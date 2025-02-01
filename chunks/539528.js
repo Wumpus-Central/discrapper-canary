@@ -117,10 +117,10 @@ function y() {
 function I() {
     return -1 === window.navigator.userAgent.indexOf('Firefox');
 }
-function b(e) {
+function T(e) {
     return void 0 === e.state && -1 === navigator.userAgent.indexOf('CriOS');
 }
-var T = 'popstate',
+var b = 'popstate',
     S = 'hashchange';
 function A() {
     try {
@@ -158,7 +158,7 @@ function N(e) {
         (0, i.Z)(Q, e), (Q.length = t.length), D.notifyListeners(Q.location, Q.action);
     }
     function L(e) {
-        b(e) || M(R(e.state));
+        T(e) || M(R(e.state));
     }
     function P() {
         M(R(A()));
@@ -271,7 +271,7 @@ function N(e) {
     }
     var Y = 0;
     function W(e) {
-        1 === (Y += e) && 1 === e ? (window.addEventListener(T, L), r && window.addEventListener(S, P)) : 0 === Y && (window.removeEventListener(T, L), r && window.removeEventListener(S, P));
+        1 === (Y += e) && 1 === e ? (window.addEventListener(b, L), r && window.addEventListener(S, P)) : 0 === Y && (window.removeEventListener(b, L), r && window.removeEventListener(S, P));
     }
     var K = !1;
     function z(e) {
@@ -355,13 +355,13 @@ function P(e) {
         h = R[u],
         v = h.encodePath,
         y = h.decodePath;
-    function b() {
+    function T() {
         var e = y(D());
         return f && (e = c(e, f)), p(e);
     }
-    var T = m();
+    var b = m();
     function S(e) {
-        (0, i.Z)(J, e), (J.length = t.length), T.notifyListeners(J.location, J.action);
+        (0, i.Z)(J, e), (J.length = t.length), b.notifyListeners(J.location, J.action);
     }
     var A = !1,
         N = null;
@@ -373,7 +373,7 @@ function P(e) {
             t = v(e);
         if (e !== t) L(t);
         else {
-            var n = b(),
+            var n = T(),
                 i = J.location;
             if ((!A && P(i, n)) || N === _(n)) return;
             (N = null), M(n);
@@ -383,7 +383,7 @@ function P(e) {
         if (A) (A = !1), S();
         else {
             var t = 'POP';
-            T.confirmTransitionTo(e, t, a, function (n) {
+            b.confirmTransitionTo(e, t, a, function (n) {
                 n
                     ? S({
                           action: t,
@@ -405,7 +405,7 @@ function P(e) {
     var U = D(),
         G = v(U);
     U !== G && L(G);
-    var B = b(),
+    var B = T(),
         Z = [_(B)];
     function F(e) {
         var t = document.querySelector('base'),
@@ -415,7 +415,7 @@ function P(e) {
     function V(e, t) {
         var n = 'PUSH',
             i = p(e, void 0, void 0, J.location);
-        T.confirmTransitionTo(i, n, a, function (e) {
+        b.confirmTransitionTo(i, n, a, function (e) {
             if (e) {
                 var t = _(i),
                     r = v(f + t),
@@ -437,7 +437,7 @@ function P(e) {
     function j(e, t) {
         var n = 'REPLACE',
             i = p(e, void 0, void 0, J.location);
-        T.confirmTransitionTo(i, n, a, function (e) {
+        b.confirmTransitionTo(i, n, a, function (e) {
             if (e) {
                 var t = _(i),
                     r = v(f + t),
@@ -468,7 +468,7 @@ function P(e) {
     var q = !1;
     function Q(e) {
         void 0 === e && (e = !1);
-        var t = T.setPrompt(e);
+        var t = b.setPrompt(e);
         return (
             q || (z(1), (q = !0)),
             function () {
@@ -477,7 +477,7 @@ function P(e) {
         );
     }
     function X(e) {
-        var t = T.appendListener(e);
+        var t = b.appendListener(e);
         return (
             z(1),
             function () {
@@ -569,10 +569,10 @@ function M(e) {
                 : d();
         });
     }
-    function b() {
+    function T() {
         I(-1);
     }
-    function T() {
+    function b() {
         I(1);
     }
     function S(e) {
@@ -595,8 +595,8 @@ function M(e) {
         push: v,
         replace: y,
         go: I,
-        goBack: b,
-        goForward: T,
+        goBack: T,
+        goForward: b,
         canGo: S,
         block: A,
         listen: N

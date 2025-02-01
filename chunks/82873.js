@@ -1,8 +1,8 @@
 e.exports = {
-    header: 'header_e4a48f',
-    gameRelationships: 'gameRelationships_e4a48f',
-    gameRelationshipsDetails: 'gameRelationshipsDetails_e4a48f',
-    gameRelationshipIcons: 'gameRelationshipIcons_e4a48f',
-    divider: 'divider_e4a48f',
-    icon: 'icon_e4a48f'
+    header: 'header_e4c2bc',
+    gameRelationships: 'gameRelationships_e4c2bc',
+    gameRelationshipsDetails: 'gameRelationshipsDetails_e4c2bc',
+    gameRelationshipIcons: 'gameRelationshipIcons_e4c2bc',
+    divider: 'divider_e4c2bc',
+    icon: 'icon_e4c2bc'
 };

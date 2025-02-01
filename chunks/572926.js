@@ -1,10 +1,10 @@
 e.exports = {
-    tile: 'tile_ab47a1',
-    tileHorizontal: 'tileHorizontal_ab47a1',
-    title: 'title_ab47a1',
-    tagline: 'tagline_ab47a1',
-    actions: 'actions_ab47a1',
-    media: 'media_ab47a1',
-    mediaHorizontal: 'mediaHorizontal_ab47a1',
-    description: 'description_ab47a1'
+    tile: 'tile__72090',
+    tileHorizontal: 'tileHorizontal__72090',
+    title: 'title__72090',
+    tagline: 'tagline__72090',
+    actions: 'actions__72090',
+    media: 'media__72090',
+    mediaHorizontal: 'mediaHorizontal__72090',
+    description: 'description__72090'
 };

@@ -4,7 +4,7 @@ n.d(t, {
     gr: () => _,
     lG: () => g,
     m7: () => I,
-    nt: () => b,
+    nt: () => T,
     u7: () => d,
     z4: () => y
 }),
@@ -85,7 +85,7 @@ class y {
         return null == e || ((f.bytes = e.bytesReceived), (f.framesCodec = e.framesDecoded), (f.framesCodecError = null !== (n = e.framesDecodeErrors) && void 0 !== n ? n : null), (f.framesNetwork = e.framesReceived), (f.packets = e.packetsReceived), (f.packetsLost = e.packetsLost), (f.framesDropped = e.framesDropped), (f.resolution = null != e.resolution ? e.resolution.height : 0), (f.minorResolution = null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0), (f.majorResolution = null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0), (f.timestamp = t), (f.nackCount = e.nackCount), (f.pliCount = e.pliCount), (f.decoder = E(e.decoderImplementationName)), (f.codecType = v(e.codec.name)), (f.qpSum = 0), (f.freezeCount = e.freezeCount), (f.pauseCount = e.pauseCount), (f.totalFreezesDuration = e.totalFreezesDuration), (f.totalPausesDuration = e.totalPausesDuration), (f.totalFramesDuration = e.totalFramesDuration), (f.keyframes = null !== (i = e.keyFramesDecoded) && void 0 !== i ? i : null), (f.passthroughCount = null !== (r = e.passthroughCount) && void 0 !== r ? r : 0), (f.cryptorSuccessCount = null !== (a = e.decryptSuccessCount) && void 0 !== a ? a : 0), (f.cryptorFailureCount = null !== (s = e.decryptFailureCount) && void 0 !== s ? s : 0), (f.cryptorDuration = null !== (o = e.decryptDuration) && void 0 !== o ? o : 0), (f.cryptorAttempts = null !== (l = e.decryptAttempts) && void 0 !== l ? l : 0), (f.cryptorMissingKeyCount = null !== (u = e.decryptMissingKeyCount) && void 0 !== u ? u : 0), (f.cryptorInvalidNonceCount = null !== (c = e.decryptInvalidNonceCount) && void 0 !== c ? c : 0), (f.localWant = null !== (d = e.sinkWantLocalAsInt) && void 0 !== d ? d : 0)), f;
     }
     static parseOutboundStats(e, t) {
-        var n, i, r, a, s, o, l, u, c, d, f, _, p, h, m, E, I, b, T, S, A, N, C, R, O;
+        var n, i, r, a, s, o, l, u, c, d, f, _, p, h, m, E, I, T, b, S, A, N, C, R, O;
         let D = new y();
         return null == e
             ? D
@@ -124,8 +124,8 @@ class y {
                   framesDroppedRateLimiter: null !== (m = e.framesDroppedRateLimiter) && void 0 !== m ? m : null,
                   framesDroppedEncoderQueue: null !== (E = e.framesDroppedEncoderQueue) && void 0 !== E ? E : null,
                   framesDroppedCongestionWindow: null !== (I = e.framesDroppedCongestionWindow) && void 0 !== I ? I : null,
-                  framesDroppedEncoder: null !== (b = e.framesDroppedEncoder) && void 0 !== b ? b : null,
-                  passthroughCount: null !== (T = e.passthroughCount) && void 0 !== T ? T : 0,
+                  framesDroppedEncoder: null !== (T = e.framesDroppedEncoder) && void 0 !== T ? T : null,
+                  passthroughCount: null !== (b = e.passthroughCount) && void 0 !== b ? b : 0,
                   cryptorSuccessCount: null !== (S = e.encryptSuccessCount) && void 0 !== S ? S : 0,
                   cryptorFailureCount: null !== (A = e.encryptFailureCount) && void 0 !== A ? A : 0,
                   cryptorDuration: null !== (N = e.encryptDuration) && void 0 !== N ? N : 0,
@@ -186,17 +186,17 @@ class I {
             s <= e && (this.resolutionBuckets[e] += g);
         });
         let I = (a - y) / 1000,
-            b = ((i - E) * 8) / I,
-            T = (r - v) / I;
+            T = ((i - E) * 8) / I,
+            b = (r - v) / I;
         o.forEach((e) => {
-            b <= e && (this.bitrateBuckets[e] += g);
+            T <= e && (this.bitrateBuckets[e] += g);
         }),
             l.forEach((e) => {
-                T <= e && (this.fpsBuckets[e] += g);
+                b <= e && (this.fpsBuckets[e] += g);
             }),
             this.resolutionHistogram.addSample(s),
-            this.bitrateHistogram.addSample(b),
-            this.fpsHistogram.addSample(T),
+            this.bitrateHistogram.addSample(T),
+            this.fpsHistogram.addSample(b),
             this.localWantHistogram.addSample(h),
             this.statsWindow.shift();
     }
@@ -293,7 +293,7 @@ class I {
             });
     }
 }
-class b extends I {
+class T extends I {
     appendTargetRates(e, t, n, i) {
         if (this.statsWindow.length < 2) return;
         (e = null != e ? e : 0), (t = null != t ? t : 0), (n = null != n ? n : 0), (i = null != i ? i : 0);

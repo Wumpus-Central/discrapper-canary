@@ -1,8 +1,8 @@
 e.exports = {
-    separator: 'separator_bf4cdc',
-    infoTitle: 'infoTitle_bf4cdc',
-    infoBadge: 'infoBadge_bf4cdc',
-    headerLine: 'headerLine_bf4cdc',
-    tooltipContainer: 'tooltipContainer_bf4cdc',
-    infoIcon: 'infoIcon_bf4cdc'
+    separator: 'separator_ae2544',
+    infoTitle: 'infoTitle_ae2544',
+    infoBadge: 'infoBadge_ae2544',
+    headerLine: 'headerLine_ae2544',
+    tooltipContainer: 'tooltipContainer_ae2544',
+    infoIcon: 'infoIcon_ae2544'
 };

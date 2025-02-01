@@ -1,31 +1,31 @@
-t.r(n);
-var s = t(200651),
-    i = t(192379),
-    a = t(512722),
-    c = t.n(a),
-    l = t(442837),
-    r = t(233787),
-    o = t(594174),
-    d = t(74538),
-    u = t(388032);
-class g extends i.Component {
+n.d(s, { default: () => m });
+var i = n(200651),
+    t = n(192379),
+    a = n(512722),
+    l = n.n(a),
+    r = n(442837),
+    o = n(233787),
+    c = n(594174),
+    d = n(74538),
+    u = n(388032);
+class g extends t.Component {
     render() {
-        let { user: e, transitionState: n, onClose: t } = this.props;
-        return (0, s.jsxs)(r.Z, {
-            transitionState: n,
+        let { user: e, transitionState: s, onClose: n } = this.props;
+        return (0, i.jsxs)(o.Z, {
+            transitionState: s,
             'aria-label': u.intl.string(u.t.BNg1io),
             children: [
-                (0, s.jsx)(r.Z.Header, {
-                    onClose: () => t(!1),
+                (0, i.jsx)(o.Z.Header, {
+                    onClose: () => n(!1),
                     children: u.intl.string(u.t.BNg1io)
                 }),
-                (0, s.jsx)(r.Z.Content, {
-                    type: r.Z.Types.UPGRADE,
+                (0, i.jsx)(o.Z.Content, {
+                    type: o.Z.Types.UPGRADE,
                     children: d.ZP.isPremium(e) && !d.ZP.canInstallPremiumApplications(e) ? u.intl.string(u.t.mKA9OD) : u.intl.string(u.t.sqSlm5)
                 }),
-                (0, s.jsx)(r.Z.Footer, {
+                (0, i.jsx)(o.Z.Footer, {
                     primary: {
-                        onClick: () => t(!0),
+                        onClick: () => n(!0),
                         label: u.intl.string(u.t.P3etAg)
                     }
                 })
@@ -33,7 +33,7 @@ class g extends i.Component {
         });
     }
 }
-n.default = l.ZP.connectStores([o.default], () => {
-    let e = o.default.getCurrentUser();
-    return c()(null != e, 'PremiumRequiredModal: user cannot be null'), { user: e };
+let m = r.ZP.connectStores([c.default], () => {
+    let e = c.default.getCurrentUser();
+    return l()(null != e, 'PremiumRequiredModal: user cannot be null'), { user: e };
 })(g);

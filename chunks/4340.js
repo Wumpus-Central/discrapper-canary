@@ -1,5 +1,5 @@
-var e = r(230364),
-    o = r(97131);
-t.exports = function (t, n, r) {
-    return r.get && e(r.get, n, { getter: !0 }), r.set && e(r.set, n, { setter: !0 }), o.f(t, n, r);
+var i = n(230364),
+    r = n(97131);
+e.exports = function (e, t, n) {
+    return n.get && i(n.get, t, { getter: !0 }), n.set && i(n.set, t, { setter: !0 }), r.f(e, t, n);
 };

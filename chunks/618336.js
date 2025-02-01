@@ -24,5 +24,5 @@ e.exports = {
     189: 'minus',
     224: 'meta'
 };
-for (var n = 1; n < 20; ++n) e.exports[111 + n] = 'f' + n;
-for (n = 0; n <= 9; ++n) e.exports[n + 96] = n;
+for (var t = 1; t < 20; ++t) e.exports[111 + t] = 'f' + t;
+for (t = 0; t <= 9; ++t) e.exports[t + 96] = t;

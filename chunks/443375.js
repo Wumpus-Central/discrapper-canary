@@ -19,8 +19,8 @@ var r = n(120356),
     v = n(769654),
     y = n(960870),
     I = n(139793),
-    b = n(994746),
-    T = n(273284),
+    T = n(994746),
+    b = n(273284),
     S = n(232174),
     A = n(510659),
     N = n(287954),
@@ -44,7 +44,7 @@ var r = n(120356),
     H = n(249942);
 function Y(e) {
     var t;
-    let { user: n, currentUser: r, activity: Y, application: W, guild: K, channel: z, className: q, onClose: Q, profileGuildId: X } = e,
+    let { user: n, currentUser: r, activity: Y, application: W, voiceGuild: K, voiceChannel: z, profileGuildId: q, className: Q, onClose: X } = e,
         { analyticsLocations: J } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { profileType: $ } = (0, R.z)(),
         ee = { [H.fullSize]: $ === Z.y0.FULL_SIZE },
@@ -74,7 +74,7 @@ function Y(e) {
             userId: n.id,
             onAction: ea
         }),
-        eo = (0, b.Z)(Y),
+        eo = (0, T.Z)(Y),
         { largeImage: el, smallImage: eu } = (0, p.FO)(Y, W),
         ec = (0, s.EQ)(Y)
             .when(c.Z, () => er)
@@ -141,7 +141,7 @@ function Y(e) {
                       variant: 'text-xs/normal',
                       text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: K.name }),
                       onClick: () => {
-                          (0, v.X)(K.id), ea({ action: 'OPEN_VOICE_GUILD' }), null == Q || Q();
+                          (0, v.X)(K.id), ea({ action: 'OPEN_VOICE_GUILD' }), null == X || X();
                       }
                   })
                 : (0, c.Z)(Y)
@@ -238,7 +238,7 @@ function Y(e) {
                       guild: K,
                       channel: z,
                       onAction: ea,
-                      onClose: Q
+                      onClose: X
                   }),
         ev = () =>
             n.id === r.id
@@ -249,7 +249,7 @@ function Y(e) {
                           activity: Y,
                           user: n,
                           onAction: ea,
-                          onClose: Q
+                          onClose: X
                       })
                   });
     if (null === $) return null;
@@ -262,10 +262,10 @@ function Y(e) {
             user: n,
             children: (0, i.jsx)(N.Z, {
                 user: n,
-                guildId: X,
+                guildId: q,
                 profileType: $,
                 sourceId: ey,
-                sourceDetails: null == ei ? (0, T.Z)(Y) : null,
+                sourceDetails: null == ei ? (0, b.Z)(Y) : null,
                 entry: ei,
                 onAction: ea,
                 sourceType: Z.n_.ACTIVITY,
@@ -282,15 +282,15 @@ function Y(e) {
                                 user: n,
                                 activity: Y,
                                 entry: ei,
-                                onClose: Q,
+                                onClose: X,
                                 children: e
                             }),
                         onShowToolbar: () => ea({ action: 'HOVER_ACTIVITY_CARD' }),
                         children: (0, i.jsxs)(L.Z, {
                             ref: es,
-                            className: a()(q, { [H.hoisted]: eI }),
+                            className: a()(Q, { [H.hoisted]: eI }),
                             onAction: ea,
-                            onClose: Q,
+                            onClose: X,
                             children: [
                                 (0, i.jsx)(P.Z, { ...eo }),
                                 (0, i.jsxs)('div', {

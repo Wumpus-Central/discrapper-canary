@@ -1,6 +1,6 @@
 e.exports = {
-    root: 'root_cb8821',
-    art: 'art_cb8821',
-    hidden: 'hidden_cb8821',
-    header: 'header_cb8821'
+    root: 'root__6dcca',
+    art: 'art__6dcca',
+    hidden: 'hidden__6dcca',
+    header: 'header__6dcca'
 };

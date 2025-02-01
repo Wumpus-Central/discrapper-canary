@@ -1,8 +1,8 @@
-function n(e) {
-    let n = e.regex,
-        r = {
+function t(e) {
+    let t = e.regex,
+        n = {
             className: 'variable',
-            variants: [{ begin: /\$\d+/ }, { begin: /\$\{\w+\}/ }, { begin: n.concat(/[$@]/, e.UNDERSCORE_IDENT_RE) }]
+            variants: [{ begin: /\$\d+/ }, { begin: /\$\{\w+\}/ }, { begin: t.concat(/[$@]/, e.UNDERSCORE_IDENT_RE) }]
         },
         i = {
             endsWithParent: !0,
@@ -16,7 +16,7 @@ function n(e) {
                 e.HASH_COMMENT_MODE,
                 {
                     className: 'string',
-                    contains: [e.BACKSLASH_ESCAPE, r],
+                    contains: [e.BACKSLASH_ESCAPE, n],
                     variants: [
                         {
                             begin: /"/,
@@ -33,11 +33,11 @@ function n(e) {
                     end: '\\s',
                     endsWithParent: !0,
                     excludeEnd: !0,
-                    contains: [r]
+                    contains: [n]
                 },
                 {
                     className: 'regexp',
-                    contains: [e.BACKSLASH_ESCAPE, r],
+                    contains: [e.BACKSLASH_ESCAPE, n],
                     variants: [
                         {
                             begin: '\\s\\^',
@@ -62,7 +62,7 @@ function n(e) {
                     begin: '\\b\\d+[kKmMgGdshdwy]?\\b',
                     relevance: 0
                 },
-                r
+                n
             ]
         };
     return {
@@ -78,11 +78,11 @@ function n(e) {
             },
             {
                 className: 'section',
-                begin: n.concat(e.UNDERSCORE_IDENT_RE + n.lookahead(/\s+\{/)),
+                begin: t.concat(e.UNDERSCORE_IDENT_RE + t.lookahead(/\s+\{/)),
                 relevance: 0
             },
             {
-                begin: n.lookahead(e.UNDERSCORE_IDENT_RE + '\\s'),
+                begin: t.lookahead(e.UNDERSCORE_IDENT_RE + '\\s'),
                 end: ';|\\{',
                 contains: [
                     {
@@ -97,4 +97,4 @@ function n(e) {
         illegal: '[^\\s\\}\\{]'
     };
 }
-e.exports = n;
+e.exports = t;

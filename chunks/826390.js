@@ -1,72 +1,72 @@
-e.r(n);
+e.d(n, { default: () => m });
 var i = e(200651),
-    o = e(192379),
-    a = e(481060),
-    s = e(313201),
-    c = e(434404),
+    c = e(192379),
+    s = e(481060),
+    a = e(313201),
+    o = e(434404),
     l = e(703656),
     r = e(981631),
-    d = e(176505),
-    x = e(388032),
-    u = e(916819);
-n.default = function (t) {
-    let { guildId: n, submittedGuildJoinRequestsCount: e, onClose: f, transitionState: h, onConfirm: m } = t,
-        p = (0, s.Dt)(),
-        T = o.useCallback(() => {
-            f(), m();
-        }, [f, m]),
-        C = o.useCallback(() => {
-            f(), c.Z.close(), (0, l.uL)(r.Z5c.CHANNEL(n, d.oC.MEMBER_SAFETY));
-        }, [n, f]);
-    return (0, i.jsxs)(a.ModalRoot, {
-        className: u.container,
-        transitionState: h,
-        'aria-labelledby': p,
+    x = e(176505),
+    d = e(388032),
+    h = e(916819);
+let m = function (t) {
+    let { guildId: n, submittedGuildJoinRequestsCount: e, onClose: m, transitionState: u, onConfirm: f } = t,
+        k = (0, a.Dt)(),
+        p = c.useCallback(() => {
+            m(), f();
+        }, [m, f]),
+        b = c.useCallback(() => {
+            m(), o.Z.close(), (0, l.uL)(r.Z5c.CHANNEL(n, x.oC.MEMBER_SAFETY));
+        }, [n, m]);
+    return (0, i.jsxs)(s.Y0X, {
+        className: h.container,
+        transitionState: u,
+        'aria-labelledby': k,
         children: [
-            (0, i.jsxs)(a.ModalContent, {
-                className: u.content,
+            (0, i.jsxs)(s.hzk, {
+                className: h.content,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(s.X6q, {
                         variant: 'heading-md/semibold',
-                        id: p,
-                        children: x.intl.format(x.t.chV4JS, { count: e })
+                        id: k,
+                        children: d.intl.format(d.t.chV4JS, { count: e })
                     }),
-                    (0, i.jsx)(a.Text, {
-                        className: u.descriptionText,
+                    (0, i.jsx)(s.Text, {
+                        className: h.descriptionText,
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: x.intl.string(x.t.GPGPDw)
+                        children: d.intl.string(d.t.GPGPDw)
                     }),
-                    (0, i.jsx)(a.Clickable, {
-                        className: u.actionText,
-                        onClick: C,
-                        children: (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.P3F, {
+                        className: h.actionText,
+                        onClick: b,
+                        children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: x.intl.string(x.t.szESVF)
+                            children: d.intl.string(d.t.szESVF)
                         })
                     })
                 ]
             }),
-            (0, i.jsxs)(a.ModalFooter, {
+            (0, i.jsxs)(s.mzw, {
                 children: [
-                    (0, i.jsx)(a.Button, {
-                        className: u.actionButton,
-                        color: a.Button.Colors.BRAND,
-                        onClick: T,
-                        size: a.Button.Sizes.SMALL,
-                        children: (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.zxk, {
+                        className: h.actionButton,
+                        color: s.zxk.Colors.BRAND,
+                        onClick: p,
+                        size: s.zxk.Sizes.SMALL,
+                        children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/semibold',
-                            children: x.intl.string(x.t['3PatS0'])
+                            children: d.intl.string(d.t['3PatS0'])
                         })
                     }),
-                    (0, i.jsx)(a.Button, {
-                        color: a.Button.Colors.PRIMARY,
-                        onClick: f,
-                        size: a.Button.Sizes.SMALL,
-                        children: (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.zxk, {
+                        color: s.zxk.Colors.PRIMARY,
+                        onClick: m,
+                        size: s.zxk.Sizes.SMALL,
+                        children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/semibold',
-                            children: x.intl.string(x.t['ETE/oK'])
+                            children: d.intl.string(d.t['ETE/oK'])
                         })
                     })
                 ]

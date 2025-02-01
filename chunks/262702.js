@@ -1,7 +1,7 @@
-n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i = n(570140),
-    r = n(846027),
-    l = n(872810),
+    l = n(846027),
+    r = n(872810),
     a = n(317770),
     s = n(569545),
     o = n(199902),
@@ -36,16 +36,16 @@ class p extends a.Z {
                     n = c.default.getId();
                 t.forEach((e) => {
                     var t;
-                    if (e.userId === n && !!(null === (t = d.Z.getChannel(e.channelId)) || void 0 === t ? void 0 : t.isGuildStageVoice())) (0, h.gf)(e) !== h.xO.ON_STAGE && (this.handleStopStream(e), this.handleStopUserVideo());
+                    e.userId === n && (null === (t = d.Z.getChannel(e.channelId)) || void 0 === t ? void 0 : t.isGuildStageVoice()) && (0, h.gf)(e) !== h.xO.ON_STAGE && (this.handleStopStream(e), this.handleStopUserVideo());
                 });
             }),
             m(this, 'handleStopStream', (e) => {
                 let t = o.Z.getActiveStreamForUser(e.userId, e.guildId);
-                if (null != t) (0, l.g)((0, s.V9)(t), !1);
+                null != t && (0, r.g)((0, s.V9)(t), !1);
             }),
             m(this, 'handleStopUserVideo', () => {
-                u.Z.isVideoEnabled() && r.Z.setVideoEnabled(!1);
+                u.Z.isVideoEnabled() && l.Z.setVideoEnabled(!1);
             });
     }
 }
-t.Z = new p();
+let g = new p();

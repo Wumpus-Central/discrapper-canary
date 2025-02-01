@@ -1,6 +1,6 @@
 e.exports = {
-    headerDivider: 'headerDivider_bc1f95',
-    header: 'header_bc1f95',
-    applicationGroup: 'applicationGroup_bc1f95',
-    iconwrapper: 'iconwrapper_bc1f95'
+    headerDivider: 'headerDivider__774bc',
+    header: 'header__774bc',
+    applicationGroup: 'applicationGroup__774bc',
+    iconwrapper: 'iconwrapper__774bc'
 };

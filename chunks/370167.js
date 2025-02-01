@@ -1,12 +1,12 @@
 e.exports = {
-    searchResultGroup: 'searchResultGroup_a9e225',
-    channelNameContainer: 'channelNameContainer_a9e225',
-    channelNameText: 'channelNameText_a9e225',
-    parentChannelName: 'parentChannelName_a9e225',
-    parentChannelNameClickable: 'parentChannelNameClickable_a9e225',
-    parentChannelNameText: 'parentChannelNameText_a9e225',
-    channelNameIcon: 'channelNameIcon_a9e225',
-    parentChannelNameIcon: 'parentChannelNameIcon_a9e225',
-    resultsBlocked: 'resultsBlocked_a9e225',
-    resultsBlockedImage: 'resultsBlockedImage_a9e225'
+    searchResultGroup: 'searchResultGroup_c68065',
+    channelNameContainer: 'channelNameContainer_c68065',
+    channelNameText: 'channelNameText_c68065',
+    parentChannelName: 'parentChannelName_c68065',
+    parentChannelNameClickable: 'parentChannelNameClickable_c68065',
+    parentChannelNameText: 'parentChannelNameText_c68065',
+    channelNameIcon: 'channelNameIcon_c68065',
+    parentChannelNameIcon: 'parentChannelNameIcon_c68065',
+    resultsBlocked: 'resultsBlocked_c68065',
+    resultsBlockedImage: 'resultsBlockedImage_c68065'
 };

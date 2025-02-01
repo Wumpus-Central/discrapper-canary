@@ -1,14 +1,14 @@
-var i = r(604175),
-    a = r(136019),
-    o = r(785330),
-    s = r(533652),
-    l = r(380092);
-function u(e) {
-    var n = -1,
-        r = null == e ? 0 : e.length;
-    for (this.clear(); ++n < r; ) {
-        var i = e[n];
+var i = n(604175),
+    r = n(136019),
+    a = n(785330),
+    s = n(533652),
+    o = n(380092);
+function l(e) {
+    var t = -1,
+        n = null == e ? 0 : e.length;
+    for (this.clear(); ++t < n; ) {
+        var i = e[t];
         this.set(i[0], i[1]);
     }
 }
-(u.prototype.clear = i), (u.prototype.delete = a), (u.prototype.get = o), (u.prototype.has = s), (u.prototype.set = l), (e.exports = u);
+(l.prototype.clear = i), (l.prototype.delete = r), (l.prototype.get = a), (l.prototype.has = s), (l.prototype.set = o), (e.exports = l);

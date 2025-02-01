@@ -1,11 +1,11 @@
 e.exports = {
-    closeButton: 'closeButton_fb1675',
-    modalContent: 'modalContent_fb1675',
-    emojiContainer: 'emojiContainer_fb1675',
-    emojiRow: 'emojiRow_fb1675',
-    emojiLabel: 'emojiLabel_fb1675',
-    emojiImage: 'emojiImage_fb1675',
-    emojiAlias: 'emojiAlias_fb1675',
-    modalFooter: 'modalFooter_fb1675',
-    cancelButton: 'cancelButton_fb1675'
+    closeButton: 'closeButton__9cef2',
+    modalContent: 'modalContent__9cef2',
+    emojiContainer: 'emojiContainer__9cef2',
+    emojiRow: 'emojiRow__9cef2',
+    emojiLabel: 'emojiLabel__9cef2',
+    emojiImage: 'emojiImage__9cef2',
+    emojiAlias: 'emojiAlias__9cef2',
+    modalFooter: 'modalFooter__9cef2',
+    cancelButton: 'cancelButton__9cef2'
 };

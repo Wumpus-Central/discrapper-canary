@@ -1,11 +1,11 @@
-n.exports = {
-    content: 'content_bb75fe',
-    header: 'header_bb75fe',
-    notes: 'notes_bb75fe',
-    note: 'note_bb75fe',
-    noteDivider: 'noteDivider_bb75fe',
-    linksContainer: 'linksContainer_bb75fe',
-    link: 'link_bb75fe',
-    linkDivider: 'linkDivider_bb75fe',
-    buttonsContainer: 'buttonsContainer_bb75fe'
+t.exports = {
+    content: 'content_b97ca2',
+    header: 'header_b97ca2',
+    notes: 'notes_b97ca2',
+    note: 'note_b97ca2',
+    noteDivider: 'noteDivider_b97ca2',
+    linksContainer: 'linksContainer_b97ca2',
+    link: 'link_b97ca2',
+    linkDivider: 'linkDivider_b97ca2',
+    buttonsContainer: 'buttonsContainer_b97ca2'
 };

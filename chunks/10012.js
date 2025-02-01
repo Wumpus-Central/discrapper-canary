@@ -1,12 +1,12 @@
-var i = r(447631),
-    a = r(821819),
-    o = r(535538);
+var i = n(447631),
+    r = n(821819),
+    a = n(535538);
 e.exports =
     !i &&
-    !a(function () {
+    !r(function () {
         return (
             7 !==
-            Object.defineProperty(o('div'), 'a', {
+            Object.defineProperty(a('div'), 'a', {
                 get: function () {
                     return 7;
                 }

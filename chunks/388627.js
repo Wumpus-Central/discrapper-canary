@@ -1,9 +1,9 @@
 n.d(t, {
-    E6: () => b,
+    E6: () => T,
     HP: () => I,
     II: () => S,
     fK: () => v,
-    pL: () => T
+    pL: () => b
 }),
     n(47120);
 var i = n(200651);
@@ -65,13 +65,13 @@ function I(e, t) {
     for (let n = 0; n < e.length; n++) if (e[n].widget !== t[n].widget) return !1;
     return !0;
 }
-function b(e, t) {
+function T(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) if (e[n].index !== t[n].index || e[n].notification !== t[n].notification || e[n].locked !== t[n].locked) return !1;
     return !0;
 }
-function T() {
+function b() {
     var e, t;
     let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.ZP,
         i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p.Z,
@@ -100,5 +100,5 @@ function T() {
 }
 function S() {
     let e = (0, l.PR)();
-    return (0, r.e7)([d.ZP, p.Z, u.ZP, c.Z], () => T(d.ZP, p.Z, u.ZP, c.Z, e), [e], a.Z);
+    return (0, r.e7)([d.ZP, p.Z, u.ZP, c.Z], () => b(d.ZP, p.Z, u.ZP, c.Z, e), [e], a.Z);
 }

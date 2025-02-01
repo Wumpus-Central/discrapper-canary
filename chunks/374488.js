@@ -1,4 +1,4 @@
-let n = (e) => ({
+let t = (e) => ({
         IMPORTANT: {
             scope: 'meta',
             begin: '!important'
@@ -29,10 +29,10 @@ let n = (e) => ({
             begin: /--[A-Za-z_][A-Za-z0-9_-]*/
         }
     }),
-    r = ['a', 'abbr', 'address', 'article', 'aside', 'audio', 'b', 'blockquote', 'body', 'button', 'canvas', 'caption', 'cite', 'code', 'dd', 'del', 'details', 'dfn', 'div', 'dl', 'dt', 'em', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'nav', 'object', 'ol', 'optgroup', 'option', 'p', 'picture', 'q', 'quote', 'samp', 'section', 'select', 'source', 'span', 'strong', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'ul', 'var', 'video', 'defs', 'g', 'marker', 'mask', 'pattern', 'svg', 'switch', 'symbol', 'feBlend', 'feColorMatrix', 'feComponentTransfer', 'feComposite', 'feConvolveMatrix', 'feDiffuseLighting', 'feDisplacementMap', 'feFlood', 'feGaussianBlur', 'feImage', 'feMerge', 'feMorphology', 'feOffset', 'feSpecularLighting', 'feTile', 'feTurbulence', 'linearGradient', 'radialGradient', 'stop', 'circle', 'ellipse', 'image', 'line', 'path', 'polygon', 'polyline', 'rect', 'text', 'use', 'textPath', 'tspan', 'foreignObject', 'clipPath'],
+    n = ['a', 'abbr', 'address', 'article', 'aside', 'audio', 'b', 'blockquote', 'body', 'button', 'canvas', 'caption', 'cite', 'code', 'dd', 'del', 'details', 'dfn', 'div', 'dl', 'dt', 'em', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'nav', 'object', 'ol', 'optgroup', 'option', 'p', 'picture', 'q', 'quote', 'samp', 'section', 'select', 'source', 'span', 'strong', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'ul', 'var', 'video', 'defs', 'g', 'marker', 'mask', 'pattern', 'svg', 'switch', 'symbol', 'feBlend', 'feColorMatrix', 'feComponentTransfer', 'feComposite', 'feConvolveMatrix', 'feDiffuseLighting', 'feDisplacementMap', 'feFlood', 'feGaussianBlur', 'feImage', 'feMerge', 'feMorphology', 'feOffset', 'feSpecularLighting', 'feTile', 'feTurbulence', 'linearGradient', 'radialGradient', 'stop', 'circle', 'ellipse', 'image', 'line', 'path', 'polygon', 'polyline', 'rect', 'text', 'use', 'textPath', 'tspan', 'foreignObject', 'clipPath'],
     i = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'].sort().reverse(),
-    a = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'].sort().reverse(),
-    o = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'].sort().reverse(),
+    r = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'].sort().reverse(),
+    a = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'].sort().reverse(),
     s = [
         'accent-color',
         'align-content',
@@ -551,14 +551,14 @@ let n = (e) => ({
     ]
         .sort()
         .reverse();
-function l(e) {
-    let l = e.regex,
-        u = n(e),
-        c = { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ },
-        d = 'and or not only',
-        f = /@-?\w[\w]*(-\w+)*/,
-        p = '[a-zA-Z-][a-zA-Z0-9_-]*',
-        h = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
+function o(e) {
+    let o = e.regex,
+        l = t(e),
+        u = { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ },
+        c = 'and or not only',
+        d = /@-?\w[\w]*(-\w+)*/,
+        f = '[a-zA-Z-][a-zA-Z0-9_-]*',
+        _ = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
     return {
         name: 'CSS',
         case_insensitive: !0,
@@ -566,9 +566,9 @@ function l(e) {
         keywords: { keyframePosition: 'from to' },
         classNameAliases: { keyframePosition: 'selector-tag' },
         contains: [
-            u.BLOCK_COMMENT,
-            c,
-            u.CSS_NUMBER_MODE,
+            l.BLOCK_COMMENT,
+            u,
+            l.CSS_NUMBER_MODE,
             {
                 className: 'selector-id',
                 begin: /#[A-Za-z0-9_-]+/,
@@ -576,15 +576,15 @@ function l(e) {
             },
             {
                 className: 'selector-class',
-                begin: '\\.' + p,
+                begin: '\\.' + f,
                 relevance: 0
             },
-            u.ATTRIBUTE_SELECTOR_MODE,
+            l.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: 'selector-pseudo',
-                variants: [{ begin: ':(' + a.join('|') + ')' }, { begin: ':(:)?(' + o.join('|') + ')' }]
+                variants: [{ begin: ':(' + r.join('|') + ')' }, { begin: ':(:)?(' + a.join('|') + ')' }]
             },
-            u.CSS_VARIABLE,
+            l.CSS_VARIABLE,
             {
                 className: 'attribute',
                 begin: '\\b(' + s.join('|') + ')\\b'
@@ -593,18 +593,18 @@ function l(e) {
                 begin: /:/,
                 end: /[;}{]/,
                 contains: [
-                    u.BLOCK_COMMENT,
-                    u.HEXCOLOR,
-                    u.IMPORTANT,
-                    u.CSS_NUMBER_MODE,
-                    ...h,
+                    l.BLOCK_COMMENT,
+                    l.HEXCOLOR,
+                    l.IMPORTANT,
+                    l.CSS_NUMBER_MODE,
+                    ..._,
                     {
                         begin: /(url|data-uri)\(/,
                         end: /\)/,
                         relevance: 0,
                         keywords: { built_in: 'url data-uri' },
                         contains: [
-                            ...h,
+                            ..._,
                             {
                                 className: 'string',
                                 begin: /[^)]/,
@@ -613,18 +613,18 @@ function l(e) {
                             }
                         ]
                     },
-                    u.FUNCTION_DISPATCH
+                    l.FUNCTION_DISPATCH
                 ]
             },
             {
-                begin: l.lookahead(/@/),
+                begin: o.lookahead(/@/),
                 end: '[{;]',
                 relevance: 0,
                 illegal: /:/,
                 contains: [
                     {
                         className: 'keyword',
-                        begin: f
+                        begin: d
                     },
                     {
                         begin: /\s/,
@@ -633,7 +633,7 @@ function l(e) {
                         relevance: 0,
                         keywords: {
                             $pattern: /[a-z-]+/,
-                            keyword: d,
+                            keyword: c,
                             attribute: i.join(' ')
                         },
                         contains: [
@@ -641,17 +641,17 @@ function l(e) {
                                 begin: /[a-z-]+(?=:)/,
                                 className: 'attribute'
                             },
-                            ...h,
-                            u.CSS_NUMBER_MODE
+                            ..._,
+                            l.CSS_NUMBER_MODE
                         ]
                     }
                 ]
             },
             {
                 className: 'selector-tag',
-                begin: '\\b(' + r.join('|') + ')\\b'
+                begin: '\\b(' + n.join('|') + ')\\b'
             }
         ]
     };
 }
-e.exports = l;
+e.exports = o;

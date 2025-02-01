@@ -1,8 +1,8 @@
-function n(e, n, r) {
+function t(e, t, n) {
     var i = -1,
-        a = e.length;
-    n < 0 && (n = -n > a ? 0 : a + n), (r = r > a ? a : r) < 0 && (r += a), (a = n > r ? 0 : (r - n) >>> 0), (n >>>= 0);
-    for (var o = Array(a); ++i < a; ) o[i] = e[i + n];
-    return o;
+        r = e.length;
+    t < 0 && (t = -t > r ? 0 : r + t), (n = n > r ? r : n) < 0 && (n += r), (r = t > n ? 0 : (n - t) >>> 0), (t >>>= 0);
+    for (var a = Array(r); ++i < r; ) a[i] = e[i + t];
+    return a;
 }
-e.exports = n;
+e.exports = t;

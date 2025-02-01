@@ -1,6 +1,6 @@
 e.exports = {
-    closeButton: 'closeButton_e7a3a7',
-    content: 'content_e7a3a7',
-    image: 'image_e7a3a7',
-    header: 'header_e7a3a7'
+    closeButton: 'closeButton_b1292a',
+    content: 'content_b1292a',
+    image: 'image_b1292a',
+    header: 'header_b1292a'
 };

@@ -24,8 +24,8 @@ var r = n(120356),
     v = n(402113),
     y = n(800965),
     I = n(157813),
-    b = n(25827),
-    T = n(131951),
+    T = n(25827),
+    b = n(131951),
     S = n(636449),
     A = n(884338),
     N = n(349619),
@@ -47,8 +47,8 @@ function P(e) {
     var t, n;
     let { channel: r, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: I, onJumpToChannel: A, idle: O, selectedParticipant: L, embeddedActivity: P } = e,
         w = (0, u.bp)() === C.IlC.POPOUT,
-        M = (0, s.e7)([T.Z], () => T.Z.isVideoEnabled()),
-        k = (0, s.e7)([T.Z], () => Object.values(T.Z.getVideoDevices())[0]),
+        M = (0, s.e7)([b.Z], () => b.Z.isVideoEnabled()),
+        k = (0, s.e7)([b.Z], () => Object.values(b.Z.getVideoDevices())[0]),
         U = !1 === (null === (t = null == k ? void 0 : k.disabled) || void 0 === t || t),
         G = (0, c.Z)([a])[0],
         B = (0, p.Z)(r),
@@ -85,7 +85,7 @@ function P(e) {
                         basis: '50%',
                         align: f.Z.Align.CENTER,
                         children: [
-                            (0, i.jsx)(b.C, {
+                            (0, i.jsx)(T.C, {
                                 className: D.leftPipIcon,
                                 enabled: M,
                                 cameraUnavailable: !U,

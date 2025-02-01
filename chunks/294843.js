@@ -1,10 +1,10 @@
 e.exports = {
-    tierNameColumn: 'tierNameColumn_c5ed9a',
-    subscribersColumn: 'subscribersColumn_c5ed9a',
-    priceColumn: 'priceColumn_c5ed9a',
-    table: 'table_c5ed9a',
-    header: 'header_c5ed9a',
-    row: 'row_c5ed9a',
-    tierNameCell: 'tierNameCell_c5ed9a',
-    tierImage: 'tierImage_c5ed9a'
+    tierNameColumn: 'tierNameColumn_e431b0',
+    priceColumn: 'priceColumn_e431b0',
+    subscribersColumn: 'subscribersColumn_e431b0',
+    table: 'table_e431b0',
+    header: 'header_e431b0',
+    row: 'row_e431b0',
+    tierNameCell: 'tierNameCell_e431b0',
+    tierImage: 'tierImage_e431b0'
 };

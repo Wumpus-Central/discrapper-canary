@@ -1,28 +1,28 @@
-var i = r(192379),
-    a = Symbol.for('react.element'),
-    o = Symbol.for('react.fragment'),
+var i = n(192379),
+    r = Symbol.for('react.element'),
+    a = Symbol.for('react.fragment'),
     s = Object.prototype.hasOwnProperty,
-    l = i.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,
-    u = {
+    o = i.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,
+    l = {
         key: !0,
         ref: !0,
         __self: !0,
         __source: !0
     };
-function c(e, n, r) {
+function u(e, t, n) {
     var i,
-        o = {},
-        c = null,
-        d = null;
-    for (i in (void 0 !== r && (c = '' + r), void 0 !== n.key && (c = '' + n.key), void 0 !== n.ref && (d = n.ref), n)) s.call(n, i) && !u.hasOwnProperty(i) && (o[i] = n[i]);
-    if (e && e.defaultProps) for (i in (n = e.defaultProps)) void 0 === o[i] && (o[i] = n[i]);
+        a = {},
+        u = null,
+        c = null;
+    for (i in (void 0 !== n && (u = '' + n), void 0 !== t.key && (u = '' + t.key), void 0 !== t.ref && (c = t.ref), t)) s.call(t, i) && !l.hasOwnProperty(i) && (a[i] = t[i]);
+    if (e && e.defaultProps) for (i in (t = e.defaultProps)) void 0 === a[i] && (a[i] = t[i]);
     return {
-        $$typeof: a,
+        $$typeof: r,
         type: e,
-        key: c,
-        ref: d,
-        props: o,
-        _owner: l.current
+        key: u,
+        ref: c,
+        props: a,
+        _owner: o.current
     };
 }
-(n.Fragment = o), (n.jsx = c), (n.jsxs = c);
+(t.Fragment = a), (t.jsx = u), (t.jsxs = u);

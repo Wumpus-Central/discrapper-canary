@@ -1,5 +1,5 @@
 e.exports = {
-    activityNewBadge: 'activityNewBadge_b4a8cd',
-    activityUpdatedBadge: 'activityUpdatedBadge_b4a8cd',
-    tooltip: 'tooltip_b4a8cd'
+    activityNewBadge: 'activityNewBadge__44107',
+    activityUpdatedBadge: 'activityUpdatedBadge__44107',
+    tooltip: 'tooltip__44107'
 };

@@ -18,8 +18,8 @@ var i,
     v = n(687476),
     y = n(978519),
     I = n(706454),
-    b = n(581883),
-    T = n(271383),
+    T = n(581883),
+    b = n(271383),
     S = n(93093),
     A = n(430824),
     N = n(771845),
@@ -69,7 +69,7 @@ class K {
     }
     isUsable(e) {
         if (0 === e.roles.length) return !0;
-        let t = T.ZP.getMember(this.id, this._userId);
+        let t = b.ZP.getMember(this.id, this._userId);
         return null != t && !!(t.roles.some((t) => e.roles.includes(t)) || (0, E.yH)(e));
     }
     get rawEmojis() {
@@ -224,7 +224,7 @@ class eu {
                 favorites: this.favorites,
                 favoriteNamesAndIds: this.favoriteNamesAndIds
             };
-        let n = (null !== (t = null === (e = b.Z.frecencyWithoutFetchingLatest.favoriteEmojis) || void 0 === e ? void 0 : e.emojis) && void 0 !== t ? t : [])
+        let n = (null !== (t = null === (e = T.Z.frecencyWithoutFetchingLatest.favoriteEmojis) || void 0 === e ? void 0 : e.emojis) && void 0 !== t ? t : [])
                 .map((e) => {
                     var t;
                     return null !== (t = this.getById(e)) && void 0 !== t ? t : k.ZP.getByName(e);
@@ -393,11 +393,11 @@ function ey(e) {
 function eI(e) {
     eh(e.guild.id, e.guild.emojis), ep();
 }
-function eb(e) {
+function eT(e) {
     let { guildId: t, emojis: n } = e;
     eh(t, n), ep();
 }
-function eT(e) {
+function eb(e) {
     let { guild: t } = e;
     e_(t.id), en.delete(t.id), ep();
 }
@@ -420,14 +420,14 @@ function eN(e, t) {
             location: 'populateInitialFrecencyData',
             autoTrackExposure: !0
         });
-    if ((M.Xb.trackExposure({ location: 'populateInitialFrecencyData' }), a().isEmpty(e) && a().isEmpty(W.pendingUsages) && b.Z.hasLoaded(V.yP.FRECENCY_AND_FAVORITES_SETTINGS))) for (let e of ['thumbsup', 'thumbsup', 'eyes', 'eyes', 'laughing', 'laughing', 'watermelon', 'fork_and_knife', 'yum', 'weary', 'tired_face', 'poop', '100']) ec.track(e);
-    if ((n || i) && a().isEmpty(t) && a().isEmpty(W.emojiReactionPendingUsages) && b.Z.hasLoaded(V.yP.FRECENCY_AND_FAVORITES_SETTINGS)) for (let e of ['100', '100', 'thumbsup', 'thumbsup', 'thumbsdown', 'thumbsdown', 'heart', 'point_up', 'eyes', 'weary', 'laughing', 'white_check_mark', 'x']) ed.track(e);
+    if ((M.Xb.trackExposure({ location: 'populateInitialFrecencyData' }), a().isEmpty(e) && a().isEmpty(W.pendingUsages) && T.Z.hasLoaded(V.yP.FRECENCY_AND_FAVORITES_SETTINGS))) for (let e of ['thumbsup', 'thumbsup', 'eyes', 'eyes', 'laughing', 'laughing', 'watermelon', 'fork_and_knife', 'yum', 'weary', 'tired_face', 'poop', '100']) ec.track(e);
+    if ((n || i) && a().isEmpty(t) && a().isEmpty(W.emojiReactionPendingUsages) && T.Z.hasLoaded(V.yP.FRECENCY_AND_FAVORITES_SETTINGS)) for (let e of ['100', '100', 'thumbsup', 'thumbsup', 'thumbsdown', 'thumbsdown', 'heart', 'point_up', 'eyes', 'weary', 'laughing', 'white_check_mark', 'x']) ed.track(e);
 }
 function eC() {
     var e, t, n, i, r, s;
-    let o = null === (t = b.Z.settings.textAndImages) || void 0 === t ? void 0 : null === (e = t.diversitySurrogate) || void 0 === e ? void 0 : e.value;
+    let o = null === (t = T.Z.settings.textAndImages) || void 0 === t ? void 0 : null === (e = t.diversitySurrogate) || void 0 === e ? void 0 : e.value;
     null != o && k.ZP.setDefaultDiversitySurrogate(o), eu.reset();
-    let l = b.Z.frecencyWithoutFetchingLatest,
+    let l = T.Z.frecencyWithoutFetchingLatest,
         u = null !== (r = null === (n = l.emojiFrecency) || void 0 === n ? void 0 : n.emojis) && void 0 !== r ? r : {},
         c = null !== (s = null === (i = l.emojiReactionFrecency) || void 0 === i ? void 0 : i.emojis) && void 0 !== s ? s : {};
     ec.overwriteHistory(
@@ -526,7 +526,7 @@ function ek(e) {
 }
 class eU extends (i = u.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(f.Z, S.Z, T.ZP, A.Z, I.default, v.Z, U.Z, C.default, m.Z), null != e && (null != e.pendingUsages && (W.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (W.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (W.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([b.Z], eC), this.syncWith([m.Z], eO);
+        this.waitFor(f.Z, S.Z, b.ZP, A.Z, I.default, v.Z, U.Z, C.default, m.Z), null != e && (null != e.pendingUsages && (W.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (W.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (W.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([T.Z], eC), this.syncWith([m.Z], eO);
     }
     getState() {
         return W;
@@ -675,8 +675,8 @@ let eG = new eU(c.Z, {
     GUILD_MEMBER_UPDATE: eS,
     GUILD_CREATE: ey,
     GUILD_UPDATE: eI,
-    GUILD_EMOJIS_UPDATE: eb,
-    GUILD_DELETE: eT,
+    GUILD_EMOJIS_UPDATE: eT,
+    GUILD_DELETE: eb,
     MESSAGE_REACTION_ADD: eA,
     EMOJI_TRACK_USAGE: eD,
     USER_SETTINGS_PROTO_UPDATE: eR,

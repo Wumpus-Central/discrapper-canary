@@ -1,6 +1,6 @@
-var i = r(474589),
-    a = r(815814);
+var i = n(474589),
+    r = n(815814);
 e.exports = function () {
     var e = Array.prototype.map;
-    return i(e) ? e : a;
+    return i(e) ? e : r;
 };

@@ -1,7 +1,7 @@
 e.exports = {
-    container: 'container_fca846',
-    content: 'content_fca846',
-    scroller: 'scroller_fca846',
-    scrollerContent: 'scrollerContent_fca846',
-    headerBar: 'headerBar_fca846'
+    container: 'container__808a1',
+    content: 'content__808a1',
+    scroller: 'scroller__808a1',
+    scrollerContent: 'scrollerContent__808a1',
+    headerBar: 'headerBar__808a1'
 };

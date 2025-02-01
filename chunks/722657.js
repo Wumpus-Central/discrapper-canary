@@ -1,5 +1,5 @@
 t.exports = {
-    content: 'content_e7ba43',
-    header: 'header_e7ba43',
-    warningIcon: 'warningIcon_e7ba43'
+    content: 'content__1c69f',
+    header: 'header__1c69f',
+    warningIcon: 'warningIcon__1c69f'
 };

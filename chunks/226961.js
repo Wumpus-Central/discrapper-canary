@@ -85,8 +85,8 @@ class I {
         f(this, 'state', void 0), (this.state = e);
     }
 }
-let b = I.empty(),
-    T = !1,
+let T = I.empty(),
+    b = !1,
     S = null;
 function A(e, t, n) {
     return ''.concat(e, ':').concat(t, ':').concat(n);
@@ -208,11 +208,11 @@ function G(e) {
         s.Z.wait(() => o.bA()));
 }
 function B(e) {
-    b = b.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
+    T = T.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
 }
 function Z(e) {
     let { value: t } = e;
-    T = t;
+    b = t;
 }
 function F(e) {
     let { userId: t, context: n, quality: i } = e;
@@ -258,10 +258,10 @@ class V extends (i = r.ZP.Store) {
         return Object.values(h[e]);
     }
     getVideoStreams() {
-        return b;
+        return T;
     }
     shouldRecordNextConnection() {
-        return T;
+        return b;
     }
     getSimulcastDebugOverride(e, t) {
         let n = y(e, t);

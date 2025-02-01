@@ -1,8 +1,8 @@
 e.exports = {
-    categories: 'categories_acddb7',
-    category: 'category_acddb7',
-    name: 'name_acddb7',
-    count: 'count_acddb7',
-    selected: 'selected_acddb7',
-    container: 'container_acddb7'
+    categories: 'categories__97499',
+    category: 'category__97499',
+    name: 'name__97499',
+    count: 'count__97499',
+    selected: 'selected__97499',
+    container: 'container__97499'
 };

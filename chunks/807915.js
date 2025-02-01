@@ -1,6 +1,6 @@
 e.exports = {
-    body: 'body_b225f6',
-    publishListing: 'publishListing_b225f6',
-    publishListingInfoHeader: 'publishListingInfoHeader_b225f6',
-    publishButton: 'publishButton_b225f6'
+    body: 'body_c01f07',
+    publishListing: 'publishListing_c01f07',
+    publishListingInfoHeader: 'publishListingInfoHeader_c01f07',
+    publishButton: 'publishButton_c01f07'
 };

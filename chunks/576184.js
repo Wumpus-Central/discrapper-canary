@@ -1,21 +1,21 @@
-s.r(r);
+s.r(r), s.d(r, { default: () => g });
 var t = s(200651),
     o = s(192379),
     i = s(120356),
     n = s.n(i),
-    c = s(568611),
-    b = s(481060),
+    a = s(568611),
+    c = s(481060),
     l = s(710845),
-    a = s(361207),
-    d = s(954824),
-    w = s(981631),
+    d = s(361207),
+    w = s(954824),
+    b = s(981631),
     m = s(388032),
     p = s(464235);
-let f = [
+let h = [
         {
             id: 'discord',
             getName: () => m.intl.string(m.t.uON9Ul),
-            url: (0, a.t3)()
+            url: (0, d.t3)()
         },
         {
             id: 'chrome',
@@ -28,7 +28,7 @@ let f = [
             url: 'https://www.mozilla.org/en-US/firefox/new/?scene=2'
         }
     ],
-    h = {
+    _ = {
         discord: 'browserDiscord',
         firefox: 'browserFirefox',
         chrome: 'browserChrome'
@@ -40,20 +40,20 @@ class u extends o.Component {
         return (
             (e =
                 null != o
-                    ? (0, t.jsx)(b.Anchor, {
+                    ? (0, t.jsx)(c.eee, {
                           className: p.btn,
                           href: o,
                           children: m.intl.string(m.t['1WjMbG'])
                       })
-                    : (0, t.jsx)(c.rU, {
+                    : (0, t.jsx)(a.rU, {
                           className: p.btn,
-                          to: w.Z5c.APPS,
+                          to: b.Z5c.APPS,
                           children: m.intl.string(m.t['1WjMbG'])
                       })),
             (0, t.jsxs)('li', {
                 className: p.browserItem,
                 children: [
-                    (0, t.jsx)('div', { className: n()(p.browserItemText, p.browser, p[h[r]]) }),
+                    (0, t.jsx)('div', { className: n()(p.browserItemText, p.browser, p[_[r]]) }),
                     (0, t.jsx)('div', {
                         className: p.browserItemText,
                         children: s()
@@ -66,18 +66,18 @@ class u extends o.Component {
 }
 class x extends o.Component {
     componentDidMount() {
-        d.Z.launch('discord://' + this.props.location.pathname, (e) => {
+        w.Z.launch('discord://' + this.props.location.pathname, (e) => {
             new l.Z('UnsupportedBrowser').log('discord://', e);
         });
     }
     render() {
-        let e = f.map((e) => (0, t.jsx)(u, { browser: e }, e.id));
+        let e = h.map((e) => (0, t.jsx)(u, { browser: e }, e.id));
         return (0, t.jsx)('div', {
             className: p.unsupportedBrowser,
             children: (0, t.jsxs)('div', {
                 className: p.wrap,
                 children: [
-                    (0, t.jsx)(b.H, {
+                    (0, t.jsx)(c.H, {
                         className: p.title,
                         children: m.intl.string(m.t['3h+n+/'])
                     }),
@@ -94,4 +94,4 @@ class x extends o.Component {
         });
     }
 }
-r.default = x;
+let g = x;

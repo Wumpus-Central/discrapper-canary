@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_e2cb96',
-    acronym: 'acronym_e2cb96',
-    text: 'text_e2cb96'
+    container: 'container__2c264',
+    acronym: 'acronym__2c264',
+    text: 'text__2c264'
 };

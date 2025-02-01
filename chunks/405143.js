@@ -1,6 +1,6 @@
 e.exports = {
-    pageContainer: 'pageContainer_a9a262',
-    scroller: 'scroller_a9a262',
-    cardsContainer: 'cardsContainer_a9a262',
-    spinner: 'spinner_a9a262'
+    pageContainer: 'pageContainer__09fde',
+    scroller: 'scroller__09fde',
+    cardsContainer: 'cardsContainer__09fde',
+    spinner: 'spinner__09fde'
 };

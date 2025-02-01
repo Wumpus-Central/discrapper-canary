@@ -39,8 +39,8 @@ var r,
     v = n(594190),
     y = n(454991),
     I = n(633565),
-    b = n(371651),
-    T = n(829907),
+    T = n(371651),
+    b = n(829907),
     S = n(610394),
     A = n(48481),
     N = n(314897),
@@ -286,7 +286,7 @@ async function eo(e) {
         J.verbose('updateIntendedOverlayPIDs: retrying failed overlay pid '.concat(n)), await i(n), (r = !0);
     }
     for (let t of null !== (n = e.added) && void 0 !== n ? n : []) {
-        let n = b.Z.getTrackedGameByPid(t);
+        let n = T.Z.getTrackedGameByPid(t);
         if (null == n) {
             J.error('updateIntendedOverlayPIDs: Tracked game not found for pid='.concat(t));
             continue;
@@ -470,18 +470,18 @@ function eI(e) {
                           ev(t, n), (ey = null);
                       }, 100)));
 }
-function eb(e) {
+function eT(e) {
     let { region: t } = e;
     Q.add(t), ev(!1, j);
 }
-function eT() {
+function eb() {
     Q.clear(), ev(!0, j);
 }
 function eS(e) {
     let { port: t } = e;
     Y = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append('build_id', '8580344432f8abb28f50487ef64ed9b48ddda510'), n.append('rpc', String(t)), n.append('rpc_auth_token', Y), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+    n.append('build_id', 'f1c50473942d5da94e9a8d8a40d1ea07328d7c93'), n.append('rpc', String(t)), n.append('rpc_auth_token', Y), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
 }
 function eA(e) {
     let { channelId: t, ring: n } = e;
@@ -554,7 +554,7 @@ function ek(e) {
     J.verbose('Updating OverlayMethod', {
         pid: e.pid,
         overlayMethod: e.overlayMethod,
-        overlayLabel: (0, T.P_)(e.overlayMethod)
+        overlayLabel: (0, b.P_)(e.overlayMethod)
     }),
         e.overlayMethod === p.gl.Hook
             ? el({
@@ -568,10 +568,10 @@ function ek(e) {
 }
 class eU extends (r = s.ZP.Store) {
     initialize() {
-        !(!M.iP || __OVERLAY__) && (this.waitFor(v.ZP, N.default, S.ZP, b.Z), g.sr(eg, em), N.default.addChangeListener(eh), ef(y.v.enabled, y.v.legacyEnabled, y.v.global), l.Z.addInterceptor(z.queueDispatch));
+        !(!M.iP || __OVERLAY__) && (this.waitFor(v.ZP, N.default, S.ZP, T.Z), g.sr(eg, em), N.default.addChangeListener(eh), ef(y.v.enabled, y.v.legacyEnabled, y.v.global), l.Z.addInterceptor(z.queueDispatch));
     }
     isInputLocked(e) {
-        return b.Z.isOverlayOOPEnabledForPid(e) ? S.ZP.isInputLocked(e) : !W.has(e);
+        return T.Z.isOverlayOOPEnabledForPid(e) ? S.ZP.isInputLocked(e) : !W.has(e);
     }
     DEV_isInputLockedV3(e) {
         return S.ZP.isInputLocked(e);
@@ -594,7 +594,7 @@ class eU extends (r = s.ZP.Store) {
     }
     isFocusedPidOutOfProcess() {
         let e = this.getFocusedPID();
-        return null != e && b.Z.isOverlayOOPEnabledForPid(e);
+        return null != e && T.Z.isOverlayOOPEnabledForPid(e);
     }
     isReady(e) {
         return S.ZP.isOverlayV3EnabledForPID(e) ? S.ZP.isReady(e) : 'READY' === G.get(e);
@@ -620,8 +620,8 @@ let eG = new eU(
                   OVERLAY_SET_ENABLED: ex,
                   OVERLAY_FOCUSED: eN,
                   OVERLAY_SET_INPUT_LOCKED: eI,
-                  OVERLAY_ACTIVATE_REGION: eb,
-                  OVERLAY_DEACTIVATE_ALL_REGIONS: eT,
+                  OVERLAY_ACTIVATE_REGION: eT,
+                  OVERLAY_DEACTIVATE_ALL_REGIONS: eb,
                   RPC_SERVER_READY: eS,
                   OVERLAY_CALL_PRIVATE_CHANNEL: eA,
                   OVERLAY_JOIN_GAME: eL,

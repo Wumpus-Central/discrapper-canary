@@ -1,8 +1,8 @@
-n(47120);
+n.d(t, { Z: () => C }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(392711),
-    a = n.n(l),
+    l = n(192379),
+    r = n(392711),
+    a = n.n(r),
     s = n(442837),
     o = n(239091),
     c = n(476669),
@@ -12,8 +12,8 @@ var i = n(200651),
     m = n(699516),
     p = n(594174),
     g = n(823379),
-    f = n(824138),
-    _ = n(388032);
+    _ = n(824138),
+    f = n(388032);
 function E(e, t, n) {
     return (
         t in e
@@ -27,7 +27,7 @@ function E(e, t, n) {
         e
     );
 }
-class I extends r.PureComponent {
+class I extends l.PureComponent {
     hasParty(e) {
         return e.length > 1;
     }
@@ -37,7 +37,7 @@ class I extends r.PureComponent {
     render() {
         let { currentUser: e, host: t, party: n } = this.props;
         return this.hasParty(n) && null != e
-            ? (0, i.jsx)(f.Z, {
+            ? (0, i.jsx)(_.Z, {
                   currentUser: e,
                   host: t,
                   party: n,
@@ -51,7 +51,7 @@ class I extends r.PureComponent {
         super(...e),
             E(this, 'handleUserContextMenu', (e, t) => {
                 (0, o.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('56842')]).then(n.bind(n, 881351));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('95052')]).then(n.bind(n, 881351));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
@@ -63,28 +63,28 @@ class I extends r.PureComponent {
                 let { party: e } = this.props;
                 return (0, i.jsx)(c.Z, {
                     party: e,
-                    header: _.intl.formatToPlainString(_.t.I9et19, { count: e.length })
+                    header: f.intl.formatToPlainString(f.t.I9et19, { count: e.length })
                 });
             });
     }
 }
-t.Z = s.ZP.connectStores([u.Z, p.default, m.Z, h.Z], () => {
+let C = s.ZP.connectStores([u.Z, p.default, m.Z, h.Z], () => {
     let e, t;
     let n = u.Z.getSyncingWith(),
         i = u.Z.getActivity(),
-        r = p.default.getCurrentUser(),
-        l = [];
-    if ((null != n ? ((e = p.default.getUser(n.userId)), (t = n.partyId)) : null != i && null != i.party && null != i.party.id && ((e = r), (t = i.party.id)), null != t)) {
+        l = p.default.getCurrentUser(),
+        r = [];
+    if ((null != n ? ((e = p.default.getUser(n.userId)), (t = n.partyId)) : null != i && null != i.party && null != i.party.id && ((e = l), (t = i.party.id)), null != t)) {
         var s;
-        l = a()(Array.from(null !== (s = h.Z.getParty(t)) && void 0 !== s ? s : []))
+        r = a()(Array.from(null !== (s = h.Z.getParty(t)) && void 0 !== s ? s : []))
             .map((e) => p.default.getUser(e))
             .filter(g.lm)
             .orderBy([(t) => null == e || e.id === t.id, (e) => m.Z.isFriend(e.id)], ['desc', 'desc'])
             .value();
     }
     return {
-        currentUser: r,
+        currentUser: l,
         host: e,
-        party: l
+        party: r
     };
 })(I);

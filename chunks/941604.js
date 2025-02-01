@@ -1,5 +1,5 @@
 e.exports = {
-    artContainer: 'artContainer_db3cf5',
-    modalContainer: 'modalContainer_db3cf5',
-    bodyContainer: 'bodyContainer_db3cf5'
+    artContainer: 'artContainer_ade26d',
+    modalContainer: 'modalContainer_ade26d',
+    bodyContainer: 'bodyContainer_ade26d'
 };

@@ -1,7 +1,7 @@
 e.exports = {
-    deviceOptionCertified: 'deviceOptionCertified_dfcd87',
-    deviceOption: 'deviceOption_dfcd87',
-    deviceOptionLabel: 'deviceOptionLabel_dfcd87',
-    devices: 'devices_dfcd87',
-    column: 'column_dfcd87'
+    deviceOptionCertified: 'deviceOptionCertified_fe5040',
+    deviceOption: 'deviceOption_fe5040',
+    deviceOptionLabel: 'deviceOptionLabel_fe5040',
+    devices: 'devices_fe5040',
+    column: 'column_fe5040'
 };

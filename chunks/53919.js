@@ -1,40 +1,40 @@
-var i = r(762378),
-    a = r(481062),
-    o = r(34775),
-    s = r(79568),
-    l = r(221286),
-    u = r(903425),
-    c = r(785775),
-    d = '[object Map]',
-    f = '[object Object]',
-    p = '[object Promise]',
-    h = '[object Set]',
-    _ = '[object WeakMap]',
-    m = '[object DataView]',
-    g = c(i),
-    E = c(a),
-    v = c(o),
-    y = c(s),
-    b = c(l),
-    I = u;
-((i && I(new i(new ArrayBuffer(1))) != m) || (a && I(new a()) != d) || (o && I(o.resolve()) != p) || (s && I(new s()) != h) || (l && I(new l()) != _)) &&
+var i = n(762378),
+    r = n(481062),
+    a = n(34775),
+    s = n(79568),
+    o = n(221286),
+    l = n(903425),
+    u = n(785775),
+    c = '[object Map]',
+    d = '[object Object]',
+    f = '[object Promise]',
+    _ = '[object Set]',
+    p = '[object WeakMap]',
+    h = '[object DataView]',
+    m = u(i),
+    g = u(r),
+    E = u(a),
+    v = u(s),
+    y = u(o),
+    I = l;
+((i && I(new i(new ArrayBuffer(1))) != h) || (r && I(new r()) != c) || (a && I(a.resolve()) != f) || (s && I(new s()) != _) || (o && I(new o()) != p)) &&
     (I = function (e) {
-        var n = u(e),
-            r = n == f ? e.constructor : void 0,
-            i = r ? c(r) : '';
+        var t = l(e),
+            n = t == d ? e.constructor : void 0,
+            i = n ? u(n) : '';
         if (i)
             switch (i) {
-                case g:
-                    return m;
-                case E:
-                    return d;
-                case v:
-                    return p;
-                case y:
+                case m:
                     return h;
-                case b:
+                case g:
+                    return c;
+                case E:
+                    return f;
+                case v:
                     return _;
+                case y:
+                    return p;
             }
-        return n;
+        return t;
     }),
     (e.exports = I);

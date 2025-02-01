@@ -1,4 +1,4 @@
-n.d(t, { $: () => f }), n(653041);
+n.d(t, { $: () => g }), n(653041);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
@@ -30,7 +30,7 @@ function m(e) {
         })
     });
 }
-let f = l.memo(function (e) {
+let g = l.memo(function (e) {
     let { unpublishedAt: t, isVisible: n, displayOptions: l, isFullScreen: i } = e,
         c = (0, d.q_F)({
             transform: 'translateX(-50%) '.concat(n ? 'translateY(-75%)' : 'translateY(0%)'),

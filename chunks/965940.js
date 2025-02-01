@@ -1,13 +1,13 @@
 e.exports = {
-    textPrimary: 'textPrimary_e13591',
-    textSecondary: 'textSecondary_e13591',
-    headerIcons: 'headerIcons_e13591',
-    container: 'container_e13591',
-    clickable: 'clickable_e13591',
-    badges: 'badges_e13591',
-    clickableText: 'clickableText_e13591',
-    truncatedText: 'truncatedText_e13591',
-    infoContainer: 'infoContainer_e13591',
-    users: 'users_e13591',
-    thumbnailContainer: 'thumbnailContainer_e13591'
+    textPrimary: 'textPrimary__8e577',
+    textSecondary: 'textSecondary__8e577',
+    headerIcons: 'headerIcons__8e577',
+    container: 'container__8e577',
+    clickable: 'clickable__8e577',
+    badges: 'badges__8e577',
+    clickableText: 'clickableText__8e577',
+    truncatedText: 'truncatedText__8e577',
+    infoContainer: 'infoContainer__8e577',
+    users: 'users__8e577',
+    thumbnailContainer: 'thumbnailContainer__8e577'
 };

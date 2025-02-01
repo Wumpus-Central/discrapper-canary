@@ -1,75 +1,75 @@
-var i = r(47120);
-var a = r(653041);
-var o = r(412788),
-    s = r(594174),
-    l = r(131681),
-    u = r(932941),
-    c = r(363072),
-    d = r(526761);
-function f(e, n, r) {
+n.d(t, { Z: () => g }), n(47120), n(653041);
+var i = n(412788),
+    r = n(594174),
+    a = n(131681),
+    s = n(932941),
+    o = n(363072),
+    l = n(526761);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let p = null;
-function h() {
-    let e = (0, l.U)() ? [...u.pF, ...u.wq, ...u.$u] : [],
-        n = s.default.getCurrentUser();
-    if (null == n ? void 0 : n.isStaff()) {
-        let n = r(932941).Bk;
-        e.push(...n);
+let c = null;
+function d() {
+    let e = (0, a.U)() ? [...s.pF, ...s.wq, ...s.$u] : [],
+        t = r.default.getCurrentUser();
+    if (null == t ? void 0 : t.isStaff()) {
+        let t = n(932941).Bk;
+        e.push(...t);
     }
-    (p = new c.B()).addWords(e);
+    (c = new o.B()).addWords(e);
+}
+function f() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+    null == c && (c = new o.B()), c.addWords(e);
 }
 function _() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-    null == p && (p = new c.B()), p.addWords(e);
+    d();
 }
-function m() {
-    h();
+function p() {
+    d();
 }
-function g() {
-    h();
+function h(e) {
+    let { local: t, settings: n } = e;
+    if (!t || n.type !== l.yP.PRELOADED_USER_SETTINGS) return !1;
+    null != c && c.clear(), d();
 }
-function E(e) {
-    let { local: n, settings: r } = e;
-    if (!n || r.type !== d.yP.PRELOADED_USER_SETTINGS) return !1;
-    null != p && p.clear(), h();
-}
-class v extends o.Z {
+class m extends i.Z {
     loadCache() {
-        let e = this.readSnapshot(v.LATEST_SNAPSHOT_VERSION);
-        null != e && (p = null != e.keywordTrie ? c.B.fromSnapshot(e.keywordTrie) : null);
+        let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
+        null != e && (c = null != e.keywordTrie ? o.B.fromSnapshot(e.keywordTrie) : null);
     }
     takeSnapshot() {
         return {
-            version: v.LATEST_SNAPSHOT_VERSION,
-            data: { keywordTrie: p }
+            version: m.LATEST_SNAPSHOT_VERSION,
+            data: { keywordTrie: c }
         };
     }
     getKeywordTrie() {
-        return p;
+        return c;
     }
     initializeForKeywordTests() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        _(e);
+        f(e);
     }
     constructor() {
         super({
-            CONNECTION_OPEN: m,
-            CONNECTION_OPEN_SUPPLEMENTAL: m,
+            CONNECTION_OPEN: _,
+            CONNECTION_OPEN_SUPPLEMENTAL: _,
             CACHE_LOADED: () => this.loadCache(),
-            OVERLAY_INITIALIZE: g,
-            USER_SETTINGS_PROTO_UPDATE: E
+            OVERLAY_INITIALIZE: p,
+            USER_SETTINGS_PROTO_UPDATE: h
         });
     }
 }
-f(v, 'displayName', 'KeywordFilterStore'), f(v, 'LATEST_SNAPSHOT_VERSION', 2), (n.Z = new v());
+u(m, 'displayName', 'KeywordFilterStore'), u(m, 'LATEST_SNAPSHOT_VERSION', 2);
+let g = new m();

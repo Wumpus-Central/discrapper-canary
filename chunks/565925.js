@@ -1,5 +1,5 @@
-var i = r(733892);
-function a(e, n) {
-    return i(e, n);
+var i = n(733892);
+function r(e, t) {
+    return i(e, t);
 }
-e.exports = a;
+e.exports = r;

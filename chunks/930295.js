@@ -1,6 +1,6 @@
 n.d(t, {
     F: () => y,
-    H: () => b
+    H: () => T
 }),
     n(47120),
     n(411104);
@@ -35,7 +35,7 @@ function v(e, t, n) {
 }
 let y = Symbol('POPOUT_PREVENT_CLOSE'),
     I = new Set(['Spacebar', ' ', 'Enter']);
-class b extends (i = a.Component) {
+class T extends (i = a.Component) {
     shouldShowPopout(e, t) {
         return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout;
     }
@@ -231,10 +231,10 @@ class b extends (i = a.Component) {
             });
     }
 }
-v(b, 'defaultProps', {
+v(T, 'defaultProps', {
     autoInvert: !1,
     nudgeAlignIntoViewport: !1,
     spacing: 0,
     loadingComponent: (0, r.jsx)(g.x, {})
 }),
-    v(b, 'contextType', h.ZP);
+    v(T, 'contextType', h.ZP);

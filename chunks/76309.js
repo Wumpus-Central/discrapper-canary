@@ -60,10 +60,10 @@ var c = r(697352),
     b = r(1231),
     S = r(292489),
     w = r(169774),
-    k = r(606166),
-    x = r(344751),
-    C = r(593121),
-    E = r(685536),
+    x = r(606166),
+    k = r(344751),
+    E = r(593121),
+    C = r(685536),
     D = r(218675),
     O = r(581079),
     K = r(680566),
@@ -155,17 +155,17 @@ var c = r(697352),
                     var e = r.props.editorState,
                         n = e.getSelection().getHasFocus(),
                         i = r.editor;
-                    if (!!i) {
+                    if (i) {
                         var o = S.getScrollParent(i),
-                            a = t || E(o),
+                            a = t || C(o),
                             u = a.x,
                             s = a.y;
-                        K(i) || O(!1), i.focus(), o === window ? window.scrollTo(u, s) : b.setTop(o, s), !n && r.update(m.forceSelection(e, e.getSelection()));
+                        K(i) || O(!1), i.focus(), o === window ? window.scrollTo(u, s) : b.setTop(o, s), n || r.update(m.forceSelection(e, e.getSelection()));
                     }
                 }),
                 u(a(r), 'blur', function () {
                     var t = r.editor;
-                    if (!!t) K(t) || O(!1), t.blur();
+                    t && (K(t) || O(!1), t.blur());
                 }),
                 u(a(r), 'setMode', function (t) {
                     var e = r.props,
@@ -204,7 +204,7 @@ var c = r(697352),
                 (r._clipboard = null),
                 (r._handler = null),
                 (r._dragCount = 0),
-                (r._editorKey = e.editorKey || x()),
+                (r._editorKey = e.editorKey || k()),
                 (r._placeholderAccessibilityID = 'placeholder-' + r._editorKey),
                 (r._latestEditorState = e.editorState),
                 (r._latestCommittedEditorState = e.editorState),
@@ -279,7 +279,7 @@ var c = r(697352),
                     f = t.readOnly,
                     h = t.textAlignment,
                     d = t.textDirectionality,
-                    g = k({
+                    g = x({
                         'DraftEditor/root': !0,
                         'DraftEditor/alignLeft': 'left' === h,
                         'DraftEditor/alignRight': 'right' === h,
@@ -305,7 +305,7 @@ var c = r(697352),
                     _.createElement(
                         'div',
                         {
-                            className: k('DraftEditor/editorContainer'),
+                            className: x('DraftEditor/editorContainer'),
                             ref: this._handleEditorContainerRef
                         },
                         _.createElement(
@@ -323,7 +323,7 @@ var c = r(697352),
                                 autoCapitalize: this.props.autoCapitalize,
                                 autoComplete: this.props.autoComplete,
                                 autoCorrect: this.props.autoCorrect,
-                                className: k({
+                                className: x({
                                     notranslate: !f,
                                     'public/DraftEditor/content': !0
                                 }),
@@ -388,7 +388,7 @@ u(R, 'defaultProps', {
     blockStyleFn: function () {
         return '';
     },
-    keyBindingFn: C,
+    keyBindingFn: E,
     readOnly: !1,
     spellCheck: !1,
     stripPastedStyles: !1

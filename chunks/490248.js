@@ -1,36 +1,36 @@
-var i = r(200651),
-    a = r(793030),
-    o = r(483444),
-    s = r(787528),
-    l = r(388032),
-    u = r(532675);
-let c = (e) => {
-    let { profileBadge: n, tenureBadge: r } = e;
+n.d(t, { Z: () => u });
+var i = n(200651),
+    r = n(793030),
+    a = n(483444),
+    s = n(787528),
+    o = n(388032),
+    l = n(532675);
+let u = (e) => {
+    let { profileBadge: t, tenureBadge: n } = e;
     return (0, i.jsxs)('div', {
-        className: u.tooltipContainer,
+        className: l.tooltipContainer,
         children: [
             (0, i.jsx)('img', {
-                src: (0, s.J)(r.id),
+                src: (0, s.J)(n.id),
                 alt: ''
             }),
             (0, i.jsx)('div', {
-                className: u.tooltipWordmarkContainer,
-                children: (0, i.jsx)(o.Z, {
+                className: l.tooltipWordmarkContainer,
+                children: (0, i.jsx)(a.Z, {
                     width: 56,
-                    className: u.tooltipWordmark
+                    className: l.tooltipWordmark
                 })
             }),
-            (0, i.jsx)(a.X6, {
+            (0, i.jsx)(r.X6, {
                 variant: 'heading-xl/extrabold',
-                children: l.intl.string(r.nameUnformatted)
+                children: o.intl.string(n.nameUnformatted)
             }),
-            (0, i.jsx)(a.xv, {
+            (0, i.jsx)(r.xv, {
                 variant: 'text-xs/normal',
                 color: 'text-muted',
-                className: u.tooltipDescription,
-                children: n.description
+                className: l.tooltipDescription,
+                children: t.description
             })
         ]
     });
 };
-n.Z = c;

@@ -1,5 +1,5 @@
-var i = n(818083);
-t.Z = (0, i.B)({
+n.d(t, { Z: () => i });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2022-04_registration_copy_updates',
     label: 'Registration Copy Updates',

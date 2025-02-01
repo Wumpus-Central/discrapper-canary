@@ -1,6 +1,6 @@
 e.exports = {
-    extrasContainer: 'extrasContainer_b932b3',
-    debug: 'debug_b932b3',
-    debugUnpinned: 'debugUnpinned_b932b3',
-    debugPinned: 'debugPinned_b932b3'
+    extrasContainer: 'extrasContainer__19b74',
+    debug: 'debug__19b74',
+    debugUnpinned: 'debugUnpinned__19b74',
+    debugPinned: 'debugPinned__19b74'
 };

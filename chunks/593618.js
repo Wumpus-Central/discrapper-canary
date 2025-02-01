@@ -23,8 +23,8 @@ var i = n(200651),
     v = n(246364),
     y = n(746916),
     I = n(965638),
-    b = n(160404),
-    T = n(777861),
+    T = n(160404),
+    b = n(777861),
     S = n(565799),
     A = n(501655),
     N = n(517334),
@@ -116,14 +116,14 @@ function G(e) {
         ),
         y = (0, u.Wu)([L.default], () => g.map((e) => L.default.getUser(e)), [g]),
         I = f.filter((e) => !g.includes(e.id) && !E.includes(e.id)),
-        b = c ? (0, _.dq)(I) : I,
-        T = y.filter((e) => null != e && !E.includes(e.id)),
-        x = h.length > 0 || I.length > 0 || T.length > 0 || v.length > 0;
+        T = c ? (0, _.dq)(I) : I,
+        b = y.filter((e) => null != e && !E.includes(e.id)),
+        x = h.length > 0 || I.length > 0 || b.length > 0 || v.length > 0;
     return {
-        voiceUsersToShow: b,
+        voiceUsersToShow: T,
         stageSpeakers: h,
         numStageListeners: m,
-        streamUsersToShow: T,
+        streamUsersToShow: b,
         embeddedActivitiesUsers: v,
         hasActivity: x
     };
@@ -189,7 +189,7 @@ function F(e) {
               className: n,
               children: M.intl.string(M.t.fpKdS0)
           })
-        : (0, i.jsx)(T.Z, {
+        : (0, i.jsx)(b.Z, {
               muteConfig: t,
               className: n
           });
@@ -253,7 +253,7 @@ function Y(e) {
         a = (0, y.E)(t),
         o = null != a ? (0, i.jsx)(H, { guildJoinRequestStatus: a }) : null,
         l = n ? (0, i.jsx)(V, { guild: t }) : null,
-        d = (0, u.e7)([b.Z], () => b.Z.isViewingRoles(t.id)),
+        d = (0, u.e7)([T.Z], () => T.Z.isViewingRoles(t.id)),
         f = null != o ? o : l,
         _ = (0, I.I)(t);
     return (0, i.jsxs)(i.Fragment, {

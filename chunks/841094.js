@@ -1,6 +1,6 @@
 e.exports = {
-    image: 'image_a4d9bd',
-    title: 'title_a4d9bd',
-    subtitle: 'subtitle_a4d9bd',
-    spacedButton: 'spacedButton_a4d9bd'
+    image: 'image_f4cef4',
+    subtitle: 'subtitle_f4cef4',
+    title: 'title_f4cef4',
+    spacedButton: 'spacedButton_f4cef4'
 };

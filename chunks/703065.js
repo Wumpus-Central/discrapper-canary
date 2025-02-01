@@ -1,6 +1,6 @@
-r(875318);
-var i = r(974802).Object,
-    a = (e.exports = function (e, n, r) {
-        return i.defineProperty(e, n, r);
+n(875318);
+var i = n(974802).Object,
+    r = (e.exports = function (e, t, n) {
+        return i.defineProperty(e, t, n);
     });
-i.defineProperty.sham && (a.sham = !0);
+i.defineProperty.sham && (r.sham = !0);

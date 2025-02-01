@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_d4a177',
-    emptySearchIcon: 'emptySearchIcon_d4a177'
+    container: 'container_b1c93b',
+    emptySearchIcon: 'emptySearchIcon_b1c93b'
 };

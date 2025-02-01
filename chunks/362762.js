@@ -1,36 +1,36 @@
-var n,
-    s,
-    i,
-    c,
-    l = a(442837),
-    r = a(570140),
-    d = a(981631);
-let o = {};
-class g extends (c = l.ZP.Store) {
+n.d(t, { Z: () => u });
+var i,
+    r,
+    l,
+    a = n(442837),
+    o = n(570140),
+    s = n(981631);
+let c = {};
+class d extends (l = a.ZP.Store) {
     getState(e) {
-        return o[e];
+        return c[e];
     }
 }
-(i = 'CodedLinkNativeAppStateStore'),
-    (s = 'displayName') in (n = g)
-        ? Object.defineProperty(n, s, {
-              value: i,
+(r = 'CodedLinkNativeAppStateStore'),
+    (i = 'displayName') in d
+        ? Object.defineProperty(d, i, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (n[s] = i),
-    (t.Z = new g(r.Z, {
-        NATIVE_APP_MODAL_OPENING: function (e) {
-            let { code: t } = e;
-            o[t] = d.kEZ.OPENING;
-        },
-        NATIVE_APP_MODAL_OPENED: function (e) {
-            let { code: t } = e;
-            o[t] = d.kEZ.OPEN;
-        },
-        NATIVE_APP_MODAL_OPEN_FAILED: function (e) {
-            let { code: t } = e;
-            o[t] = d.kEZ.OPEN_FAIL;
-        }
-    }));
+        : (d[i] = r);
+let u = new d(o.Z, {
+    NATIVE_APP_MODAL_OPENING: function (e) {
+        let { code: t } = e;
+        c[t] = s.kEZ.OPENING;
+    },
+    NATIVE_APP_MODAL_OPENED: function (e) {
+        let { code: t } = e;
+        c[t] = s.kEZ.OPEN;
+    },
+    NATIVE_APP_MODAL_OPEN_FAILED: function (e) {
+        let { code: t } = e;
+        c[t] = s.kEZ.OPEN_FAIL;
+    }
+});

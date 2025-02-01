@@ -1,6 +1,6 @@
-var i = r(548828),
-    a = r(250765);
-e.exports = function (e, n) {
-    var r = e[n];
-    return a(r) ? void 0 : i(r);
+var i = n(548828),
+    r = n(250765);
+e.exports = function (e, t) {
+    var n = e[t];
+    return r(n) ? void 0 : i(n);
 };

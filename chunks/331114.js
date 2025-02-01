@@ -1,7 +1,7 @@
-n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var i,
-    r = n(442837),
-    l = n(570140),
+    l = n(442837),
+    r = n(570140),
     a = n(881052);
 function s(e, t, n) {
     return (
@@ -40,7 +40,7 @@ function u(e, t) {
     let n = o.get(e);
     return null != n ? t(n) : null;
 }
-class h extends (i = r.ZP.Store) {
+class h extends (i = l.ZP.Store) {
     getIsInitialFetchComplete(e) {
         return u(e, (e) => e.isInitialFetchComplete);
     }
@@ -51,28 +51,28 @@ class h extends (i = r.ZP.Store) {
         return u(e, (e) => e.counts);
     }
 }
-s(h, 'displayName', 'GlobalDiscoveryServersSearchCountStore'),
-    (t.Z = new h(l.Z, {
-        CONNECTION_OPEN: function () {
-            o.clear();
-        },
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_START: function (e) {
-            let { query: t } = e;
-            d(t).handleSearchCountStart();
-        },
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
-            let { query: t, categoryCounts: n } = e;
-            d(t).handleSearchCountSuccess(n);
-        },
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_FAILURE: function (e) {
-            let { query: t, error: n } = e;
-            d(t).handleSearchCountFailure(n);
-        },
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function (e) {
-            let { ignoreQueries: t } = e,
-                n = new Set(t);
-            o.forEach((e, t) => {
-                !n.has(t) && o.delete(t);
-            });
-        }
-    }));
+s(h, 'displayName', 'GlobalDiscoveryServersSearchCountStore');
+let m = new h(r.Z, {
+    CONNECTION_OPEN: function () {
+        o.clear();
+    },
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_START: function (e) {
+        let { query: t } = e;
+        d(t).handleSearchCountStart();
+    },
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
+        let { query: t, categoryCounts: n } = e;
+        d(t).handleSearchCountSuccess(n);
+    },
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_FAILURE: function (e) {
+        let { query: t, error: n } = e;
+        d(t).handleSearchCountFailure(n);
+    },
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function (e) {
+        let { ignoreQueries: t } = e,
+            n = new Set(t);
+        o.forEach((e, t) => {
+            n.has(t) || o.delete(t);
+        });
+    }
+});

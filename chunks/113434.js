@@ -19,7 +19,7 @@ n.d(t, {
     bA: () => H,
     e5: () => j,
     eN: () => Y,
-    eQ: () => eb,
+    eQ: () => eT,
     iO: () => er,
     kJ: () => eo,
     me: () => eg,
@@ -29,7 +29,7 @@ n.d(t, {
     t5: () => ei,
     tP: () => K,
     uA: () => en,
-    vf: () => eT,
+    vf: () => eb,
     z: () => J,
     z6: () => el,
     zP: () => eN
@@ -56,8 +56,8 @@ var i = n(192379),
     v = n(358085),
     y = n(74538),
     I = n(617136),
-    b = n(915750),
-    T = n(272008),
+    T = n(915750),
+    b = n(272008),
     S = n(569984),
     A = n(497505),
     N = n(918701),
@@ -83,7 +83,7 @@ function G() {
         o = (0, C.cB)({ location: L.dr.USE_QUESTS });
     return (
         i.useEffect(() => {
-            'cache-only' !== e.fetchPolicy && ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === s)) && o && !t && !a && (n(!0), (0, T.xw)(), (0, R.Z)({ location: L.dr.USE_QUESTS }) && (0, T.w)(A.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
+            'cache-only' !== e.fetchPolicy && ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === s)) && o && !t && !a && (n(!0), (0, b.xw)(), (0, R.Z)({ location: L.dr.USE_QUESTS }) && (0, b.w)(A.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
         }, [e.fetchPolicy, o, t, a, s]),
         {
             quests: r,
@@ -164,7 +164,7 @@ function Y() {
         n = (0, u.e7)([S.Z], () => S.Z.isFetchingClaimedQuests);
     return (
         i.useEffect(() => {
-            n || e.current || ((e.current = !0), (0, T.Ag)());
+            n || e.current || ((e.current = !0), (0, b.Ag)());
         }, [n]),
         {
             claimedQuests: t,
@@ -256,7 +256,7 @@ function et(e) {
 let en = (e) => {
     let { quest: t, questContent: n } = e,
         i = ec({ quest: t }),
-        r = (0, b.WD)();
+        r = (0, T.WD)();
     return () => {
         i
             ? (0, N.gI)(
@@ -353,11 +353,11 @@ function es(e) {
 function eo(e) {
     return i.useMemo(
         () => ({
-            handleComplete: () => (0, T.Wf)(e),
-            handleProgress: (t) => (0, T.Wf)(e, t),
-            handleResetStatusClick: () => (0, T.eT)(e),
-            handleResetDismissibilityClick: () => (0, T.T0)(e),
-            handleOverrideDeliveryClick: () => (0, T.EW)(e)
+            handleComplete: () => (0, b.Wf)(e),
+            handleProgress: (t) => (0, b.Wf)(e, t),
+            handleResetStatusClick: () => (0, b.eT)(e),
+            handleResetDismissibilityClick: () => (0, b.T0)(e),
+            handleOverrideDeliveryClick: () => (0, b.EW)(e)
         }),
         [e]
     );
@@ -404,7 +404,7 @@ let eu = (e) => {
                     null == r || r(), d(!0);
                     let e = null;
                     try {
-                        (e = await (0, T.CS)(t, n)), l(e.errorHints);
+                        (e = await (0, b.CS)(t, n)), l(e.errorHints);
                     } finally {
                         var i;
                         d(!1), null == a || a(null !== (i = null == e ? void 0 : e.errorHints) && void 0 !== i ? i : []);
@@ -479,7 +479,7 @@ function eh(e) {
     return s ? M.intl.formatToPlainString(M.t.lOVr0N, { claimDate: o }) : null != r ? r.description : null != a ? a : null;
 }
 function em(e) {
-    return [(0, u.e7)([S.Z], () => S.Z.selectedTaskPlatform(e)), i.useCallback((t) => (0, T.OR)(e, t), [e])];
+    return [(0, u.e7)([S.Z], () => S.Z.selectedTaskPlatform(e)), i.useCallback((t) => (0, b.OR)(e, t), [e])];
 }
 function eg(e, t) {
     let [n, s] = em(e.id),
@@ -613,7 +613,7 @@ function eI(e) {
                 };
         }, [r, n]);
 }
-function eb(e) {
+function eT(e) {
     var t, n;
     let i = (0, u.e7)([f.default], () => f.default.locale),
         r = ee(e),
@@ -625,7 +625,7 @@ function eb(e) {
     }
     return a === A.LI.SELECT ? M.intl.string(M.t.EMrUHR) : (0, N.$J)(e) ? M.intl.string(M.t.mOrpXF) : M.intl.string(M.t['7e5k7O']);
 }
-function eT(e, t, n) {
+function eb(e, t, n) {
     var r;
     let a = z(i.useMemo(() => x.r.build(e.config).rewardsExpireAt, [e.config])),
         s = ee(e),

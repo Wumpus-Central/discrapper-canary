@@ -1,6 +1,6 @@
 n.exports = {
-    confirmationContainer: 'confirmationContainer_e6ccba',
-    confirmationHeader: 'confirmationHeader_e6ccba',
-    confirmationSubtitle: 'confirmationSubtitle_e6ccba',
-    buttonContainer: 'buttonContainer_e6ccba'
+    confirmationContainer: 'confirmationContainer_f473af',
+    confirmationHeader: 'confirmationHeader_f473af',
+    confirmationSubtitle: 'confirmationSubtitle_f473af',
+    buttonContainer: 'buttonContainer_f473af'
 };

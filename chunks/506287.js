@@ -1,4 +1,4 @@
 e.exports = {
-    applicationName: 'applicationName_dd20c4',
-    systemMessage: 'systemMessage_dd20c4'
+    applicationName: 'applicationName__9e50d',
+    systemMessage: 'systemMessage__9e50d'
 };

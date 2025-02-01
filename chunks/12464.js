@@ -15,8 +15,8 @@ let p = function (e) {
         { stripeType: n, flipped: s, updateCompleted: p, onFocus: h, onBlur: m } = e,
         [g, E] = r.useState(c.Qy.UNKNOWN),
         [v, y] = r.useState(!1),
-        [I, b] = r.useState(!1),
-        [T, S] = r.useState(null),
+        [I, T] = r.useState(!1),
+        [b, S] = r.useState(null),
         [A, N] = r.useState({}),
         C = (0, a.useElements)(),
         R = r.useCallback(() => {
@@ -43,7 +43,7 @@ let p = function (e) {
         }, [C, n]),
         O = r.useCallback(
             (e) => {
-                I || e.empty || b(!0), null != p && p(e.complete), null != e.error && y(!1);
+                I || e.empty || T(!0), null != p && p(e.complete), null != e.error && y(!1);
             },
             [I, p]
         ),
@@ -100,7 +100,7 @@ let p = function (e) {
         w = (0, u.dQu)(l.Z.colors.TEXT_PRIMARY).hex();
     function M() {
         return o()(f.cardInput, {
-            [f.cardInputError]: null !== T,
+            [f.cardInputError]: null !== b,
             [f.cardInputFocused]: v,
             [f.cardNumberInput]: 'cardNumber' === n
         });
@@ -168,7 +168,7 @@ let p = function (e) {
                     className: o()(f.hiddenDiv, _.input)
                 }),
                 k(),
-                (0, i.jsx)(u.pdY, { error: T })
+                (0, i.jsx)(u.pdY, { error: b })
             ]
         })
     );

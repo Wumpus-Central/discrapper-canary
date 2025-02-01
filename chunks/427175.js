@@ -1,7 +1,7 @@
 e.exports = {
-    container: 'container_bb7809',
-    button: 'button_bb7809',
-    select: 'select_bb7809',
-    presetImage: 'presetImage_bb7809',
-    presetLabel: 'presetLabel_bb7809'
+    container: 'container__14992',
+    button: 'button__14992',
+    select: 'select__14992',
+    presetImage: 'presetImage__14992',
+    presetLabel: 'presetLabel__14992'
 };

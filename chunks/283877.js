@@ -1,4 +1,4 @@
 e.exports = {
-    card: 'card_ac370c',
-    label: 'label_ac370c'
+    card: 'card_b651ff',
+    label: 'label_b651ff'
 };

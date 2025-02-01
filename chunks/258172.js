@@ -1,7 +1,7 @@
-var i = r(648500),
-    a = r(754401),
-    o = r(880051);
-function s(e) {
-    return 'function' != typeof e.constructor || (0, o.Z)(e) ? {} : (0, i.Z)((0, a.Z)(e));
-}
-n.Z = s;
+n.d(t, { Z: () => s });
+var i = n(648500),
+    r = n(754401),
+    a = n(880051);
+let s = function (e) {
+    return 'function' != typeof e.constructor || (0, a.Z)(e) ? {} : (0, i.Z)((0, r.Z)(e));
+};

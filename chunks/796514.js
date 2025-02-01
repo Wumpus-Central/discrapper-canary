@@ -1,10 +1,10 @@
-function n(e) {
-    let n = e.regex,
-        r = 'HTTP/([32]|1\\.[01])',
+function t(e) {
+    let t = e.regex,
+        n = 'HTTP/([32]|1\\.[01])',
         i = /[A-Za-z][A-Za-z0-9-]*/,
-        a = {
+        r = {
             className: 'attribute',
-            begin: n.concat('^', i, '(?=\\:\\s)'),
+            begin: t.concat('^', i, '(?=\\:\\s)'),
             starts: {
                 contains: [
                     {
@@ -19,8 +19,8 @@ function n(e) {
                 ]
             }
         },
-        o = [
-            a,
+        a = [
+            r,
             {
                 begin: '\\n\\n',
                 starts: {
@@ -35,12 +35,12 @@ function n(e) {
         illegal: /\S/,
         contains: [
             {
-                begin: '^(?=' + r + ' \\d{3})',
+                begin: '^(?=' + n + ' \\d{3})',
                 end: /$/,
                 contains: [
                     {
                         className: 'meta',
-                        begin: r
+                        begin: n
                     },
                     {
                         className: 'number',
@@ -50,11 +50,11 @@ function n(e) {
                 starts: {
                     end: /\b\B/,
                     illegal: /\S/,
-                    contains: o
+                    contains: a
                 }
             },
             {
-                begin: '(?=^[A-Z]+ (.*?) ' + r + '$)',
+                begin: '(?=^[A-Z]+ (.*?) ' + n + '$)',
                 end: /$/,
                 contains: [
                     {
@@ -66,7 +66,7 @@ function n(e) {
                     },
                     {
                         className: 'meta',
-                        begin: r
+                        begin: n
                     },
                     {
                         className: 'keyword',
@@ -76,11 +76,11 @@ function n(e) {
                 starts: {
                     end: /\b\B/,
                     illegal: /\S/,
-                    contains: o
+                    contains: a
                 }
             },
-            e.inherit(a, { relevance: 0 })
+            e.inherit(r, { relevance: 0 })
         ]
     };
 }
-e.exports = n;
+e.exports = t;

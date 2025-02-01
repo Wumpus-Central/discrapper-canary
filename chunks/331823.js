@@ -1,28 +1,28 @@
-var i = r(192379),
-    a = r(476400),
-    o = r.n(a),
-    s = r(723184),
-    l = r(329022),
-    u = r(829307),
-    c = r(820611),
-    d = r(877837),
-    f = function (e) {
-        var n = e.onChange,
-            r = e.onSwatchHover,
-            a = e.hex,
-            o = e.colors,
-            f = e.width,
-            p = e.triangle,
-            h = e.styles,
-            _ = void 0 === h ? {} : h,
-            m = e.className,
-            g = void 0 === m ? '' : m,
-            E = (0, s.default)(
-                (0, u.Z)(
+var i = n(192379),
+    r = n(476400),
+    a = n.n(r),
+    s = n(723184),
+    o = n(329022),
+    l = n(829307),
+    u = n(820611),
+    c = n(877837),
+    d = function (e) {
+        var t = e.onChange,
+            n = e.onSwatchHover,
+            r = e.hex,
+            a = e.colors,
+            d = e.width,
+            f = e.triangle,
+            _ = e.styles,
+            p = void 0 === _ ? {} : _,
+            h = e.className,
+            m = void 0 === h ? '' : h,
+            g = (0, s.default)(
+                (0, l.Z)(
                     {
                         default: {
                             card: {
-                                width: f,
+                                width: d,
                                 background: '#fff',
                                 border: '0 solid rgba(0,0,0,0.25)',
                                 boxShadow: '0 1px 4px rgba(0,0,0,0.25)',
@@ -108,67 +108,67 @@ var i = r(192379),
                             }
                         }
                     },
-                    _
+                    p
                 ),
                 {
-                    'hide-triangle': 'hide' === p,
-                    'top-left-triangle': 'top-left' === p,
-                    'top-right-triangle': 'top-right' === p
+                    'hide-triangle': 'hide' === f,
+                    'top-left-triangle': 'top-left' === f,
+                    'top-right-triangle': 'top-right' === f
                 }
             ),
-            v = function (e, r) {
-                c.FX(e) &&
-                    n(
+            E = function (e, n) {
+                u.FX(e) &&
+                    t(
                         {
                             hex: e,
                             source: 'hex'
                         },
-                        r
+                        n
                     );
             };
         return i.createElement(
             'div',
             {
-                style: E.card,
-                className: 'twitter-picker ' + g
+                style: g.card,
+                className: 'twitter-picker ' + m
             },
-            i.createElement('div', { style: E.triangleShadow }),
-            i.createElement('div', { style: E.triangle }),
+            i.createElement('div', { style: g.triangleShadow }),
+            i.createElement('div', { style: g.triangle }),
             i.createElement(
                 'div',
-                { style: E.body },
-                (0, l.Z)(o, function (e, n) {
-                    return i.createElement(d.m4, {
-                        key: n,
+                { style: g.body },
+                (0, o.Z)(a, function (e, t) {
+                    return i.createElement(c.m4, {
+                        key: t,
                         color: e,
                         hex: e,
-                        style: E.swatch,
-                        onClick: v,
-                        onHover: r,
+                        style: g.swatch,
+                        onClick: E,
+                        onHover: n,
                         focusStyle: { boxShadow: '0 0 4px ' + e }
                     });
                 }),
-                i.createElement('div', { style: E.hash }, '#'),
-                i.createElement(d.Vm, {
+                i.createElement('div', { style: g.hash }, '#'),
+                i.createElement(c.Vm, {
                     label: null,
-                    style: { input: E.input },
-                    value: a.replace('#', ''),
-                    onChange: v
+                    style: { input: g.input },
+                    value: r.replace('#', ''),
+                    onChange: E
                 }),
-                i.createElement('div', { style: E.clear })
+                i.createElement('div', { style: g.clear })
             )
         );
     };
-(f.propTypes = {
-    width: o().oneOfType([o().string, o().number]),
-    triangle: o().oneOf(['hide', 'top-left', 'top-right']),
-    colors: o().arrayOf(o().string),
-    styles: o().object
+(d.propTypes = {
+    width: a().oneOfType([a().string, a().number]),
+    triangle: a().oneOf(['hide', 'top-left', 'top-right']),
+    colors: a().arrayOf(a().string),
+    styles: a().object
 }),
-    (f.defaultProps = {
+    (d.defaultProps = {
         width: 276,
         colors: ['#FF6900', '#FCB900', '#7BDCB5', '#00D084', '#8ED1FC', '#0693E3', '#ABB8C3', '#EB144C', '#F78DA7', '#9900EF'],
         triangle: 'top-left',
         styles: {}
     }),
-    (0, d.t1)(f);
+    (0, c.t1)(d);

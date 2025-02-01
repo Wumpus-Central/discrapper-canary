@@ -1,43 +1,44 @@
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(493773),
-    s = r(367907),
-    l = r(524444),
-    u = r(297047),
-    c = r(592125),
-    d = r(944486),
-    f = r(626135),
-    p = r(981631),
-    h = r(388032),
-    _ = r(202776);
-function m(e) {
-    let { guild: n, message: r, onClose: m } = e,
-        g = c.Z.getChannel(d.Z.getChannelId(n.id));
+n.d(t, { Z: () => h });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(493773),
+    s = n(367907),
+    o = n(524444),
+    l = n(297047),
+    u = n(592125),
+    c = n(944486),
+    d = n(626135),
+    f = n(981631),
+    _ = n(388032),
+    p = n(202776);
+let h = function (e) {
+    let { guild: t, message: n, onClose: h } = e,
+        m = u.Z.getChannel(c.Z.getChannelId(t.id));
     if (
-        ((0, o.Z)(() => {
-            f.default.track(p.rMx.OPEN_POPOUT, {
+        ((0, a.Z)(() => {
+            d.default.track(f.rMx.OPEN_POPOUT, {
                 type: 'New Member Badge Popout',
-                guild_id: n.id,
-                channel_id: null == g ? void 0 : g.id
+                guild_id: t.id,
+                channel_id: null == m ? void 0 : m.id
             });
         }),
-        null == g)
+        null == m)
     )
         return null;
-    let E = () => {
-        s.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: r.author.id }), m(), (0, u.q)(r.author, g.id);
+    let g = () => {
+        s.ZP.trackWithMetadata(f.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), h(), (0, l.q)(n.author, m.id);
     };
-    return (0, i.jsx)(l.W_, {
+    return (0, i.jsx)(o.W_, {
         children: (0, i.jsxs)('div', {
-            className: _.popoutContainer,
+            className: p.popoutContainer,
             children: [
                 (0, i.jsxs)('div', {
-                    className: _.mainContent,
+                    className: p.mainContent,
                     children: [
                         (0, i.jsx)('div', {
-                            className: _.iconContainer,
-                            children: (0, i.jsx)(a.NewUserIcon, {
+                            className: p.iconContainer,
+                            children: (0, i.jsx)(r.hg2, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 40,
@@ -46,30 +47,29 @@ function m(e) {
                         }),
                         (0, i.jsxs)('div', {
                             children: [
-                                (0, i.jsx)(a.Heading, {
+                                (0, i.jsx)(r.X6q, {
                                     variant: 'heading-md/semibold',
-                                    className: _.header,
-                                    children: h.intl.string(h.t['v/OYd3'])
+                                    className: p.header,
+                                    children: _.intl.string(_.t['v/OYd3'])
                                 }),
-                                (0, i.jsx)(a.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: 'text-sm/normal',
-                                    children: h.intl.string(h.t.Z85MlJ)
+                                    children: _.intl.string(_.t.Z85MlJ)
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, i.jsx)(a.Button, {
-                    size: a.Button.Sizes.SMALL,
-                    color: a.Button.Colors.BRAND,
-                    className: _.ctaButton,
-                    innerClassName: _.ctaButtonContent,
+                (0, i.jsx)(r.zxk, {
+                    size: r.zxk.Sizes.SMALL,
+                    color: r.zxk.Colors.BRAND,
+                    className: p.ctaButton,
+                    innerClassName: p.ctaButtonContent,
                     fullWidth: !0,
-                    onClick: E,
-                    children: h.intl.format(h.t['+xsVS0'], { username: r.author.username })
+                    onClick: g,
+                    children: _.intl.format(_.t['+xsVS0'], { username: n.author.username })
                 })
             ]
         })
     });
-}
-n.Z = m;
+};

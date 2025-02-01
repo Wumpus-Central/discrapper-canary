@@ -1,4 +1,4 @@
 e.exports = {
-    volumes: 'volumes_d77399',
-    column: 'column_d77399'
+    volumes: 'volumes__7072d',
+    column: 'column__7072d'
 };

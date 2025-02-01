@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         name: 'Dockerfile',
         aliases: ['docker'],
@@ -20,4 +20,4 @@ function n(e) {
         illegal: '</'
     };
 }
-e.exports = n;
+e.exports = t;

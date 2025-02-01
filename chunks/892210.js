@@ -43,5 +43,5 @@ if (!u || !s) {
         s.apply(r, arguments);
     }),
     (e.exports.polyfill = function (e) {
-        !e && (e = r), (e.requestAnimationFrame = u), (e.cancelAnimationFrame = s);
+        e || (e = r), (e.requestAnimationFrame = u), (e.cancelAnimationFrame = s);
     });

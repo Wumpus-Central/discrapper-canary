@@ -1,7 +1,7 @@
-r(147018)(
+n(147018)(
     {
         target: 'Object',
         stat: !0
     },
-    { hasOwn: r(740362) }
+    { hasOwn: n(740362) }
 );

@@ -1,8 +1,8 @@
-n(47120);
-var i = n(200651),
-    s = n(192379),
-    l = n(120356),
-    a = n.n(l),
+n.d(t, { Z: () => _ }), n(47120);
+var l = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
     r = n(481060),
     o = n(231239),
     c = n(881052),
@@ -11,107 +11,107 @@ var i = n(200651),
     m = n(888592),
     x = n(981631),
     h = n(388032),
-    g = n(569055);
-let v = (0, d.hQ)();
-t.Z = (e) => {
-    let { setStep: t, setGuildsInfo: n, email: l, setEmail: d, setGuildId: N, invite: j, onClose: f, isNUXFlow: C } = e,
-        [I, p] = s.useState(null),
-        [S, T] = s.useState(!1),
-        b = async (e) => {
-            e.preventDefault(), p(null), T(!0);
-            try {
-                var i, s, a, r, d;
-                let e = null !== (d = null !== (r = null == j ? void 0 : null === (i = j.guild) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : null === (s = u.Z.getChannel(null == j ? void 0 : null === (a = j.channel) || void 0 === a ? void 0 : a.id)) || void 0 === s ? void 0 : s.getGuildId()) && void 0 !== d ? d : void 0;
-                e === m.fQ && (e = void 0);
-                let c = await o.Z.sendVerificationEmail(l, !0, e),
-                    x = c.guilds_info;
-                c.has_matching_guild ? (N(e), t(m.tF.VERIFY_PIN)) : 0 === x.length ? t(m.tF.SUBMIT_SCHOOL) : 1 === x.length ? (N(x[0].id), await o.Z.sendVerificationEmail(l, !0, x[0].id), t(m.tF.VERIFY_PIN)) : (n(x), t(m.tF.SELECT_SCHOOL));
-            } catch (e) {
-                p(new c.Hx(e));
-            } finally {
-                T(!1);
-            }
-        },
-        _ = h.intl.string(h.t.H1jCHB),
-        E = h.intl.string(h.t.YfeHRE);
-    if (C) (_ = h.intl.string(h.t.LVyxND)), (E = h.intl.string(h.t.ECd7Rk));
-    else if ((null == j ? void 0 : j.guild) != null && j.guild.id !== m.fQ && (null == j ? void 0 : j.approximate_member_count) != null) {
-        let { name: e } = j.guild;
-        _ = h.intl.formatToPlainString(h.t['4T4+p6'], {
-            guildName: e,
-            count: j.approximate_member_count
-        });
-    }
-    return (0, i.jsxs)('div', {
-        className: g.container,
-        children: [
-            (0, i.jsx)('div', { className: g.topImage }),
-            (0, i.jsx)(r.Heading, {
-                className: a()(g.centerText, g.header),
-                variant: 'heading-xl/semibold',
-                children: _
-            }),
-            (0, i.jsx)('div', {
-                className: g.descriptionWidth,
-                children: (0, i.jsx)(r.Text, {
-                    className: g.centerText,
-                    variant: 'text-sm/normal',
-                    color: 'header-secondary',
-                    children: E
-                })
-            }),
-            (0, i.jsxs)('form', {
-                className: g.formContent,
-                onSubmit: b,
-                children: [
-                    (0, i.jsxs)(r.FormItem, {
-                        children: [
-                            (0, i.jsx)(r.FormTitle, {
-                                id: v,
-                                children: h.intl.string(h.t.kmCxkZ)
-                            }),
-                            (0, i.jsx)(r.TextInput, {
-                                placeholder: h.intl.string(h.t.ImAOh4),
-                                onChange: (e) => {
-                                    d(e);
-                                },
-                                error: null == I ? void 0 : I.getAnyErrorMessage(),
-                                'aria-labelledby': v
-                            })
-                        ]
-                    }),
-                    (0, i.jsx)(r.Text, {
-                        color: 'header-secondary',
-                        className: g.formDescription,
+    v = n(569055);
+let N = (0, d.hQ)(),
+    _ = (e) => {
+        let { setStep: t, setGuildsInfo: n, email: s, setEmail: d, setGuildId: _, invite: g, onClose: f, isNUXFlow: p } = e,
+            [E, I] = i.useState(null),
+            [S, j] = i.useState(!1),
+            C = async (e) => {
+                e.preventDefault(), I(null), j(!0);
+                try {
+                    var l, i, a, r, d;
+                    let e = null !== (d = null !== (r = null == g ? void 0 : null === (l = g.guild) || void 0 === l ? void 0 : l.id) && void 0 !== r ? r : null === (i = u.Z.getChannel(null == g ? void 0 : null === (a = g.channel) || void 0 === a ? void 0 : a.id)) || void 0 === i ? void 0 : i.getGuildId()) && void 0 !== d ? d : void 0;
+                    e === m.fQ && (e = void 0);
+                    let c = await o.Z.sendVerificationEmail(s, !0, e),
+                        x = c.guilds_info;
+                    c.has_matching_guild ? (_(e), t(m.tF.VERIFY_PIN)) : 0 === x.length ? t(m.tF.SUBMIT_SCHOOL) : 1 === x.length ? (_(x[0].id), await o.Z.sendVerificationEmail(s, !0, x[0].id), t(m.tF.VERIFY_PIN)) : (n(x), t(m.tF.SELECT_SCHOOL));
+                } catch (e) {
+                    I(new c.Hx(e));
+                } finally {
+                    j(!1);
+                }
+            },
+            A = h.intl.string(h.t.H1jCHB),
+            T = h.intl.string(h.t.YfeHRE);
+        if (p) (A = h.intl.string(h.t.LVyxND)), (T = h.intl.string(h.t.ECd7Rk));
+        else if ((null == g ? void 0 : g.guild) != null && g.guild.id !== m.fQ && (null == g ? void 0 : g.approximate_member_count) != null) {
+            let { name: e } = g.guild;
+            A = h.intl.formatToPlainString(h.t['4T4+p6'], {
+                guildName: e,
+                count: g.approximate_member_count
+            });
+        }
+        return (0, l.jsxs)('div', {
+            className: v.container,
+            children: [
+                (0, l.jsx)('div', { className: v.topImage }),
+                (0, l.jsx)(r.X6q, {
+                    className: a()(v.centerText, v.header),
+                    variant: 'heading-xl/semibold',
+                    children: A
+                }),
+                (0, l.jsx)('div', {
+                    className: v.descriptionWidth,
+                    children: (0, l.jsx)(r.Text, {
+                        className: v.centerText,
                         variant: 'text-sm/normal',
-                        children: h.intl.string(h.t.Cv7mmJ)
-                    }),
-                    (0, i.jsx)(r.Button, {
-                        type: 'submit',
-                        size: r.Button.Sizes.LARGE,
-                        color: r.Button.Colors.BRAND,
-                        className: g.submitButton,
-                        submitting: S,
-                        children: h.intl.string(h.t['8vmKOz'])
-                    }),
-                    (0, i.jsx)(r.Text, {
-                        className: g.termsPhrase,
                         color: 'header-secondary',
-                        variant: 'text-xs/normal',
-                        children: h.intl.format(h.t.RPT0vr, {
-                            termsURL: x.EYA.TERMS,
-                            privacyURL: x.EYA.PRIVACY
-                        })
-                    }),
-                    C &&
-                        (0, i.jsx)(r.Button, {
-                            look: r.Button.Looks.LINK,
-                            onClick: f,
-                            className: g.cancelButton,
-                            children: h.intl.string(h.t.hO6qJy)
-                        })
-                ]
-            })
-        ]
-    });
-};
+                        children: T
+                    })
+                }),
+                (0, l.jsxs)('form', {
+                    className: v.formContent,
+                    onSubmit: C,
+                    children: [
+                        (0, l.jsxs)(r.xJW, {
+                            children: [
+                                (0, l.jsx)(r.vwX, {
+                                    id: N,
+                                    children: h.intl.string(h.t.kmCxkZ)
+                                }),
+                                (0, l.jsx)(r.oil, {
+                                    placeholder: h.intl.string(h.t.ImAOh4),
+                                    onChange: (e) => {
+                                        d(e);
+                                    },
+                                    error: null == E ? void 0 : E.getAnyErrorMessage(),
+                                    'aria-labelledby': N
+                                })
+                            ]
+                        }),
+                        (0, l.jsx)(r.Text, {
+                            color: 'header-secondary',
+                            className: v.formDescription,
+                            variant: 'text-sm/normal',
+                            children: h.intl.string(h.t.Cv7mmJ)
+                        }),
+                        (0, l.jsx)(r.zxk, {
+                            type: 'submit',
+                            size: r.zxk.Sizes.LARGE,
+                            color: r.zxk.Colors.BRAND,
+                            className: v.submitButton,
+                            submitting: S,
+                            children: h.intl.string(h.t['8vmKOz'])
+                        }),
+                        (0, l.jsx)(r.Text, {
+                            className: v.termsPhrase,
+                            color: 'header-secondary',
+                            variant: 'text-xs/normal',
+                            children: h.intl.format(h.t.RPT0vr, {
+                                termsURL: x.EYA.TERMS,
+                                privacyURL: x.EYA.PRIVACY
+                            })
+                        }),
+                        p &&
+                            (0, l.jsx)(r.zxk, {
+                                look: r.zxk.Looks.LINK,
+                                onClick: f,
+                                className: v.cancelButton,
+                                children: h.intl.string(h.t.hO6qJy)
+                            })
+                    ]
+                })
+            ]
+        });
+    };

@@ -1,5 +1,5 @@
 e.exports = {
-    applicationStore: 'applicationStore_cecc86',
-    marketingHeader: 'marketingHeader_cecc86',
-    marketingFooter: 'marketingFooter_cecc86'
+    applicationStore: 'applicationStore_f07d62',
+    marketingHeader: 'marketingHeader_f07d62',
+    marketingFooter: 'marketingFooter_f07d62'
 };

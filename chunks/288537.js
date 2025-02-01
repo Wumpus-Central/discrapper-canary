@@ -17,8 +17,8 @@ var i,
     v = -1,
     y = 1,
     I = 2,
-    b = 3,
-    T = 4,
+    T = 3,
+    b = 4,
     S = 0,
     A = 2,
     N = 8,
@@ -205,7 +205,7 @@ function em(e, t) {
 function eg(e, t, n, i, a, s) {
     if (!e) return m;
     var o = 1;
-    if ((t === v && (t = 6), i < 0 ? ((o = 0), (i = -i)) : i > 15 && ((o = 2), (i -= 16)), a < 1 || a > C || n !== N || i < 8 || i > 15 || t < 0 || t > 9 || s < 0 || s > T)) return X(e, m);
+    if ((t === v && (t = 6), i < 0 ? ((o = 0), (i = -i)) : i > 15 && ((o = 2), (i -= 16)), a < 1 || a > C || n !== N || i < 8 || i > 15 || t < 0 || t > 9 || s < 0 || s > b)) return X(e, m);
     8 === i && (i = 9);
     var l = new e_();
     return (e.state = l), (l.strm = e), (l.wrap = o), (l.gzhead = null), (l.w_bits = i), (l.w_size = 1 << l.w_bits), (l.w_mask = l.w_size - 1), (l.hash_bits = a + 7), (l.hash_size = 1 << l.hash_bits), (l.hash_mask = l.hash_size - 1), (l.hash_shift = ~~((l.hash_bits + M - 1) / M)), (l.window = new r.Buf8(2 * l.w_size)), (l.head = new r.Buf16(l.hash_size)), (l.prev = new r.Buf16(l.w_size)), (l.lit_bufsize = 1 << (a + 6)), (l.pending_buf_size = 4 * l.lit_bufsize), (l.pending_buf = new r.Buf8(l.pending_buf_size)), (l.d_buf = 1 * l.lit_bufsize), (l.l_buf = 3 * l.lit_bufsize), (l.level = t), (l.strategy = s), (l.method = n), eh(e);
@@ -265,7 +265,7 @@ function ev(e, t) {
     } else if (0 === e.avail_in && J(t) <= J(n) && t !== f) return X(e, E);
     if (r.status === Y && 0 !== e.avail_in) return X(e, E);
     if (0 !== e.avail_in || 0 !== r.lookahead || (t !== u && r.status !== Y)) {
-        var y = r.strategy === I ? ec(r, t) : r.strategy === b ? eu(r, t) : i[r.level].func(r, t);
+        var y = r.strategy === I ? ec(r, t) : r.strategy === T ? eu(r, t) : i[r.level].func(r, t);
         if (((y === z || y === q) && (r.status = Y), y === W || y === z)) return 0 === e.avail_out && (r.last_flush = -1), p;
         if (y === K && (t === c ? a._tr_align(r) : t !== _ && (a._tr_stored_block(r, 0, 0, !1), t === d && ($(r.head), 0 === r.lookahead && ((r.strstart = 0), (r.block_start = 0), (r.insert = 0)))), ee(e), 0 === e.avail_out)) return (r.last_flush = -1), p;
     }

@@ -1,5 +1,5 @@
 e.exports = {
-    modal: 'modal_c1e5f4',
-    body: 'body_c1e5f4',
-    error: 'error_c1e5f4'
+    modal: 'modal__0955d',
+    body: 'body__0955d',
+    error: 'error__0955d'
 };

@@ -1,5 +1,5 @@
 e.exports = {
-    prompt: 'prompt_ff74de',
-    selectYourAnswer: 'selectYourAnswer_ff74de',
-    separator: 'separator_ff74de'
+    prompt: 'prompt__2e257',
+    selectYourAnswer: 'selectYourAnswer__2e257',
+    separator: 'separator__2e257'
 };

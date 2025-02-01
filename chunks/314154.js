@@ -1,5 +1,5 @@
 e.exports = {
-    member: 'member_dd4e91',
-    heading: 'heading_dd4e91',
-    content: 'content_dd4e91'
+    member: 'member__122b7',
+    heading: 'heading__122b7',
+    content: 'content__122b7'
 };

@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
         1: "'inci",
         5: "'inci",
         8: "'inci",
@@ -59,8 +59,8 @@
             y: 'bir yıl',
             yy: '%d yıl'
         },
-        ordinal: function (e, r) {
-            switch (r) {
+        ordinal: function (e, n) {
+            switch (n) {
                 case 'd':
                 case 'D':
                 case 'Do':
@@ -69,9 +69,9 @@
                 default:
                     if (0 === e) return e + "'ıncı";
                     var i = e % 10,
-                        a = (e % 100) - i,
-                        o = e >= 100 ? 100 : null;
-                    return e + (n[i] || n[a] || n[o]);
+                        r = (e % 100) - i,
+                        a = e >= 100 ? 100 : null;
+                    return e + (t[i] || t[r] || t[a]);
             }
         },
         week: {

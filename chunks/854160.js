@@ -1,23 +1,23 @@
-var i = r(970661),
-    a = (function () {
+var i = n(970661),
+    r = (function () {
         try {
             return !!Object.defineProperty({}, 'a', {});
         } catch (e) {
             return !1;
         }
     })();
-a || Object.prototype.__defineGetter__;
-var o = a
+r || Object.prototype.__defineGetter__;
+var a = r
         ? Object.defineProperty
-        : function (e, n, r) {
-              'get' in r && e.__defineGetter__ ? e.__defineGetter__(n, r.get) : (!i.hop.call(e, n) || 'value' in r) && (e[n] = r.value);
+        : function (e, t, n) {
+              'get' in n && e.__defineGetter__ ? e.__defineGetter__(t, n.get) : (!i.hop.call(e, t) || 'value' in n) && (e[t] = n.value);
           },
     s =
         Object.create ||
-        function (e, n) {
-            var r, a;
+        function (e, t) {
+            var n, r;
             function s() {}
-            for (a in ((s.prototype = e), (r = new s()), n)) i.hop.call(n, a) && o(r, a, n[a]);
-            return r;
+            for (r in ((s.prototype = e), (n = new s()), t)) i.hop.call(t, r) && a(n, r, t[r]);
+            return n;
         };
-(n.defineProperty = o), (n.objCreate = s);
+(t.defineProperty = a), (t.objCreate = s);

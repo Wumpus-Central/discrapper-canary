@@ -1,48 +1,48 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(442837),
-    l = r(481060),
-    u = r(661824),
-    c = r(913663),
-    d = r(268350),
-    f = r(419922),
-    p = r(388032),
-    h = r(573101);
+n.d(t, { Z: () => p }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(661824),
+    l = n(913663),
+    u = n(268350),
+    c = n(419922),
+    d = n(388032),
+    f = n(573101);
 function _(e) {
-    var n;
-    let { channelId: r, chatInputType: i } = e,
-        [_, m] = o.useState(null),
-        g = (0, s.e7)([c.Z], () => c.Z.getStickerPreview(r, i.drafts.type));
-    return (null === (n = i.stickers) || void 0 === n ? void 0 : n.allowSending) && null != g && 0 !== g.length
-        ? (0, a.jsxs)(a.Fragment, {
+    var t;
+    let { channelId: n, chatInputType: _ } = e,
+        [p, h] = r.useState(null),
+        m = (0, a.e7)([l.Z], () => l.Z.getStickerPreview(n, _.drafts.type));
+    return (null === (t = _.stickers) || void 0 === t ? void 0 : t.allowSending) && null != m && 0 !== m.length
+        ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, a.jsx)('div', {
-                      className: h.stickerPreviews,
-                      children: g.map((e) =>
-                          (0, a.jsxs)(
+                  (0, i.jsx)('div', {
+                      className: f.stickerPreviews,
+                      children: m.map((e) =>
+                          (0, i.jsxs)(
                               'div',
                               {
-                                  className: h.stickerPreviewContainer,
+                                  className: f.stickerPreviewContainer,
                                   children: [
-                                      (0, a.jsx)(l.Clickable, {
-                                          onFocus: () => m(e.id),
-                                          onBlur: () => m(null),
-                                          className: h.closeButton,
-                                          'aria-label': p.intl.formatToPlainString(p.t.BGAQRU, { name: e.name }),
-                                          onClick: () => (0, d.qB)(r, i.drafts.type),
-                                          children: (0, a.jsx)('div', {
-                                              className: h.closeIconContainer,
-                                              children: (0, a.jsx)(l.CircleXIcon, {
+                                      (0, i.jsx)(s.P3F, {
+                                          onFocus: () => h(e.id),
+                                          onBlur: () => h(null),
+                                          className: f.closeButton,
+                                          'aria-label': d.intl.formatToPlainString(d.t.BGAQRU, { name: e.name }),
+                                          onClick: () => (0, u.qB)(n, _.drafts.type),
+                                          children: (0, i.jsx)('div', {
+                                              className: f.closeIconContainer,
+                                              children: (0, i.jsx)(s.k$p, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: h.closeIcon
+                                                  className: f.closeIcon
                                               })
                                           })
                                       }),
-                                      (0, a.jsx)(f.ZP, {
-                                          isInteracting: _ === e.id,
-                                          className: h.stickerPreview,
+                                      (0, i.jsx)(c.ZP, {
+                                          isInteracting: p === e.id,
+                                          className: f.stickerPreview,
                                           size: 48,
                                           sticker: e
                                       })
@@ -52,9 +52,9 @@ function _(e) {
                           )
                       )
                   }),
-                  (0, a.jsx)(u.Z, { className: h.stickerPreviewDivider })
+                  (0, i.jsx)(o.Z, { className: f.stickerPreviewDivider })
               ]
           })
         : null;
 }
-n.Z = o.memo(_);
+let p = r.memo(_);

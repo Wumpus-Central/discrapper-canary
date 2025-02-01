@@ -1,5 +1,5 @@
-t.exports = {
-    content: 'content_b610b6',
-    header: 'header_b610b6',
-    footer: 'footer_b610b6'
+e.exports = {
+    content: 'content_b96ca2',
+    header: 'header_b96ca2',
+    footer: 'footer_b96ca2'
 };

@@ -1,10 +1,10 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             className: 'number',
             relevance: 0,
             variants: [{ begin: '[$][a-fA-F0-9]+' }, e.NUMBER_MODE]
         },
-        r = {
+        n = {
             variants: [
                 {
                     match: [/(function|method)/, /\s+/, e.UNDERSCORE_IDENT_RE]
@@ -38,7 +38,7 @@ function n(e) {
         contains: [
             e.COMMENT('#rem', '#end'),
             e.COMMENT("'", '$', { relevance: 0 }),
-            r,
+            n,
             i,
             {
                 className: 'variable.language',
@@ -60,8 +60,8 @@ function n(e) {
                 contains: [e.UNDERSCORE_TITLE_MODE]
             },
             e.QUOTE_STRING_MODE,
-            n
+            t
         ]
     };
 }
-e.exports = n;
+e.exports = t;

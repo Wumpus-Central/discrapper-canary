@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_dcd0fd',
-    removeButton: 'removeButton_dcd0fd'
+    container: 'container_cd2100',
+    removeButton: 'removeButton_cd2100'
 };

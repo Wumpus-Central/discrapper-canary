@@ -1,3 +1,4 @@
+n.d(t, { Z: () => i });
 let i = (0, n(818083).B)({
     kind: 'guild',
     id: '2023-01_shared_canvas',
@@ -11,4 +12,3 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-t.Z = i;

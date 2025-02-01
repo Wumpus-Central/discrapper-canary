@@ -1,8 +1,8 @@
 e.exports = {
-    formHeaderContainer: 'formHeaderContainer_bacf97',
-    formContent: 'formContent_bacf97',
-    formFooter: 'formFooter_bacf97',
-    formImage: 'formImage_bacf97',
-    formSubHeader: 'formSubHeader_bacf97',
-    formHeader: 'formHeader_bacf97'
+    formHeaderContainer: 'formHeaderContainer__23a6b',
+    formContent: 'formContent__23a6b',
+    formFooter: 'formFooter__23a6b',
+    formImage: 'formImage__23a6b',
+    formSubHeader: 'formSubHeader__23a6b',
+    formHeader: 'formHeader__23a6b'
 };

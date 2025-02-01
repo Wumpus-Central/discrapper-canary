@@ -1,5 +1,5 @@
-var e = n(859209);
-t.exports = function (t, r, n) {
-    for (var o in r) e(t, o, r[o], n);
-    return t;
+var i = n(859209);
+e.exports = function (e, t, n) {
+    for (var r in t) i(e, r, t[r], n);
+    return e;
 };

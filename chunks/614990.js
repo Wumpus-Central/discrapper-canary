@@ -1,4 +1,4 @@
 e.exports = {
-    text: 'text_e0bc33',
-    premiumIcon: 'premiumIcon_e0bc33'
+    text: 'text__18089',
+    premiumIcon: 'premiumIcon__18089'
 };

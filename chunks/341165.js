@@ -30,9 +30,9 @@ let m = {},
     v = {},
     y = !1,
     I = !1,
-    b = !1;
-function T() {
-    (m = {}), (g = {}), (E = {}), (v = {}), (i = null), (I = !1), (b = !1), (y = !1);
+    T = !1;
+function b() {
+    (m = {}), (g = {}), (E = {}), (v = {}), (i = null), (I = !1), (T = !1), (y = !1);
 }
 function S(e) {
     let { channel: t } = e;
@@ -53,10 +53,10 @@ function C(e) {
 }
 function R(e) {
     var t;
-    (v[e.invite.code] = _.Z.createFromServer(e.invite)), (i = null !== (t = s()(l()(c()(Object.values(v), 'createdAt')))) && void 0 !== t ? t : null), (b = !1);
+    (v[e.invite.code] = _.Z.createFromServer(e.invite)), (i = null !== (t = s()(l()(c()(Object.values(v), 'createdAt')))) && void 0 !== t ? t : null), (T = !1);
 }
 function O() {
-    b = !1;
+    T = !1;
 }
 function D(e) {
     var t;
@@ -71,7 +71,7 @@ function x() {
     I = !0;
 }
 function L() {
-    b = !0;
+    T = !0;
 }
 function P() {
     y = !0;
@@ -101,12 +101,12 @@ class k extends (r = d.ZP.Store) {
         return y;
     }
     canRevokeFriendInvite() {
-        return null != i && !I && !b;
+        return null != i && !I && !T;
     }
 }
 h(k, 'displayName', 'InstantInviteStore');
 let U = new k(f.Z, {
-    CONNECTION_OPEN: T,
+    CONNECTION_OPEN: b,
     CHANNEL_DELETE: S,
     FRIEND_INVITE_CREATE_SUCCESS: R,
     FRIEND_INVITE_CREATE_FAILURE: O,

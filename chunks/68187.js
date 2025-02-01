@@ -1,7 +1,7 @@
 e.exports = {
-    section: 'section_d8eba3',
-    header: 'header_d8eba3',
-    loading: 'loading_d8eba3',
-    clickable: 'clickable_d8eba3',
-    list: 'list_d8eba3'
+    section: 'section_c7ac92',
+    header: 'header_c7ac92',
+    loading: 'loading_c7ac92',
+    clickable: 'clickable_c7ac92',
+    list: 'list_c7ac92'
 };

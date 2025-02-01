@@ -1,5 +1,5 @@
 e.exports = {
-    bannerIcon: 'bannerIcon_fc2669',
-    bannerContainer: 'bannerContainer_fc2669',
-    bannerHeader: 'bannerHeader_fc2669'
+    bannerIcon: 'bannerIcon_cbe8c4',
+    bannerContainer: 'bannerContainer_cbe8c4',
+    bannerHeader: 'bannerHeader_cbe8c4'
 };

@@ -1,21 +1,22 @@
-var o = n(200651),
+n.d(t, { Z: () => d });
+var s = n(200651),
     r = n(192379),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    o = n.n(a),
     i = n(642128),
     l = n(95985),
     c = n(952529);
 let d = r.forwardRef(function (e, t) {
     var n;
-    let { className: s, expansionSpring: d, isExpanded: u, isExpansionAnimationComplete: p, quest: m, taskDetails: x } = e,
-        g = r.useRef(null),
-        h = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
-    return (0, o.jsx)(i.animated.div, {
+    let { className: a, expansionSpring: d, isExpanded: u, isExpansionAnimationComplete: p, quest: m, taskDetails: x } = e,
+        h = r.useRef(null),
+        g = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
+    return (0, s.jsx)(i.animated.div, {
         ref: t,
         'aria-hidden': u && p,
-        className: a()(s, c.contentCollapsed, {
+        className: o()(a, c.contentCollapsed, {
             [c.contentCollapsedExpanded]: u,
-            [c.contentCollapsedAccepted]: h
+            [c.contentCollapsedAccepted]: g
         }),
         style: {
             opacity: d.to({
@@ -23,13 +24,13 @@ let d = r.forwardRef(function (e, t) {
                 output: [1, 0]
             })
         },
-        children: (0, o.jsx)('div', {
+        children: (0, s.jsx)('div', {
             className: c.contentCollapsedWrapper,
-            children: h
-                ? (0, o.jsx)(l.Z, {
+            children: g
+                ? (0, s.jsx)(l.Z, {
                       contentLocation: 'collapsed',
                       quest: m,
-                      progressBarRef: g,
+                      progressBarRef: h,
                       isExpanded: !1,
                       taskDetails: x
                   })
@@ -37,4 +38,3 @@ let d = r.forwardRef(function (e, t) {
         })
     });
 });
-t.Z = d;

@@ -1,13 +1,13 @@
 e.exports = {
-    modalHeader: 'modalHeader_d85614',
-    modalHeaderTitle: 'modalHeaderTitle_d85614',
-    modalContent: 'modalContent_d85614',
-    guildSelector: 'guildSelector_d85614',
-    categoryRow: 'categoryRow_d85614',
-    channelRow: 'channelRow_d85614',
-    channelName: 'channelName_d85614',
-    channelIconContainer: 'channelIconContainer_d85614',
-    channelIcon: 'channelIcon_d85614',
-    modalFooter: 'modalFooter_d85614',
-    goBackButton: 'goBackButton_d85614'
+    modalHeader: 'modalHeader_d295eb',
+    modalHeaderTitle: 'modalHeaderTitle_d295eb',
+    modalContent: 'modalContent_d295eb',
+    guildSelector: 'guildSelector_d295eb',
+    categoryRow: 'categoryRow_d295eb',
+    channelRow: 'channelRow_d295eb',
+    channelName: 'channelName_d295eb',
+    channelIconContainer: 'channelIconContainer_d295eb',
+    channelIcon: 'channelIcon_d295eb',
+    modalFooter: 'modalFooter_d295eb',
+    goBackButton: 'goBackButton_d295eb'
 };

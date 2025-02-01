@@ -1,5 +1,5 @@
 e.exports = {
-    reminderTooltip: 'reminderTooltip_df8ef6',
-    tooltipContent: 'tooltipContent_df8ef6',
-    buttonContainer: 'buttonContainer_df8ef6'
+    reminderTooltip: 'reminderTooltip__5cad1',
+    tooltipContent: 'tooltipContent__5cad1',
+    buttonContainer: 'buttonContainer__5cad1'
 };

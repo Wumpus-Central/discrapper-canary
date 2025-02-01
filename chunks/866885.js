@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(366050),
     y = n(944486),
     I = n(594174),
-    b = n(566620),
-    T = n(317381),
+    T = n(566620),
+    b = n(317381),
     S = n(531826),
     A = n(175894),
     N = n(246106),
@@ -38,8 +38,8 @@ function G(e) {
     var t, n, a;
     let { channel: A, isLoading: N } = e,
         [G, B] = r.useState(!1),
-        Z = (0, o.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivityForChannel(A.id)),
-        F = (0, o.e7)([T.ZP], () => T.ZP.getActivityPanelMode()),
+        Z = (0, o.e7)([b.ZP], () => b.ZP.getSelfEmbeddedActivityForChannel(A.id)),
+        F = (0, o.e7)([b.ZP], () => b.ZP.getActivityPanelMode()),
         V = (0, _.q)(null == Z ? void 0 : Z.applicationId),
         j = null == Z ? void 0 : Z.launchId,
         H = (0, o.e7)([y.Z], () => y.Z.getChannelId() === A.id),
@@ -101,7 +101,7 @@ function G(e) {
                             onMouseDown: e,
                             onMouseLeave: t,
                             onJumpToChannel: () => {
-                                er(), (0, b.tg)(L.Ez.PANEL);
+                                er(), (0, T.tg)(L.Ez.PANEL);
                             },
                             channel: A,
                             applicationId: Z.applicationId,

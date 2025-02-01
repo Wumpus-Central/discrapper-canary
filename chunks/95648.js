@@ -1,8 +1,8 @@
 e.exports = {
-    list: 'list_a06168',
-    container: 'container_a06168',
-    header: 'header_a06168',
-    permission: 'permission_a06168',
-    check: 'check_a06168',
-    cross: 'cross_a06168'
+    list: 'list__83c7c',
+    container: 'container__83c7c',
+    header: 'header__83c7c',
+    permission: 'permission__83c7c',
+    check: 'check__83c7c',
+    cross: 'cross__83c7c'
 };

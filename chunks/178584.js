@@ -1,5 +1,5 @@
 e.exports = {
-    scroller: 'scroller_bf550a',
-    container: 'container_bf550a',
-    header: 'header_bf550a'
+    scroller: 'scroller__7d20c',
+    container: 'container__7d20c',
+    header: 'header__7d20c'
 };

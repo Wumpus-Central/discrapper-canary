@@ -1,6 +1,6 @@
-e.exports = {
-    content: 'content_fd44a9',
-    header: 'header_fd44a9',
-    warningIcon: 'warningIcon_fd44a9',
-    dangerIcon: 'dangerIcon_fd44a9'
+A.exports = {
+    content: 'content__33e3e',
+    header: 'header__33e3e',
+    warningIcon: 'warningIcon__33e3e',
+    dangerIcon: 'dangerIcon__33e3e'
 };

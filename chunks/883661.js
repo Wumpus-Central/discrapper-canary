@@ -1,47 +1,47 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(481060),
-    s = r(149203);
-let l = (e) => {
+n.d(t, { Z: () => l });
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(149203);
+let o = (e) => {
         switch (e) {
             case s.UX.RECENT:
-                return o.ClockIcon;
+                return a.T39;
             case s.UX.FAVORITES:
-                return o.StarIcon;
+                return a.r7p;
             case s.UX.TOP_GUILD_EMOJI:
-                return o.TrophyIcon;
+                return a.rm8;
             case s.UX.PEOPLE:
-                return o.ReactionIcon;
+                return a.EO4;
             case s.UX.NATURE:
-                return o.NatureIcon;
+                return a.NQW;
             case s.UX.FOOD:
-                return o.FoodIcon;
+                return a.ED8;
             case s.UX.ACTIVITY:
-                return o.GameControllerIcon;
+                return a.iWm;
             case s.UX.TRAVEL:
-                return o.BicycleIcon;
+                return a.QhB;
             case s.UX.OBJECTS:
-                return o.ObjectIcon;
+                return a.Xbz;
             case s.UX.SYMBOLS:
-                return o.HeartIcon;
+                return a.h_8;
             case s.UX.FLAGS:
-                return o.FlagIcon;
+                return a.U65;
             case s.UX.PREMIUM_UPSELL:
-                return o.NitroWheelIcon;
+                return a.SrA;
             case s.UX.SOUNDMOJI:
-                return o.SoundboardIcon;
+                return a.KY1;
             default:
                 return;
         }
     },
-    u = a.memo(function (e) {
-        let { categoryId: n, ...r } = e,
-            a = l(n);
-        return null == a
+    l = r.memo(function (e) {
+        let { categoryId: t, ...n } = e,
+            r = o(t);
+        return null == r
             ? null
-            : (0, i.jsx)(a, {
+            : (0, i.jsx)(r, {
                   color: 'currentColor',
-                  ...r
+                  ...n
               });
     });
-n.Z = u;

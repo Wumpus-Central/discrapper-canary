@@ -1,4 +1,4 @@
 e.exports = {
-    iconContainer: 'iconContainer_a2aef9',
-    filledIcon: 'filledIcon_a2aef9'
+    iconContainer: 'iconContainer__98cf7',
+    filledIcon: 'filledIcon__98cf7'
 };

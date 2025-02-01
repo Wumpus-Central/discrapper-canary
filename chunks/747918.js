@@ -1,9 +1,9 @@
 e.exports = {
-    header: 'header_a823cd',
-    headerTag: 'headerTag_a823cd',
-    footer: 'footer_a823cd',
-    footerButtonColor: 'footerButtonColor_a823cd',
-    banner: 'banner_a823cd',
-    backdrop: 'backdrop_a823cd',
-    toast: 'toast_a823cd'
+    header: 'header__537ec',
+    headerTag: 'headerTag__537ec',
+    footer: 'footer__537ec',
+    footerButtonColor: 'footerButtonColor__537ec',
+    banner: 'banner__537ec',
+    backdrop: 'backdrop__537ec',
+    toast: 'toast__537ec'
 };

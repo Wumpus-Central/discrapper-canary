@@ -1,37 +1,37 @@
-var i = r(47120);
-var a = r(147913),
-    o = r(474873),
-    s = r(523746),
-    l = r(292959),
-    u = r(246946),
-    c = r(979651),
-    d = r(938475),
-    f = r(557177);
-function p(e, n, r) {
+n.d(t, { Z: () => p }), n(47120);
+var i = n(147913),
+    r = n(460181),
+    a = n(474873),
+    s = n(523746),
+    o = n(292959),
+    l = n(246946),
+    u = n(979651),
+    c = n(938475);
+function d(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let h = (0, f.uk)('call_calling', o.Z.getSoundpack());
-class _ extends a.Z {
+let f = (0, r.uk)('call_calling', a.Z.getSoundpack());
+class _ extends i.Z {
     handleSoundpackUpdate() {
-        h.stop(), (h = (0, f.uk)('call_calling', o.Z.getSoundpack()));
+        f.stop(), (f = (0, r.uk)('call_calling', a.Z.getSoundpack()));
     }
     handleRingUpdate() {
-        let e = s.Z.getCalls().filter((e) => e.ringing.length > 0 && c.Z.getCurrentClientVoiceChannelId(null) === e.channelId),
-            n = c.Z.getCurrentClientVoiceChannelId(null);
-        (null != n && d.ZP.countVoiceStatesForChannel(n) >= 2) || !(e.length > 0) || l.Z.isSoundDisabled('call_calling') || u.Z.disableSounds ? h.stop() : h.loop();
+        let e = s.Z.getCalls().filter((e) => e.ringing.length > 0 && u.Z.getCurrentClientVoiceChannelId(null) === e.channelId),
+            t = u.Z.getCurrentClientVoiceChannelId(null);
+        (null != t && c.ZP.countVoiceStatesForChannel(t) >= 2) || !(e.length > 0) || o.Z.isSoundDisabled('call_calling') || l.Z.disableSounds ? f.stop() : f.loop();
     }
     constructor(...e) {
-        super(...e), p(this, 'stores', new Map().set(s.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(c.Z, this.handleRingUpdate).set(o.Z, this.handleSoundpackUpdate));
+        super(...e), d(this, 'stores', new Map().set(s.Z, this.handleRingUpdate).set(o.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(a.Z, this.handleSoundpackUpdate));
     }
 }
-n.Z = new _();
+let p = new _();

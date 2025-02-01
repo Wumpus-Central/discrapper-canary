@@ -1,4 +1,4 @@
 e.exports = {
-    status: 'status_dcb18f',
-    hoverableStatus: 'hoverableStatus_dcb18f'
+    status: 'status_cdcd10',
+    hoverableStatus: 'hoverableStatus_cdcd10'
 };

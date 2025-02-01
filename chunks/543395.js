@@ -1,8 +1,8 @@
 e.exports = {
-    userMenuItem: 'userMenuItem_e1268c',
-    userMenuUsername: 'userMenuUsername_e1268c',
-    userMenuText: 'userMenuText_e1268c',
-    userMenuDiscriminator: 'userMenuDiscriminator_e1268c',
-    focused: 'focused_e1268c',
-    activeIcon: 'activeIcon_e1268c'
+    userMenuItem: 'userMenuItem_d40c56',
+    userMenuUsername: 'userMenuUsername_d40c56',
+    userMenuText: 'userMenuText_d40c56',
+    userMenuDiscriminator: 'userMenuDiscriminator_d40c56',
+    focused: 'focused_d40c56',
+    activeIcon: 'activeIcon_d40c56'
 };

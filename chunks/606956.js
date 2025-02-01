@@ -1,17 +1,17 @@
-var n = String.prototype.replace,
-    r = /%20/g,
+var t = String.prototype.replace,
+    n = /%20/g,
     i = 'RFC1738',
-    a = 'RFC3986';
+    r = 'RFC3986';
 e.exports = {
-    default: a,
+    default: r,
     formatters: {
         RFC1738: function (e) {
-            return n.call(e, r, '+');
+            return t.call(e, n, '+');
         },
         RFC3986: function (e) {
             return String(e);
         }
     },
     RFC1738: i,
-    RFC3986: a
+    RFC3986: r
 };

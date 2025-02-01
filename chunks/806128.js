@@ -1,8 +1,8 @@
 e.exports = {
-    errorNotificationContainer: 'errorNotificationContainer_fb285e',
-    errorNotificationWrapper: 'errorNotificationWrapper_fb285e',
-    errorClickNotification: 'errorClickNotification_fb285e',
-    stackTraceCode: 'stackTraceCode_fb285e',
-    code: 'code_fb285e',
-    notificationIcon: 'notificationIcon_fb285e'
+    errorNotificationContainer: 'errorNotificationContainer_e13eda',
+    errorNotificationWrapper: 'errorNotificationWrapper_e13eda',
+    errorClickNotification: 'errorClickNotification_e13eda',
+    stackTraceCode: 'stackTraceCode_e13eda',
+    code: 'code_e13eda',
+    notificationIcon: 'notificationIcon_e13eda'
 };

@@ -1,5 +1,5 @@
-e.exports = {
-    spacing: 'spacing_ddcc45',
-    spacingTop: 'spacingTop_ddcc45',
-    message: 'message_ddcc45'
+n.exports = {
+    spacing: 'spacing__89466',
+    spacingTop: 'spacingTop__89466',
+    message: 'message__89466'
 };

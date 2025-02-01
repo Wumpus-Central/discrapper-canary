@@ -8,7 +8,7 @@ var i = n(200651),
     u = n(388032);
 function c(e) {
     let { display: t, entry: n, onAction: c, onClose: d } = e;
-    return 'live' !== t && (0, l.Mq)(n)
+    return 'recent' === t && (0, l.Mq)(n)
         ? (0, i.jsx)(r.sNh, {
               id: 'view-activity',
               label: u.intl.string(u.t.GDWYR0),

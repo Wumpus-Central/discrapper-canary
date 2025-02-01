@@ -1,5 +1,5 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             className: 'string',
             variants: [
                 e.inherit(e.QUOTE_STRING_MODE, { begin: '((u8?|U)|L)?"' }),
@@ -15,7 +15,7 @@ function n(e) {
                 }
             ]
         },
-        r = {
+        n = {
             className: 'number',
             variants: [{ begin: '\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)' }, { begin: e.C_NUMBER_RE }],
             relevance: 0
@@ -35,7 +35,7 @@ function n(e) {
                     end: '$',
                     keywords: { keyword: 'include' },
                     contains: [
-                        e.inherit(n, { className: 'string' }),
+                        e.inherit(t, { className: 'string' }),
                         {
                             className: 'string',
                             begin: '<',
@@ -44,21 +44,21 @@ function n(e) {
                         }
                     ]
                 },
-                n,
+                t,
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE
             ]
         },
-        a = {
+        r = {
             className: 'variable',
             begin: /&[a-z\d_]*\b/
         },
-        o = {
+        a = {
             className: 'params',
             relevance: 0,
             begin: '<',
             end: '>',
-            contains: [r, a]
+            contains: [n, r]
         },
         s = {
             scope: 'punctuation',
@@ -73,7 +73,7 @@ function n(e) {
                 begin: /^\/(?=\s*\{)/,
                 relevance: 10
             },
-            a,
+            r,
             {
                 className: 'keyword',
                 begin: '/[a-z][a-z\\d-]*/'
@@ -100,11 +100,11 @@ function n(e) {
                 relevance: 0,
                 scope: 'attr'
             },
-            o,
+            a,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            r,
             n,
+            t,
             i,
             s,
             {
@@ -114,4 +114,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

@@ -1,23 +1,23 @@
-let { MAX_SAFE_COMPONENT_LENGTH: i, MAX_SAFE_BUILD_LENGTH: a, MAX_LENGTH: o } = r(942177),
-    s = r(13556),
-    l = ((n = e.exports = {}).re = []),
-    u = (n.safeRe = []),
-    c = (n.src = []),
-    d = (n.t = {}),
-    f = 0,
-    p = '[a-zA-Z0-9-]',
-    h = [
+let { MAX_SAFE_COMPONENT_LENGTH: i, MAX_SAFE_BUILD_LENGTH: r, MAX_LENGTH: a } = n(942177),
+    s = n(13556),
+    o = ((t = e.exports = {}).re = []),
+    l = (t.safeRe = []),
+    u = (t.src = []),
+    c = (t.t = {}),
+    d = 0,
+    f = '[a-zA-Z0-9-]',
+    _ = [
         ['\\s', 1],
-        ['\\d', o],
-        [p, a]
+        ['\\d', a],
+        [f, r]
     ],
-    _ = (e) => {
-        for (let [n, r] of h) e = e.split(`${n}*`).join(`${n}{0,${r}}`).split(`${n}+`).join(`${n}{1,${r}}`);
+    p = (e) => {
+        for (let [t, n] of _) e = e.split(`${t}*`).join(`${t}{0,${n}}`).split(`${t}+`).join(`${t}{1,${n}}`);
         return e;
     },
-    m = (e, n, r) => {
-        let i = _(n),
-            a = f++;
-        s(e, a, n), (d[e] = a), (c[a] = n), (l[a] = new RegExp(n, r ? 'g' : void 0)), (u[a] = new RegExp(i, r ? 'g' : void 0));
+    h = (e, t, n) => {
+        let i = p(t),
+            r = d++;
+        s(e, r, t), (c[e] = r), (u[r] = t), (o[r] = new RegExp(t, n ? 'g' : void 0)), (l[r] = new RegExp(i, n ? 'g' : void 0));
     };
-m('NUMERICIDENTIFIER', '0|[1-9]\\d*'), m('NUMERICIDENTIFIERLOOSE', '\\d+'), m('NONNUMERICIDENTIFIER', `\\d*[a-zA-Z-]${p}*`), m('MAINVERSION', `(${c[d.NUMERICIDENTIFIER]})\\.(${c[d.NUMERICIDENTIFIER]})\\.(${c[d.NUMERICIDENTIFIER]})`), m('MAINVERSIONLOOSE', `(${c[d.NUMERICIDENTIFIERLOOSE]})\\.(${c[d.NUMERICIDENTIFIERLOOSE]})\\.(${c[d.NUMERICIDENTIFIERLOOSE]})`), m('PRERELEASEIDENTIFIER', `(?:${c[d.NUMERICIDENTIFIER]}|${c[d.NONNUMERICIDENTIFIER]})`), m('PRERELEASEIDENTIFIERLOOSE', `(?:${c[d.NUMERICIDENTIFIERLOOSE]}|${c[d.NONNUMERICIDENTIFIER]})`), m('PRERELEASE', `(?:-(${c[d.PRERELEASEIDENTIFIER]}(?:\\.${c[d.PRERELEASEIDENTIFIER]})*))`), m('PRERELEASELOOSE', `(?:-?(${c[d.PRERELEASEIDENTIFIERLOOSE]}(?:\\.${c[d.PRERELEASEIDENTIFIERLOOSE]})*))`), m('BUILDIDENTIFIER', `${p}+`), m('BUILD', `(?:\\+(${c[d.BUILDIDENTIFIER]}(?:\\.${c[d.BUILDIDENTIFIER]})*))`), m('FULLPLAIN', `v?${c[d.MAINVERSION]}${c[d.PRERELEASE]}?${c[d.BUILD]}?`), m('FULL', `^${c[d.FULLPLAIN]}$`), m('LOOSEPLAIN', `[v=\\s]*${c[d.MAINVERSIONLOOSE]}${c[d.PRERELEASELOOSE]}?${c[d.BUILD]}?`), m('LOOSE', `^${c[d.LOOSEPLAIN]}$`), m('GTLT', '((?:<|>)?=?)'), m('XRANGEIDENTIFIERLOOSE', `${c[d.NUMERICIDENTIFIERLOOSE]}|x|X|\\*`), m('XRANGEIDENTIFIER', `${c[d.NUMERICIDENTIFIER]}|x|X|\\*`), m('XRANGEPLAIN', `[v=\\s]*(${c[d.XRANGEIDENTIFIER]})(?:\\.(${c[d.XRANGEIDENTIFIER]})(?:\\.(${c[d.XRANGEIDENTIFIER]})(?:${c[d.PRERELEASE]})?${c[d.BUILD]}?)?)?`), m('XRANGEPLAINLOOSE', `[v=\\s]*(${c[d.XRANGEIDENTIFIERLOOSE]})(?:\\.(${c[d.XRANGEIDENTIFIERLOOSE]})(?:\\.(${c[d.XRANGEIDENTIFIERLOOSE]})(?:${c[d.PRERELEASELOOSE]})?${c[d.BUILD]}?)?)?`), m('XRANGE', `^${c[d.GTLT]}\\s*${c[d.XRANGEPLAIN]}$`), m('XRANGELOOSE', `^${c[d.GTLT]}\\s*${c[d.XRANGEPLAINLOOSE]}$`), m('COERCEPLAIN', `(^|[^\\d])(\\d{1,${i}})(?:\\.(\\d{1,${i}}))?(?:\\.(\\d{1,${i}}))?`), m('COERCE', `${c[d.COERCEPLAIN]}(?:$|[^\\d])`), m('COERCEFULL', c[d.COERCEPLAIN] + `(?:${c[d.PRERELEASE]})?` + `(?:${c[d.BUILD]})?` + '(?:$|[^\\d])'), m('COERCERTL', c[d.COERCE], !0), m('COERCERTLFULL', c[d.COERCEFULL], !0), m('LONETILDE', '(?:~>?)'), m('TILDETRIM', `(\\s*)${c[d.LONETILDE]}\\s+`, !0), (n.tildeTrimReplace = '$1~'), m('TILDE', `^${c[d.LONETILDE]}${c[d.XRANGEPLAIN]}$`), m('TILDELOOSE', `^${c[d.LONETILDE]}${c[d.XRANGEPLAINLOOSE]}$`), m('LONECARET', '(?:\\^)'), m('CARETTRIM', `(\\s*)${c[d.LONECARET]}\\s+`, !0), (n.caretTrimReplace = '$1^'), m('CARET', `^${c[d.LONECARET]}${c[d.XRANGEPLAIN]}$`), m('CARETLOOSE', `^${c[d.LONECARET]}${c[d.XRANGEPLAINLOOSE]}$`), m('COMPARATORLOOSE', `^${c[d.GTLT]}\\s*(${c[d.LOOSEPLAIN]})$|^$`), m('COMPARATOR', `^${c[d.GTLT]}\\s*(${c[d.FULLPLAIN]})$|^$`), m('COMPARATORTRIM', `(\\s*)${c[d.GTLT]}\\s*(${c[d.LOOSEPLAIN]}|${c[d.XRANGEPLAIN]})`, !0), (n.comparatorTrimReplace = '$1$2$3'), m('HYPHENRANGE', `^\\s*(${c[d.XRANGEPLAIN]})\\s+-\\s+(${c[d.XRANGEPLAIN]})\\s*$`), m('HYPHENRANGELOOSE', `^\\s*(${c[d.XRANGEPLAINLOOSE]})\\s+-\\s+(${c[d.XRANGEPLAINLOOSE]})\\s*$`), m('STAR', '(<|>)?=?\\s*\\*'), m('GTE0', '^\\s*>=\\s*0\\.0\\.0\\s*$'), m('GTE0PRE', '^\\s*>=\\s*0\\.0\\.0-0\\s*$');
+h('NUMERICIDENTIFIER', '0|[1-9]\\d*'), h('NUMERICIDENTIFIERLOOSE', '\\d+'), h('NONNUMERICIDENTIFIER', `\\d*[a-zA-Z-]${f}*`), h('MAINVERSION', `(${u[c.NUMERICIDENTIFIER]})\\.(${u[c.NUMERICIDENTIFIER]})\\.(${u[c.NUMERICIDENTIFIER]})`), h('MAINVERSIONLOOSE', `(${u[c.NUMERICIDENTIFIERLOOSE]})\\.(${u[c.NUMERICIDENTIFIERLOOSE]})\\.(${u[c.NUMERICIDENTIFIERLOOSE]})`), h('PRERELEASEIDENTIFIER', `(?:${u[c.NUMERICIDENTIFIER]}|${u[c.NONNUMERICIDENTIFIER]})`), h('PRERELEASEIDENTIFIERLOOSE', `(?:${u[c.NUMERICIDENTIFIERLOOSE]}|${u[c.NONNUMERICIDENTIFIER]})`), h('PRERELEASE', `(?:-(${u[c.PRERELEASEIDENTIFIER]}(?:\\.${u[c.PRERELEASEIDENTIFIER]})*))`), h('PRERELEASELOOSE', `(?:-?(${u[c.PRERELEASEIDENTIFIERLOOSE]}(?:\\.${u[c.PRERELEASEIDENTIFIERLOOSE]})*))`), h('BUILDIDENTIFIER', `${f}+`), h('BUILD', `(?:\\+(${u[c.BUILDIDENTIFIER]}(?:\\.${u[c.BUILDIDENTIFIER]})*))`), h('FULLPLAIN', `v?${u[c.MAINVERSION]}${u[c.PRERELEASE]}?${u[c.BUILD]}?`), h('FULL', `^${u[c.FULLPLAIN]}$`), h('LOOSEPLAIN', `[v=\\s]*${u[c.MAINVERSIONLOOSE]}${u[c.PRERELEASELOOSE]}?${u[c.BUILD]}?`), h('LOOSE', `^${u[c.LOOSEPLAIN]}$`), h('GTLT', '((?:<|>)?=?)'), h('XRANGEIDENTIFIERLOOSE', `${u[c.NUMERICIDENTIFIERLOOSE]}|x|X|\\*`), h('XRANGEIDENTIFIER', `${u[c.NUMERICIDENTIFIER]}|x|X|\\*`), h('XRANGEPLAIN', `[v=\\s]*(${u[c.XRANGEIDENTIFIER]})(?:\\.(${u[c.XRANGEIDENTIFIER]})(?:\\.(${u[c.XRANGEIDENTIFIER]})(?:${u[c.PRERELEASE]})?${u[c.BUILD]}?)?)?`), h('XRANGEPLAINLOOSE', `[v=\\s]*(${u[c.XRANGEIDENTIFIERLOOSE]})(?:\\.(${u[c.XRANGEIDENTIFIERLOOSE]})(?:\\.(${u[c.XRANGEIDENTIFIERLOOSE]})(?:${u[c.PRERELEASELOOSE]})?${u[c.BUILD]}?)?)?`), h('XRANGE', `^${u[c.GTLT]}\\s*${u[c.XRANGEPLAIN]}$`), h('XRANGELOOSE', `^${u[c.GTLT]}\\s*${u[c.XRANGEPLAINLOOSE]}$`), h('COERCEPLAIN', `(^|[^\\d])(\\d{1,${i}})(?:\\.(\\d{1,${i}}))?(?:\\.(\\d{1,${i}}))?`), h('COERCE', `${u[c.COERCEPLAIN]}(?:$|[^\\d])`), h('COERCEFULL', u[c.COERCEPLAIN] + `(?:${u[c.PRERELEASE]})?` + `(?:${u[c.BUILD]})?` + '(?:$|[^\\d])'), h('COERCERTL', u[c.COERCE], !0), h('COERCERTLFULL', u[c.COERCEFULL], !0), h('LONETILDE', '(?:~>?)'), h('TILDETRIM', `(\\s*)${u[c.LONETILDE]}\\s+`, !0), (t.tildeTrimReplace = '$1~'), h('TILDE', `^${u[c.LONETILDE]}${u[c.XRANGEPLAIN]}$`), h('TILDELOOSE', `^${u[c.LONETILDE]}${u[c.XRANGEPLAINLOOSE]}$`), h('LONECARET', '(?:\\^)'), h('CARETTRIM', `(\\s*)${u[c.LONECARET]}\\s+`, !0), (t.caretTrimReplace = '$1^'), h('CARET', `^${u[c.LONECARET]}${u[c.XRANGEPLAIN]}$`), h('CARETLOOSE', `^${u[c.LONECARET]}${u[c.XRANGEPLAINLOOSE]}$`), h('COMPARATORLOOSE', `^${u[c.GTLT]}\\s*(${u[c.LOOSEPLAIN]})$|^$`), h('COMPARATOR', `^${u[c.GTLT]}\\s*(${u[c.FULLPLAIN]})$|^$`), h('COMPARATORTRIM', `(\\s*)${u[c.GTLT]}\\s*(${u[c.LOOSEPLAIN]}|${u[c.XRANGEPLAIN]})`, !0), (t.comparatorTrimReplace = '$1$2$3'), h('HYPHENRANGE', `^\\s*(${u[c.XRANGEPLAIN]})\\s+-\\s+(${u[c.XRANGEPLAIN]})\\s*$`), h('HYPHENRANGELOOSE', `^\\s*(${u[c.XRANGEPLAINLOOSE]})\\s+-\\s+(${u[c.XRANGEPLAINLOOSE]})\\s*$`), h('STAR', '(<|>)?=?\\s*\\*'), h('GTE0', '^\\s*>=\\s*0\\.0\\.0\\s*$'), h('GTE0PRE', '^\\s*>=\\s*0\\.0\\.0-0\\s*$');

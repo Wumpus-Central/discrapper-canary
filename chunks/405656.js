@@ -9,7 +9,7 @@ n.d(t, {
     cl: () => I,
     g9: () => g,
     jW: () => h,
-    kG: () => T,
+    kG: () => b,
     qc: () => E,
     zV: () => v
 }),
@@ -188,12 +188,12 @@ function y(e) {
 function I(e) {
     return null == e ? '' : e.map((e) => e.getFullMatch()).join('');
 }
-let b = new a.ZP();
-function T(e) {
-    return b.tokenize(e);
+let T = new a.ZP();
+function b(e) {
+    return T.tokenize(e);
 }
 function S() {
-    return b.clearCache();
+    return T.clearCache();
 }
 function A(e) {
     return null != e ? _[e] : null;
@@ -204,9 +204,9 @@ function N(e, t) {
 }
 function C() {
     (0, s.Pe)(),
-        b.reset(),
+        T.reset(),
         r()(s.ZP).forOwn((e, t) =>
-            b.addRule({
+            T.addRule({
                 type: t,
                 ...e
             })

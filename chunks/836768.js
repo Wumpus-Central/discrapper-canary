@@ -1,4 +1,4 @@
-var i = r(972959);
-let a = { selectedTab: r(49898).GlobalDiscoveryTab.SERVERS },
-    o = (0, i.H)(() => a);
-n.Z = o;
+n.d(t, { Z: () => a });
+var i = n(972959);
+let r = { selectedTab: n(49898).GlobalDiscoveryTab.SERVERS },
+    a = (0, i.H)(() => r);

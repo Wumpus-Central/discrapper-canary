@@ -1,6 +1,6 @@
 e.exports = {
-    inputItem: 'inputItem_e795b5',
-    inputItemText: 'inputItemText_e795b5',
-    inputItemTitle: 'inputItemTitle_e795b5',
-    selectControl: 'selectControl_e795b5'
+    inputItem: 'inputItem__3b8e9',
+    inputItemText: 'inputItemText__3b8e9',
+    inputItemTitle: 'inputItemTitle__3b8e9',
+    selectControl: 'selectControl__3b8e9'
 };

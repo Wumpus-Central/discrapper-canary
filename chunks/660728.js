@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_c55991',
-    enableCard: 'enableCard_c55991',
-    arrow: 'arrow_c55991'
+    container: 'container__74f90',
+    enableCard: 'enableCard__74f90',
+    arrow: 'arrow__74f90'
 };

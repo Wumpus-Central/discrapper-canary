@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(315263),
     y = n(40851),
     I = n(607070),
-    b = n(899663),
-    T = n(793903),
+    T = n(899663),
+    b = n(793903),
     S = n(213609),
     A = n(613413),
     N = n(94795),
@@ -114,8 +114,8 @@ let eu = (0, $.Un)({
         eg && ea && !em && ev.push(d.z.CLIENT_THEMES_COACHMARK);
         let [ey, eI] = (0, G.US)(ev, eo.R.SIDEBAR, !0);
         ev.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-        let eb = ey === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-            eT = ey === d.z.CLIENT_THEMES_COACHMARK;
+        let eT = ey === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
+            eb = ey === d.z.CLIENT_THEMES_COACHMARK;
         r.useEffect(() => {
             null ==
                 (0, l.LX)(a, {
@@ -123,17 +123,17 @@ let eu = (0, $.Un)({
                     exact: !1,
                     strict: !1
                 }) &&
-                eb &&
-                !eT &&
+                eT &&
+                !eb &&
                 ((0, N.nJ)(),
                 p.Z.dispatch({
                     type: 'APP_ICON_TRACK_IMPRESSION',
                     markAsDismissed: eI
                 }));
-        }, [eb, eT, eI, a]);
+        }, [eT, eb, eI, a]);
         let eS = r.useRef(document.body),
-            eA = (eg && !ea) || eT,
-            eN = eE && !eT,
+            eA = (eg && !ea) || eb,
+            eN = eE && !eb,
             eC = ef || ep,
             { enabled: eR } = j.Z.useExperiment(
                 { location: 'AppSkeleton' },
@@ -146,7 +146,7 @@ let eu = (0, $.Un)({
         return (0, i.jsx)(
             H.Z,
             {
-                children: (0, i.jsx)(b.Z, {
+                children: (0, i.jsx)(T.Z, {
                     children: (0, i.jsxs)(_.vWI, {
                         children: [
                             (0, i.jsx)(ee.Z, { skipsSettingDefaultPageTitle: n }),
@@ -178,7 +178,7 @@ let eu = (0, $.Un)({
                                                                     'data-app-not-dev-tools': !0,
                                                                     children: (0, i.jsx)(w.m, {
                                                                         children: (0, i.jsx)(F.OR, {
-                                                                            children: (0, i.jsx)(T.Z.Provider, {
+                                                                            children: (0, i.jsx)(b.Z.Provider, {
                                                                                 value: S.Z,
                                                                                 children: (0, i.jsxs)(P.p, {
                                                                                     children: [
@@ -210,7 +210,7 @@ let eu = (0, $.Un)({
                                                                 eN &&
                                                                     !eR &&
                                                                     (0, i.jsx)(R.Z, {
-                                                                        isCoachmark: eb,
+                                                                        isCoachmark: eT,
                                                                         markAsDismissed: eI
                                                                     }),
                                                                 (eA || eN) &&

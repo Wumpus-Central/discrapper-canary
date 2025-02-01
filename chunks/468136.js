@@ -1,11 +1,11 @@
-n(47120);
+n.d(t, { Z: () => s }), n(47120);
 var i = n(544891),
-    r = n(626135),
-    l = n(186901),
+    l = n(626135),
+    r = n(186901),
     a = n(981631);
-t.Z = {
+let s = {
     [a.Etm.GET_NETWORKING_CONFIG]: {
-        scope: l.lH,
+        scope: r.lH,
         handler: () =>
             Promise.all([
                 i.tn
@@ -42,21 +42,21 @@ t.Z = {
             })
     },
     [a.Etm.NETWORKING_SYSTEM_METRICS]: {
-        scope: l.lH,
+        scope: r.lH,
         handler(e) {
             let { socket: t, args: n } = e;
-            (n.application_id = t.application.id), r.default.track(a.rMx.NETWORKING_SYSTEM_METRICS, n);
+            (n.application_id = t.application.id), l.default.track(a.rMx.NETWORKING_SYSTEM_METRICS, n);
         }
     },
     [a.Etm.NETWORKING_PEER_METRICS]: {
-        scope: l.lH,
+        scope: r.lH,
         handler(e) {
             let { socket: t, args: n } = e;
-            (n.application_id = t.application.id), r.default.track(a.rMx.NETWORKING_PEER_METRICS, n);
+            (n.application_id = t.application.id), l.default.track(a.rMx.NETWORKING_PEER_METRICS, n);
         }
     },
     [a.Etm.NETWORKING_CREATE_TOKEN]: {
-        scope: l.lH,
+        scope: r.lH,
         handler: () =>
             i.tn
                 .post({

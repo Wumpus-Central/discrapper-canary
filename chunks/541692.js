@@ -1,45 +1,45 @@
-let r;
-var i,
+let i;
+n.d(t, { Z: () => h });
+var r,
     l = n(442837),
-    u = n(570140),
+    a = n(570140),
     o = n(133080);
-function a(t, e, n) {
+function s(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
+        t in e
+            ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = n),
-        t
+            : (e[t] = n),
+        e
     );
 }
 let c = (0, o.K4)();
-function s(t) {
-    var e;
-    let { countryCode: n } = t;
-    if (null != n) c = null !== (e = (0, o.Zz)(n)) && void 0 !== e ? e : (0, o.K4)();
+function d(e) {
+    var t;
+    let { countryCode: n } = e;
+    null != n && (c = null !== (t = (0, o.Zz)(n)) && void 0 !== t ? t : (0, o.K4)());
 }
-class _ extends (i = l.ZP.DeviceSettingsStore) {
-    initialize(t) {
-        if (null != t) r = t.selectedCountryCode;
+class u extends (r = l.ZP.DeviceSettingsStore) {
+    initialize(e) {
+        null != e && (i = e.selectedCountryCode);
     }
     getUserAgnosticState() {
-        return { selectedCountryCode: r };
+        return { selectedCountryCode: i };
     }
     getCountryCode() {
-        return null != r ? r : c;
+        return null != i ? i : c;
     }
 }
-a(_, 'displayName', 'PhoneStore'),
-    a(_, 'persistKey', 'PhoneStore'),
-    (e.Z = new _(u.Z, {
-        PHONE_SET_COUNTRY_CODE: function (t) {
-            let { countryCode: e } = t;
-            r = e;
-        },
-        CONNECTION_OPEN: s,
-        SET_LOCATION_METADATA: s
-    }));
+s(u, 'displayName', 'PhoneStore'), s(u, 'persistKey', 'PhoneStore');
+let h = new u(a.Z, {
+    PHONE_SET_COUNTRY_CODE: function (e) {
+        let { countryCode: t } = e;
+        i = t;
+    },
+    CONNECTION_OPEN: d,
+    SET_LOCATION_METADATA: d
+});

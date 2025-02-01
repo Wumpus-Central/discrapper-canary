@@ -1,7 +1,7 @@
-e.exports = {
-    gatedContent: 'gatedContent_def860',
-    image: 'image_def860',
-    title: 'title_def860',
-    description: 'description_def860',
-    action: 'action_def860'
+t.exports = {
+    gatedContent: 'gatedContent__7184c',
+    image: 'image__7184c',
+    title: 'title__7184c',
+    description: 'description__7184c',
+    action: 'action__7184c'
 };

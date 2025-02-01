@@ -18,8 +18,8 @@ var i,
     v = n(885110),
     y = n(959457),
     I = n(358085),
-    b = n(138859),
-    T = n(955132),
+    T = n(138859),
+    b = n(955132),
     S = n(645436),
     A = n(344651),
     N = n(981631),
@@ -38,7 +38,7 @@ function R(e, t, n) {
     );
 }
 let O = window.DiscordNative;
-T.Wb.dispatcher.getDispatchHandler = A.Z;
+b.Wb.dispatcher.getDispatchHandler = A.Z;
 let D = new u.Z('ConnectionStore'),
     x = 100,
     L = 0,
@@ -46,16 +46,16 @@ let D = new u.Z('ConnectionStore'),
     w = !0,
     M = null;
 function k() {
-    return T.Wb.isClosed() ? (D.verbose('Socket is reconnecting because of starting new session'), T.Wb.connect()) : (D.verbose('Socket is not reconnecting during a new session because it is not closed'), !1);
+    return b.Wb.isClosed() ? (D.verbose('Socket is reconnecting because of starting new session'), b.Wb.connect()) : (D.verbose('Socket is not reconnecting during a new session because it is not closed'), !1);
 }
 function U(e) {
-    e.isSwitchingAccount && T.RR.handleAccountSwitch(), D.verbose('Closing socket because of logout'), T.Wb.close();
+    e.isSwitchingAccount && b.RR.handleAccountSwitch(), D.verbose('Closing socket because of logout'), b.Wb.close();
 }
 function G() {
-    return D.verbose('session refresh dispatched', { isEstablished: T.Wb.isSessionEstablished() }), !!T.Wb.isSessionEstablished() && (T.Wb.close(), T.Wb.connect());
+    return D.verbose('session refresh dispatched', { isEstablished: b.Wb.isSessionEstablished() }), !!b.Wb.isSessionEstablished() && (b.Wb.close(), b.Wb.connect());
 }
 async function B(e) {
-    (L = Date.now()), (P = e.sessionId), T.RR.handleConnectionOpen();
+    (L = Date.now()), (P = e.sessionId), b.RR.handleConnectionOpen();
     let t = {},
         n = E.Z.getVoiceChannelId();
     if (null != n) {
@@ -70,26 +70,26 @@ async function B(e) {
                 });
         }
     }
-    T.GC.update(t, !0), (w = !1);
+    b.GC.update(t, !0), (w = !1);
 }
 function Z() {
     D.verbose('connection closed dispatched'), (L = Date.now());
 }
 function F(e) {
-    return e.resetSocket && (T.Wb.close(), T.Wb.dispatcher.clear(), T.Wb.connect()), !1;
+    return e.resetSocket && (b.Wb.close(), b.Wb.dispatcher.clear(), b.Wb.connect()), !1;
 }
 function V(e) {
     return (
-        T.GC.update({
+        b.GC.update({
             guildId: e.guildId,
             channelId: e.channelId
         }),
-        (0, I.isIOS)() && M === N.$7l.BACKGROUND && (null == e.channelId ? T.Wb.close(!0) : T.Wb.isClosed() && (S.Y(!1), T.Wb.connect())),
+        (0, I.isIOS)() && M === N.$7l.BACKGROUND && (null == e.channelId ? b.Wb.close(!0) : b.Wb.isClosed() && (S.Y(!1), b.Wb.connect())),
         !1
     );
 }
 function j() {
-    T.GC.update();
+    b.GC.update();
 }
 function H(e) {
     var t;
@@ -100,13 +100,13 @@ function Y(e) {
     return t.reduce((e, t) => {
         if (f.default.getId() !== t.userId) return e;
         if (t.sessionId === P)
-            T.GC.setState({
+            b.GC.setState({
                 guildId: t.guildId,
                 channelId: t.channelId
             });
         else {
-            if (t.guildId !== T.GC.guildId) return e;
-            T.GC.setState({
+            if (t.guildId !== b.GC.guildId) return e;
+            b.GC.setState({
                 guildId: null,
                 channelId: null
             });
@@ -115,54 +115,54 @@ function Y(e) {
     }, !1);
 }
 function W(e) {
-    e.guild.id === T.GC.guildId &&
-        T.GC.setState({
+    e.guild.id === b.GC.guildId &&
+        b.GC.setState({
             guildId: null,
             channelId: null
         });
 }
 function K(e) {
     let { channelId: t } = e;
-    t === T.GC.channelId &&
-        T.GC.setState({
+    t === b.GC.channelId &&
+        b.GC.setState({
             guildId: null,
             channelId: null
         });
 }
 function z(e) {
     let { channel: t } = e;
-    t.id === T.GC.channelId &&
-        T.GC.setState({
+    t.id === b.GC.channelId &&
+        b.GC.setState({
             guildId: null,
             channelId: null
         });
 }
 function q(e) {
     if (e.state !== N.hes.DISCONNECTED) return !1;
-    e.willReconnect && (null != e.streamKey ? T.Wb.streamPing(e.streamKey) : T.Wb.voiceServerPing());
+    e.willReconnect && (null != e.streamKey ? b.Wb.streamPing(e.streamKey) : b.Wb.voiceServerPing());
 }
 function Q(e) {
-    return (0, I.isIOS)() ? (f.default.isAuthenticated() && (M === N.$7l.INACTIVE && e.state === N.$7l.BACKGROUND && null == T.GC.channelId ? T.Wb.close(!0) : M === N.$7l.BACKGROUND && e.state === N.$7l.ACTIVE && T.Wb.isClosed() && (S.Y(!1), T.Wb.connect())), (M = e.state)) : e.state === N.$7l.ACTIVE && (S.Y(!1), f.default.isAuthenticated() && T.Wb.resetBackoff('App state is active')), !1;
+    return (0, I.isIOS)() ? (f.default.isAuthenticated() && (M === N.$7l.INACTIVE && e.state === N.$7l.BACKGROUND && null == b.GC.channelId ? b.Wb.close(!0) : M === N.$7l.BACKGROUND && e.state === N.$7l.ACTIVE && b.Wb.isClosed() && (S.Y(!1), b.Wb.connect())), (M = e.state)) : e.state === N.$7l.ACTIVE && (S.Y(!1), f.default.isAuthenticated() && b.Wb.resetBackoff('App state is active')), !1;
 }
 function X() {
-    return T.GC.update(), !1;
+    return b.GC.update(), !1;
 }
 function J() {
-    return T.RR.update(), !1;
+    return b.RR.update(), !1;
 }
 function $(e) {
     return (
-        T.Wb.isSessionEstablished() &&
+        b.Wb.isSessionEstablished() &&
             ('userIds' in e
                 ? a()(e.userIds)
                       .chunk(x)
                       .forEach((t) => {
-                          T.Wb.requestGuildMembers(e.guildIds, {
+                          b.Wb.requestGuildMembers(e.guildIds, {
                               userIds: t,
                               presences: !!e.presences
                           });
                       })
-                : T.Wb.requestGuildMembers(e.guildIds, {
+                : b.Wb.requestGuildMembers(e.guildIds, {
                       query: e.query,
                       limit: e.limit,
                       presences: !!e.presences
@@ -172,36 +172,36 @@ function $(e) {
 }
 function ee(e) {
     let { guildId: t, query: n, continuationToken: i } = e;
-    T.Wb.isSessionEstablished() &&
-        T.Wb.searchRecentMembers(t, {
+    b.Wb.isSessionEstablished() &&
+        b.Wb.searchRecentMembers(t, {
             query: n,
             continuationToken: i
         });
 }
 function et(e) {
     let { subscriptions: t } = e;
-    return T.Wb.isSessionEstablished() && T.Wb.updateGuildSubscriptions(t), !1;
+    return b.Wb.isSessionEstablished() && b.Wb.updateGuildSubscriptions(t), !1;
 }
 function en(e) {
     let { channelId: t } = e;
-    return T.Wb.isSessionEstablished() && T.Wb.callConnect(t), !1;
+    return b.Wb.isSessionEstablished() && b.Wb.callConnect(t), !1;
 }
 function ei(e) {
     let { channelIds: t } = e;
     return (
-        T.Wb.isSessionEstablished() &&
+        b.Wb.isSessionEstablished() &&
             t.forEach((e) => {
-                T.Wb.callConnect(e);
+                b.Wb.callConnect(e);
             }),
         !1
     );
 }
 function er(e) {
     let { sessionId: t, payload: n } = e;
-    return T.Wb.isSessionEstablished() && T.Wb.remoteCommand(t, n), !1;
+    return b.Wb.isSessionEstablished() && b.Wb.remoteCommand(t, n), !1;
 }
 function ea(e) {
-    T.Wb.isSessionEstablished() && T.Wb.streamDelete(e);
+    b.Wb.isSessionEstablished() && b.Wb.streamDelete(e);
 }
 function es() {
     let e = eo();
@@ -214,54 +214,54 @@ function eo() {
 }
 function el(e) {
     let { streamType: t, guildId: n, channelId: i } = e;
-    if (T.Wb.isSessionEstablished()) {
+    if (b.Wb.isSessionEstablished()) {
         var r, a;
         let e = null != n ? (null === (r = p.Z.getChannel(i)) || void 0 === r ? void 0 : r.rtcRegion) : null === (a = _.Z.getCall(i)) || void 0 === a ? void 0 : a.region;
-        T.Wb.streamCreate(t, n, i, null != e ? e : g.Z.getPreferredRegion());
+        b.Wb.streamCreate(t, n, i, null != e ? e : g.Z.getPreferredRegion());
     }
     return !1;
 }
 function eu(e) {
     let { streamKey: t, paused: n } = e;
-    T.Wb.isSessionEstablished() && T.Wb.streamSetPaused(t, n);
+    b.Wb.isSessionEstablished() && b.Wb.streamSetPaused(t, n);
 }
 function ec(e) {
     let { streamKey: t, allowMultiple: n } = e;
-    return T.Wb.isSessionEstablished() && (n || es(), T.Wb.streamWatch(t)), !1;
+    return b.Wb.isSessionEstablished() && (n || es(), b.Wb.streamWatch(t)), !1;
 }
 function ed(e) {
     let { streamKey: t } = e;
     return ea(t), j(), !1;
 }
 function ef() {
-    return T.Wb.expeditedHeartbeat(5000, 'user clicked on notification', !0), !1;
+    return b.Wb.expeditedHeartbeat(5000, 'user clicked on notification', !0), !1;
 }
 function e_(e) {
     let { guildId: t, channelId: n, threads: i } = e;
-    T.Wb.requestForumUnreads(t, n, i);
+    b.Wb.requestForumUnreads(t, n, i);
 }
 function ep(e) {
-    T.Wb.connectionState !== b.Z.WILL_RECONNECT && T.Wb.resetSocketOnError(e.args);
+    b.Wb.connectionState !== T.Z.WILL_RECONNECT && b.Wb.resetSocketOnError(e.args);
 }
 function eh(e) {
     let { guildIds: t } = e;
-    T.Wb.requestSoundboardSounds(t);
+    b.Wb.requestSoundboardSounds(t);
 }
 class em extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(f.default, E.Z, p.Z, _.Z, d.Z), this.syncWith([h.Z], X), this.syncWith([v.Z], J);
     }
     getSocket() {
-        return T.Wb;
+        return b.Wb;
     }
     isTryingToConnect() {
-        return !T.Wb.isClosed();
+        return !b.Wb.isClosed();
     }
     isConnected() {
-        return T.Wb.isSessionEstablished();
+        return b.Wb.isSessionEstablished();
     }
     isConnectedOrOverlay() {
-        return T.Wb.isSessionEstablished() || __OVERLAY__;
+        return b.Wb.isSessionEstablished() || __OVERLAY__;
     }
     lastTimeConnectedChanged() {
         return L;

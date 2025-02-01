@@ -1,4 +1,4 @@
 e.exports = {
-    base: 'base_aabd07',
-    widget: 'widget_aabd07'
+    base: 'base_e3f659',
+    widget: 'widget_e3f659'
 };

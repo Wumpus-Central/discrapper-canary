@@ -13,8 +13,8 @@ e.exports = function (e, t, n, p, h, m, g, E) {
     var v,
         y,
         I,
-        b,
         T,
+        b,
         S,
         A,
         N,
@@ -45,21 +45,21 @@ e.exports = function (e, t, n, p, h, m, g, E) {
     if (k > 0 && (e === o || 1 !== L)) return -1;
     for (O = 1, V[1] = 0; O < r; O++) V[O + 1] = V[O] + F[O];
     for (D = 0; D < p; D++) 0 !== t[n + D] && (g[V[t[n + D]]++] = D);
-    if ((e === o ? ((B = j = g), (S = 19)) : e === l ? ((B = c), (Z -= 257), (j = d), (H -= 257), (S = 256)) : ((B = f), (j = _), (S = -1)), (G = 0), (D = 0), (O = x), (T = m), (w = P), (M = 0), (I = -1), (b = (U = 1 << P) - 1), (e === l && U > a) || (e === u && U > s))) return 1;
+    if ((e === o ? ((B = j = g), (S = 19)) : e === l ? ((B = c), (Z -= 257), (j = d), (H -= 257), (S = 256)) : ((B = f), (j = _), (S = -1)), (G = 0), (D = 0), (O = x), (b = m), (w = P), (M = 0), (I = -1), (T = (U = 1 << P) - 1), (e === l && U > a) || (e === u && U > s))) return 1;
     for (;;) {
         (A = O - M), g[D] < S ? ((N = 0), (C = g[D])) : g[D] > S ? ((N = j[H + g[D]]), (C = B[Z + g[D]])) : ((N = 96), (C = 0)), (v = 1 << (O - M)), (x = y = 1 << w);
-        do h[T + (G >> M) + (y -= v)] = (A << 24) | (N << 16) | C | 0;
+        do h[b + (G >> M) + (y -= v)] = (A << 24) | (N << 16) | C | 0;
         while (0 !== y);
         for (v = 1 << (O - 1); G & v; ) v >>= 1;
         if ((0 !== v ? ((G &= v - 1), (G += v)) : (G = 0), D++, 0 == --F[O])) {
             if (O === L) break;
             O = t[n + g[D]];
         }
-        if (O > P && (G & b) !== I) {
-            for (0 === M && (M = P), T += x, k = 1 << (w = O - M); w + M < L && !((k -= F[w + M]) <= 0); ) w++, (k <<= 1);
+        if (O > P && (G & T) !== I) {
+            for (0 === M && (M = P), b += x, k = 1 << (w = O - M); w + M < L && !((k -= F[w + M]) <= 0); ) w++, (k <<= 1);
             if (((U += 1 << w), (e === l && U > a) || (e === u && U > s))) return 1;
-            h[(I = G & b)] = (P << 24) | (w << 16) | (T - m) | 0;
+            h[(I = G & T)] = (P << 24) | (w << 16) | (b - m) | 0;
         }
     }
-    return 0 !== G && (h[T + G] = ((O - M) << 24) | 4194304), (E.bits = P), 0;
+    return 0 !== G && (h[b + G] = ((O - M) << 24) | 4194304), (E.bits = P), 0;
 };

@@ -59,8 +59,8 @@ function g(e, t, n, r) {
 let E = function (e) {
     let { id: t, onChange: n, checked: a, disabled: m, className: E, focusProps: v, innerRef: y } = e,
         { reducedMotion: I } = r.useContext(u.S),
-        b = r.useRef(null),
-        [T, S] = r.useState(!1),
+        T = r.useRef(null),
+        [b, S] = r.useState(!1),
         A = (0, _.Q3)('Switch'),
         N = (0, d.d)(A ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
         C = (0, d.d)(A ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
@@ -68,7 +68,7 @@ let E = function (e) {
             {
                 config: h,
                 opacity: m ? (A ? 0.5 : 0.3) : 1,
-                state: T ? (a ? 0.7 : 0.3) : a ? 1 : 0
+                state: b ? (a ? 0.7 : 0.3) : a ? 1 : 0
             },
             'animate-always'
         );
@@ -80,7 +80,7 @@ let E = function (e) {
     }
     function L(e) {
         var t;
-        !m && T && !e.repeat && (S(!1), 'Enter' === e.key && (null === (t = b.current) || void 0 === t || t.click()));
+        !m && b && !e.repeat && (S(!1), 'Enter' === e.key && (null === (t = T.current) || void 0 === t || t.click()));
     }
     return (0, i.jsx)(c.t, {
         ...v,
@@ -140,7 +140,7 @@ let E = function (e) {
                     id: t,
                     type: 'checkbox',
                     ref: (e) => {
-                        (b.current = e), null != y && (y.current = e);
+                        (T.current = e), null != y && (y.current = e);
                     },
                     className: p.input,
                     tabIndex: m ? -1 : 0,

@@ -1,5 +1,5 @@
 e.exports = {
-    popoutHeader: 'popoutHeader_aab567',
-    channelIcon: 'channelIcon_aab567',
-    channelName: 'channelName_aab567'
+    popoutHeader: 'popoutHeader__628e6',
+    channelIcon: 'channelIcon__628e6',
+    channelName: 'channelName__628e6'
 };

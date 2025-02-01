@@ -1,3 +1,3 @@
-e.exports = function () {
+t.exports = function () {
     return [];
 };

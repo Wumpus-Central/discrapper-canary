@@ -1,9 +1,9 @@
-var i = r(451530),
-    a = (function () {
+n.d(t, { Z: () => a });
+var i = n(451530),
+    r = (function () {
         var e = /[^.]+$/.exec((i.Z && i.Z.keys && i.Z.keys.IE_PROTO) || '');
         return e ? 'Symbol(src)_1.' + e : '';
     })();
-function o(e) {
-    return !!a && a in e;
-}
-n.Z = o;
+let a = function (e) {
+    return !!r && r in e;
+};

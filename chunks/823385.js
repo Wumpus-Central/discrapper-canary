@@ -18,8 +18,8 @@ var r,
     v = n(271383),
     y = n(430824),
     I = n(496675),
-    b = n(306680),
-    T = n(944486),
+    T = n(306680),
+    b = n(944486),
     S = n(914010),
     A = n(9156),
     N = n(483360),
@@ -74,7 +74,7 @@ function W(e) {
 function K() {
     var e, t;
     let n = null !== (e = S.Z.getGuildId()) && void 0 !== e ? e : void 0,
-        i = null !== (t = T.Z.getChannelId()) && void 0 !== t ? t : void 0;
+        i = null !== (t = b.Z.getChannelId()) && void 0 !== t ? t : void 0;
     switch (G) {
         case c.h8.USER: {
             let e = h.default.getId();
@@ -121,7 +121,7 @@ function K() {
     a.length > 0 && r.push((0, c.o6)(O.intl.string(O.t['80lOZ2'])), ...a);
     let o = Y((e) => e === i || j.includes(e));
     o.length > 0 && r.push((0, c.o6)(O.intl.string(O.t['4B63jY'])), ...o);
-    let l = b.ZP.getMentionChannelIds()
+    let l = T.ZP.getMentionChannelIds()
         .filter((e) => e !== i && !j.includes(e))
         .map((e) => W(e))
         .filter(C.lm)

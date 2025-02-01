@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => N,
-    _1: () => T,
+    _1: () => b,
     jd: () => S
 }),
     n(627341),
@@ -24,8 +24,8 @@ var i = n(200651),
     v = n(652853),
     y = n(228168),
     I = n(388032),
-    b = n(518919);
-let T = 2700,
+    T = n(518919);
+let b = 2700,
     S = '> -# *',
     A = (e, t) =>
         (0, l.EQ)({
@@ -76,7 +76,7 @@ let T = 2700,
             )
             .exhaustive();
 function N(e) {
-    let { user: t, sourceType: n, isVisible: a, isExpandable: T, interactionSourceId: S, onAction: N, renderMoreButtonPopout: C } = e,
+    let { user: t, sourceType: n, isVisible: a, isExpandable: b, interactionSourceId: S, onAction: N, renderMoreButtonPopout: C } = e,
         R = (0, u.e7)([p.default], () => p.default.getId() === t.id),
         O = (0, h.Z)(t.id),
         { profileType: D } = (0, v.z)(),
@@ -120,50 +120,50 @@ function N(e) {
                 D === y.y0.BITE_SIZE && (0, _.EW)(c.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
         Z = (e) => {
-            e.animationName === (0, o.get)(b, 'fadeInAndOut') && U(!1);
+            e.animationName === (0, o.get)(T, 'fadeInAndOut') && U(!1);
         };
     return (0, i.jsxs)(f.ZP, {
-        className: s()(b.popover, {
-            [b.fadeInAndOut]: k,
-            [b.visible]: a,
-            [b.expandable]: T,
-            [b.statusPopover]: n === y.n_.STATUS,
-            [b.avatarPopover]: n === y.n_.AVATAR,
-            [b.activityPopover]: n === y.n_.ACTIVITY
+        className: s()(T.popover, {
+            [T.fadeInAndOut]: k,
+            [T.visible]: a,
+            [T.expandable]: b,
+            [T.statusPopover]: n === y.n_.STATUS,
+            [T.avatarPopover]: n === y.n_.AVATAR,
+            [T.activityPopover]: n === y.n_.ACTIVITY
         }),
         onAnimationEnd: k ? Z : void 0,
         children: [
             (0, i.jsx)(d.DY3, {
                 text: I.intl.string(I.t.nhaI4e),
                 shouldShow: a,
-                className: b.tooltipContainer,
+                className: T.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, i.jsx)(f.zx, {
                     onClick: G,
-                    className: b.button,
+                    className: T.button,
                     'aria-label': A(y.P.REACT, n),
                     'aria-haspopup': 'dialog',
                     children: (0, i.jsx)(d.EO4, {
                         size: 'xs',
-                        className: b.icon
+                        className: T.icon
                     })
                 })
             }),
             (0, i.jsx)(d.DY3, {
                 text: I.intl.string(I.t.RmDYKC),
                 shouldShow: a,
-                className: b.tooltipContainer,
+                className: T.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, i.jsx)(f.zx, {
                     onClick: B,
-                    className: b.button,
+                    className: T.button,
                     'aria-label': A(y.P.REPLY, n),
                     'aria-haspopup': 'dialog',
                     children: (0, i.jsx)(d.n$P, {
                         size: 'xs',
-                        className: b.icon
+                        className: T.icon
                     })
                 })
             }),
@@ -173,16 +173,16 @@ function N(e) {
                       (0, i.jsx)(d.DY3, {
                           text: I.intl.string(I.t.UKOtz8),
                           shouldShow: a,
-                          className: b.tooltipContainer,
+                          className: T.tooltipContainer,
                           delay: 0,
                           'aria-label': !1,
                           children: (0, i.jsx)(f.zx, {
                               ...e,
-                              className: b.button,
+                              className: T.button,
                               'aria-label': I.intl.string(I.t.UKOtz8),
                               children: (0, i.jsx)(d.xhG, {
                                   size: 'xs',
-                                  className: b.icon
+                                  className: T.icon
                               })
                           })
                       })

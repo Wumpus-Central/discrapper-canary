@@ -1,7 +1,6 @@
 n.d(t, {
-    x: function () {
-        return C;
-    }
+    Z: () => E,
+    x: () => C
 }),
     n(47120);
 var i,
@@ -11,14 +10,14 @@ var i,
     a = n.n(s),
     o = n(642128),
     c = n(772848),
-    d = n(513431),
+    d = n(374470),
     u = n(477690),
     m = n(481060),
     h = n(624138),
     g = n(981631),
     x = n(388032),
     p = n(4122);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,20 +31,20 @@ function f(e, t, n) {
     );
 }
 let C = -1,
-    v = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
-    I = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
+    f = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
+    v = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
     N = {
         tension: 140,
         friction: 30
     },
-    _ = {
+    j = {
         tension: 800,
         friction: 20
     };
-class T extends (i = l.Component) {
+class I extends (i = l.Component) {
     getTotalHeight() {
         let { tiers: e } = this.props;
-        return e[e.length - 1].y + I / 2;
+        return e[e.length - 1].y + v / 2;
     }
     getProgressHeight(e) {
         let { tiers: t, progress: n } = this.props,
@@ -70,11 +69,11 @@ class T extends (i = l.Component) {
             s = null != l ? l.numRequired : null,
             a = null != s ? s - e : null;
         return (0, r.jsxs)(
-            m.TooltipLayer,
+            m.Cys,
             {
                 targetElementRef: this.foregroundTooltipElementRef,
                 position: 'right',
-                color: m.Tooltip.Colors.BLACK,
+                color: m.ua7.Colors.BLACK,
                 tooltipClassName: p.foregroundTooltip,
                 children: [
                     (0, r.jsx)('div', { children: x.intl.format(x.t.gDsyBw, { numSubscriptions: e }) }),
@@ -118,20 +117,20 @@ class T extends (i = l.Component) {
             u = null != c && e.key === c.key,
             h = e.key === a[0].key;
         l = h ? p.tierFirst : u ? p.tierCurrent : d ? p.tierAccomplished : p.tierInProgress;
-        let g = e.y - (h ? 0 : I / 2),
+        let g = e.y - (h ? 0 : v / 2),
             x = this.state.tierMarkerActive === t,
-            f = !h && u && x;
+            _ = !h && u && x;
         return (0, r.jsx)(
-            m.Tooltip,
+            m.ua7,
             {
                 text: this.renderTierMarkerTooltip(e),
                 position: 'right',
                 'aria-label': null !== (i = e.name) && void 0 !== i ? i : '',
                 children: (e) =>
-                    (0, r.jsx)(m.Spring, {
+                    (0, r.jsx)(m.AMe, {
                         from: { scale: 1 },
-                        to: { scale: f ? 1.625 : 1 },
-                        config: _,
+                        to: { scale: _ ? 1.625 : 1 },
+                        config: j,
                         children: (t) =>
                             (0, r.jsx)(o.animated.div, {
                                 ...e,
@@ -141,8 +140,8 @@ class T extends (i = l.Component) {
                                     transform: t.scale.interpolate((e) => 'scale('.concat(e, ')'))
                                 },
                                 children:
-                                    f &&
-                                    (0, r.jsx)(m.CheckmarkLargeIcon, {
+                                    _ &&
+                                    (0, r.jsx)(m.dz2, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: p.currentTierIcon
@@ -161,7 +160,7 @@ class T extends (i = l.Component) {
                 (0, r.jsx)('rect', {
                     x: '0',
                     y: '0',
-                    width: v,
+                    width: f,
                     height: e,
                     fill: 'white'
                 }),
@@ -169,9 +168,9 @@ class T extends (i = l.Component) {
                     (0, r.jsx)(
                         'circle',
                         {
-                            cx: v / 2,
+                            cx: f / 2,
                             cy: e.y,
-                            r: v / 2,
+                            r: f / 2,
                             fill: 'black'
                         },
                         e.key
@@ -191,7 +190,7 @@ class T extends (i = l.Component) {
                     height: e,
                     fill: 'currentColor'
                 }),
-                (0, r.jsx)(m.Spring, {
+                (0, r.jsx)(m.AMe, {
                     from: { height: 0 },
                     to: { height: n },
                     config: N,
@@ -220,8 +219,8 @@ class T extends (i = l.Component) {
             style: { height: i },
             children: [
                 (0, r.jsxs)('svg', {
-                    viewBox: '0 0 '.concat(v, ' ').concat(i),
-                    width: v,
+                    viewBox: '0 0 '.concat(f, ' ').concat(i),
+                    width: f,
                     height: i,
                     children: [this.renderProgressMask(i), this.renderProgressBar(i, n)]
                 }),
@@ -237,27 +236,27 @@ class T extends (i = l.Component) {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'state', {
+            _(this, 'state', {
                 showForegroundTooltip: !1,
                 foregroundTooltipY: 0,
                 tierMarkerActive: 0,
                 finishedInitialAnimation: !1
             }),
-            f(this, 'foregroundTooltipElementRef', l.createRef()),
-            f(this, 'tierMarkerMaskId', (0, c.Z)()),
-            f(this, 'handleForegroundMouseEnter', (e) => {
+            _(this, 'foregroundTooltipElementRef', l.createRef()),
+            _(this, 'tierMarkerMaskId', (0, c.Z)()),
+            _(this, 'handleForegroundMouseEnter', (e) => {
                 this.setState({ showForegroundTooltip: !0 }), this.handleForegroundMouseMove(e);
             }),
-            f(this, 'handleForegroundMouseMove', (e) => {
+            _(this, 'handleForegroundMouseMove', (e) => {
                 if (!(0, d.k)(e.target)) return;
                 let t = e.target.getBoundingClientRect(),
                     n = e.clientY - t.top;
                 n !== this.state.foregroundTooltipY && this.setState({ foregroundTooltipY: n });
             }),
-            f(this, 'handleForegroundMouseLeave', () => {
+            _(this, 'handleForegroundMouseLeave', () => {
                 this.setState({ showForegroundTooltip: !1 });
             }),
-            f(this, 'handleForegroundFrame', (e) => {
+            _(this, 'handleForegroundFrame', (e) => {
                 let { height: t } = e,
                     { tiers: n, progress: i, onAnimatedTierMaker: r } = this.props,
                     { tierMarkerActive: l } = this.state;
@@ -265,14 +264,15 @@ class T extends (i = l.Component) {
                     let s = n[e],
                         a = l === e;
                     if (t + 20 >= s.y && i >= s.numRequired) {
-                        !a && (this.setState({ tierMarkerActive: e }), null != r && r(s));
+                        a || (this.setState({ tierMarkerActive: e }), null != r && r(s));
                         return;
                     }
                 }
             }),
-            f(this, 'handleFinishedInitialAnimation', () => {
+            _(this, 'handleFinishedInitialAnimation', () => {
                 this.setState({ finishedInitialAnimation: !0 });
             });
     }
 }
-f(T, 'defaultProps', { initialAnimationDelay: 0 }), (t.Z = T);
+_(I, 'defaultProps', { initialAnimationDelay: 0 });
+let E = I;

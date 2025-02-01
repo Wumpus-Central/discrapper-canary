@@ -1,4 +1,4 @@
 e.exports = {
-    errorImage: 'errorImage_d90cba',
-    carousel: 'carousel_d90cba'
+    errorImage: 'errorImage_d389c2',
+    carousel: 'carousel_d389c2'
 };

@@ -1,136 +1,136 @@
 let i;
-var a,
-    o = r(47120);
-var s = r(442837),
-    l = r(570140),
-    u = r(706454),
-    c = r(659181),
-    d = r(77498);
-function f(e, n, r) {
+n.d(t, { Z: () => P }), n(47120);
+var r,
+    a = n(442837),
+    s = n(570140),
+    o = n(706454),
+    l = n(659181),
+    u = n(77498);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let p = new Map(),
-    h = new Set(),
+let d = new Map(),
+    f = new Set(),
     _ = new Set(),
-    m = new Map(),
-    g = new Map(),
-    E = new Map();
-function v(e) {
-    var n;
-    m.set(e.id, c.Z.createFromServer(e)),
-        h.delete(e.id),
+    p = new Map(),
+    h = new Map(),
+    m = new Map();
+function g(e) {
+    var t;
+    p.set(e.id, l.Z.createFromServer(e)),
+        f.delete(e.id),
         _.delete(e.id),
-        null === (n = e.bundled_sku_ids) ||
-            void 0 === n ||
-            n.forEach((n) => {
-                p.set(n, e.id);
+        null === (t = e.bundled_sku_ids) ||
+            void 0 === t ||
+            t.forEach((t) => {
+                d.set(t, e.id);
             }),
-        !g.has(e.application_id) && g.set(e.application_id, new Set()),
-        g.get(e.application_id).add(e.id);
+        h.has(e.application_id) || h.set(e.application_id, new Set()),
+        h.get(e.application_id).add(e.id);
+}
+function E(e) {
+    g(e);
+}
+function v(e) {
+    let { skuId: t } = e;
+    f.add(t);
 }
 function y(e) {
-    v(e);
-}
-function b(e) {
-    let { skuId: n } = e;
-    h.add(n);
+    let { skuId: t } = e;
+    f.add(t);
 }
 function I(e) {
-    let { skuId: n } = e;
-    h.add(n);
+    let { skuId: t } = e;
+    f.delete(t), _.add(t);
 }
 function T(e) {
-    let { skuId: n } = e;
-    h.delete(n), _.add(n);
+    let { skuId: t } = e;
+    f.delete(t), _.add(t);
+}
+function b(e) {
+    let { giftCode: t } = e;
+    if (null == t.store_listing) return !1;
+    g(t.store_listing.sku);
 }
 function S(e) {
-    let { skuId: n } = e;
-    h.delete(n), _.add(n);
+    let { sku: t } = e;
+    E(t);
 }
 function A(e) {
-    let { giftCode: n } = e;
-    if (null == n.store_listing) return !1;
-    v(n.store_listing.sku);
-}
-function C(e) {
-    let { sku: n } = e;
-    y(n);
+    let { guildId: t, skus: n } = e;
+    for (let e of n) E(e);
+    null != t && m.set(t, new Set(n.map((e) => e.id)));
 }
 function N(e) {
-    let { guildId: n, skus: r } = e;
-    for (let e of r) y(e);
-    null != n && E.set(n, new Set(r.map((e) => e.id)));
+    g(e.sku), null != e.child_skus && e.child_skus.forEach((e) => g(e)), null != e.alternative_skus && e.alternative_skus.forEach((e) => g(e));
+}
+function C(e) {
+    let { storeListings: t } = e;
+    for (let e of t) N(e);
 }
 function R(e) {
-    v(e.sku), null != e.child_skus && e.child_skus.forEach((e) => v(e)), null != e.alternative_skus && e.alternative_skus.forEach((e) => v(e));
+    let { storeListing: t } = e;
+    N(t);
 }
 function O(e) {
-    let { storeListings: n } = e;
-    for (let e of n) R(e);
+    let { entitlements: t } = e;
+    for (let e of t) null != e.sku && g(e.sku);
 }
-function D(e) {
-    let { storeListing: n } = e;
-    R(n);
-}
-function L(e) {
-    let { entitlements: n } = e;
-    for (let e of n) null != e.sku && v(e.sku);
+function D() {
+    (d = new Map()), (f = new Set()), (_ = new Set()), (p = new Map()), (h = new Map()), (m = new Map());
 }
 function x() {
-    (p = new Map()), (h = new Set()), (_ = new Set()), (m = new Map()), (g = new Map()), (E = new Map());
+    if (i === o.default.locale) return !1;
+    (i = o.default.locale), D();
 }
-function w() {
-    if (i === u.default.locale) return !1;
-    (i = u.default.locale), x();
-}
-class P extends (a = s.yh) {
+class L extends (r = a.yh) {
     initialize() {
-        this.waitFor(u.default, d.Z), this.syncWith([u.default], w), (i = u.default.locale);
+        this.waitFor(o.default, u.Z), this.syncWith([o.default], x), (i = o.default.locale);
     }
     get(e) {
-        return m.get(e);
+        return p.get(e);
     }
     getForApplication(e) {
-        let n = g.get(e);
-        return null == n ? [] : Array.from(n).map((e) => m.get(e));
+        let t = h.get(e);
+        return null == t ? [] : Array.from(t).map((e) => p.get(e));
     }
     isFetching(e) {
-        return h.has(e);
+        return f.has(e);
     }
     getSKUs() {
-        return Object.fromEntries(m);
+        return Object.fromEntries(p);
     }
     getParentSKU(e) {
-        let n = p.get(e);
-        if (null != n) return this.get(n);
+        let t = d.get(e);
+        if (null != t) return this.get(t);
     }
     didFetchingSkuFail(e) {
         return _.has(e);
     }
 }
-f(P, 'displayName', 'SKUStore'),
-    (n.Z = new P(l.Z, {
-        STORE_LISTINGS_FETCH_START: b,
-        STORE_LISTINGS_FETCH_FAIL: T,
-        STORE_LISTINGS_FETCH_SUCCESS: O,
-        STORE_LISTING_FETCH_SUCCESS: D,
-        GIFT_CODE_RESOLVE_SUCCESS: A,
-        SKU_FETCH_START: I,
-        SKU_FETCH_SUCCESS: C,
-        SKU_FETCH_FAIL: S,
-        SKUS_FETCH_SUCCESS: N,
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: L,
-        APPLICATION_STORE_CLEAR_DATA: x,
-        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: L,
-        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: L
-    }));
+c(L, 'displayName', 'SKUStore');
+let P = new L(s.Z, {
+    STORE_LISTINGS_FETCH_START: v,
+    STORE_LISTINGS_FETCH_FAIL: I,
+    STORE_LISTINGS_FETCH_SUCCESS: C,
+    STORE_LISTING_FETCH_SUCCESS: R,
+    GIFT_CODE_RESOLVE_SUCCESS: b,
+    SKU_FETCH_START: y,
+    SKU_FETCH_SUCCESS: S,
+    SKU_FETCH_FAIL: T,
+    SKUS_FETCH_SUCCESS: A,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: O,
+    APPLICATION_STORE_CLEAR_DATA: D,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: O,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: O
+});

@@ -1,5 +1,5 @@
 e.exports = {
-    button: 'button_adca65',
-    enabled: 'enabled_adca65',
-    disabled: 'disabled_adca65'
+    button: 'button__67645',
+    enabled: 'enabled__67645',
+    disabled: 'disabled__67645'
 };

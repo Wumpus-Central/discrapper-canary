@@ -1,6 +1,6 @@
-var i = r(970636),
-    a = r(939556),
-    o = r(285709),
-    s = o && o.isSet,
-    l = s ? a(s) : i;
-e.exports = l;
+var i = n(970636),
+    r = n(939556),
+    a = n(285709),
+    s = a && a.isSet,
+    o = s ? r(s) : i;
+e.exports = o;

@@ -1,88 +1,88 @@
-n.r(e),
-    n.d(e, {
-        transitionToGlobalDiscovery: function () {
-            return function t(e) {
-                var n, I, _;
-                let E = e.tab;
-                switch ((s.Z.setState({ selectedTab: E }), E)) {
-                    case p.GlobalDiscoveryTab.SERVERS:
-                        let P = e.selectedServersTab;
+n.r(t),
+    n.d(t, {
+        transitionToGlobalDiscovery: () =>
+            function e(t) {
+                var n, f, T;
+                let p = t.tab;
+                switch ((d.Z.setState({ selectedTab: p }), p)) {
+                    case u.GlobalDiscoveryTab.SERVERS:
+                        let S = t.selectedServersTab;
                         return (
-                            null != P
-                                ? o.Z.setState({
-                                      selectedTab: P,
-                                      entrypoint: null !== (n = e.entrypoint) && void 0 !== n ? n : O.Qq.UNKNOWN
+                            null != S
+                                ? a.Z.setState({
+                                      selectedTab: S,
+                                      entrypoint: null !== (n = t.entrypoint) && void 0 !== n ? n : I.Qq.UNKNOWN
                                   })
-                                : o.Z.setState({ entrypoint: null !== (I = e.entrypoint) && void 0 !== I ? I : O.Qq.UNKNOWN }),
-                            (0, i.uL)(d.Z5c.GLOBAL_DISCOVERY_SERVERS, e.extra)
+                                : a.Z.setState({ entrypoint: null !== (f = t.entrypoint) && void 0 !== f ? f : I.Qq.UNKNOWN }),
+                            (0, r.uL)(s.Z5c.GLOBAL_DISCOVERY_SERVERS, t.extra)
                         );
-                    case p.GlobalDiscoveryTab.APPS:
-                        if (null != e.newSessionState) {
-                            let n = (0, l.PM)(),
-                                { guildId: o, entrypoint: a } = e.newSessionState;
+                    case u.GlobalDiscoveryTab.APPS:
+                        if (null != t.newSessionState) {
+                            let n = (0, o.PM)(),
+                                { guildId: a, entrypoint: l } = t.newSessionState;
                             if (
-                                (r.z8.setState({
+                                (i.z8.setState({
                                     sessionId: n,
-                                    guildId: null != o ? o : null,
-                                    entrypoint: a,
+                                    guildId: null != a ? a : null,
+                                    entrypoint: l,
                                     trackedOpenedFromExternalEntrypoint: !1
                                 }),
-                                u.default.track(d.rMx.APP_DIRECTORY_OPENED, {
-                                    source: null == a ? void 0 : a.name,
+                                _.default.track(s.rMx.APP_DIRECTORY_OPENED, {
+                                    source: null == l ? void 0 : l.name,
                                     session_id: n,
-                                    guild_id: o,
-                                    user_id: null === (_ = c.default.getCurrentUser()) || void 0 === _ ? void 0 : _.id
+                                    guild_id: a,
+                                    user_id: null === (T = c.default.getCurrentUser()) || void 0 === T ? void 0 : T.id
                                 }),
-                                e.newSessionState.restorePreviousView)
+                                t.newSessionState.restorePreviousView)
                             )
-                                return t(
+                                return e(
                                     (function () {
-                                        let { lastItem: t } = r.aQ.getState();
-                                        if (null != t)
-                                            switch (t.type) {
-                                                case r.m_.APPLICATION:
+                                        let { lastItem: e } = i.aQ.getState();
+                                        if (null != e)
+                                            switch (e.type) {
+                                                case i.m_.APPLICATION:
                                                     return {
-                                                        tab: p.GlobalDiscoveryTab.APPS,
-                                                        applicationId: t.applicationId,
-                                                        section: t.section
+                                                        tab: u.GlobalDiscoveryTab.APPS,
+                                                        applicationId: e.applicationId,
+                                                        section: e.section
                                                     };
-                                                case r.m_.CATEGORY:
+                                                case i.m_.CATEGORY:
                                                     return {
-                                                        tab: p.GlobalDiscoveryTab.APPS,
-                                                        categoryId: Number(t.categoryId)
+                                                        tab: u.GlobalDiscoveryTab.APPS,
+                                                        categoryId: Number(e.categoryId)
                                                     };
-                                                case r.m_.SEARCH:
-                                                    var e;
+                                                case i.m_.SEARCH:
+                                                    var t;
                                                     return {
-                                                        tab: p.GlobalDiscoveryTab.APPS,
-                                                        query: null !== (e = t.query) && void 0 !== e ? e : '',
-                                                        page: t.page,
-                                                        categoryId: null != t.categoryId ? Number(t.categoryId) : void 0
+                                                        tab: u.GlobalDiscoveryTab.APPS,
+                                                        query: null !== (t = e.query) && void 0 !== t ? t : '',
+                                                        page: e.page,
+                                                        categoryId: null != e.categoryId ? Number(e.categoryId) : void 0
                                                     };
                                             }
-                                        return { tab: p.GlobalDiscoveryTab.APPS };
+                                        return { tab: u.GlobalDiscoveryTab.APPS };
                                     })()
                                 );
                         }
-                        if (null != e.applicationId) {
-                            if (e.section === S.GlobalDiscoveryAppsSections.STORE) {
-                                if (null != e.skuId) return (0, i.uL)(d.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(e.applicationId, e.skuId));
-                                return (0, i.uL)(d.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(e.applicationId, S.GlobalDiscoveryAppsSections.STORE));
+                        if (null != t.applicationId) {
+                            if (t.section === E.GlobalDiscoveryAppsSections.STORE) {
+                                if (null != t.skuId) return (0, r.uL)(s.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.applicationId, t.skuId));
+                                return (0, r.uL)(s.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t.applicationId, E.GlobalDiscoveryAppsSections.STORE));
                             }
-                            return (0, i.uL)(d.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e.applicationId));
+                            return (0, r.uL)(s.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t.applicationId));
                         }
-                        if (null != e.query) {
-                            let t = new URLSearchParams();
-                            return '' !== e.query && t.set('q', e.query), null != e.categoryId && t.set('category_id', e.categoryId.toString()), null != e.page && t.set('page', e.page.toString()), (0, i.uL)(d.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: t.toString() });
-                        } else if (null != e.categoryId) return (0, i.uL)(d.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(e.categoryId.toString()));
-                        else return (0, i.uL)(d.Z5c.GLOBAL_DISCOVERY_APPS);
-                    case p.GlobalDiscoveryTab.QUESTS:
-                        return (0, a.navigateToQuestHome)(e.location, e.questContent, e.questId);
+                        if (null != t.query) {
+                            let e = new URLSearchParams();
+                            return '' !== t.query && e.set('q', t.query), null != t.categoryId && e.set('category_id', t.categoryId.toString()), null != t.page && e.set('page', t.page.toString()), (0, r.uL)(s.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: e.toString() });
+                        }
+                        if (null != t.categoryId) return (0, r.uL)(s.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t.categoryId.toString()));
+                        else return (0, r.uL)(s.Z5c.GLOBAL_DISCOVERY_APPS);
+                    case u.GlobalDiscoveryTab.QUESTS:
+                        return (0, l.navigateToQuestHome)(t.location, t.questContent, t.questId);
                     default:
-                        throw Error('[transitionToGlobalDiscovery] Unhandled tab type: '.concat(E));
+                        throw Error('[transitionToGlobalDiscovery] Unhandled tab type: '.concat(p));
                 }
-            };
-        }
+            }
     }),
     n(610138),
     n(216116),
@@ -90,15 +90,15 @@ n.r(e),
     n(815648),
     n(47120),
     n(411104);
-var r = n(258971),
-    l = n(726115),
-    o = n(859921),
-    a = n(341907),
-    i = n(703656),
+var i = n(258971),
+    o = n(726115),
+    a = n(859921),
+    l = n(341907),
+    r = n(703656),
     c = n(594174),
-    u = n(626135),
-    s = n(836768),
-    p = n(49898),
-    d = n(981631),
-    S = n(979007),
-    O = n(128449);
+    _ = n(626135),
+    d = n(836768),
+    u = n(49898),
+    s = n(981631),
+    E = n(979007),
+    I = n(128449);

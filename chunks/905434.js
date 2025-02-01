@@ -1,49 +1,49 @@
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(565138),
-    s = r(430824),
-    l = r(388032),
-    u = r(273652);
-let c = (e) => {
-    let { stageInstance: n } = e,
-        r = s.Z.getGuild(n.guild_id);
-    return null == r
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(565138),
+    s = n(430824),
+    o = n(388032),
+    l = n(273652);
+let u = (e) => {
+    let { stageInstance: t } = e,
+        n = s.Z.getGuild(t.guild_id);
+    return null == n
         ? null
         : (0, i.jsxs)('div', {
-              className: u.container,
+              className: l.container,
               children: [
-                  (0, i.jsx)(a.Heading, {
-                      className: u.header,
+                  (0, i.jsx)(r.X6q, {
+                      className: l.header,
                       variant: 'heading-sm/semibold',
-                      children: l.intl.string(l.t['InbJ8/'])
+                      children: o.intl.string(o.t['InbJ8/'])
                   }),
                   (0, i.jsxs)('div', {
-                      className: u.guildContainer,
+                      className: l.guildContainer,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: u.guildInfo,
+                              className: l.guildInfo,
                               children: [
-                                  (0, i.jsx)(o.Z, {
-                                      guild: r,
-                                      size: o.Z.Sizes.MINI,
-                                      className: u.guildIcon
+                                  (0, i.jsx)(a.Z, {
+                                      guild: n,
+                                      size: a.Z.Sizes.MINI,
+                                      className: l.guildIcon
                                   }),
-                                  (0, i.jsx)(a.Text, {
+                                  (0, i.jsx)(r.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
-                                      children: r.name
+                                      children: n.name
                                   })
                               ]
                           }),
-                          (0, i.jsx)(a.Text, {
+                          (0, i.jsx)(r.Text, {
                               variant: 'text-md/semibold',
                               color: 'header-primary',
-                              children: n.topic
+                              children: t.topic
                           })
                       ]
                   })
               ]
           });
 };
-n.Z = c;

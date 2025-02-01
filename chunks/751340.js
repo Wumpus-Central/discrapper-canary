@@ -1,11 +1,11 @@
-var i = r(535213),
-    a = r(234268),
-    o = r(286233);
+var i = n(535213),
+    r = n(234268),
+    a = n(286233);
 e.exports = function () {
     i();
-    var e = a();
+    var e = r();
     return (
-        o(
+        a(
             Promise,
             { allSettled: e },
             {

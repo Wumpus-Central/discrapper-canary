@@ -1,4 +1,4 @@
 t.exports = {
-    modalContent: 'modalContent_acbedc',
-    modalDescription: 'modalDescription_acbedc'
+    modalContent: 'modalContent_d3d8e0',
+    modalDescription: 'modalDescription_d3d8e0'
 };

@@ -1,5 +1,5 @@
 n.d(t, {
-    Dk: () => b,
+    Dk: () => T,
     QF: () => v,
     Sk: () => d.Skl,
     W5: () => N,
@@ -80,7 +80,7 @@ function y(e, t, n, i) {
 function I(e, t, n) {
     return ''.concat(0.5625 * e + n, 'px ').concat(0.75 * e + t, 'px');
 }
-function b(e) {
+function T(e) {
     let { size: t, status: n, isMobile: i, isTyping: r, topOffset: a = 0, leftOffset: s = 0 } = e,
         o = (a / p) * t,
         l = (s / p) * t;
@@ -216,7 +216,7 @@ function b(e) {
             };
     }
 }
-function T(e) {
+function b(e) {
     return '-'
         .concat(0.216506 * e, ',-')
         .concat(0.25 * e, ' ')
@@ -248,7 +248,7 @@ function S(e, t, n) {
                 fill: 'black'
             }),
             (0, i.jsx)(s.animated.polygon, {
-                points: T(t),
+                points: b(t),
                 fill: 'black',
                 transform: h,
                 style: { transformOrigin: m }

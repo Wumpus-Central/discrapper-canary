@@ -1,14 +1,14 @@
 e.exports = {
-    closeButton: 'closeButton_d0957e',
-    modalContents: 'modalContents_d0957e',
-    headerText: 'headerText_d0957e',
-    formDescription: 'formDescription_d0957e',
-    emojiTitleContainer: 'emojiTitleContainer_d0957e',
-    emojiSectionContainer: 'emojiSectionContainer_d0957e',
-    emojiButton: 'emojiButton_d0957e',
-    emoji: 'emoji_d0957e',
-    input: 'input_d0957e',
-    footer: 'footer_d0957e',
-    tooltip: 'tooltip_d0957e',
-    channelTitleIcon: 'channelTitleIcon_d0957e'
+    closeButton: 'closeButton_eb89ff',
+    modalContents: 'modalContents_eb89ff',
+    headerText: 'headerText_eb89ff',
+    formDescription: 'formDescription_eb89ff',
+    emojiTitleContainer: 'emojiTitleContainer_eb89ff',
+    emojiSectionContainer: 'emojiSectionContainer_eb89ff',
+    emojiButton: 'emojiButton_eb89ff',
+    emoji: 'emoji_eb89ff',
+    input: 'input_eb89ff',
+    footer: 'footer_eb89ff',
+    tooltip: 'tooltip_eb89ff',
+    channelTitleIcon: 'channelTitleIcon_eb89ff'
 };

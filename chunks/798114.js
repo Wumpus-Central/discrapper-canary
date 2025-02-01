@@ -1,8 +1,8 @@
 e.exports = {
-    trigger: 'trigger_eaa55e',
-    video: 'video_eaa55e',
-    content: 'content_eaa55e',
-    masked: 'masked_eaa55e',
-    text: 'text_eaa55e',
-    premium: 'premium_eaa55e'
+    trigger: 'trigger__88a38',
+    video: 'video__88a38',
+    content: 'content__88a38',
+    masked: 'masked__88a38',
+    text: 'text__88a38',
+    premium: 'premium__88a38'
 };

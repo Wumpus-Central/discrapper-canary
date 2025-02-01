@@ -1,10 +1,10 @@
-function n(e) {
-    return function (n, r, i) {
-        for (var a = -1, o = Object(n), s = i(n), l = s.length; l--; ) {
-            var u = s[e ? l : ++a];
-            if (!1 === r(o[u], u, o)) break;
+function t(e) {
+    return function (t, n, i) {
+        for (var r = -1, a = Object(t), s = i(t), o = s.length; o--; ) {
+            var l = s[e ? o : ++r];
+            if (!1 === n(a[l], l, a)) break;
         }
-        return n;
+        return t;
     };
 }
-e.exports = n;
+e.exports = t;

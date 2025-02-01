@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('ko', {
         months: '1월_2월_3월_4월_5월_6월_7월_8월_9월_10월_11월_12월'.split('_'),
@@ -44,8 +44,8 @@
             yy: '%d년'
         },
         dayOfMonthOrdinalParse: /\d{1,2}(일|월|주)/,
-        ordinal: function (e, n) {
-            switch (n) {
+        ordinal: function (e, t) {
+            switch (t) {
                 case 'd':
                 case 'D':
                 case 'DDD':
@@ -63,7 +63,7 @@
         isPM: function (e) {
             return '오후' === e;
         },
-        meridiem: function (e, n, r) {
+        meridiem: function (e, t, n) {
             return e < 12 ? '오전' : '오후';
         }
     });

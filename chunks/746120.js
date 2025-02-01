@@ -1,13 +1,13 @@
 e.exports = {
-    overlay: 'overlay_e17343',
-    overlayBackground: 'overlayBackground_e17343',
-    overlayActive: 'overlayActive_e17343',
-    overlayLocked: 'overlayLocked_e17343',
-    previewMode: 'previewMode_e17343',
-    closeContainer: 'closeContainer_e17343',
-    invalidContainer: 'invalidContainer_e17343',
-    inactiveContainer: 'inactiveContainer_e17343',
-    layoutLocked: 'layoutLocked_e17343',
-    layoutUnlocked: 'layoutUnlocked_e17343 layoutLocked_e17343',
-    previewingInGameHeader: 'previewingInGameHeader_e17343'
+    overlay: 'overlay_df3f07',
+    overlayBackground: 'overlayBackground_df3f07',
+    overlayActive: 'overlayActive_df3f07',
+    overlayLocked: 'overlayLocked_df3f07',
+    previewMode: 'previewMode_df3f07',
+    closeContainer: 'closeContainer_df3f07',
+    invalidContainer: 'invalidContainer_df3f07',
+    inactiveContainer: 'inactiveContainer_df3f07',
+    layoutLocked: 'layoutLocked_df3f07',
+    layoutUnlocked: 'layoutUnlocked_df3f07 layoutLocked_df3f07',
+    previewingInGameHeader: 'previewingInGameHeader_df3f07'
 };

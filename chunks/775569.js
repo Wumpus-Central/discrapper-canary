@@ -1,6 +1,6 @@
-(n = e.exports = 'function' == typeof Object.keys ? Object.keys : r).shim = r;
-function r(e) {
-    var n = [];
-    for (var r in e) n.push(r);
-    return n;
+(t = e.exports = 'function' == typeof Object.keys ? Object.keys : n).shim = n;
+function n(e) {
+    var t = [];
+    for (var n in e) t.push(n);
+    return t;
 }

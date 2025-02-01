@@ -1,9 +1,9 @@
 e.exports = {
-    mainContainer: 'mainContainer_bd9c39',
-    textArea: 'textArea_bd9c39',
-    innerScroller: 'innerScroller_bd9c39',
-    resizeHandle: 'resizeHandle_bd9c39',
-    mainTextInput: 'mainTextInput_bd9c39',
-    isEditingOtherNodes: 'isEditingOtherNodes_bd9c39',
-    maxTags: 'maxTags_bd9c39'
+    mainContainer: 'mainContainer_c615b7',
+    textArea: 'textArea_c615b7',
+    innerScroller: 'innerScroller_c615b7',
+    resizeHandle: 'resizeHandle_c615b7',
+    mainTextInput: 'mainTextInput_c615b7',
+    isEditingOtherNodes: 'isEditingOtherNodes_c615b7',
+    maxTags: 'maxTags_c615b7'
 };

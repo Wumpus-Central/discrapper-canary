@@ -1,7 +1,7 @@
 e.exports = {
-    badgeContainer: 'badgeContainer_b7316a',
-    newBadge: 'newBadge_b7316a',
-    star: 'star_b7316a',
-    starLeft: 'starLeft_b7316a',
-    starRight: 'starRight_b7316a'
+    badgeContainer: 'badgeContainer__98c7b',
+    newBadge: 'newBadge__98c7b',
+    star: 'star__98c7b',
+    starLeft: 'starLeft__98c7b',
+    starRight: 'starRight__98c7b'
 };

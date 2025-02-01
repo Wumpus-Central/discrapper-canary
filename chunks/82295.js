@@ -1,25 +1,25 @@
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(540059),
-    u = r(65040);
-let c = (e) => {
-    let { className: n, children: r, 'aria-label': a, id: c } = e;
-    return (0, l.Q3)('ListSectionItem')
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(540059),
+    l = n(65040);
+let u = (e) => {
+    let { className: t, children: n, 'aria-label': r, id: u } = e;
+    return (0, o.Q3)('ListSectionItem')
         ? (0, i.jsx)(s.Text, {
               variant: 'text-sm/medium',
-              className: o()(n, u.container),
-              'aria-label': a,
-              id: c,
-              children: r
+              className: a()(t, l.container),
+              'aria-label': r,
+              id: u,
+              children: n
           })
         : (0, i.jsx)(s.H, {
-              className: o()(n, u.container, u.text),
-              'aria-label': a,
-              id: c,
-              children: r
+              className: a()(t, l.container, l.text),
+              'aria-label': r,
+              id: u,
+              children: n
           });
 };
-n.Z = c;

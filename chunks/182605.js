@@ -1,16 +1,16 @@
-e.exports = {
-    member: 'member_a31c43',
-    memberInner: 'memberInner_a31c43',
-    offline: 'offline_a31c43',
-    ownerIcon: 'ownerIcon_a31c43 icon_a31c43',
-    lostPermission: 'lostPermission_a31c43',
-    premiumIcon: 'premiumIcon_a31c43 icon_a31c43',
-    placeholder: 'placeholder_a31c43 member_a31c43',
-    botTag: 'botTag_a31c43',
-    username: 'username_a31c43',
-    activity: 'activity_a31c43',
-    activityText: 'activityText_a31c43',
-    activityEmoji: 'activityEmoji_a31c43',
-    name: 'name_a31c43',
-    clanTag: 'clanTag_a31c43'
+var i = {
+    member: 'member__5d473',
+    memberInner: 'memberInner__5d473',
+    offline: 'offline__5d473',
+    icon: 'icon__5d473',
+    ownerIcon: 'ownerIcon__5d473 icon__5d473',
+    lostPermission: 'lostPermission__5d473',
+    premiumIcon: 'premiumIcon__5d473 icon__5d473',
+    placeholder: 'placeholder__5d473 member__5d473',
+    botTag: 'botTag__5d473',
+    username: 'username__5d473',
+    activityText: 'activityText__5d473',
+    name: 'name__5d473',
+    clanTag: 'clanTag__5d473'
 };
+e.exports = i;

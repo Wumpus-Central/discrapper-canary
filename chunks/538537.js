@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_d4eda4',
-    pill: 'pill_d4eda4',
-    disabled: 'disabled_d4eda4'
+    container: 'container__33d66',
+    pill: 'pill__33d66',
+    disabled: 'disabled__33d66'
 };

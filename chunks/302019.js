@@ -1,38 +1,38 @@
-Object.defineProperty(n, '__esModule', { value: !0 }), (n.Hue = void 0);
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.Hue = void 0);
 var i = (function () {
-        function e(e, n) {
-            for (var r = 0; r < n.length; r++) {
-                var i = n[r];
+        function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var i = t[n];
                 (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (n, r, i) {
-            return r && e(n.prototype, r), i && e(n, i), n;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })(),
-    a = r(192379),
-    o = c(a),
-    s = c(r(723184)),
-    l = u(r(14666));
-function u(e) {
+    r = n(192379),
+    a = u(r),
+    s = u(n(723184)),
+    o = l(n(14666));
+function l(e) {
     if (e && e.__esModule) return e;
-    var n = {};
-    if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
-    return (n.default = e), n;
+    var t = {};
+    if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+    return (t.default = e), t;
 }
-function c(e) {
+function u(e) {
     return e && e.__esModule ? e : { default: e };
 }
-function d(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function c(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function f(e, n) {
+function d(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function p(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function f(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -40,17 +40,17 @@ function p(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var h = (n.Hue = (function (e) {
-    function n() {
-        d(this, n);
-        for (var e, r, i, a = arguments.length, o = Array(a), s = 0; s < a; s++) o[s] = arguments[s];
+var _ = (t.Hue = (function (e) {
+    function t() {
+        c(this, t);
+        for (var e, n, i, r = arguments.length, a = Array(r), s = 0; s < r; s++) a[s] = arguments[s];
         return (
-            (r = i = f(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(o)))),
+            (n = i = d(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a)))),
             (i.handleChange = function (e) {
-                var n = l.calculateChange(e, i.props.direction, i.props.hsl, i.container);
-                n && 'function' == typeof i.props.onChange && i.props.onChange(n, e);
+                var t = o.calculateChange(e, i.props.direction, i.props.hsl, i.container);
+                t && 'function' == typeof i.props.onChange && i.props.onChange(t, e);
             }),
             (i.handleMouseDown = function (e) {
                 i.handleChange(e), window.addEventListener('mousemove', i.handleChange), window.addEventListener('mouseup', i.handleMouseUp);
@@ -58,12 +58,12 @@ var h = (n.Hue = (function (e) {
             (i.handleMouseUp = function () {
                 i.unbindEventListeners();
             }),
-            f(i, r)
+            d(i, n)
         );
     }
     return (
-        p(n, e),
-        i(n, [
+        f(t, e),
+        i(t, [
             {
                 key: 'componentWillUnmount',
                 value: function () {
@@ -80,8 +80,8 @@ var h = (n.Hue = (function (e) {
                 key: 'render',
                 value: function () {
                     var e = this,
-                        n = this.props.direction,
-                        r = void 0 === n ? 'horizontal' : n,
+                        t = this.props.direction,
+                        n = void 0 === t ? 'horizontal' : t,
                         i = (0, s.default)(
                             {
                                 default: {
@@ -117,31 +117,31 @@ var h = (n.Hue = (function (e) {
                                     }
                                 }
                             },
-                            { vertical: 'vertical' === r }
+                            { vertical: 'vertical' === n }
                         );
-                    return o.default.createElement(
+                    return a.default.createElement(
                         'div',
                         { style: i.hue },
-                        o.default.createElement(
+                        a.default.createElement(
                             'div',
                             {
-                                className: 'hue-' + r,
+                                className: 'hue-' + n,
                                 style: i.container,
-                                ref: function (n) {
-                                    return (e.container = n);
+                                ref: function (t) {
+                                    return (e.container = t);
                                 },
                                 onMouseDown: this.handleMouseDown,
                                 onTouchMove: this.handleChange,
                                 onTouchStart: this.handleChange
                             },
-                            o.default.createElement('style', null, '\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          '),
-                            o.default.createElement('div', { style: i.pointer }, this.props.pointer ? o.default.createElement(this.props.pointer, this.props) : o.default.createElement('div', { style: i.slider }))
+                            a.default.createElement('style', null, '\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          '),
+                            a.default.createElement('div', { style: i.pointer }, this.props.pointer ? a.default.createElement(this.props.pointer, this.props) : a.default.createElement('div', { style: i.slider }))
                         )
                     );
                 }
             }
         ]),
-        n
+        t
     );
-})(a.PureComponent || a.Component));
-n.default = h;
+})(r.PureComponent || r.Component));
+t.default = _;

@@ -1,5 +1,5 @@
 e.exports = {
-    listingNameColumn: 'listingNameColumn_e8401a',
-    paymentsCountColumn: 'paymentsCountColumn_e8401a',
-    priceColumn: 'priceColumn_e8401a'
+    listingNameColumn: 'listingNameColumn__6ef11',
+    paymentsCountColumn: 'paymentsCountColumn__6ef11',
+    priceColumn: 'priceColumn__6ef11'
 };

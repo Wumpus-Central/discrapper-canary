@@ -1,17 +1,17 @@
-function n(e) {
-    let n = ['assembly', 'module', 'package', 'import', 'alias', 'class', 'interface', 'object', 'given', 'value', 'assign', 'void', 'function', 'new', 'of', 'extends', 'satisfies', 'abstracts', 'in', 'out', 'return', 'break', 'continue', 'throw', 'assert', 'dynamic', 'if', 'else', 'switch', 'case', 'for', 'while', 'try', 'catch', 'finally', 'then', 'let', 'this', 'outer', 'super', 'is', 'exists', 'nonempty'],
-        r = ['shared', 'abstract', 'formal', 'default', 'actual', 'variable', 'late', 'native', 'deprecated', 'final', 'sealed', 'annotation', 'suppressWarnings', 'small'],
+function t(e) {
+    let t = ['assembly', 'module', 'package', 'import', 'alias', 'class', 'interface', 'object', 'given', 'value', 'assign', 'void', 'function', 'new', 'of', 'extends', 'satisfies', 'abstracts', 'in', 'out', 'return', 'break', 'continue', 'throw', 'assert', 'dynamic', 'if', 'else', 'switch', 'case', 'for', 'while', 'try', 'catch', 'finally', 'then', 'let', 'this', 'outer', 'super', 'is', 'exists', 'nonempty'],
+        n = ['shared', 'abstract', 'formal', 'default', 'actual', 'variable', 'late', 'native', 'deprecated', 'final', 'sealed', 'annotation', 'suppressWarnings', 'small'],
         i = ['doc', 'by', 'license', 'see', 'throws', 'tagged'],
-        a = {
+        r = {
             className: 'subst',
             excludeBegin: !0,
             excludeEnd: !0,
             begin: /``/,
             end: /``/,
-            keywords: n,
+            keywords: t,
             relevance: 10
         },
-        o = [
+        a = [
             {
                 className: 'string',
                 begin: '"""',
@@ -22,7 +22,7 @@ function n(e) {
                 className: 'string',
                 begin: '"',
                 end: '"',
-                contains: [a]
+                contains: [r]
             },
             {
                 className: 'string',
@@ -36,11 +36,11 @@ function n(e) {
             }
         ];
     return (
-        (a.contains = o),
+        (r.contains = a),
         {
             name: 'Ceylon',
             keywords: {
-                keyword: n.concat(r),
+                keyword: t.concat(n),
                 meta: i
             },
             illegal: '\\$[^01]|#[^0-9a-fA-F]',
@@ -51,8 +51,8 @@ function n(e) {
                     className: 'meta',
                     begin: '@[a-z]\\w*(?::"[^"]*")?'
                 }
-            ].concat(o)
+            ].concat(a)
         }
     );
 }
-e.exports = n;
+e.exports = t;

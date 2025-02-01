@@ -1,14 +1,14 @@
-var i = r(957578).Buffer,
-    a = r(63523).Transform,
-    o = r(2682).StringDecoder;
+var i = n(957578).Buffer,
+    r = n(63523).Transform,
+    a = n(2682).StringDecoder;
 function s(e) {
-    a.call(this), (this.hashMode = 'string' == typeof e), this.hashMode ? (this[e] = this._finalOrDigest) : (this.final = this._finalOrDigest), this._final && ((this.__final = this._final), (this._final = null)), (this._decoder = null), (this._encoding = null);
+    r.call(this), (this.hashMode = 'string' == typeof e), this.hashMode ? (this[e] = this._finalOrDigest) : (this.final = this._finalOrDigest), this._final && ((this.__final = this._final), (this._final = null)), (this._decoder = null), (this._encoding = null);
 }
-r(689118)(s, a),
-    (s.prototype.update = function (e, n, r) {
-        'string' == typeof e && (e = i.from(e, n));
-        var a = this._update(e);
-        return this.hashMode ? this : (r && (a = this._toString(a, r)), a);
+n(689118)(s, r),
+    (s.prototype.update = function (e, t, n) {
+        'string' == typeof e && (e = i.from(e, t));
+        var r = this._update(e);
+        return this.hashMode ? this : (n && (r = this._toString(r, n)), r);
     }),
     (s.prototype.setAutoPadding = function () {}),
     (s.prototype.getAuthTag = function () {
@@ -20,32 +20,32 @@ r(689118)(s, a),
     (s.prototype.setAAD = function () {
         throw Error('trying to set aad in unsupported state');
     }),
-    (s.prototype._transform = function (e, n, r) {
+    (s.prototype._transform = function (e, t, n) {
         var i;
         try {
             this.hashMode ? this._update(e) : this.push(this._update(e));
         } catch (e) {
             i = e;
         } finally {
-            r(i);
+            n(i);
         }
     }),
     (s.prototype._flush = function (e) {
-        var n;
+        var t;
         try {
             this.push(this.__final());
         } catch (e) {
-            n = e;
+            t = e;
         }
-        e(n);
+        e(t);
     }),
     (s.prototype._finalOrDigest = function (e) {
-        var n = this.__final() || i.alloc(0);
-        return e && (n = this._toString(n, e, !0)), n;
+        var t = this.__final() || i.alloc(0);
+        return e && (t = this._toString(t, e, !0)), t;
     }),
-    (s.prototype._toString = function (e, n, r) {
-        if ((!this._decoder && ((this._decoder = new o(n)), (this._encoding = n)), this._encoding !== n)) throw Error("can't switch encodings");
+    (s.prototype._toString = function (e, t, n) {
+        if ((this._decoder || ((this._decoder = new a(t)), (this._encoding = t)), this._encoding !== t)) throw Error("can't switch encodings");
         var i = this._decoder.write(e);
-        return r && (i += this._decoder.end()), i;
+        return n && (i += this._decoder.end()), i;
     }),
     (e.exports = s);

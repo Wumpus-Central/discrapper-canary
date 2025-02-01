@@ -1,145 +1,145 @@
-var i = r(728804),
-    a = r(505388),
-    o = r(363406),
+var i = n(728804),
+    r = n(505388),
+    a = n(363406),
     s = Object.prototype.hasOwnProperty,
-    l = {
+    o = {
         brackets: function (e) {
             return e + '[]';
         },
         comma: 'comma',
-        indices: function (e, n) {
-            return e + '[' + n + ']';
+        indices: function (e, t) {
+            return e + '[' + t + ']';
         },
         repeat: function (e) {
             return e;
         }
     },
-    u = Array.isArray,
-    c = Array.prototype.push,
-    d = function (e, n) {
-        c.apply(e, u(n) ? n : [n]);
+    l = Array.isArray,
+    u = Array.prototype.push,
+    c = function (e, t) {
+        u.apply(e, l(t) ? t : [t]);
     },
-    f = Date.prototype.toISOString,
-    p = o.default,
-    h = {
+    d = Date.prototype.toISOString,
+    f = a.default,
+    _ = {
         addQueryPrefix: !1,
         allowDots: !1,
         charset: 'utf-8',
         charsetSentinel: !1,
         delimiter: '&',
         encode: !0,
-        encoder: a.encode,
+        encoder: r.encode,
         encodeValuesOnly: !1,
-        format: p,
-        formatter: o.formatters[p],
+        format: f,
+        formatter: a.formatters[f],
         indices: !1,
         serializeDate: function (e) {
-            return f.call(e);
+            return d.call(e);
         },
         skipNulls: !1,
         strictNullHandling: !1
     },
-    _ = function (e) {
+    p = function (e) {
         return 'string' == typeof e || 'number' == typeof e || 'boolean' == typeof e || 'symbol' == typeof e || 'bigint' == typeof e;
     },
-    m = {},
-    g = function e(n, r, o, s, l, c, f, p, g, E, v, y, b, I, T, S) {
-        for (var A, C = n, N = S, R = 0, O = !1; void 0 !== (N = N.get(m)) && !O; ) {
-            var D = N.get(n);
-            if (((R += 1), void 0 !== D)) {
-                if (D === R) throw RangeError('Cyclic object value');
-                O = !0;
+    h = {},
+    m = function e(t, n, a, s, o, u, d, f, m, g, E, v, y, I, T, b) {
+        for (var S, A = t, N = b, C = 0, R = !1; void 0 !== (N = N.get(h)) && !R; ) {
+            var O = N.get(t);
+            if (((C += 1), void 0 !== O)) {
+                if (O === C) throw RangeError('Cyclic object value');
+                R = !0;
             }
-            void 0 === N.get(m) && (R = 0);
+            void 0 === N.get(h) && (C = 0);
         }
         if (
-            ('function' == typeof p
-                ? (C = p(r, C))
-                : C instanceof Date
-                  ? (C = v(C))
-                  : 'comma' === o &&
-                    u(C) &&
-                    (C = a.maybeMap(C, function (e) {
-                        return e instanceof Date ? v(e) : e;
+            ('function' == typeof f
+                ? (A = f(n, A))
+                : A instanceof Date
+                  ? (A = E(A))
+                  : 'comma' === a &&
+                    l(A) &&
+                    (A = r.maybeMap(A, function (e) {
+                        return e instanceof Date ? E(e) : e;
                     })),
-            null === C)
+            null === A)
         ) {
-            if (l) return f && !I ? f(r, h.encoder, T, 'key', y) : r;
-            C = '';
+            if (o) return d && !I ? d(n, _.encoder, T, 'key', v) : n;
+            A = '';
         }
-        if (_(C) || a.isBuffer(C)) return f ? [b(I ? r : f(r, h.encoder, T, 'key', y)) + '=' + b(f(C, h.encoder, T, 'value', y))] : [b(r) + '=' + b(String(C))];
-        var L = [];
-        if (void 0 === C) return L;
-        if ('comma' === o && u(C)) I && f && (C = a.maybeMap(C, f)), (A = [{ value: C.length > 0 ? C.join(',') || null : void 0 }]);
-        else if (u(p)) A = p;
+        if (p(A) || r.isBuffer(A)) return d ? [y(I ? n : d(n, _.encoder, T, 'key', v)) + '=' + y(d(A, _.encoder, T, 'value', v))] : [y(n) + '=' + y(String(A))];
+        var D = [];
+        if (void 0 === A) return D;
+        if ('comma' === a && l(A)) I && d && (A = r.maybeMap(A, d)), (S = [{ value: A.length > 0 ? A.join(',') || null : void 0 }]);
+        else if (l(f)) S = f;
         else {
-            var x = Object.keys(C);
-            A = g ? x.sort(g) : x;
+            var x = Object.keys(A);
+            S = m ? x.sort(m) : x;
         }
-        for (var w = s && u(C) && 1 === C.length ? r + '[]' : r, P = 0; P < A.length; ++P) {
-            var M = A[P],
-                k = 'object' == typeof M && void 0 !== M.value ? M.value : C[M];
-            if (!c || null !== k) {
-                var U = u(C) ? ('function' == typeof o ? o(w, M) : w) : w + (E ? '.' + M : '[' + M + ']');
-                S.set(n, R);
-                var B = i();
-                B.set(m, S), d(L, e(k, U, o, s, l, c, 'comma' === o && I && u(C) ? null : f, p, g, E, v, y, b, I, T, B));
+        for (var L = s && l(A) && 1 === A.length ? n + '[]' : n, P = 0; P < S.length; ++P) {
+            var w = S[P],
+                M = 'object' == typeof w && void 0 !== w.value ? w.value : A[w];
+            if (!u || null !== M) {
+                var k = l(A) ? ('function' == typeof a ? a(L, w) : L) : L + (g ? '.' + w : '[' + w + ']');
+                b.set(t, C);
+                var U = i();
+                U.set(h, b), c(D, e(M, k, a, s, o, u, 'comma' === a && I && l(A) ? null : d, f, m, g, E, v, y, I, T, U));
             }
         }
-        return L;
+        return D;
     },
-    E = function (e) {
-        if (!e) return h;
+    g = function (e) {
+        if (!e) return _;
         if (null !== e.encoder && void 0 !== e.encoder && 'function' != typeof e.encoder) throw TypeError('Encoder has to be a function.');
-        var n = e.charset || h.charset;
+        var t = e.charset || _.charset;
         if (void 0 !== e.charset && 'utf-8' !== e.charset && 'iso-8859-1' !== e.charset) throw TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
-        var r = o.default;
+        var n = a.default;
         if (void 0 !== e.format) {
-            if (!s.call(o.formatters, e.format)) throw TypeError('Unknown format option provided.');
-            r = e.format;
+            if (!s.call(a.formatters, e.format)) throw TypeError('Unknown format option provided.');
+            n = e.format;
         }
-        var i = o.formatters[r],
-            a = h.filter;
+        var i = a.formatters[n],
+            r = _.filter;
         return (
-            ('function' == typeof e.filter || u(e.filter)) && (a = e.filter),
+            ('function' == typeof e.filter || l(e.filter)) && (r = e.filter),
             {
-                addQueryPrefix: 'boolean' == typeof e.addQueryPrefix ? e.addQueryPrefix : h.addQueryPrefix,
-                allowDots: void 0 === e.allowDots ? h.allowDots : !!e.allowDots,
-                charset: n,
-                charsetSentinel: 'boolean' == typeof e.charsetSentinel ? e.charsetSentinel : h.charsetSentinel,
-                delimiter: void 0 === e.delimiter ? h.delimiter : e.delimiter,
-                encode: 'boolean' == typeof e.encode ? e.encode : h.encode,
-                encoder: 'function' == typeof e.encoder ? e.encoder : h.encoder,
-                encodeValuesOnly: 'boolean' == typeof e.encodeValuesOnly ? e.encodeValuesOnly : h.encodeValuesOnly,
-                filter: a,
-                format: r,
+                addQueryPrefix: 'boolean' == typeof e.addQueryPrefix ? e.addQueryPrefix : _.addQueryPrefix,
+                allowDots: void 0 === e.allowDots ? _.allowDots : !!e.allowDots,
+                charset: t,
+                charsetSentinel: 'boolean' == typeof e.charsetSentinel ? e.charsetSentinel : _.charsetSentinel,
+                delimiter: void 0 === e.delimiter ? _.delimiter : e.delimiter,
+                encode: 'boolean' == typeof e.encode ? e.encode : _.encode,
+                encoder: 'function' == typeof e.encoder ? e.encoder : _.encoder,
+                encodeValuesOnly: 'boolean' == typeof e.encodeValuesOnly ? e.encodeValuesOnly : _.encodeValuesOnly,
+                filter: r,
+                format: n,
                 formatter: i,
-                serializeDate: 'function' == typeof e.serializeDate ? e.serializeDate : h.serializeDate,
-                skipNulls: 'boolean' == typeof e.skipNulls ? e.skipNulls : h.skipNulls,
+                serializeDate: 'function' == typeof e.serializeDate ? e.serializeDate : _.serializeDate,
+                skipNulls: 'boolean' == typeof e.skipNulls ? e.skipNulls : _.skipNulls,
                 sort: 'function' == typeof e.sort ? e.sort : null,
-                strictNullHandling: 'boolean' == typeof e.strictNullHandling ? e.strictNullHandling : h.strictNullHandling
+                strictNullHandling: 'boolean' == typeof e.strictNullHandling ? e.strictNullHandling : _.strictNullHandling
             }
         );
     };
-e.exports = function (e, n) {
-    var r,
+e.exports = function (e, t) {
+    var n,
+        r,
         a,
-        o,
         s = e,
-        c = E(n);
-    'function' == typeof c.filter ? (s = (a = c.filter)('', s)) : u(c.filter) && (r = a = c.filter);
-    var f = [];
+        u = g(t);
+    'function' == typeof u.filter ? (s = (r = u.filter)('', s)) : l(u.filter) && (n = r = u.filter);
+    var d = [];
     if ('object' != typeof s || null === s) return '';
-    o = n && n.arrayFormat in l ? n.arrayFormat : n && 'indices' in n ? (n.indices ? 'indices' : 'repeat') : 'indices';
-    var p = l[o];
-    if (n && 'commaRoundTrip' in n && 'boolean' != typeof n.commaRoundTrip) throw TypeError('`commaRoundTrip` must be a boolean, or absent');
-    var h = 'comma' === p && n && n.commaRoundTrip;
-    !r && (r = Object.keys(s)), c.sort && r.sort(c.sort);
-    for (var _ = i(), m = 0; m < r.length; ++m) {
-        var v = r[m];
-        if (!c.skipNulls || null !== s[v]) d(f, g(s[v], v, p, h, c.strictNullHandling, c.skipNulls, c.encode ? c.encoder : null, c.filter, c.sort, c.allowDots, c.serializeDate, c.format, c.formatter, c.encodeValuesOnly, c.charset, _));
+    a = t && t.arrayFormat in o ? t.arrayFormat : t && 'indices' in t ? (t.indices ? 'indices' : 'repeat') : 'indices';
+    var f = o[a];
+    if (t && 'commaRoundTrip' in t && 'boolean' != typeof t.commaRoundTrip) throw TypeError('`commaRoundTrip` must be a boolean, or absent');
+    var _ = 'comma' === f && t && t.commaRoundTrip;
+    n || (n = Object.keys(s)), u.sort && n.sort(u.sort);
+    for (var p = i(), h = 0; h < n.length; ++h) {
+        var E = n[h];
+        (!u.skipNulls || null !== s[E]) && c(d, m(s[E], E, f, _, u.strictNullHandling, u.skipNulls, u.encode ? u.encoder : null, u.filter, u.sort, u.allowDots, u.serializeDate, u.format, u.formatter, u.encodeValuesOnly, u.charset, p));
     }
-    var y = f.join(c.delimiter),
-        b = !0 === c.addQueryPrefix ? '?' : '';
-    return c.charsetSentinel && ('iso-8859-1' === c.charset ? (b += 'utf8=%26%2310003%3B&') : (b += 'utf8=%E2%9C%93&')), y.length > 0 ? b + y : '';
+    var v = d.join(u.delimiter),
+        y = !0 === u.addQueryPrefix ? '?' : '';
+    return u.charsetSentinel && ('iso-8859-1' === u.charset ? (y += 'utf8=%26%2310003%3B&') : (y += 'utf8=%E2%9C%93&')), v.length > 0 ? y + v : '';
 };

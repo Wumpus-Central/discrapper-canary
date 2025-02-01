@@ -42,11 +42,11 @@ function f(e, t, n) {
         v = e.type !== a.uaV.DEFAULT || (!E && '' !== e.content),
         y = (0, r.Z)(e),
         I = !y && (null == n ? void 0 : n.hasTimestamp) !== !1,
-        b = !y,
-        T = l(e, t),
+        T = !y,
+        b = l(e, t),
         S = o(e),
-        A = c ? S : T,
-        N = b ? ''.concat(A, ' ').concat(i.Z0) : '';
+        A = c ? S : b,
+        N = T ? ''.concat(A, ' ').concat(i.Z0) : '';
     if (v) {
         let t = s(e);
         N += ' '.concat(t);

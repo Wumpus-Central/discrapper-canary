@@ -1,6 +1,6 @@
 e.exports = {
-    jumbleWrapper: 'jumbleWrapper_abcfcd',
-    asset: 'asset_abcfcd',
-    peaking: 'peaking_abcfcd',
-    transitioned: 'transitioned_abcfcd'
+    jumbleWrapper: 'jumbleWrapper__014df',
+    asset: 'asset__014df',
+    peaking: 'peaking__014df',
+    transitioned: 'transitioned__014df'
 };

@@ -1,4 +1,4 @@
-n(411104), n(47120);
+n.d(t, { Z: () => N }), n(411104), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -6,18 +6,18 @@ var i = n(200651),
     o = n(442837),
     s = n(493683),
     c = n(239091),
-    u = n(146773),
-    d = n(201895),
+    d = n(146773),
+    u = n(201895),
     h = n(703656),
     p = n(592125),
     m = n(430824),
-    f = n(496675),
-    g = n(98597),
-    v = n(473403),
-    C = n(981631),
+    g = n(496675),
+    f = n(98597),
+    _ = n(473403),
+    v = n(981631),
     x = n(490897),
-    I = n(831746);
-function _(e, t, n) {
+    C = n(831746);
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,26 +30,26 @@ function _(e, t, n) {
         e
     );
 }
-function Z(e, t) {
+function I(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error('TextChannel, preloadChannel: Channel does not have a guildId');
     s.Z.preload(n, t.id);
 }
-class b extends g.ZP {
+class b extends f.ZP {
     render() {
         let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: o } = this.props,
             s = (0, i.jsx)('li', {
-                className: a()(this.getClassName(), { [I.disabled]: this.isDisabled() }),
+                className: a()(this.getClassName(), { [C.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
-                children: (0, i.jsxs)(v.Z, {
-                    className: I.iconVisibility,
+                children: (0, i.jsxs)(_.Z, {
+                    className: C.iconVisibility,
                     channel: e,
                     selected: t,
                     onClick: this.handleClick,
-                    onMouseDown: Z,
+                    onMouseDown: I,
                     onContextMenu: this.handleContextMenu,
                     connectDragPreview: o ? r : null,
-                    'aria-label': (0, d.ZP)({ channel: e }),
+                    'aria-label': (0, u.ZP)({ channel: e }),
                     resolvedUnreadSetting: x.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()]
                 })
@@ -58,7 +58,7 @@ class b extends g.ZP {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'handleContextMenu', (e) => {
+            Z(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     l = m.Z.getGuild(t.getGuildId());
                 null != l &&
@@ -72,16 +72,16 @@ class b extends g.ZP {
                             });
                     });
             }),
-            _(this, 'handleClick', (e) => {
-                !(function (e) {
+            Z(this, 'handleClick', (e) => {
+                (function (e) {
                     let t = e.getGuildId();
                     if (null == t) throw Error('TextChannel, transitionTo: Channel does not have a guildId');
-                    (0, h.uL)(C.Z5c.CHANNEL(t, e.id), {
+                    (0, h.uL)(v.Z5c.CHANNEL(t, e.id), {
                         state: {
                             analyticsSource: {
-                                page: C.ZY5.GUILD_CHANNEL,
-                                section: C.jXE.CHANNEL_LIST,
-                                object: C.qAy.CHANNEL
+                                page: v.ZY5.GUILD_CHANNEL,
+                                section: v.jXE.CHANNEL_LIST,
+                                object: v.qAy.CHANNEL
                             }
                         }
                     });
@@ -89,18 +89,18 @@ class b extends g.ZP {
             });
     }
 }
-let S = (0, u.B)(b);
-t.Z = l.memo(function (e) {
-    let { channel: t, guild: n, disableSorting: l } = e,
-        r = (0, o.cj)([p.Z, f.Z], () => {
-            let e = p.Z.getChannel(t.parent_id);
-            return {
-                canManageChannel: f.Z.can(C.Plq.MANAGE_CHANNELS, t),
-                canReorderChannel: !0 !== l && null != e ? f.Z.can(C.Plq.MANAGE_CHANNELS, e) : f.Z.can(C.Plq.MANAGE_CHANNELS, n)
-            };
+let S = (0, d.B)(b),
+    N = l.memo(function (e) {
+        let { channel: t, guild: n, disableSorting: l } = e,
+            r = (0, o.cj)([p.Z, g.Z], () => {
+                let e = p.Z.getChannel(t.parent_id);
+                return {
+                    canManageChannel: g.Z.can(v.Plq.MANAGE_CHANNELS, t),
+                    canReorderChannel: !0 !== l && null != e ? g.Z.can(v.Plq.MANAGE_CHANNELS, e) : g.Z.can(v.Plq.MANAGE_CHANNELS, n)
+                };
+            });
+        return (0, i.jsx)(S, {
+            ...r,
+            ...e
         });
-    return (0, i.jsx)(S, {
-        ...r,
-        ...e
     });
-});

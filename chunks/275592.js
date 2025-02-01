@@ -1,5 +1,5 @@
 e.exports = {
-    advancedModeDivider: 'advancedModeDivider_cd9517',
-    advancedTitle: 'advancedTitle_cd9517',
-    titleCaret: 'titleCaret_cd9517'
+    advancedModeDivider: 'advancedModeDivider__4914c',
+    advancedTitle: 'advancedTitle__4914c',
+    titleCaret: 'titleCaret__4914c'
 };

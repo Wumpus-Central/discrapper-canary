@@ -34,8 +34,8 @@ let g = 200,
     v = 40,
     y = 80,
     I = 132,
-    b = 80,
-    T = {
+    T = 80,
+    b = {
         [_.VD2.TOP_RIGHT]: h.resizeHandleTopRight,
         [_.VD2.TOP_LEFT]: h.resizeHandleTopLeft,
         [_.VD2.BOTTOM_LEFT]: h.resizeHandleBottomLeft,
@@ -70,7 +70,7 @@ function N(e) {
         );
     return (0, r.jsx)('div', {
         onMouseDown: d,
-        className: o()(h.resizeHandle, T[l])
+        className: o()(h.resizeHandle, b[l])
     });
 }
 class C extends (i = a.PureComponent) {
@@ -321,7 +321,7 @@ let R = (e) => {
                     dockedRect: u,
                     edgeOffsetTop: y,
                     edgeOffsetBottom: I,
-                    edgeOffsetLeft: b,
+                    edgeOffsetLeft: T,
                     edgeOffsetRight: y,
                     roundCorners: f,
                     resizeConfig: h ? void 0 : p,

@@ -1,83 +1,83 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(981729),
-    l = r(780384),
-    u = r(351773),
-    c = r(410030),
-    d = r(100527),
-    f = r(906732),
-    p = r(704440),
-    h = r(632583),
-    _ = r(626135),
-    m = r(443603),
-    g = r(981631),
-    E = r(474936),
-    v = r(388032),
-    y = r(553796);
-function b(e) {
-    let { disabled: n, referralsRemaining: r, channel: i, isResending: b } = e,
-        I = b ? v.intl.string(v.t.zzfBQk) : v.intl.string(v.t.ziPEBg),
-        [T, S] = o.useState(!1),
-        [A, C] = o.useState(!1),
-        N = (0, u.Z)(null, () => C(!1)),
-        { analyticsLocations: R } = (0, f.ZP)(d.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
-        O = i.isDM() && void 0 !== i.recipients ? i.recipients[0] : null,
-        D = (0, c.ZP)();
-    function L() {
-        C((e) => !e);
+n.d(t, { Z: () => y }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(981729),
+    s = n(780384),
+    o = n(351773),
+    l = n(410030),
+    u = n(100527),
+    c = n(906732),
+    d = n(704440),
+    f = n(632583),
+    _ = n(626135),
+    p = n(443603),
+    h = n(981631),
+    m = n(474936),
+    g = n(388032),
+    E = n(553796);
+function v(e) {
+    let { disabled: t, referralsRemaining: n, channel: v, isResending: y } = e,
+        I = y ? g.intl.string(g.t.zzfBQk) : g.intl.string(g.t.ziPEBg),
+        [T, b] = r.useState(!1),
+        [S, A] = r.useState(!1),
+        N = (0, o.Z)(null, () => A(!1)),
+        { analyticsLocations: C } = (0, c.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
+        R = v.isDM() && void 0 !== v.recipients ? v.recipients[0] : null,
+        O = (0, l.ZP)();
+    function D() {
+        A((e) => !e);
     }
-    return n
+    return t
         ? null
-        : (0, a.jsxs)('div', {
+        : (0, i.jsxs)('div', {
               ref: N,
-              className: y.buttonContainer,
+              className: E.buttonContainer,
               children: [
-                  (0, a.jsx)(p.Z, {
-                      shouldShowPopout: A,
-                      referralsRemaining: r,
-                      channel: i,
-                      onClose: () => C(!1),
-                      isResending: b
+                  (0, i.jsx)(d.Z, {
+                      shouldShowPopout: S,
+                      referralsRemaining: n,
+                      channel: v,
+                      onClose: () => A(!1),
+                      isResending: y
                   }),
-                  (0, a.jsx)(s.u, {
+                  (0, i.jsx)(a.u, {
                       text: I,
-                      shouldShow: !A,
+                      shouldShow: !S,
                       'aria-label': I.toString(),
                       children: (e) =>
-                          (0, a.jsx)('div', {
+                          (0, i.jsx)('div', {
                               onMouseEnter: () => {
-                                  !A &&
-                                      !T &&
-                                      (S(!0),
-                                      _.default.track(g.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                          location_stack: R,
-                                          step: E.fz.BADGE_TOOLTIP_VIEWED,
-                                          other_user_id: Number(O)
+                                  S ||
+                                      T ||
+                                      (b(!0),
+                                      _.default.track(h.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                          location_stack: C,
+                                          step: m.fz.BADGE_TOOLTIP_VIEWED,
+                                          other_user_id: Number(R)
                                       }));
                               },
                               onMouseLeave: () => {
-                                  S(!1);
+                                  b(!1);
                               },
-                              children: (0, a.jsx)(m.Z, {
+                              children: (0, i.jsx)(p.Z, {
                                   ...e,
-                                  innerClassName: y.button,
-                                  isActive: A,
+                                  innerClassName: E.button,
+                                  isActive: S,
                                   'aria-label': I.toString(),
                                   'aria-haspopup': 'dialog',
                                   onClick: () => {
-                                      L(),
-                                          _.default.track(g.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                              location_stack: R,
-                                              step: E.fz.BADGE_CLICKED,
-                                              other_user_id: Number(O)
+                                      D(),
+                                          _.default.track(h.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                              location_stack: C,
+                                              step: m.fz.BADGE_CLICKED,
+                                              other_user_id: Number(R)
                                           });
                                   },
-                                  children: (0, a.jsx)(h.Z, {
-                                      referralsRemaining: r,
+                                  children: (0, i.jsx)(f.Z, {
+                                      referralsRemaining: n,
                                       hovered: T,
-                                      isResending: b,
-                                      isLightTheme: (0, l.ap)(D)
+                                      isResending: y,
+                                      isLightTheme: (0, s.ap)(O)
                                   })
                               })
                           })
@@ -85,4 +85,4 @@ function b(e) {
               ]
           });
 }
-n.Z = o.memo(b);
+let y = r.memo(v);

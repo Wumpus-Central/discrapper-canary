@@ -1,39 +1,39 @@
+n.d(t, { Z: () => p });
 var i,
-    r,
     l,
     a,
-    o = n(913527),
-    s = n.n(o),
-    c = n(442837),
-    u = n(570140),
+    r = n(913527),
+    s = n.n(r),
+    o = n(442837),
+    c = n(570140),
     d = n(255078),
-    m = n(594174),
-    h = n(74538);
-let f = !1;
-class p extends (a = c.ZP.Store) {
+    u = n(594174),
+    m = n(74538);
+let h = !1;
+class _ extends (a = o.ZP.Store) {
     shouldShowReactivateNotice() {
-        let e = m.default.getCurrentUser();
-        return !(0, h.I5)(e) && f;
+        let e = u.default.getCurrentUser();
+        return !(0, m.I5)(e) && h;
     }
 }
 (l = 'SubscriptionRemindersStore'),
-    (r = 'displayName') in (i = p)
-        ? Object.defineProperty(i, r, {
+    (i = 'displayName') in _
+        ? Object.defineProperty(_, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = l),
-    (t.Z = new p(u.Z, {
-        BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
-            let { subscription: t } = e;
-            if (null != t) {
-                var n;
-                let e = d.Z.createFromServer(t);
-                if (null == (0, h.Af)(e) || (null === (n = e.metadata) || void 0 === n ? void 0 : n.ended_at) == null) return;
-                let i = s()(e.metadata.ended_at);
-                s()().isBetween(i.clone().add(4, 'days'), i.clone().add(11, 'days')) && (f = !0);
-            }
+        : (_[i] = l);
+let p = new _(c.Z, {
+    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
+        let { subscription: t } = e;
+        if (null != t) {
+            var n;
+            let e = d.Z.createFromServer(t);
+            if (null == (0, m.Af)(e) || (null === (n = e.metadata) || void 0 === n ? void 0 : n.ended_at) == null) return;
+            let i = s()(e.metadata.ended_at);
+            s()().isBetween(i.clone().add(4, 'days'), i.clone().add(11, 'days')) && (h = !0);
         }
-    }));
+    }
+});

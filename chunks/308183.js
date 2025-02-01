@@ -1,7 +1,7 @@
 e.exports = {
-    menu: 'menu_ec5137',
-    optionLabel: 'optionLabel_ec5137',
-    optionIcon: 'optionIcon_ec5137',
-    optionName: 'optionName_ec5137',
-    badge: 'badge_ec5137'
+    menu: 'menu__77820',
+    optionLabel: 'optionLabel__77820',
+    optionIcon: 'optionIcon__77820',
+    badge: 'badge__77820',
+    optionName: 'optionName__77820'
 };

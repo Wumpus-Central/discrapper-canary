@@ -1,10 +1,10 @@
 e.exports = {
-    button: 'button_a467e9',
-    separatorDot: 'separatorDot_a467e9',
-    guildIconContainer: 'guildIconContainer_a467e9',
-    guildName: 'guildName_a467e9',
-    guildIcon: 'guildIcon_a467e9',
-    voiceChannelNameContainer: 'voiceChannelNameContainer_a467e9',
-    channelIcon: 'channelIcon_a467e9',
-    channelName: 'channelName_a467e9'
+    button: 'button__46219',
+    separatorDot: 'separatorDot__46219',
+    guildIconContainer: 'guildIconContainer__46219',
+    guildName: 'guildName__46219',
+    guildIcon: 'guildIcon__46219',
+    voiceChannelNameContainer: 'voiceChannelNameContainer__46219',
+    channelIcon: 'channelIcon__46219',
+    channelName: 'channelName__46219'
 };

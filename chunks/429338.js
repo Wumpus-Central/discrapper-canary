@@ -1,35 +1,35 @@
-var i = r(829132);
-function a(e) {
+var i = n(829132);
+function r(e) {
     (this.data = e), (this.left = null), (this.right = null);
 }
-function o(e) {
+function a(e) {
     (this._root = null), (this._comparator = e), (this.size = 0);
 }
-(a.prototype.get_child = function (e) {
+(r.prototype.get_child = function (e) {
     return e ? this.right : this.left;
 }),
-    (a.prototype.set_child = function (e, n) {
-        e ? (this.right = n) : (this.left = n);
+    (r.prototype.set_child = function (e, t) {
+        e ? (this.right = t) : (this.left = t);
     }),
-    (o.prototype = new i()),
-    (o.prototype.insert = function (e) {
-        if (null === this._root) return (this._root = new a(e)), this.size++, !0;
-        for (var n = 0, r = null, i = this._root; ; ) {
-            if (null === i) return (i = new a(e)), r.set_child(n, i), (ret = !0), this.size++, !0;
+    (a.prototype = new i()),
+    (a.prototype.insert = function (e) {
+        if (null === this._root) return (this._root = new r(e)), this.size++, !0;
+        for (var t = 0, n = null, i = this._root; ; ) {
+            if (null === i) return (i = new r(e)), n.set_child(t, i), (ret = !0), this.size++, !0;
             if (0 === this._comparator(i.data, e)) return !1;
-            (n = 0 > this._comparator(i.data, e)), (r = i), (i = i.get_child(n));
+            (t = 0 > this._comparator(i.data, e)), (n = i), (i = i.get_child(t));
         }
     }),
-    (o.prototype.remove = function (e) {
+    (a.prototype.remove = function (e) {
         if (null === this._root) return !1;
-        var n = new a(void 0),
-            r = n;
-        r.right = this._root;
-        for (var i = null, o = null, s = 1; null !== r.get_child(s); ) {
-            (i = r), (r = r.get_child(s));
-            var l = this._comparator(e, r.data);
-            (s = l > 0), 0 === l && (o = r);
+        var t = new r(void 0),
+            n = t;
+        n.right = this._root;
+        for (var i = null, a = null, s = 1; null !== n.get_child(s); ) {
+            (i = n), (n = n.get_child(s));
+            var o = this._comparator(e, n.data);
+            (s = o > 0), 0 === o && (a = n);
         }
-        return null !== o && ((o.data = r.data), i.set_child(i.right === r, r.get_child(null === r.left)), (this._root = n.right), this.size--, !0);
+        return null !== a && ((a.data = n.data), i.set_child(i.right === n, n.get_child(null === n.left)), (this._root = t.right), this.size--, !0);
     }),
-    (e.exports = o);
+    (e.exports = a);

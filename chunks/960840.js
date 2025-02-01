@@ -1,7 +1,7 @@
 e.exports = {
-    button: 'button_ae6b8e',
-    divider: 'divider_ae6b8e',
-    speaker: 'speaker_ae6b8e',
-    last: 'last_ae6b8e',
-    lastButton: 'lastButton_ae6b8e'
+    button: 'button__9db96',
+    divider: 'divider__9db96',
+    speaker: 'speaker__9db96',
+    last: 'last__9db96',
+    lastButton: 'lastButton__9db96'
 };

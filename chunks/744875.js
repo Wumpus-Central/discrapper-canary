@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         name: 'CMake',
         aliases: ['cmake.in'],
@@ -17,4 +17,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

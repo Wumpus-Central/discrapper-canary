@@ -1,12 +1,12 @@
-var i = r(67867),
-    a = r(611345),
-    o = r(474883),
-    s = r(520078),
-    l = r(741674),
-    u = r(821819)(function () {
+var i = n(67867),
+    r = n(611345),
+    a = n(474883),
+    s = n(520078),
+    o = n(741674),
+    l = n(821819)(function () {
         return 4294967297 !== [].push.call({ length: 4294967296 }, 1);
     }),
-    c = function () {
+    u = function () {
         try {
             Object.defineProperty([], 'length', { writable: !1 }).push();
         } catch (e) {
@@ -18,16 +18,16 @@ i(
         target: 'Array',
         proto: !0,
         arity: 1,
-        forced: u || !c()
+        forced: l || !u()
     },
     {
         push: function (e) {
-            var n = a(this),
-                r = o(n),
+            var t = r(this),
+                n = a(t),
                 i = arguments.length;
-            l(r + i);
-            for (var u = 0; u < i; u++) (n[r] = arguments[u]), r++;
-            return s(n, r), r;
+            o(n + i);
+            for (var l = 0; l < i; l++) (t[n] = arguments[l]), n++;
+            return s(t, n), n;
         }
     }
 );

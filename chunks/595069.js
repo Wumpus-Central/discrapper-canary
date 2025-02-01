@@ -1,24 +1,24 @@
-var i = r(668530),
-    a = r(821819),
-    o = r(96403),
-    s = r(342545),
-    l = r(625014).trim,
-    u = r(219479),
-    c = i.parseInt,
-    d = i.Symbol,
-    f = d && d.iterator,
-    p = /^[+-]?0x/i,
-    h = o(p.exec),
-    _ =
-        8 !== c(u + '08') ||
-        22 !== c(u + '0x16') ||
-        (f &&
-            !a(function () {
-                c(Object(f));
+var i = n(668530),
+    r = n(821819),
+    a = n(96403),
+    s = n(342545),
+    o = n(625014).trim,
+    l = n(219479),
+    u = i.parseInt,
+    c = i.Symbol,
+    d = c && c.iterator,
+    f = /^[+-]?0x/i,
+    _ = a(f.exec),
+    p =
+        8 !== u(l + '08') ||
+        22 !== u(l + '0x16') ||
+        (d &&
+            !r(function () {
+                u(Object(d));
             }));
-e.exports = _
-    ? function (e, n) {
-          var r = l(s(e));
-          return c(r, n >>> 0 || (h(p, r) ? 16 : 10));
+e.exports = p
+    ? function (e, t) {
+          var n = o(s(e));
+          return u(n, t >>> 0 || (_(f, n) ? 16 : 10));
       }
-    : c;
+    : u;

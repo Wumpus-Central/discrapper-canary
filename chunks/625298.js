@@ -1,5 +1,5 @@
 e.exports = {
-    pageContainer: 'pageContainer_cc3078',
-    joinCtaTitle: 'joinCtaTitle_cc3078',
-    joinCtaSubtitle: 'joinCtaSubtitle_cc3078'
+    pageContainer: 'pageContainer__8893c',
+    joinCtaTitle: 'joinCtaTitle__8893c',
+    joinCtaSubtitle: 'joinCtaSubtitle__8893c'
 };

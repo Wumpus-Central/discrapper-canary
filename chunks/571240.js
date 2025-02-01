@@ -1,25 +1,25 @@
-var i = r(96403),
-    a = r(821819),
-    o = r(735471),
-    s = r(327192),
-    l = r(294377),
-    u = r(976396),
-    c = function () {},
-    d = [],
-    f = l('Reflect', 'construct'),
-    p = /^\s*(?:class|function)\b/,
-    h = i(p.exec),
-    _ = !p.test(c),
-    m = function (e) {
-        if (!o(e)) return !1;
+var i = n(96403),
+    r = n(821819),
+    a = n(735471),
+    s = n(327192),
+    o = n(294377),
+    l = n(976396),
+    u = function () {},
+    c = [],
+    d = o('Reflect', 'construct'),
+    f = /^\s*(?:class|function)\b/,
+    _ = i(f.exec),
+    p = !f.test(u),
+    h = function (e) {
+        if (!a(e)) return !1;
         try {
-            return f(c, d, e), !0;
+            return d(u, c, e), !0;
         } catch (e) {
             return !1;
         }
     },
-    g = function (e) {
-        if (!o(e)) return !1;
+    m = function (e) {
+        if (!a(e)) return !1;
         switch (s(e)) {
             case 'AsyncFunction':
             case 'GeneratorFunction':
@@ -27,24 +27,24 @@ var i = r(96403),
                 return !1;
         }
         try {
-            return _ || !!h(p, u(e));
+            return p || !!_(f, l(e));
         } catch (e) {
             return !0;
         }
     };
-(g.sham = !0),
+(m.sham = !0),
     (e.exports =
-        !f ||
-        a(function () {
+        !d ||
+        r(function () {
             var e;
             return (
-                m(m.call) ||
-                !m(Object) ||
-                !m(function () {
+                h(h.call) ||
+                !h(Object) ||
+                !h(function () {
                     e = !0;
                 }) ||
                 e
             );
         })
-            ? g
-            : m);
+            ? m
+            : h);

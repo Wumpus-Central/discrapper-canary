@@ -2,7 +2,7 @@ n.d(t, {
     D$: () => R,
     N4: () => w,
     UI: () => N,
-    Uu: () => b,
+    Uu: () => T,
     _N: () => C,
     cS: () => O,
     cZ: () => M,
@@ -34,14 +34,14 @@ var i = n(392711),
     v = n(489887),
     y = n(981631),
     I = n(388032);
-function b() {
+function T() {
     return {
         text: void 0,
         image: void 0,
-        localCreationAnswerId: T()
+        localCreationAnswerId: b()
     };
 }
-function T() {
+function b() {
     return (0, a.Z)();
 }
 function S(e) {

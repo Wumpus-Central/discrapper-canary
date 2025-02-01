@@ -1,4 +1,4 @@
-e.exports = {
-    emptyStateContainer: 'emptyStateContainer_d9d1c9',
-    emptyStateImage: 'emptyStateImage_d9d1c9'
+n.exports = {
+    emptyStateContainer: 'emptyStateContainer_cce1d3',
+    emptyStateImage: 'emptyStateImage_cce1d3'
 };

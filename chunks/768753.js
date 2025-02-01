@@ -1,4 +1,4 @@
 e.exports = {
-    guildsError: 'guildsError_aada25',
-    errorInner: 'errorInner_aada25'
+    guildsError: 'guildsError_e8d03f',
+    errorInner: 'errorInner_e8d03f'
 };

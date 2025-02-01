@@ -1,9 +1,9 @@
 e.exports = {
-    avatar: 'avatar_c32699',
-    userListOverflow: 'userListOverflow_c32699',
-    voiceUserList: 'voiceUserList_c32699',
-    channelIcon: 'channelIcon_c32699',
-    selected: 'selected_c32699',
-    channelInfo: 'channelInfo_c32699',
-    channelName: 'channelName_c32699'
+    avatar: 'avatar__248f3',
+    userListOverflow: 'userListOverflow__248f3',
+    voiceUserList: 'voiceUserList__248f3',
+    channelIcon: 'channelIcon__248f3',
+    selected: 'selected__248f3',
+    channelInfo: 'channelInfo__248f3',
+    channelName: 'channelName__248f3'
 };

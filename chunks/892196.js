@@ -1,5 +1,5 @@
 e.exports = {
-    emptyWidgetContainer: 'emptyWidgetContainer_f44cfe',
-    absolute: 'absolute_f44cfe',
-    emptyWidgetIcon: 'emptyWidgetIcon_f44cfe'
+    emptyWidgetContainer: 'emptyWidgetContainer_cc1cc5',
+    absolute: 'absolute_cc1cc5',
+    emptyWidgetIcon: 'emptyWidgetIcon_cc1cc5'
 };

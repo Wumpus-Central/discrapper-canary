@@ -20,11 +20,11 @@ let c = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i,
 function I(e) {
     return v.has(e.toLowerCase());
 }
-function b(e) {
+function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null != e && (c.test(e) || (t && I(e)));
 }
-function T(e) {
+function b(e) {
     return null != e && 'discord:' === e;
 }
 function S(e) {
@@ -32,20 +32,20 @@ function S(e) {
     if (null != e) {
         var n;
         let i = null === (n = l.Z.toURLSafe(e)) || void 0 === n ? void 0 : n.hostname;
-        if (null != i && b(i, t)) return !0;
+        if (null != i && T(i, t)) return !0;
     }
     return !1;
 }
 function A(e) {
-    return null != e && T(o.parse(e).protocol);
+    return null != e && b(o.parse(e).protocol);
 }
 let N = {
     URL_REGEX: E,
-    isDiscordHostname: b,
+    isDiscordHostname: T,
     isDiscordLocalhost: function (e, t) {
         return null != e && null != t && window.location.host === e;
     },
-    isDiscordProtocol: T,
+    isDiscordProtocol: b,
     isDiscordUrl: S,
     isDiscordUri: A,
     isDiscordCdnUrl: function (e) {

@@ -1,3 +1,3 @@
-let i = r(40231),
-    a = (e, n) => new i(e, n).major;
-e.exports = a;
+let i = n(40231),
+    r = (e, t) => new i(e, t).major;
+e.exports = r;

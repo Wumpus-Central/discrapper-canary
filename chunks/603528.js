@@ -1,6 +1,6 @@
-var e = n(838957),
-    o = TypeError;
-t.exports = function (t, r) {
-    if (e(r, t)) return t;
-    throw o('Incorrect invocation');
+var i = n(838957),
+    r = TypeError;
+e.exports = function (e, t) {
+    if (i(t, e)) return e;
+    throw r('Incorrect invocation');
 };

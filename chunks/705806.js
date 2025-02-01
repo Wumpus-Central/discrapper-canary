@@ -1,22 +1,22 @@
-var i = r(4148),
-    a = r(665679),
-    o = a('%Function.prototype.apply%'),
-    s = a('%Function.prototype.call%'),
-    l = a('%Reflect.apply%', !0) || i.call(s, o),
-    u = a('%Object.getOwnPropertyDescriptor%', !0),
-    c = a('%Object.defineProperty%', !0),
-    d = a('%Math.max%');
-if (c)
+var i = n(4148),
+    r = n(665679),
+    a = r('%Function.prototype.apply%'),
+    s = r('%Function.prototype.call%'),
+    o = r('%Reflect.apply%', !0) || i.call(s, a),
+    l = r('%Object.getOwnPropertyDescriptor%', !0),
+    u = r('%Object.defineProperty%', !0),
+    c = r('%Math.max%');
+if (u)
     try {
-        c({}, 'a', { value: 1 });
+        u({}, 'a', { value: 1 });
     } catch (e) {
-        c = null;
+        u = null;
     }
 e.exports = function (e) {
-    var n = l(i, s, arguments);
-    return u && c && u(n, 'length').configurable && c(n, 'length', { value: 1 + d(0, e.length - (arguments.length - 1)) }), n;
+    var t = o(i, s, arguments);
+    return l && u && l(t, 'length').configurable && u(t, 'length', { value: 1 + c(0, e.length - (arguments.length - 1)) }), t;
 };
-var f = function () {
-    return l(i, o, arguments);
+var d = function () {
+    return o(i, a, arguments);
 };
-c ? c(e.exports, 'apply', { value: f }) : (e.exports.apply = f);
+u ? u(e.exports, 'apply', { value: d }) : (e.exports.apply = d);

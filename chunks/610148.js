@@ -1,22 +1,22 @@
-var e = n(325008),
-    o = n(498576),
+var n = e(325008),
+    o = e(498576),
     i = TypeError,
-    u = Object.getOwnPropertyDescriptor,
-    c =
-        e &&
+    f = Object.getOwnPropertyDescriptor,
+    u =
+        n &&
         !(function () {
             if (void 0 !== this) return !0;
             try {
                 Object.defineProperty([], 'length', { writable: !1 }).length = 1;
-            } catch (t) {
-                return t instanceof TypeError;
+            } catch (r) {
+                return r instanceof TypeError;
             }
         })();
-t.exports = c
-    ? function (t, r) {
-          if (o(t) && !u(t, 'length').writable) throw i('Cannot set read only .length');
-          return (t.length = r);
+r.exports = u
+    ? function (r, t) {
+          if (o(r) && !f(r, 'length').writable) throw i('Cannot set read only .length');
+          return (r.length = t);
       }
-    : function (t, r) {
-          return (t.length = r);
+    : function (r, t) {
+          return (r.length = t);
       };

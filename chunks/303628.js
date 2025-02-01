@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(117530),
     y = n(459273),
     I = n(444282),
-    b = n(898463),
-    T = n(981631),
+    T = n(898463),
+    b = n(981631),
     S = n(995987),
     A = n(763971);
 let N = [];
@@ -71,7 +71,7 @@ function C(e) {
         C.focusFirstVisibleItem();
     }, [C]);
     (0, y.yp)({
-        event: T.CkL.FOCUS_ATTACHMENT_AREA,
+        event: b.CkL.FOCUS_ATTACHMENT_AREA,
         handler: M
     });
     let k = {
@@ -124,7 +124,7 @@ function C(e) {
                                         )
                                       : R.map((e) =>
                                             (0, i.jsx)(
-                                                b.Z,
+                                                T.Z,
                                                 {
                                                     channelId: t,
                                                     draftType: n.drafts.type,

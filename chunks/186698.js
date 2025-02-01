@@ -1,38 +1,38 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = 'pagh_wa\u2019_cha\u2019_wej_loS_vagh_jav_Soch_chorgh_Hut'.split('_');
-    function r(e) {
-        var n = e;
-        return (n = -1 !== e.indexOf('jaj') ? n.slice(0, -3) + 'leS' : -1 !== e.indexOf('jar') ? n.slice(0, -3) + 'waQ' : -1 !== e.indexOf('DIS') ? n.slice(0, -3) + 'nem' : n + ' pIq');
+    var t = 'pagh_wa\u2019_cha\u2019_wej_loS_vagh_jav_Soch_chorgh_Hut'.split('_');
+    function n(e) {
+        var t = e;
+        return -1 !== e.indexOf('jaj') ? t.slice(0, -3) + 'leS' : -1 !== e.indexOf('jar') ? t.slice(0, -3) + 'waQ' : -1 !== e.indexOf('DIS') ? t.slice(0, -3) + 'nem' : t + ' pIq';
     }
     function i(e) {
-        var n = e;
-        return (n = -1 !== e.indexOf('jaj') ? n.slice(0, -3) + 'Hu\u2019' : -1 !== e.indexOf('jar') ? n.slice(0, -3) + 'wen' : -1 !== e.indexOf('DIS') ? n.slice(0, -3) + 'ben' : n + ' ret');
+        var t = e;
+        return -1 !== e.indexOf('jaj') ? t.slice(0, -3) + 'Hu\u2019' : -1 !== e.indexOf('jar') ? t.slice(0, -3) + 'wen' : -1 !== e.indexOf('DIS') ? t.slice(0, -3) + 'ben' : t + ' ret';
     }
-    function a(e, n, r, i) {
-        var a = o(e);
-        switch (r) {
+    function r(e, t, n, i) {
+        var r = a(e);
+        switch (n) {
             case 'ss':
-                return a + ' lup';
+                return r + ' lup';
             case 'mm':
-                return a + ' tup';
+                return r + ' tup';
             case 'hh':
-                return a + ' rep';
+                return r + ' rep';
             case 'dd':
-                return a + ' jaj';
+                return r + ' jaj';
             case 'MM':
-                return a + ' jar';
+                return r + ' jar';
             case 'yy':
-                return a + ' DIS';
+                return r + ' DIS';
         }
     }
-    function o(e) {
-        var r = Math.floor((e % 1000) / 100),
+    function a(e) {
+        var n = Math.floor((e % 1000) / 100),
             i = Math.floor((e % 100) / 10),
-            a = e % 10,
-            o = '';
-        return r > 0 && (o += n[r] + 'vatlh'), i > 0 && (o += ('' !== o ? ' ' : '') + n[i] + 'maH'), a > 0 && (o += ('' !== o ? ' ' : '') + n[a]), '' === o ? 'pagh' : o;
+            r = e % 10,
+            a = '';
+        return n > 0 && (a += t[n] + 'vatlh'), i > 0 && (a += ('' !== a ? ' ' : '') + t[i] + 'maH'), r > 0 && (a += ('' !== a ? ' ' : '') + t[r]), '' === a ? 'pagh' : a;
     }
     return e.defineLocale('tlh', {
         months: 'tera\u2019 jar wa\u2019_tera\u2019 jar cha\u2019_tera\u2019 jar wej_tera\u2019 jar loS_tera\u2019 jar vagh_tera\u2019 jar jav_tera\u2019 jar Soch_tera\u2019 jar chorgh_tera\u2019 jar Hut_tera\u2019 jar wa\u2019maH_tera\u2019 jar wa\u2019maH wa\u2019_tera\u2019 jar wa\u2019maH cha\u2019'.split('_'),
@@ -58,20 +58,20 @@
             sameElse: 'L'
         },
         relativeTime: {
-            future: r,
+            future: n,
             past: i,
             s: 'puS lup',
-            ss: a,
+            ss: r,
             m: 'wa\u2019 tup',
-            mm: a,
+            mm: r,
             h: 'wa\u2019 rep',
-            hh: a,
+            hh: r,
             d: 'wa\u2019 jaj',
-            dd: a,
+            dd: r,
             M: 'wa\u2019 jar',
-            MM: a,
+            MM: r,
             y: 'wa\u2019 DIS',
-            yy: a
+            yy: r
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

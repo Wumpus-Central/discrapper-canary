@@ -122,7 +122,7 @@ function g(e) {
 function E(e) {
     let { quest: t, taskDetails: n, thirdPartyTaskDetails: i, withoutMarkdown: r, withSimplifiedCopy: s } = e;
     if (s)
-        switch (b(t)) {
+        switch (T(t)) {
             case 0:
                 return d(
                     u.t.goA6o6,
@@ -229,15 +229,15 @@ function I(e) {
         withSimplifiedCopy: (0, s.j)({ location: n })
     });
 }
-function b(e) {
+function T(e) {
     return (0, a.$J)(e) || (0, a.pO)(e) ? 0 : (0, a.Dr)({ quest: e }) ? 1 : (0, a.q8)(e) ? 2 : 0;
 }
-function T(e) {
-    return i.useMemo(() => b(e), [e]);
+function b(e) {
+    return i.useMemo(() => T(e), [e]);
 }
 function S(e) {
     let { quest: t, location: n, autoTrackExposure: i = !0 } = e,
-        r = T(t),
+        r = b(t),
         a = (0, s.j)({
             location: n,
             autoTrackExposure: i

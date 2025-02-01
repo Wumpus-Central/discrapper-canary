@@ -1,5 +1,5 @@
 e.exports = {
-    wrapper: 'wrapper_c41ff0',
-    heading: 'heading_c41ff0',
-    originalPrice: 'originalPrice_c41ff0'
+    wrapper: 'wrapper__53812',
+    heading: 'heading__53812',
+    originalPrice: 'originalPrice__53812'
 };

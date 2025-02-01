@@ -1,10 +1,10 @@
 e.exports = {
-    formPriorityImageContainer: 'formPriorityImageContainer_d76ce1',
-    formPriorityTitleContainer: 'formPriorityTitleContainer_d76ce1',
-    formPriorityTitle: 'formPriorityTitle_d76ce1',
-    formPriorityDescription: 'formPriorityDescription_d76ce1',
-    formPriorityImage: 'formPriorityImage_d76ce1',
-    attachments: 'attachments_d76ce1',
-    attachment: 'attachment_d76ce1',
-    removeAttachment: 'removeAttachment_d76ce1'
+    formPriorityImageContainer: 'formPriorityImageContainer__2cf82',
+    formPriorityTitleContainer: 'formPriorityTitleContainer__2cf82',
+    formPriorityTitle: 'formPriorityTitle__2cf82',
+    formPriorityDescription: 'formPriorityDescription__2cf82',
+    formPriorityImage: 'formPriorityImage__2cf82',
+    attachments: 'attachments__2cf82',
+    attachment: 'attachment__2cf82',
+    removeAttachment: 'removeAttachment__2cf82'
 };

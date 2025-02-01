@@ -1,12 +1,12 @@
 e.exports = {
-    row: 'row_b8c2de',
-    icon: 'icon_b8c2de',
-    salePercentage: 'salePercentage_b8c2de',
-    originalAmount: 'originalAmount_b8c2de',
-    directoryTilePrice: 'directoryTilePrice_b8c2de',
-    directoryHeroPrice: 'directoryHeroPrice_b8c2de',
-    directoryHeroPricePremium: 'directoryHeroPricePremium_b8c2de',
-    directorySearchPrice: 'directorySearchPrice_b8c2de',
-    listingPrice: 'listingPrice_b8c2de',
-    embedPrice: 'embedPrice_b8c2de'
+    row: 'row_c7dbcb',
+    icon: 'icon_c7dbcb',
+    salePercentage: 'salePercentage_c7dbcb',
+    originalAmount: 'originalAmount_c7dbcb',
+    directoryTilePrice: 'directoryTilePrice_c7dbcb',
+    directoryHeroPrice: 'directoryHeroPrice_c7dbcb',
+    directoryHeroPricePremium: 'directoryHeroPricePremium_c7dbcb',
+    directorySearchPrice: 'directorySearchPrice_c7dbcb',
+    listingPrice: 'listingPrice_c7dbcb',
+    embedPrice: 'embedPrice_c7dbcb'
 };

@@ -1,6 +1,6 @@
 e.exports = {
-    tooltipContainer: 'tooltipContainer_eb20d6',
-    tooltipBackground: 'tooltipBackground_eb20d6',
-    tooltip: 'tooltip_eb20d6',
-    tooltipContent: 'tooltipContent_eb20d6'
+    tooltipContainer: 'tooltipContainer__87e08',
+    tooltipBackground: 'tooltipBackground__87e08',
+    tooltip: 'tooltip__87e08',
+    tooltipContent: 'tooltipContent__87e08'
 };

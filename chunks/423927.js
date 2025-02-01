@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
         ss: 'sekundes_sekundēm_sekunde_sekundes'.split('_'),
         m: 'minūtes_minūtēm_minūte_minūtes'.split('_'),
         mm: 'minūtes_minūtēm_minūte_minūtes'.split('_'),
@@ -14,17 +14,17 @@
         y: 'gada_gadiem_gads_gadi'.split('_'),
         yy: 'gada_gadiem_gads_gadi'.split('_')
     };
-    function r(e, n, r) {
-        return r ? (n % 10 == 1 && n % 100 != 11 ? e[2] : e[3]) : n % 10 == 1 && n % 100 != 11 ? e[0] : e[1];
+    function n(e, t, n) {
+        return n ? (t % 10 == 1 && t % 100 != 11 ? e[2] : e[3]) : t % 10 == 1 && t % 100 != 11 ? e[0] : e[1];
     }
-    function i(e, i, a) {
-        return e + ' ' + r(n[a], e, i);
+    function i(e, i, r) {
+        return e + ' ' + n(t[r], e, i);
     }
-    function a(e, i, a) {
-        return r(n[a], e, i);
+    function r(e, i, r) {
+        return n(t[r], e, i);
     }
-    function o(e, n) {
-        return n ? 'dažas sekundes' : 'dažām sekundēm';
+    function a(e, t) {
+        return t ? 'dažas sekundes' : 'dažām sekundēm';
     }
     return e.defineLocale('lv', {
         months: 'janvāris_februāris_marts_aprīlis_maijs_jūnijs_jūlijs_augusts_septembris_oktobris_novembris_decembris'.split('_'),
@@ -52,17 +52,17 @@
         relativeTime: {
             future: 'pēc %s',
             past: 'pirms %s',
-            s: o,
+            s: a,
             ss: i,
-            m: a,
+            m: r,
             mm: i,
-            h: a,
+            h: r,
             hh: i,
-            d: a,
+            d: r,
             dd: i,
-            M: a,
+            M: r,
             MM: i,
-            y: a,
+            y: r,
             yy: i
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,

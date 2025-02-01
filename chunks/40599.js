@@ -1,9 +1,9 @@
-t.exports = {
-    container: 'container_ac53d0',
-    title: 'title_ac53d0',
-    img: 'img_ac53d0',
-    birthday: 'birthday_ac53d0',
-    confirmContainer: 'confirmContainer_ac53d0',
-    confirmTitle: 'confirmTitle_ac53d0',
-    confirmFooter: 'confirmFooter_ac53d0'
+e.exports = {
+    container: 'container__6faef',
+    title: 'title__6faef',
+    img: 'img__6faef',
+    birthday: 'birthday__6faef',
+    confirmContainer: 'confirmContainer__6faef',
+    confirmTitle: 'confirmTitle__6faef',
+    confirmFooter: 'confirmFooter__6faef'
 };

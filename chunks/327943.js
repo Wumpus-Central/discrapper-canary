@@ -1,94 +1,94 @@
+n.d(t, { Z: () => N });
 var i,
-    a = r(442837),
-    o = r(570140),
-    s = r(594174),
-    l = r(626135),
-    u = r(74538),
-    c = r(997945),
-    d = r(981631),
-    f = r(921944),
-    p = r(474936);
-function h(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(594174),
+    o = n(626135),
+    l = n(74538),
+    u = n(997945),
+    c = n(981631),
+    d = n(921944),
+    f = n(474936);
+function _(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let _ = 2,
-    m = {
+let p = 2,
+    h = {
         client: {
-            desktop: c.aH.DEFAULT,
+            desktop: u.aH.DEFAULT,
             coachmarkImpressions: 0
         }
     },
-    g = !1,
-    E = !0,
-    v = () => {
-        E = !u.ZP.canUsePremiumAppIcons(s.default.getCurrentUser());
+    m = !1,
+    g = !0,
+    E = () => {
+        g = !l.ZP.canUsePremiumAppIcons(s.default.getCurrentUser());
     },
-    y = (e) => {
-        if (((m.client.desktop = e), !E)) {
-            var n;
-            l.default.track(d.rMx.APP_ICON_UPDATED, {
+    v = (e) => {
+        if (((h.client.desktop = e), !g)) {
+            var t;
+            o.default.track(c.rMx.APP_ICON_UPDATED, {
                 icon_id: e,
-                user_premium_tier: null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.premiumType,
-                icon_premium_tier: e !== c.aH.DEFAULT ? p.p9.TIER_2 : null
+                user_premium_tier: null === (t = s.default.getCurrentUser()) || void 0 === t ? void 0 : t.premiumType,
+                icon_premium_tier: e !== u.aH.DEFAULT ? f.p9.TIER_2 : null
             });
         }
     };
-function b(e) {
-    let { id: n } = e;
-    null != n && y(n);
+function y(e) {
+    let { id: t } = e;
+    null != t && v(t);
 }
 function I() {
-    g = !0;
+    m = !0;
 }
 function T() {
-    S(), (g = !1);
+    b(), (m = !1);
 }
-function S() {
-    E &&
-        (m.client = {
-            desktop: c.aH.DEFAULT,
-            coachmarkImpressions: _
+function b() {
+    g &&
+        (h.client = {
+            desktop: u.aH.DEFAULT,
+            coachmarkImpressions: p
         });
 }
-function A(e) {
-    let { markAsDismissed: n } = e;
-    (m.client.coachmarkImpressions += 1), m.client.coachmarkImpressions >= _ && (null == n || n(f.L.UNKNOWN), T());
+function S(e) {
+    let { markAsDismissed: t } = e;
+    (h.client.coachmarkImpressions += 1), h.client.coachmarkImpressions >= p && (null == t || t(d.L.UNKNOWN), T());
 }
-class C extends (i = a.ZP.PersistedStore) {
+class A extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (m = e), this.waitFor(s.default), this.syncWith([s.default], v);
+        null != e && (h = e), this.waitFor(s.default), this.syncWith([s.default], E);
     }
     get isEditorOpen() {
-        return g;
+        return m;
     }
     get isUpsellPreview() {
-        return E;
+        return g;
     }
     getState() {
-        return m;
+        return h;
     }
     getCurrentDesktopIcon() {
         var e;
-        return null == m ? void 0 : null === (e = m.client) || void 0 === e ? void 0 : e.desktop;
+        return null == h ? void 0 : null === (e = h.client) || void 0 === e ? void 0 : e.desktop;
     }
 }
-h(C, 'displayName', 'AppIconPersistedStoreState'),
-    h(C, 'persistKey', 'AppIconPersistedStoreState'),
-    (n.Z = new C(o.Z, {
-        APP_ICON_UPDATED: b,
-        APP_ICON_EDITOR_OPEN: I,
-        APP_ICON_EDITOR_CLOSE: T,
-        APP_ICON_EDITOR_RESET: S,
-        APP_ICON_TRACK_IMPRESSION: A,
-        LOGOUT: T
-    }));
+_(A, 'displayName', 'AppIconPersistedStoreState'), _(A, 'persistKey', 'AppIconPersistedStoreState');
+let N = new A(a.Z, {
+    APP_ICON_UPDATED: y,
+    APP_ICON_EDITOR_OPEN: I,
+    APP_ICON_EDITOR_CLOSE: T,
+    APP_ICON_EDITOR_RESET: b,
+    APP_ICON_TRACK_IMPRESSION: S,
+    LOGOUT: T
+});

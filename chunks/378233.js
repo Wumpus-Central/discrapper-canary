@@ -6,7 +6,7 @@ n.d(t, {
     V9: () => U,
     WD: () => L,
     X_: () => D,
-    Zt: () => T,
+    Zt: () => b,
     Zv: () => A,
     _V: () => N,
     cv: () => k,
@@ -31,8 +31,8 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
     v = Object.values(d.og),
     y = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(v.join('|'), ')'))),
     I = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(h, ')(').concat(y, ')'), 'ig'),
-    b = RegExp(''.concat(location.protocol).concat(p, '(').concat(y, ')'), 'ig'),
-    T = (e) => {
+    T = RegExp(''.concat(location.protocol).concat(p, '(').concat(y, ')'), 'ig'),
+    b = (e) => {
         if (null != e.cover_sticker_id) {
             let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
             if (null != t) return t;
@@ -108,7 +108,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
             n
         );
     },
-    O = (e) => null != e.match('development' !== m ? I : b),
+    O = (e) => null != e.match('development' !== m ? I : T),
     D = (e) =>
         e.stickers.some((e) => {
             let { format_type: t } = e;
@@ -119,7 +119,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         id: e.id,
         name: e.name,
         stickers: e.stickers,
-        previewSticker: T(e)
+        previewSticker: b(e)
     }),
     L = (e, t) => (e === f.yr.ANIMATE_ON_INTERACTION ? t : e !== f.yr.NEVER_ANIMATE),
     P = (e, t, n, r) => {

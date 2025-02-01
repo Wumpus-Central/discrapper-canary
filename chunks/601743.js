@@ -10,7 +10,7 @@ t.exports = function (t, e) {
     }
     var s = t._latestEditorState,
         c = s.getSelection();
-    if (!!c.getHasFocus()) {
+    if (c.getHasFocus()) {
         var l = c.set('hasFocus', !1);
         t.props.onBlur && t.props.onBlur(e), t.update(n.acceptSelection(s, l));
     }

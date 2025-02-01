@@ -1,13 +1,13 @@
-function n(e) {
-    let n = "a-zA-Z_\\-!.?+*=<>&'",
-        r = '[#]?[' + n + '][' + n + '0-9/;:$#]*',
+function t(e) {
+    let t = "a-zA-Z_\\-!.?+*=<>&'",
+        n = '[#]?[' + t + '][' + t + '0-9/;:$#]*',
         i = 'def defonce defprotocol defstruct defmulti defmethod defn- defn defmacro deftype defrecord',
-        a = {
-            $pattern: r,
+        r = {
+            $pattern: n,
             built_in: i + ' cond apply if-not if-let if not not= =|0 <|0 >|0 <=|0 >=|0 ==|0 +|0 /|0 *|0 -|0 rem quot neg? pos? delay? symbol? keyword? true? false? integer? empty? coll? list? set? ifn? fn? associative? sequential? sorted? counted? reversible? number? decimal? class? distinct? isa? float? rational? reduced? ratio? odd? even? char? seq? vector? string? map? nil? contains? zero? instance? not-every? not-any? libspec? -> ->> .. . inc compare do dotimes mapcat take remove take-while drop letfn drop-last take-last drop-while while intern condp case reduced cycle split-at split-with repeat replicate iterate range merge zipmap declare line-seq sort comparator sort-by dorun doall nthnext nthrest partition eval doseq await await-for let agent atom send send-off release-pending-sends add-watch mapv filterv remove-watch agent-error restart-agent set-error-handler error-handler set-error-mode! error-mode shutdown-agents quote var fn loop recur throw try monitor-enter monitor-exit macroexpand macroexpand-1 for dosync and or when when-not when-let comp juxt partial sequence memoize constantly complement identity assert peek pop doto proxy first rest cons cast coll last butlast sigs reify second ffirst fnext nfirst nnext meta with-meta ns in-ns create-ns import refer keys select-keys vals key val rseq name namespace promise into transient persistent! conj! assoc! dissoc! pop! disj! use class type num float double short byte boolean bigint biginteger bigdec print-method print-dup throw-if printf format load compile get-in update-in pr pr-on newline flush read slurp read-line subvec with-open memfn time re-find re-groups rand-int rand mod locking assert-valid-fdecl alias resolve ref deref refset swap! reset! set-validator! compare-and-set! alter-meta! reset-meta! commute get-validator alter ref-set ref-history-count ref-min-history ref-max-history ensure sync io! new next conj set! to-array future future-call into-array aset gen-class reduce map filter find empty hash-map hash-set sorted-map sorted-map-by sorted-set sorted-set-by vec vector seq flatten reverse assoc dissoc list disj get union difference intersection extend extend-type extend-protocol int nth delay count concat chunk chunk-buffer chunk-append chunk-first chunk-rest max min dec unchecked-inc-int unchecked-inc unchecked-dec-inc unchecked-dec unchecked-negate unchecked-add-int unchecked-add unchecked-subtract-int unchecked-subtract chunk-next chunk-cons chunked-seq? prn vary-meta lazy-seq spread list* str find-keyword keyword symbol gensym force rationalize'
         },
-        o = {
-            begin: r,
+        a = {
+            begin: n,
             relevance: 0
         },
         s = {
@@ -15,7 +15,7 @@ function n(e) {
             relevance: 0,
             variants: [{ match: /[-+]?0[xX][0-9a-fA-F]+N?/ }, { match: /[-+]?0[0-7]+N?/ }, { match: /[-+]?[1-9][0-9]?[rR][0-9a-zA-Z]+N?/ }, { match: /[-+]?[0-9]+\/[0-9]+N?/ }, { match: /[-+]?[0-9]+((\.[0-9]*([eE][+-]?[0-9]+)?M?)|([eE][+-]?[0-9]+M?|M))/ }, { match: /[-+]?([1-9][0-9]*|0)N?/ }]
         },
-        l = {
+        o = {
             scope: 'character',
             variants: [
                 { match: /\\o[0-3]?[0-7]{1,2}/ },
@@ -27,75 +27,75 @@ function n(e) {
                 }
             ]
         },
-        u = {
+        l = {
             scope: 'regex',
             begin: /#"/,
             end: /"/,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        c = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
-        d = {
+        u = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        c = {
             scope: 'punctuation',
             match: /,/,
             relevance: 0
         },
-        f = e.COMMENT(';', '$', { relevance: 0 }),
-        p = {
+        d = e.COMMENT(';', '$', { relevance: 0 }),
+        f = {
             className: 'literal',
             begin: /\b(true|false|nil)\b/
         },
-        h = {
-            begin: '\\[|(#::?' + r + ')?\\{',
+        _ = {
+            begin: '\\[|(#::?' + n + ')?\\{',
             end: '[\\]\\}]',
             relevance: 0
         },
-        _ = {
+        p = {
             className: 'symbol',
-            begin: '[:]{1,2}' + r
+            begin: '[:]{1,2}' + n
         },
-        m = {
+        h = {
             begin: '\\(',
             end: '\\)'
         },
-        g = {
+        m = {
             endsWithParent: !0,
             relevance: 0
         },
-        E = {
-            keywords: a,
+        g = {
+            keywords: r,
             className: 'name',
-            begin: r,
+            begin: n,
             relevance: 0,
-            starts: g
+            starts: m
         },
-        v = [d, m, l, u, c, f, _, h, s, p, o],
-        y = {
+        E = [c, h, o, l, u, d, p, _, s, f, a],
+        v = {
             beginKeywords: i,
             keywords: {
-                $pattern: r,
+                $pattern: n,
                 keyword: i
             },
             end: '(\\[|#|\\d|"|:|\\{|\\)|\\(|$)',
             contains: [
                 {
                     className: 'title',
-                    begin: r,
+                    begin: n,
                     relevance: 0,
                     excludeEnd: !0,
                     endsParent: !0
                 }
-            ].concat(v)
+            ].concat(E)
         };
     return (
-        (m.contains = [y, E, g]),
-        (g.contains = v),
-        (h.contains = v),
+        (h.contains = [v, g, m]),
+        (m.contains = E),
+        (_.contains = E),
         {
             name: 'Clojure',
             aliases: ['clj', 'edn'],
             illegal: /\S/,
-            contains: [d, m, l, u, c, f, _, h, s, p]
+            contains: [c, h, o, l, u, d, p, _, s, f]
         }
     );
 }
-e.exports = n;
+e.exports = t;

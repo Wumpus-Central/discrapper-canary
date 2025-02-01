@@ -1,6 +1,6 @@
-var e = r(35179),
-    o = TypeError;
+var r = a(35179),
+    n = TypeError;
 t.exports = function (t) {
-    if (e(t)) throw o("Can't call method on " + t);
+    if (r(t)) throw n("Can't call method on " + t);
     return t;
 };

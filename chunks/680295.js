@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(264275);
 let v = (e) => {
         let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: a = !1, isHovering: o = !1, useOpacityOnHover: l = !0, autoPlay: u = !0, restartMethod: h, urlQueryString: g, profileEffectConfig: v, noBorderRadius: y = !1, introDelay: I = c.lG } = e,
-            b = r.useRef(null),
-            [T, S] = r.useState([]);
+            T = r.useRef(null),
+            [b, S] = r.useState([]);
         (0, m.Z)(v);
         let [A, N] = r.useState(0),
             [C, R] = r.useState(0),
@@ -45,24 +45,24 @@ let v = (e) => {
             r.useEffect(() => {
                 let e = 0,
                     t = 1 / 0;
-                T.forEach((n) => {
+                b.forEach((n) => {
                     let i = n.start + n.duration;
                     i > e && (e = i), n.loop && n.start < t && (t = n.start);
                 }),
                     N(t),
                     R(e);
-            }, [R, T]);
+            }, [R, b]);
         let [k, U] = r.useState(!1);
         return (
             r.useEffect(() => {
                 !0 === u || o || (L(), x(0)), !o && k && w.current && (L(), x(0)), a && o && !w.current && (P(), v.animationType === d.Q.PERSISTENT ? x(h === d.j.FromStart ? 0 : A) : x(0));
             }, [o, k, A, a, L, P, w, v.animationType, u, h]),
             (0, i.jsx)('div', {
-                ref: b,
+                ref: T,
                 className: s()(E.profileEffects, { [E.hovered]: o && l }),
                 children: (0, i.jsx)('div', {
                     className: y ? E.innerNoRadius : E.inner,
-                    children: T.map((e, r) => {
+                    children: b.map((e, r) => {
                         if (!w.current && v.animationType === d.Q.PERSISTENT && null != v.staticFrameSrc && 0 === r && !0 === u) {
                             var a, s, o, l;
                             let { staticFrameSrc: n } = v;

@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('sq', {
         months: 'Janar_Shkurt_Mars_Prill_Maj_Qershor_Korrik_Gusht_Shtator_Tetor_Nëntor_Dhjetor'.split('_'),
@@ -12,7 +12,7 @@
         isPM: function (e) {
             return 'M' === e.charAt(0);
         },
-        meridiem: function (e, n, r) {
+        meridiem: function (e, t, n) {
             return e < 12 ? 'PD' : 'MD';
         },
         longDateFormat: {

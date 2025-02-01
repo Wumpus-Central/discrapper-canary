@@ -1,8 +1,8 @@
 e.exports = {
-    planSelectStep: 'planSelectStep_eeab8f',
-    externalErrorBlock: 'externalErrorBlock_eeab8f',
-    footerRight: 'footerRight_eeab8f',
-    backStep: 'backStep_eeab8f',
-    copy: 'copy_eeab8f',
-    loadingWrapper: 'loadingWrapper_eeab8f'
+    planSelectStep: 'planSelectStep__65b48',
+    externalErrorBlock: 'externalErrorBlock__65b48',
+    footerRight: 'footerRight__65b48',
+    backStep: 'backStep__65b48',
+    copy: 'copy__65b48',
+    loadingWrapper: 'loadingWrapper__65b48'
 };

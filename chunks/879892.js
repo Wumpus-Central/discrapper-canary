@@ -14,7 +14,7 @@ var r = n(481060),
     p = n(981631);
 let h = 'apply-guild-boost-modal';
 async function m(e) {
-    let { analyticsLocations: t, analyticsLocation: m, analyticsSourceLocation: g, numberOfBoostsToAdd: E, onClose: v, closeLayer: y, onSubscriptionConfirmation: I, guild: b, handleSubscribeModalClose: T, disablePremiumUpsell: S, inPopout: A, applicationId: N } = e,
+    let { analyticsLocations: t, analyticsLocation: m, analyticsSourceLocation: g, numberOfBoostsToAdd: E, onClose: v, closeLayer: y, onSubscriptionConfirmation: I, guild: T, handleSubscribeModalClose: b, disablePremiumUpsell: S, inPopout: A, applicationId: N } = e,
         C = A ? r.u1M : r.z1l,
         R = l.default.getCurrentUser();
     if (null == R) return;
@@ -39,7 +39,7 @@ async function m(e) {
     let D = (0, f.vx)(u.Z.boostSlots),
         x = D.length,
         L = (e) => {
-            null == v || v(), null == T || T(e);
+            null == v || v(), null == b || b(e);
         },
         P = () => {
             null == v || v(),
@@ -62,7 +62,7 @@ async function m(e) {
                             onClose: (e) => {
                                 r(), L(e);
                             },
-                            selectedGuild: b,
+                            selectedGuild: T,
                             locationSection: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                             guildBoostSlots: e
                         });
@@ -81,7 +81,7 @@ async function m(e) {
             analyticsLocations: t,
             analyticsLocation: m,
             analyticsSourceLocation: g,
-            guildId: b.id,
+            guildId: T.id,
             closeLayer: P,
             totalNumberOfSlotsToAssign: null != E ? E : 1,
             onCloseModal: L,

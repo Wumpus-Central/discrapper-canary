@@ -1,6 +1,6 @@
 e.exports = {
-    newMembersNotice: 'newMembersNotice_dfba43',
-    memberNoticeAction: 'memberNoticeAction_dfba43',
-    memberNoticeActionButton: 'memberNoticeActionButton_dfba43',
-    memberNoticeActionIcon: 'memberNoticeActionIcon_dfba43'
+    newMembersNotice: 'newMembersNotice_acdcc0',
+    memberNoticeAction: 'memberNoticeAction_acdcc0',
+    memberNoticeActionButton: 'memberNoticeActionButton_acdcc0',
+    memberNoticeActionIcon: 'memberNoticeActionIcon_acdcc0'
 };

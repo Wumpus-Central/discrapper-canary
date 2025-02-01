@@ -1,24 +1,24 @@
 var i = (function () {
-    function e(e, n) {
-        for (var r = 0; r < n.length; r++) {
-            var i = n[r];
+    function e(e, t) {
+        for (var n = 0; n < t.length; n++) {
+            var i = t[n];
             (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
         }
     }
-    return function (n, r, i) {
-        return r && e(n.prototype, r), i && e(n, i), n;
+    return function (t, n, i) {
+        return n && e(t.prototype, n), i && e(t, i), t;
     };
 })();
-function a(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function r(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function o(e, n) {
+function a(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function s(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function s(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -26,46 +26,46 @@ function s(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var l = r(328794),
-    u = r(601102),
-    c = r(887442),
-    d = (function (e) {
-        function n(e) {
-            a(this, n);
-            var r = o(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
-            return (r._deceleration = void 0 !== e.deceleration ? e.deceleration : 0.998), (r._velocity = e.velocity), (r.__isInteraction = void 0 === e.isInteraction || e.isInteraction), r;
+var o = n(328794),
+    l = n(601102),
+    u = n(887442),
+    c = (function (e) {
+        function t(e) {
+            r(this, t);
+            var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+            return (n._deceleration = void 0 !== e.deceleration ? e.deceleration : 0.998), (n._velocity = e.velocity), (n.__isInteraction = void 0 === e.isInteraction || e.isInteraction), n;
         }
         return (
-            s(n, e),
-            i(n, [
+            s(t, e),
+            i(t, [
                 {
                     key: 'start',
-                    value: function (e, n, r) {
-                        (this.__active = !0), (this._lastValue = e), (this._fromValue = e), (this._onUpdate = n), (this.__onEnd = r), (this._startTime = Date.now()), (this._animationFrame = u.current(this.onUpdate.bind(this)));
+                    value: function (e, t, n) {
+                        (this.__active = !0), (this._lastValue = e), (this._fromValue = e), (this._onUpdate = t), (this.__onEnd = n), (this._startTime = Date.now()), (this._animationFrame = l.current(this.onUpdate.bind(this)));
                     }
                 },
                 {
                     key: 'onUpdate',
                     value: function () {
                         var e = Date.now(),
-                            n = this._fromValue + (this._velocity / (1 - this._deceleration)) * (1 - Math.exp(-(1 - this._deceleration) * (e - this._startTime)));
-                        if ((this._onUpdate(n), 0.1 > Math.abs(this._lastValue - n))) {
+                            t = this._fromValue + (this._velocity / (1 - this._deceleration)) * (1 - Math.exp(-(1 - this._deceleration) * (e - this._startTime)));
+                        if ((this._onUpdate(t), 0.1 > Math.abs(this._lastValue - t))) {
                             this.__debouncedOnEnd({ finished: !0 });
                             return;
                         }
-                        (this._lastValue = n), this.__active && (this._animationFrame = u.current(this.onUpdate.bind(this)));
+                        (this._lastValue = t), this.__active && (this._animationFrame = l.current(this.onUpdate.bind(this)));
                     }
                 },
                 {
                     key: 'stop',
                     value: function () {
-                        (this.__active = !1), c.current(this._animationFrame), this.__debouncedOnEnd({ finished: !1 });
+                        (this.__active = !1), u.current(this._animationFrame), this.__debouncedOnEnd({ finished: !1 });
                     }
                 }
             ]),
-            n
+            t
         );
-    })(l);
-e.exports = d;
+    })(o);
+e.exports = c;

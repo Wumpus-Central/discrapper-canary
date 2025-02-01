@@ -19,12 +19,12 @@ var r = n(192379),
     h = n(237031),
     p = n(981631);
 let m = ''.concat('#').concat('itemSkuId', '='),
-    f = new RegExp('^'.concat(m, '(\\d+)$')),
-    g = [p.Z5c.COLLECTIBLES_SHOP, p.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
+    g = new RegExp('^'.concat(m, '(\\d+)$')),
+    f = [p.Z5c.COLLECTIBLES_SHOP, p.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
     x = (e) => {
         let t = (0, l.TH)();
         r.useEffect(() => {
-            if (null != e && g.includes(t.pathname))
+            if (null != e && f.includes(t.pathname))
                 return (
                     window.location.replace(''.concat(m).concat(e)),
                     () => {
@@ -78,11 +78,11 @@ let m = ''.concat('#').concat('itemSkuId', '='),
             C = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
             h = r.useRef(null),
             m = (0, l.TH)(),
-            g = m.pathname === p.Z5c.COLLECTIBLES_SHOP ? o.Z.HOME_PAGE_SHOP_TAB : m.pathname === p.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN : o.Z.COLLECTIBLES_SHOP,
-            { analyticsLocations: x } = (0, d.ZP)(g);
+            f = m.pathname === p.Z5c.COLLECTIBLES_SHOP ? o.Z.HOME_PAGE_SHOP_TAB : m.pathname === p.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN : o.Z.COLLECTIBLES_SHOP,
+            { analyticsLocations: x } = (0, d.ZP)(f);
         (0, s.Z)(() => {
             if (n) return;
-            let e = f.exec(m.hash);
+            let e = g.exec(m.hash);
             if (null != e) {
                 let t = e[1];
                 h.current = t;
@@ -98,7 +98,7 @@ let m = ''.concat('#').concat('itemSkuId', '='),
                         let n = _({
                             productSkuId: e,
                             analyticsLocations: x,
-                            analyticsSource: g,
+                            analyticsSource: f,
                             initialItemCardRef: c,
                             reducedMotion: C
                         });
@@ -111,7 +111,7 @@ let m = ''.concat('#').concat('itemSkuId', '='),
                     }
                 );
             }
-        }, [n, x, g, t, v, c, C]);
+        }, [n, x, f, t, v, c, C]);
     },
     b = (e) => {
         let t = r.useRef({}),

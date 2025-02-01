@@ -1,8 +1,8 @@
-n(653041);
+n.d(t, { Z: () => v }), n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(399606),
     o = n(481060),
     c = n(285173),
@@ -13,33 +13,33 @@ var i = n(200651),
     m = n(351127),
     f = n(50493),
     g = n(981631),
-    C = n(388032),
-    x = n(944454);
-function v(e) {
+    _ = n(388032),
+    C = n(944454);
+function x(e) {
     var t, n;
-    let { permission: l, roleIds: r, guild: h, specMap: p } = e,
+    let { permission: l, roleIds: a, guild: h, specMap: p } = e,
         f = g.Plq[l],
-        v = null !== (n = null === (t = p[f.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, d.wt)(f),
-        _ = m._o.has(f),
-        I = (0, s.e7)([u.Z], () => u.Z.getRoles(h.id));
-    return (0, i.jsx)(o.Tooltip, {
-        'aria-label': C.intl.string(C.t['0g8Xd3']),
-        tooltipClassName: x.roleTooltipContainer,
-        tooltipContentClassName: x.roleTooltipContentContainer,
+        x = null !== (n = null === (t = p[f.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, d.wt)(f),
+        v = m._o.has(f),
+        E = (0, s.e7)([u.Z], () => u.Z.getRoles(h.id));
+    return (0, i.jsx)(o.ua7, {
+        'aria-label': _.intl.string(_.t['0g8Xd3']),
+        tooltipClassName: C.roleTooltipContainer,
+        tooltipContentClassName: C.roleTooltipContentContainer,
         allowOverflow: !0,
         text: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Text, {
                     variant: 'text-sm/normal',
-                    children: _ ? C.intl.string(C.t['GEuu/P']) : C.intl.string(C.t.wgGiCg)
+                    children: v ? _.intl.string(_.t['GEuu/P']) : _.intl.string(_.t.wgGiCg)
                 }),
-                r.map((e) =>
+                a.map((e) =>
                     (0, i.jsx)(
                         'div',
                         {
-                            className: x.roleTooltipItem,
+                            className: C.roleTooltipItem,
                             children: (0, i.jsx)(c.Z, {
-                                role: I[e],
+                                role: E[e],
                                 guildId: h.id
                             })
                         },
@@ -50,46 +50,46 @@ function v(e) {
         }),
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n } = e;
-            return (0, i.jsxs)(o.Clickable, {
-                className: a()(x.permissionChiplet, { [x.elevatedPermission]: _ }),
+            return (0, i.jsxs)(o.P3F, {
+                className: r()(C.permissionChiplet, { [C.elevatedPermission]: v }),
                 onMouseEnter: t,
                 onMouseLeave: n,
                 children: [
-                    _ &&
-                        (0, i.jsx)(o.ShieldLockIcon, {
+                    v &&
+                        (0, i.jsx)(o.tQf, {
                             size: 'custom',
                             width: 16,
                             height: 16,
-                            color: o.tokens.colors.TEXT_BRAND
+                            color: o.TVs.colors.TEXT_BRAND
                         }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-xs/medium',
                         color: 'interactive-normal',
-                        children: v
+                        children: x
                     })
                 ]
             });
         }
     });
 }
-t.Z = l.memo(function (e) {
+let v = l.memo(function (e) {
     let { member: t, onNavigate: n } = e,
-        r = (0, s.e7)([u.Z], () => u.Z.getGuild(t.guildId), [t.guildId]),
+        a = (0, s.e7)([u.Z], () => u.Z.getGuild(t.guildId), [t.guildId]),
         c = (0, m.B2)(t.userId, t.guildId, m.Qn),
         d = (0, m.B2)(t.userId, t.guildId, m.pd),
-        _ = Object.keys(c).length,
-        I = Object.keys(d).length,
-        E = l.useMemo(() => (null != r ? h.Z.getGuildPermissionSpecMap(r) : null), [r]),
-        b = l.useMemo(() => (null != r ? h.Z.generateGuildPermissionSpec(r) : null), [r]),
+        v = Object.keys(c).length,
+        E = Object.keys(d).length,
+        I = l.useMemo(() => (null != a ? h.Z.getGuildPermissionSpecMap(a) : null), [a]),
+        b = l.useMemo(() => (null != a ? h.Z.generateGuildPermissionSpec(a) : null), [a]),
         Z = l.useMemo(() => {
-            if (null == r || null == E) return null;
-            if (0 === _)
+            if (null == a || null == I) return null;
+            if (0 === v)
                 return (0, i.jsx)('div', {
-                    className: a()(x.permissionChiplet, x.noModPerms),
+                    className: r()(C.permissionChiplet, C.noModPerms),
                     children: (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-positive',
-                        children: C.intl.string(C.t.sXhykZ)
+                        children: _.intl.string(_.t.sXhykZ)
                     })
                 });
             let e = [];
@@ -100,16 +100,16 @@ t.Z = l.memo(function (e) {
                             let n = t.flag,
                                 l = m.pd.find((e) => g.Plq[e] === n);
                             if (null == l) return;
-                            let a = c[l];
-                            if (null != a)
+                            let r = c[l];
+                            null != r &&
                                 e.push(
                                     (0, i.jsx)(
-                                        v,
+                                        x,
                                         {
                                             permission: l,
-                                            roleIds: a,
-                                            guild: r,
-                                            specMap: E
+                                            roleIds: r,
+                                            guild: a,
+                                            specMap: I
                                         },
                                         l
                                     )
@@ -118,28 +118,28 @@ t.Z = l.memo(function (e) {
                     }),
                 e
             );
-        }, [r, _, c, b, E]);
-    return null == r
+        }, [a, v, c, b, I]);
+    return null == a
         ? null
-        : (0, i.jsx)(o.FormItem, {
+        : (0, i.jsx)(o.xJW, {
               title: (0, i.jsxs)('div', {
-                  className: x.headerContainer,
+                  className: C.headerContainer,
                   children: [
                       (0, i.jsx)(o.Text, {
                           variant: 'eyebrow',
                           color: 'header-secondary',
-                          children: C.intl.string(C.t.ZCq2nJ)
+                          children: _.intl.string(_.t.ZCq2nJ)
                       }),
-                      (0, i.jsxs)(o.Clickable, {
-                          className: x.viewAllPermissions,
+                      (0, i.jsxs)(o.P3F, {
+                          className: C.viewAllPermissions,
                           onClick: () => n(f.k.PERMISSIONS),
                           children: [
                               (0, i.jsx)(o.Text, {
                                   variant: 'eyebrow',
                                   color: 'interactive-normal',
-                                  children: C.intl.format(C.t['0x6aTk'], { count: I })
+                                  children: _.intl.format(_.t['0x6aTk'], { count: E })
                               }),
-                              (0, i.jsx)(o.ChevronSmallRightIcon, {
+                              (0, i.jsx)(o.Fbu, {
                                   size: 'custom',
                                   width: 16,
                                   height: 16
@@ -151,7 +151,7 @@ t.Z = l.memo(function (e) {
               children: (0, i.jsx)(p.WM, {
                   children: (0, i.jsx)(p._2, {
                       description: (0, i.jsx)('div', {
-                          className: x.permissionsContainer,
+                          className: C.permissionsContainer,
                           children: Z
                       })
                   })

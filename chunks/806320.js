@@ -1,14 +1,14 @@
 e.exports = {
-    invalidWrapper: 'invalidWrapper_b5b752',
-    invalid: 'invalid_b5b752',
-    buttonContainer: 'buttonContainer_b5b752',
-    metadata: 'metadata_b5b752',
-    container: 'container_b5b752',
-    tile: 'tile_b5b752',
-    title: 'title_b5b752',
-    tagline: 'tagline_b5b752',
-    actions: 'actions_b5b752',
-    media: 'media_b5b752',
-    referral: 'referral_b5b752',
-    description: 'description_b5b752'
+    invalidWrapper: 'invalidWrapper_ff4e03',
+    invalid: 'invalid_ff4e03',
+    buttonContainer: 'buttonContainer_ff4e03',
+    metadata: 'metadata_ff4e03',
+    container: 'container_ff4e03',
+    tile: 'tile_ff4e03',
+    title: 'title_ff4e03',
+    tagline: 'tagline_ff4e03',
+    actions: 'actions_ff4e03',
+    media: 'media_ff4e03',
+    referral: 'referral_ff4e03',
+    description: 'description_ff4e03'
 };

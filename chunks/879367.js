@@ -1,15 +1,15 @@
-e.r(a);
+e.d(a, { default: () => i });
 var n = e(200651),
-    o = e(192379),
-    s = e(481060),
-    r = e(388032),
-    c = e(999752);
-a.default = function (t) {
+    s = e(192379),
+    c = e(481060),
+    o = e(388032),
+    r = e(999752);
+let i = function (t) {
     let { onClose: a, onComplete: e, transitionState: i, webviewUrl: l } = t,
-        d = o.useCallback(() => {
+        d = s.useCallback(() => {
             a(), e();
         }, [e, a]),
-        u = o.useCallback(
+        u = s.useCallback(
             (t) => {
                 if ('' !== l && 'string' == typeof t.data)
                     try {
@@ -20,7 +20,7 @@ a.default = function (t) {
             [l, d]
         );
     return (
-        o.useEffect(
+        s.useEffect(
             () => (
                 window.addEventListener('message', u),
                 () => {
@@ -29,28 +29,28 @@ a.default = function (t) {
             ),
             [u]
         ),
-        (0, n.jsx)(s.ModalRoot, {
+        (0, n.jsx)(c.Y0X, {
             transitionState: i,
-            className: c.root,
-            children: (0, n.jsxs)(s.ModalContent, {
-                className: c.content,
+            className: r.root,
+            children: (0, n.jsxs)(c.hzk, {
+                className: r.content,
                 children: [
-                    (0, n.jsx)(s.Heading, {
+                    (0, n.jsx)(c.X6q, {
                         variant: 'heading-xl/bold',
-                        children: r.intl.string(r.t.tYNaXF)
+                        children: o.intl.string(o.t.tYNaXF)
                     }),
                     (0, n.jsx)('iframe', {
                         id: 'frame',
                         src: l,
-                        className: c.iframe,
+                        className: r.iframe,
                         allow: 'camera; microphone'
                     }),
-                    (0, n.jsx)(s.Button, {
-                        color: s.Button.Colors.TRANSPARENT,
-                        look: s.Button.Looks.BLANK,
+                    (0, n.jsx)(c.zxk, {
+                        color: c.zxk.Colors.TRANSPARENT,
+                        look: c.zxk.Looks.BLANK,
                         onClick: a,
-                        className: c.cancelButton,
-                        children: r.intl.string(r.t['4gTnU1'])
+                        className: r.cancelButton,
+                        children: o.intl.string(o.t['4gTnU1'])
                     })
                 ]
             })

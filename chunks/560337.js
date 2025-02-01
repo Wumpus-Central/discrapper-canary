@@ -1,32 +1,32 @@
-function n(e) {
-    let n = '[a-zA-Z_][\\w.]*',
-        r = '<\\?(lasso(script)?|=)',
+function t(e) {
+    let t = '[a-zA-Z_][\\w.]*',
+        n = '<\\?(lasso(script)?|=)',
         i = '\\]|\\?>',
-        a = {
-            $pattern: n + '|&[lg]t;',
+        r = {
+            $pattern: t + '|&[lg]t;',
             literal: 'true false none minimal full all void and or not bw nbw ew new cn ncn lt lte gt gte eq neq rx nrx ft',
             built_in: 'array date decimal duration integer map pair string tag xml null boolean bytes keyword list locale queue set stack staticarray local var variable global data self inherited currentcapture givenblock',
             keyword: 'cache database_names database_schemanames database_tablenames define_tag define_type email_batch encode_set html_comment handle handle_error header if inline iterate ljax_target link link_currentaction link_currentgroup link_currentrecord link_detail link_firstgroup link_firstrecord link_lastgroup link_lastrecord link_nextgroup link_nextrecord link_prevgroup link_prevrecord log loop namespace_using output_none portal private protect records referer referrer repeating resultset rows search_args search_arguments select sort_args sort_arguments thread_atomic value_list while abort case else fail_if fail_ifnot fail if_empty if_false if_null if_true loop_abort loop_continue loop_count params params_up return return_value run_children soap_definetag soap_lastrequest soap_lastresponse tag_name ascending average by define descending do equals frozen group handle_failure import in into join let match max min on order parent protected provide public require returnhome skip split_thread sum take thread to trait type where with yield yieldhome'
         },
-        o = e.COMMENT('<!--', '-->', { relevance: 0 }),
+        a = e.COMMENT('<!--', '-->', { relevance: 0 }),
         s = {
             className: 'meta',
             begin: '\\[noprocess\\]',
             starts: {
                 end: '\\[/noprocess\\]',
                 returnEnd: !0,
-                contains: [o]
+                contains: [a]
             }
         },
-        l = {
+        o = {
             className: 'meta',
-            begin: '\\[/noprocess|' + r
+            begin: '\\[/noprocess|' + n
         },
-        u = {
+        l = {
             className: 'symbol',
-            begin: "'" + n + "'"
+            begin: "'" + t + "'"
         },
-        c = [
+        u = [
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.inherit(e.C_NUMBER_MODE, { begin: e.C_NUMBER_RE + '|(-?infinity|NaN)\\b' }),
@@ -39,7 +39,7 @@ function n(e) {
             },
             {
                 variants: [
-                    { begin: '[#$]' + n },
+                    { begin: '[#$]' + t },
                     {
                         begin: '#',
                         end: '\\d+',
@@ -50,14 +50,14 @@ function n(e) {
             {
                 className: 'type',
                 begin: '::\\s*',
-                end: n,
+                end: t,
                 illegal: '\\W'
             },
             {
                 className: 'params',
                 variants: [
                     {
-                        begin: '-(?!infinity)' + n,
+                        begin: '-(?!infinity)' + t,
                         relevance: 0
                     },
                     { begin: '(\\.\\.\\.)' }
@@ -66,55 +66,55 @@ function n(e) {
             {
                 begin: /(->|\.)\s*/,
                 relevance: 0,
-                contains: [u]
+                contains: [l]
             },
             {
                 className: 'class',
                 beginKeywords: 'define',
                 returnEnd: !0,
                 end: '\\(|=>',
-                contains: [e.inherit(e.TITLE_MODE, { begin: n + '(=(?!>))?|[-+*/%](?!>)' })]
+                contains: [e.inherit(e.TITLE_MODE, { begin: t + '(=(?!>))?|[-+*/%](?!>)' })]
             }
         ];
     return {
         name: 'Lasso',
         aliases: ['ls', 'lassoscript'],
         case_insensitive: !0,
-        keywords: a,
+        keywords: r,
         contains: [
             {
                 className: 'meta',
                 begin: i,
                 relevance: 0,
                 starts: {
-                    end: '\\[|' + r,
+                    end: '\\[|' + n,
                     returnEnd: !0,
                     relevance: 0,
-                    contains: [o]
+                    contains: [a]
                 }
             },
             s,
-            l,
+            o,
             {
                 className: 'meta',
                 begin: '\\[no_square_brackets',
                 starts: {
                     end: '\\[/no_square_brackets\\]',
-                    keywords: a,
+                    keywords: r,
                     contains: [
                         {
                             className: 'meta',
                             begin: i,
                             relevance: 0,
                             starts: {
-                                end: '\\[noprocess\\]|' + r,
+                                end: '\\[noprocess\\]|' + n,
                                 returnEnd: !0,
-                                contains: [o]
+                                contains: [a]
                             }
                         },
                         s,
-                        l
-                    ].concat(c)
+                        o
+                    ].concat(u)
                 }
             },
             {
@@ -128,7 +128,7 @@ function n(e) {
                 end: 'lasso9$',
                 relevance: 10
             }
-        ].concat(c)
+        ].concat(u)
     };
 }
-e.exports = n;
+e.exports = t;

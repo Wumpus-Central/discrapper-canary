@@ -1,8 +1,8 @@
 t.exports = {
-    closeButton: 'closeButton_d801f7',
-    content: 'content_d801f7',
-    iconContainer: 'iconContainer_d801f7',
-    heading: 'heading_d801f7',
-    infoText: 'infoText_d801f7',
-    button: 'button_d801f7'
+    closeButton: 'closeButton__8a472',
+    content: 'content__8a472',
+    iconContainer: 'iconContainer__8a472',
+    heading: 'heading__8a472',
+    infoText: 'infoText__8a472',
+    button: 'button__8a472'
 };

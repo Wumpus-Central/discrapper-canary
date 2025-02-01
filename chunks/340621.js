@@ -1,8 +1,8 @@
 e.exports = {
-    container: 'container_e1e1a4',
-    coverImageContainer: 'coverImageContainer_e1e1a4',
-    infoContainer: 'infoContainer_e1e1a4',
-    coverImage: 'coverImage_e1e1a4',
-    showMoreButton: 'showMoreButton_e1e1a4',
-    showMoreArrow: 'showMoreArrow_e1e1a4'
+    container: 'container_adb50a',
+    coverImageContainer: 'coverImageContainer_adb50a',
+    infoContainer: 'infoContainer_adb50a',
+    coverImage: 'coverImage_adb50a',
+    showMoreButton: 'showMoreButton_adb50a',
+    showMoreArrow: 'showMoreArrow_adb50a'
 };

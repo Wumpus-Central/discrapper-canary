@@ -1,6 +1,6 @@
 e.exports = {
-    icon: 'icon_fcf03e',
-    iconWithGuildIcon: 'iconWithGuildIcon_fcf03e',
-    channelGuildIcon: 'channelGuildIcon_fcf03e',
-    acronym: 'acronym_fcf03e'
+    icon: 'icon__2894c',
+    iconWithGuildIcon: 'iconWithGuildIcon__2894c',
+    channelGuildIcon: 'channelGuildIcon__2894c',
+    acronym: 'acronym__2894c'
 };

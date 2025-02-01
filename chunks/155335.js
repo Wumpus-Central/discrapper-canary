@@ -1,5 +1,5 @@
-function n(e) {
-    let n = e.COMMENT(/\{/, /\}/, { contains: ['self'] });
+function t(e) {
+    let t = e.COMMENT(/\{/, /\}/, { contains: ['self'] });
     return {
         name: 'Parser3',
         subLanguage: 'xml',
@@ -8,7 +8,7 @@ function n(e) {
             e.COMMENT('^#', '$'),
             e.COMMENT(/\^rem\{/, /\}/, {
                 relevance: 10,
-                contains: [n]
+                contains: [t]
             }),
             {
                 className: 'meta',
@@ -35,4 +35,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

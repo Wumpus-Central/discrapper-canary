@@ -1,76 +1,76 @@
-var i = r(47120);
-var a = r(846519),
-    o = r(147913),
-    s = r(246133),
-    l = r(734934),
-    u = r(695346),
-    c = r(885110),
-    d = r(981631);
-function f(e, n, r) {
+n.d(t, { Z: () => h }), n(47120);
+var i = n(846519),
+    r = n(147913),
+    a = n(246133),
+    s = n(734934),
+    o = n(695346),
+    l = n(885110),
+    u = n(981631);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let p = new a.V7(),
-    h = new a.V7(),
-    _ = new a.V7();
-class m extends o.Z {
+let d = new i.V7(),
+    f = new i.V7(),
+    _ = new i.V7();
+class p extends r.Z {
     constructor(...e) {
         super(...e),
-            f(this, 'actions', {
+            c(this, 'actions', {
                 USER_SETTINGS_PROTO_UPDATE: () => this.handleUpdateProto(),
                 POST_CONNECTION_OPEN: () => this.handleUpdateProto()
             }),
-            f(this, 'handleUpdateProto', () => {
-                let e = u.Ok.getSetting();
+            c(this, 'handleUpdateProto', () => {
+                let e = o.Ok.getSetting();
                 if (null == e) _.stop();
                 else if (null != e.expiresAtMs && '0' !== e.expiresAtMs) {
-                    let n = new Date(Number(e.expiresAtMs)).getTime() - new Date().getTime();
-                    n > 0
+                    let t = new Date(Number(e.expiresAtMs)).getTime() - new Date().getTime();
+                    t > 0
                         ? _.start(
-                              n,
+                              t,
                               () => {
-                                  u.Ok.updateSetting(void 0);
+                                  o.Ok.updateSetting(void 0);
                               },
                               !0
                           )
-                        : (u.Ok.updateSetting(void 0), _.stop());
+                        : (o.Ok.updateSetting(void 0), _.stop());
                 } else null != _ && _.stop();
-                let n = u.Cr.getSetting();
-                if (null != n && '0' !== n && c.Z.getStatus() !== d.Skl.ONLINE) {
+                let t = o.Cr.getSetting();
+                if (null != t && '0' !== t && l.Z.getStatus() !== u.Skl.ONLINE) {
+                    let e = new Date(Number(t)).getTime() - new Date().getTime();
+                    e > 0
+                        ? d.start(
+                              e,
+                              () => {
+                                  (0, a.Z)(u.Skl.ONLINE, l.Z.getStatus(), { location: { object: u.qAy.CUSTOM_STATUS_MANAGER } }, void 0);
+                              },
+                              !0
+                          )
+                        : ((0, a.Z)(u.Skl.ONLINE, l.Z.getStatus(), { location: { object: u.qAy.CUSTOM_STATUS_MANAGER } }, void 0), d.stop());
+                } else null != d && d.stop();
+                let n = o.fv.getSetting();
+                if (null != n && '0' !== n) {
                     let e = new Date(Number(n)).getTime() - new Date().getTime();
                     e > 0
-                        ? p.start(
+                        ? f.start(
                               e,
                               () => {
-                                  (0, s.Z)(d.Skl.ONLINE, c.Z.getStatus(), { location: { object: d.qAy.CUSTOM_STATUS_MANAGER } }, void 0);
+                                  (0, s.oW)(!1);
                               },
                               !0
                           )
-                        : ((0, s.Z)(d.Skl.ONLINE, c.Z.getStatus(), { location: { object: d.qAy.CUSTOM_STATUS_MANAGER } }, void 0), p.stop());
-                } else null != p && p.stop();
-                let r = u.fv.getSetting();
-                if (null != r && '0' !== r) {
-                    let e = new Date(Number(r)).getTime() - new Date().getTime();
-                    e > 0
-                        ? h.start(
-                              e,
-                              () => {
-                                  (0, l.oW)(!1);
-                              },
-                              !0
-                          )
-                        : ((0, l.oW)(!1), h.stop());
-                } else null != h && h.stop();
+                        : ((0, s.oW)(!1), f.stop());
+                } else null != f && f.stop();
             });
     }
 }
-n.Z = new m();
+let h = new p();

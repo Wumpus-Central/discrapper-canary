@@ -1,6 +1,6 @@
 e.exports = {
-    container: 'container_da6719',
-    spinnerContainer: 'spinnerContainer_da6719',
-    spinner: 'spinner_da6719',
-    loading: 'loading_da6719'
+    container: 'container_a07a02',
+    spinnerContainer: 'spinnerContainer_a07a02',
+    spinner: 'spinner_a07a02',
+    loading: 'loading_a07a02'
 };

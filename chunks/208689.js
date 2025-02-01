@@ -1,5 +1,5 @@
 e.exports = {
-    input: 'input_cc6ddd',
-    inputField: 'inputField_cc6ddd',
-    inputWrapper: 'inputWrapper_cc6ddd'
+    input: 'input_d64f22',
+    inputField: 'inputField_d64f22',
+    inputWrapper: 'inputWrapper_d64f22'
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    dismissButton: 'dismissButton_a9614f',
-    dismissIcon: 'dismissIcon_a9614f'
+    dismissButton: 'dismissButton_dd40b0',
+    dismissIcon: 'dismissIcon_dd40b0'
 };

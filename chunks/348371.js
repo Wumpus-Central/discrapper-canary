@@ -1,14 +1,14 @@
-t.exports = {
-    formHeader: 'formHeader_c1a031',
-    formContent: 'formContent_c1a031',
-    formImage: 'formImage_c1a031',
-    formTitle: 'formTitle_c1a031',
-    formBody: 'formBody_c1a031',
-    formItem: 'formItem_c1a031',
-    logoutButton: 'logoutButton_c1a031',
-    closeButton: 'closeButton_c1a031',
-    successContent: 'successContent_c1a031',
-    successTitle: 'successTitle_c1a031',
-    successPromotion: 'successPromotion_c1a031',
-    successImage: 'successImage_c1a031'
+e.exports = {
+    formHeader: 'formHeader__80325',
+    formContent: 'formContent__80325',
+    formImage: 'formImage__80325',
+    formTitle: 'formTitle__80325',
+    formBody: 'formBody__80325',
+    formItem: 'formItem__80325',
+    logoutButton: 'logoutButton__80325',
+    closeButton: 'closeButton__80325',
+    successContent: 'successContent__80325',
+    successTitle: 'successTitle__80325',
+    successPromotion: 'successPromotion__80325',
+    successImage: 'successImage__80325'
 };

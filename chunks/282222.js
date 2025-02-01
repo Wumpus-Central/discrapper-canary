@@ -1,8 +1,8 @@
 e.exports = {
-    modal: 'modal_f4abc8',
-    content: 'content_f4abc8',
-    image: 'image_f4abc8',
-    title: 'title_f4abc8',
-    description: 'description_f4abc8',
-    formItem: 'formItem_f4abc8'
+    modal: 'modal__5fa9f',
+    content: 'content__5fa9f',
+    image: 'image__5fa9f',
+    title: 'title__5fa9f',
+    description: 'description__5fa9f',
+    formItem: 'formItem__5fa9f'
 };

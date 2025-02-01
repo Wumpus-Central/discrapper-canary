@@ -1,43 +1,43 @@
 var i,
-    a = r(28886),
-    o = r(930134),
-    s = r(459535),
-    l = r(511364),
-    u = r(439230),
-    c = r(535538),
-    d = r(964653),
-    f = '>',
-    p = '<',
-    h = 'prototype',
-    _ = 'script',
-    m = d('IE_PROTO'),
-    g = function () {},
-    E = function (e) {
-        return p + _ + f + e + p + '/' + _ + f;
+    r = n(28886),
+    a = n(930134),
+    s = n(459535),
+    o = n(511364),
+    l = n(439230),
+    u = n(535538),
+    c = n(964653),
+    d = '>',
+    f = '<',
+    _ = 'prototype',
+    p = 'script',
+    h = c('IE_PROTO'),
+    m = function () {},
+    g = function (e) {
+        return f + p + d + e + f + '/' + p + d;
     },
-    v = function (e) {
-        e.write(E('')), e.close();
-        var n = e.parentWindow.Object;
-        return (e = null), n;
+    E = function (e) {
+        e.write(g('')), e.close();
+        var t = e.parentWindow.Object;
+        return (e = null), t;
+    },
+    v = function () {
+        var e,
+            t = u('iframe'),
+            n = 'java' + p + ':';
+        return (t.style.display = 'none'), l.appendChild(t), (t.src = String(n)), (e = t.contentWindow.document).open(), e.write(g('document.F=Object')), e.close(), e.F;
     },
     y = function () {
-        var e,
-            n = c('iframe'),
-            r = 'java' + _ + ':';
-        return (n.style.display = 'none'), u.appendChild(n), (n.src = String(r)), (e = n.contentWindow.document).open(), e.write(E('document.F=Object')), e.close(), e.F;
-    },
-    b = function () {
         try {
             i = new ActiveXObject('htmlfile');
         } catch (e) {}
-        b = 'undefined' != typeof document ? (document.domain && i ? v(i) : y()) : v(i);
-        for (var e = s.length; e--; ) delete b[h][s[e]];
-        return b();
+        y = 'undefined' != typeof document ? (document.domain && i ? E(i) : v()) : E(i);
+        for (var e = s.length; e--; ) delete y[_][s[e]];
+        return y();
     };
-(l[m] = !0),
+(o[h] = !0),
     (e.exports =
         Object.create ||
-        function (e, n) {
-            var r;
-            return null !== e ? ((g[h] = a(e)), (r = new g()), (g[h] = null), (r[m] = e)) : (r = b()), void 0 === n ? r : o.f(r, n);
+        function (e, t) {
+            var n;
+            return null !== e ? ((m[_] = r(e)), (n = new m()), (m[_] = null), (n[h] = e)) : (n = y()), void 0 === t ? n : a.f(n, t);
         });

@@ -1,8 +1,8 @@
 let i;
 n.d(t, {
-    RI: () => b,
+    RI: () => T,
     ZP: () => C,
-    jy: () => T
+    jy: () => b
 });
 var r = n(570140),
     a = n(519938),
@@ -32,11 +32,11 @@ function I() {
     let e = i;
     null != e && c.Z.isOpen(e) && (r.Z.wait(() => a.xv(e)), (i = null));
 }
-function b(e) {
+function T(e) {
     let t = null != e ? e : i;
     null != t && c.Z.isOpen(t) && r.Z.wait(() => a.Cp(t));
 }
-function T(e) {
+function b(e) {
     let t = null != e ? e : i;
     null != t && c.Z.isOpen(t) && r.Z.wait(() => a.$Z(t));
 }
@@ -51,8 +51,8 @@ function A() {
         LayerStore: u.Z,
         PopoutWindowStore: o.Z
     })
-        ? b()
-        : T();
+        ? T()
+        : b();
 }
 class N extends s.Z {
     _initialize() {

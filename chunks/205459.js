@@ -1,6 +1,6 @@
 e.exports = {
-    container: 'container_b118e0',
-    nitroWheel: 'nitroWheel_b118e0',
-    text: 'text_b118e0',
-    nitroButton: 'nitroButton_b118e0'
+    container: 'container_a9b435',
+    nitroWheel: 'nitroWheel_a9b435',
+    text: 'text_a9b435',
+    nitroButton: 'nitroButton_a9b435'
 };

@@ -1,5 +1,5 @@
 t.exports = {
-    content: 'content_d0edcf',
-    radioItem: 'radioItem_d0edcf',
-    textArea: 'textArea_d0edcf'
+    content: 'content__61700',
+    radioItem: 'radioItem__61700',
+    textArea: 'textArea__61700'
 };

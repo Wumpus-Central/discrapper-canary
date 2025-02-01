@@ -1,4 +1,4 @@
 e.exports = {
-    notificationToggle: 'notificationToggle_ab70d0',
-    tooltip: 'tooltip_ab70d0'
+    notificationToggle: 'notificationToggle__74570',
+    tooltip: 'tooltip__74570'
 };

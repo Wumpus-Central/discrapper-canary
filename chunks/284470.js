@@ -1,48 +1,48 @@
-var i = r(67867),
-    a = r(821819),
-    o = r(952256),
-    s = r(982665),
-    l = r(611345),
-    u = r(474883),
-    c = r(741674),
-    d = r(256110),
-    f = r(15507),
-    p = r(469624),
-    h = r(360518),
-    _ = r(882708),
-    m = h('isConcatSpreadable'),
-    g =
-        _ >= 51 ||
-        !a(function () {
+var i = n(67867),
+    r = n(821819),
+    a = n(952256),
+    s = n(982665),
+    o = n(611345),
+    l = n(474883),
+    u = n(741674),
+    c = n(256110),
+    d = n(15507),
+    f = n(469624),
+    _ = n(360518),
+    p = n(882708),
+    h = _('isConcatSpreadable'),
+    m =
+        p >= 51 ||
+        !r(function () {
             var e = [];
-            return (e[m] = !1), e.concat()[0] !== e;
+            return (e[h] = !1), e.concat()[0] !== e;
         }),
-    E = function (e) {
+    g = function (e) {
         if (!s(e)) return !1;
-        var n = e[m];
-        return void 0 !== n ? !!n : o(e);
+        var t = e[h];
+        return void 0 !== t ? !!t : a(e);
     };
 i(
     {
         target: 'Array',
         proto: !0,
         arity: 1,
-        forced: !g || !p('concat')
+        forced: !m || !f('concat')
     },
     {
         concat: function (e) {
-            var n,
-                r,
+            var t,
+                n,
                 i,
+                r,
                 a,
-                o,
-                s = l(this),
-                p = f(s, 0),
-                h = 0;
-            for (n = -1, i = arguments.length; n < i; n++)
-                if (((o = -1 === n ? s : arguments[n]), E(o))) for (c(h + (a = u(o))), r = 0; r < a; r++, h++) r in o && d(p, h, o[r]);
-                else c(h + 1), d(p, h++, o);
-            return (p.length = h), p;
+                s = o(this),
+                f = d(s, 0),
+                _ = 0;
+            for (t = -1, i = arguments.length; t < i; t++)
+                if (((a = -1 === t ? s : arguments[t]), g(a))) for (u(_ + (r = l(a))), n = 0; n < r; n++, _++) n in a && c(f, _, a[n]);
+                else u(_ + 1), c(f, _++, a);
+            return (f.length = _), f;
         }
     }
 );

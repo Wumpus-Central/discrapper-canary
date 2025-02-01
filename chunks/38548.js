@@ -1,6 +1,6 @@
-var i = r(625014).start,
-    a = r(875701);
-e.exports = a('trimStart')
+var i = n(625014).start,
+    r = n(875701);
+e.exports = r('trimStart')
     ? function () {
           return i(this);
       }

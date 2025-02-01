@@ -1,8 +1,8 @@
 t.exports = {
-    content: 'content_f142a5',
-    title: 'title_f142a5',
-    subtitle: 'subtitle_f142a5',
-    icon: 'icon_f142a5',
-    iconBackground: 'iconBackground_f142a5',
-    cancelButton: 'cancelButton_f142a5'
+    content: 'content_e55088',
+    title: 'title_e55088',
+    subtitle: 'subtitle_e55088',
+    icon: 'icon_e55088',
+    iconBackground: 'iconBackground_e55088',
+    cancelButton: 'cancelButton_e55088'
 };

@@ -1,4 +1,4 @@
-n.r(t), n(47120);
+n.d(t, { default: () => P }), n(47120);
 var r = n(200651),
     o = n(192379),
     i = n(512722),
@@ -11,15 +11,15 @@ var r = n(200651),
     h = n(600164),
     p = n(454585),
     f = n(144114),
-    m = n(607018),
-    _ = n(325067),
-    E = n(594174),
-    b = n(279837),
-    N = n(981631),
-    g = n(815660),
-    S = n(388032),
-    y = n(269157);
-function C(e, t, n) {
+    _ = n(607018),
+    E = n(325067),
+    m = n(594174),
+    N = n(279837),
+    g = n(981631),
+    S = n(815660),
+    b = n(388032),
+    x = n(269157);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,20 +32,20 @@ function C(e, t, n) {
         e
     );
 }
-let x = (e) => {
+let C = (e) => {
     let { label: t, text: n, children: o, ...i } = e;
     return (0, r.jsxs)(h.Z, {
         direction: h.Z.Direction.VERTICAL,
         ...i,
         children: [
-            (0, r.jsx)(l.FormTitle, {
+            (0, r.jsx)(l.vwX, {
                 tag: 'h2',
                 children: t
             }),
             null != n
                 ? (0, r.jsx)(l.Text, {
                       variant: 'text-md/normal',
-                      className: y.sectionBody,
+                      className: x.sectionBody,
                       children: n
                   })
                 : null,
@@ -56,107 +56,107 @@ let x = (e) => {
         ]
     });
 };
-class M extends o.PureComponent {
+class w extends o.PureComponent {
     renderSMSSection() {
         let { currentUser: e } = this.props,
             t = null != this.props.currentUser.phone,
-            n = e.hasFlag(N.xW$.MFA_SMS),
-            o = e.hasFlag(N.xW$.PARTNER) || e.hasFlag(N.xW$.STAFF);
+            n = e.hasFlag(g.xW$.MFA_SMS),
+            o = e.hasFlag(g.xW$.PARTNER) || e.hasFlag(g.xW$.STAFF);
         return t
-            ? (0, r.jsxs)(x, {
-                  label: S.intl.string(S.t.DZQe29),
-                  text: S.intl.string(S.t.fspJ4O),
+            ? (0, r.jsxs)(C, {
+                  label: b.intl.string(b.t.DZQe29),
+                  text: b.intl.string(b.t.fspJ4O),
                   children: [
                       (0, r.jsxs)(l.Text, {
                           variant: 'text-md/normal',
-                          className: y.sectionBody,
+                          className: x.sectionBody,
                           children: [
                               (0, r.jsx)('strong', {
-                                  className: y.phoneNumber,
-                                  children: S.intl.format(S.t.PXVoEB, { phoneNumber: e.phone })
+                                  className: x.phoneNumber,
+                                  children: b.intl.format(b.t.PXVoEB, { phoneNumber: e.phone })
                               }),
-                              (0, r.jsx)(l.Button, {
-                                  look: l.Button.Looks.LINK,
-                                  color: l.Button.Colors.LINK,
-                                  size: l.Button.Sizes.MIN,
-                                  className: y.linkButton,
+                              (0, r.jsx)(l.zxk, {
+                                  look: l.zxk.Looks.LINK,
+                                  color: l.zxk.Colors.LINK,
+                                  size: l.zxk.Sizes.MIN,
+                                  className: x.linkButton,
                                   onClick: this.handleChangePhoneNumber,
-                                  children: S.intl.string(S.t.Ulqq6O)
+                                  children: b.intl.string(b.t.Ulqq6O)
                               })
                           ]
                       }),
-                      (0, r.jsx)(l.Button, {
+                      (0, r.jsx)(l.zxk, {
                           onClick: this.handleEnableSMS,
                           disabled: n || o,
-                          color: l.Button.Colors.GREEN,
-                          size: l.Button.Sizes.SMALL,
-                          children: o ? S.intl.string(S.t.Sq6Q1t) : n ? S.intl.string(S.t.kSbHTE) : S.intl.string(S.t.DZQe29)
+                          color: l.zxk.Colors.GREEN,
+                          size: l.zxk.Sizes.SMALL,
+                          children: o ? b.intl.string(b.t.Sq6Q1t) : n ? b.intl.string(b.t.kSbHTE) : b.intl.string(b.t.DZQe29)
                       })
                   ]
               })
-            : (0, r.jsx)(x, {
-                  label: S.intl.string(S.t.DZQe29),
-                  text: S.intl.string(S.t.fspJ4O),
-                  children: (0, r.jsx)(l.Button, {
+            : (0, r.jsx)(C, {
+                  label: b.intl.string(b.t.DZQe29),
+                  text: b.intl.string(b.t.fspJ4O),
+                  children: (0, r.jsx)(l.zxk, {
                       onClick: this.handleEnableSMS,
-                      color: l.Button.Colors.GREEN,
-                      size: l.Button.Sizes.SMALL,
+                      color: l.zxk.Colors.GREEN,
+                      size: l.zxk.Sizes.SMALL,
                       disabled: o,
-                      children: o ? S.intl.string(S.t.Sq6Q1t) : S.intl.string(S.t['O5qS/v'])
+                      children: o ? b.intl.string(b.t.Sq6Q1t) : b.intl.string(b.t['O5qS/v'])
                   })
               });
     }
     renderBackupCodesSection() {
-        return (0, r.jsx)(x, {
-            label: S.intl.string(S.t.qZZUy8),
-            text: S.intl.format(S.t.M0Dogo, {}),
+        return (0, r.jsx)(C, {
+            label: b.intl.string(b.t.qZZUy8),
+            text: b.intl.format(b.t.M0Dogo, {}),
             children: (0, r.jsx)(u.Z, {
                 fileContents: this.getDownloadFileContents,
                 contentType: 'text/plain',
                 fileName: 'discord_backup_codes.txt',
                 onDownload: () => d.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }),
-                children: (0, r.jsx)(l.Button, {
-                    color: l.Button.Colors.GREEN,
-                    size: l.Button.Sizes.SMALL,
-                    children: S.intl.string(S.t.qZZUy8)
+                children: (0, r.jsx)(l.zxk, {
+                    color: l.zxk.Colors.GREEN,
+                    size: l.zxk.Sizes.SMALL,
+                    children: b.intl.string(b.t.qZZUy8)
                 })
             })
         });
     }
     renderHeader(e) {
-        return (0, r.jsxs)(l.ModalHeader, {
+        return (0, r.jsxs)(l.xBx, {
             separator: !1,
             children: [
                 (0, r.jsxs)(h.Z.Child, {
                     grow: 1,
                     shrink: 1,
                     children: [
-                        (0, r.jsx)(l.Heading, {
+                        (0, r.jsx)(l.X6q, {
                             variant: 'heading-lg/semibold',
-                            className: y.header,
-                            children: p.Z.parse(S.intl.string(S.t['681MPT']))
+                            className: x.header,
+                            children: p.Z.parse(b.intl.string(b.t['681MPT']))
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: 'text-xs/normal',
-                            className: y.subHeader,
+                            className: x.subHeader,
                             children: e
                         })
                     ]
                 }),
                 (0, r.jsx)(h.Z.Child, {
                     grow: 0,
-                    children: (0, r.jsx)(l.ModalCloseButton, { onClick: this.handleCloseModal })
+                    children: (0, r.jsx)(l.olH, { onClick: this.handleCloseModal })
                 })
             ]
         });
     }
     renderConfirmModal(e) {
         let { onClose: t } = this.props;
-        return (0, r.jsx)(l.DeclarativeConfirmModal, {
+        return (0, r.jsx)(l.sYh, {
             dismissable: !0,
-            header: S.intl.string(S.t.mwVXnJ),
-            confirmText: S.intl.string(S.t.MwSEo6),
-            cancelText: S.intl.string(S.t['ETE/oK']),
+            header: b.intl.string(b.t.mwVXnJ),
+            confirmText: b.intl.string(b.t.MwSEo6),
+            cancelText: b.intl.string(b.t['ETE/oK']),
             onCancel: () => this.setState({ showConfirmModal: !1 }),
             onConfirm: () => {
                 d.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }), t();
@@ -175,78 +175,78 @@ class M extends o.PureComponent {
     renderTotp() {
         let { transitionState: e } = this.props,
             { showConfirmModal: t } = this.state;
-        return (0, r.jsxs)(l.ModalRoot, {
+        return (0, r.jsxs)(l.Y0X, {
             transitionState: e,
-            className: y.modal,
+            className: x.modal,
             children: [
-                this.renderHeader(S.intl.format(S.t.pQioMz, {})),
-                (0, r.jsxs)(l.ModalContent, {
-                    className: y.modalInner,
-                    children: [this.renderSMSSection(), (0, r.jsx)(l.FormDivider, { className: y.divider }), this.renderBackupCodesSection()]
+                this.renderHeader(b.intl.format(b.t.pQioMz, {})),
+                (0, r.jsxs)(l.hzk, {
+                    className: x.modalInner,
+                    children: [this.renderSMSSection(), (0, r.jsx)(l.$i$, { className: x.divider }), this.renderBackupCodesSection()]
                 }),
-                t && this.renderConfirmModal(S.intl.string(S.t.WJFPHB))
+                t && this.renderConfirmModal(b.intl.string(b.t.WJFPHB))
             ]
         });
     }
     renderWebAuthn() {
         let { transitionState: e } = this.props,
             { showConfirmModal: t } = this.state;
-        return (0, r.jsxs)(l.ModalRoot, {
+        return (0, r.jsxs)(l.Y0X, {
             transitionState: e,
-            className: y.modal,
+            className: x.modal,
             children: [
-                this.renderHeader(S.intl.format(S.t.Xb5JGh, {})),
-                (0, r.jsx)(l.ModalContent, {
-                    className: y.modalInner,
+                this.renderHeader(b.intl.format(b.t.Xb5JGh, {})),
+                (0, r.jsx)(l.hzk, {
+                    className: x.modalInner,
                     children: this.renderBackupCodesSection()
                 }),
-                t && this.renderConfirmModal(S.intl.string(S.t.aoNIXF))
+                t && this.renderConfirmModal(b.intl.string(b.t.aoNIXF))
             ]
         });
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, l.openModal)(
+        (0, l.h7j)(
             (t) =>
-                (0, r.jsx)(m.default, {
+                (0, r.jsx)(_.default, {
                     reason: f.L.MFA_PHONE_UPDATE,
                     ...t,
                     ...e
                 }),
-            { modalKey: g.M }
+            { modalKey: S.M }
         );
     }
     constructor(...e) {
         super(...e),
-            C(this, 'state', { showConfirmModal: !1 }),
-            C(this, 'handleCloseModal', () => {
+            y(this, 'state', { showConfirmModal: !1 }),
+            y(this, 'handleCloseModal', () => {
                 let { onClose: e, hasSeenBackupPrompt: t } = this.props;
                 t ? null == e || e() : this.setState({ showConfirmModal: !0 });
             }),
-            C(this, 'getDownloadFileContents', () => {
+            y(this, 'getDownloadFileContents', () => {
                 let e = this.props.backupCodes
                         .map((e) => {
                             let { consumed: t, code: n } = e;
                             return '* '
                                 .concat(n.substr(0, 4), '-')
                                 .concat(n.substr(4), ' ')
-                                .concat(t ? '('.concat(S.intl.string(S.t['ycME+/']), ')') : '');
+                                .concat(t ? '('.concat(b.intl.string(b.t['ycME+/']), ')') : '');
                         })
                         .join('\r\n'),
-                    t = S.intl.formatToPlainString(S.t.uYWwh4, { email: this.props.currentUser.email });
+                    t = b.intl.formatToPlainString(b.t.uYWwh4, { email: this.props.currentUser.email });
                 return ''.concat(t, '\r\n\r\n').concat(e);
             }),
-            C(this, 'handleChangePhoneNumber', () => {
+            y(this, 'handleChangePhoneNumber', () => {
                 this.openPhoneVerificationModal();
             }),
-            C(this, 'handleEnableSMS', () => {
+            y(this, 'handleEnableSMS', () => {
                 let { currentUser: e } = this.props,
                     t = () => {
-                        (0, l.openModal)((e) =>
-                            (0, r.jsx)(b.default, {
+                        (0, l.h7j)((e) =>
+                            (0, r.jsx)(N.default, {
                                 ...e,
                                 handleSubmit: (e) => c.Z.enableSMS(e),
-                                title: S.intl.string(S.t.DZQe29)
+                                title: b.intl.string(b.t.DZQe29)
                             })
                         );
                     };
@@ -254,14 +254,14 @@ class M extends o.PureComponent {
             });
     }
 }
-t.default = s.ZP.connectStores([E.default, _.Z], () => {
-    let e = E.default.getCurrentUser();
+let P = s.ZP.connectStores([m.default, E.Z], () => {
+    let e = m.default.getCurrentUser();
     return (
         a()(null != e, 'MFAEnableSuccess: currentUser cannot be undefined'),
         {
             currentUser: e,
-            backupCodes: _.Z.getBackupCodes(),
-            hasSeenBackupPrompt: _.Z.hasSeenBackupPrompt
+            backupCodes: E.Z.getBackupCodes(),
+            hasSeenBackupPrompt: E.Z.hasSeenBackupPrompt
         }
     );
-})(M);
+})(w);

@@ -1,3 +1,3 @@
-let i = r(889658),
-    a = (e, n, r) => ((e = new i(e, r)), (n = new i(n, r)), e.intersects(n, r));
-e.exports = a;
+let i = n(889658),
+    r = (e, t, n) => ((e = new i(e, n)), (t = new i(t, n)), e.intersects(t, n));
+e.exports = r;

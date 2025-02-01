@@ -1,11 +1,11 @@
-e.exports = {
-    container: 'container_f77b50',
-    publishable: 'publishable_f77b50',
-    explanationColumn: 'explanationColumn_f77b50',
-    publishButton: 'publishButton_f77b50',
-    disabledPublishButton: 'disabledPublishButton_f77b50',
-    button: 'button_f77b50',
-    buttonContents: 'buttonContents_f77b50',
-    buttonIcon: 'buttonIcon_f77b50',
-    wasEverPublished: 'wasEverPublished_f77b50'
+A.exports = {
+    container: 'container_b6a3c4',
+    publishable: 'publishable_b6a3c4',
+    explanationColumn: 'explanationColumn_b6a3c4',
+    publishButton: 'publishButton_b6a3c4',
+    disabledPublishButton: 'disabledPublishButton_b6a3c4',
+    button: 'button_b6a3c4',
+    buttonContents: 'buttonContents_b6a3c4',
+    buttonIcon: 'buttonIcon_b6a3c4',
+    wasEverPublished: 'wasEverPublished_b6a3c4'
 };

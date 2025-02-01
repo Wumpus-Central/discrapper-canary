@@ -18,14 +18,14 @@ var i = n(200651),
     v = n(197115),
     y = n(302945),
     I = n(631771),
-    b = n(474936),
-    T = n(981631),
+    T = n(474936),
+    b = n(981631),
     S = n(388032),
     A = n(913197),
     N = n(769860);
 function C(e) {
     var t, n, a;
-    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: x, body: L, context: P, glowUp: w, modalClassName: M, modalContentClassName: k, artContainerClassName: U, headerClassName: G, bodyClassName: B, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: j, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = b.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: ei, LeadingComponent: er, ...ea } = e,
+    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: x, body: L, context: P, glowUp: w, modalClassName: M, modalContentClassName: k, artContainerClassName: U, headerClassName: G, bodyClassName: B, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: j, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = T.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: ei, LeadingComponent: er, ...ea } = e,
         es = null != O,
         eo = (0, g.N)(),
         el = (0, m.Ng)(),
@@ -46,14 +46,14 @@ function C(e) {
             if (Q) return;
             let { analyticsLocation: e, analyticsLocations: t, analyticsSource: n, guildBoostProps: i, type: r } = ef.current;
             es
-                ? _.default.track(T.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
+                ? _.default.track(b.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
                       type: ''.concat(r, ' - Tier ').concat(null == i ? void 0 : i.boostedGuildTier),
                       guild_id: null == i ? void 0 : i.guild.id,
                       channel_id: null == i ? void 0 : i.channelId,
                       location: e,
                       location_stack: t
                   })
-                : _.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+                : _.default.track(b.rMx.PREMIUM_UPSELL_VIEWED, {
                       type: r,
                       source: n,
                       location: e,
@@ -138,7 +138,7 @@ function C(e) {
                                         children: (0, i.jsx)(E.ZP, {
                                             onClose: F,
                                             type: R,
-                                            subscriptionTier: null !== (a = null == eo ? void 0 : null === (n = eo.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : b.Si.TIER_2,
+                                            subscriptionTier: null !== (a = null == eo ? void 0 : null === (n = eo.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : T.Si.TIER_2,
                                             headingText: C,
                                             context: P,
                                             analyticsLocationObject: x,

@@ -1,12 +1,12 @@
 e.exports = {
-    modal: 'modal_c48629',
-    footer: 'footer_c48629',
-    footerButtons: 'footerButtons_c48629',
-    linkButton: 'linkButton_c48629',
-    innerLinkButton: 'innerLinkButton_c48629',
-    appIcon: 'appIcon_c48629',
-    content: 'content_c48629',
-    unavailableTitle: 'unavailableTitle_c48629',
-    unavailableBody: 'unavailableBody_c48629',
-    button: 'button_c48629'
+    modal: 'modal__24654',
+    footer: 'footer__24654',
+    footerButtons: 'footerButtons__24654',
+    linkButton: 'linkButton__24654',
+    innerLinkButton: 'innerLinkButton__24654',
+    appIcon: 'appIcon__24654',
+    content: 'content__24654',
+    unavailableTitle: 'unavailableTitle__24654',
+    unavailableBody: 'unavailableBody__24654',
+    button: 'button__24654'
 };

@@ -1,36 +1,37 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(442837),
-    s = r(481060),
-    l = r(846027),
-    u = r(468026),
-    c = r(131951),
-    d = r(388032);
-let f = () => {
-    let e = (0, o.e7)([c.Z], () => c.Z.isInteractionRequired(), []),
-        n = a.useRef(null);
-    function r() {
-        null !== n.current && ((0, s.closeModal)(n.current), (n.current = null));
+n.d(t, { Z: () => d });
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(846027),
+    l = n(468026),
+    u = n(131951),
+    c = n(388032);
+let d = () => {
+    let e = (0, a.e7)([u.Z], () => u.Z.isInteractionRequired(), []),
+        t = r.useRef(null);
+    function n() {
+        null !== t.current && ((0, s.Mr3)(t.current), (t.current = null));
     }
-    function f() {
-        l.Z.interact();
+    function d() {
+        o.Z.interact();
     }
     return (
-        a.useEffect(
+        r.useEffect(
             () => (
                 e
-                    ? (n.current = (0, s.openModal)((e) =>
-                          (0, i.jsx)(u.default, {
-                              title: d.intl.string(d.t.dLLxCw),
-                              body: d.intl.string(d.t['64lmt7']),
-                              onConfirm: f,
-                              confirmText: d.intl.string(d.t.BddRzc),
+                    ? (t.current = (0, s.h7j)((e) =>
+                          (0, i.jsx)(l.default, {
+                              title: c.intl.string(c.t.dLLxCw),
+                              body: c.intl.string(c.t['64lmt7']),
+                              onConfirm: d,
+                              confirmText: c.intl.string(c.t.BddRzc),
                               ...e
                           })
                       ))
-                    : r(),
+                    : n(),
                 () => {
-                    r();
+                    n();
                 }
             ),
             [e]
@@ -38,4 +39,3 @@ let f = () => {
         null
     );
 };
-n.Z = f;

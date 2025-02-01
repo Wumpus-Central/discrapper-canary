@@ -1,11 +1,11 @@
 e.exports = {
-    username: 'username_d090f5',
-    discriminator: 'discriminator_d090f5',
-    tag: 'tag_d090f5',
-    bot: 'bot_d090f5',
-    label: 'label_d090f5',
-    labelText: 'labelText_d090f5',
-    roleCountContainer: 'roleCountContainer_d090f5',
-    roleCountIcon: 'roleCountIcon_d090f5',
-    roleCountText: 'roleCountText_d090f5'
+    discriminator: 'discriminator__78c91',
+    username: 'username__78c91',
+    tag: 'tag__78c91',
+    bot: 'bot__78c91',
+    label: 'label__78c91',
+    labelText: 'labelText__78c91',
+    roleCountContainer: 'roleCountContainer__78c91',
+    roleCountIcon: 'roleCountIcon__78c91',
+    roleCountText: 'roleCountText__78c91'
 };

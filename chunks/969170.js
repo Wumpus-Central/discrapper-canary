@@ -1,8 +1,8 @@
 e.exports = {
-    popoutContainer: 'popoutContainer_c64593',
-    customColorsHeader: 'customColorsHeader_c64593',
-    colorSwatch: 'colorSwatch_c64593',
-    colorPickersContainer: 'colorPickersContainer_c64593',
-    colorColumn: 'colorColumn_c64593',
-    colorPicker: 'colorPicker_c64593'
+    popoutContainer: 'popoutContainer_a6cedd',
+    customColorsHeader: 'customColorsHeader_a6cedd',
+    colorSwatch: 'colorSwatch_a6cedd',
+    colorPickersContainer: 'colorPickersContainer_a6cedd',
+    colorColumn: 'colorColumn_a6cedd',
+    colorPicker: 'colorPicker_a6cedd'
 };

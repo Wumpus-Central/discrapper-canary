@@ -1,6 +1,6 @@
 e.exports = {
-    content: 'content_af0f97',
-    innerContent: 'innerContent_af0f97',
-    footerButton: 'footerButton_af0f97',
-    artwork: 'artwork_af0f97'
+    content: 'content__89631',
+    innerContent: 'innerContent__89631',
+    footerButton: 'footerButton__89631',
+    artwork: 'artwork__89631'
 };

@@ -18,7 +18,7 @@ var i,
     v = n(451478),
     y = n(981631),
     I = n(987650);
-function b(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function b(e, t, n) {
         e
     );
 }
-let T = Object.freeze({
+let b = Object.freeze({
         selectedGuildId: null,
         selectedChannelId: null,
         displayUserMode: y.OYC.ALWAYS,
@@ -58,9 +58,9 @@ let T = Object.freeze({
     P = !1;
 function w(e) {
     let t = A[e];
-    return null == t && (t = A[e] = { ...T }), t;
+    return null == t && (t = A[e] = { ...b }), t;
 }
-let M = { ...T },
+let M = { ...b },
     k = new Set(['AUDIO_SET_INPUT_DEVICE', 'AUDIO_SET_INPUT_VOLUME', 'AUDIO_SET_LOCAL_VIDEO_DISABLED', 'AUDIO_SET_LOCAL_VOLUME', 'AUDIO_SET_MODE', 'AUDIO_SET_NOISE_CANCELLATION', 'AUDIO_SET_NOISE_SUPPRESSION', 'AUDIO_SET_OUTPUT_DEVICE', 'AUDIO_SET_OUTPUT_VOLUME', 'AUDIO_TOGGLE_LOCAL_MUTE', 'AUDIO_TOGGLE_SELF_DEAF', 'AUDIO_TOGGLE_SELF_MUTE', 'BILLING_SUBSCRIPTION_UPDATE_SUCCESS', 'CATEGORY_COLLAPSE', 'CATEGORY_EXPAND', 'CHANNEL_ACK', 'CHANNEL_PRELOAD', 'GIFT_CODE_REDEEM', 'GIFT_CODE_REDEEM_FAILURE', 'GIFT_CODE_REDEEM_SUCCESS', 'HOTSPOT_HIDE', 'INVITE_MODAL_CLOSE', 'LAYOUT_CREATE', 'LAYOUT_CREATE_WIDGETS', 'LAYOUT_DELETE_ALL_WIDGETS', 'LAYOUT_DELETE_WIDGET', 'LAYOUT_SET_PINNED', 'LAYOUT_SET_TOP_WIDGET', 'LAYOUT_UPDATE_WIDGET', 'LOAD_MESSAGES', 'LOAD_MESSAGES_FAILURE', 'LOAD_MESSAGES_SUCCESS', 'MEDIA_ENGINE_SET_GO_LIVE_SOURCE', 'OVERLAY_ACTIVATE_REGION', 'OVERLAY_DEACTIVATE_ALL_REGIONS', 'OVERLAY_MESSAGE_EVENT_ACTION', 'OVERLAY_SET_AVATAR_SIZE_MODE', 'OVERLAY_SET_CLICK_ZONES', 'OVERLAY_SET_DISPLAY_NAME_MODE', 'OVERLAY_SET_DISPLAY_USER_MODE', 'OVERLAY_SET_INPUT_LOCKED', 'OVERLAY_SET_NOTIFICATION_POSITION_MODE', 'OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE', 'OVERLAY_SET_SHOW_KEYBIND_INDICATORS', 'OVERLAY_SET_GAME_INVITE_NOTIFICATION', 'OVERLAY_SET_INVITE_MESSAGE', 'OVERLAY_SET_TEXT_WIDGET_OPACITY', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', 'PREMIUM_PAYMENT_ERROR_CLEAR', 'PREMIUM_PAYMENT_MODAL_CLOSE', 'PREMIUM_PAYMENT_MODAL_OPEN', 'PREMIUM_PAYMENT_SUBSCRIBE_FAIL', 'PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS', 'PREMIUM_PAYMENT_UPDATE_FAIL', 'PREMIUM_PAYMENT_UPDATE_SUCCESS', 'PREMIUM_REQUIRED_MODAL_CLOSE', 'PREMIUM_REQUIRED_MODAL_OPEN', 'PURCHASE_CONFIRMATION_MODAL_CLOSE', 'PURCHASE_CONFIRMATION_MODAL_OPEN', 'SKU_PURCHASE_CLEAR_ERROR', 'SKU_PURCHASE_FAIL', 'SKU_PURCHASE_MODAL_CLOSE', 'SKU_PURCHASE_MODAL_OPEN', 'SKU_PURCHASE_PREVIEW_FETCH_SUCCESS', 'SKU_PURCHASE_SHOW_CONFIRMATION_STEP', 'SKU_PURCHASE_START', 'SKU_PURCHASE_SUCCESS', 'STREAM_CLOSE', 'STREAM_START', 'VOICE_CHANNEL_SELECT', 'USER_SETTINGS_PROTO_ENQUEUE_UPDATE', 'USER_SETTINGS_PROTO_LOAD_IF_NECESSARY']),
     U = new Set([...k.values(), 'ACTIVITY_INVITE_MODAL_CLOSE', 'CALL_DELETE', 'CHANNEL_COLLAPSE', 'CHANNEL_SELECT', 'GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', 'OVERLAY_CALL_PRIVATE_CHANNEL', 'OVERLAY_JOIN_GAME', 'OVERLAY_NOTIFICATION_EVENT', 'OVERLAY_SELECT_CALL', 'OVERLAY_SET_NOT_IDLE', 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', 'OVERLAY_WIDGET_CHANGED', 'SOUNDBOARD_SET_OVERLAY_ENABLED', 'STREAM_STOP']);
 function G(e) {
@@ -302,14 +302,14 @@ class eg extends (i = r.ZP.PersistedStore) {
             (this.waitFor(d.default),
             this.syncWith([d.default], () => {
                 let e = d.default.getId();
-                M = null != e ? w(e) : { ...T };
+                M = null != e ? w(e) : { ...b };
             }),
             __OVERLAY__ && (m.isPlatformEmbedded && (O = g.ZP.requireModule('discord_overlay2')), C.delete((0, E.QF)())),
             null != e)
         ) {
             A = e;
             let t = d.default.getId();
-            null != t && (null == (M = w(t)).textChatNotifications && (M.textChatNotifications = T.textChatNotifications), null == M.textWidgetOpacity && (M.textWidgetOpacity = T.textWidgetOpacity));
+            null != t && (null == (M = w(t)).textChatNotifications && (M.textChatNotifications = b.textChatNotifications), null == M.textWidgetOpacity && (M.textWidgetOpacity = b.textWidgetOpacity));
         }
     }
     getState() {
@@ -393,13 +393,13 @@ class eg extends (i = r.ZP.PersistedStore) {
         return P;
     }
 }
-b(eg, 'displayName', 'OverlayStore'),
-    b(eg, 'persistKey', 'OverlayStoreV2'),
-    b(eg, 'migrations', [
+T(eg, 'displayName', 'OverlayStore'),
+    T(eg, 'persistKey', 'OverlayStoreV2'),
+    T(eg, 'migrations', [
         () => {
             let { pinnedWidgets: e, positions: t, sizes: n, v: i, ...r } = { ...a.K.get('OverlayStore') };
             return {
-                ...T,
+                ...b,
                 ...(5 === i ? r : null)
             };
         },

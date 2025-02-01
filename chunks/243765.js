@@ -1,6 +1,6 @@
 e.exports = {
-    root: 'root_ff37c5',
-    voiceUsers: 'voiceUsers_ff37c5',
-    header: 'header_ff37c5',
-    scroller: 'scroller_ff37c5'
+    root: 'root_d529e9',
+    voiceUsers: 'voiceUsers_d529e9',
+    header: 'header_d529e9',
+    scroller: 'scroller_d529e9'
 };

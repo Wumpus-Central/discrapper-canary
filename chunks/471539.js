@@ -1,12 +1,12 @@
-var i = r(627202),
-    a = r(256098),
-    o = r(730179),
+var i = n(627202),
+    r = n(256098),
+    a = n(730179),
     s = Math.max,
-    l = Math.min;
-function u(e, n, r) {
-    var u = null == e ? 0 : e.length;
-    if (!u) return -1;
-    var c = u - 1;
-    return void 0 !== r && ((c = o(r)), (c = r < 0 ? s(u + c, 0) : l(c, u - 1))), i(e, a(n, 3), c, !0);
+    o = Math.min;
+function l(e, t, n) {
+    var l = null == e ? 0 : e.length;
+    if (!l) return -1;
+    var u = l - 1;
+    return void 0 !== n && ((u = a(n)), (u = n < 0 ? s(l + u, 0) : o(u, l - 1))), i(e, r(t, 3), u, !0);
 }
-e.exports = u;
+e.exports = l;

@@ -22,8 +22,8 @@ var i = n(200651),
     v = n(137412),
     y = n(893607),
     I = n(314897),
-    b = n(626135),
-    T = n(361207),
+    T = n(626135),
+    b = n(361207),
     S = n(690032),
     A = n(358085),
     N = n(998502),
@@ -279,12 +279,12 @@ class $ extends r.Component {
                                         path: C.Z5c.DOWNLOAD_QR_CODE_REDIRECT,
                                         render: () => {
                                             var e, t, n;
-                                            let i = null === (e = b.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                                            let i = null === (e = T.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
                                                 r = (0, a.parse)((null !== (n = window.location.search) && void 0 !== n ? n : '').substr(1)),
                                                 s = null === (t = r.referring_location) || void 0 === t ? void 0 : t.toString();
                                             return (
                                                 ('iOS' === i || 'Android' === i) &&
-                                                    b.default.track(C.rMx.DOWNLOAD_APP, {
+                                                    T.default.track(C.rMx.DOWNLOAD_APP, {
                                                         platform: i,
                                                         ptb: !1,
                                                         released: !0,
@@ -292,7 +292,7 @@ class $ extends r.Component {
                                                         referring_location: s,
                                                         qr_code: !0
                                                     }),
-                                                (window.location.href = (0, T.Gn)(null != s && '' !== s ? s : 'qr_code', i)),
+                                                (window.location.href = (0, b.Gn)(null != s && '' !== s ? s : 'qr_code', i)),
                                                 null
                                             );
                                         }
@@ -301,14 +301,14 @@ class $ extends r.Component {
                                         path: C.Z5c.OPEN_APP_FROM_EMAIL,
                                         render: () => {
                                             var e, t;
-                                            let n = null === (e = b.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                                            let n = null === (e = T.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
                                                 r = (0, S.o)(null !== (t = window.location.search) && void 0 !== t ? t : '');
                                             if ('iOS' !== n && 'Android' !== n) return (0, i.jsx)(s.l_, { to: null != r.desktop ? ''.concat(r.desktop.pathname).concat(r.desktop.search) : C.Z5c.APP });
                                             {
-                                                let e = (0, T.Gn)('app_open_from_email', n, r.mobile),
+                                                let e = (0, b.Gn)('app_open_from_email', n, r.mobile),
                                                     t = (0, u.zS)(e);
                                                 null != t &&
-                                                    b.default.track(C.rMx.DEEP_LINK_CLICKED, {
+                                                    T.default.track(C.rMx.DEEP_LINK_CLICKED, {
                                                         fingerprint: (0, c.K)(t.fingerprint),
                                                         attempt_id: t.attemptId,
                                                         source: t.utmSource,

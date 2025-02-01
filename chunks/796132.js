@@ -1,12 +1,12 @@
-function n(e) {
-    let n = e.regex,
-        r = {
+function t(e) {
+    let t = e.regex,
+        n = {
             keyword: 'in of on if for while finally var new function do return void else break catch instanceof with throw case default try this switch continue typeof delete let yield const export super debugger as async await import',
             literal: 'true false null undefined NaN Infinity',
             built_in: 'eval isFinite isNaN parseFloat parseInt decodeURI decodeURIComponent encodeURI encodeURIComponent escape unescape Object Function Boolean Error EvalError InternalError RangeError ReferenceError StopIteration SyntaxError TypeError URIError Number Math Date String RegExp Array Float32Array Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array Uint8Array Uint8ClampedArray ArrayBuffer DataView JSON Intl arguments require module console window document Symbol Set Map WeakSet WeakMap Proxy Reflect Behavior bool color coordinate date double enumeration font geocircle georectangle geoshape int list matrix4x4 parent point quaternion real rect size string url variant vector2d vector3d vector4d Promise'
         },
         i = '[a-zA-Z_][a-zA-Z0-9\\._]*',
-        a = {
+        r = {
             className: 'keyword',
             begin: '\\bproperty\\b',
             starts: {
@@ -15,7 +15,7 @@ function n(e) {
                 returnEnd: !0
             }
         },
-        o = {
+        a = {
             className: 'keyword',
             begin: '\\bsignal\\b',
             starts: {
@@ -33,7 +33,7 @@ function n(e) {
                 returnEnd: !1
             }
         },
-        l = {
+        o = {
             begin: i + '\\s*:',
             returnBegin: !0,
             contains: [
@@ -47,8 +47,8 @@ function n(e) {
             ],
             relevance: 0
         },
-        u = {
-            begin: n.concat(i, /\s*\{/),
+        l = {
+            begin: t.concat(i, /\s*\{/),
             end: /\{/,
             returnBegin: !0,
             relevance: 0,
@@ -58,7 +58,7 @@ function n(e) {
         name: 'QML',
         aliases: ['qt'],
         case_insensitive: !1,
-        keywords: r,
+        keywords: n,
         contains: [
             {
                 className: 'meta',
@@ -102,8 +102,8 @@ function n(e) {
                 ],
                 relevance: 0
             },
-            o,
             a,
+            r,
             {
                 className: 'function',
                 beginKeywords: 'function',
@@ -127,10 +127,10 @@ function n(e) {
                 relevance: 0
             },
             s,
-            l,
-            u
+            o,
+            l
         ],
         illegal: /#/
     };
 }
-e.exports = n;
+e.exports = t;

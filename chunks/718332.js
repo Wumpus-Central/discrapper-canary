@@ -1,41 +1,41 @@
-var i = r(102074),
-    a = r(153027),
-    o = r(803607),
+var i = n(102074),
+    r = n(153027),
+    a = n(803607),
     s = 1,
-    l = 2;
-function u(e, n, r, u, c, d) {
-    var f = r & s,
-        p = e.length,
-        h = n.length;
-    if (p != h && !(f && h > p)) return !1;
-    var _ = d.get(e);
-    if (_ && d.get(n)) return _ == n;
-    var m = -1,
-        g = !0,
-        E = r & l ? new i() : void 0;
-    for (d.set(e, n), d.set(n, e); ++m < p; ) {
-        var v = e[m],
-            y = n[m];
-        if (u) var b = f ? u(y, v, m, n, e, d) : u(v, y, m, e, n, d);
-        if (void 0 !== b) {
-            if (b) continue;
-            g = !1;
+    o = 2;
+function l(e, t, n, l, u, c) {
+    var d = n & s,
+        f = e.length,
+        _ = t.length;
+    if (f != _ && !(d && _ > f)) return !1;
+    var p = c.get(e);
+    if (p && c.get(t)) return p == t;
+    var h = -1,
+        m = !0,
+        g = n & o ? new i() : void 0;
+    for (c.set(e, t), c.set(t, e); ++h < f; ) {
+        var E = e[h],
+            v = t[h];
+        if (l) var y = d ? l(v, E, h, t, e, c) : l(E, v, h, e, t, c);
+        if (void 0 !== y) {
+            if (y) continue;
+            m = !1;
             break;
         }
-        if (E) {
+        if (g) {
             if (
-                !a(n, function (e, n) {
-                    if (!o(E, n) && (v === e || c(v, e, r, u, d))) return E.push(n);
+                !r(t, function (e, t) {
+                    if (!a(g, t) && (E === e || u(E, e, n, l, c))) return g.push(t);
                 })
             ) {
-                g = !1;
+                m = !1;
                 break;
             }
-        } else if (!(v === y || c(v, y, r, u, d))) {
-            g = !1;
+        } else if (!(E === v || u(E, v, n, l, c))) {
+            m = !1;
             break;
         }
     }
-    return d.delete(e), d.delete(n), g;
+    return c.delete(e), c.delete(t), m;
 }
-e.exports = u;
+e.exports = l;

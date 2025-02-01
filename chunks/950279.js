@@ -1,4 +1,4 @@
-n(47120), n(773603);
+n.d(t, { Z: () => _ }), n(47120), n(773603);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -13,15 +13,15 @@ var i = n(200651),
     g = n(240938);
 function x(e) {
     let { gameApplicationIds: t, preventGameRemoval: n, onUpdateGames: l, minGames: o = 1, error: x } = e,
-        { options: p, matchSorterOptions: f } = (0, c.P)(),
+        { options: p, matchSorterOptions: _ } = (0, c.P)(),
         C = r.useMemo(() => Array.from(t), [t]),
-        v = r.useCallback(
+        f = r.useCallback(
             (e) => {
-                if (!(e.length < o)) l(new Set(e));
+                !(e.length < o) && l(new Set(e));
             },
             [o, l]
         ),
-        I = r.useCallback(
+        v = r.useCallback(
             (e) => {
                 if (n) return;
                 let i = new Set(t);
@@ -32,10 +32,10 @@ function x(e) {
         N = r.useCallback(() => null, []);
     return (0, i.jsx)('div', {
         className: h.inputContainer,
-        children: (0, i.jsxs)(a.FormItem, {
+        children: (0, i.jsxs)(a.xJW, {
             error: x,
             children: [
-                (0, i.jsx)(a.SearchableSelect, {
+                (0, i.jsx)(a.VcW, {
                     multi: !0,
                     hidePills: !0,
                     autoFocus: !0,
@@ -43,9 +43,9 @@ function x(e) {
                     options: p,
                     value: C,
                     placeholder: m.intl.string(m.t.acyezc),
-                    onChange: v,
+                    onChange: f,
                     isDisabled: t.size === u.cm,
-                    matchSorterOptions: f,
+                    matchSorterOptions: _,
                     clearQueryOnSelect: !0,
                     customPillContainerClassName: h.pills,
                     renderCustomPill: N
@@ -63,7 +63,7 @@ function x(e) {
                                 className: h.gamesList,
                                 children: C.map((e) =>
                                     (0, i.jsx)(
-                                        a.Tooltip,
+                                        a.ua7,
                                         {
                                             text: m.intl.string(m.t.C1K2XV),
                                             shouldShow: n,
@@ -78,7 +78,7 @@ function x(e) {
                                                             imageContainerClassName: t.size > o ? h.clickableGame : void 0,
                                                             selected: !0,
                                                             locked: n,
-                                                            onClick: I
+                                                            onClick: v
                                                         },
                                                         e
                                                     )
@@ -106,7 +106,7 @@ function p(e) {
             });
     }, [t, c]);
     let p = r.useMemo(() => (null == u ? [] : Object.keys(u).sort((e, t) => u[t].score - u[e].score)), [u]),
-        f = r.useCallback(
+        _ = r.useCallback(
             (e) => {
                 let t = new Set(n);
                 n.has(e) ? t.delete(e) : t.add(e), l(t);
@@ -114,7 +114,7 @@ function p(e) {
             [l, n]
         );
     return g && null == u
-        ? (0, i.jsx)(a.Spinner, { className: h.loadingSpinner })
+        ? (0, i.jsx)(a.$jN, { className: h.loadingSpinner })
         : null == p || 0 === p.length
           ? null
           : (0, i.jsxs)(i.Fragment, {
@@ -137,7 +137,7 @@ function p(e) {
                                             applicationId: e,
                                             imageContainerClassName: h.clickableGame,
                                             selected: n.has(e),
-                                            onClick: f
+                                            onClick: _
                                         },
                                         e
                                     )
@@ -148,13 +148,13 @@ function p(e) {
                 ]
             });
 }
-t.Z = (e) => {
+let _ = (e) => {
     let { title: t, description: n, onUpdateGames: r, gameApplicationIds: l, minGames: o = 1, error: c, guildId: d, includeSuggestedGames: u } = e,
         m = l.size <= o;
     return (0, i.jsxs)('div', {
         className: s()(g.slideContent, h.container),
         children: [
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(a.X6q, {
                 variant: 'heading-xxl/medium',
                 className: g.title,
                 children: t

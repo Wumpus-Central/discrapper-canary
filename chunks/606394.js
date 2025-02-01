@@ -1,6 +1,6 @@
-function n(e) {
-    let n = ['add', 'and', 'cmp', 'cmpg', 'cmpl', 'const', 'div', 'double', 'float', 'goto', 'if', 'int', 'long', 'move', 'mul', 'neg', 'new', 'nop', 'not', 'or', 'rem', 'return', 'shl', 'shr', 'sput', 'sub', 'throw', 'ushr', 'xor'],
-        r = ['aget', 'aput', 'array', 'check', 'execute', 'fill', 'filled', 'goto/16', 'goto/32', 'iget', 'instance', 'invoke', 'iput', 'monitor', 'packed', 'sget', 'sparse'],
+function t(e) {
+    let t = ['add', 'and', 'cmp', 'cmpg', 'cmpl', 'const', 'div', 'double', 'float', 'goto', 'if', 'int', 'long', 'move', 'mul', 'neg', 'new', 'nop', 'not', 'or', 'rem', 'return', 'shl', 'shr', 'sput', 'sub', 'throw', 'ushr', 'xor'],
+        n = ['aget', 'aput', 'array', 'check', 'execute', 'fill', 'filled', 'goto/16', 'goto/32', 'iget', 'instance', 'invoke', 'iput', 'monitor', 'packed', 'sget', 'sparse'],
         i = ['transient', 'constructor', 'abstract', 'final', 'synthetic', 'public', 'private', 'protected', 'static', 'bridge', 'system'];
     return {
         name: 'Smali',
@@ -30,13 +30,13 @@ function n(e) {
             {
                 className: 'built_in',
                 variants: [
-                    { begin: '\\s(' + n.join('|') + ')\\s' },
+                    { begin: '\\s(' + t.join('|') + ')\\s' },
                     {
-                        begin: '\\s(' + n.join('|') + ')((-|/)[a-zA-Z0-9]+)+\\s',
+                        begin: '\\s(' + t.join('|') + ')((-|/)[a-zA-Z0-9]+)+\\s',
                         relevance: 10
                     },
                     {
-                        begin: '\\s(' + r.join('|') + ')((-|/)[a-zA-Z0-9]+)*\\s',
+                        begin: '\\s(' + n.join('|') + ')((-|/)[a-zA-Z0-9]+)*\\s',
                         relevance: 10
                     }
                 ]
@@ -50,4 +50,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

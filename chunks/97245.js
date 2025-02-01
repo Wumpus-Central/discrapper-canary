@@ -1,4 +1,4 @@
-t.exports = {
-    message: 'message_f19fa9',
-    imageUnverified: 'imageUnverified_f19fa9'
+e.exports = {
+    message: 'message_d450d1',
+    imageUnverified: 'imageUnverified_d450d1'
 };

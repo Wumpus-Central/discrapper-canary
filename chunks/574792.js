@@ -1,6 +1,6 @@
 e.exports = {
-    container: 'container_c5ebaa',
-    section: 'section_c5ebaa',
-    sectionDivider: 'sectionDivider_c5ebaa',
-    labelSpacing: 'labelSpacing_c5ebaa'
+    container: 'container_cc79ae',
+    section: 'section_cc79ae',
+    sectionDivider: 'sectionDivider_cc79ae',
+    labelSpacing: 'labelSpacing_cc79ae'
 };

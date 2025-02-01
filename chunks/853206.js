@@ -1,8 +1,8 @@
-e.exports = {
-    phoneVerificationModal: 'phoneVerificationModal_fb9bea',
-    animationContainer: 'animationContainer_fb9bea',
-    title: 'title_fb9bea',
-    description: 'description_fb9bea',
-    error: 'error_fb9bea',
-    field: 'field_fb9bea'
+n.exports = {
+    phoneVerificationModal: 'phoneVerificationModal_db41ea',
+    animationContainer: 'animationContainer_db41ea',
+    title: 'title_db41ea',
+    description: 'description_db41ea',
+    error: 'error_db41ea',
+    field: 'field_db41ea'
 };

@@ -1,5 +1,5 @@
-function n(e) {
-    let n = { begin: '`[\\s\\S]' };
+function t(e) {
+    let t = { begin: '`[\\s\\S]' };
     return {
         name: 'AutoHotkey',
         case_insensitive: !0,
@@ -10,8 +10,8 @@ function n(e) {
             built_in: 'ComSpec Clipboard ClipboardAll ErrorLevel'
         },
         contains: [
-            n,
-            e.inherit(e.QUOTE_STRING_MODE, { contains: [n] }),
+            t,
+            e.inherit(e.QUOTE_STRING_MODE, { contains: [t] }),
             e.COMMENT(';', '$', { relevance: 0 }),
             e.C_BLOCK_COMMENT_MODE,
             {
@@ -51,4 +51,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

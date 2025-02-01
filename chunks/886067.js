@@ -1,15 +1,15 @@
-let i = r(839525),
-    a = r(15496);
-e.exports = (e, n, r) => {
-    let o = [],
+let i = n(839525),
+    r = n(15496);
+e.exports = (e, t, n) => {
+    let a = [],
         s = null,
-        l = null,
-        u = e.sort((e, n) => a(e, n, r));
-    for (let e of u) i(e, n, r) ? ((l = e), !s && (s = e)) : (l && o.push([s, l]), (l = null), (s = null));
-    s && o.push([s, null]);
-    let c = [];
-    for (let [e, n] of o) e === n ? c.push(e) : n || e !== u[0] ? (n ? (e === u[0] ? c.push(`<=${n}`) : c.push(`${e} - ${n}`)) : c.push(`>=${e}`)) : c.push('*');
-    let d = c.join(' || '),
-        f = 'string' == typeof n.raw ? n.raw : String(n);
-    return d.length < f.length ? d : n;
+        o = null,
+        l = e.sort((e, t) => r(e, t, n));
+    for (let e of l) i(e, t, n) ? ((o = e), s || (s = e)) : (o && a.push([s, o]), (o = null), (s = null));
+    s && a.push([s, null]);
+    let u = [];
+    for (let [e, t] of a) e === t ? u.push(e) : t || e !== l[0] ? (t ? (e === l[0] ? u.push(`<=${t}`) : u.push(`${e} - ${t}`)) : u.push(`>=${e}`)) : u.push('*');
+    let c = u.join(' || '),
+        d = 'string' == typeof t.raw ? t.raw : String(t);
+    return c.length < d.length ? c : t;
 };

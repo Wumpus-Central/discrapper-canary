@@ -1,42 +1,42 @@
-t(47120);
+t.d(n, { Z: () => m }), t(47120);
 var l = t(200651),
     a = t(192379),
     i = t(481060),
-    r = t(22382),
-    s = t(747071),
+    s = t(22382),
+    r = t(747071),
     o = t(586826),
     u = t(174727),
-    c = t(990792),
-    d = t(388032),
+    d = t(990792),
+    c = t(388032),
     f = t(194316);
-n.Z = a.memo(function (e) {
+let m = a.memo(function (e) {
     let { sound: n, volume: t, disabled: m } = e,
         [h, g] = a.useState(!1),
         p = a.useRef(null),
-        { file: v, audio: x, loadAudioFromFile: N } = (0, o.p)(),
-        y = a.useMemo(() => (0, r.Z)(n.soundId), [n]);
+        { file: x, audio: v, loadAudioFromFile: y } = (0, o.p)(),
+        b = a.useMemo(() => (0, s.Z)(n.soundId), [n]);
     return (
         a.useEffect(() => {
-            null == p.current && (p.current = (0, u.XG)(y, n.name).then(N));
-        }, [y, N, n.name]),
+            null == p.current && (p.current = (0, u.XG)(b, n.name).then(y));
+        }, [b, y, n.name]),
         (0, l.jsxs)('div', {
             className: f.previewContainer,
             children: [
-                (0, l.jsx)(i.Clickable, {
+                (0, l.jsx)(i.P3F, {
                     onClick: m
                         ? void 0
                         : function () {
-                              null != x && (x.paused ? ((x.volume = (0, s.Z)(t)), (x.currentTime = 0), x.play(), g(!0), x.addEventListener('ended', () => g(!1), { once: !0 })) : (x.pause(), g(!1)));
+                              null != v && (v.paused ? ((v.volume = (0, r.Z)(t)), (v.currentTime = 0), v.play(), g(!0), v.addEventListener('ended', () => g(!1), { once: !0 })) : (v.pause(), g(!1)));
                           },
                     className: f.playButton,
-                    'aria-label': h ? d.intl.string(d.t.hHBkuL) : d.intl.string(d.t.RscU7O),
+                    'aria-label': h ? c.intl.string(c.t.hHBkuL) : c.intl.string(c.t.RscU7O),
                     children: h
-                        ? (0, l.jsx)(i.StopIcon, {
+                        ? (0, l.jsx)(i.wNq, {
                               size: 'xs',
                               color: 'currentColor',
                               className: f.playIcon
                           })
-                        : (0, l.jsx)(i.PlayIcon, {
+                        : (0, l.jsx)(i.o1U, {
                               size: 'xs',
                               color: 'currentColor',
                               className: f.playIcon
@@ -44,10 +44,10 @@ n.Z = a.memo(function (e) {
                 }),
                 (0, l.jsx)('div', {
                     className: f.waveformContainer,
-                    children: (0, l.jsx)(c.Z, {
+                    children: (0, l.jsx)(d.Z, {
                         className: f.waveform,
-                        file: v,
-                        audio: x
+                        file: x,
+                        audio: v
                     })
                 })
             ]

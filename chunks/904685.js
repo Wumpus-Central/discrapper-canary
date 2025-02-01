@@ -1,8 +1,8 @@
 e.exports = {
-    label: 'label_e8e89d',
-    createLabel: 'createLabel_e8e89d',
-    labelIcon: 'labelIcon_e8e89d',
-    labelText: 'labelText_e8e89d',
-    labelTitle: 'labelTitle_e8e89d',
-    labelSubtitle: 'labelSubtitle_e8e89d'
+    label: 'label__27da5',
+    createLabel: 'createLabel__27da5',
+    labelIcon: 'labelIcon__27da5',
+    labelText: 'labelText__27da5',
+    labelTitle: 'labelTitle__27da5',
+    labelSubtitle: 'labelSubtitle__27da5'
 };

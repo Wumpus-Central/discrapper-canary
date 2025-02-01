@@ -1,6 +1,6 @@
-function r(e) {
-    return function (n) {
-        return null == n ? void 0 : n[e];
+n.d(t, { Z: () => i });
+let i = function (e) {
+    return function (t) {
+        return null == t ? void 0 : t[e];
     };
-}
-n.Z = r;
+};

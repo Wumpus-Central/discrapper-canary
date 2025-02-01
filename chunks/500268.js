@@ -1,39 +1,39 @@
-function r(e, n, r, i) {
-    var a = [],
+function n(e, t, n, i) {
+    var r = [],
         s = {},
-        l = {},
-        u = {};
-    return function c(d) {
-        (s[d] = !0), a.push(d), (u[d] = !0);
-        for (let n = 0; n < e[d].length; n++) {
-            let r = e[d][n];
-            if (s[r]) {
-                if (u[r] && (a.push(r), !i)) throw new o(a);
-            } else c(r);
+        o = {},
+        l = {};
+    return function u(c) {
+        (s[c] = !0), r.push(c), (l[c] = !0);
+        for (let t = 0; t < e[c].length; t++) {
+            let n = e[c][t];
+            if (s[n]) {
+                if (l[n] && (r.push(n), !i)) throw new a(r);
+            } else u(n);
         }
-        a.pop(), delete u[d], (!n || 0 === e[d].length) && !l[d] && (r.push(d), (l[d] = !0));
+        r.pop(), delete l[c], (t && 0 !== e[c].length) || o[c] || (n.push(c), (o[c] = !0));
     };
 }
 var i,
-    a = (n.DepGraph = function (e) {
+    r = (t.DepGraph = function (e) {
         (this.nodes = {}), (this.outgoingEdges = {}), (this.incomingEdges = {}), (this.circular = e && !!e.circular);
     });
-a.prototype = {
+r.prototype = {
     size: function () {
         return Object.keys(this.nodes).length;
     },
-    addNode: function (e, n) {
-        !this.hasNode(e) && (2 == arguments.length ? (this.nodes[e] = n) : (this.nodes[e] = e), (this.outgoingEdges[e] = []), (this.incomingEdges[e] = []));
+    addNode: function (e, t) {
+        this.hasNode(e) || (2 == arguments.length ? (this.nodes[e] = t) : (this.nodes[e] = e), (this.outgoingEdges[e] = []), (this.incomingEdges[e] = []));
     },
     removeNode: function (e) {
         this.hasNode(e) &&
             (delete this.nodes[e],
             delete this.outgoingEdges[e],
             delete this.incomingEdges[e],
-            [this.incomingEdges, this.outgoingEdges].forEach(function (n) {
-                Object.keys(n).forEach(function (r) {
-                    var i = n[r].indexOf(e);
-                    i >= 0 && n[r].splice(i, 1);
+            [this.incomingEdges, this.outgoingEdges].forEach(function (t) {
+                Object.keys(t).forEach(function (n) {
+                    var i = t[n].indexOf(e);
+                    i >= 0 && t[n].splice(i, 1);
                 }, this);
             }));
     },
@@ -44,61 +44,61 @@ a.prototype = {
         if (this.hasNode(e)) return this.nodes[e];
         throw Error('Node does not exist: ' + e);
     },
-    setNodeData: function (e, n) {
-        if (this.hasNode(e)) this.nodes[e] = n;
+    setNodeData: function (e, t) {
+        if (this.hasNode(e)) this.nodes[e] = t;
         else throw Error('Node does not exist: ' + e);
     },
-    addDependency: function (e, n) {
+    addDependency: function (e, t) {
         if (!this.hasNode(e)) throw Error('Node does not exist: ' + e);
-        if (!this.hasNode(n)) throw Error('Node does not exist: ' + n);
-        return -1 === this.outgoingEdges[e].indexOf(n) && this.outgoingEdges[e].push(n), -1 === this.incomingEdges[n].indexOf(e) && this.incomingEdges[n].push(e), !0;
+        if (!this.hasNode(t)) throw Error('Node does not exist: ' + t);
+        return -1 === this.outgoingEdges[e].indexOf(t) && this.outgoingEdges[e].push(t), -1 === this.incomingEdges[t].indexOf(e) && this.incomingEdges[t].push(e), !0;
     },
-    removeDependency: function (e, n) {
-        var r;
-        this.hasNode(e) && (r = this.outgoingEdges[e].indexOf(n)) >= 0 && this.outgoingEdges[e].splice(r, 1), this.hasNode(n) && (r = this.incomingEdges[n].indexOf(e)) >= 0 && this.incomingEdges[n].splice(r, 1);
+    removeDependency: function (e, t) {
+        var n;
+        this.hasNode(e) && (n = this.outgoingEdges[e].indexOf(t)) >= 0 && this.outgoingEdges[e].splice(n, 1), this.hasNode(t) && (n = this.incomingEdges[t].indexOf(e)) >= 0 && this.incomingEdges[t].splice(n, 1);
     },
     clone: function () {
         var e = this,
-            n = new a();
+            t = new r();
         return (
-            Object.keys(e.nodes).forEach(function (r) {
-                (n.nodes[r] = e.nodes[r]), (n.outgoingEdges[r] = e.outgoingEdges[r].slice(0)), (n.incomingEdges[r] = e.incomingEdges[r].slice(0));
+            Object.keys(e.nodes).forEach(function (n) {
+                (t.nodes[n] = e.nodes[n]), (t.outgoingEdges[n] = e.outgoingEdges[n].slice(0)), (t.incomingEdges[n] = e.incomingEdges[n].slice(0));
             }),
-            n
+            t
         );
     },
-    dependenciesOf: function (e, n) {
+    dependenciesOf: function (e, t) {
         if (this.hasNode(e)) {
             var i = [];
-            r(this.outgoingEdges, n, i, this.circular)(e);
-            var a = i.indexOf(e);
-            return a >= 0 && i.splice(a, 1), i;
+            n(this.outgoingEdges, t, i, this.circular)(e);
+            var r = i.indexOf(e);
+            return r >= 0 && i.splice(r, 1), i;
         }
         throw Error('Node does not exist: ' + e);
     },
-    dependantsOf: function (e, n) {
+    dependantsOf: function (e, t) {
         if (this.hasNode(e)) {
             var i = [];
-            r(this.incomingEdges, n, i, this.circular)(e);
-            var a = i.indexOf(e);
-            return a >= 0 && i.splice(a, 1), i;
+            n(this.incomingEdges, t, i, this.circular)(e);
+            var r = i.indexOf(e);
+            return r >= 0 && i.splice(r, 1), i;
         }
         throw Error('Node does not exist: ' + e);
     },
     overallOrder: function (e) {
-        var n = this,
+        var t = this,
             i = [],
-            a = Object.keys(this.nodes);
-        if (0 === a.length) return i;
-        var o = r(this.outgoingEdges, !1, [], this.circular);
-        a.forEach(function (e) {
-            o(e);
+            r = Object.keys(this.nodes);
+        if (0 === r.length) return i;
+        var a = n(this.outgoingEdges, !1, [], this.circular);
+        r.forEach(function (e) {
+            a(e);
         });
-        var s = r(this.outgoingEdges, e, i, this.circular);
+        var s = n(this.outgoingEdges, e, i, this.circular);
         return (
-            a
+            r
                 .filter(function (e) {
-                    return 0 === n.incomingEdges[e].length;
+                    return 0 === t.incomingEdges[e].length;
                 })
                 .forEach(function (e) {
                     s(e);
@@ -107,11 +107,11 @@ a.prototype = {
         );
     }
 };
-var o = (i = function (e) {
-    var n = Error('Dependency Cycle Found: ' + e.join(' -> '));
-    return (n.cyclePath = e), Object.setPrototypeOf(n, Object.getPrototypeOf(this)), Error.captureStackTrace && Error.captureStackTrace(n, o), n;
+var a = (i = function (e) {
+    var t = Error('Dependency Cycle Found: ' + e.join(' -> '));
+    return (t.cyclePath = e), Object.setPrototypeOf(t, Object.getPrototypeOf(this)), Error.captureStackTrace && Error.captureStackTrace(t, a), t;
 });
-(o.prototype = Object.create(Error.prototype, {
+(a.prototype = Object.create(Error.prototype, {
     constructor: {
         value: Error,
         enumerable: !1,
@@ -119,4 +119,4 @@ var o = (i = function (e) {
         configurable: !0
     }
 })),
-    Object.setPrototypeOf(o, Error);
+    Object.setPrototypeOf(a, Error);

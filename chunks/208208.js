@@ -1,66 +1,66 @@
-var i = r(903799),
-    a = r(609513),
-    o = r(685053),
-    s = o.assert,
-    l = o.parseBytes,
-    u = r(226140),
-    c = r(452610);
-function d(e) {
-    if ((s('ed25519' === e, 'only tested with ed25519 so far'), !(this instanceof d))) return new d(e);
-    (e = a[e].curve), (this.curve = e), (this.g = e.g), this.g.precompute(e.n.bitLength() + 1), (this.pointClass = e.point().constructor), (this.encodingLength = Math.ceil(e.n.bitLength() / 8)), (this.hash = i.sha512);
+var i = n(903799),
+    r = n(609513),
+    a = n(685053),
+    s = a.assert,
+    o = a.parseBytes,
+    l = n(226140),
+    u = n(452610);
+function c(e) {
+    if ((s('ed25519' === e, 'only tested with ed25519 so far'), !(this instanceof c))) return new c(e);
+    (e = r[e].curve), (this.curve = e), (this.g = e.g), this.g.precompute(e.n.bitLength() + 1), (this.pointClass = e.point().constructor), (this.encodingLength = Math.ceil(e.n.bitLength() / 8)), (this.hash = i.sha512);
 }
-(e.exports = d),
-    (d.prototype.sign = function (e, n) {
-        e = l(e);
-        var r = this.keyFromSecret(n),
-            i = this.hashInt(r.messagePrefix(), e),
-            a = this.g.mul(i),
-            o = this.encodePoint(a),
-            s = this.hashInt(o, r.pubBytes(), e).mul(r.priv()),
-            u = i.add(s).umod(this.curve.n);
+(e.exports = c),
+    (c.prototype.sign = function (e, t) {
+        e = o(e);
+        var n = this.keyFromSecret(t),
+            i = this.hashInt(n.messagePrefix(), e),
+            r = this.g.mul(i),
+            a = this.encodePoint(r),
+            s = this.hashInt(a, n.pubBytes(), e).mul(n.priv()),
+            l = i.add(s).umod(this.curve.n);
         return this.makeSignature({
-            R: a,
-            S: u,
-            Rencoded: o
+            R: r,
+            S: l,
+            Rencoded: a
         });
     }),
-    (d.prototype.verify = function (e, n, r) {
-        (e = l(e)), (n = this.makeSignature(n));
-        var i = this.keyFromPublic(r),
-            a = this.hashInt(n.Rencoded(), i.pubBytes(), e),
-            o = this.g.mul(n.S());
-        return n.R().add(i.pub().mul(a)).eq(o);
+    (c.prototype.verify = function (e, t, n) {
+        (e = o(e)), (t = this.makeSignature(t));
+        var i = this.keyFromPublic(n),
+            r = this.hashInt(t.Rencoded(), i.pubBytes(), e),
+            a = this.g.mul(t.S());
+        return t.R().add(i.pub().mul(r)).eq(a);
     }),
-    (d.prototype.hashInt = function () {
-        for (var e = this.hash(), n = 0; n < arguments.length; n++) e.update(arguments[n]);
-        return o.intFromLE(e.digest()).umod(this.curve.n);
+    (c.prototype.hashInt = function () {
+        for (var e = this.hash(), t = 0; t < arguments.length; t++) e.update(arguments[t]);
+        return a.intFromLE(e.digest()).umod(this.curve.n);
     }),
-    (d.prototype.keyFromPublic = function (e) {
-        return u.fromPublic(this, e);
+    (c.prototype.keyFromPublic = function (e) {
+        return l.fromPublic(this, e);
     }),
-    (d.prototype.keyFromSecret = function (e) {
-        return u.fromSecret(this, e);
+    (c.prototype.keyFromSecret = function (e) {
+        return l.fromSecret(this, e);
     }),
-    (d.prototype.makeSignature = function (e) {
-        return e instanceof c ? e : new c(this, e);
+    (c.prototype.makeSignature = function (e) {
+        return e instanceof u ? e : new u(this, e);
     }),
-    (d.prototype.encodePoint = function (e) {
-        var n = e.getY().toArray('le', this.encodingLength);
-        return (n[this.encodingLength - 1] |= e.getX().isOdd() ? 128 : 0), n;
+    (c.prototype.encodePoint = function (e) {
+        var t = e.getY().toArray('le', this.encodingLength);
+        return (t[this.encodingLength - 1] |= e.getX().isOdd() ? 128 : 0), t;
     }),
-    (d.prototype.decodePoint = function (e) {
-        var n = (e = o.parseBytes(e)).length - 1,
-            r = e.slice(0, n).concat(-129 & e[n]),
-            i = (128 & e[n]) != 0,
-            a = o.intFromLE(r);
-        return this.curve.pointFromY(a, i);
+    (c.prototype.decodePoint = function (e) {
+        var t = (e = a.parseBytes(e)).length - 1,
+            n = e.slice(0, t).concat(-129 & e[t]),
+            i = (128 & e[t]) != 0,
+            r = a.intFromLE(n);
+        return this.curve.pointFromY(r, i);
     }),
-    (d.prototype.encodeInt = function (e) {
+    (c.prototype.encodeInt = function (e) {
         return e.toArray('le', this.encodingLength);
     }),
-    (d.prototype.decodeInt = function (e) {
-        return o.intFromLE(e);
+    (c.prototype.decodeInt = function (e) {
+        return a.intFromLE(e);
     }),
-    (d.prototype.isPoint = function (e) {
+    (c.prototype.isPoint = function (e) {
         return e instanceof this.pointClass;
     });

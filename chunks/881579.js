@@ -1,6 +1,6 @@
 e.exports = {
-    activatePage: 'activatePage_ac6740',
-    content: 'content_ac6740',
-    artwork: 'artwork_ac6740',
-    logo: 'logo_ac6740'
+    activatePage: 'activatePage__8cc35',
+    content: 'content__8cc35',
+    artwork: 'artwork__8cc35',
+    logo: 'logo__8cc35'
 };

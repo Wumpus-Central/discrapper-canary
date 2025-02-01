@@ -1,9 +1,9 @@
 e.exports = {
-    upsellContainer: 'upsellContainer_bb33d5',
-    upsellHeader: 'upsellHeader_bb33d5',
-    upsellDescription: 'upsellDescription_bb33d5',
-    upsellButtons: 'upsellButtons_bb33d5',
-    upsellButtonPrimary: 'upsellButtonPrimary_bb33d5',
-    upsellButton: 'upsellButton_bb33d5',
-    divider: 'divider_bb33d5'
+    upsellContainer: 'upsellContainer_c0eeaa',
+    upsellHeader: 'upsellHeader_c0eeaa',
+    upsellDescription: 'upsellDescription_c0eeaa',
+    upsellButtons: 'upsellButtons_c0eeaa',
+    upsellButtonPrimary: 'upsellButtonPrimary_c0eeaa',
+    upsellButton: 'upsellButton_c0eeaa',
+    divider: 'divider_c0eeaa'
 };

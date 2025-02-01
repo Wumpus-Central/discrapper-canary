@@ -1,5 +1,5 @@
-t.exports = {
-    closeButton: 'closeButton_e6af31',
-    applicationIcon: 'applicationIcon_e6af31',
-    submissionWarning: 'submissionWarning_e6af31'
+e.exports = {
+    closeButton: 'closeButton_e858dd',
+    applicationIcon: 'applicationIcon_e858dd',
+    submissionWarning: 'submissionWarning_e858dd'
 };

@@ -1,6 +1,6 @@
 e.exports = {
-    container: 'container_eff583',
-    header: 'header_eff583',
-    requiredItem: 'requiredItem_eff583',
-    icon: 'icon_eff583'
+    container: 'container_e9b3cb',
+    header: 'header_e9b3cb',
+    requiredItem: 'requiredItem_e9b3cb',
+    icon: 'icon_e9b3cb'
 };

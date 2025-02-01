@@ -39,8 +39,8 @@ var y = (function (e) {
     return (e.PRIMARY = 'primary'), (e.NESTED = 'nested'), (e.BLACK = 'black'), (e.GREY = 'grey'), (e.BRAND = 'brand'), (e.GREEN = 'green'), (e.YELLOW = 'yellow'), (e.RED = 'red'), (e.PREMIUM = 'premium'), e;
 })({});
 let I = 16,
-    b = 10,
-    T = 8,
+    T = 10,
+    b = 8,
     S = Object.freeze({}),
     A = Object.freeze({
         top: E.tooltipTop,
@@ -66,10 +66,10 @@ function N(e, t, n) {
         s = i ? 'bottom' : 'right',
         o = '50%',
         l = n;
-    return t === a ? ((o = '0%'), (l += I)) : t === s && ((o = '100%'), (l -= b + b)), { [r]: 'calc('.concat(o, ' + ').concat(l, 'px)') };
+    return t === a ? ((o = '0%'), (l += I)) : t === s && ((o = '100%'), (l -= T + T)), { [r]: 'calc('.concat(o, ' + ').concat(l, 'px)') };
 }
 let C = (e) => {
-        let { targetElementRef: t, align: n = 'center', position: i, color: a, children: s, onNonAccessibleClick: l, tooltipClassName: c, tooltipStyle: d, tooltipContentClassName: f, spacing: _ = T, animationStyle: p, disableTooltipPointerEvents: h = !1, allowOverflow: m = !1, tooltipPointerClassName: v } = e,
+        let { targetElementRef: t, align: n = 'center', position: i, color: a, children: s, onNonAccessibleClick: l, tooltipClassName: c, tooltipStyle: d, tooltipContentClassName: f, spacing: _ = b, animationStyle: p, disableTooltipPointerEvents: h = !1, allowOverflow: m = !1, tooltipPointerClassName: v } = e,
             y = ''.concat('string' == typeof s ? s : '', ':').concat(i);
         return (0, r.jsx)(g.W5, {
             disablePointerEvents: h,
@@ -268,7 +268,7 @@ v(L, 'Colors', y),
         position: 'top',
         color: 'primary',
         forceOpen: !1,
-        spacing: T,
+        spacing: b,
         shouldShow: !0,
         allowOverflow: !1,
         overflowOnly: !1

@@ -1,6 +1,6 @@
 t.exports = {
-    artContainer: 'artContainer_e90205',
-    grayArt: 'grayArt_e90205',
-    subscribeButton: 'subscribeButton_e90205',
-    subHeader: 'subHeader_e90205'
+    artContainer: 'artContainer_ee7791',
+    grayArt: 'grayArt_ee7791',
+    subscribeButton: 'subscribeButton_ee7791',
+    subHeader: 'subHeader_ee7791'
 };

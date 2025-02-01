@@ -1,7 +1,7 @@
-e.exports = {
-    body: 'body_bf926b',
-    reviewStep: 'reviewStep_bf926b',
-    sliderBody: 'sliderBody_bf926b',
-    sliderBodyLarge: 'sliderBodyLarge_bf926b',
-    sliderBodyDynamic: 'sliderBodyDynamic_bf926b'
+var i = {
+    body: 'body_c6f1a4',
+    reviewStep: 'reviewStep_c6f1a4',
+    sliderBody: 'sliderBody_c6f1a4',
+    sliderBodyLarge: 'sliderBodyLarge_c6f1a4'
 };
+e.exports = i;

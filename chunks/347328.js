@@ -23,7 +23,7 @@ function p(e) {
                 null == h || h({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }), s.Z.open(f.oAB.CONNECTIONS), null == m || m();
             }
         });
-    if ('live' === p || !(0, c.gr)(n)) return null;
+    if ('recent' !== p || !(0, c.gr)(n)) return null;
     let E = n.extra.url;
     return null == E || '' === E
         ? null

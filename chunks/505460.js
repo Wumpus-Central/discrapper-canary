@@ -1,5 +1,5 @@
 e.exports = {
-    thankYouCard: 'thankYouCard_ad8fa4',
-    thankYouText: 'thankYouText_ad8fa4',
-    userAvatar: 'userAvatar_ad8fa4'
+    thankYouCard: 'thankYouCard_b851f5',
+    thankYouText: 'thankYouText_b851f5',
+    userAvatar: 'userAvatar_b851f5'
 };

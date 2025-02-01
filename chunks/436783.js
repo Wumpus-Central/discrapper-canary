@@ -1,4 +1,5 @@
-let i = (0, r(818083).B)({
+n.d(t, { Z: () => r });
+let i = (0, n(818083).B)({
         kind: 'user',
         id: '2024-07_bogo_countdown',
         label: 'BOGO Countdown Experiment',
@@ -11,8 +12,7 @@ let i = (0, r(818083).B)({
             }
         ]
     }),
-    a = function () {
+    r = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return i.useExperiment({ location: '489551_3' }, { autoTrackExposure: e });
     };
-n.Z = a;

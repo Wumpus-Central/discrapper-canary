@@ -1,101 +1,101 @@
-var i = r(653041);
-var a = r(371193);
-var o = r(501501),
-    s = r.n(o),
-    l = r(78650),
-    u = r.n(l),
-    c = r(505444),
-    d = r.n(c);
-function f(e) {
-    let n = Object.keys(e)[0];
-    return ''.concat(n, '(').concat(e[n], ')');
+n.d(t, { Z: () => y }), n(653041);
+var i = n(371193),
+    r = n(501501),
+    a = n.n(r),
+    s = n(78650),
+    o = n.n(s),
+    l = n(505444),
+    u = n.n(l);
+function c(e) {
+    let t = Object.keys(e)[0];
+    return ''.concat(t, '(').concat(e[t], ')');
 }
-let p = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
-function h(e) {
-    let n = e.match(p);
+let d = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
+function f(e) {
+    let t = e.match(d);
     return (
-        null != n &&
+        null != t &&
             (e = 'rgba('
-                .concat(0 | n[1], ', ')
-                .concat(0 | n[2], ', ')
-                .concat(0 | n[3], ', ')
-                .concat(n[4], ')')),
+                .concat(0 | t[1], ', ')
+                .concat(0 | t[2], ', ')
+                .concat(0 | t[3], ', ')
+                .concat(t[4], ')')),
         e
     );
 }
 function _(e) {
-    return e && (e.transform && (e.transform = e.WebkitTransform = e.MozTransform = e.transform.map(f).join(' ')), e.color && (e.color = h(e.color)), e.backgroundColor && (e.backgroundColor = h(e.backgroundColor))), e;
+    return e && (e.transform && (e.transform = e.WebkitTransform = e.MozTransform = e.transform.map(c).join(' ')), e.color && (e.color = f(e.color)), e.backgroundColor && (e.backgroundColor = f(e.backgroundColor))), e;
 }
-function m(e, n, r) {
-    if (e.setNativeProps) e.setNativeProps(n);
+function p(e, t, n) {
+    if (e.setNativeProps) e.setNativeProps(t);
     else {
         if (!e.nodeType || void 0 === e.setAttribute) return !1;
-        d().setValueForStyles(e, _(n.style), r._reactInternalInstance);
+        u().setValueForStyles(e, _(t.style), n._reactInternalInstance);
     }
 }
-function g(e) {
+function h(e) {
     return (e.transform = e.transform || []), e.transform.push({ translateZ: 0 }), e;
 }
-function E(e, n, r) {
-    return void 0 !== n && void 0 != r ? u()(n, r) : e;
+function m(e, t, n) {
+    return void 0 !== t && void 0 != n ? o()(t, n) : e;
 }
-function v(e, n) {
-    let r;
-    let { toValueMin: i, toValueMax: o, tension: s = 0, friction: l = 0, loop: u, reverse: c, invert: d, callback: f, type: p = 'spring', shouldLoop: h, durationMin: _, durationMax: m, ...g } = n,
-        y = e._value,
-        b = E(n.duration, _, m),
-        I = E(n.toValue, i, o),
-        T = a[p](e, {
-            ...g,
+function g(e, t) {
+    let n;
+    let { toValueMin: r, toValueMax: a, tension: s = 0, friction: o = 0, loop: l, reverse: u, invert: c, callback: d, type: f = 'spring', shouldLoop: _, durationMin: p, durationMax: h, ...E } = t,
+        v = e._value,
+        y = m(t.duration, p, h),
+        I = m(t.toValue, r, a),
+        T = i[f](e, {
+            ...E,
             toValue: I,
             tension: s,
-            friction: l,
-            duration: b
+            friction: o,
+            duration: y
         }),
-        S = T;
-    if (c || d) {
-        let i = E(n.duration, _, m);
-        (r = a[p](e, {
-            ...g,
-            toValue: c ? y : -I,
+        b = T;
+    if (u || c) {
+        let r = m(t.duration, p, h);
+        (n = i[f](e, {
+            ...E,
+            toValue: u ? v : -I,
             tension: s,
-            friction: l,
-            duration: i
+            friction: o,
+            duration: r
         })),
-            (S = a.sequence([T, r]));
+            (b = i.sequence([T, n]));
     }
-    u
-        ? S.start(() => {
-              (!h || (h && h())) && (f ? f(v.bind(null, e, n)) : v(e, n));
+    l
+        ? b.start(() => {
+              (!_ || (_ && _())) && (d ? d(g.bind(null, e, t)) : g(e, t));
           })
-        : S.start(f);
+        : b.start(d);
 }
-function y(e) {
-    for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
+function E(e) {
+    for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
     return e.interpolate({
         inputRange: [0, 1],
-        outputRange: r
+        outputRange: n
     });
 }
-a.inject.ApplyAnimatedValues(m, (e) => e);
-let b = { CLAMP: 'clamp' };
-n.Z = {
-    ...a,
-    Easing: s(),
-    accelerate: g,
-    animate: v,
-    interpolate: y,
-    Extrapolate: b,
-    div: a.createAnimatedComponent('div'),
-    span: a.createAnimatedComponent('span'),
-    img: a.createAnimatedComponent('img'),
-    a: a.createAnimatedComponent('a'),
-    form: a.createAnimatedComponent('form'),
-    ul: a.createAnimatedComponent('ul'),
-    li: a.createAnimatedComponent('li'),
-    g: a.createAnimatedComponent('g'),
-    use: a.createAnimatedComponent('use'),
-    path: a.createAnimatedComponent('path'),
-    section: a.createAnimatedComponent('section'),
-    video: a.createAnimatedComponent('video')
-};
+i.inject.ApplyAnimatedValues(p, (e) => e);
+let v = { CLAMP: 'clamp' },
+    y = {
+        ...i,
+        Easing: a(),
+        accelerate: h,
+        animate: g,
+        interpolate: E,
+        Extrapolate: v,
+        div: i.createAnimatedComponent('div'),
+        span: i.createAnimatedComponent('span'),
+        img: i.createAnimatedComponent('img'),
+        a: i.createAnimatedComponent('a'),
+        form: i.createAnimatedComponent('form'),
+        ul: i.createAnimatedComponent('ul'),
+        li: i.createAnimatedComponent('li'),
+        g: i.createAnimatedComponent('g'),
+        use: i.createAnimatedComponent('use'),
+        path: i.createAnimatedComponent('path'),
+        section: i.createAnimatedComponent('section'),
+        video: i.createAnimatedComponent('video')
+    };

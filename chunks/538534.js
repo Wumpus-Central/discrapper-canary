@@ -103,11 +103,11 @@ function I(e) {
               ]
           });
 }
-function b(e) {
+function T(e) {
     var t;
     let { disabled: n, checked: i, option: a, size: s, onClick: l, infoClassName: c, titleClassName: d, radioItemClassName: _, radioItemIconClassName: p, radioBarClassName: h, hasSelection: m, radioPosition: g = 'left', icon: v, withTransparentBackground: y } = e,
-        b = null !== (t = a.color) && void 0 !== t ? t : '',
-        T = i || !m,
+        T = null !== (t = a.color) && void 0 !== t ? t : '',
+        b = i || !m,
         S = (0, r.jsx)(I, {
             checked: i,
             disabled: n,
@@ -118,7 +118,7 @@ function b(e) {
         role: 'radio',
         'aria-checked': i,
         onClick: n ? void 0 : l,
-        tabIndex: !n && T ? 0 : -1,
+        tabIndex: !n && b ? 0 : -1,
         className: o()(
             null != a.collapsibleContent ? E.collapsibleItem : E.item,
             {
@@ -129,7 +129,7 @@ function b(e) {
         ),
         children: (0, r.jsxs)('div', {
             style: {
-                '--radio-bar-accent-color': b,
+                '--radio-bar-accent-color': T,
                 padding: s
             },
             className: o()(
@@ -165,7 +165,7 @@ function b(e) {
         })
     });
 }
-class T extends (i = a.PureComponent) {
+class b extends (i = a.PureComponent) {
     render() {
         let { checked: e, disabled: t, option: n, size: i, infoClassName: a, hasSelection: s, titleClassName: o, radioItemClassName: l, radioItemIconClassName: u, radioBarClassName: d, collapsibleClassName: f, withTransparentBackground: p, radioPosition: h } = this.props,
             m = t || n.disabled,
@@ -178,7 +178,7 @@ class T extends (i = a.PureComponent) {
                           collapsibleContent: n.collapsibleContent,
                           children: (t) => {
                               let { onClick: c } = t;
-                              return (0, r.jsx)(b, {
+                              return (0, r.jsx)(T, {
                                   disabled: !!m,
                                   checked: e,
                                   hasSelection: s,
@@ -198,7 +198,7 @@ class T extends (i = a.PureComponent) {
                               });
                           }
                       })
-                    : (0, r.jsx)(b, {
+                    : (0, r.jsx)(T, {
                           disabled: !!m,
                           checked: e,
                           hasSelection: s,
@@ -304,7 +304,7 @@ function N(e) {
         className: s,
         children: _.map((e) =>
             (0, r.jsx)(
-                T,
+                b,
                 {
                     hasSelection: I,
                     disabled: f,
@@ -326,7 +326,7 @@ function N(e) {
         )
     });
 }
-v(T, 'defaultProps', {
+v(b, 'defaultProps', {
     withTransparentBackground: !1,
     radioPosition: 'left'
 }),

@@ -1,4 +1,4 @@
 e.exports = {
-    effect: 'effect_e5651',
-    effectsWrapper: 'effectsWrapper_e5651'
+    effect: 'effect_a9ddb3',
+    effectsWrapper: 'effectsWrapper_a9ddb3'
 };

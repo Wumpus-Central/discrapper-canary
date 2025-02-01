@@ -1,5 +1,5 @@
-var r = Object.prototype.toString;
-function i(e) {
-    return r.call(e);
-}
-n.Z = i;
+n.d(t, { Z: () => r });
+var i = Object.prototype.toString;
+let r = function (e) {
+    return i.call(e);
+};

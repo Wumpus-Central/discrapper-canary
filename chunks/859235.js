@@ -22,22 +22,22 @@ function g(e) {
     e.stopPropagation();
 }
 function E(e, t) {
-    let { id: n, channelId: r, className: a, children: m, actions: E, handleEditModal: v, keyboardModeEnabled: y, onKeyDown: I, draftType: b, size: T = 1 } = e,
+    let { id: n, channelId: r, className: a, children: m, actions: E, handleEditModal: v, keyboardModeEnabled: y, onKeyDown: I, draftType: T, size: b = 1 } = e,
         { onFocus: S, ...A } = (0, o.JA)(n),
         { handleFocus: N, handleBlur: C } = (0, f.b)(S),
-        R = 0 === T,
+        R = 0 === b,
         O = null != E,
         D = (e) => {
             if (y) {
                 switch (e.which) {
                     case _.yXg.D:
-                        e.preventDefault(), u.Z.remove(r, n, b);
+                        e.preventDefault(), u.Z.remove(r, n, T);
                         return;
                     case _.yXg.E:
                         null != v && (e.preventDefault(), v(e));
                         return;
                     case _.yXg.BACKSPACE:
-                        e.ctrlKey ? (e.preventDefault(), u.Z.clearAll(r, b)) : (e.preventDefault(), u.Z.remove(r, n, b));
+                        e.ctrlKey ? (e.preventDefault(), u.Z.clearAll(r, T)) : (e.preventDefault(), u.Z.remove(r, n, T));
                         return;
                     case _.yXg.ARROW_UP:
                         if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
@@ -52,7 +52,7 @@ function E(e, t) {
             onFocus: N,
             onBlur: C,
             onKeyDown: D,
-            className: s()(h.upload, a, { [h.sizeClip]: 2 === T }),
+            className: s()(h.upload, a, { [h.sizeClip]: 2 === b }),
             ref: t,
             children: (0, i.jsxs)('div', {
                 className: h.uploadContainer,

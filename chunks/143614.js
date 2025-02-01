@@ -1,9 +1,9 @@
 e.exports = {
-    selectTeamContainer: 'selectTeamContainer_a4eb46',
-    teamSelect: 'teamSelect_a4eb46',
-    enableTicketingButton: 'enableTicketingButton_a4eb46',
-    error: 'error_a4eb46',
-    description: 'description_a4eb46',
-    nonOwnerNotice: 'nonOwnerNotice_a4eb46',
-    selfDemonetization: 'selfDemonetization_a4eb46'
+    selectTeamContainer: 'selectTeamContainer__7b175',
+    teamSelect: 'teamSelect__7b175',
+    enableTicketingButton: 'enableTicketingButton__7b175',
+    error: 'error__7b175',
+    description: 'description__7b175',
+    nonOwnerNotice: 'nonOwnerNotice__7b175',
+    selfDemonetization: 'selfDemonetization__7b175'
 };

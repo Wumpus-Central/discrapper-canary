@@ -1,44 +1,44 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
+n.d(t, { Z: () => r });
 var i = n(981631);
-let r = '<removed>';
-function l(e) {
+let l = '<removed>';
+function r(e) {
     var t, n;
-    let l = { ...e };
-    if ('object' == typeof (t = l).args && 'string' == typeof t.cmd)
-        l = (function (e) {
-            switch (e.cmd) {
-                case i.Etm.AUTHENTICATE:
-                case i.Etm.GET_PROVIDER_ACCESS_TOKEN:
-                    return {
-                        ...e,
-                        args: {
-                            ...e.args,
-                            access_token: r
-                        }
-                    };
-                default:
-                    return { ...e };
-            }
-        })(l);
-    if ('object' == typeof (n = l).data && 'string' == typeof n.cmd)
-        l = (function (e) {
-            switch (e.cmd) {
-                case i.Etm.AUTHENTICATE:
-                case i.Etm.GET_PROVIDER_ACCESS_TOKEN:
-                    return {
-                        ...e,
-                        data: {
-                            ...e.data,
-                            access_token: r
-                        }
-                    };
-                default:
-                    return { ...e };
-            }
-        })(l);
-    return l;
+    let r = { ...e };
+    return (
+        'object' == typeof (t = r).args &&
+            'string' == typeof t.cmd &&
+            (r = (function (e) {
+                switch (e.cmd) {
+                    case i.Etm.AUTHENTICATE:
+                    case i.Etm.GET_PROVIDER_ACCESS_TOKEN:
+                        return {
+                            ...e,
+                            args: {
+                                ...e.args,
+                                access_token: l
+                            }
+                        };
+                    default:
+                        return { ...e };
+                }
+            })(r)),
+        'object' == typeof (n = r).data &&
+            'string' == typeof n.cmd &&
+            (r = (function (e) {
+                switch (e.cmd) {
+                    case i.Etm.AUTHENTICATE:
+                    case i.Etm.GET_PROVIDER_ACCESS_TOKEN:
+                        return {
+                            ...e,
+                            data: {
+                                ...e.data,
+                                access_token: l
+                            }
+                        };
+                    default:
+                        return { ...e };
+                }
+            })(r)),
+        r
+    );
 }

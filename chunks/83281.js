@@ -1,10 +1,10 @@
 e.exports = {
-    mainLoginContainer: 'mainLoginContainer_be9398',
-    title: 'title_be9398',
-    subtitle: 'subtitle_be9398',
-    loginForm: 'loginForm_be9398',
-    needAccount: 'needAccount_be9398',
-    navRow: 'navRow_be9398',
-    continueButton: 'continueButton_be9398',
-    backButton: 'backButton_be9398'
+    mainLoginContainer: 'mainLoginContainer__86e92',
+    title: 'title__86e92',
+    subtitle: 'subtitle__86e92',
+    loginForm: 'loginForm__86e92',
+    needAccount: 'needAccount__86e92',
+    navRow: 'navRow__86e92',
+    backButton: 'backButton__86e92',
+    continueButton: 'continueButton__86e92'
 };

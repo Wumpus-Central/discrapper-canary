@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_ecc04c',
-    tabBar: 'tabBar_ecc04c',
-    tabBarItem: 'tabBarItem_ecc04c'
+    container: 'container_d1d9f3',
+    tabBar: 'tabBar_d1d9f3',
+    tabBarItem: 'tabBarItem_d1d9f3'
 };

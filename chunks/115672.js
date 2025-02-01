@@ -1,4 +1,4 @@
-e.exports = {
-    header: 'header_e74886',
-    text: 'text_e74886'
+n.exports = {
+    header: 'header__047bc',
+    text: 'text__047bc'
 };

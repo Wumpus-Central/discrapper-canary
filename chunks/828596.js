@@ -1,9 +1,9 @@
-var i = r(882708),
-    a = r(821819),
-    o = r(668530).String;
+var i = n(882708),
+    r = n(821819),
+    a = n(668530).String;
 e.exports =
     !!Object.getOwnPropertySymbols &&
-    !a(function () {
+    !r(function () {
         var e = Symbol('symbol detection');
-        return !o(e) || !(Object(e) instanceof Symbol) || (!Symbol.sham && i && i < 41);
+        return !a(e) || !(Object(e) instanceof Symbol) || (!Symbol.sham && i && i < 41);
     });

@@ -1,5 +1,5 @@
 n.d(t, {
-    $V: () => b,
+    $V: () => T,
     Bz: () => S,
     ZP: () => R,
     hc: () => A
@@ -38,12 +38,12 @@ function y(e, t, n) {
 }
 let I = null;
 __OVERLAY__ && (I = n(237997).Z);
-var b = (function (e) {
+var T = (function (e) {
     return (e[(e.SEND = 0)] = 'SEND'), (e[(e.EDIT = 1)] = 'EDIT'), (e[(e.COMMAND = 2)] = 'COMMAND'), e;
 })({});
-let T = (e) => 0 === e.type,
+let b = (e) => 0 === e.type,
     S = (e) => 1 === e.type,
-    A = (e) => (T(e) ? e.message.nonce : S(e) ? e.message.messageId : e.message.data.id),
+    A = (e) => (b(e) ? e.message.nonce : S(e) ? e.message.messageId : e.message.data.id),
     N = [1 * _.Z.Millis.MINUTE, 5 * _.Z.Millis.MINUTE];
 class C extends h.Z {
     isFull() {
@@ -176,7 +176,7 @@ class C extends h.Z {
             let e = f;
             I.data.attachments = e.map((e, t) => (r()(e.status === g.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, m.B)(e, t)));
         }
-        let b = new AbortController();
+        let T = new AbortController();
         a.tn.post(
             {
                 url: E.ANM.INTERACTIONS,
@@ -187,10 +187,10 @@ class C extends h.Z {
                     }
                 ],
                 attachments: n,
-                signal: b.signal,
+                signal: T.signal,
                 rejectWithError: !0,
                 onRequestCreated: (e) => {
-                    this.requests.set(c, b),
+                    this.requests.set(c, T),
                         e.on('progress', (e) => {
                             let { total: t } = e,
                                 n = (0, p.dg)(o);

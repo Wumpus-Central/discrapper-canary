@@ -1,10 +1,10 @@
 e.exports = {
-    wrapper: 'wrapper_fcea2f',
-    heroImage: 'heroImage_fcea2f',
-    closeButton: 'closeButton_fcea2f',
-    heading: 'heading_fcea2f',
-    perks: 'perks_fcea2f',
-    footer: 'footer_fcea2f',
-    header: 'header_fcea2f',
-    subtitleText: 'subtitleText_fcea2f'
+    wrapper: 'wrapper__30359',
+    heroImage: 'heroImage__30359',
+    closeButton: 'closeButton__30359',
+    heading: 'heading__30359',
+    perks: 'perks__30359',
+    footer: 'footer__30359',
+    header: 'header__30359',
+    subtitleText: 'subtitleText__30359'
 };

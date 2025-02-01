@@ -1,4 +1,4 @@
 e.exports = {
-    subscriptionsContainer: 'subscriptionsContainer_b2730c',
-    title: 'title_b2730c'
+    subscriptionsContainer: 'subscriptionsContainer__0dc23',
+    title: 'title__0dc23'
 };

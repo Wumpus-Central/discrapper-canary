@@ -1,8 +1,8 @@
 e.exports = {
-    container: 'container_dc71f0',
-    imageContainer: 'imageContainer_dc71f0',
-    image: 'image_dc71f0',
-    backgroundImage: 'backgroundImage_dc71f0',
-    backgroundImageFilter: 'backgroundImageFilter_dc71f0',
-    loader: 'loader_dc71f0'
+    container: 'container__06f11',
+    imageContainer: 'imageContainer__06f11',
+    image: 'image__06f11',
+    backgroundImage: 'backgroundImage__06f11',
+    backgroundImageFilter: 'backgroundImageFilter__06f11',
+    loader: 'loader__06f11'
 };

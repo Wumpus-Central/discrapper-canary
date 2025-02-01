@@ -1,25 +1,25 @@
-var i = r(147018),
-    a = r(581031),
-    o = r(676125),
-    s = r(959318),
-    l = r(714050),
-    u = r(936940),
-    c = a(''.charAt);
+var i = n(147018),
+    r = n(581031),
+    a = n(676125),
+    s = n(959318),
+    o = n(714050),
+    l = n(936940),
+    u = r(''.charAt);
 i(
     {
         target: 'String',
         proto: !0,
-        forced: u(function () {
+        forced: l(function () {
             return '\uD842' !== '\uD842\uDFB7'.at(-2);
         })
     },
     {
         at: function (e) {
-            var n = l(o(this)),
-                r = n.length,
+            var t = o(a(this)),
+                n = t.length,
                 i = s(e),
-                a = i >= 0 ? i : r + i;
-            return a < 0 || a >= r ? void 0 : c(n, a);
+                r = i >= 0 ? i : n + i;
+            return r < 0 || r >= n ? void 0 : u(t, r);
         }
     }
 );

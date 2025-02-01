@@ -1,11 +1,11 @@
-var a = r(46166),
-    n = r(107378),
-    _ = r(849513);
-e.exports = function (e) {
-    var t = n(e);
-    return 1 == t.length && t[0][2]
-        ? _(t[0][0], t[0][1])
-        : function (r) {
-              return r === e || a(r, e, t);
+var r = a(46166),
+    n = a(107378),
+    o = a(849513);
+t.exports = function (t) {
+    var e = n(t);
+    return 1 == e.length && e[0][2]
+        ? o(e[0][0], e[0][1])
+        : function (a) {
+              return a === t || r(a, t, e);
           };
 };

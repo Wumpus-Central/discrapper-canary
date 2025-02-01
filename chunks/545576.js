@@ -1,6 +1,6 @@
-var e = r(161581),
-    o = r(354848);
-t.exports = function (t, n) {
-    var r;
-    return arguments.length < 2 ? (o((r = e[t])) ? r : void 0) : e[t] && e[t][n];
+var r = a(161581),
+    n = a(354848);
+t.exports = function (t, e) {
+    var a;
+    return arguments.length < 2 ? (n((a = r[t])) ? a : void 0) : r[t] && r[t][e];
 };

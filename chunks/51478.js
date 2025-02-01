@@ -1,6 +1,6 @@
 t.exports = {
-    content: 'content_fa13a8',
-    card: 'card_fa13a8',
-    footer: 'footer_fa13a8',
-    error: 'error_fa13a8'
+    content: 'content_d7fb2d',
+    card: 'card_d7fb2d',
+    error: 'error_d7fb2d',
+    footer: 'footer_d7fb2d'
 };

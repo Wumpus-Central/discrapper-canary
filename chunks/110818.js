@@ -152,10 +152,10 @@ class I extends (r = l.PureComponent) {
     }
 }
 h(I, 'Scenes', v);
-var b = (function (e) {
+var T = (function (e) {
     return (e.IDLE_ENTRY = 'idle_entry'), (e.IDLE_LOOP = 'idle_loop'), (e.BOOST_START = 'boost_start'), (e.BOOST_LOOP = 'boost_loop'), (e.BOOST_END = 'boost_end'), (e.VICTORY = 'victory'), (e.ERROR = 'error'), e;
-})(b || {});
-let T = {
+})(T || {});
+let b = {
     idle_entry: {
         BEG: 0,
         END: 50
@@ -339,7 +339,7 @@ class C extends (a = l.PureComponent) {
                     className: p.sequencedAnimation,
                     importData: this.importData,
                     nextScene: n ? 'idle_loop' : t,
-                    sceneSegments: T,
+                    sceneSegments: b,
                     onScenePlay: this.handleScenePlay,
                     onSceneComplete: i,
                     pauseWhileUnfocused: !1,
@@ -401,7 +401,7 @@ class C extends (a = l.PureComponent) {
             });
     }
 }
-h(C, 'Scenes', b);
+h(C, 'Scenes', T);
 var R = (function (e) {
     return (e.ENTRY = 'entry'), (e.IDLE = 'idle'), (e.STARS = 'stars'), (e.ERROR = 'error'), (e.SUCCESS = 'success'), e;
 })(R || {});

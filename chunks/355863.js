@@ -354,11 +354,11 @@ function I(e, t) {
     let a = i[n.layoutId];
     return null != a && t(n, a);
 }
-function b(e) {
+function T(e) {
     let { widgetId: t, anchor: n, size: i, opacity: r } = e;
     return I(t, (e, t) => R(e, n, i, r));
 }
-function T(e) {
+function b(e) {
     let { widgetId: t } = e;
     return I(t, (e, t) => S(t, e.id));
 }
@@ -728,8 +728,8 @@ m(G, 'displayName', 'LayoutStore'),
 let B = new G(d.Z, {
     LAYOUT_CREATE: v,
     LAYOUT_SET_PINNED: C,
-    LAYOUT_UPDATE_WIDGET: b,
-    LAYOUT_SET_TOP_WIDGET: T,
+    LAYOUT_UPDATE_WIDGET: T,
+    LAYOUT_SET_TOP_WIDGET: b,
     LAYOUT_DELETE_WIDGET: O,
     LAYOUT_DELETE_ALL_WIDGETS: D,
     LAYOUT_CREATE_WIDGETS: x,

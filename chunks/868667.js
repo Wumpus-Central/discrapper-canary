@@ -1,11 +1,11 @@
-let i = r(40231),
-    a = (e, n, r = !1) => {
+let i = n(40231),
+    r = (e, t, n = !1) => {
         if (e instanceof i) return e;
         try {
-            return new i(e, n);
+            return new i(e, t);
         } catch (e) {
-            if (!r) return null;
+            if (!n) return null;
             throw e;
         }
     };
-e.exports = a;
+e.exports = r;

@@ -1,8 +1,8 @@
 e.exports = {
-    selected: 'selected_cc7518',
-    siblingSelected: 'siblingSelected_cc7518',
-    list: 'list_cc7518',
-    sectionTitle: 'sectionTitle_cc7518',
-    titleDivider: 'titleDivider_cc7518',
-    clearAllButton: 'clearAllButton_cc7518'
+    selected: 'selected_dcc822',
+    siblingSelected: 'siblingSelected_dcc822',
+    list: 'list_dcc822',
+    sectionTitle: 'sectionTitle_dcc822',
+    titleDivider: 'titleDivider_dcc822',
+    clearAllButton: 'clearAllButton_dcc822'
 };

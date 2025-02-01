@@ -1,20 +1,20 @@
-var e = n(161581),
-    o = n(936940),
-    i = n(80270),
-    u = n(192291).NATIVE_ARRAY_BUFFER_VIEWS,
-    f = e.ArrayBuffer,
-    a = e.Int8Array;
-t.exports =
-    !u ||
-    !o(function () {
-        a(1);
+var i = n(161581),
+    r = n(936940),
+    a = n(80270),
+    s = n(192291).NATIVE_ARRAY_BUFFER_VIEWS,
+    o = i.ArrayBuffer,
+    l = i.Int8Array;
+e.exports =
+    !s ||
+    !r(function () {
+        l(1);
     }) ||
-    !o(function () {
-        new a(-1);
+    !r(function () {
+        new l(-1);
     }) ||
-    !i(function (t) {
-        new a(), new a(null), new a(1.5), new a(t);
+    !a(function (e) {
+        new l(), new l(null), new l(1.5), new l(e);
     }, !0) ||
-    o(function () {
-        return 1 !== new a(new f(2), 1, void 0).length;
+    r(function () {
+        return 1 !== new l(new o(2), 1, void 0).length;
     });

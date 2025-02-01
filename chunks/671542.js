@@ -1,4 +1,5 @@
-var i = {
+i.d(t, { Z: () => a });
+var n = {
     lessThanXSeconds: {
         one: 'น้อยกว่า 1 วินาที',
         other: 'น้อยกว่า {{count}} วินาที'
@@ -61,9 +62,8 @@ var i = {
         other: 'เกือบ {{count}} ปี'
     }
 };
-t.Z = function (e, t, n) {
+let a = function (e, t, i) {
     var a,
-        o = i[e];
-    if (((a = 'string' == typeof o ? o : 1 === t ? o.one : o.other.replace('{{count}}', String(t))), null != n && n.addSuffix)) return n.comparison && n.comparison > 0 ? ('halfAMinute' === e ? 'ใน' + a : 'ใน ' + a) : a + 'ที่ผ่านมา';
-    return a;
+        o = n[e];
+    return ((a = 'string' == typeof o ? o : 1 === t ? o.one : o.other.replace('{{count}}', String(t))), null != i && i.addSuffix) ? (i.comparison && i.comparison > 0 ? ('halfAMinute' === e ? 'ใน' + a : 'ใน ' + a) : a + 'ที่ผ่านมา') : a;
 };

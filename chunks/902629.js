@@ -1,28 +1,28 @@
-var i = r(47120);
-var a = r(147913),
-    o = r(313261),
-    s = r(38618);
-function l(e, n, r) {
+n.d(t, { Z: () => l }), n(47120);
+var i = n(147913),
+    r = n(313261),
+    a = n(38618);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class u extends a.Z {
+class o extends i.Z {
     handleCheckExperiments() {
-        let { enabled: e } = o.O.getCurrentConfig({ location: 'gateway' }, { autoTrackExposure: !0 });
-        s.Z.getSocket().dispatcher.toggleRequestIdleCallback(e);
+        let { enabled: e } = r.O.getCurrentConfig({ location: 'gateway' }, { autoTrackExposure: !0 });
+        a.Z.getSocket().dispatcher.toggleRequestIdleCallback(e);
     }
     constructor(...e) {
         super(...e),
-            l(this, 'actions', {
+            s(this, 'actions', {
                 EXPERIMENT_OVERRIDE_BUCKET: this.handleCheckExperiments,
                 LOGIN_SUCCESS: this.handleCheckExperiments,
                 EXPERIMENTS_FETCH_SUCCESS: this.handleCheckExperiments,
@@ -31,4 +31,4 @@ class u extends a.Z {
             });
     }
 }
-n.Z = new u();
+let l = new o();

@@ -1,4 +1,4 @@
-e.exports = {
-    spacer: 'spacer_b0944f',
-    input: 'input_b0944f'
+n.exports = {
+    spacer: 'spacer__5ecaa',
+    input: 'input__5ecaa'
 };

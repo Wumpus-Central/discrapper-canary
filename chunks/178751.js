@@ -41,34 +41,34 @@ t.exports = {
             h = e.getCharacterList();
         return (
             n(p, f, s, function (t, e) {
+                var r, i, a;
                 u.push(
                     new l({
                         start: t,
                         end: e,
                         decoratorKey: p.get(t),
-                        leaves: (function (t, e) {
-                            var r = [];
-                            return (
-                                n(
-                                    t
-                                        .map(function (t) {
-                                            return t.getStyle();
+                        leaves:
+                            ((r = h.slice(t, e).toList()),
+                            (i = t),
+                            (a = []),
+                            n(
+                                r
+                                    .map(function (t) {
+                                        return t.getStyle();
+                                    })
+                                    .toList(),
+                                f,
+                                s,
+                                function (t, e) {
+                                    a.push(
+                                        new c({
+                                            start: t + i,
+                                            end: e + i
                                         })
-                                        .toList(),
-                                    f,
-                                    s,
-                                    function (t, n) {
-                                        r.push(
-                                            new c({
-                                                start: t + e,
-                                                end: n + e
-                                            })
-                                        );
-                                    }
-                                ),
-                                o(r)
-                            );
-                        })(h.slice(t, e).toList(), t)
+                                    );
+                                }
+                            ),
+                            o(a))
                     })
                 );
             }),

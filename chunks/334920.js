@@ -1,31 +1,31 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(866609);
-let u = (e) => {
-    let { src: n, alt: r, size: o, 'aria-label': u, className: c } = e,
-        d = a.useRef(null),
-        f = a.useRef(!1),
-        p = f.current ? l.image : l.imageLoading;
+n.d(t, { Z: () => l });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(866609);
+let l = (e) => {
+    let { src: t, alt: n, size: a, 'aria-label': l, className: u } = e,
+        c = r.useRef(null),
+        d = r.useRef(!1),
+        f = d.current ? o.image : o.imageLoading;
     return (0, i.jsx)('img', {
-        className: s()(p, c),
-        alt: r,
-        src: n,
-        ref: d,
-        'aria-label': u,
+        className: s()(f, u),
+        alt: n,
+        src: t,
+        ref: c,
+        'aria-label': l,
         style: {
-            backgroundSize: o,
-            height: o,
-            width: o
+            backgroundSize: a,
+            height: a,
+            width: a
         },
-        onLoad: f.current
+        onLoad: d.current
             ? void 0
             : () => {
                   window.requestAnimationFrame(() => {
-                      null != d.current && ((f.current = !0), d.current.classList.remove(l.imageLoading), d.current.classList.add(l.image));
+                      null != c.current && ((d.current = !0), c.current.classList.remove(o.imageLoading), c.current.classList.add(o.image));
                   });
               }
     });
 };
-n.Z = u;

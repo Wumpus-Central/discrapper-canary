@@ -1,10 +1,10 @@
 e.exports = {
-    messagesWrapper: 'messagesWrapper_e2e187',
-    scrollerContent: 'scrollerContent_e2e187',
-    scroller: 'scroller_e2e187',
-    scrollerInner: 'scrollerInner_e2e187',
-    scrollerSpacer: 'scrollerSpacer_e2e187',
-    empty: 'empty_e2e187',
-    emptyForum: 'emptyForum_e2e187',
-    navigationDescription: 'navigationDescription_e2e187'
+    messagesWrapper: 'messagesWrapper__36d07',
+    scrollerContent: 'scrollerContent__36d07',
+    scroller: 'scroller__36d07',
+    scrollerInner: 'scrollerInner__36d07',
+    scrollerSpacer: 'scrollerSpacer__36d07',
+    empty: 'empty__36d07',
+    emptyForum: 'emptyForum__36d07',
+    navigationDescription: 'navigationDescription__36d07'
 };

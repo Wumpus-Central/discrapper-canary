@@ -1,6 +1,6 @@
 e.exports = {
-    sectionContainer: 'sectionContainer_a7f862',
-    contentContainer: 'contentContainer_a7f862',
-    commandContainer: 'commandContainer_a7f862',
-    commandName: 'commandName_a7f862'
+    sectionContainer: 'sectionContainer_c6b177',
+    contentContainer: 'contentContainer_c6b177',
+    commandContainer: 'commandContainer_c6b177',
+    commandName: 'commandName_c6b177'
 };

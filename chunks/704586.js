@@ -1,22 +1,22 @@
-var i = r(67867),
-    a = r(804104).find,
-    o = r(501953),
+var i = n(67867),
+    r = n(804104).find,
+    a = n(501953),
     s = 'find',
-    l = !0;
+    o = !0;
 s in [] &&
     [,][s](function () {
-        l = !1;
+        o = !1;
     }),
     i(
         {
             target: 'Array',
             proto: !0,
-            forced: l
+            forced: o
         },
         {
             find: function (e) {
-                return a(this, e, arguments.length > 1 ? arguments[1] : void 0);
+                return r(this, e, arguments.length > 1 ? arguments[1] : void 0);
             }
         }
     ),
-    o(s);
+    a(s);

@@ -1,7 +1,7 @@
 e.exports = {
-    banner: 'banner_dadc63',
-    potion: 'potion_dadc63',
-    actionButton: 'actionButton_dadc63',
-    x: 'x_dadc63',
-    subsection: 'subsection_dadc63'
+    banner: 'banner__19627',
+    potion: 'potion__19627',
+    actionButton: 'actionButton__19627',
+    x: 'x__19627',
+    subsection: 'subsection__19627'
 };

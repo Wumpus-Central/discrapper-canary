@@ -1,4 +1,4 @@
 e.exports = {
-    video: 'video_a5936c',
-    artContainer: 'artContainer_a5936c'
+    video: 'video_cc0382',
+    artContainer: 'artContainer_cc0382'
 };

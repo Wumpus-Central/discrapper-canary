@@ -1,19 +1,19 @@
-var i = r(369529),
-    a = r(886985),
-    o = r(901806),
-    s = r(484155),
-    l = r(246209),
-    u = Math.max;
-function c(e) {
+var i = n(369529),
+    r = n(886985),
+    a = n(901806),
+    s = n(484155),
+    o = n(246209),
+    l = Math.max;
+function u(e) {
     if (!(e && e.length)) return [];
-    var n = 0;
+    var t = 0;
     return (
         (e = i(e, function (e) {
-            if (l(e)) return (n = u(e.length, n)), !0;
+            if (o(e)) return (t = l(e.length, t)), !0;
         })),
-        s(n, function (n) {
-            return a(e, o(n));
+        s(t, function (t) {
+            return r(e, a(t));
         })
     );
 }
-e.exports = c;
+e.exports = u;

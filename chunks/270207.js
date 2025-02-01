@@ -1,6 +1,6 @@
 t.exports = {
-    container: 'container_ff235c',
-    containerActive: 'containerActive_ff235c',
-    playButton: 'playButton_ff235c',
-    textContainer: 'textContainer_ff235c'
+    container: 'container__6b668',
+    containerActive: 'containerActive__6b668',
+    playButton: 'playButton__6b668',
+    textContainer: 'textContainer__6b668'
 };

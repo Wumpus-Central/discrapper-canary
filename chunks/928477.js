@@ -29,8 +29,8 @@ var i = n(192379),
     v = n(630388),
     y = n(709054),
     I = n(968437),
-    b = n(665906),
-    T = n(456077),
+    T = n(665906),
+    b = n(456077),
     S = n(124368),
     A = n(981631),
     N = n(388032),
@@ -38,8 +38,8 @@ var i = n(192379),
         return (e[(e.Disabled = 1)] = 'Disabled'), (e[(e.Enabled = 2)] = 'Enabled'), (e[(e.PrivateOnly = 3)] = 'PrivateOnly'), e;
     })({});
 function R(e) {
-    let t = (0, b.NE)(e);
-    return (0, b.Xu)(e) ? (t ? 2 : 3) : 1;
+    let t = (0, T.NE)(e);
+    return (0, T.Xu)(e) ? (t ? 2 : 3) : 1;
 }
 function O(e, t) {
     var n;
@@ -57,7 +57,7 @@ function x(e, t) {
     if ('' !== d) return D(d, 80);
     {
         let t = f.ZP.unparse(null !== (l = null == u ? void 0 : u.content) && void 0 !== l ? l : '', e.id, !0),
-            n = (0, T.Z)(t.split('\n')[0], !0);
+            n = (0, b.Z)(t.split('\n')[0], !0);
         n = n.replace(/^[ #-]+/, '');
         let i = [];
         for (;;) {
@@ -89,8 +89,8 @@ function L(e) {
                 let e = x(t, n);
                 v = '' !== e ? e : N.intl.string(N.t['7Xm5QE']);
             }
-            let b = (0, I.WD)(t),
-                T = p.Z.getChannel(y.default.castMessageIdAsChannelId(n)),
+            let T = (0, I.WD)(t),
+                b = p.Z.getChannel(y.default.castMessageIdAsChannelId(n)),
                 S = await k(t, () => {
                     let e = null != n ? A.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : A.ANM.CHANNEL_THREADS(t.id);
                     return r.tn.post({
@@ -98,13 +98,13 @@ function L(e) {
                         body: {
                             name: v,
                             type: E ? A.d4z.PRIVATE_THREAD : t.type === A.d4z.GUILD_ANNOUNCEMENT ? A.d4z.ANNOUNCEMENT_THREAD : A.d4z.PUBLIC_THREAD,
-                            auto_archive_duration: b,
+                            auto_archive_duration: T,
                             location: l
                         },
                         rejectWithError: !1
                     });
                 });
-            S !== T && (o.Z.clearDraft(t.id, h.d.ThreadSettings), o.Z.clearDraft(t.id, h.d.FirstThreadMessage), null == c || c(S), (g || e.length > 0 || (null != i && i.length > 0) || (null != _ && _.length > 0)) && M(S, e, i, _, f)), u.Z.clearAll(t.id, h.d.FirstThreadMessage);
+            S !== b && (o.Z.clearDraft(t.id, h.d.ThreadSettings), o.Z.clearDraft(t.id, h.d.FirstThreadMessage), null == c || c(S), (g || e.length > 0 || (null != i && i.length > 0) || (null != _ && _.length > 0)) && M(S, e, i, _, f)), u.Z.clearAll(t.id, h.d.FirstThreadMessage);
         },
         [t, n, a, c, s, l, d, f]
     );
@@ -142,7 +142,7 @@ function w(e) {
                         flags: 0 !== f ? f : void 0
                     }
                 },
-                b = await k(t, () =>
+                T = await k(t, () =>
                     null != c && c.length > 0
                         ? l(E, y, c)
                         : r.tn.post({
@@ -158,10 +158,10 @@ function w(e) {
                 (0, d.Je)({
                     guildId: t.guild_id,
                     channelId: t.id,
-                    postId: b.id
+                    postId: T.id
                 }),
-                null == s || s(b),
-                b
+                null == s || s(T),
+                T
             );
         },
         [t, n, s, a, l]

@@ -1,56 +1,56 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(481060),
-    c = r(68405),
-    d = r(985375),
-    f = r(585483),
-    p = r(981631),
-    h = r(388032),
-    _ = r(380538);
-n.Z = o.memo(function (e) {
-    let { width: n, height: r, src: i, url: s, format: m, className: g } = e,
-        [E, v] = o.useState(!1),
-        y = (0, d.hb)((0, c.iy)(s)),
-        b = y ? h.intl.string(h.t['5/NS7+']) : h.intl.string(h.t.nIH0v7),
-        I = y ? u.StarIcon : u.StarOutlineIcon;
-    o.useEffect(() => {
-        if (!E) return;
+n.d(t, { Z: () => p }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(68405),
+    u = n(985375),
+    c = n(585483),
+    d = n(981631),
+    f = n(388032),
+    _ = n(380538);
+let p = r.memo(function (e) {
+    let { width: t, height: n, src: a, url: p, format: h, className: m } = e,
+        [g, E] = r.useState(!1),
+        v = (0, u.hb)((0, l.iy)(p)),
+        y = v ? f.intl.string(f.t['5/NS7+']) : f.intl.string(f.t.nIH0v7),
+        I = v ? o.r7p : o.vxU;
+    r.useEffect(() => {
+        if (!g) return;
         let e = setTimeout(() => {
-            v(!1);
+            E(!1);
         }, 500);
         return () => clearTimeout(e);
-    }, [E]);
+    }, [g]);
     let T = (e) => {
         e.preventDefault(),
             e.stopPropagation(),
-            v(!0),
-            y
-                ? (0, c.PF)(s)
-                : ((0, c.uL)({
-                      url: s,
-                      src: i,
-                      width: n,
-                      height: r,
-                      format: m
+            E(!0),
+            v
+                ? (0, l.PF)(p)
+                : ((0, l.uL)({
+                      url: p,
+                      src: a,
+                      width: t,
+                      height: n,
+                      format: h
                   }),
-                  f.S.dispatch(p.CkL.FAVORITE_GIF));
+                  c.S.dispatch(d.CkL.FAVORITE_GIF));
     };
-    return (0, a.jsx)(u.Tooltip, {
-        text: b,
+    return (0, i.jsx)(o.ua7, {
+        text: y,
         children: (e) =>
-            (0, a.jsx)(u.Clickable, {
+            (0, i.jsx)(o.P3F, {
                 ...e,
-                className: l()(g, _.gifFavoriteButton, {
-                    [_.selected]: y,
-                    [_.showPulse]: E
+                className: s()(m, _.gifFavoriteButton, {
+                    [_.selected]: v,
+                    [_.showPulse]: g
                 }),
                 onMouseDown: (e) => e.preventDefault(),
                 onClick: T,
                 onDoubleClick: (e) => e.preventDefault(),
-                children: (0, a.jsx)(I, {
+                children: (0, i.jsx)(I, {
                     color: 'currentColor',
                     className: _.icon,
                     size: 'custom',

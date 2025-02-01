@@ -1,9 +1,9 @@
-n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var r = n(200651),
     l = n(192379),
     i = n(525654),
-    s = n.n(i),
-    a = n(748780),
+    a = n.n(i),
+    s = n(748780),
     o = n(599344);
 function E(e, t, n) {
     return (
@@ -32,8 +32,8 @@ class c extends l.Component {
     componentDidMount() {
         this._isMounted = !0;
         let { x: e, y: t } = this.state;
-        'Firefox' !== s().name &&
-            (a.Z.animate(e, {
+        'Firefox' !== a().name &&
+            (s.Z.animate(e, {
                 loop: !0,
                 toValueMin: -74,
                 toValueMax: 95,
@@ -42,7 +42,7 @@ class c extends l.Component {
                 tension: 1,
                 shouldLoop: this.shouldLoop
             }),
-            a.Z.animate(t, {
+            s.Z.animate(t, {
                 loop: !0,
                 toValueMin: -59,
                 toValueMax: 75,
@@ -83,7 +83,7 @@ class c extends l.Component {
                                         (0, r.jsx)('mask', {
                                             id: 'search-index-foreground-mask-b',
                                             fill: '#fff',
-                                            children: (0, r.jsx)(a.Z.use, {
+                                            children: (0, r.jsx)(s.Z.use, {
                                                 style: u(this.state),
                                                 className: o.mask,
                                                 xlinkHref: '#search-index-foreground-mask-a'
@@ -409,7 +409,7 @@ class c extends l.Component {
                                         })
                                     ]
                                 }),
-                                (0, r.jsxs)(a.Z.g, {
+                                (0, r.jsxs)(s.Z.g, {
                                     className: o.magnifyingGlass,
                                     style: u(this.state),
                                     children: [
@@ -466,11 +466,11 @@ class c extends l.Component {
     constructor(...e) {
         super(...e),
             E(this, 'state', {
-                x: new a.Z.Value(0),
-                y: new a.Z.Value(0)
+                x: new s.Z.Value(0),
+                y: new s.Z.Value(0)
             }),
             E(this, '_isMounted', !1),
             E(this, 'shouldLoop', () => this._isMounted);
     }
 }
-t.Z = c;
+let _ = c;

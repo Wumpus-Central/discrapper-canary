@@ -1,6 +1,6 @@
 e.exports = {
-    buttonsContainer: 'buttonsContainer_b5c67e',
-    removeButton: 'removeButton_b5c67e',
-    buttonHighlighted: 'buttonHighlighted_b5c67e',
-    overrideButtonsContainer: 'overrideButtonsContainer_b5c67e'
+    buttonsContainer: 'buttonsContainer__89253',
+    removeButton: 'removeButton__89253',
+    buttonHighlighted: 'buttonHighlighted__89253',
+    overrideButtonsContainer: 'overrideButtonsContainer__89253'
 };

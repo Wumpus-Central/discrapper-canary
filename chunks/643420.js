@@ -76,7 +76,7 @@ function m(e) {
             }),
             []
         ),
-        b = r.useCallback(() => {
+        T = r.useCallback(() => {
             let e = null == v ? void 0 : v.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
@@ -96,9 +96,9 @@ function m(e) {
             });
         }, [y, v]);
     return (r.useEffect(() => {
-        let e = n ? setInterval(b, d) : null;
+        let e = n ? setInterval(T, d) : null;
         return () => clearInterval(e);
-    }, [n, b]),
+    }, [n, T]),
     m === c.IlC.OVERLAY)
         ? (0, i.jsx)(i.Fragment, { children: t })
         : (0, i.jsxs)(u.Rm.Provider, {

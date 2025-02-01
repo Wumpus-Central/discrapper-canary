@@ -1,4 +1,4 @@
 e.exports = {
-    tag: 'tag_b18025',
-    text: 'text_b18025'
+    tag: 'tag_d0ccaf',
+    text: 'text_d0ccaf'
 };

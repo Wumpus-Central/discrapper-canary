@@ -18,9 +18,9 @@ var i = n(200651),
     v = n(789707),
     y = n(981631),
     I = n(531578),
-    b = n(359337);
-function T(e) {
-    let { summary: t, channel: f, members: v, guildId: T, unread: S, onClick: A } = e,
+    T = n(359337);
+function b(e) {
+    let { summary: t, channel: f, members: v, guildId: b, unread: S, onClick: A } = e,
         [N, C] = r.useState(!1),
         R = (0, c.Ye)(h.default.extractTimestamp(t.startId)),
         O = (0, a.e7)([m.Z], () => m.Z.summaryFeedback(t)),
@@ -45,7 +45,7 @@ function T(e) {
                 });
         };
     return (0, i.jsxs)(s.P3F, {
-        className: b.container,
+        className: T.container,
         onClick: A,
         onContextMenu: L,
         onMouseEnter: () => C(!0),
@@ -54,15 +54,15 @@ function T(e) {
             (0, i.jsx)(u.Z, {
                 hovered: N,
                 unread: S,
-                className: b.unreadPill
+                className: T.unreadPill
             }),
             (0, i.jsx)('div', {
-                className: b.rowHeader,
+                className: T.rowHeader,
                 children: (0, i.jsxs)('div', {
-                    className: b.rowHeaderLeft,
+                    className: T.rowHeaderLeft,
                     children: [
                         (0, i.jsx)(s.Text, {
-                            className: b.timestamp,
+                            className: T.timestamp,
                             color: 'interactive-normal',
                             variant: 'text-xs/normal',
                             children: R
@@ -71,15 +71,15 @@ function T(e) {
                             height: 4,
                             width: 4,
                             'aria-hidden': 'true',
-                            className: b.dot
+                            className: T.dot
                         }),
                         (0, i.jsx)(s.kBi, {
                             size: 'xxs',
                             color: 'currentColor',
-                            className: b.icon
+                            className: T.icon
                         }),
                         (0, i.jsx)(s.Text, {
-                            className: b.count,
+                            className: T.count,
                             color: 'interactive-normal',
                             variant: 'text-xs/normal',
                             children: t.count
@@ -91,7 +91,7 @@ function T(e) {
                                         height: 4,
                                         width: 4,
                                         'aria-hidden': 'true',
-                                        className: b.dot
+                                        className: T.dot
                                     }),
                                     (0, i.jsx)(E.Z, {
                                         partySize: {
@@ -100,7 +100,7 @@ function T(e) {
                                         },
                                         maxAvatarsShown: 3,
                                         members: v,
-                                        guildId: T
+                                        guildId: b
                                     })
                                 ]
                             })
@@ -110,12 +110,12 @@ function T(e) {
             N &&
                 !O &&
                 (0, i.jsxs)('div', {
-                    className: b.feedbackContainer,
+                    className: T.feedbackContainer,
                     children: [
                         (0, i.jsx)(s.P3F, {
                             onClick: (e) => D(e, I.aZ.GOOD),
                             children: (0, i.jsx)(p.Z, {
-                                className: b.thumbIcon,
+                                className: T.thumbIcon,
                                 width: 12,
                                 height: 12
                             })
@@ -123,7 +123,7 @@ function T(e) {
                         (0, i.jsx)(s.P3F, {
                             onClick: (e) => D(e, I.aZ.BAD),
                             children: (0, i.jsx)(_.Z, {
-                                className: b.thumbIcon,
+                                className: T.thumbIcon,
                                 width: 12,
                                 height: 12
                             })
@@ -133,13 +133,13 @@ function T(e) {
             (0, i.jsx)(s.Text, {
                 color: 'header-primary',
                 variant: 'text-sm/semibold',
-                className: b.title,
+                className: T.title,
                 children: t.topic
             }),
             (0, i.jsx)(s.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                className: b.subtitle,
+                className: T.subtitle,
                 children: t.summShort
             })
         ]
@@ -161,7 +161,7 @@ function S(e) {
                   var r;
                   let a = null !== (r = n[t]) && void 0 !== r ? r : [];
                   return (0, i.jsx)(
-                      T,
+                      b,
                       {
                           summary: e,
                           channel: s,

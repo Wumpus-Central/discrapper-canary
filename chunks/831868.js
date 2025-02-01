@@ -19,8 +19,8 @@ var f = 0,
     v = 286,
     y = 30,
     I = 19,
-    b = 573,
-    T = 15,
+    T = 573,
+    b = 15,
     S = 16,
     A = 7,
     N = 256,
@@ -85,8 +85,8 @@ function q(e, t) {
         _ = t.stat_desc.extra_base,
         p = t.stat_desc.max_length,
         h = 0;
-    for (a = 0; a <= T; a++) e.bl_count[a] = 0;
-    for (l[2 * e.heap[e.heap_max] + 1] = 0, n = e.heap_max + 1; n < b; n++) (a = l[2 * l[2 * (i = e.heap[n]) + 1] + 1] + 1) > p && ((a = p), h++), (l[2 * i + 1] = a), !(i > u) && (e.bl_count[a]++, (s = 0), i >= _ && (s = f[i - _]), (o = l[2 * i]), (e.opt_len += o * (a + s)), d && (e.static_len += o * (c[2 * i + 1] + s)));
+    for (a = 0; a <= b; a++) e.bl_count[a] = 0;
+    for (l[2 * e.heap[e.heap_max] + 1] = 0, n = e.heap_max + 1; n < T; n++) (a = l[2 * l[2 * (i = e.heap[n]) + 1] + 1] + 1) > p && ((a = p), h++), (l[2 * i + 1] = a), !(i > u) && (e.bl_count[a]++, (s = 0), i >= _ && (s = f[i - _]), (o = l[2 * i]), (e.opt_len += o * (a + s)), d && (e.static_len += o * (c[2 * i + 1] + s)));
     if (0 !== h) {
         do {
             for (a = p - 1; 0 === e.bl_count[a]; ) a--;
@@ -98,9 +98,9 @@ function q(e, t) {
 function Q(e, t, n) {
     var i,
         r,
-        a = Array(T + 1),
+        a = Array(b + 1),
         s = 0;
-    for (i = 1; i <= T; i++) a[i] = s = (s + n[i - 1]) << 1;
+    for (i = 1; i <= b; i++) a[i] = s = (s + n[i - 1]) << 1;
     for (r = 0; r <= t; r++) {
         var o = e[2 * r + 1];
         0 !== o && (e[2 * r] = K(a[o]++, o));
@@ -112,17 +112,17 @@ function X() {
         n,
         s,
         o,
-        l = Array(T + 1);
+        l = Array(b + 1);
     for (s = 0, n = 0; s < g - 1; s++) for (e = 0, B[s] = n; e < 1 << D[s]; e++) G[n++] = s;
     for (G[n - 1] = s, o = 0, s = 0; s < 16; s++) for (e = 0, Z[s] = o; e < 1 << x[s]; e++) U[o++] = s;
     for (o >>= 7; s < y; s++) for (e = 0, Z[s] = o << 7; e < 1 << (x[s] - 7); e++) U[256 + o++] = s;
-    for (t = 0; t <= T; t++) l[t] = 0;
+    for (t = 0; t <= b; t++) l[t] = 0;
     for (e = 0; e <= 143; ) (M[2 * e + 1] = 8), e++, l[8]++;
     for (; e <= 255; ) (M[2 * e + 1] = 9), e++, l[9]++;
     for (; e <= 279; ) (M[2 * e + 1] = 7), e++, l[7]++;
     for (; e <= 287; ) (M[2 * e + 1] = 8), e++, l[8]++;
     for (Q(M, v + 1, l), e = 0; e < y; e++) (k[2 * e + 1] = 5), (k[2 * e] = K(e, 5));
-    (i = new F(M, D, E + 1, v, T)), (r = new F(k, x, 0, y, T)), (a = new F([], L, 0, I, A));
+    (i = new F(M, D, E + 1, v, b)), (r = new F(k, x, 0, y, b)), (a = new F([], L, 0, I, A));
 }
 function J(e) {
     var t;
@@ -166,7 +166,7 @@ function er(e, t) {
         o = t.stat_desc.has_stree,
         l = t.stat_desc.elems,
         u = -1;
-    for (n = 0, e.heap_len = 0, e.heap_max = b; n < l; n++) 0 !== a[2 * n] ? ((e.heap[++e.heap_len] = u = n), (e.depth[n] = 0)) : (a[2 * n + 1] = 0);
+    for (n = 0, e.heap_len = 0, e.heap_max = T; n < l; n++) 0 !== a[2 * n] ? ((e.heap[++e.heap_len] = u = n), (e.depth[n] = 0)) : (a[2 * n + 1] = 0);
     for (; e.heap_len < 2; ) (a[2 * (r = e.heap[++e.heap_len] = u < 2 ? ++u : 0)] = 1), (e.depth[r] = 0), e.opt_len--, o && (e.static_len -= s[2 * r + 1]);
     for (t.max_code = u, n = e.heap_len >> 1; n >= 1; n--) en(e, a, n);
     r = l;

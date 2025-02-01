@@ -1,8 +1,8 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e, n, r, i) {
-        var a = {
+    function t(e, t, n, i) {
+        var r = {
             s: ['viensas secunds', "'iensas secunds"],
             ss: [e + ' secunds', '' + e + ' secunds'],
             m: ["'n míut", "'iens míut"],
@@ -16,7 +16,7 @@
             y: ["'n ar", "'iens ar"],
             yy: [e + ' ars', '' + e + ' ars']
         };
-        return i ? a[r][0] : n ? a[r][0] : a[r][1];
+        return i ? r[n][0] : t ? r[n][0] : r[n][1];
     }
     return e.defineLocale('tzl', {
         months: 'Januar_Fevraglh_Març_Avrïu_Mai_Gün_Julia_Guscht_Setemvar_Listopäts_Noemvar_Zecemvar'.split('_'),
@@ -36,8 +36,8 @@
         isPM: function (e) {
             return "d'o" === e.toLowerCase();
         },
-        meridiem: function (e, n, r) {
-            return e > 11 ? (r ? "d'o" : "D'O") : r ? "d'a" : "D'A";
+        meridiem: function (e, t, n) {
+            return e > 11 ? (n ? "d'o" : "D'O") : n ? "d'a" : "D'A";
         },
         calendar: {
             sameDay: '[oxhi à] LT',
@@ -50,18 +50,18 @@
         relativeTime: {
             future: 'osprei %s',
             past: 'ja%s',
-            s: n,
-            ss: n,
-            m: n,
-            mm: n,
-            h: n,
-            hh: n,
-            d: n,
-            dd: n,
-            M: n,
-            MM: n,
-            y: n,
-            yy: n
+            s: t,
+            ss: t,
+            m: t,
+            mm: t,
+            h: t,
+            hh: t,
+            d: t,
+            dd: t,
+            M: t,
+            MM: t,
+            y: t,
+            yy: t
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

@@ -1,6 +1,6 @@
-e.exports = {
-    container: 'container_c5e69b',
-    sparkleIcon: 'sparkleIcon_c5e69b',
-    sparkleTop: 'sparkleTop_c5e69b',
-    sparkleBottom: 'sparkleBottom_c5e69b'
+n.exports = {
+    container: 'container__05cdc',
+    sparkleIcon: 'sparkleIcon__05cdc',
+    sparkleTop: 'sparkleTop__05cdc',
+    sparkleBottom: 'sparkleBottom__05cdc'
 };

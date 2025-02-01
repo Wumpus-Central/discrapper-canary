@@ -1,7 +1,7 @@
-var e = n(951332),
-    o = RangeError;
-t.exports = function (t, r) {
-    var n = e(t);
-    if (n % r) throw o('Wrong offset');
+var i = n(951332),
+    r = RangeError;
+e.exports = function (e, t) {
+    var n = i(e);
+    if (n % t) throw r('Wrong offset');
     return n;
 };

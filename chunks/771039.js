@@ -1,9 +1,9 @@
 e.exports = {
-    sectionDescription: 'sectionDescription_dcf630',
-    card: 'card_dcf630',
-    manageSubscriptionsButton: 'manageSubscriptionsButton_dcf630',
-    handImage: 'handImage_dcf630',
-    textContainer: 'textContainer_dcf630',
-    header: 'header_dcf630',
-    description: 'description_dcf630'
+    sectionDescription: 'sectionDescription__8d742',
+    card: 'card__8d742',
+    manageSubscriptionsButton: 'manageSubscriptionsButton__8d742',
+    handImage: 'handImage__8d742',
+    textContainer: 'textContainer__8d742',
+    header: 'header__8d742',
+    description: 'description__8d742'
 };

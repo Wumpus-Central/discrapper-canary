@@ -1,6 +1,6 @@
 t.exports = {
-    root: 'root_ba7877',
-    content: 'content_ba7877',
-    iframe: 'iframe_ba7877',
-    cancelButton: 'cancelButton_ba7877'
+    root: 'root__10a0c',
+    content: 'content__10a0c',
+    iframe: 'iframe__10a0c',
+    cancelButton: 'cancelButton__10a0c'
 };

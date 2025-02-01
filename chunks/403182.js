@@ -1,7 +1,7 @@
 n.d(t, {
-    Ng: () => b,
+    Ng: () => T,
     OC: () => C,
-    dg: () => T,
+    dg: () => b,
     dp: () => E,
     f3: () => y,
     iL: () => R,
@@ -104,10 +104,10 @@ function I(e, t) {
     let i = o().find(v, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
     return null != i ? i.klass : 'unknown';
 }
-function b(e) {
+function T(e) {
     return a().filesize(e);
 }
-function T(e) {
+function b(e) {
     let t = u.default.getCurrentUser(),
         n = d.ZP.getUserMaxFileSize(t);
     if (null == e) return n;
@@ -115,7 +115,7 @@ function T(e) {
     return Math.max(null != i ? _.HO[i.premiumTier].limits.fileSize : f.mBz, n);
 }
 function S(e, t) {
-    let n = T(t);
+    let n = b(t);
     return Array.from(e).some((e) => e.size > n);
 }
 function A(e) {
@@ -132,7 +132,7 @@ function C() {
 }
 function R(e) {
     let { guildId: t, onClick: n } = e,
-        r = (0, c.BU)(T(t) / 1024, { useKibibytes: !0 }),
+        r = (0, c.BU)(b(t) / 1024, { useKibibytes: !0 }),
         a = (0, c.BU)(_.Uq / 1024, { useKibibytes: !0 }),
         s = p.intl.formatToPlainString(p.t.q5fTZm, { maxSize: r }),
         o = p.intl.formatToPlainString(p.t.htbuIS, { premiumMaxSize: a }),

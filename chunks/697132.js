@@ -1,6 +1,6 @@
 e.exports = {
-    addAnotherRuleCardContainer: 'addAnotherRuleCardContainer_a57b58',
-    mainRuleContainer: 'mainRuleContainer_a57b58',
-    plusIcon: 'plusIcon_a57b58',
-    animatedRuleCardContainer: 'animatedRuleCardContainer_a57b58'
+    addAnotherRuleCardContainer: 'addAnotherRuleCardContainer__0c1e8',
+    mainRuleContainer: 'mainRuleContainer__0c1e8',
+    plusIcon: 'plusIcon__0c1e8',
+    animatedRuleCardContainer: 'animatedRuleCardContainer__0c1e8'
 };

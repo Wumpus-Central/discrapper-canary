@@ -1,14 +1,14 @@
-function n(e, n, r) {
-    switch (r.length) {
+function t(e, t, n) {
+    switch (n.length) {
         case 0:
-            return e.call(n);
+            return e.call(t);
         case 1:
-            return e.call(n, r[0]);
+            return e.call(t, n[0]);
         case 2:
-            return e.call(n, r[0], r[1]);
+            return e.call(t, n[0], n[1]);
         case 3:
-            return e.call(n, r[0], r[1], r[2]);
+            return e.call(t, n[0], n[1], n[2]);
     }
-    return e.apply(n, r);
+    return e.apply(t, n);
 }
-e.exports = n;
+e.exports = t;

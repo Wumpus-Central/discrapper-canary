@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return e.split('');
 }
-e.exports = n;
+e.exports = t;

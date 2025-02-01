@@ -1,18 +1,18 @@
-var e = r(325008),
-    o = r(926515),
-    i = r(610067),
-    u = r(879),
-    c = r(299623),
-    f = r(966606),
-    a = r(740362),
-    s = r(34924),
-    p = Object.getOwnPropertyDescriptor;
-n.f = e
-    ? p
-    : function (t, n) {
-          if (((t = c(t)), (n = f(n)), s))
+var r = a(325008),
+    n = a(926515),
+    o = a(610067),
+    _ = a(879),
+    i = a(299623),
+    c = a(966606),
+    s = a(740362),
+    E = a(34924),
+    l = Object.getOwnPropertyDescriptor;
+e.f = r
+    ? l
+    : function (t, e) {
+          if (((t = i(t)), (e = c(e)), E))
               try {
-                  return p(t, n);
+                  return l(t, e);
               } catch (t) {}
-          if (a(t, n)) return u(!o(i.f, t, n), t[n]);
+          if (s(t, e)) return _(!n(o.f, t, e), t[e]);
       };

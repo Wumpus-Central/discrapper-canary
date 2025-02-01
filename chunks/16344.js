@@ -1,8 +1,8 @@
 e.exports = {
-    heading: 'heading_aaae74',
-    tabBar: 'tabBar_aaae74',
-    tab: 'tab_aaae74',
-    tabIcon: 'tabIcon_aaae74',
-    iconTitle: 'iconTitle_aaae74',
-    body: 'body_aaae74'
+    heading: 'heading__6f81c',
+    tabBar: 'tabBar__6f81c',
+    tab: 'tab__6f81c',
+    tabIcon: 'tabIcon__6f81c',
+    iconTitle: 'iconTitle__6f81c',
+    body: 'body__6f81c'
 };

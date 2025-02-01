@@ -1,5 +1,5 @@
-var n = i(818083);
-t.Z = (0, n.B)({
+i.d(t, { Z: () => l });
+let l = (0, i(818083).B)({
     kind: 'user',
     id: '2021-10_runtime_accessibility_system',
     label: 'Runtime Accessibility System',

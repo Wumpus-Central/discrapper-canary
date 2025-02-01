@@ -1,14 +1,14 @@
-var i = r(620267),
-    a = Math.max;
-function o(e, n, r) {
+var i = n(620267),
+    r = Math.max;
+function a(e, t, n) {
     return (
-        (n = a(void 0 === n ? e.length - 1 : n, 0)),
+        (t = r(void 0 === t ? e.length - 1 : t, 0)),
         function () {
-            for (var o = arguments, s = -1, l = a(o.length - n, 0), u = Array(l); ++s < l; ) u[s] = o[n + s];
+            for (var a = arguments, s = -1, o = r(a.length - t, 0), l = Array(o); ++s < o; ) l[s] = a[t + s];
             s = -1;
-            for (var c = Array(n + 1); ++s < n; ) c[s] = o[s];
-            return (c[n] = r(u)), i(e, this, c);
+            for (var u = Array(t + 1); ++s < t; ) u[s] = a[s];
+            return (u[t] = n(l)), i(e, this, u);
         }
     );
 }
-e.exports = o;
+e.exports = a;

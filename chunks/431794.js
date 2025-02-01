@@ -1,7 +1,7 @@
 e.exports = {
-    sharePromptContainer: 'sharePromptContainer_c65518',
-    sharePromptContent: 'sharePromptContent_c65518',
-    sharePromptCta: 'sharePromptCta_c65518',
-    ctaContent: 'ctaContent_c65518',
-    closeButton: 'closeButton_c65518'
+    sharePromptContainer: 'sharePromptContainer__56d6c',
+    sharePromptContent: 'sharePromptContent__56d6c',
+    sharePromptCta: 'sharePromptCta__56d6c',
+    ctaContent: 'ctaContent__56d6c',
+    closeButton: 'closeButton__56d6c'
 };

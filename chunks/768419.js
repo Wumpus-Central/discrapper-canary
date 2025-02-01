@@ -16,8 +16,8 @@ var s,
     v = n(314897),
     y = n(553795),
     I = n(517100),
-    b = n(158776),
-    T = n(606304),
+    T = n(158776),
+    b = n(606304),
     S = n(979651),
     A = n(626135),
     N = n(81063),
@@ -101,7 +101,7 @@ function el(e) {
     });
 }
 function eu(e) {
-    return b.Z.findActivity(e, (e) => null != e.party && null != e.party.id && (0, D.Ps)(e.party.id));
+    return T.Z.findActivity(e, (e) => null != e.party && null != e.party.id && (0, D.Ps)(e.party.id));
 }
 let ec = new Set([WebSocket.CONNECTING, WebSocket.OPEN]);
 class ed {
@@ -347,11 +347,11 @@ function eI(e) {
     let { id: t } = e;
     a = t;
 }
-function eb(e) {
+function eT(e) {
     let { accountId: t, devices: n } = e;
     (en[t] = n), q.info('Devices updated for '.concat(t, ':'), n);
 }
-function eT(e) {
+function eb(e) {
     let { accountId: t, deviceId: n } = e;
     ep(t, n);
 }
@@ -444,7 +444,7 @@ function eP(e, t, n) {
     var i, r, a, s, o, l, u, c, d, f, p, h, m, g;
     let E,
         v,
-        { device: y, progress_ms: I, is_playing: b, repeat_state: T, item: S, context: A } = n;
+        { device: y, progress_ms: I, is_playing: T, repeat_state: b, item: S, context: A } = n;
     if (null != S && S.type === D.Hw.TRACK) {
         let e = S.id;
         null != S.linked_from && null != S.linked_from.id && (e = S.linked_from.id),
@@ -512,8 +512,8 @@ function eP(e, t, n) {
                 accountId: e,
                 track: E,
                 volumePercent: null != y ? y.volume_percent : 0,
-                isPlaying: b,
-                repeat: 'off' !== T,
+                isPlaying: T,
+                repeat: 'off' !== b,
                 position: I,
                 context: t,
                 device: y
@@ -535,7 +535,7 @@ function ew(e, t) {
 }
 class eM extends (s = c.ZP.Store) {
     initialize() {
-        this.waitFor(y.Z, T.Z), this.syncWith([b.Z], () => eN()), (0, O.k1)();
+        this.waitFor(y.Z, b.Z), this.syncWith([T.Z], () => eN()), (0, O.k1)();
     }
     hasConnectedAccount() {
         return Object.keys(et).length > 0;
@@ -635,8 +635,8 @@ let ek = new eM(_.Z, {
         ACTIVITY_PLAY: eS,
         ACTIVITY_SYNC: eA,
         ACTIVITY_SYNC_STOP: em,
-        SPOTIFY_SET_DEVICES: eb,
-        SPOTIFY_SET_ACTIVE_DEVICE: eT,
+        SPOTIFY_SET_DEVICES: eT,
+        SPOTIFY_SET_ACTIVE_DEVICE: eb,
         SPEAKING: eO,
         VOICE_STATE_UPDATES: eD,
         MEDIA_ENGINE_SET_GO_LIVE_SOURCE: eL

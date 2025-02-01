@@ -1,7 +1,7 @@
 e.exports = {
-    body: 'body_e0a971',
-    invoiceTable: 'invoiceTable_e0a971',
-    cancelImage: 'cancelImage_e0a971',
-    invoiceCancelRow: 'invoiceCancelRow_e0a971',
-    error: 'error_e0a971'
+    body: 'body__968a4',
+    invoiceTable: 'invoiceTable__968a4',
+    cancelImage: 'cancelImage__968a4',
+    invoiceCancelRow: 'invoiceCancelRow__968a4',
+    error: 'error__968a4'
 };

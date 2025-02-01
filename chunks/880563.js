@@ -1,16 +1,16 @@
-var i = r(200651);
-r(192379);
-var a = r(908486);
-let o = (e) => {
-    let { children: n, shouldAnimate: r } = e;
-    return r
+n.d(t, { Z: () => a });
+var i = n(200651);
+n(192379);
+var r = n(908486);
+let a = (e) => {
+    let { children: t, shouldAnimate: n } = e;
+    return n
         ? (0, i.jsx)('div', {
-              className: a.outerContainer,
+              className: r.outerContainer,
               children: (0, i.jsx)('div', {
-                  className: a.innerContainer,
-                  children: n
+                  className: r.innerContainer,
+                  children: t
               })
           })
-        : n;
+        : t;
 };
-n.Z = o;

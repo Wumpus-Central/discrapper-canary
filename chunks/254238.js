@@ -1,8 +1,8 @@
 n.d(t, {
     LO: () => N,
-    On: () => T,
+    On: () => b,
     Vv: () => I,
-    _: () => b,
+    _: () => T,
     bp: () => C,
     ef: () => y,
     s6: () => v,
@@ -66,7 +66,7 @@ function I(e, t) {
     }),
         E('VOICE_STATE_UPDATE', e);
 }
-function b(e) {
+function T(e) {
     s.Z.dispatch({
         type: 'REMOTE_COMMAND',
         sessionId: e,
@@ -75,7 +75,7 @@ function b(e) {
         E('DISCONNECT', e),
         v();
 }
-function T(e, t, n, i) {
+function b(e, t, n, i) {
     let r = (0, l.z)(n);
     null != r &&
         (s.Z.dispatch({

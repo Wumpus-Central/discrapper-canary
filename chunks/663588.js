@@ -1,5 +1,5 @@
 e.exports = {
-    section: 'section_a79deb',
-    fakeInput: 'fakeInput_a79deb',
-    audioTrimmer: 'audioTrimmer_a79deb'
+    section: 'section__66efc',
+    fakeInput: 'fakeInput__66efc',
+    audioTrimmer: 'audioTrimmer__66efc'
 };

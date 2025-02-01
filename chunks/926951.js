@@ -1,7 +1,7 @@
-var i = r(47120);
-var a = r(818083);
-let o = 'bandwidth_estimation',
-    s = (0, a.B)({
+n.d(t, { Z: () => s }), n(47120);
+var i = n(818083);
+let r = 'bandwidth_estimation',
+    a = (0, i.B)({
         kind: 'user',
         id: '2024-06_rtc_pacer__simulcast',
         label: 'RTC Pacer & Golive Simulcast',
@@ -66,20 +66,20 @@ let o = 'bandwidth_estimation',
                 }
             }
         ]
-    });
-n.Z = {
-    getConfig(e, n) {
-        let r = s.getCurrentConfig({ location: 'e1c55b_1' }, { autoTrackExposure: e });
-        return !this.supportsBandwidthEstimationExperimentFullname(r.fullname, n) && (r.enabled = !1), r;
-    },
-    supportsBandwidthEstimationExperimentFullname(e, n) {
-        let r = this.getMediaEngineExperiments(e);
-        if (null === r) return !1;
-        for (let e of r) if (!n.includes(e)) return !1;
-        return !0;
-    },
-    getMediaEngineExperiments(e) {
-        let n = e.split('/');
-        return 3 !== n.length || n[0] !== o ? null : n[1].split(',').filter((e) => 0 !== e.length);
-    }
-};
+    }),
+    s = {
+        getConfig(e, t) {
+            let n = a.getCurrentConfig({ location: 'e1c55b_1' }, { autoTrackExposure: e });
+            return this.supportsBandwidthEstimationExperimentFullname(n.fullname, t) || (n.enabled = !1), n;
+        },
+        supportsBandwidthEstimationExperimentFullname(e, t) {
+            let n = this.getMediaEngineExperiments(e);
+            if (null === n) return !1;
+            for (let e of n) if (!t.includes(e)) return !1;
+            return !0;
+        },
+        getMediaEngineExperiments(e) {
+            let t = e.split('/');
+            return 3 !== t.length || t[0] !== r ? null : t[1].split(',').filter((e) => 0 !== e.length);
+        }
+    };

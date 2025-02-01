@@ -1,5 +1,5 @@
 e.exports = {
-    list: 'list_a478e5',
-    withGuildIcon: 'withGuildIcon_a478e5',
-    collapsed: 'collapsed_a478e5'
+    list: 'list_c3cd7d',
+    withGuildIcon: 'withGuildIcon_c3cd7d',
+    collapsed: 'collapsed_c3cd7d'
 };

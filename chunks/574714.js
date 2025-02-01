@@ -1,13 +1,13 @@
 e.exports = {
-    page: 'page_d87cd8',
-    bgImg: 'bgImg_d87cd8',
-    logoContainer: 'logoContainer_d87cd8',
-    card: 'card_d87cd8',
-    gameTile: 'gameTile_d87cd8',
-    gameTileImg: 'gameTileImg_d87cd8',
-    headingText: 'headingText_d87cd8',
-    bodyText: 'bodyText_d87cd8',
-    container: 'container_d87cd8',
-    backgroundArtwork: 'backgroundArtwork_d87cd8',
-    appOpenedTitle: 'appOpenedTitle_d87cd8'
+    page: 'page__4c945',
+    bgImg: 'bgImg__4c945',
+    logoContainer: 'logoContainer__4c945',
+    card: 'card__4c945',
+    gameTile: 'gameTile__4c945',
+    gameTileImg: 'gameTileImg__4c945',
+    headingText: 'headingText__4c945',
+    bodyText: 'bodyText__4c945',
+    container: 'container__4c945',
+    backgroundArtwork: 'backgroundArtwork__4c945',
+    appOpenedTitle: 'appOpenedTitle__4c945'
 };

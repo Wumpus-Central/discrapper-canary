@@ -1,21 +1,21 @@
 var i = (function () {
-    function e(e, n) {
-        for (var r = 0; r < n.length; r++) {
-            var i = n[r];
+    function e(e, t) {
+        for (var n = 0; n < t.length; n++) {
+            var i = t[n];
             (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
         }
     }
-    return function (n, r, i) {
-        return r && e(n.prototype, r), i && e(n, i), n;
+    return function (t, n, i) {
+        return n && e(t.prototype, n), i && e(t, i), t;
     };
 })();
-function a(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function r(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-var o = r(780643),
+var a = n(780643),
     s = (function () {
         function e() {
-            a(this, e);
+            r(this, e);
         }
         return (
             i(e, null, [
@@ -40,7 +40,7 @@ var o = r(780643),
                 {
                     key: 'ease',
                     value: function (e) {
-                        return l(e);
+                        return o(e);
                     }
                 },
                 {
@@ -58,8 +58,8 @@ var o = r(780643),
                 {
                     key: 'poly',
                     value: function (e) {
-                        return function (n) {
-                            return Math.pow(n, e);
+                        return function (t) {
+                            return Math.pow(t, e);
                         };
                     }
                 },
@@ -85,9 +85,9 @@ var o = r(780643),
                     key: 'elastic',
                     value: function () {
                         var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-                            n = e * Math.PI;
+                            t = e * Math.PI;
                         return function (e) {
-                            return 1 - Math.pow(Math.cos((e * Math.PI) / 2), 3) * Math.cos(e * n);
+                            return 1 - Math.pow(Math.cos((e * Math.PI) / 2), 3) * Math.cos(e * t);
                         };
                     }
                 },
@@ -96,8 +96,8 @@ var o = r(780643),
                     value: function (e) {
                         return (
                             void 0 === e && (e = 1.70158),
-                            function (n) {
-                                return n * n * ((e + 1) * n - e);
+                            function (t) {
+                                return t * t * ((e + 1) * t - e);
                             }
                         );
                     }
@@ -110,8 +110,8 @@ var o = r(780643),
                 },
                 {
                     key: 'bezier',
-                    value: function (e, n, r, i) {
-                        return o(e, n, r, i);
+                    value: function (e, t, n, i) {
+                        return a(e, t, n, i);
                     }
                 },
                 {
@@ -123,16 +123,16 @@ var o = r(780643),
                 {
                     key: 'out',
                     value: function (e) {
-                        return function (n) {
-                            return 1 - e(1 - n);
+                        return function (t) {
+                            return 1 - e(1 - t);
                         };
                     }
                 },
                 {
                     key: 'inOut',
                     value: function (e) {
-                        return function (n) {
-                            return n < 0.5 ? e(2 * n) / 2 : 1 - e((1 - n) * 2) / 2;
+                        return function (t) {
+                            return t < 0.5 ? e(2 * t) / 2 : 1 - e((1 - t) * 2) / 2;
                         };
                     }
                 }
@@ -140,5 +140,5 @@ var o = r(780643),
             e
         );
     })(),
-    l = s.bezier(0.42, 0, 1, 1);
+    o = s.bezier(0.42, 0, 1, 1);
 e.exports = s;

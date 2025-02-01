@@ -1,5 +1,5 @@
 e.exports = {
-    divider: 'divider_a7ad40',
-    eventSchedule: 'eventSchedule_a7ad40',
-    eventName: 'eventName_a7ad40'
+    divider: 'divider_cfc051',
+    eventSchedule: 'eventSchedule_cfc051',
+    eventName: 'eventName_cfc051'
 };

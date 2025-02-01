@@ -18,22 +18,22 @@ let E = (e) => {
     let { application: t, reportId: n } = e,
         [E, v] = r.useState(!1),
         [y, I] = r.useState(!1),
-        b = (0, a.e7)([h.Z, f.Z], () => {
+        T = (0, a.e7)([h.Z, f.Z], () => {
             var e;
             return null === (e = f.Z.getChannel(h.Z.getChannelId())) || void 0 === e ? void 0 : e.guild_id;
         }),
-        [T, S] = r.useState(null);
+        [b, S] = r.useState(null);
     r.useEffect(() => {
-        null != T && (v(!0), I(!0));
-    }, [T]),
+        null != b && (v(!0), I(!0));
+    }, [b]),
         r.useEffect(() => {
-            if (null == b) return;
+            if (null == T) return;
             let e = !1;
             return (
                 (async () => {
                     let n = null;
                     try {
-                        n = await (0, c.i)(b);
+                        n = await (0, c.i)(T);
                     } catch {}
                     if (e || null == n) return;
                     let i = n.find((e) => {
@@ -46,31 +46,31 @@ let E = (e) => {
                     e = !0;
                 }
             );
-        }, [b, t.id]);
+        }, [T, t.id]);
     let A = r.useCallback(() => {
             I(!1),
                 l.ZP.trackWithMetadata(m.rMx.IAR_REMOVE_APP_BUTTON_CLICKED, {
-                    guild_id: b,
+                    guild_id: T,
                     application_id: t.id,
                     report_id: n
                 }),
-                null != b &&
-                    null != T &&
-                    u.Z.disableIntegration(b, T.id).catch(() => {
+                null != T &&
+                    null != b &&
+                    u.Z.disableIntegration(T, b.id).catch(() => {
                         o.Z.show({
                             title: g.intl.string(g.t.wYqMmJ),
                             body: g.intl.string(g.t.A4Mnsr)
                         });
                     });
-        }, [t.id, b, T, n]),
+        }, [t.id, T, b, n]),
         N = (0, a.e7)([p.Z, _.Z], () => {
-            let e = _.Z.getGuild(b);
+            let e = _.Z.getGuild(T);
             if (null == e) return !1;
             let n = p.Z.can(m.Plq.MANAGE_GUILD, e),
                 i = null == t.bot || p.Z.canManageUser(m.Plq.MANAGE_GUILD, t.bot.id, e);
             return n && i;
         });
-    return null != t && null != b && E && N
+    return null != t && null != T && E && N
         ? (0, i.jsx)(d.ZP, {
               title: g.intl.string(g.t['WV/CsL']),
               description: g.intl.string(g.t['FlcC+/']),

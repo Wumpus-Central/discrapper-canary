@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(358085),
     y = n(521147),
     I = n(981631),
-    b = n(65154),
-    T = n(388032);
+    T = n(65154),
+    b = n(388032);
 function S(e, t, n) {
     let i = (0, a.e7)([c.Z], () => (null != e ? c.Z.getSelectedParticipantId(e.id) : null)),
         r = (0, a.e7)([h.Z], () => (null != i ? h.Z.getActiveStreamForStreamKey(i) : null), [i]);
@@ -46,12 +46,12 @@ function A(e) {
     let { channel: h, currentUser: g, activeStreams: E, hideSelfOptions: A = !1, showReportOption: N = !1, handleGoLive: C, onClose: R, onSelect: O, appContext: D = I.IlC.APP, disableChangeWindows: x = !1 } = e,
         L = (0, a.e7)([m.Z], () => m.Z.getGoLiveSource()),
         P = (0, a.e7)([p.Z], () => p.Z.getState().soundshareEnabled),
-        w = m.Z.supports(b.AN.DESKTOP_CAPTURE_APPLICATIONS),
+        w = m.Z.supports(T.AN.DESKTOP_CAPTURE_APPLICATIONS),
         M = null !== (c = E.find((e) => e.ownerId === (null == g ? void 0 : g.id))) && void 0 !== c ? c : null,
         k = S(h, g, E),
         U = (0, f.Z)(M, D),
         G = (0, d.Z)(M, D, I.VqG),
-        B = (0, a.e7)([m.Z], () => m.Z.supports(b.AN.SOUNDSHARE)),
+        B = (0, a.e7)([m.Z], () => m.Z.supports(T.AN.SOUNDSHARE)),
         Z = (0, a.e7)([m.Z], () => m.Z.supportsScreenSoundshare()),
         F = (null == L ? void 0 : L.desktopSource) != null,
         V = null == L ? void 0 : null === (n = L.desktopSource) || void 0 === n ? void 0 : null === (t = n.id) || void 0 === t ? void 0 : t.startsWith('screen'),
@@ -67,7 +67,7 @@ function A(e) {
             var e, t, n;
             (null === (n = m.Z.getGoLiveSource()) || void 0 === n ? void 0 : null === (t = n.desktopSource) || void 0 === t ? void 0 : null === (e = t.id) || void 0 === e ? void 0 : e.startsWith('prepicked:'))
                 ? m.Z.getMediaEngine().eachConnection((e) => {
-                      e.context === b.Yn.STREAM && e.presentDesktopSourcePicker();
+                      e.context === T.Yn.STREAM && e.presentDesktopSourcePicker();
                   })
                 : C();
         }, [C]),
@@ -79,7 +79,7 @@ function A(e) {
                         resolution: t,
                         frameRate: n
                     },
-                    context: b.Yn.STREAM
+                    context: T.Yn.STREAM
                 };
             if ((null == L ? void 0 : L.desktopSource) != null) {
                 var r;
@@ -100,7 +100,7 @@ function A(e) {
             null == M
                 ? (0, i.jsx)(s.sNh, {
                       id: 'share-your-screen',
-                      label: T.intl.string(T.t.fjBNo6),
+                      label: b.intl.string(b.t.fjBNo6),
                       icon: s.hGI,
                       action: C
                   })
@@ -109,7 +109,7 @@ function A(e) {
                           v.isPlatformEmbedded
                               ? (0, i.jsx)(s.sNh, {
                                     id: 'stream-settings',
-                                    label: T.intl.string(T.t.ytAD9f),
+                                    label: b.intl.string(b.t.ytAD9f),
                                     children: U
                                 })
                               : null,
@@ -117,7 +117,7 @@ function A(e) {
                           H
                               ? (0, i.jsx)(s.S89, {
                                     id: 'stream-settings-audio-enable',
-                                    label: T.intl.string(T.t.ZJEHt7),
+                                    label: b.intl.string(b.t.ZJEHt7),
                                     checked: P,
                                     action: W
                                 })
@@ -125,14 +125,14 @@ function A(e) {
                           w && !x
                               ? (0, i.jsx)(s.sNh, {
                                     id: 'change-windows',
-                                    label: T.intl.string(T.t.qntSam),
+                                    label: b.intl.string(b.t.qntSam),
                                     icon: s.hGI,
                                     action: Y
                                 })
                               : null,
                           (0, i.jsx)(s.sNh, {
                               id: 'stop-streaming',
-                              label: T.intl.string(T.t.S5anIS),
+                              label: b.intl.string(b.t.S5anIS),
                               icon: s.g5r,
                               action: () => (0, _.Z)(M)
                           })
@@ -144,7 +144,7 @@ function A(e) {
             onSelect: O,
             navId: 'manage-streams',
             onClose: R,
-            'aria-label': null != M ? T.intl.string(T.t.S5anIS) : T.intl.string(T.t.fjBNo6),
+            'aria-label': null != M ? b.intl.string(b.t.S5anIS) : b.intl.string(b.t.fjBNo6),
             children: [
                 (0, i.jsx)(s.kSQ, {
                     children: k.map((e) => {
@@ -153,7 +153,7 @@ function A(e) {
                             s.sNh,
                             {
                                 id: t.ownerId,
-                                label: T.intl.formatToPlainString(T.t['7rkg+/'], { username: n }),
+                                label: b.intl.formatToPlainString(b.t['7rkg+/'], { username: n }),
                                 icon: s.g5r,
                                 action: () => (0, _.Z)(t)
                             },

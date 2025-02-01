@@ -44,10 +44,10 @@ let d = {
     v = _,
     y = [],
     I = [];
-function b(e) {
+function T(e) {
     p = e.analyticsID;
 }
-function T(e) {
+function b(e) {
     '' === (h = e.query) && ((m = ''), (g = []), (y = []));
 }
 function S(e) {
@@ -151,8 +151,8 @@ class x extends (i = r.ZP.Store) {
 }
 c(x, 'displayName', 'GIFPickerViewStore');
 let L = new x(o.Z, {
-    GIF_PICKER_INITIALIZE: b,
-    GIF_PICKER_QUERY: T,
+    GIF_PICKER_INITIALIZE: T,
+    GIF_PICKER_QUERY: b,
     GIF_PICKER_QUERY_SUCCESS: N,
     GIF_PICKER_QUERY_FAILURE: C,
     GIF_PICKER_TRENDING_FETCH_SUCCESS: R,

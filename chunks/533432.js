@@ -1,68 +1,68 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(232713),
-    c = r(260866),
-    d = r(481060),
-    f = r(806966),
-    p = r(28546),
-    h = r(149203),
-    _ = r(981631),
-    m = r(388032),
-    g = r(405156);
-let E = o.forwardRef(function (e, n) {
-    let { emojiListRef: r, gridNavigatorId: i, isFullRow: s, onKeyDown: E, onFocus: v, autoFocus: y, className: b, defaultSearchPlaceholder: I } = e,
-        T = o.useRef(null),
-        S = (0, p.Iu)((e) => e.searchQuery),
-        [A, C] = f.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], u.X),
-        N = o.useCallback(
-            (e) => {
-                var n;
-                f.kJ.setActiveCategoryIndex('' === e ? 0 : h.c), f.kJ.setInspectedExpressionPosition(0, 0), f.kJ.setSearchPlaceholder(null), (0, p.ql)(e), null === (n = r.current) || void 0 === n || n.scrollTo(0);
-            },
-            [r]
-        ),
-        R = o.useCallback(() => {
-            (0, p.ql)('');
-        }, []),
-        O = (e) => {
-            switch (e.keyCode) {
-                case _.yXg.ARROW_LEFT:
-                case _.yXg.ARROW_RIGHT:
-                case _.yXg.ARROW_UP:
-                case _.yXg.ARROW_DOWN:
-                    document.activeElement !== e.target && e.preventDefault();
-            }
-            E(e);
-        };
-    return (
-        o.useImperativeHandle(n, () => ({
-            focus: () => {
-                var e;
-                return null === (e = T.current) || void 0 === e ? void 0 : e.focus();
-            }
-        })),
-        (0, a.jsx)(d.SearchBar, {
-            autoFocus: y,
-            query: S,
-            ref: T,
-            size: d.SearchBar.Sizes.MEDIUM,
-            placeholder: null != C ? C : I,
-            onClear: R,
-            onKeyDown: O,
-            onFocus: v,
-            onChange: N,
-            className: l()(b, { [g.searchBarFullRow]: s }),
-            inputProps: {
-                'aria-label': m.intl.string(m.t.tCauZW),
-                'aria-haspopup': 'grid',
-                'aria-controls': i,
-                'aria-expanded': !0,
-                'aria-activedescendant': (0, c.NE)(i, A.columnIndex, A.rowIndex)
-            }
-        })
-    );
-});
-n.Z = o.memo(E);
+n.d(t, { Z: () => g }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(232713),
+    l = n(260866),
+    u = n(481060),
+    c = n(806966),
+    d = n(28546),
+    f = n(149203),
+    _ = n(981631),
+    p = n(388032),
+    h = n(405156);
+let m = r.forwardRef(function (e, t) {
+        let { emojiListRef: n, gridNavigatorId: a, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: v, className: y, defaultSearchPlaceholder: I } = e,
+            T = r.useRef(null),
+            b = (0, d.Iu)((e) => e.searchQuery),
+            [S, A] = c.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], o.X),
+            N = r.useCallback(
+                (e) => {
+                    var t;
+                    c.kJ.setActiveCategoryIndex('' === e ? 0 : f.c), c.kJ.setInspectedExpressionPosition(0, 0), c.kJ.setSearchPlaceholder(null), (0, d.ql)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0);
+                },
+                [n]
+            ),
+            C = r.useCallback(() => {
+                (0, d.ql)('');
+            }, []),
+            R = (e) => {
+                switch (e.keyCode) {
+                    case _.yXg.ARROW_LEFT:
+                    case _.yXg.ARROW_RIGHT:
+                    case _.yXg.ARROW_UP:
+                    case _.yXg.ARROW_DOWN:
+                        document.activeElement !== e.target && e.preventDefault();
+                }
+                g(e);
+            };
+        return (
+            r.useImperativeHandle(t, () => ({
+                focus: () => {
+                    var e;
+                    return null === (e = T.current) || void 0 === e ? void 0 : e.focus();
+                }
+            })),
+            (0, i.jsx)(u.E1j, {
+                autoFocus: v,
+                query: b,
+                ref: T,
+                size: u.E1j.Sizes.MEDIUM,
+                placeholder: null != A ? A : I,
+                onClear: C,
+                onKeyDown: R,
+                onFocus: E,
+                onChange: N,
+                className: s()(y, { [h.searchBarFullRow]: m }),
+                inputProps: {
+                    'aria-label': p.intl.string(p.t.tCauZW),
+                    'aria-haspopup': 'grid',
+                    'aria-controls': a,
+                    'aria-expanded': !0,
+                    'aria-activedescendant': (0, l.NE)(a, S.columnIndex, S.rowIndex)
+                }
+            })
+        );
+    }),
+    g = r.memo(m);

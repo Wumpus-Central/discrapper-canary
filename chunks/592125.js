@@ -24,8 +24,8 @@ var i,
     v = n(709054),
     y = n(314897),
     I = n(430824),
-    b = n(594174),
-    T = n(981631);
+    T = n(594174),
+    b = n(981631);
 function S(e, t, n) {
     return (
         t in e
@@ -151,7 +151,7 @@ function q(e) {
 }
 function Q(e) {
     if (null != e.recipients.find((e) => (0, p.Z)(e))) return !1;
-    (O[e.id] = e), e.type === T.d4z.DM && (L[e.getRecipientId()] = e.id), (P += 1);
+    (O[e.id] = e), e.type === b.d4z.DM && (L[e.getRecipientId()] = e.id), (P += 1);
 }
 function X(e) {
     let t = C[e.parent_id];
@@ -291,7 +291,7 @@ function em(e) {
     });
 }
 function eg(e) {
-    if ('basicPermissions' in e || e.type !== T.d4z.DM) return;
+    if ('basicPermissions' in e || e.type !== b.d4z.DM) return;
     let t = e.getRecipientId();
     L[t] === e.id && delete L[t];
 }
@@ -313,12 +313,12 @@ function ey(e) {
 function eI(e) {
     A.fileOnly('GuildDelete of '.concat(e.guild.id)), W(e.guild.id), k.delete(e.guild.id), f.Z.invalidate(e.guild.id);
 }
-function eb(e) {
+function eT(e) {
     let t = z(e.channelId),
         n = y.default.getId();
     return null != t && !!t.isPrivate() && (q(t.addRecipient(e.user.id, e.nick, n)), !0);
 }
-function eT(e) {
+function eb(e) {
     let t = z(e.channelId);
     return null != t && !!t.isPrivate() && (q(t.removeRecipient(e.user.id)), !0);
 }
@@ -352,7 +352,7 @@ function eR() {
 }
 class eO extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, b.default, I.Z, m.Z), this.syncWith([m.Z], eC);
+        this.waitFor(f.Z, T.default, I.Z, m.Z), this.syncWith([m.Z], eC);
     }
     hasChannel(e) {
         return null != K(e);
@@ -443,8 +443,8 @@ let ex = new eO(l.Z, {
     CACHE_LOADED: eo,
     CHANNEL_CREATE: ec,
     CHANNEL_DELETE: ev,
-    CHANNEL_RECIPIENT_ADD: eb,
-    CHANNEL_RECIPIENT_REMOVE: eT,
+    CHANNEL_RECIPIENT_ADD: eT,
+    CHANNEL_RECIPIENT_REMOVE: eb,
     CHANNEL_UPDATES: ep,
     CONNECTION_OPEN_SUPPLEMENTAL: ei,
     CONNECTION_OPEN: et,

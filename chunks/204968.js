@@ -1,5 +1,5 @@
 e.exports = {
-    welcomeCard: 'welcomeCard_be6cec',
-    welcomeCardText: 'welcomeCardText_be6cec',
-    welcomeCardBadge: 'welcomeCardBadge_be6cec'
+    welcomeCard: 'welcomeCard_d74b42',
+    welcomeCardText: 'welcomeCardText_d74b42',
+    welcomeCardBadge: 'welcomeCardBadge_d74b42'
 };

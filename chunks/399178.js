@@ -1,5 +1,5 @@
-e.exports = {
-    roleTagContainer: 'roleTagContainer_b463ca',
-    roleTag: 'roleTag_b463ca',
-    roleColor: 'roleColor_b463ca'
+A.exports = {
+    roleTag: 'roleTag__9cd44',
+    roleTagContainer: 'roleTagContainer__9cd44',
+    roleColor: 'roleColor__9cd44'
 };

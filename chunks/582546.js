@@ -20,7 +20,7 @@ function h(e) {
             return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === n.id;
         }),
         y = (0, r.e7)([c.Z], () => c.Z.hasConnectedAccount());
-    if ('live' === m || !(0, u.AZ)(h)) return null;
+    if ('recent' !== m || !(0, u.AZ)(h)) return null;
     if (!y)
         return (0, i.jsx)(a.sNh, {
             id: 'connect-spotify',

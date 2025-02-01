@@ -1,7 +1,7 @@
 e.exports = {
-    modal: 'modal_cde5c6',
-    coverImageContainer: 'coverImageContainer_cde5c6',
-    header: 'header_cde5c6',
-    content: 'content_cde5c6',
-    description: 'description_cde5c6'
+    modal: 'modal_a47d61',
+    coverImageContainer: 'coverImageContainer_a47d61',
+    header: 'header_a47d61',
+    content: 'content_a47d61',
+    description: 'description_a47d61'
 };

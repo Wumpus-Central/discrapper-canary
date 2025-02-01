@@ -1,11 +1,11 @@
 e.exports = {
-    boostedGuildIconGem: 'boostedGuildIconGem_d4a69b',
-    iconBackgroundTierNone: 'iconBackgroundTierNone_d4a69b',
-    iconBackgroundTierOne: 'iconBackgroundTierOne_d4a69b',
-    iconBackgroundTierTwo: 'iconBackgroundTierTwo_d4a69b',
-    iconBackgroundTierThree: 'iconBackgroundTierThree_d4a69b',
-    iconTierNone: 'iconTierNone_d4a69b',
-    iconTierOne: 'iconTierOne_d4a69b',
-    iconTierTwo: 'iconTierTwo_d4a69b',
-    iconTierThree: 'iconTierThree_d4a69b'
+    boostedGuildIconGem: 'boostedGuildIconGem__97677',
+    iconBackgroundTierNone: 'iconBackgroundTierNone__97677',
+    iconBackgroundTierOne: 'iconBackgroundTierOne__97677',
+    iconBackgroundTierThree: 'iconBackgroundTierThree__97677',
+    iconBackgroundTierTwo: 'iconBackgroundTierTwo__97677',
+    iconTierNone: 'iconTierNone__97677',
+    iconTierOne: 'iconTierOne__97677',
+    iconTierTwo: 'iconTierTwo__97677',
+    iconTierThree: 'iconTierThree__97677'
 };

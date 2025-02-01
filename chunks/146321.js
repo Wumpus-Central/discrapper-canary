@@ -1,11 +1,11 @@
-var i = r(294377),
-    a = r(802973),
-    o = i('Map');
+var i = n(294377),
+    r = n(802973),
+    a = i('Map');
 e.exports = {
-    Map: o,
-    set: a('set', 2),
-    get: a('get', 1),
-    has: a('has', 1),
-    remove: a('delete', 1),
-    proto: o.prototype
+    Map: a,
+    set: r('set', 2),
+    get: r('get', 1),
+    has: r('has', 1),
+    remove: r('delete', 1),
+    proto: a.prototype
 };

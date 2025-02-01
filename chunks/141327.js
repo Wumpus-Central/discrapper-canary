@@ -1,12 +1,12 @@
-var i = r(816569),
-    a = 'object' == typeof exports && exports && !exports.nodeType && exports,
-    o = a && 'object' == typeof module && module && !module.nodeType && module,
-    s = o && o.exports === a && i.Z.process,
-    l = (function () {
-        try {
-            var e = o && o.require && o.require('util').types;
-            if (e) return e;
-            return s && s.binding && s.binding('util');
-        } catch (e) {}
-    })();
-n.Z = l;
+n.d(t, { Z: () => o });
+var i = n(816569),
+    r = 'object' == typeof exports && exports && !exports.nodeType && exports,
+    a = r && 'object' == typeof module && module && !module.nodeType && module,
+    s = a && a.exports === r && i.Z.process;
+let o = (function () {
+    try {
+        var e = a && a.require && a.require('util').types;
+        if (e) return e;
+        return s && s.binding && s.binding('util');
+    } catch (e) {}
+})();

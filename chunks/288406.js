@@ -1,75 +1,75 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(392711),
-    u = r.n(l),
-    c = r(481060),
-    d = r(633302),
-    f = r(334920),
-    p = r(768581),
-    h = r(185923),
-    _ = r(154949);
-let m = u().memoize((e) => ''.concat(e * h.DC.NonDiversityPerRow, 'px ').concat(e * Math.ceil(d.ZP.numNonDiversitySprites / h.DC.NonDiversityPerRow), 'px')),
-    g = u().memoize((e) => ''.concat(e * h.DC.DiversityPerRow, 'px ').concat(e * Math.ceil(d.ZP.numDiversitySprites / h.DC.DiversityPerRow), 'px')),
-    E = (e, n, i) => {
-        let a, o, s;
+n.d(t, { Z: () => E });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(392711),
+    l = n.n(o),
+    u = n(481060),
+    c = n(633302),
+    d = n(334920),
+    f = n(768581),
+    _ = n(185923),
+    p = n(154949);
+let h = l().memoize((e) => ''.concat(e * _.DC.NonDiversityPerRow, 'px ').concat(e * Math.ceil(c.ZP.numNonDiversitySprites / _.DC.NonDiversityPerRow), 'px')),
+    m = l().memoize((e) => ''.concat(e * _.DC.DiversityPerRow, 'px ').concat(e * Math.ceil(c.ZP.numDiversitySprites / _.DC.DiversityPerRow), 'px')),
+    g = (e, t, i) => {
+        let r, a, s;
         if (!e.useSpriteSheet) return;
-        let l = null != e.index ? e.index : 0;
-        e.hasDiversity ? ((a = r(735800)('./spritesheet-'.concat(n, '-').concat(i, '.png'))), (o = g(i)), (s = h.DC.DiversityPerRow)) : ((a = r(604901)('./spritesheet-emoji-'.concat(i, '.png'))), (o = m(i)), (s = h.DC.NonDiversityPerRow));
-        let u = (-l % s) * i,
-            c = -Math.floor(l / s) * i;
+        let o = null != e.index ? e.index : 0;
+        e.hasDiversity ? ((r = n(735800)('./spritesheet-'.concat(t, '-').concat(i, '.png'))), (a = m(i)), (s = _.DC.DiversityPerRow)) : ((r = n(604901)('./spritesheet-emoji-'.concat(i, '.png'))), (a = h(i)), (s = _.DC.NonDiversityPerRow));
+        let l = (-o % s) * i,
+            u = -Math.floor(o / s) * i;
         return {
-            backgroundImage: "url('".concat(a, "')"),
-            backgroundPosition: ''.concat(u, 'px ').concat(c, 'px'),
-            backgroundSize: o,
+            backgroundImage: "url('".concat(r, "')"),
+            backgroundPosition: ''.concat(l, 'px ').concat(u, 'px'),
+            backgroundSize: a,
             height: i,
             width: i
         };
     },
-    v = a.memo(function (e) {
-        let { emoji: n, size: r, surrogateCodePoint: o, allowAnimatedEmoji: l, 'aria-label': u, isLocked: d } = e,
-            m = (() => {
-                if (!n.useSpriteSheet) {
+    E = r.memo(function (e) {
+        let { emoji: t, size: n, surrogateCodePoint: a, allowAnimatedEmoji: o, 'aria-label': l, isLocked: c } = e,
+            h = (() => {
+                if (!t.useSpriteSheet) {
                     var e;
-                    let a =
-                        null == n.id
-                            ? n.url
-                            : p.ZP.getEmojiURL({
-                                  id: n.id,
-                                  animated: l && n.animated,
-                                  size: h.$U
+                    let r =
+                        null == t.id
+                            ? t.url
+                            : f.ZP.getEmojiURL({
+                                  id: t.id,
+                                  animated: o && t.animated,
+                                  size: _.$U
                               });
-                    return null != a
-                        ? (0, i.jsx)(f.Z, {
-                              className: _.lockedEmoji,
-                              'aria-label': u,
-                              src: a,
-                              size: r,
-                              alt: null !== (e = n.allNamesString) && void 0 !== e ? e : ''
+                    return null != r
+                        ? (0, i.jsx)(d.Z, {
+                              className: p.lockedEmoji,
+                              'aria-label': l,
+                              src: r,
+                              size: n,
+                              alt: null !== (e = t.allNamesString) && void 0 !== e ? e : ''
                           })
                         : null;
                 }
                 return (0, i.jsx)('div', {
-                    className: s()(_.emojiSpriteImage, { [_.lockedEmoji]: d }),
-                    style: E(n, o, r),
-                    children: (0, i.jsx)(c.HiddenVisually, { children: u })
+                    className: s()(p.emojiSpriteImage, { [p.lockedEmoji]: c }),
+                    style: g(t, a, n),
+                    children: (0, i.jsx)(u.nn4, { children: l })
                 });
             })();
-        return (0, i.jsxs)(a.Fragment, {
+        return (0, i.jsxs)(r.Fragment, {
             children: [
-                m,
-                d
+                h,
+                c
                     ? (0, i.jsx)('div', {
-                          className: _.emojiLockIconContainer,
-                          children: (0, i.jsx)(c.LockIcon, {
+                          className: p.emojiLockIconContainer,
+                          children: (0, i.jsx)(u.mBM, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: _.emojiLockIcon
+                              className: p.emojiLockIcon
                           })
                       })
                     : null
             ]
         });
     });
-n.Z = v;

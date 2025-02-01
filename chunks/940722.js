@@ -1,7 +1,7 @@
 e.exports = {
-    listItem: 'listItem_c96c45',
-    unavailableBadge: 'unavailableBadge_c96c45',
-    iconBadge: 'iconBadge_c96c45',
-    isCurrentUserConnected: 'isCurrentUserConnected_c96c45',
-    tutorialContainer: 'tutorialContainer_c96c45'
+    listItem: 'listItem__650eb',
+    unavailableBadge: 'unavailableBadge__650eb',
+    iconBadge: 'iconBadge__650eb',
+    isCurrentUserConnected: 'isCurrentUserConnected__650eb',
+    tutorialContainer: 'tutorialContainer__650eb'
 };

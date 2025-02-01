@@ -1,4 +1,4 @@
 e.exports = {
-    desktopTooltip: 'desktopTooltip_a9b354',
-    infoIcon: 'infoIcon_a9b354'
+    desktopTooltip: 'desktopTooltip_fed3a2',
+    infoIcon: 'infoIcon_fed3a2'
 };

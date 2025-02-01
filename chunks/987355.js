@@ -1,7 +1,7 @@
-var i = r(208066);
-function a(e) {
-    return function (n) {
-        return (0, i.Z)(n, e);
+n.d(t, { Z: () => r });
+var i = n(208066);
+let r = function (e) {
+    return function (t) {
+        return (0, i.Z)(t, e);
     };
-}
-n.Z = a;
+};

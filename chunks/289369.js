@@ -1,10 +1,10 @@
-function n(e) {
-    let n = '[ \\t\\f]*',
-        r = n + '[:=]' + n,
+function t(e) {
+    let t = '[ \\t\\f]*',
+        n = t + '[:=]' + t,
         i = '[ \\t\\f]+',
-        a = '([^\\\\:= \\t\\f\\n]|\\\\.)+',
-        o = {
-            end: '(' + r + '|' + i + ')',
+        r = '([^\\\\:= \\t\\f\\n]|\\\\.)+',
+        a = {
+            end: '(' + n + '|' + i + ')',
             relevance: 0,
             starts: {
                 className: 'string',
@@ -22,21 +22,21 @@ function n(e) {
             e.COMMENT('^\\s*[!#]', '$'),
             {
                 returnBegin: !0,
-                variants: [{ begin: a + r }, { begin: a + i }],
+                variants: [{ begin: r + n }, { begin: r + i }],
                 contains: [
                     {
                         className: 'attr',
-                        begin: a,
+                        begin: r,
                         endsParent: !0
                     }
                 ],
-                starts: o
+                starts: a
             },
             {
                 className: 'attr',
-                begin: a + n + '$'
+                begin: r + t + '$'
             }
         ]
     };
 }
-e.exports = n;
+e.exports = t;

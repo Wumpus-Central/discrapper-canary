@@ -1,9 +1,9 @@
 e.exports = {
-    header: 'header_a49400',
-    channelPrompt: 'channelPrompt_a49400',
-    closeButton: 'closeButton_a49400',
-    guildName: 'guildName_a49400',
-    title: 'title_a49400',
-    subtitle: 'subtitle_a49400',
-    skipButton: 'skipButton_a49400'
+    header: 'header__9f397',
+    channelPrompt: 'channelPrompt__9f397',
+    closeButton: 'closeButton__9f397',
+    guildName: 'guildName__9f397',
+    title: 'title__9f397',
+    subtitle: 'subtitle__9f397',
+    skipButton: 'skipButton__9f397'
 };

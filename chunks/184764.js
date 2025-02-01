@@ -1,4 +1,4 @@
 t.exports = {
-    fullArt: 'fullArt_adc7d0',
-    header: 'header_adc7d0'
+    fullArt: 'fullArt__86d5c',
+    header: 'header__86d5c'
 };

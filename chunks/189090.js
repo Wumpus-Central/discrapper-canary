@@ -1,12 +1,12 @@
 e.exports = {
-    container: 'container_e8df26',
-    header: 'header_e8df26',
-    headerBackground: 'headerBackground_e8df26',
-    headerImage: 'headerImage_e8df26',
-    scroller: 'scroller_e8df26',
-    scrollContent: 'scrollContent_e8df26',
-    content: 'content_e8df26',
-    details: 'details_e8df26',
-    benefits: 'benefits_e8df26',
-    description: 'description_e8df26'
+    container: 'container__000a3',
+    header: 'header__000a3',
+    headerBackground: 'headerBackground__000a3',
+    headerImage: 'headerImage__000a3',
+    scroller: 'scroller__000a3',
+    scrollContent: 'scrollContent__000a3',
+    content: 'content__000a3',
+    details: 'details__000a3',
+    benefits: 'benefits__000a3',
+    description: 'description__000a3'
 };

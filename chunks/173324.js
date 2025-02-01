@@ -1,12 +1,12 @@
 e.exports = {
-    summaryDivider: 'summaryDivider_cabeb6',
-    summaryDividerStart: 'summaryDividerStart_cabeb6',
-    summaryDividerEnd: 'summaryDividerEnd_cabeb6',
-    summaryStartContent: 'summaryStartContent_cabeb6',
-    summaryEndContent: 'summaryEndContent_cabeb6',
-    summaryStartIcon: 'summaryStartIcon_cabeb6',
-    summaryEndIcon: 'summaryEndIcon_cabeb6',
-    summaryFeedbackWrapper: 'summaryFeedbackWrapper_cabeb6',
-    summaryFeedback: 'summaryFeedback_cabeb6',
-    thumbIcon: 'thumbIcon_cabeb6'
+    summaryDivider: 'summaryDivider__3aab5',
+    summaryDividerStart: 'summaryDividerStart__3aab5',
+    summaryDividerEnd: 'summaryDividerEnd__3aab5',
+    summaryStartContent: 'summaryStartContent__3aab5',
+    summaryEndContent: 'summaryEndContent__3aab5',
+    summaryStartIcon: 'summaryStartIcon__3aab5',
+    summaryEndIcon: 'summaryEndIcon__3aab5',
+    summaryFeedbackWrapper: 'summaryFeedbackWrapper__3aab5',
+    summaryFeedback: 'summaryFeedback__3aab5',
+    thumbIcon: 'thumbIcon__3aab5'
 };

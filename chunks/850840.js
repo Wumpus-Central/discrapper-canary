@@ -1,36 +1,36 @@
 let i;
-var a,
-    o = r(653041);
-var s = r(442837),
-    l = r(570140);
-function u(e, n, r) {
+n.d(t, { Z: () => f }), n(653041);
+var r,
+    a = n(442837),
+    s = n(570140);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let c = {
+let l = {
     hasAcceptedStoreTerms: !1,
     hasAcceptedEulaIds: []
 };
-function d() {
+function u() {
     i.hasAcceptedStoreTerms = !0;
 }
-function f(e) {
-    let { eulaId: n } = e;
-    if (i.hasAcceptedEulaIds.includes(n)) return !1;
-    i.hasAcceptedEulaIds.push(n);
+function c(e) {
+    let { eulaId: t } = e;
+    if (i.hasAcceptedEulaIds.includes(t)) return !1;
+    i.hasAcceptedEulaIds.push(t);
 }
-class p extends (a = s.ZP.PersistedStore) {
+class d extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        i = null != e ? e : c;
+        i = null != e ? e : l;
     }
     getState() {
         return i;
@@ -42,9 +42,9 @@ class p extends (a = s.ZP.PersistedStore) {
         return i.hasAcceptedEulaIds.includes(e);
     }
 }
-u(p, 'displayName', 'ApplicationStoreUserSettingsStore'),
-    u(p, 'persistKey', 'ApplicationStoreUserSettingsStore'),
-    u(p, 'migrations', [
+o(d, 'displayName', 'ApplicationStoreUserSettingsStore'),
+    o(d, 'persistKey', 'ApplicationStoreUserSettingsStore'),
+    o(d, 'migrations', [
         (e) =>
             null == e.hasAcceptedEulaIds
                 ? {
@@ -52,8 +52,8 @@ u(p, 'displayName', 'ApplicationStoreUserSettingsStore'),
                       hasAcceptedEulaIds: []
                   }
                 : e
-    ]),
-    (n.Z = new p(l.Z, {
-        APPLICATION_STORE_ACCEPT_STORE_TERMS: d,
-        APPLICATION_STORE_ACCEPT_EULA: f
-    }));
+    ]);
+let f = new d(s.Z, {
+    APPLICATION_STORE_ACCEPT_STORE_TERMS: u,
+    APPLICATION_STORE_ACCEPT_EULA: c
+});

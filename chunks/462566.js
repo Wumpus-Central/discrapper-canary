@@ -21,8 +21,8 @@ let h = function (e) {
             country: '',
             postalCode: ''
         }),
-        [I, b] = r.useState({}),
-        [T, S] = r.useState({});
+        [I, T] = r.useState({}),
+        [b, S] = r.useState({});
     function A(e, t) {
         !!g[e] !== t &&
             E((n) => ({
@@ -109,8 +109,8 @@ let h = function (e) {
         if ('name' !== t && 'country' !== t && 'postalCode' !== t) return;
         let n = { ...v },
             i = { ...I },
-            r = { name: T.name };
-        I[t] || '' === e || (i[t] = !0), (n[t] = e), i[t] && '' === e ? 'name' === t && (r.name = f.intl.string(f.t.lIkVsr)) : delete r[t], y(n), b(i), S(r);
+            r = { name: b.name };
+        I[t] || '' === e || (i[t] = !0), (n[t] = e), i[t] && '' === e ? 'name' === t && (r.name = f.intl.string(f.t.lIkVsr)) : delete r[t], y(n), T(i), S(r);
     }
     function D() {
         var e;
@@ -129,7 +129,7 @@ let h = function (e) {
             D(),
             (0, i.jsx)(c.Z, {
                 form: R,
-                errors: T,
+                errors: b,
                 formError: n,
                 values: v,
                 onFieldChange: O,

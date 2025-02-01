@@ -1,7 +1,7 @@
-var i = r(571240),
-    a = r(858698),
-    o = TypeError;
+var i = n(571240),
+    r = n(858698),
+    a = TypeError;
 e.exports = function (e) {
     if (i(e)) return e;
-    throw new o(a(e) + ' is not a constructor');
+    throw new a(r(e) + ' is not a constructor');
 };

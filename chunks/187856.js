@@ -1,7 +1,7 @@
-var a = r(196322),
-    n = r(828091);
-e.exports = function (e, t) {
-    t = a(t, e);
-    for (var r = 0, _ = t.length; null != e && r < _; ) e = e[n(t[r++])];
-    return r && r == _ ? e : void 0;
+var r = a(196322),
+    n = a(828091);
+t.exports = function (t, e) {
+    e = r(e, t);
+    for (var a = 0, o = e.length; null != t && a < o; ) t = t[n(e[a++])];
+    return a && a == o ? t : void 0;
 };

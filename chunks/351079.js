@@ -1,8 +1,8 @@
-e.exports = {
-    avatarUploader: 'avatarUploader_e9b3be',
-    avatarUploaderDisabled: 'avatarUploaderDisabled_e9b3be',
-    avatarUploaderInnerSquare: 'avatarUploaderInnerSquare_e9b3be',
-    avatarUploaderInnerSquareDisabled: 'avatarUploaderInnerSquareDisabled_e9b3be',
-    avatarUploadIcon: 'avatarUploadIcon_e9b3be',
-    hideDefaultIcon: 'hideDefaultIcon_e9b3be'
+n.exports = {
+    avatarUploader: 'avatarUploader_e04502',
+    avatarUploaderDisabled: 'avatarUploaderDisabled_e04502',
+    avatarUploaderInnerSquare: 'avatarUploaderInnerSquare_e04502',
+    avatarUploaderInnerSquareDisabled: 'avatarUploaderInnerSquareDisabled_e04502',
+    avatarUploadIcon: 'avatarUploadIcon_e04502',
+    hideDefaultIcon: 'hideDefaultIcon_e04502'
 };

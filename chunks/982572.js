@@ -1,4 +1,4 @@
 e.exports = {
-    widget: 'widget_e80714',
-    dragContainer: 'dragContainer_e80714'
+    widget: 'widget__31ce1',
+    dragContainer: 'dragContainer__31ce1'
 };

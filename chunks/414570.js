@@ -1,9 +1,9 @@
-var i = r(875604),
-    a = r(752206),
-    o = r(638636),
+var i = n(875604),
+    r = n(752206),
+    a = n(638636),
     s = Array.prototype,
-    l = String.prototype;
+    o = String.prototype;
 e.exports = function (e) {
-    var n = e.includes;
-    return e === s || (i(s, e) && n === s.includes) ? a : 'string' == typeof e || e === l || (i(l, e) && n === l.includes) ? o : n;
+    var t = e.includes;
+    return e === s || (i(s, e) && t === s.includes) ? r : 'string' == typeof e || e === o || (i(o, e) && t === o.includes) ? a : t;
 };

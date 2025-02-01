@@ -1,16 +1,16 @@
 e.exports = function (e) {
-    var n = {},
-        r = e.stopCallback;
+    var t = {},
+        n = e.stopCallback;
     return (
-        (e.stopCallback = function (e, i, a, o) {
-            return !n[a] && !n[o] && r(e, i, a);
+        (e.stopCallback = function (e, i, r, a) {
+            return !t[r] && !t[a] && n(e, i, r);
         }),
-        (e.bindGlobal = function (e, r, i) {
-            if ((this.bind(e, r, i), e instanceof Array)) {
-                for (var a = 0; a < e.length; a++) n[e[a]] = !0;
+        (e.bindGlobal = function (e, n, i) {
+            if ((this.bind(e, n, i), e instanceof Array)) {
+                for (var r = 0; r < e.length; r++) t[e[r]] = !0;
                 return;
             }
-            n[e] = !0;
+            t[e] = !0;
         }),
         e
     );

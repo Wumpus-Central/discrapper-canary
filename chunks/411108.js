@@ -1,26 +1,26 @@
-var i = r(546299).rotr32;
-function a(e, n, r, i) {
-    return 0 === e ? o(n, r, i) : 1 === e || 3 === e ? l(n, r, i) : 2 === e ? s(n, r, i) : void 0;
+var i = n(546299).rotr32;
+function r(e, t, n, i) {
+    return 0 === e ? a(t, n, i) : 1 === e || 3 === e ? o(t, n, i) : 2 === e ? s(t, n, i) : void 0;
 }
-function o(e, n, r) {
-    return (e & n) ^ (~e & r);
+function a(e, t, n) {
+    return (e & t) ^ (~e & n);
 }
-function s(e, n, r) {
-    return (e & n) ^ (e & r) ^ (n & r);
+function s(e, t, n) {
+    return (e & t) ^ (e & n) ^ (t & n);
 }
-function l(e, n, r) {
-    return e ^ n ^ r;
+function o(e, t, n) {
+    return e ^ t ^ n;
 }
-function u(e) {
+function l(e) {
     return i(e, 2) ^ i(e, 13) ^ i(e, 22);
 }
-function c(e) {
+function u(e) {
     return i(e, 6) ^ i(e, 11) ^ i(e, 25);
 }
-function d(e) {
+function c(e) {
     return i(e, 7) ^ i(e, 18) ^ (e >>> 3);
 }
-function f(e) {
+function d(e) {
     return i(e, 17) ^ i(e, 19) ^ (e >>> 10);
 }
-(n.ft_1 = a), (n.ch32 = o), (n.maj32 = s), (n.p32 = l), (n.s0_256 = u), (n.s1_256 = c), (n.g0_256 = d), (n.g1_256 = f);
+(t.ft_1 = r), (t.ch32 = a), (t.maj32 = s), (t.p32 = o), (t.s0_256 = l), (t.s1_256 = u), (t.g0_256 = c), (t.g1_256 = d);

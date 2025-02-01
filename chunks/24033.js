@@ -1,7 +1,7 @@
-var e = r(622281),
-    o = String,
-    i = TypeError;
+var r = a(622281),
+    n = String,
+    o = TypeError;
 t.exports = function (t) {
-    if (e(t)) return t;
-    throw i(o(t) + ' is not an object');
+    if (r(t)) return t;
+    throw o(n(t) + ' is not an object');
 };

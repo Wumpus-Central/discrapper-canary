@@ -1,10 +1,10 @@
 e.exports = {
-    popover: 'popover_e986d9',
-    popoverReactionHoverBar: 'popoverReactionHoverBar_e986d9',
-    hoverBarButton: 'hoverBarButton_e986d9',
-    icon: 'icon_e986d9',
-    buttonContent: 'buttonContent_e986d9',
-    tooltip: 'tooltip_e986d9',
-    newBadge: 'newBadge_e986d9',
-    separator: 'separator_e986d9'
+    popover: 'popover_f84418',
+    popoverReactionHoverBar: 'popoverReactionHoverBar_f84418',
+    hoverBarButton: 'hoverBarButton_f84418',
+    icon: 'icon_f84418',
+    buttonContent: 'buttonContent_f84418',
+    tooltip: 'tooltip_f84418',
+    newBadge: 'newBadge_f84418',
+    separator: 'separator_f84418'
 };

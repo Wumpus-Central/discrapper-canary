@@ -1,8 +1,8 @@
 e.exports = {
-    title: 'title_c768e8',
-    divider: 'divider_c768e8',
-    container: 'container_c768e8',
-    measurements: 'measurements_c768e8',
-    more: 'more_c768e8',
-    selected: 'selected_c768e8'
+    title: 'title_e2bdda',
+    divider: 'divider_e2bdda',
+    container: 'container_e2bdda',
+    measurements: 'measurements_e2bdda',
+    more: 'more_e2bdda',
+    selected: 'selected_e2bdda'
 };

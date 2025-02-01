@@ -1,6 +1,6 @@
 e.exports = {
-    stageSystemMessage: 'stageSystemMessage_c0e838',
-    iconContainer: 'iconContainer_c0e838',
-    inviteToSpeakButtonWrapper: 'inviteToSpeakButtonWrapper_c0e838',
-    inviteToSpeakButtonInner: 'inviteToSpeakButtonInner_c0e838'
+    stageSystemMessage: 'stageSystemMessage_e9ab2f',
+    iconContainer: 'iconContainer_e9ab2f',
+    inviteToSpeakButtonWrapper: 'inviteToSpeakButtonWrapper_e9ab2f',
+    inviteToSpeakButtonInner: 'inviteToSpeakButtonInner_e9ab2f'
 };

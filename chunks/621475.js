@@ -1,9 +1,9 @@
 e.exports = {
-    container: 'container_f64057',
-    centerText: 'centerText_f64057',
-    header: 'header_f64057',
-    descriptionWidth: 'descriptionWidth_f64057',
-    formItem: 'formItem_f64057',
-    footer: 'footer_f64057',
-    backButton: 'backButton_f64057'
+    container: 'container__07ec5',
+    centerText: 'centerText__07ec5',
+    header: 'header__07ec5',
+    descriptionWidth: 'descriptionWidth__07ec5',
+    formItem: 'formItem__07ec5',
+    footer: 'footer__07ec5',
+    backButton: 'backButton__07ec5'
 };

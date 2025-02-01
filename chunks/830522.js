@@ -1,6 +1,6 @@
-function n(e) {
-    let n = e.regex,
-        r = /[a-zA-Z_][a-zA-Z0-9_]*/,
+function t(e) {
+    let t = e.regex,
+        n = /[a-zA-Z_][a-zA-Z0-9_]*/,
         i = {
             className: 'number',
             variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]
@@ -29,7 +29,7 @@ function n(e) {
             {
                 className: 'variable',
                 variants: [
-                    { begin: n.concat(/\$/, n.optional(/::/), r, '(::', r, ')*') },
+                    { begin: t.concat(/\$/, t.optional(/::/), n, '(::', n, ')*') },
                     {
                         begin: '\\$\\{(::)?[a-zA-Z_]((::)?[a-zA-Z0-9_])*',
                         end: '\\}',
@@ -46,4 +46,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

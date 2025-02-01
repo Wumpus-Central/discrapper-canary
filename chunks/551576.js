@@ -1,12 +1,12 @@
 IntlMessageFormat.__addLocaleData({
     locale: 'en',
-    pluralRuleFunction: function (e, n) {
-        var r = String(e).split('.'),
-            i = !r[1],
-            a = Number(r[0]) == e,
-            o = a && r[0].slice(-1),
-            s = a && r[0].slice(-2);
-        return n ? (1 == o && 11 != s ? 'one' : 2 == o && 12 != s ? 'two' : 3 == o && 13 != s ? 'few' : 'other') : 1 == e && i ? 'one' : 'other';
+    pluralRuleFunction: function (e, t) {
+        var n = String(e).split('.'),
+            i = !n[1],
+            r = Number(n[0]) == e,
+            a = r && n[0].slice(-1),
+            s = r && n[0].slice(-2);
+        return t ? (1 == a && 11 != s ? 'one' : 2 == a && 12 != s ? 'two' : 3 == a && 13 != s ? 'few' : 'other') : 1 == e && i ? 'one' : 'other';
     }
 }),
     IntlMessageFormat.__addLocaleData({
@@ -111,7 +111,7 @@ IntlMessageFormat.__addLocaleData({
     }),
     IntlMessageFormat.__addLocaleData({
         locale: 'en-Dsrt',
-        pluralRuleFunction: function (e, n) {
+        pluralRuleFunction: function (e, t) {
             return 'other';
         }
     }),
@@ -365,7 +365,7 @@ IntlMessageFormat.__addLocaleData({
     }),
     IntlMessageFormat.__addLocaleData({
         locale: 'en-Shaw',
-        pluralRuleFunction: function (e, n) {
+        pluralRuleFunction: function (e, t) {
             return 'other';
         }
     }),

@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_c4a3bb',
-    searchBar: 'searchBar_c4a3bb'
+    container: 'container_d806b9',
+    searchBar: 'searchBar_d806b9'
 };

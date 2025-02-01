@@ -1,6 +1,6 @@
 e.exports = {
-    groupContainer: 'groupContainer_f573e6',
-    groupHeaderRow: 'groupHeaderRow_f573e6',
-    pointer: 'pointer_f573e6',
-    groupCollapsedContainer: 'groupCollapsedContainer_f573e6'
+    groupContainer: 'groupContainer_b6a9f9',
+    groupHeaderRow: 'groupHeaderRow_b6a9f9',
+    pointer: 'pointer_b6a9f9',
+    groupCollapsedContainer: 'groupCollapsedContainer_b6a9f9'
 };

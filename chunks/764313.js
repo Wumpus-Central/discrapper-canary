@@ -1,6 +1,6 @@
-function n(e) {
-    let n = e.regex,
-        r = ['__FILE__', '__LINE__'],
+function t(e) {
+    let t = e.regex,
+        n = ['__FILE__', '__LINE__'],
         i = ['begin_keywords', 'celldefine', 'default_nettype', 'default_decay_time', 'default_trireg_strength', 'define', 'delay_mode_distributed', 'delay_mode_path', 'delay_mode_unit', 'delay_mode_zero', 'else', 'elsif', 'end_keywords', 'endcelldefine', 'endif', 'ifdef', 'ifndef', 'include', 'line', 'nounconnected_drive', 'pragma', 'resetall', 'timescale', 'unconnected_drive', 'undef', 'undefineall'];
     return {
         name: 'Verilog',
@@ -40,11 +40,11 @@ function n(e) {
             },
             {
                 scope: 'variable.constant',
-                match: n.concat(/`/, n.either(...r))
+                match: t.concat(/`/, t.either(...n))
             },
             {
                 scope: 'meta',
-                begin: n.concat(/`/, n.either(...i)),
+                begin: t.concat(/`/, t.either(...i)),
                 end: /$|\/\/|\/\*/,
                 returnEnd: !0,
                 keywords: i
@@ -52,4 +52,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

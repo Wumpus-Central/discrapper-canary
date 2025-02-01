@@ -1,33 +1,33 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e, n, r, i) {
-        var a = e + ' ';
-        switch (r) {
+    function t(e, t, n, i) {
+        var r = e + ' ';
+        switch (n) {
             case 's':
-                return n || i ? 'nekaj sekund' : 'nekaj sekundami';
+                return t || i ? 'nekaj sekund' : 'nekaj sekundami';
             case 'ss':
-                return 1 === e ? (a += n ? 'sekundo' : 'sekundi') : 2 === e ? (a += n || i ? 'sekundi' : 'sekundah') : e < 5 ? (a += n || i ? 'sekunde' : 'sekundah') : (a += (n, 'sekund')), a;
+                return 1 === e ? (r += t ? 'sekundo' : 'sekundi') : 2 === e ? (r += t || i ? 'sekundi' : 'sekundah') : e < 5 ? (r += t || i ? 'sekunde' : 'sekundah') : (r += 'sekund'), r;
             case 'm':
-                return n ? 'ena minuta' : 'eno minuto';
+                return t ? 'ena minuta' : 'eno minuto';
             case 'mm':
-                return 1 === e ? (a += n ? 'minuta' : 'minuto') : 2 === e ? (a += n || i ? 'minuti' : 'minutama') : e < 5 ? (a += n || i ? 'minute' : 'minutami') : (a += n || i ? 'minut' : 'minutami'), a;
+                return 1 === e ? (r += t ? 'minuta' : 'minuto') : 2 === e ? (r += t || i ? 'minuti' : 'minutama') : e < 5 ? (r += t || i ? 'minute' : 'minutami') : (r += t || i ? 'minut' : 'minutami'), r;
             case 'h':
-                return n ? 'ena ura' : 'eno uro';
+                return t ? 'ena ura' : 'eno uro';
             case 'hh':
-                return 1 === e ? (a += n ? 'ura' : 'uro') : 2 === e ? (a += n || i ? 'uri' : 'urama') : e < 5 ? (a += n || i ? 'ure' : 'urami') : (a += n || i ? 'ur' : 'urami'), a;
+                return 1 === e ? (r += t ? 'ura' : 'uro') : 2 === e ? (r += t || i ? 'uri' : 'urama') : e < 5 ? (r += t || i ? 'ure' : 'urami') : (r += t || i ? 'ur' : 'urami'), r;
             case 'd':
-                return n || i ? 'en dan' : 'enim dnem';
+                return t || i ? 'en dan' : 'enim dnem';
             case 'dd':
-                return 1 === e ? (a += n || i ? 'dan' : 'dnem') : 2 === e ? (a += n || i ? 'dni' : 'dnevoma') : (a += n || i ? 'dni' : 'dnevi'), a;
+                return 1 === e ? (r += t || i ? 'dan' : 'dnem') : 2 === e ? (r += t || i ? 'dni' : 'dnevoma') : (r += t || i ? 'dni' : 'dnevi'), r;
             case 'M':
-                return n || i ? 'en mesec' : 'enim mesecem';
+                return t || i ? 'en mesec' : 'enim mesecem';
             case 'MM':
-                return 1 === e ? (a += n || i ? 'mesec' : 'mesecem') : 2 === e ? (a += n || i ? 'meseca' : 'mesecema') : e < 5 ? (a += n || i ? 'mesece' : 'meseci') : (a += n || i ? 'mesecev' : 'meseci'), a;
+                return 1 === e ? (r += t || i ? 'mesec' : 'mesecem') : 2 === e ? (r += t || i ? 'meseca' : 'mesecema') : e < 5 ? (r += t || i ? 'mesece' : 'meseci') : (r += t || i ? 'mesecev' : 'meseci'), r;
             case 'y':
-                return n || i ? 'eno leto' : 'enim letom';
+                return t || i ? 'eno leto' : 'enim letom';
             case 'yy':
-                return 1 === e ? (a += n || i ? 'leto' : 'letom') : 2 === e ? (a += n || i ? 'leti' : 'letoma') : e < 5 ? (a += n || i ? 'leta' : 'leti') : (a += n || i ? 'let' : 'leti'), a;
+                return 1 === e ? (r += t || i ? 'leto' : 'letom') : 2 === e ? (r += t || i ? 'leti' : 'letoma') : e < 5 ? (r += t || i ? 'leta' : 'leti') : (r += t || i ? 'let' : 'leti'), r;
         }
     }
     return e.defineLocale('sl', {
@@ -85,18 +85,18 @@
         relativeTime: {
             future: 'čez %s',
             past: 'pred %s',
-            s: n,
-            ss: n,
-            m: n,
-            mm: n,
-            h: n,
-            hh: n,
-            d: n,
-            dd: n,
-            M: n,
-            MM: n,
-            y: n,
-            yy: n
+            s: t,
+            ss: t,
+            m: t,
+            mm: t,
+            h: t,
+            hh: t,
+            d: t,
+            dd: t,
+            M: t,
+            MM: t,
+            y: t,
+            yy: t
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

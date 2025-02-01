@@ -1,12 +1,12 @@
 e.exports = {
-    container: 'container_f7ea1b',
-    profile: 'profile_f7ea1b',
-    status: 'status_f7ea1b',
-    title: 'title_f7ea1b',
-    health: 'health_f7ea1b',
-    line: 'line_f7ea1b',
-    statusOption: 'statusOption_f7ea1b',
-    statusLabel: 'statusLabel_f7ea1b',
-    marker: 'marker_f7ea1b',
-    empty: 'empty_f7ea1b'
+    container: 'container_d878e7',
+    profile: 'profile_d878e7',
+    status: 'status_d878e7',
+    title: 'title_d878e7',
+    health: 'health_d878e7',
+    line: 'line_d878e7',
+    statusOption: 'statusOption_d878e7',
+    statusLabel: 'statusLabel_d878e7',
+    marker: 'marker_d878e7',
+    empty: 'empty_d878e7'
 };

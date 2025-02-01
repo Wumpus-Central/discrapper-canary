@@ -22,18 +22,18 @@ function E(e) {
     let { generateImageRef: a, leaderboard: g, userId: E, guildId: v } = e,
         y = (0, o.e7)([c.default], () => c.default.getUser(E)),
         I = g.guild_settings.sort_by_statistic_id,
-        b = r.useMemo(() => g.users.findIndex((e) => e.user_id === E) + 1, [g, E]),
-        T = r.useMemo(() => g.users.find((e) => e.user_id === E), [g, E]);
-    s()(null != T, 'User row should not be null'), s()(null != y, 'User must exist');
+        T = r.useMemo(() => g.users.findIndex((e) => e.user_id === E) + 1, [g, E]),
+        b = r.useMemo(() => g.users.find((e) => e.user_id === E), [g, E]);
+    s()(null != b, 'User row should not be null'), s()(null != y, 'User must exist');
     let S = d.ZP.getName(v, void 0, y),
-        A = null !== (n = null === (t = T.statistics[I]) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : 0;
+        A = null !== (n = null === (t = b.statistics[I]) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : 0;
     return (0, i.jsxs)('div', {
         ref: a,
         className: m.container,
         children: [
             (0, i.jsx)(p.Z, {
                 user: y,
-                rank: b,
+                rank: T,
                 avatarClassName: m.avatar,
                 rankBadgeVisibility: 'visibleWithoutBorder'
             }),
@@ -59,7 +59,7 @@ function E(e) {
                         variant: 'text-md/semibold',
                         children: h.intl.format(h.t.tluICw, {
                             username: S,
-                            rank: b
+                            rank: T
                         })
                     }),
                     (0, i.jsx)(l.LZC, { size: 2 }),

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => S,
-    a: () => b
+    a: () => T
 });
 var i = n(200651),
     r = n(192379),
@@ -21,10 +21,10 @@ var i = n(200651),
     v = n(463396),
     y = n(981631),
     I = n(507304),
-    b = (function (e) {
+    T = (function (e) {
         return (e[(e.SYSTEM_TAG = 0)] = 'SYSTEM_TAG'), (e[(e.BADGES = 1)] = 'BADGES'), e;
     })({});
-function T(e) {
+function b(e) {
     let { compact: t } = e;
     return (0, i.jsx)(_.Z, {
         className: t ? I.botTagCompact : I.botTagCozy,
@@ -35,9 +35,9 @@ function T(e) {
 function S(e) {
     var t;
     let n,
-        { author: a, message: _, channel: b, userOverride: S, compact: A = !1, withMentionPrefix: N = !1, showPopout: C = !1, className: R, onClick: O, onContextMenu: D, onPopoutRequestClose: x, renderPopout: L, renderRemixTag: P = !1, decorations: w } = e,
+        { author: a, message: _, channel: T, userOverride: S, compact: A = !1, withMentionPrefix: N = !1, showPopout: C = !1, className: R, onClick: O, onContextMenu: D, onPopoutRequestClose: x, renderPopout: L, renderRemixTag: P = !1, decorations: w } = e,
         M = r.useContext(h.Z),
-        k = null !== (t = null == b ? void 0 : b.guild_id) && void 0 !== t ? t : M,
+        k = null !== (t = null == T ? void 0 : T.guild_id) && void 0 !== t ? t : M,
         { analyticsLocations: U } = (0, f.ZP)(d.Z.USERNAME),
         G = N ? '@' : '',
         { nick: B, colorString: Z, colorRoleName: F } = a,
@@ -154,7 +154,7 @@ function S(e) {
                 }),
             null != J ? (0, i.jsx)(i.Fragment, { children: J }) : null,
             null == X || A ? null : X,
-            null != _ && (0, v.f)(_) && W && P ? (0, i.jsx)(T, {}) : null
+            null != _ && (0, v.f)(_) && W && P ? (0, i.jsx)(b, {}) : null
         ]
     });
 }

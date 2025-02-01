@@ -1,5 +1,5 @@
-var a = r(665352);
-t.Z = new a.Z({
+r.d(t, { Z: () => a });
+let a = new (r(665352).Z)({
     id: 'xyz-d65',
     name: 'XYZ D65',
     coords: {

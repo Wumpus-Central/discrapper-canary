@@ -1,49 +1,49 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = 'január_február_marec_apríl_máj_jún_júl_august_september_október_november_december'.split('_'),
-        r = 'jan_feb_mar_apr_máj_jún_júl_aug_sep_okt_nov_dec'.split('_');
+    var t = 'január_február_marec_apríl_máj_jún_júl_august_september_október_november_december'.split('_'),
+        n = 'jan_feb_mar_apr_máj_jún_júl_aug_sep_okt_nov_dec'.split('_');
     function i(e) {
         return e > 1 && e < 5;
     }
-    function a(e, n, r, a) {
-        var o = e + ' ';
-        switch (r) {
+    function r(e, t, n, r) {
+        var a = e + ' ';
+        switch (n) {
             case 's':
-                return n || a ? 'pár sekúnd' : 'pár sekundami';
+                return t || r ? 'pár sekúnd' : 'pár sekundami';
             case 'ss':
-                if (n || a) return o + (i(e) ? 'sekundy' : 'sekúnd');
-                return o + 'sekundami';
+                if (t || r) return a + (i(e) ? 'sekundy' : 'sekúnd');
+                return a + 'sekundami';
             case 'm':
-                return n ? 'minúta' : a ? 'minútu' : 'minútou';
+                return t ? 'minúta' : r ? 'minútu' : 'minútou';
             case 'mm':
-                if (n || a) return o + (i(e) ? 'minúty' : 'minút');
-                return o + 'minútami';
+                if (t || r) return a + (i(e) ? 'minúty' : 'minút');
+                return a + 'minútami';
             case 'h':
-                return n ? 'hodina' : a ? 'hodinu' : 'hodinou';
+                return t ? 'hodina' : r ? 'hodinu' : 'hodinou';
             case 'hh':
-                if (n || a) return o + (i(e) ? 'hodiny' : 'hodín');
-                return o + 'hodinami';
+                if (t || r) return a + (i(e) ? 'hodiny' : 'hodín');
+                return a + 'hodinami';
             case 'd':
-                return n || a ? 'deň' : 'dňom';
+                return t || r ? 'deň' : 'dňom';
             case 'dd':
-                if (n || a) return o + (i(e) ? 'dni' : 'dní');
-                return o + 'dňami';
+                if (t || r) return a + (i(e) ? 'dni' : 'dní');
+                return a + 'dňami';
             case 'M':
-                return n || a ? 'mesiac' : 'mesiacom';
+                return t || r ? 'mesiac' : 'mesiacom';
             case 'MM':
-                if (n || a) return o + (i(e) ? 'mesiace' : 'mesiacov');
-                return o + 'mesiacmi';
+                if (t || r) return a + (i(e) ? 'mesiace' : 'mesiacov');
+                return a + 'mesiacmi';
             case 'y':
-                return n || a ? 'rok' : 'rokom';
+                return t || r ? 'rok' : 'rokom';
             case 'yy':
-                if (n || a) return o + (i(e) ? 'roky' : 'rokov');
-                return o + 'rokmi';
+                if (t || r) return a + (i(e) ? 'roky' : 'rokov');
+                return a + 'rokmi';
         }
     }
     return e.defineLocale('sk', {
-        months: n,
-        monthsShort: r,
+        months: t,
+        monthsShort: n,
         weekdays: 'nedeľa_pondelok_utorok_streda_štvrtok_piatok_sobota'.split('_'),
         weekdaysShort: 'ne_po_ut_st_št_pi_so'.split('_'),
         weekdaysMin: 'ne_po_ut_st_št_pi_so'.split('_'),
@@ -96,18 +96,18 @@
         relativeTime: {
             future: 'za %s',
             past: 'pred %s',
-            s: a,
-            ss: a,
-            m: a,
-            mm: a,
-            h: a,
-            hh: a,
-            d: a,
-            dd: a,
-            M: a,
-            MM: a,
-            y: a,
-            yy: a
+            s: r,
+            ss: r,
+            m: r,
+            mm: r,
+            h: r,
+            hh: r,
+            d: r,
+            dd: r,
+            M: r,
+            MM: r,
+            y: r,
+            yy: r
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

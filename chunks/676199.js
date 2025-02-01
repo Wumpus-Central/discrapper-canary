@@ -1,6 +1,6 @@
 e.exports = {
-    chatHeaderBar: 'chatHeaderBar_e2f46e',
-    narrow: 'narrow_e2f46e',
-    chatHeaderBarText: 'chatHeaderBarText_e2f46e',
-    chatHeaderBarButton: 'chatHeaderBarButton_e2f46e'
+    chatHeaderBar: 'chatHeaderBar_a5700d',
+    narrow: 'narrow_a5700d',
+    chatHeaderBarText: 'chatHeaderBarText_a5700d',
+    chatHeaderBarButton: 'chatHeaderBarButton_a5700d'
 };

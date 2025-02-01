@@ -1,8 +1,8 @@
 e.exports = {
-    headerContainer: 'headerContainer_f5d0f2',
-    headerText: 'headerText_f5d0f2',
-    bodyText: 'bodyText_f5d0f2',
-    disabled: 'disabled_f5d0f2',
-    rules: 'rules_f5d0f2',
-    rulesHeader: 'rulesHeader_f5d0f2'
+    headerContainer: 'headerContainer__92677',
+    headerText: 'headerText__92677',
+    bodyText: 'bodyText__92677',
+    disabled: 'disabled__92677',
+    rules: 'rules__92677',
+    rulesHeader: 'rulesHeader__92677'
 };

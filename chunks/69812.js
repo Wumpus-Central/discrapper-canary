@@ -1,13 +1,13 @@
 e.exports = {
-    sectionContainer: 'sectionContainer_a211ab',
-    divider: 'divider_a211ab',
-    sectionHeader: 'sectionHeader_a211ab',
-    contentContainer: 'contentContainer_a211ab',
-    appContainer: 'appContainer_a211ab',
-    appHeader: 'appHeader_a211ab',
-    avatar: 'avatar_a211ab',
-    titleContainer: 'titleContainer_a211ab',
-    appName: 'appName_a211ab',
-    appCategory: 'appCategory_a211ab',
-    appDescription: 'appDescription_a211ab'
+    sectionContainer: 'sectionContainer__5a4b6',
+    divider: 'divider__5a4b6',
+    sectionHeader: 'sectionHeader__5a4b6',
+    contentContainer: 'contentContainer__5a4b6',
+    appContainer: 'appContainer__5a4b6',
+    appHeader: 'appHeader__5a4b6',
+    avatar: 'avatar__5a4b6',
+    titleContainer: 'titleContainer__5a4b6',
+    appName: 'appName__5a4b6',
+    appCategory: 'appCategory__5a4b6',
+    appDescription: 'appDescription__5a4b6'
 };

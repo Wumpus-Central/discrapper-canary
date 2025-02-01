@@ -1,86 +1,86 @@
-var e = n(147018),
-    o = n(161581),
-    i = n(197187),
-    u = n(261987),
-    c = 'WebAssembly',
-    a = o[c],
-    f = 7 !== Error('e', { cause: 7 }).cause,
-    s = function (t, r) {
-        var n = {};
-        (n[t] = u(t, r, f)),
-            e(
+var r = i(147018),
+    n = i(161581),
+    a = i(197187),
+    s = i(261987),
+    o = 'WebAssembly',
+    u = n[o],
+    c = 7 !== Error('e', { cause: 7 }).cause,
+    h = function (t, e) {
+        var i = {};
+        (i[t] = s(t, e, c)),
+            r(
                 {
                     global: !0,
                     constructor: !0,
                     arity: 1,
-                    forced: f
+                    forced: c
                 },
-                n
+                i
             );
     },
-    p = function (t, r) {
-        if (a && a[t]) {
-            var n = {};
-            (n[t] = u(c + '.' + t, r, f)),
-                e(
+    l = function (t, e) {
+        if (u && u[t]) {
+            var i = {};
+            (i[t] = s(o + '.' + t, e, c)),
+                r(
                     {
-                        target: c,
+                        target: o,
                         stat: !0,
                         constructor: !0,
                         arity: 1,
-                        forced: f
+                        forced: c
                     },
-                    n
+                    i
                 );
         }
     };
-s('Error', function (t) {
-    return function (r) {
-        return i(t, this, arguments);
+h('Error', function (t) {
+    return function (e) {
+        return a(t, this, arguments);
     };
 }),
-    s('EvalError', function (t) {
-        return function (r) {
-            return i(t, this, arguments);
+    h('EvalError', function (t) {
+        return function (e) {
+            return a(t, this, arguments);
         };
     }),
-    s('RangeError', function (t) {
-        return function (r) {
-            return i(t, this, arguments);
+    h('RangeError', function (t) {
+        return function (e) {
+            return a(t, this, arguments);
         };
     }),
-    s('ReferenceError', function (t) {
-        return function (r) {
-            return i(t, this, arguments);
+    h('ReferenceError', function (t) {
+        return function (e) {
+            return a(t, this, arguments);
         };
     }),
-    s('SyntaxError', function (t) {
-        return function (r) {
-            return i(t, this, arguments);
+    h('SyntaxError', function (t) {
+        return function (e) {
+            return a(t, this, arguments);
         };
     }),
-    s('TypeError', function (t) {
-        return function (r) {
-            return i(t, this, arguments);
+    h('TypeError', function (t) {
+        return function (e) {
+            return a(t, this, arguments);
         };
     }),
-    s('URIError', function (t) {
-        return function (r) {
-            return i(t, this, arguments);
+    h('URIError', function (t) {
+        return function (e) {
+            return a(t, this, arguments);
         };
     }),
-    p('CompileError', function (t) {
-        return function (r) {
-            return i(t, this, arguments);
+    l('CompileError', function (t) {
+        return function (e) {
+            return a(t, this, arguments);
         };
     }),
-    p('LinkError', function (t) {
-        return function (r) {
-            return i(t, this, arguments);
+    l('LinkError', function (t) {
+        return function (e) {
+            return a(t, this, arguments);
         };
     }),
-    p('RuntimeError', function (t) {
-        return function (r) {
-            return i(t, this, arguments);
+    l('RuntimeError', function (t) {
+        return function (e) {
+            return a(t, this, arguments);
         };
     });

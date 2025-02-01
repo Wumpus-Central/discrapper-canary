@@ -1,18 +1,18 @@
-function n(e) {
-    let n = e.regex,
-        r = /[a-zA-Z]\w*/,
+function t(e) {
+    let t = e.regex,
+        n = /[a-zA-Z]\w*/,
         i = ['as', 'break', 'class', 'construct', 'continue', 'else', 'for', 'foreign', 'if', 'import', 'in', 'is', 'return', 'static', 'var', 'while'],
-        a = ['true', 'false', 'null'],
-        o = ['this', 'super'],
+        r = ['true', 'false', 'null'],
+        a = ['this', 'super'],
         s = ['Bool', 'Class', 'Fiber', 'Fn', 'List', 'Map', 'Null', 'Num', 'Object', 'Range', 'Sequence', 'String', 'System'],
-        l = ['-', '~', /\*/, '%', /\.\.\./, /\.\./, /\+/, '<<', '>>', '>=', '<=', '<', '>', /\^/, /!=/, /!/, /\bis\b/, '==', '&&', '&', /\|\|/, /\|/, /\?:/, '='],
-        u = {
+        o = ['-', '~', /\*/, '%', /\.\.\./, /\.\./, /\+/, '<<', '>>', '>=', '<=', '<', '>', /\^/, /!=/, /!/, /\bis\b/, '==', '&&', '&', /\|\|/, /\|/, /\?:/, '='],
+        l = {
             relevance: 0,
-            match: n.concat(/\b(?!(if|while|for|else|super)\b)/, r, /(?=\s*[({])/),
+            match: t.concat(/\b(?!(if|while|for|else|super)\b)/, n, /(?=\s*[({])/),
             className: 'title.function'
         },
-        c = {
-            match: n.concat(n.either(n.concat(/\b(?!(if|while|for|else|super)\b)/, r), n.either(...l)), /(?=\s*\([^)]+\)\s*\{)/),
+        u = {
+            match: t.concat(t.either(t.concat(/\b(?!(if|while|for|else|super)\b)/, n), t.either(...o)), /(?=\s*\([^)]+\)\s*\{)/),
             className: 'title.function',
             starts: {
                 contains: [
@@ -23,20 +23,20 @@ function n(e) {
                             {
                                 relevance: 0,
                                 scope: 'params',
-                                match: r
+                                match: n
                             }
                         ]
                     }
                 ]
             }
         },
-        d = {
+        c = {
             variants: [
                 {
-                    match: [/class\s+/, r, /\s+is\s+/, r]
+                    match: [/class\s+/, n, /\s+is\s+/, n]
                 },
                 {
-                    match: [/class\s+/, r]
+                    match: [/class\s+/, n]
                 }
             ],
             scope: {
@@ -45,44 +45,44 @@ function n(e) {
             },
             keywords: i
         },
-        f = {
+        d = {
             relevance: 0,
-            match: n.either(...l),
+            match: t.either(...o),
             className: 'operator'
         },
-        p = {
+        f = {
             className: 'string',
             begin: /"""/,
             end: /"""/
         },
-        h = {
+        _ = {
             className: 'property',
-            begin: n.concat(/\./, n.lookahead(r)),
-            end: r,
+            begin: t.concat(/\./, t.lookahead(n)),
+            end: n,
             excludeBegin: !0,
             relevance: 0
         },
-        _ = {
+        p = {
             relevance: 0,
-            match: n.concat(/\b_/, r),
+            match: t.concat(/\b_/, n),
             scope: 'variable'
         },
-        m = {
+        h = {
             relevance: 0,
             match: /\b[A-Z]+[a-z]+([A-Z]+[a-z]+)*/,
             scope: 'title.class',
             keywords: { _: s }
         },
-        g = e.C_NUMBER_MODE,
-        E = {
-            match: [r, /\s*/, /=/, /\s*/, /\(/, r, /\)\s*\{/],
+        m = e.C_NUMBER_MODE,
+        g = {
+            match: [n, /\s*/, /=/, /\s*/, /\(/, n, /\)\s*\{/],
             scope: {
                 1: 'title.function',
                 3: 'operator',
                 6: 'params'
             }
         },
-        v = e.COMMENT(/\/\*\*/, /\*\//, {
+        E = e.COMMENT(/\/\*\*/, /\*\//, {
             contains: [
                 {
                     match: /@[a-z]+/,
@@ -91,38 +91,38 @@ function n(e) {
                 'self'
             ]
         }),
-        y = {
+        v = {
             scope: 'subst',
             begin: /%\(/,
             end: /\)/,
-            contains: [g, m, u, _, f]
+            contains: [m, h, l, p, d]
         },
-        b = {
+        y = {
             scope: 'string',
             begin: /"/,
             end: /"/,
             contains: [
-                y,
+                v,
                 {
                     scope: 'char.escape',
                     variants: [{ match: /\\\\|\\["0%abefnrtv]/ }, { match: /\\x[0-9A-F]{2}/ }, { match: /\\u[0-9A-F]{4}/ }, { match: /\\U[0-9A-F]{8}/ }]
                 }
             ]
         };
-    y.contains.push(b);
-    let I = [...i, ...o, ...a],
+    v.contains.push(y);
+    let I = [...i, ...a, ...r],
         T = {
             relevance: 0,
-            match: n.concat('\\b(?!', I.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
+            match: t.concat('\\b(?!', I.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
             className: 'variable'
         },
-        S = {
+        b = {
             scope: 'comment',
             variants: [
                 {
                     begin: [/#!?/, /[A-Za-z_]+(?=\()/],
                     beginScope: {},
-                    keywords: { literal: a },
+                    keywords: { literal: r },
                     contains: [],
                     end: /\)/
                 },
@@ -137,10 +137,10 @@ function n(e) {
         name: 'Wren',
         keywords: {
             keyword: i,
-            'variable.language': o,
-            literal: a
+            'variable.language': a,
+            literal: r
         },
-        contains: [S, g, b, p, v, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, m, d, E, c, u, f, _, h, T]
+        contains: [b, m, y, f, E, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, h, c, g, u, l, d, p, _, T]
     };
 }
-e.exports = n;
+e.exports = t;

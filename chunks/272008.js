@@ -1,5 +1,5 @@
 n.d(t, {
-    AH: () => T,
+    AH: () => b,
     Ag: () => P,
     CS: () => v,
     EW: () => x,
@@ -13,7 +13,7 @@ n.d(t, {
     gl: () => N,
     is: () => y,
     lL: () => U,
-    m0: () => b,
+    m0: () => T,
     nE: () => C,
     pf: () => A,
     qm: () => w,
@@ -118,7 +118,7 @@ async function I() {
         }
     }
 }
-async function b(e) {
+async function T(e) {
     let { questId: t, streamKey: n, terminal: r = !1 } = e;
     try {
         var l;
@@ -155,7 +155,7 @@ async function b(e) {
         });
     }
 }
-async function T(e, t) {
+async function b(e, t) {
     if (
         (null != t.questContentCTA &&
             (0, l._3)({

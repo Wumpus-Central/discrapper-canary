@@ -1,10 +1,10 @@
-var i = r(690244),
-    a = i('%Math.abs%'),
-    o = i('%Math.floor%'),
-    s = r(45331),
-    l = r(238896);
+var i = n(690244),
+    r = i('%Math.abs%'),
+    a = i('%Math.floor%'),
+    s = n(45331),
+    o = n(238896);
 e.exports = function (e) {
-    if ('number' != typeof e || s(e) || !l(e)) return !1;
-    var n = a(e);
-    return o(n) === n;
+    if ('number' != typeof e || s(e) || !o(e)) return !1;
+    var t = r(e);
+    return a(t) === t;
 };

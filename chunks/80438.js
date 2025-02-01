@@ -1,13 +1,13 @@
-var i = r(294377),
-    a = r(96403),
-    o = i('Symbol'),
-    s = o.keyFor,
-    l = a(o.prototype.valueOf);
+var i = n(294377),
+    r = n(96403),
+    a = i('Symbol'),
+    s = a.keyFor,
+    o = r(a.prototype.valueOf);
 e.exports =
-    o.isRegisteredSymbol ||
+    a.isRegisteredSymbol ||
     function (e) {
         try {
-            return void 0 !== s(l(e));
+            return void 0 !== s(o(e));
         } catch (e) {
             return !1;
         }

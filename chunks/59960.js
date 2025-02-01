@@ -1,7 +1,7 @@
-t.exports = {
-    emailVerificationModal: 'emailVerificationModal_be7f63',
-    animationContainer: 'animationContainer_be7f63',
-    title: 'title_be7f63',
-    body: 'body_be7f63',
-    container: 'container_be7f63'
+e.exports = {
+    emailVerificationModal: 'emailVerificationModal_a2241a',
+    animationContainer: 'animationContainer_a2241a',
+    title: 'title_a2241a',
+    body: 'body_a2241a',
+    container: 'container_a2241a'
 };

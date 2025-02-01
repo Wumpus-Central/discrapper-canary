@@ -1,13 +1,13 @@
-var i = r(67867),
-    a = r(414629),
-    o = r(197859),
-    s = r(821819),
-    l = r(294377),
-    u = r(735471),
-    c = r(992416),
-    d = r(607672),
-    f = r(691244),
-    p = o && o.prototype;
+var i = n(67867),
+    r = n(414629),
+    a = n(197859),
+    s = n(821819),
+    o = n(294377),
+    l = n(735471),
+    u = n(992416),
+    c = n(607672),
+    d = n(691244),
+    f = a && a.prototype;
 if (
     (i(
         {
@@ -15,9 +15,9 @@ if (
             proto: !0,
             real: !0,
             forced:
-                !!o &&
+                !!a &&
                 s(function () {
-                    p.finally.call(
+                    f.finally.call(
                         {
                             then: function () {}
                         },
@@ -27,20 +27,20 @@ if (
         },
         {
             finally: function (e) {
-                var n = c(this, l('Promise')),
-                    r = u(e);
+                var t = u(this, o('Promise')),
+                    n = l(e);
                 return this.then(
-                    r
-                        ? function (r) {
-                              return d(n, e()).then(function () {
-                                  return r;
+                    n
+                        ? function (n) {
+                              return c(t, e()).then(function () {
+                                  return n;
                               });
                           }
                         : e,
-                    r
-                        ? function (r) {
-                              return d(n, e()).then(function () {
-                                  throw r;
+                    n
+                        ? function (n) {
+                              return c(t, e()).then(function () {
+                                  throw n;
                               });
                           }
                         : e
@@ -48,8 +48,8 @@ if (
             }
         }
     ),
-    !a && u(o))
+    !r && l(a))
 ) {
-    var h = l('Promise').prototype.finally;
-    p.finally !== h && f(p, 'finally', h, { unsafe: !0 });
+    var _ = o('Promise').prototype.finally;
+    f.finally !== _ && d(f, 'finally', _, { unsafe: !0 });
 }

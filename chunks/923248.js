@@ -1,5 +1,5 @@
 e.exports = {
-    options: 'options_bbd3ea',
-    neverShow: 'neverShow_bbd3ea',
-    cancelButton: 'cancelButton_bbd3ea'
+    neverShow: 'neverShow__8c141',
+    options: 'options__8c141',
+    cancelButton: 'cancelButton__8c141'
 };

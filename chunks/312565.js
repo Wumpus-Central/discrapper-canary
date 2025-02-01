@@ -1,7 +1,7 @@
 e.exports = {
-    empty: 'empty_c47fa9',
-    headerText: 'headerText_c47fa9',
-    privateChannelsHeaderContainer: 'privateChannelsHeaderContainer_c47fa9',
-    privateChannelRecipientsInviteButtonIcon: 'privateChannelRecipientsInviteButtonIcon_c47fa9',
-    scroller: 'scroller_c47fa9'
+    empty: 'empty__99e7c',
+    headerText: 'headerText__99e7c',
+    privateChannelsHeaderContainer: 'privateChannelsHeaderContainer__99e7c',
+    privateChannelRecipientsInviteButtonIcon: 'privateChannelRecipientsInviteButtonIcon__99e7c',
+    scroller: 'scroller__99e7c'
 };

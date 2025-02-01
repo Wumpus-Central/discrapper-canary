@@ -1,51 +1,51 @@
-e.r(t);
-var r = e(200651);
-e(192379);
-var i = e(481060),
-    l = e(287734),
-    o = e(313201),
-    c = e(471253),
-    a = e(939863),
-    s = e(388032),
-    u = e(962190);
-t.default = (n) => {
-    let { channel: t, ...e } = n,
-        d = (0, o.Dt)();
-    return (0, r.jsxs)(i.ConfirmModal, {
-        confirmText: s.intl.string(s.t.saZaRU),
-        cancelText: s.intl.string(s.t['ETE/oK']),
+t.d(e, { default: () => u });
+var i = t(200651);
+t(192379);
+var r = t(481060),
+    l = t(287734),
+    a = t(313201),
+    o = t(471253),
+    s = t(939863),
+    c = t(388032),
+    d = t(962190);
+let u = (n) => {
+    let { channel: e, ...t } = n,
+        u = (0, a.Dt)();
+    return (0, i.jsxs)(r.ConfirmModal, {
+        confirmText: c.intl.string(c.t.saZaRU),
+        cancelText: c.intl.string(c.t['ETE/oK']),
         onConfirm: () => {
-            (0, c.NZ)(t), l.default.disconnect();
+            (0, o.NZ)(e), l.default.disconnect();
         },
-        confirmButtonColor: i.Button.Colors.RED,
-        bodyClassName: u.body,
-        ...e,
+        confirmButtonColor: r.zxk.Colors.RED,
+        bodyClassName: d.body,
+        ...t,
         children: [
-            (0, r.jsx)(a.Z, {
-                className: u.headerIconContainer,
-                children: (0, r.jsx)('div', {
-                    className: u.iconBackground,
-                    children: (0, r.jsx)(i.StageXIcon, {
+            (0, i.jsx)(s.Z, {
+                className: d.headerIconContainer,
+                children: (0, i.jsx)('div', {
+                    className: d.iconBackground,
+                    children: (0, i.jsx)(r.XzT, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 40,
                         height: 40,
-                        className: u.headerIcon
+                        className: d.headerIcon
                     })
                 })
             }),
-            (0, r.jsx)(i.Heading, {
-                id: d,
+            (0, i.jsx)(r.X6q, {
+                id: u,
                 variant: 'heading-xl/semibold',
                 color: 'header-primary',
-                className: u.title,
-                children: s.intl.string(s.t.xrYNBA)
+                className: d.title,
+                children: c.intl.string(c.t.xrYNBA)
             }),
-            (0, r.jsx)(i.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: u.subtitle,
-                children: s.intl.string(s.t.TP1D8v)
+                className: d.subtitle,
+                children: c.intl.string(c.t.TP1D8v)
             })
         ]
     });

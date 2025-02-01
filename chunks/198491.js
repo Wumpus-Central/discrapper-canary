@@ -1,11 +1,11 @@
 e.exports = {
-    voiceModalContainer: 'voiceModalContainer_e52708',
-    voiceModalRootContainer: 'voiceModalRootContainer_e52708',
-    channelIdSection: 'channelIdSection_e52708',
-    inputWrapper: 'inputWrapper_e52708',
-    voiceChannelList: 'voiceChannelList_e52708',
-    guildName: 'guildName_e52708',
-    selectedVoiceChannel: 'selectedVoiceChannel_e52708',
-    noVoiceChannelSelected: 'noVoiceChannelSelected_e52708',
-    voiceListSearchEmpty: 'voiceListSearchEmpty_e52708'
+    voiceModalContainer: 'voiceModalContainer__25eff',
+    voiceModalRootContainer: 'voiceModalRootContainer__25eff',
+    channelIdSection: 'channelIdSection__25eff',
+    inputWrapper: 'inputWrapper__25eff',
+    voiceChannelList: 'voiceChannelList__25eff',
+    guildName: 'guildName__25eff',
+    selectedVoiceChannel: 'selectedVoiceChannel__25eff',
+    noVoiceChannelSelected: 'noVoiceChannelSelected__25eff',
+    voiceListSearchEmpty: 'voiceListSearchEmpty__25eff'
 };

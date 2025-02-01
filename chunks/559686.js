@@ -1,5 +1,5 @@
 t.exports = {
-    title: 'title_dee2a4',
-    body: 'body_dee2a4',
-    art: 'art_dee2a4'
+    title: 'title__3a7a0',
+    body: 'body__3a7a0',
+    art: 'art__3a7a0'
 };

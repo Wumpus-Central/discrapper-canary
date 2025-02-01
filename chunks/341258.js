@@ -1,4 +1,4 @@
 e.exports = {
-    bioTextArea: 'bioTextArea_ccf27d',
-    bioTextAreaContainer: 'bioTextAreaContainer_ccf27d'
+    bioTextArea: 'bioTextArea__6a919',
+    bioTextAreaContainer: 'bioTextAreaContainer__6a919'
 };

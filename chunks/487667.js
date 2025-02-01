@@ -1,8 +1,8 @@
 e.exports = {
-    priceTagsContainer: 'priceTagsContainer_c72deb',
-    price: 'price_c72deb',
-    striked: 'striked_c72deb',
-    dimmed: 'dimmed_c72deb',
-    fullPrice: 'fullPrice_c72deb',
-    premiumIcon: 'premiumIcon_c72deb'
+    priceTagsContainer: 'priceTagsContainer_f73e93',
+    price: 'price_f73e93',
+    striked: 'striked_f73e93',
+    dimmed: 'dimmed_f73e93',
+    fullPrice: 'fullPrice_f73e93',
+    premiumIcon: 'premiumIcon_f73e93'
 };

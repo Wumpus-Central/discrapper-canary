@@ -1,64 +1,64 @@
-var i = r(47120);
-var a = r(392711),
-    o = r.n(a),
-    s = r(25209),
-    l = r(691424),
-    u = r(428595),
-    c = r(364458);
-let d = null;
-function f(e, n) {
-    let r = {};
-    return null != e.mention && null != d && (r = { mention: d }), (0, c.Z)([e, ...n, r]);
+n.d(t, { Z: () => b }), n(47120);
+var i = n(392711),
+    r = n.n(i),
+    a = n(25209),
+    s = n(691424),
+    o = n(428595),
+    l = n(364458);
+let u = null;
+function c(e, t) {
+    let n = {};
+    return null != e.mention && null != u && (n = { mention: u }), (0, l.Z)([e, ...t, n]);
 }
-d = r(878611).Z;
-let p = {
+u = n(878611).Z;
+let d = {
         enableBuildOverrides: !1,
         enableEmojiClick: !0
     },
-    h = f(u.Z.RULES, [(0, l.Z)({ enableBuildOverrides: !0 })]),
-    _ = o().omit(f(u.Z.RULES, [(0, l.Z)(p)]), 'paragraph', 'newline'),
-    m = f(u.Z.CHANNEL_TOPIC_RULES, [
-        (0, l.Z)({
-            ...p,
+    f = c(o.Z.RULES, [(0, s.Z)({ enableBuildOverrides: !0 })]),
+    _ = r().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline'),
+    p = c(o.Z.CHANNEL_TOPIC_RULES, [
+        (0, s.Z)({
+            ...d,
             emojiTooltipPosition: 'bottom'
         }),
-        { codeBlock: { react: u.Z.RULES.text.react } }
+        { codeBlock: { react: o.Z.RULES.text.react } }
     ]),
-    g = f(u.Z.VOICE_CHANNEL_STATUS_RULES, [
-        (0, l.Z)({
-            ...p,
+    h = c(o.Z.VOICE_CHANNEL_STATUS_RULES, [
+        (0, s.Z)({
+            ...d,
             enableEmojiClick: !1
         })
     ]),
-    E = f(u.Z.EMBED_TITLE_RULES, [(0, l.Z)(p)]),
-    v = f(u.Z.INLINE_REPLY_RULES, [(0, l.Z)(p)]),
-    y = f(u.Z.GUILD_VERIFICATION_FORM_RULES, [(0, l.Z)(p)]),
-    b = f(u.Z.GUILD_EVENT_RULES, [(0, l.Z)(p)]),
-    I = f(u.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, l.Z)(p)]),
-    T = o().omit(f(u.Z.RULES, [(0, l.Z)(p)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
-    S = { text: u.Z.RULES.text };
-n.Z = {
-    combineAndInjectMentionRule: f,
-    createReactRules: l.Z,
-    defaultReactRuleOptions: p,
-    defaultRules: h,
-    guildEventRules: b,
-    notifCenterV2MessagePreviewRules: T,
-    lockscreenWidgetMessageRules: S,
-    astParserFor: s._p,
-    reactParserFor: s.w4,
-    parse: s.w4(h),
-    parseTopic: s.w4(m),
-    parseVoiceChannelStatus: s.w4(g),
-    parseEmbedTitle: s.w4(E),
-    parseInlineReply: s.w4(v),
-    parseGuildVerificationFormRule: s.w4(y),
-    parseGuildEventDescription: s.w4(b),
-    parseAutoModerationSystemMessage: s.w4(I),
-    parseForumPostGuidelines: s.w4(_),
-    parseToAST: s._p(h),
-    parseTopicToAST: s._p(m),
-    parseEmbedTitleToAST: s._p(E),
-    parseInlineReplyToAST: s._p(v),
-    parseAutoModerationSystemMessageToAST: s._p(I)
-};
+    m = c(o.Z.EMBED_TITLE_RULES, [(0, s.Z)(d)]),
+    g = c(o.Z.INLINE_REPLY_RULES, [(0, s.Z)(d)]),
+    E = c(o.Z.GUILD_VERIFICATION_FORM_RULES, [(0, s.Z)(d)]),
+    v = c(o.Z.GUILD_EVENT_RULES, [(0, s.Z)(d)]),
+    y = c(o.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.Z)(d)]),
+    I = r().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
+    T = { text: o.Z.RULES.text },
+    b = {
+        combineAndInjectMentionRule: c,
+        createReactRules: s.Z,
+        defaultReactRuleOptions: d,
+        defaultRules: f,
+        guildEventRules: v,
+        notifCenterV2MessagePreviewRules: I,
+        lockscreenWidgetMessageRules: T,
+        astParserFor: a._p,
+        reactParserFor: a.w4,
+        parse: a.w4(f),
+        parseTopic: a.w4(p),
+        parseVoiceChannelStatus: a.w4(h),
+        parseEmbedTitle: a.w4(m),
+        parseInlineReply: a.w4(g),
+        parseGuildVerificationFormRule: a.w4(E),
+        parseGuildEventDescription: a.w4(v),
+        parseAutoModerationSystemMessage: a.w4(y),
+        parseForumPostGuidelines: a.w4(_),
+        parseToAST: a._p(f),
+        parseTopicToAST: a._p(p),
+        parseEmbedTitleToAST: a._p(m),
+        parseInlineReplyToAST: a._p(g),
+        parseAutoModerationSystemMessageToAST: a._p(y)
+    };

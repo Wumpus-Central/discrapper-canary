@@ -15,8 +15,8 @@ let o = Object.freeze({
 function l(e) {
     let { sections: t, columns: n, getItemKey: l, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: f, maxBufferWidth: _, itemGutter: p, removeEdgeItemGutters: h, sectionGutter: m, padding: g, paddingVertical: E, paddingHorizontal: v, dir: y } = e,
         I = (0, a.Z)(),
-        b = (0, i.useRef)(o),
-        [T] = (0, i.useState)(() => new r.ZP()),
+        T = (0, i.useRef)(o),
+        [b] = (0, i.useState)(() => new r.ZP()),
         S = f(),
         A = Math.min(null != _ ? _ : 1 / 0, S.offsetWidth),
         N = null != _ ? Math.max(0, S.offsetWidth - _) : 0,
@@ -31,11 +31,11 @@ function l(e) {
             forceUpdate: I
         });
     return (
-        (b.current = (0, i.useMemo)(
+        (T.current = (0, i.useMemo)(
             () =>
                 C > 0
-                    ? b.current
-                    : (T.mergeProps({
+                    ? T.current
+                    : (b.mergeProps({
                           sections: t,
                           columns: n,
                           getItemKey: l,
@@ -51,13 +51,13 @@ function l(e) {
                           marginLeft: N / 2,
                           dir: y
                       }),
-                      T.computeVisibleSections(Math.max(0, R * d), O * d),
-                      T.getState()),
-            [C, T, t, n, l, u, c, R, O, d, p, h, m, g, E, v, A, y]
+                      b.computeVisibleSections(Math.max(0, R * d), O * d),
+                      b.getState()),
+            [C, b, t, n, l, u, c, R, O, d, p, h, m, g, E, v, A, y]
         )),
         {
-            ...b.current,
-            masonryComputer: T,
+            ...T.current,
+            masonryComputer: b,
             forceUpdateOnChunkChange: D,
             forceUpdate: I
         }

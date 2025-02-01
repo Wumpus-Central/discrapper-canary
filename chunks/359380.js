@@ -1,4 +1,4 @@
-n(47120), n(653041);
+n.d(t, { Z: () => h }), n(47120), n(653041);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -72,15 +72,15 @@ function m(e) {
             return null !== (e = null != m ? m : null == s ? void 0 : s.interests) && void 0 !== e ? e : new Set();
         }, [m, null == s ? void 0 : s.interests]),
         p = r.useMemo(() => Array.from(x), [x]),
-        f = r.useMemo(() => p.filter((e) => o.gh.has(e)), [p]),
+        _ = r.useMemo(() => p.filter((e) => o.gh.has(e)), [p]),
         C = r.useCallback(
             (e) => {
                 n(new Set([...p.filter((e) => !o.gh.has(e)), ...e]));
             },
             [n, p]
         ),
-        v = r.useMemo(() => p.filter((e) => o.WZ.has(e) || o.gh.has(e)), [p]),
-        I = r.useCallback(
+        f = r.useMemo(() => p.filter((e) => o.WZ.has(e) || o.gh.has(e)), [p]),
+        v = r.useCallback(
             (e) => {
                 let t = new Set(x);
                 t.delete(e), n(t);
@@ -95,14 +95,14 @@ function m(e) {
                 children: [
                     (0, i.jsx)(u, {
                         title: c.intl.string(c.t.SXqVqq),
-                        icon: l.UserIcon,
+                        icon: l.tBG,
                         availableTraits: o.jK,
                         selectedTraits: x,
                         onUpdateTraits: n
                     }),
                     (0, i.jsx)(u, {
                         title: c.intl.string(c.t['7uZoaG']),
-                        icon: l.UserIcon,
+                        icon: l.tBG,
                         availableTraits: o.CT,
                         selectedTraits: x,
                         onUpdateTraits: n
@@ -115,10 +115,10 @@ function m(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: d.languageSelect,
-                        children: (0, i.jsx)(l.SearchableSelect, {
+                        children: (0, i.jsx)(l.VcW, {
                             wrapperClassName: d.input,
                             options: g,
-                            value: f,
+                            value: _,
                             onChange: C,
                             placeholder: c.intl.string(c.t.GA91en),
                             multi: !0
@@ -135,15 +135,15 @@ function m(e) {
                     (0, i.jsx)(a.Z, {
                         guildId: t,
                         progress: s,
-                        traitsToHighlight: v,
+                        traitsToHighlight: f,
                         maskDescription: !0,
-                        onTraitClick: I
+                        onTraitClick: v
                     })
             })
         ]
     });
 }
-t.Z = (e) => {
+let h = (e) => {
     let { guildId: t, title: n, description: r, onUpdateTraits: s, progress: a, traits: o, optional: u = !1, hidePreview: h = !1 } = e;
     return (0, i.jsxs)('div', {
         className: d.slideContent,
@@ -155,7 +155,7 @@ t.Z = (e) => {
                     className: d.optionalTag,
                     children: c.intl.string(c.t['vWEL6+'])
                 }),
-            (0, i.jsx)(l.Heading, {
+            (0, i.jsx)(l.X6q, {
                 variant: 'heading-xxl/medium',
                 className: d.title,
                 children: n

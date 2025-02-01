@@ -1,9 +1,9 @@
 t.exports = {
-    body: 'body_c96919',
-    wumpus: 'wumpus_c96919',
-    textContainer: 'textContainer_c96919',
-    buttonContainer: 'buttonContainer_c96919',
-    ringContainer: 'ringContainer_c96919',
-    iconButton: 'iconButton_c96919',
-    icon: 'icon_c96919'
+    body: 'body__7ce16',
+    wumpus: 'wumpus__7ce16',
+    textContainer: 'textContainer__7ce16',
+    buttonContainer: 'buttonContainer__7ce16',
+    ringContainer: 'ringContainer__7ce16',
+    iconButton: 'iconButton__7ce16',
+    icon: 'icon__7ce16'
 };

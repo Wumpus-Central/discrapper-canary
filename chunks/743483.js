@@ -1,12 +1,12 @@
 e.exports = {
-    muted: 'muted_ec8679',
-    avatar: 'avatar_ec8679',
-    highlighted: 'highlighted_ec8679',
-    layout: 'layout_ec8679',
-    content: 'content_ec8679',
-    name: 'name_ec8679',
-    wrappedLayout: 'wrappedLayout_ec8679',
-    wrappedName: 'wrappedName_ec8679',
-    nameAndDecorators: 'nameAndDecorators_ec8679',
-    subText: 'subText_ec8679'
+    muted: 'muted__20a53',
+    avatar: 'avatar__20a53',
+    highlighted: 'highlighted__20a53',
+    layout: 'layout__20a53',
+    content: 'content__20a53',
+    name: 'name__20a53',
+    wrappedLayout: 'wrappedLayout__20a53',
+    wrappedName: 'wrappedName__20a53',
+    nameAndDecorators: 'nameAndDecorators__20a53',
+    subText: 'subText__20a53'
 };

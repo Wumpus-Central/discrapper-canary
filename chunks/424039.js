@@ -1,8 +1,8 @@
 e.exports = {
-    container: 'container_c06a56',
-    iconContainer: 'iconContainer_c06a56',
-    icon: 'icon_c06a56',
-    header: 'header_c06a56',
-    headerText: 'headerText_c06a56',
-    button: 'button_c06a56'
+    container: 'container__65338',
+    iconContainer: 'iconContainer__65338',
+    icon: 'icon__65338',
+    header: 'header__65338',
+    headerText: 'headerText__65338',
+    button: 'button__65338'
 };

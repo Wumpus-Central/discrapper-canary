@@ -1,6 +1,6 @@
-function n(r) {
+function t(n) {
     return (
-        (e.exports = n =
+        (e.exports = t =
             'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
                 ? function (e) {
                       return typeof e;
@@ -10,7 +10,7 @@ function n(r) {
                   }),
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports),
-        n(r)
+        t(n)
     );
 }
-(e.exports = n), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);

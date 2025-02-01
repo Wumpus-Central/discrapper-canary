@@ -4,12 +4,12 @@ n.d(t, {
     Mn: () => v,
     P6: () => R,
     S2: () => E,
-    UZ: () => b,
+    UZ: () => T,
     V3: () => y,
     W3: () => C,
     Zy: () => m,
     b9: () => A,
-    cV: () => T,
+    cV: () => b,
     si: () => N,
     ss: () => g,
     xn: () => S
@@ -148,13 +148,13 @@ function I(e) {
     }),
         null == e ? a.uv.announce(p.intl.string(p.t['f1+oNj'])) : a.uv.announce(p.intl.string(p.t.NstziY));
 }
-function b(e) {
+function T(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME',
         globalName: e
     });
 }
-function T(e) {
+function b(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION',
         avatarDecoration: e

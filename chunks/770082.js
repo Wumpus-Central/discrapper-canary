@@ -1,4 +1,4 @@
 e.exports = {
-    settingsItemHighlight: 'settingsItemHighlight_fd41ea',
-    settingsBackgroundFlashElement: 'settingsBackgroundFlashElement_fd41ea'
+    settingsItemHighlight: 'settingsItemHighlight__7cd2d',
+    settingsBackgroundFlashElement: 'settingsBackgroundFlashElement__7cd2d'
 };

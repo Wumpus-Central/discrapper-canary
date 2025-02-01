@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
             1: '۱',
             2: '۲',
             3: '۳',
@@ -13,7 +13,7 @@
             9: '۹',
             0: '۰'
         },
-        r = {
+        n = {
             '۱': '1',
             '۲': '2',
             '۳': '3',
@@ -44,7 +44,7 @@
         isPM: function (e) {
             return /بعد از ظهر/.test(e);
         },
-        meridiem: function (e, n, r) {
+        meridiem: function (e, t, n) {
             return e < 12 ? 'قبل از ظهر' : 'بعد از ظهر';
         },
         calendar: {
@@ -74,14 +74,14 @@
         preparse: function (e) {
             return e
                 .replace(/[۰-۹]/g, function (e) {
-                    return r[e];
+                    return n[e];
                 })
                 .replace(/،/g, ',');
         },
         postformat: function (e) {
             return e
                 .replace(/\d/g, function (e) {
-                    return n[e];
+                    return t[e];
                 })
                 .replace(/,/g, '\u060C');
         },

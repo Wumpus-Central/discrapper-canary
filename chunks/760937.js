@@ -1,13 +1,13 @@
-var i = r(565580);
-function a(e, n) {
-    var r = -1,
-        a = e.length,
-        o = a - 1;
-    for (n = void 0 === n ? a : n; ++r < n; ) {
-        var s = i(r, o),
-            l = e[s];
-        (e[s] = e[r]), (e[r] = l);
+var i = n(565580);
+function r(e, t) {
+    var n = -1,
+        r = e.length,
+        a = r - 1;
+    for (t = void 0 === t ? r : t; ++n < t; ) {
+        var s = i(n, a),
+            o = e[s];
+        (e[s] = e[n]), (e[n] = o);
     }
-    return (e.length = n), e;
+    return (e.length = t), e;
 }
-e.exports = a;
+e.exports = r;

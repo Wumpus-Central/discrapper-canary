@@ -1,14 +1,14 @@
 e.exports = {
-    modal: 'modal_b8f561',
-    container: 'container_b8f561',
-    headerIcon: 'headerIcon_b8f561',
-    modalCloseButton: 'modalCloseButton_b8f561',
-    verifiedRoles: 'verifiedRoles_b8f561',
-    verifiedRole: 'verifiedRole_b8f561',
-    verifiedRoleNameDescriptionContainer: 'verifiedRoleNameDescriptionContainer_b8f561',
-    verifiedRoleName: 'verifiedRoleName_b8f561',
-    verifiedRoleDescription: 'verifiedRoleDescription_b8f561',
-    verifiedRoleHasRole: 'verifiedRoleHasRole_b8f561',
-    roleCheckmark: 'roleCheckmark_b8f561',
-    botAvatar: 'botAvatar_b8f561'
+    modal: 'modal_e59759',
+    container: 'container_e59759',
+    headerIcon: 'headerIcon_e59759',
+    modalCloseButton: 'modalCloseButton_e59759',
+    verifiedRoles: 'verifiedRoles_e59759',
+    verifiedRole: 'verifiedRole_e59759',
+    verifiedRoleNameDescriptionContainer: 'verifiedRoleNameDescriptionContainer_e59759',
+    verifiedRoleDescription: 'verifiedRoleDescription_e59759',
+    verifiedRoleName: 'verifiedRoleName_e59759',
+    verifiedRoleHasRole: 'verifiedRoleHasRole_e59759',
+    roleCheckmark: 'roleCheckmark_e59759',
+    botAvatar: 'botAvatar_e59759'
 };

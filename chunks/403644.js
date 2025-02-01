@@ -1,13 +1,13 @@
-var i = r(812639),
-    a = r(757209),
-    o = r(105890),
+var i = n(812639),
+    r = n(757209),
+    a = n(105890),
     s = Math.ceil,
-    l = Math.max;
-function u(e, n, r) {
-    n = (r ? a(e, n, r) : void 0 === n) ? 1 : l(o(n), 0);
-    var u = null == e ? 0 : e.length;
-    if (!u || n < 1) return [];
-    for (var c = 0, d = 0, f = Array(s(u / n)); c < u; ) f[d++] = i(e, c, (c += n));
-    return f;
+    o = Math.max;
+function l(e, t, n) {
+    t = (n ? r(e, t, n) : void 0 === t) ? 1 : o(a(t), 0);
+    var l = null == e ? 0 : e.length;
+    if (!l || t < 1) return [];
+    for (var u = 0, c = 0, d = Array(s(l / t)); u < l; ) d[c++] = i(e, u, (u += t));
+    return d;
 }
-e.exports = u;
+e.exports = l;

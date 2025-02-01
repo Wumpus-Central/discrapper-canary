@@ -1,7 +1,7 @@
 e.exports = {
-    banner: 'banner_ad4cb5',
-    ctaContainer: 'ctaContainer_ad4cb5',
-    button: 'button_ad4cb5',
-    content: 'content_ad4cb5',
-    header: 'header_ad4cb5'
+    banner: 'banner_ec75b3',
+    ctaContainer: 'ctaContainer_ec75b3',
+    button: 'button_ec75b3',
+    content: 'content_ec75b3',
+    header: 'header_ec75b3'
 };

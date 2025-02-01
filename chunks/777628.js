@@ -1,15 +1,15 @@
-var i = r(726433),
-    a = r(729605),
-    o = r(937443).f,
-    s = r(960081),
-    l = 'object' == typeof window && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : [],
-    u = function (e) {
+var i = n(726433),
+    r = n(729605),
+    a = n(937443).f,
+    s = n(960081),
+    o = 'object' == typeof window && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : [],
+    l = function (e) {
         try {
-            return o(e);
+            return a(e);
         } catch (e) {
-            return s(l);
+            return s(o);
         }
     };
 e.exports.f = function (e) {
-    return l && 'Window' === i(e) ? u(e) : o(a(e));
+    return o && 'Window' === i(e) ? l(e) : a(r(e));
 };

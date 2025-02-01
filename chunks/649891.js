@@ -1,8 +1,8 @@
-var i = r(901806),
-    a = r(80014),
-    o = r(320249),
-    s = r(278757);
-function l(e) {
-    return o(e) ? i(s(e)) : a(e);
+var i = n(901806),
+    r = n(80014),
+    a = n(320249),
+    s = n(278757);
+function o(e) {
+    return a(e) ? i(s(e)) : r(e);
 }
-e.exports = l;
+e.exports = o;

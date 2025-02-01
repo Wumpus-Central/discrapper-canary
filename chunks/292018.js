@@ -1,6 +1,6 @@
 e.exports = {
-    header: 'header_abdb08',
-    content: 'content_abdb08',
-    footer: 'footer_abdb08',
-    root: 'root_abdb08'
+    header: 'header__11268',
+    content: 'content__11268',
+    footer: 'footer__11268',
+    root: 'root__11268'
 };

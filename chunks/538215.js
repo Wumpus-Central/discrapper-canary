@@ -1,38 +1,38 @@
-var i = r(47120);
-var a = r(147913),
-    o = r(358221),
-    s = r(729052),
-    l = r(592125),
-    u = r(979651),
-    c = r(556076);
-function d(e, n, r) {
+n.d(t, { Z: () => d }), n(47120);
+var i = n(147913),
+    r = n(358221),
+    a = n(729052),
+    s = n(592125),
+    o = n(979651),
+    l = n(556076);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class f extends a.Z {
+class c extends i.Z {
     handleVoiceChannelSelect(e) {
-        let { channelId: n, guildId: r } = e;
-        if (null == n || null == r) return;
-        let i = l.Z.getChannel(n);
-        if (null != i && (0, s.vS)(i) && i.isGuildVoice()) {
-            let e = o.Z.getParticipants(n).length,
-                r = u.Z.isInChannel(n),
-                i = e === (r ? 1 : 0),
-                a = e === (r ? 2 : 1);
-            i ? c.y(n, i) : a && c.y(n, i);
+        let { channelId: t, guildId: n } = e;
+        if (null == t || null == n) return;
+        let i = s.Z.getChannel(t);
+        if (null != i && (0, a.vS)(i) && i.isGuildVoice()) {
+            let e = r.Z.getParticipants(t).length,
+                n = o.Z.isInChannel(t),
+                i = e === (n ? 1 : 0),
+                a = e === (n ? 2 : 1);
+            i ? l.y(t, i) : a && l.y(t, i);
         }
     }
     constructor(...e) {
-        super(...e), d(this, 'actions', { VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect });
+        super(...e), u(this, 'actions', { VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect });
     }
 }
-n.Z = new f();
+let d = new c();

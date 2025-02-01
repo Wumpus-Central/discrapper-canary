@@ -1,5 +1,5 @@
-var i = r(97742);
-function a(e) {
+var i = n(97742);
+function r(e) {
     return null == e ? '' : i(e);
 }
-e.exports = a;
+e.exports = r;

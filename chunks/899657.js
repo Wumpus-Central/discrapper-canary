@@ -1,6 +1,6 @@
-function n(e) {
-    let n = e.regex,
-        r = {
+function t(e) {
+    let t = e.regex,
+        n = {
             $pattern: /[\w.\/]+/,
             built_in: ['action', 'bindattr', 'collection', 'component', 'concat', 'debugger', 'each', 'each-in', 'get', 'hash', 'if', 'in', 'input', 'link-to', 'loc', 'log', 'lookup', 'mut', 'outlet', 'partial', 'query-params', 'render', 'template', 'textarea', 'unbound', 'unless', 'view', 'with', 'yield']
         },
@@ -8,61 +8,61 @@ function n(e) {
             $pattern: /[\w.\/]+/,
             literal: ['true', 'false', 'undefined', 'null']
         },
-        a = /""|"[^"]+"/,
-        o = /''|'[^']+'/,
+        r = /""|"[^"]+"/,
+        a = /''|'[^']+'/,
         s = /\[\]|\[[^\]]+\]/,
-        l = /[^\s!"#%&'()*+,.\/;<=>@\[\\\]^`{|}~]+/,
-        u = /(\.|\/)/,
-        c = n.either(a, o, s, l),
-        d = n.concat(n.optional(/\.|\.\/|\//), c, n.anyNumberOfTimes(n.concat(u, c))),
-        f = n.concat('(', s, '|', l, ')(?==)'),
-        p = { begin: d },
-        h = e.inherit(p, { keywords: i }),
-        _ = {
+        o = /[^\s!"#%&'()*+,.\/;<=>@\[\\\]^`{|}~]+/,
+        l = /(\.|\/)/,
+        u = t.either(r, a, s, o),
+        c = t.concat(t.optional(/\.|\.\/|\//), u, t.anyNumberOfTimes(t.concat(l, u))),
+        d = t.concat('(', s, '|', o, ')(?==)'),
+        f = { begin: c },
+        _ = e.inherit(f, { keywords: i }),
+        p = {
             begin: /\(/,
             end: /\)/
         },
-        m = {
+        h = {
             className: 'attr',
-            begin: f,
+            begin: d,
             relevance: 0,
             starts: {
                 begin: /=/,
                 end: /=/,
                 starts: {
-                    contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, h, _]
+                    contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, _, p]
                 }
             }
         },
-        g = {
+        m = {
             begin: /as\s+\|/,
             keywords: { keyword: 'as' },
             end: /\|/,
             contains: [{ begin: /\w+/ }]
         },
-        E = {
-            contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, g, m, h, _],
+        g = {
+            contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, m, h, _, p],
             returnEnd: !0
         },
-        v = e.inherit(p, {
+        E = e.inherit(f, {
             className: 'name',
-            keywords: r,
-            starts: e.inherit(E, { end: /\)/ })
+            keywords: n,
+            starts: e.inherit(g, { end: /\)/ })
         });
-    _.contains = [v];
-    let y = e.inherit(p, {
-            keywords: r,
+    p.contains = [E];
+    let v = e.inherit(f, {
+            keywords: n,
             className: 'name',
-            starts: e.inherit(E, { end: /\}\}/ })
+            starts: e.inherit(g, { end: /\}\}/ })
         }),
-        b = e.inherit(p, {
-            keywords: r,
+        y = e.inherit(f, {
+            keywords: n,
             className: 'name'
         }),
-        I = e.inherit(p, {
+        I = e.inherit(f, {
             className: 'name',
-            keywords: r,
-            starts: e.inherit(E, { end: /\}\}/ })
+            keywords: n,
+            starts: e.inherit(g, { end: /\}\}/ })
         });
     return {
         name: 'Handlebars',
@@ -84,7 +84,7 @@ function n(e) {
                 className: 'template-tag',
                 begin: /\{\{\{\{(?!\/)/,
                 end: /\}\}\}\}/,
-                contains: [y],
+                contains: [v],
                 starts: {
                     end: /\{\{\{\{\//,
                     returnEnd: !0,
@@ -95,13 +95,13 @@ function n(e) {
                 className: 'template-tag',
                 begin: /\{\{\{\{\//,
                 end: /\}\}\}\}/,
-                contains: [b]
+                contains: [y]
             },
             {
                 className: 'template-tag',
                 begin: /\{\{#/,
                 end: /\}\}/,
-                contains: [y]
+                contains: [v]
             },
             {
                 className: 'template-tag',
@@ -119,7 +119,7 @@ function n(e) {
                 className: 'template-tag',
                 begin: /\{\{\//,
                 end: /\}\}/,
-                contains: [b]
+                contains: [y]
             },
             {
                 className: 'template-variable',
@@ -136,4 +136,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

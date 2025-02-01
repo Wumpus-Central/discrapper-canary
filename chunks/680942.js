@@ -12,8 +12,8 @@ var r = n(200651),
     h = n(474936),
     p = n(231338),
     m = n(388032),
-    f = n(74483);
-let g = {
+    g = n(74483);
+let f = {
         dark: [
             {
                 box: '#FFF19E',
@@ -78,10 +78,10 @@ let g = {
     x = (e) => {
         let { product: t, selectedVariantIndex: n, returnRef: x, onSuccess: _, tooltipDelay: v, isGiftEasterEggEnabled: b, disableCustomColor: k = !1 } = e,
             { analyticsLocations: j } = (0, a.ZP)(),
-            E = l.useRef(null),
-            L = (0, s.Z)(E),
-            I = k ? p.BR.DARK : p.BR.LIGHT,
-            S = (0, u.hv)('CollectiblesShopGiftButton');
+            L = l.useRef(null),
+            E = (0, s.Z)(L),
+            S = k ? p.BR.DARK : p.BR.LIGHT,
+            T = (0, u.hv)('CollectiblesShopGiftButton');
         return (0, c.x6)(t)
             ? null
             : (0, r.jsx)(i.ua7, {
@@ -90,12 +90,12 @@ let g = {
                   children: (e) =>
                       (0, r.jsx)(i.zxk, {
                           ...e,
-                          buttonRef: E,
-                          className: f.giftButton,
+                          buttonRef: L,
+                          className: g.giftButton,
                           color: k ? i.Ttl.BRAND : i.Ttl.CUSTOM,
                           look: i.zxk.Looks.FILLED,
                           size: i.PhG.ICON,
-                          innerClassName: f.giftButtonInner,
+                          innerClassName: g.giftButtonInner,
                           'aria-label': m.intl.string(m.t.PEjaCw),
                           onClick: (e) => {
                               e.stopPropagation(),
@@ -108,7 +108,7 @@ let g = {
                                       giftingOrigin: h.Wt.SHOP_PAGE,
                                       analyticsLocations: j,
                                       returnRef: x,
-                                      variantsReturnStyle: S,
+                                      variantsReturnStyle: T,
                                       onClose:
                                           null != _
                                               ? (e) => {
@@ -119,10 +119,10 @@ let g = {
                           },
                           children: b
                               ? (0, r.jsx)(d.Z, {
-                                    hovered: L,
+                                    hovered: E,
                                     isContentDismissed: !0,
-                                    themeOverride: I,
-                                    boxColors: g
+                                    themeOverride: S,
+                                    boxColors: f
                                 })
                               : (0, r.jsx)(i.OgN, {
                                     size: 'md',

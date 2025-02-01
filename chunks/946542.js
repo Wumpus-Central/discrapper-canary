@@ -1,34 +1,34 @@
-n(47120);
+n.d(t, { Z: () => C }), n(47120);
 var i = n(200651),
     a = n(192379),
     r = n(481060),
     l = n(434650),
-    o = n(303383),
-    s = n(924489),
+    s = n(303383),
+    o = n(924489),
     c = n(125909),
     d = n(824606),
     u = n(768581),
     m = n(881294),
-    p = n(981631),
-    h = n(388032),
+    h = n(981631),
+    p = n(388032),
     g = n(69812);
-function C(e) {
-    let { applicationId: t, similarApplications: n, onSelectApplication: r, similarLoadId: o } = e,
-        s = (function (e) {
+function _(e) {
+    let { applicationId: t, similarApplications: n, onSelectApplication: r, similarLoadId: s } = e,
+        o = (function (e) {
             let { applicationId: t, similarAppIds: n } = e,
                 [i, r] = a.useState(),
-                o = (0, l.O)((e) => {
+                s = (0, l.O)((e) => {
                     e && r(t);
                 });
             return (
                 a.useEffect(() => {
                     i === t &&
-                        (0, m.zZ)(p.rMx.APP_DIRECTORY_RECOMMENDATIONS_VIEWED, {
+                        (0, m.zZ)(h.rMx.APP_DIRECTORY_RECOMMENDATIONS_VIEWED, {
                             application_id: t,
                             suggested_application_ids: n
                         });
                 }, [i, t, n]),
-                o
+                s
             );
         })({
             applicationId: t,
@@ -36,7 +36,7 @@ function C(e) {
         });
     return (0, i.jsx)('div', {
         className: g.contentContainer,
-        ref: s,
+        ref: o,
         children: n.map((e, n) =>
             (0, i.jsx)(
                 x,
@@ -44,7 +44,7 @@ function C(e) {
                     applicationId: t,
                     similarApplication: e,
                     onSelectApplication: r,
-                    similarLoadId: o,
+                    similarLoadId: s,
                     position: n
                 },
                 e.id
@@ -54,9 +54,9 @@ function C(e) {
 }
 function x(e) {
     var t, n, l;
-    let { applicationId: o, similarApplication: c, onSelectApplication: h, position: C, similarLoadId: x } = e,
-        v = (0, d.Z)({ application: c }),
-        _ = null === (t = c.categories) || void 0 === t ? void 0 : t[0],
+    let { applicationId: s, similarApplication: c, onSelectApplication: p, position: _, similarLoadId: x } = e,
+        C = (0, d.Z)({ application: c }),
+        v = null === (t = c.categories) || void 0 === t ? void 0 : t[0],
         f = a.useMemo(
             () =>
                 u.ZP.getApplicationIconURL({
@@ -66,19 +66,19 @@ function x(e) {
                 }),
             [c]
         ),
-        b = a.useCallback(() => {
-            (0, m.zZ)(p.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
+        I = a.useCallback(() => {
+            (0, m.zZ)(h.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
                 current_page: 'product',
-                application_id: o,
+                application_id: s,
                 suggested_application_id: c.id,
-                position: C,
+                position: _,
                 load_id: x,
-                shown_mutual_guilds_count: v.length
+                shown_mutual_guilds_count: C.length
             }),
-                h(c.id);
-        }, [h, c.id, o, v.length, x, C]);
-    return (0, i.jsxs)(r.Clickable, {
-        onClick: b,
+                p(c.id);
+        }, [p, c.id, s, C.length, x, _]);
+    return (0, i.jsxs)(r.P3F, {
+        onClick: I,
         className: g.appContainer,
         children: [
             (0, i.jsxs)('div', {
@@ -100,19 +100,19 @@ function x(e) {
                                     minWidth: 0,
                                     overflow: 'hidden'
                                 },
-                                children: (0, i.jsx)(r.Heading, {
+                                children: (0, i.jsx)(r.X6q, {
                                     variant: 'heading-md/semibold',
                                     color: 'header-primary',
                                     className: g.appName,
                                     children: c.name
                                 })
                             }),
-                            null != _
+                            null != v
                                 ? (0, i.jsx)(r.Text, {
                                       className: g.appCategory,
                                       variant: 'text-xs/medium',
                                       color: 'text-muted',
-                                      children: _.name
+                                      children: v.name
                                   })
                                 : null
                         ]
@@ -126,40 +126,40 @@ function x(e) {
                 lineClamp: 2,
                 children: null !== (l = null === (n = c.directory_entry) || void 0 === n ? void 0 : n.short_description) && void 0 !== l ? l : c.description
             }),
-            (0, i.jsx)(s.Z, {
+            (0, i.jsx)(o.Z, {
                 application: c,
                 textVariant: 'text-xs/medium',
-                mutualGuilds: v,
+                mutualGuilds: C,
                 mutualGuildShownMax: 3,
-                guildIconSize: s.x.SMALL,
+                guildIconSize: o.x.SMALL,
                 compact: !0
             })
         ]
     });
 }
-t.Z = function (e) {
-    let { applicationId: t, fetchState: n, similarApplications: a, onSelectApplication: l, similarLoadId: s } = e;
-    return n !== o.M.FETCHING && (null == a || 0 === a.length)
+let C = function (e) {
+    let { applicationId: t, fetchState: n, similarApplications: a, onSelectApplication: l, similarLoadId: o } = e;
+    return n !== s.M.FETCHING && (null == a || 0 === a.length)
         ? null
         : (0, i.jsxs)('div', {
               className: g.sectionContainer,
               children: [
                   (0, i.jsx)('div', { className: g.divider }),
-                  (0, i.jsx)(r.Heading, {
+                  (0, i.jsx)(r.X6q, {
                       variant: 'heading-sm/semibold',
                       color: 'header-primary',
                       className: g.sectionHeader,
-                      children: h.intl.string(h.t.E8wCnp)
+                      children: p.intl.string(p.t.E8wCnp)
                   }),
                   (0, i.jsx)(c.Z, {
-                      loading: n === o.M.FETCHING,
+                      loading: n === s.M.FETCHING,
                       children:
                           null != a
-                              ? (0, i.jsx)(C, {
+                              ? (0, i.jsx)(_, {
                                     applicationId: t,
                                     similarApplications: a,
                                     onSelectApplication: l,
-                                    similarLoadId: s
+                                    similarLoadId: o
                                 })
                               : null
                   })

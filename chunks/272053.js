@@ -30,8 +30,8 @@ let g = '33kozedd0zs6fbauka98psnc7zwom2s',
     v = (e) => 'https://youtube.com/watch?v='.concat(e),
     y = 5 * f.Z.Millis.MINUTE,
     I = 'https://api.twitch.tv/helix',
-    b = /live_user_(.*)-\{width\}/,
-    T = 128,
+    T = /live_user_(.*)-\{width\}/,
+    b = 128,
     S = null,
     A = 0,
     N = null,
@@ -39,7 +39,7 @@ let g = '33kozedd0zs6fbauka98psnc7zwom2s',
     R = {};
 function O(e) {
     var t;
-    return null === (t = b.exec(e)) || void 0 === t ? void 0 : t[1];
+    return null === (t = T.exec(e)) || void 0 === t ? void 0 : t[1];
 }
 function D(e, t, n) {
     return o.tn.get({
@@ -98,8 +98,8 @@ class L {
                 _ = await x(l, t),
                 p = c.Z.get(h.ABu.TWITCH),
                 m = null !== (r = O(o)) && void 0 !== r ? r : e.name,
-                g = null != u && '' !== u ? u.slice(0, T) : void 0,
-                E = null != _ && '' !== _ ? _.slice(0, T) : void 0;
+                g = null != u && '' !== u ? u.slice(0, b) : void 0,
+                E = null != _ && '' !== _ ? _.slice(0, b) : void 0;
             return {
                 url:
                     null === (n = p.getPlatformUserUrl) || void 0 === n
@@ -145,7 +145,7 @@ class L {
                     snippet: { title: a, thumbnails: s }
                 } = i[0],
                 l = { large_image: null !== (n = (0, d.getAssetFromImageURL)(h.ABu.YOUTUBE, s.high.url)) && void 0 !== n ? n : void 0 },
-                u = null != a && '' !== a ? a.slice(0, T) : void 0;
+                u = null != a && '' !== a ? a.slice(0, b) : void 0;
             return (N = {
                 url: v(r),
                 name: c.Z.get(h.ABu.YOUTUBE).name,

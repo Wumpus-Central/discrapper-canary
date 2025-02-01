@@ -1,44 +1,44 @@
 n(47120);
 var i = n(200651),
-    o = n(149765),
-    r = n(481060),
-    a = n(570140),
-    l = n(700785);
+    a = n(149765),
+    o = n(481060),
+    r = n(570140),
+    s = n(700785);
 __OVERLAY__ &&
-    a.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
+    r.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
         let {
                 clientId: t,
-                authorizeProps: { authorizations: s, permissions: d, ...c }
+                authorizeProps: { authorizations: l, permissions: d, ...c }
             } = e,
-            u = 'OAuth2Authorize_'.concat(t, '_').concat(c.guildId, '_').concat(c.channelId);
-        function p(e) {
+            _ = 'OAuth2Authorize_'.concat(t, '_').concat(c.guildId, '_').concat(c.channelId);
+        function u(e) {
             let { location: n } = e;
-            a.Z.dispatch({
+            r.Z.dispatch({
                 type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE',
                 clientId: t,
                 location: n
             });
         }
-        let h = l.Hn;
+        let h = s.Hn;
         try {
-            h = o.vB(null != d ? d : 0);
+            h = a.vB(null != d ? d : 0);
         } catch (e) {}
-        (0, r.openModalLazy)(
+        (0, o.ZDy)(
             async () => {
                 let { OAuth2AuthorizeModal: e } = await Promise.resolve().then(n.bind(n, 69580));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,
                         ...c,
-                        authorizations: new Map(s),
+                        authorizations: new Map(l),
                         permissions: h,
-                        callback: p
+                        callback: u
                     });
             },
             {
-                modalKey: u,
+                modalKey: _,
                 onCloseRequest: () => {
-                    (0, r.closeModal)(u), p({});
+                    (0, o.Mr3)(_), u({});
                 }
             }
         );

@@ -1,4 +1,5 @@
-let l = (0, i(818083).B)({
+l.d(t, { Z: () => i });
+let i = (0, l(818083).B)({
     kind: 'user',
     id: '2023-06_golive_capture_card',
     label: 'GoLive Capture Card Support',
@@ -11,4 +12,3 @@ let l = (0, i(818083).B)({
         }
     ]
 });
-t.Z = l;

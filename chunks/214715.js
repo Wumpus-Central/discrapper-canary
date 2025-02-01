@@ -1,41 +1,41 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(481060),
-    u = r(611528);
-let c = a.memo(function (e) {
-    let { text: n, variant: r = 'text-xs/medium', color: o = 'text-normal', icon: c, className: d, selected: f, onMouseEnter: p, onMouseLeave: h, onClick: _ } = e,
-        m = a.useMemo(() => {
-            if (null != _) return () => _(n);
-        }, [_, n]);
-    return (0, i.jsxs)(l.Clickable, {
-        tabIndex: null == _ ? -1 : 0,
+n.d(t, { Z: () => u });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(611528);
+let u = r.memo(function (e) {
+    let { text: t, variant: n = 'text-xs/medium', color: a = 'text-normal', icon: u, className: c, selected: d, onMouseEnter: f, onMouseLeave: _, onClick: p } = e,
+        h = r.useMemo(() => {
+            if (null != p) return () => p(t);
+        }, [p, t]);
+    return (0, i.jsxs)(o.P3F, {
+        tabIndex: null == p ? -1 : 0,
         className: s()(
-            u.trait,
+            l.trait,
             {
-                [u.selectable]: null != m && !f,
-                [u.selected]: f,
-                [u.clickable]: null != m
+                [l.selectable]: null != h && !d,
+                [l.selected]: d,
+                [l.clickable]: null != h
             },
-            d
+            c
         ),
-        onMouseEnter: p,
-        onMouseLeave: h,
-        onClick: m,
+        onMouseEnter: f,
+        onMouseLeave: _,
+        onClick: h,
         children: [
-            null != c &&
-                (0, i.jsx)(c, {
+            null != u &&
+                (0, i.jsx)(u, {
                     size: 'xs',
                     color: 'currentColor'
                 }),
-            (0, i.jsx)(l.Text, {
-                variant: r,
-                color: o,
+            (0, i.jsx)(o.Text, {
+                variant: n,
+                color: a,
                 lineClamp: 1,
-                children: n
+                children: t
             })
         ]
     });
 });
-n.Z = c;

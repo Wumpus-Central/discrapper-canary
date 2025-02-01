@@ -1,8 +1,8 @@
 e.exports = {
-    wrapper: 'wrapper_cd22e7',
-    activeWrapper: 'activeWrapper_cd22e7',
-    videoWrapper: 'videoWrapper_cd22e7',
-    gadientHighlight: 'gadientHighlight_cd22e7',
-    swipeWrapper: 'swipeWrapper_cd22e7',
-    swipe: 'swipe_cd22e7'
+    activeWrapper: 'activeWrapper__452c3',
+    wrapper: 'wrapper__452c3',
+    videoWrapper: 'videoWrapper__452c3',
+    gadientHighlight: 'gadientHighlight__452c3',
+    swipeWrapper: 'swipeWrapper__452c3',
+    swipe: 'swipe__452c3'
 };

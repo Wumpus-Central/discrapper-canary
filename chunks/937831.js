@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         aliases: ['pycon'],
         contains: [
@@ -16,4 +16,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

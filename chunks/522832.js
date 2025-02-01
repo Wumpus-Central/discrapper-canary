@@ -1,5 +1,5 @@
 e.exports = {
-    buttonsWrapper: 'buttonsWrapper_bf8eca',
-    horizontal: 'horizontal_bf8eca',
-    vertical: 'vertical_bf8eca'
+    buttonsWrapper: 'buttonsWrapper__65bb6',
+    horizontal: 'horizontal__65bb6',
+    vertical: 'vertical__65bb6'
 };

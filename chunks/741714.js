@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
         words: {
             ss: ['sekunda', 'sekunde', 'sekundi'],
             m: ['jedan minut', 'jedne minute'],
@@ -12,12 +12,12 @@
             MM: ['mesec', 'meseca', 'meseci'],
             yy: ['godina', 'godine', 'godina']
         },
-        correctGrammaticalCase: function (e, n) {
-            return 1 === e ? n[0] : e >= 2 && e <= 4 ? n[1] : n[2];
+        correctGrammaticalCase: function (e, t) {
+            return 1 === e ? t[0] : e >= 2 && e <= 4 ? t[1] : t[2];
         },
-        translate: function (e, r, i) {
-            var a = n.words[i];
-            return 1 === i.length ? (r ? a[0] : a[1]) : e + ' ' + n.correctGrammaticalCase(e, a);
+        translate: function (e, n, i) {
+            var r = t.words[i];
+            return 1 === i.length ? (n ? r[0] : r[1]) : e + ' ' + t.correctGrammaticalCase(e, r);
         }
     };
     return e.defineLocale('sr', {
@@ -64,17 +64,17 @@
             future: 'za %s',
             past: 'pre %s',
             s: 'nekoliko sekundi',
-            ss: n.translate,
-            m: n.translate,
-            mm: n.translate,
-            h: n.translate,
-            hh: n.translate,
+            ss: t.translate,
+            m: t.translate,
+            mm: t.translate,
+            h: t.translate,
+            hh: t.translate,
             d: 'dan',
-            dd: n.translate,
+            dd: t.translate,
             M: 'mesec',
-            MM: n.translate,
+            MM: t.translate,
             y: 'godinu',
-            yy: n.translate
+            yy: t.translate
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

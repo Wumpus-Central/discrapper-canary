@@ -1,63 +1,63 @@
-var i = r(47120);
-var a = r(729357),
-    o = r.n(a),
-    s = r(147913),
-    l = r(557177);
-function u(e, n, r) {
+n.d(t, { Z: () => T }), n(47120);
+var i = n(729357),
+    r = n.n(i),
+    a = n(147913),
+    s = n(460181);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let c = 100,
-    d = 0.5,
-    f = 500,
-    p = (0, l.tu)('vibing_wumpus', 'vibing_wumpus', 0),
-    h = 0,
+let l = 100,
+    u = 0.5,
+    c = 500,
+    d = (0, s.tu)('vibing_wumpus', 'vibing_wumpus', 0),
+    f = 0,
     _ = 0,
-    m = null;
-function g(e, n) {
-    let r = Math.round(100 * e),
+    p = null;
+function h(e, t) {
+    let n = Math.round(100 * e),
         i = Math.round(100 * _),
-        a = Math.round(100 * h);
-    (r > 0 && a >= i) || (r < 0 && a <= i) ? (clearInterval(m), 0 === i && null != n && n()) : ((a += r), (h = a / 100), (p.volume = o()(h, 0, d)));
+        a = Math.round(100 * f);
+    (n > 0 && a >= i) || (n < 0 && a <= i) ? (clearInterval(p), 0 === i && null != t && t()) : ((a += n), (f = a / 100), (d.volume = r()(f, 0, u)));
 }
-function E(e) {
-    null != m && clearInterval(m), (_ = 0);
-    let n = I();
-    m = setInterval(() => {
-        g(n, e);
-    }, c);
+function m(e) {
+    null != p && clearInterval(p), (_ = 0);
+    let t = y();
+    p = setInterval(() => {
+        h(t, e);
+    }, l);
+}
+function g() {
+    null != p && clearInterval(p), d.loop(), (_ = u);
+    let e = y();
+    p = setInterval(() => h(e), l);
+}
+function E() {
+    m(d.pause.bind(d));
 }
 function v() {
-    null != m && clearInterval(m), p.loop(), (_ = d);
-    let e = I();
-    m = setInterval(() => g(e), c);
+    m(d.stop.bind(d));
 }
 function y() {
-    E(p.pause.bind(p));
+    return (l / c) * (_ - f);
 }
-function b() {
-    E(p.stop.bind(p));
-}
-function I() {
-    return (c / f) * (_ - h);
-}
-class T extends s.Z {
+class I extends a.Z {
     constructor(...e) {
         super(...e),
-            u(this, 'actions', {
-                VIBING_WUMPUS_PLAY_MUSIC: v,
-                VIBING_WUMPUS_STOP_MUSIC: b,
-                VIBING_WUMPUS_PAUSE_MUSIC: y
+            o(this, 'actions', {
+                VIBING_WUMPUS_PLAY_MUSIC: g,
+                VIBING_WUMPUS_STOP_MUSIC: v,
+                VIBING_WUMPUS_PAUSE_MUSIC: E
             });
     }
 }
-n.Z = new T();
+let T = new I();

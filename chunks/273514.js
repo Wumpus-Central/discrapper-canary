@@ -1,52 +1,52 @@
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(565138),
-    s = r(592125),
-    l = r(430824),
-    u = r(388032),
-    c = r(411773);
-let d = (e) => {
-    let { entry: n } = e,
-        r = s.Z.getChannel(n.channelId);
-    if (null == r) return null;
-    let d = l.Z.getGuild(r.guild_id);
-    return null == d
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(565138),
+    s = n(592125),
+    o = n(430824),
+    l = n(388032),
+    u = n(411773);
+let c = (e) => {
+    let { entry: t } = e,
+        n = s.Z.getChannel(t.channelId);
+    if (null == n) return null;
+    let c = o.Z.getGuild(n.guild_id);
+    return null == c
         ? null
         : (0, i.jsxs)('div', {
-              className: c.container,
+              className: u.container,
               children: [
-                  (0, i.jsx)(a.Heading, {
-                      className: c.header,
+                  (0, i.jsx)(r.X6q, {
+                      className: u.header,
                       variant: 'heading-sm/semibold',
-                      children: u.intl.string(u.t.nTe4HB)
+                      children: l.intl.string(l.t.nTe4HB)
                   }),
                   (0, i.jsxs)('div', {
-                      className: c.guildContainer,
+                      className: u.guildContainer,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: c.hubInfo,
+                              className: u.hubInfo,
                               children: [
-                                  (0, i.jsx)(o.Z, {
-                                      guild: d,
-                                      size: o.Z.Sizes.MINI,
-                                      className: c.hubIcon
+                                  (0, i.jsx)(a.Z, {
+                                      guild: c,
+                                      size: a.Z.Sizes.MINI,
+                                      className: u.hubIcon
                                   }),
-                                  (0, i.jsx)(a.Text, {
+                                  (0, i.jsx)(r.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
-                                      children: d.name
+                                      children: c.name
                                   })
                               ]
                           }),
-                          (0, i.jsx)(a.Text, {
+                          (0, i.jsx)(r.Text, {
                               variant: 'text-md/semibold',
                               color: 'header-primary',
-                              children: n.name
+                              children: t.name
                           })
                       ]
                   })
               ]
           });
 };
-n.Z = d;

@@ -1,43 +1,43 @@
-var n = 'Function.prototype.bind called on incompatible ',
-    r = Object.prototype.toString,
+var t = 'Function.prototype.bind called on incompatible ',
+    n = Object.prototype.toString,
     i = Math.max,
-    a = '[object Function]',
-    o = function (e, n) {
-        for (var r = [], i = 0; i < e.length; i += 1) r[i] = e[i];
-        for (var a = 0; a < n.length; a += 1) r[a + e.length] = n[a];
-        return r;
+    r = '[object Function]',
+    a = function (e, t) {
+        for (var n = [], i = 0; i < e.length; i += 1) n[i] = e[i];
+        for (var r = 0; r < t.length; r += 1) n[r + e.length] = t[r];
+        return n;
     },
-    s = function (e, n) {
-        for (var r = [], i = n || 0, a = 0; i < e.length; i += 1, a += 1) r[a] = e[i];
-        return r;
+    s = function (e, t) {
+        for (var n = [], i = t || 0, r = 0; i < e.length; i += 1, r += 1) n[r] = e[i];
+        return n;
     },
-    l = function (e, n) {
-        for (var r = '', i = 0; i < e.length; i += 1) (r += e[i]), i + 1 < e.length && (r += n);
-        return r;
+    o = function (e, t) {
+        for (var n = '', i = 0; i < e.length; i += 1) (n += e[i]), i + 1 < e.length && (n += t);
+        return n;
     };
 e.exports = function (e) {
-    var u,
-        c = this;
-    if ('function' != typeof c || r.apply(c) !== a) throw TypeError(n + c);
+    var l,
+        u = this;
+    if ('function' != typeof u || n.apply(u) !== r) throw TypeError(t + u);
     for (
-        var d = s(arguments, 1),
-            f = function () {
-                if (this instanceof u) {
-                    var n = c.apply(this, o(d, arguments));
-                    return Object(n) === n ? n : this;
+        var c = s(arguments, 1),
+            d = function () {
+                if (this instanceof l) {
+                    var t = u.apply(this, a(c, arguments));
+                    return Object(t) === t ? t : this;
                 }
-                return c.apply(e, o(d, arguments));
+                return u.apply(e, a(c, arguments));
             },
-            p = i(0, c.length - d.length),
-            h = [],
-            _ = 0;
-        _ < p;
-        _++
+            f = i(0, u.length - c.length),
+            _ = [],
+            p = 0;
+        p < f;
+        p++
     )
-        h[_] = '$' + _;
-    if (((u = Function('binder', 'return function (' + l(h, ',') + '){ return binder.apply(this,arguments); }')(f)), c.prototype)) {
-        var m = function () {};
-        (m.prototype = c.prototype), (u.prototype = new m()), (m.prototype = null);
+        _[p] = '$' + p;
+    if (((l = Function('binder', 'return function (' + o(_, ',') + '){ return binder.apply(this,arguments); }')(d)), u.prototype)) {
+        var h = function () {};
+        (h.prototype = u.prototype), (l.prototype = new h()), (h.prototype = null);
     }
-    return u;
+    return l;
 };

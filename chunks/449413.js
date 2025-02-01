@@ -1,25 +1,25 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(481060),
-    s = r(454585),
-    l = r(273744),
-    u = r(926686);
-let c = (e) => {
+n.d(t, { Z: () => u });
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(454585),
+    o = n(273744),
+    l = n(926686);
+let u = (e) => {
     let {
-            node: { info: n }
+            node: { info: t }
         } = e,
-        r = a.useRef(
+        n = r.useRef(
             s.Z.reactParserFor({
                 ...s.Z.defaultRules,
-                link: l.s
+                link: o.s
             })
         );
-    return null == n
+    return null == t
         ? null
-        : (0, i.jsx)(o.HelpMessage, {
-              className: u.infoBox,
-              messageType: o.HelpMessageTypes.INFO,
-              children: r.current(n)
+        : (0, i.jsx)(a.Wn, {
+              className: l.infoBox,
+              messageType: a.QYI.INFO,
+              children: n.current(t)
           });
 };
-n.Z = c;

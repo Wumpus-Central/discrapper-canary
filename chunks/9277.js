@@ -1,75 +1,75 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(232713),
-    c = r(442837),
-    d = r(114101),
-    f = r(481060),
-    p = r(540059),
-    h = r(28546),
-    _ = r(581883),
-    m = r(459273),
-    g = r(443603),
-    E = r(981631),
-    v = r(957825),
-    y = r(388032),
-    b = r(553796);
-function I(e, n) {
-    let { disabled: r, type: i } = e,
-        [s, I] = o.useState(!1),
-        T = (0, c.e7)([_.Z], () => {
-            var e, n;
-            return s && Object.values(null !== (n = null === (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== n ? n : {}).length <= 2;
+n.d(t, { Z: () => I }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(232713),
+    l = n(442837),
+    u = n(114101),
+    c = n(481060),
+    d = n(540059),
+    f = n(28546),
+    _ = n(581883),
+    p = n(459273),
+    h = n(443603),
+    m = n(981631),
+    g = n(957825),
+    E = n(388032),
+    v = n(553796);
+function y(e, t) {
+    let { disabled: n, type: a } = e,
+        [y, I] = r.useState(!1),
+        T = (0, l.e7)([_.Z], () => {
+            var e, t;
+            return y && Object.values(null !== (t = null === (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
         }),
-        [S, A, C] = (0, h.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], u.X),
-        N = o.useRef(0),
-        R = o.useCallback(() => {
+        [b, S, A] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
+        N = r.useRef(0),
+        C = r.useCallback(() => {
             I(!0),
                 clearTimeout(N.current),
                 (N.current = setTimeout(() => {
                     I(!1), (N.current = 0);
                 }, 2000));
         }, []);
-    (0, m.yp)({
-        event: E.CkL.FAVORITE_GIF,
-        handler: R
+    (0, p.yp)({
+        event: m.CkL.FAVORITE_GIF,
+        handler: C
     });
-    let O = o.useCallback(() => {
-            (0, h.RO)(v.X1.GIF, i);
-        }, [i]),
-        { Component: D, events: L, play: x } = (0, d.V)(),
-        w = (0, p.Q3)('ChannelGIFPickerButton');
-    if (r) return null;
-    let P = S === v.X1.GIF && A === i;
-    return (0, a.jsx)(f.Tooltip, {
-        text: T ? y.intl.string(y.t.mE2e8P) : null,
+    let R = r.useCallback(() => {
+            (0, f.RO)(g.X1.GIF, a);
+        }, [a]),
+        { Component: O, events: D, play: x } = (0, u.V)(),
+        L = (0, d.Q3)('ChannelGIFPickerButton');
+    if (n) return null;
+    let P = b === g.X1.GIF && S === a;
+    return (0, i.jsx)(c.ua7, {
+        text: T ? E.intl.string(E.t.mE2e8P) : null,
         forceOpen: !0,
         children: (e) =>
-            (0, a.jsx)('div', {
-                ref: n,
-                className: l()(v.CT, b.buttonContainer),
+            (0, i.jsx)('div', {
+                ref: t,
+                className: s()(g.CT, v.buttonContainer),
                 ...e,
-                children: (0, a.jsx)(g.Z, {
-                    innerClassName: b.button,
-                    onMouseEnter: L.onMouseEnter,
-                    onMouseLeave: L.onMouseLeave,
+                children: (0, i.jsx)(h.Z, {
+                    innerClassName: v.button,
+                    onMouseEnter: D.onMouseEnter,
+                    onMouseLeave: D.onMouseLeave,
                     onClick: () => {
-                        O(), x();
+                        R(), x();
                     },
                     isActive: P,
-                    pulse: s,
-                    'aria-label': y.intl.string(y.t.PtVpk5),
+                    pulse: y,
+                    'aria-label': E.intl.string(E.t.PtVpk5),
                     'aria-expanded': P,
                     'aria-haspopup': 'dialog',
-                    'aria-controls': C,
-                    children: (0, a.jsx)(D, {
-                        size: w ? 'refresh_sm' : void 0,
+                    'aria-controls': A,
+                    children: (0, i.jsx)(O, {
+                        size: L ? 'refresh_sm' : void 0,
                         color: 'currentColor'
                     })
                 })
             })
     });
 }
-n.Z = o.memo(o.forwardRef(I));
+let I = r.memo(r.forwardRef(y));

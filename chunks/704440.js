@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(981631),
     y = n(388032),
     I = n(735633),
-    b = n(352175),
-    T = n(90351);
+    T = n(352175),
+    b = n(90351);
 let S = async (e, t, n) => {
         n(!0),
             await (0, g.Eo)(e)
@@ -46,7 +46,7 @@ let S = async (e, t, n) => {
                         }),
                         (0, i.jsx)('img', {
                             alt: '',
-                            src: b,
+                            src: T,
                             className: I.confirmationImage
                         }),
                         (0, i.jsx)(c.X6q, {
@@ -99,7 +99,7 @@ let S = async (e, t, n) => {
 function N(e) {
     let { referralsRemaining: t, channel: n, onClose: a, isResending: o } = e,
         [u, d] = r.useState(!1),
-        [g, b] = r.useState(!1),
+        [g, T] = r.useState(!1),
         N = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null,
         { analyticsLocations: C } = (0, _.ZP)(f.Z.REFERRAL_TRIALS_POPOUT),
         R = new Date('2023-06-15T08:00:00-08:00');
@@ -120,7 +120,7 @@ function N(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: T,
+                                src: b,
                                 className: I.generalBodyImage
                             }),
                             (0, i.jsxs)('div', {
@@ -163,7 +163,7 @@ function N(e) {
                             submitting: g,
                             onClick: () => {
                                 o
-                                    ? S(N, a, b)
+                                    ? S(N, a, T)
                                     : (d(!0),
                                       p.default.track(v.rMx.SHARE_NITRO_FLOW_STEPS, {
                                           location_stack: C,

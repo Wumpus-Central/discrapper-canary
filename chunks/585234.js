@@ -1,27 +1,27 @@
-function n(e) {
-    let n = e.regex,
-        r = /(r#)?/,
-        i = n.concat(r, e.UNDERSCORE_IDENT_RE),
-        a = n.concat(r, e.IDENT_RE),
-        o = {
+function t(e) {
+    let t = e.regex,
+        n = /(r#)?/,
+        i = t.concat(n, e.UNDERSCORE_IDENT_RE),
+        r = t.concat(n, e.IDENT_RE),
+        a = {
             className: 'title.function.invoke',
             relevance: 0,
-            begin: n.concat(/\b/, /(?!let|for|while|if|else|match\b)/, a, n.lookahead(/\s*\(/))
+            begin: t.concat(/\b/, /(?!let|for|while|if|else|match\b)/, r, t.lookahead(/\s*\(/))
         },
         s = '([ui](8|16|32|64|128|size)|f(32|64))?',
-        l = ['abstract', 'as', 'async', 'await', 'become', 'box', 'break', 'const', 'continue', 'crate', 'do', 'dyn', 'else', 'enum', 'extern', 'false', 'final', 'fn', 'for', 'if', 'impl', 'in', 'let', 'loop', 'macro', 'match', 'mod', 'move', 'mut', 'override', 'priv', 'pub', 'ref', 'return', 'self', 'Self', 'static', 'struct', 'super', 'trait', 'true', 'try', 'type', 'typeof', 'union', 'unsafe', 'unsized', 'use', 'virtual', 'where', 'while', 'yield'],
-        u = ['true', 'false', 'Some', 'None', 'Ok', 'Err'],
-        c = ['drop ', 'Copy', 'Send', 'Sized', 'Sync', 'Drop', 'Fn', 'FnMut', 'FnOnce', 'ToOwned', 'Clone', 'Debug', 'PartialEq', 'PartialOrd', 'Eq', 'Ord', 'AsRef', 'AsMut', 'Into', 'From', 'Default', 'Iterator', 'Extend', 'IntoIterator', 'DoubleEndedIterator', 'ExactSizeIterator', 'SliceConcatExt', 'ToString', 'assert!', 'assert_eq!', 'bitflags!', 'bytes!', 'cfg!', 'col!', 'concat!', 'concat_idents!', 'debug_assert!', 'debug_assert_eq!', 'env!', 'eprintln!', 'panic!', 'file!', 'format!', 'format_args!', 'include_bytes!', 'include_str!', 'line!', 'local_data_key!', 'module_path!', 'option_env!', 'print!', 'println!', 'select!', 'stringify!', 'try!', 'unimplemented!', 'unreachable!', 'vec!', 'write!', 'writeln!', 'macro_rules!', 'assert_ne!', 'debug_assert_ne!'],
-        d = ['i8', 'i16', 'i32', 'i64', 'i128', 'isize', 'u8', 'u16', 'u32', 'u64', 'u128', 'usize', 'f32', 'f64', 'str', 'char', 'bool', 'Box', 'Option', 'Result', 'String', 'Vec'];
+        o = ['abstract', 'as', 'async', 'await', 'become', 'box', 'break', 'const', 'continue', 'crate', 'do', 'dyn', 'else', 'enum', 'extern', 'false', 'final', 'fn', 'for', 'if', 'impl', 'in', 'let', 'loop', 'macro', 'match', 'mod', 'move', 'mut', 'override', 'priv', 'pub', 'ref', 'return', 'self', 'Self', 'static', 'struct', 'super', 'trait', 'true', 'try', 'type', 'typeof', 'union', 'unsafe', 'unsized', 'use', 'virtual', 'where', 'while', 'yield'],
+        l = ['true', 'false', 'Some', 'None', 'Ok', 'Err'],
+        u = ['drop ', 'Copy', 'Send', 'Sized', 'Sync', 'Drop', 'Fn', 'FnMut', 'FnOnce', 'ToOwned', 'Clone', 'Debug', 'PartialEq', 'PartialOrd', 'Eq', 'Ord', 'AsRef', 'AsMut', 'Into', 'From', 'Default', 'Iterator', 'Extend', 'IntoIterator', 'DoubleEndedIterator', 'ExactSizeIterator', 'SliceConcatExt', 'ToString', 'assert!', 'assert_eq!', 'bitflags!', 'bytes!', 'cfg!', 'col!', 'concat!', 'concat_idents!', 'debug_assert!', 'debug_assert_eq!', 'env!', 'eprintln!', 'panic!', 'file!', 'format!', 'format_args!', 'include_bytes!', 'include_str!', 'line!', 'local_data_key!', 'module_path!', 'option_env!', 'print!', 'println!', 'select!', 'stringify!', 'try!', 'unimplemented!', 'unreachable!', 'vec!', 'write!', 'writeln!', 'macro_rules!', 'assert_ne!', 'debug_assert_ne!'],
+        c = ['i8', 'i16', 'i32', 'i64', 'i128', 'isize', 'u8', 'u16', 'u32', 'u64', 'u128', 'usize', 'f32', 'f64', 'str', 'char', 'bool', 'Box', 'Option', 'Result', 'String', 'Vec'];
     return {
         name: 'Rust',
         aliases: ['rs'],
         keywords: {
             $pattern: e.IDENT_RE + '!?',
-            type: d,
-            keyword: l,
-            literal: u,
-            built_in: c
+            type: c,
+            keyword: o,
+            literal: l,
+            built_in: u
         },
         illegal: '</',
         contains: [
@@ -110,16 +110,16 @@ function n(e) {
                 begin: e.IDENT_RE + '::',
                 keywords: {
                     keyword: 'Self',
-                    built_in: c,
-                    type: d
+                    built_in: u,
+                    type: c
                 }
             },
             {
                 className: 'punctuation',
                 begin: '->'
             },
-            o
+            a
         ]
     };
 }
-e.exports = n;
+e.exports = t;

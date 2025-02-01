@@ -18,8 +18,8 @@ var i = n(46973),
     v = n(894694),
     y = n(779618),
     I = n(356659),
-    b = n(981631),
-    T = n(70722);
+    T = n(981631),
+    b = n(70722);
 function S(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ function S(e, t, n) {
 class A extends a.Z {
     handleRTCConnectionState(e) {
         let { context: t, state: n, streamKey: r } = e;
-        if (!(0, g.ln)() || n !== b.hes.RTC_CONNECTED) return;
+        if (!(0, g.ln)() || n !== T.hes.RTC_CONNECTED) return;
         let a = c.default.getId();
         if (t === i.Yn.DEFAULT) return this.applyUserVoiceRecording(a);
         if (t === i.Yn.STREAM && null != r) {
@@ -56,7 +56,7 @@ class A extends a.Z {
         this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t);
         let r = _.Z.getRTCConnection(
             o.V9({
-                streamType: null != i ? T.lo.GUILD : T.lo.CALL,
+                streamType: null != i ? b.lo.GUILD : b.lo.CALL,
                 ownerId: t,
                 channelId: n,
                 guildId: i
@@ -66,7 +66,7 @@ class A extends a.Z {
     }
     handleClipsInitFailure(e) {
         let { applicationName: t, errMsg: n } = e;
-        h.default.track(b.rMx.CLIPS_INIT_FAILURE, {
+        h.default.track(T.rMx.CLIPS_INIT_FAILURE, {
             application_name: t,
             error_message: n
         });
@@ -107,7 +107,7 @@ class A extends a.Z {
         if (n !== i.Yn.STREAM || !(0, y.Z)(d.Z)) return;
         let s = _.Z.getRTCConnection(
             o.V9({
-                streamType: null != a ? T.lo.GUILD : T.lo.CALL,
+                streamType: null != a ? b.lo.GUILD : b.lo.CALL,
                 ownerId: t,
                 channelId: r,
                 guildId: a
@@ -140,7 +140,7 @@ class A extends a.Z {
                 }
             })();
             return (
-                h.default.track(b.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
+                h.default.track(T.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
                     classification: t,
                     version: I.WM,
                     gpu_models: e

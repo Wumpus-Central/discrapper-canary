@@ -1,8 +1,8 @@
-n(47120);
+n.d(t, { Z: () => L }), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(642128),
     o = n(468194),
     c = n(442837),
@@ -14,93 +14,93 @@ var i = n(200651),
     h = n(194082),
     g = n(484459),
     v = n(594174),
-    S = n(626135),
-    I = n(74538),
-    x = n(557457),
-    _ = n(475674),
-    C = n(981631),
-    b = n(474936),
-    E = n(388032),
+    _ = n(626135),
+    S = n(74538),
+    I = n(557457),
+    x = n(475674),
+    E = n(981631),
+    C = n(474936),
+    Z = n(388032),
     y = n(891252);
-let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
-    T = {
+let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
+    N = {
         opacity: 0,
         transform: 'translate3d(100%, 0, 0)'
     },
-    N = {
+    T = {
         opacity: 1,
         transform: 'translate3d(0%, 0, 0)'
     },
     A = { opacity: 0 },
-    j = { opacity: 1 },
-    w = { borderRadius: ''.concat(Z, 'px ').concat(Z, 'px ').concat(Z, 'px ').concat(Z, 'px') },
-    P = { borderRadius: '0px '.concat(Z, 'px ').concat(Z, 'px 0px') },
+    w = { opacity: 1 },
+    P = { borderRadius: ''.concat(b, 'px ').concat(b, 'px ').concat(b, 'px ').concat(b, 'px') },
+    j = { borderRadius: '0px '.concat(b, 'px ').concat(b, 'px 0px') },
     R = {
         mass: 1,
         tension: 500,
         friction: 18,
         clamp: !0
     },
-    O = (e) => {
+    k = (e) => {
         let t,
-            r,
-            { participant: s, isUpsellEnabled: o, shape: d, size: g, didTrackUpsellViewed: Z, setDidTrackUpsellViewed: T, className: N, premiumIndicator: A } = e,
-            j = (0, x.Wc)(s),
-            { analyticsLocations: w } = (0, p.ZP)(),
-            P = null != (0, _.Z)(s);
+            a,
+            { participant: s, isUpsellEnabled: o, shape: d, size: g, didTrackUpsellViewed: b, setDidTrackUpsellViewed: N, className: T, premiumIndicator: A } = e,
+            w = (0, I.Wc)(s),
+            { analyticsLocations: P } = (0, p.ZP)(),
+            j = null != (0, x.Z)(s);
         try {
-            t = (0, x.nG)(j);
+            t = (0, I.nG)(w);
         } catch (e) {
             t = !1;
         }
         try {
-            r = (0, x.tR)(j);
+            a = (0, I.tR)(w);
         } catch (e) {
-            r = !1;
+            a = !1;
         }
-        let R = t || r,
-            { location: O } = (0, f.O)(),
-            M = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
-            k = o && !I.ZP.isPremium(M, b.p9.TIER_1) && !I.ZP.canStreamQuality(I.ZP.StreamQuality.MID, M),
-            L = l.useCallback(() => {
-                k &&
+        let R = t || a,
+            { location: k } = (0, f.O)(),
+            L = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
+            O = o && !S.ZP.isPremium(L, C.p9.TIER_1) && !S.ZP.canStreamQuality(S.ZP.StreamQuality.MID, L),
+            M = l.useCallback(() => {
+                O &&
                     R &&
-                    (0, m.openModalLazy)(async () => {
+                    (0, m.ZDy)(async () => {
                         let { default: e } = await n.e('28479').then(n.bind(n, 78865));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                analyticsSource: O
+                                analyticsSource: k
                             });
                     });
-            }, [k, R, O]);
+            }, [O, R, k]);
         if (
             (l.useEffect(() => {
-                !Z &&
+                !b &&
                     R &&
-                    (S.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: b.cd.STREAM_QUALITY_INDICATOR,
+                    (_.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
+                        type: C.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
-                        has_premium_stream_resolution: r,
-                        location_stack: w
+                        has_premium_stream_resolution: a,
+                        location_stack: P
                     }),
-                    T(!0));
-            }, [t, r, R, Z, T, w]),
-            null == j)
+                    N(!0));
+            }, [t, a, R, b, N, P]),
+            null == w)
         )
             return null;
-        let D = (0, i.jsx)(m.Tooltip, {
-            text: P ? E.intl.string(E.t.q8TiVl) : R ? E.intl.string(E.t.IHgpEh) : E.intl.string(E.t.vLb0VV),
+        let D = (0, i.jsx)(m.ua7, {
+            text: j ? Z.intl.string(Z.t.q8TiVl) : R ? Z.intl.string(Z.t.IHgpEh) : Z.intl.string(Z.t.vLb0VV),
             position: 'bottom',
-            color: m.Tooltip.Colors.GREY,
+            color: m.ua7.Colors.GREY,
             children: (e) =>
-                (0, i.jsxs)(m.Clickable, {
+                (0, i.jsxs)(m.P3F, {
                     ...e,
-                    onClick: L,
-                    className: a()(y.qualityIndicator, g, h.eE[d], P ? y.qualityIndicatorLowQuality : y.qualityIndicatorFullQuality, { [y.clickable]: k && R }),
+                    onClick: M,
+                    className: r()(y.qualityIndicator, g, h.eE[d], j ? y.qualityIndicatorLowQuality : y.qualityIndicatorFullQuality, { [y.clickable]: O && R }),
                     children: [
                         R
-                            ? (0, i.jsx)(m.NitroWheelIcon, {
+                            ? (0, i.jsx)(m.SrA, {
                                   size: 'md',
                                   color: 'currentColor',
                                   className: y.premiumStreamIcon
@@ -108,80 +108,80 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                             : null,
                         (0, i.jsx)('span', {
                             className: y.qualityResolution,
-                            children: (0, x.ml)(j.maxResolution)
+                            children: (0, I.ml)(w.maxResolution)
                         }),
-                        (0, i.jsx)('span', { children: (0, x.bp)(j.maxFrameRate) })
+                        (0, i.jsx)('span', { children: (0, I.bp)(w.maxFrameRate) })
                     ]
                 })
         });
-        return (0, i.jsx)(m.TextBadge, {
+        return (0, i.jsx)(m.IGR, {
             text: D,
-            className: a()(N, y.qualityIndicatorBadge, { [y.qualityIndicatorBadgePremium]: R && A }),
+            className: r()(T, y.qualityIndicatorBadge, { [y.qualityIndicatorBadgePremium]: R && A }),
             color: u.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: d
         });
-    };
-t.Z = (e) => {
-    let { participant: t, showQuality: n, isUpsellEnabled: r = !0, size: o, className: c, premiumIndicator: u } = e,
-        [d, f] = l.useState(!1),
-        p = (0, x.Wc)(t),
-        { reducedMotion: v } = l.useContext(m.AccessibilityPreferencesContext),
-        S = n && null != p;
-    l.useEffect(() => {
-        (0, g.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
-    }, [t]);
-    let I = (0, m.useTransition)(
-            S,
-            {
-                enter: {
-                    from: v.enabled ? A : T,
-                    to: v.enabled ? j : N
+    },
+    L = (e) => {
+        let { participant: t, showQuality: n, isUpsellEnabled: a = !0, size: o, className: c, premiumIndicator: u } = e,
+            [d, f] = l.useState(!1),
+            p = (0, I.Wc)(t),
+            { reducedMotion: v } = l.useContext(m.Sfi),
+            _ = n && null != p;
+        l.useEffect(() => {
+            (0, g.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
+        }, [t]);
+        let S = (0, m.Yzy)(
+                _,
+                {
+                    enter: {
+                        from: v.enabled ? A : N,
+                        to: v.enabled ? w : T
+                    },
+                    leave: v.enabled ? A : N,
+                    config: R
                 },
-                leave: v.enabled ? A : T,
-                config: R
-            },
-            'animate-always'
-        ),
-        _ = (0, m.useSpring)(
-            {
-                to: S ? P : w,
-                config: R
-            },
-            'animate-always'
-        );
-    return ((e) => {
-        let { className: n, popoutProps: l } = e;
-        return (0, i.jsxs)('div', {
-            className: a()(y.streamQualityIndicator, n),
-            ...l,
-            children: [
-                I((e, n) =>
-                    n
-                        ? (0, i.jsx)(s.animated.div, {
-                              style: e,
-                              children: (0, i.jsx)(O, {
-                                  className: y.liveQualityIndicator,
-                                  participant: t,
-                                  size: o,
-                                  shape: m.BadgeShapes.ROUND_LEFT,
-                                  isUpsellEnabled: r,
-                                  didTrackUpsellViewed: d,
-                                  setDidTrackUpsellViewed: f,
-                                  premiumIndicator: u
+                'animate-always'
+            ),
+            x = (0, m.q_F)(
+                {
+                    to: _ ? j : P,
+                    config: R
+                },
+                'animate-always'
+            );
+        return ((e) => {
+            let { className: n, popoutProps: l } = e;
+            return (0, i.jsxs)('div', {
+                className: r()(y.streamQualityIndicator, n),
+                ...l,
+                children: [
+                    S((e, n) =>
+                        n
+                            ? (0, i.jsx)(s.animated.div, {
+                                  style: e,
+                                  children: (0, i.jsx)(k, {
+                                      className: y.liveQualityIndicator,
+                                      participant: t,
+                                      size: o,
+                                      shape: m.Dv2.ROUND_LEFT,
+                                      isUpsellEnabled: a,
+                                      didTrackUpsellViewed: d,
+                                      setDidTrackUpsellViewed: f,
+                                      premiumIndicator: u
+                                  })
                               })
-                          })
-                        : null
-                ),
-                (0, i.jsx)(s.animated.div, {
-                    style: _,
-                    className: y.liveIndicator,
-                    children: (0, i.jsx)(h.ZP, {
-                        look: h.jZ.RED,
-                        size: o,
-                        shape: S ? m.BadgeShapes.ROUND_RIGHT : m.BadgeShapes.ROUND
+                            : null
+                    ),
+                    (0, i.jsx)(s.animated.div, {
+                        style: x,
+                        className: y.liveIndicator,
+                        children: (0, i.jsx)(h.ZP, {
+                            look: h.jZ.RED,
+                            size: o,
+                            shape: _ ? m.Dv2.ROUND_RIGHT : m.Dv2.ROUND
+                        })
                     })
-                })
-            ]
-        });
-    })({ className: c });
-};
+                ]
+            });
+        })({ className: c });
+    };

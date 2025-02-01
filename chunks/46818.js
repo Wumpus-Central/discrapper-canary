@@ -1,9 +1,9 @@
-var i = r(36478),
-    a = r(573492);
-function o(n) {
+var i = n(36478),
+    r = n(573492);
+function a(t) {
     return (
-        (e.exports = o =
-            'function' == typeof i && 'symbol' == typeof a
+        (e.exports = a =
+            'function' == typeof i && 'symbol' == typeof r
                 ? function (e) {
                       return typeof e;
                   }
@@ -12,7 +12,7 @@ function o(n) {
                   }),
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports),
-        o(n)
+        a(t)
     );
 }
-(e.exports = o), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = a), (e.exports.__esModule = !0), (e.exports.default = e.exports);

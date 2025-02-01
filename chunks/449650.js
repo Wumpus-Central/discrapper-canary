@@ -1,8 +1,8 @@
 e.exports = {
-    card: 'card_f925ba',
-    iconWrapper: 'iconWrapper_f925ba',
-    tag: 'tag_f925ba',
-    divider: 'divider_f925ba',
-    permissionHeader: 'permissionHeader_f925ba',
-    rolePills: 'rolePills_f925ba'
+    card: 'card__83361',
+    iconWrapper: 'iconWrapper__83361',
+    tag: 'tag__83361',
+    divider: 'divider__83361',
+    permissionHeader: 'permissionHeader__83361',
+    rolePills: 'rolePills__83361'
 };

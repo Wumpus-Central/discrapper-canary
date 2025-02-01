@@ -1,7 +1,8 @@
+n.d(t, { Z: () => E });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(570140),
+var l = n(481060),
+    r = n(570140),
     a = n(317770),
     s = n(592125),
     o = n(944486),
@@ -12,32 +13,31 @@ var r = n(481060),
     m = n(208381),
     p = n(723359),
     g = n(981631);
-function f(e, t) {
+function _(e, t) {
     var n;
     if (null == e) return;
     let i = d.default.getCurrentUser();
     (null === (n = s.Z.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != i && null == i.nsfwAllowed && (0, u.mN)(p.L0.NSFW_CHANNEL);
 }
-class _ extends a.Z {
+class f extends a.Z {
     _initialize() {
-        l.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), l.Z.subscribe('CHANNEL_SELECT', this.handleChannelSelect), l.Z.subscribe('AGE_GATE_MODAL_OPEN', this.handleAgeGateModalOpen), l.Z.subscribe('AGE_GATE_MODAL_CLOSE', this.handleAgeGateModalClose), l.Z.subscribe('AGE_GATE_SUCCESS_MODAL_OPEN', this.handleAgeGateSuccess), l.Z.subscribe('AGE_GATE_FAILURE_MODAL_OPEN', this.handleAgeGateFailure);
+        r.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), r.Z.subscribe('CHANNEL_SELECT', this.handleChannelSelect), r.Z.subscribe('AGE_GATE_MODAL_OPEN', this.handleAgeGateModalOpen), r.Z.subscribe('AGE_GATE_MODAL_CLOSE', this.handleAgeGateModalClose), r.Z.subscribe('AGE_GATE_SUCCESS_MODAL_OPEN', this.handleAgeGateSuccess), r.Z.subscribe('AGE_GATE_FAILURE_MODAL_OPEN', this.handleAgeGateFailure);
     }
     _terminate() {
-        l.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), l.Z.unsubscribe('CHANNEL_SELECT', this.handleChannelSelect), l.Z.unsubscribe('AGE_GATE_MODAL_OPEN', this.handleAgeGateModalOpen), l.Z.unsubscribe('AGE_GATE_MODAL_CLOSE', this.handleAgeGateModalClose), l.Z.unsubscribe('AGE_GATE_SUCCESS_MODAL_OPEN', this.handleAgeGateSuccess), l.Z.unsubscribe('AGE_GATE_FAILURE_MODAL_OPEN', this.handleAgeGateFailure);
+        r.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), r.Z.unsubscribe('CHANNEL_SELECT', this.handleChannelSelect), r.Z.unsubscribe('AGE_GATE_MODAL_OPEN', this.handleAgeGateModalOpen), r.Z.unsubscribe('AGE_GATE_MODAL_CLOSE', this.handleAgeGateModalClose), r.Z.unsubscribe('AGE_GATE_SUCCESS_MODAL_OPEN', this.handleAgeGateSuccess), r.Z.unsubscribe('AGE_GATE_FAILURE_MODAL_OPEN', this.handleAgeGateFailure);
     }
     handleChannelSelect(e) {
         let { guildId: t, channelId: n } = e;
-        f(t, n);
+        _(t, n);
     }
     handleConnectionOpen() {
-        let e = c.Z.getGuildId();
-        f(e, o.Z.getChannelId());
+        _(c.Z.getGuildId(), o.Z.getChannelId());
     }
     handleAgeGateModalOpen(e) {
         let { source: t } = e;
-        (0, r.openModalLazy)(
+        (0, l.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('63288'), n.e('1337'), n.e('16764')]).then(n.bind(n, 746882));
+                let { default: e } = await Promise.all([n.e('63288'), n.e('1337'), n.e('99588')]).then(n.bind(n, 746882));
                 return (n) =>
                     (0, i.jsx)(e, {
                         source: t,
@@ -51,11 +51,11 @@ class _ extends a.Z {
         );
     }
     handleAgeGateSuccess() {
-        (0, r.updateModal)(p.dG, (e) => (0, i.jsx)(m.Z, { ...e }));
+        (0, l.oav)(p.dG, (e) => (0, i.jsx)(m.Z, { ...e }));
     }
     handleAgeGateFailure(e) {
         let { underageMessage: t } = e;
-        (0, r.updateModal)(p.dG, (e) =>
+        (0, l.oav)(p.dG, (e) =>
             (0, i.jsx)(h.Z, {
                 underageMessage: t,
                 ...e
@@ -63,7 +63,7 @@ class _ extends a.Z {
         );
     }
     handleAgeGateModalClose() {
-        (0, r.closeModal)(p.dG);
+        (0, l.Mr3)(p.dG);
     }
 }
-t.Z = new _();
+let E = new f();

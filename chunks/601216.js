@@ -1,4 +1,4 @@
 t.exports = {
-    image: 'image_a6ea01',
-    text: 'text_a6ea01'
+    image: 'image__97ca1',
+    text: 'text__97ca1'
 };

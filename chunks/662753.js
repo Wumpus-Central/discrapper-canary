@@ -1,5 +1,5 @@
-var a = r(524556);
-e.exports = function (e, t) {
-    var r = this.__data__;
-    return (this.size += this.has(e) ? 0 : 1), (r[e] = a && void 0 === t ? '__lodash_hash_undefined__' : t), this;
+var r = a(524556);
+t.exports = function (t, e) {
+    var a = this.__data__;
+    return (this.size += this.has(t) ? 0 : 1), (a[t] = r && void 0 === e ? '__lodash_hash_undefined__' : e), this;
 };

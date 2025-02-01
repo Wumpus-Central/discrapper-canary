@@ -1,29 +1,29 @@
-var n,
-    r = 'function' == typeof Map && Map.prototype ? Map : null,
+var t,
+    n = 'function' == typeof Map && Map.prototype ? Map : null,
     i = 'function' == typeof Set && Set.prototype ? Set : null;
-!r &&
-    (n = function (e) {
+n ||
+    (t = function (e) {
         return !1;
     });
-var a = r ? Map.prototype.has : null,
-    o = i ? Set.prototype.has : null;
-!n &&
-    !a &&
-    (n = function (e) {
+var r = n ? Map.prototype.has : null,
+    a = i ? Set.prototype.has : null;
+t ||
+    r ||
+    (t = function (e) {
         return !1;
     }),
     (e.exports =
-        n ||
+        t ||
         function (e) {
             if (!e || 'object' != typeof e) return !1;
             try {
-                if ((a.call(e), o))
+                if ((r.call(e), a))
                     try {
-                        o.call(e);
+                        a.call(e);
                     } catch (e) {
                         return !0;
                     }
-                return e instanceof r;
+                return e instanceof n;
             } catch (e) {}
             return !1;
         });

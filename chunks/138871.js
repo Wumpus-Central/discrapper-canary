@@ -1,7 +1,7 @@
 e.exports = {
-    modal: 'modal_a6c1fe',
-    content: 'content_a6c1fe',
-    footer: 'footer_a6c1fe',
-    goBackButton: 'goBackButton_a6c1fe',
-    slideContainer: 'slideContainer_a6c1fe'
+    modal: 'modal__339fa',
+    content: 'content__339fa',
+    footer: 'footer__339fa',
+    goBackButton: 'goBackButton__339fa',
+    slideContainer: 'slideContainer__339fa'
 };

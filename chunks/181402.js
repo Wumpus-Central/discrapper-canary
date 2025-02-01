@@ -1,6 +1,6 @@
 e.exports = {
-    memberSinceWrapper: 'memberSinceWrapper_b06bc5',
-    memberSince: 'memberSince_b06bc5',
-    discordIcon: 'discordIcon_b06bc5',
-    divider: 'divider_b06bc5'
+    memberSinceWrapper: 'memberSinceWrapper_c4eb81',
+    memberSince: 'memberSince_c4eb81',
+    discordIcon: 'discordIcon_c4eb81',
+    divider: 'divider_c4eb81'
 };

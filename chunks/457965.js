@@ -1,8 +1,8 @@
-var a = r(480751),
+var r = a(480751),
     n = (function () {
         try {
-            var e = a(Object, 'defineProperty');
-            return e({}, '', {}), e;
-        } catch (e) {}
+            var t = r(Object, 'defineProperty');
+            return t({}, '', {}), t;
+        } catch (t) {}
     })();
-e.exports = n;
+t.exports = n;

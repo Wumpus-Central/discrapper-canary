@@ -1,16 +1,16 @@
-var r = 800,
-    i = 16,
+n.d(t, { Z: () => s });
+var i = 800,
+    r = 16,
     a = Date.now;
-function o(e) {
-    var n = 0,
-        o = 0;
+let s = function (e) {
+    var t = 0,
+        n = 0;
     return function () {
         var s = a(),
-            l = i - (s - o);
-        if (((o = s), l > 0)) {
-            if (++n >= r) return arguments[0];
-        } else n = 0;
+            o = r - (s - n);
+        if (((n = s), o > 0)) {
+            if (++t >= i) return arguments[0];
+        } else t = 0;
         return e.apply(void 0, arguments);
     };
-}
-n.Z = o;
+};

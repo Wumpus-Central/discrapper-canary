@@ -1,29 +1,29 @@
 !(function () {
-    var n = {}.hasOwnProperty;
-    function r() {
-        for (var e = '', n = 0; n < arguments.length; n++) {
-            var r = arguments[n];
-            r && (e = a(e, i(r)));
+    var t = {}.hasOwnProperty;
+    function n() {
+        for (var e = '', t = 0; t < arguments.length; t++) {
+            var n = arguments[t];
+            n && (e = r(e, i(n)));
         }
         return e;
     }
     function i(e) {
         if ('string' == typeof e || 'number' == typeof e) return e;
         if ('object' != typeof e) return '';
-        if (Array.isArray(e)) return r.apply(null, e);
+        if (Array.isArray(e)) return n.apply(null, e);
         if (e.toString !== Object.prototype.toString && !e.toString.toString().includes('[native code]')) return e.toString();
         var i = '';
-        for (var o in e) n.call(e, o) && e[o] && (i = a(i, o));
+        for (var a in e) t.call(e, a) && e[a] && (i = r(i, a));
         return i;
     }
-    function a(e, n) {
-        return n ? (e ? e + ' ' + n : e + n) : e;
+    function r(e, t) {
+        return t ? (e ? e + ' ' + t : e + t) : e;
     }
     e.exports
-        ? ((r.default = r), (e.exports = r))
+        ? ((n.default = n), (e.exports = n))
         : 'function' == typeof define && 'object' == typeof define.amd && define.amd
           ? define('classnames', [], function () {
-                return r;
+                return n;
             })
-          : (window.classNames = r);
+          : (window.classNames = n);
 })();

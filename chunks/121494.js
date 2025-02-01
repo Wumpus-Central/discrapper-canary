@@ -1,29 +1,29 @@
-Object.defineProperty(n, '__esModule', { value: !0 }),
-    (n.calculateChange = function (e, n, r, i, a) {
-        var o = a.clientWidth,
-            s = a.clientHeight,
-            l = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
-            u = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
-            c = l - (a.getBoundingClientRect().left + window.pageXOffset),
-            d = u - (a.getBoundingClientRect().top + window.pageYOffset);
-        if ('vertical' === r) {
-            var f = void 0;
-            if (((f = d < 0 ? 0 : d > s ? 1 : Math.round((100 * d) / s) / 100), n.a !== f))
+Object.defineProperty(t, '__esModule', { value: !0 }),
+    (t.calculateChange = function (e, t, n, i, r) {
+        var a = r.clientWidth,
+            s = r.clientHeight,
+            o = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
+            l = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
+            u = o - (r.getBoundingClientRect().left + window.pageXOffset),
+            c = l - (r.getBoundingClientRect().top + window.pageYOffset);
+        if ('vertical' === n) {
+            var d = void 0;
+            if (((d = c < 0 ? 0 : c > s ? 1 : Math.round((100 * c) / s) / 100), t.a !== d))
                 return {
-                    h: n.h,
-                    s: n.s,
-                    l: n.l,
-                    a: f,
+                    h: t.h,
+                    s: t.s,
+                    l: t.l,
+                    a: d,
                     source: 'rgb'
                 };
         } else {
-            var p = void 0;
-            if (i !== (p = c < 0 ? 0 : c > o ? 1 : Math.round((100 * c) / o) / 100))
+            var f = void 0;
+            if (i !== (f = u < 0 ? 0 : u > a ? 1 : Math.round((100 * u) / a) / 100))
                 return {
-                    h: n.h,
-                    s: n.s,
-                    l: n.l,
-                    a: p,
+                    h: t.h,
+                    s: t.s,
+                    l: t.l,
+                    a: f,
                     source: 'rgb'
                 };
         }

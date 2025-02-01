@@ -1,5 +1,5 @@
-var i = n(818083);
-t.Z = (0, i.B)({
+n.d(t, { Z: () => i });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-12_app_dm_report_button',
     label: 'App DMs Report Button Experiment',

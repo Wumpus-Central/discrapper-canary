@@ -1,14 +1,14 @@
 e.exports = {
-    confrimationContainer: 'confrimationContainer_cc0775',
-    closeButtonContainer: 'closeButtonContainer_cc0775',
-    headerIcon: 'headerIcon_cc0775',
-    heading: 'heading_cc0775',
-    confirmedUserContainer: 'confirmedUserContainer_cc0775',
-    referredUserRowContainer: 'referredUserRowContainer_cc0775',
-    referredUserRowBody: 'referredUserRowBody_cc0775',
-    displayNameClickableContainer: 'displayNameClickableContainer_cc0775',
-    displayName: 'displayName_cc0775',
-    errorDisplayName: 'errorDisplayName_cc0775',
-    userName: 'userName_cc0775',
-    erroredAvatar: 'erroredAvatar_cc0775'
+    confrimationContainer: 'confrimationContainer_daaad8',
+    closeButtonContainer: 'closeButtonContainer_daaad8',
+    headerIcon: 'headerIcon_daaad8',
+    heading: 'heading_daaad8',
+    confirmedUserContainer: 'confirmedUserContainer_daaad8',
+    referredUserRowContainer: 'referredUserRowContainer_daaad8',
+    referredUserRowBody: 'referredUserRowBody_daaad8',
+    displayNameClickableContainer: 'displayNameClickableContainer_daaad8',
+    displayName: 'displayName_daaad8',
+    errorDisplayName: 'errorDisplayName_daaad8',
+    userName: 'userName_daaad8',
+    erroredAvatar: 'erroredAvatar_daaad8'
 };

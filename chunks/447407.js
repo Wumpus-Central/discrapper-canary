@@ -1,6 +1,6 @@
 e.exports = {
-    container: 'container_a56665',
-    option: 'option_a56665',
-    optionSelected: 'optionSelected_a56665',
-    icon: 'icon_a56665'
+    container: 'container__20987',
+    option: 'option__20987',
+    optionSelected: 'optionSelected__20987',
+    icon: 'icon__20987'
 };

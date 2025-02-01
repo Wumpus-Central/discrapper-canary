@@ -1,7 +1,7 @@
-var e = n(251069),
-    o = n(905145),
-    i = n(187684),
-    u = Error.captureStackTrace;
-t.exports = function (t, r, n, c) {
-    i && (u ? u(t, r) : e(t, 'stack', o(n, c)));
+var r = i(251069),
+    n = i(905145),
+    a = i(187684),
+    s = Error.captureStackTrace;
+t.exports = function (t, e, i, o) {
+    a && (s ? s(t, e) : r(t, 'stack', n(i, o)));
 };

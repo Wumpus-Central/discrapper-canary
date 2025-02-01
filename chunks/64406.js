@@ -1,6 +1,6 @@
 e.exports = {
-    scroller: 'scroller_d53fbd',
-    connections: 'connections_d53fbd',
-    appsConnections: 'appsConnections_d53fbd',
-    note: 'note_d53fbd'
+    scroller: 'scroller_fcb628',
+    connections: 'connections_fcb628',
+    appsConnections: 'appsConnections_fcb628',
+    note: 'note_fcb628'
 };

@@ -19,8 +19,8 @@ var f = n(616254),
     v = n(395727),
     y = n(471638),
     I = n(585275),
-    b = n(960048),
-    T = n(63063),
+    T = n(960048),
+    b = n(63063),
     S = n(240849),
     A = n(998502),
     N = n(513566),
@@ -56,7 +56,7 @@ if (null != P.Z) {
         void 0 === i ||
         i.call(P.Z, (e, t) => {
             setImmediate(() => {
-                throw (b.Z.captureCrash(e), e);
+                throw (T.Z.captureCrash(e), e);
             });
         }),
         null === (r = P.Z.setWebAppLoaded) || void 0 === r || r.call(P.Z);
@@ -64,11 +64,11 @@ if (null != P.Z) {
         t = null === (o = (l = P.Z.remoteApp).getBuildNumber) || void 0 === o ? void 0 : o.call(l),
         n = {};
     null != P.Z.remoteApp.getModuleVersions && (n = P.Z.remoteApp.getModuleVersions()),
-        b.Z.setExtra({
+        T.Z.setExtra({
             hostVersion: e,
             moduleVersions: n
         }),
-        b.Z.setTags({ nativeBuildNumber: null == t ? void 0 : t.toString() });
+        T.Z.setTags({ nativeBuildNumber: null == t ? void 0 : t.toString() });
     let d = Object.keys(n)
         .filter((e) => null != n[e])
         .map((e) => ''.concat(e, ': ').concat(n[e]))
@@ -81,7 +81,7 @@ if (((0, x.O)(window), __OVERLAY__)) W(h.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) W(h.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), R.isPlatformEmbedded)) {
-        (window.onbeforeunload = () => A.ZP.beforeUnload()), A.ZP.on('HELP_OPEN', () => window.open(T.Z.getCommunityURL()));
+        (window.onbeforeunload = () => A.ZP.beforeUnload()), A.ZP.on('HELP_OPEN', () => window.open(b.Z.getCommunityURL()));
         let e = new L.sW(F, () => A.ZP.purgeMemory());
         A.ZP.on('MAIN_WINDOW_BLUR', () => {
             e.delay(), A.ZP.setFocused(!1), (0, D.T_)(window, !1);

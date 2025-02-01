@@ -1,4 +1,4 @@
-function n(e, n) {
-    return null == e ? void 0 : e[n];
+function t(e, t) {
+    return null == e ? void 0 : e[t];
 }
-e.exports = n;
+e.exports = t;

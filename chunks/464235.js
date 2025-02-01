@@ -1,17 +1,17 @@
 s.r(
     (e.exports = {
-        unsupportedBrowser: 'unsupportedBrowser_be70cf',
-        wrap: 'wrap_be70cf',
-        title: 'title_be70cf',
-        message: 'message_be70cf',
-        browserList: 'browserList_be70cf',
-        browserItem: 'browserItem_be70cf',
-        browser: 'browser_be70cf',
-        btn: 'btn_be70cf',
-        browserItemText: 'browserItemText_be70cf',
-        browserDiscord: 'browserDiscord_be70cf',
-        browserOpera: 'browserOpera_be70cf',
-        browserFirefox: 'browserFirefox_be70cf',
-        browserChrome: 'browserChrome_be70cf'
+        unsupportedBrowser: 'unsupportedBrowser__9ec6a',
+        wrap: 'wrap__9ec6a',
+        title: 'title__9ec6a',
+        message: 'message__9ec6a',
+        browserList: 'browserList__9ec6a',
+        browserItem: 'browserItem__9ec6a',
+        browser: 'browser__9ec6a',
+        btn: 'btn__9ec6a',
+        browserItemText: 'browserItemText__9ec6a',
+        browserDiscord: 'browserDiscord__9ec6a',
+        browserOpera: 'browserOpera__9ec6a',
+        browserFirefox: 'browserFirefox__9ec6a',
+        browserChrome: 'browserChrome__9ec6a'
     })
 );

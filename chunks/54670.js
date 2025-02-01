@@ -1,4 +1,4 @@
-e.exports = {
-    descriptionText: 'descriptionText_f4ba67',
-    truncate: 'truncate_f4ba67'
+n.exports = {
+    descriptionText: 'descriptionText__535f5',
+    truncate: 'truncate__535f5'
 };

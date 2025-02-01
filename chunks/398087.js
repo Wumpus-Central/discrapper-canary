@@ -1,12 +1,12 @@
 e.exports = {
-    modal: 'modal_a9236d',
-    selectContent: 'selectContent_a9236d',
-    confirmImage: 'confirmImage_a9236d',
-    transferConfirmImage: 'transferConfirmImage_a9236d',
-    quantitySelectorBody: 'quantitySelectorBody_a9236d',
-    quantitySelectorHeader: 'quantitySelectorHeader_a9236d',
-    quantitySelectorDescription: 'quantitySelectorDescription_a9236d',
-    quantitySelectorWrapper: 'quantitySelectorWrapper_a9236d',
-    quantitySelectorLabel: 'quantitySelectorLabel_a9236d',
-    modalCloseButton: 'modalCloseButton_a9236d'
+    modal: 'modal__0f8ce',
+    selectContent: 'selectContent__0f8ce',
+    confirmImage: 'confirmImage__0f8ce',
+    transferConfirmImage: 'transferConfirmImage__0f8ce',
+    quantitySelectorBody: 'quantitySelectorBody__0f8ce',
+    quantitySelectorDescription: 'quantitySelectorDescription__0f8ce',
+    quantitySelectorHeader: 'quantitySelectorHeader__0f8ce',
+    quantitySelectorWrapper: 'quantitySelectorWrapper__0f8ce',
+    quantitySelectorLabel: 'quantitySelectorLabel__0f8ce',
+    modalCloseButton: 'modalCloseButton__0f8ce'
 };

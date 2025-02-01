@@ -1,9 +1,9 @@
 e.exports = {
-    selectedIcon: 'selectedIcon_da7eaa',
-    ellipsisText: 'ellipsisText_da7eaa',
-    changeButton: 'changeButton_da7eaa',
-    warningIcon: 'warningIcon_da7eaa',
-    warning: 'warning_da7eaa',
-    checkboxRow: 'checkboxRow_da7eaa',
-    hardwareWarning: 'hardwareWarning_da7eaa'
+    selectedIcon: 'selectedIcon__885c5',
+    ellipsisText: 'ellipsisText__885c5',
+    changeButton: 'changeButton__885c5',
+    warningIcon: 'warningIcon__885c5',
+    warning: 'warning__885c5',
+    checkboxRow: 'checkboxRow__885c5',
+    hardwareWarning: 'hardwareWarning__885c5'
 };

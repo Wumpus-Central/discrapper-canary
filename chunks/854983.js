@@ -1,7 +1,7 @@
 e.exports = {
-    mainContainer: 'mainContainer_e13d39',
-    modal: 'modal_e13d39',
-    infoContainer: 'infoContainer_e13d39',
-    modalFooter: 'modalFooter_e13d39',
-    headerTextContainer: 'headerTextContainer_e13d39'
+    mainContainer: 'mainContainer_e1323c',
+    modal: 'modal_e1323c',
+    infoContainer: 'infoContainer_e1323c',
+    modalFooter: 'modalFooter_e1323c',
+    headerTextContainer: 'headerTextContainer_e1323c'
 };

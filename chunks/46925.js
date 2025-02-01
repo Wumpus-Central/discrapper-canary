@@ -98,7 +98,7 @@ function g(t, e, r, o) {
 t.exports = {
     setDraftEditorSelection: function (t, e, r, n, i) {
         var o = s(e);
-        if (!!a(o.documentElement, e)) {
+        if (a(o.documentElement, e)) {
             var u = o.defaultView.getSelection(),
                 c = t.getAnchorKey(),
                 l = t.getAnchorOffset(),

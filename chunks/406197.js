@@ -1,6 +1,6 @@
-function n(e) {
-    let n = '[a-zA-Z_$][a-zA-Z0-9_$]*',
-        r = /(-?)(\b0[xX][a-fA-F0-9_]+|(\b\d+(\.[\d_]*)?|\.[\d_]+)(([eE][-+]?\d+)|i32|u32|i64|f64)?)/;
+function t(e) {
+    let t = '[a-zA-Z_$][a-zA-Z0-9_$]*',
+        n = /(-?)(\b0[xX][a-fA-F0-9_]+|(\b\d+(\.[\d_]*)?|\.[\d_]+)(([eE][-+]?\d+)|i32|u32|i64|f64)?)/;
     return {
         name: 'Haxe',
         aliases: ['hx'],
@@ -33,12 +33,12 @@ function n(e) {
             e.C_BLOCK_COMMENT_MODE,
             {
                 className: 'number',
-                begin: r,
+                begin: n,
                 relevance: 0
             },
             {
                 className: 'variable',
-                begin: '\\$' + n
+                begin: '\\$' + t
             },
             {
                 className: 'meta',
@@ -144,4 +144,4 @@ function n(e) {
         illegal: /<\//
     };
 }
-e.exports = n;
+e.exports = t;

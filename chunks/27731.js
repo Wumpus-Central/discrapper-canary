@@ -1,4 +1,4 @@
 e.exports = {
-    panel: 'panel_cb7302',
-    panelGroup: 'panelGroup_cb7302'
+    panel: 'panel_b6e84c',
+    panelGroup: 'panelGroup_b6e84c'
 };

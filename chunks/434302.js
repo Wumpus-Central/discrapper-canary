@@ -1,22 +1,22 @@
-var i = r(67867),
-    a = r(828596),
-    o = r(821819),
-    s = r(502640),
-    l = r(611345);
+var i = n(67867),
+    r = n(828596),
+    a = n(821819),
+    s = n(502640),
+    o = n(611345);
 i(
     {
         target: 'Object',
         stat: !0,
         forced:
-            !a ||
-            o(function () {
+            !r ||
+            a(function () {
                 s.f(1);
             })
     },
     {
         getOwnPropertySymbols: function (e) {
-            var n = s.f;
-            return n ? n(l(e)) : [];
+            var t = s.f;
+            return t ? t(o(e)) : [];
         }
     }
 );

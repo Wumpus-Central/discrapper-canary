@@ -1,78 +1,78 @@
-t.r(r), t(47120);
+t.d(r, { default: () => u }), t(47120);
 var n = t(200651),
-    o = t(192379),
-    s = t(512722),
-    i = t.n(s),
+    s = t(192379),
+    i = t(512722),
+    o = t.n(i),
     l = t(481060),
     c = t(985002),
     a = t(880257),
     d = t(957656),
-    u = t(388032),
-    h = t(773958);
-r.default = (e) => {
-    let { currentUser: r, otherUser: t, transitionState: s, onClose: x } = e,
-        [j, m] = o.useState(!1),
-        f = o.useCallback(() => {
-            m(!0);
+    h = t(388032),
+    x = t(773958);
+let u = (e) => {
+    let { currentUser: r, otherUser: t, transitionState: i, onClose: u } = e,
+        [j, b] = s.useState(!1),
+        k = s.useCallback(() => {
+            b(!0);
         }, []),
-        b = o.useCallback(() => {
-            m(!1);
+        m = s.useCallback(() => {
+            b(!1);
         }, []),
-        g = o.useCallback(() => {
-            x();
-        }, [x]),
-        C = (0, a.Z)(),
-        { declineLinkRequest: k, isDeclineLoading: p } = (0, c.G)({
-            onError: f,
-            onSuccess: g
+        f = s.useCallback(() => {
+            u();
+        }, [u]),
+        _ = (0, a.Z)(),
+        { declineLinkRequest: z, isDeclineLoading: g } = (0, c.G)({
+            onError: k,
+            onSuccess: f
         });
     return (
-        i()(!C, 'FamilyCenterDeclineLinkModal should only be rendered for teens.'),
+        o()(!_, 'FamilyCenterDeclineLinkModal should only be rendered for teens.'),
         (0, n.jsx)(d.Z, {
-            transitionState: s,
+            transitionState: i,
             children: (0, n.jsxs)('form', {
                 onSubmit: (e) => {
-                    e.preventDefault(), k(t);
+                    e.preventDefault(), z(t);
                 },
                 children: [
                     (0, n.jsx)(d.Z.Error, {
-                        error: j ? u.intl.string(u.t.tJAUys) : void 0,
-                        onDismiss: b
+                        error: j ? h.intl.string(h.t.tJAUys) : void 0,
+                        onDismiss: m
                     }),
-                    (0, n.jsxs)(l.ModalContent, {
+                    (0, n.jsxs)(l.hzk, {
                         children: [
                             (0, n.jsx)(d.Z.Header, {
                                 currentUser: r,
                                 otherUser: t,
-                                header: u.intl.string(u.t.teIRCQ),
-                                icon: (0, n.jsx)(l.XSmallIcon, {
+                                header: h.intl.string(h.t.teIRCQ),
+                                icon: (0, n.jsx)(l.Dio, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: h.closeIcon
+                                    className: x.closeIcon
                                 })
                             }),
-                            (0, n.jsx)(d.Z.Content, { children: (0, n.jsx)(d.Z.Notice, { notice: u.intl.string(u.t.LcM8BQ) }) })
+                            (0, n.jsx)(d.Z.Content, { children: (0, n.jsx)(d.Z.Notice, { notice: h.intl.string(h.t.LcM8BQ) }) })
                         ]
                     }),
-                    (0, n.jsx)(l.ModalFooter, {
+                    (0, n.jsx)(l.mzw, {
                         children: (0, n.jsxs)(d.Z.ButtonFooter, {
                             children: [
-                                (0, n.jsx)(l.Button, {
+                                (0, n.jsx)(l.zxk, {
                                     type: 'button',
-                                    disabled: p,
-                                    look: l.Button.Looks.LINK,
-                                    color: l.Button.Colors.PRIMARY,
-                                    onClick: x,
-                                    size: l.Button.Sizes.SMALL,
-                                    children: u.intl.string(u.t['ETE/oK'])
+                                    disabled: g,
+                                    look: l.zxk.Looks.LINK,
+                                    color: l.zxk.Colors.PRIMARY,
+                                    onClick: u,
+                                    size: l.zxk.Sizes.SMALL,
+                                    children: h.intl.string(h.t['ETE/oK'])
                                 }),
-                                (0, n.jsx)(l.Button, {
+                                (0, n.jsx)(l.zxk, {
                                     type: 'submit',
-                                    disabled: p,
-                                    submitting: p,
-                                    color: l.ButtonColors.RED,
-                                    size: l.Button.Sizes.SMALL,
-                                    children: u.intl.string(u.t.dKxFcn)
+                                    disabled: g,
+                                    submitting: g,
+                                    color: l.Ttl.RED,
+                                    size: l.zxk.Sizes.SMALL,
+                                    children: h.intl.string(h.t.dKxFcn)
                                 })
                             ]
                         })

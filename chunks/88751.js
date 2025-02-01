@@ -55,13 +55,13 @@ function I(e, t) {
           }
         : E;
 }
-function b(e, t) {
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     null == g[t] && (g[t] = {});
     let i = I(e, t, n);
     return (g[t][e] = i), i;
 }
-function T(e, t) {
+function b(e, t) {
     var n;
     if (null == t) return !1;
     let i = l.Z.getChannel(t);
@@ -97,7 +97,7 @@ function O(e) {
         !a().isEmpty(g) &&
         t.reduce((e, t) => {
             let { userId: n, channelId: i } = t;
-            return T(n, i) || e;
+            return b(n, i) || e;
         }, !1)
     );
 }
@@ -134,7 +134,7 @@ class P extends (i = s.ZP.Store) {
         let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (null == e || null == t) return E;
         let r = null === (n = g[t]) || void 0 === n ? void 0 : n[e];
-        return null != r ? (i && null == r.moderator ? b(e, t, !0) : r) : b(e, t, i);
+        return null != r ? (i && null == r.moderator ? T(e, t, !0) : r) : T(e, t, i);
     }
 }
 m(P, 'displayName', 'StageChannelRoleStore');

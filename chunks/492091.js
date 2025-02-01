@@ -1,22 +1,22 @@
-var i = r(96403),
-    a = r(952256),
-    o = r(735471),
-    s = r(726433),
-    l = r(342545),
-    u = i([].push);
+var i = n(96403),
+    r = n(952256),
+    a = n(735471),
+    s = n(726433),
+    o = n(342545),
+    l = i([].push);
 e.exports = function (e) {
-    if (o(e)) return e;
-    if (a(e)) {
-        for (var n = e.length, r = [], i = 0; i < n; i++) {
-            var c = e[i];
-            'string' == typeof c ? u(r, c) : ('number' == typeof c || 'Number' === s(c) || 'String' === s(c)) && u(r, l(c));
+    if (a(e)) return e;
+    if (r(e)) {
+        for (var t = e.length, n = [], i = 0; i < t; i++) {
+            var u = e[i];
+            'string' == typeof u ? l(n, u) : ('number' == typeof u || 'Number' === s(u) || 'String' === s(u)) && l(n, o(u));
         }
-        var d = r.length,
-            f = !0;
-        return function (e, n) {
-            if (f) return (f = !1), n;
-            if (a(this)) return n;
-            for (var i = 0; i < d; i++) if (r[i] === e) return n;
+        var c = n.length,
+            d = !0;
+        return function (e, t) {
+            if (d) return (d = !1), t;
+            if (r(this)) return t;
+            for (var i = 0; i < c; i++) if (n[i] === e) return t;
         };
     }
 };

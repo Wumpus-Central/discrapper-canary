@@ -1,5 +1,5 @@
-var i = n(818083);
-t.Z = (0, i.B)({
+n.d(t, { Z: () => i });
+let i = (0, n(818083).B)({
     kind: 'guild',
     id: '2024-03_advanced_slowmode_input',
     label: 'advanced slowmode input',

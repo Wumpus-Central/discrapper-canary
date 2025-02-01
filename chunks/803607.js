@@ -1,4 +1,4 @@
-function n(e, n) {
-    return e.has(n);
+function t(e, t) {
+    return e.has(t);
 }
-e.exports = n;
+e.exports = t;

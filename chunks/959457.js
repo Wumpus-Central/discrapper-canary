@@ -17,8 +17,8 @@ var a,
     v = n(199902),
     y = n(314897),
     I = n(131951),
-    b = n(158776),
-    T = n(19780),
+    T = n(158776),
+    b = n(19780),
     S = n(981631),
     A = n(65154);
 function N(e, t, n) {
@@ -53,7 +53,7 @@ function k(e, t, n) {
             initialLayout: L,
             analyticsContext: n,
             isStreamer: null != R[e],
-            parentMediaSessionId: T.Z.getMediaSessionId()
+            parentMediaSessionId: b.Z.getMediaSessionId()
         })
     );
 }
@@ -132,7 +132,7 @@ function j(e) {
     if (null == s && null != n) {
         null == O[t] && (R[t] = null);
         let e = (0, h.my)(t);
-        null == R[t] && null == D[t] && (R[t] = (0, m.L2)(e, b.Z));
+        null == R[t] && null == D[t] && (R[t] = (0, m.L2)(e, T.Z));
         let r = new p.A({
             streamRegion: i,
             streamApplication: R[t],

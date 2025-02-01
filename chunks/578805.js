@@ -63,15 +63,15 @@ if (n(322499)() || n(882171)()) {
         var v = n(403006),
             y = n(72859),
             I = f('Map.prototype.forEach', !0),
-            b = f('Set.prototype.forEach', !0);
+            T = f('Set.prototype.forEach', !0);
         if (void 0 === i || !i.versions || !i.versions.node)
-            var T = f('Map.prototype.iterator', !0),
+            var b = f('Map.prototype.iterator', !0),
                 S = f('Set.prototype.iterator', !0);
         var A = f('Map.prototype.@@iterator', !0) || f('Map.prototype._es6-shim iterator_', !0),
             N = f('Set.prototype.@@iterator', !0) || f('Set.prototype._es6-shim iterator_', !0),
             C = function (e) {
                 if (v(e)) {
-                    if (T) return a(T(e));
+                    if (b) return a(b(e));
                     if (A) return A(e);
                     if (I) {
                         var t = [];
@@ -86,10 +86,10 @@ if (n(322499)() || n(882171)()) {
                 if (y(e)) {
                     if (S) return a(S(e));
                     if (N) return N(e);
-                    if (b) {
+                    if (T) {
                         var n = [];
                         return (
-                            b(e, function (e) {
+                            T(e, function (e) {
                                 _(n, e);
                             }),
                             g(n)

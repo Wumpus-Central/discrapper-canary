@@ -18,8 +18,8 @@ var i = n(147018),
     v = n(974971),
     y = n(24033),
     I = n(622281),
-    b = n(714050),
-    T = n(803938),
+    T = n(714050),
+    b = n(803938),
     S = n(879),
     A = n(981971),
     N = n(11697),
@@ -111,7 +111,7 @@ var i = n(147018),
         !0
     ),
     ed = function (e) {
-        (this.entries = []), (this.url = null), void 0 !== e && (I(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === K(e, 0) ? ee(e, 1) : e) : b(e)));
+        (this.entries = []), (this.url = null), void 0 !== e && (I(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === K(e, 0) ? ee(e, 1) : e) : T(e)));
     };
 ed.prototype = {
     type: x,
@@ -131,8 +131,8 @@ ed.prototype = {
             for (n = (t = A(e, u)).next; !(i = a(n, t)).done; ) {
                 if ((o = a((s = (r = A(y(i.value))).next), r)).done || (l = a(s, r)).done || !a(s, r).done) throw H('Expected sequence with length 2');
                 q(this.entries, {
-                    key: b(o.value),
-                    value: b(l.value)
+                    key: T(o.value),
+                    value: T(l.value)
                 });
             }
         else
@@ -140,7 +140,7 @@ ed.prototype = {
                 g(e, c) &&
                     q(this.entries, {
                         key: c,
-                        value: b(e[c])
+                        value: T(e[c])
                     });
     },
     parseQuery: function (e) {
@@ -179,14 +179,14 @@ if (
                 var n = w(this);
                 C(arguments.length, 2),
                     q(n.entries, {
-                        key: b(e),
-                        value: b(t)
+                        key: T(e),
+                        value: T(t)
                     }),
                     !o && this.length++,
                     n.updateURL();
             },
             delete: function (e) {
-                for (var t = w(this), n = C(arguments.length, 1), i = t.entries, r = b(e), a = n < 2 ? void 0 : arguments[1], s = void 0 === a ? a : b(a), l = 0; l < i.length; ) {
+                for (var t = w(this), n = C(arguments.length, 1), i = t.entries, r = T(e), a = n < 2 ? void 0 : arguments[1], s = void 0 === a ? a : T(a), l = 0; l < i.length; ) {
                     var u = i[l];
                     if (u.key === r && (void 0 === s || u.value === s)) {
                         if ((J(i, l, 1), void 0 !== s)) break;
@@ -197,17 +197,17 @@ if (
             get: function (e) {
                 var t = w(this).entries;
                 C(arguments.length, 1);
-                for (var n = b(e), i = 0; i < t.length; i++) if (t[i].key === n) return t[i].value;
+                for (var n = T(e), i = 0; i < t.length; i++) if (t[i].key === n) return t[i].value;
                 return null;
             },
             getAll: function (e) {
                 var t = w(this).entries;
                 C(arguments.length, 1);
-                for (var n = b(e), i = [], r = 0; r < t.length; r++) t[r].key === n && q(i, t[r].value);
+                for (var n = T(e), i = [], r = 0; r < t.length; r++) t[r].key === n && q(i, t[r].value);
                 return i;
             },
             has: function (e) {
-                for (var t = w(this).entries, n = C(arguments.length, 1), i = b(e), r = n < 2 ? void 0 : arguments[1], a = void 0 === r ? r : b(r), s = 0; s < t.length; ) {
+                for (var t = w(this).entries, n = C(arguments.length, 1), i = T(e), r = n < 2 ? void 0 : arguments[1], a = void 0 === r ? r : T(r), s = 0; s < t.length; ) {
                     var o = t[s++];
                     if (o.key === i && (void 0 === a || o.value === a)) return !0;
                 }
@@ -217,7 +217,7 @@ if (
                 var n,
                     i = w(this);
                 C(arguments.length, 1);
-                for (var r = i.entries, a = !1, s = b(e), l = b(t), u = 0; u < r.length; u++) (n = r[u]).key === s && (a ? J(r, u--, 1) : ((a = !0), (n.value = l)));
+                for (var r = i.entries, a = !1, s = T(e), l = T(t), u = 0; u < r.length; u++) (n = r[u]).key === s && (a ? J(r, u--, 1) : ((a = !0), (n.value = l)));
                 a ||
                     q(r, {
                         key: s,
@@ -285,8 +285,8 @@ if (
                 if (v(n) === x)
                     return (
                         ep((t = e.headers ? new Z(e.headers) : new Z()), 'content-type') || eh(t, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
-                        T(e, {
-                            body: S(0, b(n)),
+                        b(e, {
+                            body: S(0, T(n)),
                             headers: S(0, t)
                         })
                     );

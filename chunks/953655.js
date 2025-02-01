@@ -1,38 +1,38 @@
-n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var r = n(200651),
-    i = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    s = n(180650),
+    l = n(192379),
+    i = n(120356),
+    s = n.n(i),
+    a = n(180650),
     o = n(87290),
-    c = n(960048),
-    d = n(381585),
+    d = n(960048),
+    c = n(381585),
     u = n(597688),
     C = n(606414),
     h = n(788822),
     p = n(215023),
-    f = n(388032),
-    m = n(218142);
-let g = (e) => {
+    m = n(388032),
+    g = n(218142);
+let f = (e) => {
         let { handleTransition: t, featuredBlockRecord: n } = e,
-            l = u.Z.getCategory(s.T.ROBERT),
-            c = (0, C.c)('CollectiblesFeedShop') && null != l,
-            d = u.Z.getCategory(s.T.ANIME_V2),
-            g = i.useMemo(() => f.intl.string(new Date() > p.gJ ? f.t.l0CjbW : f.t.uPewb2), []);
+            i = u.Z.getCategory(a.T.ROBERT),
+            d = (0, C.c)('CollectiblesFeedShop') && null != i,
+            c = u.Z.getCategory(a.T.ANIME_V2),
+            f = l.useMemo(() => m.intl.string(new Date() > p.gJ ? m.t.l0CjbW : m.t.uPewb2), []);
         return (0, r.jsx)('div', {
-            className: a()(m.section, m.col2, m.featuredBlocksContainer),
+            className: s()(g.section, g.col2, g.featuredBlocksContainer),
             children:
                 null == n
                     ? void 0
                     : n.subblocks.map((e, n) => {
                           if (e.type === o.O.CATEGORY) {
-                              let i = null != e.unpublishedAt ? f.intl.string(f.t['h/uBCQ']) : e.categoryStoreListingId === (null == d ? void 0 : d.storeListingId) ? f.intl.string(f.t['o/oRJC']) : void 0,
-                                  a = c && e.categoryStoreListingId === (null == l ? void 0 : l.storeListingId) ? g : i;
+                              let l = null != e.unpublishedAt ? m.intl.string(m.t['h/uBCQ']) : e.categoryStoreListingId === (null == c ? void 0 : c.storeListingId) ? m.intl.string(m.t['o/oRJC']) : void 0,
+                                  s = d && e.categoryStoreListingId === (null == i ? void 0 : i.storeListingId) ? f : l;
                               return (0, r.jsx)(
                                   h.q,
                                   {
                                       subblock: e,
-                                      badgeText: 0 === n ? i : a,
+                                      badgeText: 0 === n ? l : s,
                                       handleTransition: t
                                   },
                                   e.categoryStoreListingId
@@ -42,63 +42,63 @@ let g = (e) => {
                       })
         });
     },
-    b = (e) => {
+    x = (e) => {
         let { handleTransition: t, categories: n } = e,
-            i = (0, C.c)('CollectiblesFeedShop') && null != u.Z.getCategory(s.T.ROBERT);
-        if (null == n || n.length < 2) return c.Z.captureMessage('Collectible Featured Block requires at least 2 categories'), null;
-        let [l, o] = n,
-            g = (null == l ? void 0 : l.unpublishedAt) != null ? f.intl.string(f.t['h/uBCQ']) : void 0,
-            b = f.intl.string(new Date() > p.gJ ? f.t.l0CjbW : f.t.uPewb2),
-            x = i ? b : f.intl.string(f.t['o/oRJC']);
+            l = (0, C.c)('CollectiblesFeedShop') && null != u.Z.getCategory(a.T.ROBERT);
+        if (null == n || n.length < 2) return d.Z.captureMessage('Collectible Featured Block requires at least 2 categories'), null;
+        let [i, o] = n,
+            f = (null == i ? void 0 : i.unpublishedAt) != null ? m.intl.string(m.t['h/uBCQ']) : void 0,
+            x = m.intl.string(new Date() > p.gJ ? m.t.l0CjbW : m.t.uPewb2),
+            _ = l ? x : m.intl.string(m.t['o/oRJC']);
         return (0, r.jsx)('div', {
-            className: a()(m.section, m.col2, m.featuredBlocksContainer),
-            children: (0, r.jsxs)(d.k0, {
+            className: s()(g.section, g.col2, g.featuredBlocksContainer),
+            children: (0, r.jsxs)(c.k0, {
                 newValue: {
                     categoryPosition: 1,
                     pageSection: 'featured_block'
                 },
                 children: [
-                    null != l &&
+                    null != i &&
                         (0, r.jsx)(h.q, {
-                            category: l,
-                            badgeText: g,
+                            category: i,
+                            badgeText: f,
                             handleTransition: t
                         }),
                     null != o &&
                         (0, r.jsx)(h.q, {
                             category: o,
-                            badgeText: x,
+                            badgeText: _,
                             handleTransition: t
                         })
                 ]
             })
         });
+    },
+    _ = (e) => {
+        let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: i } = e;
+        return t
+            ? (0, r.jsxs)('div', {
+                  className: s()(g.section, g.col2, g.featuredBlocksContainer),
+                  children: [
+                      (0, r.jsx)('div', {
+                          className: s()(g.skeleton, g.featuredBlock),
+                          children: (0, r.jsx)('div', { className: g.skeletonBody })
+                      }),
+                      (0, r.jsx)('div', {
+                          className: s()(g.skeleton, g.featuredBlock),
+                          children: (0, r.jsx)('div', { className: g.skeletonBody })
+                      })
+                  ]
+              })
+            : null != i
+              ? (0, r.jsx)(f, {
+                    featuredBlockRecord: i,
+                    handleTransition: n,
+                    isLoading: !1
+                })
+              : (0, r.jsx)(x, {
+                    categories: l,
+                    handleTransition: n,
+                    isLoading: !1
+                });
     };
-t.Z = (e) => {
-    let { isLoading: t, handleTransition: n, categories: i, featuredBlockRecord: l } = e;
-    return t
-        ? (0, r.jsxs)('div', {
-              className: a()(m.section, m.col2, m.featuredBlocksContainer),
-              children: [
-                  (0, r.jsx)('div', {
-                      className: a()(m.skeleton, m.featuredBlock),
-                      children: (0, r.jsx)('div', { className: m.skeletonBody })
-                  }),
-                  (0, r.jsx)('div', {
-                      className: a()(m.skeleton, m.featuredBlock),
-                      children: (0, r.jsx)('div', { className: m.skeletonBody })
-                  })
-              ]
-          })
-        : null != l
-          ? (0, r.jsx)(g, {
-                featuredBlockRecord: l,
-                handleTransition: n,
-                isLoading: !1
-            })
-          : (0, r.jsx)(b, {
-                categories: i,
-                handleTransition: n,
-                isLoading: !1
-            });
-};

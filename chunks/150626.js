@@ -1,10 +1,10 @@
 e.exports = {
-    rootContainer: 'rootContainer_e45ea8',
-    headerContainer: 'headerContainer_e45ea8',
-    text: 'text_e45ea8',
-    newBadge: 'newBadge_e45ea8',
-    nitroWheel: 'nitroWheel_e45ea8',
-    labelContainer: 'labelContainer_e45ea8',
-    playButton: 'playButton_e45ea8',
-    mutedLabel: 'mutedLabel_e45ea8'
+    rootContainer: 'rootContainer_f4adbd',
+    headerContainer: 'headerContainer_f4adbd',
+    text: 'text_f4adbd',
+    newBadge: 'newBadge_f4adbd',
+    nitroWheel: 'nitroWheel_f4adbd',
+    labelContainer: 'labelContainer_f4adbd',
+    playButton: 'playButton_f4adbd',
+    mutedLabel: 'mutedLabel_f4adbd'
 };

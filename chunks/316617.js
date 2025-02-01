@@ -1,61 +1,62 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(442837),
-    s = r(481060),
-    l = r(39154),
-    u = r(739566),
-    c = r(492593),
-    d = r(930282),
-    f = r(464891),
-    p = r(267128),
-    h = r(25015),
-    _ = r(592125),
-    m = r(217702),
-    g = r(388032),
-    E = r(165881);
-let v = (e) => {
-    let { message: n } = e,
-        r = (0, u.ZP)(n),
-        v = (0, o.e7)([_.Z], () => _.Z.getChannel(n.channel_id)),
-        y = a.useMemo(() => (0, l.Z)(n), [n]),
-        { content: b } = (0, h.Z)(y, { hideSimpleEmbedContent: !1 }),
-        I = a.useCallback(() => {
-            let { leadingIcon: e, trailingIcon: r } = (0, p.f)(n, b, !1, !1, '', {
-                leadingIconClass: E.attachmentIcon,
-                trailingIconClass: E.attachmentIcon,
-                iconSize: m.WW
+n.d(t, { Z: () => E });
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(39154),
+    l = n(739566),
+    u = n(492593),
+    c = n(930282),
+    d = n(464891),
+    f = n(267128),
+    _ = n(25015),
+    p = n(592125),
+    h = n(217702),
+    m = n(388032),
+    g = n(165881);
+let E = (e) => {
+    let { message: t } = e,
+        n = (0, l.ZP)(t),
+        E = (0, a.e7)([p.Z], () => p.Z.getChannel(t.channel_id)),
+        v = r.useMemo(() => (0, o.Z)(t), [t]),
+        { content: y } = (0, _.Z)(v, { hideSimpleEmbedContent: !1 }),
+        I = r.useCallback(() => {
+            let { leadingIcon: e, trailingIcon: n } = (0, f.f)(t, y, !1, !1, '', {
+                leadingIconClass: g.attachmentIcon,
+                trailingIconClass: g.attachmentIcon,
+                iconSize: h.WW
             });
             return (0, i.jsxs)('div', {
-                className: E.contentContainer,
+                className: g.contentContainer,
                 children: [
                     e,
-                    (0, i.jsx)(d.ZP, {
-                        message: n,
-                        content: b
+                    (0, i.jsx)(c.ZP, {
+                        message: t,
+                        content: y
                     }),
-                    r
+                    n
                 ]
             });
-        }, [n, b]);
-    return null == v
+        }, [t, y]);
+    return null == E
         ? null
         : (0, i.jsxs)('div', {
-              className: E.container,
+              className: g.container,
               children: [
-                  (0, i.jsx)(s.Heading, {
-                      className: E.header,
+                  (0, i.jsx)(s.X6q, {
+                      className: g.header,
                       variant: 'heading-sm/semibold',
-                      children: g.intl.string(g.t.iouM3d)
+                      children: m.intl.string(m.t.iouM3d)
                   }),
-                  (0, i.jsx)(s.Scroller, {
-                      className: E.messagePreviewContainer,
-                      children: (0, i.jsx)(c.Z, {
+                  (0, i.jsx)(s.Ttm, {
+                      className: g.messagePreviewContainer,
+                      children: (0, i.jsx)(u.Z, {
                           childrenMessageContent: I(),
-                          childrenHeader: (0, i.jsx)(f.ZP, {
-                              message: n,
-                              channel: v,
-                              author: r,
-                              guildId: v.guild_id
+                          childrenHeader: (0, i.jsx)(d.ZP, {
+                              message: t,
+                              channel: E,
+                              author: n,
+                              guildId: E.guild_id
                           }),
                           disableInteraction: !0
                       })
@@ -63,4 +64,3 @@ let v = (e) => {
               ]
           });
 };
-n.Z = v;

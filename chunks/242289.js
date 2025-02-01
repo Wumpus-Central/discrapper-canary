@@ -1,4 +1,4 @@
 e.exports = {
-    button: 'button_ccfa44',
-    buttonIcon: 'buttonIcon_ccfa44'
+    button: 'button__6e3f1',
+    buttonIcon: 'buttonIcon__6e3f1'
 };

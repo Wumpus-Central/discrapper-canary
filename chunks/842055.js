@@ -1,7 +1,7 @@
 e.exports = {
-    container: 'container_dee259',
-    gifContainer: 'gifContainer_dee259',
-    gif: 'gif_dee259',
-    sectionDivider: 'sectionDivider_dee259',
-    learnMoreLink: 'learnMoreLink_dee259'
+    container: 'container_b4f99f',
+    gifContainer: 'gifContainer_b4f99f',
+    gif: 'gif_b4f99f',
+    ctaButton: 'ctaButton_b4f99f',
+    learnMoreLink: 'learnMoreLink_b4f99f'
 };

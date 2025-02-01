@@ -1,10 +1,10 @@
 e.exports = {
-    searchHeader: 'searchHeader_b7c924',
-    searchHeaderTabList: 'searchHeaderTabList_b7c924',
-    helpdeskLink: 'helpdeskLink_b7c924',
-    totalResultsWrapper: 'totalResultsWrapper_b7c924',
-    totalResults: 'totalResults_b7c924',
-    spinnerWrapper: 'spinnerWrapper_b7c924',
-    spinner: 'spinner_b7c924',
-    spinnerPath: 'spinnerPath_b7c924'
+    searchHeader: 'searchHeader_f3b986',
+    searchHeaderTabList: 'searchHeaderTabList_f3b986',
+    helpdeskLink: 'helpdeskLink_f3b986',
+    totalResultsWrapper: 'totalResultsWrapper_f3b986',
+    totalResults: 'totalResults_f3b986',
+    spinnerWrapper: 'spinnerWrapper_f3b986',
+    spinner: 'spinner_f3b986',
+    spinnerPath: 'spinnerPath_f3b986'
 };

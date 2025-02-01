@@ -1,13 +1,13 @@
-var i = r(675717),
-    a = Object.create,
-    o = (function () {
-        function e() {}
-        return function (n) {
-            if (!(0, i.Z)(n)) return {};
-            if (a) return a(n);
-            e.prototype = n;
-            var r = new e();
-            return (e.prototype = void 0), r;
-        };
-    })();
-n.Z = o;
+n.d(t, { Z: () => a });
+var i = n(675717),
+    r = Object.create;
+let a = (function () {
+    function e() {}
+    return function (t) {
+        if (!(0, i.Z)(t)) return {};
+        if (r) return r(t);
+        e.prototype = t;
+        var n = new e();
+        return (e.prototype = void 0), n;
+    };
+})();

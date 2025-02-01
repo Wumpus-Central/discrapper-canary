@@ -1,18 +1,18 @@
-var i = r(320387),
-    a = Object.prototype.toString,
-    o = Object.prototype.hasOwnProperty,
-    s = function (e, n, r) {
-        for (var i = 0, a = e.length; i < a; i++) o.call(e, i) && (null == r ? n(e[i], i, e) : n.call(r, e[i], i, e));
+var i = n(320387),
+    r = Object.prototype.toString,
+    a = Object.prototype.hasOwnProperty,
+    s = function (e, t, n) {
+        for (var i = 0, r = e.length; i < r; i++) a.call(e, i) && (null == n ? t(e[i], i, e) : t.call(n, e[i], i, e));
     },
-    l = function (e, n, r) {
-        for (var i = 0, a = e.length; i < a; i++) null == r ? n(e.charAt(i), i, e) : n.call(r, e.charAt(i), i, e);
+    o = function (e, t, n) {
+        for (var i = 0, r = e.length; i < r; i++) null == n ? t(e.charAt(i), i, e) : t.call(n, e.charAt(i), i, e);
     },
-    u = function (e, n, r) {
-        for (var i in e) o.call(e, i) && (null == r ? n(e[i], i, e) : n.call(r, e[i], i, e));
+    l = function (e, t, n) {
+        for (var i in e) a.call(e, i) && (null == n ? t(e[i], i, e) : t.call(n, e[i], i, e));
     },
-    c = function (e, n, r) {
-        var o;
-        if (!i(n)) throw TypeError('iterator must be a function');
-        arguments.length >= 3 && (o = r), '[object Array]' === a.call(e) ? s(e, n, o) : 'string' == typeof e ? l(e, n, o) : u(e, n, o);
+    u = function (e, t, n) {
+        var a;
+        if (!i(t)) throw TypeError('iterator must be a function');
+        arguments.length >= 3 && (a = n), '[object Array]' === r.call(e) ? s(e, t, a) : 'string' == typeof e ? o(e, t, a) : l(e, t, a);
     };
-e.exports = c;
+e.exports = u;

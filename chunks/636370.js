@@ -1,10 +1,10 @@
-n.exports = {
-    modalHeader: 'modalHeader_a193aa',
-    modalHeaderText: 'modalHeaderText_a193aa',
-    modalContent: 'modalContent_a193aa',
-    closeButton: 'closeButton_a193aa',
-    closeButtonInner: 'closeButtonInner_a193aa',
-    closeIcon: 'closeIcon_a193aa',
-    moreHeading: 'moreHeading_a193aa',
-    mainSection: 'mainSection_a193aa'
+e.exports = {
+    modalHeader: 'modalHeader__3fee9',
+    modalHeaderText: 'modalHeaderText__3fee9',
+    modalContent: 'modalContent__3fee9',
+    closeButton: 'closeButton__3fee9',
+    closeButtonInner: 'closeButtonInner__3fee9',
+    closeIcon: 'closeIcon__3fee9',
+    moreHeading: 'moreHeading__3fee9',
+    mainSection: 'mainSection__3fee9'
 };

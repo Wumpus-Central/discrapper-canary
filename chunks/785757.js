@@ -1,5 +1,5 @@
-e.exports = function (e, n) {
-    if ((' ' + n.className + ' ').indexOf(' combokeys ') > -1) return !1;
-    var r = n.tagName.toLowerCase();
-    return 'input' === r || 'select' === r || 'textarea' === r || n.isContentEditable;
+e.exports = function (e, t) {
+    if ((' ' + t.className + ' ').indexOf(' combokeys ') > -1) return !1;
+    var n = t.tagName.toLowerCase();
+    return 'input' === n || 'select' === n || 'textarea' === n || t.isContentEditable;
 };

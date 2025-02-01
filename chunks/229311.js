@@ -1,4 +1,4 @@
 e.exports = {
-    applicationBody: 'applicationBody_a6b33b',
-    form: 'form_a6b33b'
+    applicationBody: 'applicationBody__864b0',
+    form: 'form__864b0'
 };

@@ -1,44 +1,44 @@
+n.d(t, { Z: () => _ });
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(654030),
-    a = n(906732),
-    o = n(973616),
-    s = n(789407),
+var l = n(442837),
+    a = n(654030),
+    r = n(906732),
+    s = n(973616),
+    o = n(789407),
     c = n(314897),
-    u = n(158776),
-    d = n(981631),
+    d = n(158776),
+    u = n(981631),
     m = n(616922),
     h = n(634303);
-t.Z = (e) => {
-    var t;
-    let { channel: n, message: f, hideParty: p } = e,
-        { analyticsLocations: _ } = (0, a.ZP)(),
-        g = (0, r.e7)([c.default], () => c.default.getId()),
-        E = (0, r.e7)(
-            [u.Z],
+let _ = (e) => {
+    let { channel: t, message: n, hideParty: _ } = e,
+        { analyticsLocations: p } = (0, r.ZP)(),
+        g = (0, l.e7)([c.default], () => c.default.getId()),
+        f = (0, l.e7)(
+            [d.Z],
             () => {
-                if (null == f.application) return u.Z.findActivity(f.author.id, (e) => e.type === d.IIU.LISTENING);
+                if (null == n.application) return d.Z.findActivity(n.author.id, (e) => e.type === u.IIU.LISTENING);
                 {
                     var e;
-                    let t = f.author.id;
-                    return (null === (e = f.activity) || void 0 === e ? void 0 : e.type) === d.mFx.JOIN_REQUEST && (t = t === g && n.isPrivate() ? n.getRecipientId() : g), u.Z.getApplicationActivity(t, f.application.id);
+                    let i = n.author.id;
+                    return (null === (e = n.activity) || void 0 === e ? void 0 : e.type) === u.mFx.JOIN_REQUEST && (i = i === g && t.isPrivate() ? t.getRecipientId() : g), d.Z.getApplicationActivity(i, n.application.id);
                 }
             },
-            [f, n, g]
+            [n, t, g]
         );
-    return (0, i.jsx)(l.Z, {
+    return (0, i.jsx)(a.Z, {
         className: h.container,
-        activity: E,
-        activityActionType: null != f.activity ? f.activity.type : null,
-        partyId: null != f.activity ? f.activity.party_id : null,
-        userId: f.author.id,
-        application: null != (t = f).application ? o.ZP.createFromServer(t.application) : null != t.activity && null != t.activity.party_id && (0, m.Ps)(t.activity.party_id) ? s.r9 : void 0,
-        message: f,
-        channelId: n.id,
-        guildId: n.getGuildId(),
-        hideParty: p,
-        isSender: f.author.id === g,
-        analyticsLocations: _
+        activity: f,
+        activityActionType: null != n.activity ? n.activity.type : null,
+        partyId: null != n.activity ? n.activity.party_id : null,
+        userId: n.author.id,
+        application: null != n.application ? s.ZP.createFromServer(n.application) : null != n.activity && null != n.activity.party_id && (0, m.Ps)(n.activity.party_id) ? o.r9 : void 0,
+        message: n,
+        channelId: t.id,
+        guildId: t.getGuildId(),
+        hideParty: _,
+        isSender: n.author.id === g,
+        analyticsLocations: p
     });
 };

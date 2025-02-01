@@ -1,12 +1,12 @@
-var i = r(714760);
-e.exports = function (e, n, r) {
-    return r
+var i = n(714760);
+e.exports = function (e, t, n) {
+    return n
         ? i(
               e.entries(),
               function (e) {
-                  return n(e[1], e[0]);
+                  return t(e[1], e[0]);
               },
               !0
           )
-        : e.forEach(n);
+        : e.forEach(t);
 };

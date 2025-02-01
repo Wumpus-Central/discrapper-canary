@@ -1,10 +1,10 @@
 e.exports = {
-    emptyStateContainer: 'emptyStateContainer_e0840f',
-    peopleList: 'peopleList_e0840f',
-    searchBar: 'searchBar_e0840f',
-    sectionTitle: 'sectionTitle_e0840f',
-    clearButton: 'clearButton_e0840f',
-    searchEmptyState: 'searchEmptyState_e0840f',
-    viewSpamButton: 'viewSpamButton_e0840f',
-    viewSpamButtonColor: 'viewSpamButtonColor_e0840f'
+    emptyStateContainer: 'emptyStateContainer__5ec2f',
+    peopleList: 'peopleList__5ec2f',
+    searchBar: 'searchBar__5ec2f',
+    sectionTitle: 'sectionTitle__5ec2f',
+    clearButton: 'clearButton__5ec2f',
+    searchEmptyState: 'searchEmptyState__5ec2f',
+    viewSpamButton: 'viewSpamButton__5ec2f',
+    viewSpamButtonColor: 'viewSpamButtonColor__5ec2f'
 };

@@ -1,8 +1,8 @@
 e.exports = {
-    eligibilityModal: 'eligibilityModal_ea0125',
-    eligibilityHeader: 'eligibilityHeader_ea0125',
-    eligibilityHeaderText: 'eligibilityHeaderText_ea0125',
-    eligibilityHeaderImage: 'eligibilityHeaderImage_ea0125',
-    eligibilityHeaderCloseButton: 'eligibilityHeaderCloseButton_ea0125',
-    paddedContainer: 'paddedContainer_ea0125'
+    eligibilityModal: 'eligibilityModal__17e0d',
+    eligibilityHeader: 'eligibilityHeader__17e0d',
+    eligibilityHeaderText: 'eligibilityHeaderText__17e0d',
+    eligibilityHeaderImage: 'eligibilityHeaderImage__17e0d',
+    eligibilityHeaderCloseButton: 'eligibilityHeaderCloseButton__17e0d',
+    paddedContainer: 'paddedContainer__17e0d'
 };

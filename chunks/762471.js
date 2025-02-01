@@ -1,5 +1,5 @@
-t.exports = {
-    row: 'row_eb2d7d',
-    icon: 'icon_eb2d7d',
-    username: 'username_eb2d7d'
+e.exports = {
+    row: 'row__6e3d6',
+    icon: 'icon__6e3d6',
+    username: 'username__6e3d6'
 };

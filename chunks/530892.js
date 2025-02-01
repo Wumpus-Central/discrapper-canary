@@ -1,6 +1,6 @@
-var i = r(44091),
-    a = r(757647);
-function o(e) {
-    return a(i(e).toLowerCase());
+var i = n(44091),
+    r = n(757647);
+function a(e) {
+    return r(i(e).toLowerCase());
 }
-e.exports = o;
+e.exports = a;

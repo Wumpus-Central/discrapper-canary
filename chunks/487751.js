@@ -1,5 +1,5 @@
 e.exports = {
-    waveformCanvas: 'waveformCanvas_deba9c',
-    container: 'container_deba9c',
-    loading: 'loading_deba9c'
+    container: 'container__864dc',
+    waveformCanvas: 'waveformCanvas__864dc',
+    loading: 'loading__864dc'
 };

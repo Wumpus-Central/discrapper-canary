@@ -1,8 +1,8 @@
 e.exports = {
-    modal: 'modal_f30e90',
-    container: 'container_f30e90',
-    header: 'header_f30e90',
-    spacer: 'spacer_f30e90',
-    threadIcon: 'threadIcon_f30e90',
-    closeIcon: 'closeIcon_f30e90'
+    modal: 'modal_a8217b',
+    container: 'container_a8217b',
+    header: 'header_a8217b',
+    spacer: 'spacer_a8217b',
+    threadIcon: 'threadIcon_a8217b',
+    closeIcon: 'closeIcon_a8217b'
 };

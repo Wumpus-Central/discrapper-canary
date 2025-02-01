@@ -1,4 +1,4 @@
 e.exports = {
-    imgContainer: 'imgContainer_a07dcf',
-    img: 'img_a07dcf'
+    imgContainer: 'imgContainer__8f9ad',
+    img: 'img__8f9ad'
 };

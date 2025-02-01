@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e, n, r) {
+    function t(e, t, n) {
         var i = ' ';
         return (
             (e % 100 >= 20 || (e >= 100 && e % 100 == 0)) && (i = ' de '),
@@ -14,7 +14,7 @@
                     dd: 'zile',
                     MM: 'luni',
                     yy: 'ani'
-                }[r]
+                }[n]
         );
     }
     return e.defineLocale('ro', {
@@ -44,17 +44,17 @@
             future: 'peste %s',
             past: '%s în urmă',
             s: 'câteva secunde',
-            ss: n,
+            ss: t,
             m: 'un minut',
-            mm: n,
+            mm: t,
             h: 'o oră',
-            hh: n,
+            hh: t,
             d: 'o zi',
-            dd: n,
+            dd: t,
             M: 'o lună',
-            MM: n,
+            MM: t,
             y: 'un an',
-            yy: n
+            yy: t
         },
         week: {
             dow: 1,

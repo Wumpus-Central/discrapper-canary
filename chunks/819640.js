@@ -1,46 +1,46 @@
+n.d(t, { Z: () => f }), n(47120);
 var i,
-    a = r(47120);
-var o = r(442837),
-    s = r(570140);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = [];
-function c(e) {
-    let { component: n } = e;
-    if (u.indexOf(n) >= 0) return !1;
-    u = [...u, n];
+let o = [];
+function l(e) {
+    let { component: t } = e;
+    if (o.indexOf(t) >= 0) return !1;
+    o = [...o, t];
 }
-function d() {
-    if (0 === u.length) return !1;
-    u = u.slice(0, -1);
+function u() {
+    if (0 === o.length) return !1;
+    o = o.slice(0, -1);
 }
-function f() {
-    u = [];
+function c() {
+    o = [];
 }
-class p extends (i = o.ZP.Store) {
+class d extends (i = r.ZP.Store) {
     hasLayers() {
-        return u.length > 0;
+        return o.length > 0;
     }
     getLayers() {
-        return u;
+        return o;
     }
 }
-l(p, 'displayName', 'LayerStore'),
-    (n.Z = new p(s.Z, {
-        LAYER_PUSH: c,
-        LAYER_POP: d,
-        LAYER_POP_ALL: f,
-        LOGOUT: f,
-        NOTIFICATION_CLICK: f
-    }));
+s(d, 'displayName', 'LayerStore');
+let f = new d(a.Z, {
+    LAYER_PUSH: l,
+    LAYER_POP: u,
+    LAYER_POP_ALL: c,
+    LOGOUT: c,
+    NOTIFICATION_CLICK: c
+});

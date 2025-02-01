@@ -1,8 +1,8 @@
 e.exports = {
-    wrapper: 'wrapper_d572e7',
-    percentCompleteWrapper: 'percentCompleteWrapper_d572e7',
-    percentCompleteLabel: 'percentCompleteLabel_d572e7',
-    progressBar: 'progressBar_d572e7',
-    progressBarFill: 'progressBarFill_d572e7',
-    percentCompleteLabelOffset: 'percentCompleteLabelOffset_d572e7'
+    wrapper: 'wrapper_ef0e9b',
+    percentCompleteWrapper: 'percentCompleteWrapper_ef0e9b',
+    percentCompleteLabel: 'percentCompleteLabel_ef0e9b',
+    progressBar: 'progressBar_ef0e9b',
+    progressBarFill: 'progressBarFill_ef0e9b',
+    percentCompleteLabelOffset: 'percentCompleteLabelOffset_ef0e9b'
 };

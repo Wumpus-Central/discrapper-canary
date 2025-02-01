@@ -1,68 +1,68 @@
-function n() {}
-function r(e) {
+function t() {}
+function n(e) {
     (this._tree = e), (this._ancestors = []), (this._cursor = null);
 }
-(n.prototype.clear = function () {
+(t.prototype.clear = function () {
     (this._root = null), (this.size = 0);
 }),
-    (n.prototype.find = function (e) {
-        for (var n = this._root; null !== n; ) {
-            var r = this._comparator(e, n.data);
-            if (0 === r) return n.data;
-            n = n.get_child(r > 0);
+    (t.prototype.find = function (e) {
+        for (var t = this._root; null !== t; ) {
+            var n = this._comparator(e, t.data);
+            if (0 === n) return t.data;
+            t = t.get_child(n > 0);
         }
         return null;
     }),
-    (n.prototype.findIter = function (e) {
-        for (var n = this._root, r = this.iterator(); null !== n; ) {
-            var i = this._comparator(e, n.data);
-            if (0 === i) return (r._cursor = n), r;
-            r._ancestors.push(n), (n = n.get_child(i > 0));
+    (t.prototype.findIter = function (e) {
+        for (var t = this._root, n = this.iterator(); null !== t; ) {
+            var i = this._comparator(e, t.data);
+            if (0 === i) return (n._cursor = t), n;
+            n._ancestors.push(t), (t = t.get_child(i > 0));
         }
         return null;
     }),
-    (n.prototype.lowerBound = function (e) {
-        for (var n = this._root, r = this.iterator(), i = this._comparator; null !== n; ) {
-            var a = i(e, n.data);
-            if (0 === a) return (r._cursor = n), r;
-            r._ancestors.push(n), (n = n.get_child(a > 0));
+    (t.prototype.lowerBound = function (e) {
+        for (var t = this._root, n = this.iterator(), i = this._comparator; null !== t; ) {
+            var r = i(e, t.data);
+            if (0 === r) return (n._cursor = t), n;
+            n._ancestors.push(t), (t = t.get_child(r > 0));
         }
-        for (var o = r._ancestors.length - 1; o >= 0; --o) if (0 > i(e, (n = r._ancestors[o]).data)) return (r._cursor = n), (r._ancestors.length = o), r;
-        return (r._ancestors.length = 0), r;
+        for (var a = n._ancestors.length - 1; a >= 0; --a) if (0 > i(e, (t = n._ancestors[a]).data)) return (n._cursor = t), (n._ancestors.length = a), n;
+        return (n._ancestors.length = 0), n;
     }),
-    (n.prototype.upperBound = function (e) {
-        for (var n = this.lowerBound(e), r = this._comparator; null !== n.data() && 0 === r(n.data(), e); ) n.next();
-        return n;
+    (t.prototype.upperBound = function (e) {
+        for (var t = this.lowerBound(e), n = this._comparator; null !== t.data() && 0 === n(t.data(), e); ) t.next();
+        return t;
     }),
-    (n.prototype.min = function () {
+    (t.prototype.min = function () {
         var e = this._root;
         if (null === e) return null;
         for (; null !== e.left; ) e = e.left;
         return e.data;
     }),
-    (n.prototype.max = function () {
+    (t.prototype.max = function () {
         var e = this._root;
         if (null === e) return null;
         for (; null !== e.right; ) e = e.right;
         return e.data;
     }),
-    (n.prototype.iterator = function () {
-        return new r(this);
+    (t.prototype.iterator = function () {
+        return new n(this);
     }),
-    (n.prototype.each = function (e) {
-        for (var n, r = this.iterator(); null !== (n = r.next()); ) e(n);
+    (t.prototype.each = function (e) {
+        for (var t, n = this.iterator(); null !== (t = n.next()); ) e(t);
     }),
-    (n.prototype.reach = function (e) {
-        for (var n, r = this.iterator(); null !== (n = r.prev()); ) e(n);
+    (t.prototype.reach = function (e) {
+        for (var t, n = this.iterator(); null !== (t = n.prev()); ) e(t);
     }),
-    (r.prototype.data = function () {
+    (n.prototype.data = function () {
         return null !== this._cursor ? this._cursor.data : null;
     }),
-    (r.prototype.next = function () {
+    (n.prototype.next = function () {
         if (null === this._cursor) {
             var e,
-                n = this._tree._root;
-            null !== n && this._minNode(n);
+                t = this._tree._root;
+            null !== t && this._minNode(t);
         } else if (null === this._cursor.right)
             do
                 if (((e = this._cursor), this._ancestors.length)) this._cursor = this._ancestors.pop();
@@ -74,11 +74,11 @@ function r(e) {
         else this._ancestors.push(this._cursor), this._minNode(this._cursor.right);
         return null !== this._cursor ? this._cursor.data : null;
     }),
-    (r.prototype.prev = function () {
+    (n.prototype.prev = function () {
         if (null === this._cursor) {
             var e,
-                n = this._tree._root;
-            null !== n && this._maxNode(n);
+                t = this._tree._root;
+            null !== t && this._maxNode(t);
         } else if (null === this._cursor.left)
             do
                 if (((e = this._cursor), this._ancestors.length)) this._cursor = this._ancestors.pop();
@@ -90,12 +90,12 @@ function r(e) {
         else this._ancestors.push(this._cursor), this._maxNode(this._cursor.left);
         return null !== this._cursor ? this._cursor.data : null;
     }),
-    (r.prototype._minNode = function (e) {
+    (n.prototype._minNode = function (e) {
         for (; null !== e.left; ) this._ancestors.push(e), (e = e.left);
         this._cursor = e;
     }),
-    (r.prototype._maxNode = function (e) {
+    (n.prototype._maxNode = function (e) {
         for (; null !== e.right; ) this._ancestors.push(e), (e = e.right);
         this._cursor = e;
     }),
-    (e.exports = n);
+    (e.exports = t);

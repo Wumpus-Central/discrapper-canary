@@ -1,10 +1,10 @@
-s.r(t), s(47120);
+s.d(t, { default: () => x }), s(47120);
 var i = s(200651),
     l = s(192379),
-    n = s(481060),
-    r = s(153867),
-    o = s(663993),
-    a = s(771845),
+    r = s(481060),
+    n = s(153867),
+    a = s(663993),
+    o = s(771845),
     h = s(981631),
     d = s(388032),
     c = s(89553);
@@ -21,38 +21,38 @@ function m(e, t, s) {
         e
     );
 }
-let u = (0, o.Un)({
-    createPromise: () => s.e('5609').then(s.bind(s, 336231)),
+let u = (0, a.Un)({
+    createPromise: () => s.e('4848').then(s.bind(s, 336231)),
     webpackId: 336231
 });
 class p extends l.PureComponent {
     render() {
         let { transitionState: e } = this.props,
             { name: t, color: s } = this.state;
-        return (0, i.jsxs)(n.ModalRoot, {
+        return (0, i.jsxs)(r.Y0X, {
             transitionState: e,
             'aria-label': d.intl.string(d.t.Dx7im5),
-            size: n.ModalSize.DYNAMIC,
+            size: r.CgR.DYNAMIC,
             children: [
-                (0, i.jsxs)(n.ModalHeader, {
+                (0, i.jsxs)(r.xBx, {
                     className: c.header,
                     separator: !1,
                     children: [
-                        (0, i.jsx)(n.Heading, {
+                        (0, i.jsx)(r.X6q, {
                             variant: 'heading-lg/semibold',
                             children: d.intl.string(d.t.Dx7im5)
                         }),
-                        (0, i.jsx)(n.ModalCloseButton, { onClick: this.close })
+                        (0, i.jsx)(r.olH, { onClick: this.close })
                     ]
                 }),
-                (0, i.jsx)(n.ModalContent, {
+                (0, i.jsx)(r.hzk, {
                     children: (0, i.jsxs)('form', {
                         onSubmit: this.handleSubmit,
                         children: [
-                            (0, i.jsx)(n.FormItem, {
+                            (0, i.jsx)(r.xJW, {
                                 title: d.intl.string(d.t.tGRbjI),
                                 className: c.formItem,
-                                children: (0, i.jsx)(n.TextInput, {
+                                children: (0, i.jsx)(r.oil, {
                                     maxLength: h.dYL,
                                     value: t,
                                     onChange: this.handleNameChange,
@@ -60,7 +60,7 @@ class p extends l.PureComponent {
                                     autoFocus: !0
                                 })
                             }),
-                            (0, i.jsx)(n.FormItem, {
+                            (0, i.jsx)(r.xJW, {
                                 title: d.intl.string(d.t.xpurRE),
                                 className: c.formItem,
                                 children: (0, i.jsx)(u, {
@@ -73,8 +73,8 @@ class p extends l.PureComponent {
                         ]
                     })
                 }),
-                (0, i.jsx)(n.ModalFooter, {
-                    children: (0, i.jsx)(n.Button, {
+                (0, i.jsx)(r.mzw, {
+                    children: (0, i.jsx)(r.zxk, {
                         type: 'submit',
                         onClick: this.handleSubmit,
                         children: d.intl.string(d.t.i4jeWV)
@@ -103,7 +103,7 @@ class p extends l.PureComponent {
                 e.preventDefault();
                 let { folderId: t } = this.props,
                     { name: s, color: i } = this.state,
-                    l = a.ZP.getGuildFolders().map((e) =>
+                    l = o.ZP.getGuildFolders().map((e) =>
                         e.folderId === t
                             ? {
                                   ...e,
@@ -112,8 +112,8 @@ class p extends l.PureComponent {
                               }
                             : e
                     );
-                (0, r.V1)(l), this.close();
+                (0, n.V1)(l), this.close();
             });
     }
 }
-t.default = p;
+let x = p;

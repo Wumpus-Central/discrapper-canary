@@ -18,12 +18,12 @@ var i = n(200651),
     v = n(490095),
     y = n(981631),
     I = n(388032),
-    b = n(834219);
-let T = (0, l.Mg)(b.__invalid_stickerPickerPreviewDimensions),
-    S = (0, l.Mg)(b.__invalid_stickerPickerPreviewPadding),
+    T = n(834219);
+let b = (0, l.Mg)(T.__invalid_stickerPickerPreviewDimensions),
+    S = (0, l.Mg)(T.__invalid_stickerPickerPreviewPadding),
     A = 250,
     N = r.memo(function (e) {
-        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: N, gutterWidth: C, inspectedStickerPosition: R, isScrolling: O, isUsingKeyboardNavigation: D, onInspect: x, onSelect: L, rowIndex: P, stickerClassName: w, stickerDescriptors: M, stickerPadding: k = S, stickerSize: U = T, ownedStickerPacks: G, enlargeOnInteraction: B = !1, channel: Z, currentUser: F, checkSendability: V = !0 } = e,
+        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: N, gutterWidth: C, inspectedStickerPosition: R, isScrolling: O, isUsingKeyboardNavigation: D, onInspect: x, onSelect: L, rowIndex: P, stickerClassName: w, stickerDescriptors: M, stickerPadding: k = S, stickerSize: U = b, ownedStickerPacks: G, enlargeOnInteraction: B = !1, channel: Z, currentUser: F, checkSendability: V = !0 } = e,
             { location: j } = (0, d.O)(),
             H = U + 2 * k,
             Y = r.useMemo(
@@ -45,13 +45,13 @@ let T = (0, l.Mg)(b.__invalid_stickerPickerPreviewDimensions),
             ),
             [K, z] = (0, f.Z)(null, 300);
         return (0, i.jsx)('div', {
-            className: b.row,
+            className: T.row,
             style: Y,
             ...(null == N ? void 0 : N(P)),
             children: M.map((e) => {
                 var d;
                 let f = e.visibleRowIndex === (null == R ? void 0 : R.rowIndex) && e.columnIndex === (null == R ? void 0 : R.columnIndex),
-                    T = e.type === m.al.STICKER && B && f,
+                    b = e.type === m.al.STICKER && B && f,
                     S = (t) => {
                         if ((null == O ? void 0 : O.current) === !0 || (null == D ? void 0 : D.current) === !0) return;
                         let n = t.altKey;
@@ -84,7 +84,7 @@ let T = (0, l.Mg)(b.__invalid_stickerPickerPreviewDimensions),
                                 ...Y,
                                 children: (0, i.jsxs)(u.P3F, {
                                     'aria-label': e.name,
-                                    className: s()(b.createSticker, w, { [b.createInspected]: f }),
+                                    className: s()(T.createSticker, w, { [T.createInspected]: f }),
                                     innerRef: M,
                                     tabIndex: k,
                                     onFocus: null != H ? H : N,
@@ -92,13 +92,13 @@ let T = (0, l.Mg)(b.__invalid_stickerPickerPreviewDimensions),
                                     onClick: C,
                                     style: W,
                                     children: [
-                                        !B && (0, i.jsx)('div', { className: b.inspectedIndicator }),
+                                        !B && (0, i.jsx)('div', { className: T.inspectedIndicator }),
                                         (0, i.jsx)('div', {
-                                            className: b.iconWrapper,
+                                            className: T.iconWrapper,
                                             children: (0, i.jsx)(u.qJs, {
                                                 size: 'md',
                                                 color: 'currentColor',
-                                                className: b.icon
+                                                className: T.icon
                                             })
                                         }),
                                         (0, i.jsx)(u.Text, {
@@ -126,9 +126,9 @@ let T = (0, l.Mg)(b.__invalid_stickerPickerPreviewDimensions),
                                 key: e.sticker.id
                             },
                             (0, i.jsxs)(u.P3F, {
-                                className: s()(b.sticker, w, {
-                                    [b.stickerInspected]: f,
-                                    [b.showPulse]: K === e.sticker.id
+                                className: s()(T.sticker, w, {
+                                    [T.stickerInspected]: f,
+                                    [T.showPulse]: K === e.sticker.id
                                 }),
                                 innerRef: M,
                                 tabIndex: k,
@@ -144,12 +144,12 @@ let T = (0, l.Mg)(b.__invalid_stickerPickerPreviewDimensions),
                                     (0, i.jsxs)('div', {
                                         'aria-hidden': !0,
                                         children: [
-                                            !B && (0, i.jsx)('div', { className: b.inspectedIndicator }),
+                                            !B && (0, i.jsx)('div', { className: T.inspectedIndicator }),
                                             (0, i.jsx)(E.ZP, {
-                                                className: s()(b.stickerNode, {
-                                                    [b.stickerNodeDimmed]: B && !f && null != R && -1 !== R.rowIndex && -1 !== R.columnIndex,
-                                                    [b.stickerNodeHidden]: T,
-                                                    [b.stickerUnsendable]: V && !(0, h.kl)(e.sticker, F, Z)
+                                                className: s()(T.stickerNode, {
+                                                    [T.stickerNodeDimmed]: B && !f && null != R && -1 !== R.rowIndex && -1 !== R.columnIndex,
+                                                    [T.stickerNodeHidden]: b,
+                                                    [T.stickerUnsendable]: V && !(0, h.kl)(e.sticker, F, Z)
                                                 }),
                                                 disableAnimation: !f && !a,
                                                 enlargeOnInteraction: B,

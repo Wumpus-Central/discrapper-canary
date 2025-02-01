@@ -57,13 +57,13 @@ function g(e) {
 async function E(e) {
     let { channelId: t, applicationId: n, launchId: i, inputApplication: a, analyticsLocations: m, launchingComponentId: E, sectionName: v, inviterUserId: y } = e,
         I = f.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == i || e.launchId === i)),
-        b = a;
-    if (null == b) {
+        T = a;
+    if (null == T) {
         let e = await r.ZP.fetchApplication(n);
-        b = s.ZP.createFromServer(e);
+        T = s.ZP.createFromServer(e);
     }
-    if (null == I || null == b) return;
-    let T = c.default.getCurrentUser(),
+    if (null == I || null == T) return;
+    let b = c.default.getCurrentUser(),
         S = o.Z.getChannel(t);
     async function A() {
         null != I &&
@@ -79,10 +79,10 @@ async function E(e) {
     }
     g({
         embeddedActivityJoinability: (0, h.ZP)({
-            userId: null == T ? void 0 : T.id,
-            application: b,
+            userId: null == b ? void 0 : b.id,
+            application: T,
             channelId: t,
-            currentUser: T,
+            currentUser: b,
             isActivitiesEnabledForCurrentPlatform: (0, p.a)(S),
             ChannelStore: o.Z,
             VoiceStateStore: d.Z,

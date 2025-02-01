@@ -1,9 +1,9 @@
 e.exports = {
-    progressBarContainer: 'progressBarContainer_e31e8a',
-    progressBarText: 'progressBarText_e31e8a',
-    progressBar: 'progressBar_e31e8a',
-    rightContainer: 'rightContainer_e31e8a',
-    rightText: 'rightText_e31e8a',
-    arrow: 'arrow_e31e8a',
-    divider: 'divider_e31e8a'
+    progressBarContainer: 'progressBarContainer_baf530',
+    progressBarText: 'progressBarText_baf530',
+    progressBar: 'progressBar_baf530',
+    rightContainer: 'rightContainer_baf530',
+    rightText: 'rightText_baf530',
+    arrow: 'arrow_baf530',
+    divider: 'divider_baf530'
 };

@@ -1,5 +1,5 @@
 e.exports = {
-    wrapper: 'wrapper_c07d45',
-    icon: 'icon_c07d45',
-    badge: 'badge_c07d45'
+    wrapper: 'wrapper_a629d4',
+    icon: 'icon_a629d4',
+    badge: 'badge_a629d4'
 };

@@ -1,5 +1,5 @@
 e.exports = {
-    body: 'body_a972fe',
-    overlay: 'overlay_a972fe',
-    activity: 'activity_a972fe'
+    body: 'body__747b1',
+    overlay: 'overlay__747b1',
+    activity: 'activity__747b1'
 };

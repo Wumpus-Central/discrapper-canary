@@ -104,8 +104,8 @@ void 0 === v && (v = E),
             h = e.exact,
             m = e.isActive,
             I = e.location,
-            b = e.sensitive,
-            T = e.strict,
+            T = e.sensitive,
+            b = e.strict,
             S = e.style,
             A = e.to,
             N = e.innerRef,
@@ -120,8 +120,8 @@ void 0 === v && (v = E),
                     ? (0, i.LX)(n.pathname, {
                           path: R,
                           exact: h,
-                          sensitive: b,
-                          strict: T
+                          sensitive: T,
+                          strict: b
                       })
                     : null,
                 D = !!(m ? m(O, n) : O),

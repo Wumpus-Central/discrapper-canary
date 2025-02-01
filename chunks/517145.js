@@ -1,61 +1,61 @@
-var i = r(957578).Buffer,
-    a = r(28704),
-    o = r(136924).ec,
-    s = r(223428),
-    l = r(733345);
-function u(e, n, r, o, l) {
-    var u = s(r);
-    if ('ec' === u.type) {
-        if ('ecdsa' !== o && 'ecdsa/rsa' !== o) throw Error('wrong public key type');
-        return c(e, n, u);
+var i = n(957578).Buffer,
+    r = n(28704),
+    a = n(136924).ec,
+    s = n(223428),
+    o = n(733345);
+function l(e, t, n, a, o) {
+    var l = s(n);
+    if ('ec' === l.type) {
+        if ('ecdsa' !== a && 'ecdsa/rsa' !== a) throw Error('wrong public key type');
+        return u(e, t, l);
     }
-    if ('dsa' === u.type) {
-        if ('dsa' !== o) throw Error('wrong public key type');
-        return d(e, n, u);
+    if ('dsa' === l.type) {
+        if ('dsa' !== a) throw Error('wrong public key type');
+        return c(e, t, l);
     }
-    if ('rsa' !== o && 'ecdsa/rsa' !== o) throw Error('wrong public key type');
-    n = i.concat([l, n]);
-    for (var f = u.modulus.byteLength(), p = [1], h = 0; n.length + p.length + 2 < f; ) p.push(255), h++;
-    p.push(0);
-    for (var _ = -1; ++_ < n.length; ) p.push(n[_]);
-    p = i.from(p);
-    var m = a.mont(u.modulus);
-    (e = (e = new a(e).toRed(m)).redPow(new a(u.publicExponent))), (e = i.from(e.fromRed().toArray()));
-    var g = h < 8 ? 1 : 0;
-    for (f = Math.min(e.length, p.length), e.length !== p.length && (g = 1), _ = -1; ++_ < f; ) g |= e[_] ^ p[_];
-    return 0 === g;
+    if ('rsa' !== a && 'ecdsa/rsa' !== a) throw Error('wrong public key type');
+    t = i.concat([o, t]);
+    for (var d = l.modulus.byteLength(), f = [1], _ = 0; t.length + f.length + 2 < d; ) f.push(255), _++;
+    f.push(0);
+    for (var p = -1; ++p < t.length; ) f.push(t[p]);
+    f = i.from(f);
+    var h = r.mont(l.modulus);
+    e = (e = new r(e).toRed(h)).redPow(new r(l.publicExponent));
+    var m = _ < 8 ? 1 : 0;
+    for (d = Math.min((e = i.from(e.fromRed().toArray())).length, f.length), e.length !== f.length && (m = 1), p = -1; ++p < d; ) m |= e[p] ^ f[p];
+    return 0 === m;
 }
-function c(e, n, r) {
-    var i = l[r.data.algorithm.curve.join('.')];
-    if (!i) throw Error('unknown curve ' + r.data.algorithm.curve.join('.'));
-    var a = new o(i),
-        s = r.data.subjectPrivateKey.data;
-    return a.verify(n, e, s);
+function u(e, t, n) {
+    var i = o[n.data.algorithm.curve.join('.')];
+    if (!i) throw Error('unknown curve ' + n.data.algorithm.curve.join('.'));
+    var r = new a(i),
+        s = n.data.subjectPrivateKey.data;
+    return r.verify(t, e, s);
 }
-function d(e, n, r) {
-    var i = r.data.p,
-        o = r.data.q,
-        l = r.data.g,
-        u = r.data.pub_key,
-        c = s.signature.decode(e, 'der'),
-        d = c.s,
-        p = c.r;
-    f(d, o), f(p, o);
-    var h = a.mont(i),
-        _ = d.invm(o);
+function c(e, t, n) {
+    var i = n.data.p,
+        a = n.data.q,
+        o = n.data.g,
+        l = n.data.pub_key,
+        u = s.signature.decode(e, 'der'),
+        c = u.s,
+        f = u.r;
+    d(c, a), d(f, a);
+    var _ = r.mont(i),
+        p = c.invm(a);
     return (
         0 ===
-        l
-            .toRed(h)
-            .redPow(new a(n).mul(_).mod(o))
+        o
+            .toRed(_)
+            .redPow(new r(t).mul(p).mod(a))
             .fromRed()
-            .mul(u.toRed(h).redPow(p.mul(_).mod(o)).fromRed())
+            .mul(l.toRed(_).redPow(f.mul(p).mod(a)).fromRed())
             .mod(i)
-            .mod(o)
-            .cmp(p)
+            .mod(a)
+            .cmp(f)
     );
 }
-function f(e, n) {
-    if (0 >= e.cmpn(0) || e.cmp(n) >= n) throw Error('invalid sig');
+function d(e, t) {
+    if (0 >= e.cmpn(0) || e.cmp(t) >= t) throw Error('invalid sig');
 }
-e.exports = u;
+e.exports = l;

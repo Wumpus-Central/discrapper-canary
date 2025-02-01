@@ -1,6 +1,6 @@
-let i = r(868667),
-    a = (e, n) => {
-        let r = i(e, n);
-        return r && r.prerelease.length ? r.prerelease : null;
+let i = n(868667),
+    r = (e, t) => {
+        let n = i(e, t);
+        return n && n.prerelease.length ? n.prerelease : null;
     };
-e.exports = a;
+e.exports = r;

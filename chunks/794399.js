@@ -1,12 +1,12 @@
-var i = r(429614),
-    a = r(483506);
-function o(e, n, r, s, l) {
-    var u = -1,
-        c = e.length;
-    for (r || (r = a), l || (l = []); ++u < c; ) {
-        var d = e[u];
-        n > 0 && r(d) ? (n > 1 ? o(d, n - 1, r, s, l) : i(l, d)) : !s && (l[l.length] = d);
+var i = n(429614),
+    r = n(483506);
+function a(e, t, n, s, o) {
+    var l = -1,
+        u = e.length;
+    for (n || (n = r), o || (o = []); ++l < u; ) {
+        var c = e[l];
+        t > 0 && n(c) ? (t > 1 ? a(c, t - 1, n, s, o) : i(o, c)) : s || (o[o.length] = c);
     }
-    return l;
+    return o;
 }
-e.exports = o;
+e.exports = a;

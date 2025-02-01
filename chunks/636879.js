@@ -1,4 +1,4 @@
-e(653041);
+e.d(i, { Z: () => a }), e(653041);
 var s = e(342412),
     n = e(722734);
 function h(t, i, e) {
@@ -14,7 +14,7 @@ function h(t, i, e) {
         t
     );
 }
-i.Z = class t {
+let a = class {
     initialize() {
         (this.particles = []),
             this.wind.initialize(),
@@ -26,10 +26,10 @@ i.Z = class t {
         (this.particles = []), this.wind.terminate(), null != this.loadInTimer && clearTimeout(this.loadInTimer);
     }
     update(t) {
-        if (0 !== this.particles.length) !this.isFilled && this.alpha < 1 ? (this.alpha = Math.min(1, this.alpha + t)) : this.isFilled && this.alpha > 0 && (this.alpha = Math.max(0, this.alpha - 3 * t)), this.wind.update(), this.particles.forEach((i) => i.update(10 * this.wind.forceX * t, 10 * Math.min(this.wind.forceY, -0.001) * t + -0.1));
+        0 !== this.particles.length && (!this.isFilled && this.alpha < 1 ? (this.alpha = Math.min(1, this.alpha + t)) : this.isFilled && this.alpha > 0 && (this.alpha = Math.max(0, this.alpha - 3 * t)), this.wind.update(), this.particles.forEach((i) => i.update(10 * this.wind.forceX * t, 10 * Math.min(this.wind.forceY, -0.001) * t + -0.1)));
     }
     render(t) {
-        if (0 !== this.particles.length) t.save(), (t.globalCompositeOperation = 'source-atop'), this.particles.forEach((i) => i.render(t, this.alpha)), t.restore();
+        0 !== this.particles.length && (t.save(), (t.globalCompositeOperation = 'source-atop'), this.particles.forEach((i) => i.render(t, this.alpha)), t.restore());
     }
     fill() {
         this.isFilled = !0;

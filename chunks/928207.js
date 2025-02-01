@@ -1,7 +1,8 @@
+n.d(t, { Z: () => A });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
+var l = n(120356),
+    r = n.n(l),
     a = n(512969),
     s = n(674746),
     o = n(442837),
@@ -12,8 +13,8 @@ var r = n(120356),
     m = n(666743),
     p = n(410030),
     g = n(100527),
-    f = n(906732),
-    _ = n(600164),
+    _ = n(906732),
+    f = n(600164),
     E = n(984370),
     I = n(278605),
     C = n(299657),
@@ -21,53 +22,53 @@ var r = n(120356),
     N = n(74538),
     T = n(981631),
     S = n(474936),
-    b = n(388032),
-    A = n(707858);
-let Z = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
+    Z = n(388032),
+    x = n(707858);
+let A = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
     (0, m.Z)(
         (0, h.Z)((e) => {
             let { isAuthenticated: t, user: n } = e,
-                { analyticsLocations: r } = (0, f.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
+                { analyticsLocations: l } = (0, _.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
                 o = (0, I.xP)('ApplicationStoreHome'),
                 h = (0, N.I5)(n),
                 m = o && !h,
                 v = (0, p.ZP)();
             return t
                 ? (0, i.jsxs)('div', {
-                      className: A.homeWrapperNormal,
+                      className: x.homeWrapperNormal,
                       children: [
                           (0, i.jsx)(u.Z, {
                               section: T.jXE.NAVIGATION,
-                              children: (0, i.jsx)(d.ThemeProvider, {
+                              children: (0, i.jsx)(d.f6W, {
                                   theme: v,
                                   children: (e) =>
                                       (0, i.jsxs)(E.Z, {
                                           isAuthenticated: t,
-                                          className: l()(A.headerBar, e, {
-                                              [A.headerBarV2LightBackground]: m && !(0, c.wj)(v),
-                                              [A.headerBarV2DarkBackground]: m && (0, c.wj)(v)
+                                          className: r()(x.headerBar, e, {
+                                              [x.headerBarV2LightBackground]: m && !(0, c.wj)(v),
+                                              [x.headerBarV2DarkBackground]: m && (0, c.wj)(v)
                                           }),
                                           role: 'navigation',
                                           children: [
                                               (0, i.jsx)(E.Z.Icon, {
-                                                  icon: d.NitroWheelIcon,
+                                                  icon: d.SrA,
                                                   'aria-hidden': !0,
                                                   color: m ? s.Z.PREMIUM_TIER_2_PINK : void 0
                                               }),
-                                              (0, i.jsx)(E.Z.Title, { children: b.intl.string(b.t.Ipxkoq) }),
+                                              (0, i.jsx)(E.Z.Title, { children: Z.intl.string(Z.t.Ipxkoq) }),
                                               (0, i.jsx)(E.Z.Divider, {})
                                           ]
                                       })
                               })
                           }),
-                          (0, i.jsx)(f.Gt, {
-                              value: r,
+                          (0, i.jsx)(_.Gt, {
+                              value: l,
                               children:
                                   null == n
-                                      ? (0, i.jsx)(_.Z, {
-                                            align: _.Z.Align.CENTER,
-                                            justify: _.Z.Justify.CENTER,
-                                            children: (0, i.jsx)(d.Spinner, { className: A.spinner })
+                                      ? (0, i.jsx)(f.Z, {
+                                            align: f.Z.Align.CENTER,
+                                            justify: f.Z.Justify.CENTER,
+                                            children: (0, i.jsx)(d.$jN, { className: x.spinner })
                                         })
                                       : (0, i.jsx)(C.Z, { entrypoint: S.EZ.ApplicationStoreHome })
                           })
@@ -77,4 +78,3 @@ let Z = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser(
         })
     )
 );
-t.Z = Z;

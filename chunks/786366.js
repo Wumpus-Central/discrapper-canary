@@ -1,35 +1,35 @@
-t.d(n, { Z: () => m }), t(789020);
-var i = t(200651);
-t(192379);
-var l = t(597312),
-    o = t(442837),
-    s = t(481060),
-    r = t(860719),
-    a = t(621853),
-    c = t(388032),
-    d = t(220613);
+i.d(n, { Z: () => m }), i(789020);
+var t = i(200651);
+i(192379);
+var l = i(597312),
+    o = i(442837),
+    s = i(481060),
+    r = i(860719),
+    a = i(621853),
+    d = i(388032),
+    c = i(220613);
 function u(e) {
-    let { icon: n, title: t, description: l } = e;
-    return (0, i.jsxs)('div', {
-        className: d.row,
+    let { icon: n, title: i, description: l } = e;
+    return (0, t.jsxs)('div', {
+        className: c.row,
         children: [
-            (0, i.jsx)('div', {
-                className: d.rowIcon,
-                children: (0, i.jsx)(n, {
+            (0, t.jsx)('div', {
+                className: c.rowIcon,
+                children: (0, t.jsx)(n, {
                     size: 'custom',
                     width: 20,
                     height: 20,
                     color: 'currentColor'
                 })
             }),
-            (0, i.jsxs)('div', {
-                className: d.rowText,
+            (0, t.jsxs)('div', {
+                className: c.rowText,
                 children: [
-                    (0, i.jsx)(s.X6q, {
+                    (0, t.jsx)(s.X6q, {
                         variant: 'text-xs/semibold',
-                        children: t
+                        children: i
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, t.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         children: l
                     })
@@ -40,36 +40,36 @@ function u(e) {
 }
 function m(e) {
     let { user: n } = e,
-        t = (0, o.e7)([a.Z], () => {
+        i = (0, o.e7)([a.Z], () => {
             var e;
             return null === (e = a.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
         }),
-        { hasMessageContent: m, hasGuildPresences: x, hasGuildMembers: p } = (0, r.w)({ flags: null == t ? void 0 : t.flags });
-    return (0, i.jsxs)(l.zJ, {
+        { hasMessageContent: m, hasGuildPresences: x, hasGuildMembers: p } = (0, r.w)({ flags: null == i ? void 0 : i.flags });
+    return (0, t.jsxs)(l.zJ, {
         fade: !0,
-        className: d.scroller,
+        className: c.scroller,
         children: [
             m &&
-                (0, i.jsx)(u, {
+                (0, t.jsx)(u, {
                     icon: s.kBi,
-                    title: c.intl.string(c.t['7Tmhfn']),
-                    description: c.intl.string(c.t['eu5x7+'])
+                    title: d.intl.string(d.t['7Tmhfn']),
+                    description: d.intl.string(d.t['eu5x7+'])
                 }),
             x &&
-                (0, i.jsx)(u, {
+                (0, t.jsx)(u, {
                     icon: s.iWm,
-                    title: c.intl.string(c.t.awYSsL),
-                    description: c.intl.string(c.t.TpsXoK)
+                    title: d.intl.string(d.t.awYSsL),
+                    description: d.intl.string(d.t.TpsXoK)
                 }),
             p &&
-                (0, i.jsx)(u, {
+                (0, t.jsx)(u, {
                     icon: s.BFJ,
-                    title: c.intl.string(c.t.WuKeSE),
-                    description: c.intl.string(c.t.wOBmtb)
+                    title: d.intl.string(d.t.WuKeSE),
+                    description: d.intl.string(d.t.wOBmtb)
                 }),
-            (0, i.jsx)(s.Text, {
+            (0, t.jsx)(s.Text, {
                 variant: 'text-xs/normal',
-                children: c.intl.format(c.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
+                children: d.intl.format(d.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
             })
         ]
     });

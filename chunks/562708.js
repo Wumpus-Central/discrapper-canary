@@ -1,7 +1,7 @@
 e.exports = {
-    panelHeader: 'panelHeader_e155ff',
-    panelInner: 'panelInner_e155ff',
-    panelRow: 'panelRow_e155ff',
-    anniversaryCountSelect: 'anniversaryCountSelect_e155ff',
-    anniversaryCountResetButton: 'anniversaryCountResetButton_e155ff'
+    panelHeader: 'panelHeader__6edf0',
+    panelInner: 'panelInner__6edf0',
+    panelRow: 'panelRow__6edf0',
+    anniversaryCountSelect: 'anniversaryCountSelect__6edf0',
+    anniversaryCountResetButton: 'anniversaryCountResetButton__6edf0'
 };

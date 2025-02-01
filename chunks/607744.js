@@ -57,27 +57,27 @@ function g(e) {
         v = !1,
         y = !1,
         I = !1,
-        b = !1;
-    i.isPhoneVerified() || i.isStaff() || ((v = n.verificationLevel >= d.sFg.LOW && !i.verified), (y = n.verificationLevel >= d.sFg.VERY_HIGH), (I = n.verificationLevel >= d.sFg.MEDIUM && _ > 0), (b = n.verificationLevel >= d.sFg.HIGH && p > 0));
-    let T = [];
-    b && T.push(p),
-        I && T.push(_),
-        T.length > 0 &&
+        T = !1;
+    i.isPhoneVerified() || i.isStaff() || ((v = n.verificationLevel >= d.sFg.LOW && !i.verified), (y = n.verificationLevel >= d.sFg.VERY_HIGH), (I = n.verificationLevel >= d.sFg.MEDIUM && _ > 0), (T = n.verificationLevel >= d.sFg.HIGH && p > 0));
+    let b = [];
+    T && b.push(p),
+        I && b.push(_),
+        b.length > 0 &&
             (t = setTimeout(
                 () =>
                     a.Z.dispatch({
                         type: 'GUILD_VERIFICATION_CHECK',
                         guildId: e
                     }),
-                Math.max(...T)
+                Math.max(...b)
             )),
         (m[e] = {
             notClaimed: g,
             notEmailVerified: v,
             notPhoneVerified: y,
             newAccount: I,
-            newMember: b,
-            canChat: !(g || v || y || I || b),
+            newMember: T,
+            canChat: !(g || v || y || I || T),
             accountDeadline: new Date(Date.now() + _),
             memberDeadline: new Date(Date.now() + p),
             timeoutRef: t
@@ -96,11 +96,11 @@ function y() {
 function I(e) {
     h.delete(e.guild.id), g(e.guild.id);
 }
-function b(e) {
+function T(e) {
     let { guild: t } = e;
     E(t.id);
 }
-function T(e) {
+function b(e) {
     var t;
     let { guildId: n, user: i } = e;
     if (i.id !== (null === (t = c.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
@@ -132,7 +132,7 @@ let C = new N(a.Z, {
     CURRENT_USER_UPDATE: S,
     GUILD_CREATE: I,
     GUILD_UPDATE: I,
-    GUILD_DELETE: b,
-    GUILD_MEMBER_UPDATE: T,
+    GUILD_DELETE: T,
+    GUILD_MEMBER_UPDATE: b,
     GUILD_VERIFICATION_CHECK: A
 });

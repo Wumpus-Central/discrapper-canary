@@ -1,12 +1,12 @@
 e.exports = {
-    answersContainer: 'answersContainer_aee2d8',
-    answer: 'answer_aee2d8',
-    currentlyVoting: 'currentlyVoting_aee2d8',
-    attachment: 'attachment_aee2d8',
-    attachmentWithResults: 'attachmentWithResults_aee2d8',
-    emoji: 'emoji_aee2d8',
-    mediaMissing: 'mediaMissing_aee2d8',
-    selectedIcon: 'selectedIcon_aee2d8',
-    pollAnswerIcon: 'pollAnswerIcon_aee2d8',
-    votesData: 'votesData_aee2d8'
+    answersContainer: 'answersContainer__10758',
+    answer: 'answer__10758',
+    currentlyVoting: 'currentlyVoting__10758',
+    attachment: 'attachment__10758',
+    attachmentWithResults: 'attachmentWithResults__10758',
+    emoji: 'emoji__10758',
+    mediaMissing: 'mediaMissing__10758',
+    selectedIcon: 'selectedIcon__10758',
+    pollAnswerIcon: 'pollAnswerIcon__10758',
+    votesData: 'votesData__10758'
 };

@@ -1,12 +1,12 @@
-var s,
-    a,
+n.d(s, { Z: () => u });
+var t,
     i = n(200651);
 n(192379);
-var c = n(481060),
+var a = n(481060),
     l = n(600164),
-    o = n(637926);
-((s = a || (a = {})).UPGRADE = 'UPGRADE'), (s.CANCEL = 'CANCEL'), (s.UNVERIFIED = 'UNVERIFIED'), (s.UNCLAIMED = 'UNCLAIMED'), (s.GRANDFATHERED = 'GRANDFATHERED');
-let r = {
+    r = n(637926),
+    c = (((t = c || {}).UPGRADE = 'UPGRADE'), (t.CANCEL = 'CANCEL'), (t.UNVERIFIED = 'UNVERIFIED'), (t.UNCLAIMED = 'UNCLAIMED'), (t.GRANDFATHERED = 'GRANDFATHERED'), t);
+let o = {
         UPGRADE: 'imageUpgrade',
         CANCEL: 'imageCancel',
         UNVERIFIED: 'imageUnverified',
@@ -14,25 +14,25 @@ let r = {
         GRANDFATHERED: 'imageCancel'
     },
     d = (e) => {
-        let { children: t, ...n } = e;
-        return (0, i.jsx)(c.ModalRoot, {
+        let { children: s, ...n } = e;
+        return (0, i.jsx)(a.Y0X, {
             ...n,
-            children: t
+            children: s
         });
     };
 (d.Header = (e) => {
-    let { children: t, onClose: n } = e;
-    return (0, i.jsxs)(c.ModalHeader, {
+    let { children: s, onClose: n } = e;
+    return (0, i.jsxs)(a.xBx, {
         justify: l.Z.Justify.BETWEEN,
         separator: !1,
         children: [
-            (0, i.jsx)(c.FormTitle, {
-                tag: c.FormTitleTags.H4,
-                children: t
+            (0, i.jsx)(a.vwX, {
+                tag: a.RB0.H4,
+                children: s
             }),
             null != n
-                ? (0, i.jsx)(c.ModalCloseButton, {
-                      className: o.__invalid_closeIcon,
+                ? (0, i.jsx)(a.olH, {
+                      className: r.__invalid_closeIcon,
                       onClick: n
                   })
                 : null
@@ -40,41 +40,41 @@ let r = {
     });
 }),
     (d.Content = (e) => {
-        let { children: t, type: n } = e;
-        return (0, i.jsxs)(c.ModalContent, {
+        let { children: s, type: n } = e;
+        return (0, i.jsxs)(a.hzk, {
             children: [
-                (0, i.jsx)('div', { className: o[r[n]] }),
+                (0, i.jsx)('div', { className: r[o[n]] }),
                 (0, i.jsx)('div', {
-                    className: o.message,
-                    children: t
+                    className: r.message,
+                    children: s
                 })
             ]
         });
     }),
     (d.Footer = (e) => {
-        let { primary: t, primaryRenderer: n, secondary: s } = e;
-        return (0, i.jsx)(c.ModalFooter, {
+        let { primary: s, primaryRenderer: n, secondary: t } = e;
+        return (0, i.jsx)(a.mzw, {
             children: (0, i.jsxs)(l.Z, {
                 justify: l.Z.Justify.END,
                 children: [
-                    null != s
-                        ? (0, i.jsx)(c.Button, {
-                              onClick: s.onClick,
-                              look: c.Button.Looks.LINK,
-                              innerClassName: o.secondaryButton,
-                              children: s.label
+                    null != t
+                        ? (0, i.jsx)(a.zxk, {
+                              onClick: t.onClick,
+                              look: a.zxk.Looks.LINK,
+                              innerClassName: r.secondaryButton,
+                              children: t.label
                           })
                         : null,
-                    null != t
-                        ? (0, i.jsx)(c.Button, {
-                              onClick: t.onClick,
-                              color: c.Button.Colors.BRAND,
-                              children: t.label
+                    null != s
+                        ? (0, i.jsx)(a.zxk, {
+                              onClick: s.onClick,
+                              color: a.zxk.Colors.BRAND,
+                              children: s.label
                           })
                         : n
                 ]
             })
         });
     }),
-    (d.Types = a),
-    (t.Z = d);
+    (d.Types = c);
+let u = d;

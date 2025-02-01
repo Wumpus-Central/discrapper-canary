@@ -1,4 +1,4 @@
 e.exports = {
-    changeButton: 'changeButton_c67245',
-    ellipsisText: 'ellipsisText_c67245'
+    changeButton: 'changeButton_a8c498',
+    ellipsisText: 'ellipsisText_a8c498'
 };

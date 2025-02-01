@@ -1,6 +1,6 @@
-var n = /\s/;
-function r(e) {
-    for (var r = e.length; r-- && n.test(e.charAt(r)); );
-    return r;
+var t = /\s/;
+function n(e) {
+    for (var n = e.length; n-- && t.test(e.charAt(n)); );
+    return n;
 }
-e.exports = r;
+e.exports = n;

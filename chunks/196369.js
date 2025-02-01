@@ -18,7 +18,7 @@ function a(t, e, r, a, u, s, c) {
             focusOffset: g.end,
             isBackward: !1
         });
-    !s && (c ? (f = g.end) : (l = g.start));
+    s || (c ? (f = g.end) : (l = g.start));
     var y = n.getRemovalRange(l, f, e.getText().slice(g.start, g.end), g.start, a);
     return r.merge({
         anchorOffset: y.start,

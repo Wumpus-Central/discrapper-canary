@@ -1,11 +1,11 @@
 e.exports = {
-    descriptionBox: 'descriptionBox_c38f8d',
-    descriptionSection: 'descriptionSection_c38f8d',
-    descriptionRow: 'descriptionRow_c38f8d',
-    descriptionIcon: 'descriptionIcon_c38f8d',
-    divider: 'divider_c38f8d',
-    button: 'button_c38f8d',
-    rightButtonContainer: 'rightButtonContainer_c38f8d',
-    lastSync: 'lastSync_c38f8d',
-    buttonContainer: 'buttonContainer_c38f8d'
+    descriptionBox: 'descriptionBox__981f7',
+    descriptionSection: 'descriptionSection__981f7',
+    descriptionRow: 'descriptionRow__981f7',
+    descriptionIcon: 'descriptionIcon__981f7',
+    divider: 'divider__981f7',
+    button: 'button__981f7',
+    rightButtonContainer: 'rightButtonContainer__981f7',
+    lastSync: 'lastSync__981f7',
+    buttonContainer: 'buttonContainer__981f7'
 };

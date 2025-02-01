@@ -1,8 +1,8 @@
 e.exports = {
-    container: 'container_d15f2c',
-    loadedContentContainer: 'loadedContentContainer_d15f2c',
-    iframeAndHeaderContainer: 'iframeAndHeaderContainer_d15f2c',
-    headerContainer: 'headerContainer_d15f2c',
-    iframeContainer: 'iframeContainer_d15f2c',
-    iframe: 'iframe_d15f2c'
+    container: 'container__0b406',
+    loadedContentContainer: 'loadedContentContainer__0b406',
+    iframeAndHeaderContainer: 'iframeAndHeaderContainer__0b406',
+    headerContainer: 'headerContainer__0b406',
+    iframeContainer: 'iframeContainer__0b406',
+    iframe: 'iframe__0b406'
 };

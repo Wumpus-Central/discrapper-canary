@@ -1,4 +1,5 @@
-let r = new (class e {
+r.d(t, { Z: () => a });
+let a = new (class {
     add(e, t, r) {
         if ('string' != typeof arguments[0]) {
             for (var e in arguments[0]) this.add(e, arguments[0][e], arguments[1]);
@@ -15,4 +16,3 @@ let r = new (class e {
             });
     }
 })();
-t.Z = r;

@@ -1,4 +1,4 @@
 e.exports = {
-    sectionContainer: 'sectionContainer_d51bcd',
-    contentContainer: 'contentContainer_d51bcd'
+    sectionContainer: 'sectionContainer_f8758b',
+    contentContainer: 'contentContainer_f8758b'
 };

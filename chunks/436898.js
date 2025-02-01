@@ -1,6 +1,6 @@
 e.exports = {
-    root: 'root_e3c915',
-    clipGrid: 'clipGrid_e3c915',
-    clipsRow: 'clipsRow_e3c915',
-    spinnerContainer: 'spinnerContainer_e3c915'
+    root: 'root__578ba',
+    clipGrid: 'clipGrid__578ba',
+    clipsRow: 'clipsRow__578ba',
+    spinnerContainer: 'spinnerContainer__578ba'
 };

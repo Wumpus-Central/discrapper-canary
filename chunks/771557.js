@@ -1,4 +1,4 @@
 e.exports = {
-    pauseBackground: 'pauseBackground_fdcfe0',
-    pause: 'pause_fdcfe0'
+    pauseBackground: 'pauseBackground_d70e0d',
+    pause: 'pause_d70e0d'
 };

@@ -1,4 +1,4 @@
-let n = (e) => ({
+let t = (e) => ({
         IMPORTANT: {
             scope: 'meta',
             begin: '!important'
@@ -29,10 +29,10 @@ let n = (e) => ({
             begin: /--[A-Za-z_][A-Za-z0-9_-]*/
         }
     }),
-    r = ['a', 'abbr', 'address', 'article', 'aside', 'audio', 'b', 'blockquote', 'body', 'button', 'canvas', 'caption', 'cite', 'code', 'dd', 'del', 'details', 'dfn', 'div', 'dl', 'dt', 'em', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'nav', 'object', 'ol', 'optgroup', 'option', 'p', 'picture', 'q', 'quote', 'samp', 'section', 'select', 'source', 'span', 'strong', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'ul', 'var', 'video', 'defs', 'g', 'marker', 'mask', 'pattern', 'svg', 'switch', 'symbol', 'feBlend', 'feColorMatrix', 'feComponentTransfer', 'feComposite', 'feConvolveMatrix', 'feDiffuseLighting', 'feDisplacementMap', 'feFlood', 'feGaussianBlur', 'feImage', 'feMerge', 'feMorphology', 'feOffset', 'feSpecularLighting', 'feTile', 'feTurbulence', 'linearGradient', 'radialGradient', 'stop', 'circle', 'ellipse', 'image', 'line', 'path', 'polygon', 'polyline', 'rect', 'text', 'use', 'textPath', 'tspan', 'foreignObject', 'clipPath'],
+    n = ['a', 'abbr', 'address', 'article', 'aside', 'audio', 'b', 'blockquote', 'body', 'button', 'canvas', 'caption', 'cite', 'code', 'dd', 'del', 'details', 'dfn', 'div', 'dl', 'dt', 'em', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'nav', 'object', 'ol', 'optgroup', 'option', 'p', 'picture', 'q', 'quote', 'samp', 'section', 'select', 'source', 'span', 'strong', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'ul', 'var', 'video', 'defs', 'g', 'marker', 'mask', 'pattern', 'svg', 'switch', 'symbol', 'feBlend', 'feColorMatrix', 'feComponentTransfer', 'feComposite', 'feConvolveMatrix', 'feDiffuseLighting', 'feDisplacementMap', 'feFlood', 'feGaussianBlur', 'feImage', 'feMerge', 'feMorphology', 'feOffset', 'feSpecularLighting', 'feTile', 'feTurbulence', 'linearGradient', 'radialGradient', 'stop', 'circle', 'ellipse', 'image', 'line', 'path', 'polygon', 'polyline', 'rect', 'text', 'use', 'textPath', 'tspan', 'foreignObject', 'clipPath'],
     i = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'].sort().reverse(),
-    a = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'].sort().reverse(),
-    o = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'].sort().reverse(),
+    r = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'].sort().reverse(),
+    a = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'].sort().reverse(),
     s = [
         'accent-color',
         'align-content',
@@ -551,13 +551,13 @@ let n = (e) => ({
     ]
         .sort()
         .reverse();
-function l(e) {
-    let l = n(e),
-        u = o,
-        c = a,
-        d = '@[a-z-]+',
-        f = 'and or not only',
-        p = {
+function o(e) {
+    let o = t(e),
+        l = a,
+        u = r,
+        c = '@[a-z-]+',
+        d = 'and or not only',
+        f = {
             className: 'variable',
             begin: '(\\$[a-zA-Z-][a-zA-Z0-9_-]*)\\b',
             relevance: 0
@@ -569,7 +569,7 @@ function l(e) {
         contains: [
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            l.CSS_NUMBER_MODE,
+            o.CSS_NUMBER_MODE,
             {
                 className: 'selector-id',
                 begin: '#[A-Za-z0-9_-]+',
@@ -580,27 +580,27 @@ function l(e) {
                 begin: '\\.[A-Za-z0-9_-]+',
                 relevance: 0
             },
-            l.ATTRIBUTE_SELECTOR_MODE,
+            o.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: 'selector-tag',
-                begin: '\\b(' + r.join('|') + ')\\b',
+                begin: '\\b(' + n.join('|') + ')\\b',
                 relevance: 0
             },
             {
                 className: 'selector-pseudo',
-                begin: ':(' + c.join('|') + ')'
+                begin: ':(' + u.join('|') + ')'
             },
             {
                 className: 'selector-pseudo',
-                begin: ':(:)?(' + u.join('|') + ')'
+                begin: ':(:)?(' + l.join('|') + ')'
             },
-            p,
+            f,
             {
                 begin: /\(/,
                 end: /\)/,
-                contains: [l.CSS_NUMBER_MODE]
+                contains: [o.CSS_NUMBER_MODE]
             },
-            l.CSS_VARIABLE,
+            o.CSS_VARIABLE,
             {
                 className: 'attribute',
                 begin: '\\b(' + s.join('|') + ')\\b'
@@ -610,12 +610,12 @@ function l(e) {
                 begin: /:/,
                 end: /[;}{]/,
                 relevance: 0,
-                contains: [l.BLOCK_COMMENT, p, l.HEXCOLOR, l.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, l.IMPORTANT, l.FUNCTION_DISPATCH]
+                contains: [o.BLOCK_COMMENT, f, o.HEXCOLOR, o.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, o.IMPORTANT, o.FUNCTION_DISPATCH]
             },
             {
                 begin: '@(page|font-face)',
                 keywords: {
-                    $pattern: d,
+                    $pattern: c,
                     keyword: '@page @font-face'
                 }
             },
@@ -625,27 +625,27 @@ function l(e) {
                 returnBegin: !0,
                 keywords: {
                     $pattern: /[a-z-]+/,
-                    keyword: f,
+                    keyword: d,
                     attribute: i.join(' ')
                 },
                 contains: [
                     {
-                        begin: d,
+                        begin: c,
                         className: 'keyword'
                     },
                     {
                         begin: /[a-z-]+(?=:)/,
                         className: 'attribute'
                     },
-                    p,
+                    f,
                     e.QUOTE_STRING_MODE,
                     e.APOS_STRING_MODE,
-                    l.HEXCOLOR,
-                    l.CSS_NUMBER_MODE
+                    o.HEXCOLOR,
+                    o.CSS_NUMBER_MODE
                 ]
             },
-            l.FUNCTION_DISPATCH
+            o.FUNCTION_DISPATCH
         ]
     };
 }
-e.exports = l;
+e.exports = o;

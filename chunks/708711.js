@@ -1,10 +1,11 @@
+n.d(t, { Z: () => r });
 var i = n(818083),
-    r = n(987338);
-let l = (0, i.B)({
+    l = n(987338);
+let r = (0, i.B)({
     kind: 'user',
     id: '2025-01_tiered_tenure_badges_mobile',
     label: 'Tiered Tenure Badging Mobile Experience',
-    commonTriggerPoint: r.$P.CONNECTION_OPEN,
+    commonTriggerPoint: l.$P.CONNECTION_OPEN,
     defaultConfig: { enabled: !1 },
     treatments: [
         {
@@ -17,4 +18,3 @@ let l = (0, i.B)({
         }
     ]
 });
-t.Z = l;

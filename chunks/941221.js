@@ -1,6 +1,6 @@
 t.exports = {
-    wrapper: 'wrapper_bfa0f5',
-    productsContainer: 'productsContainer_bfa0f5',
-    productSection: 'productSection_bfa0f5',
-    subscriptionCardSubtext: 'subscriptionCardSubtext_bfa0f5'
+    wrapper: 'wrapper__29f4e',
+    productsContainer: 'productsContainer__29f4e',
+    productSection: 'productSection__29f4e',
+    subscriptionCardSubtext: 'subscriptionCardSubtext__29f4e'
 };

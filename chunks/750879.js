@@ -1,6 +1,6 @@
 IntlMessageFormat.__addLocaleData({
     locale: 'th',
-    pluralRuleFunction: function (e, n) {
+    pluralRuleFunction: function (e, t) {
         return 'other';
     }
 });

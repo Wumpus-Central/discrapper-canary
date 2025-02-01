@@ -1,6 +1,6 @@
 e.exports = {
-    box: 'box_af45f8',
-    textContainer: 'textContainer_af45f8',
-    divider: 'divider_af45f8',
-    animation: 'animation_af45f8'
+    box: 'box_ee23ac',
+    textContainer: 'textContainer_ee23ac',
+    divider: 'divider_ee23ac',
+    animation: 'animation_ee23ac'
 };

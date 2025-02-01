@@ -1,8 +1,8 @@
 e.exports = {
-    upsellOuter: 'upsellOuter_d6af8e',
-    upsellInner: 'upsellInner_d6af8e',
-    upsellTitle: 'upsellTitle_d6af8e',
-    nitroWheel: 'nitroWheel_d6af8e',
-    close: 'close_d6af8e',
-    closeIcon: 'closeIcon_d6af8e'
+    upsellOuter: 'upsellOuter__50e68',
+    upsellInner: 'upsellInner__50e68',
+    upsellTitle: 'upsellTitle__50e68',
+    nitroWheel: 'nitroWheel__50e68',
+    close: 'close__50e68',
+    closeIcon: 'closeIcon__50e68'
 };

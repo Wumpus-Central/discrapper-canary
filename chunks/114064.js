@@ -53,7 +53,7 @@ function I(e) {
     let { perkType: t } = e;
     (h.available[t] = !1), (null == i ? void 0 : i.extendedDemoDuration) !== !0 && delete h.activated[t];
 }
-function b(e) {
+function T(e) {
     let { user: t, perkType: n, available: i, activateSuccess: r, demoDuration: a } = e;
     void 0 !== t &&
         (0, l.QI)(t) &&
@@ -67,7 +67,7 @@ function b(e) {
         delete h.activated[n],
         (h.lastFetched = null));
 }
-function T() {
+function b() {
     (0, u.vw)(a.q.STREAM_HIGH_QUALITY) && (0, c.cD)(!0);
 }
 function S() {
@@ -111,8 +111,8 @@ let C = new N(o.Z, {
     PREMIUM_PERKS_DEMO_ACTIVATE_FAILURE: y,
     PREMIUM_PERKS_DEMO_COMPLETE: I,
     LOGOUT: m,
-    PREMIUM_PERKS_DEMO_OVERRIDE: b,
-    STREAM_START: T,
+    PREMIUM_PERKS_DEMO_OVERRIDE: T,
+    STREAM_START: b,
     STREAM_STOP: S,
     CONNECTION_OPEN: A,
     EXPERIMENTS_FETCH_SUCCESS: A,

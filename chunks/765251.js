@@ -9,7 +9,7 @@ t.exports = function (t, e) {
     var a = 0,
         u = [];
     t.forEach(function (s) {
-        (function (t, e) {
+        !(function (t, e) {
             if (!r.g.FileReader || (t.type && !(t.type in o))) {
                 e('');
                 return;

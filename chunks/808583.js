@@ -1,5 +1,5 @@
 t.exports = {
-    container: 'container_dd2728',
-    guildBoostingIcon: 'guildBoostingIcon_dd2728',
-    subscribeButton: 'subscribeButton_dd2728'
+    container: 'container_aea6af',
+    guildBoostingIcon: 'guildBoostingIcon_aea6af',
+    subscribeButton: 'subscribeButton_aea6af'
 };

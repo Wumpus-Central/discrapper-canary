@@ -30,11 +30,11 @@ let m = Object.freeze([]),
     v = {},
     y = {},
     I = {};
-function b(e, t) {
+function T(e, t) {
     let n = g[e];
     return null != n ? n[t] : null;
 }
-let T = (e) => {
+let b = (e) => {
     switch (e.type) {
         case p.IIU.CUSTOM_STATUS:
             return 4;
@@ -49,7 +49,7 @@ let T = (e) => {
     }
 };
 function S(e, t) {
-    return T(t) - T(e);
+    return b(t) - b(e);
 }
 let A = (e) => ((0, c.Z)(e) ? 1 : 0);
 function N(e, t) {
@@ -279,7 +279,7 @@ class K extends (i = l.ZP.Store) {
             a = _.default.getUser(e);
         if ((null != a && a.hasFlag(p.xW$.BOT_HTTP_INTERACTIONS) && (r = p.Skl.UNKNOWN), null == a ? void 0 : a.isClyde())) return p.Skl.ONLINE;
         if (null == i) return null !== (t = E[e]) && void 0 !== t ? t : r;
-        let s = b(e, i);
+        let s = T(e, i);
         return null !== (n = null == s ? void 0 : s.status) && void 0 !== n ? n : r;
     }
     getActivities(e) {
@@ -288,7 +288,7 @@ class K extends (i = l.ZP.Store) {
             var n;
             return null !== (n = v[e]) && void 0 !== n ? n : m;
         }
-        let i = b(e, t);
+        let i = T(e, t);
         return null == i || null == i.activities ? m : i.activities;
     }
     getPrimaryActivity(e) {

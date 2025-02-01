@@ -1,8 +1,8 @@
-n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i = n(200651);
 n(192379);
-var r = n(392711),
-    l = n.n(r),
+var l = n(392711),
+    r = n.n(l),
     a = n(481060),
     s = n(463395),
     o = n(820486),
@@ -14,32 +14,32 @@ function m() {
     let e;
     if (h) return;
     let t = c.Z.getInputDeviceId(),
-        r = c.Z.getOutputDeviceId();
-    if (o.Z.getState().neverShowModal || l().isEmpty(o.Z.lastDeviceConnected)) return;
+        l = c.Z.getOutputDeviceId();
+    if (o.Z.getState().neverShowModal || r().isEmpty(o.Z.lastDeviceConnected)) return;
     let m = (0, o.X)(c.Z.getInputDevices()[t]),
-        p = (0, o.X)(c.Z.getOutputDevices()[r]);
-    if (l().some(o.Z.lastDeviceConnected, (e) => u.has(e.displayName) || e.displayName === m || e.displayName === p)) return;
-    let g = l().some(o.Z.lastDeviceConnected, (e) => s.Z.isCertified(o.Z.inputDevices[e.displayName]) || s.Z.isCertified(o.Z.outputDevices[e.displayName]));
-    if (((t === d.w5 && o.Z.lastInputSystemDevice.justChanged) || (r === d.w5 && o.Z.lastOutputSystemDevice.justChanged)) && !g) return;
-    let f = l().first(Object.keys(o.Z.lastDeviceConnected)),
-        _ = null != f && '' !== f ? o.Z.lastDeviceConnected[f] : null;
-    null != _ &&
-        (o.Z.initialized && null != f && (s.Z.isCertified(o.Z.inputDevices[f]) ? (e = s.Z.getCertifiedDevice(o.Z.inputDevices[f])) : s.Z.isCertified(o.Z.outputDevices[f]) && (e = s.Z.getCertifiedDevice(o.Z.outputDevices[f]))),
+        p = (0, o.X)(c.Z.getOutputDevices()[l]);
+    if (r().some(o.Z.lastDeviceConnected, (e) => u.has(e.displayName) || e.displayName === m || e.displayName === p)) return;
+    let g = r().some(o.Z.lastDeviceConnected, (e) => s.Z.isCertified(o.Z.inputDevices[e.displayName]) || s.Z.isCertified(o.Z.outputDevices[e.displayName]));
+    if (((t === d.w5 && o.Z.lastInputSystemDevice.justChanged) || (l === d.w5 && o.Z.lastOutputSystemDevice.justChanged)) && !g) return;
+    let _ = r().first(Object.keys(o.Z.lastDeviceConnected)),
+        f = null != _ && '' !== _ ? o.Z.lastDeviceConnected[_] : null;
+    null != f &&
+        (o.Z.initialized && null != _ && (s.Z.isCertified(o.Z.inputDevices[_]) ? (e = s.Z.getCertifiedDevice(o.Z.inputDevices[_])) : s.Z.isCertified(o.Z.outputDevices[_]) && (e = s.Z.getCertifiedDevice(o.Z.outputDevices[_]))),
         (h = !0),
-        (0, a.openModalLazy)(async () => {
+        (0, a.ZDy)(async () => {
             let { default: t } = await n.e('83536').then(n.bind(n, 43991));
             return (n) => {
-                let { transitionState: r, onClose: l } = n;
+                let { transitionState: l, onClose: r } = n;
                 return (0, i.jsx)(t, {
-                    device: _,
+                    device: f,
                     certifiedDeviceMetadata: e,
-                    transitionState: r,
-                    onClose: () => ((h = !1), l())
+                    transitionState: l,
+                    onClose: () => ((h = !1), r())
                 });
             };
         }));
 }
-t.Z = {
+let p = {
     init() {
         o.Z.addChangeListener(m);
     }

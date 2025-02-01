@@ -1,30 +1,30 @@
-var i = r(192379),
-    a = r(476400),
-    o = r.n(a),
-    s = r(723184),
-    l = r(829307),
-    u = r(877837),
-    c = r(474527),
-    d = r(372712),
-    f = r(899627),
-    p = function (e) {
-        var n = e.width,
-            r = e.onChange,
-            a = e.rgb,
-            o = e.hsl,
-            p = e.hsv,
-            h = e.hex,
-            _ = e.header,
-            m = e.styles,
-            g = void 0 === m ? {} : m,
-            E = e.className,
-            v = void 0 === E ? '' : E,
-            y = (0, s.default)(
-                (0, l.Z)(
+var i = n(192379),
+    r = n(476400),
+    a = n.n(r),
+    s = n(723184),
+    o = n(829307),
+    l = n(877837),
+    u = n(474527),
+    c = n(372712),
+    d = n(899627),
+    f = function (e) {
+        var t = e.width,
+            n = e.onChange,
+            r = e.rgb,
+            a = e.hsl,
+            f = e.hsv,
+            _ = e.hex,
+            p = e.header,
+            h = e.styles,
+            m = void 0 === h ? {} : h,
+            g = e.className,
+            E = void 0 === g ? '' : g,
+            v = (0, s.default)(
+                (0, o.Z)(
                     {
                         default: {
                             picker: {
-                                width: n,
+                                width: t,
                                 background: '#fff',
                                 border: '1px solid #dfe1e5',
                                 boxSizing: 'initial',
@@ -52,7 +52,7 @@ var i = r(192379),
                                 width: '30%',
                                 height: '228px',
                                 padding: '0px',
-                                background: 'rgba(' + a.r + ', ' + a.g + ', ' + a.b + ', 1)',
+                                background: 'rgba(' + r.r + ', ' + r.g + ', ' + r.b + ', 1)',
                                 position: 'relative',
                                 overflow: 'hidden'
                             },
@@ -76,66 +76,66 @@ var i = r(192379),
                             Hue: { radius: '2px' }
                         }
                     },
-                    g
+                    m
                 )
             );
         return i.createElement(
             'div',
             {
-                style: y.picker,
-                className: 'google-picker ' + v
+                style: v.picker,
+                className: 'google-picker ' + E
             },
-            i.createElement('div', { style: y.head }, _),
-            i.createElement('div', { style: y.swatch }),
+            i.createElement('div', { style: v.head }, p),
+            i.createElement('div', { style: v.swatch }),
             i.createElement(
                 'div',
-                { style: y.saturation },
-                i.createElement(u.OQ, {
-                    hsl: o,
-                    hsv: p,
-                    pointer: c.C,
-                    onChange: r
+                { style: v.saturation },
+                i.createElement(l.OQ, {
+                    hsl: a,
+                    hsv: f,
+                    pointer: u.C,
+                    onChange: n
                 })
             ),
             i.createElement(
                 'div',
-                { style: y.body },
+                { style: v.body },
                 i.createElement(
                     'div',
                     {
-                        style: y.controls,
+                        style: v.controls,
                         className: 'flexbox-fix'
                     },
                     i.createElement(
                         'div',
-                        { style: y.hue },
-                        i.createElement(u.PS, {
-                            style: y.Hue,
-                            hsl: o,
+                        { style: v.hue },
+                        i.createElement(l.PS, {
+                            style: v.Hue,
+                            hsl: a,
                             radius: '4px',
-                            pointer: d.Z,
-                            onChange: r
+                            pointer: c.Z,
+                            onChange: n
                         })
                     )
                 ),
-                i.createElement(f.Z, {
-                    rgb: a,
-                    hsl: o,
-                    hex: h,
-                    hsv: p,
-                    onChange: r
+                i.createElement(d.Z, {
+                    rgb: r,
+                    hsl: a,
+                    hex: _,
+                    hsv: f,
+                    onChange: n
                 })
             )
         );
     };
-(p.propTypes = {
-    width: o().oneOfType([o().string, o().number]),
-    styles: o().object,
-    header: o().string
+(f.propTypes = {
+    width: a().oneOfType([a().string, a().number]),
+    styles: a().object,
+    header: a().string
 }),
-    (p.defaultProps = {
+    (f.defaultProps = {
         width: 652,
         styles: {},
         header: 'Color picker'
     }),
-    (0, u.t1)(p);
+    (0, l.t1)(f);

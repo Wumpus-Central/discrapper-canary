@@ -1,6 +1,6 @@
-var i = r(67867),
-    a = r(228042),
-    o = r(292137);
+var i = n(67867),
+    r = n(228042),
+    a = n(292137);
 i(
     {
         target: 'Map',
@@ -10,14 +10,14 @@ i(
     },
     {
         keyOf: function (e) {
-            var n = o(
-                a(this),
-                function (n, r) {
-                    if (n === e) return { key: r };
+            var t = a(
+                r(this),
+                function (t, n) {
+                    if (t === e) return { key: n };
                 },
                 !0
             );
-            return n && n.key;
+            return t && t.key;
         }
     }
 );

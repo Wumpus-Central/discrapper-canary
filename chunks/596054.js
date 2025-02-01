@@ -1,6 +1,6 @@
 n.exports = {
-    guildPickerContainer: 'guildPickerContainer_e72e2e',
-    breadcrumbs: 'breadcrumbs_e72e2e',
-    userSubscriptionDetailsContainer: 'userSubscriptionDetailsContainer_e72e2e',
-    guildNameContainer: 'guildNameContainer_e72e2e'
+    guildPickerContainer: 'guildPickerContainer__99854',
+    breadcrumbs: 'breadcrumbs__99854',
+    userSubscriptionDetailsContainer: 'userSubscriptionDetailsContainer__99854',
+    guildNameContainer: 'guildNameContainer__99854'
 };

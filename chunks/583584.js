@@ -1,4 +1,4 @@
-var i = r(690244)('%Object.defineProperty%', !0) || !1;
+var i = n(690244)('%Object.defineProperty%', !0) || !1;
 if (i)
     try {
         i({}, 'a', { value: 1 });

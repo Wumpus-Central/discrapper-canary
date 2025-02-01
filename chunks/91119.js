@@ -1,36 +1,36 @@
-var i = r(772949),
-    a = r(587816),
-    o = r(756237),
-    s = r(407411);
-function l(n) {
-    var r = 'function' == typeof Map ? new Map() : void 0;
+var i = n(772949),
+    r = n(587816),
+    a = n(756237),
+    s = n(407411);
+function o(t) {
+    var n = 'function' == typeof Map ? new Map() : void 0;
     return (
-        (e.exports = l =
+        (e.exports = o =
             function (e) {
-                if (null === e || !o(e)) return e;
+                if (null === e || !a(e)) return e;
                 if ('function' != typeof e) throw TypeError('Super expression must either be null or a function');
-                if (void 0 !== r) {
-                    if (r.has(e)) return r.get(e);
-                    r.set(e, n);
+                if (void 0 !== n) {
+                    if (n.has(e)) return n.get(e);
+                    n.set(e, t);
                 }
-                function n() {
+                function t() {
                     return s(e, arguments, i(this).constructor);
                 }
                 return (
-                    (n.prototype = Object.create(e.prototype, {
+                    (t.prototype = Object.create(e.prototype, {
                         constructor: {
-                            value: n,
+                            value: t,
                             enumerable: !1,
                             writable: !0,
                             configurable: !0
                         }
                     })),
-                    a(n, e)
+                    r(t, e)
                 );
             }),
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports),
-        l(n)
+        o(t)
     );
 }
-(e.exports = l), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = o), (e.exports.__esModule = !0), (e.exports.default = e.exports);

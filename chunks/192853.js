@@ -1,7 +1,7 @@
-var i = r(690244),
-    a = r(160171),
-    o = a(i('String.prototype.indexOf'));
-e.exports = function (e, n) {
-    var r = i(e, !!n);
-    return 'function' == typeof r && o(e, '.prototype.') > -1 ? a(r) : r;
+var i = n(690244),
+    r = n(160171),
+    a = r(i('String.prototype.indexOf'));
+e.exports = function (e, t) {
+    var n = i(e, !!t);
+    return 'function' == typeof n && a(e, '.prototype.') > -1 ? r(n) : n;
 };

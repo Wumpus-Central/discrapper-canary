@@ -1,27 +1,27 @@
-var n = '[0-9](_*[0-9])*',
-    r = `\\.(${n})`,
+var t = '[0-9](_*[0-9])*',
+    n = `\\.(${t})`,
     i = '[0-9a-fA-F](_*[0-9a-fA-F])*',
-    a = {
+    r = {
         className: 'number',
-        variants: [{ begin: `(\\b(${n})((${r})|\\.)?|(${r}))[eE][+-]?(${n})[fFdD]?\\b` }, { begin: `\\b(${n})((${r})[fFdD]?\\b|\\.([fFdD]\\b)?)` }, { begin: `(${r})[fFdD]?\\b` }, { begin: `\\b(${n})[fFdD]\\b` }, { begin: `\\b0[xX]((${i})\\.?|(${i})?\\.(${i}))[pP][+-]?(${n})[fFdD]?\\b` }, { begin: '\\b(0|[1-9](_*[0-9])*)[lL]?\\b' }, { begin: `\\b0[xX](${i})[lL]?\\b` }, { begin: '\\b0(_*[0-7])*[lL]?\\b' }, { begin: '\\b0[bB][01](_*[01])*[lL]?\\b' }],
+        variants: [{ begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b` }, { begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)` }, { begin: `(${n})[fFdD]?\\b` }, { begin: `\\b(${t})[fFdD]\\b` }, { begin: `\\b0[xX]((${i})\\.?|(${i})?\\.(${i}))[pP][+-]?(${t})[fFdD]?\\b` }, { begin: '\\b(0|[1-9](_*[0-9])*)[lL]?\\b' }, { begin: `\\b0[xX](${i})[lL]?\\b` }, { begin: '\\b0(_*[0-7])*[lL]?\\b' }, { begin: '\\b0[bB][01](_*[01])*[lL]?\\b' }],
         relevance: 0
     };
-function o(e, n, r) {
-    return -1 === r ? '' : e.replace(n, (i) => o(e, n, r - 1));
+function a(e, t, n) {
+    return -1 === n ? '' : e.replace(t, (i) => a(e, t, n - 1));
 }
 function s(e) {
-    let n = e.regex,
-        r = '[À-ʸa-zA-Z_$][À-ʸa-zA-Z_$0-9]*',
-        i = r + o('(?:<' + r + '~~~(?:\\s*,\\s*' + r + '~~~)*>)?', /~~~/g, 2),
+    let t = e.regex,
+        n = '[À-ʸa-zA-Z_$][À-ʸa-zA-Z_$0-9]*',
+        i = n + a('(?:<' + n + '~~~(?:\\s*,\\s*' + n + '~~~)*>)?', /~~~/g, 2),
         s = {
             keyword: ['synchronized', 'abstract', 'private', 'var', 'static', 'if', 'const ', 'for', 'while', 'strictfp', 'finally', 'protected', 'import', 'native', 'final', 'void', 'enum', 'else', 'break', 'transient', 'catch', 'instanceof', 'volatile', 'case', 'assert', 'package', 'default', 'public', 'try', 'switch', 'continue', 'throws', 'protected', 'public', 'private', 'module', 'requires', 'exports', 'do', 'sealed', 'yield', 'permits', 'goto', 'when'],
             literal: ['false', 'true', 'null'],
             type: ['char', 'boolean', 'long', 'float', 'int', 'byte', 'short', 'double'],
             built_in: ['super', 'this']
         },
-        l = {
+        o = {
             className: 'meta',
-            begin: '@' + r,
+            begin: '@' + n,
             contains: [
                 {
                     begin: /\(/,
@@ -30,7 +30,7 @@ function s(e) {
                 }
             ]
         },
-        u = {
+        l = {
             className: 'params',
             begin: /\(/,
             end: /\)/,
@@ -74,7 +74,7 @@ function s(e) {
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             {
-                match: [/\b(?:class|interface|enum|extends|implements|new)/, /\s+/, r],
+                match: [/\b(?:class|interface|enum|extends|implements|new)/, /\s+/, n],
                 className: {
                     1: 'keyword',
                     3: 'title.class'
@@ -85,7 +85,7 @@ function s(e) {
                 scope: 'keyword'
             },
             {
-                begin: [n.concat(/(?!else)/, r), /\s+/, r, /\s+/, /=(?!=)/],
+                begin: [t.concat(/(?!else)/, n), /\s+/, n, /\s+/, /=(?!=)/],
                 className: {
                     1: 'type',
                     3: 'variable',
@@ -93,12 +93,12 @@ function s(e) {
                 }
             },
             {
-                begin: [/record/, /\s+/, r],
+                begin: [/record/, /\s+/, n],
                 className: {
                     1: 'keyword',
                     3: 'title.class'
                 },
-                contains: [u, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                contains: [l, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
             },
             {
                 beginKeywords: 'new throw return else',
@@ -115,14 +115,14 @@ function s(e) {
                         end: /\)/,
                         keywords: s,
                         relevance: 0,
-                        contains: [l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, a, e.C_BLOCK_COMMENT_MODE]
+                        contains: [o, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, r, e.C_BLOCK_COMMENT_MODE]
                     },
                     e.C_LINE_COMMENT_MODE,
                     e.C_BLOCK_COMMENT_MODE
                 ]
             },
-            a,
-            l
+            r,
+            o
         ]
     };
 }

@@ -1,17 +1,17 @@
-var i = r(67867),
-    a = r(414629),
-    o = r(732116).CONSTRUCTOR,
-    s = r(197859),
-    l = r(294377),
-    u = r(735471),
-    c = r(691244),
-    d = s && s.prototype;
+var i = n(67867),
+    r = n(414629),
+    a = n(732116).CONSTRUCTOR,
+    s = n(197859),
+    o = n(294377),
+    l = n(735471),
+    u = n(691244),
+    c = s && s.prototype;
 if (
     (i(
         {
             target: 'Promise',
             proto: !0,
-            forced: o,
+            forced: a,
             real: !0
         },
         {
@@ -20,8 +20,8 @@ if (
             }
         }
     ),
-    !a && u(s))
+    !r && l(s))
 ) {
-    var f = l('Promise').prototype.catch;
-    d.catch !== f && c(d, 'catch', f, { unsafe: !0 });
+    var d = o('Promise').prototype.catch;
+    c.catch !== d && u(c, 'catch', d, { unsafe: !0 });
 }

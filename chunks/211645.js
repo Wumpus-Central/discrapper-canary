@@ -1,24 +1,24 @@
 var i = (function () {
-    function e(e, n) {
-        for (var r = 0; r < n.length; r++) {
-            var i = n[r];
+    function e(e, t) {
+        for (var n = 0; n < t.length; n++) {
+            var i = t[n];
             (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
         }
     }
-    return function (n, r, i) {
-        return r && e(n.prototype, r), i && e(n, i), n;
+    return function (t, n, i) {
+        return n && e(t.prototype, n), i && e(t, i), t;
     };
 })();
-function a(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function r(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function o(e, n) {
+function a(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function s(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function s(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -26,28 +26,28 @@ function s(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var l = r(129629),
-    u = (function (e) {
-        function n(e) {
-            a(this, n);
-            var r = o(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
-            return (r._transforms = e), r;
+var o = n(129629),
+    l = (function (e) {
+        function t(e) {
+            r(this, t);
+            var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+            return (n._transforms = e), n;
         }
         return (
-            s(n, e),
-            i(n, [
+            s(t, e),
+            i(t, [
                 {
                     key: '__getValue',
                     value: function () {
                         return this._transforms.map(function (e) {
-                            var n = {};
-                            for (var r in e) {
-                                var i = e[r];
-                                i instanceof l ? (n[r] = i.__getValue()) : (n[r] = i);
+                            var t = {};
+                            for (var n in e) {
+                                var i = e[n];
+                                i instanceof o ? (t[n] = i.__getValue()) : (t[n] = i);
                             }
-                            return n;
+                            return t;
                         });
                     }
                 },
@@ -55,12 +55,12 @@ var l = r(129629),
                     key: '__getAnimatedValue',
                     value: function () {
                         return this._transforms.map(function (e) {
-                            var n = {};
-                            for (var r in e) {
-                                var i = e[r];
-                                i instanceof l ? (n[r] = i.__getAnimatedValue()) : (n[r] = i);
+                            var t = {};
+                            for (var n in e) {
+                                var i = e[n];
+                                i instanceof o ? (t[n] = i.__getAnimatedValue()) : (t[n] = i);
                             }
-                            return n;
+                            return t;
                         });
                     }
                 },
@@ -68,10 +68,10 @@ var l = r(129629),
                     key: '__attach',
                     value: function () {
                         var e = this;
-                        this._transforms.forEach(function (n) {
-                            for (var r in n) {
-                                var i = n[r];
-                                i instanceof l && i.__addChild(e);
+                        this._transforms.forEach(function (t) {
+                            for (var n in t) {
+                                var i = t[n];
+                                i instanceof o && i.__addChild(e);
                             }
                         });
                     }
@@ -80,16 +80,16 @@ var l = r(129629),
                     key: '__detach',
                     value: function () {
                         var e = this;
-                        this._transforms.forEach(function (n) {
-                            for (var r in n) {
-                                var i = n[r];
-                                i instanceof l && i.__removeChild(e);
+                        this._transforms.forEach(function (t) {
+                            for (var n in t) {
+                                var i = t[n];
+                                i instanceof o && i.__removeChild(e);
                             }
                         });
                     }
                 }
             ]),
-            n
+            t
         );
-    })(r(22672));
-e.exports = u;
+    })(n(22672));
+e.exports = l;

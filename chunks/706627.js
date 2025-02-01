@@ -1,4 +1,4 @@
-e.exports = function (e) {
-    var t = typeof e;
-    return null != e && ('object' == t || 'function' == t);
+t.exports = function (t) {
+    var e = typeof t;
+    return null != t && ('object' == e || 'function' == e);
 };

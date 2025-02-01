@@ -1,14 +1,14 @@
 e.exports = {
-    container: 'container_a1531c',
-    header: 'header_a1531c',
-    question: 'question_a1531c',
-    prompt: 'prompt_a1531c',
-    detailsText: 'detailsText_a1531c',
-    detailsTextButton: 'detailsTextButton_a1531c',
-    interactive: 'interactive_a1531c',
-    bottomBar: 'bottomBar_a1531c',
-    secondaryAction: 'secondaryAction_a1531c',
-    tertiaryAction: 'tertiaryAction_a1531c',
-    buttonPresentation: 'buttonPresentation_a1531c',
-    secondaryButtonPresentation: 'secondaryButtonPresentation_a1531c'
+    container: 'container__0be77',
+    header: 'header__0be77',
+    question: 'question__0be77',
+    prompt: 'prompt__0be77',
+    detailsText: 'detailsText__0be77',
+    detailsTextButton: 'detailsTextButton__0be77',
+    interactive: 'interactive__0be77',
+    bottomBar: 'bottomBar__0be77',
+    secondaryAction: 'secondaryAction__0be77',
+    tertiaryAction: 'tertiaryAction__0be77',
+    buttonPresentation: 'buttonPresentation__0be77',
+    secondaryButtonPresentation: 'secondaryButtonPresentation__0be77'
 };

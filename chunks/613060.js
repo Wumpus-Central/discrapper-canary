@@ -1,3 +1,4 @@
+n.d(t, { Z: () => c });
 var i,
     l = n(442837),
     r = n(570140);
@@ -29,11 +30,10 @@ class s extends (i = l.ZP.PersistedStore) {
         return null != o[e];
     }
 }
-a(s, 'displayName', 'ViewHistoryStore'),
-    a(s, 'persistKey', 'ViewHistoryStore'),
-    (t.Z = new s(r.Z, {
-        VIEW_HISTORY_MARK_VIEW: function (e) {
-            let { key: t } = e;
-            o[t] = Date.now();
-        }
-    }));
+a(s, 'displayName', 'ViewHistoryStore'), a(s, 'persistKey', 'ViewHistoryStore');
+let c = new s(r.Z, {
+    VIEW_HISTORY_MARK_VIEW: function (e) {
+        let { key: t } = e;
+        o[t] = Date.now();
+    }
+});

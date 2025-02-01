@@ -1,9 +1,9 @@
 e.exports = {
-    header: 'header_dea326',
-    closeButton: 'closeButton_dea326',
-    title: 'title_dea326',
-    buttonRow: 'buttonRow_dea326',
-    addConfirmButton: 'addConfirmButton_dea326',
-    createConfirmButton: 'createConfirmButton_dea326',
-    createSecondaryButton: 'createSecondaryButton_dea326'
+    header: 'header__21615',
+    closeButton: 'closeButton__21615',
+    title: 'title__21615',
+    buttonRow: 'buttonRow__21615',
+    addConfirmButton: 'addConfirmButton__21615',
+    createConfirmButton: 'createConfirmButton__21615',
+    createSecondaryButton: 'createSecondaryButton__21615'
 };

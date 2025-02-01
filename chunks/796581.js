@@ -1,4 +1,4 @@
-e.exports = function (e, t) {
-    for (var r = -1, a = t.length, n = e.length; ++r < a; ) e[n + r] = t[r];
-    return e;
+t.exports = function (t, e) {
+    for (var a = -1, r = e.length, n = t.length; ++a < r; ) t[n + a] = e[a];
+    return t;
 };

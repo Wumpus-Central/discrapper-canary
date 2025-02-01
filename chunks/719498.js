@@ -1,75 +1,75 @@
-e.r(t);
-var n = e(200651),
-    i = e(192379),
-    r = e(481060),
-    o = e(933557),
-    s = e(925329),
-    d = e(296023),
-    l = e(388032),
-    c = e(165998);
-t.default = (a) => {
-    let { channel: t, application: x, onClose: h, transitionState: m } = a,
-        u = (0, d.w)(t),
-        j = i.useCallback(
+t.d(a, { default: () => x });
+var i = t(200651),
+    n = t(192379),
+    r = t(481060),
+    s = t(933557),
+    l = t(925329),
+    d = t(296023),
+    o = t(388032),
+    c = t(165998);
+let x = (e) => {
+    let { channel: a, application: x, onClose: h, transitionState: m } = e,
+        k = (0, d.w)(a),
+        j = n.useCallback(
             () => (
                 h(),
-                (0, r.openModalLazy)(async () => {
-                    let { default: a } = await Promise.all([e.e('38902'), e.e('31907')]).then(e.bind(e, 366854));
-                    return (e) =>
-                        (0, n.jsx)(a, {
-                            ...e,
-                            channelId: t.id,
+                (0, r.ZDy)(async () => {
+                    let { default: e } = await Promise.all([t.e('38902'), t.e('31907')]).then(t.bind(t, 366854));
+                    return (t) =>
+                        (0, i.jsx)(e, {
+                            ...t,
+                            channelId: a.id,
                             application: x
                         });
                 })
             ),
-            [x, t.id, h]
+            [x, a.id, h]
         ),
-        p = (0, o.ZP)(t, !0);
-    return (0, n.jsxs)(r.ModalRoot, {
+        p = (0, s.ZP)(a, !0);
+    return (0, i.jsxs)(r.Y0X, {
         transitionState: m,
-        'aria-label': l.intl.string(l.t.OJknho),
+        'aria-label': o.intl.string(o.t.OJknho),
         children: [
-            (0, n.jsx)(r.ModalHeader, {
+            (0, i.jsx)(r.xBx, {
                 separator: !1,
-                children: (0, n.jsx)(r.Heading, {
+                children: (0, i.jsx)(r.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: l.intl.string(l.t.OJknho)
+                    children: o.intl.string(o.t.OJknho)
                 })
             }),
-            (0, n.jsxs)(r.ModalContent, {
+            (0, i.jsxs)(r.hzk, {
                 className: c.content,
                 children: [
-                    (0, n.jsx)(s.Z, {
+                    (0, i.jsx)(l.Z, {
                         game: x,
-                        size: s.Z.Sizes.LARGE
+                        size: l.Z.Sizes.LARGE
                     }),
-                    (0, n.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         className: c.metadata,
                         children: [
-                            (0, n.jsxs)('div', {
+                            (0, i.jsxs)('div', {
                                 className: c.metadataHeader,
                                 children: [
-                                    (0, n.jsx)(r.Text, {
+                                    (0, i.jsx)(r.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
                                         children: x.name
                                     }),
-                                    (0, n.jsx)(r.Text, {
+                                    (0, i.jsx)(r.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'header-secondary',
-                                        children: l.intl.format(l.t['0NJZAQ'], { channelName: p })
+                                        children: o.intl.format(o.t['0NJZAQ'], { channelName: p })
                                     })
                                 ]
                             }),
-                            null != u &&
-                                (0, n.jsxs)(n.Fragment, {
+                            null != k &&
+                                (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, n.jsx)('div', { className: c.divider }),
-                                        (0, n.jsx)(r.Text, {
+                                        (0, i.jsx)('div', { className: c.divider }),
+                                        (0, i.jsx)(r.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-secondary',
-                                            children: u
+                                            children: k
                                         })
                                     ]
                                 })
@@ -77,18 +77,18 @@ t.default = (a) => {
                     })
                 ]
             }),
-            (0, n.jsxs)(r.ModalFooter, {
+            (0, i.jsxs)(r.mzw, {
                 children: [
-                    (0, n.jsx)(r.Button, {
+                    (0, i.jsx)(r.zxk, {
                         onClick: j,
-                        color: r.Button.Colors.RED,
-                        children: l.intl.string(l.t.LLWaxc)
+                        color: r.zxk.Colors.RED,
+                        children: o.intl.string(o.t.LLWaxc)
                     }),
-                    (0, n.jsx)(r.Button, {
+                    (0, i.jsx)(r.zxk, {
                         onClick: h,
-                        look: r.Button.Looks.LINK,
-                        color: r.Button.Colors.PRIMARY,
-                        children: l.intl.string(l.t['ETE/oK'])
+                        look: r.zxk.Looks.LINK,
+                        color: r.zxk.Colors.PRIMARY,
+                        children: o.intl.string(o.t['ETE/oK'])
                     })
                 ]
             })

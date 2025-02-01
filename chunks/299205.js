@@ -1,5 +1,5 @@
 e.exports = {
-    row: 'row_c76498',
-    userCell: 'userCell_c76498',
-    affinityCell: 'affinityCell_c76498'
+    row: 'row_e4169f',
+    userCell: 'userCell_e4169f',
+    affinityCell: 'affinityCell_e4169f'
 };

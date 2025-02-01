@@ -1,8 +1,8 @@
 e.exports = {
-    progress: 'progress_d8cc3d',
-    container: 'container_d8cc3d',
-    countdown: 'countdown_d8cc3d',
-    iconHover: 'iconHover_d8cc3d',
-    active: 'active_d8cc3d',
-    button: 'button_d8cc3d'
+    progress: 'progress__26d03',
+    container: 'container__26d03',
+    countdown: 'countdown__26d03',
+    iconHover: 'iconHover__26d03',
+    active: 'active__26d03',
+    button: 'button__26d03'
 };

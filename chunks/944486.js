@@ -17,8 +17,8 @@ var c,
     v = n(314897),
     y = n(592125),
     I = n(984933),
-    b = n(430824),
-    T = n(131951),
+    T = n(430824),
+    b = n(131951),
     S = n(914010),
     A = n(981631),
     N = n(176505);
@@ -86,7 +86,7 @@ function B(e) {
 }
 function Z() {
     let e = !1,
-        t = b.Z.getGuilds();
+        t = T.Z.getGuilds();
     return (
         f().each(x, (t, n) => {
             (null != t && (y.Z.hasChannel(t) || t === a || w.has(t) || (0, N.ME)(t))) || (delete x[n], delete L[n], (e = !0));
@@ -130,7 +130,7 @@ function W(e, t) {
         let n = S.Z.getGuildId();
         x[M(n)] === e && (t = n);
     }
-    let n = null != b.Z.getGuild(t) ? t : null,
+    let n = null != T.Z.getGuild(t) ? t : null,
         i = !1;
     o === e && ((o = null), (i = !0)), x[M(n)] === e && ((x[M(n)] = U(M(n))), S.Z.getGuildId() === n && (0, m.dL)(A.Z5c.CHANNEL(t, x[M(n)])), (i = !0)), null != n && P[n] === e && (delete P[n], (i = !0)), i && k();
 }
@@ -230,7 +230,7 @@ class et extends (c = _.ZP.Store) {
                         null: null
                     });
         }
-        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(b.Z, y.Z, S.Z, I.ZP, T.Z);
+        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(T.Z, y.Z, S.Z, I.ZP, b.Z);
     }
     getChannelId(e) {
         var t, n;
@@ -239,7 +239,7 @@ class et extends (c = _.ZP.Store) {
         return i ? (null !== (n = x[r]) && void 0 !== n ? n : U(r)) : x[r];
     }
     getVoiceChannelId() {
-        return T.Z.isSupported() ? o : null;
+        return b.Z.isSupported() ? o : null;
     }
     getMostRecentSelectedTextChannelId(e) {
         var t;

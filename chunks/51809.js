@@ -1,9 +1,9 @@
 t.exports = {
-    splash: 'splash_fd3088',
-    gameIcon: 'gameIcon_fd3088',
-    gameName: 'gameName_fd3088',
-    installSize: 'installSize_fd3088',
-    divider: 'divider_fd3088',
-    selector: 'selector_fd3088',
-    terms: 'terms_fd3088'
+    splash: 'splash__15293',
+    gameIcon: 'gameIcon__15293',
+    gameName: 'gameName__15293',
+    installSize: 'installSize__15293',
+    divider: 'divider__15293',
+    selector: 'selector__15293',
+    terms: 'terms__15293'
 };

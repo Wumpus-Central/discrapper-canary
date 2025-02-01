@@ -1,6 +1,6 @@
-var a = r(299578),
-    n = r(538027);
-e.exports = function (e, t) {
-    var r = n(e, t);
-    return a(r) ? r : void 0;
+var r = a(299578),
+    n = a(538027);
+t.exports = function (t, e) {
+    var a = n(t, e);
+    return r(a) ? a : void 0;
 };

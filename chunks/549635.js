@@ -25,10 +25,10 @@ function v(e) {
 function y(e) {
     var t, n, r, a, o;
     let f,
-        { media: h, obscured: y = !1, padding: I, onContextMenu: T } = e,
+        { media: h, obscured: y = !1, padding: I, onContextMenu: b } = e,
         { width: S, height: A, url: N, proxyUrl: C, alt: R, type: O, maxWidth: D, maxHeight: x, ...L } = h,
         { zoomed: P, setZoomed: w } = (0, g.Y)(),
-        M = b(P, N, C),
+        M = T(P, N, C),
         k = {
             vertical: (null !== (t = null == I ? void 0 : I.top) && void 0 !== t ? t : 0) + (null !== (n = null == I ? void 0 : I.bottom) && void 0 !== n ? n : 0),
             horizontal: (null !== (r = null == I ? void 0 : I.left) && void 0 !== r ? r : 0) + (null !== (a = null == I ? void 0 : I.right) && void 0 !== a ? a : 0)
@@ -56,7 +56,7 @@ function y(e) {
             renderLinkComponent: t,
             autoPlay: !y,
             alt: R,
-            onContextMenu: T
+            onContextMenu: b
         });
     }
     return (
@@ -75,12 +75,12 @@ function y(e) {
                       autoPlay: !y,
                       alt: R,
                       zoomThumbnailPlaceholder: h.zoomThumbnailPlaceholder,
-                      onContextMenu: T
+                      onContextMenu: b
                   })
                 : (0, i.jsx)('img', {
                       src: M,
                       alt: R,
-                      onContextMenu: T,
+                      onContextMenu: b,
                       className: E.dimensionlessImage
                   })),
         null != f
@@ -101,7 +101,7 @@ function y(e) {
     );
 }
 let I = r.memo(y);
-function b(e, t, n) {
+function T(e, t, n) {
     return e && (0, o.rV)(t)
         ? (0, o.s$)(t)
         : (0, f.q)({

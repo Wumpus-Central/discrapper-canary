@@ -1,14 +1,14 @@
 e.exports = {
-    formTitle: 'formTitle_bc05bb',
-    description: 'description_bc05bb',
-    forumGuidelines: 'forumGuidelines_bc05bb',
-    forumGuidelinesCharacterCount: 'forumGuidelinesCharacterCount_bc05bb',
-    badgedItem: 'badgedItem_bc05bb',
-    twoColumnSettings: 'twoColumnSettings_bc05bb',
-    settingsLeft: 'settingsLeft_bc05bb',
-    settingsDefaultReaction: 'settingsDefaultReaction_bc05bb',
-    settingsDefaultView: 'settingsDefaultView_bc05bb',
-    buttonRow: 'buttonRow_bc05bb',
-    removeButton: 'removeButton_bc05bb',
-    defaultImageView: 'defaultImageView_bc05bb'
+    formTitle: 'formTitle__0511a',
+    description: 'description__0511a',
+    forumGuidelines: 'forumGuidelines__0511a',
+    forumGuidelinesCharacterCount: 'forumGuidelinesCharacterCount__0511a',
+    badgedItem: 'badgedItem__0511a',
+    twoColumnSettings: 'twoColumnSettings__0511a',
+    settingsLeft: 'settingsLeft__0511a',
+    settingsDefaultReaction: 'settingsDefaultReaction__0511a',
+    settingsDefaultView: 'settingsDefaultView__0511a',
+    buttonRow: 'buttonRow__0511a',
+    removeButton: 'removeButton__0511a',
+    defaultImageView: 'defaultImageView__0511a'
 };

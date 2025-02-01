@@ -1,6 +1,6 @@
-var i = r(96403),
-    a = i({}.toString),
-    o = i(''.slice);
+var i = n(96403),
+    r = i({}.toString),
+    a = i(''.slice);
 e.exports = function (e) {
-    return o(a(e), 8, -1);
+    return a(r(e), 8, -1);
 };

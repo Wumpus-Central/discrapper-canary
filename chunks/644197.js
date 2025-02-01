@@ -1,5 +1,5 @@
 e.exports = {
-    guildAvatar: 'guildAvatar_c5a773',
-    guildAvatarWithoutIcon: 'guildAvatarWithoutIcon_c5a773',
-    guildNick: 'guildNick_c5a773'
+    guildAvatar: 'guildAvatar_aafe31',
+    guildAvatarWithoutIcon: 'guildAvatarWithoutIcon_aafe31',
+    guildNick: 'guildNick_aafe31'
 };

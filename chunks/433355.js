@@ -34,8 +34,8 @@ function v(e, t, n) {
 }
 let y = 'message_requests',
     I = !1,
-    b = !1,
-    T = !0,
+    T = !1,
+    b = !0,
     S = !1,
     A = {},
     N = {};
@@ -57,13 +57,13 @@ function O(e) {
     return null != n && n in A && (delete A[n], (t = !0)), t && e ? e : !e;
 }
 function D() {
-    b && (b = O(b)), (I = O(I));
+    T && (T = O(T)), (I = O(I));
 }
 function x() {
-    I && (I = O(I)), (b = O(b));
+    I && (I = O(I)), (T = O(T));
 }
 function L() {
-    T || l.S.dispatch(m.CkL.SEARCH_RESULTS_CLOSE), (T = O(T));
+    b || l.S.dispatch(m.CkL.SEARCH_RESULTS_CLOSE), (b = O(b));
 }
 function P(e) {
     let { sidebarType: t, guildId: n, baseChannelId: i, details: r } = e;
@@ -160,21 +160,21 @@ function V() {
     S = f.Z.isActive();
 }
 function j() {
-    r.tq && I && ((I = !1), (b = !1));
+    r.tq && I && ((I = !1), (T = !1));
 }
 class H extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n, i, r, a;
-            (I = null !== (t = e.isMembersOpen) && void 0 !== t && t), (b = null !== (n = e.isSummariesOpen) && void 0 !== n && n), (T = null === (i = e.isProfileOpen) || void 0 === i || i), (A = null !== (r = e.sidebars) && void 0 !== r ? r : {}), (N = null !== (a = e.guildSidebars) && void 0 !== a ? a : {});
+            (I = null !== (t = e.isMembersOpen) && void 0 !== t && t), (T = null !== (n = e.isSummariesOpen) && void 0 !== n && n), (b = null === (i = e.isProfileOpen) || void 0 === i || i), (A = null !== (r = e.sidebars) && void 0 !== r ? r : {}), (N = null !== (a = e.guildSidebars) && void 0 !== a ? a : {});
         }
         this.syncWith([f.Z], V), this.syncWith([d.Z], Z);
     }
     getState() {
         return {
             isMembersOpen: I,
-            isSummariesOpen: b,
-            isProfileOpen: T,
+            isSummariesOpen: T,
+            isProfileOpen: b,
             sidebars: A,
             guildSidebars: N
         };
@@ -182,7 +182,7 @@ class H extends (i = a.ZP.PersistedStore) {
     getSection(e, t) {
         if (S) return m.ULH.SEARCH;
         let n = C(e);
-        return null != n && null != A[n] ? m.ULH.SIDEBAR_CHAT : t && T ? m.ULH.PROFILE : b ? m.ULH.SUMMARIES : I ? m.ULH.MEMBERS : m.ULH.NONE;
+        return null != n && null != A[n] ? m.ULH.SIDEBAR_CHAT : t && b ? m.ULH.PROFILE : T ? m.ULH.SUMMARIES : I ? m.ULH.MEMBERS : m.ULH.NONE;
     }
     getSidebarState(e) {
         let t = C(e);

@@ -1,5 +1,5 @@
 e.exports = {
-    pill: 'pill_f9623d',
-    downloadProgress: 'downloadProgress_f9623d',
-    tutorialContainer: 'tutorialContainer_f9623d'
+    pill: 'pill__1f388',
+    downloadProgress: 'downloadProgress__1f388',
+    tutorialContainer: 'tutorialContainer__1f388'
 };

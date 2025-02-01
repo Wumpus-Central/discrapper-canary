@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(274495);
 let y = 3,
     I = 80,
-    b = 12,
-    T = 16,
+    T = 12,
+    b = 16,
     S = () => I,
     A = (e) => {
         let { children: t, className: n, onSelect: r, isSelected: a = !1, ...o } = e;
@@ -36,9 +36,9 @@ let y = 3,
                 let e = f.Z.getProduct(n.skuId);
                 return (0, _.G1)(e);
             }),
-            b = (0, _.Yq)(n.skuId),
-            T = p.ZP.canUseCollectibles(t),
-            S = s === m.$0.PREMIUM_PURCHASE && !T,
+            T = (0, _.Yq)(n.skuId),
+            b = p.ZP.canUseCollectibles(t),
+            S = s === m.$0.PREMIUM_PURCHASE && !b,
             N = r.useRef(null),
             C = (0, d.Z)(null != a ? a : N),
             { avatarDecorationSrc: R } = (0, g.Z)({
@@ -48,9 +48,9 @@ let y = 3,
                 onlyAnimateOnHover: !C
             }),
             O = () =>
-                s === m.$0.PURCHASE || (s === m.$0.PREMIUM_PURCHASE && T)
+                s === m.$0.PURCHASE || (s === m.$0.PREMIUM_PURCHASE && b)
                     ? null
-                    : b
+                    : T
                       ? (0, i.jsx)(c.lBU, {
                             className: v.newBadge,
                             text: (0, i.jsxs)('div', {
@@ -195,9 +195,9 @@ let y = 3,
                 let { items: t } = e;
                 return t.length;
             }),
-            sectionGutter: T,
-            itemGutter: b,
-            paddingHorizontal: b,
+            sectionGutter: b,
+            itemGutter: T,
+            paddingHorizontal: T,
             paddingVertical: 0,
             removeEdgeItemGutters: !0,
             renderItem: _,

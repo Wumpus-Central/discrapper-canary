@@ -18,8 +18,8 @@ var i = n(392711),
     v = n(800927),
     y = n(143223),
     I = n(945884),
-    b = n(594199),
-    T = n(97734),
+    T = n(594199),
+    b = n(97734),
     S = n(303694),
     A = n(660199),
     N = n(364458),
@@ -130,7 +130,7 @@ let U = (e) => {
         em: s().defaultRules.em,
         u: s().defaultRules.u,
         br: s().defaultRules.br,
-        text: b.ZP,
+        text: T.ZP,
         inlineCode: {
             ...s().defaultRules.inlineCode,
             parse(e, t, n) {
@@ -144,7 +144,7 @@ let U = (e) => {
             }
         },
         emoticon: {
-            order: b.ZP.order,
+            order: T.ZP.order,
             requiredFirstCharacters: ['\xAF'],
             match: (e) => /^(¯\\_\(ツ\)_\/¯)/.exec(e),
             parse: (e) => ({
@@ -166,7 +166,7 @@ let U = (e) => {
             }
         },
         roleMention: {
-            order: b.ZP.order,
+            order: T.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => /^<@&(\d+)>/.exec(e),
             parse(e, t, n) {
@@ -202,7 +202,7 @@ let U = (e) => {
             }
         },
         mention: {
-            order: b.ZP.order,
+            order: T.ZP.order,
             requiredFirstCharacters: ['<', '@'],
             match(e, t) {
                 let n = /^<@!?(\d+)>|^(@(?:everyone|here|Clyde))/.exec(e);
@@ -247,7 +247,7 @@ let U = (e) => {
             }
         },
         silentPrefix: {
-            order: b.ZP.order,
+            order: T.ZP.order,
             requiredFirstCharacters: ['@'],
             match: (e, t, n) => (null == n || '' === n ? /^(@silent(?![^\s]))/.exec(e) : null),
             parse: function (e) {
@@ -289,7 +289,7 @@ let U = (e) => {
             }
         },
         emoji: {
-            order: b.ZP.order,
+            order: T.ZP.order,
             requiredFirstCharacters: [':'],
             match(e) {
                 let t = l.ZP.EMOJI_NAME_RE.exec(e);
@@ -304,13 +304,13 @@ let U = (e) => {
             }
         },
         soundboard: {
-            order: b.ZP.order,
+            order: T.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => u.hf.exec(e),
             parse: (e, t, n) => (0, u.ZP)(e, n)
         },
         customEmoji: {
-            order: b.ZP.order,
+            order: T.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => /^<a?:(\w+):(\d+)>/.exec(e),
             parse: (e) => ({
@@ -319,7 +319,7 @@ let U = (e) => {
             })
         },
         timestamp: {
-            order: b.ZP.order - 1,
+            order: T.ZP.order - 1,
             requiredFirstCharacters: ['<'],
             match: (e) => A.Ay.exec(e),
             parse(e) {
@@ -340,7 +340,7 @@ let U = (e) => {
             parse: s().defaultRules.u.parse
         },
         spoiler: {
-            order: b.ZP.order,
+            order: T.ZP.order,
             requiredFirstCharacters: ['|'],
             match: (e) => C.$92.exec(e),
             parse: (e, t, n) => ({
@@ -349,7 +349,7 @@ let U = (e) => {
             })
         },
         staticRouteLink: {
-            order: b.ZP.order,
+            order: T.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => C.PEY.exec(e),
             parse(e, t, n) {
@@ -382,7 +382,7 @@ let U = (e) => {
         list: v.Z,
         subtext: I.Z
     },
-    Z = (0, N.Z)([B, T.Z]),
+    Z = (0, N.Z)([B, b.Z]),
     F = r().omit(Z, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext', 'soundboard']),
     V = r().omit(Z, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext', 'soundboard']),
     j = r().omit(Z, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext', 'soundboard']),

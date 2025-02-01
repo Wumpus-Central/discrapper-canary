@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('cv', {
         months: 'кӑрлач_нарӑс_пуш_ака_май_ҫӗртме_утӑ_ҫурла_авӑн_юпа_чӳк_раштав'.split('_'),
@@ -25,8 +25,8 @@
         },
         relativeTime: {
             future: function (e) {
-                var n = /сехет$/i.exec(e) ? 'рен' : /ҫул$/i.exec(e) ? 'тан' : 'ран';
-                return e + n;
+                var t = /сехет$/i.exec(e) ? 'рен' : /ҫул$/i.exec(e) ? 'тан' : 'ран';
+                return e + t;
             },
             past: '%s каялла',
             s: 'пӗр-ик ҫеккунт',

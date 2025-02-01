@@ -1,13 +1,13 @@
 e.exports = {
-    loading: 'loading_df0a38',
-    maybeLaterButton: 'maybeLaterButton_df0a38',
-    bodyText: 'bodyText_df0a38',
-    formDivider: 'formDivider_df0a38',
-    formSection: 'formSection_df0a38',
-    confirmationText: 'confirmationText_df0a38',
-    headerContainer: 'headerContainer_df0a38',
-    art: 'art_df0a38',
-    errorHeader: 'errorHeader_df0a38',
-    errorBody: 'errorBody_df0a38',
-    errorArt: 'errorArt_df0a38'
+    loading: 'loading__9ed46',
+    maybeLaterButton: 'maybeLaterButton__9ed46',
+    bodyText: 'bodyText__9ed46',
+    formDivider: 'formDivider__9ed46',
+    formSection: 'formSection__9ed46',
+    confirmationText: 'confirmationText__9ed46',
+    headerContainer: 'headerContainer__9ed46',
+    art: 'art__9ed46',
+    errorHeader: 'errorHeader__9ed46',
+    errorBody: 'errorBody__9ed46',
+    errorArt: 'errorArt__9ed46'
 };

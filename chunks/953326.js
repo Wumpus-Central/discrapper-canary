@@ -1,19 +1,19 @@
-var e = r(299623),
-    o = r(980855),
-    i = r(49693),
-    u = function (t) {
-        return function (n, r, u) {
-            var c,
-                f = e(n),
-                a = i(f),
-                s = o(u, a);
-            if (t && r != r) {
-                for (; a > s; ) if ((c = f[s++]) != c) return !0;
-            } else for (; a > s; s++) if ((t || s in f) && f[s] === r) return t || s || 0;
+var r = a(299623),
+    n = a(980855),
+    o = a(49693),
+    _ = function (t) {
+        return function (e, a, _) {
+            var i,
+                c = r(e),
+                s = o(c),
+                E = n(_, s);
+            if (t && a != a) {
+                for (; s > E; ) if ((i = c[E++]) != i) return !0;
+            } else for (; s > E; E++) if ((t || E in c) && c[E] === a) return t || E || 0;
             return !t && -1;
         };
     };
 t.exports = {
-    includes: u(!0),
-    indexOf: u(!1)
+    includes: _(!0),
+    indexOf: _(!1)
 };

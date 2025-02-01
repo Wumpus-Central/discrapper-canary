@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         name: 'Gherkin',
         aliases: ['feature'],
@@ -38,4 +38,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

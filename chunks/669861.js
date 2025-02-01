@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
             1: '၁',
             2: '၂',
             3: '၃',
@@ -13,7 +13,7 @@
             9: '၉',
             0: '၀'
         },
-        r = {
+        n = {
             '၁': '1',
             '၂': '2',
             '၃': '3',
@@ -65,12 +65,12 @@
         },
         preparse: function (e) {
             return e.replace(/[၁၂၃၄၅၆၇၈၉၀]/g, function (e) {
-                return r[e];
+                return n[e];
             });
         },
         postformat: function (e) {
             return e.replace(/\d/g, function (e) {
-                return n[e];
+                return t[e];
             });
         },
         week: {

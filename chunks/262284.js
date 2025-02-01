@@ -1,6 +1,6 @@
 e.exports = {
-    container: 'container_d3e49b',
-    trophyIconContainer: 'trophyIconContainer_d3e49b',
-    lockContainer: 'lockContainer_d3e49b',
-    confettiIcon: 'confettiIcon_d3e49b'
+    container: 'container_e6b065',
+    trophyIconContainer: 'trophyIconContainer_e6b065',
+    lockContainer: 'lockContainer_e6b065',
+    confettiIcon: 'confettiIcon_e6b065'
 };

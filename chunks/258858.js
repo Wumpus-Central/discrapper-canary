@@ -1,13 +1,13 @@
 e.exports = {
-    container: 'container_ef615b',
-    imgContainer: 'imgContainer_ef615b',
-    img: 'img_ef615b',
-    content: 'content_ef615b',
-    heading: 'heading_ef615b',
-    description: 'description_ef615b',
-    cta: 'cta_ef615b',
-    maxParticipants: 'maxParticipants_ef615b',
-    peopleIcon: 'peopleIcon_ef615b',
-    buttonWrapper: 'buttonWrapper_ef615b',
-    button: 'button_ef615b'
+    container: 'container__4bfb6',
+    imgContainer: 'imgContainer__4bfb6',
+    img: 'img__4bfb6',
+    content: 'content__4bfb6',
+    heading: 'heading__4bfb6',
+    description: 'description__4bfb6',
+    cta: 'cta__4bfb6',
+    maxParticipants: 'maxParticipants__4bfb6',
+    peopleIcon: 'peopleIcon__4bfb6',
+    buttonWrapper: 'buttonWrapper__4bfb6',
+    button: 'button__4bfb6'
 };

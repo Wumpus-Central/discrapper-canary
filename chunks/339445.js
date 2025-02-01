@@ -1,4 +1,4 @@
 e.exports = {
-    root: 'root_eb1d73',
-    warningIcon: 'warningIcon_eb1d73'
+    root: 'root__14990',
+    warningIcon: 'warningIcon__14990'
 };

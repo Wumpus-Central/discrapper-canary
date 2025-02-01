@@ -1,107 +1,107 @@
-function r(e, n, r) {
-    (this.locales = e), (this.formats = n), (this.pluralFn = r);
+function n(e, t, n) {
+    (this.locales = e), (this.formats = t), (this.pluralFn = n);
 }
 function i(e) {
     this.id = e;
 }
-function a(e, n, r, i, a) {
-    (this.id = e), (this.useOrdinal = n), (this.offset = r), (this.options = i), (this.pluralFn = a);
+function r(e, t, n, i, r) {
+    (this.id = e), (this.useOrdinal = t), (this.offset = n), (this.options = i), (this.pluralFn = r);
 }
-function o(e, n, r, i) {
-    (this.id = e), (this.offset = n), (this.numberFormat = r), (this.string = i);
+function a(e, t, n, i) {
+    (this.id = e), (this.offset = t), (this.numberFormat = n), (this.string = i);
 }
-function s(e, n) {
-    (this.id = e), (this.options = n);
+function s(e, t) {
+    (this.id = e), (this.options = t);
 }
-(n.default = r),
-    (r.prototype.compile = function (e) {
+(t.default = n),
+    (n.prototype.compile = function (e) {
         return (this.pluralStack = []), (this.currentPlural = null), (this.pluralNumberFormat = null), this.compileMessage(e);
     }),
-    (r.prototype.compileMessage = function (e) {
+    (n.prototype.compileMessage = function (e) {
         if (!(e && 'messageFormatPattern' === e.type)) throw Error('Message AST is not of type: "messageFormatPattern"');
-        var n,
-            r,
+        var t,
+            n,
             i,
-            a = e.elements,
-            o = [];
-        for (n = 0, r = a.length; n < r; n += 1)
-            switch ((i = a[n]).type) {
+            r = e.elements,
+            a = [];
+        for (t = 0, n = r.length; t < n; t += 1)
+            switch ((i = r[t]).type) {
                 case 'messageTextElement':
-                    o.push(this.compileMessageText(i));
+                    a.push(this.compileMessageText(i));
                     break;
                 case 'argumentElement':
-                    o.push(this.compileArgument(i));
+                    a.push(this.compileArgument(i));
                     break;
                 default:
                     throw Error('Message element does not have a valid type');
             }
-        return o;
+        return a;
     }),
-    (r.prototype.compileMessageText = function (e) {
-        return this.currentPlural && /(^|[^\\])#/g.test(e.value) ? (!this.pluralNumberFormat && (this.pluralNumberFormat = new Intl.NumberFormat(this.locales)), new o(this.currentPlural.id, this.currentPlural.format.offset, this.pluralNumberFormat, e.value)) : e.value.replace(/\\#/g, '#');
+    (n.prototype.compileMessageText = function (e) {
+        return this.currentPlural && /(^|[^\\])#/g.test(e.value) ? (this.pluralNumberFormat || (this.pluralNumberFormat = new Intl.NumberFormat(this.locales)), new a(this.currentPlural.id, this.currentPlural.format.offset, this.pluralNumberFormat, e.value)) : e.value.replace(/\\#/g, '#');
     }),
-    (r.prototype.compileArgument = function (e) {
-        var n = e.format;
-        if (!n) return new i(e.id);
-        var r,
-            o = this.formats,
-            l = this.locales,
-            u = this.pluralFn;
-        switch (n.type) {
+    (n.prototype.compileArgument = function (e) {
+        var t = e.format;
+        if (!t) return new i(e.id);
+        var n,
+            a = this.formats,
+            o = this.locales,
+            l = this.pluralFn;
+        switch (t.type) {
             case 'numberFormat':
                 return (
-                    (r = o.number[n.style]),
+                    (n = a.number[t.style]),
                     {
                         id: e.id,
-                        format: new Intl.NumberFormat(l, r).format
+                        format: new Intl.NumberFormat(o, n).format
                     }
                 );
             case 'dateFormat':
                 return (
-                    (r = o.date[n.style]),
+                    (n = a.date[t.style]),
                     {
                         id: e.id,
-                        format: new Intl.DateTimeFormat(l, r).format
+                        format: new Intl.DateTimeFormat(o, n).format
                     }
                 );
             case 'timeFormat':
                 return (
-                    (r = o.time[n.style]),
+                    (n = a.time[t.style]),
                     {
                         id: e.id,
-                        format: new Intl.DateTimeFormat(l, r).format
+                        format: new Intl.DateTimeFormat(o, n).format
                     }
                 );
             case 'pluralFormat':
-                return (r = this.compileOptions(e)), new a(e.id, n.ordinal, n.offset, r, u);
+                return (n = this.compileOptions(e)), new r(e.id, t.ordinal, t.offset, n, l);
             case 'selectFormat':
-                return (r = this.compileOptions(e)), new s(e.id, r);
+                return (n = this.compileOptions(e)), new s(e.id, n);
             default:
                 throw Error('Message element does not have a valid format type');
         }
     }),
-    (r.prototype.compileOptions = function (e) {
-        var n,
-            r,
+    (n.prototype.compileOptions = function (e) {
+        var t,
+            n,
             i,
-            a = e.format,
-            o = a.options,
+            r = e.format,
+            a = r.options,
             s = {};
-        for (this.pluralStack.push(this.currentPlural), this.currentPlural = 'pluralFormat' === a.type ? e : null, n = 0, r = o.length; n < r; n += 1) s[(i = o[n]).selector] = this.compileMessage(i.value);
+        for (this.pluralStack.push(this.currentPlural), this.currentPlural = 'pluralFormat' === r.type ? e : null, t = 0, n = a.length; t < n; t += 1) s[(i = a[t]).selector] = this.compileMessage(i.value);
         return (this.currentPlural = this.pluralStack.pop()), s;
     }),
     (i.prototype.format = function (e) {
         return e ? ('string' == typeof e ? e : String(e)) : '';
     }),
-    (a.prototype.getOption = function (e) {
-        var n = this.options;
-        return n['=' + e] || n[this.pluralFn(e - this.offset, this.useOrdinal)] || n.other;
+    (r.prototype.getOption = function (e) {
+        var t = this.options;
+        return t['=' + e] || t[this.pluralFn(e - this.offset, this.useOrdinal)] || t.other;
     }),
-    (o.prototype.format = function (e) {
-        var n = this.numberFormat.format(e - this.offset);
-        return this.string.replace(/(^|[^\\])#/g, '$1' + n).replace(/\\#/g, '#');
+    (a.prototype.format = function (e) {
+        var t = this.numberFormat.format(e - this.offset);
+        return this.string.replace(/(^|[^\\])#/g, '$1' + t).replace(/\\#/g, '#');
     }),
     (s.prototype.getOption = function (e) {
-        var n = this.options;
-        return n[e] || n.other;
+        var t = this.options;
+        return t[e] || t.other;
     });

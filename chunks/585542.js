@@ -1,16 +1,16 @@
-function n(e) {
-    let n = e.regex,
-        r = e.COMMENT('//', '$', { contains: [{ begin: /\\\n/ }] }),
+function t(e) {
+    let t = e.regex,
+        n = e.COMMENT('//', '$', { contains: [{ begin: /\\\n/ }] }),
         i = 'decltype\\(auto\\)',
-        a = '[a-zA-Z_]\\w*::',
-        o = '<[^<>]+>',
-        s = '(' + i + '|' + n.optional(a) + '[a-zA-Z_]\\w*' + n.optional(o) + ')',
-        l = {
+        r = '[a-zA-Z_]\\w*::',
+        a = '<[^<>]+>',
+        s = '(' + i + '|' + t.optional(r) + '[a-zA-Z_]\\w*' + t.optional(a) + ')',
+        o = {
             className: 'type',
             variants: [{ begin: '\\b[a-z\\d_]*_t\\b' }, { match: /\batomic_[a-z]{3,6}\b/ }]
         },
-        u = '\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4,8}|[0-7]{3}|\\S)',
-        c = {
+        l = '\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4,8}|[0-7]{3}|\\S)',
+        u = {
             className: 'string',
             variants: [
                 {
@@ -20,7 +20,7 @@ function n(e) {
                     contains: [e.BACKSLASH_ESCAPE]
                 },
                 {
-                    begin: "(u8?|U|L)?'(" + u + '|.)',
+                    begin: "(u8?|U|L)?'(" + l + '|.)',
                     end: "'",
                     illegal: '.'
                 },
@@ -30,12 +30,12 @@ function n(e) {
                 })
             ]
         },
-        d = {
+        c = {
             className: 'number',
             variants: [{ match: /\b(0b[01']+)/ }, { match: /(-?)\b([\d']+(\.[\d']*)?|\.[\d']+)((ll|LL|l|L)(u|U)?|(u|U)(ll|LL|l|L)?|f|F|b|B)/ }, { match: /(-?)\b(0[xX][a-fA-F0-9]+(?:'[a-fA-F0-9]+)*(?:\.[a-fA-F0-9]*(?:'[a-fA-F0-9]*)*)?(?:[pP][-+]?[0-9]+)?(l|L)?(u|U)?)/ }, { match: /(-?)\b\d+(?:'\d+)*(?:\.\d*(?:'\d*)*)?(?:[eE][-+]?\d+)?/ }],
             relevance: 0
         },
-        f = {
+        d = {
             className: 'meta',
             begin: /#\s*[a-z]+\b/,
             end: /$/,
@@ -45,29 +45,29 @@ function n(e) {
                     begin: /\\\n/,
                     relevance: 0
                 },
-                e.inherit(c, { className: 'string' }),
+                e.inherit(u, { className: 'string' }),
                 {
                     className: 'string',
                     begin: /<.*?>/
                 },
-                r,
+                n,
                 e.C_BLOCK_COMMENT_MODE
             ]
         },
-        p = {
+        f = {
             className: 'title',
-            begin: n.optional(a) + e.IDENT_RE,
+            begin: t.optional(r) + e.IDENT_RE,
             relevance: 0
         },
-        h = n.optional(a) + e.IDENT_RE + '\\s*\\(',
-        _ = {
+        _ = t.optional(r) + e.IDENT_RE + '\\s*\\(',
+        p = {
             keyword: ['asm', 'auto', 'break', 'case', 'continue', 'default', 'do', 'else', 'enum', 'extern', 'for', 'fortran', 'goto', 'if', 'inline', 'register', 'restrict', 'return', 'sizeof', 'typeof', 'typeof_unqual', 'struct', 'switch', 'typedef', 'union', 'volatile', 'while', '_Alignas', '_Alignof', '_Atomic', '_Generic', '_Noreturn', '_Static_assert', '_Thread_local', 'alignas', 'alignof', 'noreturn', 'static_assert', 'thread_local', '_Pragma'],
             type: ['float', 'double', 'signed', 'unsigned', 'int', 'short', 'long', 'char', 'void', '_Bool', '_BitInt', '_Complex', '_Imaginary', '_Decimal32', '_Decimal64', '_Decimal96', '_Decimal128', '_Decimal64x', '_Decimal128x', '_Float16', '_Float32', '_Float64', '_Float128', '_Float32x', '_Float64x', '_Float128x', 'const', 'static', 'constexpr', 'complex', 'bool', 'imaginary'],
             literal: 'true false NULL',
             built_in: 'std string wstring cin cout cerr clog stdin stdout stderr stringstream istringstream ostringstream auto_ptr deque list queue stack vector map set pair bitset multiset multimap unordered_set unordered_map unordered_multiset unordered_multimap priority_queue make_pair array shared_ptr abort terminate abs acos asin atan2 atan calloc ceil cosh cos exit exp fabs floor fmod fprintf fputs free frexp fscanf future isalnum isalpha iscntrl isdigit isgraph islower isprint ispunct isspace isupper isxdigit tolower toupper labs ldexp log10 log malloc realloc memchr memcmp memcpy memset modf pow printf putchar puts scanf sinh sin snprintf sprintf sqrt sscanf strcat strchr strcmp strcpy strcspn strlen strncat strncmp strncpy strpbrk strrchr strspn strstr tanh tan vfprintf vprintf vsprintf endl initializer_list unique_ptr'
         },
-        m = [f, l, r, e.C_BLOCK_COMMENT_MODE, d, c],
-        g = {
+        h = [d, o, n, e.C_BLOCK_COMMENT_MODE, c, u],
+        m = {
             variants: [
                 {
                     begin: /=/,
@@ -82,35 +82,35 @@ function n(e) {
                     end: /;/
                 }
             ],
-            keywords: _,
-            contains: m.concat([
+            keywords: p,
+            contains: h.concat([
                 {
                     begin: /\(/,
                     end: /\)/,
-                    keywords: _,
-                    contains: m.concat(['self']),
+                    keywords: p,
+                    contains: h.concat(['self']),
                     relevance: 0
                 }
             ]),
             relevance: 0
         },
-        E = {
-            begin: '(' + s + '[\\*&\\s]+)+' + h,
+        g = {
+            begin: '(' + s + '[\\*&\\s]+)+' + _,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
-            keywords: _,
+            keywords: p,
             illegal: /[^\w\s\*&:<>.]/,
             contains: [
                 {
                     begin: i,
-                    keywords: _,
+                    keywords: p,
                     relevance: 0
                 },
                 {
-                    begin: h,
+                    begin: _,
                     returnBegin: !0,
-                    contains: [e.inherit(p, { className: 'title.function' })],
+                    contains: [e.inherit(f, { className: 'title.function' })],
                     relevance: 0
                 },
                 {
@@ -121,40 +121,40 @@ function n(e) {
                     className: 'params',
                     begin: /\(/,
                     end: /\)/,
-                    keywords: _,
+                    keywords: p,
                     relevance: 0,
                     contains: [
-                        r,
+                        n,
                         e.C_BLOCK_COMMENT_MODE,
+                        u,
                         c,
-                        d,
-                        l,
+                        o,
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: _,
+                            keywords: p,
                             relevance: 0,
-                            contains: ['self', r, e.C_BLOCK_COMMENT_MODE, c, d, l]
+                            contains: ['self', n, e.C_BLOCK_COMMENT_MODE, u, c, o]
                         }
                     ]
                 },
-                l,
-                r,
+                o,
+                n,
                 e.C_BLOCK_COMMENT_MODE,
-                f
+                d
             ]
         };
     return {
         name: 'C',
         aliases: ['h'],
-        keywords: _,
+        keywords: p,
         disableAutodetect: !0,
         illegal: '</',
-        contains: [].concat(g, E, m, [
-            f,
+        contains: [].concat(m, g, h, [
+            d,
             {
                 begin: e.IDENT_RE + '::',
-                keywords: _
+                keywords: p
             },
             {
                 className: 'class',
@@ -164,10 +164,10 @@ function n(e) {
             }
         ]),
         exports: {
-            preprocessor: f,
-            strings: c,
-            keywords: _
+            preprocessor: d,
+            strings: u,
+            keywords: p
         }
     };
 }
-e.exports = n;
+e.exports = t;

@@ -1,10 +1,10 @@
-var i = r(605905),
-    a = r(779882),
-    o = r(580495),
+var i = n(605905),
+    r = n(779882),
+    a = n(580495),
     s = RegExp("['\u2019]", 'g');
-function l(e) {
-    return function (n) {
-        return i(o(a(n).replace(s, '')), e, '');
+function o(e) {
+    return function (t) {
+        return i(a(r(t).replace(s, '')), e, '');
     };
 }
-e.exports = l;
+e.exports = o;

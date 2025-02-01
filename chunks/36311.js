@@ -1,8 +1,8 @@
-n(47120);
+n.d(t, { Z: () => C }), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(749210),
@@ -25,7 +25,7 @@ function g(e, t, n) {
         e
     );
 }
-class C extends l.PureComponent {
+class _ extends l.PureComponent {
     componentDidMount() {
         let { current: e } = this.scroller;
         null == e || e.scrollToBottom();
@@ -52,11 +52,11 @@ class C extends l.PureComponent {
                   agreement: m.intl.string(m.t.wVq7ur),
                   disagreement: m.intl.string(m.t.hg1uxs)
               });
-        return (0, i.jsx)(o.AdvancedScroller, {
+        return (0, i.jsx)(o.Den, {
             ref: this.scroller,
             className: f.scroller,
             children: (0, i.jsx)('div', {
-                className: a()(this.props.className, f.wrapper),
+                className: r()(this.props.className, f.wrapper),
                 children: n
             })
         });
@@ -74,7 +74,7 @@ class C extends l.PureComponent {
             });
     }
 }
-t.Z = s.ZP.connectStores([u.default], () => {
+let C = s.ZP.connectStores([u.default], () => {
     var e;
     return { nsfwDisallowed: (null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1 };
-})(C);
+})(_);

@@ -1,53 +1,53 @@
-a.r(t), a(47120);
-var d = a(200651),
-    o = a(192379),
-    n = a(442837),
-    r = a(481060),
-    s = a(367907),
-    i = a(313201),
-    l = a(650774),
-    c = a(434404),
-    C = a(166184),
-    u = a(981631),
-    m = a(388032),
-    h = a(435339);
-t.default = (e) => {
-    let { transitionState: t, onClose: a, guild: p } = e,
-        _ = (0, i.Dt)();
-    o.useEffect(() => {
-        s.ZP.trackWithMetadata(u.rMx.OPEN_MODAL, { type: u.jXE.DISCOVERY_SETUP_SUCCESS_MODAL });
+t.d(a, { default: () => p }), t(47120);
+var n = t(200651),
+    r = t(192379),
+    s = t(442837),
+    i = t(481060),
+    d = t(367907),
+    l = t(313201),
+    o = t(650774),
+    c = t(434404),
+    C = t(166184),
+    m = t(981631),
+    h = t(388032),
+    u = t(435339);
+let p = (e) => {
+    let { transitionState: a, onClose: t, guild: p } = e,
+        x = (0, l.Dt)();
+    r.useEffect(() => {
+        d.ZP.trackWithMetadata(m.rMx.OPEN_MODAL, { type: m.jXE.DISCOVERY_SETUP_SUCCESS_MODAL });
     }, []);
-    let [x, S] = (0, n.Wu)([l.Z], () => [l.Z.getOnlineCount(p.id), l.Z.getMemberCount(p.id)], [p.id]);
-    return (0, d.jsxs)(r.ModalRoot, {
-        transitionState: t,
-        'aria-labelledby': _,
-        className: h.root,
+    let [_, S] = (0, s.Wu)([o.Z], () => [o.Z.getOnlineCount(p.id), o.Z.getMemberCount(p.id)], [p.id]);
+    return (0, n.jsxs)(i.Y0X, {
+        transitionState: a,
+        'aria-labelledby': x,
+        className: u.root,
         children: [
-            (0, d.jsx)(r.ModalHeader, {
-                className: h.modalHeader,
+            (0, n.jsx)(i.xBx, {
+                className: u.modalHeader,
                 separator: !1,
-                children: (0, d.jsx)(r.ModalCloseButton, {
-                    onClick: a,
-                    className: h.modalCloseButton
+                children: (0, n.jsx)(i.olH, {
+                    onClick: t,
+                    className: u.modalCloseButton
                 })
             }),
-            (0, d.jsx)(r.Heading, {
+            (0, n.jsx)(i.X6q, {
                 variant: 'heading-xl/semibold',
-                id: _,
-                className: h.header,
-                children: m.intl.string(m.t['2ocCIi'])
+                id: x,
+                className: u.header,
+                children: h.intl.string(h.t['2ocCIi'])
             }),
-            (0, d.jsxs)(r.ModalContent, {
-                className: h.modalContent,
+            (0, n.jsxs)(i.hzk, {
+                className: u.modalContent,
                 children: [
-                    (0, d.jsx)(r.Text, {
+                    (0, n.jsx)(i.Text, {
                         variant: 'text-md/normal',
-                        className: h.subheader,
-                        children: m.intl.format(m.t.TRh6a2, {
+                        className: u.subheader,
+                        children: h.intl.format(h.t.TRh6a2, {
                             onServerSettingsClick: () => {
-                                a(),
-                                    c.Z.setSection(u.pNK.DISCOVERY),
-                                    s.ZP.trackWithMetadata(u.rMx.SETTINGS_PANE_VIEWED, {
+                                t(),
+                                    c.Z.setSection(m.pNK.DISCOVERY),
+                                    d.ZP.trackWithMetadata(m.rMx.SETTINGS_PANE_VIEWED, {
                                         settings_type: 'guild',
                                         origin_pane: 'DISCOVERY',
                                         destination_pane: 'DISCOVERY'
@@ -55,18 +55,18 @@ t.default = (e) => {
                             }
                         })
                     }),
-                    (0, d.jsx)(C.Z, {
-                        className: h.previewCard,
+                    (0, n.jsx)(C.Z, {
+                        className: u.previewCard,
                         guild: p,
-                        presenceCount: x,
+                        presenceCount: _,
                         memberCount: S
                     })
                 ]
             }),
-            (0, d.jsx)(r.ModalFooter, {
-                children: (0, d.jsx)(r.Button, {
-                    onClick: a,
-                    children: m.intl.string(m.t['NX+WJC'])
+            (0, n.jsx)(i.mzw, {
+                children: (0, n.jsx)(i.zxk, {
+                    onClick: t,
+                    children: h.intl.string(h.t['NX+WJC'])
                 })
             })
         ]

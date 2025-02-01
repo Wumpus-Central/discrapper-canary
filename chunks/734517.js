@@ -1,9 +1,9 @@
 e.exports = {
-    listContainer: 'listContainer_b4c815',
-    listItem: 'listItem_b4c815',
-    anchorContainer: 'anchorContainer_b4c815',
-    inputContainer: 'inputContainer_b4c815',
-    errorText: 'errorText_b4c815',
-    buttonContainer: 'buttonContainer_b4c815',
-    footerText: 'footerText_b4c815'
+    listContainer: 'listContainer_a95388',
+    listItem: 'listItem_a95388',
+    anchorContainer: 'anchorContainer_a95388',
+    inputContainer: 'inputContainer_a95388',
+    errorText: 'errorText_a95388',
+    buttonContainer: 'buttonContainer_a95388',
+    footerText: 'footerText_a95388'
 };

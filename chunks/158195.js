@@ -1,37 +1,37 @@
-e.r(t);
+e.d(t, { default: () => I });
 var i = e(200651);
 e(192379);
-var r = e(481060),
-    u = e(239091),
-    l = e(883385),
-    o = e(108843),
-    a = e(100527),
-    c = e(584836),
-    d = e(544642),
-    f = e(965244),
-    s = e(981631),
+var l = e(481060),
+    r = e(239091),
+    u = e(883385),
+    a = e(108843),
+    d = e(100527),
+    o = e(584836),
+    c = e(544642),
+    s = e(965244),
+    f = e(981631),
     _ = e(388032);
-t.default = (0, o.Z)(
-    (0, l.Z)(
+let I = (0, a.Z)(
+    (0, u.Z)(
         function (n) {
-            let { guildId: t, context: e, onSelect: l } = n,
-                o = (0, d.Z)(t, e),
-                a = (0, f.Z)(t, e),
-                s = (0, c.Z)(t, e);
-            return (0, i.jsxs)(r.Menu, {
+            let { guildId: t, context: e, onSelect: u } = n,
+                a = (0, c.Z)(t, e),
+                d = (0, s.Z)(t, e),
+                f = (0, o.Z)(t, e);
+            return (0, i.jsxs)(l.v2r, {
                 navId: 'moderation-raid-context',
-                onClose: u.Zy,
+                onClose: r.Zy,
                 'aria-label': _.intl.string(_.t.liqwPD),
-                onSelect: l,
+                onSelect: u,
                 children: [
-                    (0, i.jsx)(r.MenuGroup, { children: a }),
-                    (0, i.jsxs)(r.MenuGroup, {
-                        children: [s, o]
+                    (0, i.jsx)(l.kSQ, { children: d }),
+                    (0, i.jsxs)(l.kSQ, {
+                        children: [f, a]
                     })
                 ]
             });
         },
-        { object: s.qAy.CONTEXT_MENU }
+        { object: f.qAy.CONTEXT_MENU }
     ),
-    [a.Z.CONTEXT_MENU, a.Z.GUILD_MODERATION_RAID_MENU]
+    [d.Z.CONTEXT_MENU, d.Z.GUILD_MODERATION_RAID_MENU]
 );

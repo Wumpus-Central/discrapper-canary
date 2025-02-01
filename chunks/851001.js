@@ -1,76 +1,76 @@
-n(47120);
+n.d(t, { Z: () => I }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(481060),
     o = n(100527),
     c = n(906732),
     d = n(70097),
     u = n(526167),
     m = n(140465),
-    g = n(104494),
-    h = n(639119),
-    p = n(635921),
+    h = n(104494),
+    g = n(639119),
+    _ = n(635921),
     x = n(474936),
-    f = n(869783),
+    p = n(869783),
     E = n(388032),
-    _ = n(255346),
-    C = n(839526),
+    C = n(255346),
+    f = n(839526),
     T = n(4046),
-    S = n(423741);
-t.Z = (e) => {
+    N = n(423741);
+let I = (e) => {
     var t, n;
-    let { className: s, isFooterVisible: b, isDarkMode: I, isReducedMotion: N } = e,
+    let { className: r, isFooterVisible: I, isDarkMode: S, isReducedMotion: b } = e,
         { analyticsLocations: v } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
-        A = (0, g.Ng)(),
-        j = (0, g.Wp)(A, x.Si.TIER_2) ? x.Si.TIER_2 : void 0,
-        O = (0, h.N)(),
+        j = (0, h.Ng)(),
+        A = (0, h.Wp)(j, x.Si.TIER_2) ? x.Si.TIER_2 : void 0,
+        O = (0, g.N)(),
         R = (0, m.Nx)(),
         P = (0, u.rO)(),
-        D = r.useRef(null),
-        [y, B] = r.useState(!1);
+        D = s.useRef(null),
+        [y, Z] = s.useState(!1);
     return (
-        r.useEffect(() => {
-            b && !N && !y && null != D.current && D.current.play();
-        }, [b, N, y]),
+        s.useEffect(() => {
+            !I || b || y || null == D.current || D.current.play();
+        }, [I, b, y]),
         (0, i.jsx)(c.Gt, {
             value: v,
             children: (0, i.jsxs)('div', {
-                className: a()(_.container, s),
+                className: l()(C.container, r),
                 children: [
-                    (0, i.jsx)(l.Heading, {
-                        className: _.footerHeader,
+                    (0, i.jsx)(a.X6q, {
+                        className: C.footerHeader,
                         variant: 'display-md',
                         color: 'header-primary',
                         children: E.intl.string(E.t.lEw32t)
                     }),
-                    (0, i.jsx)(p.PK, {
-                        subscriptionTier: null !== (n = null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : j,
+                    (0, i.jsx)(_.PK, {
+                        subscriptionTier: null !== (n = null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : A,
                         inOfferExperience: R,
-                        containerClassName: a()(_.footerCTAContainer),
+                        containerClassName: l()(C.footerCTAContainer),
                         isMarketingPageV2Enabled: !0,
-                        isDarkMode: I
+                        isDarkMode: S
                     }),
                     (0, i.jsx)('div', {
-                        className: _.footerArtContainer,
+                        className: C.footerArtContainer,
                         children: (0, i.jsx)(d.Z, {
                             playsInline: !0,
                             preload: 'auto',
                             poster: T.Z,
-                            className: a()(_.footerArt),
+                            className: l()(C.footerArt),
                             onEnded: () => {
-                                B(!0);
+                                Z(!0);
                             },
                             ref: D,
                             children: (0, i.jsx)('source', {
-                                src: P ? C.Z : S.Z,
-                                type: P ? f.m.MP4 : f.m.WEBM
+                                src: P ? f.Z : N.Z,
+                                type: P ? p.m.MP4 : p.m.WEBM
                             })
                         })
                     }),
-                    (0, i.jsx)('div', { className: _.leftGradient }),
-                    (0, i.jsx)('div', { className: _.rightGradient })
+                    (0, i.jsx)('div', { className: C.leftGradient }),
+                    (0, i.jsx)('div', { className: C.rightGradient })
                 ]
             })
         })

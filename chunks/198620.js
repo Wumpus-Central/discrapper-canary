@@ -48,23 +48,23 @@ function I(e) {
     for (let e of ['ex', 'is', 'hm']) t.searchParams.delete(e);
     return t;
 }
-function b(e) {
+function T(e) {
     let t = e.searchParams.get('ex'),
         n = parseInt(null != t ? t : '', 16);
     return isNaN(n) ? void 0 : n * o.Z.Millis.SECOND;
 }
-function T(e) {
-    let t = b(e);
+function b(e) {
+    let t = T(e);
     return null == t || t <= Date.now() + p;
 }
 function S(e) {
     let t = l.Z.toURLSafe(e.url);
-    return null != t && T(t);
+    return null != t && b(t);
 }
 function A(e) {
     if (null == e) return !1;
     let t = l.Z.toURLSafe(e.url);
-    return !!(null != t && v(t)) && T(t);
+    return !!(null != t && v(t)) && b(t);
 }
 function N(e) {
     var t;
@@ -83,7 +83,7 @@ async function R(e) {
 }
 async function O(e) {
     let t = l.Z.toURLSafe(e);
-    if (null == t || !T(t)) return e;
+    if (null == t || !b(t)) return e;
     let n = await R(e);
     return null != n ? n : e;
 }

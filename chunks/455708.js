@@ -1,75 +1,75 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(232713),
-    c = r(442837),
-    d = r(481060),
-    f = r(570140),
-    p = r(68405),
-    h = r(600164),
-    _ = r(28546),
-    m = r(656733),
-    g = r(985375),
-    E = r(653235),
-    v = r(215016),
-    y = r(981631),
-    b = r(149203),
-    I = r(388032),
-    T = r(489489);
-function S(e, n, r) {
+n.d(t, { Z: () => A }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(232713),
+    l = n(442837),
+    u = n(481060),
+    c = n(570140),
+    d = n(68405),
+    f = n(600164),
+    _ = n(28546),
+    p = n(656733),
+    h = n(985375),
+    m = n(653235),
+    g = n(215016),
+    E = n(981631),
+    v = n(149203),
+    y = n(388032),
+    I = n(489489);
+function T(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let A = (e) => e.stopPropagation();
-class C extends o.PureComponent {
+let b = (e) => e.stopPropagation();
+class S extends r.PureComponent {
     componentDidMount() {
-        p.gK(), document.addEventListener('keydown', this.backToFrontPage), '' !== this.props.query && this.search(this.props.query, y.wI2.SEARCH);
+        d.gK(), document.addEventListener('keydown', this.backToFrontPage), '' !== this.props.query && this.search(this.props.query, E.wI2.SEARCH);
     }
     componentWillUnmount() {
-        f.Z.wait(() => p.v2()), document.removeEventListener('keydown', this.backToFrontPage);
+        c.Z.wait(() => d.v2()), document.removeEventListener('keydown', this.backToFrontPage);
     }
     componentDidUpdate() {
-        this.state.resultType !== y.wI2.SEARCH && '' !== this.props.query && this.search(this.props.query, y.wI2.SEARCH);
+        this.state.resultType !== E.wI2.SEARCH && '' !== this.props.query && this.search(this.props.query, E.wI2.SEARCH);
     }
-    search(e, n, r) {
-        p.yC(e, n, r), '' === e ? this.setState({ resultType: null }) : this.state.resultType !== y.wI2.SEARCH && this.setState({ resultType: y.wI2.SEARCH });
+    search(e, t, n) {
+        d.yC(e, t, n), '' === e ? this.setState({ resultType: null }) : this.state.resultType !== E.wI2.SEARCH && this.setState({ resultType: E.wI2.SEARCH });
     }
     renderHeaderContent() {
         let { query: e } = this.props,
-            { resultType: n } = this.state;
-        switch (n) {
-            case y.wI2.FAVORITES:
-                return (0, a.jsx)(d.FormTitle, {
+            { resultType: t } = this.state;
+        switch (t) {
+            case E.wI2.FAVORITES:
+                return (0, i.jsx)(u.vwX, {
                     tag: 'h5',
-                    className: T.searchHeader,
-                    children: I.intl.string(I.t.y3LQCA)
+                    className: I.searchHeader,
+                    children: y.intl.string(y.t.y3LQCA)
                 });
-            case y.wI2.TRENDING_GIFS:
-                return (0, a.jsx)(d.FormTitle, {
+            case E.wI2.TRENDING_GIFS:
+                return (0, i.jsx)(u.vwX, {
                     tag: 'h5',
-                    className: T.searchHeader,
-                    children: I.intl.string(I.t.H6zNFx)
+                    className: I.searchHeader,
+                    children: y.intl.string(y.t.H6zNFx)
                 });
             default:
-                return (0, a.jsx)(d.SearchBar, {
-                    className: T.searchBar,
-                    size: d.SearchBar.Sizes.MEDIUM,
+                return (0, i.jsx)(u.E1j, {
+                    className: I.searchBar,
+                    size: u.E1j.Sizes.MEDIUM,
                     query: e,
                     onChange: this.handleChangeQuery,
                     onClear: this.handleClearQuery,
-                    placeholder: I.intl.string(I.t.TnYqkZ),
-                    'aria-label': I.intl.string(I.t.TnYqkZ),
+                    placeholder: y.intl.string(y.t.TnYqkZ),
+                    'aria-label': y.intl.string(y.t.TnYqkZ),
                     ref: this.props.searchBarRef,
                     autoFocus: !0
                 });
@@ -77,63 +77,63 @@ class C extends o.PureComponent {
     }
     renderHeader() {
         let { resultType: e } = this.state,
-            n = null;
+            t = null;
         return (
             null != e &&
-                (n = (0, a.jsx)(d.Clickable, {
+                (t = (0, i.jsx)(u.P3F, {
                     onClick: this.handleClearQuery,
-                    className: T.backButton,
-                    'aria-label': I.intl.string(I.t['13/7kZ']),
-                    children: (0, a.jsx)(d.ArrowSmallLeftIcon, {
+                    className: I.backButton,
+                    'aria-label': y.intl.string(y.t['13/7kZ']),
+                    children: (0, i.jsx)(u.whL, {
                         size: 'md',
                         color: 'currentColor'
                     })
                 })),
-            (0, a.jsxs)(h.Z, {
-                align: h.Z.Align.CENTER,
-                children: [n, this.renderHeaderContent()]
+            (0, i.jsxs)(f.Z, {
+                align: f.Z.Align.CENTER,
+                children: [t, this.renderHeaderContent()]
             })
         );
     }
     renderContent() {
-        let { contentClassName: e, resultItems: n, resultQuery: r, query: i, favorites: o, searchOffset: s, searchLimit: l, searchTotalResults: u, suggestions: c, hideFavorites: d } = this.props,
-            { resultType: f } = this.state;
-        return null == f
-            ? (0, a.jsx)(E.Z, {
+        let { contentClassName: e, resultItems: t, resultQuery: n, query: r, favorites: a, searchOffset: s, searchLimit: o, searchTotalResults: l, suggestions: u, hideFavorites: c } = this.props,
+            { resultType: d } = this.state;
+        return null == d
+            ? (0, i.jsx)(m.Z, {
                   className: e,
-                  hideFavoritesTile: d,
+                  hideFavoritesTile: c,
                   onSelectItem: this.handleSelectItem
               })
-            : (0, a.jsx)(v.ZP, {
+            : (0, i.jsx)(g.ZP, {
                   className: e,
-                  data: f === y.wI2.FAVORITES ? o : n,
+                  data: d === E.wI2.FAVORITES ? a : t,
                   onSelectGIF: this.handleSelectGIF,
-                  resultType: f,
-                  resultQuery: r,
-                  query: i,
+                  resultType: d,
+                  resultQuery: n,
+                  query: r,
                   searchOffset: s,
-                  searchLimit: l,
-                  searchTotalResults: u,
-                  suggestions: c,
+                  searchLimit: o,
+                  searchTotalResults: l,
+                  suggestions: u,
                   onSelectSuggestion: this.handleSelectSuggestion
               });
     }
     render() {
-        let { className: e, forwardedRef: n } = this.props;
-        return (0, a.jsxs)('div', {
-            id: b.vO,
+        let { className: e, forwardedRef: t } = this.props;
+        return (0, i.jsxs)('div', {
+            id: v.vO,
             role: 'tabpanel',
-            'aria-labelledby': b._3,
-            className: l()(T.container, e),
-            onClick: A,
-            ref: n,
+            'aria-labelledby': v._3,
+            className: s()(I.container, e),
+            onClick: b,
+            ref: t,
             children: [
-                (0, a.jsx)('div', {
-                    className: T.header,
+                (0, i.jsx)('div', {
+                    className: I.header,
                     children: this.renderHeader()
                 }),
-                (0, a.jsx)('div', {
-                    className: T.content,
+                (0, i.jsx)('div', {
+                    className: I.content,
                     children: this.renderContent()
                 })
             ]
@@ -141,80 +141,80 @@ class C extends o.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'state', { resultType: null }),
-            S(this, 'backToFrontPage', (e) => {
-                let { resultType: n } = this.state;
-                e.keyCode === y.yXg.ESCAPE && null != n && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery());
+            T(this, 'state', { resultType: null }),
+            T(this, 'backToFrontPage', (e) => {
+                let { resultType: t } = this.state;
+                e.keyCode === E.yXg.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery());
             }),
-            S(this, 'handleChangeQuery', (e) => {
-                (0, _.ql)(e), this.search(e, y.wI2.SEARCH);
+            T(this, 'handleChangeQuery', (e) => {
+                (0, _.ql)(e), this.search(e, E.wI2.SEARCH);
             }),
-            S(this, 'handleSelectSuggestion', (e) => {
-                (0, _.ql)(''), p.v2(), this.search(e, y.wI2.SEARCH_SUGGESTION, !0);
+            T(this, 'handleSelectSuggestion', (e) => {
+                (0, _.ql)(''), d.v2(), this.search(e, E.wI2.SEARCH_SUGGESTION, !0);
             }),
-            S(this, 'handleClearQuery', () => {
+            T(this, 'handleClearQuery', () => {
                 let { current: e } = this.props.searchBarRef;
-                (0, _.ql)(''), p.v2(), this.setState({ resultType: null }), null != e && e.focus();
+                (0, _.ql)(''), d.v2(), this.setState({ resultType: null }), null != e && e.focus();
             }),
-            S(this, 'handleSelectGIF', (e) => {
-                let { onSelectGIF: n } = this.props;
-                null != n && n(e);
+            T(this, 'handleSelectGIF', (e) => {
+                let { onSelectGIF: t } = this.props;
+                null != t && t(e);
             }),
-            S(this, 'handleSelectItem', (e, n) => {
-                let { current: r } = this.props.searchBarRef;
+            T(this, 'handleSelectItem', (e, t) => {
+                let { current: n } = this.props.searchBarRef;
                 switch (e) {
-                    case y.wI2.TRENDING_CATEGORY:
-                        p.yC(n, y.wI2.TRENDING_CATEGORY, !0), null != r && r.focus();
+                    case E.wI2.TRENDING_CATEGORY:
+                        d.yC(t, E.wI2.TRENDING_CATEGORY, !0), null != n && n.focus();
                         break;
-                    case y.wI2.TRENDING_GIFS:
-                        p.UU();
+                    case E.wI2.TRENDING_GIFS:
+                        d.UU();
                 }
                 this.setState({ resultType: e });
             });
     }
 }
-n.Z = o.forwardRef((e, n) => {
-    !e.persistSearch && (0, _.ql)('');
+let A = r.forwardRef((e, t) => {
+    e.persistSearch || (0, _.ql)('');
     let {
-            query: r,
-            resultQuery: i,
+            query: n,
+            resultQuery: a,
             resultItems: s,
-            suggestions: l
-        } = (0, c.cj)([m.Z], () => ({
-            query: m.Z.getQuery(),
-            resultQuery: m.Z.getResultQuery(),
-            resultItems: m.Z.getResultItems(),
-            suggestions: m.Z.getSuggestions()
+            suggestions: u
+        } = (0, l.cj)([p.Z], () => ({
+            query: p.Z.getQuery(),
+            resultQuery: p.Z.getResultQuery(),
+            resultItems: p.Z.getResultItems(),
+            suggestions: p.Z.getSuggestions()
         })),
-        { expressionPickerQuery: d, isSearchSuggestion: f } = (0, _.Iu)(
+        { expressionPickerQuery: c, isSearchSuggestion: d } = (0, _.Iu)(
             (e) => ({
                 expressionPickerQuery: e.searchQuery,
                 isSearchSuggestion: e.isSearchSuggestion
             }),
-            u.X
+            o.X
         ),
-        p = null != d && '' !== d ? d : r,
-        h = (0, g.HI)(),
-        E = o.createRef();
+        f = null != c && '' !== c ? c : n,
+        m = (0, h.HI)(),
+        g = r.createRef();
     return (
-        o.useLayoutEffect(() => {
-            if (f) {
+        r.useLayoutEffect(() => {
+            if (d) {
                 var e;
-                null === (e = E.current) || void 0 === e || e.focus();
+                null === (e = g.current) || void 0 === e || e.focus();
             }
-        }, [f, E]),
-        (0, a.jsx)(C, {
+        }, [d, g]),
+        (0, i.jsx)(S, {
             ...e,
-            forwardedRef: n,
-            query: p,
-            resultQuery: i,
+            forwardedRef: t,
+            query: f,
+            resultQuery: a,
             resultItems: s,
-            suggestions: l,
-            favorites: h,
+            suggestions: u,
+            favorites: m,
             searchOffset: 0,
-            searchTotalResults: m.Z.getResultItems().length,
+            searchTotalResults: p.Z.getResultItems().length,
             searchLimit: null,
-            searchBarRef: E
+            searchBarRef: g
         })
     );
 });

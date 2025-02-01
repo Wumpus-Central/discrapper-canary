@@ -1,5 +1,5 @@
 n.d(t, {
-    Ch: () => b,
+    Ch: () => T,
     Tr: () => I
 }),
     n(47120);
@@ -308,7 +308,7 @@ class I extends y {
         super(...e), g(this, 'state', { ...this.initialState }), g(this, 'paymentRequestWallet', 'googlePay');
     }
 }
-class b extends y {
+class T extends y {
     isBrowserCompatible() {
         return (0, d.G6)();
     }

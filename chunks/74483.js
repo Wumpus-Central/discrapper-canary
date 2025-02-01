@@ -1,4 +1,4 @@
 e.exports = {
-    giftButton: 'giftButton_e70ca4',
-    giftButtonInner: 'giftButtonInner_e70ca4'
+    giftButton: 'giftButton_f3c9fa',
+    giftButtonInner: 'giftButtonInner_f3c9fa'
 };

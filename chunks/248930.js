@@ -18,25 +18,25 @@ var r = n(120356),
     E = n(249942);
 function v(e) {
     let { user: t, entry: n, profileGuildId: r, className: v, onClose: y, hideContextMenu: I = !1 } = e,
-        { analyticsLocations: b } = (0, o.ZP)(s.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
-        { profileType: T } = (0, _.z)(),
+        { analyticsLocations: T } = (0, o.ZP)(s.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
+        { profileType: b } = (0, _.z)(),
         { interactionSource: S, interactionSourceId: A } = (0, c.Xo)(),
         N = (0, u.Z)({
             display: 'recent',
             user: t,
             entry: n,
-            analyticsLocations: b
+            analyticsLocations: T
         });
-    return null != T && (0, l.Rh)(n)
+    return null != b && (0, l.Rh)(n)
         ? (0, i.jsx)(o.Gt, {
-              value: b,
+              value: T,
               children: (0, i.jsx)(p.Z, {
                   sourceType: g.n_.ACTIVITY,
                   user: t,
                   children: (0, i.jsx)(d.Z, {
                       user: t,
                       guildId: r,
-                      profileType: T,
+                      profileType: b,
                       sourceId: n.id,
                       entry: n,
                       onAction: N,

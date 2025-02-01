@@ -1,9 +1,9 @@
 e.exports = {
-    containerExpanded: 'containerExpanded_fcbce6',
-    button: 'button_fcbce6',
-    containerCompact: 'containerCompact_fcbce6',
-    compactButton: 'compactButton_fcbce6',
-    compactButtonDisabled: 'compactButtonDisabled_fcbce6',
-    text: 'text_fcbce6',
-    error: 'error_fcbce6'
+    containerExpanded: 'containerExpanded__7ff28',
+    button: 'button__7ff28',
+    containerCompact: 'containerCompact__7ff28',
+    compactButton: 'compactButton__7ff28',
+    compactButtonDisabled: 'compactButtonDisabled__7ff28',
+    text: 'text__7ff28',
+    error: 'error__7ff28'
 };

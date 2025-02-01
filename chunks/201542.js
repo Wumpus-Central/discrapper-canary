@@ -1,241 +1,241 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(442837),
-    c = r(481060),
-    d = r(607070),
-    f = r(62170),
-    p = r(640108),
-    h = r(793148),
-    _ = r(585483),
-    m = r(70956),
-    g = r(36703),
-    E = r(347312),
-    v = r(981631),
-    y = r(388032),
-    b = r(438922);
-let I = o.lazy(() => Promise.all([r.e('26460'), r.e('89792')]).then(r.bind(r, 711635)));
-function T(e) {
-    let { played: n, duration: r, currentTime: i } = e,
-        o = null == r ? '--:--' : n ? (0, p.yv)(Math.ceil(r - i)) : (0, p.yv)(Math.ceil(r));
-    return (0, a.jsx)(c.Text, {
+n.d(t, { Z: () => S }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(442837),
+    l = n(481060),
+    u = n(607070),
+    c = n(62170),
+    d = n(640108),
+    f = n(793148),
+    _ = n(585483),
+    p = n(70956),
+    h = n(36703),
+    m = n(347312),
+    g = n(981631),
+    E = n(388032),
+    v = n(438922);
+let y = r.lazy(() => Promise.all([n.e('26460'), n.e('89792')]).then(n.bind(n, 711635)));
+function I(e) {
+    let { played: t, duration: n, currentTime: r } = e,
+        a = null == n ? '--:--' : t ? (0, d.yv)(Math.ceil(n - r)) : (0, d.yv)(Math.ceil(n));
+    return (0, i.jsx)(l.Text, {
         variant: 'text-sm/normal',
-        className: b.duration,
+        className: v.duration,
         tabularNumbers: !0,
-        children: o
+        children: a
     });
 }
-function S(e, n, r) {
-    o.useEffect(() => {
+function T(e, t, n) {
+    r.useEffect(() => {
         let i;
-        function a() {
-            let o = e.current;
-            if (null == o) return;
-            if ((r(o.currentTime), !!n)) i = requestAnimationFrame(a);
+        function r() {
+            let a = e.current;
+            if (null != a) n(a.currentTime), t && (i = requestAnimationFrame(r));
         }
         return (
-            a(),
+            r(),
             () => {
                 null != i && cancelAnimationFrame(i);
             }
         );
-    }, [e, n, r]);
+    }, [e, t, n]);
 }
-function A(e, n, r) {
-    o.useEffect(() => {
-        if (!!n)
+function b(e, t, n) {
+    r.useEffect(() => {
+        if (t)
             return (
-                _.S.dispatch(v.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, { src: e }),
-                _.S.subscribe(v.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, i),
+                _.S.dispatch(g.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, { src: e }),
+                _.S.subscribe(g.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, i),
                 () => {
-                    _.S.unsubscribe(v.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, i);
+                    _.S.unsubscribe(g.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, i);
                 }
             );
-        function i(n) {
-            let { src: i } = n;
-            if (e !== i) r(!1);
+        function i(t) {
+            let { src: i } = t;
+            e !== i && n(!1);
         }
-    }, [e, n, r]);
+    }, [e, t, n]);
 }
-n.Z = o.memo(function (e) {
-    let n,
-        { src: r, volume: i = 1, onVolumeChange: s, onMute: p, waveform: _, durationSecs: v, onVolumeShow: C, onVolumeHide: N, onPlay: R, onPause: O, onError: D } = e,
-        L = o.useRef(null),
-        [x, w] = o.useState(0),
-        [P, M] = o.useState(v),
-        [k, U] = o.useState(!1),
-        [B, G] = o.useState(!1),
-        [Z, F] = o.useState(!1),
-        [V, j] = o.useState(!1),
-        [H, Y] = o.useState('none'),
-        [W, K] = o.useState(() => ('function' == typeof i ? i() : i)),
-        z = o.useRef(void 0),
-        q = o.useCallback(() => {
+let S = r.memo(function (e) {
+    let t,
+        { src: n, volume: a = 1, onVolumeChange: d, onMute: _, waveform: g, durationSecs: S, onVolumeShow: A, onVolumeHide: N, onPlay: C, onPause: R, onError: O } = e,
+        D = r.useRef(null),
+        [x, L] = r.useState(0),
+        [P, w] = r.useState(S),
+        [M, k] = r.useState(!1),
+        [U, G] = r.useState(!1),
+        [B, Z] = r.useState(!1),
+        [F, V] = r.useState(!1),
+        [j, H] = r.useState('none'),
+        [Y, W] = r.useState(() => ('function' == typeof a ? a() : a)),
+        K = r.useRef(void 0),
+        z = r.useCallback(() => {
             G((e) => !e);
         }, []),
-        Q = o.useCallback(() => {
-            Y('metadata');
+        q = r.useCallback(() => {
+            H('metadata');
         }, []),
-        X = o.useCallback((e) => {
-            let n = e.currentTarget.duration;
-            if (!isNaN(n)) M(n);
+        Q = r.useCallback((e) => {
+            let t = e.currentTarget.duration;
+            !isNaN(t) && w(t);
         }, []),
-        J = o.useCallback(() => {
-            if ((G(!1), null == z.current))
-                z.current = setTimeout(() => {
-                    j(!1), (z.current = void 0);
-                }, 500);
+        X = r.useCallback(() => {
+            G(!1),
+                null == K.current &&
+                    (K.current = setTimeout(() => {
+                        V(!1), (K.current = void 0);
+                    }, 500));
         }, []),
-        $ = o.useCallback(() => {
-            if (!Z) J();
-        }, [J, Z]),
-        ee = o.useCallback(() => {
-            let e = L.current;
+        J = r.useCallback(() => {
+            !B && X();
+        }, [X, B]),
+        $ = r.useCallback(() => {
+            let e = D.current;
             if (null == e) return;
-            let n = e.error;
-            null == D || D(n);
-        }, [D]),
-        et = o.useCallback(
+            let t = e.error;
+            null == O || O(t);
+        }, [O]),
+        ee = r.useCallback(
             (e) => {
-                let n = (0, g.A)(e, 1);
-                U(0 === n), K(n), null == s || s(n);
+                let t = (0, h.A)(e, 1);
+                k(0 === t), W(t), null == d || d(t);
             },
-            [s]
+            [d]
         ),
-        en = o.useCallback(() => {
-            U(!k), null == p || p(!k);
-        }, [k, p]),
-        er = o.useCallback(() => {
-            F(!0);
+        et = r.useCallback(() => {
+            k(!M), null == _ || _(!M);
+        }, [M, _]),
+        en = r.useCallback(() => {
+            Z(!0);
         }, []),
-        ei = o.useCallback(() => {
-            F(!1), x === P && J();
-        }, [x, P, J]),
-        ea = o.useCallback(
+        ei = r.useCallback(() => {
+            Z(!1), x === P && X();
+        }, [x, P, X]),
+        er = r.useCallback(
             (e) => {
-                let n = L.current;
-                if (null == P || null == n) return;
-                let r = e * P;
-                w(r), (n.currentTime = r), j(!0), clearTimeout(z.current), (z.current = void 0);
+                let t = D.current;
+                if (null == P || null == t) return;
+                let n = e * P;
+                L(n), (t.currentTime = n), V(!0), clearTimeout(K.current), (K.current = void 0);
             },
             [P]
         );
-    o.useEffect(() => {
-        !V && B && j(!0);
-    }, [B, V]);
-    let eo = o.useRef(null),
+    r.useEffect(() => {
+        !F && U && V(!0);
+    }, [U, F]);
+    let ea = r.useRef(null),
         es = {
-            played: V,
+            played: F,
             currentTime: x,
-            onPause: O,
-            onPlay: R
+            onPause: R,
+            onPlay: C
         },
-        el = o.useRef(es);
-    o.useEffect(() => {
-        el.current = es;
+        eo = r.useRef(es);
+    r.useEffect(() => {
+        eo.current = es;
     }),
-        o.useEffect(() => {
-            let { played: e, currentTime: n, onPause: r, onPlay: i } = el.current;
-            if (e || B) {
-                if (B) {
-                    var a, o;
-                    (eo.current = performance.now()), null == i || i(!1, n, (null !== (o = null === (a = L.current) || void 0 === a ? void 0 : a.duration) && void 0 !== o ? o : 0) * m.Z.Millis.SECOND);
+        r.useEffect(() => {
+            let { played: e, currentTime: t, onPause: n, onPlay: i } = eo.current;
+            if (e || U) {
+                if (U) {
+                    var r, a;
+                    (ea.current = performance.now()), null == i || i(!1, t, (null !== (a = null === (r = D.current) || void 0 === r ? void 0 : r.duration) && void 0 !== a ? a : 0) * p.Z.Millis.SECOND);
                 } else {
                     let e = performance.now(),
-                        i = eo.current,
-                        a = null != i ? (e - i) / 1000 : 0;
-                    null == r || r(n, a), (eo.current = null);
+                        i = ea.current,
+                        r = null != i ? (e - i) / 1000 : 0;
+                    null == n || n(t, r), (ea.current = null);
                 }
             }
-        }, [B]),
-        S(L, B, w),
-        A(r, B, G);
-    let eu = B ? c.PauseIcon : c.PlayIcon,
-        ec = B ? y.intl.string(y.t.ZcgDJS) : y.intl.string(y.t.RscU7O);
+        }, [U]),
+        T(D, U, L),
+        b(n, U, G);
+    let el = U ? l.fpf : l.o1U,
+        eu = U ? E.intl.string(E.t.ZcgDJS) : E.intl.string(E.t.RscU7O);
     'Safari' === platform.name
-        ? (n = (0, a.jsx)(o.Suspense, {
-              children: (0, a.jsx)(I, {
-                  ref: L,
-                  className: b.audioElement,
-                  src: r,
-                  preload: H,
-                  playing: B && !Z,
-                  onEnded: $,
-                  onLoadedMetadata: X,
-                  onError: ee,
-                  muted: k,
-                  volume: W
+        ? (t = (0, i.jsx)(r.Suspense, {
+              children: (0, i.jsx)(y, {
+                  ref: D,
+                  className: v.audioElement,
+                  src: n,
+                  preload: j,
+                  playing: U && !B,
+                  onEnded: J,
+                  onLoadedMetadata: Q,
+                  onError: $,
+                  muted: M,
+                  volume: Y
               })
           }))
-        : (n = (0, a.jsx)(f.Z, {
-              ref: L,
-              className: b.audioElement,
+        : (t = (0, i.jsx)(c.Z, {
+              ref: D,
+              className: v.audioElement,
               controls: !1,
-              preload: H,
-              onEnded: $,
-              onLoadedMetadata: X,
-              onError: ee,
-              muted: k,
-              volume: W,
-              playing: B && !Z,
-              children: (0, a.jsx)('source', { src: r })
+              preload: j,
+              onEnded: J,
+              onLoadedMetadata: Q,
+              onError: $,
+              muted: M,
+              volume: Y,
+              playing: U && !B,
+              children: (0, i.jsx)('source', { src: n })
           }));
-    let ed = (0, u.e7)([d.Z], () => d.Z.useReducedMotion),
-        { enabled: ef } = (0, c.useRedesignIconContext)();
-    return (0, a.jsxs)('div', {
-        className: l()(b.container, { [b.playing]: B }),
-        onMouseEnter: Q,
+    let ec = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        { enabled: ed } = (0, l.bWb)();
+    return (0, i.jsxs)('div', {
+        className: s()(v.container, { [v.playing]: U }),
+        onMouseEnter: q,
         children: [
-            (0, a.jsx)('div', {
-                className: b.rippleContainer,
-                children: (0, a.jsx)('div', { className: l()(b.ripple, { [b.reducedMotion]: ed }) })
+            (0, i.jsx)('div', {
+                className: v.rippleContainer,
+                children: (0, i.jsx)('div', { className: s()(v.ripple, { [v.reducedMotion]: ec }) })
             }),
-            (0, a.jsx)(c.Clickable, {
-                className: b.playButtonContainer,
-                onClick: q,
-                'aria-label': ec,
-                children: (0, a.jsx)(eu, {
-                    className: l()(b.playIcon, { [b.oldPlayIconSpacing]: !ef && !B }),
+            (0, i.jsx)(l.P3F, {
+                className: v.playButtonContainer,
+                onClick: z,
+                'aria-label': eu,
+                children: (0, i.jsx)(el, {
+                    className: s()(v.playIcon, { [v.oldPlayIconSpacing]: !ed && !U }),
                     size: 'custom',
                     color: 'currentColor',
                     width: 18,
                     height: 18
                 })
             }),
-            (0, a.jsx)(E.Z, {
-                className: b.waveform,
-                waveform: _,
+            (0, i.jsx)(m.Z, {
+                className: v.waveform,
+                waveform: g,
                 currentTime: x,
                 duration: null != P ? P : 1,
-                playing: B,
-                played: V,
-                onDrag: ea,
-                onDragStart: er,
+                playing: U,
+                played: F,
+                onDrag: er,
+                onDragStart: en,
                 onDragEnd: ei
             }),
-            (0, a.jsx)(T, {
-                played: V,
+            (0, i.jsx)(I, {
+                played: F,
                 currentTime: x,
                 duration: P
             }),
-            (0, a.jsx)(h.Z, {
-                className: b.volumeButton,
-                iconClassName: b.volumeButtonIcon,
+            (0, i.jsx)(f.Z, {
+                className: v.volumeButton,
+                iconClassName: v.volumeButtonIcon,
                 iconColor: 'currentColor',
-                sliderWrapperClassName: b.volumeSlider,
-                muted: k,
-                value: (0, g.P)(W, 1),
+                sliderWrapperClassName: v.volumeSlider,
+                muted: M,
+                value: (0, h.P)(Y, 1),
                 minValue: 0,
                 maxValue: 1,
                 currentWindow: window,
-                onValueChange: et,
-                onToggleMute: en,
-                onVolumeShow: C,
+                onValueChange: ee,
+                onToggleMute: et,
+                onVolumeShow: A,
                 onVolumeHide: N
             }),
-            n
+            t
         ]
     });
 });

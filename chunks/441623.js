@@ -30,8 +30,8 @@ function E(e, t, n) {
 let v = 5,
     y = 15,
     I = 7,
-    b = 604800000,
-    T = 1209600000;
+    T = 604800000,
+    b = 1209600000;
 function S() {
     return {
         messageGiftIntentLastShownMap: {},
@@ -118,7 +118,7 @@ function V(e) {
 function j() {
     for (let e in A.messageGiftIntentLastShownMap) {
         let t = A.messageGiftIntentLastShownMap[e];
-        Date.now() - t > T && delete A.messageGiftIntentLastShownMap[e];
+        Date.now() - t > b && delete A.messageGiftIntentLastShownMap[e];
     }
 }
 function H() {
@@ -173,7 +173,7 @@ class q extends (i = l.ZP.PersistedStore) {
     canShowFriendsTabBadge() {
         var e;
         let t = null !== (e = A.friendsTabBadgeLastDismissedTime) && void 0 !== e ? e : 0;
-        return !(Date.now() - t <= b) && w();
+        return !(Date.now() - t <= T) && w();
     }
     getFriendAnniversaryYears(e) {
         let t = R[e];

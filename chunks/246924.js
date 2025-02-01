@@ -1,10 +1,10 @@
 e.exports = {
-    container: 'container_c2668b',
-    header: 'header_c2668b',
-    description: 'description_c2668b',
-    emptyChannelIcon: 'emptyChannelIcon_c2668b',
-    emptyChannelIconComponent: 'emptyChannelIconComponent_c2668b',
-    emptyChannelIconSvg: 'emptyChannelIconSvg_c2668b',
-    locked: 'locked_c2668b',
-    voiceChat: 'voiceChat_c2668b'
+    container: 'container__00de6',
+    header: 'header__00de6',
+    description: 'description__00de6',
+    emptyChannelIcon: 'emptyChannelIcon__00de6',
+    emptyChannelIconComponent: 'emptyChannelIconComponent__00de6',
+    emptyChannelIconSvg: 'emptyChannelIconSvg__00de6',
+    locked: 'locked__00de6',
+    voiceChat: 'voiceChat__00de6'
 };

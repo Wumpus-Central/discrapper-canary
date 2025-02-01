@@ -1,48 +1,48 @@
-Object.defineProperty(n, '__esModule', { value: !0 }), (n.Alpha = void 0);
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.Alpha = void 0);
 var i =
         Object.assign ||
         function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = arguments[n];
-                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         },
-    a = (function () {
-        function e(e, n) {
-            for (var r = 0; r < n.length; r++) {
-                var i = n[r];
+    r = (function () {
+        function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var i = t[n];
                 (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (n, r, i) {
-            return r && e(n.prototype, r), i && e(n, i), n;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })(),
-    o = r(192379),
-    s = f(o),
-    l = f(r(723184)),
-    u = d(r(121494)),
-    c = f(r(122024));
-function d(e) {
+    a = n(192379),
+    s = d(a),
+    o = d(n(723184)),
+    l = c(n(121494)),
+    u = d(n(122024));
+function c(e) {
     if (e && e.__esModule) return e;
-    var n = {};
-    if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
-    return (n.default = e), n;
+    var t = {};
+    if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+    return (t.default = e), t;
 }
-function f(e) {
+function d(e) {
     return e && e.__esModule ? e : { default: e };
 }
-function p(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function f(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function h(e, n) {
+function _(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function _(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function p(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -50,17 +50,17 @@ function _(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var m = (n.Alpha = (function (e) {
-    function n() {
-        p(this, n);
-        for (var e, r, i, a = arguments.length, o = Array(a), s = 0; s < a; s++) o[s] = arguments[s];
+var h = (t.Alpha = (function (e) {
+    function t() {
+        f(this, t);
+        for (var e, n, i, r = arguments.length, a = Array(r), s = 0; s < r; s++) a[s] = arguments[s];
         return (
-            (r = i = h(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(o)))),
+            (n = i = _(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a)))),
             (i.handleChange = function (e) {
-                var n = u.calculateChange(e, i.props.hsl, i.props.direction, i.props.a, i.container);
-                n && 'function' == typeof i.props.onChange && i.props.onChange(n, e);
+                var t = l.calculateChange(e, i.props.hsl, i.props.direction, i.props.a, i.container);
+                t && 'function' == typeof i.props.onChange && i.props.onChange(t, e);
             }),
             (i.handleMouseDown = function (e) {
                 i.handleChange(e), window.addEventListener('mousemove', i.handleChange), window.addEventListener('mouseup', i.handleMouseUp);
@@ -71,12 +71,12 @@ var m = (n.Alpha = (function (e) {
             (i.unbindEventListeners = function () {
                 window.removeEventListener('mousemove', i.handleChange), window.removeEventListener('mouseup', i.handleMouseUp);
             }),
-            h(i, r)
+            _(i, n)
         );
     }
     return (
-        _(n, e),
-        a(n, [
+        p(t, e),
+        r(t, [
             {
                 key: 'componentWillUnmount',
                 value: function () {
@@ -87,8 +87,8 @@ var m = (n.Alpha = (function (e) {
                 key: 'render',
                 value: function () {
                     var e = this,
-                        n = this.props.rgb,
-                        r = (0, l.default)(
+                        t = this.props.rgb,
+                        n = (0, o.default)(
                             {
                                 default: {
                                     alpha: {
@@ -102,7 +102,7 @@ var m = (n.Alpha = (function (e) {
                                     },
                                     gradient: {
                                         absolute: '0px 0px 0px 0px',
-                                        background: 'linear-gradient(to right, rgba(' + n.r + ',' + n.g + ',' + n.b + ', 0) 0%,\n           rgba(' + n.r + ',' + n.g + ',' + n.b + ', 1) 100%)',
+                                        background: 'linear-gradient(to right, rgba(' + t.r + ',' + t.g + ',' + t.b + ', 0) 0%,\n           rgba(' + t.r + ',' + t.g + ',' + t.b + ', 1) 100%)',
                                         boxShadow: this.props.shadow,
                                         borderRadius: this.props.radius
                                     },
@@ -113,7 +113,7 @@ var m = (n.Alpha = (function (e) {
                                     },
                                     pointer: {
                                         position: 'absolute',
-                                        left: 100 * n.a + '%'
+                                        left: 100 * t.a + '%'
                                     },
                                     slider: {
                                         width: '4px',
@@ -126,10 +126,10 @@ var m = (n.Alpha = (function (e) {
                                     }
                                 },
                                 vertical: {
-                                    gradient: { background: 'linear-gradient(to bottom, rgba(' + n.r + ',' + n.g + ',' + n.b + ', 0) 0%,\n           rgba(' + n.r + ',' + n.g + ',' + n.b + ', 1) 100%)' },
+                                    gradient: { background: 'linear-gradient(to bottom, rgba(' + t.r + ',' + t.g + ',' + t.b + ', 0) 0%,\n           rgba(' + t.r + ',' + t.g + ',' + t.b + ', 1) 100%)' },
                                     pointer: {
                                         left: 0,
-                                        top: 100 * n.a + '%'
+                                        top: 100 * t.a + '%'
                                     }
                                 },
                                 overwrite: i({}, this.props.style)
@@ -141,27 +141,27 @@ var m = (n.Alpha = (function (e) {
                         );
                     return s.default.createElement(
                         'div',
-                        { style: r.alpha },
-                        s.default.createElement('div', { style: r.checkboard }, s.default.createElement(c.default, { renderers: this.props.renderers })),
-                        s.default.createElement('div', { style: r.gradient }),
+                        { style: n.alpha },
+                        s.default.createElement('div', { style: n.checkboard }, s.default.createElement(u.default, { renderers: this.props.renderers })),
+                        s.default.createElement('div', { style: n.gradient }),
                         s.default.createElement(
                             'div',
                             {
-                                style: r.container,
-                                ref: function (n) {
-                                    return (e.container = n);
+                                style: n.container,
+                                ref: function (t) {
+                                    return (e.container = t);
                                 },
                                 onMouseDown: this.handleMouseDown,
                                 onTouchMove: this.handleChange,
                                 onTouchStart: this.handleChange
                             },
-                            s.default.createElement('div', { style: r.pointer }, this.props.pointer ? s.default.createElement(this.props.pointer, this.props) : s.default.createElement('div', { style: r.slider }))
+                            s.default.createElement('div', { style: n.pointer }, this.props.pointer ? s.default.createElement(this.props.pointer, this.props) : s.default.createElement('div', { style: n.slider }))
                         )
                     );
                 }
             }
         ]),
-        n
+        t
     );
-})(o.PureComponent || o.Component));
-n.default = m;
+})(a.PureComponent || a.Component));
+t.default = h;

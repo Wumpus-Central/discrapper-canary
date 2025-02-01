@@ -1,4 +1,4 @@
-r.exports = {
+e.exports = {
     IndexSizeError: {
         s: 'INDEX_SIZE_ERR',
         c: 1,

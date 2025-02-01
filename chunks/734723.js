@@ -1,7 +1,7 @@
 e.exports = {
-    rewardTileContainer: 'rewardTileContainer_eb16c5',
-    rewardTileSpacer: 'rewardTileSpacer_eb16c5',
-    rewardHighlightLogoCTA: 'rewardHighlightLogoCTA_eb16c5',
-    partnerBranding: 'partnerBranding_eb16c5',
-    rewardHighlightCTA: 'rewardHighlightCTA_eb16c5'
+    rewardTileContainer: 'rewardTileContainer__8a22c',
+    rewardTileSpacer: 'rewardTileSpacer__8a22c',
+    rewardHighlightLogoCTA: 'rewardHighlightLogoCTA__8a22c',
+    partnerBranding: 'partnerBranding__8a22c',
+    rewardHighlightCTA: 'rewardHighlightCTA__8a22c'
 };

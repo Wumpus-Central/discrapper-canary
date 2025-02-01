@@ -1,17 +1,17 @@
+n.d(t, { Z: () => m });
 var i,
     l,
-    r,
     a,
-    s = n(392711),
-    o = n.n(s),
-    c = n(442837),
-    d = n(570140),
-    u = n(430824);
-let h = null,
-    p = {};
-class m extends (a = c.ZP.Store) {
+    r = n(392711),
+    s = n.n(r),
+    o = n(442837),
+    c = n(570140),
+    d = n(430824);
+let u = null,
+    h = {};
+class p extends (a = o.ZP.Store) {
     initialize() {
-        this.waitFor(u.Z);
+        this.waitFor(d.Z);
     }
     getOptimalRegion() {
         var e;
@@ -24,7 +24,7 @@ class m extends (a = c.ZP.Store) {
                       return t;
                   })) && void 0 !== e
                 ? e
-                : o().sample(n)
+                : s().sample(n)
             : null;
     }
     getOptimalRegionId() {
@@ -35,7 +35,7 @@ class m extends (a = c.ZP.Store) {
     getRandomRegion() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
             t = this.getRegions(e);
-        return null != t ? o().sample(t) : null;
+        return null != t ? s().sample(t) : null;
     }
     getRandomRegionId() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
@@ -43,24 +43,24 @@ class m extends (a = c.ZP.Store) {
         return null != t ? t.id : null;
     }
     getRegions(e) {
-        return null != e ? p[e] : h;
+        return null != e ? h[e] : u;
     }
 }
-(r = 'RegionStore'),
-    (l = 'displayName') in (i = m)
-        ? Object.defineProperty(i, l, {
-              value: r,
+(l = 'RegionStore'),
+    (i = 'displayName') in p
+        ? Object.defineProperty(p, i, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[l] = r),
-    (t.Z = new m(d.Z, {
-        LOAD_REGIONS: function (e) {
-            let t = o().sortBy(e.regions, (e) => e.name);
-            null != e.guildId ? (p[e.guildId] = t) : (h = t);
-        },
-        GUILD_DELETE: function (e) {
-            delete p[e.guild.id];
-        }
-    }));
+        : (p[i] = l);
+let m = new p(c.Z, {
+    LOAD_REGIONS: function (e) {
+        let t = s().sortBy(e.regions, (e) => e.name);
+        null != e.guildId ? (h[e.guildId] = t) : (u = t);
+    },
+    GUILD_DELETE: function (e) {
+        delete h[e.guild.id];
+    }
+});

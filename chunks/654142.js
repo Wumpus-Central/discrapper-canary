@@ -1,4 +1,4 @@
-n(653041), n(47120), n(724458);
+n.d(t, { Z: () => f }), n(653041), n(47120), n(724458);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -6,27 +6,27 @@ var i = n(200651),
     o = n(749210),
     s = n(905423),
     c = n(664915),
-    u = n(888369),
-    d = n(430824),
+    d = n(888369),
+    u = n(430824),
     h = n(823379),
     p = n(179809),
     m = n(652376),
-    f = n(981631);
-t.Z = l.memo(function (e) {
-    let { folderNode: t, ...g } = e,
-        { id: v, name: C, color: x, children: I } = t,
-        _ = I.map((e) => e.id),
-        Z = (0, s.Z)((e) => e.guildId),
-        b = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(v)),
+    g = n(981631);
+let f = l.memo(function (e) {
+    let { folderNode: t, ...f } = e,
+        { id: _, name: v, color: x, children: C } = t,
+        Z = C.map((e) => e.id),
+        I = (0, s.Z)((e) => e.guildId),
+        b = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(_)),
         S = (function (e) {
             let t = e.children
                     .map((e) => {
                         let t = e.id,
-                            n = d.Z.getGuild(t);
+                            n = u.Z.getGuild(t);
                         return null != n ? n.name : null;
                     })
                     .filter(h.lm),
-                n = 2 * f.dYL,
+                n = 2 * g.dYL,
                 i = [];
             for (let e of t) (e.length < n || 0 === i.length) && (i.push(e), (n -= e.length));
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
@@ -34,16 +34,16 @@ t.Z = l.memo(function (e) {
         N = (0, m.Z)(t),
         {
             mentionCount: E,
-            isMentionLowImportance: y,
-            unread: j
-        } = (0, r.cj)([u.default], () => ({
-            mentionCount: _.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
-            isMentionLowImportance: _.every((e) => u.default.getIsMentionLowImportance(e)),
-            unread: _.some((e) => u.default.hasUnread(e))
+            isMentionLowImportance: j,
+            unread: y
+        } = (0, r.cj)([d.default], () => ({
+            mentionCount: Z.map((e) => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
+            isMentionLowImportance: Z.every((e) => d.default.getIsMentionLowImportance(e)),
+            unread: Z.some((e) => d.default.hasUnread(e))
         })),
-        T = l.useCallback(() => {
-            o.Z.toggleGuildFolderExpand(v);
-        }, [v]),
+        P = l.useCallback(() => {
+            o.Z.toggleGuildFolderExpand(_);
+        }, [_]),
         A = l.useCallback(
             (e) => {
                 (0, a.jW)(e, async () => {
@@ -51,26 +51,26 @@ t.Z = l.memo(function (e) {
                     return (t) =>
                         (0, i.jsx)(e, {
                             ...t,
-                            folderId: v,
-                            folderName: C,
+                            folderId: _,
+                            folderName: v,
                             folderColor: x,
-                            unread: j || E > 0
+                            unread: y || E > 0
                         });
                 });
             },
-            [v, C, x, j, E]
+            [_, v, x, y, E]
         );
     return (0, i.jsx)(p.Z, {
-        ...g,
+        ...f,
         folderNode: t,
         expanded: b,
-        selected: null != Z && _.includes(Z),
+        selected: null != I && Z.includes(I),
         mentionCount: E,
-        isMentionLowImportance: y,
-        unread: j,
+        isMentionLowImportance: j,
+        unread: y,
         mediaState: N,
         defaultFolderName: S,
-        onExpandCollapse: T,
+        onExpandCollapse: P,
         onContextMenu: A
     });
 });

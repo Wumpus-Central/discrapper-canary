@@ -1,18 +1,19 @@
-var r = (function () {
-    function e(e, n) {
-        (this.minDate = null), (this.maxDate = null), (this._result = []), (this.total = 0), (this.method = e), (this.args = n), 'between' === e ? ((this.maxDate = n.inc ? n.before : new Date(n.before.getTime() - 1)), (this.minDate = n.inc ? n.after : new Date(n.after.getTime() + 1))) : 'before' === e ? (this.maxDate = n.inc ? n.dt : new Date(n.dt.getTime() - 1)) : 'after' === e && (this.minDate = n.inc ? n.dt : new Date(n.dt.getTime() + 1));
+n.d(t, { Z: () => i });
+let i = (function () {
+    function e(e, t) {
+        (this.minDate = null), (this.maxDate = null), (this._result = []), (this.total = 0), (this.method = e), (this.args = t), 'between' === e ? ((this.maxDate = t.inc ? t.before : new Date(t.before.getTime() - 1)), (this.minDate = t.inc ? t.after : new Date(t.after.getTime() + 1))) : 'before' === e ? (this.maxDate = t.inc ? t.dt : new Date(t.dt.getTime() - 1)) : 'after' === e && (this.minDate = t.inc ? t.dt : new Date(t.dt.getTime() + 1));
     }
     return (
         (e.prototype.accept = function (e) {
             ++this.total;
-            var n = this.minDate && e < this.minDate,
-                r = this.maxDate && e > this.maxDate;
+            var t = this.minDate && e < this.minDate,
+                n = this.maxDate && e > this.maxDate;
             if ('between' === this.method) {
-                if (n) return !0;
-                if (r) return !1;
+                if (t) return !0;
+                if (n) return !1;
             } else if ('before' === this.method) {
-                if (r) return !1;
-            } else if ('after' === this.method) return !!n || (this.add(e), !1);
+                if (n) return !1;
+            } else if ('after' === this.method) return !!t || (this.add(e), !1);
             return this.add(e);
         }),
         (e.prototype.add = function (e) {
@@ -34,4 +35,3 @@ var r = (function () {
         e
     );
 })();
-n.Z = r;

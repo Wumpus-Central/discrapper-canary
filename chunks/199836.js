@@ -1,75 +1,75 @@
-e.r(n);
-var a = e(200651);
+e.d(n, { default: () => l });
+var i = e(200651);
 e(192379);
-var i = e(481060),
-    o = e(313201),
-    r = e(112612),
-    s = e(388032),
-    l = e(916819);
-n.default = function (t) {
-    let { onClose: n, transitionState: e, onSubmit: c } = t,
+var a = e(481060),
+    r = e(313201),
+    s = e(112612),
+    o = e(388032),
+    c = e(916819);
+let l = function (t) {
+    let { onClose: n, transitionState: e, onSubmit: l } = t,
         {
-            submitting: d,
-            errorMessage: u,
-            onSubmit: x
-        } = (0, r.Z)({
-            onSubmit: c,
+            submitting: x,
+            errorMessage: d,
+            onSubmit: u
+        } = (0, s.Z)({
+            onSubmit: l,
             onClose: n
         }),
-        f = (0, o.Dt)();
-    return (0, a.jsxs)(i.ModalRoot, {
-        className: l.container,
+        m = (0, r.Dt)();
+    return (0, i.jsxs)(a.Y0X, {
+        className: c.container,
         transitionState: e,
-        'aria-labelledby': f,
+        'aria-labelledby': m,
         children: [
-            (0, a.jsxs)(i.ModalContent, {
-                className: l.content,
+            (0, i.jsxs)(a.hzk, {
+                className: c.content,
                 children: [
-                    (0, a.jsx)(i.Heading, {
+                    (0, i.jsx)(a.X6q, {
                         variant: 'heading-md/semibold',
-                        id: f,
-                        children: s.intl.string(s.t.e1ekUl)
+                        id: m,
+                        children: o.intl.string(o.t.e1ekUl)
                     }),
-                    (0, a.jsx)(i.Text, {
-                        className: l.manualApprovalDescriptionText,
+                    (0, i.jsx)(a.Text, {
+                        className: c.manualApprovalDescriptionText,
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: s.intl.string(s.t.oW7b5O)
+                        children: o.intl.string(o.t.oW7b5O)
                     }),
-                    (0, a.jsx)(i.Text, {
+                    (0, i.jsx)(a.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: s.intl.format(s.t['9Zaa4u'], {})
+                        children: o.intl.format(o.t['9Zaa4u'], {})
                     }),
-                    null != u &&
-                        (0, a.jsx)(i.Text, {
-                            className: l.__invalid_errorText,
+                    null != d &&
+                        (0, i.jsx)(a.Text, {
+                            className: c.__invalid_errorText,
                             variant: 'text-xs/normal',
                             color: 'text-danger',
-                            children: u
+                            children: d
                         })
                 ]
             }),
-            (0, a.jsxs)(i.ModalFooter, {
+            (0, i.jsxs)(a.mzw, {
                 children: [
-                    (0, a.jsx)(i.Button, {
-                        className: l.actionButton,
-                        color: i.Button.Colors.BRAND,
-                        submitting: d,
-                        onClick: x,
-                        size: i.Button.Sizes.SMALL,
-                        children: (0, a.jsx)(i.Text, {
+                    (0, i.jsx)(a.zxk, {
+                        className: c.actionButton,
+                        color: a.zxk.Colors.BRAND,
+                        submitting: x,
+                        onClick: u,
+                        size: a.zxk.Sizes.SMALL,
+                        children: (0, i.jsx)(a.Text, {
                             variant: 'text-sm/semibold',
-                            children: s.intl.string(s.t['cY+Ooa'])
+                            children: o.intl.string(o.t['cY+Ooa'])
                         })
                     }),
-                    (0, a.jsx)(i.Button, {
-                        color: i.Button.Colors.PRIMARY,
+                    (0, i.jsx)(a.zxk, {
+                        color: a.zxk.Colors.PRIMARY,
                         onClick: n,
-                        size: i.Button.Sizes.SMALL,
-                        children: (0, a.jsx)(i.Text, {
+                        size: a.zxk.Sizes.SMALL,
+                        children: (0, i.jsx)(a.Text, {
                             variant: 'text-sm/semibold',
-                            children: s.intl.string(s.t['ETE/oK'])
+                            children: o.intl.string(o.t['ETE/oK'])
                         })
                     })
                 ]

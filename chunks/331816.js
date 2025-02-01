@@ -1,4 +1,4 @@
 e.exports = {
-    rerollButton: 'rerollButton_b9c7e6',
-    innerRerollButton: 'innerRerollButton_b9c7e6'
+    rerollButton: 'rerollButton__5d002',
+    innerRerollButton: 'innerRerollButton__5d002'
 };

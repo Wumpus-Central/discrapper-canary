@@ -1,7 +1,7 @@
 e.exports = {
-    listeningAlong: 'listeningAlong_d4626d',
-    party: 'party_d4626d',
-    overflow: 'overflow_d4626d',
-    icons: 'icons_d4626d',
-    avatar: 'avatar_d4626d'
+    listeningAlong: 'listeningAlong_e0cf27',
+    party: 'party_e0cf27',
+    overflow: 'overflow_e0cf27',
+    icons: 'icons_e0cf27',
+    avatar: 'avatar_e0cf27'
 };

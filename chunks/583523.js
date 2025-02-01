@@ -1,71 +1,71 @@
-var i = r(47120);
-var a = r(570140),
-    o = r(147913),
-    s = r(314897),
-    l = r(967368),
-    u = r(592125),
-    c = r(944486),
-    d = r(631768),
-    f = r(981631);
-function p(e, n, r) {
+n.d(t, { Z: () => E }), n(47120);
+var i = n(570140),
+    r = n(147913),
+    a = n(314897),
+    s = n(967368),
+    o = n(592125),
+    l = n(944486),
+    u = n(631768),
+    c = n(981631);
+function d(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function h() {
-    let e = c.Z.getVoiceChannelId(),
-        n = l.Z.bitrate;
+function f() {
+    let e = l.Z.getVoiceChannelId(),
+        t = s.Z.bitrate;
     if (null == e) return;
-    let r = u.Z.getChannel(e);
-    if (null != r)
-        n !== r.bitrate &&
-            a.Z.dispatch({
-                type: 'SET_CHANNEL_BITRATE',
-                bitrate: r.bitrate
-            });
+    let n = o.Z.getChannel(e);
+    null != n &&
+        t !== n.bitrate &&
+        i.Z.dispatch({
+            type: 'SET_CHANNEL_BITRATE',
+            bitrate: n.bitrate
+        });
 }
 function _() {
     var e;
-    let n = c.Z.getVoiceChannelId(),
-        r = d.Z.mode;
-    if (null == n) return;
-    let i = u.Z.getChannel(n);
-    if (null == i) return;
-    let o = null !== (e = i.videoQualityMode) && void 0 !== e ? e : f.Ucd.AUTO;
-    r !== o &&
-        a.Z.dispatch({
+    let t = l.Z.getVoiceChannelId(),
+        n = u.Z.mode;
+    if (null == t) return;
+    let r = o.Z.getChannel(t);
+    if (null == r) return;
+    let a = null !== (e = r.videoQualityMode) && void 0 !== e ? e : c.Ucd.AUTO;
+    n !== a &&
+        i.Z.dispatch({
             type: 'SET_CHANNEL_VIDEO_QUALITY_MODE',
-            mode: o
+            mode: a
         });
 }
-function m() {
-    h(), _();
+function p() {
+    f(), _();
 }
-function g(e) {
-    let { channels: n } = e;
-    for (let e of n) c.Z.getVoiceChannelId() === e.id && m();
+function h(e) {
+    let { channels: t } = e;
+    for (let e of t) l.Z.getVoiceChannelId() === e.id && p();
 }
-function E(e) {
-    let { voiceStates: n } = e;
-    n.forEach((e) => {
-        s.default.getSessionId() === e.sessionId && m();
+function m(e) {
+    let { voiceStates: t } = e;
+    t.forEach((e) => {
+        a.default.getSessionId() === e.sessionId && p();
     });
 }
-class v extends o.Z {
+class g extends r.Z {
     constructor(...e) {
         super(...e),
-            p(this, 'actions', {
-                CHANNEL_UPDATES: g,
-                VOICE_STATE_UPDATES: E
+            d(this, 'actions', {
+                CHANNEL_UPDATES: h,
+                VOICE_STATE_UPDATES: m
             });
     }
 }
-n.Z = new v();
+let E = new g();

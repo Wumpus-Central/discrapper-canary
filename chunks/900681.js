@@ -84,7 +84,7 @@ function I(e) {
                 })
             });
 }
-function b(e) {
+function T(e) {
     let { traits: t, traitsToHighlight: n, onInteraction: a } = e,
         l = r.useMemo(() => (null == n ? new Set() : new Set(n)), [n]),
         u = r.useCallback(
@@ -118,7 +118,7 @@ function b(e) {
         itemGapPx: 4
     });
 }
-function T(e) {
+function b(e) {
     let { hasPendingJoinRequest: t, atMaxMemberCapacity: n, isGuildMember: r } = e;
     return t
         ? (0, i.jsxs)('div', {
@@ -219,7 +219,7 @@ function S(e) {
                 style: Q,
                 children: [
                     X,
-                    (0, i.jsx)(T, {
+                    (0, i.jsx)(b, {
                         hasPendingJoinRequest: x,
                         atMaxMemberCapacity: L,
                         isGuildMember: h
@@ -320,7 +320,7 @@ function S(e) {
                         description: n.description,
                         expanded: d
                     }),
-                    (0, i.jsx)(b, {
+                    (0, i.jsx)(T, {
                         traits: J,
                         traitsToHighlight: S,
                         onInteraction: $('traits')

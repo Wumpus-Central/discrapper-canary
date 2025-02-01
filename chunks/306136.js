@@ -1,5 +1,5 @@
 e.exports = {
-    messageContentContainer: 'messageContentContainer_f93a69',
-    iconContainer: 'iconContainer_f93a69',
-    icon: 'icon_f93a69'
+    messageContentContainer: 'messageContentContainer__4ea49',
+    iconContainer: 'iconContainer__4ea49',
+    icon: 'icon__4ea49'
 };

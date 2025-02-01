@@ -1,19 +1,19 @@
-var i = r(67867),
-    a = r(447631),
-    o = r(688313),
-    s = r(729605),
-    l = r(65007),
-    u = r(256110);
+var i = n(67867),
+    r = n(447631),
+    a = n(688313),
+    s = n(729605),
+    o = n(65007),
+    l = n(256110);
 i(
     {
         target: 'Object',
         stat: !0,
-        sham: !a
+        sham: !r
     },
     {
         getOwnPropertyDescriptors: function (e) {
-            for (var n, r, i = s(e), a = l.f, c = o(i), d = {}, f = 0; c.length > f; ) void 0 !== (r = a(i, (n = c[f++]))) && u(d, n, r);
-            return d;
+            for (var t, n, i = s(e), r = o.f, u = a(i), c = {}, d = 0; u.length > d; ) void 0 !== (n = r(i, (t = u[d++]))) && l(c, t, n);
+            return c;
         }
     }
 );

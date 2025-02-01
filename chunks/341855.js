@@ -1,5 +1,5 @@
 e.exports = {
-    overlay: 'overlay_a8795b',
-    divider: 'divider_a8795b',
-    list: 'list_a8795b'
+    overlay: 'overlay__325ce',
+    divider: 'divider__325ce',
+    list: 'list__325ce'
 };

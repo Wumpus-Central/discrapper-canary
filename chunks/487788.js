@@ -1,4 +1,4 @@
 e.exports = {
-    raisedHandIcon: 'raisedHandIcon_de335c',
-    raisedHandCount: 'raisedHandCount_de335c'
+    raisedHandIcon: 'raisedHandIcon__15cd2',
+    raisedHandCount: 'raisedHandCount__15cd2'
 };

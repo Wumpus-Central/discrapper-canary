@@ -1,7 +1,7 @@
-n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var i = n(243814),
-    r = n(846027),
-    l = n(131951),
+    l = n(846027),
+    r = n(131951),
     a = n(13140),
     s = n(996106),
     o = n(452426),
@@ -13,7 +13,7 @@ function h(e) {
     if (null == t) throw new s.Z({ errorCode: d.lTL.INVALID_COMMAND }, 'No application.');
     return t;
 }
-t.Z = {
+let m = {
     [d.Etm.SET_VOICE_SETTINGS_2]: {
         scope: c.lH,
         validation: (e) =>
@@ -33,7 +33,7 @@ t.Z = {
                     args: { input_mode: n, self_mute: i, self_deaf: s }
                 } = e,
                 o = h(t);
-            null != n && r.Z.setMode(n.type, { shortcut: (0, a.Kd)(n.shortcut) }, o), null != i && i !== l.Z.isSelfMute(o) && r.Z.toggleSelfMute({ context: o }), null != s && s !== l.Z.isSelfDeaf(o) && r.Z.toggleSelfDeaf({ context: o });
+            null != n && l.Z.setMode(n.type, { shortcut: (0, a.Kd)(n.shortcut) }, o), null != i && i !== r.Z.isSelfMute(o) && l.Z.toggleSelfMute({ context: o }), null != s && s !== r.Z.isSelfDeaf(o) && l.Z.toggleSelfDeaf({ context: o });
         }
     },
     [d.Etm.SET_USER_VOICE_SETTINGS_2]: {
@@ -52,7 +52,7 @@ t.Z = {
                     args: { user_id: n, mute: i, volume: a }
                 } = e,
                 s = h(t);
-            null != i && i !== l.Z.isLocalMute(n, s) && r.Z.toggleLocalMute(n, s), null != a && r.Z.setLocalVolume(n, a, s);
+            null != i && i !== r.Z.isLocalMute(n, s) && l.Z.toggleLocalMute(n, s), null != a && l.Z.setLocalVolume(n, a, s);
         }
     },
     [d.Etm.PUSH_TO_TALK]: {
@@ -64,7 +64,7 @@ t.Z = {
             let {
                 args: { active: t }
             } = e;
-            if (l.Z.getMode(u.Yn.DEFAULT) === d.pM4.PUSH_TO_TALK) l.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(t), u.Yn.DEFAULT);
+            r.Z.getMode(u.Yn.DEFAULT) === d.pM4.PUSH_TO_TALK && r.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(t), u.Yn.DEFAULT);
         }
     }
 };

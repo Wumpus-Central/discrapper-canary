@@ -1,5 +1,5 @@
 e.exports = {
-    header: 'header_c96274',
-    title: 'title_c96274',
-    emptyState: 'emptyState_c96274'
+    header: 'header__94b08',
+    title: 'title__94b08',
+    emptyState: 'emptyState__94b08'
 };

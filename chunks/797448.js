@@ -1,7 +1,7 @@
 e.exports = {
-    code: 'code_e9fe13',
-    chunk: 'chunk_e9fe13',
-    divider: 'divider_e9fe13',
-    codeText: 'codeText_e9fe13',
-    loading: 'loading_e9fe13'
+    code: 'code__1a1f5',
+    chunk: 'chunk__1a1f5',
+    divider: 'divider__1a1f5',
+    codeText: 'codeText__1a1f5',
+    loading: 'loading__1a1f5'
 };

@@ -1,6 +1,6 @@
-t.exports = {
-    spacing: 'spacing_ce1366',
-    card: 'card_ce1366 spacing_ce1366',
-    error: 'error_ce1366',
-    warning: 'warning_ce1366'
+e.exports = {
+    spacing: 'spacing_b3ae06',
+    card: 'card_b3ae06 spacing_b3ae06',
+    error: 'error_b3ae06',
+    warning: 'warning_b3ae06'
 };

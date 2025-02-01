@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(373228),
     y = n(378233),
     I = n(419922),
-    b = n(981631),
-    T = n(957825),
+    T = n(981631),
+    b = n(957825),
     S = n(388032),
     A = n(944727);
 let N = (0, m.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
@@ -143,9 +143,9 @@ let N = (0, m.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                                 }),
                                                 onClick: () => {
                                                     P.type === v.Ih.PACK &&
-                                                        h.default.track(b.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                                                        h.default.track(T.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                                                             location: null == _ ? void 0 : _.location,
-                                                            tab: T.X1.STICKER,
+                                                            tab: b.X1.STICKER,
                                                             sticker_pack_id: P.id,
                                                             guild_id: f
                                                         }),
@@ -214,7 +214,7 @@ let N = (0, m.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
         let {
                 renderCategoryListItem: y,
                 rowHeight: I,
-                onScroll: b
+                onScroll: T
             } = k({
                 activeIndex: c,
                 stickerPickerCategories: f,
@@ -222,7 +222,7 @@ let N = (0, m.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                 firstStandardStickerCategoryOffsetTop: h,
                 setShouldRenderShortcut: u
             }),
-            T = r.useCallback(
+            b = r.useCallback(
                 (e) => {
                     var t;
                     e(p), null === (t = a.current) || void 0 === t || t.scrollTo(h);
@@ -235,7 +235,7 @@ let N = (0, m.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
             expressionsListRef: t,
             store: d.ZN,
             listPadding: L,
-            onScroll: b,
+            onScroll: T,
             renderCategoryListItem: y,
             rowCount: f.length,
             categories: f,
@@ -245,7 +245,7 @@ let N = (0, m.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                 o &&
                 (0, i.jsx)(l.P3F, {
                     className: s()(A.standardStickerShortcut, { [A.invisibleShortcut]: !o }),
-                    onClick: () => T(e),
+                    onClick: () => b(e),
                     children: (0, i.jsx)(l.SlE, {
                         size: 'md',
                         color: 'currentColor'

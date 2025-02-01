@@ -1,28 +1,28 @@
-var i = r(687249),
-    a = r(779518),
-    o = 1,
+var i = n(687249),
+    r = n(779518),
+    a = 1,
     s = 2;
-function l(e, n, r, l) {
-    var u = r.length,
-        c = u,
-        d = !l;
-    if (null == e) return !c;
-    for (e = Object(e); u--; ) {
-        var f = r[u];
-        if (d && f[2] ? f[1] !== e[f[0]] : !(f[0] in e)) return !1;
+function o(e, t, n, o) {
+    var l = n.length,
+        u = l,
+        c = !o;
+    if (null == e) return !u;
+    for (e = Object(e); l--; ) {
+        var d = n[l];
+        if (c && d[2] ? d[1] !== e[d[0]] : !(d[0] in e)) return !1;
     }
-    for (; ++u < c; ) {
-        var p = (f = r[u])[0],
-            h = e[p],
-            _ = f[1];
-        if (d && f[2]) {
-            if (void 0 === h && !(p in e)) return !1;
+    for (; ++l < u; ) {
+        var f = (d = n[l])[0],
+            _ = e[f],
+            p = d[1];
+        if (c && d[2]) {
+            if (void 0 === _ && !(f in e)) return !1;
         } else {
-            var m = new i();
-            if (l) var g = l(h, _, p, e, n, m);
-            if (!(void 0 === g ? a(_, h, o | s, l, m) : g)) return !1;
+            var h = new i();
+            if (o) var m = o(_, p, f, e, t, h);
+            if (!(void 0 === m ? r(p, _, a | s, o, h) : m)) return !1;
         }
     }
     return !0;
 }
-e.exports = l;
+e.exports = o;

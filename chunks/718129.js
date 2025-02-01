@@ -1,18 +1,18 @@
-var i = r(927066)('%Reflect.construct%', !0),
-    a = r(751564);
+var i = n(927066)('%Reflect.construct%', !0),
+    r = n(751564);
 try {
-    a({}, '', {
+    r({}, '', {
         '[[Get]]': function () {}
     });
 } catch (e) {
-    a = null;
+    r = null;
 }
-if (a && i) {
-    var o = {},
+if (r && i) {
+    var a = {},
         s = {};
-    a(s, 'length', {
+    r(s, 'length', {
         '[[Get]]': function () {
-            throw o;
+            throw a;
         },
         '[[Enumerable]]': !0
     }),
@@ -20,7 +20,7 @@ if (a && i) {
             try {
                 i(e, s);
             } catch (e) {
-                return e === o;
+                return e === a;
             }
         });
 } else

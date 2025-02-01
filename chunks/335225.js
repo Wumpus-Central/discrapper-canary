@@ -1,51 +1,51 @@
-var e = n(566885),
-    o = n(581031),
-    i = n(470592),
-    u = n(339718),
-    f = n(49693),
-    a = n(29016),
-    c = o([].push),
-    s = function (t) {
-        var r = 1 === t,
-            n = 2 === t,
-            o = 3 === t,
-            s = 4 === t,
-            y = 6 === t,
-            p = 7 === t,
-            h = 5 === t || y;
-        return function (v, d, g, l) {
-            for (var A, w, x = u(v), b = i(x), T = e(d, g), E = f(b), I = 0, R = l || a, m = r ? R(v, E) : n || p ? R(v, 0) : void 0; E > I; I++)
-                if ((h || I in b) && ((w = T((A = b[I]), I, x)), t)) {
-                    if (r) m[I] = w;
-                    else if (w)
-                        switch (t) {
+var i = n(566885),
+    r = n(581031),
+    a = n(470592),
+    s = n(339718),
+    o = n(49693),
+    l = n(29016),
+    u = r([].push),
+    c = function (e) {
+        var t = 1 === e,
+            n = 2 === e,
+            r = 3 === e,
+            c = 4 === e,
+            d = 6 === e,
+            f = 7 === e,
+            _ = 5 === e || d;
+        return function (p, h, m, g) {
+            for (var E, v, y = s(p), I = a(y), T = i(h, m), b = o(I), S = 0, A = g || l, N = t ? A(p, b) : n || f ? A(p, 0) : void 0; b > S; S++)
+                if ((_ || S in I) && ((v = T((E = I[S]), S, y)), e)) {
+                    if (t) N[S] = v;
+                    else if (v)
+                        switch (e) {
                             case 3:
                                 return !0;
                             case 5:
-                                return A;
+                                return E;
                             case 6:
-                                return I;
+                                return S;
                             case 2:
-                                c(m, A);
+                                u(N, E);
                         }
                     else
-                        switch (t) {
+                        switch (e) {
                             case 4:
                                 return !1;
                             case 7:
-                                c(m, A);
+                                u(N, E);
                         }
                 }
-            return y ? -1 : o || s ? s : m;
+            return d ? -1 : r || c ? c : N;
         };
     };
-t.exports = {
-    forEach: s(0),
-    map: s(1),
-    filter: s(2),
-    some: s(3),
-    every: s(4),
-    find: s(5),
-    findIndex: s(6),
-    filterReject: s(7)
+e.exports = {
+    forEach: c(0),
+    map: c(1),
+    filter: c(2),
+    some: c(3),
+    every: c(4),
+    find: c(5),
+    findIndex: c(6),
+    filterReject: c(7)
 };

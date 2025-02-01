@@ -1,6 +1,6 @@
 n.d(t, {
     U5: () => I,
-    ZP: () => T,
+    ZP: () => b,
     pp: () => y
 }),
     n(47120);
@@ -70,7 +70,7 @@ function I(e) {
         i = _.Z.getStageInstanceByChannel(e);
     return t && null == i && !n;
 }
-class b extends r.Z {
+class T extends r.Z {
     handleVoiceChannelSelect(e) {
         let { channelId: t } = e;
         if (null != t) {
@@ -112,4 +112,4 @@ class b extends r.Z {
             });
     }
 }
-let T = new b();
+let b = new T();

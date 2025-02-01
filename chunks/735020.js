@@ -1,35 +1,35 @@
+n.d(t, { Z: () => v }), n(724458);
 var i,
-    a = r(724458);
-var o = r(442837),
-    s = r(570140),
-    l = r(786761),
-    u = r(651530),
-    c = r(247206);
-function d(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(786761),
+    o = n(651530),
+    l = n(247206);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let f = {};
-function p(e) {
+let c = {};
+function d(e) {
     return ''.concat(e.channel_id, ':').concat(e.id);
 }
-function h(e) {
+function f(e) {
     return (
-        !!(0, u.Kh)() &&
+        !!(0, o.Kh)() &&
         null != e.messages &&
-        ((f = e.messages.reduce(
-            (e, n) => (
-                n.forEach((n) => {
-                    e[p(n)] = (0, l.e5)(n);
+        ((c = e.messages.reduce(
+            (e, t) => (
+                t.forEach((t) => {
+                    e[d(t)] = (0, s.e5)(t);
                 }),
                 e
             ),
@@ -39,53 +39,53 @@ function h(e) {
     );
 }
 function _(e) {
-    let { message: n } = e;
-    if (!(0, u.Kh)() || null == n.id || null == n.channel_id) return !1;
-    let r = p(n),
-        i = f[r];
+    let { message: t } = e;
+    if (!(0, o.Kh)() || null == t.id || null == t.channel_id) return !1;
+    let n = d(t),
+        i = c[n];
     return (
         null != i &&
-        ((f[r] = (0, l.wi)(i, {
-            attachments: n.attachments,
-            embeds: n.embeds
+        ((c[n] = (0, s.wi)(i, {
+            attachments: t.attachments,
+            embeds: t.embeds
         })),
         !0)
     );
 }
-function m(e) {
-    let { messageId: n, channelId: r } = e,
-        i = p({
-            id: n,
-            channel_id: r
+function p(e) {
+    let { messageId: t, channelId: n } = e,
+        i = d({
+            id: t,
+            channel_id: n
         }),
-        a = f[i];
-    null != a && (f[i] = (0, c.Cm)(a));
+        r = c[i];
+    null != r && (c[i] = (0, l.Cm)(r));
+}
+function h() {
+    g();
+}
+function m() {
+    g();
 }
 function g() {
-    v();
+    c = {};
 }
-function E() {
-    v();
-}
-function v() {
-    f = {};
-}
-class y extends (i = o.ZP.Store) {
-    getMessage(e, n) {
-        return f[
-            p({
+class E extends (i = r.ZP.Store) {
+    getMessage(e, t) {
+        return c[
+            d({
                 id: e,
-                channel_id: n
+                channel_id: t
             })
         ];
     }
 }
-d(y, 'displayName', 'SearchMessageStore'),
-    (n.Z = new y(s.Z, {
-        SEARCH_FINISH: h,
-        MOD_VIEW_SEARCH_FINISH: h,
-        MESSAGE_UPDATE: _,
-        LOGOUT: g,
-        CONNECTION_OPEN: E,
-        MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: m
-    }));
+u(E, 'displayName', 'SearchMessageStore');
+let v = new E(a.Z, {
+    SEARCH_FINISH: f,
+    MOD_VIEW_SEARCH_FINISH: f,
+    MESSAGE_UPDATE: _,
+    LOGOUT: h,
+    CONNECTION_OPEN: m,
+    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: p
+});

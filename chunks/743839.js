@@ -1,4 +1,4 @@
-e.exports = {
-    message: 'message_cac369',
-    details: 'details_cac369'
+s.exports = {
+    message: 'message_f87c73',
+    details: 'details_f87c73'
 };

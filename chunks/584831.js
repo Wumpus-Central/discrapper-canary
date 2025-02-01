@@ -1,58 +1,58 @@
 var i,
+    r,
     a,
-    o,
     s,
-    l,
-    u = r(668530),
-    c = r(476508),
-    d = r(65007).f,
-    f = r(62691).set,
-    p = r(6938),
-    h = r(378636),
-    _ = r(192006),
-    m = r(325435),
-    g = r(42433),
-    E = u.MutationObserver || u.WebKitMutationObserver,
-    v = u.document,
-    y = u.process,
-    b = u.Promise,
-    I = d(u, 'queueMicrotask'),
+    o,
+    l = n(668530),
+    u = n(476508),
+    c = n(65007).f,
+    d = n(62691).set,
+    f = n(6938),
+    _ = n(378636),
+    p = n(192006),
+    h = n(325435),
+    m = n(42433),
+    g = l.MutationObserver || l.WebKitMutationObserver,
+    E = l.document,
+    v = l.process,
+    y = l.Promise,
+    I = c(l, 'queueMicrotask'),
     T = I && I.value;
 if (!T) {
-    var S = new p(),
-        A = function () {
-            var e, n;
-            for (g && (e = y.domain) && e.exit(); (n = S.get()); )
+    var b = new f(),
+        S = function () {
+            var e, t;
+            for (m && (e = v.domain) && e.exit(); (t = b.get()); )
                 try {
-                    n();
+                    t();
                 } catch (e) {
-                    throw (S.head && i(), e);
+                    throw (b.head && i(), e);
                 }
             e && e.enter();
         };
-    h || g || m || !E || !v
-        ? !_ && b && b.resolve
-            ? (((s = b.resolve(void 0)).constructor = b),
-              (l = c(s.then, s)),
+    _ || m || h || !g || !E
+        ? !p && y && y.resolve
+            ? (((s = y.resolve(void 0)).constructor = y),
+              (o = u(s.then, s)),
               (i = function () {
-                  l(A);
+                  o(S);
               }))
-            : g
+            : m
               ? (i = function () {
-                    y.nextTick(A);
+                    v.nextTick(S);
                 })
-              : ((f = c(f, u)),
+              : ((d = u(d, l)),
                 (i = function () {
-                    f(A);
+                    d(S);
                 }))
-        : ((a = !0),
-          (o = v.createTextNode('')),
-          new E(A).observe(o, { characterData: !0 }),
+        : ((r = !0),
+          (a = E.createTextNode('')),
+          new g(S).observe(a, { characterData: !0 }),
           (i = function () {
-              o.data = a = !a;
+              a.data = r = !r;
           })),
         (T = function (e) {
-            !S.head && i(), S.add(e);
+            b.head || i(), b.add(e);
         });
 }
 e.exports = T;

@@ -1,7 +1,7 @@
 n.d(t, {
     B5: () => y,
     PI: () => E,
-    WD: () => T,
+    WD: () => b,
     aM: () => S,
     ui: () => A
 }),
@@ -178,14 +178,14 @@ let y = (e, t) => {
             n = (0, o.Z)(t);
         return t !== n;
     },
-    b = r.createContext(void 0);
-function T() {
-    let e = r.useContext(b);
+    T = r.createContext(void 0);
+function b() {
+    let e = r.useContext(T);
     return null == e ? void 0 : e.current;
 }
 function S() {
     var e;
-    return null === (e = T()) || void 0 === e ? void 0 : e.getId();
+    return null === (e = b()) || void 0 === e ? void 0 : e.getId();
 }
 function A(e) {
     let { visible: t, visibleChanged: n, reference: a, focused: s, focusedChanged: o, impression: l } = e,
@@ -216,7 +216,7 @@ function A(e) {
                     })),
                     l.current.start());
         }, [s, t, l, o, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u, e.minViewTimeSeconds, f]),
-        (0, i.jsx)(b.Provider, {
+        (0, i.jsx)(T.Provider, {
             value: l,
             children: e.children(a, l)
         })

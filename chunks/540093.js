@@ -1,5 +1,5 @@
 e.exports = {
-    clickableSticker: 'clickableSticker_a1debe',
-    stickerName: 'stickerName_a1debe',
-    stickerIcon: 'stickerIcon_a1debe'
+    clickableSticker: 'clickableSticker_abd7a8',
+    stickerName: 'stickerName_abd7a8',
+    stickerIcon: 'stickerIcon_abd7a8'
 };

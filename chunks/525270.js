@@ -1,10 +1,10 @@
 e.exports = {
-    scroller: 'scroller_fb2f1c',
-    voiceUsers: 'voiceUsers_fb2f1c',
-    expandButton: 'expandButton_fb2f1c',
-    avatarContainer: 'avatarContainer_fb2f1c',
-    avatar: 'avatar_fb2f1c',
-    speaking: 'speaking_fb2f1c',
-    avatarIconOverlay: 'avatarIconOverlay_fb2f1c',
-    avatarIconRed: 'avatarIconRed_fb2f1c'
+    scroller: 'scroller__68617',
+    voiceUsers: 'voiceUsers__68617',
+    expandButton: 'expandButton__68617',
+    avatarContainer: 'avatarContainer__68617',
+    avatar: 'avatar__68617',
+    speaking: 'speaking__68617',
+    avatarIconOverlay: 'avatarIconOverlay__68617',
+    avatarIconRed: 'avatarIconRed__68617'
 };

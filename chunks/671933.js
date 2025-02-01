@@ -1,7 +1,7 @@
-e.exports = {
-    recurrences: 'recurrences_cf6131',
-    heading: 'heading_cf6131',
-    scroller: 'scroller_cf6131',
-    showScroller: 'showScroller_cf6131',
-    button: 'button_cf6131'
+n.exports = {
+    recurrences: 'recurrences__4fb8c',
+    heading: 'heading__4fb8c',
+    scroller: 'scroller__4fb8c',
+    showScroller: 'showScroller__4fb8c',
+    button: 'button__4fb8c'
 };

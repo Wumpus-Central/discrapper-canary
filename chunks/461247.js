@@ -1,11 +1,11 @@
 t.exports = {
-    buttonContainer: 'buttonContainer_b00055',
-    button: 'button_b00055',
-    buttonInner: 'buttonInner_b00055',
-    buttonIcon: 'buttonIcon_b00055',
-    body: 'body_b00055',
-    textContainer: 'textContainer_b00055',
-    description: 'description_b00055',
-    heroImage: 'heroImage_b00055',
-    safetyTips: 'safetyTips_b00055'
+    buttonContainer: 'buttonContainer__3e6b4',
+    button: 'button__3e6b4',
+    buttonInner: 'buttonInner__3e6b4',
+    buttonIcon: 'buttonIcon__3e6b4',
+    body: 'body__3e6b4',
+    textContainer: 'textContainer__3e6b4',
+    description: 'description__3e6b4',
+    heroImage: 'heroImage__3e6b4',
+    safetyTips: 'safetyTips__3e6b4'
 };

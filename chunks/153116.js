@@ -1,10 +1,10 @@
 e.exports = {
-    header: 'header_bc96af',
-    closeButton: 'closeButton_bc96af',
-    templatesList: 'templatesList_bc96af',
-    title: 'title_bc96af',
-    subtitle: 'subtitle_bc96af',
-    optionHeader: 'optionHeader_bc96af',
-    footer: 'footer_bc96af',
-    backButton: 'backButton_bc96af'
+    header: 'header__1f657',
+    closeButton: 'closeButton__1f657',
+    templatesList: 'templatesList__1f657',
+    title: 'title__1f657',
+    subtitle: 'subtitle__1f657',
+    optionHeader: 'optionHeader__1f657',
+    footer: 'footer__1f657',
+    backButton: 'backButton__1f657'
 };

@@ -51,19 +51,19 @@ function y() {
 function I() {
     (g = []), (h = !1);
 }
-function b() {
+function T() {
     let e = null;
     for (let t of g) (null == e || new Date(t.startDate) > new Date(e)) && (e = t.startDate);
     return e;
 }
-function T() {
+function b() {
     if (0 === g.length) return !1;
-    let e = b();
+    let e = T();
     null != e && (E = e);
 }
 function S() {
     if (0 === g.length) return !1;
-    let e = b();
+    let e = T();
     null != e && ((E = e), (u.lastSeenOutboundPromotionStartDate = e));
 }
 function A() {
@@ -119,7 +119,7 @@ let R = new C(a.Z, {
     ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: p,
     ACTIVE_BOGO_PROMOTION_FETCH: f,
     ACTIVE_BOGO_PROMOTION_FETCH_FAIL: _,
-    OUTBOUND_PROMOTION_NOTICE_DISMISS: T,
+    OUTBOUND_PROMOTION_NOTICE_DISMISS: b,
     OUTBOUND_PROMOTIONS_SEEN: S,
     LOGOUT: A
 });

@@ -1,12 +1,12 @@
 e.exports = {
-    header: 'header_f0cd33',
-    headerTitle: 'headerTitle_f0cd33',
-    headerTabs: 'headerTabs_f0cd33',
-    tabBar: 'tabBar_f0cd33',
-    tab: 'tab_f0cd33',
-    inboxIcon: 'inboxIcon_f0cd33',
-    inboxTitle: 'inboxTitle_f0cd33',
-    controls: 'controls_f0cd33',
-    controlButton: 'controlButton_f0cd33',
-    iconBadge: 'iconBadge_f0cd33'
+    header: 'header_ab6641',
+    headerTitle: 'headerTitle_ab6641',
+    headerTabs: 'headerTabs_ab6641',
+    tabBar: 'tabBar_ab6641',
+    tab: 'tab_ab6641',
+    inboxIcon: 'inboxIcon_ab6641',
+    inboxTitle: 'inboxTitle_ab6641',
+    controls: 'controls_ab6641',
+    controlButton: 'controlButton_ab6641',
+    iconBadge: 'iconBadge_ab6641'
 };

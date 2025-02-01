@@ -1,6 +1,6 @@
 e.exports = {
-    clickZoneDebugContainer: 'clickZoneDebugContainer_afd0a0',
-    clickZone: 'clickZone_afd0a0',
-    clickBackground: 'clickBackground_afd0a0',
-    clickable: 'clickable_afd0a0'
+    clickZone: 'clickZone__29c87',
+    clickZoneDebugContainer: 'clickZoneDebugContainer__29c87',
+    clickBackground: 'clickBackground__29c87',
+    clickable: 'clickable__29c87'
 };

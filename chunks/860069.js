@@ -1,5 +1,5 @@
 e.exports = {
-    soundboardColumn: 'soundboardColumn_c9d62c',
-    soundboardRow: 'soundboardRow_c9d62c',
-    refresh: 'refresh_c9d62c'
+    soundboardColumn: 'soundboardColumn__16280',
+    soundboardRow: 'soundboardRow__16280',
+    refresh: 'refresh__16280'
 };

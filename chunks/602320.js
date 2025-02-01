@@ -1,61 +1,61 @@
-t.r(n);
-var l = t(200651);
-t(192379);
-var i = t(442837),
-    a = t(481060),
-    s = t(239091),
-    d = t(995532),
-    o = t(388032);
-n.default = (e) => {
-    var n;
-    let { guildId: r, welcomeChannel: c, onEdit: u, onChannelReorder: h, setShowConfirmModal: b, index: g, onSelect: p } = e,
-        x = (0, i.e7)([d.Z], () => d.Z.get(r)),
-        m = (null !== (n = null == x ? void 0 : x.welcome_channels) && void 0 !== n ? n : []).length - 1,
-        v = (e) => {
-            h(c, e, !0);
+n.d(t, { default: () => o });
+var l = n(200651);
+n(192379);
+var i = n(442837),
+    s = n(481060),
+    a = n(239091),
+    d = n(995532),
+    c = n(388032);
+let o = (e) => {
+    var t;
+    let { guildId: o, welcomeChannel: r, onEdit: h, onChannelReorder: u, setShowConfirmModal: b, index: g, onSelect: v } = e,
+        x = (0, i.e7)([d.Z], () => d.Z.get(o)),
+        w = (null !== (t = null == x ? void 0 : x.welcome_channels) && void 0 !== t ? t : []).length - 1,
+        j = (e) => {
+            u(r, e, !0);
         };
-    return (0, l.jsxs)(a.Menu, {
+    return (0, l.jsxs)(s.v2r, {
         navId: 'welcome-settings-context',
-        'aria-label': o.intl.string(o.t.ogxXGh),
-        onClose: s.Zy,
-        onSelect: p,
+        'aria-label': c.intl.string(c.t.ogxXGh),
+        onClose: a.Zy,
+        onSelect: v,
         children: [
-            (0, l.jsxs)(a.MenuGroup, {
+            (0, l.jsxs)(s.kSQ, {
                 children: [
-                    (0, l.jsx)(a.MenuItem, {
+                    (0, l.jsx)(s.sNh, {
                         id: 'move-up',
-                        label: o.intl.string(o.t['4UBqwM']),
+                        label: c.intl.string(c.t['4UBqwM']),
                         disabled: g <= 0,
-                        action: () => v(g - 1)
+                        action: () => j(g - 1)
                     }),
-                    (0, l.jsx)(a.MenuItem, {
+                    (0, l.jsx)(s.sNh, {
                         id: 'move-down',
-                        label: o.intl.string(o.t.b73Gwc),
-                        disabled: g > m,
-                        action: () => v(g + 1)
+                        label: c.intl.string(c.t.b73Gwc),
+                        disabled: g > w,
+                        action: () => j(g + 1)
                     })
                 ]
             }),
-            (0, l.jsxs)(a.MenuGroup, {
+            (0, l.jsxs)(s.kSQ, {
                 children: [
-                    (0, l.jsx)(a.MenuItem, {
+                    (0, l.jsx)(s.sNh, {
                         id: 'edit',
-                        label: o.intl.string(o.t.u5DUrK),
+                        label: c.intl.string(c.t.u5DUrK),
                         action: () =>
-                            (0, a.openModalLazy)(async () => {
-                                let { default: e } = await t.e('39143').then(t.bind(t, 737868));
-                                return (n) =>
+                            (0, s.ZDy)(async () => {
+                                let { default: e } = await n.e('39143').then(n.bind(n, 737868));
+                                return (t) =>
                                     (0, l.jsx)(e, {
-                                        ...n,
-                                        welcomeChannel: c,
-                                        guildId: r,
-                                        onSave: u
+                                        ...t,
+                                        welcomeChannel: r,
+                                        guildId: o,
+                                        onSave: h
                                     });
                             })
                     }),
-                    (0, l.jsx)(a.MenuItem, {
+                    (0, l.jsx)(s.sNh, {
                         id: 'delete',
-                        label: o.intl.string(o.t.JYBc3N),
+                        label: c.intl.string(c.t.JYBc3N),
                         action: () => b(!0),
                         color: 'danger'
                     })

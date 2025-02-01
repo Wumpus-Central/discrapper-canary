@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('lo', {
         months: 'ມັງກອນ_ກຸມພາ_ມີນາ_ເມສາ_ພຶດສະພາ_ມິຖຸນາ_ກໍລະກົດ_ສິງຫາ_ກັນຍາ_ຕຸລາ_ພະຈິກ_ທັນວາ'.split('_'),
@@ -20,7 +20,7 @@
         isPM: function (e) {
             return 'ຕອນແລງ' === e;
         },
-        meridiem: function (e, n, r) {
+        meridiem: function (e, t, n) {
             return e < 12 ? 'ຕອນເຊົ້າ' : 'ຕອນແລງ';
         },
         calendar: {

@@ -1,8 +1,8 @@
 e.exports = {
-    body: 'body_a78d93',
-    cancellationHeader: 'cancellationHeader_a78d93',
-    whatYouLoseButtonContainer: 'whatYouLoseButtonContainer_a78d93',
-    discountAppliedBody: 'discountAppliedBody_a78d93',
-    bodyString: 'bodyString_a78d93',
-    nitroIcon: 'nitroIcon_a78d93'
+    body: 'body__22665',
+    cancellationHeader: 'cancellationHeader__22665',
+    whatYouLoseButtonContainer: 'whatYouLoseButtonContainer__22665',
+    discountAppliedBody: 'discountAppliedBody__22665',
+    bodyString: 'bodyString__22665',
+    nitroIcon: 'nitroIcon__22665'
 };

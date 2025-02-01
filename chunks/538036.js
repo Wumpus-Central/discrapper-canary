@@ -1,41 +1,41 @@
-var i = r(653041);
-var a = r(981631);
-let o = [],
-    s = !1;
-function l() {
+n.d(t, { Z: () => f }), n(653041);
+var i = n(981631);
+let r = [],
+    a = !1;
+function s() {
     let e = window.navigator.connection;
     return null == e
         ? {
-              type: a.IWh.UNKNOWN,
-              effectiveSpeed: a.IyS.UNKNOWN
+              type: i.IWh.UNKNOWN,
+              effectiveSpeed: i.IyS.UNKNOWN
           }
         : {
-              type: null != e.type ? e.type : a.IWh.UNKNOWN,
+              type: null != e.type ? e.type : i.IWh.UNKNOWN,
               effectiveSpeed: e.effectiveType
           };
 }
+function o() {
+    if (!0 === a) return;
+    let e = window.navigator.connection;
+    null != e && ((a = !0), e.addEventListener('change', u));
+}
+function l() {
+    if (!1 === a) return;
+    let e = window.navigator.connection;
+    null != e && 0 === r.length && null != e && (e.removeEventListener('change', u), (a = !1));
+}
 function u() {
-    if (!0 === s) return;
-    let e = window.navigator.connection;
-    null != e && ((s = !0), e.addEventListener('change', d));
+    let e = s();
+    r.forEach((t) => t(e));
 }
-function c() {
-    if (!1 === s) return;
-    let e = window.navigator.connection;
-    null != e && 0 === o.length && null != e && (e.removeEventListener('change', d), (s = !1));
+function c(e) {
+    r.push(e), o();
 }
-function d() {
-    let e = l();
-    o.forEach((n) => n(e));
+function d(e) {
+    let t = r.indexOf(e);
+    -1 !== t && (r.splice(t, 1), l());
 }
-function f(e) {
-    o.push(e), u();
-}
-function p(e) {
-    let n = o.indexOf(e);
-    -1 !== n && (o.splice(n, 1), c());
-}
-n.Z = {
+let f = {
     addOnlineCallback(e) {
         window.addEventListener('online', e);
     },
@@ -49,12 +49,12 @@ n.Z = {
         window.removeEventListener('offline', e);
     },
     addChangeCallback(e) {
-        f(e);
+        c(e);
     },
     removeChangeCallback(e) {
-        p(e);
+        d(e);
     },
-    getNetworkInformation: () => Promise.resolve(l()),
+    getNetworkInformation: () => Promise.resolve(s()),
     isOnline() {
         let e = navigator.onLine;
         return void 0 === e || e;

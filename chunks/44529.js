@@ -1,4 +1,4 @@
 e.exports = {
-    locatorEntry: 'locatorEntry_f63175',
-    entryAuthor: 'entryAuthor_f63175'
+    locatorEntry: 'locatorEntry__19739',
+    entryAuthor: 'entryAuthor__19739'
 };

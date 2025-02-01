@@ -1,8 +1,8 @@
-t.exports = {
-    header: 'header_bf03d5',
-    headerImage: 'headerImage_bf03d5',
-    title: 'title_bf03d5',
-    subtitle: 'subtitle_bf03d5',
-    modalCloseButton: 'modalCloseButton_bf03d5',
-    help: 'help_bf03d5'
+e.exports = {
+    header: 'header__61c70',
+    headerImage: 'headerImage__61c70',
+    title: 'title__61c70',
+    subtitle: 'subtitle__61c70',
+    modalCloseButton: 'modalCloseButton__61c70',
+    help: 'help__61c70'
 };

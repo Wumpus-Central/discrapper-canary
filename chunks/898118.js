@@ -1,9 +1,9 @@
 t.exports = {
-    header: 'header_b81fca',
-    content: 'content_b81fca',
-    tabBar: 'tabBar_b81fca',
-    tags: 'tags_b81fca',
-    button: 'button_b81fca',
-    footer: 'footer_b81fca',
-    buttons: 'buttons_b81fca'
+    header: 'header__0b5a5',
+    content: 'content__0b5a5',
+    tabBar: 'tabBar__0b5a5',
+    tags: 'tags__0b5a5',
+    button: 'button__0b5a5',
+    footer: 'footer__0b5a5',
+    buttons: 'buttons__0b5a5'
 };

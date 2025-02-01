@@ -1,6 +1,6 @@
 e.exports = {
-    streamIcon: 'streamIcon_a2aefc',
-    iconButton: 'iconButton_a2aefc',
-    iconButtonSize: 'iconButtonSize_a2aefc',
-    iconSize: 'iconSize_a2aefc'
+    streamIcon: 'streamIcon__43481',
+    iconButton: 'iconButton__43481',
+    iconButtonSize: 'iconButtonSize__43481',
+    iconSize: 'iconSize__43481'
 };

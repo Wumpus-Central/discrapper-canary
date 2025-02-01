@@ -1,4 +1,4 @@
 t.exports = {
-    modalContent: 'modalContent_d7625c',
-    warningText: 'warningText_d7625c'
+    modalContent: 'modalContent__70657',
+    warningText: 'warningText__70657'
 };

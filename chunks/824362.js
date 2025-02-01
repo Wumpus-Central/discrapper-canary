@@ -1,6 +1,6 @@
-var i = r(346391);
-function a(e) {
-    var n = i(this, e).delete(e);
-    return (this.size -= n ? 1 : 0), n;
+var i = n(346391);
+function r(e) {
+    var t = i(this, e).delete(e);
+    return (this.size -= t ? 1 : 0), t;
 }
-e.exports = a;
+e.exports = r;

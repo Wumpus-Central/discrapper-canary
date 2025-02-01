@@ -1,13 +1,13 @@
-var e = n(97131).f;
-t.exports = function (t, r, n) {
-    n in t ||
-        e(t, n, {
+var r = i(97131).f;
+t.exports = function (t, e, i) {
+    i in t ||
+        r(t, i, {
             configurable: !0,
             get: function () {
-                return r[n];
+                return e[i];
             },
             set: function (t) {
-                r[n] = t;
+                e[i] = t;
             }
         });
 };

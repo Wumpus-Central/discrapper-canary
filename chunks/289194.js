@@ -1,9 +1,9 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             className: 'string',
             begin: /'(.|\\[xXuU][a-zA-Z0-9]+)'/
         },
-        r = {
+        n = {
             className: 'string',
             variants: [
                 {
@@ -31,7 +31,7 @@ function n(e) {
             keyword: ['case', 'class', 'def', 'else', 'enum', 'if', 'impl', 'import', 'in', 'lat', 'rel', 'index', 'let', 'match', 'namespace', 'switch', 'type', 'yield', 'with'],
             literal: ['true', 'false']
         },
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, n, r, i, e.C_NUMBER_MODE]
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, t, n, i, e.C_NUMBER_MODE]
     };
 }
-e.exports = n;
+e.exports = t;

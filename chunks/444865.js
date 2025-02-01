@@ -1,13 +1,13 @@
 e.exports = {
-    wrapper: 'wrapper_a18c91',
-    submenuIcon: 'submenuIcon_a18c91',
-    utils: 'utils_a18c91',
-    wrapperQuestAccepted: 'wrapperQuestAccepted_a18c91',
-    heading: 'heading_a18c91',
-    headingGameTile: 'headingGameTile_a18c91',
-    headingCopy: 'headingCopy_a18c91',
-    instructions: 'instructions_a18c91',
-    ctas: 'ctas_a18c91',
-    cta: 'cta_a18c91',
-    rewardTileWithInstructions: 'rewardTileWithInstructions_a18c91'
+    wrapper: 'wrapper__960df',
+    submenuIcon: 'submenuIcon__960df',
+    utils: 'utils__960df',
+    wrapperQuestAccepted: 'wrapperQuestAccepted__960df',
+    heading: 'heading__960df',
+    headingGameTile: 'headingGameTile__960df',
+    headingCopy: 'headingCopy__960df',
+    instructions: 'instructions__960df',
+    ctas: 'ctas__960df',
+    cta: 'cta__960df',
+    rewardTileWithInstructions: 'rewardTileWithInstructions__960df'
 };

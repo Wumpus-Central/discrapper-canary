@@ -1,56 +1,56 @@
-var i = r(67867),
-    a = r(96403),
-    o = r(511364),
-    s = r(982665),
-    l = r(141603),
-    u = r(349446).f,
-    c = r(937443),
-    d = r(777628),
-    f = r(497308),
-    p = r(348343),
-    h = r(718380),
-    _ = !1,
-    m = p('meta'),
-    g = 0,
-    E = function (e) {
-        u(e, m, {
+var i = n(67867),
+    r = n(96403),
+    a = n(511364),
+    s = n(982665),
+    o = n(141603),
+    l = n(349446).f,
+    u = n(937443),
+    c = n(777628),
+    d = n(497308),
+    f = n(348343),
+    _ = n(718380),
+    p = !1,
+    h = f('meta'),
+    m = 0,
+    g = function (e) {
+        l(e, h, {
             value: {
-                objectID: 'O' + g++,
+                objectID: 'O' + m++,
                 weakData: {}
             }
         });
     },
-    v = function (e, n) {
+    E = function (e, t) {
         if (!s(e)) return 'symbol' == typeof e ? e : ('string' == typeof e ? 'S' : 'P') + e;
-        if (!l(e, m)) {
-            if (!f(e)) return 'F';
-            if (!n) return 'E';
-            E(e);
+        if (!o(e, h)) {
+            if (!d(e)) return 'F';
+            if (!t) return 'E';
+            g(e);
         }
-        return e[m].objectID;
+        return e[h].objectID;
     },
-    y = function (e, n) {
-        if (!l(e, m)) {
-            if (!f(e)) return !0;
-            if (!n) return !1;
-            E(e);
+    v = function (e, t) {
+        if (!o(e, h)) {
+            if (!d(e)) return !0;
+            if (!t) return !1;
+            g(e);
         }
-        return e[m].weakData;
+        return e[h].weakData;
     },
-    b = function (e) {
-        return h && _ && f(e) && !l(e, m) && E(e), e;
+    y = function (e) {
+        return _ && p && d(e) && !o(e, h) && g(e), e;
     },
     I = function () {
-        (T.enable = function () {}), (_ = !0);
-        var e = c.f,
-            n = a([].splice),
-            r = {};
-        (r[m] = 1),
-            e(r).length &&
-                ((c.f = function (r) {
-                    for (var i = e(r), a = 0, o = i.length; a < o; a++)
-                        if (i[a] === m) {
-                            n(i, a, 1);
+        (T.enable = function () {}), (p = !0);
+        var e = u.f,
+            t = r([].splice),
+            n = {};
+        (n[h] = 1),
+            e(n).length &&
+                ((u.f = function (n) {
+                    for (var i = e(n), r = 0, a = i.length; r < a; r++)
+                        if (i[r] === h) {
+                            t(i, r, 1);
                             break;
                         }
                     return i;
@@ -61,13 +61,13 @@ var i = r(67867),
                         stat: !0,
                         forced: !0
                     },
-                    { getOwnPropertyNames: d.f }
+                    { getOwnPropertyNames: c.f }
                 ));
     },
     T = (e.exports = {
         enable: I,
-        fastKey: v,
-        getWeakData: y,
-        onFreeze: b
+        fastKey: E,
+        getWeakData: v,
+        onFreeze: y
     });
-o[m] = !0;
+a[h] = !0;

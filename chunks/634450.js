@@ -1,30 +1,30 @@
-function r(e) {
+function i(e) {
     return '/' === e.charAt(0);
 }
-function i(e, n) {
-    for (var r = n, i = r + 1, a = e.length; i < a; r += 1, i += 1) e[r] = e[i];
+function r(e, t) {
+    for (var n = t, i = n + 1, r = e.length; i < r; n += 1, i += 1) e[n] = e[i];
     e.pop();
 }
-function a(e, n) {
-    void 0 === n && (n = '');
-    var a,
-        o = (e && e.split('/')) || [],
-        s = (n && n.split('/')) || [],
-        l = e && r(e),
-        u = n && r(n),
-        c = l || u;
-    if ((e && r(e) ? (s = o) : o.length && (s.pop(), (s = s.concat(o))), !s.length)) return '/';
+n.d(t, { Z: () => a });
+let a = function (e, t) {
+    void 0 === t && (t = '');
+    var n,
+        a = (e && e.split('/')) || [],
+        s = (t && t.split('/')) || [],
+        o = e && i(e),
+        l = t && i(t),
+        u = o || l;
+    if ((e && i(e) ? (s = a) : a.length && (s.pop(), (s = s.concat(a))), !s.length)) return '/';
     if (s.length) {
-        var d = s[s.length - 1];
-        a = '.' === d || '..' === d || '' === d;
-    } else a = !1;
-    for (var f = 0, p = s.length; p >= 0; p--) {
-        var h = s[p];
-        '.' === h ? i(s, p) : '..' === h ? (i(s, p), f++) : f && (i(s, p), f--);
+        var c = s[s.length - 1];
+        n = '.' === c || '..' === c || '' === c;
+    } else n = !1;
+    for (var d = 0, f = s.length; f >= 0; f--) {
+        var _ = s[f];
+        '.' === _ ? r(s, f) : '..' === _ ? (r(s, f), d++) : d && (r(s, f), d--);
     }
-    if (!c) for (; f--; f) s.unshift('..');
-    c && '' !== s[0] && (!s[0] || !r(s[0])) && s.unshift('');
-    var _ = s.join('/');
-    return a && '/' !== _.substr(-1) && (_ += '/'), _;
-}
-n.Z = a;
+    if (!u) for (; d--; d) s.unshift('..');
+    !u || '' === s[0] || (s[0] && i(s[0])) || s.unshift('');
+    var p = s.join('/');
+    return n && '/' !== p.substr(-1) && (p += '/'), p;
+};

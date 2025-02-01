@@ -1,7 +1,7 @@
 e.exports = {
-    stackedAvatar: 'stackedAvatar_bf3a3d',
-    clickable: 'clickable_bf3a3d',
-    container: 'container_bf3a3d',
-    truncatedText: 'truncatedText_bf3a3d',
-    usersHeader: 'usersHeader_bf3a3d'
+    stackedAvatar: 'stackedAvatar__4337d',
+    clickable: 'clickable__4337d',
+    container: 'container__4337d',
+    truncatedText: 'truncatedText__4337d',
+    usersHeader: 'usersHeader__4337d'
 };

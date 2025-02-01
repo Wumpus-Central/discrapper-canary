@@ -1,6 +1,6 @@
-function n(e) {
-    let n = 'primitive rsc_template',
-        r = 'group clone ms master location colocation order fencing_topology rsc_ticket acl_target acl_group user role tag xml',
+function t(e) {
+    let t = 'primitive rsc_template',
+        n = 'group clone ms master location colocation order fencing_topology rsc_ticket acl_target acl_group user role tag xml',
         i = 'property rsc_defaults op_defaults';
     return {
         name: 'crmsh',
@@ -23,7 +23,7 @@ function n(e) {
                 }
             },
             {
-                beginKeywords: n,
+                beginKeywords: t,
                 starts: {
                     className: 'title',
                     end: '\\s*[\\$\\w_][\\w_-]*',
@@ -31,8 +31,8 @@ function n(e) {
                 }
             },
             {
-                begin: '\\b(' + r.split(' ').join('|') + ')\\s+',
-                keywords: r,
+                begin: '\\b(' + n.split(' ').join('|') + ')\\s+',
+                keywords: n,
                 starts: {
                     className: 'title',
                     end: '[\\$\\w_][\\w_-]*'
@@ -75,4 +75,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

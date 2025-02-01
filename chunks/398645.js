@@ -1,4 +1,4 @@
 e.exports = {
-    localizeBadge: 'localizeBadge_d44307',
-    referralIncentive: 'referralIncentive_d44307'
+    localizeBadge: 'localizeBadge__51968',
+    referralIncentive: 'referralIncentive__51968'
 };

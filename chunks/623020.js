@@ -1,5 +1,5 @@
 e.exports = {
-    headerContainer: 'headerContainer_bc6acb',
-    header: 'header_bc6acb',
-    toggleExpandIcon: 'toggleExpandIcon_bc6acb'
+    headerContainer: 'headerContainer__095fe',
+    header: 'header__095fe',
+    toggleExpandIcon: 'toggleExpandIcon__095fe'
 };

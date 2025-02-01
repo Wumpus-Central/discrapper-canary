@@ -1,10 +1,10 @@
-var i = r(458340),
-    a = r(957578).Buffer,
-    o = r(764900);
-function s(e, n, r, s) {
-    o.call(this), (this._cipher = new i.AES(n)), (this._prev = a.from(r)), (this._cache = a.allocUnsafe(0)), (this._secCache = a.allocUnsafe(0)), (this._decrypt = s), (this._mode = e);
+var i = n(458340),
+    r = n(957578).Buffer,
+    a = n(764900);
+function s(e, t, n, s) {
+    a.call(this), (this._cipher = new i.AES(t)), (this._prev = r.from(n)), (this._cache = r.allocUnsafe(0)), (this._secCache = r.allocUnsafe(0)), (this._decrypt = s), (this._mode = e);
 }
-r(689118)(s, o),
+n(689118)(s, a),
     (s.prototype._update = function (e) {
         return this._mode.encrypt(this, e, this._decrypt);
     }),

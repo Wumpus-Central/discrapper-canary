@@ -30,8 +30,8 @@ function I(e, t, n) {
         e
     );
 }
-let b = 1 * _.Z.Millis.MINUTE,
-    T = 2,
+let T = 1 * _.Z.Millis.MINUTE,
+    b = 2,
     S = 1 * _.Z.Millis.SECOND,
     A = (0, g.T)({ location: v.dr.QUESTS_MANAGER }),
     N = (e) =>
@@ -49,7 +49,7 @@ function C() {
     return null != n && O(n) ? n : null;
 }
 function R(e) {
-    return f.ZP.countVoiceStatesForChannel(e) >= T;
+    return f.ZP.countVoiceStatesForChannel(e) >= b;
 }
 function O(e) {
     return !(0, m.zi)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
@@ -67,8 +67,8 @@ function D(e) {
         v = (0, s.p)(null == g ? void 0 : g.location),
         y = null != (null == p ? void 0 : p.config) && (null == p ? void 0 : p.id) === n && (0, m.UZ)(r, p) && v === a,
         I = o.ZP.getRunningGames().map((e) => e.id),
-        b = (0, m.$H)(d) && I.includes(r);
-    return _ || y || b ? 'BEAT' : 'BEAT_TERMINAL';
+        T = (0, m.$H)(d) && I.includes(r);
+    return _ || y || T ? 'BEAT' : 'BEAT_TERMINAL';
 }
 function x(e) {
     let t = {
@@ -128,10 +128,10 @@ class L extends r.Z {
             }),
             I(this, 'calculateHeartbeatDurationMs', (e) => {
                 let t = h.Z.quests.get(e);
-                if (null == t || null == t.config || null == t.userStatus) return b;
+                if (null == t || null == t.config || null == t.userStatus) return T;
                 let { progressSeconds: n, targetSeconds: r } = (0, m.il)(t, i.T.DESKTOP),
                     a = Math.max(0, (r - n) * _.Z.Millis.SECOND);
-                return a <= b ? a + S : b;
+                return a <= T ? a + S : T;
             }),
             I(this, 'terminateHeartbeat', (e) => {
                 let { streamKey: t, sendTerminalHeartbeat: n } = e,

@@ -1,6 +1,6 @@
 n.d(t, {
     GG: () => E,
-    Rw: () => b,
+    Rw: () => T,
     Vq: () => p,
     j_: () => m,
     kG: () => h,
@@ -73,9 +73,9 @@ let h = () => {
                   status: 'upcoming'
               };
     },
-    b = () => {
+    T = () => {
         let e = (0, a.e7)([l.default], () => l.default.getCurrentUser()),
-            t = T(null == e ? void 0 : e.id),
+            t = b(null == e ? void 0 : e.id),
             n = y(),
             i = I();
         return null != t
@@ -88,7 +88,7 @@ let h = () => {
               ? i
               : null;
     },
-    T = (e) => {
+    b = (e) => {
         let t = (0, f.l)(e);
         return null == t ? null : _.np[t];
     };

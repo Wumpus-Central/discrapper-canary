@@ -1,69 +1,69 @@
-t.r(n);
-var o = t(200651),
-    i = t(192379),
-    r = t(442837),
-    c = t(481060),
-    l = t(959457),
-    s = t(571826),
-    a = t(630759),
-    d = t(301107),
-    u = t(785792),
-    h = t(190054),
-    f = t(245581),
-    x = t(760373),
-    m = t(388032),
-    p = t(822466);
-n.default = function (e) {
-    let { transitionState: n, streamKey: t, channelId: v } = e,
-        _ = (0, r.e7)([l.Z], () => {
+n.r(t), n.d(t, { default: () => v });
+var i = n(200651),
+    r = n(192379),
+    l = n(442837),
+    s = n(481060),
+    o = n(959457),
+    c = n(571826),
+    a = n(630759),
+    d = n(301107),
+    u = n(785792),
+    h = n(190054),
+    x = n(245581),
+    m = n(760373),
+    f = n(388032),
+    _ = n(822466);
+let v = function (e) {
+    let { transitionState: t, streamKey: n, channelId: v } = e,
+        p = (0, l.e7)([o.Z], () => {
             var e;
-            return null === (e = l.Z.getSecureFramesState(t)) || void 0 === e ? void 0 : e.epochAuthenticator;
+            return null === (e = o.Z.getSecureFramesState(n)) || void 0 === e ? void 0 : e.epochAuthenticator;
         }),
         j = (0, d.W)({
-            fingerprintBase64: _,
-            chunkSize: x.y6,
-            desiredLength: x.YP
+            fingerprintBase64: p,
+            chunkSize: m.y6,
+            desiredLength: m.YP
         }),
-        g = i.useCallback(() => {
-            (0, s.ih)({ channelId: v });
+        N = r.useCallback(() => {
+            (0, c.ih)({ channelId: v });
         }, [v]);
-    return (0, o.jsxs)(f.Z, {
-        transitionState: n,
-        title: m.intl.string(m.t.QogHlZ),
-        subtitle: m.intl.string(m.t.qODBkZ),
+    return (0, i.jsxs)(x.Z, {
+        transitionState: t,
+        title: f.intl.string(f.t.QogHlZ),
+        subtitle: f.intl.string(f.t.qODBkZ),
         children: [
-            (0, o.jsxs)('div', {
-                className: p.verification,
+            (0, i.jsxs)('div', {
+                className: _.verification,
                 children: [
-                    (0, o.jsxs)('div', {
-                        className: p.header,
+                    (0, i.jsxs)('div', {
+                        className: _.header,
                         children: [
-                            (0, o.jsx)(c.Heading, {
+                            (0, i.jsx)(s.X6q, {
                                 variant: 'text-sm/bold',
                                 color: 'header-primary',
-                                children: m.intl.string(m.t.cgBTyM)
+                                children: f.intl.string(f.t.cgBTyM)
                             }),
                             null != j &&
-                                (0, o.jsx)(h.H, {
-                                    className: p.copyIcon,
+                                (0, i.jsx)(h.H, {
+                                    className: _.copyIcon,
                                     chunks: j,
-                                    color: c.tokens.colors.INTERACTIVE_NORMAL,
-                                    onCopy: g
+                                    color: s.TVs.colors.INTERACTIVE_NORMAL,
+                                    onCopy: N
                                 })
                         ]
                     }),
-                    (0, o.jsx)(u.b, {
-                        className: p.code,
+                    (0, i.jsx)(u.b, {
+                        className: _.code,
                         chunks: j,
-                        columns: x.WK
+                        columns: m.WK
                     })
                 ]
             }),
-            (0, o.jsx)(c.Text, {
-                className: p.footer,
+            (0, i.jsx)(s.Text, {
+                className: _.footer,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: m.intl.format(m.t['H3+ktr'], { helpArticle: (0, a.uV)() })
+                children: f.intl.format(f.t['H3+ktr'], { helpArticle: (0, a.uV)() })
             })
         ]
     });

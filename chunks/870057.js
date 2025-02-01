@@ -1,7 +1,7 @@
 e.exports = {
-    container: 'container_de6558',
-    tierTextInfoContainer: 'tierTextInfoContainer_de6558',
-    tierPriceContainer: 'tierPriceContainer_de6558',
-    tierPrice: 'tierPrice_de6558',
-    toggleButton: 'toggleButton_de6558'
+    container: 'container_b27fdc',
+    tierTextInfoContainer: 'tierTextInfoContainer_b27fdc',
+    tierPriceContainer: 'tierPriceContainer_b27fdc',
+    tierPrice: 'tierPrice_b27fdc',
+    toggleButton: 'toggleButton_b27fdc'
 };

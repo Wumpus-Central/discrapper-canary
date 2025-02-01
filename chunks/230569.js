@@ -1,5 +1,5 @@
 e.exports = {
-    carouselModal: 'carouselModal_c9eb31',
-    mobileCloseWrapper: 'mobileCloseWrapper_c9eb31',
-    forcedTransparency: 'forcedTransparency_c9eb31'
+    carouselModal: 'carouselModal__8a837',
+    mobileCloseWrapper: 'mobileCloseWrapper__8a837',
+    forcedTransparency: 'forcedTransparency__8a837'
 };

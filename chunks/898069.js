@@ -1,5 +1,5 @@
 e.exports = {
-    buttonContent: 'buttonContent_f4a996',
-    shareIcon: 'shareIcon_f4a996',
-    button: 'button_f4a996'
+    buttonContent: 'buttonContent_a83ec9',
+    shareIcon: 'shareIcon_a83ec9',
+    button: 'button_a83ec9'
 };

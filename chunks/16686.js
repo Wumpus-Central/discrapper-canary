@@ -1,4 +1,4 @@
-var n = 0;
+var t = 0;
 e.exports = function () {
-    return String(n++);
+    return String(t++);
 };

@@ -1,7 +1,7 @@
 e.exports = {
-    confirmationContainer: 'confirmationContainer_dbfdb0',
-    confirmationHeader: 'confirmationHeader_dbfdb0',
-    confirmationSubtitle: 'confirmationSubtitle_dbfdb0',
-    openDiscordButton: 'openDiscordButton_dbfdb0',
-    doneButton: 'doneButton_dbfdb0'
+    confirmationContainer: 'confirmationContainer_e64651',
+    confirmationHeader: 'confirmationHeader_e64651',
+    confirmationSubtitle: 'confirmationSubtitle_e64651',
+    openDiscordButton: 'openDiscordButton_e64651',
+    doneButton: 'doneButton_e64651'
 };

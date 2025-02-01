@@ -1,13 +1,13 @@
 e.exports = {
-    body: 'body_d29b0b',
-    confirmDiscountContent: 'confirmDiscountContent_d29b0b',
-    confirmDiscountDescription: 'confirmDiscountDescription_d29b0b',
-    confirmDiscountIcon: 'confirmDiscountIcon_d29b0b',
-    confirmDiscountLegalese: 'confirmDiscountLegalese_d29b0b',
-    confirmDiscountLegaleseText: 'confirmDiscountLegaleseText_d29b0b',
-    confirmDiscountButtons: 'confirmDiscountButtons_d29b0b',
-    confrimDiscountsButtonsError: 'confrimDiscountsButtonsError_d29b0b',
-    confrimDiscountsButtonsNoError: 'confrimDiscountsButtonsNoError_d29b0b',
-    redemptionFailedMessage: 'redemptionFailedMessage_d29b0b',
-    redemptionFailedMessageCopy: 'redemptionFailedMessageCopy_d29b0b'
+    body: 'body__996b0',
+    confirmDiscountContent: 'confirmDiscountContent__996b0',
+    confirmDiscountDescription: 'confirmDiscountDescription__996b0',
+    confirmDiscountIcon: 'confirmDiscountIcon__996b0',
+    confirmDiscountLegalese: 'confirmDiscountLegalese__996b0',
+    confirmDiscountLegaleseText: 'confirmDiscountLegaleseText__996b0',
+    confirmDiscountButtons: 'confirmDiscountButtons__996b0',
+    confrimDiscountsButtonsError: 'confrimDiscountsButtonsError__996b0',
+    confrimDiscountsButtonsNoError: 'confrimDiscountsButtonsNoError__996b0',
+    redemptionFailedMessage: 'redemptionFailedMessage__996b0',
+    redemptionFailedMessageCopy: 'redemptionFailedMessageCopy__996b0'
 };

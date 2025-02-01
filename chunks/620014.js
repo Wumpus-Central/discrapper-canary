@@ -1,11 +1,11 @@
-var a = r(900624),
-    n = r(979882),
-    _ = r(686639),
-    o = r(173887),
-    E = r(702603),
-    i = r(457853);
-function c(e) {
-    var t = (this.__data__ = new a(e));
-    this.size = t.size;
+var r = a(900624),
+    n = a(979882),
+    o = a(686639),
+    _ = a(173887),
+    i = a(702603),
+    c = a(457853);
+function s(t) {
+    var e = (this.__data__ = new r(t));
+    this.size = e.size;
 }
-(c.prototype.clear = n), (c.prototype.delete = _), (c.prototype.get = o), (c.prototype.has = E), (c.prototype.set = i), (e.exports = c);
+(s.prototype.clear = n), (s.prototype.delete = o), (s.prototype.get = _), (s.prototype.has = i), (s.prototype.set = c), (t.exports = s);

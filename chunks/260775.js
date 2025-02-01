@@ -1,5 +1,5 @@
 t.exports = {
-    art: 'art_f2f3e8',
-    modalHeader: 'modalHeader_f2f3e8',
-    modalInnerCloseButton: 'modalInnerCloseButton_f2f3e8'
+    art: 'art_cb3c76',
+    modalHeader: 'modalHeader_cb3c76',
+    modalInnerCloseButton: 'modalInnerCloseButton_cb3c76'
 };

@@ -1,6 +1,6 @@
 e.exports = {
-    pro: 'pro_b5053a',
-    tip: 'tip_b5053a',
-    block: 'block_b5053a',
-    inline: 'inline_b5053a'
+    pro: 'pro__30cbe',
+    tip: 'tip__30cbe',
+    block: 'block__30cbe',
+    inline: 'inline__30cbe'
 };

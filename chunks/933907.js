@@ -1,10 +1,10 @@
 e.exports = {
-    uploadInput: 'uploadInput_a15d29',
-    uploadIcon: 'uploadIcon_a15d29',
-    fileInput: 'fileInput_a15d29',
-    container: 'container_a15d29',
-    popoutContainer: 'popoutContainer_a15d29',
-    popout: 'popout_a15d29',
-    uploads: 'uploads_a15d29',
-    badge: 'badge_a15d29'
+    uploadInput: 'uploadInput__94439',
+    uploadIcon: 'uploadIcon__94439',
+    fileInput: 'fileInput__94439',
+    container: 'container__94439',
+    popoutContainer: 'popoutContainer__94439',
+    popout: 'popout__94439',
+    uploads: 'uploads__94439',
+    badge: 'badge__94439'
 };

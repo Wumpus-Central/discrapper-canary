@@ -1,58 +1,58 @@
 n.d(t, {
-    V9: function () {
-        return g;
-    }
+    V9: () => g,
+    ek: () => h
 }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(43747),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(43747),
     o = n(317257),
     c = n(120786),
     d = n(970815),
-    u = n(900377);
-let m = {
-        START: u.alignLeft,
-        END: u.alignRight
+    u = n(388032),
+    m = n(900377);
+let h = {
+        START: m.alignLeft,
+        END: m.alignRight
     },
     g = (e) => {
-        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, className: g, linkText: h, linkTo: p, cardAlignment: x = m.START } = e,
-            { balance: f } = (0, l.A)(),
-            [E, _] = r.useState(o.b.DEFAULT),
-            [C, T] = r.useState(!1),
-            S = () => {
-                T(!C);
+        let { showNotificationBadge: t, ctaText: n, ctaOnClick: r, linkText: g = u.intl.string(u.t['7f4H7O']), linkTo: _, cardAlignment: x = h.START, className: p } = e,
+            { balance: E } = (0, a.A)(),
+            [C, f] = s.useState(o.b.DEFAULT),
+            [T, N] = s.useState(!1),
+            I = () => {
+                N(!T);
             };
         return (
-            r.useEffect(() => {
-                _(C ? o.b.SELECTED : o.b.DEFAULT);
-            }, [C, _]),
+            s.useEffect(() => {
+                f(T ? o.b.SELECTED : o.b.DEFAULT);
+            }, [T, f]),
             (0, i.jsxs)('div', {
-                className: a()(u.container, g),
+                className: l()(m.container, p),
                 children: [
                     (0, i.jsx)(d.A, {
-                        balance: f,
-                        placeholderBalance: null != f ? f : 0,
-                        balanceWidgetMode: E,
-                        onClick: S,
+                        balance: E,
+                        placeholderBalance: null != E ? E : 0,
+                        balanceWidgetMode: C,
+                        onClick: I,
                         showNotificationBadge: t
                     }),
-                    C &&
+                    T &&
                         (0, i.jsx)('div', {
-                            className: a()(u.cardContainer, x),
+                            className: l()(m.cardContainer, x),
                             children: (0, i.jsx)(c.L, {
                                 ctaText: n,
                                 ctaOnClick: () => {
-                                    S(), s();
+                                    I(), r();
                                 },
-                                linkText: h,
-                                linkTo: p
+                                linkText: g,
+                                linkTo: _
                             })
                         })
                 ]
             })
         );
     };
-g.CardAlignment = m;
+g.CardAlignment = h;

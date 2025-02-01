@@ -1,17 +1,17 @@
-var i = r(67867),
-    a = r(611345),
-    o = r(302231);
+var i = n(67867),
+    r = n(611345),
+    a = n(302231);
 i(
     {
         target: 'Object',
         stat: !0,
-        forced: r(821819)(function () {
-            o(1);
+        forced: n(821819)(function () {
+            a(1);
         })
     },
     {
         keys: function (e) {
-            return o(a(e));
+            return a(r(e));
         }
     }
 );

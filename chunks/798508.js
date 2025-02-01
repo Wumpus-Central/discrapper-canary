@@ -1,8 +1,8 @@
 e.exports = {
-    modalRoot: 'modalRoot_e5b5f9',
-    sidebarContainer: 'sidebarContainer_e5b5f9',
-    contentContainer: 'contentContainer_e5b5f9',
-    modalContent: 'modalContent_e5b5f9',
-    container: 'container_e5b5f9',
-    closeButton: 'closeButton_e5b5f9'
+    modalRoot: 'modalRoot__1d6c7',
+    sidebarContainer: 'sidebarContainer__1d6c7',
+    contentContainer: 'contentContainer__1d6c7',
+    modalContent: 'modalContent__1d6c7',
+    container: 'container__1d6c7',
+    closeButton: 'closeButton__1d6c7'
 };

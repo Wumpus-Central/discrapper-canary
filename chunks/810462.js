@@ -13,14 +13,14 @@ let d = r.forwardRef(function (e, t) {
         [E, v] = (0, u.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.X),
         y = n.useStore((e) => e.searchPlaceholder),
         I = n.useStore((e) => e.inspectedExpressionPosition, a.X),
-        b = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 var t;
                 n.setActiveCategoryIndex('' === e ? 0 : l.c), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = p.current) || void 0 === t || t.scrollTo(0);
             },
             [p, n]
         ),
-        T = r.useCallback(() => {
+        b = r.useCallback(() => {
             (0, u.ql)('');
         }, []);
     r.useImperativeHandle(t, () => ({
@@ -45,9 +45,9 @@ let d = r.forwardRef(function (e, t) {
             ref: g,
             size: o.E1j.Sizes.MEDIUM,
             placeholder: S(),
-            onClear: T,
+            onClear: b,
             onKeyDown: f,
-            onChange: b,
+            onChange: T,
             className: c.__invalid_searchBar,
             inputProps: {
                 'aria-haspopup': 'grid',

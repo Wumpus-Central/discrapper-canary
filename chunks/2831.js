@@ -1,113 +1,113 @@
-var i = r(444675);
-!(function (e, n) {
+var i = n(444675);
+!(function (e, t) {
     if (!e.setImmediate) {
-        var r,
-            a = 1,
-            o = {},
+        var n,
+            r = 1,
+            a = {},
             s = !1,
-            l = e.document;
-        var u = Object.getPrototypeOf && Object.getPrototypeOf(e);
-        (u = u && u.setTimeout ? u : e), '[object process]' === {}.toString.call(e.process) ? h() : _() ? m() : e.MessageChannel ? g() : l && 'onreadystatechange' in l.createElement('script') ? E() : v(), (u.setImmediate = c), (u.clearImmediate = d);
+            o = e.document,
+            l = Object.getPrototypeOf && Object.getPrototypeOf(e);
+        (l = l && l.setTimeout ? l : e), '[object process]' === {}.toString.call(e.process) ? _() : p() ? h() : e.MessageChannel ? m() : o && 'onreadystatechange' in o.createElement('script') ? g() : E(), (l.setImmediate = u), (l.clearImmediate = c);
     }
-    function c(e) {
+    function u(e) {
         'function' != typeof e && (e = Function('' + e));
-        for (var n = Array(arguments.length - 1), i = 0; i < n.length; i++) n[i] = arguments[i + 1];
+        for (var t = Array(arguments.length - 1), i = 0; i < t.length; i++) t[i] = arguments[i + 1];
         var s = {
             callback: e,
-            args: n
+            args: t
         };
-        return (o[a] = s), r(a), a++;
+        return (a[r] = s), n(r), r++;
+    }
+    function c(e) {
+        delete a[e];
     }
     function d(e) {
-        delete o[e];
-    }
-    function f(e) {
-        var r = e.callback,
+        var n = e.callback,
             i = e.args;
         switch (i.length) {
             case 0:
-                r();
+                n();
                 break;
             case 1:
-                r(i[0]);
+                n(i[0]);
                 break;
             case 2:
-                r(i[0], i[1]);
+                n(i[0], i[1]);
                 break;
             case 3:
-                r(i[0], i[1], i[2]);
+                n(i[0], i[1], i[2]);
                 break;
             default:
-                r.apply(n, i);
+                n.apply(t, i);
         }
     }
-    function p(e) {
-        if (s) setTimeout(p, 0, e);
+    function f(e) {
+        if (s) setTimeout(f, 0, e);
         else {
-            var n = o[e];
-            if (n) {
+            var t = a[e];
+            if (t) {
                 s = !0;
                 try {
-                    f(n);
+                    d(t);
                 } finally {
-                    d(e), (s = !1);
+                    c(e), (s = !1);
                 }
             }
         }
     }
-    function h() {
-        r = function (e) {
+    function _() {
+        n = function (e) {
             i.nextTick(function () {
-                p(e);
+                f(e);
             });
         };
     }
-    function _() {
+    function p() {
         if (e.postMessage && !e.importScripts) {
-            var n = !0,
-                r = e.onmessage;
+            var t = !0,
+                n = e.onmessage;
             return (
                 (e.onmessage = function () {
-                    n = !1;
+                    t = !1;
                 }),
                 e.postMessage('', '*'),
-                (e.onmessage = r),
-                n
+                (e.onmessage = n),
+                t
             );
         }
     }
-    function m() {
-        var n = 'setImmediate$' + Math.random() + '$',
-            i = function (r) {
-                r.source === e && 'string' == typeof r.data && 0 === r.data.indexOf(n) && p(+r.data.slice(n.length));
+    function h() {
+        var t = 'setImmediate$' + Math.random() + '$',
+            i = function (n) {
+                n.source === e && 'string' == typeof n.data && 0 === n.data.indexOf(t) && f(+n.data.slice(t.length));
             };
         e.addEventListener ? e.addEventListener('message', i, !1) : e.attachEvent('onmessage', i),
-            (r = function (r) {
-                e.postMessage(n + r, '*');
+            (n = function (n) {
+                e.postMessage(t + n, '*');
+            });
+    }
+    function m() {
+        var e = new MessageChannel();
+        (e.port1.onmessage = function (e) {
+            f(e.data);
+        }),
+            (n = function (t) {
+                e.port2.postMessage(t);
             });
     }
     function g() {
-        var e = new MessageChannel();
-        (e.port1.onmessage = function (e) {
-            p(e.data);
-        }),
-            (r = function (n) {
-                e.port2.postMessage(n);
-            });
+        var e = o.documentElement;
+        n = function (t) {
+            var n = o.createElement('script');
+            (n.onreadystatechange = function () {
+                f(t), (n.onreadystatechange = null), e.removeChild(n), (n = null);
+            }),
+                e.appendChild(n);
+        };
     }
     function E() {
-        var e = l.documentElement;
-        r = function (n) {
-            var r = l.createElement('script');
-            (r.onreadystatechange = function () {
-                p(n), (r.onreadystatechange = null), e.removeChild(r), (r = null);
-            }),
-                e.appendChild(r);
+        n = function (e) {
+            setTimeout(f, 0, e);
         };
     }
-    function v() {
-        r = function (e) {
-            setTimeout(p, 0, e);
-        };
-    }
-})('undefined' == typeof self ? (void 0 === r.g ? this : r.g) : self);
+})('undefined' == typeof self ? (void 0 === n.g ? this : n.g) : self);

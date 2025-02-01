@@ -1,36 +1,37 @@
-var i = r(192379),
-    a = r(924102),
-    o = r(820611),
+n.d(t, { Z: () => d });
+var i = n(192379),
+    r = n(924102),
+    a = n(820611),
     s =
         Object.assign ||
         function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = arguments[n];
-                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         },
-    l = (function () {
-        function e(e, n) {
-            for (var r = 0; r < n.length; r++) {
-                var i = n[r];
+    o = (function () {
+        function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var i = t[n];
                 (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (n, r, i) {
-            return r && e(n.prototype, r), i && e(n, i), n;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })();
-function u(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function l(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function c(e, n) {
+function u(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function d(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function c(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -38,61 +39,61 @@ function d(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var f = function (e) {
-    var n = (function (n) {
-        function r(e) {
-            u(this, r);
-            var n = c(this, (r.__proto__ || Object.getPrototypeOf(r)).call(this));
+let d = function (e) {
+    var t = (function (t) {
+        function n(e) {
+            l(this, n);
+            var t = u(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
             return (
-                (n.handleChange = function (e, r) {
-                    if (o.LX(e)) {
-                        var i = o.jH(e, e.h || n.state.oldHue);
-                        n.setState(i), n.props.onChangeComplete && n.debounce(n.props.onChangeComplete, i, r), n.props.onChange && n.props.onChange(i, r);
+                (t.handleChange = function (e, n) {
+                    if (a.LX(e)) {
+                        var i = a.jH(e, e.h || t.state.oldHue);
+                        t.setState(i), t.props.onChangeComplete && t.debounce(t.props.onChangeComplete, i, n), t.props.onChange && t.props.onChange(i, n);
                     }
                 }),
-                (n.handleSwatchHover = function (e, r) {
-                    if (o.LX(e)) {
-                        var i = o.jH(e, e.h || n.state.oldHue);
-                        n.props.onSwatchHover && n.props.onSwatchHover(i, r);
+                (t.handleSwatchHover = function (e, n) {
+                    if (a.LX(e)) {
+                        var i = a.jH(e, e.h || t.state.oldHue);
+                        t.props.onSwatchHover && t.props.onSwatchHover(i, n);
                     }
                 }),
-                (n.state = s({}, o.jH(e.color, 0))),
-                (n.debounce = (0, a.Z)(function (e, n, r) {
-                    e(n, r);
+                (t.state = s({}, a.jH(e.color, 0))),
+                (t.debounce = (0, r.Z)(function (e, t, n) {
+                    e(t, n);
                 }, 100)),
-                n
+                t
             );
         }
         return (
-            d(r, n),
-            l(
-                r,
+            c(n, t),
+            o(
+                n,
                 [
                     {
                         key: 'render',
                         value: function () {
-                            var n = {};
-                            return this.props.onSwatchHover && (n.onSwatchHover = this.handleSwatchHover), i.createElement(e, s({}, this.props, this.state, { onChange: this.handleChange }, n));
+                            var t = {};
+                            return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), i.createElement(e, s({}, this.props, this.state, { onChange: this.handleChange }, t));
                         }
                     }
                 ],
                 [
                     {
                         key: 'getDerivedStateFromProps',
-                        value: function (e, n) {
-                            return s({}, o.jH(e.color, n.oldHue));
+                        value: function (e, t) {
+                            return s({}, a.jH(e.color, t.oldHue));
                         }
                     }
                 ]
             ),
-            r
+            n
         );
     })(i.PureComponent || i.Component);
     return (
-        (n.propTypes = s({}, e.propTypes)),
-        (n.defaultProps = s({}, e.defaultProps, {
+        (t.propTypes = s({}, e.propTypes)),
+        (t.defaultProps = s({}, e.defaultProps, {
             color: {
                 h: 250,
                 s: 0.5,
@@ -100,7 +101,6 @@ var f = function (e) {
                 a: 1
             }
         })),
-        n
+        t
     );
 };
-n.Z = f;

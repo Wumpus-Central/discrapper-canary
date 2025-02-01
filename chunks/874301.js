@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('sv', {
         months: 'januari_februari_mars_april_maj_juni_juli_augusti_september_oktober_november_december'.split('_'),
@@ -43,9 +43,9 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}(e|a)/,
         ordinal: function (e) {
-            var n = e % 10,
-                r = 1 == ~~((e % 100) / 10) ? 'e' : 1 === n ? 'a' : 2 === n ? 'a' : 'e';
-            return e + r;
+            var t = e % 10,
+                n = 1 == ~~((e % 100) / 10) ? 'e' : 1 === t ? 'a' : 2 === t ? 'a' : 'e';
+            return e + n;
         },
         week: {
             dow: 1,

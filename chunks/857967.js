@@ -1,30 +1,30 @@
 function i(e) {
     return e && 'object' == typeof e && 'default' in e ? e.default : e;
 }
-Object.defineProperty(n, '__esModule', { value: !0 });
-var a = r(698091),
-    o = i(r(21217)),
-    s = i(r(719427)),
-    l = i(r(271491)),
-    u = r(239189),
-    c = r(192379),
-    d = r(985445),
-    f = Symbol.for('Animated:node'),
-    p = function (e) {
-        return !!e && e[f] === e;
+Object.defineProperty(t, '__esModule', { value: !0 });
+var r = n(698091),
+    a = i(n(21217)),
+    s = i(n(719427)),
+    o = i(n(271491)),
+    l = n(239189),
+    u = n(192379),
+    c = n(985445),
+    d = Symbol.for('Animated:node'),
+    f = function (e) {
+        return !!e && e[d] === e;
+    },
+    _ = function (e) {
+        return e && e[d];
+    },
+    p = function (e, t) {
+        return r.defineHidden(e, d, t);
     },
     h = function (e) {
-        return e && e[f];
+        return e && e[d] && e[d].getPayload();
     },
-    _ = function (e, n) {
-        return a.defineHidden(e, f, n);
-    },
-    m = function (e) {
-        return e && e[f] && e[f].getPayload();
-    },
-    g = (function () {
+    m = (function () {
         function e() {
-            (this.payload = void 0), _(this, this);
+            (this.payload = void 0), p(this, this);
         }
         return (
             (e.prototype.getPayload = function () {
@@ -33,275 +33,275 @@ var a = r(698091),
             e
         );
     })(),
-    E = (function (e) {
-        function n(n) {
-            var r;
-            return ((r = e.call(this) || this)._value = n), (r.done = !0), (r.elapsedTime = void 0), (r.lastPosition = void 0), (r.lastVelocity = void 0), (r.v0 = void 0), a.is.num(r._value) && (r.lastPosition = r._value), r;
+    g = (function (e) {
+        function t(t) {
+            var n;
+            return ((n = e.call(this) || this)._value = t), (n.done = !0), (n.elapsedTime = void 0), (n.lastPosition = void 0), (n.lastVelocity = void 0), (n.v0 = void 0), r.is.num(n._value) && (n.lastPosition = n._value), n;
         }
-        o(n, e),
-            (n.create = function (e, r) {
-                return new n(e);
+        a(t, e),
+            (t.create = function (e, n) {
+                return new t(e);
             });
-        var r = n.prototype;
+        var n = t.prototype;
         return (
-            (r.getPayload = function () {
+            (n.getPayload = function () {
                 return [this];
             }),
-            (r.getValue = function () {
+            (n.getValue = function () {
                 return this._value;
             }),
-            (r.setValue = function (e, n) {
-                return a.is.num(e) && ((this.lastPosition = e), n && ((e = Math.round(e / n) * n), this.done && (this.lastPosition = e))), this._value !== e && ((this._value = e), !0);
+            (n.setValue = function (e, t) {
+                return r.is.num(e) && ((this.lastPosition = e), t && ((e = Math.round(e / t) * t), this.done && (this.lastPosition = e))), this._value !== e && ((this._value = e), !0);
             }),
-            (r.reset = function () {
+            (n.reset = function () {
                 var e = this.done;
-                (this.done = !1), a.is.num(this._value) && ((this.elapsedTime = 0), (this.lastPosition = this._value), e && (this.lastVelocity = null), (this.v0 = null));
+                (this.done = !1), r.is.num(this._value) && ((this.elapsedTime = 0), (this.lastPosition = this._value), e && (this.lastVelocity = null), (this.v0 = null));
             }),
-            n
+            t
         );
-    })(g),
-    v = (function (e) {
-        function n(n, r) {
+    })(m),
+    E = (function (e) {
+        function t(t, n) {
             var i;
             return (
                 ((i = e.call(this, 0) || this)._value = void 0),
                 (i._string = null),
                 (i._toString = void 0),
-                (i._toString = a.createInterpolator({
-                    output: [n, r]
+                (i._toString = r.createInterpolator({
+                    output: [t, n]
                 })),
                 i
             );
         }
-        o(n, e),
-            (n.create = function (e, r) {
-                if ((void 0 === r && (r = e), a.is.str(e) && a.is.str(r))) return new n(e, r);
+        a(t, e),
+            (t.create = function (e, n) {
+                if ((void 0 === n && (n = e), r.is.str(e) && r.is.str(n))) return new t(e, n);
                 throw TypeError('Expected "from" and "to" to be strings');
             });
-        var r = n.prototype;
+        var n = t.prototype;
         return (
-            (r.getValue = function () {
+            (n.getValue = function () {
                 var e = this._string;
                 return null == e ? (this._string = this._toString(this._value)) : e;
             }),
-            (r.setValue = function (n) {
-                if (a.is.num(n)) {
-                    if (!e.prototype.setValue.call(this, n)) return !1;
-                    else this._string = null;
-                } else (this._string = n), (this._value = 1);
+            (n.setValue = function (t) {
+                if (r.is.num(t)) {
+                    if (!e.prototype.setValue.call(this, t)) return !1;
+                    this._string = null;
+                } else (this._string = t), (this._value = 1);
                 return !0;
             }),
-            (r.reset = function (n) {
-                n &&
-                    (this._toString = a.createInterpolator({
-                        output: [this.getValue(), n]
+            (n.reset = function (t) {
+                t &&
+                    (this._toString = r.createInterpolator({
+                        output: [this.getValue(), t]
                     })),
                     (this._value = 0),
                     e.prototype.reset.call(this);
             }),
-            n
+            t
         );
-    })(E),
-    y = { current: null },
-    b = (function (e) {
-        function n(n) {
-            var r;
-            return void 0 === n && (n = null), ((r = e.call(this) || this).source = void 0), r.setValue(n), r;
+    })(g),
+    v = { current: null },
+    y = (function (e) {
+        function t(t) {
+            var n;
+            return void 0 === t && (t = null), ((n = e.call(this) || this).source = void 0), n.setValue(t), n;
         }
-        o(n, e);
-        var r = n.prototype;
+        a(t, e);
+        var n = t.prototype;
         return (
-            (r.getValue = function (e) {
+            (n.getValue = function (e) {
                 if (!this.source) return null;
-                var n = {};
+                var t = {};
                 return (
-                    a.each(this.source, function (r, i) {
-                        if (p(r)) n[i] = r.getValue(e);
+                    r.each(this.source, function (n, i) {
+                        if (f(n)) t[i] = n.getValue(e);
                         else {
-                            var o = a.getFluidConfig(r);
-                            o ? (n[i] = o.get()) : !e && (n[i] = r);
+                            var a = r.getFluidConfig(n);
+                            a ? (t[i] = a.get()) : e || (t[i] = n);
                         }
                     }),
-                    n
+                    t
                 );
             }),
-            (r.setValue = function (e) {
+            (n.setValue = function (e) {
                 (this.source = e), (this.payload = this._makePayload(e));
             }),
-            (r.reset = function () {
+            (n.reset = function () {
                 this.payload &&
-                    a.each(this.payload, function (e) {
+                    r.each(this.payload, function (e) {
                         return e.reset();
                     });
             }),
-            (r._makePayload = function (e) {
+            (n._makePayload = function (e) {
                 if (e) {
-                    var n = new Set();
-                    return a.each(e, this._addToPayload, n), Array.from(n);
+                    var t = new Set();
+                    return r.each(e, this._addToPayload, t), Array.from(t);
                 }
             }),
-            (r._addToPayload = function (e) {
-                var n = this;
-                a.getFluidConfig(e) && y.current && y.current.dependencies.add(e);
-                var r = m(e);
-                r &&
-                    a.each(r, function (e) {
-                        return n.add(e);
+            (n._addToPayload = function (e) {
+                var t = this;
+                r.getFluidConfig(e) && v.current && v.current.dependencies.add(e);
+                var n = h(e);
+                n &&
+                    r.each(n, function (e) {
+                        return t.add(e);
                     });
             }),
-            n
+            t
         );
-    })(g),
+    })(m),
     I = (function (e) {
-        function n(n, r) {
+        function t(t, n) {
             var i;
-            return ((i = e.call(this, null) || this).source = void 0), e.prototype.setValue.call(s(i), i._makeAnimated(n, r)), i;
+            return ((i = e.call(this, null) || this).source = void 0), e.prototype.setValue.call(s(i), i._makeAnimated(t, n)), i;
         }
-        o(n, e),
-            (n.create = function (e, r) {
-                return new n(e, r);
+        a(t, e),
+            (t.create = function (e, n) {
+                return new t(e, n);
             });
-        var r = n.prototype;
+        var n = t.prototype;
         return (
-            (r.getValue = function () {
+            (n.getValue = function () {
                 return this.source.map(function (e) {
                     return e.getValue();
                 });
             }),
-            (r.setValue = function (e) {
-                var n = this.getPayload();
-                e && e.length == n.length
-                    ? a.each(n, function (n, r) {
-                          return n.setValue(e[r]);
+            (n.setValue = function (e) {
+                var t = this.getPayload();
+                e && e.length == t.length
+                    ? r.each(t, function (t, n) {
+                          return t.setValue(e[n]);
                       })
                     : ((this.source = this._makeAnimated(e)), (this.payload = this._makePayload(this.source)));
             }),
-            (r._makeAnimated = function (e, n) {
+            (n._makeAnimated = function (e, t) {
                 return (
-                    void 0 === n && (n = e),
+                    void 0 === t && (t = e),
                     e
-                        ? e.map(function (e, r) {
-                              return (a.isAnimatedString(e) ? v : E).create(e, n[r]);
+                        ? e.map(function (e, n) {
+                              return (r.isAnimatedString(e) ? E : g).create(e, t[n]);
                           })
                         : []
                 );
             }),
-            n
+            t
         );
-    })(b),
+    })(y),
     T = (function (e) {
-        function n(n) {
-            var r;
-            return ((r = e.call(this, null) || this).update = n), (r.dirty = !1), r;
+        function t(t) {
+            var n;
+            return ((n = e.call(this, null) || this).update = t), (n.dirty = !1), n;
         }
-        o(n, e);
-        var r = n.prototype;
+        a(t, e);
+        var n = t.prototype;
         return (
-            (r.setValue = function (n, r) {
-                if (n) {
-                    if (r && ((y.current = r), n.style)) {
-                        var i = r.host.createAnimatedStyle;
-                        n = l(l({}, n), {}, { style: i(n.style) });
+            (n.setValue = function (t, n) {
+                if (t) {
+                    if (n && ((v.current = n), t.style)) {
+                        var i = n.host.createAnimatedStyle;
+                        t = o(o({}, t), {}, { style: i(t.style) });
                     }
-                    e.prototype.setValue.call(this, n), (y.current = null);
+                    e.prototype.setValue.call(this, t), (v.current = null);
                 }
             }),
-            (r.onParentChange = function (e) {
-                var n = this,
-                    r = e.type;
-                !this.dirty &&
-                    'change' === r &&
+            (n.onParentChange = function (e) {
+                var t = this,
+                    n = e.type;
+                this.dirty ||
+                    'change' !== n ||
                     ((this.dirty = !0),
-                    u.frameLoop.onFrame(function () {
-                        (n.dirty = !1), n.update();
+                    l.frameLoop.onFrame(function () {
+                        (t.dirty = !1), t.update();
                     }));
             }),
-            n
+            t
         );
-    })(b),
-    S = function (e, n) {
-        return c.forwardRef(function (r, i) {
-            var o = c.useRef(null),
-                s = !a.is.fun(e) || (e.prototype && e.prototype.isReactComponent),
-                u = a.useForceUpdate(),
-                f = new T(function () {
-                    var e = o.current;
-                    if (!s || !!e) !1 === (!!e && n.applyAnimatedValues(e, f.getValue(!0))) && u();
+    })(y),
+    b = function (e, t) {
+        return u.forwardRef(function (n, i) {
+            var a = u.useRef(null),
+                s = !r.is.fun(e) || (e.prototype && e.prototype.isReactComponent),
+                l = r.useForceUpdate(),
+                d = new T(function () {
+                    var e = a.current;
+                    (!s || e) && !1 === (!!e && t.applyAnimatedValues(e, d.getValue(!0))) && l();
                 }),
-                p = new Set();
+                f = new Set();
             return (
-                f.setValue(r, {
-                    dependencies: p,
-                    host: n
+                d.setValue(n, {
+                    dependencies: f,
+                    host: t
                 }),
-                d.useLayoutEffect(function () {
+                c.useLayoutEffect(function () {
                     return (
-                        a.each(p, function (e) {
-                            return e.addChild(f);
+                        r.each(f, function (e) {
+                            return e.addChild(d);
                         }),
                         function () {
-                            return a.each(p, function (e) {
-                                return e.removeChild(f);
+                            return r.each(f, function (e) {
+                                return e.removeChild(d);
                             });
                         }
                     );
                 }),
-                c.createElement(
+                u.createElement(
                     e,
-                    l({}, n.getComponentProps(f.getValue()), {
+                    o({}, t.getComponentProps(d.getValue()), {
                         ref:
                             s &&
                             function (e) {
-                                o.current = A(i, e);
+                                a.current = S(i, e);
                             }
                     })
                 )
             );
         });
     };
-function A(e, n) {
-    return e && (a.is.fun(e) ? e(n) : (e.current = n)), n;
+function S(e, t) {
+    return e && (r.is.fun(e) ? e(t) : (e.current = t)), t;
 }
-var C = Symbol.for('AnimatedComponent'),
-    N = function (e, n) {
-        var r = void 0 === n ? {} : n,
-            i = r.applyAnimatedValues,
-            o =
+var A = Symbol.for('AnimatedComponent'),
+    N = function (e, t) {
+        var n = void 0 === t ? {} : t,
+            i = n.applyAnimatedValues,
+            a =
                 void 0 === i
                     ? function () {
                           return !1;
                       }
                     : i,
-            s = r.createAnimatedStyle,
-            l =
+            s = n.createAnimatedStyle,
+            o =
                 void 0 === s
                     ? function (e) {
-                          return new b(e);
+                          return new y(e);
                       }
                     : s,
-            u = r.getComponentProps,
-            c = {
-                applyAnimatedValues: o,
-                createAnimatedStyle: l,
+            l = n.getComponentProps,
+            u = {
+                applyAnimatedValues: a,
+                createAnimatedStyle: o,
                 getComponentProps:
-                    void 0 === u
+                    void 0 === l
                         ? function (e) {
                               return e;
                           }
-                        : u
+                        : l
             },
-            d = function (e) {
-                var n = R(e) || 'Anonymous';
-                return ((e = a.is.str(e) ? S(e, c) : e[C] || (e[C] = S(e, c))).displayName = 'Animated(' + n + ')'), e;
+            c = function (e) {
+                var t = C(e) || 'Anonymous';
+                return ((e = r.is.str(e) ? b(e, u) : e[A] || (e[A] = b(e, u))).displayName = 'Animated(' + t + ')'), e;
             };
         return (
-            a.each(e, function (e, n) {
-                !a.is.str(n) && (n = R(e)), (d[n] = d(e));
+            r.each(e, function (e, t) {
+                r.is.str(t) || (t = C(e)), (c[t] = c(e));
             }),
-            { animated: d }
+            { animated: c }
         );
     },
-    R = function (e) {
-        return a.is.str(e) ? e : e && a.is.str(e.displayName) ? e.displayName : (a.is.fun(e) && e.name) || null;
+    C = function (e) {
+        return r.is.str(e) ? e : e && r.is.str(e.displayName) ? e.displayName : (r.is.fun(e) && e.name) || null;
     };
-(n.Animated = g), (n.AnimatedArray = I), (n.AnimatedObject = b), (n.AnimatedProps = T), (n.AnimatedString = v), (n.AnimatedValue = E), (n.createHost = N), (n.getAnimated = h), (n.getPayload = m), (n.isAnimated = p), (n.setAnimated = _);
+(t.Animated = m), (t.AnimatedArray = I), (t.AnimatedObject = y), (t.AnimatedProps = T), (t.AnimatedString = E), (t.AnimatedValue = g), (t.createHost = N), (t.getAnimated = _), (t.getPayload = h), (t.isAnimated = f), (t.setAnimated = p);

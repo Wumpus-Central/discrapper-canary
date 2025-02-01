@@ -1,4 +1,4 @@
 e.exports = {
-    chatIcon: 'chatIcon_f420ee',
-    badge: 'badge_f420ee'
+    chatIcon: 'chatIcon__233f8',
+    badge: 'badge__233f8'
 };

@@ -1,42 +1,42 @@
-var e = r(581031),
-    o = r(936940),
-    i = r(354848),
-    u = r(740362),
-    c = r(325008),
-    f = r(539459).CONFIGURABLE,
-    a = r(943329),
-    s = r(644659),
-    p = s.enforce,
-    l = s.get,
-    v = String,
-    b = Object.defineProperty,
-    y = e(''.slice),
-    g = e(''.replace),
-    h = e([].join),
-    m =
-        c &&
-        !o(function () {
-            return 8 !== b(function () {}, 'length', { value: 8 }).length;
+var r = a(581031),
+    n = a(936940),
+    o = a(354848),
+    _ = a(740362),
+    i = a(325008),
+    c = a(539459).CONFIGURABLE,
+    s = a(943329),
+    E = a(644659),
+    l = E.enforce,
+    u = E.get,
+    I = String,
+    R = Object.defineProperty,
+    d = r(''.slice),
+    A = r(''.replace),
+    f = r([].join),
+    p =
+        i &&
+        !n(function () {
+            return 8 !== R(function () {}, 'length', { value: 8 }).length;
         }),
-    x = String(String).split('String'),
-    d = (t.exports = function (t, n, r) {
-        'Symbol(' === y(v(n), 0, 7) && (n = '[' + g(v(n), /^Symbol\(([^)]*)\)/, '$1') + ']'),
-            r && r.getter && (n = 'get ' + n),
-            r && r.setter && (n = 'set ' + n),
-            (!u(t, 'name') || (f && t.name !== n)) &&
-                (c
-                    ? b(t, 'name', {
-                          value: n,
+    T = String(String).split('String'),
+    N = (t.exports = function (t, e, a) {
+        'Symbol(' === d(I(e), 0, 7) && (e = '[' + A(I(e), /^Symbol\(([^)]*)\)/, '$1') + ']'),
+            a && a.getter && (e = 'get ' + e),
+            a && a.setter && (e = 'set ' + e),
+            (!_(t, 'name') || (c && t.name !== e)) &&
+                (i
+                    ? R(t, 'name', {
+                          value: e,
                           configurable: !0
                       })
-                    : (t.name = n)),
-            m && r && u(r, 'arity') && t.length !== r.arity && b(t, 'length', { value: r.arity });
+                    : (t.name = e)),
+            p && a && _(a, 'arity') && t.length !== a.arity && R(t, 'length', { value: a.arity });
         try {
-            r && u(r, 'constructor') && r.constructor ? c && b(t, 'prototype', { writable: !1 }) : t.prototype && (t.prototype = void 0);
+            a && _(a, 'constructor') && a.constructor ? i && R(t, 'prototype', { writable: !1 }) : t.prototype && (t.prototype = void 0);
         } catch (t) {}
-        var e = p(t);
-        return !u(e, 'source') && (e.source = h(x, 'string' == typeof n ? n : '')), t;
+        var r = l(t);
+        return _(r, 'source') || (r.source = f(T, 'string' == typeof e ? e : '')), t;
     });
-Function.prototype.toString = d(function () {
-    return (i(this) && l(this).source) || a(this);
+Function.prototype.toString = N(function () {
+    return (o(this) && u(this).source) || s(this);
 }, 'toString');

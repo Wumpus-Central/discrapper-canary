@@ -1,5 +1,5 @@
-var i = r(818083);
-n.Z = (0, i.B)({
+n.d(t, { Z: () => i });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-06_amd_av1_video_encoding',
     label: 'Test how AV1 works on windows with AMD GPU',

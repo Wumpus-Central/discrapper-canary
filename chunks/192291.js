@@ -17,9 +17,9 @@ var i,
     v = n(276321),
     y = n(641236),
     I = n(457507),
-    b = n(644659),
-    T = b.enforce,
-    S = b.get,
+    T = n(644659),
+    b = T.enforce,
+    S = T.get,
     A = l.Int8Array,
     N = A && A.prototype,
     C = l.Uint8ClampedArray,
@@ -109,8 +109,8 @@ var i,
             for (i in G) (r = l[i]) && (!r[e] || n) && h(r, e, t);
         }
     };
-for (i in G) (a = (r = l[i]) && r.prototype) ? (T(a)[M] = r) : (k = !1);
-for (i in B) (a = (r = l[i]) && r.prototype) && (T(a)[M] = r);
+for (i in G) (a = (r = l[i]) && r.prototype) ? (b(a)[M] = r) : (k = !1);
+for (i in B) (a = (r = l[i]) && r.prototype) && (b(a)[M] = r);
 if (
     (!k || !u(O) || O === Function.prototype) &&
     ((O = function () {

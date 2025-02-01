@@ -1,5 +1,5 @@
 e.exports = {
-    tabBar: 'tabBar_d8bb15',
-    tabBarPanel: 'tabBarPanel_d8bb15',
-    tab: 'tab_d8bb15'
+    tabBar: 'tabBar_f8303a',
+    tabBarPanel: 'tabBarPanel_f8303a',
+    tab: 'tab_f8303a'
 };

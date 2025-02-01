@@ -1,31 +1,31 @@
-var i = r(47120);
-var a = r(147913),
-    o = r(2818),
-    s = r(192720),
-    l = r(742989);
-function u(e, n, r) {
+n.d(t, { Z: () => c }), n(47120);
+var i = n(147913),
+    r = n(2818),
+    a = n(192720),
+    s = n(742989);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function c() {
-    if (!!(o.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled || l.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).showReminders)) (0, s.sE)();
+function l() {
+    (r.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled || s.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).showReminders) && (0, a.sE)();
 }
-class d extends a.Z {
+class u extends i.Z {
     constructor(...e) {
         super(...e),
-            u(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() }),
-            u(this, 'handlePostConnectionOpen', () => {
-                c();
+            o(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() }),
+            o(this, 'handlePostConnectionOpen', () => {
+                l();
             });
     }
 }
-n.Z = new d();
+let c = new u();

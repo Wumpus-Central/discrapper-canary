@@ -1,21 +1,21 @@
-var i = r(593007),
-    a = r(382855),
-    o = r(675717),
-    s = r(526389),
-    l = /[\\^$.*+?()[\]{}|]/g,
-    u = /^\[object .+?Constructor\]$/,
-    c = Object.prototype,
-    d = Function.prototype.toString,
-    f = c.hasOwnProperty,
-    p = RegExp(
+n.d(t, { Z: () => _ });
+var i = n(593007),
+    r = n(382855),
+    a = n(675717),
+    s = n(526389),
+    o = /[\\^$.*+?()[\]{}|]/g,
+    l = /^\[object .+?Constructor\]$/,
+    u = Object.prototype,
+    c = Function.prototype.toString,
+    d = u.hasOwnProperty,
+    f = RegExp(
         '^' +
-            d
-                .call(f)
-                .replace(l, '\\$&')
+            c
+                .call(d)
+                .replace(o, '\\$&')
                 .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') +
             '$'
     );
-function h(e) {
-    return !(!(0, o.Z)(e) || (0, a.Z)(e)) && ((0, i.Z)(e) ? p : u).test((0, s.Z)(e));
-}
-n.Z = h;
+let _ = function (e) {
+    return !(!(0, a.Z)(e) || (0, r.Z)(e)) && ((0, i.Z)(e) ? f : l).test((0, s.Z)(e));
+};

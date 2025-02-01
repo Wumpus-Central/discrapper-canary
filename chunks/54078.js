@@ -1,4 +1,4 @@
-function r(e, n) {
-    if (('constructor' !== n || 'function' != typeof e[n]) && '__proto__' != n) return e[n];
-}
-n.Z = r;
+n.d(t, { Z: () => i });
+let i = function (e, t) {
+    if (('constructor' !== t || 'function' != typeof e[t]) && '__proto__' != t) return e[t];
+};

@@ -1,73 +1,73 @@
-n.r(e);
-var i = n(200651);
-n(192379);
-var o = n(442837),
-    s = n(481060),
-    r = n(600164),
-    l = n(418632),
-    a = n(594174),
-    c = n(388032),
-    d = n(97245);
-function u(t) {
-    let { onClose: e } = t,
-        r = (0, o.e7)([a.default], () => a.default.getCurrentUser());
-    function d() {
-        null == e || e();
+i.d(t, { default: () => f });
+var n = i(200651);
+i(192379);
+var s = i(442837),
+    r = i(481060),
+    l = i(600164),
+    o = i(418632),
+    a = i(594174),
+    d = i(388032),
+    c = i(97245);
+function u(e) {
+    let { onClose: t } = e,
+        l = (0, s.e7)([a.default], () => a.default.getCurrentUser());
+    function c() {
+        null == t || t();
     }
     function u() {
-        d(),
-            (0, s.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e('9343'), n.e('58679')]).then(n.bind(n, 642298));
-                return (e) => (0, i.jsx)(t, { ...e });
+        c(),
+            (0, r.ZDy)(async () => {
+                let { default: e } = await Promise.all([i.e('9343'), i.e('58679')]).then(i.bind(i, 642298));
+                return (t) => (0, n.jsx)(e, { ...t });
             });
     }
-    return (null == r ? void 0 : r.email) == null
-        ? (0, i.jsx)(s.Button, {
+    return (null == l ? void 0 : l.email) == null
+        ? (0, n.jsx)(r.zxk, {
               onClick: u,
-              color: s.Button.Colors.BRAND,
-              look: s.Button.Looks.FILLED,
-              children: c.intl.string(c.t.ydw5nZ)
+              color: r.zxk.Colors.BRAND,
+              look: r.zxk.Looks.FILLED,
+              children: d.intl.string(d.t.ydw5nZ)
           })
-        : (0, i.jsxs)(i.Fragment, {
+        : (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, i.jsx)(s.Button, {
+                  (0, n.jsx)(r.zxk, {
                       onClick: u,
-                      color: s.Button.Colors.PRIMARY,
-                      look: s.Button.Looks.LINK,
-                      children: c.intl.string(c.t.Vm8akJ)
+                      color: r.zxk.Colors.PRIMARY,
+                      look: r.zxk.Looks.LINK,
+                      children: d.intl.string(d.t.Vm8akJ)
                   }),
-                  (0, i.jsx)(l.Z, {
-                      color: s.Button.Colors.BRAND,
-                      onClick: d
+                  (0, n.jsx)(o.Z, {
+                      color: r.zxk.Colors.BRAND,
+                      onClick: c
                   })
               ]
           });
 }
-e.default = function (t) {
-    let { onClose: e, transitionState: n } = t;
-    return (0, i.jsxs)(s.ModalRoot, {
-        transitionState: n,
+let f = function (e) {
+    let { onClose: t, transitionState: i } = e;
+    return (0, n.jsxs)(r.Y0X, {
+        transitionState: i,
         children: [
-            (0, i.jsx)(s.ModalHeader, {
-                children: (0, i.jsx)(s.FormTitle, {
-                    tag: s.FormTitleTags.H4,
-                    children: c.intl.string(c.t.UZLrY2)
+            (0, n.jsx)(r.xBx, {
+                children: (0, n.jsx)(r.vwX, {
+                    tag: r.RB0.H4,
+                    children: d.intl.string(d.t.UZLrY2)
                 })
             }),
-            (0, i.jsxs)(s.ModalContent, {
+            (0, n.jsxs)(r.hzk, {
                 children: [
-                    (0, i.jsx)('div', { className: d.imageUnverified }),
-                    (0, i.jsx)(s.Text, {
+                    (0, n.jsx)('div', { className: c.imageUnverified }),
+                    (0, n.jsx)(r.Text, {
                         variant: 'text-md/normal',
-                        className: d.message,
-                        children: c.intl.string(c.t['0LgOKC'])
+                        className: c.message,
+                        children: d.intl.string(d.t['0LgOKC'])
                     })
                 ]
             }),
-            (0, i.jsx)(s.ModalFooter, {
-                children: (0, i.jsx)(r.Z, {
-                    justify: r.Z.Justify.END,
-                    children: (0, i.jsx)(u, { onClose: e })
+            (0, n.jsx)(r.mzw, {
+                children: (0, n.jsx)(l.Z, {
+                    justify: l.Z.Justify.END,
+                    children: (0, n.jsx)(u, { onClose: t })
                 })
             })
         ]

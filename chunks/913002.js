@@ -28,10 +28,10 @@ function g(e) {
         { trackUserProfileAction: E } = (0, f.KZ)(),
         [v, y] = (0, s.Wu)([l.Z], () => [l.Z.useReducedMotion, l.Z.keyboardModeEnabled]),
         I = !n || v || y ? 0 : h,
-        b = () => {
+        T = () => {
             E({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), m(g), null == r || r();
         },
-        T = () => {
+        b = () => {
             E({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), d.Ok.updateSetting(void 0);
         };
     return (0, i.jsxs)(c.ZP, {
@@ -48,7 +48,7 @@ function g(e) {
                     className: a()(p.button, p.left),
                     'aria-label': _.intl.string(_.t.QdHxoq),
                     'aria-haspopup': 'dialog',
-                    onClick: b,
+                    onClick: T,
                     children: (0, i.jsx)(o.vdY, {
                         size: 'xs',
                         colorClass: p.icon
@@ -62,7 +62,7 @@ function g(e) {
                 children: (0, i.jsx)(c.zx, {
                     className: a()(p.button, p.right),
                     'aria-label': _.intl.string(_.t.wfYTHR),
-                    onClick: T,
+                    onClick: b,
                     children: (0, i.jsx)(o.XHJ, {
                         size: 'xs',
                         colorClass: p.icon

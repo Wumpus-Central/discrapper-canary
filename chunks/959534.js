@@ -1,6 +1,6 @@
 e.exports = {
-    privateChannels: 'privateChannels_ec7a6d',
-    searchBar: 'searchBar_ec7a6d',
-    searchBarComponent: 'searchBarComponent_ec7a6d',
-    panels: 'panels_ec7a6d'
+    privateChannels: 'privateChannels_ee924e',
+    searchBar: 'searchBar_ee924e',
+    searchBarComponent: 'searchBarComponent_ee924e',
+    panels: 'panels_ee924e'
 };

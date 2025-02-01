@@ -1,10 +1,10 @@
 e.exports = {
-    modal: 'modal_de766b',
-    modalHeader: 'modalHeader_de766b',
-    header: 'header_de766b',
-    content: 'content_de766b',
-    linkedLobbyNotice: 'linkedLobbyNotice_de766b',
-    linkedLobbyNoticeSeparator: 'linkedLobbyNoticeSeparator_de766b',
-    linkedLobbyApplicationIcon: 'linkedLobbyApplicationIcon_de766b',
-    channelIcon: 'channelIcon_de766b'
+    modal: 'modal_ca6911',
+    modalHeader: 'modalHeader_ca6911',
+    header: 'header_ca6911',
+    content: 'content_ca6911',
+    linkedLobbyNotice: 'linkedLobbyNotice_ca6911',
+    linkedLobbyNoticeSeparator: 'linkedLobbyNoticeSeparator_ca6911',
+    linkedLobbyApplicationIcon: 'linkedLobbyApplicationIcon_ca6911',
+    channelIcon: 'channelIcon_ca6911'
 };

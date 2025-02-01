@@ -1,103 +1,103 @@
+n.d(t, { Z: () => v });
 var i,
-    a = r(913527),
-    o = r.n(a),
-    s = r(442837),
-    l = r(570140),
-    u = r(709054);
-function c(e, n, r) {
+    r = n(913527),
+    a = n.n(r),
+    s = n(442837),
+    o = n(570140),
+    l = n(709054);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let d = { lastSeenNewlyAddedEmojiIds: {} },
-    f = d,
-    p = {};
-function h() {
-    (f = d), (p = {});
+let c = { lastSeenNewlyAddedEmojiIds: {} },
+    d = c,
+    f = {};
+function _() {
+    (d = c), (f = {});
 }
-function _(e) {
-    var n;
-    let { guildId: r, emojiId: i } = e,
-        a = null !== (n = p[r]) && void 0 !== n ? n : f.lastSeenNewlyAddedEmojiIds[r];
-    null == a || 0 > u.default.compare(a.id, i)
-        ? (p[r] = {
+function p(e) {
+    var t;
+    let { guildId: n, emojiId: i } = e,
+        r = null !== (t = f[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
+    null == r || 0 > l.default.compare(r.id, i)
+        ? (f[n] = {
               id: i,
               lastSeen: Date.now(),
               acknowledged: !0
           })
-        : (p[r] = {
-              ...a,
+        : (f[n] = {
+              ...r,
               acknowledged: !0
           });
 }
-function m(e) {
-    var n;
-    let { guildId: r, emojiId: i } = e,
-        a = null !== (n = p[r]) && void 0 !== n ? n : f.lastSeenNewlyAddedEmojiIds[r];
-    (null == a || 0 > u.default.compare(a.id, i)) &&
-        (p[r] = {
+function h(e) {
+    var t;
+    let { guildId: n, emojiId: i } = e,
+        r = null !== (t = f[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
+    (null == r || 0 > l.default.compare(r.id, i)) &&
+        (f[n] = {
             id: i,
             lastSeen: Date.now(),
             acknowledged: !1
         });
 }
+function m() {
+    for (let e in f) d.lastSeenNewlyAddedEmojiIds[e] = f[e];
+}
 function g() {
-    for (let e in p) f.lastSeenNewlyAddedEmojiIds[e] = p[e];
+    (d = c), m();
 }
-function E() {
-    (f = d), g();
-}
-class v extends (i = s.ZP.PersistedStore) {
+class E extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        f = null != e ? e : d;
+        d = null != e ? e : c;
     }
     getState() {
-        return f;
+        return d;
     }
     getLastSeenEmojiByGuild(e) {
-        return f.lastSeenNewlyAddedEmojiIds[e];
+        return d.lastSeenNewlyAddedEmojiIds[e];
     }
-    isNewerThanLastSeen(e, n) {
-        if (null == e || null == n) return !1;
-        let r = this.getLastSeenEmojiByGuild(e);
-        if (null == r) return !0;
-        if (u.default.compare(n, r.id) > 0) return !0;
+    isNewerThanLastSeen(e, t) {
+        if (null == e || null == t) return !1;
+        let n = this.getLastSeenEmojiByGuild(e);
+        if (null == n || l.default.compare(t, n.id) > 0) return !0;
         {
-            let e = o()(r.lastSeen);
-            return o()().isBefore(e.add(2, 'weeks')) && !r.acknowledged;
+            let e = a()(n.lastSeen);
+            return a()().isBefore(e.add(2, 'weeks')) && !n.acknowledged;
         }
     }
 }
-c(v, 'displayName', 'NewlyAddedEmojiStore'),
-    c(v, 'persistKey', 'NewlyAddedEmojiStore'),
-    c(v, 'migrations', [
+u(E, 'displayName', 'NewlyAddedEmojiStore'),
+    u(E, 'persistKey', 'NewlyAddedEmojiStore'),
+    u(E, 'migrations', [
         (e) => {
-            let n = e.lastSeenNewlyAddedEmojiIds,
-                r = {};
-            for (let e in n) {
-                let i = n[e];
-                r[e] = {
+            let t = e.lastSeenNewlyAddedEmojiIds,
+                n = {};
+            for (let e in t) {
+                let i = t[e];
+                n[e] = {
                     id: i,
                     lastSeen: Date.now(),
                     acknowledged: !1
                 };
             }
-            return { lastSeenNewlyAddedEmojiIds: r };
+            return { lastSeenNewlyAddedEmojiIds: n };
         }
-    ]),
-    (n.Z = new v(l.Z, {
-        LOGOUT: h,
-        NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: _,
-        NEWLY_ADDED_EMOJI_SEEN_PENDING: m,
-        NEWLY_ADDED_EMOJI_SEEN_UPDATED: g,
-        CLEAR_CACHES: E,
-        CONNECTION_CLOSED: g
-    }));
+    ]);
+let v = new E(o.Z, {
+    LOGOUT: _,
+    NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: p,
+    NEWLY_ADDED_EMOJI_SEEN_PENDING: h,
+    NEWLY_ADDED_EMOJI_SEEN_UPDATED: m,
+    CLEAR_CACHES: g,
+    CONNECTION_CLOSED: m
+});

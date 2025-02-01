@@ -1,7 +1,7 @@
 e.exports = {
-    container: 'container_a934b7',
-    emojiContainer: 'emojiContainer_a934b7',
-    name: 'name_a934b7',
-    linkedName: 'linkedName_a934b7',
-    infoContainer: 'infoContainer_a934b7'
+    container: 'container__6b8b8',
+    emojiContainer: 'emojiContainer__6b8b8',
+    name: 'name__6b8b8',
+    linkedName: 'linkedName__6b8b8',
+    infoContainer: 'infoContainer__6b8b8'
 };

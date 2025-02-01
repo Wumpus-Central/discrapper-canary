@@ -1,8 +1,8 @@
 e.exports = {
-    container: 'container_feab95',
-    title: 'title_feab95',
-    tabs: 'tabs_feab95',
-    tabBarItem: 'tabBarItem_feab95',
-    debugPanelStandalone: 'debugPanelStandalone_feab95',
-    debugPanelSection: 'debugPanelSection_feab95'
+    container: 'container__50387',
+    tabs: 'tabs__50387',
+    title: 'title__50387',
+    tabBarItem: 'tabBarItem__50387',
+    debugPanelStandalone: 'debugPanelStandalone__50387',
+    debugPanelSection: 'debugPanelSection__50387'
 };

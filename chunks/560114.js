@@ -1,62 +1,62 @@
-n.r(t), n(789020), n(47120);
+n.d(t, { default: () => ec }), n(789020), n(47120);
 var l,
     i = n(200651),
     s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     o = n(512722),
     d = n.n(o),
     u = n(392711),
     c = n.n(u),
     h = n(990547),
     g = n(533800),
-    m = n(442837),
-    v = n(902704),
-    I = n(692547),
-    x = n(481060),
+    v = n(442837),
+    m = n(902704),
+    x = n(692547),
+    I = n(481060),
     p = n(447543),
     S = n(247272),
     N = n(110924),
-    C = n(100527),
-    E = n(906732),
-    f = n(835473),
-    T = n(447003),
-    _ = n(471445),
+    E = n(100527),
+    T = n(906732),
+    C = n(835473),
+    _ = n(447003),
+    f = n(471445),
     j = n(259473),
-    y = n(600164),
-    Z = n(687516),
+    Z = n(600164),
+    y = n(687516),
     A = n(648159),
-    M = n(227672),
-    w = n(427679),
+    w = n(227672),
+    M = n(427679),
     P = n(199902),
-    b = n(662594),
-    R = n(592125),
-    B = n(984933),
+    R = n(662594),
+    b = n(592125),
+    k = n(984933),
     U = n(341165),
     L = n(751771),
-    F = n(496675),
-    k = n(158776),
-    D = n(944486),
-    V = n(594174),
-    G = n(938475),
-    O = n(626135),
-    H = n(630388),
-    z = n(971130),
-    K = n(264229),
+    B = n(496675),
+    V = n(158776),
+    O = n(944486),
+    D = n(594174),
+    F = n(938475),
+    G = n(626135),
+    z = n(630388),
+    H = n(971130),
+    q = n(264229),
     W = n(366980),
-    q = n(277364),
+    K = n(277364),
     Y = n(585385),
-    Q = n(603236),
-    $ = n(462376),
-    J = n(245335),
-    X = n(981631),
+    X = n(603236),
+    J = n(462376),
+    Q = n(245335),
+    $ = n(981631),
     ee = n(176505),
     et = n(388032),
     en = n(755527),
     el = n(232186),
     ei = n(107720),
     es = n(622577);
-function er(e, t, n) {
+function ea(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -69,33 +69,33 @@ function er(e, t, n) {
         e
     );
 }
-let { INVITE_OPTIONS_FOREVER: ea, INVITE_OPTIONS_7_DAYS: eo, INVITE_OPTIONS_UNLIMITED: ed } = z.ZP;
+let { INVITE_OPTIONS_FOREVER: er, INVITE_OPTIONS_7_DAYS: eo, INVITE_OPTIONS_UNLIMITED: ed } = H.ZP;
 class eu extends (l = s.PureComponent) {
     componentDidMount() {
-        let { inviteChannel: e, code: t, guild: n, source: l, canCreateInvites: i, analyticsLocation: s, streamUserId: r, targetType: a, targetUserId: o, application: d, initialCounts: u, rows: c, showFriends: h, modalState: g, setModalState: m } = this.props,
-            { maxAge: v, maxUses: I, temporary: x, flags: S } = g;
+        let { inviteChannel: e, code: t, guild: n, source: l, canCreateInvites: i, analyticsLocation: s, streamUserId: a, targetType: r, targetUserId: o, application: d, initialCounts: u, rows: c, showFriends: h, modalState: g, setModalState: v } = this.props,
+            { maxAge: m, maxUses: x, temporary: I, flags: S } = g;
         if (i) {
             let n = null == e ? void 0 : e.id;
             if (null == n) return;
-            m({ networkError: void 0 }),
+            v({ networkError: void 0 }),
                 p.Z.createInvite(
                     n,
                     {
                         validate: null != t ? t : null,
-                        max_age: v,
-                        max_uses: I,
+                        max_age: m,
+                        max_uses: x,
                         target_user_id: o,
-                        target_type: a,
+                        target_type: r,
                         target_application_id: null == d ? void 0 : d.id,
-                        temporary: x,
+                        temporary: I,
                         flags: S
                     },
                     l
-                ).catch((e) => m({ networkError: e }));
+                ).catch((e) => v({ networkError: e }));
         }
         if (
             (h &&
-                O.default.track(X.rMx.INVITE_SUGGESTION_OPENED, {
+                G.default.track($.rMx.INVITE_SUGGESTION_OPENED, {
                     location: l,
                     num_suggestions: c.length,
                     num_friends: u.numFriends,
@@ -104,22 +104,22 @@ class eu extends (l = s.PureComponent) {
                     guild_id: n.id,
                     application_id: null == d ? void 0 : d.id
                 }),
-            null != r)
+            null != a)
         ) {
-            let e = P.Z.getStreamForUser(r, n.id),
-                t = (0, Z.L2)(e, k.Z);
-            O.default.track(X.rMx.OPEN_MODAL, {
+            let e = P.Z.getStreamForUser(a, n.id),
+                t = (0, y.L2)(e, V.Z);
+            G.default.track($.rMx.OPEN_MODAL, {
                 type: 'Send Stream Invite',
                 source: l,
                 location: s,
-                other_user_id: r,
+                other_user_id: a,
                 application_id: null != t ? t.id : null,
                 application_name: null != t ? t.name : null,
                 game_id: null != t ? t.id : null
             });
         } else
             (null == d ? void 0 : d.id) != null ||
-                O.default.track(X.rMx.OPEN_MODAL, {
+                G.default.track($.rMx.OPEN_MODAL, {
                     type: 'Instant Invite Modal',
                     source: l,
                     location: s
@@ -127,7 +127,7 @@ class eu extends (l = s.PureComponent) {
     }
     componentWillUnmount() {
         let { inviteChannel: e, modalState: t } = this.props;
-        (0, H.yE)(t.flags, g.$.IS_GUEST_INVITE) && null != e && p.Z.clearInviteFromStore(e.id);
+        (0, z.yE)(t.flags, g.$.IS_GUEST_INVITE) && null != e && p.Z.clearInviteFromStore(e.id);
     }
     getInviteKey() {
         let { code: e, vanityURLCode: t, guildScheduledEvent: n, modalState: l } = this.props,
@@ -135,24 +135,24 @@ class eu extends (l = s.PureComponent) {
             s = i ? t : null != e ? e : t;
         return null == s
             ? s
-            : (0, K.tV)({
+            : (0, q.tV)({
                   baseCode: s,
                   guildScheduledEventId: null == n ? void 0 : n.id
               });
     }
     renderChannelWarning() {
         let { inviteChannel: e } = this.props;
-        return (0, T.Z)(e)
+        return (0, _.Z)(e)
             ? (0, i.jsxs)('div', {
                   className: en.warningContainer,
                   children: [
-                      (0, i.jsx)(x.CircleWarningIcon, {
+                      (0, i.jsx)(I.P4T, {
                           size: 'custom',
                           className: en.warningIcon,
-                          color: I.Z.unsafe_rawColors.YELLOW_300.css,
+                          color: x.Z.unsafe_rawColors.YELLOW_300.css,
                           width: 12
                       }),
-                      (0, i.jsx)(x.Text, {
+                      (0, i.jsx)(I.Text, {
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
                           children: et.intl.string(et.t.x1SQZW)
@@ -163,18 +163,18 @@ class eu extends (l = s.PureComponent) {
     }
     renderHeader() {
         let e;
-        let { guild: t, showFriends: n, guildScheduledEvent: l, streamUserId: s, application: r, welcomeToServer: o, inviteChannel: d, modalState: u, handleDone: c } = this.props,
+        let { guild: t, showFriends: n, guildScheduledEvent: l, streamUserId: s, application: a, welcomeToServer: o, inviteChannel: d, modalState: u, handleDone: c } = this.props,
             { query: h } = u,
             g = null,
-            m = null;
-        if (((e = o ? null : null != s ? et.intl.string(et.t['6VQaqa']) : null != r ? et.intl.formatToPlainString(et.t.ZdK3dX, { applicationName: r.name }) : null != l ? et.intl.string(et.t.JKV4FB) : (null == d ? void 0 : d.isGuildStageVoice()) ? et.intl.string(et.t.zTrsHx) : et.intl.format(et.t.NvVBJS, { name: t.toString() })), null != d)) {
-            let e = (0, _.KS)(d, t);
+            v = null;
+        if (((e = o ? null : null != s ? et.intl.string(et.t['6VQaqa']) : null != a ? et.intl.formatToPlainString(et.t.ZdK3dX, { applicationName: a.name }) : null != l ? et.intl.string(et.t.JKV4FB) : (null == d ? void 0 : d.isGuildStageVoice()) ? et.intl.string(et.t.zTrsHx) : et.intl.format(et.t.NvVBJS, { name: t.toString() })), null != d)) {
+            let e = (0, f.KS)(d, t);
             null != e &&
-                (m = (0, i.jsxs)('div', {
+                (v = (0, i.jsxs)('div', {
                     className: en.headerChannelContainer,
                     children: [
                         (0, i.jsx)(e, { className: en.channelIcon }),
-                        (0, i.jsx)(x.Text, {
+                        (0, i.jsx)(I.Text, {
                             color: 'interactive-normal',
                             variant: 'text-md/normal',
                             children: d.name
@@ -183,24 +183,24 @@ class eu extends (l = s.PureComponent) {
                 }));
         }
         return (
-            (g = t.hasFeature(X.oNc.HUB)
+            (g = t.hasFeature($.oNc.HUB)
                 ? (0, i.jsxs)('div', {
                       className: en.hubHeader,
                       children: [
-                          (0, i.jsx)(x.Heading, {
-                              className: a()(en.hubInviteTitle, en.headerCloseButtonSpacing),
+                          (0, i.jsx)(I.X6q, {
+                              className: r()(en.hubInviteTitle, en.headerCloseButtonSpacing),
                               id: this._headerId,
                               variant: 'heading-xl/semibold',
                               color: 'header-primary',
                               children: et.intl.string(et.t.WhR38v)
                           }),
-                          (0, i.jsx)(x.Text, {
+                          (0, i.jsx)(I.Text, {
                               color: 'header-secondary',
                               variant: 'text-md/normal',
                               children: et.intl.string(et.t.Ed4BMj)
                           }),
                           n &&
-                              (0, i.jsx)(x.SearchBar, {
+                              (0, i.jsx)(I.E1j, {
                                   query: h,
                                   className: en.hubFriendSearch,
                                   onChange: this.handleQueryChange,
@@ -217,15 +217,15 @@ class eu extends (l = s.PureComponent) {
                         children: [
                             (0, i.jsx)('div', {
                                 className: en.__invalid_headerTopRow,
-                                children: (0, i.jsx)(x.FormTitle, {
+                                children: (0, i.jsx)(I.vwX, {
                                     id: this._headerId,
                                     tag: 'h2',
-                                    className: a()(el.marginBottom4, en.headerCloseButtonSpacing, en.headerText),
+                                    className: r()(el.marginBottom4, en.headerCloseButtonSpacing, en.headerText),
                                     children: e
                                 })
                             }),
-                            m,
-                            (0, i.jsx)(x.SearchBar, {
+                            v,
+                            (0, i.jsx)(I.E1j, {
                                 query: h,
                                 className: en.searchBar,
                                 onChange: this.handleQueryChange,
@@ -241,22 +241,22 @@ class eu extends (l = s.PureComponent) {
                     })
                   : (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(x.FormTitle, {
+                            (0, i.jsx)(I.vwX, {
                                 id: this._headerId,
                                 tag: 'h2',
-                                className: a()(el.marginReset, en.headerCloseButtonSpacing, en.headerText),
+                                className: r()(el.marginReset, en.headerCloseButtonSpacing, en.headerText),
                                 children: e
                             }),
-                            m,
+                            v,
                             this.renderChannelWarning()
                         ]
                     })),
-            (0, i.jsxs)(x.ModalHeader, {
+            (0, i.jsxs)(I.xBx, {
                 separator: n,
                 children: [
                     (0, i.jsx)('div', {
                         className: en.closeButton,
-                        children: (0, i.jsx)(x.ModalCloseButton, { onClick: c })
+                        children: (0, i.jsx)(I.olH, { onClick: c })
                     }),
                     (0, i.jsxs)('div', {
                         className: en.headerContainer,
@@ -269,12 +269,12 @@ class eu extends (l = s.PureComponent) {
                                             src: es,
                                             alt: ''
                                         }),
-                                        (0, i.jsx)(x.Heading, {
+                                        (0, i.jsx)(I.X6q, {
                                             variant: 'heading-lg/semibold',
                                             className: en.welcomeHeading,
                                             children: et.intl.string(et.t.DpoBNz)
                                         }),
-                                        (0, i.jsx)(x.Text, {
+                                        (0, i.jsx)(I.Text, {
                                             variant: 'text-md/normal',
                                             color: 'text-secondary',
                                             className: en.welcomeSubheading,
@@ -294,16 +294,16 @@ class eu extends (l = s.PureComponent) {
         let { rows: e } = this.props,
             t = this.getInviteKey();
         return 0 === e.length
-            ? (0, i.jsx)(x.ModalContent, {
-                  className: a()(en.inviteRowEmptyState),
-                  children: (0, i.jsx)(x.EmptyStateText, { children: et.intl.string(et.t.ojoWgY) })
+            ? (0, i.jsx)(I.hzk, {
+                  className: r()(en.inviteRowEmptyState),
+                  children: (0, i.jsx)(I.OZU, { children: et.intl.string(et.t.ojoWgY) })
               })
             : null == t
-              ? (0, i.jsx)(x.ModalContent, {
-                    className: a()(en.inviteRowEmptyState),
-                    children: (0, i.jsx)(x.EmptyStateText, { children: et.intl.string(et.t.hzPwGB) })
+              ? (0, i.jsx)(I.hzk, {
+                    className: r()(en.inviteRowEmptyState),
+                    children: (0, i.jsx)(I.OZU, { children: et.intl.string(et.t.hzPwGB) })
                 })
-              : (0, i.jsx)(x.ModalListContent, {
+              : (0, i.jsx)(I.YAO, {
                     className: en.scroller,
                     sections: [e.length],
                     renderSection: this.renderSection,
@@ -320,27 +320,27 @@ class eu extends (l = s.PureComponent) {
         var e;
         let { guild: t, showFriends: n, streamUserId: l, application: s } = this.props;
         if (n) return this.renderFriendsBody();
-        let r = (0, W.Z)(null !== (e = this.getInviteKey()) && void 0 !== e ? e : ''),
-            a = V.default.getCurrentUser();
-        d()(null != a, 'InstantInviteModal: user cannot be undefined');
-        let o = t.isOwner(a) ? et.intl.string(et.t.HFbByM) : et.intl.string(et.t.ueBhAw);
+        let a = (0, W.Z)(null !== (e = this.getInviteKey()) && void 0 !== e ? e : ''),
+            r = D.default.getCurrentUser();
+        d()(null != r, 'InstantInviteModal: user cannot be undefined');
+        let o = t.isOwner(r) ? et.intl.string(et.t.HFbByM) : et.intl.string(et.t.ueBhAw);
         return (
             null != l ? (o = et.intl.string(et.t.CXpS1N)) : null != s && (o = et.intl.string(et.t.ueCrHB)),
-            (0, i.jsx)(x.ModalContent, {
+            (0, i.jsx)(I.hzk, {
                 className: en.noScroll,
-                children: (0, i.jsxs)(y.Z, {
-                    direction: y.Z.Direction.VERTICAL,
+                children: (0, i.jsxs)(Z.Z, {
+                    direction: Z.Z.Direction.VERTICAL,
                     className: el.marginBottom20,
                     children: [
-                        (0, i.jsx)(x.Text, {
+                        (0, i.jsx)(I.Text, {
                             className: en.subText,
                             variant: 'text-sm/normal',
                             children: o
                         }),
-                        (0, i.jsx)(Q.I, {
+                        (0, i.jsx)(X.I, {
                             ...this.props,
                             setInviteFlags: this.handleSetInviteFlags,
-                            copyValue: r
+                            copyValue: a
                         })
                     ]
                 })
@@ -349,23 +349,23 @@ class eu extends (l = s.PureComponent) {
     }
     renderFooter() {
         var e;
-        let { noInvitesAvailable: t, showFriends: n, guildScheduledEvent: l, streamUserId: s, application: r, inviteChannel: o, modalState: d } = this.props,
+        let { noInvitesAvailable: t, showFriends: n, guildScheduledEvent: l, streamUserId: s, application: a, inviteChannel: o, modalState: d } = this.props,
             { maxAge: u } = d,
             c = null,
             h = (0, W.Z)(null !== (e = this.getInviteKey()) && void 0 !== e ? e : '');
         if (n) {
             let e = et.intl.string(et.t.MLkj7O);
-            null != s ? (e = et.intl.string(et.t['1b9nen'])) : null != r ? (e = et.intl.string(et.t.iI1gMj)) : null != l ? (e = et.intl.string(et.t.KaWCyM)) : (null == o ? void 0 : o.isGuildStageVoice()) && (e = et.intl.string(et.t['2frWa2'])),
-                (c = (0, i.jsxs)(y.Z, {
-                    direction: y.Z.Direction.VERTICAL,
+            null != s ? (e = et.intl.string(et.t['1b9nen'])) : null != a ? (e = et.intl.string(et.t.iI1gMj)) : null != l ? (e = et.intl.string(et.t.KaWCyM)) : (null == o ? void 0 : o.isGuildStageVoice()) && (e = et.intl.string(et.t['2frWa2'])),
+                (c = (0, i.jsxs)(Z.Z, {
+                    direction: Z.Z.Direction.VERTICAL,
                     className: en.content,
                     children: [
-                        (0, i.jsx)(x.FormTitle, {
+                        (0, i.jsx)(I.vwX, {
                             tag: 'h5',
                             className: el.marginBottom8,
                             children: e
                         }),
-                        (0, i.jsx)(Q.I, {
+                        (0, i.jsx)(X.I, {
                             ...this.props,
                             setInviteFlags: this.handleSetInviteFlags,
                             copyValue: h
@@ -373,33 +373,33 @@ class eu extends (l = s.PureComponent) {
                     ]
                 }));
         } else
-            !t &&
-                (c = (0, i.jsxs)(y.Z, {
-                    justify: y.Z.Justify.BETWEEN,
+            t ||
+                (c = (0, i.jsxs)(Z.Z, {
+                    justify: Z.Z.Justify.BETWEEN,
                     className: el.marginTop20,
                     children: [
-                        (0, i.jsx)(x.Checkbox, {
+                        (0, i.jsx)(I.XZJ, {
                             size: 18,
-                            type: x.Checkbox.Types.INVERTED,
-                            value: u === ea.value,
+                            type: I.XZJ.Types.INVERTED,
+                            value: u === er.value,
                             onChange: this.handleToggleMaxAge,
-                            children: (0, i.jsx)(x.Text, {
+                            children: (0, i.jsx)(I.Text, {
                                 variant: 'text-sm/normal',
                                 children: et.intl.string(et.t.QKJru7)
                             })
                         }),
-                        (0, i.jsx)(x.Tooltip, {
+                        (0, i.jsx)(I.ua7, {
                             text: et.intl.string(et.t.Yx4IiI),
                             children: (e) => {
                                 let { onMouseEnter: t, onMouseLeave: n } = e;
-                                return (0, i.jsx)(x.Clickable, {
+                                return (0, i.jsx)(I.P3F, {
                                     onClick: this.openSettings,
                                     onMouseEnter: t,
                                     onMouseLeave: n,
                                     className: ei.cursorPointer,
-                                    children: (0, i.jsx)(x.SettingsIcon, {
+                                    children: (0, i.jsx)(I.ewm, {
                                         size: 'sm',
-                                        color: I.Z.unsafe_rawColors.PRIMARY_400.css
+                                        color: x.Z.unsafe_rawColors.PRIMARY_400.css
                                     })
                                 });
                             }
@@ -407,8 +407,8 @@ class eu extends (l = s.PureComponent) {
                     ]
                 }));
         return null != c
-            ? (0, i.jsx)(x.ModalFooter, {
-                  className: a()({
+            ? (0, i.jsx)(I.mzw, {
+                  className: r()({
                       [en.noPadding]: !n,
                       [en.footer]: n
                   }),
@@ -420,11 +420,11 @@ class eu extends (l = s.PureComponent) {
         let { modalState: e, handleDone: t } = this.props,
             { currentPage: n } = e;
         switch (n) {
-            case J.RV.MAIN:
+            case Q.RV.MAIN:
                 return (0, i.jsxs)(i.Fragment, {
                     children: [this.renderHeader(), this.renderBody(), this.renderFooter()]
                 });
-            case J.RV.SETTINGS:
+            case Q.RV.SETTINGS:
                 return (0, i.jsx)(Y.D, {
                     ...this.props,
                     onSetInviteFlags: this.handleSetInviteFlags,
@@ -442,7 +442,7 @@ class eu extends (l = s.PureComponent) {
         let { transitionState: e, inviteChannel: t, guild: n } = this.props;
         return (0, i.jsx)('div', {
             className: this.props.showFriends ? en.wrapper : void 0,
-            children: (0, i.jsx)(x.ModalRoot, {
+            children: (0, i.jsx)(I.Y0X, {
                 impression: {
                     impressionName: h.ImpressionNames.GUILD_INVITE,
                     impressionProperties: {
@@ -459,40 +459,40 @@ class eu extends (l = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            er(this, '_scroller', null),
-            er(this, '_headerId', c().uniqueId()),
-            er(this, 'openSettings', () => {
+            ea(this, '_scroller', null),
+            ea(this, '_headerId', c().uniqueId()),
+            ea(this, 'openSettings', () => {
                 let { changePage: e } = this.props;
-                e(J.RV.SETTINGS);
+                e(Q.RV.SETTINGS);
             }),
-            er(this, 'handleSelectMaxAge', (e) => {
+            ea(this, 'handleSelectMaxAge', (e) => {
                 let { modalState: t, setModalState: n } = this.props;
                 n({
                     maxAge: e,
                     savedMaxAge: t.maxAge
                 });
             }),
-            er(this, 'handleSelectMaxUses', (e) => {
+            ea(this, 'handleSelectMaxUses', (e) => {
                 let { setModalState: t } = this.props;
                 t({ maxUses: e });
             }),
-            er(this, 'handleToggleTemporary', (e) => {
+            ea(this, 'handleToggleTemporary', (e) => {
                 let { setModalState: t } = this.props;
                 t({ temporary: e });
             }),
-            er(this, 'handleSetInviteFlags', (e) => {
+            ea(this, 'handleSetInviteFlags', (e) => {
                 let { setModalState: t } = this.props;
                 t({ flags: e });
             }),
-            er(this, 'handleQueryChange', (e) => {
+            ea(this, 'handleQueryChange', (e) => {
                 var t;
                 let { setModalState: n } = this.props;
                 null === (t = this._scroller) || void 0 === t || t.scrollTo({ to: 0 }), (0, S.C)(e), n({ query: e });
             }),
-            er(this, 'handleClearSearch', () => {
+            ea(this, 'handleClearSearch', () => {
                 this.handleQueryChange('');
             }),
-            er(this, 'handleToggleMaxAge', () => {
+            ea(this, 'handleToggleMaxAge', () => {
                 let { modalState: e, setModalState: t } = this.props,
                     { maxAge: n, savedMaxAge: l } = e;
                 t({
@@ -500,49 +500,49 @@ class eu extends (l = s.PureComponent) {
                     savedMaxAge: n
                 });
             }),
-            er(this, 'getRowHeight', (e, t) => {
+            ea(this, 'getRowHeight', (e, t) => {
                 if (e > 0) return 0;
                 switch (this.props.rows[t].type) {
-                    case z.bm.CHANNEL:
-                    case z.bm.GROUP_DM:
-                    case z.bm.DM:
-                    case z.bm.FRIEND:
-                        return $.k;
+                    case H.bm.CHANNEL:
+                    case H.bm.GROUP_DM:
+                    case H.bm.DM:
+                    case H.bm.FRIEND:
+                        return J.k;
                     default:
                         return 0;
                 }
             }),
-            er(this, 'renderRow', (e) => {
+            ea(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e;
                 if (t > 0) return null;
                 let { analyticsLocation: l } = this.props,
                     s = this.getInviteKey(),
-                    r = this.props.rows[n],
-                    a = ''.concat(r.type, '-').concat(r.item.id);
-                switch (r.type) {
-                    case z.bm.GROUP_DM:
-                    case z.bm.CHANNEL:
+                    a = this.props.rows[n],
+                    r = ''.concat(a.type, '-').concat(a.item.id);
+                switch (a.type) {
+                    case H.bm.GROUP_DM:
+                    case H.bm.CHANNEL:
                         return (0, i.jsx)(
-                            $.d,
+                            J.d,
                             {
-                                row: r,
-                                channel: r.item,
+                                row: a,
+                                channel: a.item,
                                 inviteKey: s,
                                 location: l
                             },
-                            a
+                            r
                         );
-                    case z.bm.DM:
-                    case z.bm.FRIEND:
+                    case H.bm.DM:
+                    case H.bm.FRIEND:
                         return (0, i.jsx)(
-                            $.d,
+                            J.d,
                             {
-                                row: r,
-                                user: r.item,
+                                row: a,
+                                user: a.item,
                                 inviteKey: s,
                                 location: l
                             },
-                            a
+                            r
                         );
                     default:
                         return null;
@@ -550,208 +550,208 @@ class eu extends (l = s.PureComponent) {
             });
     }
 }
-er(eu, 'defaultProps', {
-    analyticsLocation: X.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
+ea(eu, 'defaultProps', {
+    analyticsLocation: $.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
     defaultMaxAge: eo.value
-}),
-    (t.default = s.forwardRef(function (e, t) {
-        var n, l;
-        let { channel: r, guild: a, source: o, guildScheduledEvent: d, streamUserId: u, applicationId: c, transitionState: h, onClose: I, welcomeToServer: x, page: _, analyticsLocation: y } = e,
-            { analyticsLocations: Z } = (0, E.ZP)(C.Z.INSTANT_INVITE_MODAL),
-            A = (0, m.e7)(
-                [D.Z, R.Z, B.ZP],
-                () => {
-                    if (null != r) return r;
-                    let e = D.Z.getChannelId(),
-                        t = null == e || (0, ee.AB)(e) ? void 0 : R.Z.getChannel(e);
-                    return (null == t ? void 0 : t.isThread()) && (t = R.Z.getChannel(t.parent_id)), null != t ? t : B.ZP.getDefaultChannel(a.id, !0, X.Plq.CREATE_INSTANT_INVITE);
-                },
-                [r, a.id]
-            ),
-            P = null;
-        null != u ? (P = J.Iq.STREAM) : null != c && (P = J.Iq.EMBEDDED_APPLICATION);
-        let k = null != r ? r.getGuildId() : null != a ? a.id : null,
-            V = (0, m.e7)(
-                [U.Z],
-                () => {
-                    let e = null != A ? A.id : null;
-                    return null == e
-                        ? null
-                        : U.Z.getInvite(e, {
-                              targetType: P,
-                              targetUserId: u,
-                              targetApplicationId: c
-                          });
-                },
-                [A, P, u, c]
-            ),
-            [O, z, K, W] = (0, m.Wu)([L.Z, G.ZP], () => [L.Z.getInviteSuggestionRows(), L.Z.getTotalSuggestionsCount() >= 1, L.Z.getInitialCounts(), null != r && null != A ? G.ZP.getVoiceStatesForChannel(A) : null], [A, r]),
-            Y = (0, m.e7)(
-                [b.ZP],
-                () => {
-                    let e = null != A ? A.id : null;
-                    return null != k ? b.ZP.getProps(k, e) : void 0;
-                },
-                [A, k],
-                v.Z
-            ),
-            Q = (0, m.e7)([F.Z], () => null != A && F.Z.can(X.Plq.CREATE_INSTANT_INVITE, A), [A]),
-            $ = null === V || !Q,
-            [et] = s.useState(() => {
-                let e = new Set();
-                return (
-                    null != u && null != W
-                        ? W.forEach((t) => {
-                              let { user: n } = t;
-                              e.add(n.id);
-                          })
-                        : null != k &&
-                          null != Y &&
-                          P !== J.Iq.EMBEDDED_APPLICATION &&
-                          Y.rows.forEach((t) => {
-                              t.type === b.so.MEMBER && e.add(t.userId);
-                          }),
-                    e
-                );
-            }),
-            en = null == r ? void 0 : r.id,
-            el = (0, m.e7)([w.Z], () => w.Z.getStageInstanceByChannel(en), [en]);
-        s.useEffect(() => {
-            (0, S.x)({
-                omitUserIds: et,
-                guild: a,
-                channel: r,
-                applicationId: c,
-                inviteTargetType: P
-            }).catch(X.VqG);
-        }, [et, r, a, c, P]);
-        let [ei] = (0, f.Z)(null != c ? [c] : []),
-            es = (0, j.Z)({ guildId: k }),
-            er = null != V ? V.code : void 0,
-            ec = null == V ? void 0 : V.maxAge,
-            eh = null == V ? void 0 : V.maxUses,
-            eg = null == V ? void 0 : V.temporary,
-            em = a.vanityURLCode,
-            ev = null != em && em.length > 0,
-            eI = !Q && !(null == A ? void 0 : A.isGuildVocal()) && ev,
-            ex = (null == A ? void 0 : A.type) === X.d4z.GUILD_VOICE,
-            ep = null !== (n = null == V ? void 0 : V.flags) && void 0 !== n ? n : 0,
-            eS = (0, T.Z)(A);
-        !Q && (null == el ? void 0 : el.invite_code) != null && (er = el.invite_code);
-        let [eN, eC] = s.useState({
-                query: '',
-                maxAge: null !== (l = null != ec ? ec : es) && void 0 !== l ? l : eo.value,
-                savedMaxAge: ec === ea.value ? (null != es ? es : eo.value) : ea.value,
-                maxUses: null != eh && 0 !== eh ? eh : ed.value,
-                temporary: null != eg && eg,
-                networkError: void 0,
-                showVanityURL: eI,
-                currentPage: null != _ ? _ : J.RV.MAIN,
-                lastPage: void 0,
-                flags: ep
-            }),
-            eE = s.useCallback((e) => {
-                eC((t) => ({
-                    ...t,
-                    ...e
-                }));
-            }, []),
-            ef = s.useCallback(
-                (e) => {
-                    eE({
-                        currentPage: e,
-                        lastPage: eN.currentPage
-                    });
-                },
-                [eN.currentPage, eE]
-            ),
-            eT = ex && !eI && !$ && !eS,
-            { enabled: e_ } = M.o.useExperiment(
-                {
-                    guildId: null == a ? void 0 : a.id,
-                    location: 'acc417_3'
-                },
-                { autoTrackExposure: eT }
-            ),
-            { maxAge: ej, maxUses: ey, temporary: eZ, savedMaxAge: eA, flags: eM } = eN,
-            ew = s.useCallback(() => {
-                let { currentPage: e, lastPage: t } = eN;
-                e === J.RV.SETTINGS && null != t ? ef(t) : I();
-            }, [ef, eN, I]),
-            eP = s.useCallback(() => {
-                let e = null == A ? void 0 : A.id;
-                0 === ey && 0 === ej && !eZ && eI
-                    ? eE({
-                          networkError: void 0,
-                          showVanityURL: !0
+});
+let ec = s.forwardRef(function (e, t) {
+    var n, l;
+    let { channel: a, guild: r, source: o, guildScheduledEvent: d, streamUserId: u, applicationId: c, transitionState: h, onClose: x, welcomeToServer: I, page: f, analyticsLocation: Z } = e,
+        { analyticsLocations: y } = (0, T.ZP)(E.Z.INSTANT_INVITE_MODAL),
+        A = (0, v.e7)(
+            [O.Z, b.Z, k.ZP],
+            () => {
+                if (null != a) return a;
+                let e = O.Z.getChannelId(),
+                    t = null == e || (0, ee.AB)(e) ? void 0 : b.Z.getChannel(e);
+                return (null == t ? void 0 : t.isThread()) && (t = b.Z.getChannel(t.parent_id)), null != t ? t : k.ZP.getDefaultChannel(r.id, !0, $.Plq.CREATE_INSTANT_INVITE);
+            },
+            [a, r.id]
+        ),
+        P = null;
+    null != u ? (P = Q.Iq.STREAM) : null != c && (P = Q.Iq.EMBEDDED_APPLICATION);
+    let V = null != a ? a.getGuildId() : null != r ? r.id : null,
+        D = (0, v.e7)(
+            [U.Z],
+            () => {
+                let e = null != A ? A.id : null;
+                return null == e
+                    ? null
+                    : U.Z.getInvite(e, {
+                          targetType: P,
+                          targetUserId: u,
+                          targetApplicationId: c
+                      });
+            },
+            [A, P, u, c]
+        ),
+        [G, H, q, W] = (0, v.Wu)([L.Z, F.ZP], () => [L.Z.getInviteSuggestionRows(), L.Z.getTotalSuggestionsCount() >= 1, L.Z.getInitialCounts(), null != a && null != A ? F.ZP.getVoiceStatesForChannel(A) : null], [A, a]),
+        Y = (0, v.e7)(
+            [R.ZP],
+            () => {
+                let e = null != A ? A.id : null;
+                return null != V ? R.ZP.getProps(V, e) : void 0;
+            },
+            [A, V],
+            m.Z
+        ),
+        X = (0, v.e7)([B.Z], () => null != A && B.Z.can($.Plq.CREATE_INSTANT_INVITE, A), [A]),
+        J = null === D || !X,
+        [et] = s.useState(() => {
+            let e = new Set();
+            return (
+                null != u && null != W
+                    ? W.forEach((t) => {
+                          let { user: n } = t;
+                          e.add(n.id);
                       })
-                    : Q &&
-                      null != e &&
-                      (eE({
-                          networkError: void 0,
-                          showVanityURL: !1
+                    : null != V &&
+                      null != Y &&
+                      P !== Q.Iq.EMBEDDED_APPLICATION &&
+                      Y.rows.forEach((t) => {
+                          t.type === R.so.MEMBER && e.add(t.userId);
                       }),
-                      p.Z.createInvite(
-                          e,
-                          {
-                              max_age: ej,
-                              max_uses: ey,
-                              target_type: P,
-                              target_user_id: u,
-                              target_application_id: null == ei ? void 0 : ei.id,
-                              temporary: eZ,
-                              flags: eM
-                          },
-                          o
-                      ).catch((e) =>
-                          eE({
-                              networkError: e,
-                              showVanityURL: eI
-                          })
-                      )),
-                    ej !== ea.value && eA !== ea.value && eE({ savedMaxAge: ea.value });
-            }, [eI, Q, A, o, null == ei ? void 0 : ei.id, P, u, ej, ey, eZ, eE, eA, eM]),
-            eb = (0, N.Z)(A),
-            eR = (0, N.Z)((0, H.yE)(eM, g.$.IS_APPLICATION_BYPASS)),
-            eB = null != eb && eb !== A,
-            eU = null != eR && eR !== (0, H.yE)(eM, g.$.IS_APPLICATION_BYPASS);
-        s.useEffect(() => {
-            !eI && (eB || eU) && eP();
-        }, [eP, eB, eU, eI]);
-        let { canCreateApplicationBypassInvites: eL, isManualApprovalGuild: eF } = (0, q.R)(a);
-        return (0, i.jsx)(E.Gt, {
-            value: Z,
-            children: (0, i.jsx)(eu, {
-                ref: t,
-                canCreateInvites: Q,
-                noInvitesAvailable: $,
-                inviteChannel: A,
-                guild: a,
-                guildScheduledEvent: d,
-                streamUserId: u,
-                vanityURLCode: em,
-                targetType: P,
-                targetUserId: u,
-                application: ei,
-                rows: O,
-                showFriends: z,
-                initialCounts: K,
-                code: er,
-                source: o,
-                welcomeToServer: x,
-                analyticsLocations: Z,
-                analyticsLocation: y,
-                transitionState: h,
-                onClose: I,
-                canShowVanityURL: eI,
-                isGuestInviteCreationToggleEnabled: e_ && eT,
-                shouldHideTemporaryInviteToggle: (e_ && eT) || eF,
-                modalState: eN,
-                setModalState: eE,
-                changePage: ef,
-                onGenerateNewLink: eP,
-                handleDone: ew,
-                isApplicationBypassToggleEnabled: eL && !$
-            })
-        });
-    }));
+                e
+            );
+        }),
+        en = null == a ? void 0 : a.id,
+        el = (0, v.e7)([M.Z], () => M.Z.getStageInstanceByChannel(en), [en]);
+    s.useEffect(() => {
+        (0, S.x)({
+            omitUserIds: et,
+            guild: r,
+            channel: a,
+            applicationId: c,
+            inviteTargetType: P
+        }).catch($.VqG);
+    }, [et, a, r, c, P]);
+    let [ei] = (0, C.Z)(null != c ? [c] : []),
+        es = (0, j.Z)({ guildId: V }),
+        ea = null != D ? D.code : void 0,
+        ec = null == D ? void 0 : D.maxAge,
+        eh = null == D ? void 0 : D.maxUses,
+        eg = null == D ? void 0 : D.temporary,
+        ev = r.vanityURLCode,
+        em = null != ev && ev.length > 0,
+        ex = !X && !(null == A ? void 0 : A.isGuildVocal()) && em,
+        eI = (null == A ? void 0 : A.type) === $.d4z.GUILD_VOICE,
+        ep = null !== (n = null == D ? void 0 : D.flags) && void 0 !== n ? n : 0,
+        eS = (0, _.Z)(A);
+    X || (null == el ? void 0 : el.invite_code) == null || (ea = el.invite_code);
+    let [eN, eE] = s.useState({
+            query: '',
+            maxAge: null !== (l = null != ec ? ec : es) && void 0 !== l ? l : eo.value,
+            savedMaxAge: ec === er.value ? (null != es ? es : eo.value) : er.value,
+            maxUses: null != eh && 0 !== eh ? eh : ed.value,
+            temporary: null != eg && eg,
+            networkError: void 0,
+            showVanityURL: ex,
+            currentPage: null != f ? f : Q.RV.MAIN,
+            lastPage: void 0,
+            flags: ep
+        }),
+        eT = s.useCallback((e) => {
+            eE((t) => ({
+                ...t,
+                ...e
+            }));
+        }, []),
+        eC = s.useCallback(
+            (e) => {
+                eT({
+                    currentPage: e,
+                    lastPage: eN.currentPage
+                });
+            },
+            [eN.currentPage, eT]
+        ),
+        e_ = eI && !ex && !J && !eS,
+        { enabled: ef } = w.o.useExperiment(
+            {
+                guildId: null == r ? void 0 : r.id,
+                location: 'acc417_3'
+            },
+            { autoTrackExposure: e_ }
+        ),
+        { maxAge: ej, maxUses: eZ, temporary: ey, savedMaxAge: eA, flags: ew } = eN,
+        eM = s.useCallback(() => {
+            let { currentPage: e, lastPage: t } = eN;
+            e === Q.RV.SETTINGS && null != t ? eC(t) : x();
+        }, [eC, eN, x]),
+        eP = s.useCallback(() => {
+            let e = null == A ? void 0 : A.id;
+            0 === eZ && 0 === ej && !ey && ex
+                ? eT({
+                      networkError: void 0,
+                      showVanityURL: !0
+                  })
+                : X &&
+                  null != e &&
+                  (eT({
+                      networkError: void 0,
+                      showVanityURL: !1
+                  }),
+                  p.Z.createInvite(
+                      e,
+                      {
+                          max_age: ej,
+                          max_uses: eZ,
+                          target_type: P,
+                          target_user_id: u,
+                          target_application_id: null == ei ? void 0 : ei.id,
+                          temporary: ey,
+                          flags: ew
+                      },
+                      o
+                  ).catch((e) =>
+                      eT({
+                          networkError: e,
+                          showVanityURL: ex
+                      })
+                  )),
+                ej !== er.value && eA !== er.value && eT({ savedMaxAge: er.value });
+        }, [ex, X, A, o, null == ei ? void 0 : ei.id, P, u, ej, eZ, ey, eT, eA, ew]),
+        eR = (0, N.Z)(A),
+        eb = (0, N.Z)((0, z.yE)(ew, g.$.IS_APPLICATION_BYPASS)),
+        ek = null != eR && eR !== A,
+        eU = null != eb && eb !== (0, z.yE)(ew, g.$.IS_APPLICATION_BYPASS);
+    s.useEffect(() => {
+        !ex && (ek || eU) && eP();
+    }, [eP, ek, eU, ex]);
+    let { canCreateApplicationBypassInvites: eL, isManualApprovalGuild: eB } = (0, K.R)(r);
+    return (0, i.jsx)(T.Gt, {
+        value: y,
+        children: (0, i.jsx)(eu, {
+            ref: t,
+            canCreateInvites: X,
+            noInvitesAvailable: J,
+            inviteChannel: A,
+            guild: r,
+            guildScheduledEvent: d,
+            streamUserId: u,
+            vanityURLCode: ev,
+            targetType: P,
+            targetUserId: u,
+            application: ei,
+            rows: G,
+            showFriends: H,
+            initialCounts: q,
+            code: ea,
+            source: o,
+            welcomeToServer: I,
+            analyticsLocations: y,
+            analyticsLocation: Z,
+            transitionState: h,
+            onClose: x,
+            canShowVanityURL: ex,
+            isGuestInviteCreationToggleEnabled: ef && e_,
+            shouldHideTemporaryInviteToggle: (ef && e_) || eB,
+            modalState: eN,
+            setModalState: eT,
+            changePage: eC,
+            onGenerateNewLink: eP,
+            handleDone: eM,
+            isApplicationBypassToggleEnabled: eL && !J
+        })
+    });
+});

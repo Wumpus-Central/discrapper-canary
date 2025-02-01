@@ -1,8 +1,8 @@
 e.exports = {
-    content: 'content_c772ad',
-    stageIconBackground: 'stageIconBackground_c772ad',
-    stageIcon: 'stageIcon_c772ad',
-    headerTitle: 'headerTitle_c772ad',
-    headerSubtitle: 'headerSubtitle_c772ad',
-    slideContainer: 'slideContainer_c772ad'
+    content: 'content__4c084',
+    stageIconBackground: 'stageIconBackground__4c084',
+    stageIcon: 'stageIcon__4c084',
+    headerTitle: 'headerTitle__4c084',
+    headerSubtitle: 'headerSubtitle__4c084',
+    slideContainer: 'slideContainer__4c084'
 };

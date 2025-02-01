@@ -1,112 +1,112 @@
-var i = r(47120);
-var a = r(846519),
-    o = r(570140),
-    s = r(872810),
-    l = r(199902),
-    u = r(314897),
-    c = r(592125),
-    d = r(936349),
-    f = r(944486),
-    p = r(959457),
-    h = r(70956),
-    _ = r(569545),
-    m = r(981631);
-let g = new a.V7(),
-    E = new a.V7(),
-    v = 180000,
-    y = 5 * h.Z.Millis.SECOND,
-    b = 12 * h.Z.Millis.SECOND,
-    I = null;
-function T(e, n) {
-    if (f.Z.getVoiceChannelId() !== e) return !1;
-    let r = c.Z.getChannel(e);
-    if (null == r || (!r.isDM() && !r.isGuildStageVoice()) || null != l.Z.getActiveStreamForUser(n, r.getGuildId())) return !1;
-    let i = l.Z.getStreamForUser(n, r.getGuildId());
+n.d(t, { Z: () => b }), n(47120);
+var i = n(846519),
+    r = n(570140),
+    a = n(872810),
+    s = n(199902),
+    o = n(314897),
+    l = n(592125),
+    u = n(936349),
+    c = n(944486),
+    d = n(959457),
+    f = n(70956),
+    _ = n(569545),
+    p = n(981631);
+let h = new i.V7(),
+    m = new i.V7(),
+    g = 180000,
+    E = 5 * f.Z.Millis.SECOND,
+    v = 12 * f.Z.Millis.SECOND,
+    y = null;
+function I(e, t) {
+    if (c.Z.getVoiceChannelId() !== e) return !1;
+    let n = l.Z.getChannel(e);
+    if (null == n || (!n.isDM() && !n.isGuildStageVoice()) || null != s.Z.getActiveStreamForUser(t, n.getGuildId())) return !1;
+    let i = s.Z.getStreamForUser(t, n.getGuildId());
     if (null == i) return !1;
-    let a = (0, _.V9)(i);
-    return a !== I && ((I = a), (0, s.rn)(i, { noFocus: !0 }), !0);
+    let r = (0, _.V9)(i);
+    return r !== y && ((y = r), (0, a.rn)(i, { noFocus: !0 }), !0);
 }
-function S(e, n) {
-    let r = null != n ? n : d.Z.getPreferredRegion();
-    null != r && r !== d.Z.getRegion(p.Z.getHostname(p.Z.getActiveStreamKey())) && (0, s.dV)(e, r);
+function T(e, t) {
+    let n = null != t ? t : u.Z.getPreferredRegion();
+    null != n && n !== u.Z.getRegion(d.Z.getHostname(d.Z.getActiveStreamKey())) && (0, a.dV)(e, n);
 }
-n.Z = {
+let b = {
     init() {
-        let e = (e, n) => {
-            !p.Z.getAllActiveStreamKeys().includes(e) &&
-                E.start(n ? b : y, () => {
-                    o.Z.dispatch({
+        let e = (e, t) => {
+            d.Z.getAllActiveStreamKeys().includes(e) ||
+                m.start(t ? v : E, () => {
+                    r.Z.dispatch({
                         type: 'STREAM_TIMED_OUT',
                         streamKey: e
                     });
                 });
         };
-        o.Z.subscribe('STREAM_WATCH', (n) => {
-            let { streamKey: r } = n,
-                { channelId: i } = (0, _.my)(r),
-                a = c.Z.getChannel(i);
-            e(r, null == a ? void 0 : a.isGuildStageVoice());
+        r.Z.subscribe('STREAM_WATCH', (t) => {
+            let { streamKey: n } = t,
+                { channelId: i } = (0, _.my)(n),
+                r = l.Z.getChannel(i);
+            e(n, null == r ? void 0 : r.isGuildStageVoice());
         }),
-            o.Z.subscribe('STREAM_START', (n) => {
-                let { streamType: r, guildId: i, channelId: a } = n,
-                    o = c.Z.getChannel(a);
+            r.Z.subscribe('STREAM_START', (t) => {
+                let { streamType: n, guildId: i, channelId: r } = t,
+                    a = l.Z.getChannel(r);
                 e(
                     (0, _.V9)({
-                        streamType: r,
+                        streamType: n,
                         guildId: i,
-                        channelId: a,
-                        ownerId: u.default.getId()
+                        channelId: r,
+                        ownerId: o.default.getId()
                     }),
-                    null == o ? void 0 : o.isGuildStageVoice()
+                    null == a ? void 0 : a.isGuildStageVoice()
                 );
             }),
-            o.Z.subscribe('STREAM_CREATE', () => {
-                E.stop();
+            r.Z.subscribe('STREAM_CREATE', () => {
+                m.stop();
             }),
-            o.Z.subscribe('STREAM_UPDATE', () => {
-                E.stop();
+            r.Z.subscribe('STREAM_UPDATE', () => {
+                m.stop();
             }),
-            o.Z.subscribe('STREAM_DELETE', () => {
-                E.stop();
+            r.Z.subscribe('STREAM_DELETE', () => {
+                m.stop();
             }),
-            o.Z.subscribe('STREAM_CLOSE', () => {
-                g.stop(), E.stop();
+            r.Z.subscribe('STREAM_CLOSE', () => {
+                h.stop(), m.stop();
             }),
-            o.Z.subscribe('VOICE_CHANNEL_SELECT', (e) => {
-                let { channelId: n } = e;
-                if (null == n) return;
-                I = null;
-                let r = l.Z.getAllApplicationStreamsForChannel(n).filter((e) => {
-                    let { ownerId: n } = e;
-                    return n !== u.default.getId();
+            r.Z.subscribe('VOICE_CHANNEL_SELECT', (e) => {
+                let { channelId: t } = e;
+                if (null == t) return;
+                y = null;
+                let n = s.Z.getAllApplicationStreamsForChannel(t).filter((e) => {
+                    let { ownerId: t } = e;
+                    return t !== o.default.getId();
                 })[0];
-                null != r && T(n, r.ownerId);
+                null != n && I(t, n.ownerId);
             }),
-            o.Z.subscribe('VOICE_STATE_UPDATES', (e) => {
-                let { voiceStates: n } = e;
-                n.forEach((e) => {
-                    let { userId: n, channelId: r, guildId: i, selfStream: a } = e;
-                    if (n !== u.default.getId() && null != r) {
-                        if (a && T(r, n)) return;
-                        let e = l.Z.getActiveStreamForUser(n, i);
-                        if (null != e && e.channelId === r && (!a && e.state !== m.jm8.ENDED && g.start(v, () => (0, s.aP)((0, _.V9)(e), !1)), a && e.state === m.jm8.ENDED)) {
-                            g.stop();
-                            let e = l.Z.getStreamForUser(n, i);
+            r.Z.subscribe('VOICE_STATE_UPDATES', (e) => {
+                let { voiceStates: t } = e;
+                t.forEach((e) => {
+                    let { userId: t, channelId: n, guildId: i, selfStream: r } = e;
+                    if (t !== o.default.getId() && null != n) {
+                        if (r && I(n, t)) return;
+                        let e = s.Z.getActiveStreamForUser(t, i);
+                        if (null != e && e.channelId === n && (r || e.state === p.jm8.ENDED || h.start(g, () => (0, a.aP)((0, _.V9)(e), !1)), r && e.state === p.jm8.ENDED)) {
+                            h.stop();
+                            let e = s.Z.getStreamForUser(t, i);
                             if (null == e) return;
-                            (0, s.rn)(e);
+                            (0, a.rn)(e);
                         }
                     }
                 });
             }),
-            o.Z.subscribe('CALL_UPDATE', (e) => {
-                let { channelId: n, region: r } = e,
-                    i = l.Z.getCurrentUserActiveStream();
-                (null == i ? void 0 : i.channelId) === n && S((0, _.V9)(i), r);
+            r.Z.subscribe('CALL_UPDATE', (e) => {
+                let { channelId: t, region: n } = e,
+                    i = s.Z.getCurrentUserActiveStream();
+                (null == i ? void 0 : i.channelId) === t && T((0, _.V9)(i), n);
             }),
-            o.Z.subscribe('CHANNEL_UPDATES', (e) => {
-                let { channels: n } = e,
-                    r = l.Z.getCurrentUserActiveStream();
-                if (null != r) for (let e of n) r.channelId === e.id && S((0, _.V9)(r), e.rtcRegion);
+            r.Z.subscribe('CHANNEL_UPDATES', (e) => {
+                let { channels: t } = e,
+                    n = s.Z.getCurrentUserActiveStream();
+                if (null != n) for (let e of t) n.channelId === e.id && T((0, _.V9)(n), e.rtcRegion);
             });
     }
 };

@@ -1,12 +1,12 @@
 e.exports = {
-    cardContainer: 'cardContainer_b9d4cd',
-    cardInnerContainer: 'cardInnerContainer_b9d4cd',
-    card: 'card_b9d4cd',
-    leftArrow: 'leftArrow_b9d4cd',
-    rightArrow: 'rightArrow_b9d4cd',
-    inactiveArrow: 'inactiveArrow_b9d4cd',
-    cardProgressBar: 'cardProgressBar_b9d4cd',
-    dot: 'dot_b9d4cd',
-    selectedDot: 'selectedDot_b9d4cd',
-    arrowIcon: 'arrowIcon_b9d4cd'
+    cardContainer: 'cardContainer__3cf14',
+    cardInnerContainer: 'cardInnerContainer__3cf14',
+    card: 'card__3cf14',
+    inactiveArrow: 'inactiveArrow__3cf14',
+    leftArrow: 'leftArrow__3cf14',
+    rightArrow: 'rightArrow__3cf14',
+    cardProgressBar: 'cardProgressBar__3cf14',
+    dot: 'dot__3cf14',
+    selectedDot: 'selectedDot__3cf14',
+    arrowIcon: 'arrowIcon__3cf14'
 };

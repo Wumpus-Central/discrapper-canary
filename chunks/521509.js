@@ -1,12 +1,12 @@
 e.exports = {
-    header: 'header_d32e26',
-    headerArtWrapper: 'headerArtWrapper_d32e26',
-    headerArt: 'headerArt_d32e26',
-    headerArtPlaceholder: 'headerArtPlaceholder_d32e26',
-    editButton: 'editButton_d32e26',
-    editButtonInner: 'editButtonInner_d32e26',
-    headerIcon: 'headerIcon_d32e26',
-    headerName: 'headerName_d32e26',
-    inviteButton: 'inviteButton_d32e26',
-    titleWrapper: 'titleWrapper_d32e26'
+    header: 'header__553a5',
+    headerArtWrapper: 'headerArtWrapper__553a5',
+    headerArt: 'headerArt__553a5',
+    headerArtPlaceholder: 'headerArtPlaceholder__553a5',
+    editButton: 'editButton__553a5',
+    editButtonInner: 'editButtonInner__553a5',
+    headerIcon: 'headerIcon__553a5',
+    headerName: 'headerName__553a5',
+    inviteButton: 'inviteButton__553a5',
+    titleWrapper: 'titleWrapper__553a5'
 };

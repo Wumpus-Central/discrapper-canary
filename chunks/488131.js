@@ -1,7 +1,7 @@
 n.d(t, {
     NK: () => A,
-    R6: () => T,
-    ok: () => b,
+    R6: () => b,
+    ok: () => T,
     vN: () => S
 });
 var i = n(512722),
@@ -23,7 +23,7 @@ var i = n(512722),
     v = n(124368),
     y = n(981631),
     I = n(176505);
-function b(e, t, n) {
+function T(e, t, n) {
     u.UI.dispatch(y.CkL.POPOUT_CLOSE);
     let i = !s().isEmpty(g.Z.getVoiceStatesForChannel(e.id));
     if (t || !p.vF.getSetting() || __OVERLAY__ || i) {
@@ -42,7 +42,7 @@ function b(e, t, n) {
             E.S.dispatch(y.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
         }, 0);
 }
-function T(e, t, n) {
+function b(e, t, n) {
     if (
         (r()(!e.isForumLikeChannel(), 'cannot open thread creation sidebar in forums'),
         r()(!__OVERLAY__, 'Cannot create threads in the overlay.'),

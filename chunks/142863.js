@@ -1,10 +1,10 @@
-e.exports = {
-    container: 'container_c811f3',
-    content: 'content_c811f3',
-    textContainer: 'textContainer_c811f3',
-    descriptionText: 'descriptionText_c811f3',
-    image: 'image_c811f3',
-    inlineText: 'inlineText_c811f3',
-    footer: 'footer_c811f3',
-    button: 'button_c811f3'
+n.exports = {
+    container: 'container__03b47',
+    content: 'content__03b47',
+    textContainer: 'textContainer__03b47',
+    descriptionText: 'descriptionText__03b47',
+    image: 'image__03b47',
+    inlineText: 'inlineText__03b47',
+    footer: 'footer__03b47',
+    button: 'button__03b47'
 };

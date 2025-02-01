@@ -1,9 +1,9 @@
 e.exports = {
-    container: 'container_a03b48',
-    iconContainer: 'iconContainer_a03b48',
-    icon: 'icon_a03b48',
-    stars: 'stars_a03b48',
-    header: 'header_a03b48',
-    cta: 'cta_a03b48',
-    button: 'button_a03b48'
+    container: 'container__93db4',
+    iconContainer: 'iconContainer__93db4',
+    icon: 'icon__93db4',
+    stars: 'stars__93db4',
+    header: 'header__93db4',
+    cta: 'cta__93db4',
+    button: 'button__93db4'
 };

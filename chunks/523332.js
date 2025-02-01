@@ -1,6 +1,6 @@
 IntlMessageFormat.__addLocaleData({
     locale: 'ja',
-    pluralRuleFunction: function (e, n) {
+    pluralRuleFunction: function (e, t) {
         return 'other';
     }
 });

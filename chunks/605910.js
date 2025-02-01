@@ -1,4 +1,4 @@
 e.exports = {
-    fallback: 'fallback_fad32c',
-    spacer: 'spacer_fad32c'
+    fallback: 'fallback_b789ab',
+    spacer: 'spacer_b789ab'
 };

@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         keywords: 'dsconfig',
         contains: [
@@ -49,4 +49,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

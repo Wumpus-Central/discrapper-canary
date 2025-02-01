@@ -1,12 +1,12 @@
 n.d(t, {
     Az: () => h,
-    Eg: () => T,
+    Eg: () => b,
     IZ: () => m,
     PP: () => p,
     Ub: () => _,
     c6: () => I,
     m9: () => v,
-    mT: () => b,
+    mT: () => T,
     qn: () => E,
     rC: () => y,
     tI: () => g
@@ -124,7 +124,7 @@ function I(e) {
         category_id: s
     });
 }
-function b(e) {
+function T(e) {
     let t = s.Z.getLoadId(e);
     d.default.track(f.rMx.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,
@@ -132,7 +132,7 @@ function b(e) {
         guild_size: u.Z.getMemberCount(e)
     });
 }
-async function T(e) {
+async function b(e) {
     try {
         var t, n;
         let a = await r.tn.get({

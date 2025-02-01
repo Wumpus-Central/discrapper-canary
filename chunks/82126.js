@@ -1,4 +1,4 @@
 e.exports = {
-    grid: 'grid_b500ad',
-    tile: 'tile_b500ad'
+    grid: 'grid__8ca5f',
+    tile: 'tile__8ca5f'
 };

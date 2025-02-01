@@ -1,8 +1,8 @@
 e.exports = {
-    content: 'content_ee099b',
-    header: 'header_ee099b',
-    buttons: 'buttons_ee099b',
-    right: 'right_ee099b',
-    warning: 'warning_ee099b',
-    dismiss: 'dismiss_ee099b'
+    content: 'content__7c233',
+    header: 'header__7c233',
+    buttons: 'buttons__7c233',
+    right: 'right__7c233',
+    warning: 'warning__7c233',
+    dismiss: 'dismiss__7c233'
 };

@@ -1,7 +1,7 @@
-var i = r(273511),
-    a = r(327192);
+var i = n(273511),
+    r = n(327192);
 e.exports = i
     ? {}.toString
     : function () {
-          return '[object ' + a(this) + ']';
+          return '[object ' + r(this) + ']';
       };

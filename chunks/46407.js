@@ -1,25 +1,25 @@
-function n(e) {
-    let n = "[a-z'][a-zA-Z0-9_']*",
-        r = '(' + n + ':' + n + '|' + n + ')',
+function t(e) {
+    let t = "[a-z'][a-zA-Z0-9_']*",
+        n = '(' + t + ':' + t + '|' + t + ')',
         i = {
             keyword: 'after and andalso|10 band begin bnot bor bsl bzr bxor case catch cond div end fun if let not of orelse|10 query receive rem try when xor maybe else',
             literal: 'false true'
         },
-        a = e.COMMENT('%', '$'),
-        o = {
+        r = e.COMMENT('%', '$'),
+        a = {
             className: 'number',
             begin: '\\b(\\d+(_\\d+)*#[a-fA-F0-9]+(_[a-fA-F0-9]+)*|\\d+(_\\d+)*(\\.\\d+(_\\d+)*)?([eE][-+]?\\d+)?)',
             relevance: 0
         },
-        s = { begin: 'fun\\s+' + n + '/\\d+' },
-        l = {
-            begin: r + '\\(',
+        s = { begin: 'fun\\s+' + t + '/\\d+' },
+        o = {
+            begin: n + '\\(',
             end: '\\)',
             returnBegin: !0,
             relevance: 0,
             contains: [
                 {
-                    begin: r,
+                    begin: n,
                     relevance: 0
                 },
                 {
@@ -31,20 +31,20 @@ function n(e) {
                 }
             ]
         },
-        u = {
+        l = {
             begin: /\{/,
             end: /\}/,
             relevance: 0
         },
-        c = {
+        u = {
             begin: '\\b_([A-Z][A-Za-z0-9_]*)?',
             relevance: 0
         },
-        d = {
+        c = {
             begin: '[A-Z][a-zA-Z0-9_]*',
             relevance: 0
         },
-        f = {
+        d = {
             begin: '#' + e.UNDERSCORE_IDENT_RE,
             relevance: 0,
             returnBegin: !0,
@@ -60,15 +60,15 @@ function n(e) {
                 }
             ]
         },
-        p = {
+        f = {
             scope: 'string',
             match: /\$(\\([^0-9]|[0-9]{1,3}|)|.)/
         },
-        h = {
+        _ = {
             scope: 'string',
             match: /"""("*)(?!")[\s\S]*?"""\1/
         },
-        _ = {
+        p = {
             scope: 'string',
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
@@ -115,20 +115,20 @@ function n(e) {
                 }
             ]
         },
-        m = {
+        h = {
             beginKeywords: 'fun receive if try case maybe',
             end: 'end',
             keywords: i
         };
-    m.contains = [a, s, e.inherit(e.APOS_STRING_MODE, { className: '' }), m, l, _, h, e.QUOTE_STRING_MODE, o, u, c, d, f, p];
-    let g = [a, s, m, l, _, h, e.QUOTE_STRING_MODE, o, u, c, d, f, p];
-    (l.contains[1].contains = g), (u.contains = g), (f.contains[1].contains = g);
-    let E = ['-module', '-record', '-undef', '-export', '-ifdef', '-ifndef', '-author', '-copyright', '-doc', '-moduledoc', '-vsn', '-import', '-include', '-include_lib', '-compile', '-define', '-else', '-endif', '-file', '-behaviour', '-behavior', '-spec', '-on_load', '-nifs'],
-        v = {
+    h.contains = [r, s, e.inherit(e.APOS_STRING_MODE, { className: '' }), h, o, p, _, e.QUOTE_STRING_MODE, a, l, u, c, d, f];
+    let m = [r, s, h, o, p, _, e.QUOTE_STRING_MODE, a, l, u, c, d, f];
+    (o.contains[1].contains = m), (l.contains = m), (d.contains[1].contains = m);
+    let g = ['-module', '-record', '-undef', '-export', '-ifdef', '-ifndef', '-author', '-copyright', '-doc', '-moduledoc', '-vsn', '-import', '-include', '-include_lib', '-compile', '-define', '-else', '-endif', '-file', '-behaviour', '-behavior', '-spec', '-on_load', '-nifs'],
+        E = {
             className: 'params',
             begin: '\\(',
             end: '\\)',
-            contains: g
+            contains: m
         };
     return {
         name: 'Erlang',
@@ -138,18 +138,18 @@ function n(e) {
         contains: [
             {
                 className: 'function',
-                begin: '^' + n + '\\s*\\(',
+                begin: '^' + t + '\\s*\\(',
                 end: '->',
                 returnBegin: !0,
                 illegal: '\\(|#|//|/\\*|\\\\|:|;',
-                contains: [v, e.inherit(e.TITLE_MODE, { begin: n })],
+                contains: [E, e.inherit(e.TITLE_MODE, { begin: t })],
                 starts: {
                     end: ';|\\.',
                     keywords: i,
-                    contains: g
+                    contains: m
                 }
             },
-            a,
+            r,
             {
                 begin: '^-',
                 end: '\\.',
@@ -158,21 +158,21 @@ function n(e) {
                 returnBegin: !0,
                 keywords: {
                     $pattern: '-' + e.IDENT_RE,
-                    keyword: E.map((e) => `${e}|1.5`).join(' ')
+                    keyword: g.map((e) => `${e}|1.5`).join(' ')
                 },
-                contains: [v, _, h, e.QUOTE_STRING_MODE]
+                contains: [E, p, _, e.QUOTE_STRING_MODE]
             },
-            o,
+            a,
+            p,
             _,
-            h,
             e.QUOTE_STRING_MODE,
-            f,
-            c,
             d,
             u,
-            p,
+            c,
+            l,
+            f,
             { begin: /\.$/ }
         ]
     };
 }
-e.exports = n;
+e.exports = t;

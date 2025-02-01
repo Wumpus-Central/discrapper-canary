@@ -1,30 +1,30 @@
-var i = r(690244),
-    a = r(706165),
-    o = r(478497)(),
+var i = n(690244),
+    r = n(706165),
+    a = n(478497)(),
     s = i('%TypeError%'),
-    l = {
-        assert: function (e, n) {
+    o = {
+        assert: function (e, t) {
             if (!e || ('object' != typeof e && 'function' != typeof e)) throw new s('`O` is not an object');
-            if ('string' != typeof n) throw new s('`slot` must be a string');
-            if ((o.assert(e), !l.has(e, n))) throw new s('`' + n + '` is not present on `O`');
+            if ('string' != typeof t) throw new s('`slot` must be a string');
+            if ((a.assert(e), !o.has(e, t))) throw new s('`' + t + '` is not present on `O`');
         },
-        get: function (e, n) {
+        get: function (e, t) {
             if (!e || ('object' != typeof e && 'function' != typeof e)) throw new s('`O` is not an object');
-            if ('string' != typeof n) throw new s('`slot` must be a string');
-            var r = o.get(e);
-            return r && r['$' + n];
+            if ('string' != typeof t) throw new s('`slot` must be a string');
+            var n = a.get(e);
+            return n && n['$' + t];
         },
-        has: function (e, n) {
+        has: function (e, t) {
             if (!e || ('object' != typeof e && 'function' != typeof e)) throw new s('`O` is not an object');
-            if ('string' != typeof n) throw new s('`slot` must be a string');
-            var r = o.get(e);
-            return !!r && a(r, '$' + n);
+            if ('string' != typeof t) throw new s('`slot` must be a string');
+            var n = a.get(e);
+            return !!n && r(n, '$' + t);
         },
-        set: function (e, n, r) {
+        set: function (e, t, n) {
             if (!e || ('object' != typeof e && 'function' != typeof e)) throw new s('`O` is not an object');
-            if ('string' != typeof n) throw new s('`slot` must be a string');
-            var i = o.get(e);
-            !i && ((i = {}), o.set(e, i)), (i['$' + n] = r);
+            if ('string' != typeof t) throw new s('`slot` must be a string');
+            var i = a.get(e);
+            i || ((i = {}), a.set(e, i)), (i['$' + t] = n);
         }
     };
-Object.freeze && Object.freeze(l), (e.exports = l);
+Object.freeze && Object.freeze(o), (e.exports = o);

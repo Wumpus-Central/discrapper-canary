@@ -1,10 +1,10 @@
 e.exports = {
-    popout: 'popout_c5b389',
-    title: 'title_c5b389',
-    row: 'row_c5b389',
-    more: 'more_c5b389',
-    avatar: 'avatar_c5b389',
-    bullet: 'bullet_c5b389',
-    timestamp: 'timestamp_c5b389',
-    name: 'name_c5b389'
+    popout: 'popout__76f04',
+    more: 'more__76f04',
+    row: 'row__76f04',
+    title: 'title__76f04',
+    avatar: 'avatar__76f04',
+    bullet: 'bullet__76f04',
+    timestamp: 'timestamp__76f04',
+    name: 'name__76f04'
 };

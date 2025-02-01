@@ -1,7 +1,7 @@
 e.exports = {
-    container: 'container_ba0672',
-    header: 'header_ba0672',
-    title: 'title_ba0672',
-    disabled: 'disabled_ba0672',
-    description: 'description_ba0672'
+    container: 'container__6b700',
+    header: 'header__6b700',
+    description: 'description__6b700',
+    disabled: 'disabled__6b700',
+    title: 'title__6b700'
 };

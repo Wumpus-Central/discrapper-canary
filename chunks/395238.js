@@ -1,9 +1,9 @@
-var i = r(690244),
-    a = r(706165),
-    o = i('%TypeError%');
-e.exports = function (e, n) {
-    if ('Object' !== e.Type(n)) return !1;
-    var r = {
+var i = n(690244),
+    r = n(706165),
+    a = i('%TypeError%');
+e.exports = function (e, t) {
+    if ('Object' !== e.Type(t)) return !1;
+    var n = {
         '[[Configurable]]': !0,
         '[[Enumerable]]': !0,
         '[[Get]]': !0,
@@ -11,7 +11,7 @@ e.exports = function (e, n) {
         '[[Value]]': !0,
         '[[Writable]]': !0
     };
-    for (var i in n) if (a(n, i) && !r[i]) return !1;
-    if (e.IsDataDescriptor(n) && e.IsAccessorDescriptor(n)) throw new o('Property Descriptors may not be both accessor and data descriptors');
+    for (var i in t) if (r(t, i) && !n[i]) return !1;
+    if (e.IsDataDescriptor(t) && e.IsAccessorDescriptor(t)) throw new a('Property Descriptors may not be both accessor and data descriptors');
     return !0;
 };

@@ -1,31 +1,31 @@
-var i = r(668530),
-    a = r(156741),
-    o = r(735471),
-    s = r(262546),
-    l = r(204384),
-    u = r(780524),
-    c = r(274745),
-    d = i.Function,
-    f =
-        /MSIE .\./.test(l) ||
+var i = n(668530),
+    r = n(156741),
+    a = n(735471),
+    s = n(262546),
+    o = n(204384),
+    l = n(780524),
+    u = n(274745),
+    c = i.Function,
+    d =
+        /MSIE .\./.test(o) ||
         (s &&
             (function () {
                 var e = i.Bun.version.split('.');
                 return e.length < 3 || ('0' === e[0] && (e[1] < 3 || ('3' === e[1] && '0' === e[2])));
             })());
-e.exports = function (e, n) {
-    var r = n ? 2 : 1;
-    return f
+e.exports = function (e, t) {
+    var n = t ? 2 : 1;
+    return d
         ? function (i, s) {
-              var l = c(arguments.length, 1) > r,
-                  f = o(i) ? i : d(i),
-                  p = l ? u(arguments, r) : [],
-                  h = l
+              var o = u(arguments.length, 1) > n,
+                  d = a(i) ? i : c(i),
+                  f = o ? l(arguments, n) : [],
+                  _ = o
                       ? function () {
-                            a(f, this, p);
+                            r(d, this, f);
                         }
-                      : f;
-              return n ? e(h, s) : e(h);
+                      : d;
+              return t ? e(_, s) : e(_);
           }
         : e;
 };

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => y,
-    d: () => T
+    d: () => b
 }),
     n(47120);
 var i = n(200651),
@@ -21,16 +21,16 @@ var i = n(200651),
     E = n(32390);
 let v = 'https://cdn.discordapp.com/assets/content/3988d11030317ce331a0b327cac18a9c02a693041f9a7695bb13b3d4cb486e11.webm';
 function y(e) {
-    let { label: t, onClick: n, onKeyDown: r, onMouseEnter: a, onMouseLeave: u, onContextMenu: c, className: d, wrapperClassName: f, iconClassName: _, iconColor: p = 'currentColor', iconComponent: m, themeable: g = !1, disabled: v = !1, isActive: y = !1, tooltipPosition: I = 'top', shouldShowTooltip: b = !0, forceTooltipOpen: T = !1, buttonRef: S, grow: A, 'aria-label': N } = e;
+    let { label: t, onClick: n, onKeyDown: r, onMouseEnter: a, onMouseLeave: u, onContextMenu: c, className: d, wrapperClassName: f, iconClassName: _, iconColor: p = 'currentColor', iconComponent: m, themeable: g = !1, disabled: v = !1, isActive: y = !1, tooltipPosition: I = 'top', shouldShowTooltip: T = !0, forceTooltipOpen: b = !1, buttonRef: S, grow: A, 'aria-label': N } = e;
     return (0, i.jsx)(h.Z, {
         children: (0, i.jsx)(l.ua7, {
             position: I,
             text: t,
             'aria-label': N,
-            shouldShow: b,
-            forceOpen: T,
+            shouldShow: T,
+            forceOpen: b,
             children: (e) => {
-                let { onClick: t, onContextMenu: h, onMouseEnter: I, onMouseLeave: b, ...T } = e;
+                let { onClick: t, onContextMenu: h, onMouseEnter: I, onMouseLeave: T, ...b } = e;
                 return (0, i.jsx)(l.zxk, {
                     look: l.zxk.Looks.BLANK,
                     size: l.zxk.Sizes.NONE,
@@ -44,7 +44,7 @@ function y(e) {
                         null == I || I(), null == a || a(e);
                     },
                     onMouseLeave: (e) => {
-                        null == b || b(), null == u || u(e);
+                        null == T || T(), null == u || u(e);
                     },
                     onContextMenu: (e) => {
                         null == h || h(), null == c || c(e);
@@ -53,7 +53,7 @@ function y(e) {
                         null == I || I(), null == a || a(e);
                     },
                     onBlur: (e) => {
-                        null == b || b(), null == u || u(e);
+                        null == T || T(), null == u || u(e);
                     },
                     disabled: v,
                     innerClassName: E.lineHeightReset,
@@ -62,7 +62,7 @@ function y(e) {
                     buttonRef: S,
                     grow: A,
                     'aria-label': N,
-                    ...T,
+                    ...b,
                     children: (0, i.jsx)(m, {
                         size: o.Z.md,
                         className: s()(E.controlIcon, _, {
@@ -86,7 +86,7 @@ let I = {
         activeLight: E.activeLight,
         premiumGradient: E.premiumGradient
     },
-    b = {
+    T = {
         red: E.red,
         white: E.white,
         green: E.green,
@@ -96,8 +96,8 @@ let I = {
         activeLight: E.experimentActiveLight,
         premiumGradient: E.premiumGradient
     };
-function T(e) {
-    let { color: t, ignoreColorForCaret: n = !1, isActive: a = !1, className: o, iconClassName: T, onPopoutClick: S, popoutOpen: A = !1, popoutDisabled: N = !1, premiumGlow: C = !1, fullRegionButton: R = !1, ...O } = e,
+function b(e) {
+    let { color: t, ignoreColorForCaret: n = !1, isActive: a = !1, className: o, iconClassName: b, onPopoutClick: S, popoutOpen: A = !1, popoutDisabled: N = !1, premiumGlow: C = !1, fullRegionButton: R = !1, ...O } = e,
         D = (0, m.Z)(t, a),
         x = (0, m.Z)(n ? void 0 : t, !1),
         L = (0, u.Z)('(max-width: 456px)'),
@@ -107,19 +107,19 @@ function T(e) {
         null != P.current && (w ? P.current.pause() : P.current.play());
     }, [w]);
     let { groupedButtons: M } = (0, f.ZP)({ location: 'CenterControlButton' }),
-        k = M ? [E.experimentButton, b[D], R && null == S && E.fullRegionButton] : [I[D]],
+        k = M ? [E.experimentButton, T[D], R && null == S && E.fullRegionButton] : [I[D]],
         U = (0, i.jsx)(y, {
             ...O,
             grow: !1,
             onContextMenu: S,
-            iconClassName: s()(T, E.centerIcon, M && E.experimentControlIcon, M && R && null == S && E.fullRegionIcon),
+            iconClassName: s()(b, E.centerIcon, M && E.experimentControlIcon, M && R && null == S && E.fullRegionIcon),
             className: s()(L ? o : null, E.staticButton, E.centerButton, ...k)
         });
     return L
         ? U
         : M
           ? (0, i.jsxs)('div', {
-                className: s()(E.caretButtonContainer, o, R && null != S && [E.fullRegionDropdownButton, b[D]]),
+                className: s()(E.caretButtonContainer, o, R && null != S && [E.fullRegionDropdownButton, T[D]]),
                 children: [
                     U,
                     null != S
@@ -128,7 +128,7 @@ function T(e) {
                                   'aria-label': g.intl.string(g.t.PdRCRk),
                                   onClick: N ? void 0 : S,
                                   onContextMenu: N ? void 0 : S,
-                                  className: s()(E.contextMenuNubExperiment, b[x], {
+                                  className: s()(E.contextMenuNubExperiment, T[x], {
                                       [E.active]: A,
                                       [E.disabled]: N
                                   }),

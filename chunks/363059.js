@@ -1,12 +1,12 @@
 e.exports = {
-    spine: 'spine_c15230',
-    systemMessageSpine: 'systemMessageSpine_c15230',
-    cozy: 'cozy_c15230',
-    container: 'container_c15230',
-    systemMessageContainer: 'systemMessageContainer_c15230',
-    topLine: 'topLine_c15230',
-    name: 'name_c15230',
-    cta: 'cta_c15230',
-    bottomLine: 'bottomLine_c15230',
-    timestamp: 'timestamp_c15230'
+    spine: 'spine__9271d',
+    systemMessageSpine: 'systemMessageSpine__9271d',
+    cozy: 'cozy__9271d',
+    container: 'container__9271d',
+    systemMessageContainer: 'systemMessageContainer__9271d',
+    topLine: 'topLine__9271d',
+    name: 'name__9271d',
+    cta: 'cta__9271d',
+    bottomLine: 'bottomLine__9271d',
+    timestamp: 'timestamp__9271d'
 };

@@ -1,7 +1,7 @@
 e.exports = {
-    verifyConnectedAccount: 'verifyConnectedAccount_f74474',
-    logos: 'logos_f74474',
-    logosDivider: 'logosDivider_f74474',
-    logo: 'logo_f74474',
-    logoDiscord: 'logoDiscord_f74474'
+    verifyConnectedAccount: 'verifyConnectedAccount_fb52a4',
+    logos: 'logos_fb52a4',
+    logosDivider: 'logosDivider_fb52a4',
+    logo: 'logo_fb52a4',
+    logoDiscord: 'logoDiscord_fb52a4'
 };

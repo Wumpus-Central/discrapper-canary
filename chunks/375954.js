@@ -18,8 +18,8 @@ var i,
     v = n(630388),
     y = n(709054),
     I = n(314897),
-    b = n(592125),
-    T = n(796974),
+    T = n(592125),
+    b = n(796974),
     S = n(984933),
     A = n(271383),
     N = n(430824),
@@ -135,7 +135,7 @@ function K(e) {
         return;
     }
     if (!r.ready) return !1;
-    null != n.nonce && n.state !== L.yb.SENDING && w.has(n.nonce) && ((r = r.remove(n.nonce)), w.delete(n.nonce)), (r = r.receiveMessage(n, !0 === T.Z.isAtBottom(t))), u.Z.commit(r);
+    null != n.nonce && n.state !== L.yb.SENDING && w.has(n.nonce) && ((r = r.remove(n.nonce)), w.delete(n.nonce)), (r = r.receiveMessage(n, !0 === b.Z.isAtBottom(t))), u.Z.commit(r);
 }
 function z(e) {
     let { channelId: t, messageId: n, reason: i } = e,
@@ -202,7 +202,7 @@ function ee(e) {
 function et() {
     u.Z.forEach((e) => {
         let { channelId: t } = e;
-        null == b.Z.getChannel(t) && u.Z.clear(t);
+        null == T.Z.getChannel(t) && u.Z.clear(t);
     });
 }
 function en() {
@@ -282,11 +282,11 @@ function ep(e) {
 }
 class eh extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(x.default, b.Z, T.Z, A.ZP, E.default, O.Z, D.Z, N.Z, R.Z, S.ZP), this.syncWith([p.Z], () => {});
+        this.waitFor(x.default, T.Z, b.Z, A.ZP, E.default, O.Z, D.Z, N.Z, R.Z, S.ZP), this.syncWith([p.Z], () => {});
     }
     getMessages(e) {
         if (p.Z.hasViewingRoles()) {
-            let t = b.Z.getChannel(e),
+            let t = T.Z.getChannel(e),
                 n = null == t ? void 0 : t.getGuildId();
             if (p.Z.isViewingRoles(n) && !C.Z.can(L.Plq.VIEW_CHANNEL, t)) return new u.Z(e);
         }

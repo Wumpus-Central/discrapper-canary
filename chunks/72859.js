@@ -1,25 +1,25 @@
-var n,
-    r = 'function' == typeof Map && Map.prototype ? Map : null,
+var t,
+    n = 'function' == typeof Map && Map.prototype ? Map : null,
     i = 'function' == typeof Set && Set.prototype ? Set : null;
-!i &&
-    (n = function (e) {
+i ||
+    (t = function (e) {
         return !1;
     });
-var a = r ? Map.prototype.has : null,
-    o = i ? Set.prototype.has : null;
-!n &&
-    !o &&
-    (n = function (e) {
+var r = n ? Map.prototype.has : null,
+    a = i ? Set.prototype.has : null;
+t ||
+    a ||
+    (t = function (e) {
         return !1;
     }),
     (e.exports =
-        n ||
+        t ||
         function (e) {
             if (!e || 'object' != typeof e) return !1;
             try {
-                if ((o.call(e), a))
+                if ((a.call(e), r))
                     try {
-                        a.call(e);
+                        r.call(e);
                     } catch (e) {
                         return !0;
                     }

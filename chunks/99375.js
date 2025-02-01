@@ -1,5 +1,5 @@
 e.exports = {
-    chooseAccountAuthBox: 'chooseAccountAuthBox_b4df52',
-    chooseAccountHelpText: 'chooseAccountHelpText_b4df52',
-    actions: 'actions_b4df52'
+    chooseAccountAuthBox: 'chooseAccountAuthBox_df9c06',
+    chooseAccountHelpText: 'chooseAccountHelpText_df9c06',
+    actions: 'actions_df9c06'
 };

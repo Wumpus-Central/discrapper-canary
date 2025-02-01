@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(621853),
     y = n(429974),
     I = n(475413),
-    b = n(981631),
-    T = n(388032);
+    T = n(981631),
+    b = n(388032);
 function S(e) {
     let { user: t, closePopout: n, ...S } = e,
         A = (0, a.e7)([v.Z], () => {
@@ -50,7 +50,7 @@ function S(e) {
                     let e = p.Z.getCurrentlySelectedChannelId(),
                         t = _.Z.getChannel(e),
                         i = null != f.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? d.Ie.SIDEBAR : d.Ie.NORMAL;
-                    l.__(u._b.TEXT, i, { applicationId: A.id }), (0, s.Mr3)((0, y.z)(x, R)), null == n || n(), h.default.track(b.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: A.id });
+                    l.__(u._b.TEXT, i, { applicationId: A.id }), (0, s.Mr3)((0, y.z)(x, R)), null == n || n(), h.default.track(T.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: A.id });
                 } else
                     (0, E.LO)({
                         applicationId: A.id,
@@ -58,7 +58,7 @@ function S(e) {
                     });
             }
         }, [D, A, x, R, n]),
-        P = D ? T.intl.string(T.t['Cia+Aw']) : T.intl.string(T.t.NgXl3N);
+        P = D ? b.intl.string(b.t['Cia+Aw']) : b.intl.string(b.t.NgXl3N);
     if (null == A || !(0, E.Eb)(A)) return null;
     let { customInstallUrl: w } = A,
         M = null == w || g.Z.isDiscordUrl(w) ? s.qJs : s.Gr1,
@@ -70,12 +70,12 @@ function S(e) {
                   return (0, i.jsx)(s.v2r, {
                       navId: 'user-bot-profile-add-app',
                       onClose: t,
-                      'aria-label': T.intl.string(T.t.dbkxVl),
+                      'aria-label': b.intl.string(b.t.dbkxVl),
                       onSelect: void 0,
                       children: (0, i.jsx)(s.kSQ, {
                           children: (0, i.jsx)(s.sNh, {
                               id: 'copy',
-                              label: T.intl.string(T.t.XWDiho),
+                              label: b.intl.string(b.t.XWDiho),
                               action: () => (0, m.JG)((0, c.J)(A))
                           })
                       })

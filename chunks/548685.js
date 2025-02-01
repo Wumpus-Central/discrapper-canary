@@ -1,63 +1,63 @@
-n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var r = n(200651),
-    i = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    s = n(442837),
+    l = n(192379),
+    i = n(120356),
+    s = n.n(i),
+    a = n(442837),
     o = n(481060),
-    c = n(594174),
-    d = n(381585),
+    d = n(594174),
+    c = n(381585),
     u = n(597688),
     C = n(937510),
     h = n(38900),
     p = n(709999),
-    f = n(957058),
-    m = n(388032),
-    g = n(218142);
-t.Z = (e) => {
-    let { isLoading: t, rankedSkuIds: n, handleTransition: l, numVisibleItems: b } = e,
-        x = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
-        v = i.createRef(),
-        _ = (0, f.u)(),
-        k = i.useMemo(() => _(n), [t, _, n]),
+    m = n(957058),
+    g = n(388032),
+    f = n(218142);
+let x = (e) => {
+    let { isLoading: t, rankedSkuIds: n, handleTransition: i, numVisibleItems: x } = e,
+        _ = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        v = l.createRef(),
+        b = (0, m.u)(),
+        k = l.useMemo(() => b(n), [t, b, n]),
         j = (0, C.l)(k);
-    return null == x
+    return null == _
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(g.row, g.between, g.section, g.popularPicksSection),
+              className: s()(f.row, f.between, f.section, f.popularPicksSection),
               children: [
                   (0, r.jsxs)('div', {
-                      className: g.popularPicksHeader,
+                      className: f.popularPicksHeader,
                       children: [
-                          (0, r.jsx)(o.Heading, {
+                          (0, r.jsx)(o.X6q, {
                               variant: 'heading-lg/semibold',
-                              children: m.intl.string(m.t.ivaAAw)
+                              children: g.intl.string(g.t.ivaAAw)
                           }),
-                          (0, r.jsxs)(o.Clickable, {
-                              className: g.shopAll,
-                              onClick: () => l('shop all top'),
+                          (0, r.jsxs)(o.P3F, {
+                              className: f.shopAll,
+                              onClick: () => i('shop all top'),
                               children: [
-                                  (0, r.jsx)(o.ServerGridIcon, {}),
+                                  (0, r.jsx)(o.dRF, {}),
                                   (0, r.jsx)(o.Text, {
                                       variant: 'text-sm/medium',
-                                      children: m.intl.string(m.t.xFcotb)
+                                      children: g.intl.string(g.t.xFcotb)
                                   })
                               ]
                           })
                       ]
                   }),
                   (0, r.jsx)('div', {
-                      className: g.feed,
+                      className: f.feed,
                       ref: v,
                       children: t
                           ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(h.K, {}, t + 1)) })
                           : (0, r.jsx)(r.Fragment, {
-                                children: j.slice(0, b).map((e, t) => {
+                                children: j.slice(0, x).map((e, t) => {
                                     let n = u.Z.getCategoryForProduct(e.skuId);
                                     return null == e || null == n
                                         ? null
                                         : (0, r.jsx)(
-                                              d.k0,
+                                              c.k0,
                                               {
                                                   newValue: {
                                                       tilePosition: t,
@@ -69,7 +69,7 @@ t.Z = (e) => {
                                                       {
                                                           product: e,
                                                           category: n,
-                                                          user: x,
+                                                          user: _,
                                                           isInFeedView: !0
                                                       },
                                                       e.skuId

@@ -1,8 +1,8 @@
 e.exports = {
-    container: 'container_cac32e',
-    content: 'content_cac32e',
-    contentContainer: 'contentContainer_cac32e',
-    tabContainer: 'tabContainer_cac32e',
-    sparkleCloudTop: 'sparkleCloudTop_cac32e',
-    sparkleCloudBottom: 'sparkleCloudBottom_cac32e'
+    container: 'container__49668',
+    content: 'content__49668',
+    contentContainer: 'contentContainer__49668',
+    tabContainer: 'tabContainer__49668',
+    sparkleCloudTop: 'sparkleCloudTop__49668',
+    sparkleCloudBottom: 'sparkleCloudBottom__49668'
 };

@@ -1,8 +1,8 @@
-var i = r(906024),
-    a = 1 / 0;
-function o(e) {
+n.d(t, { Z: () => a });
+var i = n(906024),
+    r = 1 / 0;
+let a = function (e) {
     if ('string' == typeof e || (0, i.Z)(e)) return e;
-    var n = e + '';
-    return '0' == n && 1 / e == -a ? '-0' : n;
-}
-n.Z = o;
+    var t = e + '';
+    return '0' == t && 1 / e == -r ? '-0' : t;
+};

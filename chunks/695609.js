@@ -1,6 +1,6 @@
-function n(e, n) {
-    var r = e.length;
-    for (e.sort(n); r--; ) e[r] = e[r].value;
+function t(e, t) {
+    var n = e.length;
+    for (e.sort(t); n--; ) e[n] = e[n].value;
     return e;
 }
-e.exports = n;
+e.exports = t;

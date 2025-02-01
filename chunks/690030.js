@@ -1,4 +1,4 @@
 e.exports = {
-    activityOverlay: 'activityOverlay_c17b55',
-    actionButton: 'actionButton_c17b55'
+    activityOverlay: 'activityOverlay_fb7f3a',
+    actionButton: 'actionButton_fb7f3a'
 };

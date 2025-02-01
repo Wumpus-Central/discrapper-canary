@@ -1,6 +1,6 @@
 e.exports = {
-    image: 'image_ed81cc',
-    emptyPreviewContainer: 'emptyPreviewContainer_ed81cc',
-    emptyPreviewImage: 'emptyPreviewImage_ed81cc',
-    emptyPreviewText: 'emptyPreviewText_ed81cc'
+    image: 'image__04666',
+    emptyPreviewContainer: 'emptyPreviewContainer__04666',
+    emptyPreviewImage: 'emptyPreviewImage__04666',
+    emptyPreviewText: 'emptyPreviewText__04666'
 };

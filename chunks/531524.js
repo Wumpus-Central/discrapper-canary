@@ -1,6 +1,6 @@
 e.exports = {
-    root: 'root_c73da7',
-    connected: 'connected_c73da7',
-    icon: 'icon_c73da7',
-    connecting: 'connecting_c73da7'
+    root: 'root_e373d2',
+    connected: 'connected_e373d2',
+    icon: 'icon_e373d2',
+    connecting: 'connecting_e373d2'
 };

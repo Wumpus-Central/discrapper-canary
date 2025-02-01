@@ -1,5 +1,5 @@
 e.exports = {
-    advanceSetting: 'advanceSetting_c82c09',
-    advanceSettingTitle: 'advanceSettingTitle_c82c09',
-    settingTitleIcon: 'settingTitleIcon_c82c09'
+    advanceSetting: 'advanceSetting_e7c13f',
+    advanceSettingTitle: 'advanceSettingTitle_e7c13f',
+    settingTitleIcon: 'settingTitleIcon_e7c13f'
 };

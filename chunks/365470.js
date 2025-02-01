@@ -1,14 +1,14 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = ['جنوري', 'فيبروري', 'مارچ', 'اپريل', 'مئي', 'جون', 'جولاءِ', 'آگسٽ', 'سيپٽمبر', 'آڪٽوبر', 'نومبر', 'ڊسمبر'],
-        r = ['آچر', 'سومر', 'اڱارو', 'اربع', 'خميس', 'جمع', 'ڇنڇر'];
+    var t = ['جنوري', 'فيبروري', 'مارچ', 'اپريل', 'مئي', 'جون', 'جولاءِ', 'آگسٽ', 'سيپٽمبر', 'آڪٽوبر', 'نومبر', 'ڊسمبر'],
+        n = ['آچر', 'سومر', 'اڱارو', 'اربع', 'خميس', 'جمع', 'ڇنڇر'];
     return e.defineLocale('sd', {
-        months: n,
-        monthsShort: n,
-        weekdays: r,
-        weekdaysShort: r,
-        weekdaysMin: r,
+        months: t,
+        monthsShort: t,
+        weekdays: n,
+        weekdaysShort: n,
+        weekdaysMin: n,
         longDateFormat: {
             LT: 'HH:mm',
             LTS: 'HH:mm:ss',
@@ -21,7 +21,7 @@
         isPM: function (e) {
             return 'شام' === e;
         },
-        meridiem: function (e, n, r) {
+        meridiem: function (e, t, n) {
             return e < 12 ? 'صبح' : 'شام';
         },
         calendar: {

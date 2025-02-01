@@ -1,5 +1,5 @@
 e.exports = {
-    tooltipTextContainer: 'tooltipTextContainer_a0ae43',
-    nitroWheel: 'nitroWheel_a0ae43',
-    tooltipText: 'tooltipText_a0ae43'
+    tooltipTextContainer: 'tooltipTextContainer__0ca35',
+    nitroWheel: 'nitroWheel__0ca35',
+    tooltipText: 'tooltipText__0ca35'
 };

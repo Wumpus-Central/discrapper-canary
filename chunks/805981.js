@@ -1,11 +1,11 @@
-var i = r(67867),
-    a = r(668530),
-    o = r(867325)(a.setTimeout, !0);
+var i = n(67867),
+    r = n(668530),
+    a = n(867325)(r.setTimeout, !0);
 i(
     {
         global: !0,
         bind: !0,
-        forced: a.setTimeout !== o
+        forced: r.setTimeout !== a
     },
-    { setTimeout: o }
+    { setTimeout: a }
 );

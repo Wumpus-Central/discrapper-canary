@@ -1,70 +1,70 @@
-n.r(t), n(47120);
+n.d(t, { default: () => E }), n(47120);
 var s = n(200651),
     i = n(192379),
-    o = n(442837),
-    l = n(279837),
-    r = n(479531),
-    a = n(144114),
+    l = n(442837),
+    o = n(279837),
+    a = n(479531),
+    r = n(144114),
     h = n(145454),
     c = n(23434),
-    u = n(594174),
-    d = n(1964),
+    d = n(594174),
+    u = n(1964),
     p = n(388032);
-t.default = i.forwardRef(function (e, t) {
+let E = i.forwardRef(function (e, t) {
     let { onAddedPhone: n, onClose: E, transitionState: m, reason: R } = e,
-        f = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        C = (0, o.e7)([c.Z], () => c.Z.getAction()),
+        C = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        f = (0, l.e7)([c.Z], () => c.Z.getAction()),
         [g, I] = i.useState(null),
         [y, _] = i.useState(null),
-        [P, x] = i.useState(null),
-        [N, v] = i.useState(!1),
-        b = i.useCallback(
+        [x, P] = i.useState(null),
+        [N, b] = i.useState(!1),
+        v = i.useCallback(
             async (e) => {
-                v(!0);
+                b(!0);
                 try {
-                    d.Z.isPhoneReverification(f, C) ? await a.Z.beginReverifyPhone(e, R) : await a.Z.beginAddPhone(e, R), x(null), I(e);
+                    u.Z.isPhoneReverification(C, f) ? await r.Z.beginReverifyPhone(e, R) : await r.Z.beginAddPhone(e, R), P(null), I(e);
                 } catch (e) {
-                    x(new r.Z(e));
+                    P(new a.Z(e));
                 }
-                v(!1);
+                b(!1);
             },
-            [f, R, C]
+            [C, R, f]
         ),
         j = i.useCallback(
             async (e) => {
-                if (null != g && null != f) {
-                    v(!0);
+                if (null != g && null != C) {
+                    b(!0);
                     try {
-                        let { token: t } = await a.Z.verifyPhone(g, e);
-                        x(null), _(t);
+                        let { token: t } = await r.Z.verifyPhone(g, e);
+                        P(null), _(t);
                     } catch (e) {
-                        x(new r.Z(e));
+                        P(new a.Z(e));
                     }
-                    v(!1);
+                    b(!1);
                 }
             },
-            [f, g]
+            [C, g]
         ),
-        w = i.useCallback(
+        k = i.useCallback(
             async (e) => {
-                if (null != y) d.Z.isPhoneReverification(f, C) ? await a.Z.reverifyPhone(y, e, R) : await a.Z.addPhone(y, e, R), null == n || n(), E();
+                null != y && (u.Z.isPhoneReverification(C, f) ? await r.Z.reverifyPhone(y, e, R) : await r.Z.addPhone(y, e, R), null == n || n(), E());
             },
-            [n, E, y, R, f, C]
+            [n, E, y, R, C, f]
         );
     return null != y
-        ? (0, s.jsx)(l.default, {
+        ? (0, s.jsx)(o.default, {
               onClose: E,
               transitionState: m,
               title: p.intl.string(p.t.ZtCDc3),
-              handleSubmit: w
+              handleSubmit: k
           })
         : (0, s.jsx)(h.Z, {
               onClose: E,
               transitionState: m,
-              error: null == P ? void 0 : P.getAnyErrorMessage(),
+              error: null == x ? void 0 : x.getAnyErrorMessage(),
               working: N,
               validPhone: null != g,
-              onAddPhone: b,
+              onAddPhone: v,
               onVerifyPhone: j
           });
 });

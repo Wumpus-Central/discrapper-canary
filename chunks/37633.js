@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_cd914a',
-    spinnerContainer: 'spinnerContainer_cd914a'
+    container: 'container__86bf6',
+    spinnerContainer: 'spinnerContainer__86bf6'
 };

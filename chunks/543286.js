@@ -1,12 +1,12 @@
 e.exports = {
-    container: 'container_ecdcb9',
-    badgesContainer: 'badgesContainer_ecdcb9',
-    pickerContainer: 'pickerContainer_ecdcb9',
-    pickerGrid: 'pickerGrid_ecdcb9',
-    badgeAssetContainer: 'badgeAssetContainer_ecdcb9',
-    badgeAssetContainerSelected: 'badgeAssetContainerSelected_ecdcb9',
-    tagContainer: 'tagContainer_ecdcb9',
-    tagInputWrapper: 'tagInputWrapper_ecdcb9',
-    tagInput: 'tagInput_ecdcb9',
-    tagValidationText: 'tagValidationText_ecdcb9'
+    container: 'container__62196',
+    badgesContainer: 'badgesContainer__62196',
+    pickerContainer: 'pickerContainer__62196',
+    pickerGrid: 'pickerGrid__62196',
+    badgeAssetContainer: 'badgeAssetContainer__62196',
+    badgeAssetContainerSelected: 'badgeAssetContainerSelected__62196',
+    tagContainer: 'tagContainer__62196',
+    tagInputWrapper: 'tagInputWrapper__62196',
+    tagInput: 'tagInput__62196',
+    tagValidationText: 'tagValidationText__62196'
 };

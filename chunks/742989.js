@@ -1,4 +1,5 @@
-let i = (0, r(818083).B)({
+n.d(t, { Z: () => i });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2022-08_message_todos_staff_only',
     label: 'Message TODO list',
@@ -11,4 +12,3 @@ let i = (0, r(818083).B)({
         }
     ]
 });
-n.Z = i;

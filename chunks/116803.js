@@ -1,4 +1,4 @@
 e.exports = {
-    fileDisplayContainer: 'fileDisplayContainer_f0fcf9',
-    fileHidden: 'fileHidden_f0fcf9'
+    fileDisplayContainer: 'fileDisplayContainer__55ed7',
+    fileHidden: 'fileHidden__55ed7'
 };

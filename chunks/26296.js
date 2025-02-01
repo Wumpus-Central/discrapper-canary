@@ -1,11 +1,11 @@
 e.exports = {
-    group: 'group_d8d11a',
-    title: 'title_d8d11a',
-    experimentDate: 'experimentDate_d8d11a',
-    emptyState: 'emptyState_d8d11a',
-    description: 'description_d8d11a',
-    divider: 'divider_d8d11a',
-    debugButton: 'debugButton_d8d11a',
-    debugTitle: 'debugTitle_d8d11a',
-    pre: 'pre_d8d11a'
+    group: 'group_bc4a3e',
+    title: 'title_bc4a3e',
+    experimentDate: 'experimentDate_bc4a3e',
+    emptyState: 'emptyState_bc4a3e',
+    description: 'description_bc4a3e',
+    divider: 'divider_bc4a3e',
+    debugButton: 'debugButton_bc4a3e',
+    debugTitle: 'debugTitle_bc4a3e',
+    pre: 'pre_bc4a3e'
 };

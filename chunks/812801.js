@@ -1,9 +1,9 @@
 e.exports = {
-    eventPromptsContainer: 'eventPromptsContainer_b6e2f9',
-    controlButton: 'controlButton_b6e2f9',
-    wrapper: 'wrapper_b6e2f9',
-    experimentWrapper: 'experimentWrapper_b6e2f9 wrapper_b6e2f9',
-    buttonContainer: 'buttonContainer_b6e2f9',
-    buttonSection: 'buttonSection_b6e2f9',
-    avSpacing: 'avSpacing_b6e2f9'
+    eventPromptsContainer: 'eventPromptsContainer__1405b',
+    controlButton: 'controlButton__1405b',
+    wrapper: 'wrapper__1405b',
+    experimentWrapper: 'experimentWrapper__1405b wrapper__1405b',
+    buttonContainer: 'buttonContainer__1405b',
+    buttonSection: 'buttonSection__1405b',
+    avSpacing: 'avSpacing__1405b'
 };

@@ -1,9 +1,9 @@
 e.exports = {
-    headerBar: 'headerBar_accde0',
-    overlay: 'overlay_accde0',
-    relative: 'relative_accde0',
-    backdrop: 'backdrop_accde0',
-    icon: 'icon_accde0',
-    iconButton: 'iconButton_accde0',
-    floatingSearchTabsMask: 'floatingSearchTabsMask_accde0'
+    headerBar: 'headerBar__8a7fc',
+    overlay: 'overlay__8a7fc',
+    relative: 'relative__8a7fc',
+    backdrop: 'backdrop__8a7fc',
+    icon: 'icon__8a7fc',
+    iconButton: 'iconButton__8a7fc',
+    floatingSearchTabsMask: 'floatingSearchTabsMask__8a7fc'
 };

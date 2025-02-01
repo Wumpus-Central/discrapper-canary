@@ -20,13 +20,13 @@ function E(e, t, n, i, r) {
             {
                 label: 'Setting the guild to a white dot unread',
                 apply: (e, t) => {
-                    b(e, t, !0);
+                    T(e, t, !0);
                 }
             }
         ];
     let a = [],
         s = Object.values(o.Z.getMutableGuildChannelsForGuild(e.id)).filter((e) => c.Z.can(m.Plq.VIEW_CHANNEL, e));
-    return a.push(...v(e, s)), a.push(y(e)), a.push(I()), a.push(...T(s)), a.push(...S(s)), a.push(...C(s)), l.Z.hasConsented(m.pjP.PERSONALIZATION) ? a.push(...A(e, s, n, i, r)) : a.push(...N(e, s)), a.filter(p.lm);
+    return a.push(...v(e, s)), a.push(y(e)), a.push(I()), a.push(...b(s)), a.push(...S(s)), a.push(...C(s)), l.Z.hasConsented(m.pjP.PERSONALIZATION) ? a.push(...A(e, s, n, i, r)) : a.push(...N(e, s)), a.filter(p.lm);
 }
 function v(e, t) {
     if (!(d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id))) return [];
@@ -68,15 +68,15 @@ function I() {
     return {
         label: 'Setting the guild to a grey dot unread',
         apply: (e, t) => {
-            b(e, t, !1);
+            T(e, t, !1);
         }
     };
 }
-function b(e, t, n) {
+function T(e, t, n) {
     var i, r;
     (e.flags = (0, _.mB)(null !== (r = null !== (i = e.flags) && void 0 !== i ? i : t.flags) && void 0 !== r ? r : 0, g.vc.UNREADS_ALL_MESSAGES, n)), (e.flags = (0, _.mB)(e.flags, g.vc.UNREADS_ONLY_MENTIONS, !n));
 }
-function T(e) {
+function b(e) {
     let t = [],
         [n, i] = r()(e)
             .filter((e) => e.type === m.d4z.GUILD_ANNOUNCEMENT)

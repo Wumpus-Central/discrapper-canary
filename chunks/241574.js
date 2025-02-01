@@ -1,6 +1,6 @@
 e.exports = {
-    listeningTimeline: 'listeningTimeline_a218d8',
-    seekBarContainer: 'seekBarContainer_a218d8',
-    seekBarFill: 'seekBarFill_a218d8',
-    timestamp: 'timestamp_a218d8'
+    listeningTimeline: 'listeningTimeline__66799',
+    seekBarContainer: 'seekBarContainer__66799',
+    seekBarFill: 'seekBarFill__66799',
+    timestamp: 'timestamp__66799'
 };

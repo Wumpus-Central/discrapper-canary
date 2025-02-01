@@ -1,11 +1,11 @@
 e.exports = {
-    avatar: 'avatar_dc0b54',
-    avatarMask: 'avatarMask_dc0b54',
-    avatarContainer: 'avatarContainer_dc0b54',
-    container: 'container_dc0b54',
-    mobileContainer: 'mobileContainer_dc0b54',
-    inline: 'inline_dc0b54',
-    divider: 'divider_dc0b54',
-    action: 'action_dc0b54',
-    mutualGuilds: 'mutualGuilds_dc0b54'
+    avatar: 'avatar_b50d96',
+    avatarMask: 'avatarMask_b50d96',
+    avatarContainer: 'avatarContainer_b50d96',
+    container: 'container_b50d96',
+    mobileContainer: 'mobileContainer_b50d96',
+    inline: 'inline_b50d96',
+    divider: 'divider_b50d96',
+    action: 'action_b50d96',
+    mutualGuilds: 'mutualGuilds_b50d96'
 };

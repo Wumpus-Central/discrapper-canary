@@ -1,5 +1,5 @@
-var e = o(936940);
-r.exports = !e(function () {
-    function r() {}
-    return (r.prototype.constructor = null), Object.getPrototypeOf(new r()) !== r.prototype;
+var r = a(936940);
+t.exports = !r(function () {
+    function t() {}
+    return (t.prototype.constructor = null), Object.getPrototypeOf(new t()) !== t.prototype;
 });

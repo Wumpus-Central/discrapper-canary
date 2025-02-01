@@ -1,55 +1,55 @@
-a.r(e);
+a.d(e, { default: () => p });
 var i = a(200651);
 a(192379);
 var l = a(442837),
     t = a(481060),
-    r = a(239091),
-    o = a(496675),
+    s = a(239091),
+    r = a(496675),
     c = a(572004),
-    s = a(981631),
-    d = a(388032),
+    d = a(981631),
+    o = a(388032),
     u = a(372819);
-e.default = function (n) {
+let p = function (n) {
     var e;
-    let { guild: p, user: I, onSelect: b } = n,
-        M = null !== (e = null == p ? void 0 : p.id) && void 0 !== e ? e : s.lds,
-        h = (0, l.e7)([o.Z], () => null != p && o.Z.canManageUser(s.Plq.BAN_MEMBERS, I, p), [p, I]);
-    return (0, i.jsx)(t.Menu, {
+    let { guild: p, user: b, onSelect: h } = n,
+        v = null !== (e = null == p ? void 0 : p.id) && void 0 !== e ? e : d.lds,
+        x = (0, l.e7)([r.Z], () => null != p && r.Z.canManageUser(d.Plq.BAN_MEMBERS, b, p), [p, b]);
+    return (0, i.jsx)(t.v2r, {
         navId: 'member-application-context-menu',
         className: u.contextMenu,
-        onClose: r.Zy,
-        'aria-label': d.intl.string(d.t.liqwPD),
-        onSelect: b,
-        children: (0, i.jsxs)(t.MenuGroup, {
+        onClose: s.Zy,
+        'aria-label': o.intl.string(o.t.liqwPD),
+        onSelect: h,
+        children: (0, i.jsxs)(t.kSQ, {
             children: [
-                h &&
+                x &&
                     (0, i.jsx)(
-                        t.MenuItem,
+                        t.sNh,
                         {
                             id: 'ban',
-                            label: d.intl.string(d.t['I+Cbur']),
-                            icon: t.HammerIcon,
+                            label: o.intl.string(o.t['I+Cbur']),
+                            icon: t.pgN,
                             color: 'danger',
                             action: () =>
-                                (0, t.openModalLazy)(async () => {
+                                (0, t.ZDy)(async () => {
                                     let { default: n } = await a.e('43350').then(a.bind(a, 98746));
                                     return (e) =>
                                         (0, i.jsx)(n, {
                                             ...e,
-                                            guildId: M,
-                                            user: I
+                                            guildId: v,
+                                            user: b
                                         });
                                 })
                         },
                         'ban'
                     ),
                 (0, i.jsx)(
-                    t.MenuItem,
+                    t.sNh,
                     {
                         id: 'copyUserId',
                         label: 'Copy User ID',
-                        icon: t.IdIcon,
-                        action: () => (0, c.JG)(I.id)
+                        icon: t.VuL,
+                        action: () => (0, c.JG)(b.id)
                     },
                     'copyUserId'
                 )

@@ -1,121 +1,121 @@
-var i = r(47120);
-var a = r(348327),
-    o = r.n(a),
-    s = r(392711),
-    l = r.n(s),
-    u = r(570140),
-    c = r(846027),
-    d = r(287734),
-    f = r(317770),
-    p = r(829750),
-    h = r(189771),
-    _ = r(67844),
-    m = r(173507),
-    g = r(592125),
-    E = r(131951),
-    v = r(944486),
-    y = r(358085),
-    b = r(998502),
-    I = r(981631),
-    T = r(388032);
-function S(e, n, r) {
+n.d(t, { Z: () => S }), n(47120);
+var i = n(348327),
+    r = n.n(i),
+    a = n(392711),
+    s = n.n(a),
+    o = n(570140),
+    l = n(846027),
+    u = n(287734),
+    c = n(317770),
+    d = n(829750),
+    f = n(189771),
+    _ = n(67844),
+    p = n(173507),
+    h = n(592125),
+    m = n(131951),
+    g = n(944486),
+    E = n(358085),
+    v = n(998502),
+    y = n(981631),
+    I = n(388032);
+function T(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class A extends f.Z {
+class b extends c.Z {
     _initialize() {
-        if (!!this.isSupported) u.Z.subscribe('AUDIO_SET_MODE', this.handleViewUpdate), u.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleViewUpdate), u.Z.subscribe('START_SESSION', this.handleViewUpdate), u.Z.subscribe('CONNECTION_OPEN', this.handleViewUpdate), u.Z.subscribe('CONNECTION_CLOSED', this.handleViewUpdate), u.Z.subscribe('CALL_CREATE', this.handleViewUpdate), u.Z.subscribe('CALL_UPDATE', this.handleViewUpdate), u.Z.subscribe('CALL_DELETE', this.handleViewUpdate), u.Z.subscribe('CHANNEL_DELETE', this.handleViewUpdate), u.Z.subscribe('VOICE_STATE_UPDATES', this.handleViewUpdate), u.Z.subscribe('AUDIO_TOGGLE_SELF_MUTE', this.handleViewUpdate), u.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', this.handleViewUpdate), u.Z.subscribe('AUDIO_TOGGLE_LOCAL_MUTE', this.handleViewUpdate), u.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleViewUpdate), b.ZP.on('THUMBAR_BUTTONS_CLICKED', (e, n) => this.buttonClicked(n));
+        this.isSupported && (o.Z.subscribe('AUDIO_SET_MODE', this.handleViewUpdate), o.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleViewUpdate), o.Z.subscribe('START_SESSION', this.handleViewUpdate), o.Z.subscribe('CONNECTION_OPEN', this.handleViewUpdate), o.Z.subscribe('CONNECTION_CLOSED', this.handleViewUpdate), o.Z.subscribe('CALL_CREATE', this.handleViewUpdate), o.Z.subscribe('CALL_UPDATE', this.handleViewUpdate), o.Z.subscribe('CALL_DELETE', this.handleViewUpdate), o.Z.subscribe('CHANNEL_DELETE', this.handleViewUpdate), o.Z.subscribe('VOICE_STATE_UPDATES', this.handleViewUpdate), o.Z.subscribe('AUDIO_TOGGLE_SELF_MUTE', this.handleViewUpdate), o.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', this.handleViewUpdate), o.Z.subscribe('AUDIO_TOGGLE_LOCAL_MUTE', this.handleViewUpdate), o.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleViewUpdate), v.ZP.on('THUMBAR_BUTTONS_CLICKED', (e, t) => this.buttonClicked(t)));
     }
     _terminate() {
-        if (!!this.isSupported) u.Z.unsubscribe('AUDIO_SET_MODE', this.handleViewUpdate), u.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleViewUpdate), u.Z.unsubscribe('START_SESSION', this.handleViewUpdate), u.Z.unsubscribe('CONNECTION_OPEN', this.handleViewUpdate), u.Z.unsubscribe('CONNECTION_CLOSED', this.handleViewUpdate), u.Z.unsubscribe('CALL_CREATE', this.handleViewUpdate), u.Z.unsubscribe('CALL_UPDATE', this.handleViewUpdate), u.Z.unsubscribe('CALL_DELETE', this.handleViewUpdate), u.Z.unsubscribe('CHANNEL_DELETE', this.handleViewUpdate), u.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleViewUpdate), u.Z.unsubscribe('AUDIO_TOGGLE_SELF_MUTE', this.handleViewUpdate), u.Z.unsubscribe('AUDIO_TOGGLE_SELF_DEAF', this.handleViewUpdate), u.Z.unsubscribe('AUDIO_TOGGLE_LOCAL_MUTE', this.handleViewUpdate), u.Z.unsubscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleViewUpdate);
+        this.isSupported && (o.Z.unsubscribe('AUDIO_SET_MODE', this.handleViewUpdate), o.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleViewUpdate), o.Z.unsubscribe('START_SESSION', this.handleViewUpdate), o.Z.unsubscribe('CONNECTION_OPEN', this.handleViewUpdate), o.Z.unsubscribe('CONNECTION_CLOSED', this.handleViewUpdate), o.Z.unsubscribe('CALL_CREATE', this.handleViewUpdate), o.Z.unsubscribe('CALL_UPDATE', this.handleViewUpdate), o.Z.unsubscribe('CALL_DELETE', this.handleViewUpdate), o.Z.unsubscribe('CHANNEL_DELETE', this.handleViewUpdate), o.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleViewUpdate), o.Z.unsubscribe('AUDIO_TOGGLE_SELF_MUTE', this.handleViewUpdate), o.Z.unsubscribe('AUDIO_TOGGLE_SELF_DEAF', this.handleViewUpdate), o.Z.unsubscribe('AUDIO_TOGGLE_LOCAL_MUTE', this.handleViewUpdate), o.Z.unsubscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleViewUpdate));
     }
     setThumbarButtons(e) {
-        !o()(this.prevButtons, e) && ((this.prevButtons = e), b.ZP.setThumbarButtons(e));
+        r()(this.prevButtons, e) || ((this.prevButtons = e), v.ZP.setThumbarButtons(e));
     }
     constructor(...e) {
         super(...e),
-            S(this, 'callbackActions', {
-                [b.tS.VIDEO]: () => {
-                    E.Z.isVideoEnabled() ? c.Z.setVideoEnabled(!1) : (0, m.Z)(() => c.Z.setVideoEnabled(!0), I.IlC.APP);
+            T(this, 'callbackActions', {
+                [v.tS.VIDEO]: () => {
+                    m.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, p.Z)(() => l.Z.setVideoEnabled(!0), y.IlC.APP);
                 },
-                [b.tS.MUTE]: () => c.Z.toggleSelfMute({ location: 'Thumbar' }),
-                [b.tS.DEAFEN]: () => c.Z.toggleSelfDeaf({ location: 'Thumbar' }),
-                [b.tS.DISCONNECT]: () => d.default.disconnect()
+                [v.tS.MUTE]: () => l.Z.toggleSelfMute({ location: 'Thumbar' }),
+                [v.tS.DEAFEN]: () => l.Z.toggleSelfDeaf({ location: 'Thumbar' }),
+                [v.tS.DISCONNECT]: () => u.default.disconnect()
             }),
-            S(this, 'isSupported', (0, y.isMac)() || (0, y.isWindows)()),
-            S(this, 'prevButtons', []),
-            S(this, 'buttonClicked', (e) => {
+            T(this, 'isSupported', (0, E.isMac)() || (0, E.isWindows)()),
+            T(this, 'prevButtons', []),
+            T(this, 'buttonClicked', (e) => {
                 if (!(e.buttonName in this.callbackActions)) {
                     console.error('ThumbarButtonsManager: Unknown callback eventName: "'.concat(e.buttonName, '"'), e);
                     return;
                 }
                 this.callbackActions[e.buttonName]();
             }),
-            S(
+            T(
                 this,
                 'handleViewUpdate',
-                l().debounce(() => {
-                    let e = v.Z.getVoiceChannelId();
+                s().debounce(() => {
+                    let e = g.Z.getVoiceChannelId();
                     if (null == e) {
                         this.setThumbarButtons([]);
                         return;
                     }
-                    let n = E.Z.isSelfMute(),
-                        r = E.Z.isSelfDeaf(),
-                        i = E.Z.isVideoEnabled(),
-                        a = E.Z.isVideoAvailable(),
-                        o = g.Z.getChannel(e),
-                        s = null == o || (0, h.y)(o),
-                        { reachedLimit: l, limit: u } =
-                            null != o
-                                ? (0, p.t)(o)
+                    let t = m.Z.isSelfMute(),
+                        n = m.Z.isSelfDeaf(),
+                        i = m.Z.isVideoEnabled(),
+                        r = m.Z.isVideoAvailable(),
+                        a = h.Z.getChannel(e),
+                        s = null == a || (0, f.y)(a),
+                        { reachedLimit: o, limit: l } =
+                            null != a
+                                ? (0, d.t)(a)
                                 : {
                                       reachedLimit: void 0,
                                       limit: void 0
                                   },
-                        c = (0, _.X)({
+                        u = (0, _.X)({
                             enabled: i,
                             join: !1,
-                            channel: o,
-                            cameraUnavailable: !a,
+                            channel: a,
+                            cameraUnavailable: !r,
                             hasPermission: s,
-                            channelLimit: u,
-                            channelLimitReached: l
+                            channelLimit: l,
+                            channelLimitReached: o
                         });
                     this.setThumbarButtons([
                         {
-                            name: b.tS.VIDEO,
+                            name: v.tS.VIDEO,
                             active: !i,
-                            tooltip: c,
-                            flags: a ? [] : ['disabled']
+                            tooltip: u,
+                            flags: r ? [] : ['disabled']
                         },
                         {
-                            name: b.tS.MUTE,
+                            name: v.tS.MUTE,
+                            active: t,
+                            tooltip: t ? I.intl.string(I.t.YqAjX1) : I.intl.string(I.t['w4m94+'])
+                        },
+                        {
+                            name: v.tS.DEAFEN,
                             active: n,
-                            tooltip: n ? T.intl.string(T.t.YqAjX1) : T.intl.string(T.t['w4m94+'])
+                            tooltip: n ? I.intl.string(I.t['2US87+']) : I.intl.string(I.t.wjcRFR)
                         },
                         {
-                            name: b.tS.DEAFEN,
-                            active: r,
-                            tooltip: r ? T.intl.string(T.t['2US87+']) : T.intl.string(T.t.wjcRFR)
-                        },
-                        {
-                            name: b.tS.DISCONNECT,
+                            name: v.tS.DISCONNECT,
                             active: !0,
-                            tooltip: T.intl.string(T.t['6vrfgo'])
+                            tooltip: I.intl.string(I.t['6vrfgo'])
                         }
                     ]);
                 }, 100)
             );
     }
 }
-n.Z = new A();
+let S = new b();

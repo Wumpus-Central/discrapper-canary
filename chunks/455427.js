@@ -1,6 +1,6 @@
 e.exports = {
-    bannerContainer: 'bannerContainer_d2d5de',
-    bannerBodyContainer: 'bannerBodyContainer_d2d5de',
-    bannerBody: 'bannerBody_d2d5de',
-    badge: 'badge_d2d5de'
+    bannerContainer: 'bannerContainer_f01cc3',
+    bannerBodyContainer: 'bannerBodyContainer_f01cc3',
+    bannerBody: 'bannerBody_f01cc3',
+    badge: 'badge_f01cc3'
 };

@@ -1,35 +1,35 @@
-var i = r(859209),
-    a = r(581031),
-    o = r(714050),
-    s = r(202934),
-    l = URLSearchParams,
-    u = l.prototype,
-    c = a(u.append),
-    d = a(u.delete),
-    f = a(u.forEach),
-    p = a([].push),
-    h = new l('a=1&a=2&b=3');
-h.delete('a', 1),
-    h.delete('b', void 0),
-    h + '' != 'a=2' &&
+var i = n(859209),
+    r = n(581031),
+    a = n(714050),
+    s = n(202934),
+    o = URLSearchParams,
+    l = o.prototype,
+    u = r(l.append),
+    c = r(l.delete),
+    d = r(l.forEach),
+    f = r([].push),
+    _ = new o('a=1&a=2&b=3');
+_.delete('a', 1),
+    _.delete('b', void 0),
+    _ + '' != 'a=2' &&
         i(
-            u,
+            l,
             'delete',
             function (e) {
-                var n,
-                    r = arguments.length,
-                    i = r < 2 ? void 0 : arguments[1];
-                if (r && void 0 === i) return d(this, e);
-                var a = [];
-                f(this, function (e, n) {
-                    p(a, {
-                        key: n,
+                var t,
+                    n = arguments.length,
+                    i = n < 2 ? void 0 : arguments[1];
+                if (n && void 0 === i) return c(this, e);
+                var r = [];
+                d(this, function (e, t) {
+                    f(r, {
+                        key: t,
                         value: e
                     });
                 }),
-                    s(r, 1);
-                for (var l = o(e), u = o(i), h = 0, _ = 0, m = !1, g = a.length; h < g; ) (n = a[h++]), m || n.key === l ? ((m = !0), d(this, n.key)) : _++;
-                for (; _ < g; ) !((n = a[_++]).key === l && n.value === u) && c(this, n.key, n.value);
+                    s(n, 1);
+                for (var o = a(e), l = a(i), _ = 0, p = 0, h = !1, m = r.length; _ < m; ) (t = r[_++]), h || t.key === o ? ((h = !0), c(this, t.key)) : p++;
+                for (; p < m; ) ((t = r[p++]).key === o && t.value === l) || u(this, t.key, t.value);
             },
             {
                 enumerable: !0,

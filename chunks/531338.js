@@ -1,63 +1,63 @@
-o.r(n), o(610138), o(216116), o(78328), o(815648), o(47120);
-var t = o(200651);
-o(192379);
-var r = o(481060),
-    i = o(457330),
-    a = o(726542),
-    s = o(77987),
-    l = o(787025),
-    c = o(656649),
-    u = o(388032),
-    d = o(555873);
-n.default = (0, s.e)(function (e) {
-    let { match: n } = e,
-        o = n.params.type,
-        s = a.Z.get(o);
-    if (null == s)
-        return (0, t.jsx)(l.G, {
-            children: (0, t.jsx)(r.Text, {
-                className: d.error,
+t.r(o), t.d(o, { default: () => v }), t(610138), t(216116), t(78328), t(815648), t(47120);
+var n = t(200651);
+t(192379);
+var r = t(481060),
+    a = t(457330),
+    s = t(726542),
+    i = t(77987),
+    l = t(787025),
+    c = t(656649),
+    d = t(388032),
+    u = t(555873);
+let v = (0, i.e)(function (e) {
+    let { match: o } = e,
+        t = o.params.type,
+        i = s.Z.get(t);
+    if (null == i)
+        return (0, n.jsx)(l.G, {
+            children: (0, n.jsx)(r.Text, {
+                className: u.error,
                 variant: 'text-md/normal',
                 color: 'text-warning',
-                children: u.intl.string(u.t.WLDKSU)
+                children: d.intl.string(d.t.WLDKSU)
             })
         });
-    async function f() {
-        var e, n, t;
+    async function v() {
+        var e, o, n;
         let r = new URLSearchParams(window.location.search),
-            { body: a } = await i.Z.authorize(o, {
+            { body: s } = await a.Z.authorize(t, {
                 location: 'Connection Intermediate',
                 twoWayLink: null != r.get('two_way_link') ? 'true' === r.get('two_way_link') : void 0,
                 twoWayLinkType: null !== (e = r.get('two_way_link_type')) && void 0 !== e ? e : void 0,
-                userCode: null !== (n = r.get('two_way_user_code')) && void 0 !== n ? n : void 0,
-                successRedirect: null !== (t = r.get('success_redirect')) && void 0 !== t ? t : void 0
+                userCode: null !== (o = r.get('two_way_user_code')) && void 0 !== o ? o : void 0,
+                successRedirect: null !== (n = r.get('success_redirect')) && void 0 !== n ? n : void 0
             });
-        window.location = a.url;
+        window.location = s.url;
     }
-    return (0, t.jsx)(l.G, {
-        wrapperClassName: d.wrapper,
-        children: (0, t.jsxs)('div', {
-            className: d.root,
+    return (0, n.jsx)(l.G, {
+        wrapperClassName: u.wrapper,
+        children: (0, n.jsxs)('div', {
+            className: u.root,
             children: [
-                (0, t.jsx)(c.KJ, {
-                    className: d.logos,
-                    platform: s
+                (0, n.jsx)(c.KJ, {
+                    className: u.logos,
+                    platform: i
                 }),
-                (0, t.jsx)(r.Heading, {
+                (0, n.jsx)(r.X6q, {
                     variant: 'text-lg/bold',
-                    className: d.header,
-                    children: u.intl.format(u.t.Pw4veX, { provider: s.name })
+                    className: u.header,
+                    children: d.intl.format(d.t.Pw4veX, { provider: i.name })
                 }),
-                (0, t.jsx)(r.Text, {
+                (0, n.jsx)(r.Text, {
                     variant: 'text-md/normal',
-                    className: d.body,
-                    children: u.intl.format(u.t.rHlSVF, { provider: s.name })
+                    className: u.body,
+                    children: d.intl.format(d.t.rHlSVF, { provider: i.name })
                 }),
-                (0, t.jsx)(r.Button, {
-                    size: r.Button.Sizes.LARGE,
-                    color: r.Button.Colors.BRAND,
-                    onClick: f,
-                    children: u.intl.string(u.t['+NJGEh'])
+                (0, n.jsx)(r.zxk, {
+                    size: r.zxk.Sizes.LARGE,
+                    color: r.zxk.Colors.BRAND,
+                    onClick: v,
+                    children: d.intl.string(d.t['+NJGEh'])
                 })
             ]
         })

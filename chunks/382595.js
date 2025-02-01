@@ -1,7 +1,7 @@
 e.exports = {
-    header: 'header_ea2748',
-    headerTitle: 'headerTitle_ea2748',
-    headerClose: 'headerClose_ea2748',
-    tabBarItem: 'tabBarItem_ea2748',
-    content: 'content_ea2748'
+    header: 'header__647a7',
+    headerTitle: 'headerTitle__647a7',
+    headerClose: 'headerClose__647a7',
+    tabBarItem: 'tabBarItem__647a7',
+    content: 'content__647a7'
 };

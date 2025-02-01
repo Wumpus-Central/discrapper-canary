@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(411104), n(47120);
+n.d(t, { Z: () => b }), n(411104), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -109,12 +109,12 @@ function I(e, t) {
         };
     throw Error('Invalid Payment Source');
 }
-function b(e, t) {
+function T(e, t) {
     let n = null;
     return e && null != t && !t.canRedeemTrial() ? (n = h.intl.string(h.t.SvheW1)) : e && null != t && t.hasFlag(p.Cw.NEW) && (n = h.intl.format(h.t.d7ZLKC, { helpDeskArticle: f.Z.getArticleURL(_.BhN.PAYMENT_AUTHORIZATION_CHARGE) })), n;
 }
-function T(e) {
-    let { selectedPaymentSourceId: t, paymentSources: n, prependOption: a, hidePersonalInformation: u, onChange: f, onPaymentSourceAdd: _, isTrial: p = !1, disabled: g = !1, className: E, optionClassName: v, dropdownLoading: T } = e,
+function b(e) {
+    let { selectedPaymentSourceId: t, paymentSources: n, prependOption: a, hidePersonalInformation: u, onChange: f, onPaymentSourceAdd: _, isTrial: p = !1, disabled: g = !1, className: E, optionClassName: v, dropdownLoading: b } = e,
         S = 0 === n.length,
         A = (e) => {
             if (e === y.id) null != _ && _();
@@ -149,7 +149,7 @@ function T(e) {
                 })
             };
         }),
-        C = b(
+        C = T(
             p,
             r.useMemo(() => n.find((e) => e.id === t), [n, t])
         );
@@ -172,7 +172,7 @@ function T(e) {
                       placeholder: h.intl.string(h.t['8lqkf3']),
                       renderOptionValue: (e) => {
                           let [t] = e;
-                          return T ? (0, i.jsx)(l.$jN, { type: l.RAz.SPINNING_CIRCLE }) : t.label;
+                          return b ? (0, i.jsx)(l.$jN, { type: l.RAz.SPINNING_CIRCLE }) : t.label;
                       }
                   }),
             null != C

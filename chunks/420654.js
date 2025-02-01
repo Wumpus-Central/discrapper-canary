@@ -1,61 +1,61 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(481060),
-    c = r(906732),
-    d = r(785717),
-    f = r(280885),
-    p = r(171368),
-    h = r(981631),
-    _ = r(388032),
-    m = r(813238);
-let g = 57.75;
-n.Z = o.memo(function (e) {
-    let { user: n, onClose: r, bio: i, hidePersonalInformation: s, viewFullBioDisabled: E = !1 } = e,
-        { context: v } = (0, d.KZ)(),
-        { analyticsLocations: y } = (0, c.ZP)(),
-        [b, I] = o.useState(!1),
-        [T, S] = o.useState(!1),
-        A = (e) => {
-            null != e && (I(!T && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > g && S(!0));
-        },
-        C = () => {
-            null == r || r(),
-                (0, p.openUserProfileModal)({
-                    ...v,
-                    userId: n.id,
-                    sourceAnalyticsLocations: y,
-                    analyticsLocation: { section: h.jXE.BITE_SIZE_PROFILE_POPOUT }
-                });
-        };
-    return s || null == i || '' === i
-        ? null
-        : (0, a.jsxs)('div', {
-              children: [
-                  (0, a.jsx)('div', {
-                      ref: A,
-                      className: l()(m.descriptionClamp, T && m.maxBioHeight),
-                      children: (0, a.jsx)(f.Z, {
-                          userBio: i,
-                          setLineClamp: !1,
-                          textColor: 'header-primary'
-                      })
-                  }),
-                  (b || T) &&
-                      (0, a.jsx)(u.Button, {
-                          look: u.Button.Looks.BLANK,
-                          size: u.Button.Sizes.NONE,
-                          className: m.viewFullBio,
-                          color: l()(m.viewFullBioColor, E && m.viewFullBioDisabled),
-                          onClick: C,
-                          children: (0, a.jsx)(u.Text, {
-                              variant: 'text-xs/normal',
-                              color: 'none',
-                              children: _.intl.string(_.t.YDiPq6)
+n.d(t, { Z: () => m }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(906732),
+    u = n(785717),
+    c = n(280885),
+    d = n(171368),
+    f = n(981631),
+    _ = n(388032),
+    p = n(813238);
+let h = 57.75,
+    m = r.memo(function (e) {
+        let { user: t, onClose: n, bio: a, hidePersonalInformation: m, viewFullBioDisabled: g = !1 } = e,
+            { context: E } = (0, u.KZ)(),
+            { analyticsLocations: v } = (0, l.ZP)(),
+            [y, I] = r.useState(!1),
+            [T, b] = r.useState(!1),
+            S = (e) => {
+                null != e && (I(!T && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && b(!0));
+            },
+            A = () => {
+                null == n || n(),
+                    (0, d.openUserProfileModal)({
+                        ...E,
+                        userId: t.id,
+                        sourceAnalyticsLocations: v,
+                        analyticsLocation: { section: f.jXE.BITE_SIZE_PROFILE_POPOUT }
+                    });
+            };
+        return m || null == a || '' === a
+            ? null
+            : (0, i.jsxs)('div', {
+                  children: [
+                      (0, i.jsx)('div', {
+                          ref: S,
+                          className: s()(p.descriptionClamp, T && p.maxBioHeight),
+                          children: (0, i.jsx)(c.Z, {
+                              userBio: a,
+                              setLineClamp: !1,
+                              textColor: 'header-primary'
                           })
-                      })
-              ]
-          });
-});
+                      }),
+                      (y || T) &&
+                          (0, i.jsx)(o.zxk, {
+                              look: o.zxk.Looks.BLANK,
+                              size: o.zxk.Sizes.NONE,
+                              className: p.viewFullBio,
+                              color: s()(p.viewFullBioColor, g && p.viewFullBioDisabled),
+                              onClick: A,
+                              children: (0, i.jsx)(o.Text, {
+                                  variant: 'text-xs/normal',
+                                  color: 'none',
+                                  children: _.intl.string(_.t.YDiPq6)
+                              })
+                          })
+                  ]
+              });
+    });

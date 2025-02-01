@@ -1,9 +1,9 @@
-var i = r(477660),
-    a = r.n(i);
-let o = /\n$/,
+n.d(t, { Z: () => s });
+var i = n(477660),
+    r = n.n(i);
+let a = /\n$/,
     s = {
-        ...a().defaultRules.heading,
+        ...r().defaultRules.heading,
         requiredFirstCharacters: [' ', '#'],
-        match: (e, n, r) => (n.allowHeading ? (null == r || '' === r || null != r.match(o) ? (0, i.anyScopeRegex)(/^ *(#{1,3})(?:\s+)((?![#]+)[^\n]+?)#*\s*(?:\n|$)/)(e, n, r) : null) : null)
+        match: (e, t, n) => (t.allowHeading && (null == n || '' === n || null != n.match(a)) ? (0, i.anyScopeRegex)(/^ *(#{1,3})(?:\s+)((?![#]+)[^\n]+?)#*\s*(?:\n|$)/)(e, t, n) : null)
     };
-n.Z = s;

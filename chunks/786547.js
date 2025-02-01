@@ -1,17 +1,17 @@
-var i = r(924102),
-    a = r(675717),
-    o = 'Expected a function';
-function s(e, n, r) {
+n.d(t, { Z: () => s });
+var i = n(924102),
+    r = n(675717),
+    a = 'Expected a function';
+let s = function (e, t, n) {
     var s = !0,
-        l = !0;
-    if ('function' != typeof e) throw TypeError(o);
+        o = !0;
+    if ('function' != typeof e) throw TypeError(a);
     return (
-        (0, a.Z)(r) && ((s = 'leading' in r ? !!r.leading : s), (l = 'trailing' in r ? !!r.trailing : l)),
-        (0, i.Z)(e, n, {
+        (0, r.Z)(n) && ((s = 'leading' in n ? !!n.leading : s), (o = 'trailing' in n ? !!n.trailing : o)),
+        (0, i.Z)(e, t, {
             leading: s,
-            maxWait: n,
-            trailing: l
+            maxWait: t,
+            trailing: o
         })
     );
-}
-n.Z = s;
+};

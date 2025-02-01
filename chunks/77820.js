@@ -1,10 +1,10 @@
-var i = r(67867),
-    a = r(339584);
+var i = n(67867),
+    r = n(339584);
 i(
     {
         target: 'Array',
         proto: !0,
-        forced: a !== [].lastIndexOf
+        forced: r !== [].lastIndexOf
     },
-    { lastIndexOf: a }
+    { lastIndexOf: r }
 );

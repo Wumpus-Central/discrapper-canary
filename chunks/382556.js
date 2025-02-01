@@ -1,9 +1,9 @@
 e.exports = {
-    header: 'header_fcff3d',
-    divider: 'divider_fcff3d',
-    content: 'content_fcff3d',
-    closeButton: 'closeButton_fcff3d',
-    earningsImage: 'earningsImage_fcff3d',
-    demo: 'demo_fcff3d',
-    description: 'description_fcff3d'
+    header: 'header__89b2b',
+    divider: 'divider__89b2b',
+    content: 'content__89b2b',
+    closeButton: 'closeButton__89b2b',
+    earningsImage: 'earningsImage__89b2b',
+    demo: 'demo__89b2b',
+    description: 'description__89b2b'
 };

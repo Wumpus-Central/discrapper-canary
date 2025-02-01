@@ -1,7 +1,7 @@
-var e = o(354848),
+var r = a(354848),
     n = String,
-    c = TypeError;
-r.exports = function (r) {
-    if ('object' == typeof r || e(r)) return r;
-    throw c("Can't set " + n(r) + ' as a prototype');
+    o = TypeError;
+t.exports = function (t) {
+    if ('object' == typeof t || r(t)) return t;
+    throw o("Can't set " + n(t) + ' as a prototype');
 };

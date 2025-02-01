@@ -1,71 +1,71 @@
-var i = r(47120);
-var a = r(442837),
-    o = r(570140),
-    s = r(699516),
-    l = r(979651),
-    u = r(414509),
-    c = r(807031);
-let d = {},
-    f = {},
-    p = new Set();
-function h() {
-    (d = {}), (f = {});
+n.d(t, { Z: () => E }), n(47120);
+var i = n(442837),
+    r = n(570140),
+    a = n(699516),
+    s = n(979651),
+    o = n(414509),
+    l = n(807031);
+let u = {},
+    c = {},
+    d = new Set();
+function f() {
+    (u = {}), (c = {});
 }
 function _() {
-    h();
-    let e = l.Z.getAllVoiceStates(),
+    f();
+    let e = s.Z.getAllVoiceStates(),
+        t = !1;
+    for (let n of Object.values(e)) for (let e of Object.values(n)) null != e.channelId && (t = m(e.channelId, e.userId) || t);
+    return t;
+}
+function p(e) {
+    let { relationship: t } = e,
+        n = s.Z.getVoiceStateForUser(t.id);
+    return null != n && null != n.channelId && m(n.channelId, t.id);
+}
+function h(e) {
+    let { voiceStates: t } = e,
         n = !1;
-    for (let r of Object.values(e)) for (let e of Object.values(r)) null != e.channelId && (n = E(e.channelId, e.userId) || n);
-    return n;
-}
-function m(e) {
-    let { relationship: n } = e,
-        r = l.Z.getVoiceStateForUser(n.id);
-    return null != r && null != r.channelId && E(r.channelId, n.id);
-}
-function g(e) {
-    let { voiceStates: n } = e,
-        r = !1;
     return (
-        n.forEach((e) => {
+        t.forEach((e) => {
             if (null != e.oldChannelId) {
-                var n, i;
-                null != d[e.oldChannelId] && (null === (n = d[e.oldChannelId]) || void 0 === n || n.delete(e.userId), (r = !0)), null != f[e.oldChannelId] && (null === (i = f[e.oldChannelId]) || void 0 === i || i.delete(e.userId), (r = !0));
+                var t, i;
+                null != u[e.oldChannelId] && (null === (t = u[e.oldChannelId]) || void 0 === t || t.delete(e.userId), (n = !0)), null != c[e.oldChannelId] && (null === (i = c[e.oldChannelId]) || void 0 === i || i.delete(e.userId), (n = !0));
             }
-            null != e.channelId && (r = E(e.channelId, e.userId) || r);
+            null != e.channelId && (n = m(e.channelId, e.userId) || n);
         }),
-        r
+        n
     );
 }
-function E(e, n) {
-    let r = !1,
+function m(e, t) {
+    let n = !1,
         i = !1,
-        a = new Set(d[e]),
-        o = s.Z.isBlocked(n);
-    o && !a.has(n) ? (a.add(n), (i = !0), (r = !0)) : !o && (r = a.delete(n)), 0 === a.size && r ? delete d[e] : r && (d[e] = a);
-    let l = new Set(f[e]),
-        c = s.Z.isIgnored(n);
-    return c && !l.has(n) ? (l.add(n), (i = !0), (r = !0)) : !c && (r = l.delete(n)), 0 === l.size && r ? delete f[e] : r && (f[e] = l), i && u.Z.handleBlockedOrIgnoredUserVoiceChannelJoin(e, n), r;
+        r = new Set(u[e]),
+        s = a.Z.isBlocked(t);
+    s && !r.has(t) ? (r.add(t), (i = !0), (n = !0)) : s || (n = r.delete(t)), 0 === r.size && n ? delete u[e] : n && (u[e] = r);
+    let l = new Set(c[e]),
+        d = a.Z.isIgnored(t);
+    return d && !l.has(t) ? (l.add(t), (i = !0), (n = !0)) : d || (n = l.delete(t)), 0 === l.size && n ? delete c[e] : n && (c[e] = l), i && o.Z.handleBlockedOrIgnoredUserVoiceChannelJoin(e, t), n;
 }
-class v extends a.ZP.Store {
+class g extends i.ZP.Store {
     initialize() {
-        this.waitFor(s.Z, l.Z);
+        this.waitFor(a.Z, s.Z);
     }
     getBlockedUsersForVoiceChannel(e) {
-        var n;
-        return (0, c.wC)({ location: 'VoiceChannelBlockedUserStore_getBlockedUsersForVoiceChannel' }) ? (null !== (n = d[e]) && void 0 !== n ? n : p) : p;
+        var t;
+        return (0, l.wC)({ location: 'VoiceChannelBlockedUserStore_getBlockedUsersForVoiceChannel' }) && null !== (t = u[e]) && void 0 !== t ? t : d;
     }
     getIgnoredUsersForVoiceChannel(e) {
-        var n;
-        return (0, c.wC)({ location: 'VoiceChannelBlockedUserStore_getIgnoredUsersForVoiceChannel' }) ? (null !== (n = f[e]) && void 0 !== n ? n : p) : p;
+        var t;
+        return (0, l.wC)({ location: 'VoiceChannelBlockedUserStore_getIgnoredUsersForVoiceChannel' }) && null !== (t = c[e]) && void 0 !== t ? t : d;
     }
 }
-n.Z = new v(o.Z, {
-    CONNECTION_OPEN: h,
-    LOGOUT: h,
+let E = new g(r.Z, {
+    CONNECTION_OPEN: f,
+    LOGOUT: f,
     OVERLAY_INITIALIZE: _,
-    VOICE_STATE_UPDATES: g,
-    RELATIONSHIP_ADD: m,
-    RELATIONSHIP_REMOVE: m,
-    RELATIONSHIP_UPDATE: m
+    VOICE_STATE_UPDATES: h,
+    RELATIONSHIP_ADD: p,
+    RELATIONSHIP_REMOVE: p,
+    RELATIONSHIP_UPDATE: p
 });

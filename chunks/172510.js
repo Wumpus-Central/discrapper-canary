@@ -1,18 +1,18 @@
-function n(e) {
-    let n = e.regex,
-        r = /\b/;
-    function i(e, n) {
+function t(e) {
+    let t = e.regex,
+        n = /\b/;
+    function i(e, t) {
         if (0 === e.index) return;
-        let r = e.input[e.index - 1];
-        if ((!(r >= '0') || !(r <= '9')) && '_' !== r) n.ignoreMatch();
+        let n = e.input[e.index - 1];
+        (!(n >= '0') || !(n <= '9')) && '_' !== n && t.ignoreMatch();
     }
-    let a = /[+-]?((\.\d+)|(\d+)(\.\d*)?)/,
-        o = /[GM]\s*\d+(\.\d+)?/,
+    let r = /[+-]?((\.\d+)|(\d+)(\.\d*)?)/,
+        a = /[GM]\s*\d+(\.\d+)?/,
         s = /T\s*\d+/,
-        l = /O\s*\d+/,
-        u = /O<.+>/,
-        c = /[ABCUVWXYZ]\s*/,
-        d = /[FHIJKPQRS]\s*/;
+        o = /O\s*\d+/,
+        l = /O<.+>/,
+        u = /[ABCUVWXYZ]\s*/,
+        c = /[FHIJKPQRS]\s*/;
     return {
         name: 'G-code (ISO 6983)',
         aliases: ['nc'],
@@ -32,12 +32,12 @@ function n(e) {
             {
                 scope: 'title.function',
                 variants: [
-                    { match: n.concat(r, o) },
+                    { match: t.concat(n, a) },
                     {
-                        begin: o,
+                        begin: a,
                         'on:begin': i
                     },
-                    { match: n.concat(r, s) },
+                    { match: t.concat(n, s) },
                     {
                         begin: s,
                         'on:begin': i
@@ -47,14 +47,14 @@ function n(e) {
             {
                 scope: 'symbol',
                 variants: [
-                    { match: n.concat(r, l) },
+                    { match: t.concat(n, o) },
                     {
-                        begin: l,
+                        begin: o,
                         'on:begin': i
                     },
-                    { match: n.concat(r, u) },
+                    { match: t.concat(n, l) },
                     {
-                        begin: u,
+                        begin: l,
                         'on:begin': i
                     },
                     { match: /\*\s*\d+\s*$/ }
@@ -71,9 +71,9 @@ function n(e) {
             {
                 scope: 'property',
                 variants: [
-                    { match: n.concat(r, c, a) },
+                    { match: t.concat(n, u, r) },
                     {
-                        begin: n.concat(c, a),
+                        begin: t.concat(u, r),
                         'on:begin': i
                     }
                 ]
@@ -81,9 +81,9 @@ function n(e) {
             {
                 scope: 'params',
                 variants: [
-                    { match: n.concat(r, d, a) },
+                    { match: t.concat(n, c, r) },
                     {
-                        begin: n.concat(d, a),
+                        begin: t.concat(c, r),
                         'on:begin': i
                     }
                 ]
@@ -91,4 +91,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

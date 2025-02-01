@@ -1,7 +1,7 @@
-var i = r(886985);
-function a(e, n) {
-    return i(n, function (n) {
-        return e[n];
+var i = n(886985);
+function r(e, t) {
+    return i(t, function (t) {
+        return e[t];
     });
 }
-e.exports = a;
+e.exports = r;

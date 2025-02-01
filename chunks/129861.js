@@ -53,11 +53,11 @@ let h = (e) => {
             v = t.toString(),
             y = f ? null : p(t),
             I = t.isVerifiedBot(),
-            b = d.ZP.getName(t),
-            T = r ? v : null != n ? n : b,
+            T = d.ZP.getName(t),
+            b = r ? v : null != n ? n : T,
             S = t.isPomelo() || l;
-        if (S || T !== v) {
-            let e = T === v && S && r ? d.ZP.getUserTag(t, { forcePomelo: l }) : T,
+        if (S || b !== v) {
+            let e = b === v && S && r ? d.ZP.getUserTag(t, { forcePomelo: l }) : b,
                 n = a && e !== '@'.concat(v) ? d.ZP.getUserTag(t) : void 0;
             return (0, i.jsx)(h, {
                 primary: e,
@@ -69,10 +69,10 @@ let h = (e) => {
             });
         }
         return (0, i.jsx)(u.Z, {
-            name: T,
+            name: b,
             botType: y,
             botVerified: I,
-            discriminator: E || T !== v ? null : null != o ? o : t.discriminator,
+            discriminator: E || b !== v ? null : null != o ? o : t.discriminator,
             ...m
         });
     };

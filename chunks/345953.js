@@ -1,168 +1,168 @@
-var i = r(47120);
-var a = r(392711),
-    o = r.n(a),
-    s = r(51407),
-    l = r(524437),
-    u = r(433517),
-    c = r(147913),
-    d = r(254238),
-    f = r(258609),
-    p = r(763296),
-    h = r(314897),
-    _ = r(131951),
-    m = r(709054),
-    g = r(725380),
-    E = r(340332),
-    v = r(675478),
-    y = r(65154);
-function b(e, n, r) {
+n.d(t, { Z: () => Z }), n(47120);
+var i = n(392711),
+    r = n.n(i),
+    a = n(51407),
+    s = n(524437),
+    o = n(433517),
+    l = n(147913),
+    u = n(254238),
+    c = n(258609),
+    d = n(763296),
+    f = n(314897),
+    _ = n(131951),
+    p = n(709054),
+    h = n(725380),
+    m = n(340332),
+    g = n(675478),
+    E = n(65154);
+function v(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let I = 300,
-    T = 2000,
-    S = (e) => 'AudioContextSettingsMigrated:'.concat(e),
-    A = (e) => (e === y.Yn.STREAM ? s.h.STREAM : s.h.USER);
-function C(e, n, r) {
-    return e[n].volume === A(r) && !e[n].muted && !e[n].soundboardMuted && delete e[n], e;
+let y = 300,
+    I = 2000,
+    T = (e) => 'AudioContextSettingsMigrated:'.concat(e),
+    b = (e) => (e === E.Yn.STREAM ? a.h.STREAM : a.h.USER);
+function S(e, t, n) {
+    return e[t].volume !== b(n) || e[t].muted || e[t].soundboardMuted || delete e[t], e;
 }
-function N(e) {
-    let n = m.default.entries(e),
-        r = n.length;
-    if (r <= I) return;
-    let i = n.sort((e, n) => {
-            let [r, { modifiedAt: i }] = e,
-                [a, { modifiedAt: o }] = n;
-            return Number(i) - Number(o);
+function A(e) {
+    let t = p.default.entries(e),
+        n = t.length;
+    if (n <= y) return;
+    let i = t.sort((e, t) => {
+            let [n, { modifiedAt: i }] = e,
+                [r, { modifiedAt: a }] = t;
+            return Number(i) - Number(a);
         }),
-        a = r - I;
-    for (let n = 0; n < a; n++) {
-        let [r] = i[n];
-        delete e[r];
+        r = n - y;
+    for (let t = 0; t < r; t++) {
+        let [n] = i[t];
+        delete e[n];
     }
 }
-function R(e) {
-    return l.JY.create({
+function N(e) {
+    return s.JY.create({
         muted: !1,
-        volume: A(e)
+        volume: b(e)
     });
 }
-function O() {
-    !u.K.get(S(h.default.getId())) &&
-        v.hW.updateAsync(
+function C() {
+    o.K.get(T(f.default.getId())) ||
+        g.hW.updateAsync(
             'audioContextSettings',
             (e) => {
-                let n = !1;
-                for (let [r, i] of Object.entries(_.Z.getState().settingsByContext)) {
-                    let a = (0, E.z)(r);
-                    if (null == a) continue;
-                    let o = e[a],
+                let t = !1;
+                for (let [n, i] of Object.entries(_.Z.getState().settingsByContext)) {
+                    let r = (0, m.z)(n);
+                    if (null == r) continue;
+                    let a = e[r],
                         s = String(Date.now()),
-                        l = {};
-                    for (let [e, n] of Object.entries(i.localMutes))
-                        l[e] = {
-                            muted: n,
-                            volume: A(r),
+                        o = {};
+                    for (let [e, t] of Object.entries(i.localMutes))
+                        o[e] = {
+                            muted: t,
+                            volume: b(n),
                             modifiedAt: s,
                             soundboardMuted: !1
                         };
-                    for (let [e, n] of Object.entries(i.localVolumes))
-                        l[e] = {
+                    for (let [e, t] of Object.entries(i.localVolumes))
+                        o[e] = {
                             muted: !1,
                             modifiedAt: s,
-                            ...l[e],
-                            volume: (0, E.r)(n, r)
+                            ...o[e],
+                            volume: (0, m.r)(t, n)
                         };
-                    let u = Object.keys(o).length;
-                    for (let [e, [r, i]] of Object.entries(l).entries()) {
-                        if (I - u - (e + 1) <= 0) break;
-                        null == o[r] && ((n = !0), (o[r] = i));
+                    let l = Object.keys(a).length;
+                    for (let [e, [n, i]] of Object.entries(o).entries()) {
+                        if (y - l - (e + 1) <= 0) break;
+                        null == a[n] && ((t = !0), (a[n] = i));
                     }
                 }
-                return u.K.set(S(h.default.getId()), !0), n;
+                return o.K.set(T(f.default.getId()), !0), t;
             },
-            v.fy.AUTOMATED
+            g.fy.AUTOMATED
         );
 }
-function D(e, n, r, i) {
-    var a;
-    let o = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
-        s = (0, E.z)(r);
+function R(e, t, n, i) {
+    var r;
+    let a = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
+        s = (0, m.z)(n);
     if (null == s) return !1;
-    let l = e[s];
-    return (l[n] = null !== (a = l[n]) && void 0 !== a ? a : R(r)), i(l[n]), (l[n].modifiedAt = String(Date.now())), o && C(l, n, r), N(l), !0;
+    let o = e[s];
+    return (o[t] = null !== (r = o[t]) && void 0 !== r ? r : N(n)), i(o[t]), (o[t].modifiedAt = String(Date.now())), a && S(o, t, n), A(o), !0;
 }
-function L() {
-    O();
+function O() {
+    C();
 }
-let x = o().debounce(() => {
-    U();
-}, T);
-function w(e, n, r) {
-    (0, g.RF)(e, n, { volume: r }), x();
+let D = r().debounce(() => {
+    M();
+}, I);
+function x(e, t, n) {
+    (0, h.RF)(e, t, { volume: n }), D();
 }
-function P(e, n, r) {
-    (0, g.RF)(e, n, { muted: r }), x.cancel(), U();
+function L(e, t, n) {
+    (0, h.RF)(e, t, { muted: n }), D.cancel(), M();
 }
-function M(e, n, r) {
-    (0, g.RF)(e, n, { soundboardMuted: r }), x.cancel(), U();
+function P(e, t, n) {
+    (0, h.RF)(e, t, { soundboardMuted: n }), D.cancel(), M();
 }
-let k = o().debounce(d.On, 500, { maxWait: 500 });
-function U() {
-    v.hW.updateAsync(
+let w = r().debounce(u.On, 500, { maxWait: 500 });
+function M() {
+    g.hW.updateAsync(
         'audioContextSettings',
         (e) => {
-            let n = !1;
+            let t = !1;
             return (
-                (0, g.$E)((r, i, a) => {
-                    let o = D(e, i, r, (e) => {
-                        Object.assign(e, a);
+                (0, h.$E)((n, i, r) => {
+                    let a = R(e, i, n, (e) => {
+                        Object.assign(e, r);
                     });
-                    n = n || o;
+                    t = t || a;
                 }),
-                n
+                t
             );
         },
-        v.fy.INFREQUENT_USER_ACTION
+        g.fy.INFREQUENT_USER_ACTION
     );
 }
-function B(e) {
-    let { context: n, userId: r, volume: i } = e;
-    if (r === h.default.getId()) return;
-    let a = f.Z.getRemoteSessionId();
-    null != a &&
-        k(a, r, n, {
-            muted: _.Z.isLocalMute(r, n),
+function k(e) {
+    let { context: t, userId: n, volume: i } = e;
+    if (n === f.default.getId()) return;
+    let r = c.Z.getRemoteSessionId();
+    null != r &&
+        w(r, n, t, {
+            muted: _.Z.isLocalMute(n, t),
             volume: i
         }),
-        w(n, r, i);
+        x(t, n, i);
+}
+function U(e) {
+    let { context: t, userId: n } = e;
+    n !== f.default.getId() && L(t, n, _.Z.isLocalMute(n, t));
 }
 function G(e) {
-    let { context: n, userId: r } = e;
-    r !== h.default.getId() && P(n, r, _.Z.isLocalMute(r, n));
+    let { context: t, userId: n } = e;
+    n !== f.default.getId() && P(t, n, d.Z.isLocalSoundboardMuted(n));
 }
-function Z(e) {
-    let { context: n, userId: r } = e;
-    r !== h.default.getId() && M(n, r, p.Z.isLocalSoundboardMuted(r));
-}
-class F extends c.Z {
+class B extends l.Z {
     constructor(...e) {
         super(...e),
-            b(this, 'actions', {
-                POST_CONNECTION_OPEN: L,
-                AUDIO_SET_LOCAL_VOLUME: B,
-                AUDIO_TOGGLE_LOCAL_MUTE: G,
-                AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: Z
+            v(this, 'actions', {
+                POST_CONNECTION_OPEN: O,
+                AUDIO_SET_LOCAL_VOLUME: k,
+                AUDIO_TOGGLE_LOCAL_MUTE: U,
+                AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: G
             });
     }
 }
-n.Z = new F();
+let Z = new B();

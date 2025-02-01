@@ -1,23 +1,23 @@
 var i,
-    a = Object.prototype.toString,
-    o = Function.prototype.toString,
+    r = Object.prototype.toString,
+    a = Function.prototype.toString,
     s = /^\s*(?:function)?\*/,
-    l = r(703825)(),
-    u = Object.getPrototypeOf,
-    c = function () {
-        if (!l) return !1;
+    o = n(703825)(),
+    l = Object.getPrototypeOf,
+    u = function () {
+        if (!o) return !1;
         try {
             return Function('return function*() {}')();
         } catch (e) {}
     };
 e.exports = function (e) {
     if ('function' != typeof e) return !1;
-    if (s.test(o.call(e))) return !0;
-    if (!l) return '[object GeneratorFunction]' === a.call(e);
-    if (!u) return !1;
+    if (s.test(a.call(e))) return !0;
+    if (!o) return '[object GeneratorFunction]' === r.call(e);
+    if (!l) return !1;
     if (void 0 === i) {
-        var n = c();
-        i = !!n && u(n);
+        var t = u();
+        i = !!t && l(t);
     }
-    return u(e) === i;
+    return l(e) === i;
 };

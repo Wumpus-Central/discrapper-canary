@@ -23,8 +23,8 @@ var i = n(200651),
     v = n(164946),
     y = n(369111),
     I = n(25990),
-    b = n(594174),
-    T = n(960048),
+    T = n(594174),
+    b = n(960048),
     S = n(272008),
     A = n(113434),
     N = n(497505),
@@ -49,7 +49,7 @@ function k(e) {
             let e = t.items.find((e) => e.type === l.Z.AVATAR_DECORATION);
             return null == e ? null : e;
         }, [t, n]),
-        a = () => (null == i ? (T.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(i), M()));
+        a = () => (null == i ? (b.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(i), M()));
     return [i, a];
 }
 function U(e) {
@@ -58,8 +58,8 @@ function U(e) {
         E = r.useRef(null),
         [v, y] = r.useState(null),
         I = r.useRef(new o.qA()),
-        T = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
-        A = (0, u.e7)([b.default], () => b.default.getCurrentUser()),
+        b = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+        A = (0, u.e7)([T.default], () => T.default.getCurrentUser()),
         C = r.useMemo(() => (0, R.fh)(l, R.eC.HERO), [l]),
         O = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         [x, P] = r.useState(!0 === g || O ? 'claimed' : 'loading');
@@ -76,7 +76,7 @@ function U(e) {
         k = !0 === g && null === p && (null == _ ? void 0 : _.skuId) !== '',
         U = null == p && !0 !== g,
         G = null == A || U || k || 'loading' === x,
-        Z = !T && !O && 'claimed' === x;
+        Z = !b && !O && 'claimed' === x;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.O_, {

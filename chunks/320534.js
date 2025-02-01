@@ -1,10 +1,10 @@
 e.exports = {
-    header: 'header_d794f7',
-    subheader: 'subheader_d794f7',
-    closeButton: 'closeButton_d794f7',
-    button: 'button_d794f7',
-    image: 'image_d794f7',
-    video: 'video_d794f7',
-    media: 'media_d794f7',
-    mediaContainer: 'mediaContainer_d794f7'
+    header: 'header_d93468',
+    subheader: 'subheader_d93468',
+    closeButton: 'closeButton_d93468',
+    button: 'button_d93468',
+    image: 'image_d93468',
+    video: 'video_d93468',
+    media: 'media_d93468',
+    mediaContainer: 'mediaContainer_d93468'
 };

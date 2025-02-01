@@ -1,6 +1,6 @@
-var i = r(250765),
-    a = TypeError;
+var i = n(250765),
+    r = TypeError;
 e.exports = function (e) {
-    if (i(e)) throw new a("Can't call method on " + e);
+    if (i(e)) throw new r("Can't call method on " + e);
     return e;
 };

@@ -1,4 +1,4 @@
-n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var i = n(200651);
 n(192379);
 var r = n(442837),
@@ -10,7 +10,7 @@ var r = n(442837),
     d = n(650461),
     u = n(388032),
     m = n(240938);
-t.Z = (e) => {
+let h = (e) => {
     let { guildId: t, error: n, inSettings: h = !1 } = e,
         g = (0, r.e7)([o.Z], () => o.Z.getGuild(t)),
         x = (0, r.e7)([c.Z, d.ZP], () => {
@@ -22,7 +22,7 @@ t.Z = (e) => {
         : (0, i.jsxs)('div', {
               className: m.slideContent,
               children: [
-                  (0, i.jsx)(l.Heading, {
+                  (0, i.jsx)(l.X6q, {
                       variant: 'heading-xxl/medium',
                       className: m.title,
                       children: h ? u.intl.string(u.t.aOQWKi) : u.intl.string(u.t.qxqOzM)

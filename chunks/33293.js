@@ -1,12 +1,12 @@
 e.exports = {
-    wrapper: 'wrapper_faf5ab',
-    content: 'content_faf5ab',
-    image: 'image_faf5ab',
-    animation: 'animation_faf5ab',
-    text: 'text_faf5ab',
-    title: 'title_faf5ab',
-    button: 'button_faf5ab',
-    buttonContainer: 'buttonContainer_faf5ab',
-    innerButton: 'innerButton_faf5ab',
-    countdown: 'countdown_faf5ab'
+    wrapper: 'wrapper__44df5',
+    content: 'content__44df5',
+    image: 'image__44df5',
+    animation: 'animation__44df5',
+    text: 'text__44df5',
+    title: 'title__44df5',
+    button: 'button__44df5',
+    buttonContainer: 'buttonContainer__44df5',
+    innerButton: 'innerButton__44df5',
+    countdown: 'countdown__44df5'
 };

@@ -1,5 +1,5 @@
 e.exports = {
-    iconUploaderContainer: 'iconUploaderContainer_bc431c',
-    previewContainer: 'previewContainer_bc431c',
-    messageContainer: 'messageContainer_bc431c'
+    iconUploaderContainer: 'iconUploaderContainer_b4d1aa',
+    previewContainer: 'previewContainer_b4d1aa',
+    messageContainer: 'messageContainer_b4d1aa'
 };

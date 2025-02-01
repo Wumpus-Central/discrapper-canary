@@ -1,4 +1,4 @@
 e.exports = {
-    firstChildSpacingFix: 'firstChildSpacingFix_d2d101',
-    tabItem: 'tabItem_d2d101'
+    firstChildSpacingFix: 'firstChildSpacingFix_c9a59b',
+    tabItem: 'tabItem_c9a59b'
 };

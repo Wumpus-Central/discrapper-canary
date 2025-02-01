@@ -38,7 +38,7 @@ let p = r.forwardRef(function (e, t) {
             backdropFilter: 'blur('.concat(E, 'px)')
         },
         I = (0, u.Z)(r),
-        b = (0, l.Yzy)(
+        T = (0, l.Yzy)(
             p,
             {
                 keys: (e) => (e ? 'backdrop' : 'empty'),
@@ -51,7 +51,7 @@ let p = r.forwardRef(function (e, t) {
         );
     if (null == f) {
         let e = { zIndex: 1000 + a };
-        return b((t, n) =>
+        return T((t, n) =>
             n
                 ? (0, i.jsx)(o.animated.div, {
                       className: c.backdrop,
@@ -65,7 +65,7 @@ let p = r.forwardRef(function (e, t) {
         );
     }
     return (0, i.jsx)(f, {
-        children: b((e, t) =>
+        children: T((e, t) =>
             t
                 ? (0, i.jsx)(o.animated.div, {
                       className: s()(c.backdrop, c.withLayer),

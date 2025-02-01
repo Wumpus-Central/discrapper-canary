@@ -1,5 +1,5 @@
-var a = r(760919);
-t.Z = new a.Z({
+r.d(t, { Z: () => a });
+let a = new (r(760919).Z)({
     id: 'a98rgb-linear',
     cssId: '--a98-rgb-linear',
     name: 'Linear Adobe\xAE 98 RGB compatible',

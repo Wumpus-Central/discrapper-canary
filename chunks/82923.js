@@ -1,4 +1,4 @@
-n(47120);
+n.d(t, { Z: () => c }), n(47120);
 var i = n(748780);
 function r(e, t, n) {
     return (
@@ -59,7 +59,7 @@ class a {
 function o(e, t, n) {
     return new l(n(e, { ...t }));
 }
-t.Z = {
+let c = {
     ...i.Z,
     timing: function (e, t) {
         return o(e, t, i.Z.timing);

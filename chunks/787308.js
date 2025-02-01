@@ -1,9 +1,9 @@
 e.exports = {
-    activity: 'activity_d5aa01',
-    partyMembers: 'partyMembers_d5aa01',
-    partyAvatar: 'partyAvatar_d5aa01',
-    morePartyMembers: 'morePartyMembers_d5aa01',
-    button: 'button_d5aa01',
-    channelActivityContainer: 'channelActivityContainer_d5aa01',
-    activityActionsContainer: 'activityActionsContainer_d5aa01'
+    activity: 'activity__7ba6e',
+    partyMembers: 'partyMembers__7ba6e',
+    partyAvatar: 'partyAvatar__7ba6e',
+    morePartyMembers: 'morePartyMembers__7ba6e',
+    button: 'button__7ba6e',
+    channelActivityContainer: 'channelActivityContainer__7ba6e',
+    activityActionsContainer: 'activityActionsContainer__7ba6e'
 };

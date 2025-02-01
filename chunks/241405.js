@@ -1,14 +1,14 @@
-var i = r(223509),
-    a = r(754793),
-    o = r(911725),
-    s = r(154470),
-    l = r(441234),
-    u = r(404625),
-    c = r(769667),
-    d = Object.prototype.toString;
-function f(e) {
-    if (!(this instanceof f)) return new f(e);
-    this.options = a.assign(
+var i = n(223509),
+    r = n(754793),
+    a = n(911725),
+    s = n(154470),
+    o = n(441234),
+    l = n(404625),
+    u = n(769667),
+    c = Object.prototype.toString;
+function d(e) {
+    if (!(this instanceof d)) return new d(e);
+    this.options = r.assign(
         {
             chunkSize: 16384,
             windowBits: 0,
@@ -16,46 +16,46 @@ function f(e) {
         },
         e || {}
     );
-    var n = this.options;
-    n.raw && n.windowBits >= 0 && n.windowBits < 16 && ((n.windowBits = -n.windowBits), 0 === n.windowBits && (n.windowBits = -15)), n.windowBits >= 0 && n.windowBits < 16 && !(e && e.windowBits) && (n.windowBits += 32), n.windowBits > 15 && n.windowBits < 48 && (15 & n.windowBits) == 0 && (n.windowBits |= 15), (this.err = 0), (this.msg = ''), (this.ended = !1), (this.chunks = []), (this.strm = new u()), (this.strm.avail_out = 0);
-    var r = i.inflateInit2(this.strm, n.windowBits);
-    if (r !== s.Z_OK) throw Error(l[r]);
-    (this.header = new c()), i.inflateGetHeader(this.strm, this.header);
+    var t = this.options;
+    t.raw && t.windowBits >= 0 && t.windowBits < 16 && ((t.windowBits = -t.windowBits), 0 === t.windowBits && (t.windowBits = -15)), t.windowBits >= 0 && t.windowBits < 16 && !(e && e.windowBits) && (t.windowBits += 32), t.windowBits > 15 && t.windowBits < 48 && (15 & t.windowBits) == 0 && (t.windowBits |= 15), (this.err = 0), (this.msg = ''), (this.ended = !1), (this.chunks = []), (this.strm = new l()), (this.strm.avail_out = 0);
+    var n = i.inflateInit2(this.strm, t.windowBits);
+    if (n !== s.Z_OK) throw Error(o[n]);
+    (this.header = new u()), i.inflateGetHeader(this.strm, this.header);
 }
-function p(e, n) {
-    var r = new f(n);
-    if ((r.push(e, !0), r.err)) throw r.msg || l[r.err];
-    return r.result;
+function f(e, t) {
+    var n = new d(t);
+    if ((n.push(e, !0), n.err)) throw n.msg || o[n.err];
+    return n.result;
 }
-function h(e, n) {
-    return ((n = n || {}).raw = !0), p(e, n);
+function _(e, t) {
+    return ((t = t || {}).raw = !0), f(e, t);
 }
-(f.prototype.push = function (e, n) {
-    var r,
+(d.prototype.push = function (e, t) {
+    var n,
+        o,
         l,
         u,
-        c,
+        d,
         f,
-        p,
-        h = this.strm,
-        _ = this.options.chunkSize,
-        m = this.options.dictionary,
-        g = !1;
+        _ = this.strm,
+        p = this.options.chunkSize,
+        h = this.options.dictionary,
+        m = !1;
     if (this.ended) return !1;
-    (l = n === ~~n ? n : !0 === n ? s.Z_FINISH : s.Z_NO_FLUSH), 'string' == typeof e ? (h.input = o.binstring2buf(e)) : '[object ArrayBuffer]' === d.call(e) ? (h.input = new Uint8Array(e)) : (h.input = e), (h.next_in = 0), (h.avail_in = h.input.length);
+    (o = t === ~~t ? t : !0 === t ? s.Z_FINISH : s.Z_NO_FLUSH), 'string' == typeof e ? (_.input = a.binstring2buf(e)) : '[object ArrayBuffer]' === c.call(e) ? (_.input = new Uint8Array(e)) : (_.input = e), (_.next_in = 0), (_.avail_in = _.input.length);
     do {
-        if ((0 === h.avail_out && ((h.output = new a.Buf8(_)), (h.next_out = 0), (h.avail_out = _)), (r = i.inflate(h, s.Z_NO_FLUSH)) === s.Z_NEED_DICT && m && ((p = 'string' == typeof m ? o.string2buf(m) : '[object ArrayBuffer]' === d.call(m) ? new Uint8Array(m) : m), (r = i.inflateSetDictionary(this.strm, p))), r === s.Z_BUF_ERROR && !0 === g && ((r = s.Z_OK), (g = !1)), r !== s.Z_STREAM_END && r !== s.Z_OK)) return this.onEnd(r), (this.ended = !0), !1;
-        h.next_out && (0 === h.avail_out || r === s.Z_STREAM_END || (0 === h.avail_in && (l === s.Z_FINISH || l === s.Z_SYNC_FLUSH))) && ('string' === this.options.to ? ((u = o.utf8border(h.output, h.next_out)), (c = h.next_out - u), (f = o.buf2string(h.output, u)), (h.next_out = c), (h.avail_out = _ - c), c && a.arraySet(h.output, h.output, u, c, 0), this.onData(f)) : this.onData(a.shrinkBuf(h.output, h.next_out))), 0 === h.avail_in && 0 === h.avail_out && (g = !0);
-    } while ((h.avail_in > 0 || 0 === h.avail_out) && r !== s.Z_STREAM_END);
-    return (r === s.Z_STREAM_END && (l = s.Z_FINISH), l === s.Z_FINISH) ? ((r = i.inflateEnd(this.strm)), this.onEnd(r), (this.ended = !0), r === s.Z_OK) : (l === s.Z_SYNC_FLUSH && (this.onEnd(s.Z_OK), (h.avail_out = 0)), !0);
+        if ((0 === _.avail_out && ((_.output = new r.Buf8(p)), (_.next_out = 0), (_.avail_out = p)), (n = i.inflate(_, s.Z_NO_FLUSH)) === s.Z_NEED_DICT && h && ((f = 'string' == typeof h ? a.string2buf(h) : '[object ArrayBuffer]' === c.call(h) ? new Uint8Array(h) : h), (n = i.inflateSetDictionary(this.strm, f))), n === s.Z_BUF_ERROR && !0 === m && ((n = s.Z_OK), (m = !1)), n !== s.Z_STREAM_END && n !== s.Z_OK)) return this.onEnd(n), (this.ended = !0), !1;
+        _.next_out && (0 === _.avail_out || n === s.Z_STREAM_END || (0 === _.avail_in && (o === s.Z_FINISH || o === s.Z_SYNC_FLUSH))) && ('string' === this.options.to ? ((l = a.utf8border(_.output, _.next_out)), (u = _.next_out - l), (d = a.buf2string(_.output, l)), (_.next_out = u), (_.avail_out = p - u), u && r.arraySet(_.output, _.output, l, u, 0), this.onData(d)) : this.onData(r.shrinkBuf(_.output, _.next_out))), 0 === _.avail_in && 0 === _.avail_out && (m = !0);
+    } while ((_.avail_in > 0 || 0 === _.avail_out) && n !== s.Z_STREAM_END);
+    return (n === s.Z_STREAM_END && (o = s.Z_FINISH), o === s.Z_FINISH) ? ((n = i.inflateEnd(this.strm)), this.onEnd(n), (this.ended = !0), n === s.Z_OK) : (o === s.Z_SYNC_FLUSH && (this.onEnd(s.Z_OK), (_.avail_out = 0)), !0);
 }),
-    (f.prototype.onData = function (e) {
+    (d.prototype.onData = function (e) {
         this.chunks.push(e);
     }),
-    (f.prototype.onEnd = function (e) {
-        e === s.Z_OK && ('string' === this.options.to ? (this.result = this.chunks.join('')) : (this.result = a.flattenChunks(this.chunks))), (this.chunks = []), (this.err = e), (this.msg = this.strm.msg);
+    (d.prototype.onEnd = function (e) {
+        e === s.Z_OK && ('string' === this.options.to ? (this.result = this.chunks.join('')) : (this.result = r.flattenChunks(this.chunks))), (this.chunks = []), (this.err = e), (this.msg = this.strm.msg);
     }),
-    (n.Inflate = f),
-    (n.inflate = p),
-    (n.inflateRaw = h),
-    (n.ungzip = p);
+    (t.Inflate = d),
+    (t.inflate = f),
+    (t.inflateRaw = _),
+    (t.ungzip = f);

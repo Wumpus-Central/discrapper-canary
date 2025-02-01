@@ -1,50 +1,50 @@
-let i, a, o;
+let i, r, a;
+n.d(t, { Z: () => b }), n(47120);
 var s,
-    l = r(47120);
-var u = r(392711);
-var c = r(442837),
-    d = r(570140);
-function f(e, n, r) {
+    o = n(392711),
+    l = n(442837),
+    u = n(570140);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let p = new Map(),
-    h = p,
-    _ = !1;
-let m = !1,
+let d = new Map(),
+    f = d,
+    _ = !1,
+    p = !1,
+    h = (e) => {
+        (_ = !0), (r = void 0);
+    },
+    m = (e) => {
+        let { error: t } = e;
+        (f = d), (_ = !1), (r = t), (p = !0);
+    },
     g = (e) => {
-        (_ = !0), (a = void 0);
+        0 === e.purchases.length ? (f = d) : (0, o.isEqual)([...f.values()], e.purchases) || (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (p = !0), (_ = !1), (r = void 0);
     },
     E = (e) => {
-        let { error: n } = e;
-        (h = p), (_ = !1), (a = n), (m = !0);
+        (i = e.skuId), (a = void 0);
     },
     v = (e) => {
-        0 === e.purchases.length ? (h = p) : !(0, u.isEqual)([...h.values()], e.purchases) && (h = new Map(e.purchases.map((e) => [e.skuId, e]))), (m = !0), (_ = !1), (a = void 0);
+        null == e.purchases || 0 === e.purchases.length ? (f = d) : (0, o.isEqual)([...f.values()], e.purchases) || (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (i = void 0), (a = void 0);
     },
     y = (e) => {
-        (i = e.skuId), (o = void 0);
-    },
-    b = (e) => {
-        null == e.purchases || 0 === e.purchases.length ? (h = p) : !(0, u.isEqual)([...h.values()], e.purchases) && (h = new Map(e.purchases.map((e) => [e.skuId, e]))), (i = void 0), (o = void 0);
+        let { error: t, skuId: n } = e;
+        (i = n), (a = t);
     },
     I = (e) => {
-        let { error: n, skuId: r } = e;
-        (i = r), (o = n);
-    },
-    T = (e) => {
-        (h = p), (_ = !1), (i = void 0), (a = void 0), (o = void 0);
+        (f = d), (_ = !1), (i = void 0), (r = void 0), (a = void 0), (p = !1);
     };
-class S extends (s = c.ZP.Store) {
+class T extends (s = l.ZP.Store) {
     get isFetching() {
         return _;
     }
@@ -52,28 +52,28 @@ class S extends (s = c.ZP.Store) {
         return i;
     }
     get purchases() {
-        return h;
+        return f;
     }
     get fetchError() {
-        return a;
+        return r;
     }
     get claimError() {
-        return o;
+        return a;
     }
     get hasPreviouslyFetched() {
-        return m;
+        return p;
     }
     getPurchase(e) {
-        return null != e ? h.get(e) : void 0;
+        return null != e ? f.get(e) : void 0;
     }
 }
-f(S, 'displayName', 'CollectiblesPurchaseStore'),
-    (n.Z = new S(d.Z, {
-        COLLECTIBLES_PURCHASES_FETCH: g,
-        COLLECTIBLES_PURCHASES_FETCH_SUCCESS: v,
-        COLLECTIBLES_PURCHASES_FETCH_FAILURE: E,
-        COLLECTIBLES_CLAIM: y,
-        COLLECTIBLES_CLAIM_SUCCESS: b,
-        COLLECTIBLES_CLAIM_FAILURE: I,
-        LOGOUT: T
-    }));
+c(T, 'displayName', 'CollectiblesPurchaseStore');
+let b = new T(u.Z, {
+    COLLECTIBLES_PURCHASES_FETCH: h,
+    COLLECTIBLES_PURCHASES_FETCH_SUCCESS: g,
+    COLLECTIBLES_PURCHASES_FETCH_FAILURE: m,
+    COLLECTIBLES_CLAIM: E,
+    COLLECTIBLES_CLAIM_SUCCESS: v,
+    COLLECTIBLES_CLAIM_FAILURE: y,
+    LOGOUT: I
+});

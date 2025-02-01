@@ -1,29 +1,30 @@
+n.d(t, { Z: () => j });
 var i,
-    a = r(442837),
-    o = r(433517),
-    s = r(780384),
-    l = r(570140),
-    u = r(695346),
-    c = r(581883),
-    d = r(12647),
-    f = r(981631),
-    p = r(959517);
-function h(e, n, r) {
+    r = n(442837),
+    a = n(433517),
+    s = n(780384),
+    o = n(570140),
+    l = n(695346),
+    u = n(581883),
+    c = n(12647),
+    d = n(981631),
+    f = n(959517);
+function _(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let _ = {
-        fontSize: f.yqN.FONT_SIZE_DEFAULT,
-        zoom: f.yqN.ZOOM_DEFAULT,
+let p = {
+        fontSize: d.yqN.FONT_SIZE_DEFAULT,
+        zoom: d.yqN.ZOOM_DEFAULT,
         keyboardModeEnabled: !1,
         colorblindMode: !1,
         lowContrastMode: !1,
@@ -45,8 +46,8 @@ let _ = {
         syncProfileThemeWithUserTheme: !1,
         hideGuildTags: !1
     },
-    m = _,
-    g = {
+    h = p,
+    m = {
         12: 'font-size-12',
         14: 'font-size-14',
         15: 'font-size-15',
@@ -55,278 +56,278 @@ let _ = {
         20: 'font-size-20',
         24: 'font-size-24'
     };
+function g(e) {
+    return d.yqN.FONT_SIZES.indexOf(e) >= 0 ? e : d.yqN.FONT_SIZE_DEFAULT;
+}
 function E(e) {
-    return f.yqN.FONT_SIZES.indexOf(e) >= 0 ? e : f.yqN.FONT_SIZE_DEFAULT;
+    let t = g(e.fontSize);
+    if (t > d.yqN.FONT_SIZE_MAX || t < d.yqN.FONT_SIZE_MIN || h.fontSize === t) return !1;
+    (h = { ...h }).fontSize = t;
 }
 function v(e) {
-    let n = E(e.fontSize);
-    if (n > f.yqN.FONT_SIZE_MAX || n < f.yqN.FONT_SIZE_MIN || m.fontSize === n) return !1;
-    (m = { ...m }).fontSize = n;
+    if (e.zoom < d.yqN.ZOOM_MIN || e.zoom > d.yqN.ZOOM_MAX || h.zoom === e.zoom) return !1;
+    ((h = { ...h }).zoom = e.zoom), c.Z.setZoomFactor(h.zoom);
 }
-function y(e) {
-    if (e.zoom < f.yqN.ZOOM_MIN || e.zoom > f.yqN.ZOOM_MAX || m.zoom === e.zoom) return !1;
-    ((m = { ...m }).zoom = e.zoom), d.Z.setZoomFactor(m.zoom);
-}
-function b() {
-    let e = m.fontSize !== f.yqN.FONT_SIZE_DEFAULT,
-        n = m.zoom !== f.yqN.ZOOM_DEFAULT;
-    if (!e && !n) return !1;
-    (m = { ...m }).fontSize !== f.yqN.FONT_SIZE_DEFAULT && (m.fontSize = f.yqN.FONT_SIZE_DEFAULT), m.zoom !== f.yqN.ZOOM_DEFAULT && ((m.zoom = f.yqN.ZOOM_DEFAULT), d.Z.setZoomFactor(m.zoom));
+function y() {
+    let e = h.fontSize !== d.yqN.FONT_SIZE_DEFAULT,
+        t = h.zoom !== d.yqN.ZOOM_DEFAULT;
+    if (!e && !t) return !1;
+    (h = { ...h }).fontSize !== d.yqN.FONT_SIZE_DEFAULT && (h.fontSize = d.yqN.FONT_SIZE_DEFAULT), h.zoom !== d.yqN.ZOOM_DEFAULT && ((h.zoom = d.yqN.ZOOM_DEFAULT), c.Z.setZoomFactor(h.zoom));
 }
 function I() {
-    if (m.keyboardModeEnabled) return !1;
-    (m = { ...m }).keyboardModeEnabled = !0;
+    if (h.keyboardModeEnabled) return !1;
+    (h = { ...h }).keyboardModeEnabled = !0;
 }
 function T() {
-    if (!m.keyboardModeEnabled) return !1;
-    (m = { ...m }).keyboardModeEnabled = !1;
+    if (!h.keyboardModeEnabled) return !1;
+    (h = { ...h }).keyboardModeEnabled = !1;
+}
+function b() {
+    (h = { ...h }).colorblindMode = !h.colorblindMode;
 }
 function S() {
-    (m = { ...m }).colorblindMode = !m.colorblindMode;
+    (h = { ...h }).lowContrastMode = !h.lowContrastMode;
 }
-function A() {
-    (m = { ...m }).lowContrastMode = !m.lowContrastMode;
-}
-function C(e) {
-    m.syncForcedColors = e.syncForcedColors;
+function A(e) {
+    h.syncForcedColors = e.syncForcedColors;
 }
 function N(e) {
-    (m = { ...m }).saturation = e.saturation;
+    (h = { ...h }).saturation = e.saturation;
 }
-function R() {
-    (m = { ...m }).desaturateUserColors = !m.desaturateUserColors;
+function C() {
+    (h = { ...h }).desaturateUserColors = !h.desaturateUserColors;
 }
-function O(e) {
-    m.roleStyle = e.roleStyle;
+function R(e) {
+    h.roleStyle = e.roleStyle;
+}
+function O() {
+    (h = { ...h }).submitButtonEnabled = !h.submitButtonEnabled;
 }
 function D() {
-    (m = { ...m }).submitButtonEnabled = !m.submitButtonEnabled;
-}
-function L() {
-    (m = { ...m }).syncProfileThemeWithUserTheme = !m.syncProfileThemeWithUserTheme;
+    (h = { ...h }).syncProfileThemeWithUserTheme = !h.syncProfileThemeWithUserTheme;
 }
 function x(e) {
-    if (m.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
-    m = {
-        ...m,
+    if (h.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
+    h = {
+        ...h,
         systemPrefersReducedMotion: e.systemPrefersReducedMotion
     };
 }
-function w(e) {
-    if (m.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
-    m = {
-        ...m,
+function L(e) {
+    if (h.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
+    h = {
+        ...h,
         systemPrefersCrossfades: e.systemPrefersCrossfades
     };
 }
 function P(e) {
-    if (m.prefersReducedMotion === e.prefersReducedMotion) return !1;
-    m = {
-        ...m,
+    if (h.prefersReducedMotion === e.prefersReducedMotion) return !1;
+    h = {
+        ...h,
         prefersReducedMotion: e.prefersReducedMotion
     };
 }
-function M(e) {
-    if (m.systemPrefersContrast === e.systemPrefersContrast) return !1;
-    m = {
-        ...m,
+function w(e) {
+    if (h.systemPrefersContrast === e.systemPrefersContrast) return !1;
+    h = {
+        ...h,
         systemPrefersContrast: e.systemPrefersContrast
     };
 }
-function k(e) {
-    m = {
-        ...m,
+function M(e) {
+    h = {
+        ...h,
         alwaysShowLinkDecorations: e.alwaysShowLinkDecorations
     };
 }
-function U(e) {
-    var n;
+function k(e) {
+    var t;
     return (
-        (m = {
-            ...m,
-            systemForcedColors: null !== (n = e.systemForcedColors) && void 0 !== n ? n : 'none'
+        (h = {
+            ...h,
+            systemForcedColors: null !== (t = e.systemForcedColors) && void 0 !== t ? t : 'none'
         }),
         !0
     );
 }
-function B() {
-    m.forcedColorsModalSeen = !0;
+function U() {
+    h.forcedColorsModalSeen = !0;
 }
 function G() {
-    m = {
-        ...m,
+    h = {
+        ...h,
         keyboardNavigationExplainerModalSeen: !0
     };
 }
+function B(e) {
+    let { messageGroupSpacing: t } = e;
+    h = {
+        ...h,
+        messageGroupSpacing: t
+    };
+}
 function Z(e) {
-    let { messageGroupSpacing: n } = e;
-    m = {
-        ...m,
-        messageGroupSpacing: n
+    let { contrast: t } = e;
+    h = {
+        ...h,
+        contrast: t
     };
 }
 function F(e) {
-    let { contrast: n } = e;
-    m = {
-        ...m,
-        contrast: n
+    let { hideTags: t } = e;
+    h = {
+        ...h,
+        hideGuildTags: t
     };
 }
-function V(e) {
-    let { hideTags: n } = e;
-    m = {
-        ...m,
-        hideGuildTags: n
-    };
-}
-class j extends (i = a.ZP.DeviceSettingsStore) {
+class V extends (i = r.ZP.DeviceSettingsStore) {
     initialize(e) {
-        this.waitFor(c.Z),
+        this.waitFor(u.Z),
             isNaN(
-                (m = {
-                    ..._,
+                (h = {
+                    ...p,
                     ...(null != e ? e : null)
                 }).fontSize
-            ) && (m.fontSize = f.yqN.FONT_SIZE_DEFAULT),
-            0 > p.fP.indexOf(null != m.messageGroupSpacing ? m.messageGroupSpacing : -1) && (m.messageGroupSpacing = null);
+            ) && (h.fontSize = d.yqN.FONT_SIZE_DEFAULT),
+            0 > f.fP.indexOf(null != h.messageGroupSpacing ? h.messageGroupSpacing : -1) && (h.messageGroupSpacing = null);
     }
     get fontScale() {
-        return (m.fontSize / f.yqN.FONT_SIZE_DEFAULT) * 100;
+        return (h.fontSize / d.yqN.FONT_SIZE_DEFAULT) * 100;
     }
     get fontSize() {
-        return m.fontSize;
+        return h.fontSize;
     }
     get isFontScaledUp() {
-        return m.fontSize > f.yqN.FONT_SIZE_DEFAULT;
+        return h.fontSize > d.yqN.FONT_SIZE_DEFAULT;
     }
     get isFontScaledDown() {
-        return m.fontSize < f.yqN.FONT_SIZE_DEFAULT;
+        return h.fontSize < d.yqN.FONT_SIZE_DEFAULT;
     }
     get fontScaleClass() {
         var e;
-        let n = null !== (e = g[this.fontSize]) && void 0 !== e ? e : '';
-        return this.isFontScaledUp ? 'a11y-font-scaled-up '.concat(n) : this.isFontScaledDown ? 'a11y-font-scaled-down '.concat(n) : ''.concat(n);
+        let t = null !== (e = m[this.fontSize]) && void 0 !== e ? e : '';
+        return this.isFontScaledUp ? 'a11y-font-scaled-up '.concat(t) : this.isFontScaledDown ? 'a11y-font-scaled-down '.concat(t) : ''.concat(t);
     }
     get zoom() {
-        return m.zoom;
+        return h.zoom;
     }
     get isZoomedIn() {
-        return m.zoom > f.yqN.ZOOM_DEFAULT;
+        return h.zoom > d.yqN.ZOOM_DEFAULT;
     }
     get isZoomedOut() {
-        return m.zoom < f.yqN.ZOOM_DEFAULT;
+        return h.zoom < d.yqN.ZOOM_DEFAULT;
     }
     get keyboardModeEnabled() {
-        return m.keyboardModeEnabled;
+        return h.keyboardModeEnabled;
     }
     get colorblindMode() {
-        return m.colorblindMode;
+        return h.colorblindMode;
     }
     get lowContrastMode() {
-        return m.lowContrastMode;
+        return h.lowContrastMode;
     }
     get saturation() {
-        return m.saturation;
+        return h.saturation;
     }
     get contrast() {
-        return m.contrast;
+        return h.contrast;
     }
     get desaturateUserColors() {
-        return m.desaturateUserColors;
+        return h.desaturateUserColors;
     }
     get forcedColorsModalSeen() {
-        return m.forcedColorsModalSeen;
+        return h.forcedColorsModalSeen;
     }
     get keyboardNavigationExplainerModalSeen() {
-        return m.keyboardNavigationExplainerModalSeen;
+        return h.keyboardNavigationExplainerModalSeen;
     }
     get messageGroupSpacing() {
-        return null != m.messageGroupSpacing ? m.messageGroupSpacing : u.jU.getSetting() ? p.c8 : p.pq;
+        return null != h.messageGroupSpacing ? h.messageGroupSpacing : l.jU.getSetting() ? f.c8 : f.pq;
     }
     get isMessageGroupSpacingIncreased() {
-        let e = u.jU.getSetting() ? p.c8 : p.pq;
+        let e = l.jU.getSetting() ? f.c8 : f.pq;
         return this.messageGroupSpacing > e;
     }
     get isMessageGroupSpacingDecreased() {
-        let e = u.jU.getSetting() ? p.c8 : p.pq;
+        let e = l.jU.getSetting() ? f.c8 : f.pq;
         return this.messageGroupSpacing < e;
     }
     get isSubmitButtonEnabled() {
-        return m.submitButtonEnabled;
+        return h.submitButtonEnabled;
     }
     get syncProfileThemeWithUserTheme() {
-        return m.syncProfileThemeWithUserTheme;
+        return h.syncProfileThemeWithUserTheme;
     }
     get systemPrefersReducedMotion() {
-        return m.systemPrefersReducedMotion;
+        return h.systemPrefersReducedMotion;
     }
     get rawPrefersReducedMotion() {
-        return m.prefersReducedMotion;
+        return h.prefersReducedMotion;
     }
     get useReducedMotion() {
-        switch (m.prefersReducedMotion) {
+        switch (h.prefersReducedMotion) {
             case 'no-preference':
                 return !1;
             case 'reduce':
                 return !0;
             default:
-                return 'reduce' === m.systemPrefersReducedMotion;
+                return 'reduce' === h.systemPrefersReducedMotion;
         }
     }
     get systemForcedColors() {
-        return m.systemForcedColors;
+        return h.systemForcedColors;
     }
     get syncForcedColors() {
-        return m.syncForcedColors;
+        return h.syncForcedColors;
     }
     get useForcedColors() {
-        return (!!m.syncForcedColors && 'active' === m.systemForcedColors) || !1;
+        return !!h.syncForcedColors && 'active' === h.systemForcedColors;
     }
     get systemPrefersContrast() {
-        return m.systemPrefersContrast;
+        return h.systemPrefersContrast;
     }
     get systemPrefersCrossfades() {
-        return m.systemPrefersCrossfades;
+        return h.systemPrefersCrossfades;
     }
     get alwaysShowLinkDecorations() {
-        return m.alwaysShowLinkDecorations;
+        return h.alwaysShowLinkDecorations;
     }
     get roleStyle() {
-        return m.roleStyle;
+        return h.roleStyle;
     }
     get hideTags() {
-        return m.hideGuildTags;
+        return h.hideGuildTags;
     }
     getUserAgnosticState() {
-        return m;
+        return h;
     }
 }
-h(j, 'displayName', 'AccessibilityStore'),
-    h(j, 'persistKey', 'AccessibilityStore'),
-    h(j, 'migrations', [
+_(V, 'displayName', 'AccessibilityStore'),
+    _(V, 'persistKey', 'AccessibilityStore'),
+    _(V, 'migrations', [
         () => {
             let e = 'a11yFontScale',
-                n = 'a11yZoom',
-                r = 'a11yColorblindMode',
-                i = o.K.get(e) || 100,
-                a = o.K.get(n) || f.yqN.ZOOM_DEFAULT,
-                s = o.K.get(r) || !1;
+                t = 'a11yZoom',
+                n = 'a11yColorblindMode',
+                i = a.K.get(e) || 100,
+                r = a.K.get(t) || d.yqN.ZOOM_DEFAULT,
+                s = a.K.get(n) || !1;
             return (
-                o.K.remove(e),
-                o.K.remove(n),
-                o.K.remove(r),
+                a.K.remove(e),
+                a.K.remove(t),
+                a.K.remove(n),
                 {
                     fontScale: i,
-                    zoom: a,
+                    zoom: r,
                     colorblindMode: s,
                     keyboardModeEnabled: !1
                 }
             );
         },
         (e) => {
-            let { fontScale: n, ...r } = e,
+            let { fontScale: t, ...n } = e,
                 i = 16;
-            switch (n) {
+            switch (t) {
                 case 82:
                     i = 12;
                     break;
@@ -346,7 +347,7 @@ h(j, 'displayName', 'AccessibilityStore'),
                     i = 24;
             }
             return {
-                ...r,
+                ...n,
                 fontSize: i
             };
         },
@@ -378,30 +379,29 @@ h(j, 'displayName', 'AccessibilityStore'),
             return e;
         }
     ]);
-let H = new j(l.Z, {
-    ACCESSIBILITY_SET_FONT_SIZE: v,
-    ACCESSIBILITY_SET_ZOOM: y,
-    ACCESSIBILITY_RESET_TO_DEFAULT: b,
+let j = new V(o.Z, {
+    ACCESSIBILITY_SET_FONT_SIZE: E,
+    ACCESSIBILITY_SET_ZOOM: v,
+    ACCESSIBILITY_RESET_TO_DEFAULT: y,
     ACCESSIBILITY_KEYBOARD_MODE_ENABLE: I,
     ACCESSIBILITY_KEYBOARD_MODE_DISABLE: T,
-    ACCESSIBILITY_COLORBLIND_TOGGLE: S,
-    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: A,
+    ACCESSIBILITY_COLORBLIND_TOGGLE: b,
+    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: S,
     ACCESSIBILITY_SET_SATURATION: N,
-    ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: R,
-    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: U,
-    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: M,
+    ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: C,
+    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: k,
+    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: w,
     ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: x,
-    ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: w,
+    ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: L,
     ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: P,
-    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: C,
-    ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: k,
-    ACCESSIBILITY_SET_ROLE_STYLE: O,
-    ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: B,
+    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: A,
+    ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: M,
+    ACCESSIBILITY_SET_ROLE_STYLE: R,
+    ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: U,
     KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: G,
-    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: Z,
-    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: D,
-    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: L,
-    ACCESSIBILITY_SET_CONTRAST: F,
-    ACCESSIBILITY_SET_HIDE_TAGS: V
+    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: B,
+    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: O,
+    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: D,
+    ACCESSIBILITY_SET_CONTRAST: Z,
+    ACCESSIBILITY_SET_HIDE_TAGS: F
 });
-n.Z = H;

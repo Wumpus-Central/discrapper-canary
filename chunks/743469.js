@@ -1,3 +1,3 @@
-r(284470);
-var i = r(387992);
+n(284470);
+var i = n(387992);
 e.exports = i('Array', 'concat');

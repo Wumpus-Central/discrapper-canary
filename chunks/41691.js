@@ -1,11 +1,11 @@
 e.exports = {
-    welcomeDescription: 'welcomeDescription_e803f7',
-    exampleContainer: 'exampleContainer_e803f7',
-    header: 'header_e803f7',
-    exampleModal: 'exampleModal_e803f7',
-    optionContainer: 'optionContainer_e803f7',
-    exampleWumpus: 'exampleWumpus_e803f7',
-    wumpus: 'wumpus_e803f7',
-    tooltip: 'tooltip_e803f7',
-    tooltipPointer: 'tooltipPointer_e803f7'
+    welcomeDescription: 'welcomeDescription_b34334',
+    exampleContainer: 'exampleContainer_b34334',
+    header: 'header_b34334',
+    exampleModal: 'exampleModal_b34334',
+    optionContainer: 'optionContainer_b34334',
+    exampleWumpus: 'exampleWumpus_b34334',
+    wumpus: 'wumpus_b34334',
+    tooltip: 'tooltip_b34334',
+    tooltipPointer: 'tooltipPointer_b34334'
 };

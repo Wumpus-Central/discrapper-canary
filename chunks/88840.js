@@ -1,10 +1,10 @@
 e.exports = {
-    safetyPolicyNoticeContainer: 'safetyPolicyNoticeContainer_add64b',
-    noticeContent: 'noticeContent_add64b',
-    headerRow: 'headerRow_add64b',
-    warningIcon: 'warningIcon_add64b',
-    incidentTiming: 'incidentTiming_add64b',
-    noticeBody: 'noticeBody_add64b',
-    detailsButton: 'detailsButton_add64b',
-    footerContainer: 'footerContainer_add64b'
+    safetyPolicyNoticeContainer: 'safetyPolicyNoticeContainer_e80b85',
+    noticeContent: 'noticeContent_e80b85',
+    headerRow: 'headerRow_e80b85',
+    warningIcon: 'warningIcon_e80b85',
+    incidentTiming: 'incidentTiming_e80b85',
+    noticeBody: 'noticeBody_e80b85',
+    detailsButton: 'detailsButton_e80b85',
+    footerContainer: 'footerContainer_e80b85'
 };

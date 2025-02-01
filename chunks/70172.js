@@ -1,10 +1,10 @@
 e.exports = {
-    guildIconContainer: 'guildIconContainer_ed9816',
-    guildIconV2Container: 'guildIconV2Container_ed9816',
-    guildBadge: 'guildBadge_ed9816',
-    disableColor: 'disableColor_ed9816',
-    tierTooltipTitle: 'tierTooltipTitle_ed9816',
-    boostedGuildTierMutedIconWithVisibleBanner: 'boostedGuildTierMutedIconWithVisibleBanner_ed9816',
-    boostedGuildTierIconBackgroundWithVisibleBanner: 'boostedGuildTierIconBackgroundWithVisibleBanner_ed9816',
-    guildBadgeIcon: 'guildBadgeIcon_ed9816'
+    guildIconContainer: 'guildIconContainer__85d16',
+    guildIconV2Container: 'guildIconV2Container__85d16',
+    guildBadge: 'guildBadge__85d16',
+    disableColor: 'disableColor__85d16',
+    tierTooltipTitle: 'tierTooltipTitle__85d16',
+    boostedGuildTierMutedIconWithVisibleBanner: 'boostedGuildTierMutedIconWithVisibleBanner__85d16',
+    boostedGuildTierIconBackgroundWithVisibleBanner: 'boostedGuildTierIconBackgroundWithVisibleBanner__85d16',
+    guildBadgeIcon: 'guildBadgeIcon__85d16'
 };

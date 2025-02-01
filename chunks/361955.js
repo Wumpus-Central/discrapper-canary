@@ -1,6 +1,6 @@
 e.exports = {
-    modalHeader: 'modalHeader_d6aff6',
-    modalContent: 'modalContent_d6aff6',
-    guildSelection: 'guildSelection_d6aff6',
-    guildSelectorContainer: 'guildSelectorContainer_d6aff6'
+    modalHeader: 'modalHeader__5a555',
+    modalContent: 'modalContent__5a555',
+    guildSelection: 'guildSelection__5a555',
+    guildSelectorContainer: 'guildSelectorContainer__5a555'
 };

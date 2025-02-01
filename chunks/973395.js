@@ -1,4 +1,4 @@
 e.exports = {
-    promotedTag: 'promotedTag_a4a2b0',
-    promotedTagBackground: 'promotedTagBackground_a4a2b0'
+    promotedTag: 'promotedTag__1d868',
+    promotedTagBackground: 'promotedTagBackground__1d868'
 };

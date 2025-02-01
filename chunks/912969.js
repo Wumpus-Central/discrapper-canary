@@ -1,5 +1,5 @@
 n.exports = {
-    mainCheckboxContainer: 'mainCheckboxContainer_cbdcfc',
-    checkboxContainer: 'checkboxContainer_cbdcfc',
-    checkbox: 'checkbox_cbdcfc'
+    mainCheckboxContainer: 'mainCheckboxContainer__16db0',
+    checkboxContainer: 'checkboxContainer__16db0',
+    checkbox: 'checkbox__16db0'
 };

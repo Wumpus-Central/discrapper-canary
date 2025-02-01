@@ -1,11 +1,11 @@
 e.exports = {
-    premiumTrialBadge: 'premiumTrialBadge_b089d3',
-    premiumTrialBadgeV2: 'premiumTrialBadgeV2_b089d3',
-    premiumTrialBadgeIcon: 'premiumTrialBadgeIcon_b089d3',
-    premiumTrialTier0UnacknowledgedBadge: 'premiumTrialTier0UnacknowledgedBadge_b089d3',
-    premiumTrialTier2UnacknowledgedBadge: 'premiumTrialTier2UnacknowledgedBadge_b089d3',
-    premiumDiscountUnacknowledgedBadge: 'premiumDiscountUnacknowledgedBadge_b089d3',
-    premiumTrialAcknowledgedBadge: 'premiumTrialAcknowledgedBadge_b089d3',
-    premiumTrialBadgeSelected: 'premiumTrialBadgeSelected_b089d3',
-    premiumOfferBadgeCopy: 'premiumOfferBadgeCopy_b089d3'
+    premiumTrialBadge: 'premiumTrialBadge__4c1e4',
+    premiumTrialBadgeV2: 'premiumTrialBadgeV2__4c1e4',
+    premiumTrialBadgeIcon: 'premiumTrialBadgeIcon__4c1e4',
+    premiumTrialTier0UnacknowledgedBadge: 'premiumTrialTier0UnacknowledgedBadge__4c1e4',
+    premiumDiscountUnacknowledgedBadge: 'premiumDiscountUnacknowledgedBadge__4c1e4',
+    premiumTrialTier2UnacknowledgedBadge: 'premiumTrialTier2UnacknowledgedBadge__4c1e4',
+    premiumTrialAcknowledgedBadge: 'premiumTrialAcknowledgedBadge__4c1e4',
+    premiumTrialBadgeSelected: 'premiumTrialBadgeSelected__4c1e4',
+    premiumOfferBadgeCopy: 'premiumOfferBadgeCopy__4c1e4'
 };

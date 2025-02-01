@@ -14,19 +14,19 @@ var i = {
     './icon-file-video.svg': '430539',
     './icon-file-webcode.svg': '343305'
 };
-function a(e) {
-    return r(o(e));
+function r(e) {
+    return n(a(e));
 }
-function o(e) {
-    if (!r.o(i, e)) {
-        var n = Error("Cannot find module '" + e + "'");
-        throw ((n.code = 'MODULE_NOT_FOUND'), n);
+function a(e) {
+    if (!n.o(i, e)) {
+        var t = Error("Cannot find module '" + e + "'");
+        throw ((t.code = 'MODULE_NOT_FOUND'), t);
     }
     return i[e];
 }
-(a.keys = function () {
+(r.keys = function () {
     return Object.keys(i);
 }),
-    (a.resolve = o),
-    (e.exports = a),
-    (a.id = '148660');
+    (r.resolve = a),
+    (e.exports = r),
+    (r.id = 148660);

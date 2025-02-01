@@ -1,6 +1,6 @@
 e.exports = {
-    headerDescription: 'headerDescription_b5918e',
-    modalBody: 'modalBody_b5918e',
-    modalFooter: 'modalFooter_b5918e',
-    modalHeader: 'modalHeader_b5918e'
+    headerDescription: 'headerDescription_ababa2',
+    modalBody: 'modalBody_ababa2',
+    modalFooter: 'modalFooter_ababa2',
+    modalHeader: 'modalHeader_ababa2'
 };

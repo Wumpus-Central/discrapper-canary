@@ -14,14 +14,14 @@ var l = n(120356),
 let p = (e) => {
     var t, n, l, p;
     let m,
-        { category: f, subblock: g, badgeText: x, handleTransition: _ } = e;
-    null != g && (m = null === (t = o.Z.getCategoryByStoreListingId(null == g ? void 0 : g.categoryStoreListingId)) || void 0 === t ? void 0 : t.skuId);
-    let v = null !== (n = null != m ? m : null == f ? void 0 : f.skuId) && void 0 !== n ? n : '',
+        { category: g, subblock: f, badgeText: x, handleTransition: _ } = e;
+    null != f && (m = null === (t = o.Z.getCategoryByStoreListingId(null == f ? void 0 : f.categoryStoreListingId)) || void 0 === t ? void 0 : t.skuId);
+    let v = null !== (n = null != m ? m : null == g ? void 0 : g.skuId) && void 0 !== n ? n : '',
         { handleCardVisibilityChange: b } = (0, c.E)(v, 'home', 'marketing'),
         k =
-            null !== (p = null == g ? void 0 : g.bannerUrl) && void 0 !== p
+            null !== (p = null == f ? void 0 : f.bannerUrl) && void 0 !== p
                 ? p
-                : (0, d.uV)(null !== (l = null == f ? void 0 : f.featuredBlock) && void 0 !== l ? l : '', {
+                : (0, d.uV)(null !== (l = null == g ? void 0 : g.featuredBlock) && void 0 !== l ? l : '', {
                       size: u.J0,
                       format: 'png'
                   });

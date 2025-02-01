@@ -1,4 +1,4 @@
 e.exports = {
-    markdownContainer: 'markdownContainer_b6273d',
-    containerSizedText: 'containerSizedText_b6273d'
+    markdownContainer: 'markdownContainer__48344',
+    containerSizedText: 'containerSizedText__48344'
 };

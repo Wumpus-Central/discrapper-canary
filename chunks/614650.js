@@ -1,5 +1,5 @@
 e.exports = {
-    description: 'description_adabdf',
-    buttonContainer: 'buttonContainer_adabdf',
-    disableButton: 'disableButton_adabdf'
+    description: 'description_d286c5',
+    buttonContainer: 'buttonContainer_d286c5',
+    disableButton: 'disableButton_d286c5'
 };

@@ -1,8 +1,8 @@
 e.exports = {
-    panelContainer: 'panelContainer_c44f9a',
-    buttonContainer: 'buttonContainer_c44f9a',
-    button: 'button_c44f9a',
-    candidatesTable: 'candidatesTable_c44f9a',
-    candidatesTableContainer: 'candidatesTableContainer_c44f9a',
-    info: 'info_c44f9a'
+    panelContainer: 'panelContainer__0dbe4',
+    buttonContainer: 'buttonContainer__0dbe4',
+    button: 'button__0dbe4',
+    candidatesTable: 'candidatesTable__0dbe4',
+    candidatesTableContainer: 'candidatesTableContainer__0dbe4',
+    info: 'info__0dbe4'
 };

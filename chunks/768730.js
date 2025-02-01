@@ -1,48 +1,48 @@
-var i = r(242474),
-    a = r(780177),
-    o = r(737372),
-    s = r(109426),
-    l = r(245413);
-function u(e, n) {
-    if (o[(e = e.toLowerCase())]) (r = o[e].key), (i = o[e].iv);
-    else if (s[e]) (r = 8 * s[e].key), (i = s[e].iv);
+var i = n(242474),
+    r = n(780177),
+    a = n(737372),
+    s = n(109426),
+    o = n(245413);
+function l(e, t) {
+    if (a[(e = e.toLowerCase())]) (n = a[e].key), (i = a[e].iv);
+    else if (s[e]) (n = 8 * s[e].key), (i = s[e].iv);
     else throw TypeError('invalid suite type');
-    var r,
+    var n,
         i,
-        a = l(n, !1, r, i);
-    return d(e, a.key, a.iv);
+        r = o(t, !1, n, i);
+    return c(e, r.key, r.iv);
 }
-function c(e, n) {
-    if (o[(e = e.toLowerCase())]) (r = o[e].key), (i = o[e].iv);
-    else if (s[e]) (r = 8 * s[e].key), (i = s[e].iv);
+function u(e, t) {
+    if (a[(e = e.toLowerCase())]) (n = a[e].key), (i = a[e].iv);
+    else if (s[e]) (n = 8 * s[e].key), (i = s[e].iv);
     else throw TypeError('invalid suite type');
-    var r,
+    var n,
         i,
-        a = l(n, !1, r, i);
-    return f(e, a.key, a.iv);
+        r = o(t, !1, n, i);
+    return d(e, r.key, r.iv);
 }
-function d(e, n, r) {
-    if (o[(e = e.toLowerCase())]) return a.createCipheriv(e, n, r);
+function c(e, t, n) {
+    if (a[(e = e.toLowerCase())]) return r.createCipheriv(e, t, n);
     if (s[e])
         return new i({
-            key: n,
-            iv: r,
+            key: t,
+            iv: n,
             mode: e
         });
     throw TypeError('invalid suite type');
 }
-function f(e, n, r) {
-    if (o[(e = e.toLowerCase())]) return a.createDecipheriv(e, n, r);
+function d(e, t, n) {
+    if (a[(e = e.toLowerCase())]) return r.createDecipheriv(e, t, n);
     if (s[e])
         return new i({
-            key: n,
-            iv: r,
+            key: t,
+            iv: n,
             mode: e,
             decrypt: !0
         });
     throw TypeError('invalid suite type');
 }
-function p() {
-    return Object.keys(s).concat(a.getCiphers());
+function f() {
+    return Object.keys(s).concat(r.getCiphers());
 }
-(n.createCipher = n.Cipher = u), (n.createCipheriv = n.Cipheriv = d), (n.createDecipher = n.Decipher = c), (n.createDecipheriv = n.Decipheriv = f), (n.listCiphers = n.getCiphers = p);
+(t.createCipher = t.Cipher = l), (t.createCipheriv = t.Cipheriv = c), (t.createDecipher = t.Decipher = u), (t.createDecipheriv = t.Decipheriv = d), (t.listCiphers = t.getCiphers = f);

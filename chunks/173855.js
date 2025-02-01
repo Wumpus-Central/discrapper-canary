@@ -1,10 +1,10 @@
 e.exports = {
-    root: 'root_b0623a',
-    icon: 'icon_b0623a',
-    title: 'title_b0623a',
-    betaTag: 'betaTag_b0623a',
-    queryInput: 'queryInput_b0623a',
-    sortInput: 'sortInput_b0623a',
-    button: 'button_b0623a',
-    settingsButton: 'settingsButton_b0623a button_b0623a'
+    root: 'root_f4dc96',
+    icon: 'icon_f4dc96',
+    title: 'title_f4dc96',
+    betaTag: 'betaTag_f4dc96',
+    queryInput: 'queryInput_f4dc96',
+    sortInput: 'sortInput_f4dc96',
+    button: 'button_f4dc96',
+    settingsButton: 'settingsButton_f4dc96 button_f4dc96'
 };

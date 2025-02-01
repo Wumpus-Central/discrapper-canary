@@ -19,8 +19,8 @@ var h = n(12647),
     v = n(581883),
     y = n(874893),
     I = n(981631),
-    b = n(469115);
-function T(e, t, n) {
+    T = n(469115);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -83,7 +83,7 @@ function w(e) {
 function M(e) {
     var t, n;
     let { presetId: i } = e;
-    S = null != i && null !== (n = null === (t = b.qt[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : R();
+    S = null != i && null !== (n = null === (t = T.qt[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : R();
     let r = null != i;
     return N !== r ? ((N = r), !0) : k();
 }
@@ -121,9 +121,9 @@ class B extends (a = s.ZP.PersistedStore) {
         return null !== A;
     }
 }
-T(B, 'displayName', 'ThemeStore'),
-    T(B, 'persistKey', 'ThemeStore'),
-    T(B, 'migrations', [
+b(B, 'displayName', 'ThemeStore'),
+    b(B, 'persistKey', 'ThemeStore'),
+    b(B, 'migrations', [
         (e) => {
             let t = e.theme;
             return (

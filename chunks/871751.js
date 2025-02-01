@@ -1,10 +1,10 @@
 e.exports = {
-    preview: 'preview_c31d36',
-    previewMessage: 'previewMessage_c31d36',
-    previewHeader: 'previewHeader_c31d36',
-    previewAvatars: 'previewAvatars_c31d36',
-    ttsPreviewWrapper: 'ttsPreviewWrapper_c31d36',
-    ttsSliderMarker: 'ttsSliderMarker_c31d36',
-    syncProfileThemeWithUserTheme: 'syncProfileThemeWithUserTheme_c31d36',
-    reducedMotion: 'reducedMotion_c31d36'
+    preview: 'preview__5d148',
+    previewMessage: 'previewMessage__5d148',
+    previewHeader: 'previewHeader__5d148',
+    previewAvatars: 'previewAvatars__5d148',
+    ttsPreviewWrapper: 'ttsPreviewWrapper__5d148',
+    ttsSliderMarker: 'ttsSliderMarker__5d148',
+    syncProfileThemeWithUserTheme: 'syncProfileThemeWithUserTheme__5d148',
+    reducedMotion: 'reducedMotion__5d148'
 };

@@ -1,13 +1,13 @@
 e.exports = {
-    headerContainer: 'headerContainer_e5a9ed',
-    textContainer: 'textContainer_e5a9ed',
-    container: 'container_e5a9ed',
-    iconCard: 'iconCard_e5a9ed',
-    tooltipContent: 'tooltipContent_e5a9ed',
-    iconContainer: 'iconContainer_e5a9ed',
-    itemContainer: 'itemContainer_e5a9ed',
-    clickable: 'clickable_e5a9ed',
-    disabledClickable: 'disabledClickable_e5a9ed',
-    spinner: 'spinner_e5a9ed',
-    spinnerInnerRunning: 'spinnerInnerRunning_e5a9ed'
+    headerContainer: 'headerContainer__675e5',
+    textContainer: 'textContainer__675e5',
+    container: 'container__675e5',
+    iconCard: 'iconCard__675e5',
+    tooltipContent: 'tooltipContent__675e5',
+    iconContainer: 'iconContainer__675e5',
+    itemContainer: 'itemContainer__675e5',
+    clickable: 'clickable__675e5',
+    disabledClickable: 'disabledClickable__675e5',
+    spinner: 'spinner__675e5',
+    spinnerInnerRunning: 'spinnerInnerRunning__675e5'
 };

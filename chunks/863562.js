@@ -1,4 +1,4 @@
-n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -11,12 +11,12 @@ var i = n(200651),
     m = n(419922),
     h = n(388032),
     g = n(515650);
-t.Z = (e) => {
+let x = (e) => {
     let { className: t, isDisabled: l, sticker: x, canManageSticker: p } = e,
-        [f, C] = r.useState(!1),
-        [v, I] = (0, c.Z)(null, 4000),
+        [_, C] = r.useState(!1),
+        [f, v] = (0, c.Z)(null, 4000),
         N = () => {
-            (0, a.openModalLazy)(async () => {
+            (0, a.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('93626'), n.e('64493')]).then(n.bind(n, 136735));
                 return (t) =>
                     (0, i.jsx)(e, {
@@ -26,25 +26,25 @@ t.Z = (e) => {
                     });
             });
         },
-        _ = async () => {
-            I(null), C(!0);
+        j = async () => {
+            v(null), C(!0);
             try {
                 await (0, u.Um)(x);
             } catch (e) {
-                I(e.body.message), C(!1);
+                v(e.body.message), C(!1);
             }
         },
-        T = d.ZP.useUserTag(x.user);
-    return (0, i.jsx)(a.Tooltip, {
-        color: a.Tooltip.Colors.RED,
-        forceOpen: null != v,
-        text: v,
+        I = d.ZP.useUserTag(x.user);
+    return (0, i.jsx)(a.ua7, {
+        color: a.ua7.Colors.RED,
+        forceOpen: null != f,
+        text: f,
         children: () =>
             (0, i.jsxs)('div', {
                 className: s()(g.wrapper, t, { [g.wrapperDisabled]: l }),
                 children: [
                     (0, i.jsxs)('div', {
-                        className: s()(g.content, { [g.contentRemoving]: f }),
+                        className: s()(g.content, { [g.contentRemoving]: _ }),
                         children: [
                             (0, i.jsx)(m.ZP, {
                                 className: g.sticker,
@@ -65,13 +65,13 @@ t.Z = (e) => {
                                             children: [
                                                 (0, i.jsx)(o.Z, {
                                                     className: g.userAvatar,
-                                                    size: a.AvatarSizes.SIZE_16,
+                                                    size: a.EFr.SIZE_16,
                                                     user: x.user
                                                 }),
                                                 (0, i.jsx)(a.Text, {
                                                     color: 'header-secondary',
                                                     variant: 'text-xs/normal',
-                                                    children: T
+                                                    children: I
                                                 })
                                             ]
                                         })
@@ -81,21 +81,21 @@ t.Z = (e) => {
                                 ? (0, i.jsxs)('div', {
                                       className: g.actions,
                                       children: [
-                                          (0, i.jsx)(a.Clickable, {
+                                          (0, i.jsx)(a.P3F, {
                                               className: g.action,
                                               onClick: N,
                                               'aria-label': h.intl.string(h.t.bt75u7),
-                                              children: (0, i.jsx)(a.PencilIcon, {
+                                              children: (0, i.jsx)(a.vdY, {
                                                   size: 'xs',
                                                   color: 'currentColor',
                                                   className: g.icon
                                               })
                                           }),
-                                          (0, i.jsx)(a.Clickable, {
+                                          (0, i.jsx)(a.P3F, {
                                               className: s()(g.action, g.actionRemove),
-                                              onClick: _,
+                                              onClick: j,
                                               'aria-label': h.intl.string(h.t.N86XcH),
-                                              children: (0, i.jsx)(a.XSmallIcon, {
+                                              children: (0, i.jsx)(a.Dio, {
                                                   size: 'md',
                                                   color: 'currentColor',
                                                   className: g.icon
@@ -106,7 +106,7 @@ t.Z = (e) => {
                                 : null
                         ]
                     }),
-                    f && (0, i.jsx)(a.Spinner, { className: g.spinner })
+                    _ && (0, i.jsx)(a.$jN, { className: g.spinner })
                 ]
             })
     });

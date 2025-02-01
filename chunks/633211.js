@@ -1,4 +1,4 @@
-t.exports = {
-    row: 'row_dd8598',
-    icon: 'icon_dd8598'
+e.exports = {
+    row: 'row__23bf1',
+    icon: 'icon__23bf1'
 };

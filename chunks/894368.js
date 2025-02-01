@@ -1,4 +1,4 @@
 e.exports = {
-    sectionsContainer: 'sectionsContainer_e466c8',
-    nitroWheel: 'nitroWheel_e466c8'
+    sectionsContainer: 'sectionsContainer__722a8',
+    nitroWheel: 'nitroWheel__722a8'
 };

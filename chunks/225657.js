@@ -1,43 +1,43 @@
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(481060),
-    s = r(700582),
-    l = r(987209),
-    u = r(699516),
-    c = r(594174),
-    d = r(51144),
-    f = r(388032);
-let p = (e) => {
-    let { selectedSkuId: n, validateSelectedGift: r, className: p } = e,
-        h = (0, a.Wu)([u.Z], () => u.Z.getFriendIDs()),
-        _ = (0, a.Wu)([c.default], () => c.default.filter((e) => h.includes(e.id) && !e.bot), [h]),
-        { giftRecipient: m, setGiftRecipient: g } = (0, l.wD)();
-    if (null == n) return null;
-    let E = (e) => {
-        r(e, n), g(e);
+n.d(t, { Z: () => f });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    s = n(700582),
+    o = n(987209),
+    l = n(699516),
+    u = n(594174),
+    c = n(51144),
+    d = n(388032);
+let f = (e) => {
+    let { selectedSkuId: t, validateSelectedGift: n, className: f } = e,
+        _ = (0, r.Wu)([l.Z], () => l.Z.getFriendIDs()),
+        p = (0, r.Wu)([u.default], () => u.default.filter((e) => _.includes(e.id) && !e.bot), [_]),
+        { giftRecipient: h, setGiftRecipient: m } = (0, o.wD)();
+    if (null == t) return null;
+    let g = (e) => {
+        n(e, t), m(e);
     };
     return (0, i.jsxs)('div', {
-        className: p,
+        className: f,
         children: [
-            (0, i.jsx)(o.FormTitle, { children: f.intl.string(f.t.xFn72t) }),
-            (0, i.jsx)(o.SearchableSelect, {
-                placeholder: f.intl.string(f.t.R0vK0N),
+            (0, i.jsx)(a.vwX, { children: d.intl.string(d.t.xFn72t) }),
+            (0, i.jsx)(a.VcW, {
+                placeholder: d.intl.string(d.t.R0vK0N),
                 renderOptionPrefix: (e) =>
                     (null == e ? void 0 : e.value) == null
                         ? null
                         : (0, i.jsx)(s.Z, {
                               user: e.value,
-                              size: o.AvatarSizes.SIZE_20
+                              size: a.EFr.SIZE_20
                           }),
-                value: m,
-                onChange: E,
-                options: _.map((e) => ({
+                value: h,
+                onChange: g,
+                options: p.map((e) => ({
                     value: e,
-                    label: ''.concat(d.ZP.getUserTag(e))
+                    label: ''.concat(c.ZP.getUserTag(e))
                 }))
             })
         ]
     });
 };
-n.Z = p;

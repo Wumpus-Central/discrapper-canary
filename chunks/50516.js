@@ -1,3 +1,4 @@
+e.d(i, { Z: () => a });
 var s = e(684827),
     n = e(898625);
 function h(t, i, e) {
@@ -13,8 +14,7 @@ function h(t, i, e) {
         t
     );
 }
-let a = -2.15;
-i.Z = class t {
+let a = class {
     updateStatic() {
         (this.targetX = this.targetX + 30 * Math.cos(this.angle) * Math.sin(this.count)), (this.targetY = this.targetY + 30 * Math.sin(this.angle) * Math.sin(this.count)), (this.x = this.targetX), (this.y = this.targetY);
     }
@@ -49,6 +49,6 @@ i.Z = class t {
             }),
             (this.index = t),
             (this.spring.tension = n.O1 * Math.max(0.1, t / 7) + n.O1),
-            (this.count = a * t);
+            (this.count = -2.15 * t);
     }
 };

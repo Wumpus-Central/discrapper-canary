@@ -1,11 +1,11 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             className: 'string',
             begin: '(~)?"',
             end: '"',
             illegal: '\\n'
         },
-        r = {
+        n = {
             className: 'symbol',
             begin: '#[a-zA-Z_]\\w*\\$?'
         };
@@ -34,9 +34,9 @@ function n(e) {
                     e.UNDERSCORE_TITLE_MODE
                 ]
             },
-            n,
-            r
+            t,
+            n
         ]
     };
 }
-e.exports = n;
+e.exports = t;

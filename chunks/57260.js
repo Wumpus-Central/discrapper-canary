@@ -15,10 +15,10 @@ function f(e) {
         [g, E] = r.useState(!1),
         v = null != f ? f : _,
         { ref: y, height: I = 0 } = (0, u.Z)(),
-        { ref: b, height: T = 0 } = (0, u.Z)(),
+        { ref: T, height: b = 0 } = (0, u.Z)(),
         S = (0, l.q_F)(
             {
-                height: v ? I + T : T,
+                height: v ? I + b : b,
                 config: o.config.stiff,
                 onRest: () => E(!0)
             },
@@ -41,7 +41,7 @@ function f(e) {
                 style: S,
                 children: [
                     (0, i.jsx)('div', {
-                        ref: b,
+                        ref: T,
                         className: s()(c.header, { [c.toggled]: v }),
                         children: t({ onClick: A })
                     }),

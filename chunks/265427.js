@@ -1,64 +1,64 @@
-var i = r(606862),
-    a = r(169742),
-    o = r(160171),
-    s = r(192853),
-    l = r(49662),
-    u = s('Object.prototype.toString'),
-    c = r(703825)(),
-    d = 'undefined' == typeof globalThis ? r.g : globalThis,
-    f = a(),
-    p = s('String.prototype.slice'),
-    h = Object.getPrototypeOf,
-    _ =
+var i = n(606862),
+    r = n(169742),
+    a = n(160171),
+    s = n(192853),
+    o = n(49662),
+    l = s('Object.prototype.toString'),
+    u = n(703825)(),
+    c = 'undefined' == typeof globalThis ? n.g : globalThis,
+    d = r(),
+    f = s('String.prototype.slice'),
+    _ = Object.getPrototypeOf,
+    p =
         s('Array.prototype.indexOf', !0) ||
-        function (e, n) {
-            for (var r = 0; r < e.length; r += 1) if (e[r] === n) return r;
+        function (e, t) {
+            for (var n = 0; n < e.length; n += 1) if (e[n] === t) return n;
             return -1;
         },
-    m = { __proto__: null };
-c && l && h
-    ? i(f, function (e) {
-          var n = new d[e]();
-          if (Symbol.toStringTag in n) {
-              var r = h(n),
-                  i = l(r, Symbol.toStringTag);
-              !i && (i = l(h(r), Symbol.toStringTag)), (m['$' + e] = o(i.get));
+    h = { __proto__: null };
+u && o && _
+    ? i(d, function (e) {
+          var t = new c[e]();
+          if (Symbol.toStringTag in t) {
+              var n = _(t),
+                  i = o(n, Symbol.toStringTag);
+              i || (i = o(_(n), Symbol.toStringTag)), (h['$' + e] = a(i.get));
           }
       })
-    : i(f, function (e) {
-          var n = new d[e](),
-              r = n.slice || n.set;
-          r && (m['$' + e] = o(r));
+    : i(d, function (e) {
+          var t = new c[e](),
+              n = t.slice || t.set;
+          n && (h['$' + e] = a(n));
       });
-var g = function (e) {
-        var n = !1;
+var m = function (e) {
+        var t = !1;
         return (
-            i(m, function (r, i) {
-                if (!n)
+            i(h, function (n, i) {
+                if (!t)
                     try {
-                        '$' + r(e) === i && (n = p(i, 1));
+                        '$' + n(e) === i && (t = f(i, 1));
                     } catch (e) {}
             }),
-            n
+            t
         );
     },
-    E = function (e) {
-        var n = !1;
+    g = function (e) {
+        var t = !1;
         return (
-            i(m, function (r, i) {
-                if (!n)
+            i(h, function (n, i) {
+                if (!t)
                     try {
-                        r(e), (n = p(i, 1));
+                        n(e), (t = f(i, 1));
                     } catch (e) {}
             }),
-            n
+            t
         );
     };
 e.exports = function (e) {
     if (!e || 'object' != typeof e) return !1;
-    if (!c) {
-        var n = p(u(e), 8, -1);
-        return _(f, n) > -1 ? n : 'Object' === n && E(e);
+    if (!u) {
+        var t = f(l(e), 8, -1);
+        return p(d, t) > -1 ? t : 'Object' === t && g(e);
     }
-    return l ? g(e) : null;
+    return o ? m(e) : null;
 };

@@ -54,7 +54,7 @@ function I(e) {
     let { channelId: t, messageId: n } = e;
     return ''.concat(t, '-').concat(n);
 }
-function b(e) {
+function T(e) {
     var t;
     let n = I(e.saveData);
     null == p.get(n) && (m = Date.now()), p.set(n, e);
@@ -63,7 +63,7 @@ function b(e) {
         a = null !== (t = v.get(r)) && void 0 !== t ? t : new Set();
     a.add(i), v.set(r, a), null == e.message && E.add(i), null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? g.add(i) : g.delete(i);
 }
-function T(e) {
+function b(e) {
     var t;
     let n = I(e),
         i = p.get(n);
@@ -80,15 +80,15 @@ function A() {
 }
 function N(e) {
     let { savedMessages: t } = e;
-    for (let e of ((h = !1), p.clear(), v.clear(), E.clear(), t)) b(e);
+    for (let e of ((h = !1), p.clear(), v.clear(), E.clear(), t)) T(e);
 }
 function C(e) {
     let { savedMessage: t } = e;
-    b(t);
+    T(t);
 }
 function R(e) {
     let { savedMessageData: t } = e;
-    return T(t);
+    return b(t);
 }
 function O(e) {
     let { messageId: t, channelId: n } = e,

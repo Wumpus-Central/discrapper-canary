@@ -1,9 +1,9 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             className: 'keyword',
             begin: '\\$(f[asn]|t|vp[rtd]|children)'
         },
-        r = {
+        n = {
             className: 'literal',
             begin: 'false|true|PI|undef'
         },
@@ -12,8 +12,8 @@ function n(e) {
             begin: '\\b\\d+(\\.\\d+)?(e-?\\d+)?',
             relevance: 0
         },
-        a = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
-        o = {
+        r = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        a = {
             className: 'meta',
             keywords: { keyword: 'include use' },
             begin: 'include|use <',
@@ -23,7 +23,7 @@ function n(e) {
             begin: '[*!#%]',
             relevance: 0
         },
-        l = {
+        o = {
             className: 'function',
             beginKeywords: 'module function',
             end: /=|\{/,
@@ -32,7 +32,7 @@ function n(e) {
                     className: 'params',
                     begin: '\\(',
                     end: '\\)',
-                    contains: ['self', i, a, n, r]
+                    contains: ['self', i, r, t, n]
                 },
                 e.UNDERSCORE_TITLE_MODE
             ]
@@ -45,7 +45,7 @@ function n(e) {
             literal: 'false true PI undef',
             built_in: 'circle square polygon text sphere cube cylinder polyhedron translate rotate scale resize mirror multmatrix color offset hull minkowski union difference intersection abs sign sin cos tan acos asin atan atan2 floor round ceil ln log pow sqrt exp rands min max concat lookup str chr search version version_num norm cross parent_module echo import import_dxf dxf_linear_extrude linear_extrude rotate_extrude surface projection render children dxf_cross dxf_dim let assign'
         },
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, i, o, a, n, s, l]
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, i, a, r, t, s, o]
     };
 }
-e.exports = n;
+e.exports = t;

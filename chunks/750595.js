@@ -1,12 +1,12 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             match: [/^\s*(?=\S)/, /[^:]+/, /:\s*/, /$/],
             className: {
                 2: 'attribute',
                 3: 'punctuation'
             }
         },
-        r = {
+        n = {
             match: [/^\s*(?=\S)/, /[^:]*[^: ]/, /[ ]*:/, /[ ]/, /.*$/],
             className: {
                 2: 'attribute',
@@ -21,7 +21,7 @@ function n(e) {
                 4: 'string'
             }
         },
-        a = {
+        r = {
             variants: [
                 {
                     match: [/^\s*/, /-/, /[ ]/, /.*$/]
@@ -43,11 +43,11 @@ function n(e) {
                 begin: /^\s*(?=#)/,
                 excludeBegin: !0
             }),
-            a,
+            r,
             i,
-            n,
-            r
+            t,
+            n
         ]
     };
 }
-e.exports = n;
+e.exports = t;

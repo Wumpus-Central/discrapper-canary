@@ -1,4 +1,4 @@
 e.exports = {
-    modal: 'modal_a60b1b',
-    browser: 'browser_a60b1b'
+    modal: 'modal__9a792',
+    browser: 'browser__9a792'
 };

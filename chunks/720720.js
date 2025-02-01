@@ -37,12 +37,12 @@ var n = r(806998),
         );
     };
 t.exports = function (t) {
-    if (!(t.first() instanceof n))
-        return o(
-            t.toArray().map(function (t) {
-                var e = i();
-                return [e, t.set('key', e)];
-            })
-        );
-    return a(t);
+    return t.first() instanceof n
+        ? a(t)
+        : o(
+              t.toArray().map(function (t) {
+                  var e = i();
+                  return [e, t.set('key', e)];
+              })
+          );
 };

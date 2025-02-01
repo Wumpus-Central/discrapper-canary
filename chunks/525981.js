@@ -1,7 +1,7 @@
 e.exports = {
-    wrapper: 'wrapper_e40f99',
-    headerTitle: 'headerTitle_e40f99',
-    subscriptionImg: 'subscriptionImg_e40f99',
-    description: 'description_e40f99',
-    benefits: 'benefits_e40f99'
+    wrapper: 'wrapper__3425d',
+    headerTitle: 'headerTitle__3425d',
+    subscriptionImg: 'subscriptionImg__3425d',
+    description: 'description__3425d',
+    benefits: 'benefits__3425d'
 };

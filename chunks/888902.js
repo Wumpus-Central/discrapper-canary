@@ -40,7 +40,7 @@ var i = (function () {
                 return this.dataPoints_.length;
             },
             getValues: function (t, i, e) {
-                return this.cacheStartTime_ == t && this.cacheStepSize_ == i && this.cacheValues_.length == e ? this.cacheValues_ : ((this.cacheValues_ = this.getValuesInternal_(t, i, e)), (this.cacheStartTime_ = t), (this.cacheStepSize_ = i), this.cacheValues_);
+                return (this.cacheStartTime_ == t && this.cacheStepSize_ == i && this.cacheValues_.length == e) || ((this.cacheValues_ = this.getValuesInternal_(t, i, e)), (this.cacheStartTime_ = t), (this.cacheStepSize_ = i)), this.cacheValues_;
             },
             getValuesInternal_: function (t, i, e) {
                 for (var s = [], a = 0, h = 0, n = t, r = 0; r < e; ++r) {

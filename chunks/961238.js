@@ -1,8 +1,8 @@
-function n(e) {
-    for (var n = -1, r = null == e ? 0 : e.length, i = {}; ++n < r; ) {
-        var a = e[n];
-        i[a[0]] = a[1];
+function t(e) {
+    for (var t = -1, n = null == e ? 0 : e.length, i = {}; ++t < n; ) {
+        var r = e[t];
+        i[r[0]] = r[1];
     }
     return i;
 }
-e.exports = n;
+e.exports = t;

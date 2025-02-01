@@ -1,16 +1,16 @@
-var i = r(835449),
-    a = r(571516);
-function o(e) {
-    return (0, i.Z)(function (n, r) {
+n.d(t, { Z: () => a });
+var i = n(835449),
+    r = n(571516);
+let a = function (e) {
+    return (0, i.Z)(function (t, n) {
         var i = -1,
-            o = r.length,
-            s = o > 1 ? r[o - 1] : void 0,
-            l = o > 2 ? r[2] : void 0;
-        for (s = e.length > 3 && 'function' == typeof s ? (o--, s) : void 0, l && (0, a.Z)(r[0], r[1], l) && ((s = o < 3 ? void 0 : s), (o = 1)), n = Object(n); ++i < o; ) {
-            var u = r[i];
-            u && e(n, u, i, s);
+            a = n.length,
+            s = a > 1 ? n[a - 1] : void 0,
+            o = a > 2 ? n[2] : void 0;
+        for (s = e.length > 3 && 'function' == typeof s ? (a--, s) : void 0, o && (0, r.Z)(n[0], n[1], o) && ((s = a < 3 ? void 0 : s), (a = 1)), t = Object(t); ++i < a; ) {
+            var l = n[i];
+            l && e(t, l, i, s);
         }
-        return n;
+        return t;
     });
-}
-n.Z = o;
+};

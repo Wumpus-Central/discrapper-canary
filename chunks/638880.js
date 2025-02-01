@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => T });
 var i = n(115911),
     r = n(812206),
     a = n(592125),
@@ -18,12 +18,12 @@ var i = n(115911),
     v = n(89425),
     y = n(197386),
     I = n(701488);
-function b(e) {
-    return (0, u.C)(() => T(e));
+function T(e) {
+    return (0, u.C)(() => b(e));
 }
-async function T(e) {
+async function b(e) {
     let t,
-        { applicationId: n, activityChannelId: u, locationObject: b, analyticsLocations: T, componentId: S, sectionName: A, source: N, partyId: C, joinUserId: R, joinSessionId: O, joinSecret: D, inviterUserId: x, isContextlessActivity: L, customId: P, referrerId: w } = e,
+        { applicationId: n, activityChannelId: u, locationObject: T, analyticsLocations: b, componentId: S, sectionName: A, source: N, partyId: C, joinUserId: R, joinSessionId: O, joinSecret: D, inviterUserId: x, isContextlessActivity: L, customId: P, referrerId: w } = e,
         M = (0, g.Z)(),
         k = a.Z.getChannel(u),
         U = null == k ? void 0 : k.getGuildId(),
@@ -68,8 +68,8 @@ async function T(e) {
             applicationId: n,
             isStart: !1,
             embeddedActivitiesManager: M,
-            analyticsLocations: T,
-            locationObject: b,
+            analyticsLocations: b,
+            locationObject: T,
             componentId: S,
             sectionName: A,
             source: N,

@@ -1,50 +1,50 @@
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(481060),
-    s = r(565138),
-    l = r(430824),
-    u = r(388032),
-    c = r(368144);
-let d = (e) => {
-    let { event: n } = e,
-        r = (0, a.e7)([l.Z], () => l.Z.getGuild(n.guild_id));
-    return null == r
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    s = n(565138),
+    o = n(430824),
+    l = n(388032),
+    u = n(368144);
+let c = (e) => {
+    let { event: t } = e,
+        n = (0, r.e7)([o.Z], () => o.Z.getGuild(t.guild_id));
+    return null == n
         ? null
         : (0, i.jsxs)('div', {
-              className: c.container,
+              className: u.container,
               children: [
-                  (0, i.jsx)(o.Heading, {
-                      className: c.header,
+                  (0, i.jsx)(a.X6q, {
+                      className: u.header,
                       variant: 'heading-sm/semibold',
-                      children: u.intl.string(u.t.SDTOLy)
+                      children: l.intl.string(l.t.SDTOLy)
                   }),
                   (0, i.jsxs)('div', {
-                      className: c.guildContainer,
+                      className: u.guildContainer,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: c.guildInfo,
+                              className: u.guildInfo,
                               children: [
                                   (0, i.jsx)(s.Z, {
-                                      guild: r,
+                                      guild: n,
                                       size: s.Z.Sizes.MINI,
-                                      className: c.guildIcon
+                                      className: u.guildIcon
                                   }),
-                                  (0, i.jsx)(o.Text, {
+                                  (0, i.jsx)(a.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
-                                      children: r.name
+                                      children: n.name
                                   })
                               ]
                           }),
-                          (0, i.jsx)(o.Text, {
+                          (0, i.jsx)(a.Text, {
                               variant: 'text-md/semibold',
                               color: 'header-primary',
-                              children: n.name
+                              children: t.name
                           })
                       ]
                   })
               ]
           });
 };
-n.Z = d;

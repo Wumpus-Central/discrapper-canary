@@ -1,8 +1,8 @@
 e.exports = {
-    tabBar: 'tabBar_a31cc1',
-    tabBarItem: 'tabBarItem_a31cc1',
-    container: 'container_a31cc1',
-    closeIcon: 'closeIcon_a31cc1',
-    closeIconBanner: 'closeIconBanner_a31cc1',
-    closeButton: 'closeButton_a31cc1'
+    tabBar: 'tabBar__4efb4',
+    tabBarItem: 'tabBarItem__4efb4',
+    container: 'container__4efb4',
+    closeIcon: 'closeIcon__4efb4',
+    closeIconBanner: 'closeIconBanner__4efb4',
+    closeButton: 'closeButton__4efb4'
 };

@@ -1,17 +1,17 @@
-var i = r(158698);
-function a(e, n) {
-    if (e !== n) {
-        var r = void 0 !== e,
-            a = null === e,
-            o = e == e,
+var i = n(158698);
+function r(e, t) {
+    if (e !== t) {
+        var n = void 0 !== e,
+            r = null === e,
+            a = e == e,
             s = i(e),
-            l = void 0 !== n,
-            u = null === n,
-            c = n == n,
-            d = i(n);
-        if ((!u && !d && !s && e > n) || (s && l && c && !u && !d) || (a && l && c) || (!r && c) || !o) return 1;
-        if ((!a && !s && !d && e < n) || (d && r && o && !a && !s) || (u && r && o) || (!l && o) || !c) return -1;
+            o = void 0 !== t,
+            l = null === t,
+            u = t == t,
+            c = i(t);
+        if ((!l && !c && !s && e > t) || (s && o && u && !l && !c) || (r && o && u) || (!n && u) || !a) return 1;
+        if ((!r && !s && !c && e < t) || (c && n && a && !r && !s) || (l && n && a) || (!o && a) || !u) return -1;
     }
     return 0;
 }
-e.exports = a;
+e.exports = r;

@@ -1,7 +1,7 @@
-e.exports = {
-    confirmation: 'confirmation_be28dd',
-    banner: 'banner_be28dd',
-    text: 'text_be28dd',
-    redirectConfirmation: 'redirectConfirmation_be28dd',
-    redirectBody: 'redirectBody_be28dd'
+o.exports = {
+    confirmation: 'confirmation__2db04',
+    banner: 'banner__2db04',
+    text: 'text__2db04',
+    redirectConfirmation: 'redirectConfirmation__2db04',
+    redirectBody: 'redirectBody__2db04'
 };

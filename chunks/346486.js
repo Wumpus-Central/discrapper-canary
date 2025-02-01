@@ -1,7 +1,7 @@
-e(47120);
+e.d(n, { Z: () => m }), e(47120);
 var l,
-    a = e(200651),
-    s = e(192379),
+    s = e(200651),
+    a = e(192379),
     i = e(392711),
     o = e.n(i),
     r = e(55935),
@@ -20,7 +20,7 @@ function u(t, n, e) {
     );
 }
 let d = () => [c.intl.string(c.t['6m/6nJ']), c.intl.string(c.t.n7dksL), c.intl.string(c.t['1LyF1t']), c.intl.string(c.t.QJyuxc)];
-class h extends (l = s.PureComponent) {
+class h extends (l = a.PureComponent) {
     componentDidMount() {
         let { intervalDuration: t, onInterval: n } = this.props;
         this._interval = setInterval(() => {
@@ -32,28 +32,28 @@ class h extends (l = s.PureComponent) {
     }
     defaultRender(t) {
         let { showDays: n, showUnits: e, className: l } = this.props,
-            s = [t.days, t.hours, t.minutes, t.seconds],
+            a = [t.days, t.hours, t.minutes, t.seconds],
             i = d();
-        if (0 === t.days) s.shift();
+        if (0 === t.days) a.shift();
         else if (!n) {
-            let t = s.shift();
-            s[0] += 24 * t;
+            let t = a.shift();
+            a[0] += 24 * t;
         }
-        let r = o()(s)
+        let r = o()(a)
             .map((t) => (t < 10 ? '0'.concat(t) : t))
             .map((t, n) => [
                 n > 0 && !e ? ':' : ' ',
-                (0, a.jsxs)(
+                (0, s.jsxs)(
                     'span',
                     {
-                        children: [t, e ? i[s.length - n - 1] : null]
+                        children: [t, e ? i[a.length - n - 1] : null]
                     },
                     n
                 )
             ])
             .flatten()
             .value();
-        return (0, a.jsx)('span', {
+        return (0, s.jsx)('span', {
             className: l,
             children: r
         });
@@ -61,13 +61,13 @@ class h extends (l = s.PureComponent) {
     render() {
         let { deadline: t, children: n, className: e, stopAtOneSec: l } = this.props;
         if (t === 1 / 0)
-            return (0, a.jsx)('span', {
+            return (0, s.jsx)('span', {
                 className: e,
                 'aria-label': c.intl.string(c.t.PqEzn5),
                 children: '\u221E'
             });
-        let s = (0, r.TD)(Date.now(), t, l);
-        return null != n ? n(s, this.defaultRender.bind(this, s)) : this.defaultRender(s);
+        let a = (0, r.TD)(Date.now(), t, l);
+        return null != n ? n(a, this.defaultRender.bind(this, a)) : this.defaultRender(a);
     }
     constructor(...t) {
         super(...t), u(this, '_interval', void 0);
@@ -78,5 +78,5 @@ u(h, 'defaultProps', {
     showUnits: !1,
     stopAtOneSec: !1,
     intervalDuration: 1000
-}),
-    (n.Z = h);
+});
+let m = h;

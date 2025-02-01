@@ -1,7 +1,7 @@
 e.exports = {
-    root: 'root_b747e2',
-    banner: 'banner_b747e2',
-    container: 'container_b747e2',
-    contentContainer: 'contentContainer_b747e2',
-    footer: 'footer_b747e2'
+    root: 'root__4325e',
+    banner: 'banner__4325e',
+    container: 'container__4325e',
+    contentContainer: 'contentContainer__4325e',
+    footer: 'footer__4325e'
 };

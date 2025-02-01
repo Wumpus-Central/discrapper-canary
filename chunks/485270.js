@@ -1,7 +1,7 @@
 e.exports = {
-    left: 'left_c48316',
-    right: 'right_c48316',
-    down: 'down_c48316',
-    downRight: 'downRight_c48316',
-    upLeft: 'upLeft_c48316'
+    left: 'left_caab99',
+    right: 'right_caab99',
+    down: 'down_caab99',
+    downRight: 'downRight_caab99',
+    upLeft: 'upLeft_caab99'
 };

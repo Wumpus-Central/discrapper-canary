@@ -1,28 +1,28 @@
-var i = r(67867),
-    a = r(294377),
-    o = r(821819),
-    s = r(274745),
-    l = r(342545),
-    u = r(502754),
-    c = a('URL');
+var i = n(67867),
+    r = n(294377),
+    a = n(821819),
+    s = n(274745),
+    o = n(342545),
+    l = n(502754),
+    u = r('URL');
 i(
     {
         target: 'URL',
         stat: !0,
         forced: !(
-            u &&
-            o(function () {
-                c.canParse();
+            l &&
+            a(function () {
+                u.canParse();
             })
         )
     },
     {
         canParse: function (e) {
-            var n = s(arguments.length, 1),
-                r = l(e),
-                i = n < 2 || void 0 === arguments[1] ? void 0 : l(arguments[1]);
+            var t = s(arguments.length, 1),
+                n = o(e),
+                i = t < 2 || void 0 === arguments[1] ? void 0 : o(arguments[1]);
             try {
-                return new c(r, i), !0;
+                return new u(n, i), !0;
             } catch (e) {
                 return !1;
             }

@@ -1,9 +1,9 @@
 e.exports = {
-    detailContainer: 'detailContainer_dc60cd',
-    contentContainer: 'contentContainer_dc60cd',
-    contentTabsContainer: 'contentTabsContainer_dc60cd',
-    contentTabs: 'contentTabs_dc60cd',
-    centerContainer: 'centerContainer_dc60cd',
-    error: 'error_dc60cd',
-    sidebar: 'sidebar_dc60cd'
+    detailContainer: 'detailContainer__871ff',
+    contentContainer: 'contentContainer__871ff',
+    contentTabsContainer: 'contentTabsContainer__871ff',
+    contentTabs: 'contentTabs__871ff',
+    centerContainer: 'centerContainer__871ff',
+    error: 'error__871ff',
+    sidebar: 'sidebar__871ff'
 };

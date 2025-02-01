@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_e848c7',
-    image: 'image_e848c7',
-    header: 'header_e848c7'
+    container: 'container__5682d',
+    image: 'image__5682d',
+    header: 'header__5682d'
 };

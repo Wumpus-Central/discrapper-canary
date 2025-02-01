@@ -1,5 +1,5 @@
-var i = r(360518),
-    a = r(349446).f,
-    o = i('metadata'),
+var i = n(360518),
+    r = n(349446).f,
+    a = i('metadata'),
     s = Function.prototype;
-void 0 === s[o] && a(s, o, { value: null });
+void 0 === s[a] && r(s, a, { value: null });

@@ -1,5 +1,5 @@
 e.exports = {
-    socialLinks: 'socialLinks_c44e94',
-    link: 'link_c44e94',
-    foreground: 'foreground_c44e94'
+    socialLinks: 'socialLinks__7df54',
+    link: 'link__7df54',
+    foreground: 'foreground__7df54'
 };

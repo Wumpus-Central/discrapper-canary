@@ -1,6 +1,6 @@
 e.exports = {
-    characterBackground: 'characterBackground_bdd070',
-    artwork: 'artwork_bdd070',
-    logoWithText: 'logoWithText_bdd070',
-    logo: 'logo_bdd070'
+    characterBackground: 'characterBackground_eb4069',
+    artwork: 'artwork_eb4069',
+    logoWithText: 'logoWithText_eb4069',
+    logo: 'logo_eb4069'
 };

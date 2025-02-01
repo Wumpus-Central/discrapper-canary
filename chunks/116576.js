@@ -1,5 +1,5 @@
-t.exports = {
-    closeButton: 'closeButton_dcf388',
-    header: 'header_dcf388',
-    name: 'name_dcf388'
+e.exports = {
+    closeButton: 'closeButton__8e05e',
+    header: 'header__8e05e',
+    name: 'name__8e05e'
 };

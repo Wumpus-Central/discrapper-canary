@@ -1,13 +1,13 @@
 e.exports = {
-    contentWarningPopout: 'contentWarningPopout_fa823b',
-    header: 'header_fa823b',
-    body: 'body_fa823b',
-    animation: 'animation_fa823b',
-    buttonWrapper: 'buttonWrapper_fa823b',
-    buttonContainer: 'buttonContainer_fa823b',
-    button: 'button_fa823b',
-    buttonHint: 'buttonHint_fa823b',
-    content: 'content_fa823b',
-    footer: 'footer_fa823b',
-    icon: 'icon_fa823b'
+    contentWarningPopout: 'contentWarningPopout_be95d0',
+    header: 'header_be95d0',
+    body: 'body_be95d0',
+    animation: 'animation_be95d0',
+    buttonWrapper: 'buttonWrapper_be95d0',
+    buttonContainer: 'buttonContainer_be95d0',
+    button: 'button_be95d0',
+    buttonHint: 'buttonHint_be95d0',
+    content: 'content_be95d0',
+    footer: 'footer_be95d0',
+    icon: 'icon_be95d0'
 };

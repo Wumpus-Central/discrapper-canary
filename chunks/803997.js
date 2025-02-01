@@ -1,24 +1,24 @@
 !(function () {
-    var n = {}.hasOwnProperty;
-    function r() {
+    var t = {}.hasOwnProperty;
+    function n() {
         for (var e = [], i = 0; i < arguments.length; i++) {
-            var a = arguments[i];
-            if (a) {
-                var o = typeof a;
-                if ('string' === o || 'number' === o) e.push(a);
-                else if (Array.isArray(a) && a.length) {
-                    var s = r.apply(null, a);
+            var r = arguments[i];
+            if (r) {
+                var a = typeof r;
+                if ('string' === a || 'number' === a) e.push(r);
+                else if (Array.isArray(r) && r.length) {
+                    var s = n.apply(null, r);
                     s && e.push(s);
-                } else if ('object' === o) for (var l in a) n.call(a, l) && a[l] && e.push(l);
+                } else if ('object' === a) for (var o in r) t.call(r, o) && r[o] && e.push(o);
             }
         }
         return e.join(' ');
     }
     e.exports
-        ? ((r.default = r), (e.exports = r))
+        ? ((n.default = n), (e.exports = n))
         : 'function' == typeof define && 'object' == typeof define.amd && define.amd
           ? define('classnames', [], function () {
-                return r;
+                return n;
             })
-          : (window.classNames = r);
+          : (window.classNames = n);
 })();

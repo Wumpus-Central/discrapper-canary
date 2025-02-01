@@ -1,7 +1,7 @@
 e.exports = {
-    expanded: 'expanded_c09d0f',
-    blockedSystemMessage: 'blockedSystemMessage_c09d0f',
-    blockedIcon: 'blockedIcon_c09d0f',
-    blockedMessageText: 'blockedMessageText_c09d0f',
-    blockedAction: 'blockedAction_c09d0f'
+    expanded: 'expanded__7a70a',
+    blockedSystemMessage: 'blockedSystemMessage__7a70a',
+    blockedIcon: 'blockedIcon__7a70a',
+    blockedMessageText: 'blockedMessageText__7a70a',
+    blockedAction: 'blockedAction__7a70a'
 };

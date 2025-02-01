@@ -1,18 +1,18 @@
-var e = r(926515),
-    o = r(622281),
-    i = r(323979),
-    u = r(995739),
-    c = r(337856),
-    f = r(641236),
-    a = TypeError,
-    s = f('toPrimitive');
-t.exports = function (t, n) {
-    if (!o(t) || i(t)) return t;
-    var r,
-        f = u(t, s);
-    if (f) {
-        if ((void 0 === n && (n = 'default'), !o((r = e(f, t, n))) || i(r))) return r;
-        throw a("Can't convert object to primitive value");
+var r = a(926515),
+    n = a(622281),
+    o = a(323979),
+    _ = a(995739),
+    i = a(337856),
+    c = a(641236),
+    s = TypeError,
+    E = c('toPrimitive');
+t.exports = function (t, e) {
+    if (!n(t) || o(t)) return t;
+    var a,
+        c = _(t, E);
+    if (c) {
+        if ((void 0 === e && (e = 'default'), !n((a = r(c, t, e))) || o(a))) return a;
+        throw s("Can't convert object to primitive value");
     }
-    return void 0 === n && (n = 'number'), c(t, n);
+    return void 0 === e && (e = 'number'), i(t, e);
 };

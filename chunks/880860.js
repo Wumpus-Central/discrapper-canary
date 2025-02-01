@@ -1,9 +1,9 @@
-var i = r(67867),
-    a = r(228042),
-    o = r(146321),
-    s = o.get,
-    l = o.has,
-    u = o.set;
+var i = n(67867),
+    r = n(228042),
+    a = n(146321),
+    s = a.get,
+    o = a.has,
+    l = a.set;
 i(
     {
         target: 'Map',
@@ -12,11 +12,11 @@ i(
         forced: !0
     },
     {
-        emplace: function (e, n) {
-            var r,
+        emplace: function (e, t) {
+            var n,
                 i,
-                o = a(this);
-            return l(o, e) ? ((r = s(o, e)), 'update' in n && ((r = n.update(r, e, o)), u(o, e, r)), r) : ((i = n.insert(e, o)), u(o, e, i), i);
+                a = r(this);
+            return o(a, e) ? ((n = s(a, e)), 'update' in t && ((n = t.update(n, e, a)), l(a, e, n)), n) : ((i = t.insert(e, a)), l(a, e, i), i);
         }
     }
 );

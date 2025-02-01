@@ -1,8 +1,8 @@
 e.exports = {
-    container: 'container_fc867b',
-    dragRegion: 'dragRegion_fc867b',
-    bannerImage: 'bannerImage_fc867b',
-    bannerGradient: 'bannerGradient_fc867b',
-    tabs: 'tabs_fc867b',
-    bannerContainer: 'bannerContainer_fc867b'
+    container: 'container__955a3',
+    dragRegion: 'dragRegion__955a3',
+    bannerImage: 'bannerImage__955a3',
+    bannerGradient: 'bannerGradient__955a3',
+    tabs: 'tabs__955a3',
+    bannerContainer: 'bannerContainer__955a3'
 };

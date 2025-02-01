@@ -1,4 +1,4 @@
 e.exports = {
-    actions: 'actions_d14755',
-    panelButtonContainer: 'panelButtonContainer_d14755'
+    actions: 'actions__4cd01',
+    panelButtonContainer: 'panelButtonContainer__4cd01'
 };

@@ -1,6 +1,6 @@
-function n(e) {
-    let n = e.regex,
-        r = {
+function t(e) {
+    let t = e.regex,
+        n = {
             className: 'meta',
             begin: '@[A-Za-z]+'
         },
@@ -14,7 +14,7 @@ function n(e) {
                 }
             ]
         },
-        a = {
+        r = {
             className: 'string',
             variants: [
                 {
@@ -42,7 +42,7 @@ function n(e) {
                 }
             ]
         },
-        o = {
+        a = {
             className: 'type',
             begin: '\\b[A-Z][A-Za-z0-9_]*',
             relevance: 0
@@ -52,7 +52,7 @@ function n(e) {
             begin: /[^0-9\n\t "'(),.`{}\[\]:;][^\n\t "'(),.`{}\[\]:;]+|[^0-9\n\t "'(),.`{}\[\]:;=]/,
             relevance: 0
         },
-        l = {
+        o = {
             className: 'class',
             beginKeywords: 'class object trait type',
             end: /[:={\[\n;]/,
@@ -70,7 +70,7 @@ function n(e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                    contains: [a, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
                 },
                 {
                     className: 'params',
@@ -79,36 +79,36 @@ function n(e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                    contains: [a, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
                 },
                 s
             ]
         },
-        u = {
+        l = {
             className: 'function',
             beginKeywords: 'def',
-            end: n.lookahead(/[:={\[(\n;]/),
+            end: t.lookahead(/[:={\[(\n;]/),
             contains: [s]
         },
-        c = {
+        u = {
             begin: [/^\s*/, 'extension', /\s+(?=[[(])/],
             beginScope: { 2: 'keyword' }
         },
-        d = {
+        c = {
             begin: [/^\s*/, /end/, /\s+/, /(extension\b)?/],
             beginScope: {
                 2: 'keyword',
                 4: 'keyword'
             }
         },
-        f = [
+        d = [
             { match: /\.inline\b/ },
             {
                 begin: /\binline(?=\s)/,
                 keywords: 'inline'
             }
         ],
-        p = {
+        f = {
             begin: [/\(\s*/, /using/, /\s+(?!\))/],
             beginScope: { 2: 'keyword' }
         };
@@ -136,17 +136,17 @@ function n(e) {
             },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
+            r,
             a,
-            o,
-            u,
             l,
+            o,
             e.C_NUMBER_MODE,
+            u,
             c,
-            d,
-            ...f,
-            p,
-            r
+            ...d,
+            f,
+            n
         ]
     };
 }
-e.exports = n;
+e.exports = t;

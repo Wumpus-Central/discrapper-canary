@@ -1,7 +1,7 @@
 e.exports = {
-    embedCard: 'embedCard_a0eae1',
-    compact: 'compact_a0eae1',
-    header: 'header_a0eae1',
-    withFooter: 'withFooter_a0eae1',
-    messageContainer: 'messageContainer_a0eae1'
+    embedCard: 'embedCard__44c9a',
+    compact: 'compact__44c9a',
+    header: 'header__44c9a',
+    withFooter: 'withFooter__44c9a',
+    messageContainer: 'messageContainer__44c9a'
 };

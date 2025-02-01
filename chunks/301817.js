@@ -1,6 +1,6 @@
 t.exports = {
-    title: 'title_bece97',
-    body: 'body_bece97',
-    art: 'art_bece97',
-    modalContent: 'modalContent_bece97'
+    title: 'title__04ae2',
+    body: 'body__04ae2',
+    art: 'art__04ae2',
+    modalContent: 'modalContent__04ae2'
 };

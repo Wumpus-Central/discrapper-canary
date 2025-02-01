@@ -1,4 +1,4 @@
 e.exports = {
-    spinner: 'spinner_abbc33',
-    markdown: 'markdown_abbc33'
+    spinner: 'spinner__600ca',
+    markdown: 'markdown__600ca'
 };

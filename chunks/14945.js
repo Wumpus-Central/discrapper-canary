@@ -1,9 +1,9 @@
 e.exports = {
-    spamBanner: 'spamBanner_c1da2c',
-    bannerTextContainer: 'bannerTextContainer_c1da2c',
-    bannerText: 'bannerText_c1da2c',
-    bannerIcon: 'bannerIcon_c1da2c',
-    bannerHeader: 'bannerHeader_c1da2c',
-    bannerSubtext: 'bannerSubtext_c1da2c',
-    actionButtons: 'actionButtons_c1da2c'
+    spamBanner: 'spamBanner_a2eac3',
+    bannerTextContainer: 'bannerTextContainer_a2eac3',
+    bannerText: 'bannerText_a2eac3',
+    bannerIcon: 'bannerIcon_a2eac3',
+    bannerHeader: 'bannerHeader_a2eac3',
+    bannerSubtext: 'bannerSubtext_a2eac3',
+    actionButtons: 'actionButtons_a2eac3'
 };

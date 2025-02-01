@@ -1,10 +1,10 @@
 e.exports = {
-    spacing: 'spacing_e6c06b',
-    modalContent: 'modalContent_e6c06b',
-    banReasonOtherClickable: 'banReasonOtherClickable_e6c06b',
-    radioItemStyles: 'radioItemStyles_e6c06b',
-    footer: 'footer_e6c06b',
-    footerStepped: 'footerStepped_e6c06b footer_e6c06b',
-    cancel: 'cancel_e6c06b',
-    error: 'error_e6c06b'
+    spacing: 'spacing__837b7',
+    modalContent: 'modalContent__837b7',
+    banReasonOtherClickable: 'banReasonOtherClickable__837b7',
+    radioItemStyles: 'radioItemStyles__837b7',
+    footer: 'footer__837b7',
+    footerStepped: 'footerStepped__837b7 footer__837b7',
+    cancel: 'cancel__837b7',
+    error: 'error__837b7'
 };

@@ -1,9 +1,9 @@
 e.exports = {
-    wrapper: 'wrapper_ac3456',
-    toastContainerInner: 'toastContainerInner_ac3456',
-    hovered: 'hovered_ac3456',
-    guildIconContainer: 'guildIconContainer_ac3456',
-    guildTagContainer: 'guildTagContainer_ac3456',
-    guildClanTag: 'guildClanTag_ac3456',
-    toastButton: 'toastButton_ac3456'
+    wrapper: 'wrapper_ec15c1',
+    toastContainerInner: 'toastContainerInner_ec15c1',
+    hovered: 'hovered_ec15c1',
+    guildIconContainer: 'guildIconContainer_ec15c1',
+    guildTagContainer: 'guildTagContainer_ec15c1',
+    guildClanTag: 'guildClanTag_ec15c1',
+    toastButton: 'toastButton_ec15c1'
 };

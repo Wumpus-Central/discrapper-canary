@@ -23,8 +23,8 @@ var i = n(200651),
     v = n(84040),
     y = n(287941),
     I = n(235894),
-    b = n(883998),
-    T = n(576645),
+    T = n(883998),
+    b = n(576645),
     S = n(981631),
     A = n(388032),
     N = n(694638),
@@ -74,12 +74,12 @@ function P(e) {
         _ = null != n,
         p = _ && (0, I.Uw)(n),
         g = (0, m.Qj)(t.id, _),
-        { price: y, fetchingPrice: b, error: A } = (0, T.R2)(E.D1),
-        { entitlement: N, fetchedEntitlement: C, error: R } = (0, T.t6)(E.D1),
+        { price: y, fetchingPrice: T, error: A } = (0, b.R2)(E.D1),
+        { entitlement: N, fetchedEntitlement: C, error: R } = (0, b.t6)(E.D1),
         O = A || R,
         { analyticsLocations: D } = (0, u.ZP)([l.Z.CONFETTI_POTION_MODAL]),
         x = null != N && !N.consumed,
-        L = b || !C;
+        L = T || !C;
     (0, r.useEffect)(
         () => () => {
             O && (0, h.SN)(E.D1);
@@ -235,7 +235,7 @@ let w = (e) => {
                           },
                 [n]
             );
-        return (0, i.jsx)(b.Z, {
+        return (0, i.jsx)(T.Z, {
             channel: t,
             shouldShow: l,
             onRequestClose: c,
@@ -318,7 +318,7 @@ let w = (e) => {
         });
     },
     G = () => {
-        let { entitlement: e, numPotions: t } = (0, T.t6)(E.D1);
+        let { entitlement: e, numPotions: t } = (0, b.t6)(E.D1);
         if (null == t || 0 === t) return null;
         let n = (null == e ? void 0 : e.type) === S.qc2.DEVELOPER_GIFT ? A.t['b+P6ra'] : A.t.RiQ4cn;
         return (0, i.jsxs)('div', {

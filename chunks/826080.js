@@ -1,11 +1,11 @@
 e.exports = {
-    role: 'role_f778a8',
-    roleOverflow: 'roleOverflow_f778a8',
-    roleContent: 'roleContent_f778a8',
-    roleInner: 'roleInner_f778a8',
-    open: 'open_f778a8',
-    roleDot: 'roleDot_f778a8',
-    roleCircle: 'roleCircle_f778a8',
-    lock: 'lock_f778a8',
-    dragged: 'dragged_f778a8'
+    role: 'role_f07e3e',
+    roleOverflow: 'roleOverflow_f07e3e',
+    roleContent: 'roleContent_f07e3e',
+    roleInner: 'roleInner_f07e3e',
+    open: 'open_f07e3e',
+    roleDot: 'roleDot_f07e3e',
+    roleCircle: 'roleCircle_f07e3e',
+    lock: 'lock_f07e3e',
+    dragged: 'dragged_f07e3e'
 };

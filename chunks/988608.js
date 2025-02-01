@@ -1,50 +1,50 @@
-var i = r(706178);
-(e.exports = v), (v.simpleSieve = g), (v.fermatTest = E);
-var a = r(814033),
-    o = new a(24),
-    s = new (r(687363))(),
-    l = new a(1),
-    u = new a(2),
-    c = new a(5);
-new a(16), new a(8);
-var d = new a(10),
-    f = new a(3);
-new a(7);
-var p = new a(11),
-    h = new a(4);
-new a(12);
-var _ = null;
-function m() {
-    if (null !== _) return _;
+var i = n(706178);
+(e.exports = E), (E.simpleSieve = m), (E.fermatTest = g);
+var r = n(814033),
+    a = new r(24),
+    s = new (n(687363))(),
+    o = new r(1),
+    l = new r(2),
+    u = new r(5);
+new r(16), new r(8);
+var c = new r(10),
+    d = new r(3);
+new r(7);
+var f = new r(11),
+    _ = new r(4);
+new r(12);
+var p = null;
+function h() {
+    if (null !== p) return p;
     var e = 1048576,
-        n = [];
-    n[0] = 2;
-    for (var r = 1, i = 3; i < e; i += 2) {
-        for (var a = Math.ceil(Math.sqrt(i)), o = 0; o < r && n[o] <= a && i % n[o] != 0; o++);
-        (r === o || !(n[o] <= a)) && (n[r++] = i);
+        t = [];
+    t[0] = 2;
+    for (var n = 1, i = 3; i < e; i += 2) {
+        for (var r = Math.ceil(Math.sqrt(i)), a = 0; a < n && t[a] <= r && i % t[a] != 0; a++);
+        (n !== a && t[a] <= r) || (t[n++] = i);
     }
-    return (_ = n), n;
+    return (p = t), t;
 }
-function g(e) {
-    for (var n = m(), r = 0; r < n.length; r++)
-        if (0 === e.modn(n[r])) {
-            if (0 !== e.cmpn(n[r])) return !1;
+function m(e) {
+    for (var t = h(), n = 0; n < t.length; n++)
+        if (0 === e.modn(t[n])) {
+            if (0 !== e.cmpn(t[n])) return !1;
             break;
         }
     return !0;
 }
-function E(e) {
-    var n = a.mont(e);
-    return 0 === u.toRed(n).redPow(e.subn(1)).fromRed().cmpn(1);
+function g(e) {
+    var t = r.mont(e);
+    return 0 === l.toRed(t).redPow(e.subn(1)).fromRed().cmpn(1);
 }
-function v(e, n) {
-    var r, _;
-    if (e < 16) return 2 === n || 5 === n ? new a([140, 123]) : new a([140, 39]);
-    for (n = new a(n); ; ) {
-        for (r = new a(i(Math.ceil(e / 8))); r.bitLength() > e; ) r.ishrn(1);
-        if ((r.isEven() && r.iadd(l), !r.testn(1) && r.iadd(u), n.cmp(u))) {
-            if (!n.cmp(c)) for (; r.mod(d).cmp(f); ) r.iadd(h);
-        } else for (; r.mod(o).cmp(p); ) r.iadd(h);
-        if (g((_ = r.shrn(1))) && g(r) && E(_) && E(r) && s.test(_) && s.test(r)) return r;
+function E(e, t) {
+    var n, p;
+    if (e < 16) return new r(2 === t || 5 === t ? [140, 123] : [140, 39]);
+    for (t = new r(t); ; ) {
+        for (n = new r(i(Math.ceil(e / 8))); n.bitLength() > e; ) n.ishrn(1);
+        if ((n.isEven() && n.iadd(o), n.testn(1) || n.iadd(l), t.cmp(l))) {
+            if (!t.cmp(u)) for (; n.mod(c).cmp(d); ) n.iadd(_);
+        } else for (; n.mod(a).cmp(f); ) n.iadd(_);
+        if (m((p = n.shrn(1))) && m(n) && g(p) && g(n) && s.test(p) && s.test(n)) return n;
     }
 }

@@ -1,4 +1,4 @@
-e.exports = {
-    container: 'container_ec8cd2',
-    appIcon: 'appIcon_ec8cd2'
+n.exports = {
+    container: 'container__7bdb0',
+    appIcon: 'appIcon__7bdb0'
 };

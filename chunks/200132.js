@@ -1,11 +1,11 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = 'nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän'.split(' '),
-        r = ['nolla', 'yhden', 'kahden', 'kolmen', 'neljän', 'viiden', 'kuuden', n[7], n[8], n[9]];
-    function i(e, n, r, i) {
-        var o = '';
-        switch (r) {
+    var t = 'nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän'.split(' '),
+        n = ['nolla', 'yhden', 'kahden', 'kolmen', 'neljän', 'viiden', 'kuuden', t[7], t[8], t[9]];
+    function i(e, t, n, i) {
+        var a = '';
+        switch (n) {
             case 's':
                 return i ? 'muutaman sekunnin' : 'muutama sekunti';
             case 'ss':
@@ -13,32 +13,32 @@
             case 'm':
                 return i ? 'minuutin' : 'minuutti';
             case 'mm':
-                o = i ? 'minuutin' : 'minuuttia';
+                a = i ? 'minuutin' : 'minuuttia';
                 break;
             case 'h':
                 return i ? 'tunnin' : 'tunti';
             case 'hh':
-                o = i ? 'tunnin' : 'tuntia';
+                a = i ? 'tunnin' : 'tuntia';
                 break;
             case 'd':
                 return i ? 'päivän' : 'päivä';
             case 'dd':
-                o = i ? 'päivän' : 'päivää';
+                a = i ? 'päivän' : 'päivää';
                 break;
             case 'M':
                 return i ? 'kuukauden' : 'kuukausi';
             case 'MM':
-                o = i ? 'kuukauden' : 'kuukautta';
+                a = i ? 'kuukauden' : 'kuukautta';
                 break;
             case 'y':
                 return i ? 'vuoden' : 'vuosi';
             case 'yy':
-                o = i ? 'vuoden' : 'vuotta';
+                a = i ? 'vuoden' : 'vuotta';
         }
-        return (o = a(e, i) + ' ' + o);
+        return r(e, i) + ' ' + a;
     }
-    function a(e, i) {
-        return e < 10 ? (i ? r[e] : n[e]) : e;
+    function r(e, i) {
+        return e < 10 ? (i ? n[e] : t[e]) : e;
     }
     return e.defineLocale('fi', {
         months: 'tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kesäkuu_heinäkuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu'.split('_'),

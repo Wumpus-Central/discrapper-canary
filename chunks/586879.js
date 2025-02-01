@@ -1,4 +1,4 @@
 e.exports = {
-    unreadCount: 'unreadCount_e33c38',
-    mention: 'mention_e33c38'
+    unreadCount: 'unreadCount__23463',
+    mention: 'mention__23463'
 };

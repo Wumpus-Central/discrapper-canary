@@ -1,7 +1,7 @@
-var i = r(857673);
-function a(e) {
-    var n = i(e),
-        r = n % 1;
-    return n == n ? (r ? n - r : n) : 0;
+var i = n(857673);
+function r(e) {
+    var t = i(e),
+        n = t % 1;
+    return t == t ? (n ? t - n : t) : 0;
 }
-e.exports = a;
+e.exports = r;

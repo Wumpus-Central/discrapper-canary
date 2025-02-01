@@ -5,7 +5,7 @@ a.d(e, {
     GC: () => G,
     WU: () => m,
     db: () => h,
-    dz: () => b,
+    dz: () => M,
     nm: () => v,
     ph: () => S,
     x5: () => L
@@ -236,7 +236,7 @@ function G(t) {
     let e = C.get(t);
     return e && C.delete(t), e;
 }
-function b(t, e) {
+function M(t, e) {
     if ((C.set(t, e), C.size > 30)) {
         let t = C.keys().next().value;
         C.delete(t);

@@ -1,13 +1,13 @@
 e.exports = {
-    header: 'header_c03fd3',
-    subtitle: 'subtitle_c03fd3',
-    closeButton: 'closeButton_c03fd3',
-    content: 'content_c03fd3',
-    smsInputContainer: 'smsInputContainer_c03fd3',
-    smsInput: 'smsInput_c03fd3',
-    error: 'error_c03fd3',
-    footer: 'footer_c03fd3',
-    listItemContainer: 'listItemContainer_c03fd3',
-    listItemText: 'listItemText_c03fd3',
-    listItemArrow: 'listItemArrow_c03fd3'
+    header: 'header__7c901',
+    subtitle: 'subtitle__7c901',
+    closeButton: 'closeButton__7c901',
+    content: 'content__7c901',
+    smsInputContainer: 'smsInputContainer__7c901',
+    smsInput: 'smsInput__7c901',
+    error: 'error__7c901',
+    footer: 'footer__7c901',
+    listItemContainer: 'listItemContainer__7c901',
+    listItemText: 'listItemText__7c901',
+    listItemArrow: 'listItemArrow__7c901'
 };

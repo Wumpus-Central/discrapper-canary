@@ -1,4 +1,5 @@
-let i = (0, t(818083).B)({
+t.d(n, { Z: () => l });
+let l = (0, t(818083).B)({
     kind: 'user',
     id: '2024-11_application_reporting_flow',
     label: 'Apps In-App Reporting',
@@ -16,4 +17,3 @@ let i = (0, t(818083).B)({
         }
     ]
 });
-n.Z = i;

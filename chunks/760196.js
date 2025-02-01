@@ -23,7 +23,7 @@ function m(e) {
             activeCommandOptionStates: s.Z.getOptionStates(t.id)
         })),
         I = (0, l.e)(t),
-        b = (0, c.LN)(t.id);
+        T = (0, c.LN)(t.id);
     return r.useMemo(() => {
         let e = [],
             r = [];
@@ -54,14 +54,14 @@ function m(e) {
                     })
                 ),
             I && e.push((0, i.jsx)(l.V, {})),
-            b && e.push((0, i.jsx)(d.Z, { channel: t })),
+            T && e.push((0, i.jsx)(d.Z, { channel: t })),
             null != E && e.push((0, i.jsx)(f.y, { pendingScheduledMessage: E })),
             {
                 stacked: e,
                 floating: r
             }
         );
-    }, [m, v, y, t, g, I, n, b, E]);
+    }, [m, v, y, t, g, I, n, T, E]);
 }
 function g(e) {
     let { bars: t } = e,

@@ -1,44 +1,44 @@
 i = { value: !0 };
 var i,
-    a =
+    r =
         Object.assign ||
         function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = arguments[n];
-                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         },
-    o = (function () {
-        function e(e, n) {
-            for (var r = 0; r < n.length; r++) {
-                var i = n[r];
+    a = (function () {
+        function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var i = t[n];
                 (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (n, r, i) {
-            return r && e(n.prototype, r), i && e(n, i), n;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })(),
-    s = r(192379),
-    l = p(s),
-    u = p(r(476400)),
-    c = p(r(995295)),
-    d = p(r(726351)),
-    f = p(r(512722));
-function p(e) {
+    s = n(192379),
+    o = f(s),
+    l = f(n(476400)),
+    u = f(n(995295)),
+    c = f(n(726351)),
+    d = f(n(512722));
+function f(e) {
     return e && e.__esModule ? e : { default: e };
 }
-function h(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function _(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function _(e, n) {
+function p(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function m(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function h(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -46,38 +46,38 @@ function m(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var g = (function (e) {
-    function n() {
-        h(this, n);
-        var e = _(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+var m = (function (e) {
+    function t() {
+        _(this, t);
+        var e = p(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
         return (e.state = { initiated: !1 }), (e.onResize = e.onResize.bind(e)), e;
     }
     return (
-        m(n, e),
-        o(n, null, [
+        h(t, e),
+        a(t, null, [
             {
                 key: 'getDomNodeDimensions',
                 value: function (e) {
-                    var n = e.getBoundingClientRect();
+                    var t = e.getBoundingClientRect();
                     return {
-                        top: n.top,
-                        right: n.right,
-                        bottom: n.bottom,
-                        left: n.left,
-                        width: n.width,
-                        height: n.height
+                        top: t.top,
+                        right: t.right,
+                        bottom: t.bottom,
+                        left: t.left,
+                        width: t.width,
+                        height: t.height
                     };
                 }
             }
         ]),
-        o(n, [
+        a(t, [
             {
                 key: 'componentDidMount',
                 value: function () {
-                    (this.parentNode = c.default.findDOMNode(this).parentNode),
-                        (this.elementResizeDetector = (0, d.default)({
+                    (this.parentNode = u.default.findDOMNode(this).parentNode),
+                        (this.elementResizeDetector = (0, c.default)({
                             strategy: 'scroll',
                             callOnAdd: !1
                         })),
@@ -95,26 +95,26 @@ var g = (function (e) {
             {
                 key: 'onResize',
                 value: function () {
-                    var e = n.getDomNodeDimensions(this.parentNode);
-                    this.componentIsMounted && this.setState(a({ initiated: !0 }, e));
+                    var e = t.getDomNodeDimensions(this.parentNode);
+                    this.componentIsMounted && this.setState(r({ initiated: !0 }, e));
                 }
             },
             {
                 key: 'render',
                 value: function () {
-                    if (((0, f.default)(this.props.children, 'Expected children to be one of function or React.Element'), !this.state.initiated)) return l.default.createElement('div', null);
+                    if (((0, d.default)(this.props.children, 'Expected children to be one of function or React.Element'), !this.state.initiated)) return o.default.createElement('div', null);
                     if ('function' == typeof this.props.children) {
                         var e = this.props.children(this.state);
                         return e && s.Children.only(e);
                     }
-                    return s.Children.only(l.default.cloneElement(this.props.children, this.state));
+                    return s.Children.only(o.default.cloneElement(this.props.children, this.state));
                 }
             }
         ]),
-        n
+        t
     );
 })(s.Component);
-(g.propTypes = {
-    children: u.default.oneOfType([u.default.element, u.default.func]).isRequired
+(m.propTypes = {
+    children: l.default.oneOfType([l.default.element, l.default.func]).isRequired
 }),
-    (n.default = g);
+    (t.default = m);

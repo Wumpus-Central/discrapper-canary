@@ -1,6 +1,6 @@
 e.exports = {
-    guildSelectOptionIcon: 'guildSelectOptionIcon_fdc4b2',
-    speakerIcon: 'speakerIcon_fdc4b2',
-    suffixNode: 'suffixNode_fdc4b2',
-    disabledOption: 'disabledOption_fdc4b2'
+    guildSelectOptionIcon: 'guildSelectOptionIcon__41a02',
+    speakerIcon: 'speakerIcon__41a02',
+    suffixNode: 'suffixNode__41a02',
+    disabledOption: 'disabledOption__41a02'
 };

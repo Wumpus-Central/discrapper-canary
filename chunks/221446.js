@@ -1,10 +1,10 @@
-var i = r(141603),
-    a = r(688313),
-    o = r(65007),
-    s = r(349446);
-e.exports = function (e, n, r) {
-    for (var l = a(n), u = s.f, c = o.f, d = 0; d < l.length; d++) {
-        var f = l[d];
-        !i(e, f) && !(r && i(r, f)) && u(e, f, c(n, f));
+var i = n(141603),
+    r = n(688313),
+    a = n(65007),
+    s = n(349446);
+e.exports = function (e, t, n) {
+    for (var o = r(t), l = s.f, u = a.f, c = 0; c < o.length; c++) {
+        var d = o[c];
+        i(e, d) || (n && i(n, d)) || l(e, d, u(t, d));
     }
 };

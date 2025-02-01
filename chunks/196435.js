@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         name: 'Nim',
         keywords: {
@@ -40,4 +40,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

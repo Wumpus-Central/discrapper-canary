@@ -1,7 +1,7 @@
 e.exports = {
-    root: 'root_e48bd3',
-    userItem: 'userItem_e48bd3',
-    title: 'title_e48bd3',
-    userCountPill: 'userCountPill_e48bd3',
-    userCountIcon: 'userCountIcon_e48bd3'
+    root: 'root_f90ef0',
+    userItem: 'userItem_f90ef0',
+    title: 'title_f90ef0',
+    userCountPill: 'userCountPill_f90ef0',
+    userCountIcon: 'userCountIcon_f90ef0'
 };

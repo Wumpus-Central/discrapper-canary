@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         name: 'Excel formulae',
         aliases: ['xlsx', 'xls'],
@@ -556,4 +556,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

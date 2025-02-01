@@ -1,6 +1,6 @@
 var a = t(147018),
-    r = t(863664),
-    i = t(299623),
+    i = t(863664),
+    r = t(299623),
     l = t(345374),
     o = Array;
 a(
@@ -10,7 +10,7 @@ a(
     },
     {
         toReversed: function () {
-            return r(i(this), o);
+            return i(r(this), o);
         }
     }
 ),

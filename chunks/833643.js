@@ -1,14 +1,14 @@
 e.exports = {
-    container: 'container_f2758d',
-    card: 'card_f2758d',
-    avatar: 'avatar_f2758d',
-    header: 'header_f2758d',
-    avatarContainer: 'avatarContainer_f2758d',
-    appDetails: 'appDetails_f2758d',
-    titleContainer: 'titleContainer_f2758d',
-    title: 'title_f2758d',
-    infoContainer: 'infoContainer_f2758d',
-    appName: 'appName_f2758d',
-    appCategory: 'appCategory_f2758d',
-    description: 'description_f2758d'
+    container: 'container_f215b9',
+    card: 'card_f215b9',
+    avatar: 'avatar_f215b9',
+    avatarContainer: 'avatarContainer_f215b9',
+    header: 'header_f215b9',
+    appDetails: 'appDetails_f215b9',
+    titleContainer: 'titleContainer_f215b9',
+    title: 'title_f215b9',
+    infoContainer: 'infoContainer_f215b9',
+    appName: 'appName_f215b9',
+    appCategory: 'appCategory_f215b9',
+    description: 'description_f215b9'
 };

@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_b53ba2',
-    details: 'details_b53ba2',
-    actions: 'actions_b53ba2'
+    container: 'container_e65d0c',
+    details: 'details_e65d0c',
+    actions: 'actions_e65d0c'
 };

@@ -1,15 +1,16 @@
-var i = r(200651);
-r(192379);
-var a = r(293335),
-    o = r(264275);
+n.d(t, { Z: () => s });
+var i = n(200651);
+n(192379);
+var r = n(293335),
+    a = n(264275);
 let s = (e) => {
-    let { profileEffectConfig: n, onReady: r } = e,
-        { pendingRef: s, setPending: l } = (0, a.Z)(n.effects, r);
+    let { profileEffectConfig: t, onReady: n } = e,
+        { pendingRef: s, setPending: o } = (0, r.Z)(t.effects, n);
     return (0, i.jsx)('div', {
-        className: o.profileEffects,
+        className: a.profileEffects,
         children: (0, i.jsx)('div', {
-            className: o.inner,
-            children: n.effects.map((e) =>
+            className: a.inner,
+            children: t.effects.map((e) =>
                 (0, i.jsx)(
                     'img',
                     {
@@ -21,7 +22,7 @@ let s = (e) => {
                             position: 'absolute'
                         },
                         onLoad: () => {
-                            l(s.current - 1), (s.current = s.current - 1);
+                            o(s.current - 1), (s.current = s.current - 1);
                         }
                     },
                     e.src
@@ -30,4 +31,3 @@ let s = (e) => {
         })
     });
 };
-n.Z = s;

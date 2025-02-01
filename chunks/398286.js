@@ -1,9 +1,9 @@
-let i = r(889658),
-    a = (e, n) => {
+let i = n(889658),
+    r = (e, t) => {
         try {
-            return new i(e, n).range || '*';
+            return new i(e, t).range || '*';
         } catch (e) {
             return null;
         }
     };
-e.exports = a;
+e.exports = r;

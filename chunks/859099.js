@@ -1,39 +1,39 @@
-var i = r(47120);
-var a = r(780384),
-    o = r(147913),
-    s = r(844070),
-    l = r(922611),
-    u = r(981631),
-    c = r(388032);
-function d(e, n, r) {
+n.d(t, { Z: () => _ }), n(47120);
+var i = n(780384),
+    r = n(147913),
+    a = n(844070),
+    s = n(922611),
+    o = n(981631),
+    l = n(388032);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function f(e) {
-    let { relationship: n } = e,
-        r = (0, l.JX)({ location: 'RelationshipManager.handleRelationshipAdd' }) && n.userIgnored;
-    n.type === u.OGo.PENDING_INCOMING && !r && (a.uv.announce(c.intl.formatToPlainString(c.t.zH0kCw, { username: n.user.username })), s.T(n.user));
+function c(e) {
+    let { relationship: t } = e,
+        n = (0, s.JX)({ location: 'RelationshipManager.handleRelationshipAdd' }) && t.userIgnored;
+    t.type !== o.OGo.PENDING_INCOMING || n || (i.uv.announce(l.intl.formatToPlainString(l.t.zH0kCw, { username: t.user.username })), a.T(t.user));
 }
-function p(e) {
-    let { user: n } = e;
-    a.uv.announce(c.intl.formatToPlainString(c.t['/+7xk5'], { username: n.username })), s.z(n);
+function d(e) {
+    let { user: t } = e;
+    i.uv.announce(l.intl.formatToPlainString(l.t['/+7xk5'], { username: t.username })), a.z(t);
 }
-class h extends o.Z {
+class f extends r.Z {
     constructor(...e) {
         super(...e),
-            d(this, 'actions', {
-                RELATIONSHIP_ADD: f,
-                FRIEND_REQUEST_ACCEPTED: p
+            u(this, 'actions', {
+                RELATIONSHIP_ADD: c,
+                FRIEND_REQUEST_ACCEPTED: d
             });
     }
 }
-n.Z = new h();
+let _ = new f();

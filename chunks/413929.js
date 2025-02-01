@@ -1,6 +1,6 @@
 e.exports = {
-    serverBoostTabItem: 'serverBoostTabItem_f7189e',
-    icon: 'icon_f7189e',
-    landingPageTabLink: 'landingPageTabLink_f7189e',
-    roleSubLabel: 'roleSubLabel_f7189e'
+    serverBoostTabItem: 'serverBoostTabItem_cbe0b4',
+    icon: 'icon_cbe0b4',
+    landingPageTabLink: 'landingPageTabLink_cbe0b4',
+    roleSubLabel: 'roleSubLabel_cbe0b4'
 };

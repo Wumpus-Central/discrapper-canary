@@ -1,7 +1,7 @@
-n(47120);
+n.d(t, { Z: () => E }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(512969),
+    l = n(192379),
+    r = n(512969),
     a = n(442837),
     s = n(493683),
     o = n(112724),
@@ -12,7 +12,7 @@ var i = n(200651),
     m = n(601564),
     p = n(981631),
     g = n(32304);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function f(e, t, n) {
         e
     );
 }
-class _ extends r.Component {
+class f extends l.Component {
     componentDidMount() {
         this.fetchStoreListing(), (0, c.e)('channel_store_listing');
     }
@@ -36,7 +36,7 @@ class _ extends r.Component {
                   root: !0,
                   children: (0, i.jsx)('div', {
                       className: g.applicationStore,
-                      children: (0, i.jsx)(l.AW, {
+                      children: (0, i.jsx)(r.AW, {
                           path: '*',
                           render: this.renderApplicationListing
                       })
@@ -46,26 +46,26 @@ class _ extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'fetchStoreListing', (e) => {
+            _(this, 'fetchStoreListing', (e) => {
                 let { channel: t, inputSkuId: n } = this.props;
                 return null != e ? s.Z.fetchChannelStoreListing(t.id, e) : null != n ? s.Z.fetchChannelStoreListing(t.id, n) : s.Z.fetchChannelStoreListing(t.id);
             }),
-            f(this, 'renderApplicationListing', (e) => {
+            _(this, 'renderApplicationListing', (e) => {
                 let { location: t } = e,
-                    { channel: n, skuId: r, width: l } = this.props;
+                    { channel: n, skuId: l, width: r } = this.props;
                 return (0, i.jsx)(h.Z, {
                     channel: n,
-                    inputSkuId: r,
+                    inputSkuId: l,
                     fetchStoreListing: this.fetchStoreListing,
                     location: t,
-                    pageSize: (0, m.getPageSize)(l)
+                    pageSize: (0, m.getPageSize)(r)
                 });
             });
     }
 }
-t.Z = (0, o.Z)(
+let E = (0, o.Z)(
     a.ZP.connectStores([d.Z], (e) => {
         let { channel: t, inputSkuId: n } = e;
         return { skuId: null != n ? n : d.Z.getSkuIdForChannel(t.id) };
-    })(_)
+    })(f)
 );

@@ -1,5 +1,5 @@
 e.exports = {
-    tags: 'tags_f451cd',
-    pinIcon: 'pinIcon_f451cd',
-    tagFiltered: 'tagFiltered_f451cd'
+    tags: 'tags__08166',
+    pinIcon: 'pinIcon__08166',
+    tagFiltered: 'tagFiltered__08166'
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    background: 'background_b42a48',
-    foreground: 'foreground_b42a48'
+    background: 'background__506d9',
+    foreground: 'foreground__506d9'
 };

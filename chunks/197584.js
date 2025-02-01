@@ -1,6 +1,6 @@
 e.exports = {
-    boostIconContainer: 'boostIconContainer_b74960',
-    boostIcon: 'boostIcon_b74960',
-    boostIconCanceled: 'boostIconCanceled_b74960',
-    snowflake: 'snowflake_b74960'
+    boostIconContainer: 'boostIconContainer__8dbf5',
+    boostIcon: 'boostIcon__8dbf5',
+    boostIconCanceled: 'boostIconCanceled__8dbf5',
+    snowflake: 'snowflake__8dbf5'
 };

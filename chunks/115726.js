@@ -1,7 +1,7 @@
 var e = r(581031),
     i = r(339718),
-    u = Math.floor,
-    o = e(''.charAt),
+    o = Math.floor,
+    u = e(''.charAt),
     a = e(''.replace),
     c = e(''.slice),
     s = /\$([$&'`]|\d{1,2}|<[^>]*>)/g,
@@ -14,7 +14,7 @@ n.exports = function (n, t, r, e, l, h) {
         void 0 !== l && ((l = i(l)), (d = s)),
         a(h, d, function (i, a) {
             var s;
-            switch (o(a, 0)) {
+            switch (u(a, 0)) {
                 case '$':
                     return '$';
                 case '&':
@@ -30,9 +30,9 @@ n.exports = function (n, t, r, e, l, h) {
                     var f = +a;
                     if (0 === f) return i;
                     if (f > p) {
-                        var h = u(f / 10);
+                        var h = o(f / 10);
                         if (0 === h) return i;
-                        if (h <= p) return void 0 === e[h - 1] ? o(a, 1) : e[h - 1] + o(a, 1);
+                        if (h <= p) return void 0 === e[h - 1] ? u(a, 1) : e[h - 1] + u(a, 1);
                         return i;
                     }
                     s = e[f - 1];

@@ -1,4 +1,4 @@
 e.exports = {
-    inviteInfo: 'inviteInfo_c2c033',
-    guildIcon: 'guildIcon_c2c033'
+    inviteInfo: 'inviteInfo__29497',
+    guildIcon: 'guildIcon__29497'
 };

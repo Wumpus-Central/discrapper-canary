@@ -1,4 +1,4 @@
-n(653041), n(47120);
+n.d(t, { Z: () => s }), n(653041), n(47120);
 var i,
     l = n(192379),
     r = n(846519);
@@ -85,5 +85,5 @@ a(o, 'defaultProps', {
     numUpdatesToShow: 30,
     updateInterval: 500,
     pointsToSmooth: 10
-}),
-    (t.Z = o);
+});
+let s = o;

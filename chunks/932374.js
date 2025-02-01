@@ -1,51 +1,51 @@
-i.r(t);
+i.d(n, { default: () => o });
 var e = i(200651);
 i(192379);
 var s = i(481060),
-    r = i(230711),
-    l = i(695346),
+    l = i(230711),
+    r = i(695346),
     a = i(981631),
-    o = i(388032),
+    c = i(388032),
     d = i(298858);
-t.default = (n) => {
-    let { transitionState: t, onClose: i } = n,
-        c = [
+let o = (t) => {
+    let { transitionState: n, onClose: i } = t,
+        o = [
             {
-                title: o.intl.string(o.t['wnt8/P']),
-                description: o.intl.string(o.t.VupM1t)
+                title: c.intl.string(c.t['wnt8/P']),
+                description: c.intl.string(c.t.VupM1t)
             },
             {
-                title: o.intl.string(o.t.Arohq6),
-                description: o.intl.string(o.t.nYLud3)
+                title: c.intl.string(c.t.Arohq6),
+                description: c.intl.string(c.t.nYLud3)
             },
             {
-                title: o.intl.string(o.t.MDXRKi),
-                description: o.intl.string(o.t.EG31Wl)
+                title: c.intl.string(c.t.MDXRKi),
+                description: c.intl.string(c.t.EG31Wl)
             }
         ];
-    return (0, e.jsx)(s.ModalRoot, {
-        transitionState: t,
+    return (0, e.jsx)(s.Y0X, {
+        transitionState: n,
         'aria-label': '',
-        children: (0, e.jsxs)(s.ModalContent, {
+        children: (0, e.jsxs)(s.hzk, {
             className: d.content,
             children: [
                 (0, e.jsxs)('div', {
                     className: d.header,
                     children: [
-                        (0, e.jsx)(s.Heading, {
+                        (0, e.jsx)(s.X6q, {
                             variant: 'heading-xl/bold',
-                            children: o.intl.string(o.t['3k4hTU'])
+                            children: c.intl.string(c.t['3k4hTU'])
                         }),
                         (0, e.jsx)(s.Text, {
                             variant: 'text-md/normal',
-                            children: o.intl.string(o.t.IR0Bf3)
+                            children: c.intl.string(c.t.IR0Bf3)
                         })
                     ]
                 }),
                 (0, e.jsx)('div', {
                     className: d.notes,
-                    children: c.map((n, t) => {
-                        let { title: i, description: r } = n;
+                    children: o.map((t, n) => {
+                        let { title: i, description: l } = t;
                         return (0, e.jsxs)(e.Fragment, {
                             children: [
                                 (0, e.jsxs)(
@@ -53,60 +53,60 @@ t.default = (n) => {
                                     {
                                         className: d.note,
                                         children: [
-                                            (0, e.jsx)(s.CircleXIcon, {}),
+                                            (0, e.jsx)(s.k$p, {}),
                                             (0, e.jsxs)('div', {
                                                 children: [
-                                                    (0, e.jsx)(s.Heading, {
+                                                    (0, e.jsx)(s.X6q, {
                                                         variant: 'heading-md/semibold',
                                                         children: i
                                                     }),
                                                     (0, e.jsx)(s.Text, {
                                                         variant: 'text-xs/normal',
-                                                        children: r
+                                                        children: l
                                                     })
                                                 ]
                                             })
                                         ]
                                     },
-                                    t
+                                    n
                                 ),
-                                t !== c.length - 1 && (0, e.jsx)(s.FormDivider, { className: d.noteDivider })
+                                n !== o.length - 1 && (0, e.jsx)(s.$i$, { className: d.noteDivider })
                             ]
                         });
                     })
                 }),
                 (0, e.jsx)(s.Text, {
                     variant: 'text-md/normal',
-                    children: o.intl.string(o.t.cEjHRk)
+                    children: c.intl.string(c.t.cEjHRk)
                 }),
                 (0, e.jsxs)('div', {
                     className: d.linksContainer,
                     children: [
-                        (0, e.jsxs)(s.Clickable, {
+                        (0, e.jsxs)(s.P3F, {
                             onClick: () => {
-                                i(), r.Z.open(a.oAB.REGISTERED_GAMES);
+                                i(), l.Z.open(a.oAB.REGISTERED_GAMES);
                             },
                             className: d.link,
                             children: [
                                 (0, e.jsx)(s.Text, {
                                     variant: 'text-md/medium',
-                                    children: o.intl.string(o.t['8uoLf3'])
+                                    children: c.intl.string(c.t['8uoLf3'])
                                 }),
-                                (0, e.jsx)(s.ChevronLargeRightIcon, { size: 'md' })
+                                (0, e.jsx)(s.LJT, { size: 'md' })
                             ]
                         }),
-                        (0, e.jsx)(s.FormDivider, { className: d.linkDivider }),
-                        (0, e.jsxs)(s.Clickable, {
+                        (0, e.jsx)(s.$i$, { className: d.linkDivider }),
+                        (0, e.jsxs)(s.P3F, {
                             onClick: () => {
-                                i(), r.Z.open(a.oAB.CONNECTIONS);
+                                i(), l.Z.open(a.oAB.CONNECTIONS);
                             },
                             className: d.link,
                             children: [
                                 (0, e.jsx)(s.Text, {
                                     variant: 'text-md/medium',
-                                    children: o.intl.string(o.t.Q42xe3)
+                                    children: c.intl.string(c.t.Q42xe3)
                                 }),
-                                (0, e.jsx)(s.ChevronLargeRightIcon, { size: 'md' })
+                                (0, e.jsx)(s.LJT, { size: 'md' })
                             ]
                         })
                     ]
@@ -114,17 +114,17 @@ t.default = (n) => {
                 (0, e.jsxs)('div', {
                     className: d.buttonsContainer,
                     children: [
-                        (0, e.jsx)(s.Button, {
+                        (0, e.jsx)(s.zxk, {
                             onClick: i,
-                            color: s.ButtonColors.PRIMARY,
-                            children: o.intl.string(o.t['ETE/oK'])
+                            color: s.Ttl.PRIMARY,
+                            children: c.intl.string(c.t['ETE/oK'])
                         }),
-                        (0, e.jsx)(s.Button, {
+                        (0, e.jsx)(s.zxk, {
                             onClick: () => {
-                                l.G6.updateSetting(!1), i();
+                                r.G6.updateSetting(!1), i();
                             },
-                            color: s.ButtonColors.RED,
-                            children: o.intl.string(o.t.R9GHyc)
+                            color: s.Ttl.RED,
+                            children: c.intl.string(c.t.R9GHyc)
                         })
                     ]
                 })

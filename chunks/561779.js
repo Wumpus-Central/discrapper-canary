@@ -1,4 +1,4 @@
-n.d(t, { i: () => b }), n(724458), n(411104), n(47120);
+n.d(t, { i: () => T }), n(724458), n(411104), n(47120);
 var i,
     r = n(200651),
     a = n(192379),
@@ -80,7 +80,7 @@ function I(e) {
         ...y(e)
     };
 }
-class b extends (i = a.PureComponent) {
+class T extends (i = a.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.initialValue !== t.initialValueProp
             ? {
@@ -99,7 +99,7 @@ class b extends (i = a.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: i, sortedMarkers: a, markerPositions: s, closestMarkerIndex: l, newClosestIndex: u, min: d, max: f } = this.state,
-            { disabled: m, stickToMarkers: E, className: v, children: y, barStyles: I, fillStyles: b, mini: S, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: x, grabberClassName: L, grabberStyles: P = {}, markerPosition: w = 0, 'aria-hidden': M, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': G } = this.props,
+            { disabled: m, stickToMarkers: E, className: v, children: y, barStyles: I, fillStyles: T, mini: S, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: x, grabberClassName: L, grabberStyles: P = {}, markerPosition: w = 0, 'aria-hidden': M, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': G } = this.props,
             B = 0;
         E ? null != s && (null != u ? (B = s[u]) : null != l && (B = s[l])) : (B = this.scaleValue(t));
         let Z = ''.concat(B, '%'),
@@ -137,7 +137,7 @@ class b extends (i = a.PureComponent) {
                     : null,
             V = null != R ? R(t) : ''.concat(B.toFixed(0), '%'),
             j = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
-        return (0, r.jsx)(T, {
+        return (0, r.jsx)(b, {
             active: n,
             keyboardFocused: i && h.Z.keyboardModeEnabled,
             children: (e) => {
@@ -186,7 +186,7 @@ class b extends (i = a.PureComponent) {
                                 children: (0, r.jsx)('div', {
                                     className: g.barFill,
                                     style: {
-                                        ...b,
+                                        ...T,
                                         width: Z
                                     }
                                 })
@@ -369,7 +369,7 @@ class b extends (i = a.PureComponent) {
             });
     }
 }
-function T(e) {
+function b(e) {
     let { active: t, keyboardFocused: n, children: i } = e,
         r = (0, m.Q3)('Slider'),
         [s, o] = a.useState(!1),
@@ -388,7 +388,7 @@ function T(e) {
           })
         : i();
 }
-E(b, 'defaultProps', {
+E(T, 'defaultProps', {
     initialValue: 10,
     minValue: 0,
     maxValue: 100,

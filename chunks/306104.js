@@ -1,27 +1,27 @@
-Object.defineProperty(n, '__esModule', { value: !0 }), (n.hover = void 0);
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.hover = void 0);
 var i =
         Object.assign ||
         function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = arguments[n];
-                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         },
-    a = o(r(192379));
-function o(e) {
+    r = a(n(192379));
+function a(e) {
     return e && e.__esModule ? e : { default: e };
 }
-function s(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function s(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function l(e, n) {
+function o(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function u(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function l(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -29,37 +29,37 @@ function u(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var c = (n.hover = function (e) {
-    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
-    return (function (r) {
-        function o() {
-            s(this, o);
-            for (var r, u, c, d = arguments.length, f = Array(d), p = 0; p < d; p++) f[p] = arguments[p];
+var u = (t.hover = function (e) {
+    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
+    return (function (n) {
+        function a() {
+            s(this, a);
+            for (var n, l, u, c = arguments.length, d = Array(c), f = 0; f < c; f++) d[f] = arguments[f];
             return (
-                (u = c = l(this, (r = o.__proto__ || Object.getPrototypeOf(o)).call.apply(r, [this].concat(f)))),
-                (c.state = { hover: !1 }),
-                (c.handleMouseOver = function () {
-                    return c.setState({ hover: !0 });
+                (l = u = o(this, (n = a.__proto__ || Object.getPrototypeOf(a)).call.apply(n, [this].concat(d)))),
+                (u.state = { hover: !1 }),
+                (u.handleMouseOver = function () {
+                    return u.setState({ hover: !0 });
                 }),
-                (c.handleMouseOut = function () {
-                    return c.setState({ hover: !1 });
+                (u.handleMouseOut = function () {
+                    return u.setState({ hover: !1 });
                 }),
-                (c.render = function () {
-                    return a.default.createElement(
-                        n,
+                (u.render = function () {
+                    return r.default.createElement(
+                        t,
                         {
-                            onMouseOver: c.handleMouseOver,
-                            onMouseOut: c.handleMouseOut
+                            onMouseOver: u.handleMouseOver,
+                            onMouseOut: u.handleMouseOut
                         },
-                        a.default.createElement(e, i({}, c.props, c.state))
+                        r.default.createElement(e, i({}, u.props, u.state))
                     );
                 }),
-                l(c, u)
+                o(u, l)
             );
         }
-        return u(o, r), o;
-    })(a.default.Component);
+        return l(a, n), a;
+    })(r.default.Component);
 });
-n.default = c;
+t.default = u;

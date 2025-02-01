@@ -25,16 +25,16 @@ var i,
 let v = window.DiscordNative,
     y = ['jpg', 'jpeg', 'png'],
     I = null,
-    b = null,
     T = null,
+    b = null,
     S = {};
 null != v &&
     ((I = v.remoteApp
         .getVersion()
         .split('.')
         .map((e) => parseInt(e))),
-    (T = null === (i = (r = v.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r)),
-    (b = null === (a = (s = v.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
+    (b = null === (i = (r = v.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r)),
+    (T = null === (a = (s = v.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
 let A = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
     N = !1;
 async function C(e) {
@@ -235,10 +235,10 @@ let L = {
         return I;
     },
     get buildNumber() {
-        return b;
+        return T;
     },
     get moduleVersions() {
-        return T;
+        return b;
     },
     get parsedOSRelease() {
         if (!h.isPlatformEmbedded) return [];

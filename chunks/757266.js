@@ -1,68 +1,68 @@
+n.d(t, { Z: () => h }), n(47120);
 var i,
-    a = r(47120);
-var o = r(392711),
-    s = r.n(o),
-    l = r(442837),
-    u = r(570140);
-function c(e, n, r) {
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
+    o = n(570140);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let d = {};
-function f(e) {
-    let { application: n } = e;
-    if (null == n.id) return !1;
-    let r = n.id;
-    null == d[r] &&
-        (d[r] = {
+let u = {};
+function c(e) {
+    let { application: t } = e;
+    if (null == t.id) return !1;
+    let n = t.id;
+    null == u[n] &&
+        (u[n] = {
             count: 0,
-            id: n.id,
-            name: n.name,
-            icon: n.icon,
-            coverImage: n.coverImage,
+            id: t.id,
+            name: t.name,
+            icon: t.icon,
+            coverImage: t.coverImage,
             authenticated: !1
         }),
-        d[r].count++;
+        u[n].count++;
 }
-function p(e) {
-    let { application: n } = e;
-    if (null != n.id && null != d[n.id]) d[n.id].authenticated = !0;
+function d(e) {
+    let { application: t } = e;
+    null != t.id && null != u[t.id] && (u[t.id].authenticated = !0);
 }
-function h(e) {
-    let { application: n } = e;
-    if (null != n.id && null != d[n.id]) d[n.id].count--, 0 === d[n.id].count && delete d[n.id];
+function f(e) {
+    let { application: t } = e;
+    null != t.id && null != u[t.id] && (u[t.id].count--, 0 === u[t.id].count && delete u[t.id]);
 }
 function _(e) {
-    let { connectedApps: n } = e;
-    d = { ...n };
+    let { connectedApps: t } = e;
+    u = { ...t };
 }
-class m extends (i = l.ZP.Store) {
+class p extends (i = s.ZP.Store) {
     isConnected(e) {
-        return null != d[e];
+        return null != u[e];
     }
     get connections() {
-        return s().values(d);
+        return a().values(u);
     }
     getApplication(e) {
-        return d[e];
+        return u[e];
     }
     getAllConnections() {
-        return d;
+        return u;
     }
 }
-c(m, 'displayName', 'ConnectedAppsStore'),
-    (n.Z = new m(u.Z, {
-        OVERLAY_INITIALIZE: _,
-        RPC_APP_CONNECTED: f,
-        RPC_APP_AUTHENTICATED: p,
-        RPC_APP_DISCONNECTED: h
-    }));
+l(p, 'displayName', 'ConnectedAppsStore');
+let h = new p(o.Z, {
+    OVERLAY_INITIALIZE: _,
+    RPC_APP_CONNECTED: c,
+    RPC_APP_AUTHENTICATED: d,
+    RPC_APP_DISCONNECTED: f
+});

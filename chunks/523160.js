@@ -1,6 +1,6 @@
 n.r(
     (e.exports = {
-        effect: 'effect_de8d64',
-        effects: 'effects_de8d64'
+        effect: 'effect__263e4',
+        effects: 'effects__263e4'
     })
 );

@@ -23,5 +23,5 @@ var n = o(t(405774)),
                 }
             }
         });
-});
-r.default = p;
+}),
+    (r.default = p);

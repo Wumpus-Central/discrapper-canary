@@ -1,5 +1,5 @@
 e.exports = {
-    button: 'button_a467ac',
-    default: 'default_a467ac',
-    filled: 'filled_a467ac'
+    button: 'button_e18686',
+    default: 'default_e18686',
+    filled: 'filled_e18686'
 };

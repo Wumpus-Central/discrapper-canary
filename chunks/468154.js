@@ -1,12 +1,12 @@
-var i = r(594463).IteratorPrototype,
-    a = r(224106),
-    o = r(241777),
-    s = r(414847),
-    l = r(519723),
-    u = function () {
+var i = n(594463).IteratorPrototype,
+    r = n(224106),
+    a = n(241777),
+    s = n(414847),
+    o = n(519723),
+    l = function () {
         return this;
     };
-e.exports = function (e, n, r, c) {
-    var d = n + ' Iterator';
-    return (e.prototype = a(i, { next: o(+!c, r) })), s(e, d, !1, !0), (l[d] = u), e;
+e.exports = function (e, t, n, u) {
+    var c = t + ' Iterator';
+    return (e.prototype = r(i, { next: a(+!u, n) })), s(e, c, !1, !0), (o[c] = l), e;
 };

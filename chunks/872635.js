@@ -106,7 +106,7 @@ let v = r.forwardRef(function (e, t) {
             },
             [v, y]
         ),
-        T = r.useCallback(
+        b = r.useCallback(
             (e) => {
                 let t = v.renderWindow;
                 if (e.target instanceof t.Element) {
@@ -132,14 +132,14 @@ let v = r.forwardRef(function (e, t) {
             return (
                 e.document.addEventListener('keydown', y),
                 e.document.addEventListener('mousedown', I),
-                e.document.addEventListener('mouseup', T),
+                e.document.addEventListener('mouseup', b),
                 e.addEventListener('focus', y),
                 e.addEventListener('blur', y),
                 () => {
-                    e.document.removeEventListener('keydown', y), e.document.removeEventListener('mousedown', I), e.document.removeEventListener('mouseup', T), e.removeEventListener('focus', y), e.removeEventListener('blur', y), clearTimeout(m.current);
+                    e.document.removeEventListener('keydown', y), e.document.removeEventListener('mousedown', I), e.document.removeEventListener('mouseup', b), e.removeEventListener('focus', y), e.removeEventListener('blur', y), clearTimeout(m.current);
                 }
             );
-        }, [v, y, I, T]);
+        }, [v, y, I, b]);
     let { x: S, y: A } = r.useMemo(() => {
             var e, t, n, i;
             let r = null === (e = a.current) || void 0 === e ? void 0 : e.getSlateEditor();
@@ -203,7 +203,7 @@ let v = r.forwardRef(function (e, t) {
                       e.stopPropagation();
                   },
                   children: [
-                      (0, i.jsx)(b, { slateEditor: D }),
+                      (0, i.jsx)(T, { slateEditor: D }),
                       (0, i.jsx)(E, {
                           editorRef: a,
                           options: l
@@ -243,7 +243,7 @@ function I(e) {
         children: r
     });
 }
-function b(e) {
+function T(e) {
     var t;
     let { slateEditor: n } = e,
         [i, a] = null !== (t = h.bN.getSelectedVoid(n)) && void 0 !== t ? t : [null, null],

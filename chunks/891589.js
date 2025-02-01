@@ -1,5 +1,5 @@
 e.exports = {
-    slide: 'slide_f97a12',
-    scaleDown: 'scaleDown_f97a12',
-    contain: 'contain_f97a12'
+    slide: 'slide_fd65ff',
+    scaleDown: 'scaleDown_fd65ff',
+    contain: 'contain_fd65ff'
 };

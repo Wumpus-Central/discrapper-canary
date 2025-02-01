@@ -1,14 +1,14 @@
-var a = r(915646),
+var r = a(915646),
     n = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
-    _ = /\\(\\)?/g,
-    o = a(function (e) {
-        var t = [];
+    o = /\\(\\)?/g,
+    _ = r(function (t) {
+        var e = [];
         return (
-            46 === e.charCodeAt(0) && t.push(''),
-            e.replace(n, function (e, r, a, n) {
-                t.push(a ? n.replace(_, '$1') : r || e);
+            46 === t.charCodeAt(0) && e.push(''),
+            t.replace(n, function (t, a, r, n) {
+                e.push(r ? n.replace(o, '$1') : a || t);
             }),
-            t
+            e
         );
     });
-e.exports = o;
+t.exports = _;

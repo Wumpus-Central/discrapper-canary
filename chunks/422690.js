@@ -1,6 +1,6 @@
 t.exports = {
-    modal: 'modal_ed8366',
-    content: 'content_ed8366',
-    image: 'image_ed8366',
-    text: 'text_ed8366'
+    content: 'content__04926',
+    modal: 'modal__04926',
+    image: 'image__04926',
+    text: 'text__04926'
 };

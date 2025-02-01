@@ -1,7 +1,7 @@
-n.exports = {
-    topBar: 'topBar_bf8df0',
-    messageContents: 'messageContents_bf8df0',
-    timestamp: 'timestamp_bf8df0',
-    closeButton: 'closeButton_bf8df0',
-    closeButtonInner: 'closeButtonInner_bf8df0'
+e.exports = {
+    topBar: 'topBar__6088c',
+    messageContents: 'messageContents__6088c',
+    timestamp: 'timestamp__6088c',
+    closeButton: 'closeButton__6088c',
+    closeButtonInner: 'closeButtonInner__6088c'
 };

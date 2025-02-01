@@ -1,5 +1,5 @@
 e.exports = {
-    keywordsContainer: 'keywordsContainer_e58e09',
-    errorSpan: 'errorSpan_e58e09',
-    subtext: 'subtext_e58e09'
+    keywordsContainer: 'keywordsContainer__2097e',
+    errorSpan: 'errorSpan__2097e',
+    subtext: 'subtext__2097e'
 };

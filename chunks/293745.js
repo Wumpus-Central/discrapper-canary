@@ -1,31 +1,31 @@
-let i = r(52878),
-    a = r(172959),
-    o = r(393808),
-    s = r(725616),
-    l = r(690217),
-    u = r(689478),
-    c = (e, n, r, c) => {
-        switch (n) {
+let i = n(52878),
+    r = n(172959),
+    a = n(393808),
+    s = n(725616),
+    o = n(690217),
+    l = n(689478),
+    u = (e, t, n, u) => {
+        switch (t) {
             case '===':
-                return 'object' == typeof e && (e = e.version), 'object' == typeof r && (r = r.version), e === r;
+                return 'object' == typeof e && (e = e.version), 'object' == typeof n && (n = n.version), e === n;
             case '!==':
-                return 'object' == typeof e && (e = e.version), 'object' == typeof r && (r = r.version), e !== r;
+                return 'object' == typeof e && (e = e.version), 'object' == typeof n && (n = n.version), e !== n;
             case '':
             case '=':
             case '==':
-                return i(e, r, c);
+                return i(e, n, u);
             case '!=':
-                return a(e, r, c);
+                return r(e, n, u);
             case '>':
-                return o(e, r, c);
+                return a(e, n, u);
             case '>=':
-                return s(e, r, c);
+                return s(e, n, u);
             case '<':
-                return l(e, r, c);
+                return o(e, n, u);
             case '<=':
-                return u(e, r, c);
+                return l(e, n, u);
             default:
-                throw TypeError(`Invalid operator: ${n}`);
+                throw TypeError(`Invalid operator: ${t}`);
         }
     };
-e.exports = c;
+e.exports = u;

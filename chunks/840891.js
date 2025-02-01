@@ -1,4 +1,4 @@
 e.exports = {
-    modalContent: 'modalContent_d3c5a1',
-    inputWrapper: 'inputWrapper_d3c5a1'
+    modalContent: 'modalContent__51422',
+    inputWrapper: 'inputWrapper__51422'
 };

@@ -1,7 +1,7 @@
 t.exports = {
-    wrapper: 'wrapper_a8220a',
-    cardHeaderImg: 'cardHeaderImg_a8220a',
-    details: 'details_a8220a',
-    description: 'description_a8220a',
-    footer: 'footer_a8220a'
+    wrapper: 'wrapper__3564f',
+    cardHeaderImg: 'cardHeaderImg__3564f',
+    details: 'details__3564f',
+    description: 'description__3564f',
+    footer: 'footer__3564f'
 };

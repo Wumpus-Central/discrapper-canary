@@ -1,16 +1,13 @@
 n.d(t, {
-    Eo: function () {
-        return O;
-    },
-    VD: function () {
-        return y;
-    }
+    Eo: () => R,
+    VD: () => P,
+    ZP: () => j
 }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(622535),
     c = n(481060),
@@ -19,48 +16,50 @@ var i = n(200651),
     h = n(881052),
     m = n(410030),
     p = n(686546),
-    g = n(66637),
+    g = n(540059),
+    _ = n(66637),
     f = n(782738),
-    _ = n(371260),
-    E = n(372769),
-    I = n(134432),
-    C = n(695346),
-    v = n(768581),
-    N = n(356164),
-    T = n(890064),
-    S = n(981631),
-    b = n(388032),
+    E = n(371260),
+    I = n(372769),
+    C = n(134432),
+    v = n(695346),
+    N = n(768581),
+    T = n(356164),
+    S = n(890064),
+    Z = n(981631),
+    x = n(388032),
     A = n(125285),
-    Z = n(129512),
-    x = n(330065),
-    L = n(755386);
-function y(e) {
-    let { guild: t, onClick: l, onView: s } = e,
-        [f, _] = r.useState(!1),
-        [N, y] = r.useState(!1),
-        [P, O] = r.useState(!1),
-        R = r.useCallback(async () => {
-            y(!0);
+    b = n(129512),
+    L = n(330065),
+    y = n(755386);
+function P(e) {
+    let { guild: t, onClick: r, onView: s } = e,
+        f = (0, g.Q3)('BaseGlobalDiscoveryServersCard'),
+        [E, T] = l.useState(!1),
+        [P, O] = l.useState(!1),
+        [R, j] = l.useState(!1),
+        D = l.useCallback(async () => {
+            O(!0);
             try {
-                await l(t.id);
+                await r(t.id);
             } catch (n) {
                 var e;
                 let t = new h.Hx(n);
                 d.Z.show({
-                    title: b.intl.string(b.t.R0RpRU),
-                    body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : b.intl.string(b.t.eAn6z8)
+                    title: x.intl.string(x.t.R0RpRU),
+                    body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : x.intl.string(x.t.eAn6z8)
                 });
             } finally {
-                y(!1);
+                O(!1);
             }
-        }, [t.id, l]),
-        j = r.useCallback(
+        }, [t.id, r]),
+        w = l.useCallback(
             (e) => {
-                e && !f && (_(!0), null == s || s(t.id));
+                e && !E && (T(!0), null == s || s(t.id));
             },
-            [t.id, f, s]
+            [t.id, E, s]
         ),
-        D = r.useCallback(
+        M = l.useCallback(
             (e) => {
                 (0, u.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 858523));
@@ -73,68 +72,69 @@ function y(e) {
             },
             [t]
         ),
-        M = (0, m.ZP)(),
-        w = t.features.has(S.oNc.HUB),
-        k = r.useMemo(() => {
-            let e = v.ZP.getGuildDiscoverySplashURL({
+        k = (0, m.ZP)(),
+        U = t.features.has(Z.oNc.HUB),
+        G = l.useMemo(() => {
+            let e = N.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
-                size: 300 * (0, I.x_)()
+                size: 300 * (0, C.x_)()
             });
             if (null != e) return e;
-            if (w) return L;
-            switch (M) {
-                case S.BRd.DARK:
-                    return Z;
-                case S.BRd.LIGHT:
-                    return x;
+            if (U) return y;
+            switch (k) {
+                case Z.BRd.DARK:
+                    return b;
+                case Z.BRd.LIGHT:
+                    return L;
             }
-        }, [t.discoverySplash, t.id, w, M]),
-        U = r.useMemo(
+        }, [t.discoverySplash, t.id, U, k]),
+        B = f ? 48 : 40,
+        V = l.useMemo(
             () =>
-                v.ZP.getGuildIconURL({
+                N.ZP.getGuildIconURL({
                     id: t.id,
                     icon: t.icon,
-                    size: 40
+                    size: B
                 }),
-            [t.icon, t.id]
+            [t.icon, t.id, B]
         ),
-        G = C.Sb.useSetting();
+        H = v.Sb.useSetting();
     return (0, i.jsxs)('div', {
         className: A.container,
         children: [
-            N &&
+            P &&
                 (0, i.jsx)('div', {
                     className: A.spinnerContainer,
-                    children: (0, i.jsx)(c.Spinner, {
-                        type: c.Spinner.Type.PULSING_ELLIPSIS,
+                    children: (0, i.jsx)(c.$jN, {
+                        type: c.$jN.Type.PULSING_ELLIPSIS,
                         className: A.spinner
                     })
                 }),
             (0, i.jsx)(o.$, {
-                onChange: j,
-                active: !f,
+                onChange: w,
+                active: !E,
                 threshold: 0.55,
-                children: (0, i.jsxs)(g.Z, {
+                children: (0, i.jsxs)(_.Z, {
                     className: A.card,
-                    onClick: R,
-                    disabled: N,
-                    onContextMenu: D,
+                    onClick: D,
+                    disabled: P,
+                    onContextMenu: M,
                     children: [
                         (0, i.jsxs)('div', {
                             className: A.header,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: a()(A.banner, { [A.loaded]: P }),
+                                    className: a()(A.banner, { [A.loaded]: R }),
                                     children: (0, i.jsx)('img', {
-                                        src: k,
+                                        src: G,
                                         alt: '',
                                         className: A.bannerImage,
-                                        onLoad: () => O(!0)
+                                        onLoad: () => j(!0)
                                     })
                                 }),
-                                G &&
-                                    (0, i.jsx)(T.Z, {
+                                H &&
+                                    (0, i.jsx)(S.Z, {
                                         guild: t,
                                         className: A.contextMenu
                                     }),
@@ -142,16 +142,16 @@ function y(e) {
                                     className: A.icon,
                                     children: (0, i.jsx)(p.ZP, {
                                         mask: p.ZP.Masks.SQUIRCLE,
-                                        width: 48,
-                                        height: 48,
+                                        width: B + 8,
+                                        height: B + 8,
                                         children: (0, i.jsx)('div', {
                                             className: A.iconMask,
                                             children: (0, i.jsx)(p.ZP, {
                                                 mask: p.ZP.Masks.SQUIRCLE,
-                                                width: 40,
-                                                height: 40,
+                                                width: B,
+                                                height: B,
                                                 children: (0, i.jsx)('img', {
-                                                    src: U,
+                                                    src: V,
                                                     alt: '',
                                                     className: A.avatar
                                                 })
@@ -167,12 +167,12 @@ function y(e) {
                                 (0, i.jsxs)('div', {
                                     className: A.title,
                                     children: [
-                                        (0, i.jsx)(E.Z, {
+                                        (0, i.jsx)(I.Z, {
                                             className: A.guildBadge,
                                             guild: t,
-                                            tooltipColor: c.Tooltip.Colors.PRIMARY
+                                            tooltipColor: c.ua7.Colors.PRIMARY
                                         }),
-                                        (0, i.jsx)(c.Heading, {
+                                        (0, i.jsx)(c.X6q, {
                                             variant: 'heading-md/semibold',
                                             className: A.guildName,
                                             children: t.name
@@ -197,7 +197,7 @@ function y(e) {
                                                         className: A.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: b.intl.format(b.t['LC+S+v'], { membersOnline: t.presenceCount })
+                                                        children: x.intl.format(x.t['LC+S+v'], { membersOnline: t.presenceCount })
                                                     })
                                                 ]
                                             }),
@@ -210,7 +210,7 @@ function y(e) {
                                                         className: A.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: b.intl.format(b.t.zRl6XV, { count: t.memberCount })
+                                                        children: x.intl.format(x.t.zRl6XV, { count: t.memberCount })
                                                     })
                                                 ]
                                             })
@@ -224,53 +224,53 @@ function y(e) {
         ]
     });
 }
-function P(e) {
-    let { guildId: t, onClick: n, onView: r } = e,
-        l = (0, s.e7)([N.Z], () => N.Z.getGuild(t));
-    return null == l
+function O(e) {
+    let { guildId: t, onClick: n, onView: l } = e,
+        r = (0, s.e7)([T.Z], () => T.Z.getGuild(t));
+    return null == r
         ? null
-        : (0, i.jsx)(y, {
-              guild: l,
+        : (0, i.jsx)(P, {
+              guild: r,
               onClick: n,
-              onView: r
+              onView: l
           });
 }
-function O(e) {
-    let { guildId: t, index: n, onClick: l, onView: a } = e,
-        s = r.useRef(null == t),
-        o = r.useCallback(
-            (e, t, n, r) =>
+function R(e) {
+    let { guildId: t, index: n, onClick: r, onView: a } = e,
+        s = l.useRef(null == t),
+        o = l.useCallback(
+            (e, t, n, l) =>
                 null == t.guildId
                     ? (0, i.jsx)(
-                          _.Z,
+                          E.Z,
                           {
                               state: n,
-                              cleanUp: r,
+                              cleanUp: l,
                               children: (0, i.jsx)(f.Z, { className: A.placeholder })
                           },
                           e
                       )
                     : (0, i.jsx)(
-                          _.Z,
+                          E.Z,
                           {
                               state: n,
-                              cleanUp: r,
+                              cleanUp: l,
                               animate: s.current,
-                              children: (0, i.jsx)(P, {
+                              children: (0, i.jsx)(O, {
                                   guildId: t.guildId,
-                                  onClick: l,
+                                  onClick: r,
                                   onView: a
                               })
                           },
                           e
                       ),
-            [l, a]
+            [r, a]
         ),
-        d = r.useCallback((e) => {
+        d = l.useCallback((e) => {
             var t;
             return null !== (t = e.guildId) && void 0 !== t ? t : ''.concat(e.index);
         }, []),
-        u = r.useMemo(
+        u = l.useMemo(
             () => [
                 {
                     guildId: t,
@@ -281,11 +281,11 @@ function O(e) {
         );
     return (0, i.jsx)('div', {
         className: A.transitionGroup,
-        children: (0, i.jsx)(c.TransitionGroup, {
+        children: (0, i.jsx)(c.W3x, {
             items: u,
             renderItem: o,
             getItemKey: d
         })
     });
 }
-t.ZP = r.memo(P);
+let j = l.memo(O);

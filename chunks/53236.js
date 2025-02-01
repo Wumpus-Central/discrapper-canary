@@ -1,12 +1,12 @@
-var i = r(671235).default;
-function a(e, n) {
+var i = n(671235).default;
+function r(e, t) {
     if ('object' != i(e) || !e) return e;
-    var r = e[Symbol.toPrimitive];
-    if (void 0 !== r) {
-        var a = r.call(e, n || 'default');
-        if ('object' != i(a)) return a;
+    var n = e[Symbol.toPrimitive];
+    if (void 0 !== n) {
+        var r = n.call(e, t || 'default');
+        if ('object' != i(r)) return r;
         throw TypeError('@@toPrimitive must return a primitive value.');
     }
-    return ('string' === n ? String : Number)(e);
+    return ('string' === t ? String : Number)(e);
 }
-(e.exports = a), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = r), (e.exports.__esModule = !0), (e.exports.default = e.exports);

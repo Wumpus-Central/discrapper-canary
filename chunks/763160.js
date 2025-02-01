@@ -1,19 +1,19 @@
 e.exports = function (e) {
-    function n() {}
-    var r = {
-        log: n,
-        warn: n,
-        error: n
+    function t() {}
+    var n = {
+        log: t,
+        warn: t,
+        error: t
     };
     if (!e && window.console) {
-        var i = function (e, n) {
-            e[n] = function () {
-                var e = console[n];
+        var i = function (e, t) {
+            e[t] = function () {
+                var e = console[t];
                 if (e.apply) e.apply(console, arguments);
-                else for (var r = 0; r < arguments.length; r++) e(arguments[r]);
+                else for (var n = 0; n < arguments.length; n++) e(arguments[n]);
             };
         };
-        i(r, 'log'), i(r, 'warn'), i(r, 'error');
+        i(n, 'log'), i(n, 'warn'), i(n, 'error');
     }
-    return r;
+    return n;
 };

@@ -35,11 +35,11 @@ function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     y(e).reset(t);
 }
-function b() {
+function T() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     for (let t in v) I(t, e);
 }
-function T(e) {
+function b(e) {
     let { guild: t } = e,
         n = y(t.id);
     I(t.id, n.isInitialized);
@@ -164,7 +164,7 @@ function G(e) {
     );
 }
 function B(e) {
-    return E ? (E = !1) : b(!0), U(e);
+    return E ? (E = !1) : T(!0), U(e);
 }
 function Z(e) {
     return G(e);
@@ -249,7 +249,7 @@ function Q(e) {
     (0, h.nf)(u, g);
     let I = f.updateSearchedMembersByMemberIds(g);
     c.length > 0 && ((o = c[0]), (l = c[c.length - 1]));
-    let [b] = f.updatePaginationState(
+    let [T] = f.updatePaginationState(
         {
             totalResultsCount: d,
             elasticSearchCursor: {
@@ -265,7 +265,7 @@ function Q(e) {
         },
         !1
     );
-    return v || I || b;
+    return v || I || T;
 }
 class X extends (i = r.ZP.Store) {
     initialize() {
@@ -330,7 +330,7 @@ let J = new X(a.Z, {
     LOCAL_MESSAGES_LOADED: V,
     CACHE_LOADED: F,
     PASSIVE_UPDATE_V2: j,
-    GUILD_CREATE: T,
+    GUILD_CREATE: b,
     GUILD_DELETE: S,
     GUILD_MEMBERS_CHUNK_BATCH: C,
     GUILD_MEMBER_ADD: A,

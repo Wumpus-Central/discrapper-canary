@@ -1,4 +1,4 @@
 e.exports = {
-    section: 'section_c95253',
-    guildSelectOptionIcon: 'guildSelectOptionIcon_c95253'
+    section: 'section__999b5',
+    guildSelectOptionIcon: 'guildSelectOptionIcon__999b5'
 };

@@ -1,59 +1,59 @@
-n(47120), n(312677);
-var e = n(8048),
-    o = n(647425);
-let i = new Map(),
-    u = (r) => {
-        let { canvas: t, canvasId: n, animationId: u, assetUrl: c, assetData: a, isVisible: f, shouldAnimate: s } = r,
-            l = new e.default({
-                canvas: t,
-                id: u,
-                assetUrl: c,
-                assetData: a,
-                isVisible: f,
-                shouldAnimate: s,
+i(47120), i(312677);
+var r = i(8048),
+    n = i(647425);
+let a = new Map(),
+    s = (t) => {
+        let { canvas: e, canvasId: i, animationId: s, assetUrl: o, assetData: u, isVisible: c, shouldAnimate: h } = t,
+            l = new r.default({
+                canvas: e,
+                id: s,
+                assetUrl: o,
+                assetData: u,
+                isVisible: c,
+                shouldAnimate: h,
                 onInitialDraw: () => {
                     self.postMessage({
-                        type: o.u.FIRST_DRAW,
-                        canvasId: n
+                        type: n.u.FIRST_DRAW,
+                        canvasId: i
                     });
                 },
                 onError: () => {
                     self.postMessage({
-                        type: o.u.ERROR,
-                        canvasId: n
+                        type: n.u.ERROR,
+                        canvasId: i
                     });
                 }
             });
-        i.set(n, l);
+        a.set(i, l);
     },
-    c = (r) => {
-        var t;
-        let { canvasId: n } = r;
-        null === (t = i.get(n)) || void 0 === t || t.drop(), i.delete(n);
+    o = (t) => {
+        var e;
+        let { canvasId: i } = t;
+        null === (e = a.get(i)) || void 0 === e || e.drop(), a.delete(i);
     },
-    a = (r) => {
-        var t;
-        let { canvasId: n, isVisible: e } = r;
-        null === (t = i.get(n)) || void 0 === t || t.setVisibility(e);
+    u = (t) => {
+        var e;
+        let { canvasId: i, isVisible: r } = t;
+        null === (e = a.get(i)) || void 0 === e || e.setVisibility(r);
     },
-    f = (r) => {
-        var t;
-        let { canvasId: n, shouldAnimate: e, nextFrame: o } = r;
-        null === (t = i.get(n)) || void 0 === t || t.setState(e, o);
+    c = (t) => {
+        var e;
+        let { canvasId: i, shouldAnimate: r, nextFrame: n } = t;
+        null === (e = a.get(i)) || void 0 === e || e.setState(r, n);
     };
-self.addEventListener('message', (r) => {
-    let { data: t } = r;
-    switch (t.type) {
-        case o.u.INITIALIZE:
-            u(t);
+self.addEventListener('message', (t) => {
+    let { data: e } = t;
+    switch (e.type) {
+        case n.u.INITIALIZE:
+            s(e);
             break;
-        case o.u.DROP:
-            c(t);
+        case n.u.DROP:
+            o(e);
             break;
-        case o.u.VISIBILITY_CHANGE:
-            a(t);
+        case n.u.VISIBILITY_CHANGE:
+            u(e);
             break;
-        case o.u.STATE_CHANGE:
-            f(t);
+        case n.u.STATE_CHANGE:
+            c(e);
     }
 });

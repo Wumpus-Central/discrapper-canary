@@ -1,7 +1,7 @@
 e.exports = {
-    headerImage: 'headerImage_bc97aa',
-    header: 'header_bc97aa',
-    closeButtonContainer: 'closeButtonContainer_bc97aa',
-    closeButtonIcon: 'closeButtonIcon_bc97aa',
-    closeButton: 'closeButton_bc97aa'
+    headerImage: 'headerImage__96095',
+    header: 'header__96095',
+    closeButtonContainer: 'closeButtonContainer__96095',
+    closeButtonIcon: 'closeButtonIcon__96095',
+    closeButton: 'closeButton__96095'
 };

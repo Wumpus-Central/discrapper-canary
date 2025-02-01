@@ -1,18 +1,18 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             className: 'string',
             contains: [e.BACKSLASH_ESCAPE],
             variants: [e.inherit(e.APOS_STRING_MODE, { illegal: null }), e.inherit(e.QUOTE_STRING_MODE, { illegal: null })]
         },
-        r = e.UNDERSCORE_TITLE_MODE,
+        n = e.UNDERSCORE_TITLE_MODE,
         i = {
             variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]
         },
-        a = 'namespace class interface use extends function return abstract final public protected private static deprecated throw try catch Exception echo empty isset instanceof unset let var new const self require if else elseif switch case default do while loop for continue break likely unlikely __LINE__ __FILE__ __DIR__ __FUNCTION__ __CLASS__ __TRAIT__ __METHOD__ __NAMESPACE__ array boolean float double integer object resource string char long unsigned bool int uint ulong uchar true false null undefined';
+        r = 'namespace class interface use extends function return abstract final public protected private static deprecated throw try catch Exception echo empty isset instanceof unset let var new const self require if else elseif switch case default do while loop for continue break likely unlikely __LINE__ __FILE__ __DIR__ __FUNCTION__ __CLASS__ __TRAIT__ __METHOD__ __NAMESPACE__ array boolean float double integer object resource string char long unsigned bool int uint ulong uchar true false null undefined';
     return {
         name: 'Zephir',
         aliases: ['zep'],
-        keywords: a,
+        keywords: r,
         contains: [
             e.C_LINE_COMMENT_MODE,
             e.COMMENT(/\/\*/, /\*\//, {
@@ -37,13 +37,13 @@ function n(e) {
                 excludeEnd: !0,
                 illegal: /\$|\[|%/,
                 contains: [
-                    r,
+                    n,
                     {
                         className: 'params',
                         begin: /\(/,
                         end: /\)/,
-                        keywords: a,
-                        contains: ['self', e.C_BLOCK_COMMENT_MODE, n, i]
+                        keywords: r,
+                        contains: ['self', e.C_BLOCK_COMMENT_MODE, t, i]
                     }
                 ]
             },
@@ -53,23 +53,23 @@ function n(e) {
                 end: /\{/,
                 excludeEnd: !0,
                 illegal: /[:($"]/,
-                contains: [{ beginKeywords: 'extends implements' }, r]
+                contains: [{ beginKeywords: 'extends implements' }, n]
             },
             {
                 beginKeywords: 'namespace',
                 end: /;/,
                 illegal: /[.']/,
-                contains: [r]
+                contains: [n]
             },
             {
                 beginKeywords: 'use',
                 end: /;/,
-                contains: [r]
+                contains: [n]
             },
             { begin: /=>/ },
-            n,
+            t,
             i
         ]
     };
 }
-e.exports = n;
+e.exports = t;

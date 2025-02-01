@@ -30,13 +30,13 @@ let l = '',
     v = '',
     y = '',
     I = '',
-    b = !1,
-    T = null,
+    T = !1,
+    b = null,
     S = null,
     A = null,
     N = null;
 function C() {
-    (d = null), (l = ''), (u = null), (c = ''), (f = !1), (_ = null), (p = 'US'), (h = ''), (m = ''), (g = ''), (E = ''), (v = ''), (y = ''), (I = ''), (b = !1), (T = null), (S = null), (A = null), (N = null);
+    (d = null), (l = ''), (u = null), (c = ''), (f = !1), (_ = null), (p = 'US'), (h = ''), (m = ''), (g = ''), (E = ''), (v = ''), (y = ''), (I = ''), (T = !1), (b = null), (S = null), (A = null), (N = null);
 }
 function R(e) {
     (h = e.name), (p = e.country), (g = e.line1), (E = e.line2), (v = e.city), (y = e.postalCode), (I = e.state), (m = e.email);
@@ -56,7 +56,7 @@ function D() {
 }
 function x(e) {
     let { email: t, nonce: n, billingAddress: i } = e;
-    (l = t), (u = n), R(i), (b = p.length > 0);
+    (l = t), (u = n), R(i), (T = p.length > 0);
 }
 function L() {
     (c = ''), (u = null);
@@ -71,18 +71,18 @@ function w(e) {
 }
 function M(e) {
     let { info: t, isValid: n } = e;
-    null != t.name && '' !== t.name && (h = t.name), (p = t.country), (h = t.name), (g = t.line1), (E = t.line2), (v = t.city), (y = t.postalCode), (I = t.state), (m = t.email), (b = n);
+    null != t.name && '' !== t.name && (h = t.name), (p = t.country), (h = t.name), (g = t.line1), (E = t.line2), (v = t.city), (y = t.postalCode), (I = t.state), (m = t.email), (T = n);
 }
 function k(e) {
     let { data: t } = e;
     _ = t;
 }
 function U() {
-    T = null;
+    b = null;
 }
 function G(e) {
     let { error: t } = e;
-    T = t;
+    b = t;
 }
 function B(e) {
     let { query: t } = e;
@@ -135,10 +135,10 @@ class F extends (i = r.ZP.Store) {
         };
     }
     get isBillingAddressInfoValid() {
-        return b;
+        return T;
     }
     get error() {
-        return T;
+        return b;
     }
 }
 o(F, 'displayName', 'NewPaymentSourceStore');

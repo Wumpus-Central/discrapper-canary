@@ -1,4 +1,4 @@
 e.exports = {
-    tabBar: 'tabBar_bff66b',
-    tabBarItem: 'tabBarItem_bff66b'
+    tabBar: 'tabBar_d6f9e9',
+    tabBarItem: 'tabBarItem_d6f9e9'
 };

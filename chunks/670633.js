@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_ea08b2',
-    discount: 'discount_ea08b2'
+    container: 'container__8a8e7',
+    discount: 'discount__8a8e7'
 };

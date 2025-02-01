@@ -1,11 +1,11 @@
-n.exports = {
-    content: 'content_d26d60',
-    stageIconBackground: 'stageIconBackground_d26d60',
-    stageIcon: 'stageIcon_d26d60',
-    headerTitle: 'headerTitle_d26d60',
-    headerSubtitle: 'headerSubtitle_d26d60',
-    buttonsContainer: 'buttonsContainer_d26d60',
-    button: 'button_d26d60',
-    innerButton: 'innerButton_d26d60',
-    icon: 'icon_d26d60'
+e.exports = {
+    content: 'content__17403',
+    stageIconBackground: 'stageIconBackground__17403',
+    stageIcon: 'stageIcon__17403',
+    headerTitle: 'headerTitle__17403',
+    buttonsContainer: 'buttonsContainer__17403',
+    headerSubtitle: 'headerSubtitle__17403',
+    button: 'button__17403',
+    icon: 'icon__17403',
+    innerButton: 'innerButton__17403'
 };

@@ -1,11 +1,11 @@
-let i = n;
+let i = t;
 (i._reverse = function (e) {
-    let n = {};
+    let t = {};
     return (
-        Object.keys(e).forEach(function (r) {
-            (0 | r) == r && (r |= 0), (n[e[r]] = r);
+        Object.keys(e).forEach(function (n) {
+            (0 | n) == n && (n |= 0), (t[e[n]] = n);
         }),
-        n
+        t
     );
 }),
-    (i.der = r(375990));
+    (i.der = n(375990));

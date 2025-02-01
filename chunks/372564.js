@@ -1,9 +1,9 @@
-n(47120);
+n.d(t, { Z: () => C }), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    s = n(513431),
+    a = n(120356),
+    r = n.n(a),
+    s = n(374470),
     o = n(481060),
     c = n(239091),
     d = n(454585),
@@ -27,7 +27,7 @@ function f(e, t, n) {
 function g(e) {
     return e.matches('a') || 'highlight' === e.className || e.className.includes('mention');
 }
-class C extends l.Component {
+class _ extends l.Component {
     render() {
         let { channel: e } = this.props;
         if (e.isMultiUserDM()) return null;
@@ -37,14 +37,14 @@ class C extends l.Component {
                   children: [
                       (0, i.jsx)(u.Z.Divider, {}),
                       (0, i.jsxs)('div', {
-                          className: a()(m.topic, m.expandable),
+                          className: r()(m.topic, m.expandable),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
                           onContextMenu: this.handleContextMenu,
                           onClick: this.handleClick,
                           children: [
-                              (0, i.jsx)(o.Clickable, {
+                              (0, i.jsx)(o.P3F, {
                                   onClick: this.handleClick,
                                   'aria-label': p.intl.string(p.t.mKwsSk),
                                   className: m.topicClickTarget
@@ -72,7 +72,7 @@ class C extends l.Component {
                     let e = t.parentNode;
                     if ((0, s.k)(e) && g(e)) return;
                 }
-                (0, o.openModalLazy)(async () => {
+                (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('65631').then(n.bind(n, 10722));
                     return (t) =>
                         (0, i.jsx)(e, {
@@ -112,4 +112,4 @@ class C extends l.Component {
             });
     }
 }
-t.Z = C;
+let C = _;

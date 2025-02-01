@@ -1,4 +1,4 @@
-e(411104);
+e.d(i, { Z: () => c }), e(411104);
 var s,
     n = e(200651),
     h = e(192379),
@@ -30,7 +30,7 @@ class u extends (s = h.PureComponent) {
     }
     initialize() {
         d(this.props.src).then(() => {
-            !this.unmounting && this.setState({ loaded: !0 });
+            this.unmounting || this.setState({ loaded: !0 });
         });
     }
     componentWillUnmount() {
@@ -64,5 +64,5 @@ o(u, 'defaultProps', {
     width: 0,
     height: 0,
     alt: ''
-}),
-    (i.Z = u);
+});
+let c = u;

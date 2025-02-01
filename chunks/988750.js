@@ -1,6 +1,6 @@
 e.exports = {
-    error: 'error_c39a71',
-    subTitle: 'subTitle_c39a71',
-    button: 'button_c39a71',
-    codeInput: 'codeInput_c39a71'
+    error: 'error__584e1',
+    subTitle: 'subTitle__584e1',
+    button: 'button__584e1',
+    codeInput: 'codeInput__584e1'
 };

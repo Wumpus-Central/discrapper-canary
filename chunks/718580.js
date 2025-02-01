@@ -38,10 +38,10 @@ function E(e) {
 function v(e) {
     var t, n, E;
     let { contentDisplay: v, fadeInOut: y = !1, ...I } = e,
-        b = {},
-        { analyticsLocations: T } = (0, _.ZP)();
+        T = {},
+        { analyticsLocations: b } = (0, _.ZP)();
     r.Children.forEach(I.children, (e, t) => {
-        b[e.props.id] = {
+        T[e.props.id] = {
             children: e.props.children,
             impressionName: e.props.impressionName,
             impressionProperties: e.props.impressionProperties,
@@ -50,13 +50,13 @@ function v(e) {
     });
     let S = I.activeSlide,
         A = (0, d.Z)(I.activeSlide),
-        N = null !== (t = I.directionOverride) && void 0 !== t ? t : m(null != A ? b[A] : null, b[S]),
+        N = null !== (t = I.directionOverride) && void 0 !== t ? t : m(null != A ? T[A] : null, T[S]),
         { reducedMotion: C } = r.useContext(l.S),
         R = r.useContext(f.Z),
-        O = b[S].impressionName,
+        O = T[S].impressionName,
         D = {
-            ...b[S].impressionProperties,
-            location_stack: T
+            ...T[S].impressionProperties,
+            location_stack: b
         };
     R({
         type: s.ImpressionTypes.MODAL,
@@ -135,7 +135,7 @@ function v(e) {
                                   ...(y && s)
                               })
                     },
-                    children: b[t].children
+                    children: T[t].children
                 },
                 r
             );

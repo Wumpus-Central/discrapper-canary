@@ -1,44 +1,44 @@
-var i = r(411104);
-var a = r(710845),
-    o = r(358085),
-    s = r(579806);
-function l(e, n, r) {
+n.d(t, { Z: () => u }), n(411104);
+var i = n(710845),
+    r = n(358085),
+    a = n(579806);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = new a.Z('ProgressBarManager');
-class c {
-    setProgress(e, n) {
-        if (!(0, o.isDesktop)()) throw Error('cannot set progress from non-native');
+let o = new i.Z('ProgressBarManager');
+class l {
+    setProgress(e, t) {
+        if (!(0, r.isDesktop)()) throw Error('cannot set progress from non-native');
         if (null != this.taskID && this.taskID !== e) {
-            u.warn(''.concat(this.taskID, ' is already running. cannot set ').concat(e));
+            o.warn(''.concat(this.taskID, ' is already running. cannot set ').concat(e));
             return;
         }
-        (this.taskID = e), s.Z.window.setProgressBar(n);
+        (this.taskID = e), a.Z.window.setProgressBar(t);
     }
     clearProgress(e) {
-        if (!(0, o.isDesktop)()) throw Error('cannot clear progress from non-native');
+        if (!(0, r.isDesktop)()) throw Error('cannot clear progress from non-native');
         if (null == this.taskID) {
-            u.warn('cannot clear progress. No current progress running.');
+            o.warn('cannot clear progress. No current progress running.');
             return;
         }
         if (this.taskID !== e) {
-            u.warn('cannot clear progress of '.concat(e, ' when ').concat(this.taskID, ' is running'));
+            o.warn('cannot clear progress of '.concat(e, ' when ').concat(this.taskID, ' is running'));
             return;
         }
-        (this.taskID = null), s.Z.window.setProgressBar(-1);
+        (this.taskID = null), a.Z.window.setProgressBar(-1);
     }
     constructor() {
-        l(this, 'taskID', void 0);
+        s(this, 'taskID', void 0);
     }
 }
-n.Z = new c();
+let u = new l();

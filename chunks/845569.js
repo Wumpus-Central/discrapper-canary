@@ -1,9 +1,9 @@
 e.exports = {
-    modalClose: 'modalClose_e5da2b',
-    modalRoot: 'modalRoot_e5da2b',
-    header: 'header_e5da2b',
-    camera: 'camera_e5da2b',
-    cameraPreview: 'cameraPreview_e5da2b',
-    content: 'content_e5da2b',
-    contentWithVideoBackgrounds: 'contentWithVideoBackgrounds_e5da2b content_e5da2b'
+    modalClose: 'modalClose__19236',
+    modalRoot: 'modalRoot__19236',
+    header: 'header__19236',
+    camera: 'camera__19236',
+    cameraPreview: 'cameraPreview__19236',
+    content: 'content__19236',
+    contentWithVideoBackgrounds: 'contentWithVideoBackgrounds__19236 content__19236'
 };

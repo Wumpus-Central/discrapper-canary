@@ -1,7 +1,7 @@
 e.exports = {
-    iconWrapper: 'iconWrapper_ec583a',
-    icon: 'icon_ec583a',
-    subtitle: 'subtitle_ec583a',
-    threadCreatorName: 'threadCreatorName_ec583a',
-    unknownCreatorName: 'unknownCreatorName_ec583a'
+    iconWrapper: 'iconWrapper__54b20',
+    icon: 'icon__54b20',
+    subtitle: 'subtitle__54b20',
+    threadCreatorName: 'threadCreatorName__54b20',
+    unknownCreatorName: 'unknownCreatorName__54b20'
 };

@@ -1,29 +1,29 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(232713),
-    c = r(318766),
-    d = r(28546),
-    f = r(957825),
-    p = r(553796);
-function h(e, n) {
-    let { disabled: r, type: i } = e,
-        [s, h, _] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], u.X),
-        m = o.useCallback(() => {
-            (0, d.RO)(f.X1.EMOJI, i);
-        }, [i]);
-    return r
+n.d(t, { Z: () => _ }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(232713),
+    l = n(318766),
+    u = n(28546),
+    c = n(957825),
+    d = n(553796);
+function f(e, t) {
+    let { disabled: n, type: a } = e,
+        [f, _, p] = (0, u.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
+        h = r.useCallback(() => {
+            (0, u.RO)(c.X1.EMOJI, a);
+        }, [a]);
+    return n
         ? null
-        : (0, a.jsx)('div', {
-              className: l()(f.CT, p.buttonContainer),
-              ref: n,
-              children: (0, a.jsx)(c.Z, {
-                  className: p.emojiButton,
-                  onClick: m,
-                  active: s === f.X1.EMOJI && h === i,
-                  'aria-controls': _,
+        : (0, i.jsx)('div', {
+              className: s()(c.CT, d.buttonContainer),
+              ref: t,
+              children: (0, i.jsx)(l.Z, {
+                  className: d.emojiButton,
+                  onClick: h,
+                  active: f === c.X1.EMOJI && _ === a,
+                  'aria-controls': p,
                   tabIndex: 0,
                   focusProps: {
                       offset: {
@@ -37,4 +37,4 @@ function h(e, n) {
               })
           });
 }
-n.Z = o.memo(o.forwardRef(h));
+let _ = r.memo(r.forwardRef(f));

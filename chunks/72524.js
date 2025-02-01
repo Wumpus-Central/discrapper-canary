@@ -1,4 +1,4 @@
 e.exports = {
-    cardContent: 'cardContent_eaaaea',
-    cardDescription: 'cardDescription_eaaaea'
+    cardContent: 'cardContent_f62fce',
+    cardDescription: 'cardDescription_f62fce'
 };

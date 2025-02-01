@@ -1,14 +1,14 @@
-t.exports = {
-    container: 'container_f91bb7',
-    image: 'image_f91bb7',
-    description: 'description_f91bb7',
-    card: 'card_f91bb7',
-    body: 'body_f91bb7',
-    purchaseBtn: 'purchaseBtn_f91bb7',
-    benefits: 'benefits_f91bb7',
-    benefitsContainer: 'benefitsContainer_f91bb7',
-    benefitsList: 'benefitsList_f91bb7',
-    cardBenefit: 'cardBenefit_f91bb7',
-    cardBenefitIcon: 'cardBenefitIcon_f91bb7',
-    benefitsSummary: 'benefitsSummary_f91bb7'
+e.exports = {
+    container: 'container__62119',
+    image: 'image__62119',
+    description: 'description__62119',
+    card: 'card__62119',
+    body: 'body__62119',
+    purchaseBtn: 'purchaseBtn__62119',
+    benefits: 'benefits__62119',
+    benefitsContainer: 'benefitsContainer__62119',
+    benefitsList: 'benefitsList__62119',
+    cardBenefit: 'cardBenefit__62119',
+    cardBenefitIcon: 'cardBenefitIcon__62119',
+    benefitsSummary: 'benefitsSummary__62119'
 };

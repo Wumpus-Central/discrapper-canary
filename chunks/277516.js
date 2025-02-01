@@ -1,4 +1,4 @@
 e.exports = {
-    acknowledgementCheckbox: 'acknowledgementCheckbox_a8af02',
-    closeIcon: 'closeIcon_a8af02'
+    acknowledgementCheckbox: 'acknowledgementCheckbox_ec3eb0',
+    closeIcon: 'closeIcon_ec3eb0'
 };

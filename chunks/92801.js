@@ -1,4 +1,4 @@
-var a = r(706627);
-e.exports = function (e) {
-    return e == e && !a(e);
+var r = a(706627);
+t.exports = function (t) {
+    return t == t && !r(t);
 };

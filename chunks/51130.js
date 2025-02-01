@@ -1,6 +1,6 @@
 e.exports = {
-    gameTitle: 'gameTitle_cf6db7',
-    gameIcon: 'gameIcon_cf6db7',
-    gameTitleContainer: 'gameTitleContainer_cf6db7',
-    emptyStateImage: 'emptyStateImage_cf6db7'
+    gameTitle: 'gameTitle_d5d1e1',
+    gameIcon: 'gameIcon_d5d1e1',
+    gameTitleContainer: 'gameTitleContainer_d5d1e1',
+    emptyStateImage: 'emptyStateImage_d5d1e1'
 };

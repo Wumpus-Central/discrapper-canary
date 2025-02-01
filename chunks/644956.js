@@ -19,8 +19,8 @@ var r = n(120356),
     v = n(480608),
     y = n(124072),
     I = n(184301),
-    b = n(347475),
-    T = n(592125),
+    T = n(347475),
+    b = n(592125),
     S = n(271383),
     A = n(430824),
     N = n(594174),
@@ -47,7 +47,7 @@ function x(e) {
         k = null != t && 0 !== t && !P,
         U = k && 'dot' === M,
         G = (0, u.e7)([A.Z], () => A.Z.getGuild(x)),
-        B = (0, u.e7)([T.Z], () => T.Z.getChannel(s)),
+        B = (0, u.e7)([b.Z], () => b.Z.getChannel(s)),
         Z = (e) =>
             (0, i.jsxs)(y.Z, {
                 className: a()(R.roleMention),
@@ -97,7 +97,7 @@ function x(e) {
                                                   channelId: B.id
                                               }),
                                           renderPopout: (t) =>
-                                              (0, i.jsx)(b.Z, {
+                                              (0, i.jsx)(T.Z, {
                                                   ...t,
                                                   userId: e.userId,
                                                   guildId: G.id,

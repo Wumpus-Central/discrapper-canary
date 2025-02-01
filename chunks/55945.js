@@ -1,6 +1,6 @@
 e.exports = {
-    listItemContents: 'listItemContents_ccc740',
-    actions: 'actions_ccc740',
-    staffIndicator: 'staffIndicator_ccc740',
-    applicationSublabel: 'applicationSublabel_ccc740'
+    listItemContents: 'listItemContents_e1ecd3',
+    actions: 'actions_e1ecd3',
+    staffIndicator: 'staffIndicator_e1ecd3',
+    applicationSublabel: 'applicationSublabel_e1ecd3'
 };

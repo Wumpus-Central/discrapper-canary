@@ -1,4 +1,4 @@
-n(47120);
+n.d(t, { Z: () => y }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(442837),
@@ -13,35 +13,35 @@ var i = n(200651),
     g = n(594174),
     x = n(451478),
     p = n(626135),
-    f = n(584825),
+    _ = n(584825),
     C = n(723047),
-    v = n(416867),
-    I = n(903773),
+    f = n(416867),
+    v = n(903773),
     N = n(215124),
-    _ = n(326578),
-    T = n(981631),
-    j = n(674563),
+    j = n(326578),
+    I = n(981631),
+    E = n(674563),
     b = n(829857),
-    E = n(388032),
+    T = n(388032),
     S = n(143614);
 function R(e) {
     let { onCreateTeamClick: t, isGuildOwner: n } = e;
     return (0, i.jsx)('div', {
         className: S.selectTeamContainer,
-        children: (0, i.jsx)(s.Button, {
+        children: (0, i.jsx)(s.zxk, {
             disabled: !n,
             onClick: t,
             className: S.enableTicketingButton,
             fullWidth: !0,
-            children: E.intl.string(E.t['5k6FfX'])
+            children: T.intl.string(T.t['5k6FfX'])
         })
     });
 }
-function y(e) {
+function Z(e) {
     let { guild: t, eligibleTeams: n, isGuildOwner: l } = e,
         [a, o] = r.useState(),
         { enableGuildMonetizationForTeam: d, submitting: u, error: m } = (0, c.Z)(),
-        { fetchSubscriptionsSettings: h } = (0, f.JH)(),
+        { fetchSubscriptionsSettings: h } = (0, _.JH)(),
         g = (0, C.mY)(),
         x = r.useMemo(
             () =>
@@ -52,12 +52,12 @@ function y(e) {
             [n]
         ),
         p = async () => {
-            (await d(t, a, j.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
+            (await d(t, a, E.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (h(t.id),
-                (0, v.B)({
-                    Icon: _.Z,
-                    title: E.intl.string(E.t['AP/2qa']),
-                    body: E.intl.string(E.t.kHMgaG)
+                (0, f.B)({
+                    Icon: j.Z,
+                    title: T.intl.string(T.t['AP/2qa']),
+                    body: T.intl.string(T.t.kHMgaG)
                 }));
         };
     return (0, i.jsxs)(i.Fragment, {
@@ -65,21 +65,21 @@ function y(e) {
             (0, i.jsxs)('div', {
                 className: S.selectTeamContainer,
                 children: [
-                    (0, i.jsx)(s.SingleSelect, {
+                    (0, i.jsx)(s.q4e, {
                         className: S.teamSelect,
                         options: x,
-                        placeholder: E.intl.string(E.t.QXf93N),
+                        placeholder: T.intl.string(T.t.QXf93N),
                         value: a,
                         isDisabled: 0 === x.length || g || !l,
                         onChange: (e) => o(e),
-                        'aria-label': E.intl.string(E.t.QXf93N)
+                        'aria-label': T.intl.string(T.t.QXf93N)
                     }),
-                    (0, i.jsx)(s.Button, {
+                    (0, i.jsx)(s.zxk, {
                         onClick: p,
                         className: S.enableTicketingButton,
                         submitting: u,
                         disabled: null == a || g || !l,
-                        children: E.intl.string(E.t['9HU3ZW'])
+                        children: T.intl.string(T.t['9HU3ZW'])
                     })
                 ]
             }),
@@ -92,75 +92,75 @@ function y(e) {
         ]
     });
 }
-t.Z = (e) => {
+let y = (e) => {
     let { guild: t } = e,
         n = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
         c = t.isOwner(n),
-        f = (0, o.Ob)(t),
+        _ = (0, o.Ob)(t),
         C = (0, l.e7)([x.Z], () => x.Z.isFocused()),
-        { teams: v, loading: _ } = (0, h.Z)({ refreshOnDepChange: C }),
-        j = r.useMemo(
+        { teams: f, loading: j } = (0, h.Z)({ refreshOnDepChange: C }),
+        E = r.useMemo(
             () =>
-                v.filter((e) => {
+                f.filter((e) => {
                     var t;
-                    return e.payout_account_status !== b.C.BLOCKED && (0, m.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : T.lds, e);
+                    return e.payout_account_status !== b.C.BLOCKED && (0, m.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : I.lds, e);
                 }),
-            [v, n]
+            [f, n]
         ),
-        A = j.length > 0,
-        Z = r.useCallback(async () => {
-            p.default.track(T.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
-                is_onboarding_v2: f,
-                has_eligible_team: A,
+        y = E.length > 0,
+        A = r.useCallback(async () => {
+            p.default.track(I.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
+                is_onboarding_v2: _,
+                has_eligible_team: y,
                 guild_id: t.id,
                 is_owner: c
             });
-            let e = await (0, d.$)(T.E07.DEVELOPER_PORTAL_TEAMS);
+            let e = await (0, d.$)(I.E07.DEVELOPER_PORTAL_TEAMS);
             (0, a.Z)(e);
-        }, [t, c, f, A]),
+        }, [t, c, _, y]),
         L = r.useCallback(
             (e) =>
                 c
                     ? (0, i.jsx)(u.Z, {
-                          onClick: Z,
+                          onClick: A,
                           children: e
                       })
                     : e,
-            [Z, c]
+            [A, c]
         );
-    return _
-        ? (0, i.jsx)(s.Spinner, {})
+    return j
+        ? (0, i.jsx)(s.$jN, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   !c &&
-                      (0, i.jsx)(I.Z, {
+                      (0, i.jsx)(v.Z, {
                           className: S.nonOwnerNotice,
-                          children: E.intl.string(E.t.t56qWF)
+                          children: T.intl.string(T.t.t56qWF)
                       }),
-                  (0, i.jsxs)(s.FormSection, {
-                      title: E.intl.string(E.t.sYLCY2),
+                  (0, i.jsxs)(s.hjN, {
+                      title: T.intl.string(T.t.sYLCY2),
                       disabled: !c,
                       children: [
-                          (0, i.jsx)(s.FormText, {
-                              type: s.FormText.Types.DESCRIPTION,
+                          (0, i.jsx)(s.R94, {
+                              type: s.R94.Types.DESCRIPTION,
                               className: S.description,
                               disabled: !c,
-                              children: E.intl.format(E.t['5mfqpa'], { onCreateTeamHook: L })
+                              children: T.intl.format(T.t['5mfqpa'], { onCreateTeamHook: L })
                           }),
-                          A
-                              ? (0, i.jsx)(y, {
+                          y
+                              ? (0, i.jsx)(Z, {
                                     guild: t,
-                                    eligibleTeams: j,
+                                    eligibleTeams: E,
                                     isGuildOwner: c
                                 })
                               : (0, i.jsx)(R, {
-                                    onCreateTeamClick: Z,
+                                    onCreateTeamClick: A,
                                     isGuildOwner: c
                                 })
                       ]
                   }),
-                  (0, i.jsx)(s.FormSection, {
-                      title: E.intl.string(E.t['0n7R2d']),
+                  (0, i.jsx)(s.hjN, {
+                      title: T.intl.string(T.t['0n7R2d']),
                       className: S.selfDemonetization,
                       children: (0, i.jsx)(N.Z, {
                           guildId: t.id,

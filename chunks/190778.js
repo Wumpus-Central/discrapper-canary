@@ -1,4 +1,4 @@
 e.exports = {
-    categories: 'categories_edecf1',
-    category: 'category_edecf1'
+    categories: 'categories_ed45d7',
+    category: 'category_ed45d7'
 };

@@ -1,8 +1,8 @@
 e.exports = {
-    ctaButtons: 'ctaButtons_e60321',
-    cta: 'cta_e60321',
-    shine: 'shine_e60321',
-    backButton: 'backButton_e60321',
-    backButtonInner: 'backButtonInner_e60321',
-    backIcon: 'backIcon_e60321'
+    ctaButtons: 'ctaButtons_a77fde',
+    cta: 'cta_a77fde',
+    shine: 'shine_a77fde',
+    backButton: 'backButton_a77fde',
+    backButtonInner: 'backButtonInner_a77fde',
+    backIcon: 'backIcon_a77fde'
 };

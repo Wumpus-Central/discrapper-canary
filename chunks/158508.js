@@ -22,28 +22,28 @@ function g() {
 }
 function E(e) {
     let { user: t, guildId: n, channelId: l, onBlock: E, onIgnore: v, onUnignore: y, location: I = 'ContextMenu' } = e,
-        { id: b } = t,
-        T = (0, r.e7)(
+        { id: T } = t,
+        b = (0, r.e7)(
             [_.default],
             () => {
                 var e;
-                return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === b;
+                return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === T;
             },
-            [b]
+            [T]
         ),
         { isIgnored: S, isBlocked: A } = (0, r.cj)(
             [f.Z],
             () => ({
-                isIgnored: f.Z.isIgnored(b),
-                isBlocked: f.Z.isBlocked(b)
+                isIgnored: f.Z.isIgnored(T),
+                isBlocked: f.Z.isBlocked(T)
             }),
-            [b]
+            [T]
         ),
         N = (0, c.Do)({ location: 'use-block-user-item-web' }),
         C = N ? [a.z.IGNORE_USER_NEW_BADGE] : [],
         [R, O] = (0, u.US)(C),
         D = R === a.z.IGNORE_USER_NEW_BADGE;
-    return !N || T || A
+    return !N || b || A
         ? null
         : (0, i.jsx)(s.sNh, {
               id: 'ignore',
@@ -56,7 +56,7 @@ function E(e) {
                     }),
               action: S
                   ? () => {
-                        null == y || y(), o.Z.unignoreUser(b, null != I ? I : 'use-ignore-user-item-web', null != l ? l : void 0);
+                        null == y || y(), o.Z.unignoreUser(T, null != I ? I : 'use-ignore-user-item-web', null != l ? l : void 0);
                     }
                   : () => {
                         D && O(p.L.TAKE_ACTION),

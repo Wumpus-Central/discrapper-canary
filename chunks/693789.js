@@ -67,10 +67,10 @@ function g() {
     });
 }
 function E(e) {
-    let { look: t = _.FILLED, color: n = p.BRAND, size: a = h.MEDIUM, fullWidth: o = !1, grow: E = !0, disabled: v = !1, submitting: y = !1, type: I = 'button', style: b, wrapperClassName: T, className: S, innerClassName: A, onClick: N, onDoubleClick: C, onMouseDown: R, onMouseUp: O, onMouseEnter: D, onMouseLeave: x, onKeyDown: L, children: P, rel: w, buttonRef: M, focusProps: k, 'aria-label': U, submittingStartedLabel: G, submittingFinishedLabel: B, ...Z } = e,
+    let { look: t = _.FILLED, color: n = p.BRAND, size: a = h.MEDIUM, fullWidth: o = !1, grow: E = !0, disabled: v = !1, submitting: y = !1, type: I = 'button', style: T, wrapperClassName: b, className: S, innerClassName: A, onClick: N, onDoubleClick: C, onMouseDown: R, onMouseUp: O, onMouseEnter: D, onMouseLeave: x, onKeyDown: L, children: P, rel: w, buttonRef: M, focusProps: k, 'aria-label': U, submittingStartedLabel: G, submittingFinishedLabel: B, ...Z } = e,
         F = v || y,
         V = F && (null != D || null != x),
-        j = V ? null : T,
+        j = V ? null : b,
         H = m(k, t),
         Y = r.useRef(!1);
     r.useEffect(() => {
@@ -93,7 +93,7 @@ function E(e) {
             onKeyDown: v ? void 0 : L,
             type: I,
             disabled: v,
-            style: b,
+            style: T,
             rel: w,
             className: s()(
                 S,
@@ -125,7 +125,7 @@ function E(e) {
     });
     return V
         ? (0, i.jsxs)('span', {
-              className: s()(f.disabledButtonWrapper, T, a, {
+              className: s()(f.disabledButtonWrapper, b, a, {
                   [f.grow]: E,
                   [f.fullWidth]: o
               }),
@@ -141,9 +141,9 @@ function E(e) {
         : W;
 }
 function v(e) {
-    let { look: t = _.FILLED, color: n = p.BRAND, size: r = h.MEDIUM, fullWidth: a = !1, grow: l = !0, style: u, className: c, innerClassName: d, to: m, onClick: g, onMouseDown: E, onMouseUp: v, children: y, rel: I, ...b } = e;
+    let { look: t = _.FILLED, color: n = p.BRAND, size: r = h.MEDIUM, fullWidth: a = !1, grow: l = !0, style: u, className: c, innerClassName: d, to: m, onClick: g, onMouseDown: E, onMouseUp: v, children: y, rel: I, ...T } = e;
     return (0, i.jsx)(o.rU, {
-        ...b,
+        ...T,
         to: m,
         onClick: g,
         onMouseUp: v,

@@ -1,4 +1,4 @@
 e.exports = {
-    icon: 'icon_f542fc',
-    browser: 'browser_f542fc'
+    icon: 'icon_d98031',
+    browser: 'browser_d98031'
 };

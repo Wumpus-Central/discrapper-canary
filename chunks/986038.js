@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_c23582',
-    peopleIcon: 'peopleIcon_c23582',
-    userCountText: 'userCountText_c23582'
+    container: 'container_b1bfd4',
+    peopleIcon: 'peopleIcon_b1bfd4',
+    userCountText: 'userCountText_b1bfd4'
 };

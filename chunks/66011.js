@@ -1,4 +1,4 @@
 e.exports = {
-    divider: 'divider_bcb954',
-    separator: 'separator_bcb954'
+    divider: 'divider__33f29',
+    separator: 'separator__33f29'
 };

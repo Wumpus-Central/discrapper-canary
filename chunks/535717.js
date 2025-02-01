@@ -1,5 +1,5 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
         begin: /\|[A-Za-z]+:?/,
         keywords: { name: 'truncatewords removetags linebreaksbr yesno get_digit timesince random striptags filesizeformat escape linebreaks length_is ljust rjust cut urlize fix_ampersands title floatformat capfirst pprint divisibleby add make_list unordered_list urlencode timeuntil urlizetrunc wordcount stringformat linenumbers slice date dictsort dictsortreversed default_if_none pluralize lower join center default truncatewords_html upper length phone2numeric wordwrap time addslashes slugify first escapejs force_escape iriencode last safe safeseq truncatechars localize unlocalize localtime utc timezone' },
         contains: [e.QUOTE_STRING_MODE, e.APOS_STRING_MODE]
@@ -24,7 +24,7 @@ function n(e) {
                         starts: {
                             endsWithParent: !0,
                             keywords: 'in by as',
-                            contains: [n],
+                            contains: [t],
                             relevance: 0
                         }
                     }
@@ -34,9 +34,9 @@ function n(e) {
                 className: 'template-variable',
                 begin: /\{\{/,
                 end: /\}\}/,
-                contains: [n]
+                contains: [t]
             }
         ]
     };
 }
-e.exports = n;
+e.exports = t;

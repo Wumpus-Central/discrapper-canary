@@ -1,11 +1,11 @@
-var i = r(584428),
-    a = r(438330);
-function o(e) {
-    for (var n = a(e), r = n.length; r--; ) {
-        var o = n[r],
-            s = e[o];
-        n[r] = [o, s, i(s)];
+var i = n(584428),
+    r = n(438330);
+function a(e) {
+    for (var t = r(e), n = t.length; n--; ) {
+        var a = t[n],
+            s = e[a];
+        t[n] = [a, s, i(s)];
     }
-    return n;
+    return t;
 }
-e.exports = o;
+e.exports = a;

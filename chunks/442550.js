@@ -13,9 +13,9 @@ function f(e) {
         g = (0, u.ZP)(),
         E = ''.concat(n, 'px'),
         [v, y] = r.useState(!1),
-        [I, b] = r.useState(!1),
-        T = null == p || I;
-    if (null == t || (v && T))
+        [I, T] = r.useState(!1),
+        b = null == p || I;
+    if (null == t || (v && b))
         return (0, i.jsx)(l.IMN, {
             size: 'custom',
             width: '100%',
@@ -48,7 +48,7 @@ function f(e) {
                     src: v && null != p ? p : t,
                     'aria-hidden': h,
                     alt: null != _ ? _ : h ? void 0 : c.intl.string(c.t['2B/phI']),
-                    onError: (e) => (v ? b(!0) : y(!0))
+                    onError: (e) => (v ? T(!0) : y(!0))
                 })
         },
         'content-image'

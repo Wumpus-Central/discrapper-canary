@@ -1,5 +1,5 @@
 e.exports = {
-    column: 'column_ef5bab',
-    container: 'container_ef5bab',
-    content: 'content_ef5bab'
+    column: 'column__1e128',
+    container: 'container__1e128',
+    content: 'content__1e128'
 };

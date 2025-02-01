@@ -1,11 +1,11 @@
 e.exports = {
-    container: 'container_b36404',
-    body: 'body_b36404',
-    footer: 'footer_b36404',
-    placeholderLines: 'placeholderLines_b36404',
-    placeholderLine: 'placeholderLine_b36404',
-    placeholderMedia: 'placeholderMedia_b36404',
-    reaction: 'reaction_b36404',
-    reactionEmote: 'reactionEmote_b36404',
-    dot: 'dot_b36404'
+    container: 'container_db5301',
+    body: 'body_db5301',
+    footer: 'footer_db5301',
+    placeholderLines: 'placeholderLines_db5301',
+    placeholderLine: 'placeholderLine_db5301',
+    placeholderMedia: 'placeholderMedia_db5301',
+    reaction: 'reaction_db5301',
+    reactionEmote: 'reactionEmote_db5301',
+    dot: 'dot_db5301'
 };

@@ -1,73 +1,73 @@
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(388032),
-    u = r(523184),
-    c = r(247844);
-function d(e) {
-    let { className: n, icon: r, children: a } = e;
+n.d(t, { Z: () => d });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(388032),
+    l = n(523184),
+    u = n(247844);
+function c(e) {
+    let { className: t, icon: n, children: r } = e;
     return (0, i.jsxs)('li', {
-        className: o()(u.card, n),
+        className: a()(l.card, t),
         children: [
-            (0, i.jsx)(r, { className: u.icon }),
+            (0, i.jsx)(n, { className: l.icon }),
             (0, i.jsx)(s.Text, {
-                className: u.__invalid_description,
+                className: l.__invalid_description,
                 variant: 'text-sm/medium',
-                children: a
+                children: r
             })
         ]
     });
 }
-function f(e) {
-    let { cardClassName: n } = e;
+let d = function (e) {
+    let { cardClassName: t } = e;
     return (0, i.jsxs)('div', {
-        className: u.wrapper,
+        className: l.wrapper,
         children: [
             (0, i.jsxs)('div', {
-                className: u.content,
+                className: l.content,
                 children: [
-                    (0, i.jsx)(s.Heading, {
-                        className: u.heading,
+                    (0, i.jsx)(s.X6q, {
+                        className: l.heading,
                         color: 'always-white',
                         variant: 'heading-xxl/bold',
-                        children: l.intl.string(l.t.IzKs3t)
+                        children: o.intl.string(o.t.IzKs3t)
                     }),
                     (0, i.jsxs)('ul', {
-                        className: u.cards,
+                        className: l.cards,
                         children: [
-                            (0, i.jsx)(d, {
-                                className: n,
-                                icon: s.BoostTier2SimpleIcon,
-                                children: l.intl.string(l.t.TZigSE)
+                            (0, i.jsx)(c, {
+                                className: t,
+                                icon: s.$zw,
+                                children: o.intl.string(o.t.TZigSE)
                             }),
-                            (0, i.jsx)(d, {
-                                className: n,
+                            (0, i.jsx)(c, {
+                                className: t,
                                 icon: (e) =>
                                     (0, i.jsx)('img', {
-                                        className: o()(e.className, u.iconImage),
-                                        src: c,
+                                        className: a()(e.className, l.iconImage),
+                                        src: u,
                                         alt: ''
                                     }),
-                                children: l.intl.string(l.t.hjQuV1)
+                                children: o.intl.string(o.t.hjQuV1)
                             }),
-                            (0, i.jsx)(d, {
-                                className: n,
-                                icon: s.ShieldUserIcon,
-                                children: l.intl.string(l.t['2RUcaG'])
+                            (0, i.jsx)(c, {
+                                className: t,
+                                icon: s.lZ8,
+                                children: o.intl.string(o.t['2RUcaG'])
                             }),
-                            (0, i.jsx)(d, {
-                                className: n,
-                                icon: s.HeartIcon,
-                                children: l.intl.string(l.t.bJoZKS)
+                            (0, i.jsx)(c, {
+                                className: t,
+                                icon: s.h_8,
+                                children: o.intl.string(o.t.bJoZKS)
                             })
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)('div', { className: u.backgroundImages })
+            (0, i.jsx)('div', { className: l.backgroundImages })
         ]
     });
-}
-n.Z = f;
+};

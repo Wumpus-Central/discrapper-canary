@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
         0: '-ші',
         1: '-ші',
         2: '-ші',
@@ -63,9 +63,9 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}-(ші|шы)/,
         ordinal: function (e) {
-            var r = e % 10,
+            var n = e % 10,
                 i = e >= 100 ? 100 : null;
-            return e + (n[e] || n[r] || n[i]);
+            return e + (t[e] || t[n] || t[i]);
         },
         week: {
             dow: 1,

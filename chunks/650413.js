@@ -1,7 +1,7 @@
 e.exports = {
-    main: 'main_d8215a',
-    artwork: 'artwork_d8215a',
-    gradient: 'gradient_d8215a',
-    bottomCenterContent: 'bottomCenterContent_d8215a',
-    cover: 'cover_d8215a'
+    main: 'main_c08b38',
+    artwork: 'artwork_c08b38',
+    gradient: 'gradient_c08b38',
+    bottomCenterContent: 'bottomCenterContent_c08b38',
+    cover: 'cover_c08b38'
 };

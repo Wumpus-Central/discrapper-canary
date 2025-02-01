@@ -124,7 +124,7 @@ function h(e) {
             t
         );
     }
-    function b(e) {
+    function T(e) {
         return (0, i.jsx)(
             l.P,
             {
@@ -137,7 +137,7 @@ function h(e) {
             e.key
         );
     }
-    function T(e) {
+    function b(e) {
         return (0, i.jsx)(
             p,
             {
@@ -161,9 +161,9 @@ function h(e) {
                               case d.s.BACK:
                                   return y(e);
                               case d.s.PAGE:
-                                  return b(e);
-                              case d.s.GAP:
                                   return T(e);
+                              case d.s.GAP:
+                                  return b(e);
                               case d.s.NEXT:
                                   return I(e);
                               default:

@@ -1,6 +1,6 @@
-(e.exports = {}).forEach = function (e, n) {
-    for (var r = 0; r < e.length; r++) {
-        var i = n(e[r]);
+(e.exports = {}).forEach = function (e, t) {
+    for (var n = 0; n < e.length; n++) {
+        var i = t(e[n]);
         if (i) return i;
     }
 };

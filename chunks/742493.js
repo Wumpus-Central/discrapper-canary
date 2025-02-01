@@ -1,5 +1,5 @@
 e.exports = {
-    wrapper: 'wrapper_fd23f5',
-    header: 'header_fd23f5',
-    content: 'content_fd23f5'
+    wrapper: 'wrapper__77ba1',
+    header: 'header__77ba1',
+    content: 'content__77ba1'
 };

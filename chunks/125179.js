@@ -1,3 +1,3 @@
-e.exports = function (e, n) {
-    return !!n && 'object' == typeof n && '[[Enumerable]]' in n && '[[Configurable]]' in n && (e.IsAccessorDescriptor(n) || e.IsDataDescriptor(n));
+e.exports = function (e, t) {
+    return !!t && 'object' == typeof t && '[[Enumerable]]' in t && '[[Configurable]]' in t && (e.IsAccessorDescriptor(t) || e.IsDataDescriptor(t));
 };

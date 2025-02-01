@@ -1,16 +1,16 @@
-function n(e) {
-    let n = e.regex,
-        r = /([-a-zA-Z$._][\w$.-]*)/,
+function t(e) {
+    let t = e.regex,
+        n = /([-a-zA-Z$._][\w$.-]*)/,
         i = {
             className: 'type',
             begin: /\bi\d+(?=\s|\b)/
         },
-        a = {
+        r = {
             className: 'operator',
             relevance: 0,
             begin: /=/
         },
-        o = {
+        a = {
             className: 'punctuation',
             relevance: 0,
             begin: /,/
@@ -20,18 +20,18 @@ function n(e) {
             variants: [{ begin: /[su]?0[xX][KMLHR]?[a-fA-F0-9]+/ }, { begin: /[-+]?\d+(?:[.]\d+)?(?:[eE][-+]?\d+(?:[.]\d+)?)?/ }],
             relevance: 0
         },
-        l = {
+        o = {
             className: 'symbol',
             variants: [{ begin: /^\s*[a-z]+:/ }],
             relevance: 0
         },
-        u = {
+        l = {
             className: 'variable',
-            variants: [{ begin: n.concat(/%/, r) }, { begin: /%\d+/ }, { begin: /#\d+/ }]
+            variants: [{ begin: t.concat(/%/, n) }, { begin: /%\d+/ }, { begin: /#\d+/ }]
         },
-        c = {
+        u = {
             className: 'title',
-            variants: [{ begin: n.concat(/@/, r) }, { begin: /@\d+/ }, { begin: n.concat(/!/, r) }, { begin: n.concat(/!\d+/, r) }, { begin: /!\d+/ }]
+            variants: [{ begin: t.concat(/@/, n) }, { begin: /@\d+/ }, { begin: t.concat(/!/, n) }, { begin: t.concat(/!\d+/, n) }, { begin: /!\d+/ }]
         };
     return {
         name: 'LLVM IR',
@@ -54,13 +54,13 @@ function n(e) {
                     }
                 ]
             },
-            c,
-            o,
-            a,
             u,
+            a,
+            r,
             l,
+            o,
             s
         ]
     };
 }
-e.exports = n;
+e.exports = t;

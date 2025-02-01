@@ -1,4 +1,4 @@
-n.d(t, { C: () => T });
+n.d(t, { C: () => b });
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -18,18 +18,18 @@ var i = n(200651),
     v = n(388032),
     y = n(812126),
     I = n(867250);
-let b = () => (0, h.f)(!1),
-    T = (e) => {
+let T = () => (0, h.f)(!1),
+    b = (e) => {
         var t, n, a;
         let { onLearnMore: h } = e,
-            { analyticsLocations: T } = (0, u.ZP)(l.Z.PREMIUM_UPSELL);
+            { analyticsLocations: b } = (0, u.ZP)(l.Z.PREMIUM_UPSELL);
         r.useEffect(() => {
             _.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
                 location_section: g.jXE.STICKER_PICKER_UPSELL,
                 type: E.cd.STICKER_PICKER_UPSELL,
-                location_stack: T
+                location_stack: b
             });
-        }, [T]);
+        }, [b]);
         let S = (0, d.N)(),
             A = (0, c.Ng)(),
             N = (null == S ? void 0 : null === (t = S.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === E.Si.TIER_0,
@@ -41,7 +41,7 @@ let b = () => (0, h.f)(!1),
                     ? (0, i.jsx)(f.ZP, {
                           trialOffer: S,
                           discountOffer: A,
-                          onClose: b,
+                          onClose: T,
                           type: E.cd.STICKER_PICKER_UPSELL,
                           subscriptionTier: null !== (a = null == S ? void 0 : null === (n = S.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : E.Si.TIER_2,
                           children: N
@@ -78,7 +78,7 @@ let b = () => (0, h.f)(!1),
                     }),
                 (0, i.jsx)(o.P3F, {
                     className: y.upsellClose,
-                    onClick: b,
+                    onClick: T,
                     children: (0, i.jsx)(o.Dio, {
                         size: 'md',
                         color: 'currentColor'

@@ -1,10 +1,10 @@
 e.exports = {
-    container: 'container_e0bbcf',
-    guildPrefixContainer: 'guildPrefixContainer_e0bbcf',
-    guildPrefixIcon: 'guildPrefixIcon_e0bbcf',
-    details: 'details_e0bbcf',
-    guildName: 'guildName_e0bbcf',
-    tag: 'tag_e0bbcf',
-    badge: 'badge_e0bbcf',
-    tagContainer: 'tagContainer_e0bbcf'
+    container: 'container__8e864',
+    guildPrefixContainer: 'guildPrefixContainer__8e864',
+    guildPrefixIcon: 'guildPrefixIcon__8e864',
+    details: 'details__8e864',
+    guildName: 'guildName__8e864',
+    tag: 'tag__8e864',
+    badge: 'badge__8e864',
+    tagContainer: 'tagContainer__8e864'
 };

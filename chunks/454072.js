@@ -1,4 +1,4 @@
 e.exports = {
-    content: 'content_ecfdf4',
-    rating: 'rating_ecfdf4'
+    content: 'content__6d178',
+    rating: 'rating__6d178'
 };

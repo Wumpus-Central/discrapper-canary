@@ -1,27 +1,27 @@
-var i = r(192379),
-    a = r(476400),
-    o = r.n(a),
-    s = r(723184),
-    l = r(329022),
-    u = r(829307),
-    c = r(877837),
-    d = r(444366),
-    f = function (e) {
-        var n = e.width,
-            r = e.colors,
-            a = e.onChange,
-            o = e.onSwatchHover,
-            c = e.triangle,
-            f = e.styles,
-            p = void 0 === f ? {} : f,
-            h = e.className,
-            _ = void 0 === h ? '' : h,
-            m = (0, s.default)(
-                (0, u.Z)(
+var i = n(192379),
+    r = n(476400),
+    a = n.n(r),
+    s = n(723184),
+    o = n(329022),
+    l = n(829307),
+    u = n(877837),
+    c = n(444366),
+    d = function (e) {
+        var t = e.width,
+            n = e.colors,
+            r = e.onChange,
+            a = e.onSwatchHover,
+            u = e.triangle,
+            d = e.styles,
+            f = void 0 === d ? {} : d,
+            _ = e.className,
+            p = void 0 === _ ? '' : _,
+            h = (0, s.default)(
+                (0, l.Z)(
                     {
                         default: {
                             card: {
-                                width: n,
+                                width: t,
                                 background: '#fff',
                                 border: '1px solid rgba(0,0,0,0.2)',
                                 boxShadow: '0 3px 12px rgba(0,0,0,0.15)',
@@ -91,53 +91,53 @@ var i = r(192379),
                             }
                         }
                     },
-                    p
+                    f
                 ),
                 {
-                    'hide-triangle': 'hide' === c,
-                    'top-left-triangle': 'top-left' === c,
-                    'top-right-triangle': 'top-right' === c,
-                    'bottom-left-triangle': 'bottom-left' === c,
-                    'bottom-right-triangle': 'bottom-right' === c
+                    'hide-triangle': 'hide' === u,
+                    'top-left-triangle': 'top-left' === u,
+                    'top-right-triangle': 'top-right' === u,
+                    'bottom-left-triangle': 'bottom-left' === u,
+                    'bottom-right-triangle': 'bottom-right' === u
                 }
             ),
-            g = function (e, n) {
-                return a(
+            m = function (e, t) {
+                return r(
                     {
                         hex: e,
                         source: 'hex'
                     },
-                    n
+                    t
                 );
             };
         return i.createElement(
             'div',
             {
-                style: m.card,
-                className: 'github-picker ' + _
+                style: h.card,
+                className: 'github-picker ' + p
             },
-            i.createElement('div', { style: m.triangleShadow }),
-            i.createElement('div', { style: m.triangle }),
-            (0, l.Z)(r, function (e) {
-                return i.createElement(d.Z, {
+            i.createElement('div', { style: h.triangleShadow }),
+            i.createElement('div', { style: h.triangle }),
+            (0, o.Z)(n, function (e) {
+                return i.createElement(c.Z, {
                     color: e,
                     key: e,
-                    onClick: g,
-                    onSwatchHover: o
+                    onClick: m,
+                    onSwatchHover: a
                 });
             })
         );
     };
-(f.propTypes = {
-    width: o().oneOfType([o().string, o().number]),
-    colors: o().arrayOf(o().string),
-    triangle: o().oneOf(['hide', 'top-left', 'top-right', 'bottom-left', 'bottom-right']),
-    styles: o().object
+(d.propTypes = {
+    width: a().oneOfType([a().string, a().number]),
+    colors: a().arrayOf(a().string),
+    triangle: a().oneOf(['hide', 'top-left', 'top-right', 'bottom-left', 'bottom-right']),
+    styles: a().object
 }),
-    (f.defaultProps = {
+    (d.defaultProps = {
         width: 200,
         colors: ['#B80000', '#DB3E00', '#FCCB00', '#008B02', '#006B76', '#1273DE', '#004DCF', '#5300EB', '#EB9694', '#FAD0C3', '#FEF3BD', '#C1E1C5', '#BEDADC', '#C4DEF6', '#BED3F3', '#D4C4FB'],
         triangle: 'top-left',
         styles: {}
     }),
-    (0, c.t1)(f);
+    (0, u.t1)(d);

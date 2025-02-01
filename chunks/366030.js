@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(385499),
     y = n(171368),
     I = n(598077),
-    b = n(271383),
-    T = n(626135),
+    T = n(271383),
+    b = n(626135),
     S = n(275759),
     A = n(107484),
     N = n(977392),
@@ -164,7 +164,7 @@ function U(e) {
     let t,
         { onGetRolesClicked: n, onOpenProfile: a, eligibilityStates: s, userId: o, roleId: l, channelId: c, guildId: d } = e;
     r.useEffect(() => {
-        T.default.track(x.rMx.PASSPORT_ROLE_POPOUT_VIEWED, {
+        b.default.track(x.rMx.PASSPORT_ROLE_POPOUT_VIEWED, {
             other_user_id: o,
             role_id: l,
             ...(0, g.JS)(c),
@@ -172,10 +172,10 @@ function U(e) {
         });
     }, [o, l, c, d]);
     let _ = (0, u.e7)(
-        [b.ZP],
+        [T.ZP],
         () => {
             var e, t;
-            return null !== (t = null === (e = b.ZP.getSelfMember(d)) || void 0 === e ? void 0 : e.roles.includes(l)) && void 0 !== t && t;
+            return null !== (t = null === (e = T.ZP.getSelfMember(d)) || void 0 === e ? void 0 : e.roles.includes(l)) && void 0 !== t && t;
         },
         [d, l]
     );

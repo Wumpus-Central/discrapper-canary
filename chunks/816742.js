@@ -1,12 +1,12 @@
 e.exports = {
-    header: 'header_a30bb3',
-    closeButton: 'closeButton_a30bb3',
-    modalContent: 'modalContent_a30bb3',
-    title: 'title_a30bb3',
-    subtitle: 'subtitle_a30bb3',
-    optionHeader: 'optionHeader_a30bb3',
-    learnMore: 'learnMore_a30bb3',
-    policyContainer: 'policyContainer_a30bb3',
-    radioItem: 'radioItem_a30bb3',
-    evidenceOffset: 'evidenceOffset_a30bb3'
+    header: 'header__3847f',
+    closeButton: 'closeButton__3847f',
+    modalContent: 'modalContent__3847f',
+    title: 'title__3847f',
+    subtitle: 'subtitle__3847f',
+    optionHeader: 'optionHeader__3847f',
+    learnMore: 'learnMore__3847f',
+    policyContainer: 'policyContainer__3847f',
+    radioItem: 'radioItem__3847f',
+    evidenceOffset: 'evidenceOffset__3847f'
 };

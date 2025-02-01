@@ -1,10 +1,10 @@
-e.exports = a;
-var i = r(92057);
-function a(e) {
-    if (!(this instanceof a)) return new a(e);
+e.exports = r;
+var i = n(92057);
+function r(e) {
+    if (!(this instanceof r)) return new r(e);
     i.call(this, e);
 }
-r(689118)(a, i),
-    (a.prototype._transform = function (e, n, r) {
-        r(null, e);
+n(689118)(r, i),
+    (r.prototype._transform = function (e, t, n) {
+        n(null, e);
     });

@@ -1,11 +1,11 @@
 t.exports = {
-    content: 'content_df0aed',
-    bulletContainer: 'bulletContainer_df0aed',
-    iconContainer: 'iconContainer_df0aed',
-    bulletIcon: 'bulletIcon_df0aed',
-    bulletText: 'bulletText_df0aed',
-    headerTitle: 'headerTitle_df0aed',
-    button: 'button_df0aed',
-    illustration: 'illustration_df0aed',
-    red: 'red_df0aed'
+    content: 'content__03273',
+    bulletContainer: 'bulletContainer__03273',
+    iconContainer: 'iconContainer__03273',
+    bulletIcon: 'bulletIcon__03273',
+    bulletText: 'bulletText__03273',
+    headerTitle: 'headerTitle__03273',
+    button: 'button__03273',
+    illustration: 'illustration__03273',
+    red: 'red__03273'
 };

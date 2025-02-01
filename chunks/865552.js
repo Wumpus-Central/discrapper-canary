@@ -1,7 +1,7 @@
 e.exports = {
-    keywordsTextArea: 'keywordsTextArea_bdc518',
-    paddingTop: 'paddingTop_bdc518',
-    errorText: 'errorText_bdc518',
-    keywordsContainer: 'keywordsContainer_bdc518',
-    keywordsCounter: 'keywordsCounter_bdc518'
+    keywordsTextArea: 'keywordsTextArea__6a631',
+    paddingTop: 'paddingTop__6a631',
+    errorText: 'errorText__6a631',
+    keywordsContainer: 'keywordsContainer__6a631',
+    keywordsCounter: 'keywordsCounter__6a631'
 };

@@ -1,10 +1,10 @@
 e.exports = {
-    labelWithIconContainer: 'labelWithIconContainer_b6bf2d',
-    icon: 'icon_b6bf2d',
-    radioSelection: 'radioSelection_b6bf2d',
-    customLabelContainer: 'customLabelContainer_b6bf2d',
-    labelText: 'labelText_b6bf2d',
-    focused: 'focused_b6bf2d',
-    selectedOption: 'selectedOption_b6bf2d',
-    containerWithRightCaret: 'containerWithRightCaret_b6bf2d'
+    labelWithIconContainer: 'labelWithIconContainer_c2c6a6',
+    icon: 'icon_c2c6a6',
+    radioSelection: 'radioSelection_c2c6a6',
+    customLabelContainer: 'customLabelContainer_c2c6a6',
+    labelText: 'labelText_c2c6a6',
+    focused: 'focused_c2c6a6',
+    selectedOption: 'selectedOption_c2c6a6',
+    containerWithRightCaret: 'containerWithRightCaret_c2c6a6'
 };

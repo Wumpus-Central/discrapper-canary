@@ -1,10 +1,10 @@
-var i = r(290677),
-    a = r(158698),
-    o = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+var i = n(290677),
+    r = n(158698),
+    a = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
     s = /^\w*$/;
-function l(e, n) {
+function o(e, t) {
     if (i(e)) return !1;
-    var r = typeof e;
-    return !!('number' == r || 'symbol' == r || 'boolean' == r || null == e || a(e)) || s.test(e) || !o.test(e) || (null != n && e in Object(n));
+    var n = typeof e;
+    return !!('number' == n || 'symbol' == n || 'boolean' == n || null == e || r(e)) || s.test(e) || !a.test(e) || (null != t && e in Object(t));
 }
-e.exports = l;
+e.exports = o;

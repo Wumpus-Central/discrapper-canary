@@ -1,59 +1,59 @@
-function n(e, n) {
-    (e.prototype = Object.create(n.prototype)), (e.prototype.constructor = e), (e.__proto__ = n);
+function t(e, t) {
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
-var r = {};
-function i(e, i, a) {
-    function o(e, n, r) {
-        return 'string' == typeof i ? i : i(e, n, r);
+var n = {};
+function i(e, i, r) {
+    function a(e, t, n) {
+        return 'string' == typeof i ? i : i(e, t, n);
     }
-    !a && (a = Error);
+    r || (r = Error);
     var s = (function (e) {
-        function r(n, r, i) {
-            return e.call(this, o(n, r, i)) || this;
+        function n(t, n, i) {
+            return e.call(this, a(t, n, i)) || this;
         }
-        return n(r, e), r;
-    })(a);
-    (s.prototype.name = a.name), (s.prototype.code = e), (r[e] = s);
+        return t(n, e), n;
+    })(r);
+    (s.prototype.name = r.name), (s.prototype.code = e), (n[e] = s);
 }
-function a(e, n) {
-    if (!Array.isArray(e)) return 'of '.concat(n, ' ').concat(String(e));
-    var r = e.length;
+function r(e, t) {
+    if (!Array.isArray(e)) return 'of '.concat(t, ' ').concat(String(e));
+    var n = e.length;
     return ((e = e.map(function (e) {
         return String(e);
     })),
-    r > 2)
-        ? 'one of '.concat(n, ' ').concat(e.slice(0, r - 1).join(', '), ', or ') + e[r - 1]
-        : 2 === r
-          ? 'one of '.concat(n, ' ').concat(e[0], ' or ').concat(e[1])
-          : 'of '.concat(n, ' ').concat(e[0]);
+    n > 2)
+        ? 'one of '.concat(t, ' ').concat(e.slice(0, n - 1).join(', '), ', or ') + e[n - 1]
+        : 2 === n
+          ? 'one of '.concat(t, ' ').concat(e[0], ' or ').concat(e[1])
+          : 'of '.concat(t, ' ').concat(e[0]);
 }
-function o(e, n, r) {
-    return e.substr(!r || r < 0 ? 0 : +r, n.length) === n;
+function a(e, t, n) {
+    return e.substr(!n || n < 0 ? 0 : +n, t.length) === t;
 }
-function s(e, n, r) {
-    return (void 0 === r || r > e.length) && (r = e.length), e.substring(r - n.length, r) === n;
+function s(e, t, n) {
+    return (void 0 === n || n > e.length) && (n = e.length), e.substring(n - t.length, n) === t;
 }
-function l(e, n, r) {
-    return 'number' != typeof r && (r = 0), !(r + n.length > e.length) && -1 !== e.indexOf(n, r);
+function o(e, t, n) {
+    return 'number' != typeof n && (n = 0), !(n + t.length > e.length) && -1 !== e.indexOf(t, n);
 }
 i(
     'ERR_INVALID_OPT_VALUE',
-    function (e, n) {
-        return 'The value "' + n + '" is invalid for option "' + e + '"';
+    function (e, t) {
+        return 'The value "' + t + '" is invalid for option "' + e + '"';
     },
     TypeError
 ),
     i(
         'ERR_INVALID_ARG_TYPE',
-        function (e, n, r) {
-            if (('string' == typeof n && o(n, 'not ') ? ((i = 'must not be'), (n = n.replace(/^not /, ''))) : (i = 'must be'), s(e, ' argument'))) u = 'The '.concat(e, ' ').concat(i, ' ').concat(a(n, 'type'));
+        function (e, t, n) {
+            if (('string' == typeof t && a(t, 'not ') ? ((i = 'must not be'), (t = t.replace(/^not /, ''))) : (i = 'must be'), s(e, ' argument'))) l = 'The '.concat(e, ' ').concat(i, ' ').concat(r(t, 'type'));
             else {
                 var i,
-                    u,
-                    c = l(e, '.') ? 'property' : 'argument';
-                u = 'The "'.concat(e, '" ').concat(c, ' ').concat(i, ' ').concat(a(n, 'type'));
+                    l,
+                    u = o(e, '.') ? 'property' : 'argument';
+                l = 'The "'.concat(e, '" ').concat(u, ' ').concat(i, ' ').concat(r(t, 'type'));
             }
-            return (u += '. Received type '.concat(typeof r));
+            return l + '. Received type '.concat(typeof n);
         },
         TypeError
     ),
@@ -77,4 +77,4 @@ i(
         TypeError
     ),
     i('ERR_STREAM_UNSHIFT_AFTER_END_EVENT', 'stream.unshift() after end event'),
-    (e.exports.codes = r);
+    (e.exports.codes = n);

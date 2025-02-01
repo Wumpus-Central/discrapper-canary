@@ -1,27 +1,27 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e, n, r, i) {
-        switch (r) {
+    function t(e, t, n, i) {
+        switch (n) {
             case 's':
-                return n ? 'хэдхэн секунд' : 'хэдхэн секундын';
+                return t ? 'хэдхэн секунд' : 'хэдхэн секундын';
             case 'ss':
-                return e + (n ? ' секунд' : ' секундын');
+                return e + (t ? ' секунд' : ' секундын');
             case 'm':
             case 'mm':
-                return e + (n ? ' минут' : ' минутын');
+                return e + (t ? ' минут' : ' минутын');
             case 'h':
             case 'hh':
-                return e + (n ? ' цаг' : ' цагийн');
+                return e + (t ? ' цаг' : ' цагийн');
             case 'd':
             case 'dd':
-                return e + (n ? ' өдөр' : ' өдрийн');
+                return e + (t ? ' өдөр' : ' өдрийн');
             case 'M':
             case 'MM':
-                return e + (n ? ' сар' : ' сарын');
+                return e + (t ? ' сар' : ' сарын');
             case 'y':
             case 'yy':
-                return e + (n ? ' жил' : ' жилийн');
+                return e + (t ? ' жил' : ' жилийн');
             default:
                 return e;
         }
@@ -46,7 +46,7 @@
         isPM: function (e) {
             return 'ҮХ' === e;
         },
-        meridiem: function (e, n, r) {
+        meridiem: function (e, t, n) {
             return e < 12 ? 'ҮӨ' : 'ҮХ';
         },
         calendar: {
@@ -60,22 +60,22 @@
         relativeTime: {
             future: '%s дараа',
             past: '%s өмнө',
-            s: n,
-            ss: n,
-            m: n,
-            mm: n,
-            h: n,
-            hh: n,
-            d: n,
-            dd: n,
-            M: n,
-            MM: n,
-            y: n,
-            yy: n
+            s: t,
+            ss: t,
+            m: t,
+            mm: t,
+            h: t,
+            hh: t,
+            d: t,
+            dd: t,
+            M: t,
+            MM: t,
+            y: t,
+            yy: t
         },
         dayOfMonthOrdinalParse: /\d{1,2} өдөр/,
-        ordinal: function (e, n) {
-            switch (n) {
+        ordinal: function (e, t) {
+            switch (t) {
                 case 'd':
                 case 'D':
                 case 'DDD':

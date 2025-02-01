@@ -1,9 +1,9 @@
 e.exports = {
-    tooltip: 'tooltip_b5d807',
-    tooltipContent: 'tooltipContent_b5d807',
-    iconContainer: 'iconContainer_b5d807',
-    inviteImage: 'inviteImage_b5d807',
-    offsetAvatarContainer: 'offsetAvatarContainer_b5d807',
-    inviterImage: 'inviterImage_b5d807',
-    titleContainer: 'titleContainer_b5d807'
+    tooltip: 'tooltip__93f15',
+    tooltipContent: 'tooltipContent__93f15',
+    iconContainer: 'iconContainer__93f15',
+    inviteImage: 'inviteImage__93f15',
+    offsetAvatarContainer: 'offsetAvatarContainer__93f15',
+    inviterImage: 'inviterImage__93f15',
+    titleContainer: 'titleContainer__93f15'
 };

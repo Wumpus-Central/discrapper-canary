@@ -1,5 +1,5 @@
 e.exports = {
-    playButtonInner: 'playButtonInner_deca39',
-    syncButton: 'syncButton_deca39',
-    syncButtonInner: 'syncButtonInner_deca39'
+    playButtonInner: 'playButtonInner__2024e',
+    syncButton: 'syncButton__2024e',
+    syncButtonInner: 'syncButtonInner__2024e'
 };

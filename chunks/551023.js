@@ -1,8 +1,8 @@
-e = r.nmd(e);
-var i = r(325237),
-    a = r(218466),
-    o = n && !n.nodeType && n,
-    s = o && e && !e.nodeType && e,
-    l = s && s.exports === o ? i.Buffer : void 0,
-    u = (l ? l.isBuffer : void 0) || a;
-e.exports = u;
+e = n.nmd(e);
+var i = n(325237),
+    r = n(218466),
+    a = t && !t.nodeType && t,
+    s = a && e && !e.nodeType && e,
+    o = s && s.exports === a ? i.Buffer : void 0,
+    l = (o ? o.isBuffer : void 0) || r;
+e.exports = l;

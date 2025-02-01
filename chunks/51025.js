@@ -6,7 +6,7 @@ n.d(t, {
     XT: () => x,
     al: () => R,
     cG: () => I,
-    li: () => T,
+    li: () => b,
     ob: () => v,
     pC: () => S,
     v4: () => A,
@@ -91,7 +91,7 @@ function I(e, t, n) {
             location: n
         });
 }
-function b(e, t, n, i) {
+function T(e, t, n, i) {
     if (s.ZP.getRunningDiscordApplicationIds().includes(e.id)) return;
     let r = u.Z.getInstallationPath(e.id, t);
     if (null == r) throw Error('Missing installation path for application: '.concat(e.id, ' ').concat(t));
@@ -105,9 +105,9 @@ function b(e, t, n, i) {
         installationPath: r
     });
 }
-function T(e, t, n, i) {
+function b(e, t, n, i) {
     let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-    b(e, t, n, i),
+    T(e, t, n, i),
         r.Z.dispatch({
             type: 'DISPATCH_APPLICATION_UPDATE',
             applicationId: e.id,

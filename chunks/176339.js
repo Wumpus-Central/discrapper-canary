@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('vi', {
         months: 'tháng 1_tháng 2_tháng 3_tháng 4_tháng 5_tháng 6_tháng 7_tháng 8_tháng 9_tháng 10_tháng 11_tháng 12'.split('_'),
@@ -13,8 +13,8 @@
         isPM: function (e) {
             return /^ch$/i.test(e);
         },
-        meridiem: function (e, n, r) {
-            return e < 12 ? (r ? 'sa' : 'SA') : r ? 'ch' : 'CH';
+        meridiem: function (e, t, n) {
+            return e < 12 ? (n ? 'sa' : 'SA') : n ? 'ch' : 'CH';
         },
         longDateFormat: {
             LT: 'HH:mm',

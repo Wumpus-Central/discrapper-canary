@@ -1,6 +1,6 @@
-var i = r(92238),
-    a = r(58834);
-function o(e, n) {
-    return e && i(n, a(n), e);
+var i = n(92238),
+    r = n(58834);
+function a(e, t) {
+    return e && i(t, r(t), e);
 }
-e.exports = o;
+e.exports = a;

@@ -1,9 +1,9 @@
 e.exports = {
-    modalContent: 'modalContent_d7bf1b',
-    editorPane: 'editorPane_d7bf1b',
-    displayVideo: 'displayVideo_d7bf1b',
-    modalRoot: 'modalRoot_d7bf1b',
-    videoSizer: 'videoSizer_d7bf1b',
-    hidden: 'hidden_d7bf1b',
-    spinnerContainer: 'spinnerContainer_d7bf1b'
+    modalContent: 'modalContent__38295',
+    editorPane: 'editorPane__38295',
+    displayVideo: 'displayVideo__38295',
+    modalRoot: 'modalRoot__38295',
+    videoSizer: 'videoSizer__38295',
+    hidden: 'hidden__38295',
+    spinnerContainer: 'spinnerContainer__38295'
 };

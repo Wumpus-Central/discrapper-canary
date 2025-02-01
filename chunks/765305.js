@@ -4,7 +4,7 @@ n.d(t, {
     Ku: () => u,
     VF: () => I,
     WX: () => f,
-    X_: () => T,
+    X_: () => b,
     _U: () => m,
     fL: () => E,
     gG: () => o,
@@ -17,7 +17,7 @@ n.d(t, {
     rC: () => v,
     sy: () => _,
     wm: () => s,
-    zV: () => b,
+    zV: () => T,
     zw: () => l
 }),
     n(47120);
@@ -53,8 +53,8 @@ var E = (function (e) {
 let v = 100,
     y = 2 * i.Z.Millis.DAY,
     I = 12 * i.Z.Millis.HOUR,
-    b = 4;
-var T = (function (e) {
+    T = 4;
+var b = (function (e) {
         return (e.NEW_EVENT = 'Upcoming Event Notice'), (e.EVENT_STARTING_SOON = 'Event Starting Soon Notice'), e;
     })({}),
     S = (function (e) {

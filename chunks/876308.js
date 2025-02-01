@@ -1,61 +1,61 @@
-n.r(e), n(411104);
-var r = n(200651),
-    o = n(192379),
-    i = n(817080),
+n.d(e, { default: () => N }), n(411104);
+var i = n(200651),
+    r = n(192379),
+    o = n(817080),
     a = n(442837),
-    u = n(481060),
-    c = n(668781),
-    s = n(239091),
+    s = n(481060),
+    u = n(668781),
+    c = n(239091),
     l = n(883385),
     d = n(108843),
     f = n(100527),
     p = n(299206),
     w = n(496675),
-    b = n(358085),
-    y = n(998502),
-    g = n(22382),
-    h = n(51078),
+    h = n(358085),
+    b = n(998502),
+    y = n(22382),
+    g = n(51078),
     v = n(710111),
     m = n(981631),
     S = n(388032);
-e.default = (0, d.Z)(
+let N = (0, d.Z)(
     (0, l.Z)(
         function (t) {
             let { soundGuild: e, sound: l, activeCallGuildId: d, onSelect: f } = t,
                 m = (function (t, e) {
-                    let { canManageGuildExpressions: i } = (0, a.cj)([w.Z], () => (null == e ? { canManageGuildExpressions: !1 } : w.Z.getGuildPermissionProps(e)), [e]),
-                        c = o.useCallback(() => {
+                    let { canManageGuildExpressions: o } = (0, a.cj)([w.Z], () => (null == e ? { canManageGuildExpressions: !1 } : w.Z.getGuildPermissionProps(e)), [e]),
+                        u = r.useCallback(() => {
                             if ((null == e ? void 0 : e.id) == null) return null;
-                            (0, u.openModalLazy)(async () => {
-                                let { default: o } = await Promise.all([n.e('56035'), n.e('28394')]).then(n.bind(n, 758961));
+                            (0, s.ZDy)(async () => {
+                                let { default: r } = await Promise.all([n.e('56035'), n.e('28394')]).then(n.bind(n, 758961));
                                 return (n) =>
-                                    (0, r.jsx)(o, {
+                                    (0, i.jsx)(r, {
                                         ...n,
                                         existingSound: t,
                                         guildId: e.id
                                     });
                             });
                         }, [e, t]);
-                    return i
-                        ? (0, r.jsx)(
-                              u.MenuItem,
+                    return o
+                        ? (0, i.jsx)(
+                              s.sNh,
                               {
                                   id: 'edit-soundboard-sound',
                                   label: S.intl.string(S.t.ponZcH),
-                                  action: c
+                                  action: u
                               },
                               'edit-soundboard-sound'
                           )
                         : null;
                 })(l, e),
-                O = (function (t) {
+                N = (function (t) {
                     let { soundId: e } = t,
-                        n = o.useCallback(async () => {
+                        n = r.useCallback(async () => {
                             try {
-                                let t = (0, g.Z)(e),
+                                let t = (0, y.Z)(e),
                                     n = await fetch(t),
-                                    r = await n.blob(),
-                                    o = (function (t) {
+                                    i = await n.blob(),
+                                    r = (function (t) {
                                         switch (t.type) {
                                             case 'audio/mpeg':
                                             case 'audio/mpeg3':
@@ -65,11 +65,11 @@ e.default = (0, d.Z)(
                                             default:
                                                 throw Error('unable to determine file type');
                                         }
-                                    })(r),
-                                    a = ''.concat(e, '.').concat(o);
-                                b.isPlatformEmbedded ? await y.ZP.saveFile(t, a) : (0, i.saveAs)(r, a);
+                                    })(i),
+                                    a = ''.concat(e, '.').concat(r);
+                                h.isPlatformEmbedded ? await b.ZP.saveFile(t, a) : (0, o.saveAs)(i, a);
                             } catch (t) {
-                                c.Z.show({
+                                u.Z.show({
                                     title: S.intl.string(S.t.mK3tDA),
                                     body: S.intl.string(S.t.jLlfDA),
                                     confirmText: S.intl.string(S.t.BddRzc)
@@ -78,8 +78,8 @@ e.default = (0, d.Z)(
                         }, [e]);
                     return t.guildId === v.X8
                         ? null
-                        : (0, r.jsx)(
-                              u.MenuItem,
+                        : (0, i.jsx)(
+                              s.sNh,
                               {
                                   id: 'download-soundboard-sound',
                                   label: S.intl.string(S.t['/fzLLC']),
@@ -88,18 +88,18 @@ e.default = (0, d.Z)(
                               'download-soundboard-sound'
                           );
                 })(l),
-                x = (0, h.Z)(l, d),
-                E = (0, p.Z)({
+                O = (0, g.Z)(l, d),
+                x = (0, p.Z)({
                     id: l.soundId,
                     label: S.intl.string(S.t.HJikXl)
                 });
-            return (0, r.jsx)(u.Menu, {
+            return (0, i.jsx)(s.v2r, {
                 navId: 'sound-button-context',
-                onClose: s.Zy,
+                onClose: c.Zy,
                 'aria-label': S.intl.string(S.t.liqwPD),
                 onSelect: f,
-                children: (0, r.jsxs)(u.MenuGroup, {
-                    children: [m, x, O, E]
+                children: (0, i.jsxs)(s.kSQ, {
+                    children: [m, O, N, x]
                 })
             });
         },

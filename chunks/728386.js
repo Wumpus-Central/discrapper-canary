@@ -1,72 +1,72 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(232713),
-    c = r(532772),
-    d = r(570220),
-    f = r(540059),
-    p = r(28546),
-    h = r(443603),
-    _ = r(957825),
-    m = r(388032),
-    g = r(553796);
-function E(e, n) {
-    let { disabled: r, type: i } = e,
-        [s, E] = (0, p.Iu)((e) => [e.activeView, e.pickerId], u.X),
-        v = o.useContext(d.ZP),
-        y = !1,
-        [b, I] = o.useState(!1),
-        T = s === _.X1.STICKER,
-        S = !1,
-        A = o.useCallback(() => {
-            (0, p.RO)(_.X1.STICKER, i);
-        }, [i]);
-    o.useEffect(() => {
+n.d(t, { Z: () => g }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(232713),
+    l = n(532772),
+    u = n(570220),
+    c = n(540059),
+    d = n(28546),
+    f = n(443603),
+    _ = n(957825),
+    p = n(388032),
+    h = n(553796);
+function m(e, t) {
+    let { disabled: n, type: a } = e,
+        [m, g] = (0, d.Iu)((e) => [e.activeView, e.pickerId], o.X),
+        E = r.useContext(u.ZP),
+        v = !1,
+        [y, I] = r.useState(!1),
+        T = m === _.X1.STICKER,
+        b = !1,
+        S = r.useCallback(() => {
+            (0, d.RO)(_.X1.STICKER, a);
+        }, [a]);
+    r.useEffect(() => {
         let e = () => {
                 requestAnimationFrame(() => {
                     I(!0);
                 });
             },
-            n = () => {
+            t = () => {
                 requestAnimationFrame(() => {
                     I(!1);
                 });
             };
         return (
-            v.addListener('sticker-suggestions-shown', e),
-            v.addListener('sticker-suggestions-hidden', n),
+            E.addListener('sticker-suggestions-shown', e),
+            E.addListener('sticker-suggestions-hidden', t),
             () => {
-                v.removeListener('sticker-suggestions-shown', e), v.removeListener('sticker-suggestions-hidden', n);
+                E.removeListener('sticker-suggestions-shown', e), E.removeListener('sticker-suggestions-hidden', t);
             }
         );
-    }, [v]);
-    let { Component: C, events: N, play: R } = (0, c.z)(),
-        O = (0, f.Q3)('ChannelStickerPickerButton');
-    if (r) return null;
-    let D = b;
-    return (0, a.jsx)('div', {
-        className: l()(_.CT, g.buttonContainer),
-        ref: n,
-        children: (0, a.jsx)(h.Z, {
-            innerClassName: l()(g.button, g.stickerButton, { [g.stickerButtonTilted]: D && !T }),
+    }, [E]);
+    let { Component: A, events: N, play: C } = (0, l.z)(),
+        R = (0, c.Q3)('ChannelStickerPickerButton');
+    if (n) return null;
+    let O = y;
+    return (0, i.jsx)('div', {
+        className: s()(_.CT, h.buttonContainer),
+        ref: t,
+        children: (0, i.jsx)(f.Z, {
+            innerClassName: s()(h.button, h.stickerButton, { [h.stickerButtonTilted]: O && !T }),
             ...N,
             onClick: () => {
-                A(), R();
+                S(), C();
             },
             isActive: T,
-            'aria-label': m.intl.string(m.t.rZpidX),
+            'aria-label': p.intl.string(p.t.rZpidX),
             'aria-expanded': T,
             'aria-haspopup': 'dialog',
-            'aria-controls': E,
-            sparkle: y,
-            notification: S ? h.j.UPDATE : null,
-            children: (0, a.jsx)(C, {
-                size: O ? 'refresh_sm' : void 0,
+            'aria-controls': g,
+            sparkle: v,
+            notification: b ? f.j.UPDATE : null,
+            children: (0, i.jsx)(A, {
+                size: R ? 'refresh_sm' : void 0,
                 color: 'currentColor'
             })
         })
     });
 }
-n.Z = o.memo(o.forwardRef(E));
+let g = r.memo(r.forwardRef(m));

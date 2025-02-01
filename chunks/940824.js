@@ -1,47 +1,48 @@
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(37234),
-    s = r(100527),
-    l = r(906732),
-    u = r(703656),
-    c = r(335131),
-    d = r(981631),
-    f = r(388032),
-    p = r(47648);
-let h = (e) => {
-    let { onClose: n } = e,
-        { analyticsLocations: r } = (0, l.ZP)(),
-        h = () => {
-            n(),
-                (0, u.uL)(d.Z5c.COLLECTIBLES_SHOP),
-                (0, c.mK)({
+n.d(t, { Z: () => _ });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(37234),
+    s = n(100527),
+    o = n(906732),
+    l = n(703656),
+    u = n(335131),
+    c = n(981631),
+    d = n(388032),
+    f = n(47648);
+let _ = (e) => {
+    let { onClose: t } = e,
+        { analyticsLocations: n } = (0, o.ZP)(),
+        _ = () => {
+            t(),
+                (0, l.uL)(c.Z5c.COLLECTIBLES_SHOP),
+                (0, u.mK)({
                     openInLayer: !1,
                     analyticsSource: s.Z.PREMIUM_PAYMENT_MODAL,
-                    analyticsLocations: r
+                    analyticsLocations: n
                 }),
-                (0, o.xf)();
+                (0, a.xf)();
         };
     return (0, i.jsxs)('div', {
-        className: p.container,
+        className: f.container,
         children: [
             (0, i.jsx)('div', {
-                className: p.iconBackground,
-                children: (0, i.jsx)(a.ShopIcon, {
+                className: f.iconBackground,
+                children: (0, i.jsx)(r.EOn, {
                     size: 'custom',
                     width: 20,
                     height: 20,
-                    color: a.tokens.colors.WHITE
+                    color: r.TVs.colors.WHITE
                 })
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-primary',
-                children: f.intl.format(f.t.twSHtb, {
+                children: d.intl.format(d.t.twSHtb, {
                     checkItOut: (e) =>
-                        (0, i.jsx)(a.Clickable, {
-                            className: p.link,
-                            onClick: h,
+                        (0, i.jsx)(r.P3F, {
+                            className: f.link,
+                            onClick: _,
                             children: e
                         })
                 })
@@ -49,4 +50,3 @@ let h = (e) => {
         ]
     });
 };
-n.Z = h;

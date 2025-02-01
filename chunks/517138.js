@@ -1,9 +1,9 @@
-function n(e) {
-    let n = e.regex,
-        r = '([a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?)',
-        i = n.either(/\b([A-Z]+[a-z0-9]+)+/, /\b([A-Z]+[a-z0-9]+)+[A-Z]+/),
-        a = n.concat(i, /(::\w+)*/),
-        o = {
+function t(e) {
+    let t = e.regex,
+        n = '([a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?)',
+        i = t.either(/\b([A-Z]+[a-z0-9]+)+/, /\b([A-Z]+[a-z0-9]+)+[A-Z]+/),
+        r = t.concat(i, /(::\w+)*/),
+        a = {
             'variable.constant': ['__FILE__', '__LINE__', '__ENCODING__'],
             'variable.language': ['self', 'super'],
             keyword: ['alias', 'and', 'begin', 'BEGIN', 'break', 'case', 'class', 'defined', 'do', 'else', 'elsif', 'end', 'END', 'ensure', 'for', 'if', 'in', 'module', 'next', 'not', 'or', 'redo', 'require', 'rescue', 'retry', 'return', 'then', 'undef', 'unless', 'until', 'when', 'while', 'yield', 'include', 'extend', 'prepend', 'public', 'private', 'protected', 'raise', 'throw'],
@@ -14,11 +14,11 @@ function n(e) {
             className: 'doctag',
             begin: '@[A-Za-z]+'
         },
-        l = {
+        o = {
             begin: '#<',
             end: '>'
         },
-        u = [
+        l = [
             e.COMMENT('#', '$', { contains: [s] }),
             e.COMMENT('^=begin', '^=end', {
                 contains: [s],
@@ -26,15 +26,15 @@ function n(e) {
             }),
             e.COMMENT('^__END__', e.MATCH_NOTHING_RE)
         ],
-        c = {
+        u = {
             className: 'subst',
             begin: /#\{/,
             end: /\}/,
-            keywords: o
+            keywords: a
         },
-        d = {
+        c = {
             className: 'string',
-            contains: [e.BACKSLASH_ESCAPE, c],
+            contains: [e.BACKSLASH_ESCAPE, u],
             variants: [
                 {
                     begin: /'/,
@@ -87,25 +87,25 @@ function n(e) {
                 { begin: /\B\?\\(c|C-)[\x20-\x7e]/ },
                 { begin: /\B\?\\?\S/ },
                 {
-                    begin: n.concat(/<<[-~]?'?/, n.lookahead(/(\w+)(?=\W)[^\n]*\n(?:[^\n]*\n)*?\s*\1\b/)),
+                    begin: t.concat(/<<[-~]?'?/, t.lookahead(/(\w+)(?=\W)[^\n]*\n(?:[^\n]*\n)*?\s*\1\b/)),
                     contains: [
                         e.END_SAME_AS_BEGIN({
                             begin: /(\w+)/,
                             end: /(\w+)/,
-                            contains: [e.BACKSLASH_ESCAPE, c]
+                            contains: [e.BACKSLASH_ESCAPE, u]
                         })
                     ]
                 }
             ]
         },
-        f = '[1-9](_?[0-9])*|0',
-        p = '[0-9](_?[0-9])*',
-        h = {
+        d = '[1-9](_?[0-9])*|0',
+        f = '[0-9](_?[0-9])*',
+        _ = {
             className: 'number',
             relevance: 0,
-            variants: [{ begin: `\\b(${f})(\\.(${p}))?([eE][+-]?(${p})|r)?i?\\b` }, { begin: '\\b0[dD][0-9](_?[0-9])*r?i?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*r?i?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*r?i?\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*r?i?\\b' }, { begin: '\\b0(_?[0-7])+r?i?\\b' }]
+            variants: [{ begin: `\\b(${d})(\\.(${f}))?([eE][+-]?(${f})|r)?i?\\b` }, { begin: '\\b0[dD][0-9](_?[0-9])*r?i?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*r?i?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*r?i?\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*r?i?\\b' }, { begin: '\\b0(_?[0-7])+r?i?\\b' }]
         },
-        _ = {
+        p = {
             variants: [
                 { match: /\(\)/ },
                 {
@@ -114,36 +114,36 @@ function n(e) {
                     end: /(?=\))/,
                     excludeBegin: !0,
                     endsParent: !0,
-                    keywords: o
+                    keywords: a
                 }
             ]
         },
-        m = {
-            match: [/(include|extend)\s+/, a],
+        h = {
+            match: [/(include|extend)\s+/, r],
             scope: { 2: 'title.class' },
-            keywords: o
+            keywords: a
         },
-        g = [
-            d,
+        m = [
+            c,
             {
                 variants: [
                     {
-                        match: [/class\s+/, a, /\s+<\s+/, a]
+                        match: [/class\s+/, r, /\s+<\s+/, r]
                     },
                     {
-                        match: [/\b(class|module)\s+/, a]
+                        match: [/\b(class|module)\s+/, r]
                     }
                 ],
                 scope: {
                     2: 'title.class',
                     4: 'title.class.inherited'
                 },
-                keywords: o
+                keywords: a
             },
-            m,
+            h,
             {
                 relevance: 0,
-                match: [a, /\.new[. (]/],
+                match: [r, /\.new[. (]/],
                 scope: { 1: 'title.class' }
             },
             {
@@ -157,12 +157,12 @@ function n(e) {
                 scope: 'title.class'
             },
             {
-                match: [/def/, /\s+/, r],
+                match: [/def/, /\s+/, n],
                 scope: {
                     1: 'keyword',
                     3: 'title.function'
                 },
-                contains: [_]
+                contains: [p]
             },
             { begin: e.IDENT_RE + '::' },
             {
@@ -173,10 +173,10 @@ function n(e) {
             {
                 className: 'symbol',
                 begin: ':(?!\\s)',
-                contains: [d, { begin: r }],
+                contains: [c, { begin: n }],
                 relevance: 0
             },
-            h,
+            _,
             {
                 className: 'variable',
                 begin: "(\\$\\W)|((\\$|@@?)(\\w+))(?=[^@$?])(?![A-Za-z])(?![@$?'])"
@@ -188,7 +188,7 @@ function n(e) {
                 excludeBegin: !0,
                 excludeEnd: !0,
                 relevance: 0,
-                keywords: o
+                keywords: a
             },
             {
                 begin: '(' + e.RE_STARTERS_RE + '|unless)\\s*',
@@ -196,7 +196,7 @@ function n(e) {
                 contains: [
                     {
                         className: 'regexp',
-                        contains: [e.BACKSLASH_ESCAPE, c],
+                        contains: [e.BACKSLASH_ESCAPE, u],
                         illegal: /\n/,
                         variants: [
                             {
@@ -221,17 +221,17 @@ function n(e) {
                             }
                         ]
                     }
-                ].concat(l, u),
+                ].concat(o, l),
                 relevance: 0
             }
-        ].concat(l, u);
-    (c.contains = g), (_.contains = g);
-    let E = [
+        ].concat(o, l);
+    (u.contains = m), (p.contains = m);
+    let g = [
         {
             begin: /^\s*=>/,
             starts: {
                 end: '$',
-                contains: g
+                contains: m
             }
         },
         {
@@ -239,20 +239,20 @@ function n(e) {
             begin: '^([>?]>|[\\w#]+\\(\\w+\\):\\d+:\\d+[>*]|(\\w+-)?\\d+\\.\\d+\\.\\d+(p\\d+)?[^\\d][^>]+>)(?=[ ])',
             starts: {
                 end: '$',
-                keywords: o,
-                contains: g
+                keywords: a,
+                contains: m
             }
         }
     ];
     return (
-        u.unshift(l),
+        l.unshift(o),
         {
             name: 'Ruby',
             aliases: ['rb', 'gemspec', 'podspec', 'thor', 'irb'],
-            keywords: o,
+            keywords: a,
             illegal: /\/\*/,
-            contains: [e.SHEBANG({ binary: 'ruby' })].concat(E).concat(u).concat(g)
+            contains: [e.SHEBANG({ binary: 'ruby' })].concat(g).concat(l).concat(m)
         }
     );
 }
-e.exports = n;
+e.exports = t;

@@ -1,58 +1,58 @@
-var i = r(939793),
-    a = r(861960),
-    o = r(777994),
-    s = r(326048),
-    l = r(688709),
-    u = '[object Boolean]',
-    c = '[object Date]',
-    d = '[object Map]',
-    f = '[object Number]',
-    p = '[object RegExp]',
-    h = '[object Set]',
-    _ = '[object String]',
-    m = '[object Symbol]',
-    g = '[object ArrayBuffer]',
-    E = '[object DataView]',
-    v = '[object Float32Array]',
-    y = '[object Float64Array]',
-    b = '[object Int8Array]',
+var i = n(939793),
+    r = n(861960),
+    a = n(777994),
+    s = n(326048),
+    o = n(688709),
+    l = '[object Boolean]',
+    u = '[object Date]',
+    c = '[object Map]',
+    d = '[object Number]',
+    f = '[object RegExp]',
+    _ = '[object Set]',
+    p = '[object String]',
+    h = '[object Symbol]',
+    m = '[object ArrayBuffer]',
+    g = '[object DataView]',
+    E = '[object Float32Array]',
+    v = '[object Float64Array]',
+    y = '[object Int8Array]',
     I = '[object Int16Array]',
     T = '[object Int32Array]',
-    S = '[object Uint8Array]',
-    A = '[object Uint8ClampedArray]',
-    C = '[object Uint16Array]',
+    b = '[object Uint8Array]',
+    S = '[object Uint8ClampedArray]',
+    A = '[object Uint16Array]',
     N = '[object Uint32Array]';
-function R(e, n, r) {
-    var R = e.constructor;
-    switch (n) {
-        case g:
+function C(e, t, n) {
+    var C = e.constructor;
+    switch (t) {
+        case m:
             return i(e);
+        case l:
         case u:
-        case c:
-            return new R(+e);
+            return new C(+e);
+        case g:
+            return r(e, n);
         case E:
-            return a(e, r);
         case v:
         case y:
-        case b:
         case I:
         case T:
+        case b:
         case S:
         case A:
-        case C:
         case N:
-            return l(e, r);
+            return o(e, n);
+        case c:
+            return new C();
         case d:
-            return new R();
-        case f:
-        case _:
-            return new R(e);
         case p:
-            return o(e);
+            return new C(e);
+        case f:
+            return a(e);
+        case _:
+            return new C();
         case h:
-            return new R();
-        case m:
             return s(e);
     }
 }
-e.exports = R;
+e.exports = C;

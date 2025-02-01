@@ -1,10 +1,10 @@
 e.exports = {
-    sideContainer: 'sideContainer_b7edb7',
-    gridContainer: 'gridContainer_b7edb7',
-    guildCountContainer: 'guildCountContainer_b7edb7',
-    guildsIconContainer: 'guildsIconContainer_b7edb7',
-    sectionContainer: 'sectionContainer_b7edb7',
-    reducedGap: 'reducedGap_b7edb7',
-    infoSection: 'infoSection_b7edb7',
-    linkGrid: 'linkGrid_b7edb7'
+    sideContainer: 'sideContainer_de3a16',
+    gridContainer: 'gridContainer_de3a16',
+    guildCountContainer: 'guildCountContainer_de3a16',
+    guildsIconContainer: 'guildsIconContainer_de3a16',
+    sectionContainer: 'sectionContainer_de3a16',
+    reducedGap: 'reducedGap_de3a16',
+    infoSection: 'infoSection_de3a16',
+    linkGrid: 'linkGrid_de3a16'
 };

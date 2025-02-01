@@ -1,6 +1,6 @@
-e.exports = {
-    spacing: 'spacing_a2ce87',
-    card: 'card_a2ce87',
-    error: 'error_a2ce87',
-    warning: 'warning_a2ce87'
+n.exports = {
+    card: 'card__594f1',
+    spacing: 'spacing__594f1',
+    error: 'error__594f1',
+    warning: 'warning__594f1'
 };

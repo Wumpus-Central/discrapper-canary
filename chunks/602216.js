@@ -1,13 +1,13 @@
 e.exports = {
-    iconWrapper: 'iconWrapper_f1b373',
-    icon: 'icon_f1b373',
-    message: 'message_f1b373',
-    cannonWrapper: 'cannonWrapper_f1b373',
-    easterEggAnimationClickTarget: 'easterEggAnimationClickTarget_f1b373',
-    easterEggAnimationClickTargetTopLeft: 'easterEggAnimationClickTargetTopLeft_f1b373',
-    easterEggAnimationClickTargetTopRight: 'easterEggAnimationClickTargetTopRight_f1b373',
-    easterEggAnimationClickTargetBottomLeft: 'easterEggAnimationClickTargetBottomLeft_f1b373',
-    easterEggAnimationClickTargetBottomRight: 'easterEggAnimationClickTargetBottomRight_f1b373',
-    easterEggAnimation: 'easterEggAnimation_f1b373',
-    easterEggAnimationHideLeaf: 'easterEggAnimationHideLeaf_f1b373'
+    iconWrapper: 'iconWrapper__9f20a',
+    icon: 'icon__9f20a',
+    message: 'message__9f20a',
+    cannonWrapper: 'cannonWrapper__9f20a',
+    easterEggAnimationClickTarget: 'easterEggAnimationClickTarget__9f20a',
+    easterEggAnimationClickTargetTopLeft: 'easterEggAnimationClickTargetTopLeft__9f20a',
+    easterEggAnimationClickTargetTopRight: 'easterEggAnimationClickTargetTopRight__9f20a',
+    easterEggAnimationClickTargetBottomLeft: 'easterEggAnimationClickTargetBottomLeft__9f20a',
+    easterEggAnimationClickTargetBottomRight: 'easterEggAnimationClickTargetBottomRight__9f20a',
+    easterEggAnimation: 'easterEggAnimation__9f20a',
+    easterEggAnimationHideLeaf: 'easterEggAnimationHideLeaf__9f20a'
 };

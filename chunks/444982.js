@@ -1,25 +1,25 @@
-(n.randomBytes = n.rng = n.pseudoRandomBytes = n.prng = r(706178)), (n.createHash = n.Hash = r(108381)), (n.createHmac = n.Hmac = r(294415));
-var i = ['sha1', 'sha224', 'sha256', 'sha384', 'sha512', 'md5', 'rmd160'].concat(Object.keys(r(518401)));
-n.getHashes = function () {
+(t.randomBytes = t.rng = t.pseudoRandomBytes = t.prng = n(706178)), (t.createHash = t.Hash = n(108381)), (t.createHmac = t.Hmac = n(294415));
+var i = ['sha1', 'sha224', 'sha256', 'sha384', 'sha512', 'md5', 'rmd160'].concat(Object.keys(n(518401)));
+t.getHashes = function () {
     return i;
 };
-var a = r(585754);
-(n.pbkdf2 = a.pbkdf2), (n.pbkdf2Sync = a.pbkdf2Sync);
-var o = r(768730);
-(n.Cipher = o.Cipher), (n.createCipher = o.createCipher), (n.Cipheriv = o.Cipheriv), (n.createCipheriv = o.createCipheriv), (n.Decipher = o.Decipher), (n.createDecipher = o.createDecipher), (n.Decipheriv = o.Decipheriv), (n.createDecipheriv = o.createDecipheriv), (n.getCiphers = o.getCiphers), (n.listCiphers = o.listCiphers);
-var s = r(985493);
-(n.DiffieHellmanGroup = s.DiffieHellmanGroup), (n.createDiffieHellmanGroup = s.createDiffieHellmanGroup), (n.getDiffieHellman = s.getDiffieHellman), (n.createDiffieHellman = s.createDiffieHellman), (n.DiffieHellman = s.DiffieHellman);
-var l = r(552718);
-(n.createSign = l.createSign), (n.Sign = l.Sign), (n.createVerify = l.createVerify), (n.Verify = l.Verify), (n.createECDH = r(398833));
-var u = r(197909);
-(n.publicEncrypt = u.publicEncrypt), (n.privateEncrypt = u.privateEncrypt), (n.publicDecrypt = u.publicDecrypt), (n.privateDecrypt = u.privateDecrypt);
-var c = r(107083);
-(n.randomFill = c.randomFill),
-    (n.randomFillSync = c.randomFillSync),
-    (n.createCredentials = function () {
+var r = n(585754);
+(t.pbkdf2 = r.pbkdf2), (t.pbkdf2Sync = r.pbkdf2Sync);
+var a = n(768730);
+(t.Cipher = a.Cipher), (t.createCipher = a.createCipher), (t.Cipheriv = a.Cipheriv), (t.createCipheriv = a.createCipheriv), (t.Decipher = a.Decipher), (t.createDecipher = a.createDecipher), (t.Decipheriv = a.Decipheriv), (t.createDecipheriv = a.createDecipheriv), (t.getCiphers = a.getCiphers), (t.listCiphers = a.listCiphers);
+var s = n(985493);
+(t.DiffieHellmanGroup = s.DiffieHellmanGroup), (t.createDiffieHellmanGroup = s.createDiffieHellmanGroup), (t.getDiffieHellman = s.getDiffieHellman), (t.createDiffieHellman = s.createDiffieHellman), (t.DiffieHellman = s.DiffieHellman);
+var o = n(552718);
+(t.createSign = o.createSign), (t.Sign = o.Sign), (t.createVerify = o.createVerify), (t.Verify = o.Verify), (t.createECDH = n(398833));
+var l = n(197909);
+(t.publicEncrypt = l.publicEncrypt), (t.privateEncrypt = l.privateEncrypt), (t.publicDecrypt = l.publicDecrypt), (t.privateDecrypt = l.privateDecrypt);
+var u = n(107083);
+(t.randomFill = u.randomFill),
+    (t.randomFillSync = u.randomFillSync),
+    (t.createCredentials = function () {
         throw Error('sorry, createCredentials is not implemented yet\nwe accept pull requests\nhttps://github.com/crypto-browserify/crypto-browserify');
     }),
-    (n.constants = {
+    (t.constants = {
         DH_CHECK_P_NOT_SAFE_PRIME: 2,
         DH_CHECK_P_NOT_PRIME: 1,
         DH_UNABLE_TO_CHECK_GENERATOR: 4,

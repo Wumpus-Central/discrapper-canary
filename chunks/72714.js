@@ -1,7 +1,7 @@
 e.exports = {
-    singleItemWrapper: 'singleItemWrapper_e3183f',
-    carousel: 'carousel_e3183f',
-    item: 'item_e3183f',
-    singleItem: 'singleItem_e3183f item_e3183f',
-    viewport: 'viewport_e3183f'
+    singleItemWrapper: 'singleItemWrapper_ed6d69',
+    carousel: 'carousel_ed6d69',
+    item: 'item_ed6d69',
+    singleItem: 'singleItem_ed6d69 item_ed6d69',
+    viewport: 'viewport_ed6d69'
 };

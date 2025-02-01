@@ -1,18 +1,18 @@
-function n() {
+function t() {
     return (
-        (e.exports = n =
+        (e.exports = t =
             Object.assign
                 ? Object.assign.bind()
                 : function (e) {
-                      for (var n = 1; n < arguments.length; n++) {
-                          var r = arguments[n];
-                          for (var i in r) ({}).hasOwnProperty.call(r, i) && (e[i] = r[i]);
+                      for (var t = 1; t < arguments.length; t++) {
+                          var n = arguments[t];
+                          for (var i in n) ({}).hasOwnProperty.call(n, i) && (e[i] = n[i]);
                       }
                       return e;
                   }),
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports),
-        n.apply(null, arguments)
+        t.apply(null, arguments)
     );
 }
-(e.exports = n), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);

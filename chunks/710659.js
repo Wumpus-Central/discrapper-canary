@@ -1,4 +1,5 @@
-var r = {
+n.d(t, { Z: () => i });
+let i = {
     dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
     monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     tokens: {
@@ -46,4 +47,3 @@ var r = {
         comma: /^(,\s*|(and|or)\s*)+/i
     }
 };
-n.Z = r;

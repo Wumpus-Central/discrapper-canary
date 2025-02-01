@@ -1,7 +1,7 @@
 e.exports = {
-    titleContainer: 'titleContainer_c69589',
-    titleText: 'titleText_c69589',
-    menu: 'menu_c69589',
-    tabBar: 'tabBar_c69589',
-    tabBarItem: 'tabBarItem_c69589'
+    titleContainer: 'titleContainer__81b3e',
+    titleText: 'titleText__81b3e',
+    menu: 'menu__81b3e',
+    tabBar: 'tabBar__81b3e',
+    tabBarItem: 'tabBarItem__81b3e'
 };

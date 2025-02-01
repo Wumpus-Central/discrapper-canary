@@ -1,15 +1,15 @@
 r(301563);
 var e = r(173850),
     i = r(859209),
-    u = r(213265),
-    o = r(936940),
+    o = r(213265),
+    u = r(936940),
     a = r(641236),
     c = r(251069),
     s = a('species'),
     f = RegExp.prototype;
 n.exports = function (n, t, r, l) {
     var h = a(n),
-        v = !o(function () {
+        v = !u(function () {
             var t = {};
             return (
                 (t[h] = function () {
@@ -20,7 +20,7 @@ n.exports = function (n, t, r, l) {
         }),
         p =
             v &&
-            !o(function () {
+            !u(function () {
                 var t = !1,
                     r = /a/;
                 return (
@@ -40,11 +40,11 @@ n.exports = function (n, t, r, l) {
             });
     if (!v || !p || r) {
         var d = e(/./[h]),
-            x = t(h, ''[n], function (n, t, r, i, o) {
+            x = t(h, ''[n], function (n, t, r, i, u) {
                 var a = e(n),
                     c = t.exec;
-                if (c === u || c === f.exec)
-                    return v && !o
+                return c === o || c === f.exec
+                    ? v && !u
                         ? {
                               done: !0,
                               value: d(t, r, i)
@@ -52,8 +52,8 @@ n.exports = function (n, t, r, l) {
                         : {
                               done: !0,
                               value: a(r, t, i)
-                          };
-                return { done: !1 };
+                          }
+                    : { done: !1 };
             });
         i(String.prototype, n, x[0]), i(f, h, x[1]);
     }

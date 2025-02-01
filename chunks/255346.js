@@ -1,9 +1,9 @@
 e.exports = {
-    container: 'container_da081d',
-    footerHeader: 'footerHeader_da081d',
-    footerCTAContainer: 'footerCTAContainer_da081d',
-    footerArtContainer: 'footerArtContainer_da081d',
-    footerArt: 'footerArt_da081d',
-    leftGradient: 'leftGradient_da081d',
-    rightGradient: 'rightGradient_da081d'
+    container: 'container_ebc9bb',
+    footerHeader: 'footerHeader_ebc9bb',
+    footerCTAContainer: 'footerCTAContainer_ebc9bb',
+    footerArtContainer: 'footerArtContainer_ebc9bb',
+    footerArt: 'footerArt_ebc9bb',
+    leftGradient: 'leftGradient_ebc9bb',
+    rightGradient: 'rightGradient_ebc9bb'
 };

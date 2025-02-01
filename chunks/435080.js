@@ -1,5 +1,5 @@
-var n = '__lodash_hash_undefined__';
-function r(e) {
-    return this.__data__.set(e, n), this;
+var t = '__lodash_hash_undefined__';
+function n(e) {
+    return this.__data__.set(e, t), this;
 }
-e.exports = r;
+e.exports = n;

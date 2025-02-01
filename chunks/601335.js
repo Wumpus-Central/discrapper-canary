@@ -1,8 +1,8 @@
-e.exports = {
-    container: 'container_c07d51',
-    header: 'header_c07d51',
-    text: 'text_c07d51',
-    options: 'options_c07d51',
-    channelOptionIcon: 'channelOptionIcon_c07d51',
-    channelPrivate: 'channelPrivate_c07d51'
+n.exports = {
+    container: 'container__4eb6e',
+    header: 'header__4eb6e',
+    text: 'text__4eb6e',
+    options: 'options__4eb6e',
+    channelOptionIcon: 'channelOptionIcon__4eb6e',
+    channelPrivate: 'channelPrivate__4eb6e'
 };

@@ -1,8 +1,8 @@
 e.exports = {
-    container: 'container_a853ca',
-    measurements: 'measurements_a853ca',
-    tabs: 'tabs_a853ca',
-    tab: 'tab_a853ca',
-    more: 'more_a853ca',
-    selected: 'selected_a853ca'
+    container: 'container__65d41',
+    measurements: 'measurements__65d41',
+    tabs: 'tabs__65d41',
+    tab: 'tab__65d41',
+    more: 'more__65d41',
+    selected: 'selected__65d41'
 };

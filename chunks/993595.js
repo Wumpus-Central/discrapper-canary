@@ -1,12 +1,12 @@
 e.exports = {
-    avatar: 'avatar_e4d6ba',
-    userPreview: 'userPreview_e4d6ba',
-    userContainerWithPreview: 'userContainerWithPreview_e4d6ba',
-    tagContainer: 'tagContainer_e4d6ba',
-    username: 'username_e4d6ba',
-    discriminator: 'discriminator_e4d6ba',
-    globalName: 'globalName_e4d6ba',
-    timestampWithPreview: 'timestampWithPreview_e4d6ba',
-    mutualGuildsContainer: 'mutualGuildsContainer_e4d6ba',
-    mutualGuilds: 'mutualGuilds_e4d6ba'
+    avatar: 'avatar_b8dbac',
+    userPreview: 'userPreview_b8dbac',
+    userContainerWithPreview: 'userContainerWithPreview_b8dbac',
+    tagContainer: 'tagContainer_b8dbac',
+    username: 'username_b8dbac',
+    discriminator: 'discriminator_b8dbac',
+    globalName: 'globalName_b8dbac',
+    timestampWithPreview: 'timestampWithPreview_b8dbac',
+    mutualGuildsContainer: 'mutualGuildsContainer_b8dbac',
+    mutualGuilds: 'mutualGuilds_b8dbac'
 };

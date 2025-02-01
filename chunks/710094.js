@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(809144),
     y = n(698708),
     I = n(844068),
-    b = n(614223),
-    T = n(481595),
+    T = n(614223),
+    b = n(481595),
     S = n(51499),
     A = n(678334),
     N = n(614277),
@@ -38,10 +38,10 @@ function x(e) {
         [ev, ey] = (0, o.Z)(!1, D);
     (0, p.t)();
     let eI = null !== (n = null != L ? L : B) && void 0 !== n ? n : null,
-        eb = null != eI && (!eo || C.nG[eI].skus.includes(ee)) ? eI : null,
-        eT = (0, d.N)(B),
+        eT = null != eI && (!eo || C.nG[eI].skus.includes(ee)) ? eI : null,
+        eb = (0, d.N)(B),
         eS = (0, c.Ng)(),
-        eA = { user_trial_offer_id: null == eT ? void 0 : eT.id };
+        eA = { user_trial_offer_id: null == eb ? void 0 : eb.id };
     r.useEffect(() => {
         null != Q && null != eE.current && eE.current.scrollIntoView({ behavior: 'smooth' });
     }, [Q]);
@@ -62,12 +62,12 @@ function x(e) {
         eR = null != $ && C.o4.has($.id) && null != eC && !(0, l.aQ)(eC) ? Error(O.intl.string(O.t['2ik8io'])) : null,
         eO = r.useRef(null),
         [eD, ex] = r.useState(null),
-        eL = !ep && null != eT && null != ee && C.nG[eT.trial_id].skus.includes(ee),
+        eL = !ep && null != eb && null != ee && C.nG[eb.trial_id].skus.includes(ee),
         eP = null == eS ? void 0 : null === (t = eS.discount) || void 0 === t ? void 0 : t.plan_ids,
         ew = !ep && null != eS && null != eP && null != $ && eP.includes($.id),
         eM = ep && (0, h.pO)(em),
         ek = null == Z && null == F && eu === R.GZ.SUBSCRIPTION,
-        eU = (0, b.Kp)({
+        eU = (0, T.Kp)({
             isTrial: eL,
             isGift: ep,
             selectedSkuId: ee,
@@ -91,7 +91,7 @@ function x(e) {
     return (
         eu === R.GZ.ONE_TIME
             ? ((eV = null != X),
-              (a = (0, i.jsx)(T.Z, {
+              (a = (0, i.jsx)(b.Z, {
                   hasLegalTermsFlash: ev,
                   legalTermsNodeRef: eO,
                   onPaymentSourceChange: (e) => en(null != e ? e.id : null),
@@ -111,7 +111,7 @@ function x(e) {
                         setHasAcceptedTerms: el,
                         legalTermsNodeRef: eO,
                         hasLegalTermsFlash: ev,
-                        trialId: eb,
+                        trialId: eT,
                         trialFooterMessageOverride: P,
                         reviewWarningMessage: w,
                         purchaseState: es,
@@ -164,7 +164,7 @@ function x(e) {
                         analyticsLocation: G,
                         baseAnalyticsData: U,
                         flowStartTime: Y.startTime,
-                        trialId: eb,
+                        trialId: eT,
                         planGroup: M,
                         purchaseTokenAuthState: J,
                         openInvoiceId: k,

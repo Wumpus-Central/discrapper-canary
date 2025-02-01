@@ -1,3 +1,4 @@
+n.d(t, { Z: () => c });
 var i,
     l = n(442837),
     r = n(570140);
@@ -26,14 +27,13 @@ class s extends (i = l.ZP.PersistedStore) {
         return o[e];
     }
 }
-a(s, 'displayName', 'GuildBoostingProgressBarPersistedStore'),
-    a(s, 'persistKey', 'PremiumGuildProgressBarPersistedStore'),
-    (t.Z = new s(r.Z, {
-        APPLIED_GUILD_BOOST_COUNT_UPDATE: (e) => {
-            let { guildId: t, premiumCount: n } = e;
-            o = {
-                ...o,
-                [t]: n
-            };
-        }
-    }));
+a(s, 'displayName', 'GuildBoostingProgressBarPersistedStore'), a(s, 'persistKey', 'PremiumGuildProgressBarPersistedStore');
+let c = new s(r.Z, {
+    APPLIED_GUILD_BOOST_COUNT_UPDATE: (e) => {
+        let { guildId: t, premiumCount: n } = e;
+        o = {
+            ...o,
+            [t]: n
+        };
+    }
+});

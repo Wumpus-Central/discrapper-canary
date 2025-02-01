@@ -1,6 +1,6 @@
 e.exports = {
-    guildHeader: 'guildHeader_c0cc4b',
-    guildHeaderInner: 'guildHeaderInner_c0cc4b',
-    channelList: 'channelList_c0cc4b',
-    panels: 'panels_c0cc4b'
+    guildHeader: 'guildHeader_b81b18',
+    guildHeaderInner: 'guildHeaderInner_b81b18',
+    channelList: 'channelList_b81b18',
+    panels: 'panels_b81b18'
 };

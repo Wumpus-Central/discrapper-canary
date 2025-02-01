@@ -1,9 +1,9 @@
-function n(e) {
-    let n = e.regex,
-        r = ['div', 'mod', 'in', 'and', 'or', 'not', 'xor', 'asserterror', 'begin', 'case', 'do', 'downto', 'else', 'end', 'exit', 'for', 'local', 'if', 'of', 'repeat', 'then', 'to', 'until', 'while', 'with', 'var'],
+function t(e) {
+    let t = e.regex,
+        n = ['div', 'mod', 'in', 'and', 'or', 'not', 'xor', 'asserterror', 'begin', 'case', 'do', 'downto', 'else', 'end', 'exit', 'for', 'local', 'if', 'of', 'repeat', 'then', 'to', 'until', 'while', 'with', 'var'],
         i = 'false true',
-        a = [e.C_LINE_COMMENT_MODE, e.COMMENT(/\{/, /\}/, { relevance: 0 }), e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 })],
-        o = {
+        r = [e.C_LINE_COMMENT_MODE, e.COMMENT(/\{/, /\}/, { relevance: 0 }), e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 })],
+        a = {
             className: 'string',
             begin: /'/,
             end: /'/,
@@ -13,17 +13,17 @@ function n(e) {
             className: 'string',
             begin: /(#\d+)+/
         },
-        l = {
+        o = {
             className: 'number',
             begin: '\\b\\d+(\\.\\d+)?(DT|D|T)',
             relevance: 0
         },
-        u = {
+        l = {
             className: 'string',
             begin: '"',
             end: '"'
         },
-        c = {
+        u = {
             match: [/procedure/, /\s+/, /[a-zA-Z_][\w@]*/, /\s*/],
             scope: {
                 1: 'keyword',
@@ -34,15 +34,15 @@ function n(e) {
                     className: 'params',
                     begin: /\(/,
                     end: /\)/,
-                    keywords: r,
-                    contains: [o, s, e.NUMBER_MODE]
+                    keywords: n,
+                    contains: [a, s, e.NUMBER_MODE]
                 },
-                ...a
+                ...r
             ]
         },
-        d = ['Table', 'Form', 'Report', 'Dataport', 'Codeunit', 'XMLport', 'MenuSuite', 'Page', 'Query'],
-        f = {
-            match: [/OBJECT/, /\s+/, n.either(...d), /\s+/, /\d+/, /\s+(?=[^\s])/, /.*/, /$/],
+        c = ['Table', 'Form', 'Report', 'Dataport', 'Codeunit', 'XMLport', 'MenuSuite', 'Page', 'Query'],
+        d = {
+            match: [/OBJECT/, /\s+/, t.either(...c), /\s+/, /\d+/, /\s+(?=[^\s])/, /.*/, /$/],
             relevance: 3,
             scope: {
                 1: 'keyword',
@@ -55,7 +55,7 @@ function n(e) {
         name: 'C/AL',
         case_insensitive: !0,
         keywords: {
-            keyword: r,
+            keyword: n,
             literal: i
         },
         illegal: /\/\*/,
@@ -65,14 +65,14 @@ function n(e) {
                 scope: 'attribute',
                 relevance: 0
             },
-            o,
+            a,
             s,
+            o,
             l,
-            u,
             e.NUMBER_MODE,
-            f,
-            c
+            d,
+            u
         ]
     };
 }
-e.exports = n;
+e.exports = t;

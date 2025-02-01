@@ -1,4 +1,4 @@
 e.exports = {
-    wrapper: 'wrapper_d73dcb',
-    subtitle: 'subtitle_d73dcb'
+    wrapper: 'wrapper__686ce',
+    subtitle: 'subtitle__686ce'
 };

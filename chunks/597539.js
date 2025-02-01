@@ -1,10 +1,10 @@
-a.exports = {
-    confirmModal: 'confirmModal_a9fa9a',
-    discordTag: 'discordTag_a9fa9a',
-    avatarIcon: 'avatarIcon_a9fa9a',
-    username: 'username_a9fa9a',
-    discriminator: 'discriminator_a9fa9a',
-    fromToWrapper: 'fromToWrapper_a9fa9a',
-    from: 'from_a9fa9a',
-    to: 'to_a9fa9a'
+e.exports = {
+    confirmModal: 'confirmModal__1b38b',
+    discordTag: 'discordTag__1b38b',
+    avatarIcon: 'avatarIcon__1b38b',
+    username: 'username__1b38b',
+    discriminator: 'discriminator__1b38b',
+    fromToWrapper: 'fromToWrapper__1b38b',
+    from: 'from__1b38b',
+    to: 'to__1b38b'
 };

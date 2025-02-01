@@ -1,8 +1,8 @@
-var i = r(578805),
-    a = TypeError,
-    o = r(126417);
+var i = n(578805),
+    r = TypeError,
+    a = n(126417);
 e.exports = function (e) {
-    var n = i(e);
-    if (!n) throw new a('non-iterable value provided');
-    return arguments.length > 1 ? o(n, arguments[1]) : o(n);
+    var t = i(e);
+    if (!t) throw new r('non-iterable value provided');
+    return arguments.length > 1 ? a(t, arguments[1]) : a(t);
 };

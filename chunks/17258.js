@@ -1,17 +1,17 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e, n, r) {
+    function t(e, t, n) {
         var i = e + ' ';
-        switch (r) {
+        switch (n) {
             case 'ss':
                 return 1 === e ? (i += 'sekunda') : 2 === e || 3 === e || 4 === e ? (i += 'sekunde') : (i += 'sekundi'), i;
             case 'm':
-                return n ? 'jedna minuta' : 'jedne minute';
+                return t ? 'jedna minuta' : 'jedne minute';
             case 'mm':
                 return 1 === e ? (i += 'minuta') : 2 === e || 3 === e || 4 === e ? (i += 'minute') : (i += 'minuta'), i;
             case 'h':
-                return n ? 'jedan sat' : 'jednog sata';
+                return t ? 'jedan sat' : 'jednog sata';
             case 'hh':
                 return 1 === e ? (i += 'sat') : 2 === e || 3 === e || 4 === e ? (i += 'sata') : (i += 'sati'), i;
             case 'dd':
@@ -80,17 +80,17 @@
             future: 'za %s',
             past: 'prije %s',
             s: 'par sekundi',
-            ss: n,
-            m: n,
-            mm: n,
-            h: n,
-            hh: n,
+            ss: t,
+            m: t,
+            mm: t,
+            h: t,
+            hh: t,
             d: 'dan',
-            dd: n,
+            dd: t,
             M: 'mjesec',
-            MM: n,
+            MM: t,
             y: 'godinu',
-            yy: n
+            yy: t
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

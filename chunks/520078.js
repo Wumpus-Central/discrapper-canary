@@ -1,8 +1,8 @@
-var i = r(447631),
-    a = r(952256),
-    o = TypeError,
+var i = n(447631),
+    r = n(952256),
+    a = TypeError,
     s = Object.getOwnPropertyDescriptor,
-    l =
+    o =
         i &&
         !(function () {
             if (void 0 !== this) return !0;
@@ -12,11 +12,11 @@ var i = r(447631),
                 return e instanceof TypeError;
             }
         })();
-e.exports = l
-    ? function (e, n) {
-          if (a(e) && !s(e, 'length').writable) throw new o('Cannot set read only .length');
-          return (e.length = n);
+e.exports = o
+    ? function (e, t) {
+          if (r(e) && !s(e, 'length').writable) throw new a('Cannot set read only .length');
+          return (e.length = t);
       }
-    : function (e, n) {
-          return (e.length = n);
+    : function (e, t) {
+          return (e.length = t);
       };

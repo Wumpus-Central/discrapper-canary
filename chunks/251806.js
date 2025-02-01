@@ -1,5 +1,5 @@
 e.exports = {
-    content: 'content_ebb939',
-    sidebar: 'sidebar_ebb939',
-    sidebarSeparator: 'sidebarSeparator_ebb939'
+    content: 'content_b0bd32',
+    sidebar: 'sidebar_b0bd32',
+    sidebarSeparator: 'sidebarSeparator_b0bd32'
 };

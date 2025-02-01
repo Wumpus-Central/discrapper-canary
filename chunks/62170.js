@@ -1,26 +1,26 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(623113);
-n.Z = o.forwardRef(function (e, n) {
-    let { muted: r, volume: i, playing: l, ...u } = e,
-        [c, d] = (0, s.Z)(n);
+n.d(t, { Z: () => s }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(623113);
+let s = r.forwardRef(function (e, t) {
+    let { muted: n, volume: s, playing: o, ...l } = e,
+        [u, c] = (0, a.Z)(t);
     return (
-        o.useEffect(() => {
-            let e = c.current;
-            if (null != e) void 0 !== r && (e.muted = r);
-        }, [c, r]),
-        o.useEffect(() => {
-            let e = c.current;
-            if (null != e) void 0 !== i && (e.volume = i);
-        }, [c, i]),
-        o.useEffect(() => {
-            let e = c.current;
-            if (null != e) void 0 !== l && (l ? e.play() : e.pause());
-        }, [c, l]),
-        (0, a.jsx)('audio', {
-            ref: d,
-            ...u
+        r.useEffect(() => {
+            let e = u.current;
+            null != e && void 0 !== n && (e.muted = n);
+        }, [u, n]),
+        r.useEffect(() => {
+            let e = u.current;
+            null != e && void 0 !== s && (e.volume = s);
+        }, [u, s]),
+        r.useEffect(() => {
+            let e = u.current;
+            null != e && void 0 !== o && (o ? e.play() : e.pause());
+        }, [u, o]),
+        (0, i.jsx)('audio', {
+            ref: c,
+            ...l
         })
     );
 });

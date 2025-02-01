@@ -1,15 +1,15 @@
-Object.defineProperty(n, '__esModule', { value: !0 }), (n.autoprefix = void 0);
-var i = o(r(320403)),
-    a =
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.autoprefix = void 0);
+var i = a(n(320403)),
+    r =
         Object.assign ||
         function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = arguments[n];
-                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         };
-function o(e) {
+function a(e) {
     return e && e.__esModule ? e : { default: e };
 }
 var s = {
@@ -81,32 +81,32 @@ var s = {
             };
         },
         absolute: function (e) {
-            var n = e && e.split(' ');
+            var t = e && e.split(' ');
             return {
                 position: 'absolute',
-                top: n && n[0],
-                right: n && n[1],
-                bottom: n && n[2],
-                left: n && n[3]
+                top: t && t[0],
+                right: t && t[1],
+                bottom: t && t[2],
+                left: t && t[3]
             };
         },
-        extend: function (e, n) {
-            var r = n[e];
-            return r ? r : { extend: e };
+        extend: function (e, t) {
+            var n = t[e];
+            return n || { extend: e };
         }
     },
-    l = (n.autoprefix = function (e) {
-        var n = {};
+    o = (t.autoprefix = function (e) {
+        var t = {};
         return (
-            (0, i.default)(e, function (e, r) {
-                var o = {};
-                (0, i.default)(e, function (e, n) {
-                    var r = s[n];
-                    r ? (o = a({}, o, r(e))) : (o[n] = e);
+            (0, i.default)(e, function (e, n) {
+                var a = {};
+                (0, i.default)(e, function (e, t) {
+                    var n = s[t];
+                    n ? (a = r({}, a, n(e))) : (a[t] = e);
                 }),
-                    (n[r] = o);
+                    (t[n] = a);
             }),
-            n
+            t
         );
     });
-n.default = l;
+t.default = o;

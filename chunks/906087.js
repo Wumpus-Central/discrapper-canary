@@ -1,6 +1,6 @@
-function n(e) {
-    var n = [];
-    if (null != e) for (var r in Object(e)) n.push(r);
-    return n;
+function t(e) {
+    var t = [];
+    if (null != e) for (var n in Object(e)) t.push(n);
+    return t;
 }
-e.exports = n;
+e.exports = t;

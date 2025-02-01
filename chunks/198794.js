@@ -1,8 +1,8 @@
-var i = r(67867),
-    a = r(548828),
-    o = r(228042),
-    s = r(292137),
-    l = TypeError;
+var i = n(67867),
+    r = n(548828),
+    a = n(228042),
+    s = n(292137),
+    o = TypeError;
 i(
     {
         target: 'Map',
@@ -12,17 +12,17 @@ i(
     },
     {
         reduce: function (e) {
-            var n = o(this),
-                r = arguments.length < 2,
-                i = r ? void 0 : arguments[1];
+            var t = a(this),
+                n = arguments.length < 2,
+                i = n ? void 0 : arguments[1];
             if (
-                (a(e),
-                s(n, function (a, o) {
-                    r ? ((r = !1), (i = a)) : (i = e(i, a, o, n));
+                (r(e),
+                s(t, function (r, a) {
+                    n ? ((n = !1), (i = r)) : (i = e(i, r, a, t));
                 }),
-                r)
+                n)
             )
-                throw new l('Reduce of empty map with no initial value');
+                throw new o('Reduce of empty map with no initial value');
             return i;
         }
     }

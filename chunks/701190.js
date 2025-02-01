@@ -104,12 +104,12 @@ function I(e) {
         })
     );
 }
-function b(e) {
+function T(e) {
     return f(e.code, (e) => {
         e.state = o.r2o.APP_OPENING;
     });
 }
-function T(e) {
+function b(e) {
     return f(e.code, (e) => {
         e.state = o.r2o.APP_OPENED;
     });
@@ -145,7 +145,7 @@ let N = new A(a.Z, {
     INVITE_ACCEPT: v,
     INVITE_ACCEPT_SUCCESS: y,
     INVITE_ACCEPT_FAILURE: I,
-    INVITE_APP_OPENING: b,
-    INVITE_APP_OPENED: T,
+    INVITE_APP_OPENING: T,
+    INVITE_APP_OPENED: b,
     INVITE_APP_NOT_OPENED: S
 });

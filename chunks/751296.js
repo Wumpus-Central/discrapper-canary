@@ -1,7 +1,7 @@
 e.exports = {
-    popoutContent: 'popoutContent_a17822',
-    stickersList: 'stickersList_a17822',
-    packActions: 'packActions_a17822',
-    popoutLoader: 'popoutLoader_a17822',
-    nonInteractingSticker: 'nonInteractingSticker_a17822'
+    popoutContent: 'popoutContent_dfa983',
+    stickersList: 'stickersList_dfa983',
+    packActions: 'packActions_dfa983',
+    popoutLoader: 'popoutLoader_dfa983',
+    nonInteractingSticker: 'nonInteractingSticker_dfa983'
 };

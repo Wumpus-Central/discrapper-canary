@@ -1,4 +1,4 @@
 e.exports = {
-    wrapper: 'wrapper_ce502a',
-    badge: 'badge_ce502a'
+    wrapper: 'wrapper__92e4b',
+    badge: 'badge__92e4b'
 };

@@ -19,8 +19,8 @@ var r = n(120356),
     v = n(740605),
     y = n(370370),
     I = n(91140),
-    b = n(551228),
-    T = n(555672),
+    T = n(551228),
+    b = n(555672),
     S = n(335326),
     A = n(297781),
     N = n(797342),
@@ -65,7 +65,7 @@ function F(e) {
             userId: t.id,
             onAction: v
         }),
-        b = () => (n.content_type === o.s.TOP_GAME ? T.Hs.map((e, t) => (0, i.jsx)(e, { entry: n }, 'entry-'.concat(t))) : I.W.map((e, t) => (0, i.jsx)(e, { entry: n }, 'entry-'.concat(t))));
+        T = () => (n.content_type === o.s.TOP_GAME ? b.Hs.map((e, t) => (0, i.jsx)(e, { entry: n }, 'entry-'.concat(t))) : I.W.map((e, t) => (0, i.jsx)(e, { entry: n }, 'entry-'.concat(t))));
     return null == h
         ? (0, i.jsxs)(P.Z.Overlay, {
               className: a()(Z.card, s),
@@ -93,7 +93,7 @@ function F(e) {
                                       (0, i.jsx)(A.Gk, {
                                           location: A.Gt.USER_PROFILE,
                                           className: Z.badges,
-                                          children: b()
+                                          children: T()
                                       })
                                   ]
                               })
@@ -139,7 +139,7 @@ function F(e) {
                                       (0, i.jsx)(A.Gk, {
                                           location: A.Gt.USER_PROFILE,
                                           className: Z.badges,
-                                          children: b()
+                                          children: T()
                                       })
                                   ]
                               })
@@ -309,7 +309,7 @@ function j(e) {
                                       (0, i.jsx)(A.Gk, {
                                           location: A.Gt.USER_PROFILE,
                                           className: Z.badges,
-                                          children: b.te.map((e, t) => (0, i.jsx)(e, { entry: s }, 'entry-'.concat(t)))
+                                          children: T.te.map((e, t) => (0, i.jsx)(e, { entry: s }, 'entry-'.concat(t)))
                                       })
                                   ]
                               })
@@ -327,8 +327,8 @@ function H(e) {
             entry: n,
             showCoverImage: !1
         }),
-        { analyticsLocations: I, newestAnalyticsLocation: b } = (0, d.ZP)(),
-        T = (0, x.Z)({
+        { analyticsLocations: I, newestAnalyticsLocation: T } = (0, d.ZP)(),
+        b = (0, x.Z)({
             display: 'recent',
             user: t,
             entry: n,
@@ -336,7 +336,7 @@ function H(e) {
         }),
         S = (0, L.Z)({
             userId: t.id,
-            onAction: T
+            onAction: b
         }),
         N = (0, c.bp)() === G.IlC.POPOUT,
         C = (0, l.e7)([O.Z, D.Z], () => O.Z.getChannel(D.Z.getChannelId())),
@@ -348,7 +348,7 @@ function H(e) {
                               type: 'channel',
                               channel: C
                           },
-                          analyticsLocation: b,
+                          analyticsLocation: T,
                           openInPopout: N
                       })
                     : (0, f.__)(_._b.TEXT, h.Ie.NORMAL, { applicationId: n.extra.application_id });
@@ -357,7 +357,7 @@ function H(e) {
         ref: S,
         className: s,
         subsection: U.Tb.RECENT_ACTIVITY,
-        onAction: T,
+        onAction: b,
         onClose: o,
         children: [
             r,
@@ -371,7 +371,7 @@ function H(e) {
                             size: E.J.SIZE_60,
                             className: Z.clickableImage,
                             onClick: (e) => {
-                                e.stopPropagation(), T({ action: 'PRESS_IMAGE' }), R();
+                                e.stopPropagation(), b({ action: 'PRESS_IMAGE' }), R();
                             }
                         }),
                         (0, i.jsxs)('div', {
@@ -382,7 +382,7 @@ function H(e) {
                                         variant: 'heading-sm/semibold',
                                         text: n.extra.activity_name,
                                         onClick: () => {
-                                            T({ action: 'PRESS_TEXT' }), R();
+                                            b({ action: 'PRESS_TEXT' }), R();
                                         }
                                     })
                                 }),

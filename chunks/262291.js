@@ -28,12 +28,12 @@ var p = !!String.prototype.startsWith && '_a'.startsWith('a', 1),
           },
     I = !0;
 try {
-    var b = O('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
-    I = (null === (i = b.exec('a')) || void 0 === i ? void 0 : i[0]) === 'a';
+    var T = O('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
+    I = (null === (i = T.exec('a')) || void 0 === i ? void 0 : i[0]) === 'a';
 } catch (e) {
     I = !1;
 }
-var T = p
+var b = p
         ? function (e, t, n) {
               return e.startsWith(t, n);
           }
@@ -335,7 +335,7 @@ var x = (function () {
                     var E = this.tryParseArgumentClose(i);
                     if (E.err) return E;
                     var v = _(i, this.clonePosition());
-                    if (p && T(null == p ? void 0 : p.style, '::', 0)) {
+                    if (p && b(null == p ? void 0 : p.style, '::', 0)) {
                         var y = C(p.style.slice(2));
                         if ('number' === d) {
                             var m = this.parseNumberSkeletonFromString(y, p.styleLocation);
@@ -381,8 +381,8 @@ var x = (function () {
                 case 'plural':
                 case 'selectordinal':
                 case 'select':
-                    var b = this.clonePosition();
-                    if ((this.bumpSpace(), !this.bumpIf(','))) return this.error(s.o.EXPECT_SELECT_ARGUMENT_OPTIONS, _(b, (0, a.pi)({}, b)));
+                    var T = this.clonePosition();
+                    if ((this.bumpSpace(), !this.bumpIf(','))) return this.error(s.o.EXPECT_SELECT_ARGUMENT_OPTIONS, _(T, (0, a.pi)({}, T)));
                     this.bumpSpace();
                     var S = this.parseIdentifierIfPossible(),
                         N = 0;
@@ -572,7 +572,7 @@ var x = (function () {
             }
         }),
         (e.prototype.bumpIf = function (e) {
-            if (T(this.message, e, this.offset())) {
+            if (b(this.message, e, this.offset())) {
                 for (var t = 0; t < e.length; t++) this.bump();
                 return !0;
             }

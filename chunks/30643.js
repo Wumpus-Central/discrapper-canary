@@ -1,7 +1,7 @@
-n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i = n(237997),
-    r = n(998502),
-    l = n(576027),
+    l = n(998502),
+    r = n(576027),
     a = n(13838),
     s = n(812967),
     o = n(350085),
@@ -12,8 +12,8 @@ var i = n(237997),
     m = n(121826),
     p = n(822746),
     g = n(753335),
-    f = n(567481),
-    _ = n(498164),
+    _ = n(567481),
+    f = n(498164),
     E = n(111097),
     I = n(908711),
     C = n(197941),
@@ -21,14 +21,14 @@ var i = n(237997),
     N = n(662194),
     T = n(188861);
 let S = {
-        ...l.A,
+        ...r.A,
         ...d.Z,
         ...u.Z,
         ...m.Z,
         ...p.Z,
         ...g.Z,
-        ...f.Z,
         ..._.Z,
+        ...f.Z,
         ...E.Z,
         ...C.Z,
         ...N.Z,
@@ -36,20 +36,20 @@ let S = {
         ...h.Z,
         ...I.Z
     },
-    b = {
+    Z = {
         ...a.Z,
         ...o.M,
         ...c.n
+    },
+    x = {
+        server: s.Z,
+        commands: S,
+        events: Z,
+        stores: [i.Z],
+        transports: [T.Z],
+        registerTransportsForEmbeddedPlatform: function () {
+            l.ZP.ensureModule('discord_rpc').then(() => {
+                for (let e of [n(178318).Z, n(967351).Z]) s.Z.registerTransport(e);
+            });
+        }
     };
-t.Z = {
-    server: s.Z,
-    commands: S,
-    events: b,
-    stores: [i.Z],
-    transports: [T.Z],
-    registerTransportsForEmbeddedPlatform: function () {
-        r.ZP.ensureModule('discord_rpc').then(() => {
-            for (let e of [n(178318).Z, n(967351).Z]) s.Z.registerTransport(e);
-        });
-    }
-};

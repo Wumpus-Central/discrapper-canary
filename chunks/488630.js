@@ -8,7 +8,7 @@ t.exports = function (t) {
         n.some(function (t) {
             return i === t.get('start')
                 ? ((o = !0), !0)
-                : !!(i < t.get('end')) &&
+                : i < t.get('end') &&
                       t.get('leaves').some(function (t) {
                           return i === t.get('start') && ((o = !0), !0);
                       });

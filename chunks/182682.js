@@ -1,11 +1,11 @@
 e.exports = {
-    icon: 'icon_d2f4d0',
-    iconOuter: 'iconOuter_d2f4d0',
-    iconCheck: 'iconCheck_d2f4d0',
-    iconCross: 'iconCross_d2f4d0',
-    scope: 'scope_d2f4d0',
-    scopeInner: 'scopeInner_d2f4d0',
-    panel: 'panel_d2f4d0',
-    panelInner: 'panelInner_d2f4d0',
-    section: 'section_d2f4d0'
+    icon: 'icon__2a871',
+    iconOuter: 'iconOuter__2a871',
+    iconCheck: 'iconCheck__2a871',
+    iconCross: 'iconCross__2a871',
+    scope: 'scope__2a871',
+    scopeInner: 'scopeInner__2a871',
+    panel: 'panel__2a871',
+    panelInner: 'panelInner__2a871',
+    section: 'section__2a871'
 };

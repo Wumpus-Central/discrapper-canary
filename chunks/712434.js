@@ -1,11 +1,11 @@
 e.exports = {
-    container: 'container_b02370',
-    splash: 'splash_b02370',
-    splashImage: 'splashImage_b02370',
-    header: 'header_b02370',
-    medium: 'medium_b02370',
-    small: 'small_b02370',
-    subheader: 'subheader_b02370',
-    button: 'button_b02370',
-    buttons: 'buttons_b02370'
+    container: 'container_b41471',
+    splash: 'splash_b41471',
+    splashImage: 'splashImage_b41471',
+    header: 'header_b41471',
+    medium: 'medium_b41471',
+    small: 'small_b41471',
+    subheader: 'subheader_b41471',
+    button: 'button_b41471',
+    buttons: 'buttons_b41471'
 };

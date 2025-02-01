@@ -1,11 +1,11 @@
-let n = /^[0-9]+$/,
-    r = (e, r) => {
-        let i = n.test(e),
-            a = n.test(r);
-        return i && a && ((e = +e), (r = +r)), e === r ? 0 : i && !a ? -1 : a && !i ? 1 : e < r ? -1 : 1;
+let t = /^[0-9]+$/,
+    n = (e, n) => {
+        let i = t.test(e),
+            r = t.test(n);
+        return i && r && ((e = +e), (n = +n)), e === n ? 0 : i && !r ? -1 : r && !i ? 1 : e < n ? -1 : 1;
     },
-    i = (e, n) => r(n, e);
+    i = (e, t) => n(t, e);
 e.exports = {
-    compareIdentifiers: r,
+    compareIdentifiers: n,
     rcompareIdentifiers: i
 };

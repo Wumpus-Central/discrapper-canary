@@ -1,12 +1,12 @@
 e.exports = {
-    headerWithImage: 'headerWithImage_a9d4d6',
-    backgroundImage: 'backgroundImage_a9d4d6',
-    closeButton: 'closeButton_a9d4d6',
-    footer: 'footer_a9d4d6',
-    skuPreviewFooterCloseButton: 'skuPreviewFooterCloseButton_a9d4d6',
-    header: 'header_a9d4d6',
-    container: 'container_a9d4d6',
-    containerWithHeader: 'containerWithHeader_a9d4d6',
-    premiumButtonNitroWheel: 'premiumButtonNitroWheel_a9d4d6',
-    premiumButtonInner: 'premiumButtonInner_a9d4d6'
+    headerWithImage: 'headerWithImage_fa5bb9',
+    backgroundImage: 'backgroundImage_fa5bb9',
+    closeButton: 'closeButton_fa5bb9',
+    footer: 'footer_fa5bb9',
+    skuPreviewFooterCloseButton: 'skuPreviewFooterCloseButton_fa5bb9',
+    header: 'header_fa5bb9',
+    container: 'container_fa5bb9',
+    containerWithHeader: 'containerWithHeader_fa5bb9',
+    premiumButtonNitroWheel: 'premiumButtonNitroWheel_fa5bb9',
+    premiumButtonInner: 'premiumButtonInner_fa5bb9'
 };

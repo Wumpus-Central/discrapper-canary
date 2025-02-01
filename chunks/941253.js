@@ -1,6 +1,6 @@
 e.exports = {
-    container: 'container_e48555',
-    iconContainer: 'iconContainer_e48555',
-    actionable: 'actionable_e48555',
-    flair: 'flair_e48555'
+    container: 'container__8a969',
+    iconContainer: 'iconContainer__8a969',
+    actionable: 'actionable__8a969',
+    flair: 'flair__8a969'
 };

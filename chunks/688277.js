@@ -1,11 +1,11 @@
 e.exports = {
-    container: 'container_f66b8e',
-    quote: 'quote_f66b8e',
-    content: 'content_f66b8e',
-    headerContainer: 'headerContainer_f66b8e',
-    headerIcon: 'headerIcon_f66b8e',
-    headerText: 'headerText_f66b8e',
-    footerContainer: 'footerContainer_f66b8e',
-    footerText: 'footerText_f66b8e',
-    originIcon: 'originIcon_f66b8e'
+    container: 'container__122e4',
+    quote: 'quote__122e4',
+    content: 'content__122e4',
+    headerContainer: 'headerContainer__122e4',
+    headerIcon: 'headerIcon__122e4',
+    headerText: 'headerText__122e4',
+    footerContainer: 'footerContainer__122e4',
+    footerText: 'footerText__122e4',
+    originIcon: 'originIcon__122e4'
 };

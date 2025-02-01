@@ -1,8 +1,8 @@
-var i = r(559969),
-    a = Array.prototype.splice;
-function o(e) {
-    var n = this.__data__,
-        r = i(n, e);
-    return !(r < 0) && (r == n.length - 1 ? n.pop() : a.call(n, r, 1), --this.size, !0);
+var i = n(559969),
+    r = Array.prototype.splice;
+function a(e) {
+    var t = this.__data__,
+        n = i(t, e);
+    return !(n < 0) && (n == t.length - 1 ? t.pop() : r.call(t, n, 1), --this.size, !0);
 }
-e.exports = o;
+e.exports = a;

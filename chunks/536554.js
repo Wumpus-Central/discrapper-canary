@@ -1,14 +1,14 @@
 e.exports = {
-    list: 'list_f20a46',
-    accountCard: 'accountCard_f20a46',
-    separator: 'separator_f20a46',
-    userDetails: 'userDetails_f20a46',
-    usernameSection: 'usernameSection_f20a46',
-    hasActionMaxWidth: 'hasActionMaxWidth_f20a46',
-    username: 'username_f20a46',
-    userActions: 'userActions_f20a46',
-    userActionMenu: 'userActionMenu_f20a46',
-    overflowMenuIcon: 'overflowMenuIcon_f20a46',
-    textOverflow: 'textOverflow_f20a46',
-    hintText: 'hintText_f20a46'
+    list: 'list__920b8',
+    accountCard: 'accountCard__920b8',
+    separator: 'separator__920b8',
+    userDetails: 'userDetails__920b8',
+    usernameSection: 'usernameSection__920b8',
+    hasActionMaxWidth: 'hasActionMaxWidth__920b8',
+    userActions: 'userActions__920b8',
+    username: 'username__920b8',
+    userActionMenu: 'userActionMenu__920b8',
+    overflowMenuIcon: 'overflowMenuIcon__920b8',
+    textOverflow: 'textOverflow__920b8',
+    hintText: 'hintText__920b8'
 };

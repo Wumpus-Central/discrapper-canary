@@ -1,39 +1,39 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = 'vasárnap hétfőn kedden szerdán csütörtökön pénteken szombaton'.split(' ');
-    function r(e, n, r, i) {
-        var a = e;
-        switch (r) {
+    var t = 'vasárnap hétfőn kedden szerdán csütörtökön pénteken szombaton'.split(' ');
+    function n(e, t, n, i) {
+        var r = e;
+        switch (n) {
             case 's':
-                return i || n ? 'néhány másodperc' : 'néhány másodperce';
+                return i || t ? 'néhány másodperc' : 'néhány másodperce';
             case 'ss':
-                return a + (i || n) ? ' másodperc' : ' másodperce';
+                return r + (i || t) ? ' másodperc' : ' másodperce';
             case 'm':
-                return 'egy' + (i || n ? ' perc' : ' perce');
+                return 'egy' + (i || t ? ' perc' : ' perce');
             case 'mm':
-                return a + (i || n ? ' perc' : ' perce');
+                return r + (i || t ? ' perc' : ' perce');
             case 'h':
-                return 'egy' + (i || n ? ' óra' : ' órája');
+                return 'egy' + (i || t ? ' óra' : ' órája');
             case 'hh':
-                return a + (i || n ? ' óra' : ' órája');
+                return r + (i || t ? ' óra' : ' órája');
             case 'd':
-                return 'egy' + (i || n ? ' nap' : ' napja');
+                return 'egy' + (i || t ? ' nap' : ' napja');
             case 'dd':
-                return a + (i || n ? ' nap' : ' napja');
+                return r + (i || t ? ' nap' : ' napja');
             case 'M':
-                return 'egy' + (i || n ? ' hónap' : ' hónapja');
+                return 'egy' + (i || t ? ' hónap' : ' hónapja');
             case 'MM':
-                return a + (i || n ? ' hónap' : ' hónapja');
+                return r + (i || t ? ' hónap' : ' hónapja');
             case 'y':
-                return 'egy' + (i || n ? ' év' : ' éve');
+                return 'egy' + (i || t ? ' év' : ' éve');
             case 'yy':
-                return a + (i || n ? ' év' : ' éve');
+                return r + (i || t ? ' év' : ' éve');
         }
         return '';
     }
     function i(e) {
-        return (e ? '' : '[múlt] ') + '[' + n[this.day()] + '] LT[-kor]';
+        return (e ? '' : '[múlt] ') + '[' + t[this.day()] + '] LT[-kor]';
     }
     return e.defineLocale('hu', {
         months: 'január_február_március_április_május_június_július_augusztus_szeptember_október_november_december'.split('_'),
@@ -53,8 +53,8 @@
         isPM: function (e) {
             return 'u' === e.charAt(1).toLowerCase();
         },
-        meridiem: function (e, n, r) {
-            return e < 12 ? (!0 === r ? 'de' : 'DE') : !0 === r ? 'du' : 'DU';
+        meridiem: function (e, t, n) {
+            return e < 12 ? (!0 === n ? 'de' : 'DE') : !0 === n ? 'du' : 'DU';
         },
         calendar: {
             sameDay: '[ma] LT[-kor]',
@@ -71,18 +71,18 @@
         relativeTime: {
             future: '%s múlva',
             past: '%s',
-            s: r,
-            ss: r,
-            m: r,
-            mm: r,
-            h: r,
-            hh: r,
-            d: r,
-            dd: r,
-            M: r,
-            MM: r,
-            y: r,
-            yy: r
+            s: n,
+            ss: n,
+            m: n,
+            mm: n,
+            h: n,
+            hh: n,
+            d: n,
+            dd: n,
+            M: n,
+            MM: n,
+            y: n,
+            yy: n
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

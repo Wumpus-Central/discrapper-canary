@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var i = n(544891),
     r = n(780384),
     a = n(570140),
@@ -59,7 +59,7 @@ function I(e, t, n) {
     }
     throw e;
 }
-let b = {
+let T = {
         sendRequest(e) {
             let { discordTag: t, context: n, captchaPayload: r, errorUxConfig: a = 0 } = e,
                 [s, o] = t.split('#');
@@ -107,25 +107,25 @@ let b = {
             function t() {
                 r.uv.announce(E.intl.string(E.t['3goNa2']));
             }
-            return b.addRelationship(e, t);
+            return T.addRelationship(e, t);
         },
         cancelFriendRequest(e, t) {
             function n() {
                 r.uv.announce(E.intl.string(E.t.pLUaxc));
             }
-            return b.removeRelationship(e, t, n);
+            return T.removeRelationship(e, t, n);
         },
         removeFriend(e, t) {
             function n() {
                 r.uv.announce(E.intl.string(E.t.vGSLa2));
             }
-            b.removeRelationship(e, t, n);
+            T.removeRelationship(e, t, n);
         },
         unblockUser(e, t) {
             function n() {
                 r.uv.announce(E.intl.string(E.t['9t1au7']));
             }
-            return b.removeRelationship(e, t, n);
+            return T.removeRelationship(e, t, n);
         },
         removeRelationship: (e, t, n) =>
             i.tn
@@ -222,4 +222,4 @@ let b = {
                     u.Z.showFailedToast(), r.uv.announce(E.intl.string(E.t.n6Jo3N));
                 })
     },
-    T = b;
+    b = T;

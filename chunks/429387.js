@@ -1,4 +1,4 @@
-let n = (e) => ({
+let t = (e) => ({
         IMPORTANT: {
             scope: 'meta',
             begin: '!important'
@@ -29,10 +29,10 @@ let n = (e) => ({
             begin: /--[A-Za-z_][A-Za-z0-9_-]*/
         }
     }),
-    r = ['a', 'abbr', 'address', 'article', 'aside', 'audio', 'b', 'blockquote', 'body', 'button', 'canvas', 'caption', 'cite', 'code', 'dd', 'del', 'details', 'dfn', 'div', 'dl', 'dt', 'em', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'nav', 'object', 'ol', 'optgroup', 'option', 'p', 'picture', 'q', 'quote', 'samp', 'section', 'select', 'source', 'span', 'strong', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'ul', 'var', 'video', 'defs', 'g', 'marker', 'mask', 'pattern', 'svg', 'switch', 'symbol', 'feBlend', 'feColorMatrix', 'feComponentTransfer', 'feComposite', 'feConvolveMatrix', 'feDiffuseLighting', 'feDisplacementMap', 'feFlood', 'feGaussianBlur', 'feImage', 'feMerge', 'feMorphology', 'feOffset', 'feSpecularLighting', 'feTile', 'feTurbulence', 'linearGradient', 'radialGradient', 'stop', 'circle', 'ellipse', 'image', 'line', 'path', 'polygon', 'polyline', 'rect', 'text', 'use', 'textPath', 'tspan', 'foreignObject', 'clipPath'],
+    n = ['a', 'abbr', 'address', 'article', 'aside', 'audio', 'b', 'blockquote', 'body', 'button', 'canvas', 'caption', 'cite', 'code', 'dd', 'del', 'details', 'dfn', 'div', 'dl', 'dt', 'em', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'nav', 'object', 'ol', 'optgroup', 'option', 'p', 'picture', 'q', 'quote', 'samp', 'section', 'select', 'source', 'span', 'strong', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'ul', 'var', 'video', 'defs', 'g', 'marker', 'mask', 'pattern', 'svg', 'switch', 'symbol', 'feBlend', 'feColorMatrix', 'feComponentTransfer', 'feComposite', 'feConvolveMatrix', 'feDiffuseLighting', 'feDisplacementMap', 'feFlood', 'feGaussianBlur', 'feImage', 'feMerge', 'feMorphology', 'feOffset', 'feSpecularLighting', 'feTile', 'feTurbulence', 'linearGradient', 'radialGradient', 'stop', 'circle', 'ellipse', 'image', 'line', 'path', 'polygon', 'polyline', 'rect', 'text', 'use', 'textPath', 'tspan', 'foreignObject', 'clipPath'],
     i = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'].sort().reverse(),
-    a = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'].sort().reverse(),
-    o = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'].sort().reverse(),
+    r = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'].sort().reverse(),
+    a = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'].sort().reverse(),
     s = [
         'accent-color',
         'align-content',
@@ -551,48 +551,48 @@ let n = (e) => ({
     ]
         .sort()
         .reverse();
-function l(e) {
-    let l = n(e),
-        u = 'and or not only',
-        c = {
+function o(e) {
+    let o = t(e),
+        l = 'and or not only',
+        u = {
             className: 'variable',
             begin: '\\$' + e.IDENT_RE
         },
-        d = ['charset', 'css', 'debug', 'extend', 'font-face', 'for', 'import', 'include', 'keyframes', 'media', 'mixin', 'page', 'warn', 'while'],
-        f = '(?=[.\\s\\n[:,(])';
+        c = ['charset', 'css', 'debug', 'extend', 'font-face', 'for', 'import', 'include', 'keyframes', 'media', 'mixin', 'page', 'warn', 'while'],
+        d = '(?=[.\\s\\n[:,(])';
     return {
         name: 'Stylus',
         aliases: ['styl'],
         case_insensitive: !1,
         keywords: 'if else for in',
-        illegal: '(' + '\\?|(\\bReturn\\b)|(\\bEnd\\b)|(\\bend\\b)|(\\bdef\\b)|;|#\\s|\\*\\s|===\\s|\\||%)',
+        illegal: '(\\?|(\\bReturn\\b)|(\\bEnd\\b)|(\\bend\\b)|(\\bdef\\b)|;|#\\s|\\*\\s|===\\s|\\||%)',
         contains: [
             e.QUOTE_STRING_MODE,
             e.APOS_STRING_MODE,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            l.HEXCOLOR,
+            o.HEXCOLOR,
             {
-                begin: '\\.[a-zA-Z][a-zA-Z0-9_-]*' + f,
+                begin: '\\.[a-zA-Z][a-zA-Z0-9_-]*' + d,
                 className: 'selector-class'
             },
             {
-                begin: '#[a-zA-Z][a-zA-Z0-9_-]*' + f,
+                begin: '#[a-zA-Z][a-zA-Z0-9_-]*' + d,
                 className: 'selector-id'
             },
             {
-                begin: '\\b(' + r.join('|') + ')' + f,
+                begin: '\\b(' + n.join('|') + ')' + d,
                 className: 'selector-tag'
             },
             {
                 className: 'selector-pseudo',
-                begin: '&?:(' + a.join('|') + ')' + f
+                begin: '&?:(' + r.join('|') + ')' + d
             },
             {
                 className: 'selector-pseudo',
-                begin: '&?:(:)?(' + o.join('|') + ')' + f
+                begin: '&?:(:)?(' + a.join('|') + ')' + d
             },
-            l.ATTRIBUTE_SELECTOR_MODE,
+            o.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: 'keyword',
                 begin: /@media/,
@@ -600,18 +600,18 @@ function l(e) {
                     end: /[{;}]/,
                     keywords: {
                         $pattern: /[a-z-]+/,
-                        keyword: u,
+                        keyword: l,
                         attribute: i.join(' ')
                     },
-                    contains: [l.CSS_NUMBER_MODE]
+                    contains: [o.CSS_NUMBER_MODE]
                 }
             },
             {
                 className: 'keyword',
-                begin: '@((-(o|moz|ms|webkit)-)?(' + d.join('|') + '))\\b'
+                begin: '@((-(o|moz|ms|webkit)-)?(' + c.join('|') + '))\\b'
             },
-            c,
-            l.CSS_NUMBER_MODE,
+            u,
+            o.CSS_NUMBER_MODE,
             {
                 className: 'function',
                 begin: '^[a-zA-Z][a-zA-Z0-9_-]*\\(.*\\)',
@@ -626,23 +626,23 @@ function l(e) {
                         className: 'params',
                         begin: /\(/,
                         end: /\)/,
-                        contains: [l.HEXCOLOR, c, e.APOS_STRING_MODE, l.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE]
+                        contains: [o.HEXCOLOR, u, e.APOS_STRING_MODE, o.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE]
                     }
                 ]
             },
-            l.CSS_VARIABLE,
+            o.CSS_VARIABLE,
             {
                 className: 'attribute',
                 begin: '\\b(' + s.join('|') + ')\\b',
                 starts: {
                     end: /;|$/,
-                    contains: [l.HEXCOLOR, c, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, l.CSS_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE, l.IMPORTANT, l.FUNCTION_DISPATCH],
+                    contains: [o.HEXCOLOR, u, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o.CSS_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE, o.IMPORTANT, o.FUNCTION_DISPATCH],
                     illegal: /\./,
                     relevance: 0
                 }
             },
-            l.FUNCTION_DISPATCH
+            o.FUNCTION_DISPATCH
         ]
     };
 }
-e.exports = l;
+e.exports = o;

@@ -1,8 +1,8 @@
 e.exports = {
-    tags: 'tags_faaca1',
-    addTags: 'addTags_faaca1',
-    disabled: 'disabled_faaca1',
-    container: 'container_faaca1',
-    dropIndicatorBefore: 'dropIndicatorBefore_faaca1',
-    dropIndicatorAfter: 'dropIndicatorAfter_faaca1'
+    tags: 'tags__3f6df',
+    addTags: 'addTags__3f6df',
+    disabled: 'disabled__3f6df',
+    container: 'container__3f6df',
+    dropIndicatorBefore: 'dropIndicatorBefore__3f6df',
+    dropIndicatorAfter: 'dropIndicatorAfter__3f6df'
 };

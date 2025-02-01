@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('si', {
         months: 'ජනවාරි_පෙබරවාරි_මාර්තු_අප්‍රේල්_මැයි_ජූනි_ජූලි_අගෝස්තු_සැප්තැම්බර්_ඔක්තෝබර්_නොවැම්බර්_දෙසැම්බර්'.split('_'),
@@ -48,8 +48,8 @@
         isPM: function (e) {
             return 'ප.ව.' === e || 'පස් වරු' === e;
         },
-        meridiem: function (e, n, r) {
-            return e > 11 ? (r ? 'ප.ව.' : 'පස් වරු') : r ? 'පෙ.ව.' : 'පෙර වරු';
+        meridiem: function (e, t, n) {
+            return e > 11 ? (n ? 'ප.ව.' : 'පස් වරු') : n ? 'පෙ.ව.' : 'පෙර වරු';
         }
     });
 });

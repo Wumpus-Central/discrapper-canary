@@ -1,34 +1,34 @@
-var e = n(545576),
-    o = n(740362),
-    i = n(251069),
-    u = n(838957),
-    c = n(276321),
-    a = n(381740),
-    f = n(504559),
-    s = n(95948),
-    p = n(892725),
-    l = n(668788),
-    v = n(154154),
-    h = n(325008),
-    y = n(992051);
-t.exports = function (t, r, n, d) {
+var r = i(545576),
+    n = i(740362),
+    a = i(251069),
+    s = i(838957),
+    o = i(276321),
+    u = i(381740),
+    c = i(504559),
+    h = i(95948),
+    l = i(892725),
+    f = i(668788),
+    d = i(154154),
+    m = i(325008),
+    v = i(992051);
+t.exports = function (t, e, i, p) {
     var g = 'stackTraceLimit',
-        x = d ? 2 : 1,
+        y = p ? 2 : 1,
         b = t.split('.'),
-        m = b[b.length - 1],
-        E = e.apply(null, b);
-    if (E) {
-        var j = E.prototype;
-        if ((!y && o(j, 'cause') && delete j.cause, !n)) return E;
-        var T = e('Error'),
-            k = r(function (t, r) {
-                var n = p(d ? r : t, void 0),
-                    e = d ? new E(t) : new E();
-                return void 0 !== n && i(e, 'message', n), v(e, k, e.stack, 2), this && u(j, this) && s(e, this, k), arguments.length > x && l(e, arguments[x]), e;
+        w = b[b.length - 1],
+        I = r.apply(null, b);
+    if (I) {
+        var E = I.prototype;
+        if ((!v && n(E, 'cause') && delete E.cause, !i)) return I;
+        var A = r('Error'),
+            k = e(function (t, e) {
+                var i = l(p ? e : t, void 0),
+                    r = p ? new I(t) : new I();
+                return void 0 !== i && a(r, 'message', i), d(r, k, r.stack, 2), this && s(E, this) && h(r, this, k), arguments.length > y && f(r, arguments[y]), r;
             });
-        if (((k.prototype = j), 'Error' !== m ? (c ? c(k, T) : a(k, T, { name: !0 })) : h && g in E && (f(k, E, g), f(k, E, 'prepareStackTrace')), a(k, E), !y))
+        if (((k.prototype = E), 'Error' !== w ? (o ? o(k, A) : u(k, A, { name: !0 })) : m && g in I && (c(k, I, g), c(k, I, 'prepareStackTrace')), u(k, I), !v))
             try {
-                j.name !== m && i(j, 'name', m), (j.constructor = k);
+                E.name !== w && a(E, 'name', w), (E.constructor = k);
             } catch (t) {}
         return k;
     }

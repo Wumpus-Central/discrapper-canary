@@ -1,7 +1,7 @@
 e.exports = {
-    errorPageContainer: 'errorPageContainer_a4a24d',
-    errorPageContent: 'errorPageContent_a4a24d',
-    errorPageIllo: 'errorPageIllo_a4a24d',
-    errorPageTitle: 'errorPageTitle_a4a24d',
-    errorPagSubtitle: 'errorPagSubtitle_a4a24d'
+    errorPageContainer: 'errorPageContainer__5a176',
+    errorPageContent: 'errorPageContent__5a176',
+    errorPageIllo: 'errorPageIllo__5a176',
+    errorPageTitle: 'errorPageTitle__5a176',
+    errorPagSubtitle: 'errorPagSubtitle__5a176'
 };

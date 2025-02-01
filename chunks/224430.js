@@ -1,5 +1,5 @@
 e.exports = {
-    previewNotice: 'previewNotice_ca24bf',
-    previewNoticeText: 'previewNoticeText_ca24bf',
-    removePreviewButton: 'removePreviewButton_ca24bf'
+    previewNotice: 'previewNotice__60f3f',
+    previewNoticeText: 'previewNoticeText__60f3f',
+    removePreviewButton: 'removePreviewButton__60f3f'
 };

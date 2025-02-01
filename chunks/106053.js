@@ -1,11 +1,11 @@
 e.exports = {
-    inviteContainer: 'inviteContainer_cdb562',
-    inviterTooltipContainer: 'inviterTooltipContainer_cdb562',
-    robot: 'robot_cdb562',
-    integrationIcon: 'integrationIcon_cdb562',
-    unknownInvite: 'unknownInvite_cdb562',
-    inviterFooter: 'inviterFooter_cdb562',
-    inviterUserContainer: 'inviterUserContainer_cdb562',
-    clickable: 'clickable_cdb562',
-    footerAlignment: 'footerAlignment_cdb562'
+    inviteContainer: 'inviteContainer__23437',
+    inviterTooltipContainer: 'inviterTooltipContainer__23437',
+    robot: 'robot__23437',
+    integrationIcon: 'integrationIcon__23437',
+    unknownInvite: 'unknownInvite__23437',
+    inviterFooter: 'inviterFooter__23437',
+    inviterUserContainer: 'inviterUserContainer__23437',
+    clickable: 'clickable__23437',
+    footerAlignment: 'footerAlignment__23437'
 };

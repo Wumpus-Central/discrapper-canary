@@ -1,4 +1,4 @@
 e.exports = {
-    crossfade: 'crossfade_e9fa7e',
-    icon: 'icon_e9fa7e'
+    crossfade: 'crossfade__04d60',
+    icon: 'icon__04d60'
 };

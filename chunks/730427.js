@@ -1,55 +1,55 @@
-var i = r(476508),
-    a = r(570596),
-    o = r(28886),
-    s = r(858698),
-    l = r(987100),
-    u = r(474883),
-    c = r(875604),
-    d = r(86930),
-    f = r(749915),
-    p = r(736849),
-    h = TypeError,
-    _ = function (e, n) {
-        (this.stopped = e), (this.result = n);
+var i = n(476508),
+    r = n(570596),
+    a = n(28886),
+    s = n(858698),
+    o = n(987100),
+    l = n(474883),
+    u = n(875604),
+    c = n(86930),
+    d = n(749915),
+    f = n(736849),
+    _ = TypeError,
+    p = function (e, t) {
+        (this.stopped = e), (this.result = t);
     },
-    m = _.prototype;
-e.exports = function (e, n, r) {
-    var g,
+    h = p.prototype;
+e.exports = function (e, t, n) {
+    var m,
+        g,
         E,
         v,
         y,
-        b,
         I,
         T,
-        S = r && r.that,
-        A = !!(r && r.AS_ENTRIES),
-        C = !!(r && r.IS_RECORD),
-        N = !!(r && r.IS_ITERATOR),
-        R = !!(r && r.INTERRUPTED),
-        O = i(n, S),
-        D = function (e) {
-            return g && p(g, 'normal', e), new _(!0, e);
+        b = n && n.that,
+        S = !!(n && n.AS_ENTRIES),
+        A = !!(n && n.IS_RECORD),
+        N = !!(n && n.IS_ITERATOR),
+        C = !!(n && n.INTERRUPTED),
+        R = i(t, b),
+        O = function (e) {
+            return m && f(m, 'normal', e), new p(!0, e);
         },
-        L = function (e) {
-            return A ? (o(e), R ? O(e[0], e[1], D) : O(e[0], e[1])) : R ? O(e, D) : O(e);
+        D = function (e) {
+            return S ? (a(e), C ? R(e[0], e[1], O) : R(e[0], e[1])) : C ? R(e, O) : R(e);
         };
-    if (C) g = e.iterator;
-    else if (N) g = e;
+    if (A) m = e.iterator;
+    else if (N) m = e;
     else {
-        if (!(E = f(e))) throw new h(s(e) + ' is not iterable');
-        if (l(E)) {
-            for (v = 0, y = u(e); y > v; v++) if ((b = L(e[v])) && c(m, b)) return b;
-            return new _(!1);
+        if (!(g = d(e))) throw new _(s(e) + ' is not iterable');
+        if (o(g)) {
+            for (E = 0, v = l(e); v > E; E++) if ((y = D(e[E])) && u(h, y)) return y;
+            return new p(!1);
         }
-        g = d(e, E);
+        m = c(e, g);
     }
-    for (I = C ? e.next : g.next; !(T = a(I, g)).done; ) {
+    for (I = A ? e.next : m.next; !(T = r(I, m)).done; ) {
         try {
-            b = L(T.value);
+            y = D(T.value);
         } catch (e) {
-            p(g, 'throw', e);
+            f(m, 'throw', e);
         }
-        if ('object' == typeof b && b && c(m, b)) return b;
+        if ('object' == typeof y && y && u(h, y)) return y;
     }
-    return new _(!1);
+    return new p(!1);
 };

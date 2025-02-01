@@ -1,6 +1,6 @@
 e.exports = {
-    container: 'container_f0e9fb',
-    imageContainer: 'imageContainer_f0e9fb',
-    image: 'image_f0e9fb',
-    primaryButton: 'primaryButton_f0e9fb'
+    container: 'container_e512ac',
+    imageContainer: 'imageContainer_e512ac',
+    image: 'image_e512ac',
+    primaryButton: 'primaryButton_e512ac'
 };

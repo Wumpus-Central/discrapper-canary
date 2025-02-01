@@ -1,68 +1,68 @@
-var i = r(47120);
-var a = r(147913),
-    o = r(70956),
-    s = r(272008),
-    l = r(569984),
-    u = r(497505),
-    c = r(977156),
-    d = r(569743),
-    f = r(46140);
-function p(e, n, r) {
+n.d(t, { Z: () => E }), n(47120);
+var i = n(147913),
+    r = n(70956),
+    a = n(272008),
+    s = n(569984),
+    o = n(497505),
+    l = n(977156),
+    u = n(569743),
+    c = n(46140);
+function d(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let h = o.Z.Millis.DAY,
-    _ = 30 * o.Z.Millis.MINUTE,
-    m = 5 * o.Z.Millis.SECOND,
-    g = 5 * o.Z.Millis.MINUTE,
-    E = 12 * o.Z.Millis.HOUR;
-class v extends a.Z {
+let f = r.Z.Millis.DAY,
+    _ = 30 * r.Z.Millis.MINUTE,
+    p = 5 * r.Z.Millis.SECOND,
+    h = 5 * r.Z.Millis.MINUTE,
+    m = 12 * r.Z.Millis.HOUR;
+class g extends i.Z {
     _fetch() {
-        if (!!(0, c.cB)({ location: f.dr.QUESTS_MANAGER }) && !l.Z.isFetchingCurrentQuests) (0, s.xw)(), (0, d.Z)({ location: f.dr.QUESTS_MANAGER }) && (0, s.w)(u.Ok.DESKTOP_ACCOUNT_PANEL_AREA);
+        (0, l.cB)({ location: c.dr.QUESTS_MANAGER }) && !s.Z.isFetchingCurrentQuests && ((0, a.xw)(), (0, u.Z)({ location: c.dr.QUESTS_MANAGER }) && (0, a.w)(o.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
     }
     constructor(...e) {
         super(...e),
-            p(this, 'instantiatedAt', Date.now()),
-            p(this, 'initialFetchTimerId', null),
-            p(this, 'recurringFetchTimerId', null),
-            p(this, 'lastFetchAttemptedAt', 0),
-            p(this, 'lastFetchedQuestForLocaleChangeAt', 0),
-            p(this, 'handleQuestsFetchCurrentQuestsBegin', () => {
+            d(this, 'instantiatedAt', Date.now()),
+            d(this, 'initialFetchTimerId', null),
+            d(this, 'recurringFetchTimerId', null),
+            d(this, 'lastFetchAttemptedAt', 0),
+            d(this, 'lastFetchedQuestForLocaleChangeAt', 0),
+            d(this, 'handleQuestsFetchCurrentQuestsBegin', () => {
                 this.lastFetchAttemptedAt = Date.now();
             }),
-            p(this, 'handlePostConnectionOpen', () => {
+            d(this, 'handlePostConnectionOpen', () => {
                 window.clearTimeout(this.initialFetchTimerId),
                     window.clearTimeout(this.recurringFetchTimerId),
                     (this.recurringFetchTimerId = window.setInterval(() => {
-                        Date.now() - this.lastFetchAttemptedAt > h && ((this.lastFetchAttemptedAt = Date.now()), this._fetch());
+                        Date.now() - this.lastFetchAttemptedAt > f && ((this.lastFetchAttemptedAt = Date.now()), this._fetch());
                     }, _)),
                     (this.initialFetchTimerId = window.setTimeout(
                         () => {
-                            0 === l.Z.lastFetchedCurrentQuests && this._fetch();
+                            0 === s.Z.lastFetchedCurrentQuests && this._fetch();
                         },
-                        Math.floor(Math.random() * m)
+                        Math.floor(Math.random() * p)
                     ));
             }),
-            p(this, 'handleRunningGamesChange', () => {
-                if (!(this.instantiatedAt + E > Date.now() || l.Z.lastFetchedCurrentQuests + E > Date.now())) this._fetch();
+            d(this, 'handleRunningGamesChange', () => {
+                !(this.instantiatedAt + m > Date.now() || s.Z.lastFetchedCurrentQuests + m > Date.now()) && this._fetch();
             }),
-            p(this, 'handleUserSettingsProtoUpdate', (e) => {
-                let { partial: n, settings: r, wasSaved: i } = e;
-                if (!(!('localization' in r.proto) || !n || i || Date.now() - this.lastFetchedQuestForLocaleChangeAt <= g)) (this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch();
+            d(this, 'handleUserSettingsProtoUpdate', (e) => {
+                let { partial: t, settings: n, wasSaved: i } = e;
+                !(!('localization' in n.proto) || !t || i || Date.now() - this.lastFetchedQuestForLocaleChangeAt <= h) && ((this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch());
             }),
-            p(this, 'handleLogout', () => {
+            d(this, 'handleLogout', () => {
                 window.clearTimeout(this.initialFetchTimerId), window.clearTimeout(this.recurringFetchTimerId), (this.lastFetchAttemptedAt = 0), (this.lastFetchedQuestForLocaleChangeAt = 0);
             }),
-            p(this, 'actions', {
+            d(this, 'actions', {
                 QUESTS_FETCH_CURRENT_QUESTS_BEGIN: this.handleQuestsFetchCurrentQuestsBegin,
                 POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
                 RUNNING_GAMES_CHANGE: this.handleRunningGamesChange,
@@ -71,4 +71,4 @@ class v extends a.Z {
             });
     }
 }
-n.Z = new v();
+let E = new g();

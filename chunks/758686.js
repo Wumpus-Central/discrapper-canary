@@ -1,3 +1,3 @@
-e.exports = function (e, n) {
-    return e.sort().join(',') === n.sort().join(',');
+e.exports = function (e, t) {
+    return e.sort().join(',') === t.sort().join(',');
 };

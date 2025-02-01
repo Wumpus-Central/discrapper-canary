@@ -1,7 +1,7 @@
 e.exports = {
-    outer: 'outer_ac5d22',
-    inset: 'inset_ac5d22',
-    padded: 'padded_ac5d22',
-    interactive: 'interactive_ac5d22',
-    active: 'active_ac5d22'
+    inset: 'inset_bf1984',
+    outer: 'outer_bf1984',
+    padded: 'padded_bf1984',
+    interactive: 'interactive_bf1984',
+    active: 'active_bf1984'
 };

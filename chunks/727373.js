@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         name: 'Awk',
         keywords: { keyword: 'BEGIN END if else while do for in break continue delete next nextfile function func exit|10' },
@@ -49,4 +49,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('ja', {
         months: '1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月'.split('_'),
@@ -23,7 +23,7 @@
         isPM: function (e) {
             return '午後' === e;
         },
-        meridiem: function (e, n, r) {
+        meridiem: function (e, t, n) {
             return e < 12 ? '午前' : '午後';
         },
         calendar: {
@@ -39,8 +39,8 @@
             sameElse: 'L'
         },
         dayOfMonthOrdinalParse: /\d{1,2}日/,
-        ordinal: function (e, n) {
-            switch (n) {
+        ordinal: function (e, t) {
+            switch (t) {
                 case 'd':
                 case 'D':
                 case 'DDD':

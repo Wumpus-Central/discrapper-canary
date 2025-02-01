@@ -14,8 +14,8 @@ n.d(t, {
     kb: () => C,
     n: () => _,
     oi: () => g,
-    pw: () => T,
-    rk: () => b,
+    pw: () => b,
+    rk: () => T,
     tB: () => y,
     uo: () => A,
     vD: () => v,
@@ -134,17 +134,17 @@ function I(e, t) {
         enabled: u
     };
 }
-let b = (e) => {
+let T = (e) => {
     if (null == e) return null;
     let t = {};
     for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
     return t;
 };
-function T(e) {
+function b(e) {
     return null == e || ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)));
 }
 function S(e) {
-    return null == e || (!!T(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)));
+    return null == e || (!!b(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)));
 }
 function A(e) {
     var t, n;

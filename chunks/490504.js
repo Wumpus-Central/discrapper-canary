@@ -1,25 +1,25 @@
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(181076);
-function s(e) {
-    let { message: n } = e;
+n.d(t, { Z: () => s });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(181076);
+let s = function (e) {
+    let { message: t } = e;
     return (0, i.jsxs)('div', {
-        className: o.container,
+        className: a.container,
         children: [
-            (0, i.jsx)(a.CircleInformationIcon, {
+            (0, i.jsx)(r.d3s, {
                 size: 'custom',
-                className: o.icon,
+                className: a.icon,
                 width: 20,
                 height: 20,
-                color: a.tokens.colors.TEXT_WARNING
+                color: r.TVs.colors.TEXT_WARNING
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-muted',
-                children: n
+                children: t
             })
         ]
     });
-}
-n.Z = s;
+};

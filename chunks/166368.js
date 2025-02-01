@@ -1,6 +1,6 @@
 e.exports = {
-    upsellPage: 'upsellPage_d76875',
-    upsellContainer: 'upsellContainer_d76875',
-    upsellContent: 'upsellContent_d76875',
-    bodyText: 'bodyText_d76875'
+    upsellPage: 'upsellPage_d204dc',
+    upsellContainer: 'upsellContainer_d204dc',
+    upsellContent: 'upsellContent_d204dc',
+    bodyText: 'bodyText_d204dc'
 };

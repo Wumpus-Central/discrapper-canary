@@ -1,22 +1,23 @@
+n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
 var a = n(477660),
     r = n.n(a),
     l = n(481060),
-    o = n(447543),
-    s = n(15470),
+    s = n(447543),
+    o = n(15470),
     c = n(960904),
     d = n(830121),
     u = n(746878),
     m = n(241209);
-let p = /^discord.gg\/[a-zA-Z0-9-]+/,
-    h = {
+let h = /^discord.gg\/[a-zA-Z0-9-]+/,
+    p = {
         ...m.Z.rules,
-        heading: { ...s.i.heading },
+        heading: { ...o.i.heading },
         image: { ...r().defaultRules.image },
         inviteLink: {
             order: m.Z.rules.link.order + 1,
-            match: (e, t) => (t.inline ? p.exec(e) : null),
+            match: (e, t) => (t.inline ? h.exec(e) : null),
             parse: (e, t, n) => {
                 let i = (0, d.zO)(e[0]);
                 return null == i || i.type !== c.g.INVITE
@@ -34,7 +35,7 @@ let p = /^discord.gg\/[a-zA-Z0-9-]+/,
                           ],
                           onClick: () => {
                               var e;
-                              o.Z.acceptInviteAndTransitionToInviteChannel({
+                              s.Z.acceptInviteAndTransitionToInviteChannel({
                                   inviteKey: i.code,
                                   context: { location: 'Application Directory' }
                               }),
@@ -44,7 +45,7 @@ let p = /^discord.gg\/[a-zA-Z0-9-]+/,
             },
             react: (e, t, n) =>
                 (0, i.jsx)(
-                    l.Anchor,
+                    l.eee,
                     {
                         onClick: (t) => {
                             t.preventDefault(), e.onClick();
@@ -55,4 +56,3 @@ let p = /^discord.gg\/[a-zA-Z0-9-]+/,
                 )
         }
     };
-t.Z = h;

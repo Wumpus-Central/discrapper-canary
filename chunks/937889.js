@@ -70,7 +70,7 @@ function _(e, t, n) {
                 : _,
             !0,
             d(t, n),
-            (e, n) => (Array.isArray(e) || (e = [e]), s && (e = T(e, (null != c ? c : t).embeds)), o || (e = E(e, n)), (e = p(e)), t.embeds.length > 0 && (f = y(e, n)), o && (e = S(e)), null != l && (e = l(e, n)), e)
+            (e, n) => (Array.isArray(e) || (e = [e]), s && (e = b(e, (null != c ? c : t).embeds)), o || (e = E(e, n)), (e = p(e)), t.embeds.length > 0 && (f = y(e, n)), o && (e = S(e)), null != l && (e = l(e, n)), e)
         );
     return {
         hasSpoilerEmbeds: f,
@@ -133,17 +133,17 @@ function v(e) {
     );
 }
 function y(e, t) {
-    return t ? b(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && b(e[0].content);
+    return t ? T(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && T(e[0].content);
 }
 function I(e, t) {
     if (e instanceof Array) return e.some((e) => I(e, t));
     let n = t(e);
     return null != n ? n : e.content instanceof Array ? I(e.content, t) : e.items instanceof Array && e.items.some((e) => I(e, t));
 }
-function b(e) {
+function T(e) {
     return I(e, (e) => ('spoiler' === e.type ? I(e, (e) => 'link' === e.type || 'attachmentLink' === e.type || null) : null));
 }
-function T(e, t) {
+function b(e, t) {
     if (1 !== e.length || 1 !== t.length) return e;
     let n = e[0],
         i = t[0];

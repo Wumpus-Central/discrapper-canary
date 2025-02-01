@@ -1,8 +1,8 @@
-e.exports = {
-    eventStatusContainer: 'eventStatusContainer_d6a475',
-    isRecurring: 'isRecurring_d6a475',
-    eventStatusLabel: 'eventStatusLabel_d6a475',
-    liveEventEndTime: 'liveEventEndTime_d6a475',
-    newBadge: 'newBadge_d6a475',
-    newBadgeText: 'newBadgeText_d6a475'
+n.exports = {
+    eventStatusContainer: 'eventStatusContainer__29021',
+    isRecurring: 'isRecurring__29021',
+    eventStatusLabel: 'eventStatusLabel__29021',
+    liveEventEndTime: 'liveEventEndTime__29021',
+    newBadge: 'newBadge__29021',
+    newBadgeText: 'newBadgeText__29021'
 };

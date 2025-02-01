@@ -1,25 +1,25 @@
-i.r(t);
+i.d(t, { default: () => o });
 var n = i(200651),
     s = i(192379),
-    c = i(481060),
-    l = i(239091),
+    l = i(481060),
+    c = i(239091),
     a = i(547280),
-    o = i(388032);
-t.default = function (e) {
+    d = i(388032);
+let o = function (e) {
     let { signupTarget: t, onSelect: i } = e,
-        d = s.useCallback(() => {
+        o = s.useCallback(() => {
             (0, a.b)(t.key, t.dismissibleContent);
         }, [t]);
-    return (0, n.jsx)(c.Menu, {
+    return (0, n.jsx)(l.v2r, {
         navId: 'signup-button-context',
-        onClose: l.Zy,
-        'aria-label': o.intl.string(o.t.WAI6xs),
+        onClose: c.Zy,
+        'aria-label': d.intl.string(d.t.WAI6xs),
         onSelect: i,
-        children: (0, n.jsx)(c.MenuGroup, {
-            children: (0, n.jsx)(c.MenuItem, {
+        children: (0, n.jsx)(l.kSQ, {
+            children: (0, n.jsx)(l.sNh, {
                 id: 'dismiss',
-                label: o.intl.string(o.t.WAI6xs),
-                action: d
+                label: d.intl.string(d.t.WAI6xs),
+                action: o
             })
         })
     });

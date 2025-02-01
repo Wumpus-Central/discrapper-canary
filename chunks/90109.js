@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('cy', {
         months: 'Ionawr_Chwefror_Mawrth_Ebrill_Mai_Mehefin_Gorffennaf_Awst_Medi_Hydref_Tachwedd_Rhagfyr'.split('_'),
@@ -42,10 +42,10 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}(fed|ain|af|il|ydd|ed|eg)/,
         ordinal: function (e) {
-            var n = e,
-                r = '',
+            var t = e,
+                n = '',
                 i = ['', 'af', 'il', 'ydd', 'ydd', 'ed', 'ed', 'ed', 'fed', 'fed', 'fed', 'eg', 'fed', 'eg', 'eg', 'fed', 'eg', 'eg', 'fed', 'eg', 'fed'];
-            return n > 20 ? (r = 40 === n || 50 === n || 60 === n || 80 === n || 100 === n ? 'fed' : 'ain') : n > 0 && (r = i[n]), e + r;
+            return t > 20 ? (n = 40 === t || 50 === t || 60 === t || 80 === t || 100 === t ? 'fed' : 'ain') : t > 0 && (n = i[t]), e + n;
         },
         week: {
             dow: 1,

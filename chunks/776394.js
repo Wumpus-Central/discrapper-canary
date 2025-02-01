@@ -1,7 +1,7 @@
 e.exports = {
-    container: 'container_e08e86',
-    innerContainer: 'innerContainer_e08e86',
-    iconWrapper: 'iconWrapper_e08e86',
-    star: 'star_e08e86',
-    sparkle: 'sparkle_e08e86'
+    container: 'container_e2461d',
+    innerContainer: 'innerContainer_e2461d',
+    iconWrapper: 'iconWrapper_e2461d',
+    star: 'star_e2461d',
+    sparkle: 'sparkle_e2461d'
 };

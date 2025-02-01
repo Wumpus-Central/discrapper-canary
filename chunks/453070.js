@@ -1,14 +1,14 @@
 n.d(t, {
     Go: () => O,
     LZ: () => L,
-    Pq: () => b,
+    Pq: () => T,
     RJ: () => D,
     Sd: () => M,
     XW: () => w,
     el: () => S,
     fP: () => N,
     fQ: () => A,
-    t$: () => T
+    t$: () => b
 }),
     n(653041),
     n(47120),
@@ -32,14 +32,14 @@ var i = n(192379),
     v = n(378233),
     y = n(981631),
     I = n(388032);
-let b = (e) => {
+let T = (e) => {
         N();
         let t = (0, r.e7)([g.Z], () => g.Z.hasLoadedStickerPacks);
         i.useEffect(() => {
             t && null == g.Z.getStickerPack(e) && (0, h.FQ)(e);
         }, [e, t]);
     },
-    T = (e) => {
+    b = (e) => {
         let t = s.Wp.useSetting();
         return (0, v.WD)(t, e);
     },
@@ -61,10 +61,10 @@ let b = (e) => {
                         { canCreateExpressions: s } = (0, a.Gw)(r),
                         o = u.Z.getGuildId(),
                         c = d.findIndex((e) => e.type === E.Ih.FAVORITE),
-                        b = d.findIndex((e) => e.type === E.Ih.RECENT),
-                        T = t.length;
-                    null != r && o === r.id && s && t.length < (0, f.A3)(r.premiumTier) && T++;
-                    let S = Math.ceil(T / e);
+                        T = d.findIndex((e) => e.type === E.Ih.RECENT),
+                        b = t.length;
+                    null != r && o === r.id && s && t.length < (0, f.A3)(r.premiumTier) && b++;
+                    let S = Math.ceil(b / e);
                     p[g] = i ? 0 : S;
                     for (let a = 0; a < S; a++) {
                         let s = a * e,
@@ -79,10 +79,10 @@ let b = (e) => {
                                 visibleRowIndex: y,
                                 category: n
                             }));
-                        g > b &&
+                        g > T &&
                             g > c &&
                             null != r &&
-                            T > t.length &&
+                            b > t.length &&
                             l.push({
                                 type: E.al.CREATE_STICKER,
                                 guild_id: r.id,

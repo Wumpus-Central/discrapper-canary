@@ -1,6 +1,7 @@
+n.d(t, { Z: () => m });
 var i,
-    r = n(442837),
-    l = n(570140);
+    l = n(442837),
+    r = n(570140);
 function a(e, t, n) {
     return (
         t in e
@@ -22,7 +23,7 @@ let s = 12 * n(70956).Z.Millis.HOUR,
     c = { hasFetchedRelevance: !1 },
     d = o,
     u = c;
-class h extends (i = r.ZP.PersistedStore) {
+class h extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         (u = c), (d = o);
         let t = new Date();
@@ -38,18 +39,17 @@ class h extends (i = r.ZP.PersistedStore) {
         return d;
     }
 }
-a(h, 'displayName', 'PerksRelevanceStore'),
-    a(h, 'persistKey', 'PerksRelevanceStore'),
-    (t.Z = new h(l.Z, {
-        BILLING_PERKS_RELEVANCE_FETCH_START: function () {
-            u.hasFetchedRelevance = !0;
-        },
-        BILLING_PERKS_RELEVANCE_FETCH_SUCCESS: function (e) {
-            let { res: t } = e;
-            null != t && ((d.profileThemesRelevanceExceeded = t.eligible), (d.savedAt = new Date().getTime()));
-        },
-        BILLING_PERKS_RELEVANCE_FETCH_FAIL: function () {},
-        LOGOUT: function () {
-            (u = c), (d = o);
-        }
-    }));
+a(h, 'displayName', 'PerksRelevanceStore'), a(h, 'persistKey', 'PerksRelevanceStore');
+let m = new h(r.Z, {
+    BILLING_PERKS_RELEVANCE_FETCH_START: function () {
+        u.hasFetchedRelevance = !0;
+    },
+    BILLING_PERKS_RELEVANCE_FETCH_SUCCESS: function (e) {
+        let { res: t } = e;
+        null != t && ((d.profileThemesRelevanceExceeded = t.eligible), (d.savedAt = new Date().getTime()));
+    },
+    BILLING_PERKS_RELEVANCE_FETCH_FAIL: function () {},
+    LOGOUT: function () {
+        (u = c), (d = o);
+    }
+});

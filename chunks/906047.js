@@ -1,4 +1,4 @@
 e.exports = {
-    positionContainer: 'positionContainer_ec62fd',
-    positionLayer: 'positionLayer_ec62fd'
+    positionContainer: 'positionContainer__31a96',
+    positionLayer: 'positionLayer__31a96'
 };

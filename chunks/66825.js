@@ -1,6 +1,6 @@
 e.exports = {
-    buttonContainer: 'buttonContainer_b159b8',
-    message: 'message_b159b8',
-    btn: 'btn_b159b8',
-    spinnerItem: 'spinnerItem_b159b8'
+    buttonContainer: 'buttonContainer_eeed5f',
+    message: 'message_eeed5f',
+    btn: 'btn_eeed5f',
+    spinnerItem: 'spinnerItem_eeed5f'
 };

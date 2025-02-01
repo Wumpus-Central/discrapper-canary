@@ -1,33 +1,33 @@
-var i = r(47120);
-var a = r(213919),
-    o = r(570140),
-    s = r(317770),
-    l = r(358085);
-function u(e, n, r) {
+n.d(t, { Z: () => u }), n(47120);
+var i = n(213919),
+    r = n(570140),
+    a = n(317770),
+    s = n(358085);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class c extends s.Z {
+class l extends a.Z {
     _initialize() {
-        o.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen);
+        r.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen);
     }
     _terminate() {
-        o.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen);
+        r.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen);
     }
     constructor(...e) {
         super(...e),
-            u(this, 'handleConnectionOpen', (e) => {
-                ((0, l.isWindows)() || (0, l.isMac)()) && a.encryptAndStoreTokens();
+            o(this, 'handleConnectionOpen', (e) => {
+                ((0, s.isWindows)() || (0, s.isMac)()) && i.encryptAndStoreTokens();
             });
     }
 }
-n.Z = new c();
+let u = new l();

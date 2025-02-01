@@ -1,4 +1,4 @@
 e.exports = {
-    streamInfoContainer: 'streamInfoContainer_e6c3b6',
-    infoRow: 'infoRow_e6c3b6'
+    streamInfoContainer: 'streamInfoContainer__0f85c',
+    infoRow: 'infoRow__0f85c'
 };

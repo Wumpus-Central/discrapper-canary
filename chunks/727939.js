@@ -1,28 +1,28 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(112724),
-    l = r(241915),
-    u = r(981631);
-let c = 48,
-    d = 32,
-    f = 32,
-    p = 32;
-function h(e) {
-    let { className: n, defaultPosition: r = u.VD2.BOTTOM_RIGHT, children: i, width: s, height: h } = e,
-        [_, m] = o.useState(r);
-    return (0, a.jsx)(l._, {
-        className: n,
-        position: _,
+n.d(t, { Z: () => _ }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(112724),
+    s = n(241915),
+    o = n(981631);
+let l = 48,
+    u = 32,
+    c = 32,
+    d = 32;
+function f(e) {
+    let { className: t, defaultPosition: n = o.VD2.BOTTOM_RIGHT, children: a, width: f, height: _ } = e,
+        [p, h] = r.useState(n);
+    return (0, i.jsx)(s._, {
+        className: t,
+        position: p,
         id: 0,
-        onMove: (e, n) => m(n),
-        maxX: s,
-        maxY: h,
-        edgeOffsetTop: c,
-        edgeOffsetBottom: d,
-        edgeOffsetLeft: f,
-        edgeOffsetRight: p,
-        children: i
+        onMove: (e, t) => h(t),
+        maxX: f,
+        maxY: _,
+        edgeOffsetTop: l,
+        edgeOffsetBottom: u,
+        edgeOffsetLeft: c,
+        edgeOffsetRight: d,
+        children: a
     });
 }
-n.Z = (0, s.Z)(h);
+let _ = (0, a.Z)(f);

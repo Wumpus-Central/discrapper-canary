@@ -1,9 +1,9 @@
 t.exports = {
-    header: 'header_a54752',
-    imageContainer: 'imageContainer_a54752',
-    content: 'content_a54752',
-    footer: 'footer_a54752',
-    bulletItem: 'bulletItem_a54752',
-    bulletImage: 'bulletImage_a54752',
-    remindMeLater: 'remindMeLater_a54752'
+    header: 'header__82995',
+    imageContainer: 'imageContainer__82995',
+    content: 'content__82995',
+    footer: 'footer__82995',
+    bulletItem: 'bulletItem__82995',
+    bulletImage: 'bulletImage__82995',
+    remindMeLater: 'remindMeLater__82995'
 };

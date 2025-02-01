@@ -1,139 +1,139 @@
-n.r(e);
+n.d(e, { default: () => g });
 var i = n(200651),
-    o = n(192379),
-    s = n(442837),
-    r = n(481060),
-    a = n(191237),
-    l = n(138201),
+    s = n(192379),
+    r = n(442837),
+    o = n(481060),
+    l = n(191237),
+    a = n(138201),
     c = n(331692),
     d = n(103879),
-    h = n(236289),
-    u = n(800530),
-    m = n(388032),
-    g = n(177872);
-let x = [
-    {
-        title: m.intl.string(m.t['1+E7LC']),
-        description: m.intl.string(m.t.BXiat7)
-    },
-    {
-        title: m.intl.string(m.t.iMQXtL),
-        description: m.intl.string(m.t.oQ0vws)
-    },
-    {
-        title: m.intl.string(m.t['oY/z1d']),
-        description: m.intl.string(m.t.wtj02d)
-    }
-];
-e.default = function (t) {
-    let { onClose: e, transitionState: n } = t,
-        p = (0, s.e7)([h.Z], () => h.Z.getAgeVerificationWebviewUrl()),
-        b = (0, s.e7)([h.Z], () => h.Z.getIsLoadingAgeVerification()),
-        N = o.useCallback(() => {
-            e(), c.Z.close();
-        }, [e]),
-        _ = o.useCallback(() => {
-            c.Z.success(), N(), c.Z.start_verification_check();
-        }, [N]);
-    return (
-        o.useEffect(() => {
-            '' !== p &&
-                a.Z.showAgeVerification({
-                    webviewUrl: p,
-                    onComplete: _
-                });
-        }, [p, _]),
-        (0, i.jsxs)(r.ModalRoot, {
-            transitionState: n,
-            className: g.root,
-            children: [
-                (0, i.jsxs)(r.ModalContent, {
-                    className: g.content,
-                    children: [
-                        (0, i.jsxs)('div', {
-                            className: g.header,
-                            children: [
-                                (0, i.jsx)(r.Heading, {
-                                    variant: 'heading-xl/bold',
-                                    children: m.intl.string(m.t['9SDLnp'])
-                                }),
-                                (0, i.jsx)(r.Heading, {
-                                    variant: 'heading-md/normal',
-                                    color: 'header-secondary',
-                                    children: m.intl.string(m.t['yvx///'])
+    f = n(236289),
+    h = n(800530),
+    x = n(388032),
+    m = n(177872);
+let u = [
+        {
+            title: x.intl.string(x.t['1+E7LC']),
+            description: x.intl.string(x.t.BXiat7)
+        },
+        {
+            title: x.intl.string(x.t.iMQXtL),
+            description: x.intl.string(x.t.oQ0vws)
+        },
+        {
+            title: x.intl.string(x.t['oY/z1d']),
+            description: x.intl.string(x.t.wtj02d)
+        }
+    ],
+    g = function (t) {
+        let { onClose: e, transitionState: n } = t,
+            g = (0, r.e7)([f.Z], () => f.Z.getAgeVerificationWebviewUrl()),
+            p = (0, r.e7)([f.Z], () => f.Z.getIsLoadingAgeVerification()),
+            b = s.useCallback(() => {
+                e(), c.Z.close();
+            }, [e]),
+            N = s.useCallback(() => {
+                c.Z.success(), b(), c.Z.start_verification_check();
+            }, [b]);
+        return (
+            s.useEffect(() => {
+                '' !== g &&
+                    l.Z.showAgeVerification({
+                        webviewUrl: g,
+                        onComplete: N
+                    });
+            }, [g, N]),
+            (0, i.jsxs)(o.Y0X, {
+                transitionState: n,
+                className: m.root,
+                children: [
+                    (0, i.jsxs)(o.hzk, {
+                        className: m.content,
+                        children: [
+                            (0, i.jsxs)('div', {
+                                className: m.header,
+                                children: [
+                                    (0, i.jsx)(o.X6q, {
+                                        variant: 'heading-xl/bold',
+                                        children: x.intl.string(x.t['9SDLnp'])
+                                    }),
+                                    (0, i.jsx)(o.X6q, {
+                                        variant: 'heading-md/normal',
+                                        color: 'header-secondary',
+                                        children: x.intl.string(x.t['yvx///'])
+                                    })
+                                ]
+                            }),
+                            (0, i.jsx)('div', {
+                                className: m.listContent,
+                                children: (0, i.jsx)('div', {
+                                    className: m.table,
+                                    children: u.map((t, e) => {
+                                        let { title: n, description: s } = t;
+                                        return (0, i.jsx)(
+                                            a.ZP,
+                                            {
+                                                title: n,
+                                                description: s,
+                                                index: e,
+                                                listType: 'numbered',
+                                                titleVariant: 'text-md/medium'
+                                            },
+                                            e
+                                        );
+                                    })
                                 })
-                            ]
-                        }),
-                        (0, i.jsx)('div', {
-                            className: g.listContent,
-                            children: (0, i.jsx)('div', {
-                                className: g.table,
-                                children: x.map((t, e) => {
-                                    let { title: n, description: o } = t;
-                                    return (0, i.jsx)(
-                                        l.ZP,
-                                        {
-                                            title: n,
-                                            description: o,
-                                            index: e,
-                                            listType: 'numbered',
-                                            titleVariant: 'text-md/medium'
-                                        },
-                                        e
-                                    );
-                                })
+                            }),
+                            (0, i.jsxs)('div', {
+                                className: m.anotherOption,
+                                children: [
+                                    (0, i.jsx)(o.Text, {
+                                        variant: 'text-sm/semibold',
+                                        className: m.optionEyebrow,
+                                        color: 'header-secondary',
+                                        children: x.intl.string(x.t.WPwp1d)
+                                    }),
+                                    (0, i.jsx)('div', {
+                                        className: m.table,
+                                        children: (0, i.jsx)(a.ZP, {
+                                            title: x.intl.string(x.t.N9WJMD),
+                                            description: x.intl.string(x.t['NHq38/']),
+                                            buttonText: x.intl.string(x.t['9iy4lJ']),
+                                            buttonColor: o.zxk.Colors.PRIMARY,
+                                            titleVariant: 'text-md/medium',
+                                            onButtonPress: () => window.open(h.sQ.AGE_VERIFICATION_LINK, '_blank')
+                                        })
+                                    }),
+                                    (0, i.jsx)('div', {
+                                        className: m.learnMore,
+                                        children: (0, i.jsx)(o.X6q, {
+                                            variant: 'heading-sm/medium',
+                                            color: 'text-secondary',
+                                            children: x.intl.format(x.t.ZbWsOD, { learnMoreLink: h.sQ.LEARN_MORE_UU_APPEAL_LINK })
+                                        })
+                                    })
+                                ]
                             })
-                        }),
-                        (0, i.jsxs)('div', {
-                            className: g.anotherOption,
-                            children: [
-                                (0, i.jsx)(r.Text, {
-                                    variant: 'text-sm/semibold',
-                                    className: g.optionEyebrow,
-                                    color: 'header-secondary',
-                                    children: m.intl.string(m.t.WPwp1d)
-                                }),
-                                (0, i.jsx)('div', {
-                                    className: g.table,
-                                    children: (0, i.jsx)(l.ZP, {
-                                        title: m.intl.string(m.t.N9WJMD),
-                                        description: m.intl.string(m.t['NHq38/']),
-                                        buttonText: m.intl.string(m.t['9iy4lJ']),
-                                        buttonColor: r.Button.Colors.PRIMARY,
-                                        titleVariant: 'text-md/medium',
-                                        onButtonPress: () => window.open(u.sQ.AGE_VERIFICATION_LINK, '_blank')
-                                    })
-                                }),
-                                (0, i.jsx)('div', {
-                                    className: g.learnMore,
-                                    children: (0, i.jsx)(r.Heading, {
-                                        variant: 'heading-sm/medium',
-                                        color: 'text-secondary',
-                                        children: m.intl.format(m.t.ZbWsOD, { learnMoreLink: u.sQ.LEARN_MORE_UU_APPEAL_LINK })
-                                    })
-                                })
-                            ]
-                        })
-                    ]
-                }),
-                (0, i.jsxs)(r.ModalFooter, {
-                    className: g.footer,
-                    children: [
-                        (0, i.jsx)(r.Button, {
-                            onClick: d.FN,
-                            submitting: b,
-                            children: m.intl.string(m.t['54b8V1'])
-                        }),
-                        (0, i.jsx)(r.Button, {
-                            color: r.Button.Colors.TRANSPARENT,
-                            look: r.Button.Looks.BLANK,
-                            onClick: N,
-                            className: g.cancelButton,
-                            children: m.intl.string(m.t.dKacJy)
-                        })
-                    ]
-                })
-            ]
-        })
-    );
-};
+                        ]
+                    }),
+                    (0, i.jsxs)(o.mzw, {
+                        className: m.footer,
+                        children: [
+                            (0, i.jsx)(o.zxk, {
+                                onClick: d.FN,
+                                submitting: p,
+                                children: x.intl.string(x.t['54b8V1'])
+                            }),
+                            (0, i.jsx)(o.zxk, {
+                                color: o.zxk.Colors.TRANSPARENT,
+                                look: o.zxk.Looks.BLANK,
+                                onClick: b,
+                                className: m.cancelButton,
+                                children: x.intl.string(x.t.dKacJy)
+                            })
+                        ]
+                    })
+                ]
+            })
+        );
+    };

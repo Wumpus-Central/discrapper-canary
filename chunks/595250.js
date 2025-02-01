@@ -1,5 +1,5 @@
-var i = r(195168),
-    a = function () {
-        return i.Z.Date.now();
-    };
-n.Z = a;
+n.d(t, { Z: () => r });
+var i = n(195168);
+let r = function () {
+    return i.Z.Date.now();
+};

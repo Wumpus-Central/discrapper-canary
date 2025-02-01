@@ -1,24 +1,24 @@
 var i = (function () {
-    function e(e, n) {
-        for (var r = 0; r < n.length; r++) {
-            var i = n[r];
+    function e(e, t) {
+        for (var n = 0; n < t.length; n++) {
+            var i = t[n];
             (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
         }
     }
-    return function (n, r, i) {
-        return r && e(n.prototype, r), i && e(n, i), n;
+    return function (t, n, i) {
+        return n && e(t.prototype, n), i && e(t, i), t;
     };
 })();
-function a(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function r(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function o(e, n) {
+function a(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function s(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function s(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -26,26 +26,26 @@ function s(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-r(129629);
-var l = r(420633),
-    u = r(22672),
-    c = r(512722),
-    d = r(16686),
-    f = (function (e) {
-        function n(e) {
-            a(this, n);
-            var r = o(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this)),
+n(129629);
+var o = n(420633),
+    l = n(22672),
+    u = n(512722),
+    c = n(16686),
+    d = (function (e) {
+        function t(e) {
+            r(this, t);
+            var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this)),
                 i = e || {
                     x: 0,
                     y: 0
                 };
-            return 'number' == typeof i.x && 'number' == typeof i.y ? ((r.x = new l(i.x)), (r.y = new l(i.y))) : (c(i.x instanceof l && i.y instanceof l, 'AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.'), (r.x = i.x), (r.y = i.y)), (r._listeners = {}), r;
+            return 'number' == typeof i.x && 'number' == typeof i.y ? ((n.x = new o(i.x)), (n.y = new o(i.y))) : (u(i.x instanceof o && i.y instanceof o, 'AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.'), (n.x = i.x), (n.y = i.y)), (n._listeners = {}), n;
         }
         return (
-            s(n, e),
-            i(n, [
+            s(t, e),
+            i(t, [
                 {
                     key: 'setValue',
                     value: function (e) {
@@ -82,17 +82,17 @@ var l = r(420633),
                 {
                     key: 'addListener',
                     value: function (e) {
-                        var n = this,
-                            r = d(),
-                            i = function (r) {
-                                r.value, e(n.__getValue());
+                        var t = this,
+                            n = c(),
+                            i = function (n) {
+                                n.value, e(t.__getValue());
                             };
                         return (
-                            (this._listeners[r] = {
+                            (this._listeners[n] = {
                                 x: this.x.addListener(i),
                                 y: this.y.addListener(i)
                             }),
-                            r
+                            n
                         );
                     }
                 },
@@ -118,7 +118,7 @@ var l = r(420633),
                     }
                 }
             ]),
-            n
+            t
         );
-    })(u);
-e.exports = f;
+    })(l);
+e.exports = d;

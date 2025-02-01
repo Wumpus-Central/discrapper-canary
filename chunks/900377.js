@@ -1,6 +1,6 @@
 e.exports = {
-    container: 'container_b4537b',
-    cardContainer: 'cardContainer_b4537b',
-    alignLeft: 'alignLeft_b4537b',
-    alignRight: 'alignRight_b4537b'
+    container: 'container__44ee9',
+    cardContainer: 'cardContainer__44ee9',
+    alignLeft: 'alignLeft__44ee9',
+    alignRight: 'alignRight__44ee9'
 };

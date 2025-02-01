@@ -1,212 +1,212 @@
+n.d(t, { Z: () => en }), n(47120);
 var i,
-    a = r(47120);
-var o = r(275726),
-    s = r(442837),
-    l = r(570140),
-    u = r(594174),
-    c = r(281494),
-    d = r(981631);
-function f(e, n, r) {
+    r = n(275726),
+    a = n(442837),
+    s = n(570140),
+    o = n(594174),
+    l = n(281494),
+    u = n(981631);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let p = 5,
-    h = null,
+let d = 5,
+    f = null,
     _ = new Map(),
+    p = new Set(),
+    h = new Map(),
     m = new Set(),
-    g = new Map(),
+    g = !1,
     E = new Set(),
-    v = !1,
-    y = new Set(),
-    b = new Set(),
-    I = new Map(),
-    T = 0,
-    S = null,
-    A = [],
-    C = !1,
-    N = 0,
+    v = new Set(),
+    y = new Map(),
+    I = 0,
+    T = null,
+    b = [],
+    S = !1,
+    A = 0,
+    N = !1,
+    C = null,
     R = !1,
-    O = null,
+    O = !1,
     D = !1,
-    L = !1,
-    x = !1,
-    w = d.g2L.NOT_ELIGIBLE;
-function P() {
-    (h = null), (_ = new Map()), (m = new Set()), (E = new Set()), (v = !1), (y = new Set()), (b = new Set()), (I = new Map()), (T = 0), (S = null), (A = []), (C = !1), (N = 0), (R = !1), (O = null), (g = new Map()), (D = !1), (L = !1), (x = !1), (w = d.g2L.NOT_ELIGIBLE);
+    x = u.g2L.NOT_ELIGIBLE;
+function L() {
+    (f = null), (_ = new Map()), (p = new Set()), (m = new Set()), (g = !1), (E = new Set()), (v = new Set()), (y = new Map()), (I = 0), (T = null), (b = []), (S = !1), (A = 0), (N = !1), (C = null), (h = new Map()), (R = !1), (O = !1), (D = !1), (x = u.g2L.NOT_ELIGIBLE);
 }
-let M = () => !0;
+let P = () => !0;
+function w(e) {
+    let {} = e;
+    (C = null), (g = !0);
+}
+function M(e) {
+    let { referrals_remaining: t, sent_user_ids: n, refresh_at: i, recipient_status: r, has_eligible_friends: a, isUserEligibleForIncentive: s, isUserQualifiedForIncentive: o, userReferralIncentiveState: l } = e;
+    (N = null == i && a), (g = !1), (f = t), (p = new Set(n)), (C = i), (h = r), (R = s && (a || h.size > 0)), (O = o), (x = l);
+}
 function k(e) {
     let {} = e;
-    (O = null), (v = !0);
+    (N = !1), (C = null), (g = !1), (I += 1), (T = Date.now() + 1000 * Math.pow(2, I));
 }
 function U(e) {
-    let { referrals_remaining: n, sent_user_ids: r, refresh_at: i, recipient_status: a, has_eligible_friends: o, isUserEligibleForIncentive: s, isUserQualifiedForIncentive: l, userReferralIncentiveState: u } = e;
-    (R = null == i && o), (v = !1), (h = n), (m = new Set(r)), (O = i), (g = a), (D = s && (o || g.size > 0)), (L = l), (w = u);
-}
-function B(e) {
-    let {} = e;
-    (R = !1), (O = null), (v = !1), (T += 1), (S = Date.now() + 1000 * Math.pow(2, T));
+    let { recipientId: t } = e;
+    m.add(t);
 }
 function G(e) {
-    let { recipientId: n } = e;
-    E.add(n);
+    let { recipientId: t, is_eligible: n } = e;
+    _.set(t, n), m.delete(t);
+}
+function B(e) {
+    let { recipientId: t } = e;
+    _.set(t, !1), m.delete(t);
 }
 function Z(e) {
-    let { recipientId: n, is_eligible: r } = e;
-    _.set(n, r), E.delete(n);
+    let { userTrialOffer: t } = e;
+    (0, l.C$)(), y.set(t.id, t), p.add(t.user_id);
 }
 function F(e) {
-    let { recipientId: n } = e;
-    _.set(n, !1), E.delete(n);
+    let { userTrialOffers: t } = e;
+    for (let e of ((0, l.C$)(), t)) y.set(e.id, e), p.add(e.user_id);
 }
 function V(e) {
-    let { userTrialOffer: n } = e;
-    (0, c.C$)(), I.set(n.id, n), m.add(n.user_id);
+    E.add(e);
 }
 function j(e) {
-    let { userTrialOffers: n } = e;
-    for (let e of ((0, c.C$)(), n)) I.set(e.id, e), m.add(e.user_id);
+    let { userTrialOffer: t } = e;
+    null != t && (E.delete(t.id), v.add(t.id), y.set(t.id, t));
 }
 function H(e) {
-    y.add(e);
+    let { userTrialOfferId: t } = e;
+    E.delete(t), v.add(t);
 }
 function Y(e) {
-    let { userTrialOffer: n } = e;
-    null != n && (y.delete(n.id), b.add(n.id), I.set(n.id, n));
+    let { message: t } = e;
+    z(t);
 }
 function W(e) {
-    let { userTrialOfferId: n } = e;
-    y.delete(n), b.add(n);
+    let { messages: t } = e;
+    t.forEach((e) => z(e));
 }
 function K(e) {
-    let { message: n } = e;
-    Q(n);
+    let { userTrialOfferId: t, recipientId: n } = e;
+    g || (0, l.C$)(), m.has(n) || (0, l.Ve)(n), E.has(t) || (V(t), s.Z.wait(() => (0, l.IB)(t).catch(u.VqG)));
 }
 function z(e) {
-    let { messages: n } = e;
-    n.forEach((e) => Q(e));
+    let t = e.type === r.u.PREMIUM_REFERRAL ? e.content : null;
+    if (null == t) return !1;
+    v.has(t) || E.has(t) || (V(t), s.Z.wait(() => (0, l.IB)(t).catch(u.VqG)));
 }
-function q(e) {
-    let { userTrialOfferId: n, recipientId: r } = e;
-    !v && (0, c.C$)(), !E.has(r) && (0, c.Ve)(r), !y.has(n) && (H(n), l.Z.wait(() => (0, c.IB)(n).catch(d.VqG)));
+function q() {
+    S = !0;
 }
 function Q(e) {
-    let n = e.type === o.u.PREMIUM_REFERRAL ? e.content : null;
-    if (null == n) return !1;
-    !b.has(n) && !y.has(n) && (H(n), l.Z.wait(() => (0, c.IB)(n).catch(d.VqG)));
+    let { users: t, nextIndex: n } = e;
+    (S = !1), (b = t), (A = n);
 }
 function X() {
-    C = !0;
+    S = !1;
 }
 function J(e) {
-    let { users: n, nextIndex: r } = e;
-    (C = !1), (A = n), (N = r);
+    let { isUserEligibleForIncentive: t } = e;
+    (D = !1), null != t && (R = t);
 }
 function $() {
-    C = !1;
+    D = !1;
 }
-function ee(e) {
-    let { isUserEligibleForIncentive: n } = e;
-    (x = !1), null != n && (D = n);
+function ee() {
+    D = !0;
 }
-function et() {
-    x = !1;
-}
-function en() {
-    x = !0;
-}
-class er extends (i = s.ZP.Store) {
+class et extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(u.default), this.syncWith([u.default], M);
+        this.waitFor(o.default), this.syncWith([o.default], P);
     }
     checkAndFetchReferralsRemaining() {
-        null == h && !v && T < p && (null == S || S < Date.now()) && (0, c.C$)();
+        null == f && !g && I < d && (null == T || T < Date.now()) && (0, l.C$)();
     }
     getReferralsRemaining() {
-        return this.checkAndFetchReferralsRemaining(), h;
+        return this.checkAndFetchReferralsRemaining(), f;
     }
     getSentUserIds() {
-        return this.checkAndFetchReferralsRemaining(), Array.from(m.values());
+        return this.checkAndFetchReferralsRemaining(), Array.from(p.values());
     }
     isFetchingReferralsRemaining() {
-        return v;
-    }
-    isFetchingRecipientEligibility(e) {
-        return E.has(e);
-    }
-    getRecipientEligibility(e) {
-        return !_.has(e) && !E.has(e) && (0, c.Ve)(e), _.get(e) || !1;
-    }
-    getRelevantUserTrialOffer(e) {
-        return I.get(e);
-    }
-    isResolving(e) {
-        return y.has(e);
-    }
-    getEligibleUsers() {
-        return A;
-    }
-    getFetchingEligibleUsers() {
-        return C;
-    }
-    getNextIndexOfEligibleUsers() {
-        return N;
-    }
-    getIsEligibleToSendReferrals() {
-        return R;
-    }
-    getRefreshAt() {
-        return O;
-    }
-    getAllRelevantReferralTrialOffers() {
-        return Array.from(I.values());
-    }
-    getRecipientStatus() {
         return g;
     }
+    isFetchingRecipientEligibility(e) {
+        return m.has(e);
+    }
+    getRecipientEligibility(e) {
+        return _.has(e) || m.has(e) || (0, l.Ve)(e), _.get(e) || !1;
+    }
+    getRelevantUserTrialOffer(e) {
+        return y.get(e);
+    }
+    isResolving(e) {
+        return E.has(e);
+    }
+    getEligibleUsers() {
+        return b;
+    }
+    getFetchingEligibleUsers() {
+        return S;
+    }
+    getNextIndexOfEligibleUsers() {
+        return A;
+    }
+    getIsEligibleToSendReferrals() {
+        return N;
+    }
+    getRefreshAt() {
+        return C;
+    }
+    getAllRelevantReferralTrialOffers() {
+        return Array.from(y.values());
+    }
+    getRecipientStatus() {
+        return h;
+    }
     getIsSenderEligibleForIncentive() {
-        return D;
+        return R;
     }
     getIsSenderQualifiedForIncentive() {
-        return L;
+        return O;
     }
     getIsFetchingReferralIncentiveEligibility() {
-        return x;
+        return D;
     }
     getSenderIncentiveState() {
-        return w;
+        return x;
     }
 }
-f(er, 'displayName', 'ReferralTrialStore'),
-    (n.Z = new er(l.Z, {
-        BILLING_REFERRAL_TRIAL_OFFER_UPDATE: q,
-        BILLING_REFERRALS_REMAINING_FETCH_START: k,
-        BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: U,
-        BILLING_REFERRALS_REMAINING_FETCH_FAIL: B,
-        BILLING_CREATE_REFERRAL_PREVIEW_START: G,
-        BILLING_GET_REFERRAL_INCENTIVE_STATUS_SUCCESS: ee,
-        BILLING_GET_REFERRAL_INCENTIVE_STATUS_FAIL: et,
-        BILLING_GET_REFERRAL_INCENTIVE_STATUS_START: en,
-        BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: Z,
-        BILLING_CREATE_REFERRAL_PREVIEW_FAIL: F,
-        BILLING_CREATE_REFERRAL_SUCCESS: V,
-        CREATE_REFERRALS_SUCCESS: j,
-        BILLING_REFERRAL_RESOLVE_SUCCESS: Y,
-        BILLING_REFERRAL_RESOLVE_FAIL: W,
-        REFERRALS_FETCH_ELIGIBLE_USER_START: X,
-        REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: J,
-        REFERRALS_FETCH_ELIGIBLE_USER_FAIL: $,
-        LOAD_MESSAGES_SUCCESS: z,
-        MESSAGE_CREATE: K,
-        LOAD_MESSAGES_AROUND_SUCCESS: z,
-        LOGOUT: P
-    }));
+c(et, 'displayName', 'ReferralTrialStore');
+let en = new et(s.Z, {
+    BILLING_REFERRAL_TRIAL_OFFER_UPDATE: K,
+    BILLING_REFERRALS_REMAINING_FETCH_START: w,
+    BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: M,
+    BILLING_REFERRALS_REMAINING_FETCH_FAIL: k,
+    BILLING_CREATE_REFERRAL_PREVIEW_START: U,
+    BILLING_GET_REFERRAL_INCENTIVE_STATUS_SUCCESS: J,
+    BILLING_GET_REFERRAL_INCENTIVE_STATUS_FAIL: $,
+    BILLING_GET_REFERRAL_INCENTIVE_STATUS_START: ee,
+    BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: G,
+    BILLING_CREATE_REFERRAL_PREVIEW_FAIL: B,
+    BILLING_CREATE_REFERRAL_SUCCESS: Z,
+    CREATE_REFERRALS_SUCCESS: F,
+    BILLING_REFERRAL_RESOLVE_SUCCESS: j,
+    BILLING_REFERRAL_RESOLVE_FAIL: H,
+    REFERRALS_FETCH_ELIGIBLE_USER_START: q,
+    REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: Q,
+    REFERRALS_FETCH_ELIGIBLE_USER_FAIL: X,
+    LOAD_MESSAGES_SUCCESS: W,
+    MESSAGE_CREATE: Y,
+    LOAD_MESSAGES_AROUND_SUCCESS: W,
+    LOGOUT: L
+});

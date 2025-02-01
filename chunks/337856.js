@@ -1,9 +1,9 @@
-var e = r(926515),
-    o = r(354848),
-    i = r(622281),
-    u = TypeError;
-t.exports = function (t, n) {
-    var r, c;
-    if (('string' === n && o((r = t.toString)) && !i((c = e(r, t)))) || (o((r = t.valueOf)) && !i((c = e(r, t)))) || ('string' !== n && o((r = t.toString)) && !i((c = e(r, t))))) return c;
-    throw u("Can't convert object to primitive value");
+var r = a(926515),
+    n = a(354848),
+    o = a(622281),
+    _ = TypeError;
+t.exports = function (t, e) {
+    var a, i;
+    if (('string' === e && n((a = t.toString)) && !o((i = r(a, t)))) || (n((a = t.valueOf)) && !o((i = r(a, t)))) || ('string' !== e && n((a = t.toString)) && !o((i = r(a, t))))) return i;
+    throw _("Can't convert object to primitive value");
 };

@@ -1,5 +1,5 @@
 e.exports = {
-    topSpacing: 'topSpacing_fa2bfc',
-    emptyState: 'emptyState_fa2bfc topSpacing_fa2bfc',
-    image: 'image_fa2bfc topSpacing_fa2bfc'
+    topSpacing: 'topSpacing__5273b',
+    emptyState: 'emptyState__5273b topSpacing__5273b',
+    image: 'image__5273b topSpacing__5273b'
 };

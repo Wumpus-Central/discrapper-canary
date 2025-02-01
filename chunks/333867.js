@@ -14,8 +14,8 @@ let _ = 'payment-modal',
     p = new Set([c.h8.REVIEW, c.h8.CONFIRM, c.h8.GIFT_CUSTOMIZATION]);
 function h(e) {
     let t;
-    let { skuId: n, isGift: c = !1, giftMessage: h, giftingOrigin: m, onClose: g, onComplete: E, analyticsLocations: v, analyticsObject: y, giftRecipient: I, variantsReturnStyle: b } = e,
-        T = !1,
+    let { skuId: n, isGift: c = !1, giftMessage: h, giftingOrigin: m, onClose: g, onComplete: E, analyticsLocations: v, analyticsObject: y, giftRecipient: I, variantsReturnStyle: T } = e,
+        b = !1,
         S = (0, r.Z)(),
         A = (e) => {
             t = e;
@@ -36,7 +36,7 @@ function h(e) {
                     t(), null == g || g(e);
                 },
                 onComplete: () => {
-                    (T = !0), null == E || E();
+                    (b = !0), null == E || E();
                 },
                 returnRef: r,
                 onStepChange: A
@@ -45,7 +45,7 @@ function h(e) {
         {
             modalKey: _,
             onCloseCallback: () => {
-                T ||
+                b ||
                     u.default.track(f.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: S,
                         payment_type: f.Zuq[f.GZQ.ONE_TIME],
@@ -56,10 +56,10 @@ function h(e) {
                     }),
                     (0, s.fw)(),
                     (0, o.p)(),
-                    null == g || g(T),
-                    T &&
+                    null == g || g(b),
+                    b &&
                         (0, l.qg)({
-                            variantsReturnStyle: b,
+                            variantsReturnStyle: T,
                             location: 'openCollectiblesPaymentModal'
                         });
             },

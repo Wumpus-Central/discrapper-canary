@@ -1,37 +1,38 @@
-var i = r(192379),
-    a = r(723184),
-    o = r(88758),
-    s = r(716708),
-    l =
+n.d(t, { Z: () => f });
+var i = n(192379),
+    r = n(723184),
+    a = n(88758),
+    s = n(716708),
+    o =
         Object.assign ||
         function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = arguments[n];
-                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         },
-    u = (function () {
-        function e(e, n) {
-            for (var r = 0; r < n.length; r++) {
-                var i = n[r];
+    l = (function () {
+        function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var i = t[n];
                 (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (n, r, i) {
-            return r && e(n.prototype, r), i && e(n, i), n;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })();
-function c(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function u(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function d(e, n) {
+function c(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function f(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function d(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -39,17 +40,17 @@ function f(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var p = (function (e) {
-    function n() {
-        c(this, n);
-        for (var e, r, i, a = arguments.length, s = Array(a), l = 0; l < a; l++) s[l] = arguments[l];
+let f = (function (e) {
+    function t() {
+        u(this, t);
+        for (var e, n, i, r = arguments.length, s = Array(r), o = 0; o < r; o++) s[o] = arguments[o];
         return (
-            (r = i = d(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(s)))),
+            (n = i = c(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(s)))),
             (i.handleChange = function (e) {
-                var n = o.T(e, i.props.hsl, i.props.direction, i.props.a, i.container);
-                n && 'function' == typeof i.props.onChange && i.props.onChange(n, e);
+                var t = a.T(e, i.props.hsl, i.props.direction, i.props.a, i.container);
+                t && 'function' == typeof i.props.onChange && i.props.onChange(t, e);
             }),
             (i.handleMouseDown = function (e) {
                 i.handleChange(e), window.addEventListener('mousemove', i.handleChange), window.addEventListener('mouseup', i.handleMouseUp);
@@ -60,12 +61,12 @@ var p = (function (e) {
             (i.unbindEventListeners = function () {
                 window.removeEventListener('mousemove', i.handleChange), window.removeEventListener('mouseup', i.handleMouseUp);
             }),
-            d(i, r)
+            c(i, n)
         );
     }
     return (
-        f(n, e),
-        u(n, [
+        d(t, e),
+        l(t, [
             {
                 key: 'componentWillUnmount',
                 value: function () {
@@ -76,8 +77,8 @@ var p = (function (e) {
                 key: 'render',
                 value: function () {
                     var e = this,
-                        n = this.props.rgb,
-                        r = (0, a.default)(
+                        t = this.props.rgb,
+                        n = (0, r.default)(
                             {
                                 default: {
                                     alpha: {
@@ -91,7 +92,7 @@ var p = (function (e) {
                                     },
                                     gradient: {
                                         absolute: '0px 0px 0px 0px',
-                                        background: 'linear-gradient(to right, rgba(' + n.r + ',' + n.g + ',' + n.b + ', 0) 0%,\n           rgba(' + n.r + ',' + n.g + ',' + n.b + ', 1) 100%)',
+                                        background: 'linear-gradient(to right, rgba(' + t.r + ',' + t.g + ',' + t.b + ', 0) 0%,\n           rgba(' + t.r + ',' + t.g + ',' + t.b + ', 1) 100%)',
                                         boxShadow: this.props.shadow,
                                         borderRadius: this.props.radius
                                     },
@@ -102,7 +103,7 @@ var p = (function (e) {
                                     },
                                     pointer: {
                                         position: 'absolute',
-                                        left: 100 * n.a + '%'
+                                        left: 100 * t.a + '%'
                                     },
                                     slider: {
                                         width: '4px',
@@ -115,13 +116,13 @@ var p = (function (e) {
                                     }
                                 },
                                 vertical: {
-                                    gradient: { background: 'linear-gradient(to bottom, rgba(' + n.r + ',' + n.g + ',' + n.b + ', 0) 0%,\n           rgba(' + n.r + ',' + n.g + ',' + n.b + ', 1) 100%)' },
+                                    gradient: { background: 'linear-gradient(to bottom, rgba(' + t.r + ',' + t.g + ',' + t.b + ', 0) 0%,\n           rgba(' + t.r + ',' + t.g + ',' + t.b + ', 1) 100%)' },
                                     pointer: {
                                         left: 0,
-                                        top: 100 * n.a + '%'
+                                        top: 100 * t.a + '%'
                                     }
                                 },
-                                overwrite: l({}, this.props.style)
+                                overwrite: o({}, this.props.style)
                             },
                             {
                                 vertical: 'vertical' === this.props.direction,
@@ -130,27 +131,26 @@ var p = (function (e) {
                         );
                     return i.createElement(
                         'div',
-                        { style: r.alpha },
-                        i.createElement('div', { style: r.checkboard }, i.createElement(s.Z, { renderers: this.props.renderers })),
-                        i.createElement('div', { style: r.gradient }),
+                        { style: n.alpha },
+                        i.createElement('div', { style: n.checkboard }, i.createElement(s.Z, { renderers: this.props.renderers })),
+                        i.createElement('div', { style: n.gradient }),
                         i.createElement(
                             'div',
                             {
-                                style: r.container,
-                                ref: function (n) {
-                                    return (e.container = n);
+                                style: n.container,
+                                ref: function (t) {
+                                    return (e.container = t);
                                 },
                                 onMouseDown: this.handleMouseDown,
                                 onTouchMove: this.handleChange,
                                 onTouchStart: this.handleChange
                             },
-                            i.createElement('div', { style: r.pointer }, this.props.pointer ? i.createElement(this.props.pointer, this.props) : i.createElement('div', { style: r.slider }))
+                            i.createElement('div', { style: n.pointer }, this.props.pointer ? i.createElement(this.props.pointer, this.props) : i.createElement('div', { style: n.slider }))
                         )
                     );
                 }
             }
         ]),
-        n
+        t
     );
 })(i.PureComponent || i.Component);
-n.Z = p;

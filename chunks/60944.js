@@ -1,4 +1,4 @@
 e.exports = {
-    notificationBody: 'notificationBody_a13960',
-    iconContainer: 'iconContainer_a13960'
+    notificationBody: 'notificationBody__3371b',
+    iconContainer: 'iconContainer__3371b'
 };

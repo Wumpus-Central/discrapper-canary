@@ -1,7 +1,7 @@
 e.exports = {
-    container: 'container_b41b7a',
-    card: 'card_b41b7a',
-    eyebrow: 'eyebrow_b41b7a',
-    button: 'button_b41b7a',
-    dismiss: 'dismiss_b41b7a'
+    container: 'container_c694b6',
+    card: 'card_c694b6',
+    eyebrow: 'eyebrow_c694b6',
+    button: 'button_c694b6',
+    dismiss: 'dismiss_c694b6'
 };

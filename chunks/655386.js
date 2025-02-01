@@ -1,4 +1,5 @@
-var e = {
+n.d(e, { Z: () => i });
+var t = {
     lessThanXSeconds: {
         one: {
             standalone: 'manje od 1 sekunde',
@@ -136,9 +137,8 @@ var e = {
         other: 'gotovo {{count}} godina'
     }
 };
-n.Z = function (o, n, t) {
+let i = function (o, e, n) {
     var i,
-        a = e[o];
-    if (((i = 'string' == typeof a ? a : 1 === n ? (null != t && t.addSuffix ? (t.comparison && t.comparison > 0 ? a.one.withPrepositionIn : a.one.withPrepositionAgo) : a.one.standalone) : n % 10 > 1 && n % 10 < 5 && '1' !== String(n).substr(-2, 1) ? a.dual.replace('{{count}}', String(n)) : a.other.replace('{{count}}', String(n))), null != t && t.addSuffix)) return t.comparison && t.comparison > 0 ? 'za ' + i : 'prije ' + i;
-    return i;
+        a = t[o];
+    return ((i = 'string' == typeof a ? a : 1 === e ? (null != n && n.addSuffix ? (n.comparison && n.comparison > 0 ? a.one.withPrepositionIn : a.one.withPrepositionAgo) : a.one.standalone) : e % 10 > 1 && e % 10 < 5 && '1' !== String(e).substr(-2, 1) ? a.dual.replace('{{count}}', String(e)) : a.other.replace('{{count}}', String(e))), null != n && n.addSuffix) ? (n.comparison && n.comparison > 0 ? 'za ' + i : 'prije ' + i) : i;
 };

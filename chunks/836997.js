@@ -1,15 +1,15 @@
-var i = r(957578).Buffer,
-    a = r(257693);
-function o(e, n, r) {
-    var o = n.length,
-        s = a(n, e._cache);
-    return (e._cache = e._cache.slice(o)), (e._prev = i.concat([e._prev, r ? n : s])), s;
+var i = n(957578).Buffer,
+    r = n(257693);
+function a(e, t, n) {
+    var a = t.length,
+        s = r(t, e._cache);
+    return (e._cache = e._cache.slice(a)), (e._prev = i.concat([e._prev, n ? t : s])), s;
 }
-n.encrypt = function (e, n, r) {
-    for (var a, s = i.allocUnsafe(0); n.length; )
-        if ((0 === e._cache.length && ((e._cache = e._cipher.encryptBlock(e._prev)), (e._prev = i.allocUnsafe(0))), e._cache.length <= n.length)) (a = e._cache.length), (s = i.concat([s, o(e, n.slice(0, a), r)])), (n = n.slice(a));
+t.encrypt = function (e, t, n) {
+    for (var r, s = i.allocUnsafe(0); t.length; )
+        if ((0 === e._cache.length && ((e._cache = e._cipher.encryptBlock(e._prev)), (e._prev = i.allocUnsafe(0))), e._cache.length <= t.length)) (r = e._cache.length), (s = i.concat([s, a(e, t.slice(0, r), n)])), (t = t.slice(r));
         else {
-            s = i.concat([s, o(e, n, r)]);
+            s = i.concat([s, a(e, t, n)]);
             break;
         }
     return s;

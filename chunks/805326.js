@@ -1,54 +1,54 @@
-function n(e) {
-    let n = '([0-9]_*)+',
-        r = '([0-9a-fA-F]_*)+',
+function t(e) {
+    let t = '([0-9]_*)+',
+        n = '([0-9a-fA-F]_*)+',
         i = '([01]_*)+',
-        a = '([0-7]_*)+',
-        o = '[!#$%&*+.\\/<=>?@\\\\^~-]',
+        r = '([0-7]_*)+',
+        a = '[!#$%&*+.\\/<=>?@\\\\^~-]',
         s = '(\\p{S}|\\p{P})',
-        l = '[(),;\\[\\]`|{}]',
-        u = `(${o}|(?!(${l}|[_:"']))${s})`,
-        c = {
+        o = '[(),;\\[\\]`|{}]',
+        l = `(${a}|(?!(${o}|[_:"']))${s})`,
+        u = {
             variants: [e.COMMENT('--+', '$'), e.COMMENT(/\{-/, /-\}/, { contains: ['self'] })]
         },
-        d = {
+        c = {
             className: 'meta',
             begin: /\{-#/,
             end: /#-\}/
         },
-        f = {
+        d = {
             className: 'meta',
             begin: '^#',
             end: '$'
         },
-        p = {
+        f = {
             className: 'type',
             begin: "\\b[A-Z][\\w']*",
             relevance: 0
         },
-        h = {
+        _ = {
             begin: '\\(',
             end: '\\)',
             illegal: '"',
             contains: [
+                c,
                 d,
-                f,
                 {
                     className: 'type',
                     begin: '\\b[A-Z][\\w]*(\\((\\.\\.|,|\\w+)\\))?'
                 },
                 e.inherit(e.TITLE_MODE, { begin: "[_a-z][\\w']*" }),
-                c
+                u
             ]
         },
-        _ = {
+        p = {
             begin: /\{/,
             end: /\}/,
-            contains: h.contains
+            contains: _.contains
         },
-        m = {
+        h = {
             className: 'number',
             relevance: 0,
-            variants: [{ match: `\\b(${n})(\\.(${n}))?([eE][+-]?(${n}))?\\b` }, { match: `\\b0[xX]_*(${r})(\\.(${r}))?([pP][+-]?(${n}))?\\b` }, { match: `\\b0[oO](${a})\\b` }, { match: `\\b0[bB](${i})\\b` }]
+            variants: [{ match: `\\b(${t})(\\.(${t}))?([eE][+-]?(${t}))?\\b` }, { match: `\\b0[xX]_*(${n})(\\.(${n}))?([pP][+-]?(${t}))?\\b` }, { match: `\\b0[oO](${r})\\b` }, { match: `\\b0[bB](${i})\\b` }]
         };
     return {
         name: 'Haskell',
@@ -60,14 +60,14 @@ function n(e) {
                 beginKeywords: 'module',
                 end: 'where',
                 keywords: 'module where',
-                contains: [h, c],
+                contains: [_, u],
                 illegal: '\\W\\.|;'
             },
             {
                 begin: '\\bimport\\b',
                 end: '$',
                 keywords: 'import qualified as hiding',
-                contains: [h, c],
+                contains: [_, u],
                 illegal: '\\W\\.|;'
             },
             {
@@ -75,38 +75,38 @@ function n(e) {
                 begin: '^(\\s*)?(class|instance)\\b',
                 end: 'where',
                 keywords: 'class family instance where',
-                contains: [p, h, c]
+                contains: [f, _, u]
             },
             {
                 className: 'class',
                 begin: '\\b(data|(new)?type)\\b',
                 end: '$',
                 keywords: 'data family type newtype deriving',
-                contains: [d, p, h, _, c]
+                contains: [c, f, _, p, u]
             },
             {
                 beginKeywords: 'default',
                 end: '$',
-                contains: [p, h, c]
+                contains: [f, _, u]
             },
             {
                 beginKeywords: 'infix infixl infixr',
                 end: '$',
-                contains: [e.C_NUMBER_MODE, c]
+                contains: [e.C_NUMBER_MODE, u]
             },
             {
                 begin: '\\bforeign\\b',
                 end: '$',
                 keywords: 'foreign import export ccall stdcall cplusplus jvm dotnet safe unsafe',
-                contains: [p, e.QUOTE_STRING_MODE, c]
+                contains: [f, e.QUOTE_STRING_MODE, u]
             },
             {
                 className: 'meta',
                 begin: '#!\\/usr\\/bin\\/env runhaskell',
                 end: '$'
             },
+            c,
             d,
-            f,
             {
                 scope: 'string',
                 begin: /'(?=\\?.')/,
@@ -119,13 +119,13 @@ function n(e) {
                 ]
             },
             e.QUOTE_STRING_MODE,
-            m,
-            p,
+            h,
+            f,
             e.inherit(e.TITLE_MODE, { begin: "^[_a-z][\\w']*" }),
-            { begin: `(?!-)${u}--+|--+(?!-)${u}` },
-            c,
+            { begin: `(?!-)${l}--+|--+(?!-)${l}` },
+            u,
             { begin: '->|<-' }
         ]
     };
 }
-e.exports = n;
+e.exports = t;

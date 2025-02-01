@@ -45,8 +45,8 @@ function I(e, t) {
     }
     return !1;
 }
-let b = 12;
-function T(e) {
+let T = 12;
+function b(e) {
     let { positionKey: t, position: n, align: i } = e;
     return null != t ? t : ''.concat(n, ':').concat(i);
 }
@@ -126,8 +126,8 @@ class D extends (i = a.Component) {
         let { nudgeAlignIntoViewport: i } = this.props;
         if (!i) return e;
         let r = n.offsetWidth,
-            a = e + t.offsetWidth - r + b;
-        return a > 0 ? Math.max(b, e - a) : Math.max(b, e);
+            a = e + t.offsetWidth - r + T;
+        return a > 0 ? Math.max(T, e - a) : Math.max(T, e);
     }
     getHorizontalAlignmentStyle(e, t, n, i) {
         let { align: r } = this.props;
@@ -174,16 +174,16 @@ class D extends (i = a.Component) {
         if (!i) return e;
         if (e < 0) return 0;
         let r = t.getBoundingClientRect().height,
-            a = e + r - n.offsetHeight + b;
-        return a > 0 ? Math.max(b, e - a) : e;
+            a = e + r - n.offsetHeight + T;
+        return a > 0 ? Math.max(T, e - a) : e;
     }
     nudgeBottomAlignment(e, t, n) {
         let { nudgeAlignIntoViewport: i } = this.props,
             r = n.offsetHeight,
             a = r - e;
         if (!i) return a;
-        let s = a + t.offsetHeight - r + b;
-        return s > 0 ? Math.max(b, a - s) : a;
+        let s = a + t.offsetHeight - r + T;
+        return s > 0 ? Math.max(T, a - s) : a;
     }
     getVerticalAlignmentStyle(e, t, n, i) {
         let { align: r } = this.props;
@@ -283,7 +283,7 @@ class D extends (i = a.Component) {
         u()(null != r, 'Missing elementRef'), null != n.current && y.set(r, n.current), p.S.subscribe(g.CkL.LAYER_POP_START, this.handleLayerPopStart), p.S.subscribe(g.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener('resize', this.handleLayerPopComplete), (this.unsubscribeDesktopVisualRefreshExperiment = (0, _.yl)('ReferencePositionLayer', this.handleDesktopVisualRefreshExperimentChange)), null == i || i();
     }
     componentDidUpdate(e, t) {
-        if (((T(e) === T(this.props) && O(e, this.props)) || this.updatePosition(), t.position !== this.state.position)) {
+        if (((b(e) === b(this.props) && O(e, this.props)) || this.updatePosition(), t.position !== this.state.position)) {
             var n, i;
             null === (n = (i = this.props).onPositionChange) || void 0 === n || n.call(i, this.state.position);
         }

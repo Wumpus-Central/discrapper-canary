@@ -1,42 +1,42 @@
+n.d(t, { Z: () => f });
 var i,
-    a = r(442837),
-    o = r(570140),
-    s = r(178635);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(178635);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = {};
-function c(e) {
-    let { feedbackType: n, cooldown: r, chance: i } = e;
-    u[n] = {
-        ...s.R[n],
-        cooldown: r,
+let l = {};
+function u(e) {
+    let { feedbackType: t, cooldown: n, chance: i } = e;
+    l[t] = {
+        ...s.R[t],
+        cooldown: n,
         chance: i
     };
 }
-function d(e) {
-    let { feedbackType: n } = e;
-    delete u[n];
+function c(e) {
+    let { feedbackType: t } = e;
+    delete l[t];
 }
-class f extends (i = a.ZP.Store) {
+class d extends (i = r.ZP.Store) {
     initialize() {}
     getFeedbackConfig(e) {
-        return u[e];
+        return l[e];
     }
 }
-l(f, 'displayName', 'FeedbackOverrideStore'),
-    l(f, 'persistKey', 'feedbackOverrides'),
-    (n.Z = new f(o.Z, {
-        FEEDBACK_OVERRIDE_SET: c,
-        FEEDBACK_OVERRIDE_CLEAR: d
-    }));
+o(d, 'displayName', 'FeedbackOverrideStore'), o(d, 'persistKey', 'feedbackOverrides');
+let f = new d(a.Z, {
+    FEEDBACK_OVERRIDE_SET: u,
+    FEEDBACK_OVERRIDE_CLEAR: c
+});

@@ -1,10 +1,10 @@
 e.exports = {
-    bodyText: 'bodyText_fb8619',
-    joinOptions: 'joinOptions_fb8619',
-    joinOptionTab: 'joinOptionTab_fb8619',
-    joinOptionContent: 'joinOptionContent_fb8619',
-    uninteractive: 'uninteractive_fb8619',
-    active: 'active_fb8619',
-    tooltipContainer: 'tooltipContainer_fb8619',
-    tooltip: 'tooltip_fb8619'
+    bodyText: 'bodyText__959cb',
+    joinOptions: 'joinOptions__959cb',
+    joinOptionTab: 'joinOptionTab__959cb',
+    joinOptionContent: 'joinOptionContent__959cb',
+    uninteractive: 'uninteractive__959cb',
+    active: 'active__959cb',
+    tooltipContainer: 'tooltipContainer__959cb',
+    tooltip: 'tooltip__959cb'
 };

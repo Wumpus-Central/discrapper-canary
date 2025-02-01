@@ -1,8 +1,8 @@
-n(757143), n(47120);
+n.d(t, { Z: () => x }), n(757143), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(771340),
@@ -35,12 +35,12 @@ let f = {
             children: l
         });
     };
-class C extends l.PureComponent {
+class _ extends l.PureComponent {
     render() {
         let { region: e, selected: t } = this.props;
         return (0, i.jsxs)(d.Z, {
             align: d.Z.Align.CENTER,
-            className: a()({ selected: t }),
+            className: r()({ selected: t }),
             children: [
                 (0, i.jsx)(g, {
                     region: e,
@@ -51,7 +51,7 @@ class C extends l.PureComponent {
         });
     }
 }
-class x extends l.PureComponent {
+class C extends l.PureComponent {
     componentDidMount() {
         null == this.props.regions && c.Z.fetchRegions(null);
     }
@@ -70,7 +70,7 @@ class x extends l.PureComponent {
                     value: e,
                     key: e.id
                 }));
-        return (0, i.jsx)(o.QuickSelect, {
+        return (0, i.jsx)(o.nsm, {
             label: h.intl.string(h.t.w8gMqq),
             options: l,
             value: n,
@@ -84,7 +84,7 @@ class x extends l.PureComponent {
         super(...e),
             m(this, 'renderOption', (e, t) =>
                 (0, i.jsx)(
-                    C,
+                    _,
                     {
                         region: e.value,
                         selected: t
@@ -121,4 +121,4 @@ class x extends l.PureComponent {
             });
     }
 }
-t.Z = s.ZP.connectStores([u.Z], () => ({ regions: u.Z.getRegions(null) }))(x);
+let x = s.ZP.connectStores([u.Z], () => ({ regions: u.Z.getRegions(null) }))(C);

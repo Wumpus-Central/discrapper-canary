@@ -1,5 +1,5 @@
-t.exports = {
-    header: 'header_f40604',
-    title: 'title_f40604',
-    modalCloseButton: 'modalCloseButton_f40604'
+e.exports = {
+    header: 'header__19497',
+    title: 'title__19497',
+    modalCloseButton: 'modalCloseButton__19497'
 };

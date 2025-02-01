@@ -1,10 +1,10 @@
 e.exports = {
-    guildShopEmbed: 'guildShopEmbed_a70c73',
-    spinnerContainer: 'spinnerContainer_a70c73',
-    serverShopLabel: 'serverShopLabel_a70c73',
-    serverShopLabelText: 'serverShopLabelText_a70c73',
-    guildShopEmbedFooter: 'guildShopEmbedFooter_a70c73',
-    guildShopSummary: 'guildShopSummary_a70c73',
-    guildShopEmbedCta: 'guildShopEmbedCta_a70c73',
-    guildShopEmbedCtaContent: 'guildShopEmbedCtaContent_a70c73'
+    guildShopEmbed: 'guildShopEmbed__86fa6',
+    spinnerContainer: 'spinnerContainer__86fa6',
+    serverShopLabel: 'serverShopLabel__86fa6',
+    serverShopLabelText: 'serverShopLabelText__86fa6',
+    guildShopEmbedFooter: 'guildShopEmbedFooter__86fa6',
+    guildShopSummary: 'guildShopSummary__86fa6',
+    guildShopEmbedCta: 'guildShopEmbedCta__86fa6',
+    guildShopEmbedCtaContent: 'guildShopEmbedCtaContent__86fa6'
 };

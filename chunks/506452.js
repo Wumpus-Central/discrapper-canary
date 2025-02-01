@@ -1,11 +1,11 @@
 e.exports = {
-    headerContainer: 'headerContainer_e99e33',
-    headerText: 'headerText_e99e33',
-    closeIcon: 'closeIcon_e99e33',
-    options: 'options_e99e33',
-    optionContainer: 'optionContainer_e99e33',
-    optionContainerOther: 'optionContainerOther_e99e33',
-    optionText: 'optionText_e99e33',
-    textboxContainer: 'textboxContainer_e99e33',
-    serverLockdownReasonText: 'serverLockdownReasonText_e99e33'
+    headerContainer: 'headerContainer__7e1d8',
+    headerText: 'headerText__7e1d8',
+    closeIcon: 'closeIcon__7e1d8',
+    options: 'options__7e1d8',
+    optionContainer: 'optionContainer__7e1d8',
+    optionContainerOther: 'optionContainerOther__7e1d8',
+    optionText: 'optionText__7e1d8',
+    textboxContainer: 'textboxContainer__7e1d8',
+    serverLockdownReasonText: 'serverLockdownReasonText__7e1d8'
 };

@@ -1,6 +1,6 @@
-function r(e, n) {
-    return function (r) {
-        return e(n(r));
+n.d(t, { Z: () => i });
+let i = function (e, t) {
+    return function (n) {
+        return e(t(n));
     };
-}
-n.Z = r;
+};

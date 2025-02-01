@@ -1,3 +1,3 @@
-let i = r(176191),
-    a = (e, n) => e.sort((e, r) => i(r, e, n));
-e.exports = a;
+let i = n(176191),
+    r = (e, t) => e.sort((e, n) => i(n, e, t));
+e.exports = r;

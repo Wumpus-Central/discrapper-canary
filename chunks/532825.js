@@ -1,11 +1,11 @@
-function n(e, n) {
+function t(e, t) {
     if (null == e) return {};
-    var r = {};
+    var n = {};
     for (var i in e)
         if ({}.hasOwnProperty.call(e, i)) {
-            if (n.includes(i)) continue;
-            r[i] = e[i];
+            if (t.includes(i)) continue;
+            n[i] = e[i];
         }
-    return r;
+    return n;
 }
-(e.exports = n), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);

@@ -1,7 +1,7 @@
-n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(481060),
+    l = n(192379),
+    r = n(481060),
     a = n(904245),
     s = n(944486),
     o = n(324262),
@@ -22,7 +22,7 @@ function m(e, t, n) {
         e
     );
 }
-class p extends r.PureComponent {
+class p extends l.PureComponent {
     render() {
         let e = ''.concat(u.intl.string(u.t.VWqWZW), '\n').concat(u.intl.string(u.t['0Lgb/P']));
         return (0, i.jsx)(o.Z, {
@@ -41,7 +41,7 @@ class p extends r.PureComponent {
         super(...e),
             m(this, 'handleInvite', () => {
                 let { guild: e } = this.props;
-                (0, l.openModalLazy)(async () => {
+                (0, r.ZDy)(async () => {
                     let { default: t } = await Promise.all([n.e('7654'), n.e('54655')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, i.jsx)(t, {
@@ -57,4 +57,4 @@ class p extends r.PureComponent {
             });
     }
 }
-t.Z = p;
+let g = p;

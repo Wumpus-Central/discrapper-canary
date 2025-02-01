@@ -1,5 +1,5 @@
 e.exports = {
-    regionSelectPopout: 'regionSelectPopout_ccb5ca',
-    check: 'check_ccb5ca',
-    regionSelectName: 'regionSelectName_ccb5ca'
+    regionSelectPopout: 'regionSelectPopout__5621e',
+    check: 'check__5621e',
+    regionSelectName: 'regionSelectName__5621e'
 };

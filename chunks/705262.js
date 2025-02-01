@@ -24,8 +24,8 @@ var i = n(200651),
     v = n(311476),
     y = n(165583),
     I = n(587446),
-    b = n(210887),
-    T = n(740492),
+    T = n(210887),
+    b = n(740492),
     S = n(626135),
     A = n(238302),
     N = n(514361),
@@ -215,11 +215,11 @@ let U = Object.freeze({
             }),
             [g, E] = r.useState(!1),
             [y, I] = r.useState(-1),
-            b = (0, l.e7)([f.Z], () => f.Z.useReducedMotion);
+            T = (0, l.e7)([f.Z], () => f.Z.useReducedMotion);
         r.useEffect(() => {
             ((y === R.XV.length - 2 && 'EDITOR' === a) || m === u.Us.EASTER_EGG) && E(!0);
         }, [y, a, m]);
-        let { enabled: T } = v.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
+        let { enabled: b } = v.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
             S = (e, t) => {
                 if (
                     ((0, A.zO)(e.id),
@@ -228,7 +228,7 @@ let U = Object.freeze({
                         analyticsLocations: o,
                         themeName: u.Us[e.id]
                     }),
-                    h && 'SETTINGS' === a && T)
+                    h && 'SETTINGS' === a && b)
                 ) {
                     (0, c.ZDy)(
                         async () => {
@@ -284,7 +284,7 @@ let U = Object.freeze({
                         }),
                         (0, i.jsx)(c.Fmz, {
                             importData: t,
-                            shouldAnimate: !b,
+                            shouldAnimate: !T,
                             className: M.sparkles
                         })
                     ]
@@ -305,7 +305,7 @@ let U = Object.freeze({
                             disabled: t,
                             tabIndex: 0 !== n || t ? void 0 : 0,
                             showBadge: !1,
-                            showLockedBadge: 'SETTINGS' === a && T && h
+                            showLockedBadge: 'SETTINGS' === a && b && h
                         },
                         e.id
                     )
@@ -331,7 +331,7 @@ let U = Object.freeze({
         let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
             { delay: a } = r.useContext(G),
             { analyticsLocations: s } = (0, p.ZP)(_.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [o, u, c] = (0, l.Wu)([b.Z, T.ZP, N.Z], () => [b.Z.theme, null == N.Z.gradientPreset, T.ZP.useSystemTheme === x.K.ON]),
+            [o, u, c] = (0, l.Wu)([T.Z, b.ZP, N.Z], () => [T.Z.theme, null == N.Z.gradientPreset, b.ZP.useSystemTheme === x.K.ON]),
             f = (e) => {
                 (0, A.xs)(),
                     B({

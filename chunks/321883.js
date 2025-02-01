@@ -1,5 +1,5 @@
 e.exports = {
-    spacing: 'spacing_ce3fe1',
-    content: 'content_ce3fe1',
-    scroller: 'scroller_ce3fe1'
+    spacing: 'spacing_bad290',
+    content: 'content_bad290',
+    scroller: 'scroller_bad290'
 };

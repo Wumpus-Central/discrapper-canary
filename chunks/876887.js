@@ -1,6 +1,6 @@
-var i = r(364555),
-    a = r(572657);
-function o(e, n, r) {
-    ((void 0 !== r && !(0, a.Z)(e[n], r)) || (void 0 === r && !(n in e))) && (0, i.Z)(e, n, r);
-}
-n.Z = o;
+n.d(t, { Z: () => a });
+var i = n(364555),
+    r = n(572657);
+let a = function (e, t, n) {
+    ((void 0 === n || (0, r.Z)(e[t], n)) && (void 0 !== n || t in e)) || (0, i.Z)(e, t, n);
+};

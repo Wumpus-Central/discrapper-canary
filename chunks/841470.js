@@ -1,3 +1,4 @@
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var r = n(692547),
@@ -5,17 +6,16 @@ var r = n(692547),
     s = n(355011),
     a = n(388032),
     o = n(530130);
-t.Z = (e) => {
+let c = (e) => {
     let { title: t, subtext: n = a.intl.string(a.t.jHpxws), localizedNumber: c, isTrendingUp: d, isTrendingDown: u, tooltipText: m } = e,
-        h = 'string' == typeof m ? m : t,
-        g =
+        h =
             null != m
-                ? (0, i.jsx)(l.Tooltip, {
+                ? (0, i.jsx)(l.ua7, {
                       text: m,
                       position: 'top',
-                      'aria-label': h,
+                      'aria-label': 'string' == typeof m ? m : t,
                       children: (e) =>
-                          (0, i.jsx)(l.CircleInformationIcon, {
+                          (0, i.jsx)(l.d3s, {
                               size: 'xs',
                               color: 'currentColor',
                               ...e,
@@ -26,13 +26,13 @@ t.Z = (e) => {
     return (0, i.jsxs)('div', {
         className: o.analyticsCard,
         children: [
-            (0, i.jsxs)(l.FormTitle, {
+            (0, i.jsxs)(l.vwX, {
                 className: o.analyticsCardTitle,
-                children: [t, g]
+                children: [t, h]
             }),
             (0, i.jsx)('div', {
                 className: o.analyticsCardContent,
-                children: (0, i.jsx)(l.Heading, {
+                children: (0, i.jsx)(l.X6q, {
                     className: null != c ? o.analyticsCardNumber : o.analyticsCardNumberNotAvailable,
                     variant: 'heading-xl/semibold',
                     children: null != c ? c : a.intl.string(a.t.jHpxws)

@@ -1,219 +1,219 @@
 var i,
+    r,
     a,
-    o,
     s,
-    l = r(67867),
-    u = r(414629),
-    c = r(42433),
-    d = r(668530),
-    f = r(570596),
-    p = r(691244),
-    h = r(600385),
-    _ = r(414847),
-    m = r(187592),
-    g = r(548828),
-    E = r(735471),
-    v = r(982665),
-    y = r(13780),
-    b = r(992416),
-    I = r(62691).set,
-    T = r(584831),
-    S = r(502856),
-    A = r(139545),
-    C = r(6938),
-    N = r(29461),
-    R = r(197859),
-    O = r(732116),
-    D = r(653457),
-    L = 'Promise',
-    x = O.CONSTRUCTOR,
-    w = O.REJECTION_EVENT,
-    P = O.SUBCLASSING,
-    M = N.getterFor(L),
-    k = N.set,
-    U = R && R.prototype,
-    B = R,
-    G = U,
-    Z = d.TypeError,
-    F = d.document,
-    V = d.process,
-    j = D.f,
-    H = j,
-    Y = !!(F && F.createEvent && d.dispatchEvent),
-    W = 'unhandledrejection',
-    K = 'rejectionhandled',
-    z = 0,
-    q = 1,
-    Q = 2,
-    X = 1,
-    J = 2,
-    $ = function (e) {
-        var n;
-        return !!(v(e) && E((n = e.then))) && n;
+    o = n(67867),
+    l = n(414629),
+    u = n(42433),
+    c = n(668530),
+    d = n(570596),
+    f = n(691244),
+    _ = n(600385),
+    p = n(414847),
+    h = n(187592),
+    m = n(548828),
+    g = n(735471),
+    E = n(982665),
+    v = n(13780),
+    y = n(992416),
+    I = n(62691).set,
+    T = n(584831),
+    b = n(502856),
+    S = n(139545),
+    A = n(6938),
+    N = n(29461),
+    C = n(197859),
+    R = n(732116),
+    O = n(653457),
+    D = 'Promise',
+    x = R.CONSTRUCTOR,
+    L = R.REJECTION_EVENT,
+    P = R.SUBCLASSING,
+    w = N.getterFor(D),
+    M = N.set,
+    k = C && C.prototype,
+    U = C,
+    G = k,
+    B = c.TypeError,
+    Z = c.document,
+    F = c.process,
+    V = O.f,
+    j = V,
+    H = !!(Z && Z.createEvent && c.dispatchEvent),
+    Y = 'unhandledrejection',
+    W = 'rejectionhandled',
+    K = 0,
+    z = 1,
+    q = 2,
+    Q = 1,
+    X = 2,
+    J = function (e) {
+        var t;
+        return !!(E(e) && g((t = e.then))) && t;
     },
-    ee = function (e, n) {
-        var r,
+    $ = function (e, t) {
+        var n,
             i,
-            a,
-            o = n.value,
-            s = n.state === q,
-            l = s ? e.ok : e.fail,
-            u = e.resolve,
-            c = e.reject,
-            d = e.domain;
+            r,
+            a = t.value,
+            s = t.state === z,
+            o = s ? e.ok : e.fail,
+            l = e.resolve,
+            u = e.reject,
+            c = e.domain;
         try {
-            l ? (!s && (n.rejection === J && ea(n), (n.rejection = X)), !0 === l ? (r = o) : (d && d.enter(), (r = l(o)), d && (d.exit(), (a = !0))), r === e.promise ? c(new Z('Promise-chain cycle')) : (i = $(r)) ? f(i, r, u, c) : u(r)) : c(o);
+            o ? (s || (t.rejection === X && er(t), (t.rejection = Q)), !0 === o ? (n = a) : (c && c.enter(), (n = o(a)), c && (c.exit(), (r = !0))), n === e.promise ? u(new B('Promise-chain cycle')) : (i = J(n)) ? d(i, n, l, u) : l(n)) : u(a);
         } catch (e) {
-            d && !a && d.exit(), c(e);
+            c && !r && c.exit(), u(e);
         }
     },
-    et = function (e, n) {
-        !e.notified &&
+    ee = function (e, t) {
+        e.notified ||
             ((e.notified = !0),
             T(function () {
-                for (var r, i = e.reactions; (r = i.get()); ) ee(r, e);
-                (e.notified = !1), n && !e.rejection && er(e);
+                for (var n, i = e.reactions; (n = i.get()); ) $(n, e);
+                (e.notified = !1), t && !e.rejection && en(e);
             }));
     },
-    en = function (e, n, r) {
-        var i, a;
-        Y
-            ? (((i = F.createEvent('Event')).promise = n), (i.reason = r), i.initEvent(e, !1, !0), d.dispatchEvent(i))
+    et = function (e, t, n) {
+        var i, r;
+        H
+            ? (((i = Z.createEvent('Event')).promise = t), (i.reason = n), i.initEvent(e, !1, !0), c.dispatchEvent(i))
             : (i = {
-                  promise: n,
-                  reason: r
+                  promise: t,
+                  reason: n
               }),
-            !w && (a = d['on' + e]) ? a(i) : e === W && S('Unhandled promise rejection', r);
+            !L && (r = c['on' + e]) ? r(i) : e === Y && b('Unhandled promise rejection', n);
     },
-    er = function (e) {
-        f(I, d, function () {
-            var n,
-                r = e.facade,
+    en = function (e) {
+        d(I, c, function () {
+            var t,
+                n = e.facade,
                 i = e.value;
             if (
                 ei(e) &&
-                ((n = A(function () {
-                    c ? V.emit('unhandledRejection', i, r) : en(W, r, i);
+                ((t = S(function () {
+                    u ? F.emit('unhandledRejection', i, n) : et(Y, n, i);
                 })),
-                (e.rejection = c || ei(e) ? J : X),
-                n.error)
+                (e.rejection = u || ei(e) ? X : Q),
+                t.error)
             )
-                throw n.value;
+                throw t.value;
         });
     },
     ei = function (e) {
-        return e.rejection !== X && !e.parent;
+        return e.rejection !== Q && !e.parent;
     },
-    ea = function (e) {
-        f(I, d, function () {
-            var n = e.facade;
-            c ? V.emit('rejectionHandled', n) : en(K, n, e.value);
+    er = function (e) {
+        d(I, c, function () {
+            var t = e.facade;
+            u ? F.emit('rejectionHandled', t) : et(W, t, e.value);
         });
     },
-    eo = function (e, n, r) {
+    ea = function (e, t, n) {
         return function (i) {
-            e(n, i, r);
+            e(t, i, n);
         };
     },
-    es = function (e, n, r) {
-        !e.done && ((e.done = !0), r && (e = r), (e.value = n), (e.state = Q), et(e, !0));
+    es = function (e, t, n) {
+        e.done || ((e.done = !0), n && (e = n), (e.value = t), (e.state = q), ee(e, !0));
     },
-    el = function (e, n, r) {
+    eo = function (e, t, n) {
         if (!e.done) {
-            (e.done = !0), r && (e = r);
+            (e.done = !0), n && (e = n);
             try {
-                if (e.facade === n) throw new Z("Promise can't be resolved itself");
-                var i = $(n);
+                if (e.facade === t) throw new B("Promise can't be resolved itself");
+                var i = J(t);
                 i
                     ? T(function () {
-                          var r = { done: !1 };
+                          var n = { done: !1 };
                           try {
-                              f(i, n, eo(el, r, e), eo(es, r, e));
-                          } catch (n) {
-                              es(r, n, e);
+                              d(i, t, ea(eo, n, e), ea(es, n, e));
+                          } catch (t) {
+                              es(n, t, e);
                           }
                       })
-                    : ((e.value = n), (e.state = q), et(e, !1));
-            } catch (n) {
-                es({ done: !1 }, n, e);
+                    : ((e.value = t), (e.state = z), ee(e, !1));
+            } catch (t) {
+                es({ done: !1 }, t, e);
             }
         }
     };
 if (
     x &&
-    ((G = (B = function (e) {
-        y(this, G), g(e), f(i, this);
-        var n = M(this);
+    ((G = (U = function (e) {
+        v(this, G), m(e), d(i, this);
+        var t = w(this);
         try {
-            e(eo(el, n), eo(es, n));
+            e(ea(eo, t), ea(es, t));
         } catch (e) {
-            es(n, e);
+            es(t, e);
         }
     }).prototype),
     ((i = function (e) {
-        k(this, {
-            type: L,
+        M(this, {
+            type: D,
             done: !1,
             notified: !1,
             parent: !1,
-            reactions: new C(),
+            reactions: new A(),
             rejection: !1,
-            state: z,
+            state: K,
             value: void 0
         });
-    }).prototype = p(G, 'then', function (e, n) {
-        var r = M(this),
-            i = j(b(this, B));
+    }).prototype = f(G, 'then', function (e, t) {
+        var n = w(this),
+            i = V(y(this, U));
         return (
-            (r.parent = !0),
-            (i.ok = !E(e) || e),
-            (i.fail = E(n) && n),
-            (i.domain = c ? V.domain : void 0),
-            r.state === z
-                ? r.reactions.add(i)
+            (n.parent = !0),
+            (i.ok = !g(e) || e),
+            (i.fail = g(t) && t),
+            (i.domain = u ? F.domain : void 0),
+            n.state === K
+                ? n.reactions.add(i)
                 : T(function () {
-                      ee(i, r);
+                      $(i, n);
                   }),
             i.promise
         );
     })),
-    (a = function () {
+    (r = function () {
         var e = new i(),
-            n = M(e);
-        (this.promise = e), (this.resolve = eo(el, n)), (this.reject = eo(es, n));
+            t = w(e);
+        (this.promise = e), (this.resolve = ea(eo, t)), (this.reject = ea(es, t));
     }),
-    (D.f = j =
+    (O.f = V =
         function (e) {
-            return e === B || e === o ? new a(e) : H(e);
+            return e === U || e === a ? new r(e) : j(e);
         }),
-    !u && E(R) && U !== Object.prototype)
+    !l && g(C) && k !== Object.prototype)
 ) {
-    (s = U.then),
-        !P &&
-            p(
-                U,
+    (s = k.then),
+        P ||
+            f(
+                k,
                 'then',
-                function (e, n) {
-                    var r = this;
-                    return new B(function (e, n) {
-                        f(s, r, e, n);
-                    }).then(e, n);
+                function (e, t) {
+                    var n = this;
+                    return new U(function (e, t) {
+                        d(s, n, e, t);
+                    }).then(e, t);
                 },
                 { unsafe: !0 }
             );
     try {
-        delete U.constructor;
+        delete k.constructor;
     } catch (e) {}
-    h && h(U, G);
+    _ && _(k, G);
 }
-l(
+o(
     {
         global: !0,
         constructor: !0,
         wrap: !0,
         forced: x
     },
-    { Promise: B }
+    { Promise: U }
 ),
-    _(B, L, !1, !0),
-    m(L);
+    p(U, D, !1, !0),
+    h(D);

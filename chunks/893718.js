@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(100527),
     y = n(906732),
     I = n(541099),
-    b = n(998698),
-    T = n(271668),
+    T = n(998698),
+    b = n(271668),
     S = n(404295),
     A = n(326133),
     N = n(405701),
@@ -74,11 +74,11 @@ let ey = 450;
 function eI(e) {
     return e !== Q.Z.getChannelId();
 }
-function eb(e, t) {
+function eT(e, t) {
     var n, i;
     return null !== (i = e && (null === (n = t.submit) || void 0 === n ? void 0 : n.clearOnSubmit)) && void 0 !== i && i;
 }
-function eT(e, t, a, s) {
+function eb(e, t, a, s) {
     let [o, l] = r.useState(!1),
         u = (0, _.e7)([U.Z], () => U.Z.fetchPotionCount(F.D1)),
         c = r.useCallback(
@@ -87,9 +87,9 @@ function eT(e, t, a, s) {
                 if (o) return;
                 l(!0);
                 let I = null !== (v = null === (E = j.Z.getStickerPreview(s, t.drafts.type)) || void 0 === E ? void 0 : E.map((e) => e.id)) && void 0 !== v ? v : [],
-                    b = null !== (y = J.Z.getUploads(s, t.drafts.type)) && void 0 !== y ? y : [],
-                    T = (0, G.q5)(s);
-                if (null == d && !_ && !m && (0, P.CB)(b, s)) {
+                    T = null !== (y = J.Z.getUploads(s, t.drafts.type)) && void 0 !== y ? y : [],
+                    b = (0, G.q5)(s);
+                if (null == d && !_ && !m && (0, P.CB)(T, s)) {
                     l(!1),
                         (0, p.ZDy)(async () => {
                             let { default: e } = await Promise.all([n.e('90508'), n.e('18895'), n.e('27173')]).then(n.bind(n, 273602));
@@ -97,13 +97,13 @@ function eT(e, t, a, s) {
                                 (0, i.jsx)(e, {
                                     ...t,
                                     threadId: s,
-                                    attachments: b,
+                                    attachments: T,
                                     sendMessage: () => c(r, void 0, void 0, void 0, !0)
                                 });
                         });
                     return;
                 }
-                let S = (0, Z.tv)(r, _, d, b),
+                let S = (0, Z.tv)(r, _, d, T),
                     A = (0, G.b7)(s, g, u);
                 if (S && A) {
                     l(!1),
@@ -115,15 +115,15 @@ function eT(e, t, a, s) {
                 }
                 e({
                     value: r,
-                    uploads: b,
+                    uploads: T,
                     stickers: I,
-                    confettiPotionEmoji: T,
+                    confettiPotionEmoji: b,
                     command: d,
                     commandOptionValues: f,
                     isGif: _
                 }).then((e) => {
                     let { shouldClear: n, shouldRefocus: i } = e,
-                        r = eb(n, t),
+                        r = eT(n, t),
                         o = null != a.current;
                     r && (eI(s) ? h.Z.saveDraft(s, '', t.drafts.type) : o && a.current.clearValue()), o && (l(!1), (0, O._Q)(), i && a.current.focus());
                 });
@@ -370,7 +370,7 @@ function ek(e, t, n, i) {
 }
 function eU(e, t) {
     var n, a, o, l, c, f, h, I, O, x, P, w, U, G, B;
-    let { textValue: Z, richValue: F, className: j, innerClassName: H, editorClassName: Y, id: W, required: z, disabled: q, placeholder: Q, accessibilityLabel: J, channel: $, type: ee, focused: et, renderAttachButton: en, renderApplicationCommandIcon: eu, renderAppLauncherButton: eE, renderAppCommandButton: eI, renderLeftAccessories: eb, pendingReply: eU, onChange: eG, onResize: eB, onBlur: eZ, onFocus: eF, onKeyDown: eV, onSubmit: ej, promptToUpload: eH, highlighted: eY, canMentionRoles: eW, canMentionChannels: eK, maxCharacterCount: ez, showRemainingCharsAfterCount: eq, allowNewLines: eQ = !0, characterCountClassName: eX, 'aria-describedby': eJ, 'aria-labelledby': e$, setEditorRef: e0, autoCompletePosition: e1, children: e2, disableThemedBackground: e3 = !1, emojiPickerCloseOnModalOuterClick: e4, parentModalKey: e6, onCommandSentinelTyped: e5, pendingScheduledMessage: e7 } = e;
+    let { textValue: Z, richValue: F, className: j, innerClassName: H, editorClassName: Y, id: W, required: z, disabled: q, placeholder: Q, accessibilityLabel: J, channel: $, type: ee, focused: et, renderAttachButton: en, renderApplicationCommandIcon: eu, renderAppLauncherButton: eE, renderAppCommandButton: eI, renderLeftAccessories: eT, pendingReply: eU, onChange: eG, onResize: eB, onBlur: eZ, onFocus: eF, onKeyDown: eV, onSubmit: ej, promptToUpload: eH, highlighted: eY, canMentionRoles: eW, canMentionChannels: eK, maxCharacterCount: ez, showRemainingCharsAfterCount: eq, allowNewLines: eQ = !0, characterCountClassName: eX, 'aria-describedby': eJ, 'aria-labelledby': e$, setEditorRef: e0, autoCompletePosition: e1, children: e2, disableThemedBackground: e3 = !1, emojiPickerCloseOnModalOuterClick: e4, parentModalKey: e6, onCommandSentinelTyped: e5, pendingScheduledMessage: e7 } = e;
     u()(null != ee, 'chat input type must be set');
     let { analyticsLocations: e8 } = (0, y.ZP)(v.Z.CHANNEL_TEXT_AREA),
         e9 = (0, R.R6)('ChannelTextAreaContainer'),
@@ -388,11 +388,11 @@ function eU(e, t) {
         let { width: t } = e;
         return tu(!to && (null == t || t > ey));
     });
-    let { activeCommand: tc, activeCommandSection: td } = (0, _.cj)([b.Z], () => {
+    let { activeCommand: tc, activeCommandSection: td } = (0, _.cj)([T.Z], () => {
             var e, t;
             return {
-                activeCommand: (null === (e = ee.commands) || void 0 === e ? void 0 : e.enabled) ? b.Z.getActiveCommand($.id) : null,
-                activeCommandSection: (null === (t = ee.commands) || void 0 === t ? void 0 : t.enabled) ? b.Z.getActiveCommandSection($.id) : null
+                activeCommand: (null === (e = ee.commands) || void 0 === e ? void 0 : e.enabled) ? T.Z.getActiveCommand($.id) : null,
+                activeCommandSection: (null === (t = ee.commands) || void 0 === t ? void 0 : t.enabled) ? T.Z.getActiveCommandSection($.id) : null
             };
         }),
         { isLurking: tf, isPendingMember: t_, disabled: tp, canAttachFiles: th, canCreateThreads: tm, canEveryoneSendMessages: tg } = eP($, ee, tc, q),
@@ -400,7 +400,7 @@ function eU(e, t) {
         tv = !K.dN.useSetting() && !(0, ei.isAndroidWeb)() && null != window.ResizeObserver,
         ty = !tv || !(null === (n = ee.commands) || void 0 === n ? void 0 : n.enabled) || !et || Z !== eg.GI,
         tI = (0, M.Z)(),
-        { isSubmitButtonEnabled: tb, fontSize: tT } = (0, _.cj)([E.Z], () => ({
+        { isSubmitButtonEnabled: tT, fontSize: tb } = (0, _.cj)([E.Z], () => ({
             fontSize: E.Z.fontSize,
             isSubmitButtonEnabled: E.Z.isSubmitButtonEnabled
         })),
@@ -416,7 +416,7 @@ function eU(e, t) {
     );
     eR(ee, tp);
     let { eventEmitter: tC, handleEditorSelectionChanged: tR } = eO(ti, Z, F),
-        { submitting: tO, submit: tD, handleSubmit: tx } = eT(ej, ee, ti, $.id),
+        { submitting: tO, submit: tD, handleSubmit: tx } = eb(ej, ee, ti, $.id),
         { autocompleteRef: tL, handleMaybeShowAutocomplete: tP, handleHideAutocomplete: tw } = eD(),
         tM = eS(tD, ee, ti),
         tk = eA(ti),
@@ -493,7 +493,7 @@ function eU(e, t) {
                           (0, i.jsxs)('div', {
                               className: ev.accessoryBarLeft,
                               children: [
-                                  null == eb ? void 0 : eb(),
+                                  null == eT ? void 0 : eT(),
                                   tX,
                                   t6
                                       ? (0, i.jsx)(m.Z, {
@@ -607,7 +607,7 @@ function eU(e, t) {
                                                 onMaybeShowAutocomplete: tP,
                                                 onHideAutocomplete: tw,
                                                 promptToUpload: eH,
-                                                fontSize: tT,
+                                                fontSize: tb,
                                                 spellcheckEnabled: tS,
                                                 canOnlyUseTextCommands: tq,
                                                 className: s()(
@@ -627,7 +627,7 @@ function eU(e, t) {
                                                   children: [
                                                       t4 ? (0, i.jsx)(N.Z, { channel: $ }) : null,
                                                       null !== (w = null == eI ? void 0 : eI()) && void 0 !== w ? w : null,
-                                                      (null === (l = ee.submit) || void 0 === l ? void 0 : l.button) != null && ((null === (c = ee.submit) || void 0 === c ? void 0 : c.ignorePreference) || tb)
+                                                      (null === (l = ee.submit) || void 0 === l ? void 0 : l.button) != null && ((null === (c = ee.submit) || void 0 === c ? void 0 : c.ignorePreference) || tT)
                                                           ? (0, i.jsx)(eo.Z, {
                                                                 onClick: tx,
                                                                 disabled: tp || t3
@@ -643,7 +643,7 @@ function eU(e, t) {
                         e9 && !ee.hideAccessoryBar ? nn : null,
                         ty
                             ? null
-                            : (0, i.jsx)(T.Z, {
+                            : (0, i.jsx)(b.Z, {
                                   ref: tn,
                                   channel: $,
                                   canOnlyUseTextCommands: tq
@@ -682,7 +682,7 @@ function eU(e, t) {
                                   channel: $,
                                   isEditorFocused: et,
                                   onSelectSticker: tU,
-                                  submitButtonVisible: (null === (I = ee.submit) || void 0 === I ? void 0 : I.button) && (null !== (U = null === (O = ee.submit) || void 0 === O ? void 0 : O.ignorePreference) && void 0 !== U ? U : tb),
+                                  submitButtonVisible: (null === (I = ee.submit) || void 0 === I ? void 0 : I.button) && (null !== (U = null === (O = ee.submit) || void 0 === O ? void 0 : O.ignorePreference) && void 0 !== U ? U : tT),
                                   stickerIconVisible: null !== (G = null === (x = ee.stickers) || void 0 === x ? void 0 : x.button) && void 0 !== G && G && !(ts && null !== (B = null === (P = ee.confetti) || void 0 === P ? void 0 : P.button) && void 0 !== B && B)
                               })
                             : null,

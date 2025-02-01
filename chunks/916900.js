@@ -1,5 +1,5 @@
-var i = r(67867),
-    a = r(181301).values;
+var i = n(67867),
+    r = n(181301).values;
 i(
     {
         target: 'Object',
@@ -7,7 +7,7 @@ i(
     },
     {
         values: function (e) {
-            return a(e);
+            return r(e);
         }
     }
 );

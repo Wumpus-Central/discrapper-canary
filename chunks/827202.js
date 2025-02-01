@@ -1,6 +1,6 @@
 e.exports = {
-    videoList: 'videoList_a6fa57',
-    vertical: 'vertical_a6fa57',
-    tile: 'tile_a6fa57',
-    hidden: 'hidden_a6fa57'
+    videoList: 'videoList__95c18',
+    vertical: 'vertical__95c18',
+    tile: 'tile__95c18',
+    hidden: 'hidden__95c18'
 };

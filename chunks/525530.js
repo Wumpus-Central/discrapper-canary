@@ -1,12 +1,12 @@
 e.exports = {
-    wrapper: 'wrapper_dba803',
-    container: 'container_dba803',
-    appliedBoostContainer: 'appliedBoostContainer_dba803',
-    boostContainer: 'boostContainer_dba803',
-    boostInnerContainer: 'boostInnerContainer_dba803',
-    boostContainerSeparator: 'boostContainerSeparator_dba803',
-    boostDescriptionContainer: 'boostDescriptionContainer_dba803',
-    boostDescriptionInnerContainer: 'boostDescriptionInnerContainer_dba803',
-    boostSlotMenuIcon: 'boostSlotMenuIcon_dba803',
-    mainSeparator: 'mainSeparator_dba803'
+    container: 'container_ceb06a',
+    wrapper: 'wrapper_ceb06a',
+    appliedBoostContainer: 'appliedBoostContainer_ceb06a',
+    boostContainer: 'boostContainer_ceb06a',
+    boostInnerContainer: 'boostInnerContainer_ceb06a',
+    boostContainerSeparator: 'boostContainerSeparator_ceb06a',
+    boostDescriptionContainer: 'boostDescriptionContainer_ceb06a',
+    boostDescriptionInnerContainer: 'boostDescriptionInnerContainer_ceb06a',
+    boostSlotMenuIcon: 'boostSlotMenuIcon_ceb06a',
+    mainSeparator: 'mainSeparator_ceb06a'
 };

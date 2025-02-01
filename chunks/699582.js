@@ -59,8 +59,8 @@ var i,
         short: {},
         long: {}
     }),
-    b = !1,
     T = !1,
+    b = !1,
     S = /^[A-Z]{3}$/,
     A = /-u(?:-[0-9a-z]{2,8})+/gi,
     N = {
@@ -487,25 +487,25 @@ function k(e, t, n, i, r) {
             v = r[s][E],
             y = v['0'],
             I = '',
-            b = d;
+            T = d;
         if (void 0 !== f) {
-            var T = b.call(f, E);
-            if (-1 !== T) {
-                if (T + 1 < _ && f[T + 1].length > 2) {
-                    var S = f[T + 1],
-                        A = b.call(v, S);
+            var b = T.call(f, E);
+            if (-1 !== b) {
+                if (b + 1 < _ && f[b + 1].length > 2) {
+                    var S = f[b + 1],
+                        A = T.call(v, S);
                     if (-1 !== A)
                         var y = S,
                             I = '-' + E + '-' + y;
                 } else {
-                    var A = b(v, 'true');
+                    var A = T(v, 'true');
                     if (-1 !== A) var y = 'true';
                 }
             }
         }
         if (u.call(n, '[[' + E + ']]')) {
             var N = n['[[' + E + ']]'];
-            -1 !== b.call(v, N) && N !== y && ((y = N), (I = ''));
+            -1 !== T.call(v, N) && N !== y && ((y = N), (I = ''));
         }
         (p['[[' + E + ']]'] = y), (h += I), m++;
     }
@@ -595,11 +595,11 @@ function j(e, t, n) {
     var E = F(n, 'minimumFractionDigits', 0, 20, 'currency' === _ ? h : 0);
     i['[[minimumFractionDigits]]'] = E;
     var I = 'currency' === _ ? Math.max(E, h) : 'percent' === _ ? Math.max(E, 0) : Math.max(E, 3),
-        b = F(n, 'maximumFractionDigits', E, 20, I);
-    i['[[maximumFractionDigits]]'] = b;
-    var T = n.minimumSignificantDigits,
+        T = F(n, 'maximumFractionDigits', E, 20, I);
+    i['[[maximumFractionDigits]]'] = T;
+    var b = n.minimumSignificantDigits,
         S = n.maximumSignificantDigits;
-    (void 0 !== T || void 0 !== S) && ((T = F(n, 'minimumSignificantDigits', 1, 21, 1)), (S = F(n, 'maximumSignificantDigits', T, 21, 21)), (i['[[minimumSignificantDigits]]'] = T), (i['[[maximumSignificantDigits]]'] = S));
+    (void 0 !== b || void 0 !== S) && ((b = F(n, 'minimumSignificantDigits', 1, 21, 1)), (S = F(n, 'maximumSignificantDigits', b, 21, 21)), (i['[[minimumSignificantDigits]]'] = b), (i['[[maximumSignificantDigits]]'] = S));
     var A = Z(n, 'useGrouping', 'boolean', void 0, !0);
     i['[[useGrouping]]'] = A;
     var N = u[f].patterns[_];
@@ -646,21 +646,21 @@ function W(e, t) {
                 var E = new e_(),
                     y = _.length - p,
                     I = y % g,
-                    b = _.slice(0, I);
-                for (b.length && h.call(E, b); I < y; ) h.call(E, _.slice(I, I + g)), (I += g);
+                    T = _.slice(0, I);
+                for (T.length && h.call(E, T); I < y; ) h.call(E, _.slice(I, I + g)), (I += g);
                 h.call(E, _.slice(y)), (f[0] = m.call(E, l.group));
             }
             n = m.call(f, l.decimal);
         }
     }
-    var T = r[!0 === c ? '[[negativePattern]]' : '[[positivePattern]]'];
-    if (((T = T.replace('{number}', n)), 'currency' === r['[[style]]'])) {
+    var b = r[!0 === c ? '[[negativePattern]]' : '[[positivePattern]]'];
+    if (((b = b.replace('{number}', n)), 'currency' === r['[[style]]'])) {
         var S,
             A = r['[[currency]]'],
             N = o.currencies[A];
-        (S = ('symbol' === r['[[currencyDisplay]]'] && N) || A), (T = T.replace('{currency}', S));
+        (S = ('symbol' === r['[[currencyDisplay]]'] && N) || A), (b = b.replace('{currency}', S));
     }
-    return i.exp.test(i.input), T;
+    return i.exp.test(i.input), b;
 }
 function K(e, t, n) {
     var i = n;
@@ -751,7 +751,7 @@ function X(e, t, n) {
     var a = L(t),
         n = ee(n, 'any', 'date'),
         s = new ef();
-    (b = Z(n, 'localeMatcher', 'string', new e_('lookup', 'best fit'), 'best fit')), (s['[[localeMatcher]]'] = b);
+    (T = Z(n, 'localeMatcher', 'string', new e_('lookup', 'best fit'), 'best fit')), (s['[[localeMatcher]]'] = T);
     var o = v.DateTimeFormat,
         d = o['[[localeData]]'],
         f = k(o['[[availableLocales]]'], a, s, o['[[relevantExtensionKeys]]'], d);
@@ -767,11 +767,11 @@ function X(e, t, n) {
     var g,
         E = d[_],
         I = $(E.formats),
-        b = Z(n, 'formatMatcher', 'string', new e_('basic', 'best fit'), 'best fit');
-    for (var h in ((E.formats = I), (g = 'basic' === b ? et(s, I) : ei(s, I)), J))
+        T = Z(n, 'formatMatcher', 'string', new e_('basic', 'best fit'), 'best fit');
+    for (var h in ((E.formats = I), (g = 'basic' === T ? et(s, I) : ei(s, I)), J))
         if (u.call(J, h) && u.call(g, h)) {
-            var T = g[h];
-            i['[[' + h + ']]'] = T;
+            var b = g[h];
+            i['[[' + h + ']]'] = b;
         }
     var S,
         A = Z(n, 'hour12', 'boolean');
@@ -848,9 +848,9 @@ function en(e, t, n) {
                 else if (void 0 !== v && void 0 === y) g -= a;
                 else {
                     var I = ['2-digit', 'numeric', 'narrow', 'short', 'long'],
-                        b = d.call(I, v),
-                        T = Math.max(Math.min(d.call(I, y) - b, 2), -2);
-                    n && ((('numeric' === v || '2-digit' === v) && 'numeric' !== y && '2-digit' !== y) || ('numeric' !== v && '2-digit' !== v && ('2-digit' === y || 'numeric' === y))) && (g -= r), 2 === T ? (g -= l) : 1 === T ? (g -= f) : -1 === T ? (g -= c) : -2 === T && (g -= o);
+                        T = d.call(I, v),
+                        b = Math.max(Math.min(d.call(I, y) - T, 2), -2);
+                    n && ((('numeric' === v || '2-digit' === v) && 'numeric' !== y && '2-digit' !== y) || ('numeric' !== v && '2-digit' !== v && ('2-digit' === y || 'numeric' === y))) && (g -= r), 2 === b ? (g -= l) : 1 === b ? (g -= f) : -1 === b ? (g -= c) : -2 === b && (g -= o);
                 }
             }
         g > _ && ((_ = g), (i = m)), p++;
@@ -977,7 +977,7 @@ function el(e, t) {
         r = [t],
         a = t.split('-');
     for (a.length > 2 && 4 === a[1].length && h.call(r, a[0] + '-' + a[2]); (n = g.call(r)); ) h.call(v.NumberFormat['[[availableLocales]]'], n), (v.NumberFormat['[[localeData]]'][n] = e.number), e.date && ((e.date.nu = e.number.nu), h.call(v.DateTimeFormat['[[availableLocales]]'], n), (v.DateTimeFormat['[[localeData]]'][n] = e.date));
-    void 0 === i && (i = t), b || (j(s.NumberFormat.prototype), (b = !0)), e.date && !T && (X(s.DateTimeFormat.prototype), (T = !0));
+    void 0 === i && (i = t), T || (j(s.NumberFormat.prototype), (T = !0)), e.date && !b && (X(s.DateTimeFormat.prototype), (b = !0));
 }
 function eu(e) {
     if ('function' == typeof Math.log10) return Math.floor(Math.log10(e));

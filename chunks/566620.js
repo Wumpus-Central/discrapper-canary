@@ -33,8 +33,8 @@ var i = n(990547),
     v = n(413523),
     y = n(358221),
     I = n(233764),
-    b = n(375824),
-    T = n(48854),
+    T = n(375824),
+    b = n(48854),
     S = n(835873),
     A = n(973616),
     N = n(314897),
@@ -79,7 +79,7 @@ async function J(e) {
         O = null !== (t = null == R ? void 0 : R.getGuildId()) && void 0 !== t ? t : void 0,
         x = (0, U.sq)();
     if (!x && null == O && !(null !== (n = null == R ? void 0 : R.isPrivate()) && void 0 !== n && n)) return !1;
-    let L = (0, T.r)();
+    let L = (0, b.r)();
     try {
         a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
@@ -158,7 +158,7 @@ async function J(e) {
                 applicationId: r,
                 channelId: null != i ? i : null,
                 isStart: s,
-                error: e instanceof I.Z || e instanceof f.Z || e instanceof b.Z ? e : new f.Z(e)
+                error: e instanceof I.Z || e instanceof f.Z || e instanceof T.Z ? e : new f.Z(e)
             }),
             !1
         );
@@ -231,9 +231,9 @@ async function ee(e) {
                                           }
                                       })
                                   )
-                                : null != r && r in b.Z.ReasonCodes
-                                  ? t(new b.Z(r))
-                                  : t(new b.Z(b.Z.ReasonCodes.UNKNOWN));
+                                : null != r && r in T.Z.ReasonCodes
+                                  ? t(new T.Z(r))
+                                  : t(new T.Z(T.Z.ReasonCodes.UNKNOWN));
                     }
                 })
             });
@@ -273,9 +273,9 @@ async function et(e) {
                   }),
             !1
         );
-    let b = G.ZP.getCurrentEmbeddedActivity();
+    let T = G.ZP.getCurrentEmbeddedActivity();
     if (
-        ((null == b ? void 0 : b.applicationId) != null && (t = E.Z.getApplication(null == b ? void 0 : b.applicationId)),
+        ((null == T ? void 0 : T.applicationId) != null && (t = E.Z.getApplication(null == T ? void 0 : T.applicationId)),
         !(
             !l ||
             (await (0, B.p)({

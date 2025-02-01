@@ -1,35 +1,35 @@
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(921944),
-    s = r(388032),
-    l = r(961335);
-let u = (e) => {
-    let { markAsDismissed: n } = e;
+n.d(t, { Z: () => l });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(921944),
+    s = n(388032),
+    o = n(961335);
+let l = (e) => {
+    let { markAsDismissed: t } = e;
     return (0, i.jsxs)('div', {
-        className: l.wrapper,
+        className: o.wrapper,
         children: [
-            (0, i.jsx)(a.HeartIcon, {
+            (0, i.jsx)(r.h_8, {
                 size: 'md',
                 color: 'currentColor',
-                className: l.icon
+                className: o.icon
             }),
             (0, i.jsx)('div', {
-                className: l.content,
-                children: (0, i.jsx)(a.Text, {
+                className: o.content,
+                children: (0, i.jsx)(r.Text, {
                     variant: 'text-xs/normal',
                     children: s.intl.string(s.t['xdRf6+'])
                 })
             }),
-            (0, i.jsx)(a.Clickable, {
-                onClick: () => n(o.L.UNKNOWN),
-                children: (0, i.jsx)(a.XSmallIcon, {
+            (0, i.jsx)(r.P3F, {
+                onClick: () => t(a.L.UNKNOWN),
+                children: (0, i.jsx)(r.Dio, {
                     size: 'md',
                     color: 'currentColor',
-                    className: l.close
+                    className: o.close
                 })
             })
         ]
     });
 };
-n.Z = u;

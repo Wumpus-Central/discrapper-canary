@@ -1,10 +1,10 @@
 e.exports = {
-    qrLogin: 'qrLogin_c6cd4b',
-    qrLoginInner: 'qrLoginInner_c6cd4b',
-    qrCode: 'qrCode_c6cd4b',
-    qrCodeContainer: 'qrCodeContainer_c6cd4b',
-    qrCodeOverlay: 'qrCodeOverlay_c6cd4b',
-    qrAvatar: 'qrAvatar_c6cd4b',
-    startOverButton: 'startOverButton_c6cd4b',
-    verticalSeparator: 'verticalSeparator_c6cd4b'
+    qrLogin: 'qrLogin_e16417',
+    qrLoginInner: 'qrLoginInner_e16417',
+    qrCode: 'qrCode_e16417',
+    qrCodeContainer: 'qrCodeContainer_e16417',
+    qrCodeOverlay: 'qrCodeOverlay_e16417',
+    qrAvatar: 'qrAvatar_e16417',
+    startOverButton: 'startOverButton_e16417',
+    verticalSeparator: 'verticalSeparator_e16417'
 };

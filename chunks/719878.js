@@ -1,4 +1,4 @@
 e.exports = {
-    image: 'image_e3f20c',
-    empty: 'empty_e3f20c'
+    image: 'image__379fe',
+    empty: 'empty__379fe'
 };

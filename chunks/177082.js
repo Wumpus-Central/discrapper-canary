@@ -1,28 +1,28 @@
-var i = r(47120);
-var a = r(355467),
-    o = r(496929),
-    s = r(147913),
-    l = r(594174),
-    u = r(351402),
-    c = r(78839),
-    d = r(580130),
-    f = r(630388),
-    p = r(74538),
-    h = r(474936);
-function _(e, n, r) {
+n.d(t, { Z: () => h }), n(47120);
+var i = n(355467),
+    r = n(496929),
+    a = n(147913),
+    s = n(594174),
+    o = n(351402),
+    l = n(78839),
+    u = n(580130),
+    c = n(630388),
+    d = n(74538),
+    f = n(474936);
+function _(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class m extends s.Z {
+class p extends a.Z {
     constructor(...e) {
         super(...e),
             _(this, 'actions', {
@@ -31,24 +31,24 @@ class m extends s.Z {
                 }
             }),
             _(this, 'maybeFetchSubscriptions', async () => {
-                let e = l.default.getCurrentUser();
-                if (p.ZP.isPremium(e)) {
-                    !c.ZP.hasFetchedSubscriptions() && (await (0, a.jg)());
-                    let e = c.ZP.getPremiumSubscription();
-                    (null == e ? void 0 : e.paymentSourceId) == null && !d.Z.applicationIdsFetched.has(h.CL) && (await (0, o.yD)(h.CL));
+                let e = s.default.getCurrentUser();
+                if (d.ZP.isPremium(e)) {
+                    l.ZP.hasFetchedSubscriptions() || (await (0, i.jg)());
+                    let e = l.ZP.getPremiumSubscription();
+                    (null == e ? void 0 : e.paymentSourceId) != null || u.Z.applicationIdsFetched.has(f.CL) || (await (0, r.yD)(f.CL));
                 }
             }),
             _(this, 'maybeFetchMostRecentSubscription', () => {
-                let e = l.default.getCurrentUser();
-                null != e && !p.ZP.isPremium(e) && null != e.purchasedFlags && ((0, f.yE)(e.purchasedFlags, h.in.PREMIUM_TIER_1) || (0, f.yE)(e.purchasedFlags, h.in.PREMIUM_TIER_2)) && (0, a.ou)();
+                let e = s.default.getCurrentUser();
+                null != e && !d.ZP.isPremium(e) && null != e.purchasedFlags && ((0, c.yE)(e.purchasedFlags, f.in.PREMIUM_TIER_1) || (0, c.yE)(e.purchasedFlags, f.in.PREMIUM_TIER_2)) && (0, i.ou)();
             }),
             _(this, 'maybeFetchCountryCode', async () => {
-                let e = l.default.getCurrentUser();
-                p.ZP.isPremium(e) && !u.Z.ipCountryCodeLoaded && (await this.fetchCountryCode());
+                let e = s.default.getCurrentUser();
+                d.ZP.isPremium(e) && !o.Z.ipCountryCodeLoaded && (await this.fetchCountryCode());
             }),
             _(this, 'fetchCountryCode', async () => {
-                await (0, a.GE)(), null != u.Z.ipCountryCode && (await (0, a.tZ)());
+                await (0, i.GE)(), null != o.Z.ipCountryCode && (await (0, i.tZ)());
             });
     }
 }
-n.Z = new m();
+let h = new p();

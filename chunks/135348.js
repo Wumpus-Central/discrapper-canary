@@ -1,4 +1,5 @@
-var n = {
+n.d(t, { Z: () => i });
+var a = {
     lessThanXSeconds: {
         one: '少於 1 秒',
         other: '少於 {{count}} 秒'
@@ -61,9 +62,8 @@ var n = {
         other: '將近 {{count}} 年'
     }
 };
-t.Z = function (e, t, a) {
+let i = function (e, t, n) {
     var i,
-        r = n[e];
-    if (((i = 'string' == typeof r ? r : 1 === t ? r.one : r.other.replace('{{count}}', String(t))), null != a && a.addSuffix)) return a.comparison && a.comparison > 0 ? i + '內' : i + '前';
-    return i;
+        r = a[e];
+    return ((i = 'string' == typeof r ? r : 1 === t ? r.one : r.other.replace('{{count}}', String(t))), null != n && n.addSuffix) ? (n.comparison && n.comparison > 0 ? i + '內' : i + '前') : i;
 };

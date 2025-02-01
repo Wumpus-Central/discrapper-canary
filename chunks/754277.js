@@ -1,50 +1,50 @@
+n.d(t, { Z: () => _ });
 var i,
-    a = r(442837),
-    o = r(570140);
-function s(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let l = !1,
-    u = !1;
+let o = !1,
+    l = !1;
+function u(e) {
+    let { muted: t } = e;
+    (o = t), (l = !1);
+}
 function c(e) {
-    let { muted: n } = e;
-    (l = n), (u = !1);
+    let { play: t } = e;
+    l = t;
 }
-function d(e) {
-    let { play: n } = e;
-    u = n;
+function d() {
+    l = !1;
 }
-function f() {
-    u = !1;
-}
-class p extends (i = a.ZP.DeviceSettingsStore) {
+class f extends (i = r.ZP.DeviceSettingsStore) {
     initialize(e) {
-        null != e && (l = e);
+        null != e && (o = e);
     }
     isMuted() {
-        return l;
+        return o;
     }
     shouldPlay() {
-        return u;
-    }
-    getUserAgnosticState() {
         return l;
     }
+    getUserAgnosticState() {
+        return o;
+    }
 }
-s(p, 'displayName', 'StageMusicStore'),
-    s(p, 'persistKey', 'StageMusicStore'),
-    (n.Z = new p(o.Z, {
-        STAGE_MUSIC_MUTE: c,
-        STAGE_MUSIC_PLAY: d,
-        VOICE_CHANNEL_SELECT: f
-    }));
+s(f, 'displayName', 'StageMusicStore'), s(f, 'persistKey', 'StageMusicStore');
+let _ = new f(a.Z, {
+    STAGE_MUSIC_MUTE: u,
+    STAGE_MUSIC_PLAY: c,
+    VOICE_CHANNEL_SELECT: d
+});

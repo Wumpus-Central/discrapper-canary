@@ -33,14 +33,14 @@ function y(e, t) {
 }
 function I(e) {
     var t;
-    let { legalTermsNodeRef: n, invoiceError: r, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: I, isGift: b, planGroup: T, isPrepaid: S, isTrial: A, makePurchase: N, needsPaymentSource: C, inReverseTrial: R, onNext: O } = e,
+    let { legalTermsNodeRef: n, invoiceError: r, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: I, isGift: T, planGroup: b, isPrepaid: S, isTrial: A, makePurchase: N, needsPaymentSource: C, inReverseTrial: R, onNext: O } = e,
         { application: D, selectedPlan: x, hasAcceptedTerms: L, purchaseType: P, paymentSourceId: w, activeSubscription: M, devShelfFetchState: k } = (0, u.JL)(),
         U = v({
             purchaseType: P,
             plan: x,
             premiumSubscription: I,
-            isGift: b,
-            planGroup: T,
+            isGift: T,
+            planGroup: b,
             isPrepaidPaymentSource: S,
             inReverseTrial: R
         }),

@@ -1,5 +1,5 @@
 e.exports = {
-    leaveActionWrapper: 'leaveActionWrapper_bf0360',
-    leaveButton: 'leaveButton_bf0360',
-    error: 'error_bf0360'
+    leaveActionWrapper: 'leaveActionWrapper__964b4',
+    leaveButton: 'leaveButton__964b4',
+    error: 'error__964b4'
 };

@@ -1,5 +1,5 @@
 e.exports = {
-    profileCustomizationSection: 'profileCustomizationSection_bad983',
-    baseLayout: 'baseLayout_bad983',
-    preview: 'preview_bad983'
+    profileCustomizationSection: 'profileCustomizationSection__44061',
+    baseLayout: 'baseLayout__44061',
+    preview: 'preview__44061'
 };

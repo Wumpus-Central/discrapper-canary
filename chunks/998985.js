@@ -1,22 +1,23 @@
 function i(a) {
     return a.replace(/sekuntia?/, 'sekunnin');
 }
-function t(a) {
+function n(a) {
     return a.replace(/minuuttia?/, 'minuutin');
 }
-function n(a) {
+function u(a) {
     return a.replace(/tuntia?/, 'tunnin');
 }
-function u(a) {
+function o(a) {
     return a.replace(/(viikko|viikkoa)/, 'viikon');
 }
-function o(a) {
+function r(a) {
     return a.replace(/(kuukausi|kuukautta)/, 'kuukauden');
 }
-function r(a) {
+function l(a) {
     return a.replace(/(vuosi|vuotta)/, 'vuoden');
 }
-var l = {
+t.d(e, { Z: () => k });
+var s = {
     lessThanXSeconds: {
         one: 'alle sekunti',
         other: 'alle {{count}} sekuntia',
@@ -37,22 +38,22 @@ var l = {
     lessThanXMinutes: {
         one: 'alle minuutti',
         other: 'alle {{count}} minuuttia',
-        futureTense: t
+        futureTense: n
     },
     xMinutes: {
         one: 'minuutti',
         other: '{{count}} minuuttia',
-        futureTense: t
+        futureTense: n
     },
     aboutXHours: {
         one: 'noin tunti',
         other: 'noin {{count}} tuntia',
-        futureTense: n
+        futureTense: u
     },
     xHours: {
         one: 'tunti',
         other: '{{count}} tuntia',
-        futureTense: n
+        futureTense: u
     },
     xDays: {
         one: 'päivä',
@@ -64,47 +65,46 @@ var l = {
     aboutXWeeks: {
         one: 'noin viikko',
         other: 'noin {{count}} viikkoa',
-        futureTense: u
+        futureTense: o
     },
     xWeeks: {
         one: 'viikko',
         other: '{{count}} viikkoa',
-        futureTense: u
+        futureTense: o
     },
     aboutXMonths: {
         one: 'noin kuukausi',
         other: 'noin {{count}} kuukautta',
-        futureTense: o
+        futureTense: r
     },
     xMonths: {
         one: 'kuukausi',
         other: '{{count}} kuukautta',
-        futureTense: o
+        futureTense: r
     },
     aboutXYears: {
         one: 'noin vuosi',
         other: 'noin {{count}} vuotta',
-        futureTense: r
+        futureTense: l
     },
     xYears: {
         one: 'vuosi',
         other: '{{count}} vuotta',
-        futureTense: r
+        futureTense: l
     },
     overXYears: {
         one: 'yli vuosi',
         other: 'yli {{count}} vuotta',
-        futureTense: r
+        futureTense: l
     },
     almostXYears: {
         one: 'lähes vuosi',
         other: 'lähes {{count}} vuotta',
-        futureTense: r
+        futureTense: l
     }
 };
-e.Z = function (a, e, i) {
-    var t = l[a],
-        n = 1 === e ? t.one : t.other.replace('{{count}}', String(e));
-    if (null != i && i.addSuffix) return i.comparison && i.comparison > 0 ? t.futureTense(n) + ' kuluttua' : n + ' sitten';
-    return n;
+let k = function (a, e, t) {
+    var i = s[a],
+        n = 1 === e ? i.one : i.other.replace('{{count}}', String(e));
+    return null != t && t.addSuffix ? (t.comparison && t.comparison > 0 ? i.futureTense(n) + ' kuluttua' : n + ' sitten') : n;
 };

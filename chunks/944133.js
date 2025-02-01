@@ -1,8 +1,8 @@
 e.exports = {
-    container: 'container_f9bbb4',
-    mask: 'mask_f9bbb4',
-    image: 'image_f9bbb4',
-    imageContainer: 'imageContainer_f9bbb4',
-    maskBackground: 'maskBackground_f9bbb4',
-    maskIcon: 'maskIcon_f9bbb4'
+    container: 'container_db811b',
+    mask: 'mask_db811b',
+    image: 'image_db811b',
+    imageContainer: 'imageContainer_db811b',
+    maskBackground: 'maskBackground_db811b',
+    maskIcon: 'maskIcon_db811b'
 };

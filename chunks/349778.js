@@ -1,8 +1,8 @@
 e.exports = {
-    sectionContainer: 'sectionContainer_ab98a8',
-    contentContainer: 'contentContainer_ab98a8',
-    privacyPolicy: 'privacyPolicy_ab98a8',
-    intentsList: 'intentsList_ab98a8',
-    intentContainer: 'intentContainer_ab98a8',
-    intentTextContainer: 'intentTextContainer_ab98a8'
+    sectionContainer: 'sectionContainer__8f46b',
+    contentContainer: 'contentContainer__8f46b',
+    privacyPolicy: 'privacyPolicy__8f46b',
+    intentsList: 'intentsList__8f46b',
+    intentContainer: 'intentContainer__8f46b',
+    intentTextContainer: 'intentTextContainer__8f46b'
 };

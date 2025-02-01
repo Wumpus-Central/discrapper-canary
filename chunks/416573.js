@@ -1,6 +1,6 @@
 e.exports = {
-    progress: 'progress_e5f4c6',
-    disabledButtonWrapper: 'disabledButtonWrapper_e5f4c6',
-    disabledButtonOverlay: 'disabledButtonOverlay_e5f4c6',
-    disabledButtonColor: 'disabledButtonColor_e5f4c6'
+    progress: 'progress__61462',
+    disabledButtonWrapper: 'disabledButtonWrapper__61462',
+    disabledButtonOverlay: 'disabledButtonOverlay__61462',
+    disabledButtonColor: 'disabledButtonColor__61462'
 };

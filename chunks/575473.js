@@ -1,40 +1,40 @@
-var a = r(466293),
-    n = r(139069),
-    _ = r(703284),
-    o = r(501979),
-    E = r(98368),
-    i = r(433005),
-    c = a ? a.prototype : void 0,
-    s = c ? c.valueOf : void 0;
-e.exports = function (e, t, r, a, c, l, I) {
-    switch (r) {
+var r = a(466293),
+    n = a(139069),
+    o = a(703284),
+    _ = a(501979),
+    i = a(98368),
+    c = a(433005),
+    s = r ? r.prototype : void 0,
+    E = s ? s.valueOf : void 0;
+t.exports = function (t, e, a, r, s, l, u) {
+    switch (a) {
         case '[object DataView]':
-            if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
-            (e = e.buffer), (t = t.buffer);
+            if (t.byteLength != e.byteLength || t.byteOffset != e.byteOffset) break;
+            (t = t.buffer), (e = e.buffer);
         case '[object ArrayBuffer]':
-            if (e.byteLength != t.byteLength || !l(new n(e), new n(t))) break;
+            if (t.byteLength != e.byteLength || !l(new n(t), new n(e))) break;
             return !0;
         case '[object Boolean]':
         case '[object Date]':
         case '[object Number]':
-            return _(+e, +t);
+            return o(+t, +e);
         case '[object Error]':
-            return e.name == t.name && e.message == t.message;
+            return t.name == e.name && t.message == e.message;
         case '[object RegExp]':
         case '[object String]':
-            return e == t + '';
+            return t == e + '';
         case '[object Map]':
-            var u = E;
+            var I = i;
         case '[object Set]':
-            var R = 1 & a;
-            if ((u || (u = i), e.size != t.size && !R)) break;
-            var A = I.get(e);
-            if (A) return A == t;
-            (a |= 2), I.set(e, t);
-            var T = o(u(e), u(t), a, c, l, I);
-            return I.delete(e), T;
+            var R = 1 & r;
+            if ((I || (I = c), t.size != e.size && !R)) break;
+            var d = u.get(t);
+            if (d) return d == e;
+            (r |= 2), u.set(t, e);
+            var A = _(I(t), I(e), r, s, l, u);
+            return u.delete(t), A;
         case '[object Symbol]':
-            if (s) return s.call(e) == s.call(t);
+            if (E) return E.call(t) == E.call(e);
     }
     return !1;
 };

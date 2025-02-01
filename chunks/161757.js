@@ -1,8 +1,8 @@
-var a = r(497549),
-    n = r(700728),
-    _ = r(98958),
-    o = r(402428),
-    E = r(691363);
-e.exports = function (e) {
-    return 'function' == typeof e ? e : null == e ? _ : 'object' == typeof e ? (o(e) ? n(e[0], e[1]) : a(e)) : E(e);
+var r = a(497549),
+    n = a(700728),
+    o = a(98958),
+    _ = a(402428),
+    i = a(691363);
+t.exports = function (t) {
+    return 'function' == typeof t ? t : null == t ? o : 'object' == typeof t ? (_(t) ? n(t[0], t[1]) : r(t)) : i(t);
 };

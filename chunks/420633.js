@@ -1,24 +1,24 @@
 var i = (function () {
-    function e(e, n) {
-        for (var r = 0; r < n.length; r++) {
-            var i = n[r];
+    function e(e, t) {
+        for (var n = 0; n < t.length; n++) {
+            var i = t[n];
             (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
         }
     }
-    return function (n, r, i) {
-        return r && e(n.prototype, r), i && e(n, i), n;
+    return function (t, n, i) {
+        return n && e(t.prototype, n), i && e(t, i), t;
     };
 })();
-function a(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function r(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function o(e, n) {
+function a(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function s(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function s(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -26,34 +26,34 @@ function s(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var l = r(22672),
-    u = r(431732),
-    c = r(526811),
-    d = r(912037);
-r(328794);
-var f = r(16686),
-    p = r.g.Set || r(344460);
-function h(e) {
-    var n = new p();
-    function r(e) {
-        'function' == typeof e.update ? n.add(e) : e.__getChildren().forEach(r);
+var o = n(22672),
+    l = n(431732),
+    u = n(526811),
+    c = n(912037);
+n(328794);
+var d = n(16686),
+    f = n.g.Set || n(344460);
+function _(e) {
+    var t = new f();
+    function n(e) {
+        'function' == typeof e.update ? t.add(e) : e.__getChildren().forEach(n);
     }
-    r(e),
-        n.forEach(function (e) {
+    n(e),
+        t.forEach(function (e) {
             return e.update();
         });
 }
-var _ = (function (e) {
-    function n(e) {
-        a(this, n);
-        var r = o(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
-        return (r._value = e), (r._offset = 0), (r._animation = null), (r._listeners = {}), r;
+var p = (function (e) {
+    function t(e) {
+        r(this, t);
+        var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+        return (n._value = e), (n._offset = 0), (n._animation = null), (n._listeners = {}), n;
     }
     return (
-        s(n, e),
-        i(n, [
+        s(t, e),
+        i(t, [
             {
                 key: '__detach',
                 value: function () {
@@ -87,8 +87,8 @@ var _ = (function (e) {
             {
                 key: 'addListener',
                 value: function (e) {
-                    var n = f();
-                    return (this._listeners[n] = e), n;
+                    var t = d();
+                    return (this._listeners[t] = e), t;
                 }
             },
             {
@@ -112,27 +112,27 @@ var _ = (function (e) {
             {
                 key: 'interpolate',
                 value: function (e) {
-                    return new c(this, d.create(e));
+                    return new u(this, c.create(e));
                 }
             },
             {
                 key: 'animate',
-                value: function (e, n) {
-                    var r = this,
+                value: function (e, t) {
+                    var n = this,
                         i = null;
-                    e.__isInteraction && (i = u.current.createInteractionHandle());
-                    var a = this._animation;
+                    e.__isInteraction && (i = l.current.createInteractionHandle());
+                    var r = this._animation;
                     this._animation && this._animation.stop(),
                         (this._animation = e),
                         e.start(
                             this._value,
                             function (e) {
-                                r._updateValue(e);
+                                n._updateValue(e);
                             },
                             function (e) {
-                                (r._animation = null), null !== i && u.current.clearInteractionHandle(i), n && n(e);
+                                (n._animation = null), null !== i && l.current.clearInteractionHandle(i), t && t(e);
                             },
-                            a
+                            r
                         );
                 }
             },
@@ -151,11 +151,11 @@ var _ = (function (e) {
             {
                 key: '_updateValue',
                 value: function (e) {
-                    for (var n in ((this._value = e), h(this), this._listeners)) this._listeners[n]({ value: this.__getValue() });
+                    for (var t in ((this._value = e), _(this), this._listeners)) this._listeners[t]({ value: this.__getValue() });
                 }
             }
         ]),
-        n
+        t
     );
-})(l);
-e.exports = _;
+})(o);
+e.exports = p;

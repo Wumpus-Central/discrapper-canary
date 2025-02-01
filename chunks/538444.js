@@ -1,4 +1,4 @@
-var a = r(961499);
-e.exports = function (e) {
-    return a(this, e).get(e);
+var r = a(961499);
+t.exports = function (t) {
+    return r(this, t).get(t);
 };

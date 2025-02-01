@@ -1,47 +1,47 @@
-var i = r(47120);
-var a = r(317770),
-    o = r(626135),
-    s = r(358085),
-    l = r(998502),
-    u = r(801814),
-    c = r(981631);
-function d(e, n, r) {
+n.d(t, { Z: () => d }), n(47120);
+var i = n(317770),
+    r = n(626135),
+    a = n(358085),
+    s = n(998502),
+    o = n(801814),
+    l = n(981631);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class f extends a.Z {
+class c extends i.Z {
     _initialize() {
-        if (!!s.isPlatformEmbedded)
-            l.ZP.on('UPDATE_DOWNLOADED', () => this.processModuleEvents()),
-                l.ZP.on('MODULE_INSTALLED', (e, n, r) => this.processModuleEvents()),
-                l.ZP.on('UPDATER_HISTORY_RESPONSE', (e, n) => {
-                    this._handleHistoryResponse(n);
-                }),
-                this.processModuleEvents();
+        a.isPlatformEmbedded &&
+            (s.ZP.on('UPDATE_DOWNLOADED', () => this.processModuleEvents()),
+            s.ZP.on('MODULE_INSTALLED', (e, t, n) => this.processModuleEvents()),
+            s.ZP.on('UPDATER_HISTORY_RESPONSE', (e, t) => {
+                this._handleHistoryResponse(t);
+            }),
+            this.processModuleEvents());
     }
     _terminate() {}
     processModuleEvents() {
-        l.ZP.send('UPDATER_HISTORY_QUERY_AND_TRUNCATE');
+        s.ZP.send('UPDATER_HISTORY_QUERY_AND_TRUNCATE');
     }
     _handleHistoryResponse(e) {
         if (null == e) return;
-        let n = 0 === Math.floor(500 * Math.random());
+        let t = 0 === Math.floor(500 * Math.random());
         e.forEach((e) => {
-            'analytics' === e.type ? (e.name === c.rMx.UPDATER_METRICS_DOWNLOAD || e.name === c.rMx.UPDATER_METRICS_INSTALL || e.name === c.rMx.UPDATER_METRICS_COMBINED || e.name === c.rMx.UPDATER_METRICS_TRANSITION_STATUS ? n && o.default.track(e.name, e.data) : console.warn('Unknown updater analytic event '.concat(e.name))) : this._tracker.trackEvent(e);
+            'analytics' === e.type ? (e.name === l.rMx.UPDATER_METRICS_DOWNLOAD || e.name === l.rMx.UPDATER_METRICS_INSTALL || e.name === l.rMx.UPDATER_METRICS_COMBINED || e.name === l.rMx.UPDATER_METRICS_TRANSITION_STATUS ? t && r.default.track(e.name, e.data) : console.warn('Unknown updater analytic event '.concat(e.name))) : this._tracker.trackEvent(e);
         }),
-            this._tracker.submissionReady() && (o.default.track(c.rMx.APP_MODULES_UPDATED, this._tracker.getStats()), this._tracker.reset());
+            this._tracker.submissionReady() && (r.default.track(l.rMx.APP_MODULES_UPDATED, this._tracker.getStats()), this._tracker.reset());
     }
     constructor(...e) {
-        super(...e), d(this, '_tracker', new u.Z());
+        super(...e), u(this, '_tracker', new o.Z());
     }
 }
-n.Z = new f();
+let d = new c();

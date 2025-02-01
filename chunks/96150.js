@@ -1,49 +1,49 @@
-var i = r(47120);
-var a = r(570140),
-    o = r(317770),
-    s = r(280837),
-    l = r(592125),
-    u = r(914010),
-    c = r(823379);
-function d(e, n, r) {
+n.d(t, { Z: () => d }), n(47120);
+var i = n(570140),
+    r = n(317770),
+    a = n(280837),
+    s = n(592125),
+    o = n(914010),
+    l = n(823379);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class f extends o.Z {
+class c extends r.Z {
     _initialize() {
-        a.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), a.Z.subscribe('LOGOUT', this.handleLogout);
+        i.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), i.Z.subscribe('LOGOUT', this.handleLogout);
     }
     _terminate() {
-        a.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), a.Z.unsubscribe('LOGOUT', this.handleLogout);
+        i.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), i.Z.unsubscribe('LOGOUT', this.handleLogout);
     }
     constructor(...e) {
         super(...e),
-            d(this, 'handleVoiceChannelSelect', (e) => {
-                let { channelId: n, guildId: r } = e;
-                if (null != n) {
-                    let e = l.Z.getChannel(n);
+            u(this, 'handleVoiceChannelSelect', (e) => {
+                let { channelId: t, guildId: n } = e;
+                if (null != t) {
+                    let e = s.Z.getChannel(t);
                     if (null == e || e.isGuildStageVoice()) return;
                 }
                 this.terminate();
-                let i = null == n ? null : null != r ? r : null;
+                let i = null == t ? null : null != n ? n : null;
                 this.handleDisconnectFromStageChannel(i);
             }),
-            d(this, 'handleDisconnectFromStageChannel', (e) => {
-                let n = u.Z.getGuildId();
-                (0, s.O)([n, e].filter(c.lm));
+            u(this, 'handleDisconnectFromStageChannel', (e) => {
+                let t = o.Z.getGuildId();
+                (0, a.O)([t, e].filter(l.lm));
             }),
-            d(this, 'handleLogout', () => {
+            u(this, 'handleLogout', () => {
                 this.terminate(), this.handleDisconnectFromStageChannel(null);
             });
     }
 }
-n.Z = new f();
+let d = new c();

@@ -1,8 +1,8 @@
-var n = Function.prototype.toString;
-function r(e) {
+var t = Function.prototype.toString;
+function n(e) {
     if (null != e) {
         try {
-            return n.call(e);
+            return t.call(e);
         } catch (e) {}
         try {
             return e + '';
@@ -10,4 +10,4 @@ function r(e) {
     }
     return '';
 }
-e.exports = r;
+e.exports = n;

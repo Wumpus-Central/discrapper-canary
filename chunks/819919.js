@@ -1,11 +1,11 @@
-var i = r(67867),
-    a = r(548828),
-    o = r(228042),
-    s = r(146321),
-    l = TypeError,
-    u = s.get,
-    c = s.has,
-    d = s.set;
+var i = n(67867),
+    r = n(548828),
+    a = n(228042),
+    s = n(146321),
+    o = TypeError,
+    l = s.get,
+    u = s.has,
+    c = s.set;
 i(
     {
         target: 'Map',
@@ -14,14 +14,14 @@ i(
         forced: !0
     },
     {
-        update: function (e, n) {
-            var r = o(this),
+        update: function (e, t) {
+            var n = a(this),
                 i = arguments.length;
-            a(n);
-            var s = c(r, e);
-            if (!s && i < 3) throw new l('Updating absent value');
-            var f = s ? u(r, e) : a(i > 2 ? arguments[2] : void 0)(e, r);
-            return d(r, e, n(f, e, r)), r;
+            r(t);
+            var s = u(n, e);
+            if (!s && i < 3) throw new o('Updating absent value');
+            var d = s ? l(n, e) : r(i > 2 ? arguments[2] : void 0)(e, n);
+            return c(n, e, t(d, e, n)), n;
         }
     }
 );

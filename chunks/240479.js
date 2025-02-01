@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(767434),
     y = n(474936),
     I = n(981631),
-    b = n(710111),
-    T = n(388032),
+    T = n(710111),
+    b = n(388032),
     S = n(89107);
 function A(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: a } = e,
@@ -38,20 +38,20 @@ function A(e) {
               size: l.zxk.Sizes.SMALL,
               color: l.zxk.Colors.CUSTOM,
               onClick: n,
-              buttonText: T.intl.string(T.t.pj0XBA)
+              buttonText: b.intl.string(b.t.pj0XBA)
           })
         : a === v.y.JOIN_GUILD
           ? (0, i.jsx)(l.zxk, {
                 size: l.zxk.Sizes.SMALL,
                 fullWidth: !0,
                 onClick: s,
-                children: T.intl.string(T.t.riu2R0)
+                children: b.intl.string(b.t.riu2R0)
             })
           : null;
 }
 function N(e) {
     let { sound: t, channel: n, closePopout: u, refreshPosition: g } = e,
-        y = t.guildId === b.X8,
+        y = t.guildId === T.X8,
         I = (0, o.e7)([m.Z], () => m.Z.getGuild(t.guildId)),
         N = !y && null != I,
         [C, R] = r.useState(),
@@ -105,7 +105,7 @@ function N(e) {
                                           variant: 'eyebrow',
                                           color: 'header-muted',
                                           className: S.infoExpandedGuildTitle,
-                                          children: N ? T.intl.string(T.t.tGDabm) : T.intl.string(T.t.rnOmOT)
+                                          children: N ? b.intl.string(b.t.tGDabm) : b.intl.string(b.t.rnOmOT)
                                       }),
                                       (0, i.jsx)('div', {
                                           className: S.infoExpandedGuildInfo,

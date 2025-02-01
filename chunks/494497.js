@@ -1,11 +1,11 @@
 e.exports = {
-    header: 'header_abda19',
-    appIcon: 'appIcon_abda19',
-    subInfo: 'subInfo_abda19',
-    guildSubscription: 'guildSubscription_abda19',
-    subInfoType: 'subInfoType_abda19',
-    subscriptions: 'subscriptions_abda19',
-    activeSubscriptionCard: 'activeSubscriptionCard_abda19',
-    activeSubscriptionCTA: 'activeSubscriptionCTA_abda19',
-    planNotice: 'planNotice_abda19'
+    header: 'header_b87308',
+    appIcon: 'appIcon_b87308',
+    subInfo: 'subInfo_b87308',
+    guildSubscription: 'guildSubscription_b87308',
+    subInfoType: 'subInfoType_b87308',
+    subscriptions: 'subscriptions_b87308',
+    activeSubscriptionCard: 'activeSubscriptionCard_b87308',
+    activeSubscriptionCTA: 'activeSubscriptionCTA_b87308',
+    planNotice: 'planNotice_b87308'
 };

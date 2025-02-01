@@ -1,68 +1,68 @@
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(507304);
-function u(e) {
+n.d(t, { Z: () => l });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(507304);
+let l = function (e) {
     let {
-            className: n,
-            compact: r = !1,
-            contentOnly: a = !1,
-            zalgo: u = !0,
-            disableInteraction: c = !1,
-            childrenRepliedMessage: d,
-            childrenExecutedCommand: f,
-            childrenHeader: p,
-            childrenSystemMessage: h,
-            childrenButtons: _,
-            childrenMessageContent: m,
-            childrenAccessories: g,
-            messageRef: E,
-            focusProps: v = {
+            className: t,
+            compact: n = !1,
+            contentOnly: r = !1,
+            zalgo: l = !0,
+            disableInteraction: u = !1,
+            childrenRepliedMessage: c,
+            childrenExecutedCommand: d,
+            childrenHeader: f,
+            childrenSystemMessage: _,
+            childrenButtons: p,
+            childrenMessageContent: h,
+            childrenAccessories: m,
+            messageRef: g,
+            focusProps: E = {
                 offset: {
                     left: 4,
                     right: 4
                 }
             },
-            hasThread: y,
-            isSystemMessage: b,
+            hasThread: v,
+            isSystemMessage: y,
             hasReply: I,
             ...T
         } = e,
-        S = (0, i.jsx)(s.FocusRing, {
-            ...v,
+        b = (0, i.jsx)(s.tEY, {
+            ...E,
             children: (0, i.jsxs)('div', {
-                className: o()(n, {
-                    [l.wrapper]: !0,
-                    [l.contentOnly]: a,
-                    [l.compact]: r,
-                    [l.cozy]: !r,
-                    [l.zalgo]: u,
-                    [l.hasThread]: y,
-                    [l.isSystemMessage]: b,
-                    [l.hasReply]: I
+                className: a()(t, {
+                    [o.wrapper]: !0,
+                    [o.contentOnly]: r,
+                    [o.compact]: n,
+                    [o.cozy]: !n,
+                    [o.zalgo]: l,
+                    [o.hasThread]: v,
+                    [o.isSystemMessage]: y,
+                    [o.hasReply]: I
                 }),
-                ref: E,
+                ref: g,
                 ...T,
                 role: 'article',
                 children: [
+                    c,
                     d,
-                    f,
                     (0, i.jsxs)('div', {
-                        className: l.contents,
-                        children: [h, p, null == h && m]
+                        className: o.contents,
+                        children: [_, f, null == _ && h]
                     }),
-                    g,
-                    null != _
+                    m,
+                    null != p
                         ? (0, i.jsx)('div', {
-                              className: l.buttonContainer,
-                              children: _
+                              className: o.buttonContainer,
+                              children: p
                           })
                         : null
                 ]
             })
         });
-    return c ? (0, i.jsx)(s.FocusBlock, { children: S }) : S;
-}
-n.Z = u;
+    return u ? (0, i.jsx)(s.Rny, { children: b }) : b;
+};

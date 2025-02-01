@@ -1,8 +1,8 @@
 e.exports = {
-    betaTag: 'betaTag_ebd904',
-    headerContainer: 'headerContainer_ebd904',
-    divider: 'divider_ebd904',
-    switchItem: 'switchItem_ebd904',
-    switchItemTextContent: 'switchItemTextContent_ebd904',
-    setupContainer: 'setupContainer_ebd904'
+    betaTag: 'betaTag_d03b93',
+    headerContainer: 'headerContainer_d03b93',
+    divider: 'divider_d03b93',
+    switchItem: 'switchItem_d03b93',
+    switchItemTextContent: 'switchItemTextContent_d03b93',
+    setupContainer: 'setupContainer_d03b93'
 };

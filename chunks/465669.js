@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_e85446',
-    circularImage: 'circularImage_e85446',
-    dots: 'dots_e85446'
+    container: 'container__1ce5d',
+    circularImage: 'circularImage__1ce5d',
+    dots: 'dots__1ce5d'
 };

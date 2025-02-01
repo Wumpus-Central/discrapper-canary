@@ -1,6 +1,6 @@
 e.exports = {
-    container: 'container_a47d49',
-    icon: 'icon_a47d49',
-    text: 'text_a47d49',
-    arrow: 'arrow_a47d49'
+    container: 'container_eb2cd2',
+    icon: 'icon_eb2cd2',
+    text: 'text_eb2cd2',
+    arrow: 'arrow_eb2cd2'
 };

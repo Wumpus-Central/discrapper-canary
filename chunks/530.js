@@ -12,8 +12,8 @@ var r = n(120356),
     f = n(388032),
     _ = n(961347);
 function p(e) {
-    let { user: t, profileType: n, usernameIcon: r, tags: p, nickname: h, nicknameIcons: m, pronouns: g, className: E, isTryItOut: v, onOpenProfile: y, nicknameVariant: I = 'heading-lg/bold', pronounsVariant: b = 'text-sm/medium' } = e,
-        T = {
+    let { user: t, profileType: n, usernameIcon: r, tags: p, nickname: h, nicknameIcons: m, pronouns: g, className: E, isTryItOut: v, onOpenProfile: y, nicknameVariant: I = 'heading-lg/bold', pronounsVariant: T = 'text-sm/medium' } = e,
+        b = {
             [_.biteSize]: n === d.y0.BITE_SIZE,
             [_.fullSize]: n === d.y0.FULL_SIZE,
             [_.panel]: n === d.y0.PANEL
@@ -36,7 +36,7 @@ function p(e) {
                 children: [
                     S(
                         (0, i.jsx)(s.X6q, {
-                            className: a()(_.nickname, T),
+                            className: a()(_.nickname, b),
                             variant: I,
                             children: h
                         })
@@ -48,13 +48,13 @@ function p(e) {
                         }),
                     null != m &&
                         (0, i.jsx)('div', {
-                            className: a()(_.nicknameIcons, T),
+                            className: a()(_.nicknameIcons, b),
                             children: m
                         })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: a()(_.tags, T, {
+                className: a()(_.tags, b, {
                     [_.pronouns]: A,
                     [_.bot]: null != N
                 }),
@@ -83,7 +83,7 @@ function p(e) {
                                     text: f.intl.string(f.t.GI2A8P),
                                     delay: d.vB,
                                     children: (0, i.jsx)(s.Text, {
-                                        variant: b,
+                                        variant: T,
                                         className: _.pronounsText,
                                         color: 'header-primary',
                                         children: g

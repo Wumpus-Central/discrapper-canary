@@ -1,12 +1,12 @@
-n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var r = n(200651),
-    i = n(192379),
-    l = n(642128),
-    a = n(780384),
-    s = n(481060),
+    l = n(192379),
+    i = n(642128),
+    s = n(780384),
+    a = n(481060),
     o = n(410030),
-    c = n(965645),
-    d = n(362061);
+    d = n(965645),
+    c = n(362061);
 let u = [
         {
             box: '#FFD89E',
@@ -68,63 +68,63 @@ let u = [
         }
     ],
     h = 1 / 300,
-    p = (0, l.animated)(c.Z),
-    f = (0, l.animated)(d.Z),
-    m = (0, l.animated)(s.GiftIcon);
-t.Z = i.memo(function (e) {
-    let {
-            themeOverride: t,
-            hovered: n,
-            isContentDismissed: l,
-            boxColors: c = {
-                dark: u,
-                light: C
-            }
-        } = e,
-        d = (0, o.ZP)(),
-        [g, b] = (function (e) {
-            let [t, n] = i.useState(!1),
-                [r, l] = i.useState(Math.floor(7 * Math.random())),
-                a = i.useRef(r);
-            return (
-                i.useEffect(() => {
-                    a.current = r;
-                }),
-                i.useEffect(() => {
-                    if (e) return;
-                    let t = Math.random() <= h;
-                    if ((n(t), !t)) {
-                        let e;
-                        do e = Math.floor(7 * Math.random());
-                        while (e === a.current);
-                        l(e);
-                    }
-                }, [e]),
-                [t, r]
-            );
-        })(n),
-        x = (0, s.useSpring)({
-            reverse: !n,
-            reset: !0,
-            from: { scale: 1 },
-            to: { scale: 1.14 },
-            config: {
-                tension: 800,
-                friction: 24
-            }
-        }),
-        v = l ? b : 0,
-        _ = (0, a.wj)(null != t ? t : d) ? c.dark[v] : c.light[v];
-    return !n && l
-        ? (0, r.jsx)(m, {})
-        : l && g
-          ? (0, r.jsx)(f, {
-                isDark: (0, a.wj)(d),
-                style: x
-            })
-          : (0, r.jsx)(p, {
-                boxColor: _.box,
-                ribbonColor: _.ribbon,
-                style: x
-            });
-});
+    p = (0, i.animated)(d.Z),
+    m = (0, i.animated)(c.Z),
+    g = (0, i.animated)(a.OgN),
+    f = l.memo(function (e) {
+        let {
+                themeOverride: t,
+                hovered: n,
+                isContentDismissed: i,
+                boxColors: d = {
+                    dark: u,
+                    light: C
+                }
+            } = e,
+            c = (0, o.ZP)(),
+            [f, x] = (function (e) {
+                let [t, n] = l.useState(!1),
+                    [r, i] = l.useState(Math.floor(7 * Math.random())),
+                    s = l.useRef(r);
+                return (
+                    l.useEffect(() => {
+                        s.current = r;
+                    }),
+                    l.useEffect(() => {
+                        if (e) return;
+                        let t = Math.random() <= h;
+                        if ((n(t), !t)) {
+                            let e;
+                            do e = Math.floor(7 * Math.random());
+                            while (e === s.current);
+                            i(e);
+                        }
+                    }, [e]),
+                    [t, r]
+                );
+            })(n),
+            _ = (0, a.q_F)({
+                reverse: !n,
+                reset: !0,
+                from: { scale: 1 },
+                to: { scale: 1.14 },
+                config: {
+                    tension: 800,
+                    friction: 24
+                }
+            }),
+            v = i ? x : 0,
+            b = (0, s.wj)(null != t ? t : c) ? d.dark[v] : d.light[v];
+        return !n && i
+            ? (0, r.jsx)(g, {})
+            : i && f
+              ? (0, r.jsx)(m, {
+                    isDark: (0, s.wj)(c),
+                    style: _
+                })
+              : (0, r.jsx)(p, {
+                    boxColor: b.box,
+                    ribbonColor: b.ribbon,
+                    style: _
+                });
+    });

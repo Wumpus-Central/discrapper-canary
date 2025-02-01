@@ -1,5 +1,5 @@
 e.exports = {
-    breadcrumbs: 'breadcrumbs_f9e5d0',
-    breadcrumbActive: 'breadcrumbActive_f9e5d0',
-    breadcrumbInactive: 'breadcrumbInactive_f9e5d0'
+    breadcrumbs: 'breadcrumbs_befe67',
+    breadcrumbActive: 'breadcrumbActive_befe67',
+    breadcrumbInactive: 'breadcrumbInactive_befe67'
 };

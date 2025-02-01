@@ -1,4 +1,4 @@
-e.exports = {
-    clickable: 'clickable_e33430',
-    container: 'container_e33430'
+n.exports = {
+    clickable: 'clickable__997f6',
+    container: 'container__997f6'
 };

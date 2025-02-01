@@ -1,89 +1,89 @@
+n.d(t, { Z: () => m });
 var i,
-    a = r(442837),
-    o = r(570140),
-    s = r(981631);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(981631);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = {},
-    c = null,
-    d = 86400000,
-    f = 3600000;
-function p() {
-    (u = {}), (c = null);
-}
-function h(e) {
-    let { statistics: n } = e;
-    n.forEach((e) => {
-        u[e.application_id] = e;
-    }),
-        (c = Date.now());
+let l = {},
+    u = null,
+    c = 86400000,
+    d = 3600000;
+function f() {
+    (l = {}), (u = null);
 }
 function _(e) {
-    let { duration: n, applicationId: r, distributor: i } = e,
-        a = u[r],
-        o = new Date().toISOString(),
-        l = 0,
-        c = 0;
-    if (null != a) {
-        var d;
-        (l = a.total_duration), (c = null !== (d = a.total_discord_sku_duration) && void 0 !== d ? d : 0);
+    let { statistics: t } = e;
+    t.forEach((e) => {
+        l[e.application_id] = e;
+    }),
+        (u = Date.now());
+}
+function p(e) {
+    let { duration: t, applicationId: n, distributor: i } = e,
+        r = l[n],
+        a = new Date().toISOString(),
+        o = 0,
+        u = 0;
+    if (null != r) {
+        var c;
+        (o = r.total_duration), (u = null !== (c = r.total_discord_sku_duration) && void 0 !== c ? c : 0);
     }
-    (l += n),
-        i === s.GQo.DISCORD && (c += n),
-        (u[r] = {
-            application_id: r,
-            total_duration: l,
-            last_played_at: o,
-            total_discord_sku_duration: c
+    (o += t),
+        i === s.GQo.DISCORD && (u += t),
+        (l[n] = {
+            application_id: n,
+            total_duration: o,
+            last_played_at: a,
+            total_discord_sku_duration: u
         });
 }
-class m extends (i = a.ZP.Store) {
+class h extends (i = r.ZP.Store) {
     get applicationStatistics() {
-        return u;
+        return l;
     }
     get lastFetched() {
-        return c;
+        return u;
     }
     getGameDuration(e) {
-        let n = u[e];
-        return null != n ? n.total_duration : 0;
+        let t = l[e];
+        return null != t ? t.total_duration : 0;
     }
     getLastPlayedDateTime(e) {
-        let n = u[e];
-        return null != n ? new Date(n.last_played_at).getTime() : null;
+        let t = l[e];
+        return null != t ? new Date(t.last_played_at).getTime() : null;
     }
     hasApplicationStatistic(e) {
-        return null != u[e];
+        return null != l[e];
     }
     getCurrentUserStatisticsForApplication(e) {
-        return u[e];
+        return l[e];
     }
     getQuickSwitcherScoreForApplication(e) {
-        let n = u[e],
-            r = 0;
-        if (null != n) {
-            let e = Date.now(),
-                i = Math.floor((e - new Date(n.last_played_at).getTime()) / d),
-                a = Math.floor((1000 * n.total_duration) / f);
-            0 === i ? (r += 50) : i >= 1 && i < 2 ? (r += 40) : i >= 2 && i < 4 ? (r += 30) : i >= 4 && i < 7 ? (r += 20) : i >= 7 && (r += 10), 0 === a ? (r += 0) : a >= 1 && a < 12 ? (r += 10) : a >= 12 && a < 168 ? (r += 20) : a >= 168 && a < 720 ? (r += 40) : a >= 720 && (r += 50);
+        let t = l[e],
+            n = 0;
+        if (null != t) {
+            let e = Math.floor((Date.now() - new Date(t.last_played_at).getTime()) / c),
+                i = Math.floor((1000 * t.total_duration) / d);
+            0 === e ? (n += 50) : e >= 1 && e < 2 ? (n += 40) : e >= 2 && e < 4 ? (n += 30) : e >= 4 && e < 7 ? (n += 20) : e >= 7 && (n += 10), 0 === i ? (n += 0) : i >= 1 && i < 12 ? (n += 10) : i >= 12 && i < 168 ? (n += 20) : i >= 168 && i < 720 ? (n += 40) : i >= 720 && (n += 50);
         }
-        return r;
+        return n;
     }
 }
-l(m, 'displayName', 'LibraryApplicationStatisticsStore'),
-    (n.Z = new m(o.Z, {
-        USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: h,
-        ACTIVITY_UPDATE_START: _,
-        LOGOUT: p
-    }));
+o(h, 'displayName', 'LibraryApplicationStatisticsStore');
+let m = new h(a.Z, {
+    USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: _,
+    ACTIVITY_UPDATE_START: p,
+    LOGOUT: f
+});

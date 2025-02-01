@@ -1,12 +1,12 @@
 n.exports = {
-    container: 'container_a5828d',
-    content: 'content_a5828d',
-    iconBackground: 'iconBackground_a5828d',
-    icon: 'icon_a5828d',
-    header: 'header_a5828d',
-    description: 'description_a5828d',
-    channel: 'channel_a5828d',
-    channelIcon: 'channelIcon_a5828d',
-    channelName: 'channelName_a5828d',
-    button: 'button_a5828d'
+    container: 'container_f08fc1',
+    content: 'content_f08fc1',
+    iconBackground: 'iconBackground_f08fc1',
+    icon: 'icon_f08fc1',
+    header: 'header_f08fc1',
+    description: 'description_f08fc1',
+    channel: 'channel_f08fc1',
+    channelIcon: 'channelIcon_f08fc1',
+    channelName: 'channelName_f08fc1',
+    button: 'button_f08fc1'
 };

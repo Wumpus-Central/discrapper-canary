@@ -1,7 +1,7 @@
 e.exports = {
-    container: 'container_cbfbcf',
-    micIcon: 'micIcon_cbfbcf',
-    downIcon: 'downIcon_cbfbcf',
-    upIcon: 'upIcon_cbfbcf',
-    text: 'text_cbfbcf'
+    container: 'container__9aed4',
+    micIcon: 'micIcon__9aed4',
+    downIcon: 'downIcon__9aed4',
+    upIcon: 'upIcon__9aed4',
+    text: 'text__9aed4'
 };

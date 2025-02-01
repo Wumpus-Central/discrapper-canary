@@ -1,7 +1,7 @@
 e.exports = {
-    modal: 'modal_f31a4d',
-    header: 'header_f31a4d',
-    subheaderText: 'subheaderText_f31a4d',
-    actions: 'actions_f31a4d',
-    infoMessage: 'infoMessage_f31a4d'
+    modal: 'modal__56d1c',
+    header: 'header__56d1c',
+    subheaderText: 'subheaderText__56d1c',
+    actions: 'actions__56d1c',
+    infoMessage: 'infoMessage__56d1c'
 };

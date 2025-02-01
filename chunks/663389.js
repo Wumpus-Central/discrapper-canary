@@ -30,8 +30,8 @@ let d = u.QZA.CLOSED,
     v = !1,
     y = !1,
     I = null,
-    b = null,
-    T = [],
+    T = null,
+    b = [],
     S = null,
     A = null;
 function N(e) {
@@ -63,16 +63,16 @@ function C(e) {
             })
         }),
         (I = null !== (i = e.onClose) && void 0 !== i ? i : null),
-        (b = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null),
-        (T = null !== (a = e.analyticsLocations) && void 0 !== a ? a : []),
+        (T = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null),
+        (b = null !== (a = e.analyticsLocations) && void 0 !== a ? a : []),
         (A = null !== (s = e.impressionSource) && void 0 !== s ? s : null);
 }
 function R() {
-    (d = u.QZA.CLOSED), (v = !1), (g = null), (S = null), (E = null), (f = null), (_ = null), (p = {}), (h = {}), (I = null), (b = null), (T = []), (A = null);
+    (d = u.QZA.CLOSED), (v = !1), (g = null), (S = null), (E = null), (f = null), (_ = null), (p = {}), (h = {}), (I = null), (T = null), (b = []), (A = null);
 }
 function O(e) {
     var t;
-    (f = _), (_ = e.section), (b = null), (T = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (p[_] = e.subsection);
+    (f = _), (_ = e.section), (T = null), (b = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (p[_] = e.subsection);
 }
 function D(e) {
     let { forSection: t } = e;
@@ -156,8 +156,8 @@ class U extends (i = s.ZP.Store) {
             errors: m,
             hasChanges: this.hasChanges(),
             openWithoutBackstack: y,
-            analyticsLocation: b,
-            analyticsLocations: T,
+            analyticsLocation: T,
+            analyticsLocations: b,
             initialSection: S,
             impressionSource: A
         };

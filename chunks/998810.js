@@ -1,13 +1,13 @@
 e.exports = {
-    returnButton: 'returnButton_d20375',
-    returnButtonText: 'returnButtonText_d20375',
-    returnIcon: 'returnIcon_d20375',
-    container: 'container_d20375',
-    page: 'page_d20375',
-    header: 'header_d20375',
-    measurements: 'measurements_d20375',
-    more: 'more_d20375',
-    selected: 'selected_d20375',
-    divider: 'divider_d20375',
-    tabsContainer: 'tabsContainer_d20375'
+    returnButton: 'returnButton_c791b2',
+    returnButtonText: 'returnButtonText_c791b2',
+    returnIcon: 'returnIcon_c791b2',
+    container: 'container_c791b2',
+    page: 'page_c791b2',
+    header: 'header_c791b2',
+    measurements: 'measurements_c791b2',
+    more: 'more_c791b2',
+    selected: 'selected_c791b2',
+    divider: 'divider_c791b2',
+    tabsContainer: 'tabsContainer_c791b2'
 };

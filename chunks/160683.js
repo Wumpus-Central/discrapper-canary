@@ -1,8 +1,8 @@
 e.exports = {
-    errors: 'errors_c3264b',
-    modalHeader: 'modalHeader_c3264b',
-    header: 'header_c3264b',
-    title: 'title_c3264b',
-    modalContent: 'modalContent_c3264b',
-    closeButton: 'closeButton_c3264b'
+    errors: 'errors__7962e',
+    modalHeader: 'modalHeader__7962e',
+    header: 'header__7962e',
+    title: 'title__7962e',
+    modalContent: 'modalContent__7962e',
+    closeButton: 'closeButton__7962e'
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    emojiContainer: 'emojiContainer_ffd153',
-    emoji: 'emoji_ffd153'
+    emojiContainer: 'emojiContainer__0524a',
+    emoji: 'emoji__0524a'
 };

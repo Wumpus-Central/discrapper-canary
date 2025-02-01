@@ -24,10 +24,10 @@ let y = {
         transform: 'scale(1)',
         opacity: 1
     };
-function b() {
+function T() {
     return 500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']);
 }
-function T() {
+function b() {
     let e = (0, l.Wu)([g.Z, h.Z, c.ZP], () =>
             g.Z.getIncomingCalls().filter((e) => {
                 let { channel: t } = e,
@@ -39,10 +39,10 @@ function T() {
         n = (0, l.e7)([p.Z], () => p.Z.isSoundDisabled('call_ringing')),
         a = (0, l.e7)([m.Z], () => m.Z.disableSounds),
         s = (0, l.e7)([_.Z], () => _.Z.getSoundpack()),
-        T = r.useRef(!1),
+        b = r.useRef(!1),
         S = (0, o.Z)(() => {
             let e = 'call_ringing';
-            return s === v.YC.CLASSIC ? (0, f.tu)(b(), e) : (0, f.uk)('call_ringing', s);
+            return s === v.YC.CLASSIC ? (0, f.tu)(T(), e) : (0, f.uk)('call_ringing', s);
         }, [s]);
     return (
         r.useEffect(
@@ -53,10 +53,10 @@ function T() {
         ),
         r.useEffect(() => {
             if (a || n) {
-                T.current && (S.stop(), (T.current = !1));
+                b.current && (S.stop(), (b.current = !1));
                 return;
             }
-            t && !T.current ? (S.loop(), (T.current = !0)) : !t && T.current && (S.stop(), (T.current = !1));
+            t && !b.current ? (S.loop(), (b.current = !0)) : !t && b.current && (S.stop(), (b.current = !1));
         }, [n, a, t, S]),
         (0, u.Yzy)(e, {
             keys: (e) => {
@@ -82,4 +82,4 @@ function T() {
         )
     );
 }
-let S = r.memo(T);
+let S = r.memo(b);

@@ -1,5 +1,5 @@
 e.exports = {
-    scroller: 'scroller_fbb822',
-    wrapper: 'wrapper_fbb822',
-    ageGatedImage: 'ageGatedImage_fbb822'
+    scroller: 'scroller__28a87',
+    wrapper: 'wrapper__28a87',
+    ageGatedImage: 'ageGatedImage__28a87'
 };

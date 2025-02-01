@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => T });
 var i,
     r = n(442837),
     a = n(570140),
@@ -109,7 +109,7 @@ u(I, 'displayName', 'NotificationSettingsStore'),
             return (t.disabledSounds = t.disabledSounds || []), (t.disableUnreadBadge = t.disableUnreadBadge || !1), (t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash), (t.ttsType = t.ttsType || l.PrB.NEVER), null == t.desktopType && (t.desktopType = o.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER), t;
         }
     ]);
-let b = new I(a.Z, {
+let T = new I(a.Z, {
     NOTIFICATIONS_SET_DESKTOP_TYPE: _,
     NOTIFICATIONS_SET_TTS_TYPE: m,
     NOTIFICATIONS_SET_DISABLED_SOUNDS: p,

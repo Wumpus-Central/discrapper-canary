@@ -1,6 +1,6 @@
 e.exports = {
-    previewContainer: 'previewContainer_bc5069',
-    quote: 'quote_bc5069',
-    content: 'content_bc5069',
-    previewImage: 'previewImage_bc5069'
+    previewContainer: 'previewContainer__9a244',
+    quote: 'quote__9a244',
+    content: 'content__9a244',
+    previewImage: 'previewImage__9a244'
 };

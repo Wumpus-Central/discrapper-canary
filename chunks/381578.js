@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_a2346a',
-    noticeIcon: 'noticeIcon_a2346a',
-    sectionLabel: 'sectionLabel_a2346a'
+    container: 'container__8ab7e',
+    noticeIcon: 'noticeIcon__8ab7e',
+    sectionLabel: 'sectionLabel__8ab7e'
 };

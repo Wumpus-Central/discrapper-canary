@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(246642),
     y = n(921227),
     I = n(314897),
-    b = n(430824),
-    T = n(699516),
+    T = n(430824),
+    b = n(699516),
     S = n(885110),
     A = n(111583),
     N = n(594174),
@@ -111,14 +111,14 @@ function G(e) {
     let { guildId: t, activity: n, showInviteEducation: r, isFocused: a, typingUsers: o, className: u, channel: c, isThreadCreation: f, renderDots: _, poggermodeEnabled: p, isComboing: g } = e,
         { rateLimitPerUser: E } = c,
         y = N.default.getCurrentUser(),
-        I = b.Z.getGuild(t),
+        I = T.Z.getGuild(t),
         S = E > 0,
         A = f
             ? []
             : l()(o)
                   .keys()
                   .filter((e) => e !== (null == y ? void 0 : y.id))
-                  .reject((e) => T.Z.isBlockedOrIgnored(e))
+                  .reject((e) => b.Z.isBlockedOrIgnored(e))
                   .map((e) => N.default.getUser(e))
                   .filter(O.lm)
                   .map((e) => D.ZP.getName(t, c.id, e))

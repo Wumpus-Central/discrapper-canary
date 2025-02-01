@@ -1,8 +1,8 @@
-n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(481060),
+    a = n(442837),
+    r = n(481060),
     s = n(23536),
     o = n(40851),
     c = n(540059),
@@ -13,10 +13,10 @@ var i = n(200651),
     m = n(665149),
     f = n(981631),
     g = n(388032);
-t.Z = function (e) {
+let _ = function (e) {
     let { channel: t } = e,
         n = (0, c.Q3)('ChannelPinsButton'),
-        C = (0, r.e7)(
+        _ = (0, a.e7)(
             [d.Z, h.default],
             () => {
                 let e = h.default.getCurrentUser();
@@ -24,33 +24,33 @@ t.Z = function (e) {
             },
             [t]
         ),
-        [x, v] = l.useState(!1),
-        _ = (0, r.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id), [t]),
-        I = (0, o.Aq)(),
-        E = l.useCallback(() => {
-            !C && v((e) => !e);
-        }, [C]);
+        [C, x] = l.useState(!1),
+        v = (0, a.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id), [t]),
+        E = (0, o.Aq)(),
+        I = l.useCallback(() => {
+            _ || x((e) => !e);
+        }, [_]);
     function b(e) {
-        !(null == e ? void 0 : e.shiftKey) && I.dispatch(f.CkL.POPOUT_CLOSE);
+        (null == e ? void 0 : e.shiftKey) || E.dispatch(f.CkL.POPOUT_CLOSE);
     }
     return (
         l.useEffect(
             () => (
-                p.S.subscribe(f.CkL.TOGGLE_CHANNEL_PINS, E),
+                p.S.subscribe(f.CkL.TOGGLE_CHANNEL_PINS, I),
                 () => {
-                    p.S.unsubscribe(f.CkL.TOGGLE_CHANNEL_PINS, E);
+                    p.S.unsubscribe(f.CkL.TOGGLE_CHANNEL_PINS, I);
                 }
             ),
-            [E]
+            [I]
         ),
-        (0, i.jsx)(a.Popout, {
-            shouldShow: x,
-            animation: a.Popout.Animation.NONE,
+        (0, i.jsx)(r.yRy, {
+            shouldShow: C,
+            animation: r.yRy.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
             ignoreModalClicks: !0,
-            onRequestClose: () => v(!1),
+            onRequestClose: () => x(!1),
             renderPopout: function (e) {
                 return (0, i.jsx)(s.Z, {
                     ...e,
@@ -63,13 +63,13 @@ t.Z = function (e) {
                 let { isShown: l } = t;
                 return (0, i.jsx)(m.JO, {
                     ...e,
-                    onClick: E,
+                    onClick: I,
                     tooltip: l ? null : g.intl.string(g.t['mp1N//']),
-                    icon: a.PinIcon,
+                    icon: r.qQX,
                     iconSize: n ? 20 : void 0,
                     'aria-label': g.intl.string(g.t['mp1N//']),
-                    disabled: C,
-                    showBadge: _,
+                    disabled: _,
+                    showBadge: v,
                     selected: l
                 });
             }

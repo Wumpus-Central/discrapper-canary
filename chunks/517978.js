@@ -1,5 +1,5 @@
 e.exports = {
-    modal: 'modal_c22d1f',
-    form: 'form_c22d1f',
-    modalTitle: 'modalTitle_c22d1f'
+    modal: 'modal_a327d2',
+    form: 'form_a327d2',
+    modalTitle: 'modalTitle_a327d2'
 };

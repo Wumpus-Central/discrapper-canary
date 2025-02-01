@@ -19,8 +19,8 @@ function h(e) {
             className: i()(C.priceTagsContainer, h),
             children: (0, r.jsx)(o.F, { price: m })
         });
-    let f = (0, a.ql)(t, c.tuJ.PREMIUM_TIER_2),
-        g = !n && !(0, a.x6)(t),
+    let g = (0, a.ql)(t, c.tuJ.PREMIUM_TIER_2),
+        f = !n && !(0, a.x6)(t),
         x =
             (0, a.x6)(t) && n
                 ? {
@@ -37,12 +37,12 @@ function h(e) {
                 className: i()(C.price, {
                     [C.striked]: n,
                     [C.dimmed]: n,
-                    [C.fullPrice]: g
+                    [C.fullPrice]: f
                 })
             }),
-            null != f &&
+            null != g &&
                 (0, r.jsx)(o.F, {
-                    price: f,
+                    price: g,
                     discount: n ? l : a.f_,
                     renderPrice: p
                         ? (e) =>
@@ -53,12 +53,12 @@ function h(e) {
                                       subscribeNowHook: (e) => (0, r.jsx)(d.F, { text: e })
                                   })
                               })
-                        : g
+                        : f
                           ? (e) => u.intl.formatToPlainString(u.t.W3gIWF, { price: e })
                           : void 0,
                     className: i()(C.price, {
                         [C.dimmed]: !n,
-                        [C.fullPrice]: g
+                        [C.fullPrice]: f
                     }),
                     variant: n ? void 0 : 'text-xs/semibold',
                     icon: (0, r.jsx)(s.ua7, {
@@ -70,7 +70,7 @@ function h(e) {
                                 size: 'md',
                                 color: 'currentColor',
                                 ...t,
-                                className: i()(C.premiumIcon, { [C.fullPrice]: g })
+                                className: i()(C.premiumIcon, { [C.fullPrice]: f })
                             });
                         }
                     })

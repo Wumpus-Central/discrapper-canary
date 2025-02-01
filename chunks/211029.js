@@ -1,8 +1,8 @@
 e.exports = {
-    checklistItem: 'checklistItem_d2fe06',
-    checklistIcon: 'checklistIcon_d2fe06',
-    checklistItemName: 'checklistItemName_d2fe06',
-    ineligibleRow: 'ineligibleRow_d2fe06',
-    eligibilityActionContainer: 'eligibilityActionContainer_d2fe06',
-    eligibilityActionButton: 'eligibilityActionButton_d2fe06'
+    checklistItem: 'checklistItem__54e17',
+    checklistIcon: 'checklistIcon__54e17',
+    checklistItemName: 'checklistItemName__54e17',
+    ineligibleRow: 'ineligibleRow__54e17',
+    eligibilityActionContainer: 'eligibilityActionContainer__54e17',
+    eligibilityActionButton: 'eligibilityActionButton__54e17'
 };

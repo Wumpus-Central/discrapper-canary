@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('ca', {
         months: {
@@ -59,9 +59,9 @@
             yy: '%d anys'
         },
         dayOfMonthOrdinalParse: /\d{1,2}(r|n|t|è|a)/,
-        ordinal: function (e, n) {
-            var r = 1 === e ? 'r' : 2 === e ? 'n' : 3 === e ? 'r' : 4 === e ? 't' : 'è';
-            return ('w' === n || 'W' === n) && (r = 'a'), e + r;
+        ordinal: function (e, t) {
+            var n = 1 === e ? 'r' : 2 === e ? 'n' : 3 === e ? 'r' : 4 === e ? 't' : 'è';
+            return ('w' === t || 'W' === t) && (n = 'a'), e + n;
         },
         week: {
             dow: 1,

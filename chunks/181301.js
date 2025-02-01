@@ -1,24 +1,24 @@
-var i = r(447631),
-    a = r(821819),
-    o = r(96403),
-    s = r(646948),
-    l = r(302231),
-    u = r(729605),
-    c = o(r(790248).f),
-    d = o([].push),
-    f =
+var i = n(447631),
+    r = n(821819),
+    a = n(96403),
+    s = n(646948),
+    o = n(302231),
+    l = n(729605),
+    u = a(n(790248).f),
+    c = a([].push),
+    d =
         i &&
-        a(function () {
+        r(function () {
             var e = Object.create(null);
-            return (e[2] = 2), !c(e, 2);
+            return (e[2] = 2), !u(e, 2);
         }),
-    p = function (e) {
-        return function (n) {
-            for (var r, a = u(n), o = l(a), p = f && null === s(a), h = o.length, _ = 0, m = []; h > _; ) (r = o[_++]), (!i || (p ? r in a : c(a, r))) && d(m, e ? [r, a[r]] : a[r]);
-            return m;
+    f = function (e) {
+        return function (t) {
+            for (var n, r = l(t), a = o(r), f = d && null === s(r), _ = a.length, p = 0, h = []; _ > p; ) (n = a[p++]), (!i || (f ? n in r : u(r, n))) && c(h, e ? [n, r[n]] : r[n]);
+            return h;
         };
     };
 e.exports = {
-    entries: p(!0),
-    values: p(!1)
+    entries: f(!0),
+    values: f(!1)
 };

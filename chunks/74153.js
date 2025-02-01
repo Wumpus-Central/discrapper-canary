@@ -1,7 +1,7 @@
-n(653041), n(47120);
+n.d(t, { Z: () => f }), n(653041), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     a = n(481060),
     s = n(16084),
     o = n(730749),
@@ -24,18 +24,18 @@ function g(e, t, n) {
         e
     );
 }
-class f extends r.PureComponent {
+class _ extends l.PureComponent {
     componentDidMount() {
         let { sku: e, primarySkuId: t, isFetchingPrimarySku: n } = this.props;
-        null != t && !n && null != e && (0, s.$N)(e.applicationId, t);
+        null == t || n || null == e || (0, s.$N)(e.applicationId, t);
     }
     render() {
         let { sku: e, primarySku: t } = this.props,
             n = [],
-            r = null;
+            l = null;
         if (null != e) {
             let i = m.Z5c.APPLICATION_STORE_LISTING_SKU(e.id, e.slug);
-            (r = i),
+            (l = i),
                 null != t &&
                     n.push({
                         id: m.Z5c.APPLICATION_STORE_LISTING_SKU(t.id, t.slug),
@@ -46,11 +46,11 @@ class f extends r.PureComponent {
                     label: e.name
                 });
         }
-        return (0, i.jsx)(a.Breadcrumbs, {
+        return (0, i.jsx)(a.OoM, {
             renderCustomBreadcrumb: this.renderCustomBreadcrumb,
             onBreadcrumbClick: this.handleClick,
             breadcrumbs: n,
-            activeId: r
+            activeId: l
         });
     }
     constructor(...e) {
@@ -76,8 +76,8 @@ class f extends r.PureComponent {
             );
     }
 }
-t.Z = (0, o.Z)(
-    l.ZP.connectStores([c.Z, h.Z], (e) => {
+let f = (0, o.Z)(
+    r.ZP.connectStores([c.Z, h.Z], (e) => {
         let { sku: t } = e,
             n = null != t ? c.Z.getApplication(t.applicationId) : null,
             i = null != n && null != n.primarySkuId && n.primarySkuId !== t.id ? n.primarySkuId : null;
@@ -86,5 +86,5 @@ t.Z = (0, o.Z)(
             isFetchingPrimarySku: null != i && h.Z.isFetching(i),
             primarySku: null != i ? h.Z.get(i) : null
         };
-    })(f)
+    })(_)
 );

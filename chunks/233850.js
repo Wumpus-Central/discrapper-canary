@@ -1,4 +1,4 @@
 t.exports = {
-    modalContent: 'modalContent_e85109',
-    header: 'header_e85109'
+    modalContent: 'modalContent__8b89b',
+    header: 'header__8b89b'
 };

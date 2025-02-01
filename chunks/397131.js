@@ -1,6 +1,6 @@
 t.exports = {
-    actionGroup: 'actionGroup_ac6e35',
-    actionRow: 'actionRow_ac6e35',
-    actionButtonDetails: 'actionButtonDetails_ac6e35',
-    clickableActionRow: 'clickableActionRow_ac6e35'
+    actionGroup: 'actionGroup__83fb3',
+    actionRow: 'actionRow__83fb3',
+    actionButtonDetails: 'actionButtonDetails__83fb3',
+    clickableActionRow: 'clickableActionRow__83fb3'
 };

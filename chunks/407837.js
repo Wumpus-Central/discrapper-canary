@@ -1,8 +1,8 @@
 IntlMessageFormat.__addLocaleData({
     locale: 'pt',
-    pluralRuleFunction: function (e, n) {
-        var r = Number(String(e).split('.')[0]) == e;
-        return n ? 'other' : r && e >= 0 && e <= 2 && 2 != e ? 'one' : 'other';
+    pluralRuleFunction: function (e, t) {
+        var n = Number(String(e).split('.')[0]) == e;
+        return t ? 'other' : n && e >= 0 && e <= 2 && 2 != e ? 'one' : 'other';
     }
 }),
     IntlMessageFormat.__addLocaleData({
@@ -12,9 +12,9 @@ IntlMessageFormat.__addLocaleData({
     IntlMessageFormat.__addLocaleData({
         locale: 'pt-PT',
         parentLocale: 'pt',
-        pluralRuleFunction: function (e, n) {
-            var r = !String(e).split('.')[1];
-            return n ? 'other' : 1 == e && r ? 'one' : 'other';
+        pluralRuleFunction: function (e, t) {
+            var n = !String(e).split('.')[1];
+            return t ? 'other' : 1 == e && n ? 'one' : 'other';
         }
     }),
     IntlMessageFormat.__addLocaleData({

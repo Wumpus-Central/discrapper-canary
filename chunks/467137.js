@@ -1,13 +1,13 @@
 e.exports = {
-    popoutContainer: 'popoutContainer_b421fc',
-    image: 'image_b421fc',
-    infoContainerParent: 'infoContainerParent_b421fc',
-    infoContainer: 'infoContainer_b421fc',
-    infoText: 'infoText_b421fc',
-    closeButton: 'closeButton_b421fc',
-    closeIcon: 'closeIcon_b421fc',
-    hidden: 'hidden_b421fc',
-    heading: 'heading_b421fc',
-    buttonContainer: 'buttonContainer_b421fc',
-    button: 'button_b421fc'
+    popoutContainer: 'popoutContainer__7169b',
+    image: 'image__7169b',
+    infoContainerParent: 'infoContainerParent__7169b',
+    infoContainer: 'infoContainer__7169b',
+    infoText: 'infoText__7169b',
+    closeButton: 'closeButton__7169b',
+    closeIcon: 'closeIcon__7169b',
+    hidden: 'hidden__7169b',
+    heading: 'heading__7169b',
+    buttonContainer: 'buttonContainer__7169b',
+    button: 'button__7169b'
 };

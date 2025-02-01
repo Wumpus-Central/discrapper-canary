@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_e3e57a',
-    darkText: 'darkText_e3e57a',
-    lightText: 'lightText_e3e57a'
+    container: 'container__12f17',
+    darkText: 'darkText__12f17',
+    lightText: 'lightText__12f17'
 };

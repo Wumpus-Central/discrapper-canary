@@ -1,7 +1,7 @@
 e.exports = {
-    switchRowContainer: 'switchRowContainer_b5a3da',
-    activitySwitchRow: 'activitySwitchRow_b5a3da',
-    connectionIcon: 'connectionIcon_b5a3da',
-    divider: 'divider_b5a3da',
-    searchInput: 'searchInput_b5a3da'
+    switchRowContainer: 'switchRowContainer__6de8b',
+    activitySwitchRow: 'activitySwitchRow__6de8b',
+    connectionIcon: 'connectionIcon__6de8b',
+    divider: 'divider__6de8b',
+    searchInput: 'searchInput__6de8b'
 };

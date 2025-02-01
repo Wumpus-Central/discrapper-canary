@@ -1,7 +1,7 @@
 e.exports = {
-    clickable: 'clickable_c5a741',
-    info: 'info_c5a741',
-    line: 'line_c5a741',
-    versionHash: 'versionHash_c5a741',
-    appArch: 'appArch_c5a741'
+    clickable: 'clickable__2debe',
+    info: 'info__2debe',
+    line: 'line__2debe',
+    appArch: 'appArch__2debe',
+    versionHash: 'versionHash__2debe'
 };

@@ -1,10 +1,10 @@
 e.exports = {
-    friendWrapper: 'friendWrapper_ebf869',
-    friend: 'friend_ebf869',
-    avatar: 'avatar_ebf869',
-    checkbox: 'checkbox_ebf869',
-    match: 'match_ebf869',
-    nickname: 'nickname_ebf869',
-    discordTag: 'discordTag_ebf869',
-    friendSelected: 'friendSelected_ebf869'
+    friendWrapper: 'friendWrapper_bbd192',
+    friend: 'friend_bbd192',
+    avatar: 'avatar_bbd192',
+    checkbox: 'checkbox_bbd192',
+    match: 'match_bbd192',
+    nickname: 'nickname_bbd192',
+    discordTag: 'discordTag_bbd192',
+    friendSelected: 'friendSelected_bbd192'
 };

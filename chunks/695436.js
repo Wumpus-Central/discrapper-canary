@@ -1,8 +1,8 @@
 e.exports = {
-    card: 'card_e903e6',
-    participants: 'participants_e903e6',
-    disabled: 'disabled_e903e6',
-    actions: 'actions_e903e6',
-    button: 'button_e903e6',
-    buttonInner: 'buttonInner_e903e6'
+    card: 'card_a8610c',
+    participants: 'participants_a8610c',
+    disabled: 'disabled_a8610c',
+    actions: 'actions_a8610c',
+    button: 'button_a8610c',
+    buttonInner: 'buttonInner_a8610c'
 };

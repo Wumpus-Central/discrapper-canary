@@ -1,10 +1,10 @@
 e.exports = {
-    header: 'header_a6018f',
-    subtitle: 'subtitle_a6018f',
-    roleContainer: 'roleContainer_a6018f',
-    roleName: 'roleName_a6018f',
-    list: 'list_a6018f',
-    footer: 'footer_a6018f',
-    buttonsRight: 'buttonsRight_a6018f',
-    backButton: 'backButton_a6018f'
+    header: 'header__38262',
+    subtitle: 'subtitle__38262',
+    roleContainer: 'roleContainer__38262',
+    roleName: 'roleName__38262',
+    list: 'list__38262',
+    footer: 'footer__38262',
+    buttonsRight: 'buttonsRight__38262',
+    backButton: 'backButton__38262'
 };

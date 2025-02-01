@@ -1,4 +1,4 @@
-e.exports = {
-    promotionalFooterBanner: 'promotionalFooterBanner_fd840c',
-    bannerText: 'bannerText_fd840c'
+o.exports = {
+    promotionalFooterBanner: 'promotionalFooterBanner_e68795',
+    bannerText: 'bannerText_e68795'
 };

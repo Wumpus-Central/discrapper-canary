@@ -1,14 +1,14 @@
-function n(r, i) {
+function t(n, i) {
     return (
-        (e.exports = n =
+        (e.exports = t =
             Object.setPrototypeOf
                 ? Object.setPrototypeOf.bind()
-                : function (e, n) {
-                      return (e.__proto__ = n), e;
+                : function (e, t) {
+                      return (e.__proto__ = t), e;
                   }),
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports),
-        n(r, i)
+        t(n, i)
     );
 }
-(e.exports = n), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);

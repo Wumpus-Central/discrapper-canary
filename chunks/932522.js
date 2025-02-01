@@ -1,6 +1,6 @@
 t.exports = {
-    notice: 'notice_b8c1a5',
-    body: 'body_b8c1a5',
-    refundErrorTitle: 'refundErrorTitle_b8c1a5',
-    refundErrorSupport: 'refundErrorSupport_b8c1a5'
+    notice: 'notice__3b8c1',
+    body: 'body__3b8c1',
+    refundErrorTitle: 'refundErrorTitle__3b8c1',
+    refundErrorSupport: 'refundErrorSupport__3b8c1'
 };

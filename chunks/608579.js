@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(742956),
     y = n(346790),
     I = n(49308),
-    b = n(117652),
-    T = n(126982),
+    T = n(117652),
+    b = n(126982),
     S = n(981631),
     A = n(302800),
     N = n(231338),
@@ -57,14 +57,14 @@ function R(e) {
                       onClose: () => t(!1),
                       giftingOrigin: M
                   })
-                : (0, i.jsx)(T.Z, {
+                : (0, i.jsx)(b.Z, {
                       step: n,
                       onClose: () => t(!1)
                   }),
         J = r.useMemo(
             () => [
                 E.WA,
-                ...(L ? [b.Dd] : []),
+                ...(L ? [T.Dd] : []),
                 y.n,
                 ...E.yp,
                 E.wo,

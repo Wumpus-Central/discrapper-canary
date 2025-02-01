@@ -1,6 +1,6 @@
 e.exports = {
-    filter: 'filter_e4088d',
-    filterBackground: 'filterBackground_e4088d',
-    menu: 'menu_e4088d',
-    categoryLabel: 'categoryLabel_e4088d'
+    filter: 'filter__72086',
+    filterBackground: 'filterBackground__72086',
+    menu: 'menu__72086',
+    categoryLabel: 'categoryLabel__72086'
 };

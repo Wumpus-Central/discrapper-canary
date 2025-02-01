@@ -1,88 +1,88 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(765053),
-    c = r(512969),
-    d = r(873546),
-    f = r(442837),
-    p = r(316792),
-    h = r(481060),
-    _ = r(168551),
-    m = r(540059),
-    g = r(19759),
-    E = r(823961),
-    v = r(706454),
-    y = r(451478),
-    b = r(597952),
-    I = r(252618),
-    T = r(80006),
-    S = r(587061),
-    A = r(392358),
-    C = r(981631);
-r(702955);
-let N = new Set([C.Z5c.LOGIN, C.Z5c.REGISTER]);
-function R(e) {
-    let n = (0, f.e7)([v.default], () => v.default.locale),
-        r = (0, f.e7)([y.Z], () => y.Z.isFocused(), []),
-        { theme: i, density: s } = (0, h.useThemeContext)(),
-        { reducedMotion: u } = o.useContext(h.AccessibilityPreferencesContext),
-        { accessibilitySettings: p, appWrapperClassName: _ } = (0, T.I)(),
-        { fontScale: I, fontScaleClass: C, saturation: R, desaturateUserColors: O, useForcedColors: D, systemForcedColors: L } = p,
-        x = (0, f.e7)([E.Z], () => E.Z.confettiMode),
-        w = (0, c.TH)(),
-        P = o.useMemo(() => N.has(w.pathname), [w.pathname]);
-    (0, S.Z)(window, P);
-    let M = (0, A.Z)(window, __OVERLAY__ || r),
-        k = (0, f.e7)([g.Z], () => g.Z.sidebarWidth),
-        U = (0, h.useRedesignIconContext)().enabled,
-        B = (0, m.Q3)('AppHelmet'),
-        G = (0, m.R6)('AppHelmet');
-    return (0, a.jsx)('html', {
-        lang: n,
-        style: 'font-size: '.concat(I, '%; --saturation-factor: ').concat(R, '; --devtools-sidebar-width: ').concat(k, 'px;'),
-        className: l()(
+n.d(t, { Z: () => O }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(765053),
+    l = n(512969),
+    u = n(873546),
+    c = n(442837),
+    d = n(316792),
+    f = n(481060),
+    _ = n(168551),
+    p = n(540059),
+    h = n(19759),
+    m = n(823961),
+    g = n(706454),
+    E = n(451478),
+    v = n(597952),
+    y = n(252618),
+    I = n(80006),
+    T = n(587061),
+    b = n(392358),
+    S = n(981631);
+n(702955);
+let A = new Set([S.Z5c.LOGIN, S.Z5c.REGISTER]);
+function N(e) {
+    let t = (0, c.e7)([g.default], () => g.default.locale),
+        n = (0, c.e7)([E.Z], () => E.Z.isFocused(), []),
+        { theme: a, density: o } = (0, f.TCT)(),
+        { reducedMotion: d } = r.useContext(f.Sfi),
+        { accessibilitySettings: _, appWrapperClassName: y } = (0, I.I)(),
+        { fontScale: S, fontScaleClass: N, saturation: C, desaturateUserColors: R, useForcedColors: O, systemForcedColors: D } = _,
+        x = (0, c.e7)([m.Z], () => m.Z.confettiMode),
+        L = (0, l.TH)(),
+        P = r.useMemo(() => A.has(L.pathname), [L.pathname]);
+    (0, T.Z)(window, P);
+    let w = (0, b.Z)(window, __OVERLAY__ || n),
+        M = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
+        k = (0, f.bWb)().enabled,
+        U = (0, p.Q3)('AppHelmet'),
+        G = (0, p.R6)('AppHelmet');
+    return (0, i.jsx)('html', {
+        lang: t,
+        style: 'font-size: '.concat(S, '%; --saturation-factor: ').concat(C, '; --devtools-sidebar-width: ').concat(M, 'px;'),
+        className: s()(
             e,
-            _,
+            y,
             {
                 overlay: __OVERLAY__,
-                'mouse-mode': M,
-                'reduce-motion': u.enabled,
-                'full-motion': !u.enabled,
-                'is-mobile': d.tq,
-                'app-focused': r,
-                'desaturate-user-colors': O,
-                'disable-forced-colors': !D && 'active' === L,
-                'enable-forced-colors': D,
-                'show-redesigned-icons': U,
-                'visual-refresh': B,
+                'mouse-mode': w,
+                'reduce-motion': d.enabled,
+                'full-motion': !d.enabled,
+                'is-mobile': u.tq,
+                'app-focused': n,
+                'desaturate-user-colors': R,
+                'disable-forced-colors': !O && 'active' === D,
+                'enable-forced-colors': O,
+                'show-redesigned-icons': k,
+                'visual-refresh': U,
                 'visual-refresh-chat-input': G,
                 'confetti-mode': x
             },
-            (0, h.getThemeClass)(i),
-            'density-'.concat(s),
-            (0, b.Z)(),
-            C
+            (0, f.QeD)(a),
+            'density-'.concat(o),
+            (0, v.Z)(),
+            N
         )
     });
 }
-function O() {
-    let [e, n] = o.useState([]);
+function C() {
+    let [e, t] = r.useState([]);
     return (
-        o.useEffect(() => {
+        r.useEffect(() => {
             Promise.all(
-                p.L.map((e) =>
-                    r(959598)('./'.concat(e, '.woff2')).then((e) => {
-                        let { default: n } = e;
-                        return n;
+                d.L.map((e) =>
+                    n(959598)('./'.concat(e, '.woff2')).then((e) => {
+                        let { default: t } = e;
+                        return t;
                     })
                 )
-            ).then((e) => n(e));
+            ).then((e) => t(e));
         }, []),
-        (0, a.jsx)(a.Fragment, {
-            children: e.map((e, n) =>
-                (0, a.jsx)(
+        (0, i.jsx)(i.Fragment, {
+            children: e.map((e, t) =>
+                (0, i.jsx)(
                     'link',
                     {
                         rel: 'preload',
@@ -91,19 +91,19 @@ function O() {
                         type: 'font/woff2',
                         crossOrigin: 'anonymous'
                     },
-                    n
+                    t
                 )
             )
         })
     );
 }
-function D(e) {
-    let { children: n, skipsSettingDefaultPageTitle: r } = e;
-    (0, I.ZD)({ skipsSettingDefaultPageTitle: r });
-    let { clientThemesClassName: i, clientThemesCSS: s } = (0, _.ZP)(),
-        l = o.createElement('style', { [_.PQ]: !0 }, s);
-    return (0, a.jsxs)(u.ql, {
-        children: [R(i), O(), l, n]
+function R(e) {
+    let { children: t, skipsSettingDefaultPageTitle: n } = e;
+    (0, y.ZD)({ skipsSettingDefaultPageTitle: n });
+    let { clientThemesClassName: a, clientThemesCSS: s } = (0, _.ZP)(),
+        l = r.createElement('style', { [_.PQ]: !0 }, s);
+    return (0, i.jsxs)(o.ql, {
+        children: [N(a), C(), l, t]
     });
 }
-n.Z = o.memo(D);
+let O = r.memo(R);

@@ -1,8 +1,8 @@
 e.exports = {
-    wrapper: 'wrapper_e74e54',
-    gradient: 'gradient_e74e54',
-    guildBoostGemWrapper: 'guildBoostGemWrapper_e74e54',
-    guildBoostGem: 'guildBoostGem_e74e54',
-    heading: 'heading_e74e54',
-    wave: 'wave_e74e54'
+    wrapper: 'wrapper__8e08c',
+    gradient: 'gradient__8e08c',
+    guildBoostGemWrapper: 'guildBoostGemWrapper__8e08c',
+    guildBoostGem: 'guildBoostGem__8e08c',
+    heading: 'heading__8e08c',
+    wave: 'wave__8e08c'
 };

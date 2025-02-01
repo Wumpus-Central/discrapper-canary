@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_f86a0e',
-    title: 'title_f86a0e',
-    sliderContainer: 'sliderContainer_f86a0e'
+    container: 'container__3f751',
+    title: 'title__3f751',
+    sliderContainer: 'sliderContainer__3f751'
 };

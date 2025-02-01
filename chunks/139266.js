@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_e39b68',
-    body: 'body_e39b68'
+    container: 'container_cbb93a',
+    body: 'body_cbb93a'
 };

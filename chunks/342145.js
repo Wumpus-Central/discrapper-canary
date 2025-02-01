@@ -1,9 +1,9 @@
-var i = r(67867),
-    a = r(570596),
-    o = r(730427),
-    s = r(735471),
-    l = r(548828),
-    u = r(146321).Map;
+var i = n(67867),
+    r = n(570596),
+    a = n(730427),
+    s = n(735471),
+    o = n(548828),
+    l = n(146321).Map;
 i(
     {
         target: 'Map',
@@ -11,15 +11,15 @@ i(
         forced: !0
     },
     {
-        keyBy: function (e, n) {
-            var r = new (s(this) ? this : u)();
-            l(n);
-            var i = l(r.set);
+        keyBy: function (e, t) {
+            var n = new (s(this) ? this : l)();
+            o(t);
+            var i = o(n.set);
             return (
-                o(e, function (e) {
-                    a(i, r, n(e), e);
+                a(e, function (e) {
+                    r(i, n, t(e), e);
                 }),
-                r
+                n
             );
         }
     }

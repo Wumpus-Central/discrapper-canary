@@ -1,8 +1,8 @@
 e.exports = {
-    avatarContainer: 'avatarContainer_e55bd2',
-    avatar: 'avatar_e55bd2',
-    infoContainer: 'infoContainer_e55bd2',
-    metadataContainer: 'metadataContainer_e55bd2',
-    disclosuresContainer: 'disclosuresContainer_e55bd2',
-    disclosuresText: 'disclosuresText_e55bd2'
+    avatarContainer: 'avatarContainer_efaad4',
+    avatar: 'avatar_efaad4',
+    infoContainer: 'infoContainer_efaad4',
+    metadataContainer: 'metadataContainer_efaad4',
+    disclosuresContainer: 'disclosuresContainer_efaad4',
+    disclosuresText: 'disclosuresText_efaad4'
 };

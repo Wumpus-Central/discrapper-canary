@@ -1,16 +1,16 @@
-var n = '\uD800-\uDFFF',
-    r = '[' + n + ']',
+var t = '\uD800-\uDFFF',
+    n = '[' + t + ']',
     i = '[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]',
-    a = '\uD83C[\uDFFB-\uDFFF]',
-    o = '[^' + n + ']',
+    r = '\uD83C[\uDFFB-\uDFFF]',
+    a = '[^' + t + ']',
     s = '(?:\uD83C[\uDDE6-\uDDFF]){2}',
-    l = '[\uD800-\uDBFF][\uDC00-\uDFFF]',
-    u = '(?:' + i + '|' + a + ')?',
-    c = '[\\ufe0e\\ufe0f]?',
-    d = '(?:\\u200d(?:' + [o, s, l].join('|') + ')' + c + u + ')*',
-    f = c + u + d,
-    p = RegExp(a + '(?=' + a + ')|' + ('(?:' + [o + i + '?', i, s, l, r].join('|') + ')') + f, 'g');
-function h(e) {
-    return e.match(p) || [];
+    o = '[\uD800-\uDBFF][\uDC00-\uDFFF]',
+    l = '(?:' + i + '|' + r + ')?',
+    u = '[\\ufe0e\\ufe0f]?',
+    c = '(?:\\u200d(?:' + [a, s, o].join('|') + ')' + u + l + ')*',
+    d = u + l + c,
+    f = RegExp(r + '(?=' + r + ')|' + ('(?:' + [a + i + '?', i, s, o, n].join('|')) + ')' + d, 'g');
+function _(e) {
+    return e.match(f) || [];
 }
-e.exports = h;
+e.exports = _;

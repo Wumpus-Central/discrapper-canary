@@ -1,7 +1,7 @@
 e.exports = {
-    section: 'section_c05dfc',
-    children: 'children_c05dfc',
-    textChildren: 'textChildren_c05dfc',
-    accessory: 'accessory_c05dfc',
-    restrictWidth: 'restrictWidth_c05dfc'
+    section: 'section_c3d3d9',
+    children: 'children_c3d3d9',
+    textChildren: 'textChildren_c3d3d9',
+    accessory: 'accessory_c3d3d9',
+    restrictWidth: 'restrictWidth_c3d3d9'
 };

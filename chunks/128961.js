@@ -1,50 +1,50 @@
-var r = function (e, n) {
+n.d(t, { Z: () => s });
+var i = function (e, t) {
         switch (e) {
             case 'P':
-                return n.date({ width: 'short' });
+                return t.date({ width: 'short' });
             case 'PP':
-                return n.date({ width: 'medium' });
+                return t.date({ width: 'medium' });
             case 'PPP':
-                return n.date({ width: 'long' });
+                return t.date({ width: 'long' });
             default:
-                return n.date({ width: 'full' });
+                return t.date({ width: 'full' });
         }
     },
-    i = function (e, n) {
+    r = function (e, t) {
         switch (e) {
             case 'p':
-                return n.time({ width: 'short' });
+                return t.time({ width: 'short' });
             case 'pp':
-                return n.time({ width: 'medium' });
+                return t.time({ width: 'medium' });
             case 'ppp':
-                return n.time({ width: 'long' });
+                return t.time({ width: 'long' });
             default:
-                return n.time({ width: 'full' });
+                return t.time({ width: 'full' });
         }
     },
-    a = function (e, n) {
-        var a,
-            o = e.match(/(P+)(p+)?/) || [],
-            s = o[1],
-            l = o[2];
-        if (!l) return r(e, n);
+    a = function (e, t) {
+        var n,
+            a = e.match(/(P+)(p+)?/) || [],
+            s = a[1],
+            o = a[2];
+        if (!o) return i(e, t);
         switch (s) {
             case 'P':
-                a = n.dateTime({ width: 'short' });
+                n = t.dateTime({ width: 'short' });
                 break;
             case 'PP':
-                a = n.dateTime({ width: 'medium' });
+                n = t.dateTime({ width: 'medium' });
                 break;
             case 'PPP':
-                a = n.dateTime({ width: 'long' });
+                n = t.dateTime({ width: 'long' });
                 break;
             default:
-                a = n.dateTime({ width: 'full' });
+                n = t.dateTime({ width: 'full' });
         }
-        return a.replace('{{date}}', r(s, n)).replace('{{time}}', i(l, n));
-    },
-    o = {
-        p: i,
-        P: a
+        return n.replace('{{date}}', i(s, t)).replace('{{time}}', r(o, t));
     };
-n.Z = o;
+let s = {
+    p: r,
+    P: a
+};

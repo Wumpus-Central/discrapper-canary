@@ -1,10 +1,10 @@
 e.exports = {
-    pendingIcon: 'pendingIcon_ae3d49',
-    container: 'container_ae3d49',
-    popoutAnchor: 'popoutAnchor_ae3d49',
-    popoutContainer: 'popoutContainer_ae3d49',
-    popoutCaretLeft: 'popoutCaretLeft_ae3d49',
-    popoutContent: 'popoutContent_ae3d49',
-    coachmarkTextContainer: 'coachmarkTextContainer_ae3d49',
-    folderIconContent: 'folderIconContent_ae3d49'
+    pendingIcon: 'pendingIcon__93fc9',
+    container: 'container__93fc9',
+    popoutAnchor: 'popoutAnchor__93fc9',
+    popoutContainer: 'popoutContainer__93fc9',
+    popoutCaretLeft: 'popoutCaretLeft__93fc9',
+    popoutContent: 'popoutContent__93fc9',
+    coachmarkTextContainer: 'coachmarkTextContainer__93fc9',
+    folderIconContent: 'folderIconContent__93fc9'
 };

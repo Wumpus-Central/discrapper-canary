@@ -1,12 +1,12 @@
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(870002);
-function s() {
-    return (0, i.jsx)(a.ChevronSmallRightIcon, {
+n.d(t, { Z: () => s });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(870002);
+let s = function () {
+    return (0, i.jsx)(r.Fbu, {
         size: 'md',
         color: 'currentColor',
-        className: o.icon
+        className: a.icon
     });
-}
-n.Z = s;
+};

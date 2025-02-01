@@ -41,8 +41,8 @@ async function p() {
         }
 }
 function h(e, t, n) {
-    var r, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, y, I, b;
-    function T(e) {
+    var r, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, y, I, T;
+    function b(e) {
         return (null == n ? void 0 : n.storedInformation) != null && 1 === n.storedInformation[e];
     }
     function S(e) {
@@ -52,11 +52,11 @@ function h(e, t, n) {
         did_crash: t,
         renderer_crash_reason: null !== (c = null == n ? void 0 : n.rendererCrashReason) && void 0 !== c ? c : null,
         renderer_crash_exit_code: null !== (d = null == n ? void 0 : n.rendererCrashExitCode) && void 0 !== d ? d : null,
-        had_rtc_connection: T(i.X4.HasRTCConnection),
-        was_sending_video: T(i.X4.IsSendingVideo),
-        was_sending_stream: T(i.X4.IsSendingStream),
-        was_receiving_video: T(i.X4.IsReceivingVideo),
-        was_receiving_stream: T(i.X4.IsReceivingStream),
+        had_rtc_connection: b(i.X4.HasRTCConnection),
+        was_sending_video: b(i.X4.IsSendingVideo),
+        was_sending_stream: b(i.X4.IsSendingStream),
+        was_receiving_video: b(i.X4.IsReceivingVideo),
+        was_receiving_stream: b(i.X4.IsReceivingStream),
         video_media_session_id: S(i.X4.VideoMediaSessionId),
         stream_media_session_id: S(i.X4.StreamMediaSessionId),
         last_memory_usage_kb: null !== (f = null == n ? void 0 : null === (r = n.lastMemoryInformation) || void 0 === r ? void 0 : r.memoryUsageKB) && void 0 !== f ? f : null,
@@ -84,7 +84,7 @@ function h(e, t, n) {
         minidump_exception_module_name: null !== (v = null == N ? void 0 : N.exceptionModuleName) && void 0 !== v ? v : null,
         minidump_relative_crash_address: null !== (y = null == N ? void 0 : N.relativeCrashAddress) && void 0 !== y ? y : null,
         minidump_exception_module_version: null !== (I = null == N ? void 0 : N.exceptionModuleVersion) && void 0 !== I ? I : null,
-        minidump_exception_module_code_id: null !== (b = null == N ? void 0 : N.exceptionModuleCodeId) && void 0 !== b ? b : null,
+        minidump_exception_module_code_id: null !== (T = null == N ? void 0 : N.exceptionModuleCodeId) && void 0 !== T ? T : null,
         ...A
     };
 }

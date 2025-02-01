@@ -1,10 +1,10 @@
 e.exports = {
-    statusWarningBlock: 'statusWarningBlock_e45fae',
-    statusWarningBlockWithCta: 'statusWarningBlockWithCta_e45fae',
-    horizontalStatusWarningBlock: 'horizontalStatusWarningBlock_e45fae',
-    verticalStatusWarningBlock: 'verticalStatusWarningBlock_e45fae',
-    ctaButtonContainer: 'ctaButtonContainer_e45fae',
-    ctaButton: 'ctaButton_e45fae',
-    ctaBlackButton: 'ctaBlackButton_e45fae',
-    ctaButtonText: 'ctaButtonText_e45fae'
+    statusWarningBlock: 'statusWarningBlock__1066d',
+    statusWarningBlockWithCta: 'statusWarningBlockWithCta__1066d',
+    horizontalStatusWarningBlock: 'horizontalStatusWarningBlock__1066d',
+    verticalStatusWarningBlock: 'verticalStatusWarningBlock__1066d',
+    ctaButtonContainer: 'ctaButtonContainer__1066d',
+    ctaButton: 'ctaButton__1066d',
+    ctaBlackButton: 'ctaBlackButton__1066d',
+    ctaButtonText: 'ctaButtonText__1066d'
 };

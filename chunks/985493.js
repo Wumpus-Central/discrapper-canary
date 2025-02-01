@@ -1,16 +1,16 @@
-var i = r(413135).Buffer,
-    a = r(988608),
-    o = r(35609),
-    s = r(168725);
-function l(e) {
-    return new s(new i(o[e].prime, 'hex'), new i(o[e].gen, 'hex'));
+var i = n(413135).Buffer,
+    r = n(988608),
+    a = n(35609),
+    s = n(168725);
+function o(e) {
+    return new s(new i(a[e].prime, 'hex'), new i(a[e].gen, 'hex'));
 }
-var u = {
+var l = {
     binary: !0,
     hex: !0,
     base64: !0
 };
-function c(e, n, r, o) {
-    return i.isBuffer(n) || void 0 === u[n] ? c(e, 'binary', n, r) : ((n = n || 'binary'), (o = o || 'binary'), (r = r || new i([2])), !i.isBuffer(r) && (r = new i(r, o)), 'number' == typeof e) ? new s(a(e, r), r, !0) : (!i.isBuffer(e) && (e = new i(e, n)), new s(e, r, !0));
+function u(e, t, n, a) {
+    return i.isBuffer(t) || void 0 === l[t] ? u(e, 'binary', t, n) : ((t = t || 'binary'), (a = a || 'binary'), (n = n || new i([2])), i.isBuffer(n) || (n = new i(n, a)), 'number' == typeof e) ? new s(r(e, n), n, !0) : (i.isBuffer(e) || (e = new i(e, t)), new s(e, n, !0));
 }
-(n.DiffieHellmanGroup = n.createDiffieHellmanGroup = n.getDiffieHellman = l), (n.createDiffieHellman = n.DiffieHellman = c);
+(t.DiffieHellmanGroup = t.createDiffieHellmanGroup = t.getDiffieHellman = o), (t.createDiffieHellman = t.DiffieHellman = u);

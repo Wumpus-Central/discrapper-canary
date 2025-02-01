@@ -1,9 +1,9 @@
 e.exports = {
-    headerContainer: 'headerContainer_ca6d9c',
-    headerBody: 'headerBody_ca6d9c',
-    modalContent: 'modalContent_ca6d9c',
-    modalFooter: 'modalFooter_ca6d9c',
-    submitFooter: 'submitFooter_ca6d9c',
-    textArea: 'textArea_ca6d9c',
-    backButton: 'backButton_ca6d9c'
+    headerContainer: 'headerContainer__4da69',
+    headerBody: 'headerBody__4da69',
+    modalContent: 'modalContent__4da69',
+    modalFooter: 'modalFooter__4da69',
+    submitFooter: 'submitFooter__4da69',
+    textArea: 'textArea__4da69',
+    backButton: 'backButton__4da69'
 };

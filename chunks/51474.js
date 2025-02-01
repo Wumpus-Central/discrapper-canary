@@ -1,6 +1,6 @@
-e.exports = {
-    up: 'up_ea4310',
-    right: 'right_ea4310',
-    down: 'down_ea4310',
-    left: 'left_ea4310'
+var i = {
+    right: 'right__89d2b',
+    down: 'down__89d2b',
+    left: 'left__89d2b'
 };
+e.exports = i;

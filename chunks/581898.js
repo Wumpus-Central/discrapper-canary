@@ -1,7 +1,7 @@
 e.exports = {
-    modalHeader: 'modalHeader_dea185',
-    subtitle: 'subtitle_dea185',
-    buttonRow: 'buttonRow_dea185',
-    removeButton: 'removeButton_dea185',
-    button: 'button_dea185'
+    modalHeader: 'modalHeader_da1bc3',
+    subtitle: 'subtitle_da1bc3',
+    buttonRow: 'buttonRow_da1bc3',
+    removeButton: 'removeButton_da1bc3',
+    button: 'button_da1bc3'
 };

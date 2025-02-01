@@ -1,14 +1,14 @@
 e.exports = {
-    wrapper: 'wrapper_b75bb9',
-    compact: 'compact_b75bb9',
-    cozy: 'cozy_b75bb9',
-    contents: 'contents_b75bb9',
-    content: 'content_b75bb9',
-    blob: 'blob_b75bb9',
-    hidden: 'hidden_b75bb9',
-    header: 'header_b75bb9',
-    attachmentContainer: 'attachmentContainer_b75bb9',
-    attachment: 'attachment_b75bb9',
-    avatar: 'avatar_b75bb9',
-    compactTimestamp: 'compactTimestamp_b75bb9'
+    wrapper: 'wrapper_fc8177',
+    compact: 'compact_fc8177',
+    cozy: 'cozy_fc8177',
+    contents: 'contents_fc8177',
+    content: 'content_fc8177',
+    blob: 'blob_fc8177',
+    hidden: 'hidden_fc8177',
+    header: 'header_fc8177',
+    attachmentContainer: 'attachmentContainer_fc8177',
+    attachment: 'attachment_fc8177',
+    avatar: 'avatar_fc8177',
+    compactTimestamp: 'compactTimestamp_fc8177'
 };

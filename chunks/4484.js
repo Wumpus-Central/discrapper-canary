@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(194625),
     y = n(77188),
     I = n(230554),
-    b = n(780748),
-    T = n(464581),
+    T = n(780748),
+    b = n(464581),
     S = n(732659),
     A = n(86724),
     N = n(847302),
@@ -99,7 +99,7 @@ let x = r.forwardRef(function (e, t) {
             onChangeEnd: ey,
             updateState: eE
         }),
-        eb = r.useCallback(
+        eT = r.useCallback(
             (e, t) => {
                 let n = _.tM(eI, e, x.id),
                     i = _.lk(e, x.guild_id, x.id, n, t);
@@ -110,11 +110,11 @@ let x = r.forwardRef(function (e, t) {
             },
             [x.guild_id, x.id, eI]
         ),
-        eT = r.useCallback(() => {
+        eb = r.useCallback(() => {
             let e;
             let t = $ ? u.Z.getActiveCommand(x.id) : null;
             if (null != t && null != t.options) {
-                let r = eb(t, !1);
+                let r = eT(t, !1);
                 e = r.values;
                 let a = _.cu(eI)
                     .filter((e) => !r.results[e].success)
@@ -149,9 +149,9 @@ let x = r.forwardRef(function (e, t) {
                     t,
                     e
                 );
-        }, [x.id, eI, z, eb, $]);
-    (0, I.Z)(t, eI, x, eT), (0, S.Z)(eI, e_, F);
-    let { handleKeyDown: eS, handleKeyUp: eA } = (0, b.Z)({
+        }, [x.id, eI, z, eT, $]);
+    (0, I.Z)(t, eI, x, eb), (0, S.Z)(eI, e_, F);
+    let { handleKeyDown: eS, handleKeyUp: eA } = (0, T.Z)({
             editor: eI,
             channel: x,
             disableEnterToSubmit: en,
@@ -160,11 +160,11 @@ let x = r.forwardRef(function (e, t) {
             onTab: W,
             onEnter: K,
             allowNewLines: ei,
-            submit: eT,
+            submit: eb,
             hideAutocomplete: Q,
             moveSelection: X
         }),
-        { handlePaste: eN, handleGlobalPaste: eC } = (0, T.Z)(eI, eg, Z),
+        { handlePaste: eN, handleGlobalPaste: eC } = (0, b.Z)(eI, eg, Z),
         eR = r.useCallback(
             (e) => {
                 null == q || q();
@@ -184,10 +184,10 @@ let x = r.forwardRef(function (e, t) {
             let e = () => {
                 var e;
                 let t = null !== (e = u.Z.getActiveCommand(x.id)) && void 0 !== e ? e : null;
-                null !== t && null != t.options && eb(t, !0);
+                null !== t && null != t.options && eT(t, !0);
             };
             return c.Z.addChangeListener(e), () => c.Z.removeChangeListener(e);
-        }, [x, eI, eb]);
+        }, [x, eI, eT]);
     let eD = r.useCallback((e, t) => (0, v.Z)(e, t), []),
         ex = r.useCallback((e) => (0, C.Z)(eI, e, x.id), [x.id, eI]),
         eL = r.useCallback((e) => (0, R.Z)(e), []);

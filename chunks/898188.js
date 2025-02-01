@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(216701),
     y = n(388032),
     I = n(210759);
-let b = 60;
-function T(e) {
+let T = 60;
+function b(e) {
     let { action: t } = e,
         n = (0, l.e7)([_.Z], () => _.Z.getChannel(t.channelId)),
         r = (0, d.ZP)(n, !0);
@@ -97,7 +97,7 @@ function A(e) {
                             style: {
                                 marginBottom: L.interpolate({
                                     inputRange: [0, 1],
-                                    outputRange: [-b, 0]
+                                    outputRange: [-T, 0]
                                 })
                             },
                             children: (0, i.jsxs)(u.P3F, {
@@ -117,7 +117,7 @@ function A(e) {
                                                 color: 'header-primary',
                                                 children: y.intl.format(y.t['/beONz'], { step: A.title })
                                             }),
-                                            (0, i.jsx)(T, { action: A })
+                                            (0, i.jsx)(b, { action: A })
                                         ]
                                     }),
                                     (0, i.jsx)('div', {
@@ -136,7 +136,7 @@ function A(e) {
                             style: {
                                 marginBottom: x.interpolate({
                                     inputRange: [0, 1],
-                                    outputRange: [-b, 0]
+                                    outputRange: [-T, 0]
                                 })
                             },
                             children: [

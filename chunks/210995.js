@@ -1,17 +1,17 @@
-e.r(i);
+e.d(i, { default: () => s });
 var n = e(200651);
 e(192379);
 var a = e(468026),
-    r = e(434404),
-    l = e(388032);
-i.default = (t) =>
+    l = e(434404),
+    r = e(388032);
+let s = (t) =>
     (0, n.jsx)(a.default, {
-        title: l.intl.string(l.t.aCAiGh),
-        body: l.intl.format(l.t['4cJV9f'], { serverName: t.name }),
-        cancelText: l.intl.string(l.t.J2TBi4),
+        title: r.intl.string(r.t.aCAiGh),
+        body: r.intl.format(r.t['4cJV9f'], { serverName: t.name }),
+        cancelText: r.intl.string(r.t.J2TBi4),
         onCancel: () => {
-            r.Z.leaveGuild(t.guildId);
+            l.Z.leaveGuild(t.guildId);
         },
-        confirmText: l.intl.string(l.t.TyCVIi),
+        confirmText: r.intl.string(r.t.TyCVIi),
         ...t
     });

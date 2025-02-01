@@ -1,4 +1,4 @@
 e.exports = {
-    contentSection: 'contentSection_a56260',
-    content: 'content_a56260'
+    contentSection: 'contentSection_b6bcee',
+    content: 'content_b6bcee'
 };

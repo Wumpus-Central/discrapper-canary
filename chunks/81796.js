@@ -1,4 +1,4 @@
 e.exports = {
-    popout: 'popout_a998c0',
-    content: 'content_a998c0'
+    popout: 'popout__0bd4a',
+    content: 'content__0bd4a'
 };

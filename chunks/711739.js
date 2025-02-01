@@ -1,134 +1,134 @@
-let n = 2147483647,
-    r = 36,
+let t = 2147483647,
+    n = 36,
     i = 1,
-    a = 26,
-    o = 38,
+    r = 26,
+    a = 38,
     s = 700,
-    l = 72,
-    u = 128,
-    c = '-',
-    d = /^xn--/,
-    f = /[^\0-\x7E]/,
-    p = /[\x2E\u3002\uFF0E\uFF61]/g,
-    h = {
+    o = 72,
+    l = 128,
+    u = '-',
+    c = /^xn--/,
+    d = /[^\0-\x7E]/,
+    f = /[\x2E\u3002\uFF0E\uFF61]/g,
+    _ = {
         overflow: 'Overflow: input needs wider integers to process',
         'not-basic': 'Illegal input >= 0x80 (not a basic code point)',
         'invalid-input': 'Invalid input'
     },
-    _ = 35,
-    m = Math.floor,
-    g = String.fromCharCode;
-function E(e) {
-    throw RangeError(h[e]);
+    p = 35,
+    h = Math.floor,
+    m = String.fromCharCode;
+function g(e) {
+    throw RangeError(_[e]);
 }
-function v(e, n) {
-    let r = [],
-        i = e.length;
-    for (; i--; ) r[i] = n(e[i]);
-    return r;
-}
-function y(e, n) {
-    let r = e.split('@'),
-        i = '';
-    return r.length > 1 && ((i = r[0] + '@'), (e = r[1])), i + v((e = e.replace(p, '.')).split('.'), n).join('.');
-}
-function b(e) {
+function E(e, t) {
     let n = [],
-        r = 0,
         i = e.length;
-    for (; r < i; ) {
-        let a = e.charCodeAt(r++);
-        if (a >= 55296 && a <= 56319 && r < i) {
-            let i = e.charCodeAt(r++);
-            (64512 & i) == 56320 ? n.push(((1023 & a) << 10) + (1023 & i) + 65536) : (n.push(a), r--);
-        } else n.push(a);
-    }
+    for (; i--; ) n[i] = t(e[i]);
     return n;
 }
+function v(e, t) {
+    let n = e.split('@'),
+        i = '';
+    return n.length > 1 && ((i = n[0] + '@'), (e = n[1])), i + E((e = e.replace(f, '.')).split('.'), t).join('.');
+}
+function y(e) {
+    let t = [],
+        n = 0,
+        i = e.length;
+    for (; n < i; ) {
+        let r = e.charCodeAt(n++);
+        if (r >= 55296 && r <= 56319 && n < i) {
+            let i = e.charCodeAt(n++);
+            (64512 & i) == 56320 ? t.push(((1023 & r) << 10) + (1023 & i) + 65536) : (t.push(r), n--);
+        } else t.push(r);
+    }
+    return t;
+}
 let I = function (e) {
-        return e - 48 < 10 ? e - 22 : e - 65 < 26 ? e - 65 : e - 97 < 26 ? e - 97 : r;
+        return e - 48 < 10 ? e - 22 : e - 65 < 26 ? e - 65 : e - 97 < 26 ? e - 97 : n;
     },
-    T = function (e, n) {
-        return e + 22 + 75 * (e < 26) - ((0 != n) << 5);
+    T = function (e, t) {
+        return e + 22 + 75 * (e < 26) - ((0 != t) << 5);
     },
-    S = function (e, n, i) {
-        let l = 0;
-        for (e = i ? m(e / s) : e >> 1, e += m(e / n); e > (_ * a) >> 1; l += r) e = m(e / _);
-        return m(l + ((_ + 1) * e) / (e + o));
+    b = function (e, t, i) {
+        let o = 0;
+        for (e = i ? h(e / s) : e >> 1, e += h(e / t); e > (p * r) >> 1; o += n) e = h(e / p);
+        return h(o + ((p + 1) * e) / (e + a));
+    },
+    S = function (e) {
+        let a = [],
+            s = e.length,
+            c = 0,
+            d = l,
+            f = o,
+            _ = e.lastIndexOf(u);
+        _ < 0 && (_ = 0);
+        for (let t = 0; t < _; ++t) e.charCodeAt(t) >= 128 && g('not-basic'), a.push(e.charCodeAt(t));
+        for (let o = _ > 0 ? _ + 1 : 0; o < s; ) {
+            let l = c;
+            for (let a = 1, l = n; ; l += n) {
+                o >= s && g('invalid-input');
+                let u = I(e.charCodeAt(o++));
+                (u >= n || u > h((t - c) / a)) && g('overflow'), (c += u * a);
+                let d = l <= f ? i : l >= f + r ? r : l - f;
+                if (u < d) break;
+                let _ = n - d;
+                a > h(t / _) && g('overflow'), (a *= _);
+            }
+            let u = a.length + 1;
+            (f = b(c - l, u, 0 == l)), h(c / u) > t - d && g('overflow'), (d += h(c / u)), (c %= u), a.splice(c++, 0, d);
+        }
+        return String.fromCodePoint(...a);
     },
     A = function (e) {
-        let o = [],
-            s = e.length,
+        let a = [],
+            s = (e = y(e)).length,
+            c = l,
             d = 0,
-            f = u,
-            p = l,
-            h = e.lastIndexOf(c);
-        h < 0 && (h = 0);
-        for (let n = 0; n < h; ++n) e.charCodeAt(n) >= 128 && E('not-basic'), o.push(e.charCodeAt(n));
-        for (let l = h > 0 ? h + 1 : 0; l < s; ) {
-            let u = d;
-            for (let o = 1, u = r; ; u += r) {
-                l >= s && E('invalid-input');
-                let c = I(e.charCodeAt(l++));
-                (c >= r || c > m((n - d) / o)) && E('overflow'), (d += c * o);
-                let f = u <= p ? i : u >= p + a ? a : u - p;
-                if (c < f) break;
-                let h = r - f;
-                o > m(n / h) && E('overflow'), (o *= h);
-            }
-            let c = o.length + 1;
-            (p = S(d - u, c, 0 == u)), m(d / c) > n - f && E('overflow'), (f += m(d / c)), (d %= c), o.splice(d++, 0, f);
-        }
-        return String.fromCodePoint(...o);
-    },
-    C = function (e) {
-        let o = [],
-            s = (e = b(e)).length,
-            d = u,
-            f = 0,
-            p = l;
-        for (let n of e) n < 128 && o.push(g(n));
-        let h = o.length,
-            _ = h;
-        for (h && o.push(c); _ < s; ) {
-            let s = n;
-            for (let n of e) n >= d && n < s && (s = n);
-            let l = _ + 1;
-            for (let u of (s - d > m((n - f) / l) && E('overflow'), (f += (s - d) * l), (d = s), e))
-                if ((u < d && ++f > n && E('overflow'), u == d)) {
-                    let e = f;
-                    for (let n = r; ; n += r) {
-                        let s = n <= p ? i : n >= p + a ? a : n - p;
+            f = o;
+        for (let t of e) t < 128 && a.push(m(t));
+        let _ = a.length,
+            p = _;
+        for (_ && a.push(u); p < s; ) {
+            let s = t;
+            for (let t of e) t >= c && t < s && (s = t);
+            let o = p + 1;
+            for (let l of (s - c > h((t - d) / o) && g('overflow'), (d += (s - c) * o), (c = s), e))
+                if ((l < c && ++d > t && g('overflow'), l == c)) {
+                    let e = d;
+                    for (let t = n; ; t += n) {
+                        let s = t <= f ? i : t >= f + r ? r : t - f;
                         if (e < s) break;
-                        let l = e - s,
-                            u = r - s;
-                        o.push(g(T(s + (l % u), 0))), (e = m(l / u));
+                        let o = e - s,
+                            l = n - s;
+                        a.push(m(T(s + (o % l), 0))), (e = h(o / l));
                     }
-                    o.push(g(T(e, 0))), (p = S(f, l, _ == h)), (f = 0), ++_;
+                    a.push(m(T(e, 0))), (f = b(d, o, p == _)), (d = 0), ++p;
                 }
-            ++f, ++d;
+            ++d, ++c;
         }
-        return o.join('');
+        return a.join('');
     },
     N = function (e) {
-        return y(e, function (e) {
-            return d.test(e) ? A(e.slice(4).toLowerCase()) : e;
+        return v(e, function (e) {
+            return c.test(e) ? S(e.slice(4).toLowerCase()) : e;
         });
     },
-    R = function (e) {
-        return y(e, function (e) {
-            return f.test(e) ? 'xn--' + C(e) : e;
+    C = function (e) {
+        return v(e, function (e) {
+            return d.test(e) ? 'xn--' + A(e) : e;
         });
     },
-    O = {
+    R = {
         version: '2.1.0',
         ucs2: {
-            decode: b,
+            decode: y,
             encode: (e) => String.fromCodePoint(...e)
         },
-        decode: A,
-        encode: C,
-        toASCII: R,
+        decode: S,
+        encode: A,
+        toASCII: C,
         toUnicode: N
     };
-e.exports = O;
+e.exports = R;

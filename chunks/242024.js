@@ -1,13 +1,13 @@
 e.exports = {
-    gradientSplash: 'gradientSplash_b3820d',
-    modalHeader: 'modalHeader_b3820d',
-    title: 'title_b3820d',
-    heroImage: 'heroImage_b3820d',
-    guildContainer: 'guildContainer_b3820d',
-    guildIcon: 'guildIcon_b3820d',
-    closeButton: 'closeButton_b3820d',
-    close: 'close_b3820d',
-    footerButtons: 'footerButtons_b3820d',
-    footer: 'footer_b3820d',
-    container: 'container_b3820d'
+    gradientSplash: 'gradientSplash__6d426',
+    modalHeader: 'modalHeader__6d426',
+    title: 'title__6d426',
+    heroImage: 'heroImage__6d426',
+    guildContainer: 'guildContainer__6d426',
+    guildIcon: 'guildIcon__6d426',
+    closeButton: 'closeButton__6d426',
+    close: 'close__6d426',
+    footerButtons: 'footerButtons__6d426',
+    footer: 'footer__6d426',
+    container: 'container__6d426'
 };

@@ -1,15 +1,15 @@
-let i = r(868667),
-    a = (e, n) => {
-        let r = i(e, null, !0),
-            a = i(n, null, !0),
-            o = r.compare(a);
-        if (0 === o) return null;
-        let s = o > 0,
-            l = s ? r : a,
-            u = s ? a : r,
-            c = !!l.prerelease.length;
-        if (u.prerelease.length && !c) return u.patch || u.minor ? (l.patch ? 'patch' : l.minor ? 'minor' : 'major') : 'major';
-        let d = c ? 'pre' : '';
-        return r.major !== a.major ? d + 'major' : r.minor !== a.minor ? d + 'minor' : r.patch !== a.patch ? d + 'patch' : 'prerelease';
+let i = n(868667),
+    r = (e, t) => {
+        let n = i(e, null, !0),
+            r = i(t, null, !0),
+            a = n.compare(r);
+        if (0 === a) return null;
+        let s = a > 0,
+            o = s ? n : r,
+            l = s ? r : n,
+            u = !!o.prerelease.length;
+        if (l.prerelease.length && !u) return l.patch || l.minor ? (o.patch ? 'patch' : o.minor ? 'minor' : 'major') : 'major';
+        let c = u ? 'pre' : '';
+        return n.major !== r.major ? c + 'major' : n.minor !== r.minor ? c + 'minor' : n.patch !== r.patch ? c + 'patch' : 'prerelease';
     };
-e.exports = a;
+e.exports = r;

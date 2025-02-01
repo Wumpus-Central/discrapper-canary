@@ -1,6 +1,6 @@
 e.exports = {
-    infoWrapper: 'infoWrapper_aad57c',
-    infoItem: 'infoItem_aad57c',
-    divider: 'divider_aad57c',
-    spacing: 'spacing_aad57c'
+    infoWrapper: 'infoWrapper__60406',
+    infoItem: 'infoItem__60406',
+    divider: 'divider__60406',
+    spacing: 'spacing__60406'
 };

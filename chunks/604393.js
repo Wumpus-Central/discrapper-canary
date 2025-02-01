@@ -1,6 +1,6 @@
 t.exports = {
-    bugReporterSubmitModalRoot: 'bugReporterSubmitModalRoot_bc7a83',
-    modalContent: 'modalContent_bc7a83',
-    closeButton: 'closeButton_bc7a83',
-    submitText: 'submitText_bc7a83'
+    bugReporterSubmitModalRoot: 'bugReporterSubmitModalRoot__341b5',
+    modalContent: 'modalContent__341b5',
+    closeButton: 'closeButton__341b5',
+    submitText: 'submitText__341b5'
 };

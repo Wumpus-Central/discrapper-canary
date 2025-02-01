@@ -1,104 +1,104 @@
+n.d(t, { Z: () => S }), n(47120);
 var i,
-    a = r(47120);
-var o = r(442837),
-    s = r(570140),
-    l = r(180335);
-function u(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(180335);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let c = new Map(),
-    d = new Set(),
-    f = null,
-    p = !1,
-    h = !1;
+let l = new Map(),
+    u = new Set(),
+    c = null,
+    d = !1,
+    f = !1;
 function _(e) {
-    let { userId: n } = e;
-    d.add(n);
+    let { userId: t } = e;
+    u.add(t);
 }
-function m(e) {
-    let { outbox: n, userId: r } = e;
-    c.set(r, {
-        ...n,
+function p(e) {
+    let { outbox: t, userId: n } = e;
+    l.set(n, {
+        ...t,
         lastFetched: Date.now()
     }),
-        d.delete(r);
+        u.delete(n);
+}
+function h(e) {
+    let { userId: t } = e;
+    u.delete(t);
+}
+function m() {
+    (c = null), (d = !0);
 }
 function g(e) {
-    let { userId: n } = e;
-    d.delete(n);
-}
-function E() {
-    (f = null), (p = !0);
-}
-function v(e) {
-    let { entry: n, userId: r } = e;
-    f = null;
-    let i = c.get(r);
+    let { entry: t, userId: n } = e;
+    c = null;
+    let i = l.get(n);
     if (null == i) return !1;
-    let a = i.entries.filter((e) => e.id !== n.id);
-    c.set(r, {
+    let r = i.entries.filter((e) => e.id !== t.id);
+    l.set(n, {
         ...i,
-        entries: a
+        entries: r
     }),
-        (p = !1);
+        (d = !1);
 }
-function y(e) {
-    let { error: n } = e;
-    (f = n), (p = !1);
+function E(e) {
+    let { error: t } = e;
+    (c = t), (d = !1);
 }
-function b() {
-    (f = null), (p = !1);
+function v() {
+    (c = null), (d = !1);
+}
+function y() {
+    (l = new Map()), (u = new Set()), (c = null), (d = !1);
 }
 function I() {
-    (c = new Map()), (d = new Set()), (f = null), (p = !1);
+    y(), (f = !0);
 }
 function T() {
-    I(), (h = !0);
+    y();
 }
-function S() {
-    I();
-}
-class A extends (i = o.ZP.Store) {
+class b extends (i = r.ZP.Store) {
     getMatchingOutboxEntry(e) {
-        let { activity: n, userId: r } = e,
-            i = c.get(r);
-        if (null != i && null != n) return (0, l.vu)(i.entries, n);
+        let { activity: t, userId: n } = e,
+            i = l.get(n);
+        if (null != i && null != t) return (0, s.vu)(i.entries, t);
     }
     getUserOutbox(e) {
-        return c.get(e);
+        return l.get(e);
     }
     isFetchingUserOutbox(e) {
-        return d.has(e);
+        return u.has(e);
     }
     get deleteOutboxEntryError() {
-        return f;
+        return c;
     }
     get isDeletingEntryHistory() {
-        return p;
+        return d;
     }
     get hasInitialized() {
-        return h;
+        return f;
     }
 }
-u(A, 'displayName', 'ContentInventoryOutboxStore'),
-    (n.Z = new A(s.Z, {
-        CONNECTION_OPEN: T,
-        LOGOUT: S,
-        CONTENT_INVENTORY_FETCH_OUTBOX_START: _,
-        CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: m,
-        CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: g,
-        CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: E,
-        CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: v,
-        CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: y,
-        CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: b
-    }));
+o(b, 'displayName', 'ContentInventoryOutboxStore');
+let S = new b(a.Z, {
+    CONNECTION_OPEN: I,
+    LOGOUT: T,
+    CONTENT_INVENTORY_FETCH_OUTBOX_START: _,
+    CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: p,
+    CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: h,
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: m,
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: g,
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: E,
+    CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: v
+});

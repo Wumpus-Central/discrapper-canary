@@ -1,6 +1,6 @@
 e.exports = {
-    circleIconButton: 'circleIconButton_db6521',
-    selected: 'selected_db6521',
-    circleIcon: 'circleIcon_db6521',
-    pill: 'pill_db6521'
+    circleIconButton: 'circleIconButton__5bc7e',
+    selected: 'selected__5bc7e',
+    circleIcon: 'circleIcon__5bc7e',
+    pill: 'pill__5bc7e'
 };

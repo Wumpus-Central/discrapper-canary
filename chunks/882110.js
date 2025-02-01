@@ -1,12 +1,12 @@
 e.exports = {
-    voiceUser: 'voiceUser_cebb84',
-    flipped: 'flipped_cebb84',
-    avatar: 'avatar_cebb84',
-    username: 'username_cebb84',
-    effect: 'effect_cebb84',
-    clanTag: 'clanTag_cebb84',
-    voiceIcons: 'voiceIcons_cebb84',
-    voiceIcon: 'voiceIcon_cebb84',
-    interactive: 'interactive_cebb84',
-    speaking: 'speaking_cebb84'
+    voiceUser: 'voiceUser_adebba',
+    flipped: 'flipped_adebba',
+    avatar: 'avatar_adebba',
+    username: 'username_adebba',
+    effect: 'effect_adebba',
+    clanTag: 'clanTag_adebba',
+    voiceIcons: 'voiceIcons_adebba',
+    voiceIcon: 'voiceIcon_adebba',
+    interactive: 'interactive_adebba',
+    speaking: 'speaking_adebba'
 };

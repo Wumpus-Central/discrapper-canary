@@ -1,4 +1,4 @@
-var n = function (e) {
+var t = function (e) {
     switch (typeof e) {
         case 'string':
             return e;
@@ -10,22 +10,22 @@ var n = function (e) {
             return '';
     }
 };
-e.exports = function (e, r, i, a) {
-    return ((r = r || '&'), (i = i || '='), null === e && (e = void 0), 'object' == typeof e)
+e.exports = function (e, n, i, r) {
+    return ((n = n || '&'), (i = i || '='), null === e && (e = void 0), 'object' == typeof e)
         ? Object.keys(e)
-              .map(function (a) {
-                  var o = encodeURIComponent(n(a)) + i;
-                  return Array.isArray(e[a])
-                      ? e[a]
+              .map(function (r) {
+                  var a = encodeURIComponent(t(r)) + i;
+                  return Array.isArray(e[r])
+                      ? e[r]
                             .map(function (e) {
-                                return o + encodeURIComponent(n(e));
+                                return a + encodeURIComponent(t(e));
                             })
-                            .join(r)
-                      : o + encodeURIComponent(n(e[a]));
+                            .join(n)
+                      : a + encodeURIComponent(t(e[r]));
               })
               .filter(Boolean)
-              .join(r)
-        : a
-          ? encodeURIComponent(n(a)) + i + encodeURIComponent(n(e))
+              .join(n)
+        : r
+          ? encodeURIComponent(t(r)) + i + encodeURIComponent(t(e))
           : '';
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    wrapper: 'wrapper_a2f8f7',
-    lowImportance: 'lowImportance_a2f8f7'
+    wrapper: 'wrapper__8b9fc',
+    lowImportance: 'lowImportance__8b9fc'
 };

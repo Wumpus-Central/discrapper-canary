@@ -1,57 +1,57 @@
-a.r(t);
+a.d(t, { default: () => m });
 var n = a(200651),
-    o = a(192379),
-    i = a(481060),
-    s = a(230711),
-    l = a(197115),
-    r = a(626135),
-    c = a(981631),
+    i = a(192379),
+    s = a(481060),
+    o = a(230711),
+    r = a(197115),
+    c = a(626135),
+    l = a(981631),
     d = a(474936),
-    M = a(388032),
-    u = a(863640);
-t.default = (e) => {
+    u = a(388032),
+    h = a(863640);
+let m = (e) => {
     let { transitionState: t, onClose: a } = e;
     return (
-        o.useEffect(() => {
-            r.default.track(c.rMx.PREMIUM_UPSELL_VIEWED, { type: d.cd.EMOJI_AUTOCOMPLETE_MODAL });
+        i.useEffect(() => {
+            c.default.track(l.rMx.PREMIUM_UPSELL_VIEWED, { type: d.cd.EMOJI_AUTOCOMPLETE_MODAL });
         }, []),
-        (0, n.jsxs)(i.ModalRoot, {
+        (0, n.jsxs)(s.Y0X, {
             transitionState: t,
-            size: i.ModalSize.SMALL,
+            size: s.CgR.SMALL,
             'aria-label': '',
             children: [
-                (0, n.jsxs)(i.ModalContent, {
-                    className: u.content,
+                (0, n.jsxs)(s.hzk, {
+                    className: h.content,
                     children: [
                         (0, n.jsx)('div', {
                             role: 'image',
-                            className: u.image
+                            className: h.image
                         }),
-                        (0, n.jsx)(i.Heading, {
+                        (0, n.jsx)(s.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: u.header,
-                            children: M.intl.string(M.t.Uq1zJS)
+                            className: h.header,
+                            children: u.intl.string(u.t.Uq1zJS)
                         }),
-                        (0, n.jsx)(i.Text, {
+                        (0, n.jsx)(s.Text, {
                             variant: 'text-md/normal',
-                            children: M.intl.format(M.t.xPaO3t, {
+                            children: u.intl.format(u.t.xPaO3t, {
                                 onLearnMore: () => {
-                                    a(), s.Z.open(c.oAB.PREMIUM);
+                                    a(), o.Z.open(l.oAB.PREMIUM);
                                 }
                             })
                         })
                     ]
                 }),
-                (0, n.jsx)(i.ModalFooter, {
-                    children: (0, n.jsx)(l.Z, {
+                (0, n.jsx)(s.mzw, {
+                    children: (0, n.jsx)(r.Z, {
                         onClick: a,
                         buttonText: 'Get Nitro',
                         subscriptionTier: d.Si.TIER_2,
-                        premiumModalAnalyticsLocation: { page: c.ZY5.CHANNEL_AUTOCOMPLETE_EMOJI_UPSELL_MODAL }
+                        premiumModalAnalyticsLocation: { page: l.ZY5.CHANNEL_AUTOCOMPLETE_EMOJI_UPSELL_MODAL }
                     })
                 }),
-                (0, n.jsx)(i.ModalCloseButton, {
-                    className: u.closeButton,
+                (0, n.jsx)(s.olH, {
+                    className: h.closeButton,
                     onClick: a
                 })
             ]

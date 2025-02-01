@@ -1,62 +1,62 @@
-var i = r(67867),
-    a = r(294377),
-    o = r(156741),
-    s = r(570596),
-    l = r(96403),
-    u = r(821819),
-    c = r(735471),
-    d = r(538769),
-    f = r(780524),
-    p = r(492091),
-    h = r(828596),
-    _ = String,
-    m = a('JSON', 'stringify'),
-    g = l(/./.exec),
-    E = l(''.charAt),
-    v = l(''.charCodeAt),
-    y = l(''.replace),
-    b = l((1).toString),
+var i = n(67867),
+    r = n(294377),
+    a = n(156741),
+    s = n(570596),
+    o = n(96403),
+    l = n(821819),
+    u = n(735471),
+    c = n(538769),
+    d = n(780524),
+    f = n(492091),
+    _ = n(828596),
+    p = String,
+    h = r('JSON', 'stringify'),
+    m = o(/./.exec),
+    g = o(''.charAt),
+    E = o(''.charCodeAt),
+    v = o(''.replace),
+    y = o((1).toString),
     I = /[\uD800-\uDFFF]/g,
     T = /^[\uD800-\uDBFF]$/,
-    S = /^[\uDC00-\uDFFF]$/,
-    A =
-        !h ||
-        u(function () {
-            var e = a('Symbol')('stringify detection');
-            return '[null]' !== m([e]) || '{}' !== m({ a: e }) || '{}' !== m(Object(e));
+    b = /^[\uDC00-\uDFFF]$/,
+    S =
+        !_ ||
+        l(function () {
+            var e = r('Symbol')('stringify detection');
+            return '[null]' !== h([e]) || '{}' !== h({ a: e }) || '{}' !== h(Object(e));
         }),
-    C = u(function () {
-        return '"\uDF06\uD834"' !== m('\uDF06\uD834') || '"\uDEAD"' !== m('\uDEAD');
+    A = l(function () {
+        return '"\uDF06\uD834"' !== h('\uDF06\uD834') || '"\uDEAD"' !== h('\uDEAD');
     }),
-    N = function (e, n) {
-        var r = f(arguments),
-            i = p(n);
-        if (!(!c(i) && (void 0 === e || d(e))))
+    N = function (e, t) {
+        var n = d(arguments),
+            i = f(t);
+        if (!(!u(i) && (void 0 === e || c(e))))
             return (
-                (r[1] = function (e, n) {
-                    if ((c(i) && (n = s(i, this, _(e), n)), !d(n))) return n;
+                (n[1] = function (e, t) {
+                    if ((u(i) && (t = s(i, this, p(e), t)), !c(t))) return t;
                 }),
-                o(m, null, r)
+                a(h, null, n)
             );
     },
-    R = function (e, n, r) {
-        var i = E(r, n - 1),
-            a = E(r, n + 1);
-        return (g(T, e) && !g(S, a)) || (g(S, e) && !g(T, i)) ? '\\u' + b(v(e, 0), 16) : e;
+    C = function (e, t, n) {
+        var i = g(n, t - 1),
+            r = g(n, t + 1);
+        return (m(T, e) && !m(b, r)) || (m(b, e) && !m(T, i)) ? '\\u' + y(E(e, 0), 16) : e;
     };
-m &&
+h &&
     i(
         {
             target: 'JSON',
             stat: !0,
             arity: 3,
-            forced: A || C
+            forced: S || A
         },
         {
-            stringify: function (e, n, r) {
-                var i = f(arguments),
-                    a = o(A ? N : m, null, i);
-                return C && 'string' == typeof a ? y(a, I, R) : a;
+            stringify: function (e, t, n) {
+                var i = d(arguments),
+                    r = a(S ? N : h, null, i);
+                return A && 'string' == typeof r ? v(r, I, C) : r;
             }
         }
     );

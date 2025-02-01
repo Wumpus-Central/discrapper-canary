@@ -1,77 +1,77 @@
-var i = r(413135).Buffer,
-    a = r(814033),
-    o = new (r(687363))(),
-    s = new a(24),
-    l = new a(11),
-    u = new a(10),
-    c = new a(3),
-    d = new a(7),
-    f = r(988608),
-    p = r(706178);
-function h(e, n) {
-    return (n = n || 'utf8'), !i.isBuffer(e) && (e = new i(e, n)), (this._pub = new a(e)), this;
+var i = n(413135).Buffer,
+    r = n(814033),
+    a = new (n(687363))(),
+    s = new r(24),
+    o = new r(11),
+    l = new r(10),
+    u = new r(3),
+    c = new r(7),
+    d = n(988608),
+    f = n(706178);
+function _(e, t) {
+    return (t = t || 'utf8'), i.isBuffer(e) || (e = new i(e, t)), (this._pub = new r(e)), this;
 }
-function _(e, n) {
-    return (n = n || 'utf8'), !i.isBuffer(e) && (e = new i(e, n)), (this._priv = new a(e)), this;
+function p(e, t) {
+    return (t = t || 'utf8'), i.isBuffer(e) || (e = new i(e, t)), (this._priv = new r(e)), this;
 }
-e.exports = E;
-var m = {};
-function g(e, n) {
-    var r,
-        i = n.toString('hex'),
-        a = [i, e.toString(16)].join('_');
-    if (a in m) return m[a];
-    var p = 0;
-    if (e.isEven() || !f.simpleSieve || !f.fermatTest(e) || !o.test(e)) return (p += 1), '02' === i || '05' === i ? (p += 8) : (p += 4), (m[a] = p), p;
-    switch ((!o.test(e.shrn(1)) && (p += 2), i)) {
+e.exports = g;
+var h = {};
+function m(e, t) {
+    var n,
+        i = t.toString('hex'),
+        r = [i, e.toString(16)].join('_');
+    if (r in h) return h[r];
+    var f = 0;
+    if (e.isEven() || !d.simpleSieve || !d.fermatTest(e) || !a.test(e)) return (f += 1), '02' === i || '05' === i ? (f += 8) : (f += 4), (h[r] = f), f;
+    switch ((a.test(e.shrn(1)) || (f += 2), i)) {
         case '02':
-            e.mod(s).cmp(l) && (p += 8);
+            e.mod(s).cmp(o) && (f += 8);
             break;
         case '05':
-            (r = e.mod(u)).cmp(c) && r.cmp(d) && (p += 8);
+            (n = e.mod(l)).cmp(u) && n.cmp(c) && (f += 8);
             break;
         default:
-            p += 4;
+            f += 4;
     }
-    return (m[a] = p), p;
+    return (h[r] = f), f;
 }
-function E(e, n, r) {
-    this.setGenerator(n), (this.__prime = new a(e)), (this._prime = a.mont(this.__prime)), (this._primeLen = e.length), (this._pub = void 0), (this._priv = void 0), (this._primeCode = void 0), r ? ((this.setPublicKey = h), (this.setPrivateKey = _)) : (this._primeCode = 8);
+function g(e, t, n) {
+    this.setGenerator(t), (this.__prime = new r(e)), (this._prime = r.mont(this.__prime)), (this._primeLen = e.length), (this._pub = void 0), (this._priv = void 0), (this._primeCode = void 0), n ? ((this.setPublicKey = _), (this.setPrivateKey = p)) : (this._primeCode = 8);
 }
-function v(e, n) {
-    var r = new i(e.toArray());
-    return n ? r.toString(n) : r;
+function E(e, t) {
+    var n = new i(e.toArray());
+    return t ? n.toString(t) : n;
 }
-Object.defineProperty(E.prototype, 'verifyError', {
+Object.defineProperty(g.prototype, 'verifyError', {
     enumerable: !0,
     get: function () {
-        return 'number' != typeof this._primeCode && (this._primeCode = g(this.__prime, this.__gen)), this._primeCode;
+        return 'number' != typeof this._primeCode && (this._primeCode = m(this.__prime, this.__gen)), this._primeCode;
     }
 }),
-    (E.prototype.generateKeys = function () {
-        return !this._priv && (this._priv = new a(p(this._primeLen))), (this._pub = this._gen.toRed(this._prime).redPow(this._priv).fromRed()), this.getPublicKey();
+    (g.prototype.generateKeys = function () {
+        return this._priv || (this._priv = new r(f(this._primeLen))), (this._pub = this._gen.toRed(this._prime).redPow(this._priv).fromRed()), this.getPublicKey();
     }),
-    (E.prototype.computeSecret = function (e) {
-        var n = new i((e = (e = new a(e)).toRed(this._prime)).redPow(this._priv).fromRed().toArray()),
-            r = this.getPrime();
-        if (n.length < r.length) {
-            var o = new i(r.length - n.length);
-            o.fill(0), (n = i.concat([o, n]));
+    (g.prototype.computeSecret = function (e) {
+        var t = new i((e = (e = new r(e)).toRed(this._prime)).redPow(this._priv).fromRed().toArray()),
+            n = this.getPrime();
+        if (t.length < n.length) {
+            var a = new i(n.length - t.length);
+            a.fill(0), (t = i.concat([a, t]));
         }
-        return n;
+        return t;
     }),
-    (E.prototype.getPublicKey = function (e) {
-        return v(this._pub, e);
+    (g.prototype.getPublicKey = function (e) {
+        return E(this._pub, e);
     }),
-    (E.prototype.getPrivateKey = function (e) {
-        return v(this._priv, e);
+    (g.prototype.getPrivateKey = function (e) {
+        return E(this._priv, e);
     }),
-    (E.prototype.getPrime = function (e) {
-        return v(this.__prime, e);
+    (g.prototype.getPrime = function (e) {
+        return E(this.__prime, e);
     }),
-    (E.prototype.getGenerator = function (e) {
-        return v(this._gen, e);
+    (g.prototype.getGenerator = function (e) {
+        return E(this._gen, e);
     }),
-    (E.prototype.setGenerator = function (e, n) {
-        return (n = n || 'utf8'), !i.isBuffer(e) && (e = new i(e, n)), (this.__gen = e), (this._gen = new a(e)), this;
+    (g.prototype.setGenerator = function (e, t) {
+        return (t = t || 'utf8'), i.isBuffer(e) || (e = new i(e, t)), (this.__gen = e), (this._gen = new r(e)), this;
     });

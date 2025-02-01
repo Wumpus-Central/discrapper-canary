@@ -1,13 +1,13 @@
 e.exports = {
-    table: 'table_b3d000',
-    row: 'row_b3d000',
-    rowName: 'rowName_b3d000',
-    rowOption: 'rowOption_b3d000',
-    icon: 'icon_b3d000',
-    channels: 'channels_b3d000',
-    channelRow: 'channelRow_b3d000',
-    modColor: 'modColor_b3d000',
-    removeButton: 'removeButton_b3d000',
-    channel: 'channel_b3d000',
-    separator: 'separator_b3d000'
+    table: 'table__4126d',
+    row: 'row__4126d',
+    rowName: 'rowName__4126d',
+    rowOption: 'rowOption__4126d',
+    icon: 'icon__4126d',
+    channels: 'channels__4126d',
+    channelRow: 'channelRow__4126d',
+    modColor: 'modColor__4126d',
+    removeButton: 'removeButton__4126d',
+    channel: 'channel__4126d',
+    separator: 'separator__4126d'
 };

@@ -1,13 +1,13 @@
 t.exports = {
-    header: 'header_c862ac',
-    closeButton: 'closeButton_c862ac',
-    description: 'description_c862ac',
-    content: 'content_c862ac',
-    infoRow: 'infoRow_c862ac',
-    dnsRecordContainer: 'dnsRecordContainer_c862ac',
-    httpFileContainer: 'httpFileContainer_c862ac',
-    text: 'text_c862ac',
-    list: 'list_c862ac',
-    footer: 'footer_c862ac',
-    footerInner: 'footerInner_c862ac'
+    header: 'header__75b62',
+    closeButton: 'closeButton__75b62',
+    description: 'description__75b62',
+    content: 'content__75b62',
+    infoRow: 'infoRow__75b62',
+    dnsRecordContainer: 'dnsRecordContainer__75b62',
+    httpFileContainer: 'httpFileContainer__75b62',
+    text: 'text__75b62',
+    list: 'list__75b62',
+    footer: 'footer__75b62',
+    footerInner: 'footerInner__75b62'
 };

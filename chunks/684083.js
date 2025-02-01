@@ -1,8 +1,8 @@
-var i = r(731383),
-    a = r(564250),
-    o = r(363406);
+var i = n(731383),
+    r = n(564250),
+    a = n(363406);
 e.exports = {
-    formats: o,
-    parse: a,
+    formats: a,
+    parse: r,
     stringify: i
 };

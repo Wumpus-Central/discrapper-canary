@@ -1,13 +1,13 @@
-var n;
-(e.exports.timeout = function (e, r) {
+var t;
+(e.exports.timeout = function (e, n) {
     var i,
-        a = new n();
+        r = new t();
     return Promise.race([
         e,
-        new Promise(function (e, n) {
+        new Promise(function (e, t) {
             i = setTimeout(function () {
-                n(a);
-            }, r);
+                t(r);
+            }, n);
         })
     ]).then(
         function (e) {
@@ -18,8 +18,8 @@ var n;
         }
     );
 }),
-    ((n = e.exports.TimeoutError =
+    ((t = e.exports.TimeoutError =
         function () {
             Error.call(this), (this.stack = Error().stack), (this.message = 'Timeout');
         }).prototype = Object.create(Error.prototype)),
-    (n.prototype.name = 'TimeoutError');
+    (t.prototype.name = 'TimeoutError');

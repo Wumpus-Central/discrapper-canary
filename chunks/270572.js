@@ -1,7 +1,7 @@
-var i = r(671235).default,
-    a = r(53236);
-function o(e) {
-    var n = a(e, 'string');
-    return 'symbol' == i(n) ? n : n + '';
+var i = n(671235).default,
+    r = n(53236);
+function a(e) {
+    var t = r(e, 'string');
+    return 'symbol' == i(t) ? t : t + '';
 }
-(e.exports = o), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = a), (e.exports.__esModule = !0), (e.exports.default = e.exports);

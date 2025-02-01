@@ -1,6 +1,6 @@
 t.exports = {
-    title: 'title_dd48c5',
-    warningText: 'warningText_dd48c5',
-    linkCalloutContainer: 'linkCalloutContainer_dd48c5',
-    checkbox: 'checkbox_dd48c5'
+    title: 'title_ad9c52',
+    warningText: 'warningText_ad9c52',
+    linkCalloutContainer: 'linkCalloutContainer_ad9c52',
+    checkbox: 'checkbox_ad9c52'
 };

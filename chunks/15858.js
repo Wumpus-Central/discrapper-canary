@@ -1,6 +1,6 @@
-var r, i;
-(r = { value: !0 }),
-    !(function (e) {
+var n, i;
+(n = { value: !0 }),
+    (function (e) {
         (e.Unidentified = 'Unidentified'),
             (e.Alt = 'Alt'),
             (e.AltGraph = 'AltGraph'),
@@ -317,4 +317,4 @@ var r, i;
             (e.Divide = 'Divide'),
             (e.Subtract = 'Subtract'),
             (e.Separator = 'Separator');
-    })((i = n.Key || (n.Key = {})));
+    })((i = t.Key || (t.Key = {})));

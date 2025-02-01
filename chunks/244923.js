@@ -1,22 +1,22 @@
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(366939),
-    s = r(853872),
-    l = r(212895),
-    u = r(296848);
-function c(e) {
-    let { activeSubscription: n, onNext: r, isSubmitting: c, paymentSourceId: d, buttonLabel: f, analyticsLocations: p } = e,
-        h = async () => {
-            let e = s.Z.getPaymentSource(d);
-            null != e && (await (0, l.i1)(d, (0, u.yb)(n)), await o.tq(n, e, n.currency, p), r());
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(366939),
+    s = n(853872),
+    o = n(212895),
+    l = n(296848);
+let u = function (e) {
+    let { activeSubscription: t, onNext: n, isSubmitting: u, paymentSourceId: c, buttonLabel: d, analyticsLocations: f } = e,
+        _ = async () => {
+            let e = s.Z.getPaymentSource(c);
+            null != e && (await (0, o.i1)(c, (0, l.yb)(t)), await a.tq(t, e, t.currency, f), n());
         };
-    return (0, i.jsx)(a.Button, {
+    return (0, i.jsx)(r.zxk, {
         'data-testid': 'purchase',
-        onClick: h,
-        color: a.Button.Colors.GREEN,
-        submitting: c,
-        children: f
+        onClick: _,
+        color: r.zxk.Colors.GREEN,
+        submitting: u,
+        children: d
     });
-}
-n.Z = c;
+};

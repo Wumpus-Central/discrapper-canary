@@ -1,32 +1,32 @@
-var i = r(67867),
-    a = r(96403),
-    o = r(548828),
-    s = r(463374),
-    l = r(730427),
-    u = r(146321),
-    c = r(414629),
-    d = u.Map,
-    f = u.has,
-    p = u.get,
-    h = u.set,
-    _ = a([].push);
+var i = n(67867),
+    r = n(96403),
+    a = n(548828),
+    s = n(463374),
+    o = n(730427),
+    l = n(146321),
+    u = n(414629),
+    c = l.Map,
+    d = l.has,
+    f = l.get,
+    _ = l.set,
+    p = r([].push);
 i(
     {
         target: 'Map',
         stat: !0,
-        forced: c
+        forced: u
     },
     {
-        groupBy: function (e, n) {
-            s(e), o(n);
-            var r = new d(),
+        groupBy: function (e, t) {
+            s(e), a(t);
+            var n = new c(),
                 i = 0;
             return (
-                l(e, function (e) {
-                    var a = n(e, i++);
-                    f(r, a) ? _(p(r, a), e) : h(r, a, [e]);
+                o(e, function (e) {
+                    var r = t(e, i++);
+                    d(n, r) ? p(f(n, r), e) : _(n, r, [e]);
                 }),
-                r
+                n
             );
         }
     }

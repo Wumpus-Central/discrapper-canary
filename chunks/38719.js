@@ -1,5 +1,5 @@
 t.exports = {
-    contentContainer: 'contentContainer_babb36',
-    title: 'title_babb36',
-    subtitle: 'subtitle_babb36'
+    contentContainer: 'contentContainer_f0889e',
+    title: 'title_f0889e',
+    subtitle: 'subtitle_f0889e'
 };

@@ -47,11 +47,11 @@ function f(e) {
         });
     }, [n]);
     let { focusPath: y } = g,
-        [I, b] = i.useState(!1),
-        [T, S] = i.useState(!1),
+        [I, T] = i.useState(!1),
+        [b, S] = i.useState(!1),
         [{ onItemFocusMemoizer: A, onItemMouseEnterMemoizer: N }] = i.useState(() => ({
             onItemFocusMemoizer: new s.$o((e) => () => {
-                b(!0),
+                T(!0),
                     E({
                         type: r.B.SET_FOCUS_PATH,
                         path: e.split(o)
@@ -91,11 +91,11 @@ function f(e) {
             [v, t, y, _, h]
         ),
         R = i.useCallback(() => {
-            I || b(!0);
+            I || T(!0);
         }, [I]),
         O = i.useCallback(
             (e) => {
-                e.target !== e.currentTarget && !e.currentTarget.contains(e.relatedTarget) && I && b(!1);
+                e.target !== e.currentTarget && !e.currentTarget.contains(e.relatedTarget) && I && T(!1);
             },
             [I]
         ),
@@ -104,7 +104,7 @@ function f(e) {
                 type: r.B.SET_FOCUS_PATH,
                 path: []
             }),
-                b(!1);
+                T(!1);
         }, []),
         x = i.useCallback((e) => e.every((e, t) => y[t] === e), [y]),
         L = i.useCallback(
@@ -128,10 +128,10 @@ function f(e) {
                     tabIndex: -1,
                     'aria-activedescendant': x(n) ? (0, s.qR)(t, y.join(o)) : void 0,
                     focusIndex: g.focusIndex,
-                    isUsingKeyboardNavigation: T
+                    isUsingKeyboardNavigation: b
                 };
             },
-            [t, y, x, g.focusIndex, T]
+            [t, y, x, g.focusIndex, b]
         ),
         w = i.useCallback(
             (e) => {
@@ -160,8 +160,8 @@ function f(e) {
             getSubmenuProps: P,
             getItemProps: w,
             isFocused: x,
-            isUsingKeyboardNavigation: T
+            isUsingKeyboardNavigation: b
         }),
-        [v, L, P, w, x, T]
+        [v, L, P, w, x, b]
     );
 }

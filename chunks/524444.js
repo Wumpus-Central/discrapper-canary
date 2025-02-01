@@ -37,8 +37,8 @@ var i = n(200651),
     v = n(249458),
     y = n(313201),
     I = n(540059),
-    b = n(688465),
-    T = n(425886),
+    T = n(688465),
+    b = n(425886),
     S = n(80966),
     A = n(593545),
     N = n(479313),
@@ -101,7 +101,7 @@ function z(e) {
     let f = () => !1;
     return (0, i.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(T.Z, {
+            (0, i.jsx)(b.Z, {
                 ...u,
                 onVolumeChange: c,
                 onMute: d,
@@ -378,7 +378,7 @@ function es(e) {
     let { channel: o, content: p, scrollManager: h } = e,
         { disableInteractions: E } = r.useContext(v.G),
         [y, I] = r.useState(null),
-        T = r.useRef(null),
+        b = r.useRef(null),
         [S, A] = r.useState(null),
         O = r.useRef(null),
         D = (0, c.Wu)(
@@ -518,7 +518,7 @@ function es(e) {
     let $ = r.useCallback(
         (e) => {
             var t;
-            !((0, u.k)(e.target) && (null === (t = T.current) || void 0 === t ? void 0 : t.contains(e.target))) &&
+            !((0, u.k)(e.target) && (null === (t = b.current) || void 0 === t ? void 0 : t.contains(e.target))) &&
                 (z &&
                     w.default.track(B.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
@@ -592,7 +592,7 @@ function es(e) {
         E
             ? null
             : (0, i.jsxs)('div', {
-                  ref: T,
+                  ref: b,
                   className: s()(j.newTopicsBarContainer, j.containerMarginTop),
                   children: [
                       (0, i.jsx)('div', {
@@ -670,7 +670,7 @@ function es(e) {
                                                       lineClamp: 1,
                                                       children: V.intl.string(V.t.q21fUl)
                                                   }),
-                                                  (0, i.jsx)(b.Z, { className: j.summariesBetaTag })
+                                                  (0, i.jsx)(T.Z, { className: j.summariesBetaTag })
                                               ]
                                           }),
                                           (0, i.jsx)(d.P3F, {
@@ -708,7 +708,7 @@ function eu(e) {
         { disableInteractions: p } = r.useContext(v.G),
         [h, E] = r.useState(null),
         y = r.useRef(null),
-        [I, T] = r.useState(null),
+        [I, b] = r.useState(null),
         S = r.useRef(null),
         A = (0, c.Wu)(
             [C.Z],
@@ -844,7 +844,7 @@ function eu(e) {
             var t;
             K(e);
             let n = null === (t = S.current) || void 0 === t ? void 0 : t.scrollTop;
-            null != n && T(n);
+            null != n && b(n);
         }, []);
     r.useEffect(() => {
         if (null != I && W) {
@@ -996,7 +996,7 @@ function eu(e) {
                                                       lineClamp: 1,
                                                       children: V.intl.string(V.t.q21fUl)
                                                   }),
-                                                  (0, i.jsx)(b.Z, { className: j.summariesBetaTag })
+                                                  (0, i.jsx)(T.Z, { className: j.summariesBetaTag })
                                               ]
                                           }),
                                           (0, i.jsx)(d.P3F, {

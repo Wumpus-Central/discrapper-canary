@@ -1,12 +1,12 @@
-r(621271);
-var i = r(67867),
-    a = r(38548);
+n(621271);
+var i = n(67867),
+    r = n(38548);
 i(
     {
         target: 'String',
         proto: !0,
         name: 'trimStart',
-        forced: ''.trimStart !== a
+        forced: ''.trimStart !== r
     },
-    { trimStart: a }
+    { trimStart: r }
 );

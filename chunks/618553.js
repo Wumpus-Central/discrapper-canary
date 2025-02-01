@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_daebb4',
-    descriptors: 'descriptors_daebb4'
+    container: 'container__41445',
+    descriptors: 'descriptors__41445'
 };

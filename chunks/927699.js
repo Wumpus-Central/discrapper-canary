@@ -18,12 +18,12 @@ let g = (0, f.kt)({
     type: p.d4z.DM
 });
 function E(e) {
-    let { sectionTitle: t, errors: n, onTextChange: a, pendingText: f, placeholder: p, currentText: E, className: v, innerClassName: y, disabled: I = !1, disableThemedBackground: b = !1 } = e,
-        [T, S] = r.useState(null != f ? f : E),
-        [A, N] = r.useState((0, u.JM)(T)),
+    let { sectionTitle: t, errors: n, onTextChange: a, pendingText: f, placeholder: p, currentText: E, className: v, innerClassName: y, disabled: I = !1, disableThemedBackground: T = !1 } = e,
+        [b, S] = r.useState(null != f ? f : E),
+        [A, N] = r.useState((0, u.JM)(b)),
         C = r.useRef(!1);
     function R(e, t, n) {
-        t !== T && (S(t), N(n), a(t));
+        t !== b && (S(t), N(n), a(t));
     }
     function O() {
         return new Promise((e) => {
@@ -57,7 +57,7 @@ function E(e) {
                         onChange: R,
                         placeholder: p,
                         channel: g,
-                        textValue: T,
+                        textValue: b,
                         richValue: A,
                         type: l.Ie.CUSTOM_GIFT,
                         onBlur: () => {
@@ -68,7 +68,7 @@ function E(e) {
                         },
                         focused: C.current,
                         onSubmit: O,
-                        disableThemedBackground: b
+                        disableThemedBackground: T
                     }),
                     (0, i.jsx)(o.nn4, { children: h.intl.format(h.t['+DFxLS'], { maxLength: _.$n }) })
                 ]

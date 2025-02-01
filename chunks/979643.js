@@ -1,9 +1,9 @@
 e.exports = {
-    modal: 'modal_b4f08b',
-    content: 'content_b4f08b',
-    breadCrumb: 'breadCrumb_b4f08b',
-    selectionBody: 'selectionBody_b4f08b',
-    footer: 'footer_b4f08b',
-    closeBtn: 'closeBtn_b4f08b',
-    spinner: 'spinner_b4f08b'
+    modal: 'modal__560ae',
+    content: 'content__560ae',
+    breadCrumb: 'breadCrumb__560ae',
+    selectionBody: 'selectionBody__560ae',
+    footer: 'footer__560ae',
+    closeBtn: 'closeBtn__560ae',
+    spinner: 'spinner__560ae'
 };

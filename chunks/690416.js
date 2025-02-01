@@ -21,7 +21,7 @@ function q(e, r) {
             (0, l.default)(e) ||
             (o = (function (e, r) {
                 if (e) {
-                    if ('string' == typeof e) return x(e, r);
+                    if ('string' == typeof e) return x(e, void 0);
                     var t,
                         a = (0, d.default)((t = Object.prototype.toString.call(e))).call(t, 8, -1);
                     if (('Object' === a && e.constructor && (a = e.constructor.name), 'Map' === a || 'Set' === a)) return (0, u.default)(e);
@@ -68,7 +68,7 @@ function q(e, r) {
         },
         f: function () {
             try {
-                !p && null != o.return && o.return();
+                p || null == o.return || o.return();
             } finally {
                 if (m) throw c;
             }
@@ -101,7 +101,7 @@ var P = new b.default([]);
                         if (s)
                             for (var u = 0, d = (0, m.default)(s.props); u < d.length; u++) {
                                 var f = d[u];
-                                !Object.prototype.hasOwnProperty.call(e.props, f) && (0, p.default)(e.props, (0, c.default)({}, f, s.props[f]));
+                                Object.prototype.hasOwnProperty.call(e.props, f) || (0, p.default)(e.props, (0, c.default)({}, f, s.props[f]));
                             }
                     }
                 } catch (e) {
@@ -115,5 +115,5 @@ var P = new b.default([]);
         } finally {
             a.f();
         }
-    });
-r.default = P;
+    }),
+    (r.default = P);

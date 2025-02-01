@@ -1,6 +1,6 @@
 e.exports = {
-    content: 'content_c9f72d',
-    header: 'header_c9f72d',
-    footer: 'footer_c9f72d',
-    description: 'description_c9f72d'
+    content: 'content_ed987b',
+    header: 'header_ed987b',
+    footer: 'footer_ed987b',
+    description: 'description_ed987b'
 };

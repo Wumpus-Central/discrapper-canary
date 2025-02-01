@@ -1,6 +1,6 @@
 e.exports = {
-    profileEntryCard: 'profileEntryCard_f1257c',
-    reactions: 'reactions_f1257c',
-    avatar: 'avatar_f1257c',
-    playerInfo: 'playerInfo_f1257c'
+    profileEntryCard: 'profileEntryCard__06137',
+    reactions: 'reactions__06137',
+    avatar: 'avatar__06137',
+    playerInfo: 'playerInfo__06137'
 };

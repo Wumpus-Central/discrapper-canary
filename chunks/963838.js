@@ -25,8 +25,8 @@ var i = n(392711),
     v = n(252611),
     y = n(136144),
     I = n(316137),
-    b = n(654123),
-    T = n(660020),
+    T = n(654123),
+    b = n(660020),
     S = n(980084),
     A = n(24688),
     N = n(200997),
@@ -42,7 +42,7 @@ let w = {
         end: 15
     },
     M = [a],
-    k = [s, o, l, u, c, d, f, _, p, h, m, g, E, v, y, I, b, T, S, A, N],
+    k = [s, o, l, u, c, d, f, _, p, h, m, g, E, v, y, I, T, b, S, A, N],
     U = {
         [L.q.BASIC]: M,
         [L.q.PREMIUM]: k

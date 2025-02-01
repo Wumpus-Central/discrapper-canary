@@ -1,8 +1,8 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e, n, r, i) {
-        var a = {
+    function t(e, t, n, i) {
+        var r = {
             s: ['mõne sekundi', 'mõni sekund', 'paar sekundit'],
             ss: [e + 'sekundi', e + 'sekundit'],
             m: ['ühe minuti', 'üks minut'],
@@ -15,7 +15,7 @@
             y: ['ühe aasta', 'aasta', 'üks aasta'],
             yy: [e + ' aasta', e + ' aastat']
         };
-        return n ? (a[r][2] ? a[r][2] : a[r][1]) : i ? a[r][0] : a[r][1];
+        return t ? (r[n][2] ? r[n][2] : r[n][1]) : i ? r[n][0] : r[n][1];
     }
     return e.defineLocale('et', {
         months: 'jaanuar_veebruar_märts_aprill_mai_juuni_juuli_august_september_oktoober_november_detsember'.split('_'),
@@ -42,18 +42,18 @@
         relativeTime: {
             future: '%s pärast',
             past: '%s tagasi',
-            s: n,
-            ss: n,
-            m: n,
-            mm: n,
-            h: n,
-            hh: n,
-            d: n,
+            s: t,
+            ss: t,
+            m: t,
+            mm: t,
+            h: t,
+            hh: t,
+            d: t,
             dd: '%d päeva',
-            M: n,
-            MM: n,
-            y: n,
-            yy: n
+            M: t,
+            MM: t,
+            y: t,
+            yy: t
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

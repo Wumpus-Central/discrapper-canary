@@ -1,12 +1,12 @@
 e.exports = {
-    card: 'card_c0517b',
-    header: 'header_c0517b',
-    text: 'text_c0517b',
-    iconContainer: 'iconContainer_c0517b',
-    usersList: 'usersList_c0517b',
-    row: 'row_c0517b',
-    lastRow: 'lastRow_c0517b',
-    userInfo: 'userInfo_c0517b',
-    loadMoreContainer: 'loadMoreContainer_c0517b',
-    loadMoreButton: 'loadMoreButton_c0517b'
+    card: 'card__5cea9',
+    header: 'header__5cea9',
+    text: 'text__5cea9',
+    iconContainer: 'iconContainer__5cea9',
+    usersList: 'usersList__5cea9',
+    row: 'row__5cea9',
+    lastRow: 'lastRow__5cea9',
+    userInfo: 'userInfo__5cea9',
+    loadMoreContainer: 'loadMoreContainer__5cea9',
+    loadMoreButton: 'loadMoreButton__5cea9'
 };

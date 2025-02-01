@@ -1,12 +1,12 @@
-function n(e) {
-    let n = '[a-zA-Z_\\-+\\*\\/<=>&#][a-zA-Z0-9_\\-+*\\/<=>&#!]*',
-        r = '\\|[^]*?\\|',
+function t(e) {
+    let t = '[a-zA-Z_\\-+\\*\\/<=>&#][a-zA-Z0-9_\\-+*\\/<=>&#!]*',
+        n = '\\|[^]*?\\|',
         i = '(-|\\+)?\\d+(\\.\\d+|\\/\\d+)?((d|e|f|l|s|D|E|F|L|S)(\\+|-)?\\d+)?',
-        a = {
+        r = {
             className: 'literal',
             begin: '\\b(t{1}|nil)\\b'
         },
-        o = {
+        a = {
             className: 'number',
             variants: [
                 {
@@ -23,27 +23,27 @@ function n(e) {
             ]
         },
         s = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
-        l = e.COMMENT(';', '$', { relevance: 0 }),
-        u = {
+        o = e.COMMENT(';', '$', { relevance: 0 }),
+        l = {
             begin: '\\*',
             end: '\\*'
         },
-        c = {
+        u = {
             className: 'symbol',
-            begin: '[:&]' + n
+            begin: '[:&]' + t
         },
-        d = {
-            begin: n,
+        c = {
+            begin: t,
             relevance: 0
         },
-        f = { begin: r },
-        p = {
+        d = { begin: n },
+        f = {
             begin: '\\(',
             end: '\\)',
-            contains: ['self', a, s, o, d]
+            contains: ['self', r, s, a, c]
         },
-        h = {
-            contains: [o, s, u, c, p, d],
+        _ = {
+            contains: [a, s, l, u, f, c],
             variants: [
                 {
                     begin: "['`]\\(",
@@ -54,40 +54,40 @@ function n(e) {
                     end: '\\)',
                     keywords: { name: 'quote' }
                 },
-                { begin: "'" + r }
+                { begin: "'" + n }
             ]
         },
-        _ = {
-            variants: [{ begin: "'" + n }, { begin: "#'" + n + '(::' + n + ')*' }]
+        p = {
+            variants: [{ begin: "'" + t }, { begin: "#'" + t + '(::' + t + ')*' }]
         },
-        m = {
+        h = {
             begin: '\\(\\s*',
             end: '\\)'
         },
-        g = {
+        m = {
             endsWithParent: !0,
             relevance: 0
         };
     return (
-        (m.contains = [
+        (h.contains = [
             {
                 className: 'name',
                 variants: [
                     {
-                        begin: n,
+                        begin: t,
                         relevance: 0
                     },
-                    { begin: r }
+                    { begin: n }
                 ]
             },
-            g
+            m
         ]),
-        (g.contains = [h, _, m, a, o, s, l, u, c, f, d]),
+        (m.contains = [_, p, h, r, a, s, o, l, u, d, c]),
         {
             name: 'Lisp',
             illegal: /\S/,
-            contains: [o, e.SHEBANG(), a, s, l, h, _, m, d]
+            contains: [a, e.SHEBANG(), r, s, o, _, p, h, c]
         }
     );
 }
-e.exports = n;
+e.exports = t;

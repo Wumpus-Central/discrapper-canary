@@ -1,8 +1,8 @@
 e.exports = {
-    container: 'container_ccb6c9',
-    descriptors: 'descriptors_ccb6c9',
-    header: 'header_ccb6c9',
-    guildBadge: 'guildBadge_ccb6c9',
-    childWrapper: 'childWrapper_ccb6c9',
-    acronym: 'acronym_ccb6c9'
+    container: 'container__0d706',
+    descriptors: 'descriptors__0d706',
+    header: 'header__0d706',
+    guildBadge: 'guildBadge__0d706',
+    childWrapper: 'childWrapper__0d706',
+    acronym: 'acronym__0d706'
 };

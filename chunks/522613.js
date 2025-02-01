@@ -1,7 +1,7 @@
 e.exports = {
-    container: 'container_a3b500',
-    isHeader: 'isHeader_a3b500',
-    isReply: 'isReply_a3b500',
-    emojiTooltipText: 'emojiTooltipText_a3b500',
-    emoji: 'emoji_a3b500'
+    container: 'container__040f0',
+    isHeader: 'isHeader__040f0',
+    isReply: 'isReply__040f0',
+    emojiTooltipText: 'emojiTooltipText__040f0',
+    emoji: 'emoji__040f0'
 };

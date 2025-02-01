@@ -1,6 +1,6 @@
 e.exports = {
-    icon: 'icon_cefc08',
-    writingMessagesTitle: 'writingMessagesTitle_cefc08',
-    voiceChannelsTitle: 'voiceChannelsTitle_cefc08',
-    channelsTitle: 'channelsTitle_cefc08'
+    icon: 'icon_dbd216',
+    writingMessagesTitle: 'writingMessagesTitle_dbd216',
+    voiceChannelsTitle: 'voiceChannelsTitle_dbd216',
+    channelsTitle: 'channelsTitle_dbd216'
 };

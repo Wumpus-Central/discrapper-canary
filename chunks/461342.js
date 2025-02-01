@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_e05cb6',
-    acceptButton: 'acceptButton_e05cb6'
+    container: 'container_fb2e73',
+    acceptButton: 'acceptButton_fb2e73'
 };

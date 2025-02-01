@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_f20c2c',
-    pointer: 'pointer_f20c2c'
+    container: 'container__58c96',
+    pointer: 'pointer__58c96'
 };

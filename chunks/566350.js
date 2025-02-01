@@ -1,10 +1,10 @@
-function n(e, n = {}) {
+function t(e, n = {}) {
     return (n.variants = e), n;
 }
-function r(e) {
-    let r = e.regex,
+function n(e) {
+    let n = e.regex,
         i = '[A-Za-z0-9_$]+',
-        a = n([
+        r = t([
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.COMMENT('/\\*\\*', '\\*/', {
@@ -21,13 +21,13 @@ function r(e) {
                 ]
             })
         ]),
-        o = {
+        a = {
             className: 'regexp',
             begin: /~?\/[^\/\n]+\//,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        s = n([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
-        l = n(
+        s = t([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
+        o = t(
             [
                 {
                     begin: /"""/,
@@ -47,7 +47,7 @@ function r(e) {
             ],
             { className: 'string' }
         ),
-        u = {
+        l = {
             match: [/(class|interface|trait|enum|record|extends|implements)/, /\s+/, e.UNDERSCORE_IDENT_RE],
             scope: {
                 1: 'keyword',
@@ -67,11 +67,11 @@ function r(e) {
                 binary: 'groovy',
                 relevance: 10
             }),
-            a,
-            l,
+            r,
             o,
+            a,
             s,
-            u,
+            l,
             {
                 className: 'meta',
                 begin: '@[A-Za-z]+',
@@ -86,11 +86,11 @@ function r(e) {
                 begin: /\?/,
                 end: /:/,
                 relevance: 0,
-                contains: [a, l, o, s, 'self']
+                contains: [r, o, a, s, 'self']
             },
             {
                 className: 'symbol',
-                begin: '^[ \t]*' + r.lookahead(i + ':'),
+                begin: '^[ \t]*' + n.lookahead(i + ':'),
                 excludeBegin: !0,
                 end: i + ':',
                 relevance: 0
@@ -99,4 +99,4 @@ function r(e) {
         illegal: /#|<\//
     };
 }
-e.exports = r;
+e.exports = n;

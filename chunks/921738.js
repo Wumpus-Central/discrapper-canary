@@ -1,31 +1,31 @@
-function r(e) {
+function n(e) {
     if (e && 'object' == typeof e) {
-        var n = e.which || e.keyCode || e.charCode;
-        n && (e = n);
+        var t = e.which || e.keyCode || e.charCode;
+        t && (e = t);
     }
     if ('number' == typeof e) return s[e];
-    var r = String(e),
-        o = i[r.toLowerCase()];
-    if (o) return o;
-    var o = a[r.toLowerCase()];
-    return o ? o : 1 === r.length ? r.charCodeAt(0) : void 0;
+    var n = String(e),
+        a = i[n.toLowerCase()];
+    if (a) return a;
+    var a = r[n.toLowerCase()];
+    return a || (1 === n.length ? n.charCodeAt(0) : void 0);
 }
-r.isEventKey = function (e, n) {
+n.isEventKey = function (e, t) {
     if (e && 'object' == typeof e) {
-        var r = e.which || e.keyCode || e.charCode;
-        if (null == r) return !1;
-        if ('string' == typeof n) {
-            var o = i[n.toLowerCase()];
-            if (o) return o === r;
-            var o = a[n.toLowerCase()];
-            if (o) return o === r;
-        } else if ('number' == typeof n) return n === r;
+        var n = e.which || e.keyCode || e.charCode;
+        if (null == n) return !1;
+        if ('string' == typeof t) {
+            var a = i[t.toLowerCase()];
+            if (a) return a === n;
+            var a = r[t.toLowerCase()];
+            if (a) return a === n;
+        } else if ('number' == typeof t) return t === n;
         return !1;
     }
 };
 var i =
-        ((n = e.exports = r).code =
-        n.codes =
+        ((t = e.exports = n).code =
+        t.codes =
             {
                 backspace: 8,
                 tab: 9,
@@ -71,7 +71,7 @@ var i =
                 ']': 221,
                 "'": 222
             }),
-    a = (n.aliases = {
+    r = (t.aliases = {
         windows: 91,
         '\u21E7': 16,
         '\u2325': 18,
@@ -93,10 +93,10 @@ var i =
         del: 46,
         cmd: 91
     });
-for (o = 97; o < 123; o++) i[String.fromCharCode(o)] = o - 32;
-for (var o = 48; o < 58; o++) i[o - 48] = o;
-for (o = 1; o < 13; o++) i['f' + o] = o + 111;
-for (o = 0; o < 10; o++) i['numpad ' + o] = o + 96;
-var s = (n.names = n.title = {});
-for (o in i) s[i[o]] = o;
-for (var l in a) i[l] = a[l];
+for (a = 97; a < 123; a++) i[String.fromCharCode(a)] = a - 32;
+for (var a = 48; a < 58; a++) i[a - 48] = a;
+for (a = 1; a < 13; a++) i['f' + a] = a + 111;
+for (a = 0; a < 10; a++) i['numpad ' + a] = a + 96;
+var s = (t.names = t.title = {});
+for (a in i) s[i[a]] = a;
+for (var o in r) i[o] = r[o];

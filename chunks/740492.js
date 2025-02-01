@@ -38,13 +38,13 @@ function I(e) {
         ...e.settings
     };
 }
-function b() {
+function T() {
     y = {
         useSystemTheme: y.useSystemTheme,
         darkSidebar: y.darkSidebar
     };
 }
-function T() {
+function b() {
     null == y && (y = {});
 }
 function S() {}
@@ -197,8 +197,8 @@ h(C, 'displayName', 'UnsyncedUserSettingsStore'),
     ]);
 let R = new C(l.Z, {
     UNSYNCED_USER_SETTINGS_UPDATE: I,
-    LOGOUT: b,
-    LOGIN_SUCCESS: T,
+    LOGOUT: T,
+    LOGIN_SUCCESS: b,
     REGISTER_SUCCESS: S,
     ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: A
 });

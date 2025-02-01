@@ -1,44 +1,44 @@
-a.r(e);
-var n = a(200651);
-a(192379);
-var o = a(481060),
-    c = a(313201),
-    l = a(388032),
-    s = a(234834);
-e.default = (t) => {
+n.d(e, { default: () => d });
+var a = n(200651);
+n(192379);
+var c = n(481060),
+    s = n(313201),
+    l = n(388032),
+    o = n(234834);
+let d = (t) => {
     let { onClose: e } = t,
-        a = (0, c.Dt)();
-    return (0, n.jsxs)(o.ModalRoot, {
+        n = (0, s.Dt)();
+    return (0, a.jsxs)(c.Y0X, {
         ...t,
-        'aria-labelledby': a,
+        'aria-labelledby': n,
         children: [
-            (0, n.jsxs)(o.ModalHeader, {
+            (0, a.jsxs)(c.xBx, {
                 separator: !1,
-                className: s.modalHeader,
+                className: o.modalHeader,
                 children: [
-                    (0, n.jsx)(o.Heading, {
-                        id: a,
+                    (0, a.jsx)(c.X6q, {
+                        id: n,
                         variant: 'heading-xl/extrabold',
                         children: l.intl.string(l.t.EouHws)
                     }),
-                    (0, n.jsx)(o.ModalCloseButton, {
-                        className: s.closeButton,
+                    (0, a.jsx)(c.olH, {
+                        className: o.closeButton,
                         onClick: e
                     })
                 ]
             }),
-            (0, n.jsx)(o.ModalContent, {
-                className: s.modalContent,
-                children: (0, n.jsx)(o.Text, {
+            (0, a.jsx)(c.hzk, {
+                className: o.modalContent,
+                children: (0, a.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    className: s.contentText,
+                    className: o.contentText,
                     children: l.intl.string(l.t.zNPBMD)
                 })
             }),
-            (0, n.jsx)(o.ModalFooter, {
-                children: (0, n.jsx)(o.Button, {
-                    className: s.button,
-                    size: o.Button.Sizes.MIN,
+            (0, a.jsx)(c.mzw, {
+                children: (0, a.jsx)(c.zxk, {
+                    className: o.button,
+                    size: c.zxk.Sizes.MIN,
                     onClick: e,
                     children: l.intl.string(l.t.BddRzc)
                 })

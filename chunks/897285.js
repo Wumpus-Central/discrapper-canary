@@ -1,81 +1,81 @@
-var i = r(47120);
-var a = r(147913),
-    o = r(914010),
-    s = r(924301),
-    l = r(482241);
-function u(e, n, r) {
+n.d(t, { Z: () => p }), n(47120);
+var i = n(147913),
+    r = n(914010),
+    a = n(924301),
+    s = n(482241);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let c = {},
-    d = new Set(),
-    f = new Set(),
-    p = 1800000,
-    h = async (e) => {
-        if (!(0 === s.ZP.getGuildScheduledEventsForGuild(e).length || d.has(e) || f.has(e)))
+let l = {},
+    u = new Set(),
+    c = new Set(),
+    d = 1800000,
+    f = async (e) => {
+        if (!(0 === a.ZP.getGuildScheduledEventsForGuild(e).length || u.has(e) || c.has(e)))
             try {
-                d.add(e), await l.Z.getGuildEventsForCurrentUser(e), f.add(e);
-            } catch (n) {
-                d.delete(e);
+                u.add(e), await s.Z.getGuildEventsForCurrentUser(e), c.add(e);
+            } catch (t) {
+                u.delete(e);
             }
     };
-class _ extends a.Z {
-    async getGuildEventUserCounts(e, n, r) {
-        let i = r.filter((r) => null == c[''.concat(e, '-').concat(n, '-').concat(r)] || Date.now() - c[''.concat(e, '-').concat(n, '-').concat(r)] > p);
-        if (!(Date.now() - c[''.concat(e, '-').concat(n)] < p) || 0 !== i.length) {
-            (c[''.concat(e, '-').concat(n)] = Date.now()), i.forEach((r) => (c[''.concat(e, '-').concat(n, '-').concat(r)] = Date.now()));
+class _ extends i.Z {
+    async getGuildEventUserCounts(e, t, n) {
+        let i = n.filter((n) => null == l[''.concat(e, '-').concat(t, '-').concat(n)] || Date.now() - l[''.concat(e, '-').concat(t, '-').concat(n)] > d);
+        if (!(Date.now() - l[''.concat(e, '-').concat(t)] < d) || 0 !== i.length) {
+            (l[''.concat(e, '-').concat(t)] = Date.now()), i.forEach((n) => (l[''.concat(e, '-').concat(t, '-').concat(n)] = Date.now()));
             try {
-                await l.Z.fetchGuildEventUserCounts(e, n, i);
+                await s.Z.fetchGuildEventUserCounts(e, t, i);
             } catch (e) {}
         }
     }
-    getGuildEventUsers(e, n, r) {
-        return l.Z.fetchUsersForGuildEvent(e, n, r);
+    getGuildEventUsers(e, t, n) {
+        return s.Z.fetchUsersForGuildEvent(e, t, n);
     }
     getGuildEventsForCurrentUser(e) {
-        return h(e);
+        return f(e);
     }
     async handleConnectionOpen() {
-        d.clear(), f.clear(), (c = {}), o.Z.getLastSelectedGuildId();
+        u.clear(), c.clear(), (l = {}), r.Z.getLastSelectedGuildId();
     }
     handleGuildUnavailable(e) {
-        let { guildId: n } = e;
-        d.delete(n), f.delete(n), delete c[n];
+        let { guildId: t } = e;
+        u.delete(t), c.delete(t), delete l[t];
     }
     handleGuildDelete(e) {
-        let { guild: n } = e,
-            r = n.id;
-        d.delete(r), f.delete(r), delete c[r];
+        let { guild: t } = e,
+            n = t.id;
+        u.delete(n), c.delete(n), delete l[n];
     }
     handleInviteResolveSuccess(e) {
-        var n;
-        let { invite: r } = e,
-            i = r.guild_scheduled_event,
-            a = null === (n = r.guild) || void 0 === n ? void 0 : n.id;
-        if (null != i && null != a) h(a);
+        var t;
+        let { invite: n } = e,
+            i = n.guild_scheduled_event,
+            r = null === (t = n.guild) || void 0 === t ? void 0 : t.id;
+        null != i && null != r && f(r);
     }
     async handleChannelSelect(e) {
-        let { guildId: n } = e;
-        if (null != n)
-            for (let e of s.ZP.getGuildScheduledEventsForGuild(n))
+        let { guildId: t } = e;
+        if (null != t)
+            for (let e of a.ZP.getGuildScheduledEventsForGuild(t))
                 try {
-                    await this.getGuildEventUserCounts(n, e.id, []);
+                    await this.getGuildEventUserCounts(t, e.id, []);
                 } finally {
                     await new Promise((e) => setTimeout(e, 200 * Math.random() + 50));
                 }
     }
     constructor(...e) {
         super(...e),
-            u(this, 'actions', {
+            o(this, 'actions', {
                 POST_CONNECTION_OPEN: () => this.handleConnectionOpen(),
                 GUILD_DELETE: (e) => this.handleGuildDelete(e),
                 GUILD_UNAVAILABLE: (e) => this.handleGuildUnavailable(e),
@@ -84,4 +84,4 @@ class _ extends a.Z {
             });
     }
 }
-n.Z = new _();
+let p = new _();

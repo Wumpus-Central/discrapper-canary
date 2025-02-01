@@ -1,43 +1,43 @@
-var i = r(126387),
-    a = r(740078);
-function o(e, n, r) {
-    var o = (0, i.Z)(e),
-        s = [a.t$, a.we].indexOf(o) >= 0 ? -1 : 1,
-        l = 'function' == typeof r ? r(Object.assign({}, n, { placement: e })) : r,
-        u = l[0],
-        c = l[1];
+n.d(t, { Z: () => s });
+var i = n(126387),
+    r = n(740078);
+function a(e, t, n) {
+    var a = (0, i.Z)(e),
+        s = [r.t$, r.we].indexOf(a) >= 0 ? -1 : 1,
+        o = 'function' == typeof n ? n(Object.assign({}, t, { placement: e })) : n,
+        l = o[0],
+        u = o[1];
     return (
-        (u = u || 0),
-        (c = (c || 0) * s),
-        [a.t$, a.F2].indexOf(o) >= 0
+        (l = l || 0),
+        (u = (u || 0) * s),
+        [r.t$, r.F2].indexOf(a) >= 0
             ? {
-                  x: c,
-                  y: u
+                  x: u,
+                  y: l
               }
             : {
-                  x: u,
-                  y: c
+                  x: l,
+                  y: u
               }
     );
 }
-function s(e) {
-    var n = e.state,
-        r = e.options,
-        i = e.name,
-        s = r.offset,
-        l = void 0 === s ? [0, 0] : s,
-        u = a.Ct.reduce(function (e, r) {
-            return (e[r] = o(r, n.rects, l)), e;
-        }, {}),
-        c = u[n.placement],
-        d = c.x,
-        f = c.y;
-    null != n.modifiersData.popperOffsets && ((n.modifiersData.popperOffsets.x += d), (n.modifiersData.popperOffsets.y += f)), (n.modifiersData[i] = u);
-}
-n.Z = {
+let s = {
     name: 'offset',
     enabled: !0,
     phase: 'main',
     requires: ['popperOffsets'],
-    fn: s
+    fn: function (e) {
+        var t = e.state,
+            n = e.options,
+            i = e.name,
+            s = n.offset,
+            o = void 0 === s ? [0, 0] : s,
+            l = r.Ct.reduce(function (e, n) {
+                return (e[n] = a(n, t.rects, o)), e;
+            }, {}),
+            u = l[t.placement],
+            c = u.x,
+            d = u.y;
+        null != t.modifiersData.popperOffsets && ((t.modifiersData.popperOffsets.x += c), (t.modifiersData.popperOffsets.y += d)), (t.modifiersData[i] = l);
+    }
 };

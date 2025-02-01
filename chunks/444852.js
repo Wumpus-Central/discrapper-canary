@@ -22,8 +22,8 @@ var i = n(392711),
     v = n(936349),
     y = n(704806),
     I = n(626135),
-    b = n(756315),
-    T = n(569545),
+    T = n(756315),
+    b = n(569545),
     S = n(297733),
     A = n(981631),
     N = n(65154);
@@ -149,9 +149,9 @@ class L extends o.Z {
                     i.on(a.Sh.ScreenshareFinish, (e, t, n, i, r, a, s, o, l, u, c, d, p, h, m, g) => {
                         let E = this.getMediaSessionId(),
                             v = this.getRTCConnectionId(),
-                            b = this.getGoLiveSource();
+                            T = this.getGoLiveSource();
                         (0, y.q)().then((y) => {
-                            var T, S, C;
+                            var b, S, C;
                             let R = null;
                             if (null != y) {
                                 let { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: i, gpu_memory: r } = y;
@@ -164,7 +164,7 @@ class L extends o.Z {
                                 };
                             }
                             let O = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != r ? r : 0) + (null != a ? a : 0) + (null != u ? u : 0) + (null != g ? g : 0) + (null != m ? m : 0),
-                                D = (null == b ? void 0 : null === (T = b.desktopSource) || void 0 === T ? void 0 : T.sourcePid) != null ? _.ZP.getGameForPID(b.desktopSource.sourcePid) : null,
+                                D = (null == T ? void 0 : null === (b = T.desktopSource) || void 0 === b ? void 0 : b.sourcePid) != null ? _.ZP.getGameForPID(T.desktopSource.sourcePid) : null,
                                 { gameName: x, gameId: L, exe: P, distributor: w } = (0, f.G8)(D);
                             I.default.track(A.rMx.SCREENSHARE_FINISHED, {
                                 screenshare_frames: e,
@@ -187,7 +187,7 @@ class L extends o.Z {
                                 screens: d,
                                 windows: p,
                                 activity: h,
-                                soundshare_session: null !== (C = null == b ? void 0 : null === (S = b.desktopSource) || void 0 === S ? void 0 : S.soundshareSession) && void 0 !== C ? C : void 0,
+                                soundshare_session: null !== (C = null == T ? void 0 : null === (S = T.desktopSource) || void 0 === S ? void 0 : S.soundshareSession) && void 0 !== C ? C : void 0,
                                 share_game_name: x,
                                 share_game_id: L,
                                 share_game_exe: P,
@@ -201,7 +201,7 @@ class L extends o.Z {
             }
         }),
             this.on(l.z.Video, (t, n, i, r, a) => {
-                let s = (0, T.my)(this._streamKey);
+                let s = (0, b.my)(this._streamKey);
                 s.guildId === t && s.channelId === n && s.ownerId === i && (null == this.getMediaSessionId() || e || (this._trackVideoStartStats(), (e = !0)), this._updateVideoStreamId(r, a));
             }),
             this.on(l.z.VideoSourceQualityChanged, (e, t, n, i, r, a) => {
@@ -335,10 +335,10 @@ class L extends o.Z {
             });
     }
     _getExtraConnectionOptions() {
-        return { streamUserId: (0, T.my)(this._streamKey).ownerId };
+        return { streamUserId: (0, b.my)(this._streamKey).ownerId };
     }
     constructor({ sessionId: e, streamKey: t, serverId: n, initialLayout: i, analyticsContext: a, isStreamer: o, parentMediaSessionId: l }) {
-        let u = (0, T.my)(t),
+        let u = (0, b.my)(t),
             { guildId: c, channelId: d } = u;
         super({
             userId: p.default.getId(),
@@ -360,10 +360,10 @@ class L extends o.Z {
             (this._streamContext = u),
             (this._streamKey = t),
             (this._isStreamer = o),
-            (this._videoStreamStats = new b.Z(i, this.isOwner)),
+            (this._videoStreamStats = new T.Z(i, this.isOwner)),
             (this.analyticsContext = a),
             (this._updateVideoStreamId = r().debounce((e, t) => {
-                let { guildId: n, channelId: i, ownerId: r } = (0, T.my)(this._streamKey);
+                let { guildId: n, channelId: i, ownerId: r } = (0, b.my)(this._streamKey);
                 s.Z.wait(() =>
                     s.Z.dispatch({
                         type: 'RTC_CONNECTION_VIDEO',

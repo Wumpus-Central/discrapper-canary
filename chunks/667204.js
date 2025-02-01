@@ -27,8 +27,8 @@ var i = n(512722),
     v = n(3148),
     y = n(48854),
     I = n(346479),
-    b = n(706454),
-    T = n(430824),
+    T = n(706454),
+    b = n(430824),
     S = n(117530),
     A = n(594174),
     N = n(403182),
@@ -45,7 +45,7 @@ var i = n(512722),
     U = n(959517),
     G = n(388032);
 async function B(e) {
-    var t, n, i, s, l, c, d, p, h, m, g, E, v, y, T, A, N;
+    var t, n, i, s, l, c, d, p, h, m, g, E, v, y, b, A, N;
     let { command: C, optionValues: R, context: L, commandTargetId: U, maxSizeCallback: G, commandOrigin: B = w.bB.CHAT, sectionName: F, interactionLifecycleOptionsFactory: j = H, source: W, clientSupportsContextlessActivityLaunch: K } = e;
     if (null == L.channel) return;
     let z = null !== (i = P.Z.getSource(L.channel.id)) && void 0 !== i ? i : W,
@@ -140,7 +140,7 @@ async function B(e) {
                         if ((0, M.BH)(a.text)) t = a.text.trim();
                         else {
                             let e = (0, _.K)(a.text, null === (y = L.guild) || void 0 === y ? void 0 : y.id, L.channel.id);
-                            (null == e ? void 0 : e.type) === 'userMention' ? (t = e.userId) : (null == e ? void 0 : e.type) === 'roleMention' ? (t = e.roleId) : (null == e ? void 0 : e.type) === 'textMention' && '@everyone' === e.text ? (t = null === (T = L.guild) || void 0 === T ? void 0 : T.id) : r()(!1, 'Failed to resolve '.concat(a.text));
+                            (null == e ? void 0 : e.type) === 'userMention' ? (t = e.userId) : (null == e ? void 0 : e.type) === 'roleMention' ? (t = e.roleId) : (null == e ? void 0 : e.type) === 'textMention' && '@everyone' === e.text ? (t = null === (b = L.guild) || void 0 === b ? void 0 : b.id) : r()(!1, 'Failed to resolve '.concat(a.text));
                         }
                     }
                     break;
@@ -150,13 +150,13 @@ async function B(e) {
                 case u.jw.INTEGER:
                     if ('text' === a.type) {
                         let i = a.text.trim();
-                        null != e.choices ? (t = (0, D.l1)(e.choices, i)) : e.autocomplete && (t = null != L.autocomplete && n ? L.autocomplete.query : (0, D.xg)(L.channel.id, e.name, i)), null == t && (t = Number(x.AS(b.default.locale, i)));
+                        null != e.choices ? (t = (0, D.l1)(e.choices, i)) : e.autocomplete && (t = null != L.autocomplete && n ? L.autocomplete.query : (0, D.xg)(L.channel.id, e.name, i)), null == t && (t = Number(x.AS(T.default.locale, i)));
                     }
                     break;
                 case u.jw.NUMBER:
                     if ('text' === a.type) {
                         let i = a.text.trim();
-                        null != e.choices ? (t = (0, D.l1)(e.choices, i)) : e.autocomplete && (t = null != L.autocomplete && n ? L.autocomplete.query : (0, D.xg)(L.channel.id, e.name, i)), null == t && (t = Number(x.AS(b.default.locale, i)));
+                        null != e.choices ? (t = (0, D.l1)(e.choices, i)) : e.autocomplete && (t = null != L.autocomplete && n ? L.autocomplete.query : (0, D.xg)(L.channel.id, e.name, i)), null == t && (t = Number(x.AS(T.default.locale, i)));
                     }
                     break;
                 default:
@@ -251,7 +251,7 @@ let Z = (e) => {
         if (e.isCommandType() && null != e.interactionData && null != n.command) {
             let i = {
                 channel: t,
-                guild: null != t.guild_id ? T.Z.getGuild(t.guild_id) : null
+                guild: null != t.guild_id ? b.Z.getGuild(t.guild_id) : null
             };
             V({
                 applicationId: n.command.applicationId,

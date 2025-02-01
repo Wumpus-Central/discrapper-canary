@@ -1,11 +1,11 @@
 e.exports = {
-    header: 'header_fc9dae',
-    closeButton: 'closeButton_fc9dae',
-    templatesList: 'templatesList_fc9dae',
-    title: 'title_fc9dae',
-    subtitle: 'subtitle_fc9dae',
-    optionHeader: 'optionHeader_fc9dae',
-    footer: 'footer_fc9dae',
-    footerTitle: 'footerTitle_fc9dae',
-    footerButton: 'footerButton_fc9dae'
+    header: 'header_c04f35',
+    closeButton: 'closeButton_c04f35',
+    templatesList: 'templatesList_c04f35',
+    title: 'title_c04f35',
+    subtitle: 'subtitle_c04f35',
+    optionHeader: 'optionHeader_c04f35',
+    footer: 'footer_c04f35',
+    footerTitle: 'footerTitle_c04f35',
+    footerButton: 'footerButton_c04f35'
 };

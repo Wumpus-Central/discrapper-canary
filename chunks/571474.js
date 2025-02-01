@@ -1,34 +1,34 @@
+n.d(t, { Z: () => p });
 var i,
-    r,
     l,
     a,
-    o = n(442837),
+    r = n(442837),
     s = n(570140),
-    c = n(70956),
-    u = n(709054),
+    o = n(70956),
+    c = n(709054),
     d = n(314897),
-    m = n(699516);
-let h = 180 * c.Z.Millis.DAY,
-    f = !1;
-class p extends (a = o.ZP.Store) {
+    u = n(699516);
+let m = 180 * o.Z.Millis.DAY,
+    h = !1;
+class _ extends (a = r.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, d.default);
+        this.waitFor(u.Z, d.default);
     }
     isEligible() {
-        return f;
+        return h;
     }
 }
 (l = 'PremiumPromoStore'),
-    (r = 'displayName') in (i = p)
-        ? Object.defineProperty(i, r, {
+    (i = 'displayName') in _
+        ? Object.defineProperty(_, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = l),
-    (t.Z = new p(s.Z, {
-        CONNECTION_OPEN: function () {
-            return f !== (f = m.Z.getFriendIDs().length >= 10 && u.default.extractTimestamp(d.default.getId()) < Date.now() - h);
-        }
-    }));
+        : (_[i] = l);
+let p = new _(s.Z, {
+    CONNECTION_OPEN: function () {
+        return h !== (h = u.Z.getFriendIDs().length >= 10 && c.default.extractTimestamp(d.default.getId()) < Date.now() - m);
+    }
+});

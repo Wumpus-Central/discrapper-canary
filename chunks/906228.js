@@ -1,12 +1,12 @@
-n(47120);
+n.d(t, { Z: () => d }), n(47120);
 var i = n(243814),
-    r = n(120960),
-    l = n(996106),
+    l = n(120960),
+    r = n(996106),
     a = n(452426),
     s = n(186901),
     o = n(981631),
     c = n(65154);
-t.Z = {
+let d = {
     [o.Etm.SET_CERTIFIED_DEVICES]: {
         scope: {
             [s.Gp.ANY]: [i.x.RPC, s.lH]
@@ -44,8 +44,8 @@ t.Z = {
                 socket: t,
                 args: { devices: n }
             } = e;
-            if (null == t.application.id) throw new l.Z({ errorCode: o.lTL.INVALID_COMMAND }, 'No application.');
-            (0, r.N)(
+            if (null == t.application.id) throw new r.Z({ errorCode: o.lTL.INVALID_COMMAND }, 'No application.');
+            (0, l.N)(
                 t.application.id,
                 n.map((e) => ({
                     type: e.type,

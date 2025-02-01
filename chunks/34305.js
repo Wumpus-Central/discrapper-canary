@@ -1,7 +1,7 @@
-n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     a = n(481060),
     s = n(325432),
     o = n(570928),
@@ -12,8 +12,8 @@ var i = n(200651),
     m = n(358085),
     p = n(998502),
     g = n(388032),
-    f = n(762353),
-    _ = n(232186);
+    _ = n(762353),
+    f = n(232186);
 function E(e, t, n) {
     return (
         t in e
@@ -27,7 +27,7 @@ function E(e, t, n) {
         e
     );
 }
-class I extends r.PureComponent {
+class I extends l.PureComponent {
     renderDiskUsageCircle() {
         let { metadata: e } = this.props;
         return null != e && null != e.availableKB && null != e.totalKB
@@ -39,29 +39,29 @@ class I extends r.PureComponent {
     }
     renderViewing() {
         let e, t;
-        let { path: n, label: r, editingPath: l, isDefault: s, metadata: d } = this.props;
+        let { path: n, label: l, editingPath: r, isDefault: s, metadata: d } = this.props;
         return (
             null != d && ((e = null != d.availableKB ? (0, h.BU)(d.availableKB, { useKibibytes: !0 }) : null), (t = null != d.totalKB ? (0, h.BU)(d.totalKB, { useKibibytes: !0 }) : null)),
             (0, i.jsxs)(c.Z, {
-                className: f.installationPath,
+                className: _.installationPath,
                 align: c.Z.Align.CENTER,
                 children: [
                     this.renderDiskUsageCircle(),
                     (0, i.jsxs)(c.Z, {
                         direction: c.Z.Direction.VERTICAL,
-                        className: f.__invalid_descriptionWrapper,
+                        className: _.__invalid_descriptionWrapper,
                         children: [
                             (0, i.jsxs)(c.Z, {
                                 align: c.Z.Align.CENTER,
                                 children: [
-                                    (0, i.jsx)(a.Heading, {
-                                        className: f.rowTitle,
+                                    (0, i.jsx)(a.X6q, {
+                                        className: _.rowTitle,
                                         variant: 'heading-md/semibold',
-                                        children: null != r ? r : u.Z.getLabelFromPath(n)
+                                        children: null != l ? l : u.Z.getLabelFromPath(n)
                                     }),
                                     s
                                         ? (0, i.jsx)('span', {
-                                              className: f.defaultIndicator,
+                                              className: _.defaultIndicator,
                                               children: g.intl.string(g.t.bBvAEB)
                                           })
                                         : null
@@ -69,7 +69,7 @@ class I extends r.PureComponent {
                             }),
                             null != d && null != e && null != t
                                 ? (0, i.jsx)(o.Z, {
-                                      className: f.rowBody,
+                                      className: _.rowBody,
                                       hoverText: g.intl.formatToPlainString(g.t.Fxo9e3, {
                                           available: e,
                                           total: t
@@ -77,16 +77,16 @@ class I extends r.PureComponent {
                                       children: n
                                   })
                                 : (0, i.jsx)(a.Text, {
-                                      className: f.rowBody,
+                                      className: _.rowBody,
                                       variant: 'text-xs/normal',
                                       children: n
                                   })
                         ]
                     }),
-                    (0, i.jsx)(a.Button, {
-                        size: a.Button.Sizes.SMALL,
-                        disabled: null != l,
-                        color: a.Button.Colors.PRIMARY,
+                    (0, i.jsx)(a.zxk, {
+                        size: a.zxk.Sizes.SMALL,
+                        disabled: null != r,
+                        color: a.zxk.Colors.PRIMARY,
                         onClick: this.handleStartEditing,
                         children: g.intl.string(g.t.bt75u7)
                     })
@@ -96,64 +96,64 @@ class I extends r.PureComponent {
     }
     renderEditing() {
         let { path: e, hasGamesInstalledInPath: t } = this.props,
-            { label: n, isDefault: r } = this.state;
-        return (0, i.jsx)(a.Card, {
+            { label: n, isDefault: l } = this.state;
+        return (0, i.jsx)(a.Zbd, {
             editable: !0,
-            className: f.installationPathEditing,
+            className: _.installationPathEditing,
             children: (0, i.jsxs)(c.Z, {
                 children: [
                     this.renderDiskUsageCircle(),
                     (0, i.jsxs)(c.Z.Child, {
                         children: [
-                            (0, i.jsx)(a.FormItem, {
+                            (0, i.jsx)(a.xJW, {
                                 title: g.intl.string(g.t.AJkKCA),
-                                children: (0, i.jsx)(a.TextInput, {
+                                children: (0, i.jsx)(a.oil, {
                                     value: n,
                                     placeholder: u.Z.getLabelFromPath(e),
                                     onChange: this.handleLabelChange
                                 })
                             }),
-                            (0, i.jsx)(a.FormItem, {
+                            (0, i.jsx)(a.xJW, {
                                 title: g.intl.string(g.t.lnUCwc),
-                                className: _.marginTop20,
-                                children: (0, i.jsx)(a.TextInput, {
+                                className: f.marginTop20,
+                                children: (0, i.jsx)(a.oil, {
                                     disabled: !0,
                                     value: e
                                 })
                             }),
-                            (0, i.jsx)(a.Checkbox, {
-                                type: a.Checkbox.Types.INVERTED,
-                                value: null != r ? r : this.props.isDefault,
+                            (0, i.jsx)(a.XZJ, {
+                                type: a.XZJ.Types.INVERTED,
+                                value: null != l ? l : this.props.isDefault,
                                 disabled: this.props.isDefault,
-                                className: f.defaultLocationCheckbox,
+                                className: _.defaultLocationCheckbox,
                                 onChange: this.handleToggleDefault,
                                 children: g.intl.string(g.t.Z2MWuL)
                             }),
-                            (0, i.jsx)(a.FormDivider, { className: f.separator }),
+                            (0, i.jsx)(a.$i$, { className: _.separator }),
                             (0, i.jsxs)(c.Z, {
                                 children: [
-                                    (0, i.jsx)(a.Button, {
+                                    (0, i.jsx)(a.zxk, {
                                         disabled: t || this.props.isDefault,
-                                        size: a.Button.Sizes.SMALL,
-                                        color: a.Button.Colors.RED,
-                                        look: a.Button.Looks.OUTLINED,
+                                        size: a.zxk.Sizes.SMALL,
+                                        color: a.zxk.Colors.RED,
+                                        look: a.zxk.Looks.OUTLINED,
                                         onClick: this.handleRemoveLocation,
                                         children: g.intl.string(g.t.iBUzS0)
                                     }),
                                     (0, i.jsxs)(c.Z, {
                                         justify: c.Z.Justify.END,
                                         children: [
-                                            (0, i.jsx)(a.Button, {
-                                                size: a.Button.Sizes.SMALL,
-                                                color: a.Button.Colors.PRIMARY,
-                                                look: a.Button.Looks.LINK,
+                                            (0, i.jsx)(a.zxk, {
+                                                size: a.zxk.Sizes.SMALL,
+                                                color: a.zxk.Colors.PRIMARY,
+                                                look: a.zxk.Looks.LINK,
                                                 onClick: this.handleStopEditing,
                                                 children: g.intl.string(g.t['ETE/oK'])
                                             }),
-                                            (0, i.jsx)(a.Button, {
-                                                disabled: e === this.props.path && n === this.props.label && r === this.props.isDefault,
-                                                size: a.Button.Sizes.SMALL,
-                                                color: a.Button.Colors.GREEN,
+                                            (0, i.jsx)(a.zxk, {
+                                                disabled: e === this.props.path && n === this.props.label && l === this.props.isDefault,
+                                                size: a.zxk.Sizes.SMALL,
+                                                color: a.zxk.Colors.GREEN,
                                                 onClick: this.handleSaveChanges,
                                                 children: g.intl.string(g.t.R3BPHx)
                                             })
@@ -193,7 +193,7 @@ class I extends r.PureComponent {
                     });
             }),
             E(this, 'handleRemoveLocation', () => {
-                (0, a.openModal)((e) =>
+                (0, a.h7j)((e) =>
                     (0, i.jsx)(a.ConfirmModal, {
                         ...e,
                         header: g.intl.string(g.t.iBUzS0),
@@ -224,7 +224,7 @@ class I extends r.PureComponent {
             });
     }
 }
-class C extends r.PureComponent {
+class C extends l.PureComponent {
     componentDidMount() {
         (0, s.ec)(
             this.props.installationPaths.map((e) => {
@@ -235,33 +235,33 @@ class C extends r.PureComponent {
     }
     render() {
         let { installationPaths: e, installationPathsMetadata: t, defaultInstallationPath: n } = this.props,
-            { editingPath: r } = this.state;
-        return (0, i.jsxs)(a.FormSection, {
-            className: f.wrapper,
+            { editingPath: l } = this.state;
+        return (0, i.jsxs)(a.hjN, {
+            className: _.wrapper,
             title: g.intl.string(g.t.aLszkJ),
             children: [
                 e.map((e) => {
-                    let { path: l, label: a } = e;
+                    let { path: r, label: a } = e;
                     return (0, i.jsx)(
                         I,
                         {
-                            path: l,
+                            path: r,
                             label: a,
-                            metadata: t[l],
-                            isDefault: n === l,
-                            editingPath: r,
-                            hasGamesInstalledInPath: u.Z.hasGamesInstalledInPath(l),
+                            metadata: t[r],
+                            isDefault: n === r,
+                            editingPath: l,
+                            hasGamesInstalledInPath: u.Z.hasGamesInstalledInPath(r),
                             onToggleEditing: this.handleToggleEditing
                         },
-                        l
+                        r
                     );
                 }),
                 (0, i.jsx)('div', {
-                    className: f.buttonRowWrapper,
-                    children: (0, i.jsx)(a.Button, {
+                    className: _.buttonRowWrapper,
+                    children: (0, i.jsx)(a.zxk, {
                         disabled: !m.isPlatformEmbedded,
                         onClick: this.handleAddInstallationLocation,
-                        size: a.Button.Sizes.SMALL,
+                        size: a.zxk.Sizes.SMALL,
                         children: g.intl.string(g.t.pnZ2ur)
                     })
                 })
@@ -273,7 +273,7 @@ class C extends r.PureComponent {
             E(this, 'state', { editingPath: null }),
             E(this, 'handleAddInstallationLocation', () => {
                 p.ZP.showOpenDialog(['openDirectory']).then((e) => {
-                    if (null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0]) (0, s.RY)(e[0]);
+                    null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0] && (0, s.RY)(e[0]);
                 });
             }),
             E(this, 'handleToggleEditing', (e) => {
@@ -281,7 +281,7 @@ class C extends r.PureComponent {
             });
     }
 }
-t.Z = l.ZP.connectStores([u.Z], () => ({
+let v = r.ZP.connectStores([u.Z], () => ({
     installationPaths: u.Z.installationPaths,
     installationPathsMetadata: u.Z.installationPathsMetadata,
     defaultInstallationPath: u.Z.defaultInstallationPath

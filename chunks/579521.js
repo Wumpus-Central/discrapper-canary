@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_e0eaac',
-    loading: 'loading_e0eaac'
+    container: 'container__6f73d',
+    loading: 'loading__6f73d'
 };

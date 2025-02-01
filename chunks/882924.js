@@ -1,12 +1,12 @@
 e.exports = {
-    container: 'container_fc06b0',
-    info: 'info_fc06b0',
-    header: 'header_fc06b0',
-    headerIcon: 'headerIcon_fc06b0',
-    warning: 'warning_fc06b0',
-    danger: 'danger_fc06b0',
-    cta: 'cta_fc06b0',
-    ctaInner: 'ctaInner_fc06b0',
-    refreshIcon: 'refreshIcon_fc06b0',
-    inFlight: 'inFlight_fc06b0'
+    container: 'container__0d029',
+    info: 'info__0d029',
+    header: 'header__0d029',
+    headerIcon: 'headerIcon__0d029',
+    warning: 'warning__0d029',
+    danger: 'danger__0d029',
+    cta: 'cta__0d029',
+    ctaInner: 'ctaInner__0d029',
+    refreshIcon: 'refreshIcon__0d029',
+    inFlight: 'inFlight__0d029'
 };

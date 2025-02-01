@@ -18,8 +18,8 @@ let m = new r.Z('Games'),
     v = null,
     y = 250,
     I = 120000,
-    b = 3600000;
-function T() {
+    T = 3600000;
+function b() {
     return null != v
         ? Promise.resolve(v)
         : (0, f.isDesktop)()
@@ -62,8 +62,8 @@ async function N(e) {
     )
         throw Error('No remaining launchable queries');
     let t = Date.now();
-    t > E && ((E = t + b), (g = {}));
-    let n = await T();
+    t > E && ((E = t + T), (g = {}));
+    let n = await b();
     for (let t of e) {
         let e = g[t.id];
         if (null != e) return e;
@@ -128,7 +128,7 @@ let O = {
     },
     removeShortcuts: (e) =>
         (0, f.isWindows)()
-            ? T().then((t) => {
+            ? b().then((t) => {
                   var n, i;
                   return null !== (i = null === (n = t.removeShortcuts) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== i && i;
               })
@@ -137,7 +137,7 @@ let O = {
         if (null == r || !(0, f.isWindows)()) return Promise.resolve(!1);
         let a = 'discord:///library/'.concat(i, '/launch'),
             s = ''.concat(r, '\\icon.ico');
-        return T().then((i) => {
+        return b().then((i) => {
             var r, o;
             return null !== (o = null === (r = i.createShortcuts) || void 0 === r ? void 0 : r.call(i, e, t, n, a, s)) && void 0 !== o && o;
         });
@@ -148,12 +148,12 @@ let O = {
             .catch(() => !1),
     launchGame: (e) => (l.Z.isConnected(e) ? Promise.resolve() : N(A(e)).then(R)),
     isProtocolRegistered: (e) =>
-        T().then((t) => {
+        b().then((t) => {
             var n, i;
             return null !== (i = null === (n = t.isProtocolSchemeRegistered) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== i && i;
         }),
     setRecentGames(e) {
-        T()
+        b()
             .then((t) => {
                 var n;
                 return null === (n = t.setRecentGames) || void 0 === n ? void 0 : n.call(t, e);

@@ -1,8 +1,8 @@
-t.exports = {
-    content: 'content_e91bdf',
-    header: 'header_e91bdf',
-    keybindHintKeys: 'keybindHintKeys_e91bdf',
-    keybindShortcut: 'keybindShortcut_e91bdf',
-    closeButton: 'closeButton_e91bdf',
-    soundWheel: 'soundWheel_e91bdf'
+e.exports = {
+    content: 'content__5003d',
+    header: 'header__5003d',
+    keybindHintKeys: 'keybindHintKeys__5003d',
+    keybindShortcut: 'keybindShortcut__5003d',
+    closeButton: 'closeButton__5003d',
+    soundWheel: 'soundWheel__5003d'
 };

@@ -1,8 +1,8 @@
 e.exports = {
-    container: 'container_ebd74a',
-    iconContainer: 'iconContainer_ebd74a',
-    icon: 'icon_ebd74a',
-    stars: 'stars_ebd74a',
-    header: 'header_ebd74a',
-    cta: 'cta_ebd74a'
+    container: 'container__1b24f',
+    iconContainer: 'iconContainer__1b24f',
+    icon: 'icon__1b24f',
+    stars: 'stars__1b24f',
+    header: 'header__1b24f',
+    cta: 'cta__1b24f'
 };

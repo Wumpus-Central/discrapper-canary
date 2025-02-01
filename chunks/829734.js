@@ -1,7 +1,7 @@
 e.exports = {
-    root: 'root_a1f5c2',
-    nameSection: 'nameSection_a1f5c2',
-    name: 'name_a1f5c2',
-    timeContainer: 'timeContainer_a1f5c2',
-    timeTitle: 'timeTitle_a1f5c2'
+    root: 'root_a77292',
+    nameSection: 'nameSection_a77292',
+    name: 'name_a77292',
+    timeContainer: 'timeContainer_a77292',
+    timeTitle: 'timeTitle_a77292'
 };

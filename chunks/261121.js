@@ -1,6 +1,6 @@
 e.exports = {
-    streamerModeEnabled: 'streamerModeEnabled_c50c8b',
-    streamerModeEnabledImage: 'streamerModeEnabledImage_c50c8b',
-    streamerModeEnabledBtn: 'streamerModeEnabledBtn_c50c8b',
-    disabled: 'disabled_c50c8b'
+    streamerModeEnabled: 'streamerModeEnabled_aa3ffd',
+    streamerModeEnabledImage: 'streamerModeEnabledImage_aa3ffd',
+    streamerModeEnabledBtn: 'streamerModeEnabledBtn_aa3ffd',
+    disabled: 'disabled_aa3ffd'
 };

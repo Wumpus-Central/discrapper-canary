@@ -1,6 +1,6 @@
-var i = r(563602),
-    a = r(917430);
-function o(e, n) {
-    return e && (0, i.Z)(e, n, a.Z);
-}
-n.Z = o;
+n.d(t, { Z: () => a });
+var i = n(563602),
+    r = n(917430);
+let a = function (e, t) {
+    return e && (0, i.Z)(e, t, r.Z);
+};

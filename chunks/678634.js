@@ -1,4 +1,4 @@
 e.exports = {
-    dragInner: 'dragInner_f734d8',
-    placeholderMask: 'placeholderMask_f734d8'
+    dragInner: 'dragInner__87847',
+    placeholderMask: 'placeholderMask__87847'
 };

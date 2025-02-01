@@ -1,9 +1,9 @@
 e.exports = {
-    modal: 'modal_fbd6d1',
-    modalFooter: 'modalFooter_fbd6d1',
-    buttonsRight: 'buttonsRight_fbd6d1',
-    modalHeader: 'modalHeader_fbd6d1',
-    modalCloseButton: 'modalCloseButton_fbd6d1',
-    modalContent: 'modalContent_fbd6d1',
-    spinner: 'spinner_fbd6d1'
+    modal: 'modal__20a09',
+    modalFooter: 'modalFooter__20a09',
+    buttonsRight: 'buttonsRight__20a09',
+    modalHeader: 'modalHeader__20a09',
+    modalCloseButton: 'modalCloseButton__20a09',
+    modalContent: 'modalContent__20a09',
+    spinner: 'spinner__20a09'
 };

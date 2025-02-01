@@ -1,93 +1,93 @@
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(692547),
-    s = r(481060),
-    l = r(726542),
-    u = r(231757),
-    c = r(511010),
-    d = r(553795),
-    f = r(979192),
-    p = r(873128),
-    h = r(463031),
-    _ = r(981631),
-    m = r(388032),
-    g = r(804665);
-function E(e) {
-    let { guildId: n, leaderboardId: E } = e,
-        { leaderboardsDisabled: v } = (0, f.O)(n, E),
-        y = (0, a.e7)([d.Z], () => d.Z.getAccount(null, _.ABu.RIOT_GAMES)),
-        b = (0, a.e7)([d.Z], () => d.Z.getAccount(null, _.ABu.LEAGUE_OF_LEGENDS)),
-        I = (0, p.Z)({
-            guildId: n,
-            leaderboardId: E
+n.d(t, { Z: () => g });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(692547),
+    s = n(481060),
+    o = n(726542),
+    l = n(231757),
+    u = n(511010),
+    c = n(553795),
+    d = n(979192),
+    f = n(873128),
+    _ = n(463031),
+    p = n(981631),
+    h = n(388032),
+    m = n(804665);
+let g = function (e) {
+    let { guildId: t, leaderboardId: g } = e,
+        { leaderboardsDisabled: E } = (0, d.O)(t, g),
+        v = (0, r.e7)([c.Z], () => c.Z.getAccount(null, p.ABu.RIOT_GAMES)),
+        y = (0, r.e7)([c.Z], () => c.Z.getAccount(null, p.ABu.LEAGUE_OF_LEGENDS)),
+        I = (0, f.Z)({
+            guildId: t,
+            leaderboardId: g
         }),
-        T = E === h.z;
-    if ((!T || (null != y && null != b)) && !v) return null;
-    let S = l.Z.get(_.ABu.RIOT_GAMES),
-        A = T && null == y && null == b,
-        C = T && null != y && null == b,
-        N = T && null == y && null != b,
-        R = C || N;
-    function O() {
-        if (null != I)
-            (0, s.openModalLazy)(async () => {
-                let { default: e } = await r.e('73217').then(r.bind(r, 139964));
-                return (r) =>
+        T = g === _.z;
+    if ((!T || (null != v && null != y)) && !E) return null;
+    let b = o.Z.get(p.ABu.RIOT_GAMES),
+        S = T && null == v && null == y,
+        A = T && null != v && null == y,
+        N = T && null == v && null != y,
+        C = A || N;
+    function R() {
+        null != I &&
+            (0, s.ZDy)(async () => {
+                let { default: e } = await n.e('73217').then(n.bind(n, 139964));
+                return (n) =>
                     (0, i.jsx)(e, {
-                        ...r,
-                        guildId: n,
+                        ...n,
+                        guildId: t,
                         leaderboard: I
                     });
             });
     }
-    function D() {
-        return A || R ? (0, u.Z)({ platformType: _.ABu.RIOT_GAMES }) : O();
+    function O() {
+        return S || C ? (0, l.Z)({ platformType: p.ABu.RIOT_GAMES }) : R();
     }
-    function L() {
-        return A ? m.intl.string(m.t.w6VSSE) : R ? m.intl.string(m.t.CHNBdn) : m.intl.string(m.t['0yRXHx']);
+    function D() {
+        return S ? h.intl.string(h.t.w6VSSE) : C ? h.intl.string(h.t.CHNBdn) : h.intl.string(h.t['0yRXHx']);
     }
     function x() {
-        if (v) return null;
-        let e = A
-                ? (0, i.jsx)(s.CircleInformationIcon, { className: g.infoMessageIcon })
-                : (0, i.jsx)(s.WarningIcon, {
-                      color: o.Z.colors.STATUS_WARNING,
-                      className: g.infoMessageIcon
+        if (E) return null;
+        let e = S
+                ? (0, i.jsx)(s.d3s, { className: m.infoMessageIcon })
+                : (0, i.jsx)(s.aNP, {
+                      color: a.Z.colors.STATUS_WARNING,
+                      className: m.infoMessageIcon
                   }),
-            n = A ? m.intl.string(m.t['Ihg/Dg']) : m.intl.string(m.t['J8U+Iy']);
+            t = S ? h.intl.string(h.t['Ihg/Dg']) : h.intl.string(h.t['J8U+Iy']);
         return (0, i.jsxs)('div', {
-            className: g.updateMessage,
+            className: m.updateMessage,
             children: [
                 e,
                 (0, i.jsx)(s.Text, {
                     variant: 'text-xs/medium',
                     color: 'text-muted',
-                    children: n
+                    children: t
                 })
             ]
         });
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(c.Z, { className: g.divider }),
+            (0, i.jsx)(u.Z, { className: m.divider }),
             x(),
-            (0, i.jsxs)(s.Button, {
-                className: g.joinLeaderboardButton,
-                innerClassName: g.joinLeaderboardButtonInner,
-                onClick: D,
+            (0, i.jsxs)(s.zxk, {
+                className: m.joinLeaderboardButton,
+                innerClassName: m.joinLeaderboardButtonInner,
+                onClick: O,
                 children: [
                     T &&
-                        !v &&
+                        !E &&
                         (0, i.jsx)('img', {
                             alt: 'Riot Games',
-                            src: S.icon.whiteSVG,
-                            className: g.riotIcon
+                            src: b.icon.whiteSVG,
+                            className: m.riotIcon
                         }),
-                    L()
+                    D()
                 ]
             })
         ]
     });
-}
-n.Z = E;
+};

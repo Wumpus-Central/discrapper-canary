@@ -1,9 +1,9 @@
-var i = r(24033),
-    a = r(772425),
-    o = r(35179),
-    s = r(641236)('species');
-e.exports = function (e, n) {
-    var r,
-        l = i(e).constructor;
-    return void 0 === l || o((r = i(l)[s])) ? n : a(r);
+var i = n(24033),
+    r = n(772425),
+    a = n(35179),
+    s = n(641236)('species');
+e.exports = function (e, t) {
+    var n,
+        o = i(e).constructor;
+    return void 0 === o || a((n = i(o)[s])) ? t : r(n);
 };

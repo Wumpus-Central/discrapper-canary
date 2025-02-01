@@ -1,4 +1,4 @@
 e.exports = {
-    animator: 'animator_d94229',
-    item: 'item_d94229'
+    animator: 'animator__52de8',
+    item: 'item__52de8'
 };

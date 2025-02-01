@@ -37,32 +37,32 @@ var d = function (e, t, n, a, l) {
         y = n.defaultMessage;
     (0, r.kG)(!!v, '[@formatjs/intl] An `id` must be provided to format a message. You can either:\n1. Configure your build toolchain with [babel-plugin-formatjs](https://formatjs.io/docs/tooling/babel-plugin)\nor [@formatjs/ts-transformer](https://formatjs.io/docs/tooling/ts-transformer) OR\n2. Configure your `eslint` config to include [eslint-plugin-formatjs](https://formatjs.io/docs/tooling/linter#enforce-id)\nto autofix this issue');
     var I = String(v),
-        b = f && Object.prototype.hasOwnProperty.call(f, I) && f[I];
-    if (Array.isArray(b) && 1 === b.length && b[0].type === o.wD.literal) return b[0].value;
-    if (!a && b && 'string' == typeof b && !E) return b.replace(/'\{(.*?)\}'/gi, '{$1}');
-    if (((a = (0, i.pi)((0, i.pi)({}, E), a || {})), (d = c(d, g)), (p = c(p, g)), !b)) {
-        if (!1 === h && '' === b) return b;
+        T = f && Object.prototype.hasOwnProperty.call(f, I) && f[I];
+    if (Array.isArray(T) && 1 === T.length && T[0].type === o.wD.literal) return T[0].value;
+    if (!a && T && 'string' == typeof T && !E) return T.replace(/'\{(.*?)\}'/gi, '{$1}');
+    if (((a = (0, i.pi)((0, i.pi)({}, E), a || {})), (d = c(d, g)), (p = c(p, g)), !T)) {
+        if (!1 === h && '' === T) return T;
         if (((!y || (u && u.toLowerCase() !== _.toLowerCase())) && m(new s.$6(n, u)), y))
             try {
-                var T = t.getMessageFormat(y, _, p, l);
-                return T.format(a);
+                var b = t.getMessageFormat(y, _, p, l);
+                return b.format(a);
             } catch (e) {
                 return m(new s.X9('Error formatting default message for: "'.concat(I, '", rendering default message verbatim'), u, n, e)), 'string' == typeof y ? y : I;
             }
         return I;
     }
     try {
-        var T = t.getMessageFormat(b, u, d, (0, i.pi)({ formatters: t }, l || {}));
-        return T.format(a);
+        var b = t.getMessageFormat(T, u, d, (0, i.pi)({ formatters: t }, l || {}));
+        return b.format(a);
     } catch (e) {
         m(new s.X9('Error formatting message: "'.concat(I, '", using ').concat(y ? 'default message' : 'id', ' as fallback.'), u, n, e));
     }
     if (y)
         try {
-            var T = t.getMessageFormat(y, _, p, l);
-            return T.format(a);
+            var b = t.getMessageFormat(y, _, p, l);
+            return b.format(a);
         } catch (e) {
             m(new s.X9('Error formatting the default message for: "'.concat(I, '", rendering message verbatim'), u, n, e));
         }
-    return 'string' == typeof b ? b : 'string' == typeof y ? y : I;
+    return 'string' == typeof T ? T : 'string' == typeof y ? y : I;
 };

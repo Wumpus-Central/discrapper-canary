@@ -1,7 +1,7 @@
 n(47120), n(653041);
 var i,
-    r = n(442837),
-    l = n(570140),
+    l = n(442837),
+    r = n(570140),
     a = n(314897),
     s = n(592125),
     o = n(430824),
@@ -25,7 +25,7 @@ function m(e, t) {
     let n = h[e];
     return !(null == n || n.has(t)) && ((h[e] = new Set(n.add(t))), !0);
 }
-class p extends (i = r.ZP.PersistedStore) {
+class p extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(a.default, o.Z),
             (h = {}),
@@ -48,7 +48,7 @@ class p extends (i = r.ZP.PersistedStore) {
 }
 u(p, 'displayName', 'GuildProgressStore'),
     u(p, 'persistKey', 'GuildProgressStore'),
-    new p(l.Z, {
+    new p(r.Z, {
         CONNECTION_OPEN: function () {
             let e = [];
             c.default.keys(h).forEach((t) => {
@@ -58,7 +58,7 @@ u(p, 'displayName', 'GuildProgressStore'),
         },
         GUILD_PROGRESS_INITIALIZE: function (e) {
             let { guildId: t } = e;
-            null == h[t] && (h[t] = new Set()), !h[t].has(d.Rg.COMPLETED) && h[t].delete(d.Rg.DISMISSED);
+            null == h[t] && (h[t] = new Set()), h[t].has(d.Rg.COMPLETED) || h[t].delete(d.Rg.DISMISSED);
         },
         GUILD_PROGRESS_COMPLETED_SEEN: function (e) {
             let { guildId: t } = e;
@@ -94,11 +94,11 @@ u(p, 'displayName', 'GuildProgressStore'),
         MESSAGE_CREATE: function (e) {
             var t;
             let { channelId: n, message: i } = e,
-                r = s.Z.getChannel(n);
-            return (null === (t = i.author) || void 0 === t ? void 0 : t.id) === a.default.getId() && null != r && null != h[r.guild_id] && m(r.guild_id, d.Rg.MESSAGE);
+                l = s.Z.getChannel(n);
+            return (null === (t = i.author) || void 0 === t ? void 0 : t.id) === a.default.getId() && null != l && null != h[l.guild_id] && m(l.guild_id, d.Rg.MESSAGE);
         },
         GUILD_MEMBER_LIST_UPDATE: function (e) {
             let { guildId: t, memberCount: n } = e;
-            return null != h[t] && !!(n > 1) && m(t, d.Rg.INVITE);
+            return null != h[t] && n > 1 && m(t, d.Rg.INVITE);
         }
     });

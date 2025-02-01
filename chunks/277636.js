@@ -1,4 +1,4 @@
 e.exports = {
-    content: 'content_fb2cb3',
-    overlay: 'overlay_fb2cb3'
+    content: 'content__60686',
+    overlay: 'overlay__60686'
 };

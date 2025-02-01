@@ -1,7 +1,7 @@
-var a = r(815869),
+var r = a(815869),
     n = Array.prototype.splice;
-e.exports = function (e) {
-    var t = this.__data__,
-        r = a(t, e);
-    return !(r < 0) && (r == t.length - 1 ? t.pop() : n.call(t, r, 1), --this.size, !0);
+t.exports = function (t) {
+    var e = this.__data__,
+        a = r(e, t);
+    return !(a < 0) && (a == e.length - 1 ? e.pop() : n.call(e, a, 1), --this.size, !0);
 };

@@ -1,6 +1,6 @@
 e.exports = {
-    authBox: 'authBox_c394c0',
-    createButton: 'createButton_c394c0',
-    header: 'header_c394c0',
-    formContainer: 'formContainer_c394c0'
+    authBox: 'authBox_fd23fc',
+    createButton: 'createButton_fd23fc',
+    header: 'header_fd23fc',
+    formContainer: 'formContainer_fd23fc'
 };

@@ -1,6 +1,6 @@
 e.exports = {
-    headerDivider: 'headerDivider_d32069',
-    headerDescription: 'headerDescription_d32069',
-    section: 'section_d32069',
-    emptyCard: 'emptyCard_d32069'
+    headerDivider: 'headerDivider__7fc1d',
+    headerDescription: 'headerDescription__7fc1d',
+    section: 'section__7fc1d',
+    emptyCard: 'emptyCard__7fc1d'
 };

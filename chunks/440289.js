@@ -1,4 +1,5 @@
-var n = {
+n.d(t, { Z: () => i });
+var a = {
         lessThanXSeconds: {
             one: 'mindre än en sekund',
             other: 'mindre än {{count}} sekunder'
@@ -61,10 +62,9 @@ var n = {
             other: 'nästan {{count}} år'
         }
     },
-    a = ['noll', 'en', 'två', 'tre', 'fyra', 'fem', 'sex', 'sju', 'åtta', 'nio', 'tio', 'elva', 'tolv'];
-t.Z = function (e, t, r) {
+    r = ['noll', 'en', 'två', 'tre', 'fyra', 'fem', 'sex', 'sju', 'åtta', 'nio', 'tio', 'elva', 'tolv'];
+let i = function (e, t, n) {
     var i,
-        o = n[e];
-    if (((i = 'string' == typeof o ? o : 1 === t ? o.one : r && r.onlyNumeric ? o.other.replace('{{count}}', String(t)) : o.other.replace('{{count}}', t < 13 ? a[t] : String(t))), null != r && r.addSuffix)) return r.comparison && r.comparison > 0 ? 'om ' + i : i + ' sedan';
-    return i;
+        o = a[e];
+    return ((i = 'string' == typeof o ? o : 1 === t ? o.one : n && n.onlyNumeric ? o.other.replace('{{count}}', String(t)) : o.other.replace('{{count}}', t < 13 ? r[t] : String(t))), null != n && n.addSuffix) ? (n.comparison && n.comparison > 0 ? 'om ' + i : i + ' sedan') : i;
 };

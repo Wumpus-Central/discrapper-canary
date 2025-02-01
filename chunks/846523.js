@@ -1,8 +1,8 @@
 e.exports = {
-    root: 'root_aef182',
-    header: 'header_aef182',
-    section: 'section_aef182',
-    sectionContent: 'sectionContent_aef182',
-    unit: 'unit_aef182',
-    review: 'review_aef182'
+    root: 'root__26095',
+    header: 'header__26095',
+    section: 'section__26095',
+    sectionContent: 'sectionContent__26095',
+    unit: 'unit__26095',
+    review: 'review__26095'
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    circleIconButton: 'circleIconButton_f85ca4',
-    geoRestrictedBadge: 'geoRestrictedBadge_f85ca4'
+    circleIconButton: 'circleIconButton_a2be55',
+    geoRestrictedBadge: 'geoRestrictedBadge_a2be55'
 };

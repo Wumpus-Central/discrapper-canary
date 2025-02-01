@@ -1,17 +1,17 @@
-var i = r(690244),
-    a = i('%Symbol.species%', !0),
-    o = i('%TypeError%'),
-    s = r(66034),
-    l = r(755228),
-    u = r(156700),
-    c = r(718129),
-    d = r(632384),
-    f = r(73871);
-e.exports = function (e, n) {
-    if (!f(n) || n < 0) throw new o('Assertion failed: length must be an integer >= 0');
-    if (!u(e)) return s(n);
-    var r = l(e, 'constructor');
-    if ((a && 'Object' === d(r) && null === (r = l(r, a)) && (r = void 0), void 0 === r)) return s(n);
-    if (!c(r)) throw new o('C must be a constructor');
-    return new r(n);
+var i = n(690244),
+    r = i('%Symbol.species%', !0),
+    a = i('%TypeError%'),
+    s = n(66034),
+    o = n(755228),
+    l = n(156700),
+    u = n(718129),
+    c = n(632384),
+    d = n(73871);
+e.exports = function (e, t) {
+    if (!d(t) || t < 0) throw new a('Assertion failed: length must be an integer >= 0');
+    if (!l(e)) return s(t);
+    var n = o(e, 'constructor');
+    if ((r && 'Object' === c(n) && null === (n = o(n, r)) && (n = void 0), void 0 === n)) return s(t);
+    if (!u(n)) throw new a('C must be a constructor');
+    return new n(t);
 };

@@ -1,9 +1,9 @@
 var i = Object.prototype.toString;
-if (r(322499)()) {
-    var a = Symbol.prototype.toString,
-        o = /^Symbol\(.*\)$/,
+if (n(322499)()) {
+    var r = Symbol.prototype.toString,
+        a = /^Symbol\(.*\)$/,
         s = function (e) {
-            return 'symbol' == typeof e.valueOf() && o.test(a.call(e));
+            return 'symbol' == typeof e.valueOf() && a.test(r.call(e));
         };
     e.exports = function (e) {
         if ('symbol' == typeof e) return !0;

@@ -1,5 +1,5 @@
-var i = r(338752),
-    a = Math.min;
+var i = n(338752),
+    r = Math.min;
 e.exports = function (e) {
-    return e > 0 ? a(i(e), 9007199254740991) : 0;
+    return e > 0 ? r(i(e), 9007199254740991) : 0;
 };

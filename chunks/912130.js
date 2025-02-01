@@ -1,14 +1,14 @@
 e.exports = {
-    panel: 'panel_d5d68c',
-    toolbar: 'toolbar_d5d68c',
-    searchBar: 'searchBar_d5d68c',
-    pausedEvents: 'pausedEvents_d5d68c',
-    actionColumn: 'actionColumn_d5d68c',
-    totalTimeColumn: 'totalTimeColumn_d5d68c',
-    subPanel: 'subPanel_d5d68c',
-    subPanelHeaderBar: 'subPanelHeaderBar_d5d68c',
-    inspectorContainer: 'inspectorContainer_d5d68c',
-    actionProperties: 'actionProperties_d5d68c',
-    errorIcon: 'errorIcon_d5d68c',
-    errorToolbar: 'errorToolbar_d5d68c'
+    panel: 'panel_a81334',
+    toolbar: 'toolbar_a81334',
+    searchBar: 'searchBar_a81334',
+    pausedEvents: 'pausedEvents_a81334',
+    actionColumn: 'actionColumn_a81334',
+    totalTimeColumn: 'totalTimeColumn_a81334',
+    subPanel: 'subPanel_a81334',
+    subPanelHeaderBar: 'subPanelHeaderBar_a81334',
+    inspectorContainer: 'inspectorContainer_a81334',
+    actionProperties: 'actionProperties_a81334',
+    errorIcon: 'errorIcon_a81334',
+    errorToolbar: 'errorToolbar_a81334'
 };

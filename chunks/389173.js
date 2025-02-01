@@ -1,7 +1,7 @@
 e.exports = {
-    checkboxLabel: 'checkboxLabel_a3253e',
-    unusualDMLabelIcon: 'unusualDMLabelIcon_a3253e',
-    timeoutLabelIcon: 'timeoutLabelIcon_a3253e',
-    unusualAccountActivityLabelIcon: 'unusualAccountActivityLabelIcon_a3253e',
-    quarantinedLabelIcon: 'quarantinedLabelIcon_a3253e'
+    checkboxLabel: 'checkboxLabel__3ed1a',
+    unusualDMLabelIcon: 'unusualDMLabelIcon__3ed1a',
+    timeoutLabelIcon: 'timeoutLabelIcon__3ed1a',
+    unusualAccountActivityLabelIcon: 'unusualAccountActivityLabelIcon__3ed1a',
+    quarantinedLabelIcon: 'quarantinedLabelIcon__3ed1a'
 };

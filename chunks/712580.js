@@ -1,4 +1,4 @@
 t.exports = {
-    missingEntitlementImage: 'missingEntitlementImage_d64cba',
-    text: 'text_d64cba'
+    missingEntitlementImage: 'missingEntitlementImage__65266',
+    text: 'text__65266'
 };

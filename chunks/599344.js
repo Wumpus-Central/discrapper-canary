@@ -1,7 +1,7 @@
 e.exports = {
-    searchIndexAnimation: 'searchIndexAnimation_faff47',
-    searchIndexForeground: 'searchIndexForeground_faff47',
-    searchIndexBackground: 'searchIndexBackground_faff47',
-    magnifyingGlass: 'magnifyingGlass_faff47',
-    mask: 'mask_faff47'
+    searchIndexAnimation: 'searchIndexAnimation_e1fee6',
+    searchIndexBackground: 'searchIndexBackground_e1fee6',
+    searchIndexForeground: 'searchIndexForeground_e1fee6',
+    magnifyingGlass: 'magnifyingGlass_e1fee6',
+    mask: 'mask_e1fee6'
 };

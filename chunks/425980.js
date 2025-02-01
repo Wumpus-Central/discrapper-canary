@@ -1,38 +1,38 @@
-Object.defineProperty(n, '__esModule', { value: !0 }), (n.handleFocus = void 0);
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.handleFocus = void 0);
 var i =
         Object.assign ||
         function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = arguments[n];
-                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         },
-    a = (function () {
-        function e(e, n) {
-            for (var r = 0; r < n.length; r++) {
-                var i = n[r];
+    r = (function () {
+        function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var i = t[n];
                 (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (n, r, i) {
-            return r && e(n.prototype, r), i && e(n, i), n;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })(),
-    o = s(r(192379));
+    a = s(n(192379));
 function s(e) {
     return e && e.__esModule ? e : { default: e };
 }
-function l(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function o(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function u(e, n) {
+function l(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function c(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function u(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -40,44 +40,44 @@ function c(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-n.handleFocus = function (e) {
-    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
-    return (function (r) {
+t.handleFocus = function (e) {
+    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
+    return (function (n) {
         function s() {
-            l(this, s);
-            for (var e, n, r, i = arguments.length, a = Array(i), o = 0; o < i; o++) a[o] = arguments[o];
+            o(this, s);
+            for (var e, t, n, i = arguments.length, r = Array(i), a = 0; a < i; a++) r[a] = arguments[a];
             return (
-                (n = r = u(this, (e = s.__proto__ || Object.getPrototypeOf(s)).call.apply(e, [this].concat(a)))),
-                (r.state = { focus: !1 }),
-                (r.handleFocus = function () {
-                    return r.setState({ focus: !0 });
+                (t = n = l(this, (e = s.__proto__ || Object.getPrototypeOf(s)).call.apply(e, [this].concat(r)))),
+                (n.state = { focus: !1 }),
+                (n.handleFocus = function () {
+                    return n.setState({ focus: !0 });
                 }),
-                (r.handleBlur = function () {
-                    return r.setState({ focus: !1 });
+                (n.handleBlur = function () {
+                    return n.setState({ focus: !1 });
                 }),
-                u(r, n)
+                l(n, t)
             );
         }
         return (
-            c(s, r),
-            a(s, [
+            u(s, n),
+            r(s, [
                 {
                     key: 'render',
                     value: function () {
-                        return o.default.createElement(
-                            n,
+                        return a.default.createElement(
+                            t,
                             {
                                 onFocus: this.handleFocus,
                                 onBlur: this.handleBlur
                             },
-                            o.default.createElement(e, i({}, this.props, this.state))
+                            a.default.createElement(e, i({}, this.props, this.state))
                         );
                     }
                 }
             ]),
             s
         );
-    })(o.default.Component);
+    })(a.default.Component);
 };

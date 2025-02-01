@@ -1,4 +1,4 @@
 e.exports = {
-    accessory: 'accessory_d62500',
-    accessoryText: 'accessoryText_d62500'
+    accessory: 'accessory__09bc1',
+    accessoryText: 'accessoryText__09bc1'
 };

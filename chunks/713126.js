@@ -1,11 +1,11 @@
 e.exports = {
-    labelSpacing: 'labelSpacing_aa75c9',
-    applyChangesButton: 'applyChangesButton_aa75c9',
-    markdown: 'markdown_aa75c9',
-    textarea: 'textarea_aa75c9',
-    form: 'form_aa75c9',
-    modal: 'modal_aa75c9',
-    scrollerContent: 'scrollerContent_aa75c9',
-    choosePaymentTypeModal: 'choosePaymentTypeModal_aa75c9',
-    choosePaymentTypeContainer: 'choosePaymentTypeContainer_aa75c9'
+    labelSpacing: 'labelSpacing__5f04d',
+    applyChangesButton: 'applyChangesButton__5f04d',
+    markdown: 'markdown__5f04d',
+    textarea: 'textarea__5f04d',
+    form: 'form__5f04d',
+    modal: 'modal__5f04d',
+    scrollerContent: 'scrollerContent__5f04d',
+    choosePaymentTypeModal: 'choosePaymentTypeModal__5f04d',
+    choosePaymentTypeContainer: 'choosePaymentTypeContainer__5f04d'
 };

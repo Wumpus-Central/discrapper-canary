@@ -1,5 +1,5 @@
 e.exports = {
-    buttonsContainer: 'buttonsContainer_dbbd43',
-    removeButton: 'removeButton_dbbd43',
-    buttonHighlighted: 'buttonHighlighted_dbbd43'
+    buttonsContainer: 'buttonsContainer_fd47ae',
+    removeButton: 'removeButton_fd47ae',
+    buttonHighlighted: 'buttonHighlighted_fd47ae'
 };

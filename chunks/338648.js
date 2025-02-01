@@ -1,8 +1,8 @@
 e.exports = {
-    tableHeaderRow: 'tableHeaderRow_e6d0a5',
-    tableHeaderCellContainer: 'tableHeaderCellContainer_e6d0a5',
-    tableHeaderCellWithFilter: 'tableHeaderCellWithFilter_e6d0a5',
-    tableHeaderCell: 'tableHeaderCell_e6d0a5',
-    filterIcon: 'filterIcon_e6d0a5',
-    filterIconButton: 'filterIconButton_e6d0a5'
+    tableHeaderRow: 'tableHeaderRow__9dd6b',
+    tableHeaderCellContainer: 'tableHeaderCellContainer__9dd6b',
+    tableHeaderCellWithFilter: 'tableHeaderCellWithFilter__9dd6b',
+    tableHeaderCell: 'tableHeaderCell__9dd6b',
+    filterIcon: 'filterIcon__9dd6b',
+    filterIconButton: 'filterIconButton__9dd6b'
 };

@@ -1,7 +1,7 @@
-var i = r(67867),
-    a = r(55525),
-    o = r(228042),
-    s = r(292137);
+var i = n(67867),
+    r = n(55525),
+    a = n(228042),
+    s = n(292137);
 i(
     {
         target: 'Map',
@@ -14,9 +14,9 @@ i(
             return (
                 !0 ===
                 s(
-                    o(this),
-                    function (n) {
-                        if (a(n, e)) return !0;
+                    a(this),
+                    function (t) {
+                        if (r(t, e)) return !0;
                     },
                     !0
                 )

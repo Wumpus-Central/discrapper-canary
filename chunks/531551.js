@@ -1,19 +1,19 @@
-n(411104);
+n.d(t, { Z: () => c }), n(411104);
 var i = n(570140),
-    r = n(51025),
-    l = n(314897),
+    l = n(51025),
+    r = n(314897),
     a = n(804739);
 function s() {
     if (!(0, a.Q)()) return;
-    let e = l.default.getToken(),
-        t = l.default.getId();
+    let e = r.default.getToken(),
+        t = r.default.getId();
     if (null == e) throw Error('missing user token');
-    r.S1(e, t);
+    l.S1(e, t);
 }
 function o() {
-    r.ob();
+    l.ob();
 }
-t.Z = {
+let c = {
     init() {
         i.Z.subscribe('CONNECTION_OPEN', s), i.Z.subscribe('LOGOUT', o);
     }

@@ -1,86 +1,86 @@
-e.r(n);
+e.d(n, { default: () => h });
 var i = e(200651),
-    o = e(192379),
-    a = e(481060),
-    s = e(313201),
+    a = e(192379),
+    s = e(481060),
+    c = e(313201),
     r = e(434404),
-    l = e(703656),
-    c = e(112612),
-    d = e(981631),
-    u = e(176505),
-    x = e(388032),
-    f = e(916819);
-n.default = function (t) {
-    let { guildId: n, submittedGuildJoinRequestsCount: e, onClose: m, transitionState: h, onConfirm: p } = t,
-        T = (0, s.Dt)(),
+    o = e(703656),
+    l = e(112612),
+    x = e(981631),
+    d = e(176505),
+    u = e(388032),
+    m = e(916819);
+let h = function (t) {
+    let { guildId: n, submittedGuildJoinRequestsCount: e, onClose: h, transitionState: f, onConfirm: b } = t,
+        k = (0, c.Dt)(),
         {
-            submitting: C,
-            errorMessage: b,
-            onSubmit: j
-        } = (0, c.Z)({
-            onSubmit: p,
-            onClose: m
+            submitting: p,
+            errorMessage: T,
+            onSubmit: z
+        } = (0, l.Z)({
+            onSubmit: b,
+            onClose: h
         }),
-        S = o.useCallback(() => {
-            m(), r.Z.close(), (0, l.uL)(d.Z5c.CHANNEL(n, u.oC.MEMBER_APPLICATIONS));
-        }, [n, m]);
-    return (0, i.jsxs)(a.ModalRoot, {
-        className: f.container,
-        transitionState: h,
-        'aria-labelledby': T,
+        j = a.useCallback(() => {
+            h(), r.Z.close(), (0, o.uL)(x.Z5c.CHANNEL(n, d.oC.MEMBER_APPLICATIONS));
+        }, [n, h]);
+    return (0, i.jsxs)(s.Y0X, {
+        className: m.container,
+        transitionState: f,
+        'aria-labelledby': k,
         children: [
-            (0, i.jsxs)(a.ModalContent, {
-                className: f.content,
+            (0, i.jsxs)(s.hzk, {
+                className: m.content,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(s.X6q, {
                         variant: 'heading-md/semibold',
-                        id: T,
-                        children: x.intl.format(x.t.chV4JS, { count: e })
+                        id: k,
+                        children: u.intl.format(u.t.chV4JS, { count: e })
                     }),
-                    (0, i.jsx)(a.Text, {
-                        className: f.descriptionText,
+                    (0, i.jsx)(s.Text, {
+                        className: m.descriptionText,
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: x.intl.string(x.t.uNQIt7)
+                        children: u.intl.string(u.t.uNQIt7)
                     }),
-                    (0, i.jsx)(a.Clickable, {
-                        className: f.actionText,
-                        onClick: S,
-                        children: (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.P3F, {
+                        className: m.actionText,
+                        onClick: j,
+                        children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: x.intl.string(x.t.szESVF)
+                            children: u.intl.string(u.t.szESVF)
                         })
                     }),
-                    null != b &&
-                        (0, i.jsx)(a.Text, {
-                            className: f.__invalid_errorText,
+                    null != T &&
+                        (0, i.jsx)(s.Text, {
+                            className: m.__invalid_errorText,
                             variant: 'text-xs/normal',
                             color: 'text-danger',
-                            children: b
+                            children: T
                         })
                 ]
             }),
-            (0, i.jsxs)(a.ModalFooter, {
+            (0, i.jsxs)(s.mzw, {
                 children: [
-                    (0, i.jsx)(a.Button, {
-                        className: f.actionButton,
-                        color: a.Button.Colors.BRAND,
-                        submitting: C,
-                        onClick: j,
-                        size: a.Button.Sizes.SMALL,
-                        children: (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.zxk, {
+                        className: m.actionButton,
+                        color: s.zxk.Colors.BRAND,
+                        submitting: p,
+                        onClick: z,
+                        size: s.zxk.Sizes.SMALL,
+                        children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/semibold',
-                            children: x.intl.string(x.t.LW0aUF)
+                            children: u.intl.string(u.t.LW0aUF)
                         })
                     }),
-                    (0, i.jsx)(a.Button, {
-                        color: a.Button.Colors.PRIMARY,
-                        onClick: m,
-                        size: a.Button.Sizes.SMALL,
-                        children: (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.zxk, {
+                        color: s.zxk.Colors.PRIMARY,
+                        onClick: h,
+                        size: s.zxk.Sizes.SMALL,
+                        children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/semibold',
-                            children: x.intl.string(x.t['ETE/oK'])
+                            children: u.intl.string(u.t['ETE/oK'])
                         })
                     })
                 ]

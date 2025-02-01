@@ -186,7 +186,7 @@ function y(e) {
             isExpanded: a,
             ...m
         }),
-        b = a || E;
+        T = a || E;
     return (0, i.jsxs)('div', {
         className: f.descriptionContainer,
         children: [
@@ -198,8 +198,8 @@ function y(e) {
                     ref: c,
                     className: _.markup,
                     variant: 'text-sm/medium',
-                    lineClamp: b ? void 0 : v,
-                    style: { maxHeight: b ? void 0 : m.minHeightOverride },
+                    lineClamp: T ? void 0 : v,
+                    style: { maxHeight: T ? void 0 : m.minHeightOverride },
                     children: l
                 })
             }),
@@ -211,9 +211,9 @@ function y(e) {
                           (0, i.jsx)(s.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: b ? d.intl.string(d.t.u4YJ8v) : d.intl.string(d.t['N/tajI'])
+                              children: T ? d.intl.string(d.t.u4YJ8v) : d.intl.string(d.t['N/tajI'])
                           }),
-                          b
+                          T
                               ? (0, i.jsx)(s.u04, {
                                     size: 'sm',
                                     color: s.TVs.colors.TEXT_BRAND

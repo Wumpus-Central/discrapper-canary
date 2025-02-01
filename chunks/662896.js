@@ -1,48 +1,48 @@
-var i = r(47120);
-var a = r(287328);
-function o(e, n, r) {
+n.d(t, { Z: () => s }), n(47120);
+var i = n(287328);
+function r(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class s {
+class a {
     async getAll() {
-        let e = a.Z.guildsRequiringDeletedIdsSync();
+        let e = i.Z.guildsRequiringDeletedIdsSync();
         return null == e ? new Set() : new Set((await e.getMany()).map((e) => e.id));
     }
-    handleConnectionOpen(e, n) {
-        let { guilds: r } = e,
-            i = r.filter((e) => e.unableToSyncDeletes).map((e) => ({ id: e.id }));
-        i.length > 0 && a.Z.guildsRequiringDeletedIdsSyncTransaction(n).putAll(i);
+    handleConnectionOpen(e, t) {
+        let { guilds: n } = e,
+            r = n.filter((e) => e.unableToSyncDeletes).map((e) => ({ id: e.id }));
+        r.length > 0 && i.Z.guildsRequiringDeletedIdsSyncTransaction(t).putAll(r);
     }
-    handleBackgroundSync(e, n) {
-        let { guilds: r } = e,
-            i = r.filter((e) => 'partial' === e.data_mode && e.unableToSyncDeletes).map((e) => ({ id: e.id }));
-        i.length > 0 && a.Z.guildsRequiringDeletedIdsSyncTransaction(n).putAll(i);
+    handleBackgroundSync(e, t) {
+        let { guilds: n } = e,
+            r = n.filter((e) => 'partial' === e.data_mode && e.unableToSyncDeletes).map((e) => ({ id: e.id }));
+        r.length > 0 && i.Z.guildsRequiringDeletedIdsSyncTransaction(t).putAll(r);
     }
-    handleGuildCreate(e, n) {
-        let { guild: r } = e;
-        r.unableToSyncDeletes && a.Z.guildsRequiringDeletedIdsSyncTransaction(n).put({ id: r.id });
+    handleGuildCreate(e, t) {
+        let { guild: n } = e;
+        n.unableToSyncDeletes && i.Z.guildsRequiringDeletedIdsSyncTransaction(t).put({ id: n.id });
     }
-    handleDeletedEntityIds(e, n) {
-        a.Z.guildsRequiringDeletedIdsSyncTransaction(n).delete(e.guild_id);
+    handleDeletedEntityIds(e, t) {
+        i.Z.guildsRequiringDeletedIdsSyncTransaction(t).delete(e.guild_id);
     }
     resetInMemoryState() {}
     constructor() {
-        o(this, 'actions', {
-            BACKGROUND_SYNC: (e, n) => this.handleBackgroundSync(e, n),
-            CONNECTION_OPEN: (e, n) => this.handleConnectionOpen(e, n),
-            GUILD_CREATE: (e, n) => this.handleGuildCreate(e, n),
-            DELETED_ENTITY_IDS: (e, n) => this.handleDeletedEntityIds(e, n)
+        r(this, 'actions', {
+            BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
+            CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
+            GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
+            DELETED_ENTITY_IDS: (e, t) => this.handleDeletedEntityIds(e, t)
         });
     }
 }
-n.Z = new s();
+let s = new a();

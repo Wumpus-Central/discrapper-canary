@@ -1,74 +1,74 @@
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(28531),
-    u = r(819758),
-    c = r(149203),
-    d = r(388032),
-    f = r(803700);
-let p = (e) => {
-        let { className: n, graphicPrimary: r, graphicSecondary: a, titlePrimary: l, titleSecondary: u, isFavorite: p = !1, emojiSubCategory: _ = c.t0.NONE } = e;
+n.d(t, { Z: () => _ });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(28531),
+    l = n(819758),
+    u = n(149203),
+    c = n(388032),
+    d = n(803700);
+let f = (e) => {
+        let { emojiSubCategory: t } = e;
         return (0, i.jsxs)('div', {
-            className: o()(f.inspector, n),
+            className: a()(d.badgeLabel, t === u.t0.TOP_GUILD_EMOJI ? d.topGuildEmojiBadge : d.newlyAddedBadge),
             children: [
-                (0, i.jsx)('div', {
-                    className: f.graphicPrimary,
-                    'aria-hidden': !0,
-                    children: r
-                }),
-                (0, i.jsxs)('div', {
-                    className: f.textWrapper,
-                    children: [
-                        (0, i.jsxs)(s.Text, {
-                            className: f.titlePrimary,
-                            variant: 'text-md/semibold',
-                            children: [
-                                p
-                                    ? (0, i.jsx)(s.StarIcon, {
-                                          size: 'custom',
-                                          color: 'currentColor',
-                                          'aria-label': p ? d.intl.formatToPlainString(d.t['+fdUkZ'], { names: l }) : void 0,
-                                          width: 15,
-                                          height: 15,
-                                          className: f.favorite
-                                      })
-                                    : null,
-                                l
-                            ]
-                        }),
-                        null != u &&
-                            (0, i.jsx)(s.Text, {
-                                className: f.titleSecondary,
-                                variant: 'text-xs/normal',
-                                children: u
-                            })
-                    ]
-                }),
-                _ === c.t0.NONE
-                    ? null != a &&
-                      (0, i.jsx)('div', {
-                          className: f.graphicSecondary,
-                          'aria-hidden': !0,
-                          children: a
-                      })
-                    : (0, i.jsx)(h, { emojiSubCategory: _ })
-            ]
-        });
-    },
-    h = (e) => {
-        let { emojiSubCategory: n } = e;
-        return (0, i.jsxs)('div', {
-            className: o()(f.badgeLabel, n === c.t0.TOP_GUILD_EMOJI ? f.topGuildEmojiBadge : f.newlyAddedBadge),
-            children: [
-                n === c.t0.TOP_GUILD_EMOJI ? (0, i.jsx)(l.Z, { foreground: f.newlyAddedBadgeIcon }) : (0, i.jsx)(u.Z, { foreground: f.newlyAddedBadgeIcon }),
+                t === u.t0.TOP_GUILD_EMOJI ? (0, i.jsx)(o.Z, { foreground: d.newlyAddedBadgeIcon }) : (0, i.jsx)(l.Z, { foreground: d.newlyAddedBadgeIcon }),
                 (0, i.jsx)(s.Text, {
                     variant: 'text-sm/semibold',
                     color: 'always-white',
-                    children: n === c.t0.TOP_GUILD_EMOJI ? d.intl.string(d.t.TR2B4e) : d.intl.string(d.t['1aZ4V1'])
+                    children: t === u.t0.TOP_GUILD_EMOJI ? c.intl.string(c.t.TR2B4e) : c.intl.string(c.t['1aZ4V1'])
                 })
             ]
         });
+    },
+    _ = (e) => {
+        let { className: t, graphicPrimary: n, graphicSecondary: r, titlePrimary: o, titleSecondary: l, isFavorite: _ = !1, emojiSubCategory: p = u.t0.NONE } = e;
+        return (0, i.jsxs)('div', {
+            className: a()(d.inspector, t),
+            children: [
+                (0, i.jsx)('div', {
+                    className: d.graphicPrimary,
+                    'aria-hidden': !0,
+                    children: n
+                }),
+                (0, i.jsxs)('div', {
+                    className: d.textWrapper,
+                    children: [
+                        (0, i.jsxs)(s.Text, {
+                            className: d.titlePrimary,
+                            variant: 'text-md/semibold',
+                            children: [
+                                _
+                                    ? (0, i.jsx)(s.r7p, {
+                                          size: 'custom',
+                                          color: 'currentColor',
+                                          'aria-label': _ ? c.intl.formatToPlainString(c.t['+fdUkZ'], { names: o }) : void 0,
+                                          width: 15,
+                                          height: 15,
+                                          className: d.favorite
+                                      })
+                                    : null,
+                                o
+                            ]
+                        }),
+                        null != l &&
+                            (0, i.jsx)(s.Text, {
+                                className: d.titleSecondary,
+                                variant: 'text-xs/normal',
+                                children: l
+                            })
+                    ]
+                }),
+                p === u.t0.NONE
+                    ? null != r &&
+                      (0, i.jsx)('div', {
+                          className: d.graphicSecondary,
+                          'aria-hidden': !0,
+                          children: r
+                      })
+                    : (0, i.jsx)(f, { emojiSubCategory: p })
+            ]
+        });
     };
-n.Z = p;

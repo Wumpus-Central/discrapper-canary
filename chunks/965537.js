@@ -1,4 +1,4 @@
-function r(e) {
+n.d(t, { Z: () => i });
+let i = function (e) {
     return e;
-}
-n.Z = r;
+};

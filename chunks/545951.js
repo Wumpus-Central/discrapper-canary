@@ -1,6 +1,6 @@
 e.exports = {
-    button: 'button_cffe58',
-    contentContainer: 'contentContainer_cffe58',
-    arrow: 'arrow_cffe58',
-    label: 'label_cffe58'
+    button: 'button__95e2d',
+    contentContainer: 'contentContainer__95e2d',
+    arrow: 'arrow__95e2d',
+    label: 'label__95e2d'
 };

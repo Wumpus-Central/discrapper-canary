@@ -1,12 +1,12 @@
 e.exports = {
-    container: 'container_d16341',
-    inputContainer: 'inputContainer_d16341',
-    input: 'input_d16341',
-    clickableGame: 'clickableGame_d16341',
-    pills: 'pills_d16341',
-    tooltip: 'tooltip_d16341',
-    gamesContainer: 'gamesContainer_d16341',
-    gamesList: 'gamesList_d16341',
-    separator: 'separator_d16341',
-    loadingSpinner: 'loadingSpinner_d16341'
+    container: 'container_d8f432',
+    inputContainer: 'inputContainer_d8f432',
+    input: 'input_d8f432',
+    clickableGame: 'clickableGame_d8f432',
+    pills: 'pills_d8f432',
+    tooltip: 'tooltip_d8f432',
+    gamesContainer: 'gamesContainer_d8f432',
+    gamesList: 'gamesList_d8f432',
+    separator: 'separator_d8f432',
+    loadingSpinner: 'loadingSpinner_d8f432'
 };

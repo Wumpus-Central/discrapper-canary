@@ -1,4 +1,4 @@
 e.exports = {
-    wrapper: 'wrapper_da5ed7',
-    icon: 'icon_da5ed7'
+    wrapper: 'wrapper__4d3a9',
+    icon: 'icon__4d3a9'
 };

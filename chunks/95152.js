@@ -30,8 +30,8 @@ function I(e, t, n) {
         e
     );
 }
-let b = 104,
-    T = 16;
+let T = 104,
+    b = 16;
 function S(e) {
     var t, n, a;
     let { file: o } = e,
@@ -56,23 +56,23 @@ function S(e) {
                     let t = Math.max(0.66, Math.min(e.naturalWidth / e.naturalHeight, 4));
                     1 === t
                         ? p({
-                              width: b,
-                              height: b
+                              width: T,
+                              height: T
                           })
                         : t > 1
                           ? p({
-                                width: b * t,
+                                width: T * t,
                                 height: void 0
                             })
                           : p({
                                 width: void 0,
-                                height: b / t
+                                height: T / t
                             }),
                         f(!0);
                 });
         }, []);
     let m = (0, u.Z)(h),
-        g = Math.max(16, (T + b - (null !== (t = null == m ? void 0 : m.width) && void 0 !== t ? t : 0)) / 2);
+        g = Math.max(16, (b + T - (null !== (t = null == m ? void 0 : m.width) && void 0 !== t ? t : 0)) / 2);
     return (0, i.jsx)('img', {
         ref: h,
         src: l,
@@ -81,10 +81,10 @@ function S(e) {
         alt: '',
         style: {
             width: null !== (n = _.width) && void 0 !== n ? n : 'initial',
-            height: null !== (a = _.height) && void 0 !== a ? a : b,
+            height: null !== (a = _.height) && void 0 !== a ? a : T,
             marginLeft: g,
             marginRight: g,
-            marginTop: null != _.height ? b - _.height - 33 : -33
+            marginTop: null != _.height ? T - _.height - 33 : -33
         }
     });
 }

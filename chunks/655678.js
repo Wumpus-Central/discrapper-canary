@@ -20,11 +20,11 @@ function y(e, t) {
     let { disabled: n, channelId: a } = e,
         y = (0, u.Q3)('ChannelMessageConfettiButton'),
         I = (0, d.LN)(a),
-        { entitlement: b } = (0, _.t6)(p.D1),
-        T = r.useCallback(() => {
+        { entitlement: T } = (0, _.t6)(p.D1),
+        b = r.useCallback(() => {
             (0, d.Rg)(a);
         }, [a]),
-        S = (null == b ? void 0 : b.type) === m.qc2.DEVELOPER_GIFT ? [o.z.CONFETTI_POTION_UPSELL] : [],
+        S = (null == T ? void 0 : T.type) === m.qc2.DEVELOPER_GIFT ? [o.z.CONFETTI_POTION_UPSELL] : [],
         [A, N] = (0, c.US)(S);
     return n
         ? null
@@ -44,7 +44,7 @@ function y(e, t) {
                       children: (0, i.jsx)(h.Z, {
                           innerClassName: s()(v.button, v.messageConfettiButton),
                           childClassName: s()(v.messageConfettiIcon, { [v.active]: I }),
-                          onClick: T,
+                          onClick: b,
                           isActive: I,
                           'aria-label': E.intl.string(E.t.yvN8bG),
                           'aria-haspopup': 'false',

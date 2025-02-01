@@ -1,7 +1,7 @@
-var a = {
+a.d(t, { Z: () => n });
+var i = {
     lastWeek: function (e) {
-        if (6 === e.getUTCDay()) return "'το προηγούμενο' eeee 'στις' p";
-        return "'την προηγούμενη' eeee 'στις' p";
+        return 6 === e.getUTCDay() ? "'το προηγούμενο' eeee 'στις' p" : "'την προηγούμενη' eeee 'στις' p";
     },
     yesterday: "'χθες στις' p",
     today: "'σήμερα στις' p",
@@ -9,7 +9,7 @@ var a = {
     nextWeek: "eeee 'στις' p",
     other: 'P'
 };
-t.Z = function (e, t) {
-    var i = a[e];
-    return 'function' == typeof i ? i(t) : i;
+let n = function (e, t) {
+    var a = i[e];
+    return 'function' == typeof a ? a(t) : a;
 };

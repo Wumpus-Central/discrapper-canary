@@ -1,5 +1,5 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
         keyword: ['break', 'case', 'chan', 'const', 'continue', 'default', 'defer', 'else', 'fallthrough', 'for', 'func', 'go', 'goto', 'if', 'import', 'interface', 'map', 'package', 'range', 'return', 'select', 'struct', 'switch', 'type', 'var'],
         type: ['bool', 'byte', 'complex64', 'complex128', 'error', 'float32', 'float64', 'int8', 'int16', 'int32', 'int64', 'string', 'uint8', 'uint16', 'uint32', 'uint64', 'int', 'uint', 'uintptr', 'rune'],
         literal: ['true', 'false', 'iota', 'nil'],
@@ -8,7 +8,7 @@ function n(e) {
     return {
         name: 'Go',
         aliases: ['golang'],
-        keywords: n,
+        keywords: t,
         illegal: '</',
         contains: [
             e.C_LINE_COMMENT_MODE,
@@ -62,7 +62,7 @@ function n(e) {
                         begin: /\(/,
                         end: /\)/,
                         endsParent: !0,
-                        keywords: n,
+                        keywords: t,
                         illegal: /["']/
                     }
                 ]
@@ -70,4 +70,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

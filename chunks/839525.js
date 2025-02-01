@@ -1,10 +1,10 @@
-let i = r(889658),
-    a = (e, n, r) => {
+let i = n(889658),
+    r = (e, t, n) => {
         try {
-            n = new i(n, r);
+            t = new i(t, n);
         } catch (e) {
             return !1;
         }
-        return n.test(e);
+        return t.test(e);
     };
-e.exports = a;
+e.exports = r;

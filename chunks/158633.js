@@ -28,9 +28,9 @@ self.addEventListener('message', (r) => {
                 n = (0, i.Fv)(t);
             return e.reduce((r, e, u) => {
                 if ('' === e.trim()) return r;
-                let f = e.toLocaleLowerCase(),
-                    c = (0, i.Fv)(f);
-                return o()(t, f) || o()(n, f) || o()(n, c) ? [...r, u] : r;
+                let a = e.toLocaleLowerCase(),
+                    c = (0, i.Fv)(a);
+                return o()(t, a) || o()(n, a) || o()(n, c) ? [...r, u] : r;
             }, []);
         })(t, n);
         self.postMessage({

@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_c5a4ce',
-    border: 'border_c5a4ce'
+    container: 'container__38f6e',
+    border: 'border__38f6e'
 };

@@ -1,7 +1,7 @@
 e.exports = {
-    upsellFooter: 'upsellFooter_a26a1a',
-    upsellFooterIcon: 'upsellFooterIcon_a26a1a',
-    reverseTrialUpsellContainer: 'reverseTrialUpsellContainer_a26a1a',
-    unlockIcon: 'unlockIcon_a26a1a',
-    upsellText: 'upsellText_a26a1a'
+    upsellFooter: 'upsellFooter__5e07c',
+    upsellFooterIcon: 'upsellFooterIcon__5e07c',
+    reverseTrialUpsellContainer: 'reverseTrialUpsellContainer__5e07c',
+    unlockIcon: 'unlockIcon__5e07c',
+    upsellText: 'upsellText__5e07c'
 };

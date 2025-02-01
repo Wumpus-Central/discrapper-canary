@@ -1,20 +1,20 @@
-Object.defineProperty(n, '__esModule', { value: !0 }),
-    (n.calculateChange = function (e, n, r) {
-        var i = r.getBoundingClientRect(),
-            a = i.width,
-            o = i.height,
+Object.defineProperty(t, '__esModule', { value: !0 }),
+    (t.calculateChange = function (e, t, n) {
+        var i = n.getBoundingClientRect(),
+            r = i.width,
+            a = i.height,
             s = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
-            l = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
-            u = s - (r.getBoundingClientRect().left + window.pageXOffset),
-            c = l - (r.getBoundingClientRect().top + window.pageYOffset);
-        u < 0 ? (u = 0) : u > a && (u = a), c < 0 ? (c = 0) : c > o && (c = o);
-        var d = u / a,
-            f = 1 - c / o;
+            o = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
+            l = s - (n.getBoundingClientRect().left + window.pageXOffset),
+            u = o - (n.getBoundingClientRect().top + window.pageYOffset);
+        l < 0 ? (l = 0) : l > r && (l = r), u < 0 ? (u = 0) : u > a && (u = a);
+        var c = l / r,
+            d = 1 - u / a;
         return {
-            h: n.h,
-            s: d,
-            v: f,
-            a: n.a,
+            h: t.h,
+            s: c,
+            v: d,
+            a: t.a,
             source: 'hsv'
         };
     });

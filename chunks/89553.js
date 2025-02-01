@@ -1,4 +1,4 @@
 e.exports = {
-    header: 'header_ead644',
-    formItem: 'formItem_ead644'
+    header: 'header__8422a',
+    formItem: 'formItem__8422a'
 };

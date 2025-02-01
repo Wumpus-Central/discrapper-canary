@@ -1,6 +1,6 @@
-var n = {}.toString;
+var t = {}.toString;
 e.exports =
     Array.isArray ||
     function (e) {
-        return '[object Array]' == n.call(e);
+        return '[object Array]' == t.call(e);
     };

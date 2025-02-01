@@ -1,31 +1,31 @@
-let i = r(13556),
-    { MAX_LENGTH: a, MAX_SAFE_INTEGER: o } = r(942177),
-    { safeRe: s, t: l } = r(646664),
-    u = r(498994),
-    { compareIdentifiers: c } = r(434016);
-class d {
-    constructor(e, n) {
-        if (((n = u(n)), e instanceof d)) {
-            if (!!n.loose === e.loose && !!n.includePrerelease === e.includePrerelease) return e;
+let i = n(13556),
+    { MAX_LENGTH: r, MAX_SAFE_INTEGER: a } = n(942177),
+    { safeRe: s, t: o } = n(646664),
+    l = n(498994),
+    { compareIdentifiers: u } = n(434016);
+class c {
+    constructor(e, t) {
+        if (((t = l(t)), e instanceof c)) {
+            if (!!t.loose === e.loose && !!t.includePrerelease === e.includePrerelease) return e;
             e = e.version;
         } else if ('string' != typeof e) throw TypeError(`Invalid version. Must be a string. Got type "${typeof e}".`);
-        if (e.length > a) throw TypeError(`version is longer than ${a} characters`);
-        i('SemVer', e, n), (this.options = n), (this.loose = !!n.loose), (this.includePrerelease = !!n.includePrerelease);
-        let r = e.trim().match(n.loose ? s[l.LOOSE] : s[l.FULL]);
-        if (!r) throw TypeError(`Invalid Version: ${e}`);
-        if (((this.raw = e), (this.major = +r[1]), (this.minor = +r[2]), (this.patch = +r[3]), this.major > o || this.major < 0)) throw TypeError('Invalid major version');
-        if (this.minor > o || this.minor < 0) throw TypeError('Invalid minor version');
-        if (this.patch > o || this.patch < 0) throw TypeError('Invalid patch version');
-        r[4]
-            ? (this.prerelease = r[4].split('.').map((e) => {
+        if (e.length > r) throw TypeError(`version is longer than ${r} characters`);
+        i('SemVer', e, t), (this.options = t), (this.loose = !!t.loose), (this.includePrerelease = !!t.includePrerelease);
+        let n = e.trim().match(t.loose ? s[o.LOOSE] : s[o.FULL]);
+        if (!n) throw TypeError(`Invalid Version: ${e}`);
+        if (((this.raw = e), (this.major = +n[1]), (this.minor = +n[2]), (this.patch = +n[3]), this.major > a || this.major < 0)) throw TypeError('Invalid major version');
+        if (this.minor > a || this.minor < 0) throw TypeError('Invalid minor version');
+        if (this.patch > a || this.patch < 0) throw TypeError('Invalid patch version');
+        n[4]
+            ? (this.prerelease = n[4].split('.').map((e) => {
                   if (/^[0-9]+$/.test(e)) {
-                      let n = +e;
-                      if (n >= 0 && n < o) return n;
+                      let t = +e;
+                      if (t >= 0 && t < a) return t;
                   }
                   return e;
               }))
             : (this.prerelease = []),
-            (this.build = r[5] ? r[5].split('.') : []),
+            (this.build = n[5] ? n[5].split('.') : []),
             this.format();
     }
     format() {
@@ -35,56 +35,56 @@ class d {
         return this.version;
     }
     compare(e) {
-        if ((i('SemVer.compare', this.version, this.options, e), !(e instanceof d))) {
+        if ((i('SemVer.compare', this.version, this.options, e), !(e instanceof c))) {
             if ('string' == typeof e && e === this.version) return 0;
-            e = new d(e, this.options);
+            e = new c(e, this.options);
         }
         return e.version === this.version ? 0 : this.compareMain(e) || this.comparePre(e);
     }
     compareMain(e) {
-        return !(e instanceof d) && (e = new d(e, this.options)), c(this.major, e.major) || c(this.minor, e.minor) || c(this.patch, e.patch);
+        return e instanceof c || (e = new c(e, this.options)), u(this.major, e.major) || u(this.minor, e.minor) || u(this.patch, e.patch);
     }
     comparePre(e) {
-        if ((!(e instanceof d) && (e = new d(e, this.options)), this.prerelease.length && !e.prerelease.length)) return -1;
+        if ((e instanceof c || (e = new c(e, this.options)), this.prerelease.length && !e.prerelease.length)) return -1;
         if (!this.prerelease.length && e.prerelease.length) return 1;
         if (!this.prerelease.length && !e.prerelease.length) return 0;
-        let n = 0;
+        let t = 0;
         do {
-            let r = this.prerelease[n],
-                a = e.prerelease[n];
-            if ((i('prerelease compare', n, r, a), void 0 === r && void 0 === a)) return 0;
-            if (void 0 === a) return 1;
-            else if (void 0 === r) return -1;
-            else if (r === a) continue;
-            else return c(r, a);
-        } while (++n);
+            let n = this.prerelease[t],
+                r = e.prerelease[t];
+            if ((i('prerelease compare', t, n, r), void 0 === n && void 0 === r)) return 0;
+            if (void 0 === r) return 1;
+            if (void 0 === n) return -1;
+            else if (n === r) continue;
+            else return u(n, r);
+        } while (++t);
     }
     compareBuild(e) {
-        !(e instanceof d) && (e = new d(e, this.options));
-        let n = 0;
+        e instanceof c || (e = new c(e, this.options));
+        let t = 0;
         do {
-            let r = this.build[n],
-                a = e.build[n];
-            if ((i('build compare', n, r, a), void 0 === r && void 0 === a)) return 0;
-            if (void 0 === a) return 1;
-            else if (void 0 === r) return -1;
-            else if (r === a) continue;
-            else return c(r, a);
-        } while (++n);
+            let n = this.build[t],
+                r = e.build[t];
+            if ((i('build compare', t, n, r), void 0 === n && void 0 === r)) return 0;
+            if (void 0 === r) return 1;
+            if (void 0 === n) return -1;
+            else if (n === r) continue;
+            else return u(n, r);
+        } while (++t);
     }
-    inc(e, n, r) {
+    inc(e, t, n) {
         switch (e) {
             case 'premajor':
-                (this.prerelease.length = 0), (this.patch = 0), (this.minor = 0), this.major++, this.inc('pre', n, r);
+                (this.prerelease.length = 0), (this.patch = 0), (this.minor = 0), this.major++, this.inc('pre', t, n);
                 break;
             case 'preminor':
-                (this.prerelease.length = 0), (this.patch = 0), this.minor++, this.inc('pre', n, r);
+                (this.prerelease.length = 0), (this.patch = 0), this.minor++, this.inc('pre', t, n);
                 break;
             case 'prepatch':
-                (this.prerelease.length = 0), this.inc('patch', n, r), this.inc('pre', n, r);
+                (this.prerelease.length = 0), this.inc('patch', t, n), this.inc('pre', t, n);
                 break;
             case 'prerelease':
-                0 === this.prerelease.length && this.inc('patch', n, r), this.inc('pre', n, r);
+                0 === this.prerelease.length && this.inc('patch', t, n), this.inc('pre', t, n);
                 break;
             case 'major':
                 (0 !== this.minor || 0 !== this.patch || 0 === this.prerelease.length) && this.major++, (this.minor = 0), (this.patch = 0), (this.prerelease = []);
@@ -96,20 +96,20 @@ class d {
                 0 === this.prerelease.length && this.patch++, (this.prerelease = []);
                 break;
             case 'pre': {
-                let e = Number(r) ? 1 : 0;
-                if (!n && !1 === r) throw Error('invalid increment argument: identifier is empty');
+                let e = Number(n) ? 1 : 0;
+                if (!t && !1 === n) throw Error('invalid increment argument: identifier is empty');
                 if (0 === this.prerelease.length) this.prerelease = [e];
                 else {
                     let i = this.prerelease.length;
                     for (; --i >= 0; ) 'number' == typeof this.prerelease[i] && (this.prerelease[i]++, (i = -2));
                     if (-1 === i) {
-                        if (n === this.prerelease.join('.') && !1 === r) throw Error('invalid increment argument: identifier already exists');
+                        if (t === this.prerelease.join('.') && !1 === n) throw Error('invalid increment argument: identifier already exists');
                         this.prerelease.push(e);
                     }
                 }
-                if (n) {
-                    let i = [n, e];
-                    !1 === r && (i = [n]), 0 === c(this.prerelease[0], n) ? isNaN(this.prerelease[1]) && (this.prerelease = i) : (this.prerelease = i);
+                if (t) {
+                    let i = [t, e];
+                    !1 === n && (i = [t]), 0 === u(this.prerelease[0], t) ? isNaN(this.prerelease[1]) && (this.prerelease = i) : (this.prerelease = i);
                 }
                 break;
             }
@@ -119,4 +119,4 @@ class d {
         return (this.raw = this.format()), this.build.length && (this.raw += `+${this.build.join('.')}`), this;
     }
 }
-e.exports = d;
+e.exports = c;

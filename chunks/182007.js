@@ -1,12 +1,12 @@
 e.exports = {
-    searchHeader: 'searchHeader_ce978e',
-    searchPageBox: 'searchPageBox_ce978e',
-    searchPageInput: 'searchPageInput_ce978e',
-    headerTitleWrapper: 'headerTitleWrapper_ce978e',
-    arrow: 'arrow_ce978e',
-    searchPageTitle: 'searchPageTitle_ce978e',
-    emptySearchWrapper: 'emptySearchWrapper_ce978e',
-    emptySearchImage: 'emptySearchImage_ce978e',
-    emptySearchTitle: 'emptySearchTitle_ce978e',
-    emptySearchSubtitle: 'emptySearchSubtitle_ce978e'
+    searchHeader: 'searchHeader__83bd4',
+    searchPageBox: 'searchPageBox__83bd4',
+    searchPageInput: 'searchPageInput__83bd4',
+    headerTitleWrapper: 'headerTitleWrapper__83bd4',
+    arrow: 'arrow__83bd4',
+    searchPageTitle: 'searchPageTitle__83bd4',
+    emptySearchWrapper: 'emptySearchWrapper__83bd4',
+    emptySearchImage: 'emptySearchImage__83bd4',
+    emptySearchTitle: 'emptySearchTitle__83bd4',
+    emptySearchSubtitle: 'emptySearchSubtitle__83bd4'
 };

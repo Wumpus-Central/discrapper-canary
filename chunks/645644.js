@@ -18,8 +18,8 @@ var i = n(259443),
     v = n(830917),
     y = n(554174),
     I = n(938038),
-    b = n(981631),
-    T = n(987650);
+    T = n(981631),
+    b = n(987650);
 function S(e, t, n) {
     return (
         t in e
@@ -42,8 +42,8 @@ class R {
         ++this.actions[e];
     }
     getAnalytics(e, t) {
-        let n = this.actions[T.bv.Viewed],
-            i = this.actions[T.bv.Clicked];
+        let n = this.actions[b.bv.Viewed],
+            i = this.actions[b.bv.Clicked];
         return 0 === n && 0 === i
             ? null
             : {
@@ -55,20 +55,20 @@ class R {
     }
     constructor() {
         S(this, 'actions', {
-            [T.bv.Viewed]: 0,
-            [T.bv.Clicked]: 0
+            [b.bv.Viewed]: 0,
+            [b.bv.Clicked]: 0
         });
     }
 }
 class O {
     static makeEmptyGroupAnalytics() {
         return {
-            [T.Vk.Nudge]: 0,
-            [T.Vk.TextChat]: 0,
-            [T.Vk.VoiceCall]: 0,
-            [T.Vk.Activity]: 0,
-            [T.Vk.Clips]: 0,
-            [T.Vk.Other]: 0
+            [b.Vk.Nudge]: 0,
+            [b.Vk.TextChat]: 0,
+            [b.Vk.VoiceCall]: 0,
+            [b.Vk.Activity]: 0,
+            [b.Vk.Clips]: 0,
+            [b.Vk.Other]: 0
         };
     }
     increment(e, t) {
@@ -77,7 +77,7 @@ class O {
             C.error('NotificationCounter: Unknown notification action: '.concat(t));
             return;
         }
-        let i = (0, T.YK)(e);
+        let i = (0, b.YK)(e);
         if (!(i in n)) {
             C.error('NotificationCounter: Unknown notification action: '.concat(e));
             return;
@@ -91,23 +91,23 @@ class O {
         r.increment(t);
     }
     getAnalytics() {
-        let e = this.groupCounters[T.bv.Viewed],
-            t = this.groupCounters[T.bv.Clicked];
+        let e = this.groupCounters[b.bv.Viewed],
+            t = this.groupCounters[b.bv.Clicked];
         return {
-            notices_viewed: this.actionCounters[T.bv.Viewed],
-            notices_clicked: this.actionCounters[T.bv.Clicked],
-            notice_nudge_viewed: e[T.Vk.Nudge],
-            notice_text_chat_viewed: e[T.Vk.TextChat],
-            notice_voice_call_viewed: e[T.Vk.VoiceCall],
-            notice_activity_viewed: e[T.Vk.Activity],
-            notice_clips_viewed: e[T.Vk.Clips],
-            notice_other_viewed: e[T.Vk.Other],
-            notice_nudge_clicked: t[T.Vk.Nudge],
-            notice_text_chat_clicked: t[T.Vk.TextChat],
-            notice_voice_call_clicked: t[T.Vk.VoiceCall],
-            notice_activity_clicked: t[T.Vk.Activity],
-            notice_clips_clicked: t[T.Vk.Clips],
-            notice_other_clicked: t[T.Vk.Other]
+            notices_viewed: this.actionCounters[b.bv.Viewed],
+            notices_clicked: this.actionCounters[b.bv.Clicked],
+            notice_nudge_viewed: e[b.Vk.Nudge],
+            notice_text_chat_viewed: e[b.Vk.TextChat],
+            notice_voice_call_viewed: e[b.Vk.VoiceCall],
+            notice_activity_viewed: e[b.Vk.Activity],
+            notice_clips_viewed: e[b.Vk.Clips],
+            notice_other_viewed: e[b.Vk.Other],
+            notice_nudge_clicked: t[b.Vk.Nudge],
+            notice_text_chat_clicked: t[b.Vk.TextChat],
+            notice_voice_call_clicked: t[b.Vk.VoiceCall],
+            notice_activity_clicked: t[b.Vk.Activity],
+            notice_clips_clicked: t[b.Vk.Clips],
+            notice_other_clicked: t[b.Vk.Other]
         };
     }
     getCounterAnalytics(e) {
@@ -120,27 +120,27 @@ class O {
     }
     constructor() {
         S(this, 'actionCounters', {
-            [T.bv.Viewed]: 0,
-            [T.bv.Clicked]: 0
+            [b.bv.Viewed]: 0,
+            [b.bv.Clicked]: 0
         }),
             S(this, 'groupCounters', {
-                [T.bv.Viewed]: O.makeEmptyGroupAnalytics(),
-                [T.bv.Clicked]: O.makeEmptyGroupAnalytics()
+                [b.bv.Viewed]: O.makeEmptyGroupAnalytics(),
+                [b.bv.Clicked]: O.makeEmptyGroupAnalytics()
             }),
             S(this, 'counters', {
-                [T.n0.NewsNudge]: new R(),
-                [T.n0.WelcomeNudge]: new R(),
-                [T.n0.TextChat]: new R(),
-                [T.n0.ActivityUserJoin]: new R(),
-                [T.n0.ActivityInvite]: new R(),
-                [T.n0.IncomingCall]: new R(),
-                [T.n0.GoLiveNudge]: new R(),
-                [T.n0.GoLiveNonVoiceNudge]: new R(),
-                [T.n0.OverlayCrashed]: new R(),
-                [T.n0.ClipsReminderNotification]: new R(),
-                [T.n0.ClipsNotification]: new R(),
-                [T.n0.KeybindIndicatorsNotification]: new R(),
-                [T.n0.SendGameInvitesNotification]: new R()
+                [b.n0.NewsNudge]: new R(),
+                [b.n0.WelcomeNudge]: new R(),
+                [b.n0.TextChat]: new R(),
+                [b.n0.ActivityUserJoin]: new R(),
+                [b.n0.ActivityInvite]: new R(),
+                [b.n0.IncomingCall]: new R(),
+                [b.n0.GoLiveNudge]: new R(),
+                [b.n0.GoLiveNonVoiceNudge]: new R(),
+                [b.n0.OverlayCrashed]: new R(),
+                [b.n0.ClipsReminderNotification]: new R(),
+                [b.n0.ClipsNotification]: new R(),
+                [b.n0.KeybindIndicatorsNotification]: new R(),
+                [b.n0.SendGameInvitesNotification]: new R()
             });
     }
 }
@@ -158,9 +158,9 @@ class D {
     }
     getByWidget(e) {
         switch (e) {
-            case b.Odu.VOICE:
+            case T.Odu.VOICE:
                 return this.getByType(0);
-            case b.Odu.TEXT:
+            case T.Odu.TEXT:
                 return this.getByType(1);
             default:
                 return null;
@@ -340,7 +340,7 @@ class L {
         if (null != n) {
             n.screenAnalytics.destroy();
             let t = await n.getAnalytics();
-            for (let e of (m.default.track(b.rMx.OVERLAY_USAGE_STATS, t.usage), t.notifications)) m.default.track(b.rMx.OVERLAY_USAGE_NOTIFICATION_STATS, e);
+            for (let e of (m.default.track(T.rMx.OVERLAY_USAGE_STATS, t.usage), t.notifications)) m.default.track(T.rMx.OVERLAY_USAGE_NOTIFICATION_STATS, e);
             C.verbose('OVERLAY_USAGE_STATS: '.concat(e.name), t), delete L.gamesByPid[e.pid];
         }
         delete L.gamesByName[t];
@@ -535,7 +535,7 @@ function Z(e) {
     C.verbose('MESSAGE_ACKED', e), L.desktopMessageEvent('ack');
 }
 function F(e) {
-    e.message.state === b.yb.SENDING && L.desktopMessageEvent('created');
+    e.message.state === T.yb.SENDING && L.desktopMessageEvent('created');
 }
 function V(e) {
     let t = (0, y.Z)();
@@ -579,10 +579,10 @@ class W {
         var t;
         let n = (null !== (t = e.channelId) && void 0 !== t ? t : 'unknown') + e.context;
         switch (e.state) {
-            case b.hes.RTC_CONNECTED:
+            case T.hes.RTC_CONNECTED:
                 W.connections.add(n);
                 break;
-            case b.hes.DISCONNECTED:
+            case T.hes.DISCONNECTED:
                 W.connections.delete(n);
         }
         let i = W.hasConnection();
@@ -606,7 +606,7 @@ class K {
         });
     }
     static handleMessageCreate(e) {
-        if (e.message.state !== b.yb.SENDING) return;
+        if (e.message.state !== T.yb.SENDING) return;
         C.verbose('MESSAGE_CREATE', e, Error().stack);
         let t = _.Z.getGame();
         if (null == t) {

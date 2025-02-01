@@ -45,16 +45,16 @@ function v(e) {
 }
 function y(e) {
     let { application: t } = e;
-    b(t);
+    T(t);
 }
 function I(e) {
     let { application: t } = e;
-    b(t);
-}
-function b(e) {
-    m(s.ZP.createFromServer(e));
+    T(t);
 }
 function T(e) {
+    m(s.ZP.createFromServer(e));
+}
+function b(e) {
     let { userId: t, applicationId: n } = e,
         i = p.botUserIdToAppUsage[t];
     null == i
@@ -109,7 +109,7 @@ function O(e) {
     let { user: t, application: n } = e;
     t.bot &&
         null != n &&
-        T({
+        b({
             userId: t.id,
             applicationId: n.id
         });
@@ -193,7 +193,7 @@ function F(e) {
         m(s.ZP.createFromServer(e.application));
         let t = e.application.bot;
         null != t &&
-            T({
+            b({
                 userId: t.id,
                 applicationId: e.application.id
             });

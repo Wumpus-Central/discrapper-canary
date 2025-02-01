@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         name: 'ReasonML',
         aliases: ['re'],
@@ -52,4 +52,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

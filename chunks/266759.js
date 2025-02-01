@@ -1,5 +1,5 @@
 e.exports = {
-    guildSelectOptionIcon: 'guildSelectOptionIcon_cd814b',
-    searchableSelect: 'searchableSelect_cd814b',
-    clydeIconContainer: 'clydeIconContainer_cd814b'
+    guildSelectOptionIcon: 'guildSelectOptionIcon_b476ba',
+    searchableSelect: 'searchableSelect_b476ba',
+    clydeIconContainer: 'clydeIconContainer_b476ba'
 };

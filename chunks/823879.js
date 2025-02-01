@@ -1,13 +1,13 @@
 e.exports = {
-    select: 'select_d01826',
-    text: 'text_d01826',
-    breakAnywhere: 'breakAnywhere_d01826',
-    columnHeading: 'columnHeading_d01826',
-    theme: 'theme_d01826',
-    input: 'input_d01826',
-    toolbar: 'toolbar_d01826',
-    fullscreen: 'fullscreen_d01826',
-    textSample: 'textSample_d01826',
-    fontSize: 'fontSize_d01826',
-    textGrid: 'textGrid_d01826'
+    select: 'select_f8dc05',
+    text: 'text_f8dc05',
+    breakAnywhere: 'breakAnywhere_f8dc05',
+    columnHeading: 'columnHeading_f8dc05',
+    theme: 'theme_f8dc05',
+    input: 'input_f8dc05',
+    toolbar: 'toolbar_f8dc05',
+    fullscreen: 'fullscreen_f8dc05',
+    textSample: 'textSample_f8dc05',
+    fontSize: 'fontSize_f8dc05',
+    textGrid: 'textGrid_f8dc05'
 };

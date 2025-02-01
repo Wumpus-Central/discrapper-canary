@@ -1,37 +1,37 @@
-var i = r(47120);
-var a = r(147913),
-    o = r(604375),
-    s = r(268004);
-function l(e, n, r) {
+n.d(t, { Z: () => l }), n(47120);
+var i = n(147913),
+    r = n(604375),
+    a = n(268004);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class u extends a.Z {
+class o extends i.Z {
     handleVoiceChannelSelect() {
-        s.M.trigger();
+        a.M.trigger();
     }
     handleCallCreate() {
-        s.M.trigger();
+        a.M.trigger();
     }
     handleUserSettingsModalOpen() {
-        o.X.trigger();
+        r.X.trigger();
     }
     constructor(...e) {
         super(...e),
-            l(this, 'actions', {
+            s(this, 'actions', {
                 VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
                 CALL_CREATE: this.handleCallCreate,
                 USER_SETTINGS_MODAL_OPEN: this.handleUserSettingsModalOpen
             });
     }
 }
-n.Z = new u();
+let l = new o();

@@ -1,50 +1,50 @@
-n(571269), n(298267);
-var i = n(200651);
+n.d(t, { Z: () => c }), n(571269), n(298267);
+var s = n(200651);
 n(192379);
-var s = n(120356),
-    l = n.n(s),
-    r = n(692547),
-    o = n(481060),
-    a = n(113434),
-    u = n(26650),
-    c = n(355533);
-t.Z = function (e) {
-    let { className: t, color: n = r.Z.colors.WHITE, quest: s, isInventory: d } = e,
-        m = (0, a.qb)(e.quest),
-        { percentComplete: x, completedRatioDisplay: h } = (0, a.I)(s);
-    return !d && m.length > 0
-        ? (0, i.jsx)(u.Z, { children: m.at(0) })
-        : (0, i.jsxs)('div', {
-              className: l()(c.wrapper, t),
+var i = n(120356),
+    l = n.n(i),
+    a = n(692547),
+    r = n(481060),
+    o = n(113434),
+    d = n(26650),
+    u = n(355533);
+let c = function (e) {
+    let { className: t, color: n = a.Z.colors.WHITE, quest: i, isInventory: c } = e,
+        m = (0, o.qb)(e.quest),
+        { percentComplete: x, completedRatioDisplay: h } = (0, o.I)(i);
+    return !c && m.length > 0
+        ? (0, s.jsx)(d.Z, { children: m.at(0) })
+        : (0, s.jsxs)('div', {
+              className: l()(u.wrapper, t),
               style: { color: n.css },
               children: [
-                  (0, i.jsxs)('div', {
-                      className: c.percentCompleteWrapper,
+                  (0, s.jsxs)('div', {
+                      className: u.percentCompleteWrapper,
                       children: [
-                          (0, i.jsx)(o.Text, {
+                          (0, s.jsx)(r.Text, {
                               variant: 'text-xs/semibold',
-                              className: c.percentCompleteLabel,
+                              className: u.percentCompleteLabel,
                               color: 'none',
                               children: h
                           }),
-                          (0, i.jsx)('div', {
-                              className: c.percentCompleteLabelOffset,
+                          (0, s.jsx)('div', {
+                              className: u.percentCompleteLabelOffset,
                               style: { width: ''.concat(100 - x, '%') }
                           })
                       ]
                   }),
-                  (0, i.jsx)('div', {
-                      className: c.progressBar,
+                  (0, s.jsx)('div', {
+                      className: u.progressBar,
                       role: 'progressbar',
                       'aria-valuenow': x,
-                      children: (0, i.jsx)('div', {
-                          className: c.progressBarFill,
+                      children: (0, s.jsx)('div', {
+                          className: u.progressBarFill,
                           style: { width: ''.concat(x, '%') }
                       })
                   }),
                   m.length > 0 &&
-                      (0, i.jsx)(u.Z, {
-                          isInventory: d,
+                      (0, s.jsx)(d.Z, {
+                          isInventory: c,
                           children: m.at(0)
                       })
               ]

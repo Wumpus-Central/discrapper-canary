@@ -1,6 +1,6 @@
 e.exports = {
-    cardContainer: 'cardContainer_c5b7ad',
-    card: 'card_c5b7ad',
-    cardContent: 'cardContent_c5b7ad',
-    selectedCard: 'selectedCard_c5b7ad'
+    cardContainer: 'cardContainer__8833c',
+    card: 'card__8833c',
+    cardContent: 'cardContent__8833c',
+    selectedCard: 'selectedCard__8833c'
 };

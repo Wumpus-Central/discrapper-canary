@@ -1,5 +1,5 @@
 e.exports = {
-    title: 'title_da258e',
-    subtitle: 'subtitle_da258e',
-    img: 'img_da258e'
+    title: 'title_efe2ea',
+    subtitle: 'subtitle_efe2ea',
+    img: 'img_efe2ea'
 };

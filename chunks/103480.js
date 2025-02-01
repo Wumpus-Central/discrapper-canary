@@ -1,4 +1,4 @@
 e.exports = {
-    countContainer: 'countContainer_e382ad',
-    dot: 'dot_e382ad'
+    countContainer: 'countContainer_dbf040',
+    dot: 'dot_dbf040'
 };

@@ -1,7 +1,7 @@
 e.exports = {
-    feature: 'feature_c80ac3',
-    featureBorder: 'featureBorder_c80ac3',
-    title: 'title_c80ac3',
-    description: 'description_c80ac3',
-    icon: 'icon_c80ac3'
+    feature: 'feature__4626b',
+    featureBorder: 'featureBorder__4626b',
+    title: 'title__4626b',
+    description: 'description__4626b',
+    icon: 'icon__4626b'
 };

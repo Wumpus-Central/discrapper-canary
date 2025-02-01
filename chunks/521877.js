@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         name: 'FIX',
         contains: [
@@ -29,4 +29,4 @@ function n(e) {
         case_insensitive: !0
     };
 }
-e.exports = n;
+e.exports = t;

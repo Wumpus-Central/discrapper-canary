@@ -1,5 +1,5 @@
 e.exports = {
-    body: 'body_fe0943',
-    uncancelImage: 'uncancelImage_fe0943',
-    error: 'error_fe0943'
+    body: 'body_fe75b7',
+    uncancelImage: 'uncancelImage_fe75b7',
+    error: 'error_fe75b7'
 };

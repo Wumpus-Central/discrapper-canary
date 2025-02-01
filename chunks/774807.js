@@ -1,12 +1,12 @@
-n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i,
-    r = n(442837),
-    l = n(570140),
-    a = n(455199),
-    o = n(70956),
-    s = n(709054),
+    l = n(442837),
+    a = n(570140),
+    r = n(455199),
+    s = n(70956),
+    o = n(709054),
     c = n(497089);
-function u(e, t, n) {
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function u(e, t, n) {
         e
     );
 }
-let d = 90 * o.Z.Millis.DAY,
+let u = 90 * s.Z.Millis.DAY,
     m = {
         tab: null,
         localItemAcks: {},
@@ -27,13 +27,13 @@ let d = 90 * o.Z.Millis.DAY,
         isDataStale: !1,
         isRefreshing: !1
     };
-class h extends (i = r.ZP.PersistedStore) {
+class h extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(a.Z), null != e)) {
+        if ((this.waitFor(r.Z), null != e)) {
             var t;
             ((m = e).localItemAcks = (function (e) {
                 let t = {};
-                for (let [n, i] of Object.entries(e)) Date.now() - i < d && (t[n] = i);
+                for (let [n, i] of Object.entries(e)) Date.now() - i < u && (t[n] = i);
                 return t;
             })(null !== (t = m.localItemAcks) && void 0 !== t ? t : {})),
                 (m.isDataStale = !0);
@@ -47,7 +47,7 @@ class h extends (i = r.ZP.PersistedStore) {
         return null !== (e = m.tab) && void 0 !== e ? e : c.b1.ForYou;
     }
     isLocalItemAcked(e) {
-        return null != e.local_id && (null != m.localItemAcks[e.local_id] || s.default.age(e.id) > d);
+        return null != e.local_id && (null != m.localItemAcks[e.local_id] || o.default.age(e.id) > u);
     }
     hasNewMentions() {
         return m.hasNewMentions;
@@ -62,11 +62,11 @@ class h extends (i = r.ZP.PersistedStore) {
         return m.hasNewMentions || m.isDataStale || m.isRefreshing;
     }
 }
-u(h, 'displayName', 'NotificationCenterStore'), u(h, 'persistKey', 'NotificationCenterStore');
-function f() {
+function _() {
     (m.hasNewMentions = !1), (m.isDataStale = !1), (m.isRefreshing = !1);
 }
-t.Z = new h(l.Z, {
+d(h, 'displayName', 'NotificationCenterStore'), d(h, 'persistKey', 'NotificationCenterStore');
+let p = new h(a.Z, {
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
     },
@@ -91,6 +91,6 @@ t.Z = new h(l.Z, {
     NOTIFICATION_CENTER_REFRESH: function () {
         m.isRefreshing = !0;
     },
-    LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: f,
-    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: f
+    LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: _,
+    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: _
 });

@@ -1,9 +1,9 @@
 t.exports = {
-    header: 'header_e7b58e',
-    title: 'title_e7b58e',
-    subtitle: 'subtitle_e7b58e',
-    modalCloseButton: 'modalCloseButton_e7b58e',
-    content: 'content_e7b58e',
-    newPassword: 'newPassword_e7b58e',
-    cancel: 'cancel_e7b58e'
+    header: 'header__6dc27',
+    title: 'title__6dc27',
+    subtitle: 'subtitle__6dc27',
+    modalCloseButton: 'modalCloseButton__6dc27',
+    content: 'content__6dc27',
+    newPassword: 'newPassword__6dc27',
+    cancel: 'cancel__6dc27'
 };

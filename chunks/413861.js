@@ -1,10 +1,10 @@
 e.exports = {
-    wrapper: 'wrapper_b448f2',
-    partyMembers: 'partyMembers_b448f2',
-    partyMember: 'partyMember_b448f2',
-    partyMemberKnown: 'partyMemberKnown_b448f2 partyMember_b448f2',
-    partyMemberEmpty: 'partyMemberEmpty_b448f2 partyMember_b448f2',
-    partyMemberUnknown: 'partyMemberUnknown_b448f2 partyMember_b448f2',
-    partyMemberUnknownIcon: 'partyMemberUnknownIcon_b448f2',
-    partyMemberOverflow: 'partyMemberOverflow_b448f2'
+    wrapper: 'wrapper_e45a82',
+    partyMembers: 'partyMembers_e45a82',
+    partyMember: 'partyMember_e45a82',
+    partyMemberKnown: 'partyMemberKnown_e45a82 partyMember_e45a82',
+    partyMemberEmpty: 'partyMemberEmpty_e45a82 partyMember_e45a82',
+    partyMemberUnknown: 'partyMemberUnknown_e45a82 partyMember_e45a82',
+    partyMemberUnknownIcon: 'partyMemberUnknownIcon_e45a82',
+    partyMemberOverflow: 'partyMemberOverflow_e45a82'
 };

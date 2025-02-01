@@ -1,12 +1,12 @@
-e.exports = {
-    roleHeader: 'roleHeader_f624e3',
-    warningTitle: 'warningTitle_f624e3',
-    warningIcon: 'warningIcon_f624e3',
-    attachedRoleContainer: 'attachedRoleContainer_f624e3',
-    attachedRoleColor: 'attachedRoleColor_f624e3',
-    attachedRoleClose: 'attachedRoleClose_f624e3',
-    attachedRoleCloseIcon: 'attachedRoleCloseIcon_f624e3',
-    detachWarningHeading: 'detachWarningHeading_f624e3',
-    reattachRoleRow: 'reattachRoleRow_f624e3',
-    restoreDetachedRoleButtonInner: 'restoreDetachedRoleButtonInner_f624e3'
+A.exports = {
+    roleHeader: 'roleHeader_e3f977',
+    warningTitle: 'warningTitle_e3f977',
+    warningIcon: 'warningIcon_e3f977',
+    attachedRoleContainer: 'attachedRoleContainer_e3f977',
+    attachedRoleColor: 'attachedRoleColor_e3f977',
+    attachedRoleClose: 'attachedRoleClose_e3f977',
+    attachedRoleCloseIcon: 'attachedRoleCloseIcon_e3f977',
+    detachWarningHeading: 'detachWarningHeading_e3f977',
+    reattachRoleRow: 'reattachRoleRow_e3f977',
+    restoreDetachedRoleButtonInner: 'restoreDetachedRoleButtonInner_e3f977'
 };

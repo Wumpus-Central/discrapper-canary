@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(28546),
     y = n(691251),
     I = n(98528),
-    b = n(551058),
-    T = n(536442),
+    T = n(551058),
+    b = n(536442),
     S = n(140465),
     A = n(775412),
     N = n(104494),
@@ -105,7 +105,7 @@ let z = 0,
                         E.kJ.setInspectedExpressionPosition(t, n, y.u.MOUSE_EVENT), E.kJ.setSearchPlaceholder(i), (es.current = j.xAR);
                     }));
             }, []),
-            ef = (0, c.e7)([T.qc], () => T.qc.hasHotspot(T.v6.FAVORITE_EMOJI_TOOLTIP), []),
+            ef = (0, c.e7)([b.qc], () => b.qc.hasHotspot(b.v6.FAVORITE_EMOJI_TOOLTIP), []),
             e_ = r.useMemo(
                 () =>
                     l().memoize((e, t) => {
@@ -193,7 +193,7 @@ let z = 0,
                                       })
                                     : void 0;
                         return (0, i.jsx)(
-                            b.Z,
+                            T.Z,
                             {
                                 className: s()(K.header, M, {
                                     [K.inactiveNitroHeader]: p,
@@ -253,7 +253,7 @@ let z = 0,
         };
     },
     el = r.memo(function (e) {
-        let { diversitySurrogate: t, emojiGrid: n, emojiListRef: a, emojiSize: s, onEmojiSelect: o, onSelectSoundmoji: l, setUpsellConfigs: d, sectionDescriptors: f, rowCountBySection: _, collapsedSections: y, setCollapsedSections: b, getEmojiItemProps: T, getEmojiRowProps: S, rowCount: O, isUsingKeyboardNavigation: k, channelGuildId: U, channelId: G, messageId: B, isBurstReaction: F, listHeaderClassName: V } = e,
+        let { diversitySurrogate: t, emojiGrid: n, emojiListRef: a, emojiSize: s, onEmojiSelect: o, onSelectSoundmoji: l, setUpsellConfigs: d, sectionDescriptors: f, rowCountBySection: _, collapsedSections: y, setCollapsedSections: T, getEmojiItemProps: b, getEmojiRowProps: S, rowCount: O, isUsingKeyboardNavigation: k, channelGuildId: U, channelId: G, messageId: B, isBurstReaction: F, listHeaderClassName: V } = e,
             H = r.useRef(!1),
             q = E.kJ.useStore((e) => e.activeCategoryIndex),
             Q = (0, v.Iu)((e) => e.searchQuery),
@@ -284,8 +284,8 @@ let z = 0,
                 renderSectionHeader: ev,
                 renderSectionFooter: ey,
                 sectionMarginBottom: eI,
-                sectionHeaderHeight: eb,
-                sectionFooterHeight: eT
+                sectionHeaderHeight: eT,
+                sectionFooterHeight: eb
             } = eo({
                 collapsedSections: y,
                 diversitySurrogate: t,
@@ -295,8 +295,8 @@ let z = 0,
                 onSelectSoundmoji: l,
                 searchQuery: Q,
                 sectionDescriptors: f,
-                setCollapsedSections: b,
-                getEmojiItemProps: T,
+                setCollapsedSections: T,
+                getEmojiItemProps: b,
                 getEmojiRowProps: S,
                 isScrolling: H,
                 isUsingKeyboardNavigation: k,
@@ -392,9 +392,9 @@ let z = 0,
                               rowCount: O,
                               rowCountBySection: _,
                               rowHeight: es(s),
-                              sectionHeaderHeight: eb,
+                              sectionHeaderHeight: eT,
                               sectionMarginBottom: eI,
-                              sectionFooterHeight: eT,
+                              sectionFooterHeight: eb,
                               stickyHeaders: !0,
                               ref: a
                           })

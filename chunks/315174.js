@@ -1,4 +1,4 @@
-n(47120);
+n.d(t, { ZP: () => I }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -6,32 +6,32 @@ var i = n(200651),
     o = n(642128),
     s = n(873546),
     c = n(481060),
-    u = n(540059),
-    d = n(666188),
+    d = n(540059),
+    u = n(666188),
     h = n(695346),
     p = n(768581),
     m = n(358555),
-    f = n(981631),
-    g = n(647086),
-    v = n(388032),
-    C = n(837349);
+    g = n(981631),
+    f = n(647086),
+    _ = n(388032),
+    v = n(837349);
 function x(e) {
     var t;
     let { guild: n, controller: l, guildBanner: r, animate: c } = e,
-        { value: d } = l.springs,
+        { value: u } = l.springs,
         m = h.QK.getSetting(),
-        f = (0, u.Q3)('AnimatedBanner') ? 150 : 90;
+        g = (0, d.Q3)('AnimatedBanner') ? 150 : 90;
     return (0, i.jsx)(o.animated.div, {
-        className: C.animatedContainer,
+        className: v.animatedContainer,
         style: {
-            opacity: d,
-            transform: d.to((e) => 'translateY(-'.concat((1 - e) * f, 'px)'))
+            opacity: u,
+            transform: u.to((e) => 'translateY(-'.concat((1 - e) * g, 'px)'))
         },
         children: (0, i.jsx)(o.animated.div, {
-            className: a()(C.bannerImage, { [C.bannerImgFullWidth]: s.tq }),
-            style: { transform: d.to((e) => (m ? 'translateY('.concat((1 - e) * f * (2 / 3), 'px) scale(').concat(1 + (1 - e) * 0.2, ')') : 'translateY('.concat((1 - e) * f, 'px)'))) },
+            className: a()(v.bannerImage, { [v.bannerImgFullWidth]: s.tq }),
+            style: { transform: u.to((e) => (m ? 'translateY('.concat((1 - e) * g * (2 / 3), 'px) scale(').concat(1 + (1 - e) * 0.2, ')') : 'translateY('.concat((1 - e) * g, 'px)'))) },
             children: (0, i.jsx)('img', {
-                className: a()(C.bannerImg, { [C.bannerImgFullWidth]: s.tq }),
+                className: a()(v.bannerImg, { [v.bannerImgFullWidth]: s.tq }),
                 src:
                     null !==
                         (t = p.ZP.getGuildBannerURL(
@@ -49,33 +49,33 @@ function x(e) {
         })
     });
 }
-function I(e) {
+function C(e) {
     let { guild: t, controller: n, hasBanner: l, hasSubheader: r } = e,
         { value: s } = n.springs,
-        u = t.hasFeature(f.oNc.DISCOVERABLE),
-        d = (0, i.jsx)('div', {
-            className: C.communityInfo,
+        d = t.hasFeature(g.oNc.DISCOVERABLE),
+        u = (0, i.jsx)('div', {
+            className: v.communityInfo,
             children:
-                u &&
-                (0, i.jsx)(c.Tooltip, {
-                    text: v.intl.string(v.t.O8lDIy),
+                d &&
+                (0, i.jsx)(c.ua7, {
+                    text: _.intl.string(_.t.O8lDIy),
                     position: 'right',
                     children: (e) =>
                         (0, i.jsxs)('div', {
-                            className: C.communityInfoPill,
+                            className: v.communityInfoPill,
                             ...e,
                             children: [
-                                (0, i.jsx)(c.GlobeEarthIcon, {
+                                (0, i.jsx)(c.enf, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 12,
                                     height: 12,
-                                    className: C.communityIcon
+                                    className: v.communityIcon
                                 }),
                                 (0, i.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'none',
-                                    children: v.intl.string(v.t['B/vjCg'])
+                                    children: _.intl.string(_.t['B/vjCg'])
                                 })
                             ]
                         })
@@ -83,58 +83,58 @@ function I(e) {
         });
     return r
         ? (0, i.jsx)('div', {
-              className: a()(C.communityInfoContainer, C.hasSubheader),
-              children: d
+              className: a()(v.communityInfoContainer, v.hasSubheader),
+              children: u
           })
         : (0, i.jsx)(o.animated.div, {
-              className: C.communityInfoContainer,
+              className: v.communityInfoContainer,
               style: l ? { opacity: s } : { height: s.to((e) => ''.concat(20 * e, 'px')) },
-              children: d
+              children: u
           });
 }
-function _() {
-    return (0, i.jsx)(c.StarIcon, {
+function Z() {
+    return (0, i.jsx)(c.r7p, {
         size: 'custom',
         color: 'currentColor',
-        className: C.favoritesIcon,
+        className: v.favoritesIcon,
         height: 20,
         width: 20
     });
 }
-t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: Z, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': N, 'aria-controls': E, guild: y, guildBanner: j, animationOverlayHeight: T, children: A, headerClassName: P, communityInfoVisible: w, hasSubheader: M } = e,
-        L = y.hasFeature(f.oNc.ANIMATED_BANNER),
-        R = (0, d.Z)(y),
-        D = !R && y.hasCommunityInfoSubheader(),
-        G = !R && w,
-        k = (0, p.xR)(j) && L && !S,
-        [B, U] = l.useState(!1),
-        O = l.useRef(),
+let I = l.memo(function (e) {
+    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: I, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': N, 'aria-controls': E, guild: j, guildBanner: y, animationOverlayHeight: P, children: A, headerClassName: T, communityInfoVisible: w, hasSubheader: R } = e,
+        L = j.hasFeature(g.oNc.ANIMATED_BANNER),
+        M = (0, u.Z)(j),
+        D = !M && j.hasCommunityInfoSubheader(),
+        G = !M && w,
+        k = (0, p.xR)(y) && L && !S,
+        [B, O] = l.useState(!1),
+        U = l.useRef(),
         V = l.useRef(null),
-        H = l.useRef(),
-        F = h.QK.getSetting();
+        F = l.useRef(),
+        H = h.QK.getSetting();
     l.useEffect(() => {
-        if (k && t && !O.current && F)
+        if (k && t && !U.current && H)
             return (
-                U(!0),
-                (H.current = setTimeout(() => {
-                    U(!1);
+                O(!0),
+                (F.current = setTimeout(() => {
+                    O(!1);
                 }, 5000)),
                 () => {
-                    clearTimeout(H.current);
+                    clearTimeout(F.current);
                 }
             );
-    }, [k, t, F]),
+    }, [k, t, H]),
         l.useEffect(() => {
-            O.current = t;
+            U.current = t;
         }, [t]);
     let z = () => {
             let { renderBanner: t, guildBanner: n } = e;
             return null != n && !t;
         },
-        W = (0, u.Q3)('GuildHeader');
-    return (0, i.jsx)(c.ThemeProvider, {
-        theme: t ? f.BRd.DARK : void 0,
+        W = (0, d.Q3)('GuildHeader');
+    return (0, i.jsx)(c.f6W, {
+        theme: t ? g.BRd.DARK : void 0,
         children: (e) => {
             var l;
             return (0, i.jsxs)(i.Fragment, {
@@ -142,38 +142,38 @@ t.ZP = l.memo(function (e) {
                     (0, i.jsxs)('div', {
                         ref: V,
                         className: a()(r, {
-                            [C.container]: !0,
-                            [C.clickable]: null != o,
-                            [C.selected]: null != o && N,
-                            [C.hasBanner]: z(),
-                            [C.bannerVisible]: t,
+                            [v.container]: !0,
+                            [v.clickable]: null != o,
+                            [v.selected]: null != o && N,
+                            [v.hasBanner]: z(),
+                            [v.bannerVisible]: t,
                             [e]: !W && t,
-                            [C.communityInfoVisible]: G || (M && D)
+                            [v.communityInfoVisible]: G || (R && D)
                         }),
                         onMouseDown: b,
-                        onContextMenu: Z,
+                        onContextMenu: I,
                         onClick: o,
                         children: [
                             (0, i.jsxs)('header', {
-                                className: a()(C.header, P, { [C.themedHeaderMobile]: s.tq }),
+                                className: a()(v.header, T, { [v.themedHeaderMobile]: s.tq }),
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: a()(C.headerContent, C.primaryInfo),
+                                        className: a()(v.headerContent, v.primaryInfo),
                                         children: [
                                             (0, i.jsx)(m.Z, {
-                                                guild: y,
+                                                guild: j,
                                                 isBannerVisible: t
                                             }),
-                                            y.id === g._ && (0, i.jsx)(_, {}),
-                                            (0, i.jsx)(c.Heading, {
+                                            j.id === f._ && (0, i.jsx)(Z, {}),
+                                            (0, i.jsx)(c.X6q, {
                                                 variant: 'text-md/semibold',
                                                 lineClamp: 1,
-                                                className: C.name,
-                                                children: y.toString()
+                                                className: v.name,
+                                                children: j.toString()
                                             }),
                                             null != o &&
-                                                (0, i.jsx)(c.Clickable, {
-                                                    className: C.headerButton,
+                                                (0, i.jsx)(c.P3F, {
+                                                    className: v.headerButton,
                                                     'aria-controls': E,
                                                     'aria-expanded': N,
                                                     focusProps: {
@@ -181,29 +181,29 @@ t.ZP = l.memo(function (e) {
                                                         offset: 4
                                                     },
                                                     onClick: o,
-                                                    onContextMenu: Z,
-                                                    'aria-label': v.intl.formatToPlainString(v.t.xMXpl5, { guildName: null !== (l = null == y ? void 0 : y.toString()) && void 0 !== l ? l : '' })
+                                                    onContextMenu: I,
+                                                    'aria-label': _.intl.formatToPlainString(_.t.xMXpl5, { guildName: null !== (l = null == j ? void 0 : j.toString()) && void 0 !== l ? l : '' })
                                                 }),
                                             (0, i.jsx)('div', {
-                                                className: C.headerChildren,
+                                                className: v.headerChildren,
                                                 children: A
                                             })
                                         ]
                                     }),
                                     D &&
-                                        (0, i.jsx)(I, {
-                                            guild: y,
+                                        (0, i.jsx)(C, {
+                                            guild: j,
                                             controller: n,
-                                            hasBanner: null != j,
-                                            hasSubheader: null != M && M
+                                            hasBanner: null != y,
+                                            hasSubheader: null != R && R
                                         })
                                 ]
                             }),
-                            null != j
+                            null != y
                                 ? (0, i.jsx)(x, {
-                                      guild: y,
+                                      guild: j,
                                       controller: n,
-                                      guildBanner: j,
+                                      guildBanner: y,
                                       animate: B
                                   })
                                 : null
@@ -211,12 +211,12 @@ t.ZP = l.memo(function (e) {
                     }),
                     k && z()
                         ? (0, i.jsx)('div', {
-                              className: C.animatedBannerHoverLayer,
+                              className: v.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  U(!0), clearTimeout(H.current);
+                                  O(!0), clearTimeout(F.current);
                               },
-                              onMouseLeave: () => U(!1),
-                              style: { height: T }
+                              onMouseLeave: () => O(!1),
+                              style: { height: P }
                           })
                         : null
                 ]

@@ -2,11 +2,11 @@ e(653041), e(47120), e(312677);
 let n = (r, t, e, n) => {
     var o;
     let i;
-    let { fineTuning: a, fineTuningResolution: u, duration: f } = e,
+    let { fineTuning: f, fineTuningResolution: u, duration: a } = e,
         l = Math.floor(t / n.waveformBlockWidth);
-    if (a >= 0) {
-        let t = Math.floor((r.length * (a - (u * a) / f)) / f),
-            e = Math.floor((r.length * (a + (u * (f - a)) / f)) / f);
+    if (f >= 0) {
+        let t = Math.floor((r.length * (f - (u * f) / a)) / a),
+            e = Math.floor((r.length * (f + (u * (a - f)) / a)) / a);
         i = r.slice(t, e);
     } else i = r;
     let c = Math.floor(i.length / l),
@@ -27,12 +27,12 @@ let n = (r, t, e, n) => {
 };
 self.addEventListener('message', (r) => {
     let {
-            data: { rawBufferData: t, width: e, options: o, config: i, id: a }
+            data: { rawBufferData: t, width: e, options: o, config: i, id: f }
         } = r,
-        { normalizedData: u, normalizedVolumeMultipler: f } = n(t, e, o, i);
+        { normalizedData: u, normalizedVolumeMultipler: a } = n(t, e, o, i);
     self.postMessage({
         waveform: u,
-        id: a,
-        normalizedVolumeMultipler: f
+        id: f,
+        normalizedVolumeMultipler: a
     });
 });

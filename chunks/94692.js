@@ -1,37 +1,37 @@
-n(653041), n(47120);
-var s = n(200651),
-    l = n(192379),
-    i = n(442837),
-    a = n(481060),
-    r = n(325432),
-    o = n(391690),
-    h = n(424218),
-    u = n(998502),
-    d = n(388032),
-    c = n(502293);
-function p(t, e, n) {
+s.d(e, { Z: () => g }), s(653041), s(47120);
+var l = s(200651),
+    n = s(192379),
+    a = s(442837),
+    i = s(481060),
+    r = s(325432),
+    h = s(391690),
+    o = s(424218),
+    d = s(998502),
+    u = s(388032),
+    c = s(502293);
+function p(t, e, s) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
-                  value: n,
+                  value: s,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = n),
+            : (t[e] = s),
         t
     );
 }
-let f = 'select';
-class I extends l.PureComponent {
+let I = 'select';
+class m extends n.PureComponent {
     fetchAllDirectoryMetadata() {
         let { installationPaths: t } = this.props,
             e = t.map((t) => {
                 let { path: e } = t;
                 return e;
             }),
-            { newInstallationPath: n } = this.state;
-        for (let t of (null != n && e.push(n), (e = e.filter((t) => !this.fetchedMetadataPaths.has(t))), (0, r.ec)(e), e)) this.fetchedMetadataPaths.add(t);
+            { newInstallationPath: s } = this.state;
+        for (let t of (null != s && e.push(s), (e = e.filter((t) => !this.fetchedMetadataPaths.has(t))), (0, r.ec)(e), e)) this.fetchedMetadataPaths.add(t);
     }
     componentDidMount() {
         this.fetchAllDirectoryMetadata();
@@ -42,71 +42,71 @@ class I extends l.PureComponent {
     getOptions() {
         let { installationPaths: t } = this.props,
             { newInstallationPath: e } = this.state,
-            n = t.map((t) => {
-                let { path: e, label: n } = t;
+            s = t.map((t) => {
+                let { path: e, label: s } = t;
                 return {
                     value: e,
-                    label: this.renderLabel(e, n)
+                    label: this.renderLabel(e, s)
                 };
             });
         return (
             null != e &&
-                n.push({
+                s.push({
                     value: e,
                     label: this.renderLabel(e)
                 }),
-            n.push({
-                value: f,
-                label: d.intl.string(d.t['cL/rrq'])
+            s.push({
+                value: I,
+                label: u.intl.string(u.t['cL/rrq'])
             }),
-            n
+            s
         );
     }
     hasEnoughDiskSpace(t) {
-        let { requiredDiskKB: e, installationPathsMetadata: n } = this.props,
-            s = null != n[t] ? n[t].availableKB : null;
-        return null == e || null == s || e < s;
+        let { requiredDiskKB: e, installationPathsMetadata: s } = this.props,
+            l = null != s[t] ? s[t].availableKB : null;
+        return null == e || null == l || e < l;
     }
     sendChange(t) {
-        let { installationPathsMetadata: e, onChange: n } = this.props,
-            s = null != e[t] && !1 === e[t].hasPermission;
-        n(t, s || !this.hasEnoughDiskSpace(t));
+        let { installationPathsMetadata: e, onChange: s } = this.props,
+            l = null != e[t] && !1 === e[t].hasPermission;
+        s(t, l || !this.hasEnoughDiskSpace(t));
     }
     renderError() {
         let { value: t, installationPathsMetadata: e } = this.props;
         return null != e[t] && !1 === e[t].hasPermission
-            ? (0, s.jsx)('div', {
+            ? (0, l.jsx)('div', {
                   className: c.error,
-                  children: d.intl.string(d.t.cEUT8P)
+                  children: u.intl.string(u.t.cEUT8P)
               })
             : this.hasEnoughDiskSpace(t)
               ? null
-              : (0, s.jsx)('div', {
+              : (0, l.jsx)('div', {
                     className: c.error,
-                    children: d.intl.string(d.t.duXbEx)
+                    children: u.intl.string(u.t.duXbEx)
                 });
     }
     renderLabel(t, e) {
-        let { installationPathsMetadata: n } = this.props,
-            s = null != e ? e : t;
-        return null != n[t] && null != n[t].availableKB
-            ? d.intl.formatToPlainString(d.t['Y+M3rq'], {
-                  path: s,
-                  size: (0, h.BU)(n[t].availableKB, { useKibibytes: !0 })
+        let { installationPathsMetadata: s } = this.props,
+            l = null != e ? e : t;
+        return null != s[t] && null != s[t].availableKB
+            ? u.intl.formatToPlainString(u.t['Y+M3rq'], {
+                  path: l,
+                  size: (0, o.BU)(s[t].availableKB, { useKibibytes: !0 })
               })
-            : s;
+            : l;
     }
     render() {
-        let { value: t, className: e, autoFocus: n } = this.props;
-        return (0, s.jsxs)('div', {
+        let { value: t, className: e, autoFocus: s } = this.props;
+        return (0, l.jsxs)('div', {
             className: e,
             children: [
-                (0, s.jsx)(a.FormTitle, {
+                (0, l.jsx)(i.vwX, {
                     tag: 'h5',
-                    children: d.intl.string(d.t.WTJuNj)
+                    children: u.intl.string(u.t.WTJuNj)
                 }),
-                (0, s.jsx)(a.SingleSelect, {
-                    autoFocus: n,
+                (0, l.jsx)(i.q4e, {
+                    autoFocus: s,
                     options: this.getOptions(),
                     value: t,
                     onChange: this.handleChange
@@ -120,16 +120,16 @@ class I extends l.PureComponent {
             p(this, 'state', { newInstallationPath: null }),
             p(this, 'fetchedMetadataPaths', new Set()),
             p(this, 'handleChange', (t) => {
-                t === f
-                    ? u.ZP.showOpenDialog(['openDirectory']).then((t) => {
+                t === I
+                    ? d.ZP.showOpenDialog(['openDirectory']).then((t) => {
                           if (null != t && t.length > 0) {
                               let e = t[0];
                               this.setState({
                                   newInstallationPath:
                                       null !=
                                       this.props.installationPaths.find((t) => {
-                                          let { path: n } = t;
-                                          return n === e;
+                                          let { path: s } = t;
+                                          return s === e;
                                       })
                                           ? null
                                           : e
@@ -141,7 +141,7 @@ class I extends l.PureComponent {
             });
     }
 }
-e.Z = i.ZP.connectStores([o.Z], () => ({
-    installationPaths: o.Z.installationPaths,
-    installationPathsMetadata: o.Z.installationPathsMetadata
-}))(I);
+let g = a.ZP.connectStores([h.Z], () => ({
+    installationPaths: h.Z.installationPaths,
+    installationPathsMetadata: h.Z.installationPathsMetadata
+}))(m);

@@ -1,10 +1,10 @@
 e.exports = {
-    voiceCallWrapper: 'voiceCallWrapper_bae578',
-    videoGridWrapper: 'videoGridWrapper_bae578',
-    flexCenter: 'flexCenter_bae578',
-    videoWrapperAnimated: 'videoWrapperAnimated_bae578',
-    videoGrid: 'videoGrid_bae578',
-    hiddenParticipants: 'hiddenParticipants_bae578',
-    videoSizer: 'videoSizer_bae578',
-    focusedVideo: 'focusedVideo_bae578'
+    voiceCallWrapper: 'voiceCallWrapper_a21736',
+    videoGridWrapper: 'videoGridWrapper_a21736',
+    flexCenter: 'flexCenter_a21736',
+    videoWrapperAnimated: 'videoWrapperAnimated_a21736',
+    videoGrid: 'videoGrid_a21736',
+    hiddenParticipants: 'hiddenParticipants_a21736',
+    videoSizer: 'videoSizer_a21736',
+    focusedVideo: 'focusedVideo_a21736'
 };

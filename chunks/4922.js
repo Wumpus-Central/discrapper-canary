@@ -1,6 +1,6 @@
-function n(e) {
-    let n = e.regex,
-        r = {
+function t(e) {
+    let t = e.regex,
+        n = {
             className: 'number',
             relevance: 0,
             variants: [{ begin: /([+-]+)?[\d]+_[\d_]+/ }, { begin: e.NUMBER_RE }]
@@ -16,11 +16,11 @@ function n(e) {
             end: /$/
         }
     ];
-    let a = {
+    let r = {
             className: 'variable',
             variants: [{ begin: /\$[\w\d"][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }]
         },
-        o = {
+        a = {
             className: 'literal',
             begin: /\bon|off|true|false|yes|no\b/
         },
@@ -48,16 +48,16 @@ function n(e) {
                 }
             ]
         },
-        l = {
+        o = {
             begin: /\[/,
             end: /\]/,
-            contains: [i, o, a, s, r, 'self'],
+            contains: [i, a, r, s, n, 'self'],
             relevance: 0
         },
-        u = /[A-Za-z0-9_-]+/,
-        c = /"(\\"|[^"])*"/,
-        d = /'[^']*'/,
-        f = n.either(u, c, d);
+        l = /[A-Za-z0-9_-]+/,
+        u = /"(\\"|[^"])*"/,
+        c = /'[^']*'/,
+        d = t.either(l, u, c);
     return {
         name: 'TOML, also INI',
         aliases: ['toml'],
@@ -71,14 +71,14 @@ function n(e) {
                 end: /\]+/
             },
             {
-                begin: n.concat(f, '(\\s*\\.\\s*', f, ')*', n.lookahead(/\s*=\s*[^#\s]/)),
+                begin: t.concat(d, '(\\s*\\.\\s*', d, ')*', t.lookahead(/\s*=\s*[^#\s]/)),
                 className: 'attr',
                 starts: {
                     end: /$/,
-                    contains: [i, l, o, a, s, r]
+                    contains: [i, o, a, r, s, n]
                 }
             }
         ]
     };
 }
-e.exports = n;
+e.exports = t;

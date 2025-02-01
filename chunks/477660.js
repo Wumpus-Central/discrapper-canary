@@ -52,10 +52,10 @@
                                         y = v.order;
                                     if (y > _) break;
                                     var I = null == i.prevCapture ? '' : i.prevCapture[0],
-                                        b = v.match(t, i, I);
-                                    if (b) {
-                                        var T = v.quality ? v.quality(b, i, I) : 0;
-                                        (y < _ || T > f) && ((l = E), (u = v), (c = b), (f = T), (_ = y));
+                                        T = v.match(t, i, I);
+                                    if (T) {
+                                        var b = v.quality ? v.quality(T, i, I) : 0;
+                                        (y < _ || b > f) && ((l = E), (u = v), (c = T), (f = b), (_ = y));
                                     }
                                 }
                         }
@@ -155,18 +155,18 @@
         I = function (e, t, n) {
             return { content: v(t, e[1], n) };
         },
-        b = function () {
+        T = function () {
             return {};
         },
-        T = '(?:[*+-]|\\d+\\.)',
-        S = '( *)(' + T + ') +',
+        b = '(?:[*+-]|\\d+\\.)',
+        S = '( *)(' + b + ') +',
         A = RegExp('^' + S),
-        N = RegExp(S + '[^\\n]*(?:\\n(?!\\1' + T + ' )[^\\n]*)*(\n|$)', 'gm'),
+        N = RegExp(S + '[^\\n]*(?:\\n(?!\\1' + b + ' )[^\\n]*)*(\n|$)', 'gm'),
         C = /\n{2,}$/,
         R = /^ (?= *`)|(` *) $/g,
         O = C,
         D = / *\n+$/,
-        x = RegExp('^( *)(' + T + ') [\\s\\S]+?(?:\n{2,}(?! )(?!\\1' + T + ' )\\n*|\\s*\n*$)'),
+        x = RegExp('^( *)(' + b + ') [\\s\\S]+?(?:\n{2,}(?! )(?!\\1' + b + ' )\\n*|\\s*\n*$)'),
         L = /(?:^|\n)( *)$/,
         P = (function () {
             var e = /^ *\| *| *\| *$/g,
@@ -318,7 +318,7 @@
             hr: {
                 order: B++,
                 match: o(/^( *[-*_]){3,} *(?:\n *)+\n/),
-                parse: b,
+                parse: T,
                 react: function (e, t, n) {
                     return c('hr', n.key, f);
                 },
@@ -518,7 +518,7 @@
                 order: B++,
                 requiredFirstCharacters: ['\n'],
                 match: o(/^(?:\n *)*\n/),
-                parse: b,
+                parse: T,
                 react: function (e, t, n) {
                     return '\n';
                 },
@@ -787,7 +787,7 @@
                 order: B++,
                 requiredFirstCharacters: [' '],
                 match: l(/^ {2,}\n/),
-                parse: b,
+                parse: T,
                 react: function (e, t, n) {
                     return c('br', n.key, f);
                 },

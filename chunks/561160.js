@@ -1,35 +1,35 @@
-t.d(n, {
-    A: function () {
-        return u;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(780384),
-    a = t(481060),
-    o = t(410030),
-    r = t(176412),
-    s = t(48097),
-    c = t(983008),
-    d = t(478408);
-function u(e) {
-    let { searchQuery: n, textContent: t, type: u } = e,
-        m = (0, o.ZP)(),
-        p = (0, l.ap)(m) ? d : c;
+n.d(t, { A: () => m });
+var i = n(200651);
+n(192379);
+var l = n(780384),
+    a = n(481060),
+    o = n(410030),
+    s = n(540059),
+    r = n(176412),
+    c = n(48097),
+    d = n(983008),
+    u = n(478408);
+function m(e) {
+    let { searchQuery: t, textContent: n, type: m } = e,
+        p = (0, s.Q3)('AppLauncherEmptyState'),
+        h = (0, o.ZP)(),
+        v = (0, l.ap)(h) ? u : d;
     return (
-        (0, r.Bm)(u, n),
+        (0, r.Bm)(m, t),
         (0, i.jsxs)('div', {
-            className: s.emptyStateContainer,
+            className: c.emptyStateContainer,
             children: [
-                (0, i.jsx)('img', {
-                    className: s.emptyStateImage,
-                    src: p,
-                    alt: 'empty state'
-                }),
+                p
+                    ? null
+                    : (0, i.jsx)('img', {
+                          className: c.emptyStateImage,
+                          src: v,
+                          alt: 'empty state'
+                      }),
                 (0, i.jsx)(a.Text, {
                     variant: 'text-md/medium',
                     color: 'text-muted',
-                    children: t
+                    children: n
                 })
             ]
         })

@@ -1,4 +1,4 @@
 e.exports = {
-    brandShine: 'brandShine_be3fae',
-    freeTrialText: 'freeTrialText_be3fae'
+    brandShine: 'brandShine__9497e',
+    freeTrialText: 'freeTrialText__9497e'
 };

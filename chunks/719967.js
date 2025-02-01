@@ -1,7 +1,7 @@
 e.exports = {
-    panel: 'panel_a8c982',
-    panelGroup: 'panelGroup_a8c982',
-    bottomPanelButton: 'bottomPanelButton_a8c982',
-    topPanelToggle: 'topPanelToggle_a8c982',
-    secondaryInfoText: 'secondaryInfoText_a8c982'
+    panel: 'panel_ef5082',
+    panelGroup: 'panelGroup_ef5082',
+    bottomPanelButton: 'bottomPanelButton_ef5082',
+    topPanelToggle: 'topPanelToggle_ef5082',
+    secondaryInfoText: 'secondaryInfoText_ef5082'
 };

@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_de3e02',
-    isHidden: 'isHidden_de3e02',
-    withAccentColor: 'withAccentColor_de3e02'
+    container: 'container__60fa3',
+    isHidden: 'isHidden__60fa3',
+    withAccentColor: 'withAccentColor__60fa3'
 };

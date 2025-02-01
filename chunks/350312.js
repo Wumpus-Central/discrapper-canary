@@ -1,9 +1,9 @@
-n(47120);
+n.d(t, { Z: () => S }), n(47120);
 var r = n(200651),
-    i = n(192379),
-    l = n(120356),
-    o = n.n(l),
-    s = n(481060),
+    l = n(192379),
+    i = n(120356),
+    s = n.n(i),
+    o = n(481060),
     a = n(497505),
     u = n(720293),
     c = n(602667),
@@ -37,18 +37,18 @@ function v(e) {
           });
 }
 function E(e) {
-    let { ctaBtnLabel: t, title: n, subtitle: i, onCTAClick: l } = e;
+    let { ctaBtnLabel: t, title: n, subtitle: l, onCTAClick: i } = e;
     return (0, r.jsxs)('div', {
         className: d.endScreenCtaContainer,
         children: [
             (0, r.jsx)(C, {
                 title: n,
-                subtitle: i
+                subtitle: l
             }),
             (0, r.jsx)(p, {
                 label: t,
-                icon: s.ArrowLargeRightIcon,
-                onClick: l
+                icon: o.d4D,
+                onClick: i
             })
         ]
     });
@@ -58,12 +58,12 @@ function C(e) {
     return (0, r.jsxs)('div', {
         className: d.endScreenCtaTitleContainer,
         children: [
-            (0, r.jsx)(s.Heading, {
+            (0, r.jsx)(o.X6q, {
                 variant: 'heading-md/semibold',
                 className: d.endScreenCtaTitle,
                 children: t
             }),
-            (0, r.jsx)(s.Heading, {
+            (0, r.jsx)(o.X6q, {
                 variant: 'heading-sm/normal',
                 className: d.endScreenCtaSubtitle,
                 children: n
@@ -72,38 +72,38 @@ function C(e) {
     });
 }
 function p(e) {
-    let { label: t, icon: n, onClick: l, className: a } = e,
-        [u, c] = i.useState(!1),
+    let { label: t, icon: n, onClick: i, className: a } = e,
+        [u, c] = l.useState(!1),
         m = () => {
             c(!0);
         },
         v = () => {
             c(!1);
         };
-    return (0, r.jsxs)(s.Clickable, {
-        className: o()(d.endScreenCtaBtn, d.accentOnHover, a),
+    return (0, r.jsxs)(o.P3F, {
+        className: s()(d.endScreenCtaBtn, d.accentOnHover, a),
         onMouseEnter: m,
         onMouseLeave: v,
         onFocus: m,
         onBlur: v,
-        onClick: l,
+        onClick: i,
         children: [
-            (0, r.jsx)(s.Heading, {
+            (0, r.jsx)(o.X6q, {
                 variant: 'heading-md/semibold',
                 className: d.endScreenCtaBtnTitle,
                 children: t
             }),
             (0, r.jsx)(n, {
                 size: 'md',
-                color: u ? s.tokens.colors.WHITE : '#B5BAC1',
+                color: u ? o.TVs.colors.WHITE : '#B5BAC1',
                 className: d.endScreenIcon
             })
         ]
     });
 }
-t.Z = function (e) {
-    let { quest: t, ctaBtnLabel: n, title: l, subtitle: o, onCTAClick: s } = e,
-        a = i.useMemo(() => (0, u.z)(u.i.VIDEO_PLAYER_THUMBNAIL, t), [t]);
+let S = function (e) {
+    let { quest: t, ctaBtnLabel: n, title: i, subtitle: s, onCTAClick: o } = e,
+        a = l.useMemo(() => (0, u.z)(u.i.VIDEO_PLAYER_THUMBNAIL, t), [t]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(m, { asset: a }),
@@ -116,10 +116,10 @@ t.Z = function (e) {
                         asset: a
                     }),
                     (0, r.jsx)(E, {
-                        title: l,
-                        subtitle: o,
+                        title: i,
+                        subtitle: s,
                         ctaBtnLabel: n,
-                        onCTAClick: s
+                        onCTAClick: o
                     })
                 ]
             })

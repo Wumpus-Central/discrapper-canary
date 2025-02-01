@@ -1,56 +1,56 @@
-n.r(e);
-var a = n(200651);
+n.d(e, { default: () => r });
+var l = n(200651);
 n(192379);
-var o = n(481060),
-    l = n(313201),
+var s = n(481060),
+    a = n(313201),
     d = n(430824),
-    s = n(614812),
-    i = n(388032),
-    r = n(263924);
-e.default = (t) => {
+    i = n(614812),
+    o = n(388032),
+    c = n(263924);
+let r = (t) => {
     let { onClose: e, guildId: n } = t,
-        c = (0, l.Dt)(),
-        u = i.intl.format(i.t.ZqkXsL, { helpdeskArticle: s.z }),
-        m = d.Z.getGuild(n);
+        r = (0, a.Dt)(),
+        m = o.intl.format(o.t.ZqkXsL, { helpdeskArticle: i.z }),
+        u = d.Z.getGuild(n);
     return (
-        null != m &&
-            (u = i.intl.format(i.t.jn0Xy8, {
-                guildName: m.name,
-                helpdeskArticle: s.z
+        null != u &&
+            (m = o.intl.format(o.t.jn0Xy8, {
+                guildName: u.name,
+                helpdeskArticle: i.z
             })),
-        (0, a.jsxs)(o.ModalRoot, {
+        (0, l.jsxs)(s.Y0X, {
             ...t,
-            'aria-labelledby': c,
+            'aria-labelledby': r,
             children: [
-                (0, a.jsxs)(o.ModalHeader, {
+                (0, l.jsxs)(s.xBx, {
                     separator: !1,
-                    className: r.modalHeader,
+                    className: c.modalHeader,
                     children: [
-                        (0, a.jsx)(o.Heading, {
-                            id: c,
+                        (0, l.jsx)(s.X6q, {
+                            id: r,
                             variant: 'heading-xl/extrabold',
-                            children: i.intl.string(i.t.kJwpBQ)
+                            children: o.intl.string(o.t.kJwpBQ)
                         }),
-                        (0, a.jsx)(o.ModalCloseButton, {
-                            className: r.closeButton,
+                        (0, l.jsx)(s.olH, {
+                            className: c.closeButton,
                             onClick: e
                         })
                     ]
                 }),
-                (0, a.jsx)(o.ModalContent, {
-                    className: r.modalContent,
-                    children: (0, a.jsx)(o.Text, {
+                (0, l.jsx)(s.hzk, {
+                    className: c.modalContent,
+                    children: (0, l.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        className: r.contentText,
-                        children: u
+                        className: c.contentText,
+                        children: m
                     })
                 }),
-                (0, a.jsx)(o.ModalFooter, {
-                    children: (0, a.jsx)(o.Button, {
-                        className: r.button,
-                        size: o.Button.Sizes.MIN,
+                (0, l.jsx)(s.mzw, {
+                    children: (0, l.jsx)(s.zxk, {
+                        className: c.button,
+                        size: s.zxk.Sizes.MIN,
                         onClick: e,
-                        children: i.intl.string(i.t.BddRzc)
+                        children: o.intl.string(o.t.BddRzc)
                     })
                 })
             ]

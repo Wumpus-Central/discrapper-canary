@@ -1,5 +1,5 @@
 t.exports = {
-    container: 'container_e9b66e',
-    footer: 'footer_e9b66e',
-    footerButton: 'footerButton_e9b66e'
+    container: 'container_ca98d9',
+    footer: 'footer_ca98d9',
+    footerButton: 'footerButton_ca98d9'
 };

@@ -1,22 +1,22 @@
-var i = r(444675),
-    a = 65536,
-    o = 4294967295;
+var i = n(444675),
+    r = 65536,
+    a = 4294967295;
 function s() {
     throw Error('Secure random number generation is not supported by this browser.\nUse Chrome, Firefox or Internet Explorer 11');
 }
-var l = r(957578).Buffer,
-    u = r.g.crypto || r.g.msCrypto;
-function c(e, n) {
-    if (e > o) throw RangeError('requested too many random bytes');
-    var r = l.allocUnsafe(e);
+var o = n(957578).Buffer,
+    l = n.g.crypto || n.g.msCrypto;
+function u(e, t) {
+    if (e > a) throw RangeError('requested too many random bytes');
+    var n = o.allocUnsafe(e);
     if (e > 0) {
-        if (e > a) for (var s = 0; s < e; s += a) u.getRandomValues(r.slice(s, s + a));
-        else u.getRandomValues(r);
+        if (e > r) for (var s = 0; s < e; s += r) l.getRandomValues(n.slice(s, s + r));
+        else l.getRandomValues(n);
     }
-    return 'function' == typeof n
+    return 'function' == typeof t
         ? i.nextTick(function () {
-              n(null, r);
+              t(null, n);
           })
-        : r;
+        : n;
 }
-u && u.getRandomValues ? (e.exports = c) : (e.exports = s);
+l && l.getRandomValues ? (e.exports = u) : (e.exports = s);

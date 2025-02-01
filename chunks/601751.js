@@ -1,10 +1,10 @@
 e.exports = {
-    content: 'content_ac101f',
-    fullHeight: 'fullHeight_ac101f',
-    innerContent: 'innerContent_ac101f',
-    bottom: 'bottom_ac101f',
-    contentAnimContainer: 'contentAnimContainer_ac101f',
-    container: 'container_ac101f',
-    heightContainer: 'heightContainer_ac101f',
-    scrollSvg: 'scrollSvg_ac101f'
+    content: 'content__72a27',
+    fullHeight: 'fullHeight__72a27',
+    innerContent: 'innerContent__72a27',
+    bottom: 'bottom__72a27',
+    contentAnimContainer: 'contentAnimContainer__72a27',
+    container: 'container__72a27',
+    heightContainer: 'heightContainer__72a27',
+    scrollSvg: 'scrollSvg__72a27'
 };

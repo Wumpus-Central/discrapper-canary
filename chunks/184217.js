@@ -1,4 +1,4 @@
 t.exports = {
-    artContainer: 'artContainer_b1a95e',
-    artAsset: 'artAsset_b1a95e'
+    artContainer: 'artContainer__22b59',
+    artAsset: 'artAsset__22b59'
 };

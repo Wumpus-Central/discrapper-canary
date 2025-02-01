@@ -1,9 +1,9 @@
 e.exports = {
-    scroller: 'scroller_da1bd9',
-    colorPicker: 'colorPicker_da1bd9',
-    colorDescription: 'colorDescription_da1bd9',
-    divider: 'divider_da1bd9',
-    noticeContainer: 'noticeContainer_da1bd9',
-    previewContainer: 'previewContainer_da1bd9',
-    messageContainer: 'messageContainer_da1bd9'
+    scroller: 'scroller__981c8',
+    colorPicker: 'colorPicker__981c8',
+    colorDescription: 'colorDescription__981c8',
+    divider: 'divider__981c8',
+    noticeContainer: 'noticeContainer__981c8',
+    previewContainer: 'previewContainer__981c8',
+    messageContainer: 'messageContainer__981c8'
 };

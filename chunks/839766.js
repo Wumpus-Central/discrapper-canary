@@ -1,6 +1,6 @@
-i(47120), i(653041), i(411104);
-var n = i(250906),
-    r = i(86104);
+i.d(e, { Z: () => o }), i(47120), i(653041), i(411104);
+var r = i(250906),
+    n = i(86104);
 function a(t, e, i) {
     return (
         e in t
@@ -15,28 +15,28 @@ function a(t, e, i) {
     );
 }
 async function s(t, e, i, a, s) {
-    let h = s;
-    if (null == h) {
+    let o = s;
+    if (null == o) {
         let t = await fetch(a);
         if (!t.ok) throw Error('Error fetching sticker at '.concat(a));
-        h = await t.text();
+        o = await t.text();
     }
-    if (null == h) return null;
-    await (0, r.j)();
-    let o = new r.Z(h);
-    return new n.Z(o, t, e, i);
+    if (null == o) return null;
+    await (0, n.j)();
+    let u = new n.Z(o);
+    return new r.Z(u, t, e, i);
 }
-e.Z = new (class t {
-    create(t, e, i, n, r) {
+let o = new (class {
+    create(t, e, i, r, n) {
         let a = !(arguments.length > 5) || void 0 === arguments[5] || arguments[5];
-        return this.getCached(t).then((h) => {
-            var o;
-            if ((this.referenceCounts.set(t, (null !== (o = this.referenceCounts.get(t)) && void 0 !== o ? o : 0) + 1), h)) return h;
-            let l = {
+        return this.getCached(t).then((o) => {
+            var u;
+            if ((this.referenceCounts.set(t, (null !== (u = this.referenceCounts.get(t)) && void 0 !== u ? u : 0) + 1), o)) return o;
+            let c = {
                 key: t,
-                promise: s(t, e, i, n, r)
+                promise: s(t, e, i, r, n)
             };
-            return a && (this.entries.push(l), l.promise.then((e) => (null == e && this.removeEntry(t), e)).catch((e) => this.removeEntry(t)), this.entries.length > 50 && this.removeEntryAt(0)), l.promise;
+            return a && (this.entries.push(c), c.promise.then((e) => (null == e && this.removeEntry(t), e)).catch((e) => this.removeEntry(t)), this.entries.length > 50 && this.removeEntryAt(0)), c.promise;
         });
     }
     drop(t) {

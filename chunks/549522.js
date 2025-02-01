@@ -1,10 +1,10 @@
 e.exports = {
-    container: 'container_b55df8',
-    nuxContent: 'nuxContent_b55df8',
-    adminUpsell: 'adminUpsell_b55df8',
-    closeButton: 'closeButton_b55df8',
-    image: 'image_b55df8',
-    heading: 'heading_b55df8',
-    tip: 'tip_b55df8',
-    checkItOut: 'checkItOut_b55df8'
+    container: 'container_bc0d35',
+    nuxContent: 'nuxContent_bc0d35',
+    adminUpsell: 'adminUpsell_bc0d35',
+    closeButton: 'closeButton_bc0d35',
+    image: 'image_bc0d35',
+    heading: 'heading_bc0d35',
+    tip: 'tip_bc0d35',
+    checkItOut: 'checkItOut_bc0d35'
 };

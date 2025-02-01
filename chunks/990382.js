@@ -1,53 +1,53 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e) {
+    function t(e) {
         if (e % 100 == 11);
         else if (e % 10 == 1) return !1;
         return !0;
     }
-    function r(e, r, i, a) {
-        var o = e + ' ';
+    function n(e, n, i, r) {
+        var a = e + ' ';
         switch (i) {
             case 's':
-                return r || a ? 'nokkrar sekúndur' : 'nokkrum sekúndum';
+                return n || r ? 'nokkrar sekúndur' : 'nokkrum sekúndum';
             case 'ss':
-                if (n(e)) return o + (r || a ? 'sekúndur' : 'sekúndum');
-                return o + 'sekúnda';
+                if (t(e)) return a + (n || r ? 'sekúndur' : 'sekúndum');
+                return a + 'sekúnda';
             case 'm':
-                return r ? 'mínúta' : 'mínútu';
+                return n ? 'mínúta' : 'mínútu';
             case 'mm':
-                if (n(e)) return o + (r || a ? 'mínútur' : 'mínútum');
-                if (r) return o + 'mínúta';
-                return o + 'mínútu';
+                if (t(e)) return a + (n || r ? 'mínútur' : 'mínútum');
+                if (n) return a + 'mínúta';
+                return a + 'mínútu';
             case 'hh':
-                if (n(e)) return o + (r || a ? 'klukkustundir' : 'klukkustundum');
-                return o + 'klukkustund';
+                if (t(e)) return a + (n || r ? 'klukkustundir' : 'klukkustundum');
+                return a + 'klukkustund';
             case 'd':
-                if (r) return 'dagur';
-                return a ? 'dag' : 'degi';
+                if (n) return 'dagur';
+                return r ? 'dag' : 'degi';
             case 'dd':
-                if (n(e)) {
-                    if (r) return o + 'dagar';
-                    return o + (a ? 'daga' : 'dögum');
+                if (t(e)) {
+                    if (n) return a + 'dagar';
+                    return a + (r ? 'daga' : 'dögum');
                 }
-                if (r) return o + 'dagur';
-                return o + (a ? 'dag' : 'degi');
+                if (n) return a + 'dagur';
+                return a + (r ? 'dag' : 'degi');
             case 'M':
-                if (r) return 'mánuður';
-                return a ? 'mánuð' : 'mánuði';
+                if (n) return 'mánuður';
+                return r ? 'mánuð' : 'mánuði';
             case 'MM':
-                if (n(e)) {
-                    if (r) return o + 'mánuðir';
-                    return o + (a ? 'mánuði' : 'mánuðum');
+                if (t(e)) {
+                    if (n) return a + 'mánuðir';
+                    return a + (r ? 'mánuði' : 'mánuðum');
                 }
-                if (r) return o + 'mánuður';
-                return o + (a ? 'mánuð' : 'mánuði');
+                if (n) return a + 'mánuður';
+                return a + (r ? 'mánuð' : 'mánuði');
             case 'y':
-                return r || a ? 'ár' : 'ári';
+                return n || r ? 'ár' : 'ári';
             case 'yy':
-                if (n(e)) return o + (r || a ? 'ár' : 'árum');
-                return o + (r || a ? 'ár' : 'ári');
+                if (t(e)) return a + (n || r ? 'ár' : 'árum');
+                return a + (n || r ? 'ár' : 'ári');
         }
     }
     return e.defineLocale('is', {
@@ -75,18 +75,18 @@
         relativeTime: {
             future: 'eftir %s',
             past: 'fyrir %s síðan',
-            s: r,
-            ss: r,
-            m: r,
-            mm: r,
+            s: n,
+            ss: n,
+            m: n,
+            mm: n,
             h: 'klukkustund',
-            hh: r,
-            d: r,
-            dd: r,
-            M: r,
-            MM: r,
-            y: r,
-            yy: r
+            hh: n,
+            d: n,
+            dd: n,
+            M: n,
+            MM: n,
+            y: n,
+            yy: n
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

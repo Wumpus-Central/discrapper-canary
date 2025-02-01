@@ -1,13 +1,13 @@
 e.exports = {
-    header: 'header_eaef52',
-    modalCloseButton: 'modalCloseButton_eaef52',
-    content: 'content_eaef52',
-    icon: 'icon_eaef52',
-    input: 'input_eaef52',
-    settings: 'settings_eaef52',
-    description: 'description_eaef52',
-    credentialList: 'credentialList_eaef52',
-    credentialItem: 'credentialItem_eaef52',
-    credentialOptions: 'credentialOptions_eaef52',
-    footer: 'footer_eaef52'
+    header: 'header__6c75d',
+    modalCloseButton: 'modalCloseButton__6c75d',
+    content: 'content__6c75d',
+    icon: 'icon__6c75d',
+    input: 'input__6c75d',
+    settings: 'settings__6c75d',
+    credentialList: 'credentialList__6c75d',
+    description: 'description__6c75d',
+    credentialItem: 'credentialItem__6c75d',
+    credentialOptions: 'credentialOptions__6c75d',
+    footer: 'footer__6c75d'
 };

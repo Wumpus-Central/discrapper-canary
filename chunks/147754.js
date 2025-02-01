@@ -1,5 +1,5 @@
-var i = n(818083);
-t.Z = (0, i.B)({
+n.d(e, { Z: () => i });
+let i = (0, n(818083).B)({
     kind: 'guild',
     id: '2021-11_hub_events',
     label: 'Hub Events',

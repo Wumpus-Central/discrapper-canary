@@ -1,14 +1,14 @@
 e.exports = {
-    headerBar: 'headerBar_d8354c',
-    headerBarInner: 'headerBarInner_d8354c',
-    headerBarRegularBackground: 'headerBarRegularBackground_d8354c',
-    headerBarTransparentDarkBackground: 'headerBarTransparentDarkBackground_d8354c',
-    headerBarTransparentLightBackground: 'headerBarTransparentLightBackground_d8354c',
-    fullscreenHeaderBar: 'fullscreenHeaderBar_d8354c',
-    shopAllHeader: 'shopAllHeader_d8354c',
-    discordLogo: 'discordLogo_d8354c',
-    alignedRightContent: 'alignedRightContent_d8354c',
-    fullScreenAlignedRightContent: 'fullScreenAlignedRightContent_d8354c',
-    balanceWidgetMenu: 'balanceWidgetMenu_d8354c',
-    back: 'back_d8354c'
+    headerBar: 'headerBar__80679',
+    headerBarInner: 'headerBarInner__80679',
+    headerBarRegularBackground: 'headerBarRegularBackground__80679',
+    headerBarTransparentDarkBackground: 'headerBarTransparentDarkBackground__80679',
+    headerBarTransparentLightBackground: 'headerBarTransparentLightBackground__80679',
+    fullscreenHeaderBar: 'fullscreenHeaderBar__80679',
+    shopAllHeader: 'shopAllHeader__80679',
+    discordLogo: 'discordLogo__80679',
+    alignedRightContent: 'alignedRightContent__80679',
+    fullScreenAlignedRightContent: 'fullScreenAlignedRightContent__80679',
+    balanceWidgetMenu: 'balanceWidgetMenu__80679',
+    back: 'back__80679'
 };

@@ -1,4 +1,4 @@
-var r =
+var n =
     '[object Arguments]' ==
     (function () {
         return Object.prototype.toString.call(arguments);
@@ -6,7 +6,7 @@ var r =
 function i(e) {
     return '[object Arguments]' == Object.prototype.toString.call(e);
 }
-function a(e) {
+function r(e) {
     return (e && 'object' == typeof e && 'number' == typeof e.length && Object.prototype.hasOwnProperty.call(e, 'callee') && !Object.prototype.propertyIsEnumerable.call(e, 'callee')) || !1;
 }
-((n = e.exports = r ? i : a).supported = i), (n.unsupported = a);
+((t = e.exports = n ? i : r).supported = i), (t.unsupported = r);

@@ -1,4 +1,4 @@
 e.exports = {
-    sectionTitle: 'sectionTitle_fa6dd5',
-    content: 'content_fa6dd5'
+    sectionTitle: 'sectionTitle_f0d60d',
+    content: 'content_f0d60d'
 };

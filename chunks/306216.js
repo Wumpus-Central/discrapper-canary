@@ -1,7 +1,7 @@
-var i = r(346391);
-function a(e, n) {
-    var r = i(this, e),
-        a = r.size;
-    return r.set(e, n), (this.size += r.size == a ? 0 : 1), this;
+var i = n(346391);
+function r(e, t) {
+    var n = i(this, e),
+        r = n.size;
+    return n.set(e, t), (this.size += n.size == r ? 0 : 1), this;
 }
-e.exports = a;
+e.exports = r;

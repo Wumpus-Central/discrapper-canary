@@ -1,27 +1,28 @@
-var i = r(192379),
-    a = r(723184),
-    o = r(925489),
+n.d(t, { Z: () => c });
+var i = n(192379),
+    r = n(723184),
+    a = n(925489),
     s = (function () {
-        function e(e, n) {
-            for (var r = 0; r < n.length; r++) {
-                var i = n[r];
+        function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var i = t[n];
                 (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (n, r, i) {
-            return r && e(n.prototype, r), i && e(n, i), n;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })();
-function l(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function o(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function u(e, n) {
+function l(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function c(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function u(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -29,17 +30,17 @@ function c(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var d = (function (e) {
-    function n() {
-        l(this, n);
-        for (var e, r, i, a = arguments.length, s = Array(a), c = 0; c < a; c++) s[c] = arguments[c];
+let c = (function (e) {
+    function t() {
+        o(this, t);
+        for (var e, n, i, r = arguments.length, s = Array(r), u = 0; u < r; u++) s[u] = arguments[u];
         return (
-            (r = i = u(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(s)))),
+            (n = i = l(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(s)))),
             (i.handleChange = function (e) {
-                var n = o.T(e, i.props.direction, i.props.hsl, i.container);
-                n && 'function' == typeof i.props.onChange && i.props.onChange(n, e);
+                var t = a.T(e, i.props.direction, i.props.hsl, i.container);
+                t && 'function' == typeof i.props.onChange && i.props.onChange(t, e);
             }),
             (i.handleMouseDown = function (e) {
                 i.handleChange(e), window.addEventListener('mousemove', i.handleChange), window.addEventListener('mouseup', i.handleMouseUp);
@@ -47,12 +48,12 @@ var d = (function (e) {
             (i.handleMouseUp = function () {
                 i.unbindEventListeners();
             }),
-            u(i, r)
+            l(i, n)
         );
     }
     return (
-        c(n, e),
-        s(n, [
+        u(t, e),
+        s(t, [
             {
                 key: 'componentWillUnmount',
                 value: function () {
@@ -69,9 +70,9 @@ var d = (function (e) {
                 key: 'render',
                 value: function () {
                     var e = this,
-                        n = this.props.direction,
-                        r = void 0 === n ? 'horizontal' : n,
-                        o = (0, a.default)(
+                        t = this.props.direction,
+                        n = void 0 === t ? 'horizontal' : t,
+                        a = (0, r.default)(
                             {
                                 default: {
                                     hue: {
@@ -106,31 +107,30 @@ var d = (function (e) {
                                     }
                                 }
                             },
-                            { vertical: 'vertical' === r }
+                            { vertical: 'vertical' === n }
                         );
                     return i.createElement(
                         'div',
-                        { style: o.hue },
+                        { style: a.hue },
                         i.createElement(
                             'div',
                             {
-                                className: 'hue-' + r,
-                                style: o.container,
-                                ref: function (n) {
-                                    return (e.container = n);
+                                className: 'hue-' + n,
+                                style: a.container,
+                                ref: function (t) {
+                                    return (e.container = t);
                                 },
                                 onMouseDown: this.handleMouseDown,
                                 onTouchMove: this.handleChange,
                                 onTouchStart: this.handleChange
                             },
                             i.createElement('style', null, '\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          '),
-                            i.createElement('div', { style: o.pointer }, this.props.pointer ? i.createElement(this.props.pointer, this.props) : i.createElement('div', { style: o.slider }))
+                            i.createElement('div', { style: a.pointer }, this.props.pointer ? i.createElement(this.props.pointer, this.props) : i.createElement('div', { style: a.slider }))
                         )
                     );
                 }
             }
         ]),
-        n
+        t
     );
 })(i.PureComponent || i.Component);
-n.Z = d;

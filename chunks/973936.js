@@ -1,7 +1,7 @@
 e.exports = {
-    pttTools: 'pttTools_ae8973',
-    pttToolsMessage: 'pttToolsMessage_ae8973',
-    pttToolsWarning: 'pttToolsWarning_ae8973',
-    pttToolsFlex: 'pttToolsFlex_ae8973',
-    column: 'column_ae8973'
+    pttTools: 'pttTools__1c5a3',
+    pttToolsMessage: 'pttToolsMessage__1c5a3',
+    pttToolsWarning: 'pttToolsWarning__1c5a3',
+    pttToolsFlex: 'pttToolsFlex__1c5a3',
+    column: 'column__1c5a3'
 };

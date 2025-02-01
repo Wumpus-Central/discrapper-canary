@@ -1,50 +1,50 @@
-e.r(n);
-var i = e(200651);
-e(192379);
-var o = e(442837),
-    l = e(481060),
-    s = e(87051),
-    a = e(9156),
-    r = e(621600),
-    d = e(388032),
-    c = e(514629);
-n.default = (t) => {
-    let { onClose: n, channelId: e, transitionState: u } = t,
-        h = (0, o.e7)([a.ZP], () => a.ZP.isChannelMuted(null, e));
-    return (0, i.jsxs)(l.ModalRoot, {
+i.d(n, { default: () => u });
+var e = i(200651);
+i(192379);
+var s = i(442837),
+    a = i(481060),
+    l = i(87051),
+    o = i(9156),
+    r = i(621600),
+    c = i(388032),
+    d = i(514629);
+let u = (t) => {
+    let { onClose: n, channelId: i, transitionState: u } = t,
+        x = (0, s.e7)([o.ZP], () => o.ZP.isChannelMuted(null, i));
+    return (0, e.jsxs)(a.Y0X, {
         transitionState: u,
-        size: l.ModalSize.SMALL,
-        'aria-label': d.intl.string(d.t.uAmAiI),
+        size: a.CgR.SMALL,
+        'aria-label': c.intl.string(c.t.uAmAiI),
         children: [
-            (0, i.jsx)(l.ModalCloseButton, {
-                className: c.closeButton,
+            (0, e.jsx)(a.olH, {
+                className: d.closeButton,
                 onClick: n
             }),
-            (0, i.jsxs)(l.ModalContent, {
-                className: c.content,
+            (0, e.jsxs)(a.hzk, {
+                className: d.content,
                 children: [
-                    (0, i.jsx)('div', {
-                        className: c.iconContainer,
-                        children: h ? (0, i.jsx)(l.BellSlashIcon, { size: 'md' }) : (0, i.jsx)(l.BellIcon, { size: 'md' })
+                    (0, e.jsx)('div', {
+                        className: d.iconContainer,
+                        children: x ? (0, e.jsx)(a.owu, { size: 'md' }) : (0, e.jsx)(a.Dkj, { size: 'md' })
                     }),
-                    (0, i.jsx)(l.Heading, {
-                        className: c.heading,
+                    (0, e.jsx)(a.X6q, {
+                        className: d.heading,
                         variant: 'heading-xl/bold',
-                        children: h ? d.intl.string(d.t['4rg7cH']) : d.intl.string(d.t.uAmAiI)
+                        children: x ? c.intl.string(c.t['4rg7cH']) : c.intl.string(c.t.uAmAiI)
                     }),
-                    (0, i.jsx)(l.Text, {
-                        className: c.infoText,
+                    (0, e.jsx)(a.Text, {
+                        className: d.infoText,
                         variant: 'text-md/normal',
                         color: 'text-normal',
-                        children: h ? d.intl.string(d.t['5vton5']) : d.intl.string(d.t.mscFJS)
+                        children: x ? c.intl.string(c.t['5vton5']) : c.intl.string(c.t.mscFJS)
                     }),
-                    (0, i.jsx)(l.Button, {
-                        className: c.button,
-                        color: h ? l.Button.Colors.PRIMARY : l.Button.Colors.RED,
+                    (0, e.jsx)(a.zxk, {
+                        className: d.button,
+                        color: x ? a.zxk.Colors.PRIMARY : a.zxk.Colors.RED,
                         onClick: () => {
-                            s.Z.updateChannelOverrideSettings(null, e, { muted: !h }, h ? r.ZB.Unmuted : r.ZB.Muted), n();
+                            l.Z.updateChannelOverrideSettings(null, i, { muted: !x }, x ? r.ZB.Unmuted : r.ZB.Muted), n();
                         },
-                        children: h ? d.intl.string(d.t.YqAjX1) : d.intl.string(d.t['w4m94+'])
+                        children: x ? c.intl.string(c.t.YqAjX1) : c.intl.string(c.t['w4m94+'])
                     })
                 ]
             })

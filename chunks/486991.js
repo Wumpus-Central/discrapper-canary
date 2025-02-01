@@ -1,7 +1,7 @@
 t.exports = {
-    modal: 'modal_fe68e0',
-    followSuccessHeader: 'followSuccessHeader_fe68e0',
-    image: 'image_fe68e0',
-    body: 'body_fe68e0',
-    root: 'root_fe68e0'
+    modal: 'modal__7db36',
+    followSuccessHeader: 'followSuccessHeader__7db36',
+    image: 'image__7db36',
+    body: 'body__7db36',
+    root: 'root__7db36'
 };

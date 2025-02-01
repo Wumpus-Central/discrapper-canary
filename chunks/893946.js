@@ -1,8 +1,8 @@
 e.exports = {
-    userSettingsOverlayField: 'userSettingsOverlayField_af804a',
-    enableOverlaySection: 'enableOverlaySection_af804a',
-    enableOverlayItem: 'enableOverlayItem_af804a',
-    enableSwitch: 'enableSwitch_af804a',
-    notificationSection: 'notificationSection_af804a',
-    notificationSettings: 'notificationSettings_af804a'
+    userSettingsOverlayField: 'userSettingsOverlayField__4d38b',
+    enableOverlaySection: 'enableOverlaySection__4d38b',
+    enableOverlayItem: 'enableOverlayItem__4d38b',
+    enableSwitch: 'enableSwitch__4d38b',
+    notificationSection: 'notificationSection__4d38b',
+    notificationSettings: 'notificationSettings__4d38b'
 };

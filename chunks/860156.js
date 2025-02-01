@@ -1,6 +1,6 @@
-e.exports = {
-    container: 'container_fb1469',
-    containerPadding: 'containerPadding_fb1469',
-    image: 'image_fb1469',
-    body: 'body_fb1469'
+n.exports = {
+    container: 'container__19cf2',
+    containerPadding: 'containerPadding__19cf2',
+    image: 'image__19cf2',
+    body: 'body__19cf2'
 };

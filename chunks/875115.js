@@ -1,9 +1,9 @@
-function n(e) {
-    for (var n, r = e.length; r--; )
-        if (255 === (n = e.readUInt8(r))) e.writeUInt8(0, r);
+function t(e) {
+    for (var t, n = e.length; n--; )
+        if (255 === (t = e.readUInt8(n))) e.writeUInt8(0, n);
         else {
-            n++, e.writeUInt8(n, r);
+            t++, e.writeUInt8(t, n);
             break;
         }
 }
-e.exports = n;
+e.exports = t;

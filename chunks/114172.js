@@ -1,33 +1,33 @@
-Object.defineProperty(n, '__esModule', { value: !0 }), (n.mergeClasses = void 0);
-var i = s(r(320403)),
-    a = s(r(117806)),
-    o =
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.mergeClasses = void 0);
+var i = s(n(320403)),
+    r = s(n(117806)),
+    a =
         Object.assign ||
         function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = arguments[n];
-                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         };
 function s(e) {
     return e && e.__esModule ? e : { default: e };
 }
-var l = (n.mergeClasses = function (e) {
-    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-        r = (e.default && (0, a.default)(e.default)) || {};
+var o = (t.mergeClasses = function (e) {
+    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+        n = (e.default && (0, r.default)(e.default)) || {};
     return (
-        n.map(function (n) {
-            var a = e[n];
+        t.map(function (t) {
+            var r = e[t];
             return (
-                a &&
-                    (0, i.default)(a, function (e, n) {
-                        !r[n] && (r[n] = {}), (r[n] = o({}, r[n], a[n]));
+                r &&
+                    (0, i.default)(r, function (e, t) {
+                        n[t] || (n[t] = {}), (n[t] = a({}, n[t], r[t]));
                     }),
-                n
+                t
             );
         }),
-        r
+        n
     );
 });
-n.default = l;
+t.default = o;

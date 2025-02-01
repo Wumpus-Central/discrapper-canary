@@ -12,8 +12,8 @@ var r = n(200651),
     h = n(209613),
     p = n(429368),
     m = n(724994),
-    f = n(388032),
-    g = n(474083);
+    g = n(388032),
+    f = n(474083);
 let x = o()((e) => {
         let t = !1;
         if (null != e && (0, u.FX)(e)) {
@@ -33,7 +33,7 @@ let x = o()((e) => {
                 [b, t, i]
             );
         return (0, r.jsx)(C.ua7, {
-            text: f.intl.string(f.t['/bUsx8']),
+            text: g.intl.string(g.t['/bUsx8']),
             'aria-label': !1,
             shouldShow: !_ && v,
             children: (e) =>
@@ -60,11 +60,11 @@ let x = o()((e) => {
                     onKeyDown: (e) => {
                         e.key === c.R8.ENTER && j(e);
                     },
-                    className: g.colorVariant,
+                    className: f.colorVariant,
                     children: (0, r.jsx)('div', {
-                        className: s()(g.colorSwatch, {
-                            [g.open]: !_,
-                            [g.selected]: i === o
+                        className: s()(f.colorSwatch, {
+                            [f.open]: !_,
+                            [f.selected]: i === o
                         }),
                         style: {
                             backgroundColor: n.variantValue,
@@ -72,7 +72,7 @@ let x = o()((e) => {
                         },
                         children: v
                             ? (0, r.jsx)(C.kSu, {
-                                  className: g.purchasedIndicator,
+                                  className: f.purchasedIndicator,
                                   color: x(n.variantValue)
                               })
                             : null
@@ -87,11 +87,11 @@ let x = o()((e) => {
             b = a.previewingVariantIndex,
             k = null === (t = l.variants) || void 0 === t ? void 0 : t[v],
             j = null !== b ? (null === (n = l.variants) || void 0 === n ? void 0 : n[b]) : void 0,
-            E = (0, h.Z)('shop-variants-group-'.concat(l.storeListingId), c.hy.HORIZONTAL);
+            L = (0, h.Z)('shop-variants-group-'.concat(l.storeListingId), c.hy.HORIZONTAL);
         if (null == k) return null;
-        let L = null != j ? j.variantLabel : null == k ? void 0 : k.variantLabel;
+        let E = null != j ? j.variantLabel : null == k ? void 0 : k.variantLabel;
         return (0, r.jsx)(d.bG, {
-            navigator: E,
+            navigator: L,
             children: (0, r.jsx)(d.SJ, {
                 children: (e) => {
                     var t;
@@ -99,15 +99,15 @@ let x = o()((e) => {
                     return (0, r.jsxs)('div', {
                         ref: n,
                         ...d,
-                        className: s()(g.variantsPanel, i, {
-                            [g.minimalState]: u,
-                            [g.alternativeColor]: x
+                        className: s()(f.variantsPanel, i, {
+                            [f.minimalState]: u,
+                            [f.alternativeColor]: x
                         }),
                         onMouseEnter: () => (null == o ? void 0 : o(!0)),
                         onMouseLeave: () => (null == o ? void 0 : o(!1)),
                         children: [
                             (0, r.jsx)('ol', {
-                                className: g.variantsList,
+                                className: f.variantsList,
                                 children:
                                     null === (t = l.variants) || void 0 === t
                                         ? void 0
@@ -132,8 +132,8 @@ let x = o()((e) => {
                             (0, r.jsx)(C.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
-                                className: g.variantLabel,
-                                children: u ? f.intl.string(f.t.wbgaj4) : L
+                                className: f.variantLabel,
+                                children: u ? g.intl.string(g.t.wbgaj4) : E
                             })
                         ]
                     });

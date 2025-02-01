@@ -30,8 +30,8 @@ var r = n(772848),
     v = n(862847),
     y = n(5881),
     I = n(492112),
-    b = n(61115),
-    T = n(150560),
+    T = n(61115),
+    b = n(150560),
     S = n(46140),
     A = n(981631),
     N = n(49898);
@@ -93,7 +93,7 @@ function L(e, t) {
         });
 }
 function P(e, t, n) {
-    (0, T.Z.getState().setUtmCurrentContext)({
+    (0, b.Z.getState().setUtmCurrentContext)({
         utmSourceCurrent: R,
         utmMediumCurrent: C,
         utmCampaignCurrent: n,
@@ -108,7 +108,7 @@ function w(e) {
     if (!(0, v.j)(n)) return;
     let i = (0, I.Z)({ entityName: e.config.messages.gameTitle });
     t.log('Showing survey '.concat(i.id)),
-        (0, b.C)({
+        (0, T.C)({
             questId: e.id,
             survey: i
         });

@@ -1,9 +1,9 @@
 e.exports = {
-    modalRoot: 'modalRoot_f94590',
-    modal: 'modal_f94590',
-    modalFooter: 'modalFooter_f94590',
-    header: 'header_f94590',
-    forumPost: 'forumPost_f94590',
-    cancelButton: 'cancelButton_f94590',
-    dontAddButton: 'dontAddButton_f94590'
+    modalRoot: 'modalRoot__02068',
+    modal: 'modal__02068',
+    modalFooter: 'modalFooter__02068',
+    header: 'header__02068',
+    forumPost: 'forumPost__02068',
+    cancelButton: 'cancelButton__02068',
+    dontAddButton: 'dontAddButton__02068'
 };

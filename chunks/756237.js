@@ -1,8 +1,8 @@
-function n(e) {
+function t(e) {
     try {
         return -1 !== Function.toString.call(e).indexOf('[native code]');
-    } catch (n) {
+    } catch (t) {
         return 'function' == typeof e;
     }
 }
-(e.exports = n), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);

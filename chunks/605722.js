@@ -1,9 +1,9 @@
-var i = r(570596),
-    a = r(735471),
-    o = r(982665),
+var i = n(570596),
+    r = n(735471),
+    a = n(982665),
     s = TypeError;
-e.exports = function (e, n) {
-    var r, l;
-    if (('string' === n && a((r = e.toString)) && !o((l = i(r, e)))) || (a((r = e.valueOf)) && !o((l = i(r, e)))) || ('string' !== n && a((r = e.toString)) && !o((l = i(r, e))))) return l;
+e.exports = function (e, t) {
+    var n, o;
+    if (('string' === t && r((n = e.toString)) && !a((o = i(n, e)))) || (r((n = e.valueOf)) && !a((o = i(n, e)))) || ('string' !== t && r((n = e.toString)) && !a((o = i(n, e))))) return o;
     throw new s("Can't convert object to primitive value");
 };

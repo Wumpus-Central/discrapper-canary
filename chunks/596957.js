@@ -1,8 +1,8 @@
-n(411104), n(47120), n(653041);
+n.d(t, { Z: () => k }), n(411104), n(47120), n(653041);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(529103),
@@ -12,8 +12,8 @@ var i = n(200651),
     m = n(906732),
     p = n(835473),
     g = n(372460),
-    f = n(91896),
-    _ = n(795448),
+    _ = n(91896),
+    f = n(795448),
     E = n(922611),
     I = n(699516),
     C = n(974042),
@@ -21,10 +21,10 @@ var i = n(200651),
     N = n(434184),
     T = n(701861),
     S = n(437314),
-    b = n(696577),
-    A = n(163417),
-    Z = n(830880),
-    x = n(492347),
+    Z = n(696577),
+    x = n(163417),
+    A = n(830880),
+    b = n(492347),
     L = n(42575),
     y = n(617015),
     P = n(981631),
@@ -34,31 +34,31 @@ let j = [];
 function D() {
     c.Z.setSection(P.pJs.ADD_FRIEND);
 }
-function M() {
-    (0, o.openModalLazy)(async () => {
+function w() {
+    (0, o.ZDy)(async () => {
         let { default: e } = await n.e('36312').then(n.bind(n, 153932));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function w(e) {
+function M(e) {
     let { section: t, showSpamCta: n } = e,
-        l = r.useMemo(() => (n ? M : t !== P.pJs.PENDING ? D : void 0), [n, t]);
+        r = l.useMemo(() => (n ? w : t !== P.pJs.PENDING ? D : void 0), [n, t]);
     return (0, i.jsx)('div', {
         className: R.emptyStateContainer,
         children: (0, i.jsx)(
             S.Z,
             {
                 type: t,
-                onClick: l
+                onClick: r
             },
             t
         )
     });
 }
-t.Z = function (e) {
+let k = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, m.ZP)(h.Z.FRIENDS_LIST),
-        { rows: l, section: c } = (0, s.cj)([C.ZP], () => C.ZP.getState()),
+        { rows: r, section: c } = (0, s.cj)([C.ZP], () => C.ZP.getState()),
         D = (0, s.e7)([v.Z], () => v.Z.isFocused()),
         { relationshipCount: k, hasBlockedOrIgnored: U } = (0, s.cj)([I.Z], () => ({
             relationshipCount: I.Z.getRelationshipCount(),
@@ -66,14 +66,14 @@ t.Z = function (e) {
         })),
         G = (0, E.Do)({ location: 'PeopleList' }),
         B = (0, g.wn)({ location: 'PeopleList' }),
-        V = (0, s.e7)([f.Z], () => f.Z.getGameRelationshipCount() > 0),
+        V = (0, s.e7)([_.Z], () => _.Z.getGameRelationshipCount() > 0),
         H = B && V,
-        [F, z] = r.useState(() => {
+        [F, z] = l.useState(() => {
             let e = {};
             for (let t of Object.values(P.pJs)) e[t] = '';
             return e;
         }),
-        W = r.useCallback(
+        W = l.useCallback(
             (e) => {
                 switch (c) {
                     case P.pJs.BLOCKED:
@@ -82,7 +82,7 @@ t.Z = function (e) {
                             isFocused: D
                         });
                     case P.pJs.PENDING:
-                        return (0, i.jsx)(b.Z, {
+                        return (0, i.jsx)(Z.Z, {
                             ...e,
                             isFocused: D,
                             disambiguateGameFriends: H
@@ -108,7 +108,7 @@ t.Z = function (e) {
             },
             [D, H, c]
         ),
-        Y = r.useCallback(
+        Y = l.useCallback(
             (e) => {
                 z({
                     ...F,
@@ -117,16 +117,16 @@ t.Z = function (e) {
             },
             [F, c]
         ),
-        K = r.useCallback(() => {
+        K = l.useCallback(() => {
             z({
                 ...F,
                 [c]: ''
             });
         }, [F, c]),
-        q = r.useMemo(() => c === P.pJs.PENDING && (l.filter(P.pJs.SPAM).length > 0 || l.filter(P.pJs.PENDING_IGNORED).length > 0), [l, c]),
-        X = r.useMemo(() => l.filter(c, F[c]), [l, F, c]),
+        q = l.useMemo(() => c === P.pJs.PENDING && (r.filter(P.pJs.SPAM).length > 0 || r.filter(P.pJs.PENDING_IGNORED).length > 0), [r, c]),
+        X = l.useMemo(() => r.filter(c, F[c]), [r, F, c]),
         Q = B && c === P.pJs.PENDING,
-        J = r.useMemo(() => {
+        J = l.useMemo(() => {
             if (!Q) return j;
             let e = [];
             return (
@@ -138,7 +138,7 @@ t.Z = function (e) {
             );
         }, [Q, X]);
     (0, p.Z)(J, Q);
-    let $ = r.useMemo(() => {
+    let $ = l.useMemo(() => {
             if (c === P.pJs.PENDING) {
                 let e = [],
                     t = [];
@@ -151,15 +151,15 @@ t.Z = function (e) {
             }
             return [X];
         }, [X, c]),
-        ee = r.useMemo(() => X.filter((e) => e.type === P.OGo.PENDING_INCOMING).length, [X]),
+        ee = l.useMemo(() => X.filter((e) => e.type === P.OGo.PENDING_INCOMING).length, [X]),
         et = c === P.pJs.PENDING && ee > 0 && ee >= y.yf,
-        en = r.useCallback(
+        en = l.useCallback(
             (e) => {
                 e.stopPropagation(), d.Z.confirmClearPendingRelationships(ee);
             },
             [ee]
         ),
-        ei = r.useCallback(
+        ei = l.useCallback(
             (e) => {
                 let n = (function (e, t, n) {
                     switch (e) {
@@ -168,7 +168,7 @@ t.Z = function (e) {
                         case P.pJs.PENDING:
                             if (0 === n) return O.intl.formatToPlainString(O.t['g+3FIS'], { count: t.toString() });
                             if (1 === n) return O.intl.formatToPlainString(O.t.npJsRk, { count: t.toString() });
-                            else throw Error('Unexpected pending friend requests section index: '.concat(n));
+                            throw Error('Unexpected pending friend requests section index: '.concat(n));
                         case P.pJs.SUGGESTIONS:
                             return O.intl.formatToPlainString(O.t['DYMZ/v'], { count: t.toString() });
                         case P.pJs.BLOCKED:
@@ -181,16 +181,16 @@ t.Z = function (e) {
                     ? (0, i.jsxs)('div', {
                           className: R.sectionTitle,
                           children: [
-                              (0, i.jsx)(x.Z, {
+                              (0, i.jsx)(b.Z, {
                                   id: t,
                                   title: n
                               }),
                               et &&
-                                  (0, i.jsx)(o.Button, {
-                                      look: o.ButtonLooks.LINK,
-                                      color: o.ButtonColors.LINK,
+                                  (0, i.jsx)(o.zxk, {
+                                      look: o.iLD.LINK,
+                                      color: o.Ttl.LINK,
                                       className: R.clearButton,
-                                      size: o.Button.Sizes.TINY,
+                                      size: o.zxk.Sizes.TINY,
                                       onClick: en,
                                       'aria-label': O.intl.string(O.t.O8k7Oz),
                                       children: O.intl.string(O.t.O8k7Oz)
@@ -199,7 +199,7 @@ t.Z = function (e) {
                       })
                     : (0, i.jsx)('div', {
                           className: R.sectionTitle,
-                          children: (0, i.jsx)(x.Z, {
+                          children: (0, i.jsx)(b.Z, {
                               id: t,
                               title: n
                           })
@@ -208,45 +208,45 @@ t.Z = function (e) {
             [$, c, t, et, en]
         );
     if (
-        (r.useEffect(() => {
-            c === P.pJs.ALL && (0, _.d$)();
+        (l.useEffect(() => {
+            c === P.pJs.ALL && (0, f.d$)();
         }, [c]),
         0 === X.length && '' === F[c])
     )
-        return (0, i.jsx)(w, {
+        return (0, i.jsx)(M, {
             section: c,
             showSpamCta: q
         });
-    let er = '' !== F[c],
-        el = 0 === X.length && er;
+    let el = '' !== F[c],
+        er = 0 === X.length && el;
     return (0, i.jsx)(m.Gt, {
         value: n,
         children: (0, i.jsxs)(u.Z, {
             section: P.jXE.FRIENDS_LIST,
             children: [
-                G && U && (0, i.jsx)(Z.R, {}),
-                (0, i.jsx)(o.SearchBar, {
-                    className: a()(R.searchBar, el ? R.searchEmptyState : null),
+                G && U && (0, i.jsx)(A.R, {}),
+                (0, i.jsx)(o.E1j, {
+                    className: a()(R.searchBar, er ? R.searchEmptyState : null),
                     query: F[c],
                     onChange: Y,
                     onClear: K,
-                    size: o.SearchBar.Sizes.MEDIUM
+                    size: o.E1j.Sizes.MEDIUM
                 }),
-                (0, i.jsx)(A.Z, {
+                (0, i.jsx)(x.Z, {
                     rows: $,
                     renderRow: W,
                     renderSection: ei,
                     sectionFilter: c,
                     isVirtualizedList: k >= y.nG,
-                    hasSearchQuery: er,
+                    hasSearchQuery: el,
                     footer:
-                        q && !el
-                            ? (0, i.jsx)(o.Button, {
-                                  look: o.Button.Looks.LINK,
+                        q && !er
+                            ? (0, i.jsx)(o.zxk, {
+                                  look: o.zxk.Looks.LINK,
                                   color: R.viewSpamButtonColor,
                                   className: R.viewSpamButton,
-                                  onClick: M,
-                                  size: o.ButtonSizes.TINY,
+                                  onClick: w,
+                                  size: o.PhG.TINY,
                                   children: (0, i.jsx)(o.Text, {
                                       variant: 'text-xs/medium',
                                       children: G ? O.intl.string(O.t.R40bU1) : O.intl.string(O.t.rXl8fn)
@@ -254,7 +254,7 @@ t.Z = function (e) {
                               })
                             : null
                 }),
-                el &&
+                er &&
                     (0, i.jsx)('div', {
                         className: R.emptyStateContainer,
                         children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, c)

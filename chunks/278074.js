@@ -176,10 +176,10 @@ function y(...e) {
 function I(e) {
     return 'number' == typeof e;
 }
-function b(e) {
+function T(e) {
     return 'string' == typeof e;
 }
-function T(e) {
+function b(e) {
     return 'bigint' == typeof e;
 }
 let S = f(
@@ -192,30 +192,30 @@ let S = f(
         Object.assign(f(e), {
             startsWith: (t) => {
                 var n;
-                return N(g(e, ((n = t), v((e) => b(e) && e.startsWith(n)))));
+                return N(g(e, ((n = t), v((e) => T(e) && e.startsWith(n)))));
             },
             endsWith: (t) => {
                 var n;
-                return N(g(e, ((n = t), v((e) => b(e) && e.endsWith(n)))));
+                return N(g(e, ((n = t), v((e) => T(e) && e.endsWith(n)))));
             },
             minLength: (t) => {
                 let n;
-                return N(g(e, ((n = t), v((e) => b(e) && e.length >= n))));
+                return N(g(e, ((n = t), v((e) => T(e) && e.length >= n))));
             },
             maxLength: (t) => {
                 let n;
-                return N(g(e, ((n = t), v((e) => b(e) && e.length <= n))));
+                return N(g(e, ((n = t), v((e) => T(e) && e.length <= n))));
             },
             includes: (t) => {
                 var n;
-                return N(g(e, ((n = t), v((e) => b(e) && e.includes(n)))));
+                return N(g(e, ((n = t), v((e) => T(e) && e.includes(n)))));
             },
             regex: (t) => {
                 var n;
-                return N(g(e, ((n = t), v((e) => b(e) && !!e.match(n)))));
+                return N(g(e, ((n = t), v((e) => T(e) && !!e.match(n)))));
             }
         }),
-    C = N(v(b)),
+    C = N(v(T)),
     R = (e, t) => v((n) => I(n) && e <= n && t >= n),
     O = (e) => v((t) => I(t) && t < e),
     D = (e) => v((t) => I(t) && t > e),
@@ -238,13 +238,13 @@ let S = f(
             negative: () => U(g(e, k()))
         }),
     G = U(v(I)),
-    B = (e, t) => v((n) => T(n) && e <= n && t >= n),
-    Z = (e) => v((t) => T(t) && t < e),
-    F = (e) => v((t) => T(t) && t > e),
-    V = (e) => v((t) => T(t) && t <= e),
-    j = (e) => v((t) => T(t) && t >= e),
-    H = () => v((e) => T(e) && e > 0),
-    Y = () => v((e) => T(e) && e < 0),
+    B = (e, t) => v((n) => b(n) && e <= n && t >= n),
+    Z = (e) => v((t) => b(t) && t < e),
+    F = (e) => v((t) => b(t) && t > e),
+    V = (e) => v((t) => b(t) && t <= e),
+    j = (e) => v((t) => b(t) && t >= e),
+    H = () => v((e) => b(e) && e > 0),
+    Y = () => v((e) => b(e) && e < 0),
     W = (e) =>
         Object.assign(f(e), {
             between: (t, n) => W(g(e, B(t, n))),
@@ -255,7 +255,7 @@ let S = f(
             positive: () => W(g(e, H())),
             negative: () => W(g(e, Y()))
         }),
-    K = W(v(T)),
+    K = W(v(b)),
     z = f(
         v(function (e) {
             return 'boolean' == typeof e;

@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => A,
-    ku: () => T
+    ku: () => b
 });
 var i = n(200651),
     r = n(192379),
@@ -21,7 +21,7 @@ var i = n(200651),
     v = n(592125),
     y = n(388032),
     I = n(205659);
-function b(e) {
+function T(e) {
     let { playSound: t } = e;
     return (0, i.jsxs)(l.P3F, {
         title: 'Risky Click',
@@ -38,14 +38,14 @@ function b(e) {
         ]
     });
 }
-function T(e) {
+function b(e) {
     let { soundId: t } = e,
         n = (0, o.e7)([h.Z], () => h.Z.getSoundById(t)),
         r = (0, d.V2)({ location: 'SoundboardMentionInline' }),
         { playing: a, playSound: s } = (0, p.Z)(n);
     return r
         ? null == n
-            ? (0, i.jsx)(b, {})
+            ? (0, i.jsx)(T, {})
             : (0, i.jsx)(S, {
                   className: I.inlineTextArea,
                   isPlaying: a,
@@ -87,10 +87,10 @@ let A = function (e) {
             var e;
             return null !== (e = (0, f.Z)(t, n, a)) && void 0 !== e ? e : d;
         }, [t, n, a, d]),
-        T = (0, o.e7)([v.Z], () => v.Z.getChannel(t)),
+        b = (0, o.e7)([v.Z], () => v.Z.getChannel(t)),
         A = (0, c.X0)({ location: 'SoundboardMention' }),
         N = r.useRef(null),
-        { playing: C, playSound: R } = (0, p.Z)(y, T),
+        { playing: C, playSound: R } = (0, p.Z)(y, b),
         O = r.useCallback(() => {
             if (R()) {
                 var e;
@@ -99,7 +99,7 @@ let A = function (e) {
         }, [R]);
     return A
         ? null == y
-            ? (0, i.jsx)(b, { playSound: O })
+            ? (0, i.jsx)(T, { playSound: O })
             : s && !u
               ? (0, i.jsx)(
                     g.ZP,
@@ -107,7 +107,7 @@ let A = function (e) {
                         containerClassName: I.jumboContainer,
                         className: I.jumboButton,
                         sound: y,
-                        channel: T,
+                        channel: b,
                         refreshEnabled: !0,
                         onSelectItem: O,
                         isPlayingSoundOverride: C,

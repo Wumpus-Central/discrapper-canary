@@ -1,9 +1,9 @@
 e.exports = {
-    header: 'header_f5507e',
-    closeButton: 'closeButton_f5507e',
-    title: 'title_f5507e',
-    subtitle: 'subtitle_f5507e',
-    optionsList: 'optionsList_f5507e',
-    backButton: 'backButton_f5507e',
-    skip: 'skip_f5507e'
+    header: 'header__78f69',
+    closeButton: 'closeButton__78f69',
+    title: 'title__78f69',
+    subtitle: 'subtitle__78f69',
+    optionsList: 'optionsList__78f69',
+    backButton: 'backButton__78f69',
+    skip: 'skip__78f69'
 };

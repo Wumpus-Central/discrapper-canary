@@ -1,6 +1,6 @@
 t.exports = {
-    container: 'container_f8759f',
-    dot: 'dot_f8759f',
-    fileIcon: 'fileIcon_f8759f',
-    fileName: 'fileName_f8759f'
+    container: 'container__1ff2f',
+    dot: 'dot__1ff2f',
+    fileIcon: 'fileIcon__1ff2f',
+    fileName: 'fileName__1ff2f'
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    page: 'page_e8251c',
-    contentContainer: 'contentContainer_e8251c'
+    page: 'page__91dc3',
+    contentContainer: 'contentContainer__91dc3'
 };

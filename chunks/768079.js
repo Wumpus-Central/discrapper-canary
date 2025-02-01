@@ -1,42 +1,42 @@
-t.r(e);
-var r = t(200651);
-t(192379);
-var i = t(481060),
-    l = t(239091),
-    u = t(410575),
-    s = t(108843),
-    a = t(100527),
-    c = t(299206),
-    o = t(88966),
-    d = t(37258),
-    f = t(981631),
-    h = t(388032);
-e.default = (0, s.Z)(
+e.d(t, { default: () => f });
+var i = e(200651);
+e(192379);
+var r = e(481060),
+    l = e(239091),
+    s = e(410575),
+    a = e(108843),
+    d = e(100527),
+    c = e(299206),
+    u = e(88966),
+    o = e(37258),
+    h = e(981631),
+    Z = e(388032);
+let f = (0, a.Z)(
     function (n) {
-        let { user: e, analyticsContext: t, onSelect: s } = n,
-            a = (0, d.Z)({ userId: e.id }),
-            Z = (0, c.Z)({
-                id: e.id,
-                label: h.intl.string(h.t['/AXYnJ'])
+        let { user: t, analyticsContext: e, onSelect: a } = n,
+            d = (0, o.Z)({ userId: t.id }),
+            f = (0, c.Z)({
+                id: t.id,
+                label: Z.intl.string(Z.t['/AXYnJ'])
             }),
-            p = (0, o.Z)(e.id),
-            v = e.isNonUserBot();
-        return (0, r.jsx)(u.Z, {
-            context: t,
-            object: f.qAy.CONTEXT_MENU,
-            children: (0, r.jsxs)(i.Menu, {
+            p = (0, u.Z)(t.id),
+            v = t.isNonUserBot();
+        return (0, i.jsx)(s.Z, {
+            context: e,
+            object: h.qAy.CONTEXT_MENU,
+            children: (0, i.jsxs)(r.v2r, {
                 navId: 'user-context',
                 onClose: l.Zy,
-                'aria-label': h.intl.string(h.t.liqwPD),
-                onSelect: s,
+                'aria-label': Z.intl.string(Z.t.liqwPD),
+                onSelect: a,
                 children: [
-                    (0, r.jsxs)(i.MenuGroup, {
-                        children: [!v && a, !v && p]
+                    (0, i.jsxs)(r.kSQ, {
+                        children: [!v && d, !v && p]
                     }),
-                    (0, r.jsx)(i.MenuGroup, { children: Z })
+                    (0, i.jsx)(r.kSQ, { children: f })
                 ]
             })
         });
     },
-    [a.Z.CONTEXT_MENU, a.Z.BANNED_USER_MENU]
+    [d.Z.CONTEXT_MENU, d.Z.BANNED_USER_MENU]
 );

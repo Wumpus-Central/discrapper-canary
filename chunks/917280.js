@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         name: 'HAML',
         case_insensitive: !0,
@@ -95,4 +95,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

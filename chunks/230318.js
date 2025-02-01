@@ -1,55 +1,55 @@
-var i = r(948437);
-let a = function (e) {
+var i = n(948437);
+let r = function (e) {
     return e && -1 !== e.indexOf('.') ? ((e = '.' + e.split('.').pop().toLowerCase()), /.*(\..*)/g.exec(e)[1] || '') : '';
 };
-var o = /^\s*([^;\s]*)(?:;|\s|$)/,
+var a = /^\s*([^;\s]*)(?:;|\s|$)/,
     s = /^text\//i;
+function o(e) {
+    if (!e || 'string' != typeof e) return !1;
+    var t = a.exec(e),
+        n = t && i[t[1].toLowerCase()];
+    return n && n.charset ? n.charset : !!(t && s.test(t[1])) && 'UTF-8';
+}
 function l(e) {
     if (!e || 'string' != typeof e) return !1;
-    var n = o.exec(e),
-        r = n && i[n[1].toLowerCase()];
-    return r && r.charset ? r.charset : !!(n && s.test(n[1])) && 'UTF-8';
+    var n = -1 === e.indexOf('/') ? t.lookup(e) : e;
+    if (!n) return !1;
+    if (-1 === n.indexOf('charset')) {
+        var i = t.charset(n);
+        i && (n += '; charset=' + i.toLowerCase());
+    }
+    return n;
 }
 function u(e) {
     if (!e || 'string' != typeof e) return !1;
-    var r = -1 === e.indexOf('/') ? n.lookup(e) : e;
-    if (!r) return !1;
-    if (-1 === r.indexOf('charset')) {
-        var i = n.charset(r);
-        i && (r += '; charset=' + i.toLowerCase());
-    }
-    return r;
+    var n = a.exec(e),
+        i = n && t.extensions[n[1].toLowerCase()];
+    return !!i && !!i.length && i[0];
 }
 function c(e) {
     if (!e || 'string' != typeof e) return !1;
-    var r = o.exec(e),
-        i = r && n.extensions[r[1].toLowerCase()];
-    return !!i && !!i.length && i[0];
-}
-function d(e) {
-    if (!e || 'string' != typeof e) return !1;
-    var r = a('x.' + e)
+    var n = r('x.' + e)
         .toLowerCase()
         .substr(1);
-    return !!r && (n.types[r] || !1);
+    return !!n && (t.types[n] || !1);
 }
-function f(e, n) {
-    var r = ['nginx', 'apache', void 0, 'iana'];
-    Object.keys(i).forEach(function (a) {
-        var o = i[a],
-            s = o.extensions;
-        if (!!s && !!s.length) {
-            e[a] = s;
-            for (var l = 0; l < s.length; l++) {
-                var u = s[l];
-                if (n[u]) {
-                    var c = r.indexOf(i[n[u]].source),
-                        d = r.indexOf(o.source);
-                    if (('application/octet-stream' !== n[u] && c > d) || (c === d && 'application/' === n[u].substr(0, 12))) continue;
+function d(e, t) {
+    var n = ['nginx', 'apache', void 0, 'iana'];
+    Object.keys(i).forEach(function (r) {
+        var a = i[r],
+            s = a.extensions;
+        if (s && s.length) {
+            e[r] = s;
+            for (var o = 0; o < s.length; o++) {
+                var l = s[o];
+                if (t[l]) {
+                    var u = n.indexOf(i[t[l]].source),
+                        c = n.indexOf(a.source);
+                    if (('application/octet-stream' !== t[l] && u > c) || (u === c && 'application/' === t[l].substr(0, 12))) continue;
                 }
-                n[u] = a;
+                t[l] = r;
             }
         }
     });
 }
-(n.charset = l), (n.charsets = { lookup: l }), (n.contentType = u), (n.extension = c), (n.extensions = Object.create(null)), (n.lookup = d), (n.types = Object.create(null)), f(n.extensions, n.types);
+(t.charset = o), (t.charsets = { lookup: o }), (t.contentType = l), (t.extension = u), (t.extensions = Object.create(null)), (t.lookup = c), (t.types = Object.create(null)), d(t.extensions, t.types);

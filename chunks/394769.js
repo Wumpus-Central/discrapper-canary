@@ -1,57 +1,57 @@
-var i = r(200651);
-r(192379);
-var a = r(642128),
-    o = r(481060),
-    s = r(565138),
-    l = r(678558),
-    u = r(981631),
-    c = r(509532);
-function d(e) {
-    let { closeLayer: n, guild: r, isVisible: d } = e,
-        f = (0, o.useSpring)({
-            transform: d ? 'translateY(-100%)' : 'translateY(0%)',
-            opacity: d ? 1 : 0,
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var r = n(642128),
+    a = n(481060),
+    s = n(565138),
+    o = n(678558),
+    l = n(981631),
+    u = n(509532);
+let c = function (e) {
+    let { closeLayer: t, guild: n, isVisible: c } = e,
+        d = (0, a.q_F)({
+            transform: c ? 'translateY(-100%)' : 'translateY(0%)',
+            opacity: c ? 1 : 0,
             config: {
                 tension: 120,
                 friction: 12
             }
         });
-    return (0, i.jsx)(a.animated.div, {
-        className: c.wrapper,
-        style: f,
+    return (0, i.jsx)(r.animated.div, {
+        className: u.wrapper,
+        style: d,
         children: (0, i.jsxs)('div', {
-            className: c.innerWrapper,
+            className: u.innerWrapper,
             children: [
                 (0, i.jsxs)('div', {
-                    className: c.guildInfo,
+                    className: u.guildInfo,
                     children: [
                         (0, i.jsx)(s.Z, {
-                            className: c.guildIcon,
-                            guild: r,
+                            className: u.guildIcon,
+                            guild: n,
                             size: s.Z.Sizes.LARGER
                         }),
-                        (0, i.jsx)(o.Heading, {
-                            className: c.guildName,
+                        (0, i.jsx)(a.X6q, {
+                            className: u.guildName,
                             variant: 'text-lg/bold',
-                            children: r.name
+                            children: n.name
                         })
                     ]
                 }),
-                (0, i.jsx)(l.Z, {
-                    className: c.ctaButton,
-                    guild: r,
+                (0, i.jsx)(o.Z, {
+                    className: u.ctaButton,
+                    guild: n,
                     analyticsLocation: {
-                        page: u.ZY5.PREMIUM_GUILD_USER_MODAL,
-                        section: u.jXE.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,
-                        object: u.qAy.BUTTON_CTA,
-                        objectType: u.Qqv.BUY
+                        page: l.ZY5.PREMIUM_GUILD_USER_MODAL,
+                        section: l.jXE.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,
+                        object: l.qAy.BUTTON_CTA,
+                        objectType: l.Qqv.BUY
                     },
-                    closeLayer: n,
-                    pauseAnimation: !d,
-                    size: o.Button.Sizes.LARGE
+                    closeLayer: t,
+                    pauseAnimation: !c,
+                    size: a.zxk.Sizes.LARGE
                 })
             ]
         })
     });
-}
-n.Z = d;
+};

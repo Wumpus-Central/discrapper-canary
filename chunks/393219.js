@@ -1,13 +1,13 @@
 e.exports = {
-    content: 'content_dec63a',
-    previewCard: 'previewCard_dec63a',
-    inline: 'inline_dec63a',
-    header: 'header_dec63a',
-    privacyLevel: 'privacyLevel_dec63a inline_dec63a',
-    buttons: 'buttons_dec63a',
-    button: 'button_dec63a',
-    publicIcon: 'publicIcon_dec63a',
-    spacing: 'spacing_dec63a',
-    verticalSpacing: 'verticalSpacing_dec63a',
-    errorMessage: 'errorMessage_dec63a'
+    content: 'content__735fb',
+    previewCard: 'previewCard__735fb',
+    inline: 'inline__735fb',
+    header: 'header__735fb',
+    privacyLevel: 'privacyLevel__735fb inline__735fb',
+    buttons: 'buttons__735fb',
+    button: 'button__735fb',
+    publicIcon: 'publicIcon__735fb',
+    spacing: 'spacing__735fb',
+    verticalSpacing: 'verticalSpacing__735fb',
+    errorMessage: 'errorMessage__735fb'
 };

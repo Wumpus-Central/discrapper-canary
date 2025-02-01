@@ -1,67 +1,67 @@
-var i = r(47120);
-var a = r(147913),
-    o = r(751571),
-    s = r(88751),
-    l = r(590415),
-    u = r(189786),
-    c = r(314897),
-    d = r(592125),
-    f = r(131951),
-    p = r(19780),
-    h = r(876506),
-    _ = r(981631),
-    m = r(761274);
-function g(e, n, r) {
+n.d(t, { Z: () => I }), n(47120);
+var i = n(147913),
+    r = n(751571),
+    a = n(88751),
+    s = n(590415),
+    o = n(189786),
+    l = n(314897),
+    u = n(592125),
+    c = n(131951),
+    d = n(19780),
+    f = n(876506),
+    _ = n(981631),
+    p = n(761274);
+function h(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let E = null;
-function v() {
-    o.Z.requestPermission(m.Eu.AUDIO).then((e) => {
-        if (!!e) (0, h.Z)(!0);
+let m = null;
+function g() {
+    r.Z.requestPermission(p.Eu.AUDIO).then((e) => {
+        e && (0, f.Z)(!0);
     }),
-        f.Z.getMode() === _.pM4.PUSH_TO_TALK && o.Z.requestPermission(m.Eu.INPUT_MONITORING);
+        c.Z.getMode() === _.pM4.PUSH_TO_TALK && r.Z.requestPermission(p.Eu.INPUT_MONITORING);
 }
-function y(e, n) {
-    var r;
-    return (null === (r = d.Z.getChannel(n)) || void 0 === r ? !void 0 : !r.isListenModeCapable()) || s.ZP.isSpeaker(e, n);
+function E(e, t) {
+    var n;
+    return null === (n = u.Z.getChannel(t)) || void 0 === n || !n.isListenModeCapable() || a.ZP.isSpeaker(e, t);
 }
-function b(e) {
-    return (0, l.gf)(e) === l.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+function v(e) {
+    return (0, s.gf)(e) === s.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 }
-class I extends a.Z {
+class y extends i.Z {
     handleVoiceChannelSelect(e) {
-        let { channelId: n } = e;
-        null == n && (E = null);
+        let { channelId: t } = e;
+        null == t && (m = null);
     }
     handleVoiceStateUpdates(e) {
-        let { voiceStates: n } = e;
-        n.forEach((e) => {
-            let { userId: n, channelId: r } = e;
-            if (null != r && c.default.getId() === n && null != p.Z.getRTCConnectionId() && E !== r) {
-                if (y(n, r)) {
-                    (E = r), v();
+        let { voiceStates: t } = e;
+        t.forEach((e) => {
+            let { userId: t, channelId: n } = e;
+            if (null != n && l.default.getId() === t && null != d.Z.getRTCConnectionId() && m !== n) {
+                if (E(t, n)) {
+                    (m = n), g();
                     return;
                 }
-                b(new u.Z(e)) && ((E = r), v());
+                v(new o.Z(e)) && ((m = n), g());
             }
         });
     }
     constructor(...e) {
         super(...e),
-            g(this, 'actions', {
+            h(this, 'actions', {
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
                 VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect
             });
     }
 }
-n.Z = new I();
+let I = new y();

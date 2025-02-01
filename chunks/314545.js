@@ -1,6 +1,6 @@
-var n = Math.floor,
-    r = Math.random;
+var t = Math.floor,
+    n = Math.random;
 function i(e, i) {
-    return e + n(r() * (i - e + 1));
+    return e + t(n() * (i - e + 1));
 }
 e.exports = i;

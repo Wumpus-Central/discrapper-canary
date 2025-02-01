@@ -52,12 +52,12 @@ function v(e) {
             timestamp: Date.now(),
             draft: i
         };
-    } else b(n, r);
+    } else T(n, r);
     return 'DRAFT_SAVE' === t;
 }
 function y(e) {
     let { channelId: t, draftType: n } = e;
-    return b(t, n);
+    return T(t, n);
 }
 function I(e) {
     let { channelId: t, draft: n } = e,
@@ -73,7 +73,7 @@ function I(e) {
             parentChannelId: t
         });
 }
-function b(e, t) {
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.default.getId();
     if (null == n) return !1;
     let i = E(n),
@@ -81,7 +81,7 @@ function b(e, t) {
     if (null == r) return !1;
     delete r[t], a().isEmpty(r) && delete i[e];
 }
-function T() {
+function b() {
     let e = c.default.getId();
     if (null == e || f.Z.totalUnavailableGuilds > 0) return;
     let t = E(e);
@@ -89,10 +89,10 @@ function T() {
 }
 function S() {
     let e = c.default.getId();
-    return e in m || (m[e] = {}), T(), !1;
+    return e in m || (m[e] = {}), b(), !1;
 }
 function A() {
-    return T(), !1;
+    return b(), !1;
 }
 function N(e) {
     let {
@@ -124,8 +124,8 @@ function C(e) {
                     draft: n
                 }
             }),
-            b(t.parent_id, 1),
-            b(t.parent_id, 2);
+            T(t.parent_id, 1),
+            T(t.parent_id, 2);
     }
 }
 function R(e) {
@@ -138,7 +138,7 @@ function D() {
     for (let [e, t] of u.default.entries(m))
         for (let [n, i] of u.default.entries(t)) {
             let t = i[0];
-            null != t && ('' === t.draft || '' === t.draft.trim()) && b(n, 0, e);
+            null != t && ('' === t.draft || '' === t.draft.trim()) && T(n, 0, e);
         }
 }
 class x extends (i = s.ZP.PersistedStore) {

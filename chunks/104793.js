@@ -23,7 +23,7 @@ var i = n(512722),
     })({});
 function g(e, t, n) {
     var i;
-    let { context: l, commandTypes: m, allowNsfw: g, computedPermissions: b, userId: T, roleIds: S, isImpersonating: A, hasBaseAccessPermissions: N } = t,
+    let { context: l, commandTypes: m, allowNsfw: g, computedPermissions: T, userId: b, roleIds: S, isImpersonating: A, hasBaseAccessPermissions: N } = t,
         { applicationAllowedForUser: C, applicationAllowedForChannel: R, isGuildInstalled: O, isUserInstalled: D, commandBotId: x } = n;
     if (!m.includes(e.type)) return 2;
     if (e.nsfw && !g) return 1;
@@ -43,15 +43,15 @@ function g(e, t, n) {
     }
     if (e.applicationId === p.bi.BUILT_IN) return 0;
     let P = null != l ? (0, _.ny)(l) : void 0;
-    if (null == P || s.e$(b, h.Plq.ADMINISTRATOR) || (D && (null === (i = e.integration_types) || void 0 === i ? void 0 : i.includes(a.Y.USER_INSTALL)))) return 0;
+    if (null == P || s.e$(T, h.Plq.ADMINISTRATOR) || (D && (null === (i = e.integration_types) || void 0 === i ? void 0 : i.includes(a.Y.USER_INSTALL)))) return 0;
     if (!N && O && (null == e.integration_types || e.integration_types.includes(a.Y.GUILD_INSTALL))) return 5;
     if (l instanceof u.Sf) {
         r()(void 0 !== R, 'missing applicationAllowedForChannel');
         let t = y(e.permissions, l, P);
         if (v(t) || (!E(t) && v(R))) return 6;
     }
-    let w = I(e.permissions, P, T, S, A);
-    return E(w) ? 0 : v(w) ? 7 : v(C) || (null != e.defaultMemberPermissions && !(!s.fS(e.defaultMemberPermissions, f.BO) && s.e$(b, e.defaultMemberPermissions))) ? 7 : 0;
+    let w = I(e.permissions, P, b, S, A);
+    return E(w) ? 0 : v(w) ? 7 : v(C) || (null != e.defaultMemberPermissions && !(!s.fS(e.defaultMemberPermissions, f.BO) && s.e$(T, e.defaultMemberPermissions))) ? 7 : 0;
 }
 function E(e) {
     return !0 === e;

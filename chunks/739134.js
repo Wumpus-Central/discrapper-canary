@@ -1,46 +1,46 @@
-var i = r(223428),
-    a = r(706178),
-    o = r(108381),
-    s = r(855467),
-    l = r(972566),
-    u = r(814033),
-    c = r(895598),
-    d = r(530917),
-    f = r(957578).Buffer;
-function p(e, n) {
-    var r = e.modulus.byteLength(),
-        i = n.length,
-        c = o('sha1').update(f.alloc(0)).digest(),
-        d = c.length,
-        p = 2 * d;
-    if (i > r - p - 2) throw Error('message too long');
-    var h = f.alloc(r - i - p - 2),
-        _ = r - d - 1,
-        m = a(d),
-        g = l(f.concat([c, h, f.alloc(1, 1), n], _), s(m, _)),
-        E = l(m, s(g, d));
-    return new u(f.concat([f.alloc(1), E, g], r));
+var i = n(223428),
+    r = n(706178),
+    a = n(108381),
+    s = n(855467),
+    o = n(972566),
+    l = n(814033),
+    u = n(895598),
+    c = n(530917),
+    d = n(957578).Buffer;
+function f(e, t) {
+    var n = e.modulus.byteLength(),
+        i = t.length,
+        u = a('sha1').update(d.alloc(0)).digest(),
+        c = u.length,
+        f = 2 * c;
+    if (i > n - f - 2) throw Error('message too long');
+    var _ = d.alloc(n - i - f - 2),
+        p = n - c - 1,
+        h = r(c),
+        m = o(d.concat([u, _, d.alloc(1, 1), t], p), s(h, p)),
+        g = o(h, s(m, c));
+    return new l(d.concat([d.alloc(1), g, m], n));
 }
-function h(e, n, r) {
+function _(e, t, n) {
     var i,
-        a = n.length,
-        o = e.modulus.byteLength();
-    if (a > o - 11) throw Error('message too long');
-    return (i = r ? f.alloc(o - a - 3, 255) : _(o - a - 3)), new u(f.concat([f.from([0, r ? 1 : 2]), i, f.alloc(1), n], o));
+        r = t.length,
+        a = e.modulus.byteLength();
+    if (r > a - 11) throw Error('message too long');
+    return (i = n ? d.alloc(a - r - 3, 255) : p(a - r - 3)), new l(d.concat([d.from([0, n ? 1 : 2]), i, d.alloc(1), t], a));
 }
-function _(e) {
-    for (var n, r = f.allocUnsafe(e), i = 0, o = a(2 * e), s = 0; i < e; ) s === o.length && ((o = a(2 * e)), (s = 0)), (n = o[s++]) && (r[i++] = n);
-    return r;
+function p(e) {
+    for (var t, n = d.allocUnsafe(e), i = 0, a = r(2 * e), s = 0; i < e; ) s === a.length && ((a = r(2 * e)), (s = 0)), (t = a[s++]) && (n[i++] = t);
+    return n;
 }
-e.exports = function (e, n, r) {
-    a = e.padding ? e.padding : r ? 1 : 4;
-    var a,
-        o,
+e.exports = function (e, t, n) {
+    r = e.padding ? e.padding : n ? 1 : 4;
+    var r,
+        a,
         s = i(e);
-    if (4 === a) o = p(s, n);
-    else if (1 === a) o = h(s, n, r);
-    else if (3 === a) {
-        if ((o = new u(n)).cmp(s.modulus) >= 0) throw Error('data too long for modulus');
+    if (4 === r) a = f(s, t);
+    else if (1 === r) a = _(s, t, n);
+    else if (3 === r) {
+        if ((a = new l(t)).cmp(s.modulus) >= 0) throw Error('data too long for modulus');
     } else throw Error('unknown padding');
-    return r ? d(o, s) : c(o, s);
+    return n ? c(a, s) : u(a, s);
 };

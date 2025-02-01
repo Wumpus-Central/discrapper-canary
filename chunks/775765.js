@@ -1,17 +1,17 @@
-function n(e) {
-    let n = e.regex,
-        r = /[dualxmsipngr]{0,12}/,
+function t(e) {
+    let t = e.regex,
+        n = /[dualxmsipngr]{0,12}/,
         i = {
             $pattern: /[\w.]+/,
             keyword: 'abs accept alarm and atan2 bind binmode bless break caller chdir chmod chomp chop chown chr chroot class close closedir connect continue cos crypt dbmclose dbmopen defined delete die do dump each else elsif endgrent endhostent endnetent endprotoent endpwent endservent eof eval exec exists exit exp fcntl field fileno flock for foreach fork format formline getc getgrent getgrgid getgrnam gethostbyaddr gethostbyname gethostent getlogin getnetbyaddr getnetbyname getnetent getpeername getpgrp getpriority getprotobyname getprotobynumber getprotoent getpwent getpwnam getpwuid getservbyname getservbyport getservent getsockname getsockopt given glob gmtime goto grep gt hex if index int ioctl join keys kill last lc lcfirst length link listen local localtime log lstat lt ma map method mkdir msgctl msgget msgrcv msgsnd my ne next no not oct open opendir or ord our pack package pipe pop pos print printf prototype push q|0 qq quotemeta qw qx rand read readdir readline readlink readpipe recv redo ref rename require reset return reverse rewinddir rindex rmdir say scalar seek seekdir select semctl semget semop send setgrent sethostent setnetent setpgrp setpriority setprotoent setpwent setservent setsockopt shift shmctl shmget shmread shmwrite shutdown sin sleep socket socketpair sort splice split sprintf sqrt srand stat state study sub substr symlink syscall sysopen sysread sysseek system syswrite tell telldir tie tied time times tr truncate uc ucfirst umask undef unless unlink unpack unshift untie until use utime values vec wait waitpid wantarray warn when while write x|0 xor y|0'
         },
-        a = {
+        r = {
             className: 'subst',
             begin: '[$@]\\{',
             end: '\\}',
             keywords: i
         },
-        o = {
+        a = {
             begin: /->\{/,
             end: /\}/
         },
@@ -19,11 +19,11 @@ function n(e) {
             scope: 'attr',
             match: /\s+:\s*\w+(\s*\(.*?\))?/
         },
-        l = {
+        o = {
             scope: 'variable',
             variants: [
                 { begin: /\$\d/ },
-                { begin: n.concat(/[$%@](?!")(\^\w\b|#\w+(::\w+)*|\{\w+\}|\w+(::\w*)*)/, '(?![A-Za-z])(?![@$%])') },
+                { begin: t.concat(/[$%@](?!")(\^\w\b|#\w+(::\w+)*|\{\w+\}|\w+(::\w*)*)/, '(?![A-Za-z])(?![@$%])') },
                 {
                     begin: /[$%@](?!")[^\s\w{=]|\$=/,
                     relevance: 0
@@ -31,26 +31,26 @@ function n(e) {
             ],
             contains: [s]
         },
-        u = {
+        l = {
             className: 'number',
             variants: [{ match: /0?\.[0-9][0-9_]+\b/ }, { match: /\bv?(0|[1-9][0-9_]*(\.[0-9_]+)?|[1-9][0-9_]*)\b/ }, { match: /\b0[0-7][0-7_]*\b/ }, { match: /\b0x[0-9a-fA-F][0-9a-fA-F_]*\b/ }, { match: /\b0b[0-1][0-1_]*\b/ }],
             relevance: 0
         },
-        c = [e.BACKSLASH_ESCAPE, a, l],
-        d = [/!/, /\//, /\|/, /\?/, /'/, /"/, /#/],
-        f = (e, i, a = '\\1') => {
-            let o = '\\1' === a ? a : n.concat(a, i);
-            return n.concat(n.concat('(?:', e, ')'), i, /(?:\\.|[^\\\/])*?/, o, /(?:\\.|[^\\\/])*?/, a, r);
+        u = [e.BACKSLASH_ESCAPE, r, o],
+        c = [/!/, /\//, /\|/, /\?/, /'/, /"/, /#/],
+        d = (e, i, r = '\\1') => {
+            let a = '\\1' === r ? r : t.concat(r, i);
+            return t.concat(t.concat('(?:', e, ')'), i, /(?:\\.|[^\\\/])*?/, a, /(?:\\.|[^\\\/])*?/, r, n);
         },
-        p = (e, i, a) => n.concat(n.concat('(?:', e, ')'), i, /(?:\\.|[^\\\/])*?/, a, r),
-        h = [
-            l,
+        f = (e, i, r) => t.concat(t.concat('(?:', e, ')'), i, /(?:\\.|[^\\\/])*?/, r, n),
+        _ = [
+            o,
             e.HASH_COMMENT_MODE,
             e.COMMENT(/^=\w/, /=cut/, { endsWithParent: !0 }),
-            o,
+            a,
             {
                 className: 'string',
-                contains: c,
+                contains: u,
                 variants: [
                     {
                         begin: 'q[qwxr]?\\s*\\(',
@@ -106,7 +106,7 @@ function n(e) {
                     }
                 ]
             },
-            u,
+            l,
             {
                 begin: '(\\/\\/|' + e.RE_STARTERS_RE + '|\\b(split|return|print|reverse|grep)\\b)\\s*',
                 keywords: 'split return print reverse grep',
@@ -115,7 +115,7 @@ function n(e) {
                     e.HASH_COMMENT_MODE,
                     {
                         className: 'regexp',
-                        variants: [{ begin: f('s|tr|y', n.either(...d, { capture: !0 })) }, { begin: f('s|tr|y', '\\(', '\\)') }, { begin: f('s|tr|y', '\\[', '\\]') }, { begin: f('s|tr|y', '\\{', '\\}') }],
+                        variants: [{ begin: d('s|tr|y', t.either(...c, { capture: !0 })) }, { begin: d('s|tr|y', '\\(', '\\)') }, { begin: d('s|tr|y', '\\[', '\\]') }, { begin: d('s|tr|y', '\\{', '\\}') }],
                         relevance: 2
                     },
                     {
@@ -125,11 +125,11 @@ function n(e) {
                                 begin: /(m|qr)\/\//,
                                 relevance: 0
                             },
-                            { begin: p('(?:m|qr)?', /\//, /\//) },
-                            { begin: p('m|qr', n.either(...d, { capture: !0 }), /\1/) },
-                            { begin: p('m|qr', /\(/, /\)/) },
-                            { begin: p('m|qr', /\[/, /\]/) },
-                            { begin: p('m|qr', /\{/, /\}/) }
+                            { begin: f('(?:m|qr)?', /\//, /\//) },
+                            { begin: f('m|qr', t.either(...c, { capture: !0 }), /\1/) },
+                            { begin: f('m|qr', /\(/, /\)/) },
+                            { begin: f('m|qr', /\[/, /\]/) },
+                            { begin: f('m|qr', /\{/, /\}/) }
                         ]
                     }
                 ]
@@ -148,7 +148,7 @@ function n(e) {
                 end: '[;{]',
                 excludeEnd: !0,
                 relevance: 5,
-                contains: [e.TITLE_MODE, s, u]
+                contains: [e.TITLE_MODE, s, l]
             },
             {
                 begin: '-\\w\\b',
@@ -168,14 +168,14 @@ function n(e) {
             }
         ];
     return (
-        (a.contains = h),
-        (o.contains = h),
+        (r.contains = _),
+        (a.contains = _),
         {
             name: 'Perl',
             aliases: ['pl', 'pm'],
             keywords: i,
-            contains: h
+            contains: _
         }
     );
 }
-e.exports = n;
+e.exports = t;

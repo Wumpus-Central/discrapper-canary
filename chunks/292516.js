@@ -64,19 +64,19 @@ var i = {
     './zh-TW': '223797',
     './zh-TW.json': '223797'
 };
-function a(e) {
-    return r(o(e));
+function r(e) {
+    return n(a(e));
 }
-function o(e) {
-    if (!r.o(i, e)) {
-        var n = Error("Cannot find module '" + e + "'");
-        throw ((n.code = 'MODULE_NOT_FOUND'), n);
+function a(e) {
+    if (!n.o(i, e)) {
+        var t = Error("Cannot find module '" + e + "'");
+        throw ((t.code = 'MODULE_NOT_FOUND'), t);
     }
     return i[e];
 }
-(a.keys = function () {
+(r.keys = function () {
     return Object.keys(i);
 }),
-    (a.resolve = o),
-    (e.exports = a),
-    (a.id = '292516');
+    (r.resolve = a),
+    (e.exports = r),
+    (r.id = 292516);

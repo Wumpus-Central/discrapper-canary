@@ -1,4 +1,4 @@
 e.exports = {
-    hamBanner: 'hamBanner_d1cafc',
-    hamBannerButton: 'hamBannerButton_d1cafc'
+    hamBanner: 'hamBanner__6a41e',
+    hamBannerButton: 'hamBannerButton__6a41e'
 };

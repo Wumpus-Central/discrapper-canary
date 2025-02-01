@@ -1,94 +1,94 @@
-(n.createDateTimeFormat = c), (n.createDateTimeFormats = d);
-var r = /(?:[Eec]{1,6}|G{1,5}|(?:[yYu]+|U{1,5})|[ML]{1,5}|d{1,2}|a|[hkHK]{1,2}|m{1,2}|s{1,2}|z{1,4})(?=([^']*'[^']*')*[^']*$)/g,
+(t.createDateTimeFormat = u), (t.createDateTimeFormats = c);
+var n = /(?:[Eec]{1,6}|G{1,5}|(?:[yYu]+|U{1,5})|[ML]{1,5}|d{1,2}|a|[hkHK]{1,2}|m{1,2}|s{1,2}|z{1,4})(?=([^']*'[^']*')*[^']*$)/g,
     i = /[QxXVOvZASjgFDwWIQqH]/,
-    a = {
+    r = {
         month: ['numeric', '2-digit', 'short', 'long', 'narrow'],
         weekday: ['short', 'short', 'short', 'long', 'narrow'],
         era: ['short', 'short', 'short', 'long', 'narrow']
     },
-    o = ['weekday', 'era', 'year', 'month', 'day'],
+    a = ['weekday', 'era', 'year', 'month', 'day'],
     s = ['hour', 'minute', 'second', 'timeZoneName'];
+function o(e) {
+    for (var t = 0; t < s.length; t += 1) if (e.hasOwnProperty(s[t])) return !1;
+    return !0;
+}
 function l(e) {
-    for (var n = 0; n < s.length; n += 1) if (e.hasOwnProperty(s[n])) return !1;
+    for (var t = 0; t < a.length; t += 1) if (e.hasOwnProperty(a[t])) return !1;
     return !0;
 }
 function u(e) {
-    for (var n = 0; n < o.length; n += 1) if (e.hasOwnProperty(o[n])) return !1;
-    return !0;
-}
-function c(e) {
     if (!i.test(e)) {
-        var n = {};
+        var t = {};
         return (
-            (n.pattern = e.replace(r, function (e) {
+            (t.pattern = e.replace(n, function (e) {
                 switch (e.charAt(0)) {
                     case 'E':
                     case 'e':
                     case 'c':
-                        return (n.weekday = a.weekday[e.length - 1]), '{weekday}';
+                        return (t.weekday = r.weekday[e.length - 1]), '{weekday}';
                     case 'G':
-                        return (n.era = a.era[e.length - 1]), '{era}';
+                        return (t.era = r.era[e.length - 1]), '{era}';
                     case 'y':
                     case 'Y':
                     case 'u':
                     case 'U':
-                        return (n.year = 2 === e.length ? '2-digit' : 'numeric'), '{year}';
+                        return (t.year = 2 === e.length ? '2-digit' : 'numeric'), '{year}';
                     case 'M':
                     case 'L':
-                        return (n.month = a.month[e.length - 1]), '{month}';
+                        return (t.month = r.month[e.length - 1]), '{month}';
                     case 'd':
-                        return (n.day = 2 === e.length ? '2-digit' : 'numeric'), '{day}';
+                        return (t.day = 2 === e.length ? '2-digit' : 'numeric'), '{day}';
                     case 'a':
                         return '{ampm}';
                     case 'h':
                     case 'H':
                     case 'k':
                     case 'K':
-                        return (n.hour = 2 === e.length ? '2-digit' : 'numeric'), '{hour}';
+                        return (t.hour = 2 === e.length ? '2-digit' : 'numeric'), '{hour}';
                     case 'm':
-                        return (n.minute = 2 === e.length ? '2-digit' : 'numeric'), '{minute}';
+                        return (t.minute = 2 === e.length ? '2-digit' : 'numeric'), '{minute}';
                     case 's':
-                        return (n.second = 2 === e.length ? '2-digit' : 'numeric'), '{second}';
+                        return (t.second = 2 === e.length ? '2-digit' : 'numeric'), '{second}';
                     case 'z':
-                        return (n.timeZoneName = e.length < 4 ? 'short' : 'long'), '{timeZoneName}';
+                        return (t.timeZoneName = e.length < 4 ? 'short' : 'long'), '{timeZoneName}';
                 }
             })),
-            (n.pattern = n.pattern.replace(/'([^']*)'/g, function (e, n) {
-                return n || "'";
+            (t.pattern = t.pattern.replace(/'([^']*)'/g, function (e, t) {
+                return t || "'";
             })),
-            n.pattern.indexOf('{ampm}') > -1 && ((n.hour12 = !0), (n.pattern12 = n.pattern), (n.pattern = n.pattern.replace('{ampm}', '').replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, ''))),
-            n
+            t.pattern.indexOf('{ampm}') > -1 && ((t.hour12 = !0), (t.pattern12 = t.pattern), (t.pattern = t.pattern.replace('{ampm}', '').replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, ''))),
+            t
         );
     }
 }
-function d(e) {
-    var n,
-        r,
+function c(e) {
+    var t,
+        n,
         i,
+        r,
         a,
-        o,
         s = e.availableFormats,
-        d = e.timeFormats,
-        f = e.dateFormats,
-        p = e.medium,
-        h = [],
+        c = e.timeFormats,
+        d = e.dateFormats,
+        f = e.medium,
         _ = [],
-        m = [];
-    function g(e, n) {
-        var r = Array((e.match(/M/g) || []).length + 1),
+        p = [],
+        h = [];
+    function m(e, t) {
+        var n = Array((e.match(/M/g) || []).length + 1),
             i = Array((e.match(/E/g) || []).length + 1);
-        return r.length > 2 && (n = n.replace(/(M|L)+/, r.join('$1'))), i.length > 2 && (n = n.replace(/([Eec])+/, i.join('$1'))), n;
+        return n.length > 2 && (t = t.replace(/(M|L)+/, n.join('$1'))), i.length > 2 && (t = t.replace(/([Eec])+/, i.join('$1'))), t;
     }
-    for (n in s) s.hasOwnProperty(n) && (i = c((r = g(n, s[n])))) && (h.push(i), l(i) ? m.push(r) : u(i) && _.push(r));
-    for (a = 0; a < _.length; a += 1)
-        for (o = 0; o < m.length; o += 1)
-            (i = c(
-                (r = p
-                    .replace('{0}', _[a])
-                    .replace('{1}', m[o])
+    for (t in s) s.hasOwnProperty(t) && (i = u((n = m(t, s[t])))) && (_.push(i), o(i) ? h.push(n) : l(i) && p.push(n));
+    for (r = 0; r < p.length; r += 1)
+        for (a = 0; a < h.length; a += 1)
+            (i = u(
+                (n = f
+                    .replace('{0}', p[r])
+                    .replace('{1}', h[a])
                     .replace(/^[,\s]+|[,\s]+$/gi, ''))
-            )) && h.push(i);
-    for (n in d) d.hasOwnProperty(n) && (i = c((r = g(n, d[n])))) && h.push(i);
-    for (n in f) f.hasOwnProperty(n) && (i = c((r = g(n, f[n])))) && h.push(i);
-    return h;
+            )) && _.push(i);
+    for (t in c) c.hasOwnProperty(t) && (i = u((n = m(t, c[t])))) && _.push(i);
+    for (t in d) d.hasOwnProperty(t) && (i = u((n = m(t, d[t])))) && _.push(i);
+    return _;
 }

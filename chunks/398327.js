@@ -1,55 +1,55 @@
+n.d(t, { Z: () => h }), n(47120);
 var i,
-    a = r(47120);
-var o = r(442837),
-    s = r(433517),
-    l = r(570140),
-    u = r(241601),
-    c = r(601993);
-function d(e, n, r) {
+    r = n(442837),
+    a = n(433517),
+    s = n(570140),
+    o = n(241601),
+    l = n(601993);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let f = 'SpellcheckStore',
-    p = !0,
-    h = new Set();
+let c = 'SpellcheckStore',
+    d = !0,
+    f = new Set();
 function _() {
-    s.K.set(f, {
-        enabled: p,
-        learnedWords: h
+    a.K.set(c, {
+        enabled: d,
+        learnedWords: f
     });
 }
-class m extends (i = o.ZP.Store) {
+class p extends (i = r.ZP.Store) {
     initialize() {
-        let e = s.K.get(f);
-        null != e && ((p = e.enabled), (h = new Set(e.learnedWords)), (0, c.gL)(p), (0, c.fG)(h)), (0, u.Ql)(c._2);
+        let e = a.K.get(c);
+        null != e && ((d = e.enabled), (f = new Set(e.learnedWords)), (0, l.gL)(d), (0, l.fG)(f)), (0, o.Ql)(l._2);
     }
     isEnabled() {
-        return p;
+        return d;
     }
     hasLearnedWord(e) {
-        return h.has(e.toLocaleLowerCase());
+        return f.has(e.toLocaleLowerCase());
     }
 }
-d(m, 'displayName', 'SpellcheckStore'),
-    (n.Z = new m(l.Z, {
-        SPELLCHECK_TOGGLE() {
-            (p = !p), (0, c.gL)(p), _();
-        },
-        SPELLCHECK_LEARN_WORD(e) {
-            let { word: n } = e;
-            h.add(n.toLocaleLowerCase()), (0, c.fG)(h), _();
-        },
-        SPELLCHECK_UNLEARN_WORD(e) {
-            let { word: n } = e;
-            h.delete(n.toLocaleLowerCase()), (0, c.fG)(h), _();
-        }
-    }));
+u(p, 'displayName', 'SpellcheckStore');
+let h = new p(s.Z, {
+    SPELLCHECK_TOGGLE() {
+        (d = !d), (0, l.gL)(d), _();
+    },
+    SPELLCHECK_LEARN_WORD(e) {
+        let { word: t } = e;
+        f.add(t.toLocaleLowerCase()), (0, l.fG)(f), _();
+    },
+    SPELLCHECK_UNLEARN_WORD(e) {
+        let { word: t } = e;
+        f.delete(t.toLocaleLowerCase()), (0, l.fG)(f), _();
+    }
+});

@@ -1,8 +1,8 @@
-var i = r(583584),
-    a = function () {
+var i = n(583584),
+    r = function () {
         return !!i;
     };
-(a.hasArrayLengthDefineBug = function () {
+(r.hasArrayLengthDefineBug = function () {
     if (!i) return null;
     try {
         return 1 !== i([], 'length', { value: 1 }).length;
@@ -10,4 +10,4 @@ var i = r(583584),
         return !0;
     }
 }),
-    (e.exports = a);
+    (e.exports = r);

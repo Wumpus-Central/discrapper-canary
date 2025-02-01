@@ -1,11 +1,11 @@
 e.exports = {
-    container: 'container_d76df7',
-    compact: 'compact_d76df7',
-    content: 'content_d76df7',
-    actionAnchor: 'actionAnchor_d76df7',
-    iconContainer: 'iconContainer_d76df7',
-    cozy: 'cozy_d76df7',
-    icon: 'icon_d76df7',
-    iconSize: 'iconSize_d76df7',
-    action: 'action_d76df7'
+    container: 'container__235ca',
+    compact: 'compact__235ca',
+    content: 'content__235ca',
+    actionAnchor: 'actionAnchor__235ca',
+    iconContainer: 'iconContainer__235ca',
+    cozy: 'cozy__235ca',
+    icon: 'icon__235ca',
+    iconSize: 'iconSize__235ca',
+    action: 'action__235ca'
 };

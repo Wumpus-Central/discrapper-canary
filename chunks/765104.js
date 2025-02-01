@@ -15,8 +15,8 @@ var o,
     v = n(944486),
     y = n(9156),
     I = n(594174),
-    b = n(70956),
-    T = n(709054),
+    T = n(70956),
+    b = n(709054),
     S = n(418088),
     A = n(814249);
 function N(e, t, n) {
@@ -65,8 +65,8 @@ class G extends (o = c.ZP.PersistedStore) {
     topSummaries() {
         return Object.values(C)
             .flat()
-            .filter((e) => e.people.length > 1 && T.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * b.Z.Millis.HOUR)
-            .sort((e, t) => T.default.extractTimestamp(t.endId) - T.default.extractTimestamp(e.endId));
+            .filter((e) => e.people.length > 1 && b.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * T.Z.Millis.HOUR)
+            .sort((e, t) => b.default.extractTimestamp(t.endId) - b.default.extractTimestamp(e.endId));
     }
     summaries(e) {
         var t;
@@ -115,7 +115,7 @@ class G extends (o = c.ZP.PersistedStore) {
         return L;
     }
     shouldFetchChannelAffinities() {
-        return !('fetching' === L.status || (null != L.lastResponse && Date.now() - L.lastResponse < 30 * b.Z.Millis.SECOND));
+        return !('fetching' === L.status || (null != L.lastResponse && Date.now() - L.lastResponse < 30 * T.Z.Millis.SECOND));
     }
     defaultChannelIds(e) {
         let { withQuickSwitcher: t, withChannelAffinities: n, withUnreads: i, numChannels: r = k } = e,
@@ -186,7 +186,7 @@ let Z = new G(d.Z, {
             let e = (null !== (o = C[n]) && void 0 !== o ? o : []).find((e) => e.id === (null == s ? void 0 : s.summaryId));
             null != e && a.push(e);
         }
-        C[n] = (0, l.sortBy)(a, (e) => T.default.extractTimestamp(e.startId)).reverse();
+        C[n] = (0, l.sortBy)(a, (e) => b.default.extractTimestamp(e.startId)).reverse();
         let u = {
             ...R[n],
             fetching: !1,
@@ -310,7 +310,7 @@ let Z = new G(d.Z, {
                     let [n, i] = t,
                         r = u()
                             .chain(i.map((e) => (0, S.b)(e, n)))
-                            .sortBy((e) => T.default.extractTimestamp(e.startId))
+                            .sortBy((e) => b.default.extractTimestamp(e.startId))
                             .takeRight(M)
                             .reverse()
                             .filter((e) => Object.keys(e).length > 0)
@@ -353,7 +353,7 @@ let Z = new G(d.Z, {
             o = Date.now(),
             l = u()
                 .chain(a)
-                .sortBy((e) => T.default.extractTimestamp(e.start_id))
+                .sortBy((e) => b.default.extractTimestamp(e.start_id))
                 .filter((e) => Object.keys(e).length > 0)
                 .map((e) => (0, S.b)(e, r))
                 .reverse()
@@ -362,7 +362,7 @@ let Z = new G(d.Z, {
             d = u()
                 .chain(l)
                 .concat(c)
-                .sortBy((e) => T.default.extractTimestamp(e.startId))
+                .sortBy((e) => b.default.extractTimestamp(e.startId))
                 .takeRight(M)
                 .uniqBy('id')
                 .reverse()

@@ -1,5 +1,5 @@
-e.exports = {
-    drawerSizingWrapper: 'drawerSizingWrapper_f7506e',
-    contentWrapper: 'contentWrapper_f7506e',
-    slideContent: 'slideContent_f7506e'
+n.exports = {
+    drawerSizingWrapper: 'drawerSizingWrapper__9c62c',
+    contentWrapper: 'contentWrapper__9c62c',
+    slideContent: 'slideContent__9c62c'
 };

@@ -1,6 +1,6 @@
 n.exports = {
-    content: 'content_fce26a',
-    header: 'header_fce26a',
-    warningIcon: 'warningIcon_fce26a',
-    dangerIcon: 'dangerIcon_fce26a'
+    content: 'content_fc289e',
+    header: 'header_fc289e',
+    warningIcon: 'warningIcon_fc289e',
+    dangerIcon: 'dangerIcon_fc289e'
 };

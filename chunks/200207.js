@@ -1,12 +1,12 @@
-function n(e) {
-    let n = e.regex,
-        r = /[a-zA-Z_$][a-zA-Z0-9_$]*/,
-        i = n.concat(r, n.concat('(\\.', r, ')*')),
-        a = /([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)/,
-        o = {
+function t(e) {
+    let t = e.regex,
+        n = /[a-zA-Z_$][a-zA-Z0-9_$]*/,
+        i = t.concat(n, t.concat('(\\.', n, ')*')),
+        r = /([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)/,
+        a = {
             className: 'rest_arg',
             begin: /[.]{3}/,
-            end: r,
+            end: n,
             relevance: 10
         };
     return {
@@ -30,7 +30,7 @@ function n(e) {
                 }
             },
             {
-                match: [/\b(?:class|interface|extends|implements)/, /\s+/, r],
+                match: [/\b(?:class|interface|extends|implements)/, /\s+/, n],
                 className: {
                     1: 'keyword',
                     3: 'title.class'
@@ -53,9 +53,9 @@ function n(e) {
                         className: 'params',
                         begin: /\(/,
                         end: /\)/,
-                        contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, o]
+                        contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, a]
                     },
-                    { begin: n.concat(/:\s*/, a) }
+                    { begin: t.concat(/:\s*/, r) }
                 ]
             },
             e.METHOD_GUARD
@@ -63,4 +63,4 @@ function n(e) {
         illegal: /#/
     };
 }
-e.exports = n;
+e.exports = t;

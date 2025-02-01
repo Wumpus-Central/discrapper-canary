@@ -1,11 +1,11 @@
 e.exports = {
-    container: 'container_e664f3',
-    header: 'header_e664f3',
-    threadIcon: 'threadIcon_e664f3',
-    title: 'title_e664f3',
-    divider: 'divider_e664f3',
-    closeIcon: 'closeIcon_e664f3',
-    spacer: 'spacer_e664f3',
-    createButton: 'createButton_e664f3',
-    searchBox: 'searchBox_e664f3'
+    container: 'container_d9c882',
+    header: 'header_d9c882',
+    closeIcon: 'closeIcon_d9c882',
+    divider: 'divider_d9c882',
+    threadIcon: 'threadIcon_d9c882',
+    title: 'title_d9c882',
+    spacer: 'spacer_d9c882',
+    createButton: 'createButton_d9c882',
+    searchBox: 'searchBox_d9c882'
 };

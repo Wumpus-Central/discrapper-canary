@@ -1,182 +1,182 @@
-let i, a;
-var o,
-    s = r(47120);
-var l = r(442837),
-    u = r(570140),
-    c = r(981631),
-    d = r(354459);
-function f(e, n, r) {
+let i, r;
+n.d(t, { Z: () => A }), n(47120);
+var a,
+    s = n(442837),
+    o = n(570140),
+    l = n(981631),
+    u = n(354459);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let p = new Map(),
-    h = {},
-    _ = c.VD2.BOTTOM_RIGHT,
-    m = {
-        [d.cL.VIDEO]: d.l8[d.cL.VIDEO],
-        [d.cL.CAMERA_PREVIEW]: d.l8[d.cL.CAMERA_PREVIEW]
+let d = new Map(),
+    f = {},
+    _ = l.VD2.BOTTOM_RIGHT,
+    p = {
+        [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
+        [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
     };
-function g(e) {
-    var n, r;
-    let { id: o, component: s, props: l } = e;
-    if (null != p.get(o)) return;
+function h(e) {
+    var t, n;
+    let { id: a, component: s, props: o } = e;
+    if (null != d.get(a)) return;
     let u = {
-        id: o,
+        id: a,
         component: s,
-        position: null !== (n = l.position) && void 0 !== n ? n : _,
-        props: l,
-        docked: null !== (r = l.docked) && void 0 !== r && r
+        position: null !== (t = o.position) && void 0 !== t ? t : _,
+        props: o,
+        docked: null !== (n = o.docked) && void 0 !== n && n
     };
-    p.set(o, u), s === c.NYg.VIDEO ? null == i && (i = o) : s === c.NYg.EMBED_IFRAME && null == a && (a = o);
+    d.set(a, u), s === l.NYg.VIDEO ? null == i && (i = a) : s === l.NYg.EMBED_IFRAME && null == r && (r = a);
 }
-function E(e) {
-    let { id: n } = e;
-    if (!p.has(n)) return !1;
+function m(e) {
+    let { id: t } = e;
+    if (!d.has(t)) return !1;
     {
-        p.delete(n);
-        let e = Array.from(p.keys());
-        i === n
+        d.delete(t);
+        let e = Array.from(d.keys());
+        i === t
             ? (i = e.find((e) => {
-                  let n = p.get(e);
-                  return null != n && n.component === c.NYg.VIDEO;
+                  let t = d.get(e);
+                  return null != t && t.component === l.NYg.VIDEO;
               }))
-            : a === n &&
-              (a = e.find((e) => {
-                  let n = p.get(e);
-                  return null != n && n.component === c.NYg.EMBED_IFRAME;
+            : r === t &&
+              (r = e.find((e) => {
+                  let t = d.get(e);
+                  return null != t && t.component === l.NYg.EMBED_IFRAME;
               }));
     }
 }
-function v(e) {
-    let { id: n, position: r } = e;
-    if (null == n || (i !== n && a !== n)) return !1;
+function g(e) {
+    let { id: t, position: n } = e;
+    if (null == t || (i !== t && r !== t)) return !1;
     {
         let e = new Map();
-        p.forEach((n, i) => {
+        d.forEach((t, i) => {
             e.set(i, {
-                ...n,
-                position: r
+                ...t,
+                position: n
             });
         }),
-            (p = e),
-            (_ = r);
+            (d = e),
+            (_ = n);
     }
 }
+function E(e) {
+    let { width: t, pipType: n } = e;
+    p[n] = t;
+}
+function v(e) {
+    let { id: t, rect: n } = e;
+    f[t] = n;
+}
 function y(e) {
-    let { width: n, pipType: r } = e;
-    m[r] = n;
-}
-function b(e) {
-    let { id: n, rect: r } = e;
-    h[n] = r;
-}
-function I(e) {
-    let { id: n } = e;
-    if (i !== n && a !== n) return !1;
+    let { id: t } = e;
+    if (i !== t && r !== t) return !1;
     {
-        let e = p.get(n);
+        let e = d.get(t);
         if (null == e) return !1;
-        p.set(n, {
+        d.set(t, {
             ...e,
             hidden: !0
         });
     }
 }
-function T(e) {
-    let { id: n } = e;
-    if (i !== n && a !== n) return !1;
+function I(e) {
+    let { id: t } = e;
+    if (i !== t && r !== t) return !1;
     {
-        let e = p.get(n);
+        let e = d.get(t);
         if (null == e) return !1;
-        p.set(n, {
+        d.set(t, {
             ...e,
             hidden: !1
         });
     }
 }
-function S(e) {
-    let { id: n } = e,
-        r = p.get(n);
-    null != r && (r.component === c.NYg.VIDEO ? (i = n) : r.component === c.NYg.EMBED_IFRAME && (a = n));
+function T(e) {
+    let { id: t } = e,
+        n = d.get(t);
+    null != n && (n.component === l.NYg.VIDEO ? (i = t) : n.component === l.NYg.EMBED_IFRAME && (r = t));
 }
-function A() {
-    (i = null), (a = null), (p = new Map());
+function b() {
+    (i = null), (r = null), (d = new Map());
 }
-class C extends (o = l.ZP.PersistedStore) {
+class S extends (a = s.ZP.PersistedStore) {
     initialize(e) {
         if (null == e) {
-            (_ = c.VD2.BOTTOM_RIGHT),
-                (m = {
-                    [d.cL.VIDEO]: d.l8[d.cL.VIDEO],
-                    [d.cL.CAMERA_PREVIEW]: d.l8[d.cL.CAMERA_PREVIEW]
+            (_ = l.VD2.BOTTOM_RIGHT),
+                (p = {
+                    [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
+                    [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
                 });
             return;
         }
-        (_ = e.openPosition), (m = e.pipWidths);
+        (_ = e.openPosition), (p = e.pipWidths);
     }
     get pipWindow() {
         var e;
-        return null == i && null == a ? null : p.get(null !== (e = null != i ? i : a) && void 0 !== e ? e : '');
+        return null == i && null == r ? null : d.get(null !== (e = null != i ? i : r) && void 0 !== e ? e : '');
     }
     get pipVideoWindow() {
-        return null == i ? null : p.get(i);
+        return null == i ? null : d.get(i);
     }
     get pipActivityWindow() {
-        return null == a ? null : p.get(a);
+        return null == r ? null : d.get(r);
     }
     get pipWindows() {
-        return p;
+        return d;
     }
     pipWidth(e) {
-        return m[e];
+        return p[e];
     }
     isEmbeddedActivityHidden() {
-        return null == a;
+        return null == r;
     }
     getDockedRect(e) {
-        return h[e];
+        return f[e];
     }
     isOpen(e) {
-        return null != e && p.has(e);
+        return null != e && d.has(e);
     }
     getState() {
         return {
             openPosition: _,
-            pipWidths: m
+            pipWidths: p
         };
     }
 }
-f(C, 'displayName', 'PictureInPictureStore'),
-    f(C, 'persistKey', 'PictureInPictureStore'),
-    f(C, 'migrations', [
+c(S, 'displayName', 'PictureInPictureStore'),
+    c(S, 'persistKey', 'PictureInPictureStore'),
+    c(S, 'migrations', [
         (e) => {
-            var n, r;
+            var t, n;
             return {
                 pipWidths: {
-                    [d.cL.VIDEO]: null !== (n = e.pipWidth) && void 0 !== n ? n : d.l8[d.cL.VIDEO],
-                    [d.cL.CAMERA_PREVIEW]: d.l8[d.cL.CAMERA_PREVIEW]
+                    [u.cL.VIDEO]: null !== (t = e.pipWidth) && void 0 !== t ? t : u.l8[u.cL.VIDEO],
+                    [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
                 },
-                openPosition: null !== (r = e.openPosition) && void 0 !== r ? r : c.VD2.BOTTOM_RIGHT
+                openPosition: null !== (n = e.openPosition) && void 0 !== n ? n : l.VD2.BOTTOM_RIGHT
             };
         }
-    ]),
-    (n.Z = new C(u.Z, {
-        PICTURE_IN_PICTURE_OPEN: g,
-        PICTURE_IN_PICTURE_CLOSE: E,
-        PICTURE_IN_PICTURE_MOVE: v,
-        PICTURE_IN_PICTURE_RESIZE: y,
-        PICTURE_IN_PICTURE_HIDE: I,
-        PICTURE_IN_PICTURE_SHOW: T,
-        PICTURE_IN_PICTURE_UPDATE_RECT: b,
-        PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: S,
-        LOGOUT: A
-    }));
+    ]);
+let A = new S(o.Z, {
+    PICTURE_IN_PICTURE_OPEN: h,
+    PICTURE_IN_PICTURE_CLOSE: m,
+    PICTURE_IN_PICTURE_MOVE: g,
+    PICTURE_IN_PICTURE_RESIZE: E,
+    PICTURE_IN_PICTURE_HIDE: y,
+    PICTURE_IN_PICTURE_SHOW: I,
+    PICTURE_IN_PICTURE_UPDATE_RECT: v,
+    PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: T,
+    LOGOUT: b
+});

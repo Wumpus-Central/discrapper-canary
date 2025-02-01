@@ -1,33 +1,33 @@
-n(47120);
-var a = n(192379),
-    i = n(796075),
+n.d(t, { Z: () => c }), n(47120);
+var i = n(192379),
+    l = n(796075),
     r = n(481060);
-let l = 'undefined' == typeof ResizeObserver ? i.d : ResizeObserver,
+let a = 'undefined' == typeof ResizeObserver ? l.d : ResizeObserver,
     s = new Map(),
-    o = new l((e) => {
+    o = new a((e) => {
         e.forEach((e) => {
             var t;
             let { target: n } = e;
             null === (t = s.get(n)) || void 0 === t || t(e);
         });
-    });
-t.Z = () => {
-    let e = a.useRef(null),
-        [t, n] = a.useState(400),
-        i = a.useCallback(() => {
-            null !== e.current && n(e.current.clientWidth);
-        }, [n, e]);
-    return (
-        (0, r.useResizeObserverSubscription)({
-            ref: e,
-            key: 'forum-container',
-            onUpdate: i,
-            resizeObserver: o,
-            listenerMap: s
-        }),
-        {
-            containerRef: e,
-            containerWidth: t
-        }
-    );
-};
+    }),
+    c = () => {
+        let e = i.useRef(null),
+            [t, n] = i.useState(400),
+            l = i.useCallback(() => {
+                null !== e.current && n(e.current.clientWidth);
+            }, [n, e]);
+        return (
+            (0, r.znF)({
+                ref: e,
+                key: 'forum-container',
+                onUpdate: l,
+                resizeObserver: o,
+                listenerMap: s
+            }),
+            {
+                containerRef: e,
+                containerWidth: t
+            }
+        );
+    };

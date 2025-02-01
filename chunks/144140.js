@@ -1,255 +1,255 @@
+n.d(t, { Z: () => K }), n(47120);
 var i,
-    a = r(47120);
-var o = r(392711),
-    s = r.n(o),
-    l = r(442837),
-    u = r(570140),
-    c = r(786761),
-    d = r(131704),
-    f = r(23750),
-    p = r(598077),
-    h = r(592125),
-    _ = r(375954),
-    m = r(709054),
-    g = r(124368),
-    E = r(981631);
-function v(e, n, r) {
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
+    o = n(570140),
+    l = n(786761),
+    u = n(131704),
+    c = n(23750),
+    d = n(598077),
+    f = n(592125),
+    _ = n(375954),
+    p = n(709054),
+    h = n(124368),
+    m = n(981631);
+function g(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let y = new Set(),
-    b = {},
-    I = {};
-function T(e) {
-    b = s().omitBy(b, (n) => {
-        let r = n.guildId === e;
-        return r && delete I[n.parentId], r;
+let E = new Set(),
+    v = {},
+    y = {};
+function I(e) {
+    v = a().omitBy(v, (t) => {
+        let n = t.guildId === e;
+        return n && delete y[t.parentId], n;
     });
 }
-function S(e) {
-    (b = s().omitBy(b, (n) => n.parentId === e)), delete I[e];
+function T(e) {
+    (v = a().omitBy(v, (t) => t.parentId === e)), delete y[e];
 }
-function A(e, n) {
-    d.AW.has(e.type) && C(R(e), n);
+function b(e, t) {
+    u.AW.has(e.type) && S(N(e), t);
 }
-function C(e, n) {
-    var r;
-    let i = (null !== (r = I[e.parentId]) && void 0 !== r ? r : 0) + 1;
-    (I[e.parentId] = i), n(e);
+function S(e, t) {
+    var n;
+    let i = (null !== (n = y[e.parentId]) && void 0 !== n ? n : 0) + 1;
+    (y[e.parentId] = i), t(e);
+}
+function A(e) {
+    var t;
+    null === (t = e.threads) || void 0 === t || t.forEach(C);
 }
 function N(e) {
-    var n;
-    null === (n = e.threads) || void 0 === n || n.forEach(O);
-}
-function R(e) {
-    if (!(e.id in b)) {
-        var n;
-        b[e.id] = {
+    if (!(e.id in v)) {
+        var t;
+        v[e.id] = {
             guildId: e.guild_id,
             parentId: e.parent_id,
-            count: null !== (n = e.messageCount) && void 0 !== n ? n : 0,
+            count: null !== (t = e.messageCount) && void 0 !== t ? t : 0,
             mostRecentRawMessage: null,
             mostRecentMessage: null
         };
     }
-    return b[e.id];
+    return v[e.id];
 }
-function O(e) {
-    A(e, (n) => {
-        var r;
-        null != e.messageCount && (n.count = e.messageCount);
-        let i = null !== (r = n.mostRecentRawMessage) && void 0 !== r ? r : n.mostRecentMessage;
-        null != e.lastMessageId && (null == i ? void 0 : i.id) !== e.lastMessageId && ((n.mostRecentRawMessage = null), (n.mostRecentMessage = null));
+function C(e) {
+    b(e, (t) => {
+        var n;
+        null != e.messageCount && (t.count = e.messageCount);
+        let i = null !== (n = t.mostRecentRawMessage) && void 0 !== n ? n : t.mostRecentMessage;
+        null != e.lastMessageId && (null == i ? void 0 : i.id) !== e.lastMessageId && ((t.mostRecentRawMessage = null), (t.mostRecentMessage = null));
     });
 }
-function D(e) {
-    if (null != e && !(e.id in b)) {
-        let n = h.Z.getChannel(e.id);
-        if (null != n) return O(n), !0;
+function R(e) {
+    if (null != e && !(e.id in v)) {
+        let t = f.Z.getChannel(e.id);
+        if (null != t) return C(t), !0;
     }
     return !1;
 }
-function L(e) {
-    (I = {}), y.clear(), e.guilds.forEach(N);
+function O(e) {
+    (y = {}), E.clear(), e.guilds.forEach(A);
 }
-function x(e) {
-    let { threadMessages: n } = e;
-    for (let e in (b = { ...n })) {
-        let r = n[e].mostRecentMessage;
-        null != r &&
-            (n[e].mostRecentMessage = new f.ZP({
-                ...r,
-                author: new p.Z(r.author)
+function D(e) {
+    let { threadMessages: t } = e;
+    for (let e in (v = { ...t })) {
+        let n = t[e].mostRecentMessage;
+        null != n &&
+            (t[e].mostRecentMessage = new c.ZP({
+                ...n,
+                author: new d.Z(n.author)
             }));
     }
 }
-function w(e) {
-    let { guild: n } = e;
-    N(n);
+function x(e) {
+    let { guild: t } = e;
+    A(t);
+}
+function L(e) {
+    let { guild: t } = e;
+    I(t.id);
 }
 function P(e) {
-    let { guild: n } = e;
-    T(n.id);
+    let { channel: t } = e;
+    C(t);
 }
-function M(e) {
-    let { channel: n } = e;
-    O(n);
-}
-function k(e) {
-    let { threads: n, mostRecentMessages: r } = e;
-    n.forEach(O),
-        null == r ||
-            r.forEach((e) => {
-                let n = h.Z.getChannel(e.channel_id);
-                null != n &&
-                    e.type !== E.uaV.THREAD_STARTER_MESSAGE &&
-                    A(n, (n) => {
-                        (n.mostRecentRawMessage = e), (n.mostRecentMessage = null);
+function w(e) {
+    let { threads: t, mostRecentMessages: n } = e;
+    t.forEach(C),
+        null == n ||
+            n.forEach((e) => {
+                let t = f.Z.getChannel(e.channel_id);
+                null != t &&
+                    e.type !== m.uaV.THREAD_STARTER_MESSAGE &&
+                    b(t, (t) => {
+                        (t.mostRecentRawMessage = e), (t.mostRecentMessage = null);
                     });
             });
 }
-function U(e) {
-    let { threads: n } = e;
-    n.forEach(D);
+function M(e) {
+    let { threads: t } = e;
+    t.forEach(R);
 }
-function B(e) {
-    let { messages: n, threads: r } = e;
-    for (let e of n) for (let n of e) D(n.thread);
-    r.forEach(D);
+function k(e) {
+    let { messages: t, threads: n } = e;
+    for (let e of t) for (let t of e) R(t.thread);
+    n.forEach(R);
+}
+function U(e) {
+    let { channel: t } = e;
+    T(t.id);
 }
 function G(e) {
-    let { channel: n } = e;
-    S(n.id);
+    let { channel: t } = e;
+    delete v[t.id];
 }
-function Z(e) {
-    let { channel: n } = e;
-    delete b[n.id];
+function B(e) {
+    let { message: t, optimistic: n, isPushNotification: i, sendMessageOptions: r } = e;
+    if (n || i || null != r) return !1;
+    let a = f.Z.getChannel(t.channel_id);
+    if (null == a || !u.Ec.has(a.type) || !Z(a, t)) return !1;
+    b(a, (e) => {
+        (e.count = Math.min(e.count + 1, h.M3)), (e.mostRecentRawMessage = t), (e.mostRecentMessage = null);
+    });
+}
+function Z(e, t) {
+    return !(t.type === m.uaV.THREAD_STARTER_MESSAGE || (e.isForumPost() && t.id === p.default.castChannelIdAsMessageId(e.id)));
 }
 function F(e) {
-    let { message: n, optimistic: r, isPushNotification: i, sendMessageOptions: a } = e;
-    if (r || i || null != a) return !1;
-    let o = h.Z.getChannel(n.channel_id);
-    if (null == o || !d.Ec.has(o.type) || !V(o, n)) return !1;
-    A(o, (e) => {
-        (e.count = Math.min(e.count + 1, g.M3)), (e.mostRecentRawMessage = n), (e.mostRecentMessage = null);
+    var t;
+    let { message: n } = e,
+        i = v[n.channel_id],
+        r = null !== (t = null == i ? void 0 : i.mostRecentRawMessage) && void 0 !== t ? t : null == i ? void 0 : i.mostRecentMessage;
+    if (null == i || null == r || r.id !== n.id) return !1;
+    S(i, (e) => {
+        null != e.mostRecentMessage && (e.mostRecentMessage = (0, l.wi)(e.mostRecentMessage, n)), null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, l.gx)(e.mostRecentRawMessage, n));
     });
 }
-function V(e, n) {
-    return !(n.type === E.uaV.THREAD_STARTER_MESSAGE || (e.isForumPost() && n.id === m.default.castChannelIdAsMessageId(e.id))) && !0;
+function V(e) {
+    let { id: t, channelId: n } = e,
+        i = v[n];
+    if (null == i) return !1;
+    let r = p.default.castChannelIdAsMessageId(n) !== t,
+        a = !E.has(t);
+    S(i, (e) => {
+        var n;
+        let i = null !== (n = e.mostRecentRawMessage) && void 0 !== n ? n : e.mostRecentMessage;
+        null != i && i.id === t && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)), (e.count = r && a ? Math.max(e.count - 1, 0) : e.count), E.add(t);
+    });
 }
 function j(e) {
-    var n;
-    let { message: r } = e,
-        i = b[r.channel_id],
-        a = null !== (n = null == i ? void 0 : i.mostRecentRawMessage) && void 0 !== n ? n : null == i ? void 0 : i.mostRecentMessage;
-    if (null == i || null == a || a.id !== r.id) return !1;
-    C(i, (e) => {
-        null != e.mostRecentMessage && (e.mostRecentMessage = (0, c.wi)(e.mostRecentMessage, r)), null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, c.gx)(e.mostRecentRawMessage, r));
-    });
-}
-function H(e) {
-    let { id: n, channelId: r } = e,
-        i = b[r];
+    let { ids: t, channelId: n } = e,
+        i = v[n];
     if (null == i) return !1;
-    let a = m.default.castChannelIdAsMessageId(r) !== n,
-        o = !y.has(n);
-    C(i, (e) => {
-        var r;
-        let i = null !== (r = e.mostRecentRawMessage) && void 0 !== r ? r : e.mostRecentMessage;
-        null != i && i.id === n && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)), (e.count = a && o ? Math.max(e.count - 1, 0) : e.count), y.add(n);
-    });
-}
-function Y(e) {
-    let { ids: n, channelId: r } = e,
-        i = b[r];
-    if (null == i) return !1;
-    let a = n.filter((e) => {
-        let n = m.default.castChannelIdAsMessageId(r) !== e,
-            i = !y.has(e);
-        return n && i;
+    let r = t.filter((e) => {
+        let t = p.default.castChannelIdAsMessageId(n) !== e,
+            i = !E.has(e);
+        return t && i;
     }).length;
-    a > 0 &&
-        C(i, (e) => {
-            var r;
-            let i = null !== (r = e.mostRecentRawMessage) && void 0 !== r ? r : e.mostRecentMessage;
-            null != i && n.includes(i.id) && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)), (e.count -= a), n.forEach((e) => y.add(e));
+    r > 0 &&
+        S(i, (e) => {
+            var n;
+            let i = null !== (n = e.mostRecentRawMessage) && void 0 !== n ? n : e.mostRecentMessage;
+            null != i && t.includes(i.id) && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)), (e.count -= r), t.forEach((e) => E.add(e));
         });
 }
-function W(e) {
-    let n = !1;
-    for (let r of e.messages) n = D(r.thread) || n;
-    if (e.isAfter || e.isBefore || e.hasMoreAfter) return n;
-    let r = h.Z.getChannel(e.channelId);
-    if (null == r || !d.Ec.has(r.type)) return n;
-    A(r, (n) => {
-        if (0 === e.messages.length) (n.mostRecentRawMessage = null), (n.mostRecentMessage = null), (n.count = 0);
+function H(e) {
+    let t = !1;
+    for (let n of e.messages) t = R(n.thread) || t;
+    if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
+    let n = f.Z.getChannel(e.channelId);
+    if (null == n || !u.Ec.has(n.type)) return t;
+    b(n, (t) => {
+        if (0 === e.messages.length) (t.mostRecentRawMessage = null), (t.mostRecentMessage = null), (t.count = 0);
         else {
-            var r;
-            let i = null !== (r = e.messages[0]) && void 0 !== r ? r : null;
-            (n.count = e.messages.length >= g.M3 ? g.M3 : n.count), (null == i ? void 0 : i.type) !== E.uaV.THREAD_STARTER_MESSAGE && ((n.mostRecentRawMessage = i), (n.mostRecentMessage = null));
+            var n;
+            let i = null !== (n = e.messages[0]) && void 0 !== n ? n : null;
+            (t.count = e.messages.length >= h.M3 ? h.M3 : t.count), (null == i ? void 0 : i.type) !== m.uaV.THREAD_STARTER_MESSAGE && ((t.mostRecentRawMessage = i), (t.mostRecentMessage = null));
         }
     });
 }
-function K() {
-    for (let e in b) {
-        let n = b[e];
-        if (null != n && null != n.mostRecentMessage) {
-            let r = _.Z.getMessage(e, n.mostRecentMessage.id);
-            if (null == r) continue;
-            n.mostRecentMessage = r;
+function Y() {
+    for (let e in v) {
+        let t = v[e];
+        if (null != t && null != t.mostRecentMessage) {
+            let n = _.Z.getMessage(e, t.mostRecentMessage.id);
+            if (null == n) continue;
+            t.mostRecentMessage = n;
         }
     }
 }
-class z extends (i = l.ZP.Store) {
+class W extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, _.Z);
+        this.waitFor(f.Z, _.Z);
     }
     getCount(e) {
-        var n, r;
-        return null !== (r = null === (n = b[e]) || void 0 === n ? void 0 : n.count) && void 0 !== r ? r : null;
+        var t, n;
+        return null !== (n = null === (t = v[e]) || void 0 === t ? void 0 : t.count) && void 0 !== n ? n : null;
     }
     getMostRecentMessage(e) {
-        var n, r;
-        let i = b[e];
-        return null == i ? null : (null == i.mostRecentMessage && null != i.mostRecentRawMessage && ((i.mostRecentMessage = null !== (n = _.Z.getMessage(e, i.mostRecentRawMessage.id)) && void 0 !== n ? n : (0, c.e5)(i.mostRecentRawMessage)), (i.mostRecentRawMessage = null)), null !== (r = i.mostRecentMessage) && void 0 !== r ? r : null);
+        var t, n;
+        let i = v[e];
+        return null == i ? null : (null == i.mostRecentMessage && null != i.mostRecentRawMessage && ((i.mostRecentMessage = null !== (t = _.Z.getMessage(e, i.mostRecentRawMessage.id)) && void 0 !== t ? t : (0, l.e5)(i.mostRecentRawMessage)), (i.mostRecentRawMessage = null)), null !== (n = i.mostRecentMessage) && void 0 !== n ? n : null);
     }
     getChannelThreadsVersion(e) {
-        return I[e];
+        return y[e];
     }
     getInitialOverlayState() {
-        return b;
+        return v;
     }
 }
-v(z, 'displayName', 'ThreadMessageStore'),
-    (n.Z = new z(u.Z, {
-        CONNECTION_OPEN: L,
-        OVERLAY_INITIALIZE: x,
-        GUILD_CREATE: w,
-        GUILD_DELETE: P,
-        THREAD_CREATE: M,
-        THREAD_UPDATE: M,
-        THREAD_LIST_SYNC: k,
-        LOAD_THREADS_SUCCESS: U,
-        LOAD_ARCHIVED_THREADS_SUCCESS: U,
-        RELATIONSHIP_ADD: K,
-        RELATIONSHIP_UPDATE: K,
-        RELATIONSHIP_REMOVE: K,
-        SEARCH_FINISH: B,
-        MOD_VIEW_SEARCH_FINISH: B,
-        THREAD_DELETE: Z,
-        CHANNEL_DELETE: G,
-        MESSAGE_CREATE: F,
-        MESSAGE_UPDATE: j,
-        MESSAGE_DELETE: H,
-        MESSAGE_DELETE_BULK: Y,
-        LOAD_MESSAGES_SUCCESS: W
-    }));
+g(W, 'displayName', 'ThreadMessageStore');
+let K = new W(o.Z, {
+    CONNECTION_OPEN: O,
+    OVERLAY_INITIALIZE: D,
+    GUILD_CREATE: x,
+    GUILD_DELETE: L,
+    THREAD_CREATE: P,
+    THREAD_UPDATE: P,
+    THREAD_LIST_SYNC: w,
+    LOAD_THREADS_SUCCESS: M,
+    LOAD_ARCHIVED_THREADS_SUCCESS: M,
+    RELATIONSHIP_ADD: Y,
+    RELATIONSHIP_UPDATE: Y,
+    RELATIONSHIP_REMOVE: Y,
+    SEARCH_FINISH: k,
+    MOD_VIEW_SEARCH_FINISH: k,
+    THREAD_DELETE: G,
+    CHANNEL_DELETE: U,
+    MESSAGE_CREATE: B,
+    MESSAGE_UPDATE: F,
+    MESSAGE_DELETE: V,
+    MESSAGE_DELETE_BULK: j,
+    LOAD_MESSAGES_SUCCESS: H
+});

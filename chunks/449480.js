@@ -1,52 +1,52 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(97028),
-    c = r(481060),
-    d = r(686546),
-    f = r(353093),
-    p = r(388032),
-    h = r(894979);
+n.d(t, { Z: () => v }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(97028),
+    l = n(481060),
+    u = n(686546),
+    c = n(353093),
+    d = n(388032),
+    f = n(894979);
 let _ = 4,
-    m = 10,
-    g = 2;
-function E(e) {
-    let { games: n, gameActivity: r } = e;
-    return (0, a.jsx)('div', {
-        className: h.tooltipGames,
-        children: n.map((e) => {
-            let n = e.getIconURL(24);
-            if (null == n) return null;
-            let i = null == r ? void 0 : r[e.id],
-                o = (null == i ? void 0 : i.level) === u.m.HIGH,
-                s = (0, a.jsxs)(c.Text, {
+    p = 10,
+    h = 2;
+function m(e) {
+    let { games: t, gameActivity: n } = e;
+    return (0, i.jsx)('div', {
+        className: f.tooltipGames,
+        children: t.map((e) => {
+            let t = e.getIconURL(24);
+            if (null == t) return null;
+            let r = null == n ? void 0 : n[e.id],
+                a = (null == r ? void 0 : r.level) === o.m.HIGH,
+                s = (0, i.jsxs)(l.Text, {
                     variant: 'text-xs/semibold',
                     color: 'interactive-active',
-                    className: h.tooltipGameName,
+                    className: f.tooltipGameName,
                     children: [
                         e.name,
-                        o &&
-                            (0, a.jsx)(c.Text, {
+                        a &&
+                            (0, i.jsx)(l.Text, {
                                 tag: 'div',
                                 variant: 'text-xxs/normal',
                                 color: 'text-muted',
-                                children: p.intl.string(p.t.gTQrTU)
+                                children: d.intl.string(d.t.gTQrTU)
                             })
                     ]
                 });
-            return (0, a.jsxs)(
+            return (0, i.jsxs)(
                 'div',
                 {
-                    className: h.tooltipGame,
+                    className: f.tooltipGame,
                     children: [
-                        (0, a.jsx)('div', {
-                            className: h.tooltipGameImageContainer,
-                            children: (0, a.jsx)('img', {
-                                src: n,
+                        (0, i.jsx)('div', {
+                            className: f.tooltipGameImageContainer,
+                            children: (0, i.jsx)('img', {
+                                src: t,
                                 alt: e.name,
-                                className: h.tooltipGameImage
+                                className: f.tooltipGameImage
                             })
                         }),
                         s
@@ -57,53 +57,53 @@ function E(e) {
         })
     });
 }
-function v(e) {
-    var n;
-    let { game: r, gameActivity: i, highlighted: o = !1 } = e,
-        s = r.getIconURL(24);
-    if (null == s) return null;
-    let f = (null == i ? void 0 : null === (n = i[r.id]) || void 0 === n ? void 0 : n.level) === u.m.HIGH,
-        _ = (0, a.jsxs)(c.Text, {
+function g(e) {
+    var t;
+    let { game: n, gameActivity: r, highlighted: a = !1 } = e,
+        c = n.getIconURL(24);
+    if (null == c) return null;
+    let _ = (null == r ? void 0 : null === (t = r[n.id]) || void 0 === t ? void 0 : t.level) === o.m.HIGH,
+        m = (0, i.jsxs)(l.Text, {
             variant: 'text-sm/semibold',
             color: 'interactive-active',
-            className: h.tooltipText,
+            className: f.tooltipText,
             children: [
-                r.name,
-                f &&
-                    (0, a.jsx)(c.Text, {
+                n.name,
+                _ &&
+                    (0, i.jsx)(l.Text, {
                         tag: 'div',
                         variant: 'text-sm/normal',
                         color: 'text-muted',
-                        children: p.intl.string(p.t.gTQrTU)
+                        children: d.intl.string(d.t.gTQrTU)
                     })
             ]
         });
-    return (0, a.jsx)(c.Tooltip, {
-        text: _,
+    return (0, i.jsx)(l.ua7, {
+        text: m,
         position: 'bottom',
-        'aria-label': r.name,
+        'aria-label': n.name,
         children: (e) =>
-            (0, a.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 ...e,
-                className: l()(h.gameImageContainer, o && h.highlighted),
+                className: s()(f.gameImageContainer, a && f.highlighted),
                 children: [
-                    (0, a.jsx)('img', {
-                        src: s,
-                        alt: r.name,
-                        className: h.gameImage
+                    (0, i.jsx)('img', {
+                        src: c,
+                        alt: n.name,
+                        className: f.gameImage
                     }),
-                    f &&
-                        (0, a.jsx)(d.ZP, {
-                            mask: d.QS.GAMEPLAY_HIGH_ACTIVITY_ICON,
-                            width: m + 2 * g,
-                            height: m + 2 * g,
-                            className: h.gameActivityLevel,
-                            children: (0, a.jsx)('div', {
-                                className: h.gameActivityLevelInner,
-                                children: (0, a.jsx)(c.FireIcon, {
-                                    color: c.tokens.unsafe_rawColors.ORANGE_330.css,
-                                    width: m,
-                                    height: m,
+                    _ &&
+                        (0, i.jsx)(u.ZP, {
+                            mask: u.QS.GAMEPLAY_HIGH_ACTIVITY_ICON,
+                            width: p + 2 * h,
+                            height: p + 2 * h,
+                            className: f.gameActivityLevel,
+                            children: (0, i.jsx)('div', {
+                                className: f.gameActivityLevelInner,
+                                children: (0, i.jsx)(l.YqE, {
+                                    color: l.TVs.unsafe_rawColors.ORANGE_330.css,
+                                    width: p,
+                                    height: p,
                                     size: 'custom'
                                 })
                             })
@@ -112,76 +112,76 @@ function v(e) {
             })
     });
 }
-let y = (e) => (n, r) => {
-    var i, a, o, s;
-    let l = null !== (o = null == e ? void 0 : null === (i = e[n.id]) || void 0 === i ? void 0 : i.score) && void 0 !== o ? o : 0,
-        u = null !== (s = null == e ? void 0 : null === (a = e[r.id]) || void 0 === a ? void 0 : a.score) && void 0 !== s ? s : 0;
-    return l !== u ? u - l : 0;
-};
-n.Z = o.memo(function (e) {
-    let { games: n, prioritizedGameIds: r = new Set(), gameActivity: i = {}, onInteraction: s } = e,
-        l = o.useMemo(() => {
-            let e = n.filter((e) => null != e && null != e.icon),
-                a = e.filter((e) => !r.has(e.id)).sort(y(i));
-            return [...e.filter((e) => r.has(e.id)).sort(y(i)), ...a];
-        }, [i, n, r]),
-        u = l.slice(0, _ - 1),
-        d = o.useMemo(() => {
-            var e;
-            let n = l[_ - 1];
-            if (null == n) return null;
-            let r = n.getIconURL(24);
-            if (null == r) return null;
-            if (l.length <= _)
-                return (0, a.jsx)(v, {
-                    game: n,
-                    gameActivity: i
-                });
-            let o = l.slice(_ - 1);
-            return (0, a.jsx)(c.Tooltip, {
-                'aria-label': null !== (e = (0, f.f6)(o.map((e) => e.name))) && void 0 !== e ? e : '',
-                onTooltipShow: () => (null == s ? void 0 : s()),
-                text: (0, a.jsx)(E, {
-                    games: o,
-                    gameActivity: i
-                }),
-                position: 'bottom',
-                children: (e) =>
-                    (0, a.jsxs)('div', {
-                        ...e,
-                        className: h.gameImageContainer,
-                        children: [
-                            (0, a.jsx)('img', {
-                                src: r,
-                                alt: n.name,
-                                className: h.gameImage
-                            }),
-                            (0, a.jsx)('div', {
-                                className: h.extraGameCount,
-                                children: (0, a.jsx)(c.Text, {
-                                    variant: 'text-xs/medium',
-                                    color: 'always-white',
-                                    children: '+'.concat(o.length)
+let E = (e) => (t, n) => {
+        var i, r, a, s;
+        let o = null !== (a = null == e ? void 0 : null === (i = e[t.id]) || void 0 === i ? void 0 : i.score) && void 0 !== a ? a : 0,
+            l = null !== (s = null == e ? void 0 : null === (r = e[n.id]) || void 0 === r ? void 0 : r.score) && void 0 !== s ? s : 0;
+        return o !== l ? l - o : 0;
+    },
+    v = r.memo(function (e) {
+        let { games: t, prioritizedGameIds: n = new Set(), gameActivity: a = {}, onInteraction: s } = e,
+            o = r.useMemo(() => {
+                let e = t.filter((e) => null != e && null != e.icon),
+                    i = e.filter((e) => !n.has(e.id)).sort(E(a));
+                return [...e.filter((e) => n.has(e.id)).sort(E(a)), ...i];
+            }, [a, t, n]),
+            u = o.slice(0, _ - 1),
+            d = r.useMemo(() => {
+                var e;
+                let t = o[_ - 1];
+                if (null == t) return null;
+                let n = t.getIconURL(24);
+                if (null == n) return null;
+                if (o.length <= _)
+                    return (0, i.jsx)(g, {
+                        game: t,
+                        gameActivity: a
+                    });
+                let r = o.slice(_ - 1);
+                return (0, i.jsx)(l.ua7, {
+                    'aria-label': null !== (e = (0, c.f6)(r.map((e) => e.name))) && void 0 !== e ? e : '',
+                    onTooltipShow: () => (null == s ? void 0 : s()),
+                    text: (0, i.jsx)(m, {
+                        games: r,
+                        gameActivity: a
+                    }),
+                    position: 'bottom',
+                    children: (e) =>
+                        (0, i.jsxs)('div', {
+                            ...e,
+                            className: f.gameImageContainer,
+                            children: [
+                                (0, i.jsx)('img', {
+                                    src: n,
+                                    alt: t.name,
+                                    className: f.gameImage
+                                }),
+                                (0, i.jsx)('div', {
+                                    className: f.extraGameCount,
+                                    children: (0, i.jsx)(l.Text, {
+                                        variant: 'text-xs/medium',
+                                        color: 'always-white',
+                                        children: '+'.concat(r.length)
+                                    })
                                 })
-                            })
-                        ]
-                    })
-            });
-        }, [i, l, s]);
-    return (0, a.jsxs)(a.Fragment, {
-        children: [
-            u.map((e) =>
-                (0, a.jsx)(
-                    v,
-                    {
-                        game: e,
-                        gameActivity: i,
-                        highlighted: r.has(e.id)
-                    },
-                    e.id
-                )
-            ),
-            d
-        ]
+                            ]
+                        })
+                });
+            }, [a, o, s]);
+        return (0, i.jsxs)(i.Fragment, {
+            children: [
+                u.map((e) =>
+                    (0, i.jsx)(
+                        g,
+                        {
+                            game: e,
+                            gameActivity: a,
+                            highlighted: n.has(e.id)
+                        },
+                        e.id
+                    )
+                ),
+                d
+            ]
+        });
     });
-});

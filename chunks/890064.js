@@ -1,40 +1,40 @@
-n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(481060),
     o = n(951394),
     c = n(858523),
     d = n(388032),
     u = n(877184);
-t.Z = function (e) {
+let h = function (e) {
     let { guild: t, className: n } = e,
-        [l, h] = r.useState(!1),
-        m = r.useCallback(() => h(!0), [h]),
-        p = r.useCallback(() => h(!0), [h]);
+        [r, h] = l.useState(!1),
+        m = l.useCallback(() => h(!0), [h]),
+        p = l.useCallback(() => h(!0), [h]);
     return (0, i.jsx)('div', {
-        className: a()(u.actionButtonsContainer, n, { [u.forceButtonsShow]: l }),
+        className: a()(u.actionButtonsContainer, n, { [u.forceButtonsShow]: r }),
         children: (0, i.jsx)(o.ZP, {
-            children: (0, i.jsx)(c.GlobalDiscoveryServerCardPopout, {
+            children: (0, i.jsx)(c.R, {
                 onRequestOpen: m,
                 onRequestClose: p,
                 guild: t,
                 children: (e) => {
                     let { onClick: t, ...n } = e;
-                    return (0, i.jsx)(s.Tooltip, {
+                    return (0, i.jsx)(s.ua7, {
                         text: d.intl.string(d.t.UKOtz8),
                         hideOnClick: !0,
                         children: (e) => {
-                            let { onClick: r, ...l } = e;
+                            let { onClick: l, ...r } = e;
                             return (0, i.jsx)(o.zx, {
                                 ...n,
-                                ...l,
+                                ...r,
                                 onClick: (e) => {
-                                    e.stopPropagation(), null == r || r(), t(e);
+                                    e.stopPropagation(), null == l || l(), t(e);
                                 },
                                 'aria-label': d.intl.string(d.t.UKOtz8),
-                                children: (0, i.jsx)(s.MoreHorizontalIcon, {
+                                children: (0, i.jsx)(s.xhG, {
                                     size: 'md',
                                     color: 'currentColor',
                                     className: u.overflowIcon

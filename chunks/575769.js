@@ -1,11 +1,11 @@
 e.exports = {
-    closeButton: 'closeButton_b186cb',
-    modalContent: 'modalContent_b186cb',
-    emojiInputContainer: 'emojiInputContainer_b186cb',
-    emojiButton: 'emojiButton_b186cb',
-    emoji: 'emoji_b186cb',
-    emojiText: 'emojiText_b186cb',
-    primaryButtons: 'primaryButtons_b186cb',
-    deleteButton: 'deleteButton_b186cb',
-    cancelButton: 'cancelButton_b186cb'
+    closeButton: 'closeButton__8079d',
+    modalContent: 'modalContent__8079d',
+    emojiInputContainer: 'emojiInputContainer__8079d',
+    emojiButton: 'emojiButton__8079d',
+    emoji: 'emoji__8079d',
+    emojiText: 'emojiText__8079d',
+    primaryButtons: 'primaryButtons__8079d',
+    deleteButton: 'deleteButton__8079d',
+    cancelButton: 'cancelButton__8079d'
 };

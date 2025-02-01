@@ -1,14 +1,14 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(634915);
-let u = a.forwardRef(function (e, n) {
-    let { isActive: r, children: a } = e;
+n.d(t, { Z: () => l });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(634915);
+let l = r.forwardRef(function (e, t) {
+    let { isActive: n, children: r } = e;
     return (0, i.jsx)('div', {
-        className: s()(l.wrapper, { [l.wrapperActive]: r }),
-        ref: n,
-        children: a
+        className: s()(o.wrapper, { [o.wrapperActive]: n }),
+        ref: t,
+        children: r
     });
 });
-n.Z = u;

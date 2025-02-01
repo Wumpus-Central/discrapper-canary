@@ -1,6 +1,6 @@
-var r = Object.prototype;
-function i(e) {
-    var n = e && e.constructor;
-    return e === (('function' == typeof n && n.prototype) || r);
-}
-n.Z = i;
+n.d(t, { Z: () => r });
+var i = Object.prototype;
+let r = function (e) {
+    var t = e && e.constructor;
+    return e === (('function' == typeof t && t.prototype) || i);
+};

@@ -1,4 +1,4 @@
-var i = r(118295)();
+var i = n(118295)();
 e.exports = i;
 try {
     regeneratorRuntime = i;

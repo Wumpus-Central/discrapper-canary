@@ -7,7 +7,7 @@ n.d(t, {
     Bz: () => ez,
     C1: () => e3,
     C9: () => e2,
-    Dr: () => eb,
+    Dr: () => eT,
     FE: () => eO,
     FI: () => tt,
     Fs: () => e4,
@@ -45,7 +45,7 @@ n.d(t, {
     lQ: () => Z,
     o9: () => eR,
     oo: () => ev,
-    pO: () => eT,
+    pO: () => eb,
     q6: () => Y,
     q8: () => eY,
     si: () => ej,
@@ -89,8 +89,8 @@ var h = n(572004),
     v = n(49012),
     y = n(960048),
     I = n(617136),
-    b = n(272008),
-    T = n(569984),
+    T = n(272008),
+    b = n(569984),
     S = n(497505),
     A = n(75137),
     N = n(566078),
@@ -407,11 +407,11 @@ function eI(e) {
     let { quest: t } = e;
     return ey(t.config);
 }
-function eb(e) {
+function eT(e) {
     let { quest: t } = e;
     return t.config.taskConfig.type === c.L.FIRST_PARTY && null != t.config.taskConfig.tasks[s.X.STREAM_ON_DESKTOP];
 }
-function eT(e) {
+function eb(e) {
     return e.config.taskConfig.type === c.L.FIRST_PARTY && null != e.config.taskConfig.tasks[s.X.PLAY_ACTIVITY];
 }
 function eS(e) {
@@ -422,7 +422,7 @@ function eA(e, t) {
 }
 function eN(e) {
     let t = N.r.build(e.config).application.id;
-    return eT(e) && t === R.Ts;
+    return eb(e) && t === R.Ts;
 }
 function eC(e, t) {
     return N.r.build(e.config).features.has(t);
@@ -460,7 +460,7 @@ let eD = (e, t) => {
             (0, h.JG)(er(e));
     },
     ex = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
-    eL = (e) => ez(e) || T.Z.isProgressingOnDesktop(e.id),
+    eL = (e) => ez(e) || b.Z.isProgressingOnDesktop(e.id),
     eP = (e, t) => {
         var n, i, a, s;
         let o = null === (s = e.userStatus) || void 0 === s ? void 0 : null === (a = s.progress) || void 0 === a ? void 0 : null === (i = a[t.eventName]) || void 0 === i ? void 0 : null === (n = i.heartbeat) || void 0 === n ? void 0 : n.lastBeatAt;
@@ -473,7 +473,7 @@ let eD = (e, t) => {
         let o = null === (i = e.userStatus) || void 0 === i ? void 0 : null === (n = i.progress) || void 0 === n ? void 0 : n[t.eventName],
             l = null !== (s = null !== (a = null == o ? void 0 : o.value) && void 0 !== a ? a : null === (r = e.userStatus) || void 0 === r ? void 0 : r.streamProgressSeconds) && void 0 !== s ? s : 0;
         if (eY(e)) {
-            let n = T.Z.getOptimisticProgress(e.id, t.eventName);
+            let n = b.Z.getOptimisticProgress(e.id, t.eventName);
             return null == n || n < l ? l : n;
         }
         return l + eP(e, t);
@@ -553,7 +553,7 @@ let eD = (e, t) => {
                         quest: e,
                         taskType: s.X.PLAY_ON_DESKTOP
                     })
-                  : eT(e)
+                  : eb(e)
                     ? eU({
                           quest: e,
                           taskType: s.X.PLAY_ACTIVITY
@@ -686,7 +686,7 @@ function e4(e) {
           });
 }
 function e6(e) {
-    let t = eI({ quest: e }) || eb({ quest: e }),
+    let t = eI({ quest: e }) || eT({ quest: e }),
         n = eH(e),
         i = [];
     return t && i.push(R.cd.DESKTOP), n && i.push(R.cd.CONSOLE), i;
@@ -718,12 +718,12 @@ function e9(e) {
 }
 function te(e) {
     let t = eY(e),
-        n = eT(e);
+        n = eb(e);
     return t || n;
 }
 function tt(e, t) {
     var n, i;
-    !j(e) && (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && (null === (i = e.userStatus) || void 0 === i ? void 0 : i.completedAt) == null && (0, b.cT)(e.id, t);
+    !j(e) && (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && (null === (i = e.userStatus) || void 0 === i ? void 0 : i.completedAt) == null && (0, T.cT)(e.id, t);
 }
 function tn(e) {
     return {

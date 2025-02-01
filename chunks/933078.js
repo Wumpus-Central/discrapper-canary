@@ -1,10 +1,10 @@
 e.exports = {
-    questionContainer: 'questionContainer_b007eb',
-    questionTitle: 'questionTitle_b007eb',
-    requirementContainer: 'requirementContainer_b007eb',
-    requirementIcon: 'requirementIcon_b007eb',
-    requirementText: 'requirementText_b007eb',
-    requirementSuccess: 'requirementSuccess_b007eb',
-    requirementFailure: 'requirementFailure_b007eb',
-    footnote: 'footnote_b007eb'
+    questionContainer: 'questionContainer__0a749',
+    questionTitle: 'questionTitle__0a749',
+    requirementContainer: 'requirementContainer__0a749',
+    requirementIcon: 'requirementIcon__0a749',
+    requirementText: 'requirementText__0a749',
+    requirementSuccess: 'requirementSuccess__0a749',
+    requirementFailure: 'requirementFailure__0a749',
+    footnote: 'footnote__0a749'
 };

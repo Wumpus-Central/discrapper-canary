@@ -1,6 +1,6 @@
 e.exports = {
-    channel: 'channel_d09ffd',
-    collapseButton: 'collapseButton_d09ffd',
-    markReadButton: 'markReadButton_d09ffd',
-    collapsed: 'collapsed_d09ffd'
+    channel: 'channel__427f0',
+    collapseButton: 'collapseButton__427f0',
+    markReadButton: 'markReadButton__427f0',
+    collapsed: 'collapsed__427f0'
 };

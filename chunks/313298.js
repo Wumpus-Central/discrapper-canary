@@ -1,97 +1,97 @@
-var i = r(47120);
-var a = r(570140),
-    o = r(147913),
-    s = r(650774),
-    l = r(709054),
-    u = r(893966);
-function c(e, n, r) {
+n.d(t, { Z: () => N }), n(47120);
+var i = n(570140),
+    r = n(147913),
+    a = n(650774),
+    s = n(709054),
+    o = n(893966);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let d = 75000,
-    f = 10,
-    p = 5000,
-    h = 2,
+let u = 75000,
+    c = 10,
+    d = 5000,
+    f = 2,
     _ = 2000,
-    m = 10000;
-function g(e) {
-    var n;
-    return (null !== (n = s.Z.getMemberCount(e)) && void 0 !== n ? n : 0) >= d ? f : h;
+    p = 10000;
+function h(e) {
+    var t;
+    return (null !== (t = a.Z.getMemberCount(e)) && void 0 !== t ? t : 0) >= u ? c : f;
 }
-function E(e) {
-    var n;
-    return (null !== (n = s.Z.getMemberCount(e)) && void 0 !== n ? n : 0) >= d ? p : _;
+function m(e) {
+    var t;
+    return (null !== (t = a.Z.getMemberCount(e)) && void 0 !== t ? t : 0) >= u ? d : _;
 }
-let v = {},
-    y = {},
-    b = null;
-function I() {
-    if (null == b)
-        b = setInterval(() => {
-            l.default.forEachKey(v, (e) => {
-                A(e) && S(e);
+let g = {},
+    E = {},
+    v = null;
+function y() {
+    null == v &&
+        (v = setInterval(() => {
+            s.default.forEachKey(g, (e) => {
+                b(e) && T(e);
             });
-        }, m);
+        }, p));
 }
-async function T(e, n) {
-    null == v[e] && (v[e] = new Set()), v[e].add(n), null == y[e] && (y[e] = Date.now()), A(e) && (await S(e));
+async function I(e, t) {
+    null == g[e] && (g[e] = new Set()), g[e].add(t), null == E[e] && (E[e] = Date.now()), b(e) && (await T(e));
 }
-function S(e) {
-    if (null == v[e]) return;
-    let n = Array.from(v[e]);
-    (v[e] = new Set()),
-        (y[e] = Date.now()),
+function T(e) {
+    if (null == g[e]) return;
+    let t = Array.from(g[e]);
+    (g[e] = new Set()),
+        (E[e] = Date.now()),
         requestAnimationFrame(async () => {
-            await a.Z.dispatch({
+            await i.Z.dispatch({
                 type: 'MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH',
                 guildId: e,
-                userIds: n
+                userIds: t
             });
         });
 }
-function A(e) {
-    let n = v[e];
-    if (null == n) return !1;
-    let r = n.size >= g(e),
-        i = y[e];
-    if (r) return !0;
+function b(e) {
+    let t = g[e];
+    if (null == t) return !1;
+    let n = t.size >= h(e),
+        i = E[e];
+    if (n) return !0;
     if (null == i) return !1;
-    let a = Date.now() - i;
-    return null != i && a >= E(e);
+    let r = Date.now() - i;
+    return null != i && r >= m(e);
 }
-function C(e) {
-    (v[e] = new Set()), (y[e] = null);
+function S(e) {
+    (g[e] = new Set()), (E[e] = null);
 }
-class N extends o.Z {
+class A extends r.Z {
     handleInitialize() {
-        null == b && I();
+        null == v && y();
     }
-    handleGuildMemberUpdate(e, n) {
-        if (!!u.Z.isInitialized(e)) return T(e, n);
+    handleGuildMemberUpdate(e, t) {
+        if (o.Z.isInitialized(e)) return I(e, t);
     }
-    handleGuildMemberRemove(e, n) {
-        if (!!u.Z.isInitialized(e)) return T(e, n);
+    handleGuildMemberRemove(e, t) {
+        if (o.Z.isInitialized(e)) return I(e, t);
     }
     handleGuildDelete(e) {
-        let n = e.guild.id;
-        if (!!u.Z.isInitialized(n)) C(n);
+        let t = e.guild.id;
+        o.Z.isInitialized(t) && S(t);
     }
     handleGuildMemberSearchSuccess(e) {
-        let { guildId: n } = e;
-        if (!!u.Z.isInitialized(n)) C(n);
+        let { guildId: t } = e;
+        o.Z.isInitialized(t) && S(t);
     }
     constructor(...e) {
         super(...e),
-            c(this, 'actions', {
+            l(this, 'actions', {
                 INITIALIZE_MEMBER_SAFETY_STORE: () => this.handleInitialize(),
                 GUILD_MEMBER_ADD: (e) => this.handleGuildMemberUpdate(e.guildId, e.user.id),
                 GUILD_MEMBER_UPDATE: (e) => this.handleGuildMemberUpdate(e.guildId, e.user.id),
@@ -100,4 +100,4 @@ class N extends o.Z {
             });
     }
 }
-n.Z = new N();
+let N = new A();

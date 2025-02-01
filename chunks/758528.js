@@ -1,4 +1,4 @@
 e.exports = {
-    OSSection: 'OSSection_ba3425',
-    purchaseUnitOperatingSystem: 'purchaseUnitOperatingSystem_ba3425'
+    OSSection: 'OSSection_f28827',
+    purchaseUnitOperatingSystem: 'purchaseUnitOperatingSystem_f28827'
 };

@@ -1,13 +1,13 @@
-var i = r(805100),
-    a = r(580897);
-function o(e, n, r, o) {
-    var s = !r;
-    r || (r = {});
-    for (var l = -1, u = n.length; ++l < u; ) {
-        var c = n[l],
-            d = o ? o(r[c], e[c], c, r, e) : void 0;
-        void 0 === d && (d = e[c]), s ? a(r, c, d) : i(r, c, d);
+var i = n(805100),
+    r = n(580897);
+function a(e, t, n, a) {
+    var s = !n;
+    n || (n = {});
+    for (var o = -1, l = t.length; ++o < l; ) {
+        var u = t[o],
+            c = a ? a(n[u], e[u], u, n, e) : void 0;
+        void 0 === c && (c = e[u]), s ? r(n, u, c) : i(n, u, c);
     }
-    return r;
+    return n;
 }
-e.exports = o;
+e.exports = a;

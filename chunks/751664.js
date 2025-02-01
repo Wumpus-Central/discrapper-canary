@@ -1,9 +1,9 @@
-e.exports = {
-    container: 'container_fd8e3e',
-    content: 'content_fd8e3e',
-    avatarBackground: 'avatarBackground_fd8e3e',
-    avatar: 'avatar_fd8e3e',
-    rect: 'rect_fd8e3e',
-    bottomOverlay: 'bottomOverlay_fd8e3e',
-    bodyText: 'bodyText_fd8e3e'
+a.exports = {
+    container: 'container__71af4',
+    content: 'content__71af4',
+    avatarBackground: 'avatarBackground__71af4',
+    avatar: 'avatar__71af4',
+    rect: 'rect__71af4',
+    bottomOverlay: 'bottomOverlay__71af4',
+    bodyText: 'bodyText__71af4'
 };

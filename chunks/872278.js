@@ -1,11 +1,11 @@
 e.exports = {
-    auditLogItem: 'auditLogItem_d748bc',
-    auditLogItemTitleContainer: 'auditLogItemTitleContainer_d748bc',
-    auditLogItemTitle: 'auditLogItemTitle_d748bc',
-    username: 'username_d748bc',
-    auditLogItemDate: 'auditLogItemDate_d748bc',
-    auditLogReason: 'auditLogReason_d748bc',
-    auditLogSecondaryContainer: 'auditLogSecondaryContainer_d748bc',
-    auditLogSecondary: 'auditLogSecondary_d748bc',
-    auditLogExpandedChangeDetails: 'auditLogExpandedChangeDetails_d748bc'
+    auditLogItem: 'auditLogItem_b2f52f',
+    auditLogItemTitleContainer: 'auditLogItemTitleContainer_b2f52f',
+    auditLogItemTitle: 'auditLogItemTitle_b2f52f',
+    username: 'username_b2f52f',
+    auditLogItemDate: 'auditLogItemDate_b2f52f',
+    auditLogReason: 'auditLogReason_b2f52f',
+    auditLogSecondaryContainer: 'auditLogSecondaryContainer_b2f52f',
+    auditLogSecondary: 'auditLogSecondary_b2f52f',
+    auditLogExpandedChangeDetails: 'auditLogExpandedChangeDetails_b2f52f'
 };

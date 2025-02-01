@@ -1,14 +1,14 @@
 e.exports = {
-    panel: 'panel_bf1a22',
-    body: 'body_bf1a22',
-    gameWrapper: 'gameWrapper_bf1a22',
-    liveIndicator: 'liveIndicator_bf1a22',
-    gameIcon: 'gameIcon_bf1a22',
-    info: 'info_bf1a22',
-    sparkleContainer: 'sparkleContainer_bf1a22',
-    sparkles: 'sparkles_bf1a22',
-    activityName: 'activityName_bf1a22',
-    channel: 'channel_bf1a22',
-    perksDemoContainer: 'perksDemoContainer_bf1a22',
-    perksDemoText: 'perksDemoText_bf1a22'
+    panel: 'panel__5dec7',
+    body: 'body__5dec7',
+    gameWrapper: 'gameWrapper__5dec7',
+    liveIndicator: 'liveIndicator__5dec7',
+    gameIcon: 'gameIcon__5dec7',
+    info: 'info__5dec7',
+    sparkleContainer: 'sparkleContainer__5dec7',
+    sparkles: 'sparkles__5dec7',
+    activityName: 'activityName__5dec7',
+    channel: 'channel__5dec7',
+    perksDemoContainer: 'perksDemoContainer__5dec7',
+    perksDemoText: 'perksDemoText__5dec7'
 };

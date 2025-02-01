@@ -1,7 +1,7 @@
 e.exports = {
-    root: 'root_ea9cce',
-    sprite: 'sprite_ea9cce',
-    participant: 'participant_ea9cce',
-    transition: 'transition_ea9cce',
-    spriteWrapper: 'spriteWrapper_ea9cce'
+    root: 'root_c8dbe9',
+    sprite: 'sprite_c8dbe9',
+    participant: 'participant_c8dbe9',
+    transition: 'transition_c8dbe9',
+    spriteWrapper: 'spriteWrapper_c8dbe9'
 };

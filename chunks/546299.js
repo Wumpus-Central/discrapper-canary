@@ -86,10 +86,10 @@ function y(e, t, n, i) {
 function I(e, t, n, i) {
     return (((t + i) >>> 0 < t ? 1 : 0) + e + n) >>> 0;
 }
-function b(e, t, n, i) {
+function T(e, t, n, i) {
     return (t + i) >>> 0;
 }
-function T(e, t, n, i, r, a, s, o) {
+function b(e, t, n, i, r, a, s, o) {
     var l,
         u = t;
     return (e + n + r + s + (l = 0 + ((u = (u + i) >>> 0) < t ? 1 : 0) + ((u = (u + a) >>> 0) < a ? 1 : 0) + ((u = (u + o) >>> 0) < o ? 1 : 0))) >>> 0;
@@ -117,4 +117,4 @@ function O(e, t, n) {
 function D(e, t, n) {
     return ((e << (32 - n)) | (t >>> n)) >>> 0;
 }
-(t.inherits = r), (t.toArray = s), (t.toHex = o), (t.htonl = l), (t.toHex32 = u), (t.zero2 = c), (t.zero8 = d), (t.join32 = f), (t.split32 = _), (t.rotr32 = p), (t.rotl32 = h), (t.sum32 = m), (t.sum32_3 = g), (t.sum32_4 = E), (t.sum32_5 = v), (t.sum64 = y), (t.sum64_hi = I), (t.sum64_lo = b), (t.sum64_4_hi = T), (t.sum64_4_lo = S), (t.sum64_5_hi = A), (t.sum64_5_lo = N), (t.rotr64_hi = C), (t.rotr64_lo = R), (t.shr64_hi = O), (t.shr64_lo = D);
+(t.inherits = r), (t.toArray = s), (t.toHex = o), (t.htonl = l), (t.toHex32 = u), (t.zero2 = c), (t.zero8 = d), (t.join32 = f), (t.split32 = _), (t.rotr32 = p), (t.rotl32 = h), (t.sum32 = m), (t.sum32_3 = g), (t.sum32_4 = E), (t.sum32_5 = v), (t.sum64 = y), (t.sum64_hi = I), (t.sum64_lo = T), (t.sum64_4_hi = b), (t.sum64_4_lo = S), (t.sum64_5_hi = A), (t.sum64_5_lo = N), (t.rotr64_hi = C), (t.rotr64_lo = R), (t.shr64_hi = O), (t.shr64_lo = D);

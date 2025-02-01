@@ -1,14 +1,14 @@
 e.exports = {
-    title: 'title_ab500b',
-    container: 'container_ab500b',
-    activityRow: 'activityRow_ab500b',
-    activitySettings: 'activitySettings_ab500b',
-    connectionIcon: 'connectionIcon_ab500b',
-    divider: 'divider_ab500b',
-    visibilitySwitch: 'visibilitySwitch_ab500b',
-    additionalDetailsSwitch: 'additionalDetailsSwitch_ab500b',
-    metadataContainer: 'metadataContainer_ab500b',
-    metadataItem: 'metadataItem_ab500b',
-    metadataRefreshButton: 'metadataRefreshButton_ab500b',
-    dot: 'dot_ab500b'
+    title: 'title__9a52c',
+    container: 'container__9a52c',
+    activityRow: 'activityRow__9a52c',
+    activitySettings: 'activitySettings__9a52c',
+    connectionIcon: 'connectionIcon__9a52c',
+    divider: 'divider__9a52c',
+    visibilitySwitch: 'visibilitySwitch__9a52c',
+    additionalDetailsSwitch: 'additionalDetailsSwitch__9a52c',
+    metadataContainer: 'metadataContainer__9a52c',
+    metadataItem: 'metadataItem__9a52c',
+    metadataRefreshButton: 'metadataRefreshButton__9a52c',
+    dot: 'dot__9a52c'
 };

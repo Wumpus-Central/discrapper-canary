@@ -1,4 +1,4 @@
-e.exports = function (e, n, r) {
+e.exports = function (e, t, n) {
     var i = this;
-    return !r && (r = i.getReverseMap()[e] ? 'keydown' : 'keypress'), 'keypress' === r && n.length && (r = 'keydown'), r;
+    return n || (n = i.getReverseMap()[e] ? 'keydown' : 'keypress'), 'keypress' === n && t.length && (n = 'keydown'), n;
 };

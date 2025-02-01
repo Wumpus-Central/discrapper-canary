@@ -1,11 +1,11 @@
-function n(e) {
-    let n = 'true false yes no null',
-        r = "[\\w#;/?:@&=+$,.~*'()[\\]]+",
+function t(e) {
+    let t = 'true false yes no null',
+        n = "[\\w#;/?:@&=+$,.~*'()[\\]]+",
         i = {
             className: 'attr',
             variants: [{ begin: /[\w*@][\w*@ :()\./-]*:(?=[ \t]|$)/ }, { begin: /"[\w*@][\w*@ :()\./-]*":(?=[ \t]|$)/ }, { begin: /'[\w*@][\w*@ :()\./-]*':(?=[ \t]|$)/ }]
         },
-        a = {
+        r = {
             className: 'template-variable',
             variants: [
                 {
@@ -18,7 +18,7 @@ function n(e) {
                 }
             ]
         },
-        o = {
+        a = {
             className: 'string',
             relevance: 0,
             begin: /'/,
@@ -41,9 +41,9 @@ function n(e) {
                 },
                 { begin: /\S+/ }
             ],
-            contains: [e.BACKSLASH_ESCAPE, a]
+            contains: [e.BACKSLASH_ESCAPE, r]
         },
-        l = e.inherit(s, {
+        o = e.inherit(s, {
             variants: [
                 {
                     begin: /'/,
@@ -62,32 +62,32 @@ function n(e) {
                 { begin: /[^\s,{}[\]]+/ }
             ]
         }),
-        u = {
+        l = {
             className: 'number',
             begin: '\\b[0-9]{4}(-[0-9][0-9]){0,2}([Tt \\t][0-9][0-9]?(:[0-9][0-9]){2})?(\\.[0-9]*)?([ \\t])*(Z|[-+][0-9][0-9]?(:[0-9][0-9])?)?\\b'
         },
-        c = {
+        u = {
             end: ',',
             endsWithParent: !0,
             excludeEnd: !0,
-            keywords: n,
+            keywords: t,
+            relevance: 0
+        },
+        c = {
+            begin: /\{/,
+            end: /\}/,
+            contains: [u],
+            illegal: '\\n',
             relevance: 0
         },
         d = {
-            begin: /\{/,
-            end: /\}/,
-            contains: [c],
-            illegal: '\\n',
-            relevance: 0
-        },
-        f = {
             begin: '\\[',
             end: '\\]',
-            contains: [c],
+            contains: [u],
             illegal: '\\n',
             relevance: 0
         },
-        p = [
+        f = [
             i,
             {
                 className: 'meta',
@@ -108,19 +108,19 @@ function n(e) {
             },
             {
                 className: 'type',
-                begin: '!\\w+!' + r
+                begin: '!\\w+!' + n
             },
             {
                 className: 'type',
-                begin: '!<' + r + '>'
+                begin: '!<' + n + '>'
             },
             {
                 className: 'type',
-                begin: '!' + r
+                begin: '!' + n
             },
             {
                 className: 'type',
-                begin: '!!' + r
+                begin: '!!' + n
             },
             {
                 className: 'meta',
@@ -137,31 +137,31 @@ function n(e) {
             },
             e.HASH_COMMENT_MODE,
             {
-                beginKeywords: n,
-                keywords: { literal: n }
+                beginKeywords: t,
+                keywords: { literal: t }
             },
-            u,
+            l,
             {
                 className: 'number',
                 begin: e.C_NUMBER_RE + '\\b',
                 relevance: 0
             },
+            c,
             d,
-            f,
-            o,
+            a,
             s
         ],
-        h = [...p];
+        _ = [...f];
     return (
-        h.pop(),
-        h.push(l),
-        (c.contains = h),
+        _.pop(),
+        _.push(o),
+        (u.contains = _),
         {
             name: 'YAML',
             case_insensitive: !0,
             aliases: ['yml'],
-            contains: p
+            contains: f
         }
     );
 }
-e.exports = n;
+e.exports = t;

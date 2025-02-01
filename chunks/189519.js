@@ -1,4 +1,4 @@
 e.exports = {
-    peopleListItem: 'peopleListItem_d51464',
-    active: 'active_d51464'
+    peopleListItem: 'peopleListItem_cc6179',
+    active: 'active_cc6179'
 };

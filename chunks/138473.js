@@ -1,39 +1,39 @@
-Object.defineProperty(n, '__esModule', { value: !0 }), (n.Saturation = void 0);
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.Saturation = void 0);
 var i = (function () {
-        function e(e, n) {
-            for (var r = 0; r < n.length; r++) {
-                var i = n[r];
+        function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var i = t[n];
                 (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (n, r, i) {
-            return r && e(n.prototype, r), i && e(n, i), n;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })(),
-    a = r(192379),
-    o = d(a),
-    s = d(r(723184)),
-    l = d(r(123763)),
-    u = c(r(733244));
-function c(e) {
+    r = n(192379),
+    a = c(r),
+    s = c(n(723184)),
+    o = c(n(123763)),
+    l = u(n(733244));
+function u(e) {
     if (e && e.__esModule) return e;
-    var n = {};
-    if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
-    return (n.default = e), n;
+    var t = {};
+    if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+    return (t.default = e), t;
 }
-function d(e) {
+function c(e) {
     return e && e.__esModule ? e : { default: e };
 }
-function f(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function d(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function p(e, n) {
+function f(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function h(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function _(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -41,33 +41,33 @@ function h(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var _ = (n.Saturation = (function (e) {
-    function n(e) {
-        f(this, n);
-        var r = p(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this, e));
+var p = (t.Saturation = (function (e) {
+    function t(e) {
+        d(this, t);
+        var n = f(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
         return (
-            (r.handleChange = function (e) {
-                'function' == typeof r.props.onChange && r.throttle(r.props.onChange, u.calculateChange(e, r.props.hsl, r.container), e);
+            (n.handleChange = function (e) {
+                'function' == typeof n.props.onChange && n.throttle(n.props.onChange, l.calculateChange(e, n.props.hsl, n.container), e);
             }),
-            (r.handleMouseDown = function (e) {
-                r.handleChange(e);
-                var n = r.getContainerRenderWindow();
-                n.addEventListener('mousemove', r.handleChange), n.addEventListener('mouseup', r.handleMouseUp);
+            (n.handleMouseDown = function (e) {
+                n.handleChange(e);
+                var t = n.getContainerRenderWindow();
+                t.addEventListener('mousemove', n.handleChange), t.addEventListener('mouseup', n.handleMouseUp);
             }),
-            (r.handleMouseUp = function () {
-                r.unbindEventListeners();
+            (n.handleMouseUp = function () {
+                n.unbindEventListeners();
             }),
-            (r.throttle = (0, l.default)(function (e, n, r) {
-                e(n, r);
+            (n.throttle = (0, o.default)(function (e, t, n) {
+                e(t, n);
             }, 50)),
-            r
+            n
         );
     }
     return (
-        h(n, e),
-        i(n, [
+        _(t, e),
+        i(t, [
             {
                 key: 'componentWillUnmount',
                 value: function () {
@@ -77,8 +77,8 @@ var _ = (n.Saturation = (function (e) {
             {
                 key: 'getContainerRenderWindow',
                 value: function () {
-                    for (var e = this.container, n = window; !n.document.contains(e) && n.parent !== n; ) n = n.parent;
-                    return n;
+                    for (var e = this.container, t = window; !t.document.contains(e) && t.parent !== t; ) t = t.parent;
+                    return t;
                 }
             },
             {
@@ -92,13 +92,13 @@ var _ = (n.Saturation = (function (e) {
                 key: 'render',
                 value: function () {
                     var e = this,
-                        n = this.props.style || {},
-                        r = n.color,
-                        i = n.white,
-                        a = n.black,
-                        l = n.pointer,
-                        u = n.circle,
-                        c = (0, s.default)(
+                        t = this.props.style || {},
+                        n = t.color,
+                        i = t.white,
+                        r = t.black,
+                        o = t.pointer,
+                        l = t.circle,
+                        u = (0, s.default)(
                             {
                                 default: {
                                     color: {
@@ -131,44 +131,44 @@ var _ = (n.Saturation = (function (e) {
                                     }
                                 },
                                 custom: {
-                                    color: r,
+                                    color: n,
                                     white: i,
-                                    black: a,
-                                    pointer: l,
-                                    circle: u
+                                    black: r,
+                                    pointer: o,
+                                    circle: l
                                 }
                             },
                             { custom: !!this.props.style }
                         );
-                    return o.default.createElement(
+                    return a.default.createElement(
                         'div',
                         {
-                            style: c.color,
-                            ref: function (n) {
-                                return (e.container = n);
+                            style: u.color,
+                            ref: function (t) {
+                                return (e.container = t);
                             },
                             onMouseDown: this.handleMouseDown,
                             onTouchMove: this.handleChange,
                             onTouchStart: this.handleChange
                         },
-                        o.default.createElement('style', null, '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '),
-                        o.default.createElement(
+                        a.default.createElement('style', null, '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '),
+                        a.default.createElement(
                             'div',
                             {
-                                style: c.white,
+                                style: u.white,
                                 className: 'saturation-white'
                             },
-                            o.default.createElement('div', {
-                                style: c.black,
+                            a.default.createElement('div', {
+                                style: u.black,
                                 className: 'saturation-black'
                             }),
-                            o.default.createElement('div', { style: c.pointer }, this.props.pointer ? o.default.createElement(this.props.pointer, this.props) : o.default.createElement('div', { style: c.circle }))
+                            a.default.createElement('div', { style: u.pointer }, this.props.pointer ? a.default.createElement(this.props.pointer, this.props) : a.default.createElement('div', { style: u.circle }))
                         )
                     );
                 }
             }
         ]),
-        n
+        t
     );
-})(a.PureComponent || a.Component));
-n.default = _;
+})(r.PureComponent || r.Component));
+t.default = p;

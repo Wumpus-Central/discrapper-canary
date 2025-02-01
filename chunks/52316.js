@@ -1,8 +1,8 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             variants: [e.COMMENT('--', '$'), e.COMMENT(/\{-/, /-\}/, { contains: ['self'] })]
         },
-        r = {
+        n = {
             className: 'type',
             begin: "\\b[A-Z][\\w']*",
             relevance: 0
@@ -16,15 +16,15 @@ function n(e) {
                     className: 'type',
                     begin: '\\b[A-Z][\\w]*(\\((\\.\\.|,|\\w+)\\))?'
                 },
-                n
+                t
             ]
         },
-        a = {
+        r = {
             begin: /\{/,
             end: /\}/,
             contains: i.contains
         },
-        o = {
+        a = {
             className: 'string',
             begin: "'\\\\?.",
             end: "'",
@@ -38,42 +38,42 @@ function n(e) {
                 beginKeywords: 'port effect module',
                 end: 'exposing',
                 keywords: 'port effect module where command subscription exposing',
-                contains: [i, n],
+                contains: [i, t],
                 illegal: '\\W\\.|;'
             },
             {
                 begin: 'import',
                 end: '$',
                 keywords: 'import as exposing',
-                contains: [i, n],
+                contains: [i, t],
                 illegal: '\\W\\.|;'
             },
             {
                 begin: 'type',
                 end: '$',
                 keywords: 'type alias',
-                contains: [r, i, a, n]
+                contains: [n, i, r, t]
             },
             {
                 beginKeywords: 'infix infixl infixr',
                 end: '$',
-                contains: [e.C_NUMBER_MODE, n]
+                contains: [e.C_NUMBER_MODE, t]
             },
             {
                 begin: 'port',
                 end: '$',
                 keywords: 'port',
-                contains: [n]
+                contains: [t]
             },
-            o,
+            a,
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
-            r,
-            e.inherit(e.TITLE_MODE, { begin: "^[_a-z][\\w']*" }),
             n,
+            e.inherit(e.TITLE_MODE, { begin: "^[_a-z][\\w']*" }),
+            t,
             { begin: '->|<-' }
         ],
         illegal: /;/
     };
 }
-e.exports = n;
+e.exports = t;

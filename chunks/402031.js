@@ -1,9 +1,9 @@
 e.exports = {
-    emptyContainer: 'emptyContainer_f35d2c',
-    emptyInner: 'emptyInner_f35d2c',
-    image: 'image_f35d2c',
-    header: 'header_f35d2c',
-    upsellButton: 'upsellButton_f35d2c',
-    upsellContainer: 'upsellContainer_f35d2c',
-    upsellText: 'upsellText_f35d2c'
+    emptyContainer: 'emptyContainer__4a7f0',
+    emptyInner: 'emptyInner__4a7f0',
+    image: 'image__4a7f0',
+    header: 'header__4a7f0',
+    upsellButton: 'upsellButton__4a7f0',
+    upsellContainer: 'upsellContainer__4a7f0',
+    upsellText: 'upsellText__4a7f0'
 };

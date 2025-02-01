@@ -1,53 +1,53 @@
-var i = r(47120);
-var a = r(147913),
-    o = r(430824),
-    s = r(70956),
-    l = r(709054),
-    u = r(553385),
-    c = r(556178),
-    d = r(890477);
-function f(e, n, r) {
+n.d(t, { Z: () => _ }), n(47120);
+var i = n(147913),
+    r = n(430824),
+    a = n(70956),
+    s = n(709054),
+    o = n(553385),
+    l = n(556178),
+    u = n(890477);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let p = 0;
-class h extends a.Z {
+let d = 0;
+class f extends i.Z {
     constructor(...e) {
         super(...e),
-            f(this, 'actions', {
+            c(this, 'actions', {
                 POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
                 IDLE: () => this.handleIdleChange()
             }),
-            f(this, 'handleConnectionOpen', (e) => {
+            c(this, 'handleConnectionOpen', (e) => {
                 this._attemptDeadchatPrompt(), this._triggerGamingStatsSetupExperiment();
             }),
-            f(this, 'handleIdleChange', () => {
-                Date.now() - p > s.Z.Millis.HOUR && this._attemptDeadchatPrompt();
+            c(this, 'handleIdleChange', () => {
+                Date.now() - d > a.Z.Millis.HOUR && this._attemptDeadchatPrompt();
             }),
-            f(this, '_attemptDeadchatPrompt', () => {
-                let e = o.Z.getGuilds(),
-                    n = l.default.keys(e).filter(
+            c(this, '_attemptDeadchatPrompt', () => {
+                let e = r.Z.getGuilds(),
+                    t = s.default.keys(e).filter(
                         (e) =>
-                            d.Z.getCurrentConfig({
+                            u.Z.getCurrentConfig({
                                 guildId: e,
                                 location: 'manager'
                             }).triggerDeadchat
                     );
-                n.length > 0 && ((p = Date.now()), (0, u.N7)(n));
+                t.length > 0 && ((d = Date.now()), (0, o.N7)(t));
             }),
-            f(this, '_triggerGamingStatsSetupExperiment', () => {
-                let e = o.Z.getGuilds();
-                l.default.keys(e).forEach((e) => {
-                    c.g.trackExposure({
+            c(this, '_triggerGamingStatsSetupExperiment', () => {
+                let e = r.Z.getGuilds();
+                s.default.keys(e).forEach((e) => {
+                    l.g.trackExposure({
                         guildId: e,
                         location: 'manager'
                     });
@@ -55,4 +55,4 @@ class h extends a.Z {
             });
     }
 }
-n.Z = new h();
+let _ = new f();

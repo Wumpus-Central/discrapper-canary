@@ -1,7 +1,7 @@
-var i = r(67867),
-    a = r(228042),
-    o = r(730427),
-    s = r(146321).set;
+var i = n(67867),
+    r = n(228042),
+    a = n(730427),
+    s = n(146321).set;
 i(
     {
         target: 'Map',
@@ -12,15 +12,15 @@ i(
     },
     {
         merge: function (e) {
-            for (var n = a(this), r = arguments.length, i = 0; i < r; )
-                o(
+            for (var t = r(this), n = arguments.length, i = 0; i < n; )
+                a(
                     arguments[i++],
-                    function (e, r) {
-                        s(n, e, r);
+                    function (e, n) {
+                        s(t, e, n);
                     },
                     { AS_ENTRIES: !0 }
                 );
-            return n;
+            return t;
         }
     }
 );

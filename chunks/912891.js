@@ -1,6 +1,6 @@
 e.exports = {
-    paymentSourceRow: 'paymentSourceRow_edf4d6',
-    subText: 'subText_edf4d6',
-    footer: 'footer_edf4d6',
-    lockIcon: 'lockIcon_edf4d6'
+    paymentSourceRow: 'paymentSourceRow__0eeee',
+    subText: 'subText__0eeee',
+    footer: 'footer__0eeee',
+    lockIcon: 'lockIcon__0eeee'
 };

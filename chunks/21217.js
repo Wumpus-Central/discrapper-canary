@@ -1,5 +1,5 @@
-var i = r(587816);
-function a(e, n) {
-    (e.prototype = Object.create(n.prototype)), (e.prototype.constructor = e), i(e, n);
+var i = n(587816);
+function r(e, t) {
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), i(e, t);
 }
-(e.exports = a), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = r), (e.exports.__esModule = !0), (e.exports.default = e.exports);

@@ -1,10 +1,10 @@
-var i = r(67867),
-    a = r(476508),
-    o = r(228042),
-    s = r(146321),
-    l = r(292137),
-    u = s.Map,
-    c = s.set;
+var i = n(67867),
+    r = n(476508),
+    a = n(228042),
+    s = n(146321),
+    o = n(292137),
+    l = s.Map,
+    u = s.set;
 i(
     {
         target: 'Map',
@@ -14,12 +14,12 @@ i(
     },
     {
         filter: function (e) {
-            var n = o(this),
-                r = a(e, arguments.length > 1 ? arguments[1] : void 0),
-                i = new u();
+            var t = a(this),
+                n = r(e, arguments.length > 1 ? arguments[1] : void 0),
+                i = new l();
             return (
-                l(n, function (e, a) {
-                    r(e, a, n) && c(i, a, e);
+                o(t, function (e, r) {
+                    n(e, r, t) && u(i, r, e);
                 }),
                 i
             );

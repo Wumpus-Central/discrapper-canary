@@ -51,7 +51,7 @@ function I(e, t, n) {
     else if (!n.isRetry) return t(), !1;
     return !0;
 }
-function b(e, t, n, i, r) {
+function T(e, t, n, i, r) {
     var s, o;
     a.Z.dispatch({
         type: e,
@@ -64,7 +64,7 @@ function b(e, t, n, i, r) {
         reactionType: (null == r ? void 0 : r.burst) ? l.O.BURST : l.O.NORMAL
     });
 }
-function T(e) {
+function b(e) {
     let { channelId: t, messageId: n, emoji: i, userId: r, useTypeEndpoint: a = !1, type: s = l.O.NORMAL } = e,
         o = null != i.id ? ''.concat(i.name, ':').concat(i.id) : i.name;
     return null == r ? E.ANM.REACTIONS(t, n, o) : a ? E.ANM.REACTION_WITH_TYPE(t, n, o, r, s) : E.ANM.REACTION(t, n, o, r);
@@ -79,7 +79,7 @@ async function A(e) {
         c =
             u === l.O.VOTE
                 ? S(t, n, r)
-                : T({
+                : b({
                       channelId: t,
                       messageId: n,
                       emoji: r
@@ -122,14 +122,14 @@ async function N(e, t, n) {
     }
     let h = await x(n, f);
     return (
-        b('MESSAGE_REACTION_ADD', e, t, n, {
+        T('MESSAGE_REACTION_ADD', e, t, n, {
             burst: f,
             colors: h
         }),
         await u.Z.unarchiveThreadIfNecessary(e),
         i.tn
             .put({
-                url: T({
+                url: b({
                     channelId: e,
                     messageId: t,
                     emoji: n,
@@ -177,7 +177,7 @@ async function N(e, t, n) {
                             isRetry: !0
                         }),
                     { isRetry: p }
-                ) && (b('MESSAGE_REACTION_REMOVE', e, t, n, { burst: f }), f ? r.uv.announce(v.intl.formatToPlainString(v.t['fJeu8/'], { name: n.name })) : r.uv.announce(v.intl.formatToPlainString(v.t.UUn5V1, { name: n.name })));
+                ) && (T('MESSAGE_REACTION_REMOVE', e, t, n, { burst: f }), f ? r.uv.announce(v.intl.formatToPlainString(v.t['fJeu8/'], { name: n.name })) : r.uv.announce(v.intl.formatToPlainString(v.t.UUn5V1, { name: n.name })));
             })
     );
 }
@@ -222,14 +222,14 @@ async function D(e) {
     let { channelId: t, messageId: n, emoji: a, location: s = 'Message', userId: o, options: c } = e,
         d = null != c && !!c.burst,
         f = null != c && !!c.isRetry;
-    b('MESSAGE_REACTION_REMOVE', t, n, a, {
+    T('MESSAGE_REACTION_REMOVE', t, n, a, {
         userId: o,
         burst: d
     }),
         await u.Z.unarchiveThreadIfNecessary(t),
         i.tn
             .del({
-                url: T({
+                url: b({
                     channelId: t,
                     messageId: n,
                     emoji: a,
@@ -267,7 +267,7 @@ async function D(e) {
                     )
                 ) {
                     let e = await x(a, d);
-                    b('MESSAGE_REACTION_ADD', t, n, a, {
+                    T('MESSAGE_REACTION_ADD', t, n, a, {
                         userId: o,
                         burst: d,
                         colors: e

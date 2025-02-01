@@ -48,7 +48,7 @@ function I(e, t) {
     for (let [e, { flags: r }] of i) if ((!n || e !== h) && (r & t) === t) return !0;
     return !1;
 }
-function b(e, t, n) {
+function T(e, t, n) {
     var i, r;
     let a = E(e),
         s = a.get(t),
@@ -67,7 +67,7 @@ function b(e, t, n) {
     }
     return !0;
 }
-function T(e) {
+function b(e) {
     let { user: t, sessionId: n } = e;
     (h = t.id), (m = n), (g = null);
 }
@@ -84,7 +84,7 @@ function S(e) {
             ? l.Z.setCanHavePriority(n, !0)
             : (l.Z.setCanHavePriority(n, !1), (i &= ~f.Dg.PRIORITY));
     }
-    return b(t, n, i);
+    return T(t, n, i);
 }
 function A(e) {
     let { voiceStates: t } = e;
@@ -141,8 +141,8 @@ class N extends (i = r.ZP.Store) {
 }
 _(N, 'displayName', 'SpeakingStore');
 let C = new N(a.Z, {
-    CONNECTION_OPEN: T,
-    OVERLAY_INITIALIZE: T,
+    CONNECTION_OPEN: b,
+    OVERLAY_INITIALIZE: b,
     SPEAKING: S,
     VOICE_STATE_UPDATES: A
 });

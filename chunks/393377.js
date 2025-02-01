@@ -1,81 +1,81 @@
-Object.defineProperty(n, '__esModule', { value: !0 }), (n.Swatch = void 0);
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.Swatch = void 0);
 var i =
         Object.assign ||
         function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = arguments[n];
-                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         },
-    a = u(r(192379)),
-    o = u(r(723184)),
-    s = r(425980),
-    l = u(r(122024));
-function u(e) {
+    r = l(n(192379)),
+    a = l(n(723184)),
+    s = n(425980),
+    o = l(n(122024));
+function l(e) {
     return e && e.__esModule ? e : { default: e };
 }
-var c = 13,
-    d = (n.Swatch = function (e) {
-        var n = e.color,
-            r = e.style,
+var u = 13,
+    c = (t.Swatch = function (e) {
+        var t = e.color,
+            n = e.style,
             s = e.onClick,
-            u = void 0 === s ? function () {} : s,
-            d = e.onHover,
-            f = e.title,
-            p = void 0 === f ? n : f,
-            h = e.children,
-            _ = e.focus,
-            m = e.focusStyle,
-            g = void 0 === m ? {} : m,
-            E = 'transparent' === n,
-            v = (0, o.default)({
+            l = void 0 === s ? function () {} : s,
+            c = e.onHover,
+            d = e.title,
+            f = void 0 === d ? t : d,
+            _ = e.children,
+            p = e.focus,
+            h = e.focusStyle,
+            m = void 0 === h ? {} : h,
+            g = 'transparent' === t,
+            E = (0, a.default)({
                 default: {
                     swatch: i(
                         {
-                            background: n,
+                            background: t,
                             height: '100%',
                             width: '100%',
                             cursor: 'pointer',
                             position: 'relative',
                             outline: 'none'
                         },
-                        r,
-                        _ ? g : {}
+                        n,
+                        p ? m : {}
                     )
                 }
             }),
-            y = function (e) {
-                return u(n, e);
+            v = function (e) {
+                return l(t, e);
             },
-            b = function (e) {
-                return e.keyCode === c && u(n, e);
+            y = function (e) {
+                return e.keyCode === u && l(t, e);
             },
             I = function (e) {
-                return d(n, e);
+                return c(t, e);
             },
             T = {};
         return (
-            d && (T.onMouseOver = I),
-            a.default.createElement(
+            c && (T.onMouseOver = I),
+            r.default.createElement(
                 'div',
                 i(
                     {
-                        style: v.swatch,
-                        onClick: y,
-                        title: p,
+                        style: E.swatch,
+                        onClick: v,
+                        title: f,
                         tabIndex: 0,
-                        onKeyDown: b
+                        onKeyDown: y
                     },
                     T
                 ),
-                h,
-                E &&
-                    a.default.createElement(l.default, {
-                        borderRadius: v.swatch.borderRadius,
+                _,
+                g &&
+                    r.default.createElement(o.default, {
+                        borderRadius: E.swatch.borderRadius,
                         boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
                     })
             )
         );
     });
-n.default = (0, s.handleFocus)(d);
+t.default = (0, s.handleFocus)(c);

@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         name: 'SML (Standard ML)',
         aliases: ['ml'],
@@ -44,4 +44,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

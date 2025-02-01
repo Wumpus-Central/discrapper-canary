@@ -1,16 +1,16 @@
-function n(e) {
-    let n = '\\d(_|\\d)*',
-        r = '[eE][-+]?' + n,
-        i = n + '(\\.' + n + ')?(' + r + ')?',
-        a = '\\w+',
-        o = '\\b(' + (n + '#' + a + '(\\.' + a + ')?#(' + r + ')?') + '|' + i + ')',
+function t(e) {
+    let t = '\\d(_|\\d)*',
+        n = '[eE][-+]?' + t,
+        i = t + '(\\.' + t + ')?(' + n + ')?',
+        r = '\\w+',
+        a = '\\b(' + (t + '#' + r + '(\\.' + r + ')?#(' + n) + ')?|' + i + ')',
         s = '[A-Za-z](_?[A-Za-z0-9.])*',
-        l = '[]\\{\\}%#\'"',
-        u = e.COMMENT('--', '$'),
-        c = {
+        o = '[]\\{\\}%#\'"',
+        l = e.COMMENT('--', '$'),
+        u = {
             begin: '\\s+:\\s+',
             end: '\\s*(:=|;|\\)|=>|$)',
-            illegal: l,
+            illegal: o,
             contains: [
                 {
                     beginKeywords: 'loop for declare others',
@@ -36,7 +36,7 @@ function n(e) {
             literal: ['True', 'False']
         },
         contains: [
-            u,
+            l,
             {
                 className: 'string',
                 begin: /"/,
@@ -54,7 +54,7 @@ function n(e) {
             },
             {
                 className: 'number',
-                begin: o,
+                begin: a,
                 relevance: 0
             },
             {
@@ -68,7 +68,7 @@ function n(e) {
                 keywords: 'package body',
                 excludeBegin: !0,
                 excludeEnd: !0,
-                illegal: l
+                illegal: o
             },
             {
                 begin: '(\\b(with|overriding)\\s+)?\\b(function|procedure)\\s+',
@@ -76,16 +76,16 @@ function n(e) {
                 keywords: 'overriding function procedure with is renames return',
                 returnBegin: !0,
                 contains: [
-                    u,
+                    l,
                     {
                         className: 'title',
                         begin: '(\\bwith\\s+)?\\b(function|procedure)\\s+',
                         end: '(\\(|\\s+|$)',
                         excludeBegin: !0,
                         excludeEnd: !0,
-                        illegal: l
+                        illegal: o
                     },
-                    c,
+                    u,
                     {
                         className: 'type',
                         begin: '\\breturn\\s+',
@@ -94,7 +94,7 @@ function n(e) {
                         excludeBegin: !0,
                         excludeEnd: !0,
                         endsParent: !0,
-                        illegal: l
+                        illegal: o
                     }
                 ]
             },
@@ -104,10 +104,10 @@ function n(e) {
                 end: '\\s+',
                 keywords: 'type',
                 excludeBegin: !0,
-                illegal: l
+                illegal: o
             },
-            c
+            u
         ]
     };
 }
-e.exports = n;
+e.exports = t;

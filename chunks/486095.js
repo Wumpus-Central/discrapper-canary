@@ -1,21 +1,21 @@
-var i = r(96403),
-    a = r(338752),
-    o = r(342545),
-    s = r(463374),
-    l = i(''.charAt),
-    u = i(''.charCodeAt),
-    c = i(''.slice),
-    d = function (e) {
-        return function (n, r) {
+var i = n(96403),
+    r = n(338752),
+    a = n(342545),
+    s = n(463374),
+    o = i(''.charAt),
+    l = i(''.charCodeAt),
+    u = i(''.slice),
+    c = function (e) {
+        return function (t, n) {
             var i,
-                d,
-                f = o(s(n)),
-                p = a(r),
-                h = f.length;
-            return p < 0 || p >= h ? (e ? '' : void 0) : (i = u(f, p)) < 55296 || i > 56319 || p + 1 === h || (d = u(f, p + 1)) < 56320 || d > 57343 ? (e ? l(f, p) : i) : e ? c(f, p, p + 2) : ((i - 55296) << 10) + (d - 56320) + 65536;
+                c,
+                d = a(s(t)),
+                f = r(n),
+                _ = d.length;
+            return f < 0 || f >= _ ? (e ? '' : void 0) : (i = l(d, f)) < 55296 || i > 56319 || f + 1 === _ || (c = l(d, f + 1)) < 56320 || c > 57343 ? (e ? o(d, f) : i) : e ? u(d, f, f + 2) : ((i - 55296) << 10) + (c - 56320) + 65536;
         };
     };
 e.exports = {
-    codeAt: d(!1),
-    charAt: d(!0)
+    codeAt: c(!1),
+    charAt: c(!0)
 };

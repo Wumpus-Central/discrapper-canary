@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_c3d7aa',
-    formElement: 'formElement_c3d7aa'
+    container: 'container__95e9d',
+    formElement: 'formElement__95e9d'
 };

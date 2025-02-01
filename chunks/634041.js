@@ -1,88 +1,88 @@
+n.d(t, { Z: () => A }), n(724458);
 var i,
-    a = r(724458);
-var o = r(442837),
-    s = r(46973),
-    l = r(570140),
-    u = r(581883),
-    c = r(131951),
-    d = r(944486),
-    f = r(594174),
-    p = r(647177);
-function h(e, n, r) {
+    r = n(442837),
+    a = n(46973),
+    s = n(570140),
+    o = n(581883),
+    l = n(131951),
+    u = n(944486),
+    c = n(594174),
+    d = n(647177);
+function f(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
 let _ = !1,
-    m = null,
-    g = !1,
-    E = {};
-function v(e) {
-    let { assets: n } = e;
-    E = n.reduce(
-        (e, n) => ({
+    p = null,
+    h = !1,
+    m = {};
+function g(e) {
+    let { assets: t } = e;
+    m = t.reduce(
+        (e, t) => ({
             ...e,
-            [n.id]: n
+            [t.id]: t
         }),
         {}
     );
 }
-function y(e) {
-    let { videoFilterAsset: n } = e;
-    E = {
-        ...E,
-        [n.id]: n
+function E(e) {
+    let { videoFilterAsset: t } = e;
+    m = {
+        ...m,
+        [t.id]: t
     };
 }
-function b(e) {
-    let { videoFilterAsset: n } = e;
-    (E = { ...E }), delete E[n.id];
+function v(e) {
+    let { videoFilterAsset: t } = e;
+    (m = { ...m }), delete m[t.id];
+}
+function y(e) {
+    var t;
+    let n = c.default.getCurrentUser();
+    if (null == n) return !1;
+    let i = null != e ? e : (0, d.Gx)(null === (t = o.Z.settings.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, n.id);
+    return null != u.Z.getVoiceChannelId() && l.Z.isVideoEnabled() && null != i;
 }
 function I(e) {
-    var n;
-    let r = f.default.getCurrentUser();
-    if (null == r) return !1;
-    let i = null != e ? e : (0, p.Gx)(null === (n = u.Z.settings.voiceAndVideo) || void 0 === n ? void 0 : n.videoBackgroundFilterDesktop, r.id);
-    return null != d.Z.getVoiceChannelId() && c.Z.isVideoEnabled() && null != i;
+    let { backgroundOption: t } = e;
+    y(t) && (h = !0);
 }
 function T(e) {
-    let { backgroundOption: n } = e;
-    I(n) && (g = !0);
+    let { settings: t } = e;
+    a.TO.CAMERA_BACKGROUND_LIVE in t && (_ = !0);
 }
-function S(e) {
-    let { settings: n } = e;
-    s.TO.CAMERA_BACKGROUND_LIVE in n && (_ = !0);
+function b() {
+    p !== u.Z.getVoiceChannelId() && (h = !1), y() && (h = !0), (p = u.Z.getVoiceChannelId());
 }
-function A() {
-    m !== d.Z.getVoiceChannelId() && (g = !1), I() && (g = !0), (m = d.Z.getVoiceChannelId());
-}
-class C extends (i = o.ZP.Store) {
+class S extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(u.Z, d.Z, c.Z), this.syncWith([d.Z, c.Z], A);
+        this.waitFor(o.Z, u.Z, l.Z), this.syncWith([u.Z, l.Z], b);
     }
     get videoFilterAssets() {
-        return E;
+        return m;
     }
     get hasBeenApplied() {
         return _;
     }
     get hasUsedBackgroundInCall() {
-        return g;
+        return h;
     }
 }
-h(C, 'displayName', 'VideoBackgroundStore'),
-    (n.Z = new C(l.Z, {
-        VIDEO_FILTER_ASSETS_FETCH_SUCCESS: v,
-        VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: y,
-        VIDEO_FILTER_ASSET_DELETE_SUCCESS: b,
-        VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: T,
-        MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: S
-    }));
+f(S, 'displayName', 'VideoBackgroundStore');
+let A = new S(s.Z, {
+    VIDEO_FILTER_ASSETS_FETCH_SUCCESS: g,
+    VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: E,
+    VIDEO_FILTER_ASSET_DELETE_SUCCESS: v,
+    VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: I,
+    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: T
+});

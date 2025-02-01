@@ -1,26 +1,26 @@
-var i = r(689118),
-    a = r(997290),
-    o = r(764900),
-    s = r(957578).Buffer,
-    l = r(877024),
-    u = r(335613),
-    c = r(315893),
-    d = s.alloc(128);
-function f(e, n) {
-    o.call(this, 'digest'), 'string' == typeof n && (n = s.from(n));
-    var r = 'sha512' === e || 'sha384' === e ? 128 : 64;
-    (this._alg = e), (this._key = n), n.length > r ? (n = ('rmd160' === e ? new u() : c(e)).update(n).digest()) : n.length < r && (n = s.concat([n, d], r));
-    for (var i = (this._ipad = s.allocUnsafe(r)), a = (this._opad = s.allocUnsafe(r)), l = 0; l < r; l++) (i[l] = 54 ^ n[l]), (a[l] = 92 ^ n[l]);
-    (this._hash = 'rmd160' === e ? new u() : c(e)), this._hash.update(i);
+var i = n(689118),
+    r = n(997290),
+    a = n(764900),
+    s = n(957578).Buffer,
+    o = n(877024),
+    l = n(335613),
+    u = n(315893),
+    c = s.alloc(128);
+function d(e, t) {
+    a.call(this, 'digest'), 'string' == typeof t && (t = s.from(t));
+    var n = 'sha512' === e || 'sha384' === e ? 128 : 64;
+    (this._alg = e), (this._key = t), t.length > n ? (t = ('rmd160' === e ? new l() : u(e)).update(t).digest()) : t.length < n && (t = s.concat([t, c], n));
+    for (var i = (this._ipad = s.allocUnsafe(n)), r = (this._opad = s.allocUnsafe(n)), o = 0; o < n; o++) (i[o] = 54 ^ t[o]), (r[o] = 92 ^ t[o]);
+    (this._hash = 'rmd160' === e ? new l() : u(e)), this._hash.update(i);
 }
-i(f, o),
-    (f.prototype._update = function (e) {
+i(d, a),
+    (d.prototype._update = function (e) {
         this._hash.update(e);
     }),
-    (f.prototype._final = function () {
+    (d.prototype._final = function () {
         var e = this._hash.digest();
-        return ('rmd160' === this._alg ? new u() : c(this._alg)).update(this._opad).update(e).digest();
+        return ('rmd160' === this._alg ? new l() : u(this._alg)).update(this._opad).update(e).digest();
     }),
-    (e.exports = function (e, n) {
-        return 'rmd160' === (e = e.toLowerCase()) || 'ripemd160' === e ? new f('rmd160', n) : 'md5' === e ? new a(l, n) : new f(e, n);
+    (e.exports = function (e, t) {
+        return 'rmd160' === (e = e.toLowerCase()) || 'ripemd160' === e ? new d('rmd160', t) : 'md5' === e ? new r(o, t) : new d(e, t);
     });

@@ -1,5 +1,5 @@
 e.exports = {
-    floatingNitroUpsell: 'floatingNitroUpsell_bc425c',
-    floatingNitroButton: 'floatingNitroButton_bc425c',
-    floatingNitroButtonInner: 'floatingNitroButtonInner_bc425c'
+    floatingNitroUpsell: 'floatingNitroUpsell__39749',
+    floatingNitroButton: 'floatingNitroButton__39749',
+    floatingNitroButtonInner: 'floatingNitroButtonInner__39749'
 };

@@ -1,5 +1,5 @@
-let i = r(689118);
-function a(e) {
+let i = n(689118);
+function r(e) {
     this._reporterState = {
         obj: null,
         path: [],
@@ -7,57 +7,57 @@ function a(e) {
         errors: []
     };
 }
-function o(e, n) {
-    (this.path = e), this.rethrow(n);
+function a(e, t) {
+    (this.path = e), this.rethrow(t);
 }
-(n.Reporter = a),
-    (a.prototype.isError = function (e) {
-        return e instanceof o;
+(t.Reporter = r),
+    (r.prototype.isError = function (e) {
+        return e instanceof a;
     }),
-    (a.prototype.save = function () {
+    (r.prototype.save = function () {
         let e = this._reporterState;
         return {
             obj: e.obj,
             pathLen: e.path.length
         };
     }),
-    (a.prototype.restore = function (e) {
-        let n = this._reporterState;
-        (n.obj = e.obj), (n.path = n.path.slice(0, e.pathLen));
+    (r.prototype.restore = function (e) {
+        let t = this._reporterState;
+        (t.obj = e.obj), (t.path = t.path.slice(0, e.pathLen));
     }),
-    (a.prototype.enterKey = function (e) {
+    (r.prototype.enterKey = function (e) {
         return this._reporterState.path.push(e);
     }),
-    (a.prototype.exitKey = function (e) {
-        let n = this._reporterState;
-        n.path = n.path.slice(0, e - 1);
+    (r.prototype.exitKey = function (e) {
+        let t = this._reporterState;
+        t.path = t.path.slice(0, e - 1);
     }),
-    (a.prototype.leaveKey = function (e, n, r) {
+    (r.prototype.leaveKey = function (e, t, n) {
         let i = this._reporterState;
-        this.exitKey(e), null !== i.obj && (i.obj[n] = r);
+        this.exitKey(e), null !== i.obj && (i.obj[t] = n);
     }),
-    (a.prototype.path = function () {
+    (r.prototype.path = function () {
         return this._reporterState.path.join('/');
     }),
-    (a.prototype.enterObject = function () {
+    (r.prototype.enterObject = function () {
         let e = this._reporterState,
-            n = e.obj;
-        return (e.obj = {}), n;
+            t = e.obj;
+        return (e.obj = {}), t;
     }),
-    (a.prototype.leaveObject = function (e) {
+    (r.prototype.leaveObject = function (e) {
+        let t = this._reporterState,
+            n = t.obj;
+        return (t.obj = e), n;
+    }),
+    (r.prototype.error = function (e) {
+        let t;
         let n = this._reporterState,
-            r = n.obj;
-        return (n.obj = e), r;
-    }),
-    (a.prototype.error = function (e) {
-        let n;
-        let r = this._reporterState,
-            i = e instanceof o;
+            i = e instanceof a;
         if (
-            ((n = i
+            ((t = i
                 ? e
-                : new o(
-                      r.path
+                : new a(
+                      n.path
                           .map(function (e) {
                               return '[' + JSON.stringify(e) + ']';
                           })
@@ -65,23 +65,23 @@ function o(e, n) {
                       e.message || e,
                       e.stack
                   )),
-            !r.options.partial)
+            !n.options.partial)
         )
-            throw n;
-        return !i && r.errors.push(n), n;
+            throw t;
+        return i || n.errors.push(t), t;
     }),
-    (a.prototype.wrapResult = function (e) {
-        let n = this._reporterState;
-        return n.options.partial
+    (r.prototype.wrapResult = function (e) {
+        let t = this._reporterState;
+        return t.options.partial
             ? {
                   result: this.isError(e) ? null : e,
-                  errors: n.errors
+                  errors: t.errors
               }
             : e;
     }),
-    i(o, Error),
-    (o.prototype.rethrow = function (e) {
-        if (((this.message = e + ' at: ' + (this.path || '(shallow)')), Error.captureStackTrace && Error.captureStackTrace(this, o), !this.stack))
+    i(a, Error),
+    (a.prototype.rethrow = function (e) {
+        if (((this.message = e + ' at: ' + (this.path || '(shallow)')), Error.captureStackTrace && Error.captureStackTrace(this, a), !this.stack))
             try {
                 throw Error(this.message);
             } catch (e) {

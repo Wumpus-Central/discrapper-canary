@@ -1,7 +1,7 @@
-n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i,
-    r = n(200651),
-    l = n(192379),
+    l = n(200651),
+    r = n(192379),
     a = n(120356),
     s = n.n(a),
     o = n(873546),
@@ -12,8 +12,8 @@ var i,
     m = n(1964),
     p = n(981631),
     g = n(388032),
-    f = n(906540),
-    _ = n(232186);
+    _ = n(906540),
+    f = n(232186);
 function E(e, t, n) {
     return (
         t in e
@@ -28,13 +28,13 @@ function E(e, t, n) {
     );
 }
 let I = h.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
-class C extends (i = l.PureComponent) {
+class C extends (i = r.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: i } = this.props;
-        return (0, r.jsx)(r.Fragment, {
+        return (0, l.jsx)(l.Fragment, {
             children: e.map((e) =>
                 e === p.PUi.CAPTCHA
-                    ? (0, r.jsx)(
+                    ? (0, l.jsx)(
                           d.Z,
                           {
                               onVerify: i,
@@ -42,10 +42,10 @@ class C extends (i = l.PureComponent) {
                           },
                           t
                       )
-                    : (0, r.jsx)(
-                          c.Button,
+                    : (0, l.jsx)(
+                          c.zxk,
                           {
-                              className: s()(_.marginBottom20),
+                              className: s()(f.marginBottom20),
                               onClick: () => this.handleClick(e),
                               children: m.Z.getButtonTitle(e)
                           },
@@ -55,27 +55,27 @@ class C extends (i = l.PureComponent) {
         });
     }
     render() {
-        return (0, r.jsxs)(u.Z, {
-            className: f.verification,
+        return (0, l.jsxs)(u.Z, {
+            className: _.verification,
             align: u.Z.Align.CENTER,
             direction: u.Z.Direction.VERTICAL,
             children: [
-                (0, r.jsxs)(u.Z, {
-                    className: s()(f.container, { [f.isMobile]: o.tq }),
+                (0, l.jsxs)(u.Z, {
+                    className: s()(_.container, { [_.isMobile]: o.tq }),
                     direction: u.Z.Direction.VERTICAL,
                     align: u.Z.Align.CENTER,
                     justify: u.Z.Justify.CENTER,
                     children: [
-                        (0, r.jsx)('div', { className: f.image }),
-                        (0, r.jsx)('div', {
-                            className: s()(f.title, _.marginTop20),
+                        (0, l.jsx)('div', { className: _.image }),
+                        (0, l.jsx)('div', {
+                            className: s()(_.title, f.marginTop20),
                             children: g.intl.string(g.t.Iz0kDg)
                         }),
-                        (0, r.jsx)('div', {
-                            className: s()(f.body, _.marginTop4, _.marginBottom20),
+                        (0, l.jsx)('div', {
+                            className: s()(_.body, f.marginTop4, f.marginBottom20),
                             children: g.intl.format(g.t['//ppOD'], { helpCenterURL: I })
                         }),
-                        (0, r.jsx)(u.Z, {
+                        (0, l.jsx)(u.Z, {
                             grow: 0,
                             direction: u.Z.Direction.VERTICAL,
                             justify: u.Z.Justify.CENTER,
@@ -83,24 +83,24 @@ class C extends (i = l.PureComponent) {
                         })
                     ]
                 }),
-                (0, r.jsx)('div', {
-                    className: s()(f.footer, _.marginTop20),
+                (0, l.jsx)('div', {
+                    className: s()(_.footer, f.marginTop20),
                     children: g.intl.string(g.t.qqYun5)
                 }),
-                (0, r.jsxs)(u.Z, {
-                    className: s()(_.marginTop4, _.marginBottom20),
+                (0, l.jsxs)(u.Z, {
+                    className: s()(f.marginTop4, f.marginBottom20),
                     grow: 0,
                     children: [
-                        (0, r.jsx)('div', {
-                            className: s()(f.footer, f.footerAction),
+                        (0, l.jsx)('div', {
+                            className: s()(_.footer, _.footerAction),
                             children: g.intl.format(g.t.WL51ZW, { supportURL: h.Z.getSubmitRequestURL() })
                         }),
-                        (0, r.jsx)('div', {
-                            className: s()(f.footer, f.footerBullet),
+                        (0, l.jsx)('div', {
+                            className: s()(_.footer, _.footerBullet),
                             children: '\u2022'
                         }),
-                        (0, r.jsx)('div', {
-                            className: s()(f.footer, f.footerAction),
+                        (0, l.jsx)('div', {
+                            className: s()(_.footer, _.footerAction),
                             children: g.intl.format(g.t.Hv7ztb, { logoutOnClick: this.props.onLogout })
                         })
                     ]
@@ -120,5 +120,5 @@ E(C, 'defaultProps', {
     types: [p.PUi.CAPTCHA],
     onCaptchaVerify: p.dG4,
     onLogout: p.dG4
-}),
-    (t.Z = C);
+});
+let v = C;

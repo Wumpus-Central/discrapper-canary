@@ -1,9 +1,9 @@
 e.exports = {
-    soundButtonSettingContainer: 'soundButtonSettingContainer_c801bb',
-    emoji: 'emoji_c801bb',
-    secondaryIcon: 'secondaryIcon_c801bb',
-    secondaryIconActive: 'secondaryIconActive_c801bb secondaryIcon_c801bb',
-    secondaryIconDisabled: 'secondaryIconDisabled_c801bb secondaryIcon_c801bb',
-    container: 'container_c801bb',
-    soundText: 'soundText_c801bb'
+    soundButtonSettingContainer: 'soundButtonSettingContainer__84bad',
+    emoji: 'emoji__84bad',
+    secondaryIcon: 'secondaryIcon__84bad',
+    secondaryIconActive: 'secondaryIconActive__84bad secondaryIcon__84bad',
+    secondaryIconDisabled: 'secondaryIconDisabled__84bad secondaryIcon__84bad',
+    container: 'container__84bad',
+    soundText: 'soundText__84bad'
 };

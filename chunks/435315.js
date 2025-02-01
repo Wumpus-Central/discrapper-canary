@@ -1,15 +1,15 @@
 n.r(
     (e.exports = {
-        wrapper: 'wrapper_a5989d',
-        video: 'video_a5989d',
-        videoCover: 'videoCover_a5989d',
-        videoContain: 'videoContain_a5989d',
-        mirror: 'mirror_a5989d',
-        previewWrapper: 'previewWrapper_a5989d video_a5989d',
-        loading: 'loading_a5989d',
-        previewImage: 'previewImage_a5989d',
-        emptyPreviewWrapper: 'emptyPreviewWrapper_a5989d',
-        emptyPreview: 'emptyPreview_a5989d',
-        spinner: 'spinner_a5989d'
+        wrapper: 'wrapper__48b20',
+        video: 'video__48b20',
+        videoCover: 'videoCover__48b20',
+        videoContain: 'videoContain__48b20',
+        mirror: 'mirror__48b20',
+        previewWrapper: 'previewWrapper__48b20 video__48b20',
+        loading: 'loading__48b20',
+        previewImage: 'previewImage__48b20',
+        emptyPreviewWrapper: 'emptyPreviewWrapper__48b20',
+        emptyPreview: 'emptyPreview__48b20',
+        spinner: 'spinner__48b20'
     })
 );

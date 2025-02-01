@@ -1,4 +1,4 @@
 e.exports = {
-    app: 'app_a01fb1',
-    layers: 'layers_a01fb1'
+    app: 'app__160d8',
+    layers: 'layers__160d8'
 };

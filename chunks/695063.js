@@ -1,5 +1,5 @@
 e.exports = {
-    panel: 'panel_f9fd16',
-    button: 'button_f9fd16',
-    title: 'title_f9fd16'
+    panel: 'panel_dca679',
+    button: 'button_dca679',
+    title: 'title_dca679'
 };

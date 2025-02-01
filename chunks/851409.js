@@ -1,11 +1,11 @@
-function r(e, n, r) {
+function n(e, t, n) {
     let i = 0,
-        a = e.length;
-    for (; a > 0; ) {
-        let o = (a / 2) | 0,
-            s = i + o;
-        0 >= r(e[s], n) ? ((i = ++s), (a -= o + 1)) : (a = o);
+        r = e.length;
+    for (; r > 0; ) {
+        let a = (r / 2) | 0,
+            s = i + a;
+        0 >= n(e[s], t) ? ((i = ++s), (r -= a + 1)) : (r = a);
     }
     return i;
 }
-Object.defineProperty(n, '__esModule', { value: !0 }), (n.default = r);
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.default = n);

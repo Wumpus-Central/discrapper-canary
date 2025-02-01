@@ -1,6 +1,6 @@
 e.exports = {
-    pageDescription: 'pageDescription_a4fa8f',
-    subscriptionsContainer: 'subscriptionsContainer_a4fa8f',
-    backButtonContents: 'backButtonContents_a4fa8f',
-    arrowIcon: 'arrowIcon_a4fa8f'
+    pageDescription: 'pageDescription__8f372',
+    subscriptionsContainer: 'subscriptionsContainer__8f372',
+    backButtonContents: 'backButtonContents__8f372',
+    arrowIcon: 'arrowIcon__8f372'
 };

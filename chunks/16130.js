@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('bg', {
         months: 'януари_февруари_март_април_май_юни_юли_август_септември_октомври_ноември_декември'.split('_'),
@@ -53,14 +53,14 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}-(ев|ен|ти|ви|ри|ми)/,
         ordinal: function (e) {
-            var n = e % 10,
-                r = e % 100;
+            var t = e % 10,
+                n = e % 100;
             if (0 === e) return e + '-ев';
-            if (0 === r) return e + '-ен';
-            if (r > 10 && r < 20) return e + '-ти';
-            else if (1 === n) return e + '-ви';
-            else if (2 === n) return e + '-ри';
-            else if (7 === n || 8 === n) return e + '-ми';
+            if (0 === n) return e + '-ен';
+            if (n > 10 && n < 20) return e + '-ти';
+            if (1 === t) return e + '-ви';
+            if (2 === t) return e + '-ри';
+            else if (7 === t || 8 === t) return e + '-ми';
             else return e + '-ти';
         },
         week: {

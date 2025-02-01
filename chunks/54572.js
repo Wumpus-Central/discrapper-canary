@@ -1,5 +1,5 @@
 e.exports = {
-    notice: 'notice_cca137',
-    noticeIcon: 'noticeIcon_cca137',
-    noticeIconPowerful: 'noticeIconPowerful_cca137'
+    notice: 'notice_cdf6f1',
+    noticeIcon: 'noticeIcon_cdf6f1',
+    noticeIconPowerful: 'noticeIconPowerful_cdf6f1'
 };

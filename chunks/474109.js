@@ -1,4 +1,4 @@
-n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -6,36 +6,36 @@ var i = n(200651),
     o = n(664915),
     s = n(888369),
     c = n(358652),
-    u = n(771845),
-    d = n(613060),
+    d = n(771845),
+    u = n(613060),
     h = n(451478),
     p = n(251625),
     m = n(981631),
-    f = n(388032);
-let g = 'app-download-item',
-    v = 'add-server-item';
-function C() {
+    g = n(388032);
+let f = 'app-download-item',
+    _ = 'add-server-item';
+function v() {
     return !1;
 }
 function x(e) {
     var t;
     let n = s.default.getMutableGuildStates();
-    return (e === m.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(m.x8Z.SERVER_DISCOVERY_BADGE)) || (e !== g && e !== v && (null === (t = n[null != e ? e : 'null']) || void 0 === t ? void 0 : t.highImportanceMentionCount) > 0);
+    return (e === m.x8Z.SERVER_DISCOVERY_BADGE && !u.Z.hasViewed(m.x8Z.SERVER_DISCOVERY_BADGE)) || (e !== f && e !== _ && (null === (t = n[null != e ? e : 'null']) || void 0 === t ? void 0 : t.highImportanceMentionCount) > 0);
 }
-let I = (0, p.oH)((e, t, n) => ['null', ...t, ...e, v, m.x8Z.E3_SERVER_DISCOVERY_BADGE, g]);
-t.Z = l.forwardRef(function (e, t) {
-    let n = (0, r.Wu)([u.ZP, c.Z, s.default], () => I(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), s.default.getStoreChangeSentinel())),
-        l = (0, r.e7)([h.Z], () => h.Z.isFocused()),
-        d = (0, r.e7)([o.Z], () => o.Z.getExpandedFolders());
-    return (0, i.jsx)(a.Z, {
-        ...e,
-        ref: t,
-        items: n,
-        isUnread: C,
-        textUnread: f.intl.string(f.t.y2b7CA),
-        textMention: f.intl.string(f.t.y2b7CA),
-        isMentioned: x,
-        animate: l,
-        expandedFolders: d
+let C = (0, p.oH)((e, t, n) => ['null', ...t, ...e, _, m.x8Z.E3_SERVER_DISCOVERY_BADGE, f]),
+    Z = l.forwardRef(function (e, t) {
+        let n = (0, r.Wu)([d.ZP, c.Z, s.default], () => C(d.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), s.default.getStoreChangeSentinel())),
+            l = (0, r.e7)([h.Z], () => h.Z.isFocused()),
+            u = (0, r.e7)([o.Z], () => o.Z.getExpandedFolders());
+        return (0, i.jsx)(a.Z, {
+            ...e,
+            ref: t,
+            items: n,
+            isUnread: v,
+            textUnread: g.intl.string(g.t.y2b7CA),
+            textMention: g.intl.string(g.t.y2b7CA),
+            isMentioned: x,
+            animate: l,
+            expandedFolders: u
+        });
     });
-});

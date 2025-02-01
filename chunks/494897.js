@@ -1,5 +1,5 @@
 e.exports = {
-    wrapper: 'wrapper_ebbdfd',
-    header: 'header_ebbdfd',
-    recommendedServerCard: 'recommendedServerCard_ebbdfd'
+    wrapper: 'wrapper__51537',
+    header: 'header__51537',
+    recommendedServerCard: 'recommendedServerCard__51537'
 };

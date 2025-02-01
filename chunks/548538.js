@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_bac4a9',
-    image: 'image_bac4a9',
-    header: 'header_bac4a9'
+    container: 'container__74f3e',
+    image: 'image__74f3e',
+    header: 'header__74f3e'
 };

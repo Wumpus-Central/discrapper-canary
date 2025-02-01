@@ -1,5 +1,5 @@
-var i = r(818083);
-n.Z = (0, i.B)({
+n.d(t, { Z: () => i });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2023-05_overlay_hook_crash_detection',
     label: 'Detect and report crashes in the overlay hook',

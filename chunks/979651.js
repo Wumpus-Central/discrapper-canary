@@ -29,8 +29,8 @@ let p = 0,
     v = {},
     y = {},
     I = {},
-    b = {};
-function T(e, t) {
+    T = {};
+function b(e, t) {
     return ''.concat(e, ':').concat(t);
 }
 function S(e, t) {
@@ -82,7 +82,7 @@ function x(e) {
 }
 function L(e) {
     let { userId: t, channelId: n, platform: i } = e;
-    b[T(t, n)] = i;
+    T[b(t, n)] = i;
 }
 function P(e, t) {
     return O(e, t.userId, (e) => {
@@ -205,7 +205,7 @@ class F extends (a = l.ZP.Store) {
     getVoicePlatformForChannel(e, t) {
         var n, a;
         let s = null != r && (null === (a = I[i]) || void 0 === a ? void 0 : null === (n = a[r]) || void 0 === n ? void 0 : n.channelId);
-        return t === i && e === s ? f.wR.DESKTOP : b[T(t, e)];
+        return t === i && e === s ? f.wR.DESKTOP : T[b(t, e)];
     }
     get userHasBeenMovedVersion() {
         return p;

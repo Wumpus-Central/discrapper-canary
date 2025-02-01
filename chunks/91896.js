@@ -46,10 +46,10 @@ function y() {
 function I(e) {
     m.set(f(e.id, e.applicationId), e);
 }
-function b(e, t) {
+function T(e, t) {
     m.delete(f(e, t));
 }
-function T(e) {
+function b(e) {
     m.clear(),
         e.gameRelationships.forEach((e) => {
             I(d(e));
@@ -60,7 +60,7 @@ function S(e) {
     I(e.gameRelationship), y();
 }
 function A(e) {
-    b(e.userId, e.applicationId), y();
+    T(e.userId, e.applicationId), y();
 }
 class N extends (i = s.ZP.Store) {
     isGameFriend(e, t) {
@@ -103,7 +103,7 @@ class N extends (i = s.ZP.Store) {
 }
 c(N, 'displayName', 'GameRelationshipStore');
 let C = new N(l.Z, {
-    CONNECTION_OPEN: T,
+    CONNECTION_OPEN: b,
     GAME_RELATIONSHIP_ADD: S,
     GAME_RELATIONSHIP_REMOVE: A
 });

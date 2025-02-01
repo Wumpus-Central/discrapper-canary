@@ -1,6 +1,6 @@
-var n = /\w*$/;
-function r(e) {
-    var r = new e.constructor(e.source, n.exec(e));
-    return (r.lastIndex = e.lastIndex), r;
+var t = /\w*$/;
+function n(e) {
+    var n = new e.constructor(e.source, t.exec(e));
+    return (n.lastIndex = e.lastIndex), n;
 }
-e.exports = r;
+e.exports = n;

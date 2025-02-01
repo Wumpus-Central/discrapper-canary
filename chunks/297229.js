@@ -1,6 +1,6 @@
-e.exports = {
-    doubleInput: 'doubleInput_c8eacd',
-    link: 'link_c8eacd',
-    addIcon: 'addIcon_c8eacd',
-    removeIcon: 'removeIcon_c8eacd'
+n.exports = {
+    doubleInput: 'doubleInput__6dc4b',
+    link: 'link__6dc4b',
+    addIcon: 'addIcon__6dc4b',
+    removeIcon: 'removeIcon__6dc4b'
 };

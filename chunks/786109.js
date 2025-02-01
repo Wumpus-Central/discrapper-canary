@@ -1,10 +1,10 @@
-t.exports = {
-    header: 'header_a70452',
-    headerImage: 'headerImage_a70452',
-    title: 'title_a70452',
-    content: 'content_a70452',
-    buttonGroup: 'buttonGroup_a70452',
-    leave: 'leave_a70452',
-    infoGroup: 'infoGroup_a70452',
-    infoRow: 'infoRow_a70452'
+e.exports = {
+    header: 'header_f549e5',
+    headerImage: 'headerImage_f549e5',
+    title: 'title_f549e5',
+    content: 'content_f549e5',
+    buttonGroup: 'buttonGroup_f549e5',
+    leave: 'leave_f549e5',
+    infoGroup: 'infoGroup_f549e5',
+    infoRow: 'infoRow_f549e5'
 };

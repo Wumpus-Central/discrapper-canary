@@ -1,4 +1,5 @@
-class r {
+n.d(t, { Z: () => r });
+class i {
     setActive(e) {
         return Promise.resolve();
     }
@@ -6,7 +7,7 @@ class r {
     setSelectedStream(e) {}
     setFocusedStream(e) {}
     setMirrored(e) {}
-    setPipAspectRatio(e, n) {}
+    setPipAspectRatio(e, t) {}
     updateSourceTrackingView() {}
     addOnPipModeChangedListener(e) {}
     addOnPipModeWillChangeListener(e) {}
@@ -20,5 +21,4 @@ class r {
         return !1;
     }
 }
-let i = new r();
-n.Z = i;
+let r = new i();

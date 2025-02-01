@@ -1,4 +1,4 @@
 e.exports = {
-    debugMode: 'debugMode_f4091c',
-    clickable: 'clickable_f4091c'
+    debugMode: 'debugMode_fa952e',
+    clickable: 'clickable_fa952e'
 };

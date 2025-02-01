@@ -1,5 +1,5 @@
 n.d(t, {
-    Ie: () => T,
+    Ie: () => b,
     OW: () => a,
     gy: () => s
 });
@@ -308,7 +308,7 @@ let o = {
         disableAutoFocus: !0,
         hideAccessoryBar: !0
     },
-    b = {
+    T = {
         analyticsName: 'forum_channel_guidelines',
         drafts: { type: r.d.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -323,7 +323,7 @@ let o = {
         showCharacterCount: !0,
         toolbarType: 1
     },
-    T = {
+    b = {
         NORMAL: o,
         OVERLAY: l,
         OVERLAY_INLINE_REPLY: g,
@@ -339,7 +339,7 @@ let o = {
         RULES_INPUT: I,
         CREATE_FORUM_POST: p,
         CREATE_POLL: h,
-        FORUM_CHANNEL_GUIDELINES: b,
+        FORUM_CHANNEL_GUIDELINES: T,
         ATOMIC_REACTOR_REPLY_INPUT: {
             analyticsName: 'atomic_reator_reply_input',
             drafts: { type: r.d.ChannelMessage },

@@ -1,55 +1,55 @@
-t.r(e), t(411104);
-var c = t(200651);
-t(192379);
-var n = t(481060),
-    o = t(429142);
-e.default = {
-    showCaptcha: function (a, e) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            { sitekey: i, captchaService: h, options: p } = a;
-        (0, n.openModalLazy)(
+a.r(e), a.d(e, { default: () => i }), a(411104);
+var c = a(200651);
+a(192379);
+var n = a(481060),
+    r = a(429142);
+let i = {
+    showCaptcha: function (t, e) {
+        let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            { sitekey: h, captchaService: o, options: p } = t;
+        (0, n.ZDy)(
             async () => {
-                let { default: a } = await t.e('12192').then(t.bind(t, 718742));
-                return (t) =>
-                    (0, c.jsx)(a, {
-                        onCaptchaVerify: (a, t) =>
+                let { default: t } = await a.e('12192').then(a.bind(a, 718742));
+                return (a) =>
+                    (0, c.jsx)(t, {
+                        onCaptchaVerify: (t, a) =>
                             e({
-                                captcha_key: a,
-                                captcha_rqtoken: t
+                                captcha_key: t,
+                                captcha_rqtoken: a
                             }),
-                        captchaService: h,
-                        sitekey: i,
-                        ...r,
+                        captchaService: o,
+                        sitekey: h,
+                        ...i,
                         ...p,
-                        ...t
+                        ...a
                     });
             },
-            { Layer: o.ZP }
+            { Layer: r.ZP }
         );
     },
-    showCaptchaAsync: function (a) {
+    showCaptchaAsync: function (t) {
         let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { sitekey: r, captchaService: i, options: h } = a;
-        return new Promise((a, p) => {
-            (0, n.openModalLazy)(
+            { sitekey: i, captchaService: h, options: o } = t;
+        return new Promise((t, p) => {
+            (0, n.ZDy)(
                 async () => {
-                    let { default: n } = await t.e('12192').then(t.bind(t, 718742));
-                    return (t) =>
+                    let { default: n } = await a.e('12192').then(a.bind(a, 718742));
+                    return (a) =>
                         (0, c.jsx)(n, {
-                            onCaptchaVerify: (e, t) =>
-                                a({
+                            onCaptchaVerify: (e, a) =>
+                                t({
                                     captcha_key: e,
-                                    captcha_rqtoken: t
+                                    captcha_rqtoken: a
                                 }),
-                            captchaService: i,
-                            sitekey: r,
+                            captchaService: h,
+                            sitekey: i,
                             onReject: () => p(Error('cancel captcha')),
                             ...e,
-                            ...h,
-                            ...t
+                            ...o,
+                            ...a
                         });
                 },
-                { Layer: o.ZP }
+                { Layer: r.ZP }
             );
         });
     }

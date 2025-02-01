@@ -1,10 +1,10 @@
 e.exports = {
-    spacingTop24: 'spacingTop24_c6d1f7',
-    permissionWarning: 'permissionWarning_c6d1f7',
-    selector: 'selector_c6d1f7',
-    selectorNoHeader: 'selectorNoHeader_c6d1f7',
-    previewToggle: 'previewToggle_c6d1f7',
-    filterLoadingIndicator: 'filterLoadingIndicator_c6d1f7',
-    cameraPreviewTitle: 'cameraPreviewTitle_c6d1f7',
-    cameraDeeplink: 'cameraDeeplink_c6d1f7'
+    spacingTop24: 'spacingTop24_f22a74',
+    permissionWarning: 'permissionWarning_f22a74',
+    selector: 'selector_f22a74',
+    selectorNoHeader: 'selectorNoHeader_f22a74',
+    previewToggle: 'previewToggle_f22a74',
+    filterLoadingIndicator: 'filterLoadingIndicator_f22a74',
+    cameraPreviewTitle: 'cameraPreviewTitle_f22a74',
+    cameraDeeplink: 'cameraDeeplink_f22a74'
 };

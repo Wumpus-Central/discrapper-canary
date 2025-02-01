@@ -1,9 +1,9 @@
 e.exports = {
-    panelGroup: 'panelGroup_e14d53',
-    rightAligned: 'rightAligned_e14d53',
-    measurement: 'measurement_e14d53',
-    measurementText: 'measurementText_e14d53',
-    measurementCheckbox: 'measurementCheckbox_e14d53',
-    bottomPanelButton: 'bottomPanelButton_e14d53',
-    secondaryInfoText: 'secondaryInfoText_e14d53'
+    panelGroup: 'panelGroup__2f37f',
+    rightAligned: 'rightAligned__2f37f',
+    measurement: 'measurement__2f37f',
+    measurementText: 'measurementText__2f37f',
+    measurementCheckbox: 'measurementCheckbox__2f37f',
+    bottomPanelButton: 'bottomPanelButton__2f37f',
+    secondaryInfoText: 'secondaryInfoText__2f37f'
 };

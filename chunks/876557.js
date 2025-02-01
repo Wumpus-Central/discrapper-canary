@@ -1,6 +1,6 @@
-var n = Object.prototype;
-function r(e) {
-    var r = e && e.constructor;
-    return e === (('function' == typeof r && r.prototype) || n);
+var t = Object.prototype;
+function n(e) {
+    var n = e && e.constructor;
+    return e === (('function' == typeof n && n.prototype) || t);
 }
-e.exports = r;
+e.exports = n;

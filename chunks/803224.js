@@ -1,5 +1,5 @@
-t.exports = {
-    name: 'name_d7fb64',
-    description: 'description_d7fb64',
-    reset: 'reset_d7fb64'
+e.exports = {
+    name: 'name_c524f4',
+    description: 'description_c524f4',
+    reset: 'reset_c524f4'
 };

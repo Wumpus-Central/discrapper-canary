@@ -1,24 +1,24 @@
-function n(e, n) {
-    return Object.prototype.hasOwnProperty.call(e, n);
+function t(e, t) {
+    return Object.prototype.hasOwnProperty.call(e, t);
 }
-e.exports = function (e, r, i, a) {
-    (r = r || '&'), (i = i || '=');
-    var o = {};
-    if ('string' != typeof e || 0 === e.length) return o;
+e.exports = function (e, n, i, r) {
+    (n = n || '&'), (i = i || '=');
+    var a = {};
+    if ('string' != typeof e || 0 === e.length) return a;
     var s = /\+/g;
-    e = e.split(r);
-    var l = 1000;
-    a && 'number' == typeof a.maxKeys && (l = a.maxKeys);
-    var u = e.length;
-    l > 0 && u > l && (u = l);
-    for (var c = 0; c < u; ++c) {
-        var d,
+    e = e.split(n);
+    var o = 1000;
+    r && 'number' == typeof r.maxKeys && (o = r.maxKeys);
+    var l = e.length;
+    o > 0 && l > o && (l = o);
+    for (var u = 0; u < l; ++u) {
+        var c,
+            d,
             f,
-            p,
-            h,
-            _ = e[c].replace(s, '%20'),
-            m = _.indexOf(i);
-        m >= 0 ? ((d = _.substr(0, m)), (f = _.substr(m + 1))) : ((d = _), (f = '')), (p = decodeURIComponent(d)), (h = decodeURIComponent(f)), n(o, p) ? (Array.isArray(o[p]) ? o[p].push(h) : (o[p] = [o[p], h])) : (o[p] = h);
+            _,
+            p = e[u].replace(s, '%20'),
+            h = p.indexOf(i);
+        h >= 0 ? ((c = p.substr(0, h)), (d = p.substr(h + 1))) : ((c = p), (d = '')), (f = decodeURIComponent(c)), (_ = decodeURIComponent(d)), t(a, f) ? (Array.isArray(a[f]) ? a[f].push(_) : (a[f] = [a[f], _])) : (a[f] = _);
     }
-    return o;
+    return a;
 };

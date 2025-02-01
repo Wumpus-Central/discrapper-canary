@@ -1,4 +1,4 @@
 e.exports = {
-    actionButton: 'actionButton_f845fd',
-    icon: 'icon_f845fd'
+    actionButton: 'actionButton_d9752c',
+    icon: 'icon_d9752c'
 };

@@ -1,5 +1,5 @@
-var a = r(760919);
-t.Z = new a.Z({
+r.d(t, { Z: () => a });
+let a = new (r(760919).Z)({
     id: 'rec2020-linear',
     cssId: '--rec2020-linear',
     name: 'Linear REC.2020',

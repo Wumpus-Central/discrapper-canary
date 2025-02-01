@@ -1,5 +1,5 @@
 e.exports = {
-    headerDivider: 'headerDivider_cb4c8f',
-    emptyStateImage: 'emptyStateImage_cb4c8f',
-    emptyStateButton: 'emptyStateButton_cb4c8f'
+    headerDivider: 'headerDivider__59048',
+    emptyStateImage: 'emptyStateImage__59048',
+    emptyStateButton: 'emptyStateButton__59048'
 };

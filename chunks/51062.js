@@ -16,7 +16,7 @@ var i = n(192379),
     g = n(377668),
     E = n(185923);
 function v(e, t, n) {
-    var v, y, I, b, T, S, A;
+    var v, y, I, T, b, S, A;
     let { channel: N, type: C } = e,
         [R, O] = i.useState(() => (0, p.P)()),
         D = (0, r.Z)(),
@@ -57,7 +57,7 @@ function v(e, t, n) {
             navigator: G,
             activeCommand: k,
             activeCommandOption: U,
-            canMentionUsers: null !== (T = null === (y = C.users) || void 0 === y ? void 0 : y.allowMentioning) && void 0 !== T && T,
+            canMentionUsers: null !== (b = null === (y = C.users) || void 0 === y ? void 0 : y.allowMentioning) && void 0 !== b && b,
             canMentionEveryone: w,
             canMentionClyde: L,
             hidePersonalInformation: M,
@@ -93,7 +93,7 @@ function v(e, t, n) {
                     for (let n of t) n.removeChangeListener(e);
                 };
             }
-        }, [F, null === (b = R.query) || void 0 === b ? void 0 : b.typeInfo]),
+        }, [F, null === (T = R.query) || void 0 === T ? void 0 : T.typeInfo]),
         [R, F, G]
     );
 }

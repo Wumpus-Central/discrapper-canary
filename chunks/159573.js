@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         name: 'LDIF',
         contains: [
@@ -19,4 +19,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

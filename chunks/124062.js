@@ -1,11 +1,11 @@
 e.exports = {
-    container: 'container_c56579',
-    headerSection: 'headerSection_c56579',
-    headerSectionLeft: 'headerSectionLeft_c56579',
-    headerSectionRight: 'headerSectionRight_c56579',
-    appIcon: 'appIcon_c56579',
-    avatar: 'avatar_c56579',
-    userAvatars: 'userAvatars_c56579',
-    dotSpacer: 'dotSpacer_c56579',
-    actionButtonsContainer: 'actionButtonsContainer_c56579'
+    container: 'container_c8f358',
+    headerSection: 'headerSection_c8f358',
+    headerSectionLeft: 'headerSectionLeft_c8f358',
+    headerSectionRight: 'headerSectionRight_c8f358',
+    appIcon: 'appIcon_c8f358',
+    avatar: 'avatar_c8f358',
+    userAvatars: 'userAvatars_c8f358',
+    dotSpacer: 'dotSpacer_c8f358',
+    actionButtonsContainer: 'actionButtonsContainer_c8f358'
 };

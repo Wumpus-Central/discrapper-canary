@@ -1,86 +1,86 @@
 let i;
-var a,
-    o = r(47120);
-var s = r(442837),
-    l = r(570140),
-    u = r(70956),
-    c = r(709054);
-function d(e, n, r) {
+n.d(t, { Z: () => y }), n(47120);
+var r,
+    a = n(442837),
+    s = n(570140),
+    o = n(70956),
+    l = n(709054);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let f = 14 * u.Z.Millis.DAY,
-    p = Object.freeze([]);
-let h = {},
+let c = 14 * o.Z.Millis.DAY,
+    d = Object.freeze([]),
+    f = {},
     _ = {};
-function m(e) {
-    var n;
-    let { messageId: r, channelId: i, attachments: a } = e,
-        o = {
-            messageId: r,
+function p(e) {
+    var t;
+    let { messageId: n, channelId: i, attachments: r } = e,
+        a = {
+            messageId: n,
             channelId: i,
-            attachments: a,
+            attachments: r,
             reportSubmit: !1
         },
-        s = null !== (n = _[i]) && void 0 !== n ? n : p;
-    (_[i] = [...s, o]), (h[r] = o);
+        s = null !== (t = _[i]) && void 0 !== t ? t : d;
+    (_[i] = [...s, a]), (f[n] = a);
 }
-function g(e) {
-    let { messageId: n, channelId: r } = e,
-        i = _[r];
+function h(e) {
+    let { messageId: t, channelId: n } = e,
+        i = _[n];
     null != i &&
-        ((_[r] = i.map((e) =>
-            e.messageId === n
+        ((_[n] = i.map((e) =>
+            e.messageId === t
                 ? {
                       ...e,
                       reportSubmit: !0
                   }
                 : e
         )),
-        (h[n] = {
-            ...h[n],
+        (f[t] = {
+            ...f[t],
             reportSubmit: !0
         }));
 }
+function m() {
+    E();
+}
+function g(e) {
+    let { explicitContentScanVersion: t } = e;
+    (i = t), E();
+}
 function E() {
-    y();
+    (f = {}), (_ = {});
 }
-function v(e) {
-    let { explicitContentScanVersion: n } = e;
-    (i = n), y();
-}
-function y() {
-    (h = {}), (_ = {});
-}
-class b extends (a = s.ZP.Store) {
+class v extends (r = a.ZP.Store) {
     getFpMessageInfo(e) {
-        return h[e];
+        return f[e];
     }
     getChannelFpInfo(e) {
-        var n;
-        return null !== (n = _[e]) && void 0 !== n ? n : p;
+        var t;
+        return null !== (t = _[e]) && void 0 !== t ? t : d;
     }
     canSubmitFpReport(e) {
-        let n = h[e];
-        return null != n && !n.reportSubmit && c.default.age(n.messageId) < f;
+        let t = f[e];
+        return null != t && !t.reportSubmit && l.default.age(t.messageId) < c;
     }
     get validContentScanVersion() {
         return i;
     }
 }
-d(b, 'displayName', 'FalsePositiveStore'),
-    (n.Z = new b(l.Z, {
-        LOGOUT: E,
-        CONNECTION_OPEN: v,
-        MESSAGE_EXPLICIT_CONTENT_FP_CREATE: m,
-        MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: g
-    }));
+u(v, 'displayName', 'FalsePositiveStore');
+let y = new v(s.Z, {
+    LOGOUT: m,
+    CONNECTION_OPEN: g,
+    MESSAGE_EXPLICIT_CONTENT_FP_CREATE: p,
+    MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: h
+});

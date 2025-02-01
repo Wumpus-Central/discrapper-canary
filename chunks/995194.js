@@ -1,11 +1,11 @@
-var i = r(67867),
-    a = r(592843);
+var i = n(67867),
+    r = n(592843);
 i(
     {
         target: 'Object',
         stat: !0,
         arity: 2,
-        forced: Object.assign !== a
+        forced: Object.assign !== r
     },
-    { assign: a }
+    { assign: r }
 );

@@ -1,8 +1,8 @@
-function n(e) {
-    let n = ['abs', 'acos', 'ambient', 'area', 'asin', 'atan', 'atmosphere', 'attribute', 'calculatenormal', 'ceil', 'cellnoise', 'clamp', 'comp', 'concat', 'cos', 'degrees', 'depth', 'Deriv', 'diffuse', 'distance', 'Du', 'Dv', 'environment', 'exp', 'faceforward', 'filterstep', 'floor', 'format', 'fresnel', 'incident', 'length', 'lightsource', 'log', 'match', 'max', 'min', 'mod', 'noise', 'normalize', 'ntransform', 'opposite', 'option', 'phong', 'pnoise', 'pow', 'printf', 'ptlined', 'radians', 'random', 'reflect', 'refract', 'renderinfo', 'round', 'setcomp', 'setxcomp', 'setycomp', 'setzcomp', 'shadow', 'sign', 'sin', 'smoothstep', 'specular', 'specularbrdf', 'spline', 'sqrt', 'step', 'tan', 'texture', 'textureinfo', 'trace', 'transform', 'vtransform', 'xcomp', 'ycomp', 'zcomp'],
-        r = ['matrix', 'float', 'color', 'point', 'normal', 'vector'],
+function t(e) {
+    let t = ['abs', 'acos', 'ambient', 'area', 'asin', 'atan', 'atmosphere', 'attribute', 'calculatenormal', 'ceil', 'cellnoise', 'clamp', 'comp', 'concat', 'cos', 'degrees', 'depth', 'Deriv', 'diffuse', 'distance', 'Du', 'Dv', 'environment', 'exp', 'faceforward', 'filterstep', 'floor', 'format', 'fresnel', 'incident', 'length', 'lightsource', 'log', 'match', 'max', 'min', 'mod', 'noise', 'normalize', 'ntransform', 'opposite', 'option', 'phong', 'pnoise', 'pow', 'printf', 'ptlined', 'radians', 'random', 'reflect', 'refract', 'renderinfo', 'round', 'setcomp', 'setxcomp', 'setycomp', 'setzcomp', 'shadow', 'sign', 'sin', 'smoothstep', 'specular', 'specularbrdf', 'spline', 'sqrt', 'step', 'tan', 'texture', 'textureinfo', 'trace', 'transform', 'vtransform', 'xcomp', 'ycomp', 'zcomp'],
+        n = ['matrix', 'float', 'color', 'point', 'normal', 'vector'],
         i = ['while', 'for', 'if', 'do', 'return', 'else', 'break', 'extern', 'continue'],
-        a = {
+        r = {
             match: [/(surface|displacement|light|volume|imager)/, /\s+/, e.IDENT_RE],
             scope: {
                 1: 'keyword',
@@ -13,8 +13,8 @@ function n(e) {
         name: 'RenderMan RSL',
         keywords: {
             keyword: i,
-            built_in: n,
-            type: r
+            built_in: t,
+            type: n
         },
         illegal: '</',
         contains: [
@@ -28,7 +28,7 @@ function n(e) {
                 begin: '#',
                 end: '$'
             },
-            a,
+            r,
             {
                 beginKeywords: 'illuminate illuminance gather',
                 end: '\\('
@@ -36,4 +36,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

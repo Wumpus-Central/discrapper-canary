@@ -1,13 +1,13 @@
 e.exports = {
-    content: 'content_c25a31',
-    guildCard: 'guildCard_c25a31',
-    image: 'image_c25a31',
-    transferGuildCardHeader: 'transferGuildCardHeader_c25a31',
-    activeTransferGuildCardBorder: 'activeTransferGuildCardBorder_c25a31',
-    transferFromGuildCard: 'transferFromGuildCard_c25a31',
-    transferToGuildCard: 'transferToGuildCard_c25a31',
-    error: 'error_c25a31',
-    pendingCancellation: 'pendingCancellation_c25a31',
-    pendingCancellationIcon: 'pendingCancellationIcon_c25a31',
-    pendingCancellationMessage: 'pendingCancellationMessage_c25a31'
+    content: 'content__2cbe8',
+    guildCard: 'guildCard__2cbe8',
+    image: 'image__2cbe8',
+    transferGuildCardHeader: 'transferGuildCardHeader__2cbe8',
+    activeTransferGuildCardBorder: 'activeTransferGuildCardBorder__2cbe8',
+    transferFromGuildCard: 'transferFromGuildCard__2cbe8',
+    transferToGuildCard: 'transferToGuildCard__2cbe8',
+    error: 'error__2cbe8',
+    pendingCancellation: 'pendingCancellation__2cbe8',
+    pendingCancellationIcon: 'pendingCancellationIcon__2cbe8',
+    pendingCancellationMessage: 'pendingCancellationMessage__2cbe8'
 };

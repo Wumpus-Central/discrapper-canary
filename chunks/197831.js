@@ -1,5 +1,5 @@
 e.exports = {
-    rowItem: 'rowItem_d8c96d',
-    last: 'last_d8c96d',
-    active: 'active_d8c96d'
+    rowItem: 'rowItem_a0365b',
+    last: 'last_a0365b',
+    active: 'active_a0365b'
 };

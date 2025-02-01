@@ -1,4 +1,4 @@
-n.r(l);
+n.r(l), n.d(l, { default: () => p });
 var t = n(200651);
 n(192379);
 var u = n(593473),
@@ -11,7 +11,7 @@ var u = n(593473),
     h = n(998502),
     o = n(981631);
 a.ZP.initialize();
-l.default = (e) => {
+let p = (e) => {
     var l;
     let { location: n } = e;
     return (0, t.jsx)(i.l_, {

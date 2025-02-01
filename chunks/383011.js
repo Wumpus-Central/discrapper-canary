@@ -1,4 +1,4 @@
 e.exports = {
-    badge: 'badge_a24a11',
-    badgeIcon: 'badgeIcon_a24a11'
+    badge: 'badge__436c9',
+    badgeIcon: 'badgeIcon__436c9'
 };

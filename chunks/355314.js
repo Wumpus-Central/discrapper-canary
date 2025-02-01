@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => T });
 var i = n(200651),
     r = n(192379),
     a = n(442837),
@@ -18,21 +18,21 @@ var i = n(200651),
     v = n(981631),
     y = n(388032),
     I = n(364443);
-function b(e) {
+function T(e) {
     let { onClose: t, ...n } = e,
-        b = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        T = (0, a.e7)([u.Z], () => u.Z.theme),
+        T = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        b = (0, a.e7)([u.Z], () => u.Z.theme),
         S = (0, a.e7)([c.Z], () => c.Z.getGuildId()),
-        A = T === v.BRd.LIGHT ? 'light' : 'dark',
+        A = b === v.BRd.LIGHT ? 'light' : 'dark',
         N = (0, i.jsx)('img', {
             className: I.art,
             alt: 'File Upload Nitro Perk',
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(A, '_v2.png')
         }),
         C = r.useMemo(() => {
-            let e = m.ZP.getUserMaxFileSize(b);
+            let e = m.ZP.getUserMaxFileSize(T);
             return (0, _.BU)(e / 1024, { useKibibytes: !0 });
-        }, [b]),
+        }, [T]),
         R = (0, p.iL)({
             guildId: S,
             onClick: () => {

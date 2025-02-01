@@ -1,9 +1,9 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             className: 'number',
             begin: /[$%]\d+/
         },
-        r = {
+        n = {
             className: 'number',
             begin: /\b\d+/
         },
@@ -11,7 +11,7 @@ function n(e) {
             className: 'number',
             begin: /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{1,5})?/
         },
-        a = {
+        r = {
             className: 'number',
             begin: /:\d{1,5}/
         };
@@ -25,7 +25,7 @@ function n(e) {
                 className: 'section',
                 begin: /<\/?/,
                 end: />/,
-                contains: [i, a, e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 })]
+                contains: [i, r, e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 })]
             },
             {
                 className: 'attribute',
@@ -52,10 +52,10 @@ function n(e) {
                             className: 'variable',
                             begin: /[\$%]\{/,
                             end: /\}/,
-                            contains: ['self', n]
+                            contains: ['self', t]
                         },
                         i,
-                        r,
+                        n,
                         e.QUOTE_STRING_MODE
                     ]
                 }
@@ -64,4 +64,4 @@ function n(e) {
         illegal: /\S/
     };
 }
-e.exports = n;
+e.exports = t;

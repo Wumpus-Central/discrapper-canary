@@ -1,10 +1,10 @@
 e.exports = {
-    outer: 'outer_df6b25',
-    progressBar: 'progressBar_df6b25',
-    progress: 'progress_df6b25',
-    inner: 'inner_df6b25',
-    coverContent: 'coverContent_df6b25',
-    progressTextWrapper: 'progressTextWrapper_df6b25',
-    progressTextOverlay: 'progressTextOverlay_df6b25',
-    progressText: 'progressText_df6b25'
+    outer: 'outer_bb1069',
+    progressBar: 'progressBar_bb1069',
+    progress: 'progress_bb1069',
+    inner: 'inner_bb1069',
+    coverContent: 'coverContent_bb1069',
+    progressTextWrapper: 'progressTextWrapper_bb1069',
+    progressTextOverlay: 'progressTextOverlay_bb1069',
+    progressText: 'progressText_bb1069'
 };

@@ -1,10 +1,10 @@
 e.exports = {
-    smallCarousel: 'smallCarousel_b0360e',
-    smallCarouselItem: 'smallCarouselItem_b0360e',
-    smallCarouselImage: 'smallCarouselImage_b0360e',
-    embedContainer: 'embedContainer_b0360e',
-    hidden: 'hidden_b0360e',
-    spinner: 'spinner_b0360e',
-    errorContainer: 'errorContainer_b0360e',
-    sizedToParent: 'sizedToParent_b0360e'
+    smallCarousel: 'smallCarousel__03498',
+    smallCarouselItem: 'smallCarouselItem__03498',
+    smallCarouselImage: 'smallCarouselImage__03498',
+    embedContainer: 'embedContainer__03498',
+    hidden: 'hidden__03498',
+    spinner: 'spinner__03498',
+    errorContainer: 'errorContainer__03498',
+    sizedToParent: 'sizedToParent__03498'
 };

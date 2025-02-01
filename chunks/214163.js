@@ -1,8 +1,8 @@
 e.exports = {
-    enabled: 'enabled_b97e9a',
-    attachmentImage: 'attachmentImage_b97e9a',
-    radioBackground: 'radioBackground_b97e9a',
-    radioForeground: 'radioForeground_b97e9a',
-    checkbox: 'checkbox_b97e9a',
-    checkboxSelected: 'checkboxSelected_b97e9a'
+    enabled: 'enabled_f4f0eb',
+    attachmentImage: 'attachmentImage_f4f0eb',
+    radioBackground: 'radioBackground_f4f0eb',
+    radioForeground: 'radioForeground_f4f0eb',
+    checkbox: 'checkbox_f4f0eb',
+    checkboxSelected: 'checkboxSelected_f4f0eb'
 };

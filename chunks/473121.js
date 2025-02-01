@@ -1,44 +1,44 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(481060),
-    s = r(454585),
-    l = r(273744),
-    u = r(388032),
-    c = r(494045);
-let d = (e) => {
+n.d(t, { Z: () => c });
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(454585),
+    o = n(273744),
+    l = n(388032),
+    u = n(494045);
+let c = (e) => {
     let {
-            node: { header: n, subheader: r, button: d }
+            node: { header: t, subheader: n, button: c }
         } = e,
-        f = (null == d ? void 0 : d.type) === 'submit',
-        p = a.useRef(
+        d = (null == c ? void 0 : c.type) === 'submit',
+        f = r.useRef(
             s.Z.reactParserFor({
                 ...s.Z.defaultRules,
-                link: l.s
+                link: o.s
             })
         );
     return (0, i.jsxs)('div', {
-        className: c.headerContainer,
+        className: u.headerContainer,
         children: [
-            null != n && '' !== n
-                ? (0, i.jsx)(o.Heading, {
+            null != t && '' !== t
+                ? (0, i.jsx)(a.X6q, {
                       variant: 'heading-xl/semibold',
                       color: 'header-primary',
-                      children: n
+                      children: t
                   })
                 : null,
-            null != r && '' !== n
-                ? (0, i.jsx)(o.Text, {
+            null != n && '' !== t
+                ? (0, i.jsx)(a.Text, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: p.current(r)
+                      children: f.current(n)
                   })
                 : null,
-            f &&
-                (0, i.jsx)(o.Text, {
+            d &&
+                (0, i.jsx)(a.Text, {
                     variant: 'text-sm/normal',
-                    children: u.intl.format(u.t.Q0tSKS, {})
+                    children: l.intl.format(l.t.Q0tSKS, {})
                 })
         ]
     });
 };
-n.Z = d;

@@ -1,10 +1,10 @@
 e.exports = {
-    header: 'header_f3e944',
-    title: 'title_f3e944',
-    inputForm: 'inputForm_f3e944',
-    formTitle: 'formTitle_f3e944',
-    error: 'error_f3e944',
-    input: 'input_f3e944',
-    inputInner: 'inputInner_f3e944',
-    connectCTA: 'connectCTA_f3e944'
+    header: 'header_adbad8',
+    title: 'title_adbad8',
+    inputForm: 'inputForm_adbad8',
+    formTitle: 'formTitle_adbad8',
+    error: 'error_adbad8',
+    input: 'input_adbad8',
+    inputInner: 'inputInner_adbad8',
+    connectCTA: 'connectCTA_adbad8'
 };

@@ -1,14 +1,14 @@
 e.exports = {
-    forwardPreview: 'forwardPreview_e4c972',
-    quote: 'quote_e4c972',
-    contentWrapper: 'contentWrapper_e4c972',
-    attachmentRow: 'attachmentRow_e4c972',
-    forwardPreviewMessage: 'forwardPreviewMessage_e4c972',
-    hasAttachments: 'hasAttachments_e4c972',
-    attachmentPreview: 'attachmentPreview_e4c972',
-    attachmentPreviewVideo: 'attachmentPreviewVideo_e4c972',
-    thumbnail: 'thumbnail_e4c972',
-    playIcon: 'playIcon_e4c972',
-    attachmentPreviewOverflow: 'attachmentPreviewOverflow_e4c972',
-    overflowCount: 'overflowCount_e4c972'
+    forwardPreview: 'forwardPreview__68334',
+    quote: 'quote__68334',
+    contentWrapper: 'contentWrapper__68334',
+    attachmentRow: 'attachmentRow__68334',
+    forwardPreviewMessage: 'forwardPreviewMessage__68334',
+    hasAttachments: 'hasAttachments__68334',
+    attachmentPreview: 'attachmentPreview__68334',
+    attachmentPreviewVideo: 'attachmentPreviewVideo__68334',
+    thumbnail: 'thumbnail__68334',
+    playIcon: 'playIcon__68334',
+    attachmentPreviewOverflow: 'attachmentPreviewOverflow__68334',
+    overflowCount: 'overflowCount__68334'
 };

@@ -1,8 +1,8 @@
 e.exports = {
-    container: 'container_acb067',
-    containerInner: 'containerInner_acb067',
-    content: 'content_acb067',
-    backButton: 'backButton_acb067',
-    backButtonContainer: 'backButtonContainer_acb067',
-    headerArt: 'headerArt_acb067'
+    container: 'container_b9abc5',
+    containerInner: 'containerInner_b9abc5',
+    content: 'content_b9abc5',
+    backButton: 'backButton_b9abc5',
+    backButtonContainer: 'backButtonContainer_b9abc5',
+    headerArt: 'headerArt_b9abc5'
 };

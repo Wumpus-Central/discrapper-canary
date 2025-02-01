@@ -1,5 +1,5 @@
 e.exports = {
-    content: 'content_b0fa9f',
-    gameContainer: 'gameContainer_b0fa9f',
-    inlineIcon: 'inlineIcon_b0fa9f'
+    content: 'content_e8c018',
+    gameContainer: 'gameContainer_e8c018',
+    inlineIcon: 'inlineIcon_e8c018'
 };

@@ -1,5 +1,5 @@
-e.exports = {
-    sectionContentContainer: 'sectionContentContainer_d193fc',
-    sectionActivitiesContentContainer: 'sectionActivitiesContentContainer_d193fc',
-    searchOpenAppDetailAppCard: 'searchOpenAppDetailAppCard_d193fc'
+n.exports = {
+    sectionContentContainer: 'sectionContentContainer_b18295',
+    sectionActivitiesContentContainer: 'sectionActivitiesContentContainer_b18295',
+    searchOpenAppDetailAppCard: 'searchOpenAppDetailAppCard_b18295'
 };

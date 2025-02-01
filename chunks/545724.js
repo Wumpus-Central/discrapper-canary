@@ -1,67 +1,67 @@
-n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(748780),
     o = n(91192),
     c = n(481060),
     d = n(239091),
     u = n(687683),
     h = n(262755);
-t.Z = function (e) {
-    let { index: t, children: l, user: m, channel: p, onClick: g, isFocused: f, isActive: _, onOtherHover: E, className: I } = e,
-        [C, v] = r.useState(!1),
-        [N, T] = r.useState(!1),
+let m = function (e) {
+    let { index: t, children: r, user: m, channel: p, onClick: g, isFocused: _, isActive: f, onOtherHover: E, className: I } = e,
+        [C, v] = l.useState(!1),
+        [N, T] = l.useState(!1),
         S = () => {
-            v(!0), f && !_ && !N && (null == E || E());
+            v(!0), !_ || f || N || null == E || E();
         },
-        b = () => {
+        Z = () => {
             v(!1);
         },
-        A = (e, t) => {
-            if (null != t)
-                T(!0),
-                    (0, d.jW)(
-                        e,
-                        async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('56842')]).then(n.bind(n, 881351));
-                            return (n) =>
-                                (0, i.jsx)(e, {
-                                    ...n,
-                                    user: t
-                                });
-                        },
-                        {
-                            onClose: () => {
-                                T(!1);
-                            }
+        x = (e, t) => {
+            null != t &&
+                (T(!0),
+                (0, d.jW)(
+                    e,
+                    async () => {
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('95052')]).then(n.bind(n, 881351));
+                        return (n) =>
+                            (0, i.jsx)(e, {
+                                ...n,
+                                user: t
+                            });
+                    },
+                    {
+                        onClose: () => {
+                            T(!1);
                         }
-                    );
+                    }
+                ));
         };
     return (0, i.jsx)(o.mh, {
         id: p.id,
         children: (e) =>
-            (0, i.jsx)(c.FocusRing, {
+            (0, i.jsx)(c.tEY, {
                 offset: {
                     left: -8,
                     right: -8
                 },
                 children: (0, i.jsx)(s.Z.div, {
                     className: a()(h.messageRequestItem, I, {
-                        [h.active]: _ || N,
+                        [h.active]: f || N,
                         [h.firstItem]: 0 === t
                     }),
-                    onContextMenu: (e) => A(e, m),
+                    onContextMenu: (e) => x(e, m),
                     onMouseEnter: S,
-                    onMouseLeave: b,
+                    onMouseLeave: Z,
                     onClick: null != g ? g : void 0,
                     style: {
                         LIST_ROW_HEIGHT: u.WN,
                         opacity: 1
                     },
                     ...e,
-                    children: l(C || _ || N)
+                    children: r(C || f || N)
                 })
             })
     });

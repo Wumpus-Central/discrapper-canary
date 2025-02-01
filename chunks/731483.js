@@ -1,6 +1,6 @@
 e.exports = {
-    linkIcon: 'linkIcon_bb1ae6',
-    linkAnchor: 'linkAnchor_bb1ae6',
-    tooltip: 'tooltip_bb1ae6',
-    tooltipContent: 'tooltipContent_bb1ae6'
+    linkIcon: 'linkIcon__22275',
+    linkAnchor: 'linkAnchor__22275',
+    tooltip: 'tooltip__22275',
+    tooltipContent: 'tooltipContent__22275'
 };

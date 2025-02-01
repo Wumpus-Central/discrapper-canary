@@ -1,12 +1,12 @@
 e.exports = {
-    container: 'container_fe3c45',
-    modalHeader: 'modalHeader_fe3c45',
-    header: 'header_fe3c45',
-    row: 'row_fe3c45',
-    switchGroup: 'switchGroup_fe3c45',
-    error: 'error_fe3c45',
-    roleSelector: 'roleSelector_fe3c45',
-    roleCircle: 'roleCircle_fe3c45',
-    footer: 'footer_fe3c45',
-    button: 'button_fe3c45'
+    container: 'container_f0aa37',
+    modalHeader: 'modalHeader_f0aa37',
+    header: 'header_f0aa37',
+    row: 'row_f0aa37',
+    switchGroup: 'switchGroup_f0aa37',
+    error: 'error_f0aa37',
+    roleSelector: 'roleSelector_f0aa37',
+    roleCircle: 'roleCircle_f0aa37',
+    footer: 'footer_f0aa37',
+    button: 'button_f0aa37'
 };

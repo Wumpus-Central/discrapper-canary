@@ -1,27 +1,27 @@
-n.r(e);
+n.d(e, { default: () => p });
 var r = n(200651);
 n(192379);
-var i = n(120356),
-    a = n.n(i),
+var a = n(120356),
+    i = n.n(a),
     s = n(481060),
     o = n(923928),
-    c = n(600164),
-    l = n(388032),
+    l = n(600164),
+    c = n(388032),
     m = n(170981),
     d = n(337667);
-e.default = (t) => {
-    let { onClose: e, transitionState: n, showHideSuppressWarning: i = !1 } = t;
-    return (0, r.jsx)(s.ModalRoot, {
+let p = (t) => {
+    let { onClose: e, transitionState: n, showHideSuppressWarning: a = !1 } = t;
+    return (0, r.jsx)(s.Y0X, {
         transitionState: n,
         className: m.container,
-        'aria-label': l.intl.string(l.t['4Y2AS0']),
+        'aria-label': c.intl.string(c.t['4Y2AS0']),
         children: (0, r.jsxs)('form', {
             onSubmit: (t) => {
                 null == t || t.preventDefault(), o.Z.clearSuppressWarning(), null == e || e();
             },
             className: m.form,
             children: [
-                (0, r.jsxs)(s.ModalContent, {
+                (0, r.jsxs)(s.hzk, {
                     className: m.modalContent,
                     children: [
                         (0, r.jsx)('img', {
@@ -33,35 +33,35 @@ e.default = (t) => {
                             className: m.title,
                             color: 'header-primary',
                             variant: 'text-md/semibold',
-                            children: l.intl.string(l.t.sDvH0d)
+                            children: c.intl.string(c.t.sDvH0d)
                         }),
                         (0, r.jsx)(s.Text, {
                             className: m.description,
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
-                            children: l.intl.string(l.t['CLpr//'])
+                            children: c.intl.string(c.t['CLpr//'])
                         })
                     ]
                 }),
-                (0, r.jsxs)(s.ModalFooter, {
-                    justify: c.Z.Justify.BETWEEN,
-                    wrap: c.Z.Wrap.WRAP,
+                (0, r.jsxs)(s.mzw, {
+                    justify: l.Z.Justify.BETWEEN,
+                    wrap: l.Z.Wrap.WRAP,
                     children: [
-                        (0, r.jsx)(s.Button, {
+                        (0, r.jsx)(s.zxk, {
                             type: 'submit',
-                            size: s.Button.Sizes.LARGE,
-                            className: a()(m.primaryButton, m.gutter),
+                            size: s.zxk.Sizes.LARGE,
+                            className: i()(m.primaryButton, m.gutter),
                             autoFocus: !0,
-                            children: l.intl.string(l.t['NX+WJC'])
+                            children: c.intl.string(c.t['NX+WJC'])
                         }),
-                        i &&
-                            (0, r.jsx)(s.Clickable, {
+                        a &&
+                            (0, r.jsx)(s.P3F, {
                                 onClick: () => o.Z.clearSuppressWarning(!0),
                                 className: m.minorContainer,
                                 children: (0, r.jsx)(s.Text, {
                                     className: m.minorAction,
                                     variant: 'text-xs/normal',
-                                    children: l.intl.string(l.t['5E9SBw'])
+                                    children: c.intl.string(c.t['5E9SBw'])
                                 })
                             })
                     ]

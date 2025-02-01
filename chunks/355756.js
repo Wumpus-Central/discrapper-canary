@@ -1,18 +1,18 @@
-var i = r(192379),
-    a = r(723184),
-    o = r(829307),
-    s = r(820611),
-    l = r(877837),
-    u = function (e) {
-        var n = e.onChange,
-            r = e.hex,
-            u = e.rgb,
-            c = e.styles,
-            d = void 0 === c ? {} : c,
-            f = e.className,
-            p = void 0 === f ? '' : f,
-            h = (0, a.default)(
-                (0, o.Z)(
+var i = n(192379),
+    r = n(723184),
+    a = n(829307),
+    s = n(820611),
+    o = n(877837),
+    l = function (e) {
+        var t = e.onChange,
+            n = e.hex,
+            l = e.rgb,
+            u = e.styles,
+            c = void 0 === u ? {} : u,
+            d = e.className,
+            f = void 0 === d ? '' : d,
+            _ = (0, r.default)(
+                (0, a.Z)(
                     {
                         default: {
                             material: {
@@ -29,7 +29,7 @@ var i = r(192379),
                                 color: '#333',
                                 padding: '0px',
                                 border: '0px',
-                                borderBottom: '2px solid ' + r,
+                                borderBottom: '2px solid ' + n,
                                 outline: 'none',
                                 height: '30px'
                             },
@@ -73,99 +73,99 @@ var i = r(192379),
                             }
                         }
                     },
-                    d
+                    c
                 )
             ),
-            _ = function (e, r) {
+            p = function (e, n) {
                 e.hex
                     ? s.FX(e.hex) &&
-                      n(
+                      t(
                           {
                               hex: e.hex,
                               source: 'hex'
                           },
-                          r
+                          n
                       )
                     : (e.r || e.g || e.b) &&
-                      n(
+                      t(
                           {
-                              r: e.r || u.r,
-                              g: e.g || u.g,
-                              b: e.b || u.b,
+                              r: e.r || l.r,
+                              g: e.g || l.g,
+                              b: e.b || l.b,
                               source: 'rgb'
                           },
-                          r
+                          n
                       );
             };
         return i.createElement(
-            l.xZ,
-            { styles: d },
+            o.xZ,
+            { styles: c },
             i.createElement(
                 'div',
                 {
-                    style: h.material,
-                    className: 'material-picker ' + p
+                    style: _.material,
+                    className: 'material-picker ' + f
                 },
-                i.createElement(l.Vm, {
+                i.createElement(o.Vm, {
                     style: {
-                        wrap: h.HEXwrap,
-                        input: h.HEXinput,
-                        label: h.HEXlabel
+                        wrap: _.HEXwrap,
+                        input: _.HEXinput,
+                        label: _.HEXlabel
                     },
                     label: 'hex',
-                    value: r,
-                    onChange: _
+                    value: n,
+                    onChange: p
                 }),
                 i.createElement(
                     'div',
                     {
-                        style: h.split,
+                        style: _.split,
                         className: 'flexbox-fix'
                     },
                     i.createElement(
                         'div',
-                        { style: h.third },
-                        i.createElement(l.Vm, {
+                        { style: _.third },
+                        i.createElement(o.Vm, {
                             style: {
-                                wrap: h.RGBwrap,
-                                input: h.RGBinput,
-                                label: h.RGBlabel
+                                wrap: _.RGBwrap,
+                                input: _.RGBinput,
+                                label: _.RGBlabel
                             },
                             label: 'r',
-                            value: u.r,
-                            onChange: _
+                            value: l.r,
+                            onChange: p
                         })
                     ),
                     i.createElement(
                         'div',
-                        { style: h.third },
-                        i.createElement(l.Vm, {
+                        { style: _.third },
+                        i.createElement(o.Vm, {
                             style: {
-                                wrap: h.RGBwrap,
-                                input: h.RGBinput,
-                                label: h.RGBlabel
+                                wrap: _.RGBwrap,
+                                input: _.RGBinput,
+                                label: _.RGBlabel
                             },
                             label: 'g',
-                            value: u.g,
-                            onChange: _
+                            value: l.g,
+                            onChange: p
                         })
                     ),
                     i.createElement(
                         'div',
-                        { style: h.third },
-                        i.createElement(l.Vm, {
+                        { style: _.third },
+                        i.createElement(o.Vm, {
                             style: {
-                                wrap: h.RGBwrap,
-                                input: h.RGBinput,
-                                label: h.RGBlabel
+                                wrap: _.RGBwrap,
+                                input: _.RGBinput,
+                                label: _.RGBlabel
                             },
                             label: 'b',
-                            value: u.b,
-                            onChange: _
+                            value: l.b,
+                            onChange: p
                         })
                     )
                 )
             )
         );
     };
-(0, l.t1)(u);
+(0, o.t1)(l);

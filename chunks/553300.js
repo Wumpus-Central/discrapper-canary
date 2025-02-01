@@ -1,3 +1,4 @@
+n.d(t, { Z: () => a });
 let a = (0, n(818083).B)({
     kind: 'user',
     id: '2024-12_premium_wow_moment',
@@ -11,4 +12,3 @@ let a = (0, n(818083).B)({
         }
     ]
 });
-t.Z = a;

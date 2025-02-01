@@ -1,4 +1,4 @@
 e.exports = {
-    guildIconImage: 'guildIconImage_d3f168',
-    acronym: 'acronym_d3f168'
+    guildIconImage: 'guildIconImage_bab6e1',
+    acronym: 'acronym_bab6e1'
 };

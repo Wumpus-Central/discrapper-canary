@@ -1,56 +1,56 @@
-var i = r(192379);
-function a(e, n) {
-    return (e === n && (0 !== e || 1 / e == 1 / n)) || (e != e && n != n);
+var i = n(192379);
+function r(e, t) {
+    return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
 }
-var o = 'function' == typeof Object.is ? Object.is : a,
+var a = 'function' == typeof Object.is ? Object.is : r,
     s = i.useState,
-    l = i.useEffect,
-    u = i.useLayoutEffect,
-    c = i.useDebugValue;
-function d(e, n) {
-    var r = n(),
+    o = i.useEffect,
+    l = i.useLayoutEffect,
+    u = i.useDebugValue;
+function c(e, t) {
+    var n = t(),
         i = s({
             inst: {
-                value: r,
-                getSnapshot: n
+                value: n,
+                getSnapshot: t
             }
         }),
-        a = i[0].inst,
-        o = i[1];
+        r = i[0].inst,
+        a = i[1];
     return (
-        u(
-            function () {
-                (a.value = r), (a.getSnapshot = n), f(a) && o({ inst: a });
-            },
-            [e, r, n]
-        ),
         l(
             function () {
+                (r.value = n), (r.getSnapshot = t), d(r) && a({ inst: r });
+            },
+            [e, n, t]
+        ),
+        o(
+            function () {
                 return (
-                    f(a) && o({ inst: a }),
+                    d(r) && a({ inst: r }),
                     e(function () {
-                        f(a) && o({ inst: a });
+                        d(r) && a({ inst: r });
                     })
                 );
             },
             [e]
         ),
-        c(r),
-        r
+        u(n),
+        n
     );
 }
-function f(e) {
-    var n = e.getSnapshot;
+function d(e) {
+    var t = e.getSnapshot;
     e = e.value;
     try {
-        var r = n();
-        return !o(e, r);
+        var n = t();
+        return !a(e, n);
     } catch (e) {
         return !0;
     }
 }
-function p(e, n) {
-    return n();
+function f(e, t) {
+    return t();
 }
-var h = 'undefined' == typeof window || void 0 === window.document || void 0 === window.document.createElement ? p : d;
-n.useSyncExternalStore = void 0 !== i.useSyncExternalStore ? i.useSyncExternalStore : h;
+var _ = 'undefined' == typeof window || void 0 === window.document || void 0 === window.document.createElement ? f : c;
+t.useSyncExternalStore = void 0 !== i.useSyncExternalStore ? i.useSyncExternalStore : _;

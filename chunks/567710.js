@@ -1,6 +1,6 @@
 e.exports = {
-    wrapper: 'wrapper_d4ec61',
-    copy: 'copy_d4ec61',
-    cta: 'cta_d4ec61',
-    boostIcon: 'boostIcon_d4ec61'
+    wrapper: 'wrapper__37ae5',
+    copy: 'copy__37ae5',
+    cta: 'cta__37ae5',
+    boostIcon: 'boostIcon__37ae5'
 };

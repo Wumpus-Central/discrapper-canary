@@ -1,4 +1,5 @@
-let i = (0, r(818083).B)({
+n.d(t, { Z: () => i });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-01_chunked_message_attachment_uploads',
     label: 'Use chunked uploads for message attachments',
@@ -17,4 +18,3 @@ let i = (0, r(818083).B)({
         }
     ]
 });
-n.Z = i;

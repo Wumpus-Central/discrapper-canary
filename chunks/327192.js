@@ -1,23 +1,23 @@
-var i = r(273511),
-    a = r(735471),
-    o = r(726433),
-    s = r(360518)('toStringTag'),
-    l = Object,
-    u =
+var i = n(273511),
+    r = n(735471),
+    a = n(726433),
+    s = n(360518)('toStringTag'),
+    o = Object,
+    l =
         'Arguments' ===
-        o(
+        a(
             (function () {
                 return arguments;
             })()
         ),
-    c = function (e, n) {
+    u = function (e, t) {
         try {
-            return e[n];
+            return e[t];
         } catch (e) {}
     };
 e.exports = i
-    ? o
+    ? a
     : function (e) {
-          var n, r, i;
-          return void 0 === e ? 'Undefined' : null === e ? 'Null' : 'string' == typeof (r = c((n = l(e)), s)) ? r : u ? o(n) : 'Object' === (i = o(n)) && a(n.callee) ? 'Arguments' : i;
+          var t, n, i;
+          return void 0 === e ? 'Undefined' : null === e ? 'Null' : 'string' == typeof (n = u((t = o(e)), s)) ? n : l ? a(t) : 'Object' === (i = a(t)) && r(t.callee) ? 'Arguments' : i;
       };

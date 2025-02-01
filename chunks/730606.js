@@ -23,8 +23,8 @@ var i = n(200651),
     v = n(956664),
     y = n(254109),
     I = n(212459),
-    b = n(369171),
-    T = n(683528),
+    T = n(369171),
+    b = n(683528),
     S = n(549635),
     A = n(981631),
     N = n(388032),
@@ -161,7 +161,7 @@ function U(e) {
             className: C.wrapper,
             children: [
                 G
-                    ? (0, i.jsx)(b.ZP, {
+                    ? (0, i.jsx)(T.ZP, {
                           children: (e) =>
                               (0, i.jsx)(c.M0o, {
                                   className: s()(C.navPrev, e),
@@ -205,11 +205,11 @@ function U(e) {
                     )
                 }),
                 G
-                    ? (0, i.jsx)(b.ZP, {
+                    ? (0, i.jsx)(T.ZP, {
                           children: (e) =>
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(T.Z, {
+                                      (0, i.jsx)(b.Z, {
                                           items: t,
                                           currentIndex: _,
                                           onGalleryItemClick: p,

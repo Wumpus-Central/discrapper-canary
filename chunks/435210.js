@@ -137,7 +137,7 @@ function p(e, t) {
         var n = "'" + JSON.stringify(t).replace(/^"|"$/g, '').replace(/'/g, "\\'").replace(/\\"/g, '"') + "'";
         return e.stylize(n, 'string');
     }
-    return T(t) ? e.stylize('' + t, 'number') : y(t) ? e.stylize('' + t, 'boolean') : I(t) ? e.stylize('null', 'null') : void 0;
+    return b(t) ? e.stylize('' + t, 'number') : y(t) ? e.stylize('' + t, 'boolean') : I(t) ? e.stylize('null', 'null') : void 0;
 }
 function h(e) {
     return '[' + Error.prototype.toString.call(e) + ']';
@@ -205,10 +205,10 @@ function y(e) {
 function I(e) {
     return null === e;
 }
-function b(e) {
+function T(e) {
     return null == e;
 }
-function T(e) {
+function b(e) {
     return 'number' == typeof e;
 }
 function S(e) {
@@ -286,8 +286,8 @@ function w(e) {
     (t.isArray = v),
     (t.isBoolean = y),
     (t.isNull = I),
-    (t.isNullOrUndefined = b),
-    (t.isNumber = T),
+    (t.isNullOrUndefined = T),
+    (t.isNumber = b),
     (t.isString = S),
     (t.isSymbol = A),
     (t.isUndefined = N),

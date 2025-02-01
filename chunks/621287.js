@@ -46,4 +46,4 @@ function r(e) {
 }),
     (i.resolve = r),
     (e.exports = i),
-    (i.id = '621287');
+    (i.id = 621287);

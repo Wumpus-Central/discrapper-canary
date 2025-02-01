@@ -1,7 +1,7 @@
 t.exports = {
-    modalHeader: 'modalHeader_c6abcc',
-    closeButton: 'closeButton_c6abcc',
-    modalContent: 'modalContent_c6abcc',
-    contentText: 'contentText_c6abcc',
-    button: 'button_c6abcc'
+    modalHeader: 'modalHeader__4acc1',
+    closeButton: 'closeButton__4acc1',
+    modalContent: 'modalContent__4acc1',
+    contentText: 'contentText__4acc1',
+    button: 'button__4acc1'
 };

@@ -1,6 +1,6 @@
 e.exports = {
-    circleContainer: 'circleContainer_d37103',
-    childrenContainer: 'childrenContainer_d37103',
-    baseProgressCircle: 'baseProgressCircle_d37103',
-    circleSVG: 'circleSVG_d37103'
+    circleContainer: 'circleContainer_c1b44f',
+    childrenContainer: 'childrenContainer_c1b44f',
+    baseProgressCircle: 'baseProgressCircle_c1b44f',
+    circleSVG: 'circleSVG_c1b44f'
 };

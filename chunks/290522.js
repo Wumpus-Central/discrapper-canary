@@ -1,21 +1,21 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e, n, r) {
+    function t(e, t, n) {
         return (
             e +
             ' ' +
-            a(
+            r(
                 {
                     mm: 'munutenn',
                     MM: 'miz',
                     dd: 'devezh'
-                }[r],
+                }[n],
                 e
             )
         );
     }
-    function r(e) {
+    function n(e) {
         switch (i(e)) {
             case 1:
             case 3:
@@ -30,16 +30,16 @@
     function i(e) {
         return e > 9 ? i(e % 10) : e;
     }
-    function a(e, n) {
-        return 2 === n ? o(e) : e;
+    function r(e, t) {
+        return 2 === t ? a(e) : e;
     }
-    function o(e) {
-        var n = {
+    function a(e) {
+        var t = {
             m: 'v',
             b: 'v',
             d: 'z'
         };
-        return void 0 === n[e.charAt(0)] ? e : n[e.charAt(0)] + e.substring(1);
+        return void 0 === t[e.charAt(0)] ? e : t[e.charAt(0)] + e.substring(1);
     }
     return e.defineLocale('br', {
         months: "Genver_C'hwevrer_Meurzh_Ebrel_Mae_Mezheven_Gouere_Eost_Gwengolo_Here_Du_Kerzu".split('_'),
@@ -70,20 +70,20 @@
             s: 'un nebeud segondennoù',
             ss: '%d eilenn',
             m: 'ur vunutenn',
-            mm: n,
+            mm: t,
             h: 'un eur',
             hh: '%d eur',
             d: 'un devezh',
-            dd: n,
+            dd: t,
             M: 'ur miz',
-            MM: n,
+            MM: t,
             y: 'ur bloaz',
-            yy: r
+            yy: n
         },
         dayOfMonthOrdinalParse: /\d{1,2}(añ|vet)/,
         ordinal: function (e) {
-            var n = 1 === e ? 'añ' : 'vet';
-            return e + n;
+            var t = 1 === e ? 'añ' : 'vet';
+            return e + t;
         },
         week: {
             dow: 1,

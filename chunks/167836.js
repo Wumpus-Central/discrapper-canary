@@ -1,5 +1,5 @@
 e.exports = {
-    wrapper: 'wrapper_f5cdb8',
-    image: 'image_f5cdb8',
-    content: 'content_f5cdb8'
+    wrapper: 'wrapper_a202d2',
+    image: 'image_a202d2',
+    content: 'content_a202d2'
 };

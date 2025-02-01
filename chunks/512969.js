@@ -7,7 +7,7 @@ n.d(t, {
     TH: () => M,
     UO: () => k,
     k6: () => w,
-    l_: () => T,
+    l_: () => b,
     rs: () => x,
     s6: () => h
 });
@@ -114,10 +114,10 @@ function I(e) {
     var t = c().compile(e);
     return y < v && ((E[e] = t), y++), t;
 }
-function b(e, t) {
+function T(e, t) {
     return void 0 === e && (e = '/'), void 0 === t && (t = {}), '/' === e ? e : I(e)(t, { pretty: !0 });
 }
-function T(e) {
+function b(e) {
     var t = e.computedMatch,
         n = e.to,
         i = e.push,
@@ -127,7 +127,7 @@ function T(e) {
         var i = e.history,
             u = e.staticContext,
             c = s ? i.push : i.replace,
-            d = (0, a.ob)(t ? ('string' == typeof n ? b(n, t.params) : (0, l.Z)({}, n, { pathname: b(n.pathname, t.params) })) : n);
+            d = (0, a.ob)(t ? ('string' == typeof n ? T(n, t.params) : (0, l.Z)({}, n, { pathname: T(n.pathname, t.params) })) : n);
         return u
             ? (c(d), null)
             : r.createElement(g, {

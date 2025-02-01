@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_d746e5',
-    dragRegion: 'dragRegion_d746e5'
+    container: 'container_a592e1',
+    dragRegion: 'dragRegion_a592e1'
 };

@@ -1,101 +1,101 @@
-var i = r(47120);
-var a = r(392711);
-var o = r(106351),
-    s = r(904245),
-    l = r(147913),
-    u = r(367907),
-    c = r(447003),
-    d = r(592125),
-    f = r(650774),
-    p = r(271383),
-    h = r(430824),
-    _ = r(375954),
-    m = r(944486),
-    g = r(626135),
-    E = r(522558),
-    v = r(581025),
-    y = r(795448),
-    b = r(441623),
-    I = r(474936),
-    T = r(981631);
-function S(e, n, r) {
+n.d(t, { Z: () => N }), n(47120);
+var i = n(392711),
+    r = n(106351),
+    a = n(904245),
+    s = n(147913),
+    o = n(367907),
+    l = n(447003),
+    u = n(592125),
+    c = n(650774),
+    d = n(271383),
+    f = n(430824),
+    _ = n(375954),
+    p = n(944486),
+    h = n(626135),
+    m = n(522558),
+    g = n(581025),
+    E = n(795448),
+    v = n(441623),
+    y = n(474936),
+    I = n(981631);
+function T(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let A = 50,
-    C = 1000;
-class N extends l.Z {
-    isChannelEligible(e, n) {
+let b = 50,
+    S = 1000;
+class A extends s.Z {
+    isChannelEligible(e, t) {
         switch (e.type) {
-            case o.d.DM:
-            case o.d.GROUP_DM:
+            case r.d.DM:
+            case r.d.GROUP_DM:
                 return !0;
-            case o.d.GUILD_TEXT:
-                let r = h.Z.getGuild(n),
-                    i = f.Z.getMemberCount(n);
-                return null != i && i <= A && (null == r ? void 0 : r.rulesChannelId) !== e.id && !e.isNSFW() && !(0, c.Z)(e) && null == e.linkedLobby;
+            case r.d.GUILD_TEXT:
+                let n = f.Z.getGuild(t),
+                    i = c.Z.getMemberCount(t);
+                return null != i && i <= b && (null == n ? void 0 : n.rulesChannelId) !== e.id && !e.isNSFW() && !(0, l.Z)(e) && null == e.linkedLobby;
             default:
                 return !1;
         }
     }
-    maybeSendGiftingPromptSystemMessageDebounced(e, n, r, i) {
-        (0, a.debounce)(() => {
-            let a = m.Z.getChannelId();
-            !b.Z.isGiftIntentMessageInCooldown(r) &&
-                e === a &&
+    maybeSendGiftingPromptSystemMessageDebounced(e, t, n, r) {
+        (0, i.debounce)(() => {
+            let i = p.Z.getChannelId();
+            !v.Z.isGiftIntentMessageInCooldown(n) &&
+                e === i &&
                 _.Z.isReady(e) &&
-                (s.Z.sendGiftingPromptSystemMessage(e, {
-                    giftIntentType: n,
-                    recipientUserId: r,
-                    giftIntentSecondaryAction: i
+                (a.Z.sendGiftingPromptSystemMessage(e, {
+                    giftIntentType: t,
+                    recipientUserId: n,
+                    giftIntentSecondaryAction: r
                 }),
-                (0, y.PV)(r));
-        }, C)();
+                (0, E.PV)(n));
+        }, S)();
     }
-    handleChannelSelect(e, n) {
-        let { enabled: r } = v.G.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
-            { enabled: i } = E.w.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
-            a = d.Z.getChannel(n);
-        if ((r || i) && null != a && this.isChannelEligible(a, e)) {
-            let n = new Set(null != e ? p.ZP.getMemberIds(e) : a.recipients),
-                o = b.Z.getFriendAnniversaries().filter((e) => n.has(e));
-            if (i && o.length > 0) {
-                let e = o[0];
-                this.maybeSendGiftingPromptSystemMessageDebounced(a.id, I.hX.FRIEND_ANNIVERSARY, e, o.length > 1 ? I.X2.VIEW_ALL : I.X2.SEND_MESSAGE);
+    handleChannelSelect(e, t) {
+        let { enabled: n } = g.G.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
+            { enabled: i } = m.w.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
+            r = u.Z.getChannel(t);
+        if ((n || i) && null != r && this.isChannelEligible(r, e)) {
+            let t = new Set(null != e ? d.ZP.getMemberIds(e) : r.recipients),
+                a = v.Z.getFriendAnniversaries().filter((e) => t.has(e));
+            if (i && a.length > 0) {
+                let e = a[0];
+                this.maybeSendGiftingPromptSystemMessageDebounced(r.id, y.hX.FRIEND_ANNIVERSARY, e, a.length > 1 ? y.X2.VIEW_ALL : y.X2.SEND_MESSAGE);
             }
-            r &&
-                g.default.track(T.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {
-                    friend_anniversaries_count: o.length,
-                    ...(0, u.v_)(a)
+            n &&
+                h.default.track(I.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {
+                    friend_anniversaries_count: a.length,
+                    ...(0, o.v_)(r)
                 });
         }
     }
     onChannelSelect(e) {
-        let { guildId: n, channelId: r } = e;
-        this.handleChannelSelect(n, r);
+        let { guildId: t, channelId: n } = e;
+        this.handleChannelSelect(t, n);
     }
     onPostConnectionOpen() {
-        let e = m.Z.getChannelId();
+        let e = p.Z.getChannelId();
         if (null != e) {
-            let n = d.Z.getChannel(e);
-            this.handleChannelSelect(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id);
+            let t = u.Z.getChannel(e);
+            this.handleChannelSelect(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id);
         }
     }
     constructor(...e) {
         super(...e),
-            S(this, 'actions', {
+            T(this, 'actions', {
                 POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
                 CHANNEL_SELECT: (e) => this.onChannelSelect(e)
             });
     }
 }
-n.Z = new N();
+let N = new A();

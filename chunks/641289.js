@@ -30,8 +30,8 @@ let s = (e) => i(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
     v = a(E, /\d/, /[\u0300-\u036F\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F]/),
     y = i(E, v, '*'),
     I = i(/[A-Z]/, v, '*'),
-    b = ['attached', 'autoclosure', i(/convention\(/, a('swift', 'block', 'c'), /\)/), 'discardableResult', 'dynamicCallable', 'dynamicMemberLookup', 'escaping', 'freestanding', 'frozen', 'GKInspectable', 'IBAction', 'IBDesignable', 'IBInspectable', 'IBOutlet', 'IBSegueAction', 'inlinable', 'main', 'nonobjc', 'NSApplicationMain', 'NSCopying', 'NSManaged', i(/objc\(/, y, /\)/), 'objc', 'objcMembers', 'propertyWrapper', 'requires_stored_property_inits', 'resultBuilder', 'Sendable', 'testable', 'UIApplicationMain', 'unchecked', 'unknown', 'usableFromInline', 'warn_unqualified_access'],
-    T = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
+    T = ['attached', 'autoclosure', i(/convention\(/, a('swift', 'block', 'c'), /\)/), 'discardableResult', 'dynamicCallable', 'dynamicMemberLookup', 'escaping', 'freestanding', 'frozen', 'GKInspectable', 'IBAction', 'IBDesignable', 'IBInspectable', 'IBOutlet', 'IBSegueAction', 'inlinable', 'main', 'nonobjc', 'NSApplicationMain', 'NSCopying', 'NSManaged', i(/objc\(/, y, /\)/), 'objc', 'objcMembers', 'propertyWrapper', 'requires_stored_property_inits', 'resultBuilder', 'Sendable', 'testable', 'UIApplicationMain', 'unchecked', 'unknown', 'usableFromInline', 'warn_unqualified_access'],
+    b = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
 function S(e) {
     let t = {
             match: /\s+/,
@@ -180,7 +180,7 @@ function S(e) {
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: T,
+                            keywords: b,
                             contains: [...x, w, Z]
                         }
                     ]
@@ -188,7 +188,7 @@ function S(e) {
             },
             {
                 scope: 'keyword',
-                match: i(/@/, a(...b), n(a(/\(/, /\s+/)))
+                match: i(/@/, a(...T), n(a(/\(/, /\s+/)))
             },
             {
                 scope: 'meta',

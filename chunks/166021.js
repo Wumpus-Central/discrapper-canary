@@ -1,21 +1,21 @@
-n(47120);
+n.d(t, { Z: () => u }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(642128),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(642128),
     o = n(481060),
     c = n(320319),
     d = n(931876);
-t.Z = (e) => {
-    let { cards: t, className: n, cardType: s } = e,
+let u = (e) => {
+    let { cards: t, className: n, cardType: r } = e,
         u = () => (window.innerWidth < 910 ? 1 : window.innerWidth < 1400 ? 2 : 3),
-        [m, g] = r.useState(0),
-        [h, p] = r.useState(u()),
+        [m, h] = s.useState(0),
+        [g, _] = s.useState(u()),
         x = t.length;
-    r.useEffect(() => {
+    s.useEffect(() => {
         let e = () => {
-            p(u());
+            _(u());
         };
         return (
             window.addEventListener('resize', e),
@@ -24,51 +24,51 @@ t.Z = (e) => {
             }
         );
     }, []),
-        r.useEffect(() => {
-            g((e) => (x > h && e > x - h ? x - h : x <= h ? 0 : e));
-        }, [x, h]);
-    let f = m > 0,
-        E = r.useCallback((e) => ({ x: (e - m) * 100 }), [m]),
-        [_, C] = (0, o.useSprings)(t.length, E);
+        s.useEffect(() => {
+            h((e) => (x > g && e > x - g ? x - g : x <= g ? 0 : e));
+        }, [x, g]);
+    let p = m > 0,
+        E = s.useCallback((e) => ({ x: (e - m) * 100 }), [m]),
+        [C, f] = (0, o.bYB)(t.length, E);
     return (
-        r.useEffect(() => {
-            C(E);
-        }, [C, E]),
+        s.useEffect(() => {
+            f(E);
+        }, [f, E]),
         (0, i.jsx)('div', {
             className: n,
             children: (0, i.jsxs)('div', {
                 className: d.cardContainer,
                 children: [
-                    x > h &&
-                        (0, i.jsx)(o.Clickable, {
-                            onClick: f
+                    x > g &&
+                        (0, i.jsx)(o.P3F, {
+                            onClick: p
                                 ? () => {
-                                      g((e) => (0 === e ? x - h : e - 1));
+                                      h((e) => (0 === e ? x - g : e - 1));
                                   }
                                 : void 0,
-                            className: a()({
-                                [d.leftArrow]: f,
-                                [d.inactiveArrow]: !f
+                            className: l()({
+                                [d.leftArrow]: p,
+                                [d.inactiveArrow]: !p
                             }),
-                            children: (0, i.jsx)(o.ArrowSmallLeftIcon, {
+                            children: (0, i.jsx)(o.whL, {
                                 className: d.arrowIcon,
                                 colorClass: d.arrowIcon
                             })
                         }),
                     (0, i.jsx)('div', {
                         className: d.cardInnerContainer,
-                        children: _.map((e, n) => {
-                            let { x: r } = e;
+                        children: C.map((e, n) => {
+                            let { x: s } = e;
                             return (0, i.jsx)(
-                                l.animated.div,
+                                a.animated.div,
                                 {
                                     className: d.card,
-                                    style: { transform: null == r ? void 0 : r.to((e) => 'translate3d('.concat(e, '%,0,0)')) },
+                                    style: { transform: null == s ? void 0 : s.to((e) => 'translate3d('.concat(e, '%,0,0)')) },
                                     children: (0, i.jsx)(
                                         c.Z,
                                         {
                                             ...t[n],
-                                            cardType: s
+                                            cardType: r
                                         },
                                         ''.concat(t[n].name, '_').concat(n, '_perks_card')
                                     )
@@ -77,22 +77,22 @@ t.Z = (e) => {
                             );
                         })
                     }),
-                    x > h &&
-                        (0, i.jsx)(o.Clickable, {
+                    x > g &&
+                        (0, i.jsx)(o.P3F, {
                             onClick: () => {
-                                g((e) => (e >= x - h ? 0 : e + 1));
+                                h((e) => (e >= x - g ? 0 : e + 1));
                             },
                             className: d.rightArrow,
-                            children: (0, i.jsx)(o.ArrowSmallRightIcon, {
+                            children: (0, i.jsx)(o.ZSh, {
                                 className: d.arrowIcon,
                                 colorClass: d.arrowIcon
                             })
                         }),
-                    x > h &&
+                    x > g &&
                         (0, i.jsx)('div', {
                             className: d.cardProgressBar,
                             children: t.map((e, t) => {
-                                if (!(t > x - h)) return (0, i.jsx)('div', { className: t === m ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
+                                if (!(t > x - g)) return (0, i.jsx)('div', { className: t === m ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
                             })
                         })
                 ]

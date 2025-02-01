@@ -1,7 +1,7 @@
 e.exports = {
-    coachtip: 'coachtip_e8254e',
-    coachtipContent: 'coachtipContent_e8254e',
-    coachtipInner: 'coachtipInner_e8254e',
-    coachtipAsset: 'coachtipAsset_e8254e',
-    coachtipTextContainer: 'coachtipTextContainer_e8254e'
+    coachtip: 'coachtip_b61b37',
+    coachtipContent: 'coachtipContent_b61b37',
+    coachtipInner: 'coachtipInner_b61b37',
+    coachtipAsset: 'coachtipAsset_b61b37',
+    coachtipTextContainer: 'coachtipTextContainer_b61b37'
 };

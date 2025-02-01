@@ -1,9 +1,9 @@
-function n(e, n, r, i, a) {
+function t(e, t, n, i, r) {
     return (
-        a(e, function (e, a, o) {
-            r = i ? ((i = !1), e) : n(r, e, a, o);
+        r(e, function (e, r, a) {
+            n = i ? ((i = !1), e) : t(n, e, r, a);
         }),
-        r
+        n
     );
 }
-e.exports = n;
+e.exports = t;

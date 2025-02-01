@@ -1,4 +1,4 @@
 e.exports = {
-    arrow: 'arrow_f91b57',
-    up: 'up_f91b57'
+    arrow: 'arrow__6c50b',
+    up: 'up__6c50b'
 };

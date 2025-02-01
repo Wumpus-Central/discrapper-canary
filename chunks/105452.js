@@ -1,11 +1,11 @@
 e.exports = {
-    scroller: 'scroller_a73849',
-    noticeContainer: 'noticeContainer_a73849',
-    searchContainer: 'searchContainer_a73849',
-    permissionsWrapper: 'permissionsWrapper_a73849',
-    clearButtonWrapper: 'clearButtonWrapper_a73849',
-    clearButton: 'clearButton_a73849',
-    noResultsContainer: 'noResultsContainer_a73849',
-    noResults: 'noResults_a73849',
-    permissionsForm: 'permissionsForm_a73849'
+    scroller: 'scroller__16663',
+    noticeContainer: 'noticeContainer__16663',
+    searchContainer: 'searchContainer__16663',
+    permissionsWrapper: 'permissionsWrapper__16663',
+    clearButtonWrapper: 'clearButtonWrapper__16663',
+    clearButton: 'clearButton__16663',
+    noResultsContainer: 'noResultsContainer__16663',
+    noResults: 'noResults__16663',
+    permissionsForm: 'permissionsForm__16663'
 };

@@ -1,8 +1,8 @@
-n.exports = {
-    container: 'container_c1cfd2',
-    circle: 'circle_c1cfd2',
-    icon: 'icon_c1cfd2',
-    title: 'title_c1cfd2',
-    subtitle: 'subtitle_c1cfd2',
-    roleTip: 'roleTip_c1cfd2'
+t.exports = {
+    container: 'container__710ee',
+    circle: 'circle__710ee',
+    icon: 'icon__710ee',
+    title: 'title__710ee',
+    roleTip: 'roleTip__710ee',
+    subtitle: 'subtitle__710ee'
 };

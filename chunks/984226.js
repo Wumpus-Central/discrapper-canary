@@ -1,8 +1,8 @@
-n.exports = {
-    header: 'header_fa4e6d',
-    content: 'content_fa4e6d',
-    icon: 'icon_fa4e6d',
-    divider: 'divider_fa4e6d',
-    button: 'button_fa4e6d',
-    iconButton: 'iconButton_fa4e6d'
+t.exports = {
+    header: 'header_d0b769',
+    content: 'content_d0b769',
+    icon: 'icon_d0b769',
+    divider: 'divider_d0b769',
+    button: 'button_d0b769',
+    iconButton: 'iconButton_d0b769'
 };

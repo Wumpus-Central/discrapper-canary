@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(510659),
     y = n(113557),
     I = n(867176),
-    b = n(451834),
-    T = n(502762),
+    T = n(451834),
+    b = n(502762),
     S = n(544989),
     A = n(481932),
     N = n(195387),
@@ -97,7 +97,7 @@ function k(e) {
                     ref: Q,
                     'aria-label': t.username,
                     children: [
-                        (0, i.jsxs)(T.Z, {
+                        (0, i.jsxs)(b.Z, {
                             user: t,
                             displayProfile: X,
                             profileType: L.y0.BITE_SIZE,
@@ -139,7 +139,7 @@ function k(e) {
                                             guildId: k,
                                             profileType: L.y0.BITE_SIZE
                                         }),
-                                        (0, i.jsx)(b.Z, {
+                                        (0, i.jsx)(T.Z, {
                                             userId: t.id,
                                             className: M.toast,
                                             onClose: Z

@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(93127),
     y = n(814443),
     I = n(590783),
-    b = n(699516),
-    T = n(246946),
+    T = n(699516),
+    b = n(246946),
     S = n(594174),
     A = n(572004),
     N = n(669079),
@@ -33,8 +33,8 @@ var i = n(200651),
 let w = 1500;
 function M(e) {
     let { giftCode: t, application: n, sku: a, subscriptionPlan: o, selectedGiftStyle: l, onClose: d, hasSentMessage: f, giftRecipient: h, giftMessageError: v, isSendingMessage: y } = e,
-        [b, S] = r.useState(c.kO8.Modes.DEFAULT),
-        M = (0, u.e7)([T.Z], () => T.Z.enabled),
+        [T, S] = r.useState(c.kO8.Modes.DEFAULT),
+        M = (0, u.e7)([b.Z], () => b.Z.enabled),
         U = f || (null != l && null != h),
         G = (null == a ? void 0 : a.productLine) === D.POd.COLLECTIBLES,
         B = (0, E.Z)(),
@@ -77,7 +77,7 @@ function M(e) {
         z = () => {
             let e;
             if (null == t) return null;
-            switch (b) {
+            switch (T) {
                 case c.kO8.Modes.SUCCESS:
                     e = L.intl.string(L.t.XVvPjY);
                     break;
@@ -95,7 +95,7 @@ function M(e) {
                         (0, i.jsx)(c.kO8, {
                             hideMessage: M ? L.intl.string(L.t['0RLn4+']) : null,
                             value: (0, N.Nz)(t),
-                            mode: b,
+                            mode: T,
                             text: e,
                             onCopy: (e) => K(e, t),
                             supportsCopy: A.wS,
@@ -209,10 +209,10 @@ let k = (e) => {
             userAffinities: y.Z.getUserAffinitiesUserIds(),
             isLoading: y.Z.getFetching()
         })),
-        T = Array.from(E.values()),
-        A = (0, u.e7)([b.Z], () => b.Z.getFriendIDs()),
-        N = l().difference(A, T),
-        C = [...T, ...N],
+        b = Array.from(E.values()),
+        A = (0, u.e7)([T.Z], () => T.Z.getFriendIDs()),
+        N = l().difference(A, b),
+        C = [...b, ...N],
         O = (0, u.e7)([S.default], () => S.default.filter((e) => C.includes(e.id) && !e.bot), [C]);
     if (null == O || 0 === O.length) return null;
     let D = l().sortBy(O, (e) => C.indexOf(e.id));

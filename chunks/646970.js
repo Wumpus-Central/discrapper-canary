@@ -1,6 +1,6 @@
-function n(e) {
-    let n = e.regex,
-        r = ['GET', 'POST', 'HEAD', 'PUT', 'DELETE', 'CONNECT', 'OPTIONS', 'PATCH', 'TRACE'];
+function t(e) {
+    let t = e.regex,
+        n = ['GET', 'POST', 'HEAD', 'PUT', 'DELETE', 'CONNECT', 'OPTIONS', 'PATCH', 'TRACE'];
     return {
         name: 'Apache Access Log',
         contains: [
@@ -16,9 +16,9 @@ function n(e) {
             },
             {
                 className: 'string',
-                begin: n.concat(/"/, n.either(...r)),
+                begin: t.concat(/"/, t.either(...n)),
                 end: /"/,
-                keywords: r,
+                keywords: n,
                 illegal: /\n/,
                 relevance: 5,
                 contains: [
@@ -58,4 +58,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

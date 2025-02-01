@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_ad8f79',
-    scroller: 'scroller_ad8f79'
+    container: 'container__4a84a',
+    scroller: 'scroller__4a84a'
 };

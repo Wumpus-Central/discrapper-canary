@@ -1,11 +1,11 @@
 e.exports = {
-    countDownWrapper: 'countDownWrapper_cd5584',
-    fullScreenWrapper: 'fullScreenWrapper_cd5584',
-    mobileWrapper: 'mobileWrapper_cd5584',
-    countdownIcon: 'countdownIcon_cd5584',
-    countdownLabel: 'countdownLabel_cd5584',
-    countdown: 'countdown_cd5584',
-    sparkles: 'sparkles_cd5584',
-    left: 'left_cd5584',
-    right: 'right_cd5584'
+    countDownWrapper: 'countDownWrapper_a1b7b8',
+    fullScreenWrapper: 'fullScreenWrapper_a1b7b8',
+    mobileWrapper: 'mobileWrapper_a1b7b8',
+    countdownIcon: 'countdownIcon_a1b7b8',
+    countdownLabel: 'countdownLabel_a1b7b8',
+    countdown: 'countdown_a1b7b8',
+    sparkles: 'sparkles_a1b7b8',
+    left: 'left_a1b7b8',
+    right: 'right_a1b7b8'
 };

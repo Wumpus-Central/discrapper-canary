@@ -54,16 +54,16 @@ function I(e) {
     let { skuId: t } = e;
     h.add(t);
 }
-function b(e) {
+function T(e) {
     let { skuId: t } = e;
     h.delete(t);
 }
-function T() {
+function b() {
     (d = {}), (p = {}), (_ = {}), (f = {}), (h = new Set());
 }
 function S() {
     if (i === o.default.locale) return !1;
-    T(), (i = o.default.locale);
+    b(), (i = o.default.locale);
 }
 class A extends (r = a.ZP.Store) {
     initialize() {
@@ -107,10 +107,10 @@ class A extends (r = a.ZP.Store) {
 c(A, 'displayName', 'StoreListingStore');
 let N = new A(s.Z, {
     STORE_LISTINGS_FETCH_START: I,
-    STORE_LISTINGS_FETCH_FAIL: b,
+    STORE_LISTINGS_FETCH_FAIL: T,
     STORE_LISTINGS_FETCH_SUCCESS: E,
     STORE_LISTING_FETCH_SUCCESS: v,
     USER_SETTINGS_PROTO_UPDATE: S,
-    APPLICATION_STORE_CLEAR_DATA: T,
+    APPLICATION_STORE_CLEAR_DATA: b,
     GIFT_CODE_RESOLVE_SUCCESS: y
 });

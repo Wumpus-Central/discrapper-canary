@@ -1,6 +1,6 @@
 t.exports = {
-    modal: 'modal_b2a2a3',
-    modalContent: 'modalContent_b2a2a3',
-    previewContainerParent: 'previewContainerParent_b2a2a3',
-    previewContainer: 'previewContainer_b2a2a3'
+    modal: 'modal__038c3',
+    modalContent: 'modalContent__038c3',
+    previewContainerParent: 'previewContainerParent__038c3',
+    previewContainer: 'previewContainer__038c3'
 };

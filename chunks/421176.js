@@ -1,26 +1,26 @@
+n.d(t, { Z: () => u });
 var i,
-    r,
     l,
-    a,
-    s = n(442837),
-    o = n(570140),
-    c = n(496675),
-    d = n(981631);
-class u extends (a = s.ZP.Store) {
+    r,
+    a = n(442837),
+    s = n(570140),
+    o = n(496675),
+    c = n(981631);
+class d extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z), this.syncWith([c.Z], d.dG4);
+        this.waitFor(o.Z), this.syncWith([o.Z], c.dG4);
     }
     channelNoticePredicate(e, t) {
-        return Date.now() - t >= d.Hqc && c.Z.can(d.Plq.MANAGE_GUILD, e);
+        return Date.now() - t >= c.Hqc && o.Z.can(c.Plq.MANAGE_GUILD, e);
     }
 }
 (l = 'GuildBoostingNoticeStore'),
-    (r = 'displayName') in (i = u)
-        ? Object.defineProperty(i, r, {
+    (i = 'displayName') in d
+        ? Object.defineProperty(d, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = l),
-    (t.Z = new u(o.Z));
+        : (d[i] = l);
+let u = new d(s.Z);

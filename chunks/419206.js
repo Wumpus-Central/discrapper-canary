@@ -1,39 +1,39 @@
-var i = r(192379),
-    a = r(476400),
-    o = r.n(a),
-    s = r(723184),
-    l = r(829307),
-    u = r(820611),
-    c = r(877837),
-    d = r(726621),
-    f = function (e) {
-        var n = e.onChange,
-            r = e.onSwatchHover,
-            a = e.hex,
-            o = e.colors,
-            f = e.width,
-            p = e.triangle,
-            h = e.styles,
-            _ = void 0 === h ? {} : h,
-            m = e.className,
-            g = void 0 === m ? '' : m,
-            E = 'transparent' === a,
-            v = function (e, r) {
-                u.FX(e) &&
-                    n(
+var i = n(192379),
+    r = n(476400),
+    a = n.n(r),
+    s = n(723184),
+    o = n(829307),
+    l = n(820611),
+    u = n(877837),
+    c = n(726621),
+    d = function (e) {
+        var t = e.onChange,
+            n = e.onSwatchHover,
+            r = e.hex,
+            a = e.colors,
+            d = e.width,
+            f = e.triangle,
+            _ = e.styles,
+            p = void 0 === _ ? {} : _,
+            h = e.className,
+            m = void 0 === h ? '' : h,
+            g = 'transparent' === r,
+            E = function (e, n) {
+                l.FX(e) &&
+                    t(
                         {
                             hex: e,
                             source: 'hex'
                         },
-                        r
+                        n
                     );
             },
-            y = (0, s.default)(
-                (0, l.Z)(
+            v = (0, s.default)(
+                (0, o.Z)(
                     {
                         default: {
                             card: {
-                                width: f,
+                                width: d,
                                 background: '#fff',
                                 boxShadow: '0 1px rgba(0,0,0,.1)',
                                 borderRadius: '6px',
@@ -41,7 +41,7 @@ var i = r(192379),
                             },
                             head: {
                                 height: '110px',
-                                background: a,
+                                background: r,
                                 borderRadius: '6px 6px 0 0',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -51,7 +51,7 @@ var i = r(192379),
                             body: { padding: '10px' },
                             label: {
                                 fontSize: '18px',
-                                color: u.Qg(a),
+                                color: l.Qg(r),
                                 position: 'relative'
                             },
                             triangle: {
@@ -59,7 +59,7 @@ var i = r(192379),
                                 height: '0px',
                                 borderStyle: 'solid',
                                 borderWidth: '0 10px 10px 10px',
-                                borderColor: 'transparent transparent ' + a + ' transparent',
+                                borderColor: 'transparent transparent ' + r + ' transparent',
                                 position: 'absolute',
                                 top: '-10px',
                                 left: '50%',
@@ -80,44 +80,44 @@ var i = r(192379),
                         },
                         'hide-triangle': { triangle: { display: 'none' } }
                     },
-                    _
+                    p
                 ),
-                { 'hide-triangle': 'hide' === p }
+                { 'hide-triangle': 'hide' === f }
             );
         return i.createElement(
             'div',
             {
-                style: y.card,
-                className: 'block-picker ' + g
+                style: v.card,
+                className: 'block-picker ' + m
             },
-            i.createElement('div', { style: y.triangle }),
-            i.createElement('div', { style: y.head }, E && i.createElement(c.QN, { borderRadius: '6px 6px 0 0' }), i.createElement('div', { style: y.label }, a)),
+            i.createElement('div', { style: v.triangle }),
+            i.createElement('div', { style: v.head }, g && i.createElement(u.QN, { borderRadius: '6px 6px 0 0' }), i.createElement('div', { style: v.label }, r)),
             i.createElement(
                 'div',
-                { style: y.body },
-                i.createElement(d.Z, {
-                    colors: o,
-                    onClick: v,
-                    onSwatchHover: r
+                { style: v.body },
+                i.createElement(c.Z, {
+                    colors: a,
+                    onClick: E,
+                    onSwatchHover: n
                 }),
-                i.createElement(c.Vm, {
-                    style: { input: y.input },
-                    value: a,
-                    onChange: v
+                i.createElement(u.Vm, {
+                    style: { input: v.input },
+                    value: r,
+                    onChange: E
                 })
             )
         );
     };
-(f.propTypes = {
-    width: o().oneOfType([o().string, o().number]),
-    colors: o().arrayOf(o().string),
-    triangle: o().oneOf(['top', 'hide']),
-    styles: o().object
+(d.propTypes = {
+    width: a().oneOfType([a().string, a().number]),
+    colors: a().arrayOf(a().string),
+    triangle: a().oneOf(['top', 'hide']),
+    styles: a().object
 }),
-    (f.defaultProps = {
+    (d.defaultProps = {
         width: 170,
         colors: ['#D9E3F0', '#F47373', '#697689', '#37D67A', '#2CCCE4', '#555555', '#dce775', '#ff8a65', '#ba68c8'],
         triangle: 'top',
         styles: {}
     }),
-    (0, c.t1)(f);
+    (0, u.t1)(d);

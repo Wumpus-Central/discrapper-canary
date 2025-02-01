@@ -1,12 +1,12 @@
 e.exports = {
-    divider: 'divider_b767ed',
-    private: 'private_b767ed',
-    instructions: 'instructions_b767ed',
-    emptyState: 'emptyState_b767ed',
-    emptyStateHeader: 'emptyStateHeader_b767ed',
-    emptyStateIcon: 'emptyStateIcon_b767ed',
-    emptyStateIconContainer: 'emptyStateIconContainer_b767ed',
-    emptyStateStars: 'emptyStateStars_b767ed',
-    emptyStateSubtext: 'emptyStateSubtext_b767ed',
-    container: 'container_b767ed'
+    divider: 'divider__7641b',
+    private: 'private__7641b',
+    instructions: 'instructions__7641b',
+    emptyState: 'emptyState__7641b',
+    emptyStateHeader: 'emptyStateHeader__7641b',
+    emptyStateIcon: 'emptyStateIcon__7641b',
+    emptyStateIconContainer: 'emptyStateIconContainer__7641b',
+    emptyStateStars: 'emptyStateStars__7641b',
+    emptyStateSubtext: 'emptyStateSubtext__7641b',
+    container: 'container__7641b'
 };

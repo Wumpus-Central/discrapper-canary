@@ -1,14 +1,14 @@
 t.exports = {
-    header: 'header_a62824',
-    emailHeaderImg: 'emailHeaderImg_a62824',
-    wumpusExclamationImg: 'wumpusExclamationImg_a62824',
-    title: 'title_a62824',
-    subtitle: 'subtitle_a62824',
-    description: 'description_a62824',
-    tooltip: 'tooltip_a62824',
-    modalCloseButton: 'modalCloseButton_a62824',
-    modalFooter: 'modalFooter_a62824',
-    content: 'content_a62824',
-    help: 'help_a62824',
-    password: 'password_a62824'
+    header: 'header_ad198f',
+    emailHeaderImg: 'emailHeaderImg_ad198f',
+    wumpusExclamationImg: 'wumpusExclamationImg_ad198f',
+    title: 'title_ad198f',
+    subtitle: 'subtitle_ad198f',
+    description: 'description_ad198f',
+    tooltip: 'tooltip_ad198f',
+    modalCloseButton: 'modalCloseButton_ad198f',
+    modalFooter: 'modalFooter_ad198f',
+    content: 'content_ad198f',
+    help: 'help_ad198f',
+    password: 'password_ad198f'
 };

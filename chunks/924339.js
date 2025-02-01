@@ -1,8 +1,8 @@
-e.r(t), e(411104);
-var n = e(200651);
+e.r(r), e.d(r, { default: () => O }), e(411104);
+var o = e(200651);
 e(192379);
-var o = e(512722),
-    a = e.n(o),
+var n = e(512722),
+    a = e.n(n),
     l = e(593473),
     i = e(186231),
     u = e(159277),
@@ -17,69 +17,69 @@ var o = e(512722),
     v = e(787025),
     _ = e(591759),
     w = e(981631),
-    f = e(602091);
-let L = new I.Z('LinkAuthorize');
-async function P(r, t, e, n) {
-    var o, l, i, u, s;
+    L = e(602091);
+let P = new I.Z('LinkAuthorize');
+async function N(t, r, e, o) {
+    var n, l, i, u, s;
     let A = null;
     try {
-        let { body: r } = await d.Z.authorize(n, { twoWayLinkType: c.g.WEB });
-        A = r.url;
-    } catch (r) {
-        throw Error('error at authorize with code '.concat(null !== (l = null == r ? void 0 : null === (o = r.body) || void 0 === o ? void 0 : o.code) && void 0 !== l ? l : 0));
+        let { body: t } = await d.Z.authorize(o, { twoWayLinkType: c.g.WEB });
+        A = t.url;
+    } catch (t) {
+        throw Error('error at authorize with code '.concat(null !== (l = null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.code) && void 0 !== l ? l : 0));
     }
     let I = null;
     try {
         a()(null != A, 'No URL in authorize response');
-        let { state: r } = (0, h.xp)(A);
-        a()(null != r, 'Authorize URL state query parameter must be present'), (I = r);
-    } catch (r) {
+        let { state: t } = (0, h.xp)(A);
+        a()(null != t, 'Authorize URL state query parameter must be present'), (I = t);
+    } catch (t) {
         throw Error('error at authorize parsing callback params');
     }
     try {
-        let o = await d.Z.completeTwoWayLink(n, r, t, I, e);
-        return null == o ? void 0 : null === (i = o.body) || void 0 === i ? void 0 : i.redirect;
-    } catch (r) {
-        throw Error('error at callback with code '.concat(null !== (s = null == r ? void 0 : null === (u = r.body) || void 0 === u ? void 0 : u.code) && void 0 !== s ? s : 0));
+        let n = await d.Z.completeTwoWayLink(o, t, r, I, e);
+        return null == n ? void 0 : null === (i = n.body) || void 0 === i ? void 0 : i.redirect;
+    } catch (t) {
+        throw Error('error at callback with code '.concat(null !== (s = null == t ? void 0 : null === (u = t.body) || void 0 === u ? void 0 : u.code) && void 0 !== s ? s : 0));
     }
 }
-function N(r) {
-    let { platformType: t } = r;
+function f(t) {
+    let { platformType: r } = t;
     (0, s.Z)();
     let e = (0, p.y)(window.location.search),
-        { code: o, token_redirect_uri: a } = l.parse(window.location.search),
-        u = async (r) => {
-            let { location: e } = r;
+        { code: n, token_redirect_uri: a } = l.parse(window.location.search),
+        u = async (t) => {
+            let { location: e } = t;
             if (null == e) return;
-            let { error: n } = l.parse(e),
+            let { error: o } = l.parse(e),
                 u = null;
-            if (null == n && null != o)
+            if (null == o && null != n)
                 try {
-                    u = await P(e, o, a, t);
-                } catch (t) {
+                    u = await N(e, n, a, r);
+                } catch (r) {
                     var c;
-                    L.error('Error Creating Discord link', null == t ? void 0 : t.message);
-                    let r = _.Z.toURLSafe(e);
-                    if (null == r) return;
-                    r.searchParams.delete('code'), r.searchParams.set('error', 'two_way_link_error'), r.searchParams.set('error_description', null !== (c = null == t ? void 0 : t.message) && void 0 !== c ? c : 'unknown_error'), (e = r.toString());
+                    P.error('Error Creating Discord link', null == r ? void 0 : r.message);
+                    let t = _.Z.toURLSafe(e);
+                    if (null == t) return;
+                    t.searchParams.delete('code'), t.searchParams.set('error', 'two_way_link_error'), t.searchParams.set('error_description', null !== (c = null == r ? void 0 : r.message) && void 0 !== c ? c : 'unknown_error'), (e = t.toString());
                 }
             window.location = null == u || u === i.b.OAUTH_REDIRECT ? e : u;
         };
-    return (0, n.jsx)(v.G, {
+    return (0, o.jsx)(v.G, {
         removeChildWrapper: !0,
-        children: (0, n.jsx)(T.OAuth2AuthorizeModal, {
-            transitionState: f.Dv.ENTERED,
+        children: (0, o.jsx)(T.OAuth2AuthorizeModal, {
+            transitionState: L.Dv.ENTERED,
             ...e,
             showLogout: !0,
             callback: u
         })
     });
 }
-t.default = (0, A.e)(function (r) {
-    let { match: t } = r,
-        e = t.params.type,
-        { client_id: o = '' } = l.parse(window.location.search),
-        a = e === w.ABu.PLAYSTATION && o === u.t.PLAYSTATION_APPLICATION_ID,
-        i = e === w.ABu.PLAYSTATION_STAGING && o === u.t.PLAYSTATION_STAGING_APPLICATION_ID;
-    return a || i ? (0, n.jsx)(N, { platformType: e }) : null;
+let O = (0, A.e)(function (t) {
+    let { match: r } = t,
+        e = r.params.type,
+        { client_id: n = '' } = l.parse(window.location.search),
+        a = e === w.ABu.PLAYSTATION && n === u.t.PLAYSTATION_APPLICATION_ID,
+        i = e === w.ABu.PLAYSTATION_STAGING && n === u.t.PLAYSTATION_STAGING_APPLICATION_ID;
+    return a || i ? (0, o.jsx)(f, { platformType: e }) : null;
 });

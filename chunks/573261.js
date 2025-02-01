@@ -1,53 +1,53 @@
-var i = r(544891),
-    a = r(626135);
-function o(e, n, r) {
-    let { trackedActionData: i, ...o } = n,
+n.d(t, { Z: () => s });
+var i = n(544891),
+    r = n(626135);
+function a(e, t, n) {
+    let { trackedActionData: i, ...a } = t,
         s = {
-            url: o.url,
-            request_method: r
+            url: a.url,
+            request_method: n
         };
-    return new Promise((n, r) => {
-        e(o)
+    return new Promise((t, n) => {
+        e(a)
             .then((e) => {
-                let r = i.properties;
-                'function' == typeof i.properties && (r = i.properties(e)),
-                    (0, a.trackNetworkAction)(i.event, {
+                let n = i.properties;
+                'function' == typeof i.properties && (n = i.properties(e)),
+                    (0, r.trackNetworkAction)(i.event, {
                         status_code: e.status,
                         ...s,
-                        ...r
+                        ...n
                     }),
-                    n(e);
+                    t(e);
             })
             .catch((e) => {
-                var n, o;
-                let l = i.properties;
-                'function' == typeof i.properties && (l = i.properties(e)),
-                    (0, a.trackNetworkAction)(i.event, {
+                var t, a;
+                let o = i.properties;
+                'function' == typeof i.properties && (o = i.properties(e)),
+                    (0, r.trackNetworkAction)(i.event, {
                         status_code: e.status,
-                        error_code: null === (n = e.body) || void 0 === n ? void 0 : n.code,
-                        error_message: null === (o = e.body) || void 0 === o ? void 0 : o.message,
+                        error_code: null === (t = e.body) || void 0 === t ? void 0 : t.code,
+                        error_message: null === (a = e.body) || void 0 === a ? void 0 : a.message,
                         ...s,
-                        ...l
+                        ...o
                     }),
-                    r(e);
+                    n(e);
             });
     });
 }
 let s = {
-    get: function e(e) {
-        return o(i.tn.get, e, 'get');
+    get: function (e) {
+        return a(i.tn.get, e, 'get');
     },
-    post: function e(e) {
-        return o(i.tn.post, e, 'post');
+    post: function (e) {
+        return a(i.tn.post, e, 'post');
     },
-    put: function e(e) {
-        return o(i.tn.put, e, 'put');
+    put: function (e) {
+        return a(i.tn.put, e, 'put');
     },
-    patch: function e(e) {
-        return o(i.tn.patch, e, 'patch');
+    patch: function (e) {
+        return a(i.tn.patch, e, 'patch');
     },
-    delete: function e(e) {
-        return o(i.tn.del, e, 'del');
+    delete: function (e) {
+        return a(i.tn.del, e, 'del');
     }
 };
-n.Z = s;

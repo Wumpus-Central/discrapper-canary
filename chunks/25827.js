@@ -20,20 +20,20 @@ function m(e) {
         { enabled: n, cameraUnavailable: a, onChange: s, onCameraUnavailable: d, hasPermission: _, children: h, channelLimitReached: m = !1, join: g } = e,
         E = (0, c.bp)(),
         v = a ? () => d() : () => s(!e.enabled, E),
-        { Component: y, play: I, events: b } = (0, u.o)(g || n ? 'disable' : 'enable');
+        { Component: y, play: I, events: T } = (0, u.o)(g || n ? 'disable' : 'enable');
     r.useEffect(() => () => I(), [n, I]);
-    let T = E === p.IlC.POPOUT ? (n ? o.O : l.A) : y;
+    let b = E === p.IlC.POPOUT ? (n ? o.O : l.A) : y;
     return (0, i.jsx)(i.Fragment, {
         children: h({
             onClick: v,
             isActive: n,
             disabled: !n && (!_ || m),
-            iconComponent: T,
+            iconComponent: b,
             iconColor: 'currentColor',
             label: t,
             unavailable: a,
-            onMouseEnter: g ? void 0 : b.onMouseEnter,
-            onMouseLeave: g ? void 0 : b.onMouseLeave
+            onMouseEnter: g ? void 0 : T.onMouseEnter,
+            onMouseLeave: g ? void 0 : T.onMouseLeave
         })
     });
 }

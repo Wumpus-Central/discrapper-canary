@@ -1,5 +1,5 @@
 e.exports = {
-    keybindIndicator: 'keybindIndicator_a49331',
-    keybindIcon: 'keybindIcon_a49331',
-    keybindIndicatorText: 'keybindIndicatorText_a49331'
+    keybindIndicator: 'keybindIndicator__1921e',
+    keybindIcon: 'keybindIcon__1921e',
+    keybindIndicatorText: 'keybindIndicatorText__1921e'
 };

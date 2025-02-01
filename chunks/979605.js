@@ -1,10 +1,10 @@
-var n = Object.prototype.hasOwnProperty;
-function r(e) {
-    if (!(this instanceof r)) throw TypeError("Constructor PseudoMap requires 'new'");
+var t = Object.prototype.hasOwnProperty;
+function n(e) {
+    if (!(this instanceof n)) throw TypeError("Constructor PseudoMap requires 'new'");
     if ((this.clear(), e)) {
-        if (e instanceof r || ('function' == typeof Map && e instanceof Map))
-            e.forEach(function (e, n) {
-                this.set(n, e);
+        if (e instanceof n || ('function' == typeof Map && e instanceof Map))
+            e.forEach(function (e, t) {
+                this.set(t, e);
             }, this);
         else if (Array.isArray(e))
             e.forEach(function (e) {
@@ -13,45 +13,45 @@ function r(e) {
         else throw TypeError('invalid argument');
     }
 }
-function i(e, n) {
-    return e === n || (e != e && n != n);
+function i(e, t) {
+    return e === t || (e != e && t != t);
 }
-function a(e, n, r) {
-    (this.key = e), (this.value = n), (this._index = r);
+function r(e, t, n) {
+    (this.key = e), (this.value = t), (this._index = n);
 }
-function o(e, r) {
-    for (var a = 0, o = '_' + r, s = o; n.call(e, s); s = o + a++) if (i(e[s].key, r)) return e[s];
+function a(e, n) {
+    for (var r = 0, a = '_' + n, s = a; t.call(e, s); s = a + r++) if (i(e[s].key, n)) return e[s];
 }
-function s(e, r, o) {
-    for (var s = 0, l = '_' + r, u = l; n.call(e, u); u = l + s++)
-        if (i(e[u].key, r)) {
-            e[u].value = o;
+function s(e, n, a) {
+    for (var s = 0, o = '_' + n, l = o; t.call(e, l); l = o + s++)
+        if (i(e[l].key, n)) {
+            e[l].value = a;
             return;
         }
-    e.size++, (e[u] = new a(r, o, u));
+    e.size++, (e[l] = new r(n, a, l));
 }
-(e.exports = r),
-    (r.prototype.forEach = function (e, n) {
-        (n = n || this),
-            Object.keys(this._data).forEach(function (r) {
-                'size' !== r && e.call(n, this._data[r].value, this._data[r].key);
+(e.exports = n),
+    (n.prototype.forEach = function (e, t) {
+        (t = t || this),
+            Object.keys(this._data).forEach(function (n) {
+                'size' !== n && e.call(t, this._data[n].value, this._data[n].key);
             }, this);
     }),
-    (r.prototype.has = function (e) {
-        return !!o(this._data, e);
+    (n.prototype.has = function (e) {
+        return !!a(this._data, e);
     }),
-    (r.prototype.get = function (e) {
-        var n = o(this._data, e);
-        return n && n.value;
+    (n.prototype.get = function (e) {
+        var t = a(this._data, e);
+        return t && t.value;
     }),
-    (r.prototype.set = function (e, n) {
-        s(this._data, e, n);
+    (n.prototype.set = function (e, t) {
+        s(this._data, e, t);
     }),
-    (r.prototype.delete = function (e) {
-        var n = o(this._data, e);
-        n && (delete this._data[n._index], this._data.size--);
+    (n.prototype.delete = function (e) {
+        var t = a(this._data, e);
+        t && (delete this._data[t._index], this._data.size--);
     }),
-    (r.prototype.clear = function () {
+    (n.prototype.clear = function () {
         var e = Object.create(null);
         (e.size = 0),
             Object.defineProperty(this, '_data', {
@@ -61,7 +61,7 @@ function s(e, r, o) {
                 writable: !1
             });
     }),
-    Object.defineProperty(r.prototype, 'size', {
+    Object.defineProperty(n.prototype, 'size', {
         get: function () {
             return this._data.size;
         },
@@ -69,9 +69,9 @@ function s(e, r, o) {
         enumerable: !0,
         configurable: !0
     }),
-    (r.prototype.values =
-        r.prototype.keys =
-        r.prototype.entries =
+    (n.prototype.values =
+        n.prototype.keys =
+        n.prototype.entries =
             function () {
                 throw Error('iterators are not implemented in this version');
             });

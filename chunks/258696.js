@@ -23,8 +23,8 @@ var i = n(200651),
     v = n(594174),
     y = n(74538),
     I = n(94161),
-    b = n(9277),
-    T = n(58995),
+    T = n(9277),
+    b = n(58995),
     S = n(655678),
     A = n(897291),
     N = n(466711),
@@ -38,7 +38,7 @@ function L(e) {
         { enabled: r } = p.O.useExperiment({ location: 'gift-button' }),
         a = (0, m.Z)();
     return r
-        ? (0, i.jsx)(T.Z, {
+        ? (0, i.jsx)(b.Z, {
               disabled: t,
               channel: n
           })
@@ -54,7 +54,7 @@ function L(e) {
             });
 }
 function P(e) {
-    var t, n, r, p, m, g, E, T, A;
+    var t, n, r, p, m, g, E, b, A;
     let { type: N, disabled: P, channel: M, handleSubmit: k, isEmpty: U, showAllButtons: G, children: B } = e,
         Z = (0, s.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
         F = w(M.id, N, U),
@@ -114,12 +114,12 @@ function P(e) {
                     'gift'
                 )
             ),
-        (null === (T = N.gifs) || void 0 === T ? void 0 : T.button) != null &&
+        (null === (b = N.gifs) || void 0 === b ? void 0 : b.button) != null &&
             null == V &&
             G &&
             Y.push(
                 (0, i.jsx)(
-                    b.Z,
+                    T.Z,
                     {
                         disabled: P,
                         type: N

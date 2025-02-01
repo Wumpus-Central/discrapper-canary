@@ -1,10 +1,10 @@
 e.exports = {
-    tryItOutSection: 'tryItOutSection_eb2d2c',
-    tryItOutLayout: 'tryItOutLayout_eb2d2c',
-    description: 'description_eb2d2c',
-    premiumIcon: 'premiumIcon_eb2d2c',
-    editor: 'editor_eb2d2c',
-    customizationSection: 'customizationSection_eb2d2c',
-    premiumTier2Divider: 'premiumTier2Divider_eb2d2c',
-    floatingUpsell: 'floatingUpsell_eb2d2c'
+    tryItOutSection: 'tryItOutSection__9d295',
+    tryItOutLayout: 'tryItOutLayout__9d295',
+    description: 'description__9d295',
+    premiumIcon: 'premiumIcon__9d295',
+    editor: 'editor__9d295',
+    customizationSection: 'customizationSection__9d295',
+    premiumTier2Divider: 'premiumTier2Divider__9d295',
+    floatingUpsell: 'floatingUpsell__9d295'
 };

@@ -1,6 +1,6 @@
 e.exports = {
-    container: 'container_ab06ed',
-    title: 'title_ab06ed',
-    subtitle: 'subtitle_ab06ed',
-    img: 'img_ab06ed'
+    container: 'container__3639b',
+    title: 'title__3639b',
+    img: 'img__3639b',
+    subtitle: 'subtitle__3639b'
 };

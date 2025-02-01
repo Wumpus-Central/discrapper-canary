@@ -1,12 +1,12 @@
 e.exports = {
-    shopBanner: 'shopBanner_be5025',
-    animationAsset: 'animationAsset_be5025',
-    categoryLogo: 'categoryLogo_be5025',
-    discordLogo: 'discordLogo_be5025',
-    discordIcon: 'discordIcon_be5025',
-    discordWordmark: 'discordWordmark_be5025',
-    summary: 'summary_be5025',
-    blackSummary: 'blackSummary_be5025',
-    limitedTimeBadge: 'limitedTimeBadge_be5025',
-    getPremiumHook: 'getPremiumHook_be5025'
+    shopBanner: 'shopBanner__7f856',
+    animationAsset: 'animationAsset__7f856',
+    categoryLogo: 'categoryLogo__7f856',
+    discordLogo: 'discordLogo__7f856',
+    discordIcon: 'discordIcon__7f856',
+    discordWordmark: 'discordWordmark__7f856',
+    summary: 'summary__7f856',
+    blackSummary: 'blackSummary__7f856',
+    limitedTimeBadge: 'limitedTimeBadge__7f856',
+    getPremiumHook: 'getPremiumHook__7f856'
 };

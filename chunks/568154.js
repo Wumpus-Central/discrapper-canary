@@ -1,7 +1,6 @@
 e.d(i, {
-    h: function () {
-        return w;
-    }
+    Z: () => x,
+    h: () => w
 }),
     e(47120);
 var s,
@@ -16,7 +15,7 @@ var s,
     c = e(686694),
     p = e(898625),
     m = e(407530);
-function f(t, i, e) {
+function v(t, i, e) {
     return (
         i in t
             ? Object.defineProperty(t, i, {
@@ -29,7 +28,7 @@ function f(t, i, e) {
         t
     );
 }
-let v = (0, d.Mg)(l.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
+let f = (0, d.Mg)(l.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
 function g(t, i) {
     let { innerWidth: e, innerHeight: s } = window;
     if (0 === t || 0 === i) return null;
@@ -92,7 +91,7 @@ class b extends (s = h.PureComponent) {
         window.removeEventListener('resize', this.handleResize);
     }
     calculateShowWaveAnimation() {
-        return window.innerWidth > v;
+        return window.innerWidth > f;
     }
     renderSplashArt() {
         let { splash: t, embedded: i } = this.props,
@@ -149,7 +148,7 @@ class b extends (s = h.PureComponent) {
     }
     constructor(...t) {
         super(...t),
-            f(this, 'state', {
+            v(this, 'state', {
                 naturalWidth: 0,
                 naturalHeight: 0,
                 width: 0,
@@ -157,7 +156,7 @@ class b extends (s = h.PureComponent) {
                 showWaveAnimation: this.calculateShowWaveAnimation(),
                 splashLoaded: !1
             }),
-            f(this, 'handleResize', () => {
+            v(this, 'handleResize', () => {
                 let { naturalWidth: t, naturalHeight: i } = this.state,
                     e = g(t, i),
                     s = this.calculateShowWaveAnimation();
@@ -168,7 +167,7 @@ class b extends (s = h.PureComponent) {
                       })
                     : this.setState({ showWaveAnimation: s });
             }),
-            f(this, 'handleLoad', (t) => {
+            v(this, 'handleLoad', (t) => {
                 let { currentTarget: i } = t,
                     { naturalWidth: e, naturalHeight: s } = i,
                     n = g(e, s);
@@ -176,4 +175,5 @@ class b extends (s = h.PureComponent) {
             });
     }
 }
-f(b, 'defaultProps', { embedded: !1 }), (i.Z = 12633 == e.j ? b : null);
+v(b, 'defaultProps', { embedded: !1 });
+let x = 12633 == e.j ? b : null;

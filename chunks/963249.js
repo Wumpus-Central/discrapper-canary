@@ -18,7 +18,7 @@ var r = n(97613),
     E = n(981631),
     v = n(474936);
 function y(e) {
-    let { initialPlanId: t, followupSKUInfo: r, onClose: y, onComplete: I, onSubscriptionConfirmation: b, analyticsLocations: T, analyticsObject: S, analyticsLocation: A, analyticsSourceLocation: N, isGift: C = !1, giftMessage: R, giftStyle: O, giftingOrigin: D, subscriptionTier: x, trialId: L, postSuccessGuild: P, openInvoiceId: w, applicationId: M, referralTrialOfferId: k, giftRecipient: U, returnRef: G, subscription: B, skipConfirm: Z, repeatPurchase: F } = null != e ? e : {},
+    let { initialPlanId: t, followupSKUInfo: r, onClose: y, onComplete: I, onSubscriptionConfirmation: T, analyticsLocations: b, analyticsObject: S, analyticsLocation: A, analyticsSourceLocation: N, isGift: C = !1, giftMessage: R, giftStyle: O, giftingOrigin: D, subscriptionTier: x, trialId: L, postSuccessGuild: P, openInvoiceId: w, applicationId: M, referralTrialOfferId: k, giftRecipient: U, returnRef: G, subscription: B, skipConfirm: Z, repeatPurchase: F } = null != e ? e : {},
         V = !1,
         j = (0, s.Z)(),
         H = p.default.getCurrentUser(),
@@ -45,7 +45,7 @@ function y(e) {
                     onClose: (e, t) => {
                         a(),
                             null == y || y(e),
-                            e && (null == b || b(), (0, _.I)(C, Y, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
+                            e && (null == T || T(), (0, _.I)(C, Y, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
                             l.Z.dispatch({
                                 type: 'PREMIUM_PAYMENT_MODAL_CLOSE',
                                 didSucceed: e
@@ -54,8 +54,8 @@ function y(e) {
                     onComplete: (e) => {
                         (V = !0), null == I || I(), (0, _.I)(C, Y, (0, g.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0);
                     },
-                    onSubscriptionConfirmation: b,
-                    analyticsLocations: T,
+                    onSubscriptionConfirmation: T,
+                    analyticsLocations: b,
                     analyticsObject: S,
                     analyticsLocation: A,
                     analyticsSourceLocation: N,
@@ -86,13 +86,13 @@ function y(e) {
                         sku_id: K,
                         eligible_for_trial: null != L,
                         application_id: M,
-                        location_stack: T
+                        location_stack: b
                     }),
                     (0, c.fw)(),
                     (0, u.fw)(),
                     (0, d.p)(),
                     null == y || y(V),
-                    V && (null == b || b());
+                    V && (null == T || T());
             }
         }
     );

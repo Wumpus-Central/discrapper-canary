@@ -1,7 +1,7 @@
-var i = r(67867),
-    a = r(476508),
-    o = r(228042),
-    s = r(292137);
+var i = n(67867),
+    r = n(476508),
+    a = n(228042),
+    s = n(292137);
 i(
     {
         target: 'Map',
@@ -11,12 +11,12 @@ i(
     },
     {
         findKey: function (e) {
-            var n = o(this),
-                r = a(e, arguments.length > 1 ? arguments[1] : void 0),
+            var t = a(this),
+                n = r(e, arguments.length > 1 ? arguments[1] : void 0),
                 i = s(
-                    n,
+                    t,
                     function (e, i) {
-                        if (r(e, i, n)) return { key: i };
+                        if (n(e, i, t)) return { key: i };
                     },
                     !0
                 );

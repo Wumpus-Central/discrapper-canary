@@ -1,4 +1,4 @@
 e.exports = {
-    wrapper: 'wrapper_c36ce4',
-    inner: 'inner_c36ce4'
+    wrapper: 'wrapper__02fc8',
+    inner: 'inner__02fc8'
 };

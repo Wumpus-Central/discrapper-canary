@@ -19,8 +19,8 @@ var a = n(442837),
     v = n(209747),
     y = n(598077),
     I = n(592125),
-    b = n(271383),
-    T = n(819640),
+    T = n(271383),
+    b = n(819640),
     S = n(594174),
     A = n(979651),
     N = n(509545),
@@ -138,7 +138,7 @@ function F(e) {
 function V(e, t, n) {
     var i;
     let { roles: a, nick: s, avatar: o, avatar_decoration_data: l, flags: u, premium_since: d, pending: f, joined_at: _, communication_disabled_until: p, unusual_dm_activity_until: h } = n,
-        m = b.ZP.getMember(e, t.id);
+        m = T.ZP.getMember(e, t.id);
     (!(null != m && m.nick === s && m.avatar === o && r().isEqual(m.roles, a) && (0, c.sr)(m.avatarDecoration, l)) || m.premiumSince !== d || m.isPending !== f || m.joinedAt !== _ || m.communicationDisabledUntil !== p || m.flags !== u || (null !== (i = m.unusualDMActivityUntil) && void 0 !== i ? i : null) !== (null != h ? h : null)) &&
         F({
             type: 'GUILD_MEMBER_ADD',
@@ -1127,10 +1127,10 @@ B(
         });
     }),
     G(['USER_PAYMENT_SOURCES_UPDATE'], () => {
-        T.Z.hasLayers() && (n(355467).tZ(), l.Gn(N.Z.getFetchedSKUIDs()));
+        b.Z.hasLayers() && (n(355467).tZ(), l.Gn(N.Z.getFetchedSKUIDs()));
     }),
     G(['USER_SUBSCRIPTIONS_UPDATE'], () => {
-        u.k(), T.Z.hasLayers() && n(355467).jg();
+        u.k(), b.Z.hasLayers() && n(355467).jg();
     }),
     G(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE'], (e) => {
         F({

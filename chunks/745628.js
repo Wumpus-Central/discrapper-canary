@@ -1,4 +1,4 @@
-n(47120);
+n.d(t, { Z: () => u }), n(47120);
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -8,18 +8,18 @@ var r = n(120356),
     o = n(308083),
     c = n(388032),
     d = n(240938);
-t.Z = (e) => {
+let u = (e) => {
     var t, n, r;
     let { guildId: u, handleUpdate: m, progress: h, errors: g } = e,
         { wildcardDescriptors: x, description: p } = h,
-        f = (e, t) => {
+        _ = (e, t) => {
             let n = [...x];
             (n[t] = e), m({ wildcardDescriptors: n });
         };
     return (0, i.jsxs)('div', {
         className: d.slideContent,
         children: [
-            (0, i.jsx)(s.Heading, {
+            (0, i.jsx)(s.X6q, {
                 variant: 'heading-xxl/medium',
                 className: d.title,
                 children: c.intl.string(c.t.pdVsBA)
@@ -45,7 +45,7 @@ t.Z = (e) => {
                         children: [
                             (0, i.jsx)('div', {
                                 className: d.maxWidthContainer,
-                                children: (0, i.jsx)(s.TextArea, {
+                                children: (0, i.jsx)(s.Kx8, {
                                     className: d.input,
                                     maxLength: o.Us,
                                     onChange: (e) => m({ description: e }),
@@ -78,24 +78,24 @@ t.Z = (e) => {
                             (0, i.jsxs)('div', {
                                 className: d.wildcardRow,
                                 children: [
-                                    (0, i.jsx)(s.TextInput, {
+                                    (0, i.jsx)(s.oil, {
                                         inputClassName: l()(d.input, d.wildcardInput),
                                         value: null !== (t = x[0]) && void 0 !== t ? t : '',
-                                        onChange: (e) => f(e, 0),
+                                        onChange: (e) => _(e, 0),
                                         maxLength: o.TY,
                                         placeholder: o.LK['0']
                                     }),
-                                    (0, i.jsx)(s.TextInput, {
+                                    (0, i.jsx)(s.oil, {
                                         inputClassName: l()(d.input, d.wildcardInput),
                                         value: null !== (n = x[1]) && void 0 !== n ? n : '',
-                                        onChange: (e) => f(e, 1),
+                                        onChange: (e) => _(e, 1),
                                         maxLength: o.TY,
                                         placeholder: o.LK['1']
                                     }),
-                                    (0, i.jsx)(s.TextInput, {
+                                    (0, i.jsx)(s.oil, {
                                         inputClassName: l()(d.input, d.wildcardInput),
                                         value: null !== (r = x[2]) && void 0 !== r ? r : '',
-                                        onChange: (e) => f(e, 2),
+                                        onChange: (e) => _(e, 2),
                                         maxLength: o.TY,
                                         placeholder: o.LK['2']
                                     })

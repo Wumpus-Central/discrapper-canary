@@ -1,3 +1,3 @@
-let i = r(15496),
-    a = (e, n, r) => i(e, n, r) > 0;
-e.exports = a;
+let i = n(15496),
+    r = (e, t, n) => i(e, t, n) > 0;
+e.exports = r;

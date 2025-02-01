@@ -1,4 +1,4 @@
-function n(e) {
+function t(e) {
     return {
         name: 'Julia REPL',
         contains: [
@@ -15,4 +15,4 @@ function n(e) {
         aliases: ['jldoctest']
     };
 }
-e.exports = n;
+e.exports = t;

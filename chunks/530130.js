@@ -1,11 +1,11 @@
 e.exports = {
-    analyticsCard: 'analyticsCard_d4b8cc',
-    analyticsCardTitle: 'analyticsCardTitle_d4b8cc',
-    infoIcon: 'infoIcon_d4b8cc',
-    analyticsCardContent: 'analyticsCardContent_d4b8cc',
-    analyticsCardNumber: 'analyticsCardNumber_d4b8cc',
-    analyticsCardNumberNotAvailable: 'analyticsCardNumberNotAvailable_d4b8cc',
-    analyticsCardArrowSubText: 'analyticsCardArrowSubText_d4b8cc',
-    trendingArrow: 'trendingArrow_d4b8cc',
-    trendingArrowIconDown: 'trendingArrowIconDown_d4b8cc trendingArrow_d4b8cc'
+    analyticsCard: 'analyticsCard__5931c',
+    analyticsCardTitle: 'analyticsCardTitle__5931c',
+    infoIcon: 'infoIcon__5931c',
+    analyticsCardContent: 'analyticsCardContent__5931c',
+    analyticsCardNumber: 'analyticsCardNumber__5931c',
+    analyticsCardNumberNotAvailable: 'analyticsCardNumberNotAvailable__5931c',
+    analyticsCardArrowSubText: 'analyticsCardArrowSubText__5931c',
+    trendingArrow: 'trendingArrow__5931c',
+    trendingArrowIconDown: 'trendingArrowIconDown__5931c trendingArrow__5931c'
 };

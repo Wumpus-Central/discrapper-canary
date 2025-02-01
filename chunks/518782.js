@@ -1,11 +1,11 @@
 e.exports = {
-    guildSelector: 'guildSelector_ce3dd8',
-    refreshGuildSelector: 'refreshGuildSelector_ce3dd8',
-    nitroWheel: 'nitroWheel_ce3dd8',
-    container: 'container_ce3dd8',
-    callSoundsDivider: 'callSoundsDivider_ce3dd8',
-    notice: 'notice_ce3dd8',
-    pill: 'pill_ce3dd8',
-    pillText: 'pillText_ce3dd8',
-    pillIcon: 'pillIcon_ce3dd8'
+    guildSelector: 'guildSelector_c3d948',
+    refreshGuildSelector: 'refreshGuildSelector_c3d948',
+    nitroWheel: 'nitroWheel_c3d948',
+    container: 'container_c3d948',
+    callSoundsDivider: 'callSoundsDivider_c3d948',
+    notice: 'notice_c3d948',
+    pill: 'pill_c3d948',
+    pillText: 'pillText_c3d948',
+    pillIcon: 'pillIcon_c3d948'
 };

@@ -22,9 +22,9 @@ function y(e) {
     let { onDismiss: r } = e,
         y = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         I = m.intl.string(m.t['eikz4+']),
-        b = (0, d.N)(),
-        T = (0, c.Ng)(),
-        S = (null == b ? void 0 : b.subscription_trial) != null || null != T,
+        T = (0, d.N)(),
+        b = (0, c.Ng)(),
+        S = (null == T ? void 0 : T.subscription_trial) != null || null != b,
         A = {
             object: p.qAy.BUTTON_CTA,
             section: p.jXE.SUPER_REACTION_PICKER
@@ -58,11 +58,11 @@ function y(e) {
                     S
                         ? (0, i.jsx)(f.ZP, {
                               type: h.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
-                              subscriptionTier: null !== (n = null == b ? void 0 : null === (t = b.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : h.Si.TIER_2,
+                              subscriptionTier: null !== (n = null == T ? void 0 : null === (t = T.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : h.Si.TIER_2,
                               headingText: m.intl.string(m.t.Wfl5zs),
                               analyticsLocationObject: A,
-                              discountOffer: T,
-                              trialOffer: b,
+                              discountOffer: b,
+                              trialOffer: T,
                               children: I
                           })
                         : (0, i.jsxs)(i.Fragment, {

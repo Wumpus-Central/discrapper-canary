@@ -1,8 +1,8 @@
-function n(e) {
-    let n = ['struct', 'enum', 'interface', 'union', 'group', 'import', 'using', 'const', 'annotation', 'extends', 'in', 'of', 'on', 'as', 'with', 'from', 'fixed'],
-        r = ['Void', 'Bool', 'Int8', 'Int16', 'Int32', 'Int64', 'UInt8', 'UInt16', 'UInt32', 'UInt64', 'Float32', 'Float64', 'Text', 'Data', 'AnyPointer', 'AnyStruct', 'Capability', 'List'],
+function t(e) {
+    let t = ['struct', 'enum', 'interface', 'union', 'group', 'import', 'using', 'const', 'annotation', 'extends', 'in', 'of', 'on', 'as', 'with', 'from', 'fixed'],
+        n = ['Void', 'Bool', 'Int8', 'Int16', 'Int32', 'Int64', 'UInt8', 'UInt16', 'UInt32', 'UInt64', 'Float32', 'Float64', 'Text', 'Data', 'AnyPointer', 'AnyStruct', 'Capability', 'List'],
         i = ['true', 'false'],
-        a = {
+        r = {
             variants: [
                 {
                     match: [/(struct|enum|interface)/, /\s+/, e.IDENT_RE]
@@ -20,8 +20,8 @@ function n(e) {
         name: 'Cap\u2019n Proto',
         aliases: ['capnp'],
         keywords: {
-            keyword: n,
-            type: r,
+            keyword: t,
+            type: n,
             literal: i
         },
         contains: [
@@ -37,8 +37,8 @@ function n(e) {
                 className: 'symbol',
                 begin: /@\d+\b/
             },
-            a
+            r
         ]
     };
 }
-e.exports = n;
+e.exports = t;

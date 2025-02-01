@@ -1,54 +1,54 @@
-var i = r(56135),
-    a = r(888968),
-    o = r(649786),
-    s = r(718332),
-    l = r(320114),
-    u = r(82075),
-    c = 1,
-    d = 2,
-    f = '[object Boolean]',
-    p = '[object Date]',
-    h = '[object Error]',
-    _ = '[object Map]',
-    m = '[object Number]',
-    g = '[object RegExp]',
-    E = '[object Set]',
-    v = '[object String]',
-    y = '[object Symbol]',
-    b = '[object ArrayBuffer]',
+var i = n(56135),
+    r = n(888968),
+    a = n(649786),
+    s = n(718332),
+    o = n(320114),
+    l = n(82075),
+    u = 1,
+    c = 2,
+    d = '[object Boolean]',
+    f = '[object Date]',
+    _ = '[object Error]',
+    p = '[object Map]',
+    h = '[object Number]',
+    m = '[object RegExp]',
+    g = '[object Set]',
+    E = '[object String]',
+    v = '[object Symbol]',
+    y = '[object ArrayBuffer]',
     I = '[object DataView]',
     T = i ? i.prototype : void 0,
-    S = T ? T.valueOf : void 0;
-function A(e, n, r, i, T, A, C) {
-    switch (r) {
+    b = T ? T.valueOf : void 0;
+function S(e, t, n, i, T, S, A) {
+    switch (n) {
         case I:
-            if (e.byteLength != n.byteLength || e.byteOffset != n.byteOffset) break;
-            (e = e.buffer), (n = n.buffer);
-        case b:
-            if (e.byteLength != n.byteLength || !A(new a(e), new a(n))) break;
-            return !0;
-        case f:
-        case p:
-        case m:
-            return o(+e, +n);
-        case h:
-            return e.name == n.name && e.message == n.message;
-        case g:
-        case v:
-            return e == n + '';
-        case _:
-            var N = l;
-        case E:
-            var R = i & c;
-            if ((N || (N = u), e.size != n.size && !R)) break;
-            var O = C.get(e);
-            if (O) return O == n;
-            (i |= d), C.set(e, n);
-            var D = s(N(e), N(n), i, T, A, C);
-            return C.delete(e), D;
+            if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
+            (e = e.buffer), (t = t.buffer);
         case y:
-            if (S) return S.call(e) == S.call(n);
+            if (e.byteLength != t.byteLength || !S(new r(e), new r(t))) break;
+            return !0;
+        case d:
+        case f:
+        case h:
+            return a(+e, +t);
+        case _:
+            return e.name == t.name && e.message == t.message;
+        case m:
+        case E:
+            return e == t + '';
+        case p:
+            var N = o;
+        case g:
+            var C = i & u;
+            if ((N || (N = l), e.size != t.size && !C)) break;
+            var R = A.get(e);
+            if (R) return R == t;
+            (i |= c), A.set(e, t);
+            var O = s(N(e), N(t), i, T, S, A);
+            return A.delete(e), O;
+        case v:
+            if (b) return b.call(e) == b.call(t);
     }
     return !1;
 }
-e.exports = A;
+e.exports = S;

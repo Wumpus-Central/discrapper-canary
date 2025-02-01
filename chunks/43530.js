@@ -1,5 +1,5 @@
 e.exports = {
-    backButtonInner: 'backButtonInner_e316bc',
-    backButton: 'backButton_e316bc',
-    backNotice: 'backNotice_e316bc'
+    backButtonInner: 'backButtonInner__84419',
+    backButton: 'backButton__84419',
+    backNotice: 'backNotice__84419'
 };

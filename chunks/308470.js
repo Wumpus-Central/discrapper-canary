@@ -1,4 +1,4 @@
 e.exports = {
-    gridContainer: 'gridContainer_e6c4a3',
-    spinner: 'spinner_e6c4a3'
+    gridContainer: 'gridContainer_f3e8a7',
+    spinner: 'spinner_f3e8a7'
 };

@@ -1,4 +1,4 @@
-let n = [
+let t = [
     'AASTriangle',
     'AbelianGroup',
     'Abort',
@@ -7233,67 +7233,67 @@ let n = [
     '$WolframID',
     '$WolframUUID'
 ];
-function r(e) {
-    let r = e.regex,
+function n(e) {
+    let n = e.regex,
         i = /([2-9]|[1-2]\d|[3][0-5])\^\^/,
-        a = /(\w*\.\w+|\w+\.\w*|\w+)/,
-        o = /(\d*\.\d+|\d+\.\d*|\d+)/,
-        s = r.either(r.concat(i, a), o),
-        l = /``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/,
-        u = /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/,
-        c = r.either(l, u),
-        d = /\*\^[+-]?\d+/,
-        f = {
+        r = /(\w*\.\w+|\w+\.\w*|\w+)/,
+        a = /(\d*\.\d+|\d+\.\d*|\d+)/,
+        s = n.either(n.concat(i, r), a),
+        o = /``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/,
+        l = /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/,
+        u = n.either(o, l),
+        c = /\*\^[+-]?\d+/,
+        d = {
             className: 'number',
             relevance: 0,
-            begin: r.concat(s, r.optional(c), r.optional(d))
+            begin: n.concat(s, n.optional(u), n.optional(c))
         },
-        p = /[a-zA-Z$][a-zA-Z0-9$]*/,
-        h = new Set(n),
-        _ = {
+        f = /[a-zA-Z$][a-zA-Z0-9$]*/,
+        _ = new Set(t),
+        p = {
             variants: [
                 {
                     className: 'builtin-symbol',
-                    begin: p,
-                    'on:begin': (e, n) => {
-                        !h.has(e[0]) && n.ignoreMatch();
+                    begin: f,
+                    'on:begin': (e, t) => {
+                        _.has(e[0]) || t.ignoreMatch();
                     }
                 },
                 {
                     className: 'symbol',
                     relevance: 0,
-                    begin: p
+                    begin: f
                 }
             ]
         },
-        m = {
+        h = {
             className: 'named-character',
             begin: /\\\[[$a-zA-Z][$a-zA-Z0-9]+\]/
         },
-        g = {
+        m = {
             className: 'operator',
             relevance: 0,
             begin: /[+\-*/,;.:@~=><&|_`'^?!%]+/
         },
-        E = {
+        g = {
             className: 'pattern',
             relevance: 0,
             begin: /([a-zA-Z$][a-zA-Z0-9$]*)?_+([a-zA-Z$][a-zA-Z0-9$]*)?/
         },
-        v = {
+        E = {
             className: 'slot',
             relevance: 0,
             begin: /#[a-zA-Z$][a-zA-Z0-9$]*|#+[0-9]?/
         },
-        y = {
+        v = {
             className: 'brace',
             relevance: 0,
             begin: /[[\](){}]/
         },
-        b = {
+        y = {
             className: 'message-name',
             relevance: 0,
-            begin: r.concat('::', p)
+            begin: n.concat('::', f)
         };
     return {
         name: 'Mathematica',
@@ -7307,7 +7307,7 @@ function r(e) {
             'builtin-symbol': 'built_in',
             'message-name': 'string'
         },
-        contains: [e.COMMENT(/\(\*/, /\*\)/, { contains: ['self'] }), E, v, b, _, m, e.QUOTE_STRING_MODE, f, g, y]
+        contains: [e.COMMENT(/\(\*/, /\*\)/, { contains: ['self'] }), g, E, y, p, h, e.QUOTE_STRING_MODE, d, m, v]
     };
 }
-e.exports = r;
+e.exports = n;

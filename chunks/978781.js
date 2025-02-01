@@ -23,8 +23,8 @@ var i = n(200651),
     v = n(572397),
     y = n(705262),
     I = n(436774),
-    b = n(768762),
-    T = n(197115),
+    T = n(768762),
+    b = n(197115),
     S = n(727939),
     A = n(981631),
     N = n(921944),
@@ -120,11 +120,11 @@ function P(e) {
                             size: u.zxk.Sizes.NONE,
                             onClick: _,
                             'aria-label': p,
-                            children: (0, i.jsx)(b.Z, { direction: b.Z.Directions.LEFT })
+                            children: (0, i.jsx)(T.Z, { direction: T.Z.Directions.LEFT })
                         })
                     }),
                     a &&
-                        (0, i.jsx)(T.Z, {
+                        (0, i.jsx)(b.Z, {
                             className: O.footerButton,
                             subscriptionTier: C.Si.TIER_2,
                             showGradient: !0,
@@ -160,7 +160,7 @@ function w(e) {
             c && m(), f && (0, _.O7)();
         }, [c, f, m]),
         I = (0, d.Z)(null, h ? y : A.dG4),
-        b = r.useCallback(() => {
+        T = r.useCallback(() => {
             (0, _.G8)(), (0, g.Mo)(), y(), null == n || n(N.L.DISMISS);
         }, [y, n]);
     return (0, i.jsx)(S.Z, {
@@ -183,7 +183,7 @@ function w(e) {
                                     className: O.closeContainer,
                                     innerClassName: O.closeInner,
                                     withCircleBackground: !0,
-                                    onClick: b
+                                    onClick: T
                                 })
                             ]
                         }),
@@ -205,7 +205,7 @@ function w(e) {
                 (0, i.jsx)(P, {
                     tab: a,
                     isPreview: h,
-                    onClose: b,
+                    onClose: T,
                     isCoachmark: !1
                 })
             ]

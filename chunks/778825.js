@@ -22,10 +22,10 @@ let v = g.QZA.CLOSED,
 function I(e) {
     (d = e.guild), (v = g.QZA.OPEN), (y = {}), (f = e.source), (_ = e.analyticsLocations);
 }
-function b() {
+function T() {
     (v = g.QZA.CLOSED), (y = {}), (f = void 0), (_ = []);
 }
-function T() {
+function b() {
     (v = g.QZA.SUBMITTING), (y = {});
 }
 function S(e) {
@@ -84,7 +84,7 @@ function G() {
     y = {};
 }
 function B() {
-    M(), b();
+    M(), T();
 }
 class Z extends (p = h.ZP.Store) {
     getFormState() {
@@ -153,7 +153,7 @@ let F = new Z(m.Z, {
     GUILD_IDENTITY_SETTINGS_INIT: I,
     GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: B,
     GUILD_IDENTITY_SETTINGS_SET_GUILD: S,
-    GUILD_IDENTITY_SETTINGS_SUBMIT: T,
+    GUILD_IDENTITY_SETTINGS_SUBMIT: b,
     GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: A,
     USER_PROFILE_UPDATE_FAILURE: N,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: C,

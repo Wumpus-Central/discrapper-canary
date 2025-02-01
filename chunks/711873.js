@@ -1,4 +1,4 @@
-var n = {
+var t = {
         childContextTypes: !0,
         contextTypes: !0,
         defaultProps: !0,
@@ -8,7 +8,7 @@ var n = {
         propTypes: !0,
         type: !0
     },
-    r = {
+    n = {
         name: !0,
         length: !0,
         prototype: !0,
@@ -17,14 +17,14 @@ var n = {
         arity: !0
     },
     i = 'function' == typeof Object.getOwnPropertySymbols;
-e.exports = function (e, a, o) {
-    if ('string' != typeof a) {
-        var s = Object.getOwnPropertyNames(a);
-        i && (s = s.concat(Object.getOwnPropertySymbols(a)));
-        for (var l = 0; l < s.length; ++l)
-            if (!n[s[l]] && !r[s[l]] && (!o || !o[s[l]]))
+e.exports = function (e, r, a) {
+    if ('string' != typeof r) {
+        var s = Object.getOwnPropertyNames(r);
+        i && (s = s.concat(Object.getOwnPropertySymbols(r)));
+        for (var o = 0; o < s.length; ++o)
+            if (!t[s[o]] && !n[s[o]] && (!a || !a[s[o]]))
                 try {
-                    e[s[l]] = a[s[l]];
+                    e[s[o]] = r[s[o]];
                 } catch (e) {}
     }
     return e;

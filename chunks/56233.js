@@ -1,5 +1,5 @@
 e.exports = {
-    wrapper: 'wrapper_c34599',
-    instructions: 'instructions_c34599',
-    rewardTile: 'rewardTile_c34599'
+    wrapper: 'wrapper_b76891',
+    copy: 'copy_b76891',
+    rewardTile: 'rewardTile_b76891'
 };

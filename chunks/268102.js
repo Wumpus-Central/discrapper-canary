@@ -1,5 +1,5 @@
 e.exports = {
-    mainContainer: 'mainContainer_dc8d93',
-    compact: 'compact_dc8d93',
-    actions: 'actions_dc8d93'
+    mainContainer: 'mainContainer__844a1',
+    compact: 'compact__844a1',
+    actions: 'actions__844a1'
 };

@@ -30,11 +30,11 @@ let m = {},
     v = {},
     y = !1,
     I = !1,
-    b = new Set(),
     T = new Set(),
+    b = new Set(),
     S = {};
 function A() {
-    (m = {}), (E = {}), (v = {}), (y = !1), (I = !1), (b = new Set()), (T = new Set());
+    (m = {}), (E = {}), (v = {}), (y = !1), (I = !1), (T = new Set()), (b = new Set());
 }
 function N(e) {
     (m[e.id] = u.Z.createFromServer(e)), null == E[e.sku_id] && (E[e.sku_id] = new Set()), null == v[e.application_id] && (v[e.application_id] = new Set()), null != e.subscription_id && (null == S[e.subscription_id] && (S[e.subscription_id] = new Set()), S[e.subscription_id].add(e.id)), v[e.application_id].add(e.id), E[e.sku_id].add(e.id);
@@ -54,11 +54,11 @@ function R(e) {
 }
 function O(e) {
     let { applicationId: t } = e;
-    b.add(t);
+    T.add(t);
 }
 function D(e) {
     let { applicationId: t, entitlements: n } = e;
-    for (let e of (b.delete(t), T.add(t), n)) !0 !== e.consumed && N(e);
+    for (let e of (T.delete(t), b.add(t), n)) !0 !== e.consumed && N(e);
 }
 function x(e) {
     let { entitlements: t } = e;
@@ -120,10 +120,10 @@ class Z extends (i = o.yh) {
         return I;
     }
     get applicationIdsFetching() {
-        return b;
+        return T;
     }
     get applicationIdsFetched() {
-        return T;
+        return b;
     }
     isFetchingForApplication(e) {
         return this.fetchingAllEntitlements || (null != e && this.applicationIdsFetching.has(e));
@@ -146,12 +146,12 @@ class Z extends (i = o.yh) {
                 let n = m[t];
                 if (null != n && n.isValid(e, f.Z, i)) return !0;
             }
-        if (T.has(n)) return !1;
+        if (b.has(n)) return !1;
         let a = null != i ? c.Z.getLibraryApplication(n, i) : c.Z.getActiveLibraryApplication(n);
         return !!(null != a && a.sku.id === t && (0, d.Je)(a)) || null;
     }
     hasFetchedForApplicationIds(e) {
-        return e.every((e) => T.has(e));
+        return e.every((e) => b.has(e));
     }
     getFractionalPremium(e) {
         var t;

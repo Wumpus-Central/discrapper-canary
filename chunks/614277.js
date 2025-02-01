@@ -25,11 +25,11 @@ function p(e) {
 function h(e) {
     var t, n, a, o, u, h;
     let { header: m, isLargeModal: g, stepProps: E } = p(e),
-        { step: v, stepConfigs: y, setBodyNode: I, setFooterNode: b, setModalOverlayNode: T, setReadySlideId: S } = (0, d.JL)(),
+        { step: v, stepConfigs: y, setBodyNode: I, setFooterNode: T, setModalOverlayNode: b, setReadySlideId: S } = (0, d.JL)(),
         A = y.find((e) => e.key === v);
     r.useEffect(() => {
-        T(null);
-    }, [v, T]),
+        b(null);
+    }, [v, b]),
         l()(null != A, 'Unknown step for current payment flow.');
     let N = null !== (u = null == A ? void 0 : null === (t = A.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
         C = null == A ? void 0 : null === (n = A.options) || void 0 === n ? void 0 : n.bodyClassName,
@@ -69,8 +69,8 @@ function h(e) {
                                           )
                                   })
                               }),
-                              (0, i.jsx)('div', { ref: (e) => b(e) }),
-                              (0, i.jsx)('div', { ref: (e) => T(e) })
+                              (0, i.jsx)('div', { ref: (e) => T(e) }),
+                              (0, i.jsx)('div', { ref: (e) => b(e) })
                           ]
                       })
             ]

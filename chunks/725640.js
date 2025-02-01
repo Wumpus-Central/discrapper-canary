@@ -1,4 +1,4 @@
 e.exports = {
-    assetContainer: 'assetContainer_e61982',
-    closeIcon: 'closeIcon_e61982'
+    assetContainer: 'assetContainer__99d56',
+    closeIcon: 'closeIcon__99d56'
 };

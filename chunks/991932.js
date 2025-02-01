@@ -1,5 +1,5 @@
 e.exports = {
-    cooldownWrapper: 'cooldownWrapper_fbe485',
-    slowModeIcon: 'slowModeIcon_fbe485',
-    leadingIcon: 'leadingIcon_fbe485'
+    cooldownWrapper: 'cooldownWrapper__7391f',
+    slowModeIcon: 'slowModeIcon__7391f',
+    leadingIcon: 'leadingIcon__7391f'
 };

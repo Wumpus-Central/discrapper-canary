@@ -1,35 +1,35 @@
-r(535213)();
-var i = r(245252),
-    a = r(665855),
-    o = r(247498),
-    s = r(350506),
-    l = r(665679),
-    u = r(705806),
-    c = u(l('%Promise.all%')),
-    d = u(l('%Promise.reject%'));
+n(535213)();
+var i = n(245252),
+    r = n(665855),
+    a = n(247498),
+    s = n(350506),
+    o = n(665679),
+    l = n(705806),
+    u = l(o('%Promise.all%')),
+    c = l(o('%Promise.reject%'));
 e.exports = function (e) {
-    var n = this;
-    if ('Object' !== a(n)) throw TypeError('`this` value must be an object');
-    return c(
-        n,
-        s(o(e), function (e) {
-            var r = function (e) {
+    var t = this;
+    if ('Object' !== r(t)) throw TypeError('`this` value must be an object');
+    return u(
+        t,
+        s(a(e), function (e) {
+            var n = function (e) {
                     return {
                         status: 'fulfilled',
                         value: e
                     };
                 },
-                a = function (e) {
+                r = function (e) {
                     return {
                         status: 'rejected',
                         reason: e
                     };
                 },
-                o = i(n, e);
+                a = i(t, e);
             try {
-                return o.then(r, a);
+                return a.then(n, r);
             } catch (e) {
-                return d(n, e);
+                return c(t, e);
             }
         })
     );

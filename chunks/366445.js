@@ -1,34 +1,34 @@
-let i = r(318655),
-    a = r(728734),
-    o = r(689118);
-function s(e, n) {
-    (this.name = e), (this.body = n), (this.decoders = {}), (this.encoders = {});
+let i = n(318655),
+    r = n(728734),
+    a = n(689118);
+function s(e, t) {
+    (this.name = e), (this.body = t), (this.decoders = {}), (this.encoders = {});
 }
-(n.define = function (e, n) {
-    return new s(e, n);
+(t.define = function (e, t) {
+    return new s(e, t);
 }),
     (s.prototype._createNamed = function (e) {
-        let n = this.name;
-        function r(e) {
-            this._initNamed(e, n);
+        let t = this.name;
+        function n(e) {
+            this._initNamed(e, t);
         }
         return (
-            o(r, e),
-            (r.prototype._initNamed = function (n, r) {
-                e.call(this, n, r);
+            a(n, e),
+            (n.prototype._initNamed = function (t, n) {
+                e.call(this, t, n);
             }),
-            new r(this)
+            new n(this)
         );
     }),
     (s.prototype._getDecoder = function (e) {
-        return (e = e || 'der'), !this.decoders.hasOwnProperty(e) && (this.decoders[e] = this._createNamed(a[e])), this.decoders[e];
+        return (e = e || 'der'), this.decoders.hasOwnProperty(e) || (this.decoders[e] = this._createNamed(r[e])), this.decoders[e];
     }),
-    (s.prototype.decode = function (e, n, r) {
-        return this._getDecoder(n).decode(e, r);
+    (s.prototype.decode = function (e, t, n) {
+        return this._getDecoder(t).decode(e, n);
     }),
     (s.prototype._getEncoder = function (e) {
-        return (e = e || 'der'), !this.encoders.hasOwnProperty(e) && (this.encoders[e] = this._createNamed(i[e])), this.encoders[e];
+        return (e = e || 'der'), this.encoders.hasOwnProperty(e) || (this.encoders[e] = this._createNamed(i[e])), this.encoders[e];
     }),
-    (s.prototype.encode = function (e, n, r) {
-        return this._getEncoder(n).encode(e, r);
+    (s.prototype.encode = function (e, t, n) {
+        return this._getEncoder(t).encode(e, n);
     });

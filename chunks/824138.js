@@ -1,8 +1,8 @@
-n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(512722),
     o = n.n(s),
     c = n(481060),
@@ -12,8 +12,8 @@ var i = n(200651),
     m = n(347475),
     p = n(237583),
     g = n(63063),
-    f = n(870569),
-    _ = n(345243),
+    _ = n(870569),
+    f = n(345243),
     E = n(115530),
     I = n(981631),
     C = n(388032),
@@ -35,34 +35,34 @@ let T = {
     HOST: 5,
     LISTENER: 4
 };
-class S extends r.PureComponent {
+class S extends l.PureComponent {
     isHost() {
         let { currentUser: e, host: t } = this.props;
         return e.id === (null == t ? void 0 : t.id);
     }
     renderTitle() {
         return (0, i.jsxs)('div', {
-            children: [(0, i.jsx)(E.Z, { children: this.isHost() ? C.intl.formatToPlainString(C.t['6UJ7mp'], { count: this.props.party.length }) : C.intl.string(C.t.RZufbG) }), (0, i.jsx)(_.Z, { children: C.intl.string(C.t['0ZHLIi']) })]
+            children: [(0, i.jsx)(E.Z, { children: this.isHost() ? C.intl.formatToPlainString(C.t['6UJ7mp'], { count: this.props.party.length }) : C.intl.string(C.t.RZufbG) }), (0, i.jsx)(f.Z, { children: C.intl.string(C.t['0ZHLIi']) })]
         });
     }
     renderStopListeningButton() {
         let { onStopListening: e } = this.props;
         return this.isHost()
             ? null
-            : (0, i.jsx)(f.Z, {
+            : (0, i.jsx)(_.Z, {
                   tooltipText: C.intl.string(C.t.LeZSp6),
                   onClick: e,
-                  icon: c.XSmallIcon
+                  icon: c.Dio
               });
     }
     renderHelpIcon() {
         return this.isHost()
-            ? (0, i.jsx)(f.Z, {
+            ? (0, i.jsx)(_.Z, {
                   tooltipText: C.intl.string(C.t.U7N2Hh),
                   onClick: () => {
                       window.open(g.Z.getArticleURL(I.BhN.SPOTIFY_CONNECTION), '_blank');
                   },
-                  icon: c.CircleInformationIcon
+                  icon: c.d3s
               })
             : null;
     }
@@ -93,11 +93,11 @@ class S extends r.PureComponent {
             N(this, 'renderPartyMember', (e, t) => {
                 let n;
                 if (null == e) return null;
-                let { host: l, onUserContextMenu: s } = this.props;
+                let { host: r, onUserContextMenu: s } = this.props;
                 return (
-                    (n = (null == l ? void 0 : l.id) === e.id ? C.intl.string(C.t.N9bqDw) : C.intl.string(C.t.Z2Y4c3)),
+                    (n = (null == r ? void 0 : r.id) === e.id ? C.intl.string(C.t.N9bqDw) : C.intl.string(C.t.Z2Y4c3)),
                     (0, i.jsx)(
-                        c.Popout,
+                        c.yRy,
                         {
                             preload: () => (0, h.Z)(e.id, e.getAvatarURL(void 0, 80)),
                             renderPopout: (t) => (
@@ -110,16 +110,16 @@ class S extends r.PureComponent {
                             ),
                             position: 'top',
                             align: 'center',
-                            children: (l) =>
-                                (0, i.jsx)(c.Tooltip, {
+                            children: (r) =>
+                                (0, i.jsx)(c.ua7, {
                                     text: n,
                                     children: (n) => {
                                         let { onMouseEnter: i, onMouseLeave: o } = n;
-                                        return (0, r.createElement)(c.Avatar, {
-                                            ...l,
+                                        return (0, l.createElement)(c.qEK, {
+                                            ...r,
                                             key: e.id,
                                             src: e.getAvatarURL(void 0, 24),
-                                            size: c.AvatarSizes.SIZE_24,
+                                            size: c.EFr.SIZE_24,
                                             className: a()(v.avatar, t),
                                             'aria-label': e.username,
                                             onMouseEnter: i,
@@ -134,18 +134,18 @@ class S extends r.PureComponent {
                 );
             }),
             N(this, 'renderPartyMemberOverflow', (e, t, n) => {
-                let { renderOverflowPopout: r } = this.props;
+                let { renderOverflowPopout: l } = this.props;
                 return (0, i.jsx)(
-                    c.Popout,
+                    c.yRy,
                     {
-                        renderPopout: r,
+                        renderPopout: l,
                         children: (n) =>
-                            (0, i.jsx)(c.Tooltip, {
+                            (0, i.jsx)(c.ua7, {
                                 text: C.intl.string(C.t.Zf4NPT),
-                                children: (r) =>
+                                children: (l) =>
                                     (0, i.jsx)('div', {
                                         className: a()(v.overflow, t),
-                                        ...r,
+                                        ...l,
                                         ...n,
                                         children: e
                                     })
@@ -156,4 +156,4 @@ class S extends r.PureComponent {
             });
     }
 }
-t.Z = S;
+let Z = S;

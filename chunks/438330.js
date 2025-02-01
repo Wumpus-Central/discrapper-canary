@@ -1,7 +1,7 @@
-var i = r(912968),
-    a = r(821330),
-    o = r(436091);
+var i = n(912968),
+    r = n(821330),
+    a = n(436091);
 function s(e) {
-    return o(e) ? i(e) : a(e);
+    return a(e) ? i(e) : r(e);
 }
 e.exports = s;

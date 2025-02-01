@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('ug-cn', {
         months: 'يانۋار_فېۋرال_مارت_ئاپرېل_ماي_ئىيۇن_ئىيۇل_ئاۋغۇست_سېنتەبىر_ئۆكتەبىر_نويابىر_دېكابىر'.split('_'),
@@ -16,16 +16,16 @@
             LLLL: 'dddd\u060C YYYY-يىلىM-ئاينىڭD-كۈنى\u060C HH:mm'
         },
         meridiemParse: /يېرىم كېچە|سەھەر|چۈشتىن بۇرۇن|چۈش|چۈشتىن كېيىن|كەچ/,
-        meridiemHour: function (e, n) {
-            return (12 === e && (e = 0), 'يېرىم كېچە' === n || 'سەھەر' === n || 'چۈشتىن بۇرۇن' === n) ? e : 'چۈشتىن كېيىن' === n || 'كەچ' === n ? e + 12 : e >= 11 ? e : e + 12;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), 'يېرىم كېچە' === t || 'سەھەر' === t || 'چۈشتىن بۇرۇن' === t) ? e : 'چۈشتىن كېيىن' === t || 'كەچ' === t ? e + 12 : e >= 11 ? e : e + 12;
         },
-        meridiem: function (e, n, r) {
-            var i = 100 * e + n;
+        meridiem: function (e, t, n) {
+            var i = 100 * e + t;
             if (i < 600) return 'يېرىم كېچە';
             if (i < 900) return 'سەھەر';
             if (i < 1130) return 'چۈشتىن بۇرۇن';
-            else if (i < 1230) return 'چۈش';
-            else if (i < 1800) return 'چۈشتىن كېيىن';
+            if (i < 1230) return 'چۈش';
+            if (i < 1800) return 'چۈشتىن كېيىن';
             else return 'كەچ';
         },
         calendar: {
@@ -53,8 +53,8 @@
             yy: '%d يىل'
         },
         dayOfMonthOrdinalParse: /\d{1,2}(-كۈنى|-ئاي|-ھەپتە)/,
-        ordinal: function (e, n) {
-            switch (n) {
+        ordinal: function (e, t) {
+            switch (t) {
                 case 'd':
                 case 'D':
                 case 'DDD':

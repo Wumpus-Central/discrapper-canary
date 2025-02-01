@@ -1,7 +1,7 @@
 e.exports = {
-    sectionTitle: 'sectionTitle_b1e578',
-    titleExtraPadding: 'titleExtraPadding_b1e578',
-    content: 'content_b1e578',
-    errorContainer: 'errorContainer_b1e578',
-    error: 'error_b1e578'
+    sectionTitle: 'sectionTitle_d2a5f7',
+    titleExtraPadding: 'titleExtraPadding_d2a5f7',
+    content: 'content_d2a5f7',
+    errorContainer: 'errorContainer_d2a5f7',
+    error: 'error_d2a5f7'
 };

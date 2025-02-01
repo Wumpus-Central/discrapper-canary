@@ -1,5 +1,5 @@
 e.exports = {
-    aboutContainer: 'aboutContainer_d0b14a',
-    divider: 'divider_d0b14a',
-    informationContainer: 'informationContainer_d0b14a'
+    aboutContainer: 'aboutContainer__17a6d',
+    divider: 'divider__17a6d',
+    informationContainer: 'informationContainer__17a6d'
 };

@@ -1,7 +1,7 @@
-var i = r(875604),
-    a = r(549842),
-    o = Array.prototype;
+var i = n(875604),
+    r = n(549842),
+    a = Array.prototype;
 e.exports = function (e) {
-    var n = e.sort;
-    return e === o || (i(o, e) && n === o.sort) ? a : n;
+    var t = e.sort;
+    return e === a || (i(a, e) && t === a.sort) ? r : t;
 };

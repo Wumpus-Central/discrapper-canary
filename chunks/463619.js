@@ -1,16 +1,16 @@
-var i = r(548015),
-    a = Object.prototype,
-    o = a.hasOwnProperty,
-    s = a.toString,
-    l = i.Z ? i.Z.toStringTag : void 0;
-function u(e) {
-    var n = o.call(e, l),
-        r = e[l];
+n.d(t, { Z: () => l });
+var i = n(548015),
+    r = Object.prototype,
+    a = r.hasOwnProperty,
+    s = r.toString,
+    o = i.Z ? i.Z.toStringTag : void 0;
+let l = function (e) {
+    var t = a.call(e, o),
+        n = e[o];
     try {
-        e[l] = void 0;
+        e[o] = void 0;
         var i = !0;
     } catch (e) {}
-    var a = s.call(e);
-    return i && (n ? (e[l] = r) : delete e[l]), a;
-}
-n.Z = u;
+    var r = s.call(e);
+    return i && (t ? (e[o] = n) : delete e[o]), r;
+};

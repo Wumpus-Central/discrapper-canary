@@ -1,12 +1,12 @@
 e.exports = {
-    modalRoot: 'modalRoot_a751c2',
-    modalHeaderContainer: 'modalHeaderContainer_a751c2',
-    modalHeader: 'modalHeader_a751c2',
-    content: 'content_a751c2',
-    closeButton: 'closeButton_a751c2',
-    deviceItem: 'deviceItem_a751c2',
-    deviceItemIcon: 'deviceItemIcon_a751c2',
-    deviceItemName: 'deviceItemName_a751c2',
-    spinnerContainer: 'spinnerContainer_a751c2',
-    emptyArt: 'emptyArt_a751c2'
+    modalRoot: 'modalRoot__6efa2',
+    modalHeaderContainer: 'modalHeaderContainer__6efa2',
+    modalHeader: 'modalHeader__6efa2',
+    content: 'content__6efa2',
+    closeButton: 'closeButton__6efa2',
+    deviceItem: 'deviceItem__6efa2',
+    deviceItemIcon: 'deviceItemIcon__6efa2',
+    deviceItemName: 'deviceItemName__6efa2',
+    spinnerContainer: 'spinnerContainer__6efa2',
+    emptyArt: 'emptyArt__6efa2'
 };

@@ -1,3 +1,3 @@
-e.exports = function (e) {
-    return 'number' == typeof e && e > -1 && e % 1 == 0 && e <= 9007199254740991;
+t.exports = function (t) {
+    return 'number' == typeof t && t > -1 && t % 1 == 0 && t <= 9007199254740991;
 };

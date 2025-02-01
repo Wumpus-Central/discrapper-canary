@@ -1,4 +1,4 @@
 e.exports = {
-    modalContent: 'modalContent_cdff0a',
-    disclaimer: 'disclaimer_cdff0a'
+    modalContent: 'modalContent__2379f',
+    disclaimer: 'disclaimer__2379f'
 };

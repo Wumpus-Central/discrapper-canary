@@ -1,31 +1,31 @@
-let i = r(423906);
-class a extends Error {
+let i = n(423906);
+class r extends Error {
     constructor(e) {
         super(e), (this.name = 'TimeoutError');
     }
 }
-let o = (e, n, r) =>
-    new Promise((o, s) => {
-        if ('number' != typeof n || n < 0) throw TypeError('Expected `milliseconds` to be a positive number');
-        if (n === 1 / 0) {
-            o(e);
+let a = (e, t, n) =>
+    new Promise((a, s) => {
+        if ('number' != typeof t || t < 0) throw TypeError('Expected `milliseconds` to be a positive number');
+        if (t === 1 / 0) {
+            a(e);
             return;
         }
-        let l = setTimeout(() => {
-            if ('function' == typeof r) {
+        let o = setTimeout(() => {
+            if ('function' == typeof n) {
                 try {
-                    o(r());
+                    a(n());
                 } catch (e) {
                     s(e);
                 }
                 return;
             }
-            let i = 'string' == typeof r ? r : `Promise timed out after ${n} milliseconds`,
-                l = r instanceof Error ? r : new a(i);
-            'function' == typeof e.cancel && e.cancel(), s(l);
-        }, n);
-        i(e.then(o, s), () => {
-            clearTimeout(l);
+            let i = 'string' == typeof n ? n : `Promise timed out after ${t} milliseconds`,
+                o = n instanceof Error ? n : new r(i);
+            'function' == typeof e.cancel && e.cancel(), s(o);
+        }, t);
+        i(e.then(a, s), () => {
+            clearTimeout(o);
         });
     });
-(e.exports = o), (e.exports.default = o), (e.exports.TimeoutError = a);
+(e.exports = a), (e.exports.default = a), (e.exports.TimeoutError = r);

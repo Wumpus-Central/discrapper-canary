@@ -1,6 +1,6 @@
 e.exports = {
-    metricsContainer: 'metricsContainer_f0f3c8',
-    totalMembersIcon: 'totalMembersIcon_f0f3c8',
-    currentMonthEarningsTable: 'currentMonthEarningsTable_f0f3c8',
-    formSection: 'formSection_f0f3c8'
+    metricsContainer: 'metricsContainer_cd734c',
+    totalMembersIcon: 'totalMembersIcon_cd734c',
+    currentMonthEarningsTable: 'currentMonthEarningsTable_cd734c',
+    formSection: 'formSection_cd734c'
 };

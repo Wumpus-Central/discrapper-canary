@@ -1,53 +1,53 @@
-var i = r(47120);
-var a = r(200651);
-r(192379);
-var o = r(525654),
-    s = r.n(o),
-    l = r(481060),
-    u = r(570140),
-    c = r(468026),
-    d = r(317770),
-    f = r(63063),
-    p = r(981631),
-    h = r(388032);
-function _(e, n, r) {
+n.d(t, { Z: () => h }), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(525654),
+    a = n.n(r),
+    s = n(481060),
+    o = n(570140),
+    l = n(468026),
+    u = n(317770),
+    c = n(63063),
+    d = n(981631),
+    f = n(388032);
+function _(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class m extends d.Z {
+class p extends u.Z {
     _initialize() {
-        u.Z.subscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
+        o.Z.subscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
     }
     _terminate() {
-        u.Z.unsubscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
+        o.Z.unsubscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
     }
     constructor(...e) {
         super(...e),
             _(this, 'handlePermission', (e) => {
-                let { kind: n, granted: r } = e,
-                    i = 'Firefox' === s().name ? p.BhN.ENABLE_MIC_FIREFOX : p.BhN.ENABLE_MIC_CHROME;
-                if (!r) {
-                    let e = 'audio' !== n;
-                    (0, l.openModal)((n) =>
-                        (0, a.jsx)(c.default, {
-                            title: e ? h.intl.string(h.t.OqloHx) : h.intl.string(h.t['kI+OOT']),
-                            body: e ? h.intl.string(h.t.l3P7Ky) : h.intl.string(h.t.l3jwOT),
-                            onConfirm: () => window.open(f.Z.getArticleURL(i), '_blank'),
-                            confirmText: h.intl.string(h.t.psXQHB),
-                            ...n
+                let { kind: t, granted: n } = e,
+                    r = 'Firefox' === a().name ? d.BhN.ENABLE_MIC_FIREFOX : d.BhN.ENABLE_MIC_CHROME;
+                if (!n) {
+                    let e = 'audio' !== t;
+                    (0, s.h7j)((t) =>
+                        (0, i.jsx)(l.default, {
+                            title: e ? f.intl.string(f.t.OqloHx) : f.intl.string(f.t['kI+OOT']),
+                            body: e ? f.intl.string(f.t.l3P7Ky) : f.intl.string(f.t.l3jwOT),
+                            onConfirm: () => window.open(c.Z.getArticleURL(r), '_blank'),
+                            confirmText: f.intl.string(f.t.psXQHB),
+                            ...t
                         })
                     );
                 }
             });
     }
 }
-n.Z = new m();
+let h = new p();

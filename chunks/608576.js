@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container_eed148',
-    searchResultsHeader: 'searchResultsHeader_eed148'
+    container: 'container_d08938',
+    searchResultsHeader: 'searchResultsHeader_d08938'
 };

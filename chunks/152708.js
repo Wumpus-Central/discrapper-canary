@@ -1,63 +1,63 @@
-var l,
-    r,
-    n,
-    s = i(200651),
-    a = i(192379),
-    c = i(120356),
-    o = i.n(c),
-    d = i(600164),
-    f = i(82126);
-function u(e, t, i) {
+l.d(t, { Z: () => x });
+var i,
+    s,
+    r = l(200651),
+    n = l(192379),
+    a = l(120356),
+    c = l.n(a),
+    o = l(600164),
+    d = l(82126);
+function f(e, t, l) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: i,
+                  value: l,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = i),
+            : (e[t] = l),
         e
     );
 }
-((l = r || (r = {})).WRAP = 'wrap'), (l.STACK = 'stack');
-class h extends (n = a.PureComponent) {
+var u = (((i = u || {}).WRAP = 'wrap'), (i.STACK = 'stack'), i);
+class h extends (s = n.PureComponent) {
     renderChildren() {
         let e;
-        let { children: t, layout: i, columns: l } = this.props;
-        switch (i) {
+        let { children: t, layout: l, columns: i } = this.props;
+        switch (l) {
             case 'stack':
                 e = '100%';
                 break;
             case 'wrap':
-                e = ''.concat((1 / l) * 100, '%');
+                e = ''.concat((1 / i) * 100, '%');
         }
-        return t.map((t, i) =>
-            (0, s.jsx)(
-                d.Z.Child,
+        return t.map((t, l) =>
+            (0, r.jsx)(
+                o.Z.Child,
                 {
-                    className: f.tile,
+                    className: d.tile,
                     basis: e,
                     grow: 0,
                     children: t
                 },
-                i
+                l
             )
         );
     }
     render() {
         let { className: e } = this.props;
-        return (0, s.jsx)(d.Z, {
-            className: o()(e, f.grid),
-            wrap: d.Z.Wrap.WRAP,
+        return (0, r.jsx)(o.Z, {
+            className: c()(e, d.grid),
+            wrap: o.Z.Wrap.WRAP,
             children: this.renderChildren()
         });
     }
 }
-u(h, 'Layout', r),
-    u(h, 'defaultProps', {
+f(h, 'Layout', u),
+    f(h, 'defaultProps', {
         children: [],
         layout: 'wrap',
         columns: 4
-    }),
-    (t.Z = h);
+    });
+let x = h;

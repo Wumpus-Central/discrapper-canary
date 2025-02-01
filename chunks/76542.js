@@ -1,5 +1,5 @@
-var i = r(632384),
-    a = Math.floor;
+var i = n(632384),
+    r = Math.floor;
 e.exports = function (e) {
-    return 'BigInt' === i(e) ? e : a(e);
+    return 'BigInt' === i(e) ? e : r(e);
 };

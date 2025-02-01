@@ -1,9 +1,9 @@
 e.exports = {
-    grid: 'grid_f8c5e7',
-    placeholderCard: 'placeholderCard_f8c5e7',
-    placeholderImg: 'placeholderImg_f8c5e7',
-    emptyTierWrapper: 'emptyTierWrapper_f8c5e7',
-    unusedTierWrapper: 'unusedTierWrapper_f8c5e7',
-    emptyTierImage: 'emptyTierImage_f8c5e7',
-    unlockTierCtaHeading: 'unlockTierCtaHeading_f8c5e7'
+    grid: 'grid_d87d30',
+    placeholderCard: 'placeholderCard_d87d30',
+    placeholderImg: 'placeholderImg_d87d30',
+    emptyTierWrapper: 'emptyTierWrapper_d87d30',
+    unusedTierWrapper: 'unusedTierWrapper_d87d30',
+    emptyTierImage: 'emptyTierImage_d87d30',
+    unlockTierCtaHeading: 'unlockTierCtaHeading_d87d30'
 };

@@ -1,15 +1,15 @@
-var a = r(466293),
+var r = a(466293),
     n = Object.prototype,
-    _ = n.hasOwnProperty,
-    o = n.toString,
-    E = a ? a.toStringTag : void 0;
-e.exports = function (e) {
-    var t = _.call(e, E),
-        r = e[E];
+    o = n.hasOwnProperty,
+    _ = n.toString,
+    i = r ? r.toStringTag : void 0;
+t.exports = function (t) {
+    var e = o.call(t, i),
+        a = t[i];
     try {
-        e[E] = void 0;
-        var a = !0;
-    } catch (e) {}
-    var n = o.call(e);
-    return a && (t ? (e[E] = r) : delete e[E]), n;
+        t[i] = void 0;
+        var r = !0;
+    } catch (t) {}
+    var n = _.call(t);
+    return r && (e ? (t[i] = a) : delete t[i]), n;
 };

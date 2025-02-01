@@ -1,4 +1,4 @@
 e.exports = {
-    coachmarkArt: 'coachmarkArt_ef9e7d',
-    coachmarkHeader: 'coachmarkHeader_ef9e7d'
+    coachmarkArt: 'coachmarkArt_a4ad2d',
+    coachmarkHeader: 'coachmarkHeader_a4ad2d'
 };

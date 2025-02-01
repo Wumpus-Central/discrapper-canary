@@ -1,12 +1,12 @@
 e.exports = {
-    cont: 'cont_cdc1bf',
-    hitboxArea: 'hitboxArea_cdc1bf',
-    interactionEnabled: 'interactionEnabled_cdc1bf',
-    progress: 'progress_cdc1bf',
-    progressGlow: 'progressGlow_cdc1bf',
-    buffer: 'buffer_cdc1bf',
-    seekableBar: 'seekableBar_cdc1bf',
-    bufferHovered: 'bufferHovered_cdc1bf',
-    timeDisplay: 'timeDisplay_cdc1bf',
-    grabber: 'grabber_cdc1bf'
+    cont: 'cont__370d1',
+    hitboxArea: 'hitboxArea__370d1',
+    interactionEnabled: 'interactionEnabled__370d1',
+    progress: 'progress__370d1',
+    progressGlow: 'progressGlow__370d1',
+    buffer: 'buffer__370d1',
+    seekableBar: 'seekableBar__370d1',
+    bufferHovered: 'bufferHovered__370d1',
+    timeDisplay: 'timeDisplay__370d1',
+    grabber: 'grabber__370d1'
 };

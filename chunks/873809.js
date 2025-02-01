@@ -1,77 +1,77 @@
-n.r(e), n(47120);
-var s = n(200651),
-    o = n(192379),
-    i = n(481060),
-    r = n(388032),
+n.d(s, { default: () => h }), n(47120);
+var t = n(200651),
+    i = n(192379),
+    r = n(481060),
+    a = n(388032),
     l = n(341088);
-function a(t, e, n) {
+function o(e, s, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
+        s in e
+            ? Object.defineProperty(e, s, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = n),
-        t
+            : (e[s] = n),
+        e
     );
 }
-class c extends o.PureComponent {
+class c extends i.PureComponent {
     render() {
-        let { transitionState: t, header: e, body: o, confirmText: a } = this.props;
-        return (0, s.jsxs)(i.ModalRoot, {
-            transitionState: t,
-            'aria-label': e,
+        let { transitionState: e, header: s, body: i, confirmText: o } = this.props;
+        return (0, t.jsxs)(r.Y0X, {
+            transitionState: e,
+            'aria-label': s,
             children: [
-                (0, s.jsxs)(i.ModalContent, {
+                (0, t.jsxs)(r.hzk, {
                     className: l.content,
                     children: [
-                        (0, s.jsx)('img', {
+                        (0, t.jsx)('img', {
                             src: n(568533),
-                            alt: e
+                            alt: s
                         }),
-                        (0, s.jsx)(i.Heading, {
+                        (0, t.jsx)(r.X6q, {
                             variant: 'heading-xl/semibold',
                             className: l.header,
-                            children: e
+                            children: s
                         }),
-                        (0, s.jsx)(i.Text, {
+                        (0, t.jsx)(r.Text, {
                             variant: 'text-md/normal',
-                            children: o
+                            children: i
                         })
                     ]
                 }),
-                (0, s.jsxs)(i.ModalFooter, {
+                (0, t.jsxs)(r.mzw, {
                     className: l.footer,
                     children: [
-                        (0, s.jsx)(i.Button, {
-                            size: i.Button.Sizes.SMALL,
+                        (0, t.jsx)(r.zxk, {
+                            size: r.zxk.Sizes.SMALL,
                             onClick: this.handleConfirm,
-                            children: a
+                            children: o
                         }),
-                        (0, s.jsx)(i.Button, {
-                            size: i.Button.Sizes.SMALL,
-                            look: i.Button.Looks.LINK,
-                            color: i.Button.Colors.PRIMARY,
+                        (0, t.jsx)(r.zxk, {
+                            size: r.zxk.Sizes.SMALL,
+                            look: r.zxk.Looks.LINK,
+                            color: r.zxk.Colors.PRIMARY,
                             onClick: this.handleDismiss,
-                            children: r.intl.string(r.t.cpT0Cg)
+                            children: a.intl.string(a.t.cpT0Cg)
                         })
                     ]
                 })
             ]
         });
     }
-    constructor(...t) {
-        super(...t),
-            a(this, 'handleConfirm', () => {
-                let { onConfirm: t, onClose: e } = this.props;
-                null == e || e(), null == t || t();
+    constructor(...e) {
+        super(...e),
+            o(this, 'handleConfirm', () => {
+                let { onConfirm: e, onClose: s } = this.props;
+                null == s || s(), null == e || e();
             }),
-            a(this, 'handleDismiss', () => {
-                let { onDismiss: t, onClose: e } = this.props;
-                null == e || e(), null == t || t();
+            o(this, 'handleDismiss', () => {
+                let { onDismiss: e, onClose: s } = this.props;
+                null == s || s(), null == e || e();
             });
     }
 }
-e.default = c;
+let h = c;

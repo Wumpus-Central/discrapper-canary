@@ -1,56 +1,56 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(692547),
-    s = r(481060),
-    l = r(220082),
-    u = r(420596),
-    c = r(880563),
-    d = r(687158),
-    f = r(484459),
-    p = r(695346),
-    h = r(981631),
-    _ = r(972753);
-function m(e) {
-    let { style: n, src: r, backgroundSrc: m, userId: g, pulseSpeakingIndicator: E = !1, speaking: v = !1, ...y } = e,
-        b = null != m ? m : r,
-        I = (0, l.ZP)(b, o.Z.unsafe_rawColors.PRIMARY_800.css),
-        T = (0, u.c)(!0, 'VideoBackground-web').enabled,
-        S = (0, d.ZP)(null != g ? g : h.lds),
-        A =
-            null == S
+n.d(t, { Z: () => h });
+var i = n(200651),
+    r = n(192379),
+    a = n(692547),
+    s = n(481060),
+    o = n(220082),
+    l = n(420596),
+    u = n(880563),
+    c = n(687158),
+    d = n(484459),
+    f = n(695346),
+    _ = n(981631),
+    p = n(972753);
+let h = function (e) {
+    let { style: t, src: n, backgroundSrc: h, userId: m, pulseSpeakingIndicator: g = !1, speaking: E = !1, ...v } = e,
+        y = null != h ? h : n,
+        I = (0, o.ZP)(y, a.Z.unsafe_rawColors.PRIMARY_800.css),
+        T = (0, l.c)(!0, 'VideoBackground-web').enabled,
+        b = (0, c.ZP)(null != m ? m : _.lds),
+        S =
+            null == b
                 ? void 0
-                : S.getBannerURL({
+                : b.getBannerURL({
                       size: 1024,
-                      canAnimate: p.QK.getSetting()
+                      canAnimate: f.QK.getSetting()
                   });
     if (
-        (a.useEffect(() => {
-            null != g && T && (0, f.Z)(g, void 0, { dispatchWait: !0 });
-        }, [T, g]),
-        null == r)
+        (r.useEffect(() => {
+            null != m && T && (0, d.Z)(m, void 0, { dispatchWait: !0 });
+        }, [T, m]),
+        null == n)
     )
         return null;
-    let C = (0, i.jsx)(s.Avatar, {
-            className: _.avatarWrapper,
-            src: r,
-            ...y
+    let A = (0, i.jsx)(s.qEK, {
+            className: p.avatarWrapper,
+            src: n,
+            ...v
         }),
         N = {
-            ...n,
+            ...t,
             backgroundColor: I
         };
     return (
-        null != A && v && T && ((N.backgroundImage = 'url('.concat(A, ')')), (N.backgroundSize = 'cover')),
+        null != S && E && T && ((N.backgroundImage = 'url('.concat(S, ')')), (N.backgroundSize = 'cover')),
         (0, i.jsx)('div', {
             style: N,
-            className: _.background,
-            children: E
-                ? (0, i.jsx)(c.Z, {
-                      shouldAnimate: v,
-                      children: C
+            className: p.background,
+            children: g
+                ? (0, i.jsx)(u.Z, {
+                      shouldAnimate: E,
+                      children: A
                   })
-                : C
+                : A
         })
     );
-}
-n.Z = m;
+};

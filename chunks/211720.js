@@ -1,9 +1,9 @@
 e.exports = {
-    wrapper: 'wrapper_f4e40b',
-    background: 'background_f4e40b',
-    borders: 'borders_f4e40b',
-    bordersTopLeft: 'bordersTopLeft_f4e40b',
-    bordersBottom: 'bordersBottom_f4e40b',
-    confettiWrapper: 'confettiWrapper_f4e40b',
-    confetti: 'confetti_f4e40b'
+    wrapper: 'wrapper__22c64',
+    background: 'background__22c64',
+    borders: 'borders__22c64',
+    bordersTopLeft: 'bordersTopLeft__22c64',
+    bordersBottom: 'bordersBottom__22c64',
+    confetti: 'confetti__22c64',
+    confettiWrapper: 'confettiWrapper__22c64'
 };

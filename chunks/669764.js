@@ -1,94 +1,94 @@
+n.d(t, { Z: () => h }), n(47120);
 var i,
-    a = r(47120);
-var o = r(442837),
-    s = r(570140);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = new Map(),
-    c = new Set(),
-    d = new Set();
-function f() {
-    (u = new Map()), (c = new Set()), (d = new Set());
+let o = new Map(),
+    l = new Set(),
+    u = new Set();
+function c() {
+    (o = new Map()), (l = new Set()), (u = new Set());
 }
-function p(e) {
-    let { applicationIds: n } = e;
-    n.forEach((e) => {
-        c.add(e), d.delete(e);
+function d(e) {
+    let { applicationIds: t } = e;
+    t.forEach((e) => {
+        l.add(e), u.delete(e);
     });
 }
-function h(e) {
-    let { applicationIds: n, supplementalGameData: r } = e;
-    n.forEach((e) => {
-        c.delete(e), d.delete(e);
+function f(e) {
+    let { applicationIds: t, supplementalGameData: n } = e;
+    t.forEach((e) => {
+        l.delete(e), u.delete(e);
     }),
-        r.forEach((e) => {
-            let { application_id: n, name: r, summary: i, websites: a, themes: o, genres: s, platforms: l, artwork_urls: c, screenshot_urls: d, cover_image_url: f, first_release_date: p, summary_localized: h, publisher_names: _, developer_names: m } = e;
-            u.set(n, {
-                applicationId: n,
-                name: r,
+        n.forEach((e) => {
+            let { application_id: t, name: n, summary: i, websites: r, themes: a, genres: s, platforms: l, artwork_urls: u, screenshot_urls: c, cover_image_url: d, first_release_date: f, summary_localized: _, publisher_names: p, developer_names: h } = e;
+            o.set(t, {
+                applicationId: t,
+                name: n,
                 summary: i,
-                summaryLocalized: h,
-                websites: a,
-                themes: o,
+                summaryLocalized: _,
+                websites: r,
+                themes: a,
                 genres: s,
                 platforms: l,
-                artwork: c,
-                screenshots: d,
-                coverImageUrl: f,
-                firstReleaseDate: p,
-                publishers: null != _ ? _ : [],
-                developers: null != m ? m : []
+                artwork: u,
+                screenshots: c,
+                coverImageUrl: d,
+                firstReleaseDate: f,
+                publishers: null != p ? p : [],
+                developers: null != h ? h : []
             });
         });
 }
 function _(e) {
-    let { applicationIds: n } = e;
-    n.forEach((e) => {
-        c.delete(e), d.add(e);
+    let { applicationIds: t } = e;
+    t.forEach((e) => {
+        l.delete(e), u.add(e);
     });
 }
-class m extends (i = o.ZP.Store) {
+class p extends (i = r.ZP.Store) {
     canFetch(e) {
-        return !c.has(e) && !d.has(e) && !u.has(e);
+        return !l.has(e) && !u.has(e) && !o.has(e);
     }
     isFetching(e) {
-        return c.has(e);
+        return l.has(e);
     }
     getGame(e) {
-        return u.get(e);
+        return o.get(e);
     }
     getGames(e) {
-        return e.map((e) => u.get(e));
+        return e.map((e) => o.get(e));
     }
     getLocalizedName(e) {
-        var n;
-        return null === (n = u.get(e)) || void 0 === n ? void 0 : n.name;
+        var t;
+        return null === (t = o.get(e)) || void 0 === t ? void 0 : t.name;
     }
     getThemes(e) {
-        var n;
-        return null === (n = u.get(e)) || void 0 === n ? void 0 : n.themes;
+        var t;
+        return null === (t = o.get(e)) || void 0 === t ? void 0 : t.themes;
     }
-    getCoverImageUrl(e, n) {
-        var r;
-        let i = null === (r = u.get(e)) || void 0 === r ? void 0 : r.coverImageUrl;
-        return null == i ? null : null == n ? i : ''.concat(i, '?width=').concat(n.width, '&height=').concat(n.height);
+    getCoverImageUrl(e, t) {
+        var n;
+        let i = null === (n = o.get(e)) || void 0 === n ? void 0 : n.coverImageUrl;
+        return null == i ? null : null == t ? i : ''.concat(i, '?width=').concat(t.width, '&height=').concat(t.height);
     }
 }
-l(m, 'displayName', 'DetectableGameSupplementalStore'),
-    (n.Z = new m(s.Z, {
-        LOGOUT: f,
-        DETECTABLE_GAME_SUPPLEMENTAL_FETCH: p,
-        DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS: h,
-        DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE: _
-    }));
+s(p, 'displayName', 'DetectableGameSupplementalStore');
+let h = new p(a.Z, {
+    LOGOUT: c,
+    DETECTABLE_GAME_SUPPLEMENTAL_FETCH: d,
+    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS: f,
+    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE: _
+});

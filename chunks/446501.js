@@ -1,6 +1,6 @@
 e.exports = {
-    friendsEmpty: 'friendsEmpty_a62993',
-    button: 'button_a62993',
-    emptyStateContainer: 'emptyStateContainer_a62993',
-    spamButton: 'spamButton_a62993'
+    friendsEmpty: 'friendsEmpty_c7ea19',
+    button: 'button_c7ea19',
+    emptyStateContainer: 'emptyStateContainer_c7ea19',
+    spamButton: 'spamButton_c7ea19'
 };

@@ -1,8 +1,8 @@
 e.exports = {
-    actionContainer: 'actionContainer_bf142c',
-    iconButton: 'iconButton_bf142c',
-    small: 'small_bf142c',
-    innerIconButton: 'innerIconButton_bf142c',
-    wide: 'wide_bf142c',
-    tiny: 'tiny_bf142c'
+    actionContainer: 'actionContainer_adfd31',
+    iconButton: 'iconButton_adfd31',
+    small: 'small_adfd31',
+    wide: 'wide_adfd31',
+    innerIconButton: 'innerIconButton_adfd31',
+    tiny: 'tiny_adfd31'
 };

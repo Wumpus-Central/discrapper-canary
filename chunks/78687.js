@@ -122,10 +122,10 @@ e.exports = function (e) {
                     var e = E();
                     r(o).style = e;
                 }
-                function b(e, t, n) {
+                function T(e, t, n) {
                     (r(e).lastWidth = t), (r(e).lastHeight = n);
                 }
-                function T(e) {
+                function b(e) {
                     return m(e).childNodes[0];
                 }
                 function S() {
@@ -201,8 +201,8 @@ e.exports = function (e) {
                         v = c(['position: absolute', 'width: 200%', 'height: 200%']),
                         y = document.createElement('div'),
                         I = document.createElement('div'),
-                        b = document.createElement('div'),
                         T = document.createElement('div'),
+                        b = document.createElement('div'),
                         S = document.createElement('div'),
                         A = document.createElement('div');
                     function N() {
@@ -213,11 +213,11 @@ e.exports = function (e) {
                         var e = r(o);
                         e && e.onShrink ? e.onShrink() : d('Aborting shrink scroll handler: element has been uninstalled');
                     }
-                    (y.dir = 'ltr'), (y.style.cssText = _), (y.className = l), (I.className = l), (I.style.cssText = h), (b.style.cssText = m), (T.style.cssText = E), (S.style.cssText = g), (A.style.cssText = v), b.appendChild(T), S.appendChild(A), I.appendChild(b), I.appendChild(S), y.appendChild(I), a.appendChild(y), p(b, 'scroll', N), p(S, 'scroll', C), (r(o).onExpandScroll = N), (r(o).onShrinkScroll = C);
+                    (y.dir = 'ltr'), (y.style.cssText = _), (y.className = l), (I.className = l), (I.style.cssText = h), (T.style.cssText = m), (b.style.cssText = E), (S.style.cssText = g), (A.style.cssText = v), T.appendChild(b), S.appendChild(A), I.appendChild(T), I.appendChild(S), y.appendChild(I), a.appendChild(y), p(T, 'scroll', N), p(S, 'scroll', C), (r(o).onExpandScroll = N), (r(o).onShrinkScroll = C);
                 }
                 function P() {
                     function s(t, n, i) {
-                        var r = T(t),
+                        var r = b(t),
                             a = N(n),
                             s = C(i);
                         r.style.setProperty('width', a + 'px', e.important ? 'important' : ''), r.style.setProperty('height', s + 'px', e.important ? 'important' : '');
@@ -227,7 +227,7 @@ e.exports = function (e) {
                             c = o.offsetHeight,
                             f = l !== r(o).lastWidth || c !== r(o).lastHeight;
                         d('Storing current size', l, c),
-                            b(o, l, c),
+                            T(o, l, c),
                             n.add(0, function () {
                                 if (f) {
                                     if (!r(o)) {
@@ -322,7 +322,7 @@ e.exports = function (e) {
                         return;
                     }
                     var e = r(o).style;
-                    b(o, e.width, e.height), D(o, e.width, e.height);
+                    T(o, e.width, e.height), D(o, e.width, e.height);
                 }
                 function M() {
                     u(o);

@@ -1,10 +1,10 @@
-var a = r(524556),
+var r = a(524556),
     n = Object.prototype.hasOwnProperty;
-e.exports = function (e) {
-    var t = this.__data__;
-    if (a) {
-        var r = t[e];
-        return '__lodash_hash_undefined__' === r ? void 0 : r;
+t.exports = function (t) {
+    var e = this.__data__;
+    if (r) {
+        var a = e[t];
+        return '__lodash_hash_undefined__' === a ? void 0 : a;
     }
-    return n.call(t, e) ? t[e] : void 0;
+    return n.call(e, t) ? e[t] : void 0;
 };

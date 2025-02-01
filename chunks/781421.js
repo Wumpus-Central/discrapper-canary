@@ -1,18 +1,18 @@
-var i = r(690244),
-    a = r(834889),
-    o = r(134533)(),
-    s = r(49662),
-    l = r(815329),
-    u = i('%Math.floor%');
-e.exports = function (e, n) {
-    if ('function' != typeof e) throw new l('`fn` is not a function');
-    if ('number' != typeof n || n < 0 || n > 4294967295 || u(n) !== n) throw new l('`length` must be a positive 32-bit integer');
-    var r = arguments.length > 2 && !!arguments[2],
+var i = n(690244),
+    r = n(834889),
+    a = n(134533)(),
+    s = n(49662),
+    o = n(815329),
+    l = i('%Math.floor%');
+e.exports = function (e, t) {
+    if ('function' != typeof e) throw new o('`fn` is not a function');
+    if ('number' != typeof t || t < 0 || t > 4294967295 || l(t) !== t) throw new o('`length` must be a positive 32-bit integer');
+    var n = arguments.length > 2 && !!arguments[2],
         i = !0,
-        c = !0;
+        u = !0;
     if ('length' in e && s) {
-        var d = s(e, 'length');
-        d && !d.configurable && (i = !1), d && !d.writable && (c = !1);
+        var c = s(e, 'length');
+        c && !c.configurable && (i = !1), c && !c.writable && (u = !1);
     }
-    return (i || c || !r) && (o ? a(e, 'length', n, !0, !0) : a(e, 'length', n)), e;
+    return (i || u || !n) && (a ? r(e, 'length', t, !0, !0) : r(e, 'length', t)), e;
 };

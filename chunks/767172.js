@@ -1,4 +1,4 @@
-var n = (e.exports = {
+var t = (e.exports = {
     v: [
         {
             name: 'version',
@@ -163,8 +163,8 @@ var n = (e.exports = {
             reg: /^candidate:(\S*) (\d*) (\S*) (\d*) (\S*) (\d*) typ (\S*)(?: raddr (\S*) rport (\d*))?(?: tcptype (\S*))?(?: generation (\d*))?(?: network-id (\d*))?(?: network-cost (\d*))?/,
             names: ['foundation', 'component', 'transport', 'priority', 'ip', 'port', 'type', 'raddr', 'rport', 'tcptype', 'generation', 'network-id', 'network-cost'],
             format: function (e) {
-                var n = 'candidate:%s %d %s %d %s %d typ %s';
-                return (n += (null != e.raddr ? ' raddr %s rport %d' : '%v%v') + (null != e.tcptype ? ' tcptype %s' : '%v')), null != e.generation && (n += ' generation %d'), (n += (null != e['network-id'] ? ' network-id %d' : '%v') + (null != e['network-cost'] ? ' network-cost %d' : '%v'));
+                var t = 'candidate:%s %d %s %d %s %d typ %s';
+                return (t += (null != e.raddr ? ' raddr %s rport %d' : '%v%v') + (null != e.tcptype ? ' tcptype %s' : '%v')), null != e.generation && (t += ' generation %d'), (t += (null != e['network-id'] ? ' network-id %d' : '%v') + (null != e['network-cost'] ? ' network-cost %d' : '%v'));
             }
         },
         {
@@ -186,8 +186,8 @@ var n = (e.exports = {
             reg: /^ssrc:(\d*) ([\w_]*)(?::(.*))?/,
             names: ['id', 'attribute', 'value'],
             format: function (e) {
-                var n = 'ssrc:%d';
-                return null != e.attribute && ((n += ' %s'), null != e.value && (n += ':%s')), n;
+                var t = 'ssrc:%d';
+                return null != e.attribute && ((t += ' %s'), null != e.value && (t += ':%s')), t;
             }
         },
         {
@@ -270,8 +270,8 @@ var n = (e.exports = {
         }
     ]
 });
-Object.keys(n).forEach(function (e) {
-    n[e].forEach(function (e) {
-        !e.reg && (e.reg = /(.*)/), !e.format && (e.format = '%s');
+Object.keys(t).forEach(function (e) {
+    t[e].forEach(function (e) {
+        e.reg || (e.reg = /(.*)/), e.format || (e.format = '%s');
     });
 });

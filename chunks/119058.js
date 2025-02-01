@@ -21,8 +21,8 @@ function v(e, t, n) {
         g,
         v,
         I,
-        b,
         T,
+        b,
         S,
         A,
         N,
@@ -38,7 +38,7 @@ function v(e, t, n) {
         k = String(t),
         U = (0, f.j)(),
         G = null !== (m = null !== (g = null == n ? void 0 : n.locale) && void 0 !== g ? g : U.locale) && void 0 !== m ? m : _.Z,
-        B = (0, c.Z)(null !== (v = null !== (I = null !== (b = null !== (T = null == n ? void 0 : n.firstWeekContainsDate) && void 0 !== T ? T : null == n ? void 0 : null === (S = n.locale) || void 0 === S ? void 0 : null === (A = S.options) || void 0 === A ? void 0 : A.firstWeekContainsDate) && void 0 !== b ? b : U.firstWeekContainsDate) && void 0 !== I ? I : null === (N = U.locale) || void 0 === N ? void 0 : null === (C = N.options) || void 0 === C ? void 0 : C.firstWeekContainsDate) && void 0 !== v ? v : 1);
+        B = (0, c.Z)(null !== (v = null !== (I = null !== (T = null !== (b = null == n ? void 0 : n.firstWeekContainsDate) && void 0 !== b ? b : null == n ? void 0 : null === (S = n.locale) || void 0 === S ? void 0 : null === (A = S.options) || void 0 === A ? void 0 : A.firstWeekContainsDate) && void 0 !== T ? T : U.firstWeekContainsDate) && void 0 !== I ? I : null === (N = U.locale) || void 0 === N ? void 0 : null === (C = N.options) || void 0 === C ? void 0 : C.firstWeekContainsDate) && void 0 !== v ? v : 1);
     if (!(B >= 1 && B <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
     var Z = (0, c.Z)(null !== (R = null !== (O = null !== (D = null !== (x = null == n ? void 0 : n.weekStartsOn) && void 0 !== x ? x : null == n ? void 0 : null === (L = n.locale) || void 0 === L ? void 0 : null === (P = L.options) || void 0 === P ? void 0 : P.weekStartsOn) && void 0 !== D ? D : U.weekStartsOn) && void 0 !== O ? O : null === (w = U.locale) || void 0 === w ? void 0 : null === (M = w.options) || void 0 === M ? void 0 : M.weekStartsOn) && void 0 !== R ? R : 0);
     if (!(Z >= 0 && Z <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');

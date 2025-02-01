@@ -1,10 +1,10 @@
 e.exports = {
-    backContainer: 'backContainer_cb02d5',
-    icon: 'icon_cb02d5',
-    headerContainer: 'headerContainer_cb02d5',
-    bottomPadding: 'bottomPadding_cb02d5',
-    headerIcon: 'headerIcon_cb02d5',
-    headerTextContainer: 'headerTextContainer_cb02d5',
-    divider: 'divider_cb02d5',
-    achievementGrid: 'achievementGrid_cb02d5'
+    backContainer: 'backContainer__951af',
+    icon: 'icon__951af',
+    headerContainer: 'headerContainer__951af',
+    bottomPadding: 'bottomPadding__951af',
+    headerIcon: 'headerIcon__951af',
+    headerTextContainer: 'headerTextContainer__951af',
+    divider: 'divider__951af',
+    achievementGrid: 'achievementGrid__951af'
 };

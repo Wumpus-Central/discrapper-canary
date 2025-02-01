@@ -1,14 +1,14 @@
 e.exports = {
-    container: 'container_f798f8',
-    banner: 'banner_f798f8',
-    avatarContainer: 'avatarContainer_f798f8',
-    avatarWrapper: 'avatarWrapper_f798f8',
-    header: 'header_f798f8',
-    members: 'members_f798f8',
-    memberCount: 'memberCount_f798f8',
-    dot: 'dot_f798f8',
-    dotOnline: 'dotOnline_f798f8',
-    established: 'established_f798f8',
-    body: 'body_f798f8',
-    error: 'error_f798f8'
+    container: 'container__86ab2',
+    banner: 'banner__86ab2',
+    avatarContainer: 'avatarContainer__86ab2',
+    avatarWrapper: 'avatarWrapper__86ab2',
+    header: 'header__86ab2',
+    members: 'members__86ab2',
+    memberCount: 'memberCount__86ab2',
+    dot: 'dot__86ab2',
+    dotOnline: 'dotOnline__86ab2',
+    established: 'established__86ab2',
+    body: 'body__86ab2',
+    error: 'error__86ab2'
 };

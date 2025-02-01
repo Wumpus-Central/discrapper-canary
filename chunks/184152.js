@@ -1,12 +1,12 @@
-function n(e) {
-    let n = e.regex,
-        r = n.concat(/[\p{L}_]/u, n.optional(/[\p{L}0-9_.-]*:/u), /[\p{L}0-9_.-]*/u),
+function t(e) {
+    let t = e.regex,
+        n = t.concat(/[\p{L}_]/u, t.optional(/[\p{L}0-9_.-]*:/u), /[\p{L}0-9_.-]*/u),
         i = /[\p{L}0-9._:-]+/u,
-        a = {
+        r = {
             className: 'symbol',
             begin: /&[a-z]+;|&#[0-9]+;|&#x[a-f0-9]+;/
         },
-        o = {
+        a = {
             begin: /\s/,
             contains: [
                 {
@@ -16,13 +16,13 @@ function n(e) {
                 }
             ]
         },
-        s = e.inherit(o, {
+        s = e.inherit(a, {
             begin: /\(/,
             end: /\)/
         }),
-        l = e.inherit(e.APOS_STRING_MODE, { className: 'string' }),
-        u = e.inherit(e.QUOTE_STRING_MODE, { className: 'string' }),
-        c = {
+        o = e.inherit(e.APOS_STRING_MODE, { className: 'string' }),
+        l = e.inherit(e.QUOTE_STRING_MODE, { className: 'string' }),
+        u = {
             endsWithParent: !0,
             illegal: /</,
             relevance: 0,
@@ -43,12 +43,12 @@ function n(e) {
                                 {
                                     begin: /"/,
                                     end: /"/,
-                                    contains: [a]
+                                    contains: [r]
                                 },
                                 {
                                     begin: /'/,
                                     end: /'/,
-                                    contains: [a]
+                                    contains: [r]
                                 },
                                 { begin: /[^\s"'=<>`]+/ }
                             ]
@@ -69,9 +69,9 @@ function n(e) {
                 end: />/,
                 relevance: 10,
                 contains: [
-                    o,
-                    u,
+                    a,
                     l,
+                    o,
                     s,
                     {
                         begin: /\[/,
@@ -81,7 +81,7 @@ function n(e) {
                                 className: 'meta',
                                 begin: /<![a-z]/,
                                 end: />/,
-                                contains: [o, s, u, l]
+                                contains: [a, s, l, o]
                             }
                         ]
                     }
@@ -93,7 +93,7 @@ function n(e) {
                 end: /\]\]>/,
                 relevance: 10
             },
-            a,
+            r,
             {
                 className: 'meta',
                 end: /\?>/,
@@ -101,7 +101,7 @@ function n(e) {
                     {
                         begin: /<\?xml/,
                         relevance: 10,
-                        contains: [u]
+                        contains: [l]
                     },
                     { begin: /<\?[a-z][a-z0-9]+/ }
                 ]
@@ -111,7 +111,7 @@ function n(e) {
                 begin: /<style(?=\s|>)/,
                 end: />/,
                 keywords: { name: 'style' },
-                contains: [c],
+                contains: [u],
                 starts: {
                     end: /<\/style>/,
                     returnEnd: !0,
@@ -123,7 +123,7 @@ function n(e) {
                 begin: /<script(?=\s|>)/,
                 end: />/,
                 keywords: { name: 'script' },
-                contains: [c],
+                contains: [u],
                 starts: {
                     end: /<\/script>/,
                     returnEnd: !0,
@@ -136,24 +136,24 @@ function n(e) {
             },
             {
                 className: 'tag',
-                begin: n.concat(/</, n.lookahead(n.concat(r, n.either(/\/>/, />/, /\s/)))),
+                begin: t.concat(/</, t.lookahead(t.concat(n, t.either(/\/>/, />/, /\s/)))),
                 end: /\/?>/,
                 contains: [
                     {
                         className: 'name',
-                        begin: r,
+                        begin: n,
                         relevance: 0,
-                        starts: c
+                        starts: u
                     }
                 ]
             },
             {
                 className: 'tag',
-                begin: n.concat(/<\//, n.lookahead(n.concat(r, />/))),
+                begin: t.concat(/<\//, t.lookahead(t.concat(n, />/))),
                 contains: [
                     {
                         className: 'name',
-                        begin: r,
+                        begin: n,
                         relevance: 0
                     },
                     {
@@ -166,4 +166,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

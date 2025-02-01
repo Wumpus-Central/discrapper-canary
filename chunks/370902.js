@@ -1,6 +1,6 @@
 e.exports = {
-    category: 'category_b2c982',
-    categoryDivider: 'categoryDivider_b2c982',
-    categoryHeader: 'categoryHeader_b2c982',
-    categoryContent: 'categoryContent_b2c982'
+    category: 'category_f06a86',
+    categoryDivider: 'categoryDivider_f06a86',
+    categoryHeader: 'categoryHeader_f06a86',
+    categoryContent: 'categoryContent_f06a86'
 };

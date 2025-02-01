@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
             1: '១',
             2: '២',
             3: '៣',
@@ -13,7 +13,7 @@
             9: '៩',
             0: '០'
         },
-        r = {
+        n = {
             '១': '1',
             '២': '2',
             '៣': '3',
@@ -44,7 +44,7 @@
         isPM: function (e) {
             return 'ល្ងាច' === e;
         },
-        meridiem: function (e, n, r) {
+        meridiem: function (e, t, n) {
             return e < 12 ? 'ព្រឹក' : 'ល្ងាច';
         },
         calendar: {
@@ -75,12 +75,12 @@
         ordinal: 'ទី%d',
         preparse: function (e) {
             return e.replace(/[១២៣៤៥៦៧៨៩០]/g, function (e) {
-                return r[e];
+                return n[e];
             });
         },
         postformat: function (e) {
             return e.replace(/\d/g, function (e) {
-                return n[e];
+                return t[e];
             });
         },
         week: {

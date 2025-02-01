@@ -1,4 +1,4 @@
 e.exports = {
-    avatarBackground: 'avatarBackground_bb882a',
-    avatar: 'avatar_bb882a'
+    avatarBackground: 'avatarBackground_eb2508',
+    avatar: 'avatar_eb2508'
 };

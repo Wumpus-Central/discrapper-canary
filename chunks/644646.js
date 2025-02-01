@@ -1,127 +1,127 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(513431),
-    u = r(442837),
-    c = r(481060),
-    d = r(607070),
-    f = r(70097),
-    p = r(617136),
-    h = r(918701),
-    _ = r(475595),
-    m = r(566078),
-    g = r(352084),
-    E = r(78826),
-    v = r(341907),
-    y = r(388032),
-    b = r(66330);
-function I(e) {
-    let n;
-    let { className: r, quest: o, autoplay: I = !0, learnMoreStyle: T = null } = e,
-        S = (0, p.O5)(),
-        A = (0, u.e7)([d.Z], () => d.Z.useReducedMotion),
-        C = a.useMemo(() => (0, _.fh)(o, _.eC.REWARD), [o]),
-        N = a.useCallback(
-            (n) => {
-                var r;
-                (0, l.k)(n.currentTarget, HTMLElement) && n.currentTarget.blur(),
-                    S({
-                        questId: o.id,
+n.d(t, { Z: () => I });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(374470),
+    l = n(442837),
+    u = n(481060),
+    c = n(607070),
+    d = n(70097),
+    f = n(617136),
+    _ = n(918701),
+    p = n(475595),
+    h = n(566078),
+    m = n(352084),
+    g = n(78826),
+    E = n(341907),
+    v = n(388032),
+    y = n(66330);
+let I = function (e) {
+    let t;
+    let { className: n, quest: a, autoplay: I = !0, learnMoreStyle: T = null } = e,
+        b = (0, f.O5)(),
+        S = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        A = r.useMemo(() => (0, p.fh)(a, p.eC.REWARD), [a]),
+        N = r.useCallback(
+            (t) => {
+                var n;
+                (0, o.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
+                    b({
+                        questId: a.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
-                        questContentCTA: p.jZ.REWARD_LEARN_MORE
+                        questContentCTA: f.jZ.REWARD_LEARN_MORE
                     }),
-                    (0, v.navigateToQuestHome)(e.location, e.questContent, o.id),
-                    null === (r = e.onClick) || void 0 === r || r.call(e, n);
+                    (0, E.navigateToQuestHome)(e.location, e.questContent, a.id),
+                    null === (n = e.onClick) || void 0 === n || n.call(e, t);
             },
-            [S, o.id, e]
+            [b, a.id, e]
         ),
-        R = a.useRef(null),
-        O = a.useRef(I),
-        D = (0, h.Bg)(o.config);
+        C = r.useRef(null),
+        R = r.useRef(I),
+        O = (0, _.Bg)(a.config);
     return (
-        a.useEffect(() => {
-            if (null != R.current) {
-                if (!C.isAnimated || A) {
-                    (R.current.currentTime = 0), R.current.pause();
+        r.useEffect(() => {
+            if (null != C.current) {
+                if (!A.isAnimated || S) {
+                    (C.current.currentTime = 0), C.current.pause();
                     return;
                 }
-                I && !O.current ? R.current.play() : !I && O.current && ((R.current.currentTime = 0), R.current.pause()), (O.current = I);
+                I && !R.current ? C.current.play() : !I && R.current && ((C.current.currentTime = 0), C.current.pause()), (R.current = I);
             }
-        }, [I, C, A]),
-        (n = D
-            ? (0, i.jsx)(E.Fl, {
+        }, [I, A, S]),
+        (t = O
+            ? (0, i.jsx)(g.Fl, {
                   id: 'QuestRewardTile_rewardTileNitro',
                   children: (e) =>
-                      (0, i.jsx)(g.Z, {
+                      (0, i.jsx)(m.Z, {
                           ref: e,
-                          className: b.questRewardTileAsset
+                          className: y.questRewardTileAsset
                       })
               })
-            : C.isAnimated
-              ? (0, i.jsx)(E.Fl, {
+            : A.isAnimated
+              ? (0, i.jsx)(g.Fl, {
                     id: 'QuestRewardTile_rewardTileAnimated',
                     children: (e) => {
-                        var n;
-                        return (0, i.jsx)(f.Z, {
-                            ref: (n) => {
-                                (e.current = n), (R.current = n);
+                        var t;
+                        return (0, i.jsx)(d.Z, {
+                            ref: (t) => {
+                                (e.current = t), (C.current = t);
                             },
-                            autoPlay: !A && I,
+                            autoPlay: !S && I,
                             loop: !0,
                             muted: !0,
                             playsInline: !0,
-                            className: b.questRewardTileAsset,
+                            className: y.questRewardTileAsset,
                             controls: !1,
                             children: (0, i.jsx)('source', {
-                                src: C.url,
-                                type: null !== (n = C.mimetype) && void 0 !== n ? n : void 0
+                                src: A.url,
+                                type: null !== (t = A.mimetype) && void 0 !== t ? t : void 0
                             })
                         });
                     }
                 })
-              : (0, i.jsx)(E.Fl, {
+              : (0, i.jsx)(g.Fl, {
                     id: 'QuestRewardTile_rewardTileStatic',
                     children: (e) =>
                         (0, i.jsx)('img', {
                             ref: e,
-                            alt: m.r.build(o.config).defaultReward.messages.name,
-                            className: s()(b.questRewardTileAsset, b.questRewardTileAssetStatic),
-                            src: C.url
+                            alt: h.r.build(a.config).defaultReward.messages.name,
+                            className: s()(y.questRewardTileAsset, y.questRewardTileAssetStatic),
+                            src: A.url
                         })
                 })),
         null == T
             ? (0, i.jsx)('div', {
-                  className: s()(b.questRewardTile, r),
-                  children: n
+                  className: s()(y.questRewardTile, n),
+                  children: t
               })
-            : (0, i.jsxs)(c.Clickable, {
-                  className: s()(b.questRewardTileInteractive, b.questRewardTile, b.rewardHighlight, r),
+            : (0, i.jsxs)(u.P3F, {
+                  className: s()(y.questRewardTileInteractive, y.questRewardTile, y.rewardHighlight, n),
                   onClick: N,
                   children: [
-                      n,
-                      (0, i.jsx)(c.Shine, {
-                          className: b.shine,
-                          shineSize: c.ShineSizes.SMALL
+                      t,
+                      (0, i.jsx)(u.ZX5, {
+                          className: y.shine,
+                          shineSize: u.rHe.SMALL
                       }),
                       'text' === T &&
-                          (0, i.jsx)(c.Text, {
+                          (0, i.jsx)(u.Text, {
                               color: 'always-white',
                               variant: 'text-xs/normal',
-                              className: b.questRewardTileDetailsLearnMore,
-                              children: y.intl.format(y.t.DYAleX, {})
+                              className: y.questRewardTileDetailsLearnMore,
+                              children: v.intl.format(v.t.DYAleX, {})
                           }),
                       'icon' === T &&
                           (0, i.jsx)('div', {
-                              className: b.questRewardTileDetailsLearnMore,
-                              children: (0, i.jsx)(c.CircleInformationIcon, {
+                              className: y.questRewardTileDetailsLearnMore,
+                              children: (0, i.jsx)(u.d3s, {
                                   size: 'xxs',
-                                  color: c.tokens.colors.WHITE.css
+                                  color: u.TVs.colors.WHITE.css
                               })
                           })
                   ]
               })
     );
-}
-n.Z = I;
+};

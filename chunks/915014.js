@@ -46,14 +46,14 @@ function m(e) {
                       ]
                   })
                 : null,
-        b = () =>
+        T = () =>
             E && v
                 ? (0, i.jsx)('div', {
                       'aria-hidden': 'true',
                       className: p.spacer
                   })
                 : null,
-        T = () =>
+        b = () =>
             v
                 ? (0, i.jsxs)(r.P3F, {
                       className: p.section,
@@ -81,6 +81,6 @@ function m(e) {
                 : null;
     return (0, i.jsxs)('div', {
         className: p.mutuals,
-        children: [I(), b(), T()]
+        children: [I(), T(), b()]
     });
 }

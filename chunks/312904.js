@@ -1,30 +1,30 @@
-var i = r(192379);
-let a = (e) => {
+n.d(t, { Z: () => a });
+var i = n(192379);
+let r = (e) => {
         e.effects.forEach((e) => {
-            let { src: n } = e,
-                r = document.createElement('link');
-            (r.rel = 'prefetch'),
-                (r.href = n),
-                (r.onload = () => {
-                    document.body.removeChild(r);
+            let { src: t } = e,
+                n = document.createElement('link');
+            (n.rel = 'prefetch'),
+                (n.href = t),
+                (n.onload = () => {
+                    document.body.removeChild(n);
                 }),
-                document.body.appendChild(r);
+                document.body.appendChild(n);
         });
     },
-    o = (e) => {
+    a = (e) => {
         i.useEffect(() => {
             if ('loading' === document.readyState) {
-                let n = () => {
-                    a(e);
+                let t = () => {
+                    r(e);
                 };
                 return (
-                    document.addEventListener('DOMContentLoaded', n),
+                    document.addEventListener('DOMContentLoaded', t),
                     () => {
-                        document.removeEventListener('DOMContentLoaded', n);
+                        document.removeEventListener('DOMContentLoaded', t);
                     }
                 );
             }
-            a(e);
+            r(e);
         }, [e]);
     };
-n.Z = o;

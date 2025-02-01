@@ -1,12 +1,12 @@
 e.exports = {
-    container: 'container_e70817',
-    loading: 'loading_e70817',
-    content: 'content_e70817',
-    accountCredit: 'accountCredit_e70817',
-    accountCreditTitle: 'accountCreditTitle_e70817',
-    accountCreditDescription: 'accountCreditDescription_e70817',
-    cardText: 'cardText_e70817',
-    noItemsCard: 'noItemsCard_e70817',
-    noItemsIcon: 'noItemsIcon_e70817',
-    hr: 'hr_e70817'
+    container: 'container__70151',
+    loading: 'loading__70151',
+    content: 'content__70151',
+    accountCredit: 'accountCredit__70151',
+    accountCreditTitle: 'accountCreditTitle__70151',
+    accountCreditDescription: 'accountCreditDescription__70151',
+    cardText: 'cardText__70151',
+    noItemsCard: 'noItemsCard__70151',
+    noItemsIcon: 'noItemsIcon__70151',
+    hr: 'hr__70151'
 };

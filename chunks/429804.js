@@ -1,5 +1,5 @@
-var n = { foo: {} },
-    r = Object;
+var t = { foo: {} },
+    n = Object;
 e.exports = function () {
-    return { __proto__: n }.foo === n.foo && !({ __proto__: null } instanceof r);
+    return { __proto__: t }.foo === t.foo && !({ __proto__: null } instanceof n);
 };

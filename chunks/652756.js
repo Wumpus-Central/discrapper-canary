@@ -58,11 +58,11 @@ function c(e, t, n, a, o) {
         I = function () {
             return new r.I([0, 0.5, 1], [f.x, (f.x / _) * E, f.x + E - _]).interpolate(h);
         },
-        b = o.offsetX,
-        T = o.offsetY,
-        S = 0 === T || T;
+        T = o.offsetX,
+        b = o.offsetY,
+        S = 0 === b || b;
     return {
-        x: 0 === b || b ? b : I(),
-        y: S ? T : y()
+        x: 0 === T || T ? T : I(),
+        y: S ? b : y()
     };
 }

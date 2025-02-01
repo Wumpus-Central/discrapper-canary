@@ -1,8 +1,8 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e, n, r, i) {
-        var a = {
+    function t(e, t, n, i) {
+        var r = {
             m: ['eine Minute', 'einer Minute'],
             h: ['eine Stunde', 'einer Stunde'],
             d: ['ein Tag', 'einem Tag'],
@@ -12,7 +12,7 @@
             y: ['ein Jahr', 'einem Jahr'],
             yy: [e + ' Jahre', e + ' Jahren']
         };
-        return n ? a[r][0] : a[r][1];
+        return t ? r[n][0] : r[n][1];
     }
     return e.defineLocale('de-ch', {
         months: 'Januar_Februar_März_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember'.split('_'),
@@ -43,16 +43,16 @@
             past: 'vor %s',
             s: 'ein paar Sekunden',
             ss: '%d Sekunden',
-            m: n,
+            m: t,
             mm: '%d Minuten',
-            h: n,
+            h: t,
             hh: '%d Stunden',
-            d: n,
-            dd: n,
-            M: n,
-            MM: n,
-            y: n,
-            yy: n
+            d: t,
+            dd: t,
+            M: t,
+            MM: t,
+            y: t,
+            yy: t
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

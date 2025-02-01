@@ -1,16 +1,16 @@
-var i = r(954955),
-    a = r(661233),
-    o = 'Expected a function';
-function s(e, n, r) {
+var i = n(954955),
+    r = n(661233),
+    a = 'Expected a function';
+function s(e, t, n) {
     var s = !0,
-        l = !0;
-    if ('function' != typeof e) throw TypeError(o);
+        o = !0;
+    if ('function' != typeof e) throw TypeError(a);
     return (
-        a(r) && ((s = 'leading' in r ? !!r.leading : s), (l = 'trailing' in r ? !!r.trailing : l)),
-        i(e, n, {
+        r(n) && ((s = 'leading' in n ? !!n.leading : s), (o = 'trailing' in n ? !!n.trailing : o)),
+        i(e, t, {
             leading: s,
-            maxWait: n,
-            trailing: l
+            maxWait: t,
+            trailing: o
         })
     );
 }

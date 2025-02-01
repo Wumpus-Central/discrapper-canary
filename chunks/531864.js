@@ -1,12 +1,12 @@
-n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var r = n(200651),
-    i = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    s = n(979554),
+    l = n(192379),
+    i = n(120356),
+    s = n.n(i),
+    a = n(979554),
     o = n(876917),
-    c = n(597688),
-    d = n(616066),
+    d = n(597688),
+    c = n(616066),
     u = n(215023),
     C = n(407691);
 let h = {
@@ -98,61 +98,61 @@ let h = {
             size: h,
             skuId: '1217625794382401577'
         }
-    ];
-t.Z = (e) => {
-    let { peaking: t, transitioning: n, style: l } = e,
-        h = window.innerHeight,
-        [f, m] = i.useState(!1),
-        g = p.map((e) => {
-            let { skuId: t } = e;
-            return c.Z.getProduct(t);
-        });
-    return (
-        i.useEffect(() => {
-            n &&
-                setTimeout(() => {
-                    m(!0);
-                }, u.lb);
-        }, [n]),
-        (0, r.jsx)('div', {
-            style: l,
-            className: a()(C.jumbleWrapper, {
-                [C.peaking]: t,
-                [C.transitioned]: f
-            }),
-            children: p.map((e, t) => {
-                var i, l;
-                let { top: a, left: c, rotation: p, size: f, skuId: m } = e,
-                    b = null === (i = g[t]) || void 0 === i ? void 0 : i.items[0],
-                    x = null === (l = g[t]) || void 0 === l ? void 0 : l.type,
-                    v = x === s.Z.AVATAR_DECORATION ? 384 : 512;
-                return (0, r.jsxs)(
-                    'div',
-                    {
-                        className: C.asset,
-                        style: {
-                            top: n ? -h - v : a,
-                            left: n ? ''.concat(c - 75 - 350 * Math.random()) : c,
-                            transform: 'rotate('.concat(p, 'deg)'),
-                            height: f.y,
-                            width: f.x,
-                            transitionDelay: ''.concat(Math.random() / 3, 's'),
-                            transitionDuration: ''.concat(u.lb - 200 * Math.random(), 'ms')
+    ],
+    m = (e) => {
+        let { peaking: t, transitioning: n, style: i } = e,
+            h = window.innerHeight,
+            [m, g] = l.useState(!1),
+            f = p.map((e) => {
+                let { skuId: t } = e;
+                return d.Z.getProduct(t);
+            });
+        return (
+            l.useEffect(() => {
+                n &&
+                    setTimeout(() => {
+                        g(!0);
+                    }, u.lb);
+            }, [n]),
+            (0, r.jsx)('div', {
+                style: i,
+                className: s()(C.jumbleWrapper, {
+                    [C.peaking]: t,
+                    [C.transitioned]: m
+                }),
+                children: p.map((e, t) => {
+                    var l, i;
+                    let { top: s, left: d, rotation: p, size: m, skuId: g } = e,
+                        x = null === (l = f[t]) || void 0 === l ? void 0 : l.items[0],
+                        _ = null === (i = f[t]) || void 0 === i ? void 0 : i.type,
+                        v = _ === a.Z.AVATAR_DECORATION ? 384 : 512;
+                    return (0, r.jsxs)(
+                        'div',
+                        {
+                            className: C.asset,
+                            style: {
+                                top: n ? -h - v : s,
+                                left: n ? ''.concat(d - 75 - 350 * Math.random()) : d,
+                                transform: 'rotate('.concat(p, 'deg)'),
+                                height: m.y,
+                                width: m.x,
+                                transitionDelay: ''.concat(Math.random() / 3, 's'),
+                                transitionDuration: ''.concat(u.lb - 200 * Math.random(), 'ms')
+                            },
+                            children: [
+                                null != x && _ === a.Z.AVATAR_DECORATION && (0, r.jsx)(c.R, { item: x }),
+                                null != x &&
+                                    _ === a.Z.PROFILE_EFFECT &&
+                                    (0, r.jsx)(o.Z, {
+                                        profileEffectId: x.id,
+                                        isPurchased: !1,
+                                        isHovering: !0
+                                    })
+                            ]
                         },
-                        children: [
-                            null != b && x === s.Z.AVATAR_DECORATION && (0, r.jsx)(d.R, { item: b }),
-                            null != b &&
-                                x === s.Z.PROFILE_EFFECT &&
-                                (0, r.jsx)(o.Z, {
-                                    profileEffectId: b.id,
-                                    isPurchased: !1,
-                                    isHovering: !0
-                                })
-                        ]
-                    },
-                    m + t
-                );
+                        g + t
+                    );
+                })
             })
-        })
-    );
-};
+        );
+    };

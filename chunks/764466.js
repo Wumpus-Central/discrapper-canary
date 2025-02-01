@@ -1,4 +1,4 @@
-n.exports = {
-    newBadgeRow: 'newBadgeRow_f08bf8',
-    newBadge: 'newBadge_f08bf8'
+e.exports = {
+    newBadgeRow: 'newBadgeRow__46b5e',
+    newBadge: 'newBadge__46b5e'
 };

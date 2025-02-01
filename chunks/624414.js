@@ -1,7 +1,7 @@
 e.exports = {
-    sidebar: 'sidebar_d86933',
-    children: 'children_d86933',
-    header: 'header_d86933',
-    draggableStartArea: 'draggableStartArea_d86933',
-    headerTitle: 'headerTitle_d86933'
+    sidebar: 'sidebar__9835e',
+    children: 'children__9835e',
+    header: 'header__9835e',
+    draggableStartArea: 'draggableStartArea__9835e',
+    headerTitle: 'headerTitle__9835e'
 };

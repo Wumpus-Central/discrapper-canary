@@ -1,7 +1,7 @@
-t.exports = {
-    headerContainer: 'headerContainer_e8233c',
-    guildIconContainer: 'guildIconContainer_e8233c',
-    statusContainer: 'statusContainer_e8233c',
-    statusIcon: 'statusIcon_e8233c',
-    descriptionContainer: 'descriptionContainer_e8233c'
+n.exports = {
+    headerContainer: 'headerContainer__56d15',
+    guildIconContainer: 'guildIconContainer__56d15',
+    statusContainer: 'statusContainer__56d15',
+    statusIcon: 'statusIcon__56d15',
+    descriptionContainer: 'descriptionContainer__56d15'
 };

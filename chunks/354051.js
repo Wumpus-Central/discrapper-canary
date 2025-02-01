@@ -1,4 +1,4 @@
-n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var i = n(200651);
 n(192379);
 var r = n(442837),
@@ -9,7 +9,7 @@ var r = n(442837),
     c = n(981631),
     d = n(388032),
     u = n(941851);
-t.Z = (e) => {
+let m = (e) => {
     let { guild: t } = e,
         n = (0, r.e7)([s.Z], () => s.Z.can(c.Plq.ADMINISTRATOR, t), [t]),
         m = t.hasFeature(c.oNc.DISCOVERABLE),
@@ -17,7 +17,7 @@ t.Z = (e) => {
             let e = new Set(t.features);
             t.hasFeature(c.oNc.DISCOVERABLE) && e.delete(c.oNc.DISCOVERABLE), a.Z.updateGuild({ features: e });
         };
-    return (0, i.jsxs)(l.FormSection, {
+    return (0, i.jsxs)(l.hjN, {
         title: d.intl.string(d.t.oGaVGx),
         tag: 'h2',
         children: [
@@ -26,7 +26,7 @@ t.Z = (e) => {
                 className: u.discoverySettings,
                 children: [
                     (0, i.jsx)('div', { className: u.image }),
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(l.X6q, {
                         className: u.header,
                         variant: 'heading-xl/semibold',
                         children: d.intl.string(d.t.rSBQU1)
@@ -43,13 +43,13 @@ t.Z = (e) => {
                         failedItemsOnly: !0
                     }),
                     m &&
-                        (0, i.jsx)(l.Tooltip, {
+                        (0, i.jsx)(l.ua7, {
                             text: n ? null : d.intl.string(d.t['5VbUBw']),
                             children: (e) =>
-                                (0, i.jsx)(l.Button, {
-                                    size: l.Button.Sizes.SMALL,
+                                (0, i.jsx)(l.zxk, {
+                                    size: l.zxk.Sizes.SMALL,
                                     onClick: h,
-                                    color: l.Button.Colors.PRIMARY,
+                                    color: l.zxk.Colors.PRIMARY,
                                     className: u.disableDiscoveryButton,
                                     disabled: !n,
                                     ...e,

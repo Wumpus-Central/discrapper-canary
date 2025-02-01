@@ -1,6 +1,6 @@
-function n(e) {
-    let n = '[a-z][a-zA-Z0-9_]*',
-        r = {
+function t(e) {
+    let t = '[a-z][a-zA-Z0-9_]*',
+        n = {
             className: 'string',
             begin: '\\$.{1}'
         },
@@ -21,25 +21,25 @@ function n(e) {
                 relevance: 0
             },
             {
-                begin: n + ':',
+                begin: t + ':',
                 relevance: 0
             },
             e.C_NUMBER_MODE,
             i,
-            r,
+            n,
             {
-                begin: '\\|[ ]*' + n + '([ ]+' + n + ')*[ ]*\\|',
+                begin: '\\|[ ]*' + t + '([ ]+' + t + ')*[ ]*\\|',
                 returnBegin: !0,
                 end: /\|/,
                 illegal: /\S/,
-                contains: [{ begin: '(\\|[ ]*)?' + n }]
+                contains: [{ begin: '(\\|[ ]*)?' + t }]
             },
             {
                 begin: '#\\(',
                 end: '\\)',
-                contains: [e.APOS_STRING_MODE, r, e.C_NUMBER_MODE, i]
+                contains: [e.APOS_STRING_MODE, n, e.C_NUMBER_MODE, i]
             }
         ]
     };
 }
-e.exports = n;
+e.exports = t;

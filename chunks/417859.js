@@ -1,4 +1,4 @@
 e.exports = {
-    attribution: 'attribution_e4fd9f',
-    img: 'img_e4fd9f'
+    attribution: 'attribution__83f6c',
+    img: 'img__83f6c'
 };

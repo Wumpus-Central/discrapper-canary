@@ -1,12 +1,12 @@
 t.exports = {
-    container: 'container_ec343b',
-    form: 'form_ec343b',
-    modalContent: 'modalContent_ec343b',
-    minorContainer: 'minorContainer_ec343b',
-    minorAction: 'minorAction_ec343b',
-    title: 'title_ec343b',
-    description: 'description_ec343b',
-    primaryButton: 'primaryButton_ec343b',
-    gutter: 'gutter_ec343b',
-    hero: 'hero_ec343b'
+    container: 'container_a3e361',
+    form: 'form_a3e361',
+    modalContent: 'modalContent_a3e361',
+    minorContainer: 'minorContainer_a3e361',
+    minorAction: 'minorAction_a3e361',
+    title: 'title_a3e361',
+    description: 'description_a3e361',
+    primaryButton: 'primaryButton_a3e361',
+    gutter: 'gutter_a3e361',
+    hero: 'hero_a3e361'
 };

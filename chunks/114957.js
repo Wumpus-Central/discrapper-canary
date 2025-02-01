@@ -1,28 +1,28 @@
-var i = r(47120);
-var a = r(224706),
-    o = r(978085),
-    s = r(147913),
-    l = r(283595),
-    u = r(358085);
-function c(e, n, r) {
+n.d(t, { Z: () => c }), n(47120);
+var i = n(224706),
+    r = n(978085),
+    a = n(147913),
+    s = n(283595),
+    o = n(358085);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class d extends s.Z {
+class u extends a.Z {
     handlePostConnectionOpen() {
-        (0, u.isDesktop)() && (!l.Z.fetched && (0, o.b8)(), a.Z.getDetectableGames());
+        (0, o.isDesktop)() && (s.Z.fetched || (0, r.b8)(), i.Z.getDetectableGames());
     }
     constructor(...e) {
-        super(...e), c(this, 'actions', { POST_CONNECTION_OPEN: this.handlePostConnectionOpen });
+        super(...e), l(this, 'actions', { POST_CONNECTION_OPEN: this.handlePostConnectionOpen });
     }
 }
-n.Z = new d();
+let c = new u();

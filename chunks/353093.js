@@ -6,7 +6,7 @@ n.d(t, {
     Zp: () => m,
     f6: () => E,
     ky: () => y,
-    p0: () => b,
+    p0: () => T,
     pY: () => I
 });
 var i = n(108131),
@@ -87,7 +87,7 @@ function I(e, t) {
     let { CDN_HOST: n } = window.GLOBAL_ENV;
     if (null != n) return ''.concat(location.protocol, '//').concat(n, '/clan-banners/').concat(e, '/').concat(t, '.png?size=512');
 }
-function b(e, t) {
+function T(e, t) {
     let n = (0, a.e7)([s.Z], () => s.Z.hideTags),
         i = (0, a.e7)([u.default], () => u.default.getUser(e), [e]),
         r = (0, a.e7)(

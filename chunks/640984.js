@@ -1,4 +1,4 @@
 e.exports = {
-    getPremiumButton: 'getPremiumButton_d6b606',
-    getPremiumButtonIcon: 'getPremiumButtonIcon_d6b606'
+    getPremiumButton: 'getPremiumButton__3de87',
+    getPremiumButtonIcon: 'getPremiumButtonIcon__3de87'
 };

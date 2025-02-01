@@ -1,7 +1,7 @@
 e.exports = {
-    applicationInfoContainer: 'applicationInfoContainer_d009e1',
-    applicationIcon: 'applicationIcon_d009e1',
-    guildCountContainer: 'guildCountContainer_d009e1',
-    guildCountIcon: 'guildCountIcon_d009e1',
-    invalidBody: 'invalidBody_d009e1'
+    applicationInfoContainer: 'applicationInfoContainer_c07d42',
+    applicationIcon: 'applicationIcon_c07d42',
+    guildCountContainer: 'guildCountContainer_c07d42',
+    guildCountIcon: 'guildCountIcon_c07d42',
+    invalidBody: 'invalidBody_c07d42'
 };

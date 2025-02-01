@@ -38,7 +38,7 @@ let v = -1,
 function I(e) {
     return 'guild_'.concat(e);
 }
-function b(e) {
+function T(e) {
     return {
         requestState: e,
         abortController: null,
@@ -50,17 +50,17 @@ function b(e) {
         elasticSearchCursor: null
     };
 }
-let T = (0, s.U)((e) => ({}));
+let b = (0, s.U)((e) => ({}));
 function S(e, t) {
-    let n = T.getState()[e];
+    let n = b.getState()[e];
     return (
-        null == n && (n = b(1)),
+        null == n && (n = T(1)),
         (n = {
             ...n,
             ...t
         }),
         (0, l.j)(() => {
-            T.setState((t) => ({
+            b.setState((t) => ({
                 ...t,
                 [e]: n
             }));
@@ -69,15 +69,15 @@ function S(e, t) {
     );
 }
 function A(e) {
-    return T.getState()[e];
+    return b.getState()[e];
 }
 function N(e) {
     let t = A(e);
-    return null == t && S(e, (t = b(1))), t;
+    return null == t && S(e, (t = T(1))), t;
 }
 function C(e) {
     (0, l.j)(() => {
-        T.setState((t) => {
+        b.setState((t) => {
             let n = { ...t };
             return delete n[e], n;
         });
@@ -287,13 +287,13 @@ async function F(e) {
     await D(o);
 }
 function V(e) {
-    return T((t) => {
+    return b((t) => {
         var n;
         return (null === (n = t[I(e)]) || void 0 === n ? void 0 : n.requestState) === 2;
     });
 }
 function j(e) {
-    return T((t) => {
+    return b((t) => {
         var n;
         return (null === (n = t[I(e)]) || void 0 === n ? void 0 : n.requestState) === 4;
     });

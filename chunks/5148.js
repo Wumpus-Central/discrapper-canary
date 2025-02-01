@@ -18,10 +18,10 @@ var n = r(399932),
     b = r(105500),
     S = r(893506),
     w = r(343623),
-    k = r(344751),
-    x = r(593121),
-    C = r(446466),
-    E = r(114603);
+    x = r(344751),
+    k = r(593121),
+    E = r(446466),
+    C = r(114603);
 t.exports = {
     Editor: f,
     EditorBlock: p,
@@ -41,10 +41,10 @@ t.exports = {
     RichUtils: _,
     DefaultDraftBlockRenderMap: c,
     DefaultDraftInlineStyle: l,
-    convertFromHTML: E,
+    convertFromHTML: C,
     convertFromRaw: w,
     convertToRaw: S,
-    genKey: k,
-    getDefaultKeyBinding: x,
-    getVisibleSelectionRect: C
+    genKey: x,
+    getDefaultKeyBinding: k,
+    getVisibleSelectionRect: E
 };

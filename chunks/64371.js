@@ -1,5 +1,5 @@
 e.exports = {
-    container: 'container_a84246',
-    avatar: 'avatar_a84246',
-    username: 'username_a84246'
+    container: 'container__9ddd5',
+    avatar: 'avatar__9ddd5',
+    username: 'username__9ddd5'
 };

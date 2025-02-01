@@ -1,14 +1,14 @@
-n.r(e), n(47120);
+n.d(e, { default: () => k }), n(47120);
 var l = n(200651),
     i = n(192379),
-    o = n(481060),
-    s = n(923928),
-    a = n(600164),
-    r = n(594190),
+    s = n(481060),
+    r = n(923928),
+    o = n(600164),
+    a = n(594190),
     d = n(626135),
     u = n(981631),
-    c = n(388032),
-    h = n(232186);
+    h = n(388032),
+    c = n(232186);
 function p(t, e, n) {
     return (
         e in t
@@ -22,10 +22,10 @@ function p(t, e, n) {
         t
     );
 }
-class m extends i.Component {
+class x extends i.Component {
     componentDidMount() {
         let { pid: t } = this.props,
-            e = null != t ? r.ZP.getGameForPID(t) : null;
+            e = null != t ? a.ZP.getGameForPID(t) : null;
         d.default.track(u.rMx.OPEN_MODAL, {
             type: 'Elevated Permissions Sound',
             application_id: null != e ? e.id : null,
@@ -34,40 +34,40 @@ class m extends i.Component {
         });
     }
     render() {
-        return (0, l.jsxs)(o.ModalRoot, {
+        return (0, l.jsxs)(s.Y0X, {
             transitionState: this.props.transitionState,
-            'aria-label': c.intl.string(c.t['4xSkEB']),
+            'aria-label': h.intl.string(h.t['4xSkEB']),
             children: [
-                (0, l.jsxs)(o.ModalHeader, {
-                    justify: a.Z.Justify.BETWEEN,
+                (0, l.jsxs)(s.xBx, {
+                    justify: o.Z.Justify.BETWEEN,
                     separator: !1,
                     children: [
-                        (0, l.jsx)(o.Heading, {
+                        (0, l.jsx)(s.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: c.intl.string(c.t['4xSkEB'])
+                            children: h.intl.string(h.t['4xSkEB'])
                         }),
-                        (0, l.jsx)(o.ModalCloseButton, { onClick: this.handleClose })
+                        (0, l.jsx)(s.olH, { onClick: this.handleClose })
                     ]
                 }),
-                (0, l.jsx)(o.ModalContent, {
-                    children: (0, l.jsx)(o.Text, {
+                (0, l.jsx)(s.hzk, {
+                    children: (0, l.jsx)(s.Text, {
                         tag: 'strong',
                         variant: 'text-md/normal',
-                        className: h.marginBottom20,
-                        children: c.intl.string(c.t.UCEXPj)
+                        className: c.marginBottom20,
+                        children: h.intl.string(h.t.UCEXPj)
                     })
                 }),
-                (0, l.jsxs)(o.ModalFooter, {
+                (0, l.jsxs)(s.mzw, {
                     children: [
-                        (0, l.jsx)(o.Button, {
+                        (0, l.jsx)(s.zxk, {
                             onClick: this.handleRequestElevated,
-                            children: c.intl.string(c.t.taPRcH)
+                            children: h.intl.string(h.t.taPRcH)
                         }),
-                        (0, l.jsx)(o.Button, {
-                            look: o.Button.Looks.LINK,
-                            color: o.Button.Colors.PRIMARY,
+                        (0, l.jsx)(s.zxk, {
+                            look: s.zxk.Looks.LINK,
+                            color: s.zxk.Colors.PRIMARY,
                             onClick: this.handleStreamWithoutSound,
-                            children: c.intl.string(c.t.of0VoK)
+                            children: h.intl.string(h.t.of0VoK)
                         })
                     ]
                 })
@@ -82,12 +82,12 @@ class m extends i.Component {
             }),
             p(this, 'handleStreamWithoutSound', () => {
                 let { handleStream: t, onClose: e, pid: n } = this.props;
-                s.Z.continueNonelevatedProcess(n), t(), e();
+                r.Z.continueNonelevatedProcess(n), t(), e();
             }),
             p(this, 'handleRequestElevated', () => {
                 let { handleStream: t, onClose: e, pid: n } = this.props;
-                s.Z.requestElevatedProcess(n), t(), e();
+                r.Z.requestElevatedProcess(n), t(), e();
             });
     }
 }
-e.default = m;
+let k = x;

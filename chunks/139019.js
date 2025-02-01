@@ -1,6 +1,6 @@
 e.exports = {
-    sectionContainer: 'sectionContainer_cf715d',
-    resetButton: 'resetButton_cf715d',
-    colorSwatchLabel: 'colorSwatchLabel_cf715d',
-    sparkleContainer: 'sparkleContainer_cf715d'
+    sectionContainer: 'sectionContainer__04485',
+    resetButton: 'resetButton__04485',
+    colorSwatchLabel: 'colorSwatchLabel__04485',
+    sparkleContainer: 'sparkleContainer__04485'
 };

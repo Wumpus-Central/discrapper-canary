@@ -18,8 +18,8 @@ var i,
     v = n(542750),
     y = n(829907),
     I = n(610394),
-    b = n(987650);
-function T(e, t, n) {
+    T = n(987650);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -361,7 +361,7 @@ function er(e) {
         }, e)));
 }
 async function ea(e, t, n) {
-    if (!b.iP) {
+    if (!T.iP) {
         S.verbose('setOverlayEnabled: not supported');
         return;
     }
@@ -471,7 +471,7 @@ class eg extends (i = r.ZP.Store) {
         if (null != e) return null !== (n = null === (t = U(e)) || void 0 === t ? void 0 : t.overlayMethod) && void 0 !== n ? n : void 0;
     }
 }
-T(eg, 'displayName', 'OverlayRenderStore');
+b(eg, 'displayName', 'OverlayRenderStore');
 let eE = new eg(s.Z, {
         CONNECTION_OPEN: es,
         EXPERIMENT_OVERRIDE_BUCKET: es,

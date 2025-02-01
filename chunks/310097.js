@@ -1,5 +1,5 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             className: 'params',
             begin: /\(/,
             end: /\)/,
@@ -18,7 +18,7 @@ function n(e) {
             ],
             relevance: 0
         },
-        r = {
+        n = {
             className: 'function',
             begin: /:[\w\-.]+/,
             relevance: 0
@@ -27,7 +27,7 @@ function n(e) {
             className: 'string',
             begin: /\B([\/.])[\w\-.\/=]+/
         },
-        a = {
+        r = {
             className: 'params',
             begin: /--[\w\-=\/]+/
         };
@@ -39,7 +39,7 @@ function n(e) {
             keyword: 'alias batch cd clear command connect connection-factory connection-info data-source deploy deployment-info deployment-overlay echo echo-dmr help history if jdbc-driver-info jms-queue|20 jms-topic|20 ls patch pwd quit read-attribute read-operation reload rollout-plan run-batch set shutdown try unalias undeploy unset version xa-data-source',
             literal: 'true false'
         },
-        contains: [e.HASH_COMMENT_MODE, e.QUOTE_STRING_MODE, a, r, i, n]
+        contains: [e.HASH_COMMENT_MODE, e.QUOTE_STRING_MODE, r, n, i, t]
     };
 }
-e.exports = n;
+e.exports = t;

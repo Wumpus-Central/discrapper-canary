@@ -1,6 +1,6 @@
 e.exports = {
-    itemCard: 'itemCard_f02fcf',
-    emptyCard: 'emptyCard_f02fcf',
-    emptyHeader: 'emptyHeader_f02fcf',
-    emptyText: 'emptyText_f02fcf'
+    itemCard: 'itemCard__7e549',
+    emptyCard: 'emptyCard__7e549',
+    emptyHeader: 'emptyHeader__7e549',
+    emptyText: 'emptyText__7e549'
 };

@@ -1,7 +1,7 @@
 t.exports = {
-    wrapper: 'wrapper_c01868',
-    image: 'image_c01868',
-    content: 'content_c01868',
-    icon: 'icon_c01868',
-    background: 'background_c01868'
+    wrapper: 'wrapper__14403',
+    image: 'image__14403',
+    content: 'content__14403',
+    icon: 'icon__14403',
+    background: 'background__14403'
 };

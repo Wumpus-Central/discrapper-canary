@@ -32,9 +32,9 @@ let E = (e) => {
     let { children: t, close: n, onUnmount: s, target: l, rect: f, position: _, align: p, impressionName: m, impressionProperties: E, disableClickTrap: v = !1 } = e,
         y = r.useRef(null),
         I = r.useMemo(() => ({ current: l }), [l]),
-        b = r.useRef(n);
+        T = r.useRef(n);
     r.useEffect(() => {
-        b.current = n;
+        T.current = n;
     }),
         r.useEffect(() => {
             var e, t, n;
@@ -44,7 +44,7 @@ let E = (e) => {
                 var t;
                 let n = e.target,
                     i = null === (t = y.current) || void 0 === t ? void 0 : t.elementRef.current;
-                !(null != i && (0, o.ty$)(i, n)) && (g(), b.current());
+                !(null != i && (0, o.ty$)(i, n)) && (g(), T.current());
             };
             return (
                 null === (t = i.ownerDocument) || void 0 === t || t.addEventListener('click', r, !0),
@@ -55,12 +55,12 @@ let E = (e) => {
                 }
             );
         }, []);
-    let T = r.useRef(s);
-    r.useEffect(() => void (T.current = s)),
+    let b = r.useRef(s);
+    r.useEffect(() => void (b.current = s)),
         r.useEffect(
             () => () => {
                 var e;
-                return null === (e = T.current) || void 0 === e ? void 0 : e.call(T);
+                return null === (e = b.current) || void 0 === e ? void 0 : e.call(b);
             },
             []
         ),

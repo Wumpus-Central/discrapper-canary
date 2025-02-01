@@ -1,4 +1,4 @@
-n(47120), n(733860);
+n.d(t, { Z: () => S }), n(47120), n(733860);
 var i = n(200651),
     r = n(192379),
     l = n(392711),
@@ -13,13 +13,13 @@ var i = n(200651),
     g = n(496675),
     x = n(699516),
     p = n(246946),
-    f = n(594174),
+    _ = n(594174),
     C = n(434404),
-    v = n(999382),
-    I = n(981631),
+    f = n(999382),
+    v = n(981631),
     N = n(388032),
-    _ = n(359963);
-function T(e, t, n) {
+    j = n(359963);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,9 +32,9 @@ function T(e, t, n) {
         e
     );
 }
-let j = 'NO_INSTANT_INVITE',
-    b = a.$e(I.Plq.VIEW_CHANNEL, I.Plq.CREATE_INSTANT_INVITE);
-class E extends r.PureComponent {
+let E = 'NO_INSTANT_INVITE',
+    b = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.CREATE_INSTANT_INVITE);
+class T extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { widgetEnabled: n } = e,
             { widgetEnabledProp: i } = t;
@@ -61,26 +61,26 @@ class E extends r.PureComponent {
                     let { channel: t } = e;
                     return {
                         value: t.id,
-                        label: (0, m.F6)(t, f.default, x.Z, !0)
+                        label: (0, m.F6)(t, _.default, x.Z, !0)
                     };
                 })
                 .value();
         return (
             r.unshift({
-                value: j,
+                value: E,
                 label: N.intl.string(N.t.u197b2)
             }),
-            (0, i.jsxs)(c.FormItem, {
+            (0, i.jsxs)(c.xJW, {
                 title: N.intl.string(N.t.LUo0Q0),
                 children: [
-                    (0, i.jsx)(c.SingleSelect, {
-                        className: _.spacing,
+                    (0, i.jsx)(c.q4e, {
+                        className: j.spacing,
                         options: r,
                         value: t,
                         onChange: this.handleChannelSelect
                     }),
-                    (0, i.jsx)(c.FormText, {
-                        type: c.FormTextTypes.DESCRIPTION,
+                    (0, i.jsx)(c.R94, {
+                        type: c.geA.DESCRIPTION,
                         children: N.intl.string(N.t.LxVR9P)
                     })
                 ]
@@ -90,16 +90,16 @@ class E extends r.PureComponent {
     renderAPIInfo(e) {
         let t = ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/guilds/').concat(e.id, '/widget.json');
         return (0, i.jsxs)('div', {
-            className: _.infoWrapper,
+            className: j.infoWrapper,
             children: [
-                (0, i.jsx)(c.FormItem, {
+                (0, i.jsx)(c.xJW, {
                     title: N.intl.string(N.t.TRyLUl),
-                    className: _.infoItem,
+                    className: j.infoItem,
                     children: (0, i.jsx)(u.Z, { value: e.id })
                 }),
-                (0, i.jsx)(c.FormItem, {
+                (0, i.jsx)(c.xJW, {
                     title: N.intl.string(N.t.VECJcH),
-                    className: _.infoItem,
+                    className: j.infoItem,
                     children: (0, i.jsx)(u.Z, { value: t })
                 })
             ]
@@ -109,21 +109,21 @@ class E extends r.PureComponent {
         let t = ''.concat(location.protocol).concat(window.GLOBAL_ENV.WIDGET_ENDPOINT, '?id=').concat(e.id, '&theme=dark');
         return (0, i.jsx)('div', {
             children: (0, i.jsxs)('div', {
-                className: _.infoWrapper,
+                className: j.infoWrapper,
                 children: [
-                    (0, i.jsxs)(c.FormItem, {
-                        className: _.infoItem,
+                    (0, i.jsxs)(c.xJW, {
+                        className: j.infoItem,
                         title: N.intl.string(N.t.XVGbn5),
                         children: [
                             (0, i.jsx)(u.Z, { value: '<iframe src="'.concat(t, '" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>') }),
-                            (0, i.jsx)(c.FormText, {
-                                type: c.FormTextTypes.DESCRIPTION,
+                            (0, i.jsx)(c.R94, {
+                                type: c.geA.DESCRIPTION,
                                 children: N.intl.format(N.t['+baN19'], {})
                             })
                         ]
                     }),
                     (0, i.jsx)('img', {
-                        className: _.infoItem,
+                        className: j.infoItem,
                         'data-accessibility': 'desaturate',
                         alt: '',
                         src: n(329488)
@@ -138,42 +138,42 @@ class E extends r.PureComponent {
             ? null
             : this.props.hide
               ? (0, i.jsx)(d.Z, {})
-              : (0, i.jsxs)(c.FormSection, {
-                    tag: c.FormTitleTags.H1,
+              : (0, i.jsxs)(c.hjN, {
+                    tag: c.RB0.H1,
                     title: N.intl.string(N.t.qlhNb2),
-                    children: [this.renderToggle(), this.renderChannelSelect(e), (0, i.jsx)(c.FormDivider, { className: _.divider }), this.renderAPIInfo(e), (0, i.jsx)(c.FormDivider, { className: _.divider }), this.renderWidget(e)]
+                    children: [this.renderToggle(), this.renderChannelSelect(e), (0, i.jsx)(c.$i$, { className: j.divider }), this.renderAPIInfo(e), (0, i.jsx)(c.$i$, { className: j.divider }), this.renderWidget(e)]
                 });
     }
     constructor(...e) {
         super(...e),
-            T(this, 'state', {
+            I(this, 'state', {
                 internalEnabled: this.props.widgetEnabled,
                 widgetEnabledProp: this.props.widgetEnabled
             }),
-            T(this, 'renderToggle', () =>
-                (0, i.jsx)(c.FormSwitch, {
-                    className: _.spacing,
+            I(this, 'renderToggle', () =>
+                (0, i.jsx)(c.j7V, {
+                    className: j.spacing,
                     value: this.state.internalEnabled,
                     onChange: this.handleToggleWidget,
                     children: N.intl.string(N.t.NR6hub)
                 })
             ),
-            T(this, 'handleToggleWidget', (e) => {
+            I(this, 'handleToggleWidget', (e) => {
                 let { guild: t, widgetChannelId: n } = this.props;
-                if (null != t) this.setState({ internalEnabled: e }), C.Z.updateEmbed(t.id, e, n);
+                null != t && (this.setState({ internalEnabled: e }), C.Z.updateEmbed(t.id, e, n));
             }),
-            T(this, 'handleChannelSelect', (e) => {
+            I(this, 'handleChannelSelect', (e) => {
                 let { guild: t, widgetEnabled: n } = this.props;
-                if (null != t) C.Z.updateEmbed(t.id, n, e !== j ? e : null);
+                null != t && C.Z.updateEmbed(t.id, n, e !== E ? e : null);
             });
     }
 }
-t.Z = o.ZP.connectStores([v.Z, p.Z], () => {
-    let { guild: e, embedChannelId: t, embedEnabled: n } = v.Z.getProps();
+let S = o.ZP.connectStores([f.Z, p.Z], () => {
+    let { guild: e, embedChannelId: t, embedEnabled: n } = f.Z.getProps();
     return {
         guild: e,
         widgetChannelId: t,
         widgetEnabled: n,
         hide: p.Z.enabled
     };
-})(E);
+})(T);

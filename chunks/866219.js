@@ -1,6 +1,6 @@
 e.exports = {
-    iconContainer: 'iconContainer_a47b9d',
-    icon: 'icon_a47b9d',
-    modalContent: 'modalContent_a47b9d',
-    actionsHeader: 'actionsHeader_a47b9d'
+    iconContainer: 'iconContainer__8310d',
+    icon: 'icon__8310d',
+    modalContent: 'modalContent__8310d',
+    actionsHeader: 'actionsHeader__8310d'
 };

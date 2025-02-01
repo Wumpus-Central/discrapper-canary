@@ -1,4 +1,4 @@
 e.exports = {
-    linkIcon: 'linkIcon_ebb2c7',
-    rowContainer: 'rowContainer_ebb2c7'
+    linkIcon: 'linkIcon__352b7',
+    rowContainer: 'rowContainer__352b7'
 };

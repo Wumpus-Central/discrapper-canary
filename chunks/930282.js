@@ -25,19 +25,19 @@ function g(e) {
         v = a.isEdited(),
         y = a.state === f.yb.SEND_FAILED,
         I = a.state === f.yb.SENDING,
-        b = a.isCommandType(),
-        T = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
+        T = a.isCommandType(),
+        b = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
         S = r.useRef(!1);
     return (
         r.useLayoutEffect(() => {
             S.current ? null != g && g() : (S.current = !0);
-        }, [g, a.content, u, T, o]),
+        }, [g, a.content, u, b, o]),
         (0, i.jsxs)('div', {
             id: (0, c.ut)(a),
             ref: E,
             className: s()(n, h.markup, {
                 [p.messageContent]: !0,
-                [p.isSending]: I && !b,
+                [p.isSending]: I && !T,
                 [p.markupRtl]: 'rtl' === l()(a.content),
                 [p.isFailed]: y,
                 [p.isUnsupported]: a.isUnsupported

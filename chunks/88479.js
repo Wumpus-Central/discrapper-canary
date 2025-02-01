@@ -1,18 +1,18 @@
-var i = r(200651);
-r(192379);
-var a = r(685072),
-    o = r(861254),
-    s = r(871499);
-function l(e) {
-    let { iconComponent: n, ...r } = e,
-        { Component: l, events: u } = (0, a.K)(),
-        { groupedButtons: c } = (0, o.ZP)({ location: 'DisconnectButton' });
+n.d(t, { Z: () => o });
+var i = n(200651);
+n(192379);
+var r = n(685072),
+    a = n(861254),
+    s = n(871499);
+let o = function (e) {
+    let { iconComponent: t, ...n } = e,
+        { Component: o, events: l } = (0, r.K)(),
+        { groupedButtons: u } = (0, a.ZP)({ location: 'DisconnectButton' });
     return (0, i.jsx)(s.d, {
-        fullRegionButton: c,
+        fullRegionButton: u,
         color: 'red',
-        iconComponent: null != n ? n : l,
-        ...u,
-        ...r
+        iconComponent: null != t ? t : o,
+        ...l,
+        ...n
     });
-}
-n.Z = l;
+};

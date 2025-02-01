@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('eo', {
         months: 'januaro_februaro_marto_aprilo_majo_junio_julio_aŭgusto_septembro_oktobro_novembro_decembro'.split('_'),
@@ -19,8 +19,8 @@
         isPM: function (e) {
             return 'p' === e.charAt(0).toLowerCase();
         },
-        meridiem: function (e, n, r) {
-            return e > 11 ? (r ? 'p.t.m.' : 'P.T.M.') : r ? 'a.t.m.' : 'A.T.M.';
+        meridiem: function (e, t, n) {
+            return e > 11 ? (n ? 'p.t.m.' : 'P.T.M.') : n ? 'a.t.m.' : 'A.T.M.';
         },
         calendar: {
             sameDay: '[Hodiaŭ je] LT',

@@ -1,5 +1,5 @@
 e.exports = {
-    micTest: 'micTest_ca3055',
-    micTestHelpLink: 'micTestHelpLink_ca3055',
-    micTestButton: 'micTestButton_ca3055'
+    micTest: 'micTest__169b3',
+    micTestHelpLink: 'micTestHelpLink__169b3',
+    micTestButton: 'micTestButton__169b3'
 };

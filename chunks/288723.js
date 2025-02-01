@@ -32,11 +32,11 @@ let d = {
                     v = n.altBoundary,
                     y = n.flipVariations,
                     I = void 0 === y || y,
-                    b = n.allowedAutoPlacements,
-                    T = t.options.placement,
-                    S = (0, r.Z)(T) === T,
-                    A = h || (S || !I ? [(0, i.Z)(T)] : c(T)),
-                    N = [T].concat(A).reduce(function (e, n) {
+                    T = n.allowedAutoPlacements,
+                    b = t.options.placement,
+                    S = (0, r.Z)(b) === b,
+                    A = h || (S || !I ? [(0, i.Z)(b)] : c(b)),
+                    N = [b].concat(A).reduce(function (e, n) {
                         return e.concat(
                             (0, r.Z)(n) === l.d7
                                 ? (0, o.Z)(t, {
@@ -45,7 +45,7 @@ let d = {
                                       rootBoundary: E,
                                       padding: m,
                                       flipVariations: I,
-                                      allowedAutoPlacements: b
+                                      allowedAutoPlacements: T
                                   })
                                 : n
                         );

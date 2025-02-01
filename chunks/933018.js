@@ -1,8 +1,8 @@
 e.exports = {
-    container: 'container_db5049',
-    avatar: 'avatar_db5049',
-    textContainer: 'textContainer_db5049',
-    name: 'name_db5049',
-    botTag: 'botTag_db5049',
-    userTag: 'userTag_db5049'
+    container: 'container_e3077c',
+    avatar: 'avatar_e3077c',
+    textContainer: 'textContainer_e3077c',
+    name: 'name_e3077c',
+    botTag: 'botTag_e3077c',
+    userTag: 'userTag_e3077c'
 };

@@ -1,11 +1,11 @@
 t.exports = {
-    center: 'center_b9c76f',
-    textCenter: 'textCenter_b9c76f',
-    button: 'button_b9c76f',
-    options: 'options_b9c76f',
-    optionContainer: 'optionContainer_b9c76f',
-    optionContainerOther: 'optionContainerOther_b9c76f',
-    optionText: 'optionText_b9c76f',
-    textboxContainer: 'textboxContainer_b9c76f',
-    falseAlarmReasonText: 'falseAlarmReasonText_b9c76f'
+    center: 'center__47458',
+    textCenter: 'textCenter__47458',
+    button: 'button__47458',
+    options: 'options__47458',
+    optionContainer: 'optionContainer__47458',
+    optionContainerOther: 'optionContainerOther__47458',
+    optionText: 'optionText__47458',
+    textboxContainer: 'textboxContainer__47458',
+    falseAlarmReasonText: 'falseAlarmReasonText__47458'
 };

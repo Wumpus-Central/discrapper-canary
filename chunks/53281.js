@@ -1,57 +1,57 @@
-var i = r(653041);
-var a = r(200651),
-    o = r(192379),
-    s = r(834427),
-    l = r(579806),
-    u = r(403182),
-    c = r(358085),
-    d = r(861990);
-function f(e, n, r) {
+n.d(t, { Z: () => _ }), n(653041);
+var i = n(200651),
+    r = n(192379),
+    a = n(834427),
+    s = n(579806),
+    o = n(403182),
+    l = n(358085),
+    u = n(861990);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function p(e) {
-    let n = ['openFile'];
-    e.multiple && n.push('multiSelections');
-    let r = e.filters;
-    l.Z.fileManager
+function d(e) {
+    let t = ['openFile'];
+    e.multiple && t.push('multiSelections');
+    let n = e.filters;
+    s.Z.fileManager
         .openFiles(
             {
-                properties: n,
-                filters: r
+                properties: t,
+                filters: n
             },
-            d.zz
+            u.zz
         )
-        .then((n) => {
-            let r = n.map((e) => u.qF(e));
-            null != r &&
+        .then((t) => {
+            let n = t.map((e) => o.qF(e));
+            null != n &&
                 e.onChange({
                     stopPropagation: () => null,
                     preventDefault: () => null,
-                    currentTarget: { files: r }
+                    currentTarget: { files: n }
                 });
         })
-        .catch((n) => {
+        .catch((t) => {
             e.onChange({
                 stopPropagation: () => null,
                 preventDefault: () => null,
                 currentTarget: {
                     files: null,
-                    err: n
+                    err: t
                 }
             });
         });
 }
-class h extends o.Component {
+class f extends r.Component {
     activateUploadDialogue() {
         if (null != this._ref) return this._ref.activateUploadDialogue();
     }
@@ -59,15 +59,15 @@ class h extends o.Component {
         this._ref = e;
     }
     render() {
-        return (0, a.jsx)(s.S, {
+        return (0, i.jsx)(a.S, {
             ref: this.setRef,
-            handleNativeClick: p,
-            embedded: (0, c.isDesktop)(),
+            handleNativeClick: d,
+            embedded: (0, l.isDesktop)(),
             ...this.props
         });
     }
     constructor(e) {
-        super(e), f(this, '_ref', o.createRef()), (this.setRef = this.setRef.bind(this));
+        super(e), c(this, '_ref', r.createRef()), (this.setRef = this.setRef.bind(this));
     }
 }
-n.Z = h;
+let _ = f;

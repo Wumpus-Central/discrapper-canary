@@ -1,9 +1,9 @@
 e.exports = {
-    content: 'content_cbc80a',
-    logo: 'logo_cbc80a',
-    title: 'title_cbc80a',
-    description: 'description_cbc80a',
-    formItem: 'formItem_cbc80a',
-    footer: 'footer_cbc80a',
-    buttonWrapper: 'buttonWrapper_cbc80a'
+    content: 'content__38377',
+    logo: 'logo__38377',
+    title: 'title__38377',
+    description: 'description__38377',
+    formItem: 'formItem__38377',
+    footer: 'footer__38377',
+    buttonWrapper: 'buttonWrapper__38377'
 };

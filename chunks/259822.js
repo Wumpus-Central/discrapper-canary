@@ -1,16 +1,16 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             className: 'attr',
             begin: /"(\\.|[^\\"\r\n])*"(?=\s*:)/,
             relevance: 1.01
         },
-        r = {
+        n = {
             match: /[{}[\],:]/,
             className: 'punctuation',
             relevance: 0
         },
         i = ['true', 'false', 'null'],
-        a = {
+        r = {
             scope: 'literal',
             beginKeywords: i.join(' ')
         };
@@ -18,8 +18,8 @@ function n(e) {
         name: 'JSON',
         aliases: ['jsonc'],
         keywords: { literal: i },
-        contains: [n, r, e.QUOTE_STRING_MODE, a, e.C_NUMBER_MODE, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
+        contains: [t, n, e.QUOTE_STRING_MODE, r, e.C_NUMBER_MODE, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
         illegal: '\\S'
     };
 }
-e.exports = n;
+e.exports = t;

@@ -1,19 +1,19 @@
-function n(e) {
-    let n = e.regex,
-        r = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+function t(e) {
+    let t = e.regex,
+        n = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
         i = {
             className: 'params',
             begin: /\(/,
             end: /\)/,
-            contains: ['self', e.C_NUMBER_MODE, r]
+            contains: ['self', e.C_NUMBER_MODE, n]
         },
-        a = e.COMMENT(/--/, /$/),
-        o = e.COMMENT(/\(\*/, /\*\)/, {
-            contains: ['self', a]
+        r = e.COMMENT(/--/, /$/),
+        a = e.COMMENT(/\(\*/, /\*\)/, {
+            contains: ['self', r]
         }),
-        s = [a, o, e.HASH_COMMENT_MODE],
-        l = [/apart from/, /aside from/, /instead of/, /out of/, /greater than/, /isn't|(doesn't|does not) (equal|come before|come after|contain)/, /(greater|less) than( or equal)?/, /(starts?|ends|begins?) with/, /contained by/, /comes (before|after)/, /a (ref|reference)/, /POSIX (file|path)/, /(date|time) string/, /quoted form/],
-        u = [/clipboard info/, /the clipboard/, /info for/, /list (disks|folder)/, /mount volume/, /path to/, /(close|open for) access/, /(get|set) eof/, /current date/, /do shell script/, /get volume settings/, /random number/, /set volume/, /system attribute/, /system info/, /time to GMT/, /(load|run|store) script/, /scripting components/, /ASCII (character|number)/, /localized string/, /choose (application|color|file|file name|folder|from list|remote application|URL)/, /display (alert|dialog)/];
+        s = [r, a, e.HASH_COMMENT_MODE],
+        o = [/apart from/, /aside from/, /instead of/, /out of/, /greater than/, /isn't|(doesn't|does not) (equal|come before|come after|contain)/, /(greater|less) than( or equal)?/, /(starts?|ends|begins?) with/, /contained by/, /comes (before|after)/, /a (ref|reference)/, /POSIX (file|path)/, /(date|time) string/, /quoted form/],
+        l = [/clipboard info/, /the clipboard/, /info for/, /list (disks|folder)/, /mount volume/, /path to/, /(close|open for) access/, /(get|set) eof/, /current date/, /do shell script/, /get volume settings/, /random number/, /set volume/, /system attribute/, /system info/, /time to GMT/, /(load|run|store) script/, /scripting components/, /ASCII (character|number)/, /localized string/, /choose (application|color|file|file name|folder|from list|remote application|URL)/, /display (alert|dialog)/];
     return {
         name: 'AppleScript',
         aliases: ['osascript'],
@@ -23,11 +23,11 @@ function n(e) {
             built_in: 'alias application boolean class constant date file integer list number real record string text activate beep count delay launch log offset read round run say summarize write character characters contents day frontmost id item length month name|0 paragraph paragraphs rest reverse running time version weekday word words year'
         },
         contains: [
-            r,
+            n,
             e.C_NUMBER_MODE,
             {
                 className: 'built_in',
-                begin: n.concat(/\b/, n.either(...u), /\b/)
+                begin: t.concat(/\b/, t.either(...l), /\b/)
             },
             {
                 className: 'built_in',
@@ -39,7 +39,7 @@ function n(e) {
             },
             {
                 className: 'keyword',
-                begin: n.concat(/\b/, n.either(...l), /\b/)
+                begin: t.concat(/\b/, t.either(...o), /\b/)
             },
             {
                 beginKeywords: 'on',
@@ -51,4 +51,4 @@ function n(e) {
         illegal: /\/\/|->|=>|\[\[/
     };
 }
-e.exports = n;
+e.exports = t;

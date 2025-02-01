@@ -1,4 +1,4 @@
 e.exports = {
-    message: 'message_d5bf6c',
-    saveNoticeContainer: 'saveNoticeContainer_d5bf6c'
+    message: 'message__51673',
+    saveNoticeContainer: 'saveNoticeContainer__51673'
 };

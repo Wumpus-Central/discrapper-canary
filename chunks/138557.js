@@ -1,5 +1,5 @@
-e.exports = {
-    header: 'header_b536d',
-    permissionList: 'permissionList_b536d',
-    footer: 'footer_b536d'
+s.exports = {
+    header: 'header__2f4ff',
+    permissionList: 'permissionList__2f4ff',
+    footer: 'footer__2f4ff'
 };

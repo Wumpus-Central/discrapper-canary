@@ -1,160 +1,160 @@
-var i = r(607974),
-    a = r(350434),
-    o = r(91826),
-    s = r(400194);
-function l(e) {
+var i = n(607974),
+    r = n(350434),
+    a = n(91826),
+    s = n(400194);
+function o(e) {
     return e.call.bind(e);
 }
-var u = 'undefined' != typeof BigInt,
-    c = 'undefined' != typeof Symbol,
-    d = l(Object.prototype.toString),
-    f = l(Number.prototype.valueOf),
-    p = l(String.prototype.valueOf),
-    h = l(Boolean.prototype.valueOf);
-if (u) var _ = l(BigInt.prototype.valueOf);
-if (c) var m = l(Symbol.prototype.valueOf);
-function g(e, n) {
+var l = 'undefined' != typeof BigInt,
+    u = 'undefined' != typeof Symbol,
+    c = o(Object.prototype.toString),
+    d = o(Number.prototype.valueOf),
+    f = o(String.prototype.valueOf),
+    _ = o(Boolean.prototype.valueOf);
+if (l) var p = o(BigInt.prototype.valueOf);
+if (u) var h = o(Symbol.prototype.valueOf);
+function m(e, t) {
     if ('object' != typeof e) return !1;
     try {
-        return n(e), !0;
+        return t(e), !0;
     } catch (e) {
         return !1;
     }
 }
-function E(e) {
+function g(e) {
     return ('undefined' != typeof Promise && e instanceof Promise) || (null !== e && 'object' == typeof e && 'function' == typeof e.then && 'function' == typeof e.catch);
 }
+function E(e) {
+    return 'undefined' != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : s(e) || F(e);
+}
 function v(e) {
-    return 'undefined' != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : s(e) || V(e);
+    return 'Uint8Array' === a(e);
 }
 function y(e) {
-    return 'Uint8Array' === o(e);
-}
-function b(e) {
-    return 'Uint8ClampedArray' === o(e);
+    return 'Uint8ClampedArray' === a(e);
 }
 function I(e) {
-    return 'Uint16Array' === o(e);
+    return 'Uint16Array' === a(e);
 }
 function T(e) {
-    return 'Uint32Array' === o(e);
+    return 'Uint32Array' === a(e);
+}
+function b(e) {
+    return 'Int8Array' === a(e);
 }
 function S(e) {
-    return 'Int8Array' === o(e);
+    return 'Int16Array' === a(e);
 }
 function A(e) {
-    return 'Int16Array' === o(e);
-}
-function C(e) {
-    return 'Int32Array' === o(e);
+    return 'Int32Array' === a(e);
 }
 function N(e) {
-    return 'Float32Array' === o(e);
+    return 'Float32Array' === a(e);
+}
+function C(e) {
+    return 'Float64Array' === a(e);
 }
 function R(e) {
-    return 'Float64Array' === o(e);
+    return 'BigInt64Array' === a(e);
 }
 function O(e) {
-    return 'BigInt64Array' === o(e);
+    return 'BigUint64Array' === a(e);
 }
 function D(e) {
-    return 'BigUint64Array' === o(e);
-}
-function L(e) {
-    return '[object Map]' === d(e);
+    return '[object Map]' === c(e);
 }
 function x(e) {
-    return 'undefined' != typeof Map && (L.working ? L(e) : e instanceof Map);
+    return 'undefined' != typeof Map && (D.working ? D(e) : e instanceof Map);
 }
-function w(e) {
-    return '[object Set]' === d(e);
+function L(e) {
+    return '[object Set]' === c(e);
 }
 function P(e) {
-    return 'undefined' != typeof Set && (w.working ? w(e) : e instanceof Set);
+    return 'undefined' != typeof Set && (L.working ? L(e) : e instanceof Set);
+}
+function w(e) {
+    return '[object WeakMap]' === c(e);
 }
 function M(e) {
-    return '[object WeakMap]' === d(e);
+    return 'undefined' != typeof WeakMap && (w.working ? w(e) : e instanceof WeakMap);
 }
 function k(e) {
-    return 'undefined' != typeof WeakMap && (M.working ? M(e) : e instanceof WeakMap);
+    return '[object WeakSet]' === c(e);
 }
 function U(e) {
-    return '[object WeakSet]' === d(e);
-}
-function B(e) {
-    return U(e);
+    return k(e);
 }
 function G(e) {
-    return '[object ArrayBuffer]' === d(e);
+    return '[object ArrayBuffer]' === c(e);
 }
-function Z(e) {
+function B(e) {
     return 'undefined' != typeof ArrayBuffer && (G.working ? G(e) : e instanceof ArrayBuffer);
 }
+function Z(e) {
+    return '[object DataView]' === c(e);
+}
 function F(e) {
-    return '[object DataView]' === d(e);
+    return 'undefined' != typeof DataView && (Z.working ? Z(e) : e instanceof DataView);
 }
-function V(e) {
-    return 'undefined' != typeof DataView && (F.working ? F(e) : e instanceof DataView);
+(t.isArgumentsObject = i), (t.isGeneratorFunction = r), (t.isTypedArray = s), (t.isPromise = g), (t.isArrayBufferView = E), (t.isUint8Array = v), (t.isUint8ClampedArray = y), (t.isUint16Array = I), (t.isUint32Array = T), (t.isInt8Array = b), (t.isInt16Array = S), (t.isInt32Array = A), (t.isFloat32Array = N), (t.isFloat64Array = C), (t.isBigInt64Array = R), (t.isBigUint64Array = O), (D.working = 'undefined' != typeof Map && D(new Map())), (t.isMap = x), (L.working = 'undefined' != typeof Set && L(new Set())), (t.isSet = P), (w.working = 'undefined' != typeof WeakMap && w(new WeakMap())), (t.isWeakMap = M), (k.working = 'undefined' != typeof WeakSet && k(new WeakSet())), (t.isWeakSet = U), (G.working = 'undefined' != typeof ArrayBuffer && G(new ArrayBuffer())), (t.isArrayBuffer = B), (Z.working = 'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView && Z(new DataView(new ArrayBuffer(1), 0, 1))), (t.isDataView = F);
+var V = 'undefined' != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
+function j(e) {
+    return '[object SharedArrayBuffer]' === c(e);
 }
-(n.isArgumentsObject = i), (n.isGeneratorFunction = a), (n.isTypedArray = s), (n.isPromise = E), (n.isArrayBufferView = v), (n.isUint8Array = y), (n.isUint8ClampedArray = b), (n.isUint16Array = I), (n.isUint32Array = T), (n.isInt8Array = S), (n.isInt16Array = A), (n.isInt32Array = C), (n.isFloat32Array = N), (n.isFloat64Array = R), (n.isBigInt64Array = O), (n.isBigUint64Array = D), (L.working = 'undefined' != typeof Map && L(new Map())), (n.isMap = x), (w.working = 'undefined' != typeof Set && w(new Set())), (n.isSet = P), (M.working = 'undefined' != typeof WeakMap && M(new WeakMap())), (n.isWeakMap = k), (U.working = 'undefined' != typeof WeakSet && U(new WeakSet())), (n.isWeakSet = B), (G.working = 'undefined' != typeof ArrayBuffer && G(new ArrayBuffer())), (n.isArrayBuffer = Z), (F.working = 'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView && F(new DataView(new ArrayBuffer(1), 0, 1))), (n.isDataView = V);
-var j = 'undefined' != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
 function H(e) {
-    return '[object SharedArrayBuffer]' === d(e);
+    return void 0 !== V && (void 0 === j.working && (j.working = j(new V())), j.working ? j(e) : e instanceof V);
 }
 function Y(e) {
-    return void 0 !== j && (void 0 === H.working && (H.working = H(new j())), H.working ? H(e) : e instanceof j);
+    return '[object AsyncFunction]' === c(e);
 }
 function W(e) {
-    return '[object AsyncFunction]' === d(e);
+    return '[object Map Iterator]' === c(e);
 }
 function K(e) {
-    return '[object Map Iterator]' === d(e);
+    return '[object Set Iterator]' === c(e);
 }
 function z(e) {
-    return '[object Set Iterator]' === d(e);
+    return '[object Generator]' === c(e);
 }
 function q(e) {
-    return '[object Generator]' === d(e);
+    return '[object WebAssembly.Module]' === c(e);
 }
 function Q(e) {
-    return '[object WebAssembly.Module]' === d(e);
+    return m(e, d);
 }
 function X(e) {
-    return g(e, f);
+    return m(e, f);
 }
 function J(e) {
-    return g(e, p);
+    return m(e, _);
 }
 function $(e) {
-    return g(e, h);
+    return l && m(e, p);
 }
 function ee(e) {
-    return u && g(e, _);
+    return u && m(e, h);
 }
 function et(e) {
-    return c && g(e, m);
+    return Q(e) || X(e) || J(e) || $(e) || ee(e);
 }
 function en(e) {
-    return X(e) || J(e) || $(e) || ee(e) || et(e);
+    return 'undefined' != typeof Uint8Array && (B(e) || H(e));
 }
-function er(e) {
-    return 'undefined' != typeof Uint8Array && (Z(e) || Y(e));
-}
-(n.isSharedArrayBuffer = Y),
-    (n.isAsyncFunction = W),
-    (n.isMapIterator = K),
-    (n.isSetIterator = z),
-    (n.isGeneratorObject = q),
-    (n.isWebAssemblyCompiledModule = Q),
-    (n.isNumberObject = X),
-    (n.isStringObject = J),
-    (n.isBooleanObject = $),
-    (n.isBigIntObject = ee),
-    (n.isSymbolObject = et),
-    (n.isBoxedPrimitive = en),
-    (n.isAnyArrayBuffer = er),
+(t.isSharedArrayBuffer = H),
+    (t.isAsyncFunction = Y),
+    (t.isMapIterator = W),
+    (t.isSetIterator = K),
+    (t.isGeneratorObject = z),
+    (t.isWebAssemblyCompiledModule = q),
+    (t.isNumberObject = Q),
+    (t.isStringObject = X),
+    (t.isBooleanObject = J),
+    (t.isBigIntObject = $),
+    (t.isSymbolObject = ee),
+    (t.isBoxedPrimitive = et),
+    (t.isAnyArrayBuffer = en),
     ['isProxy', 'isExternal', 'isModuleNamespaceObject'].forEach(function (e) {
-        Object.defineProperty(n, e, {
+        Object.defineProperty(t, e, {
             enumerable: !1,
             value: function () {
                 throw Error(e + ' is not supported in userland');

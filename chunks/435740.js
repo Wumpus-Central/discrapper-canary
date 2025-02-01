@@ -1,6 +1,6 @@
-function n(e) {
-    let n = /([A-Za-z_][A-Za-z_0-9]*)?/,
-        r = {
+function t(e) {
+    let t = /([A-Za-z_][A-Za-z_0-9]*)?/,
+        n = {
             scope: 'params',
             begin: /\(/,
             end: /\)(?=\:?)/,
@@ -27,17 +27,17 @@ function n(e) {
             ]
         },
         i = {
-            match: [n, /(?=\()/],
+            match: [t, /(?=\()/],
             scope: { 1: 'keyword' },
-            contains: [r]
+            contains: [n]
         };
     return (
-        r.contains.unshift(i),
+        n.contains.unshift(i),
         {
             name: 'Leaf',
             contains: [
                 {
-                    match: [/#+/, n, /(?=\()/],
+                    match: [/#+/, t, /(?=\()/],
                     scope: {
                         1: 'punctuation',
                         2: 'keyword'
@@ -50,10 +50,10 @@ function n(e) {
                             }
                         ]
                     },
-                    contains: [r]
+                    contains: [n]
                 },
                 {
-                    match: [/#+/, n, /:?/],
+                    match: [/#+/, t, /:?/],
                     scope: {
                         1: 'punctuation',
                         2: 'keyword',
@@ -64,4 +64,4 @@ function n(e) {
         }
     );
 }
-e.exports = n;
+e.exports = t;

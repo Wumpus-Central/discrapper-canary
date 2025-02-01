@@ -1,6 +1,6 @@
-function n(e) {
-    let n = ['package', 'import', 'option', 'optional', 'required', 'repeated', 'group', 'oneof'],
-        r = ['double', 'float', 'int32', 'int64', 'uint32', 'uint64', 'sint32', 'sint64', 'fixed32', 'fixed64', 'sfixed32', 'sfixed64', 'bool', 'string', 'bytes'],
+function t(e) {
+    let t = ['package', 'import', 'option', 'optional', 'required', 'repeated', 'group', 'oneof'],
+        n = ['double', 'float', 'int32', 'int64', 'uint32', 'uint64', 'sint32', 'sint64', 'fixed32', 'fixed64', 'sfixed32', 'sfixed64', 'bool', 'string', 'bytes'],
         i = {
             match: [/(message|enum|service)\s+/, e.IDENT_RE],
             scope: {
@@ -12,8 +12,8 @@ function n(e) {
         name: 'Protocol Buffers',
         aliases: ['proto'],
         keywords: {
-            keyword: n,
-            type: r,
+            keyword: t,
+            type: n,
             literal: ['true', 'false']
         },
         contains: [
@@ -33,4 +33,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

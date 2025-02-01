@@ -1,6 +1,6 @@
 e.exports = {
-    guild: 'guild_cee378',
-    guildIcon: 'guildIcon_cee378',
-    icon: 'icon_cee378',
-    button: 'button_cee378'
+    title: 'title__85643',
+    icon: 'icon__85643',
+    guildIcon: 'guildIcon__85643',
+    button: 'button__85643'
 };

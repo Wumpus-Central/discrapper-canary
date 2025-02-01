@@ -1,13 +1,13 @@
 e.exports = {
-    dragging: 'dragging_b4e3a7',
-    draggableInputContainer: 'draggableInputContainer_b4e3a7',
-    inputWrapper: 'inputWrapper_b4e3a7',
-    dragContainer: 'dragContainer_b4e3a7',
-    clearButton: 'clearButton_b4e3a7',
-    rulesContainer: 'rulesContainer_b4e3a7',
-    rulesTextAreaInput: 'rulesTextAreaInput_b4e3a7',
-    clearIcon: 'clearIcon_b4e3a7',
-    dragIcon: 'dragIcon_b4e3a7',
-    exampleRulesTitle: 'exampleRulesTitle_b4e3a7',
-    pill: 'pill_b4e3a7'
+    dragging: 'dragging_f7c056',
+    draggableInputContainer: 'draggableInputContainer_f7c056',
+    inputWrapper: 'inputWrapper_f7c056',
+    clearButton: 'clearButton_f7c056',
+    rulesContainer: 'rulesContainer_f7c056',
+    rulesTextAreaInput: 'rulesTextAreaInput_f7c056',
+    clearIcon: 'clearIcon_f7c056',
+    dragContainer: 'dragContainer_f7c056',
+    dragIcon: 'dragIcon_f7c056',
+    exampleRulesTitle: 'exampleRulesTitle_f7c056',
+    pill: 'pill_f7c056'
 };

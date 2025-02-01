@@ -1,5 +1,5 @@
 e.exports = {
-    select: 'select_fbe7b1',
-    error: 'error_fbe7b1',
-    errorMessage: 'errorMessage_fbe7b1'
+    select: 'select_d48ec6',
+    error: 'error_d48ec6',
+    errorMessage: 'errorMessage_d48ec6'
 };

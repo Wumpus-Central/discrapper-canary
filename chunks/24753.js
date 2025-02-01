@@ -1,14 +1,14 @@
 e.exports = {
-    productCard: 'productCard_f26f9b',
-    productCardClickable: 'productCardClickable_f26f9b',
-    productThumbnail: 'productThumbnail_f26f9b',
-    productInfo: 'productInfo_f26f9b',
-    productInfoContent: 'productInfoContent_f26f9b',
-    productName: 'productName_f26f9b',
-    productDetails: 'productDetails_f26f9b',
-    dotSeparator: 'dotSeparator_f26f9b',
-    productActionMenuButton: 'productActionMenuButton_f26f9b',
-    productActionMenuIcon: 'productActionMenuIcon_f26f9b',
-    menuContainer: 'menuContainer_f26f9b',
-    disabled: 'disabled_f26f9b'
+    productCard: 'productCard__8d9f6',
+    productCardClickable: 'productCardClickable__8d9f6',
+    productThumbnail: 'productThumbnail__8d9f6',
+    productInfo: 'productInfo__8d9f6',
+    productInfoContent: 'productInfoContent__8d9f6',
+    productName: 'productName__8d9f6',
+    productDetails: 'productDetails__8d9f6',
+    dotSeparator: 'dotSeparator__8d9f6',
+    productActionMenuButton: 'productActionMenuButton__8d9f6',
+    productActionMenuIcon: 'productActionMenuIcon__8d9f6',
+    menuContainer: 'menuContainer__8d9f6',
+    disabled: 'disabled__8d9f6'
 };

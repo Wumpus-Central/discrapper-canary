@@ -1,35 +1,35 @@
 !(function (e, i) {
-    i(n, r(192379));
-})(0, function (e, n) {
-    function r(e, n) {
-        var r = Object.keys(e);
+    i(t, n(192379));
+})(0, function (e, t) {
+    function n(e, t) {
+        var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
             var i = Object.getOwnPropertySymbols(e);
-            n &&
-                (i = i.filter(function (n) {
-                    return Object.getOwnPropertyDescriptor(e, n).enumerable;
+            t &&
+                (i = i.filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(e, t).enumerable;
                 })),
-                r.push.apply(r, i);
+                n.push.apply(n, i);
         }
-        return r;
+        return n;
     }
     function i(e) {
-        for (var n = 1; n < arguments.length; n++) {
-            var i = null != arguments[n] ? arguments[n] : {};
-            n % 2
-                ? r(Object(i), !0).forEach(function (n) {
-                      o(e, n, i[n]);
+        for (var t = 1; t < arguments.length; t++) {
+            var i = null != arguments[t] ? arguments[t] : {};
+            t % 2
+                ? n(Object(i), !0).forEach(function (t) {
+                      a(e, t, i[t]);
                   })
                 : Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
-                  : r(Object(i)).forEach(function (n) {
-                        Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(i, n));
+                  : n(Object(i)).forEach(function (t) {
+                        Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(i, t));
                     });
         }
         return e;
     }
-    function a(e) {
-        return (a =
+    function r(e) {
+        return (r =
             'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
                 ? function (e) {
                       return typeof e;
@@ -38,116 +38,114 @@
                       return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
                   })(e);
     }
-    function o(e, n, r) {
+    function a(e, t, n) {
         return (
-            n in e
-                ? Object.defineProperty(e, n, {
-                      value: r,
+            t in e
+                ? Object.defineProperty(e, t, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (e[n] = r),
+                : (e[t] = n),
             e
         );
     }
-    function s(e, n) {
+    function s(e, t) {
         if (null == e) return {};
-        var r,
+        var n,
             i,
-            a = {},
-            o = Object.keys(e);
-        for (i = 0; i < o.length; i++) (r = o[i]), !(n.indexOf(r) >= 0) && (a[r] = e[r]);
-        return a;
+            r = {},
+            a = Object.keys(e);
+        for (i = 0; i < a.length; i++) (n = a[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+        return r;
     }
-    function l(e, n) {
+    function o(e, t) {
         if (null == e) return {};
-        var r,
+        var n,
             i,
-            a = s(e, n);
+            r = s(e, t);
         if (Object.getOwnPropertySymbols) {
-            var o = Object.getOwnPropertySymbols(e);
-            for (i = 0; i < o.length; i++) {
-                if (((r = o[i]), !(n.indexOf(r) >= 0))) Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-            }
+            var a = Object.getOwnPropertySymbols(e);
+            for (i = 0; i < a.length; i++) (n = a[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
         }
-        return a;
+        return r;
     }
-    function u(e, n) {
-        return c(e) || d(e, n) || f(e, n) || h();
+    function l(e, t) {
+        return u(e) || c(e, t) || d(e, t) || _();
     }
-    function c(e) {
+    function u(e) {
         if (Array.isArray(e)) return e;
     }
-    function d(e, n) {
-        var r,
+    function c(e, t) {
+        var n,
             i,
-            a = e && (('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator']);
-        if (null != a) {
-            var o = [],
+            r = e && (('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator']);
+        if (null != r) {
+            var a = [],
                 s = !0,
-                l = !1;
+                o = !1;
             try {
-                for (a = a.call(e); !(s = (r = a.next()).done) && (o.push(r.value), !n || o.length !== n); s = !0);
+                for (r = r.call(e); !(s = (n = r.next()).done) && (a.push(n.value), !t || a.length !== t); s = !0);
             } catch (e) {
-                (l = !0), (i = e);
+                (o = !0), (i = e);
             } finally {
                 try {
-                    !s && null != a.return && a.return();
+                    s || null == r.return || r.return();
                 } finally {
-                    if (l) throw i;
+                    if (o) throw i;
                 }
             }
-            return o;
+            return a;
         }
     }
-    function f(e, n) {
+    function d(e, t) {
         if (e) {
-            if ('string' == typeof e) return p(e, n);
-            var r = Object.prototype.toString.call(e).slice(8, -1);
-            if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r)) return Array.from(e);
-            if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return p(e, n);
+            if ('string' == typeof e) return f(e, t);
+            var n = Object.prototype.toString.call(e).slice(8, -1);
+            if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
+            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return f(e, t);
         }
     }
-    function p(e, n) {
-        (null == n || n > e.length) && (n = e.length);
-        for (var r = 0, i = Array(n); r < n; r++) i[r] = e[r];
+    function f(e, t) {
+        (null == t || t > e.length) && (t = e.length);
+        for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
         return i;
     }
-    function h() {
+    function _() {
         throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
     }
-    function _(e) {
+    function p(e) {
         return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, 'default') ? e.default : e;
     }
-    var m,
+    var h,
+        m,
         g,
         E,
-        v,
-        y = { exports: {} };
-    function b() {
-        return g ? m : ((g = 1), (m = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED'));
+        v = { exports: {} };
+    function y() {
+        return m ? h : ((m = 1), (h = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED'));
     }
     function I() {
-        if (v) return E;
-        v = 1;
-        var e = b();
+        if (E) return g;
+        E = 1;
+        var e = y();
+        function t() {}
         function n() {}
-        function r() {}
         return (
-            (r.resetWarningCache = n),
-            (E = function () {
-                function i(n, r, i, a, o, s) {
+            (n.resetWarningCache = t),
+            (g = function () {
+                function i(t, n, i, r, a, s) {
                     if (s !== e) {
-                        var l = Error('Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types');
-                        throw ((l.name = 'Invariant Violation'), l);
+                        var o = Error('Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types');
+                        throw ((o.name = 'Invariant Violation'), o);
                     }
                 }
-                function a() {
+                function r() {
                     return i;
                 }
                 i.isRequired = i;
-                var o = {
+                var a = {
                     array: i,
                     bool: i,
                     func: i,
@@ -156,170 +154,172 @@
                     string: i,
                     symbol: i,
                     any: i,
-                    arrayOf: a,
+                    arrayOf: r,
                     element: i,
                     elementType: i,
-                    instanceOf: a,
+                    instanceOf: r,
                     node: i,
-                    objectOf: a,
-                    oneOf: a,
-                    oneOfType: a,
-                    shape: a,
-                    exact: a,
-                    checkPropTypes: r,
-                    resetWarningCache: n
+                    objectOf: r,
+                    oneOf: r,
+                    oneOfType: r,
+                    shape: r,
+                    exact: r,
+                    checkPropTypes: n,
+                    resetWarningCache: t
                 };
-                return (o.PropTypes = o), o;
+                return (a.PropTypes = a), a;
             })
         );
     }
-    y.exports = I()();
-    var T = _(y.exports),
-        S = function (e, r, i) {
-            var a = !!i,
-                o = n.useRef(i);
-            n.useEffect(
+    v.exports = I()();
+    var T = p(v.exports),
+        b = function (e, n, i) {
+            var r = !!i,
+                a = t.useRef(i);
+            t.useEffect(
                 function () {
-                    o.current = i;
+                    a.current = i;
                 },
                 [i]
             ),
-                n.useEffect(
+                t.useEffect(
                     function () {
-                        if (!a || !e) return function () {};
-                        var n = function () {
-                            o.current && o.current.apply(o, arguments);
+                        if (!r || !e) return function () {};
+                        var t = function () {
+                            a.current && a.current.apply(a, arguments);
                         };
                         return (
-                            e.on(r, n),
+                            e.on(n, t),
                             function () {
-                                e.off(r, n);
+                                e.off(n, t);
                             }
                         );
                     },
-                    [a, r, e, o]
+                    [r, n, e, a]
                 );
         },
-        A = function (e) {
-            var r = n.useRef(e);
+        S = function (e) {
+            var n = t.useRef(e);
             return (
-                n.useEffect(
+                t.useEffect(
                     function () {
-                        r.current = e;
+                        n.current = e;
                     },
                     [e]
                 ),
-                r.current
+                n.current
             );
         },
-        C = function (e) {
-            return null !== e && 'object' === a(e);
+        A = function (e) {
+            return null !== e && 'object' === r(e);
         },
         N = function (e) {
-            return C(e) && 'function' == typeof e.then;
+            return A(e) && 'function' == typeof e.then;
         },
-        R = function (e) {
-            return C(e) && 'function' == typeof e.elements && 'function' == typeof e.createToken && 'function' == typeof e.createPaymentMethod && 'function' == typeof e.confirmCardPayment;
+        C = function (e) {
+            return A(e) && 'function' == typeof e.elements && 'function' == typeof e.createToken && 'function' == typeof e.createPaymentMethod && 'function' == typeof e.confirmCardPayment;
         },
-        O = '[object Object]',
-        D = function e(n, r) {
-            if (!C(n) || !C(r)) return n === r;
-            var i = Array.isArray(n);
-            if (i !== Array.isArray(r)) return !1;
-            var a = Object.prototype.toString.call(n) === O;
-            if (a !== (Object.prototype.toString.call(r) === O)) return !1;
-            if (!a && !i) return n === r;
-            var o = Object.keys(n),
-                s = Object.keys(r);
-            if (o.length !== s.length) return !1;
-            for (var l = {}, u = 0; u < o.length; u += 1) l[o[u]] = !0;
-            for (var c = 0; c < s.length; c += 1) l[s[c]] = !0;
-            var d = Object.keys(l);
-            if (d.length !== o.length) return !1;
-            var f = n,
-                p = r,
-                h = function (n) {
-                    return e(f[n], p[n]);
+        R = '[object Object]',
+        O = function e(t, n) {
+            if (!A(t) || !A(n)) return t === n;
+            var i = Array.isArray(t);
+            if (i !== Array.isArray(n)) return !1;
+            var r = Object.prototype.toString.call(t) === R;
+            if (r !== (Object.prototype.toString.call(n) === R)) return !1;
+            if (!r && !i) return t === n;
+            var a = Object.keys(t),
+                s = Object.keys(n);
+            if (a.length !== s.length) return !1;
+            for (var o = {}, l = 0; l < a.length; l += 1) o[a[l]] = !0;
+            for (var u = 0; u < s.length; u += 1) o[s[u]] = !0;
+            var c = Object.keys(o);
+            if (c.length !== a.length) return !1;
+            var d = t,
+                f = n,
+                _ = function (t) {
+                    return e(d[t], f[t]);
                 };
-            return d.every(h);
+            return c.every(_);
         },
-        L = function (e, n, r) {
-            return C(e)
-                ? Object.keys(e).reduce(function (a, s) {
-                      var l = !C(n) || !D(e[s], n[s]);
-                      return r.includes(s) ? (l && console.warn('Unsupported prop change: options.'.concat(s, ' is not a mutable property.')), a) : l ? i(i({}, a || {}), {}, o({}, s, e[s])) : a;
+        D = function (e, t, n) {
+            return A(e)
+                ? Object.keys(e).reduce(function (r, s) {
+                      var o = !A(t) || !O(e[s], t[s]);
+                      return n.includes(s) ? (o && console.warn('Unsupported prop change: options.'.concat(s, ' is not a mutable property.')), r) : o ? i(i({}, r || {}), {}, a({}, s, e[s])) : r;
                   }, null)
                 : null;
         },
         x = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
-        w = function (e) {
-            var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x;
-            if (null === e || R(e)) return e;
-            throw Error(n);
+        L = function (e) {
+            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x;
+            if (null === e || C(e)) return e;
+            throw Error(t);
         },
         P = function (e) {
-            var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x;
+            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x;
             if (N(e))
                 return {
                     tag: 'async',
                     stripePromise: Promise.resolve(e).then(function (e) {
-                        return w(e, n);
+                        return L(e, t);
                     })
                 };
-            var r = w(e, n);
-            return null === r
+            var n = L(e, t);
+            return null === n
                 ? { tag: 'empty' }
                 : {
                       tag: 'sync',
-                      stripe: r
+                      stripe: n
                   };
         },
-        M = function (e) {
-            if (!!e && !!e._registerWrapper && !!e.registerAppInfo)
-                e._registerWrapper({
+        w = function (e) {
+            e &&
+                e._registerWrapper &&
+                e.registerAppInfo &&
+                (e._registerWrapper({
                     name: 'react-stripe-js',
                     version: '2.7.0'
                 }),
-                    e.registerAppInfo({
-                        name: 'react-stripe-js',
-                        version: '2.7.0',
-                        url: 'https://stripe.com/docs/stripe-js/react'
-                    });
+                e.registerAppInfo({
+                    name: 'react-stripe-js',
+                    version: '2.7.0',
+                    url: 'https://stripe.com/docs/stripe-js/react'
+                }));
         },
-        k = n.createContext(null);
-    k.displayName = 'ElementsContext';
-    var U = function (e, n) {
-            if (!e) throw Error('Could not find Elements context; You need to wrap the part of your app that '.concat(n, ' in an <Elements> provider.'));
+        M = t.createContext(null);
+    M.displayName = 'ElementsContext';
+    var k = function (e, t) {
+            if (!e) throw Error('Could not find Elements context; You need to wrap the part of your app that '.concat(t, ' in an <Elements> provider.'));
             return e;
         },
-        B = function (e) {
-            var r = e.stripe,
+        U = function (e) {
+            var n = e.stripe,
                 i = e.options,
-                a = e.children,
-                o = n.useMemo(
+                r = e.children,
+                a = t.useMemo(
                     function () {
-                        return P(r);
+                        return P(n);
                     },
-                    [r]
+                    [n]
                 ),
-                s = u(
-                    n.useState(function () {
+                s = l(
+                    t.useState(function () {
                         return {
-                            stripe: 'sync' === o.tag ? o.stripe : null,
-                            elements: 'sync' === o.tag ? o.stripe.elements(i) : null
+                            stripe: 'sync' === a.tag ? a.stripe : null,
+                            elements: 'sync' === a.tag ? a.stripe.elements(i) : null
                         };
                     }),
                     2
                 ),
-                l = s[0],
-                c = s[1];
-            n.useEffect(
+                o = s[0],
+                u = s[1];
+            t.useEffect(
                 function () {
                     var e = !0,
-                        n = function (e) {
-                            c(function (n) {
-                                return n.stripe
-                                    ? n
+                        t = function (e) {
+                            u(function (t) {
+                                return t.stripe
+                                    ? t
                                     : {
                                           stripe: e,
                                           elements: e.elements(i)
@@ -327,129 +327,129 @@
                             });
                         };
                     return (
-                        'async' !== o.tag || l.stripe
-                            ? 'sync' === o.tag && !l.stripe && n(o.stripe)
-                            : o.stripePromise.then(function (r) {
-                                  r && e && n(r);
+                        'async' !== a.tag || o.stripe
+                            ? 'sync' !== a.tag || o.stripe || t(a.stripe)
+                            : a.stripePromise.then(function (n) {
+                                  n && e && t(n);
                               }),
                         function () {
                             e = !1;
                         }
                     );
                 },
-                [o, l, i]
+                [a, o, i]
             );
-            var d = A(r);
-            n.useEffect(
+            var c = S(n);
+            t.useEffect(
                 function () {
-                    null !== d && d !== r && console.warn('Unsupported prop change on Elements: You cannot change the `stripe` prop after setting it.');
+                    null !== c && c !== n && console.warn('Unsupported prop change on Elements: You cannot change the `stripe` prop after setting it.');
                 },
-                [d, r]
+                [c, n]
             );
-            var f = A(i);
+            var d = S(i);
             return (
-                n.useEffect(
+                t.useEffect(
                     function () {
-                        if (!!l.elements) {
-                            var e = L(i, f, ['clientSecret', 'fonts']);
-                            e && l.elements.update(e);
+                        if (o.elements) {
+                            var e = D(i, d, ['clientSecret', 'fonts']);
+                            e && o.elements.update(e);
                         }
                     },
-                    [i, f, l.elements]
+                    [i, d, o.elements]
                 ),
-                n.useEffect(
+                t.useEffect(
                     function () {
-                        M(l.stripe);
+                        w(o.stripe);
                     },
-                    [l.stripe]
+                    [o.stripe]
                 ),
-                n.createElement(k.Provider, { value: l }, a)
+                t.createElement(M.Provider, { value: o }, r)
             );
         };
-    B.propTypes = {
+    U.propTypes = {
         stripe: T.any,
         options: T.object
     };
     var G = function (e) {
-            return U(n.useContext(k), e);
+            return k(t.useContext(M), e);
         },
-        Z = function () {
+        B = function () {
             return G('calls useElements()').elements;
         },
-        F = function (e) {
+        Z = function (e) {
             return (0, e.children)(G('mounts <ElementsConsumer>'));
         };
-    F.propTypes = { children: T.func.isRequired };
-    var V = ['on', 'session'],
-        j = n.createContext(null);
-    j.displayName = 'CustomCheckoutSdkContext';
-    var H = function (e, n) {
-            if (!e) throw Error('Could not find CustomCheckoutProvider context; You need to wrap the part of your app that '.concat(n, ' in an <CustomCheckoutProvider> provider.'));
+    Z.propTypes = { children: T.func.isRequired };
+    var F = ['on', 'session'],
+        V = t.createContext(null);
+    V.displayName = 'CustomCheckoutSdkContext';
+    var j = function (e, t) {
+            if (!e) throw Error('Could not find CustomCheckoutProvider context; You need to wrap the part of your app that '.concat(t, ' in an <CustomCheckoutProvider> provider.'));
             return e;
         },
-        Y = n.createContext(null);
-    Y.displayName = 'CustomCheckoutContext';
-    var W = function (e, n) {
+        H = t.createContext(null);
+    H.displayName = 'CustomCheckoutContext';
+    var Y = function (e, t) {
             if (!e) return null;
             e.on, e.session;
-            var r = l(e, V);
-            return n ? i(i({}, r), n) : i(i({}, r), e.session());
+            var n = o(e, F);
+            return t ? i(i({}, n), t) : i(i({}, n), e.session());
         },
-        K = 'Invalid prop `stripe` supplied to `CustomCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
-        z = function (e) {
-            var r = e.stripe,
+        W = 'Invalid prop `stripe` supplied to `CustomCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
+        K = function (e) {
+            var n = e.stripe,
                 i = e.options,
-                a = e.children,
-                o = n.useMemo(
+                r = e.children,
+                a = t.useMemo(
                     function () {
-                        return P(r, K);
+                        return P(n, W);
                     },
-                    [r]
+                    [n]
                 ),
-                s = u(n.useState(null), 2),
-                l = s[0],
-                c = s[1],
-                d = u(
-                    n.useState(function () {
+                s = l(t.useState(null), 2),
+                o = s[0],
+                u = s[1],
+                c = l(
+                    t.useState(function () {
                         return {
-                            stripe: 'sync' === o.tag ? o.stripe : null,
+                            stripe: 'sync' === a.tag ? a.stripe : null,
                             customCheckoutSdk: null
                         };
                     }),
                     2
                 ),
-                f = d[0],
-                p = d[1],
-                h = function (e, n) {
-                    p(function (r) {
-                        return r.stripe && r.customCheckoutSdk
-                            ? r
+                d = c[0],
+                f = c[1],
+                _ = function (e, t) {
+                    f(function (n) {
+                        return n.stripe && n.customCheckoutSdk
+                            ? n
                             : {
                                   stripe: e,
-                                  customCheckoutSdk: n
+                                  customCheckoutSdk: t
                               };
                     });
                 },
-                _ = n.useRef(!1);
-            n.useEffect(
+                p = t.useRef(!1);
+            t.useEffect(
                 function () {
                     var e = !0;
                     return (
-                        'async' !== o.tag || f.stripe
-                            ? 'sync' === o.tag &&
-                              o.stripe &&
-                              !_.current &&
-                              ((_.current = !0),
-                              o.stripe.initCustomCheckout(i).then(function (e) {
-                                  e && (h(o.stripe, e), e.on('change', c));
+                        'async' !== a.tag || d.stripe
+                            ? 'sync' === a.tag &&
+                              a.stripe &&
+                              !p.current &&
+                              ((p.current = !0),
+                              a.stripe.initCustomCheckout(i).then(function (e) {
+                                  e && (_(a.stripe, e), e.on('change', u));
                               }))
-                            : o.stripePromise.then(function (n) {
-                                  n &&
+                            : a.stripePromise.then(function (t) {
+                                  t &&
                                       e &&
-                                      !_.current &&
-                                      ((_.current = !0),
-                                      n.initCustomCheckout(i).then(function (e) {
-                                          e && (h(n, e), e.on('change', c));
+                                      !p.current &&
+                                      ((p.current = !0),
+                                      t.initCustomCheckout(i).then(function (e) {
+                                          e && (_(t, e), e.on('change', u));
                                       }));
                               }),
                         function () {
@@ -457,162 +457,162 @@
                         }
                     );
                 },
-                [o, f, i, c]
+                [a, d, i, u]
             );
-            var m = A(r);
-            n.useEffect(
+            var h = S(n);
+            t.useEffect(
                 function () {
-                    null !== m && m !== r && console.warn('Unsupported prop change on CustomCheckoutProvider: You cannot change the `stripe` prop after setting it.');
+                    null !== h && h !== n && console.warn('Unsupported prop change on CustomCheckoutProvider: You cannot change the `stripe` prop after setting it.');
                 },
-                [m, r]
+                [h, n]
             );
-            var g = A(i);
-            n.useEffect(
+            var m = S(i);
+            t.useEffect(
                 function () {
-                    if (!!f.customCheckoutSdk) {
-                        i.clientSecret && !C(g) && !D(i.clientSecret, g.clientSecret) && console.warn('Unsupported prop change: options.client_secret is not a mutable property.');
+                    if (d.customCheckoutSdk) {
+                        !i.clientSecret || A(m) || O(i.clientSecret, m.clientSecret) || console.warn('Unsupported prop change: options.client_secret is not a mutable property.');
                         var e,
-                            n,
-                            r = null == g ? void 0 : null === (e = g.elementsOptions) || void 0 === e ? void 0 : e.appearance,
-                            a = null == i ? void 0 : null === (n = i.elementsOptions) || void 0 === n ? void 0 : n.appearance;
-                        a && !D(a, r) && f.customCheckoutSdk.changeAppearance(a);
+                            t,
+                            n = null == m ? void 0 : null === (e = m.elementsOptions) || void 0 === e ? void 0 : e.appearance,
+                            r = null == i ? void 0 : null === (t = i.elementsOptions) || void 0 === t ? void 0 : t.appearance;
+                        r && !O(r, n) && d.customCheckoutSdk.changeAppearance(r);
                     }
                 },
-                [i, g, f.customCheckoutSdk]
+                [i, m, d.customCheckoutSdk]
             ),
-                n.useEffect(
+                t.useEffect(
                     function () {
-                        M(f.stripe);
+                        w(d.stripe);
                     },
-                    [f.stripe]
+                    [d.stripe]
                 );
-            var E = n.useMemo(
+            var g = t.useMemo(
                 function () {
-                    return W(f.customCheckoutSdk, l);
+                    return Y(d.customCheckoutSdk, o);
                 },
-                [f.customCheckoutSdk, l]
+                [d.customCheckoutSdk, o]
             );
-            return f.customCheckoutSdk ? n.createElement(j.Provider, { value: f }, n.createElement(Y.Provider, { value: E }, a)) : null;
+            return d.customCheckoutSdk ? t.createElement(V.Provider, { value: d }, t.createElement(H.Provider, { value: g }, r)) : null;
         };
-    z.propTypes = {
+    K.propTypes = {
         stripe: T.any,
         options: T.shape({
             clientSecret: T.string.isRequired,
             elementsOptions: T.object
         }).isRequired
     };
-    var q = function (e) {
-            return H(n.useContext(j), e);
+    var z = function (e) {
+            return j(t.useContext(V), e);
         },
-        Q = function (e) {
-            var r = n.useContext(j),
-                i = n.useContext(k);
-            if (r && i) throw Error('You cannot wrap the part of your app that '.concat(e, ' in both <CustomCheckoutProvider> and <Elements> providers.'));
-            return r ? H(r, e) : U(i, e);
+        q = function (e) {
+            var n = t.useContext(V),
+                i = t.useContext(M);
+            if (n && i) throw Error('You cannot wrap the part of your app that '.concat(e, ' in both <CustomCheckoutProvider> and <Elements> providers.'));
+            return n ? j(n, e) : k(i, e);
         },
-        X = function () {
-            q('calls useCustomCheckout()');
-            var e = n.useContext(Y);
+        Q = function () {
+            z('calls useCustomCheckout()');
+            var e = t.useContext(H);
             if (!e) throw Error('Could not find CustomCheckout Context; You need to wrap the part of your app that calls useCustomCheckout() in an <CustomCheckoutProvider> provider.');
             return e;
         },
-        J = function (e) {
+        X = function (e) {
             return e.charAt(0).toUpperCase() + e.slice(1);
         },
-        $ = function (e, r) {
-            var i = ''.concat(J(e), 'Element'),
-                a = function (r) {
-                    var a,
-                        o = r.id,
-                        s = r.className,
-                        l = r.options,
-                        c = void 0 === l ? {} : l,
-                        d = r.onBlur,
-                        f = r.onFocus,
-                        p = r.onReady,
-                        h = r.onChange,
-                        _ = r.onEscape,
-                        m = r.onClick,
-                        g = r.onLoadError,
-                        E = r.onLoaderStart,
-                        v = r.onNetworksChange,
-                        y = r.onConfirm,
-                        b = r.onCancel,
-                        I = r.onShippingAddressChange,
-                        T = r.onShippingRateChange,
-                        C = Q('mounts <'.concat(i, '>')),
-                        N = 'elements' in C ? C.elements : null,
-                        R = 'customCheckoutSdk' in C ? C.customCheckoutSdk : null,
-                        O = u(n.useState(null), 2),
-                        D = O[0],
-                        x = O[1],
-                        w = n.useRef(null),
-                        P = n.useRef(null);
-                    S(D, 'blur', d),
-                        S(D, 'focus', f),
-                        S(D, 'escape', _),
-                        S(D, 'click', m),
-                        S(D, 'loaderror', g),
-                        S(D, 'loaderstart', E),
-                        S(D, 'networkschange', v),
-                        S(D, 'confirm', y),
-                        S(D, 'cancel', b),
-                        S(D, 'shippingaddresschange', I),
-                        S(D, 'shippingratechange', T),
-                        S(D, 'change', h),
-                        p &&
-                            (a =
+        J = function (e, n) {
+            var i = ''.concat(X(e), 'Element'),
+                r = function (n) {
+                    var r,
+                        a = n.id,
+                        s = n.className,
+                        o = n.options,
+                        u = void 0 === o ? {} : o,
+                        c = n.onBlur,
+                        d = n.onFocus,
+                        f = n.onReady,
+                        _ = n.onChange,
+                        p = n.onEscape,
+                        h = n.onClick,
+                        m = n.onLoadError,
+                        g = n.onLoaderStart,
+                        E = n.onNetworksChange,
+                        v = n.onConfirm,
+                        y = n.onCancel,
+                        I = n.onShippingAddressChange,
+                        T = n.onShippingRateChange,
+                        A = q('mounts <'.concat(i, '>')),
+                        N = 'elements' in A ? A.elements : null,
+                        C = 'customCheckoutSdk' in A ? A.customCheckoutSdk : null,
+                        R = l(t.useState(null), 2),
+                        O = R[0],
+                        x = R[1],
+                        L = t.useRef(null),
+                        P = t.useRef(null);
+                    b(O, 'blur', c),
+                        b(O, 'focus', d),
+                        b(O, 'escape', p),
+                        b(O, 'click', h),
+                        b(O, 'loaderror', m),
+                        b(O, 'loaderstart', g),
+                        b(O, 'networkschange', E),
+                        b(O, 'confirm', v),
+                        b(O, 'cancel', y),
+                        b(O, 'shippingaddresschange', I),
+                        b(O, 'shippingratechange', T),
+                        b(O, 'change', _),
+                        f &&
+                            (r =
                                 'expressCheckout' === e
-                                    ? p
+                                    ? f
                                     : function () {
-                                          p(D);
+                                          f(O);
                                       }),
-                        S(D, 'ready', a),
-                        n.useLayoutEffect(
+                        b(O, 'ready', r),
+                        t.useLayoutEffect(
                             function () {
-                                if (null === w.current && null !== P.current && (N || R)) {
-                                    var n = null;
-                                    R ? (n = R.createElement(e, c)) : N && (n = N.create(e, c)), (w.current = n), x(n), n && n.mount(P.current);
+                                if (null === L.current && null !== P.current && (N || C)) {
+                                    var t = null;
+                                    C ? (t = C.createElement(e, u)) : N && (t = N.create(e, u)), (L.current = t), x(t), t && t.mount(P.current);
                                 }
                             },
-                            [N, R, c]
+                            [N, C, u]
                         );
-                    var M = A(c);
+                    var w = S(u);
                     return (
-                        n.useEffect(
+                        t.useEffect(
                             function () {
-                                if (!!w.current) {
-                                    var e = L(c, M, ['paymentRequest']);
-                                    e && w.current.update(e);
+                                if (L.current) {
+                                    var e = D(u, w, ['paymentRequest']);
+                                    e && L.current.update(e);
                                 }
                             },
-                            [c, M]
+                            [u, w]
                         ),
-                        n.useLayoutEffect(function () {
+                        t.useLayoutEffect(function () {
                             return function () {
-                                if (w.current && 'function' == typeof w.current.destroy)
+                                if (L.current && 'function' == typeof L.current.destroy)
                                     try {
-                                        w.current.destroy(), (w.current = null);
+                                        L.current.destroy(), (L.current = null);
                                     } catch (e) {}
                             };
                         }, []),
-                        n.createElement('div', {
-                            id: o,
+                        t.createElement('div', {
+                            id: a,
                             className: s,
                             ref: P
                         })
                     );
                 },
-                o = function (e) {
-                    Q('mounts <'.concat(i, '>'));
-                    var r = e.id,
-                        a = e.className;
-                    return n.createElement('div', {
-                        id: r,
-                        className: a
+                a = function (e) {
+                    q('mounts <'.concat(i, '>'));
+                    var n = e.id,
+                        r = e.className;
+                    return t.createElement('div', {
+                        id: n,
+                        className: r
                     });
                 },
-                s = r ? o : a;
+                s = n ? a : r;
             return (
                 (s.propTypes = {
                     id: T.string,
@@ -637,154 +637,154 @@
                 s
             );
         },
-        ee = 'undefined' == typeof window,
-        et = n.createContext(null);
-    et.displayName = 'EmbeddedCheckoutProviderContext';
-    var en = function () {
-            var e = n.useContext(et);
+        $ = 'undefined' == typeof window,
+        ee = t.createContext(null);
+    ee.displayName = 'EmbeddedCheckoutProviderContext';
+    var et = function () {
+            var e = t.useContext(ee);
             if (!e) throw Error('<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>');
             return e;
         },
-        er = 'Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
+        en = 'Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
         ei = function (e) {
-            var r = e.stripe,
+            var n = e.stripe,
                 i = e.options,
-                a = e.children,
-                o = n.useMemo(
+                r = e.children,
+                a = t.useMemo(
                     function () {
-                        return P(r, er);
+                        return P(n, en);
                     },
-                    [r]
+                    [n]
                 ),
-                s = n.useRef(null),
-                l = n.useRef(null),
-                c = u(n.useState({ embeddedCheckout: null }), 2),
-                d = c[0],
-                f = c[1];
-            n.useEffect(
+                s = t.useRef(null),
+                o = t.useRef(null),
+                u = l(t.useState({ embeddedCheckout: null }), 2),
+                c = u[0],
+                d = u[1];
+            t.useEffect(
                 function () {
-                    if (!l.current && !s.current) {
+                    if (!o.current && !s.current) {
                         var e = function (e) {
-                            !l.current &&
-                                !s.current &&
-                                ((l.current = e),
-                                (s.current = l.current.initEmbeddedCheckout(i).then(function (e) {
-                                    f({ embeddedCheckout: e });
+                            o.current ||
+                                s.current ||
+                                ((o.current = e),
+                                (s.current = o.current.initEmbeddedCheckout(i).then(function (e) {
+                                    d({ embeddedCheckout: e });
                                 })));
                         };
-                        'async' === o.tag && !l.current && (i.clientSecret || i.fetchClientSecret)
-                            ? o.stripePromise.then(function (n) {
-                                  n && e(n);
+                        'async' === a.tag && !o.current && (i.clientSecret || i.fetchClientSecret)
+                            ? a.stripePromise.then(function (t) {
+                                  t && e(t);
                               })
-                            : 'sync' === o.tag && !l.current && (i.clientSecret || i.fetchClientSecret) && e(o.stripe);
+                            : 'sync' === a.tag && !o.current && (i.clientSecret || i.fetchClientSecret) && e(a.stripe);
                     }
                 },
-                [o, i, d, l]
+                [a, i, c, o]
             ),
-                n.useEffect(
+                t.useEffect(
                     function () {
                         return function () {
-                            d.embeddedCheckout
-                                ? ((s.current = null), d.embeddedCheckout.destroy())
+                            c.embeddedCheckout
+                                ? ((s.current = null), c.embeddedCheckout.destroy())
                                 : s.current &&
                                   s.current.then(function () {
-                                      (s.current = null), d.embeddedCheckout && d.embeddedCheckout.destroy();
+                                      (s.current = null), c.embeddedCheckout && c.embeddedCheckout.destroy();
                                   });
                         };
                     },
-                    [d.embeddedCheckout]
+                    [c.embeddedCheckout]
                 ),
-                n.useEffect(
+                t.useEffect(
                     function () {
-                        M(l);
+                        w(o);
                     },
-                    [l]
+                    [o]
                 );
-            var p = A(r);
-            n.useEffect(
+            var f = S(n);
+            t.useEffect(
                 function () {
-                    null !== p && p !== r && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.');
+                    null !== f && f !== n && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.');
                 },
-                [p, r]
+                [f, n]
             );
-            var h = A(i);
+            var _ = S(i);
             return (
-                n.useEffect(
+                t.useEffect(
                     function () {
-                        if (null != h) {
+                        if (null != _) {
                             if (null == i) {
                                 console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot unset options after setting them.');
                                 return;
                             }
-                            void 0 === i.clientSecret && void 0 === i.fetchClientSecret && console.warn('Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.'), null != h.clientSecret && i.clientSecret !== h.clientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != h.fetchClientSecret && i.fetchClientSecret !== h.fetchClientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != h.onComplete && i.onComplete !== h.onComplete && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.');
+                            void 0 === i.clientSecret && void 0 === i.fetchClientSecret && console.warn('Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.'), null != _.clientSecret && i.clientSecret !== _.clientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != _.fetchClientSecret && i.fetchClientSecret !== _.fetchClientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != _.onComplete && i.onComplete !== _.onComplete && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.');
                         }
                     },
-                    [h, i]
+                    [_, i]
                 ),
-                n.createElement(et.Provider, { value: d }, a)
+                t.createElement(ee.Provider, { value: c }, r)
             );
         },
-        ea = function (e) {
-            var r = e.id,
+        er = function (e) {
+            var n = e.id,
                 i = e.className,
-                a = en().embeddedCheckout,
-                o = n.useRef(!1),
-                s = n.useRef(null);
+                r = et().embeddedCheckout,
+                a = t.useRef(!1),
+                s = t.useRef(null);
             return (
-                n.useLayoutEffect(
+                t.useLayoutEffect(
                     function () {
                         return (
-                            !o.current && a && null !== s.current && (a.mount(s.current), (o.current = !0)),
+                            !a.current && r && null !== s.current && (r.mount(s.current), (a.current = !0)),
                             function () {
-                                if (o.current && a)
+                                if (a.current && r)
                                     try {
-                                        a.unmount(), (o.current = !1);
+                                        r.unmount(), (a.current = !1);
                                     } catch (e) {}
                             }
                         );
                     },
-                    [a]
+                    [r]
                 ),
-                n.createElement('div', {
+                t.createElement('div', {
                     ref: s,
-                    id: r,
+                    id: n,
                     className: i
                 })
             );
         },
-        eo = function (e) {
-            var r = e.id,
+        ea = function (e) {
+            var n = e.id,
                 i = e.className;
             return (
-                en(),
-                n.createElement('div', {
-                    id: r,
+                et(),
+                t.createElement('div', {
+                    id: n,
                     className: i
                 })
             );
         },
-        es = ee ? eo : ea,
-        el = function () {
-            return Q('calls useStripe()').stripe;
+        es = $ ? ea : er,
+        eo = function () {
+            return q('calls useStripe()').stripe;
         },
-        eu = $('auBankAccount', ee),
-        ec = $('card', ee),
-        ed = $('cardNumber', ee),
-        ef = $('cardExpiry', ee),
-        ep = $('cardCvc', ee),
-        eh = $('fpxBank', ee),
-        e_ = $('iban', ee),
-        em = $('idealBank', ee),
-        eg = $('p24Bank', ee),
-        eE = $('epsBank', ee),
-        ev = $('payment', ee),
-        ey = $('expressCheckout', ee),
-        eb = $('paymentRequestButton', ee),
-        eI = $('linkAuthentication', ee),
-        eT = $('address', ee),
-        eS = $('shippingAddress', ee),
-        eA = $('paymentMethodMessaging', ee),
-        eC = $('affirmMessage', ee),
-        eN = $('afterpayClearpayMessage', ee);
-    (e.AddressElement = eT), (e.AffirmMessageElement = eC), (e.AfterpayClearpayMessageElement = eN), (e.AuBankAccountElement = eu), (e.CardCvcElement = ep), (e.CardElement = ec), (e.CardExpiryElement = ef), (e.CardNumberElement = ed), (e.CustomCheckoutProvider = z), (e.Elements = B), (e.ElementsConsumer = F), (e.EmbeddedCheckout = es), (e.EmbeddedCheckoutProvider = ei), (e.EpsBankElement = eE), (e.ExpressCheckoutElement = ey), (e.FpxBankElement = eh), (e.IbanElement = e_), (e.IdealBankElement = em), (e.LinkAuthenticationElement = eI), (e.P24BankElement = eg), (e.PaymentElement = ev), (e.PaymentMethodMessagingElement = eA), (e.PaymentRequestButtonElement = eb), (e.ShippingAddressElement = eS), (e.useCustomCheckout = X), (e.useElements = Z), (e.useStripe = el);
+        el = J('auBankAccount', $),
+        eu = J('card', $),
+        ec = J('cardNumber', $),
+        ed = J('cardExpiry', $),
+        ef = J('cardCvc', $),
+        e_ = J('fpxBank', $),
+        ep = J('iban', $),
+        eh = J('idealBank', $),
+        em = J('p24Bank', $),
+        eg = J('epsBank', $),
+        eE = J('payment', $),
+        ev = J('expressCheckout', $),
+        ey = J('paymentRequestButton', $),
+        eI = J('linkAuthentication', $),
+        eT = J('address', $),
+        eb = J('shippingAddress', $),
+        eS = J('paymentMethodMessaging', $),
+        eA = J('affirmMessage', $),
+        eN = J('afterpayClearpayMessage', $);
+    (e.AddressElement = eT), (e.AffirmMessageElement = eA), (e.AfterpayClearpayMessageElement = eN), (e.AuBankAccountElement = el), (e.CardCvcElement = ef), (e.CardElement = eu), (e.CardExpiryElement = ed), (e.CardNumberElement = ec), (e.CustomCheckoutProvider = K), (e.Elements = U), (e.ElementsConsumer = Z), (e.EmbeddedCheckout = es), (e.EmbeddedCheckoutProvider = ei), (e.EpsBankElement = eg), (e.ExpressCheckoutElement = ev), (e.FpxBankElement = e_), (e.IbanElement = ep), (e.IdealBankElement = eh), (e.LinkAuthenticationElement = eI), (e.P24BankElement = em), (e.PaymentElement = eE), (e.PaymentMethodMessagingElement = eS), (e.PaymentRequestButtonElement = ey), (e.ShippingAddressElement = eb), (e.useCustomCheckout = Q), (e.useElements = B), (e.useStripe = eo);
 });

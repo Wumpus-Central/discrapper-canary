@@ -1,18 +1,18 @@
-t.r(n), t(47120);
-var l = t(200651),
-    a = t(192379),
-    i = t(97613),
-    r = t.n(i),
-    o = t(410575),
-    s = t(881052),
-    u = t(246364),
-    d = t(296991),
-    c = t(915509),
-    f = t(981631),
-    g = t(388032);
-n.default = function (e) {
-    let { field: n, onSave: t, onClose: i, guild: p } = e,
-        [x, m] = a.useState(
+l.d(n, { default: () => p }), l(47120);
+var t = l(200651),
+    a = l(192379),
+    i = l(97613),
+    r = l.n(i),
+    o = l(410575),
+    s = l(881052),
+    u = l(246364),
+    c = l(296991),
+    d = l(915509),
+    x = l(981631),
+    g = l(388032);
+let p = function (e) {
+    let { field: n, onSave: l, onClose: i, guild: p } = e,
+        [m, _] = a.useState(
             (null == n ? void 0 : n.values) != null
                 ? null == n
                     ? void 0
@@ -27,12 +27,12 @@ n.default = function (e) {
                       }
                   ]
         ),
-        [C, h] = a.useState(null),
+        [h, C] = a.useState(null),
         b = async () => {
-            null != C && h(null);
-            let e = x.map((e) => e.value.trim()).filter((e) => '' !== e);
+            null != h && C(null);
+            let e = m.map((e) => e.value.trim()).filter((e) => '' !== e);
             if (0 === e.length) {
-                h(g.intl.string(g.t.TCHkcX));
+                C(g.intl.string(g.t.TCHkcX));
                 return;
             }
             let n = {
@@ -42,23 +42,23 @@ n.default = function (e) {
                 required: !0
             };
             try {
-                await t(n), i();
+                await l(n), i();
             } catch (e) {
-                h(new s.Hx(e).getAnyErrorMessage());
+                C(new s.Hx(e).getAnyErrorMessage());
             }
         };
-    return (0, l.jsx)(o.Z, {
-        page: f.ZY5.GUILD_RULES_CREATE_MODAL,
-        children: (0, l.jsx)(c.Z, {
+    return (0, t.jsx)(o.Z, {
+        page: x.ZY5.GUILD_RULES_CREATE_MODAL,
+        children: (0, t.jsx)(d.Z, {
             ...e,
-            errorText: C,
+            errorText: h,
             title: g.intl.string(g.t['3pz9t7']),
             onCancel: i,
             onConfirm: b,
-            children: (0, l.jsx)(d.k, {
+            children: (0, t.jsx)(c.k, {
                 guild: p,
-                rules: x,
-                setRules: m
+                rules: m,
+                setRules: _
             })
         })
     });

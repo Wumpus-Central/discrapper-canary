@@ -1,9 +1,9 @@
-var i = r(67867),
-    a = r(668530);
+var i = n(67867),
+    r = n(668530);
 i(
     {
         global: !0,
-        forced: a.globalThis !== a
+        forced: r.globalThis !== r
     },
-    { globalThis: a }
+    { globalThis: r }
 );

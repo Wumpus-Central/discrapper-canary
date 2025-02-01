@@ -1,4 +1,4 @@
 t.exports = {
-    modal: 'modal_fb5d87',
-    footer: 'footer_fb5d87'
+    modal: 'modal_f5e7c0',
+    footer: 'footer_f5e7c0'
 };

@@ -1,19 +1,19 @@
-var i = r(484155),
-    a = r(841566),
-    o = r(290677),
-    s = r(551023),
-    l = r(682653),
-    u = r(454745),
-    c = Object.prototype.hasOwnProperty;
-function d(e, n) {
-    var r = o(e),
-        d = !r && a(e),
-        f = !r && !d && s(e),
-        p = !r && !d && !f && u(e),
-        h = r || d || f || p,
-        _ = h ? i(e.length, String) : [],
-        m = _.length;
-    for (var g in e) (n || c.call(e, g)) && !(h && ('length' == g || (f && ('offset' == g || 'parent' == g)) || (p && ('buffer' == g || 'byteLength' == g || 'byteOffset' == g)) || l(g, m))) && _.push(g);
-    return _;
+var i = n(484155),
+    r = n(841566),
+    a = n(290677),
+    s = n(551023),
+    o = n(682653),
+    l = n(454745),
+    u = Object.prototype.hasOwnProperty;
+function c(e, t) {
+    var n = a(e),
+        c = !n && r(e),
+        d = !n && !c && s(e),
+        f = !n && !c && !d && l(e),
+        _ = n || c || d || f,
+        p = _ ? i(e.length, String) : [],
+        h = p.length;
+    for (var m in e) (t || u.call(e, m)) && !(_ && ('length' == m || (d && ('offset' == m || 'parent' == m)) || (f && ('buffer' == m || 'byteLength' == m || 'byteOffset' == m)) || o(m, h))) && p.push(m);
+    return p;
 }
-e.exports = d;
+e.exports = c;

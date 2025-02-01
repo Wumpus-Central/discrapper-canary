@@ -1,12 +1,12 @@
 e.exports = {
-    clipForm: 'clipForm_b00e1b',
-    clipFormSection: 'clipFormSection_b00e1b',
-    editSection: 'editSection_b00e1b',
-    metadataSection: 'metadataSection_b00e1b',
-    clipFormFooter: 'clipFormFooter_b00e1b',
-    clipFormFooterButton: 'clipFormFooterButton_b00e1b',
-    submittingWrapperFix: 'submittingWrapperFix_b00e1b',
-    clipFormItem: 'clipFormItem_b00e1b',
-    clipFormSwitches: 'clipFormSwitches_b00e1b',
-    userList: 'userList_b00e1b'
+    clipForm: 'clipForm__54978',
+    clipFormSection: 'clipFormSection__54978',
+    editSection: 'editSection__54978',
+    metadataSection: 'metadataSection__54978',
+    clipFormFooter: 'clipFormFooter__54978',
+    clipFormFooterButton: 'clipFormFooterButton__54978',
+    submittingWrapperFix: 'submittingWrapperFix__54978',
+    clipFormItem: 'clipFormItem__54978',
+    clipFormSwitches: 'clipFormSwitches__54978',
+    userList: 'userList__54978'
 };

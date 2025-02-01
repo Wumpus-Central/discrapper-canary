@@ -1,4 +1,4 @@
-n(789020);
+n.d(t, { Z: () => d }), n(789020);
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -7,14 +7,14 @@ var r = n(481060),
     a = n(981631),
     o = n(388032),
     c = n(54572);
-t.Z = (e) => {
+let d = (e) => {
     let { role: t } = e;
     return (0, l.yE)(t.flags, a.aO5.IN_PROMPT)
         ? (0, s.F)(t)
             ? (0, i.jsxs)('div', {
                   className: c.notice,
                   children: [
-                      (0, i.jsx)(r.CircleWarningIcon, {
+                      (0, i.jsx)(r.P4T, {
                           size: 'custom',
                           width: 20,
                           height: 20,
@@ -30,7 +30,7 @@ t.Z = (e) => {
             : (0, i.jsxs)('div', {
                   className: c.notice,
                   children: [
-                      (0, i.jsx)(r.CircleWarningIcon, {
+                      (0, i.jsx)(r.P4T, {
                           size: 'custom',
                           width: 20,
                           height: 20,

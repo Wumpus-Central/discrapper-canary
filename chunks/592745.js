@@ -1,60 +1,60 @@
+n.d(t, { Z: () => _ }), n(47120);
 var i,
-    a = r(47120);
-var o = r(442837),
-    s = r(570140);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = new Set(),
-    c = {};
+let o = new Set(),
+    l = {};
+function u(e) {
+    let { gameId: t, isLaunchable: n } = e;
+    l[t] = n;
+}
+function c(e) {
+    let { applicationId: t } = e;
+    o.add(t);
+}
 function d(e) {
-    let { gameId: n, isLaunchable: r } = e;
-    c[n] = r;
+    let { applicationId: t } = e;
+    o.delete(t);
 }
-function f(e) {
-    let { applicationId: n } = e;
-    u.add(n);
-}
-function p(e) {
-    let { applicationId: n } = e;
-    u.delete(n);
-}
-class h extends (i = o.ZP.Store) {
+class f extends (i = r.ZP.Store) {
     get launchingGames() {
-        return u;
+        return o;
     }
     get launchableGames() {
-        return c;
+        return l;
     }
     isLaunchable(e) {
-        return null != c[e]
-            ? c[e]
-            : ((c[e] = !1),
-              s.Z.dispatch({
+        return null != l[e]
+            ? l[e]
+            : ((l[e] = !1),
+              a.Z.dispatch({
                   type: 'CHECK_LAUNCHABLE_GAME',
                   gameId: e
               }),
               !1);
     }
 }
-l(h, 'displayName', 'LaunchableGameStore'),
-    (n.Z = new h(s.Z, {
-        GAME_LAUNCHABLE_UPDATE: d,
-        GAME_CLOUD_SYNC_START: f,
-        GAME_LAUNCH_START: f,
-        GAME_LAUNCH_SUCCESS: p,
-        GAME_LAUNCH_FAIL: p,
-        GAME_CLOUD_SYNC_CONFLICT: p,
-        GAME_CLOUD_SYNC_ERROR: p,
-        GAME_CLOUD_SYNC_COMPLETE: p
-    }));
+s(f, 'displayName', 'LaunchableGameStore');
+let _ = new f(a.Z, {
+    GAME_LAUNCHABLE_UPDATE: u,
+    GAME_CLOUD_SYNC_START: c,
+    GAME_LAUNCH_START: c,
+    GAME_LAUNCH_SUCCESS: d,
+    GAME_LAUNCH_FAIL: d,
+    GAME_CLOUD_SYNC_CONFLICT: d,
+    GAME_CLOUD_SYNC_ERROR: d,
+    GAME_CLOUD_SYNC_COMPLETE: d
+});

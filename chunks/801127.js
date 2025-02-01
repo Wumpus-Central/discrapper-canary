@@ -1,5 +1,5 @@
-var e = r(161581),
-    o = r(492424),
-    i = '__core-js_shared__',
-    u = e[i] || o(i, {});
-t.exports = u;
+var r = a(161581),
+    n = a(492424),
+    o = '__core-js_shared__',
+    _ = r[o] || n(o, {});
+t.exports = _;

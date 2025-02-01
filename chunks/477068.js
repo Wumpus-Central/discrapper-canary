@@ -1,17 +1,17 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             keyword: 'if then not for in while do return else elseif break continue switch and or unless when class extends super local import export from using',
             literal: 'true false nil',
             built_in: '_G _VERSION assert collectgarbage dofile error getfenv getmetatable ipairs load loadfile loadstring module next pairs pcall print rawequal rawget rawset require select setfenv setmetatable tonumber tostring type unpack xpcall coroutine debug io math os package string table'
         },
-        r = '[A-Za-z$_][0-9A-Za-z$_]*',
+        n = '[A-Za-z$_][0-9A-Za-z$_]*',
         i = {
             className: 'subst',
             begin: /#\{/,
             end: /\}/,
-            keywords: n
+            keywords: t
         },
-        a = [
+        r = [
             e.inherit(e.C_NUMBER_MODE, {
                 starts: {
                     end: '(\\s*/)?',
@@ -40,10 +40,10 @@ function n(e) {
             { begin: '@' + e.IDENT_RE },
             { begin: e.IDENT_RE + '\\\\' + e.IDENT_RE }
         ];
-    i.contains = a;
-    let o = e.inherit(e.TITLE_MODE, { begin: r }),
+    i.contains = r;
+    let a = e.inherit(e.TITLE_MODE, { begin: n }),
         s = '(\\(.*\\)\\s*)?\\B[-=]>',
-        l = {
+        o = {
             className: 'params',
             begin: '\\([^\\(]',
             returnBegin: !0,
@@ -51,24 +51,24 @@ function n(e) {
                 {
                     begin: /\(/,
                     end: /\)/,
-                    keywords: n,
-                    contains: ['self'].concat(a)
+                    keywords: t,
+                    contains: ['self'].concat(r)
                 }
             ]
         };
     return {
         name: 'MoonScript',
         aliases: ['moon'],
-        keywords: n,
+        keywords: t,
         illegal: /\/\*/,
-        contains: a.concat([
+        contains: r.concat([
             e.COMMENT('--', '$'),
             {
                 className: 'function',
-                begin: '^\\s*' + r + '\\s*=\\s*' + s,
+                begin: '^\\s*' + n + '\\s*=\\s*' + s,
                 end: '[-=]>',
                 returnBegin: !0,
-                contains: [o, l]
+                contains: [a, o]
             },
             {
                 begin: /[\(,:=]\s*/,
@@ -79,7 +79,7 @@ function n(e) {
                         begin: s,
                         end: '[-=]>',
                         returnBegin: !0,
-                        contains: [l]
+                        contains: [o]
                     }
                 ]
             },
@@ -93,14 +93,14 @@ function n(e) {
                         beginKeywords: 'extends',
                         endsWithParent: !0,
                         illegal: /[:="\[\]]/,
-                        contains: [o]
+                        contains: [a]
                     },
-                    o
+                    a
                 ]
             },
             {
                 className: 'name',
-                begin: r + ':',
+                begin: n + ':',
                 end: ':',
                 returnBegin: !0,
                 returnEnd: !0,
@@ -109,4 +109,4 @@ function n(e) {
         ])
     };
 }
-e.exports = n;
+e.exports = t;

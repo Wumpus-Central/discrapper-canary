@@ -1,6 +1,6 @@
 e.exports = {
-    headerDivider: 'headerDivider_b363b0',
-    createButton: 'createButton_b363b0',
-    emptyStateImage: 'emptyStateImage_b363b0',
-    emptyStateButton: 'emptyStateButton_b363b0'
+    headerDivider: 'headerDivider__97dd8',
+    createButton: 'createButton__97dd8',
+    emptyStateImage: 'emptyStateImage__97dd8',
+    emptyStateButton: 'emptyStateButton__97dd8'
 };

@@ -1,9 +1,9 @@
-var i = r(735471),
-    a = r(941332),
-    o = a.all;
-e.exports = a.IS_HTMLDDA
+var i = n(735471),
+    r = n(941332),
+    a = r.all;
+e.exports = r.IS_HTMLDDA
     ? function (e) {
-          return 'object' == typeof e ? null !== e : i(e) || e === o;
+          return 'object' == typeof e ? null !== e : i(e) || e === a;
       }
     : function (e) {
           return 'object' == typeof e ? null !== e : i(e);

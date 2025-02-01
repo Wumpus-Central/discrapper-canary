@@ -1,141 +1,141 @@
-t.r(e);
+t.d(n, { default: () => y });
 var i = t(200651);
 t(192379);
-var u = t(481060),
-    l = t(239091),
-    o = t(883385),
+var o = t(481060),
+    a = t(239091),
+    l = t(883385),
     r = t(108843),
     c = t(947440),
-    a = t(100527),
-    d = t(299206),
-    s = t(916069),
-    p = t(895563),
-    h = t(212205),
-    Z = t(478035),
-    x = t(62420),
-    M = t(423589),
-    f = t(398048),
-    j = t(109764),
+    d = t(100527),
+    _ = t(299206),
+    u = t(916069),
+    s = t(895563),
+    p = t(212205),
+    b = t(478035),
+    m = t(62420),
+    h = t(423589),
+    x = t(398048),
+    f = t(109764),
     C = t(3689),
-    E = t(323597),
-    N = t(852245),
-    _ = t(367722),
-    b = t(461535),
-    G = t(776568),
-    P = t(218035),
-    v = t(775666),
-    g = t(593589),
-    m = t(442754),
-    A = t(981631),
-    T = t(388032);
-function k(n) {
-    let { channel: e, onSelect: t } = n,
-        o = (0, b.Z)(e),
-        r = (0, j.Z)(e),
-        a = (0, p.l)(e),
-        s = (0, p.P)(e),
-        f = (0, h.Z)(e),
-        C = (0, Z.Z)(e),
-        E = (0, x.Z)(e),
-        _ = (0, G.ZP)(e),
-        g = (0, P.Z)(e),
-        m = (0, N.Z)(e),
-        A = (0, d.Z)({
-            id: e.id,
-            label: T.intl.string(T.t.gFHI3t)
+    Z = t(323597),
+    I = t(852245),
+    g = t(367722),
+    k = t(461535),
+    S = t(776568),
+    v = t(218035),
+    E = t(775666),
+    L = t(593589),
+    T = t(442754),
+    P = t(981631),
+    j = t(388032);
+function w(e) {
+    let { channel: n, onSelect: t } = e,
+        l = (0, k.Z)(n),
+        r = (0, f.Z)(n),
+        d = (0, s.l)(n),
+        u = (0, s.P)(n),
+        x = (0, p.Z)(n),
+        C = (0, b.Z)(n),
+        Z = (0, m.Z)(n),
+        g = (0, S.ZP)(n),
+        L = (0, v.Z)(n),
+        T = (0, I.Z)(n),
+        P = (0, _.Z)({
+            id: n.id,
+            label: j.intl.string(j.t.gFHI3t)
         }),
-        k = (0, c.Z)(e),
-        H = (0, v.ZP)(e),
-        I = (0, M.Mn)('ChannelContextFavoritesMenu');
-    return (0, i.jsxs)(u.Menu, {
+        w = (0, c.Z)(n),
+        A = (0, E.ZP)(n),
+        y = (0, h.Mn)('ChannelContextFavoritesMenu');
+    return (0, i.jsxs)(o.v2r, {
         navId: 'channel-context',
-        onClose: l.Zy,
-        'aria-label': T.intl.string(T.t.Xm41aW),
+        onClose: a.Zy,
+        'aria-label': j.intl.string(j.t.Xm41aW),
         onSelect: t,
         children: [
-            (0, i.jsx)(u.MenuGroup, { children: o }),
-            (0, i.jsxs)(u.MenuGroup, {
-                children: [C, E, f, a]
+            (0, i.jsx)(o.kSQ, { children: l }),
+            (0, i.jsxs)(o.kSQ, {
+                children: [C, Z, x, d]
             }),
-            (0, i.jsxs)(u.MenuGroup, {
-                children: [_, I ? H : g]
+            (0, i.jsxs)(o.kSQ, {
+                children: [g, y ? A : L]
             }),
-            (0, i.jsx)(u.MenuGroup, { children: m }),
-            (0, i.jsx)(u.MenuGroup, { children: k }),
-            (0, i.jsx)(u.MenuGroup, { children: s }),
-            (0, i.jsx)(u.MenuGroup, { children: r }),
-            (0, i.jsx)(u.MenuGroup, { children: A })
+            (0, i.jsx)(o.kSQ, { children: T }),
+            (0, i.jsx)(o.kSQ, { children: w }),
+            (0, i.jsx)(o.kSQ, { children: u }),
+            (0, i.jsx)(o.kSQ, { children: r }),
+            (0, i.jsx)(o.kSQ, { children: P })
         ]
     });
 }
-function H(n) {
-    let { channel: e, guild: t, onSelect: o } = n,
-        r = (0, b.Z)(e),
-        a = (0, j.Z)(e),
-        s = (0, p.l)(e),
-        h = (0, p.P)(e),
-        Z = (0, m.Z)(e),
-        x = (0, G.ZP)(e),
-        A = (0, N.Z)(e),
-        k = (0, _.Z)(e, t),
-        H = (0, f.Z)(e, t),
-        I = (0, C.Z)(e, t),
-        S = (0, E.Z)(e),
-        w = (0, d.Z)({
-            id: e.id,
-            label: T.intl.string(T.t.gFHI3t)
+function A(e) {
+    let { channel: n, guild: t, onSelect: l } = e,
+        r = (0, k.Z)(n),
+        d = (0, f.Z)(n),
+        u = (0, s.l)(n),
+        p = (0, s.P)(n),
+        b = (0, T.Z)(n),
+        m = (0, S.ZP)(n),
+        P = (0, I.Z)(n),
+        w = (0, g.Z)(n, t),
+        A = (0, x.Z)(n, t),
+        y = (0, C.Z)(n, t),
+        N = (0, Z.Z)(n),
+        U = (0, _.Z)({
+            id: n.id,
+            label: j.intl.string(j.t.gFHI3t)
         }),
-        L = (0, c.Z)(e),
-        y = (0, g.Z)(e, 'list_text_channel_context_menu'),
-        O = (0, P.Z)(e),
-        X = (0, v.ZP)(e),
-        q = (0, M.Mn)('ChannelContextMenuNormal');
-    return (0, i.jsxs)(u.Menu, {
+        M = (0, c.Z)(n),
+        B = (0, L.Z)(n, 'list_text_channel_context_menu'),
+        O = (0, v.Z)(n),
+        G = (0, E.ZP)(n),
+        Q = (0, h.Mn)('ChannelContextMenuNormal');
+    return (0, i.jsxs)(o.v2r, {
         navId: 'channel-context',
-        onClose: l.Zy,
-        'aria-label': T.intl.string(T.t.Xm41aW),
-        onSelect: o,
+        onClose: a.Zy,
+        'aria-label': j.intl.string(j.t.Xm41aW),
+        onSelect: l,
         children: [
             (0, i.jsxs)(
-                u.MenuGroup,
+                o.kSQ,
                 {
-                    children: [r, s]
+                    children: [r, u]
                 },
                 'mark-as-read-or-favorite'
             ),
             (0, i.jsxs)(
-                u.MenuGroup,
+                o.kSQ,
                 {
-                    children: [k, Z, a, y]
+                    children: [w, b, d, B]
                 },
                 'channel-actions'
             ),
             (0, i.jsxs)(
-                u.MenuGroup,
+                o.kSQ,
                 {
-                    children: [x, q ? X : O]
+                    children: [m, Q ? G : O]
                 },
                 'notifications'
             ),
             (0, i.jsxs)(
-                u.MenuGroup,
+                o.kSQ,
                 {
-                    children: [A, H, I, S]
+                    children: [P, A, y, N]
                 },
                 'admin-actions'
             ),
-            (0, i.jsx)(u.MenuGroup, { children: L }),
-            (0, i.jsx)(u.MenuGroup, { children: h }),
-            (0, i.jsx)(u.MenuGroup, { children: w }, 'developer-actions')
+            (0, i.jsx)(o.kSQ, { children: M }),
+            (0, i.jsx)(o.kSQ, { children: p }),
+            (0, i.jsx)(o.kSQ, { children: U }, 'developer-actions')
         ]
     });
 }
-e.default = (0, r.Z)(
-    (0, o.Z)(
-        function (n) {
-            return (0, s.Z)() ? (0, i.jsx)(k, { ...n }) : (0, i.jsx)(H, { ...n });
+let y = (0, r.Z)(
+    (0, l.Z)(
+        function (e) {
+            return (0, u.Z)() ? (0, i.jsx)(w, { ...e }) : (0, i.jsx)(A, { ...e });
         },
-        { object: A.qAy.CONTEXT_MENU }
+        { object: P.qAy.CONTEXT_MENU }
     ),
-    [a.Z.CONTEXT_MENU, a.Z.CHANNEL_LIST_TEXT_CHANNEL_MENU]
+    [d.Z.CONTEXT_MENU, d.Z.CHANNEL_LIST_TEXT_CHANNEL_MENU]
 );

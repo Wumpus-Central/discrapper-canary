@@ -1,5 +1,5 @@
-var i = r(726185),
-    a = (0, r(267250).Z)(function (e, n, r) {
-        (0, i.Z)(e, n, r);
-    });
-n.Z = a;
+n.d(t, { Z: () => r });
+var i = n(726185);
+let r = (0, n(267250).Z)(function (e, t, n) {
+    (0, i.Z)(e, t, n);
+});

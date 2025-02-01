@@ -1,5 +1,5 @@
 e.exports = {
-    buttonColor: 'buttonColor_d4af21',
-    textButton: 'textButton_d4af21',
-    iconButton: 'iconButton_d4af21'
+    buttonColor: 'buttonColor__7b3e8',
+    textButton: 'textButton__7b3e8',
+    iconButton: 'iconButton__7b3e8'
 };

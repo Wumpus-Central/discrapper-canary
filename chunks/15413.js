@@ -1,18 +1,18 @@
-function n(e) {
-    let n = e.regex,
-        r = {
+function t(e) {
+    let t = e.regex,
+        n = {
             begin: "^'{3,}[ \\t]*$",
             relevance: 10
         },
         i = [{ begin: /\\[*_`]/ }, { begin: /\\\\\*{2}[^\n]*?\*{2}/ }, { begin: /\\\\_{2}[^\n]*_{2}/ }, { begin: /\\\\`{2}[^\n]*`{2}/ }, { begin: /[:;}][*_`](?![*_`])/ }],
-        a = [
+        r = [
             {
                 className: 'strong',
                 begin: /\*{2}([^\n]+?)\*{2}/
             },
             {
                 className: 'strong',
-                begin: n.concat(/\*\*/, /((\*(?!\*)|\\[^\n]|[^*\n\\])+\n)+/, /(\*(?!\*)|\\[^\n]|[^*\n\\])*/, /\*\*/),
+                begin: t.concat(/\*\*/, /((\*(?!\*)|\\[^\n]|[^*\n\\])+\n)+/, /(\*(?!\*)|\\[^\n]|[^*\n\\])*/, /\*\*/),
                 relevance: 0
             },
             {
@@ -24,14 +24,14 @@ function n(e) {
                 begin: /\*[^\s]([^\n]+\n)+([^\n]+)\*/
             }
         ],
-        o = [
+        a = [
             {
                 className: 'emphasis',
                 begin: /_{2}([^\n]+?)_{2}/
             },
             {
                 className: 'emphasis',
-                begin: n.concat(/__/, /((_(?!_)|\\[^\n]|[^_\n\\])+\n)+/, /(_(?!_)|\\[^\n]|[^_\n\\])*/, /__/),
+                begin: t.concat(/__/, /((_(?!_)|\\[^\n]|[^_\n\\])+\n)+/, /(_(?!_)|\\[^\n]|[^_\n\\])*/, /__/),
                 relevance: 0
             },
             {
@@ -60,7 +60,7 @@ function n(e) {
             begin: '^(NOTE|TIP|IMPORTANT|WARNING|CAUTION):\\s+',
             relevance: 10
         },
-        l = {
+        o = {
             className: 'bullet',
             begin: '^(\\*+|-+|\\.+|[^\\n]+?::)\\s+'
         };
@@ -121,11 +121,11 @@ function n(e) {
                 ],
                 relevance: 10
             },
-            l,
+            o,
             s,
             ...i,
+            ...r,
             ...a,
-            ...o,
             {
                 className: 'string',
                 variants: [{ begin: "``.+?''" }, { begin: "`.+?'" }]
@@ -146,7 +146,7 @@ function n(e) {
                 end: '$',
                 relevance: 0
             },
-            r,
+            n,
             {
                 begin: '(link:)?(http|https|ftp|file|irc|image:?):\\S+?\\[[^[]*?\\]',
                 returnBegin: !0,
@@ -175,4 +175,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

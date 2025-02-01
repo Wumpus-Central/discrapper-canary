@@ -1,73 +1,73 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(218867),
-    u = r(28546),
-    c = r(981631),
-    d = r(670638);
-let f = (e) => {
-        let { activeIndex: n, categoryListRef: r, getScrollOffsetForIndex: i } = e,
-            o = a.useRef(c.xAR),
-            s = a.useRef(n);
+n.d(t, { Z: () => f });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(218867),
+    l = n(28546),
+    u = n(981631),
+    c = n(670638);
+let d = (e) => {
+        let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: i } = e,
+            a = r.useRef(u.xAR),
+            s = r.useRef(t);
         return (
-            a.useEffect(() => {
-                null != n &&
-                    n !== s.current &&
-                    (o.current !== c.xAR && window.cancelAnimationFrame(o.current),
-                    (o.current = window.requestAnimationFrame(() => {
+            r.useEffect(() => {
+                null != t &&
+                    t !== s.current &&
+                    (a.current !== u.xAR && window.cancelAnimationFrame(a.current),
+                    (a.current = window.requestAnimationFrame(() => {
                         var e;
-                        if (null == r.current) return;
-                        let a = n > (null !== (e = s.current) && void 0 !== e ? e : -1),
-                            l = null != i ? i(n, a) : 0;
-                        r.current.scrollRowIntoView(n, {
+                        if (null == n.current) return;
+                        let r = t > (null !== (e = s.current) && void 0 !== e ? e : -1),
+                            o = null != i ? i(t, r) : 0;
+                        n.current.scrollRowIntoView(t, {
                             animate: !0,
-                            offset: l
+                            offset: o
                         }),
-                            (o.current = c.xAR),
-                            (s.current = n);
+                            (a.current = u.xAR),
+                            (s.current = t);
                     })));
-            }, [n, r, i]),
-            { categoryListRef: r }
+            }, [t, n, i]),
+            { categoryListRef: n }
         );
     },
-    p = function (e) {
-        let { categoryListRef: n, expressionsListRef: r, categories: o, store: c, children: p, className: h, listPadding: _, rowCount: m, getScrollOffsetForIndex: g, categoryHeight: E, onScroll: v, renderCategoryListItem: y, rowCountBySection: b, renderSection: I } = e,
-            T = c.useStore((e) => e.activeCategoryIndex);
-        f({
+    f = function (e) {
+        let { categoryListRef: t, expressionsListRef: n, categories: a, store: u, children: f, className: _, listPadding: p, rowCount: h, getScrollOffsetForIndex: m, categoryHeight: g, onScroll: E, renderCategoryListItem: v, rowCountBySection: y, renderSection: I } = e,
+            T = u.useStore((e) => e.activeCategoryIndex);
+        d({
             activeIndex: T,
-            categoryListRef: n,
-            getScrollOffsetForIndex: g
+            categoryListRef: t,
+            getScrollOffsetForIndex: m
         });
-        let S = a.useCallback(
+        let b = r.useCallback(
                 (e) => {
-                    let { searchQuery: n } = u.Iu.getState();
-                    if ((c.setActiveCategoryIndex(e), '' !== n)) (0, u.ql)('');
+                    let { searchQuery: t } = l.Iu.getState();
+                    if ((u.setActiveCategoryIndex(e), '' !== t)) (0, l.ql)('');
                     else {
                         var i;
-                        null === (i = r.current) || void 0 === i || i.scrollToSectionTop(e);
+                        null === (i = n.current) || void 0 === i || i.scrollToSectionTop(e);
                     }
                 },
-                [r, c]
+                [n, u]
             ),
-            A = a.useCallback((e) => y(o[e], e, () => S(e), T === e), [T, o, S, y]),
-            C = a.useMemo(() => ('function' == typeof E ? (e) => E(o[e], e) : E), [o, E]);
+            S = r.useCallback((e) => v(a[e], e, () => b(e), T === e), [T, a, b, v]),
+            A = r.useMemo(() => ('function' == typeof g ? (e) => g(a[e], e) : g), [a, g]);
         return (0, i.jsxs)('div', {
-            className: s()(d.wrapper, h),
+            className: s()(c.wrapper, _),
             children: [
-                (0, i.jsx)(l.Z, {
-                    listPadding: _,
-                    onScroll: v,
-                    ref: n,
-                    renderRow: A,
-                    rowCount: m,
-                    rowHeight: C,
+                (0, i.jsx)(o.Z, {
+                    listPadding: p,
+                    onScroll: E,
+                    ref: t,
+                    renderRow: S,
+                    rowCount: h,
+                    rowHeight: A,
                     hideScrollbar: !0,
-                    rowCountBySection: b,
+                    rowCountBySection: y,
                     renderSection: I
                 }),
-                null == p ? void 0 : p(S)
+                null == f ? void 0 : f(b)
             ]
         });
     };
-n.Z = p;

@@ -1,11 +1,11 @@
 e.exports = {
-    container: 'container_dc92e9',
-    acceptButton: 'acceptButton_dc92e9',
-    acceptText: 'acceptText_dc92e9',
-    declineButton: 'declineButton_dc92e9',
-    declineText: 'declineText_dc92e9',
-    blocked: 'blocked_dc92e9',
-    blockedIcon: 'blockedIcon_dc92e9',
-    blockedText: 'blockedText_dc92e9',
-    noIcon: 'noIcon_dc92e9'
+    container: 'container__477aa',
+    acceptButton: 'acceptButton__477aa',
+    acceptText: 'acceptText__477aa',
+    declineButton: 'declineButton__477aa',
+    declineText: 'declineText__477aa',
+    blocked: 'blocked__477aa',
+    blockedIcon: 'blockedIcon__477aa',
+    blockedText: 'blockedText__477aa',
+    noIcon: 'noIcon__477aa'
 };

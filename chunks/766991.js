@@ -1,5 +1,5 @@
 e.exports = {
-    avatar: 'avatar_dbeaea',
-    userPreview: 'userPreview_dbeaea',
-    userContainerWithTimestamp: 'userContainerWithTimestamp_dbeaea'
+    avatar: 'avatar__1327d',
+    userPreview: 'userPreview__1327d',
+    userContainerWithTimestamp: 'userContainerWithTimestamp__1327d'
 };

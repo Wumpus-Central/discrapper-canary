@@ -1,6 +1,6 @@
 e.exports = {
-    imageWrapper: 'imageWrapper_b2ce70',
-    image: 'image_b2ce70',
-    cooldown: 'cooldown_b2ce70',
-    cooldownImage: 'cooldownImage_b2ce70'
+    imageWrapper: 'imageWrapper__5ef8c',
+    image: 'image__5ef8c',
+    cooldown: 'cooldown__5ef8c',
+    cooldownImage: 'cooldownImage__5ef8c'
 };

@@ -1,14 +1,14 @@
-var i = r(548828),
-    a = TypeError,
-    o = function (e) {
-        var n, r;
+var i = n(548828),
+    r = TypeError,
+    a = function (e) {
+        var t, n;
         (this.promise = new e(function (e, i) {
-            if (void 0 !== n || void 0 !== r) throw new a('Bad Promise constructor');
-            (n = e), (r = i);
+            if (void 0 !== t || void 0 !== n) throw new r('Bad Promise constructor');
+            (t = e), (n = i);
         })),
-            (this.resolve = i(n)),
-            (this.reject = i(r));
+            (this.resolve = i(t)),
+            (this.reject = i(n));
     };
 e.exports.f = function (e) {
-    return new o(e);
+    return new a(e);
 };

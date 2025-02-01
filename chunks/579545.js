@@ -1,18 +1,18 @@
-var i = r(406434);
-function a(e) {
-    var n = e.state,
-        r = e.name;
-    n.modifiersData[r] = (0, i.Z)({
-        reference: n.rects.reference,
-        element: n.rects.popper,
-        strategy: 'absolute',
-        placement: n.placement
-    });
-}
-n.Z = {
+n.d(t, { Z: () => r });
+var i = n(406434);
+let r = {
     name: 'popperOffsets',
     enabled: !0,
     phase: 'read',
-    fn: a,
+    fn: function (e) {
+        var t = e.state,
+            n = e.name;
+        t.modifiersData[n] = (0, i.Z)({
+            reference: t.rects.reference,
+            element: t.rects.popper,
+            strategy: 'absolute',
+            placement: t.placement
+        });
+    },
     data: {}
 };

@@ -1,14 +1,14 @@
 t.exports = {
-    header: 'header_f7625d',
-    customGiftHeader: 'customGiftHeader_f7625d',
-    backSplash: 'backSplash_f7625d',
-    customMessage: 'customMessage_f7625d',
-    giftAnimation: 'giftAnimation_f7625d',
-    customGiftHeaderText: 'customGiftHeaderText_f7625d',
-    content: 'content_f7625d',
-    contentCustomGift: 'contentCustomGift_f7625d',
-    body: 'body_f7625d',
-    closeButton: 'closeButton_f7625d',
-    seasonalGiftIcon: 'seasonalGiftIcon_f7625d',
-    modal: 'modal_f7625d'
+    header: 'header__7560f',
+    customGiftHeader: 'customGiftHeader__7560f',
+    backSplash: 'backSplash__7560f',
+    customMessage: 'customMessage__7560f',
+    giftAnimation: 'giftAnimation__7560f',
+    customGiftHeaderText: 'customGiftHeaderText__7560f',
+    content: 'content__7560f',
+    contentCustomGift: 'contentCustomGift__7560f',
+    body: 'body__7560f',
+    closeButton: 'closeButton__7560f',
+    seasonalGiftIcon: 'seasonalGiftIcon__7560f',
+    modal: 'modal__7560f'
 };

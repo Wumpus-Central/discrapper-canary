@@ -1,6 +1,6 @@
-var i = r(67867),
-    a = r(228042),
-    o = r(146321).remove;
+var i = n(67867),
+    r = n(228042),
+    a = n(146321).remove;
 i(
     {
         target: 'Map',
@@ -10,8 +10,8 @@ i(
     },
     {
         deleteAll: function () {
-            for (var e, n = a(this), r = !0, i = 0, s = arguments.length; i < s; i++) (e = o(n, arguments[i])), (r = r && e);
-            return !!r;
+            for (var e, t = r(this), n = !0, i = 0, s = arguments.length; i < s; i++) (e = a(t, arguments[i])), (n = n && e);
+            return !!n;
         }
     }
 );

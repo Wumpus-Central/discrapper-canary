@@ -1,7 +1,7 @@
 e.exports = {
-    keywordTextAreaContainer: 'keywordTextAreaContainer_a4df17',
-    keywordTextArea: 'keywordTextArea_a4df17',
-    collapseable: 'collapseable_a4df17',
-    header: 'header_a4df17',
-    arrow: 'arrow_a4df17'
+    keywordTextAreaContainer: 'keywordTextAreaContainer__4546e',
+    keywordTextArea: 'keywordTextArea__4546e',
+    collapseable: 'collapseable__4546e',
+    header: 'header__4546e',
+    arrow: 'arrow__4546e'
 };

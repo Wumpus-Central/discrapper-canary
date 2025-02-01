@@ -1,7 +1,7 @@
 t.exports = {
-    header: 'header_e53007',
-    closeButton: 'closeButton_e53007',
-    description: 'description_e53007',
-    content: 'content_e53007',
-    footer: 'footer_e53007'
+    header: 'header_fc3cf0',
+    closeButton: 'closeButton_fc3cf0',
+    description: 'description_fc3cf0',
+    content: 'content_fc3cf0',
+    footer: 'footer_fc3cf0'
 };

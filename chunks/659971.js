@@ -1,30 +1,30 @@
+n.d(t, { Z: () => u });
 var i,
-    r,
     l,
-    a,
-    s = n(873546),
-    o = n(442837),
-    c = n(570140);
-let d = !1;
-class u extends (a = o.ZP.Store) {
+    r,
+    a = n(873546),
+    s = n(442837),
+    o = n(570140);
+let c = !1;
+class d extends (r = s.ZP.Store) {
     getIsOpen() {
-        return !s.tq || d;
+        return !a.tq || c;
     }
 }
 (l = 'MobileWebSidebarStore'),
-    (r = 'displayName') in (i = u)
-        ? Object.defineProperty(i, r, {
+    (i = 'displayName') in d
+        ? Object.defineProperty(d, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = l),
-    (t.Z = new u(c.Z, {
-        MOBILE_WEB_SIDEBAR_OPEN: function () {
-            d = !0;
-        },
-        MOBILE_WEB_SIDEBAR_CLOSE: function () {
-            d = !1;
-        }
-    }));
+        : (d[i] = l);
+let u = new d(o.Z, {
+    MOBILE_WEB_SIDEBAR_OPEN: function () {
+        c = !0;
+    },
+    MOBILE_WEB_SIDEBAR_CLOSE: function () {
+        c = !1;
+    }
+});

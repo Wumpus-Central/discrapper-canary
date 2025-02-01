@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
             1: '١',
             2: '٢',
             3: '٣',
@@ -13,7 +13,7 @@
             9: '٩',
             0: '٠'
         },
-        r = {
+        n = {
             '١': '1',
             '٢': '2',
             '٣': '3',
@@ -44,7 +44,7 @@
         isPM: function (e) {
             return 'م' === e;
         },
-        meridiem: function (e, n, r) {
+        meridiem: function (e, t, n) {
             return e < 12 ? 'ص' : 'م';
         },
         calendar: {
@@ -74,14 +74,14 @@
         preparse: function (e) {
             return e
                 .replace(/[١٢٣٤٥٦٧٨٩٠]/g, function (e) {
-                    return r[e];
+                    return n[e];
                 })
                 .replace(/،/g, ',');
         },
         postformat: function (e) {
             return e
                 .replace(/\d/g, function (e) {
-                    return n[e];
+                    return t[e];
                 })
                 .replace(/,/g, '\u060C');
         },

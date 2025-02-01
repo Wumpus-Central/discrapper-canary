@@ -1,9 +1,9 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             className: 'variable',
             begin: /\b_+[a-zA-Z]\w*/
         },
-        r = {
+        n = {
             className: 'title',
             begin: /[a-zA-Z][a-zA-Z_0-9]*_fnc_[a-zA-Z_0-9]+/
         },
@@ -32,8 +32,8 @@ function n(e) {
                 }
             ]
         },
-        a = ['break', 'breakWith', 'breakOut', 'breakTo', 'case', 'catch', 'continue', 'continueWith', 'default', 'do', 'else', 'exit', 'exitWith', 'for', 'forEach', 'from', 'if', 'local', 'private', 'switch', 'step', 'then', 'throw', 'to', 'try', 'waitUntil', 'while', 'with'],
-        o = ['blufor', 'civilian', 'configNull', 'controlNull', 'displayNull', 'diaryRecordNull', 'east', 'endl', 'false', 'grpNull', 'independent', 'lineBreak', 'locationNull', 'nil', 'objNull', 'opfor', 'pi', 'resistance', 'scriptNull', 'sideAmbientLife', 'sideEmpty', 'sideEnemy', 'sideFriendly', 'sideLogic', 'sideUnknown', 'taskNull', 'teamMemberNull', 'true', 'west'],
+        r = ['break', 'breakWith', 'breakOut', 'breakTo', 'case', 'catch', 'continue', 'continueWith', 'default', 'do', 'else', 'exit', 'exitWith', 'for', 'forEach', 'from', 'if', 'local', 'private', 'switch', 'step', 'then', 'throw', 'to', 'try', 'waitUntil', 'while', 'with'],
+        a = ['blufor', 'civilian', 'configNull', 'controlNull', 'displayNull', 'diaryRecordNull', 'east', 'endl', 'false', 'grpNull', 'independent', 'lineBreak', 'locationNull', 'nil', 'objNull', 'opfor', 'pi', 'resistance', 'scriptNull', 'sideAmbientLife', 'sideEmpty', 'sideEnemy', 'sideFriendly', 'sideLogic', 'sideUnknown', 'taskNull', 'teamMemberNull', 'true', 'west'],
         s = [
             'abs',
             'accTime',
@@ -2493,7 +2493,7 @@ function n(e) {
             'worldToModelVisual',
             'worldToScreen'
         ],
-        l = {
+        o = {
             className: 'meta',
             begin: /#\s*[a-z]+\b/,
             end: /$/,
@@ -2517,12 +2517,12 @@ function n(e) {
         name: 'SQF',
         case_insensitive: !0,
         keywords: {
-            keyword: a,
+            keyword: r,
             built_in: s,
-            literal: o
+            literal: a
         },
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.NUMBER_MODE, n, r, i, l],
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.NUMBER_MODE, t, n, i, o],
         illegal: [/\$[^a-fA-F0-9]/, /\w\$/, /\?/, /@/, / \| /, /[a-zA-Z_]\./, /\:\=/, /\[\:/]
     };
 }
-e.exports = n;
+e.exports = t;

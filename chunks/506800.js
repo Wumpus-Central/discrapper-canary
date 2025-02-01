@@ -1,9 +1,9 @@
 e.exports = {
-    container: 'container_d0fc80',
-    chipletContainer: 'chipletContainer_d0fc80',
-    chipletParent: 'chipletParent_d0fc80',
-    usernameContainer: 'usernameContainer_d0fc80',
-    isOverlayContainer: 'isOverlayContainer_d0fc80',
-    noPadding: 'noPadding_d0fc80',
-    isOverlayTag: 'isOverlayTag_d0fc80'
+    container: 'container__91e7c',
+    chipletContainer: 'chipletContainer__91e7c',
+    chipletParent: 'chipletParent__91e7c',
+    usernameContainer: 'usernameContainer__91e7c',
+    isOverlayContainer: 'isOverlayContainer__91e7c',
+    noPadding: 'noPadding__91e7c',
+    isOverlayTag: 'isOverlayTag__91e7c'
 };

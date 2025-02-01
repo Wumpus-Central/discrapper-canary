@@ -1,4 +1,4 @@
 e.exports = {
-    dot: 'dot_f92f5f',
-    container: 'container_f92f5f'
+    dot: 'dot_ae2d95',
+    container: 'container_ae2d95'
 };

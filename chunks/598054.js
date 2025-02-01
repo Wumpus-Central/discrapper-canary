@@ -1,20 +1,20 @@
-var i = r(67867),
-    a = r(570596),
-    o = r(982665),
-    s = r(28886),
-    l = r(453556),
-    u = r(65007),
-    c = r(646948);
-function d(e, n) {
-    var r,
+var i = n(67867),
+    r = n(570596),
+    a = n(982665),
+    s = n(28886),
+    o = n(453556),
+    l = n(65007),
+    u = n(646948);
+function c(e, t) {
+    var n,
         i,
-        f = arguments.length < 3 ? e : arguments[2];
-    return s(e) === f ? e[n] : (r = u.f(e, n)) ? (l(r) ? r.value : void 0 === r.get ? void 0 : a(r.get, f)) : o((i = c(e))) ? d(i, n, f) : void 0;
+        d = arguments.length < 3 ? e : arguments[2];
+    return s(e) === d ? e[t] : (n = l.f(e, t)) ? (o(n) ? n.value : void 0 === n.get ? void 0 : r(n.get, d)) : a((i = u(e))) ? c(i, t, d) : void 0;
 }
 i(
     {
         target: 'Reflect',
         stat: !0
     },
-    { get: d }
+    { get: c }
 );

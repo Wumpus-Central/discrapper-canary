@@ -1,7 +1,7 @@
 e.exports = {
-    switch: 'switch_e3bb71',
-    panel: 'panel_e3bb71',
-    divider: 'divider_e3bb71',
-    inGameNuxContainer: 'inGameNuxContainer_e3bb71',
-    search: 'search_e3bb71'
+    switch: 'switch__9d40d',
+    panel: 'panel__9d40d',
+    divider: 'divider__9d40d',
+    inGameNuxContainer: 'inGameNuxContainer__9d40d',
+    search: 'search__9d40d'
 };

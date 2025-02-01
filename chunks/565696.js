@@ -1,4 +1,4 @@
 e.exports = {
-    card: 'card_d04837',
-    button: 'button_d04837'
+    card: 'card__2023f',
+    button: 'button__2023f'
 };

@@ -1,15 +1,15 @@
-function n(e) {
-    let n = e.regex,
-        r = /[\p{XID_Start}_]\p{XID_Continue}*/u,
+function t(e) {
+    let t = e.regex,
+        n = /[\p{XID_Start}_]\p{XID_Continue}*/u,
         i = ['and', 'as', 'assert', 'async', 'await', 'break', 'case', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'match', 'nonlocal|10', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield'],
-        a = {
+        r = {
             $pattern: /[A-Za-z]\w+|__\w+__/,
             keyword: i,
             built_in: ['__import__', 'abs', 'all', 'any', 'ascii', 'bin', 'bool', 'breakpoint', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass', 'iter', 'len', 'list', 'locals', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'zip'],
             literal: ['__debug__', 'Ellipsis', 'False', 'None', 'NotImplemented', 'True'],
             type: ['Any', 'Callable', 'Coroutine', 'Dict', 'List', 'Literal', 'Generic', 'Optional', 'Sequence', 'Set', 'Tuple', 'Type', 'Union']
         },
-        o = {
+        a = {
             className: 'meta',
             begin: /^(>>>|\.\.\.) /
         },
@@ -17,38 +17,38 @@ function n(e) {
             className: 'subst',
             begin: /\{/,
             end: /\}/,
-            keywords: a,
+            keywords: r,
             illegal: /#/
         },
-        l = {
+        o = {
             begin: /\{\{/,
             relevance: 0
         },
-        u = {
+        l = {
             className: 'string',
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
                 {
                     begin: /([uU]|[bB]|[rR]|[bB][rR]|[rR][bB])?'''/,
                     end: /'''/,
-                    contains: [e.BACKSLASH_ESCAPE, o],
+                    contains: [e.BACKSLASH_ESCAPE, a],
                     relevance: 10
                 },
                 {
                     begin: /([uU]|[bB]|[rR]|[bB][rR]|[rR][bB])?"""/,
                     end: /"""/,
-                    contains: [e.BACKSLASH_ESCAPE, o],
+                    contains: [e.BACKSLASH_ESCAPE, a],
                     relevance: 10
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])'''/,
                     end: /'''/,
-                    contains: [e.BACKSLASH_ESCAPE, o, l, s]
+                    contains: [e.BACKSLASH_ESCAPE, a, o, s]
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])"""/,
                     end: /"""/,
-                    contains: [e.BACKSLASH_ESCAPE, o, l, s]
+                    contains: [e.BACKSLASH_ESCAPE, a, o, s]
                 },
                 {
                     begin: /([uU]|[rR])'/,
@@ -71,30 +71,30 @@ function n(e) {
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])'/,
                     end: /'/,
-                    contains: [e.BACKSLASH_ESCAPE, l, s]
+                    contains: [e.BACKSLASH_ESCAPE, o, s]
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])"/,
                     end: /"/,
-                    contains: [e.BACKSLASH_ESCAPE, l, s]
+                    contains: [e.BACKSLASH_ESCAPE, o, s]
                 },
                 e.APOS_STRING_MODE,
                 e.QUOTE_STRING_MODE
             ]
         },
-        c = '[0-9](_?[0-9])*',
-        d = `(\\b(${c}))?\\.(${c})|\\b(${c})\\.`,
-        f = `\\b|${i.join('|')}`,
-        p = {
+        u = '[0-9](_?[0-9])*',
+        c = `(\\b(${u}))?\\.(${u})|\\b(${u})\\.`,
+        d = `\\b|${i.join('|')}`,
+        f = {
             className: 'number',
             relevance: 0,
-            variants: [{ begin: `(\\b(${c})|(${d}))[eE][+-]?(${c})[jJ]?(?=${f})` }, { begin: `(${d})[jJ]?` }, { begin: `\\b([1-9](_?[0-9])*|0+(_?0)*)[lLjJ]?(?=${f})` }, { begin: `\\b0[bB](_?[01])+[lL]?(?=${f})` }, { begin: `\\b0[oO](_?[0-7])+[lL]?(?=${f})` }, { begin: `\\b0[xX](_?[0-9a-fA-F])+[lL]?(?=${f})` }, { begin: `\\b(${c})[jJ](?=${f})` }]
+            variants: [{ begin: `(\\b(${u})|(${c}))[eE][+-]?(${u})[jJ]?(?=${d})` }, { begin: `(${c})[jJ]?` }, { begin: `\\b([1-9](_?[0-9])*|0+(_?0)*)[lLjJ]?(?=${d})` }, { begin: `\\b0[bB](_?[01])+[lL]?(?=${d})` }, { begin: `\\b0[oO](_?[0-7])+[lL]?(?=${d})` }, { begin: `\\b0[xX](_?[0-9a-fA-F])+[lL]?(?=${d})` }, { begin: `\\b(${u})[jJ](?=${d})` }]
         },
-        h = {
+        _ = {
             className: 'comment',
-            begin: n.lookahead(/# type:/),
+            begin: t.lookahead(/# type:/),
             end: /$/,
-            keywords: a,
+            keywords: r,
             contains: [
                 { begin: /# type:/ },
                 {
@@ -104,7 +104,7 @@ function n(e) {
                 }
             ]
         },
-        _ = {
+        p = {
             className: 'params',
             variants: [
                 {
@@ -117,22 +117,22 @@ function n(e) {
                     end: /\)/,
                     excludeBegin: !0,
                     excludeEnd: !0,
-                    keywords: a,
-                    contains: ['self', o, p, u, e.HASH_COMMENT_MODE]
+                    keywords: r,
+                    contains: ['self', a, f, l, e.HASH_COMMENT_MODE]
                 }
             ]
         };
     return (
-        (s.contains = [u, p, o]),
+        (s.contains = [l, f, a]),
         {
             name: 'Python',
             aliases: ['py', 'gyp', 'ipython'],
             unicodeRegex: !0,
-            keywords: a,
+            keywords: r,
             illegal: /(<\/|\?)|=>/,
             contains: [
-                o,
-                p,
+                a,
+                f,
                 {
                     scope: 'variable.language',
                     match: /\bself\b/
@@ -145,24 +145,24 @@ function n(e) {
                     match: /\bor\b/,
                     scope: 'keyword'
                 },
-                u,
-                h,
+                l,
+                _,
                 e.HASH_COMMENT_MODE,
                 {
-                    match: [/\bdef/, /\s+/, r],
+                    match: [/\bdef/, /\s+/, n],
                     scope: {
                         1: 'keyword',
                         3: 'title.function'
                     },
-                    contains: [_]
+                    contains: [p]
                 },
                 {
                     variants: [
                         {
-                            match: [/\bclass/, /\s+/, r, /\s*/, /\(\s*/, r, /\s*\)/]
+                            match: [/\bclass/, /\s+/, n, /\s*/, /\(\s*/, n, /\s*\)/]
                         },
                         {
-                            match: [/\bclass/, /\s+/, r]
+                            match: [/\bclass/, /\s+/, n]
                         }
                     ],
                     scope: {
@@ -175,10 +175,10 @@ function n(e) {
                     className: 'meta',
                     begin: /^[\t ]*@/,
                     end: /(?=#)|$/,
-                    contains: [p, _, u]
+                    contains: [f, p, l]
                 }
             ]
         }
     );
 }
-e.exports = n;
+e.exports = t;

@@ -1,14 +1,14 @@
 e.exports = {
-    modal: 'modal_ba6508',
-    modalHeader: 'modalHeader_ba6508',
-    heading: 'heading_ba6508',
-    modalContent: 'modalContent_ba6508',
-    modalFooter: 'modalFooter_ba6508',
-    clearAllButton: 'clearAllButton_ba6508',
-    spamRequest: 'spamRequest_ba6508',
-    listItem: 'listItem_ba6508',
-    active: 'active_ba6508',
-    listItemContents: 'listItemContents_ba6508',
-    userInfo: 'userInfo_ba6508',
-    actions: 'actions_ba6508'
+    modal: 'modal__2bb83',
+    modalHeader: 'modalHeader__2bb83',
+    heading: 'heading__2bb83',
+    modalContent: 'modalContent__2bb83',
+    modalFooter: 'modalFooter__2bb83',
+    clearAllButton: 'clearAllButton__2bb83',
+    spamRequest: 'spamRequest__2bb83',
+    listItem: 'listItem__2bb83',
+    active: 'active__2bb83',
+    listItemContents: 'listItemContents__2bb83',
+    userInfo: 'userInfo__2bb83',
+    actions: 'actions__2bb83'
 };

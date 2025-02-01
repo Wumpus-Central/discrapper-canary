@@ -30,8 +30,8 @@ function E(e, t, n) {
 let v = null,
     y = !1,
     I = 1209600000,
-    b = 86400000;
-function T(e) {
+    T = 86400000;
+function b(e) {
     let t = u.Z.createFromServer(e.entitlement);
     (0, m._k)(t)
         ? S({ forceRefresh: !0 })
@@ -108,7 +108,7 @@ function L() {
 class P extends s.Z {
     forceRefreshIfOutdated() {
         let e = h.Z.getState();
-        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > b && S({ forceRefresh: !0 });
+        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > T && S({ forceRefresh: !0 });
     }
     constructor(...e) {
         super(...e),
@@ -116,7 +116,7 @@ class P extends s.Z {
                 POST_CONNECTION_OPEN: L,
                 CONNECTION_CLOSED: x,
                 ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => S(),
-                ENTITLEMENT_CREATE: T,
+                ENTITLEMENT_CREATE: b,
                 ENTITLEMENT_UPDATE: () => S(),
                 ENTITLEMENT_DELETE: () => S(),
                 LOGOUT: D

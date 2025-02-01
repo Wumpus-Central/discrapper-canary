@@ -1,31 +1,31 @@
-var i,
-    l,
-    r,
+n.d(t, { Z: () => c });
+var l,
+    i,
     a,
-    o = n(442837),
-    s = n(570140),
-    c = n(780106);
+    r = n(442837),
+    o = n(570140),
+    E = n(780106);
 let u = 'None';
-class d extends (a = o.ZP.Store) {
+class _ extends (a = r.ZP.Store) {
     getFakeGameToShow() {
         return u;
     }
     getFakeGameData() {
-        return c.O[u];
+        return E.O[u];
     }
 }
-(r = 'ContentInventoryDevToolsStore'),
-    (l = 'displayName') in (i = d)
-        ? Object.defineProperty(i, l, {
-              value: r,
+(i = 'ContentInventoryDevToolsStore'),
+    (l = 'displayName') in _
+        ? Object.defineProperty(_, l, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[l] = r),
-    (t.Z = new d(s.Z, {
-        CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING: function (e) {
-            let { gameToShow: t } = e;
-            u = t;
-        }
-    }));
+        : (_[l] = i);
+let c = new _(o.Z, {
+    CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING: function (e) {
+        let { gameToShow: t } = e;
+        u = t;
+    }
+});

@@ -29,9 +29,9 @@ var n = o(t(405774)),
                                 t = r[0];
                             return r[1], (0, u.default)(t) === o;
                         }) || [])[1];
-                    !d && (d = new n.default([])), d.add(e), v.set(t, d);
+                    d || (d = new n.default([])), d.add(e), v.set(t, d);
                 }
             }
         });
-});
-r.default = v;
+}),
+    (r.default = v);

@@ -11,8 +11,8 @@ function u(e, t) {
 }
 function c(e) {
     let { id: t, defaultFocused: n, isEnabled: c, scrollToStart: d, scrollToEnd: f, onNavigatePreviousAtStart: _, onNavigateNextAtEnd: p, setFocus: h, setFocusOnList: m, preserveFocusPosition: g = !0, useVirtualFocus: E = !1, wrap: v = !1, orientation: y = o.hy.VERTICAL, disableClickOnSpace: I = !1 } = e,
-        b = i.useRef(n ? (0, l.jb)(t, n) : null),
-        T = i.useRef(!1),
+        T = i.useRef(n ? (0, l.jb)(t, n) : null),
+        b = i.useRef(!1),
         S = i.useRef(null),
         A = i.useRef(c);
     function N(e) {
@@ -40,7 +40,7 @@ function c(e) {
         ),
         D = i.useCallback(
             (e) => {
-                if (((b.current = e), null == e)) {
+                if (((T.current = e), null == e)) {
                     (0, a.h)(t, null, g);
                     return;
                 }
@@ -89,24 +89,24 @@ function c(e) {
                 !e.currentTarget.contains(e.relatedTarget) &&
                     (P(!1),
                     requestAnimationFrame(() => {
-                        let e = b.current;
+                        let e = T.current;
                         null !== e && null == N((0, l.P1)(e)) && O((0, l.P1)(t, l.kn));
                     }));
             }
             async function r() {
                 let e = S.current;
                 if (w.current || null == e) return;
-                let n = b.current;
+                let n = T.current;
                 if (g && null !== n) {
                     let t = (0, l.P1)(n),
                         i = N(t);
-                    if (null != i && (!0 !== T.current || (await (0, s.JJ)(e, i)))) return R(t, (0, l.x3)(n));
+                    if (null != i && (!0 !== b.current || (await (0, s.JJ)(e, i)))) return R(t, (0, l.x3)(n));
                 }
                 let i = await (0, s.KG)(e, u(t, S));
                 null !== i && D(i);
             }
             function a() {
-                T.current = !0;
+                b.current = !0;
             }
         }, [c, t, g, R, m, O, D]);
     let M = i.useMemo(
@@ -114,7 +114,7 @@ function c(e) {
                 wrap: v,
                 get from() {
                     if (!E) return;
-                    let t = b.current;
+                    let t = T.current;
                     if (null != t) {
                         var e;
                         return null !== (e = N((0, l.P1)(t))) && void 0 !== e ? e : void 0;
@@ -168,7 +168,7 @@ function c(e) {
                     case o.R8.SPACE:
                     case o.R8.ENTER: {
                         if ((e.key === o.R8.SPACE && I) || e.repeat) return;
-                        let t = b.current;
+                        let t = T.current;
                         if (null != t) {
                             var r;
                             let n = N((0, l.P1)(t)),
@@ -184,7 +184,7 @@ function c(e) {
         B = i.useCallback(
             (e) => {
                 let n = null != e ? (0, l.jb)(t, e) : null;
-                (b.current = n), (0, a.h)(t, e, g);
+                (T.current = n), (0, a.h)(t, e, g);
             },
             [t, g]
         );
@@ -211,7 +211,7 @@ function c(e) {
             focusPreviousItem: U,
             focusNextItem: k,
             focusedItemId() {
-                let e = b.current;
+                let e = T.current;
                 return e ? (0, l.x3)(e) : null;
             }
         }),

@@ -1,4 +1,4 @@
 e.exports = {
-    classificationEvidenceCard: 'classificationEvidenceCard_b59990',
-    classificationEvidenceMessageAttachment: 'classificationEvidenceMessageAttachment_b59990'
+    classificationEvidenceCard: 'classificationEvidenceCard_f57acb',
+    classificationEvidenceMessageAttachment: 'classificationEvidenceMessageAttachment_f57acb'
 };

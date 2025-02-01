@@ -1,50 +1,50 @@
-Object.defineProperty(n, '__esModule', { value: !0 }), (n.Checkboard = void 0);
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.Checkboard = void 0);
 var i =
         Object.assign ||
         function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = arguments[n];
-                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         },
-    a = r(192379),
-    o = c(a),
-    s = c(r(723184)),
-    l = u(r(292346));
-function u(e) {
+    r = n(192379),
+    a = u(r),
+    s = u(n(723184)),
+    o = l(n(292346));
+function l(e) {
     if (e && e.__esModule) return e;
-    var n = {};
-    if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
-    return (n.default = e), n;
+    var t = {};
+    if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+    return (t.default = e), t;
 }
-function c(e) {
+function u(e) {
     return e && e.__esModule ? e : { default: e };
 }
-var d = (n.Checkboard = function (e) {
-    var n = e.white,
-        r = e.grey,
-        u = e.size,
-        c = e.renderers,
-        d = e.borderRadius,
-        f = e.boxShadow,
-        p = e.children,
-        h = (0, s.default)({
+var c = (t.Checkboard = function (e) {
+    var t = e.white,
+        n = e.grey,
+        l = e.size,
+        u = e.renderers,
+        c = e.borderRadius,
+        d = e.boxShadow,
+        f = e.children,
+        _ = (0, s.default)({
             default: {
                 grid: {
-                    borderRadius: d,
-                    boxShadow: f,
+                    borderRadius: c,
+                    boxShadow: d,
                     absolute: '0px 0px 0px 0px',
-                    background: 'url(' + l.get(n, r, u, c.canvas) + ') center left'
+                    background: 'url(' + o.get(t, n, l, u.canvas) + ') center left'
                 }
             }
         });
-    return (0, a.isValidElement)(p) ? o.default.cloneElement(p, i({}, p.props, { style: i({}, p.props.style, h.grid) })) : o.default.createElement('div', { style: h.grid });
+    return (0, r.isValidElement)(f) ? a.default.cloneElement(f, i({}, f.props, { style: i({}, f.props.style, _.grid) })) : a.default.createElement('div', { style: _.grid });
 });
-(d.defaultProps = {
+(c.defaultProps = {
     size: 8,
     white: 'transparent',
     grey: 'rgba(0,0,0,.08)',
     renderers: {}
 }),
-    (n.default = d);
+    (t.default = c);

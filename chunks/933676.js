@@ -1,50 +1,50 @@
-var e = n(581031),
-    o = n(936940),
-    i = n(354848),
-    u = n(974971),
-    f = n(545576),
-    a = n(943329),
-    c = function () {},
-    s = [],
-    y = f('Reflect', 'construct'),
-    p = /^\s*(?:class|function)\b/,
-    h = e(p.exec),
-    v = !p.exec(c),
-    d = function (t) {
-        if (!i(t)) return !1;
+var i = n(581031),
+    r = n(936940),
+    a = n(354848),
+    s = n(974971),
+    o = n(545576),
+    l = n(943329),
+    u = function () {},
+    c = [],
+    d = o('Reflect', 'construct'),
+    f = /^\s*(?:class|function)\b/,
+    _ = i(f.exec),
+    p = !f.exec(u),
+    h = function (e) {
+        if (!a(e)) return !1;
         try {
-            return y(c, s, t), !0;
-        } catch (t) {
+            return d(u, c, e), !0;
+        } catch (e) {
             return !1;
         }
     },
-    g = function (t) {
-        if (!i(t)) return !1;
-        switch (u(t)) {
+    m = function (e) {
+        if (!a(e)) return !1;
+        switch (s(e)) {
             case 'AsyncFunction':
             case 'GeneratorFunction':
             case 'AsyncGeneratorFunction':
                 return !1;
         }
         try {
-            return v || !!h(p, a(t));
-        } catch (t) {
+            return p || !!_(f, l(e));
+        } catch (e) {
             return !0;
         }
     };
-(g.sham = !0),
-    (t.exports =
-        !y ||
-        o(function () {
-            var t;
+(m.sham = !0),
+    (e.exports =
+        !d ||
+        r(function () {
+            var e;
             return (
-                d(d.call) ||
-                !d(Object) ||
-                !d(function () {
-                    t = !0;
+                h(h.call) ||
+                !h(Object) ||
+                !h(function () {
+                    e = !0;
                 }) ||
-                t
+                e
             );
         })
-            ? g
-            : d);
+            ? m
+            : h);

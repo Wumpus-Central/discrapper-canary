@@ -41,11 +41,11 @@ function I(e) {
     let { applicationId: t, originURL: n } = e;
     (i = t), (r = n), m.delete(t), (a = null), (h.applicationId = t), (h.originURL = n);
 }
-function b(e) {
+function T(e) {
     let { applicationId: t, error: n } = e;
     m.delete(t), (a = n);
 }
-function T(e) {
+function b(e) {
     let { testModeApplicationId: t } = e;
     i = t;
 }
@@ -99,8 +99,8 @@ _(S, 'displayName', 'TestModeStore'), _(S, 'persistKey', 'TestModeStore');
 let A = new S(l.Z, {
     DEVELOPER_TEST_MODE_AUTHORIZATION_START: y,
     DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: I,
-    DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: b,
-    OVERLAY_INITIALIZE: T,
+    DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: T,
+    OVERLAY_INITIALIZE: b,
     DEVELOPER_TEST_MODE_RESET_ERROR: E,
     LOGOUT: v,
     DEVELOPER_TEST_MODE_RESET: v

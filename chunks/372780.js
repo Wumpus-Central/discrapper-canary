@@ -1,5 +1,5 @@
-var a = r(760919);
-t.Z = new a.Z({
+r.d(t, { Z: () => a });
+let a = new (r(760919).Z)({
     id: 'p3-linear',
     cssId: '--display-p3-linear',
     name: 'Linear P3',

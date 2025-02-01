@@ -1,43 +1,43 @@
+n.d(t, { Z: () => p });
 var i,
-    a = r(442837),
-    o = r(570140),
-    s = r(703558);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(703558);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = {},
-    c = {};
+let l = {},
+    u = {};
+function c(e) {
+    let { channelId: t, sticker: n, draftType: i } = e;
+    (i === s.d.FirstThreadMessage ? u : l)[t] = [n];
+}
 function d(e) {
-    let { channelId: n, sticker: r, draftType: i } = e;
-    (i === s.d.FirstThreadMessage ? c : u)[n] = [r];
+    let { channelId: t, draftType: n } = e,
+        i = n === s.d.FirstThreadMessage ? u : l;
+    null != i[t] && delete i[t];
 }
-function f(e) {
-    let { channelId: n, draftType: r } = e,
-        i = r === s.d.FirstThreadMessage ? c : u;
-    null != i[n] && delete i[n];
+function f() {
+    (l = {}), (u = {});
 }
-function p() {
-    (u = {}), (c = {});
-}
-class h extends (i = a.ZP.Store) {
-    getStickerPreview(e, n) {
-        return (n === s.d.FirstThreadMessage ? c : u)[e];
+class _ extends (i = r.ZP.Store) {
+    getStickerPreview(e, t) {
+        return (t === s.d.FirstThreadMessage ? u : l)[e];
     }
 }
-l(h, 'displayName', 'StickerMessagePreviewStore');
-let _ = new h(o.Z, {
-    ADD_STICKER_PREVIEW: d,
-    CLEAR_STICKER_PREVIEW: f,
-    LOGOUT: p
+o(_, 'displayName', 'StickerMessagePreviewStore');
+let p = new _(a.Z, {
+    ADD_STICKER_PREVIEW: c,
+    CLEAR_STICKER_PREVIEW: d,
+    LOGOUT: f
 });
-n.Z = _;

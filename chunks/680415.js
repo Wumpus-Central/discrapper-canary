@@ -1,37 +1,37 @@
-e(312677);
-var r = e(511004);
-e(149182);
-var u = e(486324);
-async function o(n) {
-    let { gif: t, x: e, y: o, width: i, height: c, rotationDegrees: f = 0 } = n;
+r(312677);
+var n = r(511004);
+r(149182);
+var o = r(486324);
+async function i(e) {
+    let { gif: t, x: r, y: i, width: a, height: u, rotationDegrees: s = 0 } = e;
     try {
-        let n = await (0, r.Q)({
+        let e = await (0, n.Q)({
             gif: t,
-            x: e,
-            y: o,
-            width: i,
-            height: c,
-            rotationDegrees: f
+            x: r,
+            y: i,
+            width: a,
+            height: u,
+            rotationDegrees: s
         });
         self.postMessage({
-            type: u.u.CROP_GIF_COMPLETE,
-            result: n
+            type: o.u.CROP_GIF_COMPLETE,
+            result: e
         });
-    } catch (n) {
-        self.postMessage({ type: u.u.CROP_GIF_ERROR });
+    } catch (e) {
+        self.postMessage({ type: o.u.CROP_GIF_ERROR });
     }
 }
-self.addEventListener('message', (n) => {
-    let { data: t } = n;
-    if (t.type === u.u.CROP_GIF_START) {
-        let { gif: n, x: e, y: r, width: u, height: i, rotationDegrees: c } = t;
-        o({
-            gif: n,
-            x: e,
-            y: r,
-            width: u,
-            height: i,
-            rotationDegrees: c
+self.addEventListener('message', (e) => {
+    let { data: t } = e;
+    if (t.type === o.u.CROP_GIF_START) {
+        let { gif: e, x: r, y: n, width: o, height: a, rotationDegrees: u } = t;
+        i({
+            gif: e,
+            x: r,
+            y: n,
+            width: o,
+            height: a,
+            rotationDegrees: u
         });
     }
 });

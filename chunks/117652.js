@@ -19,8 +19,8 @@ var r = n(442837),
     v = n(855775),
     y = n(626135),
     I = n(937615),
-    b = n(987209),
-    T = n(563132),
+    T = n(987209),
+    b = n(563132),
     S = n(409813),
     A = n(614277),
     N = n(981631),
@@ -38,7 +38,7 @@ let x = {
 };
 function L(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: r = !1, disabled: s = !1, loading: o = !1 } = e,
-        { hasPaymentSources: l } = (0, T.JL)(),
+        { hasPaymentSources: l } = (0, b.JL)(),
         u = l ? S.h8.REVIEW : S.h8.ADD_PAYMENT_STEPS;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -54,8 +54,8 @@ function L(e) {
 }
 function P(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { customGiftMessage: o = '', setCustomGiftMessage: l, giftRecipientError: m, setGiftRecipientError: S, validatingGiftRecipient: x, giftRecipient: P, recommendedGiftSkuIds: M, giftingOrigin: k, setValidatingGiftRecipient: U } = (0, b.wD)(),
-        { selectedSkuId: G, setSelectedSkuId: B, selectedSkuPricePreview: Z, paymentSourceId: F, skuPricePreviewsById: V } = (0, T.JL)(),
+        { customGiftMessage: o = '', setCustomGiftMessage: l, giftRecipientError: m, setGiftRecipientError: S, validatingGiftRecipient: x, giftRecipient: P, recommendedGiftSkuIds: M, giftingOrigin: k, setValidatingGiftRecipient: U } = (0, T.wD)(),
+        { selectedSkuId: G, setSelectedSkuId: B, selectedSkuPricePreview: Z, paymentSourceId: F, skuPricePreviewsById: V } = (0, b.JL)(),
         j = (0, r.e7)([E.default], () => E.default.getCurrentUser()),
         { enabled: H, giftRecommendationAlgorithm: Y } = _.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
         W = H && k === C.Wt.DM_CHANNEL,

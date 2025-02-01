@@ -1,12 +1,12 @@
-var i = r(147018),
-    a = r(161581),
-    o = r(112285).clear;
+var i = n(147018),
+    r = n(161581),
+    a = n(112285).clear;
 i(
     {
         global: !0,
         bind: !0,
         enumerable: !0,
-        forced: a.clearImmediate !== o
+        forced: r.clearImmediate !== a
     },
-    { clearImmediate: o }
+    { clearImmediate: a }
 );

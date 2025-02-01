@@ -1,86 +1,86 @@
-t.r(e);
-var i = t(200651);
-t(192379);
-var r = t(481060),
-    l = t(239091),
-    a = t(108843),
-    u = t(100527),
-    o = t(299206),
-    d = t(895563),
-    c = t(32750),
-    s = t(109764),
-    h = t(323597),
-    f = t(461535),
-    Z = t(438536),
-    p = t(251746),
-    M = t(193987),
-    j = t(933793),
-    m = t(13736),
-    x = t(732393),
-    G = t(214906),
-    _ = t(612856),
-    g = t(137591),
-    v = t(388032);
-e.default = (0, a.Z)(
+i.d(e, { default: () => b });
+var t = i(200651);
+i(192379);
+var l = i(481060),
+    r = i(239091),
+    a = i(108843),
+    d = i(100527),
+    s = i(299206),
+    o = i(895563),
+    c = i(32750),
+    u = i(109764),
+    h = i(323597),
+    Z = i(461535),
+    f = i(438536),
+    j = i(251746),
+    x = i(193987),
+    v = i(933793),
+    _ = i(13736),
+    g = i(732393),
+    p = i(214906),
+    k = i(612856),
+    m = i(137591),
+    C = i(388032);
+let b = (0, a.Z)(
     function (n) {
-        let { channel: e, onSelect: t } = n,
-            a = (0, s.Z)(e),
-            u = (0, f.Z)(e),
-            C = (0, G.Z)(e),
-            b = (0, c.Z)(e),
-            P = (0, M.Z)(e),
-            I = (0, h.Z)(e),
-            E = (0, o.Z)({
+        let { channel: e, onSelect: i } = n,
+            a = (0, u.Z)(e),
+            d = (0, Z.Z)(e),
+            b = (0, p.Z)(e),
+            P = (0, c.Z)(e),
+            E = (0, x.Z)(e),
+            N = (0, h.Z)(e),
+            S = (0, s.Z)({
                 id: e.id,
-                label: v.intl.string(v.t.DQ797u)
+                label: C.intl.string(C.t.DQ797u)
             }),
-            U = (0, Z.Z)(e, 'Context Menu'),
-            O = (0, j.Z)(e),
-            T = (0, _.Z)(e),
-            k = (0, m.Z)(e),
-            y = (0, x.Z)(e.id),
-            D = (0, p.Z)(e),
-            L = (0, g.Z)(e),
-            w = (0, d.l)(e),
-            z = (0, d.P)(e);
-        return (0, i.jsxs)(r.Menu, {
+            G = (0, f.Z)(e, 'Context Menu'),
+            U = (0, v.Z)(e),
+            O = (0, k.Z)(e),
+            D = (0, _.Z)(e),
+            M = (0, g.Z)(e.id),
+            Q = (0, j.Z)(e),
+            T = (0, m.Z)(e),
+            y = (0, o.l)(e),
+            w = (0, o.P)(e);
+        return (0, t.jsxs)(l.v2r, {
             navId: 'thread-context',
-            onClose: l.Zy,
-            'aria-label': v.intl.string(v.t['1NBjqa']),
-            onSelect: t,
+            onClose: r.Zy,
+            'aria-label': C.intl.string(C.t['1NBjqa']),
+            onSelect: i,
             children: [
-                (0, i.jsxs)(
-                    r.MenuGroup,
+                (0, t.jsxs)(
+                    l.kSQ,
                     {
-                        children: [u, w]
+                        children: [d, y]
                     },
                     'mark-as-read-or-favorite'
                 ),
-                (0, i.jsxs)(
-                    r.MenuGroup,
+                (0, t.jsxs)(
+                    l.kSQ,
                     {
-                        children: [U, D, b, P, k, y, a]
+                        children: [G, Q, P, E, D, M, a]
                     },
                     'thread-actions'
                 ),
-                (0, i.jsxs)(
-                    r.MenuGroup,
+                (0, t.jsxs)(
+                    l.kSQ,
                     {
-                        children: [C, T]
+                        children: [b, O]
                     },
                     'notifications'
                 ),
-                (0, i.jsx)(r.MenuGroup, { children: z }),
-                (0, i.jsxs)(
-                    r.MenuGroup,
+                (0, t.jsx)(l.kSQ, { children: w }),
+                (0, t.jsxs)(
+                    l.kSQ,
                     {
-                        children: [L, O, I]
+                        children: [T, U, N]
                     },
                     'admin-actions'
                 ),
-                (0, i.jsx)(r.MenuGroup, { children: E }, 'developer-actions')
+                (0, t.jsx)(l.kSQ, { children: S }, 'developer-actions')
             ]
         });
     },
-    [u.Z.CONTEXT_MENU, u.Z.CHANNEL_LIST_THREAD_MENU]
+    [d.Z.CONTEXT_MENU, d.Z.CHANNEL_LIST_THREAD_MENU]
 );
