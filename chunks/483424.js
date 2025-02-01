@@ -1,49 +1,65 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(561308),
     s = n(456644),
-    o = n(369566),
-    l = n(565640),
-    u = n(151545),
-    c = n(744802),
-    d = n(493043);
-function f(e) {
-    let { user: t, currentUser: n, profileGuildId: f, className: _, onClose: p } = e,
-        { live: h, recent: m, stream: g } = (0, o.Z)(t.id),
-        [E] = h,
-        { recentActivityEnabled: v } = (0, s.i)({ location: 'UserProfileFeaturedActivity' }),
-        y = t.id === n.id,
-        I = (0, l.Z)(t.id, 'UserProfileFeaturedActivity'),
-        b = r.useMemo(() => (y ? m.find(a.Ae) : I), [y, m, I]);
-    return null != g
-        ? (0, i.jsx)(d.Z, {
+    o = n(308406),
+    l = n(369566),
+    u = n(565640),
+    c = n(29899),
+    d = n(151545),
+    f = n(744802),
+    _ = n(493043),
+    p = n(864141);
+function h(e) {
+    let { user: t, currentUser: n, displayProfile: h, guildId: m, className: g, onClose: E } = e,
+        { live: v, recent: y, stream: I } = (0, l.Z)(t.id),
+        [T] = v,
+        { voiceChannel: b, voiceActivity: S } = (0, c.Z)({
+            userId: t.id,
+            guildId: m
+        }),
+        A = null != T && T === S,
+        { recentActivityEnabled: N } = (0, s.i)({ location: 'UserProfileFeaturedActivity' }),
+        { voiceActivityCardEnabled: C } = (0, o.o)({ location: 'UserProfileFeaturedActivity' }),
+        R = t.id === n.id,
+        O = (0, u.Z)(t.id, 'UserProfileFeaturedActivity'),
+        D = r.useMemo(() => (R ? y.find(a.Ae) : O), [R, y, O]);
+    return null != I
+        ? (0, i.jsx)(_.Z, {
               location: 'UserProfileFeaturedActivity',
               user: t,
               currentUser: n,
-              stream: g,
-              profileGuildId: f,
-              className: _,
-              onClose: p
+              stream: I,
+              profileGuildId: null == h ? void 0 : h.guildId,
+              className: g,
+              onClose: E
           })
-        : null != E
-          ? (0, i.jsx)(u.Z, {
+        : C && null != b && !A
+          ? (0, i.jsx)(p.Z, {
                 user: t,
-                currentUser: n,
-                activity: E,
-                profileGuildId: f,
-                className: _,
-                onClose: p
+                voiceChannel: b,
+                className: g,
+                onClose: E
             })
-          : v && null != b
-            ? (0, i.jsx)(c.Z, {
-                  location: 'UserProfileFeaturedActivity',
+          : null != T
+            ? (0, i.jsx)(d.Z, {
                   user: t,
                   currentUser: n,
-                  entry: b,
-                  profileGuildId: f,
-                  className: _,
-                  onClose: p
+                  activity: T,
+                  profileGuildId: null == h ? void 0 : h.guildId,
+                  className: g,
+                  onClose: E
               })
-            : null;
+            : N && null != D
+              ? (0, i.jsx)(f.Z, {
+                    location: 'UserProfileFeaturedActivity',
+                    user: t,
+                    currentUser: n,
+                    entry: D,
+                    profileGuildId: null == h ? void 0 : h.guildId,
+                    className: g,
+                    onClose: E
+                })
+              : null;
 }

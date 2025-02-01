@@ -154,6 +154,7 @@ function Y(e) {
                                 (0, i.jsx)(T.Z, {
                                     user: n,
                                     currentUser: n,
+                                    displayProfile: X,
                                     onClose: Y
                                 }),
                                 (0, i.jsxs)('div', {

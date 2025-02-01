@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(944043),
     y = n(502762),
     I = n(530),
-    b = n(827313),
-    T = n(420654),
+    T = n(827313),
+    b = n(420654),
     S = n(116854),
     A = n(166584),
     N = n(915014),
@@ -64,7 +64,7 @@ function D(e) {
                     children: [
                         (0, i.jsx)(g.Z, { userId: t.id }),
                         !F &&
-                            (0, i.jsx)(b.Z, {
+                            (0, i.jsx)(T.Z, {
                                 userId: t.id,
                                 isHovering: L,
                                 onOpenProfile: P
@@ -110,7 +110,7 @@ function D(e) {
                       look: 'profile',
                       userId: t.id
                   })
-                : (0, i.jsx)(T.Z, {
+                : (0, i.jsx)(b.Z, {
                       user: t,
                       bio: null == D ? void 0 : D.bio,
                       hidePersonalInformation: F,
@@ -126,7 +126,8 @@ function D(e) {
             (0, i.jsx)(m.Z, {
                 user: t,
                 currentUser: n,
-                profileGuildId: null == D ? void 0 : D.guildId,
+                displayProfile: D,
+                guildId: null == x ? void 0 : x.id,
                 onClose: M,
                 className: O.activity
             }),

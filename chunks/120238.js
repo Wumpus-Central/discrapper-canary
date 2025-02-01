@@ -1,2 +1,2 @@
-var i = { textarea: 'textarea__9daae ' + t(716722).inputDefault };
-e.exports = i;
+var t = { textarea: 'textarea__9daae ' + i(716722).inputDefault };
+e.exports = t;

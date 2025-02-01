@@ -153,6 +153,7 @@ function q(e) {
                                 (0, i.jsx)(Z.Z, {
                                     user: n,
                                     currentUser: n,
+                                    displayProfile: J,
                                     onClose: q
                                 }),
                                 (0, i.jsxs)('div', {

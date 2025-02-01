@@ -141,6 +141,7 @@ var i = (function (e) {
         (e.PROFILE_CUSTOM_STATUS = 'profile custom status'),
         (e.USER_PROFILE_LIVE_ACTIVITY_CARD = 'user profile live activity card'),
         (e.USER_PROFILE_RECENT_ACTIVITY_CARD = 'user profile recent activity card'),
+        (e.USER_PROFILE_VOICE_ACTIVITY_CARD = 'user profile voice activity card'),
         (e.USER_PROFILE_ACTIVITY_CONTEXT_MENU = 'user profile activity context menu'),
         (e.GUILD_PROFILE = 'guild profile'),
         (e.EDIT_AVATAR = 'edit avatar'),

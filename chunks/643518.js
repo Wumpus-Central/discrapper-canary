@@ -1,48 +1,55 @@
-t.d(n, { Z: () => m }), t(653041);
-var i = t(697927),
-    l = t(200634),
-    o = t(369566),
-    s = t(326094),
-    r = t(708108),
-    a = t(146078),
-    c = t(228168),
-    d = t(981631),
-    u = t(388032);
-function m(e) {
-    var n, t;
-    let { user: m, currentUser: x, initialSubsection: p } = e,
-        { live: f, recent: I, stream: h, outbox: v } = (0, o.Z)(m.id),
-        Z = f.length > 0 || I.length > 0 || null != h,
-        _ = null === (n = (0, i.Z)(m.id, m.id !== (null == x ? void 0 : x.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
-        g = null === (t = (0, l.Z)(m.id, m.id !== (null == x ? void 0 : x.id)).mutualGuilds) || void 0 === t ? void 0 : t.length,
-        j = m.id === (null == x ? void 0 : x.id),
-        E = (0, s.Z)({
-            user: m,
-            currentUser: x,
-            location: d.Sbl.PROFILE_MODAL_TABS
+i.d(n, { Z: () => p }), i(653041);
+var t = i(308406),
+    l = i(697927),
+    o = i(200634),
+    s = i(369566),
+    r = i(29899),
+    a = i(326094),
+    d = i(708108),
+    c = i(146078),
+    u = i(228168),
+    m = i(981631),
+    x = i(388032);
+function p(e) {
+    var n, i;
+    let { user: p, currentUser: f, guildId: I, initialSubsection: h } = e,
+        { live: v, recent: Z, stream: g, outbox: _ } = (0, s.Z)(p.id),
+        j = v.length > 0 || Z.length > 0 || null != g,
+        { voiceActivityCardEnabled: E } = (0, t.o)({ location: 'useUserProfileModalTabBarItems' }),
+        { voiceChannel: N } = (0, r.Z)({
+            userId: p.id,
+            guildId: I
         }),
-        N = [
+        y = null === (n = (0, l.Z)(p.id, p.id !== (null == f ? void 0 : f.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
+        T = null === (i = (0, o.Z)(p.id, p.id !== (null == f ? void 0 : f.id)).mutualGuilds) || void 0 === i ? void 0 : i.length,
+        P = p.id === (null == f ? void 0 : f.id),
+        b = (0, a.Z)({
+            user: p,
+            currentUser: f,
+            location: m.Sbl.PROFILE_MODAL_TABS
+        }),
+        S = [
             {
-                section: c.oh.USER_INFO,
-                text: u.intl.string(u.t.jGoPJS)
+                section: u.oh.USER_INFO,
+                text: x.intl.string(x.t.jGoPJS)
             }
         ];
     return (
-        (Z || (null == v && p === c.Tb.RECENT_ACTIVITY)) &&
-            N.push({
-                section: c.oh.ACTIVITY,
-                text: u.intl.string(u.t.chq59f)
+        (j || (E && null != N) || (null == _ && h === u.Tb.RECENT_ACTIVITY)) &&
+            S.push({
+                section: u.oh.ACTIVITY,
+                text: x.intl.string(x.t.chq59f)
             }),
-        !j &&
-            E &&
-            (N.push({
-                section: c.oh.MUTUAL_FRIENDS,
-                text: (0, r.Z)(_)
+        !P &&
+            b &&
+            (S.push({
+                section: u.oh.MUTUAL_FRIENDS,
+                text: (0, d.Z)(y)
             }),
-            N.push({
-                section: c.oh.MUTUAL_GUILDS,
-                text: (0, a.Z)(g)
+            S.push({
+                section: u.oh.MUTUAL_GUILDS,
+                text: (0, c.Z)(T)
             })),
-        N
+        S
     );
 }

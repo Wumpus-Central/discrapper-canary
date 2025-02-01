@@ -17,34 +17,32 @@ var r = n(442837),
     g = n(263059),
     E = n(981631);
 function v(e) {
-    let { user: t, currentUser: n, activity: v, className: y, onClose: I, profileGuildId: b } = e,
-        T = (0, r.e7)([d.Z, u.Z], () => {
+    let { user: t, currentUser: n, activity: v, className: y, onClose: I, profileGuildId: T } = e,
+        { recentActivityTabEnabled: b } = (0, f.O)({ location: 'UserProfileActivityCardWrapper' }),
+        { recentActivityEnabled: S } = (0, _.i)({ location: 'UserProfileActivityCardWrapper' }),
+        A = t.id === n.id,
+        N = (b || S) && !A && !t.bot,
+        { voiceGuild: C, voiceChannel: R } = (0, r.cj)([c.Z, d.Z, u.Z], () => {
             var e;
-            return u.Z.getChannel(null === (e = d.Z.getVoiceStateForUser(t.id)) || void 0 === e ? void 0 : e.channelId);
-        }),
-        { recentActivityTabEnabled: S } = (0, f.O)({ location: 'UserProfileActivityCardWrapper' }),
-        { recentActivityEnabled: A } = (0, _.i)({ location: 'UserProfileActivityCardWrapper' }),
-        N = t.id === n.id,
-        C = (S || A) && !N && !t.bot,
-        R = (0, r.e7)([c.Z, d.Z, u.Z], () => {
-            var e, n;
-            if (!(0, a.Z)(v)) return null;
-            let i = null === (e = d.Z.getVoiceStateForSession(t.id, null == v ? void 0 : v.session_id)) || void 0 === e ? void 0 : e.channelId;
-            return c.Z.getGuild(null === (n = u.Z.getChannel(i)) || void 0 === n ? void 0 : n.getGuildId());
+            if (!(0, a.Z)(v)) return {};
+            let n = null === (e = d.Z.getVoiceStateForSession(t.id, null == v ? void 0 : v.session_id)) || void 0 === e ? void 0 : e.channelId,
+                i = u.Z.getChannel(n);
+            return {
+                voiceGuild: c.Z.getGuild(null == i ? void 0 : i.getGuildId()),
+                voiceChannel: i
+            };
         });
     (0, l.q)(null == v ? void 0 : v.application_id);
     let O = (0, r.e7)([o.Z], () => ((null == v ? void 0 : v.application_id) != null ? o.Z.getApplication(v.application_id) : (null == v ? void 0 : v.name) != null ? o.Z.getApplicationByName(v.name) : null));
     return (null == v ? void 0 : v.type) === E.IIU.CUSTOM_STATUS || (null == v ? void 0 : v.type) === E.IIU.HANG_STATUS
         ? null
         : (0, s.Z)(v)
-          ? C
+          ? N
               ? (0, i.jsx)(g.Z, {
                     user: t,
                     currentUser: n,
                     activity: v,
-                    guild: R,
-                    profileGuildId: b,
-                    channel: T,
+                    profileGuildId: T,
                     className: y,
                     onClose: I
                 })
@@ -52,20 +50,18 @@ function v(e) {
                     user: t,
                     currentUser: n,
                     activity: v,
-                    guild: R,
-                    channel: T,
                     className: y,
                     onClose: I
                 })
-          : C
+          : N
             ? (0, i.jsx)(h.Z, {
                   user: t,
                   currentUser: n,
                   activity: v,
                   application: O,
-                  guild: R,
-                  profileGuildId: b,
-                  channel: T,
+                  voiceGuild: C,
+                  voiceChannel: R,
+                  profileGuildId: T,
                   className: y,
                   onClose: I
               })
@@ -74,8 +70,8 @@ function v(e) {
                   currentUser: n,
                   activity: v,
                   application: O,
-                  guild: R,
-                  channel: T,
+                  voiceGuild: C,
+                  voiceChannel: R,
                   className: y,
                   onClose: I
               });

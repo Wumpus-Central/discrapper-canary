@@ -102,6 +102,7 @@ function y(e) {
             (0, i.jsx)(g.Z, {
                 user: t,
                 currentUser: n,
+                displayProfile: y,
                 className: A.activity
             }),
             (0, i.jsxs)(b.Z.Overlay, {
