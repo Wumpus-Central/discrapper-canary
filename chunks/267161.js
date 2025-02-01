@@ -69,11 +69,12 @@ function D() {
         null != e &&
             '' !== e &&
             (0, i.jsxs)('div', {
-                className: R.guild,
+                className: R.title,
                 children: [
                     h,
                     (0, i.jsx)(d.Text, {
                         variant: 'text-sm/medium',
+                        lineClamp: 1,
                         children: e
                     })
                 ]

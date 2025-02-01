@@ -49899,12 +49899,6 @@ html.disable-forced-colors * {
     bottom: 0
 }
 
-@media (max-width:800px) {
-    .title_c38106 {
-        display: none
-    }
-}
-
 .leading_c38106 {
     box-sizing: border-box;
     justify-content: flex-start
