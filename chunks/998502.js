@@ -25,16 +25,16 @@ var i,
 let v = window.DiscordNative,
     y = ['jpg', 'jpeg', 'png'],
     I = null,
-    T = null,
     b = null,
+    T = null,
     S = {};
 null != v &&
     ((I = v.remoteApp
         .getVersion()
         .split('.')
         .map((e) => parseInt(e))),
-    (b = null === (i = (r = v.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r)),
-    (T = null === (a = (s = v.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
+    (T = null === (i = (r = v.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r)),
+    (b = null === (a = (s = v.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
 let A = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
     N = !1;
 async function C(e) {
@@ -235,10 +235,10 @@ let L = {
         return I;
     },
     get buildNumber() {
-        return T;
+        return b;
     },
     get moduleVersions() {
-        return b;
+        return T;
     },
     get parsedOSRelease() {
         if (!h.isPlatformEmbedded) return [];
@@ -341,6 +341,9 @@ let L = {
     async isAlwaysOnTop(e) {
         let t = !1;
         return 'function' == typeof v.window.isAlwaysOnTop && (t = await v.window.isAlwaysOnTop(e)), t;
+    },
+    showInactive(e) {
+        'function' == typeof v.window.showInactive && v.window.showInactive(e);
     },
     setMinimumSize(e, t) {
         var n, i;
