@@ -1,92 +1,95 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var s = n(481060),
     l = n(13245),
-    r = n(371651),
+    a = n(371651),
+    r = n(594174),
     o = n(145597),
-    a = n(312839),
-    d = n(981631),
-    c = n(987650),
-    u = n(388032),
-    h = n(114057);
-function p() {
+    d = n(312839),
+    c = n(981631),
+    u = n(987650),
+    h = n(388032),
+    p = n(114057);
+function g() {
     return (0, i.jsx)('div', {
-        className: h.footer,
+        className: p.footer,
         children: (0, i.jsx)(s.zxk, {
             color: s.zxk.Colors.GREEN,
             size: s.zxk.Sizes.SMALL,
-            className: h.ctaButton,
-            children: u.intl.string(u.t.U76Ft7)
+            className: p.ctaButton,
+            children: h.intl.string(h.t.U76Ft7)
         })
     });
 }
-function g(e) {
+function m(e) {
     switch (e.type) {
-        case c.nc.GO_LIVE_VOICE: {
-            let { game: t, voiceGuild: h } = e,
-                { trackView: g, trackClick: f } = (0, a.R)(c.n0.GoLiveNudge, { notif_type: c.n0.GoLiveNudge });
+        case u.nc.GO_LIVE_VOICE: {
+            let { game: t, voiceGuild: p } = e,
+                { trackView: m, trackClick: f } = (0, d.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
             return {
                 icon: n(847881),
                 title: null,
-                body: u.intl.formatToPlainString(u.t.z9znpa, {
+                body: h.intl.formatToPlainString(h.t.z9znpa, {
                     game: t.name,
-                    server: h.toString()
+                    server: p.toString()
                 }),
-                hint: () => (0, i.jsx)(p, {}),
-                renderFooter: () => (0, i.jsx)(p, {}),
+                hint: () => (0, i.jsx)(g, {}),
+                renderFooter: () => (0, i.jsx)(g, {}),
                 onNotificationShow: () => {
-                    g();
+                    m();
                 },
                 onNotificationClick: (e, t) => {
-                    f('unlock'),
-                        l.Z.updateNotificationStatus(t),
-                        r.Z.isOverlayOOPEnabledForPid((0, o.QF)()) ? l.Z.setInputLocked(!1, (0, o.QF)()) : l.Z.setInstanceLocked(!1),
-                        (0, s.ZDy)(async () => {
-                            let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('56877')]).then(n.bind(n, 60594));
-                            return (t) =>
-                                (0, i.jsx)(e, {
-                                    ...t,
-                                    selectSource: !1,
-                                    guildId: h.id,
-                                    analyticsLocation: d.Sbl.OVERLAY_NUDGE
-                                });
-                        });
+                    f('unlock'), l.Z.updateNotificationStatus(t);
+                    let d = a.Z.isOverlayOOPEnabledForPid((0, o.QF)());
+                    if ((d ? l.Z.setInputLocked(!1, (0, o.QF)()) : l.Z.setInstanceLocked(!1), null == r.default.getCurrentUser())) return;
+                    let u = d ? { contextKey: s.u1M } : void 0;
+                    (0, s.ZDy)(async () => {
+                        let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('80176')]).then(n.bind(n, 60594));
+                        return (t) =>
+                            (0, i.jsx)(e, {
+                                ...t,
+                                selectSource: !1,
+                                guildId: p.id,
+                                analyticsLocation: c.Sbl.OVERLAY_NUDGE
+                            });
+                    }, u);
                 },
                 onDismissClick: () => {
                     f('dismiss');
                 }
             };
         }
-        case c.nc.GO_LIVE_NON_VOICE: {
+        case u.nc.GO_LIVE_NON_VOICE: {
             let { game: t } = e,
-                { trackView: h, trackClick: g } = (0, a.R)(c.n0.GoLiveNonVoiceNudge, { notif_type: c.n0.GoLiveNonVoiceNudge });
+                { trackView: r, trackClick: p } = (0, d.R)(u.n0.GoLiveNonVoiceNudge, { notif_type: u.n0.GoLiveNonVoiceNudge });
             return {
                 icon: n(847881),
                 title: null,
-                body: u.intl.formatToPlainString(u.t['0SVWgI'], { game: t.name }),
-                hint: () => (0, i.jsx)(p, {}),
-                renderFooter: () => (0, i.jsx)(p, {}),
+                body: h.intl.formatToPlainString(h.t['0SVWgI'], { game: t.name }),
+                hint: () => (0, i.jsx)(g, {}),
+                renderFooter: () => (0, i.jsx)(g, {}),
                 onNotificationShow: () => {
-                    h();
+                    r();
                 },
                 onNotificationClick: (e, t) => {
-                    g('unlock'),
-                        l.Z.updateNotificationStatus(t),
-                        r.Z.isOverlayOOPEnabledForPid((0, o.QF)()) ? l.Z.setInputLocked(!1, (0, o.QF)()) : l.Z.setInstanceLocked(!1),
-                        (0, s.ZDy)(async () => {
-                            let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('56877')]).then(n.bind(n, 60594));
-                            return (t) =>
-                                (0, i.jsx)(e, {
-                                    ...t,
-                                    selectSource: !1,
-                                    selectGuild: !0,
-                                    analyticsLocation: d.Sbl.OVERLAY_NUDGE
-                                });
-                        });
+                    p('unlock'), l.Z.updateNotificationStatus(t);
+                    let r = a.Z.isOverlayOOPEnabledForPid((0, o.QF)());
+                    r ? l.Z.setInputLocked(!1, (0, o.QF)()) : l.Z.setInstanceLocked(!1);
+                    let d = r ? { contextKey: s.u1M } : void 0;
+                    (0, s.ZDy)(async () => {
+                        let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('80176')]).then(n.bind(n, 60594));
+                        return (t) =>
+                            (0, i.jsx)(e, {
+                                ...t,
+                                selectSource: !1,
+                                selectGuild: !0,
+                                analyticsLocation: c.Sbl.OVERLAY_NUDGE
+                            });
+                    }, d);
                 },
                 onDismissClick: () => {
-                    g('dismiss');
+                    p('dismiss');
                 }
             };
         }

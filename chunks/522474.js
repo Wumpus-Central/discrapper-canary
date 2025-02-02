@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(519149), n(411104);
+n.d(t, { Z: () => K }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(519149), n(411104);
 var i,
     r = n(512722),
     a = n.n(r),
@@ -35,7 +35,7 @@ let v = new d.Z('PopoutWindowStore'),
     S = {},
     A = new Set(),
     N = 'app-mount',
-    C = () => Y.emitChange(),
+    C = () => W.emitChange(),
     R = o().debounce(C, 150),
     O = !1;
 function D(e, t) {
@@ -122,7 +122,7 @@ function k(e) {
     (E.windowKey = t), r || null == E || E.focus(), (T[t] = E), (S[t] = i), _.isPlatformEmbedded && (p.ZP.setAlwaysOnTop(t, f), (I[t] = f), p.ZP.isAlwaysOnTop(t).then((e) => (I[t] = e))), A.add(t);
 }
 function U(e) {
-    A.has(e) && (M(e), A.delete(e), Y.emitChange());
+    A.has(e) && (M(e), A.delete(e), W.emitChange());
 }
 function G(e) {
     let t = T[e];
@@ -130,13 +130,9 @@ function G(e) {
         (t.closed || x(e),
         L(e),
         setTimeout(() => {
-            try {
-                t.closed || t.close();
-            } catch (e) {
-                v.warn('Failed to close popout window', e);
-            }
+            Z(t);
         }, 100),
-        Y.emitChange());
+        W.emitChange());
 }
 function B(e) {
     let { data: t } = e;
@@ -151,27 +147,35 @@ function B(e) {
         }
 }
 function Z(e) {
+    if (null != e && !e.closed)
+        try {
+            e.close();
+        } catch (e) {
+            v.error('Error closing popout window', e);
+        }
+}
+function F(e) {
     let { key: t } = e,
         n = T[t];
-    null == n || n.closed || (x(t), f.default.preventPopoutClose || n.close());
+    null == n || n.closed || (x(t), f.default.preventPopoutClose || Z(n));
 }
-function F() {
+function V() {
     for (let e of Object.keys(T)) {
         let t = T[e];
-        null != t && t.close();
+        null != t && Z(t);
     }
 }
-function V(e) {
+function j(e) {
     let { key: t, alwaysOnTop: n } = e;
     _.isPlatformEmbedded && (p.ZP.setAlwaysOnTop(t, n), (I[t] = n), p.ZP.isAlwaysOnTop(t).then((e) => (I[t] = e)));
 }
-function j(e) {
+function H(e) {
     let { url: t, integrity: n } = e;
     for (let e of Object.values(T)) null == e || e.closed || P(e, t, n);
 }
-class H extends (i = u.ZP.PersistedStore) {
+class Y extends (i = u.ZP.PersistedStore) {
     initialize(e) {
-        window.addEventListener('message', B), window.addEventListener('beforeunload', F), (y = null != e ? e : {});
+        window.addEventListener('message', B), window.addEventListener('beforeunload', V), (y = null != e ? e : {});
     }
     getWindow(e) {
         return T[e];
@@ -206,12 +210,12 @@ class H extends (i = u.ZP.PersistedStore) {
         return G(e);
     }
 }
-E(H, 'displayName', 'PopoutWindowStore'), E(H, 'persistKey', 'PopoutWindowStore');
-let Y = new H(c.Z, {
+E(Y, 'displayName', 'PopoutWindowStore'), E(Y, 'persistKey', 'PopoutWindowStore');
+let W = new Y(c.Z, {
         POPOUT_WINDOW_OPEN: k,
-        POPOUT_WINDOW_ADD_STYLESHEET: j,
-        POPOUT_WINDOW_CLOSE: Z,
-        POPOUT_WINDOW_SET_ALWAYS_ON_TOP: V,
-        LOGOUT: F
+        POPOUT_WINDOW_ADD_STYLESHEET: H,
+        POPOUT_WINDOW_CLOSE: F,
+        POPOUT_WINDOW_SET_ALWAYS_ON_TOP: j,
+        LOGOUT: V
     }),
-    W = Y;
+    K = W;
