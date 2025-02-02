@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => l });
 var i = n(200651);
 n(192379);
 var a = n(481060),
     r = n(695346),
     o = n(981631);
-function _(e, t) {
+function l(e, t) {
     r.qF.getSetting()
         ? (0, a.ZDy)(
               async () => {

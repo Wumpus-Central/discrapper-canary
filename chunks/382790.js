@@ -2,20 +2,20 @@ n.d(t, { Z: () => C }), n(47120);
 var i,
     s = n(200651),
     l = n(192379),
-    r = n(120356),
-    o = n.n(r),
-    a = n(442837),
+    a = n(120356),
+    r = n.n(a),
+    o = n(442837),
     d = n(552062),
     c = n(416568),
     u = n(914010),
     h = n(518084),
     p = n(178528),
     g = n(669083),
-    f = n(483962),
-    m = n(711553),
-    x = n(388032),
-    v = n(433217);
-function Z(e, t, n) {
+    m = n(483962),
+    f = n(711553),
+    v = n(388032),
+    Z = n(433217);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,15 +45,15 @@ class E extends (i = l.PureComponent) {
                           },
                           e
                       )
-                    : (0, s.jsx)(m.Z, {
-                          title: x.intl.string(x.t.YUU0RE),
+                    : (0, s.jsx)(f.Z, {
+                          title: v.intl.string(v.t.YUU0RE),
                           renderSettings: S,
                           onDragStart: this.onDragStart,
-                          children: (0, s.jsx)(f.Z, {})
+                          children: (0, s.jsx)(m.Z, {})
                       }),
-            r = n ? 'div' : h.ZP;
-        return (0, s.jsxs)(r, {
-            className: o()(v.base, { [v.widget]: !n }, i),
+            a = n ? 'div' : h.ZP;
+        return (0, s.jsxs)(a, {
+            className: r()(Z.base, { [Z.widget]: !n }, i),
             children: [
                 (0, s.jsx)(c.Z, {
                     isOverlay: !0,
@@ -66,11 +66,11 @@ class E extends (i = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            Z(this, 'onDragStart', (e) => {
+            x(this, 'onDragStart', (e) => {
                 let { dragStart: t } = this.props;
                 t(d.B.MOVE, e.clientX, e.clientY);
             });
     }
 }
-Z(E, 'defaultProps', { contained: !1 });
-let C = a.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(E);
+x(E, 'defaultProps', { contained: !1 });
+let C = o.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(E);

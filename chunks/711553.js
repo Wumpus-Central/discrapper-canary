@@ -3,9 +3,9 @@ var i = n(200651);
 n(192379);
 var s = n(120356),
     l = n.n(s),
-    r = n(481060),
-    o = n(518084),
-    a = n(981631),
+    a = n(481060),
+    r = n(518084),
+    o = n(981631),
     d = n(388032),
     c = n(624414);
 let u = function (e) {
@@ -14,24 +14,24 @@ let u = function (e) {
     return (
         (t =
             null != n
-                ? (0, i.jsxs)(o.ZP.Bar, {
+                ? (0, i.jsxs)(r.ZP.Bar, {
                       className: l()(c.header, c.draggableStartArea),
                       onMouseDown: p,
                       children: [
-                          (0, i.jsx)(o.ZP.Content, {
+                          (0, i.jsx)(r.ZP.Content, {
                               className: l()(c.headerTitle, c.draggableStartArea),
                               dynamicSize: !0,
                               children: n
                           }),
-                          (0, i.jsx)(o.ZP.Content, {
-                              children: (0, i.jsx)(r.yRy, {
+                          (0, i.jsx)(r.ZP.Content, {
+                              children: (0, i.jsx)(a.yRy, {
                                   position: 'right',
-                                  renderPopout: null != h ? h : a.dG4,
+                                  renderPopout: null != h ? h : o.dG4,
                                   autoInvert: !1,
                                   children: (e) =>
-                                      (0, i.jsx)(o.ZP.Icon, {
+                                      (0, i.jsx)(r.ZP.Icon, {
                                           ...e,
-                                          icon: r.ewm,
+                                          icon: a.ewm,
                                           label: d.intl.string(d.t['3D5yo6'])
                                       })
                               })

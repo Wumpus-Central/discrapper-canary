@@ -1,30 +1,30 @@
-t.d(n, { Z: () => g });
-var r,
-    o,
-    l,
-    a = t(442837),
-    i = t(570140),
-    c = t(358085),
-    d = t(998502),
-    u = t(869614),
-    s = t(281083),
-    _ = t(672598);
+n.d(t, { Z: () => h });
+var o,
+    r,
+    c,
+    i = n(442837),
+    d = n(570140),
+    _ = n(358085),
+    a = n(998502),
+    l = n(869614),
+    s = n(281083),
+    u = n(672598);
 let f = !1,
-    m = !0,
+    g = !0,
     p = !1;
-class x extends (l = a.ZP.Store) {
+class b extends (c = i.ZP.Store) {
     initialize() {
-        !c.isPlatformEmbedded ||
+        !_.isPlatformEmbedded ||
             __OVERLAY__ ||
-            d.ZP.getGPUDriverVersions().then((e) => {
-                (f = (0, _.Z)(e)), (m = (0, u.Z)(e)), (p = (0, s.Z)(e)), this.emitChange();
+            a.ZP.getGPUDriverVersions().then((e) => {
+                (f = (0, u.Z)(e)), (g = (0, l.Z)(e)), (p = (0, s.Z)(e)), this.emitChange();
             });
     }
     get GPUDriversOutdated() {
         return f;
     }
     get canUseHardwareAcceleration() {
-        return m;
+        return g;
     }
     get problematicGPUDriver() {
         return p;
@@ -32,23 +32,23 @@ class x extends (l = a.ZP.Store) {
     getState() {
         return {
             GPUDriversOutdated: f,
-            canUseHardwareAcceleration: m,
+            canUseHardwareAcceleration: g,
             problematicGPUDriver: p
         };
     }
 }
-(o = 'StreamingCapabilitiesStore'),
-    (r = 'displayName') in x
-        ? Object.defineProperty(x, r, {
-              value: o,
+(r = 'StreamingCapabilitiesStore'),
+    (o = 'displayName') in b
+        ? Object.defineProperty(b, o, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (x[r] = o);
-let g = new x(i.Z, {
+        : (b[o] = r);
+let h = new b(d.Z, {
     OVERLAY_INITIALIZE: function (e) {
-        let { streamingCapabilitiesStoreState: n } = e;
-        (f = n.GPUDriversOutdated), (m = n.canUseHardwareAcceleration);
+        let { streamingCapabilitiesStoreState: t } = e;
+        (f = t.GPUDriversOutdated), (g = t.canUseHardwareAcceleration);
     }
 });

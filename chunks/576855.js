@@ -1,33 +1,33 @@
-n.d(t, { Z: () => p });
-var r,
-    i,
-    l = n(200651),
-    a = n(192379),
-    o = n(120356),
-    u = n.n(o),
-    s = n(481060),
-    c = n(388032),
-    d = n(323822);
-let f = {
-    BLOCK: d.block,
-    INLINE: d.inline
+n.d(t, { Z: () => _ });
+var i,
+    l,
+    a = n(200651),
+    r = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    c = n(481060),
+    d = n(388032),
+    u = n(323822);
+let m = {
+    BLOCK: u.block,
+    INLINE: u.inline
 };
-class _ extends (i = a.PureComponent) {
+class h extends (l = r.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: r = f.BLOCK, style: i } = this.props;
-        return (0, l.jsxs)('div', {
-            className: u()(t, r),
-            style: i,
+        let { children: e, className: t, textClassName: n, type: i = m.BLOCK, style: l } = this.props;
+        return (0, a.jsxs)('div', {
+            className: o()(t, i),
+            style: l,
             children: [
-                (0, l.jsxs)(s.Text, {
+                (0, a.jsxs)(c.Text, {
                     variant: 'text-sm/bold',
                     tag: 'div',
                     color: 'text-positive',
-                    className: d.pro,
-                    children: [c.intl.string(c.t['8tvIiI']), ':']
+                    className: u.pro,
+                    children: [d.intl.string(d.t['8tvIiI']), ':']
                 }),
-                (0, l.jsx)(s.Text, {
-                    className: u()(d.tip, n),
+                (0, a.jsx)(c.Text, {
+                    className: o()(u.tip, n),
                     variant: 'text-sm/normal',
                     children: e
                 })
@@ -35,12 +35,12 @@ class _ extends (i = a.PureComponent) {
         });
     }
 }
-(r = 'Types') in _
-    ? Object.defineProperty(_, r, {
-          value: f,
+(i = 'Types') in h
+    ? Object.defineProperty(h, i, {
+          value: m,
           enumerable: !0,
           configurable: !0,
           writable: !0
       })
-    : (_[r] = f);
-let p = _;
+    : (h[i] = m);
+let _ = h;

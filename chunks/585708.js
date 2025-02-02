@@ -1,61 +1,61 @@
-i.d(e, { Z: () => v });
-var n = i(200651);
-i(192379);
-var l = i(13245),
-    s = i(937889),
-    o = i(703656),
-    r = i(460181),
-    a = i(974180),
-    d = i(150097),
-    u = i(358085),
-    c = i(998502),
-    h = i(145597),
-    E = i(610394),
-    p = i(516542),
-    S = i(380736),
-    f = i(620954),
-    g = i(987650),
-    _ = i(981631),
-    m = i(388032);
-function v(t, e, i, v) {
-    var I;
-    let { icon: Z, title: O, body: C } = (0, d.Xi)(t, e, i),
-        { trackView: N, trackClick: y } = (0, f.R)(g.n0.TextChat, {
-            notif_type: g.n0.TextChat,
-            notif_user_id: null === (I = e.author) || void 0 === I ? void 0 : I.id,
-            message_id: e.id,
-            message_type: e.type,
-            guild_id: t.guild_id,
-            channel_id: t.id,
-            channel_type: t.type
+n.d(t, { Z: () => E });
+var i = n(200651);
+n(192379);
+var l = n(13245),
+    r = n(937889),
+    o = n(703656),
+    a = n(460181),
+    s = n(974180),
+    d = n(150097),
+    c = n(358085),
+    u = n(998502),
+    h = n(145597),
+    _ = n(610394),
+    p = n(516542),
+    g = n(380736),
+    f = n(620954),
+    m = n(987650),
+    v = n(981631),
+    x = n(388032);
+function E(e, t, n, E) {
+    var Z;
+    let { icon: C, title: I, body: S } = (0, d.Xi)(e, t, n),
+        { trackView: b, trackClick: y } = (0, f.R)(m.n0.TextChat, {
+            notif_type: m.n0.TextChat,
+            notif_user_id: null === (Z = t.author) || void 0 === Z ? void 0 : Z.id,
+            message_id: t.id,
+            message_type: t.type,
+            guild_id: e.guild_id,
+            channel_id: e.id,
+            channel_type: e.type
         });
     return {
-        icon: Z,
-        title: O,
+        icon: C,
+        title: I,
         body:
-            e.content.length > 0
-                ? (0, s.ZP)(e, {
+            t.content.length > 0
+                ? (0, r.ZP)(t, {
                       noStyleAndInteraction: !0,
                       formatInline: !0,
                       hideSimpleEmbedContent: !1
                   }).content
-                : C,
-        hint: (t) => (t ? null : (0, S.QR)((0, f.P)(), m.t.ykjOAA, m.intl.string(m.t.jZkzVF))),
+                : S,
+        hint: (e) => (e ? null : (0, g.QR)((0, f.P)(), x.t.ykjOAA, x.intl.string(x.t.jZkzVF))),
         maxBodyLines: 2,
-        renderFooter: (e, i) =>
-            e
-                ? (0, n.jsx)(p.Z, {
-                      id: i,
-                      channel: t,
+        renderFooter: (t, n) =>
+            t
+                ? (0, i.jsx)(p.Z, {
+                      id: n,
+                      channel: e,
                       onSend: () => y('send')
                   })
                 : null,
         onNotificationShow: () => {
-            v && (0, r.GN)(a.Ay, a.yk), N();
+            E && (0, a.GN)(s.Ay, s.yk), b();
         },
         onNotificationClick: () => {
-            let i = (0, h.QF)();
-            E.ZP.isInputLocked(i) ? (y('unlock'), l.Z.setInputLocked(!1, i)) : (y('jump'), (0, o.uL)(_.Z5c.CHANNEL(t.guild_id, t.id, e.id)), u.isPlatformEmbedded && c.ZP.focus());
+            let n = (0, h.QF)();
+            _.ZP.isInputLocked(n) ? (y('unlock'), l.Z.setInputLocked(!1, n)) : (y('jump'), (0, o.uL)(v.Z5c.CHANNEL(e.guild_id, e.id, t.id)), c.isPlatformEmbedded && u.ZP.focus());
         },
         onDismissClick: () => {
             y('dismiss');

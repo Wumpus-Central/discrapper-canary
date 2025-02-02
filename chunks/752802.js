@@ -1,65 +1,65 @@
-n.d(t, { Z: () => A }), n(47120);
+n.d(t, { Z: () => L }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    l = n(399606),
+    l = n(192379),
+    r = n(120356),
+    o = n.n(r),
+    a = n(399606),
     s = n(46973),
-    c = n(481060),
-    d = n(846027),
+    d = n(481060),
+    c = n(846027),
     u = n(239091),
     h = n(765250),
     _ = n(872810),
-    m = n(40851),
+    p = n(40851),
     g = n(414910),
-    p = n(194082),
-    f = n(979264),
-    x = n(871118),
-    v = n(352978),
-    C = n(833519),
-    b = n(839662),
-    Z = n(199902),
+    f = n(194082),
+    m = n(979264),
+    v = n(871118),
+    x = n(352978),
+    E = n(833519),
+    Z = n(839662),
+    C = n(199902),
     I = n(314897),
-    j = n(131951),
-    w = n(594174),
+    S = n(131951),
+    b = n(594174),
     y = n(5192),
-    E = n(1226),
-    k = n(981631),
-    N = n(388032),
-    S = n(2847);
-function T(e) {
+    N = n(1226),
+    w = n(981631),
+    T = n(388032),
+    O = n(2847);
+function j(e) {
     let { participant: t } = e,
         n = t.user.id,
-        o = (0, l.e7)(
-            [j.Z],
+        r = (0, a.e7)(
+            [S.Z],
             () => {
                 let e = (0, g.Z)(t.type);
-                return j.Z.isLocalMute(t.user.id, e);
+                return S.Z.isLocalMute(t.user.id, e);
             },
             [t]
         ),
-        a = (0, l.e7)([I.default], () => I.default.getId()),
-        { hasVideo: u } = (0, b.Z)(t, a),
-        h = o && u,
-        _ = r.useCallback(() => {
-            d.Z.toggleLocalMute(n, s.Yn.STREAM);
+        o = (0, a.e7)([I.default], () => I.default.getId()),
+        { hasVideo: u } = (0, Z.Z)(t, o),
+        h = r && u,
+        _ = l.useCallback(() => {
+            c.Z.toggleLocalMute(n, s.Yn.STREAM);
         }, [n]);
-    return (0, i.jsx)(c.ua7, {
-        text: h ? N.intl.string(N.t.YqAjX1) : N.intl.string(N.t['w4m94+']),
+    return (0, i.jsx)(d.ua7, {
+        text: h ? T.intl.string(T.t.YqAjX1) : T.intl.string(T.t['w4m94+']),
         children: (e) => {
             let { onClick: t, ...n } = e;
-            return (0, i.jsx)(c.P3F, {
+            return (0, i.jsx)(d.P3F, {
                 ...n,
-                className: S.controlAction,
+                className: O.controlAction,
                 onClick: (e) => {
                     e.stopPropagation(), null == t || t(), _();
                 },
                 children: h
-                    ? (0, i.jsx)(c.OyP, {
+                    ? (0, i.jsx)(d.OyP, {
                           size: 'sm',
                           color: 'currentColor'
                       })
-                    : (0, i.jsx)(c.gj8, {
+                    : (0, i.jsx)(d.gj8, {
                           size: 'sm',
                           color: 'currentColor'
                       })
@@ -67,14 +67,14 @@ function T(e) {
         }
     });
 }
-function O(e, t, r) {
-    return (o) => {
-        o.stopPropagation(),
-            null == r || r(),
-            (0, u.jW)(o, async () => {
-                let { default: r } = await n.e('5704').then(n.bind(n, 360429));
+function k(e, t, l) {
+    return (r) => {
+        r.stopPropagation(),
+            null == l || l(),
+            (0, u.jW)(r, async () => {
+                let { default: l } = await n.e('5704').then(n.bind(n, 360429));
                 return (n) =>
-                    (0, i.jsx)(r, {
+                    (0, i.jsx)(l, {
                         ...n,
                         stream: e.stream,
                         exitFullscreen: () => {},
@@ -83,31 +83,31 @@ function O(e, t, r) {
             });
     };
 }
-function P(e) {
-    let { hasActiveStream: t, participant: n, onEnablePin: r } = e,
-        o = (0, m.bp)(),
+function R(e) {
+    let { hasActiveStream: t, participant: n, onEnablePin: l } = e,
+        r = (0, p.bp)(),
         s = n.user,
-        d = (0, l.e7)(
-            [w.default],
+        c = (0, a.e7)(
+            [b.default],
             () => {
                 var e;
-                return null !== (e = w.default.getUser(s.id)) && void 0 !== e ? e : s;
+                return null !== (e = b.default.getUser(s.id)) && void 0 !== e ? e : s;
             },
             [s]
         ),
-        u = t ? N.intl.string(N.t.tLxK4u) : N.intl.string(N.t.E5RDnJ);
+        u = t ? T.intl.string(T.t.tLxK4u) : T.intl.string(T.t.E5RDnJ);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)('div', { className: a()(S.controlBackground, { [S.controlsWithActiveStream]: t }) }),
+            (0, i.jsx)('div', { className: o()(O.controlBackground, { [O.controlsWithActiveStream]: t }) }),
             !t &&
                 (0, i.jsx)('div', {
-                    className: S.watchActionContainer,
-                    children: (0, i.jsx)(c.ua7, {
+                    className: O.watchActionContainer,
+                    children: (0, i.jsx)(d.ua7, {
                         text: u,
                         children: (e) =>
-                            (0, i.jsxs)(c.P3F, {
+                            (0, i.jsxs)(d.P3F, {
                                 ...e,
-                                className: S.watchButton,
+                                className: O.watchButton,
                                 onClick: () => {
                                     var t;
                                     null === (t = e.onClick) || void 0 === t || t.call(e),
@@ -115,15 +115,15 @@ function P(e) {
                                             forceMultiple: !0,
                                             noFocus: !0
                                         }),
-                                        r();
+                                        l();
                                 },
                                 children: [
-                                    (0, i.jsx)(c.Text, {
+                                    (0, i.jsx)(d.Text, {
                                         variant: 'text-sm/semibold',
                                         color: 'always-white',
-                                        children: N.intl.string(N.t['I6JG4+'])
+                                        children: T.intl.string(T.t['I6JG4+'])
                                     }),
-                                    (0, i.jsx)(c.OgY, {
+                                    (0, i.jsx)(d.OgY, {
                                         size: 'sm',
                                         color: 'currentColor'
                                     })
@@ -132,45 +132,45 @@ function P(e) {
                     })
                 }),
             (0, i.jsxs)('div', {
-                className: S.controls,
+                className: O.controls,
                 children: [
                     (0, i.jsx)('div', {
-                        className: S.controlUser,
+                        className: O.controlUser,
                         children: (0, i.jsxs)('div', {
-                            className: S.controlUserContainer,
+                            className: O.controlUserContainer,
                             children: [
-                                (0, i.jsx)(c.pzj, {
+                                (0, i.jsx)(d.pzj, {
                                     size: 'xs',
-                                    color: c.TVs.colors.INTERACTIVE_ACTIVE
+                                    color: d.TVs.colors.INTERACTIVE_ACTIVE
                                 }),
-                                (0, i.jsx)(c.Text, {
+                                (0, i.jsx)(d.Text, {
                                     variant: 'text-md/medium',
                                     color: 'always-white',
                                     children: y.ZP.getName(n.stream.guildId, n.stream.channelId, s)
                                 }),
-                                (0, i.jsx)(f.ZP, {
-                                    primaryGuild: d.primaryGuild,
+                                (0, i.jsx)(m.ZP, {
+                                    primaryGuild: c.primaryGuild,
                                     userId: s.id
                                 })
                             ]
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: S.controlActions,
+                        className: O.controlActions,
                         children:
                             t &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)(T, { participant: n }),
-                                    (0, i.jsx)(c.ua7, {
-                                        text: N.intl.string(N.t['3D5yo6']),
+                                    (0, i.jsx)(j, { participant: n }),
+                                    (0, i.jsx)(d.ua7, {
+                                        text: T.intl.string(T.t['3D5yo6']),
                                         children: (e) => {
-                                            let { onClick: t, ...r } = e;
-                                            return (0, i.jsx)(c.P3F, {
-                                                ...r,
-                                                className: S.controlAction,
-                                                onClick: O(n, o, t),
-                                                children: (0, i.jsx)(c.xhG, {
+                                            let { onClick: t, ...l } = e;
+                                            return (0, i.jsx)(d.P3F, {
+                                                ...l,
+                                                className: O.controlAction,
+                                                onClick: k(n, r, t),
+                                                children: (0, i.jsx)(d.xhG, {
                                                     size: 'sm',
                                                     color: 'currentColor'
                                                 })
@@ -185,63 +185,63 @@ function P(e) {
         ]
     });
 }
-let L = new Set([k.jm8.ENDED, k.jm8.FAILED, k.jm8.PAUSED]),
-    A = r.memo(function (e) {
-        let { participant: t, width: n, locked: r, widgetId: o, pinned: s } = e,
-            d = (0, l.e7)([Z.Z], () => Z.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
-            u = (0, m.bp)(),
-            _ = null != d && L.has(d.state),
-            g = null != d,
-            f = (0, E.yA)(t.stream),
-            b = (0, E.xN)(t.stream);
-        return (!g && r) || _
+let A = new Set([w.jm8.ENDED, w.jm8.FAILED, w.jm8.PAUSED]),
+    L = l.memo(function (e) {
+        let { participant: t, width: n, locked: l, widgetId: r, pinned: s } = e,
+            c = (0, a.e7)([C.Z], () => C.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
+            u = (0, p.bp)(),
+            _ = null != c && A.has(c.state),
+            g = null != c,
+            m = (0, N.yA)(t.stream),
+            Z = (0, N.xN)(t.stream);
+        return (!g && l) || _
             ? null
             : (0, i.jsxs)('div', {
-                  className: S.tile,
+                  className: O.tile,
                   children: [
                       g &&
-                          !r &&
-                          (0, i.jsx)(p.ZP, {
-                              size: p.ZP.Sizes.SMALL,
-                              className: S.liveIndicator
+                          !l &&
+                          (0, i.jsx)(f.ZP, {
+                              size: f.ZP.Sizes.SMALL,
+                              className: O.liveIndicator
                           }),
                       g
                           ? (0, i.jsx)('div', {
-                                className: S.streamTile,
-                                children: (0, i.jsx)(c.kL8, {
-                                    'aria-label': N.intl.formatToPlainString(N.t.gHPz3d, { streamerName: t.user.username }),
+                                className: O.streamTile,
+                                children: (0, i.jsx)(d.kL8, {
+                                    'aria-label': T.intl.formatToPlainString(T.t.gHPz3d, { streamerName: t.user.username }),
                                     onClick: () => {},
-                                    onContextMenu: O(t, u),
-                                    className: S.streamTile,
-                                    style: { transform: 'scale('.concat(f, ')') },
-                                    children: (0, i.jsx)(C.Z, {
+                                    onContextMenu: k(t, u),
+                                    className: O.streamTile,
+                                    style: { transform: 'scale('.concat(m, ')') },
+                                    children: (0, i.jsx)(E.Z, {
                                         participant: t,
                                         width: n,
-                                        fit: null != b ? b : v.L.CONTAIN,
+                                        fit: null != Z ? Z : x.L.CONTAIN,
                                         inPopout: !0,
-                                        focused: !r,
+                                        focused: !l,
                                         paused: !1,
                                         selected: !1,
-                                        wrapperClassName: r ? S.streamTileWrapper : void 0,
+                                        wrapperClassName: l ? O.streamTileWrapper : void 0,
                                         inOverlayPopout: !0
                                     })
                                 })
                             })
                           : (0, i.jsx)('div', {
-                                className: S.streamPreview,
-                                children: (0, i.jsx)(x.Z, {
+                                className: O.streamPreview,
+                                children: (0, i.jsx)(v.Z, {
                                     noText: !0,
-                                    className: a()(S.absoluteFill),
+                                    className: o()(O.absoluteFill),
                                     stream: t.stream
                                 })
                             }),
-                      r
+                      l
                           ? null
-                          : (0, i.jsx)(P, {
+                          : (0, i.jsx)(R, {
                                 participant: t,
                                 hasActiveStream: g,
                                 onEnablePin: () => {
-                                    s || (0, h.xh)(o);
+                                    s || (0, h.xh)(r);
                                 }
                             })
                   ]

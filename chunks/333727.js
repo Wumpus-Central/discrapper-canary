@@ -1,50 +1,50 @@
-i.d(e, { Z: () => h });
-var n = i(278323),
-    l = i(13245),
-    s = i(45114),
-    o = i(237997),
-    r = i(145597),
-    a = i(620954),
-    d = i(987650),
-    u = i(981631),
-    c = i(388032);
-function h(t, e, i, h) {
-    let E = e.username,
-        p = c.intl.format(c.t.VDODnp, {
+n.d(t, { Z: () => h });
+var i = n(278323),
+    l = n(13245),
+    r = n(45114),
+    o = n(237997),
+    a = n(145597),
+    s = n(620954),
+    d = n(987650),
+    c = n(981631),
+    u = n(388032);
+function h(e, t, n, h) {
+    let _ = t.username,
+        p = u.intl.format(u.t.VDODnp, {
             username: '',
-            game: i.name
+            game: n.name
         }),
-        S = e.getAvatarURL(t.guild_id, 80),
-        { trackView: f, trackClick: g } = (0, a.R)(d.n0.ActivityInvite, {
+        g = t.getAvatarURL(e.guild_id, 80),
+        { trackView: f, trackClick: m } = (0, s.R)(d.n0.ActivityInvite, {
             notif_type: d.n0.ActivityInvite,
-            notif_user_id: e.id,
-            activity_type: u.mFx.JOIN_REQUEST,
+            notif_user_id: t.id,
+            activity_type: c.mFx.JOIN_REQUEST,
             activity_name: h.name
         });
     return {
-        icon: S,
-        title: E,
+        icon: g,
+        title: _,
         body: p,
-        confirmText: c.intl.string(c.t['fgP/wc']),
-        cancelText: c.intl.string(c.t.tpXzJy),
+        confirmText: u.intl.string(u.t['fgP/wc']),
+        cancelText: u.intl.string(u.t.tpXzJy),
         onNotificationShow: () => {
             f();
         },
-        onConfirmClick: (e, i) => {
-            n.Z.sendActivityInvite({
-                channelId: t.id,
-                type: u.mFx.JOIN,
+        onConfirmClick: (t, n) => {
+            i.Z.sendActivityInvite({
+                channelId: e.id,
+                type: c.mFx.JOIN,
                 activity: h,
-                location: o.Z.isLocked((0, r.QF)()) ? u.Sbl.LOCKED_OVERLAY : u.Sbl.UNLOCKED_OVERLAY
+                location: o.Z.isLocked((0, a.QF)()) ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY
             }),
-                g('join'),
-                l.Z.updateNotificationStatus(i);
+                m('join'),
+                l.Z.updateNotificationStatus(n);
         },
-        onCancelClick: (e, i) => {
-            (0, s.In)(t.id, !0, !0), l.Z.updateNotificationStatus(i), g('decline');
+        onCancelClick: (t, n) => {
+            (0, r.In)(e.id, !0, !0), l.Z.updateNotificationStatus(n), m('decline');
         },
         onDismissClick: () => {
-            g('dismiss');
+            m('dismiss');
         }
     };
 }

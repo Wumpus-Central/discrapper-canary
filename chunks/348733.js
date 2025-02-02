@@ -3,9 +3,9 @@ var i = n(200651);
 n(192379);
 var s = n(120356),
     l = n.n(s),
-    r = n(392711),
-    o = n(442837),
-    a = n(261435),
+    a = n(392711),
+    r = n(442837),
+    o = n(261435),
     d = n(237997),
     c = n(692546),
     u = n(438015),
@@ -13,21 +13,21 @@ var s = n(120356),
     p = n(544690);
 function g(e) {
     let { locked: t, keybind: n } = e,
-        s = (0, o.Wu)([a.Z], () => a.Z.getNotifications()),
-        u = (0, o.e7)([d.Z], () => d.Z.getNotificationPositionMode());
+        s = (0, r.Wu)([o.Z], () => o.Z.getNotifications()),
+        u = (0, r.e7)([d.Z], () => d.Z.getNotificationPositionMode());
     if (u === h._vf.DISABLED) return null;
     let g = s.filter((e) => !t || e.status !== h._1z.TIMED_OUT),
-        m = (0, r.groupBy)(g, (e) => e.type);
+        f = (0, a.groupBy)(g, (e) => e.type);
     return (0, i.jsx)(c.Z, {
         observeInterval: 200,
         children: (0, i.jsx)('div', {
             className: l()(p.container, p[u]),
-            children: Object.entries(m).map((e) => {
+            children: Object.entries(f).map((e) => {
                 let [s, l] = e;
                 return 0 === l.length
                     ? null
                     : (0, i.jsx)(
-                          f,
+                          m,
                           {
                               locked: t,
                               keybind: n,
@@ -40,7 +40,7 @@ function g(e) {
         })
     });
 }
-function f(e) {
+function m(e) {
     let { notification: t, position: n, keybind: s, locked: l } = e;
     return (0, i.jsx)('div', {
         className: p.notificationGroup,

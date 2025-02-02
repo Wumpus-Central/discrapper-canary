@@ -1,49 +1,49 @@
-i.d(e, { Z: () => d });
-var n = i(224706),
-    l = i(13245),
-    s = i(150097),
-    o = i(620954),
-    r = i(987650),
-    a = i(388032);
-function d(t, e, i, d, u) {
-    if (null == e.activity || null == d.id) return null;
-    let c = e.activity.type,
-        h = u.session_id;
+n.d(t, { Z: () => d });
+var i = n(224706),
+    l = n(13245),
+    r = n(150097),
+    o = n(620954),
+    a = n(987650),
+    s = n(388032);
+function d(e, t, n, d, c) {
+    if (null == t.activity || null == d.id) return null;
+    let u = t.activity.type,
+        h = c.session_id;
     if (null == h) return null;
-    let { icon: E, title: p, body: S } = (0, s.Xi)(t, e, i),
-        { trackView: f, trackClick: g } = (0, o.R)(r.n0.ActivityInvite, {
-            notif_type: r.n0.ActivityInvite,
-            notif_user_id: i.id,
-            message_id: e.id,
-            message_type: e.type,
-            guild_id: t.guild_id,
-            channel_id: t.id,
-            channel_type: t.type,
-            activity_type: c,
-            activity_name: u.name
+    let { icon: _, title: p, body: g } = (0, r.Xi)(e, t, n),
+        { trackView: f, trackClick: m } = (0, o.R)(a.n0.ActivityInvite, {
+            notif_type: a.n0.ActivityInvite,
+            notif_user_id: n.id,
+            message_id: t.id,
+            message_type: t.type,
+            guild_id: e.guild_id,
+            channel_id: e.id,
+            channel_type: e.type,
+            activity_type: u,
+            activity_name: c.name
         });
     return {
-        icon: E,
+        icon: _,
         title: p,
-        body: S,
+        body: g,
         onNotificationShow: () => {
             f();
         },
-        confirmText: a.intl.string(a.t.VJlc0d),
-        onConfirmClick: (s, o) => {
-            var r;
-            n.Z.join({
-                userId: i.id,
+        confirmText: s.intl.string(s.t.VJlc0d),
+        onConfirmClick: (r, o) => {
+            var a;
+            i.Z.join({
+                userId: n.id,
                 sessionId: h,
-                applicationId: null !== (r = d.altId) && void 0 !== r ? r : d.id,
-                channelId: t.id,
-                messageId: e.id
+                applicationId: null !== (a = d.altId) && void 0 !== a ? a : d.id,
+                channelId: e.id,
+                messageId: t.id
             }),
                 l.Z.updateNotificationStatus(o),
-                g('join');
+                m('join');
         },
         onDismissClick: () => {
-            g('dismiss');
+            m('dismiss');
         }
     };
 }

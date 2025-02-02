@@ -171,8 +171,8 @@ var e;
             return n.length > 3 ? [e, a, r, n[3]] : [e, a, r, 1];
         },
         G = /^rgb\(\s*(-?\d+),\s*(-?\d+)\s*,\s*(-?\d+)\s*\)$/,
-        M = /^rgba\(\s*(-?\d+),\s*(-?\d+)\s*,\s*(-?\d+)\s*,\s*([01]|[01]?\.\d+)\)$/,
-        b = /^rgb\(\s*(-?\d+(?:\.\d+)?)%,\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*\)$/,
+        b = /^rgba\(\s*(-?\d+),\s*(-?\d+)\s*,\s*(-?\d+)\s*,\s*([01]|[01]?\.\d+)\)$/,
+        M = /^rgb\(\s*(-?\d+(?:\.\d+)?)%,\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*\)$/,
         U = /^rgba\(\s*(-?\d+(?:\.\d+)?)%,\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*,\s*([01]|[01]?\.\d+)\)$/,
         w = /^hsl\(\s*(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*\)$/,
         B = /^hsla\(\s*(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*,\s*([01]|[01]?\.\d+)\)$/,
@@ -186,11 +186,11 @@ var e;
                 for (var e, a = e.slice(1, 4), r = 0; r < 3; r++) a[r] = +a[r];
                 return (a[3] = 1), a;
             }
-            if ((e = t.match(M))) {
+            if ((e = t.match(b))) {
                 for (var n = e.slice(1, 5), o = 0; o < 4; o++) n[o] = +n[o];
                 return n;
             }
-            if ((e = t.match(b))) {
+            if ((e = t.match(M))) {
                 for (var _ = e.slice(1, 4), i = 0; i < 3; i++) _[i] = W(2.55 * _[i]);
                 return (_[3] = 1), _;
             }
@@ -212,7 +212,7 @@ var e;
             }
         };
     Y.test = function (t) {
-        return G.test(t) || M.test(t) || b.test(t) || U.test(t) || w.test(t) || B.test(t);
+        return G.test(t) || b.test(t) || M.test(t) || U.test(t) || w.test(t) || B.test(t);
     };
     var H = i.type,
         K = function () {
@@ -530,9 +530,9 @@ var e;
             return [E < 0 ? 0 : E, 500 * (i - c), 200 * (c - s)];
         },
         tG = i.unpack,
-        tM = Math.pow,
-        tb = function (t) {
-            return 255 * (t <= 0.00304 ? 12.92 * t : 1.055 * tM(t, 1 / 2.4) - 0.055);
+        tb = Math.pow,
+        tM = function (t) {
+            return 255 * (t <= 0.00304 ? 12.92 * t : 1.055 * tb(t, 1 / 2.4) - 0.055);
         },
         tU = function (t) {
             return t > tm.t1 ? t * t * t : tm.t2 * (t - tm.t0);
@@ -542,7 +542,7 @@ var e;
             var _ = (n = tG(n, 'lab'))[0],
                 i = n[1],
                 c = n[2];
-            return (e = (_ + 16) / 116), (t = isNaN(i) ? e : e + i / 500), (a = isNaN(c) ? e : e - c / 200), (e = tm.Yn * tU(e)), (r = tb(3.2404542 * (t = tm.Xn * tU(t)) - 1.5371385 * e - 0.4985314 * (a = tm.Zn * tU(a)))), [r, tb(-0.969266 * t + 1.8760108 * e + 0.041556 * a), tb(0.0556434 * t - 0.2040259 * e + 1.0572252 * a), n.length > 3 ? n[3] : 1];
+            return (e = (_ + 16) / 116), (t = isNaN(i) ? e : e + i / 500), (a = isNaN(c) ? e : e - c / 200), (e = tm.Yn * tU(e)), (r = tM(3.2404542 * (t = tm.Xn * tU(t)) - 1.5371385 * e - 0.4985314 * (a = tm.Zn * tU(a)))), [r, tM(-0.969266 * t + 1.8760108 * e + 0.041556 * a), tM(0.0556434 * t - 0.2040259 * e + 1.0572252 * a), n.length > 3 ? n[3] : 1];
         },
         tB = i.unpack,
         tW = i.type;
@@ -1065,7 +1065,7 @@ var e;
         (u.prototype.desaturate = function (t) {
             return void 0 === t && (t = 1), this.saturate(-t);
         });
-    var eM = i.type;
+    var eb = i.type;
     (u.prototype.set = function (t, e, a) {
         void 0 === a && (a = !1);
         var r = t.split('.'),
@@ -1075,7 +1075,7 @@ var e;
         if (!o) return _;
         var i = n.indexOf(o) - ('ok' === n.substr(0, 2) ? 2 : 0);
         if (i > -1) {
-            if ('string' == eM(e))
+            if ('string' == eb(e))
                 switch (e.charAt(0)) {
                     case '+':
                     case '-':
@@ -1090,7 +1090,7 @@ var e;
                     default:
                         _[i] = +e;
                 }
-            else if ('number' === eM(e)) _[i] = e;
+            else if ('number' === eb(e)) _[i] = e;
             else throw Error('unsupported value for Color.set');
             var c = new u(_, n);
             return a ? ((this._rgb = c._rgb), this) : c;
@@ -1102,7 +1102,7 @@ var e;
                 n = e._rgb;
             return new u(r[0] + a * (n[0] - r[0]), r[1] + a * (n[1] - r[1]), r[2] + a * (n[2] - r[2]), 'rgb');
         });
-    var eb = Math.sqrt,
+    var eM = Math.sqrt,
         eU = Math.pow;
     (eC.lrgb = function (t, e, a) {
         var r = t._rgb,
@@ -1113,7 +1113,7 @@ var e;
             c = i[0],
             s = i[1],
             E = i[2];
-        return new u(eb(eU(n, 2) * (1 - a) + eU(c, 2) * a), eb(eU(o, 2) * (1 - a) + eU(s, 2) * a), eb(eU(_, 2) * (1 - a) + eU(E, 2) * a), 'rgb');
+        return new u(eM(eU(n, 2) * (1 - a) + eU(c, 2) * a), eM(eU(o, 2) * (1 - a) + eU(s, 2) * a), eM(eU(_, 2) * (1 - a) + eU(E, 2) * a), 'rgb');
     }),
         (eC.lab = function (t, e, a) {
             var r = t.lab(),
@@ -1578,8 +1578,8 @@ var e;
                                 C < y && ((y = C), (P = v)), T[P]++, (p[g] = P);
                             }
                         for (var S = Array(a), G = 0; G < a; G++) S[G] = null;
-                        for (var M = 0; M < f; M++) null === S[(A = p[M])] ? (S[A] = _[M]) : (S[A] += _[M]);
-                        for (var b = 0; b < a; b++) S[b] *= 1 / T[b];
+                        for (var b = 0; b < f; b++) null === S[(A = p[b])] ? (S[A] = _[b]) : (S[A] += _[b]);
+                        for (var M = 0; M < a; M++) S[M] *= 1 / T[M];
                         N = !1;
                         for (var U = 0; U < a; U++)
                             if (S[U] !== h[U]) {
@@ -1800,11 +1800,11 @@ var e;
             (C = 180 >= as(C) ? C : y <= m ? C + 360 : C - 360), (C = 2 * an(L * h) * al(_(C) / 2));
             var S = h - L,
                 G = 1 + (0.015 * ao(A - 50, 2)) / an(20 + ao(A - 50, 2)),
-                M = 1 + 0.045 * O,
-                b = 1 + 0.015 * O * v,
+                b = 1 + 0.045 * O,
+                M = 1 + 0.015 * O * v,
                 U = 30 * au(-ao((P - 275) / 25, 2)),
                 w = -(2 * an(ao(O, 7) / (ao(O, 7) + ao(25, 7)))) * al(2 * _(U));
-            return ai(0, a_(100, an(ao((I - c) / (a * G), 2) + ao(S / (r * M), 2) + ao(C / (n * b), 2) + (S / (r * M)) * w * (C / (n * b)))));
+            return ai(0, a_(100, an(ao((I - c) / (a * G), 2) + ao(S / (r * b), 2) + ao(C / (n * M), 2) + (S / (r * b)) * w * (C / (n * M)))));
         }),
         (I.distance = function (t, e, a) {
             void 0 === a && (a = 'lab'), (t = new u(t)), (e = new u(e));

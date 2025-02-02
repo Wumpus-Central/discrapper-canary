@@ -1,40 +1,40 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => w });
 var i = n(200651),
-    r = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    l = n(442837),
+    l = n(192379),
+    r = n(120356),
+    o = n.n(r),
+    a = n(442837),
     s = n(481060),
-    c = n(239091),
-    d = n(765250),
+    d = n(239091),
+    c = n(765250),
     u = n(393238),
     h = n(358221),
     _ = n(933557),
-    m = n(352978),
+    p = n(352978),
     g = n(27457),
-    p = n(796638),
-    f = n(592125),
-    x = n(131951),
-    v = n(944486),
-    C = n(906037),
-    b = n(804570),
-    Z = n(501787),
+    f = n(796638),
+    m = n(592125),
+    v = n(131951),
+    x = n(944486),
+    E = n(906037),
+    Z = n(804570),
+    C = n(501787),
     I = n(65154),
-    j = n(388032),
-    w = n(827202);
+    S = n(388032),
+    b = n(827202);
 function y(e) {
     var t;
-    let { participant: n, channel: r, context: o } = e,
-        a = null === (t = n.user) || void 0 === t ? void 0 : t.id;
-    return (0, l.e7)([x.Z], () => null != n.user && null != o && null != r && x.Z.isLocalVideoDisabled(a, o), [a, n.user, o, r]) ? null : (0, i.jsx)(g.ZP, { ...e });
+    let { participant: n, channel: l, context: r } = e,
+        o = null === (t = n.user) || void 0 === t ? void 0 : t.id;
+    return (0, a.e7)([v.Z], () => null != n.user && null != r && null != l && v.Z.isLocalVideoDisabled(o, r), [o, n.user, r, l]) ? null : (0, i.jsx)(g.ZP, { ...e });
 }
-function E(e) {
-    let { context: t = I.Yn.DEFAULT, participants: o, locked: l, widget: d, channel: u, width: h, height: _, containerRef: g } = e,
-        p = (e, r) => {
-            (0, c.jW)(r, async () => {
-                let { default: r } = await Promise.all([n.e('79695'), n.e('69220'), n.e('351')]).then(n.bind(n, 881351));
+function N(e) {
+    let { context: t = I.Yn.DEFAULT, participants: r, locked: a, widget: c, channel: u, width: h, height: _, containerRef: g } = e,
+        f = (e, l) => {
+            (0, d.jW)(l, async () => {
+                let { default: l } = await Promise.all([n.e('79695'), n.e('69220'), n.e('351')]).then(n.bind(n, 881351));
                 return (n) =>
-                    (0, i.jsx)(r, {
+                    (0, i.jsx)(l, {
                         ...n,
                         user: e.user,
                         showMediaItems: !0,
@@ -42,49 +42,49 @@ function E(e) {
                     });
             });
         },
-        f = o.length > 0 && null != t && null != u && (!l || d.pinned);
-    r.useEffect(() => {
-        (0, C.m3)(
+        m = r.length > 0 && null != t && null != u && (!a || c.pinned);
+    l.useEffect(() => {
+        (0, E.m3)(
             {
-                locked: l,
-                pinned: d.pinned,
-                widget: d.type,
+                locked: a,
+                pinned: c.pinned,
+                widget: c.type,
                 isPreviewingInGame: !1
             },
-            f
+            m
         );
-    }, [l, d, f]);
-    let x = 'boolean' != typeof d.meta.horizontal || d.meta.horizontal;
-    return 0 !== o.length || l
+    }, [a, c, m]);
+    let v = 'boolean' != typeof c.meta.horizontal || c.meta.horizontal;
+    return 0 !== r.length || a
         ? null == u
             ? null
             : (0, i.jsx)('div', {
                   ref: g,
-                  className: a()({
-                      [w.videoList]: !0,
-                      [w.vertical]: !x,
-                      [w.hidden]: !f && l
+                  className: o()({
+                      [b.videoList]: !0,
+                      [b.vertical]: !v,
+                      [b.hidden]: !m && a
                   }),
-                  style: { opacity: d.opacity },
-                  children: o.map((e) =>
+                  style: { opacity: c.opacity },
+                  children: r.map((e) =>
                       (0, i.jsx)(
                           y,
                           {
                               participant: e,
                               width: h,
-                              className: w.tile,
+                              className: b.tile,
                               containerStyle: {
                                   width: h,
                                   height: _
                               },
-                              fit: m.L.COVER,
+                              fit: p.L.COVER,
                               channel: u,
                               inPopout: !0,
                               inCall: !0,
                               noBorder: !0,
-                              onContextMenu: l ? void 0 : p,
-                              forceIdle: l,
-                              paused: !f,
+                              onContextMenu: a ? void 0 : f,
+                              forceIdle: a,
+                              paused: !m,
                               inOverlayPopout: !0,
                               context: t
                           },
@@ -92,42 +92,42 @@ function E(e) {
                       )
                   )
               })
-        : l
+        : a
           ? null
-          : (0, i.jsx)(b.E, {
-                emptyText: j.intl.string(j.t['aTiM4+']),
+          : (0, i.jsx)(Z.E, {
+                emptyText: S.intl.string(S.t['aTiM4+']),
                 icon: s.Odl,
                 absolute: !0
             });
 }
-function k(e) {
-    let t = (0, l.e7)([v.Z, f.Z], () => f.Z.getChannel(v.Z.getVoiceChannelId())),
+function w(e) {
+    let t = (0, a.e7)([x.Z, m.Z], () => m.Z.getChannel(x.Z.getVoiceChannelId())),
         n = (0, _.ZP)(t),
-        o = (0, l.Wu)([h.Z], () => (null != t ? h.Z.getVideoParticipants(t.id) : [])),
-        a = (0, l.e7)([h.Z], () => (null != t ? h.Z.getParticipantsVersion(t.id) : 0)),
+        r = (0, a.Wu)([h.Z], () => (null != t ? h.Z.getVideoParticipants(t.id) : [])),
+        o = (0, a.e7)([h.Z], () => (null != t ? h.Z.getParticipantsVersion(t.id) : 0)),
         s = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
-        { width: c, height: m, ref: g } = (0, u.Z)(e.locked, e.widget.pinned),
-        { participantTileWidth: x, visibleParticipants: C } = (0, p.ZB)(s ? (null != c ? c : e.width) : null != m ? m : e.height, o, {
-            tileWidth: Z.vZ,
-            tileMinWidth: Z.mo,
-            tileMargin: Z.F$,
+        { width: d, height: p, ref: g } = (0, u.Z)(e.locked, e.widget.pinned),
+        { participantTileWidth: v, visibleParticipants: E } = (0, f.ZB)(s ? (null != d ? d : e.width) : null != p ? p : e.height, r, {
+            tileWidth: C.vZ,
+            tileMinWidth: C.mo,
+            tileMargin: C.F$,
             limit: 8,
             cropSelfVideo: !0,
-            version: a
+            version: o
         }),
-        b = {
+        Z = {
             id: e.widget.id,
             size: e.widget.size,
             containerWidth: e.width,
             containerHeight: e.height
         },
-        I = r.useRef(b);
+        I = l.useRef(Z);
     return (
-        r.useLayoutEffect(() => void (I.current = b)),
-        r.useLayoutEffect(() => {
+        l.useLayoutEffect(() => void (I.current = Z)),
+        l.useLayoutEffect(() => {
             let { size: e, id: t, containerWidth: n, containerHeight: i } = I.current;
             ((s && e.height > e.width) || (!s && e.width > e.height)) &&
-                (0, d.nv)({
+                (0, c.nv)({
                     widgetId: t,
                     size: {
                         fixed: !0,
@@ -136,14 +136,14 @@ function k(e) {
                     }
                 });
         }, [s]),
-        (0, i.jsx)(E, {
+        (0, i.jsx)(N, {
             ...e,
             channel: t,
             title: null != n ? n : '',
-            participants: C,
-            participantsVersion: a,
-            width: s ? x : null != c ? c : e.width,
-            height: s ? (null != m ? m : e.height) : x,
+            participants: E,
+            participantsVersion: o,
+            width: s ? v : null != d ? d : e.width,
+            height: s ? (null != p ? p : e.height) : v,
             containerRef: g
         })
     );

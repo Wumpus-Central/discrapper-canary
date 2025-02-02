@@ -1,32 +1,32 @@
-n.d(t, { Z: () => h }), n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var i = n(200651);
 n(192379);
-var a = n(442837),
-    o = n(352527),
-    r = n(183584),
+var r = n(442837),
+    a = n(352527),
+    o = n(183584),
     s = n(487029),
-    l = n(592125),
-    d = n(944486),
-    c = n(554174),
-    _ = n(710111),
-    u = n(408704);
-function h() {
-    let [e, t] = (0, a.Wu)([o.Z], () => [o.Z.enabled, o.Z.keepOpen]),
-        n = (0, a.e7)([d.Z], () => d.Z.getVoiceChannelId()),
-        h = (0, a.e7)([l.Z], () => l.Z.getChannel(n), [n]),
-        f = null == h ? void 0 : h.getGuildId();
-    return e && null != h
+    d = n(592125),
+    c = n(944486),
+    l = n(554174),
+    u = n(710111),
+    _ = n(408704);
+function f() {
+    let [e, t] = (0, r.Wu)([a.Z], () => [a.Z.enabled, a.Z.keepOpen]),
+        n = (0, r.e7)([c.Z], () => c.Z.getVoiceChannelId()),
+        f = (0, r.e7)([d.Z], () => d.Z.getChannel(n), [n]),
+        p = null == f ? void 0 : f.getGuildId();
+    return e && null != f
         ? (0, i.jsx)('div', {
-              className: u.widget,
+              className: _.widget,
               children: (0, i.jsx)(s.Z, {
-                  width: _.FW.width,
-                  height: _.FW.height,
-                  guildId: f,
-                  channel: h,
+                  width: u.FW.width,
+                  height: u.FW.height,
+                  guildId: p,
+                  channel: f,
                   keepOpen: t,
                   onClose: function () {
-                      let e = (0, c.Z)();
-                      null != e && (0, r.oZ)(e);
+                      let e = (0, l.Z)();
+                      null != e && (0, o.oZ)(e);
                   },
                   analyticsSource: 'overlay'
               })

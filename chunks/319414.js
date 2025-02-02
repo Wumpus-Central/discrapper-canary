@@ -1,32 +1,32 @@
-i.d(e, { Z: () => E }), i(47120);
-var n = i(200651);
-i(192379);
-var l = i(442837),
-    s = i(352527),
-    o = i(183584),
-    r = i(487029),
-    a = i(592125),
-    d = i(944486),
-    u = i(554174),
-    c = i(710111),
-    h = i(714902);
-function E() {
-    let [t, e] = (0, l.Wu)([s.Z], () => [s.Z.enabled, s.Z.keepOpen]),
-        i = (0, l.e7)([d.Z], () => d.Z.getVoiceChannelId()),
-        E = (0, l.e7)([a.Z], () => a.Z.getChannel(i), [i]),
-        p = null == E ? void 0 : E.getGuildId();
-    return t && null != E
-        ? (0, n.jsx)('div', {
+n.d(t, { Z: () => _ }), n(47120);
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    r = n(352527),
+    o = n(183584),
+    a = n(487029),
+    s = n(592125),
+    d = n(944486),
+    c = n(554174),
+    u = n(710111),
+    h = n(714902);
+function _() {
+    let [e, t] = (0, l.Wu)([r.Z], () => [r.Z.enabled, r.Z.keepOpen]),
+        n = (0, l.e7)([d.Z], () => d.Z.getVoiceChannelId()),
+        _ = (0, l.e7)([s.Z], () => s.Z.getChannel(n), [n]),
+        p = null == _ ? void 0 : _.getGuildId();
+    return e && null != _
+        ? (0, i.jsx)('div', {
               className: h.container,
-              children: (0, n.jsx)(r.Z, {
-                  width: c.FW.width,
-                  height: c.FW.height,
+              children: (0, i.jsx)(a.Z, {
+                  width: u.FW.width,
+                  height: u.FW.height,
                   guildId: p,
-                  channel: E,
-                  keepOpen: e,
+                  channel: _,
+                  keepOpen: t,
                   onClose: function () {
-                      let t = (0, u.Z)();
-                      null != t && (0, o.oZ)(t);
+                      let e = (0, c.Z)();
+                      null != e && (0, o.oZ)(e);
                   },
                   analyticsSource: 'overlay'
               })

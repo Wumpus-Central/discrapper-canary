@@ -1,4 +1,4 @@
-n.d(t, { default: () => l });
+n.r(t), n.d(t, { default: () => l });
 var i = n(200651);
 n(192379);
 var a = n(238246),
@@ -6,7 +6,7 @@ var a = n(238246),
     o = n(438162);
 function l(e) {
     let { withTitleBar: t, windowKey: n } = e;
-    return (0, r.r)(n)
+    return (0, r.useOverlayInitialFocus)(n)
         ? (0, i.jsx)(a.Z, {
               withTitleBar: t,
               windowKey: n,

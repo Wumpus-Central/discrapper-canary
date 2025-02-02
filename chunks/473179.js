@@ -1,16 +1,16 @@
-t.d(n, { Z: () => o });
-var i = t(200651),
-    a = t(481060),
-    r = t(870745),
-    l = t(388032);
-function o(e) {
-    let { onClose: n, onSelect: t, application: o, channelId: d } = e,
-        c = (0, r.Z)(o, d);
-    return (0, i.jsx)(a.v2r, {
+n.d(t, { Z: () => a });
+var r = n(200651),
+    i = n(481060),
+    l = n(870745),
+    o = n(388032);
+function a(e) {
+    let { onClose: t, onSelect: n, application: a, channelId: d } = e,
+        c = (0, l.Z)(a, d);
+    return (0, r.jsx)(i.v2r, {
         navId: 'activity-popout-overflow-popout',
-        onClose: n,
-        onSelect: t,
-        'aria-label': l.intl.string(l.t.SS9Y6O),
+        onClose: t,
+        onSelect: n,
+        'aria-label': o.intl.string(o.t.SS9Y6O),
         children: c
     });
 }

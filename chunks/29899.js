@@ -13,7 +13,7 @@ function c(e) {
             voiceChannel: d,
             isInVoiceChannel: f
         } = (0, i.cj)([a.Z, s.Z, l.Z], () => {
-            let e = l.Z.getVoiceState(n, t),
+            let e = null != n ? l.Z.getVoiceState(n, t) : l.Z.getVoiceStateForUser(t),
                 i = a.Z.getChannel(null == e ? void 0 : e.channelId);
             return (null == i ? void 0 : i.isPrivate())
                 ? {

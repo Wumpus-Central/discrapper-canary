@@ -1,11 +1,11 @@
-n.d(t, { Z: () => _ }), n(47120), n(733860);
-var r,
-    i = n(442837),
-    l = n(570140),
-    a = n(592125),
-    o = n(271383),
-    u = n(430824);
-function s(e, t, n) {
+n.d(t, { Z: () => f }), n(47120), n(733860);
+var i,
+    a = n(442837),
+    r = n(570140),
+    o = n(592125),
+    l = n(271383),
+    c = n(430824);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,28 +18,28 @@ function s(e, t, n) {
         e
     );
 }
-let c = [],
-    d = new Set();
-class f extends (r = i.ZP.PersistedStore) {
+let _ = [],
+    u = new Set();
+class s extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(o.ZP, u.Z, a.Z), (d = new Set([...(c = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : [])]));
+        this.waitFor(l.ZP, c.Z, o.Z), (u = new Set([...(_ = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : [])]));
     }
     getState() {
-        return { channelHistory: c };
+        return { channelHistory: _ };
     }
     getChannelHistory() {
-        return c;
+        return _;
     }
 }
-s(f, 'displayName', 'RecentVoiceChannelStore'), s(f, 'persistKey', 'RecentVoiceChannelStore');
-let _ = new f(l.Z, {
+d(s, 'displayName', 'RecentVoiceChannelStore'), d(s, 'persistKey', 'RecentVoiceChannelStore');
+let f = new s(r.Z, {
     POST_CONNECTION_OPEN: function () {
-        d = new Set([...c]);
+        u = new Set([..._]);
     },
     VOICE_CHANNEL_SELECT: function (e) {
         var t, n;
-        let { channelId: r } = e;
-        return !(null == r || !(null !== (n = null === (t = a.Z.getChannel(r)) || void 0 === t ? void 0 : t.isVocal()) && void 0 !== n && n) || d.has(r)) && (c.unshift(r), d.add(r), c.length > 10 && ((c.length = 10), (d = new Set([...c]))), !0);
+        let { channelId: i } = e;
+        return !(null == i || !(null !== (n = null === (t = o.Z.getChannel(i)) || void 0 === t ? void 0 : t.isVocal()) && void 0 !== n && n) || u.has(i)) && (_.unshift(i), u.add(i), _.length > 10 && ((_.length = 10), (u = new Set([..._]))), !0);
     }
 });

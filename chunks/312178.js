@@ -6,20 +6,20 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     l = n(442837),
-    r = n(765250),
-    o = n(13245),
-    a = n(26229),
+    a = n(765250),
+    r = n(13245),
+    o = n(26229),
     d = n(552062),
     c = n(355863),
     u = n(237997),
     h = n(451478),
     p = n(434529),
     g = n(145597),
-    f = n(382790),
-    m = n(990673),
-    x = n(906037),
-    v = n(430036),
-    Z = n(383099),
+    m = n(382790),
+    f = n(990673),
+    v = n(906037),
+    Z = n(430036),
+    x = n(383099),
     S = n(981631);
 function E(e, t, n) {
     return (
@@ -36,37 +36,37 @@ function E(e, t, n) {
 }
 let C = {
     [S.Odu.TEXT](e) {
-        let { dragging: t, locked: n, pinned: s, dragStart: l, className: r } = e;
-        return (0, i.jsx)(v.Z, {
+        let { dragging: t, locked: n, pinned: s, dragStart: l, className: a } = e;
+        return (0, i.jsx)(Z.Z, {
             dragStart: l,
             locked: n,
             pinned: s,
             dragging: t,
-            className: r
+            className: a
         });
     },
     [S.Odu.GUILDS](e) {
         let { locked: t, dragStart: n, className: s } = e;
-        return (0, i.jsx)(f.Z, {
+        return (0, i.jsx)(m.Z, {
             dragStart: n,
             locked: t,
             className: s
         });
     },
     [S.Odu.VOICE](e) {
-        let { id: t, anchor: n, isPreviewingInGame: s, locked: l, pinned: r } = e;
-        return (0, i.jsx)(Z.Z, {
+        let { id: t, anchor: n, isPreviewingInGame: s, locked: l, pinned: a } = e;
+        return (0, i.jsx)(x.Z, {
             anchor: n,
             id: t,
             locked: l,
-            pinned: r,
+            pinned: a,
             widget: S.Odu.VOICE,
             isPreviewingInGame: s
         });
     },
     [S.Odu.GUILDS_TEXT](e) {
         let { dragging: t, locked: n, dragStart: s, className: l } = e;
-        return (0, i.jsx)(m.Z, {
+        return (0, i.jsx)(f.Z, {
             dragStart: s,
             dragging: t,
             locked: n,
@@ -75,20 +75,20 @@ let C = {
         });
     }
 };
-class I extends s.PureComponent {
+class y extends s.PureComponent {
     componentDidUpdate(e) {
-        this.props.locked && !e.locked && null != this.state.lastLayoutUpdate && (o.Z.track(S.rMx.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({ lastLayoutUpdate: null }));
+        this.props.locked && !e.locked && null != this.state.lastLayoutUpdate && (r.Z.track(S.rMx.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({ lastLayoutUpdate: null }));
     }
     renderWidget(e, t, n) {
         let {
                 props: { locked: i, isPreviewingInGame: s },
                 state: { dragging: l }
             } = this,
-            r = C[e.type];
-        return null == r
+            a = C[e.type];
+        return null == a
             ? null
-            : (o) =>
-                  r({
+            : (r) =>
+                  a({
                       id: e.id,
                       locked: i,
                       pinned: e.pinned,
@@ -96,20 +96,20 @@ class I extends s.PureComponent {
                       isPreviewingInGame: s,
                       anchor: t,
                       size: n,
-                      dragStart: o
+                      dragStart: r
                   });
     }
     render() {
-        let { widget: e, widgetConfig: t, layoutSize: n, locked: s, isPreviewingInGame: l, isActiveRegion: r } = this.props;
+        let { widget: e, widgetConfig: t, layoutSize: n, locked: s, isPreviewingInGame: l, isActiveRegion: a } = this.props;
         if (null == e || null == t) return null;
-        let { id: o, pinned: a, zIndex: c, size: u, anchor: h } = e,
+        let { id: r, pinned: o, zIndex: c, size: u, anchor: h } = e,
             g = (0, p.w_)(u, n),
-            f = (0, p.KR)(h, n),
-            { minSize: m, resizeX: v, resizeY: Z, dragAnywhere: S } = t,
-            E = (0, x.eM)({
+            m = (0, p.KR)(h, n),
+            { minSize: f, resizeX: Z, resizeY: x, dragAnywhere: S } = t,
+            E = (0, v.eM)({
                 locked: s,
                 isPreviewingInGame: l,
-                pinned: a
+                pinned: o
             }),
             C = {
                 minX: 0,
@@ -117,26 +117,26 @@ class I extends s.PureComponent {
                 maxX: n.width,
                 maxY: n.height
             },
-            I = this.renderWidget(e, f, g);
-        return null == I
+            y = this.renderWidget(e, m, g);
+        return null == y
             ? null
             : (0, i.jsx)(d.Z, {
-                  id: o,
+                  id: r,
                   size: g,
-                  anchor: f,
+                  anchor: m,
                   container: C,
-                  minSize: m,
+                  minSize: f,
                   hidden: !E,
-                  resizeX: v,
-                  resizeY: Z,
+                  resizeX: Z,
+                  resizeY: x,
                   style: { zIndex: c },
                   dragAnywhere: S,
-                  active: !s || r,
+                  active: !s || a,
                   onUpdate: this.handleUpdate,
                   onClick: this.handleFocus,
                   onDragStart: this.handleDragStart,
                   onDragEnd: this.handleDragEnd,
-                  children: I
+                  children: y
               });
     }
     constructor(...e) {
@@ -148,44 +148,44 @@ class I extends s.PureComponent {
             E(this, 'handleUpdate', (e, t, n, i, s) => {
                 let {
                     props: { layoutSize: l },
-                    state: { lastLayoutUpdate: o }
+                    state: { lastLayoutUpdate: r }
                 } = this;
                 if (!(0, g.Te)(l)) return;
-                let a = (0, p.jL)(n, l),
+                let o = (0, p.jL)(n, l),
                     u = (0, p.Ox)(i, l);
-                (0, r.Os)(t),
-                    (0, r.nv)({
+                (0, a.Os)(t),
+                    (0, a.nv)({
                         widgetId: t,
-                        anchor: a,
+                        anchor: o,
                         size: u
                     });
                 let h = e === d.B.MOVE,
-                    f = (0, p.PY)(n, l.width, l.height, s.width, s.height);
+                    m = (0, p.PY)(n, l.width, l.height, s.width, s.height);
                 this.setState({
                     lastLayoutUpdate: {
-                        was_resized: (null != o && o.was_resized) || !h,
-                        was_dragged: (null != o && o.was_dragged) || h,
+                        was_resized: (null != r && r.was_resized) || !h,
+                        was_dragged: (null != r && r.was_dragged) || h,
                         widget_type: c.Z.getWidgetType(t),
                         window_width: l.width,
                         window_height: l.height,
                         widget_width: s.width,
                         widget_height: s.height,
-                        widget_left: f.left,
-                        widget_top: f.top
+                        widget_left: m.left,
+                        widget_top: m.top
                     }
                 });
             }),
             E(this, 'handleFocus', (e) => {
                 let { layoutSize: t } = this.props;
-                (0, g.Te)(t) && (0, r.Os)(e);
+                (0, g.Te)(t) && (0, a.Os)(e);
             }),
             E(this, 'handleDragStart', () => {
                 let { widget: e } = this.props;
-                null != e && (e.pinned && o.Z.setPreviewInGameMode(!0), this.setState({ dragging: !0 }));
+                null != e && (e.pinned && r.Z.setPreviewInGameMode(!0), this.setState({ dragging: !0 }));
             }),
             E(this, 'handleDragEnd', () => {
                 let { widget: e } = this.props;
-                null != e && (e.pinned && o.Z.setPreviewInGameMode(!1), this.setState({ dragging: !1 }));
+                null != e && (e.pinned && r.Z.setPreviewInGameMode(!1), this.setState({ dragging: !1 }));
             });
     }
 }
@@ -200,8 +200,8 @@ let N = l.ZP.connectStores([c.Z, u.Z], (e) => {
         isPreviewingInGame: u.Z.isPreviewingInGame(),
         isActiveRegion: null != n && n.type === S.Odu.TEXT && i.has(S.O0n.TEXT_WIDGET)
     };
-})(I);
-function y(e, t) {
+})(y);
+function I(e, t) {
     return (0, i.jsx)(
         N,
         {
@@ -216,6 +216,6 @@ let _ = l.ZP.connectStores([c.Z, h.Z], () => {
     return {
         layout: null !== (e = c.Z.getLayout(g.qU)) && void 0 !== e ? e : void 0,
         layoutSize: h.Z.windowSize(),
-        renderWidget: y
+        renderWidget: I
     };
-})(a.Z);
+})(o.Z);

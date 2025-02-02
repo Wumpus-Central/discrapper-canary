@@ -42,15 +42,15 @@ var i = l(200651),
     Z = l(918701),
     y = l(977156),
     N = l(28798),
-    S = l(131951),
-    M = l(449224),
+    M = l(131951),
+    S = l(449224),
     R = l(358085),
-    b = l(463727),
-    I = l(855403),
-    A = l(299570),
-    G = l(960861),
-    _ = l(989941),
-    k = l(958707),
+    I = l(463727),
+    b = l(855403),
+    G = l(299570),
+    _ = l(960861),
+    k = l(989941),
+    A = l(958707),
     B = l(152165),
     O = l(133179),
     E = l(70722),
@@ -60,8 +60,8 @@ var i = l(200651),
     P = l(388032),
     H = l(545477);
 async function D() {
-    let e = S.Z.getVideoDevices(),
-        t = (0, u.Z)(S.Z.getMediaEngine(), [d.vA.WINDOW, d.vA.SCREEN], {
+    let e = M.Z.getVideoDevices(),
+        t = (0, u.Z)(M.Z.getMediaEngine(), [d.vA.WINDOW, d.vA.SCREEN], {
             width: 176,
             height: 99
         }),
@@ -144,20 +144,20 @@ async function U() {
     ).filter((e) => null !== e);
 }
 function W(e) {
-    let t = (0, R.isWindows)() ? (0, _.Z)(v.ZP, M.Z) : null,
+    let t = (0, R.isWindows)() ? (0, k.Z)(v.ZP, S.Z) : null,
         l = v.ZP.getRunningGames();
-    return null != t && (0, I.Z)(e.id, t.windowHandle) ? 2 : null != l.find((t) => (0, I.Z)(e.id, t.windowHandle)) ? 1 : 0;
+    return null != t && (0, b.Z)(e.id, t.windowHandle) ? 2 : null != l.find((t) => (0, b.Z)(e.id, t.windowHandle)) ? 1 : 0;
 }
 function V(e) {
     let { selectedSource: t, onChangeSelectedSource: l } = e,
-        { enableGoLiveCaptureCard: r } = b.Z.useExperiment({ location: 'GoLive_Source_Select' }),
-        a = S.Z.supports(F.AN.GO_LIVE_HARDWARE),
+        { enableGoLiveCaptureCard: r } = I.Z.useExperiment({ location: 'GoLive_Source_Select' }),
+        a = M.Z.supports(F.AN.GO_LIVE_HARDWARE),
         [c, o] = s.useState(null),
         [u, p] = s.useState(null),
-        [j, M] = s.useState(null),
+        [j, S] = s.useState(null),
         R = null != j && j.length > 0,
-        [A, G] = s.useState(d.vA.WINDOW),
-        [_, B] = s.useState(!1),
+        [G, _] = s.useState(d.vA.WINDOW),
+        [k, B] = s.useState(!1),
         E = s.useRef(null),
         U = s.useRef(new h.Xp()),
         V = (0, f.e7)([v.ZP], () => v.ZP.getRunningGames()),
@@ -167,7 +167,7 @@ function V(e) {
                 if (null == l || !i) return null;
                 for (let i of l) {
                     var s, r;
-                    let l = t.find((e) => (0, I.Z)(i.id, e.windowHandle));
+                    let l = t.find((e) => (0, b.Z)(i.id, e.windowHandle));
                     if ((null == l ? void 0 : l.id) == null) continue;
                     let n = (0, Z.lQ)(e, l.id);
                     if (null != n && (null === (s = n.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && (null === (r = n.userStatus) || void 0 === r ? void 0 : r.completedAt) == null)
@@ -189,11 +189,11 @@ function V(e) {
         return (
             D().then((e) => {
                 let { screenSources: t, windowSources: l, cameraSources: i } = e;
-                o(t), p(l), M(i);
+                o(t), p(l), S(i);
             }),
             e.start(1000, async () => {
                 let { screenSources: e, windowSources: t, cameraSources: l } = await D();
-                o(e), p(t), M(l);
+                o(e), p(t), S(l);
             }),
             () => {
                 e.stop();
@@ -216,7 +216,7 @@ function V(e) {
             case d.vA.CAMERA:
                 return j;
         }
-    })(A);
+    })(G);
     if (null == Y)
         return !1 === Q
             ? (0, i.jsxs)(x.Text, {
@@ -256,7 +256,7 @@ function V(e) {
             (0, i.jsxs)('div', {
                 className: H.segmentContainer,
                 children: [
-                    (0, i.jsx)(k.Z, { separator: _ }),
+                    (0, i.jsx)(A.Z, { separator: k }),
                     (0, i.jsx)(x.sY7, {
                         options: (function () {
                             let e = [
@@ -280,10 +280,10 @@ function V(e) {
                                 e
                             );
                         })(),
-                        value: A,
+                        value: G,
                         onChange: (e) => {
                             let { value: t } = e;
-                            return G(t);
+                            return _(t);
                         },
                         className: H.segmentControl,
                         optionClassName: H.segmentControlOption
@@ -298,7 +298,7 @@ function V(e) {
                     null != e && B(!e.isScrolledToTop());
                 },
                 children: [
-                    A === d.vA.WINDOW && null != J && (0, i.jsx)(N.Z, { quest: J.quest }),
+                    G === d.vA.WINDOW && null != J && (0, i.jsx)(N.Z, { quest: J.quest }),
                     (0, i.jsx)(m.Z, {
                         layout: m.Z.Layout.WRAP,
                         columns: 2,
@@ -374,7 +374,7 @@ function K(e) {
     s.useEffect(() => {
         let e = d.current,
             t = () => {
-                let e = Object.entries(S.Z.getVideoDevices()).filter((e) => {
+                let e = Object.entries(M.Z.getVideoDevices()).filter((e) => {
                     let [t, l] = e;
                     return !l.disabled;
                 });
@@ -498,17 +498,17 @@ function K(e) {
 }
 function Q(e) {
     let { onSourceSelect: t, onCancel: l, pickerType: r } = e,
-        { lastPickerAction: n, lastPickerError: a } = (0, f.e7)([G.ZP], () => G.ZP.getPickerState()),
+        { lastPickerAction: n, lastPickerError: a } = (0, f.e7)([_.ZP], () => _.ZP.getPickerState()),
         [o, d] = s.useState(!1);
     return (
-        (0, G.kE)(),
+        (0, _.kE)(),
         s.useEffect(() => {
-            (0, R.isLinux)() || ((0, R.isMac)() && c().satisfies(null === j.Z || void 0 === j.Z ? void 0 : j.Z.os.release, E.jR)) ? (0, A.T)(r) : (0, A.t)();
+            (0, R.isLinux)() || ((0, R.isMac)() && c().satisfies(null === j.Z || void 0 === j.Z ? void 0 : j.Z.os.release, E.jR)) ? (0, G.T)(r) : (0, G.t)();
         }, [r]),
         s.useEffect(() => {
-            o ? (n === G.Uc.Update ? t() : n === G.Uc.Cancel && ((0, A.t)(), l())) : (null == n || n === G.Uc.Present) && d(!0);
+            o ? (n === _.Uc.Update ? t() : n === _.Uc.Cancel && ((0, G.t)(), l())) : (null == n || n === _.Uc.Present) && d(!0);
         }, [o, n, t, l]),
-        n === G.Uc.Error
+        n === _.Uc.Error
             ? (0, i.jsx)(x.Text, {
                   className: H.errorMessage,
                   variant: 'text-md/normal',

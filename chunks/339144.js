@@ -55,7 +55,7 @@ let Z = l.memo(function (e) {
             let e = null != E && (0, m.vd)(E.type) ? E : null,
                 t = null != e ? e.getGuildId() : S;
             (0, o.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('56877')]).then(n.bind(n, 60594));
+                let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('80176')]).then(n.bind(n, 60594));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

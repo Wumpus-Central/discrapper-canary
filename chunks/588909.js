@@ -1,107 +1,107 @@
-i.d(e, { Z: () => O }), i(47120);
-var n = i(200651);
-i(192379);
-var l = i(952265),
-    s = i(24124),
-    o = i(13245),
-    r = i(620662),
-    a = i(835473),
-    d = i(442550),
-    u = i(293273),
-    c = i(145597),
-    h = i(603618),
-    E = i(380736),
-    p = i(620954),
-    S = i(987650),
-    f = i(981631),
-    g = i(602091),
-    _ = i(701488),
-    m = i(388032),
-    v = i(176463),
-    I = i(802334);
-function Z(t) {
-    let { game: e } = t,
-        i = (0, a.q)(e.id);
-    return null == i
+n.d(t, { Z: () => I }), n(47120);
+var i = n(200651);
+n(192379);
+var l = n(952265),
+    r = n(24124),
+    o = n(13245),
+    a = n(620662),
+    s = n(835473),
+    d = n(442550),
+    c = n(293273),
+    u = n(145597),
+    h = n(603618),
+    _ = n(380736),
+    p = n(620954),
+    g = n(987650),
+    f = n(981631),
+    m = n(602091),
+    v = n(701488),
+    x = n(388032),
+    E = n(176463),
+    Z = n(802334);
+function C(e) {
+    let { game: t } = e,
+        n = (0, s.q)(t.id);
+    return null == n
         ? null
-        : (0, n.jsx)(d.f, {
-              src: i.getIconURL(_.Si.LARGE),
+        : (0, i.jsx)(d.f, {
+              src: n.getIconURL(v.Si.LARGE),
               size: 40
           });
 }
-function O(t, e) {
-    let { trackView: a, trackClick: d } = (0, p.R)(S.n0.WelcomeNudge, { notif_type: S.n0.WelcomeNudge }),
-        _ = {};
-    for (let a of e)
-        switch (a.type) {
-            case S.nc.WELCOME: {
-                let e = (null == t ? void 0 : t.altId) != null ? u.Z.getApplicationActivity(t.altId) : (null == t ? void 0 : t.id) != null ? u.Z.getApplicationActivity(t.id) : null;
-                null != e &&
-                    (0, r.Z)(e, f.xjy.JOIN) &&
-                    ((_.cancelText = m.intl.string(m.t['6F9ivr'])),
-                    (_.onCancelClick = (t, i) => {
-                        d('unlock'), o.Z.updateNotificationStatus(i), o.Z.setInputLocked(!1, (0, c.QF)()), (0, s.h7)(e, !1, f.IlC.POPOUT);
+function I(e, t) {
+    let { trackView: s, trackClick: d } = (0, p.R)(g.n0.WelcomeNudge, { notif_type: g.n0.WelcomeNudge }),
+        v = {};
+    for (let s of t)
+        switch (s.type) {
+            case g.nc.WELCOME: {
+                let t = (null == e ? void 0 : e.altId) != null ? c.Z.getApplicationActivity(e.altId) : (null == e ? void 0 : e.id) != null ? c.Z.getApplicationActivity(e.id) : null;
+                null != t &&
+                    (0, a.Z)(t, f.xjy.JOIN) &&
+                    ((v.cancelText = x.intl.string(x.t['6F9ivr'])),
+                    (v.onCancelClick = (e, n) => {
+                        d('unlock'), o.Z.updateNotificationStatus(n), o.Z.setInputLocked(!1, (0, u.QF)()), (0, r.h7)(t, !1, f.IlC.POPOUT);
                     }));
                 break;
             }
-            case S.nc.GO_LIVE_VOICE:
-            case S.nc.GO_LIVE_NON_VOICE:
-                (_.confirmText = m.intl.string(m.t.U76Ft7)),
-                    (_.onConfirmClick = (t, e) => {
+            case g.nc.GO_LIVE_VOICE:
+            case g.nc.GO_LIVE_NON_VOICE:
+                (v.confirmText = x.intl.string(x.t.U76Ft7)),
+                    (v.onConfirmClick = (e, t) => {
                         d('unlock'),
-                            o.Z.updateNotificationStatus(e),
-                            o.Z.setInputLocked(!1, (0, c.QF)()),
+                            o.Z.updateNotificationStatus(t),
+                            o.Z.setInputLocked(!1, (0, u.QF)()),
                             (0, l.ZD)(
                                 async () => {
-                                    let { default: t } = await Promise.all([i.e('93382'), i.e('79477'), i.e('53424')]).then(i.bind(i, 60594));
-                                    return (e) =>
-                                        (0, n.jsx)(t, {
-                                            ...e,
+                                    let { default: e } = await Promise.all([n.e('79477'), n.e('73554')]).then(n.bind(n, 60594));
+                                    return (t) =>
+                                        (0, i.jsx)(e, {
+                                            ...t,
                                             selectSource: !1,
-                                            guildId: a.type === S.nc.GO_LIVE_VOICE ? a.voiceGuild.id : void 0,
-                                            selectGuild: a.type === S.nc.GO_LIVE_NON_VOICE,
+                                            guildId: s.type === g.nc.GO_LIVE_VOICE ? s.voiceGuild.id : void 0,
+                                            selectGuild: s.type === g.nc.GO_LIVE_NON_VOICE,
                                             analyticsLocation: f.Sbl.OVERLAY_NUDGE
                                         });
                                 },
-                                { contextKey: g.u1 }
+                                { contextKey: m.u1 }
                             );
                     });
                 break;
-            case S.nc.CONTENT_INVENTORY:
-                (_.renderFooter = () =>
-                    (0, n.jsx)('div', {
-                        className: I.container,
-                        children: (0, n.jsx)(h.i, { entries: a.entries })
+            case g.nc.CONTENT_INVENTORY:
+                (v.renderFooter = () =>
+                    (0, i.jsx)('div', {
+                        className: Z.container,
+                        children: (0, i.jsx)(h.i, { entries: s.entries })
                     })),
-                    (_.onNotificationShow = () => {
+                    (v.onNotificationShow = () => {
                         o.Z.track(f.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
-                            user_ids: a.entries.map((t) => t.author_id),
-                            entry_ids: a.entries.map((t) => t.id)
+                            user_ids: s.entries.map((e) => e.author_id),
+                            entry_ids: s.entries.map((e) => e.id)
                         });
                     });
         }
     return {
         icon:
-            null != t
-                ? (0, n.jsx)(Z, { game: t })
-                : (0, n.jsx)('img', {
-                      src: i(328756),
-                      className: v.icon,
+            null != e
+                ? (0, i.jsx)(C, { game: e })
+                : (0, i.jsx)('img', {
+                      src: n(328756),
+                      className: E.icon,
                       alt: ''
                   }),
-        title: null != t ? t.name : m.intl.string(m.t.pkXAeH),
+        title: null != e ? e.name : x.intl.string(x.t.pkXAeH),
         body: null,
-        hint: () => (0, E.QR)((0, p.P)(), m.t.e6giBQ, m.intl.string(m.t.jZkzVF)),
-        onNotificationShow: (t) => {
-            var e;
-            a(), null === (e = _.onNotificationShow) || void 0 === e || e.call(_, t);
+        hint: () => (0, _.QR)((0, p.P)(), x.t.e6giBQ, x.intl.string(x.t.jZkzVF)),
+        onNotificationShow: (e) => {
+            var t;
+            s(), null === (t = v.onNotificationShow) || void 0 === t || t.call(v, e);
         },
         onNotificationClick: () => {
-            d('unlock'), o.Z.setInputLocked(!1, (0, c.QF)());
+            d('unlock'), o.Z.setInputLocked(!1, (0, u.QF)());
         },
         onDismissClick: () => {
             d('dismiss');
         },
-        ..._
+        ...v
     };
 }

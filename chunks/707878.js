@@ -1,51 +1,51 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(442837),
-    r = n(481060),
-    o = n(13245),
-    a = n(313201),
+    a = n(481060),
+    r = n(13245),
+    o = n(313201),
     d = n(237997),
     c = n(766032),
     u = n(987650),
     h = n(981631),
     p = n(388032),
     g = n(394977);
-let f = Object.values(u.wF).map((e) => 100 * e),
-    m = (0, a.hQ)();
-class x extends s.PureComponent {
+let m = Object.values(u.wF).map((e) => 100 * e),
+    f = (0, o.hQ)();
+class v extends s.PureComponent {
     handleUpdateBackgroundOpacity(e) {
-        o.Z.setTextWidgetOpacity((0, c.Z)(e / 100)), o.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
+        r.Z.setTextWidgetOpacity((0, c.Z)(e / 100)), r.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
     }
     handlePreviewBackgroundOpacity(e) {
-        o.Z.setTextWidgetOpacity((0, c.Z)(e / 100));
+        r.Z.setTextWidgetOpacity((0, c.Z)(e / 100));
     }
     render() {
         return (0, i.jsxs)('div', {
             className: g.container,
             children: [
-                (0, i.jsx)(r.vwX, {
-                    id: m,
-                    tag: r.RB0.H5,
+                (0, i.jsx)(a.vwX, {
+                    id: f,
+                    tag: a.RB0.H5,
                     className: g.title,
                     children: p.intl.string(p.t.OVovCQ)
                 }),
                 (0, i.jsx)('div', {
                     className: g.sliderContainer,
-                    children: (0, i.jsx)(r.iRW, {
+                    children: (0, i.jsx)(a.iRW, {
                         mini: !0,
                         initialValue: this.initialValue,
                         defaultValue: this.initialValue,
-                        minValue: f[0],
-                        maxValue: f[f.length - 1],
+                        minValue: m[0],
+                        maxValue: m[m.length - 1],
                         handleSize: 10,
                         onValueChange: this.handleUpdateBackgroundOpacity,
                         asValueChanges: this.handlePreviewBackgroundOpacity,
-                        markers: f,
+                        markers: m,
                         onMarkerRender: h.dG4,
                         equidistant: !0,
                         stickToMarkers: !0,
-                        'aria-labelledby': m
+                        'aria-labelledby': f
                     })
                 })
             ]
@@ -66,4 +66,4 @@ class x extends s.PureComponent {
                 : (this[t] = n);
     }
 }
-let v = l.ZP.connectStores([d.Z], () => ({ opacity: d.Z.getTextWidgetOpacity() }))(x);
+let Z = l.ZP.connectStores([d.Z], () => ({ opacity: d.Z.getTextWidgetOpacity() }))(v);

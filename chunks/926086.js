@@ -1,16 +1,16 @@
 n.d(t, { Z: () => g }), n(47120), n(411104);
 var i = n(200651),
-    r = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    l = n(348327),
-    s = n.n(l),
-    c = n(642128),
-    d = n(481060),
+    l = n(192379),
+    r = n(120356),
+    o = n.n(r),
+    a = n(348327),
+    s = n.n(a),
+    d = n(642128),
+    c = n(481060),
     u = n(667142),
     h = n(333031),
     _ = n(70491);
-let m = {
+let p = {
     mass: 1,
     tension: 600,
     friction: 60,
@@ -18,79 +18,79 @@ let m = {
 };
 function g(e) {
     let { locked: t, pinned: n } = e,
-        [o, l] = r.useState(0),
-        [g, p] = r.useState(0),
-        [f, x] = r.useState(0),
-        v = r.useRef(0),
-        [C, b] = r.useState(0),
-        { timeToLiveMs: Z, reappearTimeMs: I } = u.ZP.useState(
+        [r, a] = l.useState(0),
+        [g, f] = l.useState(0),
+        [m, v] = l.useState(0),
+        x = l.useRef(0),
+        [E, Z] = l.useState(0),
+        { timeToLiveMs: C, reappearTimeMs: I } = u.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
                 reappearTimeMs: e.reappearTimeMs
             }),
             s()
         ),
-        j = {
-            timeToLiveMs: Z,
+        S = {
+            timeToLiveMs: C,
             reappearTimeMs: I
         },
-        w = r.useRef(j);
-    r.useEffect(() => void (w.current = j)),
-        r.useEffect(
+        b = l.useRef(S);
+    l.useEffect(() => void (b.current = S)),
+        l.useEffect(
             () => (
-                (v.current = setInterval(() => {
+                (x.current = setInterval(() => {
                     let e = Date.now();
-                    p(e),
-                        x((t) => {
+                    f(e),
+                        v((t) => {
                             if (0 === t) return e;
                             let n = e - t,
-                                i = w.current.timeToLiveMs,
-                                r = i + w.current.reappearTimeMs;
-                            return n > i ? t + r : t;
+                                i = b.current.timeToLiveMs,
+                                l = i + b.current.reappearTimeMs;
+                            return n > i ? t + l : t;
                         });
                 }, 100)),
                 () => {
-                    clearInterval(v.current);
+                    clearInterval(x.current);
                 }
             ),
             []
         );
     let y = () => {
-            l(Date.now()), b((e) => e + 1);
+            a(Date.now()), Z((e) => e + 1);
         },
-        E = o > 0 && g - o < 1000,
-        k = (0, d.Yzy)(f > 0 && f < g && g - f < Z, {
+        N = r > 0 && g - r < 1000,
+        w = (0, c.Yzy)(m > 0 && m < g && g - m < C, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
-            config: m
+            config: p
         }),
-        [N, S] = r.useState(!1);
+        [T, O] = l.useState(!1);
     if (
-        (r.useEffect(() => {
-            C > 10 && S(!0);
-        }, [C]),
-        N)
+        (l.useEffect(() => {
+            E > 10 && O(!0);
+        }, [E]),
+        T)
     )
         throw Error('ClickZoneDebugWidget crashed, too many clicks');
     return t && !n
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: k(
+              children: w(
                   (e, t) =>
                       t &&
-                      (0, i.jsx)(c.animated.div, {
+                      (0, i.jsx)(d.animated.div, {
                           style: e,
                           className: _.clickZoneDebugContainer,
                           children: (0, i.jsx)(h.Z, {
-                              className: a()(_.clickZone, E && _.clickBackground),
-                              children: (0, i.jsx)(d.P3F, {
+                              className: o()(_.clickZone, N && _.clickBackground),
+                              children: (0, i.jsx)(c.P3F, {
                                   onClick: y,
                                   className: _.clickable,
-                                  children: (0, i.jsxs)(d.Text, {
+                                  children: (0, i.jsxs)(c.Text, {
                                       variant: 'text-md/semibold',
                                       color: 'always-white',
-                                      children: ['Click Me (', C, ')']
+                                      children: ['Click Me (', E, ')']
                                   })
                               })
                           })

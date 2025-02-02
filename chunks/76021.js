@@ -20,7 +20,7 @@ function v(e, t, v) {
     let y = l.Z.getWindowOpen(g.KJ3.CHANNEL_CALL_POPOUT) ? g.KJ3.CHANNEL_CALL_POPOUT : null;
     if (((0, o.Z)(y), m.isPlatformEmbedded))
         (0, r.ZDy)(async () => {
-            let { default: t } = await Promise.all([n.e('93382'), n.e('79477'), n.e('38128')]).then(n.bind(n, 60594));
+            let { default: t } = await Promise.all([n.e('93382'), n.e('79477'), n.e('66770')]).then(n.bind(n, 60594));
             return (n) =>
                 (0, i.jsx)(t, {
                     ...n,
