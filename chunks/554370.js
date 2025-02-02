@@ -138,10 +138,11 @@ function ea(e) {
             [V.ZP, N.Z, w.Z, b.Z],
             () => {
                 let e = w.Z.windowSize((0, R.ZY)(n)),
-                    t = b.Z.getOverlayKeybind();
+                    t = b.Z.getOverlayKeybind(),
+                    i = (0, k.QF)();
                 return {
-                    locked: V.ZP.isInputLocked((0, k.QF)()),
-                    focused: V.ZP.isFocused((0, k.QF)()),
+                    locked: V.ZP.isInputLocked(i),
+                    focused: i === k.Js ? N.Z.isFocused(i) : V.ZP.isFocused((0, k.QF)()),
                     incompatibleApp: N.Z.incompatibleApp,
                     hasValidResolution: (0, k.Te)(e),
                     hasZeroSizeDimension: 0 === e.height || 0 === e.width,
