@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(653041);
+n.d(t, { Z: () => g }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(653041);
 var i = n(200651),
     s = n(192379),
     r = n(442837),
@@ -7,14 +7,17 @@ var i = n(200651),
     o = n(205822),
     c = n(329013),
     d = n(594174),
-    u = n(731994),
-    m = n(421794);
-function h() {
-    let [e, t] = (0, s.useState)(!1),
-        [n, r] = (0, s.useState)(null),
-        [a, d] = (0, s.useState)([]),
-        h = (0, s.useCallback)((e) => {
-            r((t) =>
+    u = n(190624),
+    m = n(731994),
+    h = n(421794);
+function g() {
+    var e;
+    let [t, n] = (0, s.useState)(!1),
+        [r, a] = (0, s.useState)(!1),
+        [d, g] = (0, s.useState)(null),
+        [C, f] = (0, s.useState)([]),
+        T = (0, s.useCallback)((e) => {
+            g((t) =>
                 null == t
                     ? { src: e }
                     : {
@@ -23,8 +26,8 @@ function h() {
                       }
             );
         }, []),
-        E = (0, s.useCallback)((e) => {
-            r((t) =>
+        N = (0, s.useCallback)((e) => {
+            g((t) =>
                 null == t
                     ? { animatedSrc: e }
                     : {
@@ -33,33 +36,66 @@ function h() {
                       }
             );
         }, []),
-        C = (0, s.useCallback)((e) => {
-            d((t) => t.filter((t) => t !== e));
+        I = (0, s.useCallback)((e) => {
+            f((t) => t.filter((t) => t !== e));
         }, []);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: m.controls,
+                className: h.controls,
                 children: [
-                    (0, i.jsx)(l.zxk, {
-                        className: m.themesButton,
-                        onClick: () => t((e) => !e),
-                        color: l.Ttl.PRIMARY,
-                        children: 'Toggle Themes'
+                    (0, i.jsxs)('div', {
+                        className: h.toggles,
+                        children: [
+                            (0, i.jsx)(l.zxk, {
+                                className: h.toggleButton,
+                                size: l.PhG.SMALL,
+                                onClick: () => {
+                                    a(!1), n((e) => !e);
+                                },
+                                color: l.Ttl.PRIMARY,
+                                children: 'Toggle Themes'
+                            }),
+                            (0, i.jsx)(l.zxk, {
+                                className: h.toggleButton,
+                                size: l.PhG.SMALL,
+                                onClick: () => {
+                                    n(!1), a((e) => !e);
+                                },
+                                color: l.Ttl.PRIMARY,
+                                children: 'Toggle Gradients'
+                            })
+                        ]
                     }),
-                    e &&
-                        (0, i.jsx)('div', {
-                            className: m.themePicker,
-                            children: (0, i.jsx)(c.i, {})
-                        })
+                    (0, i.jsxs)('div', {
+                        className: h.themePicker,
+                        children: [
+                            t && (0, i.jsx)(c.i, {}),
+                            ' ',
+                            r &&
+                                (0, i.jsx)(u.Z, {
+                                    selected: null == d ? void 0 : null === (e = d.palette) || void 0 === e ? void 0 : e.name,
+                                    onSelect: (e) => {
+                                        g((t) =>
+                                            null == t
+                                                ? { palette: e }
+                                                : {
+                                                      ...t,
+                                                      palette: e
+                                                  }
+                                        );
+                                    }
+                                })
+                        ]
+                    })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: m.main,
+                className: h.main,
                 children: [
-                    (0, i.jsx)('div', { children: (0, i.jsx)(p, { namePlate: n }) }),
+                    (0, i.jsx)('div', { children: (0, i.jsx)(E, { namePlate: d }) }),
                     (0, i.jsxs)('div', {
-                        className: m.buttons,
+                        className: h.buttons,
                         children: [
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/semibold',
@@ -68,34 +104,34 @@ function h() {
                             (0, i.jsx)(o.Z, {
                                 title: 'upload image',
                                 description: 'upload the background',
-                                icons: u.pA,
+                                icons: m.pA,
                                 onDrop: (e) => {
                                     let t = URL.createObjectURL(e[0]);
-                                    d((e) => {
+                                    f((e) => {
                                         let n = Array.from(e);
                                         return n.push(t), n;
                                     });
                                 }
                             }),
                             (0, i.jsx)('div', {
-                                className: m.uploadedArea,
-                                children: a.map((e) =>
+                                className: h.uploadedArea,
+                                children: C.map((e) =>
                                     (0, i.jsx)(
-                                        g,
+                                        _,
                                         {
                                             src: e,
-                                            onSetStatic: h,
-                                            onSetAnimated: E,
-                                            removeAsset: C
+                                            onSetStatic: T,
+                                            onSetAnimated: N,
+                                            removeAsset: I
                                         },
                                         e
                                     )
                                 )
                             }),
-                            (0, i.jsx)(x, {
+                            (0, i.jsx)(p, {
                                 label: 'border color',
                                 onChange: (e) =>
-                                    r((t) =>
+                                    g((t) =>
                                         null == t
                                             ? { borderColor: e }
                                             : {
@@ -104,19 +140,19 @@ function h() {
                                               }
                                     )
                             }),
-                            (0, i.jsx)(_, {
+                            (0, i.jsx)(x, {
                                 label: 'set',
                                 onClick: () => {}
                             }),
-                            (0, i.jsx)(_, {
+                            (0, i.jsx)(x, {
                                 label: 'share',
                                 onClick: () => {}
                             }),
-                            (0, i.jsx)(_, {
+                            (0, i.jsx)(x, {
                                 label: 'save',
                                 onClick: () => {}
                             }),
-                            (0, i.jsx)(_, {
+                            (0, i.jsx)(x, {
                                 label: 'sell',
                                 onClick: () => {}
                             })
@@ -127,14 +163,14 @@ function h() {
         ]
     });
 }
-function g(e) {
+function _(e) {
     let { src: t, onSetStatic: n, onSetAnimated: s, removeAsset: r } = e;
     return (0, i.jsxs)('div', {
-        className: m.uploaded,
+        className: h.uploaded,
         children: [
             (0, i.jsx)(l.P3F, {
                 onClick: () => r(t),
-                className: m.xicon,
+                className: h.xicon,
                 children: (0, i.jsx)(l.Dio, {
                     size: 'custom',
                     width: 16,
@@ -143,12 +179,12 @@ function g(e) {
                 })
             }),
             (0, i.jsx)('img', {
-                className: m.uploadedImg,
+                className: h.uploadedImg,
                 src: t,
                 alt: ''
             }),
             (0, i.jsxs)('div', {
-                className: m.uploadedControls,
+                className: h.uploadedControls,
                 children: [
                     (0, i.jsx)(l.zxk, {
                         onClick: () => n(t),
@@ -167,10 +203,10 @@ function g(e) {
         ]
     });
 }
-function _(e) {
+function x(e) {
     let { label: t, onClick: n } = e;
     return (0, i.jsxs)('div', {
-        className: m.flex,
+        className: h.flex,
         children: [
             (0, i.jsx)(l.Text, {
                 variant: 'text-sm/normal',
@@ -186,10 +222,10 @@ function _(e) {
         ]
     });
 }
-function x(e) {
+function p(e) {
     let { label: t, onChange: n } = e;
     return (0, i.jsxs)('div', {
-        className: m.hexInput,
+        className: h.hexInput,
         children: [
             (0, i.jsx)(l.Text, {
                 variant: 'text-sm/normal',
@@ -199,17 +235,17 @@ function x(e) {
                 onChange: (e) => {
                     n(e.target.value);
                 },
-                className: m.inputs,
+                className: h.inputs,
                 placeholder: '#000000'
             })
         ]
     });
 }
-function p(e) {
+function E(e) {
     let { namePlate: t } = e,
         n = (0, r.e7)([d.default], () => d.default.getCurrentUser());
     return (0, i.jsxs)('div', {
-        className: m.preview,
+        className: h.preview,
         children: [
             (0, i.jsxs)('div', {
                 children: [
