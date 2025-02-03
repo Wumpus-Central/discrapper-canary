@@ -239,12 +239,13 @@ let F = {
             )
     },
     soundboard: {
-        react: (e) =>
+        react: (e, t, n) =>
             (0, i.jsx)(v.ZP, {
                 channelId: e.channelId,
                 messageId: e.messageId,
                 soundId: e.soundId,
-                jumbo: e.jumboable
+                jumbo: e.jumboable,
+                messageSounds: n.soundboardSounds
             })
     },
     staticRouteLink: {

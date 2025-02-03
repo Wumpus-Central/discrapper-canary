@@ -18,17 +18,19 @@ let l = 30,
     u = new Set([o.hBH.IMAGE, o.hBH.GIFV]),
     c = new Set(['strong', 'em', 'u', 'text', 'inlineCode', 's', 'spoiler']);
 function d(e, t) {
-    let n = f({
+    var n;
+    let i = f({
             channelId: e.channel_id,
             messageId: e.id,
             renderOptions: t
         }),
-        i = null != e.webhookId;
+        r = null != e.webhookId;
     return {
-        ...n,
-        allowLinks: i || n.allowLinks,
-        allowEmojiLinks: i,
-        mentionChannels: e.mentionChannels
+        ...i,
+        allowLinks: r || i.allowLinks,
+        allowEmojiLinks: r,
+        mentionChannels: e.mentionChannels,
+        soundboardSounds: null !== (n = e.soundboardSounds) && void 0 !== n ? n : []
     };
 }
 function f(e) {
@@ -48,6 +50,7 @@ function f(e) {
         allowEmojiLinks: !1,
         disableAutoBlockNewlines: !0,
         mentionChannels: [],
+        soundboardSounds: [],
         muted: !1,
         unknownUserMentionPlaceholder: !0,
         viewingChannelId: i.viewingChannelId,
@@ -98,6 +101,7 @@ function m(e, t, n, i) {
             allowDevLinks: !1,
             allowEmojiLinks: !1,
             mentionChannels: [],
+            soundboardSounds: [],
             isInteracting: !1,
             formatInline: !1,
             noStyleAndInteraction: !1,
