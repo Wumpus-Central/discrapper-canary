@@ -22,8 +22,8 @@ var i,
     g = n(639351),
     v = n(630388),
     _ = n(51144),
-    S = n(981631),
-    I = n(354459),
+    I = n(981631),
+    S = n(354459),
     x = n(927923),
     E = n(388032),
     C = n(939214);
@@ -124,7 +124,7 @@ function b(e) {
                     'activity'
                 )
             ),
-        T === x.YE.XBOX || P === I.wR.XBOX
+        T === x.YE.XBOX || P === S.wR.XBOX
             ? M.push(
                   (0, l.jsx)(
                       'div',
@@ -135,7 +135,7 @@ function b(e) {
                       'xbox'
                   )
               )
-            : (T === x.YE.PLAYSTATION || P === I.wR.PLAYSTATION) &&
+            : (T === x.YE.PLAYSTATION || P === S.wR.PLAYSTATION) &&
               M.push(
                   (0, l.jsx)(
                       'div',
@@ -173,7 +173,7 @@ function b(e) {
                       'watch'
                   )
               );
-    let U = null != j && !(0, v.yE)(j.flags, S.udG.EMBEDDED);
+    let U = null != j && !(0, v.yE)(j.flags, I.udG.EMBEDDED);
     return 0 !== M.length || null != D || U
         ? (0, l.jsxs)('div', {
               className: s()(C.icons, t),
@@ -219,11 +219,11 @@ class N extends (i = a.Component) {
         let { speaking: e, user: t, size: n, avatarContainerClass: i, guildId: a } = this.props;
         return (0, l.jsx)('div', {
             className: s()(i, C.avatar, {
-                [C.avatarLarge]: n === S.ipw.LARGE,
-                [C.avatarSmall]: n === S.ipw.SMALL,
+                [C.avatarLarge]: n === I.ipw.LARGE,
+                [C.avatarSmall]: n === I.ipw.SMALL,
                 [C.avatarSpeaking]: e
             }),
-            style: { backgroundImage: 'url('.concat(t.getAvatarURL(a, n === S.ipw.LARGE ? 38 : 24), ')') }
+            style: { backgroundImage: 'url('.concat(t.getAvatarURL(a, n === I.ipw.LARGE ? 38 : 24), ')') }
         });
     }
     renderName() {
@@ -250,7 +250,7 @@ class N extends (i = a.Component) {
                 isOverlay: u,
                 disableTooltip: !0,
                 className: s()(C.clanTag, u && C.isOverlay),
-                profileViewedAnalytics: { source: u ? S.jXE.OVERLAY : S.Sbl.VOICE_PANEL }
+                profileViewedAnalytics: { source: u ? I.jXE.OVERLAY : I.Sbl.VOICE_PANEL }
             };
         return !n || u
             ? (0, l.jsx)(l.Fragment, {
@@ -272,8 +272,8 @@ class N extends (i = a.Component) {
                 [C.overlap]: u,
                 [C.selected]: r,
                 [C.clickable]: null != e,
-                [C.userSmall]: i === S.ipw.SMALL,
-                [C.userLarge]: i === S.ipw.LARGE,
+                [C.userSmall]: i === I.ipw.SMALL,
+                [C.userLarge]: i === I.ipw.LARGE,
                 [C.disabled]: !r && c,
                 [C.ringing]: f
             }),
@@ -323,7 +323,7 @@ class N extends (i = a.Component) {
 Z(N, 'defaultProps', {
     avatarContainerClass: C.avatarContainer,
     userNameClassName: C.usernameFont,
-    size: S.ipw.SMALL,
+    size: I.ipw.SMALL,
     selected: !1,
     disabled: !1,
     isOverlay: !1
@@ -336,7 +336,7 @@ function A(e) {
     return (
         a.useEffect(() => {
             m &&
-                d.ZP.trackWithMetadata(S.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
+                d.ZP.trackWithMetadata(I.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
                     channel_id: r,
                     guild_id: i,
                     user_id: u
@@ -353,7 +353,7 @@ function A(e) {
                     game: t,
                     size: p.Z.Sizes.XSMALL,
                     onMouseEnter: () => {
-                        d.ZP.trackWithMetadata(S.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
+                        d.ZP.trackWithMetadata(I.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
                             channel_id: r,
                             guild_id: i,
                             game_name: t.name,

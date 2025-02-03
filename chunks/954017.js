@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => _,
-    R: () => S
+    R: () => I
 });
 var i = n(512722),
     l = n.n(i),
@@ -27,7 +27,7 @@ let _ = async (e) => {
             reaction: t
         });
     },
-    S = async (e) => {
+    I = async (e) => {
         let { reply: t, altText: n, ...i } = e,
             r = await x(i),
             s = await a.Z.openPrivateChannel(i.user.id, !1, !1),
@@ -40,7 +40,7 @@ let _ = async (e) => {
                 reply: t
             });
     },
-    I = (e) => {
+    S = (e) => {
         let { activity: t, application: i, user: l } = e,
             { theme: a } = (0, g.j3)(l, 'black'),
             r = 'dark' === a,
@@ -58,7 +58,7 @@ let _ = async (e) => {
     x = async (e) => {
         let { user: t, activity: n, application: i, stream: l } = e,
             d = await a.Z.openPrivateChannel(t.id, !1, !1),
-            m = I({
+            m = S({
                 activity: n,
                 application: i,
                 user: t

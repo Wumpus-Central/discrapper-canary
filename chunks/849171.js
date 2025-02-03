@@ -25,8 +25,8 @@ var i,
     g = n(716600),
     v = n(778569),
     _ = n(563218),
-    S = n(318891),
-    I = n(884338),
+    I = n(318891),
+    S = n(884338),
     x = n(719296),
     E = n(958185),
     C = n(100527),
@@ -54,7 +54,7 @@ function F(e) {
     let { avatarSize: t, guildId: n, channelId: i, users: a } = e,
         r = null != t ? t : c.EFr.SIZE_32,
         s = (0, c.pxk)(r);
-    return (0, l.jsx)(I.Z, {
+    return (0, l.jsx)(S.Z, {
         size: s,
         guildId: n,
         users: a,
@@ -97,15 +97,15 @@ function V(e) {
     let { participants: i, application: r, channel: p, width: g } = e,
         v = D(g),
         [_] = U(g),
-        S = (0, o.Wu)([w.default, T.default], () =>
+        I = (0, o.Wu)([w.default, T.default], () =>
             Array.from(i)
                 .map((e) => ((0, f.J)(e, T.default) ? null : w.default.getUser(e.userId)))
                 .filter(P.lm)
         ),
-        I = (0, o.e7)([d.ZP], () => d.ZP.getEmbeddedActivitiesForChannel(p.id).find((e) => e.applicationId === r.id)),
+        S = (0, o.e7)([d.ZP], () => d.ZP.getEmbeddedActivitiesForChannel(p.id).find((e) => e.applicationId === r.id)),
         { analyticsLocations: x } = (0, Z.ZP)(),
         E = (0, u.O)(),
-        C = j.ZP.getName(p.getGuildId(), p.id, null == S ? void 0 : S[0]),
+        C = j.ZP.getName(p.getGuildId(), p.id, null == I ? void 0 : I[0]),
         b =
             (0, h.s5)({
                 userId: null === (t = w.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -134,7 +134,7 @@ function V(e) {
                 avatarSize: _,
                 guildId: N,
                 channelId: p.id,
-                users: S
+                users: I
             }),
             (0, l.jsx)(c.Text, {
                 className: s()(k.subheader, {
@@ -143,10 +143,10 @@ function V(e) {
                 }),
                 variant: 'text-sm/normal',
                 children:
-                    S.length > 1
+                    I.length > 1
                         ? R.intl.formatToPlainString(R.t.cpe6CA, {
                               username: C,
-                              count: S.length - 1
+                              count: I.length - 1
                           })
                         : R.intl.formatToPlainString(R.t['7Uuia2'], { username: C })
             }),
@@ -164,9 +164,9 @@ function V(e) {
                     ? (0, l.jsx)(c.zxk, {
                           onClick: function (e) {
                               e.stopPropagation(),
-                                  null != I &&
+                                  null != S &&
                                       (0, m.Z)({
-                                          applicationId: I.applicationId,
+                                          applicationId: S.applicationId,
                                           activityChannelId: p.id,
                                           locationObject: E.location,
                                           analyticsLocations: x,
@@ -197,7 +197,7 @@ function W(e) {
             names: M,
             size: O
         }),
-        I = !i && m,
+        S = !i && m,
         y = !m,
         T = !m && !i,
         w = (0, o.e7)([A.Z, N.Z], () =>
@@ -208,18 +208,18 @@ function W(e) {
         );
     return (
         a.useEffect(() => {
-            if (I && null != d && !w) {
+            if (S && null != d && !w) {
                 let e = (0, x.Z)(d.location.id, d.applicationId);
-                (0, S.jy)(e);
+                (0, I.jy)(e);
             }
-        }, [I, d, w]),
+        }, [S, d, w]),
         (0, l.jsx)(Z.Gt, {
             value: c,
             children: (0, l.jsx)('div', {
                 className: k.container,
                 children: (0, l.jsxs)(l.Fragment, {
                     children: [
-                        I &&
+                        S &&
                             null != d &&
                             (0, l.jsx)(_.Z, {
                                 className: k.iframe,

@@ -16,24 +16,24 @@ var l = n(442837),
     g = n(388032),
     v = n(951908);
 function _(e) {
-    let { isCurrentUser: t, color: n, look: _, applicationStream: S, onAction: I } = e,
+    let { isCurrentUser: t, color: n, look: _, applicationStream: I, onAction: S } = e,
         { activeStream: x, watchingOtherStream: E } = (0, l.cj)([d.Z], () => ({
-            activeStream: d.Z.getActiveStreamForApplicationStream(S),
+            activeStream: d.Z.getActiveStreamForApplicationStream(I),
             watchingOtherStream:
-                null != S &&
-                d.Z.getAllActiveStreamsForChannel(S.channelId).filter((e) => {
+                null != I &&
+                d.Z.getAllActiveStreamsForChannel(I.channelId).filter((e) => {
                     let { ownerId: t } = e;
-                    return t !== S.ownerId;
+                    return t !== I.ownerId;
                 }).length > 0
         })),
-        C = (0, l.e7)([m.Z], () => m.Z.getChannel(null == S ? void 0 : S.channelId)),
+        C = (0, l.e7)([m.Z], () => m.Z.getChannel(null == I ? void 0 : I.channelId)),
         [Z, y] = (0, u.wq)(C),
         b = (0, c.Aq)(),
-        N = null != x && null != S && x.state !== h.jm8.ENDED && x.ownerId === S.ownerId,
+        N = null != x && null != I && x.state !== h.jm8.ENDED && x.ownerId === I.ownerId,
         T = (e) => {
-            null != S && (null == I || I(), s.default.selectVoiceChannel(S.channelId), N || (0, o.iV)(S, { forceMultiple: e }), b.dispatch(h.CkL.POPOUT_CLOSE), f.S.dispatch(h.CkL.MODAL_CLOSE), r.Z.popAll());
+            null != I && (null == S || S(), s.default.selectVoiceChannel(I.channelId), N || (0, o.iV)(I, { forceMultiple: e }), b.dispatch(h.CkL.POPOUT_CLOSE), f.S.dispatch(h.CkL.MODAL_CLOSE), r.Z.popAll());
         };
-    if (null == S) return null;
+    if (null == I) return null;
     let A = (0, u.P9)(y);
     t ? (A = g.intl.string(g.t.XvBdeX)) : N && (A = g.intl.string(g.t.JH1SJy));
     let w = {

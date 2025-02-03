@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(314897),
     v = n(592125),
     _ = n(594174),
-    S = n(849171),
-    I = n(388032),
+    I = n(849171),
+    S = n(388032),
     x = n(712434);
 function E(e) {
     let { participant: t, width: n, channelId: a } = e,
@@ -26,8 +26,8 @@ function E(e) {
         [c] = (0, h.Z)([o]),
         { url: u } = (0, m.Z)({
             applicationId: o,
-            names: S.Ix,
-            size: S.bn
+            names: I.Ix,
+            size: I.bn
         }),
         d = l.useMemo(
             () => ({
@@ -64,8 +64,8 @@ function E(e) {
 }
 function C(e) {
     let { width: t, channelId: n, participant: a, applicationId: m } = e,
-        f = (0, S.V_)(t),
-        [E] = (0, S.Ym)(t),
+        f = (0, I.V_)(t),
+        [E] = (0, I.Ym)(t),
         C = (0, s.e7)([v.Z], () => v.Z.getChannel(n)),
         Z = (0, s.e7)([_.default, g.default], () => ((0, d.J)(a, g.default) ? null : _.default.getUser(a.userId))),
         y = l.useMemo(() => (null != Z ? [Z] : []), [Z]),
@@ -98,7 +98,7 @@ function C(e) {
         : (0, i.jsxs)('div', {
               className: x.splash,
               children: [
-                  (0, i.jsx)(S.OV, {
+                  (0, i.jsx)(I.OV, {
                       avatarSize: E,
                       guildId: C.guild_id,
                       channelId: C.id,
@@ -106,16 +106,16 @@ function C(e) {
                   }),
                   (0, i.jsx)(o.Text, {
                       className: r()(x.subheader, {
-                          [x.small]: f === S.nR.SMALL,
-                          [x.medium]: f === S.nR.MEDIUM
+                          [x.small]: f === I.nR.SMALL,
+                          [x.medium]: f === I.nR.MEDIUM
                       }),
                       variant: 'text-sm/normal',
-                      children: I.intl.formatToPlainString(I.t['7Uuia2'], { username: Z.username })
+                      children: S.intl.formatToPlainString(S.t['7Uuia2'], { username: Z.username })
                   }),
                   (0, i.jsx)(o.Text, {
                       className: r()(x.header, {
-                          [x.small]: f === S.nR.SMALL,
-                          [x.medium]: f === S.nR.MEDIUM
+                          [x.small]: f === I.nR.SMALL,
+                          [x.medium]: f === I.nR.MEDIUM
                       }),
                       variant: 'text-sm/normal',
                       children: b.name
@@ -125,10 +125,10 @@ function C(e) {
                       children: (0, i.jsx)(o.zxk, {
                           onClick: R,
                           submitting: w,
-                          size: (0, S.ac)(f),
+                          size: (0, I.ac)(f),
                           className: x.button,
                           color: o.zxk.Colors.PRIMARY,
-                          children: I.intl.string(I.t['4i2vj4'])
+                          children: S.intl.string(S.t['4i2vj4'])
                       })
                   })
               ]

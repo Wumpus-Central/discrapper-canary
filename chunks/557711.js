@@ -9,9 +9,9 @@ var l = n(120356),
     c = n(629257);
 function u(e) {
     let { activity: t, user: n, channelId: l, guildId: u, source: d, size: m, look: f, color: p, className: h, onAction: g } = e,
-        { tooltip: v, loading: _, disabled: S, onClick: I } = (0, o.Fe)(t, n, d, s.ZP.getNickname(u, l, n)),
+        { tooltip: v, loading: _, disabled: I, onClick: S } = (0, o.Fe)(t, n, d, s.ZP.getNickname(u, l, n)),
         x = () => {
-            null == g || g(), I();
+            null == g || g(), S();
         };
     return (0, i.jsx)(r.ua7, {
         text: v,
@@ -26,7 +26,7 @@ function u(e) {
                 onClick: x,
                 onMouseEnter: n,
                 onMouseLeave: l,
-                disabled: S,
+                disabled: I,
                 submitting: _,
                 'aria-label': null != v ? v : t.name,
                 children: (0, i.jsx)(r.iOO, {

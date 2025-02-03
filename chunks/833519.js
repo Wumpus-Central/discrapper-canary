@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(863908),
     v = n(871118),
     _ = n(517525),
-    S = n(352978),
-    I = n(576645),
+    I = n(352978),
+    S = n(576645),
     x = n(590076),
     E = n(507675),
     C = n(199902),
@@ -50,7 +50,7 @@ function W(e) {
         [m, p] = l.useState(!1),
         h = (0, s.e7)([y.Z], () => y.Z.getChannel(null == u ? void 0 : u.channelId));
     return (
-        (0, I.J)(h, () => {
+        (0, S.J)(h, () => {
             let e = setTimeout(() => {
                     p(!0);
                 }, 5000),
@@ -79,7 +79,7 @@ function W(e) {
     );
 }
 function B(e) {
-    let { participant: t, selected: n, onVideoResize: a, paused: f, fit: p, inPopout: _, inOverlayPopout: I = !1, width: L, focused: O, wrapperClassName: W } = e,
+    let { participant: t, selected: n, onVideoResize: a, paused: f, fit: p, inPopout: _, inOverlayPopout: S = !1, width: L, focused: O, wrapperClassName: W } = e,
         B = b.Z.getVideoComponent(),
         Y = (0, s.e7)([Z.default], () => Z.default.getId()),
         G = (0, h.Z)(),
@@ -185,7 +185,7 @@ function B(e) {
                       })
                     : null,
                 (0, i.jsx)(
-                    S.Z,
+                    I.Z,
                     {
                         onResize: a,
                         wrapperClassName: r()(z.videoWrapper, W),

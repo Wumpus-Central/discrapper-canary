@@ -8,36 +8,36 @@ let u = { minInterval: 1000 / 60 },
         let { drawCallback: t, size: r, fps: c = 60, useOffscreen: s = !0, playing: o = !0, useClockOptions: d = {} } = e,
             f = a.useMemo(() => Object.assign({ minInterval: 1000 / c }, u, d), [c, d]),
             m = a.useRef(null),
-            h = a.useRef();
+            p = a.useRef();
         a.useEffect(() => {
-            null != h.current && h.current.setSize(r);
+            null != p.current && r.w > 0 && r.h > 0 && p.current.setSize(r);
         }, [r]),
             a.useEffect(() => {
                 if (null != m.current) {
                     let e = new l.Z(m.current);
-                    (h.current = e), s && e.setupOffscreenCanvas();
+                    (p.current = e), s && e.setupOffscreenCanvas();
                 }
             }, [m, s, r]);
         let {
-            ticking: p,
-            stop: w,
-            reset: y
+            ticking: h,
+            stop: y,
+            reset: v
         } = (0, i.Z)((e) => {
-            if (null != h.current) {
-                let { width: r, height: n } = h.current.canvas;
-                h.current.clearRect({
+            if (null != p.current) {
+                let { width: r, height: n } = p.current.canvas;
+                p.current.clearRect({
                     x: 0,
                     y: 0,
                     w: r,
                     h: n
                 }),
-                    t(h.current, e / 1000);
+                    t(p.current, e / 1000);
             }
         }, f);
         return (
             a.useEffect(() => {
-                o && !p.current && y(), o || w();
-            }, [o, y, w, p]),
+                o && !h.current && v(), o || y();
+            }, [o, v, y, h]),
             (0, n.jsx)('div', { children: (0, n.jsx)('canvas', { ref: m }) })
         );
     };

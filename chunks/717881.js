@@ -19,8 +19,8 @@ var l = n(120356),
     g = n(314091),
     v = n(159244),
     _ = n(952164),
-    S = n(199902),
-    I = n(592125),
+    I = n(199902),
+    S = n(592125),
     x = n(430824),
     E = n(979651),
     C = n(626135),
@@ -47,14 +47,14 @@ function T(e) {
 let A = c.Z.Types,
     w = function (e) {
         let { activity: t, user: n, useStoreStream: l = !0, showActions: s = !0, hideHeader: u = !1, showChannelDetails: Z = !1, analyticsParams: A, ...w } = e,
-            P = (0, r.e7)([E.Z, I.Z], () => {
+            P = (0, r.e7)([E.Z, S.Z], () => {
                 var e;
-                return I.Z.getChannel(null === (e = E.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
+                return S.Z.getChannel(null === (e = E.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
             }),
-            j = (0, r.e7)([S.Z], () => (l ? S.Z.getAnyStreamForUser(n.id) : null)),
-            R = (0, r.e7)([x.Z, E.Z, I.Z], () => {
+            j = (0, r.e7)([I.Z], () => (l ? I.Z.getAnyStreamForUser(n.id) : null)),
+            R = (0, r.e7)([x.Z, E.Z, S.Z], () => {
                 var e, i;
-                return (0, o.Z)(t, y.xjy.EMBEDDED) ? x.Z.getGuild(null === (e = I.Z.getChannel(null === (i = E.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null;
+                return (0, o.Z)(t, y.xjy.EMBEDDED) ? x.Z.getGuild(null === (e = S.Z.getChannel(null === (i = E.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null;
             }),
             k = (0, r.e7)([x.Z], () => (null != j ? x.Z.getGuild(j.guildId) : null)),
             L = (0, r.e7)([d.Z], () => (null != t ? (null != t.application_id ? d.Z.getApplication(t.application_id) : d.Z.getApplicationByName(t.name)) : null)),

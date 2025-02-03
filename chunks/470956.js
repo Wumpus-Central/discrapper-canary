@@ -1,6 +1,6 @@
 n.d(t, {
     Es: () => v,
-    Eu: () => S,
+    Eu: () => I,
     bt: () => _
 }),
     n(47120),
@@ -82,7 +82,7 @@ function _(e, t) {
         [n, t]
     );
 }
-function S(e, t) {
+function I(e, t) {
     let n = (0, a.e7)([c.default], () => c.default.getId() === t),
         l = (0, a.e7)([f.Z], () => f.Z.getChannelId()),
         r = i.useRef(null),

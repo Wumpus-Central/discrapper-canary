@@ -34,19 +34,19 @@ let f = l.memo(function (e) {
             g({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(r, 'px)') });
         }),
         _ = (0, o.y)(v),
-        S = (0, u.p0)(f.userId, a),
-        I = {
+        I = (0, u.p0)(f.userId, a),
+        S = {
             handleResize: v,
             positionTrackerRef: _
         },
-        x = l.useRef(I);
+        x = l.useRef(S);
     l.useEffect(() => {
-        x.current = I;
+        x.current = S;
     }),
         l.useEffect(() => {
             let { handleResize: e, positionTrackerRef: t } = x.current;
             null != t.current && e();
-        }, [S]);
+        }, [I]);
     let E = (0, s.O)(v);
     return (0, i.jsxs)('div', {
         className: r()(m.container, n && m.isOverlayContainer),
@@ -60,7 +60,7 @@ let f = l.memo(function (e) {
                 className: m.chipletParent,
                 ref: E,
                 children: (0, i.jsx)('span', {
-                    className: r()(m.chipletContainer, !S && n && m.noPadding),
+                    className: r()(m.chipletContainer, !I && n && m.noPadding),
                     ref: p,
                     style: h,
                     children: (0, i.jsx)(d.ZP, {

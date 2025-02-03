@@ -22,10 +22,10 @@ function v(e) {
         { embedId: n, className: r, style: s } = e,
         v = (0, a.e7)([o.Z], () => o.Z.getWindow(h.KJ3.CHANNEL_CALL_POPOUT)),
         _ = (0, f.Z)(),
-        S = (0, a.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
-    if (null == _ || (0, m.Z)((0, d.p)(_.location)) || S !== p.Ez.PANEL) {
-        var I;
-        t = null !== (I = null == v ? void 0 : v.window) && void 0 !== I ? I : window;
+        I = (0, a.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
+    if (null == _ || (0, m.Z)((0, d.p)(_.location)) || I !== p.Ez.PANEL) {
+        var S;
+        t = null !== (S = null == v ? void 0 : v.window) && void 0 !== S ? S : window;
     } else t = window;
     let x = l.useRef(null),
         E = l.useMemo(() => {

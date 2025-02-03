@@ -15,7 +15,7 @@ function r(e) {
         g(t.points[t.points.length - 1]) || m.push(t);
         return;
     }
-    let S = (e, t) => {
+    let I = (e, t) => {
             let i = null;
             (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(_.x, _.y);
             for (let e = 1; e < f.length; e++) {
@@ -24,8 +24,8 @@ function r(e) {
             }
             return n.stroke(), i;
         },
-        { fillColor: I, outlineColor: x } = (0, i.bg)(t.userId, c, u, o),
-        E = S(x, 6 + a.q2),
+        { fillColor: S, outlineColor: x } = (0, i.bg)(t.userId, c, u, o),
+        E = I(x, 6 + a.q2),
         C = null != E && v(E);
-    C && (0, l.I)(n, E.x, E.y, x, a.q2), S(I, 6), C && (0, l.T)(n, E.x, E.y, t.userId);
+    C && (0, l.I)(n, E.x, E.y, x, a.q2), I(S, 6), C && (0, l.T)(n, E.x, E.y, t.userId);
 }

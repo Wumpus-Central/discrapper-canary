@@ -13,7 +13,7 @@ function o(e) {
             onGameJoin: s
         });
     if (null == d) return null;
-    let { isJoining: f, handleJoinRequest: m, buttonCTA: p, tooltip: h, isEnabled: v } = d;
+    let { isJoining: m, handleJoinRequest: f, buttonCTA: p, tooltip: h, isEnabled: v } = d;
     return (0, l.jsx)(
         i.ua7,
         {
@@ -21,11 +21,11 @@ function o(e) {
             children: (e) => {
                 let { onMouseEnter: t, onMouseLeave: n } = e;
                 return (0, l.jsx)(u, {
-                    onClick: m,
+                    onClick: f,
                     onMouseEnter: t,
                     onMouseLeave: n,
                     disabled: !v,
-                    submitting: f,
+                    submitting: m,
                     fullWidth: !0,
                     ...c,
                     children: p

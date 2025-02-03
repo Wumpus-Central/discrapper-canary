@@ -18,8 +18,8 @@ var i = n(200651),
     g = n(518950),
     v = n(470956),
     _ = n(314897),
-    S = n(271383),
-    I = n(131951),
+    I = n(271383),
+    S = n(131951),
     x = n(451478),
     E = n(5192),
     C = n(44136),
@@ -47,15 +47,15 @@ function w(e) {
 }
 function P(e) {
     let { participant: t, channel: n, inCall: a, width: o, paused: v, selected: w, fit: P, onVideoResize: j, blocked: R, ignored: k, noVideoRender: L = !1, pulseSpeakingIndicator: O = !1, inOverlayPopout: M = !1 } = e,
-        D = I.Z.getVideoComponent(),
+        D = S.Z.getVideoComponent(),
         U = (0, s.e7)([_.default], () => _.default.getId()),
         { user: F, streamId: z, speaking: V } = t,
         W = F.id === U,
         B = (0, C.ZP)(t),
         Y = (0, s.e7)([x.Z], () => x.Z.isFocused()),
         G = (0, s.e7)([h.Z], () => h.Z.getWindowFocused(Z.KJ3.CHANNEL_CALL_POPOUT)),
-        H = (0, s.e7)([I.Z], () => null != F.id && I.Z.isLocalVideoDisabled(F.id, (0, m.Z)(t.type)), [F.id, t.type]),
-        J = (0, s.e7)([S.ZP], () => S.ZP.isGuestOrLurker(n.guild_id, F.id)),
+        H = (0, s.e7)([S.Z], () => null != F.id && S.Z.isLocalVideoDisabled(F.id, (0, m.Z)(t.type)), [F.id, t.type]),
+        J = (0, s.e7)([I.ZP], () => I.ZP.isGuestOrLurker(n.guild_id, F.id)),
         q = E.ZP.getName(n.getGuildId(), n.id, F) + (J ? ' '.concat(b.intl.string(b.t['pFO/Pj'])) : ''),
         X = V && (G || Y),
         K = o < 124 ? A : T,
@@ -79,7 +79,7 @@ function P(e) {
         let { channel: e, selectedParticipant: t, user: n } = en.current;
         e.isGuildStageVoice() && !B && (null == t ? void 0 : t.id) === n.id && c.Z.selectParticipant(e.id, null);
     }, [B]),
-    a && !H && !L && B && !w && null != D && I.Z.supports(y.AN.VIDEO))
+    a && !H && !L && B && !w && null != D && S.Z.supports(y.AN.VIDEO))
         ? (0, i.jsx)(
               p.Z,
               {

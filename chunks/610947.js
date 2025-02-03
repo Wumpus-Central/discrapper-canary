@@ -15,8 +15,8 @@ var i = n(192379),
 let g = 1000 / 60;
 function v(e, t, n, v) {
     let _ = (0, r.dQu)(a.Z.unsafe_rawColors.BRAND_500).hex(),
-        S = (0, r.dQu)(a.Z.unsafe_rawColors.BLACK_500).hex(),
-        I = (0, r.dQu)(a.Z.unsafe_rawColors.WHITE_500).hex(),
+        I = (0, r.dQu)(a.Z.unsafe_rawColors.BLACK_500).hex(),
+        S = (0, r.dQu)(a.Z.unsafe_rawColors.WHITE_500).hex(),
         x = i.useRef({}),
         E = i.useRef(new l.Xp()),
         C = i.useCallback(
@@ -85,12 +85,12 @@ function v(e, t, n, v) {
                         fallbackColor: _,
                         linesDrawnAt: x,
                         streamerId: t,
-                        outlineColorDark: S,
-                        outlineColorLight: I,
+                        outlineColorDark: I,
+                        outlineColorLight: S,
                         channelId: v
                     });
             },
-            [e, v, _, S, I]
+            [e, v, _, I, S]
         );
     i.useEffect(() => {
         let t = new ResizeObserver(() => {

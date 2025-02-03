@@ -16,8 +16,8 @@ var l = n(120356),
     g = n(639351),
     v = n(503438),
     _ = n(802856),
-    S = n(387903),
-    I = n(606925),
+    I = n(387903),
+    S = n(606925),
     x = n(719216),
     E = n(429589),
     C = n(636245),
@@ -34,7 +34,7 @@ let P = (0, u.Z)((e) => {
             let e = p.default.getCurrentUser();
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
         }),
-        U = O === S.Y.STREAM_PREVIEW || null != r,
+        U = O === I.Y.STREAM_PREVIEW || null != r,
         F = (0, v.Z)(t),
         z = F || U ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
         V = z === m.Z.Direction.VERTICAL;
@@ -47,7 +47,7 @@ let P = (0, u.Z)((e) => {
         children: (() => {
             if ((0, _.Z)(t))
                 return (0, i.jsx)(
-                    I.Z,
+                    S.Z,
                     {
                         platform: d.Z.get(A.ABu.XBOX),
                         look: L,
@@ -59,7 +59,7 @@ let P = (0, u.Z)((e) => {
                 );
             if ((null == t ? void 0 : t.platform) === A.M7m.PS4 || (null == t ? void 0 : t.platform) === A.M7m.PS5)
                 return (0, i.jsx)(
-                    I.Z,
+                    S.Z,
                     {
                         look: L,
                         color: k,

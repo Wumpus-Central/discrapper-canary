@@ -15,8 +15,8 @@ var i,
     g = n(981631);
 let v = new Map(),
     _ = new Map(),
-    S = !1,
-    I = null;
+    I = !1,
+    S = null;
 function x() {
     return m.Z.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, c.my)(t),
@@ -35,8 +35,8 @@ function E() {
             i = !1;
             break;
         }
-    let l = i !== S;
-    return (S = i), l;
+    let l = i !== I;
+    return (I = i), l;
 }
 function C(e) {
     let { userId: t } = e;
@@ -56,14 +56,14 @@ function C(e) {
     return n || i || l;
 }
 function Z() {
-    v.clear(), _.clear(), (S = !1);
+    v.clear(), _.clear(), (I = !1);
 }
 class y extends (i = r.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, h.Z, d.Z, m.Z);
     }
     isCallVerified() {
-        return S;
+        return I;
     }
     isStreamVerified(e) {
         return _.get(e);
@@ -85,8 +85,8 @@ let b = new y(o.Z, {
     CONNECTION_OPEN: Z,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        if (t === I) return !1;
-        (I = t), Z();
+        if (t === S) return !1;
+        (S = t), Z();
     },
     RTC_CONNECTION_STATE: function (e) {
         let { streamKey: t, state: n, context: i } = e;

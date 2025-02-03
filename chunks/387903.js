@@ -20,8 +20,8 @@ var i,
     g = n(600164),
     v = n(686546),
     _ = n(111028),
-    S = n(925329),
-    I = n(810568),
+    I = n(925329),
+    S = n(810568),
     x = n(168524),
     E = n(565138),
     C = n(707409),
@@ -271,7 +271,7 @@ class G extends (i = r.PureComponent) {
             ? null
             : null == i && null != l
               ? (0, a.jsx)('div', { className: o()(U.gameIcon, U.screenshareIcon) })
-              : (0, a.jsx)(S.Z, {
+              : (0, a.jsx)(I.Z, {
                     className: U.gameIcon,
                     game: i
                 });
@@ -490,11 +490,11 @@ class G extends (i = r.PureComponent) {
         let h = this.renderName(u),
             v = this.renderDetails(u),
             _ = this.renderState(u, l),
-            S = this.renderTimePlayed(u),
-            I = this.renderChannelDetails(u),
+            I = this.renderTimePlayed(u),
+            S = this.renderChannelDetails(u),
             x = null != n ? n() : null,
             E = this.renderTimeBar(u),
-            C = ![e, h, v, _, S, E, x].some((e) => null != e);
+            C = ![e, h, v, _, I, E, x].some((e) => null != e);
         return (0, a.jsxs)('div', {
             className: o()(this.getTypeClass('activity'), i),
             children: [
@@ -518,9 +518,9 @@ class G extends (i = r.PureComponent) {
                                                             c(e), null == s || s();
                                                         }
                                                       : void 0,
-                                              children: [h, v, _, S]
+                                              children: [h, v, _, I]
                                           }),
-                                          I,
+                                          S,
                                           f ? null : E,
                                           d ? x : null
                                       ]
@@ -555,7 +555,7 @@ let H = (e) => {
     let l = (0, x.Z)({
         location: 'UserActivity',
         applicationId: null !== (i = null === (t = e.application) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : null === (n = e.activity) || void 0 === n ? void 0 : n.application_id,
-        source: I.m1.UserProfile,
+        source: S.m1.UserProfile,
         sourceUserId: e.user.id,
         trackEntryPointImpression: !0
     });

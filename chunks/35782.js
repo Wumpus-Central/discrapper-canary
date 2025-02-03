@@ -149,8 +149,8 @@ let { Themes: i } = n(15202).V,
                         opacity: 0.0392156862745098
                     },
                     [i.LIGHT]: {
-                        raw: 'OPACITY_4',
-                        opacity: 0.0392156862745098
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.MIDNIGHT]: {
                         raw: 'OPACITY_8',
@@ -209,8 +209,8 @@ let { Themes: i } = n(15202).V,
                         opacity: 0.0784313725490196
                     },
                     [i.LIGHT]: {
-                        raw: 'OPACITY_8',
-                        opacity: 0.0784313725490196
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
                     },
                     [i.MIDNIGHT]: {
                         raw: 'OPACITY_12',
@@ -229,8 +229,8 @@ let { Themes: i } = n(15202).V,
                         opacity: 0.23921568627450981
                     },
                     [i.LIGHT]: {
-                        raw: 'OPACITY_24',
-                        opacity: 0.23921568627450981
+                        raw: 'OPACITY_28',
+                        opacity: 0.2784313725490196
                     },
                     [i.MIDNIGHT]: {
                         raw: 'OPACITY_28',
@@ -389,8 +389,8 @@ let { Themes: i } = n(15202).V,
                         opacity: 0.0784313725490196
                     },
                     [i.LIGHT]: {
-                        raw: 'OPACITY_8',
-                        opacity: 0.0784313725490196
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
                     },
                     [i.MIDNIGHT]: {
                         raw: 'OPACITY_12',
@@ -409,8 +409,8 @@ let { Themes: i } = n(15202).V,
                         opacity: 0.23921568627450981
                     },
                     [i.LIGHT]: {
-                        raw: 'OPACITY_24',
-                        opacity: 0.23921568627450981
+                        raw: 'OPACITY_28',
+                        opacity: 0.2784313725490196
                     },
                     [i.MIDNIGHT]: {
                         raw: 'OPACITY_28',
@@ -1229,8 +1229,8 @@ let { Themes: i } = n(15202).V,
                         opacity: 0.0784313725490196
                     },
                     [i.LIGHT]: {
-                        raw: 'OPACITY_8',
-                        opacity: 0.0784313725490196
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
                     },
                     [i.MIDNIGHT]: {
                         raw: 'OPACITY_12',

@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(610394),
     v = n(561064),
     _ = n(501787),
-    S = n(608631);
-function I(e, t, n) {
+    I = n(608631);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -88,18 +88,18 @@ let E = l.createContext(
             this.globalUpdate.cancel(), this.zones.clear(), this.elements.clear(), null === (e = this.resizeObserver) || void 0 === e || e.disconnect(), null === (t = this.mutationObserver) || void 0 === t || t.disconnect(), this.updateZones();
         }
         constructor(e) {
-            I(this, 'resizeObserver', void 0),
-                I(this, 'mutationObserver', void 0),
-                I(this, 'zones', new Map()),
-                I(this, 'elements', new Set()),
-                I(this, 'window', void 0),
-                I(this, 'handleResize', () => {
+            S(this, 'resizeObserver', void 0),
+                S(this, 'mutationObserver', void 0),
+                S(this, 'zones', new Map()),
+                S(this, 'elements', new Set()),
+                S(this, 'window', void 0),
+                S(this, 'handleResize', () => {
                     this.globalUpdate();
                 }),
-                I(this, 'handleMutations', () => {
+                S(this, 'handleMutations', () => {
                     this.globalUpdate();
                 }),
-                I(
+                S(
                     this,
                     'globalUpdate',
                     o()(
@@ -150,7 +150,7 @@ function C(e) {
         }, [t, d]),
         (0, i.jsx)('div', {
             ref: c,
-            className: r()(n, S.clickable, o && S.debugMode),
+            className: r()(n, I.clickable, o && I.debugMode),
             'data-click-zone': !0,
             children: a
         })

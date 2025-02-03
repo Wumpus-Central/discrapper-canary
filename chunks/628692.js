@@ -80,49 +80,49 @@ function S(e) {
         : null;
 }
 let A = function (e) {
-    let { channelId: t, messageId: n, soundId: a, jumbo: s = !1 } = e,
-        u = E.jU.useSetting(),
-        d = (0, o.e7)([h.Z], () => h.Z.getSoundById(a), [a]),
-        y = r.useMemo(() => {
+    let { channelId: t, messageId: n, soundId: a, messageSounds: s, jumbo: u = !1 } = e,
+        d = E.jU.useSetting(),
+        y = (0, o.e7)([h.Z], () => h.Z.getSoundById(a), [a]),
+        T = r.useMemo(() => {
             var e;
-            return null !== (e = (0, f.Z)(t, n, a)) && void 0 !== e ? e : d;
-        }, [t, n, a, d]),
-        T = (0, o.e7)([v.Z], () => v.Z.getChannel(t)),
-        A = (0, c.X0)({ location: 'SoundboardMention' }),
-        N = r.useRef(null),
-        { playing: C, playSound: R } = (0, p.Z)(y, T),
-        O = r.useCallback(() => {
-            if (R()) {
+            return null !== (e = (0, f.Z)(t, n, a, s)) && void 0 !== e ? e : y;
+        }, [t, n, a, s, y]),
+        A = (0, o.e7)([v.Z], () => v.Z.getChannel(t)),
+        N = (0, c.X0)({ location: 'SoundboardMention' }),
+        C = r.useRef(null),
+        { playing: R, playSound: O } = (0, p.Z)(T, A),
+        D = r.useCallback(() => {
+            if (O()) {
                 var e;
-                null === (e = N.current) || void 0 === e || e.addAnimation();
+                null === (e = C.current) || void 0 === e || e.addAnimation();
             }
-        }, [R]);
-    return A
-        ? null == y
-            ? (0, i.jsx)(b, { playSound: O })
-            : s && !u
+        }, [O]);
+    return N
+        ? null == T
+            ? (0, i.jsx)(b, { playSound: D })
+            : u && !d
               ? (0, i.jsx)(
                     g.ZP,
                     {
                         containerClassName: I.jumboContainer,
                         className: I.jumboButton,
-                        sound: y,
-                        channel: T,
+                        sound: T,
+                        channel: A,
                         refreshEnabled: !0,
-                        onSelectItem: O,
-                        isPlayingSoundOverride: C,
+                        onSelectItem: D,
+                        isPlayingSoundOverride: R,
                         isSoundmoji: !0,
                         buttonOverlay: m.Pb.SOUNDMOJI,
                         tooltipClassName: I.tooltip,
                         tooltipContentClassName: I.tooltipContainer,
-                        tooltipOverride: (0, i.jsx)(_.Dp, { sound: y }),
-                        soundmojiVisualEffectRef: N
+                        tooltipOverride: (0, i.jsx)(_.Dp, { sound: T }),
+                        soundmojiVisualEffectRef: C
                     },
-                    ''.concat(y.soundId)
+                    ''.concat(T.soundId)
                 )
               : (0, i.jsx)(l.ua7, {
-                    'aria-label': y.name,
-                    text: (0, i.jsx)(_.Dp, { sound: y }),
+                    'aria-label': T.name,
+                    text: (0, i.jsx)(_.Dp, { sound: T }),
                     tooltipClassName: I.tooltip,
                     tooltipContentClassName: I.tooltipContainer,
                     position: 'top',
@@ -131,9 +131,9 @@ let A = function (e) {
                         (0, i.jsx)('span', {
                             ...e,
                             children: (0, i.jsx)(S, {
-                                sound: y,
-                                playSound: O,
-                                isPlaying: C
+                                sound: T,
+                                playSound: D,
+                                isPlaying: R
                             })
                         })
                 })

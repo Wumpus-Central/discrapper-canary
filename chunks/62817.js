@@ -8,13 +8,13 @@ var l,
 let u = Object.freeze([]),
     c = {},
     d = {},
-    f = {},
     m = {},
+    f = {},
     p = {};
 function h(e, t) {}
 function v(e, t) {
     let n = c[e];
-    return null != n && ((c[e] = n.filter((e) => e.id !== t)), delete d[t], delete f[t], n.length !== c[e].length);
+    return null != n && ((c[e] = n.filter((e) => e.id !== t)), delete d[t], delete m[t], n.length !== c[e].length);
 }
 function g(e, t) {
     let n = c[e];
@@ -27,11 +27,11 @@ function g(e, t) {
               }
             : e
     );
-    let l = f[t.id];
+    let l = m[t.id];
     null != l &&
-        null != m[l.id] &&
-        (m[l.id] = {
-            ...m[l.id],
+        null != f[l.id] &&
+        (f[l.id] = {
+            ...f[l.id],
             ...t
         });
 }
@@ -44,10 +44,10 @@ class x extends (l = a.ZP.Store) {
         return null !== (t = c[e]) && void 0 !== t ? t : u;
     }
     getMessageForFile(e) {
-        return f[e];
+        return m[e];
     }
     getUploaderFileForMessageId(e) {
-        return m[e];
+        return f[e];
     }
     getUploadAttachments(e) {
         if (null != e) return p[e];
@@ -74,10 +74,10 @@ let E = new x(o.Z, {
         let { channelId: n, file: l, uploader: i, message: r } = e;
         if (i._aborted || i._errored) return;
         let a = null !== (t = c[n]) && void 0 !== t ? t : u;
-        (d[l.id] = i), (c[n] = [...a, l]), (f[l.id] = r);
+        (d[l.id] = i), (c[n] = [...a, l]), (m[l.id] = r);
         let { items: o } = l;
         null != o &&
-            (m[r.id] = {
+            (f[r.id] = {
                 ...l,
                 items: o
             }),
@@ -116,11 +116,11 @@ let E = new x(o.Z, {
     },
     UPLOAD_FILE_UPDATE: function (e) {
         let { channelId: t, file: n } = e,
-            l = f[n.id];
+            l = m[n.id];
         null != l && l.nonce, g(t, n);
     },
     UPLOAD_RESTORE_FAILED_UPLOAD: function (e) {
         let { file: t, messageId: n } = e;
-        m[n] = t;
+        f[n] = t;
     }
 });

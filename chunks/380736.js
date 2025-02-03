@@ -20,13 +20,13 @@ var i = n(200651),
     g = n(388032),
     v = n(176463);
 function _(e, t, n) {
-    return (0, i.jsx)(S, {
+    return (0, i.jsx)(I, {
         keybind: e,
         message: t,
         messageWithoutKeybind: n
     });
 }
-function S(e) {
+function I(e) {
     let { keybind: t, message: n, messageWithoutKeybind: l } = e,
         a = (0, u.o)();
     return (0, i.jsx)(i.Fragment, {
@@ -38,11 +38,11 @@ function S(e) {
             : l
     });
 }
-function I(e) {
+function S(e) {
     e.currentTarget.scrollTo(0, 0);
 }
 let x = l.memo(function (e) {
-    let { maxBodyLines: t, expand: n = !1, onNotificationShow: a, onDismissClick: c, onConfirmClick: u, onCancelClick: m, onNotificationClick: f, hint: p, cancelText: _, confirmText: S, icon: x, body: E, title: C, renderFooter: Z, contentOpacity: y, status: b, containerRef: N, className: T, wrapperClassName: A } = e,
+    let { maxBodyLines: t, expand: n = !1, onNotificationShow: a, onDismissClick: c, onConfirmClick: u, onCancelClick: m, onNotificationClick: f, hint: p, cancelText: _, confirmText: I, icon: x, body: E, title: C, renderFooter: Z, contentOpacity: y, status: b, containerRef: N, className: T, wrapperClassName: A } = e,
         [w, P] = l.useState(!1),
         j = n || w || b === h._1z.FOCUSED;
     l.useEffect(() => {
@@ -76,7 +76,7 @@ let x = l.memo(function (e) {
         children: [
             (0, i.jsx)('div', {
                 className: r()(v.overflowWrapper, A),
-                onScroll: I,
+                onScroll: S,
                 children: (0, i.jsx)(o.P3F, {
                     innerRef: N,
                     ignoreKeyPress: !0,
@@ -144,7 +144,7 @@ let x = l.memo(function (e) {
                                                                         size: o.zxk.Sizes.SMALL,
                                                                         color: o.zxk.Colors.GREEN,
                                                                         onClick: k,
-                                                                        children: null != S ? S : g.intl.string(g.t.BddRzc)
+                                                                        children: null != I ? I : g.intl.string(g.t.BddRzc)
                                                                     })
                                                                   : null,
                                                               null != m
@@ -209,10 +209,10 @@ function C(e) {
             id: o,
             props: { onNotificationShow: u, onDismissClick: d, onNotificationClick: m, onConfirmClick: h, onCancelClick: g, renderFooter: _ }
         } = t,
-        S = l.useCallback(() => {
+        I = l.useCallback(() => {
             u(o);
         }, [u, o]),
-        I = l.useCallback(
+        S = l.useCallback(
             (e) => {
                 c.Z.updateNotificationStatus(o), null == d || d(e, o);
             },
@@ -252,11 +252,11 @@ function C(e) {
             className: v.clickZone,
             children: (0, i.jsx)(x, {
                 ...R,
-                title: 'function' == typeof R.title ? R.title(I) : R.title,
+                title: 'function' == typeof R.title ? R.title(S) : R.title,
                 containerRef: L,
                 notificationId: t.id,
-                onNotificationShow: 0 === n ? S : void 0,
-                onDismissClick: I,
+                onNotificationShow: 0 === n ? I : void 0,
+                onDismissClick: S,
                 onNotificationClick: null != m ? C : void 0,
                 onConfirmClick: null != h ? Z : void 0,
                 onCancelClick: null != g ? y : void 0,

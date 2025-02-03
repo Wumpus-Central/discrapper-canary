@@ -15,8 +15,8 @@ var i,
     g = n(607070),
     v = n(899663),
     _ = n(636449),
-    S = n(317381),
-    I = n(496616),
+    I = n(317381),
+    S = n(496616),
     x = n(100527),
     E = n(906732),
     C = n(168551),
@@ -121,7 +121,7 @@ class K extends (i = a.Component) {
         i.classList.toggle('disable-forced-colors', !e && 'active' === t), i.classList.toggle('enable-forced-colors', e && 'active' === t);
     }
     render() {
-        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: a, windowKey: r, isRefreshEnabled: o, isRefreshChatInputEnabled: c, mouseModeEnabled: d, reducedMotionEnabled: m, fontScaleClass: g, withTitleBar: _, guestWindow: S, clientThemesClassName: I, contentClassName: x, appWrapperClassName: E } = this.props,
+        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: a, windowKey: r, isRefreshEnabled: o, isRefreshChatInputEnabled: c, mouseModeEnabled: d, reducedMotionEnabled: m, fontScaleClass: g, withTitleBar: _, guestWindow: I, clientThemesClassName: S, contentClassName: x, appWrapperClassName: E } = this.props,
             C = (0, z.getPlatform)(),
             A = s()(g, {
                 'mouse-mode': d,
@@ -143,7 +143,7 @@ class K extends (i = a.Component) {
                                 children: (0, l.jsx)('div', {
                                     'data-popout-root': !0,
                                     ref: this.rootRef,
-                                    className: s()(e, (0, y.Z)(), A, I, E),
+                                    className: s()(e, (0, y.Z)(), A, S, E),
                                     children: (0, l.jsx)(f.JcV, {
                                         containerRef: this.rootRef,
                                         children: (0, l.jsx)(v.Z, {
@@ -152,7 +152,7 @@ class K extends (i = a.Component) {
                                                     (0, l.jsx)(N.Co, {}),
                                                     (0, l.jsx)(h.Wu, {
                                                         appContext: G.IlC.POPOUT,
-                                                        renderWindow: S,
+                                                        renderWindow: I,
                                                         children: (0, l.jsx)(Z.m, {
                                                             children: (0, l.jsxs)(k.yP, {
                                                                 children: [
@@ -211,7 +211,7 @@ class K extends (i = a.Component) {
                     (0, _.R)()
                         ? t()
                         : ((e.returnValue = J.intl.string(J.t['bST/Y2'])),
-                          (0, I.Z)(() => {
+                          (0, S.Z)(() => {
                               t();
                           }));
                 } else t();
@@ -238,16 +238,16 @@ let Q = a.forwardRef(function (e, t) {
         })),
         d = (0, m.e7)([g.Z], () => (g.Z.useForcedColors ? 'yes' : 'no')),
         { accessibilitySettings: p, appWrapperClassName: h } = (0, A.I)(),
-        v = (0, m.e7)([S.ZP], () => null != e.channelId && null !== S.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+        v = (0, m.e7)([I.ZP], () => null != e.channelId && null !== I.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, P.Z)(n, !1);
     let _ = (0, j.Z)(n, i),
-        { analyticsLocations: I } = (0, E.ZP)(x.Z.POPOUT_WINDOW),
+        { analyticsLocations: S } = (0, E.ZP)(x.Z.POPOUT_WINDOW),
         { clientThemesClassName: Z, clientThemesCSS: y } = (0, C.ZP)();
     return null == n
         ? null
         : (0, l.jsx)(f.Sle, {
               children: (0, l.jsx)(E.Gt, {
-                  value: I,
+                  value: S,
                   children: (0, l.jsx)(K, {
                       ref: t,
                       ...e,

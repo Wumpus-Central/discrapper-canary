@@ -11,26 +11,26 @@ var i = n(763296),
     u = n(277078),
     c = n(981631);
 let d = /^<sound:(\d+):(\d+)>/;
-function f(e, t, n, a) {
+function f(e, t, n, a, l) {
     if (!s.zv.getCurrentConfig({ location: 'getSoundmojiASTFromString' }, { autoTrackExposure: !1 }).enabled) return;
-    let l = i.Z.getSoundById(a),
-        d = (0, u.Z)(l, e, t);
+    let d = i.Z.getSoundById(a),
+        f = (0, u.Z)(d, e, t);
     if (null != n && null != t) {
-        let e = (0, o.Z)(t, n, a);
-        if (d && null == e) {
+        let e = (0, o.Z)(t, n, a, l);
+        if (f && null == e) {
             let e = r.Z.getMessage(t, n);
-            if ((null == e ? void 0 : e.state) !== c.yb.SENT) return l;
+            if ((null == e ? void 0 : e.state) !== c.yb.SENT) return d;
         }
         return e;
     }
-    if (d && null != l) return l;
+    if (f && null != d) return d;
 }
 function _(e, t) {
     var n;
     let i = e[1],
         r = e[2],
         { guildId: s, channelId: o, messageId: u } = t,
-        c = f(s, o, u, r);
+        c = f(s, o, u, r, t.soundboardSounds);
     if (null == c)
         return {
             type: 'text',

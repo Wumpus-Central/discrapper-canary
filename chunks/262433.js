@@ -36,12 +36,12 @@ function g(e, t) {
 }
 function v(e) {
     var t, n, i;
-    let { emojiHose: r, context: v, canvasWidth: _, canvasHeight: S, fallbackColor: I, outlineColorDark: x, outlineColorLight: E, streamerId: C, deadDrawables: Z } = e;
+    let { emojiHose: r, context: v, canvasWidth: _, canvasHeight: I, fallbackColor: S, outlineColorDark: x, outlineColorLight: E, streamerId: C, deadDrawables: Z } = e;
     v.save();
     let y = c.Z.getEmojiImage(null !== (n = null !== (t = r.emojiId) && void 0 !== t ? t : r.emojiName) && void 0 !== n ? n : ''),
         b = (0, d.np)(r.x, _),
-        N = (0, d.np)(r.y, S),
-        { outlineColor: T } = (0, d.bg)(r.userId, x, E, I);
+        N = (0, d.np)(r.y, I),
+        { outlineColor: T } = (0, d.bg)(r.userId, x, E, S);
     g(r, (e) => {
         (e.x += e.xSpeed * window.devicePixelRatio),
             (e.y += e.ySpeed * window.devicePixelRatio),

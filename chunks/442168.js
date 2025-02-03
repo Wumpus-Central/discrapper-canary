@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => I });
 var i = n(200651),
     l = n(192379),
     a = n(642128),
@@ -23,10 +23,10 @@ let h = { visibility: 'hidden' },
         bounce: 0
     },
     _ = { duration: 1000 };
-function S(e) {
+function I(e) {
     let { stream: t, inPopout: n } = e,
-        { reducedMotion: S } = l.useContext(s.Sf),
-        I = (0, l.useRef)(null),
+        { reducedMotion: I } = l.useContext(s.Sf),
+        S = (0, l.useRef)(null),
         x = d.n.getState().clipsButtonRef,
         E = (0, m.V9)(t),
         C = (0, r.e7)([c.Z], () => c.Z.getActiveAnimation()),
@@ -40,7 +40,7 @@ function S(e) {
     );
     let b = () => {
             var e;
-            let t = null === (e = I.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+            let t = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             return null == t || n
                 ? h
                 : {
@@ -83,7 +83,7 @@ function S(e) {
                     position: 'fixed',
                     visibility: 'hidden',
                     opacity: 1,
-                    ...(S.enabled ? N(e) : b())
+                    ...(I.enabled ? N(e) : b())
                 }),
                 enter: (e) => [
                     {
@@ -94,7 +94,7 @@ function S(e) {
                 ],
                 leave: {
                     opacity: 0,
-                    ...(!S.enabled && {
+                    ...(!I.enabled && {
                         height: 0,
                         width: 0,
                         ...(() => {
@@ -106,7 +106,7 @@ function S(e) {
                         })()
                     })
                 },
-                config: S.enabled ? _ : v,
+                config: I.enabled ? _ : v,
                 onRest: (e, t) => {
                     null != t.item && null != Z.find((e) => e.timestamp === t.item.timestamp) && (0, u.Gh)(E, t.item.timestamp);
                 }
@@ -119,7 +119,7 @@ function S(e) {
             children: [
                 (0, i.jsx)('div', {
                     className: p.hidden,
-                    ref: I
+                    ref: S
                 }),
                 A(
                     (e, t) =>

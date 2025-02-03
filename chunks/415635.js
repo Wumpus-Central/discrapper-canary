@@ -15,8 +15,8 @@ var i = n(200651),
 function g(e) {
     let { channelId: t, guildId: n, userId: g, containerDimensions: v } = e,
         _ = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
-        [S, I] = l.useState([]),
-        x = S.length < 50;
+        [I, S] = l.useState([]),
+        x = I.length < 50;
     l.useEffect(() => {
         function e(e) {
             var i;
@@ -34,7 +34,7 @@ function g(e) {
                         url: e,
                         userId: r
                     };
-                I((e) => [...e, l]),
+                S((e) => [...e, l]),
                     c.ZP.trackWithMetadata(p.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
                         channel_id: t,
                         guild_id: n
@@ -49,7 +49,7 @@ function g(e) {
         );
     }, [t, n, g, _, x]);
     let E = l.useCallback((e) => {
-        I((t) => {
+        S((t) => {
             let n = [...t],
                 i = n.findIndex((t) => t.id === e);
             return n.splice(i, 1), n;
@@ -62,7 +62,7 @@ function g(e) {
               style: { width: v.width },
               children: (0, i.jsx)('div', {
                   className: h.effects,
-                  children: S.map((e) =>
+                  children: I.map((e) =>
                       (0, i.jsx)(
                           f.Z,
                           {

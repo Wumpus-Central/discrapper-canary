@@ -44,8 +44,8 @@ function v(e, t) {
             clearTimeout(e);
         };
     }, [t]);
-    let S = l.useRef({}),
-        { visibleParticipants: I, participantTileWidth: x } = l.useMemo(() => {
+    let I = l.useRef({}),
+        { visibleParticipants: S, participantTileWidth: x } = l.useMemo(() => {
             let n = Date.now(),
                 l = (0, a.sortBy)(t, (e) =>
                     (function (e) {
@@ -80,9 +80,9 @@ function v(e, t) {
                 v = f.findIndex(g),
                 _ = null;
             -1 !== v && ((_ = f[v]), f.splice(v, 1));
-            let I = null == _ || m ? e : e - i - o,
-                x = Math.max(0, Math.min(Math.floor((I - o) / (s + o)), u, t.length)),
-                E = Math.min((I - o) / x - o, i),
+            let S = null == _ || m ? e : e - i - o,
+                x = Math.max(0, Math.min(Math.floor((S - o) / (s + o)), u, t.length)),
+                E = Math.min((S - o) / x - o, i),
                 C = Math.max(0, x - p.length),
                 Z = p.slice(0, x),
                 y = f.slice(0, C),
@@ -90,7 +90,7 @@ function v(e, t) {
             if (C > 0) {
                 let e = [];
                 for (let t of y) {
-                    let n = S.current[t.id];
+                    let n = I.current[t.id];
                     null != n && n < C ? (b[n] = t) : e.push(t);
                 }
                 for (let t = 0; t < b.length; t++) {
@@ -102,7 +102,7 @@ function v(e, t) {
             }
             let N = b.filter(c.lm),
                 T = (0, a.keyBy)((0, a.range)(N.length), (e) => N[e].id);
-            S.current = T;
+            I.current = T;
             let A = [...Z, ...N];
             return (
                 null != _ && (m && A.length >= x ? (A[Math.max(0, A.length - 1)] = _) : A.push(_)),
@@ -113,7 +113,7 @@ function v(e, t) {
             );
         }, [e, t, v, f, m, u, o, s, i]);
     return {
-        visibleParticipants: I,
+        visibleParticipants: S,
         participantTileWidth: x
     };
 }

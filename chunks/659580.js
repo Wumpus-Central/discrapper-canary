@@ -16,7 +16,7 @@ var l = n(990547),
     g = n(388032),
     v = n(126741);
 function _(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: _ = !1, renderInputModes: S = !1, renderInputVolume: I = !1, renderOutputVolume: x = !1, onSelect: E } = e,
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: _ = !1, renderInputModes: I = !1, renderInputVolume: S = !1, renderOutputVolume: x = !1, onSelect: E } = e,
         { analyticsLocations: C } = (0, s.ZP)();
     (0, o.Z)({
         type: l.ImpressionTypes.MENU,
@@ -50,14 +50,14 @@ function _(e) {
                           children: b
                       })
                     : null,
-                S
+                I
                     ? (0, i.jsx)(a.kSQ, {
                           label: g.intl.string(g.t['pS+K2N']),
                           children: N
                       })
                     : null,
                 (0, i.jsxs)(a.kSQ, {
-                    children: [I ? T : null, x ? A : null, Z]
+                    children: [S ? T : null, x ? A : null, Z]
                 })
             ]
         })

@@ -12,11 +12,11 @@ var l = n(570140),
     u = n(592125),
     c = n(703558),
     d = n(62817),
-    f = n(960048);
-let m = (e) => {
+    m = n(960048);
+let f = (e) => {
         let t = d.Z.getFiles(e)[0];
         return null == d.Z.getMessageForFile(t.id)
-            ? (f.Z.addBreadcrumb({ message: 'No message found for upload' }), Promise.reject())
+            ? (m.Z.addBreadcrumb({ message: 'No message found for upload' }), Promise.reject())
             : new Promise((e, n) => {
                   let i = (r) => {
                       r.file.id === t.id && (l.Z.unsubscribe('UPLOAD_COMPLETE', i), l.Z.unsubscribe('UPLOAD_FAIL', i), 'UPLOAD_COMPLETE' === r.type ? e(r.messageRecord) : n(Error('Upload failed')));
@@ -49,7 +49,7 @@ let m = (e) => {
         let { file: t, reaction: n, user: l, altText: r, requireConfirmation: s = !1 } = e,
             u = await i.Z.openPrivateChannel(l.id, !1, !1);
         p(t, u, s, r);
-        let c = await m(u);
+        let c = await f(u);
         if (null != c) {
             let e = (0, o.g1)(n);
             await (0, a.rU)(u, c.id, e);

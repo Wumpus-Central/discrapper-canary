@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(493773),
     v = n(797614),
     _ = n(703656),
-    S = n(594174),
-    I = n(254761),
+    I = n(594174),
+    S = n(254761),
     x = n(70956),
     E = n(960048),
     C = n(145597),
@@ -61,7 +61,7 @@ function k(e) {
         h = l.useRef(null),
         [v, _] = l.useState(!1),
         [x, E] = l.useState(!1),
-        C = (0, d.e7)([S.default], () => S.default.getCurrentUser());
+        C = (0, d.e7)([I.default], () => I.default.getCurrentUser());
     (0, g.Z)(
         () => (
             (h.current = setTimeout(Z, R)),
@@ -142,7 +142,7 @@ function k(e) {
         hint: D ? M : void 0,
         confirmText: A.intl.string(A.t.a3HlgI),
         cancelText: null != L ? A.intl.string(A.t.qIYnPj) : void 0,
-        icon: (0, i.jsx)(I.Z, {
+        icon: (0, i.jsx)(S.Z, {
             width: 40,
             height: 40,
             className: w.notificationIcon
