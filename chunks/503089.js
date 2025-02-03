@@ -106,20 +106,20 @@ class _ extends i.PureComponent {
             : ((this._intensity = E), !0);
     }
     renderSidebar(e) {
-        let { section: t, title: s, isUserSettingsSearchEnabled: i } = this.props,
-            r = e.flatMap((e) => e.newIndicatorDismissibleContentTypes).filter((e) => null != e),
-            a = null != t ? t : e[0].section;
+        let { section: t, title: s } = this.props,
+            i = e.flatMap((e) => e.newIndicatorDismissibleContentTypes).filter((e) => null != e),
+            r = null != t ? t : e[0].section;
         return (0, n.jsx)(u.ZP, {
-            contentTypes: r,
+            contentTypes: i,
             children: (t) => {
-                let { visibleContent: r } = t;
+                let { visibleContent: i } = t;
                 return (0, n.jsxs)(o.njP, {
-                    selectedItem: a,
+                    selectedItem: r,
                     onItemSelect: this.handleSetSection,
                     orientation: 'vertical',
                     'aria-label': s,
                     children: [
-                        i ? (0, n.jsx)(p.Z, { style: b.searchBar }) : null,
+                        (0, n.jsx)(p.Z, { style: b.searchBar }),
                         e.map((e, t) => {
                             if (null != e.tabPredicate && !e.tabPredicate()) return null;
                             switch (e.section) {
@@ -129,10 +129,10 @@ class _ extends i.PureComponent {
                                     return (0, n.jsx)(o.njP.Separator, {}, t);
                                 case h.ID.CUSTOM:
                                     var s;
-                                    let i = null !== (s = e.element) && void 0 !== s ? s : m.VqG;
-                                    return (0, n.jsx)(i, {}, t);
+                                    let a = null !== (s = e.element) && void 0 !== s ? s : m.VqG;
+                                    return (0, n.jsx)(a, {}, t);
                                 default:
-                                    return this.renderSettingsSectionTabBarItem(e, a === e.section, r);
+                                    return this.renderSettingsSectionTabBarItem(e, r === e.section, i);
                             }
                         })
                     ]
@@ -231,44 +231,38 @@ class _ extends i.PureComponent {
                 !this._unmounted && ((this._intensity = E), this.forceUpdate());
             }),
             S(this, 'renderSettingsSectionTabBarItem', (e, t, s) => {
-                let { section: i, label: r = null, ariaLabel: l, onClick: c, color: u, icon: p, className: f, newIndicator: g, newIndicatorDismissibleContentTypes: x, badgeCount: h, searchFilterCount: S } = e,
-                    C = null;
-                null != S && S > 0
-                    ? (C = (0, n.jsx)(o.mAB, {
-                          count: S,
-                          disableColor: !0,
-                          className: b.searchFilterCount
+                let { section: i, label: r = null, ariaLabel: l, onClick: c, color: u, icon: p, className: f, newIndicator: g, newIndicatorDismissibleContentTypes: x, badgeCount: h } = e,
+                    S = null;
+                i === m.oAB.ACCOUNT && this.props.isEligibleForPomelo
+                    ? (S = (0, n.jsx)(o.P4T, {
+                          size: 'custom',
+                          width: 20,
+                          height: 20,
+                          color: a.Z.colors.STATUS_WARNING.css
                       }))
-                    : i === m.oAB.ACCOUNT && this.props.isEligibleForPomelo
-                      ? (C = (0, n.jsx)(o.P4T, {
-                            size: 'custom',
-                            width: 20,
-                            height: 20,
-                            color: a.Z.colors.STATUS_WARNING.css
+                    : null != e.decoration
+                      ? (S = (0, n.jsx)(o.Text, {
+                            variant: 'text-md/normal',
+                            color: 'text-muted',
+                            children: e.decoration
                         }))
-                      : null != e.decoration
-                        ? (C = (0, n.jsx)(o.Text, {
-                              variant: 'text-md/normal',
-                              color: 'text-muted',
-                              children: e.decoration
-                          }))
-                        : null != s && (null == x ? void 0 : x.includes(s)) && !t
-                          ? (C = null != g ? g : (0, n.jsx)(o.IGR, { text: v.intl.string(v.t.y2b7CA) }))
-                          : null != p
-                            ? (C = p)
-                            : null != h && h > 0 && (C = (0, n.jsx)(o.mAB, { count: h }));
-                let E =
+                      : null != s && (null == x ? void 0 : x.includes(s)) && !t
+                        ? (S = null != g ? g : (0, n.jsx)(o.IGR, { text: v.intl.string(v.t.y2b7CA) }))
+                        : null != p
+                          ? (S = p)
+                          : null != h && h > 0 && (S = (0, n.jsx)(o.mAB, { count: h }));
+                let C =
                     i === m.oAB.PREMIUM
                         ? (0, n.jsx)(d.Z, {
                               label: r,
                               isSelected: t,
-                              decoration: C
+                              decoration: S
                           })
-                        : null == C
+                        : null == S
                           ? r
                           : (0, n.jsxs)('div', {
                                 className: b.tabBarItemContainer,
-                                children: [r, C]
+                                children: [r, S]
                             });
                 return (0, n.jsx)(
                     o.njP.Item,
@@ -278,7 +272,7 @@ class _ extends i.PureComponent {
                         onClick: c,
                         className: f,
                         'aria-label': l,
-                        children: E
+                        children: C
                     },
                     i
                 );

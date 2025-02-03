@@ -1,48 +1,45 @@
-n.d(t, { b: () => u });
+n.d(t, { b: () => d });
 var i = n(481060),
     s = n(358085),
     r = n(991346),
-    l = n(295545),
-    a = n(168308),
-    o = n(726985),
-    c = n(332325),
-    d = n(388032);
-function u() {
-    let e = (0, a.bC)(),
-        t = (0, r.Gj)(o.s6.GAMES);
-    return (function (e, t, n) {
-        let r = [
+    l = n(168308),
+    a = n(726985),
+    o = n(332325),
+    c = n(388032);
+function d() {
+    return (function (e, t) {
+        let n = [
             {
-                id: c.Z.MY_GAMES,
-                title: d.intl.string(d.t['5DMgp6']),
+                id: o.Z.MY_GAMES,
+                title: c.intl.string(c.t['5DMgp6']),
                 icon: i.xoD,
                 predicate: () => !s.isPlatformEmbedded,
-                setting: o.s6.GAMES_MY_GAMES
+                setting: a.s6.GAMES_MY_GAMES
             },
             {
-                id: c.Z.CLIPS,
-                title: d.intl.string(d.t.z2jK6e),
+                id: o.Z.CLIPS,
+                title: c.intl.string(c.t.z2jK6e),
                 icon: i.AlX,
-                setting: o.s6.GAMES_CLIPS
+                setting: a.s6.GAMES_CLIPS
             },
             {
-                id: c.Z.OVERLAY,
-                title: d.intl.string(d.t.bNqkDw),
+                id: o.Z.OVERLAY,
+                title: c.intl.string(c.t.bNqkDw),
                 icon: i.n6r,
                 predicate: () => !e,
-                setting: o.s6.GAMES_OVERLAY
+                setting: a.s6.GAMES_OVERLAY
             },
             {
-                id: c.Z.ACTIVITY_PRIVACY,
-                title: d.intl.string(d.t.Cq98yM),
+                id: o.Z.ACTIVITY_PRIVACY,
+                title: c.intl.string(c.t.Cq98yM),
                 icon: i.qOE,
-                setting: o.s6.GAMES_ACTIVITY_PRIVACY
+                setting: a.s6.GAMES_ACTIVITY_PRIVACY
             }
         ].filter((e) => null == e.predicate || !e.predicate());
-        if (t && null != n && n.size > 0) {
-            let e = r.filter((e) => n.has(e.setting));
-            return e.length > 0 ? e : r;
+        if (null != t && t.size > 0) {
+            let e = n.filter((e) => t.has(e.setting));
+            return e.length > 0 ? e : n;
         }
-        return r;
-    })(e, (0, l.eA)({ location: 'settings' }), t);
+        return n;
+    })((0, l.bC)(), (0, r.Gj)(a.s6.GAMES));
 }

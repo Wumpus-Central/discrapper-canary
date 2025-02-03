@@ -1,40 +1,39 @@
-n.r(t), n.d(t, { default: () => j });
+n.r(t), n.d(t, { default: () => A });
 var i = n(200651),
     a = n(192379),
-    s = n(442837),
+    l = n(442837),
     o = n(37234),
-    l = n(230711),
+    s = n(230711),
     r = n(410575),
     u = n(503089),
     c = n(110924),
     d = n(100527),
     Z = n(367907),
-    _ = n(906732),
-    f = n(254901),
-    g = n(45493),
-    p = n(332473),
+    f = n(906732),
+    _ = n(254901),
+    p = n(45493),
+    g = n(332473),
     E = n(113434),
-    S = n(663389),
-    h = n(210887),
+    h = n(663389),
+    S = n(210887),
     b = n(996733),
     k = n(991346),
-    m = n(295545),
     x = n(839469),
-    P = n(981631),
-    T = n(388032);
-let A = a.forwardRef(function () {
-        g.Z.trackExposure({ location: 'cd25e4_1' }), f.Z.useExperiment({ location: 'user_setting_auto' }, { autoTrackExposure: !1 }), f.Z.trackExposure({ location: 'user_setting_manual' });
-        let e = (0, s.e7)([h.Z], () => h.Z.theme),
-            t = (0, s.e7)([h.Z], () => (h.Z.darkSidebar ? P.BRd.DARK : void 0)),
+    m = n(981631),
+    P = n(388032);
+let T = a.forwardRef(function () {
+        p.Z.trackExposure({ location: 'cd25e4_1' }), _.Z.useExperiment({ location: 'user_setting_auto' }, { autoTrackExposure: !1 }), _.Z.trackExposure({ location: 'user_setting_manual' });
+        let e = (0, l.e7)([S.Z], () => S.Z.theme),
+            t = (0, l.e7)([S.Z], () => (S.Z.darkSidebar ? m.BRd.DARK : void 0)),
             {
                 section: n,
-                subsection: A,
-                analyticsLocation: j,
-                analyticsLocations: y
-            } = (0, s.cj)([S.Z], () => {
-                let e = S.Z.getSection(),
-                    t = S.Z.getSubsection(),
-                    { analyticsLocation: n, analyticsLocations: i } = S.Z.getProps();
+                subsection: T,
+                analyticsLocation: A,
+                analyticsLocations: j
+            } = (0, l.cj)([h.Z], () => {
+                let e = h.Z.getSection(),
+                    t = h.Z.getSubsection(),
+                    { analyticsLocation: n, analyticsLocations: i } = h.Z.getProps();
                 return {
                     section: e,
                     subsection: t,
@@ -42,69 +41,66 @@ let A = a.forwardRef(function () {
                     analyticsLocations: i
                 };
             }),
-            R = (0, c.Z)(n),
-            v = (0, c.Z)(A),
-            C = (0, b.Z7)(),
-            { analyticsLocations: G } = (0, _.ZP)(d.Z.USER_SETTINGS);
+            y = (0, c.Z)(n),
+            R = (0, c.Z)(T),
+            v = (0, b.Z7)(),
+            { analyticsLocations: C } = (0, f.ZP)(d.Z.USER_SETTINGS);
         a.useEffect(() => {
             null != n &&
-                (n !== R || A !== v) &&
+                (n !== y || T !== R) &&
                 !(function (e) {
-                    let { destinationPane: t, originPane: n = null, source: i = null, subsection: a = null, locationStack: s = null, searchQuery: o = null } = e;
-                    Z.ZP.trackWithMetadata(P.rMx.SETTINGS_PANE_VIEWED, {
+                    let { destinationPane: t, originPane: n = null, source: i = null, subsection: a = null, locationStack: l = null, searchQuery: o = null } = e;
+                    Z.ZP.trackWithMetadata(m.rMx.SETTINGS_PANE_VIEWED, {
                         settings_type: 'user',
                         origin_pane: n,
                         destination_pane: t,
-                        location_stack: s,
+                        location_stack: l,
                         source: i,
                         subsection: a,
                         search_query: o
                     });
                 })({
                     destinationPane: n,
-                    originPane: null != R ? R : null,
-                    source: j,
-                    subsection: A,
-                    locationStack: y,
-                    searchQuery: '' !== C ? C : null
+                    originPane: null != y ? y : null,
+                    source: A,
+                    subsection: T,
+                    locationStack: j,
+                    searchQuery: '' !== v ? v : null
                 });
-        }, [n, R, A, v, j, y, C]);
-        let I = (0, m.eA)({ location: 'user_settings' }),
-            { hasSearchResults: N, searchResults: w } = (0, x.E)(),
-            M = a.useMemo(() => I && N, [I, N]),
-            U = (0, k.VO)(),
-            q = (0, k.q8)(w),
-            B = a.useMemo(() => (M ? q : U), [M, q, U]),
-            L = (0, p.b)(),
-            D = (0, E.iO)(),
-            F = a.useCallback((e) => {
-                l.Z.setSection(e);
+        }, [n, y, T, R, A, j, v]);
+        let { hasSearchResults: G, searchResults: I } = (0, x.E)(),
+            N = (0, k.VO)(),
+            w = (0, k.q8)(I),
+            q = a.useMemo(() => (G ? w : N), [G, w, N]),
+            B = (0, g.b)(),
+            L = (0, E.iO)(),
+            M = a.useCallback((e) => {
+                s.Z.setSection(e);
             }, []);
-        return (0, i.jsx)(_.Gt, {
-            value: G,
+        return (0, i.jsx)(f.Gt, {
+            value: C,
             children: (0, i.jsx)(r.Z, {
                 root: !0,
-                page: P.ZY5.USER_SETTINGS,
+                page: m.ZY5.USER_SETTINGS,
                 children: (0, i.jsx)(u.ZP, {
                     theme: e,
-                    title: T.intl.string(T.t.cduTBA),
+                    title: P.intl.string(P.t.cduTBA),
                     sidebarTheme: t,
                     section: n,
-                    onSetSection: F,
+                    onSetSection: M,
                     onClose: o.xf,
-                    sections: B,
-                    isEligibleForPomelo: L,
-                    questsForBadge: D,
-                    isUserSettingsSearchEnabled: I
+                    sections: q,
+                    isEligibleForPomelo: B,
+                    questsForBadge: L
                 })
             })
         });
     }),
-    j = a.forwardRef(function () {
-        let e = (0, s.e7)([S.Z], () => S.Z.getProps().analyticsLocations),
-            { analyticsLocations: t } = (0, _.ZP)(e);
-        return (0, i.jsx)(_.Gt, {
+    A = a.forwardRef(function () {
+        let e = (0, l.e7)([h.Z], () => h.Z.getProps().analyticsLocations),
+            { analyticsLocations: t } = (0, f.ZP)(e);
+        return (0, i.jsx)(f.Gt, {
             value: t,
-            children: (0, i.jsx)(A, {})
+            children: (0, i.jsx)(T, {})
         });
     });
