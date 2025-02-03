@@ -47,7 +47,7 @@ let T = (0, g.Un)({
         name: 'CollectiblesShop'
     }),
     x = (0, g.Un)({
-        createPromise: () => Promise.all([n.e('7654'), n.e('44156'), n.e('16806'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('12672'), n.e('95140')]).then(n.bind(n, 994763)),
+        createPromise: () => Promise.all([n.e('7654'), n.e('44156'), n.e('16806'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('66593'), n.e('95140')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),

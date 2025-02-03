@@ -76,7 +76,7 @@ function F(e) {
     });
 }
 function K(e) {
-    let { message: t, channel: n, mediaItem: l, textSelection: s, favoriteableType: F, favoriteableId: K, favoriteableName: H, itemHref: z, itemSrc: B, itemSafeSrc: X, itemTextContent: V, canReport: q, onHeightUpdate: J, onSelect: Q, onClose: W, navId: Y, ariaLabel: $, shouldHideMediaOptions: ee = !1 } = e,
+    let { message: t, channel: n, mediaItem: l, textSelection: s, favoriteableType: F, favoriteableId: K, favoriteableName: H, itemHref: z, itemSrc: B, itemSafeSrc: X, itemTextContent: q, canReport: J, onHeightUpdate: V, onSelect: Q, onClose: W, navId: Y, ariaLabel: $, shouldHideMediaOptions: ee = !1 } = e,
         et = (0, d.Z)(s),
         en = (0, g.Z)(s),
         ei = (0, M.Z)(t, n),
@@ -99,7 +99,7 @@ function K(e) {
         eE = (0, D.Z)(t),
         ev = (0, D.e)(t),
         eZ = (0, O.Z)(t, n),
-        ex = (0, u.Z)(null != z ? z : B, V, t, { shouldHideMediaOptions: ee }),
+        ex = (0, u.Z)(null != z ? z : B, q, t, { shouldHideMediaOptions: ee }),
         ep = (0, c.Z)(X, t, { shouldHideMediaOptions: ee }),
         eN = (0, G.Z)(t, l),
         eS = (0, o.Z)({
@@ -120,7 +120,7 @@ function K(e) {
             commandTargetId: t.id,
             channel: n,
             guildId: void 0,
-            onHeightUpdate: J
+            onHeightUpdate: V
         }),
         eC = (0, w.Z)(t),
         eD = (0, f.Z)(t);
@@ -142,7 +142,7 @@ function K(e) {
                 children: [eM, es, eb, eP, eo, ed, eu, eg, eZ, eD, eC]
             }),
             (0, i.jsxs)(a.kSQ, {
-                children: [em, ef, eh, q && eE, q && ev]
+                children: [em, ef, eh, J && eE, J && ev]
             }),
             (0, i.jsxs)(a.kSQ, {
                 children: [er, eT, ep, eN, eA]

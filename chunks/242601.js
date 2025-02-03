@@ -309,7 +309,7 @@ class ev extends l.PureComponent {
                 let { guild: t } = this.props;
                 null != t &&
                     (0, p.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('7654'), n.e('44156'), n.e('16806'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('12672'), n.e('33213'), n.e('43954')]).then(n.bind(n, 545135));
+                        let { default: e } = await Promise.all([n.e('7654'), n.e('44156'), n.e('16806'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('66593'), n.e('33213'), n.e('43954')]).then(n.bind(n, 545135));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,

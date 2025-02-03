@@ -16,8 +16,8 @@ var l = i(481060),
     I = i(871604),
     h = i(952124),
     v = i(53558),
-    Z = i(544989),
-    g = i(934861),
+    g = i(544989),
+    Z = i(934861),
     _ = i(4517),
     j = i(740628),
     E = i(398145),
@@ -26,11 +26,11 @@ var l = i(481060),
     T = i(388032),
     P = i(171865);
 function b(e) {
-    let { user: n, currentUser: i, guildId: b, channelId: S, messageId: L, roleId: C, sessionId: A, initialSection: O, initialSubsection: M, transitionState: R, onClose: U, sourceAnalyticsLocations: B = [] } = e,
+    let { user: n, currentUser: i, guildId: b, channelId: S, messageId: L, roleId: C, sessionId: A, initialSection: M, initialSubsection: O, transitionState: R, onClose: U, sourceAnalyticsLocations: B = [] } = e,
         F = b === y.ME ? void 0 : b,
         D = (0, d.ZP)(n.id, F),
-        { analyticsLocations: G } = (0, s.ZP)([...B, o.Z.SIMPLIFIED_PROFILE_MODAL]),
-        w = (0, a.ZB)({
+        { analyticsLocations: w } = (0, s.ZP)([...B, o.Z.SIMPLIFIED_PROFILE_MODAL]),
+        G = (0, a.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             sourceSessionId: A,
@@ -41,9 +41,9 @@ function b(e) {
         }),
         k = (0, E.Z)(n);
     return (0, t.jsx)(s.Gt, {
-        value: G,
+        value: w,
         children: (0, t.jsx)(a.Mt, {
-            value: w,
+            value: G,
             children: (0, t.jsx)(l.Y0X, {
                 transitionState: R,
                 className: P.root,
@@ -54,7 +54,7 @@ function b(e) {
                     displayProfile: D,
                     profileType: N.y0.FULL_SIZE,
                     children: [
-                        (0, t.jsx)(Z.Z, {
+                        (0, t.jsx)(g.Z, {
                             profileType: N.y0.FULL_SIZE,
                             children: (0, t.jsx)(h.Z, {
                                 user: n,
@@ -88,12 +88,12 @@ function b(e) {
                                         (0, t.jsxs)('div', {
                                             className: P.headerButtons,
                                             children: [
-                                                (0, t.jsx)(g.c, {
+                                                (0, t.jsx)(Z.c, {
                                                     userId: n.id,
                                                     onClose: U,
                                                     className: P.messageTextButton
                                                 }),
-                                                (0, t.jsx)(g.v, {
+                                                (0, t.jsx)(Z.v, {
                                                     userId: n.id,
                                                     onClose: U,
                                                     tooltipContainerClassName: P.messageIconButton
@@ -133,8 +133,8 @@ function b(e) {
                                         displayProfile: D,
                                         guildId: F,
                                         items: k,
-                                        initialSection: null != O ? O : N.oh.BOT_INFO,
-                                        initialSubsection: M,
+                                        initialSection: null != M ? M : N.oh.BOT_INFO,
+                                        initialSubsection: O,
                                         onClose: U
                                     })
                                 })

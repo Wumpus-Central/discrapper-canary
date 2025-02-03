@@ -16,8 +16,8 @@ var l = i(442837),
     I = i(228168),
     h = i(981631),
     v = i(388032),
-    Z = i(189144),
-    g = i(731218);
+    g = i(189144),
+    Z = i(731218);
 function _(e) {
     let { user: n, currentUser: i, displayProfile: _, guildId: j, subsection: E, onClose: N } = e,
         { live: y, recent: T, stream: P } = (0, d.Z)(n.id),
@@ -28,10 +28,10 @@ function _(e) {
             userId: n.id,
             guildId: j
         }),
-        O = L && null != C;
-    return b || O || !S
+        M = L && null != C;
+    return b || M || !S
         ? (0, t.jsxs)(o.zJl, {
-              className: Z.scroller,
+              className: g.scroller,
               fade: !0,
               children: [
                   (0, t.jsxs)(u.Z, {
@@ -105,7 +105,7 @@ function _(e) {
               ]
           })
         : (0, t.jsx)('div', {
-              className: g.empty,
+              className: Z.empty,
               children: (0, t.jsx)(o.$jN, {})
           });
 }

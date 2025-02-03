@@ -1,5 +1,5 @@
 n.d(t, {
-    Dj: () => l,
+    Dj: () => a,
     i1: () => r
 });
 let i = (0, n(987170).Z)({
@@ -17,23 +17,23 @@ let i = (0, n(987170).Z)({
 });
 function r(e) {
     let { guildId: t, location: n, autoTrackExposure: r = !0 } = e,
-        { enabled: l } = i.getCurrentConfig(
+        { enabled: a } = i.getCurrentConfig(
             {
                 guildId: t,
                 location: n
             },
             { autoTrackExposure: r }
         );
-    return l;
+    return a;
 }
-function l(e) {
+function a(e) {
     let { guildId: t, location: n, autoTrackExposure: r = !0 } = e,
-        { enabled: l } = i.useExperiment(
+        { enabled: a } = i.useExperiment(
             {
                 guildId: t,
                 location: n
             },
             { autoTrackExposure: r }
         );
-    return l;
+    return a;
 }

@@ -1,4 +1,4 @@
-i.d(n, { default: () => Z }), i(47120);
+i.d(n, { default: () => g }), i(47120);
 var t = i(200651),
     l = i(192379),
     o = i(512722),
@@ -15,33 +15,33 @@ var t = i(200651),
     I = i(886794),
     h = i(910364);
 let v = [a.Z.BITE_SIZE_PROFILE_POPOUT, a.Z.PROFILE_PANEL];
-function Z(e) {
+function g(e) {
     let { user: n, ...i } = e,
         o = (0, r.e7)([m.default], () => m.default.getCurrentUser());
     s()(null != o, 'UserProfileModalWrapper: currentUser cannot be undefined');
-    let { isBlocked: a, isIgnored: Z } = (0, r.cj)([u.Z], () => ({
+    let { isBlocked: a, isIgnored: g } = (0, r.cj)([u.Z], () => ({
             isBlocked: u.Z.isBlocked(n.id),
             isIgnored: u.Z.isIgnored(n.id)
         })),
-        g = (0, d.Do)({ location: 'UserProfileModalWrapper' }),
-        [_, j] = l.useState(a || (g && (Z || a))),
+        Z = (0, d.Do)({ location: 'UserProfileModalWrapper' }),
+        [_, j] = l.useState(a || (Z && (g || a))),
         E = (0, x.sS)({ location: 'UserProfileModalWrapper' });
     l.useEffect(() => {
-        j(Z || a);
-    }, [Z, a]);
+        j(g || a);
+    }, [g, a]);
     let N = !v.some((e) => {
             var n;
             return (null !== (n = i.sourceAnalyticsLocations) && void 0 !== n ? n : []).includes(e);
         }),
         y = c.Rt.useSetting();
-    return _ && E && N && !g
+    return _ && E && N && !Z
         ? (0, t.jsx)(p.Z, {
               user: n,
               currentUser: o,
               onViewBlockedProfileClick: () => j(!1),
               ...i
           })
-        : _ && N && g && !(Z && y)
+        : _ && N && Z && !(g && y)
           ? (0, t.jsx)(p.W, {
                 user: n,
                 currentUser: o,

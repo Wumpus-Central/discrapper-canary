@@ -13,8 +13,8 @@ var t = i(308406),
 function p(e) {
     var n, i;
     let { user: p, currentUser: f, guildId: I, initialSubsection: h } = e,
-        { live: v, recent: Z, stream: g, outbox: _ } = (0, s.Z)(p.id),
-        j = v.length > 0 || Z.length > 0 || null != g,
+        { live: v, recent: g, stream: Z, outbox: _ } = (0, s.Z)(p.id),
+        j = v.length > 0 || g.length > 0 || null != Z,
         { voiceActivityCardEnabled: E } = (0, t.o)({ location: 'useUserProfileModalTabBarItems' }),
         { voiceChannel: N } = (0, r.Z)({
             userId: p.id,

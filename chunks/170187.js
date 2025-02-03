@@ -11,7 +11,7 @@ function c(e) {
     let { children: t, className: n, variant: r = 'text-xs/medium' } = e;
     return (0, i.jsx)(s.xv, {
         variant: r,
-        color: 'text-muted',
+        color: 'none',
         className: a()(u.text, n),
         children: (0, i.jsx)(o.Z, {
             delay: l.X,

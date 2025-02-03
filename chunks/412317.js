@@ -55,8 +55,8 @@ function h(e) {
 }
 function v(e) {
     let { isCurrentUser: n, user: i, relationshipType: c, friendToken: u, onClose: v } = e,
-        { newestAnalyticsLocation: Z } = (0, s.ZP)(),
-        g = (0, r.wn)({ location: 'UserProfileModalHeaderActionButtons' }),
+        { newestAnalyticsLocation: g } = (0, s.ZP)(),
+        Z = (0, r.wn)({ location: 'UserProfileModalHeaderActionButtons' }),
         { gameFriends: _, hasOutgoingPendingGameFriends: j, hasIncomingPendingGameFriends: E } = (0, m.H)({ userId: i.id }),
         N = _.length > 0 || j || E;
     return n || c === x.OGo.BLOCKED
@@ -69,13 +69,13 @@ function v(e) {
                     onClose: v
                 })
             })
-          : c === x.OGo.NONE && g && N
+          : c === x.OGo.NONE && Z && N
             ? (0, t.jsxs)('div', {
                   className: f.multipleButtons,
                   children: [
                       (0, t.jsx)(h, {
                           user: i,
-                          analyticsLocation: Z,
+                          analyticsLocation: g,
                           gameFriends: _,
                           hasIncomingPendingGameFriends: j,
                           hasOutgoingPendingGameFriends: E
@@ -94,7 +94,7 @@ function v(e) {
                             icon: l.iHX,
                             tooltipText: p.intl.string(p.t.zz2i8v),
                             user: i,
-                            analyticsLocation: Z
+                            analyticsLocation: g
                         }),
                         (0, t.jsx)(d.c, {
                             userId: i.id,
@@ -110,7 +110,7 @@ function v(e) {
                               icon: l.iHX,
                               tooltipText: p.intl.string(p.t.ZOFd1N),
                               user: i,
-                              analyticsLocation: Z
+                              analyticsLocation: g
                           }),
                           (0, t.jsx)(d.c, {
                               userId: i.id,
@@ -133,7 +133,7 @@ function v(e) {
                               onClick: () => {
                                   o.Z.addRelationship({
                                       userId: i.id,
-                                      context: { location: Z },
+                                      context: { location: g },
                                       friendToken: u
                                   });
                               }

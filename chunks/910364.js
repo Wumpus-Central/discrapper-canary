@@ -1,4 +1,4 @@
-i.d(n, { Z: () => G }), i(47120);
+i.d(n, { Z: () => w }), i(47120);
 var t = i(200651),
     l = i(192379),
     o = i(642128),
@@ -15,8 +15,8 @@ var t = i(200651),
     I = i(221292),
     h = i(816988),
     v = i(687158),
-    Z = i(326094),
-    g = i(510659),
+    g = i(326094),
+    Z = i(510659),
     _ = i(113557),
     j = i(867176),
     E = i(451834),
@@ -29,17 +29,17 @@ var t = i(200651),
     L = i(748283),
     C = i(902423),
     A = i(4517),
-    O = i(171368),
-    M = i(62154),
+    M = i(171368),
+    O = i(62154),
     R = i(412317),
     U = i(228168),
     B = i(981631),
     F = i(388032),
     D = i(171865);
-function G(e) {
-    let { user: n, currentUser: i, guildId: G, channelId: w, messageId: k, roleId: V, sessionId: W, friendToken: z, initialSection: K, initialSubsection: Y, transitionState: X, onClose: J, showGuildProfile: q = !0, sourceAnalyticsLocations: H = [] } = e,
+function w(e) {
+    let { user: n, currentUser: i, guildId: w, channelId: G, messageId: k, roleId: V, sessionId: W, friendToken: z, initialSection: K, initialSubsection: Y, transitionState: X, onClose: J, showGuildProfile: q = !0, sourceAnalyticsLocations: H = [] } = e,
         { analyticsLocations: Q } = (0, u.ZP)([...H, c.Z.SIMPLIFIED_PROFILE_MODAL]),
-        $ = (0, Z.Z)({
+        $ = (0, g.Z)({
             user: n,
             currentUser: i,
             location: B.Sbl.SIMPLIFIED_USER_PROFILE
@@ -48,22 +48,22 @@ function G(e) {
             layout: $ ? 'SIMPLIFIED_MODAL' : 'SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE',
             userId: n.id,
             sourceSessionId: W,
-            guildId: G,
-            channelId: w,
+            guildId: w,
+            channelId: G,
             messageId: k,
             roleId: V,
             showGuildProfile: q
         }),
-        en = (0, g.$m)(),
+        en = (0, Z.$m)(),
         ei = (0, r.q_F)({
             opacity: null != en.interactionType ? 1 : 0,
             config: { duration: 150 }
         }),
-        et = (0, v.ZP)(n.id, q ? G : void 0),
-        el = (0, v.ZP)(n.id, G),
+        et = (0, v.ZP)(n.id, q ? w : void 0),
+        el = (0, v.ZP)(n.id, w),
         eo = (0, s.e7)([x.Z], () => x.Z.getRelationshipType(n.id)),
         es = n.id === i.id,
-        er = l.useMemo(() => (null != G ? { [G]: [n.id] } : {}), [G, n.id]);
+        er = l.useMemo(() => (null != w ? { [w]: [n.id] } : {}), [w, n.id]);
     (0, d.$)(er);
     let ea = l.createRef(),
         ed = (0, a.Z)(ea),
@@ -72,7 +72,7 @@ function G(e) {
         value: Q,
         children: (0, t.jsx)(f.Mt, {
             value: ee,
-            children: (0, t.jsx)(g.NJ, {
+            children: (0, t.jsx)(Z.NJ, {
                 value: en,
                 children: (0, t.jsxs)(r.Y0X, {
                     transitionState: X,
@@ -103,8 +103,8 @@ function G(e) {
                                         (0, t.jsx)(b.Z, {
                                             shouldShowTooltip: null === en.interactionType,
                                             user: n,
-                                            guildId: G,
-                                            channelId: w,
+                                            guildId: w,
+                                            channelId: G,
                                             onClose: J
                                         }),
                                         (0, t.jsx)(P.Z, {
@@ -115,7 +115,7 @@ function G(e) {
                                         }),
                                         (0, t.jsx)(S.Z, {
                                             user: n,
-                                            guildId: G,
+                                            guildId: w,
                                             viewProfileItem:
                                                 (null == el ? void 0 : el.guildId) == null
                                                     ? null
@@ -126,7 +126,7 @@ function G(e) {
                                                             subtext: F.intl.formatToPlainString(F.t['mn/nW1'], { displayName: p.ZP.getName(void 0, void 0, n) }),
                                                             action: () => {
                                                                 J(),
-                                                                    (0, O.openUserProfileModal)({
+                                                                    (0, M.openUserProfileModal)({
                                                                         ...ee,
                                                                         showGuildProfile: !1,
                                                                         friendToken: z,
@@ -142,10 +142,10 @@ function G(e) {
                                                       : (0, t.jsx)(r.sNh, {
                                                             id: 'view-server-profile',
                                                             label: F.intl.string(F.t.DisZzM),
-                                                            subtext: F.intl.formatToPlainString(F.t['mn/nW1'], { displayName: p.ZP.getName(G, w, n) }),
+                                                            subtext: F.intl.formatToPlainString(F.t['mn/nW1'], { displayName: p.ZP.getName(w, G, n) }),
                                                             action: () => {
                                                                 J(),
-                                                                    (0, O.openUserProfileModal)({
+                                                                    (0, M.openUserProfileModal)({
                                                                         ...ee,
                                                                         showGuildProfile: !0,
                                                                         friendToken: z,
@@ -185,15 +185,15 @@ function G(e) {
                                                     location: 'UserProfileModal',
                                                     user: n,
                                                     displayProfile: et,
-                                                    guildId: G,
-                                                    channelId: w,
+                                                    guildId: w,
+                                                    channelId: G,
                                                     profileType: U.y0.FULL_SIZE
                                                 }),
                                                 (0, t.jsx)(A.Z, {
                                                     location: 'UserProfileModal',
                                                     user: n,
-                                                    guildId: G,
-                                                    channelId: w,
+                                                    guildId: w,
+                                                    channelId: G,
                                                     profileType: U.y0.FULL_SIZE,
                                                     hasEntered: X === r.Dvm.ENTERED,
                                                     onCloseProfile: J
@@ -210,7 +210,7 @@ function G(e) {
                                                         }),
                                                         (0, t.jsx)(T.Z, {
                                                             user: n,
-                                                            guildId: G,
+                                                            guildId: w,
                                                             onClose: J
                                                         })
                                                     ]
@@ -219,11 +219,11 @@ function G(e) {
                                         })
                                     ]
                                 }),
-                                (0, t.jsx)(M.Z, {
+                                (0, t.jsx)(O.Z, {
                                     user: n,
                                     currentUser: i,
-                                    guildId: G,
-                                    channelId: w,
+                                    guildId: w,
+                                    channelId: G,
                                     displayProfile: et,
                                     initialSection: K,
                                     initialSubsection: Y,

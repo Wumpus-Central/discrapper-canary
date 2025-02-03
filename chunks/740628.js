@@ -15,8 +15,8 @@ var t = i(200651),
     I = i(228168),
     h = i(388032),
     v = i(731218),
-    Z = i(893302);
-function g(e) {
+    g = i(893302);
+function Z(e) {
     let { section: n, subsection: i, user: l, currentUser: o, displayProfile: s, guildId: r, onClose: a } = e;
     return n === I.oh.ACTIVITY
         ? (0, t.jsx)(m.Z, {
@@ -98,7 +98,7 @@ function _(e) {
     );
     return y
         ? (0, t.jsx)('div', {
-              className: Z.container,
+              className: g.container,
               children: (0, t.jsxs)('div', {
                   className: v.empty,
                   children: [
@@ -111,10 +111,10 @@ function _(e) {
               })
           })
         : (0, t.jsxs)('div', {
-              className: Z.container,
+              className: g.container,
               children: [
                   (0, t.jsx)(s.n, {
-                      className: Z.tabBar,
+                      className: g.tabBar,
                       type: 'top',
                       selectedItem: T,
                       onItemSelect: S,
@@ -123,7 +123,7 @@ function _(e) {
                           return (0, t.jsx)(
                               s.n.Item,
                               {
-                                  className: Z.tabBarItem,
+                                  className: g.tabBarItem,
                                   id: n,
                                   'aria-label': i,
                                   children: (0, t.jsx)(r.Text, {
@@ -135,7 +135,7 @@ function _(e) {
                           );
                       })
                   }),
-                  (0, t.jsx)(g, {
+                  (0, t.jsx)(Z, {
                       items: f,
                       section: T,
                       subsection: P,
