@@ -449,8 +449,8 @@ class Q extends s.Component {
         });
     }
     renderVisualRefreshOverride() {
-        let { isRefreshEnabled: e, isRefreshExperimentEnabled: t } = this.props;
-        return t
+        let { isRefreshEnabled: e, isRefreshExperimentEnabled: t, canOptOutOfRefresh: n } = this.props;
+        return t && n
             ? (0, i.jsx)(u.xJW, {
                   className: F.marginTop8,
                   children: (0, i.jsx)(u.j7V, {
@@ -712,16 +712,18 @@ function et() {
                 gradientPreset: C.Z.gradientPreset
             };
         }),
-        d = (0, N.o9)('UserSettingsAppearance'),
-        u = (0, N.Q3)('UserSettingsAppearance');
-    return (0, i.jsx)(u ? $ : Q, {
+        d = (0, N.nm)('UserSettingsAppearance'),
+        u = (0, N.o9)('UserSettingsAppearance'),
+        m = (0, N.Q3)('UserSettingsAppearance');
+    return (0, i.jsx)(m ? $ : Q, {
         messageDisplayCompact: e,
         hideSimpleEmbedContent: t && n,
         clientTheme: s,
         timestampHourCycle: r,
-        isRefreshEnabled: u,
-        isRefreshExperimentEnabled: d,
+        isRefreshEnabled: m,
+        isRefreshExperimentEnabled: u,
         density: l,
+        canOptOutOfRefresh: d,
         ...c
     });
 }

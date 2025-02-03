@@ -1,16 +1,18 @@
 n.d(t, {
-    Q3: () => f,
-    R6: () => l,
-    TH: () => _,
-    i9: () => o,
-    iT: () => u,
-    o9: () => d,
-    yl: () => c
+    Q3: () => _,
+    R6: () => u,
+    TH: () => p,
+    i9: () => l,
+    iT: () => c,
+    nm: () => h,
+    o9: () => f,
+    yl: () => d
 });
 var i = n(442837),
     r = n(818083),
-    a = n(740492);
-let s = (0, r.B)({
+    a = n(740492),
+    s = n(594174);
+let o = (0, r.B)({
     id: '2024-05_desktop_visual_refresh',
     label: 'Desktop Visual Refresh',
     kind: 'user',
@@ -18,7 +20,8 @@ let s = (0, r.B)({
         enabled: !1,
         enableCollapsibleSidebar: !1,
         newChatInput: !1,
-        disabledByDefault: !0
+        disabledByDefault: !0,
+        canOptOut: !1
     },
     treatments: [
         {
@@ -28,7 +31,8 @@ let s = (0, r.B)({
                 enabled: !1,
                 enableCollapsibleSidebar: !1,
                 newChatInput: !1,
-                disabledByDefault: !0
+                disabledByDefault: !0,
+                canOptOut: !1
             }
         },
         {
@@ -38,7 +42,8 @@ let s = (0, r.B)({
                 enabled: !0,
                 enableCollapsibleSidebar: !1,
                 newChatInput: !0,
-                disabledByDefault: !1
+                disabledByDefault: !1,
+                canOptOut: !1
             }
         },
         {
@@ -48,7 +53,8 @@ let s = (0, r.B)({
                 enabled: !0,
                 enableCollapsibleSidebar: !0,
                 newChatInput: !0,
-                disabledByDefault: !1
+                disabledByDefault: !1,
+                canOptOut: !1
             }
         },
         {
@@ -58,7 +64,8 @@ let s = (0, r.B)({
                 enabled: !0,
                 enableCollapsibleSidebar: !1,
                 newChatInput: !1,
-                disabledByDefault: !1
+                disabledByDefault: !1,
+                canOptOut: !1
             }
         },
         {
@@ -68,7 +75,8 @@ let s = (0, r.B)({
                 enabled: !0,
                 enableCollapsibleSidebar: !0,
                 newChatInput: !1,
-                disabledByDefault: !1
+                disabledByDefault: !1,
+                canOptOut: !1
             }
         },
         {
@@ -78,35 +86,44 @@ let s = (0, r.B)({
                 enabled: !0,
                 enableCollapsibleSidebar: !1,
                 newChatInput: !0,
-                disabledByDefault: !0
+                disabledByDefault: !0,
+                canOptOut: !0
             }
         }
     ]
 });
-function o(e) {
-    let t = s.getCurrentConfig({ location: e }).enabled,
+function l(e) {
+    let t = o.getCurrentConfig({ location: e }).enabled,
         n = a.ZP.disableVisualRefresh;
     return !!t && !n;
 }
-function l(e) {
-    return f(e) && s.getCurrentConfig({ location: e }).newChatInput;
-}
 function u(e) {
-    return s.getCurrentConfig({ location: e }).disabledByDefault;
+    return _(e) && o.getCurrentConfig({ location: e }).newChatInput;
 }
-function c(e, t) {
-    return s.subscribe({ location: e }, t);
+function c(e) {
+    return o.getCurrentConfig({ location: e }).disabledByDefault;
 }
-function d(e) {
-    return s.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
+function d(e, t) {
+    return o.subscribe({ location: e }, t);
 }
 function f(e) {
-    let t = d(e),
-        n = (0, i.e7)([a.ZP], () => a.ZP.disableVisualRefresh);
-    return !!t && !n;
+    return o.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
 }
 function _(e) {
     let t = f(e),
-        n = s.useExperiment({ location: e }, { autoTrackExposure: !0 }).enableCollapsibleSidebar;
+        n = (0, i.e7)([a.ZP], () => a.ZP.disableVisualRefresh);
+    return !!t && !n;
+}
+function p(e) {
+    let t = _(e),
+        n = o.useExperiment({ location: e }, { autoTrackExposure: !0 }).enableCollapsibleSidebar;
     return !!t && n;
+}
+function h(e) {
+    let { canOptOut: t } = o.getCurrentConfig({ location: e }),
+        n = (0, i.e7)([s.default], () => {
+            var e, t;
+            return null === (t = s.default.getCurrentUser()) || void 0 === t ? void 0 : null === (e = t.isStaff) || void 0 === e ? void 0 : e.call(t);
+        });
+    return !!(t || n);
 }
