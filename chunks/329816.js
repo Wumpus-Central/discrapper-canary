@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ef }), n(47120), n(653041);
+n.d(t, { Z: () => e_ }), n(47120), n(653041);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(315263),
     y = n(40851),
     I = n(607070),
-    T = n(899663),
-    b = n(793903),
+    b = n(899663),
+    T = n(793903),
     S = n(213609),
     A = n(613413),
     N = n(94795),
@@ -34,88 +34,89 @@ var i = n(200651),
     M = n(482215),
     k = n(540059),
     U = n(947519),
-    G = n(243778),
-    B = n(314910),
-    Z = n(84615),
-    F = n(429142),
-    V = n(813744),
-    j = n(311476),
-    H = n(892254),
-    Y = n(210887),
-    W = n(978781),
-    K = n(314897),
-    z = n(819640),
-    q = n(594174),
-    Q = n(451478),
-    X = n(358085),
-    J = n(74538),
-    $ = n(663993),
-    ee = n(823453),
-    et = n(628123),
-    en = n(436774),
-    ei = n(686546),
-    er = n(950796),
-    ea = n(151851),
-    es = n(981631),
-    eo = n(921944),
-    el = n(999429);
+    G = n(605236),
+    B = n(243778),
+    Z = n(314910),
+    F = n(84615),
+    V = n(429142),
+    j = n(813744),
+    H = n(311476),
+    Y = n(892254),
+    W = n(210887),
+    K = n(978781),
+    z = n(314897),
+    q = n(819640),
+    Q = n(594174),
+    X = n(451478),
+    J = n(358085),
+    $ = n(74538),
+    ee = n(663993),
+    et = n(823453),
+    en = n(628123),
+    ei = n(436774),
+    er = n(686546),
+    ea = n(950796),
+    es = n(151851),
+    eo = n(981631),
+    el = n(921944),
+    eu = n(999429);
 n(167666),
     Promise.resolve()
         .then(n.bind(n, 62883))
         .then((e) => {
-            X.isPlatformEmbedded ? window.addEventListener('contextmenu', e.contextMenuCallbackNative, !1) : window.addEventListener('contextmenu', e.contextMenuCallbackWeb, !1);
+            J.isPlatformEmbedded ? window.addEventListener('contextmenu', e.contextMenuCallbackNative, !1) : window.addEventListener('contextmenu', e.contextMenuCallbackWeb, !1);
         }),
     (0, f.E)({ getDefaultLinkInterceptor: v.default }),
-    (0, $.Un)({
+    (0, ee.Un)({
         createPromise: () => Promise.all([n.e('80451'), n.e('30634'), n.e('33551')]).then(n.bind(n, 849493)),
         webpackId: 849493
     }),
-    (0, $.Un)({
+    (0, ee.Un)({
         createPromise: () => Promise.all([n.e('80451'), n.e('30634'), n.e('58493')]).then(n.bind(n, 80753)),
         webpackId: 80753
     });
-let eu = (0, $.Un)({
+let ec = (0, ee.Un)({
         createPromise: () => n.e('67110').then(n.bind(n, 177741)),
         webpackId: 177741
     }),
-    ec = (0, $.Un)({
+    ed = (0, ee.Un)({
         createPromise: () => Promise.all([n.e('78447'), n.e('13474')]).then(n.bind(n, 420541)),
         webpackId: 420541
     }),
-    ed = r.memo(function (e) {
-        let t = (0, c.e7)([Q.Z], () => Q.Z.isFocused()),
-            n = (0, c.e7)([z.Z], () => z.Z.hasLayers()),
+    ef = r.memo(function (e) {
+        let t = (0, c.e7)([X.Z], () => X.Z.isFocused()),
+            n = (0, c.e7)([q.Z], () => q.Z.hasLayers()),
             r = (0, _.s9z)(_.$sL);
         return (0, k.Q3)('ConnectedTitleBar')
-            ? (0, i.jsx)(er.D, {
+            ? (0, i.jsx)(ea.D, {
                   fixed: !0,
-                  show: n || r || !K.default.isAuthenticated()
+                  show: n || r || !z.default.isAuthenticated()
               })
-            : (0, i.jsx)(ea.Z, {
+            : (0, i.jsx)(es.Z, {
                   ...e,
                   focused: t
               });
     }),
-    ef = function (e) {
+    e_ = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
             { pathname: a } = (0, l.TH)(),
-            f = (0, X.getPlatform)(),
+            f = (0, J.getPlatform)(),
             v = u.tq || u.Em,
-            K = (0, c.e7)([Y.Z], () => (Y.Z.darkSidebar ? es.BRd.DARK : void 0)),
-            Q = (0, k.Q3)('ChannelSidebar'),
-            $ = (0, c.e7)([I.Z], () => (I.Z.useForcedColors ? 'yes' : 'no')),
-            [er, ea, ef] = (0, c.Wu)([x.Z], () => [x.Z.isEditorOpen, x.Z.isCoachmark, x.Z.isPreview]),
-            [e_, ep] = (0, c.Wu)([C.Z], () => [C.Z.isEditorOpen, C.Z.isUpsellPreview]),
-            eh = (0, c.e7)([z.Z], () => z.Z.getLayers().includes(es.S9g.USER_SETTINGS)),
-            em = (0, c.e7)([q.default], () => J.ZP.canUseClientThemes(q.default.getCurrentUser())),
-            eg = er && !eh,
-            eE = e_ && !eh,
-            ev = [];
-        eg && ea && !em && ev.push(d.z.CLIENT_THEMES_COACHMARK);
-        let [ey, eI] = (0, G.US)(ev, eo.R.SIDEBAR, !0);
-        ev.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-        let eT = ey === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-            eb = ey === d.z.CLIENT_THEMES_COACHMARK;
+            z = (0, c.e7)([W.Z], () => (W.Z.darkSidebar ? eo.BRd.DARK : void 0)),
+            X = (0, k.Q3)('ChannelSidebar'),
+            ee = (0, c.e7)([I.Z], () => (I.Z.useForcedColors ? 'yes' : 'no')),
+            [ea, es, e_] = (0, c.Wu)([x.Z], () => [x.Z.isEditorOpen, x.Z.isCoachmark, x.Z.isPreview]),
+            [ep, eh] = (0, c.Wu)([C.Z], () => [C.Z.isEditorOpen, C.Z.isUpsellPreview]),
+            em = (0, c.e7)([q.Z], () => q.Z.getLayers().includes(eo.S9g.USER_SETTINGS)),
+            eg = (0, c.e7)([Q.default], () => $.ZP.canUseClientThemes(Q.default.getCurrentUser())),
+            eE = ea && !em,
+            ev = ep && !em,
+            ey = [];
+        em || !es || eg || ey.push(d.z.CLIENT_THEMES_COACHMARK);
+        let [eI, eb] = (0, B.US)(ey, el.R.SIDEBAR, !0);
+        ey.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+        let eT = eI === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
+            eS = eI === d.z.CLIENT_THEMES_COACHMARK;
         r.useEffect(() => {
             null ==
                 (0, l.LX)(a, {
@@ -124,80 +125,80 @@ let eu = (0, $.Un)({
                     strict: !1
                 }) &&
                 eT &&
-                !eb &&
+                !eS &&
                 ((0, N.nJ)(),
                 p.Z.dispatch({
                     type: 'APP_ICON_TRACK_IMPRESSION',
-                    markAsDismissed: eI
+                    markAsDismissed: eb
                 }));
-        }, [eT, eb, eI, a]);
-        let eS = r.useRef(document.body),
-            eA = (eg && !ea) || eb,
-            eN = eE && !eb,
-            eC = ef || ep,
-            { enabled: eR } = j.Z.useExperiment(
+        }, [eT, eS, eb, a]);
+        let eA = r.useRef(document.body),
+            eN = eE || eS,
+            eC = ev && !eS,
+            eR = e_ || eh,
+            { enabled: eO } = H.Z.useExperiment(
                 { location: 'AppSkeleton' },
                 {
-                    autoTrackExposure: eC && (eA || eN),
-                    disable: !eC
+                    autoTrackExposure: eR && (eN || eC),
+                    disable: !eR
                 }
             ),
-            eO = ''.concat(Q ? 'enabled' : 'disabled').concat($);
+            eD = ''.concat(X ? 'enabled' : 'disabled').concat(ee);
         return (0, i.jsx)(
-            H.Z,
+            Y.Z,
             {
-                children: (0, i.jsx)(T.Z, {
+                children: (0, i.jsx)(b.Z, {
                     children: (0, i.jsxs)(_.vWI, {
                         children: [
-                            (0, i.jsx)(ee.Z, { skipsSettingDefaultPageTitle: n }),
+                            (0, i.jsx)(et.Z, { skipsSettingDefaultPageTitle: n }),
                             (0, i.jsx)(E.T, {
-                                children: (0, i.jsx)(et.Z, {
+                                children: (0, i.jsx)(en.Z, {
                                     children: (0, i.jsxs)(_.JcV, {
-                                        containerRef: eS,
+                                        containerRef: eA,
                                         children: [
-                                            (0, i.jsx)(ei.Co, {}),
-                                            (0, i.jsx)(en.ZP, {}),
+                                            (0, i.jsx)(er.Co, {}),
+                                            (0, i.jsx)(ei.ZP, {}),
                                             (0, i.jsx)(o.OU, {}),
                                             (0, i.jsx)(y.Wu, {
-                                                appContext: es.IlC.APP,
+                                                appContext: eo.IlC.APP,
                                                 renderWindow: window,
-                                                children: (0, i.jsxs)(B.yP, {
+                                                children: (0, i.jsxs)(Z.yP, {
                                                     children: [
                                                         null != f
-                                                            ? (0, i.jsx)(ed, {
+                                                            ? (0, i.jsx)(ef, {
                                                                   type: f,
-                                                                  themeOverride: K
+                                                                  themeOverride: z
                                                               })
                                                             : null,
                                                         (0, i.jsxs)('div', {
-                                                            className: s()(el.appAsidePanelWrapper, v && el.mobileAppAsidePanelWrapper),
+                                                            className: s()(eu.appAsidePanelWrapper, v && eu.mobileAppAsidePanelWrapper),
                                                             children: [
                                                                 (0, i.jsx)(M.K, {}),
                                                                 (0, i.jsx)('div', {
-                                                                    className: el.notAppAsidePanel,
+                                                                    className: eu.notAppAsidePanel,
                                                                     'data-app-not-dev-tools': !0,
                                                                     children: (0, i.jsx)(w.m, {
-                                                                        children: (0, i.jsx)(F.OR, {
-                                                                            children: (0, i.jsx)(b.Z.Provider, {
+                                                                        children: (0, i.jsx)(V.OR, {
+                                                                            children: (0, i.jsx)(T.Z.Provider, {
                                                                                 value: S.Z,
                                                                                 children: (0, i.jsxs)(P.p, {
                                                                                     children: [
                                                                                         (0, i.jsx)('div', {
-                                                                                            className: s()(v ? el.mobileApp : el.app),
+                                                                                            className: s()(v ? eu.mobileApp : eu.app),
                                                                                             children: t
                                                                                         }),
                                                                                         (0, i.jsx)(O.Z, {}),
                                                                                         (0, i.jsx)(m.Z, {}),
                                                                                         (0, i.jsx)(_.nKe, {}),
                                                                                         (0, i.jsx)(g.Z, {}),
-                                                                                        (0, i.jsx)(Z.Ox, {}),
-                                                                                        (0, i.jsx)(B.Un, {}),
-                                                                                        (0, i.jsx)(F.ot, {}),
+                                                                                        (0, i.jsx)(F.Ox, {}),
+                                                                                        (0, i.jsx)(Z.Un, {}),
+                                                                                        (0, i.jsx)(V.ot, {}),
                                                                                         (0, i.jsx)(_.Ixi, {}),
                                                                                         (0, i.jsx)(A.Z, {}),
-                                                                                        (0, i.jsx)(V.Z, {}),
-                                                                                        (0, i.jsx)(eu, {}),
-                                                                                        (0, i.jsx)(ec, {})
+                                                                                        (0, i.jsx)(j.Z, {}),
+                                                                                        (0, i.jsx)(ec, {}),
+                                                                                        (0, i.jsx)(ed, {})
                                                                                     ]
                                                                                 })
                                                                             })
@@ -206,18 +207,31 @@ let eu = (0, $.Un)({
                                                                 }),
                                                                 (0, i.jsx)(D.Z, {}),
                                                                 (0, i.jsx)(h.Z, {}),
-                                                                eA && !eR && (0, i.jsx)(L.Z, { markAsDismissed: eI }),
                                                                 eN &&
-                                                                    !eR &&
+                                                                    !eO &&
+                                                                    (0, i.jsx)(L.Z, {
+                                                                        markAsDismissed: eS
+                                                                            ? eb
+                                                                            : () => {
+                                                                                  (0, G.EW)(d.z.CLIENT_THEMES_COACHMARK, {
+                                                                                      dismissAction: el.L.INDIRECT_ACTION,
+                                                                                      forceTrack: !0
+                                                                                  });
+                                                                              },
+                                                                        showClientThemesCoachmark: eS
+                                                                    }),
+                                                                eC &&
+                                                                    !eO &&
                                                                     (0, i.jsx)(R.Z, {
                                                                         isCoachmark: eT,
-                                                                        markAsDismissed: eI
+                                                                        markAsDismissed: eb
                                                                     }),
-                                                                (eA || eN) &&
-                                                                    eR &&
-                                                                    (0, i.jsx)(W.Z, {
-                                                                        initialTab: eN ? W._.APP_ICONS : W._.CLIENT_THEMES,
-                                                                        markAsDismissed: eI
+                                                                (eN || eC) &&
+                                                                    eO &&
+                                                                    (0, i.jsx)(K.Z, {
+                                                                        initialTab: eC ? K._.APP_ICONS : K._.CLIENT_THEMES,
+                                                                        markAsDismissed: eb,
+                                                                        isCoachmark: eS
                                                                     }),
                                                                 (0, i.jsx)(U.Z, { mobile: v })
                                                             ]
@@ -235,6 +249,6 @@ let eu = (0, $.Un)({
                     })
                 })
             },
-            eO
+            eD
         );
     };

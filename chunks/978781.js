@@ -23,8 +23,8 @@ var i = n(200651),
     v = n(572397),
     y = n(705262),
     I = n(436774),
-    T = n(768762),
-    b = n(197115),
+    b = n(768762),
+    T = n(197115),
     S = n(727939),
     A = n(981631),
     N = n(921944),
@@ -34,13 +34,17 @@ var i = n(200651),
     D = (function (e) {
         return (e[(e.CLIENT_THEMES = 0)] = 'CLIENT_THEMES'), (e[(e.APP_ICONS = 1)] = 'APP_ICONS'), e;
     })({});
-function x() {
-    let e = (0, v.q)();
+function x(e) {
+    let { isCoachmark: t } = e,
+        n = (0, v.q)();
     return (
-        r.useEffect(() => ((0, g.Kq)(), e(A.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(A.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
+        r.useEffect(() => ((0, g.Kq)(), n(A.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => n(A.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [n]),
         (0, i.jsx)(y.ZP, {
             type: y.yH.EDITOR,
-            children: (0, i.jsx)(y.ZP.BasicAndGradient, { isEditor: !0 })
+            children: (0, i.jsx)(y.ZP.BasicAndGradient, {
+                isEditor: !0,
+                isCoachmark: t
+            })
         })
     );
 }
@@ -120,11 +124,11 @@ function P(e) {
                             size: u.zxk.Sizes.NONE,
                             onClick: _,
                             'aria-label': p,
-                            children: (0, i.jsx)(T.Z, { direction: T.Z.Directions.LEFT })
+                            children: (0, i.jsx)(b.Z, { direction: b.Z.Directions.LEFT })
                         })
                     }),
                     a &&
-                        (0, i.jsx)(b.Z, {
+                        (0, i.jsx)(T.Z, {
                             className: O.footerButton,
                             subscriptionTier: C.Si.TIER_2,
                             showGradient: !0,
@@ -137,9 +141,9 @@ function P(e) {
     });
 }
 function w(e) {
-    let { initialTab: t, markAsDismissed: n } = e,
-        [a, s] = r.useState(t),
-        o = r.useMemo(
+    let { initialTab: t, markAsDismissed: n, isCoachmark: a } = e,
+        [s, o] = r.useState(t),
+        c = r.useMemo(
             () => [
                 {
                     name: R.intl.string(R.t.Ksh3io),
@@ -152,21 +156,21 @@ function w(e) {
             ],
             []
         ),
-        c = (0, l.e7)([E.Z], () => E.Z.isPreview),
-        f = (0, l.e7)([p.Z], () => p.Z.isUpsellPreview),
-        h = c || f,
-        m = (0, v.J)(),
-        y = r.useCallback(() => {
-            c && m(), f && (0, _.O7)();
-        }, [c, f, m]),
-        I = (0, d.Z)(null, h ? y : A.dG4),
+        f = (0, l.e7)([E.Z], () => E.Z.isPreview),
+        h = (0, l.e7)([p.Z], () => p.Z.isUpsellPreview),
+        m = f || h,
+        y = (0, v.J)(),
+        I = r.useCallback(() => {
+            f && y(), h && (0, _.O7)();
+        }, [f, h, y]),
+        b = (0, d.Z)(null, m ? I : A.dG4),
         T = r.useCallback(() => {
-            (0, _.G8)(), (0, g.Mo)(), y(), null == n || n(N.L.DISMISS);
-        }, [y, n]);
+            (0, _.G8)(), (0, g.Mo)(), I(), null == n || n(N.L.DISMISS);
+        }, [I, n]);
     return (0, i.jsx)(S.Z, {
         className: O.draggableContainer,
         children: (0, i.jsxs)('div', {
-            ref: I,
+            ref: b,
             className: O.container,
             children: [
                 (0, i.jsxs)('div', {
@@ -188,11 +192,11 @@ function w(e) {
                             ]
                         }),
                         (0, i.jsx)(u.sY7, {
-                            options: o,
-                            value: a,
+                            options: c,
+                            value: s,
                             onChange: (e) => {
                                 let { value: t } = e;
-                                return s(t);
+                                return o(t);
                             },
                             look: 'pill'
                         })
@@ -200,11 +204,11 @@ function w(e) {
                 }),
                 (0, i.jsxs)(u.Ttm, {
                     className: O.scrollContainer,
-                    children: [0 === a && (0, i.jsx)(x, {}), 1 === a && (0, i.jsx)(L, {})]
+                    children: [0 === s && (0, i.jsx)(x, { isCoachmark: a }), 1 === s && (0, i.jsx)(L, {})]
                 }),
                 (0, i.jsx)(P, {
-                    tab: a,
-                    isPreview: h,
+                    tab: s,
+                    isPreview: m,
                     onClose: T,
                     isCoachmark: !1
                 })

@@ -24,8 +24,8 @@ var i = n(200651),
     v = n(311476),
     y = n(165583),
     I = n(587446),
-    T = n(210887),
-    b = n(740492),
+    b = n(210887),
+    T = n(740492),
     S = n(626135),
     A = n(238302),
     N = n(514361),
@@ -170,13 +170,13 @@ let U = Object.freeze({
     },
     V = (e) => {
         var t, n;
-        let { renderCTAButtons: a } = e,
-            { type: s } = r.useContext(G),
-            [o, u] = (0, l.Wu)([N.Z], () => [N.Z.isPreview, N.Z.isCoachmark]),
+        let { renderCTAButtons: a, isCoachmark: s } = e,
+            { type: o } = r.useContext(G),
+            [u] = (0, l.Wu)([N.Z], () => [N.Z.isPreview]),
             c = (null === (n = (0, E.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.Si.TIER_2;
         return (0, i.jsx)(i.Fragment, {
             children:
-                'EDITOR' === s && o && c
+                'EDITOR' === o && u && c
                     ? (0, i.jsx)(y.ZP, {
                           type: D.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                           subscriptionTier: D.Si.TIER_2,
@@ -189,14 +189,14 @@ let U = Object.freeze({
                                   className: M.headings,
                                   children: [
                                       (0, i.jsx)(Z, {
-                                          type: s,
-                                          isPreview: o,
-                                          isCoachmark: u
+                                          type: o,
+                                          isPreview: u,
+                                          isCoachmark: s
                                       }),
                                       (0, i.jsx)(F, {
-                                          type: s,
-                                          isPreview: o,
-                                          isCoachmark: u
+                                          type: o,
+                                          isPreview: u,
+                                          isCoachmark: s
                                       })
                                   ]
                               }),
@@ -215,11 +215,11 @@ let U = Object.freeze({
             }),
             [g, E] = r.useState(!1),
             [y, I] = r.useState(-1),
-            T = (0, l.e7)([f.Z], () => f.Z.useReducedMotion);
+            b = (0, l.e7)([f.Z], () => f.Z.useReducedMotion);
         r.useEffect(() => {
             ((y === R.XV.length - 2 && 'EDITOR' === a) || m === u.Us.EASTER_EGG) && E(!0);
         }, [y, a, m]);
-        let { enabled: b } = v.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
+        let { enabled: T } = v.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
             S = (e, t) => {
                 if (
                     ((0, A.zO)(e.id),
@@ -228,7 +228,7 @@ let U = Object.freeze({
                         analyticsLocations: o,
                         themeName: u.Us[e.id]
                     }),
-                    h && 'SETTINGS' === a && b)
+                    h && 'SETTINGS' === a && T)
                 ) {
                     (0, c.ZDy)(
                         async () => {
@@ -284,7 +284,7 @@ let U = Object.freeze({
                         }),
                         (0, i.jsx)(c.Fmz, {
                             importData: t,
-                            shouldAnimate: !T,
+                            shouldAnimate: !b,
                             className: M.sparkles
                         })
                     ]
@@ -305,7 +305,7 @@ let U = Object.freeze({
                             disabled: t,
                             tabIndex: 0 !== n || t ? void 0 : 0,
                             showBadge: !1,
-                            showLockedBadge: 'SETTINGS' === a && b && h
+                            showLockedBadge: 'SETTINGS' === a && T && h
                         },
                         e.id
                     )
@@ -315,11 +315,14 @@ let U = Object.freeze({
         });
     },
     H = (e) => {
-        let { className: t, renderCTAButtons: n, disabled: r = !1 } = e;
+        let { className: t, renderCTAButtons: n, disabled: r = !1, isCoachmark: a } = e;
         return (0, i.jsxs)('section', {
             className: t,
             children: [
-                (0, i.jsx)(V, { renderCTAButtons: n }),
+                (0, i.jsx)(V, {
+                    renderCTAButtons: n,
+                    isCoachmark: a
+                }),
                 (0, i.jsx)('div', {
                     className: M.presets,
                     children: (0, i.jsx)(j, { disabled: r })
@@ -331,7 +334,7 @@ let U = Object.freeze({
         let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
             { delay: a } = r.useContext(G),
             { analyticsLocations: s } = (0, p.ZP)(_.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [o, u, c] = (0, l.Wu)([T.Z, b.ZP, N.Z], () => [T.Z.theme, null == N.Z.gradientPreset, b.ZP.useSystemTheme === x.K.ON]),
+            [o, u, c] = (0, l.Wu)([b.Z, T.ZP, N.Z], () => [b.Z.theme, null == N.Z.gradientPreset, T.ZP.useSystemTheme === x.K.ON]),
             f = (e) => {
                 (0, A.xs)(),
                     B({
@@ -394,12 +397,15 @@ let U = Object.freeze({
         });
     },
     K = (e) => {
-        let { isEditor: t, className: n, renderCTAButtons: r } = e,
-            a = (0, l.e7)([N.Z], () => N.Z.isCoachmark);
+        let { isEditor: t, className: n, renderCTAButtons: r, isCoachmark: a } = e;
         return (0, i.jsxs)('section', {
             className: n,
             children: [
-                !t && (0, i.jsx)(V, { renderCTAButtons: r }),
+                !t &&
+                    (0, i.jsx)(V, {
+                        renderCTAButtons: r,
+                        isCoachmark: a
+                    }),
                 t &&
                     a &&
                     (0, i.jsx)(c.X6q, {
