@@ -19,8 +19,8 @@ var r = n(120356),
     v = n(639119),
     y = n(474936),
     I = n(981631),
-    T = n(388032),
-    b = n(641135);
+    b = n(388032),
+    T = n(641135);
 function S(e) {
     let { isClaimed: t, isVerified: r, isGift: a, subscriptionTier: s, trialId: l, postSuccessGuild: u, onSubscribeModalClose: c, analyticsLocations: d, premiumModalAnalyticsLocation: _, applicationId: p, giftMessage: h } = e;
     if (!t) {
@@ -81,7 +81,7 @@ function A(e) {
         l = null != o ? y.$e[o] : null,
         u = null != n ? y.$e[n] : null;
     return (
-        i ? (s = E.ZP.getSwitchingPlansDisabledMessage(r)) : null != u && null != l && l < u ? ((a = T.intl.string(T.t['2pG5GR'])), (s = T.intl.string(T.t.jXaaRk))) : null != o && null != n && o === n ? ((a = T.intl.string(T.t.ymSxh4)), (s = T.intl.string(T.t.jXaaRk))) : null == o && null != n && n === y.p9.TIER_2 && (s = T.intl.string(T.t.jXaaRk)),
+        i ? (s = E.ZP.getSwitchingPlansDisabledMessage(r)) : null != u && null != l && l < u ? ((a = b.intl.string(b.t['2pG5GR'])), (s = b.intl.string(b.t.jXaaRk))) : null != o && null != n && o === n ? ((a = b.intl.string(b.t.ymSxh4)), (s = b.intl.string(b.t.jXaaRk))) : null == o && null != n && n === y.p9.TIER_2 && (s = b.intl.string(b.t.jXaaRk)),
         {
             disabledButtonText: a,
             disabledButtonTooltipText: s
@@ -125,7 +125,7 @@ let N = function (e) {
         return (0, i.jsxs)(o.zxk, {
             size: f,
             className: N,
-            innerClassName: b.premiumSubscribeButton,
+            innerClassName: T.premiumSubscribeButton,
             color: o.zxk.Colors.BRAND_INVERTED,
             onClick: q,
             ...F,
@@ -134,11 +134,11 @@ let N = function (e) {
                     (0, i.jsx)(o.SrA, {
                         size: 'md',
                         color: 'currentColor',
-                        className: b.premiumIcon
+                        className: T.premiumIcon
                     }),
                 (0, i.jsx)('span', {
-                    className: a()(b.buttonText, O),
-                    children: null != R ? R : T.intl.string(T.t['Gd/XHB'])
+                    className: a()(T.buttonText, O),
+                    children: null != R ? R : b.intl.string(b.t['Gd/XHB'])
                 })
             ]
         });
@@ -146,7 +146,7 @@ let N = function (e) {
         return (0, i.jsxs)(o.zxk, {
             size: f,
             className: N,
-            innerClassName: b.giftButton,
+            innerClassName: T.giftButton,
             color: o.zxk.Colors.PRIMARY,
             onClick: q,
             ...F,
@@ -154,19 +154,19 @@ let N = function (e) {
                 (0, i.jsx)(o.OgN, {
                     size: 'md',
                     color: 'currentColor',
-                    className: b.giftIcon
+                    className: T.giftIcon
                 }),
                 (0, i.jsx)('span', {
-                    className: a()(b.buttonText, O),
-                    children: null != R ? R : T.intl.string(T.t.PEjaCw)
+                    className: a()(T.buttonText, O),
+                    children: null != R ? R : b.intl.string(b.t.PEjaCw)
                 })
             ]
         });
-    let Q = T.intl.string(T.t['2pG5GR']),
+    let Q = b.intl.string(b.t['2pG5GR']),
         X = null != H ? (0, E.Af)(H) : null,
         J = null != X ? E.ZP.getPremiumType(X.planId) : null == V ? void 0 : V.premiumType,
         $ = n === y.Si.TIER_2 && null != J && [y.p9.TIER_0, y.p9.TIER_1].includes(J);
-    $ && (Q = T.intl.string(T.t.IJI7ys));
+    $ && (Q = b.intl.string(b.t.IJI7ys));
     let ee = null != H && E.ZP.isSwitchingPlansDisabled(H, Y),
         et = (null != H && H.status !== I.O0b.ACCOUNT_HOLD && !(0, p.Q0)(H.planId) && !$) || ee,
         en = et
@@ -184,14 +184,14 @@ let N = function (e) {
         return (0, i.jsxs)(o.gtL, {
             disabled: et,
             onClick: q,
-            innerClassName: b.premiumSubscribeButton,
+            innerClassName: T.premiumSubscribeButton,
             color: n === y.Si.TIER_1 ? o.zxk.Colors.PRIMARY : o.zxk.Colors.GREEN,
             size: f,
             className: B,
             wrapperClassName: a()(
                 {
-                    [b.tier2Gradient]: Z && n === y.Si.TIER_2,
-                    [b.tier1Gradient]: Z && n === y.Si.TIER_1
+                    [T.tier2Gradient]: Z && n === y.Si.TIER_2,
+                    [T.tier1Gradient]: Z && n === y.Si.TIER_1
                 },
                 N
             ),
@@ -203,10 +203,10 @@ let N = function (e) {
                     (0, i.jsx)(o.SrA, {
                         size: 'md',
                         color: 'currentColor',
-                        className: a()(b.premiumIcon, D)
+                        className: a()(T.premiumIcon, D)
                     }),
                 (0, i.jsx)('span', {
-                    className: a()(b.buttonText, O),
+                    className: a()(T.buttonText, O),
                     children: null !== (r = null !== (t = null == en ? void 0 : en.disabledButtonText) && void 0 !== t ? t : R) && void 0 !== r ? r : Q
                 })
             ]

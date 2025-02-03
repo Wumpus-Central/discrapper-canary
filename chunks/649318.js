@@ -1,6 +1,6 @@
 n.d(t, {
     $6: () => R,
-    MP: () => b,
+    MP: () => T,
     Mg: () => v,
     Nl: () => N,
     Ns: () => g,
@@ -102,7 +102,7 @@ function I(e) {
         media: e
     });
 }
-function T(e) {
+function b(e) {
     let { mid: t, type: n, setup: i, direction: a, baseSDP: s, codec: o, payload: l, bitrate: u, ssrcs: f, extensions: m, rtxPayload: g, sendingVideo: v } = e;
     if ('inactive' === a && !p.WS)
         return {
@@ -233,7 +233,7 @@ function T(e) {
     }
     return y;
 }
-function b(e) {
+function T(e) {
     let { type: t, baseSDP: n, direction: i, audioCodec: r, audioPayloadType: a, audioBitRate: s, videoCodec: o, videoPayloadType: l, videoBitRate: u, rtxPayloadType: d, ssrcs: f, extensions: _ } = e,
         p = [];
     if ((m.info('generateSessionDescription: '.concat(JSON.stringify(f))), 'Firefox' === c().name)) {
@@ -245,7 +245,7 @@ function b(e) {
                 E = 'audio' === f ? a : l,
                 v = 'audio' === f ? s : u;
             p.push(
-                T({
+                b({
                     mid: m,
                     type: f,
                     setup: e,
@@ -272,7 +272,7 @@ function b(e) {
                 });
         if (
             (p.push(
-                T({
+                b({
                     mid: 'audio',
                     type: 'audio',
                     setup: e,
@@ -297,7 +297,7 @@ function b(e) {
                     return y(n, t, 'v');
                 });
             p.push(
-                T({
+                b({
                     mid: 'video',
                     type: 'video',
                     setup: e,
@@ -329,10 +329,10 @@ function S(e) {
             '' !== h ? (t = y(h, d, 'audio' === m ? 'a' : 'v')) : ((t = []), 'sendonly' === g ? (g = 'inactive') : 'sendrecv' === g && (g = 'recvonly'));
             let v = 'audio' === m ? i : s,
                 I = 'audio' === m ? r : o,
-                b = 'audio' === m ? null : c,
+                T = 'audio' === m ? null : c,
                 S = 'audio' === m ? a : l;
             _.push(
-                T({
+                b({
                     mid: E,
                     type: m,
                     setup: p,
@@ -343,7 +343,7 @@ function S(e) {
                     bitrate: S,
                     ssrcs: t,
                     extensions: f,
-                    rtxPayload: b,
+                    rtxPayload: T,
                     sendingVideo: u
                 })
             );

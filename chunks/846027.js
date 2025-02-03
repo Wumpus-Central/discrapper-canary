@@ -46,14 +46,14 @@ let v = {
         trackToggleSelfMute(e) {},
         trackToggleSelfDeaf(e) {}
     },
-    { enable: y, isNotSupported: I, trackToggleSelfMute: T, trackToggleSelfDeaf: b } = (v = n(929782)),
+    { enable: y, isNotSupported: I, trackToggleSelfMute: b, trackToggleSelfDeaf: T } = (v = n(929782)),
     S = {
         enable: y,
         toggleSelfMute() {
             let { context: e = h.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, playSoundEffect: r = !0, location: a } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
             return I()
                 ? Promise.resolve()
-                : (T({
+                : (b({
                         usedKeybind: n,
                         location: a
                     }),
@@ -84,7 +84,7 @@ let v = {
         toggleSelfDeaf() {
             let { context: e = h.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, location: r } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
             I() ||
-                (b({
+                (T({
                     usedKeybind: n,
                     location: r
                 }),

@@ -18,7 +18,7 @@ var i = n(200651),
     v = n(149203),
     y = n(388032),
     I = n(489489);
-function T(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function T(e, t, n) {
         e
     );
 }
-let b = (e) => e.stopPropagation();
+let T = (e) => e.stopPropagation();
 class S extends r.PureComponent {
     componentDidMount() {
         d.gK(), document.addEventListener('keydown', this.backToFrontPage), '' !== this.props.query && this.search(this.props.query, E.wI2.SEARCH);
@@ -125,7 +125,7 @@ class S extends r.PureComponent {
             role: 'tabpanel',
             'aria-labelledby': v._3,
             className: s()(I.container, e),
-            onClick: b,
+            onClick: T,
             ref: t,
             children: [
                 (0, i.jsx)('div', {
@@ -141,26 +141,26 @@ class S extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            T(this, 'state', { resultType: null }),
-            T(this, 'backToFrontPage', (e) => {
+            b(this, 'state', { resultType: null }),
+            b(this, 'backToFrontPage', (e) => {
                 let { resultType: t } = this.state;
                 e.keyCode === E.yXg.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery());
             }),
-            T(this, 'handleChangeQuery', (e) => {
+            b(this, 'handleChangeQuery', (e) => {
                 (0, _.ql)(e), this.search(e, E.wI2.SEARCH);
             }),
-            T(this, 'handleSelectSuggestion', (e) => {
+            b(this, 'handleSelectSuggestion', (e) => {
                 (0, _.ql)(''), d.v2(), this.search(e, E.wI2.SEARCH_SUGGESTION, !0);
             }),
-            T(this, 'handleClearQuery', () => {
+            b(this, 'handleClearQuery', () => {
                 let { current: e } = this.props.searchBarRef;
                 (0, _.ql)(''), d.v2(), this.setState({ resultType: null }), null != e && e.focus();
             }),
-            T(this, 'handleSelectGIF', (e) => {
+            b(this, 'handleSelectGIF', (e) => {
                 let { onSelectGIF: t } = this.props;
                 null != t && t(e);
             }),
-            T(this, 'handleSelectItem', (e, t) => {
+            b(this, 'handleSelectItem', (e, t) => {
                 let { current: n } = this.props.searchBarRef;
                 switch (e) {
                     case E.wI2.TRENDING_CATEGORY:

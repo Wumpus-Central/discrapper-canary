@@ -26,8 +26,8 @@ function m(e) {
     var t;
     let n,
         { application: a, scopes: m, redirectUri: E, approximateGuildCount: v, isEmbeddedFlow: y, disclosures: I } = e,
-        T = new Date(u.default.extractTimestamp(a.id)),
-        b = (0, d.W3)(m),
+        b = new Date(u.default.extractTimestamp(a.id)),
+        T = (0, d.W3)(m),
         S = (0, l.yE)(null !== (t = a.flags) && void 0 !== t ? t : 0, f.udG.EMBEDDED);
     if (null != E && !S && !y)
         try {
@@ -51,7 +51,7 @@ function m(e) {
             }),
             (0, i.jsx)(g, {
                 icon: s.T39,
-                text: _.intl.formatToPlainString(_.t['+1bjc3'], { date: T })
+                text: _.intl.formatToPlainString(_.t['+1bjc3'], { date: b })
             }),
             m.includes(r.x.BOT) && null != v
                 ? (0, i.jsx)(g, {
@@ -61,7 +61,7 @@ function m(e) {
                 : null,
             (0, i.jsx)(g, {
                 icon: s.b7C,
-                text: b
+                text: T
             }),
             null != I
                 ? I.map((e) => {

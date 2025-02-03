@@ -18,8 +18,8 @@ var r,
     v = n(145597),
     y = n(372679),
     I = n(451478),
-    T = n(981631),
-    b = n(987650);
+    b = n(981631),
+    T = n(987650);
 function S(e, t, n) {
     return (
         t in e
@@ -36,15 +36,15 @@ function S(e, t, n) {
 let A = Object.freeze({
         selectedGuildId: null,
         selectedChannelId: null,
-        displayUserMode: T.OYC.ALWAYS,
-        displayNameMode: T.wC$.ALWAYS,
-        avatarSizeMode: T.ipw.LARGE,
-        notificationPositionMode: T._vf.TOP_LEFT,
-        textChatNotifications: T.Ypu.ENABLED,
+        displayUserMode: b.OYC.ALWAYS,
+        displayNameMode: b.wC$.ALWAYS,
+        avatarSizeMode: b.ipw.LARGE,
+        notificationPositionMode: b._vf.TOP_LEFT,
+        textChatNotifications: b.Ypu.ENABLED,
         disableExternalLinkAlert: !1,
         disablePinTutorial: !1,
         showKeybindIndicators: !0,
-        textWidgetOpacity: b.wF.LOWER,
+        textWidgetOpacity: T.wF.LOWER,
         showGameInviteNotification: !0,
         customInviteMessage: void 0
     }),
@@ -243,15 +243,15 @@ function eh() {
             return (
                 null != n &&
                 ((0, u.lW)({
-                    type: T.BmY.DISPATCH,
+                    type: b.BmY.DISPATCH,
                     pid: (0, v.QF)(),
                     token: (0, v.Ht)(),
                     payloads: [
                         {
                             type: 'CHANNEL_PRELOAD',
-                            guildId: t === T.ME ? null : t,
+                            guildId: t === b.ME ? null : t,
                             channelId: n,
-                            context: T.e3s
+                            context: b.e3s
                         },
                         {
                             type: 'OVERLAY_SELECT_CHANNEL',
@@ -265,7 +265,7 @@ function eh() {
         }
         return (
             (0, u.lW)({
-                type: T.BmY.DISPATCH,
+                type: b.BmY.DISPATCH,
                 pid: (0, v.QF)(),
                 token: (0, v.Ht)(),
                 payloads: [e]
@@ -278,10 +278,10 @@ function em(e) {
     let t = (0, v.QF)();
     if (null == e.pid || e.pid === t)
         switch (e.type) {
-            case T.BmY.STORAGE_SYNC:
+            case b.BmY.STORAGE_SYNC:
                 a.ZP.PersistedStore.initializeAll(e.states);
                 break;
-            case T.BmY.DISPATCH:
+            case b.BmY.DISPATCH:
                 null != e.payloads && ((x = !0), e.payloads.forEach((e) => F(e)), (x = !1));
         }
 }
@@ -290,7 +290,7 @@ function eg() {
         (0, u.Ty)(em, (0, v.Ht)()),
         (0, u.$j)(),
         (0, u.lW)({
-            type: T.BmY.CONNECT,
+            type: b.BmY.CONNECT,
             pid: (0, v.QF)(),
             token: (0, v.Ht)()
         });
@@ -368,7 +368,7 @@ class ev extends (r = a.ZP.PersistedStore) {
         return U.notificationPositionMode;
     }
     getTextChatNotificationMode() {
-        return U.notificationPositionMode === T._vf.DISABLED ? T.Ypu.DISABLED : U.textChatNotifications;
+        return U.notificationPositionMode === b._vf.DISABLED ? b.Ypu.DISABLED : U.textChatNotifications;
     }
     get showKeybindIndicators() {
         return null == U.showKeybindIndicators || U.showKeybindIndicators;

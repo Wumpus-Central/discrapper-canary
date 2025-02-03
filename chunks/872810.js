@@ -31,9 +31,9 @@ var i = n(512722),
     v = n(934415),
     y = n(70956),
     I = n(557457),
-    T = n(573261);
+    b = n(573261);
 n(26151), n(493683);
-var b = n(475179);
+var T = n(475179);
 n(287734);
 var S = n(981631),
     A = n(70722);
@@ -76,7 +76,7 @@ function D(e, t) {
         streamKey: r,
         allowMultiple: a
     }),
-        a || (null != t && t.noFocus) || b.Z.selectParticipant(e.channelId, r);
+        a || (null != t && t.noFocus) || T.Z.selectParticipant(e.channelId, r);
 }
 function x(e, t) {
     o.Z.dispatch({
@@ -146,7 +146,7 @@ async function M(e, t, n) {
 }
 async function k(e) {
     try {
-        await T.Z.post({
+        await b.Z.post({
             url: S.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
             trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY },

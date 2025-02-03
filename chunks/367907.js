@@ -28,8 +28,8 @@ var i = n(392711),
     v = n(306680),
     y = n(944486),
     I = n(914010),
-    T = n(9156),
-    b = n(594174),
+    b = n(9156),
+    T = n(594174),
     S = n(979651),
     A = n(626135),
     N = n(70956),
@@ -142,7 +142,7 @@ function B(e) {
     if (null == n) {
         let n = !1;
         if (t.isDM()) {
-            let e = b.default.getUser(t.recipients[0]);
+            let e = T.default.getUser(t.recipients[0]);
             null != e && (n = e.bot);
         }
         return {
@@ -155,16 +155,16 @@ function B(e) {
         channel_id: e,
         channel_was_unread: i.unread,
         channel_mention_count: i.mentionCount,
-        channel_is_muted: T.ZP.isChannelMuted(t.guild_id, t.id),
+        channel_is_muted: b.ZP.isChannelMuted(t.guild_id, t.id),
         channel_is_nsfw: t.isNSFW(),
-        channel_resolved_unread_setting: T.ZP.resolveUnreadSetting(t),
-        channel_preset: (0, o.gs)(T.ZP.resolveUnreadSetting(t), T.ZP.resolvedMessageNotifications(t)),
+        channel_resolved_unread_setting: b.ZP.resolveUnreadSetting(t),
+        channel_preset: (0, o.gs)(b.ZP.resolveUnreadSetting(t), b.ZP.resolvedMessageNotifications(t)),
         guild_id: t.guild_id,
         guild_was_unread: i.guildUnread,
         guild_mention_count: i.guildMentionCount,
-        guild_is_muted: T.ZP.isMuted(t.guild_id),
-        guild_resolved_unread_setting: T.ZP.resolveGuildUnreadSetting(n),
-        guild_preset: (0, o.gs)(T.ZP.resolveGuildUnreadSetting(n), T.ZP.getMessageNotifications(t.guild_id)),
+        guild_is_muted: b.ZP.isMuted(t.guild_id),
+        guild_resolved_unread_setting: b.ZP.resolveGuildUnreadSetting(n),
+        guild_preset: (0, o.gs)(b.ZP.resolveGuildUnreadSetting(n), b.ZP.getMessageNotifications(t.guild_id)),
         parent_id: t.parent_id,
         parent_channel_type: t.parentChannelThreadType,
         has_pending_member_action: (0, s.P)(t.guild_id, e),

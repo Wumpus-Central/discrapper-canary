@@ -43,12 +43,12 @@ function u(e) {
         v = '[0-9](_?[0-9])*',
         y = `\\.(${v})`,
         I = '0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*',
-        T = {
+        b = {
             className: 'number',
             variants: [{ begin: `(\\b(${I})((${y})|\\.)?|(${y}))[eE][+-]?(${v})\\b` }, { begin: `\\b(${I})\\b((${y})\\b|\\.)?|(${y})\\b` }, { begin: '\\b(0|[1-9](_?[0-9])*)n\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' }, { begin: '\\b0[0-7]+n?\\b' }],
             relevance: 0
         },
-        b = {
+        T = {
             className: 'subst',
             begin: '\\$\\{',
             end: '\\}',
@@ -61,7 +61,7 @@ function u(e) {
             starts: {
                 end: '`',
                 returnEnd: !1,
-                contains: [e.BACKSLASH_ESCAPE, b],
+                contains: [e.BACKSLASH_ESCAPE, T],
                 subLanguage: 'xml'
             }
         },
@@ -71,7 +71,7 @@ function u(e) {
             starts: {
                 end: '`',
                 returnEnd: !1,
-                contains: [e.BACKSLASH_ESCAPE, b],
+                contains: [e.BACKSLASH_ESCAPE, T],
                 subLanguage: 'css'
             }
         },
@@ -81,7 +81,7 @@ function u(e) {
             starts: {
                 end: '`',
                 returnEnd: !1,
-                contains: [e.BACKSLASH_ESCAPE, b],
+                contains: [e.BACKSLASH_ESCAPE, T],
                 subLanguage: 'graphql'
             }
         },
@@ -89,7 +89,7 @@ function u(e) {
             className: 'string',
             begin: '`',
             end: '`',
-            contains: [e.BACKSLASH_ESCAPE, b]
+            contains: [e.BACKSLASH_ESCAPE, T]
         },
         R = {
             className: 'comment',
@@ -131,14 +131,14 @@ function u(e) {
                 e.C_LINE_COMMENT_MODE
             ]
         },
-        O = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, A, N, C, { match: /\$\d+/ }, T];
-    b.contains = O.concat({
+        O = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, A, N, C, { match: /\$\d+/ }, b];
+    T.contains = O.concat({
         begin: /\{/,
         end: /\}/,
         keywords: E,
         contains: ['self'].concat(O)
     });
-    let D = [].concat(R, b.contains),
+    let D = [].concat(R, T.contains),
         x = D.concat([
             {
                 begin: /(\s*)\(/,
@@ -270,7 +270,7 @@ function u(e) {
             C,
             R,
             { match: /\$\d+/ },
-            T,
+            b,
             w,
             {
                 scope: 'attr',

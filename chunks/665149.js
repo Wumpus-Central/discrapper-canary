@@ -43,7 +43,7 @@ let h = 24,
               });
     },
     g = (e) => {
-        let { className: t, iconClassName: n, children: r, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: _, foreground: m, background: g, icon: E, iconSize: v = h, onClick: y, onContextMenu: I, tooltip: T = null, tooltipColor: b, tooltipPosition: S = 'bottom', tooltipDisabled: A, hideOnClick: N = !0, role: C, 'aria-label': R, 'aria-hidden': O, 'aria-checked': D, 'aria-expanded': x, 'aria-haspopup': L } = e,
+        let { className: t, iconClassName: n, children: r, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: _, foreground: m, background: g, icon: E, iconSize: v = h, onClick: y, onContextMenu: I, tooltip: b = null, tooltipColor: T, tooltipPosition: S = 'bottom', tooltipDisabled: A, hideOnClick: N = !0, role: C, 'aria-label': R, 'aria-hidden': O, 'aria-checked': D, 'aria-expanded': x, 'aria-haspopup': L } = e,
             P = (0, f.Q3)('BaseHeaderBar'),
             w = (0, i.jsx)(E, {
                 x: 0,
@@ -58,15 +58,15 @@ let h = 24,
             }),
             M = R;
         return (
-            null == M && 'string' == typeof T && (M = T),
+            null == M && 'string' == typeof b && (M = b),
             (0, i.jsx)(u.ua7, {
-                text: T,
-                color: b,
+                text: b,
+                color: T,
                 position: S,
                 hideOnClick: N,
                 shouldShow: !A,
                 children: (e) => {
-                    let { onMouseEnter: f, onMouseLeave: h, onFocus: T, onBlur: b } = e;
+                    let { onMouseEnter: f, onMouseLeave: h, onFocus: b, onBlur: T } = e;
                     return null == y
                         ? (0, i.jsx)('div', {
                               className: s()(t, [p.iconWrapper]),
@@ -83,8 +83,8 @@ let h = 24,
                                   'aria-hidden': O,
                                   onMouseEnter: f,
                                   onMouseLeave: h,
-                                  onFocus: T,
-                                  onBlur: b
+                                  onFocus: b,
+                                  onBlur: T
                               })
                           })
                         : (0, i.jsxs)(u.P3F, {
@@ -93,8 +93,8 @@ let h = 24,
                               onContextMenu: o ? void 0 : I,
                               onMouseEnter: f,
                               onMouseLeave: h,
-                              onFocus: T,
-                              onBlur: b,
+                              onFocus: b,
+                              onBlur: T,
                               className: s()(t, {
                                   [p.iconWrapper]: !0,
                                   [p.clickable]: !o && null != y,

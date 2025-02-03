@@ -1,5 +1,5 @@
 n.d(t, {
-    R: () => v,
+    R: () => h,
     Z: () => C
 }),
     n(411104);
@@ -19,22 +19,22 @@ var l = n(200651),
     S = n(598077),
     g = n(594174),
     A = n(51144),
-    T = n(981631),
-    I = n(888592),
+    I = n(981631),
+    T = n(888592),
     R = n(245335),
     O = n(388032),
-    h = n(594193);
-let v = () =>
+    v = n(594193);
+let h = () =>
         (0, l.jsxs)(i.Fragment, {
             children: [
                 (0, l.jsx)(u.qE, {
                     src: null,
                     size: r.EFr.DEPRECATED_SIZE_100,
-                    className: h.avatar
+                    className: v.avatar
                 }),
                 (0, l.jsx)(u.DK, { children: O.intl.string(O.t['3rE1Pz']) }),
                 (0, l.jsx)(u.Dx, {
-                    className: h.inviteResolvingGuildName,
+                    className: v.inviteResolvingGuildName,
                     children: O.intl.string(O.t.ZTNur6)
                 })
             ]
@@ -43,22 +43,22 @@ let v = () =>
         let { guild: t, user: n, application: i, compact: a } = e;
         return null != i
             ? (0, l.jsx)(d.Z, {
-                  className: h.appIcon,
+                  className: v.appIcon,
                   game: i,
-                  size: h.appIconSize
+                  size: v.appIconSize
               })
             : null != n
               ? (0, l.jsx)(u.qE, {
                     src: null != n ? n.getAvatarURL(void 0, 80) : null,
                     size: r.EFr.SIZE_80,
-                    className: a ? h.compactAvatar : h.avatar
+                    className: a ? v.compactAvatar : v.avatar
                 })
               : null != t
                 ? (0, l.jsx)(s.ZP, {
                       mask: s.ZP.Masks.SQUIRCLE,
                       width: 64,
                       height: 64,
-                      className: h.guildIcon,
+                      className: v.guildIcon,
                       children: (0, l.jsx)(u.Vj, {
                           guild: t,
                           size: u.Vj.Sizes.LARGER,
@@ -72,15 +72,15 @@ let v = () =>
         let n,
             i,
             s,
-            { invite: d, disableUser: v = !1, error: C, flatActivityCount: D = !1, isRegister: L = !1 } = e,
+            { invite: d, disableUser: h = !1, error: C, flatActivityCount: D = !1, isRegister: L = !1 } = e,
             x = (0, c.WR)({ location: 'invite' }),
             { currentUser: P } = (0, a.cj)([g.default], () => ({ currentUser: g.default.getCurrentUser() }));
         if (null == d) return null;
         let p = null != d.guild ? new N.ZP(d.guild) : null,
             U = null != d.channel ? (0, m.jD)(d.channel) : null,
             j = null != d.target_application ? new _.ZP(d.target_application) : null,
-            M = v || null == d.inviter ? null : new S.Z(d.inviter),
-            Z = !((null != d.approximate_member_count && d.approximate_member_count > 100) || (null != p && p.hasFeature(T.oNc.COMMUNITY))) && null != M,
+            M = h || null == d.inviter ? null : new S.Z(d.inviter),
+            Z = !((null != d.approximate_member_count && d.approximate_member_count > 100) || (null != p && p.hasFeature(I.oNc.COMMUNITY))) && null != M,
             F = null,
             G = !1;
         if (null != p)
@@ -90,7 +90,7 @@ let v = () =>
                 Z &&
                     null == j &&
                     (n = (0, l.jsx)(u.Vj, {
-                        className: h.icon,
+                        className: v.icon,
                         guild: p,
                         size: u.Vj.Sizes.SMALL
                     })),
@@ -100,11 +100,11 @@ let v = () =>
                     (s = (0, l.jsxs)('div', {
                         children: [
                             (0, l.jsx)(u.DK, {
-                                className: h.appIn,
+                                className: v.appIn,
                                 children: O.intl.string(O.t['3gg9fH'])
                             }),
                             (0, l.jsxs)('div', {
-                                className: h.guildContainer,
+                                className: v.guildContainer,
                                 children: [
                                     (0, l.jsx)(u.Vj, {
                                         guild: p,
@@ -114,7 +114,7 @@ let v = () =>
                                         tag: 'span',
                                         variant: 'text-lg/normal',
                                         color: 'header-primary',
-                                        className: h.appGuildName,
+                                        className: v.appGuildName,
                                         children: p.name
                                     })
                                 ]
@@ -141,12 +141,12 @@ let v = () =>
                     null != C
                         ? null
                         : (0, l.jsx)(u.DK, {
-                              className: h.directInviteSubTitle,
+                              className: v.directInviteSubTitle,
                               children: L ? O.intl.format(O.t['6r4JiY'], { username: e }) : O.intl.format(O.t.Quj7HR, { username: e })
                           }));
         }
         return (0, l.jsxs)('div', {
-            className: h.container,
+            className: v.container,
             children: [
                 (0, l.jsx)(f, {
                     application: j,
@@ -162,12 +162,12 @@ let v = () =>
                           children: [
                               (0, l.jsx)(u.DK, { children: F }),
                               (0, l.jsxs)(u.Dx, {
-                                  className: h.title,
+                                  className: v.title,
                                   children: [
                                       null != p
                                           ? (0, l.jsx)(o.Z, {
                                                 guild: p,
-                                                className: h.guildBadge,
+                                                className: v.guildBadge,
                                                 tooltipPosition: 'left'
                                             })
                                           : null,
@@ -178,10 +178,10 @@ let v = () =>
                           ]
                       }),
                 s,
-                null != j || G || (null == d ? void 0 : null === (t = d.guild) || void 0 === t ? void 0 : t.id) === I.fQ
+                null != j || G || (null == d ? void 0 : null === (t = d.guild) || void 0 === t ? void 0 : t.id) === T.fQ
                     ? null
                     : (0, l.jsx)(u.EJ, {
-                          className: h.activityCount,
+                          className: v.activityCount,
                           online: d.approximate_presence_count,
                           total: d.approximate_member_count,
                           flat: D

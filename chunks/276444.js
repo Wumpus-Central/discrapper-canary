@@ -30,8 +30,8 @@ let d = 5,
     v = new Set(),
     y = new Map(),
     I = 0,
-    T = null,
-    b = [],
+    b = null,
+    T = [],
     S = !1,
     A = 0,
     N = !1,
@@ -41,7 +41,7 @@ let d = 5,
     D = !1,
     x = u.g2L.NOT_ELIGIBLE;
 function L() {
-    (f = null), (_ = new Map()), (p = new Set()), (m = new Set()), (g = !1), (E = new Set()), (v = new Set()), (y = new Map()), (I = 0), (T = null), (b = []), (S = !1), (A = 0), (N = !1), (C = null), (h = new Map()), (R = !1), (O = !1), (D = !1), (x = u.g2L.NOT_ELIGIBLE);
+    (f = null), (_ = new Map()), (p = new Set()), (m = new Set()), (g = !1), (E = new Set()), (v = new Set()), (y = new Map()), (I = 0), (b = null), (T = []), (S = !1), (A = 0), (N = !1), (C = null), (h = new Map()), (R = !1), (O = !1), (D = !1), (x = u.g2L.NOT_ELIGIBLE);
 }
 let P = () => !0;
 function w(e) {
@@ -54,7 +54,7 @@ function M(e) {
 }
 function k(e) {
     let {} = e;
-    (N = !1), (C = null), (g = !1), (I += 1), (T = Date.now() + 1000 * Math.pow(2, I));
+    (N = !1), (C = null), (g = !1), (I += 1), (b = Date.now() + 1000 * Math.pow(2, I));
 }
 function U(e) {
     let { recipientId: t } = e;
@@ -109,7 +109,7 @@ function q() {
 }
 function Q(e) {
     let { users: t, nextIndex: n } = e;
-    (S = !1), (b = t), (A = n);
+    (S = !1), (T = t), (A = n);
 }
 function X() {
     S = !1;
@@ -129,7 +129,7 @@ class et extends (i = a.ZP.Store) {
         this.waitFor(o.default), this.syncWith([o.default], P);
     }
     checkAndFetchReferralsRemaining() {
-        null == f && !g && I < d && (null == T || T < Date.now()) && (0, l.C$)();
+        null == f && !g && I < d && (null == b || b < Date.now()) && (0, l.C$)();
     }
     getReferralsRemaining() {
         return this.checkAndFetchReferralsRemaining(), f;
@@ -153,7 +153,7 @@ class et extends (i = a.ZP.Store) {
         return E.has(e);
     }
     getEligibleUsers() {
-        return b;
+        return T;
     }
     getFetchingEligibleUsers() {
         return S;

@@ -57,7 +57,7 @@ function v(e, t, n, i) {
     var r;
     let a = 'line' === t[0].type && (null === (r = t[0].codeBlockState) || void 0 === r ? void 0 : r.isInCodeBlock) === !0,
         s = f.q.markdown(t[0], n);
-    y(e, t, a, s) && ((t = f.q.updateElement(e, t)), (s = f.q.markdown(t[0], n))), a || (I(e, t, i, s) && ((t = f.q.updateElement(e, t)), (s = f.q.markdown(t[0], n))), T(e, t, n, i, s));
+    y(e, t, a, s) && ((t = f.q.updateElement(e, t)), (s = f.q.markdown(t[0], n))), a || (I(e, t, i, s) && ((t = f.q.updateElement(e, t)), (s = f.q.markdown(t[0], n))), b(e, t, n, i, s));
 }
 function y(e, t, n, i) {
     let [r, a] = t,
@@ -209,7 +209,7 @@ function I(e, t, n, i) {
     }
     return a;
 }
-function T(e, t, n, i, r) {
+function b(e, t, n, i, r) {
     let [a, s] = t,
         l = !1;
     for (let u = a.children.length - 1; u >= 0; u--) {
@@ -244,11 +244,11 @@ function T(e, t, n, i, r) {
                   })
                 : (_.lastIndex = c.index + 1);
         }
-        for (let t of h.reverse()) b(e, [d, f.C0.child(s, u)], t.index, t.length, t.node), (l = !0);
+        for (let t of h.reverse()) T(e, [d, f.C0.child(s, u)], t.index, t.length, t.node), (l = !0);
     }
     return l;
 }
-function b(e, t, n, i, a) {
+function T(e, t, n, i, a) {
     let [s, o] = t,
         l = {
             path: o,

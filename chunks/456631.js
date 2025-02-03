@@ -51,11 +51,11 @@ let _ = [],
         let { cooldownEndsAtMs: t } = e;
         i = new Date(Date.now() + t);
     },
-    T = (0, a.debounce)(() => {
+    b = (0, a.debounce)(() => {
         let e = (0, c.cX)(h);
         o.uv.announce(e, 'polite'), (h = []);
     }, 500),
-    b = (e) => {
+    T = (e) => {
         let { emoji: t, userId: n, animationType: i } = e;
         null != t &&
             null != i &&
@@ -71,7 +71,7 @@ let _ = [],
                     userId: n
                 }
             ]),
-            T());
+            b());
     },
     S = (e) => {
         let { emoji: t } = e;
@@ -99,7 +99,7 @@ f(N, 'displayName', 'VoiceChannelEffectsStore');
 let C = new N(l.Z, {
     VOICE_CHANNEL_EFFECT_CLEAR: A,
     VOICE_CHANNEL_EFFECT_RECENT_EMOJI: S,
-    VOICE_CHANNEL_EFFECT_SEND: b,
+    VOICE_CHANNEL_EFFECT_SEND: T,
     VOICE_CHANNEL_EFFECT_SENT_LOCAL: y,
     VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: I
 });

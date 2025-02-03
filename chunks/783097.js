@@ -14,9 +14,9 @@ n.d(t, {
     lf: () => S,
     pF: () => L,
     sl: () => C,
-    vJ: () => b,
+    vJ: () => T,
     yJ: () => A,
-    ye: () => T
+    ye: () => b
 }),
     n(789020),
     n(627494),
@@ -48,11 +48,11 @@ function y(e) {
 function I(e) {
     return v(e) ? e.description : g.intl.string(g.t.X9fusr);
 }
-function T(e) {
+function b(e) {
     var t;
     return v(e) && (0, f.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.EMBEDDED);
 }
-function b(e) {
+function T(e) {
     var t;
     return v(e) && (0, f.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.PARTNER);
 }
@@ -61,7 +61,7 @@ function S(e) {
     return v(e) && (0, f.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.PROMOTED);
 }
 function A(e) {
-    return v(e) && T(e) ? (e instanceof u.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return v(e) && b(e) ? (e instanceof u.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function N(e) {
     let { command: t, optionValues: n, context: i, commandTargetId: u, maxSizeCallback: c, sectionName: d, commandOrigin: f = s.bB.APPLICATION_LAUNCHER } = e,
@@ -132,7 +132,7 @@ function x(e) {
 function L(e) {
     let t = [];
     for (let n of e) {
-        let e = n.application_directory_collection_items.filter((e) => e.type === i.C.APPLICATION && T(e.application));
+        let e = n.application_directory_collection_items.filter((e) => e.type === i.C.APPLICATION && b(e.application));
         0 !== e.length &&
             t.push({
                 ...n,

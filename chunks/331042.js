@@ -23,8 +23,8 @@ var i = n(200651),
     v = n(286961),
     y = n(300284),
     I = n(876917),
-    T = n(642619),
-    b = n(594174),
+    b = n(642619),
+    T = n(594174),
     S = n(1870),
     A = n(429368),
     N = n(884697),
@@ -48,8 +48,8 @@ var i = n(200651),
 let H = 880,
     Y = (e) => {
         let { product: t, item: n } = e,
-            r = (0, d.e7)([b.default], () => {
-                let e = b.default.getCurrentUser();
+            r = (0, d.e7)([T.default], () => {
+                let e = T.default.getCurrentUser();
                 return o()(null != e, 'User cannot be undefined'), e;
             }),
             { avatarDecorationSrc: a } = (0, E.Z)({
@@ -179,7 +179,7 @@ let H = 880,
     },
     z = (e) => {
         var t, n;
-        let { product: a, onClose: s, confettiTarget: l, confettiCanvas: E, hideConfetti: I = !1, analyticsLocations: b, title: S, description: A, selectedVariantIndex: U, shouldShowPromotionalExperience: B } = e,
+        let { product: a, onClose: s, confettiTarget: l, confettiCanvas: E, hideConfetti: I = !1, analyticsLocations: T, title: S, description: A, selectedVariantIndex: U, shouldShowPromotionalExperience: B } = e,
             j = (0, G.W)(a, U),
             { confettiColors: Y } = (0, P.Z)(j.styles),
             W = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
@@ -190,7 +190,7 @@ let H = 880,
             J = null == X ? void 0 : null === (t = X.giftPurchaseConfirmation) || void 0 === t ? void 0 : t.rewardCollectedText(),
             [$] = j.items,
             ee = r.useRef(null),
-            { analyticsLocations: et } = (0, m.ZP)([...b, h.Z.COLLECTIBLES_COLLECTED_MODAL]),
+            { analyticsLocations: et } = (0, m.ZP)([...T, h.Z.COLLECTIBLES_COLLECTED_MODAL]),
             en = (0, y.Z)({ analyticsLocations: et }),
             ei = r.useCallback(() => {
                 if ((s(), (0, _.xf)(), en(), j.type === c.Z.AVATAR_DECORATION)) {
@@ -202,7 +202,7 @@ let H = 880,
                     return;
                 }
                 j.type === c.Z.PROFILE_EFFECT &&
-                    (0, T.H)({
+                    (0, b.H)({
                         initialSelectedEffectId: $.id,
                         analyticsLocations: et
                     });

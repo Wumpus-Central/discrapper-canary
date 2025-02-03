@@ -28,8 +28,8 @@ var i = n(200651),
     v = n(362755),
     y = n(981631),
     I = n(474936),
-    T = n(388032),
-    b = n(13926);
+    b = n(388032),
+    T = n(13926);
 let S = 1000;
 function A(e, t, n, i, r) {
     let o = y.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, r),
@@ -87,16 +87,16 @@ let N = (e) => {
                 null !== O && (I.YQ.includes(O) && ((0, u.GZ)(O), (0, l.jg)()), N(O)), null !== D && f(D), R === x.loadId && C === v.Y.DONE && s();
             }, [N, f, C, R, O, D, x, s]),
             (0, i.jsxs)('div', {
-                className: b.body,
+                className: T.body,
                 children: [
                     (0, i.jsx)(o.X6q, {
                         variant: 'heading-xl/bold',
-                        children: T.intl.string(T.t.C4HYf3)
+                        children: b.intl.string(b.t.C4HYf3)
                     }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/normal',
-                        className: b.description,
-                        children: T.intl.string(T.t.xfG7Ji)
+                        className: T.description,
+                        children: b.intl.string(b.t.xfG7Ji)
                     })
                 ]
             })
@@ -111,7 +111,7 @@ let N = (e) => {
                 children: [
                     (0, i.jsx)(d.y, {
                         onClick: t,
-                        children: T.intl.string(T.t['4Qvmmp'])
+                        children: b.intl.string(b.t['4Qvmmp'])
                     }),
                     (0, i.jsx)(d.Z, { onClick: n })
                 ]

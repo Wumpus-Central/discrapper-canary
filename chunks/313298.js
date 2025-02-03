@@ -38,14 +38,14 @@ function y() {
     null == v &&
         (v = setInterval(() => {
             s.default.forEachKey(g, (e) => {
-                b(e) && T(e);
+                T(e) && b(e);
             });
         }, p));
 }
 async function I(e, t) {
-    null == g[e] && (g[e] = new Set()), g[e].add(t), null == E[e] && (E[e] = Date.now()), b(e) && (await T(e));
+    null == g[e] && (g[e] = new Set()), g[e].add(t), null == E[e] && (E[e] = Date.now()), T(e) && (await b(e));
 }
-function T(e) {
+function b(e) {
     if (null == g[e]) return;
     let t = Array.from(g[e]);
     (g[e] = new Set()),
@@ -58,7 +58,7 @@ function T(e) {
             });
         });
 }
-function b(e) {
+function T(e) {
     let t = g[e];
     if (null == t) return !1;
     let n = t.size >= h(e),

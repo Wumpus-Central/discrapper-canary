@@ -50,8 +50,8 @@ let m = new o.h(
     v = new Set(),
     y = {},
     I = {},
-    T = {},
     b = {},
+    T = {},
     S = new Map();
 function A(e) {
     return m.values(f(e));
@@ -64,7 +64,7 @@ function C(e) {
     g.set(e.id, e);
 }
 function R() {
-    m.clear(), g.clear(), (E = {}), v.clear(), (y = {}), (I = {}), (T = {}), (b = {}), S.clear();
+    m.clear(), g.clear(), (E = {}), v.clear(), (y = {}), (I = {}), (b = {}), (T = {}), S.clear();
 }
 function O(e) {
     let { settings: t } = e;
@@ -117,19 +117,19 @@ function Z(e) {
 }
 function F(e) {
     let { guildId: t } = e;
-    b[t] = 1;
+    T[t] = 1;
 }
 function V(e) {
     let { guildId: t, restrictions: n } = e;
-    (T[t] = n), (b[t] = 2);
+    (b[t] = n), (T[t] = 2);
 }
 function j(e) {
     let { guildId: t } = e;
-    (b[t] = 2), (T[t] = u.m);
+    (T[t] = 2), (b[t] = u.m);
 }
 function H(e) {
     let { guildId: t } = e;
-    b[t] = 0;
+    T[t] = 0;
 }
 let Y = [];
 class W extends (i = s.ZP.Store) {
@@ -169,11 +169,11 @@ class W extends (i = s.ZP.Store) {
         return I[e];
     }
     getMonetizationRestrictions(e) {
-        return T[e];
+        return b[e];
     }
     getMonetizationRestrictionsFetchState(e) {
         var t;
-        return null !== (t = b[e]) && void 0 !== t ? t : 0;
+        return null !== (t = T[e]) && void 0 !== t ? t : 0;
     }
     getApplicationIdForGuild(e) {
         return S.get(e);

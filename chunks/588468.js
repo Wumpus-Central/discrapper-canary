@@ -24,8 +24,8 @@ var i,
     v = n(887120),
     y = n(926491),
     I = n(378233),
-    T = n(695346),
-    b = n(430824),
+    b = n(695346),
+    T = n(430824),
     S = n(699516),
     A = n(594174),
     N = n(768581),
@@ -274,7 +274,7 @@ class W extends U {
 class K extends U {
     renderContent() {
         let { emoji: e, sentinel: t, guild: n } = this.props,
-            i = T.Yk.getSetting(),
+            i = b.Yk.getSetting(),
             a =
                 null != e.id || '' !== e.url
                     ? (0, r.jsx)('img', {
@@ -317,7 +317,7 @@ class z extends U {
         let { queryMatch: i, renderSticker: a, selected: s, sticker: o } = this.props,
             { hovered: l } = this.state;
         return (
-            (0, I.jl)(o) ? (n = null === (e = y.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, I.J8)(o) && (n = null === (t = b.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
+            (0, I.jl)(o) ? (n = null === (e = y.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, I.J8)(o) && (n = null === (t = T.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
             (0, r.jsxs)(R.RX, {
                 children: [
                     (0, r.jsx)(R.Tw, { children: a(o, l || !0 === s) }),

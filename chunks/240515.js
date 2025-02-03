@@ -36,8 +36,8 @@ function E() {
     });
 }
 function v(e) {
-    let { user: t, guildId: n, channelId: l, onIgnore: v, onBlock: y, location: I = 'ContextMenu', ...T } = e,
-        b = () => {
+    let { user: t, guildId: n, channelId: l, onIgnore: v, onBlock: y, location: I = 'ContextMenu', ...b } = e,
+        T = () => {
             c.default.track(h.rMx.USER_REMEDIATION_ACTION, {
                 action: p.l.CANCEL_IGNORE,
                 location: I
@@ -59,10 +59,10 @@ function v(e) {
             onConfirm: () => {
                 null == v || v(), o.Z.ignoreUser(t.id, I, null != l ? l : void 0), c.default.track(h.rMx.IGNORE_USER_CONFIRMED);
             },
-            onCancel: b,
+            onCancel: T,
             impression: { impressionName: a.ImpressionNames.IGNORE_USER_CONFIRMATION },
             confirmButtonColor: s.zxk.Colors.BRAND,
-            ...T,
+            ...b,
             children: (0, i.jsxs)('div', {
                 className: g.container,
                 children: [

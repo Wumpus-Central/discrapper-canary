@@ -35,10 +35,10 @@ function I(e) {
         return n && delete y[t.parentId], n;
     });
 }
-function T(e) {
+function b(e) {
     (v = a().omitBy(v, (t) => t.parentId === e)), delete y[e];
 }
-function b(e, t) {
+function T(e, t) {
     u.AW.has(e.type) && S(N(e), t);
 }
 function S(e, t) {
@@ -64,7 +64,7 @@ function N(e) {
     return v[e.id];
 }
 function C(e) {
-    b(e, (t) => {
+    T(e, (t) => {
         var n;
         null != e.messageCount && (t.count = e.messageCount);
         let i = null !== (n = t.mostRecentRawMessage) && void 0 !== n ? n : t.mostRecentMessage;
@@ -112,7 +112,7 @@ function w(e) {
                 let t = f.Z.getChannel(e.channel_id);
                 null != t &&
                     e.type !== m.uaV.THREAD_STARTER_MESSAGE &&
-                    b(t, (t) => {
+                    T(t, (t) => {
                         (t.mostRecentRawMessage = e), (t.mostRecentMessage = null);
                     });
             });
@@ -128,7 +128,7 @@ function k(e) {
 }
 function U(e) {
     let { channel: t } = e;
-    T(t.id);
+    b(t.id);
 }
 function G(e) {
     let { channel: t } = e;
@@ -139,7 +139,7 @@ function B(e) {
     if (n || i || null != r) return !1;
     let a = f.Z.getChannel(t.channel_id);
     if (null == a || !u.Ec.has(a.type) || !Z(a, t)) return !1;
-    b(a, (e) => {
+    T(a, (e) => {
         (e.count = Math.min(e.count + 1, h.M3)), (e.mostRecentRawMessage = t), (e.mostRecentMessage = null);
     });
 }
@@ -190,7 +190,7 @@ function H(e) {
     if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
     let n = f.Z.getChannel(e.channelId);
     if (null == n || !u.Ec.has(n.type)) return t;
-    b(n, (t) => {
+    T(n, (t) => {
         if (0 === e.messages.length) (t.mostRecentRawMessage = null), (t.mostRecentMessage = null), (t.count = 0);
         else {
             var n;

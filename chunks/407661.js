@@ -18,7 +18,7 @@ var i = n(200651),
     v = n(112726);
 let y = 2,
     I = 10;
-function T(e, t) {
+function b(e, t) {
     let n = e.id,
         i = t.id;
     return (0, o.e7)(
@@ -35,7 +35,7 @@ function T(e, t) {
         [n, i]
     );
 }
-function b(e) {
+function T(e) {
     let { channel: t, message: n, replyChainLength: a } = e;
     function s() {
         (0, d.A6)(t.id), (0, p.R6)(t, n, 'Reply Chain Nudge');
@@ -83,7 +83,7 @@ function S(e) {
     let { reply: t, chatInputType: n } = e,
         { channel: r, message: a, shouldMention: o, showMentionToggle: u } = t,
         { nick: p, colorString: h, colorRoleName: I } = (0, c.ZP)(a),
-        S = T(r, a),
+        S = b(r, a),
         A = (0, _.NE)(r, a),
         N = n.showThreadPromptOnReply && S >= y && A,
         C = () => (0, f.uL)(g.Z5c.CHANNEL(r.getGuildId(), r.id, a.id));
@@ -177,7 +177,7 @@ function S(e) {
                     ]
                 }),
                 N &&
-                    (0, i.jsx)(b, {
+                    (0, i.jsx)(T, {
                         channel: r,
                         message: a,
                         replyChainLength: S

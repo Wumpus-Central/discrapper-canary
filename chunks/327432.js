@@ -369,8 +369,8 @@ var v = function (e) {
     },
     y = /\s/,
     I = /[\u0021-\u0023\u0025-\u002A\u002C-\u002F\u003A\u003B\u003F\u0040\u005B-\u005D\u005F\u007B\u007D\u00A1\u00A7\u00AB\u00B6\u00B7\u00BB\u00BF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061E\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u0AF0\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166D\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E3B\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]/,
-    T = /['\u2018\u2019]/,
-    b = function (e) {
+    b = /['\u2018\u2019]/,
+    T = function (e) {
         for (var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1], n = 0, i = !1; e.length > 0; ) {
             var r = v(e, t),
                 [a, s] = S(e, r, t);
@@ -391,7 +391,7 @@ var v = function (e) {
     A = function e(t, n) {
         var i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (y.test(t)) return !1;
-        if (T.test(t)) {
+        if (b.test(t)) {
             var r = v(n, i),
                 [a, s] = S(n, r, i);
             if (e(a, s, i)) return !0;
@@ -951,7 +951,7 @@ var J = new WeakMap(),
                 }
             }
             function I(e, t, n) {
-                return 'character' === t ? v(e, n) : 'word' === t ? b(e, n) : 'line' === t || 'block' === t ? e.length : 1;
+                return 'character' === t ? v(e, n) : 'word' === t ? T(e, n) : 'line' === t || 'block' === t ? e.length : 1;
             }
         },
         previous(e) {
@@ -1749,8 +1749,8 @@ var eg = {
         for (var o in t) if (void 0 === e[o] && void 0 !== t[o]) return !1;
         return !0;
     },
-    eT = ['text'],
-    eb = ['anchor', 'focus'];
+    eb = ['text'],
+    eT = ['anchor', 'focus'];
 function eS(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -1783,7 +1783,7 @@ var eN = {
         var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             { loose: i = !1 } = n;
         function r(e) {
-            return E(e, eT);
+            return E(e, eb);
         }
         return eI(i ? r(e) : e, i ? r(t) : t);
     },
@@ -1797,7 +1797,7 @@ var eN = {
     decorations(e, t) {
         var n = [eA({}, e)];
         for (var i of t) {
-            var r = E(i, eb),
+            var r = E(i, eT),
                 [a, s] = eg.edges(i),
                 o = [],
                 l = 0,
@@ -1882,11 +1882,11 @@ var eO = (e, t, n) => {
                     v = el.previous(g),
                     y = er.get(e, v),
                     I = er.parent(e, g),
-                    T = g[g.length - 1];
+                    b = g[g.length - 1];
                 if (eN.isText(E) && eN.isText(y)) y.text += E.text;
                 else if (eN.isText(E) || eN.isText(y)) throw Error('Cannot apply a "merge_node" operation at path ['.concat(g, '] to nodes of different interfaces: ').concat(ey.stringify(E), ' ').concat(ey.stringify(y)));
                 else y.children.push(...E.children);
-                if ((I.children.splice(T, 1), t)) for (var [b, S] of eg.points(t)) t[S] = ef.transform(b, n);
+                if ((I.children.splice(b, 1), t)) for (var [T, S] of eg.points(t)) t[S] = ef.transform(T, n);
                 break;
             case 'move_node':
                 var { path: A, newPath: N } = n;
@@ -1966,12 +1966,12 @@ var eO = (e, t, n) => {
                     ev = e_[e_.length - 1];
                 if (eN.isText(em)) {
                     var eI = em.text.slice(0, ep),
-                        eT = em.text.slice(ep);
-                    (em.text = eI), (ed = eR(eR({}, eh), {}, { text: eT }));
+                        eb = em.text.slice(ep);
+                    (em.text = eI), (ed = eR(eR({}, eh), {}, { text: eb }));
                 } else {
-                    var eb = em.children.slice(0, ep),
+                    var eT = em.children.slice(0, ep),
                         eS = em.children.slice(ep);
-                    (em.children = eb), (ed = eR(eR({}, eh), {}, { children: eS }));
+                    (em.children = eT), (ed = eR(eR({}, eh), {}, { children: eS }));
                 }
                 if ((eE.children.splice(ev + 1, 0, ed), t)) for (var [eA, eC] of eg.points(t)) t[eC] = ef.transform(eA, n);
         }
@@ -2179,18 +2179,18 @@ var eM = {
                             var v = el.next(g),
                                 y = el.common(h, g),
                                 I = el.isSibling(h, g),
-                                T = Array.from($.levels(e, { at: h }), (e) => {
+                                b = Array.from($.levels(e, { at: h }), (e) => {
                                     var [t] = e;
                                     return t;
                                 })
                                     .slice(y.length)
                                     .slice(0, -1),
-                                b = $.above(e, {
+                                T = $.above(e, {
                                     at: h,
                                     mode: 'highest',
-                                    match: (t) => T.includes(t) && ek(e, t)
+                                    match: (t) => b.includes(t) && ek(e, t)
                                 }),
-                                S = b && $.pathRef(e, b[1]);
+                                S = T && $.pathRef(e, T[1]);
                             if (eN.isText(p) && eN.isText(m)) {
                                 var A = E(p, ex);
                                 (i = m.text.length), (n = A);
@@ -2332,7 +2332,7 @@ var eM = {
                             y = {};
                         if (0 !== E.length) {
                             var I = !1;
-                            for (var T in t) 'children' !== T && 'text' !== T && a(t[T], g[T]) && ((I = !0), g.hasOwnProperty(T) && (v[T] = g[T]), s ? null != t[T] && (y[T] = s(g[T], t[T])) : null != t[T] && (y[T] = t[T]));
+                            for (var b in t) 'children' !== b && 'text' !== b && a(t[b], g[b]) && ((I = !0), g.hasOwnProperty(b) && (v[b] = g[b]), s ? null != t[b] && (y[b] = s(g[b], t[b])) : null != t[b] && (y[b] = t[b]));
                             I &&
                                 e.apply({
                                     type: 'set_node',
@@ -2391,17 +2391,17 @@ var eM = {
                             (l = o.path.length - E.length + 1), (u = !0);
                         }
                         n = $.pointRef(e, o);
-                        var T = o.path.length - l,
-                            [, b] = p,
-                            S = o.path.slice(0, T),
-                            A = 0 === l ? o.offset : o.path[T] + m;
+                        var b = o.path.length - l,
+                            [, T] = p,
+                            S = o.path.slice(0, b),
+                            A = 0 === l ? o.offset : o.path[b] + m;
                         for (var [N, C] of $.levels(e, {
                             at: S,
                             reverse: !0,
                             voids: a
                         })) {
                             var R = !1;
-                            if (C.length < b.length || 0 === C.length || (!a && K.isElement(N) && $.isVoid(e, N))) break;
+                            if (C.length < T.length || 0 === C.length || (!a && K.isElement(N) && $.isVoid(e, N))) break;
                             var O = _.current,
                                 D = $.isEnd(e, O, C);
                             if (u || !_ || !$.isEdge(e, O, C)) {
@@ -2732,23 +2732,23 @@ var eF = {
                             }),
                             y = E && v && !el.equals(E[1], v[1]),
                             I = el.equals(m.path, g.path),
-                            T = s
+                            b = s
                                 ? null
                                 : $.void(e, {
                                       at: m,
                                       mode: 'highest'
                                   }),
-                            b = s
+                            T = s
                                 ? null
                                 : $.void(e, {
                                       at: g,
                                       mode: 'highest'
                                   });
-                        if (T) {
+                        if (b) {
                             var S = $.before(e, m);
                             S && E && el.isAncestor(E[1], S.path) && (m = S);
                         }
-                        if (b) {
+                        if (T) {
                             var A = $.after(e, g);
                             A && v && el.isAncestor(v[1], A.path) && (g = A);
                         }
@@ -2767,7 +2767,7 @@ var eF = {
                             x = $.pointRef(e, m),
                             L = $.pointRef(e, g),
                             P = '';
-                        if (!I && !T) {
+                        if (!I && !b) {
                             var w = x.current,
                                 [M] = $.leaf(e, w),
                                 { path: k } = w,
@@ -2792,7 +2792,7 @@ var eF = {
                                         voids: s
                                     })
                                 ),
-                            !b)
+                            !T)
                         ) {
                             var B = L.current,
                                 [Z] = $.leaf(e, B),
@@ -2871,12 +2871,12 @@ var eF = {
                                 return 0 !== i.length && (!!p || !((h && el.isAncestor(i, g) && K.isElement(n) && !e.isVoid(n) && !e.isInline(n)) || (m && el.isAncestor(i, E) && K.isElement(n) && !e.isVoid(n) && !e.isInline(n))));
                             };
                         for (var I of er.nodes({ children: t }, { pass: y })) y(I) && v.push(I);
-                        var T = [],
-                            b = [],
+                        var b = [],
+                            T = [],
                             S = [],
                             A = !0,
                             N = !1;
-                        for (var [C] of v) K.isElement(C) && !e.isInline(C) ? ((A = !1), (N = !0), b.push(C)) : A ? T.push(C) : S.push(C);
+                        for (var [C] of v) K.isElement(C) && !e.isInline(C) ? ((A = !1), (N = !0), T.push(C)) : A ? b.push(C) : S.push(C);
                         var [R] = $.nodes(e, {
                                 at: s,
                                 match: (t) => eN.isText(t) || $.isInline(e, t),
@@ -2892,26 +2892,26 @@ var eF = {
                             at: s,
                             match: (t) => (N ? K.isElement(t) && $.isBlock(e, t) : eN.isText(t) || $.isInline(e, t)),
                             mode: N ? 'lowest' : 'highest',
-                            always: N && (!f || T.length > 0) && (!_ || S.length > 0),
+                            always: N && (!f || b.length > 0) && (!_ || S.length > 0),
                             voids: a
                         });
                         var w = $.pathRef(e, !D || (D && x) ? el.next(O) : O);
                         if (
-                            (eY.insertNodes(e, T, {
+                            (eY.insertNodes(e, b, {
                                 at: w.current,
                                 match: (t) => eN.isText(t) || $.isInline(e, t),
                                 mode: 'highest',
                                 voids: a
                             }),
                             p &&
-                                !T.length &&
-                                b.length &&
+                                !b.length &&
+                                T.length &&
                                 !S.length &&
                                 eY.delete(e, {
                                     at: d,
                                     voids: a
                                 }),
-                            eY.insertNodes(e, b, {
+                            eY.insertNodes(e, T, {
                                 at: L.current,
                                 match: (t) => K.isElement(t) && $.isBlock(e, t),
                                 mode: 'lowest',
@@ -2923,7 +2923,7 @@ var eF = {
                                 mode: 'highest',
                                 voids: a
                             }),
-                            !n.at && (S.length > 0 && P.current ? (i = el.previous(P.current)) : b.length > 0 && L.current ? (i = el.previous(L.current)) : w.current && (i = el.previous(w.current)), i))
+                            !n.at && (S.length > 0 && P.current ? (i = el.previous(P.current)) : T.length > 0 && L.current ? (i = el.previous(L.current)) : w.current && (i = el.previous(w.current)), i))
                         ) {
                             var M = $.end(e, i);
                             eY.select(e, M);

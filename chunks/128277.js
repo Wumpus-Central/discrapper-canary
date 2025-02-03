@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(448980),
     y = n(336383),
     I = n(194811),
-    T = n(373826),
-    b = n(262210),
+    b = n(373826),
+    T = n(262210),
     S = n(666984),
     A = n(670451),
     N = n(228168),
@@ -53,11 +53,11 @@ function R(e) {
             return 0 === l.length
                 ? null
                 : null == a.sync_id
-                  ? (0, i.jsx)(T.Z, {
+                  ? (0, i.jsx)(b.Z, {
                         variant: 'text-xs/normal',
                         text: l.join(', ')
                     })
-                  : (0, i.jsx)(T.Z, {
+                  : (0, i.jsx)(b.Z, {
                         variant: 'text-xs/normal',
                         text: l.map((e, n) =>
                             (0, i.jsxs)(
@@ -85,7 +85,7 @@ function R(e) {
             let { start: t, end: n } = e;
             return null == t || null == n
                 ? null
-                : (0, i.jsx)(b.Z, {
+                : (0, i.jsx)(T.Z, {
                       start: t,
                       end: n
                   });
@@ -137,7 +137,7 @@ function R(e) {
                                 children: [
                                     (0, i.jsxs)('div', {
                                         children: [
-                                            (0, i.jsx)(T.Z, {
+                                            (0, i.jsx)(b.Z, {
                                                 variant: 'heading-sm/semibold',
                                                 text: a.details,
                                                 onClick: () => {

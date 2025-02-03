@@ -66,7 +66,7 @@ let v = (e) => {
                         })
                 });
         if (!o) return y();
-        let T = (e) =>
+        let b = (e) =>
             (0, i.jsx)(_.Az, {
                 ...e,
                 node: n
@@ -80,14 +80,14 @@ let v = (e) => {
             onRequestClose: () => {
                 g(!1);
             },
-            renderPopout: T,
+            renderPopout: b,
             children: y
         });
     },
     y = (e) => {
         let { node: t, isInteracting: n, tooltipPosition: a = p.b_.position, enableClick: c = !0, channelId: g, messageId: v } = e,
-            [y, T] = r.useState(String(Date.now())),
-            [b, S] = r.useState(!1),
+            [y, b] = r.useState(String(Date.now())),
+            [T, S] = r.useState(!1),
             [A, N] = r.useState(!1),
             C = function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -134,7 +134,7 @@ let v = (e) => {
                                   }
                                 : void 0,
                             onMouseLeave: () => {
-                                b && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: R }), S(!1));
+                                T && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: R }), S(!1));
                             },
                             tag: 'span',
                             className: s()(E.emojiContainer, {
@@ -149,7 +149,7 @@ let v = (e) => {
             (0, i.jsx)(_.vk, {
                 ...e,
                 node: t,
-                refreshPositionKey: () => T(String(Date.now())),
+                refreshPositionKey: () => b(String(Date.now())),
                 nonce: R
             });
         return (0, i.jsx)(l.yRy, {

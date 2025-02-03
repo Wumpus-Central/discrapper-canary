@@ -17,11 +17,11 @@ var r = n(120356),
     g = n(787078);
 function E(e) {
     var t;
-    let { activities: n, applicationStream: r, textClassName: E, emojiClassName: v, animate: y = !0, hideTooltip: I = !1, hideEmoji: T = !1, user: b, hasQuest: S } = e,
+    let { activities: n, applicationStream: r, textClassName: E, emojiClassName: v, animate: y = !0, hideTooltip: I = !1, hideEmoji: b = !1, user: T, hasQuest: S } = e,
         A = 'activity-status-web',
         { blockeeExperimentEnabled: N, blockerExperimentEnabled: C } = (0, u.NR)(A);
-    (0, c.Z)(null == b ? void 0 : b.id, A);
-    let R = (0, s.e7)([d.Z], () => d.Z.isBlocked(null == b ? void 0 : b.id));
+    (0, c.Z)(null == T ? void 0 : T.id, A);
+    let R = (0, s.e7)([d.Z], () => d.Z.isBlocked(null == T ? void 0 : T.id));
     if (C && R) return null;
     let O = (0, l.Z)(n, r, void 0, N),
         D = null == O ? void 0 : O.activityText,
@@ -38,7 +38,7 @@ function E(e) {
                 ? t
                 : null,
         P =
-            (null == L ? void 0 : L.emoji) == null || T
+            (null == L ? void 0 : L.emoji) == null || b
                 ? null
                 : (0, i.jsx)(_.Z, {
                       emoji: L.emoji,

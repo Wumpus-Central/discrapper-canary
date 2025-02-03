@@ -176,7 +176,7 @@ function y(e, t) {
     return n && 0 === n.index;
 }
 let I = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
-function T(e, { joinWith: t }) {
+function b(e, { joinWith: t }) {
     let n = 0;
     return e
         .map((e) => {
@@ -196,7 +196,7 @@ function T(e, { joinWith: t }) {
         .map((e) => `(${e})`)
         .join(t);
 }
-let b = /\b\B/,
+let T = /\b\B/,
     S = '[a-zA-Z]\\w*',
     A = '[a-zA-Z_]\\w*',
     N = '\\b\\d+(\\.\\d+)?',
@@ -318,7 +318,7 @@ var V = Object.freeze({
     },
     HASH_COMMENT_MODE: G,
     IDENT_RE: S,
-    MATCH_NOTHING_RE: b,
+    MATCH_NOTHING_RE: T,
     METHOD_GUARD: {
         begin: '\\.\\s*' + A,
         relevance: 0
@@ -426,14 +426,14 @@ function eo(e) {
     if (Array.isArray(e.begin)) {
         if (e.skip || e.excludeBegin || e.returnBegin) throw (en('skip, excludeBegin, returnBegin not compatible with beginScope: {}'), ea);
         if ('object' != typeof e.beginScope || null === e.beginScope) throw (en('beginScope must be object'), ea);
-        es(e, e.begin, { key: 'beginScope' }), (e.begin = T(e.begin, { joinWith: '' }));
+        es(e, e.begin, { key: 'beginScope' }), (e.begin = b(e.begin, { joinWith: '' }));
     }
 }
 function el(e) {
     if (Array.isArray(e.end)) {
         if (e.skip || e.excludeEnd || e.returnEnd) throw (en('skip, excludeEnd, returnEnd not compatible with endScope: {}'), ea);
         if ('object' != typeof e.endScope || null === e.endScope) throw (en('endScope must be object'), ea);
-        es(e, e.end, { key: 'endScope' }), (e.end = T(e.end, { joinWith: '' }));
+        es(e, e.end, { key: 'endScope' }), (e.end = b(e.end, { joinWith: '' }));
     }
 }
 function eu(e) {
@@ -456,7 +456,7 @@ function ed(e) {
         compile() {
             0 === this.regexes.length && (this.exec = () => null);
             let e = this.regexes.map((e) => e[1]);
-            (this.matcherRe = t(T(e, { joinWith: '|' }), !0)), (this.lastIndex = 0);
+            (this.matcherRe = t(b(e, { joinWith: '|' }), !0)), (this.lastIndex = 0);
         }
         exec(e) {
             this.matcherRe.lastIndex = this.lastIndex;
@@ -654,7 +654,7 @@ let em = i,
                         return;
                     }
                     (e = v(x.subLanguage, w, !0, L[x.subLanguage])), (L[x.subLanguage] = e._top);
-                } else e = T(w, x.subLanguage.length ? x.subLanguage : null);
+                } else e = b(w, x.subLanguage.length ? x.subLanguage : null);
                 x.relevance > 0 && (M += e.relevance), P.__addSublanguage(e._emitter, e.language);
             }
             function _() {
@@ -703,7 +703,7 @@ let em = i,
                 for (let n of [i.__beforeBegin, i['on:begin']]) if (n && (n(e, r), r.isMatchIgnored)) return E(t);
                 return i.skip ? (w += t) : (i.excludeBegin && (w += t), _(), i.returnBegin || i.excludeBegin || (w = t)), m(i, e), i.returnBegin ? 0 : t.length;
             }
-            function b(e) {
+            function T(e) {
                 let n = e[0],
                     i = t.substring(e.index),
                     r = g(x, e, i);
@@ -733,7 +733,7 @@ let em = i,
                 if (((A = i), 'begin' === i.type)) return I(i);
                 if ('illegal' !== i.type || r) {
                     if ('end' === i.type) {
-                        let e = b(i);
+                        let e = T(i);
                         if (e !== eE) return e;
                     }
                 } else {
@@ -821,7 +821,7 @@ let em = i,
             };
             return t._emitter.addText(e), t;
         }
-        function T(e, t) {
+        function b(e, t) {
             t = t || u.languages || Object.keys(i);
             let n = I(e),
                 r = t
@@ -840,7 +840,7 @@ let em = i,
                 o = a;
             return (o.secondBest = s), o;
         }
-        function b(e, t, n) {
+        function T(e, t, n) {
             let i = (t && r[t]) || n;
             e.classList.add('hljs'), e.classList.add(`language-${i}`);
         }
@@ -865,10 +865,10 @@ let em = i,
                           language: n,
                           ignoreIllegals: !0
                       })
-                    : T(i);
+                    : b(i);
             (e.innerHTML = r.value),
                 (e.dataset.highlighted = 'yes'),
-                b(e, n, r.language),
+                T(e, n, r.language),
                 (e.result = {
                     language: r.language,
                     re: r.relevance,
@@ -949,7 +949,7 @@ let em = i,
         }
         for (let n in (Object.assign(e, {
             highlight: g,
-            highlightAuto: T,
+            highlightAuto: b,
             highlightAll: R,
             highlightElement: S,
             highlightBlock: M,

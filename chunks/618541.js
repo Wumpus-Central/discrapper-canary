@@ -61,10 +61,10 @@ function I() {
             return (0, o.K0)() + c.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(c.gg$.BRAINTREE, i);
         },
         open: (e) => {
-            (r = e), window.open(e), b.emitChange();
+            (r = e), window.open(e), T.emitChange();
         }
     });
-class T extends (a = s.ZP.Store) {
+class b extends (a = s.ZP.Store) {
     getClient() {
         return f;
     }
@@ -78,8 +78,8 @@ class T extends (a = s.ZP.Store) {
         return r;
     }
 }
-d(T, 'displayName', 'BraintreeStore');
-let b = new T(l.Z, {
+d(b, 'displayName', 'BraintreeStore');
+let T = new b(l.Z, {
         BRAINTREE_CREATE_CLIENT_SUCCESS: h,
         BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS: m,
         BILLING_POPUP_BRIDGE_CALLBACK: E,
@@ -88,4 +88,4 @@ let b = new T(l.Z, {
         BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS: g,
         BRAINTREE_TEARDOWN_VENMO_CLIENT: I
     }),
-    S = b;
+    S = T;

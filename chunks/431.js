@@ -37,24 +37,24 @@ function g() {
 }
 function E(e) {
     let { userTrialOffer: t } = e;
-    null != t ? (m.userTrialOffers[t.trial_id] = t) : b(), (m.userOffersLastFetchedAtDate = Date.now()), (m.isFetching = !1);
+    null != t ? (m.userTrialOffers[t.trial_id] = t) : T(), (m.userOffersLastFetchedAtDate = Date.now()), (m.isFetching = !1);
 }
 function v(e) {
     let { userTrialOffer: t, userDiscount: n, userDiscountOffer: i } = e;
-    null == t && null == n && null == i && b(), null != t ? ((m.userTrialOffers[t.trial_id] = t), (m.userDiscountOffers = {})) : null != n ? ((m.userDiscountOffers[n.discount_id] = n), (m.userTrialOffers = {})) : null != i && ((m.userDiscountOffers[i.discount_id] = i), (m.userTrialOffers = {})), (m.userOffersLastFetchedAtDate = Date.now()), (m.isFetching = !1);
+    null == t && null == n && null == i && T(), null != t ? ((m.userTrialOffers[t.trial_id] = t), (m.userDiscountOffers = {})) : null != n ? ((m.userDiscountOffers[n.discount_id] = n), (m.userTrialOffers = {})) : null != i && ((m.userDiscountOffers[i.discount_id] = i), (m.userTrialOffers = {})), (m.userOffersLastFetchedAtDate = Date.now()), (m.isFetching = !1);
 }
 function y() {
-    b(), (m.userOffersLastFetchedAtDate = Date.now()), (m.isFetching = !1);
+    T(), (m.userOffersLastFetchedAtDate = Date.now()), (m.isFetching = !1);
 }
 function I(e) {
     let { userTrialOffer: t } = e;
     null != t ? (m.userTrialOffers[t.trial_id] = t) : (m.userTrialOffers = {}), (m.userOffersLastFetchedAtDate = Date.now());
 }
-function T(e) {
+function b(e) {
     let { userTrialOffer: t, userDiscount: n, userDiscountOffer: i } = e;
     null != t ? (m.userTrialOffers[t.trial_id] = t) : (m.userTrialOffers = {}), null != n ? (m.userDiscountOffers[n.discount_id] = n) : null != i ? (m.userDiscountOffers[i.discount_id] = i) : (m.userDiscountOffers = {}), (m.userOffersLastFetchedAtDate = Date.now());
 }
-function b() {
+function T() {
     (m.userTrialOffers = {}), (m.userDiscountOffers = {}), (m.userOffersLastFetchedAtDate = void 0), (m.userAnnualOfferLastFetchedAtDate = void 0), (m.isFetching = !1);
 }
 let S = () => !0;
@@ -144,7 +144,7 @@ class R extends (i = r.ZP.PersistedStore) {
         return m;
     }
     forceReset() {
-        b();
+        T();
     }
 }
 f(R, 'displayName', 'UserOfferStore'),
@@ -182,10 +182,10 @@ let O = new R(a.Z, {
     BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: E,
     BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: I,
     BILLING_USER_OFFER_FETCH_SUCCESS: v,
-    BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: T,
+    BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: b,
     BILLING_USER_OFFER_FETCH_FAIL: y,
     BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: N,
     BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: N,
     BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: N,
-    LOGOUT: b
+    LOGOUT: T
 });

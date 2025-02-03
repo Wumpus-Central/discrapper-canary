@@ -25,8 +25,8 @@ function f(e) {
     let { application: t, context: n, name: f, iconURL: N, scrollerRef: C, sectionName: E } = e,
         A = (0, o.ap)((0, r.ZP)()),
         I = l.useRef(null),
-        g = l.useRef(null),
         _ = l.useRef(null),
+        g = l.useRef(null),
         P = l.useRef(null),
         j = (0, s.dQu)(s.TVs.colors.BG_BASE_PRIMARY).hex(),
         y = (0, c.ZP)('number' == typeof N ? '' : N, null != j ? j : ''),
@@ -47,12 +47,12 @@ function f(e) {
                 : y;
         }, [y, A]),
         S = x(I),
-        b = x(g),
+        b = x(_),
         L = l.useCallback(() => {
             var e, t, n, i;
             let l = C.current,
                 o = I.current,
-                s = _.current,
+                s = g.current,
                 r = null == P ? void 0 : P.current,
                 c = parseInt(null !== (e = null == S ? void 0 : S.height) && void 0 !== e ? e : ''),
                 d = parseInt(null !== (t = null == b ? void 0 : b.height) && void 0 !== t ? t : '');
@@ -108,7 +108,7 @@ function f(e) {
                         (0, i.jsx)('div', {
                             className: v.nameContainer,
                             children: (0, i.jsx)(s.X6q, {
-                                ref: _,
+                                ref: g,
                                 className: v.textApplicationName,
                                 variant: 'heading-lg/extrabold',
                                 children: f
@@ -129,7 +129,7 @@ function f(e) {
                       })
                     : null,
                 (0, i.jsx)('div', {
-                    ref: g,
+                    ref: _,
                     className: v.bannerBackground,
                     style: { backgroundColor: y }
                 })

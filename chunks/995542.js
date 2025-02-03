@@ -17,9 +17,9 @@ var i = n(56135),
     v = '[object Symbol]',
     y = '[object ArrayBuffer]',
     I = '[object DataView]',
-    T = i ? i.prototype : void 0,
-    b = T ? T.valueOf : void 0;
-function S(e, t, n, i, T, S, A) {
+    b = i ? i.prototype : void 0,
+    T = b ? b.valueOf : void 0;
+function S(e, t, n, i, b, S, A) {
     switch (n) {
         case I:
             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
@@ -44,10 +44,10 @@ function S(e, t, n, i, T, S, A) {
             var R = A.get(e);
             if (R) return R == t;
             (i |= c), A.set(e, t);
-            var O = s(N(e), N(t), i, T, S, A);
+            var O = s(N(e), N(t), i, b, S, A);
             return A.delete(e), O;
         case v:
-            if (b) return b.call(e) == b.call(t);
+            if (T) return T.call(e) == T.call(t);
     }
     return !1;
 }

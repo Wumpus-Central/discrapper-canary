@@ -16,7 +16,7 @@ let _ = [16, 8, 8, 8],
 function g(e) {
     let { className: t, channel: n, sections: a, activeCategoryIndex: g, filteredSectionId: E, onSectionClick: v, applicationCommandListRef: y } = e,
         I = r.useRef(null),
-        T = r.useCallback(
+        b = r.useCallback(
             (e, t) => {
                 var n;
                 let i = 2 * h;
@@ -24,7 +24,7 @@ function g(e) {
             },
             [a]
         ),
-        b = r.useCallback(
+        T = r.useCallback(
             (e, t) => {
                 var n;
                 return t ? ((null === (n = a[e + 1]) || void 0 === n ? void 0 : n.type) === c.Qi.BUILT_IN ? 0 : 2 * h) : 0 === e ? 0 : 2 * h;
@@ -88,9 +88,9 @@ function g(e) {
                   className: f.list,
                   renderCategoryListItem: S,
                   rowCount: a.length,
-                  categoryHeight: T,
+                  categoryHeight: b,
                   listPadding: _,
-                  getScrollOffsetForIndex: b
+                  getScrollOffsetForIndex: T
               })
           });
 }

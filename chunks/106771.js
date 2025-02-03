@@ -29,12 +29,12 @@ function v(e) {
             [v]
         ),
         { iconURL: E, name: A, description: I } = l.useMemo(() => (0, r.sl)(v, { fakeAppIconURL: h }), [v]),
-        g = l.useMemo(() => {
+        _ = l.useMemo(() => {
             var e;
             let t = null !== (e = null == n ? void 0 : n.displayDescription) && void 0 !== e ? e : I;
             return null == t ? null : (0, c.ae)(t, void 0);
         }, [I, null == n ? void 0 : n.displayDescription]),
-        { trackSearchResultsItemImpressionRef: _ } = (0, m.Z)({
+        { trackSearchResultsItemImpressionRef: g } = (0, m.Z)({
             applicationId: v.id,
             commandId: null == n ? void 0 : n.id,
             query: f,
@@ -42,7 +42,7 @@ function v(e) {
         });
     return (0, i.jsx)(a.P3F, {
         className: p.clickable,
-        innerRef: (e) => (_.current = e),
+        innerRef: (e) => (g.current = e),
         onClick: x,
         onContextMenu: C,
         children: (0, i.jsxs)(a.Rny, {
@@ -67,7 +67,7 @@ function v(e) {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             lineClamp: 1,
-                            children: g
+                            children: _
                         })
                     ]
                 }),

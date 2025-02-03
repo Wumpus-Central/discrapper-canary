@@ -30,18 +30,18 @@ let E = new Map(),
     v = new Map(),
     y = new Set(),
     I = 0,
-    T = 0,
-    b = new Set(),
+    b = 0,
+    T = new Set(),
     S = new Map(),
     A = !1;
 function N() {
-    E.clear(), v.clear(), S.clear(), (A = !1), (T = 0), (I = 0);
+    E.clear(), v.clear(), S.clear(), (A = !1), (b = 0), (I = 0);
 }
 function C() {
     v.clear(), S.clear();
 }
 function R() {
-    T = 1;
+    b = 1;
 }
 function O(e) {
     let { updates: t } = e;
@@ -49,7 +49,7 @@ function O(e) {
         let { guildId: t, sounds: n } = e;
         E.set(t, n);
     }),
-        (T = 2);
+        (b = 2);
 }
 function D(e) {
     let { guild: t } = e;
@@ -110,7 +110,7 @@ function F(e) {
         { type: n, proto: i } = t;
     if (n === m.yP.FRECENCY_AND_FAVORITES_SETTINGS) {
         var r, a;
-        b = new Set(null !== (a = null == i ? void 0 : null === (r = i.favoriteSoundboardSounds) || void 0 === r ? void 0 : r.soundIds) && void 0 !== a ? a : []);
+        T = new Set(null !== (a = null == i ? void 0 : null === (r = i.favoriteSoundboardSounds) || void 0 === r ? void 0 : r.soundIds) && void 0 !== a ? a : []);
     } else n === m.yP.PRELOADED_USER_SETTINGS && Z(i);
 }
 function V(e) {
@@ -119,7 +119,7 @@ function V(e) {
 }
 function j(e) {
     let { soundboardStoreState: t } = e;
-    (E = new Map(_.default.entries(t.soundboardSounds))), (b = new Set(t.favoritedSoundIds)), (y = new Set(t.localSoundboardMutes));
+    (E = new Map(_.default.entries(t.soundboardSounds))), (T = new Set(t.favoritedSoundIds)), (y = new Set(t.localSoundboardMutes));
 }
 class H extends (i = s.ZP.Store) {
     initialize() {
@@ -128,7 +128,7 @@ class H extends (i = s.ZP.Store) {
     getOverlaySerializedState() {
         return {
             soundboardSounds: Object.fromEntries(E),
-            favoritedSoundIds: Array.from(b),
+            favoritedSoundIds: Array.from(T),
             localSoundboardMutes: Array.from(y)
         };
     }
@@ -148,7 +148,7 @@ class H extends (i = s.ZP.Store) {
             .find((t) => t.soundId === e);
     }
     isFetchingSounds() {
-        return 1 === T;
+        return 1 === b;
     }
     isFetchingDefaultSounds() {
         return 1 === I;
@@ -170,10 +170,10 @@ class H extends (i = s.ZP.Store) {
         return null != v.get(e);
     }
     isFavoriteSound(e) {
-        return b.has(e);
+        return T.has(e);
     }
     getFavorites() {
-        return b;
+        return T;
     }
     isLocalSoundboardMuted(e) {
         return y.has(e);
@@ -182,7 +182,7 @@ class H extends (i = s.ZP.Store) {
         return A;
     }
     hasFetchedAllSounds() {
-        return 2 === T && 2 === I;
+        return 2 === b && 2 === I;
     }
 }
 g(H, 'displayName', 'SoundboardStore');

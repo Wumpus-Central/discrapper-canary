@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
-        baseRules: () => T,
-        customRules: () => b
+        baseRules: () => b,
+        customRules: () => T
     }),
     n(47120);
 var i = n(200651),
@@ -33,8 +33,8 @@ let I = (e) => {
             c = o + (isNaN(l) ? 1 : l) - 1;
         return r.createElement('h'.concat(c), { className: s()(...y(a, i)) }, n);
     },
-    T = null != f.Z ? f.Z.defaultRules : null,
-    b = {
+    b = null != f.Z ? f.Z.defaultRules : null,
+    T = {
         link: {
             parse(e, t, n) {
                 let i;
@@ -117,6 +117,6 @@ let I = (e) => {
                 );
             }
         },
-        blockQuote: { react: null == T ? void 0 : T.blockQuote.react },
+        blockQuote: { react: null == b ? void 0 : b.blockQuote.react },
         paragraph: { react: (e, t, n) => (0, i.jsx)('p', { children: t(e.content, n) }, n.key) }
     };

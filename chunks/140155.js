@@ -67,14 +67,14 @@ function y() {
 function I() {
     (m.loading = !1), (m.initialized = !0), (m.errored = !0);
 }
-function T(e) {
+function b(e) {
     return {
         ...e,
         kind: 'notification-center-item',
         message: null != e.message ? (0, o.e5)(e.message) : void 0
     };
 }
-function b(e) {
+function T(e) {
     E();
     let t = [];
     e.relationships.forEach((e) => {
@@ -93,10 +93,10 @@ function b(e) {
 }
 function S(e) {
     let { items: t, hasMore: n, cursor: i } = e;
-    m.loading && ((m.loading = !1), (m.initialized = !0), (m.errored = !1), (m.isDataStale = !1), (null != i && m.notifCenterIds.has(i)) || ((m.paginationHasMore = t.length > 0 && n), (m.paginationCursor = t.length > 0 ? i : void 0)), (m.notifCenterItems = [...m.notifCenterItems, ...t.map(T).filter((e) => !m.notifCenterIds.has(e.id))]), m.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id)), t.forEach((e) => m.notifCenterIds.add(e.id)));
+    m.loading && ((m.loading = !1), (m.initialized = !0), (m.errored = !1), (m.isDataStale = !1), (null != i && m.notifCenterIds.has(i)) || ((m.paginationHasMore = t.length > 0 && n), (m.paginationCursor = t.length > 0 ? i : void 0)), (m.notifCenterItems = [...m.notifCenterItems, ...t.map(b).filter((e) => !m.notifCenterIds.has(e.id))]), m.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id)), t.forEach((e) => m.notifCenterIds.add(e.id)));
 }
 function A(e) {
-    let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? T(e.item) : e.item;
+    let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? b(e.item) : e.item;
     if (!m.initialized || !g(t) || m.notifCenterIds.has(t.id)) return !1;
     m.notifCenterIds.add(t.id), (m.notifCenterItems = [t, ...m.notifCenterItems]), m.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id));
 }
@@ -261,7 +261,7 @@ class B extends (i = r.ZP.PersistedStore) {
 }
 h(B, 'displayName', 'NotificationCenterItemsStore'), h(B, 'persistKey', 'NotificationCenterItemsStore_v2');
 let Z = new B(a.Z, {
-    CONNECTION_OPEN: b,
+    CONNECTION_OPEN: T,
     LOGOUT: () => E(),
     NOTIFICATION_CENTER_ITEMS_ACK: R,
     NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: O,

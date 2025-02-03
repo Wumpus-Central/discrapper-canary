@@ -30,8 +30,8 @@ let E = 'default',
     v = [],
     y = [],
     I = [],
-    T = 0,
-    b = null,
+    b = 0,
+    T = null,
     S = null,
     A = {},
     N = null,
@@ -96,7 +96,7 @@ function w(e) {
 }
 function M(e) {
     let { clipType: t, streamKey: n, thumbnail: i } = e;
-    if (((T += 1), (D.hasTakenDecoupledClip = D.hasTakenDecoupledClip || t === p.X9.DECOUPLED), null != n && null != i)) {
+    if (((b += 1), (D.hasTakenDecoupledClip = D.hasTakenDecoupledClip || t === p.X9.DECOUPLED), null != n && null != i)) {
         var r;
         let e = Date.now();
         (C = null != C ? C : e),
@@ -114,12 +114,12 @@ function k(e) {
     C === n && (C = null), null == n ? (R[t] = []) : (R[t] = R[t].filter((e) => e.timestamp !== n));
 }
 function U() {
-    T = Math.max(T - 1, 0);
+    b = Math.max(b - 1, 0);
 }
 function G(e) {
     var t, n;
     let { clip: i } = e;
-    (T = Math.max(T - 1, 0)),
+    (b = Math.max(b - 1, 0)),
         (S = {
             applicationName: i.applicationName,
             ended: !1,
@@ -150,11 +150,11 @@ function Z(e) {
 }
 function F(e) {
     let { channelId: t } = e;
-    b = t;
+    T = t;
 }
 function V(e) {
     let { channelId: t } = e;
-    t !== b && (b = null);
+    t !== T && (T = null);
 }
 function j(e) {
     let { applicationName: t } = e;
@@ -255,7 +255,7 @@ class ee extends (i = r.ZP.DeviceSettingsStore) {
         return S;
     }
     getClipsWarningShown(e) {
-        return b === e;
+        return T === e;
     }
     getActiveAnimation() {
         return C;
@@ -277,7 +277,7 @@ class ee extends (i = r.ZP.DeviceSettingsStore) {
         return D.hardwareClassificationVersion;
     }
     getIsAtMaxSaveClipOperations() {
-        return T >= p.Kw;
+        return b >= p.Kw;
     }
     getLastClipsError() {
         return N;

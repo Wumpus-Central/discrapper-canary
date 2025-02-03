@@ -30,8 +30,8 @@ let E = 2,
     v = new Map(),
     y = new Map(),
     I = null,
-    T = [],
-    b = null,
+    b = [],
+    T = null,
     S = !1,
     A = new Map(),
     N = (e, t) => {
@@ -73,7 +73,7 @@ let D = function (e) {
                 value: e.name.trim().toLocaleLowerCase()
             };
         if ((0, m.jl)(e)) {
-            let t = T.find((t) => t.id === e.pack_id),
+            let t = b.find((t) => t.id === e.pack_id),
                 r = [
                     i,
                     ...(null != n ? n : '').split(',').map((e) => ({
@@ -124,10 +124,10 @@ let D = function (e) {
     },
     L = (e, t, n) => {
         v.set(e.id, e);
-        let i = [...T];
+        let i = [...b];
         if (t) {
             let t = i.findIndex((t) => t.id === e.id);
-            -1 !== t ? (i[t] = e) : i.push(e), (T = i);
+            -1 !== t ? (i[t] = e) : i.push(e), (b = i);
         }
         (t || n) && e.stickers.forEach((e) => D(e));
     },
@@ -136,7 +136,7 @@ let D = function (e) {
             let n = _.Z.getGuild(t);
             null != n && e.forEach((e) => x(e, n));
         }),
-            T.forEach((e) => {
+            b.forEach((e) => {
                 e.stickers.forEach((e) => x(e));
             });
     },
@@ -165,14 +165,14 @@ function G(e) {
         (A = new Map(A));
 }
 let B = () => {
-        (E = 0), (T = []), y.clear(), v.clear(), (I = null), A.clear(), (A = new Map(A)), (S = !1), (b = null);
+        (E = 0), (b = []), y.clear(), v.clear(), (I = null), A.clear(), (A = new Map(A)), (S = !1), (T = null);
     },
     Z = () => {
         S = !0;
     },
     F = (e) => {
         let { packs: t } = e;
-        t.forEach((e) => L(e, !0)), (b = Date.now()), (S = !1);
+        t.forEach((e) => L(e, !0)), (T = Date.now()), (S = !1);
     },
     V = (e) => {
         let { pack: t, ingestStickers: n } = e;
@@ -228,7 +228,7 @@ class K extends (i = a.ZP.Store) {
         return R(), null == I && ((I = new Map()), P()), I;
     }
     get hasLoadedStickerPacks() {
-        return null != b && b + C > Date.now();
+        return null != T && T + C > Date.now();
     }
     get isFetchingStickerPacks() {
         return S;
@@ -240,10 +240,10 @@ class K extends (i = a.ZP.Store) {
         return v.get(e);
     }
     getPremiumPacks() {
-        return T;
+        return b;
     }
     isPremiumPack(e) {
-        return T.some((t) => t.id === e);
+        return b.some((t) => t.id === e);
     }
     getRawStickersByGuild() {
         return A;

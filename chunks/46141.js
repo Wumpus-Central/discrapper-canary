@@ -1,8 +1,8 @@
 n.d(t, {
     $z: () => N,
     D0: () => h,
-    JC: () => b,
-    Om: () => T,
+    JC: () => T,
+    Om: () => b,
     Sf: () => f,
     U4: () => S,
     Vg: () => p,
@@ -107,9 +107,9 @@ class u extends i.Z {
             case o.HeQ.MOMO_WALLET:
                 return new y({ ...i });
             case o.HeQ.KAKAOPAY:
-                return new T({ ...i });
-            case o.HeQ.GOPAY_WALLET:
                 return new b({ ...i });
+            case o.HeQ.GOPAY_WALLET:
+                return new T({ ...i });
             case o.HeQ.BANCONTACT:
                 return new S({ ...i });
             case o.HeQ.IDEAL:
@@ -151,9 +151,9 @@ class u extends i.Z {
             case o.HeQ.VENMO:
                 return new I(e);
             case o.HeQ.KAKAOPAY:
-                return new T(e);
-            case o.HeQ.GOPAY_WALLET:
                 return new b(e);
+            case o.HeQ.GOPAY_WALLET:
+                return new T(e);
             case o.HeQ.BANCONTACT:
                 return new S(e);
             case o.HeQ.EPS:
@@ -250,12 +250,12 @@ class I extends u {
         this.username = e.username || '';
     }
 }
-class T extends u {
+class b extends u {
     constructor(e) {
         if ((super(e), e.type !== o.HeQ.KAKAOPAY)) throw Error('Cannot instantiate KaKaoPaySourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.KAKAOPAY));
     }
 }
-class b extends u {
+class T extends u {
     constructor(e) {
         if ((super(e), e.type !== o.HeQ.GOPAY_WALLET)) throw Error('Cannot instantiate GoPayWalletSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.GOPAY_WALLET));
     }

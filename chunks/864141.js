@@ -19,8 +19,8 @@ var r = n(120356),
     v = n(139793),
     y = n(652853),
     I = n(336383),
-    T = n(194811),
-    b = n(373826),
+    b = n(194811),
+    T = n(373826),
     S = n(340266),
     A = n(788858),
     N = n(599864),
@@ -75,7 +75,7 @@ function x(e) {
                             ]
                         }),
                         null != U &&
-                            (0, i.jsx)(b.Z, {
+                            (0, i.jsx)(T.Z, {
                                 variant: 'text-xs/normal',
                                 text: O.intl.formatToPlainString(O.t['hq/Qzc'], { guildName: U.name }),
                                 onClick: t
@@ -101,7 +101,7 @@ function x(e) {
             onAction: M,
             onClose: x,
             children: [
-                (0, i.jsx)(T.Z, {
+                (0, i.jsx)(b.Z, {
                     text: O.intl.string(n.isGuildStageVoice() ? O.t.Q1lNen : O.t.bl1Mz8),
                     contextMenu: (0, i.jsx)(C.Z, {
                         display: 'voice',

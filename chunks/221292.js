@@ -3,8 +3,8 @@ n.d(t, {
     QN: () => I,
     Qf: () => A,
     TY: () => N,
-    pQ: () => T,
-    z7: () => b
+    pQ: () => b,
+    z7: () => T
 }),
     n(653041),
     n(47120);
@@ -97,7 +97,7 @@ let g = (e) => {
                   affinity: null === (n = r.Z.getUserAffinity(i)) || void 0 === n ? void 0 : n.affinity
               };
     },
-    T = (e) => {
+    b = (e) => {
         let { guildId: t, channelId: n, messageId: r, roleId: a, analyticsLocations: s, action: o, section: l } = e;
         c.default.track(h.rMx.USER_PROFILE_ACTION, {
             ...(0, i.hH)(t),
@@ -111,7 +111,7 @@ let g = (e) => {
             source_role_id: a
         });
     },
-    b = (e) => {
+    T = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: r, action: a, display: s, activity: o, stream: l, entry: u, outbox: d } = e;
         c.default.track(h.rMx.USER_PROFILE_ACTIVITY_ACTION, {
             ...(0, i.hH)(t),

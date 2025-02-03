@@ -19,8 +19,8 @@ var r = n(442837),
     v = n(524444),
     y = n(981631),
     I = n(176505),
-    T = n(388032),
-    b = n(623105);
+    b = n(388032),
+    T = n(623105);
 let S = 40,
     A = (e) => {
         let { roleIcon: t, guild: n } = e,
@@ -34,7 +34,7 @@ let S = 40,
         });
         let N = (0, r.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
             C = (0, f.Z)(N),
-            R = C ? T.intl.formatToPlainString(T.t.t0928f, { name: A }) : T.intl.formatToPlainString(T.t.UDDkGx, { name: A }),
+            R = C ? b.intl.formatToPlainString(b.t.t0928f, { name: A }) : b.intl.formatToPlainString(b.t.UDDkGx, { name: A }),
             O = {
                 ...t,
                 src: null == t.src ? t.src : (0, c.o)(t.src, S),
@@ -53,26 +53,26 @@ let S = 40,
         return (0, i.jsx)(a.VqE, {
             children: (0, i.jsx)(v.W_, {
                 children: (0, i.jsxs)('div', {
-                    className: b.popoutContainer,
+                    className: T.popoutContainer,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: b.mainContent,
+                            className: T.mainContent,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: b.roleIconContainer,
+                                    className: T.roleIconContainer,
                                     children: (0, i.jsx)(u.Z, {
                                         ...O,
                                         enableTooltip: !1,
-                                        className: b.__invalid_roleIcon,
+                                        className: T.__invalid_roleIcon,
                                         enableHeight: !1
                                     })
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: b.truncatingText,
+                                    className: T.truncatingText,
                                     children: [
                                         (0, i.jsx)(a.X6q, {
                                             variant: 'heading-md/semibold',
-                                            className: b.roleName,
+                                            className: T.roleName,
                                             children: (0, i.jsx)(l.Z, { children: A })
                                         }),
                                         (0, i.jsx)(a.Text, {
@@ -86,8 +86,8 @@ let S = 40,
                         (0, i.jsxs)(a.zxk, {
                             size: a.zxk.Sizes.SMALL,
                             color: a.zxk.Colors.PRIMARY,
-                            className: b.ctaButton,
-                            innerClassName: b.ctaButtonContent,
+                            className: T.ctaButton,
+                            innerClassName: T.ctaButtonContent,
                             fullWidth: !0,
                             onClick: L,
                             autoFocus: !0,
@@ -95,9 +95,9 @@ let S = 40,
                                 (0, i.jsx)(g.Z, {
                                     width: 14,
                                     height: 14,
-                                    className: b.boosterBadge
+                                    className: T.boosterBadge
                                 }),
-                                T.intl.string(T.t['H930+P'])
+                                b.intl.string(b.t['H930+P'])
                             ]
                         })
                     ]

@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(652853),
     y = n(228168),
     I = n(420212),
-    T = n(388032),
-    b = n(583677);
+    b = n(388032),
+    T = n(583677);
 let S = (0, f.kt)({
         id: '1',
         type: o.d.DM
@@ -28,14 +28,14 @@ let S = (0, f.kt)({
         let { input: t, username: n, sourceType: i, sourceDetails: r } = e;
         switch (i) {
             case y.n_.ACTIVITY:
-                let a = T.intl.formatToPlainString(T.t.WmvMCg, { username: n }),
+                let a = b.intl.formatToPlainString(b.t.WmvMCg, { username: n }),
                     s = '\n> '.concat(r);
                 return null != r ? ''.concat(E.jd).concat(a, '*').concat(s, '\n').concat(t) : ''.concat(E.jd).concat(a, '*\n').concat(t);
             case y.n_.AVATAR:
-                let o = T.intl.formatToPlainString(T.t.lpaBsL, { username: n });
+                let o = b.intl.formatToPlainString(b.t.lpaBsL, { username: n });
                 return ''.concat(E.jd).concat(o, '*\n').concat(t);
             case y.n_.STATUS:
-                let l = T.intl.formatToPlainString(T.t.lFXgFR, { username: n }),
+                let l = b.intl.formatToPlainString(b.t.lFXgFR, { username: n }),
                     u = '\n> '.concat(r);
                 return null != r ? ''.concat(E.jd).concat(l, '*').concat(u, '\n').concat(t) : ''.concat(E.jd).concat(l, '*\n').concat(t);
             default:
@@ -45,11 +45,11 @@ let S = (0, f.kt)({
     N = (e) => {
         switch (e) {
             case y.n_.ACTIVITY:
-                return T.t.Qn081N;
+                return b.t.Qn081N;
             case y.n_.AVATAR:
-                return T.t.xGNPFB;
+                return b.t.xGNPFB;
             case y.n_.STATUS:
-                return T.t.g9BTCA;
+                return b.t.g9BTCA;
             default:
                 (0, _.vE)(e);
         }
@@ -94,28 +94,28 @@ function C(e) {
             L(y.P.REPLY);
         },
         V = {
-            [b.biteSize]: o === y.y0.BITE_SIZE,
-            [b.panel]: o === y.y0.PANEL,
-            [b.fullSize]: o === y.y0.FULL_SIZE
+            [T.biteSize]: o === y.y0.BITE_SIZE,
+            [T.panel]: o === y.y0.PANEL,
+            [T.fullSize]: o === y.y0.FULL_SIZE
         },
         j = {
-            [b.status]: f === y.n_.STATUS,
-            [b.avatar]: f === y.n_.AVATAR,
-            [b.activity]: f === y.n_.ACTIVITY
+            [T.status]: f === y.n_.STATUS,
+            [T.avatar]: f === y.n_.AVATAR,
+            [T.activity]: f === y.n_.ACTIVITY
         };
     return (0, i.jsx)(l.V, {
         ref: B,
         onKeyDown: Z,
         children: (0, i.jsx)('div', {
-            className: s()(b.container, V, j, { [b.customProfileTheme]: null != P }),
+            className: s()(T.container, V, j, { [T.customProfileTheme]: null != P }),
             children: (0, i.jsx)(d.Z, {
                 parentModalKey: C,
                 emojiPickerCloseOnModalOuterClick: !0,
-                className: b.input,
-                innerClassName: b.inputInner,
-                editorClassName: b.editor,
+                className: T.input,
+                innerClassName: T.inputInner,
+                editorClassName: T.editor,
                 type: u.Ie.USER_PROFILE_REPLY,
-                placeholder: T.intl.formatToPlainString(N(f), { username: p.ZP.getName(n, a, t) }),
+                placeholder: b.intl.formatToPlainString(N(f), { username: p.ZP.getName(n, a, t) }),
                 channel: S,
                 textValue: w,
                 richValue: k,

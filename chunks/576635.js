@@ -14,16 +14,16 @@ function d(e) {
         E = (0, r.e7)([s.Z], () => s.Z.syncProfileThemeWithUserTheme),
         v = null != h ? h : null == f ? void 0 : f.getAvatarURL(null == _ ? void 0 : _.guildId, 80),
         y = (0, l.Sl)(c.Ilk.PRIMARY_530).hex,
-        [I, T] = (0, o.Cf)(v, y, !1);
+        [I, b] = (0, o.Cf)(v, y, !1);
     if (!(null == _ ? void 0 : _.canEditThemes) && !m)
         return {
             theme: g,
             primaryColor: null,
             secondaryColor: null
         };
-    let b = null == _ ? void 0 : _.getPreviewThemeColors(p),
-        S = null !== (t = null == b ? void 0 : b[0]) && void 0 !== t ? t : (0, i._i)(I),
-        A = null !== (n = null == b ? void 0 : b[1]) && void 0 !== n ? n : (0, i._i)(T);
+    let T = null == _ ? void 0 : _.getPreviewThemeColors(p),
+        S = null !== (t = null == T ? void 0 : T[0]) && void 0 !== t ? t : (0, i._i)(I),
+        A = null !== (n = null == T ? void 0 : T[1]) && void 0 !== n ? n : (0, i._i)(b);
     return {
         theme: E ? g : null !== (d = (0, u.V3)(S)) && void 0 !== d ? d : g,
         primaryColor: S,

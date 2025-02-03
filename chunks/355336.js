@@ -18,8 +18,8 @@ function c(e, t) {
     return r.forwardRef(function (t, c) {
         let { children: d, className: f, onResize: _, contentClassName: p, onScroll: h, dir: m = 'ltr', fade: g = !1, customTheme: E = !1, style: v, ...y } = t,
             I = r.useRef(null),
-            T = r.useRef(null),
-            [b, S] = r.useState(!1),
+            b = r.useRef(null),
+            [T, S] = r.useState(!1),
             { scrollerRef: A, getScrollerState: N } = (0, l.Ke)(),
             C = (0, l.t2)(A);
         r.useImperativeHandle(
@@ -52,7 +52,7 @@ function c(e, t) {
                 listenerMap: n
             }),
             (0, l.zn)({
-                ref: T,
+                ref: b,
                 key: 'content',
                 onUpdate: _,
                 resizeObserver: a,
@@ -65,18 +65,18 @@ function c(e, t) {
                     [u.customTheme]: E,
                     [e]: !0,
                     [u.managedReactiveScroller]: !0,
-                    [u.scrolling]: b && g
+                    [u.scrolling]: T && g
                 }),
                 style: v,
                 dir: m,
                 onScroll: R,
                 ...y,
                 children: (0, i.jsx)(o.J, {
-                    containerRef: T,
+                    containerRef: b,
                     children: (0, i.jsxs)('div', {
-                        ref: T,
+                        ref: b,
                         className: s()(p, u.content),
-                        children: [d, b && (0, i.jsx)('div', { className: u.pointerCover })]
+                        children: [d, T && (0, i.jsx)('div', { className: u.pointerCover })]
                     })
                 })
             })

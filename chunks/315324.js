@@ -21,18 +21,18 @@ var r = n(442837),
     E = n(249942);
 let v = 3;
 function y(e) {
-    let { user: t, guild: n, channel: y, onAction: I, onClose: T } = e,
-        { profileType: b } = (0, p.z)(),
+    let { user: t, guild: n, channel: y, onAction: I, onClose: b } = e,
+        { profileType: T } = (0, p.z)(),
         S = (0, _.Z)(y);
     if (!(0, r.e7)([f.Z], () => f.Z.can(g.Plq.VIEW_CHANNEL, y))) return null;
     let A = (e) => {
-            e.stopPropagation(), (0, d.X)(n.id), null == I || I({ action: 'OPEN_VOICE_GUILD' }), null == T || T();
+            e.stopPropagation(), (0, d.X)(n.id), null == I || I({ action: 'OPEN_VOICE_GUILD' }), null == b || b();
         },
         N = (e) => {
-            e.stopPropagation(), s.default.selectVoiceChannel(y.id), (0, c.Kh)(y.id), null == I || I({ action: 'OPEN_VOICE_CHANNEL' }), null == T || T();
+            e.stopPropagation(), s.default.selectVoiceChannel(y.id), (0, c.Kh)(y.id), null == I || I({ action: 'OPEN_VOICE_CHANNEL' }), null == b || b();
         },
-        C = b === m.y0.FULL_SIZE,
-        R = b === m.y0.PANEL,
+        C = T === m.y0.FULL_SIZE,
+        R = T === m.y0.PANEL,
         O = !C && !R;
     return (0, i.jsxs)(i.Fragment, {
         children: [

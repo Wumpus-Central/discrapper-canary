@@ -4,8 +4,8 @@ var l = t(200651),
     i = t(120356),
     s = t.n(i),
     r = t(442837),
-    o = t(481060),
-    u = t(565138),
+    u = t(481060),
+    o = t(565138),
     d = t(357156),
     c = t(430824),
     f = t(496675),
@@ -21,12 +21,12 @@ var l = t(200651),
     j = t(693793);
 function w(e) {
     let { availableSlots: n, className: t } = e;
-    return (0, l.jsxs)(o.Text, {
+    return (0, l.jsxs)(u.Text, {
         className: s()(j.suffixNode, t),
         variant: 'text-sm/medium',
         color: 'text-primary',
         children: [
-            (0, l.jsx)(o.gj8, {
+            (0, l.jsx)(u.gj8, {
                 size: 'md',
                 color: 'currentColor',
                 className: j.speakerIcon
@@ -77,10 +77,10 @@ function C(e) {
             (e) =>
                 null == e || '' === e.value
                     ? null
-                    : (0, l.jsx)(u.Z, {
+                    : (0, l.jsx)(o.Z, {
                           className: s()(j.guildSelectOptionIcon, { [j.disabledOption]: e.disabled }),
                           guild: C[e.value],
-                          size: u.Z.Sizes.SMOL,
+                          size: o.Z.Sizes.SMOL,
                           active: !0
                       }),
             [C]
@@ -115,7 +115,7 @@ function C(e) {
             let e = S[null != n ? n : b.lds];
             return null == e || e > 0 ? n : void 0;
         })();
-    return (0, l.jsx)(o.VcW, {
+    return (0, l.jsx)(u.VcW, {
         className: t,
         onChange: I,
         value: P,

@@ -1,4 +1,4 @@
-n.d(t, { N: () => T }), n(757143), n(47120);
+n.d(t, { N: () => b }), n(757143), n(47120);
 var i = n(623279),
     r = n(392711),
     a = n.n(r),
@@ -109,7 +109,7 @@ function y(e) {
 function I(e) {
     return null == e ? null : (0, s.k)(e, HTMLInputElement) || (0, s.k)(e, HTMLTextAreaElement) ? e.value : (0, s.k)(e) && e.hasAttribute('contenteditable') ? e.textContent : void 0;
 }
-async function T() {
+async function b() {
     var e;
     let t = new E((null !== (e = await m.getAvailableDictionaries()) && void 0 !== e ? e : []).map(g).filter(c.lm));
     return y(t), t;

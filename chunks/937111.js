@@ -80,7 +80,7 @@ function I(e) {
     let { guild: t } = e;
     m(t.id);
 }
-function T(e) {
+function b(e) {
     let { invite: t } = e,
         { guild: n, join_request: i } = t;
     if (null != n && null != i) {
@@ -96,7 +96,7 @@ function T(e) {
         };
     }
 }
-function b(e) {
+function T(e) {
     let { guilds: t } = e;
     (f = !0),
         t.forEach((e) => {
@@ -168,9 +168,9 @@ let D = new O(a.Z, {
     GUILD_JOIN_REQUEST_DELETE: y,
     USER_GUILD_JOIN_REQUEST_UPDATE: E,
     GUILD_DELETE: I,
-    USER_JOIN_REQUEST_GUILDS_FETCH: b,
+    USER_JOIN_REQUEST_GUILDS_FETCH: T,
     MEMBER_VERIFICATION_FORM_UPDATE: A,
-    INVITE_ACCEPT_SUCCESS: T,
+    INVITE_ACCEPT_SUCCESS: b,
     ACK_APPROVED_GUILD_JOIN_REQUEST: N,
     USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW: C,
     USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: R,

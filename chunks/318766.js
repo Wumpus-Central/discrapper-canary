@@ -22,8 +22,8 @@ var i = n(200651),
     v = n(153066),
     y = n(981631),
     I = n(921944),
-    T = n(185923),
-    b = n(388032),
+    b = n(185923),
+    T = n(388032),
     S = n(659650);
 let A = 20,
     N = 24,
@@ -48,7 +48,7 @@ let A = 20,
                 (0, i.jsx)(c.Text, {
                     variant: 'text-sm/medium',
                     className: S.premiumTooltipText,
-                    children: b.intl.format(b.t['/7R4q6'], {})
+                    children: T.intl.format(T.t['/7R4q6'], {})
                 })
             ]
         });
@@ -70,12 +70,12 @@ let L = function (e) {
         F = r.useCallback(() => {
             if (G) return;
             let e = Math.floor(Math.random() * R);
-            M(!0), U(e), (0, p.x)(T.qR.EmojiButtonMouseEntered);
+            M(!0), U(e), (0, p.x)(b.qR.EmojiButtonMouseEntered);
         }, [G, M, U]),
         V = r.useCallback(() => {
             M(!1);
         }, [M]),
-        j = r.useCallback(() => (0, p.x)(T.qR.EmojiButtonFocused), []),
+        j = r.useCallback(() => (0, p.x)(b.qR.EmojiButtonFocused), []),
         H = (0, h.B4)({ location: 'EmojiButton' }),
         [Y, W] = (0, _.US)(H ? [u.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
         K = Y === u.z.TRIAL_NUX_EMOJI_BUTTON,
@@ -96,7 +96,7 @@ let L = function (e) {
         children: (e) =>
             (0, i.jsx)(c.ua7, {
                 text: () => (0, i.jsx)(D, {}),
-                'aria-label': b.intl.formatToMarkdownString(b.t['/7R4q6'], {}),
+                'aria-label': T.intl.formatToMarkdownString(T.t['/7R4q6'], {}),
                 position: 'top',
                 shouldShow: z,
                 onTooltipHide: () => X(!1),
@@ -124,7 +124,7 @@ let L = function (e) {
                             var t;
                             null == N || N(e), null === (t = r.onClick) || void 0 === t || t.call(r);
                         },
-                        'aria-label': b.intl.string(b.t['59QgaG']),
+                        'aria-label': T.intl.string(T.t['59QgaG']),
                         'aria-controls': C,
                         'aria-expanded': A,
                         'aria-haspopup': 'dialog',

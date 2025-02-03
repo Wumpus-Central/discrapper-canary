@@ -6,12 +6,12 @@ n.d(t, {
     Hh: () => R,
     II: () => A,
     MC: () => S,
-    Vj: () => b,
+    Vj: () => T,
     ZP: () => L,
     gO: () => N,
     i_: () => C,
     jQ: () => D,
-    qE: () => T,
+    qE: () => b,
     v6: () => x,
     zx: () => I
 }),
@@ -74,7 +74,7 @@ let E = (e) => {
         });
     };
 (I.Looks = s.zxk.Looks), (I.Colors = s.zxk.Colors), (I.Sizes = s.zxk.Sizes);
-let T = (e) => {
+let b = (e) => {
         let { className: t, src: n, size: r } = e;
         return (0, i.jsx)(g, {
             src: n,
@@ -83,7 +83,7 @@ let T = (e) => {
             'aria-hidden': !0
         });
     },
-    b = (e) => {
+    T = (e) => {
         let { guild: t, size: n, animate: r = !1, className: a } = e;
         return (0, i.jsx)(d.Z, {
             active: !0,
@@ -93,7 +93,7 @@ let T = (e) => {
             className: a
         });
     };
-b.Sizes = d.Z.Sizes;
+T.Sizes = d.Z.Sizes;
 let S = (e) => {
     let { className: t, channel: n, size: r } = e;
     return (0, i.jsx)(g, {
@@ -105,7 +105,7 @@ let S = (e) => {
 };
 S.Sizes = s.EFr;
 let A = (e) => {
-        let { label: t, error: n, placeholder: r, value: o, className: l, inputClassName: u, setRef: d, type: f = 'text', onChange: _, autoComplete: p, autoFocus: h, maxLength: g, spellCheck: E, name: v, description: y, required: I, onFocus: T, onBlur: b } = e,
+        let { label: t, error: n, placeholder: r, value: o, className: l, inputClassName: u, setRef: d, type: f = 'text', onChange: _, autoComplete: p, autoFocus: h, maxLength: g, spellCheck: E, name: v, description: y, required: I, onFocus: b, onBlur: T } = e,
             S = (0, c.Dt)();
         return (0, i.jsxs)(s.xJW, {
             title: t,
@@ -129,8 +129,8 @@ let A = (e) => {
                     maxLength: g,
                     spellCheck: E,
                     id: S,
-                    onFocus: T,
-                    onBlur: b
+                    onFocus: b,
+                    onBlur: T
                 }),
                 null != y
                     ? (0, i.jsx)(s.R94, {
@@ -220,7 +220,7 @@ let A = (e) => {
                           color: 'header-secondary',
                           children: h.intl.string(h.t['/8WWvL'])
                       }),
-                      (0, i.jsx)(T, {
+                      (0, i.jsx)(b, {
                           className: m.joiningAsAvatar,
                           src: t.getAvatarURL(void 0, 24),
                           size: s.EFr.SIZE_24,

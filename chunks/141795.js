@@ -35,8 +35,8 @@ function I(e, t, n) {
         e
     );
 }
-let T = new o.Z('CloudUpload.tsx'),
-    b = n(224497).Z;
+let b = new o.Z('CloudUpload.tsx'),
+    T = n(224497).Z;
 var S = (function (e) {
     return (e.NOT_STARTED = 'NOT_STARTED'), (e.STARTED = 'STARTED'), (e.UPLOADING = 'UPLOADING'), (e.ERROR = 'ERROR'), (e.COMPLETED = 'COMPLETED'), (e.CANCELED = 'CANCELED'), e;
 })({});
@@ -89,7 +89,7 @@ class N extends E.ZP {
             r = Math.ceil(n / e);
         (this.uploadAnalytics.numChunks = r), (this.uploadAnalytics.totalRequestCount = 0);
         for (let a = 0; a < r; a++) {
-            T.info(
+            b.info(
                 'Uploading chunk '
                     .concat(a + 1, ' of ')
                     .concat(r, ' for file id ')
@@ -109,7 +109,7 @@ class N extends E.ZP {
                 });
             } catch (e) {
                 throw (
-                    (T.error(
+                    (b.error(
                         'Error uploading chunk '
                             .concat(a + 1, ' for file id ')
                             .concat(this.id, ': ')
@@ -119,7 +119,7 @@ class N extends E.ZP {
                 );
             }
         }
-        T.log('Upload complete for file id '.concat(this.id));
+        b.log('Upload complete for file id '.concat(this.id));
     }
     async prepareChunkUploadItem() {
         let e, t, n;
@@ -129,7 +129,7 @@ class N extends E.ZP {
                 try {
                     t = await (0, g.Fm)(i.uri);
                 } catch (e) {
-                    T.warn('Failed to peek content length for file id '.concat(this.id, ', reading whole file instead: ').concat(e)), (t = (n = await (0, g.Lc)(i.uri)).size);
+                    b.warn('Failed to peek content length for file id '.concat(this.id, ', reading whole file instead: ').concat(e)), (t = (n = await (0, g.Lc)(i.uri)).size);
                 }
             else t = i.size;
         } else (e = 'application/octet-stream'), (t = this.item.file.size);
@@ -154,7 +154,7 @@ class N extends E.ZP {
         for (let a = 1; a <= n; a++) {
             var i;
             (this.uploadAnalytics.totalRequestCount = (null !== (i = this.uploadAnalytics.totalRequestCount) && void 0 !== i ? i : 0) + 1),
-                T.log(
+                b.log(
                     'Attempt '
                         .concat(a, ' for file id ')
                         .concat(this.id, ' : Uploading chunk ')
@@ -184,7 +184,7 @@ class N extends E.ZP {
             } catch (t) {
                 if (!this.RESUME_INCOMPLETE_CODES.includes(t.status)) throw t;
                 if (this.isUnsuccessfulChunkUpload(t, e.end - 1)) {
-                    T.error('Incomplete chunk upload for file id '.concat(this.id, ': ').concat(t.status));
+                    b.error('Incomplete chunk upload for file id '.concat(this.id, ': ').concat(t.status));
                     continue;
                 }
                 return;
@@ -200,7 +200,7 @@ class N extends E.ZP {
     uploadFileToCloud() {
         let e, t;
         if (null == this.responseUrl) throw Error('_uploadFileToCloud - responseUrl is not set');
-        T.log('Uploading '.concat(this.id)),
+        b.log('Uploading '.concat(this.id)),
             this.item.platform === E.ow.REACT_NATIVE
                 ? (t =
                       null !=
@@ -245,10 +245,10 @@ class N extends E.ZP {
             this.handleComplete(this.id);
             return;
         }
-        let i = await b.getUploadPayload(this),
+        let i = await T.getUploadPayload(this),
             r = (0, v.F)(this.item.target);
         if (null == i.filename || '' === i.filename || 0 === this.currentSize) {
-            T.error('File does not have a filename or size is 0.', JSON.stringify(i)), this.handleError(y.evJ.INVALID_FILE_ASSET);
+            b.error('File does not have a filename or size is 0.', JSON.stringify(i)), this.handleError(y.evJ.INVALID_FILE_ASSET);
             return;
         }
         if ((null !== (e = this.currentSize) && void 0 !== e ? e : 0) > r.getMaxFileSize(this.channelId)) {
@@ -262,7 +262,7 @@ class N extends E.ZP {
             return;
         }
         try {
-            T.log('Requesting upload url for '.concat(this.id));
+            b.log('Requesting upload url for '.concat(this.id));
             let e = await this.trackTime(
                 'getUploadUrlTimeMs',
                 async () =>
@@ -276,7 +276,7 @@ class N extends E.ZP {
             this.setResponseUrl(e.body.attachments[0].upload_url), this.setUploadedFilename(e.body.attachments[0].upload_filename);
         } catch (i) {
             let e = null !== (n = null == i ? void 0 : null === (t = i.body) || void 0 === t ? void 0 : t.code) && void 0 !== n ? n : i.status;
-            e !== y.evJ.ENTITY_TOO_LARGE && (T.error('Requesting upload url failed with code '.concat(null != e ? e : JSON.stringify(i.body), ' for ').concat(this.id)), m.Z.captureException(i)), this.handleError(e);
+            e !== y.evJ.ENTITY_TOO_LARGE && (b.error('Requesting upload url failed with code '.concat(null != e ? e : JSON.stringify(i.body), ' for ').concat(this.id)), m.Z.captureException(i)), this.handleError(e);
             return;
         }
         try {
@@ -284,25 +284,25 @@ class N extends E.ZP {
             let t = u.Z.getCurrentConfig({ location: 'CloudUpload' }, { autoTrackExposure: !0 });
             (e = t.enabled && t.chunkSize > 0 ? await this.trackTime('uploadTimeMs', async () => await this.uploadFileToCloudAsChunks(t.chunkSize)) : await this.trackTime('uploadTimeMs', async () => await this.uploadFileToCloud())), this.trackUploadFinished('COMPLETED'), this.handleComplete(e);
         } catch (e) {
-            'CANCELED' === this.status ? this.handleComplete(e) : (T.info('Error: status '.concat(e.status, ' for ').concat(this.id)), this.handleError(e));
+            'CANCELED' === this.status ? this.handleComplete(e) : (b.info('Error: status '.concat(e.status, ' for ').concat(this.id)), this.handleError(e));
         }
     }
     async reactNativeCompressAndExtractData() {
         var e;
-        if (!(0, v.F)(this.item.target).shouldReactNativeCompressUploads) return (this.uploadAnalytics.compressAndExtractDisabled = !0), T.log('reactNativeCompressAndExtractData() disabled by upload target'), this;
-        if (!0 === this.reactNativeFilePrepped) return (this.uploadAnalytics.fileAlreadyPrepped = !0), T.log('reactNativeCompressAndExtractData() file already prepped - '.concat(this.id)), this;
-        T.log('Starting compression/conversion for '.concat(this.id));
+        if (!(0, v.F)(this.item.target).shouldReactNativeCompressUploads) return (this.uploadAnalytics.compressAndExtractDisabled = !0), b.log('reactNativeCompressAndExtractData() disabled by upload target'), this;
+        if (!0 === this.reactNativeFilePrepped) return (this.uploadAnalytics.fileAlreadyPrepped = !0), b.log('reactNativeCompressAndExtractData() file already prepped - '.concat(this.id)), this;
+        b.log('Starting compression/conversion for '.concat(this.id));
         let t = await this.trackTime('compressTimeMs', async () => {
             var e;
             return await (0, p.J)(this, null !== (e = this.reactNativeFileIndex) && void 0 !== e ? e : 0);
         });
-        if (null == t || null == t.file) return T.error('Failed to get compressed file for '.concat(this.id)), this;
+        if (null == t || null == t.file) return b.error('Failed to get compressed file for '.concat(this.id)), this;
         let n = t.uri,
             i = t.file.name,
             r = t.file.type;
         if (((0, E.rG)(t.file) && ((this.uploadAnalytics.imageCompressionQuality = t.file.imageCompressionQuality), (this.uploadAnalytics.videoCompressionQuality = t.file.videoCompressionQuality), (this.uploadAnalytics.convertedMimeType = t.file.type), void 0 !== t.file.videoMetadata && ((this.uploadAnalytics.sourceMediaWidth = t.file.videoMetadata.width), (this.uploadAnalytics.sourceMediaHeight = t.file.videoMetadata.height), (this.uploadAnalytics.sourceMediaFormat = t.file.videoMetadata.format), (this.uploadAnalytics.sourceVideoBitrate = t.file.videoMetadata.bitRate), (this.uploadAnalytics.sourceVideoFramerate = t.file.videoMetadata.frameRate), (this.uploadAnalytics.videoDurationMs = t.file.videoMetadata.durationMs), (this.uploadAnalytics.sourceVideoProfile = t.file.videoMetadata.sourceProfile), (this.uploadAnalytics.sourceVideoLevel = t.file.videoMetadata.sourceLevel)), void 0 !== t.file.encodingConfig && ((this.uploadAnalytics.targetVideoWidth = t.file.encodingConfig.targetWidth), (this.uploadAnalytics.targetVideoHeight = t.file.encodingConfig.targetHeight), (this.uploadAnalytics.targetVideoBitrate = t.file.encodingConfig.targetBitrate), (this.uploadAnalytics.targetVideoCodec = t.file.encodingConfig.useHEVC ? 'hvc1' : 'avc1'), (this.uploadAnalytics.targetVideoFramerate = t.file.encodingConfig.frameRate), (this.uploadAnalytics.targetVideoIsHdr = t.file.encodingConfig.createHDR), (this.uploadAnalytics.hevcIsSupported = t.file.encodingConfig.hevcIsSupported))), (this.filename = i), null == i || null == n || null == r))
             throw (
-                (T.error(
+                (b.error(
                     'Insufficient file data: '
                         .concat(
                             {
@@ -323,8 +323,8 @@ class N extends E.ZP {
                 ))
             );
         let a = null !== (e = t.fileSize) && void 0 !== e ? e : (await (0, g.Lc)(n)).size;
-        if (((this.postCompressionSize = a), (this.currentSize = a), null == a)) throw (T.error('Size missing from file data for '.concat(this.id)), Error('Size missing from file data'));
-        T.log('Completed compression and conversion. Output size='.concat(a, ' bytes; filename=').concat(i, ' for ').concat(this.id));
+        if (((this.postCompressionSize = a), (this.currentSize = a), null == a)) throw (b.error('Size missing from file data for '.concat(this.id)), Error('Size missing from file data'));
+        b.log('Completed compression and conversion. Output size='.concat(a, ' bytes; filename=').concat(i, ' for ').concat(this.id));
         let s = {
             uri: n,
             filename: i,
@@ -347,10 +347,10 @@ class N extends E.ZP {
         this.removeAllListeners();
     }
     handleComplete(e) {
-        this.setStatus('COMPLETED'), T.log('Upload complete for '.concat(this.id)), this.emit('complete', e), this.removeAllListeners();
+        this.setStatus('COMPLETED'), b.log('Upload complete for '.concat(this.id)), this.emit('complete', e), this.removeAllListeners();
     }
     cancel() {
-        T.log('Cancelled called for '.concat(this.id)), this._abortController.abort(), this.trackUploadFinished('CANCELED'), 'COMPLETED' === this.status && this.delete(), this.setStatus('CANCELED'), this.emit('complete'), this.removeAllListeners();
+        b.log('Cancelled called for '.concat(this.id)), this._abortController.abort(), this.trackUploadFinished('CANCELED'), 'COMPLETED' === this.status && this.delete(), this.setStatus('CANCELED'), this.emit('complete'), this.removeAllListeners();
     }
     resetState() {
         return (this.status = 'NOT_STARTED'), (this.uploadedFilename = void 0), (this.responseUrl = void 0), (this.error = void 0), (this.startTime = void 0), (this.uploadAnalytics = new A()), (this._abortController = new AbortController()), super.resetState();

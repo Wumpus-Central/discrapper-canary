@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var i = n(392711),
     r = n.n(i),
     a = n(25209),
@@ -36,15 +36,15 @@ let d = {
     v = c(o.Z.GUILD_EVENT_RULES, [(0, s.Z)(d)]),
     y = c(o.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.Z)(d)]),
     I = r().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
-    T = { text: o.Z.RULES.text },
-    b = {
+    b = { text: o.Z.RULES.text },
+    T = {
         combineAndInjectMentionRule: c,
         createReactRules: s.Z,
         defaultReactRuleOptions: d,
         defaultRules: f,
         guildEventRules: v,
         notifCenterV2MessagePreviewRules: I,
-        lockscreenWidgetMessageRules: T,
+        lockscreenWidgetMessageRules: b,
         astParserFor: a._p,
         reactParserFor: a.w4,
         parse: a.w4(f),

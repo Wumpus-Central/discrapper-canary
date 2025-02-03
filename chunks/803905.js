@@ -3,11 +3,11 @@ n.d(t, {
     AN: () => M,
     Ct: () => A,
     EQ: () => B,
-    Ej: () => b,
+    Ej: () => T,
     ME: () => h,
     O1: () => I,
     O8: () => D,
-    Pl: () => T,
+    Pl: () => b,
     Uw: () => L,
     ZE: () => w,
     _G: () => y,
@@ -68,8 +68,8 @@ let _ = new f(i.q.ANIMATED_EMOJIS),
     v = new f(i.q.ANIMATED_AVATAR),
     y = new f(i.q.CUSTOM_DISCRIMINATOR),
     I = new f(i.q.PREMIUM_GUILD_MEMBER_PROFILE),
-    T = new f('profileBadges'),
-    b = new f(i.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
+    b = new f('profileBadges'),
+    T = new f(i.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
     S = new f('collectibles'),
     A = new f('appIcons'),
     N = new f(i.q.CLIENT_THEMES),
@@ -88,9 +88,9 @@ let k = new f(i.q.INCREASED_GUILD_LIMIT),
     G = new f('increasedVideoUploadQuality'),
     B = new f('uploadLargeFiles'),
     Z = Object.freeze({
-        [l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [_, p, h, T, M, G, B, A]),
-        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, p, v, y, T, C, O, L, G, B, A]),
-        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, p, h, m, g, v, y, I, T, b, N, C, R, O, D, L, P, w, M, k, U, G, B, A, S, x, E])
+        [l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [_, p, h, b, M, G, B, A]),
+        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, p, v, y, b, C, O, L, G, B, A]),
+        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, p, h, m, g, v, y, I, b, T, N, C, R, O, D, L, P, w, M, k, U, G, B, A, S, x, E])
     });
 function F(e, t) {
     return e.getFeatureValue(t);

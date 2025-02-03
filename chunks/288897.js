@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(704875),
     y = n(653309),
     I = n(981631),
-    T = n(846644),
-    b = n(665162);
+    b = n(846644),
+    T = n(665162);
 function S(e, t, n) {
     return (
         t in e
@@ -288,7 +288,7 @@ class A extends r.PureComponent {
             children: [
                 this.state.showPlaceholder
                     ? (0, i.jsx)('div', {
-                          className: s()(T.placeholder, t),
+                          className: s()(b.placeholder, t),
                           'aria-hidden': !0,
                           children: l
                       })
@@ -298,7 +298,7 @@ class A extends r.PureComponent {
                     value: [...this.state.initialValue],
                     children: (0, i.jsx)(o.CX, {
                         ...v,
-                        className: s()(b.markup, T.editor, t),
+                        className: s()(T.markup, b.editor, t),
                         decorate: this.decorate,
                         renderElement: this.renderElement,
                         renderLeaf: this.renderLeaf,

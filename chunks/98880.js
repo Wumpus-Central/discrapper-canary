@@ -26,8 +26,8 @@ var i,
     E = n(220082),
     A = n(70097),
     I = n(973616),
-    g = n(695103),
-    _ = n(880448),
+    _ = n(695103),
+    g = n(880448),
     P = n(768581),
     j = n(541099),
     y = n(783097),
@@ -158,19 +158,19 @@ function W(e) {
         N = a.useMemo(() => (null == f ? null : (0, S.ae)(f)), [f]),
         C = (0, E.ZP)(v, ''),
         [A, I] = a.useState(!1),
-        _ = a.useCallback(() => {
+        g = a.useCallback(() => {
             !0 === o && I(!0);
         }, [o]),
         P = h || (0, y.lf)(t),
         j = 'large_banner' === n || 'medium_banner' === n,
         T = a.useCallback(() => I(!1), []),
-        b = (0, r.e7)([p.Z, g.Z], () => p.Z.inDevModeForApplication(t.id) || g.Z.inTestModeForApplication(t.id), [t.id]);
+        b = (0, r.e7)([p.Z, _.Z], () => p.Z.inDevModeForApplication(t.id) || _.Z.inTestModeForApplication(t.id), [t.id]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             j
                 ? (0, l.jsxs)('div', {
-                      onMouseEnter: _,
-                      onFocus: _,
+                      onMouseEnter: g,
+                      onFocus: g,
                       onMouseLeave: T,
                       onBlur: T,
                       className: s()(k.bannerImageContainer, {
@@ -267,7 +267,7 @@ function F() {
             (0, l.jsx)('div', {
                 className: k.devShelfBadge,
                 ...e,
-                children: (0, l.jsx)(_.Z, { className: k.devShelfIcon })
+                children: (0, l.jsx)(g.Z, { className: k.devShelfIcon })
             })
     });
 }

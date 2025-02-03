@@ -30,15 +30,15 @@ let p = {},
     v = new Set(),
     y = {},
     I = 0,
-    T = 0,
     b = 0,
+    T = 0,
     S = 0,
     A = 0,
     N = 0;
 function C() {
     S = Object.values(p).length;
     let { [f.OGo.PENDING_INCOMING]: e = 0, [f.OGo.PENDING_OUTGOING]: t = 0, [f.OGo.FRIEND]: n = 0 } = a().countBy(Object.values(p), (e) => e);
-    (T = t), (b = n), (A = g.size), (N = v.size), (I = Math.max(e - A - N, 0));
+    (b = t), (T = n), (A = g.size), (N = v.size), (I = Math.max(e - A - N, 0));
 }
 function R(e) {
     (p = {}),
@@ -158,10 +158,10 @@ class w extends (i = s.ZP.Store) {
         return (0, l.JX)({ location: 'RelationshipStore::getPendingIgnoredCount' }) ? N : 0;
     }
     getOutgoingCount() {
-        return T;
+        return b;
     }
     getFriendCount() {
-        return b;
+        return T;
     }
     getRelationshipCount() {
         return S;

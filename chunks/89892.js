@@ -427,8 +427,8 @@ class v {
         let v = [...e.newMessages],
             y = null !== (t = e.isBefore) && void 0 !== t && t,
             I = null !== (n = e.isAfter) && void 0 !== n && n,
-            T = null !== (i = e.jump) && void 0 !== i ? i : null,
-            b = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
+            b = null !== (i = e.jump) && void 0 !== i ? i : null,
+            T = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
             S = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
             A = null !== (c = e.cached) && void 0 !== c && c,
             N = r()(v)
@@ -436,26 +436,26 @@ class v {
                 .map(a.Z.getCurrentConfig({ location: '2ecb25_2' }, { autoTrackExposure: !1 }).enabled ? (e) => (0, u.e5)(e) : (e) => g(this, e))
                 .value(),
             C = null;
-        if ((y || I) && null == T && this.ready) C = this.merge(N, y, !0);
+        if ((y || I) && null == b && this.ready) C = this.merge(N, y, !0);
         else {
             let e = this._array.filter((e) => e.state === f.yb.SENDING),
                 t = this._array.filter((e) => e.state === f.yb.SEND_FAILED),
                 n = e.length > 0 || t.length > 0;
-            (C = this.reset(N)), !n || y || I || (null == T ? void 0 : T.messageId) != null || (null == T ? void 0 : T.offset) != null ? p.info('loadComplete: resetting state for channelId='.concat(this.channelId, ', sending.length=').concat(e.length)) : (t.length > 0 && (p.info('loadComplete: merging with SEND_FAILED messages for channelId='.concat(this.channelId)), (C = C.merge(t))), e.length > 0 && (p.info('loadComplete: merging with SENDING messages for channelId='.concat(this.channelId)), (C = C.merge(e))));
+            (C = this.reset(N)), !n || y || I || (null == b ? void 0 : b.messageId) != null || (null == b ? void 0 : b.offset) != null ? p.info('loadComplete: resetting state for channelId='.concat(this.channelId, ', sending.length=').concat(e.length)) : (t.length > 0 && (p.info('loadComplete: merging with SEND_FAILED messages for channelId='.concat(this.channelId)), (C = C.merge(t))), e.length > 0 && (p.info('loadComplete: merging with SENDING messages for channelId='.concat(this.channelId)), (C = C.merge(e))));
         }
         return C.mutate({
             ready: !0,
             loadingMore: !1,
-            jumpType: null !== (d = null == T ? void 0 : T.jumpType) && void 0 !== d ? d : s.SR.ANIMATED,
-            jumpFlash: null !== (_ = null == T ? void 0 : T.flash) && void 0 !== _ && _,
-            jumped: null != T,
-            jumpedToPresent: null !== (h = null == T ? void 0 : T.present) && void 0 !== h && h,
-            jumpTargetId: null !== (m = null == T ? void 0 : T.messageId) && void 0 !== m ? m : null,
-            jumpTargetOffset: null != T && null != T.messageId && null != T.offset ? T.offset : 0,
-            jumpSequenceId: null != T ? C.jumpSequenceId + 1 : C.jumpSequenceId,
-            jumpReturnTargetId: null !== (E = null == T ? void 0 : T.returnMessageId) && void 0 !== E ? E : null,
-            hasMoreBefore: null == T && I ? C.hasMoreBefore : b,
-            hasMoreAfter: null == T && y ? C.hasMoreAfter : S,
+            jumpType: null !== (d = null == b ? void 0 : b.jumpType) && void 0 !== d ? d : s.SR.ANIMATED,
+            jumpFlash: null !== (_ = null == b ? void 0 : b.flash) && void 0 !== _ && _,
+            jumped: null != b,
+            jumpedToPresent: null !== (h = null == b ? void 0 : b.present) && void 0 !== h && h,
+            jumpTargetId: null !== (m = null == b ? void 0 : b.messageId) && void 0 !== m ? m : null,
+            jumpTargetOffset: null != b && null != b.messageId && null != b.offset ? b.offset : 0,
+            jumpSequenceId: null != b ? C.jumpSequenceId + 1 : C.jumpSequenceId,
+            jumpReturnTargetId: null !== (E = null == b ? void 0 : b.returnMessageId) && void 0 !== E ? E : null,
+            hasMoreBefore: null == b && I ? C.hasMoreBefore : T,
+            hasMoreAfter: null == b && y ? C.hasMoreAfter : S,
             cached: A,
             hasFetched: e.hasFetched,
             error: !1

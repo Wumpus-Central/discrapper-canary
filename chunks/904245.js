@@ -18,8 +18,8 @@ var i = n(278074),
     v = n(247206),
     y = n(38618),
     I = n(687516),
-    T = n(539573),
-    b = n(926526),
+    b = n(539573),
+    T = n(926526),
     S = n(826581),
     A = n(409059),
     N = n(264229),
@@ -87,7 +87,7 @@ function eE(e, t, n) {
 let ev = new E.Z('MessageActionCreators'),
     ey = new E.Z('MessageQueue'),
     eI = !1;
-class eT {
+class eb {
     markComplete() {
         this.completed = !0;
     }
@@ -95,7 +95,7 @@ class eT {
         eE(this, 'completed', !1);
     }
 }
-function eb(e) {
+function eT(e) {
     let { content: t, channelId: n, messageId: i, location: r, suggested: a = null, overrideProperties: s = {} } = e;
     (0, g.ZP)(t).forEach((e) => {
         let { type: t, code: o } = e;
@@ -486,9 +486,9 @@ let eC = {
             let v = o.Z.getOrCreate(t).loadStart(E);
             o.Z.commit(v), s.Z.dispatch({ type: 'LOAD_MESSAGES' });
             let I = null == E ? void 0 : E.messageId,
-                T = new eT();
+                b = new eb();
             return (
-                d || this.fetchLocalMessages(t, n, i, a, T),
+                d || this.fetchLocalMessages(t, n, i, a, b),
                 r.tn
                     .get({
                         url: eh.ANM.MESSAGES(t),
@@ -531,7 +531,7 @@ let eC = {
                                     }
                                 }
                                 ev.log('Fetched '.concat(r.length, ' messages for ').concat(t, ' isBefore:').concat(o, ' isAfter:').concat(u)),
-                                    T.markComplete(),
+                                    b.markComplete(),
                                     s.Z.dispatch({
                                         type: 'LOAD_MESSAGES_SUCCESS',
                                         channelId: t,
@@ -970,7 +970,7 @@ let eC = {
                                         l = S.Z.getRequest(r);
                                     if (null != l) {
                                         let { guildId: t, userId: n, applicationStatus: i } = l;
-                                        (0, b.pL)({
+                                        (0, T.pL)({
                                             guildId: t,
                                             channelId: e,
                                             messageId: o.body.id,
@@ -999,7 +999,7 @@ let eC = {
                                                 author: eo.default.getCurrentUser()
                                             }
                                         }),
-                                        eb({
+                                        eT({
                                             content: u,
                                             channelId: e,
                                             messageId: o.body.id,
@@ -1030,7 +1030,7 @@ let eC = {
                                                     cooldownMs: t * el.Z.Millis.SECOND
                                                 });
                                         } else
-                                            T.U8.has(o.body.code)
+                                            b.U8.has(o.body.code)
                                                 ? s.Z.dispatch({
                                                       type: 'MESSAGE_SEND_FAILED_AUTOMOD',
                                                       messageData: W,
@@ -1111,7 +1111,7 @@ let eC = {
                     message: o
                 },
                 (n) => {
-                    let i = !n.hasErr && T.U8.has(n.body.code);
+                    let i = !n.hasErr && b.U8.has(n.body.code);
                     if (i) {
                         let e = {
                             type: l.$V.EDIT,

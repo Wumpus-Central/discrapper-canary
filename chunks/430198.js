@@ -30,8 +30,8 @@ function y(e, t, n) {
     );
 }
 let I = {},
-    T = new Set();
-function b(e, t) {
+    b = new Set();
+function T(e, t) {
     if (null == e) return !1;
     let n = E.default.getCurrentUser();
     if (null == n) return !1;
@@ -40,7 +40,7 @@ function b(e, t) {
 }
 function S(e) {
     let { guildId: t, role: n, isPreviewingRoles: i } = e;
-    return !!(0, d.Z)(n) && !!(i || (0, d.h)(null != n ? n : void 0) || b(n, t));
+    return !!(0, d.Z)(n) && !!(i || (0, d.h)(null != n ? n : void 0) || T(n, t));
 }
 function A(e, t) {
     if (!t.hasFeature(v.oNc.CREATOR_MONETIZABLE) && !t.hasFeature(v.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
@@ -98,7 +98,7 @@ function C(e, t) {
     return a !== s && (s ? n.add(t) : n.delete(t), !0);
 }
 function R() {
-    (I = {}), T.clear();
+    (I = {}), b.clear();
 }
 function O(e) {
     let { guild: t } = e;
@@ -120,11 +120,11 @@ function L(e) {
 }
 function P(e) {
     let { guildId: t, restrictions: n } = e;
-    (0, l.uq)(n) ? T.add(t) : T.delete(t);
+    (0, l.uq)(n) ? b.add(t) : b.delete(t);
 }
 function w(e) {
     let { guildId: t } = e;
-    T.add(t);
+    b.add(t);
 }
 class M extends (i = a.ZP.Store) {
     initialize() {
@@ -136,7 +136,7 @@ class M extends (i = a.ZP.Store) {
         return null == n && (N(e), (n = I[e])), null != n && n.has(t);
     }
     isChannelGatedAndVisible(e, t) {
-        return null != e && this.isChannelGated(e, t) && !T.has(e);
+        return null != e && this.isChannelGated(e, t) && !b.has(e);
     }
     isChannelOrThreadParentGated(e, t) {
         if (null == e) return !1;

@@ -15,13 +15,13 @@ var r = n(442837),
     h = n(318411);
 let m = function (e) {
     let t, n, m, g;
-    let { subscriptionPlan: E, isGift: v, isTrial: y, isEmbeddedIAP: I, renewalInvoice: T, paymentSourceType: b, hide: S, purchaseType: A, productLine: N, basePrice: C, currentSubscription: R } = e,
+    let { subscriptionPlan: E, isGift: v, isTrial: y, isEmbeddedIAP: I, renewalInvoice: b, paymentSourceType: T, hide: S, purchaseType: A, productLine: N, basePrice: C, currentSubscription: R } = e,
         O = (0, r.e7)([s.ZP], () => s.ZP.inReverseTrial());
     if (S) return null;
     let D = null == e.planGroup ? [] : e.planGroup;
-    if (null != T) {
-        let e = u.ZP.getIntervalForInvoice(T);
-        (t = e.intervalType), (n = e.intervalCount), (m = (0, c.og)((0, c.T4)(T.total, T.currency), t, n)), (g = (0, c.og)((0, c.T4)(T.subtotal, T.currency), t, n));
+    if (null != b) {
+        let e = u.ZP.getIntervalForInvoice(b);
+        (t = e.intervalType), (n = e.intervalCount), (m = (0, c.og)((0, c.T4)(b.total, b.currency), t, n)), (g = (0, c.og)((0, c.T4)(b.subtotal, b.currency), t, n));
     } else null != E && ((t = E.interval), (n = E.intervalCount));
     let x = (0, a.K)({
             purchaseType: A || f.GZQ.SUBSCRIPTION,
@@ -42,7 +42,7 @@ let m = function (e) {
         w = '',
         M = '';
     if (I) {
-        if (null != m && (null == T ? void 0 : T.subscriptionPeriodEnd) != null) w = p.intl.format(p.t['2VPTa2'], { subtotalRate: g });
+        if (null != m && (null == b ? void 0 : b.subscriptionPeriodEnd) != null) w = p.intl.format(p.t['2VPTa2'], { subtotalRate: g });
         else
             switch (t) {
                 case _.rV.MONTH:
@@ -141,12 +141,12 @@ let m = function (e) {
                     children: [(0, i.jsx)('div', { children: M }), (0, i.jsx)('div', { className: h.divider })]
                 }),
             '' !== w && (0, i.jsx)('div', { children: w }),
-            b === f.HeQ.PAYSAFE_CARD &&
+            T === f.HeQ.PAYSAFE_CARD &&
                 (0, i.jsx)('div', {
                     className: h.paymentSourceNoticeCopy,
                     children: p.intl.string(p.t.kj9VLC)
                 }),
-            b === f.HeQ.SOFORT &&
+            T === f.HeQ.SOFORT &&
                 (0, i.jsxs)('div', {
                     className: h.paymentSourceNoticeCopy,
                     children: [p.intl.string(p.t['UYy1/v']), ' ']

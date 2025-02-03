@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(449605),
     y = n(102172),
     I = n(359110),
-    T = n(769654),
-    b = n(922482),
+    b = n(769654),
+    T = n(922482),
     S = n(592125),
     A = n(430824),
     N = n(496675),
@@ -96,19 +96,19 @@ function J(e) {
         }
     }, [t, ey, es, eo, a]);
     let eI = (0, d.Z)(eE ? null : eg),
-        eT = eE || null == eg ? eI : eg;
+        eb = eE || null == eg ? eI : eg;
     if (null == ed || null == ef || (es && !1 === a.discoverable) || null === et) return null;
-    let eb = () => {
+    let eT = () => {
             let e = s()(q.preview, ea),
                 t = (e) => {
                     e.stopPropagation(), eu({ action: 'PRESS_IMAGE' }), u.default.selectVoiceChannel(a.channelId), (0, c.iV)(a), null == $ || $();
                 };
-            return null == eT && eE
+            return null == eb && eE
                 ? (0, i.jsx)('div', {
                       className: e,
                       children: (0, i.jsx)(l.$jN, {})
                   })
-                : null == eT
+                : null == eb
                   ? (0, i.jsxs)(l.P3F, {
                         className: s()(e, q.overlay, { [q.clickable]: eh }),
                         onClick: eh ? t : void 0,
@@ -140,7 +140,7 @@ function J(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: eT,
+                                src: eb,
                                 className: q.image
                             }),
                             et !== Y.y0.FULL_SIZE &&
@@ -165,10 +165,10 @@ function J(e) {
         eS = () => {
             if (et !== Y.y0.FULL_SIZE) return null;
             let e = (e) => {
-                    e.stopPropagation(), null == eu || eu({ action: 'OPEN_VOICE_CHANNEL' }), ef.isGuildStageVoice() ? (0, b.Cq)(ef) : (u.default.selectVoiceChannel(ef.id), (0, I.Kh)(ef.id)), null == $ || $();
+                    e.stopPropagation(), null == eu || eu({ action: 'OPEN_VOICE_CHANNEL' }), ef.isGuildStageVoice() ? (0, T.Cq)(ef) : (u.default.selectVoiceChannel(ef.id), (0, I.Kh)(ef.id)), null == $ || $();
                 },
                 n = (e) => {
-                    e.stopPropagation(), eu({ action: 'OPEN_VOICE_GUILD' }), (0, T.X)(ed.id), null == $ || $();
+                    e.stopPropagation(), eu({ action: 'OPEN_VOICE_GUILD' }), (0, b.X)(ed.id), null == $ || $();
                 };
             return (0, i.jsxs)('div', {
                 className: z.details,
@@ -284,7 +284,7 @@ function J(e) {
                                     children: [
                                         (0, i.jsxs)('div', {
                                             className: s()(z.content, ea),
-                                            children: [eb(), eS(), et === Y.y0.FULL_SIZE && eN()]
+                                            children: [eT(), eS(), et === Y.y0.FULL_SIZE && eN()]
                                         }),
                                         eA()
                                     ]

@@ -19,26 +19,26 @@ e.exports = function (e, t, n) {
     var g,
         y = -1 !== e.indexOf('Map'),
         I = -1 !== e.indexOf('Weak'),
-        T = y ? 'set' : 'add',
-        b = r[e],
-        S = b && b.prototype,
+        b = y ? 'set' : 'add',
+        T = r[e],
+        S = T && T.prototype,
         A = {};
     if (
         m &&
-        c(b) &&
+        c(T) &&
         (I ||
             (S.forEach &&
                 !s(function () {
-                    new b().entries().next();
+                    new T().entries().next();
                 })))
     ) {
         var N = (g = t(function (t, n) {
                 E(u(t, N), {
                     type: e,
-                    collection: new b()
+                    collection: new T()
                 }),
                     f(n) ||
-                        l(n, t[T], {
+                        l(n, t[b], {
                             that: t,
                             AS_ENTRIES: y
                         });
@@ -62,7 +62,7 @@ e.exports = function (e, t, n) {
                         return C(this).collection.size;
                     }
                 });
-    } else (g = n.getConstructor(t, e, y, T)), a.enable();
+    } else (g = n.getConstructor(t, e, y, b)), a.enable();
     return (
         _(g, e, !1, !0),
         (A[e] = g),

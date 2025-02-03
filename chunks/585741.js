@@ -35,9 +35,9 @@ i.inherits(E, m),
             y = this.h[6],
             I = this.h[7];
         for (s(this.k.length === n.length), i = 0; i < n.length; i++) {
-            var T = u(I, _(E), c(E, v, y), this.k[i], n[i]),
-                b = o(f(r), d(r, a, m));
-            (I = y), (y = v), (v = E), (E = o(g, T)), (g = m), (m = a), (a = r), (r = o(T, b));
+            var b = u(I, _(E), c(E, v, y), this.k[i], n[i]),
+                T = o(f(r), d(r, a, m));
+            (I = y), (y = v), (v = E), (E = o(g, b)), (g = m), (m = a), (a = r), (r = o(b, T));
         }
         (this.h[0] = o(this.h[0], r)), (this.h[1] = o(this.h[1], a)), (this.h[2] = o(this.h[2], m)), (this.h[3] = o(this.h[3], g)), (this.h[4] = o(this.h[4], E)), (this.h[5] = o(this.h[5], v)), (this.h[6] = o(this.h[6], y)), (this.h[7] = o(this.h[7], I));
     }),

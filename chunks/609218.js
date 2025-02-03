@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => S,
-    p: () => b
+    p: () => T
 });
 var i = n(200651),
     r = n(192379),
@@ -21,12 +21,12 @@ var i = n(200651),
     v = n(474936),
     y = n(981631),
     I = n(388032),
-    T = n(638916),
-    b = (function (e) {
+    b = n(638916),
+    T = (function (e) {
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e;
     })({});
 function S(e) {
-    let { containerContext: t, image: n, title: a, description: b, enableSocialProof: S, analyticsLocationSection: A, upsellViewedTrackingData: N, onClose: C, onDisplay: R, onLearnMore: O } = e,
+    let { containerContext: t, image: n, title: a, description: T, enableSocialProof: S, analyticsLocationSection: A, upsellViewedTrackingData: N, onClose: C, onDisplay: R, onLearnMore: O } = e,
         D = (0, o.e7)([h.Z], () => h.Z.affinities),
         x = (0, o.e7)([h.Z], () => h.Z.hasFetched);
     r.useEffect(() => {
@@ -36,7 +36,7 @@ function S(e) {
             _.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, N), null == R || R();
         }, [R, N]);
     let L = D.length > 1 && S,
-        P = () => (2 === t ? T.hasTabParentContainer : 1 === t ? T.hasParentContainer : T.noParentContainer),
+        P = () => (2 === t ? b.hasTabParentContainer : 1 === t ? b.hasParentContainer : b.noParentContainer),
         w = () => {
             _.default.track(y.rMx.PREMIUM_PROMOTION_OPENED, {
                 location_section: A,
@@ -62,40 +62,40 @@ function S(e) {
                 isVisible: !0
             }),
             (0, i.jsxs)('div', {
-                className: s()(T.container, P()),
+                className: s()(b.container, P()),
                 children: [
                     (0, i.jsx)(l.olH, {
                         onClick: C,
-                        className: T.closeButton
+                        className: b.closeButton
                     }),
                     (0, i.jsxs)('div', {
-                        className: T.contentContainer,
+                        className: b.contentContainer,
                         children: [
                             (0, i.jsx)('img', {
-                                className: T.image,
+                                className: b.image,
                                 width: n.width,
                                 height: n.height,
                                 src: n.url,
                                 alt: 'Nitro Perk'
                             }),
                             (0, i.jsx)(l.X6q, {
-                                className: s()(T.title, { [T.titleNoSocialProof]: !L }),
+                                className: s()(b.title, { [b.titleNoSocialProof]: !L }),
                                 variant: 'heading-xl/bold',
                                 children: a
                             }),
                             L && (0, i.jsx)(E.Z, { affinities: D }),
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
-                                className: T.body,
-                                children: b
+                                className: b.body,
+                                children: T
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: T.ctaContainer,
+                        className: b.ctaContainer,
                         children: [
                             (0, i.jsx)(l.zxk, {
-                                className: T.secondaryCTA,
+                                className: b.secondaryCTA,
                                 size: l.zxk.Sizes.SMALL,
                                 color: l.zxk.Colors.CUSTOM,
                                 look: l.zxk.Looks.LINK,

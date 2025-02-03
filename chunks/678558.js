@@ -18,14 +18,14 @@ var i = n(200651),
     v = n(388032),
     y = n(656634);
 let I = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: I, targetBoostedGuildTier: T, onClose: b = () => {}, closeLayer: S = () => {}, pauseAnimation: A = !1, applicationId: N, handleSubscribeModalClose: C, withHighlight: R = !1, ...O } = e,
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: I, targetBoostedGuildTier: b, onClose: T = () => {}, closeLayer: S = () => {}, pauseAnimation: A = !1, applicationId: N, handleSubscribeModalClose: C, withHighlight: R = !1, ...O } = e,
         { analyticsLocations: D } = (0, c.ZP)(),
         x = (0, u.bp)() === g.IlC.POPOUT,
         [L, P] = r.useState(!1),
         { fractionalState: w } = (0, d.Z)();
     _.Z.hasFetched || (0, l.X8)();
     let M = (0, h.vx)(_.Z.boostSlots),
-        k = null != T ? Math.max((0, h.KK)(a, T), 1) : 1,
+        k = null != b ? Math.max((0, h.KK)(a, b), 1) : 1,
         U = (0, h.aq)({ fractionalState: w }),
         G = async () => {
             P(!0),
@@ -35,7 +35,7 @@ let I = (e) => {
                     analyticsSourceLocation: n,
                     guild: a,
                     numberOfBoostsToAdd: k,
-                    onClose: b,
+                    onClose: T,
                     closeLayer: S,
                     inPopout: x,
                     applicationId: N,

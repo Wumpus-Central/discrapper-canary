@@ -18,20 +18,20 @@ var i = n(200651),
     v = n(858380),
     y = n(981631),
     I = n(388032),
-    T = n(294794);
-function b(e) {
-    let { user: t, onBlock: n, onIgnore: r, location: a, disallowIgnore: l, guildId: d, channelId: b } = e,
+    b = n(294794);
+function T(e) {
+    let { user: t, onBlock: n, onIgnore: r, location: a, disallowIgnore: l, guildId: d, channelId: T } = e,
         S = (0, g.Do)({ location: 'confirm_block_modal_body' }),
         A = (0, s.e7)([_.Z], () => _.Z.isIgnored(t.id));
     return S
         ? (0, i.jsxs)('div', {
-              className: T.container,
+              className: b.container,
               children: [
                   (0, i.jsxs)('div', {
-                      className: T.confirmationHeader,
+                      className: b.confirmationHeader,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: T.iconContainer,
+                              className: b.iconContainer,
                               children: [
                                   (0, i.jsx)(o.qEK, {
                                       size: o.EFr.SIZE_56,
@@ -39,7 +39,7 @@ function b(e) {
                                       'aria-hidden': !0
                                   }),
                                   (0, i.jsx)('div', {
-                                      className: T.icon,
+                                      className: b.icon,
                                       children: (0, i.jsx)(o.t6m, {})
                                   })
                               ]
@@ -49,7 +49,7 @@ function b(e) {
                                   (0, i.jsx)(o.X6q, {
                                       variant: 'heading-xl/bold',
                                       color: 'header-primary',
-                                      children: I.intl.format(I.t.CIbzHR, { username: m.ZP.getName(d, b, t) })
+                                      children: I.intl.format(I.t.CIbzHR, { username: m.ZP.getName(d, T, t) })
                                   }),
                                   (0, i.jsx)(o.Text, {
                                       variant: 'text-md/medium',
@@ -64,7 +64,7 @@ function b(e) {
                   l || A
                       ? null
                       : (0, i.jsxs)('div', {
-                            className: T.otherOptions,
+                            className: b.otherOptions,
                             children: [
                                 (0, i.jsx)(f.rT, {
                                     title: I.intl.string(I.t['+BJTcH']),
@@ -86,7 +86,7 @@ function b(e) {
                                                         ...e,
                                                         user: t,
                                                         guildId: d,
-                                                        channelId: b,
+                                                        channelId: T,
                                                         onIgnore: r,
                                                         onBlock: n,
                                                         location: a
@@ -97,7 +97,7 @@ function b(e) {
                                 }),
                                 (0, i.jsx)(o.Text, {
                                     variant: 'text-sm/medium',
-                                    className: T.featureGuide,
+                                    className: b.featureGuide,
                                     children: I.intl.format(I.t.DJN6eX, { articleLink: h.Z.getArticleURL(y.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
                                 })
                             ]
@@ -114,7 +114,7 @@ function b(e) {
 function S(e) {
     let { user: t, onBlock: n, onCancel: s, onIgnore: u, location: c = 'ContextMenu', disallowIgnore: f, guildId: _, channelId: h, ...m } = e,
         E = (0, g.Do)({ location: 'block-confirm-modal' }),
-        T = () => {
+        b = () => {
             p.default.track(y.rMx.USER_REMEDIATION_ACTION, {
                 action: v.l.CANCEL_BLOCK,
                 location: c
@@ -135,7 +135,7 @@ function S(e) {
             header: E ? null : I.intl.formatToPlainString(I.t.x5pOn5, { name: t.username }),
             confirmText: I.intl.string(I.t.l4EmaW),
             cancelText: E ? I.intl.string(I.t['ETE/oK']) : I.intl.string(I.t['eN6+rK']),
-            onCancel: T,
+            onCancel: b,
             onConfirm: () => {
                 null == n || n(),
                     l.Z.addRelationship({
@@ -148,7 +148,7 @@ function S(e) {
             },
             impression: { impressionName: a.ImpressionNames.BLOCK_USER_CONFIRMATION },
             ...m,
-            children: (0, i.jsx)(b, {
+            children: (0, i.jsx)(T, {
                 user: t,
                 guildId: _,
                 channelId: h,

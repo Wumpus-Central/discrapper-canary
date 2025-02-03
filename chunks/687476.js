@@ -55,10 +55,10 @@ function I() {
     for (let n in e) e[n].hasFeature(d.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && t.add(n);
     return (E = t), t;
 }
-function T() {
+function b() {
     p.clear(), m.clear(), h.clear(), g.clear(), (E = null);
 }
-function b(e) {
+function T(e) {
     let {
         guild: { id: t }
     } = e;
@@ -122,10 +122,10 @@ class C extends (i = a.ZP.Store) {
 }
 f(C, 'displayName', 'SubscriptionRoleStore');
 let R = new C(s.Z, {
-    CONNECTION_OPEN: T,
-    LOGOUT: T,
+    CONNECTION_OPEN: b,
+    LOGOUT: b,
     GUILD_CREATE: S,
-    GUILD_DELETE: b,
+    GUILD_DELETE: T,
     GUILD_UPDATE: S,
     GUILD_ROLE_CREATE: A,
     GUILD_ROLE_UPDATE: A,

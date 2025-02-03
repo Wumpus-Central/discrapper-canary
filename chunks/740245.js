@@ -26,11 +26,11 @@ function I(e, t, n, i, r, a) {
     var s = (t & i) ^ (~t & a);
     return s < 0 && (s += 4294967296), s;
 }
-function T(e, t, n, i, r) {
+function b(e, t, n, i, r) {
     var a = (e & n) ^ (e & r) ^ (n & r);
     return a < 0 && (a += 4294967296), a;
 }
-function b(e, t, n, i, r, a) {
+function T(e, t, n, i, r, a) {
     var s = (t & i) ^ (t & a) ^ (i & a);
     return s < 0 && (s += 4294967296), s;
 }
@@ -120,7 +120,7 @@ i.inherits(v, g),
                 H = h(w, M, k, U, G, B, Z, F, V, j),
                 Y = m(w, M, k, U, G, B, Z, F, V, j);
             (w = S(i, r)), (M = A(i, r));
-            var W = d(w, M, (k = T(i, r, s, o, l, u)), (U = b(i, r, s, o, l, u))),
+            var W = d(w, M, (k = b(i, r, s, o, l, u)), (U = T(i, r, s, o, l, u))),
                 K = f(w, M, k, U);
             (x = O), (L = D), (O = v), (D = R), (v = g), (R = E), (g = d(_, p, H, Y)), (E = f(p, p, H, Y)), (_ = l), (p = u), (l = s), (u = o), (s = i), (o = r), (i = d(H, Y, W, K)), (r = f(H, Y, W, K));
         }

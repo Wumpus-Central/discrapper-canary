@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(645896),
     y = n(905362),
     I = n(353093),
-    T = n(574410),
-    b = n(900681),
+    b = n(574410),
+    T = n(900681),
     S = n(284019),
     A = n(308083),
     N = n(981631),
@@ -34,7 +34,7 @@ let D = r.memo(function (e) {
         M = null == D ? void 0 : D.identityGuildId,
         k = (0, v.Cc)(null != M ? M : null),
         U = null == D ? void 0 : D.tag,
-        { enabled: G } = T.w.useExperiment({ location: 'ClanGuildProfile' }, { autoTrackExposure: !1 }),
+        { enabled: G } = b.w.useExperiment({ location: 'ClanGuildProfile' }, { autoTrackExposure: !1 }),
         [B, Z] = r.useState(!1),
         [F, V] = r.useState(''),
         j = (0, s.e7)([m.default], () => m.default.getUser(w)),
@@ -150,7 +150,7 @@ let D = r.memo(function (e) {
             (0, i.jsxs)('div', {
                 ...eo,
                 children: [
-                    (0, i.jsx)(b.x, {
+                    (0, i.jsx)(T.x, {
                         clan: k,
                         className: R.cardContainer,
                         isMember: X,

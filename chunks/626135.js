@@ -37,8 +37,8 @@ let g = { location: {} },
     v = {},
     y = 10000,
     I = 60000,
-    T = 120000,
-    b = 300000,
+    b = 120000,
+    T = 300000,
     S = 900000,
     A = 3600000,
     N = 86400000,
@@ -50,11 +50,11 @@ function D(e) {
 }
 let x = {
     [p.rMx.APP_OPENED]: {
-        throttlePeriod: b,
+        throttlePeriod: T,
         throttleKeys: () => []
     },
     [p.rMx.APP_BACKGROUND]: {
-        throttlePeriod: T,
+        throttlePeriod: b,
         throttleKeys: () => []
     },
     [p.rMx.ACK_MESSAGES]: {
@@ -111,7 +111,7 @@ let x = {
         throttleKeys: () => []
     },
     [p.rMx.KEYBOARD_SHORTCUT_USED]: {
-        throttlePeriod: T,
+        throttlePeriod: b,
         throttleKeys: (e) => {
             var t;
             return [e.shortcut_name, e.location_object, ...(null !== (t = e.source_class_list) && void 0 !== t ? t : [])];
@@ -126,15 +126,15 @@ let x = {
         throttleKeys: (e) => [e.type]
     },
     [p.rMx.ROLE_PAGE_VIEWED]: {
-        throttlePeriod: T,
+        throttlePeriod: b,
         throttleKeys: (e) => [e.role_id, e.tab_opened]
     },
     [p.rMx.VIDEO_INPUT_INITIALIZED]: {
-        throttlePeriod: b,
+        throttlePeriod: T,
         throttleKeys: () => []
     },
     [p.rMx.AUDIO_INPUT_INITIALIZED]: {
-        throttlePeriod: b,
+        throttlePeriod: T,
         throttleKeys: () => []
     },
     [p.rMx.HUB_ONBOARDING_CAROUSEL_SCROLLED]: {
@@ -188,7 +188,7 @@ let x = {
         throttleKeys: () => []
     },
     [p.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
-        throttlePeriod: b,
+        throttlePeriod: T,
         throttleKeys: (e) => [e.channel_id]
     },
     [p.rMx.ACTIVITY_CARDS_VIEWED]: {
@@ -224,11 +224,11 @@ let x = {
         throttleKeys: (e) => [e.message_id]
     },
     [p.rMx.MEDIA_INPUT_VOLUME_CHANGED]: {
-        throttlePeriod: b,
+        throttlePeriod: T,
         throttleKeys: (e) => [e.location_stack]
     },
     [p.rMx.MEDIA_OUTPUT_VOLUME_CHANGED]: {
-        throttlePeriod: b,
+        throttlePeriod: T,
         throttleKeys: (e) => [e.location_stack]
     },
     [p.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION]: {
@@ -236,12 +236,12 @@ let x = {
         throttleKeys: (e) => [e.channel_id]
     },
     [p.rMx.USER_VOICE_ACTIVITY_VIEWED]: {
-        throttlePeriod: b,
+        throttlePeriod: T,
         throttleKeys: (e) => [e.activity_user_id, e.surface],
         deduplicate: !0
     },
     [p.rMx.PARTY_VOICE_ACTIVITY_VIEWED]: {
-        throttlePeriod: b,
+        throttlePeriod: T,
         throttleKeys: (e) => [e.voice_channel_id],
         deduplicate: !0
     },

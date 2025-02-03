@@ -25,11 +25,11 @@ i.inherits(c, u),
     (c.hmacStrength = 192),
     (c.padLength = 64),
     (c.prototype._update = function (e, t) {
-        for (var n = this.h[0], i = this.h[1], r = this.h[2], u = this.h[3], c = this.h[4], E = n, v = i, y = r, I = u, T = c, b = 0; b < 80; b++) {
-            var S = s(a(l(n, d(b, i, r, u), e[p[b] + t], f(b)), m[b]), c);
-            (n = c), (c = u), (u = a(r, 10)), (r = i), (i = S), (S = s(a(l(E, d(79 - b, v, y, I), e[h[b] + t], _(b)), g[b]), T)), (E = T), (T = I), (I = a(y, 10)), (y = v), (v = S);
+        for (var n = this.h[0], i = this.h[1], r = this.h[2], u = this.h[3], c = this.h[4], E = n, v = i, y = r, I = u, b = c, T = 0; T < 80; T++) {
+            var S = s(a(l(n, d(T, i, r, u), e[p[T] + t], f(T)), m[T]), c);
+            (n = c), (c = u), (u = a(r, 10)), (r = i), (i = S), (S = s(a(l(E, d(79 - T, v, y, I), e[h[T] + t], _(T)), g[T]), b)), (E = b), (b = I), (I = a(y, 10)), (y = v), (v = S);
         }
-        (S = o(this.h[1], r, I)), (this.h[1] = o(this.h[2], u, T)), (this.h[2] = o(this.h[3], c, E)), (this.h[3] = o(this.h[4], n, v)), (this.h[4] = o(this.h[0], i, y)), (this.h[0] = S);
+        (S = o(this.h[1], r, I)), (this.h[1] = o(this.h[2], u, b)), (this.h[2] = o(this.h[3], c, E)), (this.h[3] = o(this.h[4], n, v)), (this.h[4] = o(this.h[0], i, y)), (this.h[0] = S);
     }),
     (c.prototype._digest = function (e) {
         return 'hex' === e ? i.toHex32(this.h, 'little') : i.split32(this.h, 'little');

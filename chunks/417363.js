@@ -30,8 +30,8 @@ function y(e, t, n) {
     );
 }
 let I = 200,
-    T = 200,
-    b = 1 * _.Z.Millis.MINUTE,
+    b = 200,
+    T = 1 * _.Z.Millis.MINUTE,
     S = {},
     A = 'content',
     N = 'file://',
@@ -158,11 +158,11 @@ function F(e) {
             timestamp: Date.now()
         },
         ...L
-    ]).slice(0, T);
+    ]).slice(0, b);
 }
 function V(e) {
     let t = Date.now(),
-        n = t - b;
+        n = t - T;
     x = (x = [
         {
             bytes: e,
@@ -170,7 +170,7 @@ function V(e) {
         },
         ...x
     ])
-        .slice(0, T)
+        .slice(0, b)
         .filter((e) => {
             let { timestamp: t } = e;
             return t >= n;
@@ -183,7 +183,7 @@ function j(e) {
             timestamp: Date.now()
         },
         ...P
-    ]).slice(0, T);
+    ]).slice(0, b);
 }
 let H = a().throttle(F, I),
     Y = a().throttle(V, I),

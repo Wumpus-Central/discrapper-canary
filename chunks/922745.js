@@ -65,7 +65,7 @@ function y(e) {
     });
 }
 function I(e) {
-    let { children: t, idle: n, onJumpToChannel: r, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: I, ...T } = e;
+    let { children: t, idle: n, onJumpToChannel: r, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: I, ...b } = e;
     return (0, i.jsxs)('div', {
         onMouseMove: u,
         onMouseDown: u,
@@ -99,7 +99,7 @@ function I(e) {
                                 idle: n,
                                 onJumpToChannel: r,
                                 onHide: s,
-                                ...T
+                                ...b
                             })
                         }),
                         (0, i.jsxs)('div', {

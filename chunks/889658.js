@@ -104,15 +104,15 @@ let a = new (n(147567))(),
         for (; n && i.length; ) (n = i.every((e) => r.intersects(e, t))), (r = i.pop());
         return n;
     },
-    y = (e, t) => (l('comp', e, t), l('caret', (e = S(e, t))), l('tildes', (e = T(e, t))), l('xrange', (e = N(e, t))), l('stars', (e = R(e, t))), e),
+    y = (e, t) => (l('comp', e, t), l('caret', (e = S(e, t))), l('tildes', (e = b(e, t))), l('xrange', (e = N(e, t))), l('stars', (e = R(e, t))), e),
     I = (e) => !e || 'x' === e.toLowerCase() || '*' === e,
-    T = (e, t) =>
+    b = (e, t) =>
         e
             .trim()
             .split(/\s+/)
-            .map((e) => b(e, t))
+            .map((e) => T(e, t))
             .join(' '),
-    b = (e, t) => {
+    T = (e, t) => {
         let n = t.loose ? c[d.TILDELOOSE] : c[d.TILDE];
         return e.replace(n, (t, n, i, r, a) => {
             let s;

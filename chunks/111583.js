@@ -90,7 +90,7 @@ function I(e) {
     if (null == i || i.channelId !== e) return !1;
     null != i.timeout && clearTimeout(i.timeout), (i = null);
 }
-function T(e) {
+function b(e) {
     let { channelId: t } = e,
         n = c.default.getId();
     return (
@@ -106,7 +106,7 @@ function T(e) {
         }))
     );
 }
-function b(e, t) {
+function T(e, t) {
     return setTimeout(() => {
         o.Z.dispatch({
             type: 'TYPING_STOP',
@@ -118,7 +118,7 @@ function b(e, t) {
 function S(e) {
     let { channelId: t, userId: n } = e,
         i = { ...v(t) };
-    clearTimeout(i[n]), (i[n] = b(t, n)), (g[t] = i);
+    clearTimeout(i[n]), (i[n] = T(t, n)), (g[t] = i);
 }
 function A(e) {
     let { channelId: t, userId: n } = e,
@@ -162,7 +162,7 @@ let D = new O(o.Z, {
     TYPING_START: S,
     TYPING_STOP: A,
     TYPING_START_LOCAL: y,
-    TYPING_STOP_LOCAL: T,
+    TYPING_STOP_LOCAL: b,
     CONNECTION_OPEN: C,
     OVERLAY_INITIALIZE: C,
     MESSAGE_CREATE: N

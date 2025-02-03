@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(733860);
+n.d(t, { Z: () => T }), n(733860);
 var i = n(200651),
     r = n(192379),
     a = n(780384),
@@ -36,7 +36,7 @@ function v(e) {
                 'png'
             )
         ],
-        T = [
+        b = [
             (0, i.jsx)(
                 'source',
                 {
@@ -66,7 +66,7 @@ function v(e) {
                     'webm'
                 )
             ),
-            T.unshift(
+            b.unshift(
                 (0, i.jsx)(
                     'source',
                     {
@@ -87,7 +87,7 @@ function v(e) {
                     'hevc'
                 )
             ),
-            T.unshift(
+            b.unshift(
                 (0, i.jsx)(
                     'source',
                     {
@@ -99,19 +99,19 @@ function v(e) {
             )),
         {
             [c.BRd.DARK]: I,
-            [c.BRd.LIGHT]: T
+            [c.BRd.LIGHT]: b
         }
     );
 }
 let y = o.Z.getAppSpinnerSources(),
     I = null != y ? v(y) : null,
-    T = v({}),
-    b = (e) => {
+    b = v({}),
+    T = (e) => {
         var t;
         let { loop: n = !0, autoPlay: o = !0, setRef: l, className: d, onReady: f } = e,
             { theme: _ } = (0, s.TCT)(),
             { reducedMotion: p } = r.useContext(s.Sfi),
-            h = T;
+            h = b;
         null != I && (h = I);
         let m = null !== (t = h[(0, a.wj)(_) ? c.BRd.DARK : c.BRd.LIGHT]) && void 0 !== t ? t : h[c.BRd.DARK];
         return (0, i.jsx)(

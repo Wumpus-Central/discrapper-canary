@@ -27,8 +27,8 @@ var i = n(200651),
     v = n(944486),
     y = n(626135),
     I = n(585483),
-    T = n(591759),
-    b = n(787025),
+    b = n(591759),
+    T = n(787025),
     S = n(981631),
     A = n(388032),
     N = n(553410);
@@ -123,10 +123,10 @@ function D(e) {
                     I.S.dispatchToLastSubscribed(S.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), y.default.track(S.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
                 }));
         }, [null == n ? void 0 : n.id, s, l]),
-        T = (0, u.e7)([v.Z, g.Z], () => g.Z.getChannel(v.Z.getChannelId())),
-        b = (0, u.e7)([E.Z], () => E.Z.can(S.Plq.SEND_MESSAGES, T)),
+        b = (0, u.e7)([v.Z, g.Z], () => g.Z.getChannel(v.Z.getChannelId())),
+        T = (0, u.e7)([E.Z], () => E.Z.can(S.Plq.SEND_MESSAGES, b)),
         C = null != t,
-        R = null == t && b && (!d || null != l);
+        R = null == t && T && (!d || null != l);
     return null != t || null != s
         ? (0, i.jsxs)('div', {
               className: N.buttonsContainer,
@@ -172,7 +172,7 @@ function x(e) {
 function L() {
     var e, t;
     let n = (0, l.TH)();
-    return (0, i.jsx)(b.G, {
+    return (0, i.jsx)(T.G, {
         children: (0, i.jsx)(O, {
             guild: null === (e = n.state) || void 0 === e ? void 0 : e.guild,
             application: null === (t = n.state) || void 0 === t ? void 0 : t.application,
@@ -185,12 +185,12 @@ function P(e) {
     let { location: a } = e;
     r.useEffect(() => {
         if (null == a || '' === a.search) return;
-        let e = null != document.referrer && '' !== document.referrer ? T.Z.toURLSafe(document.referrer) : null;
+        let e = null != document.referrer && '' !== document.referrer ? b.Z.toURLSafe(document.referrer) : null;
         (null == e || e.host !== window.location.host || e.pathname !== S.Z5c.OAUTH2_AUTHORIZE) && (0, h.uL)(S.Z5c.INDEX);
     }, [a]);
     let s = null != a ? (0, o.parse)(a.search) : {},
         l = null !== (n = null !== (t = s.error_description) && void 0 !== t ? t : s.error) && void 0 !== n ? n : A.intl.string(A.t['mqn87+']);
-    return (0, i.jsx)(b.G, {
+    return (0, i.jsx)(T.G, {
         children: (0, i.jsx)(x, {
             message: l,
             showsCloseWindowText: !0

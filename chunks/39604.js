@@ -38,8 +38,8 @@ var i = n(46973),
     v = n(626135),
     y = n(358085),
     I = n(435064),
-    T = n(61994),
-    b = n(550351),
+    b = n(61994),
+    T = n(550351),
     S = n(659487),
     A = n(711644),
     N = n(259612),
@@ -176,8 +176,8 @@ function G(e, t) {
 }
 async function B(e) {
     let t = I.Z.getSettings().storageLocation,
-        n = (0, b.Z)(e),
-        i = ''.concat((0, T.Z)(n.applicationName.substring(0, 20)), '_').concat(n.id, '.mp4'),
+        n = (0, T.Z)(e),
+        i = ''.concat((0, b.Z)(n.applicationName.substring(0, 20)), '_').concat(n.id, '.mp4'),
         r = s.Z.fileManager.join(t, i),
         o = m.Z.getMediaEngine(),
         l = JSON.stringify(n),
@@ -234,11 +234,11 @@ async function Z(e) {
     let g = p.Z.getCurrentUserActiveStream(),
         v = null != g ? (0, u.V9)(g) : void 0,
         y = null != e ? e : v,
-        T = (() => {
+        b = (() => {
             let e = null != y ? (0, u.my)(y).ownerId : void 0;
             return e === h.default.getId() ? C.X9.STREAMER : null != e ? C.X9.VIEWER : C.X9.DECOUPLED;
         })(),
-        b = await (async () => {
+        T = await (async () => {
             if (null == y) return;
             let { ownerId: e, guildId: t } = (0, u.my)(y),
                 n = E.Z.getStreamId(e, t, i.Yn.STREAM);
@@ -253,9 +253,9 @@ async function Z(e) {
         })();
     a.Z.dispatch({
         type: 'CLIPS_SAVE_CLIP_START',
-        clipType: T,
+        clipType: b,
         streamKey: y,
-        thumbnail: b
+        thumbnail: T
     });
     let S = (0, d.GN)('clip_save', 0.5),
         A = performance.now();

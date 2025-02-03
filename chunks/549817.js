@@ -18,8 +18,8 @@ var i = n(392711),
     v = n(960048),
     y = n(709054),
     I = n(45966),
-    T = n(637853),
-    b = n(816436),
+    b = n(637853),
+    T = n(816436),
     S = n(981631),
     A = n(372897),
     N = n(490897);
@@ -115,13 +115,13 @@ let O = {
     completeOnboarding(e, t) {
         let n = t.length > 0 ? t[t.length - 1] : null,
             i = I.Z.getSelectedOptions(e),
-            r = (0, T.L6)(i),
-            a = (0, T.dX)(i),
+            r = (0, b.L6)(i),
+            a = (0, b.dX)(i),
             s = I.Z.getEnabled(e) ? I.Z.getDefaultChannelIds(e) : [],
-            [u, f] = (0, T.Ee)(e, t, s),
+            [u, f] = (0, b.Ee)(e, t, s),
             v = [...a, ...s],
             R = v.map((e) => _.Z.getChannel(e)).filter(E.lm),
-            O = (0, b.v)(e, new Set(v), R, !0).length,
+            O = (0, T.v)(e, new Set(v), R, !0).length,
             D = null == n ? [] : n.options.map((e) => e.id);
         if (
             (m.default.track(S.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {

@@ -34,8 +34,8 @@ var i = n(200651),
     v = n(481060),
     y = n(893776),
     I = n(384275),
-    T = n(596454),
-    b = n(434650),
+    b = n(596454),
+    T = n(434650),
     S = n(367907),
     A = n(702493),
     N = n(424602),
@@ -181,7 +181,7 @@ function ed(e) {
         O,
         D,
         L,
-        { clientId: U, responseType: ee, redirectUri: et, codeChallenge: ea, codeChallengeMethod: eu, state: ec, nonce: ed, prompt: ef, authorizations: e_, scopes: ep, permissions: eh, guildId: em, channelId: eg, integrationType: eE, disableGuildSelect: ev = !1, showLogout: ey = !1, cancelCompletesFlow: eI = !0, isTrustedName: eT = !1, isEmbeddedFlow: eb = !1, callback: eS, callbackWithoutPost: eA, onClose: eN, disclosures: eC } = e,
+        { clientId: U, responseType: ee, redirectUri: et, codeChallenge: ea, codeChallengeMethod: eu, state: ec, nonce: ed, prompt: ef, authorizations: e_, scopes: ep, permissions: eh, guildId: em, channelId: eg, integrationType: eE, disableGuildSelect: ev = !1, showLogout: ey = !1, cancelCompletesFlow: eI = !0, isTrustedName: eb = !1, isEmbeddedFlow: eT = !1, callback: eS, callbackWithoutPost: eA, onClose: eN, disclosures: eC } = e,
         eR = null != eE ? (null == e_ ? void 0 : e_.get(eE)) : void 0,
         eO = (0, o.TH)(),
         eD = (0, _.e7)([x.Z], () => x.Z.hasLoadedExperiments);
@@ -403,7 +403,7 @@ function ed(e) {
     let ta = r.useCallback((e) => {
             e && eZ(!0);
         }, []),
-        ts = (0, b.O)(ta);
+        ts = (0, T.O)(ta);
     if (eM instanceof Error)
         return {
             header: (0, i.jsxs)(v.xBx, {
@@ -485,7 +485,7 @@ function ed(e) {
                         requestedScopes: e2,
                         integrationType: eQ,
                         errors: th,
-                        isTrustedName: eT
+                        isTrustedName: eb
                     }),
                     (0, i.jsx)('div', {
                         className: eo.intObserver,
@@ -537,7 +537,7 @@ function ed(e) {
                     disclosures: e5,
                     redirectUri: null !== (m = ex.redirect_uri) && void 0 !== m ? m : null,
                     approximateGuildCount: void 0 !== e ? e : null,
-                    isEmbeddedFlow: eb
+                    isEmbeddedFlow: eT
                 }),
                 (0, i.jsx)('div', {
                     className: eo.intObserver,
@@ -602,7 +602,7 @@ function ed(e) {
                                                   children: [
                                                       es.intl.string(es.t.N22i9P),
                                                       ' ',
-                                                      (0, i.jsx)(T.Z, {
+                                                      (0, i.jsx)(b.Z, {
                                                           className: eo.emoji,
                                                           src: G.ZP.getURL(p.Z.convert.fromCodePoint(ei.I)),
                                                           emojiName: ':point_down:',

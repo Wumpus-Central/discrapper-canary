@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(510659),
     y = n(287954),
     I = n(660579),
-    T = n(652853),
-    b = n(64621),
+    b = n(652853),
+    T = n(64621),
     S = n(448980),
     A = n(336383),
     N = n(194811),
@@ -32,7 +32,7 @@ var i = n(200651),
 function P(e) {
     var t;
     let { user: n, currentUser: a, activity: P, profileGuildId: w, className: M, onClose: k } = e,
-        { profileType: U } = (0, T.z)(),
+        { profileType: U } = (0, b.z)(),
         G = { [L.fullSize]: U === x.y0.FULL_SIZE },
         { interactionSource: B, interactionSourceId: Z } = (0, v.Xo)(),
         F = (0, _.Z)({
@@ -113,7 +113,7 @@ function P(e) {
         X = B === x.n_.ACTIVITY && Z === Q;
     return (0, i.jsx)(c.Gt, {
         value: H,
-        children: (0, i.jsx)(b.Z, {
+        children: (0, i.jsx)(T.Z, {
             sourceType: x.n_.ACTIVITY,
             user: n,
             children: (0, i.jsx)(y.Z, {

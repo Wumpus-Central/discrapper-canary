@@ -92,7 +92,7 @@ function I(e, t, n, i) {
         return null;
     }
 }
-function T(e, t) {
+function b(e, t) {
     if (U(e, t)) return null;
     var n = g(e),
         i = g(t),
@@ -185,12 +185,12 @@ function T(e, t) {
         return this.format(), (this.raw = this.version), this;
     }),
     (t.inc = I),
-    (t.diff = T),
+    (t.diff = b),
     (t.compareIdentifiers = S);
-var b = /^[0-9]+$/;
+var T = /^[0-9]+$/;
 function S(e, t) {
-    var n = b.test(e),
-        i = b.test(t);
+    var n = T.test(e),
+        i = T.test(t);
     return n && i && ((e = +e), (t = +t)), e === t ? 0 : n && !i ? -1 : i && !n ? 1 : e < t ? -1 : 1;
 }
 function A(e, t) {

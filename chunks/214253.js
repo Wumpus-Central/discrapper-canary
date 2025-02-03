@@ -18,12 +18,12 @@ var i,
     v = n(342545),
     y = n(414847),
     I = n(274745),
-    T = n(853708),
-    b = n(29461),
-    S = b.set,
-    A = b.getterFor('URL'),
-    N = T.URLSearchParams,
-    C = T.getState,
+    b = n(853708),
+    T = n(29461),
+    S = T.set,
+    A = T.getterFor('URL'),
+    N = b.URLSearchParams,
+    C = b.getState,
     R = o.URL,
     O = o.TypeError,
     D = o.parseInt,
@@ -210,8 +210,8 @@ var i,
         return '..' === (e = j(e)) || '%2e.' === e || '.%2e' === e || '%2e%2e' === e;
     },
     eI = {},
-    eT = {},
     eb = {},
+    eT = {},
     eS = {},
     eA = {},
     eN = {},
@@ -260,14 +260,14 @@ eV.prototype = {
         for (e = v(e), t || ((l.scheme = ''), (l.username = ''), (l.password = ''), (l.host = null), (l.port = null), (l.path = []), (l.query = null), (l.fragment = null), (l.cannotBeABaseURL = !1), (e = B(e, er, '')), (e = B(e, ea, '$1'))), r = h((e = B(e, es, ''))); c <= r.length; ) {
             switch (((a = r[c]), u)) {
                 case eI:
-                    if (a && w(q, a)) (d += j(a)), (u = eT);
+                    if (a && w(q, a)) (d += j(a)), (u = eb);
                     else {
                         if (t) return W;
-                        u = eb;
+                        u = eT;
                         continue;
                     }
                     break;
-                case eT:
+                case eb:
                     if (a && (w(Q, a) || '+' === a || '-' === a || '.' === a)) d += j(a);
                     else if (':' === a) {
                         if (t && (l.isSpecial() !== _(em, d) || ('file' === d && (l.includesCredentials() || null !== l.port)) || ('file' === l.scheme && !l.host))) return;
@@ -278,11 +278,11 @@ eV.prototype = {
                         (d = ''), 'file' === l.scheme ? (u = ew) : l.isSpecial() && n && n.scheme === l.scheme ? (u = eS) : l.isSpecial() ? (u = eR) : '/' === r[c + 1] ? ((u = eA), c++) : ((l.cannotBeABaseURL = !0), G(l.path, ''), (u = eB));
                     } else {
                         if (t) return W;
-                        (d = ''), (u = eb), (c = 0);
+                        (d = ''), (u = eT), (c = 0);
                         continue;
                     }
                     break;
-                case eb:
+                case eT:
                     if (!n || (n.cannotBeABaseURL && '#' !== a)) return W;
                     if (n.cannotBeABaseURL && '#' === a) {
                         (l.scheme = n.scheme), (l.path = m(n.path)), (l.query = n.query), (l.fragment = ''), (l.cannotBeABaseURL = !0), (u = eF);
@@ -376,9 +376,9 @@ eV.prototype = {
                     else {
                         if (!(a === i || '/' === a || '?' === a || '#' === a || ('\\' === a && l.isSpecial())) && !t) return z;
                         if ('' !== d) {
-                            var T = D(d, 10);
-                            if (T > 65535) return z;
-                            (l.port = l.isSpecial() && T === em[l.scheme] ? null : T), (d = '');
+                            var b = D(d, 10);
+                            if (b > 65535) return z;
+                            (l.port = l.isSpecial() && b === em[l.scheme] ? null : b), (d = '');
                         }
                         if (t) return;
                         u = eU;

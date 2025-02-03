@@ -19,7 +19,7 @@ function d(e, t, n) {
         });
     return (0, r.forwardRef)(function (n, _) {
         var p;
-        let { onScroll: h, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: y, getSectionHeight: I, chunkSize: T, renderSection: b, renderItem: S, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: x, fade: L = !1, className: P, style: w, maxContentWidth: M, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
+        let { onScroll: h, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: y, getSectionHeight: I, chunkSize: b, renderSection: T, renderItem: S, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: x, fade: L = !1, className: P, style: w, maxContentWidth: M, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
             B = r.useRef(null),
             Z = r.useRef(null),
             F = r.useRef({}),
@@ -46,7 +46,7 @@ function d(e, t, n) {
             getItemKey: v,
             getItemHeight: y,
             getSectionHeight: I,
-            chunkSize: T,
+            chunkSize: b,
             itemGutter: N,
             removeEdgeItemGutters: C,
             sectionGutter: R,
@@ -141,7 +141,7 @@ function d(e, t, n) {
                                                           ...(null !== (t = null == o ? void 0 : o.style) && void 0 !== t ? t : {})
                                                       },
                                                       children: [
-                                                          null != b && null != s && b(n, s, e),
+                                                          null != T && null != s && T(n, s, e),
                                                           a.map((e) => {
                                                               let [t, n, i] = e,
                                                                   r = z[t];
@@ -155,7 +155,7 @@ function d(e, t, n) {
                                     })
                                 })
                             }),
-                        [Q, S, b, z, X, A, q]
+                        [Q, S, T, z, X, A, q]
                     )
                 ]
             })

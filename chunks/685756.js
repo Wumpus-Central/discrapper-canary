@@ -45,8 +45,8 @@ let m = 20 * u.Z.Millis.SECOND,
     v = 0.25,
     y = 0.1,
     I = 5 * u.Z.Millis.SECOND,
-    T = 2,
-    b = 8;
+    b = 2,
+    T = 8;
 function S(e) {
     return e.map((e) => ({
         name: e.name,
@@ -200,14 +200,14 @@ class O extends s.Z {
                         this.emit('mls-proposals', i);
                         break;
                     case 29: {
-                        let e = new DataView(i.buffer, i.byteOffset, T).getUint16(0, !1),
-                            t = i.slice(T);
+                        let e = new DataView(i.buffer, i.byteOffset, b).getUint16(0, !1),
+                            t = i.slice(b);
                         this.emit('mls-prepare-commit-transition', e, t);
                         break;
                     }
                     case 30: {
-                        let e = new DataView(i.buffer, i.byteOffset, T).getUint16(0, !1),
-                            t = i.slice(T);
+                        let e = new DataView(i.buffer, i.byteOffset, b).getUint16(0, !1),
+                            t = i.slice(b);
                         this.emit('mls-welcome', e, t);
                         break;
                     }
@@ -324,8 +324,8 @@ class O extends s.Z {
         {
             let t = new Uint8Array(e.data),
                 n = null;
-            this.serverVersion >= b && (n = new DataView(t.buffer).getUint16(0, !1));
-            let i = this.serverVersion >= b ? 2 : 0,
+            this.serverVersion >= T && (n = new DataView(t.buffer).getUint16(0, !1));
+            let i = this.serverVersion >= T ? 2 : 0,
                 r = 1;
             return {
                 op: t[i],
@@ -340,7 +340,7 @@ class O extends s.Z {
     handleHeartbeatAck(e) {
         this.logger.info('Heartbeat ACK received');
         let t = null;
-        (t = this.serverVersion >= b ? e.t : e), this.emit('ping', Date.now() - t), (this.lastHeartbeatAckTime = Date.now()), (this.heartbeatAck = !0), null !== this.expeditedHeartbeatTimeout && (clearTimeout(this.expeditedHeartbeatTimeout), (this.expeditedHeartbeatTimeout = null), this.logger.info('Expedited heartbeat succeeded'));
+        (t = this.serverVersion >= T ? e.t : e), this.emit('ping', Date.now() - t), (this.lastHeartbeatAckTime = Date.now()), (this.heartbeatAck = !0), null !== this.expeditedHeartbeatTimeout && (clearTimeout(this.expeditedHeartbeatTimeout), (this.expeditedHeartbeatTimeout = null), this.logger.info('Expedited heartbeat succeeded'));
     }
     handleHeartbeatTimeout() {
         this.cleanupWebSocket((e) => e.close(4000));
@@ -357,7 +357,7 @@ class O extends s.Z {
             }, this.heartbeatInterval));
     }
     sendHeartbeat() {
-        if (this.serverVersion >= b) {
+        if (this.serverVersion >= T) {
             var e;
             let t = null !== (e = this.lastRecvSeqNum) && void 0 !== e ? e : -1;
             this.logger.info('Sending heartbeat with last received sequence number: '.concat(t)),

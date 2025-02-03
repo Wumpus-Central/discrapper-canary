@@ -3,11 +3,11 @@ n.r(t),
     n.d(t, {
         encryptAndStoreTokens: () => A,
         getToken: () => y,
-        hideToken: () => T,
+        hideToken: () => b,
         init: () => v,
         removeToken: () => S,
         setToken: () => I,
-        showToken: () => b
+        showToken: () => T
     }),
     n(47120),
     n(724458);
@@ -84,10 +84,10 @@ function I(e, t) {
     }
     (i = e), null != t && (f[t] = e), d ? A() : ((r = i), (_ = f), m());
 }
-function T() {
+function b() {
     !p && ((p = !0), m());
 }
-function b() {
+function T() {
     p && ((p = !1), m());
 }
 function S(e) {

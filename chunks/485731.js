@@ -64,14 +64,14 @@ function y(e) {
 function I() {
     h(() => f);
 }
-function T() {
+function b() {
     null == l.Z.getVoiceStateForUser(o.default.getId()) &&
         h(() => ({
             hqStreamingOptInPopoutDismissed: !1,
             hqStreamingFrameAnimationPlayed: !1
         }));
 }
-function b() {
+function T() {
     i = u.Z.getCurrentConfig({ location: 'handleExperimentFetch' }, { autoTrackExposure: !1 });
 }
 class S extends (r = a.ZP.PersistedStore) {
@@ -93,9 +93,9 @@ let A = new S(s.Z, {
     PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_SHOULD_SHOW: v,
     PREMIUM_PERKS_DEMO_ENABLED: y,
     PREMIUM_PERKS_DEMO_UI_RESET: I,
-    VOICE_STATE_UPDATES: T,
-    CONNECTION_OPEN: b,
-    EXPERIMENTS_FETCH_SUCCESS: b,
-    EXPERIMENT_OVERRIDE_BUCKET: b,
+    VOICE_STATE_UPDATES: b,
+    CONNECTION_OPEN: T,
+    EXPERIMENTS_FETCH_SUCCESS: T,
+    EXPERIMENT_OVERRIDE_BUCKET: T,
     LOGOUT: I
 });

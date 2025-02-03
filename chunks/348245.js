@@ -18,8 +18,8 @@ var r = n(512969),
     v = n(430824),
     y = n(306680),
     I = n(944486),
-    T = n(914010),
-    b = n(70956),
+    b = n(914010),
+    T = n(70956),
     S = n(198620),
     A = n(981631),
     N = n(176505),
@@ -118,7 +118,7 @@ function D(e) {
         }
     }
 }
-let x = 90 * b.Z.Millis.DAY,
+let x = 90 * T.Z.Millis.DAY,
     L = 'viewedThreadIds';
 function P(e) {
     if (y.ZP.hasOpenedThread(e)) return !1;
@@ -198,7 +198,7 @@ function G(e, t) {
 }
 function B() {
     let e = I.Z.getChannelId(),
-        t = T.Z.getGuildId();
+        t = b.Z.getGuildId();
     if (null == t || null == e) return;
     let n = g.ZP.getSidebarState(e);
     (null == n ? void 0 : n.type) !== h.tI.VIEW_CHANNEL && G(t, e);
@@ -241,7 +241,7 @@ function H(e) {
     let { channelId: n, jump: i, isStale: r, isPreview: a = !1 } = e;
     if (a) return;
     let s = null !== (t = j[n]) && void 0 !== t ? t : 0;
-    if (Date.now() - s < 10 * b.Z.Millis.SECOND) return;
+    if (Date.now() - s < 10 * T.Z.Millis.SECOND) return;
     j[n] = Date.now();
     let o = I.Z.getChannelId(),
         l = g.ZP.getCurrentSidebarChannelId(o),

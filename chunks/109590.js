@@ -1,5 +1,5 @@
 n.d(t, {
-    EB: () => b,
+    EB: () => T,
     cl: () => I
 }),
     n(47120);
@@ -92,7 +92,7 @@ function I(e) {
         }
     );
 }
-function T(e, t) {
+function b(e, t) {
     let n = !1;
     t.forEach((t) => {
         let { loaded: i, firstMessage: r } = d.Z.getMessage(t);
@@ -100,15 +100,15 @@ function T(e, t) {
     }),
         n && null == v && (v = setTimeout(A, 0));
 }
-function b(e) {
-    T(e, (0, c.U)(e.id).slice(0, p));
+function T(e) {
+    b(e, (0, c.U)(e.id).slice(0, p));
 }
 function S(e, t) {
     if (E.hasRequested(e.id, t)) return;
     let n = (0, c.U)(e.id),
         i = n.findIndex((e) => e === t),
         r = n.slice(i, i + h).filter((t) => !E.hasRequested(e.id, t));
-    T(e, r);
+    b(e, r);
 }
 async function A() {
     try {

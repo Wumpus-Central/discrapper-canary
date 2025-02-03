@@ -17,8 +17,8 @@ var i,
     v = n(13780),
     y = n(992416),
     I = n(62691).set,
-    T = n(584831),
-    b = n(502856),
+    b = n(584831),
+    T = n(502856),
     S = n(139545),
     A = n(6938),
     N = n(29461),
@@ -70,7 +70,7 @@ var i,
     ee = function (e, t) {
         e.notified ||
             ((e.notified = !0),
-            T(function () {
+            b(function () {
                 for (var n, i = e.reactions; (n = i.get()); ) $(n, e);
                 (e.notified = !1), t && !e.rejection && en(e);
             }));
@@ -83,7 +83,7 @@ var i,
                   promise: t,
                   reason: n
               }),
-            !L && (r = c['on' + e]) ? r(i) : e === Y && b('Unhandled promise rejection', n);
+            !L && (r = c['on' + e]) ? r(i) : e === Y && T('Unhandled promise rejection', n);
     },
     en = function (e) {
         d(I, c, function () {
@@ -125,7 +125,7 @@ var i,
                 if (e.facade === t) throw new B("Promise can't be resolved itself");
                 var i = J(t);
                 i
-                    ? T(function () {
+                    ? b(function () {
                           var n = { done: !1 };
                           try {
                               d(i, t, ea(eo, n, e), ea(es, n, e));
@@ -171,7 +171,7 @@ if (
             (i.domain = u ? F.domain : void 0),
             n.state === K
                 ? n.reactions.add(i)
-                : T(function () {
+                : b(function () {
                       $(i, n);
                   }),
             i.promise

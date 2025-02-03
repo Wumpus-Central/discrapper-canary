@@ -30,7 +30,7 @@ let o = 1000 / 24,
                 },
                 [n, v, d, r, c, e]
             ),
-            T = i.useCallback(() => {
+            b = i.useCallback(() => {
                 (m.current = !0), (h.current = void 0), (_.current = requestAnimationFrame(I));
             }, [I]);
         return (
@@ -40,7 +40,7 @@ let o = 1000 / 24,
             (0, s.Z)(() => ((_.current = requestAnimationFrame(I)), () => y())),
             {
                 stop: y,
-                reset: T,
+                reset: b,
                 ticking: m
             }
         );

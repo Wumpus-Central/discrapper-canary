@@ -27,8 +27,8 @@ function d(e) {
         { interactionType: m, interactionSource: g, resetInteraction: E, interactionSourceId: v } = (0, a.Xo)(),
         y = f === u.y0.FULL_SIZE ? (0, l.z)(t.id, n) : void 0,
         I = g === h.sourceType && m === u.P.REACT,
-        T = g === h.sourceType && m === u.P.REPLY,
-        b = (I || T) && v === h.sourceId;
+        b = g === h.sourceType && m === u.P.REPLY,
+        T = (I || b) && v === h.sourceId;
     return (0, i.jsx)(r.yRy, {
         renderPopout: (e) => {
             let { setPopoutRef: r } = e,
@@ -47,7 +47,7 @@ function d(e) {
         onRequestClose: () => {
             E(), null == _ || _();
         },
-        shouldShow: b,
+        shouldShow: T,
         ...c(m, f),
         children: p
     });

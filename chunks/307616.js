@@ -1,6 +1,6 @@
 n.d(t, {
     n: () => S,
-    v: () => T
+    v: () => b
 }),
     n(47120),
     n(411104),
@@ -91,13 +91,13 @@ class I extends r.PureComponent {
             );
     }
 }
-function T() {
+function b() {
     return (0, h.Vn)((0, d.bp)());
 }
-let b = [];
+let T = [];
 function S() {
-    let e = T(),
-        t = (0, h.s9)((t) => (void 0 !== t[e] ? t[e] : b)),
+    let e = b(),
+        t = (0, h.s9)((t) => (void 0 !== t[e] ? t[e] : T)),
         n = r.useRef();
     r.useLayoutEffect(() => {
         n.current = t[t.length - 1];

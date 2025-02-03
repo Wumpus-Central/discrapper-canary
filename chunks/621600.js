@@ -1,14 +1,14 @@
 n.d(t, {
     $R: () => h,
     GA: () => y,
-    I: () => T,
+    I: () => b,
     UE: () => p,
     Wq: () => m,
     ZB: () => _,
     jz: () => v,
     rU: () => I,
     sK: () => E,
-    wK: () => b
+    wK: () => T
 }),
     n(789020),
     n(47120);
@@ -69,7 +69,7 @@ function m(e, t, n, a, s) {
         E = g(p, m, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         v = null !== (o = E('guild_flags')) && void 0 !== o ? o : 0,
         I = (null !== (d = m.guild_flags) && void 0 !== d ? d : 0) ^ v,
-        T = 0 === (0, l.M1)(I, f.vc.OPT_IN_CHANNELS_OFF, f.vc.OPT_IN_CHANNELS_ON);
+        b = 0 === (0, l.M1)(I, f.vc.OPT_IN_CHANNELS_OFF, f.vc.OPT_IN_CHANNELS_ON);
     i.ZP.trackWithMetadata(u.rMx.NOTIFICATION_SETTINGS_UPDATED, {
         ...m,
         ...r.Z.getStats(e),
@@ -85,7 +85,7 @@ function m(e, t, n, a, s) {
         guild_receive_mobile_push_old: E('guild_receive_mobile_push'),
         guild_scheduled_events_muted_old: E('guild_scheduled_events_muted'),
         guild_message_notification_settings_old: E('guild_message_notification_settings'),
-        is_opt_in_only_change: T
+        is_opt_in_only_change: b
     });
 }
 function g(e, t, n) {
@@ -112,9 +112,9 @@ function v(e, t, n, o, d, _) {
                 channel_muted_until: E(r.mute_config)
             };
         },
-        b = I(o),
-        S = I(T(e, t), n),
-        A = g(b, S, 'RETURN_PREVIOUS_WHEN_CHANGED'),
+        T = I(o),
+        S = I(b(e, t), n),
+        A = g(T, S, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         N = a.Z.getChannel(t),
         C = null !== (m = A('channel_flags')) && void 0 !== m ? m : 0,
         R = (null !== (v = S.channel_flags) && void 0 !== v ? v : 0) ^ C,
@@ -157,7 +157,7 @@ function I(e) {
     let t = new Map();
     return e.forEach((e) => t.set(e, y(e))), t;
 }
-function T(e, t) {
+function b(e, t) {
     let n = o.ZP.isChannelMuted(e, t),
         i = o.ZP.getChannelMuteConfig(e, t);
     return {
@@ -167,7 +167,7 @@ function T(e, t) {
         channel_flags: o.ZP.getChannelIdFlags(e, t)
     };
 }
-function b(e, t) {
+function T(e, t) {
     let n = new Map();
-    return t.forEach((t) => n.set(t, T(e, t))), n;
+    return t.forEach((t) => n.set(t, b(e, t))), n;
 }

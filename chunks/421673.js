@@ -24,10 +24,10 @@ let _ = 100,
     v = 3,
     y = 2,
     I = 1,
-    T = [],
-    b = 350,
-    S = s()(N, b),
-    A = s()(C, b);
+    b = [],
+    T = 350,
+    S = s()(N, T),
+    A = s()(C, T);
 function N(e, t) {
     u.default.track(f.rMx.SEARCH_STARTED, {
         channel_id: t,
@@ -50,9 +50,9 @@ function R(e, t, n, i) {
         u = t.name.toLocaleLowerCase(),
         c = null != t.emojiId ? o.ZP.getCustomEmojiById(t.emojiId) : null,
         f = null != t.emojiName ? l.ZP.convertSurrogateToName(t.emojiName, !1) : null,
-        T = null != f ? l.ZP.getByName(f) : null,
-        b = null != c ? [c.name] : null !== (a = null == T ? void 0 : T.names) && void 0 !== a ? a : [];
-    return e === u && (s += p), b.includes(e) && (s += h), u.startsWith(e) && (s += m), b.some((t) => t.startsWith(e)) && (s += g), u.endsWith(e) && (s += E), b.some((t) => t.endsWith(e)) && (s += v), r()(e, t.name.toLocaleLowerCase()) && (s += y), b.some((t) => r()(e, t)) && (s += I), s > 0 && (0, d.Nq)(n, t, i) && (s += _), s;
+        b = null != f ? l.ZP.getByName(f) : null,
+        T = null != c ? [c.name] : null !== (a = null == b ? void 0 : b.names) && void 0 !== a ? a : [];
+    return e === u && (s += p), T.includes(e) && (s += h), u.startsWith(e) && (s += m), T.some((t) => t.startsWith(e)) && (s += g), u.endsWith(e) && (s += E), T.some((t) => t.endsWith(e)) && (s += v), r()(e, t.name.toLocaleLowerCase()) && (s += y), T.some((t) => r()(e, t)) && (s += I), s > 0 && (0, d.Nq)(n, t, i) && (s += _), s;
 }
 function O(e, t, n, i, r) {
     let a = t.reduce((t, a) => (S(r, null == i ? void 0 : i.id), (t[a.soundId] = R(e.toLocaleLowerCase(), a, n, i)), t), {}),
@@ -61,7 +61,7 @@ function O(e, t, n, i, r) {
 }
 function D(e, t, n, i, r) {
     return 0 === e.length
-        ? T
+        ? b
         : O(
               e,
               t.reduce((e, t) => {

@@ -42,7 +42,7 @@ let h = 24,
         }
     };
 function E(e) {
-    let { className: t, disabled: n = !1, innerClassName: r, childClassName: a, iconClassName: p, icon: E, children: v, onClick: y, isActive: I, onMouseEnter: T, onMouseLeave: b, onFocus: S, onBlur: A, pulse: N, sparkle: C, notification: R, 'aria-label': O, 'aria-expanded': D, 'aria-haspopup': x, 'aria-controls': L } = e,
+    let { className: t, disabled: n = !1, innerClassName: r, childClassName: a, iconClassName: p, icon: E, children: v, onClick: y, isActive: I, onMouseEnter: b, onMouseLeave: T, onFocus: S, onBlur: A, pulse: N, sparkle: C, notification: R, 'aria-label': O, 'aria-expanded': D, 'aria-haspopup': x, 'aria-controls': L } = e,
         P = (0, c.Q3)('ChannelTextAreaButton'),
         w = (0, l.Yzy)(null != v, {
             ...g,
@@ -77,8 +77,8 @@ function E(e) {
         className: s()(t, { [_.active]: I }),
         innerClassName: s()(_.button, r, { [_.pulseButton]: N }),
         onClick: y,
-        onMouseEnter: T,
-        onMouseLeave: b,
+        onMouseEnter: b,
+        onMouseLeave: T,
         onFocus: S,
         onBlur: A,
         focusProps: {

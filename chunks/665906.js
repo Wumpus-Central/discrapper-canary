@@ -1,7 +1,7 @@
 n.d(t, {
     $R: () => x,
     C7: () => N,
-    Ek: () => b,
+    Ek: () => T,
     Gu: () => G,
     JQ: () => A,
     NE: () => E,
@@ -44,7 +44,7 @@ let g = (0, o.Z)({
     ]
 });
 function E(e, t) {
-    return T(
+    return b(
         (0, s.e7)(
             [_.Z],
             () => {
@@ -59,21 +59,21 @@ function E(e, t) {
 }
 function v(e, t) {
     let n = e.isForumLikeChannel() ? m.Plq.SEND_MESSAGES : a.$e(m.Plq.CREATE_PUBLIC_THREADS, m.Plq.READ_MESSAGE_HISTORY);
-    return T(_.Z.can(n, e), e, t);
+    return b(_.Z.can(n, e), e, t);
 }
 function y(e) {
     let t = (0, s.e7)([_.Z], () => _.Z.can(a.$e(m.Plq.CREATE_PRIVATE_THREADS), e), [e]);
-    return e.type === m.d4z.GUILD_TEXT && T(t, e);
+    return e.type === m.d4z.GUILD_TEXT && b(t, e);
 }
 function I(e) {
     let t = E(e),
         n = y(e);
     return t || n;
 }
-function T(e, t, n) {
+function b(e, t, n) {
     return !(__OVERLAY__ || !e || !c.uC.has(t.type) || (null != n && (n.hasFlag(m.iLy.HAS_THREAD) || (0, u.Z)(n))));
 }
-function b(e) {
+function T(e) {
     let t = (0, s.e7)([f.Z], () => f.Z.getChannel(p.default.castMessageIdAsChannelId(e.id)), [e]);
     return S(
         (0, s.e7)([_.Z], () => _.Z.can(m.Plq.VIEW_CHANNEL, t), [t]),

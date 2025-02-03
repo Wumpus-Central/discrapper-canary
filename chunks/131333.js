@@ -18,8 +18,8 @@ let h = [],
     v = -100,
     y = 11,
     I = 125,
-    T = 20,
-    b = 12,
+    b = 20,
+    T = 12,
     S = 48,
     A = 0.01,
     N = new Set(['jack_o_lantern', 'nose']),
@@ -101,7 +101,7 @@ let L = r.forwardRef(function (e, t) {
                             },
                             size: {
                                 type: 'static-random',
-                                minValue: b,
+                                minValue: T,
                                 maxValue: S
                             },
                             dragCoefficient: {
@@ -109,7 +109,7 @@ let L = r.forwardRef(function (e, t) {
                                 value: A
                             }
                         },
-                        T
+                        b
                     );
                 }
             }),
@@ -142,14 +142,14 @@ function P(e) {
             },
             [h]
         ),
-        T = r.useMemo(
+        b = r.useMemo(
             () => ({
                 triggerAnimation: v,
                 untriggerAnimation: () => {}
             }),
             [v]
         ),
-        b = r.useCallback((e) => {
+        T = r.useCallback((e) => {
             l(e);
         }, []),
         S = r.useCallback((e) => {
@@ -171,7 +171,7 @@ function P(e) {
     E !== f.IlC.APP)
         ? (0, i.jsx)(i.Fragment, { children: t })
         : (0, i.jsxs)(d.Rm.Provider, {
-              value: T,
+              value: b,
               children: [
                   t,
                   Object.keys(C).map((e) => {
@@ -196,7 +196,7 @@ function P(e) {
                                     className: p.lottieAnimation,
                                     nextScene: u,
                                     sceneSegments: O,
-                                    onScenePlay: b,
+                                    onScenePlay: T,
                                     onSceneComplete: S,
                                     importData: D,
                                     pauseWhileUnfocused: !1

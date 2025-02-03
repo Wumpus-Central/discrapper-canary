@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(481060),
@@ -75,7 +75,7 @@ function I(e) {
             });
         }, [t, n, i]);
 }
-function T(e) {
+function b(e) {
     let { leaderboard: t, application: n } = e,
         s = r.useMemo(() => (0, u.n)(l.default.extractTimestamp(t.interval_end)), [t]),
         o = n.getIconURL(m.Si.LARGE),
@@ -121,12 +121,12 @@ function T(e) {
         ]
     });
 }
-let b = (e) => {
+let T = (e) => {
     var t;
     let { guildId: n, leaderboardId: o, previewMode: l = !1, source: u, trackRankingItemInteraction: f } = e,
         [h, m] = r.useState(l),
         g = r.useRef(null),
-        b = (0, c.Z)({
+        T = (0, c.Z)({
             guildId: n,
             leaderboardId: o,
             intervalOffset: 0
@@ -142,8 +142,8 @@ let b = (e) => {
             leaderboardId: o,
             source: u
         });
-    let A = (0, s.q)(null == b ? void 0 : null === (t = b.settings) || void 0 === t ? void 0 : t.application_id);
-    return null == b || null == A
+    let A = (0, s.q)(null == T ? void 0 : null === (t = T.settings) || void 0 === t ? void 0 : t.application_id);
+    return null == T || null == A
         ? null
         : (0, i.jsx)(y, {
               children: (0, i.jsxs)('div', {
@@ -153,12 +153,12 @@ let b = (e) => {
                       (0, i.jsxs)('div', {
                           className: v.content,
                           children: [
-                              (0, i.jsx)(T, {
-                                  leaderboard: b,
+                              (0, i.jsx)(b, {
+                                  leaderboard: T,
                                   application: A
                               }),
                               (0, i.jsx)(p.Z, {
-                                  leaderboard: b,
+                                  leaderboard: T,
                                   previewMode: h,
                                   trackRankingItemInteraction: f
                               }),

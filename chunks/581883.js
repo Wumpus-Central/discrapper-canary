@@ -57,10 +57,10 @@ function I(e) {
         }),
         S();
 }
-function T() {
+function b() {
     S();
 }
-function b() {
+function T() {
     S(),
         Object.values(v).forEach((e) => {
             (e.proto = e.ProtoClass.create()), (e.editInfo = (0, h.JC)());
@@ -193,8 +193,8 @@ let L = new x(f.Z, {
     USER_SETTINGS_PROTO_ENQUEUE_UPDATE: C,
     USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: R,
     CONNECTION_OPEN: I,
-    CONNECTION_CLOSED: T,
-    CONNECTION_RESUMED: T,
+    CONNECTION_CLOSED: b,
+    CONNECTION_RESUMED: b,
     OVERLAY_INITIALIZE: N,
-    LOGOUT: b
+    LOGOUT: T
 });

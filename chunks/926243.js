@@ -18,9 +18,9 @@ var i = n(200651),
     v = n(288406),
     y = n(388032),
     I = n(538891);
-let T = (e, t) => ''.concat(e, ':').concat(t),
-    b = r.forwardRef(function (e, t) {
-        let { emoji: n, isFavorite: r, isLargeSize: a, isMediumSize: u, isInspected: c, isDisabled: d, showPulse: _, columnIndex: h, rowIndex: m, size: E, surrogateCodePoint: T, allowAnimatedEmoji: b, selectedItemClassName: S, inNitroLockedSection: A, ...N } = e,
+let b = (e, t) => ''.concat(e, ':').concat(t),
+    T = r.forwardRef(function (e, t) {
+        let { emoji: n, isFavorite: r, isLargeSize: a, isMediumSize: u, isInspected: c, isDisabled: d, showPulse: _, columnIndex: h, rowIndex: m, size: E, surrogateCodePoint: b, allowAnimatedEmoji: T, selectedItemClassName: S, inNitroLockedSection: A, ...N } = e,
             C = (0, o.e7)([g.Z], () => (n.type === f.B.GUILD ? g.Z.getGuild(n.guildId) : void 0), [n]),
             R = () => {
                 let e = n.allNamesString;
@@ -56,8 +56,8 @@ let T = (e, t) => ''.concat(e, ':').concat(t),
                     rowIndex: m,
                     emoji: n,
                     size: E,
-                    surrogateCodePoint: T,
-                    allowAnimatedEmoji: b,
+                    surrogateCodePoint: b,
+                    allowAnimatedEmoji: T,
                     isLocked: O
                 })
             })
@@ -100,8 +100,8 @@ function S(e) {
                     key: a,
                     ref: V
                 },
-                G !== T(W, f) &&
-                    (0, i.jsx)(b, {
+                G !== b(W, f) &&
+                    (0, i.jsx)(T, {
                         ref: o,
                         emoji: j,
                         isFavorite: F.isFavoriteEmojiWithoutFetchingLatest(j),
@@ -119,7 +119,7 @@ function S(e) {
                             if (null != V.current && null != k && null != w && !e.shiftKey && null != j.name && M && !Z && L) {
                                 let e = null == j.id ? _.ZP.convertNameToSurrogate(j.name) : j.name,
                                     t = V.current.getBoundingClientRect();
-                                (t.x = k.x + (W + 1) * H), B(T(W, f)), (0, m.U)(w, e, j.id, t);
+                                (t.x = k.x + (W + 1) * H), B(b(W, f)), (0, m.U)(w, e, j.id, t);
                             }
                             K(e);
                         },

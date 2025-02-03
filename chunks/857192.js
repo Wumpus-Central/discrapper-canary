@@ -96,13 +96,13 @@ function y(e) {
 function I(e) {
     v(g);
 }
-function T(e) {
+function b(e) {
     var t;
     let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & _.xW$.STAFF) === _.xW$.STAFF,
         i = n || null != e.user.personal_connection_id;
     n && h.set(E.sourceMapsEnabled), f.Z.setTags({ isStaff: i.toString() });
 }
-class b extends (i = s.ZP.Store) {
+class T extends (i = s.ZP.Store) {
     initialize() {
         let e = l.K.get(m);
         null != e &&
@@ -168,9 +168,9 @@ class b extends (i = s.ZP.Store) {
         );
     }
 }
-p(b, 'displayName', 'DeveloperOptionsStore');
-let S = new b(u.Z, {
+p(T, 'displayName', 'DeveloperOptionsStore');
+let S = new T(u.Z, {
     LOGOUT: I,
-    CONNECTION_OPEN: T,
+    CONNECTION_OPEN: b,
     DEVELOPER_OPTIONS_UPDATE_SETTINGS: y
 });

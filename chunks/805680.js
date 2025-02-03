@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(367907),
     y = n(243778),
     I = n(907040),
-    T = n(455708),
-    b = n(314910),
+    b = n(455708),
+    T = n(314910),
     S = n(125900),
     A = n(603074),
     N = n(453070),
@@ -200,16 +200,16 @@ function H(e) {
             }
         });
     let eI = (null === (t = q.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.tq && null != H,
-        eT = (null === (n = q.stickers) || void 0 === n ? void 0 : n.allowSending) && null != W,
-        eb = r.useCallback((e, t) => (null == K ? void 0 : K(e, 'emoji_picker', t)), [K]),
+        eb = (null === (n = q.stickers) || void 0 === n ? void 0 : n.allowSending) && null != W,
+        eT = r.useCallback((e, t) => (null == K ? void 0 : K(e, 'emoji_picker', t)), [K]),
         eS = r.useCallback((e, t) => (null == K ? void 0 : K(e, 'soundboard_picker', t)), [K]),
         eA = (null === (a = q.soundmoji) || void 0 === a ? void 0 : a.allowSending) === !0 && null != K,
-        eN = !(null === (o = q.expressionPicker) || void 0 === o ? void 0 : o.onlyEmojis) && (eI || eT),
+        eN = !(null === (o = q.expressionPicker) || void 0 === o ? void 0 : o.onlyEmojis) && (eI || eb),
         eC = 'left' === X ? 'right' : 'left',
         eR = null != J ? J : 'left' === X ? Z.positionLayerDefaultAlignLeft : Z.positionLayerDefaultAlignRight;
     return (0, i.jsx)(m.Z, {
         section: w.jXE.EXPRESSION_PICKER,
-        children: (0, i.jsx)(b.W5, {
+        children: (0, i.jsx)(T.W5, {
             className: s()(Z.positionLayer, eR),
             targetRef: l,
             position: Q,
@@ -260,7 +260,7 @@ function H(e) {
                                                                       children: B.intl.string(B.t['6gUTsb'])
                                                                   })
                                                                 : null,
-                                                            eT
+                                                            eb
                                                                 ? (0, i.jsx)(V, {
                                                                       id: G.ED,
                                                                       'aria-controls': G.nZ,
@@ -299,7 +299,7 @@ function H(e) {
                                                     })
                                                 })
                                               : null,
-                                          eo === P.X1.STICKER && eT
+                                          eo === P.X1.STICKER && eb
                                               ? (0, i.jsx)(R.Z, {
                                                     isLoading: ed,
                                                     channel: z,
@@ -312,7 +312,7 @@ function H(e) {
                                                 })
                                               : null,
                                           eo === P.X1.GIF && eI
-                                              ? (0, i.jsx)(T.Z, {
+                                              ? (0, i.jsx)(b.Z, {
                                                     onSelectGIF: H,
                                                     hideFavorites: h,
                                                     persistSearch: !0
@@ -330,7 +330,7 @@ function H(e) {
                                                     pickerIntention: U.Hz.CHAT,
                                                     closePopout: em,
                                                     onSelectEmoji: Y,
-                                                    onSelectSoundmoji: eb,
+                                                    onSelectSoundmoji: eT,
                                                     ref: (e) => {
                                                         ei.current = e;
                                                     },

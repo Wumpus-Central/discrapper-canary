@@ -140,11 +140,11 @@ function I(e, t, n) {
                 (e = (e + '').toLowerCase()), (i = !0);
         }
 }
-function T(e, t, n) {
+function b(e, t, n) {
     var i = e[t];
     (e[t] = e[n]), (e[n] = i);
 }
-function b(e, t, n, i, r) {
+function T(e, t, n, i, r) {
     if (0 === e.length) return -1;
     if (('string' == typeof n ? ((i = n), (n = 0)) : n > 2147483647 ? (n = 2147483647) : n < -2147483648 && (n = -2147483648), J((n = +n)) && (n = r ? 0 : e.length - 1), n < 0 && (n = e.length + n), n >= e.length)) {
         if (r) return -1;
@@ -325,19 +325,19 @@ function L(e, t, n) {
     (u.prototype.swap16 = function () {
         var e = this.length;
         if (e % 2 != 0) throw RangeError('Buffer size must be a multiple of 16-bits');
-        for (var t = 0; t < e; t += 2) T(this, t, t + 1);
+        for (var t = 0; t < e; t += 2) b(this, t, t + 1);
         return this;
     }),
     (u.prototype.swap32 = function () {
         var e = this.length;
         if (e % 4 != 0) throw RangeError('Buffer size must be a multiple of 32-bits');
-        for (var t = 0; t < e; t += 4) T(this, t, t + 3), T(this, t + 1, t + 2);
+        for (var t = 0; t < e; t += 4) b(this, t, t + 3), b(this, t + 1, t + 2);
         return this;
     }),
     (u.prototype.swap64 = function () {
         var e = this.length;
         if (e % 8 != 0) throw RangeError('Buffer size must be a multiple of 64-bits');
-        for (var t = 0; t < e; t += 8) T(this, t, t + 7), T(this, t + 1, t + 6), T(this, t + 2, t + 5), T(this, t + 3, t + 4);
+        for (var t = 0; t < e; t += 8) b(this, t, t + 7), b(this, t + 1, t + 6), b(this, t + 2, t + 5), b(this, t + 3, t + 4);
         return this;
     }),
     (u.prototype.toString = function () {
@@ -379,10 +379,10 @@ function L(e, t, n) {
         return -1 !== this.indexOf(e, t, n);
     }),
     (u.prototype.indexOf = function (e, t, n) {
-        return b(this, e, t, n, !0);
+        return T(this, e, t, n, !0);
     }),
     (u.prototype.lastIndexOf = function (e, t, n) {
-        return b(this, e, t, n, !1);
+        return T(this, e, t, n, !1);
     }),
     (u.prototype.write = function (e, t, n, i) {
         if (void 0 === t) (i = 'utf8'), (n = this.length), (t = 0);

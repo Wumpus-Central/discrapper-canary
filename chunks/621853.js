@@ -30,8 +30,8 @@ let E = Symbol('NO GUILD ID'),
     v = new Map(),
     y = new Set(),
     I = 'premium',
-    T = 'guild_booster_lvl',
-    b = 2147483647,
+    b = 'guild_booster_lvl',
+    T = 2147483647,
     S = new Map(),
     A = new Map(),
     N = new Map(),
@@ -48,7 +48,7 @@ function L(e) {
     else {
         let t = N.get(e);
         if (null == t) return;
-        t.start(Math.min(b, n), () => L(e));
+        t.start(Math.min(T, n), () => L(e));
     }
 }
 function P(e, t) {
@@ -70,7 +70,7 @@ function P(e, t) {
         if (null == r) return;
         let n = r.get(t);
         if (null == n) return;
-        n.start(Math.min(b, a), () => P(e, t));
+        n.start(Math.min(T, a), () => P(e, t));
     }
 }
 function w() {
@@ -101,7 +101,7 @@ function G(e) {
     y.delete(e.userId), R.set(e.userId, U(e.mutualFriends)), O.set(e.userId, e.mutualFriends.length);
 }
 function B(e) {
-    var t, n, i, r, o, l, u, d, f, h, g, y, b, x, w, M, k, G, B, Z, F, V, j, H, Y, W, K;
+    var t, n, i, r, o, l, u, d, f, h, g, y, T, x, w, M, k, G, B, Z, F, V, j, H, Y, W, K;
     let z = null !== (w = null === (t = e.guild_member_profile) || void 0 === t ? void 0 : t.guild_id) && void 0 !== w ? w : E;
     if ((null === (n = v.get(e.user.id)) || void 0 === n || n.delete(z), null != e.mutual_guilds)) {
         let t = {};
@@ -178,7 +178,7 @@ function B(e) {
                                   }
                               );
                           }
-                          return e.id.startsWith(T) && null != Q
+                          return e.id.startsWith(b) && null != Q
                               ? {
                                     ...e,
                                     description: m.intl.formatToPlainString(m.t.IWkAq6, { date: Q })
@@ -187,7 +187,7 @@ function B(e) {
                       })
                     : e.badges
         }),
-        (null === (x = e.user_profile) || void 0 === x ? void 0 : null === (b = x.profile_effect) || void 0 === b ? void 0 : b.expires_at) != null)
+        (null === (x = e.user_profile) || void 0 === x ? void 0 : null === (T = x.profile_effect) || void 0 === T ? void 0 : T.expires_at) != null)
     ) {
         let t = new a.V7();
         N.set(e.user.id, t), L(e.user.id);

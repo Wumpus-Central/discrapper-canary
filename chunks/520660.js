@@ -17,8 +17,8 @@ var i = n(96403),
     v = Math.floor,
     y = String.fromCharCode,
     I = i(''.charCodeAt),
-    T = i([].join),
-    b = i([].push),
+    b = i([].join),
+    T = i([].push),
     S = i(''.replace),
     A = i(''.split),
     N = i(''.toLowerCase),
@@ -27,8 +27,8 @@ var i = n(96403),
             var r = I(e, n++);
             if (r >= 55296 && r <= 56319 && n < i) {
                 var a = I(e, n++);
-                (64512 & a) == 56320 ? b(t, ((1023 & r) << 10) + (1023 & a) + 65536) : (b(t, r), n--);
-            } else b(t, r);
+                (64512 & a) == 56320 ? T(t, ((1023 & r) << 10) + (1023 & a) + 65536) : (T(t, r), n--);
+            } else T(t, r);
         }
         return t;
     },
@@ -48,10 +48,10 @@ var i = n(96403),
             u = d,
             _ = 0,
             p = c;
-        for (t = 0; t < e.length; t++) (n = e[t]) < 128 && b(i, y(n));
+        for (t = 0; t < e.length; t++) (n = e[t]) < 128 && T(i, y(n));
         var m = i.length,
             E = m;
-        for (m && b(i, f); E < l; ) {
+        for (m && T(i, f); E < l; ) {
             var I = r;
             for (t = 0; t < e.length; t++) (n = e[t]) >= u && n < I && (I = n);
             var S = E + 1;
@@ -64,20 +64,20 @@ var i = n(96403),
                         if (A < D) break;
                         var x = A - D,
                             L = a - D;
-                        b(i, y(R(D + (x % L)))), (A = v(x / L)), (N += a);
+                        T(i, y(R(D + (x % L)))), (A = v(x / L)), (N += a);
                     }
-                    b(i, y(R(A))), (p = O(_, S, E === m)), (_ = 0), E++;
+                    T(i, y(R(A))), (p = O(_, S, E === m)), (_ = 0), E++;
                 }
             }
             _++, u++;
         }
-        return T(i, '');
+        return b(i, '');
     };
 e.exports = function (e) {
     var t,
         n,
         i = [],
         r = A(S(N(e), p, '.'), '.');
-    for (t = 0; t < r.length; t++) b(i, E(_, (n = r[t])) ? 'xn--' + D(n) : n);
-    return T(i, '.');
+    for (t = 0; t < r.length; t++) T(i, E(_, (n = r[t])) ? 'xn--' + D(n) : n);
+    return b(i, '.');
 };

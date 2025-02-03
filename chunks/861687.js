@@ -18,8 +18,8 @@ var i,
     v = n(547727),
     y = n(710845),
     I = n(75060),
-    T = n(631053),
-    b = n(148959),
+    b = n(631053),
+    T = n(148959),
     S = n(926951),
     A = n(166884),
     N = n(868616),
@@ -348,7 +348,7 @@ class eh extends f.Z {
                                 ...e.getNetworkStats(),
                                 ...e.getCodecUsageStats('sender', this.userId),
                                 ...this._soundshareStats.getStats(),
-                                device_performance_class: (0, T.Z)()
+                                device_performance_class: (0, b.Z)()
                             });
                     }),
                 e.getInboundParticipants().forEach((t) => {
@@ -414,7 +414,7 @@ class eh extends f.Z {
                 voice_output_volume: n.outputVolume,
                 encryption_mode: this._encryptionMode,
                 channel_count: this.channelIds.size,
-                device_performance_class: (0, T.Z)(),
+                device_performance_class: (0, b.Z)(),
                 num_fast_udp_reconnects: null != this._connection ? (null === (u = this._connection) || void 0 === u ? void 0 : u.getNumFastUdpReconnects()) : null,
                 parent_media_session_id: this.parentMediaSessionId,
                 audio_subsystem: w.Z.getMediaEngine().getAudioSubsystem(),
@@ -1255,12 +1255,12 @@ class eh extends f.Z {
                 });
         } else
             r === ei.Yn.STREAM &&
-                ((this._goLiveQualityManager = new b.Z(!0)),
-                this._goLiveQualityManager.on(b.y.RequestedSSRCsUpdate, (e, t, n) => {
+                ((this._goLiveQualityManager = new T.Z(!0)),
+                this._goLiveQualityManager.on(T.y.RequestedSSRCsUpdate, (e, t, n) => {
                     var i;
                     null === (i = this._connection) || void 0 === i || i.createUser(e, t, n);
                 }),
-                this._goLiveQualityManager.on(b.y.RequestedStreamsUpdate, (e) => {
+                this._goLiveQualityManager.on(T.y.RequestedStreamsUpdate, (e) => {
                     if (this.state === en.hes.RTC_CONNECTED && null != this._socket) {
                         var t;
                         this.logger.info('Go Live Media sink wants: '.concat(JSON.stringify(e))), this._socket.mediaSinkWants(e), null === (t = this._connection) || void 0 === t || t.setLocalVideoSinkWants(e);

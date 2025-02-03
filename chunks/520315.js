@@ -19,11 +19,11 @@ function s(e) {
     y.current = l;
     let I = i.useRef(u);
     I.current = u;
-    let [T, b] = i.useState(!1),
-        S = i.useCallback(() => b(!1), []);
+    let [b, T] = i.useState(!1),
+        S = i.useCallback(() => T(!1), []);
     return (
         i.useLayoutEffect(() => {
-            void 0 !== t && ((h.current = void 0), (m.current = void 0), b(!1));
+            void 0 !== t && ((h.current = void 0), (m.current = void 0), T(!1));
         }, [t]),
         i.useLayoutEffect(() => {
             var e, i, r;
@@ -38,7 +38,7 @@ function s(e) {
                 c = n ? s : u,
                 f = n ? u : s;
             if (!(c !== f)) return;
-            b(!0), (d.style.height = ''.concat(c, 'px')), (d.style.transition = '');
+            T(!0), (d.style.height = ''.concat(c, 'px')), (d.style.transition = '');
             let _ = null;
             return (
                 (_ = requestAnimationFrame(() => {
@@ -48,11 +48,11 @@ function s(e) {
             );
         }, [t, d, n]),
         i.useLayoutEffect(() => {
-            null != d && !T && ((d.style.height = ''), (d.style.transition = ''));
-        }, [t, d, T]),
+            null != d && !b && ((d.style.height = ''), (d.style.transition = ''));
+        }, [t, d, b]),
         {
             ref: p,
-            isTransitioning: T,
+            isTransitioning: b,
             onTransitionEnd: S
         }
     );

@@ -1,5 +1,5 @@
 let i, r;
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var a,
     s = n(392711),
     o = n.n(s),
@@ -56,7 +56,7 @@ function E() {
                         : s[0]) && (e = null != r && a.has(r) ? r : null === (u = n.first()) || void 0 === u ? void 0 : null === (l = u.user) || void 0 === l ? void 0 : l.id);
         }
     }
-    r !== e && ((r = e), t && T.emitChange());
+    r !== e && ((r = e), t && b.emitChange());
 }
 let v = o().debounce(E, 300);
 function y() {
@@ -71,5 +71,5 @@ class I extends (a = l.ZP.Store) {
     }
 }
 g(I, 'displayName', 'VideoSpeakerStore');
-let T = new I(u.Z, { AUDIO_SET_LOCAL_VIDEO_DISABLED: y }),
-    b = T;
+let b = new I(u.Z, { AUDIO_SET_LOCAL_VIDEO_DISABLED: y }),
+    T = b;

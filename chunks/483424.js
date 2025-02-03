@@ -14,12 +14,12 @@ var i = n(200651),
 function h(e) {
     let { user: t, currentUser: n, displayProfile: h, guildId: m, className: g, onClose: E } = e,
         { live: v, recent: y, stream: I } = (0, l.Z)(t.id),
-        [T] = v,
-        { voiceChannel: b, voiceActivity: S } = (0, c.Z)({
+        [b] = v,
+        { voiceChannel: T, voiceActivity: S } = (0, c.Z)({
             userId: t.id,
             guildId: m
         }),
-        A = null != T && T === S,
+        A = null != b && b === S,
         { recentActivityEnabled: N } = (0, s.i)({ location: 'UserProfileFeaturedActivity' }),
         { voiceActivityCardEnabled: C } = (0, o.o)({ location: 'UserProfileFeaturedActivity' }),
         R = t.id === n.id,
@@ -35,18 +35,18 @@ function h(e) {
               className: g,
               onClose: E
           })
-        : C && null != b && !A
+        : C && null != T && !A
           ? (0, i.jsx)(p.Z, {
                 user: t,
-                voiceChannel: b,
+                voiceChannel: T,
                 className: g,
                 onClose: E
             })
-          : null != T
+          : null != b
             ? (0, i.jsx)(d.Z, {
                   user: t,
                   currentUser: n,
-                  activity: T,
+                  activity: b,
                   profileGuildId: null == h ? void 0 : h.guildId,
                   className: g,
                   onClose: E

@@ -141,7 +141,7 @@ function I(e) {
         }
     };
 }
-let T = {
+let b = {
         url: {
             parse: (e) =>
                 null == (0, c.yw)(e[1])
@@ -194,9 +194,9 @@ let T = {
                       }
         }
     },
-    b = /(-# +)/,
-    S = (0, _.Z)([v, T]),
-    A = (0, _.Z)([y, T]),
+    T = /(-# +)/,
+    S = (0, _.Z)([v, b]),
+    A = (0, _.Z)([y, b]),
     N = l._p(S),
     C = l._p(A),
     R = {
@@ -398,7 +398,7 @@ function M(e, t, n, i) {
         };
     if ('subtext' === t)
         return {
-            before: b.exec(i.input)[1],
+            before: T.exec(i.input)[1],
             after: ''
         };
     let r = g['link' === t ? 'url' : t];

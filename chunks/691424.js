@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(628692),
     y = n(590956),
     I = n(703656),
-    T = n(271383),
-    b = n(430824),
+    b = n(271383),
+    T = n(430824),
     S = n(572004),
     A = n(746878),
     N = n(285063),
@@ -83,7 +83,7 @@ function G(e) {
     };
 }
 function B(e, t, n) {
-    let i = b.Z.getGuild(e);
+    let i = T.Z.getGuild(e);
     if (null == e || null == i) return;
     let r = (t) => {
         i.hasFeature(P.oNc.COMMUNITY) && (0, I.uL)(P.Z5c.CHANNEL(e, t));
@@ -101,9 +101,9 @@ function B(e, t, n) {
             break;
         case 'linked-roles':
             if (null != n) {
-                let t = T.ZP.getSelfMember(e);
+                let t = b.ZP.getSelfMember(e);
                 if (null == t) return null;
-                let i = b.Z.getRoles(e)[n];
+                let i = T.Z.getRoles(e)[n];
                 null == i || t.roles.includes(i.id)
                     ? u.Z.dispatch({
                           type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',
@@ -294,7 +294,7 @@ let F = {
     },
     guild: {
         react: (e, t, n) => {
-            let r = b.Z.getGuild(e.guildId);
+            let r = T.Z.getGuild(e.guildId);
             return (0, i.jsx)(
                 h.Z,
                 {

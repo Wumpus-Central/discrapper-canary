@@ -30,7 +30,7 @@ let p = 'GameStoreReportedGames',
     v = null !== (r = o.K.get(p)) && void 0 !== r ? r : {},
     y = '',
     I = null;
-function T(e) {
+function b(e) {
     var t, n, i, r, a, s;
     return {
         id: e.id,
@@ -44,7 +44,7 @@ function T(e) {
         supportsOutOfProcessOverlay: d.ZP.supportsOutOfProcessOverlay(e.overlay_methods)
     };
 }
-function b(e) {
+function T(e) {
     return {
         id: e.id,
         name: e.name,
@@ -58,7 +58,7 @@ function b(e) {
     };
 }
 function S(e) {
-    let t = e instanceof d.ZP ? b(e) : e;
+    let t = e instanceof d.ZP ? T(e) : e;
     for (let n of (m.set(e.id, t), (g[e.name.toLowerCase()] = t), e.aliases)) g[n.toLowerCase()] = t;
     if ((0, f.isDesktop)()) for (let n of e.executables) E[n.name] = t;
 }
@@ -74,7 +74,7 @@ function C() {
 }
 function R(e) {
     let { games: t, etag: n } = e;
-    for (let e of (null != n && y !== n && (y = n), t)) S(T(e));
+    for (let e of (null != n && y !== n && (y = n), t)) S(b(e));
     (i = void 0), (I = Date.now());
 }
 class O extends (a = s.ZP.PersistedStore) {
@@ -154,7 +154,7 @@ _(O, 'displayName', 'GameStore'),
                   }
                 : {
                       detectableGamesEtag: e.detectableGamesEtag,
-                      detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map((e) => b(new d.ZP(e)))) && void 0 !== n ? n : []
+                      detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map((e) => T(new d.ZP(e)))) && void 0 !== n ? n : []
                   };
         },
         (e) =>

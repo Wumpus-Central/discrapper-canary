@@ -1,6 +1,6 @@
 n.d(t, {
     T: () => S,
-    v: () => b
+    v: () => T
 }),
     n(390547),
     n(724458),
@@ -144,7 +144,7 @@ function I(e) {
         []
     );
 }
-function T(e, t, n, r) {
+function b(e, t, n, r) {
     let a = 0,
         s = [];
     return e.reduce((e, o, l) => {
@@ -203,7 +203,7 @@ function T(e, t, n, r) {
                                       parentItem: m,
                                       isFocused: p,
                                       menuSubmenuProps: t.getSubmenuProps({ path: _ }),
-                                      rows: T(e, t, _, r),
+                                      rows: b(e, t, _, r),
                                       rowHeight: s,
                                       onScroll: l,
                                       listClassName: c
@@ -220,7 +220,7 @@ function T(e, t, n, r) {
                                       parentItem: m,
                                       isFocused: p,
                                       menuSubmenuProps: t.getSubmenuProps({ path: _ }),
-                                      renderSubmenu: () => T(e, t, _, r)
+                                      renderSubmenu: () => b(e, t, _, r)
                                   },
                                   ''.concat(o.key, '-submenu')
                               )
@@ -326,9 +326,9 @@ function T(e, t, n, r) {
         return e;
     }, []);
 }
-function b(e) {
+function T(e) {
     var t;
-    let { navId: n, variant: a = 'flexible', hideScroller: o = !1, className: f, children: h, onClose: v, onSelect: b } = e,
+    let { navId: n, variant: a = 'flexible', hideScroller: o = !1, className: f, children: h, onClose: v, onSelect: T } = e,
         S = y(h),
         N = I(S),
         C = r.useRef([]);
@@ -347,7 +347,7 @@ function b(e) {
     (0, c.T)(D);
     let x = o ? d.u2 : d.zJ;
     return (0, i.jsx)(m.r.Provider, {
-        value: b,
+        value: T,
         children: (0, i.jsx)('div', {
             className: s()(E.menu, E[a], f),
             ...O.getContainerProps(),
@@ -365,7 +365,7 @@ function b(e) {
                             onFocus: () => {},
                             onClose: v
                         }),
-                    S.length > 0 && T(S, O, [], v)
+                    S.length > 0 && b(S, O, [], v)
                 ]
             })
         })

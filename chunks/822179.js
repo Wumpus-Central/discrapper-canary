@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(653041);
+n.d(t, { Z: () => T }), n(653041);
 var i,
     r = n(392711),
     a = n.n(r),
@@ -73,7 +73,7 @@ function I(e) {
     if (t !== f.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     p.pendingUsages = [];
 }
-class T extends (i = s.ZP.PersistedStore) {
+class b extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(d.Z), null != e && (p = e), this.syncWith([d.Z], v), this.syncWith([u.Z], y);
     }
@@ -87,8 +87,8 @@ class T extends (i = s.ZP.PersistedStore) {
         return m;
     }
 }
-_(T, 'displayName', 'StickersPersistedStore'), _(T, 'persistKey', 'StickersPersistedStoreV2');
-let b = new T(o.Z, {
+_(b, 'displayName', 'StickersPersistedStore'), _(b, 'persistKey', 'StickersPersistedStoreV2');
+let T = new b(o.Z, {
     STICKER_TRACK_USAGE: E,
     USER_SETTINGS_PROTO_UPDATE: I
 });

@@ -51,10 +51,10 @@ function y(e) {
 function I() {
     m = !0;
 }
-function T() {
-    b(), (m = !1);
-}
 function b() {
+    T(), (m = !1);
+}
+function T() {
     g &&
         (h.client = {
             desktop: u.aH.DEFAULT,
@@ -63,7 +63,7 @@ function b() {
 }
 function S(e) {
     let { markAsDismissed: t } = e;
-    (h.client.coachmarkImpressions += 1), h.client.coachmarkImpressions >= p && (null == t || t(d.L.UNKNOWN), T());
+    (h.client.coachmarkImpressions += 1), h.client.coachmarkImpressions >= p && (null == t || t(d.L.UNKNOWN), b());
 }
 class A extends (i = r.ZP.PersistedStore) {
     initialize(e) {
@@ -87,8 +87,8 @@ _(A, 'displayName', 'AppIconPersistedStoreState'), _(A, 'persistKey', 'AppIconPe
 let N = new A(a.Z, {
     APP_ICON_UPDATED: y,
     APP_ICON_EDITOR_OPEN: I,
-    APP_ICON_EDITOR_CLOSE: T,
-    APP_ICON_EDITOR_RESET: b,
+    APP_ICON_EDITOR_CLOSE: b,
+    APP_ICON_EDITOR_RESET: T,
     APP_ICON_TRACK_IMPRESSION: S,
-    LOGOUT: T
+    LOGOUT: b
 });

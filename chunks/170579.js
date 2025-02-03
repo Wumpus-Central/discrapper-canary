@@ -19,7 +19,7 @@ var r = n(120356),
     v = n(474936),
     y = n(388032),
     I = n(779655);
-function T(e, t) {
+function b(e, t) {
     let n = p.ZP.getDefaultPrice(e),
         { intervalType: i } = p.ZP.getInterval(e),
         r = (0, h.T4)(n.amount, n.currency);
@@ -31,7 +31,7 @@ function T(e, t) {
             return y.intl.formatToPlainString(y.t.rS8FAw, { price: r });
     }
 }
-let b = (e) => {
+let T = (e) => {
         let { isTier0: t, discountAmount: n } = e,
             r = (0, g.N)(),
             s = null != r && r.trial_id === v.a7,
@@ -84,7 +84,7 @@ let b = (e) => {
                             children: [
                                 (0, i.jsx)(n, { className: a()(I.headerIcon, { [I.nonTier2]: !x }) }),
                                 (O || D) &&
-                                    (0, i.jsx)(b, {
+                                    (0, i.jsx)(T, {
                                         isTier0: N === v.p9.TIER_0,
                                         discountAmount: D ? w : void 0
                                     })
@@ -101,7 +101,7 @@ let b = (e) => {
                 h && null != g
                     ? (0, i.jsx)('div', {
                           className: I.price,
-                          children: T(g, A)
+                          children: b(g, A)
                       })
                     : null
             ]

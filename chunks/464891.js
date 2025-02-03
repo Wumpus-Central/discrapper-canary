@@ -25,8 +25,8 @@ var i = n(200651),
     v = n(98278),
     y = n(869765),
     I = n(243317),
-    T = n(621853),
-    b = n(518950),
+    b = n(621853),
+    T = n(518950),
     S = n(484459),
     A = n(184301),
     N = n(740492),
@@ -115,7 +115,7 @@ function z(e, t, n) {
 function q(e) {
     var t, n;
     let { props: a, guildId: s, handleRenderPopout: f, showCommunicationDisabledStyles: _ = !1, className: p } = e,
-        { message: h, author: m, compact: g = !1, subscribeToGroupId: E, animate: v = !0, onContextMenu: y, onClickAvatar: I, onPopoutRequestClose: T, showAvatarPopout: S } = a,
+        { message: h, author: m, compact: g = !1, subscribeToGroupId: E, animate: v = !0, onContextMenu: y, onClickAvatar: I, onPopoutRequestClose: b, showAvatarPopout: S } = a,
         [C, R] = r.useState(!1),
         { analyticsLocations: O } = (0, d.ZP)(c.Z.AVATAR),
         L = (0, l.e7)([N.ZP], () => {
@@ -130,7 +130,7 @@ function q(e) {
             avatarSrc: U,
             avatarDecorationSrc: G,
             eventHandlers: B
-        } = (0, b.Z)({
+        } = (0, T.Z)({
             user: w,
             guildId: s,
             size: k,
@@ -168,7 +168,7 @@ function q(e) {
                       renderPopout: f,
                       shouldShow: S,
                       position: o.tq ? 'window_center' : 'right',
-                      onRequestClose: T,
+                      onRequestClose: b,
                       clickTrap: !0,
                       children: (e) =>
                           K({
@@ -273,9 +273,9 @@ let X = (e) => {
 };
 function J(e) {
     let { currentUserIsPremium: t, author: n } = e,
-        r = (0, l.e7)([T.Z], () => {
+        r = (0, l.e7)([b.Z], () => {
             var e;
-            return null === (e = T.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.premiumSince;
+            return null === (e = b.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.premiumSince;
         });
     return (0, i.jsx)(u.ua7, {
         tooltipClassName: V.nitroAuthorBadgeTootip,
@@ -297,7 +297,7 @@ function J(e) {
     });
 }
 function $(e) {
-    let { message: t, repliedMessage: n, compact: a = !1, renderPopout: o, showTimestampOnHover: c, roleIcon: d, subscribeToGroupId: f, hideTimestamp: v, className: T, channel: b } = e,
+    let { message: t, repliedMessage: n, compact: a = !1, renderPopout: o, showTimestampOnHover: c, roleIcon: d, subscribeToGroupId: f, hideTimestamp: v, className: b, channel: T } = e,
         S = r.useMemo(() => (null != o ? (e) => o(e, t) : void 0), [o, t]),
         [, A] = (0, h.ZP)(t.author.id, e.guildId),
         D = (0, l.e7)([C.Z], () => C.Z.getGuild(e.guildId), [e.guildId]),
@@ -352,7 +352,7 @@ function $(e) {
                   : null,
         W = (0, B.x)({
             message: t,
-            channel: b,
+            channel: T,
             user: null == t ? void 0 : t.author,
             compact: a,
             isRepliedMessage: !1
@@ -361,7 +361,7 @@ function $(e) {
         X = O.default.getCurrentUser(),
         $ = P.ZP.isPremium(t.author),
         ee = P.ZP.isPremium(X),
-        et = null == b ? void 0 : b.isPrivate();
+        et = null == T ? void 0 : T.isPrivate();
     (0, w.R)(null != d, 'Message Username') &&
         $ &&
         !a &&
@@ -398,14 +398,14 @@ function $(e) {
                     'leaderboard-champion'
                 )
             )),
-        null != b &&
+        null != T &&
             null != D &&
             K.push(
                 (0, i.jsx)(
                     _.Z,
                     {
                         guild: D,
-                        channel: b,
+                        channel: T,
                         userId: t.author.id,
                         messageId: t.id
                     },
@@ -456,7 +456,7 @@ function $(e) {
         showTimestampOnHover: c,
         ariaLabelledBy: eo,
         ariaDescribedBy: el,
-        className: T,
+        className: b,
         badges: en
     });
 }

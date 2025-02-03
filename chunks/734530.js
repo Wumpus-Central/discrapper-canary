@@ -172,8 +172,8 @@
         );
     }
     v.exports = I()();
-    var T = p(v.exports),
-        b = function (e, n, i) {
+    var b = p(v.exports),
+        T = function (e, n, i) {
             var r = !!i,
                 a = t.useRef(i);
             t.useEffect(
@@ -367,8 +367,8 @@
             );
         };
     U.propTypes = {
-        stripe: T.any,
-        options: T.object
+        stripe: b.any,
+        options: b.object
     };
     var G = function (e) {
             return k(t.useContext(M), e);
@@ -379,7 +379,7 @@
         Z = function (e) {
             return (0, e.children)(G('mounts <ElementsConsumer>'));
         };
-    Z.propTypes = { children: T.func.isRequired };
+    Z.propTypes = { children: b.func.isRequired };
     var F = ['on', 'session'],
         V = t.createContext(null);
     V.displayName = 'CustomCheckoutSdkContext';
@@ -495,10 +495,10 @@
             return d.customCheckoutSdk ? t.createElement(V.Provider, { value: d }, t.createElement(H.Provider, { value: g }, r)) : null;
         };
     K.propTypes = {
-        stripe: T.any,
-        options: T.shape({
-            clientSecret: T.string.isRequired,
-            elementsOptions: T.object
+        stripe: b.any,
+        options: b.shape({
+            clientSecret: b.string.isRequired,
+            elementsOptions: b.object
         }).isRequired
     };
     var z = function (e) {
@@ -539,7 +539,7 @@
                         v = n.onConfirm,
                         y = n.onCancel,
                         I = n.onShippingAddressChange,
-                        T = n.onShippingRateChange,
+                        b = n.onShippingRateChange,
                         A = q('mounts <'.concat(i, '>')),
                         N = 'elements' in A ? A.elements : null,
                         C = 'customCheckoutSdk' in A ? A.customCheckoutSdk : null,
@@ -548,18 +548,18 @@
                         x = R[1],
                         L = t.useRef(null),
                         P = t.useRef(null);
-                    b(O, 'blur', c),
-                        b(O, 'focus', d),
-                        b(O, 'escape', p),
-                        b(O, 'click', h),
-                        b(O, 'loaderror', m),
-                        b(O, 'loaderstart', g),
-                        b(O, 'networkschange', E),
-                        b(O, 'confirm', v),
-                        b(O, 'cancel', y),
-                        b(O, 'shippingaddresschange', I),
-                        b(O, 'shippingratechange', T),
-                        b(O, 'change', _),
+                    T(O, 'blur', c),
+                        T(O, 'focus', d),
+                        T(O, 'escape', p),
+                        T(O, 'click', h),
+                        T(O, 'loaderror', m),
+                        T(O, 'loaderstart', g),
+                        T(O, 'networkschange', E),
+                        T(O, 'confirm', v),
+                        T(O, 'cancel', y),
+                        T(O, 'shippingaddresschange', I),
+                        T(O, 'shippingratechange', b),
+                        T(O, 'change', _),
                         f &&
                             (r =
                                 'expressCheckout' === e
@@ -567,7 +567,7 @@
                                     : function () {
                                           f(O);
                                       }),
-                        b(O, 'ready', r),
+                        T(O, 'ready', r),
                         t.useLayoutEffect(
                             function () {
                                 if (null === L.current && null !== P.current && (N || C)) {
@@ -615,22 +615,22 @@
                 s = n ? a : r;
             return (
                 (s.propTypes = {
-                    id: T.string,
-                    className: T.string,
-                    onChange: T.func,
-                    onBlur: T.func,
-                    onFocus: T.func,
-                    onReady: T.func,
-                    onEscape: T.func,
-                    onClick: T.func,
-                    onLoadError: T.func,
-                    onLoaderStart: T.func,
-                    onNetworksChange: T.func,
-                    onConfirm: T.func,
-                    onCancel: T.func,
-                    onShippingAddressChange: T.func,
-                    onShippingRateChange: T.func,
-                    options: T.object
+                    id: b.string,
+                    className: b.string,
+                    onChange: b.func,
+                    onBlur: b.func,
+                    onFocus: b.func,
+                    onReady: b.func,
+                    onEscape: b.func,
+                    onClick: b.func,
+                    onLoadError: b.func,
+                    onLoaderStart: b.func,
+                    onNetworksChange: b.func,
+                    onConfirm: b.func,
+                    onCancel: b.func,
+                    onShippingAddressChange: b.func,
+                    onShippingRateChange: b.func,
+                    options: b.object
                 }),
                 (s.displayName = i),
                 (s.__elementType = e),
@@ -781,10 +781,10 @@
         ev = J('expressCheckout', $),
         ey = J('paymentRequestButton', $),
         eI = J('linkAuthentication', $),
-        eT = J('address', $),
-        eb = J('shippingAddress', $),
+        eb = J('address', $),
+        eT = J('shippingAddress', $),
         eS = J('paymentMethodMessaging', $),
         eA = J('affirmMessage', $),
         eN = J('afterpayClearpayMessage', $);
-    (e.AddressElement = eT), (e.AffirmMessageElement = eA), (e.AfterpayClearpayMessageElement = eN), (e.AuBankAccountElement = el), (e.CardCvcElement = ef), (e.CardElement = eu), (e.CardExpiryElement = ed), (e.CardNumberElement = ec), (e.CustomCheckoutProvider = K), (e.Elements = U), (e.ElementsConsumer = Z), (e.EmbeddedCheckout = es), (e.EmbeddedCheckoutProvider = ei), (e.EpsBankElement = eg), (e.ExpressCheckoutElement = ev), (e.FpxBankElement = e_), (e.IbanElement = ep), (e.IdealBankElement = eh), (e.LinkAuthenticationElement = eI), (e.P24BankElement = em), (e.PaymentElement = eE), (e.PaymentMethodMessagingElement = eS), (e.PaymentRequestButtonElement = ey), (e.ShippingAddressElement = eb), (e.useCustomCheckout = Q), (e.useElements = B), (e.useStripe = eo);
+    (e.AddressElement = eb), (e.AffirmMessageElement = eA), (e.AfterpayClearpayMessageElement = eN), (e.AuBankAccountElement = el), (e.CardCvcElement = ef), (e.CardElement = eu), (e.CardExpiryElement = ed), (e.CardNumberElement = ec), (e.CustomCheckoutProvider = K), (e.Elements = U), (e.ElementsConsumer = Z), (e.EmbeddedCheckout = es), (e.EmbeddedCheckoutProvider = ei), (e.EpsBankElement = eg), (e.ExpressCheckoutElement = ev), (e.FpxBankElement = e_), (e.IbanElement = ep), (e.IdealBankElement = eh), (e.LinkAuthenticationElement = eI), (e.P24BankElement = em), (e.PaymentElement = eE), (e.PaymentMethodMessagingElement = eS), (e.PaymentRequestButtonElement = ey), (e.ShippingAddressElement = eT), (e.useCustomCheckout = Q), (e.useElements = B), (e.useStripe = eo);
 });

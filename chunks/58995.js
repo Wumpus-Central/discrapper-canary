@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(594174),
     y = n(70956),
     I = n(709054),
-    T = n(51144),
-    b = n(443603),
+    b = n(51144),
+    T = n(443603),
     S = n(981631),
     A = n(921944),
     N = n(388032),
@@ -69,7 +69,7 @@ function x(e) {
     w && P && M.push(l.z.NITROWEEN_COACHMARKS);
     let [k, U] = (0, p.US)(M),
         G = null != k,
-        B = (0, T.Ft)(n),
+        B = (0, b.Ft)(n),
         { Component: Z, events: F, play: V } = (0, u.$)();
     if (t) return null;
     let j = () => {
@@ -102,7 +102,7 @@ function x(e) {
                     onCheckItOutClick: j,
                     markAsDismissed: U
                 }),
-            (0, i.jsx)(b.Z, {
+            (0, i.jsx)(T.Z, {
                 innerClassName: R.button,
                 'aria-label': N.intl.string(N.t.Z1RnTk),
                 isActive: !1,

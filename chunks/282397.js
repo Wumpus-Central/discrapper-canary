@@ -38,7 +38,7 @@ function I() {
             for (let [t, n] of Object.entries(y)) e - n.insertedAt > m && delete y[t];
         }, h);
 }
-function T(e) {
+function b(e) {
     let { nonce: t, messageId: n, data: i, onCreate: r, onCancel: a, onSuccess: s, onFailure: o } = e;
     null != n && ((E[n] = t), (v[t] = n)),
         (g[t] = {
@@ -50,7 +50,7 @@ function T(e) {
             onFailure: o
         });
 }
-function b(e) {
+function T(e) {
     var t;
     let { nonce: n, interactionId: i } = e;
     if (null == n) return !1;
@@ -170,8 +170,8 @@ class M extends (a = s.ZP.Store) {
 p(M, 'displayName', 'InteractionStore');
 let k = new M(o.Z, {
     LOGOUT: I,
-    INTERACTION_QUEUE: T,
-    INTERACTION_CREATE: b,
+    INTERACTION_QUEUE: b,
+    INTERACTION_CREATE: T,
     INTERACTION_SUCCESS: S,
     INTERACTION_FAILURE: N,
     MESSAGE_CREATE: A,

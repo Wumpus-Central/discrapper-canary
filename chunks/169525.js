@@ -1,9 +1,9 @@
 n.d(t, {
-    As: () => T,
+    As: () => b,
     BP: () => v,
     MC: () => S,
     dn: () => E,
-    hL: () => b,
+    hL: () => T,
     lK: () => y,
     wk: () => g
 }),
@@ -64,7 +64,7 @@ function I(e) {
             return;
     }
 }
-function T(e, t, n) {
+function b(e, t, n) {
     if (null == e) return [!1, void 0];
     if (n && (0, s.Sv)(e.contentScanVersion)) return [!0, 'potential_explicit_content'];
     let i = I(e.type);
@@ -81,12 +81,12 @@ function T(e, t, n) {
           ? [t, 'spoiler']
           : [!1, void 0];
 }
-function b(e) {
+function T(e) {
     let { channel: t, media: n } = e,
         i = (0, r.e7)([f.Z], () => null != t && f.Z.can(h.Plq.MANAGE_MESSAGES, t)),
         a = c.cC.useSetting(),
         s = (0, o.m)();
-    return T(n, !(0, p.Z)(a, i), s);
+    return b(n, !(0, p.Z)(a, i), s);
 }
 let S = (e) =>
     (0, i.EQ)(e)

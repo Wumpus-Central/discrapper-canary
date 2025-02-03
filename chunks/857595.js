@@ -1,9 +1,9 @@
 n.d(t, {
-    Ej: () => T,
+    Ej: () => b,
     Nc: () => E,
     Nv: () => R,
     Qj: () => _,
-    TX: () => b,
+    TX: () => T,
     Uv: () => C,
     ZZ: () => d,
     Zt: () => y,
@@ -102,14 +102,14 @@ function I(e) {
         syncForcedColors: e
     });
 }
-function T(e, t) {
+function b(e, t) {
     i.Z.dispatch({
         type: 'ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED',
         systemPrefersColorScheme: e,
         systemForcedColors: t
     });
 }
-function b(e) {
+function T(e) {
     i.Z.dispatch({
         type: 'ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED',
         systemPrefersContrast: e

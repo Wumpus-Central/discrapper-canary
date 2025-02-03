@@ -37,8 +37,8 @@ let E = 'scientist:triggered',
     v = 'exerimentOverrides',
     y = 'userExperimentOverrides',
     I = 'guildExperimentOverrides',
-    T = 1,
-    b = new c.Z('ExperimentStore'),
+    b = 1,
+    T = new c.Z('ExperimentStore'),
     S = !1,
     A = {},
     N = {},
@@ -427,7 +427,7 @@ function er() {
 }
 function ea() {
     let e = o.K.get(E);
-    if (null == e || e.v !== T) return {};
+    if (null == e || e.v !== b) return {};
     let t = e.e,
         n = Date.now(),
         i = !1;
@@ -470,7 +470,7 @@ function eo() {
     try {
         o.K.set(y, x);
     } catch (e) {
-        b.error('Error saving user experiment overrides, unsaved data will be lost', e),
+        T.error('Error saving user experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
@@ -479,7 +479,7 @@ function eo() {
     try {
         o.K.set(I, L);
     } catch (e) {
-        b.error('Error saving guild experiment overrides, unsaved data will be lost', e),
+        T.error('Error saving guild experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
@@ -489,11 +489,11 @@ function eo() {
 function el(e) {
     try {
         o.K.set(E, {
-            v: T,
+            v: b,
             e: e
         });
     } catch (e) {
-        b.error('Error saving tracked exposure experiments, unsaved data will be lost', e),
+        T.error('Error saving tracked exposure experiments, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveTrackedExposureExperiments'

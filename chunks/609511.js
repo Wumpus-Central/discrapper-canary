@@ -17,8 +17,8 @@ var i = n(939793),
     v = '[object Float64Array]',
     y = '[object Int8Array]',
     I = '[object Int16Array]',
-    T = '[object Int32Array]',
-    b = '[object Uint8Array]',
+    b = '[object Int32Array]',
+    T = '[object Uint8Array]',
     S = '[object Uint8ClampedArray]',
     A = '[object Uint16Array]',
     N = '[object Uint32Array]';
@@ -36,8 +36,8 @@ function C(e, t, n) {
         case v:
         case y:
         case I:
-        case T:
         case b:
+        case T:
         case S:
         case A:
         case N:

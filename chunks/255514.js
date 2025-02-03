@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(996701),
     y = n(320596),
     I = n(273514),
-    T = n(995712),
-    b = n(234937),
+    b = n(995712),
+    T = n(234937),
     S = n(473121),
     A = n(497954),
     N = n(449413),
@@ -112,10 +112,10 @@ let W = (e) => {
     let eI = () => {
             ec('');
         },
-        eT = (e) => {
+        eb = (e) => {
             e === Z.evJ.INVALID_FORM_BODY ? ec(F.intl.string(F.t.VjAAuL)) : ec(F.intl.string(F.t.h6D8V1));
         },
-        eb = () =>
+        eT = () =>
             q({
                 nodeRef: t.id,
                 destination: ['', e.successNodeId]
@@ -125,7 +125,7 @@ let W = (e) => {
                 })
                 .catch((e) => {
                     var t;
-                    eT(null === (t = e.body) || void 0 === t ? void 0 : t.code);
+                    eb(null === (t = e.body) || void 0 === t ? void 0 : t.code);
                 })
                 .finally(() => {
                     es(!1);
@@ -140,7 +140,7 @@ let W = (e) => {
                     ey(['', e.target]);
                     break;
                 case 'submit':
-                    es(!0), eb();
+                    es(!0), eT();
             }
         };
     r.useEffect(() => {
@@ -234,9 +234,9 @@ let W = (e) => {
                             reportSubType: B
                         }),
                     null != j(t, 'channel_preview') && 'stage_channel' === n.name && (0, i.jsx)(w.Z, { stageInstance: n.record }),
-                    null != j(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, i.jsx)(b.Z, { event: n.record }),
+                    null != j(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, i.jsx)(T.Z, { event: n.record }),
                     null != j(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, i.jsx)(I.Z, { entry: n.record }),
-                    null != j(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, i.jsx)(T.Z, { entry: n.record }),
+                    null != j(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, i.jsx)(b.Z, { entry: n.record }),
                     null != j(t, 'app_preview') && 'application' === n.name && (0, i.jsx)(d.Z, { entry: n.record }),
                     null != $ &&
                         (0, i.jsx)(O.Z, {

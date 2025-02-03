@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(555573),
     y = n(10718),
     I = n(367790),
-    T = n(895924),
-    b = n(581364),
+    b = n(895924),
+    T = n(581364),
     S = n(56801),
     A = n(342687),
     N = n(826298),
@@ -127,7 +127,7 @@ let L = 512,
                         channelId: n.id,
                         command: e,
                         section: t,
-                        location: T.Vh.DISCOVERY,
+                        location: b.Vh.DISCOVERY,
                         triggerSection: i
                     });
                 },
@@ -145,7 +145,7 @@ let L = 512,
                         if (((t = n), F < (n += e.data.length))) {
                             let n = e.data[F - t],
                                 i = z.find((e) => e.id === n.applicationId);
-                            el(n, i, (0, b.tI)(e.section));
+                            el(n, i, (0, T.tI)(e.section));
                             break;
                         }
                     return !0;
@@ -216,7 +216,7 @@ let L = 512,
                     let a = Q[t.sectionIndex],
                         s = a.data[t.sectionRowIndex],
                         o = ''.concat(a.section.id, ':').concat(null !== (r = null == s ? void 0 : s.id) && void 0 !== r ? r : e);
-                    if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === T.iw.PLACEHOLDER) return (0, i.jsx)(A.Z, {}, o);
+                    if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === b.iw.PLACEHOLDER) return (0, i.jsx)(A.Z, {}, o);
                     let l = z.find((e) => e.id === s.applicationId);
                     return (0, i.jsx)(
                         f.ZP.NewCommand,
@@ -228,7 +228,7 @@ let L = 512,
                             selected: F === e,
                             showImage: a.section.id !== s.applicationId,
                             section: l,
-                            onClick: () => el(s, l, (0, b.tI)(a.section)),
+                            onClick: () => el(s, l, (0, T.tI)(a.section)),
                             onHover: () => {
                                 j(null), W(!1);
                             }

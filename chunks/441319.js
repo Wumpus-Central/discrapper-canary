@@ -23,8 +23,8 @@ var i = n(997945),
     v = n(73375),
     y = n(328664),
     I = n(328259),
-    T = n(19009),
-    b = n(234912),
+    b = n(19009),
+    T = n(234912),
     S = n(405571),
     A = n(730886),
     N = n(473974),
@@ -60,7 +60,7 @@ function D() {
         },
         {
             id: i.Ru.MATTE_LIGHT,
-            iconSource: T,
+            iconSource: b,
             name: r.intl.string(r.t.G2W309),
             isPremium: !0
         },
@@ -162,7 +162,7 @@ function D() {
         },
         {
             id: i.Ru.MIDNIGHT_PRISM,
-            iconSource: b,
+            iconSource: T,
             isPremium: !0,
             name: r.intl.string(r.t.nshUZW)
         },

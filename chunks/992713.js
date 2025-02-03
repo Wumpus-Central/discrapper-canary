@@ -37,7 +37,7 @@ class v extends o.Z {
     constructor(...e) {
         super(...e),
             m(this, 'actions', {
-                GUILD_CREATE: T,
+                GUILD_CREATE: b,
                 DELETED_ENTITY_IDS: y
             });
     }
@@ -52,14 +52,14 @@ function y(e) {
 }
 function I() {
     l.Z.getAll().then((e) => {
-        e.forEach((e) => b(e));
+        e.forEach((e) => T(e));
     });
 }
-function T(e) {
-    let { guild: t } = e;
-    t.unableToSyncDeletes && b(t.id);
-}
 function b(e) {
+    let { guild: t } = e;
+    t.unableToSyncDeletes && T(t.id);
+}
+function T(e) {
     setTimeout(() => S(e), Math.ceil(Math.random() * g));
 }
 function S(e) {

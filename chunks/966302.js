@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(898531),
     y = n(861254),
     I = n(923973),
-    T = n(189771),
-    b = n(560688),
+    b = n(189771),
+    T = n(560688),
     S = n(88479),
     A = n(136995),
     N = n(25827),
@@ -84,7 +84,7 @@ function Y(e) {
 function W(e) {
     let { canVideo: t, channel: n, numVideoDevices: r } = e,
         { cameraUnavailable: a, enabled: o } = (0, I.Z)(),
-        l = (0, T.Z)(n),
+        l = (0, b.Z)(n),
         { groupedButtons: d } = (0, y.ZP)({ location: 'CallActionButtons' });
     return (0, i.jsxs)('div', {
         className: s()(G.wrapper, d ? G.experimentActions : G.actions),
@@ -119,7 +119,7 @@ function W(e) {
                             channel: n,
                             onPopoutClick: r > 1 ? s : null,
                             popoutOpen: u,
-                            onCameraUnavailable: b.Z,
+                            onCameraUnavailable: T.Z,
                             onChange: () => {
                                 var e;
                                 f.default.selectVoiceChannel(n.id, !0), (0, m.XU)(null !== (e = n.guild_id) && void 0 !== e ? e : M.ME, n.id);
@@ -150,9 +150,9 @@ function K(e) {
                   })
                 : null,
         I = null !== (t = (0, p.x)(m, H, !0)) && void 0 !== t ? t : y,
-        T = (0, h.ZP)(m),
-        [b, S] = (0, l.Wu)([R.Z], () => [R.Z.supports(k.AN.VIDEO), Object.keys(R.Z.getVideoDevices()).length]),
-        A = null != v ? ''.concat(T, ', ').concat(v.name) : T,
+        b = (0, h.ZP)(m),
+        [T, S] = (0, l.Wu)([R.Z], () => [R.Z.supports(k.AN.VIDEO), Object.keys(R.Z.getVideoDevices()).length]),
+        A = null != v ? ''.concat(b, ', ').concat(v.name) : b,
         N = (0, l.e7)([D.Z], () => D.Z.isFocused()),
         O = (0, l.e7)([L.Z], () => L.Z.getMode(m.id)),
         w = r.useCallback((e) => {
@@ -174,7 +174,7 @@ function K(e) {
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [m]);
-    let z = O === M.WtW.VIDEO && b && S > 0,
+    let z = O === M.WtW.VIDEO && T && S > 0,
         q = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(P.Z, {

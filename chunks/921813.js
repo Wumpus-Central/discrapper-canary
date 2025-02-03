@@ -19,7 +19,7 @@ var r = n(120356),
     v = n(228168),
     y = n(154960);
 function I(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: r, onUpsellClick: I, pendingBanner: T, pendingBio: b, pendingPronouns: S, pendingAvatar: A, pendingAvatarDecoration: N, pendingNickname: C, pendingGlobalName: R, pendingThemeColors: O, pendingProfileEffectId: D, avatarClassName: x, containerClassName: L, isTryItOutFlow: P = !1, disabledInputs: w = !1, hideCustomStatus: M = !1, hideBioSection: k = !1, hideMessageInput: U = !0, hideExampleButton: G = !1 } = e,
+    let { user: t, guild: n, canUsePremiumCustomization: r, onUpsellClick: I, pendingBanner: b, pendingBio: T, pendingPronouns: S, pendingAvatar: A, pendingAvatarDecoration: N, pendingNickname: C, pendingGlobalName: R, pendingThemeColors: O, pendingProfileEffectId: D, avatarClassName: x, containerClassName: L, isTryItOutFlow: P = !1, disabledInputs: w = !1, hideCustomStatus: M = !1, hideBioSection: k = !1, hideMessageInput: U = !0, hideExampleButton: G = !1 } = e,
         B = (0, l.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: Z, avatarDecorationSrc: F } = (0, c.Z)({
             user: t,
@@ -55,7 +55,7 @@ function I(e) {
                         displayProfile: B,
                         guildId: null == n ? void 0 : n.id,
                         canUsePremiumCustomization: r,
-                        pendingBanner: T,
+                        pendingBanner: b,
                         isTryItOutFlow: P,
                         disabledInputs: w,
                         onUpsellClick: () => (null == I ? void 0 : I({ object: E.qAy.EDIT_PROFILE_BANNER }))
@@ -89,7 +89,7 @@ function I(e) {
                 pendingAvatar: A,
                 pendingNickname: C,
                 pendingGlobalName: R,
-                pendingBio: b,
+                pendingBio: T,
                 pendingPronouns: S,
                 isTryItOutFlow: P,
                 hideBioSection: k

@@ -20,8 +20,8 @@ function _(e) {
     if (null == u) return null;
     let y = (0, l.EY)(u.thumbnail),
         I = !v && u.has_media_attachment,
-        T = v ? d.intl.string(d.t.UsZEBA) : d.intl.string(d.t.ReFzYW),
-        b = null != g ? o.ZP.getName(u.guild_id, u.channel_id, g) : void 0,
+        b = v ? d.intl.string(d.t.UsZEBA) : d.intl.string(d.t.ReFzYW),
+        T = null != g ? o.ZP.getName(u.guild_id, u.channel_id, g) : void 0,
         S = null == g ? void 0 : g.getAvatarURL(null == _ ? void 0 : _.id, f);
     (null == S || E !== u.guild_id) &&
         (S = s.ZP.getGuildIconURL({
@@ -35,7 +35,7 @@ function _(e) {
     return {
         title: null !== (r = u.title) && void 0 !== r ? r : '',
         subtitle: u.description,
-        ctaText: T,
+        ctaText: b,
         coverImage: y,
         coverImageOverlayText: I ? d.intl.string(d.t.YonliY) : void 0,
         parentChannelId: u.parent_channel_id,
@@ -46,7 +46,7 @@ function _(e) {
         guildId: u.guild_id,
         guildName: null !== (a = null == _ ? void 0 : _.name) && void 0 !== a ? a : u.guild_name,
         authorId: null == u ? void 0 : u.author_id,
-        authorName: b,
+        authorName: T,
         channelName: null == p ? void 0 : p.name,
         avatarUrl: S,
         shouldShowBlurredThumbnailImage: I,

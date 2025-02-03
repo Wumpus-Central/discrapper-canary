@@ -28,8 +28,8 @@ var i = n(200651),
     v = n(977156),
     y = n(920916),
     I = n(669041),
-    T = n(341907),
-    b = n(604162),
+    b = n(341907),
+    T = n(604162),
     S = n(388032);
 function A(e) {
     let { quest: t, location: n, questContentPosition: i, questContentRowIndex: a } = e,
@@ -49,12 +49,12 @@ function A(e) {
             }),
             o
                 ? (0, E.Bg)(t.config)
-                    ? (0, T.openQuestsNitroRewardModal)(t, n)
+                    ? (0, b.openQuestsNitroRewardModal)(t, n)
                     : (0, E.Xv)(t.config)
                       ? (0, y.m)(t, n)
                       : (0, E.vQ)(t.config)
-                        ? (0, T.openQuestInGameRewardModal)(t, n)
-                        : (0, T.openQuestsRewardCodeModal)({
+                        ? (0, b.openQuestInGameRewardModal)(t, n)
+                        : (0, b.openQuestsRewardCodeModal)({
                               questId: t.id,
                               location: n,
                               questContentPosition: i
@@ -156,7 +156,7 @@ function O(e) {
                             questContentPosition: o,
                             questContentRowIndex: l
                         }),
-                            d && (0, T.openVideoQuestModal)(n);
+                            d && (0, b.openVideoQuestModal)(n);
                     }
                 };
             case h.OH.ACCEPTED:
@@ -179,9 +179,9 @@ function O(e) {
                     };
                 if (d)
                     return {
-                        text: (0, b.F9)(v),
+                        text: (0, T.F9)(v),
                         tooltipText: S.intl.string(S.t.hsbwjo),
-                        onClick: () => (0, T.openVideoQuestModal)(n)
+                        onClick: () => (0, b.openVideoQuestModal)(n)
                     };
                 return {
                     text: S.intl.string(S.t.cfY4PD),

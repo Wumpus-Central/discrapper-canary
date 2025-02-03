@@ -139,11 +139,11 @@ function I(e, t) {
     for (let i of e) n = !1 !== t(i) || n;
     return n;
 }
-function T(e) {
+function b(e) {
     let { messages: t } = e;
     return I(t, (e) => y(e));
 }
-function b(e) {
+function T(e) {
     let { messages: t } = e;
     return I(Object.values(t), (e) => I(Object.values(e), (e) => y(e)));
 }
@@ -235,10 +235,10 @@ class U extends (i = s.ZP.Store) {
 }
 _(U, 'displayName', 'ReferencedMessageStore');
 let G = new U(o.Z, {
-    CACHE_LOADED: b,
-    LOCAL_MESSAGES_LOADED: T,
-    LOAD_MESSAGES_SUCCESS: T,
-    LOAD_MESSAGES_AROUND_SUCCESS: T,
+    CACHE_LOADED: T,
+    LOCAL_MESSAGES_LOADED: b,
+    LOAD_MESSAGES_SUCCESS: b,
+    LOAD_MESSAGES_AROUND_SUCCESS: b,
     SEARCH_FINISH: S,
     MOD_VIEW_SEARCH_FINISH: S,
     LOAD_THREADS_SUCCESS: M,

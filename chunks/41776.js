@@ -72,11 +72,11 @@ function I(e) {
         s = null == i;
     return !!(a && !s && d.includes(n)) && (m(n), (_ = null), (p = null), !0);
 }
-function T(e) {
+function b(e) {
     let { guild: t } = e;
     return !!d.includes(t.id) && (m(t.id), (_ = null), (p = null), !0);
 }
-function b(e) {
+function T(e) {
     let { ignoredGuildIds: t } = e,
         n = h(t);
     return n && ((_ = null), (p = null)), n;
@@ -121,9 +121,9 @@ c(N, 'displayName', 'LurkingStore');
 let C = new N(a.Z, {
     CONNECTION_OPEN: A,
     GUILD_JOIN: v,
-    GUILD_STOP_LURKING: b,
+    GUILD_STOP_LURKING: T,
     GUILD_STOP_LURKING_FAILURE: S,
     GUILD_CREATE: y,
-    GUILD_DELETE: T,
+    GUILD_DELETE: b,
     GUILD_MEMBER_ADD: I
 });

@@ -25,10 +25,10 @@ var i = n(147018),
     },
     y = (v.prototype = E.prototype),
     I = 'stack' in g(m),
-    T = 'stack' in new E(1, 2),
-    b = E && p && Object.getOwnPropertyDescriptor(r, m),
-    S = !!b && !(b.writable && b.configurable),
-    A = I && !S && !T;
+    b = 'stack' in new E(1, 2),
+    T = E && p && Object.getOwnPropertyDescriptor(r, m),
+    S = !!T && !(T.writable && T.configurable),
+    A = I && !S && !b;
 i(
     {
         global: !0,

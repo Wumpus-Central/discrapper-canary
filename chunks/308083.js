@@ -12,12 +12,12 @@ n.d(t, {
     U6: () => v,
     Us: () => g,
     WZ: () => R,
-    Wy: () => b,
+    Wy: () => T,
     c4: () => p,
     cG: () => d,
     cm: () => _,
     dM: () => Z,
-    f4: () => T,
+    f4: () => b,
     gQ: () => j,
     gh: () => O,
     i1: () => M,
@@ -71,7 +71,7 @@ function I(e) {
             return e;
     }
 }
-function T() {
+function b() {
     return {
         [l.z.SOCIAL]: {
             type: l.z.SOCIAL,
@@ -99,10 +99,10 @@ function T() {
         }
     };
 }
-var b = (function (e) {
+var T = (function (e) {
     return (e[(e.GAMES = 0)] = 'GAMES'), (e[(e.PLAYSTYLE = 1)] = 'PLAYSTYLE'), (e[(e.UTILITY_TRAITS = 2)] = 'UTILITY_TRAITS'), (e[(e.INTERESTS = 3)] = 'INTERESTS'), (e[(e.DESCRIPTION = 4)] = 'DESCRIPTION'), (e[(e.CUSTOMIZE_TAG_BADGE = 5)] = 'CUSTOMIZE_TAG_BADGE'), (e[(e.CUSTOMIZE_BANNER = 6)] = 'CUSTOMIZE_BANNER'), (e[(e.MEMBER_APPLICATION = 7)] = 'MEMBER_APPLICATION'), e;
 })({});
-if (isNaN(Number(Object.values(b).pop()))) throw Error('Failed to get the last step in the ClanSetupSteps enum');
+if (isNaN(Number(Object.values(T).pop()))) throw Error('Failed to get the last step in the ClanSetupSteps enum');
 let S = ['Server: NA', 'Server: EU', 'Server: LATAM', 'Server: KR', 'Server: AP', 'Voice ON', 'Voice OFF', 'Unrated', 'All Ranks', 'Bronze+', 'Silver+', 'Gold+', 'Platinum+', 'Diamond+'],
     A = new Set([...S, 'Server: NA', 'Server: EU', 'Server: Asia', 'Server: TW/HK/MO', 'Mondstadt', 'Liyue', 'Inazuma', 'Sumeru', 'Fontaine', 'F2P', 'Spenders', 'Co-op', 'Support']),
     N = ['20+', '30+', '40+', 'All Ages'],

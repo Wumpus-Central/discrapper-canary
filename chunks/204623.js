@@ -30,7 +30,7 @@ function I(e, t, n) {
         e
     );
 }
-function T() {
+function b() {
     let e = window.require('electron').remote.getCurrentWindow();
     (g.ZP.minimize = () => e.minimize()),
         (g.ZP.maximize = () => {
@@ -38,7 +38,7 @@ function T() {
         }),
         (g.ZP.close = () => e.close());
 }
-let b = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(E.Z);
+let T = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(E.Z);
 class S extends r.PureComponent {
     getPlatform() {
         var e;
@@ -46,7 +46,7 @@ class S extends r.PureComponent {
         return null != t && /^win/i.test(t) ? m.PlatformTypes.WINDOWS : null != t && /darwin|os x/i.test(t) ? m.PlatformTypes.OSX : m.PlatformTypes.LINUX;
     }
     componentDidMount() {
-        T();
+        b();
     }
     render() {
         let e = (0, i.jsx)('div', {
@@ -70,7 +70,7 @@ class S extends r.PureComponent {
         return (0, i.jsxs)(r.Fragment, {
             children: [
                 (0, i.jsx)(o.ql, { children: (0, i.jsx)('html', { className: (0, c.QeD)(v.BRd.DARK) }) }),
-                (0, i.jsx)(b, { type: this.getPlatform() }),
+                (0, i.jsx)(T, { type: this.getPlatform() }),
                 (0, i.jsx)(f.Z, {
                     title: y.intl.string(y.t['3h+n+/']),
                     note: e,

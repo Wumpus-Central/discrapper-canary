@@ -125,8 +125,8 @@ class d extends i.EventEmitter {
         for (let e of Object.values(g)) Array.isArray(e) && (v += e.length);
         let y = !0 === g.isLoading,
             I = this.shouldShow(v, y, f),
-            T = this.state.selectedIndex;
-        !I || y ? (T = null) : null != T && T >= v && (T = v - 1),
+            b = this.state.selectedIndex;
+        !I || y ? (b = null) : null != b && b >= v && (b = v - 1),
             I && !this.state.isVisible && (0, a.a7)(d, this.props.channel, E),
             this.setState({
                 query: {
@@ -139,7 +139,7 @@ class d extends i.EventEmitter {
                     isLoading: y
                 },
                 isVisible: I,
-                selectedIndex: T
+                selectedIndex: b
             });
     }
     shouldShow(e, t, n) {

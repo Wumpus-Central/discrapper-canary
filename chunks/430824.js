@@ -56,15 +56,15 @@ function I(e) {
     }
     i = Object.keys(g).length;
 }
-function T(e) {
+function b(e) {
     for (let t of ((g = {}), (m = {}), (i = 0), e)) i++, (g[t.id] = u.cL(t)), (m[t.id] = t.roles);
 }
-function b(e) {
-    T(e.guilds);
+function T(e) {
+    b(e.guilds);
 }
 function S(e) {
     if (0 === e.guilds.length) return !1;
-    T(e.guilds);
+    b(e.guilds);
 }
 function A(e) {
     var t;
@@ -189,7 +189,7 @@ let k = new M(o.Z, {
     BACKGROUND_SYNC: I,
     CONNECTION_OPEN: y,
     OVERLAY_INITIALIZE: A,
-    CACHE_LOADED: b,
+    CACHE_LOADED: T,
     CACHE_LOADED_LAZY: S,
     GUILD_CREATE: N,
     GUILD_UPDATE: C,

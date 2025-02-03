@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(176354),
     y = n(624138),
     I = n(981631),
-    T = n(388032),
-    b = n(61788);
+    b = n(388032),
+    T = n(61788);
 let S = 20,
     A = 125,
     N = (0, g.hQ)(),
@@ -29,17 +29,17 @@ let S = 20,
 function D(e) {
     switch (d.Z.convert.toCodePoint(e)) {
         case '1f3fb':
-            return T.intl.string(T.t.BVK5b2);
+            return b.intl.string(b.t.BVK5b2);
         case '1f3fc':
-            return T.intl.string(T.t.xJWOKy);
+            return b.intl.string(b.t.xJWOKy);
         case '1f3fd':
-            return T.intl.string(T.t['MB+T5u']);
+            return b.intl.string(b.t['MB+T5u']);
         case '1f3fe':
-            return T.intl.string(T.t.MODud3);
+            return b.intl.string(b.t.MODud3);
         case '1f3ff':
-            return T.intl.string(T.t['0uzqsb']);
+            return b.intl.string(b.t['0uzqsb']);
         default:
-            return T.intl.string(T.t.bGN1o6);
+            return b.intl.string(b.t.bGN1o6);
     }
 }
 let x = (e) => {
@@ -59,10 +59,10 @@ let x = (e) => {
             role: 'option',
             'aria-selected': 0 === s,
             onClick: () => r(n),
-            className: b.diversityEmojiItem,
+            className: T.diversityEmojiItem,
             children: (0, i.jsx)(u.animated.div, {
                 'aria-label': D(n),
-                className: b.diversityEmojiItemImage,
+                className: T.diversityEmojiItemImage,
                 style: {
                     backgroundImage: 'url("'.concat(l, '")'),
                     ...d
@@ -94,7 +94,7 @@ let x = (e) => {
                             ...r,
                             id: t,
                             ref: n,
-                            className: s()(b.diversitySelectorOptions, { [b.diversitySelectorOptionsHasTabWrapper]: o }),
+                            className: s()(T.diversitySelectorOptions, { [T.diversitySelectorOptionsHasTabWrapper]: o }),
                             style: f,
                             role: 'listbox',
                             children: p.map((e, t) =>
@@ -138,15 +138,15 @@ let x = (e) => {
             children: [
                 (0, i.jsx)(_.P3F, {
                     innerRef: d,
-                    className: b.diversitySelectorButton,
+                    className: T.diversitySelectorButton,
                     onClick: f,
-                    'aria-label': T.intl.string(T.t.pAVHxc),
+                    'aria-label': b.intl.string(b.t.pAVHxc),
                     'aria-haspopup': !0,
                     'aria-expanded': l,
                     'aria-controls': N,
                     tabIndex: l ? -1 : 0,
                     children: (0, i.jsx)('div', {
-                        className: b.diversityEmojiItemImage,
+                        className: T.diversityEmojiItemImage,
                         style: { backgroundImage: 'url("'.concat(o, '")') }
                     })
                 }),

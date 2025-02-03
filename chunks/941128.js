@@ -30,8 +30,8 @@ function v(e, t, n) {
 }
 let y = [E.ff.AUTHENTICATION_FAILED, E.ff.NOT_ENTITLED],
     I = 'DispatchManagerStore',
-    T = [],
     b = [],
+    T = [],
     S = !1,
     A = null,
     N = null,
@@ -41,7 +41,7 @@ let y = [E.ff.AUTHENTICATION_FAILED, E.ff.NOT_ENTITLED],
     D = null;
 function x() {
     let e = {
-        queue: T,
+        queue: b,
         paused: S,
         userActions: Array.from(R)
     };
@@ -51,7 +51,7 @@ function L(e, t) {
     return (null != A && A.applicationId === e && A.branchId === t) || (null != N && N.applicationId === e && N.branchId === t);
 }
 function P() {
-    let e = T[0];
+    let e = b[0];
     if (null != e) {
         let { comboId: t, action: n } = e,
             { applicationId: i, branchId: r } = (0, _.CP)(t);
@@ -65,7 +65,7 @@ function P() {
 }
 function w(e, t) {
     let n = (0, _.Tu)(e, t);
-    return T.findIndex((e) => e.comboId === n);
+    return b.findIndex((e) => e.comboId === n);
 }
 function M(e, t, n, i) {
     let r = (0, _.Tu)(e, t),
@@ -73,17 +73,17 @@ function M(e, t, n, i) {
             comboId: r,
             action: i
         },
-        s = b.indexOf(r);
-    -1 !== s && b.splice(s, 1);
+        s = T.indexOf(r);
+    -1 !== s && T.splice(s, 1);
     let o = w(e, t);
-    0 !== o && (n ? -1 === o && (T.push(a), P()) : (o > 0 && T.splice(o, 1), T.unshift(a), P())), !n && S && p.Z.resume(), x();
+    0 !== o && (n ? -1 === o && (b.push(a), P()) : (o > 0 && b.splice(o, 1), b.unshift(a), P())), !n && S && p.Z.resume(), x();
 }
 function k(e, t) {
     let n = (0, _.Tu)(e, t),
-        i = b.indexOf(n);
-    -1 !== i && b.splice(i, 1);
+        i = T.indexOf(n);
+    -1 !== i && T.splice(i, 1);
     let r = w(e, t);
-    -1 !== r && (T.splice(r, 1), x()), P();
+    -1 !== r && (b.splice(r, 1), x()), P();
 }
 function U(e) {
     let { applicationId: t, branchId: n } = e;
@@ -108,13 +108,13 @@ function V(e) {
     let { applicationId: t, branchId: n } = e,
         i = w(t, n);
     if (i < 1) return !1;
-    T.splice(0, 0, T.splice(i, 1)[0]), P(), S && p.Z.resume(), x();
+    b.splice(0, 0, b.splice(i, 1)[0]), P(), S && p.Z.resume(), x();
 }
 function j(e) {
     let { applicationId: t, branchId: n } = e,
         i = (0, _.Tu)(t, n),
-        r = b.indexOf(i);
-    -1 !== r && b.splice(r, 1);
+        r = T.indexOf(i);
+    -1 !== r && T.splice(r, 1);
 }
 function H(e) {
     let { state: t } = e;
@@ -122,14 +122,14 @@ function H(e) {
     let n = S;
     (S = t.paused), (A = t.currentTask), (N = t.nextTask);
     let i = !1;
-    (T = T.filter((e) => {
+    (b = b.filter((e) => {
         let { comboId: t } = e,
             { applicationId: n, branchId: r } = (0, _.CP)(t),
             s = m.Z.getState(n, r),
             o = f.Z.getTargetBuildId(n, r),
             l = f.Z.getTargetManifests(n, r);
         if (null != s && s.type === g.vxO.UP_TO_DATE && s.buildId === s.targetBuildId && s.buildId === o && a().isEqual(s.manifestIds, s.targetManifestIds) && a().isEqual(s.manifestIds, l)) {
-            if ((b.push(t), R.has(t))) {
+            if ((T.push(t), R.has(t))) {
                 switch (R.get(t)) {
                     case 'Install':
                         u.XT(n, s);
@@ -197,16 +197,16 @@ class X extends (i = s.ZP.Store) {
                       paused: null,
                       userActions: null
                   };
-        null != t.queue && (T = Q(t.queue)), null != t.paused && (S = t.paused), null != t.userActions && (R = new Map(Array.from(t.userActions))), this.waitFor(m.Z, c.ZP), this.syncWith([c.ZP], K), this.waitFor(m.Z);
+        null != t.queue && (b = Q(t.queue)), null != t.paused && (S = t.paused), null != t.userActions && (R = new Map(Array.from(t.userActions))), this.waitFor(m.Z, c.ZP), this.syncWith([c.ZP], K), this.waitFor(m.Z);
     }
     get activeItems() {
-        return T.map((e) => {
+        return b.map((e) => {
             let { comboId: t } = e;
             return (0, _.CP)(t);
         });
     }
     get finishedItems() {
-        return b.map(_.CP);
+        return T.map(_.CP);
     }
     get paused() {
         return S;

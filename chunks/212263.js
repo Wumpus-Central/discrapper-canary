@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(631771),
     y = n(609218),
     I = n(210887),
-    T = n(626135),
-    b = n(176354),
+    b = n(626135),
+    T = n(176354),
     S = n(74538),
     A = n(543241),
     N = n(149203),
@@ -55,11 +55,11 @@ let L = (e) => {
     t = M === R.Hz.REACTION ? O.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == w ? O.cd.EMOJI_PICKER_FLOATING_UPSELL : w.subCategory === N.t0.TOP_GUILD_EMOJI ? O.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : w.subCategory === N.t0.NEWLY_ADDED_EMOJI ? O.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : O.cd.EMOJI_PICKER_EMOJI_CLICKED;
     let J = null != w ? w.emoji : void 0,
         $ = null != J && J.animated,
-        ee = null != J && !b.ZP.isInternalEmojiForGuildId(J, null == P ? void 0 : P.getGuildId()),
+        ee = null != J && !T.ZP.isInternalEmojiForGuildId(J, null == P ? void 0 : P.getGuildId()),
         et = null != J ? C.qAy.EMOJI : C.qAy.EMOJI_PICKER_FLOATING_UPSELL;
     r.useEffect(() => {
         Q ||
-            T.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
+            b.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: t,
                 is_animated: $,
                 is_external: ee,

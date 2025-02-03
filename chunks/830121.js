@@ -30,8 +30,8 @@ var _ = n(807675),
 let v = 10,
     y = /^\/([a-zA-Z0-9-]+)$/,
     I = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
-    T = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
-    b = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
+    b = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
+    T = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
     S = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/?((about|images|privacy)\/?)?$/,
     A = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     N = /^\/activities\/([0-9-]+)\/?$/,
@@ -83,7 +83,7 @@ function H(e) {
 }
 function Y(e) {
     if (null == e) return null;
-    let t = e.match(b);
+    let t = e.match(T);
     return null != t && t.length >= 4
         ? {
               guildId: t[1],
@@ -138,7 +138,7 @@ function K(e) {
             p.Z.getInvite(e), h(g.g.INVITE, e);
         }
         (null == l ? void 0 : l.match(y)) != null && h(g.g.TEMPLATE, l.substring(1));
-        let m = null == u ? void 0 : u.match(T);
+        let m = null == u ? void 0 : u.match(b);
         if (null != m) {
             let e = m[1].toUpperCase();
             if (e === g.g.INVITE) {
@@ -153,9 +153,9 @@ function K(e) {
                 t = e.clientId;
             null == t || '' === t || (null === (a = e.scopes) || void 0 === a ? void 0 : a.some((e) => e !== c.x.APPLICATIONS_COMMANDS)) || h(g.g.APP_OAUTH2_LINK, t);
         }
-        let b = null == u ? void 0 : u.match(S);
-        if (null != b) {
-            let e = b[2];
+        let T = null == u ? void 0 : u.match(S);
+        if (null != T) {
+            let e = T[2];
             h(g.g.APP_DIRECTORY_PROFILE, e);
         }
         let O = null == u ? void 0 : u.match(A);

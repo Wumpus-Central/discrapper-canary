@@ -38,7 +38,7 @@ let o = /\n{2,}$/,
                 y = RegExp('^ {1,' + c + '}', 'gm'),
                 I = l.match(m);
             r()(null != I, 'markup list items can not be parsed.');
-            let T = !1;
+            let b = !1;
             return {
                 ordered: a,
                 start: s,
@@ -46,8 +46,8 @@ let o = /\n{2,}$/,
                     let r;
                     let a = e.replace(d, '').replace(y, ''),
                         s = i === I.length - 1,
-                        o = -1 !== a.indexOf('\n\n') || (s && T);
-                    T = o;
+                        o = -1 !== a.indexOf('\n\n') || (s && b);
+                    b = o;
                     let l = n.inline,
                         u = n._list,
                         c = n._listLevel;

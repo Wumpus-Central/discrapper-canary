@@ -42,10 +42,10 @@ function _(e) {
 let p = function (e) {
     let { children: t, className: n, compact: r = !1, timestamp: p, isVisibleOnlyOnHover: h = !1, cozyAlt: m = !1, isInline: g = !0, id: E, isEdited: v = !1, application: y } = e,
         I = f(p),
-        T = (0, o.Hg)(I),
-        b = r ? (0, o.vc)(I, 'LT') : (0, o.Y4)(I),
-        S = r ? (0, u.Z)(b) : null,
-        A = v ? c.intl.formatToPlainString(c.t.CDzOFR, { timeFormatted: T }) : T;
+        b = (0, o.Hg)(I),
+        T = r ? (0, o.vc)(I, 'LT') : (0, o.Y4)(I),
+        S = r ? (0, u.Z)(T) : null,
+        A = v ? c.intl.formatToPlainString(c.t.CDzOFR, { timeFormatted: b }) : b;
     return (0, i.jsx)('span', {
         className: a()(n, S, {
             [d.timestamp]: !0,
@@ -63,7 +63,7 @@ let p = function (e) {
                       children: (e) =>
                           (0, i.jsx)(_, {
                               tooltipProps: e,
-                              timeFormatted: b,
+                              timeFormatted: T,
                               timestamp: I,
                               id: E,
                               compact: r,
@@ -75,7 +75,7 @@ let p = function (e) {
                       timestamp: I,
                       compact: r,
                       children: (0, i.jsx)(_, {
-                          timeFormatted: b,
+                          timeFormatted: T,
                           timestamp: I,
                           id: E,
                           compact: r,

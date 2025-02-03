@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(594174),
     y = n(981631),
     I = n(37113),
-    T = n(65154),
-    b = n(388032);
+    b = n(65154),
+    T = n(388032);
 function S(e, t) {
     (0, o.ZDy)(
         async () => {
@@ -54,7 +54,7 @@ function A(e, t) {
                                 resolution: n,
                                 frameRate: i
                             },
-                            context: T.Yn.STREAM
+                            context: b.Yn.STREAM
                         };
                         null != C.desktopSource
                             ? (e.desktopSettings = {
@@ -116,11 +116,11 @@ function A(e, t) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.kSQ, {
-                label: b.intl.string(b.t.SkkeIi),
+                label: T.intl.string(T.t.SkkeIi),
                 children: k
             }),
             (0, i.jsx)(o.kSQ, {
-                label: b.intl.string(b.t.rHyPXl),
+                label: T.intl.string(T.t.rHyPXl),
                 children: U
             })
         ]

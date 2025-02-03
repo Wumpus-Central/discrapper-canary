@@ -39,16 +39,16 @@ function m(e) {
         });
         return;
     }
-    let T = y ? _.en1 : _.J6R,
-        b = !y;
-    if (c.length > T) {
-        b && null != g
+    let b = y ? _.en1 : _.J6R,
+        T = !y;
+    if (c.length > b) {
+        T && null != g
             ? a.Z.dispatch({
                   type: 'MESSAGE_LENGTH_UPSELL',
                   channel: g,
                   content: c
               })
-            : h(c.length, T),
+            : h(c.length, b),
             I({
                 valid: !1,
                 failureReason: _.zYc.MESSAGE_TOO_LONG

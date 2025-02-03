@@ -17,12 +17,12 @@ let { Themes: m } = n(15202).V,
     { SemanticColorExperiments: v } = u.V,
     { Shadows: y } = p.V,
     { Spacing: I } = h.V,
-    { Modules: T } = f.V,
-    { Layout: b } = d.V,
+    { Modules: b } = f.V,
+    { Layout: T } = d.V,
     S = l()(E, (e) => r()(e)),
     A = {
         themes: m,
-        modules: T,
+        modules: b,
         colors: l()(g, (e, t) => {
             let n = t;
             return {
@@ -63,7 +63,7 @@ let { Themes: m } = n(15202).V,
         })),
         radii: _.w,
         spacing: l()(I, (e) => ''.concat(e, 'px')),
-        layout: l()(b, (e) => ('number' == typeof e ? ''.concat(e, 'px') : e))
+        layout: l()(T, (e) => ('number' == typeof e ? ''.concat(e, 'px') : e))
     };
 function N(e, t) {
     return {

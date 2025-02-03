@@ -65,13 +65,13 @@ function y(e) {
 function I() {
     (h = {}), null != p && y(p);
 }
-function T(e) {
+function b(e) {
     let {
         guild: { id: t }
     } = e;
     (h[t] = void 0), p === t && y(t);
 }
-function b(e) {
+function T(e) {
     let {
         guild: { id: t }
     } = e;
@@ -145,9 +145,9 @@ let k = new M(a.Z, {
     CONNECTION_OPEN: I,
     OVERLAY_INITIALIZE: I,
     CACHE_LOADED_LAZY: I,
-    GUILD_CREATE: T,
-    GUILD_UPDATE: T,
-    GUILD_DELETE: b,
+    GUILD_CREATE: b,
+    GUILD_UPDATE: b,
+    GUILD_DELETE: T,
     CHANNEL_CREATE: S,
     CHANNEL_DELETE: S,
     CHANNEL_UPDATES: A,

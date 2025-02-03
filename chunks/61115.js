@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => b,
+    C: () => T,
     default: () => I
 }),
     n(47120);
@@ -24,14 +24,14 @@ let v = 2500,
 function I(e) {
     let { questId: t, survey: n, transitionState: a, onClose: s, onSubmit: f } = e,
         p = (0, _.B4)(t),
-        [I, b] = r.useState(0),
+        [I, T] = r.useState(0),
         [A, N] = (0, l.q_F)(() => ({
             from: { width: '0%' },
             config: { duration: v }
         })),
         C = (e) => {
             f(),
-                b(1),
+                T(1),
                 null != p &&
                     d.default.track(h.rMx.QUEST_SURVEY_SUBMITTED, {
                         ...S(p, n),
@@ -88,7 +88,7 @@ function I(e) {
                                 className: g.modalContent,
                                 children: n.choices.map((e) =>
                                     (0, i.jsx)(
-                                        T,
+                                        b,
                                         {
                                             choice: e,
                                             onClick: C
@@ -143,7 +143,7 @@ function I(e) {
         })
     );
 }
-function T(e) {
+function b(e) {
     let { className: t, choice: n, onClick: r } = e;
     return (0, i.jsxs)(l.P3F, {
         className: s()(g.choiceContainer, t),
@@ -157,7 +157,7 @@ function T(e) {
         ]
     });
 }
-function b(e) {
+function T(e) {
     let t = !1;
     (0, l.ZDy)(
         async () => {

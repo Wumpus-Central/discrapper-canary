@@ -32,11 +32,11 @@ let I = new d.Z({
     id: '???',
     username: '???'
 });
-function T(e) {
+function b(e) {
     var t;
     return null == e.author ? I : null != e.webhook_id ? new d.Z(e.author) : null !== (t = p.default.getUser(e.author.id)) && void 0 !== t ? t : new d.Z(e.author);
 }
-function b(e) {
+function T(e) {
     return !1;
 }
 function S(e) {
@@ -60,7 +60,7 @@ function A(e) {
         A = null !== (a = e.mention_roles) && void 0 !== a ? a : [],
         N = null !== (s = e.mention_channels) && void 0 !== s ? s : [],
         C = e.message_reference,
-        R = T(e),
+        R = b(e),
         D = null,
         P = null == e ? void 0 : e.gift_info,
         w = e.gifting_prompt,
@@ -68,7 +68,7 @@ function A(e) {
         k = e.type === y.uaV.THREAD_STARTER_MESSAGE ? (null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id) : void 0,
         U = e.content;
     return new c.ZP(
-        (e.type === y.uaV.PREMIUM_REFERRAL && ((d = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (U = '')), b(e))
+        (e.type === y.uaV.PREMIUM_REFERRAL && ((d = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (U = '')), T(e))
             ? {
                   ...D,
                   id: e.id,

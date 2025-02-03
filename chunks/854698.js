@@ -40,8 +40,8 @@ let p = 365,
     v = 4,
     y = [s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday],
     I = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday],
-    T = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
-    b = [s.Ci.SA.weekday, s.Ci.SU.weekday],
+    b = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
+    T = [s.Ci.SA.weekday, s.Ci.SU.weekday],
     S = [s.Ci.FR.weekday, s.Ci.SA.weekday],
     A = [s.Ci.SU.weekday, s.Ci.MO.weekday],
     N = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
@@ -217,12 +217,12 @@ function Y(e, t) {
 function W(e) {
     let t = P(e.toDate().getDay()),
         n = P(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? T : n.weekday - t.weekday < 0 ? I : y;
+    return n.weekday - t.weekday > 0 ? b : n.weekday - t.weekday < 0 ? I : y;
 }
 function K(e) {
     let t = P(e.toDate().getDay()),
         n = P(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? A : n.weekday - t.weekday < 0 ? S : b;
+    return n.weekday - t.weekday > 0 ? A : n.weekday - t.weekday < 0 ? S : T;
 }
 function z(e, t) {
     let n = W(t),

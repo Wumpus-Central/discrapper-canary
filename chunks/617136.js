@@ -1,8 +1,8 @@
 n.d(t, {
     Ic: () => I,
-    O5: () => b,
+    O5: () => T,
     _3: () => y,
-    _F: () => T,
+    _F: () => b,
     _b: () => p,
     dA: () => E,
     jZ: () => v,
@@ -87,7 +87,7 @@ function I(e) {
         }
     });
 }
-function T() {
+function b() {
     let e = (0, o.WD)();
     function t(t) {
         let { questId: n, event: i, properties: r, trackGuildAndChannelMetadata: a = !1 } = t;
@@ -103,8 +103,8 @@ function T() {
     }
     return i.useCallback(t, [e]);
 }
-function b() {
-    let e = T();
+function T() {
+    let e = b();
     return i.useCallback(
         (t) => {
             let { questId: n, questContent: i, questContentCTA: r, questContentPosition: a, questContentRowIndex: s, trackGuildAndChannelMetadata: o = !1 } = t;

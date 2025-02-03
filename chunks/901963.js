@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(913527),
@@ -18,10 +18,10 @@ var i = n(200651),
     v = n(888084);
 let y = 'premiumRetentionEmojiPickerNotice',
     I = l.K.get(y),
-    T = (e) => {
+    b = (e) => {
         let { closePopout: t, channel: n } = e,
-            [a, T] = r.useState(!1),
-            { subscription: b, hasFetchedSubscriptions: S } = (0, o.cj)([_.ZP], () => ({
+            [a, b] = r.useState(!1),
+            { subscription: T, hasFetchedSubscriptions: S } = (0, o.cj)([_.ZP], () => ({
                 subscription: _.ZP.getPremiumSubscription(),
                 hasFetchedSubscriptions: _.ZP.hasFetchedSubscriptions()
             }));
@@ -29,13 +29,13 @@ let y = 'premiumRetentionEmojiPickerNotice',
             (r.useEffect(() => {
                 S || (0, c.jg)();
             }, [S]),
-            null == b || !(0, p.zV)(b.status) || a)
+            null == T || !(0, p.zV)(T.status) || a)
         )
             return null;
-        let A = b.status === m.O0b.PAST_DUE ? (0, p.lY)(b).expiresDate : s()(b.currentPeriodStart).add(g.gh),
-            N = ''.concat(b.id, ':').concat(A.toISOString());
+        let A = T.status === m.O0b.PAST_DUE ? (0, p.lY)(T).expiresDate : s()(T.currentPeriodStart).add(g.gh),
+            N = ''.concat(T.id, ':').concat(A.toISOString());
         if (I === N) return null;
-        let C = p.ZP.getPremiumType(b.planId) === g.p9.TIER_0 ? f.JX.PREMIUM_TIER_0 : p.ZP.getPremiumType(b.planId) === g.p9.TIER_1 ? f.JX.PREMIUM_TIER_1 : f.JX.PREMIUM_TIER_2;
+        let C = p.ZP.getPremiumType(T.planId) === g.p9.TIER_0 ? f.JX.PREMIUM_TIER_0 : p.ZP.getPremiumType(T.planId) === g.p9.TIER_1 ? f.JX.PREMIUM_TIER_1 : f.JX.PREMIUM_TIER_2;
         return (0, i.jsxs)('div', {
             className: v.premiumRetentionNotice,
             children: [
@@ -50,7 +50,7 @@ let y = 'premiumRetentionEmojiPickerNotice',
                         (0, i.jsx)(u.Text, {
                             variant: 'text-xs/normal',
                             children: E.intl.format(E.t.bTMjiI, {
-                                planName: p.ZP.getDisplayPremiumType(b.planId),
+                                planName: p.ZP.getDisplayPremiumType(T.planId),
                                 endsAt: A.toDate()
                             })
                         }),
@@ -66,7 +66,7 @@ let y = 'premiumRetentionEmojiPickerNotice',
                 }),
                 (0, i.jsx)(u.P3F, {
                     onClick: () => {
-                        l.K.set(y, N), (I = N), T(!0);
+                        l.K.set(y, N), (I = N), b(!0);
                     },
                     children: (0, i.jsx)(u.Dio, {
                         size: 'md',

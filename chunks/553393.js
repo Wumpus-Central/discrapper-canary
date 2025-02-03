@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(430824),
     y = n(496675),
     I = n(979651),
-    T = n(617136),
-    b = n(113434),
+    b = n(617136),
+    T = n(113434),
     S = n(497505),
     A = n(475595),
     N = n(602667),
@@ -48,7 +48,7 @@ function B(e) {
             quest: y,
             location: S.jn.MEMBERS_LIST
         }),
-        Y = (0, b.tP)(y),
+        Y = (0, T.tP)(y),
         W = (null == y ? void 0 : null === (t = y.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         K = (null == y ? void 0 : null === (n = y.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
         z = (null == y ? void 0 : null === (h = y.userStatus) || void 0 === h ? void 0 : h.completedAt) != null,
@@ -108,22 +108,22 @@ function B(e) {
         eo = 'top' === B ? ''.concat(M, ' ').concat(M, ' 0 0') : '0 0 '.concat(M, ' ').concat(M);
     if (null == y || Y || (W && !G(N, j))) return null;
     let el = () => {
-            (0, T._3)({
+            (0, b._3)({
                 questId: y.id,
                 questContent: S.jn.MEMBERS_LIST,
-                questContentCTA: T.jZ.OPEN_DISCLOSURE,
+                questContentCTA: b.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, O.openDisclosureModal)(y, {
                     content: S.jn.MEMBERS_LIST,
-                    ctaContent: T.jZ.OPEN_DISCLOSURE
+                    ctaContent: b.jZ.OPEN_DISCLOSURE
                 });
         },
         eu = () => {
-            (0, T._3)({
+            (0, b._3)({
                 questId: y.id,
                 questContent: S.jn.MEMBERS_LIST,
-                questContentCTA: T.jZ.LEARN_MORE,
+                questContentCTA: b.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, O.navigateToQuestHome)(D.dr.MEMBERS_LIST, S.jn.MEMBERS_LIST, y.id);
@@ -134,10 +134,10 @@ function B(e) {
         ed = () => {
             if (G(N, j) && null != j)
                 return (
-                    (0, T._3)({
+                    (0, b._3)({
                         questId: y.id,
                         questContent: S.jn.MEMBERS_LIST,
-                        questContentCTA: T.jZ.WATCH_STREAM,
+                        questContentCTA: b.jZ.WATCH_STREAM,
                         trackGuildAndChannelMetadata: !0
                     }),
                     c.default.selectVoiceChannel(j.id),

@@ -94,12 +94,12 @@ function o(e) {
             scope: 'computation-expression',
             match: /\b[_a-z]\w*(?=\s*\{)/
         },
-        T = {
+        b = {
             begin: [/^\s*/, r(/#/, s(...a)), /\b/],
             beginScope: { 2: 'meta' },
             end: i(/\s|$/)
         },
-        b = {
+        T = {
             variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]
         },
         S = {
@@ -150,7 +150,7 @@ function o(e) {
             match: r(/'/, s(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
-        (C.contains = [O, R, A, S, x, n, u, d, E, I, T, b, _, h]),
+        (C.contains = [O, R, A, S, x, n, u, d, E, I, b, T, _, h]),
         {
             name: 'F#',
             aliases: ['fs', 'f#'],
@@ -170,13 +170,13 @@ function o(e) {
                     begin: /\[</,
                     end: />\]/,
                     relevance: 2,
-                    contains: [d, N, A, S, x, b]
+                    contains: [d, N, A, S, x, T]
                 },
                 v,
                 E,
                 I,
-                T,
                 b,
+                T,
                 _,
                 h
             ]

@@ -22,11 +22,11 @@ function p(e) {
             },
             [y]
         ),
-        T = (0, a.e7)([d.Z], () => d.Z.isBlocked(y), [y]),
-        b = (0, l.Do)({ location: 'use-block-user-item-web' }),
+        b = (0, a.e7)([d.Z], () => d.Z.isBlocked(y), [y]),
+        T = (0, l.Do)({ location: 'use-block-user-item-web' }),
         S = (0, r.EQ)({
-            isStealthRemediationEnabled: b,
-            isBlocked: T
+            isStealthRemediationEnabled: T,
+            isBlocked: b
         })
             .with(
                 {
@@ -48,8 +48,8 @@ function p(e) {
         : (0, i.jsx)(s.sNh, {
               id: 'block',
               color: null != S ? S : 'default',
-              label: T ? _.intl.string(_.t.XyHpKC) : _.intl.string(_.t.l4EmaW),
-              action: T
+              label: b ? _.intl.string(_.t.XyHpKC) : _.intl.string(_.t.l4EmaW),
+              action: b
                   ? () => {
                         null == E || E(), o.Z.unblockUser(y, { location: v }), c.Z.showUnblockSuccessToast(y, null != h ? h : void 0);
                     }

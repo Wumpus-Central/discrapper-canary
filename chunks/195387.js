@@ -18,7 +18,7 @@ function m(e) {
         { newestAnalyticsLocation: v } = (0, s.ZP)(),
         y = (0, r.e7)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)),
         I = (0, l.m)(null != n ? n : null),
-        T = (0, r.e7)([d.Z], () => (null != m ? m : d.Z.getChannelId(n, !0)), [m, n]);
+        b = (0, r.e7)([d.Z], () => (null != m ? m : d.Z.getChannelId(n, !0)), [m, n]);
     return null == n || !I || y
         ? null
         : (0, i.jsx)(f.oY, {
@@ -28,7 +28,7 @@ function m(e) {
               tooltipText: h.intl.string(h.t.kj3tz8),
               onClick: () => {
                   u.Z.close(),
-                      (0, o.r)(n, t.id, null != T ? T : _.oC.MEMBER_SAFETY, {
+                      (0, o.r)(n, t.id, null != b ? b : _.oC.MEMBER_SAFETY, {
                           modViewPanel: p.k.INFO,
                           sourceLocation: v
                       }),

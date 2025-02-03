@@ -2911,7 +2911,7 @@ var f = function (e) {
         for (e = 0; e < this.moov.traks.length; e++) (t = this.moov.traks[e]), this.buildTrakSampleLists(t);
     }),
     (f.prototype.buildTrakSampleLists = function (e) {
-        if (((e.samples = []), (e.samples_duration = 0), (e.samples_size = 0), (n = e.mdia.minf.stbl.stco || e.mdia.minf.stbl.co64), (i = e.mdia.minf.stbl.stsc), (r = e.mdia.minf.stbl.stsz || e.mdia.minf.stbl.stz2), (a = e.mdia.minf.stbl.stts), (s = e.mdia.minf.stbl.ctts), (o = e.mdia.minf.stbl.stss), (l = e.mdia.minf.stbl.stsd), (u = e.mdia.minf.stbl.subs), (_ = e.mdia.minf.stbl.stdp), (c = e.mdia.minf.stbl.sbgps), (d = e.mdia.minf.stbl.sgpds), (v = -1), (y = -1), (I = -1), (T = -1), (b = 0), (S = 0), (A = 0), f.initSampleGroups(e, null, c, d), void 0 !== r)) {
+        if (((e.samples = []), (e.samples_duration = 0), (e.samples_size = 0), (n = e.mdia.minf.stbl.stco || e.mdia.minf.stbl.co64), (i = e.mdia.minf.stbl.stsc), (r = e.mdia.minf.stbl.stsz || e.mdia.minf.stbl.stz2), (a = e.mdia.minf.stbl.stts), (s = e.mdia.minf.stbl.ctts), (o = e.mdia.minf.stbl.stss), (l = e.mdia.minf.stbl.stsd), (u = e.mdia.minf.stbl.subs), (_ = e.mdia.minf.stbl.stdp), (c = e.mdia.minf.stbl.sbgps), (d = e.mdia.minf.stbl.sgpds), (v = -1), (y = -1), (I = -1), (b = -1), (T = 0), (S = 0), (A = 0), f.initSampleGroups(e, null, c, d), void 0 !== r)) {
             for (t = 0; t < r.sample_sizes.length; t++) {
                 var t,
                     n,
@@ -2933,12 +2933,12 @@ var f = function (e) {
                     v,
                     y,
                     I,
-                    T,
                     b,
+                    T,
                     S,
                     A,
                     N = {};
-                (N.number = t), (N.track_id = e.tkhd.track_id), (N.timescale = e.mdia.mdhd.timescale), (N.alreadyRead = 0), (e.samples[t] = N), (N.size = r.sample_sizes[t]), (e.samples_size += N.size), 0 === t ? ((h = 1), (p = 0), (N.chunk_index = h), (N.chunk_run_index = p), (E = i.samples_per_chunk[p]), (g = 0), (m = p + 1 < i.first_chunk.length ? i.first_chunk[p + 1] - 1 : 1 / 0)) : t < E ? ((N.chunk_index = h), (N.chunk_run_index = p)) : (h++, (N.chunk_index = h), (g = 0), h <= m || (m = ++p + 1 < i.first_chunk.length ? i.first_chunk[p + 1] - 1 : 1 / 0), (N.chunk_run_index = p), (E += i.samples_per_chunk[p])), (N.description_index = i.sample_description_index[N.chunk_run_index] - 1), (N.description = l.entries[N.description_index]), (N.offset = n.chunk_offsets[N.chunk_index - 1] + g), (g += N.size), t > v && (y++, v < 0 && (v = 0), (v += a.sample_counts[y])), t > 0 ? ((e.samples[t - 1].duration = a.sample_deltas[y]), (e.samples_duration += e.samples[t - 1].duration), (N.dts = e.samples[t - 1].dts + e.samples[t - 1].duration)) : (N.dts = 0), s ? (t >= I && (T++, I < 0 && (I = 0), (I += s.sample_counts[T])), (N.cts = e.samples[t].dts + s.sample_offsets[T])) : (N.cts = N.dts), o ? (t == o.sample_numbers[b] - 1 ? ((N.is_sync = !0), b++) : ((N.is_sync = !1), (N.degradation_priority = 0)), u && u.entries[S].sample_delta + A == t + 1 && ((N.subsamples = u.entries[S].subsamples), (A += u.entries[S].sample_delta), S++)) : (N.is_sync = !0), f.process_sdtp(e.mdia.minf.stbl.sdtp, N, N.number), _ ? (N.degradation_priority = _.priority[t]) : (N.degradation_priority = 0), u && u.entries[S].sample_delta + A == t && ((N.subsamples = u.entries[S].subsamples), (A += u.entries[S].sample_delta)), (c.length > 0 || d.length > 0) && f.setSampleGroupProperties(e, N, t, e.sample_groups_info);
+                (N.number = t), (N.track_id = e.tkhd.track_id), (N.timescale = e.mdia.mdhd.timescale), (N.alreadyRead = 0), (e.samples[t] = N), (N.size = r.sample_sizes[t]), (e.samples_size += N.size), 0 === t ? ((h = 1), (p = 0), (N.chunk_index = h), (N.chunk_run_index = p), (E = i.samples_per_chunk[p]), (g = 0), (m = p + 1 < i.first_chunk.length ? i.first_chunk[p + 1] - 1 : 1 / 0)) : t < E ? ((N.chunk_index = h), (N.chunk_run_index = p)) : (h++, (N.chunk_index = h), (g = 0), h <= m || (m = ++p + 1 < i.first_chunk.length ? i.first_chunk[p + 1] - 1 : 1 / 0), (N.chunk_run_index = p), (E += i.samples_per_chunk[p])), (N.description_index = i.sample_description_index[N.chunk_run_index] - 1), (N.description = l.entries[N.description_index]), (N.offset = n.chunk_offsets[N.chunk_index - 1] + g), (g += N.size), t > v && (y++, v < 0 && (v = 0), (v += a.sample_counts[y])), t > 0 ? ((e.samples[t - 1].duration = a.sample_deltas[y]), (e.samples_duration += e.samples[t - 1].duration), (N.dts = e.samples[t - 1].dts + e.samples[t - 1].duration)) : (N.dts = 0), s ? (t >= I && (b++, I < 0 && (I = 0), (I += s.sample_counts[b])), (N.cts = e.samples[t].dts + s.sample_offsets[b])) : (N.cts = N.dts), o ? (t == o.sample_numbers[T] - 1 ? ((N.is_sync = !0), T++) : ((N.is_sync = !1), (N.degradation_priority = 0)), u && u.entries[S].sample_delta + A == t + 1 && ((N.subsamples = u.entries[S].subsamples), (A += u.entries[S].sample_delta), S++)) : (N.is_sync = !0), f.process_sdtp(e.mdia.minf.stbl.sdtp, N, N.number), _ ? (N.degradation_priority = _.priority[t]) : (N.degradation_priority = 0), u && u.entries[S].sample_delta + A == t && ((N.subsamples = u.entries[S].subsamples), (A += u.entries[S].sample_delta)), (c.length > 0 || d.length > 0) && f.setSampleGroupProperties(e, N, t, e.sample_groups_info);
             }
             t > 0 && ((e.samples[t - 1].duration = Math.max(e.mdia.mdhd.duration - e.samples[t - 1].dts, 0)), (e.samples_duration += e.samples[t - 1].duration));
         }
@@ -2976,8 +2976,8 @@ var f = function (e) {
                         }
                         if (d.subs) {
                             _.has_fragment_subsamples = !0;
-                            var T = d.first_sample_index;
-                            for (t = 0; t < d.subs.entries.length; t++) (T += d.subs.entries[t].sample_delta), ((h = _.samples[T - 1]).subsamples = d.subs.entries[t].subsamples);
+                            var b = d.first_sample_index;
+                            for (t = 0; t < d.subs.entries.length; t++) (b += d.subs.entries[t].sample_delta), ((h = _.samples[b - 1]).subsamples = d.subs.entries[t].subsamples);
                         }
                     }
         }

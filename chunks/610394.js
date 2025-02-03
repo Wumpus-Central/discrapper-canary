@@ -23,8 +23,8 @@ var i,
     v = n(829907),
     y = n(388627),
     I = n(987650),
-    T = n(501787),
-    b = n(981631);
+    b = n(501787),
+    T = n(981631);
 function S(e, t, n) {
     return (
         t in e
@@ -232,7 +232,7 @@ async function $(e) {
             J(e),
             (M = e),
             (0, m.tB)(e);
-        let r = null !== (n = await (null === l.Z || void 0 === l.Z ? void 0 : null === (t = l.Z.window) || void 0 === t ? void 0 : t.getNativeHandle(T.$J))) && void 0 !== n ? n : '';
+        let r = null !== (n = await (null === l.Z || void 0 === l.Z ? void 0 : null === (t = l.Z.window) || void 0 === t ? void 0 : t.getNativeHandle(b.$J))) && void 0 !== n ? n : '';
         return s.Z.updateOverlayState(e, o.mM.OVERLAY_RENDERING), V(e, { renderer_started_after: new Date().getTime() - i }), eu(!1), r;
     } catch (t) {
         C.error('failed to create out of process overlay host window', t), Y(e, t), s.Z.updateOverlayState(e, o.mM.OVERLAY_CRASHED_DISABLED);
@@ -243,7 +243,7 @@ function ee() {
     C.verbose('Destroying OOP host window'), x.resetGPUBoosts();
     try {
         var e;
-        null === l.Z || void 0 === l.Z || null === (e = l.Z.window) || void 0 === e || e.close(T.$J);
+        null === l.Z || void 0 === l.Z || null === (e = l.Z.window) || void 0 === e || e.close(b.$J);
     } catch (e) {
         C.error('Error destroying overlay window:', e), H(null != M ? M : m.R2, e);
     }
@@ -257,12 +257,12 @@ function ee() {
 function et(e) {
     var t;
     let n = null !== (t = F(e).renderer_started_after) && void 0 !== t ? t : new Date().getTime();
-    V(e, { uptime_process_renderer: new Date().getTime() - n }), p.default.track(b.rMx.OVERLAY_HOOK_RESULT, F(e));
+    V(e, { uptime_process_renderer: new Date().getTime() - n }), p.default.track(T.rMx.OVERLAY_HOOK_RESULT, F(e));
 }
 function en(e) {
     try {
         C.verbose('Refreshing OOP host window for pid '.concat(e)), J(e), O.delete(null != M ? M : m.R2), (M = e), (0, m.tB)(null != M ? M : m.R2);
-        let t = f.Z.getWindow(T.$J),
+        let t = f.Z.getWindow(b.$J),
             n = () =>
                 new Promise((e) => {
                     null == t ||
@@ -284,7 +284,7 @@ function en(e) {
     }
 }
 function ei(e, t, n, i) {
-    let r = f.Z.getWindow(T.$J);
+    let r = f.Z.getWindow(b.$J);
     if (null == r) return;
     let a = Math.ceil(n * r.innerWidth),
         s = Math.ceil(i * r.innerHeight),
@@ -378,11 +378,11 @@ function eI(e) {
                           X(t), (k = null);
                       }, 100)));
 }
-function eT(e) {
+function eb(e) {
     let { region: t } = e;
     X(!1);
 }
-function eb() {
+function eT() {
     X(!0);
 }
 function eS(e) {
@@ -435,8 +435,8 @@ let eN = new eA(a.Z, {
     RUNNING_GAME_TOGGLE_OVERLAY: e_,
     OVERLAY_SET_CLICK_ZONES: ev,
     OVERLAY_SET_INPUT_LOCKED: eI,
-    OVERLAY_ACTIVATE_REGION: eT,
-    OVERLAY_DEACTIVATE_ALL_REGIONS: eb,
+    OVERLAY_ACTIVATE_REGION: eb,
+    OVERLAY_DEACTIVATE_ALL_REGIONS: eT,
     OVERLAY_RENDER_DEBUG_MODE: eS,
     OVERLAY_UPDATE_OVERLAY_METHOD: ep,
     OVERLAY_UPDATE_OVERLAY_STATE: ey,

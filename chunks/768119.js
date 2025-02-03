@@ -61,8 +61,8 @@ function v(e, t) {
 }
 let y = 'SearchStore',
     I = 'tokenized',
-    T = !1,
-    b = {},
+    b = !1,
+    T = {},
     S = null;
 function A(e) {
     let { searchId: t, editorState: n } = e;
@@ -137,9 +137,9 @@ function R(e) {
     var t;
     let { searchId: n, query: i } = e;
     if ('string' != typeof i || '' === (i = i.trim())) return;
-    let r = (b[n] = null !== (t = b[n]) && void 0 !== t ? t : []),
+    let r = (T[n] = null !== (t = T[n]) && void 0 !== t ? t : []),
         a = r.indexOf(i);
-    -1 !== a ? (r.splice(a, 1), r.unshift(i)) : null != r[0] && '' !== r[0] && i.startsWith(r[0]) ? (r[0] = i) : a < 0 && r.unshift(i), r.length > 5 && r.splice(5, r.length), o.K.set(y, { history: b });
+    -1 !== a ? (r.splice(a, 1), r.unshift(i)) : null != r[0] && '' !== r[0] && i.startsWith(r[0]) ? (r[0] = i) : a < 0 && r.unshift(i), r.length > 5 && r.splice(5, r.length), o.K.set(y, { history: T });
 }
 function O(e) {
     let { searchId: t } = e,
@@ -171,11 +171,11 @@ function w(e) {
 }
 function M(e) {
     let { searchId: t } = e;
-    null == t ? (o.K.remove(y), (b = {})) : (delete b[t], o.K.set(y, { history: b }));
+    null == t ? (o.K.remove(y), (T = {})) : (delete T[t], o.K.set(y, { history: T }));
 }
 function k(e) {
     let { searchId: t, query: n } = e;
-    null != b[t] && ((b[t] = b[t].filter((e) => e !== n)), o.K.set(y, { history: b }));
+    null != T[t] && ((T[t] = T[t].filter((e) => e !== n)), o.K.set(y, { history: T }));
 }
 function U(e) {
     return (
@@ -195,7 +195,7 @@ function B() {
     });
 }
 function Z() {
-    o.K.remove(y), (b = {});
+    o.K.remove(y), (T = {});
 }
 function F() {
     return null != S && x({ searchId: S });
@@ -204,7 +204,7 @@ class V extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, d.Z);
         let e = o.K.get(y);
-        (null == e ? void 0 : e.history) != null && (b = U(e.history)), (T = !!o.K.get(I));
+        (null == e ? void 0 : e.history) != null && (T = U(e.history)), (b = !!o.K.get(I));
     }
     getCurrentSearchId() {
         return S;
@@ -214,7 +214,7 @@ class V extends (i = s.ZP.Store) {
         return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e));
     }
     isTokenized() {
-        return T;
+        return b;
     }
     getSearchType(e) {
         return v(null != e ? e : S, (e) => e.searchType);
@@ -254,7 +254,7 @@ class V extends (i = s.ZP.Store) {
         return v(e, (e) => e.editorState);
     }
     getHistory(e) {
-        return b[e];
+        return T[e];
     }
     getOffset(e) {
         var t;

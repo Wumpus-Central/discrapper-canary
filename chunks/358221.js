@@ -18,8 +18,8 @@ var i,
     v = n(158776),
     y = n(944486),
     I = n(606304),
-    T = n(594174),
-    b = n(33039),
+    b = n(594174),
+    T = n(33039),
     S = n(979651),
     A = n(413523),
     N = n(354459),
@@ -279,13 +279,13 @@ function eI(e) {
     }
     return !1;
 }
-function eT(e) {
+function eb(e) {
     let {
         channel: { id: t }
     } = e;
     return delete B[t], delete Z[t], delete F[t], et(t);
 }
-function eb(e) {
+function eT(e) {
     let { channelId: t, layout: n, appContext: i } = e;
     k[t] = {
         ...k[t],
@@ -348,7 +348,7 @@ function eL(e) {
 }
 class eP extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(h.Z, m.default, g.Z, E.Z, c.ZP, v.Z, y.Z, I.Z, T.default, b.Z, S.Z), this.syncWith([c.ZP], es), this.syncWith([v.Z], eo), this.syncWith([f.Z], en), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(G, null == e ? void 0 : e.voiceParticipantsHidden);
+        this.waitFor(h.Z, m.default, g.Z, E.Z, c.ZP, v.Z, y.Z, I.Z, b.default, T.Z, S.Z), this.syncWith([c.ZP], es), this.syncWith([v.Z], eo), this.syncWith([f.Z], en), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(G, null == e ? void 0 : e.voiceParticipantsHidden);
     }
     getState() {
         return { voiceParticipantsHidden: G };
@@ -459,13 +459,13 @@ let ew = new eP(u.Z, {
     CHANNEL_RTC_ACTIVE_CHANNELS: en,
     VOICE_STATE_UPDATES: ea,
     CHANNEL_CREATE: eI,
-    CHANNEL_DELETE: eT,
-    THREAD_DELETE: eT,
+    CHANNEL_DELETE: eb,
+    THREAD_DELETE: eb,
     CALL_CREATE: ec,
     CALL_UPDATE: ec,
     CALL_DELETE: ed,
     CHANNEL_RTC_SELECT_PARTICIPANT: ey,
-    CHANNEL_RTC_UPDATE_LAYOUT: eb,
+    CHANNEL_RTC_UPDATE_LAYOUT: eT,
     CHANNEL_RTC_UPDATE_PARTICIPANTS_OPEN: e_,
     CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN: ep,
     CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE: em,

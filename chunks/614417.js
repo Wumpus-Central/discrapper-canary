@@ -22,8 +22,8 @@ var i = n(200651),
     v = n(848780),
     y = n(907179),
     I = n(475413),
-    T = n(228168),
-    b = n(388032),
+    b = n(228168),
+    T = n(388032),
     S = n(378067),
     A = n(609440);
 function N(e) {
@@ -55,7 +55,7 @@ function N(e) {
                     children: (0, i.jsx)(E.Z, {
                         user: t,
                         displayProfile: O,
-                        profileType: T.y0.BITE_SIZE,
+                        profileType: b.y0.BITE_SIZE,
                         children: (0, i.jsxs)('div', {
                             className: S.container,
                             children: [
@@ -75,20 +75,20 @@ function N(e) {
                                         (0, i.jsx)(l.X6q, {
                                             variant: 'heading-lg/bold',
                                             className: S.header,
-                                            children: b.intl.string(b.t.VNJ7UF)
+                                            children: T.intl.string(T.t.VNJ7UF)
                                         }),
                                         (0, i.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: b.intl.format(b.t.LXbngo, { username: t.username })
+                                            children: T.intl.format(T.t.LXbngo, { username: t.username })
                                         }),
                                         (0, i.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: b.intl.string(b.t['20WzZ2'])
+                                            children: T.intl.string(T.t['20WzZ2'])
                                         }),
                                         (0, i.jsx)(I.tG, {
                                             className: S.centeredButton,
                                             action: 'VIEW_BLOCKED_PROFILE',
-                                            text: b.intl.string(b.t.iXAna2),
+                                            text: T.intl.string(T.t.iXAna2),
                                             autoFocus: !0,
                                             fullWidth: !1,
                                             onClick: () => {
@@ -140,7 +140,7 @@ function C(e) {
                 children: (0, i.jsx)(E.Z, {
                     user: t,
                     displayProfile: w,
-                    profileType: T.y0.BITE_SIZE,
+                    profileType: b.y0.BITE_SIZE,
                     children: (0, i.jsxs)('div', {
                         className: S.container,
                         children: [
@@ -162,11 +162,11 @@ function C(e) {
                                             }),
                                             (0, i.jsx)(l.X6q, {
                                                 variant: 'heading-lg/bold',
-                                                children: b.intl.string(b.t.b33pLC)
+                                                children: T.intl.string(T.t.b33pLC)
                                             }),
                                             (0, i.jsx)(l.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: b.intl.format(D ? b.t['8F+WNz'] : b.t['/cZp5u'], { username: _.ZP.getName(n, I, t) })
+                                                children: T.intl.format(D ? T.t['8F+WNz'] : T.t['/cZp5u'], { username: _.ZP.getName(n, I, t) })
                                             })
                                         ]
                                     }),

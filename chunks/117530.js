@@ -58,7 +58,7 @@ let I = (e) => {
     }),
         v(n, r, s);
 };
-function T(e) {
+function b(e) {
     let { channelId: t, id: n, draftType: i } = e,
         r = [...g(t, i)],
         a = r.findIndex((e) =>
@@ -72,7 +72,7 @@ function T(e) {
         );
     a > -1 && (r.splice(a, 1)[0].cancel(), v(t, i, r));
 }
-function b(e) {
+function T(e) {
     let { channelId: t, attachmentIds: n, draftType: i } = e,
         r = [...g(t, i)];
     n.forEach((e) => {
@@ -132,8 +132,8 @@ let D = new O(o.Z, {
     UPLOAD_ATTACHMENT_POP_FILE: y,
     UPLOAD_ATTACHMENT_ADD_FILES: I,
     UPLOAD_ATTACHMENT_UPDATE_FILE: S,
-    UPLOAD_ATTACHMENT_REMOVE_FILE: T,
-    UPLOAD_ATTACHMENT_REMOVE_FILES: b,
+    UPLOAD_ATTACHMENT_REMOVE_FILE: b,
+    UPLOAD_ATTACHMENT_REMOVE_FILES: T,
     UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: C,
     UPLOAD_ATTACHMENT_SET_UPLOADS: N,
     UPLOAD_ATTACHMENT_SET_FILE: A,

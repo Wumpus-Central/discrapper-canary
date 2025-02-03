@@ -39,10 +39,10 @@ function I(e) {
     let t = y[e];
     return null == t && ((t = new C(e)), (y[e] = t)), t;
 }
-function T(e, t) {
+function b(e, t) {
     return f.ZP.getMember(e, t.id);
 }
-function b(e, t, n) {
+function T(e, t, n) {
     var i;
     let r = null !== (i = null == t ? void 0 : t.nick) && void 0 !== i ? i : m.ZP.getName(n);
     return {
@@ -57,7 +57,7 @@ function S(e, t) {
         .concat(e.userId);
 }
 function A(e, t, n) {
-    return b(n, T(e, t), t);
+    return T(n, b(e, t), t);
 }
 function N(e, t, n) {
     let i = _.default.getUser(n),
@@ -88,7 +88,7 @@ class C {
             if (null == n) return this._voiceStates.set(e, N(t, this.guildId, e)), !0;
             if (n.voiceState !== t) {
                 var r;
-                let a = T(this.guildId, i),
+                let a = b(this.guildId, i),
                     s = null !== (r = null == a ? void 0 : a.nick) && void 0 !== r ? r : m.ZP.getName(i);
                 return (
                     this._voiceStates.set(e, {
@@ -110,9 +110,9 @@ class C {
             n = _.default.getUser(e);
         if (null != t && null != n) {
             var i, r;
-            let a = T(this.guildId, n);
+            let a = b(this.guildId, n);
             if ((null == a ? void 0 : a.nick) !== (null === (i = t.member) || void 0 === i ? void 0 : i.nick) || (null == a ? void 0 : a.avatar) !== (null === (r = t.member) || void 0 === r ? void 0 : r.avatar)) {
-                let { comparator: i } = b(t.voiceState, a, n);
+                let { comparator: i } = T(t.voiceState, a, n);
                 return (
                     this._voiceStates.set(e, {
                         ...t,

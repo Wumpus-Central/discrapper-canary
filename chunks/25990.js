@@ -5,7 +5,7 @@ var g,
     v = n(442837),
     y = n(570140),
     I = n(981631);
-function T(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,21 +18,21 @@ function T(e, t, n) {
         e
     );
 }
-let b = I.QZA.CLOSED,
+let T = I.QZA.CLOSED,
     S = {};
 function A() {
-    (b = I.QZA.OPEN), (S = {});
+    (T = I.QZA.OPEN), (S = {});
 }
 function N() {
-    (b = I.QZA.CLOSED), (S = {});
+    (T = I.QZA.CLOSED), (S = {});
 }
 function C() {
-    (b = I.QZA.SUBMITTING), (S = {});
+    (T = I.QZA.SUBMITTING), (S = {});
 }
 function R(e) {
     var t;
-    if (b !== I.QZA.SUBMITTING) return !1;
-    (b = I.QZA.OPEN), (S = null !== (t = e.errors) && void 0 !== t ? t : {});
+    if (T !== I.QZA.SUBMITTING) return !1;
+    (T = I.QZA.OPEN), (S = null !== (t = e.errors) && void 0 !== t ? t : {});
 }
 function O(e) {
     let { section: t } = e;
@@ -130,7 +130,7 @@ function $() {
 }
 class ee extends (g = v.ZP.Store) {
     getFormState() {
-        return b;
+        return T;
     }
     getErrors() {
         return S;
@@ -206,7 +206,7 @@ class ee extends (g = v.ZP.Store) {
         };
     }
 }
-T(ee, 'displayName', 'UserSettingsAccountStore');
+b(ee, 'displayName', 'UserSettingsAccountStore');
 let et = new ee(y.Z, {
     USER_SETTINGS_ACCOUNT_INIT: A,
     USER_SETTINGS_MODAL_INIT: A,

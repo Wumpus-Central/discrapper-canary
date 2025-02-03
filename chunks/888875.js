@@ -30,8 +30,8 @@ function v(e, t, n) {
 }
 let y = 10 + Math.random() * (10 * _.Z.Millis.SECOND),
     I = 2 * _.Z.Millis.HOUR + Math.floor(Math.random() * (10 * _.Z.Millis.MINUTE)),
-    T = null,
-    b = !1;
+    b = null,
+    T = !1;
 class S extends s.Z {
     _initialize() {
         p.DZ.beforeSendCallbacks.push({
@@ -88,13 +88,13 @@ class S extends s.Z {
     }
 }
 function A() {
-    (b = !0), O(y, !0);
+    (T = !0), O(y, !0);
 }
 function N(e) {
-    b && 'active' !== e.state && (clearTimeout(T), (T = null), R(!1));
+    T && 'active' !== e.state && (clearTimeout(b), (b = null), R(!1));
 }
 function C() {
-    b && (clearTimeout(T), (T = null), R(!1));
+    T && (clearTimeout(b), (b = null), R(!1));
 }
 async function R(e) {
     O(I, !1),
@@ -104,6 +104,6 @@ async function R(e) {
         });
 }
 function O(e, t) {
-    null != T && clearTimeout(T), (T = setTimeout(() => R(t), e));
+    null != b && clearTimeout(b), (b = setTimeout(() => R(t), e));
 }
 let D = new S();

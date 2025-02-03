@@ -44,14 +44,14 @@ var o = (function () {
             }
         }
         h.push(_[_.length - 1]);
-        for (var I = [], T = [], b = 0; b < h.length - 1; b++) {
-            o = _[b];
-            var S = h[b],
-                A = 1 / f[b],
-                N = S + h[b + 1] - o - o;
-            I.push((o - S - N) * A), T.push(N * A * A);
+        for (var I = [], b = [], T = 0; T < h.length - 1; T++) {
+            o = _[T];
+            var S = h[T],
+                A = 1 / f[T],
+                N = S + h[T + 1] - o - o;
+            I.push((o - S - N) * A), b.push(N * A * A);
         }
-        (this.xs = t), (this.ys = n), (this.c1s = h), (this.c2s = I), (this.c3s = T);
+        (this.xs = t), (this.ys = n), (this.c1s = h), (this.c2s = I), (this.c3s = b);
     }
     return (
         a(e, [

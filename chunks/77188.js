@@ -19,8 +19,8 @@ n(209073);
 var v = n(814011),
     y = n(50607),
     I = n(618136),
-    T = n(247765),
-    b = n(15559),
+    b = n(247765),
+    T = n(15559),
     S = n(42530);
 function A(e) {
     let t = i.useContext(s.ZP),
@@ -80,11 +80,11 @@ function N(e) {
         (O = (0, g.ZP)(O, o.guild_id, o.id)),
         (null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) || (O = (0, f.Z)(O)),
         (null === (i = s.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) || (O = (0, _.ZP)(O)),
-        A && (O = (0, T.Z)(O)),
+        A && (O = (0, b.Z)(O)),
         (O = (0, m.Z)(O)),
         (O = (0, p.Z)(O)),
         (O = (0, I.Z)(O)),
-        (O = (0, b.Z)(O, N, C)),
+        (O = (0, T.Z)(O, N, C)),
         (O = (0, h.Z)(O, (e) => {
             let { newValue: t, newSelection: n } = e;
             return R(O, 'undo', {

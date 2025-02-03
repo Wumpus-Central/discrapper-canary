@@ -19,8 +19,8 @@ var i = n(200651),
     E = n(541099),
     A = n(783097),
     I = n(570949),
-    g = n(314734),
-    _ = n(981631),
+    _ = n(314734),
+    g = n(981631),
     P = n(388032),
     j = n(472033);
 function y(e) {
@@ -42,7 +42,7 @@ function y(e) {
             label: P.intl.string(P.t['+NP/b2'])
         }),
         k = (0, I.P)({ application: n }),
-        U = (0, N.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, _.udG.EMBEDDED),
+        U = (0, N.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, g.udG.EMBEDDED),
         D = 'channel' === l.type ? l.channel : void 0;
     return (0, i.jsxs)('div', {
         className: j.container,
@@ -59,7 +59,7 @@ function y(e) {
                               ...b
                           });
                     (0, f.JG)(e),
-                        x.default.track(_.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                        x.default.track(g.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: n.id,
                             source: S
                         }),
@@ -76,7 +76,7 @@ function y(e) {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, i.jsxs)(s.v2r, {
-                        className: g.NN,
+                        className: _.NN,
                         navId: 'app-details-more-menu',
                         onClose: t,
                         'aria-label': P.intl.string(P.t.AXIHpa),
@@ -89,12 +89,12 @@ function y(e) {
                                               id: 'add-app',
                                               label: P.intl.string(P.t.NgXl3N),
                                               action: () => {
-                                                  null == b.customInstallUrl && (0, r.yw)(_.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, R),
+                                                  null == b.customInstallUrl && (0, r.yw)(g.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, R),
                                                       (0, C.LO)({
                                                           ...b,
                                                           oauth2Callback: (e) => {
                                                               let { location: t } = e;
-                                                              null != t && (0, r.yw)(_.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, R);
+                                                              null != t && (0, r.yw)(g.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, R);
                                                           },
                                                           source: 'app_launcher_app_details'
                                                       });

@@ -34,7 +34,7 @@ function y() {
 function I() {
     (v = !1), (m = {});
 }
-function T(e, t, n) {
+function b(e, t, n) {
     let i = !1,
         r = [];
     for (let t = 0; t < e.options.length; t++) {
@@ -53,14 +53,14 @@ function T(e, t, n) {
         isNew: null == t[e.id]
     };
 }
-function b(e, t, n) {
-    return e.map((e) => T(e, t, n));
+function T(e, t, n) {
+    return e.map((e) => b(e, t, n));
 }
 function S(e) {
     let { guildId: t, prompts: n, defaultChannelIds: i, enabled: r, responses: a, onboardingPromptsSeen: s, onboardingResponsesSeen: o, mode: l, belowRequirements: u } = e;
     v = !1;
     let c = _.ZP.getOnboardingStatus(t) === _.uX.READY,
-        d = b(n, s, o);
+        d = T(n, s, o);
     (m[t] = {
         enabled: r,
         mode: l,
@@ -83,7 +83,7 @@ function N(e) {
     let { guildId: c, updates: d } = e,
         f = null !== (a = null !== (r = d.onboardingPromptsSeen) && void 0 !== r ? r : null === (t = m[c]) || void 0 === t ? void 0 : t.onboardingPromptsSeen) && void 0 !== a ? a : {},
         _ = null !== (o = null !== (s = d.onboardingResponsesSeen) && void 0 !== s ? s : null === (n = m[c]) || void 0 === n ? void 0 : n.onboardingResponsesSeen) && void 0 !== o ? o : {},
-        p = b(null !== (u = null !== (l = d.prompts) && void 0 !== l ? l : null === (i = m[c]) || void 0 === i ? void 0 : i.prompts) && void 0 !== u ? u : [], f, _);
+        p = T(null !== (u = null !== (l = d.prompts) && void 0 !== l ? l : null === (i = m[c]) || void 0 === i ? void 0 : i.prompts) && void 0 !== u ? u : [], f, _);
     m[c] = {
         ...m[c],
         ...d,
@@ -115,7 +115,7 @@ function O(e) {
     R(t, n);
     let a = m[t];
     if (null == a) return !1;
-    let s = b(a.prompts, i, r);
+    let s = T(a.prompts, i, r);
     m[t] = {
         ...a,
         prompts: s,

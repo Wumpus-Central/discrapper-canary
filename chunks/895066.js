@@ -183,8 +183,8 @@ class d {
             let { previous: g, current: E, currentTimestampMs: v, previousTimestampMs: y, numRateSamples: I } = m;
             if (void 0 !== y && v > y) {
                 var t, n, i, r, a, s, o, l, u, c, d, f, _, p;
-                let T = v - y,
-                    b = {
+                let b = v - y,
+                    T = {
                         userId: h,
                         silent: null !== (n = E.silent) && void 0 !== n ? n : 0 - (null !== (t = g.silent) && void 0 !== t ? t : 0),
                         normal: null !== (r = E.normal) && void 0 !== r ? r : 0 - (null !== (i = g.normal) && void 0 !== i ? i : 0),
@@ -197,9 +197,9 @@ class d {
                         expandRate: m.expandRateSum / I,
                         preemptiveExpandRate: m.preemptiveExpandRateSum / I,
                         speechExpandRate: m.speechExpandRateSum / I,
-                        durationMs: T
+                        durationMs: b
                     };
-                b.normal + b.merged + b.expanded + b.accelerated + b.preemptiveExpanded > 0 && e.push(b);
+                T.normal + T.merged + T.expanded + T.accelerated + T.preemptiveExpanded > 0 && e.push(T);
             }
             (this.periodicInboundStats[h].accelerateRateSum = 0), (this.periodicInboundStats[h].expandRateSum = 0), (this.periodicInboundStats[h].preemptiveExpandRateSum = 0), (this.periodicInboundStats[h].speechExpandRateSum = 0), (this.periodicInboundStats[h].numRateSamples = 0), (this.periodicInboundStats[h].previous = E), (this.periodicInboundStats[h].previousTimestampMs = v);
         }
@@ -256,8 +256,8 @@ class d {
                     r().forEach(e.rtp.inbound, (t, n) => {
                         r().forEach(t, (t) => {
                             if ('audio' === t.type) {
-                                var i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, y, I, T;
-                                let b = null !== (i = e.transport.ping) && void 0 !== i ? i : 0,
+                                var i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, y, I, b;
+                                let T = null !== (i = e.transport.ping) && void 0 !== i ? i : 0,
                                     S = t.packetsReceived,
                                     A = t.packetsLost,
                                     N = t.bytesReceived,
@@ -295,7 +295,7 @@ class d {
                                         i = A - this.inboundStats[n].packetsLost,
                                         a = 0,
                                         s = this.inboundStats[n].mosBuckets;
-                                    e > 0 && i >= 0 && ((a = this.calculateMos(b + D, r().clamp(i / (e + i), 0, 1))), s[Math.floor(a)]++),
+                                    e > 0 && i >= 0 && ((a = this.calculateMos(T + D, r().clamp(i / (e + i), 0, 1))), s[Math.floor(a)]++),
                                         (this.inboundStats[n] = {
                                             packetsReceived: S,
                                             bytesReceived: N,
@@ -346,7 +346,7 @@ class d {
                                             accelerateRateSum: null !== (v = t.accelerateRate) && void 0 !== v ? v : 0,
                                             expandRateSum: null !== (y = t.expandRate) && void 0 !== y ? y : 0,
                                             preemptiveExpandRateSum: null !== (I = t.preemptiveExpandRate) && void 0 !== I ? I : 0,
-                                            speechExpandRateSum: null !== (T = t.speechExpandRate) && void 0 !== T ? T : 0,
+                                            speechExpandRateSum: null !== (b = t.speechExpandRate) && void 0 !== b ? b : 0,
                                             numRateSamples: 1
                                         });
                             }

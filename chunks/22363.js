@@ -11,8 +11,8 @@ var r = n(120356),
     d = n(185923),
     f = n(405156);
 let _ = (e) => {
-    let { accessory: t, pickerIntention: n, headerClassName: r, emojiListRef: _, onKeyDown: p, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: v, isBurstReaction: y, onBurstReactionToggle: I, renderHeader: T } = e,
-        b = (0, i.jsxs)(i.Fragment, {
+    let { accessory: t, pickerIntention: n, headerClassName: r, emojiListRef: _, onKeyDown: p, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: v, isBurstReaction: y, onBurstReactionToggle: I, renderHeader: b } = e,
+        T = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(u.Z, {
                     emojiListRef: _,
@@ -46,6 +46,6 @@ let _ = (e) => {
         });
     return (0, i.jsx)('div', {
         className: a()(f.header, r),
-        children: null != T ? T(b) : b
+        children: null != b ? b(T) : T
     });
 };

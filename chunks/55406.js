@@ -92,27 +92,27 @@ let v = (e) => {
             ...('function' == typeof i.customRules.lheading ? i.customRules.lheading(e) : i.customRules.lheading)
         }
     }),
-    T = (e) => ({
+    b = (e) => ({
         ...y(e),
         newline: { ...a().defaultRules.newline },
         text: l.ZP,
         list: s.Z,
         subtext: o.Z
     });
-function b(e) {
+function T(e) {
     return { ...y(e) };
 }
 let S = {
-    getDefaultRules: b,
+    getDefaultRules: T,
     getSpecialRules: (e) => ({
         ...y(e),
         ...I(e)
     }),
-    getMessageRules: (e) => ({ ...T(e) })
+    getMessageRules: (e) => ({ ...b(e) })
 };
 function A(e, t, n) {
     return {
         hasSpoilerEmbeds: !1,
-        content: u.Z.reactParserFor(b(t))(e.content, !1, null != n ? { changeLog: n } : {})
+        content: u.Z.reactParserFor(T(t))(e.content, !1, null != n ? { changeLog: n } : {})
     };
 }

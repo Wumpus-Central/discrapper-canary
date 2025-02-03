@@ -41,7 +41,7 @@ let f = 1500,
     v = () => Promise.resolve({ sessionId: void 0 }),
     y = (e) => {
         var t;
-        let { dispatcher: n, actionHandler: s, getFingerprint: c, getSessionId: y = v, TRACKING_URL: I, drainTimeoutOverride: T, waitFor: b } = e;
+        let { dispatcher: n, actionHandler: s, getFingerprint: c, getSessionId: y = v, TRACKING_URL: I, drainTimeoutOverride: b, waitFor: T } = e;
         function S(e) {
             if (null != r) return r;
             let t = e.fingerprint || c();
@@ -90,7 +90,7 @@ let f = 1500,
                 rejectWithError: !1
             });
         }
-        (p = null != T ? T : f),
+        (p = null != b ? b : f),
             (g.handleConnectionOpen = function (e) {
                 let { analyticsToken: t, user: n } = e;
                 return null != t && (i = t), null != n.id && (r = n.id), N(), !1;
@@ -124,7 +124,7 @@ let f = 1500,
             });
         class O extends (t = l.ZP.Store) {
             initialize() {
-                null != b && this.waitFor(...b);
+                null != T && this.waitFor(...T);
             }
             constructor(...e) {
                 super(...e), d(this, 'submitEventsImmediately', R);

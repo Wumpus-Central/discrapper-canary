@@ -19,8 +19,8 @@ var i = n(200651),
     E = n(880308),
     A = n(427996),
     I = n(367907),
-    g = n(10718),
-    _ = n(895924),
+    _ = n(10718),
+    g = n(895924),
     P = n(151517),
     j = n(674588),
     y = n(368862),
@@ -74,9 +74,9 @@ function en(e) {
         p = n === Z._b.TEXT,
         [x, C] = ed(!0),
         [E, A] = ed(d),
-        [I, g] = ed(u),
-        [_, P] = ed(m),
-        j = x && E && I && _,
+        [I, _] = ed(u),
+        [g, P] = ed(m),
+        j = x && E && I && g,
         y = (u || d) && !j,
         T = m && c;
     l.useEffect(() => {
@@ -128,7 +128,7 @@ function en(e) {
                                   (0, i.jsx)(er, {
                                       context: t,
                                       entrypoint: n,
-                                      onEmptyState: g
+                                      onEmptyState: _
                                   }),
                               m &&
                                   (0, i.jsx)(eo, {
@@ -171,7 +171,7 @@ function el(e) {
                         (0, I.yw)(X.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
                             query: e,
                             source: M.Z.entrypoint(),
-                            location: _.Vh.APP_LAUNCHER_HOME
+                            location: g.Vh.APP_LAUNCHER_HOME
                         });
                     },
                     400,
@@ -187,7 +187,7 @@ function el(e) {
             c(!0),
                 (0, I.yw)(X.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
                     source: M.Z.entrypoint(),
-                    location: _.Vh.APP_LAUNCHER_HOME
+                    location: g.Vh.APP_LAUNCHER_HOME
                 });
         }, []),
         p = l.useCallback(() => {
@@ -368,7 +368,7 @@ function eo(e) {
                                   context: n,
                                   application: l,
                                   look: s,
-                                  location: _.Vh.APP_LAUNCHER_HOME,
+                                  location: g.Vh.APP_LAUNCHER_HOME,
                                   sectionName: Z.L3.ACTIVITIES,
                                   resultsPosition: t,
                                   sectionOverallPosition: 0,
@@ -429,7 +429,7 @@ function es(e) {
                                               look: w.U4.ROW,
                                               sectionName: a,
                                               resultsPosition: n,
-                                              location: _.Vh.APP_LAUNCHER_HOME
+                                              location: g.Vh.APP_LAUNCHER_HOME
                                           },
                                           l.id
                                       )
@@ -458,7 +458,7 @@ function er(e) {
                     activeState: i
                 });
             }, [i]);
-            let { sectionDescriptors: a } = g.wi({
+            let { sectionDescriptors: a } = _.wi({
                     context: t,
                     filters: { commandTypes: [x.yU.CHAT] },
                     options: {
@@ -652,7 +652,7 @@ function ec(e) {
                                 look: t,
                                 sectionName: x,
                                 resultsPosition: n,
-                                location: _.Vh.APP_LAUNCHER_HOME,
+                                location: g.Vh.APP_LAUNCHER_HOME,
                                 installOnDemand: c,
                                 enableVideoBanner: E,
                                 sectionOverallPosition: r,

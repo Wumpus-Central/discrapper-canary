@@ -26,8 +26,8 @@ var r = n(658722),
     v = n(763296),
     y = n(421673),
     I = n(285651),
-    T = n(822179),
-    b = n(926491),
+    b = n(822179),
+    T = n(926491),
     S = n(373228),
     A = n(601070),
     N = n(675478),
@@ -107,7 +107,7 @@ function ey(e, t) {
 function eI(e) {
     return (null == e ? void 0 : e.joinedAt) != null && !e.isPending;
 }
-function eT(e) {
+function eb(e) {
     let { query: t, members: n, limit: i, filter: r, allowSnowflake: s } = e,
         o = B.default.getUsers(),
         l = G.Z.getGuildId(),
@@ -119,7 +119,7 @@ function eT(e) {
         h = 0,
         m = 0;
     for (; h < p; ) {
-        var g, E, v, y, I, T, b, S, A;
+        var g, E, v, y, I, b, T, S, A;
         let e, i;
         let u = n[h];
         u instanceof R.Z ? ((i = u), (e = null === (E = x.ZP.getNick(l, i.id)) || void 0 === E ? void 0 : E.toLocaleLowerCase())) : ((e = null === (v = u.nick) || void 0 === v ? void 0 : v.toLocaleLowerCase()), (i = o[u.userId]));
@@ -145,8 +145,8 @@ function eT(e) {
                         type: q.h8.USER,
                         record: i,
                         score: ei,
-                        comparator: null !== (T = null != p ? p : e) && void 0 !== T ? T : n,
-                        sortable: null !== (b = null != h ? h : l) && void 0 !== b ? b : r
+                        comparator: null !== (b = null != p ? p : e) && void 0 !== b ? b : n,
+                        sortable: null !== (T = null != h ? h : l) && void 0 !== T ? T : r
                     })
                   : m < ec &&
                     (a()(c, r) || a()(d, o) || (null != l && a()(c, l)) || (null != u && a()(d, u)) || (null != h && a()(c, h)) || (null != g && a()(d, g))) &&
@@ -163,7 +163,7 @@ function eT(e) {
     }
     return f.sort(u.Z), f.length < i && (_.sort(u.Z), (f = f.concat(_.slice(0, Math.max(0, i - f.length))))), f.length > i && (f.length = i), f;
 }
-function eb(e) {
+function eT(e) {
     switch (e) {
         case S.MO.STICKER_NAME:
             return ea;
@@ -266,7 +266,7 @@ function eD(e, t) {
 let ex = {
     queryFriends(e) {
         let { query: t, limit: n = 10, _fuzzy: i = !0, filter: r } = e;
-        return eT({
+        return eb({
             query: t,
             members: k.Z.getFriendIDs()
                 .map((e) => B.default.getUser(e))
@@ -277,7 +277,7 @@ let ex = {
     },
     queryDMUsers(e) {
         let { query: t, limit: n = 10, filter: i } = e;
-        return eT({
+        return eb({
             query: t,
             members: O.Z.getDMUserIds()
                 .map((e) => B.default.getUser(e))
@@ -315,7 +315,7 @@ let ex = {
             }
             (t = x.ZP.getMembers(c.guild_id).filter(eI)), a && V.Z.requestMembers(c.guild_id, i, r);
         }
-        return eT({
+        return eb({
             query: i,
             members: t,
             limit: r,
@@ -339,7 +339,7 @@ let ex = {
         let l = x.ZP.getMembers(t).filter(eI);
         return (
             r && n.length > 0 && V.Z.requestMembers(t, n, i),
-            eT({
+            eb({
                 query: n,
                 members: l,
                 limit: i,
@@ -354,7 +354,7 @@ let ex = {
             i = arguments.length > 4 ? arguments[4] : void 0;
         return (
             n && e.length > 0 && V.Z.requestMembers(null, e, t),
-            eT({
+            eb({
                 query: e,
                 members: o()(B.default.getUsers()).values().value(),
                 limit: t,
@@ -775,7 +775,7 @@ let ex = {
     queryStickers(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [null, ed],
-            { stickerMetadata: r } = b.Z,
+            { stickerMetadata: r } = T.Z,
             a = B.default.getCurrentUser(),
             s = new Set(),
             l = [];
@@ -788,15 +788,15 @@ let ex = {
             r.forEach((r, o) => {
                 let u = 0,
                     f = null,
-                    _ = b.Z.getStickerById(o);
+                    _ = T.Z.getStickerById(o);
                 if (null == _ || !i(_, (0, I.cO)(_, a, n))) return;
                 for (let n of r) {
                     let { type: i, value: r } = n,
-                        a = eb(i),
+                        a = eT(i),
                         s = 0;
                     t ? (r === e ? (s = $ * a) : c.test(r) ? (s = ee * a) : (i === S.MO.GUILD_NAME || i === S.MO.PACK_NAME || i === S.MO.STICKER_NAME) && d.test(r) && (s = et * a)) : r === e && ((s = $ * a), (f = r)), s > u && ((u = s), (f = r));
                 }
-                let p = T.Z.stickerFrecencyWithoutFetchingLatest.getScore(o);
+                let p = b.Z.stickerFrecencyWithoutFetchingLatest.getScore(o);
                 null != p && (u *= p / 100),
                     u > 0 &&
                         null != f &&

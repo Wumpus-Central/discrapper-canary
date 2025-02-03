@@ -156,12 +156,12 @@
     function I(e) {
         return u(e).desaturate(100);
     }
-    function T(e, t) {
+    function b(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = u(e).toHsl();
         return (n.l += t / 100), (n.l = U(n.l)), u(n);
     }
-    function b(e, t) {
+    function T(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = u(e).toRgb();
         return (n.r = o(0, s(255, n.r - a(-((t / 100) * 255))))), (n.g = o(0, s(255, n.g - a(-((t / 100) * 255))))), (n.b = o(0, s(255, n.b - a(-((t / 100) * 255))))), u(n);
@@ -386,10 +386,10 @@
             return (this._r = n._r), (this._g = n._g), (this._b = n._b), this.setAlpha(n._a), this;
         },
         lighten: function () {
-            return this._applyModification(T, arguments);
+            return this._applyModification(b, arguments);
         },
         brighten: function () {
-            return this._applyModification(b, arguments);
+            return this._applyModification(T, arguments);
         },
         darken: function () {
             return this._applyModification(S, arguments);

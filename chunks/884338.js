@@ -48,7 +48,7 @@ function I(e) {
         children: e
     });
 }
-function T() {
+function b() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.SIZE_24;
     switch (e) {
         case v.SIZE_16:
@@ -63,7 +63,7 @@ function T() {
             return g.size24;
     }
 }
-class b extends (i = a.PureComponent) {
+class T extends (i = a.PureComponent) {
     renderUsers() {
         let { users: e, max: t, renderUser: n = this.defaultRenderUser, size: i, extraDetail: a } = this.props,
             s = [],
@@ -149,7 +149,7 @@ class b extends (i = a.PureComponent) {
             onRequestClose: () => this.setState({ popoutUserId: null }),
             children: (n) =>
                 (0, r.jsxs)('div', {
-                    className: o()(e, g.container, T(t)),
+                    className: o()(e, g.container, b(t)),
                     ref: this._ref,
                     ...n,
                     children: [this.renderIcon(), this.renderUsers()]
@@ -200,11 +200,11 @@ class b extends (i = a.PureComponent) {
             });
     }
 }
-E(b, 'defaultProps', {
+E(T, 'defaultProps', {
     max: 10,
     renderMoreUsers: I,
     renderIcon: !1,
     showDefaultAvatarsForNullUsers: !1,
     size: v.SIZE_24
 });
-let S = b;
+let S = T;

@@ -1,5 +1,5 @@
 n.d(t, {
-    EO: () => T,
+    EO: () => b,
     Fc: () => I,
     Ft: () => A,
     W5: () => S,
@@ -89,13 +89,13 @@ function I(e) {
         maxDaysOld: 30
     });
 }
-function T(e) {
+function b(e) {
     return y(e, {
         minDaysOld: 0,
         maxDaysOld: 7
     });
 }
-function b(e, t, n) {
+function T(e, t, n) {
     if (null == e) return o.intl.string(o.t.sKdZ6e);
     if (!_(e.username)) return u;
     let i = n;
@@ -109,7 +109,7 @@ function S(e, t) {
             ...t
         },
         i = 'auto' !== n.identifiable || r.Z.hidePersonalInformation;
-    return b(e, n, i);
+    return T(e, n, i);
 }
 function A(e) {
     return (0, i.e7)([a.default], () => {
@@ -122,7 +122,7 @@ let N = {
     isNameConcealed: (e) => 4 === e.length && e.endsWith('...'),
     getUserTag: S,
     useUserTag: function (e, t) {
-        return b(
+        return T(
             e,
             {
                 ...f,

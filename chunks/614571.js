@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var i = n(846519),
     r = n(147913),
     a = n(553795),
@@ -114,4 +114,4 @@ class I extends r.Z {
         super(...e), d(this, 'actions', { RUNNING_GAMES_CHANGE: this.handleRunningGameChange }), d(this, 'stores', new Map().set(s.Z, this.handleDependantStoreChanges).set(a.Z, this.handleDependantStoreChanges));
     }
 }
-let T = new I();
+let b = new I();

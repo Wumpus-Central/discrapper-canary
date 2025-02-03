@@ -29,9 +29,9 @@ let l = function (e) {
             hasThread: v,
             isSystemMessage: y,
             hasReply: I,
-            ...T
+            ...b
         } = e,
-        b = (0, i.jsx)(s.tEY, {
+        T = (0, i.jsx)(s.tEY, {
             ...E,
             children: (0, i.jsxs)('div', {
                 className: a()(t, {
@@ -45,7 +45,7 @@ let l = function (e) {
                     [o.hasReply]: I
                 }),
                 ref: g,
-                ...T,
+                ...b,
                 role: 'article',
                 children: [
                     c,
@@ -64,5 +64,5 @@ let l = function (e) {
                 ]
             })
         });
-    return u ? (0, i.jsx)(s.Rny, { children: b }) : b;
+    return u ? (0, i.jsx)(s.Rny, { children: T }) : T;
 };

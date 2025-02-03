@@ -12,8 +12,8 @@ var i = n(200651),
 let _ = (e) => {
     let { reportType: t, menu: n, modalProps: _, onSubmit: p, onNavigate: h, emailToken: m, isAuthenticated: g = !0 } = e,
         E = (0, o.Dt)(),
-        { nodes: v, root_node_id: y, success_node_id: I, fail_node_id: T } = n,
-        [b, S] = r.useState(y),
+        { nodes: v, root_node_id: y, success_node_id: I, fail_node_id: b } = n,
+        [T, S] = r.useState(y),
         [A, N] = r.useState(void 0),
         [C, R] = r.useState(void 0),
         [O, D] = r.useState([]),
@@ -35,7 +35,7 @@ let _ = (e) => {
                     message_id: e,
                     content_type: t.name,
                     report_sub_type: a.report_type,
-                    current_node: v[b].id,
+                    current_node: v[T].id,
                     next_node: a.id
                 });
             }
@@ -59,7 +59,7 @@ let _ = (e) => {
                     message_id: e,
                     content_type: t.name,
                     report_sub_type: v[a].report_type,
-                    current_node: v[b].id,
+                    current_node: v[T].id,
                     next_node: v[a].id
                 });
             }
@@ -71,7 +71,7 @@ let _ = (e) => {
             for (let a in v) {
                 var n, i, r;
                 let s = v[a];
-                if (s.id !== I && s.id !== T && s.id !== y) {
+                if (s.id !== I && s.id !== b && s.id !== y) {
                     if (s.key.endsWith('_SUBMIT') || (null === (n = s.button) || void 0 === n ? void 0 : n.type) === 'submit') {
                         t.push(s);
                         continue;
@@ -83,14 +83,14 @@ let _ = (e) => {
                     }
                 }
             }
-            return [v[y], ...e, ...t, v[I], v[T]];
-        }, [v, y, T, I]);
+            return [v[y], ...e, ...t, v[I], v[b]];
+        }, [v, y, b, I]);
     return (0, i.jsx)(a.Y0X, {
         transitionState: _.transitionState,
         'aria-labelledby': E,
         children: (0, i.jsx)(a.MyZ, {
             width: 440,
-            activeSlide: b,
+            activeSlide: T,
             centered: !1,
             children: G.map((e) =>
                 (0, i.jsx)(
@@ -110,7 +110,7 @@ let _ = (e) => {
                                 multiSelect: A,
                                 textInput: C,
                                 successNodeId: I,
-                                failNodeId: T,
+                                failNodeId: b,
                                 onSubmit: k,
                                 reportId: x
                             })

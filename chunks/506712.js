@@ -39,12 +39,12 @@ function d(e, t, n, i, r) {
             g
         ],
         I = 0,
-        T = 0;
+        b = 0;
     p.forEach((e) => {
         var t;
-        I++, (T += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0);
+        I++, (b += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0);
     });
-    let b = '\n**Pain**:\n- Everyones: '
+    let T = '\n**Pain**:\n- Everyones: '
             .concat(c.XR[null !== (o = h.everyones) && void 0 !== o ? o : 0], '\n- Messages: ')
             .concat(c.XR[null !== (u = h.messages) && void 0 !== u ? u : 0], '\n- Size: ')
             .concat(m, '\n**Remote**:\n- Channels: ')
@@ -53,10 +53,10 @@ function d(e, t, n, i, r) {
             .concat(y.map((e) => e.guildOpens).join(' / '), '\n- Biggest Channel (abs): ')
             .concat(y.map((e) => e.biggestChannel).join(' / '), '\n- Biggest Channel (%): ')
             .concat(y.map((e) => e.biggestChannelFormatted).join(' / '), '\n- Sent Msgs: ')
-            .concat(T, '\n'),
+            .concat(b, '\n'),
         S = v.guildOpens >= 0.02 * v.totalOpensAcrossAllServers,
         A = (null !== (d = g.guildOpens) && void 0 !== d ? d : 0) > 0;
-    return h.messages !== c.XR.High || (r && (S || !A)) ? [c.AR.KeepAsIs, S, 'KeepAsIs' + b] : [c.AR.UseGreyDot, S, 'UseGreyDot' + b];
+    return h.messages !== c.XR.High || (r && (S || !A)) ? [c.AR.KeepAsIs, S, 'KeepAsIs' + T] : [c.AR.UseGreyDot, S, 'UseGreyDot' + T];
 }
 function f(e, t, n, i) {
     let a = t.reduce((e, t) => e + i(t), 0),

@@ -8,7 +8,7 @@ var i = n(200651),
     u = n(388032);
 class c extends r.Component {
     render() {
-        let { src: e, fileSize: t, className: n, mediaPlayerClassName: r, poster: c, fileName: d, naturalWidth: f, naturalHeight: _, playable: p, downloadable: h = !0, volume: m, autoPlay: g, autoMute: E, responsive: v, mediaLayoutType: y, mimeType: I, renderOverlayContent: T, renderLinkComponent: b, onClick: S, onPlay: A, onPause: N, onEnded: C, onControlsShow: R, onControlsHide: O, onVolumeChange: D, onMute: x, alt: L = u.intl.string(u.t.FlNoSU), ...P } = this.props;
+        let { src: e, fileSize: t, className: n, mediaPlayerClassName: r, poster: c, fileName: d, naturalWidth: f, naturalHeight: _, playable: p, downloadable: h = !0, volume: m, autoPlay: g, autoMute: E, responsive: v, mediaLayoutType: y, mimeType: I, renderOverlayContent: b, renderLinkComponent: T, onClick: S, onPlay: A, onPause: N, onEnded: C, onControlsShow: R, onControlsHide: O, onVolumeChange: D, onMute: x, alt: L = u.intl.string(u.t.FlNoSU), ...P } = this.props;
         return (0, i.jsx)(s.ZP, {
             alt: L,
             className: n,
@@ -43,8 +43,8 @@ class c extends r.Component {
                     fileSize: null == t ? void 0 : (0, a.Ng)(t),
                     fileSizeBytes: null == t ? void 0 : t,
                     playable: p,
-                    renderLinkComponent: b,
-                    renderOverlayContent: T,
+                    renderLinkComponent: T,
+                    renderOverlayContent: b,
                     onClick: S,
                     onPlay: A,
                     onPause: N,

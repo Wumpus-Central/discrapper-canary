@@ -30,8 +30,8 @@ function I(e, t, n) {
         e
     );
 }
-let T = [],
-    b = {};
+let b = [],
+    T = {};
 function S() {
     let e = [],
         t = h.Ok.getSetting();
@@ -45,7 +45,7 @@ function S() {
             ...i
         });
     let r = new Set();
-    o().forEach(b, (t) => {
+    o().forEach(T, (t) => {
         let [, n] = t;
         null != n.application_id && (r.add(n.name), e.push(n));
     });
@@ -69,33 +69,33 @@ function S() {
             type: y.IIU.LISTENING,
             ...A
         }),
-        a()(T, e) || (T = e);
+        a()(b, e) || (b = e);
 }
 function A() {
-    (b = {}), S();
+    (T = {}), S();
 }
 function N(e) {
     let { socketId: t, pid: n, activity: i } = e;
-    if (a()(b[t], [n, i])) return !1;
-    null != i ? (b[t] = [n, i]) : delete b[t], S();
+    if (a()(T[t], [n, i])) return !1;
+    null != i ? (T[t] = [n, i]) : delete T[t], S();
 }
 function C(e) {
     let { socketId: t } = e;
-    delete b[t], S();
+    delete T[t], S();
 }
 function R(e) {
     let { localActivities: t } = e;
-    (b = { ...t }), S();
+    (T = { ...t }), S();
 }
 class O extends (i = l.ZP.Store) {
     initialize() {
         this.waitFor(f.ZP, c.ZP, E.Z, g.Z, p.Z, m.Z, v.Z), this.syncWith([_.Z], () => S());
     }
     getActivities() {
-        return T;
+        return b;
     }
     getPrimaryActivity() {
-        return T[0];
+        return b[0];
     }
     getApplicationActivity(e) {
         return this.findActivity((t) => t.application_id === e);
@@ -104,13 +104,13 @@ class O extends (i = l.ZP.Store) {
         return this.findActivity((e) => e.type === y.IIU.CUSTOM_STATUS);
     }
     findActivity(e) {
-        return T.find(e);
+        return b.find(e);
     }
     getApplicationActivities() {
-        return b;
+        return T;
     }
     getActivityForPID(e) {
-        for (let [t, n] of Object.values(b)) if (t === e) return n;
+        for (let [t, n] of Object.values(T)) if (t === e) return n;
         return null;
     }
 }

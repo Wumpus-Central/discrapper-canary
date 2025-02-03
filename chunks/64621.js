@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(981631),
     y = n(388032),
     I = n(493248),
-    T = n(425637),
-    b = n(685741);
+    b = n(425637),
+    T = n(685741);
 let S = 200,
     A = 32,
     N = 30;
@@ -58,7 +58,7 @@ function C(e) {
             dismissibleContentType: j
         } = x
             ? {
-                  asset: b,
+                  asset: T,
                   assetClassName: I.profileImage,
                   className: I.profileCoachmark,
                   content: y.intl.string(y.t.HEGlIC),
@@ -67,7 +67,7 @@ function C(e) {
                   dismissibleContentType: o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL
               }
             : {
-                  asset: T,
+                  asset: b,
                   assetClassName: void 0,
                   className: I.activityCoachmark,
                   content: y.intl.string(y.t.LQ32TU),

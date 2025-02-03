@@ -1,5 +1,5 @@
 let i, r, a;
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var s,
     o = n(392711),
     l = n(442837),
@@ -44,7 +44,7 @@ let d = new Map(),
     I = (e) => {
         (f = d), (_ = !1), (i = void 0), (r = void 0), (a = void 0), (p = !1);
     };
-class T extends (s = l.ZP.Store) {
+class b extends (s = l.ZP.Store) {
     get isFetching() {
         return _;
     }
@@ -67,8 +67,8 @@ class T extends (s = l.ZP.Store) {
         return null != e ? f.get(e) : void 0;
     }
 }
-c(T, 'displayName', 'CollectiblesPurchaseStore');
-let b = new T(u.Z, {
+c(b, 'displayName', 'CollectiblesPurchaseStore');
+let T = new b(u.Z, {
     COLLECTIBLES_PURCHASES_FETCH: h,
     COLLECTIBLES_PURCHASES_FETCH_SUCCESS: g,
     COLLECTIBLES_PURCHASES_FETCH_FAILURE: m,

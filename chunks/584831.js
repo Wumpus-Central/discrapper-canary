@@ -17,16 +17,16 @@ var i,
     v = l.process,
     y = l.Promise,
     I = c(l, 'queueMicrotask'),
-    T = I && I.value;
-if (!T) {
-    var b = new f(),
+    b = I && I.value;
+if (!b) {
+    var T = new f(),
         S = function () {
             var e, t;
-            for (m && (e = v.domain) && e.exit(); (t = b.get()); )
+            for (m && (e = v.domain) && e.exit(); (t = T.get()); )
                 try {
                     t();
                 } catch (e) {
-                    throw (b.head && i(), e);
+                    throw (T.head && i(), e);
                 }
             e && e.enter();
         };
@@ -51,8 +51,8 @@ if (!T) {
           (i = function () {
               a.data = r = !r;
           })),
-        (T = function (e) {
-            b.head || i(), b.add(e);
+        (b = function (e) {
+            T.head || i(), T.add(e);
         });
 }
-e.exports = T;
+e.exports = b;

@@ -7,7 +7,7 @@ n.d(t, {
     hM: () => S,
     iy: () => w,
     mO: () => R,
-    t1: () => b,
+    t1: () => T,
     uL: () => M,
     v2: () => O,
     yC: () => C
@@ -32,8 +32,8 @@ var i = n(392711),
     v = n(526761),
     y = n(388032);
 let I = 250,
-    T = /-/g;
-function b(e) {
+    b = /-/g;
+function T(e) {
     let t = null != e ? { [e]: 1 } : {};
     u.ZP.trackWithMetadata(E.rMx.SEARCH_STARTED, {
         search_type: E.aib.GIF,
@@ -62,7 +62,7 @@ function S(e, t) {
 }
 function A(e, t, n) {
     let i = Date.now();
-    b(t),
+    T(t),
         s.tn
             .get({
                 url: E.ANM.GIFS_SEARCH,
@@ -164,7 +164,7 @@ function D(e) {
             });
 }
 function x() {
-    let e = (0, a.Z)().replace(T, '');
+    let e = (0, a.Z)().replace(b, '');
     u.ZP.trackWithMetadata(E.rMx.SEARCH_OPENED, {
         search_type: E.aib.GIF,
         load_id: e
@@ -200,7 +200,7 @@ function L() {
 }
 function P(e) {
     let t = Date.now();
-    b(E.wI2.TRENDING_GIFS),
+    T(E.wI2.TRENDING_GIFS),
         s.tn
             .get({
                 url: E.ANM.GIFS_TRENDING_GIFS,

@@ -22,8 +22,8 @@ var i = n(200651),
     v = n(558602),
     y = n(736144),
     I = n(113434),
-    T = n(553393),
-    b = n(565640),
+    b = n(553393),
+    T = n(565640),
     S = n(518950),
     A = n(594174),
     N = n(709586),
@@ -45,7 +45,7 @@ let w = (0, C.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             e_ = r.useRef(null),
             [ep, eh] = r.useState(!1),
             [em, eg] = r.useState(null),
-            eE = (0, b.Z)(ec, 'MemberListItem'),
+            eE = (0, T.Z)(ec, 'MemberListItem'),
             {
                 avatarDecorationSrc: ev,
                 avatarSrc: ey,
@@ -56,8 +56,8 @@ let w = (0, C.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 animateOnHover: !(n || ep),
                 guildId: z
             }),
-            { canSee: eT } = (0, m.D)('NamePlate'),
-            eb = eT && null != Q,
+            { canSee: eb } = (0, m.D)('NamePlate'),
+            eT = eb && null != Q,
             [eS, eA] = r.useState(!1);
         r.useEffect(() => {
             n && eA(!1);
@@ -192,7 +192,7 @@ let w = (0, C.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                     ]
                 }),
             eB = (e) =>
-                (0, i.jsx)(T.Z, {
+                (0, i.jsx)(b.Z, {
                     quest: eN,
                     memberListItemRef: e_,
                     applicationStream: V,
@@ -220,8 +220,8 @@ let w = (0, C.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                           selected: n,
                           children: (0, i.jsx)(E.Z, {
                               ref: e_,
-                              selected: n && !eb,
-                              highlighted: n && eb,
+                              selected: n && !eT,
+                              highlighted: n && eT,
                               className: s()(P.member, q, { [P.offline]: eZ && !n }),
                               innerClassName: P.memberInner,
                               onClick: $,

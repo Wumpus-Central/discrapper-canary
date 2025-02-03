@@ -76,10 +76,10 @@ var m = {
         itemprop: 'itemProp',
         tabindex: 'tabIndex'
     },
-    T = Object.keys(I).reduce(function (e, t) {
+    b = Object.keys(I).reduce(function (e, t) {
         return (e[I[t]] = t), e;
     }, {}),
-    b = function (e, t) {
+    T = function (e, t) {
         for (var n = e.length - 1; n >= 0; n -= 1) {
             var i = e[n];
             if (Object.prototype.hasOwnProperty.call(i, t)) return i[t];
@@ -87,17 +87,17 @@ var m = {
         return null;
     },
     S = function (e) {
-        var t = b(e, m.TITLE),
-            n = b(e, 'titleTemplate');
+        var t = T(e, m.TITLE),
+            n = T(e, 'titleTemplate');
         if ((Array.isArray(t) && (t = t.join('')), n && t))
             return n.replace(/%s/g, function () {
                 return t;
             });
-        var i = b(e, 'defaultTitle');
+        var i = T(e, 'defaultTitle');
         return t || i || void 0;
     },
     A = function (e) {
-        return b(e, 'onChangeClientState') || function () {};
+        return T(e, 'onChangeClientState') || function () {};
     },
     N = function (e, t) {
         return t
@@ -525,8 +525,8 @@ var W = function (e, t) {
                             }))
                         ),
                         bodyAttributes: N('bodyAttributes', e),
-                        defer: b(e, 'defer'),
-                        encode: b(e, 'encodeSpecialCharacters'),
+                        defer: T(e, 'defer'),
+                        encode: T(e, 'encodeSpecialCharacters'),
                         htmlAttributes: N('htmlAttributes', e),
                         linkTags: R(m.LINK, ['rel', 'href'], e),
                         metaTags: R(m.META, ['name', 'charset', 'http-equiv', 'property', 'itemprop'], e),
@@ -649,7 +649,7 @@ var X = ['children'],
                                 a = i.children,
                                 s = h(i, X),
                                 o = Object.keys(s).reduce(function (e, t) {
-                                    return (e[T[t] || t] = s[t]), e;
+                                    return (e[b[t] || t] = s[t]), e;
                                 }, {}),
                                 l = e.type;
                             switch (('symbol' == typeof l ? (l = l.toString()) : n.warnOnInvalidChildren(e, a), l)) {

@@ -35,9 +35,9 @@ function d(e) {
 }
 function f(e) {
     let { navId: t, columnCounts: n, focusedX: f, focusedY: _, onSelect: p, prepareFocus: h, getNewFocusPosition: m, dispatch: g, maintainFocusPosition: E, enabled: v, autoFocusElement: y, useVirtualFocus: I } = e,
-        T = i.useRef();
-    T.current = v;
-    let b = c(u(t, f, _)),
+        b = i.useRef();
+    b.current = v;
+    let T = c(u(t, f, _)),
         [S, A] = i.useState(!1),
         [N, C] = i.useState(!1),
         [R, O] = i.useState(!1),
@@ -58,7 +58,7 @@ function f(e) {
     i.useEffect(() => () => D.clean(), [D]);
     let x = i.useCallback(
             (e) => {
-                if (!T.current || !y) return !1;
+                if (!b.current || !y) return !1;
                 e.focus();
             },
             [y]
@@ -108,17 +108,17 @@ function f(e) {
         null != n && x(n);
     }, [t, w, S, x, f, _]);
     let k = i.useCallback((e) => {
-        T.current && null == e && M(!0);
+        b.current && null == e && M(!0);
     }, []);
     i.useEffect(() => {
-        S && N && null != b && (x(b), C(!1));
-    }, [N, b]),
+        S && N && null != T && (x(T), C(!1));
+    }, [N, T]),
         i.useEffect(() => {
             S && (R || L(f, _), O(!1));
         }, [f, _]);
     let U = i.useCallback(
             (e) => {
-                if (!T.current) return;
+                if (!b.current) return;
                 if (!I && o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
                     e.preventDefault(), e.stopPropagation(), P();
                     return;
@@ -136,13 +136,13 @@ function f(e) {
                         0 === n.length || (0 === f && 0 === _ && t === a.Us.NAVIGATE_LEFT) || (e.preventDefault(), e.stopPropagation()), g({ type: t });
                         return;
                     case a.Us.SELECT_FOCUSED_ITEM:
-                        if ((y && !d(b)) || e.repeat) return;
-                        e.preventDefault(), e.stopPropagation(), g({ type: t }), null != p ? p(f, _, e) : null != b && b.click();
+                        if ((y && !d(T)) || e.repeat) return;
+                        e.preventDefault(), e.stopPropagation(), g({ type: t }), null != p ? p(f, _, e) : null != T && T.click();
                 }
             },
-            [P, g, y, b, p, f, _]
+            [P, g, y, T, p, f, _]
         ),
-        G = i.useCallback((e) => (e.currentTarget !== e.target ? (S || (A(!0), O(!0)), !1) : S ? (P(!1), !1) : void (E && null != b ? L(f, _) : P(!0))), [S, E, b, P, L, f, _]),
+        G = i.useCallback((e) => (e.currentTarget !== e.target ? (S || (A(!0), O(!0)), !1) : S ? (P(!1), !1) : void (E && null != T ? L(f, _) : P(!0))), [S, E, T, P, L, f, _]),
         B = i.useCallback((e) => {
             if (e.target !== e.currentTarget) {
                 if (e.currentTarget.contains(e.relatedTarget)) return !1;
@@ -208,8 +208,8 @@ function _(e) {
             focusedY: o,
             columnCounts: n
         }),
-        { columnCounts: y, focusedX: I, focusedY: T } = E,
-        [b] = i.useState(() => (0, s.P2)(v, 16));
+        { columnCounts: y, focusedX: I, focusedY: b } = E,
+        [T] = i.useState(() => (0, s.P2)(v, 16));
     return (
         i.useEffect(() => {
             v({
@@ -221,8 +221,8 @@ function _(e) {
             navId: t,
             columnCounts: y,
             focusedX: I,
-            focusedY: T,
-            dispatch: b,
+            focusedY: b,
+            dispatch: T,
             onSelect: l,
             prepareFocus: u,
             getNewFocusPosition: c,

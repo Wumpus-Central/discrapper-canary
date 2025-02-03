@@ -17,8 +17,8 @@ var i = n(903425),
     v = '[object ArrayBuffer]',
     y = '[object DataView]',
     I = '[object Float64Array]',
-    T = '[object Int8Array]',
-    b = '[object Int16Array]',
+    b = '[object Int8Array]',
+    T = '[object Int16Array]',
     S = '[object Int32Array]',
     A = '[object Uint8Array]',
     N = '[object Uint8ClampedArray]',
@@ -28,4 +28,4 @@ var i = n(903425),
 function D(e) {
     return a(e) && r(e.length) && !!O[i(e)];
 }
-(O['[object Float32Array]'] = O[I] = O[T] = O[b] = O[S] = O[A] = O[N] = O[C] = O[R] = !0), (O[s] = O[o] = O[v] = O[l] = O[y] = O[u] = O[c] = O[d] = O[f] = O[_] = O[p] = O[h] = O[m] = O[g] = O[E] = !1), (e.exports = D);
+(O['[object Float32Array]'] = O[I] = O[b] = O[T] = O[S] = O[A] = O[N] = O[C] = O[R] = !0), (O[s] = O[o] = O[v] = O[l] = O[y] = O[u] = O[c] = O[d] = O[f] = O[_] = O[p] = O[h] = O[m] = O[g] = O[E] = !1), (e.exports = D);

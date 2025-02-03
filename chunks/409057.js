@@ -19,8 +19,8 @@ var r = n(120356),
     v = n(649700),
     y = n(810568),
     I = n(168524),
-    T = n(769654),
-    b = n(960870),
+    b = n(769654),
+    T = n(960870),
     S = n(139793),
     A = n(994746),
     N = n(232174),
@@ -59,7 +59,7 @@ function j(e) {
                 entry: X
             })
         }),
-        $ = (0, b.Z)({
+        $ = (0, T.Z)({
             display: 'live',
             user: t,
             activity: r,
@@ -141,7 +141,7 @@ function j(e) {
                       variant: 'text-xs/normal',
                       text: F.intl.formatToPlainString(F.t['hq/Qzc'], { guildName: H.name }),
                       onClick: () => {
-                          (0, T.X)(H.id), $({ action: 'OPEN_VOICE_GUILD' }), null == K || K();
+                          (0, b.X)(H.id), $({ action: 'OPEN_VOICE_GUILD' }), null == K || K();
                       }
                   })
                 : (0, c.Z)(r)

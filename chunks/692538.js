@@ -56,8 +56,8 @@ var i = n(995769),
                       }))),
                     E && t.interpretNumericEntities && 'iso-8859-1' === h && (E = o(E)),
                     v.indexOf('[]=') > -1 && (E = a(E) ? [E] : E);
-                var T = r.call(n, g);
-                T && 'combine' === t.duplicates ? (n[g] = i.combine(n[g], E)) : (T && 'last' !== t.duplicates) || (n[g] = E);
+                var b = r.call(n, g);
+                b && 'combine' === t.duplicates ? (n[g] = i.combine(n[g], E)) : (b && 'last' !== t.duplicates) || (n[g] = E);
             }
         return n;
     },

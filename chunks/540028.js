@@ -22,8 +22,8 @@ function v(e) {
     let v = (0, r.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(p)),
         y = (0, r.e7)([_.Z], () => _.Z.pipWindow),
         I = (0, r.e7)([d.Z], () => d.Z.getSelectedParticipant(p)),
-        T = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(p));
-    function b(e) {
+        b = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(p));
+    function T(e) {
         (null == y ? void 0 : y.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
         let t = e.participant;
         null != t && t.type !== m.fO.ACTIVITY && o.Z.selectParticipant(p, t.id);
@@ -41,7 +41,7 @@ function v(e) {
             t = a.find((e) => e.component === h.NYg.VIDEO);
         return (
             null != t &&
-                T.forEach((n) => {
+                b.forEach((n) => {
                     let i = f.Z.getActiveStreamForApplicationStream(n.stream),
                         r = n.id === (null == I ? void 0 : I.id) && (null == y ? void 0 : y.id) === t.id;
                     null == i ||
@@ -66,7 +66,7 @@ function v(e) {
             {
                 id: o,
                 label: a,
-                action: () => b(e)
+                action: () => T(e)
             },
             o
         );

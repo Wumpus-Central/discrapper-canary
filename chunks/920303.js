@@ -34,14 +34,14 @@ function E(e, t, n) {
 let v = 25,
     y = !1,
     I = !0,
-    T = !1,
     b = !1,
+    T = !1,
     S = null,
     A = o.z.LATEST_ACTIVITY,
     N = [],
     C = 0;
 function R() {
-    (y = !1), (I = !0), (T = !1), (b = !1), (S = null), (A = o.z.LATEST_ACTIVITY), (i = new Set()), (C = 0), (N = []);
+    (y = !1), (I = !0), (b = !1), (T = !1), (S = null), (A = o.z.LATEST_ACTIVITY), (i = new Set()), (C = 0), (N = []);
 }
 function O(e, t) {
     return t === o.z.LATEST_ACTIVITY ? p.ZP.lastMessageId(e.id) : e.id;
@@ -65,7 +65,7 @@ function x(e) {
             sortOrder: e.sortOrder
         }),
         P(),
-        (T = e.hasMore),
+        (b = e.hasMore),
         (C = e.offset + v),
         (y = !1),
         (I = !1);
@@ -75,7 +75,7 @@ function L(e) {
 }
 function P() {
     if (null == S) return !1;
-    let e = !T,
+    let e = !b,
         t = _.Z.getChannel(N[N.length - 1]),
         n = null == t ? null : O(t, A);
     N = s()(_.Z.getAllThreadsForParent(S))
@@ -96,7 +96,7 @@ function P() {
 }
 function w(e) {
     if (e.channelId !== S || e.sortOrder !== A || !(0, h.OL)(e.tagFilter, i)) return !1;
-    (y = !1), (b = !0), (I = !1);
+    (y = !1), (T = !0), (I = !1);
 }
 function M(e) {
     if (e.channel.id !== S) return !1;
@@ -120,7 +120,7 @@ class Z extends (r = l.ZP.Store) {
         this.waitFor(_.Z, g.Z, p.ZP);
     }
     get canLoadMore() {
-        return T && !y && !b;
+        return b && !y && !T;
     }
     get nextOffset() {
         return C;

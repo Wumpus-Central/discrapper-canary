@@ -29,8 +29,8 @@ var _ = n(887866),
     v = h.ERR_STREAM_CANNOT_PIPE,
     y = h.ERR_STREAM_DESTROYED,
     I = h.ERR_STREAM_NULL_VALUES,
-    T = h.ERR_STREAM_WRITE_AFTER_END,
-    b = h.ERR_UNKNOWN_ENCODING,
+    b = h.ERR_STREAM_WRITE_AFTER_END,
+    T = h.ERR_UNKNOWN_ENCODING,
     S = _.errorOrDestroy;
 function A() {}
 function N(e, t, r) {
@@ -64,7 +64,7 @@ function C(e) {
     (this._writableState = new N(e, this, t)), (this.writable = !0), e && ('function' == typeof e.write && (this._write = e.write), 'function' == typeof e.writev && (this._writev = e.writev), 'function' == typeof e.destroy && (this._destroy = e.destroy), 'function' == typeof e.final && (this._final = e.final)), l.call(this);
 }
 function R(e, t) {
-    var n = new T();
+    var n = new b();
     S(e, n), a.nextTick(t, n);
 }
 function O(e, t, n, i) {
@@ -218,7 +218,7 @@ n(689118)(C, l),
         !e.corked || (e.corked--, e.writing || e.corked || e.bufferProcessing || !e.bufferedRequest || G(this, e));
     }),
     (C.prototype.setDefaultEncoding = function (e) {
-        if (('string' == typeof e && (e = e.toLowerCase()), !(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((e + '').toLowerCase()) > -1))) throw new b(e);
+        if (('string' == typeof e && (e = e.toLowerCase()), !(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((e + '').toLowerCase()) > -1))) throw new T(e);
         return (this._writableState.defaultEncoding = e), this;
     }),
     Object.defineProperty(C.prototype, 'writableBuffer', {

@@ -22,8 +22,8 @@ var i = n(200651),
     v = n(28546),
     y = n(468954),
     I = n(409700),
-    T = n(53691),
-    b = n(75145),
+    b = n(53691),
+    T = n(75145),
     S = n(631771),
     A = n(609218),
     N = n(695346),
@@ -56,7 +56,7 @@ let X = 16,
     $ = 48,
     ee = 80,
     et = 32,
-    en = 32 + b.Kn,
+    en = 32 + T.Kn,
     ei = 16,
     er = 150,
     ea = 100,
@@ -126,7 +126,7 @@ function eu(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             l &&
-                (0, i.jsx)(b.ZP, {
+                (0, i.jsx)(T.ZP, {
                     colorOpacity: 0.35,
                     glowOpacity: 0.35
                 }),
@@ -204,17 +204,17 @@ function ed(e) {
     });
 }
 function ef(e) {
-    let { guildId: t, channel: a, containerWidth: d, onClose: g, onSelect: b, shouldValidateSelectedSound: D = !1, suppressPlaySound: F = !1, shouldShowUpsell: V = !0, gridNotice: X, soundButtonOverlay: ef, listPadding: e_, renderHeader: ep, defaultSoundsOnly: eh = !1, inExpressionPicker: em, refreshEnabled: eg, analyticsSource: eE } = e,
+    let { guildId: t, channel: a, containerWidth: d, onClose: g, onSelect: T, shouldValidateSelectedSound: D = !1, suppressPlaySound: F = !1, shouldShowUpsell: V = !0, gridNotice: X, soundButtonOverlay: ef, listPadding: e_, renderHeader: ep, defaultSoundsOnly: eh = !1, inExpressionPicker: em, refreshEnabled: eg, analyticsSource: eE } = e,
         { currentPreviewRef: ev } = r.useContext(P.Z),
         { analyticsLocations: ey } = (0, p.ZP)(),
         { analyticsLocations: eI } = (0, p.ZP)(_.Z.PREMIUM_UPSELL),
-        { location: eT } = (0, f.O)(),
-        eb = r.useMemo(
+        { location: eb } = (0, f.O)(),
+        eT = r.useMemo(
             () => ({
-                ...eT,
+                ...eb,
                 section: K.jXE.SOUNDBOARD_SOUND_PICKER
             }),
-            [eT]
+            [eb]
         ),
         [eS, eA] = r.useState(null),
         eN = (0, l.e7)([R.default], () => R.default.getCurrentUser()),
@@ -247,9 +247,9 @@ function ef(e) {
         ),
         eX = r.useCallback(
             (e, t, n) => {
-                if (null != b && !D) return b(e, n);
+                if (null != T && !D) return T(e, n);
                 let i = (0, k.Nq)(eN, e, a, !1);
-                if (null != b && D && i) b(e, n);
+                if (null != T && D && i) T(e, n);
                 else if (!F && i && (0, k.C0)(a)) {
                     var r;
                     (0, k.GN)(e, null !== (r = null == a ? void 0 : a.id) && void 0 !== r ? r : K.lds, t),
@@ -265,7 +265,7 @@ function ef(e) {
                     V && eA(e);
                 }
             },
-            [F, eN, a, V, ex, eD, b, D]
+            [F, eN, a, V, ex, eD, T, D]
         ),
         eJ = r.useCallback(
             (e, t) => {
@@ -418,7 +418,7 @@ function ef(e) {
         tt = r.useCallback(
             () =>
                 eY
-                    ? (0, i.jsx)(T.p, {
+                    ? (0, i.jsx)(b.p, {
                           showUpsell: eU,
                           text: te(),
                           button: q.intl.string(q.t.pj0XBA),
@@ -480,7 +480,7 @@ function ef(e) {
                                   type: z.cd.SOUND_PICKER_SOUND_CLICKED,
                                   is_external: !0,
                                   location: {
-                                      ...eb,
+                                      ...eT,
                                       object: K.qAy.SOUNDBOARD_SOUND
                                   },
                                   location_stack: eI,

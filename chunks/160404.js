@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(47120), n(789020), n(724458);
+n.d(t, { Z: () => b }), n(47120), n(789020), n(724458);
 var i,
     r = n(442837),
     a = n(570140),
@@ -153,7 +153,7 @@ class I extends (i = r.ZP.Store) {
     }
 }
 _(I, 'displayName', 'ImpersonateStore');
-let T = new I(a.Z, {
+let b = new I(a.Z, {
     IMPERSONATE_UPDATE: h,
     IMPERSONATE_STOP: m,
     GUILD_ROLE_DELETE: g,

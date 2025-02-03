@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var i,
     r = n(442837),
     a = n(570140),
@@ -78,7 +78,7 @@ function y(e) {
 function I(e) {
     c = null;
 }
-class T extends (i = r.ZP.Store) {
+class b extends (i = r.ZP.Store) {
     getGuildTemplate(e) {
         if (null != e) return u.get(e);
     }
@@ -95,8 +95,8 @@ class T extends (i = r.ZP.Store) {
         return c;
     }
 }
-l(T, 'displayName', 'GuildTemplateStore');
-let b = new T(a.Z, {
+l(b, 'displayName', 'GuildTemplateStore');
+let T = new b(a.Z, {
     GUILD_TEMPLATE_RESOLVE: f,
     GUILD_TEMPLATE_CREATE_SUCCESS: _,
     GUILD_TEMPLATE_SYNC_SUCCESS: _,

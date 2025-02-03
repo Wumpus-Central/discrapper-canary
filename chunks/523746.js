@@ -64,12 +64,12 @@ function I(e) {
     let { channelId: t } = e;
     return m(!1, t);
 }
-function T(e) {
+function b(e) {
     let { channel: t } = e;
     if ((null != h[t.id] && delete h[t.id], null == p[t.id])) return !1;
     delete p[t.id];
 }
-function b(e) {
+function T(e) {
     let { channelId: t, messageId: n, region: i, ringing: r } = e;
     if (
         ((p[t] = {
@@ -168,8 +168,8 @@ let O = new R(l.Z, {
     OVERLAY_INITIALIZE: E,
     CONNECTION_RESUMED: y,
     CHANNEL_SELECT: I,
-    CHANNEL_DELETE: T,
-    CALL_CREATE: b,
+    CHANNEL_DELETE: b,
+    CALL_CREATE: T,
     CALL_UPDATE: A,
     CALL_DELETE: N,
     CALL_ENQUEUE_RING: S,

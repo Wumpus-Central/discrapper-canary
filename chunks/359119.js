@@ -22,7 +22,7 @@ function f(e) {
 }
 function _(e) {
     let { safetyWarnings: t } = e;
-    null != t && ((c[e.id] = t), t.some((e) => f(e) && null != e.dismiss_timestamp && !T(e.dismiss_timestamp)) ? d.add(e.id) : d.delete(e.id)), null == t && (null != c[e.id] && delete c[e.id], d.delete(e.id));
+    null != t && ((c[e.id] = t), t.some((e) => f(e) && null != e.dismiss_timestamp && !b(e.dismiss_timestamp)) ? d.add(e.id) : d.delete(e.id)), null == t && (null != c[e.id] && delete c[e.id], d.delete(e.id));
 }
 function p(e) {
     _(e.channel);
@@ -83,10 +83,10 @@ function I() {
             _(e);
         });
 }
-function T(e) {
+function b(e) {
     return new Date(e).getTime() > Date.now() - s;
 }
-class b extends i.ZP.Store {
+class T extends i.ZP.Store {
     initialize() {
         this.waitFor(a.Z);
     }
@@ -102,7 +102,7 @@ class b extends i.ZP.Store {
         return d.has(e);
     }
 }
-let S = new b(r.Z, {
+let S = new T(r.Z, {
     CHANNEL_CREATE: p,
     CHANNEL_DELETE: m,
     CHANNEL_UPDATES: h,

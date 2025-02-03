@@ -17,8 +17,8 @@ var i,
     v = -2,
     y = -3,
     I = -4,
-    T = -5,
-    b = 8,
+    b = -5,
+    T = 8,
     S = 1,
     A = 2,
     N = 3,
@@ -118,14 +118,14 @@ function ep(e, t) {
         ev,
         ey,
         eI,
-        eT,
         eb,
+        eT,
         eS,
         eA = 0,
         eN = new a.Buf8(4),
         eC = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
     if (!e || !e.state || !e.output || (!e.input && 0 !== e.avail_in)) return v;
-    (n = e.state).mode === M && (n.mode = k), (en = e.next_out), (r = e.output), (ea = e.avail_out), (et = e.next_in), (i = e.input), (ei = e.avail_in), (es = n.hold), (eo = n.bits), (el = ei), (eu = ea), (eT = m);
+    (n = e.state).mode === M && (n.mode = k), (en = e.next_out), (r = e.output), (ea = e.avail_out), (et = e.next_in), (i = e.input), (ei = e.avail_in), (es = n.hold), (eo = n.bits), (el = ei), (eu = ea), (eb = m);
     i: for (;;)
         switch (n.mode) {
             case S:
@@ -145,7 +145,7 @@ function ep(e, t) {
                     (e.msg = 'incorrect header check'), (n.mode = $);
                     break;
                 }
-                if ((15 & es) !== b) {
+                if ((15 & es) !== T) {
                     (e.msg = 'unknown compression method'), (n.mode = $);
                     break;
                 }
@@ -161,7 +161,7 @@ function ep(e, t) {
                     if (0 === ei) break i;
                     ei--, (es += i[et++] << eo), (eo += 8);
                 }
-                if (((n.flags = es), (255 & n.flags) !== b)) {
+                if (((n.flags = es), (255 & n.flags) !== T)) {
                     (e.msg = 'unknown compression method'), (n.mode = $);
                     break;
                 }
@@ -303,7 +303,7 @@ function ep(e, t) {
                     (n.lens[eC[n.have++]] = 7 & es), (es >>>= 3), (eo -= 3);
                 }
                 for (; n.have < 19; ) n.lens[eC[n.have++]] = 0;
-                if (((n.lencode = n.lendyn), (n.lenbits = 7), (eb = { bits: n.lenbits }), (eT = u(c, n.lens, 0, 19, n.lencode, 0, n.work, eb)), (n.lenbits = eb.bits), eT)) {
+                if (((n.lencode = n.lendyn), (n.lenbits = 7), (eT = { bits: n.lenbits }), (eb = u(c, n.lens, 0, 19, n.lencode, 0, n.work, eT)), (n.lenbits = eT.bits), eb)) {
                     (e.msg = 'invalid code lengths set'), (n.mode = $);
                     break;
                 }
@@ -351,11 +351,11 @@ function ep(e, t) {
                     (e.msg = 'invalid code -- missing end-of-block'), (n.mode = $);
                     break;
                 }
-                if (((n.lenbits = 9), (eb = { bits: n.lenbits }), (eT = u(d, n.lens, 0, n.nlen, n.lencode, 0, n.work, eb)), (n.lenbits = eb.bits), eT)) {
+                if (((n.lenbits = 9), (eT = { bits: n.lenbits }), (eb = u(d, n.lens, 0, n.nlen, n.lencode, 0, n.work, eT)), (n.lenbits = eT.bits), eb)) {
                     (e.msg = 'invalid literal/lengths set'), (n.mode = $);
                     break;
                 }
-                if (((n.distbits = 6), (n.distcode = n.distdyn), (eb = { bits: n.distbits }), (eT = u(f, n.lens, n.nlen, n.ndist, n.distcode, 0, n.work, eb)), (n.distbits = eb.bits), eT)) {
+                if (((n.distbits = 6), (n.distcode = n.distdyn), (eT = { bits: n.distbits }), (eb = u(f, n.lens, n.nlen, n.ndist, n.distcode, 0, n.work, eT)), (n.distbits = eT.bits), eb)) {
                     (e.msg = 'invalid distances set'), (n.mode = $);
                     break;
                 }
@@ -475,17 +475,17 @@ function ep(e, t) {
                 }
                 n.mode = J;
             case J:
-                eT = g;
+                eb = g;
                 break i;
             case $:
-                eT = y;
+                eb = y;
                 break i;
             case ee:
                 return I;
             default:
                 return v;
         }
-    return ((e.next_out = en), (e.avail_out = ea), (e.next_in = et), (e.avail_in = ei), (n.hold = es), (n.bits = eo), (n.wsize || (eu !== e.avail_out && n.mode < $ && (n.mode < Q || t !== _))) && e_(e, e.output, e.next_out, eu - e.avail_out)) ? ((n.mode = ee), I) : ((el -= e.avail_in), (eu -= e.avail_out), (e.total_in += el), (e.total_out += eu), (n.total += eu), n.wrap && eu && (e.adler = n.check = n.flags ? o(n.check, r, eu, e.next_out - eu) : s(n.check, r, eu, e.next_out - eu)), (e.data_type = n.bits + (n.last ? 64 : 0) + (n.mode === M ? 128 : 0) + (n.mode === j || n.mode === G ? 256 : 0)), ((0 === el && 0 === eu) || t === _) && eT === m && (eT = T), eT);
+    return ((e.next_out = en), (e.avail_out = ea), (e.next_in = et), (e.avail_in = ei), (n.hold = es), (n.bits = eo), (n.wsize || (eu !== e.avail_out && n.mode < $ && (n.mode < Q || t !== _))) && e_(e, e.output, e.next_out, eu - e.avail_out)) ? ((n.mode = ee), I) : ((el -= e.avail_in), (eu -= e.avail_out), (e.total_in += el), (e.total_out += eu), (n.total += eu), n.wrap && eu && (e.adler = n.check = n.flags ? o(n.check, r, eu, e.next_out - eu) : s(n.check, r, eu, e.next_out - eu)), (e.data_type = n.bits + (n.last ? 64 : 0) + (n.mode === M ? 128 : 0) + (n.mode === j || n.mode === G ? 256 : 0)), ((0 === el && 0 === eu) || t === _) && eb === m && (eb = b), eb);
 }
 function eh(e) {
     if (!e || !e.state) return v;

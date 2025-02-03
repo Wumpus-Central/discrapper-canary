@@ -18,7 +18,7 @@ var i = n(200651),
 function v(e) {
     let { disabled: t, referralsRemaining: n, channel: v, isResending: y } = e,
         I = y ? g.intl.string(g.t.zzfBQk) : g.intl.string(g.t.ziPEBg),
-        [T, b] = r.useState(!1),
+        [b, T] = r.useState(!1),
         [S, A] = r.useState(!1),
         N = (0, o.Z)(null, () => A(!1)),
         { analyticsLocations: C } = (0, c.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
@@ -48,8 +48,8 @@ function v(e) {
                           (0, i.jsx)('div', {
                               onMouseEnter: () => {
                                   S ||
-                                      T ||
-                                      (b(!0),
+                                      b ||
+                                      (T(!0),
                                       _.default.track(h.rMx.SHARE_NITRO_FLOW_STEPS, {
                                           location_stack: C,
                                           step: m.fz.BADGE_TOOLTIP_VIEWED,
@@ -57,7 +57,7 @@ function v(e) {
                                       }));
                               },
                               onMouseLeave: () => {
-                                  b(!1);
+                                  T(!1);
                               },
                               children: (0, i.jsx)(p.Z, {
                                   ...e,
@@ -75,7 +75,7 @@ function v(e) {
                                   },
                                   children: (0, i.jsx)(f.Z, {
                                       referralsRemaining: n,
-                                      hovered: T,
+                                      hovered: b,
                                       isResending: y,
                                       isLightTheme: (0, s.ap)(O)
                                   })

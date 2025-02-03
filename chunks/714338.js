@@ -18,11 +18,11 @@ let f = {},
     v = [...o.u.binds, 'mod+shift+[', 'mod+shift+]', 'mod+[', 'mod+]', 'alt+[', 'alt+]', 'ctrl+shift+tab', 'ctrl+tab', 'mod+n', 'mod+t', 'mod+shift+t', 'mod+plus', 'mod+minus', 'mod+0'].map((e) => e.replace('mod', m)),
     y = () => [],
     I = [];
-function T(e, t) {
+function b(e, t) {
     let n = (e) => t(e, e.key);
     document.addEventListener(e, n), I.push(() => document.removeEventListener(e, n));
 }
-function b(e) {
+function T(e) {
     let t = [];
     for (let n of Object.values(e)) null != n && t.push(...n.binds);
     return t.map((e) => e.replace('mod', m));
@@ -40,7 +40,7 @@ function A(e) {
         let r = n.comboKeysBindGlobal ? h.bindGlobal : h.bind;
         if ((null != n.action && r.call(h, i, S(t, n.action)), null != n.keyup && r.call(h, i, S(t, n.keyup), 'keyup'), null != n.keydown)) {
             let e = i.indexOf('any-character');
-            -1 !== e && (T('keydown', n.keydown), i.splice(e, 1)), i.length > 0 && r.call(h, i, S(t, n.keydown), 'keydown');
+            -1 !== e && (b('keydown', n.keydown), i.splice(e, 1)), i.length > 0 && r.call(h, i, S(t, n.keydown), 'keydown');
         }
         null != n.keypress && r.call(h, i, S(t, n.keypress), 'keypress');
     }
@@ -57,7 +57,7 @@ let N = {
     checkDupes(e) {
         let t = new Set(),
             n = [];
-        for (let i of b(e)) t.has(i) && n.push(i), t.add(i);
+        for (let i of T(e)) t.has(i) && n.push(i), t.add(i);
         n.length > 0 && new l.Z('Keybinds').warn('Duplicate keyboard shortcuts defined:', n);
     },
     setLayout(e) {
@@ -80,7 +80,7 @@ let N = {
         p && this.hasBind(e) && h.unbind(e);
     },
     hasBind(e) {
-        let t = b(f);
+        let t = T(f);
         return (e = (e = e.replace('meta', 'cmd')).replace(/right |left /i, '').trim()), t.includes(e);
     }
 };

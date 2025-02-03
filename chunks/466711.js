@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(709054),
     y = n(51144),
     I = n(443603),
-    T = n(981631),
-    b = n(921944),
+    b = n(981631),
+    T = n(921944),
     S = n(388032),
     A = n(17823),
     N = n(553796);
@@ -101,15 +101,15 @@ function D(e) {
                 initialPlanId: null,
                 analyticsLocations: I,
                 analyticsObject: {
-                    page: E.isPrivate() ? T.ZY5.DM_CHANNEL : T.ZY5.GUILD_CHANNEL,
-                    section: T.jXE.CHANNEL_TEXT_AREA,
-                    object: T.qAy.GIFTING_PROMOTION_BUTTON,
-                    objectType: T.Qqv.GIFT
+                    page: E.isPrivate() ? b.ZY5.DM_CHANNEL : b.ZY5.GUILD_CHANNEL,
+                    section: b.jXE.CHANNEL_TEXT_AREA,
+                    object: b.qAy.GIFTING_PROMOTION_BUTTON,
+                    objectType: b.Qqv.GIFT
                 }
             });
         },
         j = () => {
-            N(!1), G(b.L.TAKE_ACTION), V();
+            N(!1), G(T.L.TAKE_ACTION), V();
         },
         H =
             void 0 !== P

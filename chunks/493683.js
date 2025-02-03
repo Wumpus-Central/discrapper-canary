@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var i = n(544891),
     r = n(780384),
     a = n(570140),
@@ -18,7 +18,7 @@ var i = n(544891),
     v = n(287734),
     y = n(981631),
     I = n(388032);
-let T = {
+let b = {
     async openPrivateChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],

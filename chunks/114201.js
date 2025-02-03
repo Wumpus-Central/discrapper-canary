@@ -19,7 +19,7 @@ var r = n(99815),
     v = n(981631),
     y = n(388032),
     I = n(234032);
-function T(e) {
+function b(e) {
     if (e > _.Z.Seconds.DAYS_30) {
         let t = Math.round(e / _.Z.Seconds.DAYS_30);
         return y.intl.formatToPlainString(y.t['HF7p4+'], { count: t });
@@ -39,7 +39,7 @@ function T(e) {
         return y.intl.formatToPlainString(y.t['1mNjX1'], { count: t });
     }
 }
-function b(e, t) {
+function T(e, t) {
     if (null == e)
         return {
             disabled: !1,
@@ -52,7 +52,7 @@ function b(e, t) {
             subtext: void 0
         };
     let i = null != t ? e.getTime() > t.getTime() && n < _.Z.Seconds.HOUR : n < _.Z.Seconds.HOUR,
-        r = i ? y.intl.string(y.t['3gPhoa']) : T(n);
+        r = i ? y.intl.string(y.t['3gPhoa']) : b(n);
     return {
         disabled: i,
         subtext: r
@@ -60,7 +60,7 @@ function b(e, t) {
 }
 function S(e) {
     let { guildId: t, leaderboardId: _ } = e,
-        T = (0, a.e7)([l.default], () => l.default.getId()),
+        b = (0, a.e7)([l.default], () => l.default.getId()),
         S = (0, a.e7)([u.Z], () => u.Z.getAccount(null, v.ABu.RIOT_GAMES)),
         A = (0, a.e7)([u.Z], () => u.Z.getAccount(null, v.ABu.LEAGUE_OF_LEGENDS)),
         N = (0, m.Z)({
@@ -83,12 +83,12 @@ function S(e) {
                 : v.dG4,
         O = null == S || C ? y.intl.string(y.t['0yRXHx']) : y.intl.string(y.t['KWpU6+']),
         { lastUpdateRequested: D, statisticLastUpdatedDate: x } = (0, g.Z)({
-            userId: T,
+            userId: b,
             guildId: t,
             leaderboardId: _,
             statisticId: r.E.LOL_TOTAL_KILLS
         }),
-        { disabled: L, subtext: P } = b(D, x),
+        { disabled: L, subtext: P } = T(D, x),
         w = (0, a.e7)(
             [d.Z, c.Z],
             () => {

@@ -23,14 +23,14 @@ let p = r.forwardRef(function (e, t) {
         ),
         y = l.ZN.useStore((e) => e.searchPlaceholder),
         I = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
-        T = r.useCallback(
+        b = r.useCallback(
             (e) => {
                 var t;
                 l.ZN.setActiveCategoryIndex('' === e ? 0 : d.c), l.ZN.setInspectedExpressionPosition(0, 0), l.ZN.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = p.current) || void 0 === t || t.scrollTo(0);
             },
             [p]
         ),
-        b = r.useCallback(() => {
+        T = r.useCallback(() => {
             (0, u.ql)('');
         }, []);
     return (
@@ -55,9 +55,9 @@ let p = r.forwardRef(function (e, t) {
                 ref: g,
                 size: o.E1j.Sizes.MEDIUM,
                 placeholder: null != y ? y : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t['Pck/4e']),
-                onClear: b,
+                onClear: T,
                 onKeyDown: n,
-                onChange: T,
+                onChange: b,
                 className: _.__invalid_searchBar,
                 inputProps: {
                     'aria-haspopup': 'grid',

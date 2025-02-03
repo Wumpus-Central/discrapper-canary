@@ -24,7 +24,7 @@ let I = {
         isLoading: !1
     }
 };
-function T(e, t, n) {
+function b(e, t, n) {
     var i, r;
     let a;
     return (
@@ -35,7 +35,7 @@ function T(e, t, n) {
         }
     );
 }
-function b(e) {
+function T(e) {
     return e.meta.url;
 }
 let S = {
@@ -45,7 +45,7 @@ let S = {
         return r.commands !== m.L8.DISABLED && (r.commands === m.L8.OLD_BUILT_INS ? n.startsWith(g.GI + 'gif') || n.startsWith(g.GI + 'tenor') : (null === (a = d.Z.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.integrationType) === E.q9n.GIF && d.Z.getOptionStates(e.id).query.hasValue);
     },
     queryResults(e, t, n, i, r) {
-        let { command: a, query: o } = T(e, n, i);
+        let { command: a, query: o } = b(e, n, i);
         if (null == a) return I;
         let l = s().findKey(E.nkL, (e) => e.command === a);
         r && null != l && o.length > 0 && u.Z.search(l, o);
@@ -70,7 +70,7 @@ let S = {
                 onHover: c,
                 onClick: f
             } = e,
-            { command: h, query: g } = T(s, l, u);
+            { command: h, query: g } = b(s, l, u);
         if (null == h || 0 === g.length) return null;
         if (n)
             return (0, i.jsx)(o.$jN, {
@@ -78,7 +78,7 @@ let S = {
                 type: o.$jN.Type.SPINNING_CIRCLE
             });
         if (null != t) {
-            var I, b;
+            var I, T;
             let e = !1,
                 n = t.map((t, n) => {
                     if (t.type === E.q9n.GIF) {
@@ -103,7 +103,7 @@ let S = {
                         );
                     }
                 }),
-                o = u.commands === m.L8.OLD_BUILT_INS ? h : null !== (b = null === (I = d.Z.getActiveCommand(s.id)) || void 0 === I ? void 0 : I.integrationTitle) && void 0 !== b ? b : h,
+                o = u.commands === m.L8.OLD_BUILT_INS ? h : null !== (T = null === (I = d.Z.getActiveCommand(s.id)) || void 0 === I ? void 0 : I.integrationTitle) && void 0 !== T ? T : h,
                 l =
                     g.length > 0 && null != o
                         ? v.intl.format(v.t['3njXz8'], {
@@ -142,7 +142,7 @@ let S = {
         if (null == t) return { type: null };
         let u = n[i];
         if (
-            (r === m.QB.INSERT ? a.replaceText(b(u)) : a.sendMessage(b(u)),
+            (r === m.QB.INSERT ? a.replaceText(T(u)) : a.sendMessage(T(u)),
             c.ZP.trackWithMetadata(E.rMx.SEARCH_RESULT_SELECTED, {
                 search_type: E.aib.GIF,
                 index_num: i,

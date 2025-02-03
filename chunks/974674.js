@@ -29,7 +29,7 @@ let y = {
 function I() {
     return document.hasFocus();
 }
-function T(e) {
+function b(e) {
     let { size: t, isMobile: n, isTyping: r, ...a } = e,
         s = (0, h.UC)(t),
         o = s.status * (n && !r ? h.EW : 1),
@@ -47,7 +47,7 @@ function T(e) {
         ...a
     });
 }
-function b(e, t) {
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return null != t
         ? E.intl.formatToPlainString(E.t['/6mw19'], {
@@ -273,16 +273,16 @@ function O(e) {
     };
 }
 function D(e) {
-    let { children: t, size: n, onClick: r, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: f, tabIndex: _, ariaLabel: p, ariaHidden: m, status: E, isMobile: y = !1, isTyping: I = !1, avatarDecoration: T, typingOffset: A, specs: N } = e,
+    let { children: t, size: n, onClick: r, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: f, tabIndex: _, ariaLabel: p, ariaHidden: m, status: E, isMobile: y = !1, isTyping: I = !1, avatarDecoration: b, typingOffset: A, specs: N } = e,
         C = {
             width: (0, h.px)(n),
             height: (0, h.px)(n)
         },
-        R = null == p || m ? void 0 : b(p, E, y),
+        R = null == p || m ? void 0 : T(p, E, y),
         O = N.size * g.hs,
         D = S(E, n, y, I),
         x =
-            null != T &&
+            null != b &&
             (0, i.jsx)('svg', {
                 width: O + A,
                 height: O,
@@ -299,7 +299,7 @@ function D(e) {
                         className: v.avatarStack,
                         children: (0, i.jsx)('img', {
                             className: v.avatar,
-                            src: T,
+                            src: b,
                             alt: ' ',
                             'aria-hidden': !0
                         })
@@ -353,7 +353,7 @@ function x(e) {
     );
 }
 function L(e) {
-    let { src: t, status: n, size: r, statusColor: a, isMobile: o = !1, isTyping: l = !1, typingIndicatorRef: f, isSpeaking: _ = !1, statusTooltip: g = !1, statusTooltipDelay: E, statusBackdropColor: y, 'aria-hidden': I = !1, 'aria-label': T, imageClassName: b } = e,
+    let { src: t, status: n, size: r, statusColor: a, isMobile: o = !1, isTyping: l = !1, typingIndicatorRef: f, isSpeaking: _ = !1, statusTooltip: g = !1, statusTooltipDelay: E, statusBackdropColor: y, 'aria-hidden': I = !1, 'aria-label': b, imageClassName: T } = e,
         S = n !== m.Skl.UNKNOWN ? n : null,
         C = (0, h.UC)(r),
         O = null != S ? Math.ceil((C.status * h.D6 - C.status) / 2) : 0,
@@ -361,7 +361,7 @@ function L(e) {
         P = (0, c.vj)(S, a);
     return (0, i.jsx)(D, {
         ...e,
-        ariaLabel: T,
+        ariaLabel: b,
         ariaHidden: I,
         status: S,
         specs: C,
@@ -382,7 +382,7 @@ function L(e) {
                     children: (0, i.jsx)(x, {
                         src: t,
                         isSpeaking: _,
-                        className: b
+                        className: T
                     })
                 }),
                 null != S && null != y ? R(y, o, C, S) : null,
@@ -424,7 +424,7 @@ function P(e, t, n) {
     return 5 - (n && !i ? 0 : 0.5 * e) + 1.5 * t;
 }
 function w(e) {
-    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: b, status: S, statusColor: A, statusTooltip: N = !1, statusTooltipDelay: C, statusBackdropColor: L, 'aria-hidden': w = !1, 'aria-label': M, imageClassName: k } = e,
+    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: T, status: S, statusColor: A, statusTooltip: N = !1, statusTooltipDelay: C, statusBackdropColor: L, 'aria-hidden': w = !1, 'aria-label': M, imageClassName: k } = e,
         U = (0, c.vj)(S, A),
         G = r.useId(),
         B = r.useId(),
@@ -516,7 +516,7 @@ function w(e) {
                     height: q,
                     mask: 'url(#'.concat(G, ')'),
                     children: (0, i.jsx)(x, {
-                        src: b,
+                        src: T,
                         isSpeaking: g,
                         className: k
                     })
@@ -555,7 +555,7 @@ function w(e) {
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(T, {
+                                (0, i.jsx)(b, {
                                     size: E,
                                     isMobile: l,
                                     isTyping: _,

@@ -34,8 +34,8 @@ function v(e, t, n) {
 }
 let y = [],
     I = null,
-    T = null,
-    b = new Set(),
+    b = null,
+    T = new Set(),
     S = o.z.LATEST_ACTIVITY,
     A = 0,
     N = [],
@@ -66,7 +66,7 @@ function k(e) {
     };
 }
 function U() {
-    (N = []), (i = null), (T = null), (b = new Set()), (S = o.z.LATEST_ACTIVITY), (A = 0), (R = []), (O = s().chain(y)), (D = s().chain(y)), L.clear(), x.clear();
+    (N = []), (i = null), (b = null), (T = new Set()), (S = o.z.LATEST_ACTIVITY), (A = 0), (R = []), (O = s().chain(y)), (D = s().chain(y)), L.clear(), x.clear();
 }
 function G() {
     var e;
@@ -86,7 +86,7 @@ function B(e) {
               .sort(M(S));
 }
 function Z(e) {
-    let t = _.Z.getChannel(T);
+    let t = _.Z.getChannel(b);
     if (null == t) return;
     (null == e ? void 0 : e.refreshThreadIds) &&
         ((R = Object.values(c.Z.getThreadsForParent(t.guild_id, t.id)).map((e) => {
@@ -99,18 +99,18 @@ function Z(e) {
         0 !== L.size && ((R = Array.from(new Set([...R, ...L]))), L.clear()),
         ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((D = s().chain(R).sort(M(o.z.LATEST_ACTIVITY))), (O = s().chain(R).sort(M(o.z.CREATION_DATE))));
     let n = (S === o.z.LATEST_ACTIVITY ? D : O).value(),
-        r = (N = 0 === b.size ? n : n.filter(k(b))).find((e) => w(e));
+        r = (N = 0 === T.size ? n : n.filter(k(T))).find((e) => w(e));
     i = null == r ? null : r;
 }
 function F(e) {
     var t;
     let { guildId: n } = e;
-    if (null == T || n !== (null === (t = _.Z.getChannel(T)) || void 0 === t ? void 0 : t.guild_id)) return !1;
+    if (null == b || n !== (null === (t = _.Z.getChannel(b)) || void 0 === t ? void 0 : t.guild_id)) return !1;
     Z({ refreshThreadIds: !0 });
 }
 function V(e) {
     let { channel: t } = e;
-    if (null == t.parent_id || t.parent_id !== T) return !1;
+    if (null == t.parent_id || t.parent_id !== b) return !1;
     let n = (0, E.yv)(t.id),
         i = L.has(t.id);
     if (n && !i) L.add(t.id), Z({ sortThreadIds: !0 });
@@ -121,27 +121,27 @@ function V(e) {
 }
 function j(e) {
     let { channel: t, isNewlyCreated: n } = e;
-    if (null == t.parent_id || t.parent_id !== T || !n) return !1;
+    if (null == t.parent_id || t.parent_id !== b || !n) return !1;
     t.ownerId !== f.default.getId() ? A++ : (I = t.id);
 }
 function H(e) {
     let { channel: t } = e;
-    if (null == t.parent_id || t.parent_id !== T) return !1;
+    if (null == t.parent_id || t.parent_id !== b) return !1;
     x.add(t.id), Z({ sortThreadIds: !0 });
 }
 function Y(e) {
     let { channel: t } = e;
-    if (null == t.parent_id || t.parent_id !== T) return !1;
+    if (null == t.parent_id || t.parent_id !== b) return !1;
     U();
 }
 function W(e) {
     let { channelId: t } = e;
-    if (null == t || t !== T) return !1;
+    if (null == t || t !== b) return !1;
     Z({ refreshThreadIds: !0 });
 }
 function K(e) {
     let { channelId: t } = e;
-    if (null == t || t !== T) return !1;
+    if (null == t || t !== b) return !1;
     C = !1;
 }
 class z extends (r = l.ZP.Store) {
@@ -155,10 +155,10 @@ class z extends (r = l.ZP.Store) {
         return C;
     }
     getThreadIds(e, t, n) {
-        let i = e !== T,
-            r = !(0, m.OL)(n, b),
+        let i = e !== b,
+            r = !(0, m.OL)(n, T),
             a = t !== S;
-        return (T = e), (b = n), (S = t), i ? Z({ refreshThreadIds: !0 }) : a ? Z({ sortThreadIds: !0 }) : r && Z(), N;
+        return (b = e), (T = n), (S = t), i ? Z({ refreshThreadIds: !0 }) : a ? Z({ sortThreadIds: !0 }) : r && Z(), N;
     }
     getCurrentThreadIds() {
         return N;

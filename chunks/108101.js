@@ -17,8 +17,8 @@ var i = n(687249),
     v = n(551023),
     y = n(118788),
     I = n(661233),
-    T = n(357361),
-    b = n(438330),
+    b = n(357361),
+    T = n(438330),
     S = 1,
     A = 2,
     N = 4,
@@ -74,7 +74,7 @@ function ee(e, t, n, R, O, D) {
     var F = D.get(e);
     if (F) return F;
     D.set(e, x),
-        T(e)
+        b(e)
             ? e.forEach(function (i) {
                   x.add(ee(i, t, n, i, e, D));
               })
@@ -82,7 +82,7 @@ function ee(e, t, n, R, O, D) {
               e.forEach(function (i, r) {
                   x.set(r, ee(i, t, n, r, e, D));
               });
-    var V = U ? (M ? _ : f) : M ? keysIn : b,
+    var V = U ? (M ? _ : f) : M ? keysIn : T,
         j = G ? void 0 : V(e);
     return (
         r(j || e, function (i, r) {

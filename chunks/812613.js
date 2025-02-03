@@ -21,12 +21,12 @@ var l = t(512722),
     i = t(304809),
     s = t(70956),
     r = t(208049),
-    o = t(419202);
-let u = new AudioContext({ sampleRate: Math.min((0, i.N)().sampleRate, 48000) });
+    u = t(419202);
+let o = new AudioContext({ sampleRate: Math.min((0, i.N)().sampleRate, 48000) });
 async function d(e) {
     let n = await e.arrayBuffer();
     if (!(n instanceof ArrayBuffer)) throw Error('Unexpected file type');
-    return u.decodeAudioData(n);
+    return o.decodeAudioData(n);
 }
 async function c(e) {
     var n;
@@ -108,7 +108,7 @@ async function m(e) {
         await i.flush(),
         new Blob(
             [
-                (0, o.Z)(n, {
+                (0, u.Z)(n, {
                     channelCount: e.numberOfChannels,
                     inputSampleRate: e.sampleRate,
                     outputGain: 0,
@@ -123,12 +123,12 @@ async function h(e, n) {
     let t = (function (e, n) {
         let { startMs: t, endMs: l } = n,
             { sampleRate: a, numberOfChannels: i, duration: r } = e,
-            o = r * s.Z.Millis.SECOND,
-            d = Math.min(l, o);
-        if (0 === t && d === o) return e;
-        let c = Math.floor((t / o) * e.length),
-            f = Math.floor((d / o) * e.length),
-            m = u.createBuffer(i, f - c, a);
+            u = r * s.Z.Millis.SECOND,
+            d = Math.min(l, u);
+        if (0 === t && d === u) return e;
+        let c = Math.floor((t / u) * e.length),
+            f = Math.floor((d / u) * e.length),
+            m = o.createBuffer(i, f - c, a);
         for (let n = 0; n < i; n++) {
             let t = m.getChannelData(n),
                 l = e.getChannelData(n),

@@ -57,7 +57,7 @@ let v = {
         [v.LARGER]: [19, 19, 17, 17, 15, 13, 11],
         [v.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
     };
-class T extends a.PureComponent {
+class b extends a.PureComponent {
     renderAcronym() {
         let { guild: e, iconSrc: t } = this.props;
         return null != e.icon || null != t
@@ -81,7 +81,7 @@ class T extends a.PureComponent {
     }
     renderIcon() {
         var e, t;
-        let { guild: n, className: i, showBadge: a, active: s, size: l, style: u = {}, textScale: c, showTooltip: f, tooltipPosition: _, onClick: p, to: h, badgeStrokeColor: E, animate: v, tabIndex: y, iconSrc: T, 'aria-hidden': b, ...S } = this.props,
+        let { guild: n, className: i, showBadge: a, active: s, size: l, style: u = {}, textScale: c, showTooltip: f, tooltipPosition: _, onClick: p, to: h, badgeStrokeColor: E, animate: v, tabIndex: y, iconSrc: b, 'aria-hidden': T, ...S } = this.props,
             A = I[l],
             N = null != p ? d.P3F : 'div';
         return (0, r.jsxs)(N, {
@@ -90,7 +90,7 @@ class T extends a.PureComponent {
                 [g.iconInactive]: !s,
                 [g.noIcon]: null == n.icon
             }),
-            'aria-hidden': b,
+            'aria-hidden': T,
             style:
                 null == n.icon
                     ? {
@@ -131,7 +131,7 @@ class T extends a.PureComponent {
             : this.renderTooltip();
     }
 }
-let b = u.ZP.connectStores([p.Z], (e) => {
+let T = u.ZP.connectStores([p.Z], (e) => {
     let { guild: t, animate: n, iconSrc: i, style: r, size: a, iconSize: s, lossless: o } = e;
     return {
         style: {
@@ -139,10 +139,10 @@ let b = u.ZP.connectStores([p.Z], (e) => {
             backgroundImage: (0, h.rv)(null != i ? i : t.getIconURL(null != s ? s : y[a], n && p.Z.isFocused(), o))
         }
     };
-})((0, f.N)((e) => (0, r.jsx)(T, { ...e })));
+})((0, f.N)((e) => (0, r.jsx)(b, { ...e })));
 class S extends (i = a.PureComponent) {
     render() {
-        return (0, r.jsx)(b, { ...this.props });
+        return (0, r.jsx)(T, { ...this.props });
     }
 }
 E(S, 'Sizes', v),

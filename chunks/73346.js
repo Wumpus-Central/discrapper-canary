@@ -32,8 +32,8 @@ n(358085);
 var y = n(709054),
     I = n(981631);
 n(388032), l().shim();
-let T = !u.tq && !u.Em && -1 !== (0, g.vu)(),
-    b = 3;
+let b = !u.tq && !u.Em && -1 !== (0, g.vu)(),
+    T = 3;
 function S(e, t) {
     let { analyticsSource: n, analyticsProperties: i, storeListingId: r, slug: a, channelId: s, guildId: o } = t,
         l = {
@@ -64,7 +64,7 @@ function A(e, t, n, i) {
             default:
                 i = 'webp';
         }
-    'webp' !== i || T || (i = 'png');
+    'webp' !== i || b || (i = 'png');
     let o = 'string' == typeof t ? t : t.id,
         l = ((r = 'https:'), 'https:');
     return (
@@ -204,7 +204,7 @@ function w(e, t, n) {
     let o = i.releaseDate;
     return (
         null != o &&
-            s()().diff(o, 'months') < b &&
+            s()().diff(o, 'months') < T &&
             (i.accessType === I.kGb.EARLY_ACCESS
                 ? a.push({
                       type: I.AzA.EARLY_ACCESS,

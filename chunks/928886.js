@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(981631),
     y = n(474936),
     I = n(231338),
-    T = n(467474);
-function b(e, t) {
+    b = n(467474);
+function T(e, t) {
     return e in t;
 }
 function S(e) {
@@ -45,16 +45,16 @@ function S(e) {
         return (
             w
                 ? (e = (0, i.jsxs)('div', {
-                      className: T.container,
+                      className: b.container,
                       children: [
                           (0, i.jsx)(f.Z, {
                               defaultAnimationState: l.SR.LOOP,
                               giftStyle: L,
-                              className: T.seasonalGiftBoxHeaderIcon
+                              className: b.seasonalGiftBoxHeaderIcon
                           }),
                           (0, i.jsx)(o.olH, {
                               onClick: S,
-                              className: T.closeButton
+                              className: b.closeButton
                           })
                       ]
                   }))
@@ -66,7 +66,7 @@ function S(e) {
                           onClose: S
                       }))
                     : U &&
-                      (s()(b(A, y.y7), 'invalid sku id: '.concat(A)),
+                      (s()(T(A, y.y7), 'invalid sku id: '.concat(A)),
                       (e = (0, i.jsx)(_.Z, {
                           currentStep: null != N ? N : void 0,
                           purchaseState: R,

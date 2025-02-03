@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var i = n(133080),
     r = n(592125),
     a = n(412788);
@@ -110,4 +110,4 @@ class I extends a.Z {
     }
 }
 s(I, 'displayName', 'MessageRequestStore'), s(I, 'LATEST_SNAPSHOT_VERSION', 1);
-let T = new I();
+let b = new I();

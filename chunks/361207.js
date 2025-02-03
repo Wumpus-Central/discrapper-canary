@@ -1,6 +1,6 @@
 n.d(t, {
     DW: () => y,
-    Gn: () => T,
+    Gn: () => b,
     t3: () => I,
     w4: () => E
 });
@@ -48,7 +48,7 @@ function I() {
         t = e === g ? 'tar.gz' : null;
     return E(e, !1, t);
 }
-function T(e, t, n) {
+function b(e, t, n) {
     let i = null != n ? n.toString() : null;
     switch (t) {
         case 'iOS':

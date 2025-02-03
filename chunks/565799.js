@@ -18,8 +18,8 @@ var i,
     v = n(594174),
     y = n(979651),
     I = n(938475),
-    T = n(501655),
-    b = n(88751),
+    b = n(501655),
+    T = n(88751),
     S = n(427679);
 function A(e, t, n) {
     return (
@@ -68,7 +68,7 @@ function P(e) {
 }
 function w(e) {
     let t = O[e];
-    return null == t && ((t = new T.ZP(e)), (O[e] = t), t.rebuild()), t;
+    return null == t && ((t = new b.ZP(e)), (O[e] = t), t.rebuild()), t;
 }
 function M(e) {
     return null != e && e.isGuildStageVoice() && I.ZP.countVoiceStatesForChannel(e.id) > 0;
@@ -166,7 +166,7 @@ function $(e) {
 let ee = [];
 class et extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(_.default, v.default, p.Z, E.Z, y.Z, m.Z, I.ZP, h.Z, b.ZP, g.Z, S.Z, f.Z);
+        this.waitFor(_.default, v.default, p.Z, E.Z, y.Z, m.Z, I.ZP, h.Z, T.ZP, g.Z, S.Z, f.Z);
     }
     getParticipantsVersion(e) {
         var t, n;

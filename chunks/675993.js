@@ -19,8 +19,8 @@ var i = n(200651),
     E = n(783097),
     A = n(695676),
     I = n(520315),
-    g = n(29380),
-    _ = n(783685),
+    _ = n(29380),
+    g = n(783685),
     P = n(388032),
     j = n(580062),
     y = n(665162);
@@ -41,11 +41,11 @@ function T(e) {
             return t.channel;
         }, [t, n]),
         { isSlideReady: N } = (0, A.hH)(),
-        [I, g] = l.useState(!1);
+        [I, _] = l.useState(!1);
     l.useEffect(() => {
-        N && g(!0);
+        N && _(!0);
     }, [N]);
-    let _ =
+    let g =
         null != f
             ? {
                   channel: f,
@@ -94,9 +94,9 @@ function T(e) {
                                       })
                                   })
                                 : null,
-                            null != _
+                            null != g
                                 ? (0, i.jsx)(M, {
-                                      context: _,
+                                      context: g,
                                       application: n,
                                       sectionName: d,
                                       isDeveloperOfThisApp: h,
@@ -250,7 +250,7 @@ function M(e) {
               children: [
                   (0, i.jsx)('div', {
                       className: j.entryPointContainerFlexChild,
-                      children: (0, i.jsx)(g.Z, {
+                      children: (0, i.jsx)(_.Z, {
                           context: n,
                           application: l,
                           sectionName: a,
@@ -261,7 +261,7 @@ function M(e) {
                   x && null != u
                       ? (0, i.jsx)('div', {
                             className: j.entryPointContainerFlexChild,
-                            children: (0, i.jsx)(_.Z, {
+                            children: (0, i.jsx)(g.Z, {
                                 botUserId: u,
                                 applicationId: l.id,
                                 buttonSize: N,

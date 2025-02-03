@@ -66,7 +66,7 @@ function h(e) {
                     analyticsLocations: g
                 })
         }),
-        T = (0, d.Z)({
+        b = (0, d.Z)({
             user: t,
             guildId: n,
             location: E,
@@ -77,12 +77,12 @@ function h(e) {
                     analyticsLocations: g
                 })
         }),
-        b = [
+        T = [
             [h, v],
             [
                 I,
                 y,
-                T,
+                b,
                 (0, d.T)({
                     user: t,
                     guildId: n,
@@ -107,7 +107,7 @@ function h(e) {
                 })
             ]
         ];
-    return b.every((e) => e.every((e) => null == e))
+    return T.every((e) => e.every((e) => null == e))
         ? null
         : (0, i.jsx)(s.Gt, {
               value: g,
@@ -119,7 +119,7 @@ function h(e) {
                           onSelect: void 0,
                           onClose: t,
                           'aria-label': p.intl.string(p.t.AXIHpa),
-                          children: b.map((e, t) => (0, i.jsx)(r.kSQ, { children: e.map((e) => e) }, t))
+                          children: T.map((e, t) => (0, i.jsx)(r.kSQ, { children: e.map((e) => e) }, t))
                       });
                   },
                   children: (e) =>

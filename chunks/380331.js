@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(626135),
     y = n(624138),
     I = n(543241),
-    T = n(883661),
-    b = n(880949),
+    b = n(883661),
+    T = n(880949),
     S = n(784222),
     A = n(149203),
     N = n(981631),
@@ -65,7 +65,7 @@ function j(e) {
             },
             children: [
                 null != E
-                    ? (0, i.jsx)(b.Z, {
+                    ? (0, i.jsx)(T.Z, {
                           guild: E,
                           isSelected: m,
                           shouldAnimate: !_ && d,
@@ -73,7 +73,7 @@ function j(e) {
                       })
                     : null,
                 null == E && null != h
-                    ? (0, i.jsx)(T.Z, {
+                    ? (0, i.jsx)(b.Z, {
                           categoryId: h,
                           className: O.categoryIcon,
                           height: L,
@@ -106,21 +106,21 @@ let H = (e) => {
             emojiListRef: n
         }),
         y = (0, _.O)(),
-        T = (0, I.kI)(o, u, null == u ? void 0 : u.guild_id, d),
-        b = r.useRef(null),
+        b = (0, I.kI)(o, u, null == u ? void 0 : u.guild_id, d),
+        T = r.useRef(null),
         N = (0, c.e7)([E.Z], () => E.Z.isFocused()),
         C = (0, c.e7)([p.Z], () => p.Z.useReducedMotion, []),
         D = r.useMemo(
             () =>
                 l().memoize((e, t) => {
-                    let n = T[t];
+                    let n = b[t];
                     if (null != n)
                         return (0, i.jsx)(
                             j,
                             {
                                 activeIndex: g,
                                 analyticsContext: y,
-                                categories: T,
+                                categories: b,
                                 category: n,
                                 categoryIndex: t,
                                 handleCategorySelect: v,
@@ -130,20 +130,20 @@ let H = (e) => {
                             t
                         );
                 }),
-            [g, y, T, v, N, C]
+            [g, y, b, v, N, C]
         ),
         w = r.useMemo(() => [8, 8, 0, 8], []),
         H = r.useCallback(
             (e, t) => {
-                let n = T[t];
+                let n = b[t];
                 if (n.type === A.En.RECENT) return G;
                 if (n.type === A.En.GUILD) {
-                    let e = T[t + 1];
+                    let e = b[t + 1];
                     return null != e && e.type !== A.En.GUILD ? Z : B;
                 }
                 return F;
             },
-            [T]
+            [b]
         ),
         {
             nonUnicodeCategoryCount: Y,
@@ -155,7 +155,7 @@ let H = (e) => {
                 t = 0,
                 n = 0,
                 i = 0;
-            T.forEach((r) => {
+            b.forEach((r) => {
                 r.type === A.En.GUILD ? ((t += 1), (n += 1)) : r.type === A.En.UNICODE ? (i += 1) : ((e += 1), (t += 1));
             });
             let r = G + t * B + Z;
@@ -165,7 +165,7 @@ let H = (e) => {
                 firstUnicodeCategoryOffsetTop: r,
                 rowCountBySection: [e, n, i]
             };
-        }, [T]),
+        }, [b]),
         [q, Q] = r.useState(!0);
     r.useLayoutEffect(() => {
         Q(Y >= V);
@@ -173,7 +173,7 @@ let H = (e) => {
     let X = r.useCallback(
             (e) => {
                 var t;
-                let n = null === (t = b.current) || void 0 === t ? void 0 : t.getListDimensions();
+                let n = null === (t = T.current) || void 0 === t ? void 0 : t.getListDimensions();
                 null != n && (e + n.height - k >= K ? Q(!1) : Q(!0));
             },
             [K]
@@ -181,23 +181,23 @@ let H = (e) => {
         J = r.useCallback(
             (e) => {
                 var t;
-                e(W), null === (t = b.current) || void 0 === t || t.scrollTo(K);
+                e(W), null === (t = T.current) || void 0 === t || t.scrollTo(K);
             },
             [K, W]
         ),
         $ = r.useCallback(
             (e, t) => {
-                let n = T[e];
+                let n = b[e];
                 if (null == n) return 0;
                 let i = q ? M : 0;
                 if (n.type === A.En.RECENT) return t ? 0 : P;
                 if (n.type === A.En.GUILD) {
-                    let n = T[e + 1];
+                    let n = b[e + 1];
                     return null != n && n.type !== A.En.GUILD ? (t ? k + -2 * U + x + i : x) : t ? i : x;
                 }
                 return t ? x + i : 2 * x;
             },
-            [T, q]
+            [b, q]
         ),
         ee = r.useMemo(
             () =>
@@ -208,16 +208,16 @@ let H = (e) => {
         ),
         et = q ? 'shortcut' : 'hiddenshortcut';
     return (0, i.jsx)(m.Z, {
-        categoryListRef: b,
+        categoryListRef: T,
         expressionsListRef: n,
         className: t,
         store: h.kJ,
-        categories: T,
+        categories: b,
         listPadding: w,
         onScroll: X,
         renderCategoryListItem: D,
         renderSection: ee,
-        rowCount: T.length,
+        rowCount: b.length,
         categoryHeight: H,
         getScrollOffsetForIndex: $,
         rowCountBySection: z,

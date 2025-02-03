@@ -1,4 +1,4 @@
-t.d(n, { p: () => o });
+t.d(n, { p: () => u });
 var l = t(232713),
     a = t(65400),
     i = t(731965),
@@ -33,7 +33,7 @@ let r = (0, a.F)((e) => ({
         (0, i.j)(() => e({ maxVolume: n }));
     }
 }));
-function o() {
+function u() {
     return r(
         (e) => ({
             audio: e.audio,

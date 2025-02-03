@@ -66,11 +66,11 @@ function I(e) {
     let { channel: t } = e;
     return m(t);
 }
-function T(e) {
+function b(e) {
     let { threads: t } = e;
     t.forEach(m);
 }
-function b(e) {
+function T(e) {
     let { threads: t } = e;
     t.forEach(R);
 }
@@ -134,12 +134,12 @@ let x = new D(o.Z, {
     CHANNEL_DELETE: S,
     THREAD_CREATE: I,
     THREAD_UPDATE: I,
-    THREAD_LIST_SYNC: T,
+    THREAD_LIST_SYNC: b,
     THREAD_MEMBERS_UPDATE: O,
     SEARCH_FINISH: C,
     MOD_VIEW_SEARCH_FINISH: C,
-    LOAD_THREADS_SUCCESS: b,
-    LOAD_ARCHIVED_THREADS_SUCCESS: b,
+    LOAD_THREADS_SUCCESS: T,
+    LOAD_ARCHIVED_THREADS_SUCCESS: T,
     THREAD_DELETE: A,
     LOAD_MESSAGES_SUCCESS: N
 });

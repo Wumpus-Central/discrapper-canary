@@ -12,7 +12,7 @@ var i = n(200651),
     _ = n(51144),
     p = n(357498);
 function h(e) {
-    let { users: t, maxUsers: a, guildId: o, channelId: h, className: m, avatarClassName: g, size: E = u.EFr.SIZE_24, overflowCountVariant: v = 'text-xs/medium', overflowCountColor: y = 'interactive-normal', overflowCountClassName: I, hideOverflowCount: T = !1, disableUsernameTooltip: b = !1, disableUserPopout: S = !1, onClick: A, onFocus: N, onUserClick: C, onUserPopoutRequestClose: R } = e,
+    let { users: t, maxUsers: a, guildId: o, channelId: h, className: m, avatarClassName: g, size: E = u.EFr.SIZE_24, overflowCountVariant: v = 'text-xs/medium', overflowCountColor: y = 'interactive-normal', overflowCountClassName: I, hideOverflowCount: b = !1, disableUsernameTooltip: T = !1, disableUserPopout: S = !1, onClick: A, onFocus: N, onUserClick: C, onUserPopoutRequestClose: R } = e,
         [O, D] = r.useState(!1);
     function x() {
         return (0, i.jsx)(u.VqE, {
@@ -59,7 +59,7 @@ function h(e) {
                 .take(a)
                 .map((e) => {
                     let t = _.ZP.getName(e);
-                    return b
+                    return T
                         ? (0, i.jsx)(
                               'div',
                               {
@@ -90,7 +90,7 @@ function h(e) {
             n = t.length - a;
         return (
             n > 0 &&
-                !T &&
+                !b &&
                 (e[e.length - 1] = (0, i.jsx)(
                     u.yRy,
                     {

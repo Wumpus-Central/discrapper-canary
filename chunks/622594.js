@@ -4,8 +4,8 @@ var l = t(200651),
     i = t(120356),
     s = t.n(i),
     r = t(259580),
-    o = t(70956),
-    u = t(586826),
+    u = t(70956),
+    o = t(586826),
     d = t(174727),
     c = t(882126),
     f = t(943351),
@@ -13,7 +13,7 @@ var l = t(200651),
 let h = a.memo(function (e) {
     let { playing: n, onPausePlayback: t, onPlaybackChange: i, onChangePosition: h, disabled: g = !1 } = e,
         p = { ...f.nl },
-        { audio: x } = (0, u.p)(),
+        { audio: x } = (0, o.p)(),
         v = null != x,
         y = a.useRef(null),
         b = a.useRef(null),
@@ -29,7 +29,7 @@ let h = a.memo(function (e) {
         O = a.useMemo(() => T / p.fineTuningScale, [p.fineTuningScale, T]);
     a.useEffect(() => {
         if (null == x) return;
-        let e = x.duration * o.Z.Millis.SECOND;
+        let e = x.duration * u.Z.Millis.SECOND;
         w(0), S(0), M(e), F(e);
     }, [x]);
     let A = a.useCallback(
@@ -103,7 +103,7 @@ let h = a.memo(function (e) {
                 return (
                     n &&
                         (e = setInterval(() => {
-                            x.currentTime < (0, d.my)(Z) ? x.currentTime >= (0, d.my)(C) && S(x.currentTime * o.Z.Millis.SECOND) : (t((0, d.my)(j)), S(j));
+                            x.currentTime < (0, d.my)(Z) ? x.currentTime >= (0, d.my)(C) && S(x.currentTime * u.Z.Millis.SECOND) : (t((0, d.my)(j)), S(j));
                         }, 16)),
                     () => {
                         clearInterval(e);

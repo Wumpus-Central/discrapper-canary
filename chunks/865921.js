@@ -14,14 +14,14 @@ function p(e) {
     let { handleStepChange: t, handleClose: n } = e,
         { blockedPayments: p, hasFetchedSkus: h, paymentSources: m, hasFetchedPaymentSources: g, application: E, skusById: v, selectedSkuId: y } = (0, u.JL)(),
         { isGift: I } = (0, l.wD)(),
-        [T, b] = r.useState(!0),
+        [b, T] = r.useState(!0),
         [S, A] = (0, a.Wu)([o.Z], () => [o.Z.isFetchingCategories, o.Z.error]);
     return (r.useEffect(() => {
         let e = null != E;
-        h && g && e && b(S);
+        h && g && e && T(S);
     }, [h, g, E, S]),
     r.useEffect(() => {
-        if (T || p || null == y) return;
+        if (b || p || null == y) return;
         let e = v[y];
         if (I && (null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES) {
             t(c.h8.GIFT_CUSTOMIZATION);
@@ -32,8 +32,8 @@ function p(e) {
             return;
         }
         t(c.h8.REVIEW);
-    }, [T, p, t, m, I, v, y]),
-    T)
+    }, [b, p, t, m, I, v, y]),
+    b)
         ? (0, i.jsx)(f.Z, {})
         : p
           ? (0, i.jsx)(s.Vq, { onClose: n })

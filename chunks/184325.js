@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(291175),
     y = n(785717),
     I = n(221292),
-    T = n(485341),
-    b = n(797321),
+    b = n(485341),
+    T = n(797321),
     S = n(228168),
     A = n(981631),
     N = n(474936),
@@ -94,7 +94,7 @@ function D(e) {
                     if (null != i) return null == x || x(), i(n);
                 },
                 r = () => {
-                    e.id === T.i && g.default.track(A.rMx.QUEST_CONTENT_VIEWED, { ...(0, _.mH)(p.jn.QUEST_BADGE) }),
+                    e.id === b.i && g.default.track(A.rMx.QUEST_CONTENT_VIEWED, { ...(0, _.mH)(p.jn.QUEST_BADGE) }),
                         w({ action: 'HOVER_BADGE' }),
                         (0, I.Qf)({
                             badge: e.id,
@@ -134,7 +134,7 @@ function D(e) {
                             m &&
                                 (0, i.jsxs)('div', {
                                     className: R.starContainer,
-                                    children: [(0, i.jsx)(b.Z, { className: R.topLeftStar }), (0, i.jsx)(b.Z, { className: R.bottomRightStar })]
+                                    children: [(0, i.jsx)(T.Z, { className: R.topLeftStar }), (0, i.jsx)(T.Z, { className: R.bottomRightStar })]
                                 })
                         ]
                     })

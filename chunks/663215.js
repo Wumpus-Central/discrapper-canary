@@ -65,7 +65,7 @@ function I(e, t, n, i, r) {
             });
     }
 }
-function T(e, t, n, i, r) {
+function b(e, t, n, i, r) {
     var a;
     if (null == t) return;
     let s = null !== (a = i.get(t.id)) && void 0 !== a ? a : [],
@@ -90,7 +90,7 @@ function T(e, t, n, i, r) {
                 items: o
             });
 }
-function b(e, t) {
+function T(e, t) {
     var n;
     let i = null !== (n = t.get(g.X8)) && void 0 !== n ? n : g.Hy;
     e.push({
@@ -137,7 +137,7 @@ function S(e) {
             i = 0,
             r = [];
         return n
-            ? (b(r, g),
+            ? (T(r, g),
               {
                   categories: r,
                   isFetching: S,
@@ -173,10 +173,10 @@ function S(e) {
                       sectionType: h.bg.FREQUENTLY_USED,
                       sortById: !1
                   }),
-              T(r, O, D, g, t),
-              R || b(r, g),
+              b(r, O, D, g, t),
+              R || T(r, g),
               I(r, C, null == O ? void 0 : O.id, g, d),
-              R && b(r, g),
+              R && T(r, g),
               r.forEach((t) => {
                   t.categoryInfo.type === h.bg.GUILD && (t.categoryInfo.isNitroLocked ? (i += t.items.length) : (e += t.items.length));
               }),

@@ -15,19 +15,19 @@ let h = function (e) {
     let { style: t, src: n, backgroundSrc: h, userId: m, pulseSpeakingIndicator: g = !1, speaking: E = !1, ...v } = e,
         y = null != h ? h : n,
         I = (0, o.ZP)(y, a.Z.unsafe_rawColors.PRIMARY_800.css),
-        T = (0, l.c)(!0, 'VideoBackground-web').enabled,
-        b = (0, c.ZP)(null != m ? m : _.lds),
+        b = (0, l.c)(!0, 'VideoBackground-web').enabled,
+        T = (0, c.ZP)(null != m ? m : _.lds),
         S =
-            null == b
+            null == T
                 ? void 0
-                : b.getBannerURL({
+                : T.getBannerURL({
                       size: 1024,
                       canAnimate: f.QK.getSetting()
                   });
     if (
         (r.useEffect(() => {
-            null != m && T && (0, d.Z)(m, void 0, { dispatchWait: !0 });
-        }, [T, m]),
+            null != m && b && (0, d.Z)(m, void 0, { dispatchWait: !0 });
+        }, [b, m]),
         null == n)
     )
         return null;
@@ -41,7 +41,7 @@ let h = function (e) {
             backgroundColor: I
         };
     return (
-        null != S && E && T && ((N.backgroundImage = 'url('.concat(S, ')')), (N.backgroundSize = 'cover')),
+        null != S && E && b && ((N.backgroundImage = 'url('.concat(S, ')')), (N.backgroundSize = 'cover')),
         (0, i.jsx)('div', {
             style: N,
             className: p.background,

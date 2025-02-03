@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -54,11 +54,11 @@ function y(e) {
 function I(e) {
     return e ? m.intl.string(m.t['5cRA/f']) : m.intl.string(m.t.buV4am);
 }
-function T(e) {
+function b(e) {
     let { checked: t, onClick: n, id: a = 'burst-reaction-toggle-button' } = e,
-        T = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        b = _.default.getCurrentUser(),
-        S = null == b || (0, p.I5)(b) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        b = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        T = _.default.getCurrentUser(),
+        S = null == T || (0, p.I5)(T) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
         [A, N] = (0, f.US)(S),
         [C, R] = r.useState(!1),
         [O, D] = (0, c.q_F)(() => ({})),
@@ -104,11 +104,11 @@ function T(e) {
                     t
                         ? (0, i.jsx)(c.ZX5, {
                               className: g.shine,
-                              shinePaused: T
+                              shinePaused: b
                           })
                         : null,
                     (0, i.jsx)(x, {
-                        style: T ? void 0 : O,
+                        style: b ? void 0 : O,
                         size: 'custom',
                         width: v,
                         height: v,

@@ -43,18 +43,18 @@ let y = function (e) {
             },
             [t.id]
         ),
-        T = r.useCallback(() => {
+        b = r.useCallback(() => {
             (0, d.GA)(t.id);
         }, [t.id]),
-        b = r.useMemo(() => (null != n ? n.name.replace(/_/g, ' ') : ''), [n]),
+        T = r.useMemo(() => (null != n ? n.name.replace(/_/g, ' ') : ''), [n]),
         S = r.useCallback(() => {
             (0, d.Hb)(t.id);
         }, [t.id]),
         A = r.useMemo(() => (null != y && y > 0 ? ((null == u ? void 0 : u.type) === m.qc2.DEVELOPER_GIFT ? g.intl.format(g.t['b+P6ra'], { numPotions: y }) : g.intl.format(g.t.RiQ4cn, { numPotions: y })) : g.intl.string(g.t.hvVgAQ)), [y, u]),
         [N, C] = r.useState(!1 === a);
     r.useEffect(() => {
-        !1 === a && T();
-    }, [a, T]);
+        !1 === a && b();
+    }, [a, b]);
     let R = r.useCallback(() => {
             C(!1);
         }, []),
@@ -92,7 +92,7 @@ let y = function (e) {
                             }),
                             (0, i.jsx)(o.xv, {
                                 variant: 'text-sm/medium',
-                                children: null == n ? g.intl.string(g.t.mzfiGR) : g.intl.format(g.t.Hcd9OT, { emojiName: b })
+                                children: null == n ? g.intl.string(g.t.mzfiGR) : g.intl.format(g.t.Hcd9OT, { emojiName: T })
                             })
                         ]
                     })

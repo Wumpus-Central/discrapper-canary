@@ -29,8 +29,8 @@ let g = [],
     v = null,
     y = null,
     I = null,
-    T = !1,
-    b = !1;
+    b = !1,
+    T = !1;
 function S(e, t) {
     if (null == r) throw Error('Creating RTCConnection without session.');
     let i = f.default.getId(),
@@ -143,8 +143,8 @@ function S(e, t) {
         }),
         (y = new u.Z(f.default.getId(), t)),
         (I = null),
-        (T = !1),
         (b = !1),
+        (T = !1),
         a
     );
 }
@@ -162,11 +162,11 @@ function R(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         var n, a, s;
-        if ((null == y || y.updateVoiceStates(t.userId, t.channelId), (T = T || (null !== (n = null == y ? void 0 : y.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1), f.default.getId() !== t.userId)) return !1;
-        if (null != i) t.sessionId === r ? ((null != t.guildId && t.guildId === i.guildId) || (null == t.guildId && t.channelId === i.channelId) ? (null == t.channelId ? A() : (i.channelId = t.channelId)) : ((t.guildId !== i.guildId && null == t.channelId) || A(), null != t.channelId && ((E = null), (v = null), (i = S(t.guildId, t.channelId)), (T = (null !== (a = null == y ? void 0 : y.getStats().max_voice_state_count) && void 0 !== a ? a : 0) > 1)))) : t.guildId === i.guildId && ((null != c.Z.getAwaitingRemoteSessionInfo() && null != c.Z.getRemoteSessionId()) || (E = i.channelId), A());
+        if ((null == y || y.updateVoiceStates(t.userId, t.channelId), (b = b || (null !== (n = null == y ? void 0 : y.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1), f.default.getId() !== t.userId)) return !1;
+        if (null != i) t.sessionId === r ? ((null != t.guildId && t.guildId === i.guildId) || (null == t.guildId && t.channelId === i.channelId) ? (null == t.channelId ? A() : (i.channelId = t.channelId)) : ((t.guildId !== i.guildId && null == t.channelId) || A(), null != t.channelId && ((E = null), (v = null), (i = S(t.guildId, t.channelId)), (b = (null !== (a = null == y ? void 0 : y.getStats().max_voice_state_count) && void 0 !== a ? a : 0) > 1)))) : t.guildId === i.guildId && ((null != c.Z.getAwaitingRemoteSessionInfo() && null != c.Z.getRemoteSessionId()) || (E = i.channelId), A());
         else {
             if (t.sessionId !== r || null == t.channelId) return e;
-            (E = null), (v = null), (i = S(t.guildId, t.channelId)), (T = (null !== (s = null == y ? void 0 : y.getStats().max_voice_state_count) && void 0 !== s ? s : 0) > 1);
+            (E = null), (v = null), (i = S(t.guildId, t.channelId)), (b = (null !== (s = null == y ? void 0 : y.getStats().max_voice_state_count) && void 0 !== s ? s : 0) > 1);
         }
         return !0;
     }, !1);
@@ -205,7 +205,7 @@ function k(e) {
     return e.state === p.$7l.ACTIVE && null != i && i.resetBackoff('App state is active'), !1;
 }
 function U(e) {
-    return e.state === p.hes.RTC_CONNECTED && (b = !0), !0;
+    return e.state === p.hes.RTC_CONNECTED && (T = !0), !0;
 }
 function G() {
     return !0;
@@ -287,10 +287,10 @@ class V extends (a = s.ZP.Store) {
         return null == y ? void 0 : y.getStats();
     }
     getWasEverMultiParticipant() {
-        return T;
+        return b;
     }
     getWasEverRtcConnected() {
-        return b;
+        return T;
     }
     getUserIds() {
         return null == i ? void 0 : i.getUserIds();

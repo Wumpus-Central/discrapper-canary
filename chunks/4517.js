@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(456644),
     y = n(510659),
     I = n(287954),
-    T = n(810097),
-    b = n(64621),
+    b = n(810097),
+    T = n(64621),
     S = n(913002),
     A = n(228168),
     N = n(388032),
@@ -80,14 +80,14 @@ function M(e) {
     var t, n;
     let { emoji: a, text: _, profileType: p, animate: h, className: m, renderToolbar: g, onShowToolbar: v, hasEntered: y = !0 } = e,
         { trackUserProfileAction: I } = (0, E.KZ)(),
-        T = {
+        b = {
             [C.biteSize]: p === A.y0.BITE_SIZE,
             [C.fullSize]: p === A.y0.FULL_SIZE,
             [C.panel]: p === A.y0.PANEL
         },
-        b = null != a ? R : 0,
-        S = O + b,
-        w = D + b,
+        T = null != a ? R : 0,
+        S = O + T,
+        w = D + T,
         M = r.useRef(null),
         k = r.useRef(null),
         U = r.useRef(null),
@@ -150,20 +150,20 @@ function M(e) {
                   })
                 : null,
         et = (0, i.jsx)('div', {
-            className: s()(C.referenceContainer, T),
+            className: s()(C.referenceContainer, b),
             children: (0, i.jsx)('div', {
-                className: s()(C.outer, T),
+                className: s()(C.outer, b),
                 children: (0, i.jsxs)('span', {
                     className: C.inner,
                     children: [
                         (0, i.jsxs)('div', {
                             ref: k,
-                            className: s()(C.content, T),
+                            className: s()(C.content, b),
                             children: [$, ee]
                         }),
                         (0, i.jsxs)('div', {
                             ref: U,
-                            className: s()(C.content, C.unclamped, T),
+                            className: s()(C.content, C.unclamped, b),
                             children: [$, ee]
                         })
                     ]
@@ -171,7 +171,7 @@ function M(e) {
             })
         }),
         en = (0, i.jsx)('div', {
-            className: s()(C.outer, T),
+            className: s()(C.outer, b),
             children: (0, i.jsx)('span', {
                 className: C.inner,
                 children: (0, i.jsxs)(o.animated.div, {
@@ -191,7 +191,7 @@ function M(e) {
                           ref: M,
                           role: 'tooltip',
                           tabIndex: 0,
-                          className: s()(C.container, T, m),
+                          className: s()(C.container, b, m),
                           'aria-label': N.intl.formatToPlainString(N.t.UpF5QU, {
                               emoji: null !== (t = null == a ? void 0 : a.name) && void 0 !== t ? t : '',
                               status: _
@@ -218,7 +218,7 @@ function M(e) {
                           ref: M,
                           role: 'tooltip',
                           tabIndex: 0,
-                          className: s()(C.container, T, m),
+                          className: s()(C.container, b, m),
                           'aria-label': N.intl.formatToPlainString(N.t.UpF5QU, {
                               emoji: null !== (n = null == a ? void 0 : a.name) && void 0 !== n ? n : '',
                               status: _
@@ -293,7 +293,7 @@ function U(e) {
         onAction: c,
         onClose: () => R(!1),
         children: () =>
-            (0, i.jsx)(b.Z, {
+            (0, i.jsx)(T.Z, {
                 sourceType: A.n_.STATUS,
                 user: a,
                 children: (0, i.jsx)(M, {
@@ -304,7 +304,7 @@ function U(e) {
                     className: g ? C.hoisted : void 0,
                     onShowToolbar: O,
                     renderToolbar: (e) =>
-                        (0, i.jsx)(T.ZP, {
+                        (0, i.jsx)(b.ZP, {
                             user: a,
                             sourceType: A.n_.STATUS,
                             isVisible: N && !g,

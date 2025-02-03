@@ -32,7 +32,7 @@ let h = Date.now(),
 function I() {
     return E || v || ((0, c.isAndroid)() && y);
 }
-function T() {
+function b() {
     Date.now() - h > Math.min(l.CM.getSetting() * u.Z.Millis.SECOND, f.OSm) || I()
         ? g ||
           a.Z.dispatch({
@@ -45,7 +45,7 @@ function T() {
               afk: !1
           });
 }
-function b() {
+function T() {
     Date.now() - h > f.OSm || I()
         ? m ||
           a.Z.dispatch({
@@ -60,7 +60,7 @@ function b() {
           });
 }
 function S() {
-    b(), T();
+    T(), b();
 }
 function A() {
     var e;

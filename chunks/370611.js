@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(371583),
     y = n(246627),
     I = n(249268),
-    T = n(864138),
-    b = n(473188),
+    b = n(864138),
+    T = n(473188),
     S = n(169080),
     A = n(986398),
     N = n(463031),
@@ -56,15 +56,15 @@ function P(e) {
             });
         }, [t, h]),
         g = (0, v.r)(t),
-        { primaryColor: T } = (0, l.Z)(g),
-        b = r.useMemo(() => {
-            let e = (0, p.oo)(T),
+        { primaryColor: b } = (0, l.Z)(g),
+        T = r.useMemo(() => {
+            let e = (0, p.oo)(b),
                 t = {
                     ...(0, p.pz)(e.r, e.g, e.b),
                     l: x
                 };
             return (0, p.ZJ)(t.h, t.s, t.l);
-        }, [T]),
+        }, [b]),
         A = r.useMemo(() => null == m.find((e) => e.userId === f) && m.length <= D, [m, f]);
     if (
         (r.useEffect(() => {
@@ -77,7 +77,7 @@ function P(e) {
         L = t.settings.statistics[N];
     return (0, i.jsxs)('div', {
         className: O.container,
-        style: { background: b },
+        style: { background: T },
         children: [
             (0, i.jsx)(I.Z, {
                 userId: m[0].userId,
@@ -138,7 +138,7 @@ function P(e) {
 function w(e) {
     let { leaderboard: t } = e,
         n = (0, v.r)(t);
-    return (0, i.jsx)(T.z, {
+    return (0, i.jsx)(b.z, {
         imageUrl: n,
         children: (0, i.jsxs)('span', {
             className: O.emptyTitleContainer,
@@ -162,7 +162,7 @@ function M(e) {
         v = (0, a.e7)([_.default], () => _.default.getUser(t)),
         y = h.ZP.getName(u, void 0, v),
         I = null != c && c > n,
-        [T, D] = r.useState('default'),
+        [b, D] = r.useState('default'),
         x = (0, a.e7)([f.Z], () => {
             let e = f.Z.getPrimaryActivity(t);
             return (null == e ? void 0 : e.application_id) != null && N.T.includes(e.application_id);
@@ -189,7 +189,7 @@ function M(e) {
             className: O.tooltip,
             variant: 'text-sm/medium',
             children:
-                'copied' === T
+                'copied' === b
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(s.kSu, {
@@ -199,7 +199,7 @@ function M(e) {
                               R.intl.string(R.t.ZO0ku7)
                           ]
                       })
-                    : 'error' === T
+                    : 'error' === b
                       ? (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(s.P$X, {
@@ -219,7 +219,7 @@ function M(e) {
                 className: O.userRank,
                 children:
                     n <= 3
-                        ? (0, i.jsx)(b._, { rank: n })
+                        ? (0, i.jsx)(T._, { rank: n })
                         : (0, i.jsx)(s.Text, {
                               tabularNumbers: !0,
                               color: 'text-muted',

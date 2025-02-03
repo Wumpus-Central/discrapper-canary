@@ -30,8 +30,8 @@ function y(e, t, n) {
     );
 }
 let I = 3,
-    T = 5,
-    b = E.YN.GLOBAL_FEED,
+    b = 5,
+    T = E.YN.GLOBAL_FEED,
     S = 900000,
     A = new Map(),
     N = new Set(),
@@ -47,7 +47,7 @@ function D(e, t) {
 }
 function x(e) {
     if (N.has(e) || (e === E.YN.GAME_PROFILE_FEED && (!(0, o._J)('ContentInventoryManager') || void 0 !== g.Z.getFeed(e)))) return !1;
-    if (e === b) {
+    if (e === T) {
         if (!(0, p.sA)('ContentInventoryManager') || (m.Z.hidden && null != g.Z.getFeed(e)) || !_.Z.isFocused() || !l.Z.isConnected()) return !1;
         let t = f.Z.getIdleSince();
         if (null != t && Date.now() - t > S) return !1;
@@ -60,21 +60,21 @@ function L(e) {
     void 0 !== t && (clearTimeout(t), A.delete(e));
 }
 function P() {
-    if ((L(b), !x(b))) return;
-    let e = g.Z.getFeed(b);
+    if ((L(T), !x(T))) return;
+    let e = g.Z.getFeed(T);
     if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == R) return;
     let t = (null == e ? void 0 : e.expired_at) == null ? 0 : new Date(e.expired_at).getTime() - Date.now(),
         n = Math.max(0, null == R ? 0 : new Date(R).getTime() - Date.now(), t);
-    D(b, {
+    D(T, {
         loading: !1,
         nextFetchDate: new Date(Date.now() + n)
     }),
         A.set(
-            b,
+            T,
             setTimeout(
                 () =>
                     w({
-                        feedId: b,
+                        feedId: T,
                         feature: r.L.INBOX
                     }),
                 n
@@ -100,12 +100,12 @@ async function w(e) {
                 C.set(t, 0),
                 N.delete(t),
                 D(t, { loading: !1 }),
-                t === b && ((R = null), P());
+                t === T && ((R = null), P());
         } catch (s) {
             var r;
             let e = null !== (r = C.get(t)) && void 0 !== r ? r : 0;
             if (e < I) {
-                let r = 1000 * Math.pow(T, e);
+                let r = 1000 * Math.pow(b, e);
                 A.set(
                     t,
                     setTimeout(
@@ -143,7 +143,7 @@ function k() {
         });
 }
 function U() {
-    L(b);
+    L(T);
 }
 function G(e) {
     let { feedId: t, feature: n } = e;
@@ -156,7 +156,7 @@ function G(e) {
 }
 function B(e) {
     let { refreshAfterMs: t } = e,
-        n = g.Z.getFeed(b);
+        n = g.Z.getFeed(T);
     (null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null && ((R = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), P());
 }
 function Z(e) {

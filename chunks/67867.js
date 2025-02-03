@@ -36,11 +36,11 @@ e.exports = function (e, t) {
         v,
         y,
         I = e.target,
-        T = e.global,
-        b = e.stat,
+        b = e.global,
+        T = e.stat,
         S = e.proto,
-        A = T ? i : b ? i[I] : (i[I] || {}).prototype,
-        N = T ? u : u[I] || d(u, I, {})[I],
+        A = b ? i : T ? i[I] : (i[I] || {}).prototype,
+        N = b ? u : u[I] || d(u, I, {})[I],
         C = N.prototype;
-    for (h in t) (r = !(n = l(T ? h : I + (b ? '.' : '#') + h, e.forced)) && A && f(A, h)), (g = N[h]), r && (E = e.dontCallGetSet ? (y = o(A, h)) && y.value : A[h]), (m = r && E ? E : t[h]), (!r || typeof g != typeof m) && ((v = e.bind && r ? c(m, i) : e.wrap && r ? _(m) : S && s(m) ? a(m) : m), (e.sham || (m && m.sham) || (g && g.sham)) && d(v, 'sham', !0), d(N, h, v), S && (f(u, (p = I + 'Prototype')) || d(u, p, {}), d(u[p], h, m), e.real && C && (n || !C[h]) && d(C, h, m)));
+    for (h in t) (r = !(n = l(b ? h : I + (T ? '.' : '#') + h, e.forced)) && A && f(A, h)), (g = N[h]), r && (E = e.dontCallGetSet ? (y = o(A, h)) && y.value : A[h]), (m = r && E ? E : t[h]), (!r || typeof g != typeof m) && ((v = e.bind && r ? c(m, i) : e.wrap && r ? _(m) : S && s(m) ? a(m) : m), (e.sham || (m && m.sham) || (g && g.sham)) && d(v, 'sham', !0), d(N, h, v), S && (f(u, (p = I + 'Prototype')) || d(u, p, {}), d(u[p], h, m), e.real && C && (n || !C[h]) && d(C, h, m)));
 };

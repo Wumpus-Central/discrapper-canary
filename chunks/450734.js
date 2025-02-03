@@ -15,21 +15,21 @@ var r = n(120356),
     h = n(776458);
 let m = d.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK;
 function g(e) {
-    let { user: t, guild: n, displayProfile: r, canUsePremiumCustomization: d, previewAvatar: g, previewAvatarDecoration: E, previewTheme: v, previewPrimaryColor: y, className: I, disabledInputs: T, isTryItOutFlow: b, onUpsellClick: S } = e,
+    let { user: t, guild: n, displayProfile: r, canUsePremiumCustomization: d, previewAvatar: g, previewAvatarDecoration: E, previewTheme: v, previewPrimaryColor: y, className: I, disabledInputs: b, isTryItOutFlow: T, onUpsellClick: S } = e,
         { analyticsLocations: A } = (0, l.ZP)(),
         N = (0, s.e7)([c.Z], () => c.Z.getStatus(t.id)),
         C = null == n || (null == r ? void 0 : r.canUsePremiumProfileCustomization) || d,
         R = (0, i.jsx)(m, {
             src: g,
             avatarDecoration: E,
-            imageClassName: a()(I, { [h.overlay]: !T }),
+            imageClassName: a()(I, { [h.overlay]: !b }),
             size: o.EFr.SIZE_80,
             'aria-label': t.username,
             status: N,
             statusTooltip: !1,
             statusBackdropColor: null != y ? (0, o.QFD)(v) : void 0
         });
-    return T
+    return b
         ? (0, i.jsx)('div', {
               className: h.avatar,
               children: R
@@ -41,12 +41,12 @@ function g(e) {
                     return (0, i.jsx)(f.Z, {
                         className: h.menu,
                         onClose: t,
-                        onChangeAvatar: () => (0, _.$r)(p.pC.AVATAR, null == n ? void 0 : n.id, b),
+                        onChangeAvatar: () => (0, _.$r)(p.pC.AVATAR, null == n ? void 0 : n.id, T),
                         onChangeAvatarDecoration: () => {
                             (0, u.ps)({
                                 guild: null == n ? void 0 : n,
                                 analyticsLocations: A,
-                                isTryItOutFlow: b
+                                isTryItOutFlow: T
                             });
                         }
                     });

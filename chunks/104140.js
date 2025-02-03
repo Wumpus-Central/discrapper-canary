@@ -30,8 +30,8 @@ function v(e, t, n) {
 }
 let y = 10800000,
     I = 18000000,
-    T = 16,
-    b = 2,
+    b = 16,
+    T = 2,
     S = {
         friction: 13,
         tension: 240,
@@ -135,8 +135,8 @@ function Z(e) {
     let {
             selected: t = !1,
             lowerBadgeSize: n = {
-                width: T,
-                height: T
+                width: b,
+                height: b
             },
             highlight: i = !1,
             ...a
@@ -272,7 +272,7 @@ class F extends a.Component {
     }
     getBadgePositionInterpolation(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T + D(this.props.isVisualRefreshEnabled);
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : b + D(this.props.isVisualRefreshEnabled);
         if (null == e) return;
         let { spring: i } = e.springs;
         return i.to([0, 1], [n, 0]).to((e) => 'translate('.concat(e, ' ').concat(e * t, ')'));
@@ -282,8 +282,8 @@ class F extends a.Component {
             { lowerBadgeSize: t } = this.props;
         if (null == e) return;
         let { spring: n } = e.springs,
-            i = (null == t ? void 0 : t.width) != null ? t.width : T,
-            r = (null == t ? void 0 : t.height) != null ? t.height : T;
+            i = (null == t ? void 0 : t.width) != null ? t.width : b,
+            r = (null == t ? void 0 : t.height) != null ? t.height : b;
         return {
             opacity: n.to([0, 0.5, 1], [0, 0, 1]),
             transform: n.to((e) => 'translate('.concat(i - e * i, 'px, ').concat(r - e * r, 'px)'))
@@ -347,8 +347,8 @@ class F extends a.Component {
             D = ''.concat(y, '-blob_mask'),
             x = ''.concat(y, '-stroke_mask'),
             L = ''.concat(y, '-highlight_mask'),
-            P = (null == s ? void 0 : s.width) != null ? s.width : T,
-            w = (null == s ? void 0 : s.height) != null ? s.height : T,
+            P = (null == s ? void 0 : s.width) != null ? s.width : b,
+            w = (null == s ? void 0 : s.height) != null ? s.height : b,
             M = {
                 width: g ? f + 8 : f,
                 height: g ? f + 8 : f,
@@ -485,7 +485,7 @@ class F extends a.Component {
                                     (0, r.jsx)(d.animated.path, {
                                         d: this.getPathInterpolation(),
                                         stroke: _.Z.BRAND_500,
-                                        'stroke-width': b,
+                                        'stroke-width': T,
                                         className: E.highlight,
                                         mask: 'url(#'.concat(x, ')')
                                     }),

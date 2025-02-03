@@ -47,7 +47,7 @@ function E(e) {
 }
 function v(e) {
     let t = I(e);
-    b(e, t);
+    T(e, t);
 }
 let y = /(?:<span class="([^"]*)">)|(?:<\/span>)/g;
 function I(e) {
@@ -55,11 +55,11 @@ function I(e) {
         n = null;
     for (let i of d.bN.blocks(e)) {
         let r = null != n && (n.isInCodeBlock || n.opensCodeBlock);
-        (n = T(e, i, r, null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine), null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null)), t.push(n);
+        (n = b(e, i, r, null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine), null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null)), t.push(n);
     }
     return A(t), t;
 }
-function T(e, t, n, i, r) {
+function b(e, t, n, i, r) {
     var a;
     let s = O(t),
         o = s[0],
@@ -87,7 +87,7 @@ function T(e, t, n, i, r) {
         opensCodeBlockOnOwnLine: m
     };
 }
-function b(e, t) {
+function T(e, t) {
     for (let n of t) {
         let [t, i] = n.blockEntry,
             r = S(n);

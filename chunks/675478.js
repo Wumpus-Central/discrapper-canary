@@ -3,7 +3,7 @@ n.d(t, {
     Bn: () => x,
     DZ: () => N,
     PS: () => R,
-    T6: () => b,
+    T6: () => T,
     Z1: () => w,
     aj: () => C,
     bE: () => k,
@@ -57,20 +57,20 @@ function v(e, t, n) {
 }
 let y = 5000,
     I = 'UserSettingsProtoLastWriteTimes',
-    T = Date.now();
-function b() {}
+    b = Date.now();
+function T() {}
 d.Z.subscribe('CONNECTION_OPEN', () => {
-    T = Date.now();
+    b = Date.now();
 }),
     d.Z.subscribe('CONNECTION_CLOSED', () => {
-        T = Date.now();
+        b = Date.now();
     }),
     'undefined' != typeof document &&
         (document.addEventListener('mousedown', () => {
-            T = 0;
+            b = 0;
         }),
         document.addEventListener('keydown', () => {
-            T = 0;
+            b = 0;
         }));
 class S {
     getEditInfo() {

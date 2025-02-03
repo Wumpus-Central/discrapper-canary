@@ -21,13 +21,13 @@ let v = (e) => {
         v = r.useRef(null),
         y = (0, f.p7)('Message Header') && n.hasPotions(),
         I = o.Z.getChannel(n.getChannelId()),
-        T = null === (t = n.potions) || void 0 === t ? void 0 : t[0],
-        b = r.useMemo(() => {
+        b = null === (t = n.potions) || void 0 === t ? void 0 : t[0],
+        T = r.useMemo(() => {
             var e;
-            if (null == T) return null;
-            let t = l.default.getUser(T.used_by);
+            if (null == b) return null;
+            let t = l.default.getUser(b.used_by);
             return null !== (e = (0, c.y)(null == I ? void 0 : I.getGuildId(), null == I ? void 0 : I.id, t)) && void 0 !== e ? e : null == t ? void 0 : t.globalName;
-        }, [T, I]),
+        }, [b, I]),
         S = r.useCallback(() => {
             if (null != v.current && (0, h.Uw)(n)) {
                 let { x: e, y: t, width: i, height: r } = v.current.getBoundingClientRect();
@@ -47,13 +47,13 @@ let v = (e) => {
         A = r.useCallback(() => {
             (0, s.Z)(u.Z.getArticleURL(m.BhN.CONFETTI_POTION));
         }, []);
-    return y && null != b && (null == T ? void 0 : T.type) === p.B.CONFETTI
+    return y && null != T && (null == b ? void 0 : b.type) === p.B.CONFETTI
         ? (0, i.jsx)(a.P3F, {
               onFocus: S,
               onClick: A,
               'aria-label': g.intl.string(g.t.Mp5k6O),
               children: (0, i.jsx)(a.ua7, {
-                  text: g.intl.formatToPlainString(g.t['FE++aG'], { user: b }),
+                  text: g.intl.formatToPlainString(g.t['FE++aG'], { user: T }),
                   children: (e) =>
                       (0, i.jsxs)('div', {
                           ref: v,

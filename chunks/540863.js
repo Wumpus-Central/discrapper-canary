@@ -10,8 +10,8 @@ let l = r.forwardRef(function (e, t) {
         v = r.useId(),
         y = r.useId(),
         I = null != g ? g : v,
-        T = null != m ? (null !== (n = E.errorId) && void 0 !== n ? n : y) : void 0,
-        [b, S] = r.useState(void 0),
+        b = null != m ? (null !== (n = E.errorId) && void 0 !== n ? n : y) : void 0,
+        [T, S] = r.useState(void 0),
         [A, N] = r.useState(void 0),
         C = void 0 !== A;
     return (0, i.jsx)('div', {
@@ -20,9 +20,9 @@ let l = r.forwardRef(function (e, t) {
         style: null != p ? p : void 0,
         children: (0, i.jsx)(a.ol, {
             titleId: I,
-            errorId: T,
+            errorId: b,
             error: null != m ? m : void 0,
-            isFocused: b,
+            isFocused: T,
             setIsFocused: S,
             hasValue: A,
             setHasValue: N,
@@ -37,7 +37,7 @@ let l = r.forwardRef(function (e, t) {
                               error: m,
                               className: d,
                               id: I,
-                              errorId: T,
+                              errorId: b,
                               ...E,
                               children: h
                           })

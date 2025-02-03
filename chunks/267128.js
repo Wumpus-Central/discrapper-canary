@@ -22,8 +22,8 @@ var i = n(200651),
     v = n(378233),
     y = n(768581),
     I = n(55935),
-    T = n(823379),
-    b = n(453687),
+    b = n(823379),
+    T = n(453687),
     S = n(930282),
     A = n(123145),
     N = n(223021),
@@ -195,7 +195,7 @@ function k(e, t, n) {
                 })
             });
         default:
-            (0, T.vE)(a);
+            (0, b.vE)(a);
     }
 }
 function U(e, t, n, r, a, s) {
@@ -203,8 +203,8 @@ function U(e, t, n, r, a, s) {
     let f = (0, p.Z)(e),
         { trailingIconClass: g, leadingIconClass: E, iconSize: y } = s,
         I = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
-        T = (0, v.cv)(f).length > 0,
-        b = null != f.interaction,
+        b = (0, v.cv)(f).length > 0,
+        T = null != f.interaction,
         A = f.hasFlag(R.iLy.IS_VOICE_MESSAGE),
         N = f.isPoll(),
         C = f.type === R.uaV.POLL_RESULT;
@@ -228,9 +228,9 @@ function U(e, t, n, r, a, s) {
         } else
             C
                 ? (o = (0, m.N4)(f))
-                : T
+                : b
                   ? (o = O.intl.string(O.t.kHdYCQ))
-                  : b
+                  : T
                     ? (o = O.intl.string(O.t['E+6SSU']))
                     : A
                       ? (o = O.intl.string(O.t['XC3A5+']))
@@ -249,7 +249,7 @@ function U(e, t, n, r, a, s) {
             className: a
         });
     return (
-        T
+        b
             ? (c = (0, i.jsx)(u.B7q, {
                   size: 'custom',
                   color: 'currentColor',
@@ -257,7 +257,7 @@ function U(e, t, n, r, a, s) {
                   width: y,
                   height: y
               }))
-            : b
+            : T
               ? (c = (0, i.jsx)(u.SsZ, {
                     size: 'custom',
                     color: 'currentColor',
@@ -297,7 +297,7 @@ function G(e) {
         [m, E] = r.useState(!1),
         v = r.useMemo(() => (null != d && c.state === g.Y.LOADED ? (e) => d(e, c.message) : void 0), [c, d]),
         y = r.useCallback(() => E((e) => !e), []),
-        T = w(e, v, o.type),
+        b = w(e, v, o.type),
         S = M(e, v),
         A = k(e, m, y),
         C = r.useMemo(() => (e.compact ? (0, N.Z)((0, I.vc)(l()(), 'LT')) : null), [e.compact]);
@@ -309,7 +309,7 @@ function G(e) {
         }));
     let x = o.type === R.uaV.CONTEXT_MENU_COMMAND;
     return (0, i.jsxs)('div', {
-        id: (0, b.Gq)(o),
+        id: (0, T.Gq)(o),
         className: s()(D.repliedMessage, C, x ? D.contextCommandMessage : { [D.messageSpine]: !h || (!_ && p) }),
         'aria-label': t,
         children: [
@@ -324,7 +324,7 @@ function G(e) {
                     onMouseEnter: y,
                     onMouseLeave: y
                 }),
-            T,
+            b,
             S,
             A
         ]

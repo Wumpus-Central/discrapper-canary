@@ -19,7 +19,7 @@ var h = n(122289),
     v = n(719919);
 let y = new Set([p.h8.SKU_SELECT, p.h8.AWAITING_AUTHENTICATION, p.h8.AWAITING_PURCHASE_TOKEN_AUTH, p.h8.CONFIRM]);
 function I(e) {
-    let { steps: t, currentStep: n, body: s, paymentError: I, header: T, footer: b, isGift: S = !1, giftMessage: A = E.intl.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: C = !1, purchaseError: R, purchaseErrorBlockRef: O, planError: D, onScroll: x, scrollerClassName: L, hasCurrencies: P = !1 } = e,
+    let { steps: t, currentStep: n, body: s, paymentError: I, header: b, footer: T, isGift: S = !1, giftMessage: A = E.intl.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: C = !1, purchaseError: R, purchaseErrorBlockRef: O, planError: D, onScroll: x, scrollerClassName: L, hasCurrencies: P = !1 } = e,
         w = null;
     null != I && null == (0, p.ly)(I) ? (w = I) : null != R ? (w = R) : null != D && (w = D);
     let M = null != w ? w.message : '';
@@ -46,7 +46,7 @@ function I(e) {
         options: g.OBo,
         stripe: k,
         children: [
-            T,
+            b,
             (0, i.jsxs)('div', {
                 className: o()('paymentModalContent', v.content),
                 children: [
@@ -105,7 +105,7 @@ function I(e) {
                     })
                 ]
             }),
-            b
+            T
         ]
     });
 }

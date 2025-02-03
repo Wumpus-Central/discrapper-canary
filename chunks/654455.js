@@ -1,6 +1,6 @@
 n.d(t, {
     LU: () => g,
-    ZP: () => b
+    ZP: () => T
 }),
     n(47120),
     n(653041);
@@ -73,7 +73,7 @@ function I() {
         h.pendingUsages
     );
 }
-class T extends (i = s.ZP.PersistedStore) {
+class b extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         null != e && (h = e), this.syncWith([c.Z], I);
     }
@@ -94,8 +94,8 @@ class T extends (i = s.ZP.PersistedStore) {
         return m.frequently;
     }
 }
-_(T, 'displayName', 'ApplicationCommandFrecencyStore'), _(T, 'persistKey', 'ApplicationCommandFrecencyV2');
-let b = new T(o.Z, {
+_(b, 'displayName', 'ApplicationCommandFrecencyStore'), _(b, 'persistKey', 'ApplicationCommandFrecencyV2');
+let T = new b(o.Z, {
     APPLICATION_COMMAND_USED: y,
     USER_SETTINGS_PROTO_UPDATE: v
 });

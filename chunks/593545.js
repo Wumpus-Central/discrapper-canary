@@ -142,7 +142,7 @@ function I(e) {
         ]
     });
 }
-function T(e) {
+function b(e) {
     let { language: t, setLanguage: n } = e;
     return (0, i.jsx)(l.yRy, {
         position: 'left',
@@ -189,7 +189,7 @@ function T(e) {
             })
     });
 }
-function b(e) {
+function T(e) {
     return (0, i.jsx)(l.ua7, {
         text: p.intl.string(p.t['0PQYk5']),
         children: (t) =>
@@ -250,7 +250,7 @@ function S(e) {
                                       isWholeFile: C,
                                       numLines: A
                                   }),
-                                  (0, i.jsx)(b, {
+                                  (0, i.jsx)(T, {
                                       url: n,
                                       fileName: r,
                                       fileSize: a,
@@ -267,7 +267,7 @@ function S(e) {
                         fileName: r,
                         fileSize: a
                     }),
-                    (0, i.jsx)(T, {
+                    (0, i.jsx)(b, {
                         language: f,
                         setLanguage: m
                     })
@@ -311,7 +311,7 @@ function A(e) {
                                 fileName: n,
                                 fileSize: a
                             }),
-                            (0, i.jsx)(T, {
+                            (0, i.jsx)(b, {
                                 language: d,
                                 setLanguage: f
                             })

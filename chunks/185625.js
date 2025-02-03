@@ -4,12 +4,12 @@ n.d(t, {
     Nt: () => c,
     RV: () => m,
     VP: () => S,
-    X: () => b,
+    X: () => T,
     ZD: () => _,
     fw: () => p,
     hs: () => E,
     i_: () => N,
-    k8: () => T,
+    k8: () => b,
     ox: () => f,
     qJ: () => g,
     yL: () => h
@@ -242,7 +242,7 @@ let I = (e, t, n, i) => {
         };
     return null;
 };
-function T(e, t, n) {
+function b(e, t, n) {
     s.ZP.trackWithMetadata(u.rMx.IAR_MODAL_CLOSE, {
         report_type: e.name,
         report_id: n,
@@ -255,7 +255,7 @@ function T(e, t, n) {
         application_id: e.name === l.b.APPLICATION ? e.record.id : void 0
     });
 }
-function b(e, t) {
+function T(e, t) {
     a.Z.dispatch({
         type: 'IN_APP_REPORTS_SHOW_FEEDBACK',
         reportId: t,

@@ -3,7 +3,7 @@ n.d(t, {
     GE: () => C,
     GL: () => h,
     Jd: () => D,
-    Jg: () => T,
+    Jg: () => b,
     Nq: () => S,
     Ol: () => v,
     PJ: () => g,
@@ -17,7 +17,7 @@ n.d(t, {
     n2: () => I,
     q_: () => L,
     vU: () => x,
-    yA: () => b,
+    yA: () => T,
     yh: () => m,
     zo: () => P
 });
@@ -113,10 +113,10 @@ function y(e) {
 function I(e) {
     return null != e.expires_at && new Date(e.expires_at) < new Date();
 }
-function T(e) {
+function b(e) {
     return E(e) && !I(e);
 }
-function b(e) {
+function T(e) {
     var t;
     return null === (t = g(e, s.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
 }
@@ -186,7 +186,7 @@ function L(e) {
     return !(Date.now() - n > 48 * l.Z.Millis.HOUR);
 }
 function P(e) {
-    let t = b(e);
+    let t = T(e);
     if (null == t)
         return {
             text: null,

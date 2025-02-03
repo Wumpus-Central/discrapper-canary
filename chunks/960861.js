@@ -37,8 +37,8 @@ var v = (function (e) {
 })({});
 let y = !1,
     I = 0,
-    T = 0,
-    b = !1,
+    b = 0,
+    T = !1,
     S = {};
 function A() {
     return d.Z.supports(g.AN.NATIVE_SCREENSHARE_PICKER);
@@ -47,10 +47,10 @@ function N() {
     return d.Z.getUseSystemScreensharePicker();
 }
 function C() {
-    let e = N() && (T > 0 || (y && 0 === I));
-    if (e !== b) {
+    let e = N() && (b > 0 || (y && 0 === I));
+    if (e !== T) {
         var t, n;
-        (b = e), null === (n = d.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, b);
+        (T = e), null === (n = d.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, T);
     }
 }
 function R() {
@@ -68,10 +68,10 @@ function R() {
 function O() {
     return (0, r.useEffect)(
         () => (
-            T++,
+            b++,
             C(),
             () => {
-                --T, C();
+                --b, C();
             }
         ),
         []

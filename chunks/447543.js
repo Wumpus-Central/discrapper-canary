@@ -23,8 +23,8 @@ var i = n(525654),
     v = n(305325),
     y = n(63568),
     I = n(281956),
-    T = n(931261),
-    b = n(15274),
+    b = n(931261),
+    T = n(15274),
     S = n(924301),
     A = n(461014),
     N = n(82085),
@@ -83,7 +83,7 @@ function ea(e, t) {
 function es(e, t, n) {
     var i, r;
     if ((null == n ? void 0 : n.targetType) === ee.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return J.oC.ROLE_SUBSCRIPTIONS;
-    if ((null == n ? void 0 : n.targetType) == null && !P.tx.has(t.type) && (0, T.s)(e)) return J.oC.GUILD_HOME;
+    if ((null == n ? void 0 : n.targetType) == null && !P.tx.has(t.type) && (0, b.s)(e)) return J.oC.GUILD_HOME;
     let a = M.Z.getChannel(t.id);
     return F.Z.can(X.Plq.VIEW_CHANNEL, a) ? t.id : null !== (r = null === (i = k.ZP.getDefaultChannel(e, !0, X.Plq.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id;
 }
@@ -105,9 +105,9 @@ function el(e) {
     if (!d && !f && !(null == r ? void 0 : r.forceTransition) && o && V.Z.getGuildId() !== t) return;
     let { type: _ } = i,
         g = M.Z.getChannel(i.id),
-        T = es(t, i, r),
-        b = _ === X.d4z.GUILD_STAGE_VOICE,
-        S = X.Z5c.CHANNEL(t, T);
+        b = es(t, i, r),
+        T = _ === X.d4z.GUILD_STAGE_VOICE,
+        S = X.Z5c.CHANNEL(t, b);
     P.tx.has(_)
         ? (0, E.h)(() => {
               Promise.resolve()
@@ -115,24 +115,24 @@ function el(e) {
                   .then((e) => {
                       let { default: n } = e,
                           s = () => {
-                              if (b) {
+                              if (T) {
                                   (0, L.Cq)(i instanceof P.Sf ? i : (0, P.kt)(i)), (0, x.uL)(S);
                                   return;
                               }
-                              n.selectVoiceChannel(T),
+                              n.selectVoiceChannel(b),
                                   u === ee.Iq.STREAM &&
                                       null != l &&
                                       Q.iV({
                                           streamType: $.lo.GUILD,
                                           ownerId: l,
                                           guildId: t,
-                                          channelId: T
+                                          channelId: b
                                       }),
                                   u === ee.Iq.EMBEDDED_APPLICATION &&
                                       null != c &&
-                                      ((0, x.uL)(X.Z5c.CHANNEL(null != t ? t : X.ME, T)),
+                                      ((0, x.uL)(X.Z5c.CHANNEL(null != t ? t : X.ME, b)),
                                       (0, h.Z)({
-                                          channelId: T,
+                                          channelId: b,
                                           applicationId: c,
                                           intent: null == r ? void 0 : r.intent,
                                           inviterUserId: null == r ? void 0 : r.inviterUserId,
@@ -146,9 +146,9 @@ function el(e) {
         : (0, p.l5)(g) &&
           u === ee.Iq.EMBEDDED_APPLICATION &&
           null != c &&
-          ((0, x.uL)(X.Z5c.CHANNEL(null != t ? t : X.ME, T)),
+          ((0, x.uL)(X.Z5c.CHANNEL(null != t ? t : X.ME, b)),
           (0, h.Z)({
-              channelId: T,
+              channelId: b,
               applicationId: c,
               intent: null == r ? void 0 : r.intent,
               inviterUserId: null == r ? void 0 : r.inviterUserId,
@@ -162,7 +162,7 @@ function eu(e) {
     null != t &&
         (0, E.h)(() => {
             let e = { guildScheduledEventId: t.id };
-            null != n && (e.welcomeModalChannelId = n), (0, b.P3)(t, e);
+            null != n && (e.welcomeModalChannelId = n), (0, T.P3)(t, e);
         });
 }
 function ec(e, t, n) {

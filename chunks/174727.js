@@ -2,10 +2,10 @@ t.d(n, {
     MN: () => r,
     XG: () => c,
     ao: () => i,
-    kD: () => u,
+    kD: () => o,
     lj: () => d,
     my: () => s,
-    pN: () => o
+    pN: () => u
 }),
     t(411104),
     t(315314),
@@ -22,11 +22,11 @@ function s(e) {
     return e / 1000;
 }
 let r = (e, n, t) => (-1 === e ? t : e + (n * (t - e)) / t),
-    o = (e, n, t, l) => {
+    u = (e, n, t, l) => {
         let a = 0;
         return (n >= 0 && t > 0 ? ((e - (n - (t * n) / l)) * 100) / t : (100 * e) / l).toFixed(4);
     },
-    u = (e, n, t, l) => {
+    o = (e, n, t, l) => {
         let a = 0;
         return (n >= 0 && t > 0 ? -((e - (n + (t * (l - n)) / l)) * 100) / t : (-100 * e) / l + 100).toFixed(4);
     };

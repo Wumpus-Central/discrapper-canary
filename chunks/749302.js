@@ -44,8 +44,8 @@ function h(e) {
         v = (0, u.wn)({ location: 'useAcceptGameFriendRequest' }),
         y = E || g || !v,
         I = y ? f : d,
-        [T, b] = r.useState(!1),
-        S = r.useCallback(() => b(!0), []),
+        [b, T] = r.useState(!1),
+        S = r.useCallback(() => T(!0), []),
         A = _(
             r.useMemo(
                 () =>
@@ -55,7 +55,7 @@ function h(e) {
                     }),
                 [I]
             ),
-            T || 1 === I.length
+            b || 1 === I.length
         );
     if (y || 0 === I.length) return null;
     if (1 === I.length) {

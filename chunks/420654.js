@@ -17,9 +17,9 @@ let h = 57.75,
             { context: E } = (0, u.KZ)(),
             { analyticsLocations: v } = (0, l.ZP)(),
             [y, I] = r.useState(!1),
-            [T, b] = r.useState(!1),
+            [b, T] = r.useState(!1),
             S = (e) => {
-                null != e && (I(!T && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && b(!0));
+                null != e && (I(!b && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && T(!0));
             },
             A = () => {
                 null == n || n(),
@@ -36,14 +36,14 @@ let h = 57.75,
                   children: [
                       (0, i.jsx)('div', {
                           ref: S,
-                          className: s()(p.descriptionClamp, T && p.maxBioHeight),
+                          className: s()(p.descriptionClamp, b && p.maxBioHeight),
                           children: (0, i.jsx)(c.Z, {
                               userBio: a,
                               setLineClamp: !1,
                               textColor: 'header-primary'
                           })
                       }),
-                      (y || T) &&
+                      (y || b) &&
                           (0, i.jsx)(o.zxk, {
                               look: o.zxk.Looks.BLANK,
                               size: o.zxk.Sizes.NONE,

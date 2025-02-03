@@ -342,7 +342,7 @@ function I(e) {
         strokeMaskRadius: s
     };
 }
-function T(e) {
+function b(e) {
     let { totalSize: t, backAvatarSize: n, frontAvatarSize: r, backAvatarCenter: a, frontAvatarCenter: s, strokeMaskRadius: o } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -367,13 +367,13 @@ function T(e) {
         ]
     });
 }
-function b(e, t) {
+function T(e, t) {
     let n = I((0, o.UC)(t));
     return (0, i.jsx)('mask', {
         id: e,
         maskContentUnits: 'objectBoundingBox',
         viewBox: '0 0 1 1',
-        children: T(n)
+        children: b(n)
     });
 }
 function S(e, t) {
@@ -386,7 +386,7 @@ function S(e, t) {
         maskContentUnits: 'objectBoundingBox',
         viewBox: '0 0 1 1',
         children: [
-            T(r),
+            b(r),
             (0, i.jsx)('circle', {
                 fill: 'black',
                 cx: (a - s - n.offset) / a,
@@ -408,7 +408,7 @@ function A(e, t) {
         maskContentUnits: 'objectBoundingBox',
         viewBox: '0 0 1 1',
         children: [
-            T(r),
+            b(r),
             (0, i.jsx)('rect', {
                 fill: 'black',
                 x: u / a,
@@ -1132,31 +1132,31 @@ let et = ee,
                     w('svg-mask-avatar-decoration-status-mobile-120', o.EF.SIZE_120),
                     x('svg-mask-avatar-status-typing-120', o.EF.SIZE_120),
                     L('svg-mask-avatar-decoration-status-typing-120', o.EF.SIZE_120),
-                    b('svg-mask-diagonal-facepile-16', o.EF.SIZE_16),
+                    T('svg-mask-diagonal-facepile-16', o.EF.SIZE_16),
                     S('svg-mask-diagonal-facepile-status-16', o.EF.SIZE_16),
                     A('svg-mask-diagonal-facepile-typing-16', o.EF.SIZE_16),
-                    b('svg-mask-diagonal-facepile-20', o.EF.SIZE_20),
+                    T('svg-mask-diagonal-facepile-20', o.EF.SIZE_20),
                     S('svg-mask-diagonal-facepile-status-20', o.EF.SIZE_20),
                     A('svg-mask-diagonal-facepile-typing-20', o.EF.SIZE_20),
-                    b('svg-mask-diagonal-facepile-24', o.EF.SIZE_24),
+                    T('svg-mask-diagonal-facepile-24', o.EF.SIZE_24),
                     S('svg-mask-diagonal-facepile-status-24', o.EF.SIZE_24),
                     A('svg-mask-diagonal-facepile-typing-24', o.EF.SIZE_24),
-                    b('svg-mask-diagonal-facepile-32', o.EF.SIZE_32),
+                    T('svg-mask-diagonal-facepile-32', o.EF.SIZE_32),
                     S('svg-mask-diagonal-facepile-status-32', o.EF.SIZE_32),
                     A('svg-mask-diagonal-facepile-typing-32', o.EF.SIZE_32),
-                    b('svg-mask-diagonal-facepile-40', o.EF.SIZE_40),
+                    T('svg-mask-diagonal-facepile-40', o.EF.SIZE_40),
                     S('svg-mask-diagonal-facepile-status-40', o.EF.SIZE_40),
                     A('svg-mask-diagonal-facepile-typing-40', o.EF.SIZE_40),
-                    b('svg-mask-diagonal-facepile-48', o.EF.SIZE_48),
+                    T('svg-mask-diagonal-facepile-48', o.EF.SIZE_48),
                     S('svg-mask-diagonal-facepile-status-48', o.EF.SIZE_48),
                     A('svg-mask-diagonal-facepile-typing-48', o.EF.SIZE_48),
-                    b('svg-mask-diagonal-facepile-56', o.EF.SIZE_56),
+                    T('svg-mask-diagonal-facepile-56', o.EF.SIZE_56),
                     S('svg-mask-diagonal-facepile-status-56', o.EF.SIZE_56),
                     A('svg-mask-diagonal-facepile-typing-56', o.EF.SIZE_56),
-                    b('svg-mask-diagonal-facepile-80', o.EF.SIZE_80),
+                    T('svg-mask-diagonal-facepile-80', o.EF.SIZE_80),
                     S('svg-mask-diagonal-facepile-status-80', o.EF.SIZE_80),
                     A('svg-mask-diagonal-facepile-typing-80', o.EF.SIZE_80),
-                    b('svg-mask-diagonal-facepile-120', o.EF.SIZE_120),
+                    T('svg-mask-diagonal-facepile-120', o.EF.SIZE_120),
                     S('svg-mask-diagonal-facepile-status-120', o.EF.SIZE_120),
                     A('svg-mask-diagonal-facepile-typing-120', o.EF.SIZE_120),
                     M('svg-mask-status-online-mobile'),

@@ -17,12 +17,12 @@ var i = n(200651),
 function E(e) {
     let { url: t, className: n, style: a, onLoad: s, shouldRefocus: g, queryParams: E, allowPopups: v = !1, referrerPolicy: y = 'origin' } = e,
         I = (0, f.sU)({}),
-        T = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
-        b = r.useRef(null),
-        S = (0, _.Z)(b, g, null == I ? window : I),
+        b = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
+        T = r.useRef(null),
+        S = (0, _.Z)(T, g, null == I ? window : I),
         A = {
             ...E,
-            frame_id: T,
+            frame_id: b,
             platform: h.S4.DESKTOP
         },
         [N, C] = r.useState(!1),
@@ -30,18 +30,18 @@ function E(e) {
         O = { ...a };
     function D(e) {
         var n;
-        null == s || s(e.target), (b.current = e.target), S(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([u.Z.HELLO, A], null != t ? t : '');
+        null == s || s(e.target), (T.current = e.target), S(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([u.Z.HELLO, A], null != t ? t : '');
     }
     return (
         R === m.BRd.LIGHT ? (O.colorScheme = 'light') : (O.colorScheme = 'dark'),
         r.useEffect(
             () => (
-                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: T }),
+                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: b }),
                 () => {
-                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: T });
+                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: b });
                 }
             ),
-            [T]
+            [b]
         ),
         r.useEffect(() => {
             let e = (e) => {

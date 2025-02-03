@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(436896),
     y = n(590921),
     I = n(606992),
-    T = n(51062),
-    b = n(918559),
+    b = n(51062),
+    T = n(918559),
     S = n(144685);
 let A = 490,
     N = 490,
@@ -39,7 +39,7 @@ let A = 490,
                 [P.guild_id]
             ),
             B = r.useRef(),
-            [Z, F, V] = (0, T.Z)(
+            [Z, F, V] = (0, b.Z)(
                 {
                     ...e,
                     guild: G
@@ -62,7 +62,7 @@ let A = 490,
                 () => {
                     let e = d.ZP.getSelfEmbeddedActivityForChannel(P.id),
                         t = d.ZP.getActivityPanelMode();
-                    return (0, c.l5)(P) && null != e && (0, f.p)(e.location) === P.id && t === b.Ez.PANEL;
+                    return (0, c.l5)(P) && null != e && (0, f.p)(e.location) === P.id && t === T.Ez.PANEL;
                 },
                 [P]
             ),

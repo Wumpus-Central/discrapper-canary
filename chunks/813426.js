@@ -17,8 +17,8 @@ var i = 'function' == typeof Map && Map.prototype,
     v = String.prototype.replace,
     y = String.prototype.toUpperCase,
     I = String.prototype.toLowerCase,
-    T = RegExp.prototype.test,
-    b = Array.prototype.concat,
+    b = RegExp.prototype.test,
+    T = Array.prototype.concat,
     S = Array.prototype.join,
     A = Array.prototype.slice,
     N = Math.floor,
@@ -36,7 +36,7 @@ var i = 'function' == typeof Map && Map.prototype,
               }
             : null);
 function w(e, t) {
-    if (e === 1 / 0 || e === -1 / 0 || e != e || (e && e > -1000 && e < 1000) || T.call(/e/, t)) return t;
+    if (e === 1 / 0 || e === -1 / 0 || e != e || (e && e > -1000 && e < 1000) || b.call(/e/, t)) return t;
     var n = /[0-9](?=(?:[0-9]{3})+(?![0-9]))/g;
     if ('number' == typeof e) {
         var i = e < 0 ? -N(-e) : N(e);
@@ -130,9 +130,9 @@ e.exports = function e(t, i, r, o) {
         return e(t, l, r + 1, o);
     }
     if ('function' == typeof t && !V(t)) {
-        var T = J(t),
+        var b = J(t),
             N = ep(t, y);
-        return '[Function' + (T ? ': ' + T : ' (anonymous)') + ']' + (N.length > 0 ? ' { ' + S.call(N, ', ') + ' }' : '');
+        return '[Function' + (b ? ': ' + b : ' (anonymous)') + ']' + (N.length > 0 ? ' { ' + S.call(N, ', ') + ' }' : '');
     }
     if (K(t)) {
         var R = D ? v.call(String(t), /^(Symbol\(.*\))_[^)]*$/, '$1') : O.call(t);
@@ -149,7 +149,7 @@ e.exports = function e(t, i, r, o) {
     }
     if (j(t)) {
         var em = ep(t, y);
-        return 'cause' in Error.prototype || !('cause' in t) || L.call(t, 'cause') ? (0 === em.length ? '[' + String(t) + ']' : '{ [' + String(t) + '] ' + S.call(em, ', ') + ' }') : '{ [' + String(t) + '] ' + S.call(b.call('[cause]: ' + y(t.cause), em), ', ') + ' }';
+        return 'cause' in Error.prototype || !('cause' in t) || L.call(t, 'cause') ? (0 === em.length ? '[' + String(t) + ']' : '{ [' + String(t) + '] ' + S.call(em, ', ') + ' }') : '{ [' + String(t) + '] ' + S.call(T.call('[cause]: ' + y(t.cause), em), ', ') + ' }';
     }
     if ('object' == typeof t && d) {
         if (U && 'function' == typeof t[U] && M) return M(t, { depth: m - r });
@@ -188,9 +188,9 @@ e.exports = function e(t, i, r, o) {
         var ev = ep(t, y),
             ey = P ? P(t) === Object.prototype : t instanceof Object || t.constructor === Object,
             eI = t instanceof Object ? '' : 'null prototype',
-            eT = !ey && x && Object(t) === t && x in t ? E.call(X(t), 8, -1) : eI ? 'Object' : '',
-            eb = (ey || 'function' != typeof t.constructor ? '' : t.constructor.name ? t.constructor.name + ' ' : '') + (eT || eI ? '[' + S.call(b.call([], eT || [], eI || []), ': ') + '] ' : '');
-        return 0 === ev.length ? eb + '{}' : g ? eb + '{' + e_(ev, g) + '}' : eb + '{ ' + S.call(ev, ', ') + ' }';
+            eb = !ey && x && Object(t) === t && x in t ? E.call(X(t), 8, -1) : eI ? 'Object' : '',
+            eT = (ey || 'function' != typeof t.constructor ? '' : t.constructor.name ? t.constructor.name + ' ' : '') + (eb || eI ? '[' + S.call(T.call([], eb || [], eI || []), ': ') + '] ' : '');
+        return 0 === ev.length ? eT + '{}' : g ? eT + '{' + e_(ev, g) + '}' : eT + '{ ' + S.call(ev, ', ') + ' }';
     }
     return String(t);
 };
@@ -340,7 +340,7 @@ function ep(e, t) {
         for (var o = 0; o < s.length; o++) n['$' + s[o]] = s[o];
     }
     for (var l in e) {
-        if (Q(e, l) && (!i || String(Number(l)) !== l || !(l < e.length))) !(D && n['$' + l] instanceof Symbol) && (T.call(/[^\w$]/, l) ? r.push(t(l, e) + ': ' + t(e[l], e)) : r.push(l + ': ' + t(e[l], e)));
+        if (Q(e, l) && (!i || String(Number(l)) !== l || !(l < e.length))) !(D && n['$' + l] instanceof Symbol) && (b.call(/[^\w$]/, l) ? r.push(t(l, e) + ': ' + t(e[l], e)) : r.push(l + ': ' + t(e[l], e)));
     }
     if ('function' == typeof R) for (var u = 0; u < s.length; u++) L.call(e, s[u]) && r.push('[' + t(s[u]) + ']: ' + t(e[s[u]], e));
     return r;

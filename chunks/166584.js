@@ -18,14 +18,14 @@ var i = n(200651),
     v = n(314172),
     y = n(981631),
     I = n(388032),
-    T = n(730479);
-let b = 4,
+    b = n(730479);
+let T = 4,
     S = 268,
     A = 2,
     N = (e) => {
         if (null == e) return 0;
         let { width: t } = e.getBoundingClientRect();
-        return t > 0 ? t + b : 0;
+        return t > 0 ? t + T : 0;
     };
 function C(e) {
     let { user: t, currentUser: n, guild: l, guildMember: c, roles: d, highestRole: f, canManageRoles: _, onAddRole: p, onRemoveRole: C } = e,
@@ -59,7 +59,7 @@ function C(e) {
                     }
                     let s = Math.min(a.getBoundingClientRect().width, t);
                     if (e + s > t) break;
-                    (e += s + b), n.push(r);
+                    (e += s + T), n.push(r);
                 }
             }
             x(n.length === D.length ? D : n), P(i), G.current++;
@@ -103,7 +103,7 @@ function C(e) {
             children: (e) => {
                 let { ref: t, ...n } = e;
                 return (0, i.jsxs)('div', {
-                    className: T.root,
+                    className: b.root,
                     'aria-label': V,
                     ref: t,
                     ...n,
@@ -115,7 +115,7 @@ function C(e) {
                                       text: I.intl.string(I.t.XnXtCg),
                                       children: (0, i.jsx)(u.P3F, {
                                           onClick: W,
-                                          className: T.collapseButton,
+                                          className: b.collapseButton,
                                           children: (0, i.jsx)(h.Z, {
                                               direction: h.Z.Directions.LEFT,
                                               width: 12,
@@ -128,7 +128,7 @@ function C(e) {
                                       children: (0, i.jsx)(u.P3F, {
                                           innerRef: k,
                                           onClick: Y,
-                                          className: T.expandButton,
+                                          className: b.expandButton,
                                           children: (0, i.jsx)(u.Text, {
                                               variant: 'text-xs/medium',
                                               children: '+'.concat(d.length - D.length)
@@ -174,7 +174,7 @@ function R(e) {
         ),
         v = m.e9(a, n.id),
         [I] = (0, l.Wu)([p.Z], () => [p.Z.can(y.Plq.MANAGE_ROLES, a), null != a ? p.Z.getGuildVersion(a.id) : null]),
-        T = r.useCallback(
+        b = r.useCallback(
             (e) => {
                 var n, i;
                 s({ action: 'REMOVE_ROLE' });
@@ -183,7 +183,7 @@ function R(e) {
             },
             [h, a.id, t.id, s]
         ),
-        b = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 s({ action: 'ADD_ROLE' });
                 let n = null != h ? h : [];
@@ -201,8 +201,8 @@ function R(e) {
               roles: E,
               highestRole: v,
               canManageRoles: I,
-              onAddRole: b,
-              onRemoveRole: T
+              onAddRole: T,
+              onRemoveRole: b
           })
         : null;
 }

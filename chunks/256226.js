@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(756317);
 let y = r.forwardRef(function (e, t) {
     var a, y, I;
-    let T;
-    let { canRemove: b, className: S, role: A, onRemove: N, guildId: C, disableBorderColor: R, onMouseDown: O } = e,
+    let b;
+    let { canRemove: T, className: S, role: A, onRemove: N, guildId: C, disableBorderColor: R, onMouseDown: O } = e,
         { tabIndex: D, ...x } = (0, o.JA)(A.id),
         L = (0, g.p9)({
             roleId: A.id,
@@ -48,10 +48,10 @@ let y = r.forwardRef(function (e, t) {
         B = c.Z.unsafe_rawColors.WHITE_500.css,
         Z = (0, l._i)(U);
     null != Z && 0.3 > (0, l.Bd)(Z) && (B = c.Z.unsafe_rawColors.PRIMARY_630.css),
-        (T = w
+        (b = w
             ? (0, i.jsx)(p.Z, {
                   className: v.roleFlowerStar,
-                  iconClassName: b ? v.roleVerifiedIcon : void 0,
+                  iconClassName: T ? v.roleVerifiedIcon : void 0,
                   color: U,
                   size: 14
               })
@@ -74,7 +74,7 @@ let y = r.forwardRef(function (e, t) {
             };
         }, [G, R, e.style]),
         V = () =>
-            b
+            T
                 ? (0, i.jsx)(d.DY3, {
                       text: E.intl.string(E.t.u3RVsL),
                       children: (0, i.jsxs)(d.P3F, {
@@ -85,7 +85,7 @@ let y = r.forwardRef(function (e, t) {
                           'aria-hidden': !1,
                           'aria-label': E.intl.formatToPlainString(E.t.QrxwhY, { roleName: A.name }),
                           children: [
-                              T,
+                              b,
                               (0, i.jsx)(d.Dio, {
                                   size: 'md',
                                   color: B,
@@ -101,7 +101,7 @@ let y = r.forwardRef(function (e, t) {
                       focusProps: { focusClassName: v.roleRemoveIconFocused },
                       'aria-hidden': !0,
                       'aria-label': E.intl.formatToPlainString(E.t.QrxwhY, { roleName: A.name }),
-                      children: T
+                      children: b
                   });
     return (0, i.jsx)(d.tEY, {
         children: (0, i.jsxs)('div', {

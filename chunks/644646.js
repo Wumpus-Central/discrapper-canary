@@ -19,15 +19,15 @@ var i = n(200651),
     y = n(66330);
 let I = function (e) {
     let t;
-    let { className: n, quest: a, autoplay: I = !0, learnMoreStyle: T = null } = e,
-        b = (0, f.O5)(),
+    let { className: n, quest: a, autoplay: I = !0, learnMoreStyle: b = null } = e,
+        T = (0, f.O5)(),
         S = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         A = r.useMemo(() => (0, p.fh)(a, p.eC.REWARD), [a]),
         N = r.useCallback(
             (t) => {
                 var n;
                 (0, o.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
-                    b({
+                    T({
                         questId: a.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
@@ -36,7 +36,7 @@ let I = function (e) {
                     (0, E.navigateToQuestHome)(e.location, e.questContent, a.id),
                     null === (n = e.onClick) || void 0 === n || n.call(e, t);
             },
-            [b, a.id, e]
+            [T, a.id, e]
         ),
         C = r.useRef(null),
         R = r.useRef(I),
@@ -92,7 +92,7 @@ let I = function (e) {
                             src: A.url
                         })
                 })),
-        null == T
+        null == b
             ? (0, i.jsx)('div', {
                   className: s()(y.questRewardTile, n),
                   children: t
@@ -106,14 +106,14 @@ let I = function (e) {
                           className: y.shine,
                           shineSize: u.rHe.SMALL
                       }),
-                      'text' === T &&
+                      'text' === b &&
                           (0, i.jsx)(u.Text, {
                               color: 'always-white',
                               variant: 'text-xs/normal',
                               className: y.questRewardTileDetailsLearnMore,
                               children: v.intl.format(v.t.DYAleX, {})
                           }),
-                      'icon' === T &&
+                      'icon' === b &&
                           (0, i.jsx)('div', {
                               className: y.questRewardTileDetailsLearnMore,
                               children: (0, i.jsx)(u.d3s, {

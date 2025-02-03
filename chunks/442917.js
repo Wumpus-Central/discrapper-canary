@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(221888),
     y = n(933557),
     I = n(569545),
-    T = n(74299),
-    b = n(863908),
+    b = n(74299),
+    T = n(863908),
     S = n(803647),
     A = n(266910),
     N = n(788983),
@@ -94,7 +94,7 @@ class ea extends r.PureComponent {
         let { participantOnScreen: e, currentUserId: t } = this.props;
         if (!(0, et._5)(e)) return null;
         let n = this.activeStreamForSelectedParticipant;
-        return null == n ? null : (0, b.Z)(n, e.user, e.user.id === t, this.streamerPaused);
+        return null == n ? null : (0, T.Z)(n, e.user, e.user.id === t, this.streamerPaused);
     }
     componentDidMount() {
         let { channel: e } = this.props;
@@ -296,7 +296,7 @@ let es = u.ZP.connectStores([U.Z, Z.Z, g.Z, k.default, M.Z, F.Z, V.Z], (e) => {
         s = null != i && i.type !== et.fO.ACTIVITY && i.type !== et.fO.HIDDEN_STREAM ? F.Z.getStreamId(i.user.id, t.getGuildId(), (0, E.Z)(i.type)) : null,
         o = !1 === a,
         u = !a && U.Z.isVideoEnabled(),
-        c = (0, T.Z)(U.Z),
+        c = (0, b.Z)(U.Z),
         d = k.default.getId(),
         f = M.Z.getCurrentUserActiveStream(),
         _ = !1;

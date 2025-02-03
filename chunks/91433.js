@@ -16,17 +16,17 @@ function m(e) {
     let { user: t, guildId: n, channelId: a, applicationId: m, friendToken: g, isGameRelationship: E = !1, className: v } = e,
         y = f.ZP.getName(n, a, t),
         { trackUserProfileAction: I } = (0, _.KZ)(),
-        { newestAnalyticsLocation: T } = (0, l.ZP)(),
-        { acceptFriendRequest: b, cancelFriendRequest: S } = (0, d.u)({
+        { newestAnalyticsLocation: b } = (0, l.ZP)(),
+        { acceptFriendRequest: T, cancelFriendRequest: S } = (0, d.u)({
             userId: t.id,
             applicationId: m,
             isGameRelationship: E,
-            location: T,
+            location: b,
             friendToken: g
         }),
         A = r.useCallback(() => {
-            b(), I({ action: E ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
-        }, [b, E, I]),
+            T(), I({ action: E ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
+        }, [T, E, I]),
         N = r.useCallback(() => {
             S(), I({ action: E ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' });
         }, [S, E, I]),

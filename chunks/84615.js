@@ -1,5 +1,5 @@
 n.d(t, {
-    Ox: () => b,
+    Ox: () => T,
     QP: () => v,
     ob: () => A,
     q4: () => S
@@ -71,7 +71,7 @@ let I = {
         exitActive: g.exitActive,
         exitDone: g.exitDone
     },
-    T = {
+    b = {
         enter: g.enterReducedMotion,
         enterActive: g.enterActiveReducedMotion,
         enterDone: g.enterDoneReducedMotion,
@@ -79,9 +79,9 @@ let I = {
         exitActive: g.exitActiveReducedMotion,
         exitDone: g.exitDoneReducedMotion
     };
-function b() {
+function T() {
     let { reducedMotion: e } = r.useContext(f.Sfi),
-        t = e.enabled ? T : I,
+        t = e.enabled ? b : I,
         n = v((e) => e.fullScreenLayers);
     return (0, i.jsx)(o.Z, {
         children: n.map((e) =>

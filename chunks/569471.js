@@ -78,11 +78,11 @@ function I(e) {
     let { guild: t } = e;
     h(t.id), m(t);
 }
-function T(e) {
+function b(e) {
     let { guild: t } = e;
     h(t.id);
 }
-function b(e) {
+function T(e) {
     let { channel: t } = e;
     g(t);
 }
@@ -187,8 +187,8 @@ let D = new O(o.Z, {
         CONNECTION_OPEN: v,
         OVERLAY_INITIALIZE: y,
         GUILD_CREATE: I,
-        GUILD_DELETE: T,
-        THREAD_CREATE: b,
+        GUILD_DELETE: b,
+        THREAD_CREATE: T,
         THREAD_LIST_SYNC: S,
         SEARCH_FINISH: S,
         MOD_VIEW_SEARCH_FINISH: S,

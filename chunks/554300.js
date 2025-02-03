@@ -8,15 +8,15 @@ var i = n(200651),
     u = n(317767);
 let c = r.forwardRef(function (e, t) {
     var n;
-    let { avatar: r, name: a, children: c, subText: d, decorators: f, onClick: _, selected: p, muted: h, to: m, avatarClassName: g, selectedClassName: E, innerClassName: v, wrapContent: y, highlighted: I, focusProps: T, ...b } = e;
-    (b.className = s()(b.className, u.container, {
+    let { avatar: r, name: a, children: c, subText: d, decorators: f, onClick: _, selected: p, muted: h, to: m, avatarClassName: g, selectedClassName: E, innerClassName: v, wrapContent: y, highlighted: I, focusProps: b, ...T } = e;
+    (T.className = s()(T.className, u.container, {
         [u.selected]: p,
         [u.highlighted]: I,
         [u.active]: p,
         [null != E ? E : '']: p,
         [u.clickable]: !p && (null != m || null != _)
     })),
-        (b['aria-selected'] = null !== (n = b['aria-selected']) && void 0 !== n ? n : p);
+        (T['aria-selected'] = null !== (n = T['aria-selected']) && void 0 !== n ? n : p);
     let S = (0, i.jsxs)('div', {
         className: s()(v, u.layout, {
             [u.muted]: !p && h,
@@ -58,11 +58,11 @@ let c = r.forwardRef(function (e, t) {
     });
     return null != m
         ? (0, i.jsx)(l.tEY, {
-              ...T,
+              ...b,
               children: (0, i.jsx)(o.rU, {
                   to: m,
                   onClick: _,
-                  ...b,
+                  ...T,
                   role: 'listitem',
                   ref: t,
                   children: S
@@ -71,16 +71,16 @@ let c = r.forwardRef(function (e, t) {
         : null != _
           ? (0, i.jsx)(l.P3F, {
                 onClick: _,
-                focusProps: T,
-                ...b,
+                focusProps: b,
+                ...T,
                 role: 'listitem',
                 innerRef: t,
                 children: S
             })
           : (0, i.jsx)(l.tEY, {
-                ...T,
+                ...b,
                 children: (0, i.jsx)('div', {
-                    ...b,
+                    ...T,
                     role: 'listitem',
                     ref: t,
                     children: S

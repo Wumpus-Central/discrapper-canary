@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(544989),
     y = n(4517),
     I = n(171368),
-    T = n(895697),
-    b = n(161572),
+    b = n(895697),
+    T = n(161572),
     S = n(228168),
     A = n(388032),
     N = n(591156);
@@ -111,7 +111,7 @@ function C(e) {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(T.Z, {
+                        (0, i.jsx)(b.Z, {
                             user: t,
                             currentUser: n,
                             displayProfile: U,
@@ -121,7 +121,7 @@ function C(e) {
                             channelId: R,
                             onClose: x
                         }),
-                        (0, i.jsx)(b.Z, {
+                        (0, i.jsx)(T.Z, {
                             user: t,
                             guildId: C,
                             channelId: R,

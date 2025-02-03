@@ -23,7 +23,7 @@ let u = function (e, t, n) {
         return (u = c = void 0), (h = t), (f = e.apply(i, n));
     }
     function y(e) {
-        return (h = e), (_ = setTimeout(b, t)), m ? v(e) : f;
+        return (h = e), (_ = setTimeout(T, t)), m ? v(e) : f;
     }
     function I(e) {
         var n = e - p,
@@ -31,15 +31,15 @@ let u = function (e, t, n) {
             r = t - n;
         return g ? l(r, d - i) : r;
     }
-    function T(e) {
+    function b(e) {
         var n = e - p,
             i = e - h;
         return void 0 === p || n >= t || n < 0 || (g && i >= d);
     }
-    function b() {
+    function T() {
         var e = (0, r.Z)();
-        if (T(e)) return S(e);
-        _ = setTimeout(b, I(e));
+        if (b(e)) return S(e);
+        _ = setTimeout(T, I(e));
     }
     function S(e) {
         return ((_ = void 0), E && u) ? v(e) : ((u = c = void 0), f);
@@ -52,12 +52,12 @@ let u = function (e, t, n) {
     }
     function C() {
         var e = (0, r.Z)(),
-            n = T(e);
+            n = b(e);
         if (((u = arguments), (c = this), (p = e), n)) {
             if (void 0 === _) return y(p);
-            if (g) return clearTimeout(_), (_ = setTimeout(b, t)), v(p);
+            if (g) return clearTimeout(_), (_ = setTimeout(T, t)), v(p);
         }
-        return void 0 === _ && (_ = setTimeout(b, t)), f;
+        return void 0 === _ && (_ = setTimeout(T, t)), f;
     }
     return (t = (0, a.Z)(t) || 0), (0, i.Z)(n) && ((m = !!n.leading), (d = (g = 'maxWait' in n) ? o((0, a.Z)(n.maxWait) || 0, t) : d), (E = 'trailing' in n ? !!n.trailing : E)), (C.cancel = A), (C.flush = N), C;
 };

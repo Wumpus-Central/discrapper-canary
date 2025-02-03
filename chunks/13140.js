@@ -3,7 +3,7 @@ n.d(t, {
     C$: () => E,
     H9: () => g,
     Kd: () => S,
-    d2: () => b,
+    d2: () => T,
     dU: () => m
 }),
     n(47120),
@@ -103,8 +103,8 @@ let v = [
         for (let [t, n] of v) if (n === e.toUpperCase()) return t.toLowerCase();
         return e;
     },
-    T = /shift|meta|ctrl|alt$/;
-function b(e) {
+    b = /shift|meta|ctrl|alt$/;
+function T(e) {
     let t = {
         keyCode: 0,
         metaKey: !1,
@@ -125,7 +125,7 @@ function b(e) {
                       }),
                       e
                   );
-              if (T.test(i)) return (t[i + 'Key'] = !0), e.map((e) => ((e[i + 'Key'] = !0), e));
+              if (b.test(i)) return (t[i + 'Key'] = !0), e.map((e) => ((e[i + 'Key'] = !0), e));
               {
                   let t = E(i, c.CgE.BROWSER);
                   return null != t && (r.keyCode = t), e.push(r), e;

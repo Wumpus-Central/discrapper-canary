@@ -18,8 +18,8 @@ var i,
     v = n(246946),
     y = n(230307),
     I = n(799777),
-    T = n(417363),
-    b = n(941128),
+    b = n(417363),
+    T = n(941128),
     S = n(70956),
     A = n(251625),
     N = n(823379),
@@ -64,7 +64,7 @@ let F = {
         [L.iEv.ACTIONS]: null
     },
     V = (0, A.oH)((e) => e.filter((e) => null != e.libraryApplication && e.shouldShowInLibrary)),
-    j = (0, A.oH)((e) => e.filter((e) => null != e.libraryApplication && T.Z.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
+    j = (0, A.oH)((e) => e.filter((e) => null != e.libraryApplication && b.Z.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
     H = (0, A.oH)((e, t) => e.filter((e) => a()(t.toLowerCase(), e.application.name.toLowerCase()))),
     Y = (0, A.oH)((e, t, n, i) => {
         let r = F[t];
@@ -88,27 +88,27 @@ function q(e, t, n, i, r) {
     let a = f.Z.getApplication(e.id);
     if (null == a) return null;
     let s = K(a, n);
-    return (t.add(e.id), (0, C.Je)(e) || T.Z.isInstalled(e.id, e.branchId))
+    return (t.add(e.id), (0, C.Je)(e) || b.Z.isInstalled(e.id, e.branchId))
         ? {
               key: ''.concat(e.id, '-').concat(e.branchId),
               application: a,
               libraryApplication: e,
               lastPlayed: s,
-              supportsCloudSync: null != e && T.Z.supportsCloudSync(e.id, e.branchId),
+              supportsCloudSync: null != e && b.Z.supportsCloudSync(e.id, e.branchId),
               isNew: Z(e, s),
               isLaunching: p.Z.launchingGames.has(e.id),
               isRunning: i.has(e.id),
               isLaunchable: (0, D.t)({
                   LibraryApplicationStore: E.Z,
                   LaunchableGameStore: p.Z,
-                  DispatchApplicationStore: T.Z,
+                  DispatchApplicationStore: b.Z,
                   ConnectedAppsStore: m.Z,
                   applicationId: e.id,
                   branchId: e.branchId
               }),
               isUpdatingFlags: E.Z.isUpdatingFlags(e.id, e.branchId),
               shouldShowInLibrary: (0, C.d0)(a, e, v.Z),
-              defaultAction: (0, x.i)(e, T.Z, b.Z)
+              defaultAction: (0, x.i)(e, b.Z, T.Z)
           }
         : null;
 }
@@ -129,7 +129,7 @@ function Q(e, t, n, i) {
             isLaunchable: (0, D.t)({
                 LibraryApplicationStore: E.Z,
                 LaunchableGameStore: p.Z,
-                DispatchApplicationStore: T.Z,
+                DispatchApplicationStore: b.Z,
                 ConnectedAppsStore: m.Z,
                 applicationId: e,
                 branchId: null
@@ -168,7 +168,7 @@ function X() {
 }
 class J extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([f.Z, g.Z, p.Z, _.ZP, T.Z, b.Z, E.Z, y.Z, v.Z, m.Z], X, 200), this.syncWith([I.Z, h.default], () => !0);
+        this.syncWith([f.Z, g.Z, p.Z, _.ZP, b.Z, T.Z, E.Z, y.Z, v.Z, m.Z], X, 200), this.syncWith([I.Z, h.default], () => !0);
     }
     get applicationFilterQuery() {
         return U;

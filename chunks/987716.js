@@ -18,7 +18,7 @@ var i = n(200651),
     v = n(461405);
 let y = (e) => {
     let { isShopGift: t, className: n, optionsContainerClassName: a } = e,
-        { giftRecipient: y, selectedGiftStyle: I, setSelectedGiftStyle: T, emojiConfetti: b, soundEffect: S, setEmojiConfetti: A, setSoundEffect: N } = (0, l.wD)(),
+        { giftRecipient: y, selectedGiftStyle: I, setSelectedGiftStyle: b, emojiConfetti: T, soundEffect: S, setEmojiConfetti: A, setSoundEffect: N } = (0, l.wD)(),
         [C, R] = r.useState(!1),
         O = r.useRef(null),
         D = (0, o.arW)({ orientation: 'horizontal' }),
@@ -63,7 +63,7 @@ let y = (e) => {
                                         className: v.emoji,
                                         children: (0, i.jsx)(h.Z, {
                                             setEmojiConfetti: A,
-                                            emojiConfetti: null == b ? void 0 : b
+                                            emojiConfetti: null == T ? void 0 : T
                                         })
                                     })
                                 ]
@@ -87,7 +87,7 @@ let y = (e) => {
                             {
                                 isSelected: I === e,
                                 giftStyle: e,
-                                setSelectedGiftStyle: T,
+                                setSelectedGiftStyle: b,
                                 ref: 0 === t ? O : null,
                                 onFocus: () => R(!0),
                                 onBlur: () => R(!1)

@@ -30,14 +30,14 @@ function E(e, t, n) {
 let v = (0, l.Z)(),
     y = (0, l.Z)(),
     I = (0, l.Z)(),
-    T = 10,
-    b = 7.23;
+    b = 10,
+    T = 7.23;
 class S extends (i = a.Component) {
     getPaddingRight() {
         let { maxLength: e, showCharacterCountFullPadding: t } = this.props;
-        if (null == e) return T;
+        if (null == e) return b;
         let n = ''.concat(e).length;
-        return t && (n += ''.concat(e, ' / ').length), b * n + T;
+        return t && (n += ''.concat(e, ' / ').length), T * n + b;
     }
     getCharsLeftLength() {
         let { maxLength: e, value: t } = this.props;
@@ -97,7 +97,7 @@ class S extends (i = a.Component) {
     }
     render() {
         var e, t;
-        let { disabled: n, value: i, placeholder: a, autoFocus: s, minLength: l, maxLength: c, allowOverflow: f, spellCheck: E, resizeable: v, className: T, id: b, rows: S, flex: A, autosize: N, required: C, onInvalid: R, inputRef: O } = this.props,
+        let { disabled: n, value: i, placeholder: a, autoFocus: s, minLength: l, maxLength: c, allowOverflow: f, spellCheck: E, resizeable: v, className: b, id: T, rows: S, flex: A, autosize: N, required: C, onInvalid: R, inputRef: O } = this.props,
             D = N ? _.l : 'textarea',
             x = this.hasError(),
             L = null !== (t = this.props['aria-labelledby']) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId,
@@ -111,7 +111,7 @@ class S extends (i = a.Component) {
                         (0, r.jsx)(u.t, {
                             children: (0, r.jsx)(D, {
                                 type: 'text',
-                                className: o()(m.inputDefault, h.textArea, g.scrollbarDefault, T, {
+                                className: o()(m.inputDefault, h.textArea, g.scrollbarDefault, b, {
                                     [m.error]: x,
                                     [m.disabled]: n,
                                     [h.resizeable]: v
@@ -120,7 +120,7 @@ class S extends (i = a.Component) {
                                 'aria-describedby': P,
                                 'aria-invalid': x,
                                 style: { paddingRight: this.getPaddingRight() },
-                                id: b,
+                                id: T,
                                 disabled: n,
                                 placeholder: a,
                                 value: i,

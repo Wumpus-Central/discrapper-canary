@@ -205,8 +205,8 @@ function I(e) {
     }
     return t.push(new E(255, 255, 255, 1)), t.reduce(v);
 }
-let T = '--__adaptive-focus-ring-color',
-    b = '--__adaptive-focus-ring-radius';
+let b = '--__adaptive-focus-ring-color',
+    T = '--__adaptive-focus-ring-radius';
 function S(e) {
     e !== i && (null == i || i.hide(), (i = e));
 }
@@ -298,8 +298,8 @@ class N {
             t = {
                 ...this.makePositionFromDOMRect(this.targetElement.getBoundingClientRect()),
                 zIndex: null != (e = this.zIndex) ? e : this.getNextZIndexForAncestry(this.targetAncestry),
-                [T]: y(n, this.themeOptions),
-                [b]: this.getBorderRadius(this.targetAncestry)
+                [b]: y(n, this.themeOptions),
+                [T]: this.getBorderRadius(this.targetAncestry)
             };
         }
         return t;
@@ -430,7 +430,7 @@ function H(e) {
         g = s.useContext(R),
         E = s.Children.only(_),
         { onBlur: v, onFocus: y, ...I } = E.props,
-        T = s.useMemo(
+        b = s.useMemo(
             () => ({
                 className: l,
                 offset: r
@@ -451,8 +451,8 @@ function H(e) {
         ),
         s.useEffect(() => {
             let e = null == o ? void 0 : o.current;
-            null == i || null == e || ((p.current = i), i ? g.showElement(e, T) : !1 === i && g.hide());
-        }, [i, T, g, o]),
+            null == i || null == e || ((p.current = i), i ? g.showElement(e, b) : !1 === i && g.hide());
+        }, [i, b, g, o]),
         j(() => {
             if (null != i) return;
             let e = null == a ? void 0 : a.current,
@@ -468,17 +468,17 @@ function H(e) {
             function r(e) {
                 if (null != n) {
                     if (e.currentTarget === e.target) {
-                        (p.current = !0), g.showElement(n, T);
+                        (p.current = !0), g.showElement(n, b);
                         return;
                     }
-                    m(!0), t && g.showElement(n, T);
+                    m(!0), t && g.showElement(n, b);
                 }
             }
             function s() {
                 g.hide(), (p.current = !1), m(!1);
             }
-        }, [t, T, i, g, a, o]);
-    let b = s.useCallback(
+        }, [t, b, i, g, a, o]);
+    let T = s.useCallback(
             (e) => {
                 g.hide(), (p.current = !1), m(!1), null == v || v(e);
             },
@@ -487,15 +487,15 @@ function H(e) {
         S = s.useCallback(
             (e) => {
                 let n = null == o ? void 0 : o.current;
-                e.currentTarget === e.target ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, T)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, T)), null == y || y(e);
+                e.currentTarget === e.target ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, b)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, b)), null == y || y(e);
             },
-            [o, t, y, g, T]
+            [o, t, y, g, b]
         );
     return n && null == a && null == i
         ? s.cloneElement(E, {
               ...I,
               className: d(I.className, p.current ? u : void 0, h ? c : void 0),
-              onBlur: b,
+              onBlur: T,
               onFocus: S
           })
         : E;

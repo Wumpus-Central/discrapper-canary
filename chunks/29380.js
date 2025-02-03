@@ -20,7 +20,7 @@ function N(e) {
         I = l.useCallback(() => {
             c.yT(d.ti.ACTIVITY);
         }, []),
-        { submitting: g, wasSubmitting: _ } = (0, p.Z)({
+        { submitting: _, wasSubmitting: g } = (0, p.Z)({
             applicationId: n.id,
             context: t,
             launchingComponentId: A,
@@ -44,7 +44,7 @@ function N(e) {
             commandName: T,
             autoDismissOnClick: y === o.JS.LEAVE,
             launchingComponentId: A,
-            submitting: null != _ ? _ : g
+            submitting: null != g ? g : _
         }),
         { disabled: R, reason: M } = (0, u.Z)({
             context: t,

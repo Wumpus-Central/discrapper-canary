@@ -25,8 +25,8 @@ var m = n(443551),
     v = n(531478).codes,
     y = v.ERR_INVALID_ARG_TYPE,
     I = v.ERR_STREAM_PUSH_AFTER_EOF,
-    T = v.ERR_METHOD_NOT_IMPLEMENTED,
-    b = v.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
+    b = v.ERR_METHOD_NOT_IMPLEMENTED,
+    T = v.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
 n(689118)(R, c);
 var S = g.errorOrDestroy,
     A = ['error', 'close', 'destroy', 'pause', 'resume'];
@@ -49,7 +49,7 @@ function O(e, t, n, i, a) {
     if (null === t) (o.reading = !1), M(e, o);
     else if ((a || (s = x(o, t)), s)) S(e, s);
     else if (o.objectMode || (t && t.length > 0)) {
-        if (('string' == typeof t || o.objectMode || Object.getPrototypeOf(t) === d.prototype || (t = _(t)), i)) o.endEmitted ? S(e, new b()) : D(e, o, t, !0);
+        if (('string' == typeof t || o.objectMode || Object.getPrototypeOf(t) === d.prototype || (t = _(t)), i)) o.endEmitted ? S(e, new T()) : D(e, o, t, !0);
         else if (o.ended) S(e, new I());
         else {
             if (o.destroyed) return !1;
@@ -183,7 +183,7 @@ function q(e, t) {
     return r('need readable', a), (0 === n.length || n.length - e < n.highWaterMark) && r('length less than watermark', (a = !0)), n.ended || n.reading ? r('reading or ended', (a = !1)) : a && (r('do read'), (n.reading = !0), (n.sync = !0), 0 === n.length && (n.needReadable = !0), this._read(n.highWaterMark), (n.sync = !1), n.reading || (e = w(i, n))), null === (t = e > 0 ? W(e, n) : null) ? ((n.needReadable = n.length <= n.highWaterMark), (e = 0)) : ((n.length -= e), (n.awaitDrain = 0)), 0 === n.length && (n.ended || (n.needReadable = !0), i !== e && n.ended && K(this)), null !== t && this.emit('data', t), t;
 }),
     (R.prototype._read = function (e) {
-        S(this, new T('_read()'));
+        S(this, new b('_read()'));
     }),
     (R.prototype.pipe = function (e, t) {
         var n = this,

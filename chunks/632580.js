@@ -13,7 +13,7 @@ var i = n(512722),
     p = n(981631),
     h = n(474936);
 async function m(e) {
-    let { setPurchaseState: t, setHasAcceptedTerms: n, setIsSubmitting: i, setPurchaseError: m, hasRedirectURL: g, setHasRedirectURL: E, isGift: v, baseAnalyticsData: y, analyticsLocation: I, analyticsLocations: T, flowStartTime: b, subscriptionPlan: S, planGroup: A, trialId: N, priceOptions: C, paymentSource: R, isPrepaidPaymentPastDue: O, openInvoiceId: D, premiumSubscription: x, onNext: L, metadata: P, sku: w, skuPricePreview: M, purchaseType: k, referralCode: U, loadId: G, giftInfoOptions: B, invoicePreview: Z } = e;
+    let { setPurchaseState: t, setHasAcceptedTerms: n, setIsSubmitting: i, setPurchaseError: m, hasRedirectURL: g, setHasRedirectURL: E, isGift: v, baseAnalyticsData: y, analyticsLocation: I, analyticsLocations: b, flowStartTime: T, subscriptionPlan: S, planGroup: A, trialId: N, priceOptions: C, paymentSource: R, isPrepaidPaymentPastDue: O, openInvoiceId: D, premiumSubscription: x, onNext: L, metadata: P, sku: w, skuPricePreview: M, purchaseType: k, referralCode: U, loadId: G, giftInfoOptions: B, invoicePreview: Z } = e;
     t(_.A.PURCHASING), n(!0), i(!0), a.Z.wait(o.fw), m(null);
     try {
         let e, n, i;
@@ -24,7 +24,7 @@ async function m(e) {
                 tax: null == Z ? void 0 : Z.tax,
                 expected_amount: null == Z ? void 0 : Z.total,
                 expected_currency: null == Z ? void 0 : Z.currency,
-                duration_ms: Date.now() - b
+                duration_ms: Date.now() - T
             }),
             g)
         )
@@ -62,7 +62,7 @@ async function m(e) {
                           paymentSource: R,
                           currency: C.currency
                       },
-                      T,
+                      b,
                       I,
                       G
                   );
@@ -72,7 +72,7 @@ async function m(e) {
                     paymentSource: R,
                     currency: C.currency
                 };
-            x.status === p.O0b.PAUSED ? (n.status = p.O0b.ACTIVE) : (n.items = t), (e = await (0, s.Mg)(x, n, T, I, G));
+            x.status === p.O0b.PAUSED ? (n.status = p.O0b.ACTIVE) : (n.items = t), (e = await (0, s.Mg)(x, n, b, I, G));
         } else
             e = await (0, l.Ld)({
                 planId: S.id,
@@ -96,7 +96,7 @@ async function m(e) {
                 payment_error_code: null == e ? void 0 : e.code,
                 payment_source_id: null == R ? void 0 : R.id,
                 payment_source_type: null == R ? void 0 : R.type,
-                duration_ms: Date.now() - b
+                duration_ms: Date.now() - T
             });
     } finally {
         g || i(!1);

@@ -13,18 +13,18 @@ function c(e) {
         m = r.useRef((0, l._)(t, p)),
         [g, E] = r.useState(null == f),
         [v, y] = r.useState(!1),
-        [I, T] = r.useState(-1),
-        b = () => {
-            (m.current = (0, l._)(t, p)), T((e) => e + 1);
+        [I, b] = r.useState(-1),
+        T = () => {
+            (m.current = (0, l._)(t, p)), b((e) => e + 1);
         },
         S = () => {
-            E(!1), y(!0), T(-1), h(d);
+            E(!1), y(!0), b(-1), h(d);
         };
     r.useEffect(() => {
         null == f && h(d);
     }, [f, d]);
     let A = {
-            applyAnimation: b,
+            applyAnimation: T,
             idleAnimationState: f,
             isChanging: v,
             resetAnimation: S,

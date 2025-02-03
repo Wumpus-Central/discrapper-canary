@@ -61,8 +61,8 @@ function I(e) {
     let { platform: t, deviceId: n } = e;
     _[t] = n;
 }
-let T = Object.freeze({});
-class b extends (i = r.ZP.DeviceSettingsStore) {
+let b = Object.freeze({});
+class T extends (i = r.ZP.DeviceSettingsStore) {
     initialize(e) {
         null != e && (_ = e.lastSelectedDeviceByPlatform), this.waitFor(s.Z, o.Z);
     }
@@ -71,7 +71,7 @@ class b extends (i = r.ZP.DeviceSettingsStore) {
     }
     getDevicesForPlatform(e) {
         var t;
-        return null !== (t = f[e]) && void 0 !== t ? t : T;
+        return null !== (t = f[e]) && void 0 !== t ? t : b;
     }
     getLastSelectedDeviceByPlatform(e) {
         return _[e];
@@ -93,8 +93,8 @@ class b extends (i = r.ZP.DeviceSettingsStore) {
         return c;
     }
 }
-l(b, 'displayName', 'GameConsoleStore'), l(b, 'persistKey', 'GameConsoleStore');
-let S = new b(a.Z, {
+l(T, 'displayName', 'GameConsoleStore'), l(T, 'persistKey', 'GameConsoleStore');
+let S = new T(a.Z, {
     REMOTE_SESSION_CONNECT: h,
     REMOTE_SESSION_DISCONNECT: m,
     WAIT_FOR_REMOTE_SESSION: g,

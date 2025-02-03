@@ -57,16 +57,16 @@ function I(e) {
     let { backgroundOption: t } = e;
     y(t) && (h = !0);
 }
-function T(e) {
+function b(e) {
     let { settings: t } = e;
     a.TO.CAMERA_BACKGROUND_LIVE in t && (_ = !0);
 }
-function b() {
+function T() {
     p !== u.Z.getVoiceChannelId() && (h = !1), y() && (h = !0), (p = u.Z.getVoiceChannelId());
 }
 class S extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z, u.Z, l.Z), this.syncWith([u.Z, l.Z], b);
+        this.waitFor(o.Z, u.Z, l.Z), this.syncWith([u.Z, l.Z], T);
     }
     get videoFilterAssets() {
         return m;
@@ -84,5 +84,5 @@ let A = new S(s.Z, {
     VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: E,
     VIDEO_FILTER_ASSET_DELETE_SUCCESS: v,
     VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: I,
-    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: T
+    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: b
 });

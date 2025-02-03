@@ -18,8 +18,8 @@ var r,
     v = n(626135),
     y = n(449934),
     I = n(960048),
-    T = n(117240),
-    b = n(412788),
+    b = n(117240),
+    T = n(412788),
     S = n(981631),
     A = n(723359);
 function N(e, t, n) {
@@ -69,7 +69,7 @@ function Q() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (((w = u.K.get(R)), null != Y)) return Y;
     let t = null != w ? w : a.getToken();
-    !(!(0, g.m1)() || (!e && null != t) || T.Z.isHandoffAvailable()) && X({ withGuildExperiments: !0 });
+    !(!(0, g.m1)() || (!e && null != t) || b.Z.isHandoffAvailable()) && X({ withGuildExperiments: !0 });
 }
 function X(e) {
     let { withGuildExperiments: t } = e,
@@ -205,7 +205,7 @@ function eE(e) {
             eI();
             return;
         }
-        v.default.track(S.rMx.APP_USER_DEAUTHENTICATED, { user_id: u.K.get(O) }), eT(), setImmediate(() => (0, g.uL)(S.Z5c.DEFAULT_LOGGED_OUT));
+        v.default.track(S.rMx.APP_USER_DEAUTHENTICATED, { user_id: u.K.get(O) }), eb(), setImmediate(() => (0, g.uL)(S.Z5c.DEFAULT_LOGGED_OUT));
     }
 }
 function ev(e) {
@@ -218,12 +218,12 @@ function ey(e) {
 }
 function eI() {
     (G = !0),
-        eT(),
+        eb(),
         c.Z.wait(() => {
             (0, g.uL)(S.Z5c.REGISTER);
         });
 }
-function eT(e) {
+function eb(e) {
     var t;
     q('handleLogout called.');
     let n = ee();
@@ -232,7 +232,7 @@ function eT(e) {
             omit: ['InstallationManagerStore', 'AgeGateStore', 'NativePermissionsStore', 'MultiAccountStore', 'DraftStore', 'OverlayStoreV2', 'StreamerModeStore', 'LoginRequiredActionStore'],
             type: (null == e ? void 0 : e.isSwitchingAccount) ? 'user-data-only' : 'all'
         }),
-        b.Z.clearAll(),
+        T.Z.clearAll(),
         h.ZH(),
         I.Z.clearUser(),
         u.K.remove(O),
@@ -245,7 +245,7 @@ function eT(e) {
         (K = !1),
         (z = !1);
 }
-function eb() {
+function eT() {
     U = S.u34.FORGOT_PASSWORD;
 }
 function eS() {
@@ -260,7 +260,7 @@ function eN(e) {
     (K = !1), (W = t), setImmediate(() => (0, g.uL)(S.Z5c.ACCOUNT_STANDING));
 }
 function eC() {
-    (W = null), (U = S.u34.NONE), eT(), setImmediate(() => (0, g.uL)(S.Z5c.DEFAULT_LOGGED_OUT));
+    (W = null), (U = S.u34.NONE), eb(), setImmediate(() => (0, g.uL)(S.Z5c.DEFAULT_LOGGED_OUT));
 }
 class eR extends (r = o.ZP.Store) {
     initialize() {
@@ -354,10 +354,10 @@ let eO = new eR(
         LOGIN_RESET: en,
         LOGIN_STATUS_RESET: ei,
         LOGIN_SUSPENDED_USER: eN,
-        LOGOUT: eT,
+        LOGOUT: eb,
         FINGERPRINT: ep,
         REGISTER_SUCCESS: eh,
-        FORGOT_PASSWORD_REQUEST: eb,
+        FORGOT_PASSWORD_REQUEST: eT,
         FORGOT_PASSWORD_SENT: eS,
         UPDATE_TOKEN: ev,
         EXPERIMENTS_FETCH: X,

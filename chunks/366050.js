@@ -103,12 +103,12 @@ function I(e) {
         });
     }
 }
-function T(e) {
+function b(e) {
     let { id: t } = e,
         n = d.get(t);
     null != n && (n.component === l.NYg.VIDEO ? (i = t) : n.component === l.NYg.EMBED_IFRAME && (r = t));
 }
-function b() {
+function T() {
     (i = null), (r = null), (d = new Map());
 }
 class S extends (a = s.ZP.PersistedStore) {
@@ -177,6 +177,6 @@ let A = new S(o.Z, {
     PICTURE_IN_PICTURE_HIDE: y,
     PICTURE_IN_PICTURE_SHOW: I,
     PICTURE_IN_PICTURE_UPDATE_RECT: v,
-    PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: T,
-    LOGOUT: b
+    PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: b,
+    LOGOUT: T
 });

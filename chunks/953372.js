@@ -16,7 +16,7 @@ var r = n(120356),
     m = n(556638),
     g = n(748442);
 function E(e) {
-    let { user: t, activities: n, applicationStream: r, emojiClassName: E, textClassName: v, animate: y = !0, hasQuest: I = !1, hideEmoji: T = !1, hideTooltip: b = !1, fullWidth: S = !1 } = e,
+    let { user: t, activities: n, applicationStream: r, emojiClassName: E, textClassName: v, animate: y = !0, hasQuest: I = !1, hideEmoji: b = !1, hideTooltip: T = !1, fullWidth: S = !1 } = e,
         A = 'live-activity-status-web',
         { blockeeExperimentEnabled: N, blockerExperimentEnabled: C } = (0, l.NR)(A);
     (0, u.Z)(null == t ? void 0 : t.id, A);
@@ -41,7 +41,7 @@ function E(e) {
                           (0, i.jsx)(h.Z, {
                               activity: R,
                               stream: r,
-                              tooltip: P && !b ? D : void 0,
+                              tooltip: P && !T ? D : void 0,
                               className: S ? g.fullWidth : void 0
                           }),
                           !P &&
@@ -58,11 +58,11 @@ function E(e) {
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != x.emoji &&
-                              !T &&
+                              !b &&
                               (0, i.jsx)(f.Z, {
                                   emoji: x.emoji,
                                   animate: y,
-                                  hideTooltip: b,
+                                  hideTooltip: T,
                                   className: a()(S ? g.fullWidth : void 0, E)
                               }),
                           null != x.text &&

@@ -90,11 +90,11 @@ function I(e) {
     let { from: t, to: n } = e;
     p = (0, u.aB)(p, t, n);
 }
-function T(e) {
+function b(e) {
     let { multiAccountMobileExperimentEnabled: t } = e;
     r = t;
 }
-function b(e) {
+function T(e) {
     let { userId: t, pushSyncToken: n } = e;
     p = p.map((e) =>
         e.id === t
@@ -183,7 +183,7 @@ let N = new A(l.Z, {
     MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => E(e.userId),
     MULTI_ACCOUNT_MOVE_ACCOUNT: I,
     CURRENT_USER_UPDATE: v,
-    MULTI_ACCOUNT_MOBILE_EXPERIMENT_UPDATE: T,
-    MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: b,
+    MULTI_ACCOUNT_MOBILE_EXPERIMENT_UPDATE: b,
+    MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: T,
     MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: S
 });

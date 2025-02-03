@@ -18,11 +18,11 @@ var r = n(120356),
     E = n(454816);
 function v(e) {
     var t, n, r, v;
-    let { type: y, textValue: I, maxCharacterCount: T, showRemainingCharsAfterCount: b, className: S } = e,
+    let { type: y, textValue: I, maxCharacterCount: b, showRemainingCharsAfterCount: T, className: S } = e,
         A = (0, s.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
         N = (0, c.Z)(),
-        C = null != T ? T : N,
-        R = null !== (v = null != b ? b : T) && void 0 !== v ? v : N / 10,
+        C = null != b ? b : N,
+        R = null !== (v = null != T ? T : b) && void 0 !== v ? v : N / 10,
         O = I.length,
         D = null != y.upsellLongMessages && (null != O ? O : 0) > h.J6R && A,
         x = null != y.upsellLongMessages && !A,

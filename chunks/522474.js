@@ -30,8 +30,8 @@ function E(e, t, n) {
 let v = new d.Z('PopoutWindowStore'),
     y = {},
     I = {},
-    T = {},
     b = {},
+    T = {},
     S = {},
     A = new Set(),
     N = 'app-mount',
@@ -51,7 +51,7 @@ function D(e, t) {
     }
 }
 function x(e) {
-    let t = T[e];
+    let t = b[e];
     null == t ||
         t.closed ||
         (y[e] = {
@@ -63,10 +63,10 @@ function x(e) {
         });
 }
 function L(e) {
-    let t = T[e];
+    let t = b[e];
     a()(null != t, 'Popout window was null during unmount'), t.removeEventListener('focus', C), t.removeEventListener('blur', C), t.removeEventListener('resize', R);
-    let n = b[e];
-    a()(null != n, 'Window root was null while unmounting'), n.unmount(), delete T[e], delete I[e], delete S[e], delete b[e];
+    let n = T[e];
+    a()(null != n, 'Window root was null while unmounting'), n.unmount(), delete b[e], delete I[e], delete S[e], delete T[e];
 }
 function P(e, t, i) {
     let r = e.document,
@@ -84,7 +84,7 @@ function w(e, t) {
     for (let e of document.querySelectorAll('link[rel="stylesheet"]')) P(t, e.href, e.integrity);
 }
 function M(e) {
-    let t = T[e],
+    let t = b[e],
         n = S[e];
     if (null == t) {
         v.warn('Failed to open window', e);
@@ -93,13 +93,13 @@ function M(e) {
     let i = t.document;
     (0, h.uF)(i, C), t.addEventListener('focus', C), t.addEventListener('blur', C), t.addEventListener('resize', R), O ? D(e, t) : w(e, t);
     let r = (0, l.createRoot)(i.getElementById(N));
-    a()(null != r, 'No render target for popout!'), (b[e] = r), r.render(n(e));
+    a()(null != r, 'No render target for popout!'), (T[e] = r), r.render(n(e));
 }
 function k(e) {
     let { key: t, features: n, render: i } = e;
     if (_.isPlatformEmbedded && !p.ZP.supportsFeature(g.eRX.POPOUT_WINDOWS)) throw Error('Popout windows not supported on this native module version!');
     let r = !0 === n.outOfProcessOverlay,
-        a = T[t],
+        a = b[t],
         s = null != a && !a.closed;
     if (s && !r) return _.isPlatformEmbedded ? p.ZP.focus(t) : null != a && a.focus(), !1;
     if (s && r) return v.info('Already has open window, skipping focus'), !1;
@@ -119,13 +119,13 @@ function k(e) {
             });
     }
     let E = window.open(g.Z5c.POPOUT_WINDOW, t, (0, m.Z)(d));
-    (E.windowKey = t), r || null == E || E.focus(), (T[t] = E), (S[t] = i), _.isPlatformEmbedded && (p.ZP.setAlwaysOnTop(t, f), (I[t] = f), p.ZP.isAlwaysOnTop(t).then((e) => (I[t] = e))), A.add(t);
+    (E.windowKey = t), r || null == E || E.focus(), (b[t] = E), (S[t] = i), _.isPlatformEmbedded && (p.ZP.setAlwaysOnTop(t, f), (I[t] = f), p.ZP.isAlwaysOnTop(t).then((e) => (I[t] = e))), A.add(t);
 }
 function U(e) {
     A.has(e) && (M(e), A.delete(e), W.emitChange());
 }
 function G(e) {
-    let t = T[e];
+    let t = b[e];
     null != t &&
         (t.closed || x(e),
         L(e),
@@ -156,12 +156,12 @@ function Z(e) {
 }
 function F(e) {
     let { key: t } = e,
-        n = T[t];
+        n = b[t];
     null == n || n.closed || (x(t), f.default.preventPopoutClose || Z(n));
 }
 function V() {
-    for (let e of Object.keys(T)) {
-        let t = T[e];
+    for (let e of Object.keys(b)) {
+        let t = b[e];
         null != t && Z(t);
     }
 }
@@ -171,23 +171,23 @@ function j(e) {
 }
 function H(e) {
     let { url: t, integrity: n } = e;
-    for (let e of Object.values(T)) null == e || e.closed || P(e, t, n);
+    for (let e of Object.values(b)) null == e || e.closed || P(e, t, n);
 }
 class Y extends (i = u.ZP.PersistedStore) {
     initialize(e) {
         window.addEventListener('message', B), window.addEventListener('beforeunload', V), (y = null != e ? e : {});
     }
     getWindow(e) {
-        return T[e];
+        return b[e];
     }
     getWindowState(e) {
         return y[e];
     }
     getWindowKeys() {
-        return Object.keys(T);
+        return Object.keys(b);
     }
     getWindowOpen(e) {
-        let t = T[e];
+        let t = b[e];
         return null != t && !t.closed;
     }
     getIsAlwaysOnTop(e) {
@@ -195,12 +195,12 @@ class Y extends (i = u.ZP.PersistedStore) {
     }
     getWindowFocused(e) {
         var t, n;
-        let i = T[e];
+        let i = b[e];
         return null !== (n = null == i ? void 0 : null === (t = i.document) || void 0 === t ? void 0 : t.hasFocus()) && void 0 !== n && n;
     }
     getWindowVisible(e) {
         var t;
-        let n = T[e];
+        let n = b[e];
         return (null == n ? void 0 : null === (t = n.document) || void 0 === t ? void 0 : t.visibilityState) === 'visible';
     }
     getState() {

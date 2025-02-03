@@ -34,7 +34,7 @@ function y(e) {
 function I(e, t) {
     (v[e] = t), E.set(e, a()());
 }
-function T(e, t, n) {
+function b(e, t, n) {
     if (t !== n && null != t) {
         if (t === _.wB.SUBMITTED) {
             let t = y(e);
@@ -46,7 +46,7 @@ function T(e, t, n) {
         }
     }
 }
-function b(e) {
+function T(e) {
     let { joinRequest: t } = e;
     k(t);
 }
@@ -90,12 +90,12 @@ function U(e) {
         a = c.default.getCurrentUser();
     if (null == a || r.userId === a.id) return !1;
     let s = null === (t = w(r.joinRequestId)) || void 0 === t ? void 0 : t.applicationStatus;
-    return T(n, r.applicationStatus, s), k(r), !0;
+    return b(n, r.applicationStatus, s), k(r), !0;
 }
 function G(e) {
     let { id: t, guildId: n } = e,
         i = w(t);
-    null != i && (T(n, g, i.applicationStatus), M(t));
+    null != i && (b(n, g, i.applicationStatus), M(t));
 }
 function B(e) {
     let { guildId: t, action: n } = e;
@@ -165,7 +165,7 @@ class z extends (i = s.ZP.Store) {
 }
 m(z, 'displayName', 'GuildJoinRequestStoreV2');
 let q = new z(l.Z, {
-    GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: b,
+    GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: T,
     GUILD_JOIN_REQUESTS_FETCH_SUCCESS: N,
     GUILD_JOIN_REQUESTS_FETCH_START: A,
     GUILD_JOIN_REQUESTS_FETCH_FAILURE: C,

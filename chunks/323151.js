@@ -15,18 +15,18 @@ function m(e, t, n, m, g, E) {
     var v = l(e),
         y = l(t),
         I = v ? _ : o(e),
-        T = y ? _ : o(t);
-    (I = I == f ? p : I), (T = T == f ? p : T);
-    var b = I == p,
-        S = T == p,
-        A = I == T;
+        b = y ? _ : o(t);
+    (I = I == f ? p : I), (b = b == f ? p : b);
+    var T = I == p,
+        S = b == p,
+        A = I == b;
     if (A && u(e)) {
         if (!u(t)) return !1;
-        (v = !0), (b = !1);
+        (v = !0), (T = !1);
     }
-    if (A && !b) return E || (E = new i()), v || c(e) ? r(e, t, n, m, g, E) : a(e, t, I, n, m, g, E);
+    if (A && !T) return E || (E = new i()), v || c(e) ? r(e, t, n, m, g, E) : a(e, t, I, n, m, g, E);
     if (!(n & d)) {
-        var N = b && h.call(e, '__wrapped__'),
+        var N = T && h.call(e, '__wrapped__'),
             C = S && h.call(t, '__wrapped__');
         if (N || C) {
             var R = N ? e.value() : e,

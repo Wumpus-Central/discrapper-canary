@@ -111,14 +111,14 @@ function I(e, t, n) {
         else e.push(encodeURI(t) + '=' + encodeURIComponent(n));
     }
 }
-function T(e) {
+function b(e) {
     let t, n;
     let i = {},
         r = e.split('&');
     for (let e = 0, a = r.length; e < a; ++e) -1 === (n = (t = r[e]).indexOf('=')) ? (i[decodeURIComponent(t)] = '') : (i[decodeURIComponent(t.slice(0, n))] = decodeURIComponent(t.slice(n + 1)));
     return i;
 }
-function b(e) {
+function T(e) {
     let t, n, i, r;
     let a = e.split(/\r?\n/),
         s = {};
@@ -131,7 +131,7 @@ function S(e) {
 function A(e) {
     (this.req = e), (this.xhr = this.req.xhr), (this.text = ('HEAD' !== this.req.method && ('' === this.xhr.responseType || 'text' === this.xhr.responseType)) || void 0 === this.xhr.responseType ? this.xhr.responseText : null), (this.statusText = this.req.xhr.statusText);
     let t = this.xhr.status;
-    1223 === t && (t = 204), this._setStatusProperties(t), (this.headers = b(this.xhr.getAllResponseHeaders())), (this.header = this.headers), (this.header['content-type'] = this.xhr.getResponseHeader('content-type')), this._setHeaderProperties(this.header), null === this.text && e._responseType ? (this.body = this.xhr.response) : (this.body = 'HEAD' === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response));
+    1223 === t && (t = 204), this._setStatusProperties(t), (this.headers = T(this.xhr.getAllResponseHeaders())), (this.header = this.headers), (this.header['content-type'] = this.xhr.getResponseHeader('content-type')), this._setHeaderProperties(this.header), null === this.text && e._responseType ? (this.body = this.xhr.response) : (this.body = 'HEAD' === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response));
 }
 function N(e, t) {
     let n = this;
@@ -159,7 +159,7 @@ function N(e, t) {
         });
 }
 (E.serializeObject = y),
-    (E.parseString = T),
+    (E.parseString = b),
     (E.types = {
         html: 'text/html',
         json: 'application/json',
@@ -173,7 +173,7 @@ function N(e, t) {
         'application/json': l
     }),
     (E.parse = {
-        'application/x-www-form-urlencoded': T,
+        'application/x-www-form-urlencoded': b,
         'application/json': JSON.parse
     }),
     _(A.prototype, h.prototype),

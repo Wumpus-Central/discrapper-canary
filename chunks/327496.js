@@ -22,24 +22,24 @@ function _(e, t) {
 let p = (e) => {
     let t,
         n,
-        { backgroundStyle: a = 'always', children: d, icon: p, name: h, ariaLabel: m, className: g, style: E, to: v, onClick: y, selected: I = !1, ...T } = e,
-        b = (0, o.k6)();
+        { backgroundStyle: a = 'always', children: d, icon: p, name: h, ariaLabel: m, className: g, style: E, to: v, onClick: y, selected: I = !1, ...b } = e,
+        T = (0, o.k6)();
     null == p && null != h && (n = f((t = (0, u.Zg)(h))));
     let S = r.useCallback(
             (e) => {
                 if (null == v);
-                else if ('string' == typeof v) b.push(v);
+                else if ('string' == typeof v) T.push(v);
                 else {
                     let { pathname: e = '', state: t } = v;
-                    b.push(e, t);
+                    T.push(e, t);
                 }
                 null != y && y(e);
             },
-            [b, v, y]
+            [T, v, y]
         ),
         A = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsxs)(l.P3F, {
-        ...T,
+        ...b,
         onClick: S,
         className: s()(g, c.wrapper, { [c.selected]: I }),
         'aria-label': null != m && '' !== m ? m : null != h ? h : '',

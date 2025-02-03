@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(354459),
     y = n(981631),
     I = n(388032),
-    T = n(140369);
-let b = 150;
+    b = n(140369);
+let T = 150;
 function S(e, t) {
     switch (e) {
         case v.fO.ACTIVITY:
@@ -35,13 +35,13 @@ function A(e) {
         u = S(a, t.length);
     return (0, i.jsx)(d.VqE, {
         'aria-label': u,
-        className: T.popoutWrapper,
+        className: b.popoutWrapper,
         children: (0, i.jsxs)(d.Ttm, {
-            className: T.scroller,
+            className: b.scroller,
             children: [
                 (0, i.jsx)(d.X6q, {
                     variant: 'heading-deprecated-12/semibold',
-                    className: T.memberListHeader,
+                    className: b.memberListHeader,
                     children: u
                 }),
                 (0, i.jsx)('div', {
@@ -53,8 +53,8 @@ function A(e) {
                                 guildId: null != r ? r : void 0,
                                 channelId: o,
                                 nick: E.ZP.getNickname(r, o, e),
-                                className: s()(T.memberListItem, { [T.popoutDisabled]: n }),
-                                textClassName: T.memberListItemText,
+                                className: s()(b.memberListItem, { [b.popoutDisabled]: n }),
+                                textClassName: b.memberListItemText,
                                 disablePopout: n,
                                 onContextMenu: (t) => (n ? null : l(t, e))
                             },
@@ -75,7 +75,7 @@ function N(e) {
                       (0, i.jsx)(
                           'div',
                           {
-                              className: T.viewersTooltipItem,
+                              className: b.viewersTooltipItem,
                               children: E.ZP.getName(n, r, e)
                           },
                           e.id
@@ -86,12 +86,12 @@ function N(e) {
         text: c,
         'aria-label': u,
         children: (0, i.jsxs)('div', {
-            className: s()(T.viewers, o),
+            className: s()(b.viewers, o),
             children: [
                 (0, i.jsx)(d.tEF, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: T.viewersIcon
+                    className: b.viewersIcon
                 }),
                 (0, i.jsx)('span', {
                     'aria-hidden': 'true',
@@ -105,7 +105,7 @@ let C = [];
 function R(e) {
     let { channelId: t, guildId: a, participant: o, className: p, compact: E = !1, disableInteraction: I = !1, maxVisibleUsers: S = 3 } = e,
         [R, O] = r.useState(!1),
-        D = r.useRef(new c.sW(b, () => O(!1))),
+        D = r.useRef(new c.sW(T, () => O(!1))),
         x = (0, u.Wu)(
             [h.Z, m.default],
             () => {
@@ -164,7 +164,7 @@ function R(e) {
                     src: e.getAvatarURL(a, 24),
                     'aria-label': e.username,
                     size: d.EFr.SIZE_24,
-                    className: T.viewer
+                    className: b.viewer
                 },
                 e.id
             )
@@ -175,7 +175,7 @@ function R(e) {
             (M[M.length - 1] = (0, i.jsxs)(
                 'div',
                 {
-                    className: T.overflow,
+                    className: b.overflow,
                     children: ['+', x.length - S + 1]
                 },
                 'overflow'
@@ -199,7 +199,7 @@ function R(e) {
                     position: 'top',
                     children: () =>
                         (0, i.jsx)('div', {
-                            className: s()(T.viewers, p),
+                            className: s()(b.viewers, p),
                             children: M
                         })
                 })

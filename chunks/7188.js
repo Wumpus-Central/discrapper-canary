@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => b });
 var i = n(200651),
     r = n(192379),
     a = n(442837),
@@ -37,12 +37,12 @@ function I(e) {
         ]
     });
 }
-function T(e) {
+function b(e) {
     let { hideBadges: t = !1, stream: n, ...o } = e,
         f = (0, a.e7)([d.default], () => _.ZP.isPremium(d.default.getCurrentUser(), g.p9.TIER_1)),
         v = (0, a.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.channelId)),
-        T = r.useMemo(() => (null != n ? [n] : []), [n]),
-        b = r.useCallback(() => {
+        b = r.useMemo(() => (null != n ? [n] : []), [n]),
+        T = r.useCallback(() => {
             null != v && (0, u.Z)(v.getGuildId(), v.id, m.jXE.STREAM_SETTINGS);
         }, [v]);
     if (null == n || null == v) return null;
@@ -57,10 +57,10 @@ function T(e) {
                     children: (0, i.jsx)(l.Z, {
                         channel: v,
                         currentUser: d.default.getCurrentUser(),
-                        activeStreams: T,
+                        activeStreams: b,
                         onClose: t,
                         showReportOption: !0,
-                        handleGoLive: b
+                        handleGoLive: T
                     })
                 });
             },

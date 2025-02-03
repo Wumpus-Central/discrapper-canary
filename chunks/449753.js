@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var i = n(846519),
     r = n(570140),
     a = n(872810),
@@ -26,11 +26,11 @@ function I(e, t) {
     let r = (0, _.V9)(i);
     return r !== y && ((y = r), (0, a.rn)(i, { noFocus: !0 }), !0);
 }
-function T(e, t) {
+function b(e, t) {
     let n = null != t ? t : u.Z.getPreferredRegion();
     null != n && n !== u.Z.getRegion(d.Z.getHostname(d.Z.getActiveStreamKey())) && (0, a.dV)(e, n);
 }
-let b = {
+let T = {
     init() {
         let e = (e, t) => {
             d.Z.getAllActiveStreamKeys().includes(e) ||
@@ -101,12 +101,12 @@ let b = {
             r.Z.subscribe('CALL_UPDATE', (e) => {
                 let { channelId: t, region: n } = e,
                     i = s.Z.getCurrentUserActiveStream();
-                (null == i ? void 0 : i.channelId) === t && T((0, _.V9)(i), n);
+                (null == i ? void 0 : i.channelId) === t && b((0, _.V9)(i), n);
             }),
             r.Z.subscribe('CHANNEL_UPDATES', (e) => {
                 let { channels: t } = e,
                     n = s.Z.getCurrentUserActiveStream();
-                if (null != n) for (let e of t) n.channelId === e.id && T((0, _.V9)(n), e.rtcRegion);
+                if (null != n) for (let e of t) n.channelId === e.id && b((0, _.V9)(n), e.rtcRegion);
             });
     }
 };

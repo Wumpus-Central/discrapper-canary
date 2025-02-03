@@ -21,22 +21,22 @@ let d = (e) => {
                 })
             ),
             [v, y] = r.useState(''),
-            [I, T] = r.useState('');
+            [I, b] = r.useState('');
         r.useEffect(() => {
             var e;
             y(null !== (e = null == m ? void 0 : m.value) && void 0 !== e ? e : '');
         }, [m]);
-        let b = r.useCallback(
+        let T = r.useCallback(
             (e) => {
                 let t = null != p ? new RegExp(p) : null;
                 null != t && null == t.exec(e)
-                    ? (T(l.intl.string(l.t['24xrGR'])),
+                    ? (b(l.intl.string(l.t['24xrGR'])),
                       h({
                           value: e,
                           isValid: !1
                       }))
                     : null != e &&
-                      (T(''),
+                      (b(''),
                       y(e),
                       h({
                           value: e,
@@ -65,7 +65,7 @@ let d = (e) => {
                     }),
                 (0, i.jsx)(a.Kx8, {
                     maxLength: _,
-                    onChange: b,
+                    onChange: T,
                     value: v,
                     error: I,
                     rows: f,

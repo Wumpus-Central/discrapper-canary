@@ -17,8 +17,8 @@ var i = n(147018),
     v = n(740362),
     y = n(974971),
     I = n(622281),
-    T = n(323979),
-    b = n(803938),
+    b = n(323979),
+    T = n(803938),
     S = n(838957),
     A = n(276321),
     N = n(537443).f,
@@ -65,7 +65,7 @@ var i = n(147018),
         return S(V, e) || 'ArrayBuffer' === (t = y(e)) || 'SharedArrayBuffer' === t;
     },
     et = function (e, t) {
-        return q(e) && !T(t) && t in e && _(+t) && t >= 0;
+        return q(e) && !b(t) && t in e && _(+t) && t >= 0;
     },
     en = function (e, t) {
         return et(e, (t = E(t))) ? d(2, e[t]) : B(e, t);
@@ -95,7 +95,7 @@ s
               E = _,
               v = E && E.prototype,
               y = {},
-              T = function (e, t) {
+              b = function (e, t) {
                   var n = M(e);
                   return n.view[u](t * s + n.byteOffset, !0);
               },
@@ -106,7 +106,7 @@ s
               D = function (e, t) {
                   G(e, t, {
                       get: function () {
-                          return T(this, t);
+                          return b(this, t);
                       },
                       set: function (e) {
                           return S(this, t, e);
@@ -165,7 +165,7 @@ s
                         D(e, u++);
                 })),
                 A && A(E, W),
-                (v = E.prototype = b(K))),
+                (v = E.prototype = T(K))),
               v.constructor !== E && f(v, 'constructor', E),
               (U(v).TypedArrayConstructor = E),
               Y && f(v, Y, l);

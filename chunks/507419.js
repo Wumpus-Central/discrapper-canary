@@ -4,8 +4,8 @@ var l = t(200651),
     i = t(481060),
     s = t(22382),
     r = t(747071),
-    o = t(586826),
-    u = t(174727),
+    u = t(586826),
+    o = t(174727),
     d = t(990792),
     c = t(388032),
     f = t(194316);
@@ -13,11 +13,11 @@ let m = a.memo(function (e) {
     let { sound: n, volume: t, disabled: m } = e,
         [h, g] = a.useState(!1),
         p = a.useRef(null),
-        { file: x, audio: v, loadAudioFromFile: y } = (0, o.p)(),
+        { file: x, audio: v, loadAudioFromFile: y } = (0, u.p)(),
         b = a.useMemo(() => (0, s.Z)(n.soundId), [n]);
     return (
         a.useEffect(() => {
-            null == p.current && (p.current = (0, u.XG)(b, n.name).then(y));
+            null == p.current && (p.current = (0, o.XG)(b, n.name).then(y));
         }, [b, y, n.name]),
         (0, l.jsxs)('div', {
             className: f.previewContainer,

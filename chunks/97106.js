@@ -28,8 +28,8 @@ let s = function (e, t, n, s, o, l) {
     }
     if (m && !g) {
         var I = e.constructor,
-            T = t.constructor;
-        I != T && 'constructor' in e && 'constructor' in t && !('function' == typeof I && I instanceof I && 'function' == typeof T && T instanceof T) && (m = !1);
+            b = t.constructor;
+        I != b && 'constructor' in e && 'constructor' in t && !('function' == typeof I && I instanceof I && 'function' == typeof b && b instanceof b) && (m = !1);
     }
     return l.delete(e), l.delete(t), m;
 };

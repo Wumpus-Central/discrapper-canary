@@ -9,30 +9,30 @@ var i = n(200651),
 function c(e, t, n) {
     let a = (0, u.G6)(e);
     return r.forwardRef(function (c, d) {
-        let { children: f, className: _, dir: p = 'ltr', orientation: h = 'vertical', fade: m = !1, customTheme: g = !1, paddingFix: E = !0, style: v, gap: y, experimental_useStack: I, ...T } = c,
-            { scrollerRef: b, getScrollerState: S } = (0, u.Ke)(),
-            A = (0, u.t2)(b, h);
+        let { children: f, className: _, dir: p = 'ltr', orientation: h = 'vertical', fade: m = !1, customTheme: g = !1, paddingFix: E = !0, style: v, gap: y, experimental_useStack: I, ...b } = c,
+            { scrollerRef: T, getScrollerState: S } = (0, u.Ke)(),
+            A = (0, u.t2)(T, h);
         r.useImperativeHandle(
             d,
             () => ({
-                getScrollerNode: () => b.current,
+                getScrollerNode: () => T.current,
                 getScrollerState: S,
-                ...(0, u.Ue)(b, S, A, h)
+                ...(0, u.Ue)(T, S, A, h)
             }),
-            [b, S, h, A]
+            [T, S, h, A]
         );
         let N = (0, u.tT)({
             paddingFix: E,
             orientation: h,
             dir: p,
             className: _,
-            scrollerRef: b,
+            scrollerRef: T,
             specs: a
         });
         return I
             ? (0, i.jsx)(l.K, {
                   gap: y,
-                  ref: b,
+                  ref: T,
                   className: s()(_, {
                       [e]: !0,
                       [t]: m,
@@ -40,14 +40,14 @@ function c(e, t, n) {
                   }),
                   style: (0, u.uT)(v, h),
                   dir: p,
-                  ...T,
+                  ...b,
                   children: (0, i.jsxs)(o.Jc, {
-                      containerRef: b,
+                      containerRef: T,
                       children: [f, N]
                   })
               })
             : (0, i.jsx)('div', {
-                  ref: b,
+                  ref: T,
                   className: s()(_, {
                       [e]: !0,
                       [t]: m,
@@ -55,9 +55,9 @@ function c(e, t, n) {
                   }),
                   style: (0, u.uT)(v, h),
                   dir: p,
-                  ...T,
+                  ...b,
                   children: (0, i.jsxs)(o.Jc, {
-                      containerRef: b,
+                      containerRef: T,
                       children: [f, N]
                   })
               });

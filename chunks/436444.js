@@ -38,17 +38,17 @@ let v = {
         [p.Eu4.TIER_3]: 1
     },
     y = function (e) {
-        let { children: t, confettiTriggerRef: n, guild: r, isProgressBarAnimationComplete: y, setConfettiCount: I, setShouldFireConfetti: T, tier: b, tierMarkerAnimationPosition: S } = e,
+        let { children: t, confettiTriggerRef: n, guild: r, isProgressBarAnimationComplete: y, setConfettiCount: I, setShouldFireConfetti: b, tier: T, tierMarkerAnimationPosition: S } = e,
             { analyticsLocations: A } = (0, l.ZP)(),
             N = (0, u.Z)(),
-            C = p.oCV[b] - r.premiumSubscriberCount,
-            R = b <= S || y,
-            O = R && b <= r.premiumTier,
-            D = R && b < r.premiumTier,
-            x = R && b === r.premiumTier,
+            C = p.oCV[T] - r.premiumSubscriberCount,
+            R = T <= S || y,
+            O = R && T <= r.premiumTier,
+            D = R && T < r.premiumTier,
+            x = R && T === r.premiumTier,
             { scaleFactor: L } = (0, o.q_F)({
                 from: { scaleFactor: 0 },
-                to: { scaleFactor: S >= b || (y && S + 1 === b) || (y && -1 === S && b === p.Eu4.NONE) ? 1 : 0 },
+                to: { scaleFactor: S >= T || (y && S + 1 === T) || (y && -1 === S && T === p.Eu4.NONE) ? 1 : 0 },
                 config: {
                     tension: 360,
                     friction: 12
@@ -60,9 +60,9 @@ let v = {
                         className: g.progressBarMarkerIndicator,
                         style: { transform: L.to((e) => 'translate(-50%, -50%) scale('.concat(e, ')')) }
                     }),
-                    b !== p.Eu4.NONE &&
+                    T !== p.Eu4.NONE &&
                         (0, i.jsx)(c.Z, {
-                            tier: b,
+                            tier: T,
                             className: g.boostedTierIcon
                         })
                 ]
@@ -75,7 +75,7 @@ let v = {
                         page: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                         section: p.jXE.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
                         object: p.qAy.SUBSCRIBE_TO_TIER_BUTTON,
-                        objectType: E(b)
+                        objectType: E(T)
                     },
                     numberOfBoostsToAdd: C,
                     guild: r
@@ -86,12 +86,12 @@ let v = {
             U = M ? { onClick: w } : {};
         return (0, i.jsx)(o.ua7, {
             text: O
-                ? m.intl.formatToPlainString(m.t['1o48kp'], { tierName: (0, d.nW)(b, { useLevels: !1 }) })
+                ? m.intl.formatToPlainString(m.t['1o48kp'], { tierName: (0, d.nW)(T, { useLevels: !1 }) })
                 : m.intl.formatToPlainString(m.t.r6NN6e, {
                       numBoostsRequired: C,
-                      tierName: (0, d.nW)(b, { useLevels: !1 })
+                      tierName: (0, d.nW)(T, { useLevels: !1 })
                   }),
-            shouldShow: b !== p.Eu4.NONE,
+            shouldShow: T !== p.Eu4.NONE,
             children: (e) =>
                 (0, i.jsxs)(k, {
                     className: a()(g.progressBarMarker, {
@@ -100,16 +100,16 @@ let v = {
                         [g.progressBarMarkerLower]: D,
                         [g.progressBarMarkerCurrent]: x
                     }),
-                    style: { left: ''.concat(100 * v[b], '%') },
+                    style: { left: ''.concat(100 * v[T], '%') },
                     ...e,
                     ...U,
                     children: [
                         !O && (0, i.jsx)('div', { className: g.boostedTierIconBackground }),
-                        O && b === p.Eu4.TIER_3
+                        O && T === p.Eu4.TIER_3
                             ? (0, i.jsx)(_.m, {
                                   confettiTriggerRef: n,
                                   setConfettiCount: I,
-                                  setShouldFireConfetti: T,
+                                  setShouldFireConfetti: b,
                                   children: P
                               })
                             : P,
@@ -118,7 +118,7 @@ let v = {
                             variant: 'text-md/normal',
                             children: [
                                 O &&
-                                    b !== p.Eu4.NONE &&
+                                    T !== p.Eu4.NONE &&
                                     (0, i.jsx)(o.dz2, {
                                         size: 'md',
                                         color: 'currentColor',

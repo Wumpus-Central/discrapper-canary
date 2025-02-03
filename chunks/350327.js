@@ -2,9 +2,9 @@ n.d(t, {
     CM: () => y,
     Cf: () => E,
     ID: () => v,
-    Xz: () => b,
+    Xz: () => T,
     Z: () => p,
-    c_: () => T,
+    c_: () => b,
     f4: () => S,
     g_: () => g,
     ho: () => m,
@@ -117,14 +117,14 @@ function I(e) {
         themeColors: e
     });
 }
-function T(e) {
+function b(e) {
     r.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR',
         avatar: e
     }),
         _(f.QP.ANIMATED_AVATAR);
 }
-function b(e) {
+function T(e) {
     r.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION',
         avatarDecoration: e

@@ -18,7 +18,7 @@ var i,
     v = n(158776),
     y = n(797258),
     I = n(981631);
-function T(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function T(e, t, n) {
         e
     );
 }
-let b = !1,
+let T = !1,
     S = I.Skl.ONLINE,
     A = I.Skl.UNKNOWN,
     N = 0,
@@ -67,7 +67,7 @@ function M() {
 function k() {
     var e;
     if (((N = null !== (e = m.Z.getIdleSince()) && void 0 !== e ? e : 0), (R = m.Z.isAFK()), O)) S = A;
-    else if (b) S = I.Skl.INVISIBLE;
+    else if (T) S = I.Skl.INVISIBLE;
     else {
         let e = f.co.getSetting();
         S = e !== I.Skl.UNKNOWN ? e : I.Skl.ONLINE;
@@ -94,10 +94,10 @@ function k() {
     }
 }
 function U(e) {
-    return (b = e.invisible), k();
+    return (T = e.invisible), k();
 }
 function G() {
-    return (b = !1), k();
+    return (T = !1), k();
 }
 function B() {
     (O = !1), (A = I.Skl.UNKNOWN), k(), v.Z.setCurrentUserOnConnectionOpen(S, x);
@@ -137,7 +137,7 @@ class F extends (i = l.ZP.Store) {
         return this.getActivities(t).find(e);
     }
 }
-T(F, 'displayName', 'SelfPresenceStore');
+b(F, 'displayName', 'SelfPresenceStore');
 let V = new F(u.Z, {
     START_SESSION: k,
     CONNECTION_OPEN: Z,

@@ -1,8 +1,8 @@
 n.d(t, {
     B6: () => S,
-    ZP: () => b,
+    ZP: () => T,
     qc: () => A,
-    sp: () => T
+    sp: () => b
 }),
     n(47120),
     n(757143),
@@ -42,7 +42,7 @@ function I(e) {
     let E = l.default.getCurrentUser();
     return f.ZP.canUseEmojisEverywhere(E) || m || (u !== p.Hz.STATUS && t.managed) ? ((0, a.Fv)(t, null != r ? r : void 0) ? ((0, i.Ol)(t.guildId) ? p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE : p.Z5.ROLE_SUBSCRIPTION_LOCKED) : !t.animated || f.ZP.canUseAnimatedEmojis(E) || (0, a.yH)(t) ? null : p.Z5.PREMIUM_LOCKED) : p.Z5.PREMIUM_LOCKED;
 }
-function T(e, t) {
+function b(e, t) {
     let n = 0,
         i = 0,
         a = 0,
@@ -63,7 +63,7 @@ function T(e, t) {
         }
     );
 }
-let b = {
+let T = {
     sanitizeEmojiName(e) {
         for (e = e.replace(p.sW, '').slice(0, p.Yc); e.length < 2; ) e += '_';
         return e;

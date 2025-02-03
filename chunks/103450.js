@@ -18,8 +18,8 @@ var i = n(192379),
     v = n(275920),
     y = n(906732),
     I = n(835473),
-    T = n(592745),
-    b = n(592125),
+    b = n(592745),
+    T = n(592125),
     S = n(757266),
     A = n(650774),
     N = n(430824),
@@ -52,13 +52,13 @@ function Z(e) {
             activity: F
         }),
         ee = (0, a.e7)(
-            [C.Z, T.Z, w.Z, S.Z],
+            [C.Z, b.Z, w.Z, S.Z],
             () =>
                 Q ||
                 (null != q &&
                     (0, k.t)({
                         LibraryApplicationStore: C.Z,
-                        LaunchableGameStore: T.Z,
+                        LaunchableGameStore: b.Z,
                         DispatchApplicationStore: w.Z,
                         ConnectedAppsStore: S.Z,
                         applicationId: q
@@ -79,7 +79,7 @@ function Z(e) {
             application: ei
         }),
         ea = (0, c.GK)(),
-        es = (0, a.e7)([b.Z, N.Z, A.Z, O.Z, D.Z, L.Z, R.Z], () =>
+        es = (0, a.e7)([T.Z, N.Z, A.Z, O.Z, D.Z, L.Z, R.Z], () =>
             null != V
                 ? er === m.Fw.CAN_JOIN
                 : (0, _.Z)({
@@ -89,7 +89,7 @@ function Z(e) {
                       channelId: $,
                       currentUser: X,
                       isEmbedded: Q,
-                      ChannelStore: b.Z,
+                      ChannelStore: T.Z,
                       GuildStore: N.Z,
                       GuildMemberCountStore: A.Z,
                       RelationshipStore: O.Z,
@@ -117,7 +117,7 @@ function Z(e) {
             if (null == ep || null == q) return;
             let r = (0, g.Z)(t, U.xjy.EMBEDDED),
                 a = D.Z.getVoiceChannelId(),
-                s = b.Z.getChannel(a);
+                s = T.Z.getChannel(a);
             await o.Z.join({
                 userId: e.id,
                 sessionId: ep,

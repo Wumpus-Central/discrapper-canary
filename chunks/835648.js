@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(388032),
     y = n(843282);
 let I = [8, 8, 8, 8],
-    T = 40;
-function b(e) {
+    b = 40;
+function T(e) {
     let { icon: t, isSelected: n, onClick: r, listItemProps: a, ...o } = e;
     return (0, i.jsx)(u.P3F, {
         ...a,
@@ -36,7 +36,7 @@ function S(e, t, n, r, a, s) {
     switch (e.categoryInfo.type) {
         case m.bg.FAVORITES:
             return (0, i.jsx)(
-                b,
+                T,
                 {
                     ...r,
                     icon: u.r7p,
@@ -48,7 +48,7 @@ function S(e, t, n, r, a, s) {
             );
         case m.bg.RECENTLY_HEARD:
             return (0, i.jsx)(
-                b,
+                T,
                 {
                     ...r,
                     icon: u.T39,
@@ -60,7 +60,7 @@ function S(e, t, n, r, a, s) {
             );
         case m.bg.FREQUENTLY_USED:
             return (0, i.jsx)(
-                b,
+                T,
                 {
                     ...r,
                     icon: u.IeX,
@@ -88,7 +88,7 @@ function S(e, t, n, r, a, s) {
             );
         case m.bg.DEFAULTS:
             return (0, i.jsx)(
-                b,
+                T,
                 {
                     ...r,
                     icon: u.gw7,
@@ -170,6 +170,6 @@ function R(e) {
         listPadding: s,
         renderCategoryListItem: v,
         rowCount: n.length,
-        categoryHeight: T
+        categoryHeight: b
     });
 }

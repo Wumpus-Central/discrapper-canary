@@ -19,11 +19,11 @@ var i = n(200651),
 function y(e, t) {
     let { disabled: n, type: a } = e,
         [y, I] = r.useState(!1),
-        T = (0, l.e7)([_.Z], () => {
+        b = (0, l.e7)([_.Z], () => {
             var e, t;
             return y && Object.values(null !== (t = null === (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
         }),
-        [b, S, A] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
+        [T, S, A] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
         N = r.useRef(0),
         C = r.useCallback(() => {
             I(!0),
@@ -42,9 +42,9 @@ function y(e, t) {
         { Component: O, events: D, play: x } = (0, u.V)(),
         L = (0, d.Q3)('ChannelGIFPickerButton');
     if (n) return null;
-    let P = b === g.X1.GIF && S === a;
+    let P = T === g.X1.GIF && S === a;
     return (0, i.jsx)(c.ua7, {
-        text: T ? E.intl.string(E.t.mE2e8P) : null,
+        text: b ? E.intl.string(E.t.mE2e8P) : null,
         forceOpen: !0,
         children: (e) =>
             (0, i.jsx)('div', {

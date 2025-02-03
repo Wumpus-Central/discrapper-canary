@@ -1,5 +1,5 @@
 n.d(t, {
-    Dp: () => b,
+    Dp: () => T,
     Hh: () => S,
     ZP: () => A,
     hq: () => I
@@ -42,7 +42,7 @@ function I() {
         ]
     });
 }
-function T(e) {
+function b(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
         r = (0, p.V2)({ location: 'SoundmojiBanner' }),
         a = (0, l.e7)([d.default], () => _.ZP.canUseSoundboardEverywhere(d.default.getCurrentUser())),
@@ -81,12 +81,12 @@ function T(e) {
               ]
           });
 }
-function b(e) {
+function T(e) {
     let { sound: t } = e;
     return (0, i.jsxs)('div', {
         className: s()(v.infoContainer, v.infoTooltip),
         children: [
-            (0, i.jsx)(T, { sound: t }),
+            (0, i.jsx)(b, { sound: t }),
             (0, i.jsxs)('div', {
                 className: v.infoSoundContainer,
                 children: [

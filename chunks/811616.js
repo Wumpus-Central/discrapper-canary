@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => b });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -19,8 +19,8 @@ var r = n(120356),
     v = n(474936),
     y = n(388032),
     I = n(589242);
-function T(e) {
-    let { premiumSubscription: t, planId: n, selectPlan: r, selected: s, priceOptions: T, shouldShowUpdatedPaymentModal: b, isEligibleForDiscount: S, discountAmountOff: A, isEligibleForTrial: N } = e,
+function b(e) {
+    let { premiumSubscription: t, planId: n, selectPlan: r, selected: s, priceOptions: b, shouldShowUpdatedPaymentModal: T, isEligibleForDiscount: S, discountAmountOff: A, isEligibleForTrial: N } = e,
         C = (0, l.e7)([f.default], () => f.default.locale),
         R = (0, l.e7)([_.Z], () => _.Z.get(n)),
         { isGift: O, giftRecipient: D } = (0, d.wD)(),
@@ -29,9 +29,9 @@ function T(e) {
     let L = null != t && t.planId === n,
         P = L || (n === v.Xh.PREMIUM_MONTH_TIER_2 && null != t && [v.Xh.PREMIUM_YEAR_TIER_0, v.Xh.PREMIUM_YEAR_TIER_1].includes(t.planId)),
         w = v.nH[n],
-        M = (0, m.aS)(n, !1, O, T),
-        k = (0, m.Ap)(T.paymentSourceId),
-        U = null != w && !b,
+        M = (0, m.aS)(n, !1, O, b),
+        k = (0, m.Ap)(b.paymentSourceId),
+        U = null != w && !T,
         G = (0, E.Ng)(),
         B = R.interval === v.rV.YEAR ? y.t.ECT4Aw : y.t.v9QeOD,
         Z = () =>
@@ -60,7 +60,7 @@ function T(e) {
                     (0, i.jsxs)('div', {
                         className: a()(I.planOptionInterval, {
                             [I.optionSelected]: s || x,
-                            [I.updatedOptionSelected]: b && (s || x)
+                            [I.updatedOptionSelected]: T && (s || x)
                         }),
                         children: [(0, m.L7)(R.interval, O, k, R.intervalCount, x, (0, m.Rd)(R.id)), x && F()]
                     }),
@@ -134,7 +134,7 @@ function T(e) {
                             !x && F()
                         ]
                     }),
-                    b
+                    T
                         ? (0, i.jsx)('div', {
                               className: a()({ [I.optionPriceSelected]: s }),
                               children: y.intl.format(y.t.hXcaLS, { price: j() })
@@ -145,7 +145,7 @@ function T(e) {
                           })
                 ]
             }),
-            b &&
+            T &&
                 (0, i.jsx)('div', {
                     className: I.planOptionSubtextContainer,
                     children: (0, i.jsx)(c.Text, {

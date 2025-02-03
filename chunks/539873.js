@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(401460),
     y = n(441319),
     I = n(981631),
-    T = n(526761),
-    b = n(388032),
+    b = n(526761),
+    T = n(388032),
     S = n(337910),
     A = n(201032);
 function N(e) {
@@ -33,7 +33,7 @@ function N(e) {
             }
         ),
         x = r.useRef(null);
-    (0, m.Z)(x, T.h1.CUSTOM_APP_ICONS);
+    (0, m.Z)(x, b.h1.CUSTOM_APP_ICONS);
     let L = (0, d.Dt)(),
         P = (0, l.arW)({
             orientation: 'horizontal',
@@ -82,7 +82,7 @@ function N(e) {
                                                 (0, i.jsx)(l.X6q, {
                                                     className: S.titleText,
                                                     variant: w ? 'text-lg/medium' : 'text-md/medium',
-                                                    children: b.intl.string(b.t.NThqT0)
+                                                    children: T.intl.string(T.t.NThqT0)
                                                 }),
                                                 !D && (0, i.jsx)(h.Z, { className: S.premiumIcon })
                                             ]
@@ -100,7 +100,7 @@ function N(e) {
                                                       }),
                                                       (0, i.jsx)(l.X6q, {
                                                           variant: 'text-sm/normal',
-                                                          children: b.intl.format(b.t.x2dQxM, {
+                                                          children: T.intl.format(T.t.x2dQxM, {
                                                               onClick: () => {
                                                                   (0, _.$)();
                                                               }
@@ -111,7 +111,7 @@ function N(e) {
                                         : (0, i.jsx)(l.X6q, {
                                               variant: 'text-sm/normal',
                                               className: s()({ [A.subtext]: w }),
-                                              children: b.intl.string(b.t.IgENJi)
+                                              children: T.intl.string(T.t.IgENJi)
                                           })
                                 ]
                             }),

@@ -18,8 +18,8 @@ let m = 40,
     v = 45,
     y = 1,
     I = 4,
-    T = 6,
-    b = 24,
+    b = 6,
+    T = 24,
     S = 2,
     A = 4,
     N = [0, 0, 0, 0, 0],
@@ -47,7 +47,7 @@ function O(e, t) {
 }
 function D(e) {
     let t;
-    return Math.floor(((t = e <= g ? m : e >= v ? E : ((Math.min(e, v) - g) / (v - g)) * (E - m) + m) + I) / T) * T - I;
+    return Math.floor(((t = e <= g ? m : e >= v ? E : ((Math.min(e, v) - g) / (v - g)) * (E - m) + m) + I) / b) * b - I;
 }
 function x(e) {
     if (null == e) return;
@@ -63,7 +63,7 @@ function P(e) {
 }
 function w(e) {
     let { context: t, devicePixelRatio: n, canvasHeight: i, segmentValue: r, segmentIndex: a, constrainMin: s } = e,
-        o = s ? (b - S) * r + S : b * r;
+        o = s ? (T - S) * r + S : T * r;
     0 !== o && L(t, a * (2 * y + I) * n, (i / 2 - o / 2) * n, o * n, y * n);
 }
 function M(e, t) {
@@ -118,7 +118,7 @@ function B(e) {
         v = r.useMemo(() => D(o), [o]),
         y = r.useRef(),
         I = M(n, E),
-        T = r.useRef(l),
+        b = r.useRef(l),
         S = r.useRef(d),
         N = r.useRef(null),
         R = window.devicePixelRatio,
@@ -168,7 +168,7 @@ function B(e) {
                     a = y.current;
                 if (null == i || null == r || null == a) return;
                 let s = !1;
-                (T.current !== l || S.current !== d) && ((T.current = l), (S.current = d), (N.current = n)), null != N.current && n > N.current + C && (N.current = null);
+                (b.current !== l || S.current !== d) && ((b.current = l), (S.current = d), (N.current = n)), null != N.current && n > N.current + C && (N.current = null);
                 let o = i.height / R;
                 r.clearRect(0, 0, i.width, i.height), r.beginPath();
                 let [u, c] = G(O, x, n, N.current);
@@ -223,7 +223,7 @@ function B(e) {
         className: s()(h.canvas, t),
         style: { width: v },
         ref: g,
-        height: (b + 2 * A) * window.devicePixelRatio,
+        height: (T + 2 * A) * window.devicePixelRatio,
         width: (null != E ? E : 0) * window.devicePixelRatio
     });
 }

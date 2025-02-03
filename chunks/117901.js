@@ -20,11 +20,11 @@ e.exports = function (e) {
         v = l(this),
         y = arguments.length,
         I = y > 1 ? arguments[1] : void 0,
-        T = void 0 !== I;
-    T && (I = i(I, y > 2 ? arguments[2] : void 0));
-    var b = f(E),
+        b = void 0 !== I;
+    b && (I = i(I, y > 2 ? arguments[2] : void 0));
+    var T = f(E),
         S = 0;
-    if (b && !(this === _ && o(b))) for (m = (h = d(E, b)).next, n = v ? new this() : []; !(p = r(m, h)).done; S++) (g = T ? s(h, I, [p.value, S], !0) : p.value), c(n, S, g);
-    else for (t = u(E), n = v ? new this(t) : _(t); t > S; S++) (g = T ? I(E[S], S) : E[S]), c(n, S, g);
+    if (T && !(this === _ && o(T))) for (m = (h = d(E, T)).next, n = v ? new this() : []; !(p = r(m, h)).done; S++) (g = b ? s(h, I, [p.value, S], !0) : p.value), c(n, S, g);
+    else for (t = u(E), n = v ? new this(t) : _(t); t > S; S++) (g = b ? I(E[S], S) : E[S]), c(n, S, g);
     return (n.length = S), n;
 };

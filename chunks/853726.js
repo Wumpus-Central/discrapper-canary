@@ -13,8 +13,8 @@ var r = n(442837),
     _ = n(591156);
 function p(e) {
     var t;
-    let { user: n, displayProfile: p, guild: h, pendingAvatar: m, pendingNickname: g, pendingGlobalName: E, pendingBio: v, pendingPronouns: y, isTryItOutFlow: I, hideBioSection: T } = e,
-        b = (0, r.e7)([u.ZP], () => (null == h ? null : u.ZP.getMember(h.id, n.id))),
+    let { user: n, displayProfile: p, guild: h, pendingAvatar: m, pendingNickname: g, pendingGlobalName: E, pendingBio: v, pendingPronouns: y, isTryItOutFlow: I, hideBioSection: b } = e,
+        T = (0, r.e7)([u.ZP], () => (null == h ? null : u.ZP.getMember(h.id, n.id))),
         S = (0, r.e7)([c.Z], () => c.Z.hidePersonalInformation),
         A = null == p ? void 0 : null === (t = p.getPreviewBio(v)) || void 0 === t ? void 0 : t.value,
         N = null != y ? y : null == p ? void 0 : p.pronouns,
@@ -22,10 +22,10 @@ function p(e) {
             pendingNickname: g,
             pendingGlobalName: E,
             user: n,
-            guildMember: b
+            guildMember: T
         }),
         R = () => {
-            if (null != b && null !== m && (null != b.avatar || null != m))
+            if (null != T && null !== m && (null != T.avatar || null != m))
                 return (0, i.jsx)(l.Z, {
                     user: n,
                     nickname: C
@@ -47,7 +47,7 @@ function p(e) {
                     profileType: f.y0.BITE_SIZE
                 })
             }),
-            !T &&
+            !b &&
                 null != A &&
                 '' !== A &&
                 (0, i.jsx)(o.Z, {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(390547), n(653041), n(47120);
+n.d(t, { Z: () => b }), n(390547), n(653041), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(392711),
@@ -38,7 +38,7 @@ function I(e) {
         return r.length < y && r.push(...s().sampleSize(null != n ? n : [], y - r.length)), r;
     }, [a, null == e ? void 0 : e.guild_id, n, i, t]);
 }
-let T = r.memo(function (e) {
+let b = r.memo(function (e) {
     let { channelId: t, onSelectSoundmoji: n } = e,
         a = (0, o.e7)([c.Z], () => !c.Z.isFetching() && !c.Z.hasFetchedAllSounds(), []),
         s = (0, o.e7)([f.Z], () => f.Z.getChannel(t)),

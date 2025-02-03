@@ -18,8 +18,8 @@ var i = n(512722),
     v = n(857192),
     y = n(626135),
     I = n(12647),
-    T = n(70956),
-    b = n(358085),
+    b = n(70956),
+    T = n(358085),
     S = n(960048),
     A = n(138859),
     N = n(14639),
@@ -86,9 +86,9 @@ let Z = 4,
     F = 1001,
     V = 'Stream end encountered',
     j = 4004,
-    H = 30 * T.Z.Millis.SECOND,
-    Y = 3 * T.Z.Millis.MINUTE,
-    W = 1 * T.Z.Millis.MINUTE;
+    H = 30 * b.Z.Millis.SECOND,
+    Y = 3 * b.Z.Millis.MINUTE,
+    W = 1 * b.Z.Millis.MINUTE;
 function K(e, t, n) {
     let i = 0;
     e.dataReady((e) => {
@@ -285,7 +285,7 @@ class Q extends x.Z {
         }
     }
     _tryDetectInvalidIOSToken(e, t, n) {
-        (0, b.isIOS)() &&
+        (0, T.isIOS)() &&
             null != this.token &&
             e === F &&
             t === V &&

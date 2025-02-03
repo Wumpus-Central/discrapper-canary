@@ -23,15 +23,15 @@ var i = n(192379),
     E = n(827498),
     A = n(346683),
     I = n(981631),
-    g = n(388032);
-let _ = {
+    _ = n(388032);
+let g = {
         ...x.Z.RULES.commandMention,
         parse: (e, t, n) => ({ content: x.Z.RULES.commandMention.parse(e, t, n).content })
     },
     P = a().pick(
         (0, f.Z)([
             x.Z.RULES,
-            { commandMention: _ },
+            { commandMention: g },
             (0, v.Z)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1
@@ -41,12 +41,12 @@ let _ = {
     ),
     j = s.w4(P);
 function y(e) {
-    let { context: t, application: n, location: l, sectionName: a, commandName: s, autoDismissOnClick: v = !0, launchingComponentId: x, submitting: f = !1, fetchesApplication: _ = !0 } = e,
+    let { context: t, application: n, location: l, sectionName: a, commandName: s, autoDismissOnClick: v = !0, launchingComponentId: x, submitting: f = !1, fetchesApplication: g = !0 } = e,
         P = (0, c.O)(),
         j = (0, d.Qv)({
             context: t,
             applicationId: n.id,
-            fetchesApplication: _
+            fetchesApplication: g
         }),
         y = (0, A.Q)(j),
         T = (0, o.e7)([C.Z], () => C.Z.entrypoint()),
@@ -75,12 +75,12 @@ function y(e) {
             commandOrigin: h.bB.APPLICATION_LAUNCHER,
             sectionName: a,
             source: T,
-            fetchesApplication: _
+            fetchesApplication: g
         }),
         L = r.Ttl.BRAND,
-        R = null != s ? s : g.intl.string(g.t.zKX8Nj);
+        R = null != s ? s : _.intl.string(_.t.zKX8Nj);
     return (
-        y === d.JS.JOIN ? ((L = r.Ttl.GREEN), (R = g.intl.string(g.t.d9PsMj))) : y !== d.JS.LEAVE || f || ((L = r.Ttl.RED), (R = g.intl.string(g.t['Hi1/aW']))),
+        y === d.JS.JOIN ? ((L = r.Ttl.GREEN), (R = _.intl.string(_.t.d9PsMj))) : y !== d.JS.LEAVE || f || ((L = r.Ttl.RED), (R = _.intl.string(_.t['Hi1/aW']))),
         {
             onActivityItemSelected: b,
             activityAction: y,

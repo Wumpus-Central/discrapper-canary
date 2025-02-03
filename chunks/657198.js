@@ -54,7 +54,7 @@ let v = (e) => {
         v = (0, o.vt)(),
         y = (0, o.UE)(),
         I = (0, o._7)(),
-        { optionType: T, errored: b } = (0, l.cj)(
+        { optionType: b, errored: T } = (0, l.cj)(
             [c.Z],
             () => {
                 var e, t, i;
@@ -70,14 +70,14 @@ let v = (e) => {
         N = null != A && h.LC.isText(A) && A.text.endsWith('\n'),
         C = s()(g.inlineElement, g.optionPill, {
             [g.selectedPill]: y && v,
-            [g.erroredPill]: (!y || !v) && b
+            [g.erroredPill]: (!y || !v) && T
         }),
         R = r.useCallback(() => {
             h.bN.isVoid(I, a) || p.Q.selectCommandOption(I, a.optionName, !0);
         }, [I, a]);
     return (
         (t =
-            T === u.jw.ATTACHMENT
+            b === u.jw.ATTACHMENT
                 ? (null == S ? void 0 : S.filename) != null
                     ? (0, i.jsxs)('span', {
                           className: s()(g.optionPillValue, g.attachmentFilename),

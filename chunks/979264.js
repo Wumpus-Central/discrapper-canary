@@ -66,12 +66,12 @@ let g = r.memo(function (e) {
             E = (0, o.e7)([c.default], () => c.default.getUser(f), [f]),
             v = null !== (t = null == E ? void 0 : E.primaryGuild) && void 0 !== t ? t : a,
             [y, I] = (0, d.L_)(null !== (n = null == v ? void 0 : v.identityGuildId) && void 0 !== n ? n : null),
-            T = r.useCallback(() => {
+            b = r.useCallback(() => {
                 I();
             }, [I]),
-            b = (0, o.e7)([u.Z], () => u.Z.theme);
+            T = (0, o.e7)([u.Z], () => u.Z.theme);
         return (0, i.jsx)(l.ze6, {
-            theme: b,
+            theme: T,
             children: (0, i.jsx)(l.yRy, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
@@ -97,7 +97,7 @@ let g = r.memo(function (e) {
                         },
                         onMouseEnter: () => {
                             var t;
-                            T(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
+                            b(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
                         },
                         children: h
                     })
@@ -108,13 +108,13 @@ let g = r.memo(function (e) {
         var t;
         let { primaryGuild: n, userId: r, contextGuildId: a, className: l, containerClassName: u, textVariant: d, textColor: _, badgeSize: p, disableGuildProfile: h = !1, inline: g = !0, profileViewedAnalytics: y } = e,
             I = (0, o.e7)([c.default], () => c.default.getUser(r), [r]),
-            T = null !== (t = null == I ? void 0 : I.primaryGuild) && void 0 !== t ? t : n,
-            { tag: b, badge: S, guildId: A } = (0, f.Pb)(T);
+            b = null !== (t = null == I ? void 0 : I.primaryGuild) && void 0 !== t ? t : n,
+            { tag: T, badge: S, guildId: A } = (0, f.Pb)(b);
         return (0, f.p0)(r, a) && null != A
             ? h
                 ? (0, i.jsx)(E, {
                       guildId: A,
-                      clanTag: b,
+                      clanTag: T,
                       clanBadge: S,
                       className: s()(m.noTooltip, l),
                       textVariant: d,
@@ -123,13 +123,13 @@ let g = r.memo(function (e) {
                       inline: g
                   })
                 : (0, i.jsx)(v, {
-                      primaryGuild: T,
+                      primaryGuild: b,
                       userId: r,
                       profileViewedAnalytics: y,
                       className: u,
                       children: (0, i.jsx)(E, {
                           guildId: A,
-                          clanTag: b,
+                          clanTag: T,
                           clanBadge: S,
                           className: l,
                           textVariant: d,

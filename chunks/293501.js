@@ -14,11 +14,11 @@ var l = t(192379),
     i = t(304809),
     s = t(586826),
     r = t(943351);
-let o = new Worker(new URL('/assets/' + t.u('14315'), t.b)),
-    u = (0, i.N)();
+let u = new Worker(new URL('/assets/' + t.u('14315'), t.b)),
+    o = (0, i.N)();
 async function d(e) {
     let n = await e.arrayBuffer();
-    return (await u.decodeAudioData(n)).getChannelData(0);
+    return (await o.decodeAudioData(n)).getChannelData(0);
 }
 function c(e) {
     let [n, t] = l.useState(null),
@@ -34,7 +34,7 @@ function c(e) {
 }
 let f = { ...r.nl };
 function m(e, n, t) {
-    let [i, u] = l.useState(null),
+    let [i, o] = l.useState(null),
         [d, c] = l.useState(null),
         [m, h] = l.useState(1),
         { setMaxVolume: g } = (0, s.p)(),
@@ -49,11 +49,11 @@ function m(e, n, t) {
                                 let {
                                     data: { waveform: t, id: l, normalizedVolumeMultipler: a }
                                 } = e;
-                                i === l && (n(t), h(a)), null == o || o.removeEventListener('message', s);
+                                i === l && (n(t), h(a)), null == u || u.removeEventListener('message', s);
                             };
-                        null == o || o.addEventListener('message', s),
-                            null == o ||
-                                o.postMessage({
+                        null == u || u.addEventListener('message', s),
+                            null == u ||
+                                u.postMessage({
                                     id: i,
                                     options: t,
                                     config: f,
@@ -68,7 +68,7 @@ function m(e, n, t) {
         l.useEffect(() => {
             if (null == e || null == n) return;
             let l = (0, r.V3)(e, t);
-            i !== l && (u(l), p(e, n));
+            i !== l && (o(l), p(e, n));
         }, [e, p, n, t, i]),
         l.useEffect(() => {
             g(m);

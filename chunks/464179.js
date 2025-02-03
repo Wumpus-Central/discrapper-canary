@@ -33,8 +33,8 @@ let m = 'US',
         label: e.name
     })).filter((e) => 'KP' !== e.value && 'SY' !== e.value),
     I = (0, c.hQ)(),
-    T = (0, c.hQ)(),
     b = (0, c.hQ)(),
+    T = (0, c.hQ)(),
     S = (0, c.hQ)(),
     A = (0, c.hQ)(),
     N = (0, c.hQ)(),
@@ -59,7 +59,7 @@ let D = {
     }),
     L = (e) => ({
         name: 'country',
-        id: T,
+        id: b,
         title: () => _.intl.string(_.t.eDdrAA),
         autoComplete: 'country',
         getClassNameForLayout: (e) => {
@@ -89,7 +89,7 @@ let D = {
     }),
     P = (e) => ({
         name: 'line1',
-        id: b,
+        id: T,
         title: () => _.intl.string(_.t.x0beVV),
         autoComplete: 'address-line1',
         placeholder: () => _.intl.string(_.t['ynII//']),

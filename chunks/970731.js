@@ -37,12 +37,12 @@ function f(e) {
         asset: v,
         markAsDismissed: y,
         caretPosition: I = 'caretTopCenter',
-        buttonLayout: T = 0
+        buttonLayout: b = 0
     } = e;
     (0, o.Z)(() => {
         null == E || E();
     });
-    let b = null != _,
+    let T = null != _,
         S = (e) => {
             p(e), null == y || y(l.L.PRIMARY);
         },
@@ -66,17 +66,17 @@ function f(e) {
                 variant: 'text-sm/normal',
                 children: c
             }),
-            null != f || b
+            null != f || T
                 ? (0, i.jsxs)('div', {
                       className: a()(u.upsellButtonsContainer, {
-                          [u.upsellButtonsAdjacent]: 0 === T,
-                          [u.upsellButtonsStacked]: 1 === T
+                          [u.upsellButtonsAdjacent]: 0 === b,
+                          [u.upsellButtonsStacked]: 1 === b
                       }),
                       children: [
-                          b
+                          T
                               ? (0, i.jsx)(s.zxk, {
                                     ...g,
-                                    fullWidth: 1 === T,
+                                    fullWidth: 1 === b,
                                     onClick: A,
                                     children: _
                                 })
@@ -85,7 +85,7 @@ function f(e) {
                               ? null
                               : (0, i.jsx)(s.zxk, {
                                     ...m,
-                                    fullWidth: !b || 1 === T,
+                                    fullWidth: !T || 1 === b,
                                     onClick: S,
                                     children: f
                                 })

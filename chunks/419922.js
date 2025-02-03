@@ -22,8 +22,8 @@ var i = n(200651),
     v = n(378233),
     y = n(388032),
     I = n(739031);
-let T = (e) => e.preventDefault(),
-    b = 0.7,
+let b = (e) => e.preventDefault(),
+    T = 0.7,
     S = 33,
     A = 1.55,
     N = {
@@ -83,7 +83,7 @@ let D = (e) => {
         let { shouldAnimate: t, size: a, sticker: s, fileUri: o, assetData: u, isFocused: c, className: d, maskAsset: f, positionRef: _, withLoadingIndicator: h, onError: m } = e,
             g = r.useRef(null),
             E = r.useRef(null),
-            [T, b] = r.useState(!0),
+            [b, T] = r.useState(!0),
             [S, A] = r.useState(!1),
             N = r.useRef(!1);
         N.current = t && c;
@@ -104,10 +104,10 @@ let D = (e) => {
                             assetUrl: C,
                             assetData: u,
                             onInitialDraw: () => {
-                                t || b(!1);
+                                t || T(!1);
                             },
                             onError: () => {
-                                t || (b(!1), A(!0), null == m || m());
+                                t || (T(!1), A(!0), null == m || m());
                             }
                         })),
                         N.current && E.current.setState(!0));
@@ -132,7 +132,7 @@ let D = (e) => {
                   ref: _,
                   children: (0, i.jsx)(D, {
                       hasError: S,
-                      isLoading: T,
+                      isLoading: b,
                       maskAsset: f,
                       size: a,
                       withLoadingIndicator: h,
@@ -181,7 +181,7 @@ let D = (e) => {
             : (0, i.jsx)(d.$, {
                   ref: S,
                   onChange: h,
-                  threshold: b,
+                  threshold: T,
                   children: (0, i.jsx)('div', {
                       className: s()(l, I.__invalid_pngImageWrapper),
                       ref: c,
@@ -199,7 +199,7 @@ let D = (e) => {
                                   draggable: !1,
                                   onError: x,
                                   onLoad: C,
-                                  onContextMenu: T,
+                                  onContextMenu: b,
                                   ref: A
                               }),
                               n.id
@@ -287,12 +287,12 @@ let D = (e) => {
             y = (0, g.t$)(t) && !n,
             I = r.useRef(null);
         if (null == c) return null;
-        let T = c.format_type === E.u3.LOTTIE ? x : L;
+        let b = c.format_type === E.u3.LOTTIE ? x : L;
         return (0, i.jsxs)(
             r.Fragment,
             {
                 children: [
-                    (0, i.jsx)(T, {
+                    (0, i.jsx)(b, {
                         shouldAnimate: y,
                         isFocused: v,
                         size: u,

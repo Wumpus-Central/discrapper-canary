@@ -124,10 +124,10 @@ function y(e, t) {
 function I() {
     return B;
 }
-function T(e, t) {
+function b(e, t) {
     t && (v('Patches'), (e.u = []), (e.s = []), (e.v = t));
 }
-function b(e) {
+function T(e) {
     S(e), e.p.forEach(N), (e.p = null);
 }
 function S(e) {
@@ -150,7 +150,7 @@ function C(e, t) {
     t._ = t.p.length;
     var n = t.p[0],
         r = void 0 !== e && e !== n;
-    return t.h.O || v('ES5').S(t, e, r), r ? (n[W].P && (b(t), i(4)), a(e) && ((e = R(t, e)), t.l || D(t, e)), t.u && v('Patches').M(n[W].t, e, t.u, t.s)) : (e = R(t, n, [])), b(t), t.u && t.v(t.u, t.s), e !== H ? e : void 0;
+    return t.h.O || v('ES5').S(t, e, r), r ? (n[W].P && (T(t), i(4)), a(e) && ((e = R(t, e)), t.l || D(t, e)), t.u && v('Patches').M(n[W].t, e, t.u, t.s)) : (e = R(t, n, [])), T(t), t.u && t.v(t.u, t.s), e !== H ? e : void 0;
 }
 function R(e, t, n) {
     if (E(t)) return t;
@@ -409,18 +409,18 @@ var ee = new ((function () {
                         try {
                             (s = n(c)), (d = !1);
                         } finally {
-                            d ? b(u) : S(u);
+                            d ? T(u) : S(u);
                         }
                         return 'undefined' != typeof Promise && s instanceof Promise
                             ? s.then(
                                   function (e) {
-                                      return T(u, r), C(e, u);
+                                      return b(u, r), C(e, u);
                                   },
                                   function (e) {
-                                      throw (b(u), e);
+                                      throw (T(u), e);
                                   }
                               )
-                            : (T(u, r), C(s, u));
+                            : (b(u, r), C(s, u));
                     }
                     if (!e || 'object' != typeof e) {
                         if ((void 0 === (s = n(e)) && (s = e), s === H && (s = void 0), t.D && m(s, !0), r)) {
@@ -464,7 +464,7 @@ var ee = new ((function () {
             }),
             (t.finishDraft = function (e, t) {
                 var n = (e && e[W]).A;
-                return T(n, t), C(void 0, n);
+                return b(n, t), C(void 0, n);
             }),
             (t.setAutoFreeze = function (e) {
                 this.D = e;

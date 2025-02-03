@@ -3,7 +3,7 @@ n.r(t),
         ASSISTANT_WUMPUS_VOICE_USER: () => v,
         default: () => eN,
         mergeUser: () => A,
-        transformUser: () => b,
+        transformUser: () => T,
         users: () => g
     }),
     n(47120),
@@ -52,7 +52,7 @@ function I(e, t) {
     let n = g[e];
     return !(null == n || (0, p.dM)(n.primaryGuild, t.primary_guild)) && (null == n.primaryGuild || null != t.primary_guild) && ((n.primaryGuild = (0, p.lt)(t.primary_guild)), (g[n.id] = n), E++, !0);
 }
-function T(e, t) {
+function b(e, t) {
     switch (!0) {
         case null == e.primaryGuild && null == t.primary_guild:
             break;
@@ -65,7 +65,7 @@ function T(e, t) {
     }
     return t;
 }
-function b(e) {
+function T(e) {
     let t = e.mfa_enabled;
     null != t && ((e.mfaEnabled = t), delete e.mfa_enabled);
     let n = (0, o.G)(e.premium_type);
@@ -96,8 +96,8 @@ function A(e) {
     if (null == i) void 0 !== (t = (i = new l.Z(e)).premiumType) && r && (i.premiumType = C((0, o.QI)(i), i.premiumType));
     else if (n) {
         var a;
-        let n = b(e);
-        void 0 !== (t = null !== (a = n.premium_type) && void 0 !== a ? a : n.premiumType) && r && (0, o.VR)(n) && (n = N(n)), (n = T(i, n)), (i = i.merge(n));
+        let n = T(e);
+        void 0 !== (t = null !== (a = n.premium_type) && void 0 !== a ? a : n.premiumType) && r && (0, o.VR)(n) && (n = N(n)), (n = b(i, n)), (i = i.merge(n));
     }
     (0, o.jX)((0, o.QI)(i), t, i.premiumType);
     let s = g[e.id] !== i;
@@ -441,12 +441,12 @@ function eI(e) {
         { users: n } = t;
     return n.reduce((e, t) => A(t) || e, !1);
 }
-function eT(e) {
+function eb(e) {
     let { members: t } = e,
         n = d.default.getId();
     return t.reduce((e, t) => (t.member.user.id === n ? e : A(t.member.user) || e), !1);
 }
-function eb(e) {
+function eT(e) {
     let { messageItems: t } = e;
     t.forEach((e) => {
         null != e.message && R(e.message, !0);
@@ -566,8 +566,8 @@ class eA extends f.Z {
             FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: ey,
             FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eI,
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: ev,
-            MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eT,
-            LOAD_GRAVITY_HYDRATED: eb,
+            MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eb,
+            LOAD_GRAVITY_HYDRATED: eT,
             EMBEDDED_ACTIVITY_UPDATE_V2: eS
         });
     }

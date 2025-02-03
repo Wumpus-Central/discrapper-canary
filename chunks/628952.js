@@ -18,13 +18,13 @@ var r = n(120356),
 let E = (e) => {
     let { skuId: t, isSelected: n, price: r, onSelect: E, shouldDisplayHeader: v = !1, className: y } = e,
         { product: I } = (0, _.T)(t),
-        { giftRecipient: T, giftRecipientError: b } = (0, u.wD)(),
+        { giftRecipient: b, giftRecipientError: T } = (0, u.wD)(),
         S = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         A = (0, p.k)(I);
     if (null == I) return null;
     let [N] = I.items,
         C = () => (N.type === s.Z.AVATAR_DECORATION ? m.intl.string(m.t['7v0T9P']) : N.type === s.Z.PROFILE_EFFECT ? m.intl.string(m.t.wR5wOj) : null),
-        R = null != T && T.id !== (null == S ? void 0 : S.id),
+        R = null != b && b.id !== (null == S ? void 0 : S.id),
         O = () => {
             null != t && null != E && E(t);
         };
@@ -43,12 +43,12 @@ let E = (e) => {
                             (0, i.jsx)(
                                 l.yRy,
                                 {
-                                    preload: () => (0, d.Z)(T.id, T.getAvatarURL(null, 80)),
+                                    preload: () => (0, d.Z)(b.id, b.getAvatarURL(null, 80)),
                                     renderPopout: (e) =>
                                         (0, i.jsx)(c.Z, {
                                             ...e,
-                                            user: T,
-                                            pendingAvatar: T.getAvatarURL(null, (0, l.pxk)(l.EFr.SIZE_80)),
+                                            user: b,
+                                            pendingAvatar: b.getAvatarURL(null, (0, l.pxk)(l.EFr.SIZE_80)),
                                             pendingAvatarDecoration: N.type === s.Z.AVATAR_DECORATION ? N : null,
                                             pendingProfileEffectId: N.type === s.Z.PROFILE_EFFECT ? N.id : null,
                                             canUsePremiumCustomization: !0,
@@ -67,7 +67,7 @@ let E = (e) => {
                                             })
                                         })
                                 },
-                                T.id
+                                b.id
                             )
                     ]
                 }),
@@ -75,8 +75,8 @@ let E = (e) => {
                 tag: 'div',
                 onClick: O,
                 className: a()(g.previewContainer, {
-                    [g.previewContainerSelected]: n && null == b,
-                    [g.previewContainerError]: n && null != b
+                    [g.previewContainerSelected]: n && null == T,
+                    [g.previewContainerError]: n && null != T
                 }),
                 children: [
                     (0, i.jsxs)('div', {
@@ -107,13 +107,13 @@ let E = (e) => {
                         ]
                     }),
                     n &&
-                        null != b &&
+                        null != T &&
                         (0, i.jsx)('div', {
                             className: g.recipientError,
                             children: (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'status-danger-background',
-                                children: b
+                                children: T
                             })
                         })
                 ]

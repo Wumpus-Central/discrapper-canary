@@ -23,10 +23,10 @@ let g = 40,
                 return null != e ? e.find((e) => e.application.id === E.id) : null;
             }),
             I = null !== (n = E.getIconURL(g)) && void 0 !== n ? n : m,
-            T = (0, l.Z)({ application: E }),
-            b = r.useRef(!1);
+            b = (0, l.Z)({ application: E }),
+            T = r.useRef(!1);
         r.useEffect(() => {
-            b.current || (o.Z.fetch(), (b.current = !0));
+            T.current || (o.Z.fetch(), (T.current = !0));
         }, []);
         let S = null != y ? _.default.extractTimestamp(y.id) : void 0;
         return (0, i.jsxs)('div', {
@@ -61,17 +61,17 @@ let g = 40,
                                         variant: 'text-md/medium',
                                         children: v
                                     }),
-                                    T.length > 0
+                                    b.length > 0
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
                                                   (0, i.jsx)(s.Text, {
                                                       color: 'text-normal',
                                                       variant: 'text-md/normal',
-                                                      children: (0, d.Z)(T.length)
+                                                      children: (0, d.Z)(b.length)
                                                   }),
                                                   (0, i.jsx)(c.Z, {
                                                       className: h.guildStack,
-                                                      guilds: T,
+                                                      guilds: b,
                                                       maxGuilds: 6
                                                   })
                                               ]

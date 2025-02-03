@@ -111,12 +111,12 @@ function t(e) {
         };
     v.contains.push(y);
     let I = [...i, ...a, ...r],
-        T = {
+        b = {
             relevance: 0,
             match: t.concat('\\b(?!', I.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
             className: 'variable'
         },
-        b = {
+        T = {
             scope: 'comment',
             variants: [
                 {
@@ -140,7 +140,7 @@ function t(e) {
             'variable.language': a,
             literal: r
         },
-        contains: [b, m, y, f, E, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, h, c, g, u, l, d, p, _, T]
+        contains: [T, m, y, f, E, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, h, c, g, u, l, d, p, _, b]
     };
 }
 e.exports = t;

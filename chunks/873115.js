@@ -7,7 +7,7 @@ n.d(t, {
     f6: () => m,
     i0: () => I,
     ib: () => p,
-    og: () => T
+    og: () => b
 }),
     n(411104),
     n(47120);
@@ -176,6 +176,6 @@ function I() {
     let e = a.Z.getLastURL();
     null == e ? m() : (r.Z.dispatch({ type: 'BRAINTREE_TOKENIZE_PAYPAL_START' }), window.open(e));
 }
-function T() {
+function b() {
     g();
 }

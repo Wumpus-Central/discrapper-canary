@@ -1,6 +1,6 @@
 n.d(t, {
     A_: () => E,
-    Ok: () => T,
+    Ok: () => b,
     U4: () => v,
     Ye: () => h.Z,
     ZJ: () => I,
@@ -48,9 +48,9 @@ function I(e, t) {
         E = _(h),
         v = p.Z.isMuted(e.id),
         y = (0, f.sK)(p.Z.getMuteConfig(e.id)),
-        { can_send_message: I, ...T } = r,
-        b = {
-            ...T,
+        { can_send_message: I, ...b } = r,
+        T = {
+            ...b,
             channel_id: e.id,
             guild_id: a,
             parent_id: s,
@@ -65,9 +65,9 @@ function I(e, t) {
             old_thread_muted_until: y,
             new_thread_muted_until: null != t.mute_config ? (0, f.sK)(t.mute_config) : y
         };
-    c.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, b);
+    c.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, T);
 }
-let T = (e) => {
+let b = (e) => {
     var t, n;
     let i = (0, a.e7)([l.ZP], () => l.ZP.lastMessageId(e.id)),
         s = null != i ? _.default.extractTimestamp(i) : null,

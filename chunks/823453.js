@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(597952),
     y = n(252618),
     I = n(80006),
-    T = n(587061),
-    b = n(392358),
+    b = n(587061),
+    T = n(392358),
     S = n(981631);
 n(702955);
 let A = new Set([S.Z5c.LOGIN, S.Z5c.REGISTER]);
@@ -33,8 +33,8 @@ function N(e) {
         x = (0, c.e7)([m.Z], () => m.Z.confettiMode),
         L = (0, l.TH)(),
         P = r.useMemo(() => A.has(L.pathname), [L.pathname]);
-    (0, T.Z)(window, P);
-    let w = (0, b.Z)(window, __OVERLAY__ || n),
+    (0, b.Z)(window, P);
+    let w = (0, T.Z)(window, __OVERLAY__ || n),
         M = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
         k = (0, f.bWb)().enabled,
         U = (0, p.Q3)('AppHelmet'),

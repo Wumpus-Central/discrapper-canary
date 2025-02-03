@@ -1,8 +1,8 @@
 s.d(t, { default: () => x }), s(47120);
 var n = s(200651),
     r = s(192379),
-    i = s(990547),
-    o = s(442837),
+    o = s(990547),
+    i = s(442837),
     a = s(481060),
     l = s(213609),
     d = s(594174),
@@ -20,27 +20,27 @@ let g = {
 function x(e) {
     let { transitionState: t, onClose: s } = e,
         [x, C] = r.useState(0),
-        { currentUser: b, multiAccountUsers: k } = (0, o.cj)([d.default, c.Z], () => ({
+        { currentUser: b, multiAccountUsers: R } = (0, i.cj)([d.default, c.Z], () => ({
             currentUser: d.default.getCurrentUser(),
             multiAccountUsers: c.Z.getUsers()
         })),
-        [R, N] = r.useState(!1),
-        [w, A] = r.useState(f.lds),
-        [v, T] = r.useState(null);
+        [k, N] = r.useState(!1),
+        [A, v] = r.useState(f.lds),
+        [w, j] = r.useState(null);
     r.useEffect(() => {
-        if (R)
-            T(
+        if (k)
+            j(
                 (0, n.jsx)(a.Wn, {
                     messageType: a.QYI.ERROR,
                     className: _.infoMessage,
                     children: p.intl.format(p.t.HAuRSE, { maxNumAccounts: m.$H })
                 })
             ),
-                A(f.lds);
-        else if (null != w) {
-            let e = d.default.getUser(w);
+                v(f.lds);
+        else if (null != A) {
+            let e = d.default.getUser(A);
             null != e &&
-                T(
+                j(
                     (0, n.jsx)(a.Wn, {
                         messageType: a.QYI.POSITIVE,
                         className: _.infoMessage,
@@ -49,18 +49,18 @@ function x(e) {
                 ),
                 N(!1);
         }
-    }, [w, R]),
+    }, [A, k]),
         r.useEffect(() => {
-            k.length < m.$H && N(!1);
-        }, [k]),
+            R.length < m.$H && N(!1);
+        }, [R]),
         (0, l.Z)({
-            type: i.ImpressionTypes.MODAL,
-            name: 0 === x ? i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING : i.ImpressionNames.USER_LOGIN
+            type: o.ImpressionTypes.MODAL,
+            name: 0 === x ? o.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING : o.ImpressionNames.USER_LOGIN
         });
-    let j = null;
+    let I = null;
     return (
         0 === x
-            ? (j = (0, n.jsxs)(n.Fragment, {
+            ? (I = (0, n.jsxs)(n.Fragment, {
                   children: [
                       (0, n.jsx)(a.xBx, {
                           separator: !1,
@@ -83,7 +83,7 @@ function x(e) {
                       }),
                       (0, n.jsxs)(a.hzk, {
                           children: [
-                              v,
+                              w,
                               (0, n.jsx)(u.Z, {
                                   actionText: p.intl.string(p.t.Wf421N),
                                   onAction: (e, t) => {
@@ -95,7 +95,7 @@ function x(e) {
                                               s();
                                               break;
                                           case u.W.REMOVED:
-                                              t === (null == b ? void 0 : b.id) && s(), A(t);
+                                              t === (null == b ? void 0 : b.id) && s(), v(t);
                                       }
                                   }
                               }),
@@ -105,7 +105,7 @@ function x(e) {
                                       look: a.zxk.Looks.LINK,
                                       color: a.zxk.Colors.PRIMARY,
                                       onClick: () => {
-                                          if (k.length >= m.$H) {
+                                          if (R.length >= m.$H) {
                                               N(!0);
                                               return;
                                           }
@@ -123,7 +123,7 @@ function x(e) {
                   ]
               }))
             : 1 === x &&
-              (j = (0, n.jsx)(h.Z, {
+              (I = (0, n.jsx)(h.Z, {
                   onClose: () => {
                       C(0);
                   }
@@ -136,7 +136,7 @@ function x(e) {
             children: (0, n.jsx)(a.qBt, {
                 step: x,
                 steps: [0, 1],
-                children: j
+                children: I
             })
         })
     );

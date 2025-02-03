@@ -30,10 +30,10 @@ function v(e, t, n) {
 }
 let y = 300,
     I = 2000,
-    T = (e) => 'AudioContextSettingsMigrated:'.concat(e),
-    b = (e) => (e === E.Yn.STREAM ? a.h.STREAM : a.h.USER);
+    b = (e) => 'AudioContextSettingsMigrated:'.concat(e),
+    T = (e) => (e === E.Yn.STREAM ? a.h.STREAM : a.h.USER);
 function S(e, t, n) {
-    return e[t].volume !== b(n) || e[t].muted || e[t].soundboardMuted || delete e[t], e;
+    return e[t].volume !== T(n) || e[t].muted || e[t].soundboardMuted || delete e[t], e;
 }
 function A(e) {
     let t = p.default.entries(e),
@@ -53,11 +53,11 @@ function A(e) {
 function N(e) {
     return s.JY.create({
         muted: !1,
-        volume: b(e)
+        volume: T(e)
     });
 }
 function C() {
-    o.K.get(T(f.default.getId())) ||
+    o.K.get(b(f.default.getId())) ||
         g.hW.updateAsync(
             'audioContextSettings',
             (e) => {
@@ -71,7 +71,7 @@ function C() {
                     for (let [e, t] of Object.entries(i.localMutes))
                         o[e] = {
                             muted: t,
-                            volume: b(n),
+                            volume: T(n),
                             modifiedAt: s,
                             soundboardMuted: !1
                         };
@@ -88,7 +88,7 @@ function C() {
                         null == a[n] && ((t = !0), (a[n] = i));
                     }
                 }
-                return o.K.set(T(f.default.getId()), !0), t;
+                return o.K.set(b(f.default.getId()), !0), t;
             },
             g.fy.AUTOMATED
         );

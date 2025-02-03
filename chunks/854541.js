@@ -24,8 +24,8 @@ var i = n(200651),
     v = n(981631),
     y = n(388032),
     I = n(379100);
-let T = 7,
-    b = () => Promise.resolve();
+let b = 7,
+    T = () => Promise.resolve();
 function S(e) {
     return null == e ? null : 'string' == typeof e ? ((0, u.FX)(e) ? (0, u._i)(e) : null) : e;
 }
@@ -107,7 +107,7 @@ class C extends r.PureComponent {
     }
 }
 function R(e) {
-    let { value: t, eagerUpdate: n = !1, onChange: a, onClose: o, suggestedColors: l, middle: f, footer: m, showEyeDropper: v, wrapperComponentType: b, className: A } = e,
+    let { value: t, eagerUpdate: n = !1, onChange: a, onClose: o, suggestedColors: l, middle: f, footer: m, showEyeDropper: v, wrapperComponentType: T, className: A } = e,
         N = (0, h.Z)(),
         C = S(t),
         R = null != C ? C : 0,
@@ -204,7 +204,7 @@ function R(e) {
                             className: I.customColorPickerInput,
                             value: x.input,
                             onChange: P,
-                            maxLength: T
+                            maxLength: b
                         })
                     ]
                 }),
@@ -228,7 +228,7 @@ function R(e) {
                 m
             ]
         }),
-        G = null != b ? b : d.V;
+        G = null != T ? T : d.V;
     return (0, i.jsx)(G, {
         'aria-label': y.intl.string(y.t.WTqQ5e),
         className: s()(I.customColorPicker, A),
@@ -259,8 +259,8 @@ function D(e) {
         E = (0, l.ZP)({
             id: 'color-picker',
             isEnabled: !0,
-            scrollToStart: b,
-            scrollToEnd: b
+            scrollToStart: T,
+            scrollToEnd: T
         });
     return (0, i.jsx)(o.bG, {
         navigator: E,

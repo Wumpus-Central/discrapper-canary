@@ -14,8 +14,8 @@ var i = n(476508),
             f = 7 === e,
             _ = 5 === e || d;
         return function (p, h, m, g) {
-            for (var E, v, y = s(p), I = a(y), T = o(I), b = i(h, m), S = 0, A = g || l, N = t ? A(p, T) : n || f ? A(p, 0) : void 0; T > S; S++)
-                if ((_ || S in I) && ((v = b((E = I[S]), S, y)), e)) {
+            for (var E, v, y = s(p), I = a(y), b = o(I), T = i(h, m), S = 0, A = g || l, N = t ? A(p, b) : n || f ? A(p, 0) : void 0; b > S; S++)
+                if ((_ || S in I) && ((v = T((E = I[S]), S, y)), e)) {
                     if (t) N[S] = v;
                     else if (v)
                         switch (e) {

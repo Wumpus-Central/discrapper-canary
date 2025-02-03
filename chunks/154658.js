@@ -30,9 +30,9 @@ function g(e) {
     let { guildId: g, leaderboard: E, className: v } = e,
         y = null == E ? void 0 : null === (t = E.users) || void 0 === t ? void 0 : t[0],
         { sort_by_statistic_id: I } = E.guild_settings,
-        T = null !== (s = null == y ? void 0 : null === (r = y.statistics) || void 0 === r ? void 0 : null === (n = r[I]) || void 0 === n ? void 0 : n.value) && void 0 !== s ? s : 0,
-        b = p.intl.formatToPlainString(p.t.yhdo8v, {
-            value: T,
+        b = null !== (s = null == y ? void 0 : null === (r = y.statistics) || void 0 === r ? void 0 : null === (n = r[I]) || void 0 === n ? void 0 : n.value) && void 0 !== s ? s : 0,
+        T = p.intl.formatToPlainString(p.t.yhdo8v, {
+            value: b,
             statisticName: (0, f.C)(I)
         }),
         S = (0, _.j)(E),
@@ -71,7 +71,7 @@ function g(e) {
                         className: h.statsText,
                         variant: 'text-xxs/medium',
                         color: 'text-secondary',
-                        children: b
+                        children: T
                     })
                 ]
             }),

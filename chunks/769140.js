@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(449605),
     y = n(102172),
     I = n(359110),
-    T = n(769654),
-    b = n(922482),
+    b = n(769654),
+    T = n(922482),
     S = n(592125),
     A = n(430824),
     N = n(496675),
@@ -160,10 +160,10 @@ function z(e) {
         eg = () => {
             if (Q !== F.y0.FULL_SIZE) return null;
             let e = (e) => {
-                    e.stopPropagation(), null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), ea.isGuildStageVoice() ? (0, b.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
+                    e.stopPropagation(), null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), ea.isGuildStageVoice() ? (0, T.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
                 },
                 n = (e) => {
-                    e.stopPropagation(), en({ action: 'OPEN_VOICE_GUILD' }), (0, T.X)(er.id), null == q || q();
+                    e.stopPropagation(), en({ action: 'OPEN_VOICE_GUILD' }), (0, b.X)(er.id), null == q || q();
                 };
             return (0, i.jsxs)('div', {
                 className: H.details,

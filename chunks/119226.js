@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(627341);
+n.d(t, { Z: () => b }), n(627341);
 var i = n(200651);
 n(192379);
 var r = n(278074),
@@ -55,7 +55,7 @@ function I(e) {
         ]
     });
 }
-function T(e) {
+function b(e) {
     let { sku: t } = e,
         { selectedGiftStyle: n } = (0, h.wD)(),
         { product: s } = (0, u.T)(null == t ? void 0 : t.id),

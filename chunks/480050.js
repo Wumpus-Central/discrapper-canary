@@ -14,7 +14,7 @@ function c(e) {
             x: 0,
             y: 0
         }),
-        [T, b] = (0, r.useState)({
+        [b, T] = (0, r.useState)({
             x: 0,
             y: 0
         }),
@@ -28,7 +28,7 @@ function c(e) {
                 x: 0,
                 y: 0
             }),
-            b({
+            T({
                 x: 0,
                 y: 0
             }));
@@ -43,7 +43,7 @@ function c(e) {
                         x: t,
                         y: i
                     }),
-                    b({
+                    T({
                         x: t - S.x,
                         y: i - S.y
                     });
@@ -69,7 +69,7 @@ function c(e) {
                 let [i, r, a, s] = [null == m ? void 0 : m.top, null == m ? void 0 : m.right, null == m ? void 0 : m.bottom, null == m ? void 0 : m.left].map((e) => (null != e ? e : 0)),
                     [o, l] = [n.width + s + r > window.innerWidth, n.height + i + a > window.innerHeight];
                 if (!o && !l) return;
-                let [u, c] = [o ? e.clientX - T.x : 0, l ? e.clientY - T.y : 0],
+                let [u, c] = [o ? e.clientX - b.x : 0, l ? e.clientY - b.y : 0],
                     [d, f] = [u - S.x, c - S.y];
                 o && d + n.x - s >= 0 && (u = S.x - n.x + s), l && f + n.y - i >= 0 && (c = S.y - n.y + i);
                 let [_, p] = [n.x + n.width, n.y + n.height];
@@ -80,7 +80,7 @@ function c(e) {
                         y: c
                     });
             },
-            [E, S, T.x, T.y, m]
+            [E, S, b.x, b.y, m]
         ),
         O = n ? (0, o.vV)(f, _, p, h) : 1,
         D = (0, r.useCallback)(() => {

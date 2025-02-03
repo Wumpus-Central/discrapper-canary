@@ -64,7 +64,7 @@ function I(e, t, n) {
             }
         });
 }
-var T = {
+var b = {
         default: {
             tension: 170,
             friction: 26
@@ -90,16 +90,16 @@ var T = {
             friction: 120
         }
     },
-    b = function (e) {
+    T = function (e) {
         return e;
     },
     S = s(
-        s({}, T.default),
+        s({}, b.default),
         {},
         {
             mass: 1,
             damping: 1,
-            easing: b,
+            easing: T,
             clamp: !1
         }
     ),
@@ -404,7 +404,7 @@ function et() {
                                 'return',
                                 (i.promise = u(
                                     l.mark(function e() {
-                                        var h, m, g, E, v, y, I, T, b;
+                                        var h, m, g, E, v, y, I, b, T;
                                         return l.wrap(
                                             function (e) {
                                                 for (;;)
@@ -478,7 +478,7 @@ function et() {
                                                                 })),
                                                                 (e.prev = 7),
                                                                 a.is.arr(t)
-                                                                    ? (b = (function () {
+                                                                    ? (T = (function () {
                                                                           var e = u(
                                                                               l.mark(function e(t) {
                                                                                   var n, i, r;
@@ -507,19 +507,19 @@ function et() {
                                                                               return e.apply(this, arguments);
                                                                           };
                                                                       })()(t))
-                                                                    : a.is.fun(t) && (b = Promise.resolve(t(I, r.stop.bind(r)))),
+                                                                    : a.is.fun(t) && (T = Promise.resolve(t(I, r.stop.bind(r)))),
                                                                 (e.next = 11),
-                                                                Promise.all([b.then(m), E])
+                                                                Promise.all([T.then(m), E])
                                                             );
                                                         case 11:
-                                                            (T = q(r, !0)), (e.next = 21);
+                                                            (b = q(r, !0)), (e.next = 21);
                                                             break;
                                                         case 14:
                                                             if (((e.prev = 14), (e.t0 = e.catch(7)), !(e.t0 instanceof ei))) {
                                                                 e.next = 20;
                                                                 break;
                                                             }
-                                                            (T = e.t0.result), (e.next = 21);
+                                                            (b = e.t0.result), (e.next = 21);
                                                             break;
                                                         case 20:
                                                             throw e.t0;
@@ -529,9 +529,9 @@ function et() {
                                                             return (
                                                                 a.is.fun(d) &&
                                                                     _.batchedUpdates(function () {
-                                                                        d(T);
+                                                                        d(b);
                                                                     }),
-                                                                e.abrupt('return', T)
+                                                                e.abrupt('return', b)
                                                             );
                                                         case 26:
                                                         case 'end':
@@ -711,8 +711,8 @@ var ei = (function (e) {
                                         (_ = h + (m / (1 - g)) * (1 - E)), (f = 0.1 > Math.abs(u.lastPosition - _)), (v = m * E);
                                     } else {
                                         v = null == u.lastVelocity ? m : u.lastVelocity;
-                                        for (var v, y = s.precision || (h == d ? 0.005 : Math.min(1, 0.001 * Math.abs(d - h))), I = s.restVelocity || y / 10, T = s.clamp ? 0 : s.bounce, b = !a.is.und(T), S = h == d ? u.v0 > 0 : h < d, A = !1, N = 1, C = Math.ceil(e / 1), R = 0; R < C && !(!(Math.abs(v) > I) && (f = Math.abs(d - _) <= y)); ++R) {
-                                            b && (A = _ == d || _ > d == S) && ((v = -v * T), (_ = d));
+                                        for (var v, y = s.precision || (h == d ? 0.005 : Math.min(1, 0.001 * Math.abs(d - h))), I = s.restVelocity || y / 10, b = s.clamp ? 0 : s.bounce, T = !a.is.und(b), S = h == d ? u.v0 > 0 : h < d, A = !1, N = 1, C = Math.ceil(e / 1), R = 0; R < C && !(!(Math.abs(v) > I) && (f = Math.abs(d - _) <= y)); ++R) {
+                                            T && (A = _ == d || _ > d == S) && ((v = -v * b), (_ = d));
                                             var O = (-(0.000001 * s.tension) * (_ - d) + -(0.001 * s.friction) * v) / s.mass;
                                             (v += O * N), (_ += v * N);
                                         }
@@ -920,9 +920,9 @@ var ei = (function (e) {
                 y && (r.from = E);
                 var I = !a.isEqual(m, d);
                 I && this._focus(m);
-                var T = a.getFluidConfig(m),
-                    b = a.getFluidConfig(E);
-                b && (E = b.get());
+                var b = a.getFluidConfig(m),
+                    T = a.getFluidConfig(E);
+                T && (E = T.get());
                 var S = a.is.arr(t.to) || a.is.fun(t.to),
                     A = r.config,
                     C = A.decay,
@@ -943,14 +943,14 @@ var ei = (function (e) {
                     }
                 }
                 var G = O.constructor,
-                    B = !!T,
+                    B = !!b,
                     F = !1;
                 if (!B) {
                     var V = D || (this.is(eo) && y);
                     (I || V) && (B = !(F = a.isEqual(Y(x), L))), (a.isEqual(A.decay, C) && a.isEqual(A.velocity, R)) || (B = !0);
                 }
                 if ((F && this.is(eu) && (r.changed && !D ? (B = !0) : B || this._stop()), !S)) {
-                    (B || a.getFluidConfig(d)) && ((r.values = O.getPayload()), (r.toValues = T ? null : G == f.AnimatedString ? [1] : a.toArray(L))), (r.immediate = k), (r.onStart = ep(u('onStart'), i)), (r.onChange = ep(u('onChange'), i));
+                    (B || a.getFluidConfig(d)) && ((r.values = O.getPayload()), (r.toValues = b ? null : G == f.AnimatedString ? [1] : a.toArray(L))), (r.immediate = k), (r.onStart = ep(u('onStart'), i)), (r.onChange = ep(u('onChange'), i));
                     var j = r.onRest,
                         H = D && !t.onRest ? j[0] || a.noop : eh(ep(u('onRest'), i), this);
                     if (B) {
@@ -1110,7 +1110,7 @@ function ev(e, t) {
 }
 var ey = ['onStart', 'onChange', 'onRest'],
     eI = 1,
-    eT = (function () {
+    eb = (function () {
         function e(e, t) {
             (this.id = eI++),
                 (this.springs = {}),
@@ -1152,7 +1152,7 @@ var ey = ['onStart', 'onChange', 'onRest'],
             }),
             (t.start = function (e) {
                 var t = e ? a.toArray(e).map(eg) : this.queue;
-                return (e || (this.queue = []), this._flush) ? this._flush(this, t) : (eO(this, t), eb(this, t));
+                return (e || (this.queue = []), this._flush) ? this._flush(this, t) : (eO(this, t), eT(this, t));
             }),
             (t.stop = function (e) {
                 if (a.is.und(e))
@@ -1256,7 +1256,7 @@ var ey = ['onStart', 'onChange', 'onRest'],
             e
         );
     })();
-function eb(e, t) {
+function eT(e, t) {
     return Promise.all(
         t.map(function (t) {
             return eS(e, t);
@@ -1467,11 +1467,11 @@ function ew(e, t, n) {
                         ? new Promise(function (i) {
                               eN(e, n),
                                   c.queue.push(function () {
-                                      i(eb(e, t));
+                                      i(eT(e, t));
                                   }),
                                   u();
                           })
-                        : eb(e, t);
+                        : eT(e, t);
                 }
             };
         })[0],
@@ -1482,7 +1482,7 @@ function ew(e, t, n) {
         h = f.slice(e, p);
     function m(e, n) {
         for (var r = e; r < n; r++) {
-            var a = f[r] || (f[r] = new eT(null, c.flush)),
+            var a = f[r] || (f[r] = new eb(null, c.flush)),
                 s = i ? i(r, a) : t[r];
             s && ((s = _[r] = eE(s)), 0 == r && ((d.current = s.ref), (s.ref = void 0)));
         }
@@ -1616,7 +1616,7 @@ function eF(e, t, n) {
                     key: m[t],
                     item: e,
                     phase: eU,
-                    ctrl: new eT()
+                    ctrl: new eb()
                 });
         }),
         v.length)
@@ -1632,8 +1632,8 @@ function eF(e, t, n) {
             return u(e.item, t.item);
         });
     var I = -d,
-        T = a.useForceUpdate(),
-        b = B(t),
+        b = a.useForceUpdate(),
+        T = B(t),
         S = new Map();
     a.each(h, function (e, n) {
         var i,
@@ -1655,11 +1655,11 @@ function eF(e, t, n) {
             }
         }
         if (((i = w(i, e.item, n)), !(i = a.is.obj(i) ? H(i) : { to: i }).config)) {
-            var c = t.config || b.config;
+            var c = t.config || T.config;
             i.config = w(c, e.item, n);
         }
         var f = s(
-            s({}, b),
+            s({}, T),
             {},
             {
                 delay: (I += d),
@@ -1691,7 +1691,7 @@ function eF(e, t, n) {
                         if (!1 !== r) {
                             var s = !0 === r ? 0 : r;
                             if (((n.expired = !0), !i && s > 0)) {
-                                s <= 2147483647 && (n.expirationId = setTimeout(T, s));
+                                s <= 2147483647 && (n.expirationId = setTimeout(b, s));
                                 return;
                             }
                         }
@@ -1700,7 +1700,7 @@ function eF(e, t, n) {
                         t.some(function (e) {
                             return e.expired;
                         }) &&
-                        T();
+                        b();
                 }
             }
         };
@@ -1905,7 +1905,7 @@ Object.keys(y).forEach(function (e) {
         }
     }),
     (t.BailSignal = ei),
-    (t.Controller = eT),
+    (t.Controller = eb),
     (t.FrameValue = es),
     (t.Interpolation = eW),
     (t.Spring = ej),
@@ -1914,7 +1914,7 @@ Object.keys(y).forEach(function (e) {
     (t.SpringValue = ef),
     (t.Trail = eH),
     (t.Transition = eY),
-    (t.config = T),
+    (t.config = b),
     (t.inferTo = H),
     (t.interpolate = ez),
     (t.to = eK),

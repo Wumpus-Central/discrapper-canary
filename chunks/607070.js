@@ -78,11 +78,11 @@ function I() {
     if (h.keyboardModeEnabled) return !1;
     (h = { ...h }).keyboardModeEnabled = !0;
 }
-function T() {
+function b() {
     if (!h.keyboardModeEnabled) return !1;
     (h = { ...h }).keyboardModeEnabled = !1;
 }
-function b() {
+function T() {
     (h = { ...h }).colorblindMode = !h.colorblindMode;
 }
 function S() {
@@ -384,8 +384,8 @@ let j = new V(o.Z, {
     ACCESSIBILITY_SET_ZOOM: v,
     ACCESSIBILITY_RESET_TO_DEFAULT: y,
     ACCESSIBILITY_KEYBOARD_MODE_ENABLE: I,
-    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: T,
-    ACCESSIBILITY_COLORBLIND_TOGGLE: b,
+    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: b,
+    ACCESSIBILITY_COLORBLIND_TOGGLE: T,
     ACCESSIBILITY_LOW_CONTRAST_TOGGLE: S,
     ACCESSIBILITY_SET_SATURATION: N,
     ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: C,

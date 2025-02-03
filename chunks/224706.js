@@ -18,8 +18,8 @@ var i = n(664751),
     v = n(630388),
     y = n(877481),
     I = n(358085),
-    T = n(573261),
-    b = n(278323),
+    b = n(573261),
+    T = n(278323),
     S = n(58642),
     A = n(254854),
     N = n(981631),
@@ -261,7 +261,7 @@ let M = {
         let e = h.Z.detectableGamesEtag;
         l.Z.wait(() => {
             l.Z.dispatch({ type: 'GAMES_DATABASE_FETCH' }),
-                T.Z.get({
+                b.Z.get({
                     url: N.ANM.APPLICATIONS_DETECTABLE,
                     headers: { 'If-None-Match': e },
                     retries: 1,
@@ -373,7 +373,7 @@ let M = {
             applicationId: i
         });
         try {
-            let e = await b.Z.getJoinSecret(t, n, i, r, a);
+            let e = await T.Z.getJoinSecret(t, n, i, r, a);
             return (
                 x({
                     applicationId: i,

@@ -65,10 +65,10 @@ function y() {
 function I() {
     y(), (f = !0);
 }
-function T() {
+function b() {
     y();
 }
-class b extends (i = r.ZP.Store) {
+class T extends (i = r.ZP.Store) {
     getMatchingOutboxEntry(e) {
         let { activity: t, userId: n } = e,
             i = l.get(n);
@@ -90,10 +90,10 @@ class b extends (i = r.ZP.Store) {
         return f;
     }
 }
-o(b, 'displayName', 'ContentInventoryOutboxStore');
-let S = new b(a.Z, {
+o(T, 'displayName', 'ContentInventoryOutboxStore');
+let S = new T(a.Z, {
     CONNECTION_OPEN: I,
-    LOGOUT: T,
+    LOGOUT: b,
     CONTENT_INVENTORY_FETCH_OUTBOX_START: _,
     CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: p,
     CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: h,

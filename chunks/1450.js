@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => b });
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(30513),
     y = n(388032),
     I = n(395399);
-let T = (e) => {
-    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: T, setTrackedUpsellViewed: b } = e,
+let b = (e) => {
+    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: b, setTrackedUpsellViewed: T } = e,
         { location: S } = (0, u.O)(),
         { analyticsLocations: A } = (0, d.ZP)(),
         N = (0, o.e7)([m.Z], () => m.Z.getGuild(n)),
@@ -29,7 +29,7 @@ let T = (e) => {
         (r.useEffect(() => {
             C &&
                 R &&
-                T &&
+                b &&
                 ((0, c.yw)(E.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
                     location: S,
                     guild_id: null == N ? void 0 : N.id,
@@ -37,8 +37,8 @@ let T = (e) => {
                     type: 'Expression Picker Inline Sticker Upsell',
                     location_stack: A
                 }),
-                b(!0));
-        }, [R, N, a, S, T, b, A, C]),
+                T(!0));
+        }, [R, N, a, S, b, T, A, C]),
         null == N || !C)
     )
         return null;

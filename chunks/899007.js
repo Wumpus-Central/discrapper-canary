@@ -18,15 +18,15 @@ var i = n(200651),
     v = n(652853),
     y = n(228168),
     I = n(981631),
-    T = n(474936),
-    b = n(882636);
+    b = n(474936),
+    T = n(882636);
 let S = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
 function A(e) {
     let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: A, animateOnHover: N, onOpenProfile: C, className: R } = e,
         { theme: O } = (0, v.z)(),
         { analyticsLocations: D } = (0, d.ZP)(c.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
-        L = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, T.p9.TIER_2),
+        L = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, b.p9.TIER_2),
         P = r.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
         { live: w } = (0, g.Z)(t.id),
         [M] = w,
@@ -36,11 +36,11 @@ function A(e) {
         })),
         G = A === y.y0.FULL_SIZE ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
         B = s()(
-            b.avatar,
+            T.avatar,
             {
-                [b.biteSize]: A === y.y0.BITE_SIZE,
-                [b.fullSize]: A === y.y0.FULL_SIZE,
-                [b.panel]: A === y.y0.PANEL
+                [T.biteSize]: A === y.y0.BITE_SIZE,
+                [T.fullSize]: A === y.y0.FULL_SIZE,
+                [T.panel]: A === y.y0.PANEL
             },
             R
         ),
@@ -59,7 +59,7 @@ function A(e) {
             avatarDecoration: Z,
             size: G,
             'aria-label': t.username,
-            imageClassName: null != C ? b.overlay : void 0,
+            imageClassName: null != C ? T.overlay : void 0,
             status: P ? I.Skl.UNKNOWN : k,
             statusBackdropColor: L && !P ? (0, l.QFD)(O) : void 0,
             isMobile: U,
@@ -74,8 +74,8 @@ function A(e) {
           })
         : (0, i.jsx)(l.P3F, {
               ...V,
-              className: s()(B, b.clickable),
-              focusProps: { ringClassName: b.focusRing },
+              className: s()(B, T.clickable),
+              focusProps: { ringClassName: T.focusRing },
               onClick: () => {
                   x({
                       action: 'PRESS_VIEW_PROFILE',

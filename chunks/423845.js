@@ -17,8 +17,8 @@ var i = n(620014),
     v = n(207757),
     y = n(397985),
     I = n(706627),
-    T = n(822480),
-    b = n(58834),
+    b = n(822480),
+    T = n(58834),
     S = n(453342),
     A = 1,
     N = 2,
@@ -75,7 +75,7 @@ function et(e, t, n, O, D, x) {
     var V = x.get(e);
     if (V) return V;
     x.set(e, L),
-        T(e)
+        b(e)
             ? e.forEach(function (i) {
                   L.add(et(i, t, n, i, e, x));
               })
@@ -83,7 +83,7 @@ function et(e, t, n, O, D, x) {
               e.forEach(function (i, r) {
                   L.set(r, et(i, t, n, r, e, x));
               });
-    var j = G ? (k ? _ : f) : k ? S : b,
+    var j = G ? (k ? _ : f) : k ? S : T,
         H = B ? void 0 : j(e);
     return (
         r(H || e, function (i, r) {

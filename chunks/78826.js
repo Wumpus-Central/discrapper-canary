@@ -62,13 +62,13 @@ function _(e) {
             },
             [n, a, _]
         ),
-        T = r.useCallback((e) => {
+        b = r.useCallback((e) => {
             g((t) => {
                 let n = new Set(t);
                 return n.delete(e), n;
             });
         }, []),
-        b = r.useCallback(
+        T = r.useCallback(
             (e, t) => {
                 if ((v(!0), c(e))) return;
                 g((t) => {
@@ -77,10 +77,10 @@ function _(e) {
                 });
                 let n = d(e);
                 function i() {
-                    T(e), e.removeEventListener(n, i);
+                    b(e), e.removeEventListener(n, i);
                 }
                 function r(n) {
-                    T(e),
+                    b(e),
                         I({
                             assetNode: e,
                             nodeId: t,
@@ -91,7 +91,7 @@ function _(e) {
                 }
                 e.addEventListener(n, i), e.addEventListener('error', r);
             },
-            [I, T]
+            [I, b]
         ),
         S = r.useMemo(() => m.size > 0 || !E, [E, m]);
     r.useEffect(() => {
@@ -99,12 +99,12 @@ function _(e) {
     }, [S]);
     let A = r.useMemo(
         () => ({
-            registerAsset: b,
-            unregisterAsset: T,
+            registerAsset: T,
+            unregisterAsset: b,
             hasError: p,
             isLoading: S && !y.current
         }),
-        [b, T, p, S]
+        [T, b, p, S]
     );
     return (0, i.jsx)(u.Provider, {
         value: A,

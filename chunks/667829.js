@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(117530),
     y = n(459273),
     I = n(403182),
-    T = n(541716),
-    b = n(752305),
+    b = n(541716),
+    T = n(752305),
     S = n(30465),
     A = n(140963),
     N = n(4484),
@@ -61,7 +61,7 @@ class w extends r.Component {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             var t, n;
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, C.sk)(this.props.richValue, { mode: 'plain' })), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, b.JM)(e));
+            (e = this.props.useSlate ? this.props.textValue : (0, C.sk)(this.props.richValue, { mode: 'plain' })), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, T.JM)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
@@ -170,7 +170,7 @@ class w extends r.Component {
                 accessibilityLabel: G,
                 disabled: c || !1,
                 submitting: B,
-                isEdit: g === T.Ie.EDIT,
+                isEdit: g === b.Ie.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -185,11 +185,11 @@ class w extends r.Component {
                 onKeyDown: _,
                 onSubmit: h,
                 textAreaPaddingClassName: s()(P[E], {
-                    [D.textAreaWithoutAttachmentButton]: g !== T.Ie.NORMAL && g !== T.Ie.OVERLAY && g !== T.Ie.THREAD_CREATION && g !== T.Ie.SIDEBAR,
-                    [D.textAreaForPostCreation]: g === T.Ie.CREATE_FORUM_POST,
-                    [D.textAreaCustomGift]: g === T.Ie.CUSTOM_GIFT,
-                    [D.textAreaForUserProfile]: g === T.Ie.USER_PROFILE,
-                    [D.textAreaForOverlayInlineReply]: g === T.Ie.OVERLAY_INLINE_REPLY
+                    [D.textAreaWithoutAttachmentButton]: g !== b.Ie.NORMAL && g !== b.Ie.OVERLAY && g !== b.Ie.THREAD_CREATION && g !== b.Ie.SIDEBAR,
+                    [D.textAreaForPostCreation]: g === b.Ie.CREATE_FORUM_POST,
+                    [D.textAreaCustomGift]: g === b.Ie.CUSTOM_GIFT,
+                    [D.textAreaForUserProfile]: g === b.Ie.USER_PROFILE,
+                    [D.textAreaForOverlayInlineReply]: g === b.Ie.OVERLAY_INLINE_REPLY
                 }),
                 spellcheckEnabled: I,
                 useNewSlashCommands: S,
@@ -209,7 +209,7 @@ class w extends r.Component {
                       ref: this.ref,
                       ...F,
                       type: g,
-                      value: c ? (0, b.JM)('') : u,
+                      value: c ? (0, T.JM)('') : u,
                       canUseCommands: null === (t = g.commands) || void 0 === t ? void 0 : t.enabled,
                       canOnlyUseTextCommands: C
                   })
@@ -288,7 +288,7 @@ class w extends r.Component {
             }),
             x(this, 'handleClearText', () => {
                 var e, t;
-                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, '', (0, b.JM)(''));
+                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, '', (0, T.JM)(''));
             }),
             x(this, 'handleInsertText', (e) => {
                 let { plainText: t, rawText: n, addSpace: i = !1 } = e;

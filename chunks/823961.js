@@ -38,12 +38,12 @@ let c = new Map(),
     I = (e) => {
         _.delete(e.skuId);
     },
-    T = (e) => {
+    b = (e) => {
         if (1 !== e.entitlements.length) return;
         let t = e.entitlements[0];
         l.Rm.has(t.sku_id) && p.set(e.skuId, o.Z.createFromServer(t));
     },
-    b = (e) => {
+    T = (e) => {
         f.delete(e.skuId), p.set(e.skuId, e.entitlement), null != e.numPotions && h.set(e.skuId, e.numPotions);
     },
     S = (e) => {
@@ -107,8 +107,8 @@ let x = new D(s.Z, {
     CONSUMABLES_PRICE_FETCH_SUCCEEDED: v,
     CONSUMABLES_PRICE_FETCH_FAILED: y,
     CONSUMABLES_CLEAR_ERROR: I,
-    CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: b,
-    SKU_PURCHASE_SUCCESS: T,
+    CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: T,
+    SKU_PURCHASE_SUCCESS: b,
     CONSUMABLES_ENTITLEMENT_FETCH_FAILED: S,
     CONSUMABLES_ENTITLEMENT_FETCH_STARTED: A,
     SET_PREVIOUS_GO_LIVE_SETTINGS: N,

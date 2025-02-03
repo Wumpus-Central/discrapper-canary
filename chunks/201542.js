@@ -27,7 +27,7 @@ function I(e) {
         children: a
     });
 }
-function T(e, t, n) {
+function b(e, t, n) {
     r.useEffect(() => {
         let i;
         function r() {
@@ -42,7 +42,7 @@ function T(e, t, n) {
         );
     }, [e, t, n]);
 }
-function b(e, t, n) {
+function T(e, t, n) {
     r.useEffect(() => {
         if (t)
             return (
@@ -150,8 +150,8 @@ let S = r.memo(function (e) {
                 }
             }
         }, [U]),
-        T(D, U, L),
-        b(n, U, G);
+        b(D, U, L),
+        T(n, U, G);
     let el = U ? l.fpf : l.o1U,
         eu = U ? E.intl.string(E.t.ZcgDJS) : E.intl.string(E.t.RscU7O);
     'Safari' === platform.name

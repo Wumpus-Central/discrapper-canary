@@ -63,14 +63,14 @@ function I(e) {
         'null' !== t.id && (f[t.id] = !0);
     });
 }
-function T(e) {
+function b(e) {
     let { guildId: t } = e;
     u.ZP.getChannels(t)[c.d4z.GUILD_CATEGORY].forEach((e) => {
         let { channel: t } = e;
         delete f[t.id];
     });
 }
-class b extends (i = r.ZP.PersistedStore) {
+class T extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(o.Z, l.Z), this.removeChangeListener(p), this.addChangeListener(p), (f = null != e ? e : {});
     }
@@ -87,13 +87,13 @@ class b extends (i = r.ZP.PersistedStore) {
         return _;
     }
 }
-d(b, 'displayName', 'CategoryCollapseStore'), d(b, 'persistKey', 'collapsedCategories');
-let S = new b(a.Z, {
+d(T, 'displayName', 'CategoryCollapseStore'), d(T, 'persistKey', 'collapsedCategories');
+let S = new T(a.Z, {
     CONNECTION_OPEN: E,
     USER_GUILD_SETTINGS_FULL_UPDATE: v,
     CATEGORY_COLLAPSE: m,
     CATEGORY_EXPAND: g,
     CATEGORY_COLLAPSE_ALL: I,
-    CATEGORY_EXPAND_ALL: T,
+    CATEGORY_EXPAND_ALL: b,
     CHANNEL_DELETE: y
 });

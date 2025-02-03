@@ -91,7 +91,7 @@ function I(e) {
         firstMessage: s
     };
 }
-function T(e) {
+function b(e) {
     let { channelId: t, messageId: n } = e,
         i = d[t];
     if (null == i || null == i.firstMessage || n !== i.firstMessage.id) return !1;
@@ -100,7 +100,7 @@ function T(e) {
         firstMessage: i.firstMessage.set('reactions', [])
     };
 }
-function b(e) {
+function T(e) {
     let { channelId: t, messageId: n, emoji: i } = e,
         r = d[t];
     if (null == r || null == r.firstMessage || n !== r.firstMessage.id) return !1;
@@ -147,8 +147,8 @@ let N = new A(a.Z, {
     THREAD_CREATE: v,
     MESSAGE_REACTION_ADD: y,
     MESSAGE_REACTION_REMOVE: y,
-    MESSAGE_REACTION_REMOVE_ALL: T,
-    MESSAGE_REACTION_REMOVE_EMOJI: b,
+    MESSAGE_REACTION_REMOVE_ALL: b,
+    MESSAGE_REACTION_REMOVE_EMOJI: T,
     MESSAGE_REACTION_ADD_MANY: I,
     LOAD_FORUM_POSTS: _,
     LOAD_THREADS_SUCCESS: p,

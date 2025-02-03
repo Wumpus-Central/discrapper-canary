@@ -68,17 +68,17 @@ let y = s.forwardRef(function (e, t) {
 function I(e) {
     return ''.concat(e.replace(/\s+/g, '-').toLowerCase(), '-tab');
 }
-function T(e, t) {
+function b(e, t) {
     if (null == e) return;
     let n = {};
     return 'Selected' === t ? ((n.backgroundColor = e), (n.color = d.Z.unsafe_rawColors.WHITE_500.css)) : ('Hover' === t && (n.backgroundColor = (0, c.wK)(e, 0.1)), (n.color = e)), n;
 }
-class b extends (i = s.Component) {
+class T extends (i = s.Component) {
     getStyle() {
         let { color: e, id: t, selectedItem: n, itemType: i } = this.props,
             { hover: r, active: a } = this.state;
         if (null != e) {
-            if ('side' === i) return (null != t && n === t) || a ? T(e, 'Selected') : r ? T(e, 'Hover') : T(e);
+            if ('side' === i) return (null != t && n === t) || a ? b(e, 'Selected') : r ? b(e, 'Hover') : b(e);
             if ('top' === i)
                 return n === t
                     ? {
@@ -163,7 +163,7 @@ class b extends (i = s.Component) {
             });
     }
 }
-m(b, 'defaultProps', {
+m(T, 'defaultProps', {
     disabled: !1,
     look: 'grey',
     disableItemStyles: !1
@@ -232,4 +232,4 @@ class S extends (r = s.Component) {
             });
     }
 }
-m(S, 'Header', E), m(S, 'Item', b), m(S, 'Separator', v), m(S, 'Panel', y);
+m(S, 'Header', E), m(S, 'Item', T), m(S, 'Separator', v), m(S, 'Panel', y);

@@ -1,4 +1,4 @@
-n.d(t, { T: () => b });
+n.d(t, { T: () => T });
 var i = n(313694);
 function r(e, t, n) {
     a(e, t), t.set(e, n);
@@ -51,8 +51,8 @@ var f = new WeakMap(),
     v = new WeakMap(),
     y = new WeakMap(),
     I = new WeakMap(),
-    T = new WeakMap();
-class b {
+    b = new WeakMap();
+class T {
     constructor(e, t, n) {
         if (
             (r(this, f, {
@@ -97,16 +97,16 @@ class b {
             }),
             s(this, 'setup', () => {
                 if ('undefined' != typeof window) {
-                    if (b.isSetUp) throw Error('Cannot have two MultiBackends at the same time.');
-                    (b.isSetUp = !0), o(this, E).call(this, window), o(this, p)[o(this, f)].instance.setup();
+                    if (T.isSetUp) throw Error('Cannot have two MultiBackends at the same time.');
+                    (T.isSetUp = !0), o(this, E).call(this, window), o(this, p)[o(this, f)].instance.setup();
                 }
             }),
             s(this, 'teardown', () => {
-                'undefined' != typeof window && ((b.isSetUp = !1), o(this, v).call(this, window), o(this, p)[o(this, f)].instance.teardown());
+                'undefined' != typeof window && ((T.isSetUp = !1), o(this, v).call(this, window), o(this, p)[o(this, f)].instance.teardown());
             }),
-            s(this, 'connectDragSource', (e, t, n) => o(this, T).call(this, 'connectDragSource', e, t, n)),
-            s(this, 'connectDragPreview', (e, t, n) => o(this, T).call(this, 'connectDragPreview', e, t, n)),
-            s(this, 'connectDropTarget', (e, t, n) => o(this, T).call(this, 'connectDropTarget', e, t, n)),
+            s(this, 'connectDragSource', (e, t, n) => o(this, b).call(this, 'connectDragSource', e, t, n)),
+            s(this, 'connectDragPreview', (e, t, n) => o(this, b).call(this, 'connectDragPreview', e, t, n)),
+            s(this, 'connectDropTarget', (e, t, n) => o(this, b).call(this, 'connectDropTarget', e, t, n)),
             s(this, 'profile', () => o(this, p)[o(this, f)].instance.profile()),
             s(this, 'previewEnabled', () => o(this, p)[o(this, f)].preview),
             s(this, 'previewsList', () => o(this, _)),
@@ -150,7 +150,7 @@ class b {
                 writable: !0,
                 value: (e, t, n, i) => o(this, p)[o(this, f)].instance[e](t, n, i)
             }),
-            r(this, T, {
+            r(this, b, {
                 writable: !0,
                 value: (e, t, n, i) => {
                     let r = ''.concat(e, '_').concat(t),
@@ -181,4 +181,4 @@ class b {
             u(this, m, {});
     }
 }
-s(b, 'isSetUp', !1);
+s(T, 'isSetUp', !1);

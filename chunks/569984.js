@@ -3,8 +3,8 @@ n.d(t, { Z: () => ev }), n(47120);
 var v,
     y = n(392711),
     I = n(754700),
-    T = n(887003),
-    b = n(442837),
+    b = n(887003),
+    T = n(442837),
     S = n(570140),
     A = n(497505),
     N = n(918701),
@@ -63,7 +63,7 @@ function U(e) {
     var t;
     let { entitlements: n } = e,
         i = null === (t = n.items[0].tenantMetadata) || void 0 === t ? void 0 : t.questRewards.reward;
-    return (null == i ? void 0 : i.tag) !== T.w.REWARD_CODE ? null : i.rewardCode;
+    return (null == i ? void 0 : i.tag) !== b.w.REWARD_CODE ? null : i.rewardCode;
 }
 function G(e, t) {
     let n = new Map(p);
@@ -233,7 +233,7 @@ function eg(e) {
     E.delete(t);
 }
 L();
-class eE extends (v = b.ZP.Store) {
+class eE extends (v = T.ZP.Store) {
     get quests() {
         return a;
     }

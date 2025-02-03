@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(47120), n(724458);
+n.d(t, { Z: () => b }), n(47120), n(724458);
 var i,
     r = n(392711),
     a = n.n(r),
@@ -104,7 +104,7 @@ class I extends (i = s.ZP.Store) {
     }
 }
 c(I, 'displayName', 'ApplicationStreamPreviewStore');
-let T = new I(o.Z, {
+let b = new I(o.Z, {
     CONNECTION_OPEN: m,
     LOGOUT: m,
     STREAM_PREVIEW_FETCH_START: v,
