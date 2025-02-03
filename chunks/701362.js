@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(430824),
     v = n(496675),
     _ = n(158776),
-    S = n(979651),
-    I = n(626135),
+    I = n(979651),
+    S = n(626135),
     x = n(102172),
     E = n(687516),
     C = n(718805),
@@ -27,7 +27,7 @@ var i = n(200651),
 class T extends l.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
-        I.default.track(y.rMx.OPEN_POPOUT, {
+        S.default.track(y.rMx.OPEN_POPOUT, {
             type: 'Stream Preview',
             other_user_id: e.id,
             application_id: null != t ? t.id : null,
@@ -44,7 +44,8 @@ class T extends l.PureComponent {
             children: [
                 (0, i.jsx)(Z.Z, {
                     className: N.previewImage,
-                    stream: e
+                    stream: e,
+                    noImage: !1
                 }),
                 a
                     ? (0, i.jsx)('div', {
@@ -114,11 +115,11 @@ class T extends l.PureComponent {
 }
 function A(e) {
     let { user: t, channel: n, ...a } = e,
-        [r, o] = (0, s.Wu)([S.Z, g.Z, v.Z, f.Z], () => (0, x.p9)(n, S.Z, g.Z, v.Z, f.Z)),
+        [r, o] = (0, s.Wu)([I.Z, g.Z, v.Z, f.Z], () => (0, x.p9)(n, I.Z, g.Z, v.Z, f.Z)),
         c = (0, s.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())),
         d = (0, s.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)),
         m = (0, s.e7)([h.default], () => h.default.getId()),
-        I = (0, E.Cf)(c),
+        S = (0, E.Cf)(c),
         C = (0, s.e7)([_.Z], () => (0, E.Um)(c, _.Z)),
         Z = l.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);
     return (
@@ -128,7 +129,7 @@ function A(e) {
             canWatch: r,
             unavailableReason: o,
             user: t,
-            streamApplication: I,
+            streamApplication: S,
             stream: c,
             activeStream: d,
             currentUserId: m,
