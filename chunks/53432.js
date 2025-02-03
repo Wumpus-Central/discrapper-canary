@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(653041);
+n.d(t, { Z: () => Z }), n(653041);
 var i = n(200651);
 n(192379);
 var r = n(442837),
@@ -14,14 +14,14 @@ var r = n(442837),
     p = n(740492),
     x = n(695346),
     j = n(874893),
-    S = n(981631),
-    Z = n(388032);
-function m() {
+    m = n(981631),
+    S = n(388032);
+function Z() {
     let e = x.jU.useSetting(),
         { analyticsLocations: t } = (0, u.ZP)(),
         {
             theme: n,
-            useSystemTheme: m,
+            useSystemTheme: Z,
             useForcedColors: b
         } = (0, r.cj)([h.Z, p.ZP, o.Z], () => ({
             theme: h.Z.theme,
@@ -29,15 +29,15 @@ function m() {
             useForcedColors: o.Z.useForcedColors
         })),
         f = x.YC.useSetting(),
-        k = (0, g.Q3)('appearance_settings'),
-        v = (0, g.o9)('appearance_settings'),
+        v = (0, g.Q3)('appearance_settings'),
+        k = (0, g.o9)('appearance_settings'),
         E = (e, r) =>
             (0, i.jsx)(a.k5B, {
                 id: e,
                 group: 'input-modes',
                 label: r,
                 disabled: b,
-                checked: m === j.K.ON ? 'system' === e : e === n,
+                checked: Z === j.K.ON ? 'system' === e : e === n,
                 action: () => {
                     (0, d.Yk)({
                         isPersisted: !0,
@@ -47,18 +47,21 @@ function m() {
                         (0, s.ZI)({ theme: e });
                 }
             }),
-        y = [
+        y = E(m.BRd.DARK, v ? S.intl.string(S.t.GEaO9P) : S.intl.string(S.t.b8Cei4)),
+        C = E(m.BRd.LIGHT, S.intl.string(S.t.K2sFfn)),
+        I = [
             (0, i.jsxs)(
                 a.kSQ,
                 {
                     children: [
-                        E(S.BRd.DARK, Z.intl.string(Z.t.b8Cei4)),
-                        E(S.BRd.LIGHT, Z.intl.string(Z.t.K2sFfn)),
-                        k &&
-                            (0, i.jsxs)(i.Fragment, {
-                                children: [E(S.BRd.DARKER, 'Darker'), E(S.BRd.MIDNIGHT, Z.intl.string(Z.t.pQwSpa))]
-                            }),
-                        E('system', Z.intl.string(Z.t['7rOU6u']))
+                        v
+                            ? (0, i.jsxs)(i.Fragment, {
+                                  children: [C, y, E(m.BRd.DARKER, S.intl.string(S.t.b8Cei4)), E(m.BRd.MIDNIGHT, S.intl.string(S.t.pQwSpa))]
+                              })
+                            : (0, i.jsxs)(i.Fragment, {
+                                  children: [y, C]
+                              }),
+                        E('system', S.intl.string(S.t['7rOU6u']))
                     ]
                 },
                 'theme-items'
@@ -66,8 +69,8 @@ function m() {
             ,
         ];
     return (
-        v
-            ? (y.push(
+        k
+            ? (I.push(
                   (0, i.jsxs)(
                       a.kSQ,
                       {
@@ -76,7 +79,7 @@ function m() {
                               (0, i.jsx)(a.k5B, {
                                   id: 'cozy-ui',
                                   group: 'list-density',
-                                  label: Z.intl.string(Z.t['4cuYHx']),
+                                  label: S.intl.string(S.t['4cuYHx']),
                                   checked: f === l.Pi.COZY,
                                   action: () => {
                                       x.YC.updateSetting(l.Pi.COZY);
@@ -85,7 +88,7 @@ function m() {
                               (0, i.jsx)(a.k5B, {
                                   id: 'compact-ui',
                                   group: 'list-density',
-                                  label: Z.intl.string(Z.t['7iegX1']),
+                                  label: S.intl.string(S.t['7iegX1']),
                                   checked: f === l.Pi.COMPACT,
                                   action: () => {
                                       x.YC.updateSetting(l.Pi.COMPACT);
@@ -96,7 +99,7 @@ function m() {
                       'list-density'
                   )
               ),
-              y.push(
+              I.push(
                   (0, i.jsxs)(
                       a.kSQ,
                       {
@@ -105,7 +108,7 @@ function m() {
                               (0, i.jsx)(a.k5B, {
                                   id: 'cozy-chat',
                                   group: 'chat-density',
-                                  label: Z.intl.string(Z.t.Jqj4cX),
+                                  label: S.intl.string(S.t.Jqj4cX),
                                   checked: !e,
                                   action: () => {
                                       x.jU.updateSetting(!1), (0, c.ZZ)();
@@ -114,7 +117,7 @@ function m() {
                               (0, i.jsx)(a.k5B, {
                                   id: 'compact-chat',
                                   group: 'chat-density',
-                                  label: Z.intl.string(Z.t['1JNcPT']),
+                                  label: S.intl.string(S.t['1JNcPT']),
                                   checked: e,
                                   action: () => {
                                       x.jU.updateSetting(!0), (0, c.ZZ)();
@@ -125,7 +128,7 @@ function m() {
                       'chat-density'
                   )
               ),
-              y.push(
+              I.push(
                   (0, i.jsx)(
                       a.kSQ,
                       {
@@ -133,21 +136,21 @@ function m() {
                               id: 'desktop-refresh-override',
                               label: 'Enable Desktop Refresh',
                               action: () => {
-                                  s.ZP.updatedUnsyncedSettings({ disableVisualRefresh: k });
+                                  s.ZP.updatedUnsyncedSettings({ disableVisualRefresh: v });
                               },
-                              checked: k
+                              checked: v
                           })
                       },
                       'refresh-experiment'
                   )
               ))
-            : y.push(
+            : I.push(
                   (0, i.jsx)(
                       a.kSQ,
                       {
                           children: (0, i.jsx)(a.sNh, {
                               id: 'compact-mode',
-                              label: e ? Z.intl.string(Z.t.CTpwDw) : Z.intl.string(Z.t['J/FISU']),
+                              label: e ? S.intl.string(S.t.CTpwDw) : S.intl.string(S.t['J/FISU']),
                               action: () => {
                                   x.jU.updateSetting(!e), (0, c.ZZ)();
                               }
@@ -156,6 +159,6 @@ function m() {
                       'compact-mode'
                   )
               ),
-        y
+        I
     );
 }
