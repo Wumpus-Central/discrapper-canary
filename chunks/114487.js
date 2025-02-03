@@ -15,12 +15,14 @@ var i = n(200651),
 function _(e) {
     let { guildId: t, guildName: n, guildIcon: r, iconSize: a, className: _, animate: p } = e,
         h = (0, o.e7)([u.Z], () => u.Z.isFocused()),
-        m = c.ZP.getGuildIconURL({
-            id: t,
-            icon: r,
-            size: a,
-            canAnimate: p && h
-        });
+        m = (0, c.pU)(r)
+            ? r
+            : c.ZP.getGuildIconURL({
+                  id: t,
+                  icon: r,
+                  size: a,
+                  canAnimate: p && h
+              });
     if (null == m) {
         let e = (0, d.Zg)(n);
         return (0, i.jsx)(l.ZP, {

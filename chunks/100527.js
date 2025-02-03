@@ -316,6 +316,7 @@ var i = (function (e) {
         (e.GUILD_BOOSTING_PLAN_SELECT = 'GUILD_BOOSTING_PLAN_SELECT'),
         (e.MEMBER_SAFETY_PAGE = 'member safety page'),
         (e.GUILD_SETTINGS_MEMBERS_PAGE = 'guild settings members page'),
+        (e.GUILD_SETTINGS_PROFILE_PAGE = 'guild settings profile page'),
         (e.GUILD_MEMBER_MOD_VIEW = 'guild member mod view'),
         (e.GUILD_MEMBER_APPLICATION_REVIEW = 'guild member application review'),
         (e.VOICE_FILTER_POPOUT = 'voice filter popout'),
