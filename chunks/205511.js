@@ -136,14 +136,15 @@ let y = function (e) {
         a = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         o = (0, h.z6)(),
         i = (0, v.j)({ location: b.dr.QUESTS_BAR }),
+        c = r.useMemo(() => (0, f.B3)(t).filter((e) => o.xboxAndPlaystationAccounts.find((t) => t.type === e)), [o.xboxAndPlaystationAccounts, t]),
         {
-            steps: c,
-            hasConnectedAccounts: u,
-            isProgressingQuestForLaunchedGame: p,
-            isQuestComplete: m
+            steps: u,
+            hasConnectedAccounts: p,
+            isProgressingQuestForLaunchedGame: m,
+            isQuestComplete: x
         } = r.useMemo(() => {
             var e;
-            let r = o.xboxAndPlaystationAccounts.length > 0,
+            let r = c.length > 0,
                 a = r && (0, f.Bz)(t),
                 i = t.config.messages.gameTitle,
                 l = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
@@ -170,15 +171,15 @@ let y = function (e) {
                 isProgressingQuestForLaunchedGame: a,
                 isQuestComplete: l
             };
-        }, [o, t, n]);
+        }, [o, c.length, t, n.targetMinutes]);
     return (0, s.jsxs)(j.ZP, {
         heading: T.intl.string(T.t.UPWlJi),
-        steps: c,
+        steps: u,
         children: [
             i && (0, s.jsx)(j.Om, { quest: t }),
-            u &&
-                !p &&
+            p &&
                 !m &&
+                !x &&
                 (0, s.jsx)(N, {
                     useReducedMotion: a,
                     quest: t
