@@ -1,1 +1,4 @@
-e.exports = { card: 'card_f04ae9' };
+e.exports = {
+    container: 'container_f04ae9',
+    card: 'card_f04ae9'
+};
