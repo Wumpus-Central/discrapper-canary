@@ -4,8 +4,8 @@ var l = t(200651),
     i = t(120356),
     s = t.n(i),
     r = t(481060),
-    o = t(70956),
-    u = t(747071),
+    u = t(70956),
+    o = t(747071),
     d = t(586826),
     c = t(622594),
     f = t(174727),
@@ -13,7 +13,7 @@ var l = t(200651),
     h = t(308508);
 let g = {
         startPositionMs: 0,
-        endPositionMs: 2 * (10 * o.Z.Millis.SECOND),
+        endPositionMs: 2 * (10 * u.Z.Millis.SECOND),
         playheadPositionMs: 0
     },
     p = a.memo(function (e) {
@@ -24,14 +24,19 @@ let g = {
             { playheadPositionMs: j, endPositionMs: w, startPositionMs: C } = b,
             S = null != x,
             Z = w - C,
-            M = Z > m.YW * o.Z.Millis.SECOND;
+            M = Z > m.YW * u.Z.Millis.SECOND;
         a.useEffect(() => {
-            null != x &&
-                N({
-                    playheadPositionMs: 0,
-                    endPositionMs: x.duration * o.Z.Millis.SECOND,
-                    startPositionMs: 0
-                });
+            if (null != x)
+                return (
+                    N({
+                        playheadPositionMs: 0,
+                        endPositionMs: x.duration * u.Z.Millis.SECOND,
+                        startPositionMs: 0
+                    }),
+                    () => {
+                        x.pause(), y(!1);
+                    }
+                );
         }, [x]);
         let k = a.useCallback(
                 (e) => {
@@ -45,7 +50,7 @@ let g = {
                         k();
                         return;
                     }
-                    j >= w ? (x.currentTime = (0, f.my)(C)) : (x.currentTime = (0, f.my)(j)), (x.volume = (0, u.Z)(t)), x.play(), y(!0);
+                    j >= w ? (x.currentTime = (0, f.my)(C)) : (x.currentTime = (0, f.my)(j)), (x.volume = (0, o.Z)(t)), x.play(), y(!0);
                 }
             }, [x, w, k, j, v, C, t]),
             I = a.useCallback(
