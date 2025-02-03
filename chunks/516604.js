@@ -8,17 +8,17 @@ var n = r(192379),
     s = r(823961);
 let o = (e) => {
     let { update: t, draw: r, emit: o, tickRate: d, improvePerformance: f, shouldTick: m } = (0, l.Z)(e),
-        h = n.useMemo(() => new i.ZP(), []),
-        p = n.useCallback(
+        p = n.useMemo(() => new i.ZP(), []),
+        h = n.useCallback(
             (e) => {
-                (e.assetMap = h), r(e);
+                (e.assetMap = p), r(e);
             },
-            [h, r]
+            [p, r]
         ),
-        [w, y] = n.useState(!1),
-        v = n.useRef(),
+        [y, v] = n.useState(!1),
+        w = n.useRef(),
         x = n.useRef(),
-        S = n.useRef(s.Z.lastConfetti);
+        E = n.useRef(s.Z.lastConfetti);
     return (
         n.useEffect(() => {
             async function e(e) {
@@ -34,9 +34,9 @@ let o = (e) => {
                                   size: 64,
                                   forcePNG: !0
                               });
-                await h.loadRemoteImage(i, l),
+                await p.loadRemoteImage(i, l),
                     o(i, n),
-                    y(!0),
+                    v(!0),
                     null != x.current && clearTimeout(x.current),
                     (x.current = setTimeout(() => {
                         var e;
@@ -48,32 +48,42 @@ let o = (e) => {
                             });
                     }, 2500));
             }
-            let t = S.current;
-            return null != t && ((S.current = void 0), e(t)), a.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => a.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e);
-        }, [h, o]),
+            let t = E.current;
+            return null != t && ((E.current = void 0), e(t)), a.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => a.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e);
+        }, [p, o]),
         n.useEffect(
             () => () => {
-                null != x.current && clearTimeout(x.current);
+                null != x.current &&
+                    (a.Z.dispatch({
+                        type: 'POTIONS_SET_CONFETTI_MODE',
+                        enabled: !1
+                    }),
+                    clearTimeout(x.current));
             },
             []
         ),
         n.useEffect(() => {
             let e = () => {
-                m.current ? (v.current = setTimeout(e, 1000)) : (y(!1), (v.current = null));
+                m.current ? (w.current = setTimeout(e, 1000)) : (v(!1), (w.current = null));
             };
             return (
-                (v.current = setTimeout(e, 1000)),
+                (w.current = setTimeout(e, 1000)),
                 () => {
-                    null != v.current && clearTimeout(v.current);
+                    null != w.current &&
+                        (a.Z.dispatch({
+                            type: 'POTIONS_SET_CONFETTI_MODE',
+                            enabled: !1
+                        }),
+                        clearTimeout(w.current));
                 }
             );
-        }, [w, m]),
+        }, [y, m]),
         {
             update: t,
-            draw: p,
+            draw: h,
             tickRate: d,
             improvePerformance: f,
-            playing: w
+            playing: y
         }
     );
 };

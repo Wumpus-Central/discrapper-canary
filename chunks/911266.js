@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => x }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(120356),
@@ -23,16 +23,20 @@ let x = (e) => {
         I = l.useRef(0),
         b = l.useRef(null),
         Z = l.useRef(null),
-        N = l.useMemo(() => !n && !v && !E, [v, n, E]);
+        [N, T] = l.useState(!1),
+        S = l.useMemo(() => !n && !v && !E, [v, n, E]);
     if (
         (l.useEffect(() => {
-            E ||
-                (!1 === n && ((I.current = 0), null != b.current && (clearTimeout(b.current), (b.current = null))),
-                (I.current = Date.now()),
-                (b.current = setTimeout(() => {
-                    let e = I.current;
-                    if (0 !== e && !1 !== n && !(Date.now() - e < 1000)) {
-                        if (!v) {
+            n || T(!1), n && v && T(!0);
+        }, [n, v]),
+        l.useEffect(() => {
+            !E &&
+                (N ||
+                    (!1 === n && ((I.current = 0), null != b.current && (clearTimeout(b.current), (b.current = null))),
+                    (I.current = Date.now()),
+                    (b.current = setTimeout(() => {
+                        let e = I.current;
+                        if (0 !== e && !1 !== n && !(Date.now() - e < 1000) && !v) {
                             if (null != Z.current) {
                                 var i;
                                 let { x: e, y: n, width: l, height: a } = null === (i = Z.current) || void 0 === i ? void 0 : i.getBoundingClientRect();
@@ -48,30 +52,30 @@ let x = (e) => {
                                     m.LL.UserTriggered
                                 );
                             } else (0, g.Z)(t, void 0, !0, m.LL.UserTriggered);
+                            T(!0),
+                                c.Z.dispatch({
+                                    type: 'POTIONS_SET_CONFETTI_MODE',
+                                    enabled: !0
+                                });
                         }
-                        c.Z.dispatch({
-                            type: 'POTIONS_SET_CONFETTI_MODE',
-                            enabled: !0
-                        });
-                    }
-                }, 1100)));
-        }, [v, n, t, E]),
+                    }, 1100))));
+        }, [v, N, n, t, E]),
         !(0, f.p7)('Message Confetti Peak') || !(0, _.Uw)(t))
     )
         return null;
-    let T = (0, _.Eq)(t);
-    if (null == T) return null;
+    let j = (0, _.Eq)(t);
+    if (null == j) return null;
     if (a)
         return (0, i.jsx)('span', {
             className: C.hidden,
             'aria-hidden': 'true'
         });
-    let S = T.emoji[0],
-        j =
-            null == S.id
-                ? h.ZP.getURL(S.name)
+    let A = j.emoji[0],
+        y =
+            null == A.id
+                ? h.ZP.getURL(A.name)
                 : u.ZP.getEmojiURL({
-                      id: S.id,
+                      id: A.id,
                       animated: !1,
                       size: 32,
                       forcePNG: !0
@@ -83,20 +87,20 @@ let x = (e) => {
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                src: j,
-                className: r()([C.emoji, C.left, N && C.shy, v && C.confettiMode]),
+                src: y,
+                className: r()([C.emoji, C.left, S && C.shy, v && C.confettiMode]),
                 width: 28
             }),
             (0, i.jsx)('img', {
                 alt: '',
-                src: j,
-                className: r()([C.emoji, C.right, N && C.shy, v && C.confettiMode]),
+                src: y,
+                className: r()([C.emoji, C.right, S && C.shy, v && C.confettiMode]),
                 width: 26
             }),
             (0, i.jsx)('img', {
                 alt: '',
-                src: j,
-                className: r()([C.emoji, C.center, N && C.shy, v && C.confettiMode]),
+                src: y,
+                className: r()([C.emoji, C.center, S && C.shy, v && C.confettiMode]),
                 width: 32
             })
         ]
