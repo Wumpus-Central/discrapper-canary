@@ -562,5 +562,11 @@ let L = {
     fetchRiotGamesLiveClientData: (e, t) => (h.isPlatformEmbedded ? (null == v.riotGames ? Promise.reject(Error('Riot Games module not available')) : v.riotGames.fetchLiveClientData(e, t)) : Promise.reject(Error('Not embedded!'))),
     appViewed() {
         (0, h.isDesktop)() && this.send('APP_VIEWED');
+    },
+    appLoaded() {
+        if ((0, h.isDesktop)())
+            try {
+                this.send('APP_LOADED');
+            } catch (e) {}
     }
 };
