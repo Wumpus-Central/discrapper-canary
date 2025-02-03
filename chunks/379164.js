@@ -26,7 +26,7 @@ let I = {
             }
         }).then(
             () => {
-                if ((this.close(), (0, o.gY)({ location: 'acceptInvite' }) && null != e.guild)) {
+                if ((0, o.gY)({ location: 'acceptInvite' }) && null != e.guild) {
                     if (d) {
                         var t;
                         let n = new Set((0, E.YK)());
@@ -36,8 +36,9 @@ let I = {
                         let t = new Set((0, E._o)());
                         t.add(e.guild.id), c.SE.updateSetting(Array.from(t));
                     }
-                    null != n && n.length > 0 && (0, s.iq)(e.guild.id, { nick: n }), r.Z.updateGuildNotificationSettings(e.guild.id, { muted: I }, _.ZB.Muted);
+                    null != n && n.length > 0 && (0, s.iq)(e.guild.id, { nick: n }), (0, o.m4)({ location: 'acceptInvite' }) && r.Z.updateGuildNotificationSettings(e.guild.id, { muted: I }, _.ZB.Muted);
                 }
+                this.close();
             },
             (e) => {
                 i.Z.dispatch({
