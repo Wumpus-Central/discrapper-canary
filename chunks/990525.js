@@ -38,9 +38,12 @@ let p = (e) => {
                 className: h.iconTreatmentsWrapper,
                 children: [
                     (0, i.jsx)('div', {
-                        className: r()(h.thumbnailWrapper, { [h.unlocked]: !C }),
+                        className: r()(h.thumbnailWrapper, {
+                            [h.unlocked]: !C,
+                            [h.underDevelopment]: a.underDevelopment
+                        }),
                         children: (0, i.jsx)('img', {
-                            className: r()(h.thumbnail, { [h.underDevelopment]: a.underDevelopment }),
+                            className: r()(h.thumbnail),
                             alt: '',
                             src: null == g ? void 0 : g.iconURL,
                             draggable: !1
