@@ -93,13 +93,11 @@ let E = {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(s.zxk, {
-                            look: s.zxk.Looks.BLANK,
-                            className: S.viewSettingsButton,
+                        (0, i.jsx)(s.Qjf, {
                             onClick: () => {
                                 t(), c.Z.open(C.oAB.ACTIVITY_PRIVACY, null, { analyticsLocations: l });
                             },
-                            children: b.intl.string(b.t.g8usuL)
+                            text: b.intl.string(b.t.g8usuL)
                         })
                     ]
                 })

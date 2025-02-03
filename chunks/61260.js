@@ -6,6 +6,5 @@ e.exports = {
     controllerImage: 'controllerImage__49970',
     title: 'title__49970',
     contentContainer: 'contentContainer__49970',
-    toggleContainer: 'toggleContainer__49970',
-    viewSettingsButton: 'viewSettingsButton__49970'
+    toggleContainer: 'toggleContainer__49970'
 };
