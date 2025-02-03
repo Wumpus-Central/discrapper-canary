@@ -63,39 +63,32 @@ function A(e) {
     b(e.userId, e.applicationId), y();
 }
 class N extends (i = s.ZP.Store) {
-    isGameFriend(e, t) {
-        var n;
-        return null != e && null != t && (null === (n = m.get(f(e, t))) || void 0 === n ? void 0 : n.type) === u.OGo.FRIEND;
-    }
     getPendingIncomingCount() {
         return g;
     }
     getPendingOutgoingCount() {
         return E;
     }
-    getGameFriendCount(e) {
-        return null == e ? v : this.getGameFriendsForApplication(e).length;
+    getGameFriendCount() {
+        return v;
     }
     getGameFriendsForApplication(e) {
-        return null == e ? [] : m.values(_(e), !0).filter((e) => e.type === u.OGo.FRIEND);
+        return m.values(_(e), !0).filter((e) => e.type === u.OGo.FRIEND);
     }
     getGameRelationshipsForUser(e) {
-        return null == e ? [] : m.values(p(e), !0);
+        return m.values(p(e), !0);
     }
-    getGameRelationshipsForUserOfType(e, t) {
-        return null == e ? [] : this.getGameRelationshipsForUser(e).filter((e) => e.type === t);
+    getGameRelationshipsForUserByType(e, t) {
+        return this.getGameRelationshipsForUser(e).filter((e) => e.type === t);
     }
     getGameFriendsForUser(e) {
-        return null == e ? [] : m.values(p(e), !0).filter((e) => e.type === u.OGo.FRIEND);
+        return this.getGameRelationshipsForUserByType(e, u.OGo.FRIEND);
     }
-    getGameRelationshipCount(e) {
-        return null == e ? m.size() : m.size(_(e));
+    getGameRelationshipCount() {
+        return m.size();
     }
     getGameRelationships() {
         return m;
-    }
-    getGameRelationship(e, t) {
-        if (null != e && null != t) return m.get(f(e, t));
     }
     getGameRelationshipsVersion() {
         return m.version;

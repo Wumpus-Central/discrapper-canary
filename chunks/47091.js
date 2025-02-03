@@ -1,51 +1,50 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => d });
 var i = n(200651),
     r = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(91896),
-    l = n(298213),
-    u = n(51144),
-    c = n(749302),
-    d = n(388032);
-function f(e) {
+    a = n(481060),
+    s = n(320582),
+    o = n(298213),
+    l = n(51144),
+    u = n(749302),
+    c = n(388032);
+function d(e) {
     let { user: t } = e,
-        f = (0, a.Wu)([o.Z], () => o.Z.getGameFriendsForUser(t.id)),
-        _ = u.ZP.useName(t),
-        p = r.useCallback(
+        d = (0, s.ML)(t.id),
+        f = l.ZP.useName(t),
+        _ = r.useCallback(
             (e) => {
-                let { id: r, name: a } = e;
-                (0, s.ZDy)(async () => {
+                let { id: r, name: s } = e;
+                (0, a.ZDy)(async () => {
                     let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
                     return (n) =>
                         (0, i.jsx)(e, {
-                            header: d.intl.formatToPlainString(d.t['GOFk9/'], { name: _ }),
-                            confirmText: d.intl.string(d.t['cY+Ooa']),
-                            cancelText: d.intl.string(d.t['ETE/oK']),
+                            header: c.intl.formatToPlainString(c.t['GOFk9/'], { name: f }),
+                            confirmText: c.intl.string(c.t['cY+Ooa']),
+                            cancelText: c.intl.string(c.t['ETE/oK']),
                             onConfirm: () =>
-                                l.Z.removeFriend({
+                                o.Z.removeFriend({
                                     userId: t.id,
                                     applicationId: r,
                                     location: 'Context Menu'
                                 }),
                             ...n,
-                            children: (0, i.jsx)(s.Text, {
+                            children: (0, i.jsx)(a.Text, {
                                 variant: 'text-md/normal',
-                                children: d.intl.format(d.t.dsU5bm, {
-                                    name: _,
-                                    gameName: a
+                                children: c.intl.format(c.t.dsU5bm, {
+                                    name: f,
+                                    gameName: s
                                 })
                             })
                         });
                 });
             },
-            [_, t]
+            [f, t]
         );
-    return (0, c.Z)({
+    return (0, u.Z)({
         user: t,
-        gameRelationships: f,
+        gameRelationships: d,
         menuItemId: 'remove-game-friend',
-        label: d.intl.string(d.t['RLcE6+']),
-        onClick: p
+        label: c.intl.string(c.t['RLcE6+']),
+        onClick: _
     });
 }
