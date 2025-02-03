@@ -79,8 +79,7 @@ function E(e) {
             M(),
             (0, i.jsx)(o.Text, {
                 variant: 'text-'.concat(w, '/normal'),
-                color: 'text-muted',
-                className: a()(g.dot, v),
+                className: a()(g.text, g.dot, v),
                 children: m.l
             }),
             k(),

@@ -7,6 +7,7 @@ e.exports = {
     canCopy: 'canCopy__37e49',
     panelTitleContainer: 'panelTitleContainer__37e49',
     panelSubtextContainer: 'panelSubtextContainer__37e49',
+    activityStatusText: 'activityStatusText__37e49',
     customStatus: 'customStatus__37e49',
     strikethrough: 'strikethrough__37e49',
     emoji: 'emoji__37e49',

@@ -199,6 +199,7 @@ class eV extends l.PureComponent {
                     user: r,
                     activities: t,
                     applicationStream: l,
+                    textClassName: ew.activityStatusText,
                     hideTooltip: !0
                 })
             });
