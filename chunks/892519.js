@@ -15,7 +15,8 @@ function p(e) {
     let { components: n, accessory: l } = e,
         { message: i } = (0, o.CJ)(),
         [p, x] = (0, u.e4)(),
-        v = (0, u.$Y)(x);
+        v = (0, u.$Y)(x),
+        f = l.type === a.re.BUTTON;
     return (0, t.jsxs)('div', {
         className: h.section,
         ref: p,
@@ -24,7 +25,7 @@ function p(e) {
                 className: h.children,
                 children: [
                     (0, t.jsx)('div', {
-                        className: h.textChildren,
+                        className: r()(h.textChildren, { [h.centerAlign]: f }),
                         children: n.map((e) => (0, t.jsx)(d.Z, { ...e }, e.id))
                     }),
                     (0, t.jsx)('div', {
