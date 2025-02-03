@@ -1,19 +1,21 @@
 n.r(t),
     n.d(t, {
-        WebAudioAPISound: () => v,
-        WebAudioSound: () => E,
-        playGiftSound: () => m
+        ExperimentalWebAudioSound: () => I,
+        WebAudioAPISound: () => y,
+        WebAudioSound: () => v,
+        playGiftSound: () => g
     }),
     n(47120),
     n(411104);
 var i = n(392711),
     r = n.n(i),
-    a = n(304809),
-    s = n(22382),
-    o = n(747071),
-    l = n(131951),
-    u = n(358085);
-function c(e, t, n) {
+    a = n(292619),
+    s = n(304809),
+    o = n(22382),
+    l = n(747071),
+    u = n(131951),
+    c = n(358085);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,42 +28,42 @@ function c(e, t, n) {
         e
     );
 }
-let d = 'default',
-    f = d,
-    _ = new Map();
-async function p(e) {
+let f = 'default',
+    _ = f,
+    p = new Map();
+async function h(e) {
     let t = await fetch(n(451343)('./'.concat(e, '.mp3'))),
         i = await t.arrayBuffer();
-    return (0, a.N)().decodeAudioData(i);
+    return (0, s.N)().decodeAudioData(i);
 }
-function h(e) {
-    let t = _.get(e);
-    return null == t && ((t = p(e)), _.set(e, t)), t;
+function m(e) {
+    let t = p.get(e);
+    return null == t && ((t = h(e)), p.set(e, t)), t;
 }
-function m(e, t) {
-    let n = new Audio((0, s.Z)(e));
-    (n.volume = (0, o.Z)(t)), n.play();
+function g(e, t) {
+    let n = new Audio((0, o.Z)(e));
+    (n.volume = (0, l.Z)(t)), n.play();
 }
-function g() {
+function E() {
     null != window.navigator.mediaDevices &&
         window.navigator.mediaDevices
             .enumerateDevices()
             .then((e) => {
-                let t = l.Z.getOutputDevices(),
+                let t = u.Z.getOutputDevices(),
                     n = r()(t)
                         .sortBy((e) => e.index)
-                        .findIndex((e) => e.id === l.Z.getOutputDeviceId()),
-                    i = t[l.Z.getOutputDeviceId()],
+                        .findIndex((e) => e.id === u.Z.getOutputDeviceId()),
+                    i = t[u.Z.getOutputDeviceId()],
                     a = e.filter((e) => 'audiooutput' === e.kind && 'communications' !== e.deviceId),
                     s = a[n];
-                null != i && (null == s || s.label !== i.name) && (s = a.find((e) => e.label === i.name)), (f = null != s ? s.deviceId : d);
+                null != i && (null == s || s.label !== i.name) && (s = a.find((e) => e.label === i.name)), (_ = null != s ? s.deviceId : f);
             })
             .catch(() => {
-                f = d;
+                _ = f;
             });
 }
-u.isPlatformEmbedded && (l.Z.addChangeListener(g), g());
-let E = class {
+c.isPlatformEmbedded && (u.Z.addChangeListener(E), E());
+let v = class {
         get volume() {
             return this._volume;
         }
@@ -113,7 +115,7 @@ let E = class {
                               let i = new Audio();
                               (i.src = n(451343)('./'.concat(this.name, '.mp3'))),
                                   (i.onloadeddata = () => {
-                                      (i.volume = Math.min((l.Z.getOutputVolume() / 100) * this._volume, 1)), u.isPlatformEmbedded && i.setSinkId(f), e(i);
+                                      (i.volume = Math.min((u.Z.getOutputVolume() / 100) * this._volume, 1)), c.isPlatformEmbedded && i.setSinkId(_), e(i);
                                   }),
                                   (i.onerror = () => t(Error('could not play audio'))),
                                   (i.onended = () => this.destroyAudio()),
@@ -123,10 +125,10 @@ let E = class {
             );
         }
         constructor(e, t, n) {
-            c(this, 'name', void 0), c(this, '_volume', void 0), c(this, '_audio', void 0), (this.name = e), (this._volume = n);
+            d(this, 'name', void 0), d(this, '_volume', void 0), d(this, '_audio', void 0), (this.name = e), (this._volume = n);
         }
     },
-    v = class {
+    y = class {
         get volume() {
             return this._volume;
         }
@@ -188,15 +190,15 @@ let E = class {
         }
         async ensureAudio() {
             if (null == this._ensureAudioPromise) {
-                let e = Math.min((l.Z.getOutputVolume() / 100) * this._volume, 1);
-                this._ensureAudioPromise = h(this.name)
+                let e = Math.min((u.Z.getOutputVolume() / 100) * this._volume, 1);
+                this._ensureAudioPromise = m(this.name)
                     .then((t) =>
                         null == t
                             ? Promise.reject(Error('Failed to load audio: '.concat(this.name)))
-                            : ((this._audioContext = (0, a.N)()),
+                            : ((this._audioContext = (0, s.N)()),
                               (this._gain = new GainNode(this._audioContext)),
                               (this._gain.gain.value = e),
-                              u.isPlatformEmbedded && this._audioContext.setSinkId(f),
+                              c.isPlatformEmbedded && this._audioContext.setSinkId(_),
                               (this._buffer = t),
                               (this._source = this._audioContext.createBufferSource()),
                               (this._source.buffer = t),
@@ -214,6 +216,38 @@ let E = class {
             return await this._ensureAudioPromise;
         }
         constructor(e, t, n) {
-            c(this, 'name', void 0), c(this, '_volume', void 0), c(this, '_audioContext', void 0), c(this, '_buffer', void 0), c(this, '_source', void 0), c(this, '_gain', void 0), c(this, '_state', void 0), c(this, '_ensureAudioPromise', void 0), (this.name = e), (this._volume = n), (this._audioContext = null), (this._buffer = null), (this._source = null), (this._state = 'stopped'), (this._ensureAudioPromise = null);
+            d(this, 'name', void 0), d(this, '_volume', void 0), d(this, '_audioContext', void 0), d(this, '_buffer', void 0), d(this, '_source', void 0), d(this, '_gain', void 0), d(this, '_state', void 0), d(this, '_ensureAudioPromise', void 0), (this.name = e), (this._volume = n), (this._audioContext = null), (this._buffer = null), (this._source = null), (this._state = 'stopped'), (this._ensureAudioPromise = null);
         }
     };
+class I {
+    shouldUseWebAudioApi() {
+        return (0, a.w)({ location: 'SoundUtils' });
+    }
+    getActiveSoundAPI() {
+        return this.shouldUseWebAudioApi() ? this.webAudioAPISound : this.webAudioSound;
+    }
+    get volume() {
+        return this.getActiveSoundAPI().volume;
+    }
+    set volume(e) {
+        null != this.webAudioSound && (this.webAudioSound.volume = e), null != this.webAudioAPISound && (this.webAudioAPISound.volume = e);
+    }
+    loop() {
+        this.getActiveSoundAPI().loop();
+    }
+    play() {
+        this.getActiveSoundAPI().play();
+    }
+    pause() {
+        this.getActiveSoundAPI().pause();
+    }
+    stop() {
+        this.getActiveSoundAPI().stop();
+    }
+    playWithListener() {
+        return this.getActiveSoundAPI().playWithListener();
+    }
+    constructor(e, t, n) {
+        d(this, 'webAudioSound', void 0), d(this, 'webAudioAPISound', void 0), (this.webAudioSound = new v(e, t, n)), (this.webAudioAPISound = new y(e, t, n)), (this.volume = n);
+    }
+}
