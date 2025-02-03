@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(724458);
+n.d(t, { Z: () => y }), n(724458);
 var i,
     l = n(442837),
     r = n(570140),
@@ -10,7 +10,7 @@ var i,
     c = n(539573),
     h = n(825829),
     g = n(981631);
-function C(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,10 +23,10 @@ function C(e, t, n) {
         e
     );
 }
-let f = {},
+let C = {},
     p = 0,
-    E = {},
     v = {},
+    E = {},
     _ = (e, t) => {
         let n = (0, s.hc)(e),
             i = {
@@ -35,13 +35,13 @@ let f = {},
                 messageData: e,
                 errorMessage: (0, c.uF)(e, t)
             };
-        (f[n] = i), p++;
+        (C[n] = i), p++;
     },
-    I = (e) => f[e],
-    S = (e) => {
-        null != f[e] && delete f[e], p++;
+    I = (e) => C[e],
+    m = (e) => {
+        null != C[e] && delete C[e], p++;
     };
-function m(e) {
+function S(e) {
     let { messageData: t, errorResponseBody: n } = e;
     return _(t, n), !0;
 }
@@ -50,7 +50,7 @@ function T(e) {
     let { channelId: n, messages: i } = e,
         l = null === (t = o.Z.getChannel(n)) || void 0 === t ? void 0 : t.getGuildId();
     if (null == l) return !1;
-    let r = v[l],
+    let r = E[l],
         s = i.reduce((e, t) => {
             var n;
             return t.type === g.uaV.AUTO_MODERATION_ACTION &&
@@ -65,17 +65,17 @@ function T(e) {
                     : void 0
                 : e;
         }, r);
-    return null != s && v[l] !== s && ((v[l] = s), !0);
+    return null != s && E[l] !== s && ((E[l] = s), !0);
 }
 class N extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(d.Z), null != e && ((f = e.automodFailedMessages), (E = e.mentionRaidDetectionByGuild));
+        this.waitFor(d.Z), null != e && ((C = e.automodFailedMessages), (v = e.mentionRaidDetectionByGuild));
     }
     getState() {
         return {
-            automodFailedMessages: f,
-            mentionRaidDetectionByGuild: E,
-            lastIncidentAlertMessage: v
+            automodFailedMessages: C,
+            mentionRaidDetectionByGuild: v,
+            lastIncidentAlertMessage: E
         };
     }
     getMessage(e) {
@@ -87,17 +87,17 @@ class N extends (i = l.ZP.PersistedStore) {
     }
     getMentionRaidDetected(e) {
         var t;
-        return null !== (t = E[e]) && void 0 !== t ? t : null;
+        return null !== (t = v[e]) && void 0 !== t ? t : null;
     }
     getLastIncidentAlertMessage(e) {
         var t;
-        return null !== (t = v[e]) && void 0 !== t ? t : null;
+        return null !== (t = E[e]) && void 0 !== t ? t : null;
     }
 }
-C(N, 'displayName', 'GuildAutomodMessageStore'), C(N, 'persistKey', 'GuildAutomodMessages');
-let O = new N(r.Z, {
+f(N, 'displayName', 'GuildAutomodMessageStore'), f(N, 'persistKey', 'GuildAutomodMessages');
+let y = new N(r.Z, {
     CONNECTION_OPEN: function (e) {
-        return (f = {}), p++, !0;
+        return (C = {}), p++, !0;
     },
     LOAD_MESSAGES_SUCCESS: T,
     LOCAL_MESSAGES_LOADED: T,
@@ -105,25 +105,25 @@ let O = new N(r.Z, {
         let { guildId: t, message: n } = e;
         if (null == t || n.type !== g.uaV.AUTO_MODERATION_ACTION) return !1;
         let i = (0, a.e5)(n);
-        return !!(0, h.nY)(i) && !!(0, h.OP)(i) && ((v[t] = i.id), !0);
+        return !!(0, h.nY)(i) && !!(0, h.OP)(i) && ((E[t] = i.id), !0);
     },
-    MESSAGE_SEND_FAILED_AUTOMOD: m,
-    MESSAGE_EDIT_FAILED_AUTOMOD: m,
+    MESSAGE_SEND_FAILED_AUTOMOD: S,
+    MESSAGE_EDIT_FAILED_AUTOMOD: S,
     REMOVE_AUTOMOD_MESSAGE_NOTICE: function (e) {
         let { messageId: t } = e;
-        return S(t), !0;
+        return m(t), !0;
     },
     MESSAGE_END_EDIT: function (e) {
         let { response: t } = e;
         if ((null == t ? void 0 : t.body) == null || t.body.code === g.evJ.AUTOMOD_MESSAGE_BLOCKED) return !1;
         let n = t.body.id;
         if (null == n) return !1;
-        S(n);
+        m(n);
     },
     AUTO_MODERATION_MENTION_RAID_DETECTION: function (e) {
         let { guildId: t, decisionId: n, suspiciousMentionActivityUntil: i } = e;
         return (
-            (E[t] = {
+            (v[t] = {
                 guildId: t,
                 decisionId: n,
                 suspiciousMentionActivityUntil: i
@@ -133,6 +133,6 @@ let O = new N(r.Z, {
     },
     AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS: function (e) {
         let { guildId: t } = e;
-        return delete E[t], !0;
+        return delete v[t], !0;
     }
 });

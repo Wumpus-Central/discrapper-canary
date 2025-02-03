@@ -33,8 +33,8 @@ function C(e) {
         { type: C, placeholder: g, maxValues: j, disabled: N } = n,
         [S, E] = r.useState(!1),
         [I, Z] = r.useState(!1),
-        [b, T] = r.useState(new Map(null == f ? void 0 : f.map((e) => [e.value, e]))),
-        [y, L] = r.useState(new Set(b.keys())),
+        [T, b] = r.useState(new Map(null == f ? void 0 : f.map((e) => [e.value, e]))),
+        [y, L] = r.useState(new Set(T.keys())),
         [k, _] = r.useState(() => (null != f ? f : []).map((e) => e.value)),
         [R, P] = r.useState(0);
     r.useEffect(() => {
@@ -42,7 +42,7 @@ function C(e) {
         if (e.every((e) => k.includes(e)) && k.every((n) => e.includes(n))) return;
         _(e);
         let n = new Map(null == f ? void 0 : f.map((e) => [e.value, e]));
-        T(n), L(new Set(n.keys())), P((e) => e + 1);
+        b(n), L(new Set(n.keys())), P((e) => e + 1);
     }, [f, k]);
     let {
             state: O,
@@ -52,25 +52,25 @@ function C(e) {
             error: U
         } = (0, d.Ee)(n, {
             type: C,
-            selectedOptions: Array.from(b.values())
+            selectedOptions: Array.from(T.values())
         }),
         H = M === m.gH.LOADING;
     r.useEffect(() => {
         if ((null == O ? void 0 : O.type) === u.re.USER_SELECT || (null == O ? void 0 : O.type) === u.re.ROLE_SELECT || (null == O ? void 0 : O.type) === u.re.MENTIONABLE_SELECT || (null == O ? void 0 : O.type) === u.re.CHANNEL_SELECT) {
             let e = new Map(O.selectedOptions.map((e) => [e.value, e]));
-            T(e), L(new Set(e.keys()));
+            b(e), L(new Set(e.keys()));
         }
     }, [O]);
     let F = r.useCallback(() => {
         A({
             type: C,
-            selectedOptions: Array.from(b.values())
-        }) && L(new Set(b.keys()));
-    }, [A, C, b]);
+            selectedOptions: Array.from(T.values())
+        }) && L(new Set(T.keys()));
+    }, [A, C, T]);
     r.useEffect(() => {
-        !(S || I || (b.size === y.size && Array.from(b.keys()).every((e) => y.has(e)))) && F();
-    }, [S, I, y, b, F]);
-    let D = 0 === b.size || S,
+        !(S || I || (T.size === y.size && Array.from(T.keys()).every((e) => y.has(e)))) && F();
+    }, [S, I, y, T, F]);
+    let D = 0 === T.size || S,
         G = {
             isDisabled: N || w,
             wrapperClassName: p.select,
@@ -107,14 +107,14 @@ function C(e) {
                               o.VcW,
                               {
                                   className: p.badges,
-                                  value: Array.from(b.values()),
+                                  value: Array.from(T.values()),
                                   onChange: (e) => {
-                                      S || Z(!0), T(new Map(e.map((e) => [e.value, e])));
+                                      S || Z(!0), b(new Map(e.map((e) => [e.value, e])));
                                   },
                                   multi: !0,
                                   inputClassNames: s()({
-                                      [p.soloInput]: 0 === b.size,
-                                      [p.inlineInput]: b.size > 0,
+                                      [p.soloInput]: 0 === T.size,
+                                      [p.inlineInput]: T.size > 0,
                                       [p.hidden]: !D
                                   }),
                                   closeOnSelect: !1,
@@ -127,8 +127,8 @@ function C(e) {
                               o.VcW,
                               {
                                   className: (p.badges, p.singleSelect),
-                                  value: [...b.values()][0],
-                                  onChange: (e) => T(null != e ? new Map([[e.value, e]]) : new Map()),
+                                  value: [...T.values()][0],
+                                  onChange: (e) => b(null != e ? new Map([[e.value, e]]) : new Map()),
                                   clearable: !0,
                                   centerCaret: !0,
                                   ...G

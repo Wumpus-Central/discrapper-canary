@@ -1,59 +1,59 @@
-n.d(l, { Z: () => m });
-var i = n(200651);
-n(192379);
-var t = n(692547),
-    a = n(481060),
-    s = n(410030),
-    r = n(686546),
-    c = n(60034),
-    d = n(686369),
-    o = n(388032),
-    u = n(950039);
+s.d(l, { Z: () => m });
+var a = s(200651);
+s(192379);
+var n = s(692547),
+    i = s(481060),
+    t = s(410030),
+    r = s(686546),
+    c = s(60034),
+    d = s(686369),
+    o = s(388032),
+    u = s(950039);
 function m(e) {
-    let { name: l, onRetry: n } = e,
-        m = (0, s.ZP)(),
-        h = (0, a.dQu)(t.Z.colors.BG_BASE_TERTIARY),
+    let { name: l, onRetry: s } = e,
+        m = (0, t.ZP)(),
+        h = (0, i.dQu)(n.Z.colors.BG_BASE_TERTIARY),
         x = (0, d.d)(m, h.hex()),
         j = null != l ? l : o.intl.string(o.t.DmIUGB);
-    return (0, i.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: u.container,
         children: [
-            (0, i.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: u.banner,
                 style: { background: x }
             }),
-            (0, i.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: u.avatarContainer,
-                children: (0, i.jsx)(r.ZP, {
+                children: (0, a.jsx)(r.ZP, {
                     mask: r.QS.CLAN_ICON,
                     width: 70,
                     height: 70,
-                    children: (0, i.jsx)('div', {
+                    children: (0, a.jsx)('div', {
                         className: u.avatarWrapper,
-                        children: (0, i.jsx)(c.R, {
+                        children: (0, a.jsx)(c.R, {
                             guildName: j,
                             iconSize: 64
                         })
                     })
                 })
             }),
-            (0, i.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: u.header,
                 children: [
-                    (0, i.jsx)(a.X6q, {
+                    (0, a.jsx)(i.X6q, {
                         variant: 'heading-lg/medium',
                         color: 'header-primary',
                         children: j
                     }),
-                    (0, i.jsxs)(a.P3F, {
+                    (0, a.jsxs)(i.P3F, {
                         className: u.error,
-                        onClick: n,
+                        onClick: s,
                         children: [
-                            (0, i.jsx)(a.P4T, {
+                            (0, a.jsx)(i.P4T, {
                                 size: 'sm',
                                 color: 'currentColor'
                             }),
-                            (0, i.jsx)(a.Text, {
+                            (0, a.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-warning',
                                 children: o.intl.string(o.t.tmGHjY)

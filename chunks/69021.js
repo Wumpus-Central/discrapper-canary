@@ -21,13 +21,13 @@ function d() {
                 isDeveloper: c.Z.isDeveloper
             };
         }),
-        { horizontalSpacing: d, verticalSpacing: g, maxHorizontalSpacing: h, maxVerticalSpacing: p } = (0, s.i)(),
+        { horizontalSpacing: d, verticalSpacing: g, maxHorizontalSpacing: p, maxVerticalSpacing: h } = (0, s.i)(),
         { setHorizontalSpacing: x, setVerticalSpacing: j } = s.i.getState(),
-        S = [];
+        m = [];
     return (
         t &&
             n &&
-            (S.push(
+            (m.push(
                 (0, i.jsx)(
                     l.S89,
                     {
@@ -42,7 +42,7 @@ function d() {
                 )
             ),
             e &&
-                (S.push(
+                (m.push(
                     (0, i.jsx)(
                         l.II_,
                         {
@@ -54,7 +54,7 @@ function d() {
                                     ref: t,
                                     value: d,
                                     minValue: 0,
-                                    maxValue: h,
+                                    maxValue: p,
                                     onChange: (e) => x(e),
                                     renderValue: (e) => ''.concat(Math.round(e), 'px'),
                                     'aria-label': 'Horizontal Spacing'
@@ -63,7 +63,7 @@ function d() {
                         'horizontal-spacing'
                     )
                 ),
-                S.push(
+                m.push(
                     (0, i.jsx)(
                         l.II_,
                         {
@@ -75,7 +75,7 @@ function d() {
                                     ref: t,
                                     value: g,
                                     minValue: 0,
-                                    maxValue: p,
+                                    maxValue: h,
                                     onChange: (e) => j(e),
                                     'aria-label': 'Horizontal Spacing',
                                     renderValue: (e) => ''.concat(Math.round(e), 'px')
@@ -84,6 +84,6 @@ function d() {
                         'vertical-spacing'
                     )
                 ))),
-        0 === S.length ? null : (0, i.jsx)(i.Fragment, { children: S })
+        0 === m.length ? null : (0, i.jsx)(i.Fragment, { children: m })
     );
 }

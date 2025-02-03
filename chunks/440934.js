@@ -10,8 +10,8 @@ var o = n(481060),
     r = n(970184),
     _ = n(471073),
     c = n(293979),
-    s = n(954654),
-    l = n(388032),
+    l = n(954654),
+    s = n(388032),
     d = n(517753);
 function u(e) {
     let { title: t, onClose: n, transitionState: u } = e,
@@ -55,13 +55,13 @@ function u(e) {
                         (0, i.jsx)(o.Wn, {
                             messageType: o.QYI.WARNING,
                             className: d.submissionWarning,
-                            children: l.intl.format(l.t['dSTy//'], { applicationName: f })
+                            children: s.intl.format(s.t['dSTy//'], { applicationName: f })
                         }),
                         (0, i.jsx)(o.hjN, {
                             children: (0, i.jsx)(r.Il, {
                                 modal: e,
                                 validators: C,
-                                children: (0, s.xX)(p)
+                                children: (0, l.xX)(p)
                             })
                         })
                     ]
@@ -73,13 +73,13 @@ function u(e) {
                             color: o.zxk.Colors.BRAND,
                             size: o.zxk.Sizes.MEDIUM,
                             submitting: m === _.i.IN_FLIGHT,
-                            children: l.intl.string(l.t.geKm7u)
+                            children: s.intl.string(s.t.geKm7u)
                         }),
                         (0, i.jsx)(o.zxk, {
                             look: o.zxk.Looks.LINK,
                             color: o.zxk.Colors.PRIMARY,
                             onClick: n,
-                            children: l.intl.string(l.t['ETE/oK'])
+                            children: s.intl.string(s.t['ETE/oK'])
                         })
                     ]
                 })

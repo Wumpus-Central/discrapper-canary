@@ -6,9 +6,9 @@ var o,
     r = t(990547),
     i = t(544891),
     a = t(570140),
-    l = t(314897),
-    s = t(573261),
-    c = t(815660),
+    s = t(314897),
+    c = t(573261),
+    l = t(815660),
     d = t(981631),
     u = (((o = {}).USER_ACTION_REQUIRED = 'user_action_required'), (o.USER_SETTINGS_UPDATE = 'user_settings_update'), (o.GUILD_PHONE_REQUIRED = 'guild_phone_required'), (o.MFA_PHONE_UPDATE = 'mfa_phone_update'), (o.CONTACT_SYNC = 'contact_sync'), o);
 let _ = {
@@ -30,7 +30,7 @@ let _ = {
         }),
     resendCode(e) {
         let n = {},
-            t = l.default.getFingerprint();
+            t = s.default.getFingerprint();
         return (
             null != t && '' !== t && (n['X-Fingerprint'] = t),
             i.tn.post({
@@ -98,9 +98,9 @@ let _ = {
         let t = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             i = {},
-            u = l.default.getFingerprint();
+            u = s.default.getFingerprint();
         null != u && '' !== u && (i['X-Fingerprint'] = u), o && (i.authorization = '');
-        let _ = await s.Z.post({
+        let _ = await c.Z.post({
             url: d.ANM.VERIFY_PHONE,
             headers: i,
             body: {
@@ -115,7 +115,7 @@ let _ = {
             t &&
                 a.Z.dispatch({
                     type: 'MODAL_POP',
-                    key: c.M
+                    key: l.M
                 }),
             _.body
         );

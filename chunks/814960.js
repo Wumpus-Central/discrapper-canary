@@ -1,5 +1,5 @@
 t.d(n, {
-    Gi: () => c,
+    Gi: () => l,
     YJ: () => d,
     zY: () => u
 });
@@ -8,18 +8,18 @@ t(192379);
 var r = t(481060),
     i = t(476770),
     a = t(592286),
-    l = t(388032),
-    s = t(484979);
-function c(e) {
-    let { value: n, placeholder: t, onChange: i, disabled: l, autofocus: s, className: c } = e;
+    s = t(388032),
+    c = t(484979);
+function l(e) {
+    let { value: n, placeholder: t, onChange: i, disabled: s, autofocus: c, className: l } = e;
     return (0, o.jsx)(r.oil, {
-        inputClassName: c,
+        inputClassName: l,
         maxLength: a.tL,
         value: null != n ? n : '',
         placeholder: t,
         onChange: i,
-        disabled: l,
-        autoFocus: s
+        disabled: s,
+        autoFocus: c
     });
 }
 function d(e) {
@@ -27,7 +27,7 @@ function d(e) {
     return (0, o.jsx)(i.CA, {
         title: n.label,
         children: (0, o.jsx)(r.Kx8, {
-            className: s.disabledFieldBackground,
+            className: c.disabledFieldBackground,
             value: n.response,
             disabled: !0,
             autoFocus: !0,
@@ -39,11 +39,11 @@ function u(e) {
     let { formField: n, autofocus: t, onChange: r } = e;
     return (0, o.jsx)(i.hK, {
         title: n.label,
-        children: (0, o.jsx)(c, {
+        children: (0, o.jsx)(l, {
             onChange: r,
             value: n.response,
             autofocus: t,
-            placeholder: l.intl.string(l.t['Sqn+Wl'])
+            placeholder: s.intl.string(s.t['Sqn+Wl'])
         })
     });
 }

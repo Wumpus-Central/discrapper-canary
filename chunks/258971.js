@@ -1,10 +1,10 @@
 if (
     (n.d(t, {
-        Uc: () => I,
-        Xh: () => f,
-        aQ: () => s,
-        m_: () => u,
-        z8: () => E
+        Uc: () => S,
+        Xh: () => I,
+        aQ: () => d,
+        m_: () => c,
+        z8: () => s
     }),
     n(610138),
     n(216116),
@@ -13,45 +13,45 @@ if (
     n(47120),
     12633 == n.j)
 )
-    var i,
-        o = n(512969);
+    var l,
+        i = n(512969);
 var a = n(972959),
-    l = n(264043),
-    r = n(34674),
-    c = n(703656),
-    _ = n(979007),
-    d = n(981631),
-    u = (((i = {}).HOME = 'home'), (i.SEARCH = 'search'), (i.APPLICATION = 'application'), (i.CATEGORY = 'category'), i);
-let s = (0, a.H)(() => ({})),
-    E = (0, a.H)(() => ({
+    r = n(264043),
+    o = n(34674),
+    E = n(703656),
+    u = n(979007),
+    _ = n(981631),
+    c = (((l = {}).HOME = 'home'), (l.SEARCH = 'search'), (l.APPLICATION = 'application'), (l.CATEGORY = 'category'), l);
+let d = (0, a.H)(() => ({})),
+    s = (0, a.H)(() => ({
         sessionId: null,
         guildId: null,
         entrypoint: null,
         trackedOpenedFromExternalEntrypoint: !1
     }));
-function I() {
+function S() {
     let {
         location: { state: e }
-    } = (0, c.s1)();
+    } = (0, E.s1)();
     return null == e ? void 0 : e.previousView;
 }
-function f() {
+function I() {
     var e, t, n;
     let {
-        location: { pathname: i, search: a }
-    } = (0, c.s1)();
+        location: { pathname: l, search: a }
+    } = (0, E.s1)();
     if (
         null !=
-        (0, o.LX)(i, {
-            path: d.Z5c.GLOBAL_DISCOVERY_APPS,
+        (0, i.LX)(l, {
+            path: _.Z5c.GLOBAL_DISCOVERY_APPS,
             exact: !0
         })
     )
         return { type: 'home' };
     if (
         null !=
-        (0, o.LX)(i, {
-            path: d.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH,
+        (0, i.LX)(l, {
+            path: _.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH,
             exact: !0
         })
     ) {
@@ -59,33 +59,33 @@ function f() {
             t = { type: 'search' },
             n = e.get('q');
         null != n && '' !== n && (t.query = n);
-        let i = Number(e.get('category_id'));
-        Number.isInteger(i) && i !== r.MU && (t.categoryId = i.toString());
-        let o = Number(e.get('page'));
-        return null != o && o > 1 && (t.page = o), t;
+        let l = Number(e.get('category_id'));
+        Number.isInteger(l) && l !== o.MU && (t.categoryId = l.toString());
+        let i = Number(e.get('page'));
+        return null != i && i > 1 && (t.page = i), t;
     }
-    let u = (0, o.LX)(i, {
-            path: [d.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId')],
+    let c = (0, i.LX)(l, {
+            path: [_.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId')],
             exact: !0
         }),
-        { categoryId: s } = null !== (e = null == u ? void 0 : u.params) && void 0 !== e ? e : {};
-    if (null != u && null != s)
+        { categoryId: d } = null !== (e = null == c ? void 0 : c.params) && void 0 !== e ? e : {};
+    if (null != c && null != d)
         return {
             type: 'category',
-            categoryId: s
+            categoryId: d
         };
-    let E = (0, o.LX)(i, {
-            path: [d.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'), d.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', ':section'), d.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')],
+    let s = (0, i.LX)(l, {
+            path: [_.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'), _.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', ':section'), _.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')],
             exact: !0
         }),
-        { applicationId: I, section: f, skuId: T } = null !== (t = null == E ? void 0 : E.params) && void 0 !== t ? t : {};
-    if (null != E && null != I) {
-        let e = null === (n = l.Z.getApplication(I)) || void 0 === n ? void 0 : n.name;
+        { applicationId: S, section: I, skuId: T } = null !== (t = null == s ? void 0 : s.params) && void 0 !== t ? t : {};
+    if (null != s && null != S) {
+        let e = null === (n = r.Z.getApplication(S)) || void 0 === n ? void 0 : n.name;
         return {
             type: 'application',
-            applicationId: I,
+            applicationId: S,
             applicationName: e,
-            section: null != f ? f : null != T ? _.GlobalDiscoveryAppsSections.STORE : _.GlobalDiscoveryAppsSections.ABOUT
+            section: null != I ? I : null != T ? u.GlobalDiscoveryAppsSections.STORE : u.GlobalDiscoveryAppsSections.ABOUT
         };
     }
 }

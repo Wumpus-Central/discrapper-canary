@@ -2,8 +2,8 @@ t.d(n, { Z: () => c });
 var i = t(200651);
 t(192379);
 var l = t(481060),
-    o = t(596454),
-    s = t(318766),
+    s = t(596454),
+    o = t(318766),
     r = t(907040),
     a = t(273039),
     d = t(185923);
@@ -26,7 +26,7 @@ function c(e) {
                 ? null
                 : () => {
                       var e;
-                      return (0, i.jsx)(o.Z, {
+                      return (0, i.jsx)(s.Z, {
                           className: t,
                           animated: null !== (e = c.animated) && void 0 !== e && e,
                           emojiId: c.id,
@@ -51,7 +51,7 @@ function c(e) {
             },
             children: (e, t) => {
                 let { isShown: l } = t;
-                return (0, i.jsx)(s.Z, {
+                return (0, i.jsx)(o.Z, {
                     ...e,
                     tabIndex: 0,
                     active: l,

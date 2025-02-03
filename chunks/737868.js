@@ -1,70 +1,70 @@
-l.d(n, { default: () => B }), l(47120), l(653041);
-var i = l(200651),
-    t = l(192379),
-    o = l(442837),
-    a = l(433517),
-    s = l(481060),
-    r = l(596454),
-    c = l(410575),
-    d = l(933557),
-    u = l(471445),
-    m = l(600164),
-    h = l(313201),
-    x = l(318766),
-    j = l(907040),
-    f = l(273039),
-    v = l(339085),
-    C = l(592125),
-    _ = l(984933),
-    N = l(699516),
-    p = l(594174),
-    g = l(700785),
-    k = l(995532),
-    b = l(514698),
-    E = l(845606),
-    T = l(981631),
-    S = l(185923),
-    Z = l(388032),
-    z = l(168427);
-let B = (e) => {
-    var n, l;
-    let { guildId: B, welcomeChannel: I, transitionState: L, onSave: P, onClose: A } = e,
+n.d(l, { default: () => I }), n(47120), n(653041);
+var i = n(200651),
+    t = n(192379),
+    o = n(442837),
+    a = n(433517),
+    s = n(481060),
+    r = n(596454),
+    d = n(410575),
+    c = n(933557),
+    u = n(471445),
+    m = n(600164),
+    h = n(313201),
+    x = n(318766),
+    j = n(907040),
+    f = n(273039),
+    C = n(339085),
+    _ = n(592125),
+    p = n(984933),
+    v = n(699516),
+    N = n(594174),
+    g = n(700785),
+    k = n(995532),
+    b = n(514698),
+    E = n(845606),
+    T = n(981631),
+    S = n(185923),
+    Z = n(388032),
+    z = n(168427);
+let I = (e) => {
+    var l, n;
+    let { guildId: I, welcomeChannel: L, transitionState: B, onSave: P, onClose: A } = e,
         H = (0, h.Dt)(),
-        [y, D] = t.useState(null != I ? I.channel_id : null),
-        [M, R] = t.useState(null != I ? I.description : ''),
-        [w, O] = t.useState(
-            null != I
+        [y, D] = t.useState(null != L ? L.channel_id : null),
+        [R, w] = t.useState(null != L ? L.description : ''),
+        [M, O] = t.useState(
+            null != L
                 ? {
-                      id: I.emoji_id,
-                      name: I.emoji_name
+                      id: L.emoji_id,
+                      name: L.emoji_name
                   }
                 : null
         ),
         [K, W] = t.useState(!1),
-        Y = (0, o.e7)([v.ZP], () => ((null == w ? void 0 : w.id) != null ? v.ZP.getUsableCustomEmojiById(w.id) : null)),
-        q = (0, o.e7)([_.ZP], () => _.ZP.getChannels(B)[_.sH], [B]),
-        G = (0, o.e7)([k.Z], () => k.Z.get(B)),
-        V = null !== (l = null == G ? void 0 : null === (n = G.welcome_channels) || void 0 === n ? void 0 : n.map((e) => e.channel_id)) && void 0 !== l ? l : [],
+        Y = (0, o.e7)([C.ZP], () => ((null == M ? void 0 : M.id) != null ? C.ZP.getUsableCustomEmojiById(M.id) : null)),
+        q = (0, o.e7)([p.ZP], () => p.ZP.getChannels(I)[p.sH], [I]),
+        G = (0, o.e7)([k.Z], () => k.Z.get(I)),
+        V = null !== (n = null == G ? void 0 : null === (l = G.welcome_channels) || void 0 === l ? void 0 : l.map((e) => e.channel_id)) && void 0 !== n ? n : [],
         [X, $] = t.useState(!1);
     t.useEffect(() => {
         a.K.get(E.S) || setTimeout(() => $(!0), 300);
     }, []);
     let U = [];
     q.forEach((e) => {
-        let { channel: n } = e;
-        g.Uu(T.Plq.VIEW_CHANNEL, n) &&
-            ((null == I ? void 0 : I.channel_id) === n.id || !V.includes(n.id)) &&
+        let { channel: l } = e;
+        g.Uu(T.Plq.VIEW_CHANNEL, l) &&
+            ((null == L ? void 0 : L.channel_id) === l.id || !V.includes(l.id)) &&
             U.push({
-                value: n.id,
-                label: (0, d.F6)(n, p.default, N.Z)
+                value: l.id,
+                label: (0, c.F6)(l, N.default, v.Z)
             });
     });
     let F = () => {
             $(!1), A();
         },
-        J = t.useCallback((e) => R(e), []),
+        J = t.useCallback((e) => w(e), []),
         Q = (e) => {
-            var n, l, i;
+            var l, n, i;
             if (null == e) {
                 O(null);
                 return;
@@ -72,8 +72,8 @@ let B = (e) => {
             O(
                 null != e.id
                     ? {
-                          id: null !== (n = e.id) && void 0 !== n ? n : null,
-                          name: null !== (l = e.name) && void 0 !== l ? l : null
+                          id: null !== (l = e.id) && void 0 !== l ? l : null,
+                          name: null !== (n = e.name) && void 0 !== n ? n : null
                       }
                     : {
                           id: null,
@@ -84,10 +84,10 @@ let B = (e) => {
         ee = t.useCallback(() => {
             a.K.set(E.S, !0), $(!1);
         }, []);
-    return (0, i.jsx)(c.Z, {
+    return (0, i.jsx)(d.Z, {
         page: T.ZY5.CHANNEL_WELCOME_CREATE_MODAL,
         children: (0, i.jsxs)(s.Y0X, {
-            transitionState: L,
+            transitionState: B,
             'aria-labelledby': H,
             children: [
                 (0, i.jsxs)('div', {
@@ -111,11 +111,11 @@ let B = (e) => {
                                     onChange: (e) => D(e),
                                     value: y,
                                     renderOptionPrefix: (e) => {
-                                        var n;
+                                        var l;
                                         if (null === e) return null;
-                                        let l = e.value,
-                                            t = C.Z.getChannel(l),
-                                            o = null !== (n = (0, u.KS)(t)) && void 0 !== n ? n : s.VL1;
+                                        let n = e.value,
+                                            t = _.Z.getChannel(n),
+                                            o = null !== (l = (0, u.KS)(t)) && void 0 !== l ? l : s.VL1;
                                         return (0, i.jsx)(o, {
                                             className: z.channelTitleIcon,
                                             size: 'xs',
@@ -141,7 +141,7 @@ let B = (e) => {
                             className: z.__invalid_formGroup,
                             children: (0, i.jsx)(s.oil, {
                                 maxLength: 42,
-                                value: M,
+                                value: R,
                                 inputClassName: z.input,
                                 placeholder: Z.intl.string(Z.t.h5EOur),
                                 onChange: J
@@ -168,28 +168,28 @@ let B = (e) => {
                                         ]
                                     }),
                                     (0, i.jsx)(f.Z, {
-                                        hasSetEmoji: null != w,
+                                        hasSetEmoji: null != M,
                                         onClick: Q,
                                         children: (0, i.jsx)(s.yRy, {
                                             renderPopout: (e) => {
-                                                let { closePopout: n } = e,
-                                                    l = _.ZP.getDefaultChannel(B);
+                                                let { closePopout: l } = e,
+                                                    n = p.ZP.getDefaultChannel(I);
                                                 return (0, i.jsx)(j.Z, {
-                                                    guildId: B,
-                                                    closePopout: n,
-                                                    onSelectEmoji: (e, l) => {
-                                                        Q(e), l && (n(), null == e && F());
+                                                    guildId: I,
+                                                    closePopout: l,
+                                                    onSelectEmoji: (e, n) => {
+                                                        Q(e), n && (l(), null == e && F());
                                                     },
                                                     pickerIntention: S.Hz.COMMUNITY_CONTENT,
                                                     onNavigateAway: F,
-                                                    channel: l
+                                                    channel: n
                                                 });
                                             },
                                             position: 'left',
                                             animation: s.yRy.Animation.NONE,
                                             align: 'bottom',
-                                            children: (e, n) => {
-                                                let { isShown: l } = n;
+                                            children: (e, l) => {
+                                                let { isShown: n } = l;
                                                 return (0, i.jsx)(s.DY3, {
                                                     color: s.FGA.BRAND,
                                                     tooltipClassName: z.tooltip,
@@ -198,20 +198,20 @@ let B = (e) => {
                                                     forceOpen: X,
                                                     children: (0, i.jsx)(x.Z, {
                                                         ...e,
-                                                        onClick: (n) => {
-                                                            var l;
-                                                            ee(), null === (l = e.onClick) || void 0 === l || l.call(e, n);
+                                                        onClick: (l) => {
+                                                            var n;
+                                                            ee(), null === (n = e.onClick) || void 0 === n || n.call(e, l);
                                                         },
-                                                        active: l,
+                                                        active: n,
                                                         className: z.emojiButton,
                                                         tabIndex: 0,
                                                         renderButtonContents:
-                                                            null != w && (null != w.id || null != w.name)
+                                                            null != M && (null != M.id || null != M.name)
                                                                 ? () =>
                                                                       (0, i.jsx)(r.Z, {
                                                                           className: z.emoji,
-                                                                          emojiId: w.id,
-                                                                          emojiName: w.name,
+                                                                          emojiId: M.id,
+                                                                          emojiName: M.name,
                                                                           animated: !!(null == Y ? void 0 : Y.animated)
                                                                       })
                                                                 : null
@@ -243,21 +243,21 @@ let B = (e) => {
                                 (0, i.jsx)(s.zxk, {
                                     onClick: () => {
                                         null != y &&
-                                            M.length > 0 &&
+                                            R.length > 0 &&
                                             P({
                                                 channel_id: y,
-                                                description: M,
-                                                emoji_id: null == w ? void 0 : w.id,
-                                                emoji_name: null == w ? void 0 : w.name
+                                                description: R,
+                                                emoji_id: null == M ? void 0 : M.id,
+                                                emoji_name: null == M ? void 0 : M.name
                                             }),
                                             F();
                                     },
-                                    disabled: null == y || 0 === M.length,
+                                    disabled: null == y || 0 === R.length,
                                     children: Z.intl.string(Z.t.R3BPHx)
                                 })
                             ]
                         }),
-                        null != I &&
+                        null != L &&
                             (0, i.jsx)(s.zxk, {
                                 onClick: () => {
                                     W(!0);

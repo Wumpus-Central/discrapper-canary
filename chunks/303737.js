@@ -1,9 +1,9 @@
 n.d(t, {
-    GN: () => S,
+    GN: () => m,
     be: () => I,
-    g4: () => v,
-    m7: () => E,
-    r4: () => m,
+    g4: () => E,
+    m7: () => v,
+    r4: () => S,
     sO: () => N,
     yL: () => T
 }),
@@ -21,16 +21,16 @@ var i = n(991637),
     c = n(944537),
     h = n(144507),
     g = n(853439),
-    C = n(981631),
-    f = n(176505);
+    f = n(981631),
+    C = n(176505);
 l().shim();
 let p = {};
-function E(e) {
+function v(e) {
     let t = (0, r.e7)([o.Z], () => o.Z.getChannel(e)),
         n = (0, r.e7)([g.Z], () => g.Z.getChannel(e));
     return null != t ? t : n;
 }
-function v(e, t, n) {
+function E(e, t, n) {
     let i = (0, r.e7)([u.Z], () => u.Z.getSubscriptionListingsForGuild(e)),
         l = (0, c.n)((t) => t.editStateIdsForGroup[e]),
         s = (0, c.n)((e) => e.listings);
@@ -78,14 +78,14 @@ function I(e) {
     let t = _(e);
     (p[e] = t),
         t.forEach((e) => {
-            let t = e.set('flags', f.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+            let t = e.set('flags', C.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
             s.Z.dispatch({
                 type: 'CHANNEL_CREATE',
                 channel: t
             });
         });
 }
-function S(e) {
+function m(e) {
     var t;
     (null !== (t = p[e]) && void 0 !== t ? t : _(e)).forEach((e) => {
         s.Z.dispatch({
@@ -94,7 +94,7 @@ function S(e) {
         });
     });
 }
-async function m(e, t) {
+async function S(e, t) {
     let n = [],
         i = [];
     t.forEach((t) => {
@@ -168,5 +168,5 @@ function T(e, t) {
     };
 }
 function N(e) {
-    return (0, h.H2)(e) && e.hasFeature(C.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, d.$F)() && (0, d.hQ)(e.id);
+    return (0, h.H2)(e) && e.hasFeature(f.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, d.$F)() && (0, d.hQ)(e.id);
 }

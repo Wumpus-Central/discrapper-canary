@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(481060),
     d = n(492435),
     g = n(353926),
-    h = n(499533),
-    p = n(388032);
+    p = n(499533),
+    h = n(388032);
 function x(e) {
     let { id: t, experiment: n, currentBucket: r } = e;
     return (0, i.jsxs)(
@@ -25,7 +25,7 @@ function x(e) {
                         u.S89,
                         {
                             id: ''.concat(e),
-                            label: h.Z.getExperimentBucketName(e),
+                            label: p.Z.getExperimentBucketName(e),
                             checked: e === r,
                             action: () => (0, d.rX)(t, e)
                         },
@@ -83,7 +83,7 @@ function j() {
                 }),
             [l]
         ),
-        h = r.useMemo(
+        p = r.useMemo(
             () =>
                 l.filter((e) => {
                     let { currentBucket: t } = e;
@@ -92,7 +92,7 @@ function j() {
             [l]
         ),
         j = r.useMemo(() => d.map(x), [d]),
-        S = r.useMemo(() => h.map(x), [h]);
+        m = r.useMemo(() => p.map(x), [p]);
     return [
         (0, i.jsx)(
             u.II_,
@@ -104,7 +104,7 @@ function j() {
                         query: t,
                         onChange: n,
                         ref: r,
-                        placeholder: p.intl.string(p.t['5h0QOD'])
+                        placeholder: h.intl.string(h.t['5h0QOD'])
                     })
             },
             'experiments-search'
@@ -112,6 +112,6 @@ function j() {
         (0, i.jsx)(u.Clw, {}, 'separator'),
         ...j,
         j.length > 0 ? (0, i.jsx)(u.Clw, {}, 'separator-2') : null,
-        ...S
+        ...m
     ];
 }

@@ -22,12 +22,12 @@ function g(e, t, n) {
         e
     );
 }
-function C() {
+function f() {
     return (0, i.jsxs)('div', {
         children: [(0, i.jsx)('div', { className: s()(h.sparkleWhite, c.sparkleOne) }), (0, i.jsx)('div', { className: s()(h.sparkleWhite, c.sparkleTwo) }), (0, i.jsx)('div', { className: s()(h.lightWhite, c.lightOne) }), (0, i.jsx)('div', { className: s()(h.lightWhite, c.lightTwo) }), (0, i.jsx)('div', { className: s()(h.crossWhite, c.crossOne) }), (0, i.jsx)('div', { className: s()(h.crossWhite, c.crossTwo) }), (0, i.jsx)('div', { className: s()(h.popWhite, c.popOne) })]
     });
 }
-class f extends l.Component {
+class C extends l.Component {
     componentDidMount() {
         let e = this.elementDOMRef.current;
         null != e && (e.ownerDocument.body.addEventListener('dragover', this.handleDragOver, !1), e.ownerDocument.body.addEventListener('drop', this.handleDragLeave, !1), e.addEventListener('dragover', this.handleDragOverZone, !1), e.addEventListener('dragleave', this.handleDragLeaveZone, !1), e.addEventListener('drop', this.handleDrop, !1));
@@ -48,7 +48,7 @@ class f extends l.Component {
             children: (0, i.jsxs)('div', {
                 className: c.uploadDropModal,
                 children: [
-                    this.state.isDragging && (0, i.jsx)(C, {}),
+                    this.state.isDragging && (0, i.jsx)(f, {}),
                     (0, i.jsx)('div', { className: c.bgScale }),
                     (0, i.jsxs)('div', {
                         className: c.inner,
@@ -152,4 +152,4 @@ class f extends l.Component {
             });
     }
 }
-let p = f;
+let p = C;

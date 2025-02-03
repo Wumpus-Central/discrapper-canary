@@ -39,10 +39,10 @@ function g(e) {
         { executeStateUpdate: N, visualState: S, isDisabled: E } = (0, p.Ee)(e),
         I = (0, d.s)(j),
         Z = null != j && i === c.ZJ.PREMIUM,
-        b = Z && (null == I ? void 0 : I.disabled),
-        T = Z ? (null == I ? void 0 : I.label) : l,
+        T = Z && (null == I ? void 0 : I.disabled),
+        b = Z ? (null == I ? void 0 : I.label) : l,
         y = null != v,
-        L = null != T && T.length > 0,
+        L = null != b && b.length > 0,
         k = i === c.ZJ.LINK && null != g && g.length > 0,
         _ = S === x.gH.LOADING || (Z && null == I);
     return (
@@ -73,7 +73,7 @@ function g(e) {
                 }
             })(i),
             size: s.zxk.Sizes.SMALL,
-            disabled: m || S === x.gH.DISABLED || E || b,
+            disabled: m || S === x.gH.DISABLED || E || T,
             onClick: n,
             onContextMenu: (e) => {
                 k &&
@@ -114,7 +114,7 @@ function g(e) {
                         L
                             ? (0, t.jsx)('div', {
                                   className: f.label,
-                                  children: T
+                                  children: b
                               })
                             : null,
                         k

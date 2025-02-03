@@ -1,11 +1,11 @@
-n.d(t, { Z: () => r });
-var i = n(200651);
-n(192379);
-var l = n(930282);
-function r(e, t) {
-    let { message: n } = e;
-    return (0, i.jsx)(l.ZP, {
-        message: n,
-        content: t
+a.d(i, { Z: () => o });
+var t = a(200651);
+a(192379);
+var n = a(930282);
+function o(e, i) {
+    let { message: a } = e;
+    return (0, t.jsx)(n.ZP, {
+        message: a,
+        content: i
     });
 }

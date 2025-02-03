@@ -120,8 +120,8 @@ function C(e) {
             type: n,
             values: j
         }),
-        b = o > 1,
-        T = E === m.gH.LOADING,
+        T = o > 1,
+        b = E === m.gH.LOADING,
         [y, L] = i.useState(!1),
         [k, _] = i.useState(() => new Set(l.filter((e) => e.default).map((e) => e.value))),
         [R, P] = i.useState(k),
@@ -147,7 +147,7 @@ function C(e) {
         !(y || (k.size === R.size && Array.from(R).every((e) => k.has(e)))) && A();
     }, [y, k, R, A]);
     let M = s.UNb;
-    b ? (M = s.gzz) : 0 === C && (M = s.s6k);
+    T ? (M = s.gzz) : 0 === C && (M = s.s6k);
     let w = (0, s.cYr)({
         value: k,
         onChange: (e) => _(e),
@@ -163,24 +163,24 @@ function C(e) {
                         className: p.select,
                         options: l.map((e) => ({
                             ...e,
-                            disabled: b && !k.has(e.value) && k.size === o
+                            disabled: T && !k.has(e.value) && k.size === o
                         })),
                         placeholder: null != a ? a : h.intl.string(h.t.Otr6W1),
                         onClose: () => L(!1),
                         onOpen: () => L(!0),
                         maxVisibleItems: 5,
-                        closeOnSelect: !b,
+                        closeOnSelect: !T,
                         optionClassName: p.selectOption,
                         renderOptionLabel: (e) =>
                             (0, t.jsx)(x, {
                                 ...e,
-                                isDisabled: b && !k.has(e.value) && k.size === o,
+                                isDisabled: T && !k.has(e.value) && k.size === o,
                                 isOffset: O
                             }),
-                        renderOptionValue: (e) => (b ? (0, t.jsx)(f, { options: e }) : (0, t.jsx)(v, { ...e[0] })),
+                        renderOptionValue: (e) => (T ? (0, t.jsx)(f, { options: e }) : (0, t.jsx)(v, { ...e[0] })),
                         ...w
                     }),
-                    T
+                    b
                         ? (0, t.jsx)('div', {
                               className: p.__invalid_loading,
                               children: (0, t.jsx)(s.bbz, {

@@ -136,7 +136,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
         let W = (e) => {
                 v.Z.updateGuild({ discoverySplash: e });
             },
-            Y = (e) => {
+            K = (e) => {
                 (0, h.W1)(n.id, e),
                     e
                         ? (0, h.Vv)({
@@ -168,7 +168,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                         description: n.description
                     });
             },
-            K = (e, t) => {
+            Y = (e, t) => {
                 let i = [...D.socialLinks],
                     r = [...B],
                     l = [...k];
@@ -516,7 +516,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                                 options: z(B[t]),
                                                                                 placeholder: S.intl.string(S.t.xSALIC),
                                                                                 value: B[t],
-                                                                                onChange: (e) => K(e, t),
+                                                                                onChange: (e) => Y(e, t),
                                                                                 isDisabled: !A
                                                                             },
                                                                             'dropdown-' + t
@@ -610,7 +610,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                 (0, i.jsx)(a.zxk, {
                                                                     size: a.zxk.Sizes.SMALL,
                                                                     color: a.zxk.Colors.RED,
-                                                                    onClick: () => Y(!1),
+                                                                    onClick: () => K(!1),
                                                                     disabled: !A,
                                                                     children: S.intl.string(S.t['DCHd/P'])
                                                                 })
@@ -634,7 +634,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                 title: S.intl.string(S.t['2kCyn5']),
                                                 children: $,
                                                 buttonLabel: S.intl.string(S.t.tVK6S0),
-                                                buttonCallback: () => Y(!0),
+                                                buttonCallback: () => K(!0),
                                                 disabled: !A || !w
                                             })
                                         })

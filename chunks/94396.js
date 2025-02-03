@@ -6,8 +6,8 @@ var i = n(374470),
     _ = n(230569);
 function c(e, t, n) {
     let c = {},
-        s = {};
-    for (let [l, d] of e.entries()) {
+        l = {};
+    for (let [s, d] of e.entries()) {
         let u = (0, r.q)({
             proxyURL: d.proxyUrl,
             url: d.url
@@ -25,11 +25,11 @@ function c(e, t, n) {
                         startingIndex: n,
                         location: null != r ? r : 'zoomedMediaModalHelper'
                     });
-            })(o, e, l, t, n)),
-            (s[u] = () => (0, o.WG)(d, e.length > 1));
+            })(o, e, s, t, n)),
+            (l[u] = () => (0, o.WG)(d, e.length > 1));
     }
     return {
         srcToOnClickOverride: c,
-        srcToHandlePreloadImage: s
+        srcToHandlePreloadImage: l
     };
 }

@@ -1,6 +1,6 @@
 n.d(t, {
-    Fo: () => M,
-    KY: () => h,
+    Fo: () => h,
+    KY: () => M,
     Uo: () => p,
     fU: () => v,
     qw: () => P,
@@ -26,17 +26,17 @@ var r = n(192379),
     O = n(306680),
     S = n(709054),
     R = n(981631),
-    f = n(176505),
-    U = n(443063),
+    U = n(176505),
+    f = n(443063),
     D = n(490897),
     C = n(388032);
 function L(e, t) {
     e.index = t;
 }
-function M(e, t, n, l) {
+function h(e, t, n, l) {
     l = l.toLowerCase();
     let a = (0, d.g)(e),
-        s = r.useCallback((e, t) => !(a && e.channel.hasFlag(f.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== R.d4z.GUILD_DIRECTORY && (0 === t.length || i()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [a]);
+        s = r.useCallback((e, t) => !(a && e.channel.hasFlag(U.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== R.d4z.GUILD_DIRECTORY && (0 === t.length || i()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [a]);
     return r.useMemo(() => {
         let e = {
             null: [],
@@ -53,16 +53,16 @@ function M(e, t, n, l) {
         );
     }, [t, n, s, l]);
 }
-function h(e) {
+function M(e) {
     let t = e.getSections(!1);
     if (t[A.wZ] > 0)
         switch (e.getGuildActionSection().getRow(0)) {
-            case U.z.GUILD_HOME:
-                return f.oC.GUILD_HOME;
-            case U.z.GUILD_ROLE_SUBSCRIPTIONS:
-                return f.oC.ROLE_SUBSCRIPTIONS;
-            case U.z.GUILD_MEMBER_APPLICATIONS:
-                return f.oC.MEMBER_APPLICATIONS;
+            case f.z.GUILD_HOME:
+                return U.oC.GUILD_HOME;
+            case f.z.GUILD_ROLE_SUBSCRIPTIONS:
+                return U.oC.ROLE_SUBSCRIPTIONS;
+            case f.z.GUILD_MEMBER_APPLICATIONS:
+                return U.oC.MEMBER_APPLICATIONS;
         }
     for (let r = A.wd; r < e.voiceChannelsSectionNumber; r++)
         if (t[r] > 0) {

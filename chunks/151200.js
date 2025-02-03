@@ -67,9 +67,9 @@ function C(e) {
 function g(e) {
     let { entry: n, channel: l, title: i, subtitle: v, thumbnailUrl: g, titleClickable: j, subtitleClickable: N, thumbnailClickable: S, providerIconProps: E, style: I = {} } = e,
         Z = (0, m.Dt)(),
-        { primaryColor: b, secondaryColor: T } = (0, c.Z)(g);
+        { primaryColor: T, secondaryColor: b } = (0, c.Z)(g);
     return (
-        null != g && (I.background = 'linear-gradient(45deg, '.concat(b, ', ').concat(T, ')')),
+        null != g && (I.background = 'linear-gradient(45deg, '.concat(T, ', ').concat(b, ')')),
         (0, t.jsx)(a.f6W, {
             theme: h.BR.DARK,
             children: (e) =>

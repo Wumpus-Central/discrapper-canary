@@ -1,18 +1,18 @@
-s.d(t, { Z: () => a });
+s.d(t, { Z: () => o });
 var n = s(200651),
     i = s(192379);
 let r = (e) => (t) => {
     null == t || t.stopPropagation(), e();
 };
-function a(e) {
-    let { onClick: t, className: s, children: a } = e,
-        o = i.useRef(null);
+function o(e) {
+    let { onClick: t, className: s, children: o } = e,
+        l = i.useRef(null);
     return (0, n.jsx)('div', {
         onClick: t,
-        ref: o,
+        ref: l,
         className: s,
-        children: a({
-            areaRef: o,
+        children: o({
+            areaRef: l,
             handleStopPropagation: r
         })
     });

@@ -48,8 +48,8 @@ var i = n(200651),
     H = n(709586),
     V = n(768581),
     W = n(630388),
-    Y = n(823379),
-    K = n(63063),
+    K = n(823379),
+    Y = n(63063),
     q = n(434404),
     X = n(999382),
     Q = n(203377),
@@ -127,7 +127,7 @@ let e_ = () => {
                 homeHeader: e.homeHeader,
                 profile: e.profile
             };
-            (0, Y.OL)(new Set(e.features), new Set(t.features)) || (n.features = e.features), q.Z.saveGuild(e.id, n);
+            (0, K.OL)(new Set(e.features), new Set(t.features)) || (n.features = e.features), q.Z.saveGuild(e.id, n);
         }, [e, t]),
         o = r.useCallback(() => {
             null != e && q.Z.init(e.id);
@@ -529,7 +529,7 @@ class eC extends r.PureComponent {
                           onChange: this.handleConversationSummariesToggle,
                           value: e.hasFeature(J.oNc.SUMMARIES_ENABLED_BY_USER),
                           hideBorder: !0,
-                          note: en.intl.format(en.t['c6Cy/v'], { helpdeskArticle: K.Z.getArticleURL(J.BhN.CONVERSATION_SUMMARIES) }),
+                          note: en.intl.format(en.t['c6Cy/v'], { helpdeskArticle: Y.Z.getArticleURL(J.BhN.CONVERSATION_SUMMARIES) }),
                           disabled: !t,
                           children: (0, i.jsxs)('div', {
                               className: ei.badgedItem,
@@ -599,7 +599,7 @@ class eC extends r.PureComponent {
                                 }),
                                 (0, i.jsx)(g.R94, {
                                     type: g.geA.DESCRIPTION,
-                                    children: en.intl.format(en.t.ZYA9PT, { articleURL: K.Z.getArticleURL(J.BhN.GUILD_INVITE_SPLASH) })
+                                    children: en.intl.format(en.t.ZYA9PT, { articleURL: Y.Z.getArticleURL(J.BhN.GUILD_INVITE_SPLASH) })
                                 }),
                                 n
                                     ? (0, i.jsxs)(g.zxk, {
@@ -719,7 +719,7 @@ class eC extends r.PureComponent {
                             }),
                             (0, i.jsx)(g.R94, {
                                 type: g.geA.DESCRIPTION,
-                                children: en.intl.format(en.t.vBcWUl, { articleURL: K.Z.getArticleURL(J.BhN.GUILD_BANNER_SPLASH) })
+                                children: en.intl.format(en.t.vBcWUl, { articleURL: Y.Z.getArticleURL(J.BhN.GUILD_BANNER_SPLASH) })
                             }),
                             r ? o : this.uploadBGUpsellButton(this.handleBannerUpsellButton)
                         ]

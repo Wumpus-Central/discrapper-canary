@@ -160,11 +160,11 @@ function k(e) {
             ref: B,
             className: s()(y.roleRow, y.roleRowDragging)
         });
-    function Y() {
+    function K() {
         R(d.id);
     }
-    function K() {
-        Y(), D(S.ZI.MEMBERS);
+    function Y() {
+        K(), D(S.ZI.MEMBERS);
     }
     return (0, i.jsxs)(u.P3F, {
         className: s()(y.roleRow, {
@@ -172,7 +172,7 @@ function k(e) {
             [y.containerDragBefore]: null != z && C < z,
             [y.containerDragAfter]: null != z && C > z
         }),
-        onClick: Y,
+        onClick: K,
         onContextMenu: V,
         innerRef: (e) => B(H(e)),
         'data-dnd-name': d.name,
@@ -234,7 +234,7 @@ function k(e) {
                     (0, i.jsxs)(u.P3F, {
                         ...e,
                         className: s()(y.memberCountContainer, A.memberSpacing),
-                        onClick: K,
+                        onClick: Y,
                         children: [
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-md/normal',
@@ -272,7 +272,7 @@ function k(e) {
                                   width: 20,
                                   height: 20
                               }),
-                        onClick: Y
+                        onClick: K
                     }),
                     (0, i.jsx)(u.M0o, {
                         className: y.circleButton,

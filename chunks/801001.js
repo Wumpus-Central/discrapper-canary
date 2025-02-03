@@ -1,8 +1,8 @@
 t.d(n, { default: () => k }), t(47120);
 var i = t(200651),
     l = t(192379),
-    o = t(392711),
-    s = t.n(o),
+    s = t(392711),
+    o = t.n(s),
     r = t(442837),
     a = t(481060),
     d = t(706371),
@@ -20,14 +20,14 @@ var i = t(200651),
     f = t(388032),
     C = t(291201);
 function k(e) {
-    let { transitionState: n, onClose: t, onSave: o, onDelete: x, option: v, guild: j, prompt: k, index: b } = e,
+    let { transitionState: n, onClose: t, onSave: s, onDelete: x, option: v, guild: j, prompt: k, index: b } = e,
         z = (0, u.Dt)(),
-        B = (0, r.e7)([h.ZP], () => h.ZP.getDefaultChannel(j.id)),
-        [S, Z] = l.useState(() => {
+        S = (0, r.e7)([h.ZP], () => h.ZP.getDefaultChannel(j.id)),
+        [B, T] = l.useState(() => {
             var e;
             return null !== (e = null == v ? void 0 : v.emoji) && void 0 !== e ? e : null;
         }),
-        [T, E] = l.useState(() => {
+        [Z, E] = l.useState(() => {
             var e;
             return null !== (e = null == v ? void 0 : v.title) && void 0 !== e ? e : '';
         }),
@@ -35,11 +35,11 @@ function k(e) {
             var e;
             return null !== (e = null == v ? void 0 : v.description) && void 0 !== e ? e : '';
         }),
-        [L, M] = l.useState(() => {
+        [H, L] = l.useState(() => {
             var e;
             return new Set(null !== (e = null == v ? void 0 : v.channelIds) && void 0 !== e ? e : []);
         }),
-        [H, P] = l.useState(() => {
+        [P, M] = l.useState(() => {
             var e;
             return new Set(null !== (e = null == v ? void 0 : v.roleIds) && void 0 !== e ? e : []);
         }),
@@ -81,7 +81,7 @@ function k(e) {
                         (0, i.jsx)(a.oil, {
                             inputRef: Y,
                             placeholder: f.intl.string(f.t.EHe6gY),
-                            value: T,
+                            value: Z,
                             onChange: (e) => E(e),
                             maxLength: I.NE,
                             autoFocus: !0
@@ -102,18 +102,18 @@ function k(e) {
                         }),
                         (0, i.jsx)(d.Z, {
                             guildId: j.id,
-                            selectedChannelIds: L,
+                            selectedChannelIds: H,
                             placeholder: f.intl.string(f.t.vephiI),
-                            onChange: M,
+                            onChange: L,
                             helperText: f.intl.string(f.t.SoT6wc),
                             className: C.searchInput
                         }),
                         (0, i.jsx)(c.Z, {
                             guildId: j.id,
-                            selectedRoleIds: H,
+                            selectedRoleIds: P,
                             disableEveryoneRole: !0,
                             placeholder: f.intl.string(f.t.aFO1Iy),
-                            onChange: P,
+                            onChange: M,
                             helperText: f.intl.string(f.t.Mbvpv7),
                             className: C.searchInput,
                             selectableRoleFilter: (e) => !e.managed
@@ -121,7 +121,7 @@ function k(e) {
                         null == w.roles ? null : (0, i.jsx)(a.pdY, { error: w.roles }),
                         (0, i.jsx)(_, {
                             guild: j,
-                            roleIds: H
+                            roleIds: P
                         }),
                         (0, i.jsx)(m.Z, { className: C.divider }),
                         (0, i.jsxs)('div', {
@@ -142,9 +142,9 @@ function k(e) {
                                     ]
                                 }),
                                 (0, i.jsx)(N.Z, {
-                                    emoji: S,
-                                    setEmoji: Z,
-                                    channel: B
+                                    emoji: B,
+                                    setEmoji: T,
+                                    channel: S
                                 })
                             ]
                         })
@@ -181,19 +181,19 @@ function k(e) {
                                             var e;
                                             let n = {
                                                     id: null !== (e = null == v ? void 0 : v.id) && void 0 !== e ? e : ''.concat(Date.now()),
-                                                    title: T,
+                                                    title: Z,
                                                     description: R,
-                                                    channelIds: Array.from(L).sort(),
-                                                    roleIds: Array.from(H).sort(),
-                                                    emoji: null == S ? void 0 : S
+                                                    channelIds: Array.from(H).sort(),
+                                                    roleIds: Array.from(P).sort(),
+                                                    emoji: null == B ? void 0 : B
                                                 },
                                                 i = (function (e, n, t, i) {
                                                     let l = {};
                                                     i.title.length <= 0 && (l.title = f.intl.string(f.t.p3PKzM));
-                                                    let o = (0, g.en)(e, n, t, i);
-                                                    return null != o && (l.roles = o), l;
+                                                    let s = (0, g.en)(e, n, t, i);
+                                                    return null != s && (l.roles = s), l;
                                                 })(j, p.Z.editedOnboardingPrompts, k, n);
-                                            q(i), s().isEmpty(i) && (o(n), t());
+                                            q(i), o().isEmpty(i) && (s(n), t());
                                         },
                                         children: f.intl.string(f.t.R3BPHx)
                                     })
@@ -209,11 +209,11 @@ function k(e) {
 function _(e) {
     let { guild: n, roleIds: t } = e,
         l = (0, r.e7)([x.Z], () => x.Z.getRoles(n.id)),
-        o = Array.from(t)
+        s = Array.from(t)
             .map((e) => l[e])
             .filter(v.lm)
             .find(j.F);
-    return null == o
+    return null == s
         ? null
         : (0, i.jsx)('div', {
               className: C.notice,
@@ -229,7 +229,7 @@ function _(e) {
                       }),
                       (0, i.jsx)(a.Text, {
                           variant: 'text-sm/normal',
-                          children: f.intl.format(f.t['5zPJER'], { permissions: (0, j.i)(n, o).join(', ') })
+                          children: f.intl.format(f.t['5zPJER'], { permissions: (0, j.i)(n, s).join(', ') })
                       })
                   ]
               })

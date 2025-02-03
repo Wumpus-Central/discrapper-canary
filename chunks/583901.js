@@ -89,24 +89,24 @@ function y(e) {
             .with({ theme: h.BRd.DARKER }, () => g.darkerIcon)
             .with({ theme: h.BRd.MIDNIGHT }, () => g.midnightIcon)
             .otherwise(() => g.darkIcon),
-        T = (0, s.EQ)(t)
+        b = (0, s.EQ)(t)
             .with(h.BRd.LIGHT, () => m.intl.string(m.t.K2sFfn))
             .with(h.BRd.DARK, () => (y ? m.intl.string(m.t.GEaO9P) : m.intl.string(m.t.b8Cei4)))
             .with(h.BRd.DARKER, () => m.intl.string(m.t.b8Cei4))
             .with(h.BRd.MIDNIGHT, () => m.intl.string(m.t.pQwSpa))
             .with('system', () => m.intl.string(m.t['7rOU6u']))
             .exhaustive(),
-        b = (0, c.bWb)().enabled;
+        T = (0, c.bWb)().enabled;
     return (0, i.jsx)(v, {
         onSelect: r,
         isSelected: n,
-        name: T,
+        name: b,
         className: a()(g.defaultThemeSelection, I),
         children:
             'system' === t &&
             (0, i.jsx)('div', {
                 className: g.iconWrapper,
-                children: b ? (0, i.jsx)(c.DuK, { color: E(_) }) : (0, i.jsx)(p.Z, { fill: E(_) })
+                children: T ? (0, i.jsx)(c.DuK, { color: E(_) }) : (0, i.jsx)(p.Z, { fill: E(_) })
             })
     });
 }

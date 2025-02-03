@@ -101,8 +101,8 @@ function O(e) {
         { imageCTA: F, imageAriaLabel: z, setFilename: H } = (0, E.Z)(null == a ? void 0 : a.cover_image_asset),
         V = (0, _.Dt)(),
         W = (0, _.Dt)(),
-        Y = (0, _.Dt)();
-    function K(e, t) {
+        K = (0, _.Dt)();
+    function Y(e, t) {
         o()(null != e, 'Null value not allowed'), null != t && H(t.name), O(e);
     }
     let q = r.useMemo(() => {
@@ -221,13 +221,13 @@ function O(e) {
                         iconWrapperClassName: y.coverImageUploaderIconWrapper,
                         imageClassName: y.coverImageUploaderInner,
                         iconClassName: y.coverImageUploaderIcon,
-                        onChange: K,
+                        onChange: Y,
                         'aria-label': z,
                         disabled: Q
                     }),
                     (0, i.jsx)(h.LZC, { size: 16 }),
                     (0, i.jsx)(C.Z, {
-                        onChange: K,
+                        onChange: Y,
                         buttonCTA: F,
                         'aria-label': z,
                         disabled: Q,
@@ -242,7 +242,7 @@ function O(e) {
                           (0, i.jsx)(h.$i$, { className: y.divider }),
                           (0, i.jsxs)(h.hjN, {
                               title: Z.intl.string(Z.t.aaZ9pK),
-                              titleId: Y,
+                              titleId: K,
                               disabled: Q,
                               children: [
                                   (0, i.jsx)(h.R94, {
@@ -268,7 +268,7 @@ function O(e) {
                         (0, i.jsx)(h.$i$, { className: y.divider }),
                         (0, i.jsxs)(h.hjN, {
                             title: Z.intl.string(Z.t['+dtmw8']),
-                            titleId: Y,
+                            titleId: K,
                             disabled: Q,
                             children: [
                                 (0, i.jsx)(h.R94, {

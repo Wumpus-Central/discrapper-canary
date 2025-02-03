@@ -9,62 +9,62 @@ var i = n(200651),
     u = n(100527),
     d = n(906732),
     g = n(386506),
-    h = n(366953),
-    p = n(991346),
+    p = n(366953),
+    h = n(991346),
     x = n(606669),
     j = n(53432),
-    S = n(74869),
-    Z = n(45570),
-    m = n(308512),
+    m = n(74869),
+    S = n(45570),
+    Z = n(308512),
     b = n(594791),
     f = n(393431),
-    k = n(69021),
-    v = n(981631),
+    v = n(69021),
+    k = n(981631),
     E = n(388032);
 let y = (0, o.Z)(
     function (e) {
         let { webBuildOverride: t, onSelect: n } = e,
             [o, u] = r.useState(!1),
-            y = (0, Z.Z)(),
-            C = (0, m.Z)(),
+            y = (0, S.Z)(),
+            C = (0, Z.Z)(),
             I = (0, j.Z)(),
-            D = (0, x.Z)(),
-            N = (0, f.Z)(),
-            B = (0, b.Z)(),
-            O = (0, S.Z)(),
-            P = (0, k.Z)(),
+            N = (0, x.Z)(),
+            B = (0, f.Z)(),
+            D = (0, b.Z)(),
+            O = (0, m.Z)(),
+            P = (0, v.Z)(),
             { analyticsLocations: R } = (0, d.ZP)(),
-            T = r.useMemo(() => (0, h.j)(), []);
-        async function M() {
+            T = r.useMemo(() => (0, p.j)(), []);
+        async function _() {
             try {
                 u(!0), await (0, g.bF)(), window.location.reload(!0);
             } catch (e) {
                 u(!1);
             }
         }
-        let _ = (e) => {
+        let M = (e) => {
                 switch (e) {
-                    case v.oAB.GAMES:
+                    case k.oAB.GAMES:
                         return y;
-                    case v.oAB.STREAMER_MODE:
+                    case k.oAB.STREAMER_MODE:
                         return C;
-                    case v.oAB.APPEARANCE:
+                    case k.oAB.APPEARANCE:
                         return I;
-                    case v.oAB.ACCESSIBILITY:
-                        return D;
-                    case v.oAB.VOICE:
+                    case k.oAB.ACCESSIBILITY:
                         return N;
-                    case v.oAB.TEXT:
+                    case k.oAB.VOICE:
                         return B;
-                    case v.oAB.EXPERIMENTS:
+                    case k.oAB.TEXT:
+                        return D;
+                    case k.oAB.EXPERIMENTS:
                         return O;
-                    case v.oAB.DEVELOPER_OPTIONS:
+                    case k.oAB.DEVELOPER_OPTIONS:
                         return P;
                     default:
                         return null;
                 }
             },
-            A = (0, p.VO)()
+            A = (0, h.VO)()
                 .filter((e) => {
                     let { section: t } = e;
                     return t !== c.ID.HEADER && t !== c.ID.CUSTOM && t !== c.ID.DIVIDER && 'logout' !== t;
@@ -90,10 +90,10 @@ let y = (0, o.Z)(
                                     null != r
                                         ? r()
                                         : (function (e, t) {
-                                              let n = Object.values(v.oAB).filter((t) => t === e)[0];
+                                              let n = Object.values(k.oAB).filter((t) => t === e)[0];
                                               null != n && s.Z.open(n, void 0, { analyticsLocations: t });
                                           })(t, R),
-                                children: _(t)
+                                children: M(t)
                             },
                             a
                         );
@@ -127,7 +127,7 @@ let y = (0, o.Z)(
                                   id: 'clear-build-override',
                                   disabled: o,
                                   label: E.intl.string(E.t['/Nz9ra']),
-                                  action: M,
+                                  action: _,
                                   color: 'danger'
                               })
                           })

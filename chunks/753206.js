@@ -11,12 +11,12 @@ var i = n(200651),
     h = n(46124);
 let g = l.memo(function (e) {
     var t;
-    let { message: n, channel: l, compact: r, className: g, isGroupStart: C, hideSimpleEmbedContent: f = !0, disableInteraction: p } = e,
-        E = (0, a.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
-        { content: v } = (0, d.Z)(n, {
-            hideSimpleEmbedContent: f,
-            allowList: E,
-            allowHeading: E,
+    let { message: n, channel: l, compact: r, className: g, isGroupStart: f, hideSimpleEmbedContent: C = !0, disableInteraction: p } = e,
+        v = (0, a.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
+        { content: E } = (0, d.Z)(n, {
+            hideSimpleEmbedContent: C,
+            allowList: v,
+            allowHeading: v,
             allowLinks: !0,
             previewLinkTarget: !0
         });
@@ -25,14 +25,14 @@ let g = l.memo(function (e) {
         className: s()(g, {
             [h.message]: !0,
             [h.cozyMessage]: !r,
-            [h.groupStart]: C
+            [h.groupStart]: f
         }),
         childrenHeader: (0, c.Z)({
             ...e,
             channel: l,
             guildId: void 0
         }),
-        childrenMessageContent: (0, u.Z)(e, v),
+        childrenMessageContent: (0, u.Z)(e, E),
         disableInteraction: p
     });
 });

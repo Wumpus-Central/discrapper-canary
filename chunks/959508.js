@@ -48,16 +48,16 @@ function I(e) {
         H = M.config,
         V = A && l.options.length >= f.fY,
         W = (0, u.kl)(n.id, Array.from(L), [l]).length - L.size,
-        Y = r.useRef(null),
-        K = r.useRef(C);
+        K = r.useRef(null),
+        Y = r.useRef(C);
     return (r.useEffect(() => {
-        K.current = C;
+        Y.current = C;
     }),
     r.useLayoutEffect(() => {
         setTimeout(() => {
-            if (0 === K.current && !d) {
+            if (0 === Y.current && !d) {
                 var e;
-                null === (e = Y.current) || void 0 === e || e.focus();
+                null === (e = K.current) || void 0 === e || e.focus();
             }
         }, 0);
     }, [d]),
@@ -151,7 +151,7 @@ function I(e) {
                       (0, i.jsx)(o.oil, {
                           className: N.title,
                           inputClassName: N.titleInput,
-                          inputRef: Y,
+                          inputRef: K,
                           value: l.title,
                           onChange: (e) => (0, p.Kk)(n, l.id, { title: e }),
                           placeholder: v.intl.string(v.t.QMCuCg),

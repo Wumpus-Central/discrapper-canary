@@ -7,40 +7,40 @@ var o = t(481060),
     r = t(301812),
     c = t(988043),
     _ = t(919539),
-    u = t(526761),
-    d = t(388032),
+    d = t(526761),
+    u = t(388032),
     s = t(916442);
 function E(e) {
     let { guildId: n } = e;
     return (0, i.jsxs)(a.Z, {
         children: [
             (0, i.jsx)(c.Z, {
-                ingress: u.f4.SERVER_PRIVACY_MODAL,
+                ingress: d.f4.SERVER_PRIVACY_MODAL,
                 guildId: n
             }),
             (0, i.jsx)(_.Z, {
-                ingress: u.f4.SERVER_PRIVACY_MODAL,
+                ingress: d.f4.SERVER_PRIVACY_MODAL,
                 guildId: n
             }),
             (0, i.jsx)(r.Z, {
-                ingress: u.f4.SERVER_PRIVACY_MODAL,
+                ingress: d.f4.SERVER_PRIVACY_MODAL,
                 guildId: n
             }),
             (0, i.jsx)(l.Z, {
-                ingress: u.f4.SERVER_PRIVACY_MODAL,
+                ingress: d.f4.SERVER_PRIVACY_MODAL,
                 guildId: n
             }),
             (0, i.jsx)(o.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: d.intl.format(d.t.LNsV09, { policyLink: 'https://discord.com/safety/360043709612-our-policies' })
+                children: u.intl.format(u.t.LNsV09, { policyLink: 'https://discord.com/safety/360043709612-our-policies' })
             })
         ]
     });
 }
 function I(e) {
     let { guild: n, transitionState: t, onClose: a } = e,
-        l = ''.concat(d.intl.string(d.t.BayiAg), '\u2014').concat(null != n ? n.toString() : '??');
+        l = ''.concat(u.intl.string(u.t.BayiAg), '\u2014').concat(null != n ? n.toString() : '??');
     return (0, i.jsxs)(o.Y0X, {
         transitionState: t,
         size: o.CgR.SMALL,
@@ -59,7 +59,7 @@ function I(e) {
             (0, i.jsx)(o.mzw, {
                 children: (0, i.jsx)(o.zxk, {
                     onClick: () => a(),
-                    children: d.intl.string(d.t.i4jeWV)
+                    children: u.intl.string(u.t.i4jeWV)
                 })
             })
         ]

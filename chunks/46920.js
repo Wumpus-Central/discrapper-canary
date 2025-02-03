@@ -1,14 +1,14 @@
 t.d(n, {
-    Ie: () => N,
-    mv: () => E
+    Ie: () => f,
+    mv: () => v
 }),
     t(47120);
-var i = t(200651);
+var l = t(200651);
 t(192379);
-var r = t(442837),
-    s = t(692547),
-    l = t(481060),
-    a = t(239091),
+var i = t(442837),
+    r = t(692547),
+    a = t(481060),
+    s = t(239091),
     o = t(584511),
     c = t(118012),
     d = t(922611),
@@ -18,33 +18,33 @@ var r = t(442837),
     m = t(930180),
     x = t(388032),
     g = t(834110);
-let E = (e) => {
+let v = (e) => {
         let { channelId: n } = e,
             t = (0, m._d)(n);
         return (0, d.Do)({ location: 'blocked-users-notice' })
-            ? (0, i.jsx)(T, { channelId: n })
+            ? (0, l.jsx)(b, { channelId: n })
             : 0 === t
               ? null
-              : (0, i.jsxs)('div', {
+              : (0, l.jsxs)('div', {
                     className: g.blockedNotice,
                     children: [
-                        (0, i.jsx)(l.t6m, {
+                        (0, l.jsx)(a.t6m, {
                             size: 'lg',
                             className: g.__invalid_blockedIcon,
-                            color: s.Z.unsafe_rawColors.RED_400.css
+                            color: r.Z.unsafe_rawColors.RED_400.css
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, l.jsx)(a.Text, {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
                             children: x.intl.format(x.t['6Tcdt7'], { number: t })
                         }),
-                        (0, i.jsx)(l.P3F, {
+                        (0, l.jsx)(a.P3F, {
                             className: g.blockedButton,
                             onClick: (e) => {
-                                (0, a.vq)(
+                                (0, s.vq)(
                                     e,
                                     (e) =>
-                                        (0, i.jsx)(j, {
+                                        (0, l.jsx)(N, {
                                             ...e,
                                             channelId: n
                                         }),
@@ -59,16 +59,16 @@ let E = (e) => {
                     ]
                 });
     },
-    T = (e) => {
+    b = (e) => {
         let { channelId: n } = e,
             t = (0, m._d)(n),
-            r = (0, m.K3)(n);
-        if (0 === t && 0 === r) return null;
+            i = (0, m.K3)(n);
+        if (0 === t && 0 === i) return null;
         let o = (e) => {
-            (0, a.vq)(
+            (0, s.vq)(
                 e,
                 (e) =>
-                    (0, i.jsx)(j, {
+                    (0, l.jsx)(N, {
                         ...e,
                         channelId: n
                     }),
@@ -78,56 +78,56 @@ let E = (e) => {
                 }
             );
         };
-        return t > 0 && r > 0
-            ? (0, i.jsxs)('div', {
+        return t > 0 && i > 0
+            ? (0, l.jsxs)('div', {
                   className: g.blockedNotice,
                   children: [
-                      (0, i.jsx)(l.t6m, {
+                      (0, l.jsx)(a.t6m, {
                           size: 'lg',
-                          color: s.Z.unsafe_rawColors.RED_400.css
+                          color: r.Z.unsafe_rawColors.RED_400.css
                       }),
-                      (0, i.jsx)(l.Text, {
+                      (0, l.jsx)(a.Text, {
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
                           children: x.intl.string(x.t['P/KFX1'])
                       }),
-                      (0, i.jsx)(l.P3F, {
+                      (0, l.jsx)(a.P3F, {
                           className: g.blockedButton,
                           onClick: o,
                           children: x.intl.string(x.t.rUEjBQ)
                       })
                   ]
               })
-            : r > 0
-              ? (0, i.jsxs)('div', {
+            : i > 0
+              ? (0, l.jsxs)('div', {
                     className: g.blockedNotice,
                     children: [
-                        (0, i.jsx)(l.kZF, { size: 'lg' }),
-                        (0, i.jsx)(l.Text, {
+                        (0, l.jsx)(a.kZF, { size: 'lg' }),
+                        (0, l.jsx)(a.Text, {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
-                            children: x.intl.format(x.t.Ri3o39, { number: r })
+                            children: x.intl.format(x.t.Ri3o39, { number: i })
                         }),
-                        (0, i.jsx)(l.P3F, {
+                        (0, l.jsx)(a.P3F, {
                             className: g.blockedButton,
                             onClick: o,
                             children: x.intl.string(x.t.rUEjBQ)
                         })
                     ]
                 })
-              : (0, i.jsxs)('div', {
+              : (0, l.jsxs)('div', {
                     className: g.blockedNotice,
                     children: [
-                        (0, i.jsx)(l.t6m, {
+                        (0, l.jsx)(a.t6m, {
                             size: 'lg',
-                            color: s.Z.unsafe_rawColors.RED_400.css
+                            color: r.Z.unsafe_rawColors.RED_400.css
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, l.jsx)(a.Text, {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
                             children: x.intl.format(x.t['6Tcdt7'], { number: t })
                         }),
-                        (0, i.jsx)(l.P3F, {
+                        (0, l.jsx)(a.P3F, {
                             className: g.blockedButton,
                             onClick: o,
                             children: x.intl.string(x.t.rUEjBQ)
@@ -135,28 +135,28 @@ let E = (e) => {
                     ]
                 });
     },
-    N = (e) => {
-        let { user: n, showStatus: t, speaker: s, channelId: a } = e,
-            d = (0, r.e7)([h.ZP], () => h.ZP.isModerator(n.id, a)),
-            m = (0, r.e7)([u.Z], () => u.Z.isBlocked(n.id)),
-            E = null;
+    f = (e) => {
+        let { user: n, showStatus: t, speaker: r, channelId: s } = e,
+            d = (0, i.e7)([h.ZP], () => h.ZP.isModerator(n.id, s)),
+            m = (0, i.e7)([u.Z], () => u.Z.isBlocked(n.id)),
+            v = null;
         return (
-            t && (E = s ? x.intl.string(x.t.LqMmGx) : d ? x.intl.string(x.t.GMZqSk) : x.intl.string(x.t.suRAp6)),
-            (0, i.jsxs)('div', {
+            t && (v = r ? x.intl.string(x.t.LqMmGx) : d ? x.intl.string(x.t.GMZqSk) : x.intl.string(x.t.suRAp6)),
+            (0, l.jsxs)('div', {
                 className: g.user,
                 children: [
-                    (0, i.jsx)(
+                    (0, l.jsx)(
                         o.Z,
                         {
                             src: n.getAvatarURL(null, 32),
-                            size: l.EFr.SIZE_32,
+                            size: a.EFr.SIZE_32,
                             muted: !1,
                             deafen: !1,
                             speaking: !1,
                             ringing: !1,
-                            renderIcon: s
+                            renderIcon: r
                                 ? () =>
-                                      (0, i.jsx)(l.S6n, {
+                                      (0, l.jsx)(a.S6n, {
                                           size: 'md',
                                           color: 'currentColor',
                                           className: g.icon
@@ -165,35 +165,35 @@ let E = (e) => {
                         },
                         n.id
                     ),
-                    (0, i.jsxs)('div', {
+                    (0, l.jsxs)('div', {
                         className: g.userInfo,
                         children: [
-                            (0, i.jsxs)('div', {
+                            (0, l.jsxs)('div', {
                                 className: g.username,
                                 children: [
-                                    (0, i.jsx)(c.Z, {
+                                    (0, l.jsx)(c.Z, {
                                         size: t ? c.Z.Sizes.SIZE_16 : c.Z.Sizes.SIZE_14,
                                         children: _.ZP.getName(n)
                                     }),
-                                    (0, i.jsx)(c.Z, {
+                                    (0, l.jsx)(c.Z, {
                                         size: t ? c.Z.Sizes.SIZE_16 : c.Z.Sizes.SIZE_14,
                                         color: c.Z.Colors.HEADER_SECONDARY,
                                         children: '#'.concat(n.discriminator)
                                     })
                                 ]
                             }),
-                            (0, i.jsxs)('div', {
+                            (0, l.jsxs)('div', {
                                 className: g.username,
                                 children: [
-                                    (0, i.jsx)(l.Text, {
+                                    (0, l.jsx)(a.Text, {
                                         variant: 'text-xs/normal',
                                         color: m ? 'text-danger' : 'text-normal',
                                         children: m ? x.intl.string(x.t['4bDptL']) : x.intl.string(x.t.tFY5ZW)
                                     }),
-                                    (0, i.jsxs)(l.Text, {
+                                    (0, l.jsxs)(a.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
-                                        children: ['| ', E]
+                                        children: ['| ', v]
                                     })
                                 ]
                             })
@@ -203,16 +203,16 @@ let E = (e) => {
             })
         );
     },
-    j = (e) => {
+    N = (e) => {
         let { channelId: n } = e,
             t = (0, m.z)(n),
-            r = (0, m.bA)(n);
-        return (0, i.jsx)(l.Ttm, {
+            i = (0, m.bA)(n);
+        return (0, l.jsx)(a.Ttm, {
             className: g.container,
-            children: [...t, ...r].map((e) => {
+            children: [...t, ...i].map((e) => {
                 let { user: t } = e;
-                return (0, i.jsx)(
-                    N,
+                return (0, l.jsx)(
+                    f,
                     {
                         user: t,
                         channelId: n

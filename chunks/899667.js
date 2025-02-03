@@ -2,24 +2,24 @@ s.d(t, { Z: () => m }), s(47120);
 var n,
     i,
     r,
-    a = s(442837),
-    o = s(570140);
-let l = {},
+    o = s(442837),
+    l = s(570140);
+let a = {},
     c = null,
     u = [],
     d = !1,
-    p = !1,
-    f = null,
+    f = !1,
+    p = null,
     g = null;
 function x() {
-    p = !0;
+    f = !0;
 }
-class h extends (n = a.ZP.Store) {
+class h extends (n = o.ZP.Store) {
     getAppliedGuildBoostsForGuild(e) {
-        return null != l[e] ? l[e].subscriptions : null;
+        return null != a[e] ? a[e].subscriptions : null;
     }
     getLastFetchedAtForGuild(e) {
-        return null != l[e] ? l[e].lastFetchedAt : null;
+        return null != a[e] ? a[e].lastFetchedAt : null;
     }
     getCurrentUserAppliedBoosts() {
         return u;
@@ -28,10 +28,10 @@ class h extends (n = a.ZP.Store) {
         return u.find((t) => t.id === e);
     }
     get isModifyingAppliedBoost() {
-        return p;
+        return f;
     }
     get applyBoostError() {
-        return f;
+        return p;
     }
     get unapplyBoostError() {
         return g;
@@ -52,10 +52,10 @@ class h extends (n = a.ZP.Store) {
               writable: !0
           })
         : (h[i] = r);
-let m = new h(o.Z, {
+let m = new h(l.Z, {
     GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, appliedBoosts: s } = e;
-        l[t] = {
+        a[t] = {
             subscriptions: s,
             lastFetchedAt: Date.now()
         };
@@ -73,19 +73,19 @@ let m = new h(o.Z, {
     GUILD_APPLY_BOOST_SUCCESS: function (e) {
         let { appliedGuildBoost: t } = e,
             s = new Set(t.map((e) => e.id));
-        (u = [...t, ...u.filter((e) => !s.has(e.id))]), (f = null), (p = !1);
+        (u = [...t, ...u.filter((e) => !s.has(e.id))]), (p = null), (f = !1);
     },
     GUILD_APPLY_BOOST_FAIL: function (e) {
         let { error: t } = e;
-        (p = !1), (f = t);
+        (f = !1), (p = t);
     },
     GUILD_UNAPPLY_BOOST_SUCCESS: function (e) {
         let { boostId: t } = e;
-        (u = u.filter((e) => e.id !== t)), (p = !1);
+        (u = u.filter((e) => e.id !== t)), (f = !1);
     },
     GUILD_UNAPPLY_BOOST_FAIL: function (e) {
         let { error: t } = e;
-        (p = !1), (g = t);
+        (f = !1), (g = t);
     },
     USER_APPLIED_BOOSTS_FETCH_START: function () {
         d = !0;

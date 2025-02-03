@@ -25,7 +25,7 @@ function S(e) {
         E = m.Z.getChannel(S),
         I = h.Z.getGuild(null == E ? void 0 : E.getGuildId()),
         Z = (0, d.Z)(null == I ? void 0 : I.id, C.HI),
-        b = i.useMemo(() => (0, C.tx)(e.defaultValues, null == I ? void 0 : I.id), [e.defaultValues, I]);
+        T = i.useMemo(() => (0, C.tx)(e.defaultValues, null == I ? void 0 : I.id), [e.defaultValues, I]);
     return (0, t.jsx)(g.ZP, {
         selectActionComponent: e,
         queryOptions: (n) => (0, C._H)(e.type, n, S),
@@ -99,6 +99,6 @@ function S(e) {
                 ]
             });
         },
-        defaultValues: b
+        defaultValues: T
     });
 }

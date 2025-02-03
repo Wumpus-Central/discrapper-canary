@@ -3,14 +3,14 @@ var n = s(200651);
 s(192379);
 var i = s(120356),
     r = s.n(i),
-    a = s(442837),
-    o = s(650032),
-    l = s(104494),
+    o = s(442837),
+    l = s(650032),
+    a = s(104494),
     c = s(639119),
     u = s(655525),
     d = s(52188),
-    p = s(346497),
-    f = s(924540),
+    f = s(346497),
+    p = s(924540),
     g = s(351402),
     x = s(170671),
     h = s(474936),
@@ -19,16 +19,16 @@ function v(e) {
     let t,
         { decoration: s, label: i, isSelected: v } = e,
         b = (0, c.N)(),
-        S = (0, l.Ng)(),
-        C = (0, p.Vi)(),
-        E = (0, a.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == b && null == s,
-        { enabled: N } = o._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
+        S = (0, a.Ng)(),
+        C = (0, f.Vi)(),
+        E = (0, o.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == b && null == s,
+        { enabled: N } = l._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
         j = N && (null == b ? void 0 : b.trial_id) === h.a7;
     return (
         (t = C
             ? (0, n.jsx)(u.Z, {})
             : null != S
-              ? (0, n.jsx)(f.GN, {
+              ? (0, n.jsx)(p.GN, {
                     isTabSelected: v,
                     userDiscount: S,
                     includesAmountOff: !1
@@ -39,7 +39,7 @@ function v(e) {
                     : E
                       ? (0, n.jsx)(d.k, { entryPoint: d.U.SettingsMenu })
                       : (0, n.jsx)(x.Z, { isSelected: v })
-                : (0, n.jsx)(f.$H, {
+                : (0, n.jsx)(p.$H, {
                       isTabSelected: v,
                       trialOffer: b
                   })),
