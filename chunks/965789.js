@@ -1,2 +1,2 @@
 n.d(t, { r: () => i });
-let i = 'https://s3-alpha-sig.figma.com/img/be77/73fe/1c92b49a12cdf94760496b1ad4daac43?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=FxwxIm9XNxxF-vNZ0WVsOpRf5j1BbXiE53btTVKG1Q3sBvsuw6WhAgweIqfH8OMEh138qSkEtnRCytEYJiSpgz4m~19uVTXypyxpzxP~8eOif-y1oi~PsH3Oal64XNBGFbAS9p-EtSl7-I7Q8FkzdH5R3b9qzF5na8-z4fPTjsrP2Eei0tvwNdjQfHN3Nj~PfcUnCrtRtcVHLPtddFi9DzZvrz7v-YHk3d1a9TssBJ8Y-iHdmJU2yF7RVVhz5z7tJdn4dyIaTURJyALdHCeCrFhNA5QzSf6VB10Wxv3WKOda4yd2xomvA4rcLpCdKeiLNpxF-AVXub5X6wqqk3Jz6Q__';
+let i = n(37219);

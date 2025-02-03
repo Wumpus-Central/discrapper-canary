@@ -1,10 +1,14 @@
-n.d(t, { A: () => h }), n(47120);
+n.d(t, {
+    A4: () => E,
+    b6: () => a.b
+}),
+    n(47120);
 var i = n(200651),
-    s = n(192379),
+    l = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(481060),
-    o = n(317257),
+    s = n.n(r),
+    o = n(481060),
+    a = n(317257),
     c = n(960919),
     d = n(289173);
 let u = () =>
@@ -13,54 +17,56 @@ let u = () =>
             src: n(808824),
             alt: ''
         }),
-    m = (e) => {
+    _ = (e) => {
         let { value: t, placeholderValue: n } = e,
-            [r, o] = (0, s.useState)(null),
-            c = (0, s.useRef)(null);
-        (0, s.useEffect)(() => {
+            [r, a] = (0, l.useState)(null),
+            c = (0, l.useRef)(null);
+        (0, l.useEffect)(() => {
             null !== t &&
                 (null === r
-                    ? o(t)
+                    ? a(t)
                     : r !== t &&
                       null === c.current &&
                       (c.current = setTimeout(() => {
-                          (c.current = null), r < t ? o(r + 1) : r > t && o(r - 1);
+                          (c.current = null), r < t ? a(r + 1) : r > t && a(r - 1);
                       }, 20)));
-        }, [r, t, o]);
+        }, [r, t, a]);
         let u = null === r ? n : r,
-            m = null !== u ? ''.concat(u).length : 1;
-        return (0, i.jsx)(a.Text, {
+            _ = null !== u ? ''.concat(u).length : 1;
+        return (0, i.jsx)(o.Text, {
             variant: 'text-md/semibold',
-            className: l()(d.balanceCounterText),
-            style: { width: ''.concat(m, 'ch') },
+            className: s()(d.balanceCounterText),
+            style: { width: ''.concat(_, 'ch') },
             children: u
         });
     },
-    h = (e) => {
-        let { balance: t, placeholderBalance: n, balanceWidgetMode: s = o.b.DEFAULT, showNotificationBadge: r, onClick: h, onMouseEnter: g, onMouseLeave: _ } = e,
-            x = d.default;
-        switch (s) {
-            case o.b.HIGHLIGHTED:
-                x = d.highlighted;
+    E = (0, l.forwardRef)(function (e, t) {
+        let { balance: n, placeholderBalance: l, balanceWidgetMode: r = a.b.DEFAULT, showNotificationBadge: E, onClick: h, onMouseEnter: p, onMouseLeave: I, className: m } = e,
+            T = d.default;
+        switch (r) {
+            case a.b.HIGHLIGHTED:
+                T = d.highlighted;
                 break;
-            case o.b.SELECTED:
-                x = d.selected;
+            case a.b.SELECTED:
+                T = d.selected;
         }
-        return (0, i.jsx)('span', {
-            onMouseEnter: void 0 !== g ? g : () => {},
-            onMouseLeave: void 0 !== _ ? _ : () => {},
-            children: (0, i.jsxs)(a.P3F, {
-                className: l()(d.container, x),
-                onClick: void 0 !== h ? h : () => {},
+        return (0, i.jsx)(o.P3F, {
+            onClick: void 0 !== h ? h : () => {},
+            className: d.clickable,
+            children: (0, i.jsxs)('span', {
+                onMouseEnter: void 0 !== p ? p : () => {},
+                onMouseLeave: void 0 !== I ? I : () => {},
+                id: 'balance-widget-pill',
+                ref: t,
+                className: s()(d.container, T, m),
                 children: [
                     (0, i.jsx)(c.M, {}),
-                    (0, i.jsx)(m, {
-                        value: t,
-                        placeholderValue: n
+                    (0, i.jsx)(_, {
+                        value: n,
+                        placeholderValue: l
                     }),
-                    r && (0, i.jsx)(u, {})
+                    E && (0, i.jsx)(u, {})
                 ]
             })
         });
-    };
-h.BalanceWidgetMode = o.b;
+    });

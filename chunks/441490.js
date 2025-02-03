@@ -1,4 +1,1 @@
-e.exports = {
-    verticalContainer: 'verticalContainer__132a5',
-    numberInput: 'numberInput__132a5'
-};
+e.exports = { numberInput: 'numberInput__132a5' };

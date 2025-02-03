@@ -38,6 +38,7 @@ var i = (function (e) {
         (e.PREMIUM_UPSELL_MODAL = 'premium upsell modal'),
         (e.PREMIUM_SETTINGS = 'premium settings'),
         (e.PAYMENT_FLOW_TEST_PAGE = 'payment flow test page'),
+        (e.REVENUE_STORYBOOK_TEST_PAGE = 'revenue storybook test page'),
         (e.PREMIUM_PAYMENT_ACTION_SHEET = 'premium payment action sheet'),
         (e.CHANNEL_CALL = 'channel call'),
         (e.CHANNEL_CALL_CONNECTING_SCREEN = 'channel call connecting screen'),
