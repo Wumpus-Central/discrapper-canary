@@ -12802,6 +12802,7 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .text__8ac07 {
+    color: var(--text-muted);
     overflow: hidden
 }
 
