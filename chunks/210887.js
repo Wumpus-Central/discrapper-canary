@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Z: () => Z });
+n.d(t, { Z: () => V });
 var r,
     a,
     s = n(442837),
@@ -19,8 +19,8 @@ var h = n(12647),
     v = n(581883),
     y = n(874893),
     I = n(981631),
-    T = n(469115);
-function b(e, t, n) {
+    b = n(469115);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,95 +35,110 @@ function b(e, t, n) {
 }
 let S = null !== (r = (0, p.Z)()) && void 0 !== r ? r : I.BRd.DARK,
     A = null,
-    N = !1;
-function C() {
+    N = null,
+    C = !1;
+function R() {
     var e, t;
     if (__OVERLAY__) return I.BRd.DARK;
-    if ((d.Z.syncForcedColors && 'active' === d.Z.systemForcedColors && null != i) || (E.ZP.useSystemTheme === y.K.ON && null != i)) return i;
+    if (d.Z.syncForcedColors && 'active' === d.Z.systemForcedColors && null != i) return i;
+    if (E.ZP.useSystemTheme === y.K.ON && null != i) return (0, _.i9)('ThemeStore') ? ((0, u.wj)(i) ? (null != A ? A : I.BRd.DARK) : I.BRd.LIGHT) : i;
     let n = null === (e = g.Z.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
     if (null != n) return n;
     let r = null === (t = v.Z.settings.appearance) || void 0 === t ? void 0 : t.theme;
     if (null == r) return S;
     if (!(0, _.i9)('ThemeStore')) return r === o.Q2.LIGHT ? I.BRd.LIGHT : I.BRd.DARK;
     switch (r) {
+        case o.Q2.DARK:
+        case o.Q2.DARKER:
+            return null != A ? A : I.BRd.DARK;
         case o.Q2.LIGHT:
             return I.BRd.LIGHT;
-        case o.Q2.DARK:
-            return I.BRd.DARK;
-        case o.Q2.DARKER:
-            return I.BRd.DARKER;
         case o.Q2.MIDNIGHT:
             return I.BRd.MIDNIGHT;
         default:
             return I.BRd.DARK;
     }
 }
-function R() {
-    return C();
-}
 function O() {
-    return U();
+    return R();
 }
 function D() {
-    return U();
+    return B();
 }
 function x() {
-    return (0, u.ap)(R());
+    return B();
 }
-function L(e) {
-    return !e.isSwitchingAccount && S !== I.BRd.DARK && ((S = I.BRd.DARK), G(), U());
+function L() {
+    return (0, u.ap)(O());
 }
 function P(e) {
-    let { systemTheme: t } = e;
-    return (A = t), U();
+    return !e.isSwitchingAccount && S !== I.BRd.DARK && ((S = I.BRd.DARK), Z(), B());
 }
 function w(e) {
-    return (i = e.systemPrefersColorScheme), U();
+    let { systemTheme: t } = e;
+    return (N = t), B();
 }
 function M(e) {
+    return (i = e.systemPrefersColorScheme), B();
+}
+function k(e) {
     var t, n;
     let { presetId: i } = e;
-    S = null != i && null !== (n = null === (t = T.qt[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : R();
+    S = null != i && null !== (n = null === (t = b.qt[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : O();
     let r = null != i;
-    return N !== r ? ((N = r), !0) : k();
+    return C !== r ? ((C = r), !0) : G();
 }
-function k() {
-    let e = R();
-    return !(0, f.qu)(S, e) && ((S = e), !0);
-}
-function U() {
-    let e = R();
-    return e !== S && ((S = e), !0);
+function U(e) {
+    let { theme: t } = e;
+    A = t;
 }
 function G() {
-    !__OVERLAY__ && m.isPlatformEmbedded && h.Z.setApplicationBackgroundColor((0, u.wj)(R()) ? l.Z.unsafe_rawColors.PRIMARY_700.resolve({ saturation: d.Z.saturation }).hsl() : l.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: d.Z.saturation }).hsl());
+    let e = O();
+    return !(0, f.qu)(S, e) && ((S = e), !0);
 }
-class B extends (a = s.ZP.PersistedStore) {
+function B() {
+    let e = O();
+    return e !== S && ((S = e), !0);
+}
+function Z() {
+    !__OVERLAY__ && m.isPlatformEmbedded && h.Z.setApplicationBackgroundColor((0, u.wj)(O()) ? l.Z.unsafe_rawColors.PRIMARY_700.resolve({ saturation: d.Z.saturation }).hsl() : l.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: d.Z.saturation }).hsl());
+}
+class F extends (a = s.ZP.PersistedStore) {
     initialize(e) {
-        (null == e ? void 0 : e.theme) != null && (S = e.theme), this.waitFor(E.ZP, g.Z, v.Z, d.Z);
+        if ((null == e ? void 0 : e.theme) != null) {
+            var t;
+            (S = e.theme), (A = null !== (t = e.selectedDarkTheme) && void 0 !== t ? t : null);
+        }
+        this.waitFor(E.ZP, g.Z, v.Z, d.Z);
     }
     getState() {
-        return { theme: this.theme };
+        return {
+            theme: this.theme,
+            selectedDarkTheme: A
+        };
     }
     get darkSidebar() {
-        return (0, u.ap)(this.theme) && E.ZP.darkSidebar && !N;
+        return (0, u.ap)(this.theme) && E.ZP.darkSidebar && !C;
     }
     get theme() {
-        return R();
+        return O();
+    }
+    get selectedDarkTheme() {
+        return A;
     }
     get systemTheme() {
-        return A;
+        return N;
     }
     get systemPrefersColorScheme() {
         return i;
     }
     get isSystemThemeAvailable() {
-        return null !== A;
+        return null !== N;
     }
 }
-b(B, 'displayName', 'ThemeStore'),
-    b(B, 'persistKey', 'ThemeStore'),
-    b(B, 'migrations', [
+T(F, 'displayName', 'ThemeStore'),
+    T(F, 'persistKey', 'ThemeStore'),
+    T(F, 'migrations', [
         (e) => {
             let t = e.theme;
             return (
@@ -135,17 +150,18 @@ b(B, 'displayName', 'ThemeStore'),
             );
         }
     ]);
-let Z = new B(c.Z, {
-    CACHE_LOADED: O,
-    CONNECTION_OPEN: O,
-    LOGOUT: L,
-    OVERLAY_INITIALIZE: O,
-    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: D,
-    UNSYNCED_USER_SETTINGS_UPDATE: D,
-    USER_SETTINGS_PROTO_UPDATE: O,
-    UPDATE_BACKGROUND_GRADIENT_PRESET: M,
-    RESET_PREVIEW_CLIENT_THEME: O,
-    SYSTEM_THEME_CHANGE: P,
-    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: w,
-    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: x
+let V = new F(c.Z, {
+    CACHE_LOADED: D,
+    CONNECTION_OPEN: D,
+    LOGOUT: P,
+    OVERLAY_INITIALIZE: D,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: x,
+    UNSYNCED_USER_SETTINGS_UPDATE: x,
+    USER_SETTINGS_PROTO_UPDATE: D,
+    UPDATE_BACKGROUND_GRADIENT_PRESET: k,
+    RESET_PREVIEW_CLIENT_THEME: D,
+    SYSTEM_THEME_CHANGE: w,
+    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: M,
+    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: L,
+    SET_DARK_MODE_THEME: U
 });

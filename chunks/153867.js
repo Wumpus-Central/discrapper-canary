@@ -1,20 +1,21 @@
 n.d(t, {
-    V1: () => _,
-    ZI: () => m,
-    ZP: () => g
+    V1: () => p,
+    ZI: () => g,
+    ZP: () => E
 });
 var i = n(524437),
     r = n(381499),
     a = n(570140),
     s = n(514361),
     o = n(238514),
-    l = n(210887),
-    u = n(695346),
-    c = n(675478),
-    d = n(981631),
-    f = n(874893);
-function _(e) {
-    return c.hW.updateAsync(
+    l = n(781391),
+    u = n(210887),
+    c = n(695346),
+    d = n(675478),
+    f = n(981631),
+    _ = n(874893);
+function p(e) {
+    return d.hW.updateAsync(
         'guildFolders',
         (t) => {
             t.folders = e.map((e) => {
@@ -22,36 +23,37 @@ function _(e) {
                 return null != e.folderId && (t.id = r.r1.create({ value: String(e.folderId) })), null != e.folderColor && (t.color = r.wA.create({ value: String(e.folderColor) })), null != e.folderName && '' !== e.folderName && (t.name = r.Gm.create({ value: String(e.folderName) })), t;
             });
         },
-        c.fy.FREQUENT_USER_ACTION
+        d.fy.FREQUENT_USER_ACTION
     );
 }
-function p(e) {
+function h(e) {
     switch (e) {
-        case d.BRd.DARK:
+        case f.BRd.DARK:
             return i.Q2.DARK;
-        case d.BRd.LIGHT:
+        case f.BRd.LIGHT:
             return i.Q2.LIGHT;
-        case d.BRd.DARKER:
+        case f.BRd.DARKER:
             return i.Q2.DARKER;
-        case d.BRd.MIDNIGHT:
+        case f.BRd.MIDNIGHT:
             return i.Q2.MIDNIGHT;
         default:
             return i.Q2.DARK;
     }
 }
-function h(e) {
+function m(e) {
     return { backgroundGradientPresetId: null != e.backgroundGradientPresetId ? r.yC.create({ value: e.backgroundGradientPresetId }) : void 0 };
 }
-function m(e) {
+function g(e) {
     let { backgroundGradientPresetId: t, theme: n, useSystemTheme: i } = e,
-        r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.fy.INFREQUENT_USER_ACTION,
-        s = 'system' === n ? f.K.ON : f.K.OFF,
-        l = null != i ? i : s;
+        r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.fy.INFREQUENT_USER_ACTION,
+        s = 'system' === n ? _.K.ON : _.K.OFF,
+        u = null != i ? i : s;
     if (
         (a.Z.dispatch({
             type: 'UNSYNCED_USER_SETTINGS_UPDATE',
-            settings: { useSystemTheme: l }
+            settings: { useSystemTheme: u }
         }),
+        null == t && (n === f.BRd.DARK || n === f.BRd.DARKER) && (0, l.F8)(n),
         a.Z.dispatch({
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
             changes: {
@@ -65,15 +67,15 @@ function m(e) {
         }),
         o.Z.shouldSync('appearance'))
     )
-        return c.hW.updateAsync(
+        return d.hW.updateAsync(
             'appearance',
             (e) => {
-                (e.theme = p(n)), (e.clientThemeSettings = h({ backgroundGradientPresetId: t }));
+                (e.theme = h(n)), (e.clientThemeSettings = m({ backgroundGradientPresetId: t }));
             },
             r
         );
 }
-let g = {
+let E = {
     overrideLocale(e) {
         a.Z.dispatch({
             type: 'USER_SETTINGS_LOCALE_OVERRIDE',
@@ -95,13 +97,13 @@ let g = {
                     settings: e
                         ? {}
                         : {
-                              inlineAttachmentMedia: u.x4.getSetting(),
-                              inlineEmbedMedia: u.RS.getSetting(),
-                              renderEmbeds: u.NA.getSetting(),
-                              renderReactions: u.nc.getSetting(),
-                              animateEmoji: u.Yk.getSetting(),
-                              animateStickers: u.Wp.getSetting(),
-                              gifAutoPlay: u.QK.getSetting()
+                              inlineAttachmentMedia: c.x4.getSetting(),
+                              inlineEmbedMedia: c.RS.getSetting(),
+                              renderEmbeds: c.NA.getSetting(),
+                              renderReactions: c.nc.getSetting(),
+                              animateEmoji: c.Yk.getSetting(),
+                              animateStickers: c.Wp.getSetting(),
+                              gifAutoPlay: c.QK.getSetting()
                           }
                 }
             }
@@ -117,9 +119,9 @@ let g = {
                     settings: e
                         ? {}
                         : {
-                              theme: l.Z.theme,
+                              theme: u.Z.theme,
                               clientThemeSettings: { backgroundGradientPresetId: null === (t = s.Z.gradientPreset) || void 0 === t ? void 0 : t.id },
-                              developerMode: u.Sb.getSetting()
+                              developerMode: c.Sb.getSetting()
                           }
                 }
             }
@@ -139,12 +141,12 @@ let g = {
         });
     },
     updateLocale: (e) =>
-        c.hW.updateAsync(
+        d.hW.updateAsync(
             'localization',
             (t) => {
                 t.locale = r.Gm.create({ value: e });
             },
-            c.fy.INFREQUENT_USER_ACTION
+            d.fy.INFREQUENT_USER_ACTION
         ),
     updateTheme(e) {
         a.Z.dispatch({
@@ -152,12 +154,12 @@ let g = {
             changes: { appearance: { settings: { theme: e } } }
         }),
             o.Z.shouldSync('appearance') &&
-                c.hW.updateAsync(
+                d.hW.updateAsync(
                     'appearance',
                     (t) => {
-                        t.theme = p(e);
+                        t.theme = h(e);
                     },
-                    c.fy.INFREQUENT_USER_ACTION
+                    d.fy.INFREQUENT_USER_ACTION
                 );
     }
 };
