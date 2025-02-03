@@ -234,12 +234,14 @@ let w = (e) => {
                               selectionText: n.name.replace(/_/g, ' ')
                           },
                 [n]
-            );
+            ),
+            p = (0, r.useRef)(null);
         return (0, i.jsx)(b.Z, {
             channel: t,
             shouldShow: l,
             onRequestClose: c,
             setEmojiConfetti: d,
+            positionRef: p,
             position: 'left',
             align: 'top',
             children: () =>
@@ -255,18 +257,22 @@ let w = (e) => {
                             (0, i.jsxs)('div', {
                                 className: N.selectedEmoji,
                                 children: [
-                                    null == n
-                                        ? (0, i.jsx)(s.EO4, {
-                                              color: 'currentColor',
-                                              size: 'custom',
-                                              className: N.emojiIcon
-                                          })
-                                        : (0, i.jsx)(o.Z, {
-                                              animated: !1,
-                                              emojiId: n.id,
-                                              emojiName: f,
-                                              className: N.emojiIcon
-                                          }),
+                                    (0, i.jsx)('div', {
+                                        ref: p,
+                                        children:
+                                            null == n
+                                                ? (0, i.jsx)(s.EO4, {
+                                                      color: 'currentColor',
+                                                      size: 'custom',
+                                                      className: N.emojiIcon
+                                                  })
+                                                : (0, i.jsx)(o.Z, {
+                                                      animated: !1,
+                                                      emojiId: n.id,
+                                                      emojiName: f,
+                                                      className: N.emojiIcon
+                                                  })
+                                    }),
                                     (0, i.jsx)(s.Text, {
                                         color: 'interactive-active',
                                         variant: 'text-sm/normal',

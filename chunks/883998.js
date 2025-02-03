@@ -11,8 +11,8 @@ let u = {
     },
     c = l.Hz.MESSAGE_CONFETTI;
 function d(e) {
-    let { channel: t, setEmojiConfetti: n, shouldShow: o, onRequestClose: l, position: d, align: f, children: _ } = e,
-        p = r.useCallback(
+    let { channel: t, setEmojiConfetti: n, shouldShow: o, onRequestClose: l, position: d, align: f, positionRef: _, children: p } = e,
+        h = r.useCallback(
             (e) => {
                 null != e && (n(e), l());
             },
@@ -21,6 +21,7 @@ function d(e) {
     return (0, i.jsx)(a.yRy, {
         shouldShow: o,
         position: d,
+        overridePositionRef: _,
         align: f,
         onRequestClose: l,
         renderPopout: (e) => {
@@ -29,11 +30,11 @@ function d(e) {
                 analyticsOverride: u,
                 channel: t,
                 closePopout: n,
-                onSelectEmoji: p,
+                onSelectEmoji: h,
                 pickerIntention: c,
                 includeCreateEmojiButton: !1
             });
         },
-        children: _
+        children: p
     });
 }

@@ -49,10 +49,11 @@ function p(e) {
 }
 class h extends (i = a.Component) {
     render() {
-        let { children: e, shouldShow: t, position: n, onRequestOpen: i, onRequestClose: a, align: s, autoInvert: o, fixed: u, nudgeAlignIntoViewport: c, useRawTargetDimensions: d, spacing: f, onShiftClick: _, positionKey: h, preload: m, disablePointerEvents: g, ignoreModalClicks: E, closeOnScroll: v, useMouseEnter: y, renderPopout: I, layerContext: b, clickTrap: T = !1 } = this.props;
+        let { children: e, shouldShow: t, position: n, onRequestOpen: i, onRequestClose: a, align: s, autoInvert: o, fixed: u, nudgeAlignIntoViewport: c, useRawTargetDimensions: d, spacing: f, onShiftClick: _, positionKey: h, overridePositionRef: m, preload: g, disablePointerEvents: E, ignoreModalClicks: v, closeOnScroll: y, useMouseEnter: I, renderPopout: b, layerContext: T, clickTrap: S = !1 } = this.props;
         return (0, r.jsx)(l.H, {
             ref: this.ref,
-            preload: m,
+            overridePositionRef: m,
+            preload: g,
             position: n,
             align: null != s ? s : p(n),
             autoInvert: o,
@@ -61,17 +62,17 @@ class h extends (i = a.Component) {
             useRawTargetDimensions: d,
             renderPopout: this.renderPopout,
             spacing: f,
-            shouldShow: null != I && t,
+            shouldShow: null != b && t,
             onRequestOpen: i,
             onRequestClose: a,
             onShiftClick: _,
             positionKey: h,
-            disablePointerEvents: g,
-            ignoreModalClicks: E,
-            closeOnScroll: v,
-            useMouseEnter: y,
-            layerContext: b,
-            clickTrap: T,
+            disablePointerEvents: E,
+            ignoreModalClicks: v,
+            closeOnScroll: y,
+            useMouseEnter: I,
+            layerContext: T,
+            clickTrap: S,
             children: e
         });
     }
