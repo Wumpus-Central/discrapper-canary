@@ -7,8 +7,15 @@ var i = n(192379),
     l = n(981631),
     u = n(388032);
 let c = (e) => {
-    let { activity: t, stream: n } = e;
-    if (null != n && !(0, o.Z)(t)) {
+    let { activity: t, stream: n } = e,
+        i = (null == t ? void 0 : t.name) === '' ? null : null == t ? void 0 : t.name,
+        c = (null == t ? void 0 : t.details) === '' ? null : null == t ? void 0 : t.details;
+    if (null != n && (0, o.Z)(t) && null != i)
+        return {
+            text: u.intl.format(u.t['0wJXSk'], { name: i }),
+            tooltip: u.intl.formatToPlainString(u.t['0wJXSk'], { name: i })
+        };
+    if (null != n) {
         let e = u.intl.string(u.t.eXan7O);
         return {
             text: e,
@@ -16,38 +23,35 @@ let c = (e) => {
         };
     }
     if ((0, s.Z)(t)) {
-        let e = (0, a.Z)(null == t ? void 0 : t.name);
+        let e = (0, a.Z)(i);
         return {
             text: e,
             tooltip: e
         };
     }
-    return (null == t ? void 0 : t.name) == null || (null == t ? void 0 : t.name) === ''
+    return null == i
         ? {}
         : (0, r.EQ)(t)
               .with({ type: l.IIU.PLAYING }, () => ({
-                  text: u.intl.format(u.t.lFApm5, { game: t.name }),
-                  tooltip: u.intl.formatToPlainString(u.t.lFApm5, { game: t.name })
+                  text: u.intl.format(u.t.lFApm5, { game: i }),
+                  tooltip: u.intl.formatToPlainString(u.t.lFApm5, { game: i })
               }))
               .with({ type: l.IIU.LISTENING }, () => ({
-                  text: u.intl.format(u.t.Vnuxub, { name: t.name }),
-                  tooltip: u.intl.formatToPlainString(u.t.Vnuxub, { name: t.name })
+                  text: u.intl.format(u.t.Vnuxub, { name: i }),
+                  tooltip: u.intl.formatToPlainString(u.t.Vnuxub, { name: i })
               }))
               .with({ type: l.IIU.WATCHING }, () => ({
-                  text: u.intl.format(u.t.pW3Ip6, { name: t.name }),
-                  tooltip: u.intl.formatToPlainString(u.t.pW3Ip6, { name: t.name })
+                  text: u.intl.format(u.t.pW3Ip6, { name: i }),
+                  tooltip: u.intl.formatToPlainString(u.t.pW3Ip6, { name: i })
               }))
               .with({ type: l.IIU.COMPETING }, () => ({
-                  text: u.intl.format(u.t.QQ2wVF, { name: t.name }),
-                  tooltip: u.intl.formatToPlainString(u.t.QQ2wVF, { name: t.name })
+                  text: u.intl.format(u.t.QQ2wVF, { name: i }),
+                  tooltip: u.intl.formatToPlainString(u.t.QQ2wVF, { name: i })
               }))
-              .with({ type: l.IIU.STREAMING }, () => {
-                  let e = null != t.details && '' !== t.details ? t.details : t.name;
-                  return {
-                      text: u.intl.format(u.t['0wJXSk'], { name: e }),
-                      tooltip: u.intl.formatToPlainString(u.t['0wJXSk'], { name: e })
-                  };
-              })
+              .with({ type: l.IIU.STREAMING }, () => ({
+                  text: u.intl.format(u.t['0wJXSk'], { name: null != c ? c : i }),
+                  tooltip: u.intl.formatToPlainString(u.t['0wJXSk'], { name: null != c ? c : i })
+              }))
               .otherwise(() => ({}));
 };
 function d(e) {
