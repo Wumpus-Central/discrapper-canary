@@ -1,21 +1,19 @@
-n.d(e, { Z: () => o });
-var a = n(626562),
-    l = n(652831),
-    i = n(695346),
-    s = n(875425);
-let r = Object.values(s.F)
+n.d(e, { Z: () => i });
+var a = n(695346),
+    l = n(875425);
+let s = Object.values(l.F)
     .filter((t) => 'number' == typeof t)
     .sort((t, e) => t - e);
-function o() {
+function i() {
     var t;
-    let e = i.Ok.getSetting();
-    if (null == e || '' === e.expiresAtMs) return (0, l.q)({ location: 'computeInitialClearAfter' }) || (0, a.iv)({ location: 'computeInitialClearAfter' }) ? s.F.DONT_CLEAR : s.F.TODAY;
+    let e = a.Ok.getSetting();
+    if (null == e || '' === e.expiresAtMs) return l.F.TODAY;
     let n = Number(e.expiresAtMs);
-    if (isNaN(n)) return s.F.TODAY;
-    if (0 === n) return s.F.DONT_CLEAR;
-    let o = new Date(),
-        u = new Date(n);
-    if (o.getFullYear() !== u.getFullYear() || o.getMonth() !== u.getMonth() || o.getDate() !== u.getDate()) return s.F.TODAY;
-    let d = Number(n) - Date.now();
-    return null !== (t = r.find((t) => d <= t)) && void 0 !== t ? t : s.F.TODAY;
+    if (isNaN(n)) return l.F.TODAY;
+    if (0 === n) return l.F.DONT_CLEAR;
+    let i = new Date(),
+        r = new Date(n);
+    if (i.getFullYear() !== r.getFullYear() || i.getMonth() !== r.getMonth() || i.getDate() !== r.getDate()) return l.F.TODAY;
+    let o = Number(n) - Date.now();
+    return null !== (t = s.find((t) => o <= t)) && void 0 !== t ? t : l.F.TODAY;
 }
