@@ -1,15 +1,13 @@
-n.d(t, { Z: () => d }), n(47120);
+n.d(t, { Z: () => c }), n(47120);
 var i = n(192379),
     l = n(442837),
     a = n(594174),
     r = n(823162),
-    s = n(907877),
-    o = n(355298);
-let c = new Set(['GB']);
-function d() {
-    let e = (0, s.f)({ location: 'useIsStricterMessageRequests' }),
-        t = (0, l.e7)([o.Z], () => o.Z.getUserCountryCode()),
-        n =
+    s = n(355298);
+let o = new Set(['GB']);
+function c() {
+    let e = (0, l.e7)([s.Z], () => s.Z.getUserCountryCode()),
+        t =
             !1 ===
             (0, l.e7)([a.default], () => {
                 var e;
@@ -17,8 +15,8 @@ function d() {
             });
     return (
         i.useEffect(() => {
-            null == t && (0, r.hi)();
-        }, [t]),
-        !!e || (!!(null != t && c.has(t.alpha2)) && !!n)
+            null == e && (0, r.hi)();
+        }, [e]),
+        !!(null != e && o.has(e.alpha2)) && !!t
     );
 }
