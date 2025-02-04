@@ -45,6 +45,7 @@ function d(e) {
         gameRelationships: d,
         menuItemId: 'remove-game-friend',
         label: c.intl.string(c.t['RLcE6+']),
-        onClick: _
+        onClick: _,
+        color: 'danger'
     });
 }

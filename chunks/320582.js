@@ -1,5 +1,6 @@
 n.d(t, {
     ML: () => l,
+    p0: () => c,
     vh: () => u
 }),
     n(47120);
@@ -16,4 +17,8 @@ function l(e) {
 }
 function u(e) {
     return o(e, s.OGo.PENDING_INCOMING);
+}
+function c(e) {
+    let [t] = (0, i.e7)([a.Z], () => [a.Z.getGameRelationshipsForUser(e), a.Z.getGameRelationshipsVersion()], [e], r.Q);
+    return t;
 }

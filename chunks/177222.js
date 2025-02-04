@@ -86,7 +86,8 @@ function k(e) {
                                     children: [
                                         (0, i.jsx)(N.Z, {
                                             user: t,
-                                            profileType: P.y0.PANEL
+                                            profileType: P.y0.PANEL,
+                                            shouldShowTooltip: null === V.interactionType
                                         }),
                                         t.bot ? (0, i.jsx)(b.Z, { user: t }) : (0, i.jsx)(T.Z, { user: t })
                                     ]

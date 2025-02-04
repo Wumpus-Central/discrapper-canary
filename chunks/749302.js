@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(47120), n(653041);
+n.d(t, { Z: () => g }), n(47120), n(653041);
 var i = n(200651),
     r = n(192379),
     a = n(442837),
@@ -6,10 +6,12 @@ var i = n(200651),
     o = n(835473),
     l = n(925329),
     u = n(372460),
-    c = n(594174),
-    d = n(960897);
-let f = [];
-function _(e, t) {
+    c = n(699516),
+    d = n(594174),
+    f = n(981631),
+    _ = n(960897);
+let p = [];
+function h(e, t) {
     let n = (0, o.Z)(e, t);
     return r.useMemo(() => {
         let e = new Map();
@@ -21,10 +23,10 @@ function _(e, t) {
         );
     }, [n]);
 }
-function p(e) {
+function m(e) {
     let { application: t } = e;
     return (0, i.jsxs)('div', {
-        className: d.subtext,
+        className: _.subtext,
         children: [
             (0, i.jsx)(l.Z, {
                 game: t,
@@ -34,49 +36,49 @@ function p(e) {
         ]
     });
 }
-function h(e) {
-    let { menuItemId: t, user: n, label: o, gameRelationships: d, onClick: h } = e,
-        { id: m, bot: g } = n,
-        E = (0, a.e7)([c.default], () => {
+function g(e) {
+    let { menuItemId: t, user: n, label: o, gameRelationships: _, onClick: g, color: E } = e,
+        { id: v, bot: y } = n,
+        I = (0, a.e7)([d.default], () => {
             var e;
-            return (null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === m;
+            return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === v;
         }),
-        v = (0, u.wn)({ location: 'useAcceptGameFriendRequest' }),
-        y = E || g || !v,
-        I = y ? f : d,
-        [b, T] = r.useState(!1),
-        S = r.useCallback(() => T(!0), []),
-        A = _(
-            r.useMemo(
-                () =>
-                    I.map((e) => {
-                        let { applicationId: t } = e;
-                        return t;
-                    }),
-                [I]
-            ),
-            b || 1 === I.length
-        );
-    if (y || 0 === I.length) return null;
-    if (1 === I.length) {
-        let { applicationId: e } = I[0],
-            n = A.get(e);
+        b = (0, u.wn)({ location: 'useAcceptGameFriendRequest' }),
+        T = I || y || !b,
+        S = T ? p : _,
+        [A, N] = r.useState(!1),
+        C = r.useCallback(() => N(!0), []),
+        R = r.useMemo(
+            () =>
+                S.map((e) => {
+                    let { applicationId: t } = e;
+                    return t;
+                }),
+            [S]
+        ),
+        O = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(v), [v]),
+        D = h(R, A || 1 === S.length);
+    if (T || 0 === S.length || O === f.OGo.FRIEND) return null;
+    if (1 === S.length) {
+        let { applicationId: e } = S[0],
+            n = D.get(e);
         return null == n
             ? null
             : (0, i.jsx)(s.sNh, {
+                  color: E,
                   id: t,
                   label: o,
-                  subtext: (0, i.jsx)(p, { application: n }),
-                  onFocus: S,
-                  action: () => h(n)
+                  subtext: (0, i.jsx)(m, { application: n }),
+                  onFocus: C,
+                  action: () => g(n)
               });
     }
-    let N = [];
-    return (I.forEach((e) => {
+    let x = [];
+    return (S.forEach((e) => {
         let { applicationId: t } = e,
-            n = A.get(t);
+            n = D.get(t);
         null != n &&
-            N.push(
+            x.push(
                 (0, i.jsx)(
                     s.sNh,
                     {
@@ -86,18 +88,19 @@ function h(e) {
                             game: n,
                             size: l.Z.Sizes.XXSMALL
                         }),
-                        action: () => h(n)
+                        action: () => g(n)
                     },
                     t
                 )
             );
     }),
-    0 === N.length)
+    0 === x.length)
         ? null
         : (0, i.jsx)(s.sNh, {
+              color: E,
               id: t,
               label: o,
-              onFocus: S,
-              children: N
+              onFocus: C,
+              children: x
           });
 }
