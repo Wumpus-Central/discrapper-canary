@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var a = n(200651),
     r = n(192379),
     i = n(894582),
@@ -8,28 +8,26 @@ var a = n(200651),
     p = n(343817),
     d = n(797614),
     l = n(626135),
-    h = n(109167),
-    u = n(353250),
-    f = n(599857),
-    v = n(981631);
-let m = (e) => {
-    let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: m, onRender: y, onVerify: C, onError: E, onOpen: b, onClose: _, onChalExpired: R, size: x, userflow: g, ...w } = e,
-        A = r.useRef(null),
-        k = (0, h.H)('captcha'),
-        S = (0, o.Z)(),
-        [j, I] = r.useState(!1),
-        N = r.useCallback(
+    h = n(353250),
+    u = n(599857),
+    f = n(981631);
+let v = (e) => {
+    let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: v, onRender: m, onVerify: y, onError: C, onOpen: E, onClose: _, onChalExpired: b, size: R, userflow: x, ...g } = e,
+        w = r.useRef(null),
+        A = (0, o.Z)(),
+        [k, S] = r.useState(!1),
+        j = r.useCallback(
             (e) => {
-                l.default.track(v.rMx.CAPTCHA_EVENT, {
+                l.default.track(f.rMx.CAPTCHA_EVENT, {
                     captcha_event_name: e,
                     captcha_service: t,
                     sitekey: n,
-                    captcha_flow_key: S
+                    captcha_flow_key: A
                 });
             },
-            [S, t, n]
+            [A, t, n]
         ),
-        O = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 d.Z.increment({
                     name: s.V.CAPTCHA_EVENT,
@@ -38,81 +36,81 @@ let m = (e) => {
             },
             [t]
         ),
-        L = r.useCallback(() => {
+        N = r.useCallback(() => {
             if (t === p.hP.HCAPTCHA) {
                 var e, n;
-                null != m && '' !== m && null != A.current && (null === (e = A.current) || void 0 === e || e.setData({ rqdata: m })), 'invisible' === x && null != A.current && (null === (n = A.current) || void 0 === n || n.execute());
+                null != v && '' !== v && null != w.current && (null === (e = w.current) || void 0 === e || e.setData({ rqdata: v })), 'invisible' === R && null != w.current && (null === (n = w.current) || void 0 === n || n.execute());
             }
-        }, [m, A, x, t]),
-        P = r.useCallback(() => {
-            j || (N('initial-load'), O('initial-load'), I(!0)), L();
-        }, [O, j, N, L]);
+        }, [v, w, R, t]),
+        O = r.useCallback(() => {
+            k || (j('initial-load'), I('initial-load'), S(!0)), N();
+        }, [I, k, j, N]);
     r.useEffect(() => {
-        L();
-    }, [L]),
+        N();
+    }, [N]),
         r.useEffect(() => {
-            P();
-        }, [P]);
-    let V = r.useCallback(() => {
-            N('error'), O('error'), L(), null == E || E();
-        }, [N, O, L, E]),
-        T = r.useCallback(
+            O();
+        }, [O]);
+    let L = r.useCallback(() => {
+            j('error'), I('error'), N(), null == C || C();
+        }, [j, I, N, C]),
+        P = r.useCallback(
             (e) => {
-                N('verify'), O('verify'), C(e);
+                j('verify'), I('verify'), y(e);
             },
-            [O, C, N]
+            [I, y, j]
         ),
+        V = r.useCallback(() => {
+            j('render'), (0, h.emitCaptchaDistributionMetric)(x), null == m || m();
+        }, [m, j, x]),
+        T = r.useCallback(() => {
+            j('open'), I('open'), (0, h.emitCaptchaDistributionMetric)(x), null == E || E();
+        }, [I, E, j, x]),
         Z = r.useCallback(() => {
-            N('render'), (0, u.emitCaptchaDistributionMetric)(k, g), null == y || y();
-        }, [k, y, N, g]),
+            j('close'), null == _ || _(), N();
+        }, [_, j, N]),
         D = r.useCallback(() => {
-            N('open'), O('open'), (0, u.emitCaptchaDistributionMetric)(k, g), null == b || b();
-        }, [O, k, b, N, g]),
-        M = r.useCallback(() => {
-            N('close'), null == _ || _(), L();
-        }, [_, N, L]),
-        H = r.useCallback(() => {
-            N('chal-expire'), null == R || R();
-        }, [R, N]);
-    return ((null == n || '' === n) && (n = v.OL7), t === p.hP.RECAPTCHA)
+            j('chal-expire'), null == b || b();
+        }, [b, j]);
+    return ((null == n || '' === n) && (n = f.OL7), t === p.hP.RECAPTCHA)
         ? (0, a.jsx)(c.Z, {
-              ...w,
-              onLoad: P,
-              onRender: Z,
-              onVerify: T,
-              onError: V,
+              ...g,
+              onLoad: O,
+              onRender: V,
+              onVerify: P,
+              onError: L,
               sitekey: n
           })
         : t === p.hP.RECAPTCHA_ENTERPRISE
-          ? (0, a.jsx)(f._, {
-                ...w,
-                onLoad: P,
-                onRender: Z,
-                onVerify: T,
-                onError: V,
+          ? (0, a.jsx)(u._, {
+                ...g,
+                onLoad: O,
+                onRender: V,
+                onVerify: P,
+                onError: L,
                 sitekey: n,
-                action: g
+                action: x
             })
           : t === p.hP.HCAPTCHA
             ? (0, a.jsx)(i.Z, {
-                  ref: A,
-                  ...w,
+                  ref: w,
+                  ...g,
                   sitekey: n,
-                  onLoad: P,
-                  onError: V,
-                  onVerify: T,
-                  onChalExpired: H,
-                  onOpen: D,
-                  onClose: M,
-                  size: x,
+                  onLoad: O,
+                  onError: L,
+                  onVerify: P,
+                  onChalExpired: D,
+                  onOpen: T,
+                  onClose: Z,
+                  size: R,
                   reCaptchaCompat: !1
               })
             : (0, a.jsx)(c.Z, {
-                  ...w,
+                  ...g,
                   sitekey: n,
-                  onLoad: P,
-                  onRender: Z,
-                  onVerify: T,
-                  onError: V
+                  onLoad: O,
+                  onRender: V,
+                  onVerify: P,
+                  onError: L
               });
 };
