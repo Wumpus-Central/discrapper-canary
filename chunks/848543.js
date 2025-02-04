@@ -106,13 +106,13 @@ function x(e) {
                         })
                     })
             }),
-        Y = l.useCallback(() => {
+        K = l.useCallback(() => {
             R || D(!j);
         }, [R, j]);
     return (
         (0, E.yp)({
             event: N.CkL.TOGGLE_SOUNDBOARD,
-            handler: Y
+            handler: K
         }),
         (0, i.jsx)(m.Gt, {
             value: G,

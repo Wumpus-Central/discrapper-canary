@@ -43,8 +43,8 @@ var i = n(200651),
     F = n(177033),
     z = n(355350),
     W = n(307947),
-    Y = n(96479),
-    K = n(480874),
+    K = n(96479),
+    Y = n(480874),
     q = n(687683),
     X = n(981631),
     Q = n(921944),
@@ -75,7 +75,7 @@ function en() {
                     c = null === (l = n[s + 1]) || void 0 === l ? void 0 : null === (t = l.channel) || void 0 === t ? void 0 : t.id,
                     d = o.channel.id;
                 return (0, i.jsx)(
-                    Y.Z,
+                    K.Z,
                     {
                         index: s,
                         className: a()({
@@ -234,7 +234,7 @@ let el = function (e) {
     };
 function ea(e) {
     let { section: t } = e;
-    return t === q.pS.SPAM ? (0, i.jsx)(K.Z, {}) : (0, i.jsx)(en, {});
+    return t === q.pS.SPAM ? (0, i.jsx)(Y.Z, {}) : (0, i.jsx)(en, {});
 }
 let es = (0, p.Z)(function (e) {
     let { width: t } = e,

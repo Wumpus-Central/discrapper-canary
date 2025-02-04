@@ -1,47 +1,47 @@
 n.d(t, {
-    m$: () => m,
-    wV: () => u,
+    m$: () => f,
+    wV: () => c,
     zU: () => d
 });
-var i = n(442837),
+var r = n(442837),
     l = n(569545),
-    a = n(314897),
-    r = n(19780),
+    i = n(314897),
+    u = n(19780),
     s = n(98369),
-    o = n(277642),
-    c = n(441894);
-function u(e) {
+    a = n(277642),
+    o = n(441894);
+function c(e) {
     let { userId: t, channelId: n, location: l } = e,
-        o = (0, c.J)({
+        a = (0, o.J)({
             channelId: n,
             location: l
         });
-    return (0, i.e7)([s.Z, a.default, r.Z], () => null != t && o && r.Z.isUserConnected(t) && a.default.getId() !== t && s.Z.isUserVerified(t), [o, t]);
+    return (0, r.e7)([s.Z, i.default, u.Z], () => null != t && a && u.Z.isUserConnected(t) && i.default.getId() !== t && s.Z.isUserVerified(t), [a, t]);
 }
 function d(e) {
-    let { streamKey: t, channelId: n, location: r } = e,
-        u = (0, c.J)({
+    let { streamKey: t, channelId: n, location: u } = e,
+        c = (0, o.J)({
             channelId: n,
-            location: r
+            location: u
         }),
-        d = (0, o.t)(t);
-    return (0, i.e7)(
-        [s.Z, a.default],
+        d = (0, a.t)(t);
+    return (0, r.e7)(
+        [s.Z, i.default],
         () => {
-            if (!u || d || null == t) return !1;
-            let e = a.default.getId(),
+            if (!c || d || null == t) return !1;
+            let e = i.default.getId(),
                 { ownerId: n } = (0, l.my)(t);
             return n !== e && s.Z.isStreamVerified(t);
         },
-        [d, u, t]
+        [d, c, t]
     );
 }
-function m(e) {
+function f(e) {
     let { channelId: t, location: n } = e,
-        l = (0, c.J)({
+        l = (0, o.J)({
             channelId: t,
             location: n
         }),
-        a = (0, o.r)();
-    return (0, i.e7)([s.Z], () => !!l && !a && s.Z.isCallVerified(), [a, l]);
+        i = (0, a.r)();
+    return (0, r.e7)([s.Z], () => !!l && !i && s.Z.isCallVerified(), [i, l]);
 }

@@ -43,8 +43,8 @@ var i = n(200651),
     F = n(210887),
     z = n(592125),
     W = n(796974),
-    Y = n(486472),
-    K = n(984933),
+    K = n(486472),
+    Y = n(984933),
     q = n(650774),
     X = n(430824),
     Q = n(819640),
@@ -225,7 +225,7 @@ class ev extends l.PureComponent {
                 className: eg.hubContainer,
                 children: (0, i.jsx)(w.Z, {
                     guild: t,
-                    channel: null != n ? n : K.ZP.getDefaultChannel(t.id)
+                    channel: null != n ? n : Y.ZP.getDefaultChannel(t.id)
                 })
             });
         {
@@ -406,18 +406,18 @@ function eN(e) {
         p = (0, c.e7)([W.Z], () => W.Z.getGuildDimensions(n).scrollTo),
         g = (0, c.e7)([ee.Z], () => ee.Z.getChannelId()),
         [N, A, R] = (0, c.Wu)([J.Z], () => [J.Z.can(ed.Plq.MANAGE_GUILD, u), J.Z.can(ed.Plq.MANAGE_ROLES, u), J.Z.can(ed.Plq.MANAGE_THREADS, u)]),
-        w = (0, c.e7)([Y.Z], () => Y.Z.isUnavailable(n)),
+        w = (0, c.e7)([K.Z], () => K.Z.isUnavailable(n)),
         U = (0, c.e7)([et.default], () => et.default.getCurrentUser()),
         B = (0, c.e7)([F.Z], () => (F.Z.darkSidebar ? ed.BRd.DARK : F.Z.theme)),
         { enableStudyGroup: H } = (0, D.s)(u),
-        K = (0, Z.ZP)((e) => e.currentlyShown.has(d.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
-        [el, er] = l.useState(!K),
+        Y = (0, Z.ZP)((e) => e.currentlyShown.has(d.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
+        [el, er] = l.useState(!Y),
         ea = (0, f.Z)(n),
         { analyticsLocations: es } = (0, I.ZP)(E.Z.GUILD_HEADER),
         { analyticsLocations: eo } = (0, I.ZP)(E.Z.GUILD_CHANNEL_LIST_FOOTER);
     l.useEffect(() => {
-        n !== ea && er(!K);
-    }, [n, ea, K]);
+        n !== ea && er(!Y);
+    }, [n, ea, Y]);
     let [ec, em] = (0, Z.ZP)((e) => [eu.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eh.R.GUILD_HEADER_TOOLTIPS)], o.X),
         ep = (0, v.Z)(u),
         eg = (0, h.s9z)(h.JQI),

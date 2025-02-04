@@ -17,8 +17,8 @@ var l = n(120356),
     v = n(185923),
     Z = n(388032),
     x = n(953568);
-let p = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
-function N(e) {
+let N = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
+function p(e) {
     var t;
     let { emoji: n, isFocused: l } = e,
         { animated: s, src: o, surrogates: d } = n;
@@ -64,7 +64,7 @@ function S(e, t) {
     let n = (0, o.MZ)(t.guild_id).filter((e) => {
         var n;
         return (
-            !(e.useSpriteSheet && p.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : '') >= 0) &&
+            !(e.useSpriteSheet && N.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : '') >= 0) &&
             !h.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: t,
@@ -90,7 +90,7 @@ function S(e, t) {
                           id: 'quickreact-'.concat(null !== (n = e.id) && void 0 !== n ? n : t),
                           render: (t) => {
                               let { isFocused: n } = t;
-                              return (0, i.jsx)(N, {
+                              return (0, i.jsx)(p, {
                                   emoji: e,
                                   isFocused: n
                               });

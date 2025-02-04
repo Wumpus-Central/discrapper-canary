@@ -113,7 +113,7 @@ function T(e) {
             grow: !1,
             onContextMenu: S,
             iconClassName: s()(T, E.centerIcon, M && E.experimentControlIcon, M && R && null == S && E.fullRegionIcon),
-            className: s()(L ? o : null, E.staticButton, E.centerButton, ...k)
+            className: s()(L ? o : null, E.staticButton, E.centerButton, a && E.active, ...k)
         });
     return L
         ? U

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => r });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2025-1_call_settings',
@@ -12,6 +12,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function l(e) {
+function r(e) {
     return i.useExperiment(e);
 }

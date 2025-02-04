@@ -108,7 +108,7 @@ let k = function (e) {
             },
             [D, H, c]
         ),
-        Y = l.useCallback(
+        K = l.useCallback(
             (e) => {
                 z({
                     ...F,
@@ -117,7 +117,7 @@ let k = function (e) {
             },
             [F, c]
         ),
-        K = l.useCallback(() => {
+        Y = l.useCallback(() => {
             z({
                 ...F,
                 [c]: ''
@@ -228,8 +228,8 @@ let k = function (e) {
                 (0, i.jsx)(o.E1j, {
                     className: a()(R.searchBar, er ? R.searchEmptyState : null),
                     query: F[c],
-                    onChange: Y,
-                    onClear: K,
+                    onChange: K,
+                    onClear: Y,
                     size: o.E1j.Sizes.MEDIUM
                 }),
                 (0, i.jsx)(x.Z, {

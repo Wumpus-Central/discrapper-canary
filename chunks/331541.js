@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Y });
+n.d(t, { Z: () => K });
 var i = n(200651),
     l = n(192379),
     r = n(873546),
@@ -43,9 +43,9 @@ var i = n(200651),
     F = n(388032),
     z = n(602654),
     W = n(591156);
-function Y(e) {
+function K(e) {
     var t;
-    let { currentUser: n, onClose: Y, setPopoutRef: K } = e,
+    let { currentUser: n, onClose: K, setPopoutRef: Y } = e,
         q = __OVERLAY__,
         X = (0, E.ZP)(n.id),
         { analyticsLocations: Q } = (0, h.ZP)(u.Z.ACCOUNT_PROFILE_POPOUT),
@@ -56,19 +56,19 @@ function Y(e) {
         { ref: $ } = (0, c.Z)(),
         ee = (0, d.Z)($);
     l.useEffect(() => {
-        null == K || K($.current);
-    }, [$, K]);
+        null == Y || Y($.current);
+    }, [$, Y]);
     let et = (0, s.e7)([O.Z], () => O.Z.getStatus(n.id)),
         en = (0, s.e7)([R.Z], () => R.Z.hidePersonalInformation),
         ei = (0, m.p)(),
         el = P.Sb.useSetting(),
         er = (0, G.I)(et),
-        ea = (0, k.g)(Y),
+        ea = (0, k.g)(K),
         es = (0, p.Z)({ analyticsLocations: Q }),
         { dimissibleUpsellsEnabled: eo } = (0, f.u)({ location: 'AccountProfilePopout' }),
         ec = (0, w.I5)(n),
         ed = (e) => {
-            null == Y || Y(),
+            null == K || K(),
                 (0, L.openUserProfileModal)({
                     sourceAnalyticsLocations: Q,
                     ...J,
@@ -106,7 +106,7 @@ function Y(e) {
                                     location: 'AccountProfilePopout',
                                     user: n,
                                     profileType: H.y0.BITE_SIZE,
-                                    onCloseProfile: Y
+                                    onCloseProfile: K
                                 })
                             ]
                         }),
@@ -128,7 +128,7 @@ function Y(e) {
                                     tags: (0, i.jsx)(C.Z, {
                                         displayProfile: X,
                                         profileType: H.y0.BITE_SIZE,
-                                        onClose: Y
+                                        onClose: K
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
@@ -144,18 +144,18 @@ function Y(e) {
                                     user: n,
                                     bio: null == X ? void 0 : X.bio,
                                     hidePersonalInformation: en,
-                                    onClose: Y
+                                    onClose: K
                                 }),
                                 eo &&
                                     (0, i.jsx)(N.Z, {
                                         isPremiumUser: ec,
-                                        onInteraction: Y
+                                        onInteraction: K
                                     }),
                                 (0, i.jsx)(T.Z, {
                                     user: n,
                                     currentUser: n,
                                     displayProfile: X,
-                                    onClose: Y
+                                    onClose: K
                                 }),
                                 (0, i.jsxs)('div', {
                                     className: z.menus,
@@ -171,7 +171,7 @@ function Y(e) {
                                                         label: F.intl.string(F.t.s5vZlZ),
                                                         icon: o.vdY,
                                                         onClick: () => {
-                                                            es(), Y();
+                                                            es(), K();
                                                         }
                                                     }),
                                                     (0, i.jsx)('div', { className: z.menuDivider }),
@@ -199,7 +199,7 @@ function Y(e) {
                                                               },
                                                         onClick: r.tq
                                                             ? () => {
-                                                                  Y(),
+                                                                  K(),
                                                                       (0, o.ZDy)(
                                                                           () =>
                                                                               new Promise((e) =>
@@ -241,7 +241,7 @@ function Y(e) {
                                                         icon: o.lMe,
                                                         label: F.intl.string(F.t.oMNyYG),
                                                         onClick: () => {
-                                                            Y(), (0, B.Z)();
+                                                            K(), (0, B.Z)();
                                                         },
                                                         renderSubmenu: (e) => {
                                                             let { closePopout: t } = e;
@@ -265,7 +265,7 @@ function Y(e) {
                                                                     icon: o.VuL,
                                                                     label: F.intl.string(F.t['/AXYnJ']),
                                                                     onClick: () => {
-                                                                        (0, a.J)(n.id), Y();
+                                                                        (0, a.J)(n.id), K();
                                                                     }
                                                                 })
                                                             ]

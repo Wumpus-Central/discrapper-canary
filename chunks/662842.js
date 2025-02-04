@@ -52,12 +52,12 @@ function M(e) {
         F = (0, s.e7)([y.Z], () => y.Z.can(R.Plq.CONNECT, r)),
         z = (0, A.Z)(null == r ? void 0 : r.id),
         W = null == M ? void 0 : M.creator_id,
-        Y = (0, s.e7)([P.default], () => P.default.getUser(W), [W]);
+        K = (0, s.e7)([P.default], () => P.default.getUser(W), [W]);
     l.useEffect(() => {
         null != W && (0, d.PR)(W);
     }, [W]);
     let {
-        noticeType: K,
+        noticeType: Y,
         title: q,
         location: X,
         locationIcon: Q,
@@ -272,16 +272,16 @@ function M(e) {
                 activeChannel: r,
                 canConnect: F,
                 myRole: z,
-                eventCreator: Y,
+                eventCreator: K,
                 speakers: V,
                 listenerCount: H,
                 isEventNoticeHidden: G,
                 isStageNoticeHidden: U,
                 isStudyRoomNotice: n
             }),
-        [M, k, r, F, z, Y, V, H, G, U, n]
+        [M, k, r, F, z, K, V, H, G, U, n]
     );
-    return null == K
+    return null == Y
         ? null
         : (0, i.jsxs)('div', {
               className: w.container,
@@ -363,7 +363,7 @@ function M(e) {
                           })
                       ]
                   }),
-                  J || 1 === K
+                  J || 1 === Y
                       ? (0, i.jsx)(c.zxk, {
                             size: c.zxk.Sizes.SMALL,
                             color: c.zxk.Colors.GREEN,

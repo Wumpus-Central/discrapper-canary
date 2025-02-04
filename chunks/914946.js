@@ -1,7 +1,7 @@
 n.d(t, {
     FJ: () => $,
     RE: () => k,
-    S5: () => Y,
+    S5: () => K,
     T5: () => G,
     Xb: () => B,
     YK: () => Q,
@@ -11,7 +11,7 @@ n.d(t, {
     cD: () => H,
     fy: () => q,
     s9: () => F,
-    t9: () => K,
+    t9: () => Y,
     tr: () => J,
     vv: () => X,
     zM: () => z,
@@ -197,7 +197,7 @@ function W(e) {
             return e;
     }
 }
-function Y(e) {
+function K(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { instance: n, secrets: i, party: l } = e,
         r = 0;
@@ -206,7 +206,7 @@ function Y(e) {
         s = p.Ou.getSetting();
     return t ? ((r |= P.xjy.EMBEDDED), a && (r |= P.xjy.PARTY_PRIVACY_FRIENDS), s && (r |= P.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : ((null == l ? void 0 : l.privacy) === P.RYY.PUBLIC || c.K.get('ACTIVITIES_FORCE_PUBLIC')) && (a && (r |= P.xjy.PARTY_PRIVACY_FRIENDS), s && (r |= P.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), r;
 }
-function K(e, t, n) {
+function Y(e, t, n) {
     return e === P.mFx.JOIN && null != t && null != t.id && null != n.join;
 }
 function q(e, t, n) {

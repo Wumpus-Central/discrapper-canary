@@ -111,7 +111,7 @@ function O(e) {
                             query: n
                         }),
                     (P || I) &&
-                        (0, i.jsx)(D, {
+                        (0, i.jsx)(H, {
                             context: t,
                             applicationResults: g,
                             includePlaceholder: I,
@@ -221,7 +221,7 @@ function U(e) {
         })
     });
 }
-function D(e) {
+function H(e) {
     let { context: t, applicationResults: n, includePlaceholder: l, query: a, searchesBots: o } = e;
     return o
         ? (0, i.jsxs)('div', {
@@ -233,7 +233,7 @@ function D(e) {
                           n.map((e, n) => {
                               let { application: l, installOnDemand: o } = e;
                               return (0, i.jsx)(
-                                  H,
+                                  D,
                                   {
                                       context: t,
                                       application: l,
@@ -280,7 +280,7 @@ function D(e) {
               ]
           });
 }
-function H(e) {
+function D(e) {
     let t = (0, C.cG)(e);
     return (0, i.jsx)(P.Z, {
         application: e.application,

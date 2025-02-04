@@ -106,13 +106,13 @@ function R(e) {
         F = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
         z = (null == I ? void 0 : I.userStatus) != null && (0, _.zE)(I.userStatus, g.jn.ACTIVITY_PANEL),
         W = (0, m.Rf)(I),
-        Y = (0, E.DD)({
+        K = (0, E.DD)({
             quest: I,
             taskDetails: W,
             location: b.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL
         }),
-        K = (0, f.j)({ location: b.dr.QUESTS_BAR_MOBILE });
+        Y = (0, f.j)({ location: b.dr.QUESTS_BAR_MOBILE });
     return z || B || F
         ? null
         : (0, i.jsxs)('div', {
@@ -159,9 +159,9 @@ function R(e) {
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
-                                          children: Y
+                                          children: K
                                       }),
-                                      K &&
+                                      Y &&
                                           (0, i.jsx)(N.Z, {
                                               quest: I,
                                               textColor: 'text-muted',

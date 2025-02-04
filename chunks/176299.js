@@ -43,8 +43,8 @@ var i = n(200651),
     F = n(659971),
     z = n(179742),
     W = n(270759),
-    Y = n(918701),
-    K = n(905423),
+    K = n(918701),
+    Y = n(905423),
     q = n(304445),
     X = n(893607),
     Q = n(210887),
@@ -192,9 +192,9 @@ let eE = (0, d.Un)({
         return (0, i.jsx)(N.Z, {});
     },
     eA = l.memo(function () {
-        let { guildId: e, channelId: t } = (0, K.Z)(),
+        let { guildId: e, channelId: t } = (0, Y.Z)(),
             n = (0, h.e7)([et.Z], () => (null != t ? t : et.Z.getChannelId(e)));
-        return window.location.pathname.startsWith(em.Z5c.GLOBAL_DISCOVERY) || window.location.pathname.startsWith(em.Z5c.GUILD_DISCOVERY) || (0, Y.OG)()
+        return window.location.pathname.startsWith(em.Z5c.GLOBAL_DISCOVERY) || window.location.pathname.startsWith(em.Z5c.GUILD_DISCOVERY) || (0, K.OG)()
             ? (0, i.jsx)(y.Z, {})
             : null != e
               ? (0, i.jsx)(

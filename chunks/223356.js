@@ -1,6 +1,6 @@
 i.d(t, {
     Tj: () => m,
-    WG: () => u,
+    WG: () => d,
     ZD: () => h,
     pD: () => c
 }),
@@ -13,8 +13,8 @@ var l = i(544891),
 i(358085);
 var o = i(573261),
     s = i(981631),
-    d = i(388032);
-async function u() {
+    u = i(388032);
+async function d() {
     return (
         await l.tn.get({
             url: s.ANM.BUG_REPORTS,
@@ -29,34 +29,34 @@ function c(e) {
 function m() {
     return [
         {
-            title: d.intl.string(d.t.VwIij4),
-            description: d.intl.format(d.t.DOP8yc, {}),
+            title: u.intl.string(u.t.VwIij4),
+            description: u.intl.format(u.t.DOP8yc, {}),
             emoji: '801497159479722084',
             value: 0
         },
         {
-            title: d.intl.string(d.t.rYfJoq),
-            description: d.intl.format(d.t['+LEfDA'], {}),
+            title: u.intl.string(u.t.rYfJoq),
+            description: u.intl.format(u.t['+LEfDA'], {}),
             emoji: '410336837563973632',
             value: 1
         },
         {
-            title: d.intl.string(d.t.Ia0skZ),
-            description: d.intl.format(d.t.D4rbgY, {}),
+            title: u.intl.string(u.t.Ia0skZ),
+            description: u.intl.format(u.t.D4rbgY, {}),
             emoji: '841420679643529296',
             value: 2
         },
         {
-            title: d.intl.string(d.t.KGsyFx),
-            description: d.intl.format(d.t.Kmg64O, {}),
+            title: u.intl.string(u.t.KGsyFx),
+            description: u.intl.format(u.t.Kmg64O, {}),
             emoji: '827645852352512021',
             value: 3
         }
     ];
 }
 async function h(e, t, i) {
-    var l, d;
-    let u = [
+    var l, u;
+    let d = [
         {
             name: 'name',
             value: e.name
@@ -75,60 +75,60 @@ async function h(e, t, i) {
         }
     ];
     '' !== e.description &&
-        u.push({
+        d.push({
             name: 'description',
             value: e.description
         }),
         '' !== e.url &&
-            u.push({
+            d.push({
                 name: 'external_url',
                 value: e.url
             }),
         null != e.buildOverride &&
-            u.push({
+            d.push({
                 name: 'build_override',
                 value: e.buildOverride
             });
     let c = null === (l = e.feature) || void 0 === l ? void 0 : l.asana_inbox_id;
     null != c &&
         '' !== c &&
-        u.push({
+        d.push({
             name: 'asana_inbox_id',
             value: ''.concat(c)
         });
-    let m = null === (d = e.feature) || void 0 === d ? void 0 : d.name;
+    let m = null === (u = e.feature) || void 0 === u ? void 0 : u.name;
     null != m &&
         '' !== m &&
-        u.push({
+        d.push({
             name: 'feature_name',
             value: m
         }),
         t.overridePlatformInformation &&
-            (u.push({
+            (d.push({
                 name: 'device',
                 value: t.device
             }),
-            u.push({
+            d.push({
                 name: 'os',
                 value: t.operatingSystem
             }),
-            u.push({
+            d.push({
                 name: 'os_version',
                 value: t.operatingSystemVersion
             }),
-            u.push({
+            d.push({
                 name: 'client_version',
                 value: t.clientVersion
             }),
-            u.push({
+            d.push({
                 name: 'client_build_number',
                 value: t.clientBuildNumber
             }),
-            u.push({
+            d.push({
                 name: 'release_channel',
                 value: window.GLOBAL_ENV.RELEASE_CHANNEL
             }),
-            u.push({
+            d.push({
                 name: 'locale',
                 value: t.locale
             })),
@@ -137,7 +137,7 @@ async function h(e, t, i) {
         return await o.Z.post({
             url: s.ANM.BUG_REPORTS,
             attachments: i,
-            fields: u,
+            fields: d,
             trackedActionData: {
                 event: n.NetworkActionNames.BUG_REPORT_SUBMIT,
                 properties: {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(733860);
+n.d(t, { Z: () => T }), n(733860);
 var i,
     l,
     a,
@@ -16,7 +16,7 @@ var i,
     v = n(699516),
     Z = n(594174);
 let x = {};
-function p(e) {
+function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -30,7 +30,7 @@ function p(e) {
         loading: i
     };
 }
-function N(e) {
+function p(e) {
     let { channel: t } = e;
     delete x[t.id];
 }
@@ -60,7 +60,7 @@ class I extends (i = o.ZP.Store) {
               writable: !0
           })
         : (I[l] = a);
-let j = new I(d.Z, {
+let T = new I(d.Z, {
     CONNECTION_OPEN: function () {
         x = {};
     },
@@ -93,7 +93,7 @@ let j = new I(d.Z, {
         }
         if (e.message.pinned) {
             if (null == i) {
-                (i = p(n, [e.message], !1)), (x[n] = i);
+                (i = N(n, [e.message], !1)), (x[n] = i);
                 return;
             }
             i.messages = i.messages.slice();
@@ -119,18 +119,18 @@ let j = new I(d.Z, {
     },
     LOAD_PINNED_MESSAGES: function (e) {
         let { channelId: t } = e;
-        x[t] = p(t, [], !1, !0);
+        x[t] = N(t, [], !1, !0);
     },
     LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
         let { channelId: t, messages: n } = e;
-        x[t] = p(t, n, !0);
+        x[t] = N(t, n, !0);
     },
     LOAD_PINNED_MESSAGES_FAILURE: function (e) {
         let { channelId: t } = e;
         delete x[t];
     },
-    CHANNEL_DELETE: N,
-    THREAD_DELETE: N,
+    CHANNEL_DELETE: p,
+    THREAD_DELETE: p,
     RELATIONSHIP_ADD: S,
     RELATIONSHIP_REMOVE: S,
     RELATIONSHIP_UPDATE: S,

@@ -43,8 +43,8 @@ var i = n(200651),
     F = n(38618),
     z = n(972830),
     W = n(981283),
-    Y = n(584233),
-    K = n(15274),
+    K = n(584233),
+    Y = n(15274),
     q = n(434404),
     X = n(543842),
     Q = n(879064),
@@ -97,8 +97,8 @@ var i = n(200651),
     eF = n(695103),
     ez = n(241890),
     eW = n(897607),
-    eY = n(417363),
-    eK = n(900974),
+    eK = n(417363),
+    eY = n(900974),
     eq = n(358085),
     eX = n(998502),
     eQ = n(346329),
@@ -147,7 +147,7 @@ let e2 = s.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
         class extends l.Component {
             componentDidMount() {
                 let { match: e } = this.props;
-                null != e && null != e.params.inviteCode && (0, Y.x)({ code: e.params.inviteCode });
+                null != e && null != e.params.inviteCode && (0, K.x)({ code: e.params.inviteCode });
             }
             render() {
                 let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: l } = this.props;
@@ -211,7 +211,7 @@ let e6 = [
             let { match: t } = e,
                 { gameId: n, action: l } = t.params;
             return (
-                eY.Z.whenInitialized(() => {
+                eK.Z.whenInitialized(() => {
                     eB.Z.whenInitialized(() => {
                         switch (l) {
                             case 'launch': {
@@ -331,7 +331,7 @@ let e6 = [
                 { guildId: n, guildEventId: l } = t.params;
             return (
                 (0, z.h)(() => {
-                    (0, K.bO)({ eventId: l });
+                    (0, Y.bO)({ eventId: l });
                 }),
                 (0, i.jsx)(a.l_, { to: eJ.Z5c.CHANNEL(n) })
             );
@@ -405,7 +405,7 @@ class tt extends l.PureComponent {
             W.Z.init(),
             J.Z.init(),
             eW.Z.init(),
-            eK.Z.init(),
+            eY.Z.init(),
             E.Z.initialize(),
             eA.Z.init(),
             ez.Z.init(),

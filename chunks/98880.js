@@ -1,5 +1,5 @@
 n.d(t, {
-    U4: () => H,
+    U4: () => D,
     cG: () => Q,
     kA: () => J,
     qR: () => K
@@ -41,8 +41,8 @@ var i,
     O = n(388032),
     k = n(330962),
     U = n(413097),
-    D = n(969728),
-    H = (((i = {}).ICON = 'icon'), (i.ROW = 'row'), (i.NO_BANNER = 'no_banner'), (i.MEDIUM_BANNER = 'medium_banner'), (i.LARGE_BANNER = 'large_banner'), i);
+    H = n(969728),
+    D = (((i = {}).ICON = 'icon'), (i.ROW = 'row'), (i.NO_BANNER = 'no_banner'), (i.MEDIUM_BANNER = 'medium_banner'), (i.LARGE_BANNER = 'large_banner'), i);
 function w(e) {
     var t;
     let { application: n, look: i = 'large_banner', onClick: a, imageStyle: o, enableVideoBanner: s = !0, children: r, sectionName: c, resultsPosition: d, sectionOverallPosition: m, tracksImpression: p = !0, disabled: h = !1, overrideImageUrl: v, showsPromoted: x } = e,
@@ -284,7 +284,7 @@ function G(e) {
                   (0, l.jsx)('img', {
                       className: k.staffBadge,
                       alt: i,
-                      src: D,
+                      src: H,
                       ...e
                   })
           });

@@ -1,14 +1,14 @@
-function i(e) {
+function r(e) {
     return new ResizeObserver(e);
 }
 function l(e, t) {
     e.observe(t);
 }
-function a(e, t) {
+function i(e, t) {
     e.unobserve(t);
 }
 n.d(t, {
-    UC: () => a,
+    UC: () => i,
     YP: () => l,
-    pP: () => i
+    pP: () => r
 });

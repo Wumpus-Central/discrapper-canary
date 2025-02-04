@@ -43,7 +43,7 @@ function y(e) {
         }),
         k = (0, I.P)({ application: n }),
         U = (0, N.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, g.udG.EMBEDDED),
-        D = 'channel' === l.type ? l.channel : void 0;
+        H = 'channel' === l.type ? l.channel : void 0;
     return (0, i.jsxs)('div', {
         className: j.container,
         children: [
@@ -111,8 +111,8 @@ function y(e) {
                                                   (0, p.uu)({
                                                       application: n,
                                                       entrypoint: 'app_launcher',
-                                                      contextualGuildId: null !== (e = null == D ? void 0 : D.getGuildId()) && void 0 !== e ? e : void 0,
-                                                      contextualChannelId: null == D ? void 0 : D.id
+                                                      contextualGuildId: null !== (e = null == H ? void 0 : H.getGuildId()) && void 0 !== e ? e : void 0,
+                                                      contextualChannelId: null == H ? void 0 : H.id
                                                   });
                                               }
                                           })

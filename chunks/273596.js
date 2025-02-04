@@ -116,7 +116,7 @@ function L(e) {
             },
             [P, D, t]
         ),
-        Y = l.useCallback(
+        K = l.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
@@ -130,7 +130,7 @@ function L(e) {
             },
             [P, D]
         ),
-        K = l.useCallback(
+        Y = l.useCallback(
             (e, t) => {
                 switch (e) {
                     case 0:
@@ -235,8 +235,8 @@ function L(e) {
             padding: $,
             renderItem: Q,
             renderSection: W,
-            getSectionHeight: Y,
-            getItemKey: K,
+            getSectionHeight: K,
+            getItemKey: Y,
             getItemHeight: q,
             chunkSize: 24,
             onScroll: J,

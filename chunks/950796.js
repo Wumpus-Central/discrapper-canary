@@ -49,14 +49,14 @@ function v(e) {
     });
 }
 function y(e) {
-    let { leading: t, title: n, trailing: a, windowKey: o, short: l } = e,
-        u = (0, d.getPlatform)(),
-        c = r.useCallback(() => g(o), [o]),
-        f = u === d.PlatformTypes.WINDOWS;
+    let { leading: t, title: n, trailing: a, windowKey: o, short: l, className: u } = e,
+        c = (0, d.getPlatform)(),
+        f = r.useCallback(() => g(o), [o]),
+        _ = c === d.PlatformTypes.WINDOWS;
     return (0, i.jsxs)('div', {
-        'data-windows': f,
-        className: s()(p.bar, { [p.shortBar]: l }),
-        onDoubleClick: c,
+        'data-windows': _,
+        className: s()(p.bar, u, { [p.shortBar]: l }),
+        onDoubleClick: f,
         children: [
             (0, i.jsx)('div', {
                 className: p.title,
@@ -72,7 +72,7 @@ function y(e) {
                 onDoubleClick: E,
                 children: [
                     a,
-                    u === d.PlatformTypes.WINDOWS &&
+                    c === d.PlatformTypes.WINDOWS &&
                         (0, i.jsx)(v, {
                             windowKey: o,
                             showDivider: null != a

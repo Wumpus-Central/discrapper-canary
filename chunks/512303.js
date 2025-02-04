@@ -16,11 +16,11 @@ var i = n(200651),
 function v(e) {
     var t, n, v, Z;
     let x = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[a.Y.USER_INSTALL],
-        p = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[a.Y.GUILD_INSTALL],
-        N = null === (v = e.interactionMetadata) || void 0 === v ? void 0 : v.user.id,
+        N = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[a.Y.GUILD_INSTALL],
+        p = null === (v = e.interactionMetadata) || void 0 === v ? void 0 : v.user.id,
         S = (0, s.e7)([m.default], () => m.default.getUser(x)),
-        I = (0, s.e7)([f.Z], () => f.Z.getGuild(p)),
-        j = (0, s.e7)([m.default], () => m.default.getUser(N));
+        I = (0, s.e7)([f.Z], () => f.Z.getGuild(N)),
+        T = (0, s.e7)([m.default], () => m.default.getUser(p));
     if (
         (l.useEffect(() => {
             null == S && null != x && (0, o.PR)(x);
@@ -28,7 +28,7 @@ function v(e) {
         !(0, c.a)(e))
     )
         return null;
-    null == j && (j = new g.Z(null === (Z = e.interactionMetadata) || void 0 === Z ? void 0 : Z.user));
+    null == T && (T = new g.Z(null === (Z = e.interactionMetadata) || void 0 === Z ? void 0 : Z.user));
     let _ = null;
     return (
         null != I
@@ -62,17 +62,17 @@ function v(e) {
             label: h.intl.string(h.t.Rjezb2),
             children: [
                 _,
-                null != j
+                null != T
                     ? (0, i.jsx)(r.sNh, {
                           className: E.interactionInfoMenuItem,
                           disabled: !0,
                           iconLeft: () =>
                               (0, i.jsx)(d.Z, {
-                                  user: j,
+                                  user: T,
                                   size: r.EFr.SIZE_20
                               }),
                           id: 'interaction-user',
-                          label: j.username,
+                          label: T.username,
                           subtext: h.intl.string(h.t['04gxNj'])
                       })
                     : null
