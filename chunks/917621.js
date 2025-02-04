@@ -86,7 +86,7 @@ class b extends l.PureComponent {
     }
     isPartyFull() {
         let [e, t] = this.getPartySize();
-        return e > -1 && e >= t;
+        return e > -1 && t > 0 && e >= t;
     }
     hasPartySize() {
         let [e, t] = this.getPartySize();

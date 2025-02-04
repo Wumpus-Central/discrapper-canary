@@ -18,7 +18,7 @@ var r = n(200651),
     O = n(327999),
     S = n(388032),
     R = n(106053);
-let U = l.memo(function () {
+let f = l.memo(function () {
         return (0, r.jsx)(o.ua7, {
             text: S.intl.string(S.t['vu/MiY']),
             children: (e) =>
@@ -31,7 +31,7 @@ let U = l.memo(function () {
                 })
         });
     }),
-    f = l.memo(function () {
+    U = l.memo(function () {
         return (0, r.jsx)(o.ua7, {
             text: S.intl.string(S.t.OrCp9v),
             children: (e) =>
@@ -182,7 +182,7 @@ function L(e) {
           })
         : (0, r.jsx)(r.Fragment, { children: t({}) });
 }
-function h(e) {
+function M(e) {
     let { type: t } = e,
         n = (0, O.Ph)(t);
     return null == n
@@ -196,7 +196,7 @@ function h(e) {
               }
           });
 }
-function M(e) {
+function h(e) {
     let { sourceInviteCode: t, joinSourceType: n, integrationType: i, showInviterAsFooter: s, guildId: E, inviterUser: u, onClickInviter: c, ..._ } = e,
         d = null != n ? D[n] : null,
         A = n === O.gq.INTEGRATION && null != i,
@@ -227,7 +227,7 @@ function M(e) {
         case null == d:
         case null == n:
         case n === O.gq.UNSPECIFIED:
-            return (0, r.jsx)(U, { ..._ });
+            return (0, r.jsx)(f, { ..._ });
         case null != i && A:
             return (0, r.jsxs)(o.P3F, {
                 className: R.inviteContainer,
@@ -237,7 +237,7 @@ function M(e) {
                 tabIndex: 0,
                 onClick: T,
                 children: [
-                    (0, r.jsx)(h, { type: i }),
+                    (0, r.jsx)(M, { type: i }),
                     (0, r.jsx)(o.Text, {
                         variant: 'text-sm/medium',
                         children: (0, O.MS)(i)
@@ -274,7 +274,7 @@ function M(e) {
                 ]
             });
         default:
-            return (0, r.jsx)(U, { ..._ });
+            return (0, r.jsx)(f, { ..._ });
     }
 }
 let p = l.memo(function (e) {
@@ -287,19 +287,19 @@ let p = l.memo(function (e) {
         null != T && (E.Z.requestMembersById(a, [T]), (0, c.Z)(T, void 0, { guildId: a }));
     }, [a, T]);
     let g = (0, s.e7)([d.Z], () => d.Z.hideInstantInvites, []);
-    if (null == _) return (0, r.jsx)(U, {});
+    if (null == _) return (0, r.jsx)(f, {});
     let { sourceInviteCode: S, joinSourceType: R, integrationType: C } = _,
-        h = null != R ? D[R] : null,
-        p = null !== (n = null == h ? void 0 : h.hasTooltip) && void 0 !== n && n;
+        M = null != R ? D[R] : null,
+        p = null !== (n = null == M ? void 0 : M.hasTooltip) && void 0 !== n && n;
     return (R === O.gq.INVITE || R === O.gq.VANITY_URL || (R === O.gq.MANUAL_MEMBER_VERIFICATION && null != S)) && g
-        ? (0, r.jsx)(f, {})
+        ? (0, r.jsx)(U, {})
         : (0, r.jsx)(L, {
               hasTooltip: p && !o,
               inviterUser: null != I ? I : null,
               guildId: a,
               joinSourceType: R,
               children: (e) =>
-                  (0, r.jsx)(M, {
+                  (0, r.jsx)(h, {
                       sourceInviteCode: S,
                       joinSourceType: R,
                       integrationType: C,

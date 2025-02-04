@@ -33,7 +33,7 @@ function h(e) {
     });
 }
 function v(e) {
-    let { stream: t, className: n, noText: r = !1, noImage: a = !0 } = e,
+    let { stream: t, className: n, noText: r = !1, noImage: a = !1 } = e,
         s = (0, o.e7)([u.Z], () => u.Z.getBasicChannel(t.channelId)),
         v = (0, o.e7)([c.Z], () => null != s && c.Z.canBasicChannel(m.S7T.CONNECT, s)),
         { previewUrl: g, isLoading: x } = (0, d.Z)(t.guildId, t.channelId, t.ownerId),
