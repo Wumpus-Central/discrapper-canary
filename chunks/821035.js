@@ -1,81 +1,85 @@
-n.d(t, { P: () => x }), n(733860);
+n.d(t, { P: () => p }), n(733860);
 var i = n(200651);
 n(192379);
 var s = n(524437),
     r = n(481060),
-    l = n(247206),
-    a = n(294602),
-    o = n(880257),
-    c = n(63063),
-    d = n(838436),
-    u = n(526761),
-    m = n(726985),
-    h = n(981631),
-    g = n(388032),
-    _ = n(835552);
-function x() {
+    l = n(704454),
+    a = n(247206),
+    o = n(294602),
+    c = n(880257),
+    d = n(63063),
+    u = n(838436),
+    m = n(526761),
+    h = n(726985),
+    g = n(981631),
+    _ = n(388032),
+    x = n(835552);
+function p() {
     var e;
-    let t = null === (e = (0, o.Z)()) || void 0 === e || e,
-        { explicitContentGuilds: n, explicitContentFriendDm: x, explicitContentNonFriendDm: p } = (0, a.B)(),
-        E = [
+    let t = null === (e = (0, c.Z)()) || void 0 === e || e,
+        { explicitContentGuilds: n, explicitContentFriendDm: p, explicitContentNonFriendDm: E } = (0, o.B)(),
+        C = (e) => {
+            !(0, l.G7)('explicit_media_redaction_settings') && (0, a.zj)(e);
+        },
+        f = [
             {
                 value: s.Q4.BLUR,
-                label: g.intl.string(g.t.S49UaW)
+                label: _.intl.string(_.t.S49UaW)
             },
             {
                 value: s.Q4.BLOCK,
-                label: g.intl.string(g.t['D/157e'])
+                label: _.intl.string(_.t['D/157e'])
             }
         ],
-        C = [
+        T = [
             {
                 value: s.Q4.BLUR,
-                label: g.intl.string(g.t.S49UaW)
+                label: _.intl.string(_.t.S49UaW)
             }
         ],
-        f = {
+        N = {
             value: s.Q4.SHOW,
-            label: g.intl.string(g.t['5k5OFh'])
+            label: _.intl.string(_.t['5k5OFh'])
         };
     return (
-        t && (E.unshift(f), C.unshift(f)),
-        (0, i.jsxs)(d.U, {
-            setting: m.s6.PRIVACY_SENSITIVE_MEDIA_V2,
-            scrollPosition: u.FY.EXPLICIT_MEDIA_REDACTION_V2,
+        t && (f.unshift(N), T.unshift(N)),
+        (0, i.jsxs)(u.U, {
+            setting: h.s6.PRIVACY_SENSITIVE_MEDIA_V2,
+            scrollPosition: m.FY.EXPLICIT_MEDIA_REDACTION_V2,
             children: [
-                (0, i.jsx)(d.H, {
-                    header: g.intl.string(g.t['c/UOwM']),
-                    description: g.intl.format(g.t.ZUvrwM, { learnMoreLink: c.Z.getArticleURL(h.BhN.EXPLICIT_MEDIA_REDACTION) })
+                (0, i.jsx)(u.H, {
+                    header: _.intl.string(_.t['c/UOwM']),
+                    description: _.intl.format(_.t.ZUvrwM, { learnMoreLink: d.Z.getArticleURL(g.BhN.EXPLICIT_MEDIA_REDACTION) })
                 }),
                 (0, i.jsx)(r.xJW, {
                     tag: r.RB0.H3,
-                    title: g.intl.string(g.t['6k0AgI']),
-                    titleClassName: _.selectItemTitle,
+                    title: _.intl.string(_.t['6k0AgI']),
+                    titleClassName: x.selectItemTitle,
                     children: (0, i.jsx)(r.q4e, {
-                        options: E,
-                        value: x,
-                        onChange: (e) => (0, l.zj)({ explicitContentFriendDm: e })
+                        options: f,
+                        value: p,
+                        onChange: (e) => C({ explicitContentFriendDm: e })
                     })
                 }),
                 (0, i.jsx)(r.xJW, {
                     tag: r.RB0.H3,
-                    title: g.intl.string(g.t.D2EGSk),
-                    titleClassName: _.selectItemTitle,
+                    title: _.intl.string(_.t.D2EGSk),
+                    titleClassName: x.selectItemTitle,
                     children: (0, i.jsx)(r.q4e, {
-                        options: E,
-                        value: p,
-                        onChange: (e) => (0, l.zj)({ explicitContentNonFriendDm: e })
+                        options: f,
+                        value: E,
+                        onChange: (e) => C({ explicitContentNonFriendDm: e })
                     })
                 }),
                 t &&
                     (0, i.jsx)(r.xJW, {
                         tag: r.RB0.H3,
-                        title: g.intl.string(g.t['FP+a4+']),
-                        titleClassName: _.selectItemTitle,
+                        title: _.intl.string(_.t['FP+a4+']),
+                        titleClassName: x.selectItemTitle,
                         children: (0, i.jsx)(r.q4e, {
-                            options: C,
+                            options: T,
                             value: n,
-                            onChange: (e) => (0, l.zj)({ explicitContentGuilds: e })
+                            onChange: (e) => C({ explicitContentGuilds: e })
                         })
                     })
             ]
