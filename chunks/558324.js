@@ -1,29 +1,30 @@
-n.d(t, { Z: () => d }), n(47120);
+n.d(t, { Z: () => u }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
     s = n.n(l),
     a = n(481060),
     o = n(981631),
-    c = n(524910);
-let d = (e) => {
-    let { className: t, tags: n, value: l, onRemoveTag: d, onAddTag: u, maxTaxLength: m, maxTags: h, disabled: g, placeholder: x, ...p } = e,
-        [_, C] = r.useState(null != l ? l : ''),
-        f = n.map((e, t) =>
+    c = n(388032),
+    d = n(524910);
+let u = (e) => {
+    let { className: t, tags: n, value: l, onRemoveTag: u, onAddTag: m, onAddTagError: h, maxTaxLength: g, maxTags: x, disabled: p, placeholder: _, ...C } = e,
+        [f, v] = r.useState(null != l ? l : ''),
+        N = n.map((e, t) =>
             (0, i.jsxs)(
                 'span',
                 {
-                    className: c.tag,
+                    className: d.tag,
                     children: [
                         e,
-                        !g &&
+                        !p &&
                             (0, i.jsx)(a.P3F, {
-                                className: c.closeWrapper,
-                                onClick: () => d(t),
+                                className: d.closeWrapper,
+                                onClick: () => u(t),
                                 children: (0, i.jsx)(a.Dio, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: c.close
+                                    className: d.close
                                 })
                             })
                     ]
@@ -31,39 +32,45 @@ let d = (e) => {
                 t
             )
         ),
-        v = r.useCallback(() => {
-            let e = _.trim();
-            0 !== e.length && ((null != h && n.length >= h) || (u(e), C('')));
-        }, [_, h, u, n.length]),
-        N = r.useCallback(
+        j = r.useCallback(() => {
+            let e = f.trim();
+            if (0 !== e.length) {
+                if (null != x && n.length >= x) {
+                    null == h || h(c.intl.string(c.t.Xx7XeH));
+                    return;
+                }
+                m(e), v('');
+            }
+        }, [f, x, m, h, n.length]),
+        I = r.useCallback(
             (e) => {
                 switch (e.keyCode) {
                     case o.yXg.BACKSPACE:
-                        0 === _.length && n.length > 0 && (e.preventDefault(), e.stopPropagation(), d(n.length - 1));
+                        0 === f.length && n.length > 0 && (e.preventDefault(), e.stopPropagation(), u(n.length - 1));
                         break;
                     case o.yXg.ENTER:
                     case o.yXg.TAB:
                     case o.yXg.COMMA:
-                        e.preventDefault(), e.stopPropagation(), v();
+                        e.preventDefault(), e.stopPropagation(), j();
                 }
             },
-            [v, _.length, d, n.length]
+            [j, f.length, u, n.length]
         );
     return (0, i.jsxs)('div', {
-        className: s()(t, c.inputWrapper, { [c.disabled]: g }),
+        className: s()(t, d.inputWrapper, { [d.disabled]: p }),
         children: [
-            f,
+            N,
             (0, i.jsx)(a.oil, {
-                className: c.inputOuter,
-                inputClassName: c.inputInner,
-                ...p,
-                value: _,
-                onKeyDown: N,
-                onChange: C,
-                maxLength: m,
-                disabled: g,
-                onBlur: v,
-                placeholder: x
+                className: d.inputOuter,
+                inputClassName: d.inputInner,
+                ...C,
+                value: f,
+                onKeyDown: I,
+                onChange: v,
+                maxLength: g,
+                disabled: p,
+                onBlur: j,
+                placeholder: _
             })
         ]
     });

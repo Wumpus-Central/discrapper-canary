@@ -213,30 +213,37 @@ function S(e) {
 }
 function R(e) {
     let { guildId: t, guildMetadata: n, requireTag: l, error: d } = e,
-        u = r.useCallback(
+        [u, m] = r.useState(null),
+        h = r.useCallback(
             (e) => {
                 let i = [...n.keywords];
-                i.splice(e, 1), (0, o.zH)(t, i);
+                i.splice(e, 1), m(null), (0, o.zH)(t, i);
             },
             [t, n]
         ),
-        m = r.useCallback(
+        g = r.useCallback(
             (e) => {
                 let { keywords: i } = n;
-                i.length >= N.G7 || (0, o.zH)(t, [...i, e]);
+                i.length >= N.G7 || (m(null), (0, o.zH)(t, [...i, e]));
             },
             [t, n]
         ),
-        h = r.useMemo(
+        x = r.useMemo(
             () =>
                 (0, C.P5)(n.primaryCategoryId)
                     .filter((e) => !n.keywords.includes(e))
-                    .map((e) => ({
-                        text: e,
-                        onClick: () => m(e)
-                    })),
-            [n.keywords, n.primaryCategoryId, m]
-        );
+                    .map((e) => {
+                        let t = n.keywords.length >= N.G7;
+                        return {
+                            text: e,
+                            onClick: () => g(e),
+                            disabled: t,
+                            tooltipText: t ? I.intl.string(I.t.Xx7XeH) : void 0
+                        };
+                    }),
+            [n.keywords, n.primaryCategoryId, g]
+        ),
+        p = null != d ? d : u;
     return (0, i.jsxs)('div', {
         className: E.sectionContainer,
         children: [
@@ -256,23 +263,24 @@ function R(e) {
                     (0, i.jsx)(a.Z, {
                         className: E.editableSection,
                         tags: n.keywords,
-                        onRemoveTag: u,
-                        onAddTag: m,
+                        onRemoveTag: h,
+                        onAddTag: g,
+                        onAddTagError: m,
                         maxTags: N.G7,
                         maxTaxLength: N._0,
                         placeholder: n.keywords.length < 1 ? I.intl.string(I.t.EL4Lho) : void 0
                     }),
-                    null != d
+                    null != p
                         ? (0, i.jsx)(s.Text, {
                               color: 'text-danger',
                               variant: 'text-sm/normal',
                               className: E.error,
-                              children: d
+                              children: p
                           })
                         : null
                 ]
             }),
-            h.length > 0
+            x.length > 0
                 ? (0, i.jsxs)('div', {
                       children: [
                           (0, i.jsx)(s.X6q, {
@@ -283,7 +291,7 @@ function R(e) {
                           }),
                           (0, i.jsx)('div', {
                               className: E.editableSection,
-                              children: (0, i.jsx)(c.j, { pills: h })
+                              children: (0, i.jsx)(c.j, { pills: x })
                           })
                       ]
                   })
