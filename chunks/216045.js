@@ -31,8 +31,8 @@ var i = n(200651),
     D = n(265159),
     y = n(532495),
     Z = n(981631),
-    L = n(388032),
-    k = n(676258);
+    k = n(388032),
+    L = n(676258);
 function B() {
     let e = (0, a.e7)([j.default], () => {
         let e = j.default.getCurrentUser();
@@ -94,13 +94,13 @@ function B() {
                   z &&
                       !B &&
                       (0, i.jsx)(C.p, {
-                          className: k.floatingNitroUpsell,
+                          className: L.floatingNitroUpsell,
                           showUpsell: z && !G,
-                          text: L.intl.format(L.t.TmfgIy, { onClick: () => (0, f.y)() }),
+                          text: k.intl.format(k.t.TmfgIy, { onClick: () => (0, f.y)() }),
                           textVariant: 'heading-md/medium',
                           button: (0, i.jsxs)(c.gtL, {
-                              className: k.floatingNitroButton,
-                              innerClassName: k.floatingNitroButtonInner,
+                              className: L.floatingNitroButton,
+                              innerClassName: L.floatingNitroButtonInner,
                               onClick: () => {
                                   var e;
                                   A.default.track(Z.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == Y || null === (e = Y.current) || void 0 === e || e.scrollIntoView({ behavior: 'smooth' });
@@ -115,7 +115,7 @@ function B() {
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'currentColor',
-                                      children: L.intl.string(L.t.uw9zIy)
+                                      children: k.intl.string(k.t.uw9zIy)
                                   })
                               ]
                           })

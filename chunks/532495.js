@@ -30,11 +30,11 @@ var s = n(512722),
     R = n(91768);
 function P() {
     var e, t, n, s, P, D, y, Z;
-    let L = (0, l.e7)([j.default], () => {
+    let k = (0, l.e7)([j.default], () => {
             let e = j.default.getCurrentUser();
             return r()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
         }),
-        k = (0, l.e7)([S.Z], () => S.Z.getUserProfile(L.id)),
+        L = (0, l.e7)([S.Z], () => S.Z.getUserProfile(k.id)),
         {
             pendingAvatar: B,
             pendingGlobalName: M,
@@ -53,9 +53,9 @@ function P() {
             };
         }),
         z = (0, u.gS)(),
-        Y = A.ZP.canUsePremiumProfileCustomization(L),
-        W = (0, m.gd)(B, L.avatar),
-        K = (0, m.f$)(w, null == k ? void 0 : k.banner),
+        Y = A.ZP.canUsePremiumProfileCustomization(k),
+        W = (0, m.gd)(B, k.avatar),
+        K = (0, m.f$)(w, null == L ? void 0 : L.banner),
         X = 'DefaultCustomizationSections';
     (0, o.j)({
         location: X + ' auto on',
@@ -65,18 +65,18 @@ function P() {
             location: X + ' auto off',
             autoTrackExposure: !1
         });
-    let q = (0, b.ZP)(L.id),
-        J = null == q ? void 0 : q.getLegacyUsername(),
-        Q = (null !== (n = null === (e = H.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== n ? n : 0) > 0 ? H.global_name : null !== (s = null == z ? void 0 : z.nick) && void 0 !== s ? s : [],
+    let q = (0, b.ZP)(k.id),
+        Q = null == q ? void 0 : q.getLegacyUsername(),
+        J = (null !== (n = null === (e = H.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== n ? n : 0) > 0 ? H.global_name : null !== (s = null == z ? void 0 : z.nick) && void 0 !== s ? s : [],
         $ = (null !== (P = null === (t = H.bio) || void 0 === t ? void 0 : t.length) && void 0 !== P ? P : 0) > 0 ? H.bio : null !== (D = null == z ? void 0 : z.bio) && void 0 !== D ? D : [],
         ee = (0, c.V)();
     return (0, i.jsxs)('div', {
         className: R.sectionsContainer,
         children: [
             (0, i.jsx)(x.Z, {
-                placeholder: L.username,
-                errors: Q,
-                currentGlobalName: L.globalName,
+                placeholder: k.username,
+                errors: J,
+                currentGlobalName: k.globalName,
                 pendingGlobalName: M,
                 onGlobalNameChange: a.UZ
             }),
@@ -87,7 +87,7 @@ function P() {
                     errors: H.pronouns,
                     onPronounsChange: I.ID,
                     pendingPronouns: U,
-                    currentPronouns: null !== (y = null == k ? void 0 : k.pronouns) && void 0 !== y ? y : ''
+                    currentPronouns: null !== (y = null == L ? void 0 : L.pronouns) && void 0 !== y ? y : ''
                 },
                 'pronouns'
             ),
@@ -105,7 +105,7 @@ function P() {
             (0, i.jsx)(
                 g.Z,
                 {
-                    user: L,
+                    user: k,
                     sectionTitle: O.intl.string(O.t['7v0T9P'])
                 },
                 'decoration'
@@ -113,7 +113,7 @@ function P() {
             (0, i.jsx)(
                 f.Z,
                 {
-                    user: L,
+                    user: k,
                     sectionTitle: O.intl.string(O.t.wR5wOj)
                 },
                 'effect'
@@ -132,7 +132,7 @@ function P() {
                               'banner'
                           ),
                           (0, i.jsx)(T.Z, {
-                              user: L,
+                              user: k,
                               pendingAvatar: B,
                               pendingColors: F,
                               onThemeColorsChange: I.z5,
@@ -143,8 +143,8 @@ function P() {
                 : (0, i.jsx)(
                       C.Z,
                       {
-                          user: L,
-                          savedUserColor: null == k ? void 0 : k.accentColor,
+                          user: k,
+                          savedUserColor: null == L ? void 0 : L.accentColor,
                           pendingColor: G,
                           setPendingAccentColor: I.CM
                       },
@@ -155,14 +155,14 @@ function P() {
                 {
                     sectionTitle: O.intl.string(O.t.NepzEx),
                     errors: $,
-                    onBioChange: (e) => (0, m.xQ)(e, null == k ? void 0 : k.bio),
+                    onBioChange: (e) => (0, m.xQ)(e, null == L ? void 0 : L.bio),
                     pendingBio: V,
-                    currentBio: null !== (Z = null == k ? void 0 : k.bio) && void 0 !== Z ? Z : ''
+                    currentBio: null !== (Z = null == L ? void 0 : L.bio) && void 0 !== Z ? Z : ''
                 },
                 'bio'
             ),
             ee.length > 0 && (0, i.jsx)(d.Z, { availableClans: ee }),
-            null != J && (0, i.jsx)(p.Z, { legacyUsername: J }, 'legacy_username')
+            null != Q && (0, i.jsx)(p.Z, { legacyUsername: Q }, 'legacy_username')
         ]
     });
 }

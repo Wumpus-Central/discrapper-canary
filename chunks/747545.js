@@ -55,8 +55,8 @@ function A(e) {
         { analyticsLocations: D } = (0, g.ZP)(),
         y = (0, c.e7)([C.Z], () => C.Z.getVideoDeviceId()),
         Z = (0, c.Wu)([C.Z], () => Object.values(C.Z.getVideoDevices())),
-        L = x.qF.useSetting(),
-        k = Z.map((e) => {
+        k = x.qF.useSetting(),
+        L = Z.map((e) => {
             let { id: t, name: n } = e;
             return {
                 value: t,
@@ -86,7 +86,7 @@ function A(e) {
                           onChange: (e) => {
                               x.qF.updateSetting(e), f.default.track(N.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
                           },
-                          value: L,
+                          value: k,
                           hideBorder: !0,
                           children: (0, i.jsx)('div', {
                               className: b.cameraPreviewTitle,
@@ -102,7 +102,7 @@ function A(e) {
                                 (0, i.jsx)(u.q4e, {
                                     placeholder: S.intl.string(S.t['t9eQ/v']),
                                     className: l()(b.selector, { [b.selectorNoHeader]: n }),
-                                    options: k,
+                                    options: L,
                                     value: y,
                                     onChange: (e) => m.Z.setVideoDevice(e),
                                     'aria-label': S.intl.string(S.t['t9eQ/v'])

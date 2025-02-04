@@ -31,8 +31,8 @@ var i = n(200651),
     D = n(706454),
     y = n(349728),
     Z = n(494620),
-    L = n(205266),
-    k = n(216153),
+    k = n(205266),
+    L = n(216153),
     B = n(981631),
     M = n(856651),
     w = n(921944),
@@ -132,16 +132,16 @@ function H(e) {
             inProgressVisibility: R,
             inProgressMetadataVisibility: w
         },
-        J = s.useRef(q);
+        Q = s.useRef(q);
     s.useEffect(() => {
-        J.current = q;
+        Q.current = q;
     }),
         s.useEffect(() => {
             if (!1 === o.verified) return;
-            let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
+            let { inProgressVisibility: e, inProgressMetadataVisibility: t } = Q.current;
             null != e && (S(e), h.Z.setVisibility(o.type, o.id, e), D(null)), null != t && (j(t), h.Z.setMetadataVisibility(o.type, o.id, t), G(null));
         }, [o]);
-    function Q() {
+    function J() {
         let e = E.Z.get(o.type),
             t = V.intl.string(V.t.apVJu7);
         (0, y.Z)(o) &&
@@ -225,7 +225,7 @@ function H(e) {
                             }),
                             (0, i.jsx)(u.P3F, {
                                 className: U.connectionDelete,
-                                onClick: Q,
+                                onClick: J,
                                 'aria-label': V.intl.string(V.t.ppppRE),
                                 focusProps: {
                                     offset: {
@@ -248,12 +248,12 @@ function H(e) {
                 : o.type === B.ABu.XBOX
                   ? (0, i.jsx)('div', {
                         className: U.upsellWrapper,
-                        children: (0, i.jsx)(k.Y, {})
+                        children: (0, i.jsx)(L.Y, {})
                     })
                   : o.type === B.ABu.PLAYSTATION
                     ? (0, i.jsx)('div', {
                           className: U.upsellWrapper,
-                          children: (0, i.jsx)(L.t, {})
+                          children: (0, i.jsx)(k.t, {})
                       })
                     : null,
             (function (e) {

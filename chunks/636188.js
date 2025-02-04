@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(47120);
+n.d(t, { Z: () => L }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -235,7 +235,7 @@ function Z(e) {
         })
     );
 }
-function L(e) {
+function k(e) {
     let { onAddBackgroundImage: t, disabled: s } = e,
         r = (0, o.vRw)(),
         l = s ? j.intl.formatToPlainString(j.t.ykGFeH, { maxCustomBackgrounds: 25 }) : j.intl.string(j.t.Qx0tFR),
@@ -270,7 +270,7 @@ function L(e) {
         tooltipText: l
     });
 }
-function k(e) {
+function L(e) {
     let { canUseCustomBackgrounds: t, customBackgroundOptions: n, selectedOption: r, onSelectOption: l, onUpsellClick: a, onAddBackgroundImage: c, smallerOptions: d } = e,
         u = s.useMemo(() => n.sort((e, t) => (null == e.last_used || null == t.last_used ? C.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime())), [n]),
         g = u.length >= 25,
@@ -296,7 +296,7 @@ function k(e) {
                     children: (0, i.jsx)('div', { className: A.backgroundOptionBlurBackground })
                 }),
                 t
-                    ? (0, i.jsx)(L, {
+                    ? (0, i.jsx)(k, {
                           onAddBackgroundImage: c,
                           disabled: g
                       })

@@ -125,11 +125,11 @@ let A = () =>
             R = null == j ? void 0 : null === (t = j.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
             y = (0, p.Ng)(),
             Z = null != y && (0, p.Wp)(y, T.Si.TIER_2),
-            L = (0, C.A)(T.Xh.PREMIUM_MONTH_TIER_2),
-            k = ''.concat(L, '/').concat((0, x.eP)(T.rV.MONTH)),
+            k = (0, C.A)(T.Xh.PREMIUM_MONTH_TIER_2),
+            L = ''.concat(k, '/').concat((0, x.eP)(T.rV.MONTH)),
             B = (0, x.CY)(T.Xh.PREMIUM_MONTH_TIER_0),
             M = (0, x.CY)(T.Xh.PREMIUM_MONTH_TIER_2),
-            w = (0, f.a)(B, M, Z, k);
+            w = (0, f.a)(B, M, Z, L);
         if (!S || !b) return null;
         w.push({
             label: null,

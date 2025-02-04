@@ -1,8 +1,8 @@
-i.d(e, { a: () => o });
-var n = i(192379),
-    r = i(996073);
-let s = { block: 'center' };
-function o(t) {
-    let e = n.useRef(null);
-    return (0, r.Z)(e, t, s, 400), e;
+n.d(t, { a: () => s });
+var i = n(192379),
+    l = n(996073);
+let r = { block: 'center' };
+function s(e) {
+    let t = i.useRef(null);
+    return (0, l.Z)(t, e, r, 400), t;
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(653041), n(627341);
+n.d(t, { Z: () => k }), n(653041), n(627341);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -127,14 +127,14 @@ function Z(e) {
             })
     );
 }
-let L = function (e) {
+let k = function (e) {
     let t, n;
     let { guildBoostSlots: r, fractionalPremiumState: _ } = e,
         x = (0, o.e7)([f.ZP], () => f.ZP.getPremiumTypeSubscription()),
         b = (null == x ? void 0 : x.isPausedOrPausePending) === !0,
         { fractionalState: v } = (0, u.Z)(),
-        L = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        k = (0, o.e7)([C.default], () => C.default.getCurrentUser()),
+        k = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        L = (0, o.e7)([C.default], () => C.default.getCurrentUser()),
         B = (0, E.Vp)(),
         M = v === A.a$.FP_SUB_PAUSED,
         w = v !== A.a$.NONE,
@@ -169,7 +169,7 @@ let L = function (e) {
         K = F > Y,
         X = Y === r.length,
         q = X ? W : 1,
-        J = s.useMemo(() => {
+        Q = s.useMemo(() => {
             let e = [];
             for (let t = 0; t < q; t++)
                 e.push(
@@ -177,19 +177,19 @@ let L = function (e) {
                         S.Z,
                         {
                             className: P.headerBoostGem,
-                            useReducedMotion: L
+                            useReducedMotion: k
                         },
                         t
                     )
                 );
             return e;
-        }, [q, L]),
-        Q = null != B,
+        }, [q, k]),
+        J = null != B,
         $ = s.useMemo(() => G.find((e) => e.isAvailable()), [G]);
     if (0 === G.length) return null;
     let ee = G.length;
-    if (((t = X ? (1 === ee && Q ? R.intl.string(R.t['65r43N']) : R.intl.formatToPlainString(z ? R.t['3DW6DQ'] : R.t['/u15QU'], { numUnappliedGuildBoostSlots: ee })) : R.intl.formatToPlainString(z ? R.t['3DW6DQ'] : R.t.BPadnJ, { numUnappliedGuildBoostSlots: ee })), I.ZP.isPremium(k))) {
-        if (X && 1 === ee && Q) n = B.skuId === O.Ft.FREE_GUILD_BOOST_1_MONTH ? R.intl.string(R.t.dm8r0t) : R.intl.string(R.t.VGJ9IC);
+    if (((t = X ? (1 === ee && J ? R.intl.string(R.t['65r43N']) : R.intl.formatToPlainString(z ? R.t['3DW6DQ'] : R.t['/u15QU'], { numUnappliedGuildBoostSlots: ee })) : R.intl.formatToPlainString(z ? R.t['3DW6DQ'] : R.t.BPadnJ, { numUnappliedGuildBoostSlots: ee })), I.ZP.isPremium(L))) {
+        if (X && 1 === ee && J) n = B.skuId === O.Ft.FREE_GUILD_BOOST_1_MONTH ? R.intl.string(R.t.dm8r0t) : R.intl.string(R.t.VGJ9IC);
         else {
             let e = (e, t) =>
                 (0, i.jsx)(
@@ -234,7 +234,7 @@ let L = function (e) {
     return (0, i.jsxs)('div', {
         className: P.wrapper,
         children: [
-            Q &&
+            J &&
                 (0, i.jsxs)('div', {
                     className: P.specialHeader,
                     children: [
@@ -252,8 +252,8 @@ let L = function (e) {
                 }),
             (0, i.jsxs)('div', {
                 className: l()(P.content, {
-                    [P.headerWithBoost]: Q,
-                    [P.headerWithoutSpecialHeader]: !Q
+                    [P.headerWithBoost]: J,
+                    [P.headerWithoutSpecialHeader]: !J
                 }),
                 children: [
                     (0, i.jsxs)('div', {
@@ -264,7 +264,7 @@ let L = function (e) {
                                 children: [
                                     (0, i.jsx)('div', {
                                         className: P.headerBoostGems,
-                                        children: J
+                                        children: Q
                                     }),
                                     (0, i.jsxs)('div', {
                                         className: P.__invalid_headerCopy,
@@ -325,7 +325,7 @@ let L = function (e) {
                                         onCancel: y,
                                         onUncancel: Z,
                                         premiumSubscription: x,
-                                        useReducedMotion: L,
+                                        useReducedMotion: k,
                                         fractionalPremiumState: _
                                     },
                                     e.id

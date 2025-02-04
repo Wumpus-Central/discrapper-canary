@@ -1,8 +1,8 @@
-n.d(e, { $: () => c });
-var l = n(51596),
-    i = n(819640);
-let c = {
+n.d(t, { $: () => r });
+var i = n(51596),
+    s = n(819640);
+let r = {
     binds: ['mod+k', 'mod+t'],
     comboKeysBindGlobal: !0,
-    action: () => (i.Z.hasLayers() || (0, l.$Z)(), !1)
+    action: () => (s.Z.hasLayers() || (0, i.$Z)(), !1)
 };

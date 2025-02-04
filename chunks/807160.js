@@ -31,8 +31,8 @@ var i,
     D = n(46141),
     y = n(430824),
     Z = n(853872),
-    L = n(509545),
-    k = n(230307),
+    k = n(509545),
+    L = n(230307),
     B = n(259580),
     M = n(572004),
     w = n(55935),
@@ -47,7 +47,7 @@ var i,
     K = n(231338),
     X = n(388032),
     q = n(943857);
-function J(e, t, n) {
+function Q(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -60,7 +60,7 @@ function J(e, t, n) {
         e
     );
 }
-let Q = (e) => 'https://'.concat(Y.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
+let J = (e) => 'https://'.concat(Y.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
     $ = [Y.epS.DURABLE_PRIMARY, Y.epS.DURABLE, Y.epS.CONSUMABLE],
     ee = [Y.PyE.FAILED, Y.PyE.REVERSED, Y.PyE.CANCELED],
     et = [K.gg.APPLE],
@@ -360,7 +360,7 @@ class ea extends (i = r.PureComponent) {
             i = this.validateRefundRules();
         if (i.includes('PAYMENT_GATEWAY') || i.includes('PAYMENT_STATUS') || i.includes('ALREADY_REFUNDED') || i.includes('SKU_STICKER_PACK') || i.includes('SUBSCRIPTION_TYPE') || i.includes('GUILD_PRODUCT')) return null;
         let l = 0 === i.length,
-            a = Q(t),
+            a = J(t),
             o = this.isPremium ? 5 : 14;
         return (
             (e = i.includes('SKU_TYPE')
@@ -445,7 +445,7 @@ class ea extends (i = r.PureComponent) {
                         children: !r.isCollectible && this.renderRefundCriteria(X.intl.string(X.t.H0RNz8), l, X.intl.formatToPlainString(X.t['7dtXa2'], { daysSincePurchase: this.daysSincePurchase }))
                     }),
                     (0, s.jsx)(h.eee, {
-                        href: Q(i),
+                        href: J(i),
                         children: X.intl.string(X.t.re5nOD)
                     })
                 ]
@@ -480,7 +480,7 @@ class ea extends (i = r.PureComponent) {
                                     return (t) =>
                                         (0, s.jsx)(e, {
                                             payment: r,
-                                            reportProblemUrl: Q(i),
+                                            reportProblemUrl: J(i),
                                             ...t
                                         });
                                 }),
@@ -488,7 +488,7 @@ class ea extends (i = r.PureComponent) {
                         })
                 }),
                 (0, s.jsx)(h.eee, {
-                    href: Q(i),
+                    href: J(i),
                     children: X.intl.string(X.t.re5nOD)
                 })
             ]
@@ -610,7 +610,7 @@ class ea extends (i = r.PureComponent) {
                                 buttonPosition: b.E.RIGHT,
                                 notice: X.intl.string(X.t['3AvulJ']),
                                 ctaLabel: X.intl.string(X.t.zoztQE),
-                                onClick: () => (0, _.Z)(Q(n))
+                                onClick: () => (0, _.Z)(J(n))
                             })
                           : null != i &&
                             null != e.sku &&
@@ -674,8 +674,8 @@ class ea extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            J(this, 'state', { expanded: !1 }),
-            J(this, 'refundRules', [
+            Q(this, 'state', { expanded: !1 }),
+            Q(this, 'refundRules', [
                 {
                     rule: 'PURCHASE_DATE',
                     canRefund: () => {
@@ -742,7 +742,7 @@ class ea extends (i = r.PureComponent) {
                     }
                 }
             ]),
-            J(this, 'handleExpandInfo', () => {
+            Q(this, 'handleExpandInfo', () => {
                 this.setState({ expanded: !this.state.expanded });
             });
     }
@@ -758,10 +758,10 @@ function eo(e) {
             applicationStatistics: g,
             gameApplication: _,
             paymentSources: p
-        } = (0, m.cj)([Z.Z, k.Z, x.Z], () => {
+        } = (0, m.cj)([Z.Z, L.Z, x.Z], () => {
             var e, t;
             return {
-                applicationStatistics: null != d ? k.Z.getCurrentUserStatisticsForApplication(d) : null,
+                applicationStatistics: null != d ? L.Z.getCurrentUserStatisticsForApplication(d) : null,
                 gameApplication: null !== (t = x.Z.getApplication(null != d ? d : '')) && void 0 !== t ? t : null === (e = i.sku) || void 0 === e ? void 0 : e.application,
                 paymentSources: Z.Z.paymentSources
             };
@@ -773,7 +773,7 @@ function eo(e) {
     let C = (0, m.e7)([y.Z], () => y.Z.getGuild(null == _ ? void 0 : _.guildId)),
         f = c ? _ : void 0,
         T = i.subscription,
-        N = (0, m.e7)([L.Z], () => (null != T && T.type !== Y.NYc.PREMIUM ? L.Z.get(T.items[0].planId) : null));
+        N = (0, m.e7)([k.Z], () => (null != T && T.type !== Y.NYc.PREMIUM ? k.Z.get(T.items[0].planId) : null));
     return (0, s.jsx)(ea, {
         applicationStatistics: g,
         application: h ? E : f,
@@ -787,4 +787,4 @@ function eo(e) {
         plan: N
     });
 }
-J(ea, 'defaultProps', { compactMode: !1 });
+Q(ea, 'defaultProps', { compactMode: !1 });

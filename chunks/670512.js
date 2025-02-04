@@ -11,7 +11,7 @@ var i,
     _ = n(981631),
     E = n(388032),
     h = n(159381);
-function I(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function I(e, t, n) {
         e
     );
 }
-let p = {
+let I = {
     friction: 15,
     tension: 100
 };
@@ -44,7 +44,7 @@ class m extends (i = r.PureComponent) {
         !0 !== t.enabled &&
             a.Z.spring(this.state.translateY, {
                 toValue: Math.min(e, 250),
-                ...p
+                ...I
             }).start();
     }
     renderArrowGroup(e) {
@@ -125,13 +125,13 @@ class m extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'state', {
+            p(this, 'state', {
                 shown: !1,
                 translateY: new a.Z.Value(0)
             }),
-            I(this, 'rootRef', r.createRef()),
-            I(this, 'focusTimeout', new c.V7()),
-            I(this, 'handleResultFocus', (e) => {
+            p(this, 'rootRef', r.createRef()),
+            p(this, 'focusTimeout', new c.V7()),
+            p(this, 'handleResultFocus', (e) => {
                 let { node: t } = e;
                 this.focusTimeout.start(1, () => {
                     if (this.props.hasQuery && null != t && null != this.rootRef.current) {
@@ -144,5 +144,5 @@ class m extends (i = r.PureComponent) {
             });
     }
 }
-I(m, 'contextType', d.Sfi);
+p(m, 'contextType', d.Sfi);
 let T = m;

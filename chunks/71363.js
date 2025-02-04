@@ -34,10 +34,10 @@ let b = (e) => {
         [P, D] = s.useState(!1),
         y = (0, g.ZP)('perks-discoverability'),
         Z = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        L = (0, f.mN)(),
-        { fractionalState: k } = (0, h.Z)();
+        k = (0, f.mN)(),
+        { fractionalState: L } = (0, h.Z)();
     return (
-        L ? ((t = N.intl.string(N.t['+vt7w8'])), (n = N.intl.string(N.t.LgHbnJ))) : ((t = N.intl.string(N.t.LgHbnJ)), (n = N.intl.string(N.t['+vt7w8']))),
+        k ? ((t = N.intl.string(N.t['+vt7w8'])), (n = N.intl.string(N.t.LgHbnJ))) : ((t = N.intl.string(N.t.LgHbnJ)), (n = N.intl.string(N.t['+vt7w8']))),
         (0, i.jsx)(c.yWw, {
             className: l()(I.allPerksScroller, {
                 [I.open]: r,
@@ -75,9 +75,9 @@ let b = (e) => {
                                         perksCards: O,
                                         variant: C.R0.CARD_CAROUSEL_FIRST_ROW,
                                         shopMarketingVariation: y,
-                                        isPremiumSubscriber: L,
+                                        isPremiumSubscriber: k,
                                         isFullScreen: j,
-                                        fractionalState: k
+                                        fractionalState: L
                                     }),
                                     cardType: C.R0.CARD_CAROUSEL_FIRST_ROW
                                 }),
@@ -93,9 +93,9 @@ let b = (e) => {
                                         perksCards: O,
                                         variant: C.R0.CARD_CAROUSEL_SECOND_ROW,
                                         shopMarketingVariation: y,
-                                        isPremiumSubscriber: L,
+                                        isPremiumSubscriber: k,
                                         isFullScreen: j,
-                                        fractionalState: k
+                                        fractionalState: L
                                     }),
                                     cardType: C.R0.CARD_CAROUSEL_SECOND_ROW
                                 }),
@@ -111,9 +111,9 @@ let b = (e) => {
                                         perksCards: O,
                                         variant: C.R0.CARD_CAROUSEL_THIRD_ROW,
                                         shopMarketingVariation: y,
-                                        isPremiumSubscriber: L,
+                                        isPremiumSubscriber: k,
                                         isFullScreen: j,
-                                        fractionalState: k
+                                        fractionalState: L
                                     }),
                                     cardType: C.R0.CARD_CAROUSEL_THIRD_ROW
                                 })

@@ -1,25 +1,25 @@
 n.d(t, {
-    Z: () => m,
+    Z: () => g,
     n: () => u
 });
 var i,
-    r = n(200651),
-    a = n(192379),
-    o = n(120356),
-    l = n.n(o),
-    s = n(748780),
-    d = n(215569),
-    c = n(383583),
+    s = n(200651),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(748780),
+    c = n(215569),
+    d = n(383583),
     u = (((i = {})[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT'), i);
-let _ = {
+let m = {
     friction: 7,
     tension: 40,
     clamp: !0
 };
-class p extends a.PureComponent {
+class h extends r.PureComponent {
     componentWillEnter(e) {
         this._animated.setValue(-this.props.direction),
-            s.Z.spring(this._animated, {
+            o.Z.spring(this._animated, {
                 toValue: 0,
                 ...this.props.springSettings
             }).start(e);
@@ -28,13 +28,13 @@ class p extends a.PureComponent {
         this._animated.setValue(0);
     }
     componentWillLeave(e) {
-        s.Z.spring(this._animated, {
+        o.Z.spring(this._animated, {
             toValue: this.props.direction,
             ...this.props.springSettings
         }).start(e);
     }
     getStyle() {
-        let e = s.Z.accelerate({
+        let e = o.Z.accelerate({
             transform: [
                 {
                     translateX: this._animated.interpolate({
@@ -54,9 +54,9 @@ class p extends a.PureComponent {
         );
     }
     render() {
-        return (0, r.jsx)(s.Z.div, {
+        return (0, s.jsx)(o.Z.div, {
             style: this.getStyle(),
-            className: c.item,
+            className: d.item,
             children: this.props.children
         });
     }
@@ -72,20 +72,20 @@ class p extends a.PureComponent {
                       writable: !0
                   })
                 : (this[t] = n),
-            (this._animated = new s.Z.Value(-1 * e.direction));
+            (this._animated = new o.Z.Value(-1 * e.direction));
     }
 }
-let m = (e) => {
-    let { children: t, step: n, direction: i, className: a, springSettings: o = _, fadeInOut: s = !1 } = e;
-    return (0, r.jsx)(d.W, {
+let g = (e) => {
+    let { children: t, step: n, direction: i, className: r, springSettings: l = m, fadeInOut: o = !1 } = e;
+    return (0, s.jsx)(c.W, {
         component: 'div',
-        className: l()(c.animator, a),
-        children: (0, r.jsx)(
-            p,
+        className: a()(d.animator, r),
+        children: (0, s.jsx)(
+            h,
             {
                 direction: i,
-                springSettings: o,
-                fadeInOut: s,
+                springSettings: l,
+                fadeInOut: o,
                 children: t
             },
             n

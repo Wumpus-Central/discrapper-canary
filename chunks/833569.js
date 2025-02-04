@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => H,
-    default: () => J
+    default: () => Q
 }),
     n(47120),
     n(411104);
@@ -36,8 +36,8 @@ var i,
     D = n(398775),
     y = n(807163),
     Z = n(311821),
-    L = n(42818),
-    k = n(798769),
+    k = n(42818),
+    L = n(798769),
     B = n(459965),
     M = n(119269),
     w = n(474936),
@@ -142,7 +142,7 @@ function Y(e) {
     return (0, s.jsxs)(s.Fragment, {
         children: [
             o
-                ? (0, s.jsx)(k.Z, {
+                ? (0, s.jsx)(L.Z, {
                       premiumType: i,
                       className: F.cancellationHeader,
                       onClose: a
@@ -213,7 +213,7 @@ function W(e) {
                         className: F.invoiceCancelRow
                     }),
                     (0, s.jsx)(O.KU, {}),
-                    (0, s.jsx)(L.nd, {
+                    (0, s.jsx)(k.nd, {
                         premiumSubscription: i,
                         renewalInvoice: l,
                         isUpdate: !0
@@ -230,7 +230,7 @@ function K(e) {
         { analyticsLocations: g } = (0, p.ZP)();
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)(k.Z, {
+            (0, s.jsx)(L.Z, {
                 premiumType: n,
                 onClose: l
             }),
@@ -290,7 +290,7 @@ let q = {
     6: 'Select Pause Duration',
     7: 'Confirm Pause Duration'
 };
-function J(e) {
+function Q(e) {
     var t;
     let n,
         { premiumSubscription: i, transitionState: l, onClose: a, analyticsLocations: c, analyticsLocation: u, initialStep: g } = e,
@@ -302,14 +302,14 @@ function J(e) {
         O = null === (t = (0, S.Af)(i)) || void 0 === t ? void 0 : t.planId,
         Z = null != O ? S.ZP.getPremiumType(O) : null;
     d()(null != Z, 'Should not be cancelling Nitro without premiumType');
-    let L = (0, _.ZP)();
+    let k = (0, _.ZP)();
     r.useEffect(() => {
         T.default.track(U.rMx.CANCELLATION_FLOW_STARTED, X(i));
     }, [i]);
-    let k = Z === w.p9.TIER_0 || Z === w.p9.TIER_1 || Z === w.p9.TIER_2;
-    null == g && (g = k ? 1 : 2);
+    let L = Z === w.p9.TIER_0 || Z === w.p9.TIER_1 || Z === w.p9.TIER_2;
+    null == g && (g = L ? 1 : 2);
     let { analyticsLocations: H } = (0, p.ZP)(c, x.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
-        [z, W, J, Q] = (function (e, t, n) {
+        [z, W, Q, J] = (function (e, t, n) {
             let [i, s] = r.useState(e),
                 [l, a] = r.useState(Date.now()),
                 [o] = r.useState(Date.now()),
@@ -337,8 +337,8 @@ function J(e) {
                 T.default.track(U.rMx.CANCELLATION_FLOW_STEP, {
                     from_step: q[e],
                     to_step: null,
-                    step_duration_ms: Date.now() - J,
-                    flow_duration_ms: Date.now() - Q,
+                    step_duration_ms: Date.now() - Q,
+                    flow_duration_ms: Date.now() - J,
                     location_stack: c,
                     ...X(i)
                 });
@@ -366,7 +366,7 @@ function J(e) {
                         }),
                         (0, s.jsx)(h.zxk, {
                             look: h.zxk.Looks.LINK,
-                            color: (0, m.wj)(L) ? h.zxk.Colors.WHITE : h.zxk.Colors.PRIMARY,
+                            color: (0, m.wj)(k) ? h.zxk.Colors.WHITE : h.zxk.Colors.PRIMARY,
                             onClick: a,
                             children: G.intl.string(G.t.h9tkAA)
                         })
@@ -428,7 +428,7 @@ function J(e) {
                         }),
                         (0, s.jsx)(h.zxk, {
                             look: h.zxk.Looks.LINK,
-                            color: (0, m.wj)(L) ? h.zxk.Colors.WHITE : h.zxk.Colors.PRIMARY,
+                            color: (0, m.wj)(k) ? h.zxk.Colors.WHITE : h.zxk.Colors.PRIMARY,
                             onClick: () => et(z),
                             children: G.intl.string(G.t.h9tkAA)
                         })
@@ -448,7 +448,7 @@ function J(e) {
                 premiumType: Z,
                 setStep: W,
                 onClose: () => et(z),
-                whatYouLoseExperienceEnabled: k,
+                whatYouLoseExperienceEnabled: L,
                 analyticsLocation: u
             });
             break;

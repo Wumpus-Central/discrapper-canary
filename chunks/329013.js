@@ -1,5 +1,5 @@
 n.d(t, {
-    g: () => L,
+    g: () => k,
     i: () => y
 });
 var i = n(200651),
@@ -163,7 +163,7 @@ function Z() {
               })
           });
 }
-let L = () => {
+let k = () => {
     let e = (0, r.e7)([_.Z], () => _.Z.isPreview),
         t = (0, p.Q3)('ClientThemesSidebarButton');
     return e

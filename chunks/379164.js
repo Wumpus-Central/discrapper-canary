@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i = n(570140),
     l = n(447543),
     r = n(87051),
@@ -11,13 +11,13 @@ var i = n(570140),
     _ = n(621600),
     E = n(88658),
     h = n(981631);
-let I = {
+let p = {
     acceptInvite(e) {
         let t = l.Z.getInviteContext('Desktop Invite Modal', e),
             n = (0, a.y)(),
             d = (0, a.h6)(),
             h = (0, a.U1)(),
-            I = (0, a.yS)();
+            p = (0, a.yS)();
         l.Z.acceptInvite({
             inviteKey: e.code,
             context: t,
@@ -36,7 +36,7 @@ let I = {
                         let t = new Set((0, E._o)());
                         t.add(e.guild.id), c.SE.updateSetting(Array.from(t));
                     }
-                    null != n && n.length > 0 && (0, s.iq)(e.guild.id, { nick: n }), (0, o.m4)({ location: 'acceptInvite' }) && r.Z.updateGuildNotificationSettings(e.guild.id, { muted: I }, _.ZB.Muted);
+                    null != n && n.length > 0 && (0, s.iq)(e.guild.id, { nick: n }), (0, o.m4)({ location: 'acceptInvite' }) && r.Z.updateGuildNotificationSettings(e.guild.id, { muted: p }, _.ZB.Muted);
                 }
                 this.close();
             },

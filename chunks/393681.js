@@ -31,8 +31,8 @@ var i = n(200651),
     D = n(709054),
     y = n(706454),
     Z = n(210887),
-    L = n(418632),
-    k = n(10298),
+    k = n(418632),
+    L = n(10298),
     B = n(526156),
     M = n(730820),
     w = n(888256),
@@ -90,7 +90,7 @@ class K extends s.PureComponent {
                         className: Y.accountWarningBodyText,
                         children: z.intl.string(z.t.NAzplJ)
                     }),
-                    (0, i.jsx)(L.Z, {
+                    (0, i.jsx)(k.Z, {
                         size: u.PhG.SMALL,
                         color: u.zxk.Colors.PRIMARY
                     })
@@ -290,7 +290,7 @@ class K extends s.PureComponent {
     }
     renderUnhidden() {
         let { subsection: e } = this.props;
-        return (0, i.jsx)(k.N, {
+        return (0, i.jsx)(L.N, {
             header: z.intl.string(z.t['JAIM/v']),
             children: (0, i.jsx)(B.Z, {
                 parentSetting: G.s6.ACCOUNT,

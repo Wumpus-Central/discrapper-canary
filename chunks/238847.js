@@ -111,12 +111,12 @@ let R = (e) => {
             { storeListing: r, groupListing: a, guild: d, expanded: h, handleToggleExpanded: _, subscriptionInfo: f, application: T } = (0, v.Z)(t),
             I = (0, x.Dt)(),
             [y, Z] = s.useState(!1),
-            { analyticsLocations: L } = (0, g.ZP)();
+            { analyticsLocations: k } = (0, g.ZP)();
         if (null == a || null == r || null == f) return null;
-        let k = async () => {
+        let L = async () => {
                 try {
                     Z(!0);
-                    let { subscription: e } = await m.pl(t, L);
+                    let { subscription: e } = await m.pl(t, k);
                     null != e &&
                         (0, u.ZDy)(async () => {
                             let { default: t } = await n.e('18879').then(n.bind(n, 535278));
@@ -280,7 +280,7 @@ let R = (e) => {
                                               });
                                       },
                                       isResubscribing: y,
-                                      onResubscribeClick: k
+                                      onResubscribeClick: L
                                   })
                           ]
                       })

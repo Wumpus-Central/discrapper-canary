@@ -70,8 +70,8 @@ function O(e) {
         })),
         y = (0, o.e7)([E.Z], () => E.Z.getOverlayKeybind()),
         Z = (0, x.Z)({ location: 'overlay_user_settings' }),
-        L = (0, h.$1)(),
-        k = (0, _.XE)('overlay_user_settings');
+        k = (0, h.$1)(),
+        L = (0, _.XE)('overlay_user_settings');
     function B(e) {
         u.Z.setEnabled(e, l, !1),
             T.default.track(I.rMx.OVERLAY_TOGGLED, {
@@ -95,7 +95,7 @@ function O(e) {
                         (0, i.jsxs)('div', {
                             className: b.enableOverlaySection,
                             children: [
-                                k
+                                L
                                     ? (0, i.jsxs)(c.xJW, {
                                           title: S.intl.string(S.t.XkaTrq),
                                           className: b.enableOverlayItem,
@@ -110,8 +110,8 @@ function O(e) {
                                               (0, i.jsx)(c.j7V, {
                                                   className: b.enableSwitch,
                                                   value: l,
-                                                  disabled: L || !s,
-                                                  note: L ? S.intl.string(S.t.Eb0lnJ) : null,
+                                                  disabled: k || !s,
+                                                  note: k ? S.intl.string(S.t.Eb0lnJ) : null,
                                                   hideBorder: !0,
                                                   onChange: function (e) {
                                                       u.Z.setEnabled(s, e, !1),
@@ -130,8 +130,8 @@ function O(e) {
                                           children: (0, i.jsx)(c.j7V, {
                                               className: b.enableSwitch,
                                               value: s,
-                                              disabled: L,
-                                              note: L ? S.intl.string(S.t.Eb0lnJ) : null,
+                                              disabled: k,
+                                              note: k ? S.intl.string(S.t.Eb0lnJ) : null,
                                               hideBorder: !0,
                                               onChange: B,
                                               children: S.intl.string(S.t.vSP6c3)
@@ -234,7 +234,7 @@ function O(e) {
                     title: S.intl.string(S.t['3GMnLi']),
                     className: b.notificationSection,
                     children: [
-                        k
+                        L
                             ? null
                             : (0, i.jsx)(A, {
                                   title: S.intl.string(S.t.IQv8Eh),

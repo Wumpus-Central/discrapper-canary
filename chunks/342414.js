@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(47120);
+n.d(t, { Z: () => L }), n(47120);
 var i = n(200651);
 n(192379);
 var s = n(120356),
@@ -30,7 +30,7 @@ var s = n(120356),
     R = n(578478);
 let P = (e) => {
         let { className: t } = e,
-            { headingText: n, headingTop: s, headingBottom: l } = L();
+            { headingText: n, headingTop: s, headingBottom: l } = k();
         return (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)('div', {
                 className: r()(A.container, t),
@@ -70,7 +70,7 @@ let P = (e) => {
         let { location: t } = e,
             { subscriberHomeVariant: n } = p.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
             s = n === p.p.VARIANT_2,
-            { headingText: r, headingTop: l, headingBottom: o } = L();
+            { headingText: r, headingTop: l, headingBottom: o } = k();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
@@ -109,7 +109,7 @@ let P = (e) => {
         });
     },
     y = () => {
-        let { headingText: e } = L();
+        let { headingText: e } = k();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
@@ -138,8 +138,8 @@ let P = (e) => {
             ]
         });
     },
-    [Z, L] = (0, g.Z)(),
-    k = (e) => {
+    [Z, k] = (0, g.Z)(),
+    L = (e) => {
         let { className: t, location: n } = e,
             { analyticsLocations: s } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
             a = (0, l.e7)([h.ZP], () => h.ZP.inReverseTrial()),
@@ -150,11 +150,11 @@ let P = (e) => {
             S = (0, i.jsx)(P, { className: t }),
             O = j.intl.string(j.t.ifwQZW),
             R = !1,
-            { fractionalState: L, endsAt: k } = (0, u.Z)(),
-            B = (0, d.Z)(k, d.a.ENDS_IN);
+            { fractionalState: k, endsAt: L } = (0, u.Z)(),
+            B = (0, d.Z)(L, d.a.ENDS_IN);
         a ? ((O = j.intl.string(j.t.ifwQZW)), (S = (0, i.jsx)(y, {}))) : (f || N) && ((p = j.intl.string(j.t.qYKftb)), (O = j.intl.string(j.t.ifwQZW)), (S = (0, i.jsx)(D, { location: n })));
         let M = null;
-        if (L !== b.a$.NONE) {
+        if (k !== b.a$.NONE) {
             (g = !0), (p = j.intl.string(j.t.vaqFvb)), (R = !0);
             let e = j.intl.format(j.t['yR+oDA'], { helpCenterLink: _.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) });
             M = (0, i.jsx)(m.Z, {

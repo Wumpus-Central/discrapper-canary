@@ -1,55 +1,55 @@
-i.d(t, {
-    Yn: () => E,
-    ZP: () => h
+n.d(t, {
+    Yn: () => h,
+    ZP: () => g
 }),
-    i(411104),
-    i(47120);
-var n = i(200651),
-    r = i(192379),
-    l = i(283693),
-    o = i(481060),
-    a = i(816814),
-    s = i(200483),
-    c = i(981631),
-    d = i(388032);
-function _(e) {
-    let { onError: t, onSuccess: i, PasswordConfirm: o, ...s } = e,
-        [_, u] = r.useState('');
-    return (0, n.jsx)(o, {
-        ...s,
+    n(411104),
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(283693),
+    l = n(481060),
+    a = n(816814),
+    o = n(200483),
+    c = n(981631),
+    d = n(388032);
+function u(e) {
+    let { onError: t, onSuccess: n, PasswordConfirm: l, ...o } = e,
+        [u, m] = s.useState('');
+    return (0, i.jsx)(l, {
+        ...o,
         handleSubmit: (e) => a.Z.enableMFAStart(e),
         onError: (e) => {
-            ('object' == typeof e && null != e && (0, l.nr)(e, 'code') && 'number' == typeof e.code ? e.code : 0) === c.evJ.MFA_INVALID_SECRET ? (i(_), s.onClose()) : t(e);
+            ('object' == typeof e && null != e && (0, r.nr)(e, 'code') && 'number' == typeof e.code ? e.code : 0) === c.evJ.MFA_INVALID_SECRET ? (n(u), o.onClose()) : t(e);
         },
-        onPasswordChange: u,
+        onPasswordChange: m,
         title: d.intl.string(d.t.cDgKtb),
         actionText: d.intl.string(d.t['3PatS0']),
         skipErrorMsgAbortCode: c.evJ.MFA_INVALID_SECRET
     });
 }
-function u(e, t) {
-    return new Promise((r) => {
-        (0, o.ZDy)(async () => {
-            let { default: l } = await Promise.all([i.e('62729'), i.e('23746')]).then(i.bind(i, 837651));
-            return (i) =>
-                (0, n.jsx)(l, {
-                    ...i,
+function m(e, t) {
+    return new Promise((s) => {
+        (0, l.ZDy)(async () => {
+            let { default: r } = await Promise.all([n.e('62729'), n.e('23746')]).then(n.bind(n, 837651));
+            return (n) =>
+                (0, i.jsx)(r, {
+                    ...n,
                     password: e,
                     emailToken: t,
-                    handleEnableMFASuccess: r
+                    handleEnableMFASuccess: s
                 });
         });
     });
 }
-function E() {
+function h() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return new Promise((t) => {
-        (0, o.ZDy)(
+        (0, l.ZDy)(
             async () => {
-                let { default: t } = await Promise.all([i.e('76540'), i.e('30463')]).then(i.bind(i, 628908));
-                return (i) =>
-                    (0, n.jsx)(t, {
-                        ...i,
+                let { default: t } = await Promise.all([n.e('76540'), n.e('30463')]).then(n.bind(n, 628908));
+                return (n) =>
+                    (0, i.jsx)(t, {
+                        ...n,
                         isTotp: e
                     });
             },
@@ -60,27 +60,27 @@ function E() {
         );
     });
 }
-let h = {
+let g = {
     enableMFA: async function () {
         let e = await new Promise((e, t) => {
-            (0, o.ZDy)(async () => {
-                let { default: r } = await i.e('24642').then(i.bind(i, 279837));
-                return (i) =>
-                    (0, n.jsx)(_, {
-                        ...i,
+            (0, l.ZDy)(async () => {
+                let { default: s } = await n.e('24642').then(n.bind(n, 279837));
+                return (n) =>
+                    (0, i.jsx)(u, {
+                        ...n,
                         onSuccess: e,
                         onError: t,
-                        PasswordConfirm: r
+                        PasswordConfirm: s
                     });
             });
         });
-        if ((0, s.j)()) {
+        if ((0, o.j)()) {
             let t = await new Promise((t) => {
-                (0, o.ZDy)(async () => {
-                    let { default: r } = await i.e('94566').then(i.bind(i, 965072));
-                    return (i) =>
-                        (0, n.jsx)(r, {
-                            ...i,
+                (0, l.ZDy)(async () => {
+                    let { default: s } = await n.e('94566').then(n.bind(n, 965072));
+                    return (n) =>
+                        (0, i.jsx)(s, {
+                            ...n,
                             onFormSubmit: async (e) => await a.Z.verifyEmailCode(e),
                             onResend: async () => {
                                 await a.Z.resendEmailCode(e);
@@ -91,8 +91,8 @@ let h = {
                         });
                 });
             });
-            await u(e, null == t ? void 0 : t.token);
-        } else await u(e);
-        await E();
+            await m(e, null == t ? void 0 : t.token);
+        } else await m(e);
+        await h();
     }
 };

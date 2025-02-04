@@ -31,12 +31,12 @@ var i = n(200651),
     D = n(639119),
     y = n(943180),
     Z = n(2359),
-    L = n(132547),
-    k = n(474936),
+    k = n(132547),
+    L = n(474936),
     B = n(981631),
     M = n(579521);
 let w = function (e) {
-    let { entrypoint: t = k.EZ.UserSettings } = e;
+    let { entrypoint: t = L.EZ.UserSettings } = e;
     (0, T.z)(f.X);
     let n = (0, p.Q)(),
         { sourceAnalyticsLocations: r, analyticsLocations: w } = (0, x.ZP)(_.Z.PREMIUM_MARKETING),
@@ -48,10 +48,10 @@ let w = function (e) {
         z = (0, E.V)(),
         [Y, W] = s.useState(!0),
         K = s.useRef(0),
-        X = (0, j.M5)(U, k.p9.TIER_2),
+        X = (0, j.M5)(U, L.p9.TIER_2),
         q = (0, R.n)(),
-        J = null == q ? void 0 : q.countryCode,
-        { enabled: Q } = (0, y.D)(),
+        Q = null == q ? void 0 : q.countryCode,
+        { enabled: J } = (0, y.D)(),
         $ = (0, a.e7)([N.Z], () => (null != U ? N.Z.getUserProfile(U.id) : null)),
         ee = (0, a.e7)([A.Z], () => A.Z.hasFetched);
     return (s.useEffect(() => {
@@ -60,9 +60,9 @@ let w = function (e) {
     s.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(J, null, B.JjL.DISCOVERY), null != G && Q && X && (0, h.In)(G)]), (K.current = Date.now() - e), W(!1);
+            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(Q, null, B.JjL.DISCOVERY), null != G && J && X && (0, h.In)(G)]), (K.current = Date.now() - e), W(!1);
         });
-    }, [J, G, Q, X]),
+    }, [Q, G, J, X]),
     s.useEffect(() => {
         n && (null != F || null != H) && (0, O.a)(F, H);
     }, [n, F, H]),
@@ -77,15 +77,15 @@ let w = function (e) {
         ? (0, i.jsx)(g.Z, {})
         : n
           ? (0, i.jsx)(C.c8, {})
-          : t === k.EZ.ApplicationStoreHome && X
-            ? Q && null == $
+          : t === L.EZ.ApplicationStoreHome && X
+            ? J && null == $
                 ? (0, i.jsx)('div', {
                       className: l()(M.container, M.loading),
                       children: (0, i.jsx)(o.$jN, {})
                   })
                 : (0, i.jsx)(x.Gt, {
                       value: w,
-                      children: (0, i.jsx)(L.Z, {})
+                      children: (0, i.jsx)(k.Z, {})
                   })
             : V && z && !Y
               ? (0, i.jsx)(x.Gt, {

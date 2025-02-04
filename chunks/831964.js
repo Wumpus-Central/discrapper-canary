@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => k,
-    __: () => L,
+    ZP: () => L,
+    __: () => k,
     dm: () => Z
 });
 var i,
@@ -35,7 +35,7 @@ var i,
     D = n(377679),
     y = n(825087),
     Z = (((i = {}).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits'), i);
-let L = () => {
+let k = () => {
         let e = (0, o.rO)();
         return {
             emojis: {
@@ -56,7 +56,7 @@ let L = () => {
             }
         };
     },
-    k = (e) => {
+    L = (e) => {
         let { analyticsLocations: t } = (0, l.ZP)(r.Z.PREMIUM_MARKETING_BENTO_BOX),
             n = (0, a.Z)({
                 scrollPosition: u.Y_.TRY_IT_OUT,

@@ -35,8 +35,8 @@ var r = n(399606),
     D = n(474936),
     y = n(735825),
     Z = n(981631),
-    L = n(526761),
-    k = n(332325),
+    k = n(526761),
+    L = n(332325),
     B = n(388032),
     M = n(506829),
     w = n(660372),
@@ -51,8 +51,8 @@ var r = n(399606),
     K = n(193943),
     X = n(707046),
     q = n(488459),
-    J = n(334347),
-    Q = n(132015),
+    Q = n(334347),
+    J = n(132015),
     $ = n(355653),
     ee = n(607762),
     et = n(474106),
@@ -89,11 +89,11 @@ let e_ = () => {
         { fractionalState: ev } = (0, d.Z)(),
         ej = ev === D.a$.FP_ONLY,
         eA = (0, h.Z)({
-            scrollPosition: L.Y_.TRY_IT_OUT,
+            scrollPosition: k.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
         eO = () => {
-            l.Z.open(Z.oAB.VOICE, L.GA, {
+            l.Z.open(Z.oAB.VOICE, k.GA, {
                 openWithoutBackstack: !0,
                 analyticsLocations: e
             });
@@ -102,7 +102,7 @@ let e_ = () => {
             (0, g.uL)(Z.Z5c.COLLECTIBLES_SHOP);
         },
         eP = () => {
-            l.Z.open(Z.oAB.APPEARANCE, null, { scrollPosition: L.h1.CUSTOM_APP_ICONS });
+            l.Z.open(Z.oAB.APPEARANCE, null, { scrollPosition: k.h1.CUSTOM_APP_ICONS });
         },
         eD = {
             clientThemes: {
@@ -129,7 +129,7 @@ let e_ = () => {
                       pillText: B.intl.string(B.t.EYxi0t),
                       onCtaClick: eN
                           ? () => {
-                                (0, _.Z)(k.Z.CLIPS, {
+                                (0, _.Z)(L.Z.CLIPS, {
                                     openWithoutBackstack: !0,
                                     analyticsLocations: e
                                 });
@@ -187,14 +187,14 @@ let e_ = () => {
                       description: B.intl.string(B.t.mUT8bG),
                       descriptionCta: B.intl.string(B.t.jVcuVV),
                       onCtaClick: eO,
-                      perkImage: Q
+                      perkImage: J
                   }
                 : {
                       name: 'entranceSounds',
                       title: B.intl.string(B.t['f4M+Hx']),
                       subtitle: B.intl.string(B.t['7ZCYvL']),
                       description: B.intl.string(B.t['3smf/f']),
-                      perkImage: Q
+                      perkImage: J
                   },
             entranceSoundsSeeAllVariation: ep
                 ? {
@@ -379,7 +379,7 @@ let e_ = () => {
                 name: 'moreEmojiPower',
                 title: B.intl.string(B.t['R2IV/f']),
                 subtitle: B.intl.string(B.t.R5Xag4),
-                perkImage: J,
+                perkImage: Q,
                 description: B.intl.string(B.t['8lsjS0'])
             },
             customSoundsEverywhere: {

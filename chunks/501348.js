@@ -31,8 +31,8 @@ var i = n(200651),
     D = n(210887),
     y = n(740492),
     Z = n(695346),
-    L = n(329013),
-    k = n(333859),
+    k = n(329013),
+    L = n(333859),
     B = n(726985),
     M = n(981631),
     w = n(921944),
@@ -106,7 +106,7 @@ let z = {
             })
         ];
     },
-    J = () => {
+    Q = () => {
         let e = (0, N.Q3)('ThemeTitle'),
             t = (0, a.e7)([C.Z], () => C.Z.isPreview),
             { enabled: n } = A.Z.useExperiment(
@@ -136,11 +136,11 @@ let z = {
                                   })
                           ]
                       }),
-                      (0, i.jsx)(L.g, {})
+                      (0, i.jsx)(k.g, {})
                   ]
               });
     };
-class Q extends s.Component {
+class J extends s.Component {
     renderZoomSlider() {
         let { isRefreshEnabled: e } = this.props;
         return P.isPlatformEmbedded
@@ -310,20 +310,20 @@ class Q extends s.Component {
                                 children: U.intl.string(U.t.Ksh3io)
                             }),
                             (0, i.jsx)(u.xJW, {
-                                title: (0, i.jsx)(J, {}),
-                                children: (0, i.jsx)(L.i, {})
+                                title: (0, i.jsx)(Q, {}),
+                                children: (0, i.jsx)(k.i, {})
                             })
                         ]
                     })
                 })
               : (0, i.jsxs)(u.xJW, {
                     className: F.marginTop8,
-                    title: (0, i.jsx)(J, {}),
+                    title: (0, i.jsx)(Q, {}),
                     children: [
-                        (0, i.jsx)(L.i, {}),
+                        (0, i.jsx)(k.i, {}),
                         (0, i.jsx)(O.F, {
                             setting: B.s6.APPEARANCE_ICON,
-                            children: (0, i.jsx)(k.c, {})
+                            children: (0, i.jsx)(L.c, {})
                         }),
                         (0, i.jsx)(u.j7V, {
                             value: n && (0, d.ap)(e) && !t,
@@ -543,7 +543,7 @@ class Q extends s.Component {
             });
     }
 }
-class $ extends Q {
+class $ extends J {
     render() {
         let { density: e } = this.props,
             t = (0, i.jsxs)(O.F, {
@@ -552,7 +552,7 @@ class $ extends Q {
             }),
             n = (0, i.jsx)(O.F, {
                 setting: B.s6.APPEARANCE_ICON,
-                children: (0, i.jsx)(k.c, {})
+                children: (0, i.jsx)(L.c, {})
             }),
             s = (0, i.jsxs)(O.F, {
                 setting: B.s6.APPEARANCE_LIST_SPACING,
@@ -715,7 +715,7 @@ function et() {
         d = (0, N.nm)('UserSettingsAppearance'),
         u = (0, N.o9)('UserSettingsAppearance'),
         m = (0, N.Q3)('UserSettingsAppearance');
-    return (0, i.jsx)(m ? $ : Q, {
+    return (0, i.jsx)(m ? $ : J, {
         messageDisplayCompact: e,
         hideSimpleEmbedContent: t && n,
         clientTheme: s,

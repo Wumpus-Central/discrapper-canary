@@ -125,8 +125,8 @@ let v = (e) => {
             { referralSentUsers: R, hasSentAllReferrals: P, refreshAt: D } = (0, E.G)(),
             y = s.useMemo(() => R.map((e) => new m.Z(e)), [R]),
             { subscriberHomeVariant: Z } = p.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
-            L = j === N.g2L.UNAPPLIED || j === N.g2L.QUALIFIED,
-            k = Z === p.p.VARIANT_2,
+            k = j === N.g2L.UNAPPLIED || j === N.g2L.QUALIFIED,
+            L = Z === p.p.VARIANT_2,
             B = {
                 redeemed: 0,
                 converted: 0,
@@ -200,7 +200,7 @@ let v = (e) => {
                                 className: l()(S.expandedProgressBarButtonContainer, { [S.expandedProgressBarButtonContainerLayout]: !u }),
                                 children: [
                                     !u &&
-                                        !k &&
+                                        !L &&
                                         (0, i.jsx)(C.Z, {
                                             color: o.Ttl.CUSTOM,
                                             buttonText: I.intl.string(I.t.Ve9Ge3),
@@ -247,11 +247,11 @@ let v = (e) => {
             value: V,
             children: (0, i.jsx)('div', {
                 className: l()({
-                    [S.containerWithGlowWithoutBanner]: !H && Y && !L,
-                    [S.containerWithGlowWithBanner]: !H && Y && L,
+                    [S.containerWithGlowWithoutBanner]: !H && Y && !k,
+                    [S.containerWithGlowWithBanner]: !H && Y && k,
                     [S.containerWithoutGlow]: H || !Y,
                     [S.containerWithMargins]: !u,
-                    [S.marginWithBanner]: L,
+                    [S.marginWithBanner]: k,
                     [S.containerWithGlowOnSettingsPage]: !H && Y && u
                 }),
                 children: (0, i.jsxs)('div', {
@@ -259,13 +259,13 @@ let v = (e) => {
                     className: l()({
                         [S.expandedProgressBarContainer]: !u,
                         [S.expandedProgressBarContainerSettingsPage]: u,
-                        [S.expandedProgressBarContainerVariant1]: !k && !u,
-                        [S.expandedProgressBarContainerVariant2]: k && !u,
+                        [S.expandedProgressBarContainerVariant1]: !L && !u,
+                        [S.expandedProgressBarContainerVariant2]: L && !u,
                         [S.allReferralsSentBorder]: !H && Y,
-                        [S.containerWithBanner]: !H && L
+                        [S.containerWithBanner]: !H && k
                     }),
                     children: [
-                        L &&
+                        k &&
                             !H &&
                             (0, i.jsx)('div', {
                                 className: l()(S.banner, {

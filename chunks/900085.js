@@ -11,12 +11,12 @@ var i,
     _ = n(134616),
     E = n(714338),
     h = n(212819),
-    I = n(14429),
-    p = n(576855),
+    p = n(14429),
+    I = n(576855),
     m = n(313201),
     T = n(592125),
-    N = n(888369),
-    C = n(430824),
+    C = n(888369),
+    N = n(430824),
     g = n(306680),
     S = n(944486),
     f = n(938475),
@@ -42,7 +42,7 @@ function v(e, t, n) {
         e
     );
 }
-let y = () =>
+let U = () =>
     (0, l.jsxs)('div', {
         className: M.emptyState,
         children: [
@@ -59,9 +59,9 @@ let y = () =>
             })
         ]
     });
-class k extends (i = r.Component) {
+class y extends (i = r.Component) {
     render() {
-        let e = C.Z.getGuild(this.props.channel.guild_id);
+        let e = N.Z.getGuild(this.props.channel.guild_id);
         return (0, l.jsx)(P.$W, {
             ...this.props,
             children: (0, l.jsx)('div', {
@@ -71,8 +71,8 @@ class k extends (i = r.Component) {
         });
     }
 }
-v(k, 'defaultProps', { unread: !1 });
-let U = c.ZP.connectStores([g.ZP, T.Z], (e) => {
+v(y, 'defaultProps', { unread: !1 });
+let k = c.ZP.connectStores([g.ZP, T.Z], (e) => {
         let { channel: t } = e;
         return {
             unread: g.ZP.hasUnread(t.id),
@@ -80,26 +80,26 @@ let U = c.ZP.connectStores([g.ZP, T.Z], (e) => {
             isMentionLowImportance: g.ZP.getIsMentionLowImportance(t.id),
             category: T.Z.getChannel(t.parent_id)
         };
-    })(k),
+    })(y),
     Z = c.ZP.connectStores([f.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: f.ZP.getVoiceStates(t.guild_id)[t.id] };
-    })(k),
-    V = c.ZP.connectStores([N.default], (e) => {
+    })(y),
+    V = c.ZP.connectStores([C.default], (e) => {
         let { guild: t } = e;
-        return { unread: N.default.hasUnread(t.id) };
+        return { unread: C.default.hasUnread(t.id) };
     })(P.ic),
     j = c.ZP.connectStores([g.ZP], (e) => {
         let { channel: t } = e;
         return { mentions: g.ZP.getMentionCount(t.id) };
     })(P.PZ),
-    G = c.ZP.connectStores([T.Z, g.ZP], (e) => {
+    w = c.ZP.connectStores([T.Z, g.ZP], (e) => {
         let { user: t } = e,
             n = T.Z.getDMFromUserId(t.id);
         return { mentions: null != n ? g.ZP.getMentionCount(n) : 0 };
     })(P.n5);
-function w(e, t, n) {
+function G(e, t, n) {
     return (0, l.jsx)(
         d.ua7,
         {
@@ -173,7 +173,7 @@ class F extends r.PureComponent {
         let { query: e } = this.state,
             { results: t } = this.props;
         return 0 === t.length && e.length > 0
-            ? (0, l.jsx)(y, {})
+            ? (0, l.jsx)(U, {})
             : 0 === t.length
               ? null
               : (0, l.jsx)(d._2F, {
@@ -197,14 +197,14 @@ class F extends r.PureComponent {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
     }
     renderProtip() {
-        return (0, l.jsx)(p.Z, {
+        return (0, l.jsx)(I.Z, {
             className: o()(M.protip, { [M.hasContent]: this.state.query.length > 0 }),
-            type: p.Z.Types.INLINE,
+            type: I.Z.Types.INLINE,
             children: D.intl.format(D.t.wukqXV, {
-                userSymbolHook: (e, t) => w(t, h.xQ.USER, D.intl.string(D.t.GQRCGh)),
-                textChannelSymbolHook: (e, t) => w(t, h.xQ.TEXT_CHANNEL, D.intl.string(D.t.wrwhub)),
-                voiceChannelSymbolHook: (e, t) => w(t, h.xQ.VOICE_CHANNEL, D.intl.string(D.t['jz+hJi'])),
-                guildSymbolHook: (e, t) => w(t, h.xQ.GUILD, D.intl.string(D.t.WuwCWl)),
+                userSymbolHook: (e, t) => G(t, h.xQ.USER, D.intl.string(D.t.GQRCGh)),
+                textChannelSymbolHook: (e, t) => G(t, h.xQ.TEXT_CHANNEL, D.intl.string(D.t.wrwhub)),
+                voiceChannelSymbolHook: (e, t) => G(t, h.xQ.VOICE_CHANNEL, D.intl.string(D.t['jz+hJi'])),
+                guildSymbolHook: (e, t) => G(t, h.xQ.GUILD, D.intl.string(D.t.WuwCWl)),
                 helpdeskArticle: A.Z.getArticleURL(b.BhN.QUICK_SWITCHER_TUTORIAL)
             })
         });
@@ -268,7 +268,7 @@ class F extends r.PureComponent {
                     case h.h8.TEXT_CHANNEL:
                     case h.h8.VOICE_CHANNEL:
                         let i = t.record,
-                            r = C.Z.getGuild(i.getGuildId());
+                            r = N.Z.getGuild(i.getGuildId());
                         if (null == r) return;
                         switch (i.type) {
                             case b.d4z.GUILD_TEXT:
@@ -397,13 +397,13 @@ class F extends r.PureComponent {
                 let { row: t } = e,
                     n = this.props.results[t],
                     { selectedIndex: i } = this.props,
-                    { showScores: r } = I.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
+                    { showScores: r } = p.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
                 switch (n.type) {
                     case h.h8.HEADER:
                         return (0, l.jsx)(P.h4, { children: n.record.text }, ''.concat(n.type, '-').concat(n.record.id));
                     case h.h8.TEXT_CHANNEL:
                         return (0, l.jsx)(
-                            U,
+                            k,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,
@@ -448,7 +448,7 @@ class F extends r.PureComponent {
                         );
                     case h.h8.USER:
                         return (0, l.jsx)(
-                            G,
+                            w,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,

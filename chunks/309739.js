@@ -145,7 +145,7 @@ function Z() {
         })
     });
 }
-function L() {
+function k() {
     return (0, i.jsx)(E.F, {
         setting: j.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, i.jsx)(m.hjN, {
@@ -160,7 +160,7 @@ function L() {
         })
     });
 }
-let k = (e) => {
+let L = (e) => {
     switch (e.type) {
         case A.ABu.SPOTIFY:
             return O.intl.format(O.t['5sYPnp'], { name: e.name });
@@ -204,7 +204,7 @@ function B(e) {
                                 (0, i.jsxs)(m.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-muted',
-                                    children: ['"', k(a), '"']
+                                    children: ['"', L(a), '"']
                                 })
                             ]
                         })
@@ -256,6 +256,6 @@ function w(e) {
               className: t,
               tag: m.RB0.H1,
               title: n ? O.intl.string(O.t.Cq98yM) : null,
-              children: [(0, i.jsx)(y, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(L, {}), s && (0, i.jsx)(M, {})]
+              children: [(0, i.jsx)(y, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(k, {}), s && (0, i.jsx)(M, {})]
           });
 }

@@ -31,8 +31,8 @@ var i = n(200651),
     D = n(626135),
     y = n(63063),
     Z = n(74538),
-    L = n(391077),
-    k = n(639056),
+    k = n(391077),
+    L = n(639056),
     B = n(52164),
     M = n(91430),
     w = n(474936),
@@ -80,7 +80,7 @@ function Y() {
                     children: F.intl.string(F.t.kNEjGh)
                 }),
                 null != e && Z.ZP.hasAccountCredit(e)
-                    ? (0, i.jsx)(k.Z, {
+                    ? (0, i.jsx)(L.Z, {
                           className: H.accountCredit,
                           entitlements: e
                       })
@@ -105,7 +105,7 @@ let K = function () {
             var e, t;
             return null !== (t = null === (e = R.ZP.getActiveApplicationSubscriptions()) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0;
         }),
-        k = (0, a.e7)([R.ZP], () => {
+        L = (0, a.e7)([R.ZP], () => {
             var e;
             return Object.values(null !== (e = R.ZP.getSubscriptions()) && void 0 !== e ? e : {})
                 .filter((e) => e.type === V.NYc.GUILD)
@@ -159,7 +159,7 @@ let K = function () {
                                               className: H.accountCreditDescription,
                                               children: F.intl.format(F.t['7Zi06e'], { helpCenterLink: y.Z.getArticleURL(V.BhN.FRACTIONAL_PREMIUM_ABOUT) })
                                           }),
-                                          (0, i.jsx)(L.Z, {
+                                          (0, i.jsx)(k.Z, {
                                               className: H.accountCredit,
                                               fractionalPremiumInfo: z,
                                               activationDate: K
@@ -170,12 +170,12 @@ let K = function () {
                                   setting: G.s6.SUBSCRIPTIONS_CREDITS,
                                   children: (0, i.jsx)(Y, {})
                               }),
-                              k > 0 &&
+                              L > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(W, {}),
                                           (0, i.jsx)(T.Z, {
-                                              count: k,
+                                              count: L,
                                               onClickManageSubscription: () => g.Z.setSection(V.oAB.SUBSCRIPTIONS, U.cP)
                                           })
                                       ]

@@ -97,18 +97,18 @@ class b extends (i = a.Component) {
     }
     renderLayer() {
         if (!this.shouldShowPopout(this.props, this.state) || null == this.domElementRef.current) return null;
-        let { position: e, align: t, nudgeAlignIntoViewport: n, useRawTargetDimensions: i, spacing: a, autoInvert: s, fixed: o, positionKey: l, disablePointerEvents: u, layerContext: c, clickTrap: _ = !1 } = this.props,
-            { resizeKey: p, isLoading: h, shouldShowLoadingState: g } = this.state;
-        return h && !g
+        let { position: e, align: t, nudgeAlignIntoViewport: n, useRawTargetDimensions: i, spacing: a, autoInvert: s, fixed: o, positionKey: l, overridePositionRef: u, disablePointerEvents: c, layerContext: _, clickTrap: p = !1 } = this.props,
+            { resizeKey: h, isLoading: g, shouldShowLoadingState: E } = this.state;
+        return g && !E
             ? null
             : (0, r.jsx)(d.mh, {
-                  layerContext: null != c ? c : m.nz,
+                  layerContext: null != _ ? _ : m.nz,
                   children: (0, r.jsx)(f.j, {
                       ref: this.layerRef,
                       onMount: this.handlePopoutShow,
                       onUnmount: this.handlePopoutHide,
                       id: this.popoutId,
-                      targetRef: this.domElementRef,
+                      targetRef: null != u ? u : this.domElementRef,
                       position: e,
                       align: t,
                       nudgeAlignIntoViewport: n,
@@ -116,10 +116,10 @@ class b extends (i = a.Component) {
                       spacing: a,
                       autoInvert: s,
                       fixed: o,
-                      positionKey: null != l ? l : String(p),
-                      disablePointerEvents: u,
+                      positionKey: null != l ? l : String(h),
+                      disablePointerEvents: c,
                       onPositionChange: this.handlePopoutPositionChange,
-                      clickTrap: _,
+                      clickTrap: p,
                       children: this.renderPopout
                   })
               });

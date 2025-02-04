@@ -191,7 +191,7 @@ let y = () => {
                   ]
               });
     },
-    L = () => {
+    k = () => {
         let e = (0, C.mq)(v.ne.ACTIVE),
             t = (0, a.e7)([u.Z], () => u.Z.getSelectedTeenId()),
             { selectTeenUser: n } = (0, _.G)({}),
@@ -222,14 +222,14 @@ let y = () => {
             options: r
         });
     },
-    k = (e) => {
+    L = (e) => {
         let { userId: t } = e,
             n = (0, E.Z)(),
             s = (0, C.mq)(v.ne.ACTIVE),
             r = (0, m.Qr)(!!n),
             l = (0, C.Rd)(r);
         return n && 1 !== s.length
-            ? (0, i.jsx)(L, {})
+            ? (0, i.jsx)(k, {})
             : (0, i.jsx)(Z, {
                   userId: t,
                   subText: l
@@ -253,7 +253,7 @@ let y = () => {
                     children: [
                         (0, i.jsx)('div', {
                             className: O.header,
-                            children: (0, i.jsx)(k, { userId: t.id })
+                            children: (0, i.jsx)(L, { userId: t.id })
                         }),
                         (0, i.jsxs)('div', {
                             className: O.content,

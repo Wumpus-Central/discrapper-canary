@@ -25,14 +25,14 @@ var i = n(200651),
     v = n(106371),
     j = n(995774),
     A = n(921801),
-    O = n(460181),
-    R = n(292959),
-    P = n(9156),
-    D = n(912101),
-    y = n(358085),
-    Z = n(709054),
-    L = n(695346),
-    k = n(675478),
+    O = n(292959),
+    R = n(9156),
+    P = n(912101),
+    D = n(358085),
+    y = n(709054),
+    Z = n(557177),
+    k = n(695346),
+    L = n(675478),
     B = n(33656),
     M = n(726985),
     w = n(981631),
@@ -88,7 +88,7 @@ function Y(e) {
         a = s.useRef(),
         o = (0, T.p)(),
         c = s.useCallback((e, t) => {
-            t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = (0, O.GN)(e));
+            t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = Z.GN(e));
         }, []),
         d = s.useCallback(
             (e, n) => {
@@ -246,7 +246,7 @@ function Y(e) {
 function W() {
     let e = (0, c.e7)([E.Z], () => E.Z.getGuildAlertSettings()),
         [t, n] = s.useState(null),
-        r = Z.default.keys(e).map((t) => {
+        r = y.default.keys(e).map((t) => {
             let n = e[t];
             return {
                 label: n.guildName,
@@ -291,12 +291,12 @@ function W() {
                                                     note: U.intl.string(U.t['z8Td4+']),
                                                     value: !e[t].disableRaidAlertNag,
                                                     onChange: () => {
-                                                        (0, k.PS)(
+                                                        (0, L.PS)(
                                                             t,
                                                             (e) => {
                                                                 e.disableRaidAlertNag = !e.disableRaidAlertNag;
                                                             },
-                                                            k.fy.INFREQUENT_USER_ACTION
+                                                            L.fy.INFREQUENT_USER_ACTION
                                                         );
                                                     },
                                                     hideBorder: !0,
@@ -313,12 +313,12 @@ function W() {
                                                     note: U.intl.string(U.t.PyxXs7),
                                                     value: !e[t].disableRaidAlertPush,
                                                     onChange: () => {
-                                                        (0, k.PS)(
+                                                        (0, L.PS)(
                                                             t,
                                                             (e) => {
                                                                 e.disableRaidAlertPush = !e.disableRaidAlertPush;
                                                             },
-                                                            k.fy.INFREQUENT_USER_ACTION
+                                                            L.fy.INFREQUENT_USER_ACTION
                                                         );
                                                     },
                                                     hideBorder: !0,
@@ -342,7 +342,7 @@ class K extends s.PureComponent {
         if (t !== w.qrD.NEVER) {
             var n;
             (n = 'UserSettingsModal'),
-                D.Z.requestPermission((e) => {
+                P.Z.requestPermission((e) => {
                     let t = e ? w.$Ab.ENABLED : w.$Ab.BLOCKED;
                     h.default.setPermissionsState(t, n);
                 });
@@ -354,7 +354,7 @@ class K extends s.PureComponent {
     }
     render() {
         let { desktopType: e, afkTimeout: t, disableUnreadBadge: n, taskbarFlash: s, disabledSounds: r, disableAllSounds: a, notifyMessagesInSelectedChannel: c, focusMode: d } = this.props,
-            m = y.isPlatformEmbedded && (0, y.isWindows)(),
+            m = D.isPlatformEmbedded && (0, D.isWindows)(),
             h = o()
                 .range(1, 11)
                 .map((e) => ({
@@ -398,7 +398,7 @@ class K extends s.PureComponent {
                         children: U.intl.string(U.t.xSmFQE)
                     })
                 }),
-                (0, i.jsx)(J, {}),
+                (0, i.jsx)(Q, {}),
                 (0, i.jsx)(et, {}),
                 (0, i.jsx)(A.F, {
                     setting: M.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
@@ -407,7 +407,7 @@ class K extends s.PureComponent {
                         children: [
                             (0, i.jsx)(u.q4e, {
                                 value: t,
-                                onChange: L.CM.updateSetting,
+                                onChange: k.CM.updateSetting,
                                 options: h
                             }),
                             (0, i.jsx)(u.R94, {
@@ -495,7 +495,7 @@ let X = (0, x.B)({
 });
 function q() {
     let e = X.useExperiment({ location: 'settings' }, { autoTrackExposure: !1 }).enabled,
-        t = (0, c.e7)([P.ZP], () => P.ZP.mentionOnAllMessages);
+        t = (0, c.e7)([R.ZP], () => R.ZP.mentionOnAllMessages);
     return e
         ? (0, i.jsx)(A.F, {
               setting: M.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
@@ -511,10 +511,10 @@ function q() {
           })
         : null;
 }
-function J() {
+function Q() {
     let e = I.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
         { manuallyOpen: t } = I.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
-        n = (0, c.e7)([P.ZP], () => P.ZP.useNewNotifications),
+        n = (0, c.e7)([R.ZP], () => R.ZP.useNewNotifications),
         [r, a] = s.useState(!1);
     return e && (n || t)
         ? (0, i.jsxs)(i.Fragment, {
@@ -527,7 +527,7 @@ function J() {
                                 value: n,
                                 disabled: r || !n,
                                 note: U.intl.string(U.t.frbLrK),
-                                onChange: () => Q(a),
+                                onChange: () => J(a),
                                 children: U.intl.string(U.t.z21l8P)
                             })
                         })
@@ -594,7 +594,7 @@ function J() {
           })
         : null;
 }
-async function Q(e) {
+async function J(e) {
     e(!0);
     let t = await (0, N.Tn)();
     0 === t.length
@@ -616,22 +616,22 @@ function $(e) {
     });
 }
 function ee() {
-    let e = (0, c.cj)([R.Z], () => ({
-        disableUnreadBadge: R.Z.getDisableUnreadBadge(),
-        taskbarFlash: R.Z.taskbarFlash,
-        disabledSounds: R.Z.getDisabledSounds(),
-        disableAllSounds: R.Z.getDisableAllSounds(),
-        desktopType: R.Z.getDesktopType(),
-        ttsType: R.Z.getTTSType(),
-        notifyMessagesInSelectedChannel: R.Z.getNotifyMessagesInSelectedChannel()
+    let e = (0, c.cj)([O.Z], () => ({
+        disableUnreadBadge: O.Z.getDisableUnreadBadge(),
+        taskbarFlash: O.Z.taskbarFlash,
+        disabledSounds: O.Z.getDisabledSounds(),
+        disableAllSounds: O.Z.getDisableAllSounds(),
+        desktopType: O.Z.getDesktopType(),
+        ttsType: O.Z.getTTSType(),
+        notifyMessagesInSelectedChannel: O.Z.getNotifyMessagesInSelectedChannel()
     }));
     return (0, i.jsx)($, {
         ...e,
-        afkTimeout: L.CM.useSetting()
+        afkTimeout: k.CM.useSetting()
     });
 }
 function et() {
-    let e = L.fz.useSetting(),
+    let e = k.fz.useSetting(),
         t = [
             {
                 name: U.intl.string(U.t['9x/Rtb']),

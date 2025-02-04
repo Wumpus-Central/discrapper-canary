@@ -8,12 +8,12 @@ var i = n(200651),
     u = n(481060),
     c = n(317381),
     d = n(966302),
-    f = n(460181),
-    _ = n(474873),
-    p = n(292959),
-    h = n(944486),
-    m = n(246946),
-    g = n(340895),
+    f = n(474873),
+    _ = n(292959),
+    p = n(944486),
+    h = n(246946),
+    m = n(340895),
+    g = n(557177),
     E = n(918559),
     v = n(871465);
 let y = {
@@ -28,21 +28,21 @@ function b() {
     return 500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']);
 }
 function T() {
-    let e = (0, l.Wu)([g.Z, h.Z, c.ZP], () =>
-            g.Z.getIncomingCalls().filter((e) => {
+    let e = (0, l.Wu)([m.Z, p.Z, c.ZP], () =>
+            m.Z.getIncomingCalls().filter((e) => {
                 let { channel: t } = e,
-                    n = c.ZP.getConnectedActivityChannelId() === t.id && h.Z.getVoiceChannelId() !== t.id && c.ZP.getActivityPanelMode() === E.Ez.PANEL;
-                return h.Z.getChannelId() !== t.id || n;
+                    n = c.ZP.getConnectedActivityChannelId() === t.id && p.Z.getVoiceChannelId() !== t.id && c.ZP.getActivityPanelMode() === E.Ez.PANEL;
+                return p.Z.getChannelId() !== t.id || n;
             })
         ),
-        t = (0, l.e7)([g.Z], () => g.Z.hasIncomingCalls()),
-        n = (0, l.e7)([p.Z], () => p.Z.isSoundDisabled('call_ringing')),
-        a = (0, l.e7)([m.Z], () => m.Z.disableSounds),
-        s = (0, l.e7)([_.Z], () => _.Z.getSoundpack()),
+        t = (0, l.e7)([m.Z], () => m.Z.hasIncomingCalls()),
+        n = (0, l.e7)([_.Z], () => _.Z.isSoundDisabled('call_ringing')),
+        a = (0, l.e7)([h.Z], () => h.Z.disableSounds),
+        s = (0, l.e7)([f.Z], () => f.Z.getSoundpack()),
         T = r.useRef(!1),
         S = (0, o.Z)(() => {
             let e = 'call_ringing';
-            return s === v.YC.CLASSIC ? (0, f.tu)(b(), e) : (0, f.uk)('call_ringing', s);
+            return s === v.YC.CLASSIC ? (0, g.tu)(b(), e) : (0, g.uk)('call_ringing', s);
         }, [s]);
     return (
         r.useEffect(

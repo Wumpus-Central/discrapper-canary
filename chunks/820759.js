@@ -9,7 +9,7 @@ var i = n(200651),
     a = n(574792);
 let o = () => (0, i.jsx)('hr', { className: a.sectionDivider }),
     c = (e) => {
-        let { label: t, children: n, className: s } = e;
+        let { label: t, children: n, direction: s = 'horizontal', className: c } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o, {}),
@@ -19,7 +19,7 @@ let o = () => (0, i.jsx)('hr', { className: a.sectionDivider }),
                     children: t
                 }),
                 (0, i.jsx)('div', {
-                    className: r()(a.container, s),
+                    className: r()(a.container, c, { [a.verticalContainer]: 'vertical' === s }),
                     children: n
                 })
             ]

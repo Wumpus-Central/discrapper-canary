@@ -37,8 +37,8 @@ function O(e) {
             pendingAvatar: D,
             pendingNickname: y,
             pendingBanner: Z,
-            pendingBio: L,
-            pendingPronouns: k,
+            pendingBio: k,
+            pendingPronouns: L,
             pendingThemeColors: B,
             errors: M,
             guild: w
@@ -91,7 +91,7 @@ function O(e) {
                     onPronounsChange: (e) => {
                         (0, S.xs)(e, X);
                     },
-                    pendingPronouns: k,
+                    pendingPronouns: L,
                     currentPronouns: X
                 },
                 'pronouns'
@@ -214,7 +214,7 @@ function O(e) {
                             }),
                             onBioChange: (e) => (0, S.qN)(e, K),
                             errors: null !== (O = null == M ? void 0 : M.bio) && void 0 !== O ? O : null == U ? void 0 : U.bio,
-                            pendingBio: L,
+                            pendingBio: k,
                             currentBio: K,
                             disabled: !H
                         },

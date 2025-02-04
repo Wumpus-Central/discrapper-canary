@@ -36,7 +36,7 @@ let R = {
         let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: C, cardType: I, confettiCanvas: S } = e,
             y = null == e ? void 0 : e.onCtaClick,
             Z = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
-            [L, k] = s.useState(!1),
+            [k, L] = s.useState(!1),
             [B, M] = s.useState(!1),
             w = (0, p.yQ)(),
             V = (0, p.IB)(),
@@ -60,7 +60,7 @@ let R = {
             s.useEffect(() => {
                 K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && U && (0, g.EW)(K);
             }, [K, U]);
-        let { easterEggLevel: q, isEasterEggTriggered: J, onHover: Q, onUnhover: $ } = (0, f.Z)(5),
+        let { easterEggLevel: q, isEasterEggTriggered: Q, onHover: J, onUnhover: $ } = (0, f.Z)(5),
             ee = (0, a.debounce)(() => {
                 x.default.track(v.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                     card_type: (0, a.snakeCase)(t),
@@ -88,8 +88,8 @@ let R = {
         };
         let ei = K !== r || null == r || B || r === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
         return (s.useEffect(() => {
-            Z && L && (M(!0), x.default.track(v.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && X(j.L.TAKE_ACTION));
-        }, [Z, L, r, t, X]),
+            Z && k && (M(!0), x.default.track(v.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && X(j.L.TAKE_ACTION));
+        }, [Z, k, r, t, X]),
         (0, h.Z)(
             {
                 type: o.ImpressionTypes.VIEW,
@@ -113,15 +113,15 @@ let R = {
             ? t === T.u.UPCOMING_DROP_UNTIMED
                 ? (0, i.jsx)('div', {
                       className: l()(O.flipCardContainer, { [O.forceShadow]: C }),
-                      onMouseEnter: Q,
-                      onFocus: Q,
+                      onMouseEnter: J,
+                      onFocus: J,
                       onMouseLeave: $,
                       onBlur: $,
                       children: (0, i.jsxs)('div', {
                           className: l()(O.flipCard, {
-                              [O.partialFlipCard]: !J,
-                              [O.ultraFlipCard]: J,
-                              [O.rotateCard]: J && 3 === q,
+                              [O.partialFlipCard]: !Q,
+                              [O.ultraFlipCard]: Q,
+                              [O.rotateCard]: Q && 3 === q,
                               [O.reducedMotion]: Z
                           }),
                           children: [
@@ -176,14 +176,14 @@ let R = {
                   : (0, i.jsx)('div', {
                         className: l()(O.flipCardContainer, { [O.forceShadow]: C }),
                         children: (0, i.jsxs)(u.P3F, {
-                            onClick: () => k(!0),
+                            onClick: () => L(!0),
                             className: l()(O.flipCard, O.clickable, {
-                                [O.flipped]: L,
-                                [O.partialFlipCard]: !B && !L,
+                                [O.flipped]: k,
+                                [O.partialFlipCard]: !B && !k,
                                 [O.reducedMotion]: Z
                             }),
                             onTransitionEnd: (e) => {
-                                L && 'transform' === e.propertyName && e.target.classList.contains(O.flipCard) && (M(!0), x.default.track(v.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && X(j.L.TAKE_ACTION));
+                                k && 'transform' === e.propertyName && e.target.classList.contains(O.flipCard) && (M(!0), x.default.track(v.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && X(j.L.TAKE_ACTION));
                             },
                             children: [
                                 (0, i.jsx)('div', {
@@ -208,7 +208,7 @@ let R = {
                                 (0, i.jsx)('div', {
                                     className: O.flipCardButtonContainer,
                                     children: (0, i.jsx)(u.zxk, {
-                                        onClick: () => k(!0),
+                                        onClick: () => L(!0),
                                         children: A.intl.string(A.t.dcztdX)
                                     })
                                 })

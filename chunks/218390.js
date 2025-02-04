@@ -35,8 +35,8 @@ var i = n(200651),
     D = n(483444),
     y = n(626135),
     Z = n(63063),
-    L = n(74538),
-    k = n(140465),
+    k = n(74538),
+    L = n(140465),
     B = n(286961),
     M = n(91802),
     w = n(533525),
@@ -51,8 +51,8 @@ var i = n(200651),
     K = n(981631),
     X = n(388032),
     q = n(328572),
-    J = n(881188),
-    Q = n(434691);
+    Q = n(881188),
+    J = n(434691);
 let $ = 'gifting_button',
     ee = 'payment modal';
 function et(e) {
@@ -62,7 +62,7 @@ function et(e) {
         d = n || a,
         h = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
         g = W.GP[t.planIdFromItems],
-        _ = L.ZP.formatPriceString(L.ZP.getDefaultPrice(g.id), g.interval);
+        _ = k.ZP.formatPriceString(k.ZP.getDefaultPrice(g.id), g.interval);
     return d
         ? (0, i.jsxs)(i.Fragment, {
               children: [
@@ -81,7 +81,7 @@ function et(e) {
                           var e, n, i;
                           if (a) {
                               if (s) {
-                                  let e = L.ZP.getReverseTrialWeeks(t.trialId);
+                                  let e = k.ZP.getReverseTrialWeeks(t.trialId);
                                   return X.intl.format(X.t.jLglur, { weeks: e });
                               }
                               return X.intl.format(X.t['2CGBrq'], {
@@ -110,8 +110,8 @@ function et(e) {
           });
 }
 function en() {
-    let e = (0, k.t7)(),
-        t = (0, k.lr)(),
+    let e = (0, L.t7)(),
+        t = (0, L.lr)(),
         n = (0, c.e7)([P.ZP], () => P.ZP.inReverseTrial()),
         s = (0, f.ZP)(),
         r = (0, c.e7)([P.ZP], () => P.ZP.getPremiumTypeSubscription()),
@@ -196,7 +196,7 @@ function en() {
                 children: (0, i.jsx)('img', {
                     className: q.tierImage,
                     alt: '',
-                    src: J
+                    src: Q
                 })
             })
         ]
@@ -265,7 +265,7 @@ function es() {
                   (0, i.jsx)('img', {
                       className: q.giftImage,
                       alt: '',
-                      src: Q
+                      src: J
                   }),
                   (0, i.jsxs)('div', {
                       className: q.giftInfo,
@@ -327,17 +327,17 @@ let er = function () {
             f || e || (await Promise.all([g.jg(), g.tZ(), (0, x.Y2)(p, null, K.JjL.DISCOVERY)])), o(!1);
         });
     }, [p, f, e]);
-    let [Z, L] = s.useState(!1);
+    let [Z, k] = s.useState(!1);
     if (f) return (0, i.jsx)(E.Z, {});
     if (e) return (0, i.jsx)(j.c8, {});
-    let k = r && null !== n && l,
+    let L = r && null !== n && l,
         B = u !== W.a$.NONE;
-    if (!k && !B && !a)
+    if (!L && !B && !a)
         return (0, i.jsx)(A.Z, {
             title: X.intl.string(X.t.dyq9TU),
             note: null
         });
-    if ((!k && !B) || a) return (0, i.jsx)(m.$jN, {});
+    if ((!L && !B) || a) return (0, i.jsx)(m.$jN, {});
     let U = null !== n && null != n.trialId;
     return (0, i.jsx)(I.Gt, {
         value: t,
@@ -361,7 +361,7 @@ let er = function () {
                 }),
                 (0, i.jsx)(d.$, {
                     onChange: (e) => {
-                        e && !Z && (y.default.track(K.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), L(!0));
+                        e && !Z && (y.default.track(K.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), k(!0));
                     },
                     children: (0, i.jsx)('div', { className: q.bottomOfPageVisibilitySensor })
                 })

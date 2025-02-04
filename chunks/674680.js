@@ -1,15 +1,15 @@
-i.d(e, { Z: () => _ });
-var n = i(200651);
-i(192379);
-var r = i(780384),
-    s = i(481060),
-    o = i(410030),
-    l = i(44315),
-    a = i(889901),
-    c = i(955204),
-    d = i(231338),
-    h = i(262284);
-let u = {
+n.d(t, { Z: () => h });
+var i = n(200651);
+n(192379);
+var l = n(780384),
+    r = n(481060),
+    s = n(410030),
+    o = n(44315),
+    a = n(889901),
+    c = n(955204),
+    d = n(231338),
+    u = n(262284);
+let _ = {
         trophy: d.Il.PRIMARY_400,
         locked: d.Il.PRIMARY_400,
         unlocked: d.Il.GREEN_330
@@ -19,68 +19,68 @@ let u = {
         locked: d.Il.PRIMARY_400,
         unlocked: d.Il.GREEN_330
     };
-function _(t) {
-    var e;
-    let { achievementId: i, unlocked: d, size: _ = s.EFr.SIZE_40 } = t,
-        g = (0, o.ZP)(),
-        L = (0, c.oX)(i);
-    if (null == L) return null;
-    let C = (0, s.UCu)(_),
-        { name: m, rarity: p } = L,
-        { color: O } = (0, c.F7)(p),
-        k = (0, r.wj)(g) ? u : E,
-        T = (C.size - C.offset - 2 * C.stroke) * 0.8,
-        U = C.size - C.stroke,
+function h(e) {
+    var t;
+    let { achievementId: n, unlocked: d, size: h = r.EFr.SIZE_40 } = e,
+        p = (0, s.ZP)(),
+        I = (0, c.oX)(n);
+    if (null == I) return null;
+    let m = (0, r.UCu)(h),
+        { name: T, rarity: C } = I,
+        { color: N } = (0, c.F7)(C),
+        g = (0, l.wj)(p) ? _ : E,
+        S = (m.size - m.offset - 2 * m.stroke) * 0.8,
+        f = m.size - m.stroke,
         R = {
-            width: 0.4 * T,
-            height: 0.4 * T
+            width: 0.4 * S,
+            height: 0.4 * S
         },
-        v = {
+        A = {
             width: R.width + 1,
             height: R.height + 1,
-            right: C.stroke + 1,
-            bottom: C.stroke + 1,
+            right: m.stroke + 1,
+            bottom: m.stroke + 1,
             padding: 0
         };
-    return (0, n.jsxs)('div', {
-        className: h.container,
+    return (0, i.jsxs)('div', {
+        className: u.container,
         style: {
-            width: U,
-            height: U,
-            padding: C.stroke
+            width: f,
+            height: f,
+            padding: m.stroke
         },
-        'aria-label': ''.concat(null !== (e = m()) && void 0 !== e ? e : ''),
+        'aria-label': ''.concat(null !== (t = T()) && void 0 !== t ? t : ''),
         children: [
-            (0, n.jsx)('div', {
-                className: h.trophyIconContainer,
-                children: (0, n.jsx)(s.rm8, {
+            (0, i.jsx)('div', {
+                className: u.trophyIconContainer,
+                children: (0, i.jsx)(r.rm8, {
                     size: 'custom',
-                    color: d ? O : (0, l.Lq)(k.trophy),
-                    width: T,
-                    height: T
+                    color: d ? N : (0, o.Lq)(g.trophy),
+                    width: S,
+                    height: S
                 })
             }),
             !d &&
-                (0, n.jsx)('div', {
-                    className: h.lockContainer,
-                    style: v,
-                    children: (0, n.jsx)(s.mBM, {
+                (0, i.jsx)('div', {
+                    className: u.lockContainer,
+                    style: A,
+                    children: (0, i.jsx)(r.mBM, {
                         size: 'custom',
-                        color: (0, l.Lq)(k.locked),
+                        color: (0, o.Lq)(g.locked),
                         ...R
                     })
                 }),
             d &&
-                p === c.EP.LEGENDARY &&
-                (0, n.jsx)('div', {
-                    className: h.lockContainer,
-                    style: v,
-                    children: (0, n.jsx)(a.Z, {
-                        className: h.confettiIcon,
+                C === c.EP.LEGENDARY &&
+                (0, i.jsx)('div', {
+                    className: u.lockContainer,
+                    style: A,
+                    children: (0, i.jsx)(a.Z, {
+                        className: u.confettiIcon,
                         ...R
                     })
                 })
         ]
     });
 }
-_.Sizes = s.EFr;
+h.Sizes = r.EFr;

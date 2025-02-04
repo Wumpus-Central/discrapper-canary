@@ -47,16 +47,16 @@ let f = (e) => {
                     })
                 );
         }, [t]);
-        let L = {
+        let k = {
                 effect: t,
                 upsertConfig: r
             },
-            k = s.useRef(L);
+            L = s.useRef(k);
         return (s.useEffect(() => {
-            k.current = L;
+            L.current = k;
         }),
         s.useEffect(() => {
-            let { effect: e, upsertConfig: t } = k.current;
+            let { effect: e, upsertConfig: t } = L.current;
             t({
                 id: e.id,
                 name: y,

@@ -34,21 +34,21 @@ var i = n(200651),
     D = n(631885),
     y = n(830746),
     Z = n(731934),
-    L = n(521450),
-    k = n(292352),
+    k = n(521450),
+    L = n(292352),
     B = n(981631),
     M = n(723359),
     w = n(921944),
     V = n(388032),
     U = n(228351);
 let G = {
-        [k.dG.REQUESTS]: () => (0, i.jsx)(Z.Z, {}),
-        [k.dG.ACTIVITY]: () => (0, i.jsx)(y.Z, {}),
-        [k.dG.SETTINGS]: () => (0, i.jsx)(L.Z, {})
+        [L.dG.REQUESTS]: () => (0, i.jsx)(Z.Z, {}),
+        [L.dG.ACTIVITY]: () => (0, i.jsx)(y.Z, {}),
+        [L.dG.SETTINGS]: () => (0, i.jsx)(k.Z, {})
     },
     F = {
-        [k.dG.REQUESTS]: () => (0, i.jsx)(Z.Z, {}),
-        [k.dG.ACTIVITY]: () => (0, i.jsx)(y.Z, {})
+        [L.dG.REQUESTS]: () => (0, i.jsx)(Z.Z, {}),
+        [L.dG.ACTIVITY]: () => (0, i.jsx)(y.Z, {})
     };
 function H(e) {
     let { section: t, handleItemSelect: n } = e,
@@ -64,12 +64,12 @@ function H(e) {
         children: [
             (0, i.jsx)(u.njP.Item, {
                 className: U.settingsTabBarItem,
-                id: k.dG.ACTIVITY,
+                id: L.dG.ACTIVITY,
                 children: V.intl.string(V.t.bdBmq6)
             }),
             (0, i.jsxs)(u.njP.Item, {
                 className: U.settingsTabBarItem,
-                id: k.dG.REQUESTS,
+                id: L.dG.REQUESTS,
                 'aria-label': V.intl.string(V.t['gVWG+/']),
                 children: [
                     V.intl.string(V.t['gVWG+/']),
@@ -84,7 +84,7 @@ function H(e) {
             r
                 ? (0, i.jsx)(u.njP.Item, {
                       className: U.settingsTabBarItem,
-                      id: k.dG.SETTINGS,
+                      id: L.dG.SETTINGS,
                       children: V.intl.string(V.t['3D5yo6'])
                   })
                 : null
@@ -122,12 +122,12 @@ function z(e) {
                         className: U.__invalid_tabBar,
                         children: [
                             (0, i.jsx)(u.njP.Item, {
-                                id: k.dG.ACTIVITY,
+                                id: L.dG.ACTIVITY,
                                 className: U.item,
                                 children: V.intl.string(V.t.bdBmq6)
                             }),
                             (0, i.jsxs)(u.njP.Item, {
-                                id: k.dG.REQUESTS,
+                                id: L.dG.REQUESTS,
                                 className: U.item,
                                 'aria-label': V.intl.string(V.t['gVWG+/']),
                                 children: [
@@ -183,8 +183,8 @@ function Y() {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
                 selected_teen_id: i,
-                initial_page: k.QH[n],
-                source: k._6[k.Mu.SIDENAV]
+                initial_page: L.QH[n],
+                source: L._6[L.Mu.SIDENAV]
             }),
                 T.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
         }
@@ -222,7 +222,7 @@ function W() {
         a = (0, c.e7)([A.Z], () => A.Z.getIsInitialized()),
         f = (0, R.M)(),
         y = (0, c.e7)([I.Z], () => I.Z.theme),
-        { selectedTab: Z, handleTabChange: L } = (0, O.Z)(),
+        { selectedTab: Z, handleTabChange: k } = (0, O.Z)(),
         G = (0, E.Dt)(),
         H = b.default.getCurrentUser(),
         Y = null != t,
@@ -255,8 +255,8 @@ function W() {
                     is_considered_adult: e,
                     num_of_accepted_links: t,
                     selected_teen_id: i,
-                    initial_page: k.QH[n],
-                    source: k._6[k.Mu.SIDENAV]
+                    initial_page: L.QH[n],
+                    source: L._6[L.Mu.SIDENAV]
                 }),
                     T.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
             }
@@ -271,8 +271,8 @@ function W() {
         W)
     )
         return null;
-    let q = Z !== k.dG.SETTINGS ? Z : k.dG.ACTIVITY,
-        J = F[q];
+    let q = Z !== L.dG.SETTINGS ? Z : L.dG.ACTIVITY,
+        Q = F[q];
     return (0, i.jsx)(x.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
@@ -284,7 +284,7 @@ function W() {
                     theme: y,
                     section: q,
                     handleItemSelect: (e) => {
-                        L(e);
+                        k(e);
                     }
                 }),
                 (0, i.jsx)(u.njP.Panel, {
@@ -294,7 +294,7 @@ function W() {
                     children: (0, i.jsx)(u.Ttm, {
                         children: (0, i.jsx)('div', {
                             className: U.sideNavContent,
-                            children: J()
+                            children: Q()
                         })
                     })
                 })

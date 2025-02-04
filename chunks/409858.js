@@ -22,18 +22,18 @@ var s = i(200651),
     R = i(313201),
     T = i(925329),
     y = i(703656),
-    A = i(146779),
-    b = i(763296),
-    j = i(82142),
-    P = i(283595),
-    E = i(594174),
-    O = i(509545),
-    w = i(55563),
-    N = i(626135),
-    k = i(176354),
-    _ = i(669079),
-    L = i(296848),
-    G = i(51144),
+    A = i(763296),
+    b = i(82142),
+    j = i(283595),
+    P = i(594174),
+    E = i(509545),
+    O = i(55563),
+    w = i(626135),
+    N = i(176354),
+    k = i(669079),
+    _ = i(296848),
+    L = i(51144),
+    G = i(902653),
     D = i(479446),
     F = i(715627),
     M = i(981632),
@@ -72,8 +72,8 @@ let W = (t) => {
             n.useEffect(() => {
                 var t;
                 if (e !== H.wZ8.CONFIRM) return;
-                let s = b.Z.getSoundById(i);
-                (0, A.playGiftSound)(i, null !== (t = null == s ? void 0 : s.volume) && void 0 !== t ? t : 1);
+                let s = A.Z.getSoundById(i);
+                (0, G.playGiftSound)(i, null !== (t = null == s ? void 0 : s.volume) && void 0 !== t ? t : 1);
             }, [e, i]),
             null
         );
@@ -84,7 +84,7 @@ class K extends n.Component {
         null == t && null != e && g.ZP.fetchApplication(e.applicationId);
         let l = null != i || null != s.giftStyle,
             a = (0, S.mO)(s),
-            r = null != n ? k.ZP.getURL(n) : void 0;
+            r = null != n ? N.ZP.getURL(n) : void 0;
         this.setState({
             isCustomGift: l,
             isCollectiblesGift: a,
@@ -96,20 +96,20 @@ class K extends n.Component {
     get step() {
         let { libraryApplication: t, accepting: e, giftCode: i } = this.props,
             { error: s, accepted: n, opened: l, isCustomGift: a } = this.state;
-        return (0, _.TO)(t, i, s, n, e, l, a);
+        return (0, k.TO)(t, i, s, n, e, l, a);
     }
     get buttonText() {
-        return (0, _.L2)(this.step, this.props.giftCode, this.state.isCustomGift);
+        return (0, k.L2)(this.step, this.props.giftCode, this.state.isCustomGift);
     }
     get firstHeaderText() {
         let { isCustomGift: t, opened: e, accepted: i } = this.state,
             { giftCode: s, subscriptionPlan: n, collectiblesItemType: l } = this.props;
         if (t && this.step === H.wZ8.ERROR) return z.intl.formatToMarkdownString(z.t.JUvC0t, {});
         if (t && !i) {
-            if (!e) return z.intl.formatToPlainString(z.t.xHzRub, { recipientDisplayName: G.ZP.getName(E.default.getCurrentUser()) });
+            if (!e) return z.intl.formatToPlainString(z.t.xHzRub, { recipientDisplayName: L.ZP.getName(P.default.getCurrentUser()) });
             {
-                let t = E.default.getUser(s.userId),
-                    e = G.ZP.getName(t);
+                let t = P.default.getUser(s.userId),
+                    e = L.ZP.getName(t);
                 return l === r.Z.AVATAR_DECORATION
                     ? z.intl.formatToPlainString(z.t.SKduys, { sender: e })
                     : l === r.Z.PROFILE_EFFECT
@@ -120,12 +120,12 @@ class K extends n.Component {
                         });
             }
         }
-        return null == this.props.sku ? null : (0, _.dQ)(this.step, this.props.giftCode, this.props.sku);
+        return null == this.props.sku ? null : (0, k.dQ)(this.step, this.props.giftCode, this.props.sku);
     }
     get secondHeaderText() {
         if (!this.state.isCustomGift || this.state.opened || this.state.accepted) return null;
-        let t = E.default.getUser(this.props.giftCode.userId);
-        return z.intl.formatToPlainString(z.t.DDO4W1, { sender: G.ZP.getName(t) });
+        let t = P.default.getUser(this.props.giftCode.userId);
+        return z.intl.formatToPlainString(z.t.DDO4W1, { sender: L.ZP.getName(t) });
     }
     get bodyText() {
         let { sku: t, accepting: e, libraryApplication: i, subscriptionPlan: s } = this.props;
@@ -133,7 +133,7 @@ class K extends n.Component {
         let { error: n, accepted: l, isCustomGift: a, opened: r } = this.state;
         return !r && a
             ? null
-            : (0, _.iM)({
+            : (0, k.iM)({
                   step: this.step,
                   sku: t,
                   libraryApplication: i,
@@ -147,7 +147,7 @@ class K extends n.Component {
     get errorMessage() {
         let { libraryApplication: t, accepting: e } = this.props,
             { error: i, accepted: s } = this.state;
-        return (0, _.e$)(t, i, s, e, this.handleGoToLibrary);
+        return (0, k.e$)(t, i, s, e, this.handleGoToLibrary);
     }
     get handleClick() {
         let { giftCode: t, onClose: e } = this.props;
@@ -167,7 +167,7 @@ class K extends n.Component {
     trackStepAnalytics() {
         let { giftCode: t, customGiftMessage: e, emojiName: i, soundId: s } = this.props,
             { isCustomGift: n } = this.state;
-        N.default.track(H.rMx.GIFT_ACCEPT_STEP, {
+        w.default.track(H.rMx.GIFT_ACCEPT_STEP, {
             to_step: this.step,
             has_custom_message: n,
             is_custom_message_edited: n && e !== z.intl.string(z.t.ZkOo1d),
@@ -179,9 +179,9 @@ class K extends n.Component {
     }
     render() {
         let { application: t, accepting: e, onClose: i, giftCode: n, headerId: l, transitionState: r, useReducedMotion: o, onComplete: d, customGiftMessage: c, emojiName: h, soundId: p, isThemeDark: f } = this.props,
-            m = E.default.getUser(n.userId),
+            m = P.default.getUser(n.userId),
             { isCustomGift: g, isCollectiblesGift: Z, accepted: S, opened: x, emojiURL: I } = this.state,
-            C = E.default.getCurrentUser(),
+            C = P.default.getCurrentUser(),
             R = this.step === H.wZ8.ERROR,
             y = (null == n ? void 0 : n.userId) != null && null != C && (null == C ? void 0 : C.id) != null && n.userId === C.id;
         switch (this.step) {
@@ -280,7 +280,7 @@ class K extends n.Component {
                                     !y &&
                                     (0, s.jsxs)(s.Fragment, {
                                         children: [
-                                            (0, s.jsx)(u.vwX, { children: z.intl.format(z.t.DDO4W1, { sender: G.ZP.getName(m) }) }),
+                                            (0, s.jsx)(u.vwX, { children: z.intl.format(z.t.DDO4W1, { sender: L.ZP.getName(m) }) }),
                                             (0, s.jsx)(u.X6q, {
                                                 id: l,
                                                 className: B.customMessage,
@@ -365,17 +365,17 @@ class K extends n.Component {
             });
     }
 }
-let J = o.ZP.connectStores([P.Z, w.Z, Z.Z, j.Z, O.Z, p.Z], (t) => {
+let J = o.ZP.connectStores([j.Z, O.Z, Z.Z, b.Z, E.Z, p.Z], (t) => {
         let { giftCode: e } = t,
-            i = w.Z.get(e.skuId),
+            i = O.Z.get(e.skuId),
             s = null != i ? Z.Z.getApplication(i.applicationId) : null,
             n = p.Z.useReducedMotion;
         return {
             sku: i,
-            libraryApplication: null != i && (null == e ? void 0 : e.entitlementBranches) != null ? (0, _.z2)(e.entitlementBranches, i, P.Z) : null,
+            libraryApplication: null != i && (null == e ? void 0 : e.entitlementBranches) != null ? (0, k.z2)(e.entitlementBranches, i, j.Z) : null,
             application: s,
-            subscriptionPlan: null != e.subscriptionPlanId ? (0, L.oE)(e.subscriptionPlanId) : null,
-            accepting: j.Z.getIsAccepting(e.code),
+            subscriptionPlan: null != e.subscriptionPlanId ? (0, _.oE)(e.subscriptionPlanId) : null,
+            accepting: b.Z.getIsAccepting(e.code),
             useReducedMotion: n
         };
     })(K),
@@ -383,7 +383,7 @@ let J = o.ZP.connectStores([P.Z, w.Z, Z.Z, j.Z, O.Z, p.Z], (t) => {
         var e;
         let { channelContext: i, code: n, customGiftMessage: l, emojiName: a, soundId: r, onClose: u, ...c } = t,
             p = (0, R.Dt)(),
-            g = (0, o.e7)([j.Z], () => j.Z.get(n)),
+            g = (0, o.e7)([b.Z], () => b.Z.get(n)),
             Z = (0, h.ZP)(),
             { analyticsLocations: S } = (0, m.ZP)(f.Z.GIFT_CODE_MODAL),
             { product: v } = (0, x.T)(null == g ? void 0 : g.skuId);

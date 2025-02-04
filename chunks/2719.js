@@ -31,8 +31,8 @@ var i = n(200651),
     D = n(695346),
     y = n(461877),
     Z = n(726985),
-    L = n(981631),
-    k = n(815660),
+    k = n(981631),
+    L = n(815660),
     B = n(801461),
     M = n(388032),
     w = n(205323);
@@ -359,7 +359,7 @@ function z(e) {
                                           (0, i.jsx)(g.default, {
                                               ...e,
                                               title: M.intl.string(M.t['3CTiKi']),
-                                              children: r.hasFlag(L.xW$.MFA_SMS) ? M.intl.string(M.t.jrhJys) : void 0,
+                                              children: r.hasFlag(k.xW$.MFA_SMS) ? M.intl.string(M.t.jrhJys) : void 0,
                                               actionText: M.intl.string(M.t.N86XcH),
                                               handleSubmit: (e) => E.Z.removePhone(e, E.L.USER_SETTINGS_UPDATE)
                                           })
@@ -383,7 +383,7 @@ function z(e) {
                                                 ...t
                                             });
                                     },
-                                    { modalKey: k.M }
+                                    { modalKey: L.M }
                                 );
                             },
                             children: c ? M.intl.string(M.t.bt75u7) : M.intl.string(M.t.OYkgVl)
@@ -427,7 +427,7 @@ function Y(e) {
         : null;
 }
 function W() {
-    m.Z.setSection(L.oAB.PROFILE_CUSTOMIZATION);
+    m.Z.setSection(k.oAB.PROFILE_CUSTOMIZATION);
 }
 function K() {
     var e;

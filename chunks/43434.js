@@ -12,14 +12,14 @@ function c() {
         settingsSection: o.oAB.REVENUE_STORYBOOK_PAGE,
         tabs: [
             {
-                title: 'Payment Components',
-                component: () => (0, i.jsx)(r.f, {}),
-                setting: a.s6.PAYMENT_COMPONENTS
-            },
-            {
                 title: 'Virtual Currency (Orb) Components',
                 component: () => (0, i.jsx)(l.O, {}),
                 setting: a.s6.ORB_COMPONENTS
+            },
+            {
+                title: 'Payment Components',
+                component: () => (0, i.jsx)(r.f, {}),
+                setting: a.s6.PAYMENT_COMPONENTS
             }
         ]
     });

@@ -1,7 +1,7 @@
 e.exports = {
     thumbnail: 'thumbnail_ed0705',
-    underDevelopment: 'underDevelopment_ed0705',
     thumbnailWrapper: 'thumbnailWrapper_ed0705',
+    underDevelopment: 'underDevelopment_ed0705',
     unlocked: 'unlocked_ed0705',
     filterName: 'filterName_ed0705',
     iconCircle: 'iconCircle_ed0705',

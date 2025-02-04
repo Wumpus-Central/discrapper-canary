@@ -49,9 +49,9 @@ function v() {
         null != j && (0, h.Z)(j.id, j.getAvatarURL(null == v ? void 0 : v.id, 80), { guildId: null == v ? void 0 : v.id });
     }, [null == v ? void 0 : v.id, j]);
     let Z = !0,
-        L = !0;
+        k = !0;
     return (
-        P && 1 === D.length && (D.includes(I.s6.PROFILE_SERVER_PROFILES) ? (y(N.NB.GUILD), (L = !1)) : D.includes(I.s6.PROFILE_USER_PROFILE) && (y(N.NB.USER_PROFILE), (Z = !1))),
+        P && 1 === D.length && (D.includes(I.s6.PROFILE_SERVER_PROFILES) ? (y(N.NB.GUILD), (k = !1)) : D.includes(I.s6.PROFILE_USER_PROFILE) && (y(N.NB.USER_PROFILE), (Z = !1))),
         (0, i.jsx)(o.Gt, {
             value: R,
             children: (0, i.jsxs)(l.y5t, {
@@ -67,7 +67,7 @@ function v() {
                         selectedItem: A,
                         onItemSelect: y,
                         children: [
-                            L
+                            k
                                 ? (0, i.jsx)(
                                       l.njP.Item,
                                       {

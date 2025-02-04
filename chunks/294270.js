@@ -3,9 +3,9 @@ var i = n(392711),
     r = n.n(i),
     a = n(846519),
     s = n(147913),
-    o = n(460181),
-    l = n(314897),
-    u = n(70956),
+    o = n(314897),
+    l = n(70956),
+    u = n(557177),
     c = n(697492),
     d = n(37091),
     f = n(721264);
@@ -22,8 +22,8 @@ function _(e, t, n) {
         e
     );
 }
-let p = 15 * u.Z.Millis.SECOND,
-    h = 15 * u.Z.Millis.SECOND,
+let p = 15 * l.Z.Millis.SECOND,
+    h = 15 * l.Z.Millis.SECOND,
     m = 550,
     g = ['\uD83C\uDDE9', '\uD83C\uDDF4', '\uD83C\uDDF9', '\uD83C\uDDE6'],
     E = g.length,
@@ -34,11 +34,11 @@ let p = 15 * u.Z.Millis.SECOND,
     y = new a.V7(),
     I = [],
     b = {},
-    T = (0, o.tu)('highfive_whistle', 'highfive_whistle', 0.6),
-    S = (0, o.tu)('highfive_clap', 'highfive_clap', 0.6);
+    T = (0, u.tu)('highfive_whistle', 'highfive_whistle', 0.6),
+    S = (0, u.tu)('highfive_clap', 'highfive_clap', 0.6);
 function A(e) {
     let { emoji: t, channelId: n, userId: i } = e,
-        a = l.default.getId(),
+        a = o.default.getId(),
         s = d.Z.getEnabled();
     if (null != t) {
         if (s && (0, f.Z)(t.name)) return C(t.name, i, n);

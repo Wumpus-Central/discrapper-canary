@@ -31,8 +31,8 @@ var i = n(200651),
     D = n(134795),
     y = n(513901),
     Z = n(451392),
-    L = n(490220),
-    k = n(981631),
+    k = n(490220),
+    L = n(981631),
     B = n(474936),
     M = n(526761),
     w = n(388032),
@@ -48,7 +48,7 @@ function U(e) {
             tryItOutAvatar: K,
             tryItOutBanner: X,
             tryItOutProfileEffectId: q,
-            tryItOutAvatarDecoration: J
+            tryItOutAvatarDecoration: Q
         } = (0, r.cj)([b.Z], () => {
             let e = b.Z.getAllPending(),
                 t = b.Z.getErrors(),
@@ -59,25 +59,25 @@ function U(e) {
                 errors: t
             };
         }),
-        Q = (0, _.Z)(q),
+        J = (0, _.Z)(q),
         $ = s.useRef(null);
     (0, S.Z)($, M.Y_.TRY_IT_OUT);
     let { analyticsLocations: ee, sourceAnalyticsLocations: et } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
         [en, ei] = s.useState(Math.floor(Math.random() * E.J2.length)),
         es = (e) => {
             if (e) {
-                if (((0, a.I5)(K), (0, I.z5)(W), (0, I.ho)(X), null != J)) {
-                    let e = m.Z.getProduct(J.skuId);
-                    null != e && (0, g.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(J)) : null != h.Z.getPurchase(J.skuId) && (0, a.cV)(J);
+                if (((0, a.I5)(K), (0, I.z5)(W), (0, I.ho)(X), null != Q)) {
+                    let e = m.Z.getProduct(Q.skuId);
+                    null != e && (0, g.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(Q)) : null != h.Z.getPurchase(Q.skuId) && (0, a.cV)(Q);
                 }
-                v.default.track(k.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: E.J2[en].presetName });
+                v.default.track(L.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: E.J2[en].presetName });
             }
         };
     s.useEffect(() => {
         G &&
-            v.default.track(k.rMx.PREMIUM_UPSELL_VIEWED, {
+            v.default.track(L.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: B.cd.PREMIUM_PROFILE_TRY_IT_OUT,
-                location: { page: k.ZY5.USER_SETTINGS },
+                location: { page: L.ZY5.USER_SETTINGS },
                 location_stack: et
             });
     }, [et, U, G]);
@@ -121,7 +121,7 @@ function U(e) {
                                       selectedIndex: en,
                                       setSelectedIndex: ei
                                   }),
-                                  (0, i.jsx)(L.Z, { user: U })
+                                  (0, i.jsx)(k.Z, { user: U })
                               ]
                           }),
                           children: (0, i.jsxs)('div', {
@@ -179,7 +179,7 @@ function U(e) {
                                       {
                                           className: V.customizationSection,
                                           isTryItOutFlow: !0,
-                                          initialSelectedEffectId: Q,
+                                          initialSelectedEffectId: J,
                                           user: U,
                                           sectionTitle: w.intl.string(w.t.wR5wOj)
                                       },

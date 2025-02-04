@@ -31,7 +31,7 @@ var i = n(200651),
     D = n(877615),
     y = n(684309),
     Z = n(232186);
-function L(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function L(e, t, n) {
         e
     );
 }
-function k(e) {
+function L(e) {
     let { children: t } = e;
     return t([x.Q2.MESSAGE, x.Q2.NAVIGATION, x.Q2.DND, x.Q2.CHAT, x.Q2.VOICE_AND_VIDEO, x.Q2.MISCELLANEOUS]);
 }
@@ -148,22 +148,22 @@ class w extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            L(this, 'handleActionChanged', (e) => {
+            k(this, 'handleActionChanged', (e) => {
                 m.Z.setKeybind({
                     ...this.props.keybind,
                     action: e
                 });
             }),
-            L(this, 'handleShortcutChange', (e) => {
+            k(this, 'handleShortcutChange', (e) => {
                 m.Z.setKeybind({
                     ...this.props.keybind,
                     shortcut: e
                 });
             }),
-            L(this, 'handleDeleteKeybind', () => {
+            k(this, 'handleDeleteKeybind', () => {
                 m.Z.deleteKeybind(this.props.keybind.id);
             }),
-            L(this, 'handleEnableDisable', () => {
+            k(this, 'handleEnableDisable', () => {
                 let { keybind: e } = this.props;
                 m.Z.setKeybind({
                     ...this.props.keybind,
@@ -394,7 +394,7 @@ class V extends s.PureComponent {
                             ]
                         }),
                         (0, i.jsx)(u.$i$, {}),
-                        (0, i.jsx)(k, {
+                        (0, i.jsx)(L, {
                             children: (e) =>
                                 (0, i.jsx)(i.Fragment, {
                                     children: e.map((e, t) => {
@@ -457,7 +457,7 @@ class V extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            L(this, 'handleAddKeybind', () => {
+            k(this, 'handleAddKeybind', () => {
                 m.Z.addKeybind();
             });
     }

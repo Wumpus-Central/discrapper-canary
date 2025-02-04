@@ -59,15 +59,15 @@ let f = (e) => {
         s.useEffect(() => {
             D && !R && (y(), Z());
         }, [y, Z, D, R]);
-        let L = () => {
+        let k = () => {
                 D && R && y();
             },
-            k = R && D;
+            L = R && D;
         (0, h.r)({
             ref: A,
-            shouldScroll: k || j,
-            onScrollEnd: L,
-            onCleanup: L
+            shouldScroll: L || j,
+            onScrollEnd: k,
+            onCleanup: k
         });
         let B = (0, p.Op)(D),
             M = (0, _.Z)(),

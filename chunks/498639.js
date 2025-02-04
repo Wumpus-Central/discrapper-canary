@@ -60,8 +60,8 @@ let D = function () {
             value: e,
             label: e.name
         })),
-        [Z, L] = s.useState(y.length > 0 ? y[0].value : null),
-        [k, B] = s.useState(''),
+        [Z, k] = s.useState(y.length > 0 ? y[0].value : null),
+        [L, B] = s.useState(''),
         [M, w] = s.useState({
             plan_id: O.Xh.PREMIUM_MONTH_TIER_2,
             gift: 'true'
@@ -72,7 +72,7 @@ let D = function () {
         [H, z] = s.useState(''),
         [Y, W] = s.useState(A.lds),
         { balance: K, isFetching: X, error: q } = (0, S.A)(),
-        { isSubmitting: J, responseMessage: Q, redeemVirtualCurrency: $ } = (0, S.f)(),
+        { isSubmitting: Q, responseMessage: J, redeemVirtualCurrency: $ } = (0, S.f)(),
         [ee, et] = s.useState(A.lds),
         [en, ei] = s.useState(''),
         [es, er] = s.useState(A.lds),
@@ -162,7 +162,7 @@ let D = function () {
                         (0, i.jsx)(a.q4e, {
                             value: Z,
                             options: y,
-                            onChange: (e) => L(e)
+                            onChange: (e) => k(e)
                         }),
                         null != Z
                             ? (0, i.jsx)(_.Z, {
@@ -187,20 +187,20 @@ let D = function () {
                     children: [
                         (0, i.jsx)(a.oil, {
                             placeholder: 'Promotion Code',
-                            value: k,
+                            value: L,
                             onChange: (e) => B(e)
                         }),
                         (0, i.jsx)(a.ua7, {
                             text: 'Need Promotion Code',
-                            shouldShow: k.length < 1,
+                            shouldShow: L.length < 1,
                             children: (e) => {
                                 let { onMouseEnter: t, onMouseLeave: n } = e;
                                 return (0, i.jsx)(a.zxk, {
-                                    disabled: k.length < 1,
+                                    disabled: L.length < 1,
                                     onMouseEnter: t,
                                     onMouseLeave: n,
                                     onClick: () => {
-                                        window.open(A.Z5c.BILLING_PROMOTION_REDEMPTION(k));
+                                        window.open(A.Z5c.BILLING_PROMOTION_REDEMPTION(L));
                                     },
                                     children: 'Open Link'
                                 });
@@ -296,9 +296,9 @@ let D = function () {
                                                       variant: 'text-sm/normal',
                                                       children: ['Error fetching Virtual Currency Balance: ', q.message]
                                                   }),
-                                              (0, i.jsx)(b.A, {
+                                              (0, i.jsx)(b.A4, {
                                                   balance: null != K ? K : 0,
-                                                  balanceWidgetMode: b.A.BalanceWidgetMode.SELECTED
+                                                  balanceWidgetMode: b.b6.SELECTED
                                               })
                                           ]
                                       })
@@ -315,7 +315,7 @@ let D = function () {
                         (0, i.jsx)(a.xJW, {
                             className: R.formItem,
                             children: (0, i.jsx)(a.zxk, {
-                                submitting: J,
+                                submitting: Q,
                                 onClick: () => $(ee),
                                 children: 'Redeem Virtual Currency for SKU'
                             })
@@ -324,7 +324,7 @@ let D = function () {
                             className: R.formItem,
                             children: (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
-                                children: Q
+                                children: J
                             })
                         })
                     ]

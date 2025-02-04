@@ -55,10 +55,10 @@ let C = (e) => {
             Z = () => {
                 null == j.current || S || ((j.current.currentTime = A.current), j.current.play());
             },
-            L = () => {
+            k = () => {
                 null == j.current || S || ((A.current = j.current.currentTime), j.current.pause());
             },
-            k = () =>
+            L = () =>
                 (0, i.jsxs)('div', {
                     className: l()({
                         [E.whatsNewTextBoxOuter]: !I,
@@ -131,14 +131,14 @@ let C = (e) => {
             }),
             onMouseEnter: Z,
             onFocus: Z,
-            onBlur: L,
-            onMouseLeave: L,
+            onBlur: k,
+            onMouseLeave: k,
             children: M
                 ? (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(k, {}), (0, i.jsx)(B, { isLeft: M })]
+                      children: [(0, i.jsx)(L, {}), (0, i.jsx)(B, { isLeft: M })]
                   })
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(B, { isLeft: M }), (0, i.jsx)(k, {})]
+                      children: [(0, i.jsx)(B, { isLeft: M }), (0, i.jsx)(L, {})]
                   })
         });
     },

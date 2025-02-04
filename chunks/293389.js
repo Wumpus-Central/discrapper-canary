@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(47120);
+n.d(t, { Z: () => L }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -317,16 +317,16 @@ function Z(e) {
         ]
     });
 }
-let L = (0, C.oH)(function () {
+let k = (0, C.oH)(function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return new Set(t.map((e) => e.exePath));
     }),
-    k = function (e) {
+    L = function (e) {
         let { className: t, showHeader: n = !0 } = e,
             r = (0, a.Wu)([h.ZP], () => h.ZP.getGamesSeen(!0)),
             { runningGame: o, overrideExePaths: d } = (0, a.cj)([h.ZP], () => ({
                 runningGame: h.ZP.getVisibleGame(),
-                overrideExePaths: L(...h.ZP.getOverrides())
+                overrideExePaths: k(...h.ZP.getOverrides())
             }));
         return (
             s.useEffect(() => ((0, g.Ky)(), g.P7), []),

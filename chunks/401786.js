@@ -95,12 +95,12 @@ async function Z(e, t, n, i) {
     if (null == s) throw Error('No slot to cancel');
     await (0, d.pD)(s), await (0, c.Mg)(e, { items: (0, v.MY)(e, t) }, n);
 }
-function L(e) {
+function k(e) {
     var t, n, r;
     let { premiumSubscription: l, guildBoostSlotId: c, onBack: d, onNext: E, onClose: N } = e,
         [S, b] = s.useState(!1),
         [R, y] = s.useState(null),
-        [L, k] = s.useMemo(() => {
+        [k, L] = s.useMemo(() => {
             try {
                 return [(0, p.g)(l, -1), !1];
             } catch {
@@ -112,8 +112,8 @@ function L(e) {
         B.current = N;
     }),
         s.useEffect(() => {
-            k && B.current();
-        }, [k]);
+            L && B.current();
+        }, [L]);
     let { premiumSubscriptionPlan: M, premiumGuildPlan: w } = (0, a.cj)([I.Z], () => {
             let e = I.Z.get(l.planId);
             return {
@@ -130,7 +130,7 @@ function L(e) {
             analyticsLocations: V,
             analyticsLocation: h.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW
         }),
-        G = null != w ? (0, v.Zx)(l, null !== (r = null === (t = L[0]) || void 0 === t ? void 0 : t.quantity) && void 0 !== r ? r : 0, w.id) : null,
+        G = null != w ? (0, v.Zx)(l, null !== (r = null === (t = k[0]) || void 0 === t ? void 0 : t.quantity) && void 0 !== r ? r : 0, w.id) : null,
         [F] = (0, x.ED)({
             subscriptionId: l.id,
             items: G,
@@ -151,7 +151,7 @@ function L(e) {
                       let { planId: t } = e;
                       return !O.Z1.has(t);
                   })) != null,
-        z = L.some((e) => {
+        z = k.some((e) => {
             let { planId: t } = e;
             return O.Z1.has(t);
         }),
@@ -203,7 +203,7 @@ function L(e) {
                         disabled: S,
                         onClick: async () => {
                             try {
-                                b(!0), y(null), await Z(l, L, V, c), E();
+                                b(!0), y(null), await Z(l, k, V, c), E();
                             } catch (t) {
                                 let e = t instanceof u.HF ? t : new u.HF(t, t.code);
                                 y(P.intl.string(e.code === m.SM.BILLING_PAUSE_INVALID_UPDATE ? P.t.dq4vq6 : P.t['5mlOCQ'])), b(!1);
@@ -217,7 +217,7 @@ function L(e) {
         ]
     });
 }
-function k(e) {
+function L(e) {
     let { premiumSubscription: t, onClose: n } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -265,7 +265,7 @@ function B(e) {
                 });
                 break;
             case 2:
-                t = (0, i.jsx)(L, {
+                t = (0, i.jsx)(k, {
                     premiumSubscription: d,
                     guildBoostSlotId: n.id,
                     onBack: () => m(1),
@@ -274,7 +274,7 @@ function B(e) {
                 });
                 break;
             case 3:
-                t = (0, i.jsx)(k, {
+                t = (0, i.jsx)(L, {
                     premiumSubscription: d,
                     onClose: l
                 });

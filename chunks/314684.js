@@ -1,7 +1,7 @@
 n.d(t, {
-    $_: () => L,
+    $_: () => k,
     FM: () => w,
-    IB: () => k,
+    IB: () => L,
     IY: () => B,
     JR: () => M,
     Kb: () => V,
@@ -170,7 +170,7 @@ let Z = (e) => {
                 return [];
         }
     },
-    L = () => {
+    k = () => {
         let e = O(),
             [t, n] = i.useState(Z(e)),
             s = (0, N.cG)({ location: 'Home' });
@@ -180,7 +180,7 @@ let Z = (e) => {
         let [r] = (0, _.US)(s ? t : []);
         return s && null != e && !0 === e.showNotification && (r === a.z.TENURE_REWARD_REDEEMABLE || r === a.z.TENURE_REWARD_PENDING) ? (0, b.Wb)(e.nitroTenureStatus) : null;
     },
-    k = () => {
+    L = () => {
         var e;
         let t = null === (e = O()) || void 0 === e ? void 0 : e.nitroTenureStatus,
             n = (0, N.cG)({ location: 'Home' }) && null != t && t === j.EB.REDEEMABLE,

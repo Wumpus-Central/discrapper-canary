@@ -42,8 +42,8 @@ let b = (e) => {
             D = (0, m._O)(),
             y = (0, g.Ng)(),
             Z = (0, g.Wp)(y, N.Si.TIER_2) ? N.Si.TIER_2 : void 0,
-            L = (0, _.N)(),
-            k = (0, u.Nx)(),
+            k = (0, _.N)(),
+            L = (0, u.Nx)(),
             B = (0, p.Vi)(),
             M = (0, l.e7)([d.Z], () => d.Z.affinities),
             w = (0, x.Z)(),
@@ -58,9 +58,9 @@ let b = (e) => {
                 children: (0, i.jsxs)('div', {
                     className: S.marketingPageV2TextContainer,
                     children: [
-                        k &&
+                        L &&
                             (0, i.jsx)(b, {
-                                trialOffer: L,
+                                trialOffer: k,
                                 discountOffer: y
                             }),
                         (0, i.jsx)(a.X6q, {
@@ -92,8 +92,8 @@ let b = (e) => {
                                   })
                               })
                             : (0, i.jsx)(T.PK, {
-                                  subscriptionTier: null !== (n = null != A ? A : null == L ? void 0 : null === (t = L.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : Z,
-                                  inOfferExperience: k,
+                                  subscriptionTier: null !== (n = null != A ? A : null == k ? void 0 : null === (t = k.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : Z,
+                                  inOfferExperience: L,
                                   containerClassName: r()(S.marketingPageV2CTAContainer, { [S.marketingPageV2CTAMargin]: !(G || U) }),
                                   buttonClassName: j,
                                   isMarketingPageV2Enabled: !0,

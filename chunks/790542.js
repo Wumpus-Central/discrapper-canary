@@ -15,7 +15,7 @@ function a() {
     }));
     return (
         (0, i.useEffect)(() => {
-            null !== e || null !== n || t || (0, r.Z)();
+            null !== e || null !== n || t || (0, r.ZO)();
         }, [e, n, t]),
         {
             balance: e,

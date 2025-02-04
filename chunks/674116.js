@@ -31,8 +31,8 @@ var i = n(200651),
     D = n(267006),
     y = n(803567),
     Z = n(269876),
-    L = n(976758),
-    k = n(526761),
+    k = n(976758),
+    L = n(526761),
     B = n(726985),
     M = n(981631),
     w = n(65154),
@@ -44,7 +44,7 @@ function F() {
         t = (0, a.e7)([h.Z], () => h.Z.getSubsection()),
         n = s.createRef();
     s.useEffect(() => {
-        if (t === k.GA) {
+        if (t === L.GA) {
             var e;
             null == n || null === (e = n.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection();
         }
@@ -63,7 +63,7 @@ function F() {
                     }),
                     (0, i.jsx)(u.F, {
                         setting: B.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
-                        children: (0, i.jsx)(L.Z, {})
+                        children: (0, i.jsx)(k.Z, {})
                     }),
                     (0, i.jsxs)(u.F, {
                         setting: B.s6.VOICE_AND_VIDEO_MIC_TEST,

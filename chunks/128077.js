@@ -54,7 +54,7 @@ function o() {
             isSubmitting: c,
             responseMessage: e,
             redeemVirtualCurrency: function (e) {
-                return (0, r.d)(e);
+                return (0, r.df)(e);
             }
         }
     );

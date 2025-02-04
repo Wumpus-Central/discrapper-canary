@@ -11,15 +11,15 @@ var i = n(200651),
     h = n(540059),
     p = n(899740),
     m = n(849862),
-    g = n(460181),
-    f = n(155409),
-    _ = n(944486),
-    v = n(594174),
-    x = n(431),
-    C = n(774343),
-    Z = n(417363),
-    I = n(941128),
-    b = n(780570),
+    g = n(155409),
+    f = n(944486),
+    _ = n(594174),
+    v = n(431),
+    x = n(774343),
+    C = n(417363),
+    Z = n(941128),
+    I = n(780570),
+    b = n(557177),
     S = n(278464),
     N = n(276952),
     E = n(682662),
@@ -43,46 +43,46 @@ let L = {
     }
 };
 function M(e) {
-    let { selected: t, user: n, badge: p, link: m, showProgressBadge: _ } = e,
-        v = (0, a.e7)([d.Z], () => d.Z.isEditorOpen),
-        [x, C] = l.useState(!1),
-        [Z, I] = l.useState(!1),
-        [b, S] = l.useState(null),
+    let { selected: t, user: n, badge: p, link: m, showProgressBadge: f } = e,
+        _ = (0, a.e7)([d.Z], () => d.Z.isEditorOpen),
+        [v, x] = l.useState(!1),
+        [C, Z] = l.useState(!1),
+        [I, S] = l.useState(null),
         [A, M] = l.useState(0),
         D = (0, r.Ie)('home'),
         G = (0, h.Q3)('DefaultHomeButton'),
         k = () => {
-            S(null), M(0), clearTimeout(b);
+            S(null), M(0), clearTimeout(I);
         };
     if (null == n) return null;
     let B = w.intl.string(w.t.YUU0RE);
-    Z && (B = o.K.get(P.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
+    C && (B = o.K.get(P.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
     let O = null;
     !t &&
-        _ &&
+        f &&
         (O = (0, i.jsx)(c.Z, {
             className: R.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let U = t || x || v,
+    let U = t || v || _,
         V = (0, i.jsx)(s.aRk, {
             selected: G || U,
             lowerBadge: p > 0 ? (0, y.Ne)(p) : null,
             upperBadge: O,
             lowerBadgeSize: { width: (0, s.OVM)(p) },
             children: (0, i.jsx)(s.LYs, {
-                onMouseEnter: () => C(!0),
-                onMouseLeave: () => C(!1),
+                onMouseEnter: () => x(!0),
+                onMouseLeave: () => x(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != b && clearTimeout(b), S(setTimeout(k, 500)), M(A + 1), 15 === A)) {
+                    if (!__OVERLAY__ && (null != I && clearTimeout(I), S(setTimeout(k, 500)), M(A + 1), 15 === A)) {
                         k();
                         let e = !o.K.get(P.wli);
                         o.K.set(P.wli, e),
                             e && o.K.set(T.O5, !0),
-                            e ? (0, g.GN)('discodo') : (0, g.GN)('user_leave'),
-                            I(!0),
+                            e ? (0, b.GN)('discodo') : (0, b.GN)('user_leave'),
+                            Z(!0),
                             setTimeout(() => {
-                                I(!1);
+                                Z(!1);
                             }, 1000);
                     }
                 },
@@ -104,7 +104,7 @@ function M(e) {
         });
     return (0, i.jsx)('div', {
         className: R.tutorialContainer,
-        children: (0, i.jsx)(f.Z, {
+        children: (0, i.jsx)(g.Z, {
             inlineSpecs: L,
             tutorialId: 'friends-list',
             position: 'right',
@@ -112,7 +112,7 @@ function M(e) {
                 children: [
                     (0, i.jsx)(N.Z, {
                         selected: t,
-                        hovered: x,
+                        hovered: v,
                         className: R.pill
                     }),
                     (0, i.jsx)(j.Z, {
@@ -129,32 +129,32 @@ function M(e) {
 }
 function D() {
     let e = (0, S.n)(),
-        t = (0, a.e7)([I.Z, Z.Z], () => {
-            let e = (0, c.E)(I.Z.activeItems, Z.Z),
-                { total: t, progress: n } = b.lK(e),
-                i = b.xI(n, t);
+        t = (0, a.e7)([Z.Z, C.Z], () => {
+            let e = (0, c.E)(Z.Z.activeItems, C.Z),
+                { total: t, progress: n } = I.lK(e),
+                i = I.xI(n, t);
             return i > 0 && i < 100;
         }),
         n = (0, m.If)(),
         l = Object.keys(A.nG),
-        { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([x.Z], () => ({
-            unviewedTrialCount: x.Z.getUnacknowledgedOffers(l).length,
-            unviewedDiscountCount: x.Z.getUnacknowledgedDiscountOffers().length
+        { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([v.Z], () => ({
+            unviewedTrialCount: v.Z.getUnacknowledgedOffers(l).length,
+            unviewedDiscountCount: v.Z.getUnacknowledgedDiscountOffers().length
         })),
         s = r + o,
-        d = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
+        d = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
         u = (0, p.q)(),
         h = n + s + u,
         g = h === s && s > 0 && n + u === 0,
-        f = C.Z.getHomeLink();
+        b = x.Z.getHomeLink();
     return (
-        g && (f = P.Z5c.APPLICATION_STORE),
+        g && (b = P.Z5c.APPLICATION_STORE),
         (0, i.jsx)(M, {
             selected: e,
             user: d,
-            selectedChannelId: _.Z.getChannelId(P.ME),
+            selectedChannelId: f.Z.getChannelId(P.ME),
             badge: h,
-            link: f,
+            link: b,
             showProgressBadge: t
         })
     );

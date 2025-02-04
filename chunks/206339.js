@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(47120);
+n.d(t, { Z: () => k }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -133,7 +133,7 @@ function Z(e) {
         ]
     });
 }
-let L = function () {
+let k = function () {
     let e = (0, c.Wu)([v.Z], () => v.Z.getGiftable()),
         [t, n] = o().partition(e, (e) => {
             let { giftCodeBatchId: t } = e;
@@ -147,7 +147,7 @@ let L = function () {
             (0, m.Qv)().then(() => x(!0));
         });
     }, []);
-    let { promotionsLoaded: E, activeOutboundPromotions: C, claimedEndedOutboundPromotions: T, claimedOutboundPromotionCodeMap: L, addClaimedOutboundPromotionCode: k } = (0, f.lG)(),
+    let { promotionsLoaded: E, activeOutboundPromotions: C, claimedEndedOutboundPromotions: T, claimedOutboundPromotionCodeMap: k, addClaimedOutboundPromotionCode: L } = (0, f.lG)(),
         B = C.length + T.length > 0,
         M =
             p.g.useExperiment(
@@ -218,7 +218,7 @@ let L = function () {
                                           {
                                               outboundPromotion: n,
                                               code: t,
-                                              addClaimedOutboundPromotionCode: k,
+                                              addClaimedOutboundPromotionCode: L,
                                               disabled: !r
                                           },
                                           n.id
@@ -229,8 +229,8 @@ let L = function () {
                                           Z,
                                           {
                                               outboundPromotion: e,
-                                              code: L[e.id],
-                                              addClaimedOutboundPromotionCode: k,
+                                              code: k[e.id],
+                                              addClaimedOutboundPromotionCode: L,
                                               disabled: !r
                                           },
                                           e.id

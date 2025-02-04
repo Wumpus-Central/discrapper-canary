@@ -32,8 +32,8 @@ function R() {
         D = (0, a.e7)([p.Z], () => p.Z.getHardwareClassification()),
         y = (0, a.e7)([_.Z], () => _.Z.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
         Z = p.Z.isDecoupledGameClippingEnabled(),
-        L = (0, C.Z)(g.Z),
-        { showClipsHeaderEntrypoint: k } = x.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
+        k = (0, C.Z)(g.Z),
+        { showClipsHeaderEntrypoint: L } = x.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
     l()(null != y, 'Save clip keybind unset');
     let B = (0, a.e7)([m.default], () => m.default.locale),
         M = s.useMemo(
@@ -143,7 +143,7 @@ function R() {
                 ]
             }),
             Z &&
-                L &&
+                k &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.$i$, {}),
@@ -166,7 +166,7 @@ function R() {
                         })
                     ]
                 }),
-            k &&
+            L &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.$i$, {}),

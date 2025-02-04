@@ -1,70 +1,70 @@
-i.d(t, { Z: () => g }), i(47120);
-var n,
-    s = i(200651),
-    r = i(192379),
-    l = i(512722),
-    o = i.n(l),
-    a = i(442837),
-    d = i(481060),
-    c = i(893776),
-    u = i(468026),
-    f = i(594174),
-    x = i(388032);
-function h(e, t, i) {
+n.d(t, { Z: () => x }), n(47120);
+var i,
+    s = n(200651),
+    r = n(192379),
+    l = n(512722),
+    a = n.n(l),
+    o = n(442837),
+    c = n(481060),
+    d = n(893776),
+    u = n(468026),
+    m = n(594174),
+    h = n(388032);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: i,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = i),
+            : (e[t] = n),
         e
     );
 }
-class m extends (n = r.Component) {
+class _ extends (i = r.Component) {
     render() {
-        let { color: e, look: t, size: i } = this.props;
-        return (0, s.jsx)(d.zxk, {
+        let { color: e, look: t, size: n } = this.props;
+        return (0, s.jsx)(c.zxk, {
             look: t,
-            size: i,
+            size: n,
             color: e,
             disabled: this.state.isSendingVerificationEmail,
             onClick: this.handleResendVerification,
-            children: x.intl.string(x.t.lm1UKi)
+            children: h.intl.string(h.t.lm1UKi)
         });
     }
     constructor(...e) {
         super(...e),
-            h(this, 'state', { isSendingVerificationEmail: !1 }),
-            h(this, 'handleResendVerification', () => {
+            g(this, 'state', { isSendingVerificationEmail: !1 }),
+            g(this, 'handleResendVerification', () => {
                 let { currentUser: e, onClick: t } = this.props;
                 null == t || t(),
                     this.setState({ isSendingVerificationEmail: !0 }, () => {
-                        c.Z.verifyResend()
+                        d.Z.verifyResend()
                             .then(() =>
-                                (0, d.h7j)((t) =>
-                                    (0, s.jsx)(d.ConfirmModal, {
-                                        header: x.intl.string(x.t.LykQYm),
-                                        confirmText: x.intl.string(x.t.BddRzc),
-                                        confirmButtonColor: d.zxk.Colors.BRAND,
+                                (0, c.h7j)((t) =>
+                                    (0, s.jsx)(c.ConfirmModal, {
+                                        header: h.intl.string(h.t.LykQYm),
+                                        confirmText: h.intl.string(h.t.BddRzc),
+                                        confirmButtonColor: c.zxk.Colors.BRAND,
                                         ...t,
-                                        children: (0, s.jsx)(d.Text, {
+                                        children: (0, s.jsx)(c.Text, {
                                             variant: 'text-md/normal',
-                                            children: x.intl.format(x.t.azKEPz, { email: e.email })
+                                            children: h.intl.format(h.t.azKEPz, { email: e.email })
                                         })
                                     })
                                 )
                             )
                             .catch((e) => {
                                 let { body: t } = e,
-                                    i = x.intl.string(x.t.XcrQNz);
-                                null != t && t.email && (i = t.email),
-                                    (0, d.h7j)((e) =>
+                                    n = h.intl.string(h.t.XcrQNz);
+                                null != t && t.email && (n = t.email),
+                                    (0, c.h7j)((e) =>
                                         (0, s.jsx)(u.default, {
-                                            title: x.intl.string(x.t.VbTh0N),
-                                            body: i,
+                                            title: h.intl.string(h.t.VbTh0N),
+                                            body: n,
                                             ...e
                                         })
                                     );
@@ -74,11 +74,11 @@ class m extends (n = r.Component) {
             });
     }
 }
-h(m, 'defaultProps', {
-    size: d.zxk.Sizes.MEDIUM,
-    color: d.zxk.Colors.BRAND
+g(_, 'defaultProps', {
+    size: c.zxk.Sizes.MEDIUM,
+    color: c.zxk.Colors.BRAND
 });
-let g = a.ZP.connectStores([f.default], () => {
-    let e = f.default.getCurrentUser();
-    return o()(null != e, 'ResendEmailVerificationButton: currentUser cannot be undefined'), { currentUser: e };
-})(m);
+let x = o.ZP.connectStores([m.default], () => {
+    let e = m.default.getCurrentUser();
+    return a()(null != e, 'ResendEmailVerificationButton: currentUser cannot be undefined'), { currentUser: e };
+})(_);

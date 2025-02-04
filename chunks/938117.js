@@ -31,15 +31,15 @@ function T(e) {
             onSelectBackgroundOption: N,
             selectedBackgroundOption: T
         },
-        L = s.useRef(Z);
+        k = s.useRef(Z);
     s.useEffect(() => {
-        L.current = Z;
+        k.current = Z;
     }),
         s.useEffect(() => {
-            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = L.current;
+            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = k.current;
             e ? (0, h.FU)(n, I, { track: !1 }).catch(() => t(null)) : null != n && t(null);
         }, [I]);
-    let k = (e) => {
+    let L = (e) => {
         N(e),
             (0, h.FU)(e, I, { location: y.location })
                 .then(() => A(null))
@@ -62,7 +62,7 @@ function T(e) {
                       canUseCustomBackgrounds: R,
                       customBackgroundOptions: D,
                       selectedOption: T,
-                      onSelectOption: k,
+                      onSelectOption: L,
                       onUpsellClick: () => {
                           (0, l.ZDy)(async () => {
                               let { default: e } = await n.e('87200').then(n.bind(n, 592163));
@@ -82,7 +82,7 @@ function T(e) {
                           return new Promise(async (i) => {
                               try {
                                   let i = await (0, d.Ff)(e, x.xV.BACKGROUND);
-                                  k(i), (0, m.g5)(i, t.type === E.m.MP4, n), A(null);
+                                  L(i), (0, m.g5)(i, t.type === E.m.MP4, n), A(null);
                               } catch (e) {
                                   A(e.message);
                               }

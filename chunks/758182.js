@@ -32,14 +32,14 @@ var a = n(149765),
     D = n(981631);
 let y = new N.Z('CacheStore'),
     Z = !1,
-    L = !1,
-    k = 'initializing',
+    k = !1,
+    L = 'initializing',
     B = 0,
     M = !1,
     w = !1,
     V = !1;
 function U(e) {
-    y.log('Clearing cache store'), (B = Date.now()), c.K.remove(D.FsG), c.K.remove(D.ihW), c.K.remove(D.O42), (k = 'no-cache'), 'CLEAR_CACHES' === e.type && e.preventWritingCachesAgainThisSession && (L = !0);
+    y.log('Clearing cache store'), (B = Date.now()), c.K.remove(D.FsG), c.K.remove(D.ihW), c.K.remove(D.O42), (L = 'no-cache'), 'CLEAR_CACHES' === e.type && e.preventWritingCachesAgainThisSession && (k = !0);
 }
 async function G(e, t, n) {
     let i = performance.now();
@@ -85,7 +85,7 @@ async function F(e, t, n) {
         T = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => C.Z.getAll(e)),
         N = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => p.Z.getAll(e)),
         b = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => E.Z.getAll(e)),
-        [[A, O], R, D, Z, L, k, B] = await Promise.all([h, g, _, x, T, N, b]),
+        [[A, O], R, D, Z, k, L, B] = await Promise.all([h, g, _, x, T, N, b]),
         M = performance.now() - m;
     if ((y.verbose('cache loaded in '.concat(M, 'ms (channel_history ').concat(A, 'ms)')), null == O)) return (0, P.Z)('database:history_cache_null'), y.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
     {
@@ -104,9 +104,9 @@ async function F(e, t, n) {
                         users: [...O.users],
                         messages: null == O.channelId ? {} : { [O.channelId]: O.messages },
                         guildMembers: null == O.guildId ? {} : { [O.guildId]: i },
-                        userSettings: L,
+                        userSettings: k,
                         userGuildSettings: B,
-                        readStates: k
+                        readStates: L
                     });
                 }),
                     l.Z.time('\uD83D\uDCBE', 'socket.processFirstQueuedDispatch()', () => a.dispatcher.processFirstQueuedDispatch(new Set(['INITIAL_GUILD'])));
@@ -127,8 +127,8 @@ async function F(e, t, n) {
                     .concat(O.users.length, '\n            initial_guild:\n              id: ')
                     .concat(m, '\n              channels: ')
                     .concat(null === (r = D.channels) || void 0 === r ? void 0 : r.length, '\n            user_settings: ')
-                    .concat(Object.keys(L).length, '\n            read_states: ')
-                    .concat(k.length, '\n            user_guild_settings: ')
+                    .concat(Object.keys(k).length, '\n            read_states: ')
+                    .concat(L.length, '\n            user_guild_settings: ')
                     .concat(B.length, '\n      )')
             ),
             y.verbose('finished dispatching CACHE_LOADED'),
@@ -346,17 +346,17 @@ class X extends (i = o.ZP.Store) {
         return !Z || M;
     }
     getLazyCacheStatus() {
-        return Z ? k : 'no-cache';
+        return Z ? L : 'no-cache';
     }
     get lastWriteTime() {
         return B;
     }
     canWriteCaches(e) {
-        return (0, A.$8)() ? (L ? (y.log('Not writing cache because caches cleared'), !1) : !!e || !!V || (y.log('Not writing cache because never connected'), !1)) : (y.log('Not writing cache because not authenticated'), !1);
+        return (0, A.$8)() ? (k ? (y.log('Not writing cache because caches cleared'), !1) : !!e || !!V || (y.log('Not writing cache because never connected'), !1)) : (y.log('Not writing cache because not authenticated'), !1);
     }
     async loadCacheAsync(e, t) {
         let n = (0, O.h)(t);
-        if ('initializing' !== k) {
+        if ('initializing' !== L) {
             (0, P.Z)('cache:lazy_cache_not_initializing'),
                 n(),
                 setTimeout(() => {
@@ -408,10 +408,10 @@ class X extends (i = o.ZP.Store) {
                       M = !0;
                   },
                   CACHE_LOADED_LAZY: function () {
-                      (M = !0), (k = 'cache-loaded');
+                      (M = !0), (L = 'cache-loaded');
                   },
                   CACHE_LOADED_LAZY_NO_CACHE: function () {
-                      k = 'no-cache';
+                      L = 'no-cache';
                   },
                   CLEAR_CACHES: U,
                   WRITE_CACHES: function () {

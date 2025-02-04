@@ -34,8 +34,8 @@ function v(e) {
         D = v.length > 0,
         y = s.useMemo(() => v.filter((e) => null != e.premiumGuildSubscription), [v]),
         Z = y.length > 0,
-        L = v.length > y.length,
-        k = (0, r.e7)([u.Z], () => u.Z.getCurrentUserAppliedBoosts()),
+        k = v.length > y.length,
+        L = (0, r.e7)([u.Z], () => u.Z.getCurrentUserAppliedBoosts()),
         { fractionalState: B } = (0, l.Z)({ forceFetch: !0 }),
         M = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && B === S.a$.NONE,
         w = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && B === S.a$.NONE,
@@ -57,14 +57,14 @@ function v(e) {
                     subscriptionIsPausedOrPausePending: M
                 }),
             (0, i.jsx)(p.Z, {
-                hide: L,
+                hide: k,
                 containerClassName: b.FPContainer,
                 pillClassName: b.FPPill
             }),
             !P && (0, i.jsx)(f.Z, {}),
             (null == t ? void 0 : t.isPaused) && B === S.a$.NONE
                 ? (0, i.jsx)(E.r, {
-                      appliedGuildBoosts: k,
+                      appliedGuildBoosts: L,
                       premiumSubscription: t
                   })
                 : (0, i.jsx)(E.Z, {
@@ -77,7 +77,7 @@ function v(e) {
             }),
             (0, i.jsx)(T.Z, {
                 canAddBoosts: Z && w,
-                canApplyBoosts: L
+                canApplyBoosts: k
             }),
             (0, i.jsx)(d.Z, {
                 className: b.tierComparisonTable,

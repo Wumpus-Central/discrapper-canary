@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(37234),
     d = n(607070),
     u = n(578361),
-    m = n(460181),
-    h = n(585483),
+    m = n(585483),
+    h = n(557177),
     g = n(57562),
     _ = n(955204),
     x = n(64078),
@@ -201,7 +201,7 @@ function Z(e) {
         ]
     });
 }
-function L(e) {
+function k(e) {
     let {
             settings: { enabled: t, combosEnabled: n, comboSoundsEnabled: s, combosRequiredCount: r },
             updateSettings: l
@@ -247,7 +247,7 @@ function L(e) {
         ]
     });
 }
-function k(e) {
+function L(e) {
     let {
             settings: { enabled: t, screenshakeEnabled: n, shakeIntensity: s, screenshakeEnabledLocations: r },
             updateSettings: a
@@ -390,8 +390,8 @@ function V(e) {
             if (e.enabled && !1 === r.enabled) {
                 var t;
                 n(!0),
-                    (0, m.GN)('poggermode_enabled'),
-                    h.S.dispatch(T.CkL.SHAKE_APP, {
+                    (0, h.GN)('poggermode_enabled'),
+                    m.S.dispatch(T.CkL.SHAKE_APP, {
                         duration: 2000,
                         intensity: null !== (t = e.shakeIntensity) && void 0 !== t ? t : r.shakeIntensity
                     });
@@ -404,7 +404,7 @@ function V(e) {
             let i = u(r.screenshakeEnabled, e.screenshakeEnabled, r.enabled, e.enabled);
             if (1 === t && i) {
                 var s;
-                h.S.dispatch(T.CkL.SHAKE_APP, {
+                m.S.dispatch(T.CkL.SHAKE_APP, {
                     duration: 1000,
                     intensity: null !== (s = e.shakeIntensity) && void 0 !== s ? s : r.shakeIntensity
                 });
@@ -430,11 +430,11 @@ function V(e) {
                     updateSettings: _
                 }),
                 (0, i.jsx)(M, { onChangePage: t }),
-                (0, i.jsx)(L, {
+                (0, i.jsx)(k, {
                     settings: r,
                     updateSettings: _
                 }),
-                (0, i.jsx)(k, {
+                (0, i.jsx)(L, {
                     settings: r,
                     updateSettings: _
                 }),
