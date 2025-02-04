@@ -43,6 +43,7 @@ var i = (function (e) {
             (e.CLIP_GALLERY_VIEWED = 'impression_clip_gallery_viewed'),
             (e.CLYDE_AI_PROFILE_EMBED_VIEWED = 'impression_clyde_ai_profile_embed_viewed'),
             (e.COLLECTIBLES_EXPIRY_MODAL = 'impression_collectibles_expiry_modal'),
+            (e.CONFETTI_POTION_MODAL = 'impression_confetti_potion_modal'),
             (e.CONTACT_SYNC_CONTACT_INVITES = 'impression_contact_sync_contact_invites'),
             (e.CONTACT_SYNC_INPUT_NAME = 'impression_contact_sync_input_name'),
             (e.CONTACT_SYNC_START = 'impression_contact_sync_start'),

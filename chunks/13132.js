@@ -1,45 +1,46 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var i = n(200651),
     r = n(481060),
     a = n(688465),
     s = n(328908),
-    o = n(921944),
-    l = n(388032),
-    u = n(9232);
-function c(e) {
+    o = n(992970),
+    l = n(921944),
+    u = n(388032),
+    c = n(9232);
+function d(e) {
     let { dismissContent: t, channelId: n } = e;
     return (0, i.jsxs)('div', {
-        className: u.upsell,
+        className: c.upsell,
         children: [
             (0, i.jsx)(r.P3F, {
-                onClick: () => t(o.L.USER_DISMISS),
-                className: u.icon,
+                onClick: () => t(l.L.USER_DISMISS),
+                className: c.icon,
                 children: (0, i.jsx)(r.Dio, { name: 'confetti' })
             }),
-            (0, i.jsx)(a.Z, { className: u.beta }),
+            (0, i.jsx)(a.Z, { className: c.beta }),
             (0, i.jsx)(r.X6q, {
                 color: 'always-white',
-                className: u.heading,
+                className: c.heading,
                 variant: 'heading-md/semibold',
-                children: l.intl.string(l.t['WsTf4+'])
+                children: u.intl.string(u.t['WsTf4+'])
             }),
             (0, i.jsx)(r.Text, {
                 color: 'always-white',
                 variant: 'text-sm/medium',
-                children: l.intl.string(l.t['7wH9GB'])
+                children: u.intl.string(u.t['7wH9GB'])
             }),
             (0, i.jsx)(r.zxk, {
                 onClick: () => {
-                    (0, s.Ne)(n), t(o.L.TAKE_ACTION);
+                    (0, s.Ne)(n, o.MG.ConfettiUpsell), t(l.L.TAKE_ACTION);
                 },
-                className: u.cta,
-                children: l.intl.string(l.t['a+udJy'])
+                className: c.cta,
+                children: u.intl.string(u.t['a+udJy'])
             }),
-            (0, i.jsx)(d, { className: u.caret })
+            (0, i.jsx)(f, { className: c.caret })
         ]
     });
 }
-function d(e) {
+function f(e) {
     let { className: t } = e;
     return (0, i.jsx)('svg', {
         className: t,

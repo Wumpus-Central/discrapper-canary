@@ -2156,6 +2156,7 @@ var T =
     (r.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED = 'collectibles_share_link_button_clicked'),
     (r.CONSUMABLE_HD_STREAMING_ENTRYPOINT = 'consumable_hd_streaming_entrypoint'),
     (r.CONFETTI_POTION_TRIGGERED = 'confetti_potion_triggered'),
+    (r.CONFETTI_POTION_ENTRYPOINT_CLICKED = 'confetti_potion_entrypoint_clicked'),
     (r.SLIDE_CAROUSEL_ITEM_VIEWED = 'slide_carousel_item_viewed'),
     (r.SLIDE_CAROUSEL_PAGINATION_CLICKED = 'slide_carousel_pagination_clicked'),
     (r.SHOP_HEADER_CAROUSEL_CTA_CLICKED = 'shop_header_carousel_cta_clicked'),

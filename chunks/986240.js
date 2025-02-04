@@ -1,39 +1,46 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var i = n(200651),
     l = n(192379),
     a = n(481060),
     s = n(980463),
     r = n(328908),
-    o = n(135793),
-    d = n(111810),
-    c = n(84040),
-    u = n(388032);
-function g(e, t) {
-    let n = (0, c.Z)(t, e),
-        g = e.hasPotions(),
-        f = (0, d.V1)('Message Context Menu'),
-        m = l.useCallback(
+    o = n(992970),
+    d = n(135793),
+    c = n(111810),
+    u = n(84040),
+    g = n(626135),
+    f = n(981631),
+    m = n(388032);
+function h(e, t) {
+    let n = (0, u.Z)(t, e),
+        h = e.hasPotions(),
+        E = (0, c.V1)('Message Context Menu'),
+        v = l.useCallback(
             (n) => {
                 try {
                     (0, s.qc)(t.id, e.id, n);
                 } catch {
-                    (0, a.showToast)((0, a.createToast)(u.intl.string(u.t.xsfC2d), a.ToastType.FAILURE));
+                    (0, a.showToast)((0, a.createToast)(m.intl.string(m.t.xsfC2d), a.ToastType.FAILURE));
                 }
             },
             [t.id, e.id]
-        );
-    return n && !g && f
+        ),
+        Z = l.useCallback(() => {
+            g.default.track(f.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: o.MG.MessageContextMenu }),
+                (0, d.s)({
+                    channelId: t.id,
+                    message: e,
+                    onRedeem: v,
+                    onClose: r.Qy,
+                    source: o.YD.MessageContextMenu
+                });
+        }, [t.id, e, v]);
+    return n && !h && E
         ? (0, i.jsx)(a.sNh, {
               id: 'add-confetti-potion',
-              label: u.intl.string(u.t.icaJW1),
+              label: m.intl.string(m.t.icaJW1),
               icon: a.l22,
-              action: () =>
-                  (0, o.s)({
-                      channelId: t.id,
-                      message: e,
-                      onRedeem: m,
-                      onClose: r.Qy
-                  })
+              action: Z
           })
         : null;
 }
