@@ -6,37 +6,34 @@ var i = n(200651),
     a = n(793030),
     o = n(442837),
     c = n(481060),
-    d = n(66511),
-    u = n(296991),
-    m = n(999382),
-    h = n(217472),
+    d = n(296991),
+    u = n(999382),
+    m = n(217472),
+    h = n(651390),
     g = n(981631),
     x = n(388032),
     p = n(457255);
 function _(e) {
     let { requireTerms: t, rules: n } = e,
-        l = (0, o.e7)([m.Z], () => m.Z.getProps().guild),
+        l = (0, o.e7)([u.Z], () => u.Z.getProps().guild),
         _ = null == l ? void 0 : l.id,
-        C = r.useCallback(() => {
-            null != _ && d.Z.openMemberVerificationPreviewModal(_);
-        }, [_]),
-        f = r.useCallback(
+        C = r.useCallback(
             (e) => {
                 if (null == _ || null == n) return null;
-                h.Z.setPendingInviteRules(_, e, [...n]);
+                m.Z.setPendingInviteRules(_, e, [...n]);
             },
             [_, n]
         ),
-        v = r.useCallback(
+        f = r.useCallback(
             (e) => {
                 if (null == _) return null;
-                h.Z.setPendingInviteRules(_, t, e);
+                m.Z.setPendingInviteRules(_, t, e);
             },
             [_, t]
         );
     if (null == l) return null;
     if (null == n) return (0, i.jsx)(c.$jN, {});
-    let N = !l.hasFeature(g.oNc.CLAN);
+    let v = !l.hasFeature(g.oNc.CLAN);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -59,20 +56,14 @@ function _(e) {
                             })
                         ]
                     }),
-                    N &&
+                    v &&
                         (0, i.jsx)(c.rsf, {
-                            onChange: f,
+                            onChange: C,
                             checked: t
                         })
                 ]
             }),
-            t &&
-                (0, i.jsx)(c.Qjf, {
-                    text: x.intl.string(x.t.SKNnqq),
-                    icon: c.rgF,
-                    variant: 'primary',
-                    onClick: C
-                }),
+            t && (0, i.jsx)(h.c, { guildId: l.id }),
             (0, i.jsx)('div', {
                 className: s()(p.rules, { [p.disabled]: !t }),
                 children: (0, i.jsxs)('div', {
@@ -84,10 +75,10 @@ function _(e) {
                             className: p.rulesHeader,
                             children: x.intl.string(x.t.XcAzbm)
                         }),
-                        (0, i.jsx)(u.k, {
+                        (0, i.jsx)(d.k, {
                             guild: l,
                             rules: n,
-                            setRules: v
+                            setRules: f
                         })
                     ]
                 })
