@@ -23,6 +23,7 @@ let r = {
     COUNTRY_STATES: {
         US: new Set(['AA', 'AE', 'AK', 'AL', 'AP', 'AR', 'AS', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'FM', 'GA', 'GU', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MH', 'MI', 'MN', 'MO', 'MP', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'PR', 'PW', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VI', 'VT', 'WA', 'WI', 'WV', 'WY'])
     },
+    NON_AD_SERVING_COUNTRIES: new Set(['RU', 'TR']),
     TAX_EXCLUSIVE: new Set(['CA', 'US']),
     NITRO_TAX_EXCLUSIVE_COUNTRIES: new Set(['CA', 'KR', 'US']),
     TAX_ADDRESS_REQUIRE_POSTAL_CODE: new Set(['CA', 'US']),
