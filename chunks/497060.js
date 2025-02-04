@@ -1,6 +1,7 @@
 n.d(t, {
     k6: () => s,
-    kH: () => o
+    kH: () => l,
+    pB: () => o
 });
 var i = n(818083);
 let r = (0, i.B)({
@@ -58,7 +59,8 @@ let r = (0, i.B)({
         ]
     }),
     s = (e) => 2 === r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).bucket || 2 === a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).bucket,
-    o = (e) => {
+    o = (e) => 1 === r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).bucket || 1 === a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).bucket,
+    l = (e) => {
         let t = r.useExperiment({ location: e }, { autoTrackExposure: !1 }).bucket,
             n = a.useExperiment({ location: e }, { autoTrackExposure: !1 }).bucket;
         return 2 === t || 2 === n;

@@ -873,6 +873,7 @@ B(
                 since: e.since,
                 nickname: e.nickname,
                 isSpamRequest: e.is_spam_request || !1,
+                isStrangerRequest: e.is_stranger_request || !1,
                 userIgnored: e.user_ignored || !1,
                 originApplicationId: e.origin_application_id
             },
@@ -895,6 +896,7 @@ B(
                 nickname: e.nickname,
                 since: e.since,
                 isSpamRequest: e.is_spam_request || !1,
+                isStrangerRequest: e.is_stranger_request || !1,
                 userIgnored: e.user_ignored || !1,
                 originApplicationId: e.origin_application_id
             }

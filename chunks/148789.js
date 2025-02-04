@@ -1,11 +1,12 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var i = n(200651),
     l = n(192379),
     a = n(481060),
     r = n(194359),
-    s = n(388032),
-    o = n(586210);
-function c(e) {
+    s = n(298213),
+    o = n(388032),
+    c = n(586210);
+function d(e) {
     let { userId: t } = e,
         n = l.useCallback(
             (e) => {
@@ -13,29 +14,33 @@ function c(e) {
             },
             [t]
         ),
-        c = l.useCallback(
+        d = l.useCallback(
             (e) => {
-                e.stopPropagation(), r.Z.addRelationship({ userId: t });
+                e.stopPropagation(),
+                    s.Z.maybeConfirmFriendRequestAccept({
+                        userId: t,
+                        location: 'ActionButtonFriendRequest'
+                    });
             },
             [t]
         );
     return (0, i.jsxs)('div', {
-        className: o.friendRequestContainer,
+        className: c.friendRequestContainer,
         children: [
             (0, i.jsx)(a.zxk, {
-                className: o.acceptButton,
+                className: c.acceptButton,
                 look: a.zxk.Looks.FILLED,
                 color: a.zxk.Colors.GREEN,
                 size: a.zxk.Sizes.NONE,
-                onClick: c,
+                onClick: d,
                 children: (0, i.jsx)(a.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
-                    children: s.intl.string(s.t.ZcibdX)
+                    children: o.intl.string(o.t.ZcibdX)
                 })
             }),
             (0, i.jsx)(a.zxk, {
-                className: o.ignoreButton,
+                className: c.ignoreButton,
                 look: a.zxk.Looks.FILLED,
                 color: a.zxk.Colors.PRIMARY,
                 size: a.zxk.Sizes.NONE,
@@ -43,7 +48,7 @@ function c(e) {
                 children: (0, i.jsx)(a.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
-                    children: s.intl.string(s.t.xuio0N)
+                    children: o.intl.string(o.t.xuio0N)
                 })
             })
         ]
