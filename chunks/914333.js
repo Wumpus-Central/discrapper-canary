@@ -8,6 +8,7 @@ e.exports = {
     itemContainer: 'itemContainer__675e5',
     clickable: 'clickable__675e5',
     disabledClickable: 'disabledClickable__675e5',
+    plusIcon: 'plusIcon__675e5',
     spinner: 'spinner__675e5',
     spinnerInnerRunning: 'spinnerInnerRunning__675e5'
 };
