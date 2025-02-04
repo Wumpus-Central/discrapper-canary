@@ -160,5 +160,7 @@ function C(e, t) {
             return g.intl.string(g.t.WjNAAA);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_LOCATION_TYPE:
             return g.intl.string(g.t.PtobXV);
+        case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION:
+            return g.intl.string(g.t.PrHIMz);
     }
 }
