@@ -18,6 +18,7 @@ function o(e, t) {
                 case s.oC.CUSTOMIZE_COMMUNITY:
                 case s.oC.MEMBER_SAFETY:
                 case s.oC.GUILD_ONBOARDING:
+                case s.oC.GUILD_BOOSTS:
                     return;
             }
             let c = null !== (l = null === (o = i.Z.getChannel(u)) || void 0 === o ? void 0 : o.type) && void 0 !== l ? l : a.d4z.UNKNOWN;

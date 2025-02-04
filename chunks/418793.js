@@ -48,6 +48,7 @@ let s = (e) => {
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
+                    orbQuantity: e.orb_quantity,
                     ...t
                 };
             case i.w.FRACTIONAL_PREMIUM:
