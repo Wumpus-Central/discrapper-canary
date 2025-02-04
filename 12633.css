@@ -44960,6 +44960,10 @@ img.thumbnail__0f2e8 {
     color: var(--interactive-active)
 }
 
+.iconDisabled__9293f {
+    opacity: .6
+}
+
 .visual-refresh .icon__9293f {
     color: var(--channel-icon)
 }
