@@ -81,16 +81,17 @@ class b extends (i = s.ZP.Store) {
         return null == i ? void 0 : i.url;
     }
     shouldFetchPreview(e, t, n) {
-        let i = (0, l.V9)({
+        var i;
+        let r = (0, l.V9)({
                 streamType: null != e ? u.lo.GUILD : u.lo.CALL,
                 guildId: e,
                 channelId: t,
                 ownerId: n
             }),
-            r = p[i],
-            a = h[i],
-            s = null != r && Date.now() > r.expires;
-        return ((null == r && a < _) || s) && !m.has(i);
+            a = p[r],
+            s = null !== (i = h[r]) && void 0 !== i ? i : 0,
+            o = null != a && Date.now() > a.expires;
+        return ((null == a && s < _) || o) && !m.has(r);
     }
     getPreviewURLForStreamKey(e) {
         let { guildId: t, channelId: n, ownerId: i } = (0, l.my)(e);
