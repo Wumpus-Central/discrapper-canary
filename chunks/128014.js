@@ -2,6 +2,6 @@ n.d(t, { b: () => r });
 var i = n(960048);
 function r() {
     var e;
-    let t = parseInt(((e = '365325'), '365325'));
-    return Number.isNaN(t) && (i.Z.captureMessage('Trying to open a changelog for an invalid build number '.concat('365325')), (t = 0)), t;
+    let t = parseInt(((e = '365386'), '365386'));
+    return Number.isNaN(t) && (i.Z.captureMessage('Trying to open a changelog for an invalid build number '.concat('365386')), (t = 0)), t;
 }

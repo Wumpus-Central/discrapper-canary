@@ -134,7 +134,7 @@ function P(e) {
                     S.Z,
                     {
                         disabled: P,
-                        channelId: M.id
+                        channel: M
                     },
                     'confetti'
                 )

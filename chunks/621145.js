@@ -1,4 +1,4 @@
-t.d(i, { Z: () => b }), t(47120), t(773603);
+t.d(i, { Z: () => P }), t(47120), t(773603);
 var n = t(200651),
     a = t(192379),
     l = t(392711),
@@ -7,25 +7,25 @@ var n = t(200651),
     r = t(640108),
     c = t(406432),
     d = t(169525),
-    u = t(786761),
-    m = t(499376),
+    m = t(786761),
+    u = t(499376),
     h = t(3148),
     p = t(492593),
     x = t(219797),
     f = t(524444),
     g = t(884182),
     v = t(25015),
-    _ = t(963550),
-    j = t(845080),
-    E = t(594174),
+    j = t(963550),
+    E = t(845080),
+    _ = t(594174),
     C = t(956664),
     N = t(709054),
     y = t(236289),
     A = t(788080),
     T = t(800530),
     w = t(981631),
-    k = t(217702),
-    I = t(453486);
+    I = t(217702),
+    k = t(453486);
 let L = (e, i, t, n) => {
         let a = e.attachments.map((e) => {
             var t, n, a, l;
@@ -43,7 +43,7 @@ let L = (e, i, t, n) => {
                   }
                 : s;
         });
-        return (0, u.e5)({
+        return (0, m.e5)({
             ...(0, h.ZP)({
                 author:
                     null != t
@@ -115,13 +115,13 @@ let L = (e, i, t, n) => {
             return (0, d.dn)(e.originalItem, i);
         }
         return (0, n.jsx)('div', {
-            className: I.classificationEvidenceMessageAttachment,
+            className: k.classificationEvidenceMessageAttachment,
             children: (0, n.jsx)(g.Z, {
                 items: t.map((e) => ({
                     item: {
                         uniqueId: e.id,
                         originalItem: e,
-                        type: (0, m.aw)(e, !0),
+                        type: (0, u.aw)(e, !0),
                         downloadUrl: e.proxy_url,
                         height: e.height,
                         width: e.width,
@@ -129,7 +129,7 @@ let L = (e, i, t, n) => {
                         contentType: e.content_type
                     },
                     message: i,
-                    mediaLayoutType: k.hV.MOSAIC,
+                    mediaLayoutType: I.hV.MOSAIC,
                     autoPlayGif: !1,
                     canRemoveItem: !1,
                     isSingleMosaicItem: s,
@@ -152,12 +152,12 @@ let L = (e, i, t, n) => {
             })
         });
     };
-function b(e) {
+function P(e) {
     var i;
     let { flaggedContent: t } = e,
-        l = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
+        l = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         [r, d] = a.useState({}),
-        [u, m] = a.useState(!0),
+        [m, u] = a.useState(!0),
         h = (0, s.e7)([y.Z], () => y.Z.getUsername()),
         x = t[0],
         f = L(x, r, l, h),
@@ -210,17 +210,17 @@ function b(e) {
                         }))
                     )
                 )
-        ).finally(() => m(!1));
+        ).finally(() => u(!1));
     }, [x.attachments]),
     '' === f.content && 0 === f.attachments.length)
         ? null
         : (0, n.jsx)('div', {
-              className: I.classificationEvidenceCard,
-              children: u
+              className: k.classificationEvidenceCard,
+              children: m
                   ? (0, n.jsx)(o.$jN, {})
                   : (0, n.jsx)(p.Z, {
                         compact: !1,
-                        childrenHeader: (0, j.Z)({
+                        childrenHeader: (0, E.Z)({
                             author: {
                                 ...l,
                                 colorString: '',
@@ -236,7 +236,7 @@ function b(e) {
                             hideTimestamp: !1
                         }),
                         childrenAccessories: (0, n.jsx)(S, { message: f }),
-                        childrenMessageContent: (0, _.Z)({ message: f }, g.content),
+                        childrenMessageContent: (0, j.Z)({ message: f }, g.content),
                         hasThread: !1,
                         hasReply: !1
                     })
