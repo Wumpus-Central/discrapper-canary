@@ -35064,6 +35064,33 @@ html:not(.visual-refresh-chat-input) .inner_a99829 {
     white-space: pre-wrap
 }
 
+.visual-refresh .after_inlineCode_ada32f,
+.visual-refresh .before_inlineCode_ada32f,
+.visual-refresh .inlineCode_ada32f {
+    box-sizing: border-box;
+    background: var(--background-code);
+    border: 1px solid var(--border-faint);
+    padding: 0;
+    margin: 0
+}
+
+.visual-refresh .before_inlineCode_ada32f {
+    border-right: none;
+    border-top-left-radius: var(--radius-xs);
+    border-bottom-left-radius: var(--radius-xs)
+}
+
+.visual-refresh .after_inlineCode_ada32f {
+    border-left: none;
+    border-top-right-radius: var(--radius-xs);
+    border-bottom-right-radius: var(--radius-xs)
+}
+
+.visual-refresh .inlineCode_ada32f {
+    border-left: none;
+    border-right: none
+}
+
 .spoiler_ada32f {
     padding: 0 .2em
 }
