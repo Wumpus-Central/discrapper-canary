@@ -34,6 +34,7 @@ let p = (e) => {
                         title: h.intl.string(h.t.DT39Aw),
                         body: l,
                         confirmText: h.intl.string(h.t.xUqheH),
+                        confirmColor: a.Ttl.RED,
                         cancelText: h.intl.string(h.t['ETE/oK']),
                         onConfirm: t,
                         ...e
