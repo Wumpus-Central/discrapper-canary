@@ -20,9 +20,9 @@ let v = (0, c.B)(function (e) {
             let e = u.ZP.getDirectoryChannelIds(t.id);
             return 0 === e.length ? null : d.Z.getChannel(e[0]);
         }),
-        E = (0, o.e7)([d.Z], () => d.Z.getChannel(null == N ? void 0 : N.parent_id)),
-        j = r === (null == N ? void 0 : N.id),
-        y = (0, o.e7)([h.Z], () => (null != E ? h.Z.can(g.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
+        j = (0, o.e7)([d.Z], () => d.Z.getChannel(null == N ? void 0 : N.parent_id)),
+        E = r === (null == N ? void 0 : N.id),
+        y = (0, o.e7)([h.Z], () => (null != j ? h.Z.can(g.Plq.MANAGE_CHANNELS, j) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
         P = l.useCallback(
             (e) => {
                 null != N &&
@@ -38,19 +38,19 @@ let v = (0, c.B)(function (e) {
             [N]
         );
     if (null == N) return null;
-    let A = (0, p.jo)(c, Z),
-        T = (0, p.CN)(N, x, C),
+    let T = (0, p.jo)(c, Z),
+        A = (0, p.CN)(N, x, C),
         w = (0, i.jsx)('div', {
-            className: a()(A, {
-                [_.disabled]: T,
-                [_.selected]: j
+            className: a()(T, {
+                [_.disabled]: A,
+                [_.selected]: E
             }),
             'data-dnd-name': N.name,
             children: (0, i.jsxs)(m.Z, {
                 className: _.iconVisibility,
                 channel: N,
                 guild: t,
-                selected: j,
+                selected: E,
                 onContextMenu: P,
                 forceInteractable: !0,
                 resolvedUnreadSetting: f.i.ONLY_MENTIONS,

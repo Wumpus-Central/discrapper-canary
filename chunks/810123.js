@@ -1,62 +1,62 @@
 n.d(t, {
-    E: () => d,
-    Z: () => f
+    E: () => c,
+    Z: () => A
 });
-var l,
-    i = n(200651),
-    a = n(120356),
-    s = n.n(a),
-    r = n(468194),
+var r,
+    l = n(200651),
+    i = n(120356),
+    a = n.n(i),
+    s = n(468194),
     o = n(471445),
-    c = n(686546),
+    E = n(686546),
     u = n(311533),
-    d = (((l = {}).SMALL_32 = 'SMALL_32'), l);
+    c = (((r = {}).SMALL_32 = 'SMALL_32'), r);
 let _ = { SMALL_32: 24 },
-    h = {
+    d = {
         SMALL_32: [13, 11, 10, 10, 10, 10, 10]
     },
-    f = function (e) {
+    A = function (e) {
         var t;
-        let { className: n, iconClassName: l, size: a, channel: d, guild: f, locked: g, hasActiveThreads: m } = e;
-        if (null == f) return null;
-        let E = f.getIconURL(48),
-            p = h[a],
-            I = _[a],
-            A = (0, o.KS)(d, f, {
-                locked: g,
-                hasActiveThreads: m
-            });
+        let { className: n, iconClassName: r, size: i, channel: c, guild: A, locked: T, hasActiveThreads: I } = e;
         if (null == A) return null;
-        let S = (0, r.Zg)(null !== (t = null == f ? void 0 : f.toString()) && void 0 !== t ? t : null);
-        return (0, i.jsxs)('div', {
+        let N = A.getIconURL(48),
+            g = d[i],
+            O = _[i],
+            S = (0, o.KS)(c, A, {
+                locked: T,
+                hasActiveThreads: I
+            });
+        if (null == S) return null;
+        let R = (0, s.Zg)(null !== (t = null == A ? void 0 : A.toString()) && void 0 !== t ? t : null);
+        return (0, l.jsxs)('div', {
             role: 'img',
             className: n,
             children: [
-                (0, i.jsx)(c.ZP, {
-                    mask: c.QS.GUILD_ICON_WITH_CHANNEL_TYPE,
+                (0, l.jsx)(E.ZP, {
+                    mask: E.QS.GUILD_ICON_WITH_CHANNEL_TYPE,
                     children:
-                        null != E
-                            ? (0, i.jsx)('img', {
+                        null != N
+                            ? (0, l.jsx)('img', {
                                   alt: '',
-                                  src: E,
+                                  src: N,
                                   className: u.channelGuildIcon,
                                   style: {
-                                      width: I,
-                                      height: I
+                                      width: O,
+                                      height: O
                                   }
                               })
-                            : (0, i.jsx)('div', {
-                                  className: s()(u.channelGuildIcon, u.acronym),
+                            : (0, l.jsx)('div', {
+                                  className: a()(u.channelGuildIcon, u.acronym),
                                   style: {
-                                      fontSize: S.length - 1 > p.length ? p[p.length - 1] : p[S.length - 1],
-                                      width: I,
-                                      height: I
+                                      fontSize: R.length - 1 > g.length ? g[g.length - 1] : g[R.length - 1],
+                                      width: O,
+                                      height: O
                                   },
-                                  children: S
+                                  children: R
                               })
                 }),
-                (0, i.jsx)(A, {
-                    className: s()(u.icon, u.iconWithGuildIcon, l),
+                (0, l.jsx)(S, {
+                    className: a()(u.icon, u.iconWithGuildIcon, r),
                     color: 'currentColor'
                 })
             ]

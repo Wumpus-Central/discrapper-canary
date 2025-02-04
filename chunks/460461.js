@@ -136,7 +136,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
         let W = (e) => {
                 v.Z.updateGuild({ discoverySplash: e });
             },
-            K = (e) => {
+            Y = (e) => {
                 (0, h.W1)(n.id, e),
                     e
                         ? (0, h.Vv)({
@@ -168,7 +168,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                         description: n.description
                     });
             },
-            Y = (e, t) => {
+            K = (e, t) => {
                 let i = [...D.socialLinks],
                     r = [...B],
                     l = [...k];
@@ -190,11 +190,11 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                 let l = [...D.socialLinks];
                 l.splice(e, 1), (0, h.t$)(n.id, l);
             },
-            Q = (e) => {
+            J = (e) => {
                 let { reason: t = '', emoji_name: n = '' } = e;
                 return null !== t && t.length >= 10 && t.length <= 128 && null !== n;
             },
-            J = (e) => {
+            Q = (e) => {
                 let { reason: t = '', emoji_name: n = '' } = e;
                 return (null === t || '' === t) && null === n;
             },
@@ -216,7 +216,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                         },
                         {
                             description: S.intl.string(S.t.qpx5MD),
-                            completed: null !== D.reasonsToJoin && D.reasonsToJoin.every((e) => J(e) || Q(e)) && D.reasonsToJoin.filter(Q).length >= 2
+                            completed: null !== D.reasonsToJoin && D.reasonsToJoin.every((e) => Q(e) || J(e)) && D.reasonsToJoin.filter(J).length >= 2
                         }
                     ]
                 }
@@ -516,7 +516,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                                 options: z(B[t]),
                                                                                 placeholder: S.intl.string(S.t.xSALIC),
                                                                                 value: B[t],
-                                                                                onChange: (e) => Y(e, t),
+                                                                                onChange: (e) => K(e, t),
                                                                                 isDisabled: !A
                                                                             },
                                                                             'dropdown-' + t
@@ -610,7 +610,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                 (0, i.jsx)(a.zxk, {
                                                                     size: a.zxk.Sizes.SMALL,
                                                                     color: a.zxk.Colors.RED,
-                                                                    onClick: () => K(!1),
+                                                                    onClick: () => Y(!1),
                                                                     disabled: !A,
                                                                     children: S.intl.string(S.t['DCHd/P'])
                                                                 })
@@ -634,7 +634,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                 title: S.intl.string(S.t['2kCyn5']),
                                                 children: $,
                                                 buttonLabel: S.intl.string(S.t.tVK6S0),
-                                                buttonCallback: () => K(!0),
+                                                buttonCallback: () => Y(!0),
                                                 disabled: !A || !w
                                             })
                                         })

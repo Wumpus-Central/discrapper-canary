@@ -186,7 +186,7 @@ let P = (e) => {
         var l, i;
         let { verificationForm: t, headerId: o, guildId: y, onClose: Z, onComplete: T, isPreview: S = !1 } = e,
             M = null == t ? void 0 : t.guild,
-            L = (0, k.N0)(y, M),
+            L = (0, k.N0)(y, M, S),
             O = null == t ? void 0 : t.formFields.some((e) => e.field_type !== b.QJ.TERMS),
             _ = (0, a.e7)([j.default], () => j.default.getCurrentUser()),
             D = null == _ ? void 0 : _.verified,

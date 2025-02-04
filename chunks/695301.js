@@ -25,18 +25,18 @@ let _ = l.memo(function (e) {
         {
             badge: S,
             unread: N,
-            isMentionLowImportance: E
+            isMentionLowImportance: j
         } = (0, r.cj)([u.default], () => ({
             badge: u.default.getMentionCount(_),
             isMentionLowImportance: u.default.getIsMentionLowImportance(_),
             unread: u.default.hasUnread(_)
         })),
-        j = (0, s.I)(v) && 0 === S,
+        E = (0, s.I)(v) && 0 === S,
         y = l.useMemo(
             () =>
                 null != n
                     ? n
-                    : j
+                    : E
                       ? (0, i.jsx)('div', {
                             className: f.pauseBackground,
                             children: (0, i.jsx)(a.fpf, {
@@ -48,7 +48,7 @@ let _ = l.memo(function (e) {
                             })
                         })
                       : null,
-            [n, j]
+            [n, E]
         );
     return (0, i.jsx)(g.Z, {
         ...e,
@@ -57,7 +57,7 @@ let _ = l.memo(function (e) {
         animatable: C,
         selected: I === _,
         badge: S,
-        isMentionLowImportance: E,
+        isMentionLowImportance: j,
         lowerBadge: y,
         unread: N,
         mediaState: b,

@@ -22,8 +22,8 @@ var i = n(200651),
     b = n(543432),
     S = n(981631),
     N = n(388032),
-    E = n(684393),
-    j = n(738523);
+    j = n(684393),
+    E = n(738523);
 function y(e) {
     var t, r;
     let { channel: a, guild: p, onAction: m, voiceStates: g, isChannelSelected: _, shouldShowSettingNudge: x } = e;
@@ -48,14 +48,14 @@ function y(e) {
     let Z = (0, d.ZP)(a),
         I = Array.from((0, d.uF)(Z).values()),
         b = null !== (t = null == g ? void 0 : g.filter(v.lm)) && void 0 !== t ? t : [],
-        j = (e) => (t) => ([S.IIU.PLAYING, S.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === S.IIU.LISTENING,
+        E = (e) => (t) => ([S.IIU.PLAYING, S.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === S.IIU.LISTENING,
         y = (0, o.e7)(
             [f.Z],
             () => {
                 let e = {};
                 return (
                     b.forEach((t) => {
-                        let n = f.Z.findActivity(t.user.id, j(t));
+                        let n = f.Z.findActivity(t.user.id, E(t));
                         if (null != n && !(0, h.Z)(n)) {
                             var i, l, r, a;
                             let o = ''.concat(null !== (l = n.application_id) && void 0 !== l ? l : '', ':').concat(null !== (r = null === (i = n.party) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.user.id),
@@ -78,14 +78,14 @@ function y(e) {
     return y.length + I.length === 0
         ? null
         : (0, i.jsxs)(s.Ttm, {
-              className: E.container,
+              className: j.container,
               children: [
                   (0, i.jsx)(P, {
                       channel: a,
                       isChannelSelected: _,
                       voiceStatesCount: null !== (r = null == g ? void 0 : g.length) && void 0 !== r ? r : 0
                   }),
-                  (0, i.jsx)('div', { className: E.headerDivider }),
+                  (0, i.jsx)('div', { className: j.headerDivider }),
                   I.map((e, t) => {
                       var n;
                       return (0, i.jsx)(
@@ -115,9 +115,9 @@ function y(e) {
                   x &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)('div', { className: E.headerDivider }),
+                              (0, i.jsx)('div', { className: j.headerDivider }),
                               (0, i.jsx)('div', {
-                                  className: E.settingNudgeText,
+                                  className: j.settingNudgeText,
                                   children: (0, i.jsx)(s.Text, {
                                       variant: 'text-xs/normal',
                                       tag: 'span',
@@ -154,7 +154,7 @@ function P(e) {
     return null == (0, p.KS)(t, d)
         ? null
         : (0, i.jsxs)('div', {
-              className: a()(E.popoutHeaderContainer, j.popoutHeaderContainer),
+              className: a()(j.popoutHeaderContainer, E.popoutHeaderContainer),
               children: [
                   (0, i.jsx)(Z.Z, { channel: t }),
                   c

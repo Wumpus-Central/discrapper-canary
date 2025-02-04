@@ -1,52 +1,52 @@
-t.d(n, {
-    Z: () => p,
-    t: () => u
+n.d(t, {
+    Z: () => A,
+    t: () => c
 });
-var o,
-    r,
+var r,
+    l,
     i,
-    a = t(392711),
-    l = t.n(a),
-    s = t(442837),
-    c = t(570140),
-    d = t(246364);
-let u = {
+    a = n(392711),
+    s = n.n(a),
+    o = n(442837),
+    E = n(570140),
+    u = n(246364);
+let c = {
         version: '',
         description: '',
         formFields: []
     },
     _ = {};
-class m extends (i = s.ZP.Store) {
+class d extends (i = o.ZP.Store) {
     get(e) {
         if (null != e) return _[e];
     }
     getRulesPrompt(e) {
-        var n;
-        return l().find(null === (n = _[e]) || void 0 === n ? void 0 : n.formFields, d.J);
+        var t;
+        return s().find(null === (t = _[e]) || void 0 === t ? void 0 : t.formFields, u.J);
     }
 }
-(r = 'MemberVerificationFormStore'),
-    (o = 'displayName') in m
-        ? Object.defineProperty(m, o, {
-              value: r,
+(l = 'MemberVerificationFormStore'),
+    (r = 'displayName') in d
+        ? Object.defineProperty(d, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (m[o] = r);
-let p = new m(c.Z, {
+        : (d[r] = l);
+let A = new d(E.Z, {
     INVITE_ACCEPT_SUCCESS: function (e) {
-        let { invite: n } = e,
-            { member_verification_form: t } = n,
-            { guild: o } = n;
-        if (null != o && null != t) {
-            var r;
+        let { invite: t } = e,
+            { member_verification_form: n } = t,
+            { guild: r } = t;
+        if (null != r && null != n) {
+            var l;
             return (
-                (_[o.id] = {
-                    version: t.version,
-                    description: null !== (r = t.description) && void 0 !== r ? r : '',
-                    formFields: t.form_fields,
-                    guild: o
+                (_[r.id] = {
+                    version: n.version,
+                    description: null !== (l = n.description) && void 0 !== l ? l : '',
+                    formFields: n.form_fields,
+                    guild: r
                 }),
                 !0
             );
@@ -54,24 +54,24 @@ let p = new m(c.Z, {
         return !1;
     },
     MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
-        let { form: n, guildId: t } = e;
-        if (null == n) _[t] = u;
+        let { form: t, guildId: n } = e;
+        if (null == t) _[n] = c;
         else {
-            var o;
-            let e = null !== (o = _[t]) && void 0 !== o ? o : u;
-            _[t] = {
+            var r;
+            let e = null !== (r = _[n]) && void 0 !== r ? r : c;
+            _[n] = {
                 ...e,
-                ...n
+                ...t
             };
         }
     },
     MEMBER_VERIFICATION_FORM_FETCH_FAIL: function (e) {
-        var n;
-        let { guildId: t } = e;
-        _[t] = null !== (n = _[t]) && void 0 !== n ? n : u;
+        var t;
+        let { guildId: n } = e;
+        _[n] = null !== (t = _[n]) && void 0 !== t ? t : c;
     },
     GUILD_DELETE: function (e) {
-        let { guild: n } = e;
-        delete _[null == n ? void 0 : n.id];
+        let { guild: t } = e;
+        delete _[null == t ? void 0 : t.id];
     }
 });

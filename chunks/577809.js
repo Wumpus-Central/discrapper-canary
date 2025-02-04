@@ -147,7 +147,7 @@ let T = (e) => {
     _ = (e) => {
         var l, t, a;
         let { verificationForm: C, headerId: S, guildId: O, onClose: y, onComplete: _, isPreview: k = !1 } = e,
-            w = (0, I.N0)(O, null == C ? void 0 : C.guild),
+            w = (0, I.N0)(O, null == C ? void 0 : C.guild, k),
             L = null == C ? void 0 : C.formFields.some((e) => e.field_type !== N.QJ.TERMS),
             [P, J] = n.useState(null !== (a = null == C ? void 0 : C.formFields) && void 0 !== a ? a : []),
             [Z, D] = n.useState(!1),

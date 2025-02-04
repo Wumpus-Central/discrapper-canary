@@ -22,13 +22,13 @@ var i = n(200651),
     b = n(388032),
     S = n(61260),
     N = n(204794);
-let E = {
+let j = {
         topLeftDark: 'rgba(62, 22, 137, 0.8)',
         topRightDark: 'rgba(160, 86, 242, 0.4)',
         topLeftLight: 'rgba(159, 86, 242, 0.4)',
         topRightLight: 'rgba(222, 194, 252, 0.5)'
     },
-    j = (e) => {
+    E = (e) => {
         let { closePopout: t, setToggleDefaultState: n } = e,
             { analyticsLocations: l } = (0, h.ZP)(u.Z.SHARING_CONTROLS_COACHMARK),
             a = (0, d.ZP)(),
@@ -39,7 +39,7 @@ let E = {
             children: [
                 (0, i.jsx)('div', {
                     className: S.gradient,
-                    style: { background: 'radial-gradient(75% 75% at 0% 0%, '.concat((0, o.wj)(a) ? E.topLeftDark : E.topLeftLight, ' 0%, transparent 100%),\n    radial-gradient(70% 50% at 100% 0%, ').concat((0, o.wj)(a) ? E.topRightDark : E.topRightLight, ' 0%, transparent 100%)') }
+                    style: { background: 'radial-gradient(75% 75% at 0% 0%, '.concat((0, o.wj)(a) ? j.topLeftDark : j.topLeftLight, ' 0%, transparent 100%),\n    radial-gradient(70% 50% at 100% 0%, ').concat((0, o.wj)(a) ? j.topRightDark : j.topRightLight, ' 0%, transparent 100%)') }
                 }),
                 (0, i.jsxs)('div', {
                     className: S.content,
@@ -128,7 +128,7 @@ let E = {
                                 },
                                 renderPopout: (e) => {
                                     let { closePopout: t } = e;
-                                    return (0, i.jsx)(j, {
+                                    return (0, i.jsx)(E, {
                                         closePopout: t,
                                         setToggleDefaultState: h
                                     });

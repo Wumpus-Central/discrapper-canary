@@ -48,12 +48,12 @@ var i = n(200651),
     H = n(709586),
     V = n(768581),
     W = n(630388),
-    K = n(823379),
-    Y = n(63063),
+    Y = n(823379),
+    K = n(63063),
     q = n(434404),
     X = n(999382),
-    Q = n(203377),
-    J = n(981631),
+    J = n(203377),
+    Q = n(981631),
     $ = n(30513),
     ee = n(486324),
     et = n(200299),
@@ -105,7 +105,7 @@ function ep(e) {
 }
 let e_ = () => {
     let { guild: e, originalGuild: t, submitting: n, errors: l } = (0, u.cj)([X.Z], () => X.Z.getProps()),
-        s = r.useMemo(() => (0, Q.LG)(l), [l]),
+        s = r.useMemo(() => (0, J.LG)(l), [l]),
         a = r.useCallback(() => {
             if (null == e) return;
             let n = {
@@ -127,7 +127,7 @@ let e_ = () => {
                 homeHeader: e.homeHeader,
                 profile: e.profile
             };
-            (0, K.OL)(new Set(e.features), new Set(t.features)) || (n.features = e.features), q.Z.saveGuild(e.id, n);
+            (0, Y.OL)(new Set(e.features), new Set(t.features)) || (n.features = e.features), q.Z.saveGuild(e.id, n);
         }, [e, t]),
         o = r.useCallback(() => {
             null != e && q.Z.init(e.id);
@@ -141,13 +141,13 @@ let e_ = () => {
 };
 class eC extends r.PureComponent {
     componentDidMount() {
-        if (this.props.subsection === J.KsC.DISPLAY && null != this._displaySectionRef.current) {
+        if (this.props.subsection === Q.KsC.DISPLAY && null != this._displaySectionRef.current) {
             let e = this._displaySectionRef.current;
             setTimeout(() => e.scrollIntoView(), 0);
-        } else if (this.props.subsection === J.KsC.INVITE && null != this._inviteSectionRef.current) {
+        } else if (this.props.subsection === Q.KsC.INVITE && null != this._inviteSectionRef.current) {
             let e = this._inviteSectionRef.current;
             setTimeout(() => e.scrollIntoView(), 0);
-        } else if (this.props.subsection === J.KsC.DEFAULT_NOTIFICATIONS && null != this._notificationSectionRef.current) {
+        } else if (this.props.subsection === Q.KsC.DEFAULT_NOTIFICATIONS && null != this._notificationSectionRef.current) {
             let e = this._notificationSectionRef.current;
             setTimeout(() => e.scrollIntoView(), 0);
         }
@@ -299,7 +299,7 @@ class eC extends r.PureComponent {
             o = d()(r)
                 .filter((e) => {
                     let { channel: t } = e;
-                    return t.type === J.d4z.GUILD_VOICE;
+                    return t.type === Q.d4z.GUILD_VOICE;
                 })
                 .map((e) => {
                     let { channel: t } = e;
@@ -360,7 +360,7 @@ class eC extends r.PureComponent {
             o = d()(n)
                 .filter((e) => {
                     let { channel: t } = e;
-                    return t.type === J.d4z.GUILD_TEXT;
+                    return t.type === Q.d4z.GUILD_TEXT;
                 })
                 .map((e) => {
                     let { channel: t } = e;
@@ -372,8 +372,8 @@ class eC extends r.PureComponent {
             label: en.intl.string(en.t.ibUhoa)
         });
         let c = (0, A.eI)(t),
-            u = c || (0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
-            m = c || (0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
+            u = c || (0, W.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
+            m = c || (0, W.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
         return (0, i.jsxs)(g.hjN, {
             className: ei.divider,
             children: [
@@ -394,7 +394,7 @@ class eC extends r.PureComponent {
                 (0, i.jsx)(g.j7V, {
                     className: ei.marginTop20,
                     onChange: this.handleShowJoinsChange,
-                    value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_JOIN_NOTIFICATIONS),
+                    value: !(0, W.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_JOIN_NOTIFICATIONS),
                     hideBorder: !0,
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['+f0bXV'])
@@ -402,7 +402,7 @@ class eC extends r.PureComponent {
                 (0, i.jsx)(g.j7V, {
                     className: s()(ei.__invalid_marginReset, ei.marginTop20),
                     onChange: this.handleShowJoinRepliesChange,
-                    value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
+                    value: !(0, W.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
                     hideBorder: !0,
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['72k7jY'])
@@ -410,7 +410,7 @@ class eC extends r.PureComponent {
                 (0, i.jsx)(g.j7V, {
                     className: s()(ei.__invalid_marginReset, ei.marginTop20),
                     onChange: this.handleShowSubscriptionsChange,
-                    value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
+                    value: !(0, W.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
                     hideBorder: !0,
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['2L8NCA'])
@@ -418,7 +418,7 @@ class eC extends r.PureComponent {
                 (0, i.jsx)(g.j7V, {
                     className: s()(ei.__invalid_marginReset, ei.marginTop20),
                     onChange: this.handleShowGuildRemindersChange,
-                    value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
+                    value: !(0, W.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
                     hideBorder: !0,
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['NvnW+f'])
@@ -427,7 +427,7 @@ class eC extends r.PureComponent {
                     (0, i.jsx)(g.j7V, {
                         className: s()(ei.__invalid_marginReset, ei.marginTop20),
                         onChange: this.handleShowGuildRoleSubscriptionPurchaseMessages,
-                        value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
+                        value: !(0, W.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
                         hideBorder: !0,
                         disabled: !r || a === eo,
                         children: en.intl.string(en.t['54n19f'])
@@ -436,7 +436,7 @@ class eC extends r.PureComponent {
                     (0, i.jsx)(g.j7V, {
                         className: s()(ei.__invalid_marginReset, ei.marginTop20),
                         onChange: this.handleShowGuildRoleSubscriptionPurchaseMessageRepliesChange,
-                        value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
+                        value: !(0, W.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
                         hideBorder: !0,
                         disabled: !r || a === eo,
                         children: en.intl.string(en.t.IhF5d3)
@@ -445,7 +445,7 @@ class eC extends r.PureComponent {
                     (0, i.jsx)(g.j7V, {
                         className: s()(ei.__invalid_marginReset, ei.marginTop20),
                         onChange: this.handleShowDeadchatPromptMessageChange,
-                        value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT),
+                        value: !(0, W.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT),
                         hideBorder: !0,
                         disabled: !r || a === eo,
                         children: (0, i.jsxs)('div', {
@@ -461,12 +461,12 @@ class eC extends r.PureComponent {
             r = [
                 {
                     name: en.intl.string(en.t['n/bTaW']),
-                    value: J.bL.ALL_MESSAGES,
-                    desc: null != n && n >= J.qWG ? en.intl.string(en.t['L+P4t7']) : null
+                    value: Q.bL.ALL_MESSAGES,
+                    desc: null != n && n >= Q.qWG ? en.intl.string(en.t['L+P4t7']) : null
                 },
                 {
                     name: en.intl.format(en.t.L2hmY2, {}),
-                    value: J.bL.ONLY_MENTIONS
+                    value: Q.bL.ONLY_MENTIONS
                 }
             ];
         return (0, i.jsx)('div', {
@@ -527,9 +527,9 @@ class eC extends r.PureComponent {
                       children: (0, i.jsx)(g.j7V, {
                           className: s()(ei.marginTop8, ei.marginBottom8),
                           onChange: this.handleConversationSummariesToggle,
-                          value: e.hasFeature(J.oNc.SUMMARIES_ENABLED_BY_USER),
+                          value: e.hasFeature(Q.oNc.SUMMARIES_ENABLED_BY_USER),
                           hideBorder: !0,
-                          note: en.intl.format(en.t['c6Cy/v'], { helpdeskArticle: Y.Z.getArticleURL(J.BhN.CONVERSATION_SUMMARIES) }),
+                          note: en.intl.format(en.t['c6Cy/v'], { helpdeskArticle: K.Z.getArticleURL(Q.BhN.CONVERSATION_SUMMARIES) }),
                           disabled: !t,
                           children: (0, i.jsxs)('div', {
                               className: ei.badgedItem,
@@ -549,7 +549,7 @@ class eC extends r.PureComponent {
     }
     renderServerInviteBGSection() {
         let { guild: e, canManageGuild: t } = this.props,
-            n = e.hasFeature(J.oNc.INVITE_SPLASH),
+            n = e.hasFeature(Q.oNc.INVITE_SPLASH),
             r = t && n,
             l = (0, i.jsx)(k.Z, {
                 image: e.splash,
@@ -586,7 +586,7 @@ class eC extends r.PureComponent {
                                         (0, i.jsx)('div', { children: en.intl.string(en.t.tzGY0t) }),
                                         (0, i.jsx)(R.Z, {
                                             guild: e,
-                                            guildFeature: J.oNc.INVITE_SPLASH,
+                                            guildFeature: Q.oNc.INVITE_SPLASH,
                                             className: ei.guildFeatureAvailabilityIndicator,
                                             onClick: this.handleInviteSplashUpsellIndicator
                                         })
@@ -599,7 +599,7 @@ class eC extends r.PureComponent {
                                 }),
                                 (0, i.jsx)(g.R94, {
                                     type: g.geA.DESCRIPTION,
-                                    children: en.intl.format(en.t.ZYA9PT, { articleURL: Y.Z.getArticleURL(J.BhN.GUILD_INVITE_SPLASH) })
+                                    children: en.intl.format(en.t.ZYA9PT, { articleURL: K.Z.getArticleURL(Q.BhN.GUILD_INVITE_SPLASH) })
                                 }),
                                 n
                                     ? (0, i.jsxs)(g.zxk, {
@@ -639,8 +639,8 @@ class eC extends r.PureComponent {
     }
     renderBanner() {
         let { guild: e, canManageGuild: t, analyticsLocations: n } = this.props,
-            r = e.hasFeature(J.oNc.BANNER),
-            l = e.hasFeature(J.oNc.ANIMATED_BANNER),
+            r = e.hasFeature(Q.oNc.BANNER),
+            l = e.hasFeature(Q.oNc.ANIMATED_BANNER),
             s = r && t,
             a = (0, i.jsx)(k.Z, {
                 image: e.banner,
@@ -664,8 +664,8 @@ class eC extends r.PureComponent {
                         this.handleBannerChange,
                         !0,
                         {
-                            page: J.ZY5.GUILD_SETTINGS,
-                            section: J.jXE.GUILD_BANNER
+                            page: Q.ZY5.GUILD_SETTINGS,
+                            section: Q.jXE.GUILD_BANNER
                         },
                         n
                     ),
@@ -682,8 +682,8 @@ class eC extends r.PureComponent {
                         this.handleBannerChange,
                         !0,
                         {
-                            page: J.ZY5.GUILD_SETTINGS,
-                            section: J.jXE.GUILD_BANNER
+                            page: Q.ZY5.GUILD_SETTINGS,
+                            section: Q.jXE.GUILD_BANNER
                         },
                         n
                     ),
@@ -706,7 +706,7 @@ class eC extends r.PureComponent {
                                     (0, i.jsx)('div', { children: en.intl.string(en.t['0r0AzM']) }),
                                     (0, i.jsx)(R.Z, {
                                         guild: e,
-                                        guildFeature: J.oNc.BANNER,
+                                        guildFeature: Q.oNc.BANNER,
                                         className: ei.guildFeatureAvailabilityIndicator,
                                         onClick: this.handleBannerUpsellIndicator
                                     })
@@ -719,7 +719,7 @@ class eC extends r.PureComponent {
                             }),
                             (0, i.jsx)(g.R94, {
                                 type: g.geA.DESCRIPTION,
-                                children: en.intl.format(en.t.vBcWUl, { articleURL: Y.Z.getArticleURL(J.BhN.GUILD_BANNER_SPLASH) })
+                                children: en.intl.format(en.t.vBcWUl, { articleURL: K.Z.getArticleURL(Q.BhN.GUILD_BANNER_SPLASH) })
                             }),
                             r ? o : this.uploadBGUpsellButton(this.handleBannerUpsellButton)
                         ]
@@ -823,20 +823,20 @@ class eC extends r.PureComponent {
                 var t;
                 e.target === e.currentTarget && (null === (t = this._imageInputRef.current) || void 0 === t || t.activateUploadDialogue());
             }),
-            es(this, 'handleShowJoinsChange', (e) => this.handleSystemChannelFlagsChange(J.xmn.SUPPRESS_JOIN_NOTIFICATIONS, !e)),
-            es(this, 'handleShowSubscriptionsChange', (e) => this.handleSystemChannelFlagsChange(J.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS, !e)),
+            es(this, 'handleShowJoinsChange', (e) => this.handleSystemChannelFlagsChange(Q.xmn.SUPPRESS_JOIN_NOTIFICATIONS, !e)),
+            es(this, 'handleShowSubscriptionsChange', (e) => this.handleSystemChannelFlagsChange(Q.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS, !e)),
             es(this, 'handleShowGuildRemindersChange', (e) => {
-                this.handleSystemChannelFlagsChange(J.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, !e);
+                this.handleSystemChannelFlagsChange(Q.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, !e);
             }),
-            es(this, 'handleShowJoinRepliesChange', (e) => this.handleSystemChannelFlagsChange(J.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES, !e)),
+            es(this, 'handleShowJoinRepliesChange', (e) => this.handleSystemChannelFlagsChange(Q.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES, !e)),
             es(this, 'handleShowGuildRoleSubscriptionPurchaseMessages', (e) => {
-                this.handleSystemChannelFlagsChange(J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS, !e);
+                this.handleSystemChannelFlagsChange(Q.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS, !e);
             }),
             es(this, 'handleShowDeadchatPromptMessageChange', (e) => {
-                this.handleSystemChannelFlagsChange(J.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT, !e);
+                this.handleSystemChannelFlagsChange(Q.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT, !e);
             }),
             es(this, 'handleShowGuildRoleSubscriptionPurchaseMessageRepliesChange', (e) => {
-                this.handleSystemChannelFlagsChange(J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES, !e);
+                this.handleSystemChannelFlagsChange(Q.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES, !e);
             }),
             es(this, 'handleHomeHeaderChange', (e, t) => {
                 if (null == e || void 0 === t) {
@@ -859,14 +859,14 @@ class eC extends r.PureComponent {
                 let { guild: n, analyticsLocations: i } = this.props,
                     r = null == t ? void 0 : t.type,
                     l = {
-                        page: J.ZY5.GUILD_SETTINGS,
-                        section: J.jXE.ANIMATED_GUILD_BANNER_UPSELL,
+                        page: Q.ZY5.GUILD_SETTINGS,
+                        section: Q.jXE.ANIMATED_GUILD_BANNER_UPSELL,
                         object: 'temp'
                     };
                 if (null != r && null != e) {
-                    if ('image/gif' !== r || n.hasFeature(J.oNc.ANIMATED_BANNER)) {
-                        if (!n.hasFeature(J.oNc.BANNER)) {
-                            (l.object = J.qAy.IMAGE_CROPPING_MODAL),
+                    if ('image/gif' !== r || n.hasFeature(Q.oNc.ANIMATED_BANNER)) {
+                        if (!n.hasFeature(Q.oNc.BANNER)) {
+                            (l.object = Q.qAy.IMAGE_CROPPING_MODAL),
                                 (0, Z.c)({
                                     guild: n,
                                     analyticsLocations: i,
@@ -877,7 +877,7 @@ class eC extends r.PureComponent {
                             return;
                         }
                     } else {
-                        (l.object = J.qAy.GIF_CROPPING_MODAL),
+                        (l.object = Q.qAy.GIF_CROPPING_MODAL),
                             (0, Z.c)({
                                 guild: n,
                                 analyticsLocations: i,
@@ -893,10 +893,10 @@ class eC extends r.PureComponent {
             es(this, 'handleShowModalUpsell', (e, t, n, i) => {
                 e.preventDefault(), e.stopPropagation();
                 let { guild: r, analyticsLocations: l } = this.props;
-                (0, f.yw)(J.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                (0, f.yw)(Q.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: {
                         section: t,
-                        object: J.qAy.LEARN_MORE
+                        object: Q.qAy.LEARN_MORE
                     },
                     guild_id: null == r ? void 0 : r.id,
                     location_stack: l
@@ -906,39 +906,39 @@ class eC extends r.PureComponent {
                         analyticsSourceLocation: {
                             section: t,
                             object: n,
-                            page: J.ZY5.GUILD_SETTINGS
+                            page: Q.ZY5.GUILD_SETTINGS
                         },
                         guild: r,
                         perks: i
                     });
             }),
             es(this, 'handleInviteSplashUpsellIndicator', (e) => {
-                this.handleShowModalUpsell(e, J.jXE.GUILD_INVITE_BACKGROUND, J.qAy.BADGE, (0, $.o9)());
+                this.handleShowModalUpsell(e, Q.jXE.GUILD_INVITE_BACKGROUND, Q.qAy.BADGE, (0, $.o9)());
             }),
             es(this, 'handleInviteSplashUpsellButton', (e) => {
-                this.handleShowModalUpsell(e, J.jXE.GUILD_INVITE_BACKGROUND, J.qAy.BUTTON_CTA, (0, $.o9)());
+                this.handleShowModalUpsell(e, Q.jXE.GUILD_INVITE_BACKGROUND, Q.qAy.BUTTON_CTA, (0, $.o9)());
             }),
             es(this, 'handleInviteSplashUpsellUpload', (e) => {
-                this.handleShowModalUpsell(e, J.jXE.GUILD_INVITE_BACKGROUND, J.qAy.UPLOAD_IMAGE, (0, $.o9)());
+                this.handleShowModalUpsell(e, Q.jXE.GUILD_INVITE_BACKGROUND, Q.qAy.UPLOAD_IMAGE, (0, $.o9)());
             }),
             es(this, 'handleBannerUpsellIndicator', (e) => {
-                this.handleShowModalUpsell(e, J.jXE.GUILD_BANNER, J.qAy.BADGE, (0, $.XO)());
+                this.handleShowModalUpsell(e, Q.jXE.GUILD_BANNER, Q.qAy.BADGE, (0, $.XO)());
             }),
             es(this, 'handleBannerUpsellButton', (e) => {
-                this.handleShowModalUpsell(e, J.jXE.GUILD_BANNER, J.qAy.BUTTON_CTA, (0, $.XO)());
+                this.handleShowModalUpsell(e, Q.jXE.GUILD_BANNER, Q.qAy.BUTTON_CTA, (0, $.XO)());
             }),
             es(this, 'handleBannerUpsellUpload', (e) => {
-                this.handleShowModalUpsell(e, J.jXE.GUILD_BANNER, J.qAy.UPLOAD_IMAGE, (0, $.XO)());
+                this.handleShowModalUpsell(e, Q.jXE.GUILD_BANNER, Q.qAy.UPLOAD_IMAGE, (0, $.XO)());
             }),
             es(this, 'handleConversationSummariesToggle', (e) => {
                 let { guild: t } = this.props,
                     n = new Set(t.features);
-                e ? n.add(J.oNc.SUMMARIES_ENABLED_BY_USER) : n.delete(J.oNc.SUMMARIES_ENABLED_BY_USER), q.Z.updateGuild({ features: n });
+                e ? n.add(Q.oNc.SUMMARIES_ENABLED_BY_USER) : n.delete(Q.oNc.SUMMARIES_ENABLED_BY_USER), q.Z.updateGuild({ features: n });
             }),
             es(this, 'handleShowActivityFeedToggle', (e) => {
                 let { guild: t } = this.props,
                     n = new Set(t.features);
-                e ? (n.add(J.oNc.ACTIVITY_FEED_ENABLED_BY_USER), n.delete(J.oNc.ACTIVITY_FEED_DISABLED_BY_USER)) : (n.add(J.oNc.ACTIVITY_FEED_DISABLED_BY_USER), n.delete(J.oNc.ACTIVITY_FEED_ENABLED_BY_USER)), q.Z.updateGuild({ features: n });
+                e ? (n.add(Q.oNc.ACTIVITY_FEED_ENABLED_BY_USER), n.delete(Q.oNc.ACTIVITY_FEED_DISABLED_BY_USER)) : (n.add(Q.oNc.ACTIVITY_FEED_DISABLED_BY_USER), n.delete(Q.oNc.ACTIVITY_FEED_ENABLED_BY_USER)), q.Z.updateGuild({ features: n });
             }),
             es(this, 'uploadBGUpsellButton', (e) =>
                 (0, i.jsxs)(g.gtL, {
@@ -970,8 +970,8 @@ function ef() {
     let d = (0, u.e7)([U.Z], () => U.Z.getCategories(null == t ? void 0 : t.id)),
         m = r.useMemo(() => (0, N.Z)(d._categories, d), [d]),
         { canManageGuild: h, isGuildAdmin: g } = (0, u.cj)([B.Z], () => ({
-            canManageGuild: B.Z.can(J.Plq.MANAGE_GUILD, t),
-            isGuildAdmin: B.Z.can(J.Plq.ADMINISTRATOR, t)
+            canManageGuild: B.Z.can(Q.Plq.MANAGE_GUILD, t),
+            isGuildAdmin: B.Z.can(Q.Plq.ADMINISTRATOR, t)
         })),
         x = (0, u.e7)([G.Z], () => G.Z.getMemberCount(null == t ? void 0 : t.id)),
         p = (0, b.E)(t),
@@ -979,7 +979,7 @@ function ef() {
     o()(null != f, 'GuildSettingsOverview: currentUser cannot be undefined');
     let { enableDeadchat: j } = E.Z.useExperiment(
         {
-            guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : J.lds,
+            guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : Q.lds,
             location: 'guild_settings'
         },
         {

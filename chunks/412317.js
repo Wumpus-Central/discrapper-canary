@@ -77,8 +77,8 @@ function v(e) {
                           user: i,
                           analyticsLocation: g,
                           gameFriends: _,
-                          hasIncomingPendingGameFriends: j,
-                          hasOutgoingPendingGameFriends: E
+                          hasIncomingPendingGameFriends: E,
+                          hasOutgoingPendingGameFriends: j
                       }),
                       (0, t.jsx)(d.c, {
                           userId: i.id,

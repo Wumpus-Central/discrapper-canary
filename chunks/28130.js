@@ -79,12 +79,12 @@ function T(e) {
         children: [
             (0, t.jsx)(B, {
                 guild: n,
-                guildFeature: (0, C.C)(i, { isGIF: !0 })
+                guildFeature: (0, C.C6)(i, { isGIF: !0 })
             }),
             (0, t.jsxs)('div', {
                 className: I.optionBoxDescription,
                 children: [
-                    (0, C.K)(i) &&
+                    (0, C.Kq)(i) &&
                         (0, t.jsx)(a.DY3, {
                             className: I.nitroWheelFlairContainer,
                             text: F.intl.string(F.t['5AFxuL']),
@@ -106,7 +106,7 @@ function k(e) {
         className: I.optionBoxText,
         children: [
             (0, t.jsx)(B, {
-                guildFeature: (0, C.C)(n, { isGIF: !1 }),
+                guildFeature: (0, C.C6)(n, { isGIF: !1 }),
                 guild: l
             }),
             (0, t.jsxs)('div', {
@@ -153,8 +153,8 @@ function b(e) {
                 location: w
             });
     }, [H, w, X]);
-    let V = E === v.pC.AVATAR || E === v.pC.BANNER,
-        q = (0, u.M)(!V);
+    let q = E === v.pC.AVATAR || E === v.pC.BANNER,
+        V = (0, u.M)(!q);
     return (0, t.jsxs)(a.Y0X, {
         transitionState: i,
         size: a.CgR.SMALL,
@@ -294,7 +294,7 @@ function b(e) {
                           })
                         : null,
                     b &&
-                        q &&
+                        V &&
                         (0, t.jsx)(p.Z, {
                             uploadType: E,
                             showUpsell: !0,

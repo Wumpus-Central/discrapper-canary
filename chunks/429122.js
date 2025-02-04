@@ -83,7 +83,7 @@ let v = l.memo(function (e) {
             guildChannels: n,
             guildChannelsVersion: h
         });
-    let E = C ? (0, i.jsx)('div', { className: m.sectionDivider }) : null;
+    let j = C ? (0, i.jsx)('div', { className: m.sectionDivider }) : null;
     return Z && 0 !== N.length
         ? (0, i.jsxs)(i.Fragment, {
               children: [
@@ -97,8 +97,8 @@ let v = l.memo(function (e) {
                           guildId: f
                       })
                   }),
-                  E
+                  j
               ]
           })
-        : E;
+        : j;
 });

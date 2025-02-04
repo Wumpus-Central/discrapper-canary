@@ -43,12 +43,12 @@ var i = n(200651),
     H = n(702478),
     V = n(247031),
     W = n(787561),
-    K = n(579648),
-    Y = n(511480),
+    Y = n(579648),
+    K = n(511480),
     q = n(460461),
     X = n(29605),
-    Q = n(365307),
-    J = n(497666),
+    J = n(365307),
+    Q = n(497666),
     $ = n(324330),
     ee = n(495300),
     et = n(312397),
@@ -248,10 +248,10 @@ let eb = {
                     impressionName: r.ImpressionNames.GUILD_SETTINGS_INTEGRATION,
                     label: eI.intl.string(eI.t.CIsNZ2),
                     ariaLabel: eI.intl.string(eI.t.CIsNZ2),
-                    element: Q.Z,
+                    element: J.Z,
                     notice: {
                         stores: [D.default, k.Z],
-                        element: Q.j
+                        element: J.j
                     },
                     predicate: () => t.canManageGuild || t.canManageWebhooks || t.canUnlinkChannels
                 };
@@ -393,10 +393,10 @@ let eb = {
                     section: ev.pNK.DISCOVERY,
                     impressionName: r.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
                     label: eI.intl.string(eI.t.oGaVGx),
-                    element: Y.Z,
+                    element: K.Z,
                     notice: {
                         stores: [k.Z],
-                        element: Y.s
+                        element: K.s
                     },
                     predicate: () => !t.memberVerificationRolloutEnabled && t.canManageGuild && t.guild.hasFeature(ev.oNc.COMMUNITY),
                     ariaLabel: t.guild.hasFeature(ev.oNc.DISCOVERABLE) ? eI.intl.string(eI.t.oGaVGx) : eI.intl.string(eI.t.XU0S6u)
@@ -427,7 +427,7 @@ let eb = {
                     impressionName: r.ImpressionNames.GUILD_SETTINGS_COMMUNITY_WELCOME,
                     label: eI.intl.string(eI.t['2rkmDg']),
                     ariaLabel: eI.intl.string(eI.t['2rkmDg']),
-                    element: K.Z,
+                    element: Y.Z,
                     notice: {
                         stores: [S.Z],
                         element: R.Z
@@ -486,7 +486,7 @@ let eb = {
                     section: ev.pNK.INSTANT_INVITES,
                     impressionName: r.ImpressionNames.GUILD_SETTINGS_INVITES,
                     label: eI.intl.string(eI.t['9F90iY']),
-                    element: J.Z,
+                    element: Q.Z,
                     type: o.bT.CUSTOM,
                     predicate: () => t.canManageGuild
                 };

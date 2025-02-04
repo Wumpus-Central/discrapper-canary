@@ -22,10 +22,10 @@ var i = n(200651),
     b = n(388032),
     S = n(10448),
     N = n(284923);
-let E = (0, g.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    j = (0, s.animated)(u.Kqy);
+let j = (0, g.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    E = (0, s.animated)(u.Kqy);
 function y(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: d, mentionCount: g = 0, isMentionLowImportance: y, unread: P = !1, defaultFolderName: A, useCircleMask: T = !1, draggable: w = !1, sorting: R = !1, onDragStart: L, onDragEnd: M, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: O } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: d, mentionCount: g = 0, isMentionLowImportance: y, unread: P = !1, defaultFolderName: T, useCircleMask: A = !1, draggable: w = !1, sorting: R = !1, onDragStart: L, onDragEnd: M, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: O } = e,
         { id: U, name: V, children: F } = t,
         H = (0, p.Q3)('FolderItem'),
         [z, W] = l.useState(!1),
@@ -57,7 +57,7 @@ function y(e) {
             },
             [D, s]
         ),
-        ee = null != V && '' !== V ? V : null != A && '' !== A ? A : b.intl.string(b.t.xV9hVl),
+        ee = null != V && '' !== V ? V : null != T && '' !== T ? T : b.intl.string(b.t.xV9hVl),
         et = (0, c.Ie)(''.concat(U)),
         en = 'folder-items-'.concat(U),
         ei = (function (e) {
@@ -72,7 +72,7 @@ function y(e) {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
-            config: { duration: E }
+            config: { duration: j }
         }),
         er = l.useCallback((e) => (null == n ? void 0 : n(U, e)), [n, U]),
         ea = (0, i.jsxs)(Z.H, {
@@ -98,7 +98,7 @@ function y(e) {
                             : (0, i.jsx)(v.Z, {
                                   folderNode: t,
                                   expanded: s,
-                                  forceCircular: T,
+                                  forceCircular: A,
                                   sorting: R,
                                   mediaState: d,
                                   mentionCount: g,
@@ -142,7 +142,7 @@ function y(e) {
                 return (
                     t &&
                     (0, i.jsx)(
-                        j,
+                        E,
                         {
                             as: 'ul',
                             gap: H ? 'xxs' : 0,

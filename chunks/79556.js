@@ -23,12 +23,12 @@ var l = n(120356),
     b = n(594174),
     S = n(109446),
     N = n(98597),
-    E = n(648501),
-    j = n(473403),
+    j = n(648501),
+    E = n(473403),
     y = n(304471),
     P = n(981631),
-    A = n(647086),
-    T = n(831746);
+    T = n(647086),
+    A = n(831746);
 function w(e, t, n) {
     return (
         t in e
@@ -54,18 +54,18 @@ class R extends N.ZP {
         return null == e
             ? null
             : (0, i.jsx)('div', {
-                  className: T.channelInfo,
+                  className: A.channelInfo,
                   children: e
               });
     }
     render() {
         let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: d, connectChannelDropTarget: u, connectChannelDragSource: h, connectDragPreview: g, canReorderChannel: f, isSubscriptionGated: _, isFavoriteSuggestion: v, subtitle: x, forceTopLevelThread: C, embeddedApps: Z, resolvedUnreadSetting: I, withGuildIcon: b, enableActivities: S } = this.props,
             N = S && null != Z && Z.length > 0,
-            E = (0, m.D)(x),
+            j = (0, m.D)(x),
             y = (0, i.jsx)('li', {
                 className: r()(this.getClassName(), {
-                    [T.disabled]: this.isDisabled(),
-                    [T.selected]: n
+                    [A.disabled]: this.isDisabled(),
+                    [A.selected]: n
                 }),
                 'data-dnd-name': e.name,
                 onMouseEnter: c || N ? this.handleMouseEnter : void 0,
@@ -77,8 +77,8 @@ class R extends N.ZP {
                     onRequestClose: this.handleClosePopout,
                     shouldShow: (c && this.state.shouldShowThreadsPopout) || (N && this.state.shouldShowActivities),
                     children: () =>
-                        (0, i.jsxs)(j.Z, {
-                            className: T.iconVisibility,
+                        (0, i.jsxs)(E.Z, {
+                            className: A.iconVisibility,
                             channel: e,
                             guild: t,
                             selected: !v && n,
@@ -86,8 +86,8 @@ class R extends N.ZP {
                             unread: a,
                             mentionCount: d,
                             hasActiveThreads: s,
-                            subtitle: null == E ? void 0 : E.subtitle,
-                            subtitleColor: null == E ? void 0 : E.color,
+                            subtitle: null == j ? void 0 : j.subtitle,
+                            subtitleColor: null == j ? void 0 : j.color,
                             onMouseDown: this.handleMouseDown,
                             onContextMenu: this.handleContextMenu,
                             connectDragPreview: f ? g : null,
@@ -213,13 +213,13 @@ function M(e) {
             let e = v.Z.getChannel(t.parent_id);
             return {
                 canManageChannel: C.Z.can(P.Plq.MANAGE_CHANNELS, t),
-                canReorderChannel: !0 !== l && (n.id === A._ || (null != e ? C.Z.can(P.Plq.MANAGE_CHANNELS, e) : C.Z.can(P.Plq.MANAGE_CHANNELS, n)))
+                canReorderChannel: !0 !== l && (n.id === T._ || (null != e ? C.Z.can(P.Plq.MANAGE_CHANNELS, e) : C.Z.can(P.Plq.MANAGE_CHANNELS, n)))
             };
         }),
         S = (0, a.e7)([f.Z], () => f.Z.shouldIndicateNewChannel(n.id, t.id)),
-        { needSubscriptionToAccess: N, isSubscriptionGated: j } = (0, g.Z)(t.id),
+        { needSubscriptionToAccess: N, isSubscriptionGated: E } = (0, g.Z)(t.id),
         y = (0, a.e7)([I.ZP], () => I.ZP.isFavorite(n.id, t.id)),
-        T = (0, a.e7)(
+        A = (0, a.e7)(
             [b.default],
             () => {
                 let e = b.default.getCurrentUser();
@@ -228,11 +228,11 @@ function M(e) {
             [t]
         ),
         w = (0, u.NX)(t.id),
-        R = (0, E.Z)({
+        R = (0, j.Z)({
             channel: t,
             isChannelCollapsed: !1,
             isChannelSelected: s,
-            isSubscriptionGated: j,
+            isSubscriptionGated: E,
             needSubscriptionToAccess: N,
             isNewChannel: S,
             muted: o,
@@ -246,11 +246,11 @@ function M(e) {
         ...e,
         hasActiveThreads: c,
         hasMoreActiveThreads: d,
-        isSubscriptionGated: j,
+        isSubscriptionGated: E,
         needSubscriptionToAccess: N,
         isNewChannel: S && e.canBeNewChannel,
         isFavoriteSuggestion: r && !y,
-        canShowThreadPreviewForUser: T,
+        canShowThreadPreviewForUser: A,
         channelInfo: R,
         embeddedApps: M,
         resolvedUnreadSetting: m,

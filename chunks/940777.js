@@ -22,32 +22,32 @@ var i = n(200651),
     b = n(979651),
     S = n(709054),
     N = n(853856),
-    E = n(593214),
-    j = n(919755),
+    j = n(593214),
+    E = n(919755),
     y = n(110977),
     P = n(603274),
-    A = n(981631),
-    T = n(388032),
+    T = n(981631),
+    A = n(388032),
     w = n(120555);
 let R = {
     analyticsSource: {
-        page: A.ZY5.GUILD_CHANNEL,
-        section: A.jXE.CHANNEL_LIST,
-        object: A.qAy.CHANNEL
+        page: T.ZY5.GUILD_CHANNEL,
+        section: T.jXE.CHANNEL_LIST,
+        object: T.qAy.CHANNEL
     }
 };
 function L() {
     let e = (0, o.Ie)('favorites'),
-        { favoriteAdded: t, clearFavoriteAdded: r } = (0, E.up)(),
+        { favoriteAdded: t, clearFavoriteAdded: r } = (0, j.up)(),
         [L, M] = l.useState(!1),
         { favoriteServerMuted: D, favoriteChannels: G } = (0, s.cj)([N.Z], () => ({
             favoriteChannels: N.Z.getFavoriteChannels(),
             favoriteServerMuted: N.Z.favoriteServerMuted
         })),
-        k = (0, s.e7)([I.Z], () => I.Z.getChannelId(A.I_8)),
+        k = (0, s.e7)([I.Z], () => I.Z.getChannelId(T.I_8)),
         B = (0, s.e7)([Z.Z], () => Z.Z.getChannel(k)),
-        O = (0, x.Z)((e) => e.guildId) === A.I_8,
-        { badge: U, unread: V } = (0, j.Z)(G),
+        O = (0, x.Z)((e) => e.guildId) === T.I_8,
+        { badge: U, unread: V } = (0, E.Z)(G),
         F = (function (e) {
             let t = (0, s.e7)([I.Z], () => I.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -105,12 +105,12 @@ function L() {
                         lowerBadge: H,
                         children: (0, i.jsx)(c.LYs, {
                             ...e,
-                            ariaLabel: T.intl.formatToPlainString(T.t['/uzRsr'], {
-                                guildName: T.intl.string(T.t.wMWycn),
+                            ariaLabel: A.intl.formatToPlainString(A.t['/uzRsr'], {
+                                guildName: A.intl.string(A.t.wMWycn),
                                 mentions: U
                             }),
                             to: {
-                                pathname: A.Z5c.CHANNEL(A.I_8, k),
+                                pathname: T.Z5c.CHANNEL(T.I_8, k),
                                 state: R
                             },
                             selected: O || L,

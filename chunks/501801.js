@@ -31,12 +31,12 @@ function L(e, t) {
     let n = f.vc[e.targetType];
     return null != n && !0 === n[t.key];
 }
-let M = {
+let h = {
     [U.vB8.CREATE]: C.typeCreate,
     [U.vB8.UPDATE]: C.typeUpdate,
     [U.vB8.DELETE]: C.typeDelete
 };
-function h(e) {
+function M(e) {
     let { applicationId: t } = e,
         n = (0, d.q)(t);
     return null == n
@@ -52,7 +52,7 @@ class p extends l.PureComponent {
             i = null != l ? C['themeOverride'.concat((0, S.De)(l))] : null,
             s = a()(
                 C.icon,
-                M[e],
+                h[e],
                 n === U.rsA.MESSAGE_DELETE
                     ? C.targetMessage
                     : n === U.rsA.AUTO_MODERATION_BLOCK_MESSAGE || n === U.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || n === U.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || n === U.rsA.AUTO_MODERATION_QUARANTINE_USER
@@ -572,7 +572,7 @@ function m(e) {
                                         newEmojiHook: (e, t) => (0, r.jsx)(_.Z, { emojiId: E }, t),
                                         applicationHook: (e, t) => {
                                             var n;
-                                            return (0, r.jsx)(h, { applicationId: null !== (n = null == o ? void 0 : o.application_id) && void 0 !== n ? n : null == E ? void 0 : E.application_id }, t);
+                                            return (0, r.jsx)(M, { applicationId: null !== (n = null == o ? void 0 : o.application_id) && void 0 !== n ? n : null == E ? void 0 : E.application_id }, t);
                                         }
                                     });
                                     return null == d

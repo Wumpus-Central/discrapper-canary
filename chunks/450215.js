@@ -38,11 +38,11 @@ function E(e) {
         [H] = C.PK(y),
         [V] = C.d9(y, 1024),
         W = '' !== F ? F : j.intl.string(j.t.QWhe9P),
-        K = '' !== F && null != V && '' !== H && null != z && !B,
-        Y = C.rU(y),
-        { loading: q, error: X, handleCreateOrUpdateFromEditState: Q } = C.Xo(),
-        { submitting: J, error: $, publishSubscriptionListing: ee } = (0, g.HQ)(),
-        et = q || J;
+        Y = '' !== F && null != V && '' !== H && null != z && !B,
+        K = C.rU(y),
+        { loading: q, error: X, handleCreateOrUpdateFromEditState: J } = C.Xo(),
+        { submitting: Q, error: $, publishSubscriptionListing: ee } = (0, g.HQ)(),
+        et = q || Q;
     return (0, i.jsxs)('div', {
         className: I.container,
         children: [
@@ -116,7 +116,7 @@ function E(e) {
                                   }),
                                   (0, i.jsx)(d.zxk, {
                                       onClick: () =>
-                                          Q({
+                                          J({
                                               guildId: l,
                                               editStateId: y,
                                               groupListingId: S,
@@ -125,7 +125,7 @@ function E(e) {
                                                   A(e.id), null == Z || Z(e);
                                               }
                                           }),
-                                      disabled: !K || !Y,
+                                      disabled: !Y || !K,
                                       className: I.autoWidth,
                                       submitting: et,
                                       children: j.intl.string(j.t.R3BPHx)

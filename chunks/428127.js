@@ -76,7 +76,7 @@ function x(e) {
             },
             C ? 'respect-motion-settings' : 'animate-never'
         ),
-        E = l.useCallback(
+        j = l.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), null != b && u(b);
             },
@@ -97,7 +97,7 @@ function x(e) {
                     : Z === m.x.UNREAD
                       ? (0, i.jsxs)(c.P3F, {
                             className: f.bar,
-                            onClick: E,
+                            onClick: j,
                             children: [
                                 'bottom' === t
                                     ? (0, i.jsx)(c.CJ0, {
@@ -125,7 +125,7 @@ function x(e) {
                       : Z === m.x.MENTIONS
                         ? (0, i.jsx)(c.P3F, {
                               className: a()(f.bar, f.mentionsBar),
-                              onClick: E,
+                              onClick: j,
                               children: (0, i.jsx)(c.Text, {
                                   variant: 'text-xs/semibold',
                                   color: 'status-danger-text',

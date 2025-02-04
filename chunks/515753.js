@@ -27,12 +27,12 @@ var i = n(200651),
     b = n(201895),
     S = n(43267),
     N = n(933557),
-    E = n(979264),
-    j = n(163889),
+    j = n(979264),
+    E = n(163889),
     y = n(111028),
     P = n(540059),
-    A = n(853856),
-    T = n(93687),
+    T = n(853856),
+    A = n(93687),
     w = n(785232),
     R = n(878857),
     L = n(565640),
@@ -96,7 +96,7 @@ let Y = H.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
 function ee(e) {
     let { route: t, selected: n, icon: l, iconClassName: r, avatarWithTextClassName: o, interactiveClassName: s, text: d, children: h, locationState: m, onClick: g, className: f, role: _, 'aria-posinset': v, 'aria-setsize': x, ...C } = e,
         I = (0, P.Q3)('PrivateChannelLinkButton');
-    return (0, i.jsx)(j.Z, {
+    return (0, i.jsx)(E.Z, {
         className: a()(q.channel, { [q.fullWidth]: u.tq }, f),
         onClick: g,
         role: _,
@@ -137,7 +137,7 @@ function ee(e) {
 }
 function et(e) {
     var t;
-    let { channel: r, isGDMFacepileEnabled: o, selected: u = !1, user: P, activities: T, applicationStream: L, entry: D, isTyping: G, status: O, isMobile: V, 'aria-posinset': F, 'aria-setsize': H } = e,
+    let { channel: r, isGDMFacepileEnabled: o, selected: u = !1, user: P, activities: A, applicationStream: L, entry: D, isTyping: G, status: O, isMobile: V, 'aria-posinset': F, 'aria-setsize': H } = e,
         [ee, et] = l.useState(!1),
         en = l.useRef(null),
         ei = l.useRef(null),
@@ -157,7 +157,7 @@ function et(e) {
         })),
         ed = (0, h.e7)([k.ZP], () => k.ZP.getMentionCount(r.id) > 0),
         eu = (0, N.ZP)(r),
-        eh = (0, h.e7)([A.Z], () => A.Z.isFavorite(r.id)),
+        eh = (0, h.e7)([T.Z], () => T.Z.isFavorite(r.id)),
         ep = () => {
             et(!0);
         },
@@ -233,11 +233,11 @@ function et(e) {
                         className: q.subtext,
                         children: W.intl.format(W.t.CxSA5O, { members: r.recipients.length + 1 })
                     })
-                  : (0, _.Z)(T, O)
+                  : (0, _.Z)(A, O)
                     ? (0, i.jsx)(v.Z, {
                           location: 'PrivateChannel',
                           user: P,
-                          activities: T,
+                          activities: A,
                           applicationStream: L,
                           animate: ee,
                           emojiClassName: eo ? q.mutedEmoji : void 0
@@ -267,7 +267,7 @@ function et(e) {
             s()(null != P, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let t = null;
             return (
-                P.isSystemUser() || (t = (0, f.Z)(T) ? z.Skl.STREAMING : O),
+                P.isSystemUser() || (t = (0, f.Z)(A) ? z.Skl.STREAMING : O),
                 (0, i.jsx)(Y, {
                     ...ea,
                     size: p.EFr.SIZE_32,
@@ -284,15 +284,15 @@ function et(e) {
         eb = r.isMultiUserDM(),
         eS = r.isSystemDM(),
         eN = (0, R.Q)(),
-        eE = !eb && !eS && r.type === z.d4z.DM,
-        ej = eE && (null == P ? void 0 : P.primaryGuild) != null,
-        ey = eE && es,
-        eP = eE && ec,
-        eA = ej
+        ej = !eb && !eS && r.type === z.d4z.DM,
+        eE = ej && (null == P ? void 0 : P.primaryGuild) != null,
+        ey = ej && es,
+        eP = ej && ec,
+        eT = eE
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       eu,
-                      (0, i.jsx)(E.ZP, {
+                      (0, i.jsx)(j.ZP, {
                           primaryGuild: null == P ? void 0 : P.primaryGuild,
                           userId: null == P ? void 0 : P.id,
                           inline: !0,
@@ -302,12 +302,12 @@ function et(e) {
                   ]
               })
             : eu,
-        eT = null !== (t = eo || ey || eP) && void 0 !== t && t;
+        eA = null !== (t = eo || ey || eP) && void 0 !== t && t;
     return (0, i.jsx)(d.mh, {
         id: r.id,
         children: (e) => {
             let { role: t, ...n } = e;
-            return (0, i.jsx)(j.Z, {
+            return (0, i.jsx)(E.Z, {
                 className: a()(q.channel, q.dm),
                 role: t,
                 focusProps: {
@@ -329,7 +329,7 @@ function et(e) {
                     }),
                     as: 'div',
                     onClick: ev,
-                    muted: eT,
+                    muted: eA,
                     selected: u,
                     children: [
                         (0, i.jsx)(c.rU, {
@@ -345,11 +345,11 @@ function et(e) {
                                 avatar: eI(),
                                 selected: u,
                                 highlighted: ed,
-                                muted: eT,
+                                muted: eA,
                                 subText: eZ(),
                                 name: (0, i.jsx)(y.Z, {
                                     tooltipClassName: q.overflowTooltip,
-                                    children: eA
+                                    children: eT
                                 }),
                                 decorators: r.isSystemDM()
                                     ? (0, i.jsx)(C.Z, {
@@ -377,7 +377,7 @@ function et(e) {
 let en = (e) => {
     let { channel: t, selected: n, ...l } = e,
         r = (0, h.e7)([V.default], () => V.default.getUser(t.getRecipientId())),
-        { isStatusIndicatorEnabled: a, isTypingIndicatorEnabled: o, isFacepileEnabled: s } = T.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
+        { isStatusIndicatorEnabled: a, isTypingIndicatorEnabled: o, isFacepileEnabled: s } = A.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
         c = null == r ? void 0 : r.id,
         d = (0, h.cj)(
             [G.Z, D.Z],

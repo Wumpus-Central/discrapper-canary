@@ -326,7 +326,7 @@ let U = d().throttle(x.OQ, 1000),
             W = () => {
                 null !== Z.current && ((0, h.Mr3)(Z.current), (Z.current = null));
             },
-            K = async (e) => {
+            Y = async (e) => {
                 Z.current = await (0, h.ZDy)(async () => {
                     let { default: t } = await n.e('16169').then(n.bind(n, 935333));
                     return (n) =>
@@ -336,7 +336,7 @@ let U = d().throttle(x.OQ, 1000),
                         });
                 });
             },
-            Y = (0, f.l)(e);
+            K = (0, f.l)(e);
         return (0, i.jsxs)('div', {
             className: w.emojiSettings,
             children: [
@@ -344,7 +344,7 @@ let U = d().throttle(x.OQ, 1000),
                     ? null
                     : (0, i.jsx)(_.Z, {
                           className: w.emojiUploadContainer,
-                          onDrop: K
+                          onDrop: Y
                       }),
                 (0, i.jsxs)(h.hjN, {
                     tag: h.RB0.H1,
@@ -362,7 +362,7 @@ let U = d().throttle(x.OQ, 1000),
                                     type: h.geA.DESCRIPTION,
                                     children: P.intl.format(P.t.TA1BR0, { count: G })
                                 }),
-                                Y &&
+                                K &&
                                     (0, i.jsx)(h.R94, {
                                         type: h.geA.DESCRIPTION,
                                         children: P.intl.format(P.t.uMkfTk, { onClick: () => A.Z.open(e.id, O.pNK.ROLE_SUBSCRIPTIONS, void 0, O.KsC.ROLE_SUBSCRIPTION_EMOJI) })

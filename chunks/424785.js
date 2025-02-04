@@ -23,12 +23,12 @@ var l = n(120356),
     b = n(368442),
     S = n(201469),
     N = n(680089),
-    E = n(592125),
-    j = n(430824),
+    j = n(592125),
+    E = n(430824),
     y = n(607744),
     P = n(496675),
-    A = n(306680),
-    T = n(9156),
+    T = n(306680),
+    A = n(9156),
     w = n(979651),
     R = n(934415),
     L = n(98597),
@@ -61,7 +61,7 @@ class H extends L.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, R.rY)(e, w.Z, j.Z);
+        return (0, R.rY)(e, w.Z, E.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -155,7 +155,7 @@ class H extends L.ZP {
             }),
             F(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    l = j.Z.getGuild(t.getGuildId());
+                    l = E.Z.getGuild(t.getGuildId());
                 null != l &&
                     (0, c.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('81070')]).then(n.bind(n, 213202));
@@ -218,13 +218,13 @@ class H extends L.ZP {
 let z = (0, d.B)((0, u.Q)(H));
 function W(e) {
     let { guild: t, channel: n, disableSorting: l, isFavoriteCategory: r, collapsed: o, voiceStates: s } = e,
-        c = (0, a.cj)([A.ZP], () => ({
-            unread: A.ZP.hasUnread(n.id),
-            mentionCount: A.ZP.getMentionCount(n.id)
+        c = (0, a.cj)([T.ZP], () => ({
+            unread: T.ZP.hasUnread(n.id),
+            mentionCount: T.ZP.getMentionCount(n.id)
         })),
-        d = (0, a.e7)([T.ZP], () => T.ZP.resolveUnreadSetting(n)),
-        u = (0, a.cj)([E.Z, y.Z, P.Z], () => {
-            let e = E.Z.getChannel(n.parent_id),
+        d = (0, a.e7)([A.ZP], () => A.ZP.resolveUnreadSetting(n)),
+        u = (0, a.cj)([j.Z, y.Z, P.Z], () => {
+            let e = j.Z.getChannel(n.parent_id),
                 i = y.Z.getCheck(n.guild_id);
             return {
                 canManageChannel: null != t && P.Z.can(k.Plq.MANAGE_CHANNELS, n),
@@ -240,8 +240,8 @@ function W(e) {
         m = (0, a.e7)([I.Z], () => I.Z.getStageInstanceByChannel(n.id), [n.id]),
         g = (0, C.Rk)(n.id, Z.pV.AUDIENCE),
         { isSubscriptionGated: _, needSubscriptionToAccess: v } = (0, f.Z)(n.id),
-        x = (0, a.e7)([T.ZP], () => T.ZP.isFavorite(t.id, n.id)),
-        j = (0, b.xJ)(n.id),
+        x = (0, a.e7)([A.ZP], () => A.ZP.isFavorite(t.id, n.id)),
+        E = (0, b.xJ)(n.id),
         w = (0, M.Z)({
             channel: n,
             isChannelSelected: !1,
@@ -249,7 +249,7 @@ function W(e) {
             voiceStates: s,
             isSubscriptionGated: _,
             needSubscriptionToAccess: v,
-            enableConnectedUserLimit: j || (n.userLimit > 0 && n.userLimit < k.xGv)
+            enableConnectedUserLimit: E || (n.userLimit > 0 && n.userLimit < k.xGv)
         }),
         R = e.connected && null == w;
     return (0, i.jsx)(z, {

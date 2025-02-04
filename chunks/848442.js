@@ -23,8 +23,8 @@ var l = n(120356),
     b = n(981631),
     S = n(176505),
     N = n(629481),
-    E = n(388032),
-    j = n(273595);
+    j = n(388032),
+    E = n(273595);
 function y(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         d = (0, m.RF)(t, 'guild_shop_channel_row'),
@@ -34,37 +34,37 @@ function y(e) {
         P = (0, a.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, i.jsx)(I.m, {
         id: 'shop-'.concat(t),
-        className: r()(j.previewChannelRow, {
-            [j.selected]: n,
-            [j.phantomPreview]: y
+        className: r()(E.previewChannelRow, {
+            [E.selected]: n,
+            [E.phantomPreview]: y
         }),
-        innerClassName: j.previewChannelRowContent,
+        innerClassName: E.previewChannelRowContent,
         renderIcon: (e) =>
             (0, i.jsx)(f.Z, {
                 width: 20,
                 height: 20,
-                className: r()([e, j.shopIcon])
+                className: r()([e, E.shopIcon])
             }),
-        text: E.intl.string(E.t.al5EXF),
+        text: j.intl.string(j.t.al5EXF),
         selected: n,
         onClick: l,
         trailing: (0, i.jsxs)('div', {
-            className: j.gifSection,
+            className: E.gifSection,
             children: [
                 P
                     ? (0, i.jsx)(c.IGR, {
                           color: c.TVs.unsafe_rawColors.BRAND_260.css,
-                          text: E.intl.string(E.t.y2b7CA),
-                          className: j.newBadge
+                          text: j.intl.string(j.t.y2b7CA),
+                          className: E.newBadge
                       })
                     : (0, i.jsx)('img', {
                           src: (0, p.b)('server_products/storefront/money.gif'),
-                          className: j.money,
+                          className: E.money,
                           alt: ''
                       }),
                 n &&
                     (0, i.jsx)(c.P3F, {
-                        className: j.closeButton,
+                        className: E.closeButton,
                         onClick: (e) => {
                             if (
                                 (e.stopPropagation(),
@@ -79,7 +79,7 @@ function y(e) {
                                 (0, v.dL)(b.Z5c.CHANNEL(t, null === (n = x.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
                             }
                         },
-                        'aria-label': E.intl.string(E.t.cpT0Cg),
+                        'aria-label': j.intl.string(j.t.cpT0Cg),
                         children: (0, i.jsx)(c.k$p, {
                             size: 'xs',
                             color: 'currentColor'
@@ -109,7 +109,7 @@ function P(e) {
                       height: 20,
                       className: e
                   }),
-              text: E.intl.string(E.t.al5EXF),
+              text: j.intl.string(j.t.al5EXF),
               selected: l,
               onClick: a,
               onContextMenu: (e) => {

@@ -41,11 +41,11 @@ function S(e) {
         o = (0, r.e7)([m.Z], () => m.Z.getGuilds()),
         S = l.useMemo(() => Object.values(o), [o]),
         N = (0, r.e7)([g.default], () => g.default.getCurrentUser()),
-        E = l.useMemo(() => S.some((e) => e.isOwner(N)), [S, N]),
-        j = (0, a.s9z)((e) => (0, a.DEQ)(e, x.PU)),
+        j = l.useMemo(() => S.some((e) => e.isOwner(N)), [S, N]),
+        E = (0, a.s9z)((e) => (0, a.DEQ)(e, x.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
         P = (0, d.Q3)('CreateJoinGuildButton'),
-        A = (0, i.jsx)(_.Z, {
+        T = (0, i.jsx)(_.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -60,21 +60,21 @@ function S(e) {
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: j,
+            selected: E,
             onContextMenu: b,
             tooltip: C.intl.string(C.t.l5WIbW),
             icon: P ? a.oFk : a.BRu
         });
     return t
-        ? A
+        ? T
         : (0, i.jsx)('div', {
               className: Z.tutorialContainer,
               children: (0, i.jsxs)(p.Z, {
-                  tutorialId: E ? 'create-more-servers' : 'create-first-server',
+                  tutorialId: j ? 'create-more-servers' : 'create-first-server',
                   inlineSpecs: I,
                   position: 'right',
                   children: [
-                      A,
+                      T,
                       null != n &&
                           (0, i.jsx)(f.ZP, {
                               name: C.intl.string(C.t['45xjMz']),

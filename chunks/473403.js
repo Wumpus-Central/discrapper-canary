@@ -33,13 +33,13 @@ let L = {
     MUTED: C.modeMuted,
     LOCKED: C.modeLocked
 };
-function M(e) {
+function h(e) {
     e.preventDefault(), e.stopPropagation();
 }
-let h = R.ZP.getEnableHardwareAcceleration() ? E.Xo$ : E.qEK;
+let M = R.ZP.getEnableHardwareAcceleration() ? E.Xo$ : E.qEK;
 function p(e) {
     let { channel: t } = e;
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(M, {
         src: (0, u.x)(t),
         'aria-hidden': !0,
         size: E.EFr.SIZE_20
@@ -60,7 +60,7 @@ function m(e) {
                       isMobile: g.Z.isMobileOnline(n.id)
                   }
         );
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(M, {
         size: E.EFr.SIZE_20,
         src: null == n ? void 0 : n.getAvatarURL(void 0, 40),
         status: i,
@@ -138,7 +138,7 @@ function P(e) {
             onClick: O,
             onMouseDown: S,
             onMouseUp: R,
-            onContextMenu: h,
+            onContextMenu: M,
             connectDragPreview: p,
             className: m,
             iconClassName: P,
@@ -148,14 +148,14 @@ function P(e) {
             onMouseEnter: F,
             onMouseLeave: y,
             'aria-label': V,
-            children: B,
-            guild: j,
+            children: j,
+            guild: B,
             channelTypeOverride: z,
             forceInteractable: H,
             mentionCount: k,
             resolvedUnreadSetting: w,
-            isFavoriteSuggestion: K,
-            withGuildIcon: Z,
+            isFavoriteSuggestion: Z,
+            withGuildIcon: K,
             hasActiveEvent: W = !1
         } = e,
         Y = w === U.i.ALL_MESSAGES || (null != k && k > 0),
@@ -167,7 +167,7 @@ function P(e) {
         et = (0, c.ZP)(n),
         en = n.isGuildVocal(),
         er = (0, r.jsx)('div', {
-            className: a()({ [C.favoritesSuggestion]: K }),
+            className: a()({ [C.favoritesSuggestion]: Z }),
             ref: Q,
             children: (0, r.jsxs)(I.Z, {
                 role: en && !_ ? 'button' : 'link',
@@ -186,28 +186,28 @@ function P(e) {
                             (0, r.jsx)(v, {
                                 className: P,
                                 channel: n,
-                                guild: j,
+                                guild: B,
                                 hasActiveThreads: g,
                                 locked: N,
-                                withGuildIcon: Z
+                                withGuildIcon: K
                             }),
                             (0, r.jsx)(d.Z, {
                                 className: a()(C.name, { [C.activeEvent]: W }),
                                 'aria-hidden': !0,
                                 children: null == i ? et : i
                             }),
-                            l.Children.count(B) > 0
+                            l.Children.count(j) > 0
                                 ? (0, r.jsx)('div', {
-                                      onClick: M,
+                                      onClick: h,
                                       className: C.children,
-                                      children: B
+                                      children: j
                                   })
                                 : null
                         ]
                     }),
                     null != b
                         ? (0, r.jsx)('div', {
-                              className: a()(C.linkBottom, { [C.withGuildIcon]: Z }),
+                              className: a()(C.linkBottom, { [C.withGuildIcon]: K }),
                               children: (0, r.jsx)(E.Text, {
                                   color: null != x ? x : 'text-muted',
                                   variant: 'text-xs/medium',
@@ -253,7 +253,7 @@ function P(e) {
             ),
             onMouseUp: (e) => (null == R ? void 0 : R(e, n)),
             onMouseDown: (e) => (null == S ? void 0 : S(e, n)),
-            onContextMenu: (e) => (null == h ? void 0 : h(e, n)),
+            onContextMenu: (e) => (null == M ? void 0 : M(e, n)),
             onMouseEnter: F,
             onMouseLeave: y,
             children: [o || !T ? null : (0, r.jsx)('div', { className: a()(C.unread, Y ? C.unreadImportant : void 0) }), null !== (t = null == p ? void 0 : p(er)) && void 0 !== t ? t : er]

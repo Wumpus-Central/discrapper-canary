@@ -1,6 +1,6 @@
 n.d(t, {
-    Fo: () => M,
-    KY: () => h,
+    Fo: () => h,
+    KY: () => M,
     Uo: () => p,
     fU: () => v,
     qw: () => P,
@@ -33,7 +33,7 @@ var r = n(192379),
 function L(e, t) {
     e.index = t;
 }
-function M(e, t, n, l) {
+function h(e, t, n, l) {
     l = l.toLowerCase();
     let a = (0, d.g)(e),
         s = r.useCallback((e, t) => !(a && e.channel.hasFlag(f.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== R.d4z.GUILD_DIRECTORY && (0 === t.length || i()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [a]);
@@ -53,7 +53,7 @@ function M(e, t, n, l) {
         );
     }, [t, n, s, l]);
 }
-function h(e) {
+function M(e) {
     let t = e.getSections(!1);
     if (t[A.wZ] > 0)
         switch (e.getGuildActionSection().getRow(0)) {

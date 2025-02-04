@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => E });
 var i = n(200651);
 n(192379);
 var l = n(442837),
@@ -23,10 +23,10 @@ var l = n(442837),
     b = n(981631),
     S = n(490897),
     N = n(388032),
-    E = n(518360);
-function j(e) {
+    j = n(518360);
+function E(e) {
     var t;
-    let { channel: n, isChannelSelected: j, isChannelCollapsed: y, voiceStates: P, enableConnectedUserLimit: A, enableActivities: T, isSubscriptionGated: w, needSubscriptionToAccess: R, isNewChannel: L, muted: M, resolvedUnreadSetting: D } = e,
+    let { channel: n, isChannelSelected: E, isChannelCollapsed: y, voiceStates: P, enableConnectedUserLimit: T, enableActivities: A, isSubscriptionGated: w, needSubscriptionToAccess: R, isNewChannel: L, muted: M, resolvedUnreadSetting: D } = e,
         G = (0, l.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
         k = (0, l.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
         B = (0, o.ZP)(n),
@@ -37,7 +37,7 @@ function j(e) {
             channel: n,
             locked: O,
             video: U || V,
-            selected: j
+            selected: E
         }),
         H = (0, l.e7)([u.Z], () => u.Z.getNewThreadCount(n.guild_id, n.id)),
         z = (0, s.n2)(n.guild_id, n.id),
@@ -55,7 +55,7 @@ function j(e) {
         return (0, i.jsx)(a.IGR, {
             text: N.intl.string(N.t.y2b7CA),
             color: r.Z.unsafe_rawColors.BRAND_260.css,
-            className: E.newChannel
+            className: j.newChannel
         });
     if (!M && D === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != H && H > 0)
         return (0, i.jsx)(a.Text, {
@@ -70,7 +70,7 @@ function j(e) {
             children: (0, a.NGo)(z)
         });
     let q = null !== (t = null == P ? void 0 : P.length) && void 0 !== t ? t : 0;
-    return null != A && A && F
+    return null != T && T && F
         ? (0, i.jsx)(Z.Z, {
               userCount: q,
               video: U || V,
@@ -81,7 +81,7 @@ function j(e) {
                 text: N.intl.string(N.t.dI3q4u),
                 color: r.Z.unsafe_rawColors.RED_400.css
             })
-          : null != T && T && (0, _.u)(B)
+          : null != A && A && (0, _.u)(B)
             ? (0, i.jsx)(C.Z, {
                   embeddedApps: B,
                   muted: M

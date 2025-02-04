@@ -22,11 +22,11 @@ var i = n(200651),
     b = n(207055),
     S = n(981631),
     N = n(124368),
-    E = n(388032),
-    j = n(831746),
+    j = n(388032),
+    E = n(831746),
     y = n(193877),
     P = n(329986);
-function A(e) {
+function T(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
         r = {
             className: a()(P.spine, { [P.spineWithGuildIcon]: n }, { [P.invertedSpine]: l }),
@@ -71,7 +71,7 @@ function A(e) {
               ]
           });
 }
-function T(e) {
+function A(e) {
     let { style: t, withGuildIcon: n } = e;
     return (0, i.jsx)('svg', {
         className: a()(P.spine, { [P.spineWithGuildIcon]: n }),
@@ -130,17 +130,17 @@ let w = l.memo(function (e) {
         W = l.useRef(null),
         q =
             G > 0
-                ? E.intl.formatToPlainString(E.t['ZL7+Iy'], {
+                ? j.intl.formatToPlainString(j.t['ZL7+Iy'], {
                       channelName: t.name,
                       mentionCount: G
                   })
                 : D
-                  ? E.intl.formatToPlainString(E.t.YlVvmZ, { channelName: t.name })
-                  : E.intl.formatToPlainString(E.t['0nZpiI'], { channelName: t.name }),
-        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? A : T;
+                  ? j.intl.formatToPlainString(j.t.YlVvmZ, { channelName: t.name })
+                  : j.intl.formatToPlainString(j.t['0nZpiI'], { channelName: t.name }),
+        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? T : A;
     return (0, i.jsxs)('li', {
         role: H,
-        className: a()(j.containerDefault, { [j.selected]: r }),
+        className: a()(E.containerDefault, { [E.selected]: r }),
         children: [
             (0, i.jsx)(Y, { withGuildIcon: R }),
             w
@@ -159,7 +159,7 @@ let w = l.memo(function (e) {
                     right: 4
                 },
                 children: (0, i.jsxs)('div', {
-                    className: a()(j.iconVisibility, y.wrapper, y.typeThread, {
+                    className: a()(E.iconVisibility, y.wrapper, y.typeThread, {
                         [y.modeSelected]: r,
                         [y.modeMuted]: !r && B,
                         [y.modeUnreadImportant]: !B && !r && D,

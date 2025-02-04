@@ -63,7 +63,7 @@ function p(e) {
         u = r.useMemo(() => {
             switch (n) {
                 case c.OGo.FRIEND:
-                    return d.intl.string(d.t.TdEu5e);
+                    return d.intl.string(d.t.G7jMpa);
                 case c.OGo.PENDING_OUTGOING:
                     return d.intl.string(d.t['s/+byM']);
                 case c.OGo.PENDING_INCOMING:

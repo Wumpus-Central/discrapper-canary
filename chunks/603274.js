@@ -23,7 +23,7 @@ var l = n(120356),
     b = n(388032),
     S = n(782451),
     N = n(572488);
-function E(e, t) {
+function j(e, t) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
@@ -41,7 +41,7 @@ function E(e, t) {
               ]
           });
 }
-function j() {
+function E() {
     let e = (0, s.Wu)([Z.Z, f.Z], () =>
             C.default
                 .keys(Z.Z.getFavoriteChannels())
@@ -98,13 +98,13 @@ function j() {
             },
             [t]
         ),
-        j = (0, s.Wu)([_.default], () => N.map((e) => _.default.getUser(e)), [N]),
+        E = (0, s.Wu)([_.default], () => N.map((e) => _.default.getUser(e)), [N]),
         y = (0, s.Wu)([_.default], () => b.map((e) => _.default.getUser(e)), [b]),
-        P = E(
+        P = j(
             c.gj8,
             r.filter((e) => !b.includes(e.id) && !N.includes(e.id))
         ),
-        A =
+        T =
             0 === a.length
                 ? null
                 : (0, i.jsxs)('div', {
@@ -137,13 +137,13 @@ function j() {
                           })
                       ]
                   }),
-        T = E(
+        A = j(
             c.hGI,
             y.filter((e) => null != e && !N.includes(e.id))
         ),
-        w = E(c.nG3, j);
+        w = j(c.nG3, E);
     return (0, i.jsxs)(i.Fragment, {
-        children: [A, P, T, w]
+        children: [T, P, A, w]
     });
 }
 function y() {
@@ -156,7 +156,7 @@ function y() {
                     children: b.intl.string(b.t.wMWycn)
                 })
             }),
-            (0, i.jsx)(j, {})
+            (0, i.jsx)(E, {})
         ]
     });
 }

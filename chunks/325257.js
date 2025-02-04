@@ -22,19 +22,19 @@ var i = n(200651),
     b = n(727258),
     S = n(276952),
     N = n(249792),
-    E = n(40153),
-    j = n(593618),
+    j = n(40153),
+    E = n(593618),
     y = n(252686),
     P = n(682662),
-    A = n(674552),
-    T = n(981631),
+    T = n(674552),
+    A = n(981631),
     w = n(388032),
     R = n(284923);
 let L = {
     analyticsSource: {
-        page: T.ZY5.GUILD_CHANNEL,
-        section: T.jXE.CHANNEL_LIST,
-        object: T.qAy.CHANNEL
+        page: A.ZY5.GUILD_CHANNEL,
+        section: A.jXE.CHANNEL_LIST,
+        object: A.qAy.CHANNEL
     }
 };
 function M(e, t) {
@@ -52,9 +52,9 @@ let D = l.memo(function (e) {
     let { guildNode: G, setRef: k, onDragStart: B, onDragEnd: O, route: U, guild: V, animatable: F, selected: H = !1, unread: z = !1, mediaState: W, unavailable: q = !1, badge: Y = 0, isMentionLowImportance: Q, contextMenu: J = M, draggable: K = !1, sorting: X = !1, preloadOnClick: $ = !0, guildJoinRequestStatus: ee, height: et } = e,
         { id: en, parentId: ei } = G,
         el = (0, _.Q3)('GuildItem'),
-        er = null !== (t = e.upperBadge) && void 0 !== t ? t : q ? (0, A.Ny)() : null != W ? (0, A.Or)(W) : void 0,
+        er = null !== (t = e.upperBadge) && void 0 !== t ? t : q ? (0, T.Ny)() : null != W ? (0, T.Or)(W) : void 0,
         ea = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-    null == ea && Y > 0 ? (ea = null !== (r = (0, A.Ne)(Y, Q ? f.Z.BACKGROUND_ACCENT : f.Z.STATUS_DANGER)) && void 0 !== r ? r : void 0) : null == ea && null != ee && (ea = null !== (m = (0, A.jt)({ guildJoinRequestStatus: ee })) && void 0 !== m ? m : void 0);
+    null == ea && Y > 0 ? (ea = null !== (r = (0, T.Ne)(Y, Q ? f.Z.BACKGROUND_ACCENT : f.Z.STATUS_DANGER)) && void 0 !== r ? r : void 0) : null == ea && null != ee && (ea = null !== (m = (0, T.jt)({ guildJoinRequestStatus: ee })) && void 0 !== m ? m : void 0);
     let eo = null !== (D = e.lowerBadgeSize) && void 0 !== D ? D : { width: (0, h.OVM)(Y) },
         [{ dragging: es }, ec] = (0, o.c)({
             type: b.eD.GUILD,
@@ -72,7 +72,7 @@ let D = l.memo(function (e) {
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
-        ed = (0, c.Ie)(null != en ? en : T.lds),
+        ed = (0, c.Ie)(null != en ? en : A.lds),
         [eu, eh] = l.useState(!1),
         ep = !X && eu,
         [em, eg] = l.useState(!1),
@@ -123,9 +123,9 @@ let D = l.memo(function (e) {
             },
             [en, k]
         ),
-        eE = (0, h.dQu)(h.TVs.modules.guildbar.AVATAR_SIZE);
+        ej = (0, h.dQu)(h.TVs.modules.guildbar.AVATAR_SIZE);
     if (null == V) return null;
-    let ej =
+    let eE =
             ef || em
                 ? (0, i.jsx)(N.Z, {
                       guild: V,
@@ -154,13 +154,13 @@ let D = l.memo(function (e) {
                       onMouseDown: eC,
                       onContextMenu: eI,
                       onKeyDown: eb,
-                      icon: V.getIconURL(2 * eE, ep && F, el),
+                      icon: V.getIconURL(2 * ej, ep && F, el),
                       selected: H || ep,
                       ...ed,
                       role: 'treeitem'
                   }),
         ey = es
-            ? (0, i.jsx)(E.OG, { children: (0, i.jsx)(y.Z, {}) })
+            ? (0, i.jsx)(j.OG, { children: (0, i.jsx)(y.Z, {}) })
             : (0, i.jsx)(s.animated.div, {
                   ref: K ? ec : void 0,
                   'data-dnd-name': V.toString(),
@@ -175,7 +175,7 @@ let D = l.memo(function (e) {
                       upperBadge: er,
                       lowerBadge: ea,
                       lowerBadgeSize: eo,
-                      children: ej
+                      children: eE
                   })
               });
     return (0, i.jsxs)(P.H, {
@@ -187,14 +187,14 @@ let D = l.memo(function (e) {
                 unread: !es && z,
                 className: R.pill
             }),
-            (0, i.jsx)(j.Z, {
+            (0, i.jsx)(E.Z, {
                 guild: V,
                 disabled: X,
                 isDragging: es,
                 children: ey
             }),
             K
-                ? (0, i.jsx)(E.ZP, {
+                ? (0, i.jsx)(j.ZP, {
                       name: V.name,
                       targetNode: G,
                       onDragOverChanged: eS

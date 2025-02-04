@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(47120);
+n.d(t, { Z: () => j }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -147,16 +147,16 @@ function N(e) {
         singleLine: !0
     });
 }
-function E(e) {
+function j(e) {
     let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: d, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: g } = e,
         f = [];
     null != n ? (f = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != d && (f = d.map((e) => e.user.id));
-    let E = (0, o.Wu)([m.default], () => f.map((e) => m.default.getUser(e)).filter(_.lm)),
-        j = null != n || (0, c.Z)(t),
+    let j = (0, o.Wu)([m.default], () => f.map((e) => m.default.getUser(e)).filter(_.lm)),
+        E = null != n || (0, c.Z)(t),
         y = l.useMemo(() => {
             let e = new Map();
             return (
-                j &&
+                E &&
                     null != d &&
                     d.forEach((t) => {
                         let n = t.member;
@@ -164,8 +164,8 @@ function E(e) {
                     }),
                 e
             );
-        }, [d, j]);
-    return j
+        }, [d, E]);
+    return E
         ? (0, i.jsxs)('div', {
               className: x.flexColumn,
               children: [
@@ -196,7 +196,7 @@ function E(e) {
                                       (0, i.jsx)(u.Z, {
                                           className: x.usersSummary,
                                           guildId: a.guild_id,
-                                          users: E,
+                                          users: j,
                                           size: C,
                                           max: 7,
                                           renderUser: (e) => {

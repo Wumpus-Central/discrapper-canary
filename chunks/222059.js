@@ -22,12 +22,12 @@ var i = n(200651),
     b = n(557177),
     S = n(278464),
     N = n(276952),
-    E = n(682662),
-    j = n(662146),
+    j = n(682662),
+    E = n(662146),
     y = n(674552),
     P = n(981631),
-    A = n(474936),
-    T = n(871465),
+    T = n(474936),
+    A = n(871465),
     w = n(388032),
     R = n(491708);
 let L = {
@@ -48,7 +48,7 @@ function M(e) {
         [v, x] = l.useState(!1),
         [C, Z] = l.useState(!1),
         [I, S] = l.useState(null),
-        [A, M] = l.useState(0),
+        [T, M] = l.useState(0),
         D = (0, r.Ie)('home'),
         G = (0, h.Q3)('DefaultHomeButton'),
         k = () => {
@@ -74,11 +74,11 @@ function M(e) {
                 onMouseEnter: () => x(!0),
                 onMouseLeave: () => x(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != I && clearTimeout(I), S(setTimeout(k, 500)), M(A + 1), 15 === A)) {
+                    if (!__OVERLAY__ && (null != I && clearTimeout(I), S(setTimeout(k, 500)), M(T + 1), 15 === T)) {
                         k();
                         let e = !o.K.get(P.wli);
                         o.K.set(P.wli, e),
-                            e && o.K.set(T.O5, !0),
+                            e && o.K.set(A.O5, !0),
                             e ? (0, b.GN)('discodo') : (0, b.GN)('user_leave'),
                             Z(!0),
                             setTimeout(() => {
@@ -108,14 +108,14 @@ function M(e) {
             inlineSpecs: L,
             tutorialId: 'friends-list',
             position: 'right',
-            children: (0, i.jsxs)(E.H, {
+            children: (0, i.jsxs)(j.H, {
                 children: [
                     (0, i.jsx)(N.Z, {
                         selected: t,
                         hovered: v,
                         className: R.pill
                     }),
-                    (0, i.jsx)(j.Z, {
+                    (0, i.jsx)(E.Z, {
                         color: s.ua7.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: B,
@@ -136,7 +136,7 @@ function D() {
             return i > 0 && i < 100;
         }),
         n = (0, m.If)(),
-        l = Object.keys(A.nG),
+        l = Object.keys(T.nG),
         { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([v.Z], () => ({
             unviewedTrialCount: v.Z.getUnacknowledgedOffers(l).length,
             unviewedDiscountCount: v.Z.getUnacknowledgedDiscountOffers().length

@@ -16,8 +16,8 @@ var i = n(200651),
     x = n(73880),
     f = n(276486),
     h = n(196345),
-    j = n(707592),
-    g = n(23262),
+    g = n(707592),
+    j = n(23262),
     v = n(483760),
     C = n(465588),
     T = n(842310),
@@ -64,7 +64,7 @@ function R(e) {
                 ...n.slice(e + 1)
             ]);
         },
-        g = (e, t) => {
+        j = (e, t) => {
             switch (e.field_type) {
                 case u.QJ.TERMS:
                     return (0, i.jsx)(
@@ -78,7 +78,7 @@ function R(e) {
                     );
                 case u.QJ.TEXT_INPUT:
                     return (0, i.jsx)(
-                        j.zY,
+                        g.zY,
                         {
                             formField: e,
                             autofocus: 0 === t,
@@ -150,7 +150,7 @@ function R(e) {
                     );
             }
         };
-    return (0, i.jsx)(i.Fragment, { children: n.map((e, t) => (o ? T(e, t) : g(e, t))) });
+    return (0, i.jsx)(i.Fragment, { children: n.map((e, t) => (o ? T(e, t) : j(e, t))) });
 }
 function I(e) {
     let t,
@@ -158,7 +158,7 @@ function I(e) {
         m = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
         x = (0, c.i)({ guildId: n }),
         h = (0, a.jS)(n, 'PreviewFormRenderer');
-    return ((t = x === F.sFg.NONE ? null : x === F.sFg.VERY_HIGH ? (h ? T.l : f.l) : h ? g.b : d.b), null == m)
+    return ((t = x === F.sFg.NONE ? null : x === F.sFg.VERY_HIGH ? (h ? T.l : f.l) : h ? j.b : d.b), null == m)
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -177,11 +177,11 @@ function b(e) {
         { guildId: n, formFields: s, updateFormFields: u, disableVerification: m } = e,
         x = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
         h = (0, c.i)({ guildId: n }),
-        j = (0, a.jS)(n, 'PreviewFormRenderer'),
+        g = (0, a.jS)(n, 'PreviewFormRenderer'),
         v = (null == x ? void 0 : x.isPhoneVerified()) || (null == x ? void 0 : x.isStaff()),
         C = (null == x ? void 0 : x.verified) || v,
         p = !1;
-    h === F.sFg.NONE ? ((p = !0), (t = null)) : h === F.sFg.VERY_HIGH ? ((p = null != v && v), (t = j ? T.v : f.v)) : ((p = null != C && C), (t = j ? g.B : d.B));
+    h === F.sFg.NONE ? ((p = !0), (t = null)) : h === F.sFg.VERY_HIGH ? ((p = null != v && v), (t = g ? T.v : f.v)) : ((p = null != C && C), (t = g ? j.B : d.B));
     let N = l.useRef(p);
     return null == x
         ? null
@@ -192,7 +192,7 @@ function b(e) {
                       guildId: n,
                       formFields: s,
                       updateFormFields: u,
-                      v2Enabled: j
+                      v2Enabled: g
                   })
               ]
           });

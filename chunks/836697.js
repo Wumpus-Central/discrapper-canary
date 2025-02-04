@@ -92,8 +92,8 @@ function Z(e) {
         b = (0, r.e7)([h.Z], () => h.Z.getGuildId()),
         S = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         N = (0, g.Z)(),
-        E = (0, o.Z)(b),
-        j = l.useMemo(() => {
+        j = (0, o.Z)(b),
+        E = l.useMemo(() => {
             let e = (0, m.qQ)({
                 folderId: p.S.PENDING_JOIN_REQUESTS_FOLDER,
                 folderName: v.intl.string(v.t['scsU+v']),
@@ -108,14 +108,14 @@ function Z(e) {
     }, [Z, S]);
     let y = null != b && N.includes(b);
     return (l.useEffect(() => {
-        !Z && y && E !== b && I(!0);
-    }, [Z, y, E, b]),
+        !Z && y && j !== b && I(!0);
+    }, [Z, y, j, b]),
     0 === N.length)
         ? null
         : (0, i.jsx)(C, {
               onActivate: t,
               children: (0, i.jsx)(f.Z, {
-                  folderNode: j,
+                  folderNode: E,
                   expanded: Z,
                   useCircleMask: !Z && !y,
                   selected: y,

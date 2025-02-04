@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(47120);
+n.d(t, { Z: () => j }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -51,17 +51,17 @@ function N(e) {
         f = g === v.Wyy,
         _ = m.map((e) => e.id),
         [x, b] = l.useState(!1),
-        [N, E] = l.useState(c),
-        j = d ? (c ? 22 : -11) : c ? 0 : -I,
+        [N, j] = l.useState(c),
+        E = d ? (c ? 22 : -11) : c ? 0 : -I,
         y = (0, u.q_F)(
             {
-                transform: 'translate3d(0, '.concat(j, 'px, 0)'),
+                transform: 'translate3d(0, '.concat(E, 'px, 0)'),
                 config: { duration: Z },
                 onStart() {
-                    b(!0), E(c);
+                    b(!0), j(c);
                 },
                 onRest() {
-                    b(!1), E(c);
+                    b(!1), j(c);
                 }
             },
             'animate-always'
@@ -93,15 +93,15 @@ function N(e) {
                     )
                 )
             }));
-    let A = { backgroundColor: d && f ? u.TVs.colors.BACKGROUND_PRIMARY.css : (0, s.br)(g, 0.4) };
+    let T = { backgroundColor: d && f ? u.TVs.colors.BACKGROUND_PRIMARY.css : (0, s.br)(g, 0.4) };
     return (0, i.jsxs)('div', {
         'aria-hidden': !0,
-        style: c ? void 0 : A,
+        style: c ? void 0 : T,
         className: C.folderIconWrapper,
         children: [t, n]
     });
 }
-function E(e) {
+function j(e) {
     let {
             folderNode: t,
             forceCircular: n,
@@ -118,13 +118,13 @@ function E(e) {
             onContextMenu: I,
             onHoverChange: b,
             onKeyDown: S,
-            treeItemProps: { onFocus: E, ...j }
+            treeItemProps: { onFocus: j, ...E }
         } = e,
         [y, P] = l.useState(!1),
-        A = l.useCallback(() => {
+        T = l.useCallback(() => {
             o || P(!0), null == b || b(!0);
         }, [o, b]),
-        T = l.useCallback(() => {
+        A = l.useCallback(() => {
             o || P(!1), null == b || b(!1);
         }, [o, b]),
         w = (0, p.Q3)('FolderHeader'),
@@ -147,10 +147,10 @@ function E(e) {
             className: a()(C.folder, { [C.hover]: y }),
             onClick: Z,
             onContextMenu: I,
-            onMouseEnter: A,
-            onMouseLeave: T,
+            onMouseEnter: T,
+            onMouseLeave: A,
             onKeyDown: S,
-            onFocus: E,
+            onFocus: j,
             'aria-label': x.intl.formatToPlainString(x.t['90/DwM'], {
                 folderName: m,
                 mentions: c
@@ -158,7 +158,7 @@ function E(e) {
             'aria-expanded': r,
             'aria-owns': g,
             focusProps: { enabled: !1 },
-            ...j,
+            ...E,
             role: 'treeitem',
             children:
                 null != v

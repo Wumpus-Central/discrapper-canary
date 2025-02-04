@@ -24,8 +24,8 @@ let v = (e) => {
         { notClaimed: x, notEmailVerified: C, notPhoneVerified: Z, newAccount: I, newMember: b } = (0, r.e7)([u.Z], () => u.Z.getCheck(i), [i]),
         S = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
         N = null,
-        E = null;
-    return (0 === t && (x ? ((N = g.intl.string(g.t.IRxUlJ)), (E = g.intl.string(g.t.fiNVio))) : Z ? ((N = g.intl.string(g.t.vW8iUF)), (E = g.intl.string(g.t['50gfOj']))) : C ? ((N = g.intl.string(g.t.vdSOp6)), (E = g.intl.string(g.t.lm1UKi))) : b ? ((N = g.intl.formatToPlainString(g.t.v1ktYW, { min: p.YeM.MEMBER_AGE })), (E = g.intl.string(g.t.BddRzc))) : I && ((N = g.intl.formatToPlainString(g.t['sncw4+'], { min: p.YeM.ACCOUNT_AGE })), (E = g.intl.string(g.t.BddRzc)))), null == S || null == N)
+        j = null;
+    return (0 === t && (x ? ((N = g.intl.string(g.t.IRxUlJ)), (j = g.intl.string(g.t.fiNVio))) : Z ? ((N = g.intl.string(g.t.vW8iUF)), (j = g.intl.string(g.t['50gfOj']))) : C ? ((N = g.intl.string(g.t.vdSOp6)), (j = g.intl.string(g.t.lm1UKi))) : b ? ((N = g.intl.formatToPlainString(g.t.v1ktYW, { min: p.YeM.MEMBER_AGE })), (j = g.intl.string(g.t.BddRzc))) : I && ((N = g.intl.formatToPlainString(g.t['sncw4+'], { min: p.YeM.ACCOUNT_AGE })), (j = g.intl.string(g.t.BddRzc)))), null == S || null == N)
         ? null
         : (0, l.jsxs)(a.VqE, {
               className: f.container,
@@ -52,7 +52,7 @@ let v = (e) => {
                           (0, l.jsxs)('div', {
                               className: f.buttonContainer,
                               children: [
-                                  null != E
+                                  null != j
                                       ? (0, l.jsx)(a.zxk, {
                                             onClick: () => {
                                                 x
@@ -87,7 +87,7 @@ let v = (e) => {
                                                     _();
                                             },
                                             className: f.primaryButton,
-                                            children: E
+                                            children: j
                                         })
                                       : null,
                                   x || Z || C

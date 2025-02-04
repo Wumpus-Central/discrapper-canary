@@ -78,11 +78,11 @@ function P(e) {
     let H = (0, m.dQu)(c.Z.colors.BACKGROUND_FLOATING).hex(),
         V = (0, m.dQu)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
         W = (0, u.wj)(G) ? H : V,
-        K = F.to({
+        Y = F.to({
             range: [0, 1],
             output: [(0, m.dQu)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, m.dQu)(c.Z.colors.TEXT_NORMAL).hex()]
         }),
-        Y = F.to({
+        K = F.to({
             range: [0, 1],
             output: [W, (0, m.dQu)(c.Z.colors.STATUS_DANGER).hex()]
         });
@@ -107,7 +107,7 @@ function P(e) {
                 }
             return !0;
         },
-        Q = async () => {
+        J = async () => {
             p.default.track(L.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                 ...(0, g.hH)(l),
                 step: T.PG[C],
@@ -117,7 +117,7 @@ function P(e) {
                 (0, v.Nb)((0, T.lg)(C)),
                 (await X()) && (0, v.IG)(l, C);
         },
-        J = async () => {
+        Q = async () => {
             p.default.track(L.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                 ...(0, g.hH)(l),
                 step: T.PG[C],
@@ -133,7 +133,7 @@ function P(e) {
             color: m.zxk.Colors.PRIMARY,
             look: m.zxk.Looks.OUTLINED,
             size: m.zxk.Sizes.SMALL,
-            onClick: J,
+            onClick: Q,
             disabled: U || M,
             children: (0, i.jsxs)('span', {
                 className: O.button,
@@ -151,11 +151,11 @@ function P(e) {
             color: w ? m.zxk.Colors.BRAND : m.zxk.Colors.PRIMARY,
             look: m.zxk.Looks.FILLED,
             size: m.zxk.Sizes.SMALL,
-            onClick: Q,
+            onClick: J,
             disabled: U || M,
             children: (0, i.jsxs)(a.animated.span, {
                 className: O.button,
-                style: { color: K },
+                style: { color: Y },
                 children: [
                     w ? D.intl.string(D.t.PDTjLC) : D.intl.string(D.t['5WxrcX']),
                     (0, i.jsx)(x.Z, {
@@ -171,7 +171,7 @@ function P(e) {
             className: s()(O.noticeRegion),
             children: (0, i.jsx)(a.animated.div, {
                 className: O.container,
-                style: { backgroundColor: Y },
+                style: { backgroundColor: K },
                 children: (0, i.jsxs)('div', {
                     className: O.flexContainer,
                     ref: B,

@@ -1,5 +1,5 @@
 n.d(t, {
-    PD: () => T,
+    PD: () => A,
     ZP: () => L,
     aR: () => w
 }),
@@ -27,33 +27,33 @@ var i = n(200651),
     b = n(531572),
     S = n(26323),
     N = n(30513),
-    E = n(981631),
-    j = n(388032),
+    j = n(981631),
+    E = n(388032),
     y = n(976019);
 let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-    A = (e) => {
+    T = (e) => {
         let { guild: t, onSelect: n } = e,
             [r, a] = l.useState(t.premiumProgressBarEnabled),
             [o, s] = l.useState(!1),
-            d = (0, c.e7)([v.Z], () => v.Z.can(E.Plq.MANAGE_GUILD, t)),
+            d = (0, c.e7)([v.Z], () => v.Z.can(j.Plq.MANAGE_GUILD, t)),
             p = async () => {
                 d && (s(!0), await _.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), a(!r), s(!1));
             };
         return (0, i.jsx)(u.v2r, {
             navId: 'progress-bar-context',
             onClose: h.Zy,
-            'aria-label': j.intl.string(j.t['m85s/v']),
+            'aria-label': E.intl.string(E.t['m85s/v']),
             onSelect: n,
             children: (0, i.jsx)(u.S89, {
                 id: 'progress-bar-enabled',
-                label: j.intl.string(j.t['0CJWPz']),
+                label: E.intl.string(E.t['0CJWPz']),
                 checked: r,
                 disabled: o,
                 action: p
             })
         });
     },
-    T = 57,
+    A = 57,
     w = 57 + P,
     R = {
         tension: 180,
@@ -65,14 +65,14 @@ let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             { analyticsLocations: d } = (0, g.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
             { premiumSubscriberCount: _, id: Z } = t,
             P = (0, C.rF)(_, Z),
-            T = (0, C.FZ)(P, t.id),
-            w = null == T,
-            L = null != T ? T : P,
+            A = (0, C.FZ)(P, t.id),
+            w = null == A,
+            L = null != A ? A : P,
             M = (0, c.e7)([b.Z], () => {
                 var e;
                 return null !== (e = b.Z.getCountForGuild(Z)) && void 0 !== e ? e : 0;
             }),
-            D = (0, c.e7)([v.Z], () => v.Z.can(E.Plq.MANAGE_GUILD, t));
+            D = (0, c.e7)([v.Z], () => v.Z.can(j.Plq.MANAGE_GUILD, t));
         l.useEffect(() => {
             M !== _ && (0, I.v)(Z, _);
         }, [Z, M, _]);
@@ -85,33 +85,33 @@ let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             },
             [O, U] = (0, u.q_F)(() => B),
             V = () => {
-                (0, m.yw)(E.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
-                    location: { section: E.jXE.PREMIUM_GUILD_PROGRESS_BAR },
+                (0, m.yw)(j.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    location: { section: j.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                     guild_id: Z,
                     location_stack: d
                 }),
                     (0, S.Z)({
                         analyticsLocations: d,
                         analyticsSourceLocation: {
-                            page: E.ZY5.GUILD_CHANNEL,
-                            section: E.jXE.PREMIUM_GUILD_PROGRESS_BAR,
-                            object: E.qAy.TOOLTIP
+                            page: j.ZY5.GUILD_CHANNEL,
+                            section: j.jXE.PREMIUM_GUILD_PROGRESS_BAR,
+                            object: j.qAy.TOOLTIP
                         },
                         guild: t,
                         perks: (0, N.VF)(),
-                        perkIntro: j.intl.string(j.t.ZhvSn5)
+                        perkIntro: E.intl.string(E.t.ZhvSn5)
                     });
             },
-            F = j.intl.formatToPlainString(j.t['2oNfMT'], { levelName: (0, C.e9)(L) }),
-            H = j.intl.format(j.t.dhKnYm, {
+            F = E.intl.formatToPlainString(E.t['2oNfMT'], { levelName: (0, C.e9)(L) }),
+            H = E.intl.format(E.t.dhKnYm, {
                 numBoosts: _,
                 numTotal: (0, C.vn)(t.id)[L]
             });
-        w && ((F = (0, C.e9)(L)), (H = j.intl.format(j.t.B2byER, { numBoosts: _ }))), r && (F = F.toLocaleLowerCase());
+        w && ((F = (0, C.e9)(L)), (H = E.intl.format(E.t.B2byER, { numBoosts: _ }))), r && (F = F.toLocaleLowerCase());
         let z = (0, s.JA)('boosts-'.concat(t.id));
         return (0, i.jsx)('li', {
             children: (0, i.jsx)(u.ua7, {
-                text: w ? j.intl.string(j.t['Y+V9go']) : j.intl.formatToPlainString(j.t.UyDKl5, { levelName: (0, C.nW)(L) }),
+                text: w ? E.intl.string(E.t['Y+V9go']) : E.intl.formatToPlainString(E.t.UyDKl5, { levelName: (0, C.nW)(L) }),
                 color: u.ua7.Colors.BLACK,
                 position: 'top',
                 delay: 200,
@@ -137,7 +137,7 @@ let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                         onContextMenu: (e) => {
                             D &&
                                 (0, h.vq)(e, (e) =>
-                                    (0, i.jsx)(A, {
+                                    (0, i.jsx)(T, {
                                         ...e,
                                         guild: t
                                     })
@@ -187,7 +187,7 @@ let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                     }),
                                     w
                                         ? (0, i.jsx)('span', {
-                                              'aria-label': j.intl.string(j.t['7iL1q6']),
+                                              'aria-label': E.intl.string(E.t['7iL1q6']),
                                               role: 'img',
                                               className: y.tadaIcon,
                                               children: '\uD83C\uDF89'

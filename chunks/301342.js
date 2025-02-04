@@ -1,9 +1,9 @@
 n.d(t, {
     P: () => y,
     Qo: () => P,
-    ZP: () => j,
-    kw: () => T,
-    rj: () => A
+    ZP: () => E,
+    kw: () => A,
+    rj: () => T
 });
 var i = n(200651),
     l = n(192379),
@@ -30,14 +30,14 @@ var i = n(200651),
 function N(e) {
     e.stopPropagation();
 }
-let E = l.memo(function (e) {
+let j = l.memo(function (e) {
         let t,
-            { channel: r, connectChannelDragSource: h, connectChannelDropTarget: C, disableManageChannels: Z, position: E, sortingPosition: j, hideIcon: y, children: P } = e,
-            A = (0, g.Q3)('CategoryChannel'),
-            T = (0, s.e7)([x.ZP], () => x.ZP.isChannelMuted(r.getGuildId(), r.id)),
+            { channel: r, connectChannelDragSource: h, connectChannelDropTarget: C, disableManageChannels: Z, position: j, sortingPosition: E, hideIcon: y, children: P } = e,
+            T = (0, g.Q3)('CategoryChannel'),
+            A = (0, s.e7)([x.ZP], () => x.ZP.isChannelMuted(r.getGuildId(), r.id)),
             w = (0, s.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
             R = (0, s.e7)([v.Z], () => v.Z.can(I.Plq.MANAGE_CHANNELS, r));
-        t = null != j ? (E > j ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
+        t = null != E ? (j > E ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
         let L = l.useCallback(() => {
                 w ? (0, d.mJ)(r.id) : (0, d.c4)(r.id);
             }, [r.id, w]),
@@ -92,7 +92,7 @@ let E = l.memo(function (e) {
                             ref: U,
                             className: a()(S.iconVisibility, S.wrapper, {
                                 [S.collapsed]: w,
-                                [S.muted]: T,
+                                [S.muted]: A,
                                 [S.clickable]: !0
                             }),
                             onContextMenu: M,
@@ -107,7 +107,7 @@ let E = l.memo(function (e) {
                                     'aria-expanded': !w,
                                     focusProps: { enabled: !1 },
                                     children: [
-                                        A || y
+                                        T || y
                                             ? null
                                             : (0, i.jsx)(c.CJ0, {
                                                   size: 'md',
@@ -118,7 +118,7 @@ let E = l.memo(function (e) {
                                             className: S.name,
                                             children: (0, i.jsx)(m.Z, { children: r.name })
                                         }),
-                                        A && !y
+                                        T && !y
                                             ? (0, i.jsx)(c.CJ0, {
                                                   size: 'md',
                                                   color: 'currentColor',
@@ -153,7 +153,7 @@ let E = l.memo(function (e) {
                                                                   left: -4
                                                               }
                                                           },
-                                                          children: A
+                                                          children: T
                                                               ? (0, i.jsx)(c.BRu, {
                                                                     size: 'xs',
                                                                     color: 'currentColor',
@@ -177,7 +177,7 @@ let E = l.memo(function (e) {
             });
         return null != C && null != h ? C(h(V)) : V;
     }),
-    j = (0, h.B)(E),
+    E = (0, h.B)(j),
     y = l.memo(function (e) {
         let { name: t, onDismiss: n, className: l } = e;
         return (0, i.jsx)('li', {
@@ -253,7 +253,7 @@ let E = l.memo(function (e) {
                   ]
               });
     }),
-    A = l.memo(function (e) {
+    T = l.memo(function (e) {
         let { category: t, channel: n } = e,
             l = (0, s.e7)([C.Z], () => C.Z.isVoiceCategoryCollapsed(t.guild.id));
         return l || null == n || n.record.type === I.d4z.GUILD_CATEGORY
@@ -271,7 +271,7 @@ let E = l.memo(function (e) {
                 : null
             : (0, i.jsx)('div', { style: { height: 16 } });
     }),
-    T = l.memo(function (e) {
+    A = l.memo(function (e) {
         let { channel: t } = e;
         return (0, i.jsx)('li', {
             className: a()(S.containerDefault),

@@ -102,10 +102,10 @@ function Z() {
     });
 }
 let I = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: I, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': N, 'aria-controls': E, guild: j, guildBanner: y, animationOverlayHeight: P, children: A, headerClassName: T, communityInfoVisible: w, hasSubheader: R } = e,
-        L = j.hasFeature(g.oNc.ANIMATED_BANNER),
-        M = (0, u.Z)(j),
-        D = !M && j.hasCommunityInfoSubheader(),
+    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: I, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': N, 'aria-controls': j, guild: E, guildBanner: y, animationOverlayHeight: P, children: T, headerClassName: A, communityInfoVisible: w, hasSubheader: R } = e,
+        L = E.hasFeature(g.oNc.ANIMATED_BANNER),
+        M = (0, u.Z)(E),
+        D = !M && E.hasCommunityInfoSubheader(),
         G = !M && w,
         k = (0, p.xR)(y) && L && !S,
         [B, O] = l.useState(!1),
@@ -155,26 +155,26 @@ let I = l.memo(function (e) {
                         onClick: o,
                         children: [
                             (0, i.jsxs)('header', {
-                                className: a()(v.header, T, { [v.themedHeaderMobile]: s.tq }),
+                                className: a()(v.header, A, { [v.themedHeaderMobile]: s.tq }),
                                 children: [
                                     (0, i.jsxs)('div', {
                                         className: a()(v.headerContent, v.primaryInfo),
                                         children: [
                                             (0, i.jsx)(m.Z, {
-                                                guild: j,
+                                                guild: E,
                                                 isBannerVisible: t
                                             }),
-                                            j.id === f._ && (0, i.jsx)(Z, {}),
+                                            E.id === f._ && (0, i.jsx)(Z, {}),
                                             (0, i.jsx)(c.X6q, {
                                                 variant: 'text-md/semibold',
                                                 lineClamp: 1,
                                                 className: v.name,
-                                                children: j.toString()
+                                                children: E.toString()
                                             }),
                                             null != o &&
                                                 (0, i.jsx)(c.P3F, {
                                                     className: v.headerButton,
-                                                    'aria-controls': E,
+                                                    'aria-controls': j,
                                                     'aria-expanded': N,
                                                     focusProps: {
                                                         ringTarget: V,
@@ -182,17 +182,17 @@ let I = l.memo(function (e) {
                                                     },
                                                     onClick: o,
                                                     onContextMenu: I,
-                                                    'aria-label': _.intl.formatToPlainString(_.t.xMXpl5, { guildName: null !== (l = null == j ? void 0 : j.toString()) && void 0 !== l ? l : '' })
+                                                    'aria-label': _.intl.formatToPlainString(_.t.xMXpl5, { guildName: null !== (l = null == E ? void 0 : E.toString()) && void 0 !== l ? l : '' })
                                                 }),
                                             (0, i.jsx)('div', {
                                                 className: v.headerChildren,
-                                                children: A
+                                                children: T
                                             })
                                         ]
                                     }),
                                     D &&
                                         (0, i.jsx)(C, {
-                                            guild: j,
+                                            guild: E,
                                             controller: n,
                                             hasBanner: null != y,
                                             hasSubheader: null != R && R
@@ -201,7 +201,7 @@ let I = l.memo(function (e) {
                             }),
                             null != y
                                 ? (0, i.jsx)(x, {
-                                      guild: j,
+                                      guild: E,
                                       controller: n,
                                       guildBanner: y,
                                       animate: B
