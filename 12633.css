@@ -18940,7 +18940,7 @@ html:not(.visual-refresh) .container_ea1e0b {
     z-index: 1
 }
 
-.full-motion .message__5126c.potioned__5126c:hover:before {
+.full-motion .message__5126c.potioned__5126c:not(.editing__5126c):not(.hasOpenPopouts__5126c):hover:before {
     width: 105%;
     transition: width 1.1s ease-in, opacity 1.1s ease-in
 }

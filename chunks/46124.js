@@ -6,6 +6,8 @@ var i = {
     mentioned: 'mentioned__5126c',
     replying: 'replying__5126c',
     message: 'message__5126c',
+    editing: 'editing__5126c',
+    hasOpenPopouts: 'hasOpenPopouts__5126c',
     messageListItem: 'messageListItem__5126c',
     selected: 'selected__5126c',
     quotedChatMessage: 'quotedChatMessage__5126c',

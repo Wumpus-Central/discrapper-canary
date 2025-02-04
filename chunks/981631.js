@@ -1302,6 +1302,7 @@ var T =
     (r.ACTIVITY_IFRAME_MOUNT = 'activity_iframe_mount'),
     (r.ACTIVITY_IFRAME_UNMOUNT = 'activity_iframe_unmount'),
     (r.ACTIVITY_HANDSHAKE = 'activity_handshake'),
+    (r.ACTIVITY_INSTANCE_EMBED_CLICKED = 'activity_instance_embed_clicked'),
     (r.APP_PROFILE_OPEN_APP_BUTTON_CLICKED = 'app_profile_open_app_button_clicked'),
     (r.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED = 'app_detail_page_entry_point_command_button_clicked'),
     (r.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED = 'embedded_application_invite_embed_viewed'),

@@ -192,25 +192,26 @@ function G(e, t) {
     );
 }
 function H(e) {
-    var t;
-    let { groupId: n, message: i, defaultValue: a } = e,
-        { canShowReactionsOnMessageHover: r } = d.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
-        s = i.author.id,
-        o = ''.concat(n, ':').concat(s),
-        c = l.useRef(a),
-        p =
-            ((t = i),
+    var t, n;
+    let { groupId: i, message: a, defaultValue: r, popouts: s } = e,
+        { canShowReactionsOnMessageHover: o } = d.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
+        c = a.author.id,
+        p = ''.concat(i, ':').concat(c),
+        g = l.useRef(r),
+        f =
+            ((t = a),
+            (n = s),
             l.useCallback(
                 (e) => {
-                    if (null == e || !(e.nativeEvent instanceof MouseEvent)) return;
-                    let n = e.target;
+                    if (null == e || !(e.nativeEvent instanceof MouseEvent) || Object.values(n).some((e) => e)) return;
+                    let i = e.target;
                     if ((0, h.Uw)(t)) {
-                        let { x: e, y: i, width: l, height: a } = n.getBoundingClientRect();
+                        let { x: e, y: n, width: l, height: a } = i.getBoundingClientRect();
                         (0, m.Z)(
                             t,
                             {
                                 x: e,
-                                y: i,
+                                y: n,
                                 w: l,
                                 h: a
                             },
@@ -219,24 +220,24 @@ function H(e) {
                         );
                     }
                 },
-                [t]
+                [t, n]
             )),
-        [g, f] = l.useState(a);
-    c.current = g || c.current;
-    let x = l.useCallback(
+        [x, C] = l.useState(r);
+    g.current = x || g.current;
+    let v = l.useCallback(
             (e) => {
-                r && (0, _.T6)(), g || (E.S.dispatchKeyed(b.LPv.ANIMATE_CHAT_AVATAR, o, !0), p(e), f(!0));
+                o && (0, _.T6)(), x || (E.S.dispatchKeyed(b.LPv.ANIMATE_CHAT_AVATAR, p, !0), f(e), C(!0));
             },
-            [g, o, r, p]
+            [x, p, o, f]
         ),
-        C = l.useCallback(() => {
-            E.S.dispatchKeyed(b.LPv.ANIMATE_CHAT_AVATAR, o, !1), f(!1);
-        }, [o]);
+        I = l.useCallback(() => {
+            E.S.dispatchKeyed(b.LPv.ANIMATE_CHAT_AVATAR, p, !1), C(!1);
+        }, [p]);
     return {
-        hasHovered: c.current,
-        isHovered: g,
-        handleMouseEnter: x,
-        handleMouseLeave: C
+        hasHovered: g.current,
+        isHovered: x,
+        handleMouseEnter: v,
+        handleMouseLeave: I
     };
 }
 function V(e, t) {

@@ -128,7 +128,8 @@ function $(e) {
         } = (0, L.tn)({
             groupId: x,
             message: s,
-            defaultValue: F
+            defaultValue: F,
+            popouts: B
         }),
         el = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
         ea = F || (el && j),
@@ -252,7 +253,8 @@ let ee = l.memo(function (e) {
         } = (0, L.tn)({
             groupId: en,
             message: E,
-            defaultValue: eh
+            defaultValue: eh,
+            popouts: eu
         }),
         { isFocused: ev, hasFocused: eE, handleFocus: eI, handleBlur: eb } = (0, L.bb)(ea),
         eZ = l.useCallback(
@@ -303,10 +305,11 @@ let ee = l.memo(function (e) {
             message: E,
             channel: J
         }),
-        ez = null != eG;
+        ez = null != eG,
+        eW = l.useMemo(() => Object.values(eu).some((e) => e), [eu]);
     a = E.type === q.uaV.CUSTOM_GIFT ? '' : !eT && ez ? (0, B.Z)(e, eL) : (0, G.Z)(e, eL, eT);
-    let eW = E.id === en,
-        eY = (0, i.jsx)(u.tEY, {
+    let eY = E.id === en,
+        eq = (0, i.jsx)(u.tEY, {
             offset: {
                 left: 4,
                 right: 4
@@ -320,7 +323,7 @@ let ee = l.memo(function (e) {
                         (0, i.jsx)(g.Z, {
                             compact: $,
                             message: E,
-                            hovering: ex
+                            hovering: ex && !eT && !eW
                         }),
                     (0, i.jsx)(R.Z, {
                         ...er,
@@ -342,11 +345,13 @@ let ee = l.memo(function (e) {
                             [X.ephemeral]: (0, S.Pv)(E),
                             [X.nitroMessage]: E.type === q.uaV.NITRO_NOTIFICATION,
                             [X.systemMessage]: (0, A.Z)(E),
-                            [X.groupStart]: !ei && (eW || E.type === q.uaV.REPLY),
+                            [X.groupStart]: !ei && (eY || E.type === q.uaV.REPLY),
                             [X.selected]: ej,
                             [X.replying]: (null == ew ? void 0 : ew.message.id) === E.id,
                             [X.interactionSending]: E.isCommandType() && E.state === q.yb.SENDING,
                             [X.automodMessage]: ez,
+                            [X.editing]: eT,
+                            [X.hasOpenPopouts]: eW,
                             [X.potioned]: (0, C.Uw)(E) && es
                         }),
                         zalgo: !eT,
@@ -411,9 +416,9 @@ let ee = l.memo(function (e) {
                       [X.backgroundFlash]: !0,
                       [X.groupStart]: !$ && E.id === en
                   }),
-                  children: eY
+                  children: eq
               },
               'bg-flash-'.concat(s)
           )
-        : eY;
+        : eq;
 });
