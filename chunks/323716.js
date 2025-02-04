@@ -9,19 +9,15 @@ n(358085);
 var u = n(960048),
     c = n(591759),
     d = n(303850),
-    f = n(981631);
-let _ = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
-    p = new d.R();
-function h(e) {
+    f = n(105713),
+    _ = n(981631);
+let p = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
+    h = new d.R();
+function m(e) {
     let t = new URLSearchParams();
     t.append('query', '@http.x_client_trace_id:"'.concat(e, '"')), t.append('showAllSpans', 'true');
     let n = c.Z.toURLSafe('traces?'.concat(t.toString()), 'https://datadog.discord.tools/apm/');
     return null == n ? null : n.toString();
-}
-function m() {
-    if (null == Intl.DateTimeFormat) return null;
-    let e = Intl.DateTimeFormat();
-    return null == e.resolvedOptions ? null : e.resolvedOptions().timeZone;
 }
 let g = /\/api(\/v\d+)?\/science/;
 function E(e) {
@@ -37,7 +33,7 @@ function E(e) {
             { default: l } = n(626135),
             { isPlatformEmbedded: c } = n(358085);
         if ('/' === e.url[0]) {
-            var d, f;
+            var d, _;
             (e.url = (0, i.K0)() + e.url), 'Authorization' in e.header || 'authorization' in e.header || e.set('Authorization', t.getToken());
             let n = l.getSuperPropertiesBase64();
             null != n && e.set('X-Super-Properties', n);
@@ -49,17 +45,17 @@ function E(e) {
                 e.set('Accept-Language', n);
             }
             e.set('X-Discord-Locale', s.locale);
-            let u = m();
+            let u = (0, f.Z)();
             null != u && e.set('X-Discord-Timezone', u);
-            let _ = a.getDebugOptionsHeaderValue();
-            if ((null != _ && '' !== _ && e.set('X-Debug-Options', _), a.isTracingRequests)) {
+            let p = a.getDebugOptionsHeaderValue();
+            if ((null != p && '' !== p && e.set('X-Debug-Options', p), a.isTracingRequests)) {
                 let t = o.getCurrentUser(),
-                    n = p.generate(null !== (f = null == t ? void 0 : t.id) && void 0 !== f ? f : '0');
+                    n = h.generate(null !== (_ = null == t ? void 0 : t.id) && void 0 !== _ ? _ : '0');
                 e.set('x-client-trace-id', n);
                 try {
                     let t = new URL(e.url).pathname;
                     if (!g.test(t)) {
-                        let i = h(n);
+                        let i = m(n);
                         null !== i && console.debug('%c[tracing]%c %s %s\n%s', 'font-weight: bold', '', e.method, t, i);
                     }
                 } catch (e) {
@@ -93,7 +89,7 @@ function E(e) {
                     null != t && 'parse' in t && t.parse)
                 ) {
                     let n = '[FILTERED]';
-                    if (_.includes(e.url)) {
+                    if (p.includes(e.url)) {
                         var i, a;
                         n = null === (a = e.xhr) || void 0 === a ? void 0 : null === (i = a.responseText) || void 0 === i ? void 0 : i.slice(0, 1000);
                     }
@@ -125,7 +121,7 @@ function E(e) {
                   })
                   .catch(i),
               !0)
-            : 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === f.evJ.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa)
+            : 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === _.evJ.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa)
               ? (Promise.all([n.e('52030'), n.e('85665')])
                     .then(n.bind(n, 24031))
                     .then((n) => {
