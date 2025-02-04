@@ -1,75 +1,77 @@
-t.d(a, { default: () => x });
-var i = t(200651),
-    n = t(192379),
-    r = t(481060),
-    s = t(933557),
-    l = t(925329),
-    d = t(296023),
-    o = t(388032),
-    c = t(165998);
-let x = (e) => {
-    let { channel: a, application: x, onClose: h, transitionState: m } = e,
-        k = (0, d.w)(a),
-        j = n.useCallback(
+a.d(t, { default: () => m });
+var n = a(200651),
+    i = a(192379),
+    s = a(481060),
+    l = a(933557),
+    r = a(540059),
+    d = a(925329),
+    o = a(296023),
+    c = a(388032),
+    x = a(165998);
+let m = (e) => {
+    let { channel: t, application: m, onClose: h, transitionState: k } = e,
+        u = (0, r.Q3)('IntegrationsEditLinkedLobbyModal'),
+        j = (0, o.w)(t),
+        p = i.useCallback(
             () => (
                 h(),
-                (0, r.ZDy)(async () => {
-                    let { default: e } = await Promise.all([t.e('38902'), t.e('31907')]).then(t.bind(t, 366854));
-                    return (t) =>
-                        (0, i.jsx)(e, {
-                            ...t,
-                            channelId: a.id,
-                            application: x
+                (0, s.ZDy)(async () => {
+                    let { default: e } = await Promise.all([a.e('38902'), a.e('31907')]).then(a.bind(a, 366854));
+                    return (a) =>
+                        (0, n.jsx)(e, {
+                            ...a,
+                            channelId: t.id,
+                            application: m
                         });
                 })
             ),
-            [x, a.id, h]
+            [m, t.id, h]
         ),
-        p = (0, s.ZP)(a, !0);
-    return (0, i.jsxs)(r.Y0X, {
-        transitionState: m,
-        'aria-label': o.intl.string(o.t.OJknho),
+        v = (0, l.ZP)(t, !0);
+    return (0, n.jsxs)(s.Y0X, {
+        transitionState: k,
+        'aria-label': c.intl.string(c.t.OJknho),
         children: [
-            (0, i.jsx)(r.xBx, {
+            (0, n.jsx)(s.xBx, {
                 separator: !1,
-                children: (0, i.jsx)(r.X6q, {
+                children: (0, n.jsx)(s.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: o.intl.string(o.t.OJknho)
+                    children: c.intl.string(c.t.OJknho)
                 })
             }),
-            (0, i.jsxs)(r.hzk, {
-                className: c.content,
+            (0, n.jsxs)(s.hzk, {
+                className: x.content,
                 children: [
-                    (0, i.jsx)(l.Z, {
-                        game: x,
-                        size: l.Z.Sizes.LARGE
+                    (0, n.jsx)(d.Z, {
+                        game: m,
+                        size: d.Z.Sizes.LARGE
                     }),
-                    (0, i.jsxs)('div', {
-                        className: c.metadata,
+                    (0, n.jsxs)('div', {
+                        className: x.metadata,
                         children: [
-                            (0, i.jsxs)('div', {
-                                className: c.metadataHeader,
+                            (0, n.jsxs)('div', {
+                                className: x.metadataHeader,
                                 children: [
-                                    (0, i.jsx)(r.Text, {
+                                    (0, n.jsx)(s.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
-                                        children: x.name
+                                        children: m.name
                                     }),
-                                    (0, i.jsx)(r.Text, {
+                                    (0, n.jsx)(s.Text, {
                                         variant: 'text-sm/normal',
-                                        color: 'header-secondary',
-                                        children: o.intl.format(o.t['0NJZAQ'], { channelName: p })
+                                        color: 'text-muted',
+                                        children: c.intl.format(c.t['0NJZAQ'], { channelName: v })
                                     })
                                 ]
                             }),
-                            null != k &&
-                                (0, i.jsxs)(i.Fragment, {
+                            null != j &&
+                                (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        (0, i.jsx)('div', { className: c.divider }),
-                                        (0, i.jsx)(r.Text, {
+                                        (0, n.jsx)('div', { className: x.divider }),
+                                        (0, n.jsx)(s.Text, {
                                             variant: 'text-xs/normal',
-                                            color: 'text-secondary',
-                                            children: k
+                                            color: 'text-muted',
+                                            children: j
                                         })
                                     ]
                                 })
@@ -77,18 +79,19 @@ let x = (e) => {
                     })
                 ]
             }),
-            (0, i.jsxs)(r.mzw, {
+            (0, n.jsxs)(s.mzw, {
                 children: [
-                    (0, i.jsx)(r.zxk, {
-                        onClick: j,
-                        color: r.zxk.Colors.RED,
-                        children: o.intl.string(o.t.LLWaxc)
+                    (0, n.jsx)(s.zxk, {
+                        onClick: p,
+                        color: s.zxk.Colors.RED,
+                        children: c.intl.string(c.t.LLWaxc)
                     }),
-                    (0, i.jsx)(r.zxk, {
+                    (0, n.jsx)(s.zxk, {
                         onClick: h,
-                        look: r.zxk.Looks.LINK,
-                        color: r.zxk.Colors.PRIMARY,
-                        children: o.intl.string(o.t['ETE/oK'])
+                        look: u ? s.zxk.Looks.FILLED : s.zxk.Looks.LINK,
+                        color: s.zxk.Colors.PRIMARY,
+                        className: x.cancelButton,
+                        children: c.intl.string(c.t['ETE/oK'])
                     })
                 ]
             })
