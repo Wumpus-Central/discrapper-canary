@@ -1,4 +1,4 @@
-n.d(s, { AnnouncementModal: () => f });
+n.d(s, { AnnouncementModal: () => m });
 var e = n(200651);
 n(192379);
 var i = n(481060),
@@ -59,12 +59,12 @@ let a = n(691041),
                 className: l.closeButtonIcon
             })
         }),
-    f = (t) => {
-        let { onClose: s, ctaOnClick: a, transitionState: f } = t;
+    m = (t) => {
+        let { onClose: s, ctaOnClick: a, transitionState: m } = t;
         return (0, e.jsxs)(i.Y0X, {
             size: i.CgR.DYNAMIC,
             className: l.container,
-            transitionState: f,
+            transitionState: m,
             children: [
                 (0, e.jsx)(b, {
                     className: l.closeButton,

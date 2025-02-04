@@ -21,6 +21,6 @@ function n(e) {
         }
     };
 }
-function u(e, t) {
-    e && ((0, r._8)() && setTimeout(() => (0, r.Zq)(), o.i), (0, r.s$)(t));
+function u(e) {
+    (0, r._8)() && setTimeout(() => (0, r.Zq)(), o.i), (0, r.s$)(e);
 }

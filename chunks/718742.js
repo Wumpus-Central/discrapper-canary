@@ -15,7 +15,7 @@ var a = n(200651),
     m = n(140238);
 let y = new Set([o.Dvm.ENTERING, o.Dvm.ENTERED]);
 function C(e) {
-    let { onClose: t, onCaptchaVerify: n, onReject: i, transitionState: C, headerText: E, bodyText: b, rqtoken: _, serveInvisible: R, ...x } = e,
+    let { onClose: t, onCaptchaVerify: n, onReject: i, transitionState: C, headerText: E, bodyText: _, rqtoken: b, serveInvisible: R, ...x } = e,
         g = (0, d.Z)(i),
         w = (0, s.Q3)('CaptchaModal');
     return (r.useEffect(() => {
@@ -51,7 +51,7 @@ function C(e) {
                                                 'aria-hidden': !0,
                                                 children: null != E ? E : u.intl.string(u.t.FpoiHR)
                                             }),
-                                            (0, a.jsx)('div', { children: null != b ? b : u.intl.string(u.t['/CidxM']) }),
+                                            (0, a.jsx)('div', { children: null != _ ? _ : u.intl.string(u.t['/CidxM']) }),
                                             (0, a.jsxs)('div', {
                                                 className: f.captchaContainer,
                                                 children: [
@@ -59,7 +59,7 @@ function C(e) {
                                                     (0, a.jsx)(l.Z, {
                                                         size: R ? 'invisible' : void 0,
                                                         onVerify: (e) => {
-                                                            g(), n(e, _), t();
+                                                            g(), n(e, b), t();
                                                         },
                                                         onClose: R ? t : void 0,
                                                         ...x
