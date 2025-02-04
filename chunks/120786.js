@@ -1,30 +1,29 @@
-n.d(t, { L: () => m });
+n.d(t, { L: () => u });
 var i = n(200651);
 n(192379);
 var s = n(120356),
     r = n.n(s),
     l = n(568611),
     a = n(693789),
-    o = n(965789),
-    c = n(842055),
-    d = n(588245);
-let u = () =>
+    o = (n(965789), n(842055)),
+    c = n(588245);
+let d = () =>
         (0, i.jsx)('div', {
-            className: c.gifContainer,
+            className: o.gifContainer,
             children: (0, i.jsx)('img', {
-                src: o.r,
-                className: c.gif,
+                src: n(37219),
+                className: o.orbSVG,
                 alt: 'Orb GIF'
             })
         }),
-    m = (e) => {
-        let { ctaText: t, ctaOnClick: n, linkText: s, linkTo: o } = e;
+    u = (e) => {
+        let { ctaText: t, ctaOnClick: n, linkText: s, linkTo: u } = e;
         return (0, i.jsxs)('div', {
-            className: r()(c.container, d.baseCardOutline),
+            className: r()(o.container, c.baseCardOutline),
             children: [
-                (0, i.jsx)(u, {}),
+                (0, i.jsx)(d, {}),
                 (0, i.jsx)(a.zx, {
-                    className: c.ctaButton,
+                    className: o.ctaButton,
                     color: a.zx.Colors.BRAND,
                     look: a.zx.Looks.FILLED,
                     onClick: n,
@@ -32,8 +31,8 @@ let u = () =>
                     children: t
                 }),
                 (0, i.jsx)(l.rU, {
-                    to: { pathname: o },
-                    className: c.learnMoreLink,
+                    to: { pathname: u },
+                    className: o.learnMoreLink,
                     children: s
                 })
             ]

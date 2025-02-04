@@ -1,6 +1,6 @@
 n.d(t, {
-    BalanceWidgetEarnedOrbsCoachmarkModal: () => E,
-    E: () => p
+    BalanceWidgetEarnedOrbsCoachmarkModal: () => p,
+    E: () => x
 });
 var i = n(200651);
 n(192379);
@@ -10,49 +10,51 @@ var s = n(120356),
     a = n(693789),
     o = n(481060),
     c = n(751648),
-    d = n(965789),
-    u = n(317257),
-    m = n(970815),
-    h = n(741808),
-    g = n(388032),
-    _ = n(588245),
-    x = n(865446);
-let p = (e) => {
-    let { earnedOrbsQuantity: t, descriptionText: n = g.intl.string(g.t['4YgBe3']), ctaText: s = g.intl.string(g.t.WYchdX), linkText: c = g.intl.string(g.t['H57f4+']), ctaOnClick: u, linkTo: m } = e;
+    d = (n(965789), n(317257)),
+    u = n(970815),
+    m = n(741808),
+    h = n(388032),
+    g = n(588245),
+    _ = n(865446);
+let x = (e) => {
+    let { earnedOrbsQuantity: t, descriptionText: s = h.intl.string(h.t['4YgBe3']), ctaText: c = h.intl.string(h.t.WYchdX), linkText: d = h.intl.string(h.t['H57f4+']), ctaOnClick: u, linkTo: m } = e;
     return (0, i.jsxs)('div', {
-        className: r()(x.container, _.baseCardOutline),
+        className: r()(_.container, g.baseCardOutline),
         children: [
-            (0, i.jsx)('img', {
-                src: d.r,
-                className: x.gif,
-                alt: 'Orb GIF'
+            (0, i.jsx)('div', {
+                className: r()(_.gifContainer, { [_.centerContent]: !0 }),
+                children: (0, i.jsx)('img', {
+                    src: n(709538),
+                    className: _.orbSvg,
+                    alt: 'Orb GIF'
+                })
             }),
             (0, i.jsxs)('div', {
-                className: x.contentContainer,
+                className: _.contentContainer,
                 children: [
                     (0, i.jsx)('h3', {
-                        className: _.coachmarkTitle,
-                        children: g.intl.format(g.t.lA7CLi, { quantity: t })
+                        className: g.coachmarkTitle,
+                        children: h.intl.format(h.t.lA7CLi, { quantity: t })
                     }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-sm/medium',
-                        className: _.coachmarkDescription,
-                        children: n
+                        className: g.coachmarkDescription,
+                        children: s
                     }),
                     (0, i.jsx)(a.zx, {
-                        className: x.ctaButton,
+                        className: _.ctaButton,
                         color: a.zx.Colors.BRAND,
                         look: a.zx.Looks.FILLED,
                         onClick: u,
                         fullWidth: !0,
-                        children: s
+                        children: c
                     }),
                     (0, i.jsx)(l.rU, {
                         to: { pathname: m },
                         children: (0, i.jsx)(o.Text, {
                             variant: 'text-sm/medium',
-                            className: x.link,
-                            children: c
+                            className: _.link,
+                            children: d
                         })
                     })
                 ]
@@ -60,13 +62,13 @@ let p = (e) => {
         ]
     });
 };
-function E(e) {
+function p(e) {
     let { earnedOrbsQuantity: t, balance: n, backgroundElementRef: s, onClose: r, onClickPill: l, ctaOnClick: a, ...o } = e,
-        d = async () => {
+        g = async () => {
             await (0, c.j2)(), await r();
         };
-    return (0, i.jsxs)(h.X, {
-        className: x.coachmarkModalContainer,
+    return (0, i.jsxs)(m.X, {
+        className: _.coachmarkModalContainer,
         backgroundElementRef: s,
         getOffsetsRelativeToElement: () => ({
             top: 0,
@@ -78,20 +80,20 @@ function E(e) {
             right: 32
         },
         children: [
-            (0, i.jsx)(m.A4, {
+            (0, i.jsx)(u.A4, {
                 onClick: async () => {
-                    await d(), l();
+                    await g(), l();
                 },
                 balance: n,
                 placeholderBalance: null != n ? n : 0,
-                balanceWidgetMode: u.b.DEFAULT
+                balanceWidgetMode: d.b.DEFAULT
             }),
-            (0, i.jsx)(p, {
+            (0, i.jsx)(x, {
                 earnedOrbsQuantity: t,
-                ctaText: g.intl.string(g.t['H57f4+']),
-                linkText: g.intl.string(g.t['7f4H7O']),
+                ctaText: h.intl.string(h.t['H57f4+']),
+                linkText: h.intl.string(h.t['7f4H7O']),
                 ctaOnClick: async () => {
-                    await d(), a();
+                    await g(), a();
                 }
             })
         ]
