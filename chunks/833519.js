@@ -136,6 +136,7 @@ function B(e) {
             className: r()(z.content, z.streamPreview, { [z.small]: ei }),
             children: [
                 (0, i.jsx)(v.Z, {
+                    noImage: !0,
                     noText: !0,
                     className: r()(z.absoluteFill, { [z.streamPreviewOpacity]: null == K }),
                     stream: t.stream

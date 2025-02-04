@@ -44,8 +44,7 @@ class T extends l.PureComponent {
             children: [
                 (0, i.jsx)(Z.Z, {
                     className: N.previewImage,
-                    stream: e,
-                    noImage: !1
+                    stream: e
                 }),
                 a
                     ? (0, i.jsx)('div', {
