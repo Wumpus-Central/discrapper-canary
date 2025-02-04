@@ -17,6 +17,7 @@ e.exports = {
     controlsContainer: 'controlsContainer_d9be46',
     controls: 'controls_d9be46',
     wrappedControls: 'wrappedControls_d9be46',
+    requiredError: 'requiredError_d9be46',
     characterCount: 'characterCount_d9be46',
     expressionPicker: 'expressionPicker_d9be46',
     submitButton: 'submitButton_d9be46',
