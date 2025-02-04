@@ -34,16 +34,17 @@ function E(e) {
     let P = (null == x ? void 0 : x.text) != null && !S,
         w = S ? 'sm' : 'xs',
         M = () =>
-            null == O
+            null == O || ((null == t ? void 0 : t.bot) && (null == x ? void 0 : x.text) != null)
                 ? null
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(h.Z, {
-                              activity: R,
-                              stream: r,
-                              tooltip: P && !T ? D : void 0,
-                              className: S ? g.fullWidth : void 0
-                          }),
+                          (null == t ? void 0 : t.bot) !== !0 &&
+                              (0, i.jsx)(h.Z, {
+                                  activity: R,
+                                  stream: r,
+                                  tooltip: P && !T ? D : void 0,
+                                  className: S ? g.fullWidth : void 0
+                              }),
                           !P &&
                               (0, i.jsx)(p.Z, {
                                   variant: 'text-'.concat(w, '/medium'),
