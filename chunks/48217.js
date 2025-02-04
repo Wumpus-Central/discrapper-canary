@@ -5,8 +5,8 @@ var o = n(481060),
     r = n(269128),
     a = n(358555),
     l = n(267642),
-    d = n(26323),
-    c = n(30513),
+    c = n(26323),
+    d = n(30513),
     s = n(981631),
     u = n(388032),
     _ = n(369576);
@@ -39,7 +39,7 @@ function h(e) {
     let { analyticsLocations: i, analyticsLocation: n, guild: o, isGIF: r, banner: a } = e,
         _ = r ? (0, l._p)(s.oNc.ANIMATED_BANNER) : (0, l._p)(s.oNc.BANNER);
     null != _ &&
-        (0, d.Z)({
+        (0, c.Z)({
             analyticsLocations: i,
             analyticsSourceLocation: n,
             guild: o,
@@ -55,6 +55,6 @@ function h(e) {
                 })
             },
             perkIntro: u.intl.string(u.t.ZuItcH),
-            perks: r ? (0, c.zC)() : (0, c.XO)()
+            perks: r ? (0, d.zC)() : (0, d.XO)()
         });
 }
