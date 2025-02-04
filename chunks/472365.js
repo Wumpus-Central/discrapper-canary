@@ -136,8 +136,12 @@ function G(e) {
         return null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
     });
     let S = (0, a.e7)([R.default], () => R.default.getCurrentUser()),
-        { invite: A, error: O, submitting: U } = (0, a.cj)([M.Z], () => M.Z.getProps()),
-        { nickname: j } = (0, N.XW)();
+        { invite: A, error: O, submitting: U } = (0, a.cj)([M.Z], () => M.Z.getProps());
+    l.useEffect(() => {
+        var e;
+        (0, N.pB)(null !== (e = null == A ? void 0 : A.approximate_member_count) && void 0 !== e ? e : 0);
+    }, [null == A ? void 0 : A.approximate_member_count]);
+    let { nickname: j } = (0, N.XW)();
     l.useEffect(() => {
         !__OVERLAY__ && x.isPlatformEmbedded && ((0, x.isWindows)() ? b.ZP.minimize() : b.ZP.restore(), b.ZP.focus());
     }, []);

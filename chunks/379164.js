@@ -28,11 +28,21 @@ let p = {
             () => {
                 if ((0, o.gY)({ location: 'acceptInvite' }) && null != e.guild) {
                     if (d) {
+                        if (c.h2.getSetting().includes(e.guild.id)) {
+                            let t = new Set((0, E.YK)());
+                            t.delete(e.guild.id), c.h2.updateSetting(Array.from(t));
+                        }
+                    } else {
                         var t;
                         let n = new Set((0, E.YK)());
                         n.add(null === (t = e.guild) || void 0 === t ? void 0 : t.id), c.h2.updateSetting(Array.from(n));
                     }
-                    if (!h) {
+                    if (h) {
+                        if (c.SE.getSetting().includes(e.guild.id)) {
+                            let t = new Set((0, E._o)());
+                            t.delete(e.guild.id), c.SE.updateSetting(Array.from(t));
+                        }
+                    } else {
                         let t = new Set((0, E._o)());
                         t.add(e.guild.id), c.SE.updateSetting(Array.from(t));
                     }
