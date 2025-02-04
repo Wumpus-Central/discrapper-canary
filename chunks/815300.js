@@ -12,6 +12,7 @@ var i = {
     clickable: 'clickable__9293f',
     icon: 'icon__9293f',
     selected: 'selected__9293f',
+    iconDisabled: 'iconDisabled__9293f',
     iconBadge: 'iconBadge__9293f',
     iconBadgeTop: 'iconBadgeTop__9293f',
     iconBadgeBottom: 'iconBadgeBottom__9293f',

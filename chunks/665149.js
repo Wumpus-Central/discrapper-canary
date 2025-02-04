@@ -69,7 +69,7 @@ let h = 24,
                     let { onMouseEnter: f, onMouseLeave: h, onFocus: b, onBlur: T } = e;
                     return null == y
                         ? (0, i.jsx)('div', {
-                              className: s()(t, [p.iconWrapper]),
+                              className: s()(t, p.iconWrapper, { [p.iconDisabled]: o }),
                               children: (0, i.jsx)(E, {
                                   x: 0,
                                   y: 0,
@@ -98,7 +98,8 @@ let h = 24,
                               className: s()(t, {
                                   [p.iconWrapper]: !0,
                                   [p.clickable]: !o && null != y,
-                                  [p.selected]: a
+                                  [p.selected]: a,
+                                  [p.iconDisabled]: o
                               }),
                               role: C,
                               'aria-label': M,
