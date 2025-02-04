@@ -1,84 +1,77 @@
-n.d(t, {
-    Z: () => g,
-    t: () => c
+t.d(n, {
+    Z: () => p,
+    t: () => u
 });
-var i,
-    r = n(392711),
-    a = n.n(r),
-    s = n(442837),
-    o = n(570140),
-    l = n(246364);
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = {
+var o,
+    r,
+    i,
+    a = t(392711),
+    l = t.n(a),
+    s = t(442837),
+    c = t(570140),
+    d = t(246364);
+let u = {
         version: '',
         description: '',
         formFields: []
     },
-    d = {};
-function f(e) {
-    let { form: t, guildId: n } = e;
-    if (null == t) d[n] = c;
-    else {
-        var i;
-        let e = null !== (i = d[n]) && void 0 !== i ? i : c;
-        d[n] = {
-            ...e,
-            ...t
-        };
-    }
-}
-function _(e) {
-    var t;
-    let { guildId: n } = e;
-    d[n] = null !== (t = d[n]) && void 0 !== t ? t : c;
-}
-function p(e) {
-    let { invite: t } = e,
-        { member_verification_form: n } = t,
-        { guild: i } = t;
-    if (null != i && null != n) {
-        var r;
-        return (
-            (d[i.id] = {
-                version: n.version,
-                description: null !== (r = n.description) && void 0 !== r ? r : '',
-                formFields: n.form_fields,
-                guild: i
-            }),
-            !0
-        );
-    }
-    return !1;
-}
-function h(e) {
-    let { guild: t } = e;
-    delete d[null == t ? void 0 : t.id];
-}
+    _ = {};
 class m extends (i = s.ZP.Store) {
     get(e) {
-        if (null != e) return d[e];
+        if (null != e) return _[e];
     }
     getRulesPrompt(e) {
-        var t;
-        return a().find(null === (t = d[e]) || void 0 === t ? void 0 : t.formFields, l.J);
+        var n;
+        return l().find(null === (n = _[e]) || void 0 === n ? void 0 : n.formFields, d.J);
     }
 }
-u(m, 'displayName', 'MemberVerificationFormStore');
-let g = new m(o.Z, {
-    INVITE_ACCEPT_SUCCESS: p,
-    MEMBER_VERIFICATION_FORM_UPDATE: f,
-    MEMBER_VERIFICATION_FORM_FETCH_FAIL: _,
-    GUILD_DELETE: h
+(r = 'MemberVerificationFormStore'),
+    (o = 'displayName') in m
+        ? Object.defineProperty(m, o, {
+              value: r,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (m[o] = r);
+let p = new m(c.Z, {
+    INVITE_ACCEPT_SUCCESS: function (e) {
+        let { invite: n } = e,
+            { member_verification_form: t } = n,
+            { guild: o } = n;
+        if (null != o && null != t) {
+            var r;
+            return (
+                (_[o.id] = {
+                    version: t.version,
+                    description: null !== (r = t.description) && void 0 !== r ? r : '',
+                    formFields: t.form_fields,
+                    guild: o
+                }),
+                !0
+            );
+        }
+        return !1;
+    },
+    MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
+        let { form: n, guildId: t } = e;
+        if (null == n) _[t] = u;
+        else {
+            var o;
+            let e = null !== (o = _[t]) && void 0 !== o ? o : u;
+            _[t] = {
+                ...e,
+                ...n
+            };
+        }
+    },
+    MEMBER_VERIFICATION_FORM_FETCH_FAIL: function (e) {
+        var n;
+        let { guildId: t } = e;
+        _[t] = null !== (n = _[t]) && void 0 !== n ? n : u;
+    },
+    GUILD_DELETE: function (e) {
+        let { guild: n } = e;
+        delete _[null == n ? void 0 : n.id];
+    }
 });
