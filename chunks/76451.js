@@ -4,9 +4,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    l = n(192379),
-    r = n(512722),
-    a = n.n(r),
+    r = n(192379),
+    l = n(512722),
+    a = n.n(l),
     s = n(642128),
     o = n(442837),
     c = n(481060),
@@ -40,8 +40,8 @@ let N = {
         friction: 52
     };
 function w(e) {
-    let { channelId: t, onClick: n, onClose: r, onMouseEnter: s } = e,
-        u = l.useRef(null),
+    let { channelId: t, onClick: n, onClose: l, onMouseEnter: s } = e,
+        u = r.useRef(null),
         m = (0, o.e7)([x.Z], () => x.Z.getChannel(t), [t]);
     return (
         a()(null != m, 'Forum Channel is null'),
@@ -62,7 +62,7 @@ function w(e) {
                     className: j.fileInput,
                     ref: u,
                     onChange: (e) => {
-                        null == r || r(), (0, C.d)(e.currentTarget.files, m, f.d.FirstThreadMessage, { requireConfirm: !0 }), v.S.dispatch(b.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
+                        null == l || l(), (0, C.d)(e.currentTarget.files, m, f.d.FirstThreadMessage, { requireConfirm: !0 }), v.S.dispatch(b.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
                     },
                     multiple: m.rateLimitPerUser <= 0,
                     tabIndex: -1,
@@ -81,8 +81,8 @@ function w(e) {
 }
 function y(e) {
     let { channelId: t, closePopout: n } = e,
-        [r, a] = l.useState(!1),
-        { reducedMotion: d } = l.useContext(c.Sfi),
+        [l, a] = r.useState(!1),
+        { reducedMotion: d } = r.useContext(c.Sfi),
         x = (0, c.q_F)(
             {
                 from: d.enabled ? T : N,
@@ -96,7 +96,7 @@ function y(e) {
     return (0, i.jsx)(s.animated.div, {
         className: j.popoutContainer,
         onMouseLeave: () => {
-            r || n();
+            l || n();
         },
         style: x,
         children: (0, i.jsxs)(c.zJl, {
@@ -137,15 +137,15 @@ function y(e) {
 }
 function E(e) {
     let { channelId: t } = e,
-        [n, r] = l.useState(!1),
+        [n, l] = r.useState(!1),
         a = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type)),
         s = a.length,
         c = s > 0;
-    l.useEffect(() => {
-        n && !c && r(!1);
+    r.useEffect(() => {
+        n && !c && l(!1);
     }, [n, c]);
     let d = () => {
-        c && r(!0);
+        c && l(!0);
     };
     return (0, i.jsxs)('div', {
         className: j.container,
@@ -173,7 +173,7 @@ function E(e) {
                 (0, i.jsx)(y, {
                     channelId: t,
                     closePopout: () => {
-                        r(!1);
+                        l(!1);
                     }
                 })
         ]

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
     s = n(642128),
     o = n(232713),
     c = n(481060),
@@ -14,16 +14,16 @@ var i = n(200651),
     x = n(388032),
     f = n(655910),
     p = n(665162);
-let v = l.memo(function (e) {
-    let { channel: t, onChange: r } = e,
+let v = r.memo(function (e) {
+    let { channel: t, onChange: l } = e,
         v = (0, h.AF)(),
         { guidelinesOpen: C } = (0, h.xH)((e) => {
             let { guidelinesOpen: t } = e;
             return { guidelinesOpen: t };
         }, o.X),
         _ = (0, m.r_)(t),
-        [b, j] = l.useState(!1),
-        N = l.useCallback(
+        [b, j] = r.useState(!1),
+        N = r.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = e.clientHeight >= 220;
@@ -31,10 +31,10 @@ let v = l.memo(function (e) {
             },
             [b]
         );
-    l.useLayoutEffect(() => {
-        setTimeout(r, 350);
-    }, [C, r]);
-    let [T, I] = l.useState(!C),
+    r.useLayoutEffect(() => {
+        setTimeout(l, 350);
+    }, [C, l]);
+    let [T, I] = r.useState(!C),
         S = (0, c.q_F)({
             opacity: C ? 1 : 0,
             maxHeight: C ? 500 : 0,

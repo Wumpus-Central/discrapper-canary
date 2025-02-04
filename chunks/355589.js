@@ -1,8 +1,8 @@
 n.d(t, { Z: () => eo }), n(653041), n(47120);
 var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
     s = n(913527),
     o = n.n(s),
     c = n(642128),
@@ -130,13 +130,13 @@ let V = (e) => {
             isDone: t
         };
     },
-    X = (e, t, l) => ({
+    X = (e, t, r) => ({
         name: F.intl.string(F.t['6A0O6+']),
         description: t
             ? F.intl.string(F.t['8hI5vr'])
             : F.intl.format(F.t.ysxcAw, {
                   onClick: (e) => {
-                      null != l &&
+                      null != r &&
                           (e.preventDefault(),
                           e.stopPropagation(),
                           (0, P.qz)(),
@@ -145,7 +145,7 @@ let V = (e) => {
                               return (t) =>
                                   (0, i.jsx)(e, {
                                       ...t,
-                                      guildId: l
+                                      guildId: r
                                   });
                           }));
                   }
@@ -155,26 +155,26 @@ let V = (e) => {
         },
         isDone: e
     }),
-    W = (e, t) => l.useCallback(() => (t(!1), w.Z.hideAdminOnboarding(e, !0)), [e, t]),
+    W = (e, t) => r.useCallback(() => (t(!1), w.Z.hideAdminOnboarding(e, !0)), [e, t]),
     K = (e) => {
         let t = I.default.extractTimestamp(e);
         return o()().isBefore(o()(t).add(o().duration(15, 'days')));
     },
     J = (e, t, n) => {
-        l.useEffect(() => {
+        r.useEffect(() => {
             e || n(!t);
         }, [e, n, t]);
     },
     Y = (e, t, n, i) => {
-        let r = l.useRef(0);
-        l.useEffect(
+        let l = r.useRef(0);
+        r.useEffect(
             () => (
                 n || !e || t
-                    ? clearTimeout(r.current)
-                    : (r.current = setTimeout(() => {
+                    ? clearTimeout(l.current)
+                    : (l.current = setTimeout(() => {
                           i();
                       }, 60 * T.Z.Millis.SECOND)),
-                () => clearTimeout(r.current)
+                () => clearTimeout(l.current)
             ),
             [e, t, i, n]
         );
@@ -185,17 +185,17 @@ let V = (e) => {
         });
     },
     $ = (e) => {
-        let { isAllDone: t, isVisible: n, canManageChannel: i, guildId: r, channel: a } = e,
-            s = (0, h.e7)([b.Z], () => (null != r ? b.Z.getRoles(r) : void 0)),
-            o = l.useCallback(() => {
+        let { isAllDone: t, isVisible: n, canManageChannel: i, guildId: l, channel: a } = e,
+            s = (0, h.e7)([b.Z], () => (null != l ? b.Z.getRoles(l) : void 0)),
+            o = r.useCallback(() => {
                 N.S.dispatch(L.CkL.REMEASURE_TARGET);
             }, []);
-        l.useEffect(() => {
+        r.useEffect(() => {
             o();
         }, [o, t, n, i, s, a.id, a.permissionOverwrites]);
     },
     ee = () => {
-        let [e, t] = l.useState(!0);
+        let [e, t] = r.useState(!0);
         return {
             transitions: (0, g.Yzy)(e, {
                 keys: (e) => (e ? 'shown' : 'hidden'),
@@ -241,26 +241,26 @@ let V = (e) => {
         friction: 18,
         clamp: !0
     },
-    el = (e) => {
-        let { guild: t, channel: r, hasAnyThread: a, handleHide: s } = e,
-            [o, c] = l.useState(!1),
-            d = (0, k.c)(r.id),
-            u = (0, h.e7)([S.Z], () => S.Z.hasHidden(r.id)),
-            x = (function (e, t, r, a) {
+    er = (e) => {
+        let { guild: t, channel: l, hasAnyThread: a, handleHide: s } = e,
+            [o, c] = r.useState(!1),
+            d = (0, k.c)(l.id),
+            u = (0, h.e7)([S.Z], () => S.Z.hasHidden(l.id)),
+            x = (function (e, t, l, a) {
                 let s = null == e ? void 0 : e.id,
                     o = (0, h.e7)([b.Z], () => (null != s ? b.Z.getRoles(s) : void 0));
-                return l.useMemo(() => {
-                    let l = new U(),
+                return r.useMemo(() => {
+                    let r = new U(),
                         s = (null == t ? void 0 : t.isMediaChannel()) === !0;
                     return (
                         null == e ||
                             null == t ||
                             s ||
                             null == o ||
-                            l.addStep(
-                                (function (e, t, l, r) {
-                                    let a = (0, v.Z)(l) ? m.$e(L.Plq.VIEW_CHANNEL, L.Plq.SEND_MESSAGES) : L.Plq.SEND_MESSAGES,
-                                        s = null != e ? (0, y.E$)(e, t, l, a).filter((t) => l.permissionOverwrites.hasOwnProperty(t.id) || (0, C.pM)(e.id, t.id)) : [],
+                            r.addStep(
+                                (function (e, t, r, l) {
+                                    let a = (0, v.Z)(r) ? m.$e(L.Plq.VIEW_CHANNEL, L.Plq.SEND_MESSAGES) : L.Plq.SEND_MESSAGES,
+                                        s = null != e ? (0, y.E$)(e, t, r, a).filter((t) => r.permissionOverwrites.hasOwnProperty(t.id) || (0, C.pM)(e.id, t.id)) : [],
                                         o = s.length > 0,
                                         c = s.some((t) => (0, C.pM)(e.id, t.id));
                                     return {
@@ -280,11 +280,11 @@ let V = (e) => {
                                                     async () => {
                                                         let { default: t } = await n.e('78704').then(n.bind(n, 560602));
                                                         return (
-                                                            r(!0),
+                                                            l(!0),
                                                             (n) =>
                                                                 (0, i.jsx)(t, {
                                                                     ...n,
-                                                                    channel: l,
+                                                                    channel: r,
                                                                     guild: e,
                                                                     permission: a,
                                                                     currentSelectedRoles: s
@@ -294,24 +294,24 @@ let V = (e) => {
                                                     {
                                                         modalKey: 'SEND_MESSAGE_ROLE_PERMISSION_FIX_MODAL_KEY',
                                                         onCloseRequest: L.VqG,
-                                                        onCloseCallback: () => r(!1)
+                                                        onCloseCallback: () => l(!1)
                                                     }
                                                 );
                                         }
                                     };
                                 })(e, o, t, a)
                             ),
-                        s || l.addStep(V(t)),
-                        l.addStep(G(t)),
-                        l.addStep(q(t)),
-                        l.addStep(X(r, s, null == e ? void 0 : e.id)),
-                        l
+                        s || r.addStep(V(t)),
+                        r.addStep(G(t)),
+                        r.addStep(q(t)),
+                        r.addStep(X(l, s, null == e ? void 0 : e.id)),
+                        r
                     );
-                }, [t, e, o, r, a]);
-            })(t, r, a, c),
+                }, [t, e, o, l, a]);
+            })(t, l, a, c),
             f = x.isAllDone();
         return (
-            Y(f, d || u || !K(r.id), o, s),
+            Y(f, d || u || !K(l.id), o, s),
             {
                 onboardingSteps: x,
                 isHidden: u,
@@ -320,8 +320,8 @@ let V = (e) => {
             }
         );
     },
-    er = () =>
-        l.useCallback((e) => {
+    el = () =>
+        r.useCallback((e) => {
             var t;
             null === (t = e.clickHandler) || void 0 === t || t.call(e);
         }, []),
@@ -359,23 +359,23 @@ let V = (e) => {
     },
     eo = (e) => {
         let { hasAnyThread: t, channel: n } = e,
-            { onboardingExpanded: l } = (0, M.xH)((e) => {
+            { onboardingExpanded: r } = (0, M.xH)((e) => {
                 let { onboardingExpanded: t } = e;
                 return { onboardingExpanded: t };
             }, d.X),
-            { tagFilter: r } = (0, E.H)(n.id),
+            { tagFilter: l } = (0, E.H)(n.id),
             s = (0, h.e7)([b.Z], () => b.Z.getGuild(n.getGuildId())),
             o = (0, R.r_)(n),
             { transitions: m, setVisible: x } = ee(),
-            f = et(l),
-            v = er(),
+            f = et(r),
+            v = el(),
             C = W(n.id, x),
             {
                 onboardingSteps: N,
                 isDismissed: T,
                 isHidden: I,
                 isAllDone: S
-            } = el({
+            } = er({
                 guild: s,
                 channel: n,
                 hasAnyThread: t,
@@ -442,8 +442,8 @@ let V = (e) => {
                                                               ]
                                                           }),
                                                           (0, i.jsx)(es, {
-                                                              expanded: l,
-                                                              onClick: () => k(!l)
+                                                              expanded: r,
+                                                              onClick: () => k(!r)
                                                           }),
                                                           (0, i.jsx)(ea, { handleHide: C })
                                                       ]
@@ -530,7 +530,7 @@ let V = (e) => {
                 : (0, i.jsx)(Z.Z, {
                       channelName: n.name,
                       guildId: n.guild_id,
-                      tagFilter: r,
+                      tagFilter: l,
                       channel: n
                   });
     };

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P });
 var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
     s = n(642128),
     o = n(442837),
     c = n(780384),
@@ -39,7 +39,7 @@ function E(e) {
     });
 }
 function R(e) {
-    let { username: t, title: n, videoSrc: l, messageCount: r, reaction: s, reactionCount: o, classname: c } = e;
+    let { username: t, title: n, videoSrc: r, messageCount: l, reaction: s, reactionCount: o, classname: c } = e;
     return (0, i.jsxs)('div', {
         className: a()(T.videoPreview, c),
         children: [
@@ -73,7 +73,7 @@ function R(e) {
             (0, i.jsx)(d.LZC, { size: 10 }),
             (0, i.jsx)(h.Z, {
                 className: T.video,
-                src: l,
+                src: r,
                 autoPlay: !0,
                 loop: !0,
                 muted: !0
@@ -97,7 +97,7 @@ function R(e) {
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'interactive-normal',
-                                    children: r
+                                    children: l
                                 })
                             ]
                         }),
@@ -124,27 +124,27 @@ function R(e) {
 }
 let P = (e) => {
     var t, n;
-    let { channel: r } = e,
+    let { channel: l } = e,
         h = (0, u.ZP)(),
         P = (0, c.wj)(h),
-        k = (0, o.e7)([C.Z], () => C.Z.getGuild(r.guild_id)),
+        k = (0, o.e7)([C.Z], () => C.Z.getGuild(l.guild_id)),
         Z = (0, o.e7)([m.Z], () => m.Z.useReducedMotion),
-        M = (0, o.e7)([g.Z], () => g.Z.hasHidden(r.id)),
+        M = (0, o.e7)([g.Z], () => g.Z.hasHidden(l.id)),
         A = (0, p.C)({
-            guildId: r.guild_id,
-            channelId: r.id
+            guildId: l.guild_id,
+            channelId: l.id
         }),
         { transitions: L, setVisible: F } = (0, b.H)(),
-        O = l.useCallback(() => {
-            F(!1), x.Z.hideAdminOnboarding(r.id, !0);
-        }, [r, F]);
-    l.useEffect(() => {
-        (0, f.c)(r.id) || F(!M);
-    }, [r, F, M]);
-    let z = l.useMemo(() => [N.intl.string(N.t['8pEGAw']), N.intl.string(N.t.jwfgDQ), N.intl.string(N.t.mPKs29), N.intl.string(N.t.StRbvL)], []),
-        D = l.useMemo(() => [N.intl.string(N.t['m/b58P']), N.intl.string(N.t.MuJSKy), N.intl.string(N.t['d/Wqvr']), N.intl.string(N.t.GJklAw)], []),
+        O = r.useCallback(() => {
+            F(!1), x.Z.hideAdminOnboarding(l.id, !0);
+        }, [l, F]);
+    r.useEffect(() => {
+        (0, f.c)(l.id) || F(!M);
+    }, [l, F, M]);
+    let z = r.useMemo(() => [N.intl.string(N.t['8pEGAw']), N.intl.string(N.t.jwfgDQ), N.intl.string(N.t.mPKs29), N.intl.string(N.t.StRbvL)], []),
+        D = r.useMemo(() => [N.intl.string(N.t['m/b58P']), N.intl.string(N.t.MuJSKy), N.intl.string(N.t['d/Wqvr']), N.intl.string(N.t.GJklAw)], []),
         B = () => {
-            v.Z.open(r.guild_id, j.pNK.ROLE_SUBSCRIPTIONS);
+            v.Z.open(l.guild_id, j.pNK.ROLE_SUBSCRIPTIONS);
         },
         H = null !== (t = null == k ? void 0 : k.hasFeature(j.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && void 0 !== t && t ? N.intl.string(N.t.n0q7sL) : N.intl.string(N.t.QoYdiY),
         U = null !== (n = (null == k ? void 0 : k.hasFeature(j.oNc.CREATOR_MONETIZABLE)) || (null == k ? void 0 : k.hasFeature(j.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && void 0 !== n && n,

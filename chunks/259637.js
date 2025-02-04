@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
-var l = n(658722),
-    r = n.n(l),
+var r = n(658722),
+    l = n.n(r),
     a = n(442837),
     s = n(481060),
     o = n(596454),
@@ -12,9 +12,9 @@ var l = n(658722),
     m = n(158804);
 let h = (e) => {
     let { tag: t } = e,
-        { id: n, name: l, emojiId: r, emojiName: d } = t,
-        u = (0, a.e7)([c.ZP], () => (null != r ? c.ZP.getUsableCustomEmojiById(r) : null)),
-        h = null != r || null != d;
+        { id: n, name: r, emojiId: l, emojiName: d } = t,
+        u = (0, a.e7)([c.ZP], () => (null != l ? c.ZP.getUsableCustomEmojiById(l) : null)),
+        h = null != l || null != d;
     return (0, i.jsx)(
         s.lo1,
         {
@@ -26,7 +26,7 @@ let h = (e) => {
                         h
                             ? (0, i.jsx)(o.Z, {
                                   className: m.__invalid_emoji,
-                                  emojiId: r,
+                                  emojiId: l,
                                   emojiName: d,
                                   animated: !!(null == u ? void 0 : u.animated)
                               })
@@ -38,7 +38,7 @@ let h = (e) => {
                         (0, i.jsx)(s.Text, {
                             variant: 'text-md/semibold',
                             color: 'header-secondary',
-                            children: l
+                            children: r
                         })
                     ]
                 })
@@ -48,14 +48,14 @@ let h = (e) => {
     );
 };
 function g(e) {
-    let { parentChannel: t, appliedTags: n, maxTagsApplied: l, onSelectTag: a, onClose: o } = e,
+    let { parentChannel: t, appliedTags: n, maxTagsApplied: r, onSelectTag: a, onClose: o } = e,
         c = (0, d.Vm)(t),
-        m = (e, t) => t.filter((t) => r()(e.toLowerCase(), t.name.toLowerCase()));
+        m = (e, t) => t.filter((t) => l()(e.toLowerCase(), t.name.toLowerCase()));
     return (0, i.jsx)(s.DBG, {
         showScrollbar: !0,
         value: n,
         onChange: (e) => {
-            (!l || n.has(e)) && (a(e), o());
+            (!r || n.has(e)) && (a(e), o());
         },
         placeholder: u.intl.string(u.t.MbhGm5),
         'aria-label': u.intl.string(u.t.MbhGm5),

@@ -1,8 +1,8 @@
 n.d(t, { _: () => E });
 var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
     s = n(512722),
     o = n.n(s),
     c = n(232713),
@@ -30,11 +30,11 @@ let S = [
     ],
     w = (0, p.hQ)();
 function y(e) {
-    let { mediaAttachments: t, containerWidth: n, containerHeight: l } = e,
-        r = (0, b.tu)({
+    let { mediaAttachments: t, containerWidth: n, containerHeight: r } = e,
+        l = (0, b.tu)({
             numAttachments: t.length,
             containerWidth: n,
-            containerHeight: l
+            containerHeight: r
         });
     return (0, i.jsx)(i.Fragment, {
         children: t.map((e, t) => {
@@ -42,7 +42,7 @@ function y(e) {
             return (0, i.jsx)(
                 'div',
                 {
-                    style: r[t],
+                    style: l[t],
                     children:
                         !0 === e.isVideo
                             ? (0, i.jsx)(v.Z, {
@@ -64,32 +64,32 @@ function y(e) {
 }
 let E = (e) => {
     var t;
-    let { parentChannel: r } = e,
+    let { parentChannel: l } = e,
         { textAreaState: s } = (0, _.xH)((e) => {
             let { textAreaState: t } = e;
             return { textAreaState: t };
         }, c.X),
         p = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
-        v = (0, N.Z)(r, null === (t = s.textValue) || void 0 === t ? void 0 : t.trim()),
-        b = l.useMemo(() => v.find((e) => e.isThumbnail), [v]),
+        v = (0, N.Z)(l, null === (t = s.textValue) || void 0 === t ? void 0 : t.trim()),
+        b = r.useMemo(() => v.find((e) => e.isThumbnail), [v]),
         E = null != v && v.length > 0,
-        R = l.useMemo(() => {
+        R = r.useMemo(() => {
             let e = (null == v ? void 0 : v.length) > 1 ? 1.15 : 1;
             return {
                 width: 153 * e,
                 height: 86 * e
             };
         }, [v]),
-        P = l.useCallback(
+        P = r.useCallback(
             (e) => {
-                null != b && m.Z.remove(r.id, b.id, g.Ie.CREATE_FORUM_POST.drafts.type),
-                    (0, j.d)(e.currentTarget.files, r, g.Ie.CREATE_FORUM_POST.drafts.type, {
+                null != b && m.Z.remove(l.id, b.id, g.Ie.CREATE_FORUM_POST.drafts.type),
+                    (0, j.d)(e.currentTarget.files, l, g.Ie.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0
                     }),
                     (e.currentTarget.value = null);
             },
-            [r, b]
+            [l, b]
         ),
         k = (e) => {
             e.stopPropagation(),
@@ -102,14 +102,14 @@ let E = (e) => {
                             (0, i.jsx)(t, {
                                 ...n,
                                 upload: e,
-                                channelId: r.id,
+                                channelId: l.id,
                                 draftType: g.Ie.CREATE_FORUM_POST.drafts.type,
                                 onSubmit: (t) => {
-                                    let { name: n, description: i, spoiler: l } = t;
-                                    m.Z.update(r.id, e.id, g.Ie.CREATE_FORUM_POST.drafts.type, {
+                                    let { name: n, description: i, spoiler: r } = t;
+                                    m.Z.update(l.id, e.id, g.Ie.CREATE_FORUM_POST.drafts.type, {
                                         filename: n,
                                         description: i,
-                                        spoiler: l
+                                        spoiler: r
                                     });
                                 },
                                 disableSpoiler: !0
@@ -189,7 +189,7 @@ let E = (e) => {
                               (0, i.jsx)(x.Z, {
                                   className: I.action,
                                   tooltip: T.intl.string(T.t.vN7REx),
-                                  onClick: () => m.Z.remove(r.id, b.id, g.Ie.CREATE_FORUM_POST.drafts.type),
+                                  onClick: () => m.Z.remove(l.id, b.id, g.Ie.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
                                   children: (0, i.jsx)(u.XHJ, {
                                       size: 'md',
@@ -200,7 +200,7 @@ let E = (e) => {
                       }),
                       draftType: g.Ie.CREATE_FORUM_POST.drafts.type,
                       id: b.id,
-                      channelId: r.id,
+                      channelId: l.id,
                       handleEditModal: k,
                       keyboardModeEnabled: p,
                       size: f.q.SMALL,

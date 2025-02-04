@@ -5,21 +5,21 @@ n.d(t, {
     V_: () => a
 });
 var i = n(539573),
-    l = n(388032);
-function r(e, t) {
+    r = n(388032);
+function l(e, t) {
     return {
         type: e,
         message: null != t ? t : null
     };
 }
 function a() {
-    return r(0, l.intl.string(l.t['71wuR0']));
+    return l(0, r.intl.string(r.t['71wuR0']));
 }
 function s() {
-    return r(0, l.intl.string(l.t['w/BT3N']));
+    return l(0, r.intl.string(r.t['w/BT3N']));
 }
 function o(e, t) {
-    return r(1, (0, i.$q)(e, null == t ? void 0 : t.id));
+    return l(1, (0, i.$q)(e, null == t ? void 0 : t.id));
 }
 function c(e, t) {
     var n;

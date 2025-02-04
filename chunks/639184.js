@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var i = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
+var r = n(120356),
+    l = n.n(r),
     a = n(481060),
     s = n(228392),
     o = n(404616),
@@ -19,7 +19,7 @@ function f(e) {
         onClick: () => {
             open(c.V8), (0, s.GX)({ readGuideCta: !0 });
         },
-        className: r()(g.container, h.container, m.mainCard),
+        className: l()(g.container, h.container, m.mainCard),
         children: [
             (0, i.jsxs)('div', {
                 className: h.inline,
@@ -75,7 +75,7 @@ function f(e) {
                     (0, i.jsxs)('div', {
                         children: [
                             (0, i.jsx)(a.X6q, {
-                                className: r()(g.__invalid_channelName, h.title),
+                                className: l()(g.__invalid_channelName, h.title),
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 children: u.intl.string(u.t.JtSpDw)

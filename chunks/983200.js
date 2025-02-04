@@ -6,8 +6,8 @@ n.d(t, {
     tu: () => m
 });
 var i = n(192379),
-    l = n(31775),
-    r = n.n(l);
+    r = n(31775),
+    l = n.n(r);
 let a = 0,
     s = 4,
     o = 4,
@@ -45,7 +45,7 @@ let a = 0,
         }
         if (3 === n) {
             let n = Math.ceil((e - i) / 2),
-                l = Math.ceil((t - i) / 2);
+                r = Math.ceil((t - i) / 2);
             return [
                 {
                     top: 0,
@@ -59,72 +59,72 @@ let a = 0,
                     left: n + i,
                     position: c,
                     width: n,
-                    height: l
+                    height: r
                 },
                 {
-                    top: l + i,
+                    top: r + i,
                     left: n + i,
                     position: c,
                     width: n,
-                    height: l
+                    height: r
                 }
             ];
         }
         {
             let n = Math.ceil((e - i) / 2),
-                l = Math.ceil((t - i) / 2);
+                r = Math.ceil((t - i) / 2);
             return [
                 {
                     top: 0,
                     left: 0,
                     position: c,
                     width: n,
-                    height: l
+                    height: r
                 },
                 {
-                    top: l + i,
+                    top: r + i,
                     left: 0,
                     position: c,
                     width: n,
-                    height: l
+                    height: r
                 },
                 {
                     top: 0,
                     left: n + i,
                     position: c,
                     width: n,
-                    height: l
+                    height: r
                 },
                 {
-                    top: l + i,
+                    top: r + i,
                     left: n + i,
                     position: c,
                     width: n,
-                    height: l
+                    height: r
                 }
             ];
         }
     },
-    u = new (r())({ max: 100 });
+    u = new (l())({ max: 100 });
 function m(e) {
-    let { numAttachments: t, containerWidth: n, containerHeight: l } = e;
+    let { numAttachments: t, containerWidth: n, containerHeight: r } = e;
     return i.useMemo(
         () =>
             (function (e) {
                 let { numAttachments: t, containerWidth: n, containerHeight: i } = e,
-                    l = ''.concat(t, '-').concat(n, '-').concat(i),
-                    r = u.get(l);
-                if (null != r) return r;
+                    r = ''.concat(t, '-').concat(n, '-').concat(i),
+                    l = u.get(r);
+                if (null != l) return l;
                 {
                     let e = d(n, i, t, 4);
-                    return u.set(l, e), e;
+                    return u.set(r, e), e;
                 }
             })({
                 numAttachments: t,
                 containerWidth: n,
-                containerHeight: l
+                containerHeight: r
             }),
-        [t, n, l]
+        [t, n, r]
     );
 }
 function h(e) {
@@ -136,11 +136,11 @@ function h(e) {
     }));
 }
 function g(e) {
-    let { imageContainerStyles: t, containerWidth: n, containerHeight: l } = e,
-        r = i.useRef(h(t)),
+    let { imageContainerStyles: t, containerWidth: n, containerHeight: r } = e,
+        l = i.useRef(h(t)),
         a = i.useRef(n),
-        s = i.useRef(l),
+        s = i.useRef(r),
         o = n > a.current + 100,
-        c = l > s.current + 100;
-    return (o || c) && (r.current = h(t)), r.current;
+        c = r > s.current + 100;
+    return (o || c) && (l.current = h(t)), l.current;
 }

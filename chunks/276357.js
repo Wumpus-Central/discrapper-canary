@@ -1,7 +1,7 @@
 n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
-    l = n(192379),
-    r = n(924826),
+    r = n(192379),
+    l = n(924826),
     a = n(91192),
     s = n(442837),
     o = n(481060),
@@ -22,7 +22,7 @@ function v(e) {
         { tagFilter: _ } = (0, d.H)(t.id),
         b = (0, d.v)(),
         j = (0, s.e7)([c.Z], () => c.Z.keyboardModeEnabled),
-        N = l.useCallback(
+        N = r.useCallback(
             (e) => {
                 (0, m.e7)({
                     guildId: t.guild_id,
@@ -40,19 +40,19 @@ function v(e) {
             },
             [t, _, b]
         ),
-        T = l.useCallback(() => {
+        T = r.useCallback(() => {
             b.getState().setTagFilter(t.id, new Set()), j || n();
         }, [b, t.id, j, n]),
-        I = (0, r.ZP)({
+        I = (0, l.ZP)({
             id: ''.concat(t.id, '-all-tags-dropdown-navigator'),
             isEnabled: !0,
             wrap: !0,
             scrollToStart: p,
             scrollToEnd: p
         }),
-        S = l.useRef(null);
+        S = r.useRef(null);
     return (
-        l.useEffect(() => {
+        r.useEffect(() => {
             requestAnimationFrame(() => {
                 if (null != S.current) {
                     let e = S.current.querySelector('.'.concat(f.tag));

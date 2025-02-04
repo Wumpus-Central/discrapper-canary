@@ -1,7 +1,7 @@
 n.d(t, { Z: () => c }), n(390547), n(47120), n(653041), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
 var i = n(192379),
-    l = n(399606),
-    r = n(541716),
+    r = n(399606),
+    l = n(541716),
     a = n(117530),
     s = n(154135),
     o = n(337077);
@@ -9,8 +9,8 @@ function c(e, t) {
     var n, c;
     let { mediaAttachments: d, hasThumbnail: u } = (function (e) {
             let [t, n] = i.useState(null),
-                o = (0, l.Wu)([a.Z], () => {
-                    let t = a.Z.getUploads(e.id, r.Ie.CREATE_FORUM_POST.drafts.type),
+                o = (0, r.Wu)([a.Z], () => {
+                    let t = a.Z.getUploads(e.id, l.Ie.CREATE_FORUM_POST.drafts.type),
                         n = t.find((e) => e.isThumbnail);
                     return null != n ? [n] : t.filter((e) => e.isVideo || e.isImage);
                 }),
@@ -24,12 +24,12 @@ function c(e, t) {
                                 var n;
                                 let i = null == t ? void 0 : null === (n = t.item) || void 0 === n ? void 0 : n.file;
                                 if (null == i) return [];
-                                let l = URL.createObjectURL(i);
+                                let r = URL.createObjectURL(i);
                                 return (
-                                    e.push(l),
+                                    e.push(r),
                                     {
                                         id: t.id,
-                                        src: l,
+                                        src: r,
                                         spoiler: t.spoiler,
                                         alt: t.description,
                                         isThumbnail: t.isThumbnail,

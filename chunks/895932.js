@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
-var l = n(313361),
-    r = n(683860),
+var r = n(313361),
+    l = n(683860),
     a = n(481060),
     s = n(109434),
     o = n(228392),
@@ -47,15 +47,15 @@ function u(e) {
                             id: 'sort-by-recent-activity',
                             group: 'sort-by',
                             label: c.intl.string(c.t.jOPmcH),
-                            action: () => x(r.z.LATEST_ACTIVITY),
-                            checked: u === r.z.LATEST_ACTIVITY
+                            action: () => x(l.z.LATEST_ACTIVITY),
+                            checked: u === l.z.LATEST_ACTIVITY
                         }),
                         (0, i.jsx)(a.k5B, {
                             id: 'sort-by-date-posted',
                             group: 'sort-by',
                             label: c.intl.string(c.t.UIltXV),
-                            action: () => x(r.z.CREATION_DATE),
-                            checked: u === r.z.CREATION_DATE
+                            action: () => x(l.z.CREATION_DATE),
+                            checked: u === l.z.CREATION_DATE
                         })
                     ]
                 }),
@@ -67,15 +67,15 @@ function u(e) {
                                 id: 'view-as-list',
                                 group: 'view-as',
                                 label: c.intl.string(c.t['NJFr+v']),
-                                action: () => f(l.X.LIST),
-                                checked: m === l.X.LIST
+                                action: () => f(r.X.LIST),
+                                checked: m === r.X.LIST
                             }),
                             (0, i.jsx)(a.k5B, {
                                 id: 'view-as-grid',
                                 group: 'view-as',
                                 label: c.intl.string(c.t.wKeggY),
-                                action: () => f(l.X.GRID),
-                                checked: m === l.X.GRID
+                                action: () => f(r.X.GRID),
+                                checked: m === r.X.GRID
                             })
                         ]
                     }),

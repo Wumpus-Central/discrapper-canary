@@ -1,20 +1,20 @@
 n.d(t, { Z: () => m }), n(47120);
 var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
     s = n(232713),
     o = n(318766),
     c = n(28546),
     d = n(957825),
     u = n(553796);
-let m = l.memo(
-    l.forwardRef(function (e, t) {
-        let { disabled: n, type: r, className: m, onClick: h } = e,
+let m = r.memo(
+    r.forwardRef(function (e, t) {
+        let { disabled: n, type: l, className: m, onClick: h } = e,
             [g, x] = (0, c.Iu)((e) => [e.activeView, e.activeViewType], s.X),
-            f = l.useCallback(() => {
-                (0, c.j9)(r), null == h || h();
-            }, [r, h]);
+            f = r.useCallback(() => {
+                (0, c.j9)(l), null == h || h();
+            }, [l, h]);
         return n
             ? null
             : (0, i.jsx)('div', {
@@ -23,7 +23,7 @@ let m = l.memo(
                   children: (0, i.jsx)(o.Z, {
                       className: a()(u.emojiButton, m),
                       onClick: f,
-                      active: (g === d.X1.GIF || g === d.X1.EMOJI || g === d.X1.STICKER) && x === r,
+                      active: (g === d.X1.GIF || g === d.X1.EMOJI || g === d.X1.STICKER) && x === l,
                       tabIndex: 0,
                       focusProps: {
                           offset: {

@@ -7,8 +7,8 @@ n.d(t, {
     rI: () => d
 });
 var i = n(512722),
-    l = n.n(i);
-function r(e, t, n) {
+    r = n.n(i);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ class o {
         };
     }
     constructor({ minWidth: e, maxWidth: t, gap: n }) {
-        r(this, 'minWidth', void 0), r(this, 'maxWidth', void 0), r(this, 'gap', void 0), l()(e < t, 'minWidth needs to be smaller than maxWidth'), (this.minWidth = e), (this.maxWidth = t), (this.gap = n);
+        l(this, 'minWidth', void 0), l(this, 'maxWidth', void 0), l(this, 'gap', void 0), r()(e < t, 'minWidth needs to be smaller than maxWidth'), (this.minWidth = e), (this.maxWidth = t), (this.gap = n);
     }
 }
 let c = {
