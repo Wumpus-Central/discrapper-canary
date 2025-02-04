@@ -209,8 +209,7 @@ function Q(e) {
         nameWithArticle: e.name_with_article,
         asset: e.asset,
         assetVideo: e.asset_video,
-        collectibleProduct: e.collectible_product,
-        orbQuantity: e.orb_quantity
+        collectibleProduct: e.collectible_product
     };
 }
 function X(e) {
