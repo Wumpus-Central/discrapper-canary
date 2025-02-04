@@ -201,7 +201,8 @@ function d(e, t, n, s) {
                     encryptDuration: e.encryptDuration,
                     encryptAttempts: e.encryptAttempts,
                     encryptMaxAttempts: e.encryptMaxAttempts,
-                    encryptMissingKeyCount: e.encryptMissingKeyCount
+                    encryptMissingKeyCount: e.encryptMissingKeyCount,
+                    pttQueueLatencyMicrosSamples: e.pttQueueLatencyMicrosSamples
                 })),
             null != a)
         )
