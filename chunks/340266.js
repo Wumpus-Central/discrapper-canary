@@ -1,143 +1,123 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => _ });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(931120);
-let s = 4,
-    o = 2,
-    l = 1,
-    u = [
+var r = n(392711),
+    a = n(481060),
+    s = n(111028),
+    o = n(5192),
+    l = n(931120);
+let u = 4,
+    c = 1,
+    d = 3,
+    f = [
         [
             {
-                translateY: 0,
-                translateX: 0,
-                scale: 1.2
-            },
-            {
-                translateY: 0,
-                translateX: 0,
-                scale: 0
-            },
-            {
-                translateY: 0,
-                translateX: 0,
-                scale: 0
-            },
-            {
-                translateY: 0,
-                translateX: 0,
-                scale: 0
+                top: 16,
+                left: 16,
+                width: 28,
+                height: 28
             }
         ],
         [
             {
-                translateY: -14,
-                translateX: -14,
-                scale: 0.7058823529411765
+                top: 8,
+                left: 8,
+                width: 20,
+                height: 20
             },
             {
-                translateY: 12,
-                translateX: 12,
-                scale: 0.8235294117647058
-            },
-            {
-                translateY: 0,
-                translateX: 0,
-                scale: 0
-            },
-            {
-                translateY: 0,
-                translateX: 0,
-                scale: 0
+                top: 26,
+                left: 26,
+                width: 26,
+                height: 26
             }
         ],
         [
             {
-                translateY: -4,
-                translateX: 16,
-                scale: 0.7058823529411765
+                top: 6,
+                left: 11,
+                width: 18,
+                height: 18
             },
             {
-                translateY: 14,
-                translateX: -14,
-                scale: 0.8235294117647058
+                top: 16,
+                left: 32,
+                width: 22,
+                height: 22
             },
             {
-                translateY: -18,
-                translateX: -12,
-                scale: 0.5882352941176471
-            },
-            {
-                translateY: 0,
-                translateX: 0,
-                scale: 0
+                top: 30,
+                left: 6,
+                width: 24,
+                height: 24
             }
         ],
         [
             {
-                translateY: -13,
-                translateX: -13,
-                scale: 0.8235294117647058
+                top: 6,
+                left: 6,
+                width: 22,
+                height: 22
             },
             {
-                translateY: 13,
-                translateX: 13,
-                scale: 0.8235294117647058
+                top: 8,
+                left: 34,
+                width: 18,
+                height: 18
             },
             {
-                translateY: -18,
-                translateX: 18,
-                scale: 0.5882352941176471
+                top: 34,
+                left: 8,
+                width: 18,
+                height: 18
             },
             {
-                translateY: 18,
-                translateX: -18,
-                scale: 0.5882352941176471
+                top: 32,
+                left: 32,
+                width: 22,
+                height: 22
             }
         ]
     ];
-function c(e) {
-    let { users: t, guildId: n } = e,
-        c = Math.min(u.length - 1, t.length - 1),
-        d = u[Math.max(0, c)],
-        f = t.length > s,
-        _ = t.length - s - 1,
-        p = _ >= 10 ? l : o;
+function _(e) {
+    let { users: t, channel: n } = e,
+        _ = t.length > u,
+        p = t.length - u + 1,
+        h = p >= 10 ? d : c;
     return (0, i.jsx)('div', {
-        className: a.container,
-        children: (0, i.jsx)('div', {
-            className: a.frame,
-            children: d.map((e, s) => {
-                let { translateX: o, translateY: l, scale: u } = e,
-                    c = t[s];
-                return null == c
-                    ? null
-                    : (0, i.jsx)(
-                          'div',
-                          {
-                              className: a.slot,
-                              style: { transform: 'translateX('.concat(o, 'px) translateY(').concat(l, 'px) scale(').concat(u, ')') },
-                              children: (0, i.jsx)('div', {
-                                  className: a.wrapper,
-                                  children:
-                                      f && s === p
-                                          ? (0, i.jsx)('div', {
-                                                className: a.overflowCount,
-                                                children: (0, i.jsxs)(r.Text, {
-                                                    variant: 'text-sm/semibold',
-                                                    children: ['+', _]
-                                                })
-                                            })
-                                          : (0, i.jsx)('img', {
-                                                className: a.avatar,
-                                                src: c.getAvatarURL(n, (0, r.pxk)(r.EFr.SIZE_80)),
+        className: l.container,
+        children: f[(0, r.clamp)(t.length - 1, 0, f.length - 1)].map((e, r) => {
+            let u = t[r];
+            return null == u
+                ? null
+                : (0, i.jsx)(
+                      'div',
+                      {
+                          className: l.circle,
+                          style: e,
+                          children:
+                              _ && r === h
+                                  ? (0, i.jsx)('div', {
+                                        className: l.overflowCount,
+                                        children: (0, i.jsx)(a.Text, {
+                                            variant: 'text-xxs/semibold',
+                                            lineClamp: 1,
+                                            children: (0, i.jsx)(s.Z, { children: p > 99 ? '>99' : '+'.concat(p) })
+                                        })
+                                    })
+                                  : (0, i.jsx)(a.ua7, {
+                                        text: o.ZP.getName(n.guild_id, n.id, u),
+                                        children: (e) =>
+                                            (0, i.jsx)('img', {
+                                                ...e,
+                                                className: l.avatar,
+                                                src: u.getAvatarURL(n.guild_id, (0, a.pxk)(a.EFr.SIZE_80)),
                                                 alt: ''
                                             })
-                              })
-                          },
-                          c.id
-                      );
-            })
+                                    })
+                      },
+                      u.id
+                  );
         })
     });
 }
