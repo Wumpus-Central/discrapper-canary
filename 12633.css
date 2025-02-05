@@ -8301,7 +8301,8 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 
 .visual-refresh .tier1Gradient__29199,
 .visual-refresh .tier2Gradient__29199 {
-    background-clip: padding-box
+    background-clip: padding-box;
+    border-radius: var(--radius-sm)
 }
 
 .imageWrapper_af017a {
@@ -21911,6 +21912,19 @@ h3.improved__1689b:after {
     text-decoration: underline
 }
 
+.visual-refresh .container_d829e7,
+.visual-refresh .ctaContainer_d829e7 {
+    background-color: var(--modal-background)
+}
+
+.visual-refresh .container_d829e7 {
+    border-radius: var(--radius-sm)
+}
+
+.visual-refresh .ctaContainer_d829e7 {
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm)
+}
+
 .banner__97f37 {
     width: 100%;
     border-radius: 8px;
@@ -21935,6 +21949,10 @@ h3.improved__1689b:after {
     justify-content: center;
     align-items: center;
     border-radius: 8px
+}
+
+.visual-refresh .wrapper__97f37 {
+    background-color: var(--modal-background)
 }
 
 .closeButton__97f37 {
@@ -38526,6 +38544,14 @@ div.popoutCloseButton__1e3f8:hover {
     max-width: 120px
 }
 
+.visual-refresh .root__6c5a1 {
+    max-width: 100%;
+    border-radius: var(--radius-sm);
+    padding: var(--space-4) var(--space-8);
+    border: 1px solid var(--border-subtle);
+    background-color: var(--background-surface-highest)
+}
+
 .text__6c5a1 {
     margin-left: 4px
 }
@@ -38559,6 +38585,16 @@ div.popoutCloseButton__1e3f8:hover {
     margin-right: 4px
 }
 
+.flairContainer__795fb {
+    display: flex;
+    align-items: center;
+    height: 24px
+}
+
+.upsell__795fb {
+    margin-top: 8px
+}
+
 .visual-refresh-chat-input .characterCount__795fb {
     position: relative;
     bottom: auto;
@@ -38567,7 +38603,11 @@ div.popoutCloseButton__1e3f8:hover {
     right: initial;
     border-right: 1px solid var(--border-subtle);
     padding-right: var(--space-16);
-    margin-right: var(--space-8)
+    margin-right: var(--space-8);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: var(--space-8)
 }
 
 .visual-refresh-chat-input .premiumFlair__795fb {
@@ -38578,14 +38618,8 @@ div.popoutCloseButton__1e3f8:hover {
     margin-right: var(--space-8)
 }
 
-.flairContainer__795fb {
-    display: flex;
-    align-items: center;
-    height: 24px
-}
-
-.upsell__795fb {
-    margin-top: 8px
+.visual-refresh-chat-input .upsell__795fb {
+    margin-top: 0
 }
 
 .container_be506c {
@@ -58332,10 +58366,6 @@ img[alt] {
 
 .density-compact.visual-refresh {
     --custom-channel-header-height: 56px
-}
-
-.density-cozy.visual-refresh-chat-input {
-    --custom-channel-textarea-text-area-height: 44px
 }
 
 .grecaptcha-badge {
