@@ -17,7 +17,7 @@ var s = n(120356),
     g = n(588245),
     _ = n(865446);
 let x = (e) => {
-    let { earnedOrbsQuantity: t, descriptionText: s = h.intl.string(h.t['4YgBe3']), ctaText: c = h.intl.string(h.t.WYchdX), linkText: d = h.intl.string(h.t['H57f4+']), ctaOnClick: u, linkTo: m } = e;
+    let { earnedOrbsQuantity: t, descriptionText: s = h.intl.string(h.t['4YgBe3']), ctaText: c = h.intl.string(h.t.WYchdX), linkText: d = h.intl.string(h.t['H57f4+']), ctaOnClick: u, linkOnClick: m, linkTo: x } = e;
     return (0, i.jsxs)('div', {
         className: r()(_.container, g.baseCardOutline),
         children: [
@@ -50,7 +50,8 @@ let x = (e) => {
                         children: c
                     }),
                     (0, i.jsx)(l.rU, {
-                        to: { pathname: m },
+                        to: { pathname: x },
+                        onClick: m,
                         children: (0, i.jsx)(o.Text, {
                             variant: 'text-sm/medium',
                             className: _.link,
@@ -63,8 +64,8 @@ let x = (e) => {
     });
 };
 function p(e) {
-    let { earnedOrbsQuantity: t, balance: n, backgroundElementRef: s, onClose: r, onClickPill: l, ctaOnClick: a, ...o } = e,
-        g = async () => {
+    let { earnedOrbsQuantity: t, balance: n, backgroundElementRef: s, onClose: r, onClickPill: l, ctaOnClick: a, linkOnClick: o, ...g } = e,
+        p = async () => {
             await (0, c.j2)(), await r();
         };
     return (0, i.jsxs)(m.X, {
@@ -82,7 +83,7 @@ function p(e) {
         children: [
             (0, i.jsx)(u.A4, {
                 onClick: async () => {
-                    await g(), l();
+                    await p(), l();
                 },
                 balance: n,
                 placeholderBalance: null != n ? n : 0,
@@ -93,7 +94,10 @@ function p(e) {
                 ctaText: h.intl.string(h.t['H57f4+']),
                 linkText: h.intl.string(h.t['7f4H7O']),
                 ctaOnClick: async () => {
-                    await g(), a();
+                    await p(), a();
+                },
+                linkOnClick: async () => {
+                    await p(), o();
                 }
             })
         ]
