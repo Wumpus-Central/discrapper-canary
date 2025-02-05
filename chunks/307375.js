@@ -1,4 +1,4 @@
-n.d(t, { h: () => g });
+n.d(t, { h: () => x });
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -6,63 +6,64 @@ var i = n(200651),
     a = n(442837),
     o = n(481060),
     c = n(496675),
-    d = n(384632),
-    u = n(981631),
-    m = n(388032),
-    h = n(676919);
-function g(e) {
+    d = n(63063),
+    u = n(384632),
+    m = n(981631),
+    h = n(388032),
+    g = n(676919);
+function x(e) {
     let { activeType: t, onTypePicked: n, guild: l } = e,
-        g = l.hasFeature(u.oNc.COMMUNITY),
-        x = (0, a.e7)([c.Z], () => c.Z.can(u.Plq.ADMINISTRATOR, l)),
-        p = r.useMemo(() => {
-            let e = t === d.A.DISCOVERABLE && !x,
-                n = g && (t === d.A.DISCOVERABLE || x);
+        x = l.hasFeature(m.oNc.COMMUNITY),
+        p = (0, a.e7)([c.Z], () => c.Z.can(m.Plq.ADMINISTRATOR, l)),
+        _ = r.useMemo(() => {
+            let e = t === u.A.DISCOVERABLE && !p,
+                n = x && (t === u.A.DISCOVERABLE || p);
             return [
                 {
-                    id: d.A.INVITE,
-                    title: m.intl.string(m.t['HQVS/P']),
-                    body: m.intl.string(m.t.KzXzFR),
+                    id: u.A.INVITE,
+                    title: h.intl.string(h.t['HQVS/P']),
+                    body: h.intl.string(h.t.KzXzFR),
                     icon: o.mBM,
                     enabled: !e,
-                    ineligibleText: m.intl.string(m.t.LIZgwM)
+                    ineligibleText: h.intl.string(h.t.LIZgwM)
                 },
                 {
-                    id: d.A.APPLY,
-                    title: m.intl.string(m.t.LrFEYW),
-                    body: m.intl.string(m.t.kJj2oK),
+                    id: u.A.APPLY,
+                    title: h.intl.string(h.t.LrFEYW),
+                    body: h.intl.string(h.t.kJj2oK),
                     icon: o._XJ,
                     enabled: !e,
-                    ineligibleText: m.intl.string(m.t.LIZgwM)
+                    ineligibleText: h.intl.string(h.t.LIZgwM)
                 },
                 {
-                    id: d.A.DISCOVERABLE,
-                    title: m.intl.string(m.t.lhOHLy),
-                    body: m.intl.string(m.t.pqQylZ),
+                    id: u.A.DISCOVERABLE,
+                    title: h.intl.string(h.t.lhOHLy),
+                    body: h.intl.string(h.t.pqQylZ),
                     icon: o.enf,
                     enabled: n,
-                    ineligibleText: g ? m.intl.string(m.t.iBpXPj) : m.intl.string(m.t['5TQ+eH'])
+                    ineligibleText: x ? h.intl.string(h.t.iBpXPj) : h.intl.string(h.t['5TQ+eH'])
                 }
             ];
-        }, [t, g, x]);
+        }, [t, x, p]);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(o.X6q, {
                 color: 'header-primary',
                 variant: 'text-md/semibold',
-                children: m.intl.string(m.t['N+GnPz'])
+                children: h.intl.string(h.t['N+GnPz'])
             }),
             (0, i.jsx)(o.Text, {
                 color: 'text-secondary',
                 variant: 'text-sm/medium',
-                className: h.bodyText,
-                children: m.intl.string(m.t.nBJ89v)
+                className: g.bodyText,
+                children: h.intl.format(h.t['Y/jYws'], { helpdeskArticle: d.Z.getArticleURL(m.BhN.MEMBER_APPLICATIONS) })
             }),
             (0, i.jsx)(o.njP, {
                 selectedItem: t,
                 onItemSelect: n,
                 orientation: 'horizontal',
-                className: h.joinOptions,
-                children: p.map((e) => {
+                className: g.joinOptions,
+                children: _.map((e) => {
                     let n = e.id === t;
                     return (0, i.jsx)(
                         o.njP.Item,
@@ -70,7 +71,7 @@ function g(e) {
                             id: e.id,
                             selectedItem: t,
                             disableItemStyles: !0,
-                            className: h.joinOptionTab,
+                            className: g.joinOptionTab,
                             disabled: !e.enabled,
                             'aria-label': e.title,
                             children: (0, i.jsx)(o.DY3, {
@@ -79,12 +80,12 @@ function g(e) {
                                 shouldShow: !e.enabled,
                                 spacing: 16,
                                 hideOnClick: !1,
-                                className: h.tooltipContainer,
-                                tooltipClassName: h.tooltip,
+                                className: g.tooltipContainer,
+                                tooltipClassName: g.tooltip,
                                 children: (0, i.jsxs)('div', {
-                                    className: s()(h.joinOptionContent, {
-                                        [h.active]: n,
-                                        [h.uninteractive]: !e.enabled
+                                    className: s()(g.joinOptionContent, {
+                                        [g.active]: n,
+                                        [g.uninteractive]: !e.enabled
                                     }),
                                     children: [
                                         (0, i.jsx)(e.icon, {
