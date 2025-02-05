@@ -1,8 +1,9 @@
 n.d(t, {
-    DH: () => E,
-    PD: () => v,
+    DH: () => y,
+    PD: () => I,
     P_: () => _,
-    hj: () => g,
+    hj: () => E,
+    qc: () => v,
     sS: () => f
 }),
     n(47120);
@@ -52,6 +53,8 @@ function _(e) {
     switch (e) {
         case i.gl.OutOfProcess:
             return 'Out of Process';
+        case i.gl.OutOfProcessLimitedInteraction:
+            return 'Out of Process (Limited Interaction)';
         case i.gl.Hook:
             return 'Hook';
         case i.gl.Disabled:
@@ -62,14 +65,12 @@ function p(e, t) {
     let { quns: n } = l.ZP.GetWindowFullscreenTypeExtraByPid(e, t.name);
     return u.info('QUNS for '.concat(t.name, ': ').concat(n)), n === r.Ng.QUNS_RUNNING_D3D_FULL_SCREEN;
 }
-let h = {
-        '762434991303950386': (e, t, n) => r.Jx.FULLSCREEN,
-        '1314682894106497096': (e, t, n) => (p(e, t) ? r.Jx.FULLSCREEN : n)
-    },
-    m = 100;
-async function g(e) {
+let h = { '1314682894106497096': (e, t, n) => (p(e, t) ? r.Jx.FULLSCREEN : n) },
+    m = { '762434991303950386': (e) => !0 },
+    g = 100;
+async function E(e) {
     var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m,
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g,
         i = await d(e, n),
         r = s.ZP.getGameForPID(e);
     if (null == r || null == r.name) return i;
@@ -78,8 +79,15 @@ async function g(e) {
     let l = h[a];
     return null != l ? l(e, r, i) : i;
 }
-function E(e, t) {
-    if (e.overlayMethod !== i.gl.OutOfProcess) return !1;
+function v(e) {
+    var t;
+    let n = null === (t = o.Z.getGameByName(e.name)) || void 0 === t ? void 0 : t.id;
+    if (null == n) return !1;
+    let i = m[n];
+    return null != i && i(e);
+}
+function y(e, t) {
+    if (e.overlayMethod !== i.gl.OutOfProcess && e.overlayMethod !== i.gl.OutOfProcessLimitedInteraction) return !1;
     switch (t) {
         case r.Jx.UNKNOWN:
         case r.Jx.FULLSCREEN:
@@ -87,7 +95,7 @@ function E(e, t) {
     }
     return !1;
 }
-function v(e, t) {
+function I(e, t) {
     if (e.overlayMethod !== i.gl.Hook) return !1;
     switch (t) {
         case r.Jx.UNKNOWN:

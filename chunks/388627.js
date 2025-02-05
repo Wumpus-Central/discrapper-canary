@@ -30,7 +30,10 @@ var m = n(145597),
 n(340101);
 var v = n(501787);
 async function y() {
-    let e = { outOfProcessOverlay: !0 },
+    let e = {
+            outOfProcessOverlay: !0,
+            focusable: !1
+        },
         t = (0, g.Rb)('openOverlayPopout'),
         a = E.Z.getForcedRenderMode(),
         s = (0, g.b4)('openOverlayPopout');
@@ -49,7 +52,7 @@ async function y() {
             })),
             (0, o.te)(m.qU, p.Z.getDefaultLayout(m.qU, 0), 0);
     } else {
-        if (!t && a !== l.R5.OUT_OF_PROCESS_V3) return;
+        if (!t && a !== l.R5.OUT_OF_PROCESS_V3 && a !== l.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION) return;
         let e = (0, r.Un)({
             createPromise: () => Promise.all([n.e('50506'), n.e('35535'), n.e('90508'), n.e('13351'), n.e('93382'), n.e('70205'), n.e('78447'), n.e('86778'), n.e('2186'), n.e('92982'), n.e('92922'), n.e('33179'), n.e('70151'), n.e('13368')]).then(n.bind(n, 989373)),
             webpackId: 989373,

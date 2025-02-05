@@ -312,6 +312,7 @@ async function el(e) {
                         (r = !0);
                     break;
                 case p.gl.OutOfProcess:
+                case p.gl.OutOfProcessLimitedInteraction:
                     $.error('updateIntendedOverlayPIDs: out of process called for hook overlay', n);
                     break;
                 case p.gl.Disabled:
@@ -481,7 +482,7 @@ function eS(e) {
     let { port: t } = e;
     W = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append('build_id', '1f084b8e7168f99f1565c0901d6431d4c4cb58c6'), n.append('rpc', String(t)), n.append('rpc_auth_token', W), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+    n.append('build_id', '6263c83da8702448bba43727b2ce6990f6cf5c38'), n.append('rpc', String(t)), n.append('rpc_auth_token', W), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
 }
 function eA(e) {
     let { channelId: t, ring: n } = e;

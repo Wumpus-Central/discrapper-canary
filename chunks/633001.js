@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(47120), n(653041), n(724458);
+n.d(t, { Z: () => w }), n(47120), n(653041), n(724458);
 var a = n(200651),
     l = n(192379),
     r = n(120356),
@@ -57,8 +57,8 @@ let k = {
             pinned: !0
         })
     },
-    Z = (e, t) => e.find((e) => e.type === t);
-function I(e) {
+    I = (e, t) => e.find((e) => e.type === t);
+function Z(e) {
     let { trackedGame: t } = e,
         n = (0, s.e7)([h.ZP], () => h.ZP.getGameForPID(t.pid)),
         l = (0, s.e7)([g.Z], () => g.Z.getGameForPID(t.pid));
@@ -220,8 +220,8 @@ function O(e) {
         ]
     });
 }
-function w(e) {
-    let t = Z(Object.values((0, s.Wu)([_.Z], () => _.Z.getWidgetsForLayout(E.OVERLAY_V3_LAYOUT_ID))), e);
+function R(e) {
+    let t = I(Object.values((0, s.Wu)([_.Z], () => _.Z.getWidgetsForLayout(E.OVERLAY_V3_LAYOUT_ID))), e);
     return [
         t,
         () => {
@@ -235,15 +235,15 @@ function w(e) {
         }
     ];
 }
-function R() {
+function w() {
     var e, t;
-    let [n, r] = w(T.Odu.CLICK_ZONE_DEBUG),
-        [o, d] = w(T.Odu.PERFORMANCE_DEBUG),
+    let [n, r] = R(T.Odu.CLICK_ZONE_DEBUG),
+        [o, d] = R(T.Odu.PERFORMANCE_DEBUG),
         _ = (0, s.e7)([b.ZP], () => b.ZP.hasRenderDebugMode(x.G.ClickZones)),
         g = (0, s.e7)([b.ZP], () => b.ZP.hasRenderDebugMode(x.G.WidgetAreas)),
         E = (0, s.e7)([p.Z], () => p.Z.getForcedRenderMode()),
-        [k, Z] = l.useState({}),
-        [R, P] = l.useState(E),
+        [k, I] = l.useState({}),
+        [w, P] = l.useState(E),
         A = (e) => {
             P(e), u.Z.forceRenderMode(e);
         },
@@ -263,6 +263,10 @@ function R() {
             {
                 label: m.R5.OUT_OF_PROCESS_V3,
                 value: m.R5.OUT_OF_PROCESS_V3
+            },
+            {
+                label: m.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+                value: m.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION
             }
         ].map((e) => ({
             ...e,
@@ -275,7 +279,7 @@ function R() {
         F = (0, s.e7)([p.Z], () => p.Z.isOverlayOOPEnabledForPid(z), [z]),
         U = (0, s.e7)([h.ZP], () => h.ZP.getRunningGames());
     l.useEffect(() => {
-        Z((e) => {
+        I((e) => {
             for (let t of Object.keys(D)) e[Number(t)] = D[Number(t)];
             return e;
         });
@@ -438,7 +442,7 @@ function R() {
                             className: y.panelGroup,
                             children: (0, a.jsx)(c.PhF, {
                                 serialize: (e) => e,
-                                isSelected: (e) => e === R,
+                                isSelected: (e) => e === w,
                                 options: L,
                                 select: A,
                                 popoutLayerContext: N.O$
@@ -490,7 +494,7 @@ function R() {
                                             color: 'text-normal',
                                             children: 'No running games'
                                         }),
-                                    Object.values(D).map((e) => (0, a.jsx)(I, { trackedGame: e }, e.pid))
+                                    Object.values(D).map((e) => (0, a.jsx)(Z, { trackedGame: e }, e.pid))
                                 ]
                             })
                         })

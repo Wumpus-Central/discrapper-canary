@@ -139,6 +139,12 @@ function K(e, t) {
                 enabled: !0,
                 overlayMethod: l.gl.OutOfProcess
             };
+        case l.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION:
+            return {
+                source: _.d.DEV_OVERRIDE,
+                enabled: !0,
+                overlayMethod: l.gl.OutOfProcessLimitedInteraction
+            };
     }
     if (!C)
         return {
@@ -177,6 +183,7 @@ function K(e, t) {
             ...W(n),
             source: _.d.LEGACY_ENABLED
         };
+    let r = (0, y.qc)(n);
     switch (t) {
         case u.Jx.MINIMIZED:
         case u.Jx.WINDOWED:
@@ -185,7 +192,7 @@ function K(e, t) {
             return {
                 source: _.d.FULL_SCREEN_TYPE,
                 enabled: !0,
-                overlayMethod: l.gl.OutOfProcess
+                overlayMethod: r ? l.gl.OutOfProcessLimitedInteraction : l.gl.OutOfProcess
             };
         case u.Jx.FULLSCREEN:
             return {
@@ -311,7 +318,7 @@ async function ee(e) {
         (t = !0));
     let r = K(n, i);
     if ((n.overlayMethod === r.overlayMethod && n.enabled === r.enabled && r.overlayMethod !== l.gl.Disabled) || (!(O !== m.R2 && null !== O) && n.state === l.mM.OVERLAY_RENDERING)) return t;
-    let a = N === l.R5.OUT_OF_PROCESS_V2 || N === l.R5.OUT_OF_PROCESS_V3,
+    let a = N === l.R5.OUT_OF_PROCESS_V2 || N === l.R5.OUT_OF_PROCESS_V3 || N === l.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
         s = N === l.R5.IN_PROCESS_V2,
         o = (0, y.PD)(n, i),
         u = (0, y.DH)(n, i);
@@ -328,6 +335,7 @@ async function ee(e) {
         r.overlayMethod)
     ) {
         case l.gl.OutOfProcess:
+        case l.gl.OutOfProcessLimitedInteraction:
             ((o && !s) || a) && (await en(e, r));
             break;
         case l.gl.Hook:
@@ -344,7 +352,7 @@ function et(e, t) {
 }
 function en(e, t) {
     var n;
-    return F(e) ? ((null === (n = U(e)) || void 0 === n ? void 0 : n.overlayMethod) === l.gl.OutOfProcess ? (S.verbose('OOP requested for pid '.concat(e, ' but already enabled')), Promise.resolve()) : (S.verbose('Enabling OOP for pid '.concat(e)), V(e, 'hasChangedRenderMode', !0), J(e, t))) : (S.verbose('OOP requested for untracked pid '.concat(e)), Promise.resolve());
+    return F(e) ? ((null === (n = U(e)) || void 0 === n ? void 0 : n.overlayMethod) === t.overlayMethod ? (S.verbose('OOP requested for pid '.concat(e, ' but already enabled')), Promise.resolve()) : (S.verbose('Enabling OOP for pid '.concat(e)), V(e, 'hasChangedRenderMode', !0), J(e, t))) : (S.verbose('OOP requested for untracked pid '.concat(e)), Promise.resolve());
 }
 async function ei(e) {
     let t = !1;
@@ -444,7 +452,8 @@ class eg extends (i = r.ZP.Store) {
         return null !== (n = null === (t = U(e)) || void 0 === t ? void 0 : t.overlayMethod) && void 0 !== n ? n : l.gl.Disabled;
     }
     isOverlayOOPEnabledForPid(e) {
-        return this.getOverlayMethod(e) === l.gl.OutOfProcess;
+        let t = this.getOverlayMethod(e);
+        return t === l.gl.OutOfProcess || t === l.gl.OutOfProcessLimitedInteraction;
     }
     hasChangedRenderMode(e) {
         var t, n;

@@ -197,14 +197,17 @@ function ea(e) {
             l.useEffect(() => {
                 var i;
                 if (!p || e.current) return;
-                (e.current = !0),
-                    u.Z.track(B.rMx.OVERLAY_INITIALIZED, {
+                e.current = !0;
+                let l = null !== (i = y.Z.getFocusedPID()) && void 0 !== i ? i : (0, k.QF)();
+                if (
+                    (u.Z.track(B.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: s,
                         text_widget_connected: !1,
-                        overlay_render_method: h.gl[h.gl.OutOfProcess]
-                    });
-                let l = null !== (i = y.Z.getFocusedPID()) && void 0 !== i ? i : (0, k.QF)();
-                if (z.Z.hasChangedRenderMode(l)) return;
+                        overlay_render_method: h.gl[z.Z.getOverlayMethod(l)]
+                    }),
+                    z.Z.hasChangedRenderMode(l))
+                )
+                    return;
                 let o = [{ type: G.nc.WELCOME }];
                 if (
                     (d && c
