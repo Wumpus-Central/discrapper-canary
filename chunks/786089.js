@@ -41,13 +41,13 @@ let A = (0, l.memo)(function (e) {
         }),
         z = null !== (b = null === (n = y.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== b ? b : 0,
         W = y.config.rewards[z],
-        K = (null == W ? void 0 : W.type) === o.w.FRACTIONAL_PREMIUM,
-        Y = (null == W ? void 0 : W.type) === o.w.COLLECTIBLE,
+        Y = (null == W ? void 0 : W.type) === o.w.FRACTIONAL_PREMIUM,
+        K = (null == W ? void 0 : W.type) === o.w.COLLECTIBLE,
         q = null == W ? void 0 : null === (A = W.collectibleProduct) || void 0 === A ? void 0 : null === (r = A.items) || void 0 === r ? void 0 : r[0],
         X = (null == q ? void 0 : q.type) === s.Z.AVATAR_DECORATION ? q : null;
     (0, h.P)(M, (e) => {
         let { height: t } = e;
-        if (!Y || null == t || null == k.current || null == M.current || null == U.current) return;
+        if (!K || null == t || null == k.current || null == M.current || null == U.current) return;
         let n = M.current.getBoundingClientRect(),
             i = k.current.getBoundingClientRect(),
             l = U.current.getBoundingClientRect();
@@ -86,7 +86,7 @@ let A = (0, l.memo)(function (e) {
                   className: a()(x.container, { [x.hovered]: P }),
                   children: [
                       null != G &&
-                          Y &&
+                          K &&
                           null != X &&
                           (0, i.jsx)('div', {
                               ref: U,
@@ -98,7 +98,7 @@ let A = (0, l.memo)(function (e) {
                                   guildId: null
                               })
                           }),
-                      K
+                      Y
                           ? (0, i.jsx)(N.Z, { className: x.image })
                           : $.isAnimated
                             ? (0, i.jsx)(i.Fragment, {

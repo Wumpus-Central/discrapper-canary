@@ -43,8 +43,8 @@ var i = n(200651),
     F = n(3570),
     z = n(689796),
     W = n(15470),
-    K = n(506648),
-    Y = n(449275),
+    Y = n(506648),
+    K = n(449275),
     q = n(445986),
     X = n(119520),
     Q = n(450233),
@@ -241,7 +241,7 @@ class ec extends l.PureComponent {
         });
     }
     renderFeatures(e) {
-        return (0, i.jsx)(K.Z, { sku: e });
+        return (0, i.jsx)(Y.Z, { sku: e });
     }
     renderSystemRequirements(e) {
         return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length
@@ -279,7 +279,7 @@ class ec extends l.PureComponent {
         });
     }
     renderApplicationLegalInfo(e) {
-        return (0, i.jsx)(Y.Z, {
+        return (0, i.jsx)(K.Z, {
             sku: e,
             className: es.legalInfo
         });

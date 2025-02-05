@@ -43,8 +43,8 @@ var i = n(200651),
     F = n(774343),
     z = n(626135),
     W = n(814225),
-    K = n(515753),
-    Y = n(831218),
+    Y = n(515753),
+    K = n(831218),
     q = n(339149),
     X = n(981631),
     Q = n(675654),
@@ -71,7 +71,7 @@ let et = (e) => {
         return (0, i.jsxs)('div', {
             className: ee.friendsButtonContainer,
             children: [
-                (0, i.jsx)(K.Qj, {
+                (0, i.jsx)(Y.Qj, {
                     onClick: () => {
                         m && (z.default.track(X.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: J.hX.FRIEND_ANNIVERSARY }), _.Z.setSection(X.pJs.ALL), (0, O.Gk)());
                     },
@@ -118,7 +118,7 @@ let et = (e) => {
     en = (e) => {
         let { selected: t, hideGameUpdateProgressIndicator: n, ...l } = e,
             r = (0, c.JA)('library');
-        return (0, i.jsx)(K.Qj, {
+        return (0, i.jsx)(Y.Qj, {
             selected: t,
             route: X.Z5c.APPLICATION_LIBRARY,
             icon: p.vqy,
@@ -138,7 +138,7 @@ let et = (e) => {
             { channelId: l } = (0, Z._)();
         if (!(0, A.a)()) return null;
         let r = null == l ? void 0 : () => g.Z.preload(X.ME, l);
-        return (0, i.jsx)(K.Qj, {
+        return (0, i.jsx)(Y.Qj, {
             selected: t,
             route: X.Z5c.MESSAGE_REQUESTS,
             icon: p._XJ,
@@ -153,7 +153,7 @@ let et = (e) => {
             n = $.intl.string($.t.Rkdixs),
             r = (0, c.JA)('family-center'),
             [a, s] = l.useState(!0);
-        return (0, i.jsx)(K.Qj, {
+        return (0, i.jsx)(Y.Qj, {
             selected: t,
             route: X.Z5c.FAMILY_CENTER,
             icon: p.BFJ,
@@ -173,7 +173,7 @@ let et = (e) => {
         let { isParentHovered: t } = e,
             l = (0, L.gU)();
         return t
-            ? (0, i.jsx)(K.PZ, {
+            ? (0, i.jsx)(Y.PZ, {
                   onClick: () => {
                       (0, m.ZD)(async () => {
                           let { default: e } = await n.e('44153').then(n.bind(n, 760949));
@@ -241,7 +241,7 @@ let ec = l.memo(function (e) {
                           })
                 })
             }),
-            (0, i.jsxs)(Y.Z, {
+            (0, i.jsxs)(K.Z, {
                 ...e,
                 version: g,
                 selectedChannelId: m,

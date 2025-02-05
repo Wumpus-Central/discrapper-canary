@@ -43,8 +43,8 @@ var i = n(200651),
     F = n(659971),
     z = n(179742),
     W = n(270759),
-    K = n(50101),
-    Y = n(918701),
+    Y = n(50101),
+    K = n(918701),
     q = n(905423),
     X = n(304445),
     Q = n(893607),
@@ -144,7 +144,7 @@ let eI = (0, d.Un)({
             }),
             u = (0, x.C4)(l, 'channel_renderer'),
             m = (0, O.jS)(l, 'ChannelRenderer'),
-            p = (0, K.Ek)(s, 'ChannelRenderer');
+            p = (0, Y.Ek)(s, 'ChannelRenderer');
         if (null != l && null != r && (0, eg.AB)(r))
             switch (r) {
                 case eg.oC.ROLE_SUBSCRIPTIONS:
@@ -204,7 +204,7 @@ let eI = (0, d.Un)({
     eL = l.memo(function () {
         let { guildId: e, channelId: t } = (0, q.Z)(),
             n = (0, h.e7)([en.Z], () => (null != t ? t : en.Z.getChannelId(e)));
-        return window.location.pathname.startsWith(ep.Z5c.GLOBAL_DISCOVERY) || window.location.pathname.startsWith(ep.Z5c.GUILD_DISCOVERY) || (0, Y.OG)()
+        return window.location.pathname.startsWith(ep.Z5c.GLOBAL_DISCOVERY) || window.location.pathname.startsWith(ep.Z5c.GUILD_DISCOVERY) || (0, K.OG)()
             ? (0, i.jsx)(y.Z, {})
             : null != e
               ? (0, i.jsx)(

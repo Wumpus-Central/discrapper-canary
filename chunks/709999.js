@@ -212,17 +212,17 @@ let er = (e) => {
                   onChange: eM,
                   threshold: 0,
                   children: (0, r.jsx)(g.tEY, {
-                      children: (0, r.jsxs)(g.P3F, {
-                          innerRef: eo,
+                      children: (0, r.jsxs)(g.kL8, {
                           className: s()(eE ? en.shopCardDark : en.shopCard, {
                               [en.partiallyOwned]: ew && !eC,
                               [en.shopCardAnimation]: !eg && eZ !== P.D.NO_MOVEMENT,
                               [eE ? en.shopCardDarkHighlighted : en.shopCardHighlighted]: eC,
                               [en.mysteryShopCard]: ey
                           }),
+                          ref: eo,
                           onBlur: () => eu(!1),
                           onClick: eq,
-                          id: 'shop-item-'.concat(t.skuId),
+                          'aria-label': t.name,
                           children: [
                               e_ &&
                                   (0, r.jsx)(g.ua7, {

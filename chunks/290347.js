@@ -69,12 +69,12 @@ function x(e) {
         [B, V] = l.useState(Date.now()),
         [H, F] = l.useState(0),
         [z, W] = l.useState(0),
-        [K, Y] = l.useState(!1),
+        [Y, K] = l.useState(!1),
         [q, X] = l.useState(!0),
         Q = l.useRef(B),
         J = l.useRef(H),
         $ = l.useRef(z),
-        ee = l.useRef(K),
+        ee = l.useRef(Y),
         et = l.useRef(q),
         [en, ei] = l.useState(T),
         el = l.useRef(!1);
@@ -122,8 +122,8 @@ function x(e) {
             [en]
         ),
         l.useEffect(() => {
-            (Q.current = B), (J.current = H), ($.current = z), (ee.current = K), (et.current = q);
-        }, [B, H, z, K, q]),
+            (Q.current = B), (J.current = H), ($.current = z), (ee.current = Y), (et.current = q);
+        }, [B, H, z, Y, q]),
         l.useEffect(
             () => () => {
                 if ('video' === r.type || 'embed' === r.type) {
@@ -184,16 +184,16 @@ function x(e) {
                                   src: r.src,
                                   poster: r.poster,
                                   onPlay: (e) => {
-                                      _.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }), V(Date.now()), Y(!0), X(e.currentTarget.muted);
+                                      _.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }), V(Date.now()), K(!0), X(e.currentTarget.muted);
                                   },
                                   onEnded: (e) => {
-                                      er(), X(e.currentTarget.muted), Y(!1);
+                                      er(), X(e.currentTarget.muted), K(!1);
                                   },
                                   onVolumeChange: (e) => {
                                       er(), X(e.currentTarget.muted);
                                   },
                                   onPause: (e) => {
-                                      er(), X(e.currentTarget.muted), Y(!1);
+                                      er(), X(e.currentTarget.muted), K(!1);
                                   },
                                   disablePictureInPicture: !0,
                                   children:

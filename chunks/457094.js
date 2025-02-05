@@ -43,8 +43,8 @@ var i = n(200651),
     F = n(38618),
     z = n(972830),
     W = n(981283),
-    K = n(584233),
-    Y = n(15274),
+    Y = n(584233),
+    K = n(15274),
     q = n(434404),
     X = n(543842),
     Q = n(879064),
@@ -97,8 +97,8 @@ var i = n(200651),
     eF = n(695103),
     ez = n(241890),
     eW = n(897607),
-    eK = n(417363),
-    eY = n(900974),
+    eY = n(417363),
+    eK = n(900974),
     eq = n(358085),
     eX = n(998502),
     eQ = n(346329),
@@ -147,7 +147,7 @@ let e2 = s.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
         class extends l.Component {
             componentDidMount() {
                 let { match: e } = this.props;
-                null != e && null != e.params.inviteCode && (0, K.x)({ code: e.params.inviteCode });
+                null != e && null != e.params.inviteCode && (0, Y.x)({ code: e.params.inviteCode });
             }
             render() {
                 let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: l } = this.props;
@@ -162,8 +162,8 @@ let e2 = s.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
     ),
     e3 = (0, Z.e)(A.Z, null, { passProps: !1 }),
     e7 = (0, Z.e)(S.default, null, { passProps: !1 }),
-    e5 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(e_.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(e_.Hw.guildId(), e))];
-function e9(e) {
+    e9 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(e_.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(e_.Hw.guildId(), e))];
+function e5(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: l = null } = e.params;
     return {
         guildId: null != t ? t : eJ.ME,
@@ -211,7 +211,7 @@ let e6 = [
             let { match: t } = e,
                 { gameId: n, action: l } = t.params;
             return (
-                eK.Z.whenInitialized(() => {
+                eY.Z.whenInitialized(() => {
                     eB.Z.whenInitialized(() => {
                         switch (l) {
                             case 'launch': {
@@ -331,7 +331,7 @@ let e6 = [
                 { guildId: n, guildEventId: l } = t.params;
             return (
                 (0, z.h)(() => {
-                    (0, Y.bO)({ eventId: l });
+                    (0, K.bO)({ eventId: l });
                 }),
                 (0, i.jsx)(a.l_, { to: eJ.Z5c.CHANNEL(n) })
             );
@@ -405,7 +405,7 @@ class tt extends l.PureComponent {
             W.Z.init(),
             J.Z.init(),
             eW.Z.init(),
-            eY.Z.init(),
+            eK.Z.init(),
             E.Z.initialize(),
             eA.Z.init(),
             ez.Z.init(),
@@ -464,7 +464,7 @@ class tt extends l.PureComponent {
             (function (e, t) {
                 let n = e8(e);
                 if (null == n) return;
-                let { guildId: i, channelId: l, messageId: s, threadId: o } = e9(n),
+                let { guildId: i, channelId: l, messageId: s, threadId: o } = e5(n),
                     c = (0, e_.Ss)(i),
                     d = (0, e_.cq)(l),
                     m = (0, e_.cq)(o),
@@ -508,7 +508,7 @@ class tt extends l.PureComponent {
                         t || n ? en.Z.closeSidebar() : en.Z.openSidebar();
                     } else ((a && c) || (!g && !a)) && en.Z.closeSidebar();
                 } else
-                    !e5.some((t) => {
+                    !e9.some((t) => {
                         var n;
                         return (null === (n = (0, a.LX)(e, t)) || void 0 === n ? void 0 : n.isExact) === !0;
                     }) && (0, ef.dL)(ek.Z.fallbackRoute);
@@ -519,7 +519,7 @@ class tt extends l.PureComponent {
         let { pathname: t } = e,
             n = e8(t);
         if (null == n) return null;
-        let { guildId: i, channelId: l, threadId: r } = e9(n),
+        let { guildId: i, channelId: l, threadId: r } = e5(n),
             a = (0, e_.Ss)(i) && i !== eJ.ME && i !== eJ.I_8;
         if (null != l && (0, e_.cq)(l) && !(0, e$.AB)(l) && a) {
             let n = eM.Z.getChannel(l);

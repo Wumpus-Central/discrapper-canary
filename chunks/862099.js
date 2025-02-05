@@ -305,10 +305,10 @@ function W(e) {
                   height: 16,
                   className: B.stageIcon
               }),
-              children: (0, l.jsx)(K, { guildEvent: t })
+              children: (0, l.jsx)(Y, { guildEvent: t })
           });
 }
-function K(e) {
+function Y(e) {
     let { guildEvent: t } = e,
         n = r.useCallback(() => {
             (0, x.bO)({ eventId: t.id });
@@ -322,7 +322,7 @@ function K(e) {
         children: G.intl.string(G.t.z4FcDg)
     });
 }
-function Y(e) {
+function K(e) {
     let { channel: t, label: n } = e;
     return (0, l.jsx)(c.zxk, {
         fullWidth: !0,
@@ -413,7 +413,7 @@ function Q(e) {
                       : null,
                   h &&
                       null == m &&
-                      (0, l.jsx)(Y, {
+                      (0, l.jsx)(K, {
                           channel: t,
                           label: p
                       })
