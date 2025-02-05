@@ -5,6 +5,7 @@ var i = {
     questRewardTileAsset: 'questRewardTileAsset__28141',
     questRewardTileAssetStatic: 'questRewardTileAssetStatic__28141',
     questRewardTileDetailsLearnMore: 'questRewardTileDetailsLearnMore__28141',
+    questRewardTileOrbQuantity: 'questRewardTileOrbQuantity__28141',
     Shine: 'Shine__28141',
     shine: 'shine__28141'
 };
