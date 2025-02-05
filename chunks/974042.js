@@ -74,49 +74,53 @@ class A extends c.Z {
 }
 class b {
     reset() {
-        let e = r().map(
+        let e = new Set(),
+            t = r().map(
                 I.Z.getRelationships(),
-                (e, t) =>
+                (t, n) => (
+                    t === v.OGo.FRIEND && e.add(n),
                     new A({
-                        key: t,
-                        type: e,
-                        userId: t,
-                        nickname: I.Z.getNickname(t),
-                        ...S(t),
-                        ...Z(t),
-                        ...x(t),
-                        spam: I.Z.isSpam(t),
-                        ignoredUser: I.Z.isIgnored(t),
-                        giftIntentType: e === v.OGo.FRIEND && p.Z.isTopAffinityFriendAnniversary({ userId: t }) ? N.hX.FRIEND_ANNIVERSARY : void 0
+                        key: n,
+                        type: t,
+                        userId: n,
+                        nickname: I.Z.getNickname(n),
+                        ...S(n),
+                        ...Z(n),
+                        ...x(n),
+                        spam: I.Z.isSpam(n),
+                        ignoredUser: I.Z.isIgnored(n),
+                        giftIntentType: t === v.OGo.FRIEND && p.Z.isTopAffinityFriendAnniversary({ userId: n }) ? N.hX.FRIEND_ANNIVERSARY : void 0
                     })
+                )
             ),
-            t = (0, h.r8)({ location: 'FriendsStore' }),
-            n = [];
-        if (t) {
-            let e = m.Z.getGameRelationships().values(),
-                t = new Set();
-            e.forEach((e) => {
-                let { id: i, applicationId: l, type: r } = e;
-                (r === v.OGo.FRIEND && t.has(i)) ||
-                    (r === v.OGo.FRIEND && t.add(i),
-                    n.push(
-                        new A({
-                            key: ''.concat(i, '-').concat(l),
-                            type: r,
-                            userId: i,
-                            applicationId: l,
-                            nickname: I.Z.getNickname(i),
-                            ...S(i),
-                            ...Z(i),
-                            ...x(i),
-                            spam: I.Z.isSpam(i),
-                            ignoredUser: I.Z.isIgnored(i),
-                            isGameRelationship: !0
-                        })
-                    ));
+            n = (0, h.r8)({ location: 'FriendsStore' }),
+            i = [];
+        if (n) {
+            let t = m.Z.getGameRelationships().values(),
+                n = new Set();
+            t.forEach((t) => {
+                let { id: l, applicationId: r, type: a } = t;
+                !e.has(l) &&
+                    ((a === v.OGo.FRIEND && n.has(l)) ||
+                        (a === v.OGo.FRIEND && n.add(l),
+                        i.push(
+                            new A({
+                                key: ''.concat(l, '-').concat(r),
+                                type: a,
+                                userId: l,
+                                applicationId: r,
+                                nickname: I.Z.getNickname(l),
+                                ...S(l),
+                                ...Z(l),
+                                ...x(l),
+                                spam: I.Z.isSpam(l),
+                                ignoredUser: I.Z.isIgnored(l),
+                                isGameRelationship: !0
+                            })
+                        )));
             });
         }
-        let i = r().map(
+        let l = r().map(
             u.Z.getSuggestions(),
             (e) =>
                 new A({
@@ -129,7 +133,7 @@ class b {
                     ...x(e.key)
                 })
         );
-        return new b(r().concat(e, n, i));
+        return new b(r().concat(t, i, l));
     }
     clone() {
         return new b(this._rows);
