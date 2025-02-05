@@ -187,7 +187,11 @@ function I() {
         [t, n] = l.useState(''),
         r = (function (e) {
             let [t, n] = l.useState(e.logs),
-                a = l.useCallback(() => n([...e.logs]), [e]);
+                a = l.useCallback(() => {
+                    (0, o.debounce)(() => {
+                        n([...e.logs]);
+                    }, 500)();
+                }, [e]);
             return (
                 l.useEffect(
                     () => (

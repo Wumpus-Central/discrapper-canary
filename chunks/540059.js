@@ -1,12 +1,11 @@
 n.d(t, {
-    Q3: () => _,
+    Q3: () => f,
     R6: () => u,
-    TH: () => p,
+    TH: () => _,
     i9: () => l,
-    iT: () => c,
-    nm: () => h,
-    o9: () => f,
-    yl: () => d
+    nm: () => p,
+    o9: () => d,
+    yl: () => c
 });
 var i = n(442837),
     r = n(818083),
@@ -93,33 +92,32 @@ let o = (0, r.B)({
     ]
 });
 function l(e) {
-    let t = o.getCurrentConfig({ location: e }).enabled,
-        n = a.ZP.disableVisualRefresh;
-    return !!t && !n;
+    let { enabled: t, disabledByDefault: n } = o.getCurrentConfig({ location: e }),
+        i = a.ZP.isVisualRefreshDisabled(n);
+    return !!t && !i;
 }
 function u(e) {
-    return _(e) && o.getCurrentConfig({ location: e }).newChatInput;
+    let t = f(e),
+        { newChatInput: n } = o.useExperiment({ location: e }, { autoTrackExposure: !0 });
+    return t && n;
 }
-function c(e) {
-    return o.getCurrentConfig({ location: e }).disabledByDefault;
-}
-function d(e, t) {
+function c(e, t) {
     return o.subscribe({ location: e }, t);
 }
-function f(e) {
+function d(e) {
     return o.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
+}
+function f(e) {
+    let { enabled: t, disabledByDefault: n } = o.useExperiment({ location: e }, { autoTrackExposure: !0 }),
+        r = (0, i.e7)([a.ZP], () => a.ZP.isVisualRefreshDisabled(n));
+    return !!t && !r;
 }
 function _(e) {
     let t = f(e),
-        n = (0, i.e7)([a.ZP], () => a.ZP.disableVisualRefresh);
-    return !!t && !n;
-}
-function p(e) {
-    let t = _(e),
         n = o.useExperiment({ location: e }, { autoTrackExposure: !0 }).enableCollapsibleSidebar;
     return !!t && n;
 }
-function h(e) {
+function p(e) {
     let { canOptOut: t } = o.getCurrentConfig({ location: e }),
         n = (0, i.e7)([s.default], () => {
             var e, t;
