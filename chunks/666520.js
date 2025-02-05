@@ -1,33 +1,33 @@
-i.d(n, { Z: () => x });
-var t = i(200651),
-    l = i(192379),
-    o = i(442837),
-    s = i(481060),
-    r = i(34854),
-    a = i(531301),
-    d = i(246946),
-    c = i(981631),
-    u = i(388032),
-    m = i(120238);
+t.d(n, { Z: () => x });
+var i = t(200651),
+    l = t(192379),
+    o = t(442837),
+    s = t(481060),
+    r = t(34854),
+    a = t(531301),
+    d = t(246946),
+    c = t(981631),
+    u = t(388032),
+    m = t(120238);
 function x(e) {
-    let { autoFocus: n = !1, className: i, userId: x, onUpdate: p } = e,
-        f = (0, o.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        { loading: I, note: h } = (0, a.Z)(x),
+    let { autoFocus: n = !1, className: t, userId: x, onUpdate: p } = e,
+        I = (0, o.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        { loading: f, note: h } = (0, a.Z)(x),
         v = l.useRef(null);
     return (l.useEffect(() => {
-        if (!n || f) return;
+        if (!n || I) return;
         let e = v.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [n, f]),
-    f)
+    }, [n, I]),
+    I)
         ? null
-        : (0, t.jsx)('div', {
-              className: i,
-              children: (0, t.jsx)(s.lcI, {
+        : (0, i.jsx)('div', {
+              className: t,
+              children: (0, i.jsx)(s.lcI, {
                   ref: v,
                   className: m.textarea,
-                  disabled: I,
-                  placeholder: I ? u.intl.string(u.t['WLKx//']) : u.intl.string(u.t.VBhOe3),
+                  disabled: f,
+                  placeholder: f ? u.intl.string(u.t['WLKx//']) : u.intl.string(u.t.VBhOe3),
                   'aria-label': u.intl.string(u.t.PbMNh4),
                   onBlur: (e) => {
                       let n = e.currentTarget.value;

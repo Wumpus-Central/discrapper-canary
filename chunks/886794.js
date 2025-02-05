@@ -1,33 +1,33 @@
-i.d(n, { Z: () => S }), i(47120);
-var t = i(200651),
-    l = i(192379),
-    o = i(481060),
-    s = i(727637),
-    r = i(100527),
-    a = i(906732),
-    d = i(680295),
-    c = i(5192),
-    u = i(785717),
-    m = i(687158),
-    x = i(899007),
-    p = i(648052),
-    f = i(867176),
-    I = i(280885),
-    h = i(900927),
-    v = i(678738),
-    g = i(502762),
-    Z = i(530),
-    _ = i(679332),
-    j = i(544989),
-    E = i(228168),
-    N = i(981631),
-    y = i(388032),
-    T = i(171865),
-    P = i(64406),
-    b = i(893302);
-function S(e) {
-    let { user: n, guildId: i, channelId: S, messageId: L, roleId: C, sessionId: A, transitionState: M, onClose: O, sourceAnalyticsLocations: R = [] } = e,
-        U = i === N.ME ? void 0 : i,
+t.d(n, { Z: () => b }), t(47120);
+var i = t(200651),
+    l = t(192379),
+    o = t(481060),
+    s = t(727637),
+    r = t(100527),
+    a = t(906732),
+    d = t(680295),
+    c = t(5192),
+    u = t(785717),
+    m = t(687158),
+    x = t(899007),
+    p = t(648052),
+    I = t(867176),
+    f = t(280885),
+    h = t(900927),
+    v = t(678738),
+    Z = t(502762),
+    g = t(530),
+    _ = t(679332),
+    j = t(544989),
+    E = t(228168),
+    N = t(981631),
+    y = t(388032),
+    T = t(171865),
+    P = t(64406),
+    S = t(893302);
+function b(e) {
+    let { user: n, guildId: t, channelId: b, messageId: L, roleId: C, sessionId: A, transitionState: O, onClose: M, sourceAnalyticsLocations: R = [] } = e,
+        U = t === N.ME ? void 0 : t,
         B = (0, m.ZP)(n.id, U),
         { analyticsLocations: F } = (0, a.ZP)([...R, r.Z.SIMPLIFIED_PROFILE_MODAL]),
         D = (0, u.ZB)({
@@ -35,83 +35,83 @@ function S(e) {
             userId: n.id,
             sourceSessionId: A,
             guildId: U,
-            channelId: S,
+            channelId: b,
             messageId: L,
             roleId: C
         }),
         w = l.createRef(),
         G = (0, s.Z)(w);
-    return (0, t.jsx)(a.Gt, {
+    return (0, i.jsx)(a.Gt, {
         value: F,
-        children: (0, t.jsx)(u.Mt, {
+        children: (0, i.jsx)(u.Mt, {
             value: D,
-            children: (0, t.jsxs)(o.Y0X, {
-                transitionState: M,
+            children: (0, i.jsxs)(o.Y0X, {
+                transitionState: O,
                 className: T.root,
                 hideShadow: !0,
                 'aria-label': y.intl.string(y.t['3N/J2t']),
                 children: [
-                    (0, t.jsxs)(g.Z, {
+                    (0, i.jsxs)(Z.Z, {
                         user: n,
                         displayProfile: B,
                         profileType: E.y0.FULL_SIZE,
                         ref: w,
                         children: [
-                            (0, t.jsx)(j.Z, {
+                            (0, i.jsx)(j.Z, {
                                 profileType: E.y0.FULL_SIZE,
-                                children: (0, t.jsx)(_.Z, { user: n })
+                                children: (0, i.jsx)(_.Z, { user: n })
                             }),
-                            (0, t.jsxs)('header', {
+                            (0, i.jsxs)('header', {
                                 children: [
-                                    (0, t.jsx)(f.Z, {
+                                    (0, i.jsx)(I.Z, {
                                         user: n,
                                         displayProfile: B,
                                         profileType: E.y0.FULL_SIZE
                                     }),
-                                    (0, t.jsx)('div', {
+                                    (0, i.jsx)('div', {
                                         className: T.headerInner,
-                                        children: (0, t.jsx)(x.Z, {
+                                        children: (0, i.jsx)(x.Z, {
                                             user: n,
                                             displayProfile: B,
                                             guildId: U,
-                                            channelId: S,
+                                            channelId: b,
                                             profileType: E.y0.FULL_SIZE
                                         })
                                     })
                                 ]
                             }),
-                            (0, t.jsxs)('div', {
+                            (0, i.jsxs)('div', {
                                 className: T.body,
                                 children: [
-                                    (0, t.jsx)(Z.Z, {
+                                    (0, i.jsx)(g.Z, {
                                         user: n,
                                         profileType: E.y0.FULL_SIZE,
-                                        nickname: c.ZP.getName(U, S, n),
+                                        nickname: c.ZP.getName(U, b, n),
                                         pronouns: null == B ? void 0 : B.pronouns,
                                         nicknameVariant: 'heading-xl/bold',
-                                        tags: (0, t.jsx)(p.Z, {
+                                        tags: (0, i.jsx)(p.Z, {
                                             displayProfile: B,
                                             profileType: E.y0.FULL_SIZE,
-                                            onClose: O
+                                            onClose: M
                                         })
                                     }),
-                                    (0, t.jsx)(g.Z.Overlay, {
+                                    (0, i.jsx)(Z.Z.Overlay, {
                                         className: T.overlay,
-                                        children: (0, t.jsxs)('div', {
-                                            className: b.container,
+                                        children: (0, i.jsxs)('div', {
+                                            className: S.container,
                                             children: [
-                                                (0, t.jsx)(o.njP, {
-                                                    className: b.tabBar,
+                                                (0, i.jsx)(o.njP, {
+                                                    className: S.tabBar,
                                                     type: 'top',
                                                     selectedItem: E.oh.BOT_INFO,
                                                     onItemSelect: N.dG4,
-                                                    children: (0, t.jsx)(
+                                                    children: (0, i.jsx)(
                                                         o.njP.Item,
                                                         {
-                                                            className: b.tabBarItem,
+                                                            className: S.tabBarItem,
                                                             id: E.oh.BOT_INFO,
                                                             'aria-label': y.intl.string(y.t.jGoPJS),
-                                                            children: (0, t.jsx)(o.Text, {
+                                                            children: (0, i.jsx)(o.Text, {
                                                                 variant: 'text-sm/normal',
                                                                 children: y.intl.string(y.t.jGoPJS)
                                                             })
@@ -119,18 +119,18 @@ function S(e) {
                                                         E.oh.BOT_INFO
                                                     )
                                                 }),
-                                                (0, t.jsxs)(o.zJl, {
+                                                (0, i.jsxs)(o.zJl, {
                                                     fade: !0,
                                                     className: P.scroller,
                                                     children: [
-                                                        (0, t.jsx)(I.Z, {
+                                                        (0, i.jsx)(f.Z, {
                                                             userId: n.id,
                                                             userBio: null == B ? void 0 : B.bio,
                                                             setLineClamp: !1
                                                         }),
-                                                        (0, t.jsx)(v.Z, {
+                                                        (0, i.jsx)(v.Z, {
                                                             heading: y.intl.string(y.t['A//N4u']),
-                                                            children: (0, t.jsx)(h.Z, {
+                                                            children: (0, i.jsx)(h.Z, {
                                                                 userId: n.id,
                                                                 guildId: U,
                                                                 tooltipDelay: E.vB
@@ -146,7 +146,7 @@ function S(e) {
                         ]
                     }),
                     (null == B ? void 0 : B.profileEffectId) != null &&
-                        (0, t.jsx)(d.Z, {
+                        (0, i.jsx)(d.Z, {
                             profileEffectId: null == B ? void 0 : B.profileEffectId,
                             isHovering: G
                         })

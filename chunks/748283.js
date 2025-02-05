@@ -1,32 +1,32 @@
-i.d(n, { Z: () => f });
-var t = i(200651),
-    l = i(481060),
-    o = i(197115),
-    s = i(703656),
-    r = i(111361),
-    a = i(785717),
-    d = i(475413),
-    c = i(228168),
-    u = i(981631),
-    m = i(474936),
-    x = i(388032),
-    p = i(640984);
-function f(e) {
-    let { currentUser: n, onClose: i } = e,
-        f = (0, r.I5)(n),
-        { trackUserProfileAction: I } = (0, a.KZ)();
-    return f
-        ? (0, t.jsx)(d.oY, {
+t.d(n, { Z: () => I });
+var i = t(200651),
+    l = t(481060),
+    o = t(197115),
+    s = t(703656),
+    r = t(111361),
+    a = t(785717),
+    d = t(475413),
+    c = t(228168),
+    u = t(981631),
+    m = t(474936),
+    x = t(388032),
+    p = t(640984);
+function I(e) {
+    let { currentUser: n, onClose: t } = e,
+        I = (0, r.I5)(n),
+        { trackUserProfileAction: f } = (0, a.KZ)();
+    return I
+        ? (0, i.jsx)(d.oY, {
               action: c.yM.VIEW_PREMIUM_PERKS,
               icon: l.SrA,
               tooltipText: x.intl.string(x.t.AnlV9f),
               onClick: () => {
-                  (0, s.uL)(u.Z5c.APPLICATION_STORE), null == i || i();
+                  (0, s.uL)(u.Z5c.APPLICATION_STORE), null == t || t();
               }
           })
-        : (0, t.jsx)(o.Z, {
+        : (0, i.jsx)(o.Z, {
               onClick: () => {
-                  I({ action: c.yM.GET_PREMIUM });
+                  f({ action: c.yM.GET_PREMIUM });
               },
               buttonText: x.intl.string(x.t.x6rkDg),
               subscriptionTier: m.Si.TIER_2,
