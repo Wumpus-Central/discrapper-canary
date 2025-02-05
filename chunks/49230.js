@@ -1,56 +1,64 @@
 n.d(t, {
-    $: () => h,
-    h: () => m
+    $: () => p,
+    h: () => g
 }),
     n(47120);
 var i = n(512722),
     l = n.n(i),
     r = n(46973),
-    a = n(304809),
-    s = n(131951),
-    o = n(747071);
-let c = null;
+    a = n(481060),
+    s = n(304809),
+    o = n(131951),
+    c = n(747071),
+    d = n(388032);
+let u = null;
 try {
-    c = (0, a.N)();
+    u = (0, s.N)();
 } catch {}
-let d = new Map();
-async function u(e) {
-    let t = d.get(e);
+let h = new Map();
+async function m(e) {
+    let t = h.get(e);
     if (null != t) return t;
     let n = await (await fetch(e)).arrayBuffer(),
-        i = await (null == c ? void 0 : c.decodeAudioData(n));
-    return null != i && d.set(e, i), i;
+        i = await (null == u ? void 0 : u.decodeAudioData(n));
+    return null != i && h.set(e, i), i;
 }
-function h(e) {
+function p(e) {
     let { soundKey: t, soundURL: n, soundVolume: i, reportSoundStartedPlaying: a } = e;
     return new Promise(async (e) => {
-        let o = await u(n);
-        null == o && e(),
-            s.Z.getMediaEngine().eachConnection((n) => {
+        let s = await m(n);
+        null == s && e(),
+            o.Z.getMediaEngine().eachConnection((n) => {
                 n.context === r.Yn.DEFAULT &&
                     (a(),
-                    l()(null != o, 'audioBuffer cannot be null here'),
-                    n.startSamplesLocalPlayback(t, o, i, () => {
+                    l()(null != s, 'audioBuffer cannot be null here'),
+                    n.startSamplesLocalPlayback(t, s, i, () => {
                         e();
                     }));
             });
     });
 }
-function m(e, t) {
+function g(e, t) {
     let { soundKey: n, soundURL: i, soundVolume: l, reportSoundStartedPlaying: r } = e,
-        a = t.get(n);
-    if (null != a) {
-        a.currentTime = 0;
+        s = t.get(n);
+    if (null != s) {
+        s.currentTime = 0;
         return;
     }
     return new Promise((e) => {
-        let a = new Audio(i);
-        (a.volume = (0, o.Z)(l)),
-            a.addEventListener('canplaythrough', () => {
-                r(), t.set(n, a), a.play();
+        let s = new Audio(i);
+        (s.volume = (0, c.Z)(l)),
+            s.addEventListener('canplaythrough', () => {
+                r(), t.set(n, s), s.play();
             }),
-            a.addEventListener('ended', () => {
-                t.delete(n), (a.src = ''), e();
+            'Safari' === platform.name &&
+                s.addEventListener('error', (t) => {
+                    var n;
+                    let i = t.target;
+                    (null == i ? void 0 : null === (n = i.error) || void 0 === n ? void 0 : n.code) === MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED && (0, a.showToast)((0, a.createToast)(d.intl.string(d.t.qAsyjI), a.ToastType.FAILURE)), e();
+                }),
+            s.addEventListener('ended', () => {
+                t.delete(n), (s.src = ''), e();
             });
     });
 }
