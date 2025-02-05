@@ -1,44 +1,45 @@
 n.d(t, {
-    a: () => c,
-    j: () => d
+    a: () => d,
+    j: () => _
 });
 var i = n(544891),
     r = n(570140),
     a = n(626135),
     s = n(70956),
-    o = n(981631);
-let l = 5000,
-    u = 3;
-async function c(e, t) {
+    o = n(823379),
+    l = n(981631);
+let u = 5000,
+    c = 3;
+async function d(e, t) {
     let n;
-    let c = performance.now(),
+    let o = performance.now(),
         d = 0;
     switch (e.type) {
         case 'channel':
-            n = o.ANM.APPLICATION_COMMAND_INDEX_CHANNEL(e.channelId);
+            n = l.ANM.APPLICATION_COMMAND_INDEX_CHANNEL(e.channelId);
             break;
         case 'guild':
-            n = o.ANM.APPLICATION_COMMAND_INDEX_GUILD(e.guildId);
+            n = l.ANM.APPLICATION_COMMAND_INDEX_GUILD(e.guildId);
             break;
         case 'user':
-            n = o.ANM.APPLICATION_COMMAND_INDEX_USER;
+            n = l.ANM.APPLICATION_COMMAND_INDEX_USER;
             break;
         case 'application':
-            n = o.ANM.APPLICATION_COMMAND_INDEX_APPLICATION(e.applicationId);
+            n = l.ANM.APPLICATION_COMMAND_INDEX_APPLICATION(e.applicationId);
     }
-    let f = async (t) =>
-            d >= u
-                ? (p(!0),
+    let _ = async (t) =>
+            d >= c
+                ? (h({ error: !0 }),
                   r.Z.dispatch({
                       type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
                       target: e
                   }))
-                : (await new Promise((e) => setTimeout(e, t)), _()),
-        _ = () =>
+                : (await new Promise((e) => setTimeout(e, t)), p()),
+        p = () =>
             i.tn
                 .get({
                     url: n,
-                    retries: u - d - 1,
+                    retries: c - d - 1,
                     signal: t.signal,
                     onRequestCreated: () => d++,
                     rejectWithError: !1
@@ -46,8 +47,8 @@ async function c(e, t) {
                 .then(
                     (t) =>
                         202 === t.status
-                            ? f(l)
-                            : (p(!1),
+                            ? _(u)
+                            : (h({ error: !1 }),
                               r.Z.dispatch({
                                   type: 'APPLICATION_COMMAND_INDEX_FETCH_SUCCESS',
                                   target: e,
@@ -55,33 +56,51 @@ async function c(e, t) {
                               })),
                     (n) => {
                         if (t.signal.aborted) {
-                            p(!0);
+                            h({ error: !0 });
                             return;
                         }
                         return 429 === n.status
-                            ? f(n.body.retry_after * s.Z.Millis.SECOND)
-                            : (p(!0),
+                            ? _(n.body.retry_after * s.Z.Millis.SECOND)
+                            : (h({ error: !0 }),
                               r.Z.dispatch({
                                   type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
                                   target: e
                               }));
                     }
                 ),
-        p = (e) => {
-            let n = performance.now() - c;
-            a.default.track(o.rMx.APPLICATION_COMMAND_PERFORMANCE, {
-                duration_ms: n,
-                error: e,
+        h = (i) => {
+            let { error: r } = i,
+                s = performance.now() - o;
+            a.default.track(l.rMx.APPLICATION_COMMAND_PERFORMANCE, {
+                duration_ms: s,
+                error: r,
                 aborted: t.signal.aborted,
                 include_applications: !0,
                 retries: Math.max(d - 1, 0),
                 kind: null,
-                command_type: null
+                command_type: null,
+                url: n,
+                target_type: e.type,
+                target_id: f(e)
             });
         };
-    await _();
+    await p();
 }
-function d(e) {
+function f(e) {
+    switch (e.type) {
+        case 'channel':
+            return e.channelId;
+        case 'guild':
+            return e.guildId;
+        case 'user':
+            return null;
+        case 'application':
+            return e.applicationId;
+        default:
+            (0, o.vE)(e);
+    }
+}
+function _(e) {
     r.Z.dispatch({
         type: 'APPLICATION_COMMAND_INDEX_FETCH_REQUEST',
         target: e
