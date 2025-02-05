@@ -102,6 +102,10 @@ function _(e) {
             return 'text/plain';
         case 'vtt':
             return 'text/vtt';
+        case 'ts':
+            return 'video/mp2t';
+        case 'm3u8':
+            return 'application/x-mpegURL';
         default:
             return null;
     }
