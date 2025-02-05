@@ -103,7 +103,12 @@ function Z(e) {
             (0, a.jsxs)(c.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-normal',
-                children: ['enabled: ', t.enabled ? 'Yes' : 'No']
+                children: ['legacyEnabled: ', t.legacyEnabled ? 'Yes' : 'No']
+            }),
+            (0, a.jsxs)(c.Text, {
+                variant: 'text-sm/normal',
+                color: 'text-normal',
+                children: ['oopEnabled: ', t.oopEnabled ? 'Yes' : 'No']
             }),
             (0, a.jsxs)(c.Text, {
                 variant: 'text-sm/normal',

@@ -63,8 +63,14 @@ class f extends a.Z {
     isHidden() {
         return this.hasFlag(u.eHb.HIDDEN);
     }
-    isOverlayEnabled() {
+    isLegacyOverlayEnabled() {
         return !this.hasFlag(u.eHb.OVERLAY_DISABLED);
+    }
+    isOverlayV3Enabled() {
+        return !this.hasFlag(u.eHb.OVERLAY_V3_DISABLED);
+    }
+    isOverlayEnabled() {
+        return this.isLegacyOverlayEnabled() || this.isOverlayV3Enabled();
     }
     isMasterBranch() {
         return this.branchId === this.id;

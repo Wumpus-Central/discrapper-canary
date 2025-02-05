@@ -17,6 +17,7 @@ let s = {
     compatibilityHook: !1,
     warn: !1,
     enabled: !1,
+    enabledOOP: !1,
     allowHook: !0,
     supportsOutOfProcessOverlay: !1
 };

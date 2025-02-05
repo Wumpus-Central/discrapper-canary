@@ -65,12 +65,11 @@ let _ = {
             if (!__OVERLAY__) throw Error('OverlayActionCreators.setInstanceLocked: Must be called within Overlay context');
             _.setInputLocked(e, (0, c.QF)());
         },
-        setEnabled(e, t, n) {
+        setEnabled(e, t) {
             r.Z.dispatch({
                 type: 'OVERLAY_SET_ENABLED',
-                enabled: e,
-                legacyEnabled: t,
-                global: n
+                legacyEnabled: e,
+                oopEnabled: t
             });
         },
         selectCall(e) {
@@ -107,6 +106,12 @@ let _ = {
             r.Z.dispatch({
                 type: 'OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE',
                 mode: e
+            });
+        },
+        setDisableClickableRegions(e) {
+            r.Z.dispatch({
+                type: 'OVERLAY_SET_DISABLE_CLICKABLE_REGIONS',
+                disable: e
             });
         },
         setShowKeybindIndicators(e) {

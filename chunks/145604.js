@@ -114,18 +114,19 @@ class K extends l.PureComponent {
                 (setTimeout(async () => {
                     var t, n, i;
                     let l = await (0, Z.hj)(O.pid),
-                        { gameName: a, gameId: g, exe: _, distributor: v } = (0, f.G8)(O);
+                        { gameName: a, gameId: g, exe: _, distributor: v } = (0, f.G8)(O),
+                        N = null !== (t = (null == m ? void 0 : m.legacyEnabled) || (null == m ? void 0 : m.oopEnabled)) && void 0 !== t && t;
                     F.default.track(Y.rMx.LAUNCH_GAME, {
                         game: a,
                         game_id: g,
                         verified: null != e && (0, f.vp)(_, null == e ? void 0 : e.executables),
                         elevated: O.elevated,
-                        is_launcher: null !== (t = null == O ? void 0 : O.isLauncher) && void 0 !== t && t,
+                        is_launcher: null !== (n = null == O ? void 0 : O.isLauncher) && void 0 !== n && n,
                         game_platform: Y.M7m.DESKTOP,
                         detection_method: u,
                         distributor: v,
                         is_overlay_enabled: V.Z.enabled,
-                        is_overlay_game_enabled: null !== (n = null == m ? void 0 : m.enabled) && void 0 !== n && n,
+                        is_overlay_game_enabled: N,
                         is_overlay_game_source: null !== (i = null == m ? void 0 : m.source) && void 0 !== i ? i : h.source,
                         fullscreen_type: null != l ? o.Jx[l] : o.Jx.UNKNOWN.toString(),
                         overlay_method: s.gl[p],

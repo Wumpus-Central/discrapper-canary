@@ -172,20 +172,24 @@ let M = {
         }),
             E.default.track(N.rMx.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
     },
-    toggleOverlay(e, t) {
-        let n = h.Z.getGameByName(e.name);
-        if (null != n) {
-            let e = m.Z.getActiveLibraryApplication(n.id);
+    toggleOverlay(e, t, n) {
+        let i = h.Z.getGameByName(e.name);
+        if (null != i) {
+            let e = m.Z.getActiveLibraryApplication(i.id);
             if (null != e) {
-                let t = v.x9(e.getFlags(), N.eHb.OVERLAY_DISABLED);
-                S.h(e.id, e.branchId, t);
+                let i = e.getFlags(),
+                    r = v.yE(i, N.eHb.OVERLAY_DISABLED);
+                t && r !== t && (i = v.x9(i, N.eHb.OVERLAY_DISABLED));
+                let a = v.yE(i, N.eHb.OVERLAY_V3_DISABLED);
+                null != n && n !== a && (i = v.x9(i, N.eHb.OVERLAY_V3_DISABLED)), S.h(e.id, e.branchId, i);
                 return;
             }
         }
         l.Z.dispatch({
             type: 'RUNNING_GAME_TOGGLE_OVERLAY',
             game: e,
-            newEnabledValue: t
+            newLegacyOverlayEnabledValue: t,
+            newOverlayV3EnabledValue: n
         });
     },
     toggleDetection(e) {

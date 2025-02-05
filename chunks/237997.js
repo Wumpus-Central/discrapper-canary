@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Z: () => ey }), n(47120), n(411104);
+n.d(t, { Z: () => eI }), n(47120), n(411104);
 var r,
     a = n(442837),
     s = n(433517),
@@ -44,6 +44,7 @@ let A = Object.freeze({
         disableExternalLinkAlert: !1,
         disablePinTutorial: !1,
         showKeybindIndicators: !0,
+        disableClickableRegions: !1,
         textWidgetOpacity: T.wF.LOWER,
         showGameInviteNotification: !0,
         customInviteMessage: void 0
@@ -63,7 +64,7 @@ function k(e) {
     return null == t && (t = C[e] = { ...A }), t;
 }
 let U = { ...A },
-    G = new Set(['AUDIO_SET_INPUT_DEVICE', 'AUDIO_SET_INPUT_VOLUME', 'AUDIO_SET_LOCAL_VIDEO_DISABLED', 'AUDIO_SET_LOCAL_VOLUME', 'AUDIO_SET_MODE', 'AUDIO_SET_NOISE_CANCELLATION', 'AUDIO_SET_NOISE_SUPPRESSION', 'AUDIO_SET_OUTPUT_DEVICE', 'AUDIO_SET_OUTPUT_VOLUME', 'AUDIO_TOGGLE_LOCAL_MUTE', 'AUDIO_TOGGLE_SELF_DEAF', 'AUDIO_TOGGLE_SELF_MUTE', 'BILLING_SUBSCRIPTION_UPDATE_SUCCESS', 'CATEGORY_COLLAPSE', 'CATEGORY_EXPAND', 'CHANNEL_ACK', 'CHANNEL_PRELOAD', 'GIFT_CODE_REDEEM', 'GIFT_CODE_REDEEM_FAILURE', 'GIFT_CODE_REDEEM_SUCCESS', 'HOTSPOT_HIDE', 'INVITE_MODAL_CLOSE', 'LAYOUT_CREATE', 'LAYOUT_CREATE_WIDGETS', 'LAYOUT_DELETE_ALL_WIDGETS', 'LAYOUT_DELETE_WIDGET', 'LAYOUT_SET_PINNED', 'LAYOUT_SET_TOP_WIDGET', 'LAYOUT_UPDATE_WIDGET', 'LOAD_MESSAGES', 'LOAD_MESSAGES_FAILURE', 'LOAD_MESSAGES_SUCCESS', 'MEDIA_ENGINE_SET_GO_LIVE_SOURCE', 'OVERLAY_ACTIVATE_REGION', 'OVERLAY_DEACTIVATE_ALL_REGIONS', 'OVERLAY_MESSAGE_EVENT_ACTION', 'OVERLAY_SET_AVATAR_SIZE_MODE', 'OVERLAY_SET_CLICK_ZONES', 'OVERLAY_SET_DISPLAY_NAME_MODE', 'OVERLAY_SET_DISPLAY_USER_MODE', 'OVERLAY_SET_INPUT_LOCKED', 'OVERLAY_SET_NOTIFICATION_POSITION_MODE', 'OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE', 'OVERLAY_SET_SHOW_KEYBIND_INDICATORS', 'OVERLAY_SET_GAME_INVITE_NOTIFICATION', 'OVERLAY_SET_INVITE_MESSAGE', 'OVERLAY_SET_TEXT_WIDGET_OPACITY', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', 'PREMIUM_PAYMENT_ERROR_CLEAR', 'PREMIUM_PAYMENT_MODAL_CLOSE', 'PREMIUM_PAYMENT_MODAL_OPEN', 'PREMIUM_PAYMENT_SUBSCRIBE_FAIL', 'PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS', 'PREMIUM_PAYMENT_UPDATE_FAIL', 'PREMIUM_PAYMENT_UPDATE_SUCCESS', 'PREMIUM_REQUIRED_MODAL_CLOSE', 'PREMIUM_REQUIRED_MODAL_OPEN', 'PURCHASE_CONFIRMATION_MODAL_CLOSE', 'PURCHASE_CONFIRMATION_MODAL_OPEN', 'SKU_PURCHASE_CLEAR_ERROR', 'SKU_PURCHASE_FAIL', 'SKU_PURCHASE_MODAL_CLOSE', 'SKU_PURCHASE_MODAL_OPEN', 'SKU_PURCHASE_PREVIEW_FETCH_SUCCESS', 'SKU_PURCHASE_SHOW_CONFIRMATION_STEP', 'SKU_PURCHASE_START', 'SKU_PURCHASE_SUCCESS', 'STREAM_CLOSE', 'STREAM_START', 'VOICE_CHANNEL_SELECT', 'USER_SETTINGS_PROTO_ENQUEUE_UPDATE', 'USER_SETTINGS_PROTO_LOAD_IF_NECESSARY']),
+    G = new Set(['AUDIO_SET_INPUT_DEVICE', 'AUDIO_SET_INPUT_VOLUME', 'AUDIO_SET_LOCAL_VIDEO_DISABLED', 'AUDIO_SET_LOCAL_VOLUME', 'AUDIO_SET_MODE', 'AUDIO_SET_NOISE_CANCELLATION', 'AUDIO_SET_NOISE_SUPPRESSION', 'AUDIO_SET_OUTPUT_DEVICE', 'AUDIO_SET_OUTPUT_VOLUME', 'AUDIO_TOGGLE_LOCAL_MUTE', 'AUDIO_TOGGLE_SELF_DEAF', 'AUDIO_TOGGLE_SELF_MUTE', 'BILLING_SUBSCRIPTION_UPDATE_SUCCESS', 'CATEGORY_COLLAPSE', 'CATEGORY_EXPAND', 'CHANNEL_ACK', 'CHANNEL_PRELOAD', 'GIFT_CODE_REDEEM', 'GIFT_CODE_REDEEM_FAILURE', 'GIFT_CODE_REDEEM_SUCCESS', 'HOTSPOT_HIDE', 'INVITE_MODAL_CLOSE', 'LAYOUT_CREATE', 'LAYOUT_CREATE_WIDGETS', 'LAYOUT_DELETE_ALL_WIDGETS', 'LAYOUT_DELETE_WIDGET', 'LAYOUT_SET_PINNED', 'LAYOUT_SET_TOP_WIDGET', 'LAYOUT_UPDATE_WIDGET', 'LOAD_MESSAGES', 'LOAD_MESSAGES_FAILURE', 'LOAD_MESSAGES_SUCCESS', 'MEDIA_ENGINE_SET_GO_LIVE_SOURCE', 'OVERLAY_ACTIVATE_REGION', 'OVERLAY_DEACTIVATE_ALL_REGIONS', 'OVERLAY_MESSAGE_EVENT_ACTION', 'OVERLAY_SET_AVATAR_SIZE_MODE', 'OVERLAY_SET_CLICK_ZONES', 'OVERLAY_SET_DISPLAY_NAME_MODE', 'OVERLAY_SET_DISPLAY_USER_MODE', 'OVERLAY_SET_INPUT_LOCKED', 'OVERLAY_SET_NOTIFICATION_POSITION_MODE', 'OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE', 'OVERLAY_SET_DISABLE_CLICKABLE_REGIONS', 'OVERLAY_SET_SHOW_KEYBIND_INDICATORS', 'OVERLAY_SET_GAME_INVITE_NOTIFICATION', 'OVERLAY_SET_INVITE_MESSAGE', 'OVERLAY_SET_TEXT_WIDGET_OPACITY', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', 'PREMIUM_PAYMENT_ERROR_CLEAR', 'PREMIUM_PAYMENT_MODAL_CLOSE', 'PREMIUM_PAYMENT_MODAL_OPEN', 'PREMIUM_PAYMENT_SUBSCRIBE_FAIL', 'PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS', 'PREMIUM_PAYMENT_UPDATE_FAIL', 'PREMIUM_PAYMENT_UPDATE_SUCCESS', 'PREMIUM_REQUIRED_MODAL_CLOSE', 'PREMIUM_REQUIRED_MODAL_OPEN', 'PURCHASE_CONFIRMATION_MODAL_CLOSE', 'PURCHASE_CONFIRMATION_MODAL_OPEN', 'SKU_PURCHASE_CLEAR_ERROR', 'SKU_PURCHASE_FAIL', 'SKU_PURCHASE_MODAL_CLOSE', 'SKU_PURCHASE_MODAL_OPEN', 'SKU_PURCHASE_PREVIEW_FETCH_SUCCESS', 'SKU_PURCHASE_SHOW_CONFIRMATION_STEP', 'SKU_PURCHASE_START', 'SKU_PURCHASE_SUCCESS', 'STREAM_CLOSE', 'STREAM_START', 'VOICE_CHANNEL_SELECT', 'USER_SETTINGS_PROTO_ENQUEUE_UPDATE', 'USER_SETTINGS_PROTO_LOAD_IF_NECESSARY']),
     B = new Set([...G.values(), 'ACTIVITY_INVITE_MODAL_CLOSE', 'CALL_DELETE', 'CHANNEL_COLLAPSE', 'CHANNEL_SELECT', 'GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', 'OVERLAY_CALL_PRIVATE_CHANNEL', 'OVERLAY_JOIN_GAME', 'OVERLAY_NOTIFICATION_EVENT', 'OVERLAY_SELECT_CALL', 'OVERLAY_SET_NOT_IDLE', 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', 'OVERLAY_WIDGET_CHANGED', 'SOUNDBOARD_SET_OVERLAY_ENABLED', 'STREAM_STOP']);
 function Z(e) {
     return (null == e.version && 1 === v.Tq) || e.version === v.Tq || (o.Z.dispatch({ type: 'OVERLAY_INCOMPATIBLE_APP' }), (0, u.zP)(), !1);
@@ -211,31 +212,35 @@ function el(e) {
     U.textChatNotifications = t;
 }
 function eu(e) {
+    let { disable: t } = e;
+    U.disableClickableRegions = t;
+}
+function ec(e) {
     let { shouldShow: t } = e;
     U.showKeybindIndicators = t;
 }
-function ec(e) {
+function ed(e) {
     let { message: t } = e,
         n = U.customInviteMessage !== t;
     return (U.customInviteMessage = t), n;
 }
-function ed(e) {
+function ef(e) {
     let { opacity: t } = e,
         n = U.textWidgetOpacity !== t;
     return (U.textWidgetOpacity = t), n;
 }
-function ef(e) {
+function e_(e) {
     let { shouldShow: t } = e,
         n = U.showGameInviteNotification !== t;
     return (U.showGameInviteNotification = t), n;
 }
-function e_() {
+function ep() {
     U.disableExternalLinkAlert = !0;
 }
-function ep() {
+function eh() {
     D = !0;
 }
-function eh() {
+function em() {
     o.Z.addInterceptor((e) => {
         if (x || !B.has(e.type)) return !1;
         if ('CHANNEL_SELECT' === e.type) {
@@ -274,7 +279,7 @@ function eh() {
         );
     });
 }
-function em(e) {
+function eg(e) {
     let t = (0, v.QF)();
     if (null == e.pid || e.pid === t)
         switch (e.type) {
@@ -285,9 +290,9 @@ function em(e) {
                 null != e.payloads && ((x = !0), e.payloads.forEach((e) => F(e)), (x = !1));
         }
 }
-function eg() {
-    eh(),
-        (0, u.Ty)(em, (0, v.Ht)()),
+function eE() {
+    em(),
+        (0, u.Ty)(eg, (0, v.Ht)()),
         (0, u.$j)(),
         (0, u.lW)({
             type: b.BmY.CONNECT,
@@ -295,10 +300,10 @@ function eg() {
             token: (0, v.Ht)()
         });
 }
-function eE(e) {
+function ev(e) {
     O.delete(e.previousAssociatedGamePID);
 }
-class ev extends (r = a.ZP.PersistedStore) {
+class ey extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         if (
             (this.waitFor(_.default),
@@ -317,7 +322,7 @@ class ev extends (r = a.ZP.PersistedStore) {
         if (null != e) {
             C = e;
             let t = _.default.getId();
-            null != t && (null == (U = k(t)).textChatNotifications && (U.textChatNotifications = A.textChatNotifications), null == U.textWidgetOpacity && (U.textWidgetOpacity = A.textWidgetOpacity));
+            null != t && (null == (U = k(t)).textChatNotifications && (U.textChatNotifications = A.textChatNotifications), null == U.textWidgetOpacity && (U.textWidgetOpacity = A.textWidgetOpacity), null == U.disableClickableRegions && (U.disableClickableRegions = A.disableClickableRegions));
         }
     }
     getState() {
@@ -376,6 +381,9 @@ class ev extends (r = a.ZP.PersistedStore) {
     get showInviteNotification() {
         return null == U.showGameInviteNotification || U.showGameInviteNotification;
     }
+    get disableClickableRegions() {
+        return null != U.disableClickableRegions && U.disableClickableRegions;
+    }
     get customInviteMessage() {
         return U.customInviteMessage;
     }
@@ -401,9 +409,9 @@ class ev extends (r = a.ZP.PersistedStore) {
         return w;
     }
 }
-S(ev, 'displayName', 'OverlayStore'),
-    S(ev, 'persistKey', 'OverlayStoreV2'),
-    S(ev, 'migrations', [
+S(ey, 'displayName', 'OverlayStore'),
+    S(ey, 'persistKey', 'OverlayStoreV2'),
+    S(ey, 'migrations', [
         () => {
             let { pinnedWidgets: e, positions: t, sizes: n, v: i, ...r } = { ...s.K.get('OverlayStore') };
             return {
@@ -416,11 +424,11 @@ S(ev, 'displayName', 'OverlayStore'),
             return null == e || null == t ? {} : { [t]: { ...e } };
         }
     ]);
-let ey = new ev(o.Z, {
+let eI = new ey(o.Z, {
     LOGOUT: V,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: j,
     CONNECTION_CLOSED: H,
-    OVERLAY_START_SESSION: eg,
+    OVERLAY_START_SESSION: eE,
     OVERLAY_INITIALIZE: Y,
     OVERLAY_READY: W,
     OVERLAY_FOCUSED: J,
@@ -433,16 +441,17 @@ let ey = new ev(o.Z, {
     OVERLAY_SET_AVATAR_SIZE_MODE: es,
     OVERLAY_SET_NOTIFICATION_POSITION_MODE: eo,
     OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE: el,
-    OVERLAY_SET_SHOW_KEYBIND_INDICATORS: eu,
-    OVERLAY_SET_INVITE_MESSAGE: ec,
-    OVERLAY_SET_GAME_INVITE_NOTIFICATION: ef,
-    OVERLAY_SET_TEXT_WIDGET_OPACITY: ed,
-    OVERLAY_DISABLE_EXTERNAL_LINK_ALERT: e_,
-    OVERLAY_INCOMPATIBLE_APP: ep,
+    OVERLAY_SET_DISABLE_CLICKABLE_REGIONS: eu,
+    OVERLAY_SET_SHOW_KEYBIND_INDICATORS: ec,
+    OVERLAY_SET_INVITE_MESSAGE: ed,
+    OVERLAY_SET_GAME_INVITE_NOTIFICATION: e_,
+    OVERLAY_SET_TEXT_WIDGET_OPACITY: ef,
+    OVERLAY_DISABLE_EXTERNAL_LINK_ALERT: ep,
+    OVERLAY_INCOMPATIBLE_APP: eh,
     OVERLAY_SET_INPUT_LOCKED: q,
     OVERLAY_ACTIVATE_REGION: Q,
     OVERLAY_DEACTIVATE_ALL_REGIONS: X,
     OVERLAY_SET_PREVIEW_IN_GAME_MODE: ei,
     WINDOW_RESIZED: en,
-    OVERLAY_SET_ASSOCIATED_GAME: eE
+    OVERLAY_SET_ASSOCIATED_GAME: ev
 });

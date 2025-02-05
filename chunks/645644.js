@@ -274,10 +274,10 @@ class L {
     }
     buildOverlayMethodStats(e, t) {
         let n = this.overlayMethodStats,
-            { enabled: i, legacyEnabled: r } = f.Z.getEnabledStatus(),
+            { oopEnabled: i, legacyEnabled: r } = f.Z.getPerGameEnabledStatus(t),
             a = {
                 legacy_override: !0 === r,
-                enabled: i,
+                enabled: i || r,
                 quns_mode: this.getQunsName(o.Ng.QUNS_UNKNOWN)
             };
         if (null != t) {
@@ -373,7 +373,8 @@ class L {
             g = (0, d.b6)(this.game),
             E = (0, c.G8)(this.game),
             v = null !== (i = this.overlayMethodStats) && void 0 !== i ? i : this.buildOverlayMethodStats(_, this.game),
-            y = null != v.any_other_method ? s.gl[v.any_other_method] : null;
+            y = null != v.any_other_method ? s.gl[v.any_other_method] : null,
+            I = g.enabledLegacy || g.enabledOOP;
         return {
             usage: {
                 event_uuid: this.uuid,
@@ -382,7 +383,7 @@ class L {
                 ...this.widgetAnalytics.getAnalytics(),
                 ...this.screenAnalytics.getAnalytics(),
                 ...m,
-                overlay_status_game_enabled: g.enabled,
+                overlay_status_game_enabled: I,
                 overlay_status_game_source: g.source,
                 game_name: null !== (r = E.gameName) && void 0 !== r ? r : null,
                 game_id: null !== (a = E.gameId) && void 0 !== a ? a : null,
