@@ -26,6 +26,8 @@ e.exports = {
     iconServer: 'iconServer__07f91',
     strikethrough: 'strikethrough__07f91',
     selected: 'selected__07f91',
+    moreClickable: 'moreClickable__07f91',
+    moreActive: 'moreActive__07f91',
     clanTag: 'clanTag__07f91',
     isOverlay: 'isOverlay__07f91',
     usernameSpeaking: 'usernameSpeaking__07f91',
