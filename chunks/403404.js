@@ -8,10 +8,10 @@ var l = n(481060),
     o = n(701488),
     c = n(981631);
 function d(e) {
-    let { channel: t, guildId: d, locationObject: u, openInPopout: m, initialSelectedApplicationId: h, initialSlide: _ = o.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: g, opensAppLauncherModal: f = !1 } = e,
+    let { channel: t, guildId: d, locationObject: u, openInPopout: m, initialSelectedApplicationId: _, initialSlide: h = o.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: g, opensAppLauncherModal: f = !1 } = e,
         x = g.length > 0 ? g[g.length - 1] : 'open-activity-shelf',
-        { enabled: E } = a.m1.getCurrentConfig({ location: x }, { autoTrackExposure: !1 });
-    if (f && E) {
+        { enabled: C } = a.m1.getCurrentConfig({ location: x }, { autoTrackExposure: !1 });
+    if (f && C) {
         (0, r.Z)({
             openInPopout: m,
             context:
@@ -26,7 +26,7 @@ function d(e) {
         return;
     }
     m && (0, s.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
-    let C = m ? l.u1M : l.z1l;
+    let v = m ? l.u1M : l.z1l;
     return (0, l.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e('69057'), n.e('89754')]).then(n.bind(n, 471840));
@@ -36,15 +36,15 @@ function d(e) {
                     channel: t,
                     guildId: d,
                     locationObject: u,
-                    initialSlide: _,
-                    initialSelectedApplicationId: h,
+                    initialSlide: h,
+                    initialSelectedApplicationId: _,
                     enableSelectedTextChannelInvite: p,
                     analyticsLocations: g
                 });
         },
         {
             modalKey: o.AC,
-            contextKey: C
+            contextKey: v
         }
     );
 }

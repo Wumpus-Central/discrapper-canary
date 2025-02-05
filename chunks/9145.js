@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(619915),
     S = n(988980),
     j = n(16609),
-    A = n(952561),
-    y = n(563218),
+    y = n(952561),
+    A = n(563218),
     P = n(884338),
     R = n(719296),
     M = n(651612),
@@ -43,18 +43,18 @@ function B(e) {
     var t, n;
     let { maxHeight: a, connectedLocation: B, renderExternalHeader: F } = e,
         { groupedButtons: H } = (0, f.ZP)({ location: 'ActivityPanelFocusedView' }),
-        G = (0, A.Z)(),
+        G = (0, y.Z)(),
         V = (0, s.Wu)([N.ZP], () => N.ZP.getEmbeddedActivitiesForLocation(B), [B]),
         z = (0, j.p)(B),
         W = (0, s.e7)([C.Z], () => C.Z.getChannel(z)),
-        Y = (0, T.gb)(V),
-        q = (0, T.uF)(Y),
+        q = (0, T.gb)(V),
+        Y = (0, T.uF)(q),
         K = l.useCallback(() => {
             (0, Z.tg)(L.Ez.PIP);
         }, []),
         X = l.useRef(null),
-        J = (0, s.e7)([N.ZP], () => N.ZP.getFocusedLayout()),
-        Q = J !== L.MI.NO_CHAT,
+        Q = (0, s.e7)([N.ZP], () => N.ZP.getFocusedLayout()),
+        J = Q !== L.MI.NO_CHAT,
         [$, ee] = l.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : a),
         et = l.useCallback((e) => {
             d.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
@@ -84,7 +84,7 @@ function B(e) {
             t = ei.height;
         ea ? ((t = ei.width / L.I0) > ei.height && (e = (t = ei.height) * L.I0), (es = (ei.height - t) / 2)) : ((e = Math.min(ei.height * L.I0)) > ei.width && (t = (e = ei.width) / L.I0), (er = (ei.width - e) / 2));
     }
-    let ec = q.get(null !== (n = null == G ? void 0 : G.id) && void 0 !== n ? n : ''),
+    let ec = Y.get(null !== (n = null == G ? void 0 : G.id) && void 0 !== n ? n : ''),
         ed = (0, s.e7)([v.Z], () => v.Z.getChannelId()),
         eu = (0, s.Wu)(
             [x.ZP],
@@ -130,7 +130,7 @@ function B(e) {
                       }
                     : i;
             }, [o, e, n, t]);
-        })(Q, $, a);
+        })(J, $, a);
     if (null == G) return null;
     let em = [];
     null != ec &&
@@ -164,7 +164,7 @@ function B(e) {
         theme: k.BRd.DARK,
         children: (e) =>
             (0, i.jsxs)('div', {
-                className: r()(D.wrapper, U[J], e),
+                className: r()(D.wrapper, U[Q], e),
                 ref: X,
                 style: ep,
                 children: [
@@ -172,7 +172,7 @@ function B(e) {
                     (0, i.jsxs)('div', {
                         className: D.activityPanelContainer,
                         children: [
-                            Q
+                            J
                                 ? null
                                 : (0, i.jsx)('div', {
                                       className: D.header,
@@ -192,7 +192,7 @@ function B(e) {
                                     paddingBottom: es
                                 },
                                 ref: en,
-                                children: (0, i.jsx)(y.Z, {
+                                children: (0, i.jsx)(A.Z, {
                                     className: D.iframe,
                                     embedId: (0, R.Z)(B.id, G.id)
                                 })
@@ -259,7 +259,7 @@ function B(e) {
                                 : null
                         ]
                     }),
-                    Q
+                    J
                         ? (0, i.jsx)(p.Z, {
                               minHeight: 480,
                               maxHeight: a,

@@ -10,8 +10,8 @@ var l = n(481060),
     d = n(942951),
     u = n(834129),
     m = n(981631),
-    h = n(388032),
-    _ = n(505984);
+    _ = n(388032),
+    h = n(505984);
 function p(e) {
     let { compact: t, message: n, channel: p } = e,
         g = (0, c.ZP)(n),
@@ -22,17 +22,17 @@ function p(e) {
             messageId: n.id
         })(g),
         x = (0, r.j)('HDStreamingUpgradedMessage'),
-        E = () => (0, s.k)(p, 'HDStreamingUpgradedMessage'),
-        C = x ? E : o.Z.getArticleURL(m.BhN.HD_STREAMING_POTION);
+        C = () => (0, s.k)(p, 'HDStreamingUpgradedMessage'),
+        v = x ? C : o.Z.getArticleURL(m.BhN.HD_STREAMING_POTION);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: _.parentContainer,
+                className: h.parentContainer,
                 children: (0, i.jsx)(u.Z, {
                     iconNode: (0, i.jsx)(l.hh5, { size: 'sm' }),
                     timestamp: n.timestamp,
                     compact: t,
-                    children: h.intl.format(h.t['u0qJ4+'], {
+                    children: _.intl.format(_.t['u0qJ4+'], {
                         actorName: g.nick,
                         actorHook: f
                     })
@@ -40,24 +40,24 @@ function p(e) {
             }),
             (0, i.jsxs)(l.P3F, {
                 onClick: () => {
-                    x ? E() : window.open(o.Z.getArticleURL(m.BhN.HD_STREAMING_POTION), '_blank');
+                    x ? C() : window.open(o.Z.getArticleURL(m.BhN.HD_STREAMING_POTION), '_blank');
                 },
-                className: _.embed,
+                className: h.embed,
                 children: [
                     (0, i.jsx)(a.Z, {}),
                     (0, i.jsxs)('div', {
-                        className: _.text,
+                        className: h.text,
                         children: [
                             (0, i.jsx)(l.Text, {
                                 color: 'text-normal',
                                 variant: 'text-sm/semibold',
-                                className: _.title,
-                                children: h.intl.string(h.t['Fh/mk5'])
+                                className: h.title,
+                                children: _.intl.string(_.t['Fh/mk5'])
                             }),
                             (0, i.jsx)(l.Text, {
                                 color: 'text-primary',
                                 variant: 'text-xs/normal',
-                                children: h.intl.format(h.t['bmGF+f'], { helpCenterLink: C })
+                                children: _.intl.format(_.t['bmGF+f'], { helpCenterLink: v })
                             })
                         ]
                     })

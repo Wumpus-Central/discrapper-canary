@@ -1,10 +1,10 @@
-function i(e) {
-    var t;
+t.d(i, { Z: () => l });
+function l(e) {
+    var i;
     return null != e
         ? {
               id: e.id,
-              name: null !== (t = e.name) && void 0 !== t ? t : ''
+              name: null !== (i = e.name) && void 0 !== i ? i : ''
           }
         : null;
 }
-n.d(t, { Z: () => i });

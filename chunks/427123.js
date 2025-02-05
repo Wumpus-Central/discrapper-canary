@@ -9,24 +9,24 @@ var i,
     d = n(570140),
     u = n(496929),
     m = n(16084),
-    h = n(728345),
-    _ = n(812206),
+    _ = n(728345),
+    h = n(812206),
     p = n(594190),
     g = n(594174),
     f = n(580130),
     x = n(55563),
-    E = n(981631);
-let C = 'DetectedOffPlatformPremiumPerksStore',
-    v = {},
+    C = n(981631);
+let v = 'DetectedOffPlatformPremiumPerksStore',
+    E = {},
     I = {},
     N = [];
 function S() {
     let e = !1;
     for (let { skuId: t, applicationId: n } of s().values(I)) {
         if (N.includes(t)) continue;
-        let i = _.Z.getApplication(n);
+        let i = h.Z.getApplication(n);
         if (null == i) {
-            _.Z.isFetchingApplication(n) || _.Z.didFetchingApplicationFail(n) || h.ZP.fetchApplication(n);
+            h.Z.isFetchingApplication(n) || h.Z.didFetchingApplicationFail(n) || _.ZP.fetchApplication(n);
             continue;
         }
         let l = x.Z.get(t);
@@ -35,8 +35,8 @@ function S() {
             continue;
         }
         f.Z.applicationIdsFetching.has(i.id) || f.Z.isEntitledToSku(g.default.getCurrentUser(), t, i.id, i.id) || !l.available
-            ? null != v[t] && (delete v[t], (e = !0))
-            : ((v[t] = {
+            ? null != E[t] && (delete E[t], (e = !0))
+            : ((E[t] = {
                   skuId: t,
                   applicationId: n
               }),
@@ -47,10 +47,10 @@ function S() {
 class T extends (i = o.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(p.ZP, x.Z, f.Z), (N = null !== (e = c.K.get(C)) && void 0 !== e ? e : N);
+        this.waitFor(p.ZP, x.Z, f.Z), (N = null !== (e = c.K.get(v)) && void 0 !== e ? e : N);
     }
     getDetectedOffPlatformPremiumPerks() {
-        return s().values(v);
+        return s().values(E);
     }
 }
 (a = 'DetectedOffPlatformPremiumPerksStore'),
@@ -64,7 +64,7 @@ class T extends (i = o.ZP.Store) {
         : (T[l] = a);
 let b = new T(d.Z, {
     LOGOUT: function () {
-        (v = {}), (I = {});
+        (E = {}), (I = {});
     },
     SKU_FETCH_SUCCESS: S,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: S,
@@ -72,14 +72,14 @@ let b = new T(d.Z, {
     APPLICATION_FETCH_SUCCESS: S,
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let { skuId: t } = e;
-        if ((delete v[t], N.includes(t))) return !1;
-        N.push(t), c.K.set(C, N);
+        if ((delete E[t], N.includes(t))) return !1;
+        N.push(t), c.K.set(v, N);
     },
     RUNNING_GAMES_CHANGE: function () {
         let e = !1;
         for (let { id: t, distributor: n } of p.ZP.getRunningGames())
-            if (null != t && n !== E.GQo.DISCORD)
-                for (let { skuId: n, applicationId: i } of E.Lg6)
+            if (null != t && n !== C.GQo.DISCORD)
+                for (let { skuId: n, applicationId: i } of C.Lg6)
                     !(i !== t || N.includes(n)) &&
                         null == I[n] &&
                         (f.Z.applicationIdsFetched.has(i) || f.Z.applicationIdsFetching.has(i) || null != f.Z.getForSku(n) || u.yD(i),

@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(961048),
     S = n(975146),
     j = n(430824),
-    A = n(496675),
-    y = n(626135),
+    y = n(496675),
+    A = n(626135),
     P = n(431328),
     R = n(501655),
     M = n(200498),
@@ -52,7 +52,7 @@ function G(e) {
         ),
         E = (0, M.B)(n.id),
         j = (0, P.Rk)(n.id, R.pV.REQUESTED_TO_SPEAK_ONLY),
-        { preventIdle: A, allowIdle: y } = (0, b.Y)('popup'),
+        { preventIdle: y, allowIdle: A } = (0, b.Y)('popup'),
         { hasParticipantsPanel: L } = (0, m.Z)({ location: 'StageChannelCallHeader' }),
         k = L && v,
         w = (0, C.Q3)('StageChannelCallHeader'),
@@ -95,8 +95,8 @@ function G(e) {
                 (0, i.jsx)(
                     I.Z,
                     {
-                        onOpen: A,
-                        onClose: y,
+                        onOpen: y,
+                        onClose: A,
                         className: H.button
                     },
                     'recents'
@@ -149,11 +149,11 @@ function V(e) {
         b = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
         Z = (null == I ? void 0 : I.isCommunity()) ? b < U.TU7 : (null == I ? void 0 : I.premiumTier) !== U.Eu4.TIER_3 && b <= U.eez,
         N = (0, w.Z)(a),
-        T = (0, s.e7)([A.Z], () => A.Z.can(L.yP, a)),
+        T = (0, s.e7)([y.Z], () => y.Z.can(L.yP, a)),
         S = (0, C.Q3)('StageChannelCallHeader'),
         M = () => {
             d.Z.updateStageVideoLimitBoostUpsellDismissed(a.id, !0),
-                y.default.track(U.rMx.BOOSTING_UPSELL_CLICKED, {
+                A.default.track(U.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: a.guild_id,
                     type: B.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: T,
@@ -173,7 +173,7 @@ function V(e) {
         l.useEffect(() => {
             let { canModerate: e, audienceCount: t, channel: n, speakerCount: i } = D.current;
             N &&
-                y.default.track(U.rMx.BOOSTING_UPSELL_VIEWED, {
+                A.default.track(U.rMx.BOOSTING_UPSELL_VIEWED, {
                     guild_id: n.guild_id,
                     type: B.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: e,
@@ -279,7 +279,7 @@ function V(e) {
                                                         guildId: a.guild_id,
                                                         location: { section: U.jXE.STAGE_VIDEO_LIMIT }
                                                     }),
-                                                        y.default.track(U.rMx.BOOSTING_UPSELL_CLICKED, {
+                                                        A.default.track(U.rMx.BOOSTING_UPSELL_CLICKED, {
                                                             guild_id: a.guild_id,
                                                             type: B.cd.VIDEO_STAGE_LIMIT,
                                                             is_moderator: T,

@@ -7,13 +7,13 @@ var l = n(739566),
 function s(e) {
     let { message: t, channel: s, targetUser: o, actorUsernameHook: c, targetUsernameHook: d, compact: u } = e,
         m = (0, l.ZP)(t),
-        h = (0, l.Sw)(o, s),
-        _ = c(m),
-        p = d(null != h ? h : void 0),
+        _ = (0, l.Sw)(o, s),
+        h = c(m),
+        p = d(null != _ ? _ : void 0),
         g = r.intl.format(r.t.tusv2t, {
             actorName: m.nick,
-            actorHook: _,
-            targetName: null == h ? void 0 : h.nick,
+            actorHook: h,
+            targetName: null == _ ? void 0 : _.nick,
             targetHook: p
         });
     return (0, i.jsx)(a.Z, {

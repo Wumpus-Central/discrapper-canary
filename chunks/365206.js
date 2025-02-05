@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
 var l = n(120356),
@@ -28,7 +28,7 @@ function m(e) {
         ]
     });
 }
-function h(e) {
+function _(e) {
     let { answer: t, isExpired: n, myAvatarUrl: l, canShowVoteCounts: r } = e,
         s = !0 === t.isSelected,
         o = !0 === t.didSelfVote,
@@ -69,7 +69,7 @@ function h(e) {
         ]
     });
 }
-function _(e) {
+function h(e) {
     let { isExpired: t, myAvatarUrl: n, answersInteraction: l, canShowVoteCounts: r, ...s } = e;
     return (0, i.jsx)(c.$e, {
         className: u.answersContainer,
@@ -77,7 +77,7 @@ function _(e) {
         myAvatarUrl: n,
         answersInteraction: l,
         renderAnswerContent: (e) =>
-            (0, i.jsx)(h, {
+            (0, i.jsx)(_, {
                 answer: e,
                 isExpired: t,
                 myAvatarUrl: n,

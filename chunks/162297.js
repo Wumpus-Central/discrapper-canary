@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(778569),
     u = n(182906),
     m = n(100527),
-    h = n(367907),
-    _ = n(906732),
+    _ = n(367907),
+    h = n(906732),
     p = n(213609),
     g = n(783097),
     f = n(606192),
     x = n(213459),
-    E = n(132871),
-    C = n(147890),
-    v = n(220082),
+    C = n(132871),
+    v = n(147890),
+    E = n(220082),
     I = n(240991),
     N = n(592125),
     S = n(496675),
@@ -56,7 +56,7 @@ function F(e) {
     var t;
     let { application: n, embedUrl: d } = e,
         u = null === (t = n.bot) || void 0 === t ? void 0 : t.id,
-        v = (0, g.ye)(n) && null != u,
+        E = (0, g.ye)(n) && null != u,
         A = (0, s.e7)([b.Z], () => {
             var e;
             return null !== (e = b.Z.getGuildId()) && void 0 !== e ? e : void 0;
@@ -93,7 +93,7 @@ function F(e) {
         Y = n.isVerified && n.isDiscoverable,
         X = (0, s.e7)([T.Z, N.Z], () => N.Z.getChannel(T.Z.getChannelId())),
         q = (0, s.e7)([S.Z], () => (null == X ? void 0 : X.isPrivate()) || S.Z.can(P.Plq.SEND_MESSAGES, X)),
-        { analyticsLocations: Q } = (0, _.ZP)(m.Z.APP_OAUTH2_LINK_EMBED),
+        { analyticsLocations: Q } = (0, h.ZP)(m.Z.APP_OAUTH2_LINK_EMBED),
         J = async () => {
             if (null != u)
                 try {
@@ -147,7 +147,7 @@ function F(e) {
                           (0, i.jsxs)('div', {
                               className: M.buttonContainer,
                               children: [
-                                  v &&
+                                  E &&
                                       (0, i.jsx)(o.zxk, {
                                           color: o.zxk.Colors.BRAND,
                                           type: 'button',
@@ -158,30 +158,30 @@ function F(e) {
                                   (K || Y) &&
                                       q &&
                                       (0, i.jsx)(o.zxk, {
-                                          color: v ? o.zxk.Colors.PRIMARY : o.zxk.Colors.BRAND,
+                                          color: E ? o.zxk.Colors.PRIMARY : o.zxk.Colors.BRAND,
                                           type: 'button',
                                           size: o.zxk.Sizes.MEDIUM,
                                           onClick: () => {
                                               var e;
                                               r.Y.USER_INSTALL in (null !== (e = n.integrationTypesConfig) && void 0 !== e ? e : {}) || K
                                                   ? (0, g.X)(n.id)
-                                                  : (0, C.dx)({
+                                                  : (0, v.dx)({
                                                         guildId: A,
-                                                        view: E.eN.APPLICATION,
+                                                        view: C.eN.APPLICATION,
                                                         applicationId: n.id,
-                                                        entrypoint: { name: E.n3.OAUTH2_EMBED }
+                                                        entrypoint: { name: C.n3.OAUTH2_EMBED }
                                                     });
                                           },
                                           children: k.intl.string(k.t.fbcCzc)
                                       }),
-                                  !v &&
+                                  !E &&
                                       !K &&
                                       (0, i.jsx)(o.zxk, {
                                           color: o.zxk.Colors.PRIMARY,
                                           type: 'button',
                                           size: o.zxk.Sizes.MEDIUM,
                                           onClick: () => {
-                                              h.ZP.trackWithMetadata(P.rMx.APP_OAUTH2_LINK_EMBED_CTA_CLICKED, { application_id: n.id }),
+                                              _.ZP.trackWithMetadata(P.rMx.APP_OAUTH2_LINK_EMBED_CTA_CLICKED, { application_id: n.id }),
                                                   (0, j.LO)({
                                                       applicationId: n.id,
                                                       customInstallUrl: n.customInstallUrl,
@@ -207,7 +207,7 @@ function U(e) {
             size: 280,
             names: ['embedded_cover']
         }),
-        a = (0, v.ZP)(n, ''),
+        a = (0, E.ZP)(n, ''),
         r = t.bot,
         s = null,
         o = {};

@@ -23,15 +23,15 @@ var i = n(192379),
     E = n(827498),
     A = n(346683),
     I = n(981631),
-    _ = n(388032);
-let g = {
+    g = n(388032);
+let _ = {
         ...x.Z.RULES.commandMention,
         parse: (e, t, n) => ({ content: x.Z.RULES.commandMention.parse(e, t, n).content })
     },
     P = a().pick(
         (0, f.Z)([
             x.Z.RULES,
-            { commandMention: g },
+            { commandMention: _ },
             (0, v.Z)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1
@@ -41,12 +41,12 @@ let g = {
     ),
     j = s.w4(P);
 function y(e) {
-    let { context: t, application: n, location: l, sectionName: a, commandName: s, autoDismissOnClick: v = !0, launchingComponentId: x, submitting: f = !1, fetchesApplication: g = !0 } = e,
+    let { context: t, application: n, location: l, sectionName: a, commandName: s, autoDismissOnClick: v = !0, launchingComponentId: x, submitting: f = !1, fetchesApplication: _ = !0 } = e,
         P = (0, c.O)(),
         j = (0, d.Qv)({
             context: t,
             applicationId: n.id,
-            fetchesApplication: g
+            fetchesApplication: _
         }),
         y = (0, A.Q)(j),
         T = (0, o.e7)([C.Z], () => C.Z.entrypoint()),
@@ -54,7 +54,7 @@ function y(e) {
             var e, i, l;
             if ('channel' !== t.type) return null !== (l = null === (e = n.bot) || void 0 === e ? void 0 : e.id) && void 0 !== l ? l : null === (i = (0, p.If)(t, n.id).descriptor) || void 0 === i ? void 0 : i.botId;
         }, [t, n.id, n.bot]),
-        b = (0, d.w1)({
+        L = (0, d.w1)({
             applicationId: n.id,
             botUserIdForAppDM: S,
             embeddedActivitiesManager: u.Z,
@@ -75,16 +75,16 @@ function y(e) {
             commandOrigin: h.bB.APPLICATION_LAUNCHER,
             sectionName: a,
             source: T,
-            fetchesApplication: g
+            fetchesApplication: _
         }),
-        L = r.Ttl.BRAND,
-        R = null != s ? s : _.intl.string(_.t.zKX8Nj);
+        b = r.Ttl.BRAND,
+        R = null != s ? s : g.intl.string(g.t.zKX8Nj);
     return (
-        y === d.JS.JOIN ? ((L = r.Ttl.GREEN), (R = _.intl.string(_.t.d9PsMj))) : y !== d.JS.LEAVE || f || ((L = r.Ttl.RED), (R = _.intl.string(_.t['Hi1/aW']))),
+        y === d.JS.JOIN ? ((b = r.Ttl.GREEN), (R = g.intl.string(g.t.d9PsMj))) : y !== d.JS.LEAVE || f || ((b = r.Ttl.RED), (R = g.intl.string(g.t['Hi1/aW']))),
         {
-            onActivityItemSelected: b,
+            onActivityItemSelected: L,
             activityAction: y,
-            buttonColor: L,
+            buttonColor: b,
             buttonText: R
         }
     );

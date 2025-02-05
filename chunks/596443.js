@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(47120), n(653041);
+n.d(t, { Z: () => y }), n(47120), n(653041);
 var i = n(200651),
     l = n(192379),
     a = n(120356),
@@ -28,8 +28,8 @@ function S(e) {
     let { permission: o, roleIds: g, guild: x, specMap: v, categoryTitle: E, userId: N } = e,
         S = (0, c.e7)([_.Z], () => _.Z.getRoles(x.id)),
         j = b.Plq[o],
-        A = null !== (a = null === (t = v[j.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== a ? a : (0, f.wt)(j),
-        y = null !== (s = null === (n = v[j.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== s ? s : '',
+        y = null !== (a = null === (t = v[j.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== a ? a : (0, f.wt)(j),
+        A = null !== (s = null === (n = v[j.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== s ? s : '',
         P = I._o.has(j),
         R = I.Qn.includes(o),
         M = g.length,
@@ -52,7 +52,7 @@ function S(e) {
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-primary',
-                                children: A
+                                children: y
                             }),
                             null != E &&
                                 (0, i.jsxs)('div', {
@@ -126,13 +126,13 @@ function S(e) {
                     })
                 ]
             }),
-            null != y &&
+            null != A &&
                 (0, i.jsx)('div', {
                     className: T.permissionItemDescription,
                     children: (0, i.jsx)(d.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
-                        children: y
+                        children: A
                     })
                 }),
             (0, i.jsx)('div', {
@@ -175,14 +175,14 @@ function S(e) {
 function j(e, t) {
     return t.toLowerCase().includes(e.toLowerCase());
 }
-function A(e) {
+function y(e) {
     let { userId: t, guildId: n, location: a, className: s, onNavigate: u } = e,
         h = (0, c.e7)([x.default], () => x.default.getUser(t), [t]),
         p = (0, c.e7)([_.Z], () => _.Z.getGuild(n), [n]),
         m = (0, c.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]),
         C = (0, I.B2)(t, n, I.pd),
-        A = Object.keys(C).length,
-        y = l.useMemo(() => (null != p ? v.Z.getGuildPermissionSpecMap(p) : null), [p]),
+        y = Object.keys(C).length,
+        A = l.useMemo(() => (null != p ? v.Z.getGuildPermissionSpecMap(p) : null), [p]),
         P = l.useMemo(() => (null != p ? v.Z.generateGuildPermissionSpec(p) : null), [p]),
         [R, M] = l.useState(''),
         [L, k] = l.useState(''),
@@ -197,8 +197,8 @@ function A(e) {
             M(''), k('');
         }, []),
         U = l.useMemo(() => {
-            if (null == p || null == y || null == m) return null;
-            if (0 === A)
+            if (null == p || null == A || null == m) return null;
+            if (0 === y)
                 return (0, i.jsx)(d.Text, {
                     variant: 'text-sm/normal',
                     children: Z.intl.string(Z.t.DEBGqK)
@@ -215,8 +215,8 @@ function A(e) {
                             if (null != s) {
                                 if (L.length > 0) {
                                     var o, c, d, u, h;
-                                    let e = null !== (u = null === (o = y[a.toString()]) || void 0 === o ? void 0 : o.title) && void 0 !== u ? u : (0, f.wt)(a),
-                                        t = null !== (h = null === (d = y[a.toString()]) || void 0 === d ? void 0 : null === (c = d.description) || void 0 === c ? void 0 : c.toString()) && void 0 !== h ? h : '',
+                                    let e = null !== (u = null === (o = A[a.toString()]) || void 0 === o ? void 0 : o.title) && void 0 !== u ? u : (0, f.wt)(a),
+                                        t = null !== (h = null === (d = A[a.toString()]) || void 0 === d ? void 0 : null === (c = d.description) || void 0 === c ? void 0 : c.toString()) && void 0 !== h ? h : '',
                                         i = n.title,
                                         l = I._o.has(a),
                                         s = I.Qn.includes(r),
@@ -234,7 +234,7 @@ function A(e) {
                                             permission: r,
                                             roleIds: s,
                                             guild: p,
-                                            specMap: y,
+                                            specMap: A,
                                             categoryTitle: n.title,
                                             userId: t
                                         },
@@ -246,7 +246,7 @@ function A(e) {
                     }),
                 e
             );
-        }, [p, y, m, A, P, C, L, t]);
+        }, [p, A, m, y, P, C, L, t]);
     return null == h || null == m
         ? null
         : (0, i.jsxs)('div', {

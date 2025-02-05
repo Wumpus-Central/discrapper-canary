@@ -14,31 +14,31 @@ var i = n(200651),
     f = n(716161),
     T = n(672339),
     p = n(898531),
-    S = n(131951),
-    g = n(594174),
-    C = n(626135),
-    b = n(747545),
+    b = n(131951),
+    S = n(594174),
+    g = n(626135),
+    C = n(747545),
     A = n(981631),
     h = n(388032),
     N = n(845569);
 function m(e) {
     let { transitionState: t, videoEnabled: n, onEnable: m, onClose: O } = e,
-        L = S.Z.getCameraComponent(),
+        L = b.Z.getCameraComponent(),
         R = (0, s.Dt)(),
         D = (0, p.Z)(),
         v = E.qF.useSetting(),
-        [U, P] = o.useState((0, I.P)(g.default.getCurrentUser())),
+        [U, P] = o.useState((0, I.P)(S.default.getCurrentUser())),
         G = (0, c.O)(),
         { analyticsLocations: k } = (0, d.ZP)(_.Z.CAMERA_PREVIEW),
-        B = o.useRef(null);
+        y = o.useRef(null);
     o.useEffect(() => {
-        C.default.track(A.rMx.OPEN_MODAL, { type: 'Camera Preview Modal' });
+        g.default.track(A.rMx.OPEN_MODAL, { type: 'Camera Preview Modal' });
     }, []),
         o.useEffect(() => {
             var e;
-            null === (e = B.current) || void 0 === e || e.scrollToTop();
+            null === (e = y.current) || void 0 === e || e.scrollToTop();
         }, []);
-    let y = async () => {
+    let B = async () => {
             await Z(), l.Z.setVideoEnabled(!0), null == m || m();
         },
         Z = async () => {
@@ -64,7 +64,7 @@ function m(e) {
                 children: [
                     (0, i.jsxs)(a.hzk, {
                         className: D ? N.contentWithVideoBackgrounds : N.content,
-                        scrollerRef: B,
+                        scrollerRef: y,
                         children: [
                             (0, i.jsx)(a.X6q, {
                                 id: R,
@@ -72,7 +72,7 @@ function m(e) {
                                 variant: 'heading-xl/semibold',
                                 children: n ? h.intl.string(h.t.LAwwbW) : h.intl.string(h.t['/HITVF'])
                             }),
-                            (0, i.jsx)(b.Z, {
+                            (0, i.jsx)(C.Z, {
                                 hidePreviewToggle: !0,
                                 showSmallBackgroundOptions: !0,
                                 hideDeviceHeader: !0,
@@ -93,7 +93,7 @@ function m(e) {
                                                     height: 207
                                                 })
                                             }),
-                                            (0, i.jsx)(b.S, {})
+                                            (0, i.jsx)(C.S, {})
                                         ]
                                     }),
                                 onLearnMore: O
@@ -106,7 +106,7 @@ function m(e) {
                             (() => {
                                 let e = n ? h.intl.string(h.t.KQENho) : h.intl.string(h.t.kgIe9f);
                                 return (0, i.jsx)(a.zxk, {
-                                    onClick: n ? Z : y,
+                                    onClick: n ? Z : B,
                                     size: a.zxk.Sizes.SMALL,
                                     autoFocus: !n,
                                     children: e
@@ -117,7 +117,7 @@ function m(e) {
                                 type: a.XZJ.Types.INVERTED,
                                 value: v,
                                 onChange: () => {
-                                    E.qF.updateSetting(!v), C.default.track(A.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !v });
+                                    E.qF.updateSetting(!v), g.default.track(A.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !v });
                                 },
                                 children: (0, i.jsx)(a.Text, {
                                     variant: 'text-sm/normal',

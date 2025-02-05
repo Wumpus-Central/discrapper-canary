@@ -25,7 +25,7 @@ var i = n(200651),
 let T = 'vc-activities-'.concat((0, s.Z)()),
     S = l.forwardRef(function (e, t) {
         var n;
-        let { channel: a, isHovered: s, closePopout: S, onMouseEnter: j, onMouseLeave: A, onClick: y, className: P } = e,
+        let { channel: a, isHovered: s, closePopout: S, onMouseEnter: j, onMouseLeave: y, onClick: A, className: P } = e,
             R = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
             { id: M, guild_id: L } = a;
         l.useEffect(() => {
@@ -57,9 +57,9 @@ let T = 'vc-activities-'.concat((0, s.Z)()),
                     analyticsLocations: O,
                     opensAppLauncherModal: !0
                 }),
-                    A(),
-                    y();
-            }, [U, O, a, y, A, w]),
+                    y(),
+                    A();
+            }, [U, O, a, A, y, w]),
             H = l.useCallback(
                 (e) => {
                     j(),
@@ -90,7 +90,7 @@ let T = 'vc-activities-'.concat((0, s.Z)()),
                         (0, i.jsxs)('div', {
                             className: N.container,
                             onMouseEnter: H,
-                            onMouseLeave: A,
+                            onMouseLeave: y,
                             children: [
                                 (0, i.jsxs)('div', {
                                     className: N.titleContainer,
@@ -145,7 +145,7 @@ let T = 'vc-activities-'.concat((0, s.Z)()),
                                                     },
                                                     activityItem: e,
                                                     onClick: () => {
-                                                        S(), y();
+                                                        S(), A();
                                                     },
                                                     aspectRatio: v.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                     animatedDivClass: N.activitySuggestion,

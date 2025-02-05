@@ -30,8 +30,8 @@ var i,
     T = n(430824),
     S = n(496675),
     j = n(979651),
-    A = n(981631),
-    y = n(927923),
+    y = n(981631),
+    A = n(927923),
     P = n(70722),
     R = n(388032),
     M = n(946688);
@@ -140,12 +140,12 @@ class D extends (i = a.PureComponent) {
             }),
             L(this, 'handleJoinVoice', () => {
                 let { user: e, channel: t, hidePreview: n } = this.props;
-                S.Z.can(o.$e(A.Plq.CONNECT, A.Plq.VIEW_CHANNEL), t) && (h.default.selectVoiceChannel(t.id), null == n || n(e.id));
+                S.Z.can(o.$e(y.Plq.CONNECT, y.Plq.VIEW_CHANNEL), t) && (h.default.selectVoiceChannel(t.id), null == n || n(e.id));
             }),
             L(this, 'handleUserContextMenu', (e) => {
                 let { channel: t, user: i } = this.props;
                 (0, u.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('13125'), n.e('64899')]).then(n.bind(n, 757387));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('7717'), n.e('11875')]).then(n.bind(n, 757387));
                     return (n) =>
                         (0, l.jsx)(e, {
                             ...n,
@@ -179,9 +179,9 @@ class D extends (i = a.PureComponent) {
                 });
             }),
             L(this, 'renderUser', (e) => {
-                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: a, mute: r, localMute: o, localVideoDisabled: d, speaking: u, disconnected: h, user: p, deaf: m, priority: f, collapsed: g, isStreaming: C, isGuest: x, nick: v, video: E, serverMute: I, serverDeaf: b, tabIndex: N, embeddedApplication: T, channel: S, ringing: j, isSelf: A, application: P } = this.props,
+                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: a, mute: r, localMute: o, localVideoDisabled: d, speaking: u, disconnected: h, user: p, deaf: m, priority: f, collapsed: g, isStreaming: C, isGuest: x, nick: v, video: E, serverMute: I, serverDeaf: b, tabIndex: N, embeddedApplication: T, channel: S, ringing: j, isSelf: y, application: P } = this.props,
                     { userPopoutOpen: L } = this.state,
-                    k = y.al.has(null != n ? n : ''),
+                    k = A.al.has(null != n ? n : ''),
                     O = {
                         user: p,
                         speaking: u,
@@ -211,7 +211,7 @@ class D extends (i = a.PureComponent) {
                         onDoubleClick: this.handleWatchStream,
                         onContextMenu: this.handleUserContextMenu,
                         guildId: S.guild_id,
-                        isSelf: A,
+                        isSelf: y,
                         application: P,
                         channelId: S.id
                     };

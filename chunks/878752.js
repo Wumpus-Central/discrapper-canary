@@ -25,8 +25,8 @@ function N(e) {
     let { channel: t, hasActiveStream: n, showRightDivider: N, themeable: T = !1 } = e,
         { groupedButtons: S } = (0, m.ZP)({ location: 'VoiceEffectsActionBar' }),
         j = (0, u.Ou)(t),
-        A = l.useRef(null),
-        y = (0, o.Z)(),
+        y = l.useRef(null),
+        A = (0, o.Z)(),
         { isSharedCanvasEnabled: P } = h.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: 'b7309a_1'
@@ -37,7 +37,7 @@ function N(e) {
         [k, O] = (0, s.US)(L, void 0, !0),
         D = k === a.z.CONSUMABLE_HD_POTION_UPSELL,
         w = (0, f.Z)(t);
-    if (null == t || null != y) return null;
+    if (null == t || null != A) return null;
     let U = (0, p.Z)(t),
         B = !S && U,
         F = !S && w,
@@ -57,13 +57,13 @@ function N(e) {
                     H && (0, i.jsx)(_.Z, { channel: t }),
                     D &&
                         (0, i.jsx)(d.t, {
-                            potionRef: A,
+                            potionRef: y,
                             channel: t,
                             markAsDismissed: O
                         }),
                     j &&
                         (0, i.jsx)(E.Z, {
-                            ref: A,
+                            ref: y,
                             channel: t,
                             glow: D
                         }),

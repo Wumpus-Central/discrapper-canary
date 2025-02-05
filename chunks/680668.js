@@ -10,33 +10,33 @@ var l = n(533800),
     d = n(267642),
     u = n(411198),
     m = n(277707),
-    h = n(358595),
-    _ = n(981631),
+    _ = n(358595),
+    h = n(981631),
     p = n(388032),
     g = n(658412);
 function f(e) {
     var t, f;
     let x,
-        E,
         C,
-        { onTransitionToInviteChannel: v, onAcceptInstantInvite: I, guild: N, invite: S, author: T, currentUserId: b } = e,
+        v,
+        { onTransitionToInviteChannel: E, onAcceptInstantInvite: I, guild: N, invite: S, author: T, currentUserId: b } = e,
         A = b === T.id,
         { channel: j, approximate_member_count: y, approximate_presence_count: Z } = S,
-        R = S.state === _.r2o.ACCEPTING,
+        R = S.state === h.r2o.ACCEPTING,
         L = null != j ? (0, o.jD)(j) : null,
         P = null != N,
         k = null != L,
         M = null != L && L.isGuildVocal(),
         O = null != L && L.isGuildStageVoice(),
         D = (0, c.yE)(null !== (t = S.flags) && void 0 !== t ? t : 0, l.$.IS_GUEST_INVITE),
-        w = null !== (f = null == N ? void 0 : N.hasFeature(_.oNc.HUB)) && void 0 !== f && f;
+        w = null !== (f = null == N ? void 0 : N.hasFeature(h.oNc.HUB)) && void 0 !== f && f;
     if (null == N) {
-        if (null == S.guild) return (0, i.jsx)(h.Z, {});
+        if (null == S.guild) return (0, i.jsx)(_.Z, {});
         N = u.Qs(S.guild);
         let e = (0, d.rF)(S.guild.premium_subscription_count, S.guild.id);
         N.premiumTier = e;
     }
-    let F = P ? v : I,
+    let F = P ? E : I,
         U = (0, m.e)({
             isVoiceChannel: M,
             isOwnInvite: A,
@@ -46,7 +46,7 @@ function f(e) {
             isStream: !1
         });
     return (
-        (E = (0, i.jsxs)('span', {
+        (C = (0, i.jsxs)('span', {
             className: g.infoTitle,
             children: [
                 (0, i.jsx)(s.Z.GuildName, { guild: N }),
@@ -61,7 +61,7 @@ function f(e) {
             ]
         })),
         D &&
-            (C = (0, i.jsx)(a.DY3, {
+            (v = (0, i.jsx)(a.DY3, {
                 className: g.tooltipContainer,
                 text: p.intl.string(p.t['/FeTKy']),
                 children: (0, i.jsx)(a.d3s, {
@@ -71,7 +71,7 @@ function f(e) {
                 })
             })),
         M
-            ? ((E = (0, i.jsx)(s.Z.Channel, { channel: L })),
+            ? ((C = (0, i.jsx)(s.Z.Channel, { channel: L })),
               (x = (0, i.jsxs)('span', {
                   className: g.infoTitle,
                   children: [
@@ -100,7 +100,7 @@ function f(e) {
                 (0, i.jsx)(s.Z.GuildSplash, { guild: N }),
                 (0, i.jsx)(s.Z.Header, {
                     text: U,
-                    extra: C
+                    extra: v
                 }),
                 (0, i.jsxs)(s.Z.Body, {
                     children: [
@@ -109,7 +109,7 @@ function f(e) {
                             children: [
                                 (0, i.jsx)(s.Z.Icon, { guild: N }),
                                 (0, i.jsx)(s.Z.Info, {
-                                    title: E,
+                                    title: C,
                                     onClick: P ? F : null,
                                     children: x
                                 })
@@ -123,7 +123,7 @@ function f(e) {
                         })
                     ]
                 }),
-                N.hasFeature(_.oNc.HUB) &&
+                N.hasFeature(h.oNc.HUB) &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)('div', { className: g.separator }),

@@ -65,10 +65,10 @@ function u(e) {
                     },
                     [p]
                 ),
-                [A, y] = i.useState(!0);
+                [y, A] = i.useState(!0);
             i.useEffect(() => {
-                if (A && !C) {
-                    y(!1);
+                if (y && !C) {
+                    A(!1);
                     return;
                 }
                 j(v(t, u), u);

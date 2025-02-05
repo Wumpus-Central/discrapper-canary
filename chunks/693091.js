@@ -1,12 +1,12 @@
 n.d(t, {
-    AS: () => r,
+    AS: () => a,
     S4: () => s,
-    X4: () => u
+    X4: () => c
 }),
     n(47120);
-var i = n(192379),
-    l = n(481060);
-function a(e, t, n) {
+var l = n(192379),
+    i = n(481060);
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function a(e, t, n) {
         e
     );
 }
-class r {
+class a {
     updateState(e, t) {
         this.items = e;
         let n = this.locked !== t;
@@ -46,11 +46,11 @@ class r {
         this.queuedCompute = !1;
         let t = 0,
             n = 0;
-        for (let i of this.items) {
-            let l = this.listeners.get(i.notification.id);
-            if (null == l) continue;
-            let { offsetHeight: a } = l.element;
-            (l.top !== t || l.height !== a || l.index !== n) && (e = !0), (l.top = t), (l.height = a), (l.index = n), 0 === t && (this.matchHeight !== a && (e = !0), (this.matchHeight = a)), (t += a + 8), n++;
+        for (let l of this.items) {
+            let i = this.listeners.get(l.notification.id);
+            if (null == i) continue;
+            let { offsetHeight: r } = i.element;
+            (i.top !== t || i.height !== r || i.index !== n) && (e = !0), (i.top = t), (i.height = r), (i.index = n), 0 === t && (this.matchHeight !== r && (e = !0), (this.matchHeight = r)), (t += r + 8), n++;
         }
         e && this.broadcastLayoutUpdates();
     }
@@ -68,7 +68,7 @@ class r {
         }
     }
     subscribe(e, t, n) {
-        var i;
+        var l;
         this.listeners.set(e, {
             notificationId: e,
             callback: n,
@@ -77,7 +77,7 @@ class r {
             top: 0,
             index: 0
         }),
-            null === (i = this.resizeObserver) || void 0 === i || i.observe(t),
+            null === (l = this.resizeObserver) || void 0 === l || l.observe(t),
             this.queueCompute();
     }
     unsubscribe(e) {
@@ -89,29 +89,29 @@ class r {
         return this.listeners.get(e);
     }
     constructor(e) {
-        a(this, 'resizeObserver', void 0),
-            a(this, 'listeners', new Map()),
-            a(this, 'queuedCompute', !1),
-            a(this, 'items', []),
-            a(this, 'matchHeight', 0),
-            a(this, 'locked', !0),
-            a(this, 'handleResize', (e) => {
+        r(this, 'resizeObserver', void 0),
+            r(this, 'listeners', new Map()),
+            r(this, 'queuedCompute', !1),
+            r(this, 'items', []),
+            r(this, 'matchHeight', 0),
+            r(this, 'locked', !0),
+            r(this, 'handleResize', (e) => {
                 this.computeLayout();
             }),
             (this.locked = e);
     }
 }
-let s = i.createContext(new r(!0));
+let s = l.createContext(new a(!0));
 function o(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
-let c = {
+let u = {
     mass: 0.8,
     friction: 25,
     tension: 320
 };
-function u(e, t, n) {
-    let [a, r] = (0, l.q_F)(
+function c(e, t, n) {
+    let [r, a] = (0, i.q_F)(
             () => ({
                 from: {
                     opacity: 0,
@@ -124,22 +124,22 @@ function u(e, t, n) {
             void 0,
             []
         ),
-        u = i.useRef(r),
-        d = i.useContext(s),
-        m = i.useMemo(() => {
+        c = l.useRef(a),
+        d = l.useContext(s),
+        m = l.useMemo(() => {
             let t = !1;
             return (n) => {
                 null == n
                     ? d.unsubscribe(e)
                     : d.subscribe(e, n, (e) => {
-                          let { locked: n, matchHeight: i, height: l, top: a, index: r } = e,
-                              { current: s } = u,
+                          let { locked: n, matchHeight: l, height: i, top: r, index: a } = e,
+                              { current: s } = c,
                               d = {
-                                  opacity: n && r > 4 ? 0 : n ? Math.min(1 - r / 4, 1) : 1,
-                                  scale: n ? Math.min(1 - r / 4, 1) : 1,
-                                  transform: o(r, n, a),
-                                  contentOpacity: n && r > 0 ? 0 : 1,
-                                  height: n ? i : l
+                                  opacity: n && a > 4 ? 0 : n ? Math.min(1 - a / 4, 1) : 1,
+                                  scale: n ? Math.min(1 - a / 4, 1) : 1,
+                                  transform: o(a, n, r),
+                                  contentOpacity: n && a > 0 ? 0 : 1,
+                                  height: n ? l : i
                               };
                           s({
                               from: t
@@ -147,39 +147,39 @@ function u(e, t, n) {
                                   : {
                                         opacity: 0,
                                         scale: 1.1,
-                                        transform: -((n ? i : l) * 1),
+                                        transform: -((n ? l : i) * 1),
                                         contentOpacity: 1,
-                                        height: n ? i : l
+                                        height: n ? l : i
                                     },
                               to: d,
-                              config: c
+                              config: u
                           }),
                               (t = !0);
                       });
             };
         }, [e, d]);
     return (
-        i.useLayoutEffect(() => {
-            if (t === l.pJH.YEETED) {
+        l.useLayoutEffect(() => {
+            if (t === i.pJH.YEETED) {
                 let t = d.getLayoutSpecs(e);
                 if (null == t) {
                     n();
                     return;
                 }
-                u.current({
+                c.current({
                     to: {
                         scale: 0.8,
                         opacity: 0,
                         transform: o(t.index, d.locked, t.top) + (d.locked ? 0 : t.height / 2)
                     },
-                    config: c
+                    config: u
                 }),
                     setTimeout(n, 300);
             }
         }, [t, n, e, d]),
         {
             ref: m,
-            springs: a
+            springs: r
         }
     );
 }

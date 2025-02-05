@@ -9,14 +9,14 @@ var i = n(200651),
     d = n(914010),
     u = n(626135),
     m = n(981631),
-    h = n(388032),
-    _ = n(658412);
+    _ = n(388032),
+    h = n(658412);
 function p(e) {
     var t;
     let { guild: n, channel: p, messageData: g } = e,
         f = d.Z.getGuildId(),
         x = c.Z.getChannelId(f),
-        E = l.useCallback(() => {
+        C = l.useCallback(() => {
             var e;
             u.default.track(m.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
                 author_id: null === (e = g.author) || void 0 === e ? void 0 : e.id,
@@ -29,23 +29,23 @@ function p(e) {
                 (0, r.K)(n.id, p.id),
                 a.default.selectVoiceChannel(p.id);
         }, [null === (t = g.author) || void 0 === t ? void 0 : t.id, n.id, p.id, p.type, f, x]),
-        C = (0, i.jsx)(o.Z.Channel, { channel: p });
+        v = (0, i.jsx)(o.Z.Channel, { channel: p });
     return (0, i.jsx)(o.Z, {
         children: (0, i.jsxs)(o.Z.Body, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: _.headerLine,
+                    className: h.headerLine,
                     children: [
                         (0, i.jsx)(o.Z.Icon, { guild: n }),
                         (0, i.jsx)(o.Z.Info, {
-                            title: C,
-                            onClick: E,
+                            title: v,
+                            onClick: C,
                             children: (0, i.jsxs)('span', {
-                                className: _.infoTitle,
+                                className: h.infoTitle,
                                 children: [
-                                    h.intl.format(h.t['2wimj4'], { guildName: n.name }),
+                                    _.intl.format(_.t['2wimj4'], { guildName: n.name }),
                                     (0, i.jsx)('span', {
-                                        className: _.infoBadge,
+                                        className: h.infoBadge,
                                         children: (0, i.jsx)(s.Z, {
                                             guild: n,
                                             isBannerVisible: !1
@@ -57,9 +57,9 @@ function p(e) {
                     ]
                 }),
                 (0, i.jsx)(o.Z.Button, {
-                    onClick: E,
+                    onClick: C,
                     color: o.Z.Button.Colors.GREEN,
-                    children: p.isGuildStageVoice() ? h.intl.string(h.t['7vb2cX']) : h.intl.string(h.t['96ANUF'])
+                    children: p.isGuildStageVoice() ? _.intl.string(_.t['7vb2cX']) : _.intl.string(_.t['96ANUF'])
                 })
             ]
         })

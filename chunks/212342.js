@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120), n(789020);
+n.d(t, { Z: () => v }), n(47120), n(789020);
 var i,
     l,
     a,
@@ -9,13 +9,13 @@ var i,
     d = n(592125),
     u = n(496675),
     m = n(594174),
-    h = n(630388),
-    _ = n(110630),
+    _ = n(630388),
+    h = n(110630),
     p = n(981631);
 let g = 'ChannelFollowingBumpChannels',
     f = new Set(),
     x = new Set();
-class E extends (i = r.ZP.Store) {
+class C extends (i = r.ZP.Store) {
     initialize() {
         this.waitFor(c.default), (f = new Set(s.K.get(g)));
     }
@@ -24,27 +24,27 @@ class E extends (i = r.ZP.Store) {
     }
 }
 (a = 'ChannelFollowingPublishBumpStore'),
-    (l = 'displayName') in E
-        ? Object.defineProperty(E, l, {
+    (l = 'displayName') in C
+        ? Object.defineProperty(C, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (E[l] = a);
-let C = new E(o.Z, {
+        : (C[l] = a);
+let v = new C(o.Z, {
     MESSAGE_CREATE: function (e) {
         var t;
         let { channelId: n, message: i, optimistic: l } = e;
         if (l || f.has(n)) return !1;
         let a = d.Z.getChannel(n),
             r = m.default.getCurrentUser();
-        if (!(null != a && a.type === p.d4z.GUILD_ANNOUNCEMENT && (0, _.Z)(i) && (null != r && (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.id ? u.Z.can(p.Plq.SEND_MESSAGES, a) : u.Z.can(p.Plq.MANAGE_MESSAGES, a)) && !h.yE(Number(i.flags), p.iLy.CROSSPOSTED))) return !1;
+        if (!(null != a && a.type === p.d4z.GUILD_ANNOUNCEMENT && (0, h.Z)(i) && (null != r && (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.id ? u.Z.can(p.Plq.SEND_MESSAGES, a) : u.Z.can(p.Plq.MANAGE_MESSAGES, a)) && !_.yE(Number(i.flags), p.iLy.CROSSPOSTED))) return !1;
         x.add(i.id);
     },
     MESSAGE_UPDATE: function (e) {
         let { message: t } = e;
-        x.has(t.id) && h.yE(Number(t.flags), p.iLy.CROSSPOSTED) && x.delete(t.id);
+        x.has(t.id) && _.yE(Number(t.flags), p.iLy.CROSSPOSTED) && x.delete(t.id);
     },
     CHANNEL_SELECT: function (e) {
         x.clear();

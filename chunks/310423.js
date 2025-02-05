@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(906732),
     u = n(778087),
     m = n(603721),
-    h = n(124072),
-    _ = n(171368),
+    _ = n(124072),
+    h = n(171368),
     p = n(592125),
     g = n(430824),
     f = n(594174),
     x = n(739566),
-    E = n(981631),
-    C = n(665692),
-    v = n(388032),
+    C = n(981631),
+    v = n(665692),
+    E = n(388032),
     I = n(476521);
 let N = {
         tag: 'span',
@@ -100,18 +100,18 @@ let b = l.memo(function (e) {
                                     t = f.default.getUser(e);
                                 if (null != t) {
                                     let e = (0, x.ij)(t, A);
-                                    I = (0, i.jsxs)(h.Z, {
+                                    I = (0, i.jsxs)(_.Z, {
                                         ...S,
                                         onClick: () =>
-                                            (0, _.openUserProfileModal)({
+                                            (0, h.openUserProfileModal)({
                                                 userId: t.id,
                                                 guildId: A.guild_id,
                                                 channelId: A.id,
                                                 messageId: y,
                                                 sourceAnalyticsLocations: L,
-                                                analyticsLocation: { section: E.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
+                                                analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                             }),
-                                        children: [C.ME, e.nick]
+                                        children: [v.ME, e.nick]
                                     });
                                 }
                                 break;
@@ -120,9 +120,9 @@ let b = l.memo(function (e) {
                                 let e = b.value.toString(),
                                     t = p.Z.getChannel(e);
                                 null != t &&
-                                    (I = (0, i.jsxs)(h.Z, {
+                                    (I = (0, i.jsxs)(_.Z, {
                                         ...S,
-                                        children: [C.zy, t.name]
+                                        children: [v.zy, t.name]
                                     }));
                                 break;
                             }
@@ -130,9 +130,9 @@ let b = l.memo(function (e) {
                                 let e = b.value.toString(),
                                     t = null != j ? g.Z.getRole(j.id, e) : void 0;
                                 null != t &&
-                                    (I = (0, i.jsxs)(h.Z, {
+                                    (I = (0, i.jsxs)(_.Z, {
                                         ...S,
-                                        children: [C.ME, t.name]
+                                        children: [v.ME, t.name]
                                     }));
                                 break;
                             }
@@ -140,29 +140,29 @@ let b = l.memo(function (e) {
                                 let e = b.value.toString(),
                                     t = null != j ? g.Z.getRole(j.id, e) : void 0;
                                 if (null != t)
-                                    I = (0, i.jsxs)(h.Z, {
-                                        children: [C.ME, t.name]
+                                    I = (0, i.jsxs)(_.Z, {
+                                        children: [v.ME, t.name]
                                     });
                                 else {
                                     let t = f.default.getUser(e);
                                     if (null != t) {
                                         let e = (0, x.ij)(t, A);
-                                        I = (0, i.jsxs)(h.Z, {
+                                        I = (0, i.jsxs)(_.Z, {
                                             ...S,
                                             onClick: () =>
-                                                (0, _.openUserProfileModal)({
+                                                (0, h.openUserProfileModal)({
                                                     userId: t.id,
                                                     guildId: A.guild_id,
-                                                    analyticsLocation: { section: E.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
+                                                    analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                                 }),
-                                            children: [C.ME, e.nick]
+                                            children: [v.ME, e.nick]
                                         });
                                     }
                                 }
                                 break;
                             }
                             case c.jw.ATTACHMENT:
-                                I = T(v.intl.string(v.t.nONJVV));
+                                I = T(E.intl.string(E.t.nONJVV));
                                 break;
                             default: {
                                 let e = null == R ? void 0 : null === (d = R.choices) || void 0 === d ? void 0 : d.find((e) => e.value === b.value);

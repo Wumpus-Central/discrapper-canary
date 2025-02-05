@@ -24,9 +24,9 @@ function Z(e) {
     let { channel: t, themeable: Z, whichPopoutIsOpen: N, setWhichPopoutIsOpen: T } = e,
         {
             Component: S,
-            events: { onMouseEnter: j, onMouseLeave: A }
+            events: { onMouseEnter: j, onMouseLeave: y }
         } = (0, s.j)(),
-        y = t.getGuildId(),
+        A = t.getGuildId(),
         { mute: P, suppress: R } = (0, f.Z)(t),
         M = (0, a.e7)([C.Z], () => C.Z.isDeaf()),
         L = P || R || M,
@@ -38,12 +38,12 @@ function Z(e) {
         return P ? b.intl.string(b.t['Ox4/zc']) : R ? b.intl.string(b.t['+YBKYG']) : M ? b.intl.string(b.t.X1lQlp) : void 0;
     }
     function H(e) {
-        null != y &&
+        null != A &&
             (0, c.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
                 return (t) =>
                     (0, i.jsx)(e, {
-                        guildId: y,
+                        guildId: A,
                         ...t
                     });
             });
@@ -70,7 +70,7 @@ function Z(e) {
                     ? null
                     : (0, i.jsx)(g.Z, {
                           children: (0, i.jsx)(p.Z, {
-                              guildId: y,
+                              guildId: A,
                               channel: t,
                               onClose: n,
                               gridNotice:
@@ -96,7 +96,7 @@ function Z(e) {
                               e.onMouseEnter(t), j();
                           },
                           onMouseLeave: () => {
-                              e.onMouseLeave(), A();
+                              e.onMouseLeave(), y();
                           },
                           color: e.isActive ? B : void 0,
                           className: ''

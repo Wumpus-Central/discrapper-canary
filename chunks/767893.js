@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(933557),
     u = n(471445),
     m = n(266076),
-    h = n(565138),
-    _ = n(430824),
+    _ = n(565138),
+    h = n(430824),
     p = n(388032),
     g = n(121361);
 let f = {
@@ -26,18 +26,18 @@ function x(e) {
         children: (0, i.jsxs)('div', {
             className: g.channelHeader,
             'data-recents-channel': t.id,
-            children: [(0, i.jsx)(E, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(s.Fbu, { size: 'xxs' }), (0, i.jsx)(C, { channel: t }), n]
+            children: [(0, i.jsx)(C, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(s.Fbu, { size: 'xxs' }), (0, i.jsx)(v, { channel: t }), n]
         })
     });
 }
-function E(e) {
+function C(e) {
     let { channel: t } = e,
-        n = (0, o.e7)([_.Z], () => _.Z.getGuild(t.guild_id));
+        n = (0, o.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
     return null != n
-        ? (0, i.jsx)(h.Z, {
+        ? (0, i.jsx)(_.Z, {
               className: g.icon,
               guild: n,
-              size: h.Z.Sizes.SMALLER,
+              size: _.Z.Sizes.SMALLER,
               'aria-hidden': !0
           })
         : t.isGroupDM()
@@ -51,9 +51,9 @@ function E(e) {
                 children: (0, i.jsx)(s.kBi, { size: 'xxs' })
             });
 }
-function C(e) {
+function v(e) {
     let { channel: t } = e,
-        n = (0, o.e7)([_.Z], () => _.Z.getGuild(t.guild_id)),
+        n = (0, o.e7)([h.Z], () => h.Z.getGuild(t.guild_id)),
         l = (0, d.ZP)(t, !1),
         a = (0, u.KS)(t, n),
         r = t.isPrivate() || null == a,

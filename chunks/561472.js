@@ -24,21 +24,21 @@ let E = function (e) {
         T = (0, a.e7)([h.Z], () => null != E && h.Z.can(x.Plq.ATTACH_FILES, E), [E]),
         S = null != (0, a.e7)([r.Z], () => r.Z.getActiveCommand(E.id)),
         j = E.getGuildId(),
-        A = I === o.d.FirstThreadMessage,
-        y = (0, a.e7)([m.default], () => {
+        y = I === o.d.FirstThreadMessage,
+        A = (0, a.e7)([m.default], () => {
             var e;
             return !0 == !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
         }),
-        P = (0, a.e7)([c.Z], () => c.Z.didAgree(j)) && !y,
+        P = (0, a.e7)([c.Z], () => c.Z.didAgree(j)) && !A,
         R = l.useMemo(() => !N && ((E.isPrivate() && !E.isManaged()) || (null != j && (!E.isNSFW() || P) && T && d.Z.canChatInGuild(j))), [T, P, E, j, N]),
-        M = A ? (x.TPd.GUILD_THREADS_ONLY.has(E.type) ? v.intl.string(v.t.RBBLhI) : v.intl.string(v.t.gUx4en)) : b ? v.intl.format(v.t.dYP2FR, { destination: (0, s.F6)(E, m.default, p.Z, !0) }) : v.intl.string(v.t.h76ulJ);
+        M = y ? (x.TPd.GUILD_THREADS_ONLY.has(E.type) ? v.intl.string(v.t.RBBLhI) : v.intl.string(v.t.gUx4en)) : b ? v.intl.format(v.t.dYP2FR, { destination: (0, s.F6)(E, m.default, p.Z, !0) }) : v.intl.string(v.t.h76ulJ);
     return S || !R
         ? null
         : (0, i.jsx)(_.Z, {
               className: t,
               style: n,
               title: M,
-              description: A ? v.intl.string(v.t.lpgkzs) : v.intl.string(v.t.usQh4O),
+              description: y ? v.intl.string(v.t.lpgkzs) : v.intl.string(v.t.usQh4O),
               icons: C.J6,
               onDrop: (e) => {
                   if (S) return !1;
@@ -53,7 +53,7 @@ let E = function (e) {
               onDragClear: () => Z(!0),
               onDragOver: (e) => {
                   if (S) return !1;
-                  A || e.shiftKey !== b || Z(!e.shiftKey);
+                  y || e.shiftKey !== b || Z(!e.shiftKey);
               }
           });
 };

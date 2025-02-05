@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => h });
 var i = n(200651),
     l = n(192379),
     a = n(442837),
@@ -9,48 +9,48 @@ var i = n(200651),
     d = n(739566),
     u = n(267128),
     m = n(981631);
-let h = l.memo(function (e) {
-    let { baseMessage: t, channel: n, referencedMessage: m, compact: h = !1 } = e,
-        _ = m.state === s.Y.LOADED ? m.message : void 0,
+let _ = l.memo(function (e) {
+    let { baseMessage: t, channel: n, referencedMessage: m, compact: _ = !1 } = e,
+        h = m.state === s.Y.LOADED ? m.message : void 0,
         p = (0, r.p)(),
         g = l.useMemo(
             () =>
-                (null == _ ? void 0 : _.content) != null && '' !== _.content
-                    ? (0, c.ZP)(_, {
+                (null == h ? void 0 : h.content) != null && '' !== h.content
+                    ? (0, c.ZP)(h, {
                           formatInline: !0,
                           shouldFilterKeywords: p
                       }).content
                     : null,
-            [_, p]
+            [h, p]
         ),
         { isReplyAuthorBlocked: f, isReplyAuthorIgnored: x } = (0, a.cj)(
             [o.Z],
             () => ({
-                isReplyAuthorBlocked: null != _ && o.Z.isBlockedForMessage(_),
-                isReplyAuthorIgnored: null != _ && o.Z.isIgnoredForMessage(_)
+                isReplyAuthorBlocked: null != h && o.Z.isBlockedForMessage(h),
+                isReplyAuthorIgnored: null != h && o.Z.isIgnoredForMessage(h)
             }),
-            [_]
+            [h]
         ),
-        E = (0, d.Uj)(_),
-        C = (0, d.Uj)(t);
+        C = (0, d.Uj)(h),
+        v = (0, d.Uj)(t);
     return (0, i.jsx)(u.Z, {
-        repliedAuthor: E,
-        baseAuthor: C,
+        repliedAuthor: C,
+        baseAuthor: v,
         baseMessage: t,
         channel: n,
         referencedMessage: m,
         content: g,
-        compact: h,
+        compact: _,
         isReplyAuthorBlocked: f,
         isReplyAuthorIgnored: x,
         isReplySpineClickable: !1,
         showReplySpine: !0
     });
 });
-function _(e, t, n, l, a) {
+function h(e, t, n, l, a) {
     return e.type !== m.uaV.REPLY || null == n
         ? null
-        : (0, i.jsx)(h, {
+        : (0, i.jsx)(_, {
               baseMessage: e,
               channel: t,
               referencedMessage: l,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => C });
 var i = n(200651);
 n(192379);
 var l = n(442837),
@@ -10,15 +10,15 @@ var l = n(442837),
     d = n(703656),
     u = n(131704),
     m = n(592125),
-    h = n(430824),
-    _ = n(699516),
+    _ = n(430824),
+    h = n(699516),
     p = n(594174),
     g = n(934415),
     f = n(900849),
     x = n(981631);
-function E(e) {
-    let { channel: t, onClick: n, beforeTransition: E, className: C, openChatWithoutConnecting: v } = e,
-        I = (0, l.e7)([p.default, _.Z], () => (null == t ? '' : (0, o.F6)(t, p.default, _.Z)), [t]);
+function C(e) {
+    let { channel: t, onClick: n, beforeTransition: C, className: v, openChatWithoutConnecting: E } = e,
+        I = (0, l.e7)([p.default, h.Z], () => (null == t ? '' : (0, o.F6)(t, p.default, h.Z)), [t]);
     return (0, i.jsx)(a.ua7, {
         text: I,
         position: 'top',
@@ -26,17 +26,17 @@ function E(e) {
             let { onMouseEnter: l, onMouseLeave: o } = e;
             return (0, i.jsx)(c.Z, {
                 role: 'link',
-                className: C,
+                className: v,
                 onClick: (e) => {
                     e.stopPropagation(),
                         null != n
                             ? n()
-                            : (null != E && E(),
+                            : (null != C && C(),
                               (0, a.pTH)(),
                               (function (e, t) {
                                   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                                   if (null == e || null == t) return;
-                                  let i = h.Z.getGuild(e);
+                                  let i = _.Z.getGuild(e);
                                   if ((null == i ? void 0 : i.joinedAt) == null) {
                                       f.Ub(e, {}, { channelId: t });
                                       return;
@@ -51,7 +51,7 @@ function E(e) {
                                       return;
                                   }
                                   (0, d.uL)(x.Z5c.CHANNEL(e, t));
-                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, v));
+                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, E));
                 },
                 onMouseEnter: l,
                 onMouseLeave: o,

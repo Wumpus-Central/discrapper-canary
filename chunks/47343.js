@@ -27,7 +27,7 @@ let A = () => {
             (0, l.jsxs)(u.P3F, {
                 className: N.header,
                 onClick: () => {
-                    n(!t), t && E.default.track(S.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED);
+                    t || E.default.track(S.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED), n(!t);
                 },
                 children: [
                     (0, l.jsx)('div', {

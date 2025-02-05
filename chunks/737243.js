@@ -25,9 +25,9 @@ let p = l.memo(function (e) {
         T = (0, u.Nk)(p.interaction, m, g, E),
         S = (0, u.NU)(_, E),
         j = (0, s.t0)(p),
-        A = (null == j ? void 0 : j.type) === r.B8.APPLICATION_COMMAND ? (null === (n = j.target_user) || void 0 === n ? void 0 : n.id) : void 0,
-        y = (0, u.wq)(A, m.id),
-        P = (0, u.JC)(A, m, x, E),
+        y = (null == j ? void 0 : j.type) === r.B8.APPLICATION_COMMAND ? (null === (n = j.target_user) || void 0 === n ? void 0 : n.id) : void 0,
+        A = (0, u.wq)(y, m.id),
+        P = (0, u.JC)(y, m, x, E),
         R = (0, u.rY)(v, E),
         M = (0, u.Xn)(C, E),
         L = l.useCallback(() => {
@@ -72,7 +72,7 @@ let p = l.memo(function (e) {
         onUserContextMenu: N,
         onClickTargetAvatar: R,
         onClickTargetUsername: P,
-        onTargetUserContextMenu: y,
+        onTargetUserContextMenu: A,
         onPopoutRequestClose: L,
         renderTargetMessage: k
     });

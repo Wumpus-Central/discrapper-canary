@@ -50,15 +50,15 @@ function b(e) {
             }),
             [o]
         ),
-        A = (0, a.e7)([u.default], () => u.default.getId()),
-        y = l.useCallback(
+        y = (0, a.e7)([u.default], () => u.default.getId()),
+        A = l.useCallback(
             (e, n, i) => {
                 let { content: l } = i,
                     a = m.Z.can(v.Plq.MANAGE_MESSAGES, t),
                     o = null != T && null != T.author ? T.author.id : null;
-                return N && (o === A || a) && null != T && (0, g.yE)(T.flags, v.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : r.Z.editMessage(e, n, { content: l }), Promise.resolve();
+                return N && (o === y || a) && null != T && (0, g.yE)(T.flags, v.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : r.Z.editMessage(e, n, { content: l }), Promise.resolve();
             },
-            [T, N, A, t]
+            [T, N, y, t]
         ),
         P = l.useCallback(
             (e) =>
@@ -80,7 +80,7 @@ function b(e) {
               onCancel: r.Z.endEditMessage,
               onChange: r.Z.updateEditMessage,
               onConfirmDelete: s.Z.confirmDelete,
-              saveMessage: y,
+              saveMessage: A,
               validateEdit: I,
               isRefreshEnabled: R,
               children: P

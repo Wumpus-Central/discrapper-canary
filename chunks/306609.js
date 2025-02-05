@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(627325),
     S = n(981631),
     j = n(474936),
-    A = n(388032),
-    y = n(600809);
+    y = n(388032),
+    A = n(600809);
 function P(e) {
     let { onSettingsButtonClick: t, short: n, wide: a, showOutputDevices: P = !1 } = e,
         [R, M] = l.useState(''),
@@ -61,18 +61,18 @@ function P(e) {
             value: L,
             children: (0, i.jsxs)('div', {
                 ref: k,
-                className: r()(y.voiceFiltersPopout, { [y.wide]: a }),
+                className: r()(A.voiceFiltersPopout, { [A.wide]: a }),
                 style: { height: 400 },
                 children: [
                     (0, i.jsx)('div', {
-                        className: y.resizeHandle,
+                        className: A.resizeHandle,
                         onMouseDown: O,
-                        children: (0, i.jsx)('div', { className: y.resizePill })
+                        children: (0, i.jsx)('div', { className: A.resizePill })
                     }),
                     (0, i.jsx)(c.E1j, {
                         size: c.E1j.Sizes.MEDIUM,
-                        placeholder: A.intl.string(A.t.hHCZJS),
-                        className: y.voiceFiltersHeader,
+                        placeholder: y.intl.string(y.t.hHCZJS),
+                        className: A.voiceFiltersHeader,
                         autoFocus: !0,
                         onChange: M,
                         query: R,
@@ -88,7 +88,7 @@ function P(e) {
                     }),
                     !D &&
                         (0, i.jsxs)('div', {
-                            className: y.upsellCountdownContainer,
+                            className: A.upsellCountdownContainer,
                             children: [
                                 null != w &&
                                     (0, i.jsx)(s.animated.div, {
@@ -99,23 +99,23 @@ function P(e) {
                                         })
                                     }),
                                 (0, i.jsx)('div', {
-                                    className: y.upsellContainer,
+                                    className: A.upsellContainer,
                                     children: (0, i.jsx)(s.animated.div, {
                                         style: G,
                                         children: (0, i.jsx)(m.p, {
                                             showUpsell: !0,
-                                            text: A.intl.format(A.t['XMDm8/'], {
+                                            text: y.intl.format(y.t['XMDm8/'], {
                                                 nitroTierName: (0, C.Px)(j.p9.TIER_2),
                                                 onClick: () => (0, f.i)()
                                             }),
-                                            button: A.intl.string(A.t.YScQSE),
+                                            button: y.intl.string(y.t.YScQSE),
                                             buttonAnalyticsObject: { section: S.jXE.VOICE_FILTERS_FLOATING_UPSELL },
                                             showShadow: !1,
                                             position: 'inline',
-                                            className: y.upsell,
+                                            className: A.upsell,
                                             buttonSize: 'sm',
                                             useLockIcon: !0,
-                                            buttonStyles: y.subscribeButton
+                                            buttonStyles: A.subscribeButton
                                         })
                                     })
                                 })
@@ -124,7 +124,7 @@ function P(e) {
                     (0, i.jsx)(b.R, {}),
                     (0, i.jsx)(Z.y, {}),
                     (0, i.jsxs)('div', {
-                        className: r()(y.voiceFiltersFooter, { [y.hasActiveVoice]: null != F }),
+                        className: r()(A.voiceFiltersFooter, { [A.hasActiveVoice]: null != F }),
                         children: [
                             (0, i.jsx)(I.Y, {}),
                             P && (0, i.jsx)(I.a, {}),
@@ -142,8 +142,8 @@ function P(e) {
                                             size: c.zxk.Sizes.MIN,
                                             look: c.zxk.Looks.BLANK,
                                             grow: !1,
-                                            className: y.voiceFiltersFooterButton,
-                                            innerClassName: y.voiceFiltersFooterButtonInner,
+                                            className: A.voiceFiltersFooterButton,
+                                            innerClassName: A.voiceFiltersFooterButtonInner,
                                             ...e,
                                             children: (0, i.jsx)(c.Huf, {
                                                 size: 'custom',

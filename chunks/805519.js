@@ -10,11 +10,11 @@ var i = n(192379),
     u = n(981631);
 function m(e) {
     let [t, n] = i.useState(!1),
-        [m, h] = i.useState(!1),
-        _ = d.default.cast(e),
+        [m, _] = i.useState(!1),
+        h = d.default.cast(e),
         { joinRequest: p, guild: g } = (0, l.cj)([r.Z, s.Z, o.Z, c.Z], () => {
             var e;
-            let t = r.Z.getRequest(_);
+            let t = r.Z.getRequest(h);
             if (null == t)
                 return {
                     joinRequest: null,
@@ -30,15 +30,15 @@ function m(e) {
         });
     return (
         i.useEffect(() => {
-            null != g || m || (h(!0), a.Z.fetchRequestToJoinGuilds());
+            null != g || m || (_(!0), a.Z.fetchRequestToJoinGuilds());
         }, [g, m]),
         i.useEffect(() => {
             null == p &&
                 (n(!0),
-                a.Z.fetchGuildJoinRequest(_).finally(() => {
+                a.Z.fetchGuildJoinRequest(h).finally(() => {
                     n(!1);
                 }));
-        }, [p, _]),
+        }, [p, h]),
         {
             loading: t,
             joinRequest: p,

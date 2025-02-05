@@ -14,15 +14,15 @@ var i,
     d = n(410575),
     u = n(498179),
     m = n(86357),
-    h = n(914602),
-    _ = n(568836),
+    _ = n(914602),
+    h = n(568836),
     p = n(730749),
     g = n(112724),
     f = n(812206),
     x = n(283595),
-    E = n(558314),
-    C = n(55563),
-    v = n(551428),
+    C = n(558314),
+    v = n(55563),
+    E = n(551428),
     I = n(73346),
     N = n(981631),
     S = n(388032),
@@ -67,11 +67,11 @@ class A extends (i = a.Component) {
     }
     render() {
         let { sku: e, storeListing: t, width: n, fetchFailed: i, renderFallback: a } = this.props,
-            s = n > _.aL;
+            s = n > h.aL;
         return null == e || null == t
             ? i
                 ? a()
-                : (0, l.jsx)(_.OR, { isHorizontal: s })
+                : (0, l.jsx)(h.OR, { isHorizontal: s })
             : e.productLine === N.POd.COLLECTIBLES
               ? (0, l.jsx)(d.Z, {
                     section: N.jXE.APPLICATION_EMBED,
@@ -120,8 +120,8 @@ class A extends (i = a.Component) {
             b(this, 'renderApplicationTile', (e, t) => {
                 let { inLibrary: n, width: i, renderCustomTitle: a, renderCustomTagline: r, renderCustomMedia: s } = this.props,
                     { playing: o, muted: c } = this.state,
-                    d = i > _.aL;
-                return (0, l.jsx)(h.Z, {
+                    d = i > h.aL;
+                return (0, l.jsx)(_.Z, {
                     sku: e,
                     storeListing: t,
                     playing: o,
@@ -172,17 +172,17 @@ class A extends (i = a.Component) {
     }
 }
 b(A, 'defaultProps', { renderFallback: N.dG4 });
-let j = [C.Z, E.Z, x.Z, v.Z];
+let j = [v.Z, C.Z, x.Z, E.Z];
 function y(e) {
     let { skuId: t } = e,
-        n = C.Z.get(t),
+        n = v.Z.get(t),
         i = null != n ? f.Z.getApplication(n.applicationId) : null;
     return {
         sku: n,
         application: i,
-        fetchFailed: C.Z.didFetchingSkuFail(t),
+        fetchFailed: v.Z.didFetchingSkuFail(t),
         inLibrary: null != n && x.Z.hasApplication(n.applicationId, n.applicationId, !0),
-        storeListing: null != n ? v.Z.getForSKU(n.id) : null,
+        storeListing: null != n ? E.Z.getForSKU(n.id) : null,
         libraryApplication: null != n ? x.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
     };
 }

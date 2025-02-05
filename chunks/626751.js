@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(981631);
 function m(e) {
     var t, n;
-    let { channel: m, message: h } = e,
-        _ = null !== (n = null === (t = h.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n ? (0, d.Md)() : (0, d.Q8)(),
+    let { channel: m, message: _ } = e,
+        h = null !== (n = null === (t = _.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n ? (0, d.Md)() : (0, d.Q8)(),
         p = m.guild_id,
         g = (0, a.e7)(
             [s.Z],
@@ -22,13 +22,13 @@ function m(e) {
             [p]
         ),
         f = null != g && (0, o.yE)(g, u.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
-        x = l.useMemo(() => (0, c._i)(m, h), [m, h]);
+        x = l.useMemo(() => (0, c._i)(m, _), [m, _]);
     return f
         ? null
         : (0, i.jsx)(r.Z, {
               channel: m,
-              message: h,
-              buttonLabels: _,
+              message: _,
+              buttonLabels: h,
               stickers: d.HG,
               event: u.rMx.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CTA_CLICKED,
               eventProperties: x

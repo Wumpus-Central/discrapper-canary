@@ -88,11 +88,11 @@ function h(e) {
         T = N + 1,
         S = T * b + (T - 1) * 8 <= _,
         j = Math.floor(b / c) + 8,
-        A = Math.max(0, E - j * Z) / 2;
+        y = Math.max(0, E - j * Z) / 2;
     return (0, i.jsx)(s.Z, {
         fade: !0,
         className: n,
-        listPadding: [p + A, 0, m + A - 8, 8],
+        listPadding: [p + y, 0, m + y - 8, 8],
         renderRow: function (e) {
             var t;
             let n = e * N;

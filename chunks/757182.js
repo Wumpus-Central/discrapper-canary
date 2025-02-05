@@ -6,7 +6,7 @@ var i = n(655922),
     a = n(915863),
     o = n(388032);
 function s(e) {
-    let { activity: t, onAction: n, ButtonComponent: s = a.Z, ...u } = e;
+    let { activity: t, onAction: n, ButtonComponent: s = a.Z, ...d } = e;
     return (0, r.Z)(t)
         ? (0, l.jsx)(
               s,
@@ -17,7 +17,7 @@ function s(e) {
                       return window.open(null != e ? e : void 0);
                   },
                   fullWidth: !0,
-                  ...u,
+                  ...d,
                   children: o.intl.string(o.t['I6JG4+'])
               },
               'play-activity'

@@ -1,12 +1,12 @@
-n.d(t, { D: () => a });
+n.d(t, { D: () => o });
 var l = n(200651);
 n(192379);
 var i = n(793030),
-    r = n(750472);
-let a = (e) => {
+    a = n(750472);
+let o = (e) => {
     let { assets: t, assetCount: n } = e;
     return (0, l.jsxs)('div', {
-        className: r.iconRow,
+        className: a.iconRow,
         children: [
             t.map((e, t) => {
                 let { src: n, alt: i } = e;
@@ -15,14 +15,14 @@ let a = (e) => {
                     {
                         src: n,
                         alt: i,
-                        className: r.icon
+                        className: a.icon
                     },
                     t
                 );
             }),
             n > 4 &&
                 (0, l.jsx)('div', {
-                    className: r.overflow,
+                    className: a.overflow,
                     children: (0, l.jsx)(i.xv, {
                         variant: 'text-sm/normal',
                         children: '+'.concat(n - 3)

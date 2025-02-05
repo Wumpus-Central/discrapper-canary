@@ -1,4 +1,4 @@
-n.r(
+i.r(
     (e.exports = {
         reactions: 'reactions_f8896c',
         largeReactions: 'largeReactions_f8896c',

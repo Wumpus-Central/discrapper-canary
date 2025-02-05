@@ -51,8 +51,8 @@ var i = n(200651),
     K = n(981631),
     X = n(388032),
     q = n(328572),
-    Q = n(881188),
-    J = n(434691);
+    J = n(881188),
+    Q = n(434691);
 let $ = 'gifting_button',
     ee = 'payment modal';
 function et(e) {
@@ -196,7 +196,7 @@ function en() {
                 children: (0, i.jsx)('img', {
                     className: q.tierImage,
                     alt: '',
-                    src: Q
+                    src: J
                 })
             })
         ]
@@ -265,7 +265,7 @@ function es() {
                   (0, i.jsx)('img', {
                       className: q.giftImage,
                       alt: '',
-                      src: J
+                      src: Q
                   }),
                   (0, i.jsxs)('div', {
                       className: q.giftInfo,

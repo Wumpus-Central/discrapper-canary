@@ -1,13 +1,13 @@
 n.d(t, {
-    HG: () => a,
-    Md: () => s,
-    Q8: () => r
+    HG: () => u,
+    Md: () => l,
+    Q8: () => a
 });
 var i = n(373228),
-    l = n(388032);
-let r = () => [l.intl.string(l.t.b6wEe3), l.intl.string(l.t.i8o9hY)],
-    s = () => [l.intl.string(l.t.vqnToa), l.intl.string(l.t['9yh+dH'])],
-    a = [
+    r = n(388032);
+let a = () => [r.intl.string(r.t.b6wEe3), r.intl.string(r.t.i8o9hY)],
+    l = () => [r.intl.string(r.t.vqnToa), r.intl.string(r.t['9yh+dH'])],
+    u = [
         {
             id: '781323471249604648',
             format_type: i.u3.APNG,

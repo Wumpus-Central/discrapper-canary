@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(831209),
     u = n(399606),
     m = n(481060),
-    h = n(607070),
-    _ = n(100527),
+    _ = n(607070),
+    h = n(100527),
     p = n(367907),
     g = n(676742),
     f = n(1585),
     x = n(841762),
-    E = n(336197),
-    C = n(406432),
-    v = n(348238),
+    C = n(336197),
+    v = n(406432),
+    E = n(348238),
     I = n(38267),
     N = n(184301),
     S = n(347475),
@@ -39,12 +39,12 @@ function w(e) {
     let { embedUrl: s, message: w, channel: F } = e,
         U = (0, L.J)(s, w),
         { setPopout: B } = (0, I.Z)(w.id, k.d$),
-        G = (0, v.qo)(w, F, B, !0),
+        G = (0, E.qo)(w, F, B, !0),
         H = T.QK.useSetting(),
         V = (0, Z.n)(),
         [z, W] = l.useState(!1),
         [K, Y] = l.useState((null == U ? void 0 : U.coverImage) == null),
-        X = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
+        X = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
         q = (0, u.e7)(
             [b.ZP, A.default],
             () => {
@@ -75,7 +75,7 @@ function w(e) {
                     can_access: U.canAccess,
                     is_member: q
                 }),
-                U.canAccess ? (0, E.Z)(P.Z5c.CHANNEL(U.guildId, U.threadId, U.messageId)) : q ? (0, E.Z)(P.Z5c.CHANNEL(U.guildId, U.parentChannelId)) : await y.Ub(U.guildId, {}, { channelId: U.parentChannelId }));
+                U.canAccess ? (0, C.Z)(P.Z5c.CHANNEL(U.guildId, U.threadId, U.messageId)) : q ? (0, C.Z)(P.Z5c.CHANNEL(U.guildId, U.parentChannelId)) : await y.Ub(U.guildId, {}, { channelId: U.parentChannelId }));
         }, [U, F, q]),
         es = l.useCallback(
             () => (
@@ -110,7 +110,7 @@ function w(e) {
             !et.enabled && ei((e) => !e);
         },
         em = U.coverImage,
-        eh = null != em && (0, C.d$)(em);
+        e_ = null != em && (0, v.d$)(em);
     return (0, i.jsxs)('div', {
         className: O.postPreviewContainer,
         children: [
@@ -129,7 +129,7 @@ function w(e) {
                                   onError: () => Y(!0)
                               })
                             : (0, i.jsx)(x.Z, {
-                                  src: !(V && (H || z)) && eh ? ''.concat(em, '?format=png') : em,
+                                  src: !(V && (H || z)) && e_ ? ''.concat(em, '?format=png') : em,
                                   backgroundSrc: ''.concat(em, '?format=png'),
                                   alt: M.intl.string(M.t.rIbh8P),
                                   aspectRatio: 16 / 9,
@@ -183,7 +183,7 @@ function w(e) {
                         children: [
                             null != ed &&
                                 (0, i.jsx)(m.yRy, {
-                                    renderPopout: (e) => eo(e, [_.Z.AVATAR]),
+                                    renderPopout: (e) => eo(e, [h.Z.AVATAR]),
                                     position: 'right',
                                     spacing: 12,
                                     preload: null == U.authorId ? void 0 : es,
@@ -234,7 +234,7 @@ function w(e) {
                                                     (0, i.jsx)(
                                                         m.yRy,
                                                         {
-                                                            renderPopout: (e) => eo(e, [_.Z.USERNAME]),
+                                                            renderPopout: (e) => eo(e, [h.Z.USERNAME]),
                                                             position: 'right',
                                                             preload: null == U.authorId ? void 0 : es,
                                                             children: (e) =>

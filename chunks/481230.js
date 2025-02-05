@@ -11,8 +11,8 @@ var i = n(913527),
     c = n(314897),
     d = n(626135),
     u = n(573261),
-    h = n(959776),
-    _ = n(981631),
+    _ = n(959776),
+    h = n(981631),
     g = n(723359);
 function p(e) {
     let { invite: t = null, giftCodeSKUId: n = null, ...i } = e;
@@ -27,18 +27,18 @@ function m(e) {
     return (
         a.Z.dispatch({ type: 'REGISTER' }),
         null != I &&
-            ((0, h.Z)(I, _.jXE.REGISTER),
-            d.default.track(_.rMx.AGE_GATE_ACTION, {
+            ((0, _.Z)(I, h.jXE.REGISTER),
+            d.default.track(h.rMx.AGE_GATE_ACTION, {
                 source: g.L0.REGISTER,
                 action: g.Al.AGE_GATE_SUBMITTED
             }),
             (function (e) {
                 let t;
                 let n = r()().diff(e, 'years');
-                n < 13 || ((t = n >= 13 && n <= 17 ? '13-17' : n >= 18 && n <= 22 ? '18-22' : '23+'), d.default.track(_.rMx.USER_AGE_SUBMITTED, { age_bucket: t }));
+                n < 13 || ((t = n >= 13 && n <= 17 ? '13-17' : n >= 18 && n <= 22 ? '18-22' : '23+'), d.default.track(h.rMx.USER_AGE_SUBMITTED, { age_bucket: t }));
             })(I)),
         u.Z.post({
-            url: _.ANM.REGISTER,
+            url: h.ANM.REGISTER,
             body: {
                 fingerprint: c.default.getFingerprint(),
                 email: t,
@@ -70,7 +70,7 @@ function m(e) {
                     type: 'REGISTER_SUCCESS',
                     token: e.body.token
                 }),
-                    d.default.track(_.rMx.AGE_GATE_ACTION, {
+                    d.default.track(h.rMx.AGE_GATE_ACTION, {
                         source: g.L0.REGISTER,
                         action: g.Al.AGE_GATE_SUCCESS
                     });
@@ -79,7 +79,7 @@ function m(e) {
                 let t = new o.Z(e);
                 throw (
                     (null != t.getFieldErrors('date_of_birth') && s.wE(g.L0.REGISTER),
-                    d.default.track(_.rMx.REGISTER_SUBMIT_ERRORED, {
+                    d.default.track(h.rMx.REGISTER_SUBMIT_ERRORED, {
                         is_unique_username_registration: !0,
                         email_error_reason: t.getFirstFieldErrorMessage('email'),
                         phone_error_reason: t.getFirstFieldErrorMessage('phone'),

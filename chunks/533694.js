@@ -10,29 +10,29 @@ var l = n(399606),
     d = n(703656),
     u = n(331372),
     m = n(981631),
-    h = n(388032),
-    _ = n(505460);
+    _ = n(388032),
+    h = n(505460);
 function p(e) {
     let { guildId: t, user: n, username: s } = e,
         o = (0, l.e7)([r.Z], () => !r.Z.useReducedMotion),
         c = n.getAvatarURL(t, 56, o),
         d = (0, i.jsx)('img', {
             src: c,
-            className: _.userAvatar,
+            className: h.userAvatar,
             alt: ''
         });
     return (0, i.jsxs)('div', {
-        className: _.thankYouCard,
+        className: h.thankYouCard,
         role: 'img',
-        'aria-label': h.intl.formatToPlainString(h.t['utf8+f'], { username: s }),
+        'aria-label': _.intl.formatToPlainString(_.t['utf8+f'], { username: s }),
         children: [
             (0, i.jsx)(u.Z, { avatar: d }),
             (0, i.jsx)(a.Text, {
-                className: _.thankYouText,
+                className: h.thankYouText,
                 tag: 'p',
                 color: 'status-positive-text',
                 variant: 'heading-xl/medium',
-                children: h.intl.format(h.t['52BAtL'], {
+                children: _.intl.format(_.t['52BAtL'], {
                     username: s,
                     usernameHook: (e, t) =>
                         (0, i.jsx)(
@@ -53,7 +53,7 @@ function p(e) {
 }
 function g(e) {
     var t, l, a;
-    let { channel: r, message: u, compact: _ } = e,
+    let { channel: r, message: u, compact: h } = e,
         g = (0, s.ZP)(u),
         f = (0, o.l)({
             user: u.author,
@@ -61,7 +61,7 @@ function g(e) {
             guildId: r.guild_id,
             messageId: u.id
         })(g),
-        x = h.intl.format(h.t.TQs67u, {
+        x = _.intl.format(_.t.TQs67u, {
             username: g.nick,
             usernameHook: f,
             productName: null !== (a = null === (l = u.purchaseNotification) || void 0 === l ? void 0 : null === (t = l.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== a ? a : '',
@@ -75,7 +75,7 @@ function g(e) {
             (0, i.jsx)(c.Z, {
                 icon: n(570111),
                 timestamp: u.timestamp,
-                compact: _,
+                compact: h,
                 children: x
             }),
             (0, i.jsx)(p, {

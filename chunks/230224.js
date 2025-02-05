@@ -18,8 +18,8 @@ var i = n(200651),
     c = n(118012),
     d = n(925329),
     u = n(372769),
-    h = n(768581),
-    _ = n(51144),
+    _ = n(768581),
+    h = n(51144),
     g = n(245335),
     p = n(981631),
     m = n(888592),
@@ -90,12 +90,12 @@ function R(e) {
 }
 function L(e) {
     let { invite: t, showBigUserIcon: n } = e,
-        l = r.useMemo(() => (n ? null : C(t) && null != t.target_user ? h.ZP.getUserAvatarURL(t.target_user) : b(t) && null != t.inviter ? h.ZP.getUserAvatarURL(t.inviter) : null), [t, n]),
+        l = r.useMemo(() => (n ? null : C(t) && null != t.target_user ? _.ZP.getUserAvatarURL(t.target_user) : b(t) && null != t.inviter ? _.ZP.getUserAvatarURL(t.inviter) : null), [t, n]),
         a = f.intl.string(f.t['3rE1Pz']);
     if (N(t)) {
         var c, d;
         a = (null === (c = t.channel) || void 0 === c ? void 0 : c.name) != null && (null === (d = t.inviter) || void 0 === d ? void 0 : d.username) != null ? f.intl.format(f.t.Lu4h19, { username: t.inviter.username }) : f.intl.string(f.t.OsdY8P);
-    } else C(t) && null != t.target_user ? (a = f.intl.formatToPlainString(f.t.x2L32d, { username: t.target_user.username })) : S(t) ? (a = f.intl.string(f.t['FDsl+P'])) : b(t) && null != t.inviter && (a = f.intl.format(f.t.spU2mJ, { username: _.ZP.getFormattedName(t.inviter) }));
+    } else C(t) && null != t.target_user ? (a = f.intl.formatToPlainString(f.t.x2L32d, { username: t.target_user.username })) : S(t) ? (a = f.intl.string(f.t['FDsl+P'])) : b(t) && null != t.inviter && (a = f.intl.format(f.t.spU2mJ, { username: h.ZP.getFormattedName(t.inviter) }));
     return (0, i.jsxs)('div', {
         className: E.inviteJoinContainer,
         children: [
@@ -118,17 +118,17 @@ function j(e) {
     let t,
         n,
         r,
-        { user: l, guild: a, channel: d, application: h, showBigUserIcon: g } = e;
+        { user: l, guild: a, channel: d, application: _, showBigUserIcon: g } = e;
     if (null != a)
         g &&
-            null == h &&
+            null == _ &&
             (t = (0, i.jsx)(s.Vj, {
                 guild: a,
                 size: s.Vj.Sizes.SMALL
             })),
             (n = a.name),
-            null != h &&
-                ((n = h.name),
+            null != _ &&
+                ((n = _.name),
                 (r = (0, i.jsxs)('div', {
                     className: E.inviteJoinContainer,
                     children: [
@@ -156,7 +156,7 @@ function j(e) {
                 })));
     else if (null != d) {
         if (null == l) throw Error('no inviter in group DM invite');
-        let e = _.ZP.getFormattedName(l);
+        let e = h.ZP.getFormattedName(l);
         null != d.name && '' !== d.name
             ? ((n = d.name),
               null != d.icon &&
@@ -166,7 +166,7 @@ function j(e) {
                   })))
             : (n = e);
     } else if (null != l) {
-        let e = _.ZP.getFormattedName(l);
+        let e = h.ZP.getFormattedName(l);
         (n = f.intl.formatToPlainString(f.t['4aF92d'], { username: e })),
             (r = (0, i.jsx)(s.DK, {
                 className: E.directInviteSubTitle,

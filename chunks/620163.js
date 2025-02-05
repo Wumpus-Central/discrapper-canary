@@ -48,8 +48,8 @@ var s = n(990547),
     K = n(498639),
     X = n(748717),
     q = n(419636),
-    Q = n(799071),
-    J = n(601433),
+    J = n(799071),
+    Q = n(601433),
     $ = n(154022),
     ee = n(393681),
     et = n(309739),
@@ -94,7 +94,7 @@ var s = n(990547),
 let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eU = ev.Z,
     eG = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eG, impressionSource: eF, numOfPendingFamilyRequests: eH, isOverlaySupported: ez, isClipsBetaTagShowing: eY = !1, shouldMergeGameSettings: eW, isKeywordFilteringEnabled: eK, isStaff: eX, isInappropriateConversationWarningEnabled: eq, isInapproprateConversationsDefaultOn: eQ, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e6, developerMode: e3, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e8, hypeSquadRemoved: e7, stealthRemediationEnabled: e5, hasIgnoredUsers: e9, hasBlockedUsers: te, isAllowGameFriendDMsVisible: tt, useRefreshedVoiceAndVideo: tn, hasRedesignedActivitySharing: ti } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eG, impressionSource: eF, numOfPendingFamilyRequests: eH, isOverlaySupported: ez, isClipsBetaTagShowing: eY = !1, shouldMergeGameSettings: eW, isKeywordFilteringEnabled: eK, isStaff: eX, isInappropriateConversationWarningEnabled: eq, isInapproprateConversationsDefaultOn: eJ, paymentsBlocked: eQ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e6, developerMode: e3, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e8, hypeSquadRemoved: e7, stealthRemediationEnabled: e9, hasIgnoredUsers: e5, hasBlockedUsers: te, isAllowGameFriendDMsVisible: tt, useRefreshedVoiceAndVideo: tn, hasRedesignedActivitySharing: ti } = e;
         return Object.freeze({
             [eZ.s6.SEARCH_NO_RESULTS]: {
                 section: h.ID.CUSTOM,
@@ -407,7 +407,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ek.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eM.intl.string(eM.t.qFsx5u)],
                 parent: eZ.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => eq && !e4 && !eQ
+                predicate: () => eq && !e4 && !eJ
             },
             [eZ.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2]: {
                 section: ek.oAB.DATA_AND_PRIVACY,
@@ -486,7 +486,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eZ.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
                 label: eM.intl.string(eM.t['3wRorq']),
                 element: eP.ZP,
-                predicate: () => e5 && (e9 || te)
+                predicate: () => e9 && (e5 || te)
             },
             [eZ.s6.BLOCKED_USERS]: {
                 section: ek.oAB.CONTENT_AND_SOCIAL,
@@ -494,7 +494,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 label: eM.intl.string(eM.t.PFOUKS),
                 searchableTitles: [eM.intl.string(eM.t.PFOUKS)],
                 element: eP.GF,
-                predicate: () => e5 && te
+                predicate: () => e9 && te
             },
             [eZ.s6.IGNORED_USERS]: {
                 section: ek.oAB.CONTENT_AND_SOCIAL,
@@ -502,7 +502,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eM.intl.string(eM.t['93ZDWF'])],
                 label: eM.intl.string(eM.t['93ZDWF']),
                 element: eP.yo,
-                predicate: () => e5 && e9
+                predicate: () => e9 && e5
             },
             [eZ.s6.PREMIUM]: {
                 section: ek.oAB.PREMIUM,
@@ -548,13 +548,13 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ek.oAB.INVENTORY,
                 searchableTitles: [eM.intl.string(eM.t.Ve9Ge3)],
                 parent: eZ.s6.GIFT_INVENTORY,
-                predicate: () => !eJ && e0
+                predicate: () => !eQ && e0
             },
             [eZ.s6.GIFT_CODE_REDEMPTION]: {
                 section: ek.oAB.INVENTORY,
                 searchableTitles: [eM.intl.string(eM.t['il+VCg'])],
                 parent: eZ.s6.GIFT_INVENTORY,
-                predicate: () => !eJ
+                predicate: () => !eQ
             },
             [eZ.s6.GIFT_INVENTORY_QUESTS]: {
                 section: ek.oAB.INVENTORY,
@@ -566,13 +566,13 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ek.oAB.INVENTORY,
                 searchableTitles: [eM.intl.string(eM.t['9KeUbW'])],
                 parent: eZ.s6.GIFT_INVENTORY,
-                predicate: () => !eJ
+                predicate: () => !eQ
             },
             [eZ.s6.GIFT_BLOCKED_PAYMENTS]: {
                 section: ek.oAB.INVENTORY,
                 searchableTitles: [eM.intl.string(eM.t.vwMEHR)],
                 parent: eZ.s6.GIFT_INVENTORY,
-                predicate: () => eJ
+                predicate: () => eQ
             },
             [eZ.s6.BILLING]: {
                 section: ek.oAB.BILLING,
@@ -1683,7 +1683,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: ['Text Playground'],
                 label: 'Text Playground',
                 element: eS.Z,
-                predicate: () => (0, J.D)() || L.Z.isDeveloper
+                predicate: () => (0, Q.D)() || L.Z.isDeveloper
             },
             [eZ.s6.DESIGN_SYSTEMS]: {
                 section: ek.oAB.DESIGN_SYSTEMS,
@@ -1710,8 +1710,8 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ek.oAB.TEXT_COMPONENT,
                 searchableTitles: ['Text Components'],
                 label: 'Text Components',
-                element: Q.Z,
-                predicate: () => (0, J.D)() || L.Z.isDeveloper
+                element: J.Z,
+                predicate: () => (0, Q.D)() || L.Z.isDeveloper
             },
             [eZ.s6.INTL_TESTING]: {
                 section: ek.oAB.INTL_TESTING,

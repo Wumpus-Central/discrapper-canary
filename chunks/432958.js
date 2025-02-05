@@ -106,17 +106,17 @@ function j(e) {
         I = (0, _.ZP)(t.id),
         S = (0, d.ZP)(),
         j = (0, o.e7)([p.Z], () => p.Z.isBlocked(t.id)),
-        { analyticsLocations: A } = (0, h.ZP)(j ? u.Z.BLOCKED_PROFILE_PANEL : u.Z.IGNORED_PROFILE_PANEL),
-        y = (0, f.ZB)({
+        { analyticsLocations: y } = (0, h.ZP)(j ? u.Z.BLOCKED_PROFILE_PANEL : u.Z.IGNORED_PROFILE_PANEL),
+        A = (0, f.ZB)({
             layout: j ? 'BLOCKED_PROFILE_PANEL' : 'IGNORED_PROFILE_PANEL',
             userId: t.id,
             channelId: n.id
         }),
         P = l.useRef(null);
     return (0, i.jsx)(h.Gt, {
-        value: A,
+        value: y,
         children: (0, i.jsx)(f.Mt, {
-            value: y,
+            value: A,
             children: (0, i.jsx)(x.Z, {
                 ref: P,
                 user: t,
@@ -159,8 +159,8 @@ function j(e) {
                                                     null == a || a(),
                                                         (0, g.pQ)({
                                                             action: j ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
-                                                            analyticsLocations: A,
-                                                            ...y
+                                                            analyticsLocations: y,
+                                                            ...A
                                                         });
                                                 }
                                             }),
@@ -170,8 +170,8 @@ function j(e) {
                                                     null == a || a(),
                                                         (0, g.pQ)({
                                                             action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
-                                                            analyticsLocations: A,
-                                                            ...y
+                                                            analyticsLocations: y,
+                                                            ...A
                                                         });
                                                 }
                                             })

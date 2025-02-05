@@ -66,8 +66,8 @@ function P() {
             autoTrackExposure: !1
         });
     let q = (0, b.ZP)(k.id),
-        Q = null == q ? void 0 : q.getLegacyUsername(),
-        J = (null !== (n = null === (e = H.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== n ? n : 0) > 0 ? H.global_name : null !== (s = null == z ? void 0 : z.nick) && void 0 !== s ? s : [],
+        J = null == q ? void 0 : q.getLegacyUsername(),
+        Q = (null !== (n = null === (e = H.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== n ? n : 0) > 0 ? H.global_name : null !== (s = null == z ? void 0 : z.nick) && void 0 !== s ? s : [],
         $ = (null !== (P = null === (t = H.bio) || void 0 === t ? void 0 : t.length) && void 0 !== P ? P : 0) > 0 ? H.bio : null !== (D = null == z ? void 0 : z.bio) && void 0 !== D ? D : [],
         ee = (0, c.V)();
     return (0, i.jsxs)('div', {
@@ -75,7 +75,7 @@ function P() {
         children: [
             (0, i.jsx)(x.Z, {
                 placeholder: k.username,
-                errors: J,
+                errors: Q,
                 currentGlobalName: k.globalName,
                 pendingGlobalName: M,
                 onGlobalNameChange: a.UZ
@@ -162,7 +162,7 @@ function P() {
                 'bio'
             ),
             ee.length > 0 && (0, i.jsx)(d.Z, { availableClans: ee }),
-            null != Q && (0, i.jsx)(p.Z, { legacyUsername: Q }, 'legacy_username')
+            null != J && (0, i.jsx)(p.Z, { legacyUsername: J }, 'legacy_username')
         ]
     });
 }

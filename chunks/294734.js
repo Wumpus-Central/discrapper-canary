@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(356264),
     u = n(628238),
     m = n(930282),
-    h = n(25015),
-    _ = n(438075),
+    _ = n(25015),
+    h = n(438075),
     p = n(695346),
     g = n(592125),
     f = n(906467),
     x = n(430824),
-    E = n(496675),
-    C = n(699516),
-    v = n(594174),
+    C = n(496675),
+    v = n(699516),
+    E = n(594174),
     I = n(100604),
     N = n(694784),
     S = n(39154),
@@ -45,20 +45,20 @@ function j() {
 function y(e) {
     let { message: t, snapshot: n, index: u } = e,
         m = l.useMemo(() => new I.r(t, n, u), [t, n, u]),
-        h = (0, r.e7)([g.Z, v.default, C.Z, E.Z, x.Z, d.Z], () => m.getForwardInfo(g.Z, v.default, C.Z, E.Z, x.Z, d.Z).footerInfo, [m], s.Z),
-        _ = l.useCallback(() => {
+        _ = (0, r.e7)([g.Z, E.default, v.Z, C.Z, x.Z, d.Z], () => m.getForwardInfo(g.Z, E.default, v.Z, C.Z, x.Z, d.Z).footerInfo, [m], s.Z),
+        h = l.useCallback(() => {
             (0, N.Z)(t);
         }, [t]);
-    return null == h
+    return null == _
         ? null
         : (0, i.jsxs)(c.P3F, {
               className: A.footerContainer,
-              onClick: _,
+              onClick: h,
               children: [
-                  null != h.originIconUrl
+                  null != _.originIconUrl
                       ? (0, i.jsx)('img', {
                             className: A.originIcon,
-                            src: h.originIconUrl,
+                            src: _.originIconUrl,
                             alt: ''
                         })
                       : null,
@@ -66,7 +66,7 @@ function y(e) {
                       className: A.footerText,
                       variant: 'text-sm/medium',
                       color: 'none',
-                      children: ''.concat(h.originLabel, '  \u2022  ').concat(h.timestampLabel)
+                      children: ''.concat(_.originLabel, '  \u2022  ').concat(_.timestampLabel)
                   }),
                   (0, i.jsx)(c.Fbu, {
                       size: 'xxs',
@@ -82,13 +82,13 @@ function Z(e) {
         c = p.RS.useSetting(),
         d = p.NA.useSetting(),
         x = (0, r.e7)([f.Z], () => f.Z.isDeveloper),
-        E = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()),
-        { content: C, hasSpoilerEmbeds: v } = (0, h.Z)(o, {
+        C = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()),
+        { content: v, hasSpoilerEmbeds: E } = (0, _.Z)(o, {
             hideSimpleEmbedContent: c && d,
             isInteracting: !1,
             formatInline: !1,
-            allowList: E,
-            allowHeading: E,
+            allowList: C,
+            allowHeading: C,
             allowLinks: !0,
             allowDevLinks: x,
             previewLinkTarget: !0
@@ -109,15 +109,15 @@ function Z(e) {
                               (0, i.jsx)(j, {}),
                               (0, i.jsx)(m.ZP, {
                                   message: o,
-                                  content: C
+                                  content: v
                               }),
-                              (0, _.Z)({
+                              (0, h.Z)({
                                   channelMessageProps: {
                                       message: o,
                                       channel: I,
                                       compact: N
                                   },
-                                  hasSpoilerEmbeds: v,
+                                  hasSpoilerEmbeds: E,
                                   isInteracting: !1,
                                   isMessageSnapshot: !0,
                                   renderThreadAccessory: !1

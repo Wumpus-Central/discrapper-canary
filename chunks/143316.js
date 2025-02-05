@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(76334);
 function u(e) {
     let { type: t, onClick: n } = e,
-        [u, h] = l.useState(!1),
-        _ = () => {
+        [u, _] = l.useState(!1),
+        h = () => {
             n(),
                 r.default.track(o.rMx.INBOX_CHANNEL_ACKED, {
                     marked_all_channels_as_read: !0,
@@ -18,14 +18,14 @@ function u(e) {
                 });
         },
         p = (e) => {
-            e.shiftKey ? _() : h(!0);
+            e.shiftKey ? h() : _(!0);
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
             u
                 ? (0, i.jsx)(m, {
-                      confirm: _,
-                      cancel: () => h(!1)
+                      confirm: h,
+                      cancel: () => _(!1)
                   })
                 : null,
             'bottom-floating' === t

@@ -39,8 +39,8 @@ function S(e) {
     });
 }
 let j = Z.LY.RESOLUTION_1440,
-    A = Z.ws.FPS_60;
-function y(e) {
+    y = Z.ws.FPS_60;
+function A(e) {
     let { channel: t } = e,
         n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
         [a, r] = l.useState(!1),
@@ -52,13 +52,13 @@ function y(e) {
                     .then((e) => {
                         if (e) {
                             if (
-                                ((0, v.J1)(!(0, x.mc)(j, A)),
+                                ((0, v.J1)(!(0, x.mc)(j, y)),
                                 g.default.track(b.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
                                     perk_type: s.q.STREAM_HIGH_QUALITY,
                                     resolution: j,
-                                    max_fps: A
+                                    max_fps: y
                                 }),
                                 (0, v.cD)(!1),
                                 null == C)
@@ -68,7 +68,7 @@ function y(e) {
                                 qualityOptions: {
                                     preset: o,
                                     resolution: j,
-                                    frameRate: A
+                                    frameRate: y
                                 },
                                 context: d.Yn.STREAM
                             };
@@ -126,7 +126,7 @@ function P(e) {
                             variant: 'text-sm/medium',
                             children: a ? N.intl.string(N.t.ZYQ2zc) : N.intl.string(N.t.kr8AEx)
                         }),
-                        (0, i.jsx)(y, { channel: t })
+                        (0, i.jsx)(A, { channel: t })
                     ]
                 })
             })

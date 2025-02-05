@@ -12,15 +12,15 @@ var i,
     d = n(692547),
     u = n(481060),
     m = n(493683),
-    h = n(529103),
-    _ = n(700582),
+    _ = n(529103),
+    h = n(700582),
     p = n(906732),
     g = n(213609),
     f = n(541716),
     x = n(28546),
-    E = n(963249),
-    C = n(703656),
-    v = n(594174),
+    C = n(963249),
+    v = n(703656),
+    E = n(594174),
     I = n(626135),
     N = n(51144),
     S = n(479446),
@@ -36,7 +36,7 @@ var i,
     k = (((i = {}).SYSTEM_MESSAGE = 'system_message'), (i.COACHMARK = 'coachmark'), i);
 function M(e) {
     let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: r, onMouseLeave: k, popoutPosition: M, analyticsPage: O, analyticsSection: D, glow: w, giftIntentSecondaryAction: F } = e,
-        U = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
+        U = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
         { analyticsLocations: B } = (0, p.ZP)(),
         G = (0, c.e7)([b.Z], () => b.Z.getFriendAnniversaryYears(i.id));
     a.useEffect(() => {
@@ -77,14 +77,14 @@ function M(e) {
                         (0, l.jsxs)('div', {
                             className: P.avatars,
                             children: [
-                                (0, l.jsx)(_.Z, {
+                                (0, l.jsx)(h.Z, {
                                     className: W,
                                     user: i,
                                     'aria-label': i.username,
                                     size: Z.EF.SIZE_56
                                 }),
                                 null != U &&
-                                    (0, l.jsx)(_.Z, {
+                                    (0, l.jsx)(h.Z, {
                                         className: K,
                                         user: U,
                                         'aria-label': i.username,
@@ -123,7 +123,7 @@ function M(e) {
                                             cta_type: F
                                         }),
                                         F === j.X2.VIEW_ALL
-                                            ? ((0, C.uL)(y.Z5c.FRIENDS), h.Z.setSection(y.pJs.ALL))
+                                            ? ((0, v.uL)(y.Z5c.FRIENDS), _.Z.setSection(y.pJs.ALL))
                                             : F === j.X2.SEND_MESSAGE &&
                                               ((0, T.PV)(i.id),
                                               m.Z.openPrivateChannel(i.id).then(() => {
@@ -161,7 +161,7 @@ function M(e) {
                             onClick: (e) => {
                                 e.stopPropagation();
                                 let l = (0, A.F)(t);
-                                (0, E.Z)({
+                                (0, C.Z)({
                                     isGift: !0,
                                     initialPlanId: null,
                                     giftRecipient: i,

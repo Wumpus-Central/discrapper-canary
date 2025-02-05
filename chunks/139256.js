@@ -17,15 +17,15 @@ var i = n(200651),
     d = n(44315),
     u = n(377171),
     m = n(124347),
-    h = n(695346),
-    _ = n(186523),
+    _ = n(695346),
+    h = n(186523),
     p = n(553826),
     g = n(506071),
     f = n(203143),
     x = n(79390),
-    E = n(839963),
-    C = n(294608),
-    v = n(65145),
+    C = n(839963),
+    v = n(294608),
+    E = n(65145),
     I = n(981631),
     N = n(388032),
     S = n(214163);
@@ -58,7 +58,7 @@ function A(e) {
 }
 function j(e) {
     let { className: t, onClick: n, isSelected: l, isFirstAnswer: a, children: s } = e,
-        { pollAnswerRef: c } = (0, v.dv)();
+        { pollAnswerRef: c } = (0, E.dv)();
     return (0, i.jsx)(o.P3F, {
         role: 'checkbox',
         className: r()(t, S.enabled),
@@ -72,7 +72,7 @@ function y(e) {
     let t,
         { className: n, children: l, onClick: a, isSelected: s, hasSelectedAnyAnswer: c, isFirstAnswer: d } = e;
     t = c ? (s ? 0 : -1) : d ? 0 : -1;
-    let { pollAnswerRef: u } = (0, v.dv)();
+    let { pollAnswerRef: u } = (0, E.dv)();
     return (0, i.jsx)(o.P3F, {
         role: 'radio',
         className: r()(n, S.enabled),
@@ -85,22 +85,22 @@ function y(e) {
 }
 function Z(e) {
     let { answers: t, answersInteraction: n, answerTapAccessibilityLabel: l, canTapAnswers: a, hasSelectedAnyAnswer: o, className: c, answerClassName: d, renderAnswerContent: u } = e,
-        { ContainerComponent: m, answerElementType: h } = (0, s.EQ)({
+        { ContainerComponent: m, answerElementType: _ } = (0, s.EQ)({
             canTapAnswers: a,
             answersInteraction: n
         })
-            .with({ answersInteraction: E.Y7.RADIO_BUTTONS }, () => ({
+            .with({ answersInteraction: C.Y7.RADIO_BUTTONS }, () => ({
                 ContainerComponent: A,
                 answerElementType: 1
             }))
-            .with({ answersInteraction: E.Y7.CHECKBOXES }, () => ({
+            .with({ answersInteraction: C.Y7.CHECKBOXES }, () => ({
                 ContainerComponent: b,
                 answerElementType: 2
             }))
             .with(
                 {
                     canTapAnswers: !0,
-                    answersInteraction: E.Y7.LIST
+                    answersInteraction: C.Y7.LIST
                 },
                 () => ({
                     ContainerComponent: T,
@@ -120,7 +120,7 @@ function Z(e) {
                     className: r()(S.__invalid_answer, d),
                     answer: e,
                     isFirstAnswer: 0 === t,
-                    elementType: h,
+                    elementType: _,
                     answerTapAccessibilityLabel: l,
                     hasSelectedAnyAnswer: o,
                     children: u(e)
@@ -132,10 +132,10 @@ function Z(e) {
 }
 function R(e) {
     let { className: t, answer: n, children: a, hasSelectedAnyAnswer: s, isFirstAnswer: o, elementType: c } = e,
-        { channelId: d, messageId: u } = (0, C.pE)(),
-        m = (0, C.$B)(n.style),
-        h = !0 === n.isSelected,
-        _ = l.useCallback(() => {
+        { channelId: d, messageId: u } = (0, v.pE)(),
+        m = (0, v.$B)(n.style),
+        _ = !0 === n.isSelected,
+        h = l.useCallback(() => {
             f.Z.handlePollAnswerTapped({
                 channelId: d,
                 messageId: u,
@@ -152,8 +152,8 @@ function R(e) {
         case 1:
             return (0, i.jsx)(y, {
                 className: r()(t, m),
-                onClick: _,
-                isSelected: h,
+                onClick: h,
+                isSelected: _,
                 hasSelectedAnyAnswer: s,
                 isFirstAnswer: o,
                 children: a
@@ -161,8 +161,8 @@ function R(e) {
         case 2:
             return (0, i.jsx)(j, {
                 className: r()(t, m),
-                onClick: _,
-                isSelected: h,
+                onClick: h,
+                isSelected: _,
                 isFirstAnswer: o,
                 children: a
             });
@@ -172,7 +172,7 @@ function L(e) {
     var t;
     let { attachment: n, className: l } = e,
         a = (0, g.n)(),
-        r = h.QK.useSetting();
+        r = _.QK.useSetting();
     return (0, i.jsx)(m.ZP, {
         className: l,
         imageClassName: S.attachmentImage,
@@ -205,7 +205,7 @@ function k(e, t) {
 }
 function M(e) {
     let { media: t, containerClassName: n, attachmentClassName: l, emojiClassName: a, fallback: r } = e,
-        { message: s } = (0, C.GF)();
+        { message: s } = (0, v.GF)();
     if (null != t.attachmentIds && t.attachmentIds.length > 0) {
         let e = s.attachments.find((e) => {
             var n;
@@ -286,7 +286,7 @@ function D(e) {
               foreground: S.radioForeground,
               className: l
           })
-        : (0, i.jsx)(_.Z, {
+        : (0, i.jsx)(h.Z, {
               ...a,
               className: l
           });

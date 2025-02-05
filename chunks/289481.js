@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(570140),
     u = n(45114),
     m = n(367907),
-    h = n(717680),
-    _ = n(703656),
+    _ = n(717680),
+    h = n(703656),
     p = n(592125),
     g = n(259580),
     f = n(617379),
     x = n(324081),
-    E = n(305248),
-    C = n(520116),
-    v = n(981631),
+    C = n(305248),
+    v = n(520116),
+    E = n(981631),
     I = n(388032),
     N = n(668496);
 let S = l.memo(function (e) {
@@ -32,7 +32,7 @@ let S = l.memo(function (e) {
                 i = n > t ? e - (n - t) : e;
             d([e, e - i]);
         }
-        let { opacity: m, size: h } = (0, c.q_F)(
+        let { opacity: m, size: _ } = (0, c.q_F)(
                 {
                     config: {
                         clamp: !0,
@@ -47,16 +47,16 @@ let S = l.memo(function (e) {
                 },
                 'animate-always'
             ),
-            _ = {
+            h = {
                 opacity: m,
-                height: h.to((e) => {
+                height: _.to((e) => {
                     var t, n;
                     return u ? ((t = r), (n = o) + (t - n) * e) : 'auto';
                 })
             };
         return (0, i.jsx)(s.animated.div, {
             ref: a,
-            style: _,
+            style: h,
             children: (0, i.jsx)(T, { ...e })
         });
     }),
@@ -78,20 +78,20 @@ let S = l.memo(function (e) {
             null == s || !t.hasLoadedAnything)
         )
             return null;
-        let h = (e, i) => {
-            (0, m.yw)(v.rMx.INBOX_CHANNEL_CLICKED, {
+        let _ = (e, i) => {
+            (0, m.yw)(E.rMx.INBOX_CHANNEL_CLICKED, {
                 channel_id: t.channelId,
                 guild_id: t.guildId
             });
             let l = null != i ? i : t.oldestUnreadMessageId;
-            (0, _.uL)(v.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : l)), n(e);
+            (0, h.uL)(E.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : l)), n(e);
         };
         return (0, i.jsx)('div', {
             className: N.channel,
             children: (0, i.jsx)(c.y5t, {
                 component: (0, i.jsxs)(x.Z, {
                     channel: s,
-                    gotoChannel: h,
+                    gotoChannel: _,
                     mentionCount: t.mentionCount,
                     toggleCollapsed: r,
                     channelState: t,
@@ -100,13 +100,13 @@ let S = l.memo(function (e) {
                 children: t.collapsed
                     ? null
                     : 'messages' === t.type
-                      ? (0, i.jsx)(C.Z, {
+                      ? (0, i.jsx)(v.Z, {
                             channel: t,
                             channelRecord: s,
-                            gotoChannel: h
+                            gotoChannel: _
                         })
                       : 'forum' === t.type
-                        ? (0, i.jsx)(E.Z, {
+                        ? (0, i.jsx)(C.Z, {
                               channel: t,
                               channelRecord: s,
                               deleteChannel: a
@@ -117,7 +117,7 @@ let S = l.memo(function (e) {
     });
 function b(e) {
     let { channel: t, markChannelRead: n, markGuildRead: l, getNumUnreadChannels: a } = e,
-        r = (0, h.Z)() && null != t.guildId;
+        r = (0, _.Z)() && null != t.guildId;
     return (0, i.jsx)(c.M0o, {
         className: N.markReadButton,
         tooltip: r ? I.intl.string(I.t['5lLMhI']) : I.intl.string(I.t.e6RscX),
@@ -133,7 +133,7 @@ function b(e) {
               }),
         onClick: function () {
             r && null != t.guildId ? l(t.guildId) : n(t),
-                (0, m.yw)(v.rMx.INBOX_CHANNEL_ACKED, {
+                (0, m.yw)(E.rMx.INBOX_CHANNEL_ACKED, {
                     channel_id: t.channelId,
                     guild_id: t.guildId,
                     marked_all_channels_as_read: !1,
@@ -146,7 +146,7 @@ function A(e) {
     let { channel: t, toggle: n, getNumUnreadChannels: l } = e;
     function a() {
         n(t),
-            (0, m.yw)(v.rMx.INBOX_CHANNEL_COLLAPSED, {
+            (0, m.yw)(E.rMx.INBOX_CHANNEL_COLLAPSED, {
                 channel_id: t.channelId,
                 guild_id: t.guildId,
                 num_unread_channels_remaining: l(),

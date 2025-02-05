@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => h });
 var i = n(544891),
     l = n(710845),
     a = n(569471),
@@ -9,24 +9,24 @@ var i = n(544891),
     d = n(594174),
     u = n(709054),
     m = n(981631);
-let h = new l.Z('markUnread');
-async function _(e, t) {
+let _ = new l.Z('markUnread');
+async function h(e, t) {
     let n = d.default.getCurrentUser();
     if (null == n) return;
     let l = o.Z.getMessages(e),
-        _ = l
+        h = l
             .toArray()
             .filter((e) => 0 > u.default.compare(e.id, t))
             .sort((e, t) => u.default.compare(e.id, t.id))
             .reverse()[0],
-        p = null == _ ? u.default.atPreviousMillisecond(t) : _.id,
+        p = null == h ? u.default.atPreviousMillisecond(t) : h.id,
         g = 0;
     l.forAll((e) => {
         u.default.compare(e.id, p) > 0 && (0, c.Ex)(e, n) && g++;
     });
     let f = s.Z.getChannel(e);
     null != f && f.isThread() && (f.isArchivedThread() && (await r.Z.unarchiveThread(f, !1)), a.Z.hasJoined(e) || (await r.Z.joinThread(f, 'Mark Unread'))),
-        h.log('Marking unread', {
+        _.log('Marking unread', {
             channelId: e,
             messageId: t
         }),

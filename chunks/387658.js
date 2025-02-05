@@ -19,19 +19,19 @@ var i = n(200651),
     E = n(541099),
     A = n(827498),
     I = n(496158),
-    _ = n(676161),
-    g = n(660090),
+    g = n(676161),
+    _ = n(660090),
     P = n(783097),
     j = n(46332),
     y = n(176412),
     T = n(870205),
     S = n(981631),
-    b = n(689079),
-    L = n(388032),
+    L = n(689079),
+    b = n(388032),
     R = n(61474),
-    M = n(616362);
-let Z = 'placeholder',
-    O = [, , , , ,].fill(Z);
+    Z = n(616362);
+let M = 'placeholder',
+    O = [, , , , ,].fill(M);
 function k(e) {
     var t, n;
     let { context: a, command: o, section: r, sectionName: c } = e,
@@ -60,7 +60,7 @@ function k(e) {
         v = l.useMemo(
             () =>
                 (0, i.jsxs)('div', {
-                    className: M.commandTextContainer,
+                    className: Z.commandTextContainer,
                     children: [
                         (0, i.jsx)(d.Text, {
                             variant: 'text-sm/semibold',
@@ -78,11 +78,11 @@ function k(e) {
             [o.displayName, h]
         );
     return (0, i.jsxs)(d.P3F, {
-        className: M.command,
+        className: Z.command,
         onClick: u,
         children: [
             (0, i.jsx)(d.Rny, {
-                className: M.commandFocusBlock,
+                className: Z.commandFocusBlock,
                 children: v
             }),
             m
@@ -113,7 +113,7 @@ function U() {
         a = l.useMemo(
             () =>
                 (0, i.jsxs)('div', {
-                    className: M.commandTextContainerPlaceholder,
+                    className: Z.commandTextContainerPlaceholder,
                     children: [
                         (0, i.jsx)('div', {
                             className: R.textPlaceholder,
@@ -142,7 +142,7 @@ function U() {
             [t, n]
         );
     return (0, i.jsx)('div', {
-        className: o()(M.command, R.loadingAnimation, { [R.noAnimation]: e }),
+        className: o()(Z.command, R.loadingAnimation, { [R.noAnimation]: e }),
         children: a
     });
 }
@@ -185,14 +185,14 @@ function H(e) {
         disabled: s,
         size: d.PhG.ICON,
         color: d.zxk.Colors.PRIMARY,
-        className: M.commandSentCTAButton,
-        innerClassName: M.commandSentCTAButtonInner,
-        'aria-label': L.intl.formatToPlainString(L.t.UXw6W1, { commandName: n.untranslatedName }),
+        className: Z.commandSentCTAButton,
+        innerClassName: Z.commandSentCTAButtonInner,
+        'aria-label': b.intl.formatToPlainString(b.t.UXw6W1, { commandName: n.untranslatedName }),
         children: [
             (0, i.jsx)(d.Text, {
                 variant: 'text-sm/medium',
                 color: 'currentColor',
-                children: L.intl.string(L.t.TXNS7e)
+                children: b.intl.string(b.t.TXNS7e)
             }),
             (0, i.jsx)(r.U, {
                 size: 'xs',
@@ -208,7 +208,7 @@ function D(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)('div', {
-                      className: M.commandListHeader,
+                      className: Z.commandListHeader,
                       children: [
                           (0, i.jsx)(d.X6q, {
                               variant: 'heading-sm/semibold',
@@ -218,10 +218,10 @@ function D(e) {
                       ]
                   }),
                   (0, i.jsx)('ul', {
-                      className: M.commandContainer,
+                      className: Z.commandContainer,
                       'aria-label': a,
                       children: n.map((e, n) =>
-                          e === Z
+                          e === M
                               ? (0, i.jsx)(U, {}, e + n)
                               : (0, i.jsx)(
                                     k,
@@ -251,7 +251,7 @@ function w(e) {
             filters: { commandTypes: [u.yU.CHAT] },
             options: {
                 placeholderCount: 0,
-                limit: b.tn,
+                limit: L.tn,
                 includeFrecency: !0,
                 allowApplicationState: s,
                 installOnDemand: s,
@@ -265,14 +265,14 @@ function w(e) {
             setSortOrder: f,
             commands: N,
             canSort: C
-        } = (0, g.Z)({
+        } = (0, _.Z)({
             sectionId: a.id,
             commandsByActiveSection: d
         });
     l.useEffect(() => {
         c(a.id);
     }, [a.id, c]);
-    let E = (0, _.Z)({
+    let E = (0, g.Z)({
         context: n,
         commands: N,
         limit: 5
@@ -282,20 +282,20 @@ function w(e) {
     }, [r, N]),
     p || 0 !== N.length)
         ? (0, i.jsxs)('ul', {
-              className: M.contentContainer,
+              className: Z.contentContainer,
               children: [
                   (0, i.jsx)(D, {
                       context: n,
                       section: h,
                       commands: E,
-                      headerName: L.intl.string(L.t.acSE0t),
+                      headerName: b.intl.string(b.t.acSE0t),
                       sectionName: o
                   }),
                   (0, i.jsx)(D, {
                       context: n,
                       section: h,
                       commands: p ? O : N,
-                      headerName: L.intl.string(L.t.DUU9Ly),
+                      headerName: b.intl.string(b.t.DUU9Ly),
                       sectionName: o,
                       children:
                           C &&

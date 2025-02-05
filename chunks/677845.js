@@ -23,7 +23,7 @@ var i = n(200651),
     Z = n(981631),
     N = n(948899);
 function T(e) {
-    let { participants: t, onClick: n, onDoubleClick: T, onContextMenu: S, channel: j, className: A, inCall: y, totalNumberOfParticipants: P, paused: R = !1 } = e,
+    let { participants: t, onClick: n, onDoubleClick: T, onContextMenu: S, channel: j, className: y, inCall: A, totalNumberOfParticipants: P, paused: R = !1 } = e,
         M = (0, c.bp)() === Z.IlC.POPOUT,
         L = (0, s.e7)([C.Z], () => C.Z.getGuild(j.guild_id), [j.guild_id]),
         { dismissedActivityEntryPointTileChannel: k } = (0, I.d)(),
@@ -60,7 +60,7 @@ function T(e) {
                         onClick: n,
                         onDoubleClick: T,
                         onContextMenu: S,
-                        inCall: y,
+                        inCall: A,
                         width: t,
                         inPopout: M
                     },
@@ -116,7 +116,7 @@ function T(e) {
                           userParticipantCount: O
                       })
                   ));
-    let Y = l.useCallback(
+    let q = l.useCallback(
         (e) => {
             var t, n;
             return null !== (n = null === (t = D[e]) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : 'empty-tile';
@@ -124,8 +124,8 @@ function T(e) {
         [D]
     );
     return (0, i.jsx)(g.Z, {
-        className: A,
-        keyExtractor: Y,
+        className: y,
+        keyExtractor: q,
         paddingTop: 64,
         paddingBottom: 64,
         children: W

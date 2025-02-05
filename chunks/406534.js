@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(122707),
     S = n(779836),
     j = n(23750),
-    A = n(496675),
-    y = n(306680),
+    y = n(496675),
+    A = n(306680),
     P = n(944486),
     R = n(594174),
     M = n(55935),
@@ -43,15 +43,15 @@ var i = n(200651),
     V = n(511010),
     z = n(524444),
     W = n(977391),
-    Y = n(921235),
-    q = n(97352),
+    q = n(921235),
+    Y = n(97352),
     K = n(226027),
     X = n(959517),
-    J = n(981631),
-    Q = n(134612),
+    Q = n(981631),
+    J = n(134612),
     $ = n(388032);
 function ee(e) {
-    return null != e && e.type === J.ys_.MESSAGE && e.content.id === e.groupId;
+    return null != e && e.type === Q.ys_.MESSAGE && e.content.id === e.groupId;
 }
 let et = l.memo(function (e) {
     let { file: t, channel: n, user: l, isGroupStart: a, compact: r } = e;
@@ -62,7 +62,7 @@ let et = l.memo(function (e) {
         message: new j.ZP({
             id: t.id,
             key: 'pending-upload-'.concat(t.id),
-            type: J.uaV.DEFAULT,
+            type: Q.uaV.DEFAULT,
             author: l,
             channel_id: n.id,
             customRenderedContent: {
@@ -91,7 +91,7 @@ function en(e) {
         ex = (0, c.ts)(en),
         ev = (0, a.e7)([N.Z], () => N.Z.shouldShowTopicsBar() && !ep),
         eE = (0, b.P)(en.id),
-        eI = (0, E.z)(en.id, Q.zr),
+        eI = (0, E.z)(en.id, J.zr),
         eb = (0, h.k)(en.id),
         eZ = (0, U.Z)(),
         eN =
@@ -118,11 +118,11 @@ function en(e) {
                 : null),
         eT = en.isForumPost() && !eC ? (0, i.jsx)(g.Z, { postId: en.id }) : null,
         eS = (0, C.Z)(en.id);
-    (0, q.Z)();
+    (0, Y.Z)();
     let ej = null,
-        eA = [],
-        ey = es.map((e, t) => {
-            if (e.type === J.ys_.DIVIDER) {
+        ey = [],
+        eA = es.map((e, t) => {
+            if (e.type === Q.ys_.DIVIDER) {
                 var n, l;
                 let a = null != e.unreadId;
                 return null != eu
@@ -145,7 +145,7 @@ function en(e) {
                             'divider-'.concat(null !== (l = null !== (n = e.contentKey) && void 0 !== n ? n : e.unreadId) && void 0 !== l ? l : t)
                         );
             }
-            if (e.type === J.ys_.FORUM_POST_ACTION_BAR)
+            if (e.type === Q.ys_.FORUM_POST_ACTION_BAR)
                 return (0, i.jsx)(
                     g.Z,
                     {
@@ -156,10 +156,10 @@ function en(e) {
                     },
                     'forum-post-action-bar-'.concat(en.id)
                 );
-            if (e.type === J.ys_.MESSAGE_GROUP_BLOCKED || e.type === J.ys_.MESSAGE_GROUP_IGNORED || e.type === J.ys_.MESSAGE_GROUP_SPAMMER) {
+            if (e.type === Q.ys_.MESSAGE_GROUP_BLOCKED || e.type === Q.ys_.MESSAGE_GROUP_IGNORED || e.type === Q.ys_.MESSAGE_GROUP_SPAMMER) {
                 let t;
                 return (
-                    (t = e.type === J.ys_.MESSAGE_GROUP_BLOCKED ? $.t['+FcYMz'] : e.type === J.ys_.MESSAGE_GROUP_IGNORED ? $.t.VFWjc3 : $.t.xfkfTE),
+                    (t = e.type === Q.ys_.MESSAGE_GROUP_BLOCKED ? $.t['+FcYMz'] : e.type === Q.ys_.MESSAGE_GROUP_IGNORED ? $.t.VFWjc3 : $.t.xfkfTE),
                     (0, i.jsx)(
                         G.Z,
                         {
@@ -174,11 +174,11 @@ function en(e) {
                 );
             }
             if (null != eu && eu > e.content.timestamp.getTime() * L.Z.Millis.SECOND) return;
-            let a = A.Z.can(J.Plq.CREATE_INSTANT_INVITE, en);
+            let a = y.Z.can(Q.Plq.CREATE_INSTANT_INVITE, en);
             if ((0, D.Z)(e.content, a)) return;
-            e.type === J.ys_.MESSAGE && null == ej && (ej = e);
+            e.type === Q.ys_.MESSAGE && null == ej && (ej = e);
             let r = e.groupId === (null == ej ? void 0 : ej.groupId) ? ej.content.id : e.groupId,
-                s = e.type === J.ys_.THREAD_STARTER_MESSAGE ? H.Ru : H.ZP;
+                s = e.type === Q.ys_.THREAD_STARTER_MESSAGE ? H.Ru : H.ZP;
             return (0, i.jsx)(
                 s,
                 {
@@ -194,7 +194,7 @@ function en(e) {
                 e.content.id
             );
         });
-    eA.push(...ey);
+    ey.push(...eA);
     let eP = es[es.length - 1];
     if (
         (null != ef &&
@@ -205,11 +205,11 @@ function en(e) {
                         en,
                         eP,
                         new j.ZP({
-                            type: J.uaV.DEFAULT,
+                            type: Q.uaV.DEFAULT,
                             author: ef
                         })
                     );
-                eA.push(
+                ey.push(
                     (0, i.jsx)(
                         et,
                         {
@@ -226,7 +226,7 @@ function en(e) {
         ei.hasMoreBefore && null == eu)
     ) {
         ei.length > 0 &&
-            eA.unshift(
+            ey.unshift(
                 (0, i.jsx)(
                     'div',
                     {
@@ -240,7 +240,7 @@ function en(e) {
             );
         let { useReducedMotion: e } = d.Z;
         ((e && eg()) || !e) &&
-            eA.unshift(
+            ey.unshift(
                 (0, i.jsx)(
                     W.ZP,
                     {
@@ -253,7 +253,7 @@ function en(e) {
     }
     if (
         ((ei.hasMoreBefore && null == eu) ||
-            eA.unshift(
+            ey.unshift(
                 (0, i.jsx)(
                     f.Z,
                     {
@@ -264,7 +264,7 @@ function en(e) {
                 )
             ),
         ei.hasMoreAfter &&
-            eA.push(
+            ey.push(
                 (0, i.jsx)(
                     W.ZP,
                     {
@@ -274,18 +274,18 @@ function en(e) {
                     'has-more-after'
                 )
             ),
-        !eh && e_ && eg() && eA.push((0, i.jsx)(Y.Z, { channel: en })),
+        !eh && e_ && eg() && ey.push((0, i.jsx)(q.Z, { channel: en })),
         el > 0 && ea && eg())
     ) {
         let e, t;
-        let n = y.ZP.getOldestUnreadTimestamp(en.id),
+        let n = A.ZP.getOldestUnreadTimestamp(en.id),
             l = 0 !== n ? n : k.default.extractTimestamp(en.id),
             a = (0, M.KC)(new Date(), new Date(l));
-        if ((y.ZP.isEstimated(en.id) ? ((e = a ? $.t.wvtbbG : $.t.tHqbtr), (t = $.t.vaPWFR)) : ((e = a ? $.t.BctFHx : $.t['3wXb9P']), (t = $.t['4H8ldH'])), ex && (0, c.tW)(en) && eZ.includes(K.E.SUMMARIES))) {
-            let n = y.ZP.ackMessageId(en.id),
-                a = (0, T.q)(en.id, y.ZP.getOldestUnreadMessageId(en.id));
+        if ((A.ZP.isEstimated(en.id) ? ((e = a ? $.t.wvtbbG : $.t.tHqbtr), (t = $.t.vaPWFR)) : ((e = a ? $.t.BctFHx : $.t['3wXb9P']), (t = $.t['4H8ldH'])), ex && (0, c.tW)(en) && eZ.includes(K.E.SUMMARIES))) {
+            let n = A.ZP.ackMessageId(en.id),
+                a = (0, T.q)(en.id, A.ZP.getOldestUnreadMessageId(en.id));
             if (
-                ((0, u.yw)(J.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
+                ((0, u.yw)(Q.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
                     num_unread_summaries: a,
                     num_unread_messages: el,
                     last_ack_message_id: n,
@@ -409,7 +409,7 @@ function en(e) {
                     (e = en.id),
                     void s.Z.fetchMessages({
                         channelId: e,
-                        limit: J.AQB,
+                        limit: Q.AQB,
                         truncate: !0
                     })
                 );
@@ -436,7 +436,7 @@ function en(e) {
                   : (0, i.jsx)(z.DR, {
                         onClick: () =>
                             (function (e) {
-                                s.Z.jumpToPresent(e.id, J.AQB);
+                                s.Z.jumpToPresent(e.id, Q.AQB);
                                 let t = P.Z.getChannelId();
                                 e.id === t && (0, x.Kh)(e.id);
                             })(en),
@@ -444,7 +444,7 @@ function en(e) {
                     });
     }
     return {
-        channelStreamMarkup: eA,
+        channelStreamMarkup: ey,
         newMessagesBar: m,
         jumpToPresentBar: F,
         forumPostActionBar: eT,

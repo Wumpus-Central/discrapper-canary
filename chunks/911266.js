@@ -70,12 +70,12 @@ let x = (e) => {
             className: C.hidden,
             'aria-hidden': 'true'
         });
-    let A = j.emoji[0],
-        y =
-            null == A.id
-                ? h.ZP.getURL(A.name)
+    let y = j.emoji[0],
+        A =
+            null == y.id
+                ? h.ZP.getURL(y.name)
                 : u.ZP.getEmojiURL({
-                      id: A.id,
+                      id: y.id,
                       animated: !1,
                       size: 32,
                       forcePNG: !0
@@ -87,19 +87,19 @@ let x = (e) => {
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                src: y,
+                src: A,
                 className: r()([C.emoji, C.left, S && C.shy, v && C.confettiMode]),
                 width: 28
             }),
             (0, i.jsx)('img', {
                 alt: '',
-                src: y,
+                src: A,
                 className: r()([C.emoji, C.right, S && C.shy, v && C.confettiMode]),
                 width: 26
             }),
             (0, i.jsx)('img', {
                 alt: '',
-                src: y,
+                src: A,
                 className: r()([C.emoji, C.center, S && C.shy, v && C.confettiMode]),
                 width: 32
             })

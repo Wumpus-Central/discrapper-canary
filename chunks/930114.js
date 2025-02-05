@@ -10,7 +10,7 @@ var l = n(481060),
     d = n(474936),
     u = n(981631);
 function m(e) {
-    let { processedCode: t, channelContext: m, customGiftMessage: h, giftInfo: _ } = e,
+    let { processedCode: t, channelContext: m, customGiftMessage: _, giftInfo: h } = e,
         p = !1,
         g = null,
         f = a.default.getCurrentUser(),
@@ -23,9 +23,9 @@ function m(e) {
                 return (0, i.jsx)(e, {
                     code: t,
                     channelContext: m,
-                    customGiftMessage: h,
-                    emojiName: null == _ ? void 0 : null === (l = _.emoji) || void 0 === l ? void 0 : l.name,
-                    soundId: null == _ ? void 0 : null === (a = _.sound) || void 0 === a ? void 0 : a.id,
+                    customGiftMessage: _,
+                    emojiName: null == h ? void 0 : null === (l = h.emoji) || void 0 === l ? void 0 : l.name,
+                    soundId: null == h ? void 0 : null === (a = h.sound) || void 0 === a ? void 0 : a.id,
                     onComplete: (e, t) => {
                         (g = e), t && ((p = t), e.isSubscription && null == r.ZP.getPremiumSubscription(!1) && (0, c.H)(!0));
                     },

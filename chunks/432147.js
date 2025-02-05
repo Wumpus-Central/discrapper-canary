@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => v });
 var i = n(200651);
 n(192379);
 var l = n(120356),
@@ -10,32 +10,32 @@ var l = n(120356),
     d = n(592125),
     u = n(709054),
     m = n(723774),
-    h = n(144140),
-    _ = n(91159),
+    _ = n(144140),
+    h = n(91159),
     p = n(576799),
     g = n(488131),
     f = n(981631),
     x = n(388032),
-    E = n(363059);
-function C(e) {
+    C = n(363059);
+function v(e) {
     let { message: t, compact: n } = e,
         l = (0, r.e7)([d.Z], () => d.Z.getChannel(u.default.castMessageIdAsChannelId(t.id)));
     return null == l
         ? null
-        : (0, i.jsx)(v, {
+        : (0, i.jsx)(E, {
               channel: l,
               compact: n,
               isSystemMessage: (0, c.Z)(t)
           });
 }
-function v(e) {
+function E(e) {
     let { channel: t, compact: l, isSystemMessage: c } = e,
-        d = (0, r.e7)([h.Z], () => h.Z.getCount(t.id)),
+        d = (0, r.e7)([_.Z], () => _.Z.getCount(t.id)),
         u = (function (e) {
             var t;
-            let n = (0, r.e7)([h.Z], () => h.Z.getMostRecentMessage(e.id)),
-                l = (0, r.e7)([h.Z], () => h.Z.getCount(e.id)),
-                a = (0, _.Ok)(e);
+            let n = (0, r.e7)([_.Z], () => _.Z.getMostRecentMessage(e.id)),
+                l = (0, r.e7)([_.Z], () => _.Z.getCount(e.id)),
+                a = (0, h.Ok)(e);
             return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived)
                 ? x.intl.string(x.t.ZTo4HR)
                 : null == l || 0 === l
@@ -45,8 +45,8 @@ function v(e) {
                           children: [
                               (0, i.jsx)('span', { children: x.intl.string(x.t.ZTo4HR) }),
                               (0, i.jsx)('span', {
-                                  className: E.timestamp,
-                                  children: (0, _.Ye)(a)
+                                  className: C.timestamp,
+                                  children: (0, h.Ye)(a)
                               })
                           ]
                       })
@@ -57,19 +57,19 @@ function v(e) {
                                   channel: e
                               }),
                               (0, i.jsx)('span', {
-                                  className: E.timestamp,
-                                  children: (0, _.Ye)(a)
+                                  className: C.timestamp,
+                                  children: (0, h.Ye)(a)
                               })
                           ]
                       });
         })(t),
-        C = null != d && d > 0;
+        v = null != d && d > 0;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: a()(E.spine, {
-                    [E.cozy]: !l,
-                    [E.systemMessageSpine]: c
+                className: a()(C.spine, {
+                    [C.cozy]: !l,
+                    [C.systemMessageSpine]: c
                 })
             }),
             (0, i.jsx)(s.P3F, {
@@ -93,20 +93,20 @@ function v(e) {
                     });
                 },
                 'aria-roledescription': x.intl.string(x.t['8ipxiY']),
-                className: a()(E.container, { [E.systemMessageContainer]: c }),
+                className: a()(C.container, { [C.systemMessageContainer]: c }),
                 children: (0, i.jsxs)(s.nuw, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: E.topLine,
+                            className: C.topLine,
                             children: [
                                 (0, i.jsx)(s.nn4, { children: x.intl.string(x.t['7Xm5QE']) }),
                                 (0, i.jsx)('span', {
-                                    className: E.name,
+                                    className: C.name,
                                     children: t.name
                                 }),
                                 (0, i.jsx)('span', {
-                                    className: E.cta,
-                                    'aria-hidden': !C,
+                                    className: C.cta,
+                                    'aria-hidden': !v,
                                     children: (0, m.WE)(d, t.id)
                                 })
                             ]
@@ -116,7 +116,7 @@ function v(e) {
                             'aria-hidden': !0,
                             lineClamp: 1,
                             color: 'header-secondary',
-                            className: E.bottomLine,
+                            className: C.bottomLine,
                             children: u
                         })
                     ]

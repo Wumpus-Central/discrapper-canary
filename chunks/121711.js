@@ -94,11 +94,11 @@ let P = function () {
                                             ctaText: L.intl.string(L.t.iEw2Nz),
                                             ctaOnClick: () => {
                                                 (0, c.mK)({
+                                                    openInLayer: !1,
                                                     analyticsLocations: [],
                                                     analyticsSource: s.Z.QUEST_HOME_PAGE
                                                 });
-                                            },
-                                            linkText: L.intl.string(L.t['7f4H7O'])
+                                            }
                                         })
                                 ]
                             }),

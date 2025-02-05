@@ -53,8 +53,8 @@ function v(e) {
                 rootNode: t
             };
         }, [d, E, v]),
-        A = r && !E,
-        y = Z === _.WtW.VIDEO && N && !A,
+        y = r && !E,
+        A = Z === _.WtW.VIDEO && N && !y,
         P = l.useCallback(
             (e, i) => {
                 i !== e && (s.Z.updateLayout(t.id, i, n), i === _.AEg.FULL_SCREEN && t.isPrivate() && m.S.dispatch(_.CkL.TEXTAREA_BLUR));
@@ -115,7 +115,7 @@ function v(e) {
     l.useEffect(() => {
         !N && E && x();
     }, [N, E]),
-    y)
+    A)
         ? (0, i.jsx)(u.Z, {
               themeable: !1,
               node: j,

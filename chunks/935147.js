@@ -48,7 +48,7 @@ function U(e) {
             tryItOutAvatar: K,
             tryItOutBanner: X,
             tryItOutProfileEffectId: q,
-            tryItOutAvatarDecoration: Q
+            tryItOutAvatarDecoration: J
         } = (0, r.cj)([b.Z], () => {
             let e = b.Z.getAllPending(),
                 t = b.Z.getErrors(),
@@ -59,16 +59,16 @@ function U(e) {
                 errors: t
             };
         }),
-        J = (0, _.Z)(q),
+        Q = (0, _.Z)(q),
         $ = s.useRef(null);
     (0, S.Z)($, M.Y_.TRY_IT_OUT);
     let { analyticsLocations: ee, sourceAnalyticsLocations: et } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
         [en, ei] = s.useState(Math.floor(Math.random() * E.J2.length)),
         es = (e) => {
             if (e) {
-                if (((0, a.I5)(K), (0, I.z5)(W), (0, I.ho)(X), null != Q)) {
-                    let e = m.Z.getProduct(Q.skuId);
-                    null != e && (0, g.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(Q)) : null != h.Z.getPurchase(Q.skuId) && (0, a.cV)(Q);
+                if (((0, a.I5)(K), (0, I.z5)(W), (0, I.ho)(X), null != J)) {
+                    let e = m.Z.getProduct(J.skuId);
+                    null != e && (0, g.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(J)) : null != h.Z.getPurchase(J.skuId) && (0, a.cV)(J);
                 }
                 v.default.track(L.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: E.J2[en].presetName });
             }
@@ -179,7 +179,7 @@ function U(e) {
                                       {
                                           className: V.customizationSection,
                                           isTryItOutFlow: !0,
-                                          initialSelectedEffectId: J,
+                                          initialSelectedEffectId: Q,
                                           user: U,
                                           sectionTitle: w.intl.string(w.t.wR5wOj)
                                       },

@@ -21,8 +21,8 @@ function m(e, t, n) {
         e
     );
 }
-let h = 1 * o.Z.Millis.HOUR,
-    _ = 7 * o.Z.Millis.DAY,
+let _ = 1 * o.Z.Millis.HOUR,
+    h = 7 * o.Z.Millis.DAY,
     p = 1 * o.Z.Millis.DAY,
     g = l.K.get('lastNonRequiredUpdateShown', Date.now()),
     f = new s.Z('AutoUpdateManager');
@@ -51,7 +51,7 @@ class x {
     _emitCallbacks() {
         this._callbacks.forEach((e) => e(this.updateAvailable)), (this._callbacks = []);
     }
-    constructor(e = h) {
+    constructor(e = _) {
         var t = this;
         m(this, 'updateAvailable', !1),
             m(this, 'hasNativeUpdate', !1),
@@ -84,9 +84,9 @@ class x {
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || '52c4c762180c46b49e0d81605b2661fd1e2da517' === e.body.hash) return this._handleUpdateNotAvailable();
+                                if (null == e.body || '5e1822788a77367642a11ed9faffa2ce891ae9ca' === e.body.hash) return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, r.fD)()) return this._handleUpdateDownloaded(!1);
-                                let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? _ : p;
+                                let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? h : p;
                                 if (Date.now() - g > t) return l.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);
                             },
                             () => this._handleUpdateError()

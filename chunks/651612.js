@@ -51,8 +51,8 @@ function x(e) {
         S = [T];
     Z > 0 && S.push(_.intl.formatToPlainString(_.t['3l1GOz'], { mentionCount: Z })), b > 0 && S.push(_.intl.string(_.t.x5zAGR));
     let j = (0, r.e7)([m.ZP], () => m.ZP.getFocusedLayout()),
-        A = Z > 0 ? Z : b,
-        y = A > 0;
+        y = Z > 0 ? Z : b,
+        A = y > 0;
     return (0, i.jsxs)('div', {
         className: C.wrapper,
         children: [
@@ -67,10 +67,10 @@ function x(e) {
                 className: n,
                 ...x
             }),
-            y
+            A
                 ? (0, i.jsx)(o.Z, {
                       hasMentions: Z > 0,
-                      truncatedCount: A > 99 ? '99+' : A,
+                      truncatedCount: y > 99 ? '99+' : y,
                       className: C.badge
                   })
                 : null

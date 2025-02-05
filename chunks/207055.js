@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(979651),
     S = n(51144),
     j = n(649739),
-    A = n(262317),
-    y = n(981631),
+    y = n(262317),
+    A = n(981631),
     P = n(524484),
     R = n(377109);
 let M = l.memo((e) => {
@@ -53,22 +53,22 @@ let M = l.memo((e) => {
         ),
         F = (0, h.Z)(null != B ? [B.applicationId] : []),
         H = (0, j.Hr)('voice_users_eligibility_check', !1),
-        G = (0, s.e7)([I.Z, b.Z], () => (R ? b.Z.getActivities() : I.Z.getActivities(E, r.guild_id))).find((e) => null != e.application_id && e.type === y.IIU.PLAYING),
+        G = (0, s.e7)([I.Z, b.Z], () => (R ? b.Z.getActivities() : I.Z.getActivities(E, r.guild_id))).find((e) => null != e.application_id && e.type === A.IIU.PLAYING),
         V = (0, s.e7)([u.Z], () => ((null == G ? void 0 : G.application_id) != null ? u.Z.getApplication(null == G ? void 0 : G.application_id) : void 0));
     null != V && j.ZP.trackExposure({ location: 'voice_users' });
     let [z, W] = (0, s.Wu)([_.Z], () => [_.Z.getStreamForUser(E, r.getGuildId()), _.Z.getActiveStreamForUser(E, r.getGuildId())], [r, E]),
-        Y = (0, s.e7)([Z.Z], () => Z.Z.getSessionById(o)),
-        q = S.ZP.useName(a),
+        q = (0, s.e7)([Z.Z], () => Z.Z.getSessionById(o)),
+        Y = S.ZP.useName(a),
         K = (0, s.e7)([T.Z], () => T.Z.getVoicePlatformForChannel(r.id, E), [r.id, E]),
         X = (0, f.Eu)(r.id, E);
     return (0, i.jsx)(m.Z, {
         shakeLocation: P.oZ.VOICE_USER,
         isShaking: D,
-        children: (0, i.jsx)(A.ZP, {
+        children: (0, i.jsx)(y.ZP, {
             ...e,
-            nick: null != g ? g : q,
+            nick: null != g ? g : Y,
             canDrag: e.canDrag && !w,
-            otherClientSessionType: null == Y ? void 0 : null === (t = Y.clientInfo) || void 0 === t ? void 0 : t.os,
+            otherClientSessionType: null == q ? void 0 : null === (t = q.clientInfo) || void 0 === t ? void 0 : t.os,
             voicePlatform: K,
             localMute: M && !R,
             localVideoDisabled: k,
@@ -80,7 +80,7 @@ let M = l.memo((e) => {
             priority: O,
             embeddedApplication: F[0],
             isStreaming: null != z && z.channelId === r.id,
-            isWatching: null != W && W.state !== y.jm8.ENDED,
+            isWatching: null != W && W.state !== A.jm8.ENDED,
             isGuest: w,
             isSelf: C.default.getId() === a.id,
             application: H ? V : void 0
@@ -151,7 +151,7 @@ let L = [],
                         sessionId: null !== (t = s.sessionId) && void 0 !== t ? t : '',
                         channel: a,
                         collapsed: d,
-                        canDrag: n && E.Z.can(y.Plq.MOVE_MEMBERS, a),
+                        canDrag: n && E.Z.can(A.Plq.MOVE_MEMBERS, a),
                         showPreview: D,
                         hidePreview: w,
                         previewIsOpen: T,
@@ -165,12 +165,12 @@ let L = [],
             return (
                 null != _ && _ > 0
                     ? e.push(
-                          (0, i.jsx)(A.ul, {
+                          (0, i.jsx)(y.ul, {
                               collapsed: d,
                               numAudience: _
                           })
                       )
-                    : d && P.length > u + 1 && e.push((0, i.jsx)(A.XX, { numUsers: P.length - u })),
+                    : d && P.length > u + 1 && e.push((0, i.jsx)(y.XX, { numUsers: P.length - u })),
                 e
             );
         })();

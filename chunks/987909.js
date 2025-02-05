@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => E }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(442837),
@@ -9,32 +9,32 @@ var i = n(200651),
     d = n(665906),
     u = n(271383),
     m = n(496675),
-    h = n(594174),
-    _ = n(626135),
+    _ = n(594174),
+    h = n(626135),
     p = n(709054),
     g = n(838440),
     f = n(981631),
     x = n(189390);
-function E(e) {
+function C(e) {
     let { assets: t, currentUser: n, message: i } = e,
         l = (p.default.extractTimestamp(n.id) + p.default.extractTimestamp(i.id)) % t.length;
     return t[l];
 }
-function C(e) {
-    let { currentUser: t, channel: n, message: a, buttonLabels: d, stickers: u, event: m, eventProperties: h } = e,
+function v(e) {
+    let { currentUser: t, channel: n, message: a, buttonLabels: d, stickers: u, event: m, eventProperties: _ } = e,
         [p, f] = l.useState(!1),
-        C = l.useMemo(
+        v = l.useMemo(
             () =>
-                E({
+                C({
                     assets: u,
                     currentUser: t,
                     message: a
                 }),
             [u, t, a]
         ),
-        v = l.useMemo(
+        E = l.useMemo(
             () =>
-                E({
+                C({
                     assets: d,
                     currentUser: t,
                     message: a
@@ -63,21 +63,21 @@ function C(e) {
                 })({
                     channel: n,
                     message: a,
-                    sticker: C
+                    sticker: v
                 }),
                 (function (e) {
                     let { sticker: t, event: n, eventProperties: i } = e;
                     null != n &&
-                        _.default.track(n, {
+                        h.default.track(n, {
                             ...i,
                             sticker_id: t.id
                         });
                 })({
-                    sticker: C,
+                    sticker: v,
                     event: m,
-                    eventProperties: h
+                    eventProperties: _
                 }));
-        }, [n, a, C, m, h]);
+        }, [n, a, v, m, _]);
     return (0, i.jsxs)(r.zxk, {
         className: x.CTAMessageButtonOuter,
         innerClassName: x.CTAMessageButton,
@@ -89,17 +89,17 @@ function C(e) {
             (0, i.jsx)(c.ZP, {
                 className: x.CTAMessageSticker,
                 isInteracting: p,
-                sticker: C,
+                sticker: v,
                 size: 28
             }),
-            v
+            E
         ]
     });
 }
-function v(e) {
+function E(e) {
     let { channel: t, message: n, buttonLabels: l, stickers: r, event: s, eventProperties: o } = e,
-        c = h.default.getCurrentUser(),
-        _ = (function (e) {
+        c = _.default.getCurrentUser(),
+        h = (function (e) {
             let { channel: t, message: n, currentUser: i } = e;
             return (0, a.e7)([m.Z, u.ZP], () => {
                 var e;
@@ -116,10 +116,10 @@ function v(e) {
             message: n,
             currentUser: c
         });
-    return null != c && _
+    return null != c && h
         ? (0, i.jsx)('div', {
               className: x.CTAMessage,
-              children: (0, i.jsx)(C, {
+              children: (0, i.jsx)(v, {
                   currentUser: c,
                   channel: t,
                   message: n,

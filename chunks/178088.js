@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(906732),
     u = n(602478),
     m = n(2818),
-    h = n(768943),
-    _ = n(742989),
+    _ = n(768943),
+    h = n(742989),
     p = n(675478),
     g = n(581883),
     f = n(585483),
     x = n(400445),
-    E = n(153209),
-    C = n(956961),
-    v = n(903672),
+    C = n(153209),
+    v = n(956961),
+    E = n(903672),
     I = n(711165),
     N = n(946443),
     S = n(264233),
@@ -69,9 +69,9 @@ function A(e) {
             P(!L), L ? null == n || n() : null == t || t();
         }, [n, t, L]);
     l.useEffect(() => (f.S.subscribe(T.CkL.TOGGLE_INBOX, F), () => void f.S.unsubscribe(T.CkL.TOGGLE_INBOX, F)), [F]);
-    let { showReminders: U } = _.Z.useExperiment({ location: 'RecentsPopout' }),
+    let { showReminders: U } = h.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: B, inInbox: G } = m.Z.useExperiment({ location: 'RecentsPopout' }),
-        H = (0, r.e7)([h.Z], () => h.Z.hasOverdueReminder(), []) && B && G,
+        H = (0, r.e7)([_.Z], () => _.Z.hasOverdueReminder(), []) && B && G,
         { enabled: V } = u.Z.useExperiment({ location: 'RecentsPopout' });
     l.useEffect(() => {
         (((!U || (B && G)) && k === s.X.TODOS) || (k === s.X.BOOKMARKS && !(B || G))) && M(s.X.MENTIONS);
@@ -96,13 +96,13 @@ function A(e) {
                     'aria-label': b.intl.string(b.t.GSmTKC),
                     children:
                         k === s.X.FOR_YOU
-                            ? (0, i.jsx)(E.Z, {
+                            ? (0, i.jsx)(C.Z, {
                                   setTab: M,
                                   badgeState: j,
                                   closePopout: w
                               })
                             : k === s.X.MENTIONS
-                              ? (0, i.jsx)(v.Z, {
+                              ? (0, i.jsx)(E.Z, {
                                     setTab: M,
                                     onJump: z,
                                     badgeState: j,
@@ -115,7 +115,7 @@ function A(e) {
                                       closePopout: w
                                   })
                                 : U && k === s.X.TODOS
-                                  ? (0, i.jsx)(C.Z, {
+                                  ? (0, i.jsx)(v.Z, {
                                         setTab: M,
                                         onJump: z,
                                         closePopout: w

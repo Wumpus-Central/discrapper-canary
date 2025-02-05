@@ -5,30 +5,30 @@ var i = n(481060),
     r = n(103450),
     a = n(915863);
 function o(e) {
-    let { activity: t, embeddedActivity: n, user: o, onAction: s, ButtonComponent: u = a.Z, ...c } = e,
-        d = (0, r.e)({
+    let { activity: t, embeddedActivity: n, user: o, onAction: s, ButtonComponent: d = a.Z, ...c } = e,
+        u = (0, r.e)({
             activity: null != t ? t : void 0,
             embeddedActivity: n,
             user: o,
             onGameJoin: s
         });
-    if (null == d) return null;
-    let { isJoining: m, handleJoinRequest: f, buttonCTA: p, tooltip: h, isEnabled: v } = d;
+    if (null == u) return null;
+    let { isJoining: p, handleJoinRequest: f, buttonCTA: m, tooltip: h, isEnabled: v } = u;
     return (0, l.jsx)(
         i.ua7,
         {
             text: h,
             children: (e) => {
                 let { onMouseEnter: t, onMouseLeave: n } = e;
-                return (0, l.jsx)(u, {
+                return (0, l.jsx)(d, {
                     onClick: f,
                     onMouseEnter: t,
                     onMouseLeave: n,
                     disabled: !v,
-                    submitting: m,
+                    submitting: p,
                     fullWidth: !0,
                     ...c,
-                    children: p
+                    children: m
                 });
             }
         },

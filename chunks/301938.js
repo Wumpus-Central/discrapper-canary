@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(479531),
     d = n(388905),
     u = n(585483),
-    h = n(573261),
-    _ = n(720196),
+    _ = n(573261),
+    h = n(720196),
     g = n(981631),
     p = n(388032),
     m = n(114969),
@@ -71,7 +71,7 @@ function E(e) {
                                         null != N && v(null),
                                         t(''),
                                         C(!0),
-                                        h.Z.post({
+                                        _.Z.post({
                                             url: g.ANM.ACCOUNT_REVERT,
                                             body: {
                                                 token: I,
@@ -84,7 +84,7 @@ function E(e) {
                                                 let {
                                                     body: { email: n }
                                                 } = e;
-                                                b(''), t(n), l(_.n.SUCCESS);
+                                                b(''), t(n), l(h.n.SUCCESS);
                                             })
                                             .catch((e) => {
                                                 if (e instanceof Error) S(p.intl.formatToPlainString(p.t.aTVNen, { statusPageURL: g.yXt.STATUS }));
@@ -126,7 +126,7 @@ function E(e) {
                     children: (0, i.jsx)(d.zx, {
                         color: d.zx.Colors.PRIMARY,
                         onClick: () => {
-                            b(''), l(_.n.START);
+                            b(''), l(h.n.START);
                         },
                         children: p.intl.string(p.t.rzxnQ0)
                     })

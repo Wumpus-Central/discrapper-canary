@@ -1,40 +1,40 @@
 n.d(t, { Z: () => o });
-var i = n(200651);
+var l = n(200651);
 n(192379);
-var l = n(763472),
-    a = n(49012),
-    r = n(591759),
+var i = n(763472),
+    r = n(49012),
+    a = n(591759),
     s = n(915863);
 function o(e) {
     let { activity: t, color: n, user: o, look: c, onAction: u } = e;
     if ((null == t ? void 0 : t.buttons) == null || t.buttons.length < 1) return null;
     async function d(e, t, n) {
         try {
-            let i = await (0, l.sd)(e, t);
-            if (i.button_urls.length <= n) return;
-            let s = i.button_urls[n];
+            let l = await (0, i.sd)(e, t);
+            if (l.button_urls.length <= n) return;
+            let s = l.button_urls[n];
             if ('string' != typeof s) return;
-            let o = r.Z.safeParseWithQuery(s);
+            let o = a.Z.safeParseWithQuery(s);
             if (null == o || null == o.protocol || null == o.hostname) return;
-            (0, a.q)({
-                href: r.Z.format(o),
+            (0, r.q)({
+                href: a.Z.format(o),
                 trusted: !1
             });
         } catch (e) {}
     }
-    return (0, i.jsx)(i.Fragment, {
-        children: t.buttons.map((e, l) =>
-            (0, i.jsx)(
+    return (0, l.jsx)(l.Fragment, {
+        children: t.buttons.map((e, i) =>
+            (0, l.jsx)(
                 s.Z,
                 {
                     color: n,
                     look: c,
                     onClick: () => {
-                        null == u || u(), d(t, o.id, l);
+                        null == u || u(), d(t, o.id, i);
                     },
                     children: e
                 },
-                'customButton-'.concat(l)
+                'customButton-'.concat(i)
             )
         )
     });

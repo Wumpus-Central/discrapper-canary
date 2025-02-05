@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(703751),
     u = n(628238),
     m = n(976853),
-    h = n(977683),
-    _ = n(869765),
+    _ = n(977683),
+    h = n(869765),
     p = n(695346),
     g = n(592125),
     f = n(699516),
     x = n(709054),
-    E = n(786761),
-    C = n(493892),
-    v = n(901461),
+    C = n(786761),
+    v = n(493892),
+    E = n(901461),
     I = n(739566),
     N = n(443877),
     S = n(492593),
@@ -39,8 +39,8 @@ let w = l.memo(function e(t) {
     let l;
     let { channel: a, message: o, compact: P = !1, className: O, onContextMenu: w, onClick: U, disableInteraction: B = !1, hasThread: G, treatSpam: H } = t,
         V = k.OBS.has(o.type) ? o.messageReference : void 0,
-        z = (0, s.e7)([_.Z], () => _.Z.getMessageByReference(V)),
-        W = (0, s.e7)([g.Z], () => (o.type === k.uaV.THREAD_STARTER_MESSAGE && z.state === _.Y.LOADED ? g.Z.getChannel(z.message.channel_id) : null)),
+        z = (0, s.e7)([h.Z], () => h.Z.getMessageByReference(V)),
+        W = (0, s.e7)([g.Z], () => (o.type === k.uaV.THREAD_STARTER_MESSAGE && z.state === h.Y.LOADED ? g.Z.getChannel(z.message.channel_id) : null)),
         K = p.x4.useSetting(),
         Y = p.RS.useSetting(),
         X = p.NA.useSetting(),
@@ -57,7 +57,7 @@ let w = l.memo(function e(t) {
         }),
         en = (0, I.ZP)(o),
         ei = (0, s.e7)([g.Z], () => o.hasFlag(k.iLy.HAS_THREAD) && g.Z.getChannel(x.default.castMessageIdAsChannelId(o.id))),
-        el = o.type === k.uaV.THREAD_STARTER_MESSAGE && z.state === _.Y.LOADED && null != W,
+        el = o.type === k.uaV.THREAD_STARTER_MESSAGE && z.state === h.Y.LOADED && null != W,
         ea = !el && void 0 === l,
         er = (0, A.Z)({
             message: o,
@@ -66,7 +66,7 @@ let w = l.memo(function e(t) {
         }),
         es = (0, c.V)(a.id, o.author.id),
         eo = (0, d.r)(o.id),
-        ec = (0, h.Z)(o);
+        ec = (0, _.Z)(o);
     return el
         ? (0, i.jsx)(e, {
               ...t,
@@ -74,7 +74,7 @@ let w = l.memo(function e(t) {
               channel: W,
               hasThread: !1
           })
-        : (f.Z.isBlockedForMessage(o) ? (l = M.t['+FcYMz']) : f.Z.isIgnoredForMessage(o) ? (l = M.t.VFWjc3) : (0, C.DQ)(o) && H && (l = M.t.xfkfTE), void 0 !== l)
+        : (f.Z.isBlockedForMessage(o) ? (l = M.t['+FcYMz']) : f.Z.isIgnoredForMessage(o) ? (l = M.t.VFWjc3) : (0, v.DQ)(o) && H && (l = M.t.xfkfTE), void 0 !== l)
           ? (0, i.jsx)(F, {
                 className: O,
                 compact: P,
@@ -84,7 +84,7 @@ let w = l.memo(function e(t) {
           : (0, i.jsx)(S.Z, {
                 compact: P,
                 className: r()(O, {
-                    [D.ephemeral]: (0, E.Pv)(o),
+                    [D.ephemeral]: (0, C.Pv)(o),
                     [D.disableInteraction]: B,
                     [D.groupStart]: t.isGroupStart
                 }),
@@ -125,7 +125,7 @@ let w = l.memo(function e(t) {
                 onClick: U,
                 hasThread: !1 !== G && null != ei && o.hasFlag(k.iLy.HAS_THREAD),
                 hasReply: o.type === k.uaV.REPLY,
-                isSystemMessage: (0, v.Z)(o),
+                isSystemMessage: (0, E.Z)(o),
                 messageRef: er
             });
 });

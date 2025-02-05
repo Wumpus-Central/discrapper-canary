@@ -19,8 +19,8 @@ var i = n(200651),
     E = n(695676),
     A = n(520315),
     I = n(29380),
-    _ = n(783685),
-    g = n(388032),
+    g = n(783685),
+    _ = n(388032),
     P = n(580062),
     j = n(665162);
 function y(e) {
@@ -59,7 +59,7 @@ function y(e) {
                                       (0, i.jsx)('img', {
                                           className: P.videoCover,
                                           src: r,
-                                          'aria-label': g.intl.string(g.t.X4IxWF)
+                                          'aria-label': _.intl.string(_.t.X4IxWF)
                                       })
                                   ]
                               })
@@ -68,8 +68,8 @@ function y(e) {
                             className: v ? P.overviewContainerWithVideo : P.overviewContainerNoVideo,
                             children: [
                                 (0, i.jsx)(S, { application: n }),
-                                (0, i.jsx)(b, { application: n }),
-                                p.length > 0 ? (0, i.jsx)(M, { description: p }) : null,
+                                (0, i.jsx)(L, { application: n }),
+                                p.length > 0 ? (0, i.jsx)(Z, { description: p }) : null,
                                 h
                                     ? (0, i.jsx)('div', {
                                           className: P.developerShelfControlsContainer,
@@ -114,7 +114,7 @@ function T(e) {
                                 (0, i.jsx)(r.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: g.intl.string(g.t['8z5B2d'])
+                                    children: _.intl.string(_.t['8z5B2d'])
                                 })
                             ]
                         })
@@ -130,7 +130,7 @@ function T(e) {
                                 (0, i.jsx)(r.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: g.intl.string(g.t['5khEk5'])
+                                    children: _.intl.string(_.t['5khEk5'])
                                 })
                             ]
                         })
@@ -158,14 +158,14 @@ function S(e) {
                       children: (0, i.jsx)(r.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
-                          children: g.intl.string(g.t.LO4f0N)
+                          children: _.intl.string(_.t.LO4f0N)
                       })
                   })
                 : null
         ]
     });
 }
-function b(e) {
+function L(e) {
     let { application: t } = e,
         n = l.useMemo(() => {
             var e;
@@ -175,7 +175,7 @@ function b(e) {
         ? (0, i.jsxs)('div', {
               className: P.tagsContainer,
               children: [
-                  (0, i.jsx)(L, { application: t }),
+                  (0, i.jsx)(b, { application: t }),
                   n.map((e, t) =>
                       (0, i.jsx)(
                           'div',
@@ -194,7 +194,7 @@ function b(e) {
           })
         : null;
 }
-function L(e) {
+function b(e) {
     var t;
     let { application: n } = e;
     if (!(0, C.ye)(n)) return null;
@@ -245,7 +245,7 @@ function R(e) {
                   x && null != u
                       ? (0, i.jsx)('div', {
                             className: P.entryPointContainerFlexChild,
-                            children: (0, i.jsx)(_.Z, {
+                            children: (0, i.jsx)(g.Z, {
                                 botUserId: u,
                                 applicationId: l.id,
                                 buttonSize: N,
@@ -259,11 +259,11 @@ function R(e) {
           ? (0, i.jsx)(r.Wn, {
                 className: P.primaryEntryPointWarningMessage,
                 messageType: r.QYI.WARNING,
-                children: g.intl.format(g.t['s/3hjI'], {})
+                children: _.intl.format(_.t['s/3hjI'], {})
             })
           : null;
 }
-function M(e) {
+function Z(e) {
     let { description: t } = e,
         [n, a] = l.useState(!0);
     l.useLayoutEffect(() => a(!1), []);
@@ -332,7 +332,7 @@ function M(e) {
                           (0, i.jsx)(r.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: v ? g.intl.string(g.t.u4YJ8v) : g.intl.string(g.t['N/tajI'])
+                              children: v ? _.intl.string(_.t.u4YJ8v) : _.intl.string(_.t['N/tajI'])
                           }),
                           v
                               ? (0, i.jsx)(r.u04, {

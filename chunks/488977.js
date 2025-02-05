@@ -19,30 +19,30 @@ var i = n(200651),
     E = n(541099),
     A = n(783097),
     I = n(570949),
-    _ = n(314734),
-    g = n(981631),
+    g = n(314734),
+    _ = n(981631),
     P = n(388032),
     j = n(472033);
 function y(e) {
     var t;
     let { application: n, context: l, className: y, sectionName: T } = e,
         S = (0, o.e7)([E.Z], () => E.Z.entrypoint()),
-        b = (0, A.L1)(n),
-        L = (0, C.Eb)(b),
+        L = (0, A.L1)(n),
+        b = (0, C.Eb)(L),
         R = {
             location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: n.id,
             section_name: T,
             source: E.Z.lastShownEntrypoint()
         },
-        M = v.default.getCurrentUser(),
-        Z = m.Z.useExperiment({ location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !0 }).enabled,
+        Z = v.default.getCurrentUser(),
+        M = m.Z.useExperiment({ location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !0 }).enabled,
         O = (0, u.Z)({
             id: n.id,
             label: P.intl.string(P.t['+NP/b2'])
         }),
         k = (0, I.P)({ application: n }),
-        U = (0, N.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, g.udG.EMBEDDED),
+        U = (0, N.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, _.udG.EMBEDDED),
         H = 'channel' === l.type ? l.channel : void 0;
     return (0, i.jsxs)('div', {
         className: j.container,
@@ -52,14 +52,14 @@ function y(e) {
                     let e = U
                         ? (0, d.H)({
                               applicationId: n.id,
-                              referrerId: null == M ? void 0 : M.id
+                              referrerId: null == Z ? void 0 : Z.id
                           })
                         : (0, d.J)({
                               id: n.id,
-                              ...b
+                              ...L
                           });
                     (0, f.JG)(e),
-                        x.default.track(g.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                        x.default.track(_.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: n.id,
                             source: S
                         }),
@@ -76,7 +76,7 @@ function y(e) {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, i.jsxs)(s.v2r, {
-                        className: _.NN,
+                        className: g.NN,
                         navId: 'app-details-more-menu',
                         onClose: t,
                         'aria-label': P.intl.string(P.t.AXIHpa),
@@ -84,24 +84,24 @@ function y(e) {
                         children: [
                             (0, i.jsxs)(s.kSQ, {
                                 children: [
-                                    L
+                                    b
                                         ? (0, i.jsx)(s.sNh, {
                                               id: 'add-app',
                                               label: P.intl.string(P.t.NgXl3N),
                                               action: () => {
-                                                  null == b.customInstallUrl && (0, r.yw)(g.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, R),
+                                                  null == L.customInstallUrl && (0, r.yw)(_.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, R),
                                                       (0, C.LO)({
-                                                          ...b,
+                                                          ...L,
                                                           oauth2Callback: (e) => {
                                                               let { location: t } = e;
-                                                              null != t && (0, r.yw)(g.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, R);
+                                                              null != t && (0, r.yw)(_.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, R);
                                                           },
                                                           source: 'app_launcher_app_details'
                                                       });
                                               }
                                           })
                                         : null,
-                                    Z && n instanceof h.ZP
+                                    M && n instanceof h.ZP
                                         ? (0, i.jsx)(s.sNh, {
                                               id: 'report-app',
                                               color: 'danger',

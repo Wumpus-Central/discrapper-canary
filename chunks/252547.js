@@ -12,8 +12,8 @@ var i = n(200651),
 function p(e) {
     let { entries: t, viewId: n, officialGuildId: a, onClose: p } = e,
         g = t.length > 7,
-        [h, _] = r.useState(!1),
-        f = r.useMemo(() => t.slice(0, g && !h ? 6 : void 0), [t, g, h]);
+        [_, h] = r.useState(!1),
+        f = r.useMemo(() => t.slice(0, g && !_ ? 6 : void 0), [t, g, _]);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(o.X6, {
@@ -32,7 +32,7 @@ function p(e) {
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)('div', {
-                              className: l()(m.friends, { [m.fadedEntries]: g && !h }),
+                              className: l()(m.friends, { [m.fadedEntries]: g && !_ }),
                               children: (0, i.jsx)('div', {
                                   className: u.column,
                                   children: f.map((e) =>
@@ -50,10 +50,10 @@ function p(e) {
                               })
                           }),
                           g &&
-                              !h &&
+                              !_ &&
                               (0, i.jsxs)(s.P3F, {
                                   className: m.expandEntriesButton,
-                                  onClick: () => _(!0),
+                                  onClick: () => h(!0),
                                   children: [
                                       (0, i.jsx)(o.xv, {
                                           variant: 'text-xs/semibold',

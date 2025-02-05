@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => _ });
 var i = n(200651),
     l = n(192379),
     a = n(442837),
@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(212342),
     u = n(388032),
     m = n(869361);
-let h = (e) => {
+let _ = (e) => {
     let { channelId: t, messageId: n } = e,
-        h = (0, a.e7)([d.Z], () => d.Z.shouldShowBump(n), [n]),
-        _ = l.useCallback(() => {
+        _ = (0, a.e7)([d.Z], () => d.Z.shouldShowBump(n), [n]),
+        h = l.useCallback(() => {
             s.Z.dismissPublishBump(n), (0, o.Z)(t, n);
         }, [t, n]),
         p = l.useCallback(() => {
@@ -21,7 +21,7 @@ let h = (e) => {
         g = l.useCallback(() => {
             s.Z.permanentlyHidePublishBump(t);
         }, [t]);
-    return h
+    return _
         ? (0, i.jsxs)('div', {
               className: m.container,
               children: [
@@ -43,7 +43,7 @@ let h = (e) => {
                               look: r.zxk.Looks.LINK,
                               size: r.zxk.Sizes.MIN,
                               className: m.publish,
-                              onClick: _,
+                              onClick: h,
                               children: u.intl.string(u.t['MFGE5+'])
                           }),
                           (0, i.jsx)(r.P3F, {

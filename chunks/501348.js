@@ -106,7 +106,7 @@ let z = {
             })
         ];
     },
-    Q = () => {
+    J = () => {
         let e = (0, N.Q3)('ThemeTitle'),
             t = (0, a.e7)([C.Z], () => C.Z.isPreview),
             { enabled: n } = A.Z.useExperiment(
@@ -140,7 +140,7 @@ let z = {
                   ]
               });
     };
-class J extends s.Component {
+class Q extends s.Component {
     renderZoomSlider() {
         let { isRefreshEnabled: e } = this.props;
         return P.isPlatformEmbedded
@@ -310,7 +310,7 @@ class J extends s.Component {
                                 children: U.intl.string(U.t.Ksh3io)
                             }),
                             (0, i.jsx)(u.xJW, {
-                                title: (0, i.jsx)(Q, {}),
+                                title: (0, i.jsx)(J, {}),
                                 children: (0, i.jsx)(k.i, {})
                             })
                         ]
@@ -318,7 +318,7 @@ class J extends s.Component {
                 })
               : (0, i.jsxs)(u.xJW, {
                     className: F.marginTop8,
-                    title: (0, i.jsx)(Q, {}),
+                    title: (0, i.jsx)(J, {}),
                     children: [
                         (0, i.jsx)(k.i, {}),
                         (0, i.jsx)(O.F, {
@@ -543,7 +543,7 @@ class J extends s.Component {
             });
     }
 }
-class $ extends J {
+class $ extends Q {
     render() {
         let { density: e } = this.props,
             t = (0, i.jsxs)(O.F, {
@@ -715,7 +715,7 @@ function et() {
         d = (0, N.nm)('UserSettingsAppearance'),
         u = (0, N.o9)('UserSettingsAppearance'),
         m = (0, N.Q3)('UserSettingsAppearance');
-    return (0, i.jsx)(m ? $ : J, {
+    return (0, i.jsx)(m ? $ : Q, {
         messageDisplayCompact: e,
         hideSimpleEmbedContent: t && n,
         clientTheme: s,

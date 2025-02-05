@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(980463),
     S = n(328908),
     j = n(992970),
-    A = n(135793),
-    y = n(111810),
+    y = n(135793),
+    A = n(111810),
     P = n(84040),
     R = n(222677),
     M = n(995774),
@@ -43,12 +43,12 @@ var i = n(200651),
     V = n(607744),
     z = n(496675),
     W = n(626135),
-    Y = n(572004),
-    q = n(176354),
+    q = n(572004),
+    Y = n(176354),
     K = n(823379),
     X = n(970257),
-    J = n(418476),
-    Q = n(151007),
+    Q = n(418476),
+    J = n(151007),
     $ = n(432376),
     ee = n(373662),
     et = n(996861),
@@ -88,7 +88,7 @@ let ep = l.memo(function (e) {
     let { channel: t, message: n } = e,
         l = (0, g.q5)(t.guild_id).filter(
             (e) =>
-                !q.ZP.isEmojiFilteredOrLocked({
+                !Y.ZP.isEmojiFilteredOrLocked({
                     emoji: e,
                     channel: t,
                     intention: es.Hz.REACTION,
@@ -165,7 +165,7 @@ function em(e) {
             canForward: M,
             isExpanded: L,
             showMoreUtilities: F,
-            showEmojiPicker: q,
+            showEmojiPicker: Y,
             showMessageBookmarksActions: K,
             isMessageBookmark: ei,
             setPopout: es,
@@ -195,12 +195,12 @@ function em(e) {
                 T = (0, w.Ek)(n),
                 S = (0, c.e7)([N.Z], () => null != t.guild_id && N.Z.isLurking(t.guild_id), [t]),
                 j = (0, c.e7)([H.ZP], () => null != t.guild_id && H.ZP.isCurrentUserGuest(t.guild_id), [t]),
-                A = o.id === u,
-                y = (x || n.canDeleteOwnMessage(u)) && h && !ea.V$x.UNDELETABLE.has(n.type);
-            n.type === ea.uaV.AUTO_MODERATION_ACTION && (y = y && x);
+                y = o.id === u,
+                A = (x || n.canDeleteOwnMessage(u)) && h && !ea.V$x.UNDELETABLE.has(n.type);
+            n.type === ea.uaV.AUTO_MODERATION_ACTION && (A = A && x);
             let P = (0, X.a4)(n),
-                R = (0, Q.Z)(n, t, x),
-                M = !t.isSystemDM() && (0, J.Z)(n, u) && h && !f,
+                R = (0, J.Z)(n, t, x),
+                M = !t.isSystemDM() && (0, Q.Z)(n, u) && h && !f,
                 { disableReactionCreates: L } = (0, $.Z)({
                     channel: t,
                     canChat: C,
@@ -210,9 +210,9 @@ function em(e) {
                     isGuest: j,
                     isActiveChannelOrUnarchivableThread: h
                 }),
-                F = t.type === ea.d4z.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(ea.oNc.NEWS) && (A || x) && (0, m.Z)(n),
+                F = t.type === ea.d4z.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(ea.oNc.NEWS) && (y || x) && (0, m.Z)(n),
                 W = t.getGuildId(),
-                q = null != W && (n.type === ea.uaV.USER_JOIN || n.type === ea.uaV.GUILD_INVITE_REMINDER) && z.Z.canWithPartialContext(ea.Plq.MANAGE_GUILD, { guildId: W }),
+                Y = null != W && (n.type === ea.uaV.USER_JOIN || n.type === ea.uaV.GUILD_INVITE_REMINDER) && z.Z.canWithPartialContext(ea.Plq.MANAGE_GUILD, { guildId: W }),
                 { canForwardMessages: K } = (0, v.yk)({ location: 'useMessageUtilitiesProps' }, { autoTrackExposure: !1 }),
                 ee = (0, E.a)(n),
                 { enabled: et } = O.Z.useExperiment({ location: 'message_utilities' }),
@@ -224,17 +224,17 @@ function em(e) {
                 message: n,
                 canPin: R,
                 canEdit: M,
-                canDelete: y,
+                canDelete: A,
                 canReport: P,
                 canReply: b,
                 canStartThread: Z,
                 canViewThread: T,
                 canForward: K && ee,
-                canCopy: Y.wS,
+                canCopy: q.wS,
                 hasDeveloperMode: _,
                 canReact: !L && g,
                 canPublish: F,
-                canConfigureJoin: q,
+                canConfigureJoin: Y,
                 isExpanded: ei && !er && !i && !l && !a,
                 showEmojiPicker: i,
                 showEmojiBurstPicker: l,
@@ -255,8 +255,8 @@ function em(e) {
                 es({ moreUtilities: !F });
         }, [F, es, n]),
         ef = l.useCallback(() => {
-            es({ emojiPicker: !q });
-        }, [q, es]),
+            es({ emojiPicker: !Y });
+        }, [Y, es]),
         eg = (0, w.$R)(t),
         eC = n.hasFlag(ea.iLy.CROSSPOSTED),
         [ex, ev] = (0, f.cv)(M ? [d.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
@@ -277,8 +277,8 @@ function em(e) {
         { canShowReactionsOnMessageHover: eS } = _.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     _.Xb.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     let ej = (0, P.Z)(t, n),
-        eA = (0, y.V1)('ExpandingButtons'),
-        ey = ej && eA && !n.hasPotions(),
+        ey = (0, A.V1)('ExpandingButtons'),
+        eA = ej && ey && !n.hasPotions(),
         eP = l.useCallback(
             (e) => {
                 try {
@@ -402,12 +402,12 @@ function em(e) {
                           (0, i.jsx)(en.Z, {
                               togglePopout: ef,
                               renderEmojiPicker: e_,
-                              shouldShow: q,
+                              shouldShow: Y,
                               isFocused: eu,
                               channel: t,
                               message: n
                           }),
-                          ey
+                          eA
                               ? (0, i.jsx)(
                                     ee.sF,
                                     {
@@ -415,7 +415,7 @@ function em(e) {
                                         icon: u.l22,
                                         onClick: () => {
                                             W.default.track(ea.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: j.MG.MessageExpandingButtons }),
-                                                (0, A.s)({
+                                                (0, y.s)({
                                                     channelId: t.id,
                                                     message: n,
                                                     onRedeem: eP,

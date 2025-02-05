@@ -10,9 +10,9 @@ var l = n(481060),
     d = n(543170);
 function u(e) {
     let t,
-        { compact: u, isOwner: m, channel: h } = e,
-        _ = () => {
-            let e = a.Z.getGuild(h.getGuildId());
+        { compact: u, isOwner: m, channel: _ } = e,
+        h = () => {
+            let e = a.Z.getGuild(_.getGuildId());
             null != e &&
                 ((0, l.ZDy)(async () => {
                     let { default: t } = await Promise.all([n.e('7654'), n.e('92124')]).then(n.bind(n, 560114));
@@ -20,7 +20,7 @@ function u(e) {
                         (0, i.jsx)(t, {
                             ...n,
                             guild: e,
-                            channel: h,
+                            channel: _,
                             source: o.t4x.INVITE_SYSTEM_MESSAGE
                         });
                 }),
@@ -31,7 +31,7 @@ function u(e) {
                 l.eee,
                 {
                     className: d.inviteLink,
-                    onClick: _,
+                    onClick: h,
                     children: e
                 },
                 t
@@ -54,7 +54,7 @@ function u(e) {
                           children: m ? c.intl.string(c.t.kLfkNj) : c.intl.string(c.t.gRHGFB)
                       }),
                       (0, i.jsx)(l.zxk, {
-                          onClick: _,
+                          onClick: h,
                           size: l.zxk.Sizes.SMALL,
                           className: d.inviteButton,
                           children: c.intl.string(c.t.K1BAQ0)

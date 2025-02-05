@@ -1,13 +1,13 @@
 n.d(t, { Z: () => o });
-var i = n(200651),
-    l = n(192379),
-    a = n(846519),
-    r = n(388032);
+var l = n(200651),
+    i = n(192379),
+    r = n(846519),
+    a = n(388032);
 function s(e) {
     return ''.concat(e).length < 13 ? 1000 * e : e;
 }
 function o(e) {
-    return class extends l.PureComponent {
+    return class extends i.PureComponent {
         componentDidMount() {
             this._interval.start(1000, () => this.setState(this.getUpdatedTime()));
         }
@@ -36,31 +36,31 @@ function o(e) {
         }
         getDiff(e, t) {
             let n = Math.max(t - e, 0),
-                i = Math.floor(n) % 60,
-                l = Math.floor(n / 60) % 60;
+                l = Math.floor(n) % 60,
+                i = Math.floor(n / 60) % 60;
             return {
                 hours: Math.floor(n / 3600) % 24,
-                minutes: l,
-                seconds: i
+                minutes: i,
+                seconds: l
             };
         }
         render() {
             let { timestamps: t, ...n } = this.props,
-                { hours: l, minutes: a, seconds: s } = this.state,
+                { hours: i, minutes: r, seconds: s } = this.state,
                 o = {
-                    hours: this.renderTime(l, !0),
-                    minutes: this.renderTime(a),
+                    hours: this.renderTime(i, !0),
+                    minutes: this.renderTime(r),
                     seconds: this.renderTime(s)
                 };
             return null != t.end
-                ? (0, i.jsx)(e, {
+                ? (0, l.jsx)(e, {
                       ...n,
-                      message: r.intl.formatToPlainString(r.t['I/J7vL'], o)
+                      message: a.intl.formatToPlainString(a.t['I/J7vL'], o)
                   })
                 : null != t.start
-                  ? (0, i.jsx)(e, {
+                  ? (0, l.jsx)(e, {
                         ...n,
-                        message: r.intl.formatToPlainString(r.t.M9Fexc, o)
+                        message: a.intl.formatToPlainString(a.t.M9Fexc, o)
                     })
                   : null;
         }
@@ -76,7 +76,7 @@ function o(e) {
                           writable: !0
                       })
                     : (this[t] = n),
-                (this._interval = new a.Xp()),
+                (this._interval = new r.Xp()),
                 (this.state = { ...this.getUpdatedTime() });
         }
     };

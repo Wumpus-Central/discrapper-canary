@@ -1,52 +1,52 @@
-n.d(t, { Z: () => Q }), n(47120);
-var i,
-    l = n(200651),
-    a = n(192379),
-    r = n(120356),
-    s = n.n(r),
+n.d(t, { Z: () => X }), n(47120);
+var l,
+    i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
     o = n(512722),
-    c = n.n(o),
-    u = n(568611),
+    u = n.n(o),
+    c = n(568611),
     d = n(731965),
     m = n(442837),
     f = n(481060),
-    p = n(490173),
-    h = n(40851),
-    g = n(607070),
-    v = n(899663),
-    _ = n(636449),
-    I = n(317381),
-    S = n(496616),
-    x = n(100527),
-    E = n(906732),
-    C = n(168551),
-    Z = n(260035),
-    y = n(597952),
-    b = n(628123),
-    N = n(686546),
-    T = n(950796),
-    A = n(80006),
-    w = n(151851),
-    P = n(587061),
-    j = n(392358),
-    R = n(540059),
-    k = n(314910),
-    L = n(22205),
-    O = n(892254),
-    M = n(706454),
-    D = n(210887),
-    U = n(740492),
-    F = n(451478),
-    z = n(358085),
-    V = n(62883),
+    h = n(490173),
+    p = n(40851),
+    v = n(607070),
+    g = n(899663),
+    E = n(636449),
+    Z = n(317381),
+    x = n(496616),
+    S = n(100527),
+    C = n(906732),
+    b = n(168551),
+    I = n(260035),
+    _ = n(597952),
+    N = n(628123),
+    R = n(686546),
+    y = n(950796),
+    T = n(80006),
+    j = n(151851),
+    w = n(587061),
+    A = n(392358),
+    O = n(540059),
+    P = n(314910),
+    k = n(22205),
+    M = n(892254),
+    D = n(706454),
+    L = n(210887),
+    F = n(740492),
+    U = n(451478),
+    V = n(358085),
+    z = n(62883),
     W = n(998502),
-    B = n(473159),
-    Y = n(928518),
-    G = n(981631),
-    H = n(501787),
-    J = n(388032),
+    Y = n(473159),
+    H = n(928518),
+    B = n(981631),
+    K = n(501787),
+    G = n(388032),
     q = n(81796);
-function X(e, t, n) {
+function J(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -59,21 +59,21 @@ function X(e, t, n) {
         e
     );
 }
-class K extends (i = a.Component) {
+class Q extends (l = r.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, B.O)(e), e.addEventListener('blur', this.handleBlur), z.isPlatformEmbedded ? t.addEventListener('contextmenu', V.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', V.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload);
+        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, Y.O)(e), e.addEventListener('blur', this.handleBlur), V.isPlatformEmbedded ? t.addEventListener('contextmenu', z.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', z.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload);
     }
     componentDidUpdate(e) {
-        let { title: t, fontScale: n, locale: i, clientThemesCSS: l } = this.props;
-        e.title !== t && this.updateTitle(), e.fontScale !== n && this.updateFontScale(), e.locale !== i && this.updateLocale(), e.clientThemesCSS !== l && this.updateClientTheme(), e.saturation !== this.props.saturation && this.updateSaturationFactor(), (e.forcedColors !== this.props.forcedColors || e.systemForcedColors !== this.props.systemForcedColors) && this.updateForcedColors();
+        let { title: t, fontScale: n, locale: l, clientThemesCSS: i } = this.props;
+        e.title !== t && this.updateTitle(), e.fontScale !== n && this.updateFontScale(), e.locale !== l && this.updateLocale(), e.clientThemesCSS !== i && this.updateClientTheme(), e.saturation !== this.props.saturation && this.updateSaturationFactor(), (e.forcedColors !== this.props.forcedColors || e.systemForcedColors !== this.props.systemForcedColors) && this.updateForcedColors();
     }
     componentWillUnmount() {
         let { guestWindow: e } = this.props,
             t = e.document;
         e.removeEventListener('blur', this.handleBlur),
-            z.isPlatformEmbedded ? t.removeEventListener('contextmenu', V.contextMenuCallbackNative) : t.removeEventListener('contextmenu', V.contextMenuCallbackWeb),
+            V.isPlatformEmbedded ? t.removeEventListener('contextmenu', z.contextMenuCallbackNative) : t.removeEventListener('contextmenu', z.contextMenuCallbackWeb),
             (0, d.j)(() =>
                 f.s9z.setState((e) => ({
                     ...e,
@@ -85,12 +85,12 @@ class K extends (i = a.Component) {
     updateSaturationFactor() {
         let { saturation: e, guestWindow: t } = this.props,
             n = t.document.documentElement;
-        c()(null != n, 'Window document element was null'), n.style.setProperty('--saturation-factor', e.toString());
+        u()(null != n, 'Window document element was null'), n.style.setProperty('--saturation-factor', e.toString());
     }
     updateLocale() {
         let { locale: e, guestWindow: t } = this.props,
             n = t.document.documentElement;
-        c()(null != n, 'Window document element was null'), (n.lang = e);
+        u()(null != n, 'Window document element was null'), (n.lang = e);
     }
     updateTitle() {
         let { title: e, guestWindow: t } = this.props,
@@ -100,88 +100,88 @@ class K extends (i = a.Component) {
     updateFontScale() {
         let { fontScale: e, guestWindow: t } = this.props,
             n = t.document.documentElement;
-        c()(null != n, 'Window document element was null'), (n.style.fontSize = ''.concat(e, '%'));
+        u()(null != n, 'Window document element was null'), (n.style.fontSize = ''.concat(e, '%'));
     }
     updateClientTheme() {
         let { clientThemesCSS: e, guestWindow: t } = this.props,
             n = t.document,
-            i = n.head;
-        c()(null != i, 'Window document '.concat('head', ' was null'));
-        let l = i.querySelector('style['.concat(C.PQ, ']'));
-        if (null != l) {
-            l.textContent = e;
+            l = n.head;
+        u()(null != l, 'Window document '.concat('head', ' was null'));
+        let i = l.querySelector('style['.concat(b.PQ, ']'));
+        if (null != i) {
+            i.textContent = e;
             return;
         }
-        let a = n.createElement('style');
-        a.setAttribute(C.PQ, 'true'), (a.textContent = e), i.appendChild(a);
+        let r = n.createElement('style');
+        r.setAttribute(b.PQ, 'true'), (r.textContent = e), l.appendChild(r);
     }
     updateForcedColors() {
         let { useForcedColors: e, systemForcedColors: t, guestWindow: n } = this.props,
-            i = n.document.documentElement;
-        i.classList.toggle('disable-forced-colors', !e && 'active' === t), i.classList.toggle('enable-forced-colors', e && 'active' === t);
+            l = n.document.documentElement;
+        l.classList.toggle('disable-forced-colors', !e && 'active' === t), l.classList.toggle('enable-forced-colors', e && 'active' === t);
     }
     render() {
-        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: a, windowKey: r, isRefreshEnabled: o, isRefreshChatInputEnabled: c, mouseModeEnabled: d, reducedMotionEnabled: m, fontScaleClass: g, withTitleBar: _, guestWindow: I, clientThemesClassName: S, contentClassName: x, appWrapperClassName: E } = this.props,
-            C = (0, z.getPlatform)(),
-            A = s()(g, {
+        let { theme: e, forcedColors: t, focused: n, appFocused: l, children: r, windowKey: a, isRefreshEnabled: o, isRefreshChatInputEnabled: u, mouseModeEnabled: d, reducedMotionEnabled: m, fontScaleClass: v, withTitleBar: E, guestWindow: Z, clientThemesClassName: x, contentClassName: S, appWrapperClassName: C } = this.props,
+            b = (0, V.getPlatform)(),
+            T = s()(v, {
                 'mouse-mode': d,
                 'reduce-motion': m,
                 'full-motion': !m,
-                'app-focused': n || i,
+                'app-focused': n || l,
                 'visual-refresh': o,
-                'visual-refresh-chat-input': c
+                'visual-refresh-chat-input': u
             }),
-            P = r === H.$J ? L.Z : b.Z;
-        return (0, l.jsx)(u.VK, {
-            children: (0, l.jsx)(
-                O.Z,
+            w = a === K.$J ? k.Z : N.Z;
+        return (0, i.jsx)(c.VK, {
+            children: (0, i.jsx)(
+                M.Z,
                 {
-                    children: (0, l.jsx)(f.f6W, {
+                    children: (0, i.jsx)(f.f6W, {
                         theme: e,
                         children: (e) =>
-                            (0, l.jsx)(f.vWI, {
-                                children: (0, l.jsx)('div', {
+                            (0, i.jsx)(f.vWI, {
+                                children: (0, i.jsx)('div', {
                                     'data-popout-root': !0,
                                     ref: this.rootRef,
-                                    className: s()(e, (0, y.Z)(), A, S, E),
-                                    children: (0, l.jsx)(f.JcV, {
+                                    className: s()(e, (0, _.Z)(), T, x, C),
+                                    children: (0, i.jsx)(f.JcV, {
                                         containerRef: this.rootRef,
-                                        children: (0, l.jsx)(v.Z, {
-                                            children: (0, l.jsxs)(P, {
+                                        children: (0, i.jsx)(g.Z, {
+                                            children: (0, i.jsxs)(w, {
                                                 children: [
-                                                    (0, l.jsx)(N.Co, {}),
-                                                    (0, l.jsx)(h.Wu, {
-                                                        appContext: G.IlC.POPOUT,
-                                                        renderWindow: I,
-                                                        children: (0, l.jsx)(Z.m, {
-                                                            children: (0, l.jsxs)(k.yP, {
+                                                    (0, i.jsx)(R.Co, {}),
+                                                    (0, i.jsx)(p.Wu, {
+                                                        appContext: B.IlC.POPOUT,
+                                                        renderWindow: Z,
+                                                        children: (0, i.jsx)(I.m, {
+                                                            children: (0, i.jsxs)(P.yP, {
                                                                 children: [
-                                                                    (0, l.jsxs)('div', {
+                                                                    (0, i.jsxs)('div', {
                                                                         className: q.popout,
                                                                         children: [
                                                                             o &&
-                                                                                _ &&
-                                                                                (0, l.jsx)(T.T, {
-                                                                                    windowKey: r,
+                                                                                E &&
+                                                                                (0, i.jsx)(y.T, {
+                                                                                    windowKey: a,
                                                                                     short: !0
                                                                                 }),
-                                                                            !o && _ && null != C
-                                                                                ? (0, l.jsx)(w.Z, {
+                                                                            !o && E && null != b
+                                                                                ? (0, i.jsx)(j.Z, {
                                                                                       focused: n,
-                                                                                      type: C,
-                                                                                      windowKey: r,
+                                                                                      type: b,
+                                                                                      windowKey: a,
                                                                                       macOSFrame: !0
                                                                                   })
                                                                                 : null,
-                                                                            (0, l.jsx)('div', {
-                                                                                className: s()(q.content, x),
-                                                                                children: a
+                                                                            (0, i.jsx)('div', {
+                                                                                className: s()(q.content, S),
+                                                                                children: r
                                                                             })
                                                                         ]
                                                                     }),
-                                                                    (0, l.jsx)(f.nKe, {}),
-                                                                    (0, l.jsx)(p.Z, {}),
-                                                                    (0, l.jsx)(k.Un, {})
+                                                                    (0, i.jsx)(f.nKe, {}),
+                                                                    (0, i.jsx)(h.Z, {}),
+                                                                    (0, i.jsx)(P.Un, {})
                                                                 ]
                                                             })
                                                         })
@@ -200,78 +200,78 @@ class K extends (i = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            X(this, 'rootRef', a.createRef()),
-            X(this, '_cleanupWindowActionCreators', void 0),
-            X(this, 'beforeUnload', (e) => {
+            J(this, 'rootRef', r.createRef()),
+            J(this, '_cleanupWindowActionCreators', void 0),
+            J(this, 'beforeUnload', (e) => {
                 let t = () => {
-                    Y.Z.unmountWindow(this.props.windowKey), z.isPlatformEmbedded && W.ZP.close(this.props.windowKey);
+                    H.Z.unmountWindow(this.props.windowKey), V.isPlatformEmbedded && W.ZP.close(this.props.windowKey);
                 };
-                if (this.props.connectedToEmbeddedActivity && !U.ZP.disableEmbeddedActivityPopOutAlert) {
-                    if (!z.isPlatformEmbedded) return;
-                    (0, _.R)()
+                if (this.props.connectedToEmbeddedActivity && !F.ZP.disableEmbeddedActivityPopOutAlert) {
+                    if (!V.isPlatformEmbedded) return;
+                    (0, E.R)()
                         ? t()
-                        : ((e.returnValue = J.intl.string(J.t['bST/Y2'])),
-                          (0, S.Z)(() => {
+                        : ((e.returnValue = G.intl.string(G.t['bST/Y2'])),
+                          (0, x.Z)(() => {
                               t();
                           }));
                 } else t();
             }),
-            X(this, 'handleBlur', () => {
+            J(this, 'handleBlur', () => {
                 var e, t;
                 null === (e = (t = this.props).onBlur) || void 0 === e || e.call(t);
             });
     }
 }
-X(K, 'defaultProps', { withTitleBar: !0 });
-let Q = a.forwardRef(function (e, t) {
-    let { guestWindow: n, focused: i } = (0, m.cj)([Y.Z], () => ({
-        guestWindow: Y.Z.getWindow(e.windowKey),
-        focused: Y.Z.getWindowFocused(e.windowKey)
+J(Q, 'defaultProps', { withTitleBar: !0 });
+let X = r.forwardRef(function (e, t) {
+    let { guestWindow: n, focused: l } = (0, m.cj)([H.Z], () => ({
+        guestWindow: H.Z.getWindow(e.windowKey),
+        focused: H.Z.getWindowFocused(e.windowKey)
     }));
-    c()(null != n, 'Missing guestWindow reference');
-    let a = (0, R.Q3)('PopoutWindow'),
-        r = (0, R.R6)('PopoutWindow'),
-        s = (0, m.e7)([F.Z], () => F.Z.isFocused()),
-        { locale: o, theme: u } = (0, m.cj)([D.Z, M.default], () => ({
-            locale: M.default.locale,
-            theme: D.Z.theme
+    u()(null != n, 'Missing guestWindow reference');
+    let r = (0, O.Q3)('PopoutWindow'),
+        a = (0, O.R6)('PopoutWindow'),
+        s = (0, m.e7)([U.Z], () => U.Z.isFocused()),
+        { locale: o, theme: c } = (0, m.cj)([L.Z, D.default], () => ({
+            locale: D.default.locale,
+            theme: L.Z.theme
         })),
-        d = (0, m.e7)([g.Z], () => (g.Z.useForcedColors ? 'yes' : 'no')),
-        { accessibilitySettings: p, appWrapperClassName: h } = (0, A.I)(),
-        v = (0, m.e7)([I.ZP], () => null != e.channelId && null !== I.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
-    (0, P.Z)(n, !1);
-    let _ = (0, j.Z)(n, i),
-        { analyticsLocations: S } = (0, E.ZP)(x.Z.POPOUT_WINDOW),
-        { clientThemesClassName: Z, clientThemesCSS: y } = (0, C.ZP)();
+        d = (0, m.e7)([v.Z], () => (v.Z.useForcedColors ? 'yes' : 'no')),
+        { accessibilitySettings: h, appWrapperClassName: p } = (0, T.I)(),
+        g = (0, m.e7)([Z.ZP], () => null != e.channelId && null !== Z.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+    (0, w.Z)(n, !1);
+    let E = (0, A.Z)(n, l),
+        { analyticsLocations: x } = (0, C.ZP)(S.Z.POPOUT_WINDOW),
+        { clientThemesClassName: I, clientThemesCSS: _ } = (0, b.ZP)();
     return null == n
         ? null
-        : (0, l.jsx)(f.Sle, {
-              children: (0, l.jsx)(E.Gt, {
-                  value: S,
-                  children: (0, l.jsx)(K, {
+        : (0, i.jsx)(f.Sle, {
+              children: (0, i.jsx)(C.Gt, {
+                  value: x,
+                  children: (0, i.jsx)(Q, {
                       ref: t,
                       ...e,
                       guestWindow: n,
-                      focused: i,
+                      focused: l,
                       appFocused: s,
                       locale: o,
-                      theme: u,
+                      theme: c,
                       forcedColors: d,
-                      useForcedColors: p.useForcedColors,
-                      systemForcedColors: p.systemForcedColors,
-                      fontScale: p.fontScale,
-                      keyboardModeEnabled: p.keyboardModeEnabled,
-                      mouseModeEnabled: _,
-                      reducedMotionEnabled: p.useReducedMotion,
-                      connectedToEmbeddedActivity: v,
-                      fontScaleClass: p.fontScaleClass,
-                      saturation: p.saturation,
-                      alwaysShowLinkDecorations: p.alwaysShowLinkDecorations,
-                      clientThemesClassName: Z,
-                      clientThemesCSS: y,
-                      appWrapperClassName: h,
-                      isRefreshEnabled: a,
-                      isRefreshChatInputEnabled: r
+                      useForcedColors: h.useForcedColors,
+                      systemForcedColors: h.systemForcedColors,
+                      fontScale: h.fontScale,
+                      keyboardModeEnabled: h.keyboardModeEnabled,
+                      mouseModeEnabled: E,
+                      reducedMotionEnabled: h.useReducedMotion,
+                      connectedToEmbeddedActivity: g,
+                      fontScaleClass: h.fontScaleClass,
+                      saturation: h.saturation,
+                      alwaysShowLinkDecorations: h.alwaysShowLinkDecorations,
+                      clientThemesClassName: I,
+                      clientThemesCSS: _,
+                      appWrapperClassName: p,
+                      isRefreshEnabled: r,
+                      isRefreshChatInputEnabled: a
                   })
               })
           });

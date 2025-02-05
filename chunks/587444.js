@@ -12,8 +12,8 @@ var r = n(120356),
     c = n(600164),
     d = n(981631),
     u = n(388032),
-    h = n(897927),
-    _ = n(652849),
+    _ = n(897927),
+    h = n(652849),
     g = n(232186);
 function p(e) {
     let { text: t, buttonCta: r, onClick: d } = e;
@@ -21,7 +21,7 @@ function p(e) {
         children: [
             (0, i.jsx)(s.Ee, { src: n(689411) }),
             (0, i.jsx)(s.Dx, {
-                className: l()(g.marginTop20, g.marginBottom8, _.flexCenter),
+                className: l()(g.marginTop20, g.marginBottom8, h.flexCenter),
                 children: u.intl.string(u.t.eL5z0t)
             }),
             (0, i.jsx)(s.DK, {
@@ -29,34 +29,34 @@ function p(e) {
                 children: u.intl.string(u.t['poAv6+'])
             }),
             (0, i.jsxs)(o.Zbd, {
-                className: h.card,
+                className: _.card,
                 type: o.Zbd.Types.CUSTOM,
                 children: [
                     (0, i.jsx)('img', {
                         alt: '',
-                        className: h.cardAccentLeft,
+                        className: _.cardAccentLeft,
                         src: n(70519)
                     }),
                     (0, i.jsx)('img', {
                         alt: '',
-                        className: h.cardAccentRight,
+                        className: _.cardAccentRight,
                         src: n(806848)
                     }),
                     (0, i.jsxs)(c.Z, {
-                        className: h.cardContents,
+                        className: _.cardContents,
                         direction: c.Z.Direction.VERTICAL,
                         align: c.Z.Align.STRETCH,
                         grow: 0,
                         children: [
                             (0, i.jsx)(o.Text, {
                                 tag: 'strong',
-                                className: h.buttonTitle,
+                                className: _.buttonTitle,
                                 variant: 'text-md/normal',
                                 style: { color: a.Z.unsafe_rawColors.PRIMARY_300.css },
                                 children: t
                             }),
                             (0, i.jsx)(s.zx, {
-                                className: h.button,
+                                className: _.button,
                                 onClick: d,
                                 children: r
                             })

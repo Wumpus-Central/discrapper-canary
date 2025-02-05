@@ -75,10 +75,10 @@ function I(e) {
                 }
             );
         })(n),
-        A = l.useCallback(() => {
+        y = l.useCallback(() => {
             null == u || u(), !N && p && (null == g || g()), c.Z.updateChatOpen(n, !N);
         }, [n, N, u, p, g]),
-        y = l.useCallback(
+        A = l.useCallback(
             (e) => {
                 let { className: t } = e;
                 return (0, i.jsx)(E, {
@@ -122,10 +122,10 @@ function I(e) {
         S > 0 && k.push(x.intl.string(x.t.x5zAGR)),
         (0, i.jsx)(_.Z, {
             buttonRef: Z,
-            onClick: A,
+            onClick: y,
             label: t,
             'aria-label': k.join(', '),
-            iconComponent: y,
+            iconComponent: A,
             tooltipPosition: 'bottom',
             wrapperClassName: r()(a, null != s && { [s]: T }),
             forceTooltipOpen: R,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(757143);
+n.d(t, { Z: () => _ }), n(757143);
 var i,
     r,
     l,
@@ -9,7 +9,7 @@ var i,
     d = n(108427),
     u = n(559786);
 s.ZP.initialize();
-class h extends (i = o.PureComponent) {
+class _ extends (i = o.PureComponent) {
     componentDidMount() {
         (0, d.e)('account_revert');
     }
@@ -30,11 +30,11 @@ class h extends (i = o.PureComponent) {
         transitionTo: (e) => n.g.location.assign(e),
         replaceWith: (e) => n.g.location.replace(e)
     }),
-    r in h
-        ? Object.defineProperty(h, r, {
+    r in _
+        ? Object.defineProperty(_, r, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (h[r] = l);
+        : (_[r] = l);

@@ -21,14 +21,14 @@ let C = (e) => {
         T = (0, s.e7)([h.Z], () => h.Z.effectCooldownEndTime),
         S = l.useMemo(() => (null != T ? (T.getTime() - Date.now()) / 1000 : 0), [T]),
         { seconds: j } = (0, c.Z)(null != T ? T : new Date()),
-        A = j > 0,
-        { groupedButtons: y, mode: P } = (0, p.ZP)({ location: 'ActionBarSoundboardButton' }),
+        y = j > 0,
+        { groupedButtons: A, mode: P } = (0, p.ZP)({ location: 'ActionBarSoundboardButton' }),
         R = P === p.BK.GroupedButtonsRedMic ? 'green' : void 0,
         M = l.useCallback(
             (e) => {
-                'focus' !== e.type && (Z || A || E());
+                'focus' !== e.type && (Z || y || E());
             },
-            [Z, A, E]
+            [Z, y, E]
         ),
         L = l.useCallback(() => {
             Z || I();
@@ -42,8 +42,8 @@ let C = (e) => {
         O = (x || Z) && (a === f.D.EMOJI || null == a);
     return (0, i.jsx)(o.yRy, {
         shouldShow: O,
-        animation: y ? o.yRy.Animation.FADE : o.yRy.Animation.TRANSLATE,
-        animationPosition: y ? 'top' : 'bottom',
+        animation: A ? o.yRy.Animation.FADE : o.yRy.Animation.TRANSLATE,
+        animationPosition: A ? 'top' : 'bottom',
         position: 'bottom',
         align: 'center',
         spacing: 16,
@@ -68,7 +68,7 @@ let C = (e) => {
                 color: Z ? R : void 0,
                 totalCooldownSeconds: S,
                 remainingCooldownSeconds: j,
-                className: r()(!y && _.controlButton, n),
+                className: r()(!A && _.controlButton, n),
                 onKeyDown: (e) => {
                     e.keyCode === g.yXg.ENTER && e.keyCode === g.yXg.SPACE && k(e, l);
                 },

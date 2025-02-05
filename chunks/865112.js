@@ -1,9 +1,9 @@
 n.d(t, {
     RB: () => I,
-    VH: () => E,
+    VH: () => C,
     Vi: () => N,
     Vu: () => S,
-    q7: () => v
+    q7: () => E
 });
 var i = n(692547),
     l = n(497089),
@@ -15,8 +15,8 @@ var i = n(692547),
     d = n(319707),
     u = n(584914),
     m = n(334702),
-    h = n(333722),
-    _ = n(549931),
+    _ = n(333722),
+    h = n(549931),
     p = n(178561),
     g = n(39863),
     f = n(130312);
@@ -24,10 +24,10 @@ let x = {
         CHECKED: o,
         FRIENDS: d,
         SHARE_SCREEN: g,
-        NEW_MESSAGE: _
+        NEW_MESSAGE: h
     },
-    E = {
-        MISSED_MESSAGES: h,
+    C = {
+        MISSED_MESSAGES: _,
         FRIEND_REQUEST_REMINDER: u,
         SCHEDULED_GUILD_EVENT: c,
         TOP_MESSAGES: m,
@@ -37,7 +37,7 @@ let x = {
         ADD_FRIEND: r,
         FIRST_MESSAGE: p
     },
-    C = (e) => {
+    v = (e) => {
         switch (e.item_enum) {
             case l.AM.ADD_FRIEND:
                 return 'ADD_FRIEND';
@@ -51,10 +51,10 @@ let x = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    v = (e) => {
+    E = (e) => {
         switch (e.type) {
             case 'lifecycle_item':
-                return C(e);
+                return v(e);
             case 'missed_messages':
                 return 'MISSED_MESSAGES';
             case 'friend_request_reminder':

@@ -81,7 +81,7 @@ function P(e) {
 function D(e) {
     var t;
     let { rawGame: n, nowPlaying: r = !1, isOverride: g } = e,
-        C = (0, a.cj)([x.Z, h.ZP, p.Z], () => (0, h.FZ)(n)),
+        C = (0, a.cj)([h.ZP, x.Z, p.Z], () => (0, h.FZ)(n, [h.ZP, x.Z, p.Z])),
         [f, T] = s.useState(!1),
         [b, A] = s.useState(null !== (t = C.name) && void 0 !== t ? t : '???'),
         O = l()(v.flexCenter, {
@@ -262,7 +262,7 @@ function D(e) {
                                     className: S.toggleIcon,
                                     onClick: () => {
                                         var t;
-                                        return (t = !e), void d.Z.toggleOverlay(C, t);
+                                        return (t = !e), void d.Z.toggleOverlay(C, t, t);
                                     },
                                     onMouseEnter: s,
                                     onMouseLeave: r,

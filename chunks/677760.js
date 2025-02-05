@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(587444),
     d = n(393238),
     u = n(388905),
-    h = n(108427),
-    _ = n(314897),
+    _ = n(108427),
+    h = n(314897),
     g = n(701190),
     p = n(626135),
     m = n(768581),
@@ -66,7 +66,7 @@ function b(e) {
 function Z(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: a, innerStyle: s, ...c } = e,
         { invite: u } = c,
-        [h, _] = r.useState(A(u)),
+        [_, h] = r.useState(A(u)),
         { ref: g, height: p } = (0, d.Z)(),
         m = (0, o.q_F)({
             height: null != p && 0 !== p ? ''.concat(p, 'px') : ''.concat(a, 'px'),
@@ -75,8 +75,8 @@ function Z(e) {
     return (
         r.useEffect(() => {
             let e = A(u);
-            e !== h && _(e);
-        }, [u, h]),
+            e !== _ && h(e);
+        }, [u, _]),
         (0, i.jsxs)(l.animated.div, {
             className: T.inviteCard,
             style: m,
@@ -86,8 +86,8 @@ function Z(e) {
                     style: m,
                     children: (0, i.jsx)('section', {
                         ref: g,
-                        className: null == s ? void 0 : s(h),
-                        children: t(h)
+                        className: null == s ? void 0 : s(_),
+                        children: t(_)
                     })
                 }),
                 n
@@ -167,7 +167,7 @@ function O(e) {
         l = (0, a.e7)([g.Z], () => g.Z.getInvite(t));
     return (
         r.useEffect(() => {
-            (0, h.e)('invite_mobile');
+            (0, _.e)('invite_mobile');
         }, []),
         r.useEffect(() => {
             null != l &&
@@ -194,8 +194,8 @@ function O(e) {
                             inviter_id: null == n ? void 0 : null === (l = n.inviter) || void 0 === l ? void 0 : l.id
                         });
                     let a = null != n && n.state !== N.r2o.EXPIRED && n.state !== N.r2o.BANNED ? t : void 0,
-                        o = _.default.getFingerprint(),
-                        c = null != o ? o : _.default.getId(),
+                        o = h.default.getFingerprint(),
+                        c = null != o ? o : h.default.getId(),
                         d = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
                     s.Z.openApp(a, void 0, c, void 0, d);
                 })(e, t, l);

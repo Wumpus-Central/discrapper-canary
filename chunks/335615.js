@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(677432),
     S = n(178762),
     j = n(868671),
-    A = n(82295),
-    y = n(91218),
+    y = n(82295),
+    A = n(91218),
     P = n(313201),
     R = n(540059),
     M = n(623624),
@@ -43,8 +43,8 @@ var i = n(200651),
     V = n(823379),
     z = n(51144),
     W = n(998502),
-    Y = n(981631),
-    q = n(388032),
+    q = n(981631),
+    Y = n(388032),
     K = n(973249);
 function X(e, t, n) {
     return (
@@ -59,8 +59,8 @@ function X(e, t, n) {
         e
     );
 }
-let J = W.ZP.getEnableHardwareAcceleration(),
-    Q = 44 + x.x,
+let Q = W.ZP.getEnableHardwareAcceleration(),
+    J = 44 + x.x,
     $ = {
         origin: {
             x: 38,
@@ -95,7 +95,7 @@ class ee extends l.Component {
                 return (0, i.jsx)(x.Z, {
                     className: K.member,
                     onContextMenu: this.renderUserContextMenu,
-                    shouldAnimateStatus: J,
+                    shouldAnimateStatus: Q,
                     user: a,
                     currentUser: r,
                     nick: l,
@@ -122,7 +122,7 @@ class ee extends l.Component {
         super(...e),
             X(this, 'renderUserContextMenu', (e) => {
                 (0, g.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('13125'), n.e('64899')]).then(n.bind(n, 757387));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('7717'), n.e('11875')]).then(n.bind(n, 757387));
                     return (t) =>
                         (0, i.jsx)(e, {
                             ...t,
@@ -137,7 +137,7 @@ class ee extends l.Component {
                 let { user: e, channel: t } = this.props,
                     n = '@'.concat(z.ZP.getUserTag(e, { decoration: 'never' })),
                     i = '<@'.concat(e.id, '>');
-                G.S.dispatchToLastSubscribed(Y.CkL.INSERT_TEXT, {
+                G.S.dispatchToLastSubscribed(q.CkL.INSERT_TEXT, {
                     plainText: n,
                     rawText: i
                 }),
@@ -150,8 +150,8 @@ class ee extends l.Component {
                     (0, M.f)({
                         guildId: t,
                         location: {
-                            section: Y.jXE.MEMBER_LIST,
-                            object: Y.qAy.BOOST_GEM_ICON
+                            section: q.jXE.MEMBER_LIST,
+                            object: q.qAy.BOOST_GEM_ICON
                         }
                     }));
             }),
@@ -195,16 +195,16 @@ let et = l.memo((e) => {
                 guildId: a,
                 size: 16
             });
-        return t === Y.Skl.UNKNOWN
+        return t === q.Skl.UNKNOWN
             ? (0, i.jsx)('div', {
                   className: K.membersGroup,
                   children: (0, i.jsx)('div', { className: K.memberGroupsPlaceholder })
               })
-            : (0, i.jsxs)(A.Z, {
+            : (0, i.jsxs)(y.Z, {
                   className: K.membersGroup,
                   children: [
                       (0, i.jsx)(f.nn4, {
-                          children: q.intl.format(q.t.UaqbkZ, {
+                          children: Y.intl.format(Y.t.UaqbkZ, {
                               title: n,
                               count: l
                           })
@@ -213,7 +213,7 @@ let et = l.memo((e) => {
                           'aria-hidden': !0,
                           children: [
                               null != r
-                                  ? (0, i.jsx)(y.Z, {
+                                  ? (0, i.jsx)(A.Z, {
                                         className: K.roleIcon,
                                         ...r
                                     })
@@ -284,7 +284,7 @@ class el extends l.Component {
                                 component: (0, i.jsx)(f.nn4, {
                                     children: (0, i.jsx)(f.H, {
                                         id: a,
-                                        children: q.intl.format(q.t.JBQxV1, { channel: n.name })
+                                        children: Y.intl.format(Y.t.JBQxV1, { channel: n.name })
                                     })
                                 }),
                                 children: (0, i.jsx)(c.SJ, {
@@ -294,7 +294,7 @@ class el extends l.Component {
                                             f.aVo,
                                             {
                                                 innerRole: s,
-                                                innerAriaLabel: q.intl.string(q.t['9Oq93t']),
+                                                innerAriaLabel: Y.intl.string(Y.t['9Oq93t']),
                                                 ref: (e) => {
                                                     var t;
                                                     (this._list = e), (this.props.listRef.current = e), (a.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
@@ -476,14 +476,14 @@ class el extends l.Component {
                     .slice(0, n + 1)
                     .filter(V.lm);
                 if (0 === i.length) return;
-                let l = i.reduce((e, t) => (t.type !== U.so.MEMBER || (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some((e) => e.type === Y.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++), e), {
+                let l = i.reduce((e, t) => (t.type !== U.so.MEMBER || (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some((e) => e.type === q.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++), e), {
                     num_users_visible: 0,
                     num_users_visible_with_mobile_indicator: 0,
                     num_users_visible_with_game_activity: 0,
                     num_users_visible_with_activity: 0,
                     num_users_visible_with_avatar_decoration: 0
                 });
-                (this.lastReportedAnalyticsChannel = this.props.channel.id), I.ZP.trackWithMetadata(Y.rMx.MEMBER_LIST_VIEWED, { ...l });
+                (this.lastReportedAnalyticsChannel = this.props.channel.id), I.ZP.trackWithMetadata(q.rMx.MEMBER_LIST_VIEWED, { ...l });
             });
     }
 }
@@ -505,7 +505,7 @@ function ea(e) {
         _ = l.useRef(null),
         C = (0, R.Q3)('ChannelMembers'),
         { density: x } = (0, f.TCT)(),
-        I = C ? ('compact' === x ? 42 : 50) : Q,
+        I = C ? ('compact' === x ? 42 : 50) : J,
         Z = l.useCallback(
             (e, t) => {
                 let n = _.current;

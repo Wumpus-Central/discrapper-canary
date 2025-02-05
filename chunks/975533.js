@@ -96,7 +96,7 @@ let x = {
     [S.kg4.TOGGLE_OVERLAY]: {
         onTrigger() {
             let e = C.Z.enabled;
-            r.Z.setEnabled(!e, C.Z.legacyEnabled, !1);
+            r.Z.setEnabled(!e, !e);
         },
         keyEvents: {
             keyup: !0,

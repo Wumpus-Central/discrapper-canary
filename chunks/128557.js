@@ -30,8 +30,8 @@ var i = n(200651),
     T = n(709054),
     S = n(967128),
     j = n(981631),
-    A = n(231873),
-    y = n(388032),
+    y = n(231873),
+    A = n(388032),
     P = n(567522),
     R = n(881454),
     M = n(435921),
@@ -91,14 +91,14 @@ function w(e) {
         {
             handleInvite: z,
             handleMessage: W,
-            handlePersonalize: Y,
-            handleDownload: q,
+            handlePersonalize: q,
+            handleDownload: Y,
             handleAddApplication: K
         } = (function (e) {
             let t = l.useCallback(() => {
                     p.ZP.trackWithMetadata(j.rMx.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: A.Ft.CHANNEL_WELCOME,
-                        action: A.j7.INVITE
+                        setup_type: y.Ft.CHANNEL_WELCOME,
+                        action: y.j7.INVITE
                     }),
                         null != e &&
                             (0, d.ZDy)(async () => {
@@ -114,8 +114,8 @@ function w(e) {
                 }, [e]),
                 a = l.useCallback(() => {
                     p.ZP.trackWithMetadata(j.rMx.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: A.Ft.CHANNEL_WELCOME,
-                        action: A.j7.SEND_MESSAGE
+                        setup_type: y.Ft.CHANNEL_WELCOME,
+                        action: y.j7.SEND_MESSAGE
                     }),
                         b.S.dispatch(j.CkL.TEXTAREA_FOCUS, {
                             highlight: !0,
@@ -124,8 +124,8 @@ function w(e) {
                 }, []),
                 r = l.useCallback(() => {
                     p.ZP.trackWithMetadata(j.rMx.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: A.Ft.CHANNEL_WELCOME,
-                        action: A.j7.PERSONALIZE_SERVER
+                        setup_type: y.Ft.CHANNEL_WELCOME,
+                        action: y.j7.PERSONALIZE_SERVER
                     }),
                         null != e && g.Z.open(e.id, (0, C.r)(e.id), { section: j.jXE.CHANNEL_WELCOME_CTA });
                 }, [e]);
@@ -135,8 +135,8 @@ function w(e) {
                 handlePersonalize: r,
                 handleDownload: l.useCallback(() => {
                     p.ZP.trackWithMetadata(j.rMx.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: A.Ft.CHANNEL_WELCOME,
-                        action: A.j7.DOWNLOAD
+                        setup_type: y.Ft.CHANNEL_WELCOME,
+                        action: y.j7.DOWNLOAD
                     }),
                         (0, d.ZDy)(async () => {
                             let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
@@ -150,8 +150,8 @@ function w(e) {
                 handleAddApplication: l.useCallback(() => {
                     null != e &&
                         (p.ZP.trackWithMetadata(j.rMx.SERVER_SETUP_CTA_CLICKED, {
-                            setup_type: A.Ft.CHANNEL_WELCOME,
-                            action: A.j7.ADD_APP
+                            setup_type: y.Ft.CHANNEL_WELCOME,
+                            action: y.j7.ADD_APP
                         }),
                         (0, d.ZDy)(async () => {
                             let { default: t } = await n.e('77875').then(n.bind(n, 657300));
@@ -168,7 +168,7 @@ function w(e) {
             };
         })(a),
         X = !(F || H || G || V),
-        { titleAnimatedStyle: J, opacities: Q } = (function (e) {
+        { titleAnimatedStyle: Q, opacities: J } = (function (e) {
             let t = (0, u.Z)(() => new s.Z.Value(0)),
                 n = (0, u.Z)(() => new s.Z.Value(0)),
                 i = (0, u.Z)(() => [new s.Z.Value(0), new s.Z.Value(0), new s.Z.Value(0), new s.Z.Value(0)]);
@@ -247,10 +247,10 @@ function w(e) {
                     s.Z.div,
                     {
                         className: P.cardWrapper,
-                        style: X ? { opacity: Q[ei.length] } : {},
+                        style: X ? { opacity: J[ei.length] } : {},
                         children: (0, i.jsx)(D, {
                             iconUrl: en ? d.YvY : L,
-                            header: y.intl.string(y.t.q9n0TU),
+                            header: A.intl.string(A.t.q9n0TU),
                             completed: H,
                             onClick: z
                         })
@@ -264,12 +264,12 @@ function w(e) {
                     s.Z.div,
                     {
                         className: P.cardWrapper,
-                        style: X ? { opacity: Q[ei.length] } : {},
+                        style: X ? { opacity: J[ei.length] } : {},
                         children: (0, i.jsx)(D, {
                             iconUrl: en ? d.$_T : k,
-                            header: y.intl.string(y.t.c5kxPj),
+                            header: A.intl.string(A.t.c5kxPj),
                             completed: V,
-                            onClick: Y
+                            onClick: q
                         })
                     },
                     'customize'
@@ -281,10 +281,10 @@ function w(e) {
                     s.Z.div,
                     {
                         className: P.cardWrapper,
-                        style: X ? { opacity: Q[ei.length] } : {},
+                        style: X ? { opacity: J[ei.length] } : {},
                         children: (0, i.jsx)(D, {
                             iconUrl: en ? d.qMX : O,
-                            header: y.intl.string(y.t['SoP7+v']),
+                            header: A.intl.string(A.t['SoP7+v']),
                             completed: G,
                             onClick: W
                         })
@@ -298,12 +298,12 @@ function w(e) {
                     s.Z.div,
                     {
                         className: P.cardWrapper,
-                        style: X ? { opacity: Q[ei.length] } : {},
+                        style: X ? { opacity: J[ei.length] } : {},
                         children: (0, i.jsx)(D, {
                             iconUrl: en ? d.yIb : M,
-                            header: y.intl.string(y.t.pGVNIy),
+                            header: A.intl.string(A.t.pGVNIy),
                             completed: F,
-                            onClick: q
+                            onClick: Y
                         })
                     },
                     'download'
@@ -314,10 +314,10 @@ function w(e) {
                 s.Z.div,
                 {
                     className: P.cardWrapper,
-                    style: X ? { opacity: Q[ei.length] } : {},
+                    style: X ? { opacity: J[ei.length] } : {},
                     children: (0, i.jsx)(D, {
                         iconUrl: en ? d.vdZ : R,
-                        header: y.intl.string(y.t.IhHDEB),
+                        header: A.intl.string(A.t.IhHDEB),
                         completed: et,
                         onClick: K
                     })
@@ -325,8 +325,8 @@ function w(e) {
                 'addapp'
             )
         ));
-    let el = I ? y.intl.string(y.t['1ach9P']) : y.intl.string(y.t['ezm+/v']);
-    h && (el = y.intl.string(y.t['gwyU/P']));
+    let el = I ? A.intl.string(A.t['1ach9P']) : A.intl.string(A.t['ezm+/v']);
+    h && (el = A.intl.string(A.t['gwyU/P']));
     let ea = ''.concat(Z.Z.getArticleURL(j.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
     return (0, i.jsx)(S.ZP, {
         channelId: t.id,
@@ -336,12 +336,12 @@ function w(e) {
                 className: P.inner,
                 children: [
                     (0, i.jsxs)(s.Z.div, {
-                        style: J,
+                        style: Q,
                         children: [
                             (0, i.jsx)(d.X6q, {
                                 className: P.titleName,
                                 variant: 'heading-xxl/semibold',
-                                children: y.intl.format(y.t.rkHVKS, { guildName: a.name })
+                                children: A.intl.format(A.t.rkHVKS, { guildName: a.name })
                             }),
                             (0, i.jsxs)(d.Text, {
                                 color: 'header-secondary',
@@ -350,7 +350,7 @@ function w(e) {
                                     [P.noChildren]: 0 === ei.length
                                 }),
                                 variant: 'text-sm/normal',
-                                children: [el, ' ', ei.length > 0 ? y.intl.format(y.t.UOtD39, { guideURL: ea }) : null]
+                                children: [el, ' ', ei.length > 0 ? A.intl.format(A.t.UOtD39, { guideURL: ea }) : null]
                             })
                         ]
                     }),

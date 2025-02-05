@@ -1,5 +1,5 @@
 n.d(t, {
-    M: () => _,
+    M: () => h,
     Z: () => g
 }),
     n(411104);
@@ -13,10 +13,10 @@ var i,
     d = n(481060),
     u = n(388032),
     m = n(708332);
-function h(e) {
+function _(e) {
     e.stopPropagation(), e.preventDefault();
 }
-function _(e, t, n) {
+function h(e, t, n) {
     return {
         id: ''.concat(e, '-').concat(t),
         role: 'option',
@@ -26,20 +26,20 @@ function _(e, t, n) {
 }
 class p extends (i = s.PureComponent) {
     renderQuery(e) {
-        let { query: t, navId: n, focusedIndex: i, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: s, hideQuery: o, searchFavorites: h } = this.props;
+        let { query: t, navId: n, focusedIndex: i, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: s, hideQuery: o, searchFavorites: _ } = this.props;
         if (e || o) return null;
         let p = -1 === i;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(d.P3F, {
                     className: c()(m.queryContainer, { [m.focused]: p }),
-                    ..._(n, -1, p),
+                    ...h(n, -1, p),
                     onMouseEnter: s,
                     onClick: l,
                     children: [
                         (0, r.jsx)('div', {
                             className: m.queryText,
-                            children: h ? u.intl.string(u.t['6RVtLC']) : u.intl.format(u.t.ub226e, { value: t })
+                            children: _ ? u.intl.string(u.t['6RVtLC']) : u.intl.format(u.t.ub226e, { value: t })
                         }),
                         (0, r.jsx)('div', {
                             className: m.queryShortcut,
@@ -52,10 +52,10 @@ class p extends (i = s.PureComponent) {
                         })
                     ]
                 }),
-                h &&
+                _ &&
                     (0, r.jsxs)(d.P3F, {
                         className: c()(m.queryContainer, { [m.focused]: p }),
-                        ..._(n, -1, p),
+                        ...h(n, -1, p),
                         onMouseEnter: s,
                         onClick: a,
                         children: [
@@ -91,7 +91,7 @@ class p extends (i = s.PureComponent) {
         return (0, r.jsxs)('div', {
             className: m.container,
             style: { width: i },
-            onMouseDown: h,
+            onMouseDown: _,
             role: 'listbox',
             id: n,
             tabIndex: -1,

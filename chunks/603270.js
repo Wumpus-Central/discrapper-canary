@@ -14,15 +14,15 @@ var i = n(200651),
     d = n(307643),
     u = n(171246),
     m = n(263519),
-    h = n(592125),
-    _ = n(509545),
+    _ = n(592125),
+    h = n(509545),
     p = n(238),
     g = n(55563),
     f = n(551428),
     x = n(626135),
-    E = n(572004),
-    C = n(601911),
-    v = n(504211),
+    C = n(572004),
+    v = n(601911),
+    E = n(504211),
     I = n(381961),
     N = n(970321),
     S = n(680005),
@@ -33,20 +33,20 @@ var i = n(200651),
 let y = L(function (e) {
         let { appId: t, message: o } = e,
             u = (0, N.R)(t),
-            [m, _, g, f, E, I, S] = (0, a.Wu)(
-                [c.Z, p.Z, h.Z],
+            [m, h, g, f, C, I, S] = (0, a.Wu)(
+                [c.Z, p.Z, _.Z],
                 () => {
                     var e;
                     let n = c.Z.getApplication(t),
-                        i = null != n ? (0, C.y)(n, 45) : void 0,
-                        l = null === (e = h.Z.getBasicChannel(o.channel_id)) || void 0 === e ? void 0 : e.guild_id;
+                        i = null != n ? (0, v.y)(n, 45) : void 0,
+                        l = null === (e = _.Z.getBasicChannel(o.channel_id)) || void 0 === e ? void 0 : e.guild_id;
                     return [n, c.Z.isFetchingApplication(t), c.Z.didFetchingApplicationFail(t), p.Z.getStoreLayout(t), p.Z.getFetchStatus(t), l, i];
                 },
                 [t, o.channel_id]
             );
         l.useEffect(() => {
-            E === p.N.NONE && (0, s.k)(t), null != m || _ || g || (0, d.UM)(t);
-        }, [m, t, g, _, E]);
+            C === p.N.NONE && (0, s.k)(t), null != m || h || g || (0, d.UM)(t);
+        }, [m, t, g, h, C]);
         let y = f.subscriptions.length,
             Z = f.otps.length,
             L = l.useMemo(
@@ -82,7 +82,7 @@ let y = L(function (e) {
             description: L,
             link: ''.concat(location.protocol, '//').concat(location.host).concat(T.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(m.id, b.GlobalDiscoveryAppsSections.STORE)),
             onLinkCopy: () => {
-                (0, v.X)(t, v.B.STORE_EMBED);
+                (0, E.X)(t, E.B.STORE_EMBED);
             },
             iconSrc: S,
             onIconClick: () => {
@@ -107,21 +107,21 @@ let y = L(function (e) {
     }),
     Z = L(function (e) {
         var t, s;
-        let { appId: d, skuId: p, message: E } = e,
+        let { appId: d, skuId: p, message: C } = e,
             [I, y, Z, L, P, k, M, O] = (0, a.Wu)(
-                [g.Z, f.Z, _.Z, h.Z, c.Z],
+                [g.Z, f.Z, h.Z, _.Z, c.Z],
                 () => {
                     var e, t, n, i;
-                    let l = null === (e = h.Z.getBasicChannel(E.channel_id)) || void 0 === e ? void 0 : e.guild_id,
+                    let l = null === (e = _.Z.getBasicChannel(C.channel_id)) || void 0 === e ? void 0 : e.guild_id,
                         a = g.Z.get(p),
                         r = null !== (n = null == a ? void 0 : null === (t = a.application) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null == a ? void 0 : a.applicationId,
                         s = null !== (i = null != r ? c.Z.getApplication(r) : void 0) && void 0 !== i ? i : null == a ? void 0 : a.application,
-                        o = null != s ? (0, C.y)(s, 45) : void 0,
-                        u = _.Z.getForSKU(p),
+                        o = null != s ? (0, v.y)(s, 45) : void 0,
+                        u = h.Z.getForSKU(p),
                         m = (null == a ? void 0 : a.applicationId) === d;
                     return [m ? a : null, m ? s : null, f.Z.getForSKU(p), g.Z.isFetching(p), g.Z.didFetchingSkuFail(p), u.length > 0 ? u[0] : null, l, o];
                 },
-                [d, E.channel_id, p]
+                [d, C.channel_id, p]
             ),
             D = (0, N.R)(null !== (s = null == y ? void 0 : y.id) && void 0 !== s ? s : '');
         l.useEffect(() => {
@@ -223,7 +223,7 @@ let y = L(function (e) {
             description: z,
             link: ''.concat(location.protocol, '//').concat(location.host).concat(T.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(y.id, b.GlobalDiscoveryAppsSections.STORE)),
             onLinkCopy: () => {
-                (0, v.X)(y.id, v.B.SKU_EMBED, p);
+                (0, E.X)(y.id, E.B.SKU_EMBED, p);
             },
             iconSrc: O,
             onIconClick: () => {
@@ -301,13 +301,13 @@ function R(e) {
                             })
                         ]
                     }),
-                    E.wS &&
+                    C.wS &&
                         (0, i.jsx)(r.zxk, {
                             look: r.iLD.BLANK,
                             size: r.PhG.ICON,
                             'aria-label': A.intl.string(A.t.WqhZsr),
                             onClick: () => {
-                                (0, E.JG)(a), (0, r.showToast)((0, r.createToast)(A.intl.string(A.t['L/PwZW']), r.ToastType.SUCCESS)), c();
+                                (0, C.JG)(a), (0, r.showToast)((0, r.createToast)(A.intl.string(A.t['L/PwZW']), r.ToastType.SUCCESS)), c();
                             },
                             children: (0, i.jsx)(r.xPt, { size: 'xs' })
                         })

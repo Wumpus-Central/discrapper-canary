@@ -1,4 +1,4 @@
-n.d(t, { y6: () => h }), n(47120);
+n.d(t, { y6: () => _ }), n(47120);
 var i = n(192379),
     l = n(442837),
     a = n(45114),
@@ -9,14 +9,14 @@ var i = n(192379),
     d = n(774807),
     u = n(490897);
 let m = (e) => {
-        let { isFocused: t, navigatedAway: n, isDesktop: m, withMentions: h = !1, initialPageSize: _ } = e,
+        let { isFocused: t, navigatedAway: n, isDesktop: m, withMentions: _ = !1, initialPageSize: h } = e,
             p = (0, l.e7)([d.Z], () => d.Z.shouldReload()),
             g = i.useRef(!1),
             [f, x] = i.useState(!1),
             {
-                initialized: E,
-                loading: C,
-                items: v,
+                initialized: C,
+                loading: v,
+                items: E,
                 hasMore: I,
                 cursor: N,
                 errored: S
@@ -34,29 +34,29 @@ let m = (e) => {
             }));
         i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []),
             i.useEffect(() => {
-                E && t && (0, a.FT)(u.W.NOTIFICATION_CENTER);
-            }, [t, E]);
+                C && t && (0, a.FT)(u.W.NOTIFICATION_CENTER);
+            }, [t, C]);
         let A = (0, r.Z)();
         i.useEffect(
             () => () => {
-                m ? !A() && (S || v.length > 100) && (0, o.jF)() : n && v.length > 100 && (0, o.jF)();
+                m ? !A() && (S || E.length > 100) && (0, o.jF)() : n && E.length > 100 && (0, o.jF)();
             },
-            [n, v, m, A, S]
+            [n, E, m, A, S]
         ),
             i.useEffect(() => {
                 let e = p && t;
-                (!E || e) &&
+                (!C || e) &&
                     (0, o.jk)({
-                        limit: null != _ ? _ : h ? 8 : 20,
-                        with_mentions: h,
+                        limit: null != h ? h : _ ? 8 : 20,
+                        with_mentions: _,
                         roles_filter: T,
                         everyone_filter: b
                     });
-            }, [E, p, t, h, T, b, _]);
+            }, [C, p, t, _, T, b, h]);
         let j = i.useCallback(
             async (e) => {
                 !g.current &&
-                    E &&
+                    C &&
                     I &&
                     null != N &&
                     (e || !S) &&
@@ -65,10 +65,10 @@ let m = (e) => {
                     await (0, o.jk)(
                         {
                             after: N,
-                            with_mentions: h,
+                            with_mentions: _,
                             roles_filter: T,
                             everyone_filter: b,
-                            limit: h ? 8 : 20
+                            limit: _ ? 8 : 20
                         },
                         () => {
                             g.current = !1;
@@ -76,12 +76,12 @@ let m = (e) => {
                     ),
                     x(!1));
             },
-            [E, I, N, S, h, T, b]
+            [C, I, N, S, _, T, b]
         );
         return {
-            initialized: E,
-            loading: C,
-            items: v,
+            initialized: C,
+            loading: v,
+            items: E,
             hasMore: I,
             loadMore: j,
             loadingMore: f,
@@ -91,7 +91,7 @@ let m = (e) => {
             errored: S
         };
     },
-    h = () => {
+    _ = () => {
         let {
             initialized: e,
             loading: t,

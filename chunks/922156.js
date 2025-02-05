@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => _ });
 var i,
     l,
     a,
@@ -22,7 +22,7 @@ class m extends (a = r.ZP.Store) {
               writable: !0
           })
         : (m[i] = l);
-let h = new m(s.Z, {
+let _ = new m(s.Z, {
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: function () {
         null != c && null != c.code && d.includes(c.code) && (c = null);
     },

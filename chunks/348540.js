@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => A });
 var i = n(200651),
     l = n(192379),
     a = n(442837),
@@ -25,9 +25,9 @@ var i = n(200651),
     T = n(228168),
     S = n(981631),
     j = n(388032),
-    A = n(866669);
-function y(e) {
-    let { user: t, currentUser: n, displayProfile: y, channel: P, isHovering: R, onOpenProfile: M } = e,
+    y = n(866669);
+function A(e) {
+    let { user: t, currentUser: n, displayProfile: A, channel: P, isHovering: R, onOpenProfile: M } = e,
         { relationshipType: L, originApplicationId: k } = (0, a.cj)([c.Z], () => ({
             relationshipType: c.Z.getRelationshipType(t.id),
             originApplicationId: c.Z.getOriginApplicationId(t.id)
@@ -43,16 +43,16 @@ function y(e) {
             return null === (e = h.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });
     return (0, i.jsxs)('div', {
-        className: A.body,
+        className: y.body,
         children: [
             (0, i.jsx)(Z.Z, {
                 user: t,
                 profileType: T.y0.PANEL,
                 nickname: u.ZP.getName(null, P.id, t),
-                pronouns: null == y ? void 0 : y.pronouns,
+                pronouns: null == A ? void 0 : A.pronouns,
                 onOpenProfile: M,
                 tags: (0, i.jsx)(m.Z, {
-                    displayProfile: y,
+                    displayProfile: A,
                     profileType: T.y0.PANEL
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
@@ -102,20 +102,20 @@ function y(e) {
             (0, i.jsx)(g.Z, {
                 user: t,
                 currentUser: n,
-                displayProfile: y,
-                className: A.activity
+                displayProfile: A,
+                className: y.activity
             }),
             (0, i.jsxs)(b.Z.Overlay, {
-                className: A.overlay,
+                className: y.overlay,
                 children: [
                     !F &&
-                        (null == y ? void 0 : y.bio) != null &&
-                        (null == y ? void 0 : y.bio) !== '' &&
+                        (null == A ? void 0 : A.bio) != null &&
+                        (null == A ? void 0 : A.bio) !== '' &&
                         (0, i.jsx)(I.Z, {
                             heading: j.intl.string(j.t['61W33d']),
                             headingColor: 'header-primary',
                             children: (0, i.jsx)(f.Z, {
-                                userBio: y.bio,
+                                userBio: A.bio,
                                 animateOnHover: !0,
                                 isHovering: R,
                                 userId: t.id

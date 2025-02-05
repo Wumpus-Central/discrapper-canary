@@ -19,25 +19,25 @@ var i,
     d = n(607070),
     u = n(206295),
     m = n(70097),
-    h = n(572004),
-    _ = n(217702),
+    _ = n(572004),
+    h = n(217702),
     p = n(388032),
     g = n(210550),
     f = (((i = {})[(i.BOT = 0)] = 'BOT'), (i[(i.ACTIVITY = 1)] = 'ACTIVITY'), i);
 function x(e) {
-    let { title: t, header: n, info: i, staticBannerSrc: r, videoBannerSrc: f, bannerAspectRatio: x = 0, iconSrc: E, embedUrl: C, actions: v = [] } = e,
-        { primaryColor: I, secondaryColor: N } = (0, u.Z)(null != E ? E : r),
+    let { title: t, header: n, info: i, staticBannerSrc: r, videoBannerSrc: f, bannerAspectRatio: x = 0, iconSrc: C, embedUrl: v, actions: E = [] } = e,
+        { primaryColor: I, secondaryColor: N } = (0, u.Z)(null != C ? C : r),
         S = 'linear-gradient(45deg, '.concat(I, ', ').concat(N, ')'),
         T = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         b =
-            h.wS && null != C
+            _.wS && null != v
                 ? (0, l.jsx)(c.zxk, {
                       look: c.zxk.Looks.BLANK,
                       size: c.zxk.Sizes.ICON,
                       'aria-label': p.intl.string(p.t.WqhZsr),
                       className: g.linkIcon,
                       onClick: () => {
-                          (0, h.JG)(C), (0, c.showToast)((0, c.createToast)(p.intl.string(p.t['L/PwZW']), c.ToastType.SUCCESS));
+                          (0, _.JG)(v), (0, c.showToast)((0, c.createToast)(p.intl.string(p.t['L/PwZW']), c.ToastType.SUCCESS));
                       },
                       children: (0, l.jsx)(c.xPt, {
                           size: 'xs',
@@ -71,7 +71,7 @@ function x(e) {
                                 : (0, l.jsx)(m.Z, {
                                       ref: R,
                                       src: f,
-                                      mediaLayoutType: _.hV.MOSAIC,
+                                      mediaLayoutType: h.hV.MOSAIC,
                                       loop: !0,
                                       muted: !0,
                                       className: g.videoBanner
@@ -103,10 +103,10 @@ function x(e) {
                     (0, l.jsxs)('div', {
                         className: g.contentWrapper,
                         children: [
-                            null != E &&
+                            null != C &&
                                 (0, l.jsx)('div', {
                                     className: g.img,
-                                    style: { backgroundImage: 'url('.concat(E, ')') }
+                                    style: { backgroundImage: 'url('.concat(C, ')') }
                                 }),
                             (0, l.jsxs)('div', {
                                 className: g.content,
@@ -126,10 +126,10 @@ function x(e) {
                             null == n && b
                         ]
                     }),
-                    v.length > 0 &&
+                    E.length > 0 &&
                         (0, l.jsx)('div', {
                             className: g.actionWrapper,
-                            children: v.map((e, t) => {
+                            children: E.map((e, t) => {
                                 let { label: n, onClick: i, disabledReason: a, submitting: r } = e,
                                     s = null != a,
                                     o = 0 === t,

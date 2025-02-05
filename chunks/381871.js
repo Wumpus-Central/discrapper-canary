@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(310892),
     S = n(12168),
     j = n(353368),
-    A = n(981631),
-    y = n(354459),
+    y = n(981631),
+    A = n(354459),
     P = n(185923),
     R = n(474936),
     M = n(526761),
@@ -34,7 +34,7 @@ var i = n(200651),
     k = n(473291);
 let O = P.Hz.CHAT,
     D = {
-        section: A.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
+        section: y.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
     },
     w = [f.ZP.getByName('thumbsup'), f.ZP.getByName('eyes'), f.ZP.getByName('laughing'), f.ZP.getByName('watermelon'), f.ZP.getByName('fork_and_knife'), f.ZP.getByName('yum')].filter(x.lm);
@@ -56,11 +56,11 @@ function U(e) {
                         intention: O
                     })
             )
-            .slice(0, y.e5),
-        z = (null !== (t = b.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !V.slice(0, y.e5 - 1).some((t) => t.name === e.name));
+            .slice(0, A.e5),
+        z = (null !== (t = b.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !V.slice(0, A.e5 - 1).some((t) => t.name === e.name));
     z.length > 0 && V.splice(V.length - 1, 1, z[0]);
     let W = (0, Z.Iu)(F),
-        Y = (e) => {
+        q = (e) => {
             c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
                 emoji: e
@@ -74,34 +74,34 @@ function U(e) {
                     isPremium: B
                 });
         },
-        q = () => {
+        Y = () => {
             (0, T.h)({
                 analytics: {
                     type: R.cd.EMOJI_PICKER_EMOJI_CLICKED,
-                    object: A.qAy.BUTTON_CTA,
-                    section: A.jXE.VOICE_CHANNEL_EFFECTS_BAR
+                    object: y.qAy.BUTTON_CTA,
+                    section: y.jXE.VOICE_CHANNEL_EFFECTS_BAR
                 }
             });
         },
         K = (e) => {
             (H.current = e),
                 e &&
-                    h.ZP.trackWithMetadata(A.rMx.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
+                    h.ZP.trackWithMetadata(y.rMx.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
                         channel_id: X,
-                        guild_id: J
+                        guild_id: Q
                     });
         },
-        { id: X, guild_id: J } = n;
+        { id: X, guild_id: Q } = n;
     l.useEffect(() => {
-        h.ZP.trackWithMetadata(A.rMx.VOICE_CHANNEL_EFFECT_BAR_VIEWED, {
+        h.ZP.trackWithMetadata(y.rMx.VOICE_CHANNEL_EFFECT_BAR_VIEWED, {
             channel_id: X,
-            guild_id: J
+            guild_id: Q
         });
-    }, [X, J]);
-    let Q = P ? [s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
+    }, [X, Q]);
+    let J = P ? [s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
         $ = F === j.q.PREMIUM;
     return (0, i.jsx)(p.ZP, {
-        contentTypes: Q,
+        contentTypes: J,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: l } = e,
                 a = P && t === s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
@@ -117,7 +117,7 @@ function U(e) {
                             header: L.intl.string(L.t['6gGHnZ']),
                             content: L.intl.string(L.t.S2RGUF),
                             onClick: () => {
-                                d.Z.open(A.oAB.ACCESSIBILITY, null, { scrollPosition: M.rP.REDUCED_MOTION }), f();
+                                d.Z.open(y.oAB.ACCESSIBILITY, null, { scrollPosition: M.rP.REDUCED_MOTION }), f();
                             },
                             markAsDismissed: l,
                             buttonCTA: L.intl.string(L.t.fgVzkJ),
@@ -130,8 +130,8 @@ function U(e) {
                         title: L.intl.string(L.t.Nn8lPz),
                         channel: n,
                         closePopout: f,
-                        onSelectEmoji: Y,
-                        onSelectDisabledEmoji: q,
+                        onSelectEmoji: q,
+                        onSelectDisabledEmoji: Y,
                         onFocus: x,
                         onExpandedToggle: K,
                         analyticsOverride: D,
@@ -142,9 +142,9 @@ function U(e) {
                                 onChange: () => {
                                     if (B)
                                         return (
-                                            h.ZP.trackWithMetadata(A.rMx.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
+                                            h.ZP.trackWithMetadata(y.rMx.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
                                                 channel_id: X,
-                                                guild_id: J,
+                                                guild_id: Q,
                                                 enabled: !$
                                             }),
                                             c.Z.dispatch({ type: 'VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE' })
@@ -154,8 +154,8 @@ function U(e) {
                                     (0, T.h)({
                                         analytics: {
                                             type: H.current ? R.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : R.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
-                                            object: A.qAy.VOICE_CHANNEL_EFFECTS_TOGGLE,
-                                            section: H.current ? A.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : A.jXE.VOICE_CHANNEL_EFFECTS_BAR
+                                            object: y.qAy.VOICE_CHANNEL_EFFECTS_TOGGLE,
+                                            section: H.current ? y.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : y.jXE.VOICE_CHANNEL_EFFECTS_BAR
                                         }
                                     })
                             })

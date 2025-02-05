@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i,
     l = n(200651),
     a = n(192379),
@@ -9,8 +9,8 @@ var i,
     d = n(687755),
     u = n(351465),
     m = n(669021),
-    h = n(73346),
-    _ = n(568836),
+    _ = n(73346),
+    h = n(568836),
     p = n(345898),
     g = n(981631),
     f = n(895402);
@@ -27,10 +27,10 @@ function x(e, t, n) {
         e
     );
 }
-class E extends (i = a.PureComponent) {
+class C extends (i = a.PureComponent) {
     render() {
         let { sku: e, storeListing: t, isHorizontal: n, className: i, renderCustomTagline: a, renderCustomTitle: r, renderCustomMedia: s, isEmbed: o } = this.props,
-            c = o ? _.$G : p.Z;
+            c = o ? h.$G : p.Z;
         return (0, l.jsx)(c, {
             className: i,
             renderMedia: null != s ? s : this.renderMedia,
@@ -70,8 +70,8 @@ class E extends (i = a.PureComponent) {
                     children: [
                         (0, l.jsx)(m.Z, {
                             className: s()(f.splashContainer, { [f.splashContainerHorizontal]: o }),
-                            video: null != c.previewVideo ? (0, h._W)(r.applicationId, c.previewVideo) : void 0,
-                            image: null != c.thumbnail ? (0, h._W)(r.applicationId, c.thumbnail, 600) : null,
+                            video: null != c.previewVideo ? (0, _._W)(r.applicationId, c.previewVideo) : void 0,
+                            image: null != c.thumbnail ? (0, _._W)(r.applicationId, c.thumbnail, 600) : null,
                             title: r.name,
                             playing: e,
                             muted: t,
@@ -86,11 +86,11 @@ class E extends (i = a.PureComponent) {
             });
     }
 }
-x(E, 'defaultProps', {
+x(C, 'defaultProps', {
     showMediaPlaceholder: !1,
     isMouseOver: !1,
     showBuyInline: !1,
     isHorizontal: !1,
     isEmbed: !1
 });
-let C = E;
+let v = C;

@@ -30,8 +30,8 @@ function I(e) {
             guildId: b
         } = e,
         [Z, N] = i.useState(!1),
-        { requestId: T, entries: S, impressionCappedEntryIds: j, hasLeaderboardEntry: A } = (0, f.Z)(I),
-        y = (0, l.e7)([h.Z], () => h.Z.hidden),
+        { requestId: T, entries: S, impressionCappedEntryIds: j, hasLeaderboardEntry: y } = (0, f.Z)(I),
+        A = (0, l.e7)([h.Z], () => h.Z.hidden),
         P = (0, l.e7)([c.Z], () => c.Z.isFocused()),
         R = (0, l.e7)([s.Z], () => s.Z.getChannel(I)),
         M = (0, l.e7)([o.Z], () => o.Z.getGuild(b), [b]),
@@ -40,9 +40,9 @@ function I(e) {
         [O, D, w, U] = i.useMemo(() => {
             let e;
             if (null == S || 0 === S.length || null == T || !k) return [t, n, E];
-            let i = Z ? S.length : A ? 4 : 3,
+            let i = Z ? S.length : y ? 4 : 3,
                 l = S.slice(0, i);
-            e = y
+            e = A
                 ? [{ type: r.so.HIDDEN_CONTENT_INVENTORY }]
                 : l.map((e) => ({
                       type: r.so.CONTENT_INVENTORY,
@@ -74,7 +74,7 @@ function I(e) {
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[a, ...t], [...n, a, ...e], Math.random(), e];
-        }, [I, S, Z, t, b, T, n, E, y, k, A]),
+        }, [I, S, Z, t, b, T, n, E, A, k, y]),
         B = i.useRef(0),
         F = i.useRef(S),
         H = i.useRef(),
@@ -104,7 +104,7 @@ function I(e) {
                     if (null == T || null == H.current || Date.now() - H.current < 3000) return;
                     let n = null !== (t = null === (e = F.current) || void 0 === e ? void 0 : e.map((e) => e.id)) && void 0 !== t ? t : [],
                         i = n.slice(0, B.current);
-                    !y &&
+                    !A &&
                         P &&
                         k &&
                         ((0, m.e)(x.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
@@ -124,7 +124,7 @@ function I(e) {
                             }));
                 }
             ),
-            [T, I, b, y, P, k]
+            [T, I, b, A, P, k]
         ),
         {
             groups: O,

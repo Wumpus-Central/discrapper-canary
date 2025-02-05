@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => _ });
 var i = n(39612),
     r = n(271579),
     l = n(756647),
@@ -8,7 +8,7 @@ var i = n(39612),
     c = n(751189),
     d = n(981631);
 let u = 'template',
-    h = {
+    _ = {
         ...c.Z,
         openNativeAppModal(e) {
             a.Z.openNativeAppModal(e, d.Etm.GUILD_TEMPLATE_BROWSER);

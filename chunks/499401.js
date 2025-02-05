@@ -1,15 +1,15 @@
-n.d(e, { Y: () => i });
-var l = n(388032);
-function i(t) {
-    let { application: e, username: n, usernameOnClick: i } = t;
-    return null != e
-        ? l.intl.formatToParts(l.t.Tes5Oj, {
+n.d(t, { Y: () => r });
+var i = n(388032);
+function r(e) {
+    let { application: t, username: n, usernameOnClick: r } = e;
+    return null != t
+        ? i.intl.formatToParts(i.t.Tes5Oj, {
               username: n,
-              applicationName: e.name,
-              usernameOnClick: i
+              applicationName: t.name,
+              usernameOnClick: r
           })
-        : l.intl.formatToParts(l.t.PUJtgo, {
+        : i.intl.formatToParts(i.t.PUJtgo, {
               username: n,
-              usernameOnClick: i
+              usernameOnClick: r
           });
 }

@@ -1,53 +1,53 @@
-n.d(t, { Z: () => h });
-var i = n(200651),
-    l = n(192379),
-    a = n(512722),
-    r = n.n(a),
+n.d(t, { Z: () => p });
+var l = n(200651),
+    i = n(192379),
+    r = n(512722),
+    a = n.n(r),
     s = n(399606),
     o = n(618158),
-    c = n(594174),
-    u = n(822183),
+    u = n(594174),
+    c = n(822183),
     d = n(364125),
     m = n(610947),
     f = n(848212);
-function p(e) {
-    let { focused: t, channelId: n, streamerId: a, stream: u } = e,
-        p = l.useRef(null),
-        h = (0, s.e7)([c.default], () => c.default.getCurrentUser());
-    r()(null != h, 'user cannot be null'), (0, m.Z)(p, h, a, n);
+function h(e) {
+    let { focused: t, channelId: n, streamerId: r, stream: c } = e,
+        h = i.useRef(null),
+        p = (0, s.e7)([u.default], () => u.default.getCurrentUser());
+    a()(null != p, 'user cannot be null'), (0, m.Z)(h, p, r, n);
     let {
-        handleClick: g,
-        handleMouseDown: v,
-        handleMouseEnter: _,
-        handleMouseMove: I,
-        handleMouseUp: S
+        handleClick: v,
+        handleMouseDown: g,
+        handleMouseEnter: E,
+        handleMouseMove: Z,
+        handleMouseUp: x
     } = (0, d.Z)({
-        user: h,
+        user: p,
         channelId: n,
-        streamerId: a,
-        stream: u,
+        streamerId: r,
+        stream: c,
         focused: t,
-        canvas: p.current
+        canvas: h.current
     });
-    return (0, i.jsx)(o.Z, {
-        children: (0, i.jsx)('canvas', {
-            ref: p,
-            onClick: g,
-            onMouseDown: v,
-            onMouseEnter: _,
-            onMouseMove: I,
-            onMouseUp: S,
+    return (0, l.jsx)(o.Z, {
+        children: (0, l.jsx)('canvas', {
+            ref: h,
+            onClick: v,
+            onMouseDown: g,
+            onMouseEnter: E,
+            onMouseMove: Z,
+            onMouseUp: x,
             className: f.sharedCanvas
         })
     });
 }
-function h(e) {
-    let { isSharedCanvasEnabled: t } = u.Z.useExperiment(
+function p(e) {
+    let { isSharedCanvasEnabled: t } = c.Z.useExperiment(
         {
             guildId: e.guildId,
             location: 'd0de1c_1'
         },
         { autoTrackExposure: !0 }
     );
-    return !t || e.hasScreenMessage ? null : (0, i.jsx)(p, { ...e });
+    return !t || e.hasScreenMessage ? null : (0, l.jsx)(h, { ...e });
 }

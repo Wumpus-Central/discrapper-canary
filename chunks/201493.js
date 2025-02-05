@@ -27,8 +27,8 @@ let Z = (e) => {
             currentCategoryId: T,
             directoryEntries: S,
             categoryCounts: j,
-            allEntriesCount: A,
-            isLoading: y
+            allEntriesCount: y,
+            isLoading: A
         } = (0, a.cj)([f.Z], () => {
             let e = f.Z.getCurrentCategoryId(Z.id),
                 t = f.Z.getDirectoryEntries(Z.id, e === E.AR.ALL ? null : e),
@@ -156,7 +156,7 @@ let Z = (e) => {
                   },
                   directoryEntries: P,
                   categoryCounts: j,
-                  allEntriesCount: A,
-                  isLoading: y
+                  allEntriesCount: y,
+                  isLoading: A
               });
 };

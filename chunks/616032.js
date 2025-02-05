@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => _ });
 var i = n(200651),
     l = n(192379),
     a = n(990547),
@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(441358),
     u = n(426521),
     m = n(817456);
-function h(e) {
-    let { initialized: t, items: n, loading: h, loadMore: _ } = e,
+function _(e) {
+    let { initialized: t, items: n, loading: _, loadMore: h } = e,
         p = l.useRef(null),
         g = (0, o.Z)('for-you', p);
     (0, c.Z)(
@@ -25,7 +25,7 @@ function h(e) {
     let f = () => {
         var e;
         let t = null === (e = p.current) || void 0 === e ? void 0 : e.getScrollerState();
-        null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && _();
+        null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && h();
     };
     return t
         ? 0 === n.length
@@ -44,7 +44,7 @@ function h(e) {
                                   },
                                   ...l,
                                   onScroll: f,
-                                  children: [(0, i.jsx)(u.U, { items: n }), h ? (0, i.jsx)(s.$jN, { className: m.spinner }) : null]
+                                  children: [(0, i.jsx)(u.U, { items: n }), _ ? (0, i.jsx)(s.$jN, { className: m.spinner }) : null]
                               });
                           }
                       })

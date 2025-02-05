@@ -9,8 +9,8 @@ var l = n(481060),
 function c(e) {
     let { message: t, usernameHook: c, onClickPins: d, compact: u } = e,
         m = (0, r.ZP)(t),
-        h = m.nick,
-        _ = c(m),
+        _ = m.nick,
+        h = c(m),
         p = () => {
             if (null == t.messageReference) return;
             let { channel_id: e, message_id: n } = t.messageReference;
@@ -36,24 +36,24 @@ function c(e) {
             null != t.messageReference
                 ? null == d
                     ? o.intl.format(o.t.lD5tur, {
-                          usernameHook: _,
-                          username: h,
+                          usernameHook: h,
+                          username: _,
                           messageOnClick: p
                       })
                     : o.intl.format(o.t.yIDvPD, {
-                          usernameHook: _,
-                          username: h,
+                          usernameHook: h,
+                          username: _,
                           pinsActionOnClick: d,
                           messageOnClick: p
                       })
                 : null == d
                   ? o.intl.format(o.t.vfkjq6, {
-                        usernameHook: _,
-                        username: h
+                        usernameHook: h,
+                        username: _
                     })
                   : o.intl.format(o.t.R7vZGR, {
-                        usernameHook: _,
-                        username: h,
+                        usernameHook: h,
+                        username: _,
                         pinsActionOnClick: d
                     })
     });

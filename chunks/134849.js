@@ -1,8 +1,8 @@
-n.d(t, { Z: () => C }), n(653041), n(47120);
+n.d(t, { Z: () => Z }), n(653041), n(47120);
 var i = n(200651),
-    l = n(192379),
-    r = n(442837),
-    o = n(481060),
+    r = n(192379),
+    o = n(442837),
+    l = n(481060),
     a = n(237997),
     s = n(804570),
     d = n(388627),
@@ -11,36 +11,36 @@ var i = n(200651),
     h = n(693091),
     _ = n(371467),
     p = n(981631),
-    g = n(388032),
-    f = n(109020);
+    f = n(388032),
+    g = n(109020);
 let m = [];
 function v(e) {
     return e.notification.id;
 }
-function x(e, t, n, l) {
-    let { index: r, notification: o, locked: a } = t;
+function x(e, t, n, r) {
+    let { index: o, notification: l, locked: a } = t;
     return (0, i.jsx)(
         u.ZP,
         {
-            index: r,
-            notification: o,
+            index: o,
+            notification: l,
             locked: a,
             transitionState: n,
-            cleanUp: l
+            cleanUp: r
         },
         e
     );
 }
 function E(e) {
     return (0, i.jsx)('div', {
-        className: f.container,
+        className: g.container,
         children: e
     });
 }
-let Z = (e) => l.useState(() => new h.AS(e))[0],
-    C = l.memo(function (e) {
+let C = (e) => r.useState(() => new h.AS(e))[0],
+    Z = r.memo(function (e) {
         let { locked: t } = e,
-            n = (0, r.e7)(
+            n = (0, o.e7)(
                 [a.Z, _.Z],
                 () => {
                     if (a.Z.getNotificationPositionMode() === p._vf.DISABLED) return m;
@@ -61,11 +61,11 @@ let Z = (e) => l.useState(() => new h.AS(e))[0],
                 [t],
                 d.E6
             ),
-            u = Z(t);
-        return (l.useLayoutEffect(() => u.updateState(n, t)), l.useLayoutEffect(() => (u.initialize((0, c.i)()), () => u.cleanUp()), [u]), 0 !== n.length || t)
+            u = C(t);
+        return (r.useLayoutEffect(() => u.updateState(n, t)), r.useLayoutEffect(() => (u.initialize((0, c.i)()), () => u.cleanUp()), [u]), 0 !== n.length || t)
             ? (0, i.jsx)(h.S4.Provider, {
                   value: u,
-                  children: (0, i.jsx)(o.W3x, {
+                  children: (0, i.jsx)(l.W3x, {
                       items: n,
                       renderItem: x,
                       getItemKey: v,
@@ -75,8 +75,8 @@ let Z = (e) => l.useState(() => new h.AS(e))[0],
             : t
               ? null
               : (0, i.jsx)(s.E, {
-                    emptyText: g.intl.string(g.t.O1Nbjo),
-                    icon: o.Dkj,
+                    emptyText: f.intl.string(f.t.O1Nbjo),
+                    icon: l.Dkj,
                     absolute: !0
                 });
     });

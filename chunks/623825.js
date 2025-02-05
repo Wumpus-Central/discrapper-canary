@@ -1,10 +1,10 @@
-function i(e) {
+function l(e) {
     return e <= 220;
 }
-function l(e) {
+function i(e) {
     return e <= 124;
 }
 n.d(t, {
-    K: () => i,
-    N: () => l
+    K: () => l,
+    N: () => i
 });

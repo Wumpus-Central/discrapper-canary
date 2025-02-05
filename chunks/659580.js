@@ -1,90 +1,90 @@
-n.d(t, { default: () => C });
-var i = n(200651);
+n.d(t, { default: () => b });
+var l = n(200651);
 n(192379);
-var l = n(990547),
-    a = n(442837),
-    r = n(46973),
+var i = n(990547),
+    r = n(442837),
+    a = n(46973),
     s = n(481060),
     o = n(846027),
-    c = n(410575),
-    u = n(906732),
+    u = n(410575),
+    c = n(906732),
     d = n(213609),
     m = n(821564),
     f = n(453925),
-    p = n(632304),
-    h = n(131951),
-    g = n(358085),
-    v = n(947150),
-    _ = n(488021),
-    I = n(822556),
-    S = n(981631),
-    x = n(388032),
-    E = n(126741);
-function C(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: C = !1, renderInputModes: Z = !1, renderInputVolume: y = !1, renderOutputVolume: b = !1, renderDeafen: N = !1, simplified: T = !1, onSelect: A } = e,
-        { analyticsLocations: w } = (0, u.ZP)();
+    h = n(632304),
+    p = n(131951),
+    v = n(358085),
+    g = n(947150),
+    E = n(488021),
+    Z = n(822556),
+    x = n(981631),
+    S = n(388032),
+    C = n(126741);
+function b(e) {
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: b = !1, renderInputModes: I = !1, renderInputVolume: _ = !1, renderOutputVolume: N = !1, renderDeafen: R = !1, simplified: y = !1, onSelect: T } = e,
+        { analyticsLocations: j } = (0, c.ZP)();
     (0, d.Z)({
-        type: l.ImpressionTypes.MENU,
-        name: l.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: w }
+        type: i.ImpressionTypes.MENU,
+        name: i.ImpressionNames.AUDIO_DEVICE_MENU,
+        properties: { location_stack: j }
     });
-    let P = (0, I.Z)(),
-        j = (0, v.Z)(w, T),
-        R = (0, _.Z)(w, T),
-        k = (0, m.Z)(w),
-        L = (0, f.Z)(w),
-        O = (0, p.Z)(w),
-        M = r.Yn.DEFAULT,
-        D = h.Z.isSelfDeaf(M),
-        U = (0, a.e7)([h.Z], () => h.Z.getMode()),
-        F = U === S.pM4.VOICE_ACTIVITY ? S.pM4.PUSH_TO_TALK : S.pM4.VOICE_ACTIVITY;
-    return (0, i.jsx)(c.Z, {
-        object: S.qAy.CONTEXT_MENU,
-        children: (0, i.jsxs)(s.v2r, {
-            onSelect: A,
-            className: E.menu,
+    let w = (0, Z.Z)(),
+        A = (0, g.Z)(j, y),
+        O = (0, E.Z)(j, y),
+        P = (0, m.Z)(j),
+        k = (0, f.Z)(j),
+        M = (0, h.Z)(j),
+        D = a.Yn.DEFAULT,
+        L = p.Z.isSelfDeaf(D),
+        F = (0, r.e7)([p.Z], () => p.Z.getMode()),
+        U = F === x.pM4.VOICE_ACTIVITY ? x.pM4.PUSH_TO_TALK : x.pM4.VOICE_ACTIVITY;
+    return (0, l.jsx)(u.Z, {
+        object: x.qAy.CONTEXT_MENU,
+        children: (0, l.jsxs)(s.v2r, {
+            onSelect: T,
+            className: C.menu,
             onClose: t,
             navId: 'audio-device-context',
-            'aria-label': x.intl.string(x.t.ZR1Ss7),
+            'aria-label': S.intl.string(S.t.ZR1Ss7),
             children: [
-                C ? j : null,
-                n ? R : null,
-                !T && Z
-                    ? (0, i.jsx)(s.kSQ, {
-                          label: x.intl.string(x.t['pS+K2N']),
-                          children: k
+                b ? A : null,
+                n ? O : null,
+                !y && I
+                    ? (0, l.jsx)(s.kSQ, {
+                          label: S.intl.string(S.t['pS+K2N']),
+                          children: P
                       })
                     : null,
-                (0, i.jsxs)(s.kSQ, {
+                (0, l.jsxs)(s.kSQ, {
                     children: [
-                        y ? L : null,
-                        b ? O : null,
-                        T ? (0, i.jsx)(s.Clw, {}) : null,
-                        T && N
-                            ? (0, i.jsx)(
+                        _ ? k : null,
+                        N ? M : null,
+                        y ? (0, l.jsx)(s.Clw, {}) : null,
+                        y && R
+                            ? (0, l.jsx)(
                                   s.S89,
                                   {
                                       id: 'deafen',
-                                      label: x.intl.string(x.t.wjcRFR),
+                                      label: S.intl.string(S.t.wjcRFR),
                                       action: () =>
                                           o.Z.toggleSelfDeaf({
-                                              context: M,
+                                              context: D,
                                               location: 'AudioDeviceMenu'
                                           }),
-                                      checked: D
+                                      checked: L
                                   },
                                   'self-deafen'
                               )
                             : null,
-                        T && C && g.isPlatformEmbedded
-                            ? (0, i.jsx)(s.S89, {
-                                  checked: U === S.pM4.PUSH_TO_TALK,
+                        y && b && v.isPlatformEmbedded
+                            ? (0, l.jsx)(s.S89, {
+                                  checked: F === x.pM4.PUSH_TO_TALK,
                                   id: 'input-mode',
-                                  label: x.intl.string(x.t.Q8gkVF),
-                                  action: () => o.Z.setMode(F, void 0, void 0, { analyticsLocations: w })
+                                  label: S.intl.string(S.t.Q8gkVF),
+                                  action: () => o.Z.setMode(U, void 0, void 0, { analyticsLocations: j })
                               })
                             : null,
-                        P
+                        w
                     ]
                 })
             ]

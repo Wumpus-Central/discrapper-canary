@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(100527),
     u = n(906732),
     m = n(783097),
-    h = n(606192),
-    _ = n(213459),
+    _ = n(606192),
+    h = n(213459),
     p = n(812236),
     g = n(132871),
     f = n(147890),
     x = n(240991),
-    E = n(706454),
-    C = n(592125),
-    v = n(496675),
+    C = n(706454),
+    v = n(592125),
+    E = n(496675),
     I = n(944486),
     N = n(914010),
     S = n(768581),
@@ -42,8 +42,8 @@ function Z(e) {
             var e;
             return null !== (e = N.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
-        B = (0, _.PL)(!0, !1),
-        G = (0, _.LD)(U, !1),
+        B = (0, h.PL)(!0, !1),
+        G = (0, h.LD)(U, !1),
         H = (0, T.TK)(n.id, B),
         V = (0, T.TK)(n.id, G),
         z = (0, m.ye)(n),
@@ -52,7 +52,7 @@ function Z(e) {
             let t = null === (e = n.description) || void 0 === e ? void 0 : e.trim();
             return null == t || '' === t ? null : (0, x.parseBioReact)(t);
         }, [n.description]),
-        K = (0, r.e7)([E.default], () => E.default.locale, []),
+        K = (0, r.e7)([C.default], () => C.default.locale, []),
         Y = l.useMemo(() => {
             var e, t;
             let i = new Intl.NumberFormat(K, {
@@ -110,10 +110,10 @@ function Z(e) {
         }, [q, k, z, n]),
         { analyticsLocations: ee } = (0, u.ZP)(d.Z.APP_MESSAGE_EMBED),
         et = (0, r.e7)(
-            [C.Z, v.Z, I.Z],
+            [v.Z, E.Z, I.Z],
             () => {
-                let e = C.Z.getChannel(I.Z.getChannelId());
-                return null != e && (e.isPrivate() || v.Z.can(A.Plq.SEND_MESSAGES, e));
+                let e = v.Z.getChannel(I.Z.getChannelId());
+                return null != e && (e.isPrivate() || E.Z.can(A.Plq.SEND_MESSAGES, e));
             },
             []
         ),
@@ -152,7 +152,7 @@ function Z(e) {
                     e.push({
                         label: j.intl.string(j.t.RscU7O),
                         onClick() {
-                            (0, h.W)({
+                            (0, _.W)({
                                 appId: n.id,
                                 botId: O,
                                 analyticsLocations: ee,

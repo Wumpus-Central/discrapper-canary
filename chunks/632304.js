@@ -1,26 +1,26 @@
 n.d(t, { Z: () => d });
-var i = n(200651);
+var l = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(481060),
-    r = n(846027),
+var i = n(442837),
+    r = n(481060),
+    a = n(846027),
     s = n(131951),
     o = n(36703),
-    c = n(358085),
-    u = n(388032);
+    u = n(358085),
+    c = n(388032);
 function d(e) {
-    let t = (0, l.e7)([s.Z], () => (0, o.P)(s.Z.getOutputVolume()));
-    return (0, i.jsx)(a.II_, {
+    let t = (0, i.e7)([s.Z], () => (0, o.P)(s.Z.getOutputVolume()));
+    return (0, l.jsx)(r.II_, {
         id: 'output',
-        label: u.intl.string(u.t.eATD2N),
-        control: (n, l) =>
-            (0, i.jsx)(a._wy, {
+        label: c.intl.string(c.t.eATD2N),
+        control: (n, i) =>
+            (0, l.jsx)(r._wy, {
                 ...n,
-                ref: l,
+                ref: i,
                 value: t,
-                maxValue: c.isPlatformEmbedded ? 200 : 100,
-                onChange: (t) => r.Z.setOutputVolume((0, o.A)(t), { analyticsLocations: e }),
-                'aria-label': u.intl.string(u.t.eATD2N)
+                maxValue: u.isPlatformEmbedded ? 200 : 100,
+                onChange: (t) => a.Z.setOutputVolume((0, o.A)(t), { analyticsLocations: e }),
+                'aria-label': c.intl.string(c.t.eATD2N)
             })
     });
 }

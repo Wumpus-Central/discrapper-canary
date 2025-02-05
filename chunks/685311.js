@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -8,10 +8,10 @@ var i = n(200651),
     c = n(388905),
     d = n(703656),
     u = n(388032),
-    h = n(232186);
-let _ = function (e) {
+    _ = n(232186);
+let h = function (e) {
     let { match: t, location: n, attemptDeepLink: l } = e,
-        [_, g] = r.useState(0);
+        [h, g] = r.useState(0);
     r.useEffect(() => {
         o.default.once('connected', () => {
             g(1);
@@ -22,10 +22,10 @@ let _ = function (e) {
             o.default.connect();
     }, []),
         r.useEffect(() => {
-            if (0 !== _) return;
+            if (0 !== h) return;
             let e = setTimeout(() => (0, d.uL)((0, s.M)()), 3000);
             return () => clearTimeout(e);
-        }, [_]);
+        }, [h]);
     let p = r.useCallback(
         async (e, t) => {
             try {
@@ -37,22 +37,22 @@ let _ = function (e) {
         [l]
     );
     if ((0, d.DB)()) return null;
-    switch (_) {
+    switch (h) {
         case 1:
             return (0, i.jsxs)(c.ZP, {
                 children: [
                     (0, i.jsx)(c.Dx, {
-                        className: h.marginBottom8,
+                        className: _.marginBottom8,
                         children: u.intl.string(u.t.qllnGh)
                     }),
                     (0, i.jsx)(c.DK, { children: u.intl.string(u.t.SXCxyc) }),
                     (0, i.jsx)(c.zx, {
-                        className: h.marginTop40,
+                        className: _.marginTop40,
                         onClick: () => p(t, n),
                         children: u.intl.string(u.t.UQvCf3)
                     }),
                     (0, i.jsx)(c.zx, {
-                        className: a()(h.marginTop8, h.marginCenterHorz),
+                        className: a()(_.marginTop8, _.marginCenterHorz),
                         color: c.zx.Colors.LINK,
                         look: c.zx.Looks.LINK,
                         onClick: () => (0, d.uL)((0, s.M)()),
@@ -69,7 +69,7 @@ let _ = function (e) {
             return (0, i.jsxs)(c.ZP, {
                 children: [
                     (0, i.jsx)(c.Dx, {
-                        className: h.marginBottom8,
+                        className: _.marginBottom8,
                         children: u.intl.string(u.t.csrAMD)
                     }),
                     (0, i.jsx)(c.DK, { children: u.intl.string(u.t.ghBJz8) })

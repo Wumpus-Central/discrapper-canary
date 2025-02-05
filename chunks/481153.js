@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(812206),
     d = n(388905),
     u = n(925329),
-    h = n(479446),
-    _ = n(981632),
+    _ = n(479446),
+    h = n(981632),
     g = n(594174),
     p = n(509545),
     m = n(55563),
@@ -43,8 +43,8 @@ let T = o.ZP.connectStores([m.Z, c.Z, p.Z, g.default], (e) => {
         (0, i.jsxs)(r.Fragment, {
             children: [
                 null != n.giftStyle
-                    ? (0, i.jsx)(_.Z, {
-                          defaultAnimationState: h.SR.LOOP,
+                    ? (0, i.jsx)(h.Z, {
+                          defaultAnimationState: _.SR.LOOP,
                           giftStyle: n.giftStyle,
                           className: C.seasonalIcon
                       })

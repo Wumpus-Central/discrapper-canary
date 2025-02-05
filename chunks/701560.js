@@ -9,15 +9,15 @@ var i,
     d = n(239091),
     u = n(2052),
     m = n(594190),
-    h = n(592745),
-    _ = n(757266),
+    _ = n(592745),
+    h = n(757266),
     p = n(417363),
     g = n(358085),
     f = n(346329),
     x = n(981631),
-    E = n(388032),
-    C = n(984203);
-function v(e, t, n) {
+    C = n(388032),
+    v = n(984203);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,15 +41,15 @@ class I extends (i = a.PureComponent) {
         let { dispatchState: e } = this.props;
         return null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1
             ? (0, l.jsxs)(c.P3F, {
-                  'aria-label': E.intl.string(E.t.KTPVLC),
-                  className: C.dropdownArrowHitbox,
+                  'aria-label': C.intl.string(C.t.KTPVLC),
+                  className: v.dropdownArrowHitbox,
                   onClick: this.handleDropdownClick,
                   children: [
-                      (0, l.jsx)('div', { className: C.arrowSeparator }),
+                      (0, l.jsx)('div', { className: v.arrowSeparator }),
                       (0, l.jsx)(c.CJ0, {
                           size: 'md',
                           color: 'currentColor',
-                          className: C.dropdownArrow
+                          className: v.dropdownArrow
                       })
                   ]
               })
@@ -58,13 +58,13 @@ class I extends (i = a.PureComponent) {
     renderDisabledButton(e, t) {
         let { className: n, fullWidth: i, size: a, customDisabledColor: r, tooltipPosition: s } = this.props;
         return (0, l.jsxs)('div', {
-            className: C.disabledButtonWrapper,
+            className: v.disabledButtonWrapper,
             children: [
                 (0, l.jsx)(c.zxk, {
                     className: n,
                     fullWidth: i,
                     size: a,
-                    color: null != r ? r : C.disabledButtonColor,
+                    color: null != r ? r : v.disabledButtonColor,
                     disabled: !0,
                     children: e
                 }),
@@ -73,7 +73,7 @@ class I extends (i = a.PureComponent) {
                     position: s,
                     children: (e) =>
                         (0, l.jsx)('div', {
-                            className: C.disabledButtonOverlay,
+                            className: v.disabledButtonOverlay,
                             ...e
                         })
                 })
@@ -82,12 +82,12 @@ class I extends (i = a.PureComponent) {
     }
     render() {
         let { className: e, fullWidth: t, size: n, color: i, isLaunchable: a, isLaunching: r, isRunning: o, isShiny: d, hideNotLaunchable: u } = this.props;
-        if (!a) return u ? null : this.renderDisabledButton(E.intl.string(E.t['359PbW']), g.isPlatformEmbedded ? E.intl.string(E.t.NASLa2) : E.intl.string(E.t.o1bhkJ));
-        if (o) return this.renderDisabledButton(E.intl.string(E.t['3elwAA']));
+        if (!a) return u ? null : this.renderDisabledButton(C.intl.string(C.t['359PbW']), g.isPlatformEmbedded ? C.intl.string(C.t.NASLa2) : C.intl.string(C.t.o1bhkJ));
+        if (o) return this.renderDisabledButton(C.intl.string(C.t['3elwAA']));
         let m = d ? c.gtL : c.zxk;
         return (0, l.jsxs)(m, {
-            className: s()(C.playButton, e),
-            innerClassName: C.playButtonContents,
+            className: s()(v.playButton, e),
+            innerClassName: v.playButtonContents,
             fullWidth: t,
             size: n,
             color: null != i ? i : c.zxk.Colors.GREEN,
@@ -95,8 +95,8 @@ class I extends (i = a.PureComponent) {
             onClick: this.handleClick,
             children: [
                 (0, l.jsx)('div', {
-                    className: C.buttonText,
-                    children: E.intl.string(E.t['359PbW'])
+                    className: v.buttonText,
+                    children: C.intl.string(C.t['359PbW'])
                 }),
                 this.renderDropdown()
             ]
@@ -104,7 +104,7 @@ class I extends (i = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            v(this, 'handleDropdownClick', (e) => {
+            E(this, 'handleDropdownClick', (e) => {
                 e.stopPropagation();
                 let { libraryApplication: t, onDropdownOpen: i, onDropdownClose: a } = this.props;
                 if ((null == i || i(e), null == t)) throw Error('Unexpected missing libraryApplication');
@@ -122,7 +122,7 @@ class I extends (i = a.PureComponent) {
                     { onClose: a }
                 );
             }),
-            v(this, 'handleClick', () => {
+            E(this, 'handleClick', () => {
                 let { applicationId: e, libraryApplication: t, analyticsListSort: n, analyticsListIndex: i } = this.props;
                 f.playApplication(e, t, {
                     analyticsParams: {
@@ -137,7 +137,7 @@ class I extends (i = a.PureComponent) {
 function N(e) {
     let { applicationId: t, libraryApplication: n } = e,
         i = (0, u.O)(),
-        [a, r] = (0, o.Wu)([_.Z, h.Z, p.Z], () => [_.Z.isConnected(t) || h.Z.isLaunchable(t) || (null != n && p.Z.isLaunchable(n.id, n.branchId)), h.Z.launchingGames.has(t)], [t, n]),
+        [a, r] = (0, o.Wu)([h.Z, _.Z, p.Z], () => [h.Z.isConnected(t) || _.Z.isLaunchable(t) || (null != n && p.Z.isLaunchable(n.id, n.branchId)), _.Z.launchingGames.has(t)], [t, n]),
         s = (0, o.e7)([m.ZP], () => new Set(m.ZP.getRunningVerifiedApplicationIds()).has(t), [t]),
         c = (0, o.e7)([p.Z], () => (null != n ? p.Z.getState(n.id, n.branchId) : null), [n]);
     return (0, l.jsx)(I, {
@@ -149,7 +149,7 @@ function N(e) {
         dispatchState: c
     });
 }
-v(I, 'defaultProps', {
+E(I, 'defaultProps', {
     fullWidth: !1,
     size: c.zxk.Sizes.LARGE,
     tooltipPosition: 'top',

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(627341);
+n.d(t, { Z: () => E }), n(627341);
 var i = n(200651),
     l = n(192379),
     a = n(120356),
@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(203143),
     u = n(365206),
     m = n(294608),
-    h = n(65145),
-    _ = n(920557),
+    _ = n(65145),
+    h = n(920557),
     p = n(823671);
 function g(e) {
     let { media: t } = e;
@@ -66,10 +66,10 @@ function x(e) {
         ]
     });
 }
-function E(e) {
+function C(e) {
     let { action: t, channelId: n, messageId: a, isInteractive: s, className: o } = e,
-        { actionButtonRef: u, manageFocusOnAction: m } = (0, h.dv)(),
-        _ = l.useCallback(async () => {
+        { actionButtonRef: u, manageFocusOnAction: m } = (0, _.dv)(),
+        h = l.useCallback(async () => {
             (null == t ? void 0 : t.type) != null &&
                 (await d.Z.handlePollActionTapped({
                     channelId: n,
@@ -85,7 +85,7 @@ function E(e) {
                 c.zxk,
                 {
                     buttonRef: u,
-                    onClick: _,
+                    onClick: h,
                     disabled: !t.enabled,
                     color: 'secondaryButton' === t.presentation ? c.zxk.Colors.CUSTOM : c.zxk.Colors.BRAND,
                     size: c.zxk.Sizes.SMALL,
@@ -102,19 +102,19 @@ function E(e) {
           : 'textButton' === t.presentation
             ? (0, i.jsx)(f, {
                   buttonRef: u,
-                  onClick: _,
+                  onClick: h,
                   className: o,
                   children: t.label
               })
             : (0, i.jsx)(x, {
                   buttonLabel: t.label,
                   secondaryLabel: t.secondaryLabel,
-                  handleClick: _,
+                  handleClick: h,
                   isInteractive: s,
                   className: o
               });
 }
-function C(e) {
+function v(e) {
     let { message: t, poll: n, className: l } = e,
         a = (0, m.$B)(n.containerStyle),
         d = (function (e, t) {
@@ -129,7 +129,7 @@ function C(e) {
                 canShowVoteCounts: t.canShowVoteCounts
             };
             return (0, s.EQ)(t.layoutType)
-                .with(o.C.DEFAULT, () => (0, i.jsx)(_.K, { ...n }))
+                .with(o.C.DEFAULT, () => (0, i.jsx)(h.K, { ...n }))
                 .with(o.C.IMAGE_ONLY_ANSWERS, () => (0, i.jsx)(u.Z, { ...n }))
                 .otherwise(() => null);
         })(0, n);
@@ -157,20 +157,20 @@ function C(e) {
                       (0, i.jsxs)('div', {
                           className: p.bottomBar,
                           children: [
-                              (0, i.jsx)(E, {
+                              (0, i.jsx)(C, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.secondaryAction,
                                   className: p.secondaryAction,
                                   isInteractive: n.isInteractive
                               }),
-                              (0, i.jsx)(E, {
+                              (0, i.jsx)(C, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.tertiaryAction,
                                   className: p.tertiaryAction
                               }),
-                              (0, i.jsx)(E, {
+                              (0, i.jsx)(C, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.primaryAction
@@ -181,13 +181,13 @@ function C(e) {
               })
           });
 }
-function v(e) {
+function E(e) {
     let { message: t, poll: n, className: l } = e;
     return (0, i.jsx)(m.XL, {
         message: t,
         poll: n,
-        children: (0, i.jsx)(h.Pk, {
-            children: (0, i.jsx)(C, {
+        children: (0, i.jsx)(_.Pk, {
+            children: (0, i.jsx)(v, {
                 message: t,
                 poll: n,
                 className: l

@@ -169,7 +169,7 @@ let k = function (e) {
         K = F > Y,
         X = Y === r.length,
         q = X ? W : 1,
-        Q = s.useMemo(() => {
+        J = s.useMemo(() => {
             let e = [];
             for (let t = 0; t < q; t++)
                 e.push(
@@ -184,12 +184,12 @@ let k = function (e) {
                 );
             return e;
         }, [q, k]),
-        J = null != B,
+        Q = null != B,
         $ = s.useMemo(() => G.find((e) => e.isAvailable()), [G]);
     if (0 === G.length) return null;
     let ee = G.length;
-    if (((t = X ? (1 === ee && J ? R.intl.string(R.t['65r43N']) : R.intl.formatToPlainString(z ? R.t['3DW6DQ'] : R.t['/u15QU'], { numUnappliedGuildBoostSlots: ee })) : R.intl.formatToPlainString(z ? R.t['3DW6DQ'] : R.t.BPadnJ, { numUnappliedGuildBoostSlots: ee })), I.ZP.isPremium(L))) {
-        if (X && 1 === ee && J) n = B.skuId === O.Ft.FREE_GUILD_BOOST_1_MONTH ? R.intl.string(R.t.dm8r0t) : R.intl.string(R.t.VGJ9IC);
+    if (((t = X ? (1 === ee && Q ? R.intl.string(R.t['65r43N']) : R.intl.formatToPlainString(z ? R.t['3DW6DQ'] : R.t['/u15QU'], { numUnappliedGuildBoostSlots: ee })) : R.intl.formatToPlainString(z ? R.t['3DW6DQ'] : R.t.BPadnJ, { numUnappliedGuildBoostSlots: ee })), I.ZP.isPremium(L))) {
+        if (X && 1 === ee && Q) n = B.skuId === O.Ft.FREE_GUILD_BOOST_1_MONTH ? R.intl.string(R.t.dm8r0t) : R.intl.string(R.t.VGJ9IC);
         else {
             let e = (e, t) =>
                 (0, i.jsx)(
@@ -234,7 +234,7 @@ let k = function (e) {
     return (0, i.jsxs)('div', {
         className: P.wrapper,
         children: [
-            J &&
+            Q &&
                 (0, i.jsxs)('div', {
                     className: P.specialHeader,
                     children: [
@@ -252,8 +252,8 @@ let k = function (e) {
                 }),
             (0, i.jsxs)('div', {
                 className: l()(P.content, {
-                    [P.headerWithBoost]: J,
-                    [P.headerWithoutSpecialHeader]: !J
+                    [P.headerWithBoost]: Q,
+                    [P.headerWithoutSpecialHeader]: !Q
                 }),
                 children: [
                     (0, i.jsxs)('div', {
@@ -264,7 +264,7 @@ let k = function (e) {
                                 children: [
                                     (0, i.jsx)('div', {
                                         className: P.headerBoostGems,
-                                        children: Q
+                                        children: J
                                     }),
                                     (0, i.jsxs)('div', {
                                         className: P.__invalid_headerCopy,

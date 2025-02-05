@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     stickyContainer: 'stickyContainer__57d3f',
     stickyBannerContainer: 'stickyBannerContainer__57d3f',
     stickyBanner: 'stickyBanner__57d3f',

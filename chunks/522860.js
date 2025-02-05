@@ -8,12 +8,12 @@ var l = n(481060),
     o = n(388032);
 function c(e) {
     var t;
-    let { message: n, channel: c, playingActivity: d, onJoinStream: u, usernameHook: m, compact: h } = e,
-        _ = (0, r.ZP)(n),
+    let { message: n, channel: c, playingActivity: d, onJoinStream: u, usernameHook: m, compact: _ } = e,
+        h = (0, r.ZP)(n),
         p = null === (t = n.call) || void 0 === t ? void 0 : t.duration,
-        g = m(_),
+        g = m(h),
         f = o.intl.format(o.t.FKXvaG, {
-            username: _.nick,
+            username: h.nick,
             activityName: null != d ? d.name : 'unknown',
             onJoinStream: u,
             usernameHook: g
@@ -21,7 +21,7 @@ function c(e) {
     return (
         null != p &&
             (f = o.intl.format(o.t.NEFxtb, {
-                username: _.nick,
+                username: h.nick,
                 duration: p.humanize(),
                 channelName: c.name,
                 usernameHook: g
@@ -37,7 +37,7 @@ function c(e) {
                       })
                     : (0, i.jsx)(a.ZP, { size: a.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
-            compact: h,
+            compact: _,
             children: f
         })
     );

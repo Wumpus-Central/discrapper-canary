@@ -9,8 +9,8 @@ var r = n(481060),
     c = n(230224),
     d = n(258356),
     u = n(981631),
-    h = n(388032),
-    _ = n(461342);
+    _ = n(388032),
+    h = n(461342);
 let g = (e) => {
     let { state: t } = e;
     switch (t) {
@@ -45,7 +45,7 @@ function p(e) {
               onAcceptInvite: n
           })
         : (0, i.jsxs)('div', {
-              className: _.container,
+              className: h.container,
               children: [
                   (0, i.jsx)(c.GB, {
                       application: E,
@@ -66,8 +66,8 @@ function p(e) {
                   (0, i.jsx)(r.zxk, {
                       onClick: n,
                       submitting: C,
-                      className: _.acceptButton,
-                      children: h.intl.string(h.t.ohMvm5)
+                      className: h.acceptButton,
+                      children: _.intl.string(_.t.ohMvm5)
                   })
               ]
           });

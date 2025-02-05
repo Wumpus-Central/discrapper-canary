@@ -9,9 +9,9 @@ var i = n(933557),
     d = n(768581),
     u = n(55935),
     m = n(631184),
-    h = n(346610);
+    _ = n(346610);
 n(978003);
-var _ = n(388032);
+var h = n(388032);
 function p(e, t, n) {
     return (
         t in e
@@ -35,7 +35,7 @@ function g(e, t) {
             canAnimate: !1
         }),
         timestampLabel: t,
-        accessibilityLabel: _.intl.formatToPlainString(_.t['+l04BA'], {
+        accessibilityLabel: h.intl.formatToPlainString(h.t['+l04BA'], {
             origin: e.name,
             timestamp: t
         })
@@ -47,11 +47,11 @@ class f {
         let p = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a.Z,
             f = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
             x = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
-            E = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.Z,
-            C = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Z,
-            v = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : l.Z,
+            C = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.Z,
+            v = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Z,
+            E = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : l.Z,
             { snapshotIndex: I, parentMessage: N, messageSnapshot: S } = this,
-            { useOldIcon: T } = (0, h.WT)({ location: 'GetForwardInfo' }, { autoTrackExposure: !1 }),
+            { useOldIcon: T } = (0, _.WT)({ location: 'GetForwardInfo' }, { autoTrackExposure: !1 }),
             { showForwardBreadcrumb: b } = m.u.getCurrentConfig({ location: 'MessageForward' });
         if (!b)
             return {
@@ -63,7 +63,7 @@ class f {
         if (null != j && j.guild_id === (null === (e = N.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
             let e = p.getChannel(null === (n = N.messageReference) || void 0 === n ? void 0 : n.channel_id);
             if (null == e) {
-                let e = C.getGuild(j.guild_id);
+                let e = v.getGuild(j.guild_id);
                 return null == e
                     ? {
                           snapshotIndex: I,
@@ -75,7 +75,7 @@ class f {
                           useOldIcon: T
                       };
             }
-            if (!E.can(e.accessPermissions, e))
+            if (!C.can(e.accessPermissions, e))
                 return {
                     snapshotIndex: I,
                     useOldIcon: T
@@ -86,7 +86,7 @@ class f {
                 footerInfo: {
                     originLabel: t,
                     timestampLabel: A,
-                    accessibilityLabel: _.intl.formatToPlainString(_.t['+l04BA'], {
+                    accessibilityLabel: h.intl.formatToPlainString(h.t['+l04BA'], {
                         origin: t,
                         timestamp: A
                     })
@@ -100,7 +100,7 @@ class f {
                 snapshotIndex: I,
                 useOldIcon: T
             };
-        let Z = null !== (d = C.getGuild(y)) && void 0 !== d ? d : v.getGuild(y);
+        let Z = null !== (d = v.getGuild(y)) && void 0 !== d ? d : E.getGuild(y);
         return null == Z
             ? {
                   snapshotIndex: I,

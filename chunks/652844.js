@@ -1,8 +1,8 @@
 n.d(t, { O: () => s });
-var i = n(200651),
-    l = n(192379),
-    a = n(709014);
-let r = {
+var l = n(200651),
+    i = n(192379),
+    r = n(709014);
+let a = {
         mute: {
             name: 'mute',
             start: 0,
@@ -25,16 +25,16 @@ let r = {
         }
     },
     s = (e) => {
-        let t = l.useRef(null),
-            s = l.useRef(e);
+        let t = i.useRef(null),
+            s = i.useRef(e);
         s.current = e;
-        let o = l.useMemo(
+        let o = i.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
                 [e]
             ),
-            c = l.useCallback(() => {
+            u = i.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
                 t.current.play(n);
@@ -42,22 +42,22 @@ let r = {
         return {
             events: {
                 onClick: o,
-                onMouseEnter: c,
-                onMouseLeave: l.useCallback(() => {
+                onMouseEnter: u,
+                onMouseLeave: i.useCallback(() => {
                     if (null == t.current) return;
                     let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
                     t.current.stopIfPlaying(n);
                 }, [e])
             },
             play: o,
-            Component: l.useCallback(
+            Component: i.useCallback(
                 (e) =>
-                    (0, i.jsx)(a.L, {
+                    (0, l.jsx)(r.L, {
                         ...e,
                         src: () => n.e('410').then(n.t.bind(n, 992285, 19)),
                         ref: t,
                         initialAnimation: s.current,
-                        markers: r
+                        markers: a
                     }),
                 []
             )

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(47120);
+n.d(t, { Z: () => C }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(392711),
@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(404616),
     u = n(470623),
     m = n(344185),
-    h = n(488131),
-    _ = n(592125),
+    _ = n(488131),
+    h = n(592125),
     p = n(823379),
     g = n(709054),
     f = n(124368),
     x = n(838503);
-function E(e) {
+function C(e) {
     let { channel: t, channelRecord: n, deleteChannel: a } = e,
-        E = (0, s.Wu)(
-            [m.Z, _.Z],
+        C = (0, s.Wu)(
+            [m.Z, h.Z],
             () =>
                 r()(m.Z.getThreadsForParent(n.guild_id, n.id))
                     .values()
@@ -28,15 +28,15 @@ function E(e) {
                     })
                     .map((e) => {
                         let { id: t } = e;
-                        return _.Z.getChannel(t);
+                        return h.Z.getChannel(t);
                     })
                     .filter(p.lm)
                     .sort((e, t) => g.default.compare(e.id, t.id))
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id]
         ),
-        C = l.useCallback((e, t) => {
-            (0, h.ok)(e, t, f.on.INBOX);
+        v = l.useCallback((e, t) => {
+            (0, _.ok)(e, t, f.on.INBOX);
         }, []);
     return (
         l.useEffect(() => {
@@ -44,14 +44,14 @@ function E(e) {
                 !t.isFullyLoaded ||
                 t.hasError ||
                 t.collapsed ||
-                0 !== E.length ||
+                0 !== C.length ||
                 o.Z.wait(() => {
                     (0, c.In)(t.channelId, !0), a(t.channelId);
                 });
         }),
         (0, i.jsx)('div', {
             className: x.container,
-            children: E.map((e) =>
+            children: C.map((e) =>
                 (0, i.jsx)(
                     u.oL,
                     {
@@ -59,7 +59,7 @@ function E(e) {
                         children: (0, i.jsx)(d.ZP, {
                             className: x.forumPost,
                             threadId: e.id,
-                            goToThread: C
+                            goToThread: v
                         })
                     },
                     e.id

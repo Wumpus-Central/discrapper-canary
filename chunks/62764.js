@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(934415),
     S = n(456269),
     j = n(109590),
-    A = n(228392),
-    y = n(981631),
+    y = n(228392),
+    A = n(981631),
     P = n(388032),
     R = n(811994),
     M = n(636804);
@@ -39,9 +39,9 @@ function L(e) {
         G = (0, o.e7)([N.Z], () => N.Z.getChannel(t), [t]),
         { firstMessage: V } = (0, j.cl)(G),
         z = (0, o.e7)([b.Z], () => b.Z.hasJoined(t)),
-        { disableReactionUpdates: W, disableReactionCreates: Y, isLurking: q, isGuest: K, isPendingMember: X } = (0, C.Z)(G),
-        J = (0, o.e7)([N.Z], () => N.Z.getChannel(L)),
-        Q = (0, S.Bs)(J),
+        { disableReactionUpdates: W, disableReactionCreates: q, isLurking: Y, isGuest: K, isPendingMember: X } = (0, C.Z)(G),
+        Q = (0, o.e7)([N.Z], () => N.Z.getChannel(L)),
+        J = (0, S.Bs)(Q),
         $ = (0, o.e7)([f.Z], () => f.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         ee = l.useCallback(
             (e) => {
@@ -78,11 +78,11 @@ function L(e) {
             z ? Z.Z.leaveThread(G, 'Forum Toolbar') : Z.Z.joinThread(G, 'Forum Toolbar');
         },
         ea = () => {
-            (0, A.B)({
+            (0, y.B)({
                 postId: G.id,
-                location: { section: y.jXE.CHANNEL_HEADER }
+                location: { section: A.jXE.CHANNEL_HEADER }
             }),
-                (0, s.J)((0, T.EO)(G, J)),
+                (0, s.J)((0, T.EO)(G, Q)),
                 H(!0);
         },
         er = () => {
@@ -104,18 +104,18 @@ function L(e) {
                         className: r()(R.reactButtons, { [R.loading]: et }),
                         children: [
                             !ei &&
-                                !Y &&
-                                null != Q &&
+                                !q &&
+                                null != J &&
                                 (0, i.jsx)('div', {
                                     className: M.reactions,
                                     children: (0, i.jsx)(I.le, {
                                         message: V,
                                         readOnly: !1,
                                         useChatFontScaling: !1,
-                                        isLurking: q,
+                                        isLurking: Y,
                                         isGuest: K,
                                         isPendingMember: X,
-                                        emoji: Q,
+                                        emoji: J,
                                         type: _.O.NORMAL,
                                         hideCount: !0,
                                         count: 0,
@@ -130,7 +130,7 @@ function L(e) {
                                 channel: G,
                                 disableReactionCreates: !0,
                                 disableReactionUpdates: W,
-                                isLurking: q,
+                                isLurking: Y,
                                 isGuest: K,
                                 isPendingMember: X,
                                 maxReactions: D,
@@ -139,7 +139,7 @@ function L(e) {
                                 isForumToolbar: !0,
                                 forceHideReactionCreates: !0
                             }),
-                            !Y &&
+                            !q &&
                                 (0, i.jsx)(x.X, {
                                     type: _.O.NORMAL,
                                     message: V,

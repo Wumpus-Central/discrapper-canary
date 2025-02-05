@@ -1,4 +1,4 @@
-n.d(t, { e: () => h }), n(47120);
+n.d(t, { e: () => _ }), n(47120);
 var i = n(200651);
 n(192379);
 var l = n(481060),
@@ -10,8 +10,8 @@ var l = n(481060),
     d = n(882101),
     u = n(388032),
     m = n(870057);
-let h = (e) => {
-    let { listingId: t, isListingPublished: n, expanded: h, onToggleExpanded: _ } = e,
+let _ = (e) => {
+    let { listingId: t, isListingPublished: n, expanded: _, onToggleExpanded: h } = e,
         p = (0, c.Z)(),
         [g] = o._T(t),
         [f] = o.d9(t, p),
@@ -47,8 +47,8 @@ let h = (e) => {
                 ]
             }),
             (0, i.jsx)(l.P3F, {
-                onClick: _,
-                children: h
+                onClick: h,
+                children: _
                     ? (0, i.jsx)(l.u04, {
                           size: 'md',
                           color: 'currentColor',

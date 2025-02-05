@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(129293),
     d = n(388905),
     u = n(353926),
-    h = n(185625),
-    _ = n(551549),
+    _ = n(185625),
+    h = n(551549),
     g = n(108427),
     p = n(314897),
     m = n(981631),
@@ -20,7 +20,7 @@ let I = (e) => {
     let { location: t } = e,
         n = (0, l.e7)([p.default], () => p.default.isAuthenticated()),
         I = (0, l.e7)([u.Z], () => u.Z.hasLoadedExperiments),
-        x = (0, _.oK)('RSL - Landing Page'),
+        x = (0, h.oK)('RSL - Landing Page'),
         [C, N] = r.useState(!1),
         [v, T] = r.useState(f.intl.string(f.t['9exy+f'])),
         [S, A] = r.useState(!0),
@@ -60,7 +60,7 @@ let I = (e) => {
             let e = async (e) => {
                 var t, n;
                 try {
-                    let n = null != e ? await (0, h.hs)(e) : void 0;
+                    let n = null != e ? await (0, _.hs)(e) : void 0;
                     null != n ? T(f.intl.string(f.t.e6mZMj)) : b(null === (t = n.body) || void 0 === t ? void 0 : t.code);
                 } catch (e) {
                     b(null === (n = e.body) || void 0 === n ? void 0 : n.code);

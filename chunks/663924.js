@@ -68,7 +68,7 @@ function T(e) {
         }, [Z, b]);
     let S = (0, r.e7)([g.Z], () => g.Z.initialState(), []),
         j = (0, d.q)(null == S ? void 0 : S.applicationId),
-        A = l.useMemo(() => {
+        y = l.useMemo(() => {
             if (null == S) return;
             let e = [{ type: C.gc.HOME }];
             return (
@@ -88,7 +88,7 @@ function T(e) {
             type: 'channel'
         },
         entrypoint: _._b.TEXT,
-        initHistory: A
+        initHistory: y
     });
 }
 let S = l.memo(function (e) {

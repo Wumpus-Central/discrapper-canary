@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(442837),
@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(63063),
     u = n(665149),
     m = n(388032);
-function h(e) {
+function _(e) {
     let { className: t } = e,
-        h = (0, a.e7)([c.Z], () => c.Z.isDeveloper),
-        [_, p] = l.useState(!1),
+        _ = (0, a.e7)([c.Z], () => c.Z.isDeveloper),
+        [h, p] = l.useState(!1),
         [g, f] = l.useState(0),
         x = (e) => {
             clearTimeout(g),
@@ -26,7 +26,7 @@ function h(e) {
         onMouseEnter: () => x(!0),
         onMouseLeave: () => x(!1),
         children: (0, i.jsx)(r.yRy, {
-            shouldShow: _,
+            shouldShow: h,
             animation: r.yRy.Animation.NONE,
             position: 'bottom',
             align: 'right',
@@ -72,7 +72,7 @@ function h(e) {
                     });
                 })({
                     onClose: () => p(!1),
-                    isDiscordDeveloper: h
+                    isDiscordDeveloper: _
                 }),
             children: (e, n) => {
                 let { isShown: l } = n;

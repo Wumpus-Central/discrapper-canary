@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(276264),
     S = n(981631),
     j = n(388032),
-    A = n(973249);
-let y = [],
+    y = n(973249);
+let A = [],
     P = N.ZP.getEnableHardwareAcceleration();
 function R(e) {
     let { user: t, channel: l, status: d, activities: u } = e,
@@ -35,7 +35,7 @@ function R(e) {
         E = (0, r.e7)([_.Z], () => _.Z.isMobileOnline(t.id)),
         b = (0, r.e7)([C.Z], () => C.Z.getNickname(t.id)),
         N = (0, p.Z)(t.id, 'private-channel-recipient'),
-        A = (e) => {
+        y = (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('8634')]).then(n.bind(n, 354589));
                 return (n) =>
@@ -79,7 +79,7 @@ function R(e) {
                     activities: u,
                     applicationStream: N,
                     channel: l,
-                    onContextMenu: A,
+                    onContextMenu: y,
                     isMobile: E,
                     nick: b,
                     ...e
@@ -112,11 +112,11 @@ function L(e) {
                     C.Z.isFriend(t.id) || t.id === (null === (i = v.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
                         ? (n[t.id] = {
                               status: null !== (l = _.Z.getStatus(t.id)) && void 0 !== l ? l : S.Skl.OFFLINE,
-                              activities: null !== (a = _.Z.getActivities(t.id)) && void 0 !== a ? a : y
+                              activities: null !== (a = _.Z.getActivities(t.id)) && void 0 !== a ? a : A
                           })
                         : (n[t.id] = {
                               status: S.Skl.OFFLINE,
-                              activities: y
+                              activities: A
                           });
                 }
                 let r = [];
@@ -144,15 +144,15 @@ function L(e) {
     return (0, i.jsx)(u.Gt, {
         value: o,
         children: (0, i.jsx)('div', {
-            className: A.container,
+            className: y.container,
             children: (0, i.jsx)('aside', {
-                className: A.membersWrap,
+                className: y.membersWrap,
                 children: (0, i.jsxs)(s.Ttm, {
-                    className: A.members,
+                    className: y.members,
                     fade: !0,
                     children: [
                         (0, i.jsxs)(m.Z, {
-                            className: A.membersGroup,
+                            className: y.membersGroup,
                             children: [''.concat(j.intl.string(j.t['9Oq93t']), '\u2014').concat(c.length, ' '), p && (0, i.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM })]
                         }),
                         c.map((e) =>

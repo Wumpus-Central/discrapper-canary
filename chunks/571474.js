@@ -9,26 +9,26 @@ var i,
     d = n(314897),
     u = n(699516);
 let m = 180 * o.Z.Millis.DAY,
-    h = !1;
-class _ extends (a = r.ZP.Store) {
+    _ = !1;
+class h extends (a = r.ZP.Store) {
     initialize() {
         this.waitFor(u.Z, d.default);
     }
     isEligible() {
-        return h;
+        return _;
     }
 }
 (l = 'PremiumPromoStore'),
-    (i = 'displayName') in _
-        ? Object.defineProperty(_, i, {
+    (i = 'displayName') in h
+        ? Object.defineProperty(h, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (_[i] = l);
-let p = new _(s.Z, {
+        : (h[i] = l);
+let p = new h(s.Z, {
     CONNECTION_OPEN: function () {
-        return h !== (h = u.Z.getFriendIDs().length >= 10 && c.default.extractTimestamp(d.default.getId()) < Date.now() - m);
+        return _ !== (_ = u.Z.getFriendIDs().length >= 10 && c.default.extractTimestamp(d.default.getId()) < Date.now() - m);
     }
 });

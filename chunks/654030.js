@@ -9,15 +9,15 @@ var i,
     d = n(763472),
     u = n(498179),
     m = n(276852),
-    h = n(620662),
-    _ = n(994339),
+    _ = n(620662),
+    h = n(994339),
     p = n(275920),
     g = n(917621),
     f = n(431583),
     x = n(592745),
-    E = n(952164),
-    C = n(768419),
-    v = n(456432),
+    C = n(952164),
+    v = n(768419),
+    E = n(456432),
     I = n(347475),
     N = n(789407),
     S = n(598077),
@@ -53,7 +53,7 @@ let B = { spotify: 'Spotify' };
 class G extends (i = a.PureComponent) {
     getCoverImage() {
         let { activity: e, connectedApplication: t, application: n, isPreview: i, message: l } = this.props;
-        if (null != n && (i || (null != l && (0, _.Z)(e, l, n.id)))) {
+        if (null != n && (i || (null != l && (0, h.Z)(e, l, n.id)))) {
             let t = (0, m.Z)(e, n.id);
             if (null != t) return t;
         }
@@ -66,13 +66,13 @@ class G extends (i = a.PureComponent) {
               });
     }
     handleOpenSpotifyTrack(e) {
-        (0, E.aG)(e);
+        (0, C.aG)(e);
     }
     handleOpenSpotifyArtist(e, t, n) {
-        (0, E.d$)(e, t, n);
+        (0, C.d$)(e, t, n);
     }
     handleOpenSpotifyAlbum(e, t) {
-        (0, E.Z5)(e, t);
+        (0, C.Z5)(e, t);
     }
     shouldRenderCustomButton() {
         let { isLaunchable: e, application: t } = this.props;
@@ -100,7 +100,7 @@ class G extends (i = a.PureComponent) {
                         source: w.Sbl.MESSAGE_EMBED,
                         analyticsLocations: t,
                         partyId: null === (r = e.party) || void 0 === r ? void 0 : r.id,
-                        embedded: (0, h.Z)(e, w.xjy.EMBEDDED)
+                        embedded: (0, _.Z)(e, w.xjy.EMBEDDED)
                     }),
                         (0, p.Z)({
                             type: w.q5t.JOIN,
@@ -157,7 +157,7 @@ class G extends (i = a.PureComponent) {
             }),
             U(this, 'renderSpotifyJoinButton', (e) => {
                 let { channelId: t, guildId: n } = this.props;
-                return (0, l.jsx)(v.Z, {
+                return (0, l.jsx)(E.Z, {
                     guildId: null != n ? n : void 0,
                     channelId: t,
                     source: 'Invite Embed',
@@ -174,7 +174,7 @@ class G extends (i = a.PureComponent) {
             }),
             U(this, 'renderEmbed', () => {
                 let e;
-                let { activity: t, partyId: n, myPartyId: i, application: a, partyMembers: r, isPreview: s, isLaunching: o, isSender: c, activityActionType: d, className: u, channelId: m, message: h, hideParty: _, isSyncable: p, isLaunchable: f, guildId: x } = this.props;
+                let { activity: t, partyId: n, myPartyId: i, application: a, partyMembers: r, isPreview: s, isLaunching: o, isSender: c, activityActionType: d, className: u, channelId: m, message: _, hideParty: h, isSyncable: p, isLaunchable: f, guildId: x } = this.props;
                 if (null != a) e = a.name;
                 else if (null != n) {
                     let [t] = n.split(':');
@@ -198,8 +198,8 @@ class G extends (i = a.PureComponent) {
                     isSender: c,
                     channelId: m,
                     guildId: null != x ? x : void 0,
-                    message: h,
-                    hideParty: _,
+                    message: _,
+                    hideParty: h,
                     onJoin: this.handleJoin,
                     onInvite: this.handleInvite,
                     onSync: this.handleSync,
@@ -215,7 +215,7 @@ class G extends (i = a.PureComponent) {
     }
 }
 U(G, 'defaultProps', { isPreview: !1 });
-let H = r.ZP.connectStores([C.Z, b.Z, y.Z, Z.Z, T.Z, L.Z, j.Z, x.Z, P.Z, R.default, A.ZP], (e) => {
+let H = r.ZP.connectStores([v.Z, b.Z, y.Z, Z.Z, T.Z, L.Z, j.Z, x.Z, P.Z, R.default, A.ZP], (e) => {
     var t;
     let { activity: n, analyticsLocations: i, application: l, partyId: a, userId: r, guildId: s } = e,
         { id: o } = null != l ? l : {},
@@ -237,16 +237,16 @@ let H = r.ZP.connectStores([C.Z, b.Z, y.Z, Z.Z, T.Z, L.Z, j.Z, x.Z, P.Z, R.defau
                 }
             );
         }),
-        h = null != n && C.Z.canPlay(n),
-        _ = C.Z.getSyncingWith(),
-        p = null != _ && null != r && _.userId === r;
+        _ = null != n && v.Z.canPlay(n),
+        h = v.Z.getSyncingWith(),
+        p = null != h && null != r && h.userId === r;
     return {
         analyticsLocations: i,
         partyMembers: m,
         connectedApplication: null != o ? T.Z.getApplication(o) : null,
         myPartyId: null != d && null != d.party ? d.party.id : null,
         isLaunching: u,
-        isSyncable: h && !p,
+        isSyncable: _ && !p,
         isLaunchable:
             null != o &&
             (0, O.t)({

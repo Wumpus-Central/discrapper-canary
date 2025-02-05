@@ -66,12 +66,12 @@ var u = {
         id: c(a),
         transports: d(l)
     },
-    h = {
+    _ = {
         appid: d(l),
         appidExclude: d(l),
         credProps: d(l)
     },
-    _ = {
+    h = {
         appid: d(l),
         appidExclude: d(l),
         credProps: d(l)
@@ -89,7 +89,7 @@ c({
     excludeCredentials: d([u]),
     authenticatorSelection: d(l),
     attestation: d(l),
-    extensions: d(h)
+    extensions: d(_)
 }),
     d(l),
     c(l),
@@ -104,7 +104,7 @@ c({
             return (null == (t = e.getTransports) ? void 0 : t.call(e)) || [];
         })
     }),
-    s(_, (e) => e.getClientExtensionResults());
+    s(h, (e) => e.getClientExtensionResults());
 var g = {
         mediation: d(l),
         publicKey: c({
@@ -113,7 +113,7 @@ var g = {
             rpId: d(l),
             allowCredentials: d([u]),
             userVerification: d(l),
-            extensions: d(h)
+            extensions: d(_)
         }),
         signal: d(l)
     },
@@ -128,7 +128,7 @@ var g = {
             signature: c(a),
             userHandle: c(a)
         }),
-        clientExtensionResults: s(_, (e) => e.getClientExtensionResults())
+        clientExtensionResults: s(h, (e) => e.getClientExtensionResults())
     };
 function m(e) {
     return o(i, g, e);

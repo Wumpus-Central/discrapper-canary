@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(51144),
     S = n(396769),
     j = n(967128),
-    A = n(318374),
-    y = n(981631),
+    y = n(318374),
+    A = n(981631),
     P = n(388032),
     R = n(840822);
 function M(e) {
@@ -58,7 +58,7 @@ function M(e) {
                             forceRoles: { [e.id]: e },
                             context: t
                         });
-                        return c.e$(n, y.Plq.ADMINISTRATOR) || c.e$(n, y.Plq.VIEW_CHANNEL);
+                        return c.e$(n, A.Plq.ADMINISTRATOR) || c.e$(n, A.Plq.VIEW_CHANNEL);
                     })
                     .value(),
             [t, M, O]
@@ -76,19 +76,19 @@ function M(e) {
                     .filter((e) => {
                         var n;
                         let i = N.BT({
-                                permission: y.Plq.ADMINISTRATOR,
+                                permission: A.Plq.ADMINISTRATOR,
                                 user: e,
                                 context: t
                             }),
                             l = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : N.Hn,
-                            a = c.e$(l.allow, y.Plq.VIEW_CHANNEL);
+                            a = c.e$(l.allow, A.Plq.VIEW_CHANNEL);
                         return i || a;
                     })
                     .value();
             },
             [t, k]
         ),
-        U = b.Z.can(y.Plq.MANAGE_CHANNELS, t) || b.Z.can(y.Plq.MANAGE_ROLES, t),
+        U = b.Z.can(A.Plq.MANAGE_CHANNELS, t) || b.Z.can(A.Plq.MANAGE_ROLES, t),
         B = l.useCallback(() => a(!1), []);
     return (0, i.jsxs)(j.ZP, {
         channelId: t.id,
@@ -134,7 +134,7 @@ function M(e) {
                 children: [
                     (function () {
                         if (1 !== w.length || D.length > 0)
-                            return (0, i.jsx)(A.Z, {
+                            return (0, i.jsx)(y.Z, {
                                 guildId: t.guild_id,
                                 className: R.avatars,
                                 maxUsers: 5,
@@ -168,7 +168,7 @@ function M(e) {
                     })(),
                     D.map((e, n) => {
                         var l, a;
-                        let s = null !== (a = e.colorString) && void 0 !== a ? a : (0, d.Rf)(y.p6O),
+                        let s = null !== (a = e.colorString) && void 0 !== a ? a : (0, d.Rf)(A.p6O),
                             o = (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) !== void 0;
                         return U
                             ? (0, i.jsx)(
@@ -180,7 +180,7 @@ function M(e) {
                                       disabled: !U,
                                       verified: o,
                                       onClick: () => {
-                                          v.Z.open(t.guild_id, y.pNK.MEMBERS), v.Z.selectRole(e.id);
+                                          v.Z.open(t.guild_id, A.pNK.MEMBERS), v.Z.selectRole(e.id);
                                       }
                                   },
                                   e.id

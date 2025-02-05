@@ -1,31 +1,31 @@
-n.d(t, { Z: () => r }), n(47120);
-var a = n(200651),
-    i = n(192379),
-    l = n(481060),
-    s = n(911969),
-    c = n(388032),
+n.d(t, { Z: () => c }), n(47120);
+var i = n(200651),
+    l = n(192379),
+    a = n(481060),
+    r = n(911969),
+    s = n(388032),
     o = n(750628);
-function r(e) {
-    let { name: t, labelType: n, collapsed: r = !1, showTooltip: d = !1 } = e,
-        u = n === s.ww.NEW ? c.intl.string(c.t.y2b7CA) : c.intl.string(c.t['/qdhkp']),
-        p = n === s.ww.NEW ? o.activityNewBadge : o.activityUpdatedBadge,
-        [m, g] = i.useState(r ? '' : u);
+function c(e) {
+    let { name: t, labelType: n, collapsed: c = !1, showTooltip: d = !1 } = e,
+        u = n === r.ww.NEW ? s.intl.string(s.t.y2b7CA) : s.intl.string(s.t['/qdhkp']),
+        h = n === r.ww.NEW ? o.activityNewBadge : o.activityUpdatedBadge,
+        [p, m] = l.useState(c ? '' : u);
     if (
-        (i.useEffect(() => {
-            r ? g('') : n === s.ww.NEW ? g(c.intl.string(c.t.y2b7CA)) : n === s.ww.UPDATED && g(c.intl.string(c.t['/qdhkp']));
-        }, [r, n]),
-        n === s.ww.NONE)
+        (l.useEffect(() => {
+            c ? m('') : n === r.ww.NEW ? m(s.intl.string(s.t.y2b7CA)) : n === r.ww.UPDATED && m(s.intl.string(s.t['/qdhkp']));
+        }, [c, n]),
+        n === r.ww.NONE)
     )
         return null;
-    let f = (0, a.jsx)(l.IGR, {
-        className: p,
+    let f = (0, i.jsx)(a.IGR, {
+        className: h,
         disableColor: !0,
-        text: (0, a.jsx)('span', { children: m })
+        text: (0, i.jsx)('span', { children: p })
     });
     if (!d) return f;
-    let v = c.intl.formatToPlainString(c.t.Vs2EeX, { activity: t });
-    return (0, a.jsx)(l.DY3, {
-        text: v,
+    let g = s.intl.formatToPlainString(s.t.Vs2EeX, { activity: t });
+    return (0, i.jsx)(a.DY3, {
+        text: g,
         tooltipContentClassName: o.tooltip,
         children: f
     });

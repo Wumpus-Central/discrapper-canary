@@ -13,15 +13,15 @@ var i = n(200651),
     d = n(442837),
     u = n(524437),
     m = n(481060),
-    h = n(570140),
-    _ = n(607070),
+    _ = n(570140),
+    h = n(607070),
     p = n(724757),
     g = n(216789),
     f = n(626135),
     x = n(585483),
-    E = n(358085),
-    C = n(143316),
-    v = n(240126),
+    C = n(358085),
+    v = n(143316),
+    E = n(240126),
     I = n(791914),
     N = n(207950),
     S = n(809780),
@@ -68,7 +68,7 @@ function j(e) {
         (Z = U),
         l.useEffect(() => {
             let e = (e) => {
-                ((0, E.isMac)() || (0, E.isMacWeb)() ? e.metaKey : e.ctrlKey) && !e.shiftKey && !e.altKey && 'z' === e.key && Z.undoMarkChannelRead();
+                ((0, C.isMac)() || (0, C.isMacWeb)() ? e.metaKey : e.ctrlKey) && !e.shiftKey && !e.altKey && 'z' === e.key && Z.undoMarkChannelRead();
             };
             return (
                 document.addEventListener('keydown', e),
@@ -82,14 +82,14 @@ function j(e) {
         }, []),
         l.useEffect(
             () => (
-                h.Z.subscribe('CONNECTION_OPEN', O),
+                _.Z.subscribe('CONNECTION_OPEN', O),
                 () => {
-                    h.Z.unsubscribe('CONNECTION_OPEN', O);
+                    _.Z.unsubscribe('CONNECTION_OPEN', O);
                 }
             ),
             [O]
         );
-    let z = (0, d.e7)([_.Z], () => _.Z.messageGroupSpacing),
+    let z = (0, d.e7)([h.Z], () => h.Z.messageGroupSpacing),
         W = (0, g.Us)({ location: 'Unreads' }),
         K = (0, p.Z)('unreads', w);
     if (0 === G.length) {
@@ -102,7 +102,7 @@ function j(e) {
                     badgeState: D,
                     closePopout: O
                 }),
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(E.Z, {
                     Icon: m.xx7,
                     header: b.intl.string(b.t['6XMM+P']),
                     tip: (null === (R = o().os) || void 0 === R ? void 0 : R.family) === 'OS X' ? b.intl.string(b.t.w9uDOT) : b.intl.string(b.t.BiUJCw)
@@ -119,7 +119,7 @@ function j(e) {
                 setTab: L,
                 badgeState: D,
                 closePopout: O,
-                children: (0, i.jsx)(C.Z, {
+                children: (0, i.jsx)(v.Z, {
                     type: 'top-header',
                     onClick: V
                 })
@@ -191,7 +191,7 @@ function Z(e) {
                 badgeState: n,
                 closePopout: l
             }),
-            (0, i.jsx)(v.Z, {
+            (0, i.jsx)(E.Z, {
                 Icon: m.xx7,
                 disableStars: !0,
                 header: b.intl.string(b.t['KG/ynZ']),

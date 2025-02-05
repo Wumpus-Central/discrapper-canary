@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(570140),
     d = n(893776),
     u = n(533307),
-    h = n(447543),
-    _ = n(126399),
+    _ = n(447543),
+    h = n(126399),
     g = n(521379),
     p = n(765717),
     m = n(267394),
@@ -63,8 +63,8 @@ let en = (0, D.Z)(V.Z),
     ec = (0, D.Z)(U.Z),
     ed = (0, D.Z)(w.Z),
     eu = (0, D.Z)(Q.Z),
-    eh = (0, D.Z)(E.Z),
-    e_ = (0, D.Z)(J.Z),
+    e_ = (0, D.Z)(E.Z),
+    eh = (0, D.Z)(J.Z),
     eg = (0, D.Z)(M.Z),
     ep = (0, D.Z)(f.Z),
     em = (0, D.Z)(N.Z),
@@ -113,14 +113,14 @@ class eN extends r.PureComponent {
             (t || ee.a) && this.resolveInvite(),
             this.resolveGiftCode(),
             this.resolveGuildTemplate(),
-            _.Z.initialize();
+            h.Z.initialize();
     }
     componentDidUpdate(e) {
         var t, n;
         e.hasLoadedExperiments || !this.props.hasLoadedExperiments || ee.a || this.resolveInvite(), (null === (t = e.invite) || void 0 === t ? void 0 : t.state) !== (null === (n = this.props.invite) || void 0 === n ? void 0 : n.state) && this.maybeFetchApplicationSplash();
     }
     componentWillUnmount() {
-        _.Z.terminate();
+        h.Z.terminate();
     }
     maybeFetchApplicationSplash() {
         let { invite: e } = this.props;
@@ -136,8 +136,8 @@ class eN extends r.PureComponent {
     async resolveInvite() {
         let { inviteKey: e } = this.props;
         if (null == e) return;
-        let { invite: t } = await h.Z.resolveInvite(e, $.Usc.INVITE);
-        null != t && ((0, m.A)(t), null != t.type && et.xf.has(t.type) && h.Z.openNativeAppModal(e));
+        let { invite: t } = await _.Z.resolveInvite(e, $.Usc.INVITE);
+        null != t && ((0, m.A)(t), null != t.type && et.xf.has(t.type) && _.Z.openNativeAppModal(e));
     }
     resolveGuildTemplate() {
         let { guildTemplateCode: e } = this.props;
@@ -270,7 +270,7 @@ class eN extends r.PureComponent {
                 }),
                 (0, i.jsx)(p.Z, {
                     path: $.Z5c.VERIFY_REQUEST,
-                    render: (e) => (0, i.jsx)(eh, { ...e })
+                    render: (e) => (0, i.jsx)(e_, { ...e })
                 }),
                 (0, i.jsx)(p.Z, {
                     path: $.Z5c.DISABLE_EMAIL_NOTIFICATIONS,
@@ -287,7 +287,7 @@ class eN extends r.PureComponent {
                 (0, i.jsx)(p.Z, {
                     path: $.Z5c.REJECT_IP,
                     render: (e) =>
-                        (0, i.jsx)(e_, {
+                        (0, i.jsx)(eh, {
                             source: $.Z5c.REJECT_IP,
                             ...e
                         })
@@ -295,7 +295,7 @@ class eN extends r.PureComponent {
                 (0, i.jsx)(p.Z, {
                     path: $.Z5c.REJECT_MFA,
                     render: (e) =>
-                        (0, i.jsx)(e_, {
+                        (0, i.jsx)(eh, {
                             source: $.Z5c.REJECT_MFA,
                             ...e
                         })
@@ -307,7 +307,7 @@ class eN extends r.PureComponent {
                 (0, i.jsx)(p.Z, {
                     path: $.Z5c.RESET,
                     render: (e) =>
-                        (0, i.jsx)(e_, {
+                        (0, i.jsx)(eh, {
                             source: $.Z5c.RESET,
                             ...e
                         })

@@ -16,15 +16,15 @@ var i = n(512722),
     d = n(668781),
     u = n(749210),
     m = n(904245),
-    h = n(881052),
-    _ = n(367907),
+    _ = n(881052),
+    h = n(367907),
     p = n(41776),
     g = n(566006),
     f = n(48854),
     x = n(869765),
-    E = n(314897),
-    C = n(592125),
-    v = n(703558),
+    C = n(314897),
+    v = n(592125),
+    E = n(703558),
     I = n(607744),
     N = n(375954),
     S = n(117530),
@@ -64,7 +64,7 @@ function P(e) {
 }
 function k(e) {
     let { channelId: t, messageId: n, answerId: i } = e,
-        l = C.Z.getChannel(t);
+        l = v.Z.getChannel(t);
     if (null == l) return;
     if (p.Z.isLurking(l.guild_id)) {
         P({
@@ -108,7 +108,7 @@ async function D(e) {
         }),
         a = r().difference(l, i),
         s = r().difference(i, l),
-        d = E.default.getId(),
+        d = C.default.getId(),
         u = [
             ...a.map((e) => ({
                 type: 'MESSAGE_REACTION_REMOVE',
@@ -140,7 +140,7 @@ async function D(e) {
 }
 async function w(e) {
     let { channelId: t, messageId: n } = e,
-        i = C.Z.getChannel(t);
+        i = v.Z.getChannel(t);
     if (null == i) return;
     if (p.Z.isLurking(i.guild_id)) {
         P({
@@ -211,7 +211,7 @@ async function w(e) {
 }
 async function F(e) {
     let { channelId: t, messageId: n } = e,
-        i = C.Z.getChannel(t);
+        i = v.Z.getChannel(t);
     if (null != i) {
         if (p.Z.isLurking(i.guild_id)) {
             P({
@@ -276,7 +276,7 @@ async function U(e) {
                                   }, 0)
                                 : 0;
                     return (
-                        _.ZP.trackWithMetadata(Z.rMx.POLL_SHOW_RESULTS_CLICKED, {
+                        h.ZP.trackWithMetadata(Z.rMx.POLL_SHOW_RESULTS_CLICKED, {
                             channel_id: t,
                             message_id: n,
                             show_results: a,
@@ -348,7 +348,7 @@ let B = {
                 let e = new Set([i]),
                     { analyticsSelectedAnswerIds: t, selectedTextAnswersCount: l, selectedEmojiAnswersCount: a } = L(null === (n = o.poll) || void 0 === n ? void 0 : n.answers, e);
                 return (
-                    _.ZP.trackWithMetadata(Z.rMx.POLL_VOTE_SELECTED, {
+                    h.ZP.trackWithMetadata(Z.rMx.POLL_VOTE_SELECTED, {
                         channel_id: r,
                         message_id: s,
                         selected_answer_ids: t,
@@ -373,7 +373,7 @@ let B = {
             }
             let { analyticsSelectedAnswerIds: c, selectedTextAnswersCount: u, selectedEmojiAnswersCount: m } = L(null === (t = o.poll) || void 0 === t ? void 0 : t.answers, a);
             return (
-                _.ZP.trackWithMetadata(Z.rMx.POLL_VOTE_SELECTED, {
+                h.ZP.trackWithMetadata(Z.rMx.POLL_VOTE_SELECTED, {
                     channel_id: r,
                     message_id: s,
                     selected_answer_ids: c,
@@ -389,7 +389,7 @@ let B = {
     handlePollActionTapped: U,
     createPoll: async function (e) {
         let { channel: t, question: n, answers: i, allowMultiSelect: l, duration: a, layout: r, onClose: o } = e,
-            c = S.Z.getUploads(t.id, v.d.Poll),
+            c = S.Z.getUploads(t.id, E.d.Poll),
             d = i.map((e) => {
                 var t, n;
                 let i = null == c ? void 0 : c.findIndex((t) => t.id === e.localCreationAnswerId),
@@ -416,8 +416,8 @@ let B = {
             };
         try {
             if (null != c && c.length > 0) {
-                var _;
-                let e = null !== (_ = E.default.getToken()) && void 0 !== _ ? _ : '';
+                var h;
+                let e = null !== (h = C.default.getToken()) && void 0 !== h ? h : '';
                 await b.sk({
                     channel: t,
                     items: c,
@@ -429,7 +429,7 @@ let B = {
             } else await m.Z.sendPollMessage(t.id, u);
             null == o || o();
         } catch (e) {
-            if ('poll' === (e instanceof h.Hx ? e : new h.Hx(e)).getAnyErrorMessage() && null != e.text)
+            if ('poll' === (e instanceof _.Hx ? e : new _.Hx(e)).getAnyErrorMessage() && null != e.text)
                 throw {
                     ...e,
                     body: JSON.parse(e.text)

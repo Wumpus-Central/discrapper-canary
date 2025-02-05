@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
 var l = n(512722),
@@ -10,13 +10,13 @@ var l = n(512722),
     d = n(613810),
     u = n(596211),
     m = n(388032),
-    h = n(916060);
-function _(e) {
-    var t, n, l, _;
+    _ = n(916060);
+function h(e) {
+    var t, n, l, h;
     let { guildId: p, productId: g } = e,
         f = (0, r.e7)([c.Z], () => c.Z.getGuildProduct(g)),
-        x = (null !== (_ = null == f ? void 0 : null === (t = f.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== _ ? _ : 0) > 1,
-        E = null == f ? void 0 : null === (l = f.attachments) || void 0 === l ? void 0 : null === (n = l[0]) || void 0 === n ? void 0 : n.id;
+        x = (null !== (h = null == f ? void 0 : null === (t = f.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== h ? h : 0) > 1,
+        C = null == f ? void 0 : null === (l = f.attachments) || void 0 === l ? void 0 : null === (n = l[0]) || void 0 === n ? void 0 : n.id;
     return x
         ? (0, i.jsxs)(s.zxk, {
               onClick: function () {
@@ -25,7 +25,7 @@ function _(e) {
                       productId: g
                   });
               },
-              innerClassName: h.textWithIcon,
+              innerClassName: _.textWithIcon,
               children: [
                   (0, i.jsx)('div', { children: m.intl.string(m.t.UyuiUF) }),
                   (0, i.jsx)(s.LZC, {
@@ -39,12 +39,12 @@ function _(e) {
                   })
               ]
           })
-        : (a()(null != E, 'No attachment'),
+        : (a()(null != C, 'No attachment'),
           (0, i.jsxs)(u.Z, {
               guildId: p,
               productId: g,
-              attachmentId: E,
-              innerClassName: h.textWithIcon,
+              attachmentId: C,
+              innerClassName: _.textWithIcon,
               children: [
                   (0, i.jsx)('div', { children: m.intl.string(m.t.t9bE9f) }),
                   (0, i.jsx)(s.LZC, {

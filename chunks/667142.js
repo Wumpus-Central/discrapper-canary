@@ -2,25 +2,25 @@ n.d(t, {
     Df: () => u,
     S_: () => c,
     V5: () => a,
-    VX: () => o,
+    VX: () => l,
     ZP: () => h,
     ih: () => s,
     xc: () => d
 });
 var i = n(972959);
-let l = {
+let r = {
         timeToLiveMs: 5000,
         reappearTimeMs: 10000
     },
-    r = (0, i.H)(() => l),
-    o = 10000,
+    o = (0, i.H)(() => r),
+    l = 10000,
     a = 20000,
     s = 500,
     d = 1000;
 function c(e) {
-    r.setState({ timeToLiveMs: e });
+    o.setState({ timeToLiveMs: e });
 }
 function u(e) {
-    r.setState({ reappearTimeMs: e });
+    o.setState({ reappearTimeMs: e });
 }
-let h = r;
+let h = o;

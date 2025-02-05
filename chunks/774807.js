@@ -27,7 +27,7 @@ let u = 90 * s.Z.Millis.DAY,
         isDataStale: !1,
         isRefreshing: !1
     };
-class h extends (i = l.ZP.PersistedStore) {
+class _ extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(r.Z), null != e)) {
             var t;
@@ -62,11 +62,11 @@ class h extends (i = l.ZP.PersistedStore) {
         return m.hasNewMentions || m.isDataStale || m.isRefreshing;
     }
 }
-function _() {
+function h() {
     (m.hasNewMentions = !1), (m.isDataStale = !1), (m.isRefreshing = !1);
 }
-d(h, 'displayName', 'NotificationCenterStore'), d(h, 'persistKey', 'NotificationCenterStore');
-let p = new h(a.Z, {
+d(_, 'displayName', 'NotificationCenterStore'), d(_, 'persistKey', 'NotificationCenterStore');
+let p = new _(a.Z, {
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
     },
@@ -91,6 +91,6 @@ let p = new h(a.Z, {
     NOTIFICATION_CENTER_REFRESH: function () {
         m.isRefreshing = !0;
     },
-    LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: _,
-    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: _
+    LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: h,
+    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: h
 });

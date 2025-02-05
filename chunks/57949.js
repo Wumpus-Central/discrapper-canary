@@ -10,8 +10,8 @@ var l = n(772848),
 function d(e) {
     let { guildProductListing: t, guildId: d, sourceAnalyticsLocations: u } = e,
         m = !1,
-        h = (0, l.Z)(),
-        _ = t.id,
+        _ = (0, l.Z)(),
+        h = t.id,
         p = () => {
             m = !0;
         };
@@ -22,13 +22,13 @@ function d(e) {
                 (0, i.jsx)(e, {
                     ...n,
                     applicationId: t.application_id,
-                    skuId: _,
+                    skuId: h,
                     sourceAnalyticsLocations: u,
                     guildProductContext: {
                         guildProductListingId: t.id,
                         guildId: d
                     },
-                    loadId: h,
+                    loadId: _,
                     onComplete: p
                 });
         },
@@ -36,10 +36,10 @@ function d(e) {
             onCloseCallback: () => {
                 m ||
                     o.default.track(c.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: h,
+                        load_id: _,
                         payment_type: c.Zuq[c.GZQ.ONE_TIME],
                         is_gift: !1,
-                        sku_id: _,
+                        sku_id: h,
                         location_stack: Array.isArray(u) ? u : [u]
                     }),
                     (0, r.fw)(),

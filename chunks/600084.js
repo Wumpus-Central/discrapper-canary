@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(967128),
     S = n(320781),
     j = n(269203),
-    A = n(86863),
-    y = n(558756),
+    y = n(86863),
+    A = n(558756),
     P = n(753898),
     R = n(734386),
     M = n(184279),
@@ -70,7 +70,7 @@ function G(e) {
                 authorizedAppsFetchState: v.Z.getFetchState()
             };
         }),
-        Y = c.Z.useExperiment({ location: 'EmptyMessages' }).enabledDesktop;
+        q = c.Z.useExperiment({ location: 'EmptyMessages' }).enabledDesktop;
     if (
         (l.useEffect(() => {
             E === D.d4z.DM && null == O && null != S && s.Z.wait(() => (0, C.Z)(h.getRecipientId(), S.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
@@ -94,19 +94,19 @@ function G(e) {
                   (e = (0, i.jsxs)('div', {
                       className: B.buttonContainer,
                       children: [
-                          (0, i.jsx)(y.W, {
+                          (0, i.jsx)(A.W, {
                               className: B.button,
                               channel: h,
                               user: S
                           }),
-                          (0, i.jsx)(A.n, {
+                          (0, i.jsx)(y.n, {
                               className: B.button,
                               user: S,
                               application: V,
                               channel: h,
                               oauth2Token: z
                           }),
-                          Y &&
+                          q &&
                               (0, i.jsx)(m.Z, {
                                   buttonSize: r.PhG.SMALL,
                                   color: r.zxk.Colors.PRIMARY,

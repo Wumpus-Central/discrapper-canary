@@ -1,27 +1,27 @@
-n.d(t, {
+i.d(t, {
     H: () => v,
-    v: () => T
+    v: () => x
 }),
-    n(47120);
-var i = n(512722),
-    a = n.n(i),
-    o = n(15729),
-    s = n(313361),
-    l = n(683860),
-    r = n(731965),
-    c = n(442837),
-    d = n(592125),
-    u = n(559241);
-function h(e, t, n) {
+    i(47120);
+var n = i(512722),
+    a = i.n(n),
+    o = i(15729),
+    s = i(313361),
+    l = i(683860),
+    r = i(731965),
+    c = i(442837),
+    d = i(592125),
+    u = i(559241);
+function h(e, t, i) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = i),
         e
     );
 }
@@ -48,11 +48,11 @@ class g {
             (this.get = t),
             (this.channelStates = {}),
             (this.setChannelState = (e, t) => {
-                let n = this.get(),
-                    i = this.getChannelState(e),
-                    a = { ...n.channelStates };
+                let i = this.get(),
+                    n = this.getChannelState(e),
+                    a = { ...i.channelStates };
                 (a[e] = {
-                    ...i,
+                    ...n,
                     ...t
                 }),
                     (0, r.j)(() => this.set({ channelStates: a }));
@@ -60,22 +60,22 @@ class g {
             (this.getChannelState = (e) => {
                 if (null == e) return p;
                 let { channelStates: t } = this.get(),
-                    n = t[e];
-                if (null == n) {
+                    i = t[e];
+                if (null == i) {
                     let t = d.Z.getChannel(e);
                     a()(null != t, '[Forum Channel Store] The channel should not be missing.'),
-                        (n = {
+                        (i = {
                             layoutType: t.getDefaultLayout(),
                             sortOrder: t.getDefaultSortOrder(),
                             tagFilter: m,
                             scrollPosition: 0
                         });
                 }
-                return n;
+                return i;
             }),
             (this.toggleTagFilter = (e, t) => {
-                let n = new Set(this.getChannelState(e).tagFilter);
-                n.has(t) ? n.delete(t) : n.add(t), this.setTagFilter(e, n);
+                let i = new Set(this.getChannelState(e).tagFilter);
+                i.has(t) ? i.delete(t) : i.add(t), this.setTagFilter(e, i);
             }),
             (this.setTagFilter = (e, t) => {
                 this.setChannelState(e, { tagFilter: t }), u.Z.setFilterTagIds(t);
@@ -96,4 +96,4 @@ let f = (0, o.U)((e, t) => new g(e, t)),
         let t = f();
         return null == (0, c.e7)([d.Z], () => d.Z.getChannel(e)) ? p : t.getChannelState(e);
     },
-    T = () => f;
+    x = () => f;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var i = n(200651);
 n(192379);
 var l = n(913527),
@@ -10,10 +10,10 @@ var l = n(913527),
     d = n(346479),
     u = n(776568),
     m = n(388032);
-function h(e) {
+function _(e) {
     let [t, n, l] = (0, r.Wu)([c.Z], () => [c.Z.isMuted(e.id), c.Z.getMuteConfig(e.id), c.Z.hasJoined(e.id)]),
-        h = (0, o.U)(n);
-    function _(t) {
+        _ = (0, o.U)(n);
+    function h(t) {
         d.Z.setNotificationSettings(e, { muted: t });
     }
     return l
@@ -21,13 +21,13 @@ function h(e) {
             ? (0, i.jsx)(s.sNh, {
                   id: 'unmute-channel',
                   label: e.isForumPost() ? m.intl.string(m.t['0JQfsL']) : m.intl.string(m.t['Cq/TzM']),
-                  subtext: h,
-                  action: () => _(!1)
+                  subtext: _,
+                  action: () => h(!1)
               })
             : (0, i.jsx)(s.sNh, {
                   id: 'mute-channel',
                   label: e.isForumPost() ? m.intl.string(m.t['nP+YkZ']) : m.intl.string(m.t.bUUd8v),
-                  action: () => _(!0),
+                  action: () => h(!0),
                   children: (0, u.k)().map((t) => {
                       let { value: n, label: l } = t;
                       return (0, i.jsx)(

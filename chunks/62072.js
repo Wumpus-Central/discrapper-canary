@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => A });
 var i = n(192379),
     l = n(904245),
     a = n(346610),
@@ -25,16 +25,16 @@ var i = n(192379),
     T = n(432376),
     S = n(996861),
     j = n(981631);
-function A(e) {
+function y(e) {
     return x.Z.can(j.Plq.MANAGE_MESSAGES, e);
 }
-let y = function (e, t, n) {
-    let y = i.useRef(n);
+let A = function (e, t, n) {
+    let A = i.useRef(n);
     return (
-        (y.current = n),
+        (A.current = n),
         i.useCallback(
             (n) => {
-                if (!y.current || n.target !== n.currentTarget) return;
+                if (!A.current || n.target !== n.currentTarget) return;
                 let i = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
                     P = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
                     R = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
@@ -46,7 +46,7 @@ let y = function (e, t, n) {
                 let D = p.default.getId();
                 switch (n.key.toLowerCase()) {
                     case 'backspace':
-                        i && (A(O) || k.canDeleteOwnMessage(D)) && (n.preventDefault(), (0, S.$Z)(O, k, n));
+                        i && (y(O) || k.canDeleteOwnMessage(D)) && (n.preventDefault(), (0, S.$Z)(O, k, n));
                         break;
                     case 'c':
                         ((0, I.isMac)() ? M : R) && v.wS && (n.preventDefault(), (0, v.JG)(k.content));
@@ -55,7 +55,7 @@ let y = function (e, t, n) {
                         i && !O.isSystemDM() && (0, Z.Z)(k, D) && (n.preventDefault(), (0, S.Hd)(O, k));
                         break;
                     case 'p':
-                        (i || L) && !O.isSystemDM() && !(0, N.Z)(k) && (A(O) || O.isPrivate()) && (n.preventDefault(), (0, S.rY)(O, k, n));
+                        (i || L) && !O.isSystemDM() && !(0, N.Z)(k) && (y(O) || O.isPrivate()) && (n.preventDefault(), (0, S.rY)(O, k, n));
                         break;
                     case '+':
                         (i || L) &&

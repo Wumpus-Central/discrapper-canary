@@ -41,10 +41,10 @@ function v(e) {
         j = a.useCallback(() => {
             S(!0);
         }, [S]),
-        A = a.useCallback(() => {
+        y = a.useCallback(() => {
             S(!1);
         }, [S]),
-        y = a.useMemo(
+        A = a.useMemo(
             () =>
                 (0, l.jsx)('div', {
                     className: g.overlayBadge,
@@ -95,9 +95,9 @@ function v(e) {
         look: c.zxk.Looks.BLANK,
         size: c.zxk.Sizes.NONE,
         onFocus: j,
-        onBlur: A,
+        onBlur: y,
         onMouseEnter: j,
-        onMouseLeave: A,
+        onMouseLeave: y,
         innerClassName: g.activityItemButtonInnerClass,
         children: (0, l.jsx)(c.AMe, {
             config: C,
@@ -124,7 +124,7 @@ function v(e) {
                                         imageClassName: g.activitySuggestionImage,
                                         imageNotFoundClassName: g.brokenImageIconWrapper
                                     }),
-                                    y,
+                                    A,
                                     P
                                 ]
                             })

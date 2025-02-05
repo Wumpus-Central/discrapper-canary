@@ -26,18 +26,18 @@ function Z(e) {
         T = (0, u.e7)([m.default], () => (0, g.I5)(m.default.getCurrentUser())),
         S = (0, u.cj)([_.Z], () => _.Z.getVoiceFilters()),
         j = (0, u.cj)([_.Z], () => _.Z.getSortedVoiceFilters()),
-        A = T ? Object.values(S) : j,
-        y = l.useMemo(() => {
+        y = T ? Object.values(S) : j,
+        A = l.useMemo(() => {
             let e = (0, d._I)(Z.toLowerCase());
             return [
                 '' === e
-                    ? A
-                    : A.filter((t) => {
+                    ? y
+                    : y.filter((t) => {
                           let { id: n } = t;
                           return o()(e, (0, d._I)(N[n].name.toLowerCase()));
                       })
             ];
-        }, [A, Z, N]),
+        }, [y, Z, N]),
         P = (e) => Math.ceil(e / t),
         R = l.useCallback(
             (e) => {
@@ -47,7 +47,7 @@ function Z(e) {
                     {
                         className: E.row,
                         children: (0, c.range)(0, t)
-                            .map((e) => y[n][l * t + e])
+                            .map((e) => A[n][l * t + e])
                             .filter(f.lm)
                             .map((e) =>
                                 (0, i.jsx)(
@@ -63,7 +63,7 @@ function Z(e) {
                     l
                 );
             },
-            [t, y, T]
+            [t, A, T]
         );
     return (0, i.jsx)(p.Z, {
         fade: !0,
@@ -80,8 +80,8 @@ function Z(e) {
                           children: v.intl.string(b[e])
                       }),
         sectionHeaderHeight: !1 === s ? void 0 : (e) => I[e],
-        rowCountBySection: y.map((e) => P(e.length)),
-        rowCount: P((0, c.sumBy)(y, (e) => e.length)),
+        rowCountBySection: A.map((e) => P(e.length)),
+        rowCount: P((0, c.sumBy)(A, (e) => e.length)),
         rowHeight: 130,
         onScroll: n,
         ref: a,

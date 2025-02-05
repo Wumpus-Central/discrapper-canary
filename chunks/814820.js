@@ -1,4 +1,4 @@
-n.d(t, { f: () => C }), n(47120);
+n.d(t, { f: () => v }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(442837),
@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(271383),
     u = n(430824),
     m = n(496675),
-    h = n(594174),
-    _ = n(838440),
+    _ = n(594174),
+    h = n(838440),
     p = n(779139),
     g = n(981631),
     f = n(388032),
     x = n(764349);
-let E = (e) => {
+let C = (e) => {
         let { channel: t, message: n } = e,
             [a, c] = l.useState(!1),
             d = (0, p.y6)(n.id),
             u = l.useCallback(() => {
-                (0, _.v)({
+                (0, h.v)({
                     type: s.Ie.FORM,
                     content: '',
                     channel: t
@@ -50,22 +50,22 @@ let E = (e) => {
             })
         });
     },
-    C = (e) => {
+    v = (e) => {
         let { message: t, channel: n } = e,
             l = n.getGuildId(),
-            r = (0, a.e7)([h.default, m.Z, u.Z, d.ZP], () => {
+            r = (0, a.e7)([_.default, m.Z, u.Z, d.ZP], () => {
                 var e;
-                let i = h.default.getCurrentUser(),
+                let i = _.default.getCurrentUser(),
                     a = (0, c.xl)(n),
                     r = m.Z.can(g.Plq.SEND_MESSAGES, n),
                     s = null != l && null != i && (null === (e = d.ZP.getMember(l, i.id)) || void 0 === e ? void 0 : e.isPending),
                     o = t.author.bot,
-                    _ = u.Z.getGuild(l),
-                    p = null != _ && (_.systemChannelFlags & g.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+                    h = u.Z.getGuild(l),
+                    p = null != h && (h.systemChannelFlags & g.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
                 return r && !a && !s && !o && p;
             });
         return null != l && r
-            ? (0, i.jsx)(E, {
+            ? (0, i.jsx)(C, {
                   message: t,
                   channel: n
               })

@@ -442,7 +442,7 @@ class q extends s.Component {
             z(this, 'handleLinkGeneration', () => {
                 let { buildOverrides: e } = this.state;
                 (0, m.h7j)((t) =>
-                    (0, i.jsx)(Q, {
+                    (0, i.jsx)(J, {
                         ...t,
                         buildOverrides: e
                     })
@@ -450,7 +450,7 @@ class q extends s.Component {
             });
     }
 }
-class Q extends s.Component {
+class J extends s.Component {
     isMobile() {
         var e;
         return K(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
@@ -780,7 +780,7 @@ class Q extends s.Component {
             });
     }
 }
-function J(e) {
+function Q(e) {
     let { layoutDebuggingEnabled: t, cssDebuggingEnabled: n } = e,
         { horizontalSpacing: r, verticalSpacing: l, maxHorizontalSpacing: a, maxVerticalSpacing: o } = (0, v.i)(),
         c = s.useMemo(() => Array.from({ length: a + 1 }, (e, t) => t), [a]),
@@ -1143,7 +1143,7 @@ let et = d.ZP.connectStores([D.default], () => ({
                     ]
                 })
             }),
-            (0, i.jsx)(J, {
+            (0, i.jsx)(Q, {
                 layoutDebuggingEnabled: c,
                 cssDebuggingEnabled: o
             })

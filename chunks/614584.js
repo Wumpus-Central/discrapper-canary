@@ -21,7 +21,7 @@ var i = n(200651),
     I = n(388032);
 let b = l.memo(function (e) {
     var t;
-    let { baseMessage: n, referencedMessage: b, channel: Z, compact: N = !1, referencedUsernameProfile: T, referencedAvatarProfile: S, setPopout: j, isReplySpineClickable: A, showReplySpine: y } = e,
+    let { baseMessage: n, referencedMessage: b, channel: Z, compact: N = !1, referencedUsernameProfile: T, referencedAvatarProfile: S, setPopout: j, isReplySpineClickable: y, showReplySpine: A } = e,
         P = b.state === p.Y.LOADED ? b.message : void 0,
         R = (0, _.Uj)(P),
         M = (0, c.p)(),
@@ -128,8 +128,8 @@ let b = l.memo(function (e) {
         onClickReply: U,
         onContextMenu: w,
         onPopoutRequestClose: H,
-        isReplySpineClickable: A,
-        showReplySpine: y
+        isReplySpineClickable: y,
+        showReplySpine: A
     });
 });
 function Z(e) {

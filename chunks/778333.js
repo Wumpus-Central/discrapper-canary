@@ -9,17 +9,17 @@ var i = n(200651),
     d = n(314897),
     u = n(592125),
     m = n(699516),
-    h = n(51144),
-    _ = n(981631),
+    _ = n(51144),
+    h = n(981631),
     p = n(388032),
     g = n(658412);
 function f(e) {
     var t;
     let { invite: n, getAcceptInviteContext: f } = e,
         x = (0, a.e7)([d.default], () => d.default.getId()),
-        E = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === x,
-        C = n.state === _.r2o.ACCEPTING,
-        v = (0, a.e7)([m.Z], () => {
+        C = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === x,
+        v = n.state === h.r2o.ACCEPTING,
+        E = (0, a.e7)([m.Z], () => {
             var e;
             return null != n.inviter && m.Z.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id);
         }),
@@ -34,13 +34,13 @@ function f(e) {
             });
         }, [n.code, f]);
     if (null == n.inviter) return null;
-    let S = v ? I : N,
+    let S = E ? I : N,
         T = p.intl.string(p.t.ib7Ng4),
         b = o.Z.Button.Colors.GREEN;
-    v ? ((T = p.intl.string(p.t.xhxnPj)), (b = o.Z.Button.Colors.PRIMARY)) : E && ((T = p.intl.string(p.t.ib7Ng4)), (b = o.Z.Button.Colors.PRIMARY));
-    let A = E ? p.intl.string(p.t.eQyu1N) : p.intl.string(p.t.PYJHW1),
+    E ? ((T = p.intl.string(p.t.xhxnPj)), (b = o.Z.Button.Colors.PRIMARY)) : C && ((T = p.intl.string(p.t.ib7Ng4)), (b = o.Z.Button.Colors.PRIMARY));
+    let A = C ? p.intl.string(p.t.eQyu1N) : p.intl.string(p.t.PYJHW1),
         j = null != n.inviter ? ''.concat(n.inviter.username) : '',
-        y = null != n.inviter ? h.ZP.getUserTag(n.inviter) : '';
+        y = null != n.inviter ? _.ZP.getUserTag(n.inviter) : '';
     return (0, i.jsxs)(o.Z, {
         children: [
             (0, i.jsx)(o.Z.Header, { text: A }),
@@ -51,19 +51,19 @@ function f(e) {
                         children: [
                             (0, i.jsx)(o.Z.Icon, {
                                 user: new c.Z(n.inviter),
-                                onClick: v ? S : void 0
+                                onClick: E ? S : void 0
                             }),
                             (0, i.jsx)(o.Z.Info, {
                                 title: j,
-                                onClick: v ? S : void 0,
+                                onClick: E ? S : void 0,
                                 children: y
                             })
                         ]
                     }),
                     (0, i.jsx)(o.Z.Button, {
                         onClick: S,
-                        submitting: C,
-                        isDisabled: E,
+                        submitting: v,
+                        isDisabled: C,
                         color: b,
                         children: T
                     })

@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(232567),
     d = n(388905),
     u = n(353926),
-    h = n(82554),
-    _ = n(726521),
+    _ = n(82554),
+    h = n(726521),
     g = n(185625),
     p = n(314897),
     m = n(63063),
@@ -41,7 +41,7 @@ let C = (e) => {
                     a = async (t) => await (0, g.RV)(r, e, t),
                     s = (e) => {
                         let t = null == e ? void 0 : e.token;
-                        r === h.BM.MESSAGE ? (0, _.eE)(t) : r === h.BM.USER && (0, _.JM)(t);
+                        r === _.BM.MESSAGE ? (0, h.eE)(t) : r === _.BM.USER && (0, h.JM)(t);
                     };
                 t(),
                     (0, o.ZDy)(async () => {
@@ -73,7 +73,7 @@ let C = (e) => {
     N = () => {
         let [e, t] = r.useState(!0),
             [n, l] = r.useState(!1),
-            _ = (0, a.e7)([p.default], () => p.default.isAuthenticated()),
+            h = (0, a.e7)([p.default], () => p.default.isAuthenticated()),
             N = (0, a.e7)([u.Z], () => u.Z.hasLoadedExperiments),
             v = () => {
                 (0, g.qJ)()
@@ -86,14 +86,14 @@ let C = (e) => {
             };
         return (
             r.useEffect(() => {
-                _
+                h
                     ? (t(!0),
                       c
                           .k({ withAnalyticsToken: !0 })
                           .then(() => v())
                           .catch(() => t(!1)))
                     : v();
-            }, [_]),
+            }, [h]),
             r.useEffect(() => {
                 (async () => {
                     N || (await s.Z.getLocationMetadata(), s.Z.getExperiments());
@@ -117,11 +117,11 @@ let C = (e) => {
                               children: [
                                   (0, i.jsx)(C, {
                                       title: E.intl.string(E.t.fuqnBA),
-                                      menuType: h.BM.MESSAGE
+                                      menuType: _.BM.MESSAGE
                                   }),
                                   (0, i.jsx)(C, {
                                       title: E.intl.string(E.t.F4jrRU),
-                                      menuType: h.BM.USER
+                                      menuType: _.BM.USER
                                   })
                               ]
                           })

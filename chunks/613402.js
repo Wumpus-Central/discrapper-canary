@@ -24,7 +24,7 @@ function l() {
     i.Z.dispatch({
         type: 'SELF_PRESENCE_STORE_UPDATE',
         status: a.Z.getStatus(),
-        activities: a.Z.getActivities()
+        activities: a.Z.getActivities(!0)
     });
 }
 let u = new o();

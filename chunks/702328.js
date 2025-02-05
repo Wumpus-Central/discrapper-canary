@@ -47,8 +47,8 @@ var i = n(200651),
     K = n(391110),
     X = n(71363),
     q = n(781800),
-    Q = n(474936),
-    J = n(981631),
+    J = n(474936),
+    Q = n(981631),
     $ = n(869783),
     ee = n(388032),
     et = n(286919),
@@ -61,7 +61,7 @@ var i = n(200651),
     eo = n(821969);
 let ec = (e) => {
         let { isFullscreen: t, selectedPremiumType: n } = e;
-        return (t && null == n) || (n === Q.p9.TIER_2 && t) ? null : (0, i.jsx)(w.Z, { className: t ? et.perkCardsContainerSpacingFullscreen : et.perkCardsContainerSpacingSettings });
+        return (t && null == n) || (n === J.p9.TIER_2 && t) ? null : (0, i.jsx)(w.Z, { className: t ? et.perkCardsContainerSpacingFullscreen : et.perkCardsContainerSpacingSettings });
     },
     ed = (e) => {
         let { isFullscreen: t, inOfferExperience: n } = e;
@@ -119,7 +119,7 @@ let ec = (e) => {
         var t, n;
         let { isFullscreen: r, entrypoint: k } = e;
         (0, E.z)(p.X);
-        let B = k === Q.EZ.ApplicationStoreHome,
+        let B = k === J.EZ.ApplicationStoreHome,
             w = s.useRef(null),
             V = s.useRef(null),
             U = (0, a.e7)([h.Z], () => h.Z.useReducedMotion),
@@ -137,7 +137,7 @@ let ec = (e) => {
             ej = (0, a.e7)([f.ZP], () => f.ZP.getPremiumTypeSubscription()),
             eA = null != ej ? (0, I.Af)(ej) : null,
             eO = null != eA ? I.ZP.getSkuIdForPlan(eA.planId) : null,
-            eR = null !== eO && eO !== Q.Si.TIER_2 ? Q.Si.TIER_2 : null,
+            eR = null !== eO && eO !== J.Si.TIER_2 ? J.Si.TIER_2 : null,
             eP = (0, j.n)(),
             eD = null != eP,
             [ey, eZ] = s.useState(!1),
@@ -175,7 +175,7 @@ let ec = (e) => {
                             ? (0, i.jsx)(W.Z, {
                                   forceInverted: em && !e_,
                                   showIcon: !1,
-                                  subscriptionTier: Q.Si.TIER_0,
+                                  subscriptionTier: J.Si.TIER_0,
                                   className: et.marginTopForButtons,
                                   buttonTextClassName: e_ ? et.v2SubButtonText : et.subButtonText,
                                   buttonShineClassName: et.buttonShine
@@ -183,18 +183,18 @@ let ec = (e) => {
                             : (0, i.jsx)(W.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
-                                  subscriptionTier: Q.Si.TIER_0,
+                                  subscriptionTier: J.Si.TIER_0,
                                   className: et.marginTopForButtons,
                                   look: d.iLD.OUTLINED,
                                   color: d.Ttl.WHITE,
                                   buttonShineClassName: et.buttonShine
                               }),
                         tier2CTAButton:
-                            eL !== Q.Si.TIER_0 || e_
+                            eL !== J.Si.TIER_0 || e_
                                 ? (0, i.jsx)(W.Z, {
                                       forceInverted: !e_,
                                       showIcon: !1,
-                                      subscriptionTier: Q.Si.TIER_2,
+                                      subscriptionTier: J.Si.TIER_2,
                                       className: et.marginTopForButtons,
                                       isEligibleForBogoPromotion: eM,
                                       buttonTextClassName: e_ ? et.v2SubButtonText : et.subButtonText,
@@ -203,7 +203,7 @@ let ec = (e) => {
                                 : (0, i.jsx)(W.Z, {
                                       forceInverted: !0,
                                       showIcon: !1,
-                                      subscriptionTier: Q.Si.TIER_2,
+                                      subscriptionTier: J.Si.TIER_2,
                                       className: et.marginTopForButtons,
                                       look: d.iLD.OUTLINED,
                                       color: d.Ttl.WHITE,
@@ -295,7 +295,7 @@ let ec = (e) => {
                         children: [(0, i.jsx)(O.Z, { isFullScreen: r }), r && eD && (0, i.jsx)(R.Z, { localizedPricingPromo: eP })]
                     }),
                     !e_ && eG,
-                    k === Q.EZ.UserSettings &&
+                    k === J.EZ.UserSettings &&
                         null != ew &&
                         (0, i.jsx)(y.C, {
                             className: et.giftPromoCard,
@@ -351,7 +351,7 @@ let ec = (e) => {
                     }),
                     (0, i.jsx)(o.$, {
                         onChange: (e) => {
-                            e && !eN && (T.default.track(J.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eV }), eI(!0));
+                            e && !eN && (T.default.track(Q.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eV }), eI(!0));
                         },
                         children: (0, i.jsx)('div', { className: et.bottomOfPageVisibilitySensor })
                     }),

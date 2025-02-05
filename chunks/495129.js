@@ -10,15 +10,15 @@ var l = n(120356),
     d = n(957730),
     u = n(739566),
     m = n(779125),
-    h = n(599706),
-    _ = n(703656),
+    _ = n(599706),
+    h = n(703656),
     p = n(592125),
     g = n(430824),
     f = n(594174),
     x = n(938475),
-    E = n(5192),
-    C = n(981631),
-    v = n(388032),
+    C = n(5192),
+    v = n(981631),
+    E = n(388032),
     I = n(695436);
 function N(e) {
     var t, n, l, N, S, T, b, A, j, y;
@@ -54,7 +54,7 @@ function N(e) {
         w = null === (b = R.recipients) || void 0 === b ? void 0 : b.find((e) => e !== Z.author.id),
         F = (0, r.e7)([f.default], () => (null != w ? f.default.getUser(w) : null)),
         U = (0, u.ZP)(Z),
-        B = (0, E._T)(R.getGuildId(), R.id, F),
+        B = (0, C._T)(R.getGuildId(), R.id, F),
         G = (0, r.Wu)([x.ZP], () => (null != M ? x.ZP.getVoiceStatesForChannel(M) : []), [M]),
         H = G.some((e) => e.user.id === (null == O ? void 0 : O.id)),
         V =
@@ -71,11 +71,11 @@ function N(e) {
                     : A.rawValue,
         z = null != V ? V.split(',') : [],
         W = (0, r.Wu)([f.default], () => z.map((e) => f.default.getUser(e)).filter(Boolean)),
-        K = D && null != F ? v.intl.formatToPlainString(v.t['er/cHx'], { username: B }) : v.intl.formatToPlainString(v.t.noNjkZ, { username: U.nick }),
+        K = D && null != F ? E.intl.formatToPlainString(E.t['er/cHx'], { username: B }) : E.intl.formatToPlainString(E.t.noNjkZ, { username: U.nick }),
         Y = null != k && null != M,
         X = null;
-    (X = Y ? (D || H ? v.intl.format(v.t.CaLQqK, { channelHook: (e, t) => (0, i.jsx)(m.Z, { channel: null != M ? M : void 0 }, t) }) : v.intl.format(v.t.VugXpK, { channelHook: (e, t) => (0, i.jsx)(m.Z, { channel: null != M ? M : void 0 }, t) })) : v.intl.string(v.t['tHT/Vl'])), 0 === G.length && (X = D ? v.intl.string(v.t.IE2uZW) : v.intl.string(v.t.QVhmGx));
-    let q = D ? v.intl.string(v.t['00XIbm']) : v.intl.string(v.t['7CrE9/']);
+    (X = Y ? (D || H ? E.intl.format(E.t.CaLQqK, { channelHook: (e, t) => (0, i.jsx)(m.Z, { channel: null != M ? M : void 0 }, t) }) : E.intl.format(E.t.VugXpK, { channelHook: (e, t) => (0, i.jsx)(m.Z, { channel: null != M ? M : void 0 }, t) })) : E.intl.string(E.t['tHT/Vl'])), 0 === G.length && (X = D ? E.intl.string(E.t.IE2uZW) : E.intl.string(E.t.QVhmGx));
+    let q = D ? E.intl.string(E.t['00XIbm']) : E.intl.string(E.t['7CrE9/']);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsxs)('div', {
@@ -94,7 +94,7 @@ function N(e) {
                     G.length > 0
                         ? (0, i.jsx)('div', {
                               className: I.participants,
-                              children: (0, i.jsx)(h.Z, {
+                              children: (0, i.jsx)(_.Z, {
                                   guildId: L,
                                   partySize: {
                                       knownSize: G.length,
@@ -107,7 +107,7 @@ function N(e) {
                           })
                         : (0, i.jsx)('div', {
                               className: a()(I.participants, I.disabled),
-                              children: (0, i.jsx)(h.Z, {
+                              children: (0, i.jsx)(_.Z, {
                                   guildId: L,
                                   partySize: {
                                       knownSize: W.length,
@@ -126,7 +126,7 @@ function N(e) {
                     (0, i.jsxs)(s.zxk, {
                         color: s.zxk.Colors.BRAND,
                         onClick: () => {
-                            null != P && null != L && ((0, _.uL)(C.Z5c.CHANNEL(L, P)), c.default.selectVoiceChannel(P));
+                            null != P && null != L && ((0, h.uL)(v.Z5c.CHANNEL(L, P)), c.default.selectVoiceChannel(P));
                         },
                         className: I.button,
                         innerClassName: I.buttonInner,
@@ -136,7 +136,7 @@ function N(e) {
                                 size: 'md',
                                 color: 'currentColor'
                             }),
-                            v.intl.string(v.t.zIeJq6)
+                            E.intl.string(E.t.zIeJq6)
                         ]
                     }),
                     (0, i.jsx)(s.zxk, {

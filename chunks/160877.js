@@ -1,6 +1,6 @@
 n.d(t, {
     $: () => I,
-    s: () => v
+    s: () => E
 });
 var i = n(200651),
     l = n(192379),
@@ -12,8 +12,8 @@ var i = n(200651),
     d = n(313201),
     u = n(70097),
     m = n(406432),
-    h = n(584656),
-    _ = n(247206),
+    _ = n(584656),
+    h = n(247206),
     p = n(719548),
     g = n(388032),
     f = n(320534);
@@ -22,19 +22,19 @@ let x = (e) => {
             { url: n, description: l } = t;
         return null == n
             ? null
-            : (0, i.jsx)(C, {
+            : (0, i.jsx)(v, {
                   url: n,
                   description: l
               });
     },
-    E = (e) => {
+    C = (e) => {
         var t, n, l;
         let { embed: a } = e;
         if (!p.n2.has(a.type)) return null;
         let r = void 0 !== a.video && a.type !== s.h.GIFV ? a.video.url : null !== (l = null === (t = a.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== l ? l : null === (n = a.image) || void 0 === n ? void 0 : n.url;
-        return null == r ? null : (0, i.jsx)(C, { url: r });
+        return null == r ? null : (0, i.jsx)(v, { url: r });
     },
-    C = (e) => {
+    v = (e) => {
         let { url: t, description: n } = e,
             l = (0, m.cb)(t);
         return (0, i.jsx)('div', {
@@ -52,30 +52,30 @@ let x = (e) => {
                   })
         });
     };
-function v(e) {
+function E(e) {
     c.Z.pop(),
-        (0, h.t)({
+        (0, _.t)({
             id: 'explicit-media-false-positive-modal',
             text: g.intl.string(g.t.gFsTKi)
         }),
         e();
 }
 function I(e) {
-    let { channelId: t, messageId: n, isReportFalsePositiveLoading: a, analyticsContext: r, attachmentPreview: s, embedPreview: c, onConfirmPress: u, transitionState: m, onClose: h } = e,
+    let { channelId: t, messageId: n, isReportFalsePositiveLoading: a, analyticsContext: r, attachmentPreview: s, embedPreview: c, onConfirmPress: u, transitionState: m, onClose: _ } = e,
         p = (0, d.Dt)(),
-        C = l.useCallback(() => {
-            (0, _.aP)({
-                action: _.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
+        v = l.useCallback(() => {
+            (0, h.aP)({
+                action: h.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
                 messageId: n,
                 context: r
             }),
-                h();
-        }, [t, n, r, h]),
-        v = l.useCallback(() => {
+                _();
+        }, [t, n, r, _]),
+        E = l.useCallback(() => {
             null == u || u(),
-                (0, _.aP)({
-                    action: _.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
+                (0, h.aP)({
+                    action: h.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                     channelId: t,
                     messageId: n,
                     context: r
@@ -83,8 +83,8 @@ function I(e) {
         }, [t, n, r, u]);
     return (
         l.useEffect(() => {
-            (0, _.aP)({
-                action: _.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
+            (0, h.aP)({
+                action: h.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
                 channelId: t,
                 messageId: n,
                 context: r
@@ -98,7 +98,7 @@ function I(e) {
                 (0, i.jsxs)(o.hzk, {
                     children: [
                         (0, i.jsx)(o.olH, {
-                            onClick: C,
+                            onClick: v,
                             className: f.closeButton
                         }),
                         (0, i.jsx)(o.X6q, {
@@ -115,7 +115,7 @@ function I(e) {
                             children: g.intl.string(g.t.gg5Dp6)
                         }),
                         null != s && (0, i.jsx)(x, { attachment: s }),
-                        null != c && (0, i.jsx)(E, { embed: c })
+                        null != c && (0, i.jsx)(C, { embed: c })
                     ]
                 }),
                 (0, i.jsxs)(o.mzw, {
@@ -126,7 +126,7 @@ function I(e) {
                             submitting: a,
                             size: o.zxk.Sizes.MEDIUM,
                             color: o.zxk.Colors.BRAND,
-                            onClick: v,
+                            onClick: E,
                             children: g.intl.string(g.t['cY+Ooa'])
                         }),
                         (0, i.jsx)(o.zxk, {
@@ -134,7 +134,7 @@ function I(e) {
                             disabled: a,
                             color: o.zxk.Colors.TRANSPARENT,
                             size: o.zxk.Sizes.MEDIUM,
-                            onClick: C,
+                            onClick: v,
                             children: g.intl.string(g.t['ETE/oK'])
                         })
                     ]

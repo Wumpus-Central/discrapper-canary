@@ -1,176 +1,176 @@
-n.d(t, { Z: () => P });
-var i = n(200651);
+n.d(t, { Z: () => w });
+var l = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(512722),
-    s = n.n(r),
+var i = n(120356),
+    r = n.n(i),
+    a = n(512722),
+    s = n.n(a),
     o = n(442837),
     c = n(481060),
     u = n(730749),
     d = n(726542),
     m = n(600164),
-    f = n(750154),
-    p = n(594174),
-    h = n(374129),
-    g = n(639351),
+    p = n(750154),
+    h = n(594174),
+    g = n(374129),
+    f = n(639351),
     v = n(503438),
-    _ = n(802856),
-    I = n(387903),
-    S = n(606925),
-    x = n(719216),
-    E = n(429589),
-    C = n(636245),
-    Z = n(697761),
-    y = n(611459),
-    b = n(544671),
-    N = n(757182),
-    T = n(910424),
-    A = n(981631),
-    w = n(522832);
-let P = (0, u.Z)((e) => {
-    let { activity: t, embeddedActivity: n, user: l, applicationStream: r, className: u, guildId: P, channelId: j, source: R, color: k = c.zxk.Colors.WHITE, look: L = c.zxk.Looks.OUTLINED, type: O, onAction: M } = e,
-        D = (0, o.e7)([p.default], () => {
-            let e = p.default.getCurrentUser();
+    S = n(802856),
+    x = n(387903),
+    I = n(606925),
+    y = n(719216),
+    T = n(429589),
+    N = n(636245),
+    A = n(697761),
+    E = n(611459),
+    Z = n(544671),
+    C = n(757182),
+    j = n(910424),
+    P = n(981631),
+    b = n(522832);
+let w = (0, u.Z)((e) => {
+    let { activity: t, embeddedActivity: n, user: i, applicationStream: a, className: u, guildId: w, channelId: _, source: R, color: L = c.zxk.Colors.WHITE, look: M = c.zxk.Looks.OUTLINED, type: U, onAction: k } = e,
+        O = (0, o.e7)([h.default], () => {
+            let e = h.default.getCurrentUser();
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
         }),
-        U = O === I.Y.STREAM_PREVIEW || null != r,
-        F = (0, v.Z)(t),
-        z = F || U ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
-        V = z === m.Z.Direction.VERTICAL;
-    return (0, i.jsx)(m.Z, {
+        D = U === x.Y.STREAM_PREVIEW || null != a,
+        G = (0, v.Z)(t),
+        Y = G || D ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
+        z = Y === m.Z.Direction.VERTICAL;
+    return (0, l.jsx)(m.Z, {
         grow: 0,
         align: m.Z.Align.STRETCH,
-        direction: z,
-        wrap: V ? m.Z.Wrap.WRAP : m.Z.Wrap.NO_WRAP,
-        className: a()(u, w.buttonsWrapper, V ? w.vertical : w.horizontal),
+        direction: Y,
+        wrap: z ? m.Z.Wrap.WRAP : m.Z.Wrap.NO_WRAP,
+        className: r()(u, b.buttonsWrapper, z ? b.vertical : b.horizontal),
         children: (() => {
-            if ((0, _.Z)(t))
-                return (0, i.jsx)(
-                    S.Z,
+            if ((0, S.Z)(t))
+                return (0, l.jsx)(
+                    I.Z,
                     {
-                        platform: d.Z.get(A.ABu.XBOX),
-                        look: L,
-                        color: k,
-                        onAction: M,
+                        platform: d.Z.get(P.ABu.XBOX),
+                        look: M,
+                        color: L,
+                        onAction: k,
+                        Icon: f.Z
+                    },
+                    'ConnectPlatformActivityButton'
+                );
+            if ((null == t ? void 0 : t.platform) === P.M7m.PS4 || (null == t ? void 0 : t.platform) === P.M7m.PS5)
+                return (0, l.jsx)(
+                    I.Z,
+                    {
+                        look: M,
+                        color: L,
+                        platform: d.Z.get(P.ABu.PLAYSTATION),
+                        onAction: k,
                         Icon: g.Z
                     },
                     'ConnectPlatformActivityButton'
                 );
-            if ((null == t ? void 0 : t.platform) === A.M7m.PS4 || (null == t ? void 0 : t.platform) === A.M7m.PS5)
-                return (0, i.jsx)(
-                    S.Z,
-                    {
-                        look: L,
-                        color: k,
-                        platform: d.Z.get(A.ABu.PLAYSTATION),
-                        onAction: M,
-                        Icon: h.Z
-                    },
-                    'ConnectPlatformActivityButton'
-                );
-            if (F) {
-                let e = (0, i.jsx)(
-                        b.Z,
+            if (G) {
+                let e = (0, l.jsx)(
+                        Z.Z,
                         {
                             activity: t,
-                            user: l,
-                            guildId: P,
-                            channelId: j,
+                            user: i,
+                            guildId: w,
+                            channelId: _,
                             source: R,
-                            look: L,
-                            color: k,
-                            onAction: M
+                            look: M,
+                            color: L,
+                            onAction: k
                         },
                         'spotify-activity-sync-button'
                     ),
-                    n = (0, i.jsx)(
-                        y.Z,
+                    n = (0, l.jsx)(
+                        E.Z,
                         {
                             activity: t,
-                            user: l,
+                            user: i,
                             source: R,
-                            look: L,
-                            color: k,
-                            onAction: M
+                            look: M,
+                            color: L,
+                            onAction: k
                         },
                         'spotify-activity-play-button'
                     );
-                return (0, i.jsxs)(i.Fragment, {
+                return (0, l.jsxs)(l.Fragment, {
                     children: [n, e]
                 });
             }
-            if ((0, f.dS)(t)) {
-                let e = (0, f.rq)(t);
+            if ((0, p.dS)(t)) {
+                let e = (0, p.rq)(t);
                 return null == e
                     ? null
-                    : (0, i.jsx)(
-                          C.Z,
+                    : (0, l.jsx)(
+                          N.Z,
                           {
                               guildId: e.guildId,
                               channelId: e.channelId,
-                              color: k,
-                              look: L,
-                              onAction: M
+                              color: L,
+                              look: M,
+                              onAction: k
                           },
                           e.channelId
                       );
             }
-            return U
-                ? (0, i.jsx)(
-                      T.Z,
+            return D
+                ? (0, l.jsx)(
+                      j.Z,
                       {
-                          isCurrentUser: D.id === l.id,
-                          color: k,
-                          look: L,
-                          applicationStream: r,
-                          onAction: M
+                          isCurrentUser: O.id === i.id,
+                          color: L,
+                          look: M,
+                          applicationStream: a,
+                          onAction: k
                       },
                       'watch-button'
                   )
-                : (0, i.jsxs)(i.Fragment, {
+                : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, i.jsx)(
-                              N.Z,
+                          (0, l.jsx)(
+                              C.Z,
                               {
                                   activity: t,
-                                  color: k,
-                                  look: L,
-                                  onAction: M
+                                  color: L,
+                                  look: M,
+                                  onAction: k
                               },
                               'watch-button'
                           ),
-                          (0, i.jsx)(
-                              E.Z,
+                          (0, l.jsx)(
+                              T.Z,
                               {
                                   activity: t,
                                   embeddedActivity: n,
-                                  user: l,
-                                  color: k,
-                                  look: L,
-                                  onAction: M
+                                  user: i,
+                                  color: L,
+                                  look: M,
+                                  onAction: k
                               },
                               'join-activity-button'
                           ),
-                          (0, i.jsx)(
-                              Z.Z,
+                          (0, l.jsx)(
+                              A.Z,
                               {
                                   activity: t,
-                                  user: l,
-                                  color: k,
-                                  look: L,
-                                  onAction: M
+                                  user: i,
+                                  color: L,
+                                  look: M,
+                                  onAction: k
                               },
                               'notify-button'
                           ),
-                          (0, i.jsx)(
-                              x.Z,
+                          (0, l.jsx)(
+                              y.Z,
                               {
-                                  user: l,
-                                  color: k,
-                                  look: L,
+                                  user: i,
+                                  color: L,
+                                  look: M,
                                   activity: t,
-                                  onAction: M
+                                  onAction: k
                               },
                               'custom-activity-button'
                           )

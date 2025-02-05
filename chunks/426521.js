@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(171368),
     u = n(695346),
     m = n(598077),
-    h = n(594174),
-    _ = n(626135),
+    _ = n(594174),
+    h = n(626135),
     p = n(709054),
     g = n(591759),
     f = n(833592),
     x = n(497089),
-    E = n(178480),
-    C = n(418316),
-    v = n(526146),
+    C = n(178480),
+    v = n(418316),
+    E = n(526146),
     I = n(400565),
     N = n(148789),
     S = n(11825),
@@ -31,7 +31,7 @@ function Z(e) {
     let { item: s } = e,
         o = null === (t = s.message) || void 0 === t ? void 0 : t.content;
     if (null == o) return (0, i.jsx)('div', {});
-    let d = null !== (l = h.default.getUser(null === (n = s.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : new m.Z(s.other_user),
+    let d = null !== (l = _.default.getUser(null === (n = s.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : new m.Z(s.other_user),
         u = c.Z.parse(o);
     return (0, i.jsxs)('div', {
         className: A.messagePreviewContainer,
@@ -92,9 +92,9 @@ let P = l.memo(function (e) {
         var t;
         let { item: r, ackedBeforeId: u } = e,
             { analyticsLocations: m } = (0, s.ZP)(),
-            h = (0, v.I)(r, u),
+            _ = (0, E.I)(r, u),
             b = l.useCallback(async () => {
-                if ((h || (0, f.wt)(r), null != r.item_enum && r.item_enum === x.AM.FIND_FRIENDS)) {
+                if ((_ || (0, f.wt)(r), null != r.item_enum && r.item_enum === x.AM.FIND_FRIENDS)) {
                     (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('6074').then(n.bind(n, 443189));
                         return (t) =>
@@ -123,18 +123,18 @@ let P = l.memo(function (e) {
                             });
                         } else await (0, o.Z)(i);
                     }
-                    _.default.track(T.rMx.NOTIFICATION_CENTER_ACTION, {
+                    h.default.track(T.rMx.NOTIFICATION_CENTER_ACTION, {
                         action_type: x.ud.CLICKED,
                         notification_center_id: r.id,
                         item_type: r.type,
-                        acked: h
+                        acked: _
                     });
                 }
-            }, [r, h, m]),
+            }, [r, _, m]),
             j = null;
         r.type === x.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (j = (0, i.jsx)(N.Z, { userId: r.other_user.id }));
         let y = null != r.local_id,
-            P = (0, C.Z)(r);
+            P = (0, v.Z)(r);
         return (0, i.jsxs)('div', {
             className: A.row,
             children: [
@@ -144,7 +144,7 @@ let P = l.memo(function (e) {
                     'aria-label': P,
                     onClick: b,
                     children: [
-                        h ? null : (0, i.jsx)('div', { className: A.unread }),
+                        _ ? null : (0, i.jsx)('div', { className: A.unread }),
                         (0, i.jsx)(I.U, { item: r }),
                         (0, i.jsxs)('div', {
                             className: A.body,
@@ -152,15 +152,15 @@ let P = l.memo(function (e) {
                                 'lifecycle_item' === r.type && null != r.item_enum && (0, i.jsx)(L, { item: r }),
                                 (0, i.jsx)(a.Text, {
                                     variant: 'text-md/normal',
-                                    color: h ? 'text-muted' : 'text-normal',
+                                    color: _ ? 'text-muted' : 'text-normal',
                                     children: 'string' != typeof P ? P : c.Z.parse(P)
                                 }),
                                 (null === (t = r.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(Z, { item: r }) : null,
                                 null != r.callout ? (0, i.jsx)(R, { item: r }) : null,
                                 (0, i.jsx)(a.Text, {
                                     variant: 'text-xs/medium',
-                                    color: h ? 'text-muted' : 'header-secondary',
-                                    children: (0, E.a3)(p.default.extractTimestamp(r.id))
+                                    color: _ ? 'text-muted' : 'header-secondary',
+                                    children: (0, C.a3)(p.default.extractTimestamp(r.id))
                                 }),
                                 j
                             ]

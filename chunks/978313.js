@@ -11,27 +11,27 @@ var i = n(200651),
     m = n(810568),
     p = n(221370),
     g = n(388032),
-    h = n(561526),
-    _ = n(72020);
+    _ = n(561526),
+    h = n(72020);
 function f(e) {
     let { detectedGame: t, trackAction: n } = e,
         [a, f] = r.useState((null == t ? void 0 : t.summaryLocalized) != null),
-        [x, E] = r.useState(!0),
-        [v, I] = r.useState(!1),
+        [x, v] = r.useState(!0),
+        [I, E] = r.useState(!1),
         C = r.useRef(null),
-        { width: A, height: S } = (0, u.Z)();
+        { width: b, height: j } = (0, u.Z)();
     return (r.useEffect(() => {
         let e = C.current;
-        null != e && I(e.scrollHeight - e.clientHeight > 1 || !x);
-    }, [C, A, S, x]),
+        null != e && E(e.scrollHeight - e.clientHeight > 1 || !x);
+    }, [C, b, j, x]),
     null == t.summary)
         ? null
         : (0, i.jsxs)('div', {
-              className: l()(h.column, h.gapMd),
+              className: l()(_.column, _.gapMd),
               children: [
                   null != t.summaryLocalized &&
                       (0, i.jsxs)('div', {
-                          className: l()(h.row, h.gapSm),
+                          className: l()(_.row, _.gapSm),
                           children: [
                               (0, i.jsx)(o.SxY, {
                                   color: c.Z.colors.HEADER_SECONDARY,
@@ -50,11 +50,11 @@ function f(e) {
                       variant: 'text-sm/normal',
                       children: a ? t.summaryLocalized : t.summary
                   }),
-                  v &&
+                  I &&
                       (0, i.jsx)(d.P3F, {
-                          className: h.clickable,
+                          className: _.clickable,
                           onClick: () => {
-                              n(x ? m.as.ShowMore : m.as.ShowLess), E(!x);
+                              n(x ? m.as.ShowMore : m.as.ShowLess), v(!x);
                           },
                           children: (0, i.jsx)(s.xv, {
                               variant: 'text-sm/semibold',
@@ -62,7 +62,7 @@ function f(e) {
                           })
                       }),
                   (0, i.jsx)(p.Z, {
-                      className: _.platforms,
+                      className: h.platforms,
                       detectedGame: t
                   })
               ]

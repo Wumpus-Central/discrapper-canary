@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(433517),
     d = n(481060),
     u = n(570140),
-    h = n(893776),
-    _ = n(314897),
+    _ = n(893776),
+    h = n(314897),
     g = n(626135),
     p = n(70956),
     m = n(970648),
@@ -25,7 +25,7 @@ let x = 'mweb_handoff_nonce',
         c.K.remove(x), c.K.remove(C);
     },
     A = () => {
-        let e = (0, o.e7)([_.default], () => _.default.getFingerprint()),
+        let e = (0, o.e7)([h.default], () => h.default.getFingerprint()),
             { fingerprint: t, handoff_token: n } = (0, l.parse)(window.location.search),
             p = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
             A = null != p ? p : null !== e ? e : void 0;
@@ -76,7 +76,7 @@ let x = 'mweb_handoff_nonce',
                             },
                             rejectWithError: !0
                         })
-                        .then((e) => h.Z.loginToken(e.body.token, !1))
+                        .then((e) => _.Z.loginToken(e.body.token, !1))
                         .then(() => {
                             g.default.track(f.rMx.LOGIN_SUCCESSFUL, {
                                 source: f.uRl.MOBILE_WEB_HANDOFF,

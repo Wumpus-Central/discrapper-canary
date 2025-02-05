@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => _,
+    Z: () => h,
     v: () => m
 });
 var i = n(200651),
@@ -16,7 +16,7 @@ function m(e) {
     let n = null !== (t = l.useContext(u)) && void 0 !== t ? t : e;
     return r()(null != n, 'Using PollReferenceMessageContext without a provider (or a fallback)'), n;
 }
-function h(e) {
+function _(e) {
     let { message: t, children: n } = e,
         a = (0, s.e7)([c.Z], () => c.Z.getMessage(t.channel_id, t.id), [t.channel_id, t.id]),
         r = null != a;
@@ -34,11 +34,11 @@ function h(e) {
         })
     );
 }
-function _(e) {
+function h(e) {
     let { message: t, children: n } = e;
     return (0, d.r8)(t)
         ? (0, i.jsx)(i.Fragment, { children: n })
-        : (0, i.jsx)(h, {
+        : (0, i.jsx)(_, {
               message: t,
               children: n
           });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var i,
     l,
     a,
@@ -11,7 +11,7 @@ let o = !1,
 function m() {
     u = {};
 }
-class h extends (i = r.ZP.Store) {
+class _ extends (i = r.ZP.Store) {
     getMessagesPendingDeletion() {
         return d;
     }
@@ -26,15 +26,15 @@ class h extends (i = r.ZP.Store) {
     }
 }
 (a = 'scheduledMessageStore'),
-    (l = 'displayName') in h
-        ? Object.defineProperty(h, l, {
+    (l = 'displayName') in _
+        ? Object.defineProperty(_, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (h[l] = a);
-let _ = new h(s.Z, {
+        : (_[l] = a);
+let h = new _(s.Z, {
     SCHEDULED_MESSAGES_CREATE_SUCCESS: function (e) {
         let { channelId: t, scheduledMessageSend: n } = e;
         (c = {

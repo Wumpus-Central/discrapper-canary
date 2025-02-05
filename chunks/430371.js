@@ -25,16 +25,16 @@ let Z = 16 / 9,
 function T(e) {
     var t;
     let n,
-        { onSelectParticipant: a, onContextMenuParticipant: T, onFullscreenParticipant: S, participants: j, filteredParticipants: A, popoutWindow: y, inCall: P, channel: R, selectedParticipant: M, showParticipants: L = !0, className: k, paused: O, width: D, height: w, layout: U, idle: B } = e,
-        F = null != y,
+        { onSelectParticipant: a, onContextMenuParticipant: T, onFullscreenParticipant: S, participants: j, filteredParticipants: y, popoutWindow: A, inCall: P, channel: R, selectedParticipant: M, showParticipants: L = !0, className: k, paused: O, width: D, height: w, layout: U, idle: B } = e,
+        F = null != A,
         H = p.Z.getVideoComponent(),
         G = h.default.getId(),
         [V, z] = l.useState(null),
-        [W, Y] = l.useState(!0),
-        [q, K] = l.useState(!1),
+        [W, q] = l.useState(!0),
+        [Y, K] = l.useState(!1),
         X = M.type === E.fO.ACTIVITY || M.type === E.fO.PRESENCE_EMBEDDED_ACTIVITY,
-        J = (0, d.Z)(X ? M.applicationId : void 0),
-        Q = !X && null != M.streamId,
+        Q = (0, d.Z)(X ? M.applicationId : void 0),
+        J = !X && null != M.streamId,
         $ = w <= 2 * N + 144,
         ee = L && !$,
         et = (0, c.Z)(ee),
@@ -44,15 +44,15 @@ function T(e) {
         ea = (null !== (t = (0, c.Z)(M.id)) && void 0 !== t ? t : M.id) !== M.id,
         er = 0;
     (X || ee) && (er += 72), X && !ee && (ei ? (er += 48) : (er += 8)), ee && (er += 0.5 * N + 8);
-    let es = l.useMemo(() => (X && J ? D / (w - 2 * er) : Q && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : Z), [Q, V, X, D, w, er, J]),
+    let es = l.useMemo(() => (X && Q ? D / (w - 2 * er) : J && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : Z), [J, V, X, D, w, er, Q]),
         eo = w - 2 * er,
-        ec = X && J ? D : eo * es,
+        ec = X && Q ? D : eo * es,
         ed = Math.floor(Math.min(D, ec) / es),
         eu = w > D / es + 72 + N + 8;
     (n = ee || X ? (ee ? -16 : -8) : 40 + Math.max(0, 72 - (w - ed) / 2)),
         l.useEffect(() => {
             let e = setTimeout(() => {
-                Y(!1);
+                q(!1);
             }, 250);
             return () => {
                 clearTimeout(e);
@@ -120,16 +120,16 @@ function T(e) {
             'animate-always'
         ),
         e_ = l.useCallback((e) => {
-            z(e), Y(!1);
+            z(e), q(!1);
         }, []),
         eC = ee || O ? [] : (0, C.n3)(j, M, G),
-        { visibleParticipants: ex, participantTileWidth: ev } = (0, x.ZB)(D, A);
+        { visibleParticipants: ex, participantTileWidth: ev } = (0, x.ZB)(D, y);
     return (0, i.jsxs)('div', {
         className: r()(b.root, I.flexCenter, k),
         children: [
             (0, i.jsxs)('div', {
                 className: b.tileWrapper,
-                style: { opacity: Q && W ? 0 : 1 },
+                style: { opacity: J && W ? 0 : 1 },
                 children: [
                     (0, i.jsxs)(s.animated.div, {
                         className: b.videoFrame,
@@ -201,8 +201,8 @@ function T(e) {
                             participantTileWidth: ev,
                             selectedParticipantId: M.id,
                             inCall: P,
-                            paused: O || q || !L,
-                            popoutWindow: y
+                            paused: O || Y || !L,
+                            popoutWindow: A
                         })
                     })
                 ]

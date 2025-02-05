@@ -9,17 +9,17 @@ var i = n(200651),
     d = n(131951),
     u = n(924557),
     m = n(435064),
-    h = n(779618),
-    _ = n(175470),
+    _ = n(779618),
+    h = n(175470),
     p = n(203259),
     g = n(356659),
     f = n(388032);
 function x(e) {
     let { canShowReminder: t = !1, className: x } = e,
-        E = (0, h.Z)(d.Z),
-        { showClipsHeaderEntrypoint: C } = u.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
+        C = (0, _.Z)(d.Z),
+        { showClipsHeaderEntrypoint: v } = u.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
-            hasClips: v,
+            hasClips: E,
             hasNewClips: I,
             lastClipsSession: N,
             remindersEnabled: S,
@@ -32,8 +32,8 @@ function x(e) {
             hasAnyClipAnimations: m.Z.hasAnyClipAnimations()
         })),
         b = null != N && N.newClipIds.length > 0,
-        A = (0, _.n)((e) => e.clipsButtonRef),
-        j = (0, _.n)((e) => e.setClipsButtonRef),
+        A = (0, h.n)((e) => e.clipsButtonRef),
+        j = (0, h.n)((e) => e.setClipsButtonRef),
         y = (0, a.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: Z, allowIdle: R } = (0, o.Y)('animation');
     function L() {
@@ -45,7 +45,7 @@ function x(e) {
             { modalKey: g.Qr }
         );
     }
-    return (l.useEffect(() => (T ? Z() : R(), () => R()), [T, Z, R]), C && E && v)
+    return (l.useEffect(() => (T ? Z() : R(), () => R()), [T, Z, R]), v && C && E)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   null != A &&

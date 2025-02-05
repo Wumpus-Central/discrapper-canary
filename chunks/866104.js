@@ -13,15 +13,15 @@ var i = n(200651),
     d = n(357352),
     u = n(70097),
     m = n(565138),
-    h = n(353254),
-    _ = n(695346),
+    _ = n(353254),
+    h = n(695346),
     p = n(271383),
     g = n(594174),
     f = n(671533),
     x = n(51144),
-    E = n(506071),
-    C = n(696014),
-    v = n(847033),
+    C = n(506071),
+    v = n(696014),
+    E = n(847033),
     I = n(544978),
     N = n(893182),
     S = n(388032),
@@ -50,9 +50,9 @@ function b(e) {
 }
 function A(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
-        l = _.QK.useSetting(),
-        a = (0, E.n)() && l,
-        [r, s] = (0, h.Z)(t, a),
+        l = h.QK.useSetting(),
+        a = (0, C.n)() && l,
+        [r, s] = (0, _.Z)(t, a),
         o = a
             ? (0, i.jsx)(u.Z, {
                   autoPlay: !0,
@@ -83,26 +83,26 @@ function A(e) {
 function j(e) {
     var t, n;
     let { guild: a, subscriptionsSettings: u } = e,
-        h = a.id,
-        { nickname: _, nickcolor: f } = (0, s.cj)(
+        _ = a.id,
+        { nickname: h, nickcolor: f } = (0, s.cj)(
             [p.ZP, g.default],
             () => {
                 var e, t;
                 let n = g.default.getCurrentUser();
                 r()(null != n, 'user cannot be null');
-                let i = p.ZP.getMember(h, n.id);
+                let i = p.ZP.getMember(_, n.id);
                 return {
                     nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : x.ZP.getName(n),
                     nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
                 };
             },
-            [h]
+            [_]
         ),
-        { isTruncated: E, ExpandableTextContainer: j } = (0, C.s)(),
+        { isTruncated: C, ExpandableTextContainer: j } = (0, v.s)(),
         y = (null !== (n = null == u ? void 0 : null === (t = u.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
         [Z, R] = l.useState(1),
         L = (0, c.Z)('(max-width: 1439px)'),
-        { selectedTab: P, isPhantomPreview: k } = (0, v.m)(),
+        { selectedTab: P, isPhantomPreview: k } = (0, E.m)(),
         M = P === I.y.GUILD_PRODUCTS_PREVIEW ? S.intl.string(S.t['LvXy/P']) : S.intl.string(S.t.XyqKh4),
         O = y
             ? (0, i.jsxs)(i.Fragment, {
@@ -115,9 +115,9 @@ function j(e) {
                               children: null == u ? void 0 : u.description
                           })
                       }),
-                      E &&
+                      C &&
                           (0, i.jsxs)(i.Fragment, {
-                              children: [(0, i.jsx)(o.LZC, { size: 4 }), (0, i.jsx)(b, { onClick: () => (0, N.Z)({ guildId: h }) })]
+                              children: [(0, i.jsx)(o.LZC, { size: 4 }), (0, i.jsx)(b, { onClick: () => (0, N.Z)({ guildId: _ }) })]
                           })
                   ]
               })
@@ -163,7 +163,7 @@ function j(e) {
                                         variant: 'text-md/normal',
                                         color: 'text-normal',
                                         children: S.intl.format(S.t['7JwrlJ'], {
-                                            username: _,
+                                            username: h,
                                             usernameHook: function (e, t) {
                                                 return (0, i.jsx)(
                                                     'span',

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
 var l = n(442837),
@@ -11,12 +11,12 @@ n(288552);
 var d = n(981631),
     u = n(388032),
     m = n(76334);
-function h(e) {
+function _(e) {
     let { closePopout: t, onSelect: n } = e,
         m = (0, l.e7)([s.Z, o.Z], () => s.Z.getChannel(o.Z.getChannelId())),
         {
-            everyoneFilter: h,
-            roleFilter: _,
+            everyoneFilter: _,
+            roleFilter: h,
             guildFilter: p
         } = (0, l.cj)([c.Z], () => {
             let { everyoneFilter: e, roleFilter: t, guildFilter: n } = c.Z;
@@ -36,17 +36,17 @@ function h(e) {
                 id: 'Everyone',
                 label: u.intl.string(u.t.cdyUsb),
                 action: function () {
-                    r.Z.setGuildFilter({ everyoneFilter: !h });
+                    r.Z.setGuildFilter({ everyoneFilter: !_ });
                 },
-                checked: h
+                checked: _
             }),
             (0, i.jsx)(a.S89, {
                 id: 'Roles',
                 label: u.intl.string(u.t.lZejCg),
                 action: function () {
-                    r.Z.setGuildFilter({ roleFilter: !_ });
+                    r.Z.setGuildFilter({ roleFilter: !h });
                 },
-                checked: _
+                checked: h
             }),
             null == m || m.isPrivate()
                 ? null
@@ -61,14 +61,14 @@ function h(e) {
         ]
     });
 }
-function _() {
+function h() {
     return (0, i.jsx)(a.yRy, {
         align: 'right',
         animation: a.yRy.Animation.NONE,
         position: 'bottom',
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(h, { closePopout: t });
+            return (0, i.jsx)(_, { closePopout: t });
         },
         children: (e) => {
             let { onClick: t } = e;

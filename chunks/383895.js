@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => I });
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -11,22 +11,22 @@ var i = n(200651),
     m = n(592125),
     p = n(944486),
     g = n(594174),
-    h = n(5192),
-    _ = n(810568),
+    _ = n(5192),
+    h = n(810568),
     f = n(388032),
     x = n(444354),
-    E = n(561526);
-let v = (e) => {
-    let { entry: t, viewId: n, officialGuildId: a, onClose: v } = e,
-        I = (0, o.e7)([p.Z, m.Z], () => m.Z.getChannel(p.Z.getChannelId())),
+    v = n(561526);
+let I = (e) => {
+    let { entry: t, viewId: n, officialGuildId: a, onClose: I } = e,
+        E = (0, o.e7)([p.Z, m.Z], () => m.Z.getChannel(p.Z.getChannelId())),
         C = (0, o.e7)([g.default], () => g.default.getUser(t.author_id)),
-        { nick: A, avatar: S } = r.useMemo(() => {
-            let e = null == C ? void 0 : C.getAvatarURL(null == I ? void 0 : I.guild_id, 48, !1);
+        { nick: b, avatar: j } = r.useMemo(() => {
+            let e = null == C ? void 0 : C.getAvatarURL(null == E ? void 0 : E.guild_id, 48, !1);
             return {
-                nick: h.ZP.getName(null == I ? void 0 : I.guild_id, null == I ? void 0 : I.id, C),
+                nick: _.ZP.getName(null == E ? void 0 : E.guild_id, null == E ? void 0 : E.id, C),
                 avatar: e
             };
-        }, [C, I]);
+        }, [C, E]);
     return null == C
         ? null
         : (0, i.jsx)(s.yRy, {
@@ -38,15 +38,15 @@ let v = (e) => {
                       closePopout: r,
                       updatePopoutPosition: l,
                       onReaction: () => {
-                          (0, _.UE)({
-                              action: _.as.SendMessageUser,
+                          (0, h.UE)({
+                              action: h.as.SendMessageUser,
                               applicationId: t.extra.application_id,
                               gameName: t.extra.game_name,
                               recipientUserId: t.author_id,
                               viewId: n,
                               officialGuildId: a
                           }),
-                              v(),
+                              I(),
                               r();
                       },
                       onUserPopoutClosed: () => r(),
@@ -55,8 +55,8 @@ let v = (e) => {
               },
               positionKey: 'game-profile-entry-'.concat(t.id),
               onRequestOpen: () => {
-                  (0, _.UE)({
-                      action: _.as.ClickMessageUser,
+                  (0, h.UE)({
+                      action: h.as.ClickMessageUser,
                       applicationId: t.extra.application_id,
                       gameName: t.extra.game_name,
                       recipientUserId: t.author_id,
@@ -79,19 +79,19 @@ let v = (e) => {
                               children: [
                                   (0, i.jsx)('img', {
                                       className: x.avatar,
-                                      src: S,
-                                      alt: f.intl.formatToPlainString(f.t.IzVXxc, { userName: A })
+                                      src: j,
+                                      alt: f.intl.formatToPlainString(f.t.IzVXxc, { userName: b })
                                   }),
                                   (0, i.jsx)('div', {
                                       className: l()(x.playerInfo),
                                       children: (0, i.jsxs)('div', {
-                                          className: l()(E.column, E.gapXs),
+                                          className: l()(v.column, v.gapXs),
                                           children: [
                                               (0, i.jsx)(s.Text, {
                                                   variant: 'text-md/medium',
                                                   color: 'text-primary',
                                                   lineClamp: 1,
-                                                  children: A
+                                                  children: b
                                               }),
                                               (0, i.jsx)(u.Gk, {
                                                   location: u.Gt.GAME_PROFILE,

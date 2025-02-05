@@ -9,28 +9,28 @@ var i,
 let d = 'MaintenanceStore',
     u = null,
     m = null,
-    h = null;
-class _ extends (a = r.ZP.Store) {
+    _ = null;
+class h extends (a = r.ZP.Store) {
     initialize() {
-        h = s.K.get(d);
+        _ = s.K.get(d);
     }
     getIncident() {
         return u;
     }
     getScheduledMaintenance() {
-        return null != m && m.id !== h ? m : null;
+        return null != m && m.id !== _ ? m : null;
     }
 }
 (l = 'MaintenanceStore'),
-    (i = 'displayName') in _
-        ? Object.defineProperty(_, i, {
+    (i = 'displayName') in h
+        ? Object.defineProperty(h, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (_[i] = l);
-let p = new _(o.Z, {
+        : (h[i] = l);
+let p = new h(o.Z, {
     CONNECTION_OPEN: function () {
         (u = null), c.Z.checkScheduledMaintenances();
     },
@@ -42,6 +42,6 @@ let p = new _(o.Z, {
     },
     STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: function () {
         if (null == m) return !1;
-        (h = m.id), s.K.set(d, h);
+        (_ = m.id), s.K.set(d, _);
     }
 });

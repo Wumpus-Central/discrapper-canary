@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var i = n(200651);
 n(192379);
 var l = n(120356),
@@ -10,30 +10,30 @@ var l = n(120356),
     d = n(553385),
     u = n(981631),
     m = n(388032),
-    h = n(188312);
-function _(e) {
+    _ = n(188312);
+function h(e) {
     let { message: t, channel: l, compact: s } = e,
         o = null != t.embeds && t.embeds.length > 0;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(c.Z, {
-                className: a()(h.mainContainer, { [h.compact]: s }),
+                className: a()(_.mainContainer, { [_.compact]: s }),
                 icon: n(570111),
                 compact: s,
                 children: (0, i.jsx)('div', {
-                    className: a()(h.__invalid_content, { [h.compact]: s }),
+                    className: a()(_.__invalid_content, { [_.compact]: s }),
                     children: (0, i.jsx)('div', {
-                        className: a()(h.__invalid_messageContent, { [h.compact]: s }),
+                        className: a()(_.__invalid_messageContent, { [_.compact]: s }),
                         children: t.content
                     })
                 })
             }),
             (0, i.jsx)('div', {
-                className: a()(h.__invalid_embedContent, { [h.compact]: s }),
+                className: a()(_.__invalid_embedContent, { [_.compact]: s }),
                 children: (0, i.jsx)(p, { message: t })
             }),
             (0, i.jsx)('div', {
-                className: h.actions,
+                className: _.actions,
                 children: (0, i.jsx)(r.zxk, {
                     color: r.zxk.Colors.PRIMARY,
                     onClick: () => {
@@ -52,7 +52,7 @@ function p(e) {
     return null == l
         ? null
         : (0, i.jsx)(s.ZP, {
-              className: h.embed,
+              className: _.embed,
               embed: l,
               renderTitle: (e, t) => o.Z.parseEmbedTitle(t, !0, { channelId: n.channel_id }),
               renderDescription: (e, t, i) => o.Z.parse(t, !0, { channelId: n.channel_id }),

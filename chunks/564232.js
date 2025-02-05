@@ -67,7 +67,7 @@ function w(e) {
                                             guildId: i.id,
                                             onContextMenu: (e) => {
                                                 (0, a.jW)(e, async () => {
-                                                    let { default: e } = await Promise.all([t.e('79695'), t.e('13125'), t.e('26976'), t.e('84940')]).then(t.bind(t, 415118));
+                                                    let { default: e } = await Promise.all([t.e('79695'), t.e('26976'), t.e('84940')]).then(t.bind(t, 415118));
                                                     return (t) =>
                                                         (0, n.jsx)(e, {
                                                             ...t,

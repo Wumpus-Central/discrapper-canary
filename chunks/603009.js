@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(981631),
     S = n(921944),
     j = n(388032),
-    A = n(431972);
-function y(e) {
+    y = n(431972);
+function A(e) {
     var t;
     let { guild: n, showToast: a, onConfirm: o, onDismiss: u } = e,
         [m, f] = l.useState(!1),
@@ -39,7 +39,7 @@ function y(e) {
             theme: v,
             saturation: 1
         }).hex(),
-        y = (0, E.nj)(T, S, 'top left', 0.3, '30%'),
+        A = (0, E.nj)(T, S, 'top left', 0.3, '30%'),
         P = (0, d.e7)(
             [_.default],
             () => {
@@ -110,32 +110,32 @@ function y(e) {
             (0, i.jsx)(s.animated.div, {
                 onMouseEnter: () => f(!0),
                 onMouseLeave: () => f(!1),
-                className: r()(A.wrapper),
+                className: r()(y.wrapper),
                 style: {
                     ...e,
-                    ...y
+                    ...A
                 },
                 ref: g,
                 children: (0, i.jsx)(c.kL8, {
                     'aria-label': w,
                     onClick: M,
                     children: (0, i.jsxs)('div', {
-                        className: r()(A.toastContainerInner, m ? A.hovered : null),
+                        className: r()(y.toastContainerInner, m ? y.hovered : null),
                         children: [
                             (0, i.jsxs)('div', {
-                                className: A.guildIconContainer,
+                                className: y.guildIconContainer,
                                 children: [
                                     (0, i.jsx)(Z.Z, {
                                         guild: n,
                                         iconSize: 64
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: A.guildTagContainer,
+                                        className: y.guildTagContainer,
                                         children: (0, i.jsx)(N.aG, {
                                             guildId: n.id,
                                             clanTag: null === (l = n.profile) || void 0 === l ? void 0 : l.tag,
                                             clanBadge: null === (a = n.profile) || void 0 === a ? void 0 : a.badge,
-                                            className: A.guildClanTag
+                                            className: y.guildClanTag
                                         })
                                     })
                                 ]
@@ -160,7 +160,7 @@ function y(e) {
                             }),
                             (0, i.jsx)('div', {
                                 children: (0, i.jsx)(c.P3F, {
-                                    className: A.toastButton,
+                                    className: y.toastButton,
                                     onClick: R,
                                     children: (0, i.jsx)(c.P$X, {
                                         size: 'custom',
@@ -205,7 +205,7 @@ function P(e) {
             s(!1), null != t && (0, m.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : T.lds, !0, S.L.DISMISS);
         }, [t]);
     return n && null != t && null != a
-        ? (0, i.jsx)(y, {
+        ? (0, i.jsx)(A, {
               guild: a,
               onConfirm: h,
               onDismiss: p,

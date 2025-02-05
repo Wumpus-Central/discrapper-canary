@@ -1,37 +1,37 @@
-n.d(t, {
-    AF: () => _,
-    oL: () => T,
-    xH: () => x
+i.d(t, {
+    AF: () => T,
+    oL: () => x,
+    xH: () => b
 }),
-    n(47120);
-var i = n(200651),
-    a = n(192379),
-    o = n(512722),
-    s = n.n(o),
-    l = n(65400),
-    r = n(731965),
-    c = n(430742),
-    d = n(752305),
-    u = n(592125),
-    h = n(703558),
-    m = n(883429),
-    p = n(228392);
-function g(e, t, n) {
+    i(47120);
+var n = i(200651),
+    a = i(192379),
+    o = i(512722),
+    s = i.n(o),
+    l = i(65400),
+    r = i(731965),
+    c = i(430742),
+    d = i(752305),
+    u = i(592125),
+    h = i(703558),
+    m = i(883429),
+    p = i(228392);
+function g(e, t, i) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = i),
         e
     );
 }
 class f {
-    constructor(e, t, n) {
-        var i, a, o;
+    constructor(e, t, i) {
+        var n, a, o;
         g(this, 'channelId', void 0),
             g(this, '_set', void 0),
             g(this, 'get', void 0),
@@ -75,7 +75,7 @@ class f {
             g(this, 'setFormOpenFromUserAction', void 0),
             (this.channelId = e),
             (this._set = t),
-            (this.get = n),
+            (this.get = i),
             (this.editorHeight = 64),
             (this.editorAdditionRowHeight = 0),
             (this.listViewCardHeights = {}),
@@ -104,8 +104,8 @@ class f {
                 this.set({ editorAdditionRowHeight: e });
             }),
             (this.setCardHeight = (e, t) => {
-                let { listViewCardHeights: n, cardHeightVersion: i } = this.get();
-                n[e] !== t && ((n[e] = t), this.set({ cardHeightVersion: i + 1 }));
+                let { listViewCardHeights: i, cardHeightVersion: n } = this.get();
+                i[e] !== t && ((i[e] = t), this.set({ cardHeightVersion: n + 1 }));
             }),
             (this.setNameError = (e) => {
                 this.set({ nameError: e });
@@ -177,27 +177,27 @@ class f {
             });
         let s = u.Z.getChannel(e);
         if (null == s) return;
-        let l = null !== (i = h.Z.getThreadSettings(s.id)) && void 0 !== i ? i : {},
+        let l = null !== (n = h.Z.getThreadSettings(s.id)) && void 0 !== n ? n : {},
             f = null == s.template ? '' : s.template.trim(),
             v = h.Z.getDraft(s.id, h.d.FirstThreadMessage),
-            T = (0, d.eK)(null != v && '' !== v.trim() ? v : f);
-        (this.name = null !== (a = l.name) && void 0 !== a ? a : ''), (o = new Set(l.appliedTags)), (this.appliedTags = void 0 !== o ? o : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = T);
+            x = (0, d.eK)(null != v && '' !== v.trim() ? v : f);
+        (this.name = null !== (a = l.name) && void 0 !== a ? a : ''), (o = new Set(l.appliedTags)), (this.appliedTags = void 0 !== o ? o : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = x);
     }
 }
 let v = a.createContext(null);
-function T(e) {
-    let { children: t, channel: n } = e,
-        o = a.useMemo(() => (0, l.F)((e, t) => new f(n.id, e, t)), [n]);
-    return (0, i.jsx)(v.Provider, {
+function x(e) {
+    let { children: t, channel: i } = e,
+        o = a.useMemo(() => (0, l.F)((e, t) => new f(i.id, e, t)), [i]);
+    return (0, n.jsx)(v.Provider, {
         value: o,
         children: t
     });
 }
-function x(e, t) {
-    let n = a.useContext(v);
-    return s()(null != n, '[useForumPostComposerStore] Context should not be null'), n(e, t);
+function b(e, t) {
+    let i = a.useContext(v);
+    return s()(null != i, '[useForumPostComposerStore] Context should not be null'), i(e, t);
 }
-function _() {
+function T() {
     let e = a.useContext(v);
     return s()(null != e, '[useForumPostComposerStore] Context should not be null'), e;
 }

@@ -1,17 +1,17 @@
-n.d(t, { Z: () => a }), n(47120);
-var i = n(192379);
+i.d(t, { Z: () => a }), i(47120);
+var n = i(192379);
 let a = (e) => {
-    let [t, n] = i.useState(!1);
+    let [t, i] = n.useState(!1);
     return {
         isFocused: t,
-        handleFocus: i.useCallback(
+        handleFocus: n.useCallback(
             (t) => {
-                e(t), n(!0);
+                e(t), i(!0);
             },
-            [e, n]
+            [e, i]
         ),
         handleBlur: () => {
-            n(!1);
+            i(!1);
         }
     };
 };

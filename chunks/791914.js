@@ -10,16 +10,16 @@ var l = n(399606),
     d = n(602478),
     u = n(2818),
     m = n(768943),
-    h = n(742989),
-    _ = n(216789),
+    _ = n(742989),
+    h = n(216789),
     p = n(818186),
     g = n(388032),
     f = n(76334);
 function x(e) {
-    let { tab: t, setTab: n, children: x, badgeState: E, closePopout: C } = e,
-        { showReminders: v } = h.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
+    let { tab: t, setTab: n, children: x, badgeState: C, closePopout: v } = e,
+        { showReminders: E } = _.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
         { enabled: I, inInbox: N } = u.Z.useExperiment({ location: 'RecentsPopout' }),
-        S = (0, _.Us)({ location: 'RecentsHeader' }),
+        S = (0, h.Us)({ location: 'RecentsHeader' }),
         { enabled: T } = d.Z.useExperiment({ location: 'RecentsHeader' }),
         b = (0, l.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
         A = (0, l.e7)([m.Z], () => m.Z.getOverdueMessageReminderCount());
@@ -42,7 +42,7 @@ function x(e) {
                     }),
                     (0, i.jsxs)('div', {
                         className: f.controls,
-                        children: [x, (0, i.jsx)(p.Z, { closePopout: C })]
+                        children: [x, (0, i.jsx)(p.Z, { closePopout: v })]
                     })
                 ]
             }),
@@ -61,7 +61,7 @@ function x(e) {
                             className: f.tab,
                             children: [
                                 g.intl.string(g.t['En+D+v']),
-                                (null == E ? void 0 : E.badgeForYou)
+                                (null == C ? void 0 : C.badgeForYou)
                                     ? (0, i.jsx)(r.fWl, {
                                           color: o.Z.STATUS_DANGER,
                                           className: f.iconBadge
@@ -104,7 +104,7 @@ function x(e) {
                                   children: 0 === A ? g.intl.string(g.t['2pAkDA']) : g.intl.formatToPlainString(g.t.I4fryM, { count: A })
                               })
                             : null,
-                        v && !I
+                        E && !I
                             ? (0, i.jsx)(r.njP.Item, {
                                   'aria-label': 'todos',
                                   id: a.X.TODOS,

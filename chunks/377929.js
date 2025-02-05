@@ -65,8 +65,8 @@ function T(e) {
             label: Z.intl.string(Z.t.DQ797u)
         }),
         j = (0, d.Z)(t),
-        A = (0, u.Z)(t),
-        y = (0, h.Z)(t, 'Toolbar Overflow'),
+        y = (0, u.Z)(t),
+        A = (0, h.Z)(t, 'Toolbar Overflow'),
         P = (0, f.Z)(t),
         R = (0, p.Z)(t),
         M = (0, C.Z)(t),
@@ -79,7 +79,7 @@ function T(e) {
         onSelect: l,
         children: [
             (0, i.jsxs)(o.kSQ, {
-                children: [y, R]
+                children: [A, R]
             }),
             (0, i.jsxs)(o.kSQ, {
                 children: [
@@ -98,7 +98,7 @@ function T(e) {
                 ]
             }),
             (0, i.jsxs)(o.kSQ, {
-                children: [M, a, v, A]
+                children: [M, a, v, y]
             }),
             (0, i.jsxs)(o.kSQ, {
                 children: [j, S]

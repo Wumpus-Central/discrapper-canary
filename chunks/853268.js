@@ -9,9 +9,9 @@ var r = n(120356),
     c = n(262437),
     d = n(232186);
 function u(e) {
-    let { value: t, onChange: n, subText: r, muted: u, marginTopStyle: h } = e;
+    let { value: t, onChange: n, subText: r, muted: u, marginTopStyle: _ } = e;
     return (0, i.jsx)(o.Z, {
-        className: null != h ? h : d.marginTop20,
+        className: null != _ ? _ : d.marginTop20,
         align: o.Z.Align.CENTER,
         children: (0, i.jsx)(a.XZJ, {
             value: t,

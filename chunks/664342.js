@@ -64,8 +64,8 @@ function T(e) {
         T = (0, c.Z)(t),
         S = (0, h.Z)(t.id),
         j = (0, u.Z)(t),
-        A = (0, s.Z)(t),
-        y = (0, g.Z)({
+        y = (0, s.Z)(t),
+        A = (0, g.Z)({
             id: t.id,
             label: Z.intl.string(Z.t.DQ797u)
         }),
@@ -119,9 +119,9 @@ function T(e) {
                 ]
             }),
             (0, i.jsxs)(a.kSQ, {
-                children: [P, N, T, A]
+                children: [P, N, T, y]
             }),
-            (0, i.jsx)(a.kSQ, { children: y })
+            (0, i.jsx)(a.kSQ, { children: A })
         ]
     });
 }

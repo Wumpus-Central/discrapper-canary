@@ -159,7 +159,7 @@ let b = l.memo(function (e) {
         l.useEffect(() => {
             (S.multiplier > 1 || S.value > 0) && (j.current = S);
         }, [S]);
-        let { multiplier: A, value: y } = l.useMemo(
+        let { multiplier: y, value: A } = l.useMemo(
             () => ({
                 value: N ? S.value : j.current.value,
                 multiplier: N ? S.multiplier : j.current.multiplier
@@ -177,8 +177,8 @@ let b = l.memo(function (e) {
                     className: I.combo,
                     style: T,
                     children: (0, i.jsx)(Z, {
-                        value: y,
-                        multiplier: A
+                        value: A,
+                        multiplier: y
                     })
                 })
             ]

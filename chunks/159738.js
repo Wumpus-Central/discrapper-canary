@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(442837),
     u = n(481060),
     m = n(603263),
-    h = n(461745),
-    _ = n(349033),
+    _ = n(461745),
+    h = n(349033),
     p = n(999650),
     g = n(857595),
     f = n(607070),
     x = n(367907),
-    E = n(313201),
-    C = n(592125),
-    v = n(984933),
+    C = n(313201),
+    v = n(592125),
+    E = n(984933),
     I = n(768119),
     N = n(944486),
     S = n(585483),
@@ -43,7 +43,7 @@ function P(e, t, n) {
     );
 }
 n(978246);
-let k = (0, E.hQ)(),
+let k = (0, C.hQ)(),
     M = c()(m.yC, 500);
 class O extends l.PureComponent {
     componentDidMount() {
@@ -62,7 +62,7 @@ class O extends l.PureComponent {
         S.S.unsubscribe(Z.CkL.PERFORM_SEARCH, this.search), S.S.unsubscribe(Z.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), S.S.unsubscribe(Z.CkL.FOCUS_SEARCH, this.handleFocusSearch);
     }
     tokenize(e) {
-        let t = b.kG(T.Sq(e)).filter((e) => e.type !== _.ZP.NON_TOKEN_TYPE);
+        let t = b.kG(T.Sq(e)).filter((e) => e.type !== h.ZP.NON_TOKEN_TYPE);
         return T.lv(t, e, p.ZP);
     }
     clearSearch() {
@@ -135,7 +135,7 @@ class O extends l.PureComponent {
                                           ref: this._searchBarRef,
                                           children: [
                                               this.renderInput(d),
-                                              (0, i.jsx)(h.BK, {
+                                              (0, i.jsx)(_.BK, {
                                                   onClear: this.handleClearSearch,
                                                   hasContent: s || n,
                                                   className: L.icon
@@ -210,12 +210,12 @@ class O extends l.PureComponent {
                     return;
                 }
                 let n = N.Z.getChannelId(),
-                    i = C.Z.getChannel(n);
-                if (((null == i ? void 0 : i.isThread()) && (i = C.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate())) {
+                    i = v.Z.getChannel(n);
+                if (((null == i ? void 0 : i.isThread()) && (i = v.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate())) {
                     this.focusEditor();
                     return;
                 }
-                let l = v.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id],
+                let l = E.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id],
                     a = null != l ? l.name : i.name;
                 Promise.resolve().then(() => {
                     let { _editorRef: e } = this;

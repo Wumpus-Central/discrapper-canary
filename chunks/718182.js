@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(493773),
     d = n(129293),
     u = n(388905),
-    h = n(108427),
-    _ = n(981631),
+    _ = n(108427),
+    h = n(981631),
     g = n(388032),
     p = n(232186);
 function m(e) {
@@ -22,12 +22,12 @@ function f(e) {
         return 'Android' === a().os.family || 'iOS' === a().os.family
             ? null
             : (0, i.jsx)(u.zx, {
-                  onClick: () => l(_.Z5c.LOGIN),
+                  onClick: () => l(h.Z5c.LOGIN),
                   children: g.intl.string(g.t.dKhVQE)
               });
     }
     return ((0, c.ZP)(() => {
-        (0, h.e)('authorize_ip');
+        (0, _.e)('authorize_ip');
         let e = (0, d.Z)(t);
         if (null == e) {
             f('failed');

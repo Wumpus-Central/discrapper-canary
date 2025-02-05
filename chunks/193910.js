@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(921944),
     S = n(489887),
     j = n(388032),
-    A = n(308183);
-let y = /(.*)```(\w+)\n(.*)```(.*)/s;
+    y = n(308183);
+let A = /(.*)```(\w+)\n(.*)```(.*)/s;
 function P() {
     let e = (0, r.e7)([C.Z], () => C.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
@@ -105,7 +105,7 @@ function R(e) {
         let e = M,
             n = 'txt',
             i = '',
-            l = M.match(y);
+            l = M.match(A);
         null != l && ((i = l[1]), (n = l[2]), (e = l[3]), (i += l[4])), (0, I.d)([(0, E.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, R), v.S.dispatchToLastSubscribed(N.CkL.CLEAR_TEXT), '' !== i && v.S.dispatchToLastSubscribed(N.CkL.INSERT_TEXT, { plainText: i });
     }
     return (
@@ -121,24 +121,24 @@ function R(e) {
             navId: 'channel-attach',
             onClose: f,
             'aria-label': j.intl.string(j.t.Xm41aW),
-            className: A.menu,
+            className: y.menu,
             children: r.map(function (e) {
                 var n;
                 let l = (0, i.jsxs)('div', {
-                    className: A.optionLabel,
+                    className: y.optionLabel,
                     children: [
                         (0, i.jsx)(e.icon, {
-                            className: A.optionIcon,
+                            className: y.optionIcon,
                             color: 'currentColor'
                         }),
                         (0, i.jsx)('div', {
-                            className: A.optionName,
+                            className: y.optionName,
                             children: e.display
                         }),
                         null != e.badgeVal &&
                             e.badgeVal > 0 &&
                             (0, i.jsx)(o.mAB, {
-                                className: A.badge,
+                                className: y.badge,
                                 color: null !== (n = e.badgeColor) && void 0 !== n ? n : a.Z.STATUS_DANGER,
                                 count: e.badgeVal
                             })

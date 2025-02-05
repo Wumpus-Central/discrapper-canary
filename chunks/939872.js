@@ -11,7 +11,7 @@ var l = n(442837),
 let u = (e) => {
     let { onClose: t, listing: n, guildId: u } = e,
         m = (0, l.e7)([s.Z], () => s.Z.getGuild(u), [u]),
-        h = (0, o.Z)({
+        _ = (0, o.Z)({
             listing: n,
             guildId: u
         });
@@ -26,12 +26,12 @@ let u = (e) => {
                     tierName: n.name
                 })
             }),
-            !h.isEmpty() &&
+            !_.isEmpty() &&
                 (0, i.jsx)(a.Text, {
                     className: d.confirmationSubtitle,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: c.intl.format(c.t.TnhFHh, { benefits: h.asString() })
+                    children: c.intl.format(c.t.TnhFHh, { benefits: _.asString() })
                 }),
             (0, i.jsx)(a.zxk, {
                 className: d.openDiscordButton,

@@ -9,17 +9,17 @@ var i = n(200651),
     d = n(782568),
     u = n(317632),
     m = n(174767),
-    h = n(594174),
-    _ = n(55935),
+    _ = n(594174),
+    h = n(55935),
     p = n(388032),
     g = n(905180);
 function f(e) {
     let { invite: t, expired: n } = e,
-        a = (0, s.e7)([h.default], () => {
+        a = (0, s.e7)([_.default], () => {
             var e, n;
-            return null !== (n = null === (e = h.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : '';
+            return null !== (n = null === (e = _.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : '';
         }),
-        d = (0, _.vc)(r()(t.created_at), 'LT'),
+        d = (0, h.vc)(r()(t.created_at), 'LT'),
         u = l.useRef(null),
         f = (0, c.Z)(u);
     return (
@@ -95,27 +95,27 @@ function x(e) {
     let { expired: t, invite: n, isHoveringInvite: a } = e,
         r = (0, s.e7)([u.Z], () => u.Z.isInviteGameInstalled(n)),
         c = (0, s.e7)([u.Z], () => u.Z.isInviteJoinable(n)),
-        [h, _] = l.useState(!1),
+        [_, h] = l.useState(!1),
         f = l.useCallback(async () => {
-            _(!0);
+            h(!0);
             try {
                 await (0, m.MH)(n);
             } catch {}
-            _(!1);
+            h(!1);
         }, [n]),
         x = l.useCallback(async () => {
-            _(!0);
+            h(!0);
             try {
                 await (0, m.Ol)(n);
             } catch {}
-            _(!1);
+            h(!1);
         }, [n]);
     return t
         ? r && a
             ? (0, i.jsx)(o.zxk, {
                   className: g.primaryButton,
                   color: o.Ttl.TRANSPARENT,
-                  disabled: h,
+                  disabled: _,
                   size: o.PhG.SMALL,
                   onClick: f,
                   children: p.intl.string(p.t['s+J8Dg'])
@@ -125,7 +125,7 @@ function x(e) {
           ? (0, i.jsx)(o.zxk, {
                 className: g.primaryButton,
                 color: o.Ttl.GREEN,
-                disabled: h,
+                disabled: _,
                 size: o.PhG.SMALL,
                 onClick: x,
                 children: p.intl.string(p.t['/loN9/'])
@@ -133,7 +133,7 @@ function x(e) {
           : null != n.fallback_url
             ? (0, i.jsx)(o.zxk, {
                   className: g.primaryButton,
-                  disabled: h,
+                  disabled: _,
                   size: o.PhG.SMALL,
                   color: o.Ttl.TRANSPARENT,
                   onClick: () => (0, d.Z)(n.fallback_url),

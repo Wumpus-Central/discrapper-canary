@@ -12,13 +12,13 @@ var i = n(200651),
     d = n(686546),
     u = n(565138),
     m = n(601964),
-    h = n(598077),
-    _ = n(388032),
+    _ = n(598077),
+    h = n(388032),
     p = n(828573);
 let g = (e) => {
         var t;
         let { speaker: n, guildId: l, isEmbed: a } = e,
-            r = new h.Z(n.user);
+            r = new _.Z(n.user);
         return (0, i.jsxs)('div', {
             className: p.speaker,
             children: [
@@ -48,7 +48,7 @@ let g = (e) => {
                     muted: !0,
                     uppercase: !0,
                     className: p.alignStart,
-                    children: _.intl.string(_.t.Eabu19)
+                    children: h.intl.string(h.t.Eabu19)
                 }),
                 (0, i.jsxs)('div', {
                     className: p.guild,
@@ -77,7 +77,7 @@ let g = (e) => {
                                         null != n && n > 0
                                             ? (0, i.jsx)(s.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: _.intl.format(_.t['LC+S+v'], { membersOnline: n })
+                                                  children: h.intl.format(h.t['LC+S+v'], { membersOnline: n })
                                               })
                                             : null
                                     ]
@@ -99,13 +99,13 @@ let g = (e) => {
     },
     x = (e) => {
         var t;
-        let { stageInstance: n, guild: a, isCard: h = !1, isEmbed: f = !1, onClick: x } = e,
-            E = l.useMemo(() => (null == a ? null : a instanceof m.ZP ? a : new m.ZP(a)), [a]);
-        if (null == n || null == E) return null;
-        let { topic: C, speaker_count: v, participant_count: I } = n,
+        let { stageInstance: n, guild: a, isCard: _ = !1, isEmbed: f = !1, onClick: x } = e,
+            C = l.useMemo(() => (null == a ? null : a instanceof m.ZP ? a : new m.ZP(a)), [a]);
+        if (null == n || null == C) return null;
+        let { topic: v, speaker_count: E, participant_count: I } = n,
             N = null !== (t = n.members) && void 0 !== t ? t : [],
             S = f ? N.slice(0, 3) : N,
-            T = v - S.length;
+            T = E - S.length;
         return (
             f && (T += N.length - S.length),
             (0, i.jsxs)('div', {
@@ -126,7 +126,7 @@ let g = (e) => {
                                     (0, i.jsx)(s.X6q, {
                                         variant: 'eyebrow',
                                         className: r()(p.__invalid_label, p.live),
-                                        children: _.intl.string(_.t['X2K3//'])
+                                        children: h.intl.string(h.t['X2K3//'])
                                     })
                                 ]
                             }),
@@ -158,7 +158,7 @@ let g = (e) => {
                                     width: 20,
                                     height: 20,
                                     children: (0, i.jsx)(u.Z, {
-                                        guild: E,
+                                        guild: C,
                                         size: u.Z.Sizes.MINI,
                                         active: !0
                                     })
@@ -167,14 +167,14 @@ let g = (e) => {
                                     color: 'header-secondary',
                                     className: p.__invalid_label,
                                     variant: 'text-sm/normal',
-                                    children: E.name
+                                    children: C.name
                                 })
                             ]
                         }),
                     (0, i.jsx)(o.Z, {
-                        size: h || f ? o.Z.Sizes.SIZE_16 : o.Z.Sizes.SIZE_20,
+                        size: _ || f ? o.Z.Sizes.SIZE_16 : o.Z.Sizes.SIZE_20,
                         className: r()(p.header, { [p.embed]: f }),
-                        children: C
+                        children: v
                     }),
                     (0, i.jsxs)('div', {
                         className: r()(p.members, { [p.embed]: f }),
@@ -188,7 +188,7 @@ let g = (e) => {
                                                 g,
                                                 {
                                                     speaker: e,
-                                                    guildId: E.id,
+                                                    guildId: C.id,
                                                     isEmbed: f
                                                 },
                                                 e.user.id
@@ -210,7 +210,7 @@ let g = (e) => {
                                                       (0, i.jsxs)(c.Z, {
                                                           size: f ? c.Z.Sizes.SIZE_12 : c.Z.Sizes.SIZE_14,
                                                           color: c.Z.Colors.HEADER_SECONDARY,
-                                                          children: ['+', _.intl.format(_.t.L1pCBQ, { count: T })]
+                                                          children: ['+', h.intl.format(h.t.L1pCBQ, { count: T })]
                                                       })
                                                   ]
                                               })
@@ -222,7 +222,7 @@ let g = (e) => {
                                     color: s.zxk.Colors.GREEN,
                                     onClick: x,
                                     className: p.joinButton,
-                                    children: _.intl.string(_.t.ZYO5OD)
+                                    children: h.intl.string(h.t.ZYO5OD)
                                 })
                         ]
                     })

@@ -17,8 +17,8 @@ function _(e) {
     let { checked: t, labelText: n, tooltipText: a, canToggle: _, iconAltText: C, onChange: x, tooltipColor: v, className: E, id: I = 'fancybutton-toggle', collapseWhenChecked: b = !0, onClick: Z, disabled: N } = e,
         T = (0, s.e7)([h.Z], () => h.Z.useReducedMotion),
         [S, j] = l.useState(!1),
-        A = (0, u.ZP)(),
-        y = (0, o.wj)(A) || t ? g : f,
+        y = (0, u.ZP)(),
+        A = (0, o.wj)(y) || t ? g : f,
         { width: P = 0, ref: R } = (0, d.Z)(),
         { width: M = 0, ref: L } = (0, d.Z)();
     return (0, i.jsxs)(c.DY3, {
@@ -63,7 +63,7 @@ function _(e) {
                         : null,
                     (0, i.jsx)('img', {
                         ref: R,
-                        src: y,
+                        src: A,
                         alt: C
                     }),
                     (0, i.jsx)('span', {

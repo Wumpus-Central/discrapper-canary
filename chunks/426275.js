@@ -9,20 +9,20 @@ var i = n(200651),
     d = n(245216),
     u = n(388032);
 function m(e) {
-    let { className: t, channelId: n, messageId: m, targetKind: h, embedIndex: _ } = e,
+    let { className: t, channelId: n, messageId: m, targetKind: _, embedIndex: h } = e,
         p = l.useCallback(() => {
             let e = s.Z.getMessage(n, m);
             if (null == e) return;
             let t = (0, o.j)(e, {
-                targetKind: h,
-                embedIndex: _
+                targetKind: _,
+                embedIndex: h
             });
             (0, c.l8)({
                 message: e,
                 source: 'message-actions',
                 forwardOptions: t
             });
-        }, [n, _, m, h]);
+        }, [n, h, m, _]);
     return (0, i.jsx)(r.M0o, {
         className: t,
         tooltip: u.intl.string(u.t.I3ltXF),

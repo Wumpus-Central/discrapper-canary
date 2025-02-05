@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(442837),
@@ -19,16 +19,16 @@ var i = n(200651),
     E = n(388032),
     A = n(370913),
     I = n(413097);
-function _(e) {
+function g(e) {
     var t;
     let { context: n, application: r, sectionName: c } = e,
-        _ = 'channel' === n.type ? n.channel : void 0,
+        g = 'channel' === n.type ? n.channel : void 0,
         P = (0, a.e7)([m.Z], () => m.Z.entrypoint()),
         j = null !== (t = (0, u.q)(r.id === C.bi.BUILT_IN ? null : r.id)) && void 0 !== t ? t : r,
-        y = (0, h.ye)(j) ? g : N.Z,
+        y = (0, h.ye)(j) ? _ : N.Z,
         T = l.useRef(null),
-        [S, b] = l.useState(!1),
-        { iconURL: L, name: R } = l.useMemo(
+        [S, L] = l.useState(!1),
+        { iconURL: b, name: R } = l.useMemo(
             () =>
                 (0, h.sl)(j, {
                     fakeAppIconURL: I,
@@ -36,14 +36,14 @@ function _(e) {
                 }),
             [j]
         ),
-        M = (0, d.PL)(!0, !0),
-        Z = (0, d.LD)(null == _ ? void 0 : _.guild_id, !0),
-        O = l.useMemo(() => (0, d.If)(n, j.id), [M, Z, n, j.id]),
+        Z = (0, d.PL)(!0, !0),
+        M = (0, d.LD)(null == g ? void 0 : g.guild_id, !0),
+        O = l.useMemo(() => (0, d.If)(n, j.id), [Z, M, n, j.id]),
         k = !O.isGuildInstalled && !O.isUserInstalled;
     return (
         l.useEffect(() => {
-            k && d.ZP.queryInstallOnDemandApp(j.id, null == _ ? void 0 : _.id);
-        }, [j.id, null == _ ? void 0 : _.id, k]),
+            k && d.ZP.queryInstallOnDemandApp(j.id, null == g ? void 0 : g.id);
+        }, [j.id, null == g ? void 0 : g.id, k]),
         (0, i.jsxs)(s.u2D, {
             className: A.container,
             fade: !0,
@@ -55,13 +55,13 @@ function _(e) {
                     application: j,
                     context: n,
                     name: R,
-                    iconURL: L,
+                    iconURL: b,
                     scrollerRef: T,
                     sectionName: c
                 }),
-                null != L &&
+                null != b &&
                     (0, i.jsx)(v.Z, {
-                        src: L,
+                        src: b,
                         className: A.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
@@ -77,14 +77,14 @@ function _(e) {
                           application: j,
                           sectionName: c,
                           installOnDemand: k,
-                          setHasCommands: b
+                          setHasCommands: L
                       })
                     : null
             ]
         })
     );
 }
-function g(e) {
+function _(e) {
     let { context: t, application: n, sectionName: l, hasCommands: a } = e,
         o = (0, c.Z)({
             applicationId: n.id,

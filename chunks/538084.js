@@ -14,9 +14,9 @@ var i = n(200651),
 let u = 'SCHEDULED_MESSAGE_CREATE_MODAL_KEY';
 function m(e) {
     let { channel: t, transitionState: n, onClose: a, prefilledTime: m } = e,
-        h = r()(),
-        _ = r()().add(365, 'days'),
-        [p, g] = l.useState(null != m ? r()(m.substring(0, 200)) : h);
+        _ = r()(),
+        h = r()().add(365, 'days'),
+        [p, g] = l.useState(null != m ? r()(m.substring(0, 200)) : _);
     return (0, i.jsxs)(s.Y0X, {
         transitionState: n,
         size: s.CgR.SMALL,
@@ -48,8 +48,8 @@ function m(e) {
                                     onSelect: (e) => {
                                         g(e);
                                     },
-                                    minDate: h,
-                                    maxDate: _,
+                                    minDate: _,
+                                    maxDate: h,
                                     disabled: !1
                                 })
                             })

@@ -10,21 +10,21 @@ var l = n(373793),
     d = n(783097),
     u = n(606192),
     m = n(213459),
-    h = n(132871),
-    _ = n(147890),
+    _ = n(132871),
+    h = n(147890),
     p = n(321231),
     g = n(230171),
     f = n(835473),
     x = n(914010),
-    E = n(624138),
-    C = n(135431),
-    v = n(147865),
+    C = n(624138),
+    v = n(135431),
+    E = n(147865),
     I = n(778569),
     N = n(388032),
     S = n(258858);
-let T = (0, E.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+let T = (0, C.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function b(e) {
-    var t, n, r, E;
+    var t, n, r, C;
     let { applicationId: b, customId: A, referrerId: j, embedUrl: y } = e,
         { analyticsLocations: Z } = (0, c.ZP)(o.Z.ACTIVITY_BOOKMARK),
         [R] = (0, f.Z)([b]),
@@ -34,15 +34,15 @@ function b(e) {
         }),
         P = null == R ? void 0 : null === (t = R.bot) || void 0 === t ? void 0 : t.id,
         k = null != R && (0, d.ye)(R),
-        M = (0, v.ZP)(null !== (r = null == R ? void 0 : R.maxParticipants) && void 0 !== r ? r : 0),
+        M = (0, E.ZP)(null !== (r = null == R ? void 0 : R.maxParticipants) && void 0 !== r ? r : 0),
         O = (0, I.Z)({
             applicationId: b,
             size: T,
             names: ['embedded_cover']
         }),
-        D = null !== (E = null == R ? void 0 : R.id) && void 0 !== E ? E : '0',
-        w = (0, C.TK)(D, (0, m.PL)(!0, !1)),
-        F = (0, C.TK)(D, (0, m.LD)(L, !1)),
+        D = null !== (C = null == R ? void 0 : R.id) && void 0 !== C ? C : '0',
+        w = (0, v.TK)(D, (0, m.PL)(!0, !1)),
+        F = (0, v.TK)(D, (0, m.LD)(L, !1)),
         U = async () => {
             if (null != P && (null == R ? void 0 : R.id) != null)
                 try {
@@ -121,11 +121,11 @@ function b(e) {
                                                             if (null != R)
                                                                 l.Y.USER_INSTALL in (null !== (e = R.integrationTypesConfig) && void 0 !== e ? e : {}) || w || F
                                                                     ? (0, d.X)(R.id)
-                                                                    : (0, _.dx)({
+                                                                    : (0, h.dx)({
                                                                           guildId: L,
-                                                                          view: h.eN.APPLICATION,
+                                                                          view: _.eN.APPLICATION,
                                                                           applicationId: R.id,
-                                                                          entrypoint: { name: h.n3.OAUTH2_EMBED }
+                                                                          entrypoint: { name: _.n3.OAUTH2_EMBED }
                                                                       });
                                                         },
                                                         className: S.button,

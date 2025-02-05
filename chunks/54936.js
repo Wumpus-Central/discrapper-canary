@@ -10,7 +10,7 @@ var l = n(120356),
     d = n(981631),
     u = n(388032),
     m = n(758528);
-let h = {
+let _ = {
     [d.TaA.WINDOWS]: {
         icon: c.Z,
         getLabel: () => u.intl.string(u.t['0/xHFB'])
@@ -24,9 +24,9 @@ let h = {
         getLabel: () => u.intl.string(u.t.tcawo6)
     }
 };
-function _(e) {
+function h(e) {
     let { operatingSystem: t, className: n } = e,
-        l = h[t];
+        l = _[t];
     if (null == l) throw Error('Unexpected operating system: '.concat(t));
     let a = l.icon;
     return (0, i.jsx)(r.ua7, {
@@ -44,7 +44,7 @@ let p = (e) => {
         className: a()(m.OSSection, n),
         children: t.map((e) =>
             (0, i.jsx)(
-                _,
+                h,
                 {
                     operatingSystem: e,
                     className: a()(m.purchaseUnitOperatingSystem, l)

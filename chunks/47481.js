@@ -96,15 +96,15 @@ function u(e) {
                           unreadId: e.id
                       }),
                   (v = null));
-            let A = (0, c.f)(e, h);
-            null != A &&
+            let y = (0, c.f)(e, h);
+            null != y &&
                 C.push({
                     type: d.ys_.MESSAGE,
-                    content: A,
-                    groupId: A.id
+                    content: y,
+                    groupId: y.id
                 });
-            let y = (null == N ? void 0 : N.type) === d.ys_.MESSAGE ? u : N;
-            (0, s.J)(h, y, e) && (n = e.id);
+            let A = (null == N ? void 0 : N.type) === d.ys_.MESSAGE ? u : N;
+            (0, s.J)(h, A, e) && (n = e.id);
             let P = {
                 type: e.type === d.uaV.THREAD_STARTER_MESSAGE ? d.ys_.THREAD_STARTER_MESSAGE : d.ys_.MESSAGE,
                 content: e,

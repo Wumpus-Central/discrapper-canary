@@ -27,7 +27,7 @@ var i = n(200651),
 function j(e) {
     let { channel: t, guild: n, width: l, inPopout: a, handleClose: r, userParticipantCount: s } = e;
     return l < 250
-        ? (0, i.jsx)(A, {
+        ? (0, i.jsx)(y, {
               channel: t,
               guild: n,
               width: l,
@@ -44,14 +44,14 @@ function j(e) {
                 handleClose: r,
                 userParticipantCount: s
             })
-          : (0, i.jsx)(y, {
+          : (0, i.jsx)(A, {
                 channel: t,
                 guild: n,
                 width: l,
                 inPopout: a
             });
 }
-function A(e) {
+function y(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
         { analyticsLocations: a } = (0, g.ZP)(f.Z.VC_TILE_ACTIVITY_SHELF_BUTTON),
         s = (0, d.O)(),
@@ -110,7 +110,7 @@ function A(e) {
         })
     });
 }
-function y(e) {
+function A(e) {
     let { channel: t, guild: a, inPopout: s, width: o } = e;
     l.useEffect(() => {
         E.default.track(b.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
@@ -222,7 +222,7 @@ function P(e) {
     });
     let T = (0, h.Z)({ guildId: n.id }).slice(0, 3),
         { analyticsLocations: j } = (0, g.ZP)(f.Z.VC_TILE_ACTIVITY_SUGGESTION),
-        A = l.useMemo(
+        y = l.useMemo(
             () => ({
                 channel: t,
                 type: 'channel'
@@ -254,7 +254,7 @@ function P(e) {
                         (0, i.jsx)(
                             p.Y,
                             {
-                                context: A,
+                                context: y,
                                 activityItem: e,
                                 aspectRatio: p.Y.AspectRatio.SIXTEEN_BY_NINE,
                                 animatedDivClass: N.activitySuggestion,

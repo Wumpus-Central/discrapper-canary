@@ -1,28 +1,28 @@
-n.d(t, {
+i.d(t, {
     s4: () => o,
     vJ: () => s
 }),
-    n(757143);
-var i = n(392711),
-    a = n(302221);
+    i(757143);
+var n = i(392711),
+    a = i(302221);
 let o = (e, t) => {
-        let n = (0, a.WY)([t.r, t.g, t.b], 2);
+        let i = (0, a.WY)([t.r, t.g, t.b], 2);
         return (e = (e = e.replace(
             /(\[1,0,0,)/g,
             '['
-                .concat(n[0][0] / 255, ',')
-                .concat(n[0][1] / 255, ',')
-                .concat(n[0][2] / 255, ',')
+                .concat(i[0][0] / 255, ',')
+                .concat(i[0][1] / 255, ',')
+                .concat(i[0][2] / 255, ',')
         )).replace(
             /\[0,0,1,/g,
             '['
-                .concat(n[1][0] / 255, ',')
-                .concat(n[1][1] / 255, ',')
-                .concat(n[1][2] / 255, ',')
+                .concat(i[1][0] / 255, ',')
+                .concat(i[1][1] / 255, ',')
+                .concat(i[1][2] / 255, ',')
         ));
     },
-    s = (0, i.memoize)((e) => {
+    s = (0, n.memoize)((e) => {
         let t = 0;
-        for (let n = 0; n < e.length; n++) t = (t << 5) - t + e.charCodeAt(n);
+        for (let i = 0; i < e.length; i++) t = (t << 5) - t + e.charCodeAt(i);
         return Math.abs(t);
     });

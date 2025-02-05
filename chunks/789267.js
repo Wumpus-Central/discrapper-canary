@@ -7,8 +7,8 @@ var l = n(739566),
 function s(e) {
     let { message: t, compact: s, missed: o, joinable: c, usernameHook: d, onClickJoinCall: u } = e,
         m = (0, l.ZP)(t),
-        h = m.nick,
-        _ = d(m),
+        _ = m.nick,
+        h = d(m),
         p = (function (e) {
             let t = null != e.call ? e.call.duration : null;
             return null != t ? t.humanize() : null;
@@ -21,13 +21,13 @@ function s(e) {
               children:
                   null != p
                       ? r.intl.format(r.t.AcqBmJ, {
-                            username: h,
-                            usernameHook: _,
+                            username: _,
+                            usernameHook: h,
                             callDuration: p
                         })
                       : r.intl.format(r.t['43phHx'], {
-                            username: h,
-                            usernameHook: _
+                            username: _,
+                            usernameHook: h
                         })
           })
         : (0, i.jsxs)(a.Z, {
@@ -37,13 +37,13 @@ function s(e) {
               children: [
                   null != p
                       ? r.intl.format(r.t['7TeC1N'], {
-                            username: h,
-                            usernameHook: _,
+                            username: _,
+                            usernameHook: h,
                             callDuration: p
                         })
                       : r.intl.format(r.t.LuB5RE, {
-                            username: h,
-                            usernameHook: _
+                            username: _,
+                            usernameHook: h
                         }),
                   c
                       ? (0, i.jsx)(a.Z.Action, {

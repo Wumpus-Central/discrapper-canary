@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     rowIcon: 'rowIcon_cb32c7',
     appDetailsRowContainer: 'appDetailsRowContainer_cb32c7',
     rowDivider: 'rowDivider_cb32c7',

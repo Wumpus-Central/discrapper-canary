@@ -1,48 +1,48 @@
-n.d(t, {
+i.d(t, {
     Z: () => f,
     s: () => g
 }),
-    n(47120);
-var i,
-    a = n(200651),
-    o = n(192379),
-    s = n(442837),
-    l = n(481060),
-    r = n(749210),
-    c = n(313201),
-    d = n(823379),
-    u = n(41776),
-    h = n(981631),
-    m = n(388032),
-    p = n(904424),
-    g = (((i = {})[(i.CHAT = 0)] = 'CHAT'), (i[(i.REACTIONS = 1)] = 'REACTIONS'), i);
+    i(47120);
+var n,
+    a = i(200651),
+    o = i(192379),
+    s = i(442837),
+    l = i(481060),
+    r = i(749210),
+    c = i(313201),
+    d = i(823379),
+    u = i(41776),
+    h = i(981631),
+    m = i(388032),
+    p = i(904424),
+    g = (((n = {})[(n.CHAT = 0)] = 'CHAT'), (n[(n.REACTIONS = 1)] = 'REACTIONS'), n);
 let f = (e) => {
-    let { type: t, guild: i, closePopout: g, ctaRef: f } = e,
+    let { type: t, guild: n, closePopout: g, ctaRef: f } = e,
         v = (0, c.Dt)(),
-        [T, x] = o.useState(!1),
-        _ = (0, s.e7)([u.Z], () => u.Z.isLurking(i.id), [i.id]);
+        [x, b] = o.useState(!1),
+        T = (0, s.e7)([u.Z], () => u.Z.isLurking(n.id), [n.id]);
     o.useEffect(() => {
-        T && !_ && g();
-    }, [T, _, g]);
-    let b = null,
-        j = m.intl.string(m.t.d7b1p6);
+        x && !T && g();
+    }, [x, T, g]);
+    let j = null,
+        _ = m.intl.string(m.t.d7b1p6);
     switch (t) {
         case 0:
-            b = m.intl.string(m.t.Xiwf1d);
+            j = m.intl.string(m.t.Xiwf1d);
             break;
         case 1:
-            b = m.intl.string(m.t.GXvlU1);
+            j = m.intl.string(m.t.GXvlU1);
             break;
         default:
             return (0, d.vE)(t);
     }
-    if (null == b) return null;
+    if (null == j) return null;
     let C = async () => {
-        x(!0);
+        b(!0);
         try {
-            await r.Z.joinGuild(i.id, { source: h.vtS.CHAT_INPUT_BLOCKER }), g();
+            await r.Z.joinGuild(n.id, { source: h.vtS.CHAT_INPUT_BLOCKER }), g();
         } catch {
-            x(!1);
+            b(!1);
         }
     };
     return (0, a.jsxs)(l.VqE, {
@@ -52,7 +52,7 @@ let f = (e) => {
             (0, a.jsx)('img', {
                 alt: '',
                 className: p.image,
-                src: n(64395)
+                src: i(64395)
             }),
             (0, a.jsxs)('div', {
                 className: p.content,
@@ -60,12 +60,12 @@ let f = (e) => {
                     (0, a.jsx)(l.X6q, {
                         variant: 'heading-md/semibold',
                         id: v,
-                        children: b
+                        children: j
                     }),
                     (0, a.jsx)(l.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: j
+                        children: _
                     }),
                     (0, a.jsxs)('div', {
                         className: p.buttonContainer,
@@ -73,7 +73,7 @@ let f = (e) => {
                             (0, a.jsx)(l.zxk, {
                                 buttonRef: f,
                                 onClick: C,
-                                submitting: T,
+                                submitting: x,
                                 children: m.intl.string(m.t['9VLmlZ'])
                             }),
                             (0, a.jsx)(l.zxk, {

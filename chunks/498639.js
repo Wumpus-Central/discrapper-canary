@@ -72,7 +72,7 @@ let D = function () {
         [H, z] = s.useState(''),
         [Y, W] = s.useState(A.lds),
         { balance: K, isFetching: X, error: q } = (0, S.A)(),
-        { isSubmitting: Q, responseMessage: J, redeemVirtualCurrency: $ } = (0, S.f)(),
+        { isSubmitting: J, responseMessage: Q, redeemVirtualCurrency: $ } = (0, S.f)(),
         [ee, et] = s.useState(A.lds),
         [en, ei] = s.useState(''),
         [es, er] = s.useState(A.lds),
@@ -315,7 +315,7 @@ let D = function () {
                         (0, i.jsx)(a.xJW, {
                             className: R.formItem,
                             children: (0, i.jsx)(a.zxk, {
-                                submitting: Q,
+                                submitting: J,
                                 onClick: () => $(ee),
                                 children: 'Redeem Virtual Currency for SKU'
                             })
@@ -324,7 +324,7 @@ let D = function () {
                             className: R.formItem,
                             children: (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
-                                children: J
+                                children: Q
                             })
                         })
                     ]

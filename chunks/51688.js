@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     icon: 'icon__761e5',
     focusBlock: 'focusBlock__761e5',
     clickable: 'clickable__761e5',

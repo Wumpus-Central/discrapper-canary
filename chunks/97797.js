@@ -1,11 +1,11 @@
-n.d(e, { i: () => r });
-var l = n(981631),
-    i = n(388032);
-function r(t) {
-    let { username: e, usernameOnClickHandler: n = l.dG4, productName: r } = t;
-    return i.intl.formatToParts(i.t.w4iXs7, {
-        username: e,
+n.d(t, { i: () => a });
+var i = n(981631),
+    r = n(388032);
+function a(e) {
+    let { username: t, usernameOnClickHandler: n = i.dG4, productName: a } = e;
+    return r.intl.formatToParts(r.t.w4iXs7, {
+        username: t,
         usernameHook: n,
-        productName: r
+        productName: a
     });
 }

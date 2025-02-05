@@ -10,15 +10,15 @@ var l = n(120356),
     d = n(43267),
     u = n(933557),
     m = n(471445),
-    h = n(377171),
-    _ = n(313201),
+    _ = n(377171),
+    h = n(313201),
     p = n(565138),
     g = n(199902),
     f = n(592125),
     x = n(430824),
-    E = n(158776),
-    C = n(306680),
-    v = n(594174),
+    C = n(158776),
+    v = n(306680),
+    E = n(594174),
     I = n(388032),
     N = n(897394);
 let S = {
@@ -29,7 +29,7 @@ let S = {
 };
 function T(e) {
     let { channel: t, children: n, gotoChannel: l, mentionCount: a, channelState: s, toggleCollapsed: c } = e,
-        d = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, _.Dt)()));
+        d = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, h.Dt)()));
     return (0, i.jsx)(o.tEY, {
         offset: S,
         children: (0, i.jsxs)('div', {
@@ -69,7 +69,7 @@ function b(e) {
 }
 function A(e) {
     let { channel: t, gotoChannel: n } = e,
-        l = (0, s.e7)([v.default], () => (t.isDM() ? v.default.getUser(t.getRecipientId()) : null)),
+        l = (0, s.e7)([E.default], () => (t.isDM() ? E.default.getUser(t.getRecipientId()) : null)),
         a = null == l ? (0, d.x)(t) : l.getAvatarURL(void 0, 40);
     return (0, i.jsx)(o.P3F, {
         onClick: n,
@@ -101,11 +101,11 @@ function y(e) {
     let { channel: t, gotoChannel: n, mentionCount: l } = e,
         r = (0, s.e7)([x.Z], () => x.Z.getGuild(t.guild_id)),
         c = (0, s.e7)([f.Z], () => f.Z.getChannel(t.parent_id)),
-        d = (0, s.e7)([C.ZP], () => C.ZP.getIsMentionLowImportance(t.id)),
-        _ = (0, m.KS)(t, r),
+        d = (0, s.e7)([v.ZP], () => v.ZP.getIsMentionLowImportance(t.id)),
+        h = (0, m.KS)(t, r),
         p = (0, u.ZP)(t, !1),
         g = null == c ? (null == r ? void 0 : r.name) : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name),
-        E = t.isMultiUserDM()
+        C = t.isMultiUserDM()
             ? I.intl.formatToPlainString(I.t.CxSA5O, { members: t.recipients.length + 1 })
             : t.isPrivate()
               ? (0, i.jsx)(Z, { channel: t })
@@ -124,9 +124,9 @@ function y(e) {
                     className: N.channelName,
                     onClick: n,
                     children: [
-                        t.isThread() || t.isGroupDM() || null == _
+                        t.isThread() || t.isGroupDM() || null == h
                             ? null
-                            : (0, i.jsx)(_, {
+                            : (0, i.jsx)(h, {
                                   className: t.isForumLikeChannel() ? N.forumIcon : void 0,
                                   width: 18,
                                   height: 18,
@@ -142,7 +142,7 @@ function y(e) {
                                   className: N.badge,
                                   children: (0, i.jsx)(o.mAB, {
                                       count: l,
-                                      color: d ? h.Z.BACKGROUND_ACCENT : h.Z.STATUS_DANGER
+                                      color: d ? _.Z.BACKGROUND_ACCENT : _.Z.STATUS_DANGER
                                   })
                               })
                             : null
@@ -153,7 +153,7 @@ function y(e) {
                 color: 'header-secondary',
                 variant: 'text-xs/normal',
                 className: N.subtextContainer,
-                children: E
+                children: C
             })
         ]
     });
@@ -164,11 +164,11 @@ function Z(e) {
             user: n,
             activities: l,
             applicationStream: a
-        } = (0, s.cj)([v.default, E.Z, g.Z], () => {
-            let e = v.default.getUser(t.getRecipientId());
+        } = (0, s.cj)([E.default, C.Z, g.Z], () => {
+            let e = E.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                activities: null != e ? E.Z.getActivities(e.id) : null,
+                activities: null != e ? C.Z.getActivities(e.id) : null,
                 applicationStream: null != e ? g.Z.getAnyStreamForUser(e.id) : null
             };
         });

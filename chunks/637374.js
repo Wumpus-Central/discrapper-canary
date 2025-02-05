@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(481060),
     u = n(230711),
     m = n(568836),
-    h = n(730749),
-    _ = n(112724),
+    _ = n(730749),
+    h = n(112724),
     p = n(607070),
     g = n(884697),
     f = n(600164),
     x = n(479446),
-    E = n(930114),
-    C = n(981632),
-    v = n(108989),
+    C = n(930114),
+    v = n(981632),
+    E = n(108989),
     I = n(703656),
     N = n(314897),
     S = n(82142),
@@ -299,7 +299,7 @@ class H extends l.Component {
                         }
                     });
                 let r = l !== O.uaV.CUSTOM_GIFT ? void 0 : i;
-                (0, E.V)({
+                (0, C.V)({
                     processedCode: n,
                     channelContext: t,
                     customGiftMessage: r,
@@ -335,13 +335,13 @@ class H extends l.Component {
                     children: [
                         !t &&
                             D.eZ.includes(e.giftStyle) &&
-                            (0, i.jsx)(v.Z, {
+                            (0, i.jsx)(E.Z, {
                                 className: F.snow,
                                 wind: 5
                             }),
                         l && (0, i.jsx)(y.Z, { className: F.headerIcon }),
                         null != e.giftStyle &&
-                            (0, i.jsx)(C.Z, {
+                            (0, i.jsx)(v.Z, {
                                 defaultAnimationState: e.redeemed ? x.SR.LOOP : x.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: s
@@ -351,7 +351,7 @@ class H extends l.Component {
             });
     }
 }
-let V = (0, _.Z)((0, h.Z)(H)),
+let V = (0, h.Z)((0, _.Z)(H)),
     z = c.ZP.connectStores([S.Z, j.Z, b.default, T.Z, A.Z, N.default, p.Z], (e) => {
         let { code: t, author: n, currentUser: i } = e,
             l = S.Z.get(t),

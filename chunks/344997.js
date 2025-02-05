@@ -10,7 +10,7 @@ var l = n(913527),
     d = n(388032),
     u = n(816762);
 let m = (e) => a()().diff(a().unix(e), 'days');
-function h(e) {
+function _(e) {
     let { classificationId: t } = e;
     return (0, i.jsx)(s.eee, {
         onClick: () => {
@@ -29,7 +29,7 @@ function h(e) {
         children: d.intl.string(d.t.QsqdXF)
     });
 }
-function _(e) {
+function h(e) {
     let { learnMoreLink: t } = e;
     return (0, i.jsx)(s.eee, {
         className: u.detailsButton,
@@ -42,10 +42,10 @@ function p(e) {
     switch (t) {
         case c.wo.POLICY_VIOLATION_DETAIL:
             if (null == n) return null;
-            return (0, i.jsx)(h, { classificationId: n });
+            return (0, i.jsx)(_, { classificationId: n });
         case c.wo.LEARN_MORE_LINK:
             if (null == l) return null;
-            return (0, i.jsx)(_, { learnMoreLink: l });
+            return (0, i.jsx)(h, { learnMoreLink: l });
         default:
             return null;
     }

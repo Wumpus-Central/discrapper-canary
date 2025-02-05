@@ -26,16 +26,16 @@ function I(e) {
         T = (0, l.e7)([c.Z], () => c.Z.getGuild(I.guild_id), [I.guild_id]),
         S = (0, l.e7)([d.Z], () => d.Z.getSelectedParticipant(Z)),
         j = (null == S ? void 0 : S.type) === C.fO.STREAM ? S.stream : null,
-        A = (0, l.e7)([s.Z], () => ((null == S ? void 0 : S.type) === C.fO.ACTIVITY ? s.Z.getApplication(S.applicationId) : void 0)),
-        y = (0, h.Z)(Z),
+        y = (0, l.e7)([s.Z], () => ((null == S ? void 0 : S.type) === C.fO.ACTIVITY ? s.Z.getApplication(S.applicationId) : void 0)),
+        A = (0, h.Z)(Z),
         P = (0, g.Z)(Z),
-        R = (0, p.Z)(I, T, null == j ? void 0 : j.ownerId, null == A ? void 0 : A.id),
+        R = (0, p.Z)(I, T, null == j ? void 0 : j.ownerId, null == y ? void 0 : y.id),
         M = (0, u.Z)(Z),
         L = (0, _.Z)(),
         k = (0, o.$A)(Z),
         O = (0, o.j8)(Z),
         D = (0, f.Z)(j, b),
-        w = (0, m.Z)(A, Z);
+        w = (0, m.Z)(y, Z);
     return (0, i.jsxs)(a.v2r, {
         className: E.menu,
         onClose: t,
@@ -45,11 +45,11 @@ function I(e) {
         children: [
             (0, i.jsx)(a.kSQ, { children: N !== x.d4z.GUILD_STAGE_VOICE ? R : null }),
             (0, i.jsxs)(a.kSQ, {
-                children: [N !== x.d4z.GUILD_STAGE_VOICE ? M : null, N !== x.d4z.GUILD_STAGE_VOICE ? y : null, N === x.d4z.GUILD_STAGE_VOICE ? k : null, N === x.d4z.GUILD_STAGE_VOICE || N === x.d4z.GUILD_VOICE ? P : null, N === x.d4z.GUILD_STAGE_VOICE ? O : null]
+                children: [N !== x.d4z.GUILD_STAGE_VOICE ? M : null, N !== x.d4z.GUILD_STAGE_VOICE ? A : null, N === x.d4z.GUILD_STAGE_VOICE ? k : null, N === x.d4z.GUILD_STAGE_VOICE || N === x.d4z.GUILD_VOICE ? P : null, N === x.d4z.GUILD_STAGE_VOICE ? O : null]
             }),
             (0, i.jsx)(a.kSQ, { children: L }),
             (0, i.jsxs)(a.kSQ, {
-                children: [null != j ? D : null, null != A ? w : null]
+                children: [null != j ? D : null, null != y ? w : null]
             })
         ]
     });

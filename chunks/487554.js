@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => c,
-    Z: () => h
+    Z: () => _
 });
 var i,
     l,
@@ -32,7 +32,7 @@ class m extends (r = s.ZP.Store) {
               writable: !0
           })
         : (m[l] = a);
-let h = new m(o.Z, {
+let _ = new m(o.Z, {
     CONNECTION_OPEN: function () {
         (d = {}), (u = {});
     },

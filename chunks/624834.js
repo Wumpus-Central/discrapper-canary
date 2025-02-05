@@ -1,58 +1,58 @@
-n.d(t, { Z: () => E }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+n.d(t, { Z: () => C }), n(47120);
+var l = n(200651),
+    i = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
-    c = n(2052),
-    u = n(638880),
+    u = n(2052),
+    c = n(638880),
     d = n(413458),
     m = n(778569),
     f = n(100527),
-    p = n(906732),
-    h = n(835473),
-    g = n(314897),
-    v = n(592125),
-    _ = n(594174),
-    I = n(849171),
-    S = n(388032),
-    x = n(712434);
-function E(e) {
-    let { participant: t, width: n, channelId: a } = e,
-        { analyticsLocations: r } = (0, p.ZP)(f.Z.PRESENCE_ACTIVITY_TILE),
+    h = n(906732),
+    p = n(835473),
+    v = n(314897),
+    g = n(592125),
+    E = n(594174),
+    Z = n(849171),
+    x = n(388032),
+    S = n(712434);
+function C(e) {
+    let { participant: t, width: n, channelId: r } = e,
+        { analyticsLocations: a } = (0, h.ZP)(f.Z.PRESENCE_ACTIVITY_TILE),
         { activity: s } = t,
         o = s.application_id,
-        [c] = (0, h.Z)([o]),
-        { url: u } = (0, m.Z)({
+        [u] = (0, p.Z)([o]),
+        { url: c } = (0, m.Z)({
             applicationId: o,
-            names: I.Ix,
-            size: I.bn
+            names: Z.Ix,
+            size: Z.bn
         }),
-        d = l.useMemo(
+        d = i.useMemo(
             () => ({
                 userId: t.user.id,
                 sessionId: t.activity.session_id
             }),
             [t]
         );
-    return (0, i.jsx)(p.Gt, {
-        value: r,
-        children: (0, i.jsx)('div', {
-            className: x.container,
-            children: (0, i.jsxs)(i.Fragment, {
+    return (0, l.jsx)(h.Gt, {
+        value: a,
+        children: (0, l.jsx)('div', {
+            className: S.container,
+            children: (0, l.jsxs)(l.Fragment, {
                 children: [
-                    null != c && null != o && null != u && '' !== u
-                        ? (0, i.jsx)('img', {
-                              className: x.splashImage,
-                              alt: c.name,
-                              src: u
+                    null != u && null != o && null != c && '' !== c
+                        ? (0, l.jsx)('img', {
+                              className: S.splashImage,
+                              alt: u.name,
+                              src: c
                           })
                         : null,
-                    null != c && null != o
-                        ? (0, i.jsx)(C, {
+                    null != u && null != o
+                        ? (0, l.jsx)(b, {
                               width: n,
-                              channelId: a,
+                              channelId: r,
                               participant: d,
                               applicationId: o
                           })
@@ -62,73 +62,73 @@ function E(e) {
         })
     });
 }
-function C(e) {
-    let { width: t, channelId: n, participant: a, applicationId: m } = e,
-        f = (0, I.V_)(t),
-        [E] = (0, I.Ym)(t),
-        C = (0, s.e7)([v.Z], () => v.Z.getChannel(n)),
-        Z = (0, s.e7)([_.default, g.default], () => ((0, d.J)(a, g.default) ? null : _.default.getUser(a.userId))),
-        y = l.useMemo(() => (null != Z ? [Z] : []), [Z]),
-        b = (0, h.q)(m),
-        { analyticsLocations: N } = (0, p.ZP)(),
-        T = (0, c.O)(),
-        A = a.sessionId,
-        [w, P] = l.useState(!1),
-        j = null == Z ? void 0 : Z.id,
-        R = l.useCallback(
+function b(e) {
+    let { width: t, channelId: n, participant: r, applicationId: m } = e,
+        f = (0, Z.V_)(t),
+        [C] = (0, Z.Ym)(t),
+        b = (0, s.e7)([g.Z], () => g.Z.getChannel(n)),
+        I = (0, s.e7)([E.default, v.default], () => ((0, d.J)(r, v.default) ? null : E.default.getUser(r.userId))),
+        _ = i.useMemo(() => (null != I ? [I] : []), [I]),
+        N = (0, p.q)(m),
+        { analyticsLocations: R } = (0, h.ZP)(),
+        y = (0, u.O)(),
+        T = r.sessionId,
+        [j, w] = i.useState(!1),
+        A = null == I ? void 0 : I.id,
+        O = i.useCallback(
             async (e) => {
                 e.stopPropagation(),
                     null != m &&
-                        null != j &&
-                        (P(!0),
-                        await (0, u.Z)({
+                        null != A &&
+                        (w(!0),
+                        await (0, c.Z)({
                             applicationId: m,
                             activityChannelId: void 0,
-                            locationObject: T.location,
-                            analyticsLocations: N,
-                            joinUserId: j,
-                            joinSessionId: A
+                            locationObject: y.location,
+                            analyticsLocations: R,
+                            joinUserId: A,
+                            joinSessionId: T
                         }),
-                        P(!1));
+                        w(!1));
             },
-            [m, j, T.location, N, A]
+            [m, A, y.location, R, T]
         );
-    return null == C || null == Z || null == b
+    return null == b || null == I || null == N
         ? null
-        : (0, i.jsxs)('div', {
-              className: x.splash,
+        : (0, l.jsxs)('div', {
+              className: S.splash,
               children: [
-                  (0, i.jsx)(I.OV, {
-                      avatarSize: E,
-                      guildId: C.guild_id,
-                      channelId: C.id,
-                      users: y
+                  (0, l.jsx)(Z.OV, {
+                      avatarSize: C,
+                      guildId: b.guild_id,
+                      channelId: b.id,
+                      users: _
                   }),
-                  (0, i.jsx)(o.Text, {
-                      className: r()(x.subheader, {
-                          [x.small]: f === I.nR.SMALL,
-                          [x.medium]: f === I.nR.MEDIUM
+                  (0, l.jsx)(o.Text, {
+                      className: a()(S.subheader, {
+                          [S.small]: f === Z.nR.SMALL,
+                          [S.medium]: f === Z.nR.MEDIUM
                       }),
                       variant: 'text-sm/normal',
-                      children: S.intl.formatToPlainString(S.t['7Uuia2'], { username: Z.username })
+                      children: x.intl.formatToPlainString(x.t['7Uuia2'], { username: I.username })
                   }),
-                  (0, i.jsx)(o.Text, {
-                      className: r()(x.header, {
-                          [x.small]: f === I.nR.SMALL,
-                          [x.medium]: f === I.nR.MEDIUM
+                  (0, l.jsx)(o.Text, {
+                      className: a()(S.header, {
+                          [S.small]: f === Z.nR.SMALL,
+                          [S.medium]: f === Z.nR.MEDIUM
                       }),
                       variant: 'text-sm/normal',
-                      children: b.name
+                      children: N.name
                   }),
-                  (0, i.jsx)('div', {
-                      className: x.buttons,
-                      children: (0, i.jsx)(o.zxk, {
-                          onClick: R,
-                          submitting: w,
-                          size: (0, I.ac)(f),
-                          className: x.button,
+                  (0, l.jsx)('div', {
+                      className: S.buttons,
+                      children: (0, l.jsx)(o.zxk, {
+                          onClick: O,
+                          submitting: j,
+                          size: (0, Z.ac)(f),
+                          className: S.button,
                           color: o.zxk.Colors.PRIMARY,
-                          children: S.intl.string(S.t['4i2vj4'])
+                          children: x.intl.string(x.t['4i2vj4'])
                       })
                   })
               ]

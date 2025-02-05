@@ -1,8 +1,8 @@
 n.d(t, {
     Vk: () => m,
     g3: () => f,
-    jF: () => h,
-    jk: () => _,
+    jF: () => _,
+    jk: () => h,
     wt: () => p
 });
 var i = n(990547),
@@ -20,10 +20,10 @@ function m(e) {
         active: e
     });
 }
-function h() {
+function _() {
     r.Z.dispatch({ type: 'RESET_NOTIFICATION_CENTER' });
 }
-async function _(e, t) {
+async function h(e, t) {
     if (c.Z.loading) return;
     await r.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS' });
     let n = Math.ceil(c.Z.items.length / e.limit);

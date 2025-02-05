@@ -1,9 +1,9 @@
 n.d(t, { Z: () => E });
 var i = n(200651);
 n(192379);
-var l = n(13245),
-    r = n(937889),
-    o = n(703656),
+var r = n(13245),
+    o = n(937889),
+    l = n(703656),
     a = n(974180),
     s = n(150097),
     d = n(358085),
@@ -12,17 +12,17 @@ var l = n(13245),
     h = n(145597),
     _ = n(610394),
     p = n(516542),
-    g = n(380736),
-    f = n(620954),
+    f = n(380736),
+    g = n(620954),
     m = n(987650),
     v = n(981631),
     x = n(388032);
 function E(e, t, n, E) {
-    var Z;
-    let { icon: C, title: I, body: S } = (0, s.Xi)(e, t, n),
-        { trackView: b, trackClick: y } = (0, f.R)(m.n0.TextChat, {
+    var C;
+    let { icon: Z, title: S, body: I } = (0, s.Xi)(e, t, n),
+        { trackView: y, trackClick: b } = (0, g.R)(m.n0.TextChat, {
             notif_type: m.n0.TextChat,
-            notif_user_id: null === (Z = t.author) || void 0 === Z ? void 0 : Z.id,
+            notif_user_id: null === (C = t.author) || void 0 === C ? void 0 : C.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -30,35 +30,35 @@ function E(e, t, n, E) {
             channel_type: e.type
         });
     return {
-        icon: C,
-        title: I,
+        icon: Z,
+        title: S,
         body:
             t.content.length > 0
-                ? (0, r.ZP)(t, {
+                ? (0, o.ZP)(t, {
                       noStyleAndInteraction: !0,
                       formatInline: !0,
                       hideSimpleEmbedContent: !1
                   }).content
-                : S,
-        hint: (e) => (e ? null : (0, g.QR)((0, f.P)(), x.t.ykjOAA, x.intl.string(x.t.jZkzVF))),
+                : I,
+        hint: (e) => (e ? null : (0, f.QR)((0, g.P)(), x.t.ykjOAA, x.intl.string(x.t.jZkzVF))),
         maxBodyLines: 2,
         renderFooter: (t, n) =>
             t
                 ? (0, i.jsx)(p.Z, {
                       id: n,
                       channel: e,
-                      onSend: () => y('send')
+                      onSend: () => b('send')
                   })
                 : null,
         onNotificationShow: () => {
-            E && (0, c.GN)(a.Ay, a.yk), b();
+            E && (0, c.GN)(a.Ay, a.yk), y();
         },
         onNotificationClick: () => {
             let n = (0, h.QF)();
-            _.ZP.isInputLocked(n) ? (y('unlock'), l.Z.setInputLocked(!1, n)) : (y('jump'), (0, o.uL)(v.Z5c.CHANNEL(e.guild_id, e.id, t.id)), d.isPlatformEmbedded && u.ZP.focus());
+            _.ZP.isInputLocked(n) ? (b('unlock'), r.Z.setInputLocked(!1, n)) : (b('jump'), (0, l.uL)(v.Z5c.CHANNEL(e.guild_id, e.id, t.id)), d.isPlatformEmbedded && u.ZP.focus());
         },
         onDismissClick: () => {
-            y('dismiss');
+            b('dismiss');
         }
     };
 }

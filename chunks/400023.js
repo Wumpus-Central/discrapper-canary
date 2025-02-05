@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(306680),
     S = n(62817),
     j = n(594174),
-    A = n(459273),
-    y = n(255269),
+    y = n(459273),
+    A = n(255269),
     P = n(47481),
     R = n(977391),
     M = n(959258),
@@ -39,7 +39,7 @@ var i = n(200651),
 let B = l.memo(
         function (e) {
             var t;
-            let { className: n, messageGroupSpacing: a, scrollerClassName: u, channel: m, messages: f, unreadCount: g, showNewMessagesBar: _, messageDisplayCompact: x, channelStream: v, uploads: E, hasUnreads: I, editingMessageId: b, fontSize: Z, keyboardModeEnabled: T, filterAfterTimestamp: S, showingQuarantineBanner: j, hideSummaries: y = !1, jumpBarClassName: P } = e,
+            let { className: n, messageGroupSpacing: a, scrollerClassName: u, channel: m, messages: f, unreadCount: g, showNewMessagesBar: _, messageDisplayCompact: x, channelStream: v, uploads: E, hasUnreads: I, editingMessageId: b, fontSize: Z, keyboardModeEnabled: T, filterAfterTimestamp: S, showingQuarantineBanner: j, hideSummaries: A = !1, jumpBarClassName: P } = e,
                 [M, B] = l.useState(!1),
                 F = l.useMemo(
                     () =>
@@ -83,8 +83,8 @@ let B = l.memo(
                 {
                     channelStreamMarkup: z,
                     newMessagesBar: W,
-                    jumpToPresentBar: Y,
-                    forumPostActionBar: q,
+                    jumpToPresentBar: q,
+                    forumPostActionBar: Y,
                     safetyWarningBanner: K
                 } = (0, O.Z)({
                     channel: m,
@@ -99,7 +99,7 @@ let B = l.memo(
                     specs: F,
                     filterAfterTimestamp: null != S ? S : V,
                     showingQuarantineBanner: j,
-                    hideSummaries: y,
+                    hideSummaries: A,
                     isAtBottom: M,
                     jumpToPresent: () => {
                         if (f.hasPresent()) {
@@ -122,24 +122,24 @@ let B = l.memo(
                         var t;
                         return null === (t = e.current) || void 0 === t ? void 0 : t.scrollPageDown({ animate: !p.Z.useReducedMotion });
                     }, [e]);
-                (0, A.yp)({
+                (0, y.yp)({
                     event: D.CkL.SCROLLTO_PRESENT,
                     handler: t
                 }),
-                    (0, A.yp)({
+                    (0, y.yp)({
                         event: D.CkL.SCROLL_PAGE_UP,
                         handler: n
                     }),
-                    (0, A.yp)({
+                    (0, y.yp)({
                         event: D.CkL.SCROLL_PAGE_DOWN,
                         handler: i
                     });
             })(H.ref);
             let X = (0, c.mFp)(),
-                { ref: J, ...Q } = (0, s.l2)(G),
+                { ref: Q, ...J } = (0, s.l2)(G),
                 $ = (0, h.Z)((e) => {
                     var t;
-                    (H.ref.current = e), (J.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
+                    (H.ref.current = e), (Q.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
                 });
             return (0, i.jsxs)(s.bG, {
                 navigator: G,
@@ -162,11 +162,11 @@ let B = l.memo(
                                 tabIndex: -1,
                                 role: 'group',
                                 children: [
-                                    q,
+                                    Y,
                                     (0, i.jsxs)('ol', {
                                         className: U.scrollerInner,
                                         'aria-label': w.intl.formatToPlainString(w.t.XarRiI, { channelName: m.name }),
-                                        ...Q,
+                                        ...J,
                                         children: [
                                             (0, i.jsx)('span', {
                                                 className: U.navigationDescription,
@@ -186,7 +186,7 @@ let B = l.memo(
                                     })
                                 ]
                             }),
-                            Y
+                            q
                         ]
                     })
                 ]
@@ -218,7 +218,7 @@ let B = l.memo(
                 };
             })(t),
             {
-                messageGroupSpacing: A,
+                messageGroupSpacing: y,
                 fontSize: R,
                 messageDisplayCompact: L,
                 renderSpoilers: k,
@@ -310,11 +310,11 @@ let B = l.memo(
                 };
             })(t);
         return (0, i.jsx)(f.a.Provider, {
-            value: (0, y.Z)(k, d),
+            value: (0, A.Z)(k, d),
             children: (0, i.jsx)(M.v, {
                 children: (0, i.jsx)(B, {
                     ...c,
-                    messageGroupSpacing: A,
+                    messageGroupSpacing: y,
                     showNewMessagesBar: !0,
                     channel: t,
                     messageDisplayCompact: !s && (r || L),

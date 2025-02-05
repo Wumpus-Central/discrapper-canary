@@ -9,17 +9,17 @@ var l = n(442837),
     c = n(701560),
     d = n(785547);
 function u(e) {
-    let { application: t, fullWidth: n = !1, size: u = a.zxk.Sizes.LARGE, color: m, customDisabledColor: h, hideNotLaunchable: _, tooltipPosition: p, onClick: g, className: f, source: x, hover: E, innerClassName: C } = e,
-        v = {
+    let { application: t, fullWidth: n = !1, size: u = a.zxk.Sizes.LARGE, color: m, customDisabledColor: _, hideNotLaunchable: h, tooltipPosition: p, onClick: g, className: f, source: x, hover: C, innerClassName: v } = e,
+        E = {
             fullWidth: n,
             size: u,
             color: m,
-            customDisabledColor: h,
+            customDisabledColor: _,
             tooltipPosition: p,
             onClick: g,
             className: f,
-            hover: E,
-            innerClassName: C
+            hover: C,
+            innerClassName: v
         },
         I = (0, l.e7)([r.Z], () => r.Z.getActiveLibraryApplication(t.id)),
         N = null != I ? I.sku.id : null,
@@ -27,15 +27,15 @@ function u(e) {
         T = (0, l.e7)([s.Z], () => null != S && !s.Z.didFetchingSkuFail(S));
     return null != I && (0, o.Je)(I)
         ? (0, i.jsx)(d.Z, {
-              ...v,
+              ...E,
               libraryApplication: I,
               source: x
           })
         : T
           ? (0, i.jsx)('div', { children: 'deprecated!' })
           : (0, i.jsx)(c.Z, {
-                ...v,
-                hideNotLaunchable: _,
+                ...E,
+                hideNotLaunchable: h,
                 applicationId: t.id
             });
 }

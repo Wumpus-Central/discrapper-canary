@@ -11,18 +11,18 @@ var l = n(481060),
 function u(e) {
     let { message: t, channel: n, compact: u } = e,
         m = (0, r.ZP)(t),
-        h = (0, s.l)({
+        _ = (0, s.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
             messageId: t.id
         })(m),
-        _ = (0, a.q)(t.applicationId);
-    if (null == _) return null;
+        h = (0, a.q)(t.applicationId);
+    if (null == h) return null;
     let p = c.intl.format(c.t.mAtJTE, {
         username: t.author.username,
-        usernameHook: h,
-        applicationName: _.name,
+        usernameHook: _,
+        applicationName: h.name,
         applicationNameHook: () =>
             (0, i.jsx)(
                 l.Text,
@@ -30,9 +30,9 @@ function u(e) {
                     className: d.applicationName,
                     variant: 'text-md/semibold',
                     color: 'header-primary',
-                    children: _.name
+                    children: h.name
                 },
-                _.name
+                h.name
             ),
         helpdeskArticle: '#'
     });

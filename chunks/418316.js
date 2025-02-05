@@ -9,14 +9,14 @@ var i = n(924301),
     d = n(981631),
     u = n(388032);
 function m(e) {
-    var t, n, m, h, _, p, g, f, x, E, C, v, I, N, S;
+    var t, n, m, _, h, p, g, f, x, C, v, E, I, N, S;
     let T = null !== (m = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== m ? m : d.lds,
         b = o.ZP.getName(r.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
     switch (e.type) {
         case c.O7.INCOMING_FRIEND_REQUESTS:
             return u.intl.format(u.t.uIomX1, { username: b });
         case c.O7.FRIEND_REQUESTS_GROUPED:
-            let A = o.ZP.getName(r.default.getUser(null === (_ = e.other_users) || void 0 === _ ? void 0 : null === (h = _[0]) || void 0 === h ? void 0 : h.id)),
+            let A = o.ZP.getName(r.default.getUser(null === (h = e.other_users) || void 0 === h ? void 0 : null === (_ = h[0]) || void 0 === _ ? void 0 : _.id)),
                 j = o.ZP.getName(r.default.getUser(null === (g = e.other_users) || void 0 === g ? void 0 : null === (p = g[1]) || void 0 === p ? void 0 : p.id)),
                 y = Math.max((null !== (x = null === (f = e.other_users) || void 0 === f ? void 0 : f.length) && void 0 !== x ? x : 0) - 2, 0);
             return u.intl.format(u.t.g5xyIC, {
@@ -25,10 +25,10 @@ function m(e) {
                 count: y
             });
         case c.O7.MOBILE_NATIVE_UPDATE_AVAILABLE:
-            let Z = null !== (C = null === (E = e.local_id) || void 0 === E ? void 0 : E.split('_').pop()) && void 0 !== C ? C : 'unknown';
+            let Z = null !== (v = null === (C = e.local_id) || void 0 === C ? void 0 : C.split('_').pop()) && void 0 !== v ? v : 'unknown';
             return 'Update to build '.concat(Z, ' available!');
         case c.DY.FRIEND_SUGGESTION_CREATED:
-            return a.Z.getRelationshipType(T), d.OGo.PENDING_OUTGOING, null !== (v = e.body) && void 0 !== v ? v : '';
+            return a.Z.getRelationshipType(T), d.OGo.PENDING_OUTGOING, null !== (E = e.body) && void 0 !== E ? E : '';
         case c.DY.GUILD_SCHEDULED_EVENT_STARTED:
             let R = e.guild_scheduled_event_id,
                 L = null != R ? i.ZP.getGuildScheduledEvent(R) : null,

@@ -1,34 +1,34 @@
-n.d(t, { Z: () => c });
-var i = n(200651);
+n.d(t, { Z: () => u });
+var l = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(153867),
-    r = n(468026),
+var i = n(481060),
+    r = n(153867),
+    a = n(468026),
     s = n(740492),
     o = n(388032);
-function c(e) {
+function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {},
         n = (t) => {
-            a.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 }), t(), e();
+            r.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 }), t(), e();
         };
     s.ZP.disableEmbeddedActivityPopOutAlert
         ? e()
-        : (0, l.h7j)(
-              (l) =>
-                  (0, i.jsx)(r.default, {
+        : (0, i.h7j)(
+              (i) =>
+                  (0, l.jsx)(a.default, {
                       confirmText: o.intl.string(o.t.efSOLC),
                       secondaryConfirmText: o.intl.string(o.t['JdIQ/f']),
                       title: o.intl.string(o.t.pVr7Cg),
                       cancelText: o.intl.string(o.t.EwoEOT),
                       onConfirm: () => {
-                          l.onClose(), e();
+                          i.onClose(), e();
                       },
                       onCancel: t,
-                      onConfirmSecondary: () => n(l.onClose),
+                      onConfirmSecondary: () => n(i.onClose),
                       body: o.intl.string(o.t.ugSbNT),
-                      ...l
+                      ...i
                   }),
               {},
-              l.u1M
+              i.u1M
           );
 }

@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(657352),
     S = n(33154),
     j = n(144114),
-    A = n(703656),
-    y = n(210887),
+    y = n(703656),
+    A = n(210887),
     P = n(237904),
     R = n(271383),
     M = n(430824),
@@ -232,7 +232,7 @@ class V extends l.PureComponent {
                 }
             }),
             G(this, 'handleGoBack', () => {
-                this.setState({ submitting: !0 }), (0, A.s1)().goBack();
+                this.setState({ submitting: !0 }), (0, y.s1)().goBack();
             }),
             G(this, 'handleFollowAnnouncement', () => {
                 let { channel: e } = this.props;
@@ -306,7 +306,7 @@ function z(e) {
         T = !!(0, E.Dc)(c),
         S = (b || d.notClaimed) && T,
         j = (0, s.e7)([Z.Z], () => Z.Z.shouldShowPopout(o)),
-        A = (0, s.e7)([k.Z], () => k.Z.can(U.Plq.SEND_MESSAGES, a)),
+        y = (0, s.e7)([k.Z], () => k.Z.can(U.Plq.SEND_MESSAGES, a)),
         w = (0, s.e7)([I.Z], () => I.Z.getRequest(o)),
         [B, F] = (0, m.L_)(o),
         H = (0, m.Cc)(o),
@@ -325,8 +325,8 @@ function z(e) {
         isFollowable: u,
         shouldShowLurkerModeSuccessPopout: j,
         showLurkerModeUpsellPopout: g && null != c && D.Uu(U.Plq.SEND_MESSAGES, a),
-        theme: y.Z.theme,
-        canSendMessages: A,
+        theme: A.Z.theme,
+        canSendMessages: y,
         channelFollowingUsersSeen: null != p ? p.usersSeenEver : null,
         hasVerificationGate: T,
         showMemberVerificationModal: S,

@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(317381),
     u = n(638880),
     m = n(122613),
-    h = n(527805),
-    _ = n(884338),
+    _ = n(527805),
+    h = n(884338),
     p = n(100527),
     g = n(906732),
     f = n(783097),
     x = n(895924),
-    E = n(311819),
-    C = n(321231),
-    v = n(758199),
+    C = n(311819),
+    v = n(321231),
+    E = n(758199),
     I = n(429551),
     N = n(973616),
     S = n(314897),
@@ -101,7 +101,7 @@ let F = l.memo(function (e) {
             let e = new N.ZP(I);
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = M.wT), e;
         }, [I]),
-        J = (0, h.s5)({
+        J = (0, _.s5)({
             userId: H,
             channelId: Z,
             application: Q
@@ -141,7 +141,7 @@ let F = l.memo(function (e) {
                       });
         },
         el = ee.disabled ? O.intl.string(O.t.JBnc7O) : O.intl.string(O.t.cX9uLS),
-        { enabled: ea } = C.G.useExperiment({ location: 'EmbeddedActivityInstanceEmbed' });
+        { enabled: ea } = v.G.useExperiment({ location: 'EmbeddedActivityInstanceEmbed' });
     if (ea) {
         let e;
         let t = y.ZP.getApplicationIconURL({
@@ -173,11 +173,11 @@ let F = l.memo(function (e) {
                         };
                 }
             })(X);
-        return (0, i.jsx)(v.W, {
+        return (0, i.jsx)(E.W, {
             header: I.name,
             title: d,
             iconSrc: t,
-            embedUrl: (0, E.H)({
+            embedUrl: (0, C.H)({
                 applicationId: I.id,
                 referrerId: null == l ? void 0 : l.id
             }),
@@ -203,11 +203,11 @@ let F = l.memo(function (e) {
                         }),
                     a > 0 &&
                         (0, i.jsx)('div', {
-                            children: (0, i.jsx)(_.Z, {
+                            children: (0, i.jsx)(h.Z, {
                                 guildId: L,
                                 users: Y,
                                 max: 6,
-                                size: _.u.SIZE_16,
+                                size: h.u.SIZE_16,
                                 extraDetail: (0, i.jsxs)(s.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'none',
@@ -286,11 +286,11 @@ let F = l.memo(function (e) {
                             }
                         }),
                         !$ &&
-                            (0, i.jsx)(_.Z, {
+                            (0, i.jsx)(h.Z, {
                                 guildId: L,
                                 users: Y,
                                 max: 4,
-                                size: _.u.SIZE_32
+                                size: h.u.SIZE_32
                             })
                     ]
                 })

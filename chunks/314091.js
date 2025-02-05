@@ -1,13 +1,13 @@
 n.d(t, {
-    b6: () => f,
-    j3: () => p,
-    xC: () => h
+    b6: () => p,
+    j3: () => h,
+    xC: () => g
 }),
     n(47120);
-var i = n(866442),
-    l = n(503438),
-    a = n(420660),
-    r = n(168631),
+var l = n(866442),
+    i = n(503438),
+    r = n(420660),
+    a = n(168631),
     s = n(621853),
     o = n(981631),
     c = n(388032);
@@ -26,31 +26,31 @@ let u = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
     },
     m = (e, t) => {
         let n = Math.max(t - e, 0),
-            i = Math.floor(n) % 60,
-            l = Math.floor(n / 60) % 60;
+            l = Math.floor(n) % 60,
+            i = Math.floor(n / 60) % 60;
         return {
             hours: Math.floor(n / 3600) % 24,
-            minutes: l,
-            seconds: i
+            minutes: i,
+            seconds: l
         };
     },
-    f = (e) => {
+    p = (e) => {
         let t = d(e);
         return t.hours > 0 ? ''.concat(t.hours, ' hours') : t.minutes > 0 ? ''.concat(t.minutes, ' minutes') : ''.concat(t.seconds, ' seconds');
     },
-    p = (e, t) => {
+    h = (e, t) => {
         var n;
-        let l = s.Z.getUserProfile(e.id),
-            [a, o] = null !== (n = null == l ? void 0 : l.themeColors) && void 0 !== n ? n : [],
-            c = (0, r.V3)(a),
-            u = null != o ? (0, i.Rf)(o) : t;
+        let i = s.Z.getUserProfile(e.id),
+            [r, o] = null !== (n = null == i ? void 0 : i.themeColors) && void 0 !== n ? n : [],
+            c = (0, a.V3)(r),
+            u = null != o ? (0, l.Rf)(o) : t;
         return {
             color: u,
             theme: u === t ? 'dark' : c
         };
     },
-    h = (e, t) =>
-        (0, l.Z)(t)
+    g = (e, t) =>
+        (0, i.Z)(t)
             ? c.intl.formatToPlainString(c.t.Xuqn4e, {
                   username: e.username,
                   song: t.details,
@@ -71,7 +71,7 @@ let u = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
                         username: e.username,
                         activity: t.name
                     })
-                  : (0, a.Z)(t) || t.type === o.IIU.STREAMING
+                  : (0, r.Z)(t) || t.type === o.IIU.STREAMING
                     ? c.intl.formatToPlainString(c.t.wqU7Wl, {
                           username: e.username,
                           activity: t.name

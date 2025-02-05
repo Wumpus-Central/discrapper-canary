@@ -8,17 +8,17 @@ function s(e) {
     let { message: t, otherUsername: s, usernameHook: o, otherUsernameHook: c, compact: d } = e,
         { nick: u } = (0, l.ZP)(t),
         m = o(),
-        h = c(),
-        _ = r.intl.format(r.t.MMN2Ji, {
+        _ = c(),
+        h = r.intl.format(r.t.MMN2Ji, {
             username: u,
             usernameHook: m,
             otherUsername: s,
-            otherUsernameHook: h
+            otherUsernameHook: _
         });
     return (0, i.jsx)(a.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
         compact: d,
-        children: _
+        children: h
     });
 }

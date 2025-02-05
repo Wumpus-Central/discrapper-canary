@@ -17,7 +17,7 @@ function m(e) {
     let { game: n, application: i, size: l, className: u } = e,
         [m, p] = a.useState(!1),
         g = null !== (t = null == i ? void 0 : i.name) && void 0 !== t ? t : n.name,
-        h = null != n.firstReleaseDate ? new Date(n.firstReleaseDate) : null;
+        _ = null != n.firstReleaseDate ? new Date(n.firstReleaseDate) : null;
     return null == n.coverImageUrl || m
         ? (0, r.jsxs)('div', {
               className: o()(d.fallback, u),
@@ -33,7 +33,7 @@ function m(e) {
                   (0, r.jsx)(s.xv, {
                       variant: 1 === l ? 'text-sm/normal' : 'text-xxs/normal',
                       color: 'always-white',
-                      children: null != h ? '('.concat(null == h ? void 0 : h.getFullYear(), ')') : null
+                      children: null != _ ? '('.concat(null == _ ? void 0 : _.getFullYear(), ')') : null
                   })
               ]
           })

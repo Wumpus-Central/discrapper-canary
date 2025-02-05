@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(135938),
     u = n(900164),
     m = n(554838),
-    h = n(493892),
-    _ = n(661824),
+    _ = n(493892),
+    h = n(661824),
     p = n(37772),
     g = n(695346),
     f = n(314897),
     x = n(496675),
-    E = n(594174),
-    C = n(55935),
-    v = n(655354),
+    C = n(594174),
+    v = n(55935),
+    E = n(655354),
     I = n(809780),
     N = n(981631),
     S = n(388032),
@@ -30,7 +30,7 @@ function A(e) {
     var t;
     let { channel: n, message: a, compact: r, isGroupStart: o, treatSpam: d, gotoChannel: u } = e,
         m = (0, s.JA)(null !== (t = a.id) && void 0 !== t ? t : ''),
-        h = l.useCallback(
+        _ = l.useCallback(
             (e) => {
                 if ('ArrowLeft' === e.key) {
                     var t;
@@ -45,10 +45,10 @@ function A(e) {
             'div',
             {
                 className: T.messageContainer,
-                onKeyDown: h,
+                onKeyDown: _,
                 ...m,
                 children: [
-                    (0, i.jsx)(v.Z, {
+                    (0, i.jsx)(E.Z, {
                         className: T.jumpButton,
                         onJump: (e) => u(e, a.id)
                     }),
@@ -60,7 +60,7 @@ function A(e) {
                         compact: r,
                         animateAvatar: !1,
                         isGroupStart: o,
-                        onKeyDown: h,
+                        onKeyDown: _,
                         treatSpam: d
                     })
                 ]
@@ -73,12 +73,12 @@ function j(e) {
     var t, n;
     let { channel: l, channelRecord: a, gotoChannel: s } = e,
         { enabled: p } = d.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
-        v = g.jU.useSetting(),
+        E = g.jU.useSetting(),
         b = (0, o.e7)([x.Z], () => x.Z.can(N.Plq.CREATE_INSTANT_INVITE, a)),
-        j = (0, h.P1)(a),
+        j = (0, _.P1)(a),
         y = !1,
         Z = 0 === l.messages.length || r()(l.messages[0].timestamp).isSame(r()(), 'day'),
-        R = null !== (n = null === (t = E.default.getUser(f.default.getId())) || void 0 === t ? void 0 : t.hasFlag(N.xW$.SPAMMER)) && void 0 !== n && n,
+        R = null !== (n = null === (t = C.default.getUser(f.default.getId())) || void 0 === t ? void 0 : t.hasFlag(N.xW$.SPAMMER)) && void 0 !== n && n,
         L = [];
     if (!l.collapsed) {
         let e = null,
@@ -87,10 +87,10 @@ function j(e) {
         n.forEach((n) => {
             if (!(0, u.Z)(n, b)) {
                 if (!Z && (null == e || !e.isSame(n.timestamp, 'day'))) {
-                    let t = (0, C.vc)(n.timestamp, 'LL');
+                    let t = (0, v.vc)(n.timestamp, 'LL');
                     L.push(
                         (0, i.jsx)(
-                            _.Z,
+                            h.Z,
                             {
                                 className: T.divider,
                                 children: t
@@ -102,16 +102,16 @@ function j(e) {
                 }
                 let l = null == t || (0, m.Z)(a, t, n);
                 (t = n),
-                    (y = y || (0, h.DQ)(n)),
+                    (y = y || (0, _.DQ)(n)),
                     L.push(
                         (0, i.jsx)(
                             A,
                             {
                                 channel: a,
                                 message: n,
-                                compact: v,
+                                compact: E,
                                 isGroupStart: l,
-                                treatSpam: !R && p && (0, h.DQ)(n) && j,
+                                treatSpam: !R && p && (0, _.DQ)(n) && j,
                                 gotoChannel: s
                             },
                             n.id

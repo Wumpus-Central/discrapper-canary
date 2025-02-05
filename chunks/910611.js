@@ -30,8 +30,8 @@ var i = n(200651),
     T = n(984370),
     S = n(217314),
     j = n(981631),
-    A = n(921944),
-    y = n(388032),
+    y = n(921944),
+    A = n(388032),
     P = n(247627);
 function R(e) {
     var t;
@@ -46,7 +46,7 @@ function R(e) {
         }),
         [h, p] =
             r !== o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP
-                ? [y.intl.string(y.t.XJVlf3), void 0]
+                ? [A.intl.string(A.t.XJVlf3), void 0]
                 : [
                       (0, i.jsxs)(
                           'div',
@@ -56,16 +56,16 @@ function R(e) {
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-md/semibold',
                                       color: 'header-primary',
-                                      children: y.intl.string(y.t.YIVr4O)
+                                      children: A.intl.string(A.t.YIVr4O)
                                   }),
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'header-secondary',
-                                      children: y.intl.format(y.t['16agur'], { helpdeskArticle: I.Z.getArticleURL(j.BhN.CHANNEL_LINKED_LOBBIES) })
+                                      children: A.intl.format(A.t['16agur'], { helpdeskArticle: I.Z.getArticleURL(j.BhN.CHANNEL_LINKED_LOBBIES) })
                                   }),
                                   (0, i.jsx)(c.P3F, {
                                       className: P.linkedLobbyEducationTooltipCloseClickContainer,
-                                      onClick: () => s(A.L.USER_DISMISS),
+                                      onClick: () => s(y.L.USER_DISMISS),
                                       children: (0, i.jsx)(c.Dio, {
                                           className: P.linkedLobbyEducationTooltipCloseIcon,
                                           color: 'currentColor'
@@ -75,7 +75,7 @@ function R(e) {
                           },
                           0
                       ),
-                      y.intl.string(y.t.YIVr4O)
+                      A.intl.string(A.t.YIVr4O)
                   ];
     return (0, i.jsx)(
         c.ua7,
@@ -120,12 +120,12 @@ function M(e) {
             switch (e) {
                 case j.d4z.DM:
                     return {
-                        prefix: y.intl.string(y.t.EJRzg4),
+                        prefix: A.intl.string(A.t.EJRzg4),
                         level: 1
                     };
                 case j.d4z.GROUP_DM:
                     return {
-                        prefix: y.intl.string(y.t['e5y+go']),
+                        prefix: A.intl.string(A.t['e5y+go']),
                         level: 1
                     };
                 case j.d4z.GUILD_DIRECTORY:
@@ -147,7 +147,7 @@ function M(e) {
                 case j.d4z.PUBLIC_THREAD:
                 case j.d4z.PRIVATE_THREAD:
                     return {
-                        prefix: y.intl.string(y.t['7Xm5QE']),
+                        prefix: A.intl.string(A.t['7Xm5QE']),
                         level: 2
                     };
                 default:
@@ -180,7 +180,7 @@ function M(e) {
             if (t.isManaged()) return b;
             return (0, i.jsxs)(l.Fragment, {
                 children: [
-                    (0, i.jsx)(c.nn4, { children: y.intl.string(y.t['e5y+go']) }),
+                    (0, i.jsx)(c.nn4, { children: A.intl.string(A.t['e5y+go']) }),
                     (0, i.jsx)('div', {
                         children: (0, i.jsx)(f.Z, {
                             'aria-hidden': !0,
@@ -202,7 +202,7 @@ function M(e) {
                 ? (0, i.jsxs)(R, {
                       channel: t,
                       children: [
-                          O(x, t.type === j.d4z.GUILD_ANNOUNCEMENT ? y.intl.string(y.t.l1dkSE) : y.intl.string(y.t.Pnajj4)),
+                          O(x, t.type === j.d4z.GUILD_ANNOUNCEMENT ? A.intl.string(A.t.l1dkSE) : A.intl.string(A.t.Pnajj4)),
                           (0, i.jsx)(T.Z.Title, {
                               level: I,
                               onContextMenu: u,
@@ -213,7 +213,7 @@ function M(e) {
                   })
                 : (0, i.jsxs)(l.Fragment, {
                       children: [
-                          O(x, t.type === j.d4z.GUILD_ANNOUNCEMENT ? y.intl.string(y.t.l1dkSE) : y.intl.string(y.t.Pnajj4)),
+                          O(x, t.type === j.d4z.GUILD_ANNOUNCEMENT ? A.intl.string(A.t.l1dkSE) : A.intl.string(A.t.Pnajj4)),
                           (0, i.jsx)(T.Z.Title, {
                               level: I,
                               onContextMenu: u,
@@ -226,7 +226,7 @@ function M(e) {
         case j.d4z.GUILD_VOICE:
             return (0, i.jsxs)(l.Fragment, {
                 children: [
-                    O(x, y.intl.string(y.t.BVZqJi)),
+                    O(x, A.intl.string(A.t.BVZqJi)),
                     (0, i.jsx)(T.Z.Title, {
                         level: I,
                         onContextMenu: u,
@@ -238,7 +238,7 @@ function M(e) {
         case j.d4z.GUILD_STAGE_VOICE:
             return (0, i.jsxs)(l.Fragment, {
                 children: [
-                    O(x, y.intl.string(y.t.EErMzM)),
+                    O(x, A.intl.string(A.t.EErMzM)),
                     (0, i.jsx)(T.Z.Title, {
                         level: I,
                         onContextMenu: u,
@@ -255,7 +255,7 @@ function M(e) {
                 let e = (0, p.KS)(a, s);
                 N = (0, i.jsxs)(l.Fragment, {
                     children: [
-                        O(e, y.intl.string(y.t.Pnajj4)),
+                        O(e, A.intl.string(A.t.Pnajj4)),
                         (0, i.jsx)(T.Z.Title, {
                             level: I,
                             onContextMenu: g,
@@ -267,25 +267,25 @@ function M(e) {
                     ]
                 });
             }
-            let A = (null == a ? void 0 : a.type) != null && j.TPd.GUILD_THREADS_ONLY.has(a.type);
+            let y = (null == a ? void 0 : a.type) != null && j.TPd.GUILD_THREADS_ONLY.has(a.type);
             return (0, i.jsxs)(l.Fragment, {
                 children: [
                     N,
-                    O(A ? null : x, y.intl.string(y.t['7Xm5QE'])),
+                    O(y ? null : x, A.intl.string(A.t['7Xm5QE'])),
                     (0, i.jsx)(T.Z.Title, {
                         level: I,
                         onContextMenu: u,
                         onClick: d,
                         className: r()({
                             [P.cursorPointer]: o,
-                            [P.forumPostTitle]: A
+                            [P.forumPostTitle]: y
                         }),
                         children: b
                     })
                 ]
             });
         case j.d4z.GUILD_DIRECTORY:
-            let M = (null == s ? void 0 : s.hasFeature(j.oNc.HUB)) ? y.intl.formatToPlainString(y.t.Dy2aho, { guildName: n }) : n;
+            let M = (null == s ? void 0 : s.hasFeature(j.oNc.HUB)) ? A.intl.formatToPlainString(A.t.Dy2aho, { guildName: n }) : n;
             return (0, i.jsxs)(l.Fragment, {
                 children: [
                     null !== x

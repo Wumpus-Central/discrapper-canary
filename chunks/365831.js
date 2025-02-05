@@ -56,8 +56,8 @@ function b(e) {
         T = N ? c.Iy5 : c.X_q,
         S = l.useCallback(() => (0, m.v6)(null), []),
         j = (0, c.dQu)(c.TVs.colors.BACKGROUND_SECONDARY).hex(),
-        A = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
-        y = (0, o.e7)([h.Z], () => h.Z.isConnected()),
+        y = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
+        A = (0, o.e7)([h.Z], () => h.Z.isConnected()),
         P = l.useRef(0),
         R = n !== a ? P.current + 1 : P.current;
     l.useEffect(() => {
@@ -265,7 +265,7 @@ function b(e) {
                                     children: _.intl.string(N ? _.t['0NnojY'] : _.t.raWNzM)
                                 }),
                                 N &&
-                                    !y &&
+                                    !A &&
                                     (0, i.jsx)(c.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-muted',
@@ -285,7 +285,7 @@ function b(e) {
                                         size: 'custom',
                                         width: 20,
                                         height: 20,
-                                        color: A
+                                        color: y
                                     })
                                 })
                             })
@@ -304,7 +304,7 @@ function b(e) {
                                         size: 'custom',
                                         width: 20,
                                         height: 20,
-                                        color: A
+                                        color: y
                                     })
                                 })
                             })

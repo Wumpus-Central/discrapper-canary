@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(695346),
     S = n(433355),
     j = n(819640),
-    A = n(375954),
-    y = n(496675),
+    y = n(375954),
+    A = n(496675),
     P = n(885110),
     R = n(627553),
     M = n(38761),
@@ -44,14 +44,14 @@ var i = n(200651),
 let z = l.memo(function (e) {
     var t, a;
     let z,
-        { className: W, channel: Y, draftType: q, editorTextContent: K, setValue: X, canOnlyUseTextCommands: J } = e,
-        Q = (0, h.bp)(),
+        { className: W, channel: q, draftType: Y, editorTextContent: K, setValue: X, canOnlyUseTextCommands: Q } = e,
+        J = (0, h.bp)(),
         $ = l.useRef(null),
         ee = (0, s.e7)([P.Z], () => P.Z.getActivities()),
         et = (0, s.e7)([_.Z], () => _.Z.getSettings().clipsEnabled),
         en = (0, s.e7)([_.Z], () => _.Z.getLastClipsSession()),
         ei = (0, s.Wu)([_.Z], () => _.Z.getNewClipIds()),
-        el = (0, s.e7)([S.ZP], () => null == S.ZP.getCurrentSidebarChannelId(Y.id)),
+        el = (0, s.e7)([S.ZP], () => null == S.ZP.getCurrentSidebarChannelId(q.id)),
         { showClipsHeaderEntrypoint: ea } = g.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         { enabled: er } = f.T.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         es = (0, s.e7)([E.qc], () => E.qc.hasHotspot(E.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
@@ -60,21 +60,21 @@ let z = l.memo(function (e) {
         ed = (0, s.e7)([_.Z], () => _.Z.hasClips()),
         [eu, eh] = l.useState(null),
         ep = (0, g.Go)() && (et || ed),
-        em = Y.isPrivate(),
-        ef = (0, s.e7)([y.Z], () => em || (y.Z.can(B.Plq.ATTACH_FILES, Y) && y.Z.can(B.Plq.SEND_MESSAGES, Y))),
+        em = q.isPrivate(),
+        ef = (0, s.e7)([A.Z], () => em || (A.Z.can(B.Plq.ATTACH_FILES, q) && A.Z.can(B.Plq.SEND_MESSAGES, q))),
         eg = ['en-US', 'en-GB'].includes((0, s.e7)([N.default], () => N.default.locale)) ? G.intl.string(G.t.d56gCQ) : G.intl.string(G.t.PdRCRk),
         e_ = (0, u.Z)(en);
     (null == e_ ? void 0 : e_.newClipIds.length) !== (null == en ? void 0 : en.newClipIds.length) && (null !== (t = null == en ? void 0 : en.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == eu && es && el && !eo && !ea && !ec && eh('recentClips');
     let eC = (e, t, n) => {
             null != t && 'ETOOLARGE' === t.code
-                ? (0, O.G)(Y, [])
-                : (0, O.d)(e, Y, q, {
+                ? (0, O.G)(q, [])
+                : (0, O.d)(e, q, Y, {
                       requireConfirm: !0,
                       showLargeMessageDialog: n
                   }),
                 L.S.dispatchToLastSubscribed(B.CkL.TEXTAREA_FOCUS);
         },
-        ex = (0, s.e7)([A.Z], () => A.Z.hasCurrentUserSentMessageSinceAppStart());
+        ex = (0, s.e7)([y.Z], () => y.Z.hasCurrentUserSentMessageSinceAppStart());
     function ev() {
         (0, c.ZDy)(
             async () => {
@@ -82,7 +82,7 @@ let z = l.memo(function (e) {
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,
-                        channelId: Y.id
+                        channelId: q.id
                     });
             },
             { modalKey: F.Qr }
@@ -101,37 +101,37 @@ let z = l.memo(function (e) {
             }
         );
     });
-    let eE = (0, Z.NE)(Y),
-        eI = (0, Z.Xu)(Y),
+    let eE = (0, Z.NE)(q),
+        eI = (0, Z.Xu)(q),
         eb = !T.dN.useSetting() && !(0, k.isAndroidWeb)() && null != window.ResizeObserver,
-        eZ = (0, I.UI)(null != Y ? Y : void 0),
+        eZ = (0, I.UI)(null != q ? q : void 0),
         eN = (0, c.bWb)().enabled,
-        eT = (0, p.qB)(Y.id, 'ChannelAttachButton'),
+        eT = (0, p.qB)(q.id, 'ChannelAttachButton'),
         eS = (0, b.Us)({ location: 'ChannelAttachButton' }),
         ej = null !== (a = null == ei ? void 0 : ei.length) && void 0 !== a ? a : 0,
-        eA = (0, U.Z)({
+        ey = (0, U.Z)({
             canAttachFiles: ef,
             canStartThreads: eE || eI,
             useSlate: eb,
             hasClips: ep,
-            canUseApplicationCommands: !J && !er,
-            channel: Y,
+            canUseApplicationCommands: !Q && !er,
+            channel: q,
             activities: ee,
             newClipsCount: ej,
             canPostPolls: eZ,
             canLaunchActivities: eT,
-            appContext: Q,
+            appContext: J,
             canSendScheduledMessages: eS
         }),
-        ey = (0, x.Q3)('ChannelAttachButton'),
+        eA = (0, x.Q3)('ChannelAttachButton'),
         eP = (0, x.R6)('ChannelAttachButton'),
         eR = (0, c.dQu)(c.TVs.modules.chat.INPUT_ICON_SIZE);
-    if (0 === eA.length) return null;
+    if (0 === ey.length) return null;
     let eM = ee.some((e) => (0, m.Z)(e, B.xjy.SYNC)),
         eL = ee.some((e) => (0, m.Z)(e, B.xjy.JOIN) && !(0, m.Z)(e, B.xjy.EMBEDDED)) || eM;
     z = eN
         ? (0, i.jsx)(c.oFk, {
-              size: ey ? 'refresh_sm' : void 0,
+              size: eA ? 'refresh_sm' : void 0,
               color: 'currentColor',
               colorClass: V.attachButtonPlus
           })
@@ -157,7 +157,7 @@ let z = l.memo(function (e) {
                   className: V.__invalid_attachButtonIcon,
                   colorClass: V.attachButtonPlus
               });
-    let ek = ey
+    let ek = eA
             ? eP
                 ? {
                       left: 8,
@@ -191,13 +191,13 @@ let z = l.memo(function (e) {
                         return (0, i.jsx)(w.Z, {
                             ...e,
                             onClose: () => eh(null),
-                            options: eA,
-                            channel: Y,
+                            options: ey,
+                            channel: q,
                             onFileUpload: () => {
                                 var e;
                                 return null === (e = $.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
                             },
-                            draftType: q,
+                            draftType: Y,
                             editorTextContent: K,
                             setValue: X,
                             openClips: ev
@@ -233,7 +233,7 @@ let z = l.memo(function (e) {
                     onChange: (e) => {
                         eC(e.currentTarget.files, e.currentTarget.err), (e.currentTarget.value = '');
                     },
-                    multiple: Y.rateLimitPerUser <= 0,
+                    multiple: q.rateLimitPerUser <= 0,
                     tabIndex: -1,
                     'aria-hidden': !0
                 })
@@ -241,7 +241,7 @@ let z = l.memo(function (e) {
             (0, i.jsx)('div', {
                 className: V.attachWrapper,
                 children: (0, i.jsx)(D.Z, {
-                    channel: Y,
+                    channel: q,
                     isOmniMenuOpen: 'attachMenu' === eu,
                     openOmniMenu: () => eh('attachMenu'),
                     enabled: eT,

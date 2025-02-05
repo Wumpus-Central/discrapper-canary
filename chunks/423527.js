@@ -8,8 +8,8 @@ var i,
     c = n(278074),
     d = n(990547),
     u = n(442837),
-    h = n(846519),
-    _ = n(481060),
+    _ = n(846519),
+    h = n(481060),
     g = n(893776),
     p = n(881052),
     m = n(899370),
@@ -154,8 +154,8 @@ class ec extends (i = l.PureComponent) {
     async handleRegister() {
         let { email: e, username: t, globalName: n, password: i, consent: r, parsedDateOfBirth: l } = this.state,
             { invite: a, guildTemplate: o, giftCode: s, onRegister: c, usernameSuggestion: d, isMobileWebInviteRegistration: u } = this.props,
-            h = null != a ? a.code : null,
-            _ = null != s ? s.skuId : null,
+            _ = null != a ? a.code : null,
+            h = null != s ? s.skuId : null,
             g = x.MD.getState(),
             m = (0, q.Ew)(d) ? null : t === d,
             f = ee.a ? await (0, R.K)(t) : t,
@@ -173,17 +173,17 @@ class ec extends (i = l.PureComponent) {
                       globalName: E,
                       consent: r,
                       password: i,
-                      invite: h,
+                      invite: _,
                       usedUsernameSuggestion: m,
                       guildTemplateCode: null == o ? void 0 : o.code,
-                      giftCodeSKUId: _,
+                      giftCodeSKUId: h,
                       birthday: l,
                       promoEmailConsent: g.required ? g : null
                   })
                 : await (0, v.ZP)({
                       consent: r,
-                      invite: h,
-                      giftCodeSKUId: _,
+                      invite: _,
+                      giftCodeSKUId: h,
                       usedUsernameSuggestion: m,
                       globalName: E
                   }),
@@ -248,11 +248,11 @@ class ec extends (i = l.PureComponent) {
                 (0, r.jsxs)(T.gO, {
                     className: el.marginTop40,
                     children: [
-                        (0, r.jsx)(_.vwX, { children: ei.intl.string(ei.t.TWzdWl) }),
-                        (0, r.jsx)(_.ua7, {
+                        (0, r.jsx)(h.vwX, { children: ei.intl.string(ei.t.TWzdWl) }),
+                        (0, r.jsx)(h.ua7, {
                             text: ei.intl.string(ei.t['hBB85+']),
                             position: 'right',
-                            color: _.ua7.Colors.BRAND,
+                            color: h.ua7.Colors.BRAND,
                             children: (e) => {
                                 let { onMouseEnter: i, onMouseLeave: l } = e;
                                 return (0, r.jsx)(T.II, {
@@ -315,7 +315,7 @@ class ec extends (i = l.PureComponent) {
             a = ei.intl.string(ei.t['3PatS0']);
         return (
             (null == e ? void 0 : e.stage_instance) != null && ((l = T.zx.Colors.GREEN), (a = ei.intl.string(ei.t['5UKyUl']))),
-            (0, r.jsx)(_.ua7, {
+            (0, r.jsx)(h.ua7, {
                 text: !n && t ? ei.intl.string(ei.t.AY4IVF) : null,
                 children: (e) =>
                     (0, r.jsx)('div', {
@@ -355,14 +355,14 @@ class ec extends (i = l.PureComponent) {
                         (0, r.jsxs)(T.gO, {
                             className: s ? void 0 : el.marginTop40,
                             children: [
-                                (0, r.jsx)(_.vwX, {
+                                (0, r.jsx)(h.vwX, {
                                     error: es(null != i ? i : n),
                                     children: ei.intl.string(ei.t['9AjdkJ'])
                                 }),
-                                (0, r.jsx)(_.ua7, {
+                                (0, r.jsx)(h.ua7, {
                                     text: ei.intl.string(ei.t['hBB85+']),
                                     position: 'right',
-                                    color: _.ua7.Colors.BRAND,
+                                    color: h.ua7.Colors.BRAND,
                                     children: (e) => {
                                         let { onMouseEnter: t, onMouseLeave: a } = e;
                                         return (0, r.jsx)(T.II, {
@@ -378,7 +378,7 @@ class ec extends (i = l.PureComponent) {
                                         });
                                     }
                                 }),
-                                (0, r.jsx)(_.Text, {
+                                (0, r.jsx)(h.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
                                     children: ei.intl.string(ei.t['330TCQ'])
@@ -423,7 +423,7 @@ class ec extends (i = l.PureComponent) {
               });
     }
     renderFull(e, t) {
-        let { email: n, username: i, globalName: a, password: s, consent: c, parsedDateOfBirth: d, globalNameFocused: u, emailClientError: h, usernameClientError: g, passwordClientError: p, dateOfBirthClientError: m, registering: f, apiErrors: { email: I, username: x, global_name: C, password: N, date_of_birth: v } = {} } = this.state,
+        let { email: n, username: i, globalName: a, password: s, consent: c, parsedDateOfBirth: d, globalNameFocused: u, emailClientError: _, usernameClientError: g, passwordClientError: p, dateOfBirthClientError: m, registering: f, apiErrors: { email: I, username: x, global_name: C, password: N, date_of_birth: v } = {} } = this.state,
             {
                 consentRequired: S,
                 isMobileWebInviteRegistration: A,
@@ -434,7 +434,7 @@ class ec extends (i = l.PureComponent) {
             } = this.props,
             { subText: O, consentText: P } = this.renderConsentComponents(),
             y = this.renderErrorMessage(),
-            U = (0, r.jsx)(_.ua7, {
+            U = (0, r.jsx)(h.ua7, {
                 text: !c && S ? ei.intl.string(ei.t.AY4IVF) : null,
                 children: (e) =>
                     (0, r.jsx)('div', {
@@ -466,7 +466,7 @@ class ec extends (i = l.PureComponent) {
                                 email: e,
                                 emailClientError: 0 === e.length ? ei.intl.string(ei.t.EkokLy) : null
                             }),
-                        error: null != h ? h : es(I),
+                        error: null != _ ? _ : es(I),
                         type: 'email',
                         setRef: (e) => {
                             this.emailRef = e;
@@ -491,7 +491,7 @@ class ec extends (i = l.PureComponent) {
                         show: u,
                         top: -12,
                         bottom: 20,
-                        children: (0, r.jsx)(_.Text, {
+                        children: (0, r.jsx)(h.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-normal',
                             children: ei.intl.string(ei.t['330TCQ'])
@@ -602,12 +602,12 @@ class ec extends (i = l.PureComponent) {
                                 children: (0, r.jsxs)('div', {
                                     className: er.content,
                                     children: [
-                                        (0, r.jsx)(_.V7D, {
+                                        (0, r.jsx)(h.V7D, {
                                             size: 'xs',
                                             color: 'currentColor',
                                             className: er.caret
                                         }),
-                                        (0, r.jsx)(_.Text, {
+                                        (0, r.jsx)(h.Text, {
                                             variant: 'text-md/normal',
                                             children: ei.intl.string(ei.t['1MrpWF'])
                                         })
@@ -650,7 +650,7 @@ class ec extends (i = l.PureComponent) {
             ea(this, 'globalNameRef', void 0),
             ea(this, 'passwordRef', void 0),
             ea(this, 'dateOfBirthRef', l.createRef()),
-            ea(this, '_retryTimer', new h.V7()),
+            ea(this, '_retryTimer', new _.V7()),
             ea(this, 'handleGotoLogin', (e) => {
                 let t;
                 let { email: n } = this.state,
@@ -659,8 +659,8 @@ class ec extends (i = l.PureComponent) {
                     null == o || o(e);
                     return;
                 }
-                let h = null != a ? (0, s.parse)(a.search) : {};
-                null != l ? (t = Q.Z5c.INVITE_LOGIN(l.code)) : null != i ? (t = Q.Z5c.GIFT_CODE_LOGIN(i.code)) : null != r ? (t = Q.Z5c.GUILD_TEMPLATE_LOGIN(r.code)) : null != c ? ((t = Q.Z5c.LOGIN), (h.redirect_to = c)) : ((t = Q.Z5c.LOGIN), '' !== n && (h = { email: n })), g.Z.loginReset(), d(t, { search: (0, s.stringify)(h) }), null == o || o(e), K.S.dispatch(Q.CkL.WAVE_EMPHASIZE);
+                let _ = null != a ? (0, s.parse)(a.search) : {};
+                null != l ? (t = Q.Z5c.INVITE_LOGIN(l.code)) : null != i ? (t = Q.Z5c.GIFT_CODE_LOGIN(i.code)) : null != r ? (t = Q.Z5c.GUILD_TEMPLATE_LOGIN(r.code)) : null != c ? ((t = Q.Z5c.LOGIN), (_.redirect_to = c)) : ((t = Q.Z5c.LOGIN), '' !== n && (_ = { email: n })), g.Z.loginReset(), d(t, { search: (0, s.stringify)(_) }), null == o || o(e), K.S.dispatch(Q.CkL.WAVE_EMPHASIZE);
             }),
             ea(this, 'handleSubmit', (e) => {
                 null == e || e.preventDefault();
@@ -763,7 +763,7 @@ function eu(e) {
                           message: c.P.select()
                       },
                       (e) =>
-                          (0, r.jsx)(_.Text, {
+                          (0, r.jsx)(h.Text, {
                               className: er.messageNegative,
                               variant: 'text-sm/normal',
                               children: e
@@ -775,21 +775,21 @@ function eu(e) {
                           message: c.P.select()
                       },
                       (e) =>
-                          (0, r.jsx)(_.Text, {
+                          (0, r.jsx)(h.Text, {
                               className: er.messagePositive,
                               variant: 'text-sm/normal',
                               children: e
                           })
                   )
                   .otherwise(() =>
-                      (0, r.jsx)(_.Text, {
+                      (0, r.jsx)(h.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-normal',
                           children: ei.intl.string(ei.t.z7c4bG)
                       })
                   )
             : null != i && i.length > 0 && l.length > 0
-              ? (0, r.jsx)(_.Text, {
+              ? (0, r.jsx)(h.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-normal',
                     children: ei.intl.format(ei.t.nDGqqq, {
@@ -797,7 +797,7 @@ function eu(e) {
                         nameOnClick: s
                     })
                 })
-              : (0, r.jsx)(_.Text, {
+              : (0, r.jsx)(h.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-normal',
                     children: ei.intl.string(ei.t.z7c4bG)

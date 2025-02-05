@@ -26,8 +26,8 @@ var l = n(120356),
     T = n(618158),
     S = n(358221),
     j = n(362721),
-    A = n(887012),
-    y = n(613548),
+    y = n(887012),
+    A = n(613548),
     P = n(221888),
     R = n(339340),
     M = n(354459),
@@ -76,7 +76,7 @@ function B(e) {
 function F(e) {
     let t,
         { focusedApplication: n, focusedParticipant: l, channel: a } = e,
-        r = (0, A.Z)(a, !0),
+        r = (0, y.Z)(a, !0),
         o = (0, g.qY)(a.id),
         c = null != o ? (0, _.DK)(o) : null,
         u = null != o;
@@ -147,8 +147,8 @@ function H(e) {
         [N] = (0, u.Z)((null == g ? void 0 : g.type) === M.fO.ACTIVITY ? [g.applicationId] : []),
         T = O.intl.string(O.t.BVZqJi);
     t.isDM() ? (T = O.intl.string(O.t.jN2DfX)) : t.isGroupDM() && (T = O.intl.string(O.t['e5y+go']));
-    let A = (0, r.e7)([h.Z], () => h.Z.getChannelStatus(t)),
-        P = t.isGuildVoice() && c && null != A && A.length > 0,
+    let y = (0, r.e7)([h.Z], () => h.Z.getChannelStatus(t)),
+        P = t.isGuildVoice() && c && null != y && y.length > 0,
         U = (0, j.ZP)(t),
         B = P
             ? (0, i.jsx)(s.ua7, {
@@ -165,7 +165,7 @@ function H(e) {
                               (0, i.jsx)(s.Text, {
                                   variant: 'text-xs/normal',
                                   className: a()(D.channelStatus, w.markup, { [D.hoverable]: U }),
-                                  children: I.Z.parseVoiceChannelStatus(A, !0, { channelId: t.id })
+                                  children: I.Z.parseVoiceChannelStatus(y, !0, { channelId: t.id })
                               }),
                               U &&
                                   (0, i.jsx)(s.vdY, {
@@ -207,7 +207,7 @@ function H(e) {
                         transparent: !0,
                         className: e,
                         childrenBottom: B,
-                        toolbar: (0, i.jsx)(y.Z, {
+                        toolbar: (0, i.jsx)(A.Z, {
                             inPopout: o === L.IlC.POPOUT,
                             channel: t,
                             appContext: o,

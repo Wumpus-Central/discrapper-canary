@@ -45,8 +45,8 @@ let b = (0, r.Z)((e) => {
             [r.id]
         ),
         j = (0, c.Io)(r.id),
-        A = (0, c.Rk)(r.id, d.pV.AUDIENCE),
-        y = (0, a.e7)([o.Z], () => (null != N ? o.Z.getParticipant(r.id, N) : null)),
+        y = (0, c.Rk)(r.id, d.pV.AUDIENCE),
+        A = (0, a.e7)([o.Z], () => (null != N ? o.Z.getParticipant(r.id, N) : null)),
         P = (0, c.w8)(r.id, d.pV.SPEAKER),
         R = P.filter(I),
         M = null != P.find((e) => e.type === d.Ui.STREAM),
@@ -62,9 +62,9 @@ let b = (0, r.Z)((e) => {
         B = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]],
         { speakerTileWidth: F, speakerTileHeight: H } = x(b, k),
         G = T ? b - 32 : Math.min(b - 64, 3 * F + 8),
-        V = (e) => e === w.length - 1 || (0 === A && 1 === e),
+        V = (e) => e === w.length - 1 || (0 === y && 1 === e),
         [z, W] = l.useState(!1),
-        [Y, q] = l.useState(!1);
+        [q, Y] = l.useState(!1);
     return (0, i.jsx)(p.Z, {
         sections: B,
         renderSection: (e) => {
@@ -87,16 +87,16 @@ let b = (0, r.Z)((e) => {
                           'speaker-header-'.concat(t)
                       )
                 : 2 === t
-                  ? 0 === A
+                  ? 0 === y
                       ? null
                       : (0, i.jsx)(
                             f.Z,
                             {
-                                participantCount: A,
+                                participantCount: y,
                                 label: _.intl.string(_.t['3foUu7']),
                                 className: C.header,
-                                onClick: () => q(!Y),
-                                collapsed: Y,
+                                onClick: () => Y(!q),
+                                collapsed: q,
                                 channel: r
                             },
                             'audience-header-'.concat(t)
@@ -132,13 +132,13 @@ let b = (0, r.Z)((e) => {
                                 tileWidth: F,
                                 channel: r,
                                 participants: a,
-                                selectedParticipant: y
+                                selectedParticipant: A
                             })
                         },
                         'speakers-'.concat(t, '-').concat(n)
                     );
                 case 2:
-                    if (Y) return null;
+                    if (q) return null;
                     return (0, i.jsx)(
                         h.Z,
                         {
@@ -152,7 +152,7 @@ let b = (0, r.Z)((e) => {
                     return null;
             }
         },
-        rowHeight: (e) => (null == U[e][0] ? 0 : 0 === e ? G / g.Q + 8 : 1 === e ? (z ? 0 : H) : Y ? 0 : 98),
+        rowHeight: (e) => (null == U[e][0] ? 0 : 0 === e ? G / g.Q + 8 : 1 === e ? (z ? 0 : H) : q ? 0 : 98),
         renderFooter: (e) => {
             let { section: t } = e;
             return V(t) ? (0, i.jsx)('div', { className: C.spacer }, 'bottom-spacer') : null;

@@ -1,17 +1,17 @@
-n.d(t, { Z: () => c });
-var i = n(200651);
+n.d(t, { Z: () => u });
+var l = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(230711),
-    r = n(906732),
+var i = n(481060),
+    r = n(230711),
+    a = n(906732),
     s = n(981631),
     o = n(388032);
-function c() {
-    let { analyticsLocations: e } = (0, r.ZP)();
-    return (0, i.jsx)(l.sNh, {
+function u() {
+    let { analyticsLocations: e } = (0, a.ZP)();
+    return (0, l.jsx)(i.sNh, {
         id: 'voice-settings',
         label: o.intl.string(o.t.NiTd0d),
-        action: () => a.Z.open(s.oAB.VOICE, null, { analyticsLocations: e }),
-        icon: l.ewm
+        action: () => r.Z.open(s.oAB.VOICE, null, { analyticsLocations: e }),
+        icon: i.ewm
     });
 }

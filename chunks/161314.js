@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(481060),
     u = n(367907),
     m = n(213609),
-    h = n(565138),
-    _ = n(267101),
+    _ = n(565138),
+    h = n(267101),
     p = n(336197),
     g = n(661824),
     f = n(430824),
     x = n(626135),
-    E = n(76535),
-    C = n(866104),
-    v = n(886176),
+    C = n(76535),
+    v = n(866104),
+    E = n(886176),
     I = n(981631),
     N = n(388032),
     S = n(894840);
@@ -25,9 +25,9 @@ function T(e) {
     var t;
     let { guildId: n } = e,
         a = (0, c.e7)([f.Z], () => f.Z.getGuild(n)),
-        { loading: T, subscriptionsSettings: b } = (0, E.H)(n),
-        { listingsLoaded: A } = (0, _.eD)(n),
-        j = (0, _.ue)(n, { publishedOnly: !0 }),
+        { loading: T, subscriptionsSettings: b } = (0, C.H)(n),
+        { listingsLoaded: A } = (0, h.eD)(n),
+        j = (0, h.ue)(n, { publishedOnly: !0 }),
         y = l.useCallback(async () => {
             x.default.track(I.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, u.hH)(n) }), await (0, p.Z)(I.Z5c.SERVER_SHOP(n));
         }, [n]);
@@ -49,12 +49,12 @@ function T(e) {
           : (0, i.jsxs)('div', {
                 className: S.guildShopEmbed,
                 children: [
-                    (0, i.jsx)(C.Z, { coverImageAsset: null !== (t = b.cover_image_asset) && void 0 !== t ? t : null }),
+                    (0, i.jsx)(v.Z, { coverImageAsset: null !== (t = b.cover_image_asset) && void 0 !== t ? t : null }),
                     (0, i.jsx)(d.LZC, { size: 16 }),
                     (0, i.jsxs)('div', {
                         className: S.serverShopLabel,
                         children: [
-                            (0, i.jsx)(v.Z, {
+                            (0, i.jsx)(E.Z, {
                                 height: '16px',
                                 width: '16px',
                                 color: o.Z.INTERACTIVE_NORMAL
@@ -86,7 +86,7 @@ function T(e) {
                     (0, i.jsxs)('div', {
                         className: S.guildShopEmbedFooter,
                         children: [
-                            (0, i.jsx)(h.Z, { guild: a }),
+                            (0, i.jsx)(_.Z, { guild: a }),
                             (0, i.jsxs)('ul', {
                                 className: S.guildShopSummary,
                                 children: [
@@ -113,7 +113,7 @@ function T(e) {
                                 children: (0, i.jsxs)('div', {
                                     className: S.guildShopEmbedCtaContent,
                                     children: [
-                                        (0, i.jsx)(v.Z, {
+                                        (0, i.jsx)(E.Z, {
                                             height: '18px',
                                             width: '18px'
                                         }),

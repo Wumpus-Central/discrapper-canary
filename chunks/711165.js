@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(442837),
     u = n(524437),
     m = n(481060),
-    h = n(724757),
-    _ = n(294218),
+    _ = n(724757),
+    h = n(294218),
     p = n(703656),
     g = n(45251),
     f = n(156012),
     x = n(74365),
-    E = n(618857),
-    C = n(695346),
-    v = n(23750),
+    C = n(618857),
+    v = n(695346),
+    E = n(23750),
     I = n(592125),
     N = n(594174),
     S = n(823379),
@@ -57,7 +57,7 @@ function P() {
         t = l.useMemo(() => Object.values(e).sort((e, t) => (new Date(e.sendAtTimestamp) > new Date(t.sendAtTimestamp) ? -1 : 1)), [e]),
         n = (0, d.e7)([f.Z], () => f.Z.loading, []),
         a = l.useRef(null),
-        r = (0, h.Z)('scheduled-messages', a);
+        r = (0, _.Z)('scheduled-messages', a);
     return n
         ? (0, i.jsx)(m.$jN, { className: Z.loadingPlaceholder })
         : 0 === t.length
@@ -136,7 +136,7 @@ function k(e) {
 }
 let M = l.memo(function (e) {
     let { scheduledMessage: t, channel: n, isPendingDeletion: a } = e,
-        s = new v.ZP({
+        s = new E.ZP({
             id: t.scheduledMessageId,
             content: t.scheduledMessage.content,
             author: N.default.getUser(t.userId),
@@ -182,10 +182,10 @@ let M = l.memo(function (e) {
         u = l.useCallback(() => {
             (0, g.gD)(t.scheduledMessageId)
                 .then(() => {
-                    (0, E.C$)();
+                    (0, C.C$)();
                 })
                 .catch((e) => {
-                    (0, E.wW)(e.message);
+                    (0, C.wW)(e.message);
                 });
         }, [t.scheduledMessageId]);
     return (0, i.jsx)(
@@ -209,12 +209,12 @@ let M = l.memo(function (e) {
                               className: Z.channelMessageAndCancelButton,
                               children: [
                                   (0, i.jsx)(
-                                      _.Z,
+                                      h.Z,
                                       {
                                           message: s,
                                           channel: n,
                                           className: Z.message,
-                                          compact: C.jU.getSetting(),
+                                          compact: v.jU.getSetting(),
                                           animateAvatar: !1,
                                           focusProps: R
                                       },

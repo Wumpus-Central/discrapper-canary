@@ -25,7 +25,7 @@ function m(e) {
             ];
         }, [t.artwork, t.screenshots]),
         g = p.length > 2;
-    function h(e) {
+    function _(e) {
         if (null == m.current) return;
         let t = m.current.getScrollerState().scrollLeft;
         m.current.scrollTo({
@@ -88,7 +88,7 @@ function m(e) {
                                       (0, i.jsx)('div', { className: u.gradientLeft }),
                                       (0, i.jsx)(a.P3F, {
                                           className: u.arrowClickable,
-                                          onClick: () => h(-1),
+                                          onClick: () => _(-1),
                                           children: (0, i.jsx)(a.whL, {
                                               className: u.arrow,
                                               color: 'currentColor'
@@ -97,7 +97,7 @@ function m(e) {
                                       (0, i.jsx)('div', { className: u.gradientRight }),
                                       (0, i.jsx)(a.P3F, {
                                           className: u.arrowClickable,
-                                          onClick: () => h(1),
+                                          onClick: () => _(1),
                                           children: (0, i.jsx)(a.ZSh, {
                                               className: u.arrow,
                                               color: 'currentColor'

@@ -132,16 +132,16 @@ function H(e) {
             inProgressVisibility: R,
             inProgressMetadataVisibility: w
         },
-        Q = s.useRef(q);
+        J = s.useRef(q);
     s.useEffect(() => {
-        Q.current = q;
+        J.current = q;
     }),
         s.useEffect(() => {
             if (!1 === o.verified) return;
-            let { inProgressVisibility: e, inProgressMetadataVisibility: t } = Q.current;
+            let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
             null != e && (S(e), h.Z.setVisibility(o.type, o.id, e), D(null)), null != t && (j(t), h.Z.setMetadataVisibility(o.type, o.id, t), G(null));
         }, [o]);
-    function J() {
+    function Q() {
         let e = E.Z.get(o.type),
             t = V.intl.string(V.t.apVJu7);
         (0, y.Z)(o) &&
@@ -225,7 +225,7 @@ function H(e) {
                             }),
                             (0, i.jsx)(u.P3F, {
                                 className: U.connectionDelete,
-                                onClick: J,
+                                onClick: Q,
                                 'aria-label': V.intl.string(V.t.ppppRE),
                                 focusProps: {
                                     offset: {

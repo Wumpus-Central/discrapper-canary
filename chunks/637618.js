@@ -12,23 +12,23 @@ var l = n(990547),
 function m(e) {
     let { code: t } = e,
         [n, m] = t.split('-'),
-        h = (0, c.hO)(n, m),
-        _ = (0, a.e7)([o.Z], () => o.Z.getGuildId());
+        _ = (0, c.hO)(n, m),
+        h = (0, a.e7)([o.Z], () => o.Z.getGuildId());
     return ((0, s.Z)(
         {
             type: u.n.VIEW,
             name: l.ImpressionNames.GUILD_PRODUCT_LISTING_EMBED,
             properties: {
                 guild_product_listing_id: m,
-                has_entitlement: (null == h ? void 0 : h.has_entitlement) === !0
+                has_entitlement: (null == _ ? void 0 : _.has_entitlement) === !0
             }
         },
-        { disableTrack: null == h }
+        { disableTrack: null == _ }
     ),
-    null == h || _ !== n)
+    null == _ || h !== n)
         ? null
         : (0, i.jsx)(d.H, {
-              guildProductListing: h,
+              guildProductListing: _,
               guildId: n,
               location: r.Z.GUILD_PRODUCT_EMBED_CARD,
               cardWidth: 390,

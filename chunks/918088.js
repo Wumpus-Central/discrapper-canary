@@ -16,15 +16,15 @@ var i = n(278074),
     d = n(592125),
     u = n(271383),
     m = n(375954),
-    h = n(594174),
-    _ = n(768581),
+    _ = n(594174),
+    h = n(768581),
     p = n(176354),
     g = n(358085),
     f = n(798628),
     x = n(79390),
-    E = n(839963),
-    C = n(897325),
-    v = n(57101),
+    C = n(839963),
+    v = n(897325),
+    E = n(57101),
     I = n(562293),
     N = n(981631),
     S = n(388032);
@@ -95,21 +95,21 @@ function y(e, t) {
     let { formattedExpirationLabel: r } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { poll: s } = e;
     if (null == s) return;
-    let h = e.state === N.yb.SENT,
-        _ = h ? (null != r ? r : (0, I.H)(s.expiry)) : '',
-        p = null == _ && h,
-        { selectedAnswerIds: g, submitting: x, editing: E, showResults: C } = null !== (l = null != t ? t : (0, f.fU)(e.getChannelId(), e.id)) && void 0 !== l ? l : T,
-        v = e.reactions,
+    let _ = e.state === N.yb.SENT,
+        h = _ ? (null != r ? r : (0, I.H)(s.expiry)) : '',
+        p = null == h && _,
+        { selectedAnswerIds: g, submitting: x, editing: C, showResults: v } = null !== (l = null != t ? t : (0, f.fU)(e.getChannelId(), e.id)) && void 0 !== l ? l : T,
+        E = e.reactions,
         S = !0;
     if (!j(e)) {
         let t = m.Z.getMessage(e.channel_id, e.id);
-        (S = !e.isSearchHit && null != t), (v = null !== (a = null == t ? void 0 : t.reactions) && void 0 !== a ? a : v);
+        (S = !e.isSearchHit && null != t), (E = null !== (a = null == t ? void 0 : t.reactions) && void 0 !== a ? a : E);
     }
     let b = g.size > 0,
-        A = v.some((e) => !0 === e.me_vote),
-        y = !E && A,
-        Z = y || p || C,
-        R = h && S && (!A || E || Z),
+        A = E.some((e) => !0 === e.me_vote),
+        y = !C && A,
+        Z = y || p || v,
+        R = _ && S && (!A || C || Z),
         L = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
         P = null != L ? u.ZP.getSelfMember(L) : null,
         k = (0, o.EY)(P),
@@ -117,22 +117,22 @@ function y(e, t) {
     return {
         poll: s,
         canTapAnswers: R,
-        canRemoveVote: y && h && !p,
+        canRemoveVote: y && _ && !p,
         canShowVoteCounts: Z,
-        canSubmitVote: !x && b && !y && h && !k && !M,
-        expirationLabel: _,
+        canSubmitVote: !x && b && !y && _ && !k && !M,
+        expirationLabel: h,
         hasSelectedAnswer: b,
         hasVoted: y,
         hasVoteRecorded: A,
-        isEditingVote: E,
+        isEditingVote: C,
         isExpired: p,
         isInteractive: S,
-        isSent: h,
-        reactions: v,
+        isSent: _,
+        reactions: E,
         selectedAnswerIds: g,
         submitting: x,
         tapShouldOpenVotersModal: Z,
-        showResults: C
+        showResults: v
     };
 }
 function Z(e, t) {
@@ -140,11 +140,11 @@ function Z(e, t) {
     let { animateEmoji: c = !1, theme: u = 'dark', formattedExpirationLabel: m } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { poll: f } = e;
     if (null == f) return;
-    let I = h.default.getCurrentUser();
+    let I = _.default.getCurrentUser();
     if (null == I) return;
     let N = a.Z.useReducedMotion,
         T = null === (o = d.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
-        j = (0, C.E)(I, T),
+        j = (0, v.E)(I, T),
         Z = f.answers,
         R = f.layout_type,
         L = y(e, t, { formattedExpirationLabel: m });
@@ -165,14 +165,14 @@ function Z(e, t) {
                 d = b(H, o),
                 u = null !== (n = null == d ? void 0 : null === (t = d.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
                 m = 0 === Y ? 0 : u / Y,
-                h = V.has(o),
+                _ = V.has(o),
                 g = u >= q && 0 !== u,
                 f = F && null !== (a = null == d ? void 0 : d.me_vote) && void 0 !== a && a,
                 x = A({
                     didSelfVote: f,
                     hasVoted: F,
                     isExpired: B,
-                    isSelected: h,
+                    isSelected: _,
                     isLeader: g,
                     showResults: K
                 });
@@ -196,7 +196,7 @@ function Z(e, t) {
                             src:
                                 null == e.id
                                     ? p.ZP.getURL(e.name)
-                                    : _.ZP.getEmojiURL({
+                                    : h.ZP.getEmojiURL({
                                           id: e.id,
                                           animated: o,
                                           size: n
@@ -207,7 +207,7 @@ function Z(e, t) {
                     stickerId: e.poll_media.sticker_id,
                     attachmentIds: e.poll_media.attachment_ids
                 },
-                isSelected: h,
+                isSelected: _,
                 isVictor: B && g,
                 didSelfVote: f,
                 style: x,
@@ -318,14 +318,14 @@ function Z(e, t) {
             canTapAnswers: P,
             canSelectMultipleAnswers: en
         })
-            .with({ tapShouldOpenVotersModal: !0 }, () => E.Y7.LIST)
-            .with({ canTapAnswers: !1 }, () => E.Y7.LIST)
-            .with({ canSelectMultipleAnswers: !1 }, () => E.Y7.RADIO_BUTTONS)
-            .with({ canSelectMultipleAnswers: !0 }, () => E.Y7.CHECKBOXES)
+            .with({ tapShouldOpenVotersModal: !0 }, () => C.Y7.LIST)
+            .with({ canTapAnswers: !1 }, () => C.Y7.LIST)
+            .with({ canSelectMultipleAnswers: !1 }, () => C.Y7.RADIO_BUTTONS)
+            .with({ canSelectMultipleAnswers: !0 }, () => C.Y7.CHECKBOXES)
             .exhaustive(),
         answerTapAccessibilityLabel: W ? $ : void 0,
         layoutType: R,
-        resources: (0, v.Z)({
+        resources: (0, E.Z)({
             theme: u,
             layoutType: R
         }),

@@ -9,15 +9,15 @@ var i = n(200651),
     d = n.n(c),
     u = n(481060),
     m = n(911969),
-    h = n(595519),
-    _ = n(566620),
+    _ = n(595519),
+    h = n(566620),
     p = n(403404),
     g = n(100527),
     f = n(906732),
     x = n(783097),
-    E = n(581364),
-    C = n(592180),
-    v = n(347475),
+    C = n(581364),
+    v = n(592180),
+    E = n(347475),
     I = n(598077),
     N = n(768581),
     S = n(585483),
@@ -47,9 +47,9 @@ function P(e) {
 }
 function k(e, t, n, l, a) {
     var s, o, c;
-    let { message: d, compact: m, channel: h, isInteractionUserBlocked: _, isInteractionUserIgnored: p, showAvatarPopout: g, showTargetAvatarPopout: f, onClickAvatar: x, onUserContextMenu: E, onClickTargetAvatar: C, onTargetUserContextMenu: v, onPopoutRequestClose: I } = e;
+    let { message: d, compact: m, channel: _, isInteractionUserBlocked: h, isInteractionUserIgnored: p, showAvatarPopout: g, showTargetAvatarPopout: f, onClickAvatar: x, onUserContextMenu: C, onClickTargetAvatar: v, onTargetUserContextMenu: E, onPopoutRequestClose: I } = e;
     if (m && 1 === n) return null;
-    if ((m && null == d.activityInstance) || _ || p)
+    if ((m && null == d.activityInstance) || h || p)
         return (0, i.jsx)('div', {
             className: L.replyBadge,
             children: (0, i.jsx)(P, { className: L.commandIcon })
@@ -59,7 +59,7 @@ function k(e, t, n, l, a) {
                 (c = N.ZP.getGuildMemberAvatarURL({
                     avatar: null !== (s = l.guildMemberAvatar) && void 0 !== s ? s : void 0,
                     userId: t.id,
-                    guildId: null !== (o = null == h ? void 0 : h.guild_id) && void 0 !== o ? o : ''
+                    guildId: null !== (o = null == _ ? void 0 : _.guild_id) && void 0 !== o ? o : ''
                 })) && void 0 !== c
                 ? c
                 : void 0,
@@ -79,10 +79,10 @@ function k(e, t, n, l, a) {
                 });
             })({
                 user: t,
-                guildId: h.guild_id,
+                guildId: _.guild_id,
                 guildAvatar: S,
-                onClick: 1 === n ? C : x,
-                onContextMenu: 1 === n ? v : E
+                onClick: 1 === n ? v : x,
+                onContextMenu: 1 === n ? E : C
             }),
         b = 1 === n ? f : g;
     return null != a && null != b
@@ -96,7 +96,7 @@ function k(e, t, n, l, a) {
         : T();
 }
 function M(e, t, n, l, a) {
-    let { message: r, channel: s, showUsernamePopout: o, showTargetUsernamePopout: c, onClickUsername: d, onUserContextMenu: u, onClickTargetUsername: m, onTargetUserContextMenu: h, onPopoutRequestClose: _ } = e;
+    let { message: r, channel: s, showUsernamePopout: o, showTargetUsernamePopout: c, onClickUsername: d, onUserContextMenu: u, onClickTargetUsername: m, onTargetUserContextMenu: _, onPopoutRequestClose: h } = e;
     return (0, i.jsx)(A.Z, {
         className: 1 === n ? L.targetUsername : '',
         compact: !0,
@@ -107,8 +107,8 @@ function M(e, t, n, l, a) {
         showPopout: 1 === n ? c : o,
         renderPopout: a,
         onClick: 1 === n ? m : d,
-        onContextMenu: 1 === n ? h : u,
-        onPopoutRequestClose: _
+        onContextMenu: 1 === n ? _ : u,
+        onPopoutRequestClose: h
     });
 }
 let O = () =>
@@ -125,7 +125,7 @@ function D(e) {
         N = l.useMemo(
             () => (e, t, n) => (
                 o()(null != s && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(E.Z, {
                     ...e,
                     channelId: s.id,
                     messageId: a.id,
@@ -148,13 +148,13 @@ function D(e) {
             ),
             [s, a.id, a.interactionData]
         ),
-        P = (0, E.t0)(a),
+        P = (0, C.t0)(a),
         D = (null == P ? void 0 : P.type) === m.B8.APPLICATION_COMMAND && null != P.target_user ? new I.Z(P.target_user) : null,
         w = (null == P ? void 0 : P.type) === m.B8.APPLICATION_COMMAND && null != a.messageReference && null != e.renderTargetMessage,
         F = (0, b.Sw)(null === (t = a.interaction) || void 0 === t ? void 0 : t.user, s),
         U = (0, b.Sw)(D, s),
         B = l.useMemo(() => (e.compact ? (0, y.Z)((0, T.vc)(d()(), 'LT')) : null), [e.compact]),
-        G = (0, h.NX)(s.id),
+        G = (0, _.NX)(s.id),
         H = a.interaction;
     if (null == H || null == F) return null;
     let V = () => {
@@ -168,7 +168,7 @@ function D(e) {
             'user'
         );
     };
-    if ((null == a ? void 0 : a.activityInstance) === null || (0, C.g)(a))
+    if ((null == a ? void 0 : a.activityInstance) === null || (0, v.g)(a))
         (n = R.intl.format(R.t['rg7U+P'], {
             userHook: V,
             commandHook: () => {
@@ -204,7 +204,7 @@ function D(e) {
                                         ]
                                     })
                                 });
-                            if (!(0, C.g)(l))
+                            if (!(0, v.g)(l))
                                 return (0, i.jsx)('div', {
                                     className: L.commandName,
                                     children: o
@@ -276,7 +276,7 @@ function D(e) {
                 enableSelectedTextChannelInvite: !0,
                 analyticsLocations: c
             }),
-                (0, _.w1)({ guildId: s.guild_id });
+                (0, h.w1)({ guildId: s.guild_id });
         };
         n = G
             ? R.intl.format(R.t.kfV8WF, {

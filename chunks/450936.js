@@ -61,7 +61,7 @@ function _(e) {
         T = N.commands.filter((e) => e.type === r.yU.PRIMARY_ENTRY_POINT && e.applicationId === Z)[0],
         S = N.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
         j = N.loading,
-        A =
+        y =
             null ===
                 (t = N.descriptors.find((e) => {
                     var t;
@@ -69,9 +69,9 @@ function _(e) {
                 })) || void 0 === t
                 ? void 0
                 : t.application,
-        y = i.useMemo(() => (null != A ? p.ZP.createFromServer(A) : void 0), [A]),
-        P = (0, d.q)(null == y ? Z : void 0),
-        R = null !== (n = null != y ? y : P) && void 0 !== n ? n : void 0,
+        A = i.useMemo(() => (null != y ? p.ZP.createFromServer(y) : void 0), [y]),
+        P = (0, d.q)(null == A ? Z : void 0),
+        R = null !== (n = null != A ? A : P) && void 0 !== n ? n : void 0,
         M = null == R || (j && 0 === S.length);
     return {
         application: R,

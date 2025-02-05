@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(19780),
     u = n(35818),
     m = n(665149),
-    h = n(388032),
-    _ = n(681714);
+    _ = n(388032),
+    h = n(681714);
 function p(e, t, n) {
     return (
         t in e
@@ -46,17 +46,17 @@ class g extends l.PureComponent {
             case 'UPDATE_AVAILABLE':
                 return (0, i.jsx)(m.JO, {
                     hideOnClick: !1,
-                    tooltip: h.intl.string(h.t['zp9d//']),
-                    foreground: _.downloadArrow,
-                    background: _.cloud,
+                    tooltip: _.intl.string(_.t['zp9d//']),
+                    foreground: h.downloadArrow,
+                    background: h.cloud,
                     icon: r._8t,
                     className: this.props.className
                 });
             case 'UPDATE_MANUALLY':
             case 'UPDATE_DOWNLOADED':
                 return (0, i.jsx)(m.JO, {
-                    tooltip: h.intl.string(h.t.u18OXF),
-                    foreground: _.updateIconForeground,
+                    tooltip: _.intl.string(_.t.u18OXF),
+                    foreground: h.updateIconForeground,
                     onClick: this.handleInstallDownload,
                     icon: r._8t,
                     className: this.props.className
@@ -74,11 +74,11 @@ class g extends l.PureComponent {
             p(this, 'handleInstallDownload', () => {
                 d.Z.isConnected()
                     ? s.Z.show({
-                          title: h.intl.string(h.t.tiu1l5),
-                          body: h.intl.string(h.t['zK+lqa']),
+                          title: _.intl.string(_.t.tiu1l5),
+                          body: _.intl.string(_.t['zK+lqa']),
                           onConfirm: this.doUpdate,
-                          cancelText: h.intl.string(h.t['ETE/oK']),
-                          confirmText: h.intl.string(h.t['QDX/qq'])
+                          cancelText: _.intl.string(_.t['ETE/oK']),
+                          confirmText: _.intl.string(_.t['QDX/qq'])
                       })
                     : this.doUpdate();
             }),

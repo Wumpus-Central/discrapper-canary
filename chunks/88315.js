@@ -1,28 +1,28 @@
 n.d(t, {
-    P7: () => p,
+    P7: () => h,
     RR: () => f,
-    UN: () => u,
-    bg: () => h,
+    UN: () => c,
+    bg: () => p,
     hn: () => d,
     np: () => m
 });
-var i = n(979590),
-    l = n.n(i),
-    a = n(866442),
-    r = n(220082),
+var l = n(979590),
+    i = n.n(l),
+    r = n(866442),
+    a = n(220082),
     s = n(594174),
     o = n(984063),
-    c = n(813900);
-function u(e) {
+    u = n(813900);
+function c(e) {
     let t = e.current,
         n = null == t ? void 0 : t.getContext('2d');
     null != t && null != n && n.clearRect(0, 0, t.width, t.height);
 }
 function d(e, t) {
-    let { width: n, height: i, left: l, top: a } = e.getBoundingClientRect();
+    let { width: n, height: l, left: i, top: r } = e.getBoundingClientRect();
     return {
-        x: (t.clientX - l) / n,
-        y: (t.clientY - a) / i
+        x: (t.clientX - i) / n,
+        y: (t.clientY - r) / l
     };
 }
 function m(e, t) {
@@ -35,27 +35,27 @@ function f(e, t, n) {
         deltaTime: e.deltaTime
     };
 }
-function p(e) {
+function h(e) {
     return e.type === o.W.LINE;
 }
-function h(e, t, n, i) {
+function p(e, t, n, l) {
     var o;
-    let u = s.default.getUser(e),
-        d = null == u ? void 0 : u.getAvatarURL(null, c.Ks),
-        m = null != d ? (null === (o = r.SR.getState().palette[d]) || void 0 === o ? void 0 : o[0]) : null,
+    let c = s.default.getUser(e),
+        d = null == c ? void 0 : c.getAvatarURL(null, u.Ks),
+        m = null != d ? (null === (o = a.SR.getState().palette[d]) || void 0 === o ? void 0 : o[0]) : null,
         f =
             null != m
                 ? '#'.concat(
-                      l()({
+                      i()({
                           r: m[0],
                           g: m[1],
                           b: m[2]
                       }).toHex()
                   )
-                : i,
-        p = (0, a.Bd)((0, a._i)(f)) > 0.5 ? n : t;
+                : l,
+        h = (0, r.Bd)((0, r._i)(f)) > 0.5 ? n : t;
     return {
         fillColor: f,
-        outlineColor: p
+        outlineColor: h
     };
 }

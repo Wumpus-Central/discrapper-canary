@@ -12,8 +12,8 @@ var i = n(200651),
     d = n(347475),
     u = n(768581),
     m = n(693912),
-    h = n(981631);
-function _(e, t) {
+    _ = n(981631);
+function h(e, t) {
     return l.useCallback(
         (n) => (l, r) => {
             let s = u.ZP.getApplicationIconURL({
@@ -64,7 +64,7 @@ function p(e) {
             guildId: l.guild_id,
             messageId: t.id
         }),
-        p = _(l, t);
+        p = h(l, t);
     return (0, i.jsx)(o.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
@@ -73,7 +73,7 @@ function p(e) {
             application: d,
             username: c.nick,
             usernameHook: u(c),
-            applicationNameHook: null != d ? p(d) : h.dG4
+            applicationNameHook: null != d ? p(d) : _.dG4
         })
     });
 }
@@ -87,7 +87,7 @@ function g(e) {
             guildId: l.guild_id,
             messageId: t.id
         }),
-        p = _(l, t);
+        p = h(l, t);
     return (0, i.jsx)(o.Z, {
         icon: n(474019),
         timestamp: t.timestamp,
@@ -96,7 +96,7 @@ function g(e) {
             application: d,
             username: c.nick,
             usernameHook: u(c),
-            applicationNameHook: null != d ? p(d) : h.dG4
+            applicationNameHook: null != d ? p(d) : _.dG4
         })
     });
 }

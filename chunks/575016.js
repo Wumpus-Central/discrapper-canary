@@ -2,7 +2,7 @@ n.d(t, {
     AT: () => p,
     fC: () => f,
     gr: () => g,
-    hQ: () => _
+    hQ: () => h
 });
 var i,
     l = n(192379),
@@ -14,8 +14,8 @@ var i,
     d = n(131704),
     u = n(592125),
     m = n(981631),
-    h = n(388032),
-    _ = (((i = {})[(i.LONG = 0)] = 'LONG'), (i[(i.SHORT = 1)] = 'SHORT'), i);
+    _ = n(388032),
+    h = (((i = {})[(i.LONG = 0)] = 'LONG'), (i[(i.SHORT = 1)] = 'SHORT'), i);
 function p(e) {
     let { dueAt: t, now: n, type: i } = e;
     if (null == t)
@@ -23,11 +23,11 @@ function p(e) {
             string: '',
             isOverdue: !1
         };
-    let l = 0 === i ? h.t.TjNWND : h.t.H4gnX1,
-        a = 0 === i ? h.t.haia19 : h.t['Uq7Y+/'],
+    let l = 0 === i ? _.t.TjNWND : _.t.H4gnX1,
+        a = 0 === i ? _.t.haia19 : _.t['Uq7Y+/'],
         s = n > t;
     return {
-        dueInText: h.intl.formatToPlainString(s ? a : l, {
+        dueInText: _.intl.formatToPlainString(s ? a : l, {
             duration: r()
                 .duration(t.getTime() - n.getTime(), 'millisecond')
                 .humanize()
@@ -46,7 +46,7 @@ function g(e) {
                         id: e.saveData.channelId,
                         guild_id: e.saveData.guildId,
                         type: m.d4z.UNKNOWN,
-                        name: h.intl.string(h.t.J90oLS)
+                        name: _.intl.string(_.t.J90oLS)
                     })
                   : void 0,
         [t, e]

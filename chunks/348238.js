@@ -28,15 +28,15 @@ var i = n(200651),
     d = n(407477),
     u = n(992970),
     m = n(287941),
-    h = n(235894),
-    _ = n(675478),
+    _ = n(235894),
+    h = n(675478),
     p = n(592125),
     g = n(323873),
     f = n(375954),
     x = n(594174),
-    E = n(585483),
-    C = n(5967),
-    v = n(630388),
+    C = n(585483),
+    v = n(5967),
+    E = n(630388),
     I = n(358085),
     N = n(51144),
     S = n(91047),
@@ -59,7 +59,7 @@ function y(e, t, n) {
             }
             let a = '@'.concat(N.ZP.getUserTag(l, { decoration: 'never' })),
                 r = '<@'.concat(e, '>');
-            E.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
+            C.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
                 plainText: a,
                 rawText: r
             }),
@@ -104,8 +104,8 @@ function D(e, t) {
 function w(e, t, a, s) {
     let { id: o } = t,
         { id: d, flags: u } = e,
-        m = (0, v.yE)(u, b.iLy.EPHEMERAL),
-        h = (0, c.bp)();
+        m = (0, E.yE)(u, b.iLy.EPHEMERAL),
+        _ = (0, c.bp)();
     return l.useCallback(
         (e, t) => {
             if (m) return;
@@ -137,11 +137,11 @@ function w(e, t, a, s) {
                     },
                     {
                         onClose: () => a({ contextMenu: !1 }),
-                        context: h
+                        context: _
                     }
                 ));
         },
-        [m, o, d, a, h, s]
+        [m, o, d, a, _, s]
     );
 }
 function F(e, t) {
@@ -205,7 +205,7 @@ function H(e) {
                 (e) => {
                     if (null == e || !(e.nativeEvent instanceof MouseEvent) || Object.values(n).some((e) => e)) return;
                     let i = e.target;
-                    if ((0, h.Uw)(t)) {
+                    if ((0, _.Uw)(t)) {
                         let { x: e, y: n, width: l, height: a } = i.getBoundingClientRect();
                         (0, m.Z)(
                             t,
@@ -222,21 +222,21 @@ function H(e) {
                 },
                 [t, n]
             )),
-        [x, C] = l.useState(r);
+        [x, v] = l.useState(r);
     g.current = x || g.current;
-    let v = l.useCallback(
+    let E = l.useCallback(
             (e) => {
-                o && (0, _.T6)(), x || (E.S.dispatchKeyed(b.LPv.ANIMATE_CHAT_AVATAR, p, !0), f(e), C(!0));
+                o && (0, h.T6)(), x || (C.S.dispatchKeyed(b.LPv.ANIMATE_CHAT_AVATAR, p, !0), f(e), v(!0));
             },
             [x, p, o, f]
         ),
         I = l.useCallback(() => {
-            E.S.dispatchKeyed(b.LPv.ANIMATE_CHAT_AVATAR, p, !1), C(!1);
+            C.S.dispatchKeyed(b.LPv.ANIMATE_CHAT_AVATAR, p, !1), v(!1);
         }, [p]);
     return {
         hasHovered: g.current,
         isHovered: x,
-        handleMouseEnter: v,
+        handleMouseEnter: E,
         handleMouseLeave: I
     };
 }
@@ -247,7 +247,7 @@ function V(e, t) {
         handleFocus: l.useCallback(
             (t) => {
                 var n, l;
-                let a = null !== (l = null === (n = (0, C.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== l ? l : null;
+                let a = null !== (l = null === (n = (0, v.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== l ? l : null;
                 (t.target === t.currentTarget || t.currentTarget.contains(a)) && (r(!0), i(!0)), null != e && e(t);
             },
             [e]
@@ -255,7 +255,7 @@ function V(e, t) {
         handleBlur: l.useCallback(
             (e) => {
                 var n, l;
-                let a = null !== (l = null === (n = (0, C.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== l ? l : null;
+                let a = null !== (l = null === (n = (0, v.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== l ? l : null;
                 (e.target !== e.currentTarget && e.currentTarget.contains(a)) || i(!1), null != t && t(e);
             },
             [t]

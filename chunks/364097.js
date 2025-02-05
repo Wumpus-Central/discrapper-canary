@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => _ });
 var i = n(200651);
 n(192379);
 var l = n(442837),
@@ -10,15 +10,15 @@ var l = n(442837),
     d = n(388032),
     u = n(239274),
     m = n(658412);
-function h(e) {
+function _(e) {
     var t;
-    let { code: h } = e,
-        _ = (0, l.e7)([o.Z], () => o.Z.getGuildTemplate(h));
-    if (null == _ || _.state === c.Rj.RESOLVING)
+    let { code: _ } = e,
+        h = (0, l.e7)([o.Z], () => o.Z.getGuildTemplate(_));
+    if (null == h || h.state === c.Rj.RESOLVING)
         return (0, i.jsxs)(r.Z, {
             children: [(0, i.jsx)(r.Z.Header, { text: d.intl.string(d.t.Xj87YW) }), (0, i.jsx)(r.Z.Body, { resolving: !0 })]
         });
-    if (_.state === c.Rj.EXPIRED)
+    if (h.state === c.Rj.EXPIRED)
         return (0, i.jsxs)(r.Z, {
             children: [
                 (0, i.jsx)(r.Z.Header, { text: d.intl.string(d.t.C7ZRNz) }),
@@ -46,11 +46,11 @@ function h(e) {
                       return (t) =>
                           (0, i.jsx)(e, {
                               ...t,
-                              guildTemplate: _
+                              guildTemplate: h
                           });
                   });
               },
-              submitting: _.state === c.Rj.ACCEPTING,
+              submitting: h.state === c.Rj.ACCEPTING,
               color: r.Z.Button.Colors.GREEN,
               children: d.intl.string(d.t['a3Gl+f'])
           });
@@ -64,8 +64,8 @@ function h(e) {
                         children: [
                             (0, i.jsx)(s.Z, { className: u.icon }),
                             (0, i.jsx)(r.Z.Info, {
-                                title: _.name,
-                                children: d.intl.format(d.t.cGXXHB, { usageCount: String(null !== (t = _.usageCount) && void 0 !== t ? t : 0) })
+                                title: h.name,
+                                children: d.intl.format(d.t.cGXXHB, { usageCount: String(null !== (t = h.usageCount) && void 0 !== t ? t : 0) })
                             })
                         ]
                     }),

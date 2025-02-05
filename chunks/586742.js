@@ -1,8 +1,8 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => N });
 var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    o = n.n(r),
+    r = n(192379),
+    o = n(120356),
+    l = n.n(o),
     a = n(442837),
     s = n(481060),
     d = n(239091),
@@ -11,30 +11,30 @@ var i = n(200651),
     h = n(358221),
     _ = n(933557),
     p = n(352978),
-    g = n(27457),
-    f = n(796638),
+    f = n(27457),
+    g = n(796638),
     m = n(592125),
     v = n(131951),
     x = n(944486),
     E = n(906037),
-    Z = n(804570),
-    C = n(501787),
-    I = n(65154),
-    S = n(388032),
-    b = n(827202);
-function y(e) {
+    C = n(804570),
+    Z = n(501787),
+    S = n(65154),
+    I = n(388032),
+    y = n(827202);
+function b(e) {
     var t;
-    let { participant: n, channel: l, context: r } = e,
-        o = null === (t = n.user) || void 0 === t ? void 0 : t.id;
-    return (0, a.e7)([v.Z], () => null != n.user && null != r && null != l && v.Z.isLocalVideoDisabled(o, r), [o, n.user, r, l]) ? null : (0, i.jsx)(g.ZP, { ...e });
+    let { participant: n, channel: r, context: o } = e,
+        l = null === (t = n.user) || void 0 === t ? void 0 : t.id;
+    return (0, a.e7)([v.Z], () => null != n.user && null != o && null != r && v.Z.isLocalVideoDisabled(l, o), [l, n.user, o, r]) ? null : (0, i.jsx)(f.ZP, { ...e });
 }
-function N(e) {
-    let { context: t = I.Yn.DEFAULT, participants: r, locked: a, widget: c, channel: u, width: h, height: _, containerRef: g } = e,
-        f = (e, l) => {
-            (0, d.jW)(l, async () => {
-                let { default: l } = await Promise.all([n.e('79695'), n.e('69220'), n.e('351')]).then(n.bind(n, 881351));
+function w(e) {
+    let { context: t = S.Yn.DEFAULT, participants: o, locked: a, widget: c, channel: u, width: h, height: _, containerRef: f } = e,
+        g = (e, r) => {
+            (0, d.jW)(r, async () => {
+                let { default: r } = await Promise.all([n.e('79695'), n.e('69220'), n.e('351')]).then(n.bind(n, 881351));
                 return (n) =>
-                    (0, i.jsx)(l, {
+                    (0, i.jsx)(r, {
                         ...n,
                         user: e.user,
                         showMediaItems: !0,
@@ -42,8 +42,8 @@ function N(e) {
                     });
             });
         },
-        m = r.length > 0 && null != t && null != u && (!a || c.pinned);
-    l.useEffect(() => {
+        m = o.length > 0 && null != t && null != u && (!a || c.pinned);
+    r.useEffect(() => {
         (0, E.m3)(
             {
                 locked: a,
@@ -55,24 +55,24 @@ function N(e) {
         );
     }, [a, c, m]);
     let v = 'boolean' != typeof c.meta.horizontal || c.meta.horizontal;
-    return 0 !== r.length || a
+    return 0 !== o.length || a
         ? null == u
             ? null
             : (0, i.jsx)('div', {
-                  ref: g,
-                  className: o()({
-                      [b.videoList]: !0,
-                      [b.vertical]: !v,
-                      [b.hidden]: !m && a
+                  ref: f,
+                  className: l()({
+                      [y.videoList]: !0,
+                      [y.vertical]: !v,
+                      [y.hidden]: !m && a
                   }),
                   style: { opacity: c.opacity },
-                  children: r.map((e) =>
+                  children: o.map((e) =>
                       (0, i.jsx)(
-                          y,
+                          b,
                           {
                               participant: e,
                               width: h,
-                              className: b.tile,
+                              className: y.tile,
                               containerStyle: {
                                   width: h,
                                   height: _
@@ -82,7 +82,7 @@ function N(e) {
                               inPopout: !0,
                               inCall: !0,
                               noBorder: !0,
-                              onContextMenu: a ? void 0 : f,
+                              onContextMenu: a ? void 0 : g,
                               forceIdle: a,
                               paused: !m,
                               inOverlayPopout: !0,
@@ -94,38 +94,38 @@ function N(e) {
               })
         : a
           ? null
-          : (0, i.jsx)(Z.E, {
-                emptyText: S.intl.string(S.t['aTiM4+']),
+          : (0, i.jsx)(C.E, {
+                emptyText: I.intl.string(I.t['aTiM4+']),
                 icon: s.Odl,
                 absolute: !0
             });
 }
-function w(e) {
+function N(e) {
     let t = (0, a.e7)([x.Z, m.Z], () => m.Z.getChannel(x.Z.getVoiceChannelId())),
         n = (0, _.ZP)(t),
-        r = (0, a.Wu)([h.Z], () => (null != t ? h.Z.getVideoParticipants(t.id) : [])),
-        o = (0, a.e7)([h.Z], () => (null != t ? h.Z.getParticipantsVersion(t.id) : 0)),
+        o = (0, a.Wu)([h.Z], () => (null != t ? h.Z.getVideoParticipants(t.id) : [])),
+        l = (0, a.e7)([h.Z], () => (null != t ? h.Z.getParticipantsVersion(t.id) : 0)),
         s = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
-        { width: d, height: p, ref: g } = (0, u.Z)(e.locked, e.widget.pinned),
-        { participantTileWidth: v, visibleParticipants: E } = (0, f.ZB)(s ? (null != d ? d : e.width) : null != p ? p : e.height, r, {
-            tileWidth: C.vZ,
-            tileMinWidth: C.mo,
-            tileMargin: C.F$,
+        { width: d, height: p, ref: f } = (0, u.Z)(e.locked, e.widget.pinned),
+        { participantTileWidth: v, visibleParticipants: E } = (0, g.ZB)(s ? (null != d ? d : e.width) : null != p ? p : e.height, o, {
+            tileWidth: Z.vZ,
+            tileMinWidth: Z.mo,
+            tileMargin: Z.F$,
             limit: 8,
             cropSelfVideo: !0,
-            version: o
+            version: l
         }),
-        Z = {
+        C = {
             id: e.widget.id,
             size: e.widget.size,
             containerWidth: e.width,
             containerHeight: e.height
         },
-        I = l.useRef(Z);
+        S = r.useRef(C);
     return (
-        l.useLayoutEffect(() => void (I.current = Z)),
-        l.useLayoutEffect(() => {
-            let { size: e, id: t, containerWidth: n, containerHeight: i } = I.current;
+        r.useLayoutEffect(() => void (S.current = C)),
+        r.useLayoutEffect(() => {
+            let { size: e, id: t, containerWidth: n, containerHeight: i } = S.current;
             ((s && e.height > e.width) || (!s && e.width > e.height)) &&
                 (0, c.nv)({
                     widgetId: t,
@@ -136,15 +136,15 @@ function w(e) {
                     }
                 });
         }, [s]),
-        (0, i.jsx)(N, {
+        (0, i.jsx)(w, {
             ...e,
             channel: t,
             title: null != n ? n : '',
             participants: E,
-            participantsVersion: o,
+            participantsVersion: l,
             width: s ? v : null != d ? d : e.width,
             height: s ? (null != p ? p : e.height) : v,
-            containerRef: g
+            containerRef: f
         })
     );
 }

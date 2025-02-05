@@ -101,7 +101,7 @@ let j = (e) => {
                   ]
               });
     },
-    A = (e) => {
+    y = (e) => {
         var t;
         let { relationshipType: n, userId: l, showingBanner: a } = e,
             r = null === (t = v.default.getUser(l)) || void 0 === t ? void 0 : t.bot,
@@ -208,7 +208,7 @@ let j = (e) => {
                 return null;
         }
     },
-    y = (e) => {
+    A = (e) => {
         let { channelId: t, otherUserId: n } = e,
             a = l.useCallback(() => {
                 (0, s.showToast)((0, s.createToast)(T.intl.string(T.t.a2j0ho), s.ToastType.FAILURE));
@@ -268,7 +268,7 @@ let j = (e) => {
             o || u
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(y, {
+                          (0, i.jsx)(A, {
                               channelId: n.id,
                               otherUserId: t
                           }),
@@ -277,7 +277,7 @@ let j = (e) => {
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(A, {
+                          (0, i.jsx)(y, {
                               relationshipType: c,
                               userId: t,
                               showingBanner: l

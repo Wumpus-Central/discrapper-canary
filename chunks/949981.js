@@ -10,29 +10,29 @@ var l = n(512722),
     d = n(594174),
     u = n(823379),
     m = n(358595),
-    h = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    h = n(388032),
     p = n(658412);
 function g(e) {
     let t,
         { invite: n, author: l, currentUserId: g, onTransitionToInviteChannel: f, onAcceptInstantInvite: x } = e,
-        E = g === l.id,
-        C = n.state === h.r2o.ACCEPTING,
-        v = (0, r.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
-    a()(null == v || v.isPrivate(), 'must be a private channel');
-    let I = null != v;
-    if (null == v) {
+        C = g === l.id,
+        v = n.state === _.r2o.ACCEPTING,
+        E = (0, r.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
+    a()(null == E || E.isPrivate(), 'must be a private channel');
+    let I = null != E;
+    if (null == E) {
         if (null == n.channel) return (0, i.jsx)(m.Z, {});
-        (v = (0, o.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
+        (E = (0, o.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
     } else {
-        t = v.recipients.reduce((e, t) => {
+        t = E.recipients.reduce((e, t) => {
             let n = d.default.getUser(t);
             return null != n && e.push(n), e;
         }, []);
         let e = d.default.getCurrentUser();
         I && null != e && t.push(e);
     }
-    let N = v.name;
+    let N = E.name;
     (null == N || '' === N) &&
         (N =
             t.length > 0
@@ -40,14 +40,14 @@ function g(e) {
                       .filter(u.lm)
                       .map((e) => e.username)
                       .join(', ')
-                : _.intl.string(_.t.LJpTRE));
+                : h.intl.string(h.t.LJpTRE));
     let S = I ? f : x,
-        T = _.intl.string(_.t.XpeFYm),
+        T = h.intl.string(h.t.XpeFYm),
         b = s.Z.Button.Colors.GREEN;
-    I && ((T = _.intl.string(_.t.cEnaW1)), (b = s.Z.Button.Colors.PRIMARY));
-    let A = _.intl.string(_.t['3p3/BA']);
+    I && ((T = h.intl.string(h.t.cEnaW1)), (b = s.Z.Button.Colors.PRIMARY));
+    let A = h.intl.string(h.t['3p3/BA']);
     return (
-        E && (A = _.intl.string(_.t.qmtuXF)),
+        C && (A = h.intl.string(h.t.qmtuXF)),
         (0, i.jsxs)(s.Z, {
             children: [
                 (0, i.jsx)(s.Z.Header, { text: A }),
@@ -57,7 +57,7 @@ function g(e) {
                             className: p.headerLine,
                             children: [
                                 (0, i.jsx)(s.Z.Icon, {
-                                    channel: v,
+                                    channel: E,
                                     onClick: I ? S : void 0
                                 }),
                                 (0, i.jsx)(s.Z.Info, {
@@ -69,7 +69,7 @@ function g(e) {
                         }),
                         (0, i.jsx)(s.Z.Button, {
                             onClick: S,
-                            submitting: C,
+                            submitting: v,
                             isDisabled: I,
                             color: b,
                             children: T

@@ -9,9 +9,9 @@ function o(e) {
     let { message: t, usernameHook: o, compact: c, guildId: d } = e,
         u = (0, a.ZP)(t),
         m = o(u),
-        h = l.Z.getWelcomeMessageKind(d),
-        _ = l.Z.getSystemMessageUserJoin(t.id, h),
-        p = s.intl.format(_, {
+        _ = l.Z.getWelcomeMessageKind(d),
+        h = l.Z.getSystemMessageUserJoin(t.id, _),
+        p = s.intl.format(h, {
             username: u.nick,
             usernameHook: m
         });

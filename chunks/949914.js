@@ -135,7 +135,7 @@ let k = (e) => {
             },
             { isCancelled: F, isPastDue: H, subscriptionPrice: z, memberSince: Y, nextRenewalDate: W, nextRenewalLabel: K, isTrial: X } = T,
             q = n.soft_deleted || null == o || U,
-            Q = () =>
+            J = () =>
                 F
                     ? (0, i.jsx)(c.IGR, { text: y.intl.string(y.t['7uFZGh']) })
                     : X
@@ -157,7 +157,7 @@ let k = (e) => {
                                   })
                           })
                         : null,
-            J = () =>
+            Q = () =>
                 U
                     ? (0, i.jsx)(c.ua7, {
                           text: y.intl.string(y.t.nv1IqK),
@@ -203,8 +203,8 @@ let k = (e) => {
                                                     className: Z.tierName,
                                                     children: n.name
                                                 }),
-                                                Q(),
-                                                J()
+                                                J(),
+                                                Q()
                                             ]
                                         })
                                     ]

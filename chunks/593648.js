@@ -398,7 +398,7 @@ class K extends s.PureComponent {
                         children: U.intl.string(U.t.xSmFQE)
                     })
                 }),
-                (0, i.jsx)(Q, {}),
+                (0, i.jsx)(J, {}),
                 (0, i.jsx)(et, {}),
                 (0, i.jsx)(A.F, {
                     setting: M.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
@@ -511,7 +511,7 @@ function q() {
           })
         : null;
 }
-function Q() {
+function J() {
     let e = I.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
         { manuallyOpen: t } = I.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
         n = (0, c.e7)([R.ZP], () => R.ZP.useNewNotifications),
@@ -527,7 +527,7 @@ function Q() {
                                 value: n,
                                 disabled: r || !n,
                                 note: U.intl.string(U.t.frbLrK),
-                                onChange: () => J(a),
+                                onChange: () => Q(a),
                                 children: U.intl.string(U.t.z21l8P)
                             })
                         })
@@ -594,7 +594,7 @@ function Q() {
           })
         : null;
 }
-async function J(e) {
+async function Q(e) {
     e(!0);
     let t = await (0, N.Tn)();
     0 === t.length

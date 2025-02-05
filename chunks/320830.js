@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(477690),
     d = n(481060),
     u = n(624138),
-    h = n(610385);
-function _(e, t, n) {
+    _ = n(610385);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -80,7 +80,7 @@ let g = (0, u.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
             }
             render() {
                 return (0, i.jsx)('div', {
-                    className: h.wrapper,
+                    className: _.wrapper,
                     children: (0, i.jsx)(d.Sfi.Consumer, {
                         children: (t) => {
                             let { reducedMotion: n } = t;
@@ -94,14 +94,14 @@ let g = (0, u.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
             }
             constructor(...e) {
                 super(...e),
-                    _(this, 'timeout', void 0),
-                    _(this, 'anim', new o.Z.Value(p.START)),
-                    _(this, 'state', { shouldAnimate: !s.tq }),
-                    _(this, 'handleResize', () => {
+                    h(this, 'timeout', void 0),
+                    h(this, 'anim', new o.Z.Value(p.START)),
+                    h(this, 'state', { shouldAnimate: !s.tq }),
+                    h(this, 'handleResize', () => {
                         let e = window.innerWidth > g;
                         !this.state.shouldAnimate && e && this.anim.setValue(p.END), this.setState({ shouldAnimate: e });
                     }),
-                    _(this, 'handleResizeDebounced', a()(this.handleResize, 60));
+                    h(this, 'handleResizeDebounced', a()(this.handleResize, 60));
             }
         };
     };

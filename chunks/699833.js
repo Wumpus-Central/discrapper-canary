@@ -10,12 +10,12 @@ var l = n(913527),
     d = n(88840);
 let u = (e) => a()().diff(a().unix(e), 'days');
 function m(e) {
-    var t, l, a, m, h;
+    var t, l, a, m, _;
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
-    let _ = e.message.embeds[0],
-        p = null !== (a = null === (t = _.fields) || void 0 === t ? void 0 : t.find((e) => e.rawName === o.Cg.CLASSIFICATION_ID)) && void 0 !== a ? a : void 0,
+    let h = e.message.embeds[0],
+        p = null !== (a = null === (t = h.fields) || void 0 === t ? void 0 : t.find((e) => e.rawName === o.Cg.CLASSIFICATION_ID)) && void 0 !== a ? a : void 0,
         g = null !== (m = null == p ? void 0 : p.rawValue) && void 0 !== m ? m : void 0,
-        f = null !== (h = null === (l = _.fields) || void 0 === l ? void 0 : l.find((e) => e.rawName === o.Cg.INCIDENT_TIMESTAMP)) && void 0 !== h ? h : void 0,
+        f = null !== (_ = null === (l = h.fields) || void 0 === l ? void 0 : l.find((e) => e.rawName === o.Cg.INCIDENT_TIMESTAMP)) && void 0 !== _ ? _ : void 0,
         x = null == f || null == f.rawValue ? void 0 : parseFloat(f.rawValue);
     return null == g || null == x
         ? null

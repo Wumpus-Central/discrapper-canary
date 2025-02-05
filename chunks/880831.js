@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => P,
-    z: () => A
+    z: () => y
 }),
     n(47120);
 var i = n(200651),
@@ -29,8 +29,8 @@ var i = n(200651),
     T = n(981631),
     S = n(217702),
     j = n(644921);
-let A = 10 * Z.Z.Millis.SECOND;
-function y(e) {
+let y = 10 * Z.Z.Millis.SECOND;
+function A(e) {
     var t;
     let { message: n } = e,
         { isBlocked: a, isIgnored: s } = (0, c.cj)(
@@ -57,7 +57,7 @@ function y(e) {
             },
             [n.channel_id, n.id]
         ),
-        A =
+        y =
             null != n.content && '' !== n.content
                 ? (0, g.ZP)(n, {
                       isInteracting: E,
@@ -65,11 +65,11 @@ function y(e) {
                   }).content
                 : null,
         {
-            contentPlaceholder: y,
+            contentPlaceholder: A,
             renderedContent: P,
             trailingIcon: R,
             leadingIcon: M
-        } = (0, C.f)(n, A, a, s, j.messageContent, {
+        } = (0, C.f)(n, y, a, s, j.messageContent, {
             trailingIconClass: j.messageContentTrailingIcon,
             leadingIconClass: j.messageContentLeadingIcon,
             iconSize: S.WW
@@ -102,7 +102,7 @@ function y(e) {
         children: [
             (0, i.jsxs)('div', {
                 className: r()(j.messageContentWrapper, { [j.mentioned]: n.mentioned }),
-                children: [null != k ? null : M, null !== (t = null != P ? P : k) && void 0 !== t ? t : (0, i.jsx)('span', { children: y }), null != k ? null : R]
+                children: [null != k ? null : M, null !== (t = null != P ? P : k) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }), null != k ? null : R]
             }),
             (0, i.jsx)('img', {
                 alt: '',
@@ -167,7 +167,7 @@ function P(e) {
             channelId: t,
             isFrozen: a,
             count: 3,
-            lingerMs: A
+            lingerMs: y
         }),
         f = l.useRef({}),
         [g, _] = l.useState({}),
@@ -232,7 +232,7 @@ function P(e) {
                         ref: (e) => C(t.message.id, null != e ? e.offsetHeight : null),
                         className: j.toastWrapper,
                         style: e,
-                        children: (0, i.jsx)(y, { message: t.message })
+                        children: (0, i.jsx)(A, { message: t.message })
                     })
                 )
             })

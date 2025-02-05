@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => _,
-    fO: () => h,
+    ZP: () => h,
+    fO: () => _,
     sF: () => m
 });
 var i = n(200651),
@@ -13,7 +13,7 @@ var i = n(200651),
     d = n(388032),
     u = n(604643);
 function m(e) {
-    let { label: t, ariaLabel: n, tooltipText: l, tooltipColor: m, icon: h, iconProps: _, onClick: p, onTooltipShow: g, onTooltipHide: f, disabled: x, dangerous: E, separator: C, sparkle: v, showNewBadge: I, buttonClassName: N, children: S, ...T } = e,
+    let { label: t, ariaLabel: n, tooltipText: l, tooltipColor: m, icon: _, iconProps: h, onClick: p, onTooltipShow: g, onTooltipHide: f, disabled: x, dangerous: C, separator: v, sparkle: E, showNewBadge: I, buttonClassName: N, children: S, ...T } = e,
         { canShowReactionsOnMessageHover: b } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (
         c.Xb.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 }),
@@ -38,14 +38,14 @@ function m(e) {
                             },
                             'aria-label': null != n ? n : t,
                             disabled: x,
-                            dangerous: E,
+                            dangerous: C,
                             ...T,
                             children: [
-                                null != h
-                                    ? (0, i.jsx)(h, {
+                                null != _
+                                    ? (0, i.jsx)(_, {
                                           className: u.icon,
                                           color: 'currentColor',
-                                          ..._
+                                          ...h
                                       })
                                     : null,
                                 null != S
@@ -54,7 +54,7 @@ function m(e) {
                                           children: S
                                       })
                                     : null,
-                                v && (0, i.jsx)(r.K1N, {}),
+                                E && (0, i.jsx)(r.K1N, {}),
                                 I &&
                                     (0, i.jsx)(r.IGR, {
                                         text: d.intl.string(d.t.y2b7CA),
@@ -63,18 +63,18 @@ function m(e) {
                                     })
                             ]
                         }),
-                        C && (0, i.jsx)(o.Z0, {})
+                        v && (0, i.jsx)(o.Z0, {})
                     ]
                 });
             }
         })
     );
 }
-function h(e) {
+function _(e) {
     let { className: t } = e;
     return (0, i.jsx)('div', { className: a()(u.separator, t) });
 }
-function _(e) {
+function h(e) {
     let { children: t, ...n } = e,
         { canShowReactionsOnMessageHover: l } = c.ZP.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
     return (

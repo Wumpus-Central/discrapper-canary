@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => H,
-    default: () => Q
+    default: () => J
 }),
     n(47120),
     n(411104);
@@ -290,7 +290,7 @@ let q = {
     6: 'Select Pause Duration',
     7: 'Confirm Pause Duration'
 };
-function Q(e) {
+function J(e) {
     var t;
     let n,
         { premiumSubscription: i, transitionState: l, onClose: a, analyticsLocations: c, analyticsLocation: u, initialStep: g } = e,
@@ -309,7 +309,7 @@ function Q(e) {
     let L = Z === w.p9.TIER_0 || Z === w.p9.TIER_1 || Z === w.p9.TIER_2;
     null == g && (g = L ? 1 : 2);
     let { analyticsLocations: H } = (0, p.ZP)(c, x.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
-        [z, W, Q, J] = (function (e, t, n) {
+        [z, W, J, Q] = (function (e, t, n) {
             let [i, s] = r.useState(e),
                 [l, a] = r.useState(Date.now()),
                 [o] = r.useState(Date.now()),
@@ -337,8 +337,8 @@ function Q(e) {
                 T.default.track(U.rMx.CANCELLATION_FLOW_STEP, {
                     from_step: q[e],
                     to_step: null,
-                    step_duration_ms: Date.now() - Q,
-                    flow_duration_ms: Date.now() - J,
+                    step_duration_ms: Date.now() - J,
+                    flow_duration_ms: Date.now() - Q,
                     location_stack: c,
                     ...X(i)
                 });

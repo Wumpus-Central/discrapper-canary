@@ -1,5 +1,5 @@
 n.d(t, {
-    J: () => C,
+    J: () => v,
     Z: () => A
 }),
     n(47120),
@@ -15,8 +15,8 @@ var s = n(570140),
     d = n(430824),
     u = n(496675),
     m = n(914010),
-    h = n(594174),
-    _ = n(981631);
+    _ = n(594174),
+    h = n(981631);
 function p(e, t, n) {
     return (
         t in e
@@ -38,10 +38,10 @@ let g = {
     },
     f = g,
     x = {},
-    E = null,
-    C = 86400000;
-var v = (((l = v || {}).IS_OWNER = 'is_owner'), (l.IS_ADMIN = 'is_admin'), (l.IS_COMMUNITY = 'is_community'), (l.GUILD_SIZE = 'guild_size'), (l.IS_HUB = 'is_hub'), (l.IS_VIEWING = 'is_viewing'), (l.GUILD_PERMISSIONS = 'guild_permissions'), (l.GUILD_SIZE_ALL = 'guild_size_all'), l);
-let I = new Set(Object.values(v));
+    C = null,
+    v = 86400000;
+var E = (((l = E || {}).IS_OWNER = 'is_owner'), (l.IS_ADMIN = 'is_admin'), (l.IS_COMMUNITY = 'is_community'), (l.GUILD_SIZE = 'guild_size'), (l.IS_HUB = 'is_hub'), (l.IS_VIEWING = 'is_viewing'), (l.GUILD_PERMISSIONS = 'guild_permissions'), (l.GUILD_SIZE_ALL = 'guild_size_all'), l);
+let I = new Set(Object.values(E));
 function N(e) {
     var t;
     return (
@@ -60,7 +60,7 @@ function N(e) {
                         continue;
                     }
                 }
-                if ((t.includes('is_community') && !s.hasFeature(_.oNc.COMMUNITY)) || (t.includes('is_hub') && !s.hasFeature(_.oNc.HUB))) continue;
+                if ((t.includes('is_community') && !s.hasFeature(h.oNc.COMMUNITY)) || (t.includes('is_hub') && !s.hasFeature(h.oNc.HUB))) continue;
                 if (t.includes('guild_permissions')) {
                     if (0 === i.length) continue;
                     let e = !1;
@@ -74,9 +74,9 @@ function N(e) {
                         } catch (e) {}
                     if (!e) continue;
                 }
-                let o = h.default.getCurrentUser(),
+                let o = _.default.getCurrentUser(),
                     d = (null == o ? void 0 : o.id) === s.ownerId,
-                    p = u.Z.can(_.Plq.ADMINISTRATOR, s);
+                    p = u.Z.can(h.Plq.ADMINISTRATOR, s);
                 if ((t.includes('is_owner') && !d) || (t.includes('is_admin') && !p)) continue;
                 null == (x = null != x ? x : {})[e.key] && (x[e.key] = e);
                 let g = m.Z.getGuildId(),
@@ -91,11 +91,11 @@ function S(e) {
     let { survey: t } = e;
     if (((f.lastFetched = Date.now()), null == f.hiddenSurveys && (f.hiddenSurveys = {}), null != t && null == f.hiddenSurveys[t.key])) {
         if (!N(t)) return;
-        E = t;
+        C = t;
     }
 }
 function T() {
-    if (null != E && (N(E) || ((E = null), 0))) return !1;
+    if (null != C && (N(C) || ((C = null), 0))) return !1;
     !(function () {
         let e = Object.values((x = null != x ? x : {}))[0];
         if (null != e && N(e)) {
@@ -105,7 +105,7 @@ function T() {
             });
             return;
         }
-        if (null != E) E = null;
+        if (null != C) C = null;
     })();
 }
 class b extends (i = r.ZP.PersistedStore) {
@@ -116,7 +116,7 @@ class b extends (i = r.ZP.PersistedStore) {
         return f;
     }
     getCurrentSurvey() {
-        return E;
+        return C;
     }
     getSurveyOverride() {
         return f.surveyOverride;
@@ -150,12 +150,12 @@ p(b, 'displayName', 'SurveyStore'),
 let A = new b(s.Z, {
     CONNECTION_OPEN: function () {
         var e;
-        (!(null != f.lastFetched && Date.now() - (null !== (e = f.lastFetched) && void 0 !== e ? e : 0) < C) || null != f.surveyOverride) && (0, o.wk)(f.surveyOverride, !0);
+        (!(null != f.lastFetched && Date.now() - (null !== (e = f.lastFetched) && void 0 !== e ? e : 0) < v) || null != f.surveyOverride) && (0, o.wk)(f.surveyOverride, !0);
     },
     SURVEY_FETCHED: S,
     SURVEY_HIDE: function (e) {
         let { key: t } = e;
-        (f.hiddenSurveys[t] = !0), (E = null), (x = null != x ? x : {}), delete x[t];
+        (f.hiddenSurveys[t] = !0), (C = null), (x = null != x ? x : {}), delete x[t];
     },
     SURVEY_OVERRIDE: function (e) {
         let { id: t } = e;

@@ -51,7 +51,7 @@ function b() {
                 label: 'Balance Widget Menu',
                 children: (0, i.jsx)(_.V9, {
                     ctaText: N.intl.string(N.t['H57f4+']),
-                    ctaOnClick: () => {},
+                    ctaOnClick: T.dG4,
                     isCoachmarkEnabled: !1
                 })
             }),
@@ -139,7 +139,7 @@ function b() {
                 children: (0, i.jsx)(g.L, {
                     ctaText: N.intl.string(N.t['H57f4+']),
                     linkText: N.intl.string(N.t['7f4H7O']),
-                    ctaOnClick: () => {}
+                    ctaOnClick: T.dG4
                 })
             })
         ]
@@ -183,11 +183,11 @@ function v() {
                 label: 'Onboarding Coachmark',
                 children: [
                     (0, i.jsx)(E.d, {
-                        onClose: () => {},
+                        onClose: T.dG4,
                         renderTail: !1
                     }),
                     (0, i.jsx)(E.d, {
-                        onClose: () => {},
+                        onClose: T.dG4,
                         renderTail: !0
                     })
                 ]
@@ -196,8 +196,8 @@ function v() {
                 label: 'Balance Widget Coachmark',
                 children: (0, i.jsx)(p.E, {
                     earnedOrbsQuantity: 200,
-                    ctaOnClick: () => {},
-                    linkTo: '/'
+                    ctaOnClick: T.dG4,
+                    linkOnClick: T.dG4
                 })
             })
         ]

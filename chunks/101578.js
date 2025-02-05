@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
 var l = n(442837),
@@ -10,9 +10,9 @@ var l = n(442837),
     d = n(158776),
     u = n(981631),
     m = n(616922),
-    h = n(634303);
-let _ = (e) => {
-    let { channel: t, message: n, hideParty: _ } = e,
+    _ = n(634303);
+let h = (e) => {
+    let { channel: t, message: n, hideParty: h } = e,
         { analyticsLocations: p } = (0, r.ZP)(),
         g = (0, l.e7)([c.default], () => c.default.getId()),
         f = (0, l.e7)(
@@ -28,7 +28,7 @@ let _ = (e) => {
             [n, t, g]
         );
     return (0, i.jsx)(a.Z, {
-        className: h.container,
+        className: _.container,
         activity: f,
         activityActionType: null != n.activity ? n.activity.type : null,
         partyId: null != n.activity ? n.activity.party_id : null,
@@ -37,7 +37,7 @@ let _ = (e) => {
         message: n,
         channelId: t.id,
         guildId: t.getGuildId(),
-        hideParty: _,
+        hideParty: h,
         isSender: n.author.id === g,
         analyticsLocations: p
     });

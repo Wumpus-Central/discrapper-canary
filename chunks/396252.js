@@ -10,16 +10,16 @@ var l = n(120356),
     d = n(739566),
     u = n(464891),
     m = n(83561),
-    h = n(834129),
-    _ = n(674563),
+    _ = n(834129),
+    h = n(674563),
     p = n(388032),
     g = n(403498);
 function f(e) {
     var t;
     let { message: n, compact: l, usernameHook: f, channel: x } = e,
-        E = (0, r.e7)([c.Z], () => c.Z.getGuild(x.guild_id)),
-        C = (0, d.ZP)(n),
-        v = f(C),
+        C = (0, r.e7)([c.Z], () => c.Z.getGuild(x.guild_id)),
+        v = (0, d.ZP)(n),
+        E = f(v),
         {
             avatarSrc: I,
             eventHandlers: { onMouseEnter: N, onMouseLeave: S }
@@ -27,7 +27,7 @@ function f(e) {
     return (0, i.jsx)('div', {
         onMouseEnter: N,
         onMouseLeave: S,
-        children: (0, i.jsx)(h.Z, {
+        children: (0, i.jsx)(_.Z, {
             className: a()(g.mainContainer, { [g.compact]: l }),
             iconNode: l ? null : (0, i.jsx)(m.S, { src: I }),
             iconContainerClassName: g.iconContainer,
@@ -50,7 +50,7 @@ function f(e) {
                                     children: p.intl.string(p.t.hG1StL)
                                 }),
                                 (0, i.jsx)(o.Z, {
-                                    type: _.Hb.SYSTEM_DM,
+                                    type: h.Hb.SYSTEM_DM,
                                     className: g.systemTag
                                 })
                             ]
@@ -61,9 +61,9 @@ function f(e) {
                     (0, i.jsx)('div', {
                         className: a()(g.__invalid_messageContent, { [g.compact]: l }),
                         children: p.intl.format(p.t.W0UBIy, {
-                            username: C.nick,
-                            usernameHook: v,
-                            guildName: null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : ''
+                            username: v.nick,
+                            usernameHook: E,
+                            guildName: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : ''
                         })
                     })
                 ]

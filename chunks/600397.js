@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => _ });
 var i = n(200651);
 n(192379);
 var l = n(657707),
@@ -10,11 +10,11 @@ var l = n(657707),
     d = n(834129),
     u = n(388032),
     m = n(560390);
-function h(e) {
-    let { message: t, channel: n, author: h, compact: _ } = e,
-        { nick: p } = (0, s.Sw)(h, n),
+function _(e) {
+    let { message: t, channel: n, author: _, compact: h } = e,
+        { nick: p } = (0, s.Sw)(_, n),
         g = (0, c.l)({
-            user: h,
+            user: _,
             channelId: n.id,
             guildId: void 0,
             messageId: void 0
@@ -46,7 +46,7 @@ function h(e) {
     });
     return (0, i.jsx)(d.Z, {
         iconNode: (0, i.jsx)(l.iWm, { size: 'sm' }),
-        compact: _,
+        compact: h,
         contentClassName: m.content,
         children: (0, i.jsx)('div', { children: x })
     });

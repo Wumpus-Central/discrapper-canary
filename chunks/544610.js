@@ -25,16 +25,16 @@ let b = !1,
     T = [],
     S = !1,
     j = new Set(),
-    A = null;
-function y() {
-    (Z = ''), (N = 0), (T = []), (j = new Set()), (b = !1), (A = null);
+    y = null;
+function A() {
+    (Z = ''), (N = 0), (T = []), (j = new Set()), (b = !1), (y = null);
 }
 function P(e) {
     (Z = e), (N = 0), R();
 }
 function R() {
     if (!b) return !1;
-    let e = _.Z.getChannel(A);
+    let e = _.Z.getChannel(y);
     if (0 === Z.trim().length) {
         var t;
         let n;
@@ -127,14 +127,14 @@ function O() {
 }
 function D(e) {
     if (e.key !== I.vTt) return !1;
-    (b = !0), M(), (i = O()), (A = null), P('');
+    (b = !0), M(), (i = O()), (y = null), P('');
 }
 function w(e) {
     if (e.key !== I.vTt) return !1;
     U();
 }
 function U() {
-    null != i && (i.destroy(), (i = null)), y();
+    null != i && (i.destroy(), (i = null)), A();
 }
 class B extends (l = c.ZP.Store) {
     initialize() {
@@ -173,24 +173,24 @@ class B extends (l = c.ZP.Store) {
         : (B[a] = r);
 let F = new B(d.Z, {
         CONNECTION_OPEN: function () {
-            y();
+            A();
         },
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;
             if (null != t) return !1;
             let i = b;
-            return y(), (b = i), (A = n), R();
+            return A(), (b = i), (y = n), R();
         },
         MODAL_PUSH: D,
         SHOW_ACTION_SHEET: D,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-            (b = !0), M(), (i = O()), (A = e.channelId), P('');
+            (b = !0), M(), (i = O()), (y = e.channelId), P('');
         },
         MODAL_POP: w,
         HIDE_ACTION_SHEET: w,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: U,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
-            (A = e.channelId), P(e.query);
+            (y = e.channelId), P(e.query);
         },
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
             N = e.row;

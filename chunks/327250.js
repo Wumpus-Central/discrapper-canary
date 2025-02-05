@@ -26,7 +26,7 @@ var l = n(120356),
     T = n(308083),
     S = n(388032),
     j = n(125712);
-function A(e) {
+function y(e) {
     let { user: t, guildId: n, onClose: l } = e,
         a = t.id,
         o = (0, r.e7)([E.Z, v.Z, g.default], () => (a === g.default.getId() ? E.Z.getStatus() : v.Z.getStatus(a, n)), [a, n]);
@@ -93,7 +93,7 @@ function A(e) {
         ]
     });
 }
-function y(e) {
+function A(e) {
     let { tag: t = 'div', text: n, disabled: l, children: r, onClick: o, ...c } = e;
     return (0, i.jsx)(s.ua7, {
         text: n,
@@ -130,7 +130,7 @@ function P(e) {
         ),
         Z = (0, u.b)(l),
         { analyticsLocations: N, newestAnalyticsLocation: T } = (0, c.ZP)(),
-        A = (0, f.sE)(a, {
+        y = (0, f.sE)(a, {
             targetUserId: t.id,
             location: T,
             locations: N
@@ -139,7 +139,7 @@ function P(e) {
     return (0, i.jsxs)('div', {
         className: j.bottomRow,
         children: [
-            (0, i.jsx)(y, {
+            (0, i.jsx)(A, {
                 disabled: P,
                 text: S.intl.string(S.t['g33r/P']),
                 onClick: () => {
@@ -152,7 +152,7 @@ function P(e) {
                     height: 24
                 })
             }),
-            (0, i.jsx)(y, {
+            (0, i.jsx)(A, {
                 disabled: !_,
                 text: S.intl.string(S.t['3glT6e']),
                 onClick: () => {
@@ -174,7 +174,7 @@ function P(e) {
                     color: s.TVs.colors.TEXT_NORMAL.css
                 })
             }),
-            (0, i.jsx)(y, {
+            (0, i.jsx)(A, {
                 disabled: !v,
                 text: S.intl.string(S.t['5MBJ5O']),
                 onClick: () => {
@@ -196,7 +196,7 @@ function P(e) {
                     color: s.TVs.colors.TEXT_NORMAL.css
                 })
             }),
-            (0, i.jsx)(y, {
+            (0, i.jsx)(A, {
                 disabled: !E,
                 text: Z ? S.intl.string(S.t.N86XcH) : S.intl.string(S.t.kTlLr6),
                 onClick: () => {
@@ -219,10 +219,10 @@ function P(e) {
                     color: s.TVs.colors.TEXT_NORMAL.css
                 })
             }),
-            (0, i.jsx)(y, {
+            (0, i.jsx)(A, {
                 text: S.intl.string(S.t.IHTjzM),
                 onClick: () => {
-                    A(f.jQ.COPY_ID), (0, b.JG)(t.id);
+                    y(f.jQ.COPY_ID), (0, b.JG)(t.id);
                 },
                 disabled: !b.wS,
                 children: (0, i.jsx)(s.VuL, {
@@ -244,7 +244,7 @@ function R(e) {
         : (0, i.jsxs)('div', {
               className: j.container,
               children: [
-                  (0, i.jsx)(A, {
+                  (0, i.jsx)(y, {
                       user: a,
                       guildId: n,
                       onClose: l

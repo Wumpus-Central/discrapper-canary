@@ -1,32 +1,32 @@
-n.d(t, { Ns: () => h }), n(47120);
+n.d(t, { Ns: () => _ }), n(47120);
 var i = n(192379),
     r = n(392711),
     a = n.n(r),
-    o = n(876215),
-    s = n(442837),
-    d = n(146282),
+    l = n(876215),
+    o = n(442837),
+    s = n(146282),
     c = n(26033),
-    l = n(897674),
+    d = n(897674),
     u = n(709054),
-    _ = n(206583);
-let f = new Set([o.s.PLAYED_GAME, o.s.LAUNCHED_ACTIVITY]),
-    p = (e) => f.has(e.content_type);
-function h(e) {
+    m = n(206583);
+let p = new Set([l.s.PLAYED_GAME, l.s.LAUNCHED_ACTIVITY]),
+    g = (e) => p.has(e.content_type);
+function _(e) {
     let { entries: t } = (function () {
-        let e = (0, l.Z)(_.YN.GAME_PROFILE_FEED),
-            t = (0, l.Z)(_.YN.GLOBAL_FEED),
+        let e = (0, d.Z)(m.YN.GAME_PROFILE_FEED),
+            t = (0, d.Z)(m.YN.GLOBAL_FEED),
             n = i.useMemo(
                 () =>
                     a()(t)
                         .unionBy(e, (e) => e.id)
-                        .filter(p)
+                        .filter(g)
                         .orderBy((e) => u.default.extractTimestamp(e.id), 'desc')
                         .uniqWith((e, t) => e.author_id === t.author_id && e.extra.application_id === t.extra.application_id)
                         .value(),
                 [e, t]
             );
         return {
-            requestId: (0, s.e7)([d.Z], () => d.Z.getFeedRequestId(_.YN.GAME_PROFILE_FEED)),
+            requestId: (0, o.e7)([s.Z], () => s.Z.getFeedRequestId(m.YN.GAME_PROFILE_FEED)),
             entries: n
         };
     })();

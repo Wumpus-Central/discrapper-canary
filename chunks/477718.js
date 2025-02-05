@@ -33,13 +33,13 @@ function S(e) {
         T = g.J5(n),
         S = (0, p.LJ)(n.id),
         j = (0, c.e7)([C.ZP], () => (null != n.userId ? C.ZP.getMember(a.guildId, n.userId) : null), [a.guildId, n.userId]),
-        A = l.useCallback(
+        y = l.useCallback(
             (e) => (t) => {
                 t.preventDefault(), t.stopPropagation(), null != e && (0, m.RE)(e, u);
             },
             [u]
         ),
-        y = l.useCallback(
+        A = l.useCallback(
             () =>
                 null == n.user
                     ? null
@@ -51,7 +51,7 @@ function S(e) {
                               return (0, i.jsx)(d.P3F, {
                                   tag: 'span',
                                   className: Z.username,
-                                  onClick: A(j),
+                                  onClick: y(j),
                                   onMouseEnter: l,
                                   onMouseLeave: r,
                                   children: (0, i.jsxs)(d.Text, {
@@ -68,7 +68,7 @@ function S(e) {
                               });
                           }
                       }),
-            [A, n.user, a.guildId, j]
+            [y, n.user, a.guildId, j]
         )();
     return (0, i.jsxs)('div', {
         className: r()(N.modInfoItem, Z.auditLogItem),
@@ -109,7 +109,7 @@ function S(e) {
                     children: (0, i.jsxs)('div', {
                         className: Z.auditLogReason,
                         children: [
-                            y,
+                            A,
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
@@ -126,7 +126,7 @@ function S(e) {
                     children: (0, i.jsxs)('div', {
                         className: Z.auditLogSecondary,
                         children: [
-                            y,
+                            A,
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',

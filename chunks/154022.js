@@ -72,12 +72,12 @@ function z(e) {
             }),
             (0, i.jsx)(I.F, {
                 setting: D.s6.ACCESSIBILITY_PROFILE_COLORS,
-                children: (0, i.jsx)(Q, {})
+                children: (0, i.jsx)(J, {})
             }),
             (0, _.b)()
                 ? (0, i.jsxs)(I.F, {
                       setting: D.s6.ACCESSIBILITY_CONTRAST,
-                      children: [(0, i.jsx)(J, {}), ' ']
+                      children: [(0, i.jsx)(Q, {}), ' ']
                   })
                 : null,
             (0, i.jsx)(I.F, {
@@ -282,7 +282,7 @@ function q() {
         })
     });
 }
-function Q() {
+function J() {
     let e = (0, c.e7)([g.Z], () => g.Z.syncProfileThemeWithUserTheme),
         t = s.useRef(null);
     return (
@@ -308,7 +308,7 @@ function Q() {
         })
     );
 }
-function J() {
+function Q() {
     let [e] = (0, c.Wu)([g.Z], () => [g.Z.syncForcedColors, g.Z.systemForcedColors]),
         [t, n] = s.useState(e);
     s.useEffect(() => {

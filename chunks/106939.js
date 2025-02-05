@@ -272,7 +272,7 @@ function W() {
     )
         return null;
     let q = Z !== L.dG.SETTINGS ? Z : L.dG.ACTIVITY,
-        Q = F[q];
+        J = F[q];
     return (0, i.jsx)(x.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
@@ -294,7 +294,7 @@ function W() {
                     children: (0, i.jsx)(u.Ttm, {
                         children: (0, i.jsx)('div', {
                             className: U.sideNavContent,
-                            children: Q()
+                            children: J()
                         })
                     })
                 })

@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(442837),
     u = n(481060),
     m = n(568836),
-    h = n(100527),
-    _ = n(906732),
+    _ = n(100527),
+    h = n(906732),
     p = n(963249),
     g = n(594174),
     f = n(78839),
     x = n(55935),
-    E = n(63063),
-    C = n(74538),
-    v = n(276444),
+    C = n(63063),
+    v = n(74538),
+    E = n(276444),
     I = n(786397),
     N = n(474936),
     S = n(981631),
@@ -43,7 +43,7 @@ class A extends l.Component {
     }
     renderBody(e, t, n) {
         let { trialOffer: i } = this.props;
-        return e && !n && void 0 === i.redeemed_at ? T.intl.format(T.t.LwCwT0, { helpdeskArticle: E.Z.getArticleURL(S.BhN.REFERRAL_PROGRAM) }) : t ? null : T.intl.string(T.t.lQLlOT);
+        return e && !n && void 0 === i.redeemed_at ? T.intl.format(T.t.LwCwT0, { helpdeskArticle: C.Z.getArticleURL(S.BhN.REFERRAL_PROGRAM) }) : t ? null : T.intl.string(T.t.lQLlOT);
     }
     renderActions(e, t, n) {
         let { trialOffer: l, currentUser: a, analyticsLocations: r } = this.props,
@@ -53,7 +53,7 @@ class A extends l.Component {
                 },
                 color: u.zxk.Colors.BRAND
             },
-            o = a.id !== l.user_id || (0, C.I5)(a) || !a.verified || (0, I.B)(l),
+            o = a.id !== l.user_id || (0, v.I5)(a) || !a.verified || (0, I.B)(l),
             c = this.renderExpirationDate(e, t, n);
         return (
             (s.disabled = o),
@@ -158,20 +158,20 @@ class A extends l.Component {
 function j(e) {
     let { userTrialOfferId: t, canRenderReferralEmbed: n } = e,
         { trialOffer: l, isResolving: a } = (0, d.cj)(
-            [v.Z],
+            [E.Z],
             () => ({
-                trialOffer: n ? v.Z.getRelevantUserTrialOffer(t) : null,
-                isResolving: !!n && v.Z.isResolving(t)
+                trialOffer: n ? E.Z.getRelevantUserTrialOffer(t) : null,
+                isResolving: !!n && E.Z.isResolving(t)
             }),
             [n, t]
         ),
         r = g.default.getCurrentUser(),
-        s = (0, d.e7)([g.default], () => null != l && (0, C.I5)(void 0 !== r && l.user_id === r.id ? r : g.default.getUser(l.user_id))),
+        s = (0, d.e7)([g.default], () => null != l && (0, v.I5)(void 0 !== r && l.user_id === r.id ? r : g.default.getUser(l.user_id))),
         o = (0, d.e7)([f.ZP], () => {
             var e;
             return s ? (null === (e = f.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
         }),
-        { analyticsLocations: u } = (0, _.ZP)(h.Z.SHARE_NITRO_EMBED);
+        { analyticsLocations: u } = (0, h.ZP)(_.Z.SHARE_NITRO_EMBED);
     return a
         ? (0, i.jsx)(m.OR, { isHorizontal: !c.tq })
         : n && null != l && void 0 !== r

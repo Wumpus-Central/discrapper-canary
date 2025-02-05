@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => E });
 var i = n(200651),
     l = n(192379),
     a = n(481060),
@@ -9,13 +9,13 @@ var i = n(200651),
     d = n(834129),
     u = n(703656),
     m = n(35125),
-    h = n(626751),
-    _ = n(891614),
+    _ = n(626751),
+    h = n(891614),
     p = n(981631),
     g = n(176505),
     f = n(388032),
     x = n(204968);
-function E(e) {
+function C(e) {
     let { username: t } = e;
     return (0, i.jsx)('div', {
         className: x.welcomeCardText,
@@ -42,27 +42,27 @@ function E(e) {
         })
     });
 }
-function C(e) {
+function v(e) {
     let { guildId: t, user: n, username: l } = e;
     return (0, i.jsxs)('div', {
         className: x.welcomeCard,
         role: 'img',
         'aria-label': f.intl.formatToPlainString(f.t['utf8+f'], { username: l }),
         children: [
-            (0, i.jsx)(_.Z, {
+            (0, i.jsx)(h.Z, {
                 guildId: t,
                 user: n,
                 className: x.welcomeCardBadge
             }),
-            (0, i.jsx)(E, { username: l })
+            (0, i.jsx)(C, { username: l })
         ]
     });
 }
-function v(e) {
+function E(e) {
     var t, a;
-    let { channel: _, message: f, compact: x } = e,
-        E = (0, o.ZP)(f),
-        v = (function (e) {
+    let { channel: h, message: f, compact: x } = e,
+        C = (0, o.ZP)(f),
+        E = (function (e) {
             let { author: t, channel: n, message: i } = e,
                 a = n.guild_id,
                 o = (0, c.l)({
@@ -72,26 +72,26 @@ function v(e) {
                     messageId: i.id
                 })(t),
                 { analyticsLocations: d } = (0, s.ZP)(r.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
-                h = i.roleSubscriptionData,
-                _ = l.useCallback(() => {
-                    (0, u.uL)(p.Z5c.CHANNEL(a, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: d }), (null == h ? void 0 : h.role_subscription_listing_id) != null && (0, m.y8)(a, n.id, i.id, h.role_subscription_listing_id);
-                }, [a, n, i, h, d]);
-            return null == h
+                _ = i.roleSubscriptionData,
+                h = l.useCallback(() => {
+                    (0, u.uL)(p.Z5c.CHANNEL(a, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: d }), (null == _ ? void 0 : _.role_subscription_listing_id) != null && (0, m.y8)(a, n.id, i.id, _.role_subscription_listing_id);
+                }, [a, n, i, _, d]);
+            return null == _
                 ? null
                 : (0, m.Tn)({
                       username: t.nick,
                       usernameOnClickHandler: o,
-                      roleSubscriptionOnClickHandler: _,
+                      roleSubscriptionOnClickHandler: h,
                       guildId: a,
                       roleSubscriptionData: i.roleSubscriptionData
                   });
         })({
-            channel: _,
+            channel: h,
             message: f,
-            author: E
+            author: C
         }),
         I = (null === (t = f.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (a = f.roleSubscriptionData) || void 0 === a ? void 0 : a.total_months_subscribed) <= 1;
-    return null == v
+    return null == E
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -99,16 +99,16 @@ function v(e) {
                       icon: n(570111),
                       timestamp: f.timestamp,
                       compact: x,
-                      children: v
+                      children: E
                   }),
                   I &&
-                      (0, i.jsx)(C, {
-                          guildId: _.guild_id,
+                      (0, i.jsx)(v, {
+                          guildId: h.guild_id,
                           user: f.author,
-                          username: E.nick
+                          username: C.nick
                       }),
-                  (0, i.jsx)(h.Z, {
-                      channel: _,
+                  (0, i.jsx)(_.Z, {
+                      channel: h,
                       message: f
                   })
               ]

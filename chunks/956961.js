@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(524437),
     u = n(481060),
     m = n(239091),
-    h = n(294218),
-    _ = n(703656),
+    _ = n(294218),
+    h = n(703656),
     p = n(324701),
     g = n(768943),
     f = n(695346),
     x = n(592125),
-    E = n(655354),
-    C = n(324081),
-    v = n(791914),
+    C = n(655354),
+    v = n(324081),
+    E = n(791914),
     I = n(981631),
     N = n(388032),
     S = n(683280),
@@ -37,7 +37,7 @@ function A(e) {
     return (0, i.jsxs)('div', {
         className: S.container,
         children: [
-            (0, i.jsx)(v.Z, {
+            (0, i.jsx)(E.Z, {
                 tab: d.X.TODOS,
                 setTab: t,
                 closePopout: n
@@ -70,19 +70,19 @@ function j(e) {
         s = l.message,
         d = (0, c.e7)([x.Z], () => x.Z.getChannel(a.channelId)),
         g = () => {
-            (0, _.uL)(I.Z5c.CHANNEL(null == d ? void 0 : d.getGuildId(), a.channelId, a.messageId));
+            (0, h.uL)(I.Z5c.CHANNEL(null == d ? void 0 : d.getGuildId(), a.channelId, a.messageId));
         },
-        v = null;
+        E = null;
     return (null != a.dueAt &&
         (a.dueAt > new Date()
             ? ((t = 'text-muted'),
-              (v = N.intl.formatToPlainString(N.t.H4gnX1, {
+              (E = N.intl.formatToPlainString(N.t.H4gnX1, {
                   duration: o()
                       .duration(a.dueAt.getTime() - Date.now(), 'millisecond')
                       .humanize()
               })))
             : ((t = 'text-danger'),
-              (v = N.intl.formatToPlainString(N.t['Uq7Y+/'], {
+              (E = N.intl.formatToPlainString(N.t['Uq7Y+/'], {
                   duration: o()
                       .duration(Date.now() - a.dueAt.getTime(), 'millisecond')
                       .humanize()
@@ -92,7 +92,7 @@ function j(e) {
         : (0, i.jsxs)('div', {
               className: T.container,
               children: [
-                  (0, i.jsx)(C.Z, {
+                  (0, i.jsx)(v.Z, {
                       channel: d,
                       gotoChannel: g,
                       children: (0, i.jsxs)('div', {
@@ -113,11 +113,11 @@ function j(e) {
                                         ]
                                     })
                                   : null,
-                              null != v
+                              null != E
                                   ? (0, i.jsx)(u.Text, {
                                         variant: 'text-sm/medium',
                                         color: t,
-                                        children: v
+                                        children: E
                                     })
                                   : null,
                               (0, i.jsx)(u.DY3, {
@@ -160,12 +160,12 @@ function j(e) {
                   (0, i.jsxs)('div', {
                       className: r()(T.messageContainer, S.unloadedMessage),
                       children: [
-                          (0, i.jsx)(E.Z, {
+                          (0, i.jsx)(C.Z, {
                               className: T.jumpMessageButton,
                               onJump: g
                           }),
                           (0, i.jsx)(
-                              h.Z,
+                              _.Z,
                               {
                                   message: s,
                                   channel: d,

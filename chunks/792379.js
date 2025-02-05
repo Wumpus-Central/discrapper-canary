@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(679332),
     S = n(544989),
     j = n(171368),
-    A = n(228168),
-    y = n(388032),
+    y = n(228168),
+    A = n(388032),
     P = n(747918),
     R = n(866669);
 function M(e) {
@@ -57,13 +57,13 @@ function M(e) {
                 ref: w,
                 user: t,
                 displayProfile: L,
-                profileType: A.y0.PANEL,
+                profileType: y.y0.PANEL,
                 themeOverride: k,
                 children: [
                     (0, i.jsxs)(a.u2, {
                         children: [
                             (0, i.jsx)(S.Z, {
-                                profileType: A.y0.PANEL,
+                                profileType: y.y0.PANEL,
                                 children: (0, i.jsx)(T.Z, { user: t })
                             }),
                             (0, i.jsxs)('header', {
@@ -72,14 +72,14 @@ function M(e) {
                                     (0, i.jsx)(v.Z, {
                                         user: t,
                                         displayProfile: L,
-                                        profileType: A.y0.PANEL,
+                                        profileType: y.y0.PANEL,
                                         animateOnHover: !U
                                     }),
                                     (0, i.jsx)(C.Z, {
                                         user: t,
                                         displayProfile: L,
                                         channelId: n.id,
-                                        profileType: A.y0.PANEL,
+                                        profileType: y.y0.PANEL,
                                         onOpenProfile: M ? void 0 : B
                                     }),
                                     t.isClyde() && (0, i.jsx)(h.Z, { className: P.headerTag })
@@ -90,20 +90,20 @@ function M(e) {
                                 children: [
                                     (0, i.jsx)(N.Z, {
                                         user: t,
-                                        profileType: A.y0.PANEL,
+                                        profileType: y.y0.PANEL,
                                         nickname: m.ZP.getName(null, n.id, t),
                                         pronouns: null == L ? void 0 : L.pronouns,
                                         onOpenProfile: M ? void 0 : B,
                                         tags: (0, i.jsx)(x.Z, {
                                             displayProfile: L,
-                                            profileType: A.y0.PANEL
+                                            profileType: y.y0.PANEL
                                         })
                                     }),
                                     (0, i.jsxs)(Z.Z.Overlay, {
                                         className: R.overlay,
                                         children: [
                                             (0, i.jsx)(b.Z, {
-                                                heading: y.intl.string(y.t['61W33d']),
+                                                heading: A.intl.string(A.t['61W33d']),
                                                 headingColor: 'header-primary',
                                                 children: (0, i.jsx)(E.Z, {
                                                     userBio: null == L ? void 0 : L.bio,
@@ -113,7 +113,7 @@ function M(e) {
                                                 })
                                             }),
                                             (0, i.jsx)(b.Z, {
-                                                heading: y.intl.string(y.t['A//N4u']),
+                                                heading: A.intl.string(A.t['A//N4u']),
                                                 headingColor: 'header-primary',
                                                 children: (0, i.jsx)(I.Z, { userId: t.id })
                                             })
@@ -139,7 +139,7 @@ function M(e) {
                                             ...D
                                         });
                                 },
-                                children: y.intl.string(y.t['+Xp3ho'])
+                                children: A.intl.string(A.t['+Xp3ho'])
                             })
                         }),
                     (null == L ? void 0 : L.profileEffectId) != null &&

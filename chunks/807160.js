@@ -47,7 +47,7 @@ var i,
     K = n(231338),
     X = n(388032),
     q = n(943857);
-function Q(e, t, n) {
+function J(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -60,7 +60,7 @@ function Q(e, t, n) {
         e
     );
 }
-let J = (e) => 'https://'.concat(Y.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
+let Q = (e) => 'https://'.concat(Y.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
     $ = [Y.epS.DURABLE_PRIMARY, Y.epS.DURABLE, Y.epS.CONSUMABLE],
     ee = [Y.PyE.FAILED, Y.PyE.REVERSED, Y.PyE.CANCELED],
     et = [K.gg.APPLE],
@@ -360,7 +360,7 @@ class ea extends (i = r.PureComponent) {
             i = this.validateRefundRules();
         if (i.includes('PAYMENT_GATEWAY') || i.includes('PAYMENT_STATUS') || i.includes('ALREADY_REFUNDED') || i.includes('SKU_STICKER_PACK') || i.includes('SUBSCRIPTION_TYPE') || i.includes('GUILD_PRODUCT')) return null;
         let l = 0 === i.length,
-            a = J(t),
+            a = Q(t),
             o = this.isPremium ? 5 : 14;
         return (
             (e = i.includes('SKU_TYPE')
@@ -445,7 +445,7 @@ class ea extends (i = r.PureComponent) {
                         children: !r.isCollectible && this.renderRefundCriteria(X.intl.string(X.t.H0RNz8), l, X.intl.formatToPlainString(X.t['7dtXa2'], { daysSincePurchase: this.daysSincePurchase }))
                     }),
                     (0, s.jsx)(h.eee, {
-                        href: J(i),
+                        href: Q(i),
                         children: X.intl.string(X.t.re5nOD)
                     })
                 ]
@@ -480,7 +480,7 @@ class ea extends (i = r.PureComponent) {
                                     return (t) =>
                                         (0, s.jsx)(e, {
                                             payment: r,
-                                            reportProblemUrl: J(i),
+                                            reportProblemUrl: Q(i),
                                             ...t
                                         });
                                 }),
@@ -488,7 +488,7 @@ class ea extends (i = r.PureComponent) {
                         })
                 }),
                 (0, s.jsx)(h.eee, {
-                    href: J(i),
+                    href: Q(i),
                     children: X.intl.string(X.t.re5nOD)
                 })
             ]
@@ -610,7 +610,7 @@ class ea extends (i = r.PureComponent) {
                                 buttonPosition: b.E.RIGHT,
                                 notice: X.intl.string(X.t['3AvulJ']),
                                 ctaLabel: X.intl.string(X.t.zoztQE),
-                                onClick: () => (0, _.Z)(J(n))
+                                onClick: () => (0, _.Z)(Q(n))
                             })
                           : null != i &&
                             null != e.sku &&
@@ -674,8 +674,8 @@ class ea extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            Q(this, 'state', { expanded: !1 }),
-            Q(this, 'refundRules', [
+            J(this, 'state', { expanded: !1 }),
+            J(this, 'refundRules', [
                 {
                     rule: 'PURCHASE_DATE',
                     canRefund: () => {
@@ -742,7 +742,7 @@ class ea extends (i = r.PureComponent) {
                     }
                 }
             ]),
-            Q(this, 'handleExpandInfo', () => {
+            J(this, 'handleExpandInfo', () => {
                 this.setState({ expanded: !this.state.expanded });
             });
     }
@@ -787,4 +787,4 @@ function eo(e) {
         plan: N
     });
 }
-Q(ea, 'defaultProps', { compactMode: !1 });
+J(ea, 'defaultProps', { compactMode: !1 });

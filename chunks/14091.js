@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120);
+n.d(t, { Z: () => A }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(120356),
@@ -92,7 +92,7 @@ let j = (e) => {
         })
     });
 };
-class A extends l.PureComponent {
+class y extends l.PureComponent {
     componentDidMount() {
         C.S.subscribe(b.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
@@ -276,10 +276,10 @@ class A extends l.PureComponent {
             });
     }
 }
-function y(e) {
+function A(e) {
     let { searchId: t } = e,
         n = (0, c.cj)([g.Z], () => g.Z.getResultsState(t), [t]);
-    return (0, i.jsx)(A, {
+    return (0, i.jsx)(y, {
         searchId: t,
         search: n,
         ...(0, c.cj)(

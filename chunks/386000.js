@@ -20,12 +20,12 @@ function f(e) {
         { Component: N, play: T, events: S } = (0, o.O)(I ? 'unmute' : 'mute');
     l.useEffect(() => () => T(), [T, I]);
     let j = (0, c.bp)() === m.IlC.POPOUT ? (I ? s.n : r.S) : N,
-        A = E === h.BK.GroupedButtonsRedMic && I ? (0, u.Lq)(a.I.RED_400) : void 0,
-        y = E !== h.BK.GroupedButtonsRedMic;
+        y = E === h.BK.GroupedButtonsRedMic && I ? (0, u.Lq)(a.I.RED_400) : void 0,
+        A = E !== h.BK.GroupedButtonsRedMic;
     return (0, i.jsx)(b, {
-        isActive: !!y && !I,
+        isActive: !!A && !I,
         iconComponent: j,
-        iconColor: A,
+        iconColor: y,
         label: Z,
         onMouseEnter: (e) => {
             null == C || C(e), S.onMouseEnter();

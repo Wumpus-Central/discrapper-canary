@@ -25,11 +25,11 @@ var i = n(192379),
     E = n(783097),
     A = n(689079),
     I = n(665692);
-function _(e, t) {
+function g(e, t) {
     let n = f.Z.getScoreWithoutLoadingLatest(e.id);
     return f.Z.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function g(e, t) {
+function _(e, t) {
     let n = (0, E.$d)(e),
         i = (0, E.$d)(t);
     return (0, m.un)(n, i);
@@ -214,7 +214,7 @@ function j(e) {
                 })
             );
         }, [j, T, f]),
-        b = i.useMemo(() => {
+        L = i.useMemo(() => {
             var e, i, l, a, s;
             let d = [];
             if (v) {
@@ -282,17 +282,17 @@ function j(e) {
                         return null !== (n = null == i ? void 0 : i.includes(s.toLocaleLowerCase())) && void 0 !== n && n;
                     })
                 ],
-                sortComparers: [_, g]
+                sortComparers: [g, _]
             });
         }, [r, v, o, t, n, j, y]),
-        L = S.length > 0,
-        R = b.length > 0;
+        b = S.length > 0,
+        R = L.length > 0;
     return {
         commandResults: S,
-        hasCommandResults: L,
-        applicationResults: b,
+        hasCommandResults: b,
+        applicationResults: L,
         hasApplicationResults: R,
-        isEmptyState: !L && !R,
+        isEmptyState: !b && !R,
         loading: C && s
     };
 }
@@ -372,7 +372,7 @@ function y(e) {
             let e = E.length;
             f === x.M.FETCHED && e === h.current && e > 0 && e < N && e < a && E[e - 1].length > 0 && (h.current++, p((e) => e + 1));
         }, [f, a, E, N]),
-        _ = i.useCallback(
+        g = i.useCallback(
             (e) => {
                 let { query: t, page: n, guildId: i } = e;
                 v.yC({
@@ -394,12 +394,12 @@ function y(e) {
     return (
         i.useEffect(() => {
             l &&
-                _({
+                g({
                     query: n,
                     page: m,
                     guildId: u
                 });
-        }, [n, u, _, m, l]),
+        }, [n, u, g, m, l]),
         i.useEffect(() => {
             p(1);
         }, [u, n]),

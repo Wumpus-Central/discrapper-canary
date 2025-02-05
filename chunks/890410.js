@@ -9,7 +9,7 @@ var l = n(120356),
     c = n(464891),
     d = n(987998);
 function u(e) {
-    let { message: t, channel: n, content: l, className: u, compact: m, popoutProps: h, hideTimestamp: _ = !1, withFooter: p = !1, ...g } = e,
+    let { message: t, channel: n, content: l, className: u, compact: m, popoutProps: _, hideTimestamp: h = !1, withFooter: p = !1, ...g } = e,
         f = (0, r.ZP)(t);
     return (0, i.jsx)('div', {
         className: a()({ [d.withFooter]: p }, d.embedCard, { [d.compact]: m }, u),
@@ -27,9 +27,9 @@ function u(e) {
                 author: f,
                 guildId: null == n ? void 0 : n.guild_id,
                 compact: m,
-                hideTimestamp: _,
+                hideTimestamp: h,
                 className: a()(d.header, { [d.compact]: m }),
-                ...(null != h ? h : {})
+                ...(null != _ ? _ : {})
             }),
             compact: m
         })

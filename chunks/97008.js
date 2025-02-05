@@ -10,7 +10,7 @@ let o = class {
         return e.toDataURL(t, n);
     }
     async exportCanvas(e, t) {
-        let { format: n, fileType: o = 'png', quality: s = 1, fileName: u } = t;
+        let { format: n, fileType: o = 'png', quality: s = 1, fileName: d } = t;
         if (n === a.kH.Base64) return this.toDataUrl(e, o, s);
         if (n === a.kH.Blob) {
             let t = this.toDataUrl(e, o, s);
@@ -18,12 +18,12 @@ let o = class {
         }
         if (n === a.kH.File) {
             let t = this.toDataUrl(e, o, s);
-            return await (0, r.Bo)(t, u, 'image/png');
+            return await (0, r.Bo)(t, d, 'image/png');
         }
         if (n === a.kH.CloudUpload) {
             let { channelId: n } = t,
                 a = this.toDataUrl(e, o, s),
-                c = await (0, r.Bo)(a, u, 'image/png');
+                c = await (0, r.Bo)(a, d, 'image/png');
             return new l.n(
                 {
                     file: c,

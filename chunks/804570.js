@@ -1,23 +1,23 @@
-n.d(t, { E: () => d });
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    o = n.n(r),
-    a = n(481060),
-    s = n(892196);
-let d = l.memo(function (e) {
-    let { emptyText: t, icon: n, absolute: l = !1 } = e;
-    return (0, i.jsx)('div', {
-        className: o()(s.emptyWidgetContainer, l && s.absolute),
-        children: (0, i.jsx)(a.ua7, {
-            text: t,
+t.d(i, { E: () => o });
+var l = t(200651),
+    n = t(192379),
+    a = t(120356),
+    r = t.n(a),
+    s = t(481060),
+    d = t(892196);
+let o = n.memo(function (e) {
+    let { emptyText: i, icon: t, absolute: n = !1 } = e;
+    return (0, l.jsx)('div', {
+        className: r()(d.emptyWidgetContainer, n && d.absolute),
+        children: (0, l.jsx)(s.ua7, {
+            text: i,
             children: (e) =>
-                (0, i.jsx)('div', {
+                (0, l.jsx)('div', {
                     ...e,
-                    children: (0, i.jsx)(n, {
+                    children: (0, l.jsx)(t, {
                         size: 'md',
-                        color: a.TVs.colors.WHITE,
-                        className: s.emptyWidgetIcon
+                        color: s.TVs.colors.WHITE,
+                        className: d.emptyWidgetIcon
                     })
                 })
         })

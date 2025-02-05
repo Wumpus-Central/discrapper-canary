@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(411104);
+n.d(t, { Z: () => _ }), n(411104);
 var i = n(200651),
     r = n(192379),
     a = n(442837),
@@ -38,11 +38,11 @@ function g(e) {
         )
     });
 }
-function h(e) {
+function _(e) {
     let { children: t, participants: n, channel: o, onPopoutClosed: s } = e,
         m = (0, a.e7)([u.Z], () => u.Z.theme),
         p = 1 === n.length ? n[0] : null,
-        h = (0, r.useCallback)(
+        _ = (0, r.useCallback)(
             (e) => {
                 if (null != p)
                     return (0, i.jsx)(d.Z, {
@@ -66,7 +66,7 @@ function h(e) {
     return (0, i.jsx)(l.ze6, {
         theme: m,
         children: (0, i.jsx)(l.yRy, {
-            renderPopout: h,
+            renderPopout: _,
             preload: () =>
                 null != p
                     ? (0, c.Z)(p, {

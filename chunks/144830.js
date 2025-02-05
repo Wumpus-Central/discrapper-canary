@@ -1,8 +1,8 @@
-n.d(t, { Z: () => h }), n(411104), n(47120);
-var i,
-    l,
-    a = n(200651),
-    r = n(192379),
+n.d(t, { Z: () => g }), n(411104), n(47120);
+var l,
+    i,
+    r = n(200651),
+    a = n(192379),
     s = n(379649),
     o = n(846519),
     c = n(388032);
@@ -19,16 +19,16 @@ function u(e, t, n) {
         e
     );
 }
-var d = (((i = d || {}).ACTIVITY_FEED = 'ACTIVITY_FEED'), (i.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (i.USER_ACTIVITY = 'USER_ACTIVITY'), (i.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (i.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), i),
-    m = (((l = m || {}).START = 'START'), (l.END = 'END'), (l.TIME = 'TIME'), l);
-let f = (e) => (t, n) =>
+var d = (((l = d || {}).ACTIVITY_FEED = 'ACTIVITY_FEED'), (l.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (l.USER_ACTIVITY = 'USER_ACTIVITY'), (l.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (l.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), l),
+    m = (((i = m || {}).START = 'START'), (i.END = 'END'), (i.TIME = 'TIME'), i);
+let p = (e) => (t, n) =>
         null == n
             ? ''
             : c.intl.format(e(), {
                   time: t,
                   ...n
               }),
-    p = {
+    h = {
         ACTIVITY_FEED: {
             START: {
                 [s.J6.SECONDS]: () => c.intl.string(c.t.ahzZr6),
@@ -48,10 +48,10 @@ let f = (e) => (t, n) =>
         },
         ACTIVITY_FEED_NEW: {
             START: {
-                [s.J6.SECONDS]: f(() => c.t.Bf3PRU),
-                [s.J6.MINUTES]: f(() => c.t['A9P+dX']),
-                [s.J6.HOURS]: f(() => c.t.KwVzfn),
-                [s.J6.DAYS]: f(() => c.t.hbUpBA)
+                [s.J6.SECONDS]: p(() => c.t.Bf3PRU),
+                [s.J6.MINUTES]: p(() => c.t['A9P+dX']),
+                [s.J6.HOURS]: p(() => c.t.KwVzfn),
+                [s.J6.DAYS]: p(() => c.t.hbUpBA)
             },
             END: {
                 [s.J6.SECONDS]: (e) => c.intl.formatToPlainString(c.t.C3MTOD, { seconds: e }),
@@ -98,16 +98,16 @@ let f = (e) => (t, n) =>
             }
         }
     };
-function h(e) {
+function g(e) {
     var t, n;
     return (
-        (n = class extends (t = r.PureComponent) {
+        (n = class extends (t = a.PureComponent) {
             componentDidMount() {
                 this.timer.start(10000, this.update);
             }
             componentDidUpdate(e) {
-                let { start: t, end: n, time: i } = this.props;
-                (e.start !== t || e.end !== n || e.time !== i) && this.update();
+                let { start: t, end: n, time: l } = this.props;
+                (e.start !== t || e.end !== n || e.time !== l) && this.update();
             }
             componentWillUnmount() {
                 this.timer.stop();
@@ -115,41 +115,41 @@ function h(e) {
             getDiff() {
                 let { start: e, end: t, time: n } = this.props;
                 if (null != n) return n / 1000 / 60;
-                let i = Date.now(),
-                    l = 0;
-                return null != e ? (l = i - e) : null != t && (l = i - t), Math.abs(l) / 1000 / 60;
+                let l = Date.now(),
+                    i = 0;
+                return null != e ? (i = l - e) : null != t && (i = l - t), Math.abs(i) / 1000 / 60;
             }
             getTimeUnit(e, t, n) {
-                let i = (0, s.jU)(e, (e) =>
+                let l = (0, s.jU)(e, (e) =>
                     (function (e, t, n) {
-                        let i = p[n];
-                        if (null != i) {
-                            let n = i[t];
+                        let l = h[n];
+                        if (null != l) {
+                            let n = l[t];
                             if (null != n) return null != n[e];
                         }
                         return !1;
                     })(e, n, t)
                 );
-                if (null == i) throw Error('Could not get the time unit in PlayTime with time: '.concat(e, ' for type: ').concat(n, ' in location: ').concat(t));
-                return i;
+                if (null == l) throw Error('Could not get the time unit in PlayTime with time: '.concat(e, ' for type: ').concat(n, ' in location: ').concat(t));
+                return l;
             }
             getType() {
                 let { start: e, end: t, time: n } = this.props;
                 return null != e ? 'START' : null != t ? 'END' : null != n ? 'TIME' : null;
             }
             render() {
-                let { location: t, messageProps: n, isApplicationStreaming: i, ...l } = this.props,
-                    { time: r } = this.state,
+                let { location: t, messageProps: n, isApplicationStreaming: l, ...i } = this.props,
+                    { time: a } = this.state,
                     o = this.getType();
                 if (null == o) return null;
-                let c = this.getTimeUnit(r, t, o),
-                    u = p[t][o];
+                let c = this.getTimeUnit(a, t, o),
+                    u = h[t][o];
                 if (null == u) return null;
                 let d = u[c],
-                    m = Math.floor((0, s.A3)(r, c));
-                return (0, a.jsx)(e, {
-                    ...l,
-                    children: null == d ? void 0 : d(m, n, i)
+                    m = Math.floor((0, s.A3)(a, c));
+                return (0, r.jsx)(e, {
+                    ...i,
+                    children: null == d ? void 0 : d(m, n, l)
                 });
             }
             constructor(...e) {

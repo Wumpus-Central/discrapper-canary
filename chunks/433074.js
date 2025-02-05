@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(321231),
     u = n(230171),
     m = n(955415),
-    h = n(706454),
-    _ = n(973616),
+    _ = n(706454),
+    h = n(973616),
     p = n(914010),
     g = n(594174),
     f = n(626135),
     x = n(135431),
-    E = n(674588),
-    C = n(264043),
-    v = n(132871),
+    C = n(674588),
+    v = n(264043),
+    E = n(132871),
     I = n(147890),
     N = n(981631),
     S = n(388032),
@@ -26,8 +26,8 @@ function b(e) {
     var t, n, b;
     let { code: A, message: j, embedUrl: y } = e,
         { enabled: Z } = d.G.useExperiment({ location: 'ApplicationDirectoryProfileEmbed' }),
-        [R, L, P] = (0, s.Wu)([C.Z], () => [C.Z.getApplication(A), C.Z.isInvalidApplication(A), C.Z.getApplicationFetchState(A)], [A]),
-        k = (0, s.e7)([h.default], () => h.default.locale),
+        [R, L, P] = (0, s.Wu)([v.Z], () => [v.Z.getApplication(A), v.Z.isInvalidApplication(A), v.Z.getApplicationFetchState(A)], [A]),
+        k = (0, s.e7)([_.default], () => _.default.locale),
         M = (0, s.e7)([p.Z], () => {
             var e;
             return null !== (e = p.Z.getGuildId()) && void 0 !== e ? e : void 0;
@@ -39,11 +39,11 @@ function b(e) {
         }, []),
         U = (0, c.O)(F);
     l.useEffect(() => {
-        (0, E.gZ)(A);
+        (0, C.gZ)(A);
     }, [A]),
         l.useEffect(() => {
             D &&
-                P === C.M.FETCHED &&
+                P === v.M.FETCHED &&
                 f.default.track(N.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                     application_id: A,
                     device_platform: a.tq ? 'mobile_web' : 'desktop_web',
@@ -71,15 +71,15 @@ function b(e) {
             channel_id: j.channel_id
         }),
             (0, I.dx)({
-                view: v.eN.APPLICATION,
+                view: E.eN.APPLICATION,
                 guildId: M,
                 applicationId: A,
-                entrypoint: { name: v.n3.APPLICATION_DIRECTORY_PROFILE_EMBED }
+                entrypoint: { name: E.n3.APPLICATION_DIRECTORY_PROFILE_EMBED }
             });
     };
     if (Z && null != R)
         return (0, i.jsx)(u.O, {
-            app: _.ZP.createFromServer(R),
+            app: h.ZP.createFromServer(R),
             embedUrl: y
         });
     if (L)
@@ -102,7 +102,7 @@ function b(e) {
                 })
             ]
         });
-    if (null == R || P === C.M.FETCHING)
+    if (null == R || P === v.M.FETCHING)
         return (0, i.jsxs)(m.Z, {
             containerRef: U,
             children: [(0, i.jsx)(m.Z.Header, { text: S.intl.string(S.t.m9hXGR) }), (0, i.jsx)(m.Z.Body, { resolving: !0 })]
@@ -128,7 +128,7 @@ function b(e) {
                         className: T.applicationInfoContainer,
                         children: [
                             (0, i.jsx)(m.Z.Icon, {
-                                application: _.ZP.createFromServer(R),
+                                application: h.ZP.createFromServer(R),
                                 className: T.applicationIcon,
                                 onClick: () => B('application_icon')
                             }),

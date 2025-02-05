@@ -17,10 +17,10 @@ var i = n(200651),
     C = n(354459),
     x = n(288135);
 let v = (0, s.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: a, participantsVersion: s, layout: v, onSelectParticipant: E, onContextMenuParticipant: I, onFullscreenParticipant: b, channel: Z, hasConnectPermission: N, className: T, inCall: S, showParticipants: j = !0, paused: A = !1, width: y, height: P, idle: R, mode: M, popoutWindow: L, awaitingRemoteSessionInfo: k, callContainerDimensions: O } = e;
+    let { participants: t, filteredParticipants: n, selectedParticipant: a, participantsVersion: s, layout: v, onSelectParticipant: E, onContextMenuParticipant: I, onFullscreenParticipant: b, channel: Z, hasConnectPermission: N, className: T, inCall: S, showParticipants: j = !0, paused: y = !1, width: A, height: P, idle: R, mode: M, popoutWindow: L, awaitingRemoteSessionInfo: k, callContainerDimensions: O } = e;
     l.useEffect(() => {
         u.S.dispatch(_.CkL.REMEASURE_TARGET);
-    }, [y, P, O.width, O.height]);
+    }, [A, P, O.width, O.height]);
     let D = l.useMemo(() => n.filter((e) => e.type !== C.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [n, s]);
     return (null == k ? void 0 : k.channelId) === Z.id
         ? (0, i.jsx)(p.Z, { height: P })
@@ -33,7 +33,7 @@ let v = (0, s.Z)((e) => {
           : M === _.WtW.VOICE
             ? (0, i.jsx)(c.Z, {
                   guildId: Z.guild_id,
-                  width: y,
+                  width: A,
                   className: x.voiceCallWrapper,
                   participants: t,
                   onContextMenu: I
@@ -43,7 +43,7 @@ let v = (0, s.Z)((e) => {
                   ? (0, i.jsx)(g.Z, {
                         className: r()(x.videoGrid, x.hiddenParticipants),
                         channelId: Z.id,
-                        width: y
+                        width: A
                     })
                   : (0, i.jsx)(d.Z, {
                         className: x.videoGridWrapper,
@@ -57,7 +57,7 @@ let v = (0, s.Z)((e) => {
                             onClick: E,
                             onDoubleClick: b,
                             onContextMenu: I,
-                            paused: A,
+                            paused: y,
                             inCall: S
                         })
                     })
@@ -72,7 +72,7 @@ let v = (0, s.Z)((e) => {
                     className: T,
                     idle: R,
                     height: P,
-                    width: y,
+                    width: A,
                     layout: v,
                     inCall: S,
                     channel: Z,

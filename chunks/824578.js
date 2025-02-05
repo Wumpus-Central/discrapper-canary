@@ -1,21 +1,21 @@
-n.d(t, { Q: () => l }), n(653041);
-var i = n(442837),
-    a = n(699516),
-    o = n(111583),
-    s = n(594174);
+i.d(t, { Q: () => l }), i(653041);
+var n = i(442837),
+    a = i(699516),
+    o = i(111583),
+    s = i(594174);
 function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Number.MAX_SAFE_INTEGER;
-    return (0, i.Wu)(
+    return (0, n.Wu)(
         [s.default, o.Z, a.Z],
         () => {
-            var n;
-            let i = null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.id,
+            var i;
+            let n = null === (i = s.default.getCurrentUser()) || void 0 === i ? void 0 : i.id,
                 l = o.Z.getTypingUsers(e),
                 r = [];
             for (let e in l) {
                 if (r.length >= t) break;
-                let n = s.default.getUser(e);
-                !(null == n || n.id === i || a.Z.isBlockedOrIgnored(n.id)) && r.push(n.id);
+                let i = s.default.getUser(e);
+                !(null == i || i.id === n || a.Z.isBlockedOrIgnored(i.id)) && r.push(i.id);
             }
             return r;
         },

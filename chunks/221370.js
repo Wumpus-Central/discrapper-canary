@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(47120), n(653041);
+n.d(t, { Z: () => _ }), n(47120), n(653041);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -70,7 +70,7 @@ function g(e) {
         )
     });
 }
-function h(e) {
+function _(e) {
     let { detectedGame: t, className: n } = e,
         a = r.useMemo(() => {
             let e = new Set(t.platforms),

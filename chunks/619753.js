@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(496675),
     S = n(699516),
     j = n(768119),
-    A = n(944486),
-    y = n(594174),
+    y = n(944486),
+    A = n(594174),
     P = n(101695),
     R = n(683101),
     M = n(981631),
@@ -66,7 +66,7 @@ function O(e) {
             },
             [a]
         ),
-        A = l.useMemo(() => {
+        y = l.useMemo(() => {
             let e;
             if (null == f) return [];
             let t = 0;
@@ -89,12 +89,12 @@ function O(e) {
                 );
             }, []);
         }, [f, b]),
-        y = l.useRef([]),
-        R = A.reduce((e, t) => e + 1 + t.results.length, 0),
+        A = l.useRef([]),
+        R = y.reduce((e, t) => e + 1 + t.results.length, 0),
         O = l.useCallback(
             (e, t) => {
                 if (!p.Z.keyboardModeEnabled) return;
-                let n = y.current,
+                let n = A.current,
                     i = null != t ? n[t] : void 0;
                 if (null == i || null == i.hitRef.current) return;
                 let l = i.hitRef.current.getClientRects()[0];
@@ -106,7 +106,7 @@ function O(e) {
             [m]
         ),
         D = l.useCallback((e) => {
-            let t = y.current[e];
+            let t = A.current[e];
             null == t || t.jumpTo();
         }, []),
         U = (0, s.ZP)({
@@ -119,7 +119,7 @@ function O(e) {
         B = j.Z.getQuery(a),
         F = j.Z.getSearchType(a) === M.aib.FAVORITES,
         H = (0, h.nC)(null !== (t = null == B ? void 0 : B.content) && void 0 !== t ? t : ''),
-        G = A.map((e) => {
+        G = y.map((e) => {
             let { channel: t, results: n, startIndex: l } = e;
             return (0, i.jsx)(
                 w,
@@ -128,7 +128,7 @@ function O(e) {
                     results: n,
                     highlighter: H,
                     startIndex: l,
-                    resultRefs: y,
+                    resultRefs: A,
                     totalResults: E,
                     scrollTo: m,
                     searchId: a,
@@ -221,17 +221,17 @@ function w(e) {
         w = I.cC.useSetting(),
         U = (0, _.p)(),
         B = l.useCallback((e) => {
-            if (e === A.Z.getChannelId()) return;
+            if (e === y.Z.getChannelId()) return;
             let t = Z.Z.getChannel(e);
             null != t && T.Z.can(M.Plq.VIEW_CHANNEL, t) && (0, E.Kh)(t.id);
         }, []),
-        F = null != r ? (0, m.F6)(r, y.default, S.Z, !1) : '???',
+        F = null != r ? (0, m.F6)(r, A.default, S.Z, !1) : '???',
         H = O && null != r.guild_id ? (null === (t = N.Z.getGuild(r.guild_id)) || void 0 === t ? void 0 : t.name) : null,
         G = (null == r ? void 0 : r.parent_id) != null ? Z.Z.getChannel(r.parent_id) : null,
         V = null !== (n = null == G ? void 0 : G.name) && void 0 !== n ? n : null,
         z = null !== (a = (0, f.KS)(r)) && void 0 !== a ? a : o.VL1,
         W = T.Z.can(M.Plq.MANAGE_MESSAGES, r),
-        { content: Y } = (0, x.ZP)(
+        { content: q } = (0, x.ZP)(
             {
                 content: F,
                 embeds: []
@@ -241,19 +241,19 @@ function w(e) {
                 shouldFilterKeywords: U
             }
         ),
-        q = l.useRef(null),
+        Y = l.useRef(null),
         [K, X] = l.useState(!1);
     l.useEffect(() => {
-        let e = q.current;
+        let e = Y.current;
         null != e && null != e.offsetWidth && null != e.scrollWidth && X(e.offsetWidth < e.scrollWidth);
     }, []);
-    let J = [F, V, H].filter((e) => null != e).join(', ');
+    let Q = [F, V, H].filter((e) => null != e).join(', ');
     return (0, i.jsx)(g.a.Provider, {
         value: (0, C.Z)(w, W),
         children: (0, i.jsxs)('ul', {
             role: 'group',
             className: k.searchResultGroup,
-            'aria-label': J,
+            'aria-label': Q,
             children: [
                 (0, i.jsx)(o.P3F, {
                     onClick: () => B(r.id),
@@ -271,9 +271,9 @@ function w(e) {
                                 children: (e) =>
                                     (0, i.jsxs)('span', {
                                         ...e,
-                                        ref: q,
+                                        ref: Y,
                                         className: k.channelNameText,
-                                        children: [O && null !== H && ''.concat(H, ' : '), Y]
+                                        children: [O && null !== H && ''.concat(H, ' : '), q]
                                     })
                             }),
                             (0, i.jsx)(D, {

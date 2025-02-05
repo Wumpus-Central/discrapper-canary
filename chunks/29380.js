@@ -20,7 +20,7 @@ function N(e) {
         I = l.useCallback(() => {
             c.yT(d.ti.ACTIVITY);
         }, []),
-        { submitting: _, wasSubmitting: g } = (0, p.Z)({
+        { submitting: g, wasSubmitting: _ } = (0, p.Z)({
             applicationId: n.id,
             context: t,
             launchingComponentId: A,
@@ -34,8 +34,8 @@ function N(e) {
         T = l.useMemo(() => (0, m.XZ)(C.displayName), [C.displayName]),
         {
             onActivityItemSelected: S,
-            buttonColor: b,
-            buttonText: L
+            buttonColor: L,
+            buttonText: b
         } = (0, h.P7)({
             context: t,
             application: n,
@@ -44,24 +44,24 @@ function N(e) {
             commandName: T,
             autoDismissOnClick: y === o.JS.LEAVE,
             launchingComponentId: A,
-            submitting: null != g ? g : _
+            submitting: null != _ ? _ : g
         }),
-        { disabled: R, reason: M } = (0, u.Z)({
+        { disabled: R, reason: Z } = (0, u.Z)({
             context: t,
             application: n,
             activityAction: y
         });
     return (0, i.jsx)(a.ua7, {
-        shouldShow: null != M,
+        shouldShow: null != Z,
         tooltipContentClassName: f.tooltipContent,
-        text: M,
+        text: Z,
         children: (e) => {
             let { onClick: t, ...l } = e;
             return (0, i.jsx)(a.zxk, {
                 ...l,
                 type: 'submit',
                 size: E,
-                color: b,
+                color: L,
                 disabled: R,
                 submitting: P,
                 onClick: () => {
@@ -74,10 +74,10 @@ function N(e) {
                         });
                 },
                 'aria-label': x.intl.formatToPlainString(x.t['XjP/R0'], {
-                    buttonText: L,
+                    buttonText: b,
                     applicationName: n.name
                 }),
-                children: L
+                children: b
             });
         }
     });

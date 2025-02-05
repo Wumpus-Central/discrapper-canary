@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(653041);
+n.d(t, { Z: () => h }), n(653041);
 var i = n(200651);
 n(192379);
 var l = n(392711),
@@ -10,7 +10,7 @@ var l = n(392711),
     d = n(463618),
     u = n(823379),
     m = n(413861);
-let h = (e) => {
+let _ = (e) => {
         let { member: t, empty: n, guildId: l } = e;
         return n
             ? (0, i.jsx)('div', { className: m.partyMemberEmpty })
@@ -42,16 +42,16 @@ let h = (e) => {
                     })
                 });
     },
-    _ = (e) => {
+    h = (e) => {
         let { partySize: t, members: n, minAvatarsShown: l = 1, maxAvatarsShown: r = 2, guildId: s } = e,
             { unknownSize: o, totalSize: c, knownSize: d } = t;
         if (c < l) return null;
-        let _ = a()(n)
+        let h = a()(n)
             .filter(u.lm)
             .take(r)
             .map((e) =>
                 (0, i.jsx)(
-                    h,
+                    _,
                     {
                         member: e,
                         guildId: s
@@ -60,12 +60,12 @@ let h = (e) => {
                 )
             )
             .value();
-        for (let e = 0; e < o && _.length < r; e++) _.push((0, i.jsx)(h, { guildId: s }, 'unknown-member-'.concat(e)));
+        for (let e = 0; e < o && h.length < r; e++) h.push((0, i.jsx)(_, { guildId: s }, 'unknown-member-'.concat(e)));
         let p = c - d - o;
-        for (let e = 0; e < p && _.length < r; e++)
-            _.push(
+        for (let e = 0; e < p && h.length < r; e++)
+            h.push(
                 (0, i.jsx)(
-                    h,
+                    _,
                     {
                         empty: !0,
                         guildId: s
@@ -73,12 +73,12 @@ let h = (e) => {
                     'empty-member-'.concat(e)
                 )
             );
-        let g = Math.max(Math.min(c - _.length, 99), 0);
+        let g = Math.max(Math.min(c - h.length, 99), 0);
         if (1 === g) {
             let e = n[r];
-            _.push(
+            h.push(
                 (0, i.jsx)(
-                    h,
+                    _,
                     {
                         member: e,
                         guildId: s
@@ -92,7 +92,7 @@ let h = (e) => {
             children: (0, i.jsxs)('div', {
                 className: m.partyMembers,
                 children: [
-                    _,
+                    h,
                     g > 1
                         ? (0, i.jsxs)('div', {
                               className: m.partyMemberOverflow,

@@ -26,9 +26,9 @@ var i = n(200651),
 let S = (e) => 1 - Math.pow(1 - e, 3);
 function j(e) {
     let { channel: t, buyer: a, onClose: s, dismissibleContent: j } = e,
-        A = (0, d.Wu)([g.Z], () => g.Z.getAllActiveStreams()),
-        y = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
-        P = null != A.find((e) => e.ownerId === (null == y ? void 0 : y.id)),
+        y = (0, d.Wu)([g.Z], () => g.Z.getAllActiveStreams()),
+        A = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
+        P = null != y.find((e) => e.ownerId === (null == A ? void 0 : A.id)),
         R = (0, d.e7)([E.Z], () => E.Z.getPreviousGoLiveSettings()),
         M = P && null != R && R.resolution !== b.LY.RESOLUTION_1440 && R.frameRate !== b.ws.FPS_60,
         [L, k] = (0, l.useState)(!1);
@@ -61,7 +61,7 @@ function j(e) {
         B = v.ZP.getName(t.guild_id, t.id, a),
         F = P && !M,
         H = t.hdStreamingUntil;
-    if (null == H || null == a || null == y) return null;
+    if (null == H || null == a || null == A) return null;
     let G = o()(H).diff(o()(), 'hours'),
         V = j
             ? Z.intl.format(Z.t['6LrV9f'], {
@@ -69,7 +69,7 @@ function j(e) {
                   num: G,
                   helpCenterLink: x.Z.getArticleURL(I.BhN.HD_STREAMING_POTION)
               })
-            : a.id === y.id
+            : a.id === A.id
               ? Z.intl.string(Z.t.IjKvNT)
               : !0 === P
                 ? Z.intl.format(Z.t.JkWoqK, {
@@ -78,7 +78,7 @@ function j(e) {
                   })
                 : Z.intl.formatToPlainString(Z.t.vNbVXF, { username: B }),
         z = M ? Z.intl.string(Z.t.o7NIjY) : F ? Z.intl.string(Z.t.r6xhBw) : Z.intl.string(Z.t.yKw8Dg);
-    return null == a || null == y
+    return null == a || null == A
         ? null
         : (0, i.jsxs)(c.animated.div, {
               style: D,

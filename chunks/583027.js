@@ -1,34 +1,34 @@
-t.d(e, {
-    Mo: () => c,
-    SC: () => d,
-    _U: () => _
+t.d(n, {
+    Mo: () => d,
+    SC: () => r,
+    _U: () => c
 }),
     t(47120);
-var o = t(15729),
-    a = t(877124),
-    r = t(731965);
-let i = (0, o.U)((0, a.XR)(() => ({ commandAnalyticsContext: new Map() })));
-function c(n) {
-    let { command: e, location: t, sectionName: o } = n,
-        { commandAnalyticsContext: a } = i.getState(),
-        c = a.get(e);
-    if (null == c || c.location !== t || c.sectionName !== o) {
-        let n = new Map(a);
-        n.set(e, {
+var l = t(15729),
+    i = t(877124),
+    a = t(731965);
+let o = (0, l.U)((0, i.XR)(() => ({ commandAnalyticsContext: new Map() })));
+function d(e) {
+    let { command: n, location: t, sectionName: l } = e,
+        { commandAnalyticsContext: i } = o.getState(),
+        d = i.get(n);
+    if (null == d || d.location !== t || d.sectionName !== l) {
+        let e = new Map(i);
+        e.set(n, {
             location: t,
-            sectionName: o
+            sectionName: l
         }),
-            (0, r.j)(() => i.setState({ commandAnalyticsContext: n }));
+            (0, a.j)(() => o.setState({ commandAnalyticsContext: e }));
     }
 }
-function _(n) {
-    let { commandAnalyticsContext: e } = i.getState();
-    return e.get(n);
+function c(e) {
+    let { commandAnalyticsContext: n } = o.getState();
+    return n.get(e);
 }
-function d(n) {
-    let { commandAnalyticsContext: e } = i.getState();
-    if (e.has(n)) {
-        let t = new Map(e);
-        t.delete(n), (0, r.j)(() => i.setState({ commandAnalyticsContext: t }));
+function r(e) {
+    let { commandAnalyticsContext: n } = o.getState();
+    if (n.has(e)) {
+        let t = new Map(n);
+        t.delete(e), (0, a.j)(() => o.setState({ commandAnalyticsContext: t }));
     }
 }

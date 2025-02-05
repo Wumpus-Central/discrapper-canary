@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(703656),
     S = n(493754),
     j = n(880831),
-    A = n(73563),
-    y = n(800965),
+    y = n(73563),
+    A = n(800965),
     P = n(107169),
     R = n(891551),
     M = n(314897),
@@ -43,12 +43,12 @@ var i = n(200651),
     V = n(513449),
     z = n(153349),
     W = n(901434),
-    Y = n(302270),
-    q = n(308177),
+    q = n(302270),
+    Y = n(308177),
     K = n(700483),
     X = n(686468),
-    J = n(801405),
-    Q = n(903108),
+    Q = n(801405),
+    J = n(903108),
     $ = n(981631),
     ee = n(354459),
     et = n(388032),
@@ -75,7 +75,7 @@ function es(e) {
             var e;
             return null !== (e = null == r ? void 0 : r.window) && void 0 !== e ? e : window;
         }, [r]),
-        g = (0, J.Z)({
+        g = (0, Q.Z)({
             channel: t,
             appContext: n,
             popoutOpen: a,
@@ -101,7 +101,7 @@ function es(e) {
                   })
                 : null,
             p
-                ? (0, i.jsx)(y.Z, {
+                ? (0, i.jsx)(A.Z, {
                       className: en.rightTrayIcon,
                       popoutOpen: a,
                       onOpenPopout: el(t, u),
@@ -141,8 +141,8 @@ function ec(e) {
         [N, T] = l.useState(0),
         { isOnStartStageScreen: S } = (0, V.ZP)();
     (0, V.MV)(n);
-    let y = (0, o.e7)([L.Z], () => L.Z.getToastsEnabled(n.id)),
-        P = (0, Q.Z)(n) ? (null != E ? '84px' : '124px') : null != E ? '0px' : '48px';
+    let A = (0, o.e7)([L.Z], () => L.Z.getToastsEnabled(n.id)),
+        P = (0, J.Z)(n) ? (null != E ? '84px' : '124px') : null != E ? '0px' : '48px';
     return (
         (t = S
             ? (0, i.jsx)(X.Z, {
@@ -152,7 +152,7 @@ function ec(e) {
                   }
               })
             : g
-              ? (0, i.jsx)(q.Z, {
+              ? (0, i.jsx)(Y.Z, {
                     channel: n,
                     onScroll: (e) => {
                         let { scrollTop: t } = e.target;
@@ -164,12 +164,12 @@ function ec(e) {
                     channel: n,
                     hasConnectPermission: C
                 })),
-        (0, i.jsx)(A.Z, {
+        (0, i.jsx)(y.Z, {
             style: {
                 height: 'calc(100% - '.concat(P, ')'),
                 paddingTop: P
             },
-            disableGradients: !!Z || (0 === N && A.e.TOP),
+            disableGradients: !!Z || (0 === N && y.e.TOP),
             renderBottomLeft: () => (0, i.jsx)(eo, { channel: n }),
             renderBottomCenter: () =>
                 g
@@ -190,14 +190,14 @@ function ec(e) {
                       })
                     : null,
             renderHeader: () =>
-                (0, i.jsx)(Y.Z, {
+                (0, i.jsx)(q.Z, {
                     inPopout: f === $.IlC.POPOUT,
                     toggleRequestToSpeakSidebar: a,
                     showRequestToSpeakSidebar: c,
                     channel: n
                 }),
             renderChatToasts: () =>
-                !y || p || I
+                !A || p || I
                     ? null
                     : (0, i.jsx)(x.ZP, {
                           children: (0, i.jsx)(j.Z, {
@@ -228,7 +228,7 @@ function ed(e) {
         Z = null != C && !C.closed,
         { analyticsLocations: T } = (0, g.ZP)(f.Z.STAGE_CHANNEL_CALL),
         S = (0, m.bp)(),
-        { chatOpen: j, participantsListOpen: A } = (0, o.cj)(
+        { chatOpen: j, participantsListOpen: y } = (0, o.cj)(
             [_.Z],
             () => ({
                 chatOpen: _.Z.getChatOpen(t.id),
@@ -236,7 +236,7 @@ function ed(e) {
             }),
             [t.id]
         ),
-        y = (0, o.e7)([k.Z], () => k.Z.getGuild(t.guild_id), [t.guild_id]),
+        A = (0, o.e7)([k.Z], () => k.Z.getGuild(t.guild_id), [t.guild_id]),
         { hasParticipantsPanel: P } = (0, I.Z)({ location: 'StageChannelCall' });
     (0, p.ZP)(() => {
         null == c.K.get(ei) &&
@@ -263,7 +263,7 @@ function ed(e) {
                                 (0, i.jsx)('div', {
                                     className: r()(en.callContainer, e, {
                                         [en.sidebarVisible]: a,
-                                        [en.sidebarOrChatVisible]: a || j || A
+                                        [en.sidebarOrChatVisible]: a || j || y
                                     }),
                                     children: (0, i.jsx)(ec, {
                                         channel: t,
@@ -290,10 +290,10 @@ function ed(e) {
                                     O &&
                                     (0, i.jsx)(v.Z, {
                                         channel: t,
-                                        guild: y,
+                                        guild: A,
                                         maxWidth: L
                                     }),
-                                A &&
+                                y &&
                                     P &&
                                     O &&
                                     (0, i.jsx)(E.Z, {

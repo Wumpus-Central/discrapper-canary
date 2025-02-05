@@ -50,8 +50,8 @@ let w = function (e) {
         K = s.useRef(0),
         X = (0, j.M5)(U, L.p9.TIER_2),
         q = (0, R.n)(),
-        Q = null == q ? void 0 : q.countryCode,
-        { enabled: J } = (0, y.D)(),
+        J = null == q ? void 0 : q.countryCode,
+        { enabled: Q } = (0, y.D)(),
         $ = (0, a.e7)([N.Z], () => (null != U ? N.Z.getUserProfile(U.id) : null)),
         ee = (0, a.e7)([A.Z], () => A.Z.hasFetched);
     return (s.useEffect(() => {
@@ -60,9 +60,9 @@ let w = function (e) {
     s.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(Q, null, B.JjL.DISCOVERY), null != G && J && X && (0, h.In)(G)]), (K.current = Date.now() - e), W(!1);
+            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(J, null, B.JjL.DISCOVERY), null != G && Q && X && (0, h.In)(G)]), (K.current = Date.now() - e), W(!1);
         });
-    }, [Q, G, J, X]),
+    }, [J, G, Q, X]),
     s.useEffect(() => {
         n && (null != F || null != H) && (0, O.a)(F, H);
     }, [n, F, H]),
@@ -78,7 +78,7 @@ let w = function (e) {
         : n
           ? (0, i.jsx)(C.c8, {})
           : t === L.EZ.ApplicationStoreHome && X
-            ? J && null == $
+            ? Q && null == $
                 ? (0, i.jsx)('div', {
                       className: l()(M.container, M.loading),
                       children: (0, i.jsx)(o.$jN, {})

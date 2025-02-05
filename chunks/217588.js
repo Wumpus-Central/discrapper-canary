@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(493773),
     u = n(367907),
     m = n(600164),
-    h = n(111028),
-    _ = n(231053),
+    _ = n(111028),
+    h = n(231053),
     p = n(697568),
     g = n(183023),
     f = n(524444),
     x = n(98278),
-    E = n(197115),
-    C = n(430824),
-    v = n(594174),
+    C = n(197115),
+    v = n(430824),
+    E = n(594174),
     I = n(626135),
     N = n(74538),
     S = n(453070),
@@ -59,7 +59,7 @@ function D(e) {
                     (0, i.jsx)(o.Text, {
                         className: P.__invalid_emojiName,
                         variant: 'text-md/semibold',
-                        children: (0, i.jsx)(h.Z, { children: t.name })
+                        children: (0, i.jsx)(_.Z, { children: t.name })
                     }),
                     null != n &&
                         (0, i.jsx)(o.Text, {
@@ -74,12 +74,12 @@ function D(e) {
 let w = (e) => {
         let { closePopout: t, sticker: n, channel: a, refreshPositionKey: r } = e,
             [c, d, m] = (0, s.Wu)([T.Z], () => [T.Z.getStickerPack(n.pack_id), !T.Z.hasLoadedStickerPacks, T.Z.isPremiumPack(n.pack_id)], [n]),
-            h = M({
+            _ = M({
                 sticker: n,
                 stickerPack: c
             });
         (0, S.Pq)(n.pack_id);
-        let _ = (0, S.Sd)(a),
+        let h = (0, S.Sd)(a),
             p = {
                 refreshPositionKey: r,
                 channel: a
@@ -116,7 +116,7 @@ let w = (e) => {
                       }),
                       (0, i.jsx)('ul', {
                           className: L.stickersList,
-                          children: h.map((e) =>
+                          children: _.map((e) =>
                               (0, i.jsx)(
                                   A.ZP,
                                   {
@@ -140,7 +140,7 @@ let w = (e) => {
                                           m &&
                                               (0, j.m)({
                                                   stickerPack: c,
-                                                  stickerPickerCategories: _
+                                                  stickerPickerCategories: h
                                               }),
                                               t();
                                       },
@@ -154,12 +154,12 @@ let w = (e) => {
     },
     F = (e) => {
         let t,
-            { sticker: n, channel: a, closePopout: h, refreshPositionKey: x } = e,
+            { sticker: n, channel: a, closePopout: _, refreshPositionKey: x } = e,
             [S, T] = l.useState(null),
             [b, j] = l.useState(!1),
-            k = v.default.getCurrentUser(),
+            k = E.default.getCurrentUser(),
             M = N.ZP.canUseCustomStickersEverywhere(k),
-            w = (0, s.e7)([C.Z], () => C.Z.getGuild(n.guild_id)),
+            w = (0, s.e7)([v.Z], () => v.Z.getGuild(n.guild_id)),
             F = null != w,
             [U, B] = l.useState(!1),
             [G, H] = l.useState(null),
@@ -200,7 +200,7 @@ let w = (e) => {
                 ? ((t = R.intl.string(R.t.IuXYcn)), (q = !0), (Q = 'Custom Sticker Popout (Upsell)'))
                 : ((t = R.intl.format(R.t.hGWuxc, {
                       openPremiumSettings: () => {
-                          O(a), h();
+                          O(a), _();
                       }
                   })),
                   (Q = 'Custom Sticker Popout (Soft Upsell)'));
@@ -222,7 +222,7 @@ let w = (e) => {
                       (() => {
                           let e = async () => {
                               if (null == S || F) return;
-                              h();
+                              _();
                               let e = S.id;
                               try {
                                   await c.Z.joinGuild(e), c.Z.transitionToGuildSync(e);
@@ -236,13 +236,13 @@ let w = (e) => {
                                       sticker: n
                                   }),
                                   q &&
-                                      (0, i.jsx)(E.Z, {
+                                      (0, i.jsx)(C.Z, {
                                           className: P.ctaButton,
                                           subscriptionTier: Z.Si.TIER_2,
                                           size: o.zxk.Sizes.SMALL,
                                           fullWidth: !0,
                                           buttonText: R.intl.string(R.t['gl/XHB']),
-                                          onSubscribeModalClose: (t) => (t ? e() : h()),
+                                          onSubscribeModalClose: (t) => (t ? e() : _()),
                                           postSuccessGuild: F || null == S ? void 0 : S,
                                           premiumModalAnalyticsLocation: V
                                       }),
@@ -265,7 +265,7 @@ let w = (e) => {
                                       .slice(0, 13)
                                       .filter((e) => e.id !== n.id)
                                       .slice(0, 12),
-                                  l = null != S ? _.JO.createFromDiscoverableGuild(S) : _.JO.createFromGuildRecord(w);
+                                  l = null != S ? h.JO.createFromDiscoverableGuild(S) : h.JO.createFromGuildRecord(w);
                               return (0, i.jsxs)('div', {
                                   className: P.guildSection,
                                   children: [

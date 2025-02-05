@@ -9,8 +9,8 @@ var l = n(481060),
     c = n(124368);
 function d(e) {
     let { channel: t, closePopout: n, onSelect: d, navId: u, label: m } = e,
-        h = (0, a.Z)(t, 'Notifications Bell'),
-        _ = (0, r.Z)(t),
+        _ = (0, a.Z)(t, 'Notifications Bell'),
+        h = (0, r.Z)(t),
         p = (0, o.B)(t);
     return (0, i.jsxs)(l.v2r, {
         navId: u,
@@ -19,7 +19,7 @@ function d(e) {
         onSelect: d,
         children: [
             (0, i.jsxs)(l.kSQ, {
-                children: [t.isForumPost() ? h : null, _]
+                children: [t.isForumPost() ? _ : null, h]
             }),
             (0, i.jsx)(l.kSQ, {
                 children: (0, c.zb)().map((e) => {

@@ -10,8 +10,8 @@ var l = n(442837),
     d = n(63063),
     u = n(51144),
     m = n(665149),
-    h = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    h = n(388032);
 let p = new Set(['ko', 'ja']);
 function g(e) {
     let { className: t } = e,
@@ -25,10 +25,10 @@ function g(e) {
         children: (0, i.jsx)(m.JO, {
             color: f ? a.Z.unsafe_rawColors.GREEN_360.css : 'currentColor',
             className: t,
-            onClick: () => c.default.track(h.rMx.HELP_CLICKED, { highlighted: f }),
+            onClick: () => c.default.track(_.rMx.HELP_CLICKED, { highlighted: f }),
             icon: r.idN,
             tooltipPosition: p.has(g) ? 'left' : void 0,
-            tooltip: _.intl.string(_.t.cqEoj4)
+            tooltip: h.intl.string(h.t.cqEoj4)
         })
     });
 }

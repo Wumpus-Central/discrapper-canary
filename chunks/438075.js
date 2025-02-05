@@ -15,8 +15,8 @@ function r(e) {
         isAutomodBlockedMessage: d,
         isMessageSnapshot: u,
         renderThreadAccessory: m,
-        renderSuppressEmbeds: h,
-        renderReactions: _,
+        renderSuppressEmbeds: _,
+        renderReactions: h,
         forceAddReactions: p,
         disableComponentInteractivity: g,
         className: f
@@ -36,9 +36,9 @@ function r(e) {
                   onMediaItemContextMenu: o,
                   renderThreadAccessory: m,
                   disableComponentInteractivity: g,
-                  renderSuppressEmbeds: h,
+                  renderSuppressEmbeds: _,
                   forceAddReactions: p,
-                  renderReactions: _
+                  renderReactions: h
               })
           });
 }

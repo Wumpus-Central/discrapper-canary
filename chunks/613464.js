@@ -24,10 +24,10 @@ var i = n(200651),
 function N(e) {
     let { userId: t, guildId: n, onClose: a, className: N, infoPanelClassName: T, style: S } = e,
         j = (0, E.m)(n),
-        A = (0, s.e7)([v.default], () => v.default.getUser(t), [t]),
-        y = (0, s.e7)([x.ZP], () => x.ZP.getMember(n, t), [n, t]),
-        [P, R] = l.useState(null == A || null == y),
-        M = (0, d.Z)(y),
+        y = (0, s.e7)([v.default], () => v.default.getUser(t), [t]),
+        A = (0, s.e7)([x.ZP], () => x.ZP.getMember(n, t), [n, t]),
+        [P, R] = l.useState(null == y || null == A),
+        M = (0, d.Z)(A),
         L = l.useRef(null),
         { analyticsLocations: k } = (0, m.ZP)(p.Z.GUILD_MEMBER_MOD_VIEW),
         O = (0, g.ZP)(t, n),
@@ -36,20 +36,20 @@ function N(e) {
         j || a();
     }, [j, a]),
     l.useEffect(() => {
-        null == M || null != y || P || a();
-    }, [P, y, a, M]),
+        null == M || null != A || P || a();
+    }, [P, A, a, M]),
     l.useEffect(() => {
-        null != A && null != y && R(!1);
-    }, [A, y]),
+        null != y && null != A && R(!1);
+    }, [y, A]),
     l.useEffect(() => {
-        let e = null == y;
+        let e = null == A;
         return (
             !P && e && (L.current = window.setTimeout(a, 500)),
             () => {
                 null != L.current && window.clearTimeout(L.current);
             }
         );
-    }, [P, y, a]),
+    }, [P, A, a]),
     (0, h.$)({ [n]: [t] }),
     l.useEffect(() => {
         (async function () {
@@ -65,7 +65,7 @@ function N(e) {
         })();
     }, [n, t]),
     j)
-        ? P || null == A || null == y
+        ? P || null == y || null == A
             ? (0, i.jsx)('div', {
                   className: r()(Z.sidebarContainer, Z.loadingContainer, N),
                   style: S,
@@ -80,7 +80,7 @@ function N(e) {
                       className: r()(Z.sidebarContainer, N),
                       style: S,
                       children: (0, i.jsx)(C.Z, {
-                          user: A,
+                          user: y,
                           displayProfile: O,
                           profileType: null,
                           themeOverride: D,

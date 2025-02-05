@@ -9,15 +9,15 @@ var i,
     d = n(58642),
     u = n(2052),
     m = n(710845),
-    h = n(703656),
-    _ = n(173747),
+    _ = n(703656),
+    h = n(173747),
     p = n(7956),
     g = n(293245),
     f = n(417363),
     x = n(941128),
-    E = n(780570),
-    C = n(358085),
-    v = n(814225),
+    C = n(780570),
+    v = n(358085),
+    E = n(814225),
     I = n(346329),
     N = n(701560),
     S = n(981631),
@@ -84,7 +84,7 @@ class R extends (i = r.Component) {
         if (e.isHidden()) return 'add_to_library';
         if (e.isPreorder()) return 'preorder_wait';
         let i = null != n ? y[n] : null;
-        return null != i ? i : null != t && t.type === S.vxO.UNINSTALLING ? 'uninstalling' : (0, C.isWeb)() ? 'play' : 'unsupported_os';
+        return null != i ? i : null != t && t.type === S.vxO.UNINSTALLING ? 'uninstalling' : (0, v.isWeb)() ? 'play' : 'unsupported_os';
     }
     renderPlayButton() {
         let { libraryApplication: e, fullWidth: t, size: n, color: i, customDisabledColor: l, isPlayShiny: r, onDropdownOpen: s, onDropdownClose: o, analyticsListSort: c, analyticsListIndex: d } = this.props;
@@ -130,9 +130,9 @@ class R extends (i = r.Component) {
     renderProgressBar() {
         let { hideProgress: e, dispatchState: t } = this.props;
         if (e) return null;
-        let n = E.KJ(t);
+        let n = C.KJ(t);
         if (null == n) return null;
-        let i = n.type === S.vxO.UNINSTALLING ? c.Exd.INDETERMINATE : E.xI(Number(n.progress), Number(n.total));
+        let i = n.type === S.vxO.UNINSTALLING ? c.Exd.INDETERMINATE : C.xI(Number(n.progress), Number(n.total));
         return (0, a.jsx)(c.Exd, {
             percent: i,
             size: c.Exd.Sizes.XSMALL,
@@ -161,7 +161,7 @@ class R extends (i = r.Component) {
             return this.renderDisabledButton(
                 n,
                 (function (e) {
-                    let t = v.en(e.sku);
+                    let t = E.en(e.sku);
                     return null != t ? T.intl.formatToPlainString(T.t.Aqe2ZG, { date: t }) : null;
                 })(t)
             );
@@ -176,7 +176,7 @@ class R extends (i = r.Component) {
             A(this, 'handleAddToLibrary', async () => {
                 try {
                     let { libraryApplication: e } = this.props;
-                    await d.h(e.id, e.branchId, e.getFlags() & ~S.eHb.HIDDEN), (0, h.uL)(S.Z5c.APPLICATION_LIBRARY);
+                    await d.h(e.id, e.branchId, e.getFlags() & ~S.eHb.HIDDEN), (0, _.uL)(S.Z5c.APPLICATION_LIBRARY);
                 } catch (e) {
                     new m.Z('LibraryApplicationButton').error(e);
                 }
@@ -205,7 +205,7 @@ function L(e) {
         n = (0, u.O)(),
         [i, l] = (0, s.Wu)([f.Z, x.Z], () => [(0, p.i)(t, f.Z, x.Z), f.Z.getState(t.id, t.branchId)], [t]),
         r = (0, s.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
-        o = (0, s.e7)([_.Z], () => _.Z.hasNoBuild(t.id, t.branchId), [t]);
+        o = (0, s.e7)([h.Z], () => h.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, a.jsx)(R, {
         ...e,
         analyticsContext: n,

@@ -32,8 +32,8 @@ function v(e) {
         T = (0, c.Z)(n),
         S = null == N ? null : N === _.k.INFO ? 'backwards' : 'forwards',
         j = (0, u.Z)(S),
-        { reducedMotion: A } = l.useContext(s.S),
-        y = l.useCallback(
+        { reducedMotion: y } = l.useContext(s.S),
+        A = l.useCallback(
             (e) => {
                 null != Z && (0, p.r)(v, n, Z.baseChannelId, { modViewPanel: e });
             },
@@ -44,10 +44,10 @@ function v(e) {
                 [C.EkH.CLOSE_MODAL]: {
                     binds: ['esc'],
                     comboKeysBindGlobal: !0,
-                    action: () => (N === _.k.INFO ? E() : y(_.k.INFO))
+                    action: () => (N === _.k.INFO ? E() : A(_.k.INFO))
                 }
             }),
-            [E, N, y]
+            [E, N, A]
         );
     l.useEffect(() => (d.Z.enable(), d.Z.enableTemp(P), () => d.Z.disableTemp()), [P]);
     let R = (0, o.Yzy)(
@@ -80,7 +80,7 @@ function v(e) {
                         backfaceVisibility: 'hidden',
                         width: '100%',
                         height: '100%',
-                        ...(A.enabled
+                        ...(y.enabled
                             ? { opacity: null === (r = e.value) || void 0 === r ? void 0 : r.to((e) => 1 - Math.abs(e)) }
                             : {
                                   left: null === (s = e.value) || void 0 === s ? void 0 : s.to(x('left', j)),
@@ -93,21 +93,21 @@ function v(e) {
                                 return (0, i.jsx)(m.Z, {
                                     userId: n,
                                     guildId: v,
-                                    onNavigate: y,
+                                    onNavigate: A,
                                     className: b
                                 });
                             case _.k.MESSAGE_HISTORY:
                                 return (0, i.jsx)(f.Z, {
                                     userId: n,
                                     guildId: v,
-                                    onNavigate: () => y(_.k.INFO),
+                                    onNavigate: () => A(_.k.INFO),
                                     className: b
                                 });
                             case _.k.PERMISSIONS:
                                 return (0, i.jsx)(g.Z, {
                                     userId: n,
                                     guildId: v,
-                                    onNavigate: () => y(_.k.INFO),
+                                    onNavigate: () => A(_.k.INFO),
                                     className: b
                                 });
                             default:

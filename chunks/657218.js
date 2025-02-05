@@ -25,8 +25,8 @@ var i = n(200651),
     T = n(268350),
     S = n(695346),
     j = n(592125),
-    A = n(703558),
-    y = n(375954),
+    y = n(703558),
+    A = n(375954),
     P = n(496675),
     R = n(117530),
     M = n(459273),
@@ -57,7 +57,7 @@ function W(e) {
                       children: [
                           (0, i.jsx)(h.Z, {
                               channel: a,
-                              draftType: A.d.FirstThreadMessage
+                              draftType: y.d.FirstThreadMessage
                           }),
                           (0, i.jsxs)(b.ZP, {
                               toolbar: (0, i.jsx)(b.ZP.Icon, {
@@ -74,7 +74,7 @@ function W(e) {
                                   (0, i.jsx)(b.ZP.Title, { children: H.intl.string(H.t['4WNcpq']) })
                               ]
                           }),
-                          (0, i.jsx)(Y, {
+                          (0, i.jsx)(q, {
                               parentChannel: a,
                               parentMessageId: n,
                               location: l
@@ -84,7 +84,7 @@ function W(e) {
               })
           });
 }
-function Y(e) {
+function q(e) {
     let { parentChannel: t, parentMessageId: n, location: a } = e,
         d = (0, s.e7)([p.Z], () => p.Z.messageGroupSpacing),
         h = (function () {
@@ -124,14 +124,14 @@ function Y(e) {
                 l.useEffect(() => {
                     function n(n) {
                         var l;
-                        let a = A.Z.getDraft(e.id, A.d.FirstThreadMessage);
-                        (0 === a.length || !0 === n) && i((0, _.eK)(a)), t(null !== (l = A.Z.getThreadSettings(e.id)) && void 0 !== l ? l : {});
+                        let a = y.Z.getDraft(e.id, y.d.FirstThreadMessage);
+                        (0 === a.length || !0 === n) && i((0, _.eK)(a)), t(null !== (l = y.Z.getThreadSettings(e.id)) && void 0 !== l ? l : {});
                     }
                     return (
                         n(!0),
-                        A.Z.addChangeListener(n),
+                        y.Z.addChangeListener(n),
                         () => {
-                            A.Z.removeChangeListener(n);
+                            y.Z.removeChangeListener(n);
                         }
                     );
                 }, [e.id, t]),
@@ -172,7 +172,7 @@ function Y(e) {
                                 shouldClear: !1,
                                 shouldRefocus: !1
                             };
-                        p(!0), null == e && (e = r.textValue), (e = e.trim()), (null == l || 0 === l.length) && (l = null === (s = N.Z.getStickerPreview(t.id, z.drafts.type)) || void 0 === s ? void 0 : s.map((e) => e.id)), (null == a || 0 === a.length) && (a = R.Z.getUploads(t.id, A.d.FirstThreadMessage));
+                        p(!0), null == e && (e = r.textValue), (e = e.trim()), (null == l || 0 === l.length) && (l = null === (s = N.Z.getStickerPreview(t.id, z.drafts.type)) || void 0 === s ? void 0 : s.map((e) => e.id)), (null == a || 0 === a.length) && (a = R.Z.getUploads(t.id, y.d.FirstThreadMessage));
                         let f = null !== (o = i.name) && void 0 !== o ? o : '',
                             g = null == n && 0 === f.length,
                             _ = '' === e && (null == l || 0 === l.length) && 0 === a.length;
@@ -234,7 +234,7 @@ function Y(e) {
             textAreaState: C,
             location: a
         }),
-        y = (0, D.oD)(m, v) ? o.qtY : o.or_,
+        A = (0, D.oD)(m, v) ? o.qtY : o.or_,
         P = (0, E.R6)('CreateThreadSidebar');
     return (0, i.jsx)('div', {
         className: G.chat,
@@ -259,7 +259,7 @@ function Y(e) {
                                     children: [
                                         (0, i.jsx)('div', {
                                             className: V.iconWrapper,
-                                            children: (0, i.jsx)(y, { className: V.icon })
+                                            children: (0, i.jsx)(A, { className: V.icon })
                                         }),
                                         (0, i.jsx)(K, {
                                             parentChannel: t,
@@ -270,7 +270,7 @@ function Y(e) {
                                             disabled: j
                                         }),
                                         t.type === F.d4z.GUILD_TEXT
-                                            ? (0, i.jsx)(q, {
+                                            ? (0, i.jsx)(Y, {
                                                   startedFromMessage: null != n,
                                                   threadSettings: m,
                                                   updateThreadSettings: g,
@@ -279,7 +279,7 @@ function Y(e) {
                                             : null
                                     ]
                                 }),
-                                (0, i.jsx)(J, {
+                                (0, i.jsx)(Q, {
                                     parentChannel: t,
                                     parentMessageId: n
                                 })
@@ -309,7 +309,7 @@ function Y(e) {
         })
     });
 }
-function q(e) {
+function Y(e) {
     let { startedFromMessage: t, threadSettings: n, updateThreadSettings: l, privateThreadMode: a } = e,
         s = (0, D.oD)(n, a),
         c = (0, i.jsx)('div', {
@@ -386,7 +386,7 @@ function X(e) {
         g = l.useCallback(() => m(!1), []),
         _ = l.useCallback(
             (e, n, i) => {
-                c.Z.saveDraft(t.id, n, A.d.FirstThreadMessage),
+                c.Z.saveDraft(t.id, n, y.d.FirstThreadMessage),
                     a(
                         (e) => (
                             '' !== n && e.textValue !== n ? d.Z.startTyping(t.id) : '' === n && d.Z.stopTyping(t.id),
@@ -445,9 +445,9 @@ function X(e) {
         ]
     });
 }
-function J(e) {
+function Q(e) {
     let { parentChannel: t, parentMessageId: n } = e,
-        l = (0, s.e7)([y.Z], () => (null == n ? null : y.Z.getMessage(t.id, n))),
+        l = (0, s.e7)([A.Z], () => (null == n ? null : A.Z.getMessage(t.id, n))),
         a = S.jU.useSetting();
     return null != l
         ? (0, i.jsx)(Z.Z, {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
 var l = n(442837),
@@ -10,23 +10,23 @@ var l = n(442837),
     d = n(51144),
     u = n(981631),
     m = n(388032),
-    h = n(658412);
-function _(e) {
+    _ = n(658412);
+function h(e) {
     let t,
         n,
-        _,
+        h,
         { author: p, banned: g } = e,
         f = (0, l.e7)([s.default], () => s.default.getId()),
         x = (0, l.e7)([o.Z], () => o.Z.getChannelId()),
-        E = d.ZP.useName(p);
+        C = d.ZP.useName(p);
     return (
         f === p.id
-            ? ((t = m.intl.string(m.t['F/OLvL'])), (_ = m.intl.string(m.t.C89OLC)))
-            : ((_ = m.intl.string(m.t['YVub5+'])),
+            ? ((t = m.intl.string(m.t['F/OLvL'])), (h = m.intl.string(m.t.C89OLC)))
+            : ((h = m.intl.string(m.t['YVub5+'])),
               g
                   ? (t = m.intl.string(m.t['57nBt7']))
-                  : null != E
-                    ? ((t = m.intl.formatToPlainString(m.t['9Akp1t'], { username: E })),
+                  : null != C
+                    ? ((t = m.intl.formatToPlainString(m.t['9Akp1t'], { username: C })),
                       (n = (0, i.jsx)(r.Z.Button, {
                           onClick: function () {
                               let { id: e } = p,
@@ -42,11 +42,11 @@ function _(e) {
                     : (t = m.intl.string(m.t['SMJr+f']))),
         (0, i.jsxs)(r.Z, {
             children: [
-                (0, i.jsx)(r.Z.Header, { text: _ }),
+                (0, i.jsx)(r.Z.Header, { text: h }),
                 (0, i.jsxs)(r.Z.Body, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: h.headerLine,
+                            className: _.headerLine,
                             children: [
                                 (0, i.jsx)(r.Z.Icon, { expired: !0 }),
                                 (0, i.jsx)(r.Z.Info, {

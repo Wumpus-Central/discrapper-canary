@@ -9,8 +9,8 @@ var i,
 let d = [],
     u = {},
     m = null,
-    h = 0;
-function _(e) {
+    _ = 0;
+function h(e) {
     let t = null;
     try {
         t = JSON.parse(e.launch_parameters);
@@ -51,7 +51,7 @@ class p extends (i = r.ZP.Store) {
         return m;
     }
     getUnseenInviteCount() {
-        return h;
+        return _;
     }
 }
 (a = 'GameInviteStore'),
@@ -66,12 +66,12 @@ class p extends (i = r.ZP.Store) {
 let g = new p(s.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { gameInvites: t } = e;
-        d = t.map(_).filter(o.lm);
+        d = t.map(h).filter(o.lm);
     },
     GAME_INVITE_CREATE: function (e) {
         let { gameInvite: t } = e,
-            n = _(t);
-        null != n && ((d = [n, ...d]), (m = t), (h += 1));
+            n = h(t);
+        null != n && ((d = [n, ...d]), (m = t), (_ += 1));
     },
     GAME_INVITE_DELETE: function (e) {
         let { inviteId: t } = e;
@@ -88,6 +88,6 @@ let g = new p(s.Z, {
         };
     },
     GAME_INVITE_CLEAR_UNSEEN: function (e) {
-        (m = null), (h = 0);
+        (m = null), (_ = 0);
     }
 });

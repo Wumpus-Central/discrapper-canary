@@ -25,8 +25,8 @@ function f(e) {
     let { application: t, context: n, name: f, iconURL: N, scrollerRef: C, sectionName: E } = e,
         A = (0, o.ap)((0, r.ZP)()),
         I = l.useRef(null),
-        _ = l.useRef(null),
         g = l.useRef(null),
+        _ = l.useRef(null),
         P = l.useRef(null),
         j = (0, s.dQu)(s.TVs.colors.BG_BASE_PRIMARY).hex(),
         y = (0, c.ZP)('number' == typeof N ? '' : N, null != j ? j : ''),
@@ -47,15 +47,15 @@ function f(e) {
                 : y;
         }, [y, A]),
         S = x(I),
-        b = x(_),
-        L = l.useCallback(() => {
+        L = x(g),
+        b = l.useCallback(() => {
             var e, t, n, i;
             let l = C.current,
                 o = I.current,
-                s = g.current,
+                s = _.current,
                 r = null == P ? void 0 : P.current,
                 c = parseInt(null !== (e = null == S ? void 0 : S.height) && void 0 !== e ? e : ''),
-                d = parseInt(null !== (t = null == b ? void 0 : b.height) && void 0 !== t ? t : '');
+                d = parseInt(null !== (t = null == L ? void 0 : L.height) && void 0 !== t ? t : '');
             if (null != l && null != o && null != s && !isNaN(c) && !isNaN(d)) {
                 let e = null !== (n = l.scrollTop) && void 0 !== n ? n : 0,
                     t = 0 !== l.scrollHeight ? l.scrollHeight : d + 20,
@@ -72,15 +72,15 @@ function f(e) {
                     (s.style.transform = 'translateY('.concat((i = c / 4) + (0 - i) * h, 'px)')),
                     null != r && (r.style.opacity = ''.concat(1 + -1 * h));
             }
-        }, [T, y, null == b ? void 0 : b.height, A, C, null == S ? void 0 : S.height]);
+        }, [T, y, null == L ? void 0 : L.height, A, C, null == S ? void 0 : S.height]);
     return (
         l.useEffect(() => {
-            L();
-        }, [L, A]),
+            b();
+        }, [b, A]),
         l.useEffect(() => {
             let e = C.current,
                 t = () => {
-                    L();
+                    b();
                 };
             return (
                 null == e || e.addEventListener('scroll', t),
@@ -88,7 +88,7 @@ function f(e) {
                     null == e || e.removeEventListener('scroll', t);
                 }
             );
-        }, [C, L]),
+        }, [C, b]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
@@ -108,7 +108,7 @@ function f(e) {
                         (0, i.jsx)('div', {
                             className: v.nameContainer,
                             children: (0, i.jsx)(s.X6q, {
-                                ref: g,
+                                ref: _,
                                 className: v.textApplicationName,
                                 variant: 'heading-lg/extrabold',
                                 children: f
@@ -129,7 +129,7 @@ function f(e) {
                       })
                     : null,
                 (0, i.jsx)('div', {
-                    ref: _,
+                    ref: g,
                     className: v.bannerBackground,
                     style: { backgroundColor: y }
                 })

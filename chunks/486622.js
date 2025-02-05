@@ -21,10 +21,10 @@ function _(e) {
         [b, Z] = i.useState(!1),
         [N, T] = i.useState(!1),
         [S, j] = i.useState(!1),
-        A = x || E || b,
-        y = i.useCallback(
+        y = x || E || b,
+        A = i.useCallback(
             async (e) => {
-                if (!A) {
+                if (!y) {
                     v(!0);
                     try {
                         await (0, h.e4)(e), T(!0), null == n || n();
@@ -36,11 +36,11 @@ function _(e) {
                     }
                 }
             },
-            [A, n, _]
+            [y, n, _]
         ),
         P = i.useCallback(
             async (e) => {
-                if (!A) {
+                if (!y) {
                     I(!0);
                     try {
                         await (0, h.gN)(e), j(!0), null == l || l();
@@ -52,11 +52,11 @@ function _(e) {
                     }
                 }
             },
-            [A, l, _]
+            [y, l, _]
         ),
         R = i.useCallback(
             async (e) => {
-                if (A) return;
+                if (y) return;
                 I(!0);
                 let t = a()(e, f.t$);
                 try {
@@ -69,11 +69,11 @@ function _(e) {
                     I(!1);
                 }
             },
-            [A, l, _]
+            [y, l, _]
         ),
         M = i.useCallback(
             async (e) => {
-                if (A) return;
+                if (y) return;
                 if (null != t && null == o.Z.getMutualGuilds(t.id)) {
                     Z(!0);
                     try {
@@ -95,7 +95,7 @@ function _(e) {
                         mutual_guild_ids: null != i ? i : [],
                         other_user_id: null == t ? void 0 : t.id
                     }),
-                        await y(e);
+                        await A(e);
                 };
                 (0, p.H)({
                     channelId: e,
@@ -112,14 +112,14 @@ function _(e) {
                     }
                 });
             },
-            [y, A, t]
+            [A, y, t]
         ),
         L = i.useCallback(
             (e, t, n) => {
                 let i = (i, l) => {
                         l && d.kJ.updateSetting(i),
                             i && null != t && (0, s.zd)(t),
-                            y(e.id),
+                            A(e.id),
                             u.default.track(g.rMx.MESSAGE_REQUEST_ACTION, {
                                 action: f.cl.ACCEPT_HAM_CONFIRMATION_PROMPT,
                                 channel_id: e.id,
@@ -142,10 +142,10 @@ function _(e) {
                       })
                     : i(l);
             },
-            [y]
+            [A]
         );
     return {
-        acceptMessageRequest: C ? M : y,
+        acceptMessageRequest: C ? M : A,
         rejectMessageRequest: P,
         rejectAll: R,
         markAsNotSpam: L,

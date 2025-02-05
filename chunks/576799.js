@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => h });
 var i = n(200651),
     l = n(192379),
     a = n(442837),
@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(123145),
     u = n(699516),
     m = n(217702),
-    h = n(507304);
-function _(e) {
+    _ = n(507304);
+function h(e) {
     let { message: t, channel: n } = e,
-        { isBlocked: _, isIgnored: p } = (0, a.cj)(
+        { isBlocked: h, isIgnored: p } = (0, a.cj)(
             [u.Z],
             () => ({
                 isBlocked: u.Z.isBlockedForMessage(t),
@@ -34,12 +34,12 @@ function _(e) {
         [t, g]
     );
     return (0, i.jsxs)('div', {
-        className: h.threadMessageAccessory,
+        className: _.threadMessageAccessory,
         children: [
             (0, i.jsx)('img', {
                 alt: '',
                 src: t.author.getAvatarURL(n.guild_id, 16),
-                className: h.threadMessageAccessoryAvatar
+                className: _.threadMessageAccessoryAvatar
             }),
             (0, i.jsx)(d.Z, {
                 message: t,
@@ -47,16 +47,16 @@ function _(e) {
                 compact: !0
             }),
             (0, i.jsx)('div', {
-                className: h.threadMessageAccessoryPreview,
+                className: _.threadMessageAccessoryPreview,
                 children: (function (e, t, n, l) {
                     let {
                         contentPlaceholder: a,
                         renderedContent: r,
                         leadingIcon: s,
                         trailingIcon: o
-                    } = (0, c.f)(e, t, n, l, h.threadMessageAccessoryContent, {
-                        trailingIconClass: h.threadMessageAccessoryContentTrailingIcon,
-                        leadingIconClass: h.threadMessageAccessoryContentLeadingIcon,
+                    } = (0, c.f)(e, t, n, l, _.threadMessageAccessoryContent, {
+                        trailingIconClass: _.threadMessageAccessoryContentTrailingIcon,
+                        leadingIconClass: _.threadMessageAccessoryContentLeadingIcon,
                         iconSize: m.WW
                     });
                     return (0, i.jsxs)(i.Fragment, {
@@ -65,13 +65,13 @@ function _(e) {
                             null != r
                                 ? r
                                 : (0, i.jsx)('span', {
-                                      className: h.threadMessageAccessoryPlaceholder,
+                                      className: _.threadMessageAccessoryPlaceholder,
                                       children: a
                                   }),
                             o
                         ]
                     });
-                })(t, x, _, p)
+                })(t, x, h, p)
             })
         ]
     });

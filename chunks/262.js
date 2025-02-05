@@ -29,12 +29,12 @@ function c(e) {
 function d(e) {
     let { usernameHook: t, message: l, compact: a } = e,
         { content: d, timestamp: u, messageReference: m } = l,
-        h = (0, r.ZP)(l),
-        _ = t(h),
+        _ = (0, r.ZP)(l),
+        h = t(_),
         p = (null != d ? d : '').split(' ').slice(0, -1).join(' '),
         g = o.intl.format(o.t['47CZc3'], {
-            username: h.nick,
-            usernameHook: _,
+            username: _.nick,
+            usernameHook: h,
             webhookName: d,
             webhookNameHook: (e, t) =>
                 (0, i.jsx)(

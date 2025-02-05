@@ -1,82 +1,82 @@
-n.d(t, {
-    GY: () => _,
-    PI: () => u,
-    RT: () => p,
-    ls: () => h
+t.d(i, {
+    GY: () => v,
+    PI: () => c,
+    RT: () => h,
+    ls: () => p
 });
-var i = n(200651);
-n(192379);
-var l = n(120356),
-    r = n.n(l),
-    o = n(692547),
-    a = n(481060),
-    s = n(765250),
-    d = n(388032),
-    c = n(122087);
-function u(e) {
-    let { children: t } = e;
-    return (0, i.jsx)('div', {
-        className: c.titleWrapper,
-        children: (0, i.jsx)(a.Text, {
+var l = t(200651);
+t(192379);
+var n = t(120356),
+    a = t.n(n),
+    r = t(692547),
+    s = t(481060),
+    d = t(765250),
+    o = t(388032),
+    u = t(122087);
+function c(e) {
+    let { children: i } = e;
+    return (0, l.jsx)('div', {
+        className: u.titleWrapper,
+        children: (0, l.jsx)(s.Text, {
             variant: 'text-xs/semibold',
             color: 'header-primary',
-            children: t
+            children: i
         })
     });
 }
-function h(e) {
-    let { onClick: t } = e,
-        n = d.intl.string(d.t['3D5yo6']);
-    return (0, i.jsx)(a.ua7, {
+function p(e) {
+    let { onClick: i } = e,
+        t = o.intl.string(o.t['3D5yo6']);
+    return (0, l.jsx)(s.ua7, {
+        text: t,
+        'aria-label': t,
+        children: (e) =>
+            (0, l.jsx)(s.P3F, {
+                ...e,
+                className: u.button,
+                onClick: i,
+                children: (0, l.jsx)(s.ewm, {
+                    size: 'xxs',
+                    color: r.Z.colors.INTERACTIVE_ACTIVE
+                })
+            })
+    });
+}
+function v(e) {
+    let { widgetId: i, showAllStreams: t } = e,
+        n = t ? o.intl.string(o.t.q2B3rq) : o.intl.string(o.t.JKGi6u),
+        c = () => {
+            (0, d.zG)(i, { showAllStreams: !t });
+        };
+    return (0, l.jsx)(s.ua7, {
         text: n,
         'aria-label': n,
         children: (e) =>
-            (0, i.jsx)(a.P3F, {
+            (0, l.jsx)(s.P3F, {
                 ...e,
-                className: c.button,
-                onClick: t,
-                children: (0, i.jsx)(a.ewm, {
+                className: a()(u.button, t && u.active),
+                onClick: c,
+                children: (0, l.jsx)(s.pzj, {
                     size: 'xxs',
-                    color: o.Z.colors.INTERACTIVE_ACTIVE
+                    color: t ? r.Z.colors.BG_BRAND : r.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });
 }
-function _(e) {
-    let { widgetId: t, showAllStreams: n } = e,
-        l = n ? d.intl.string(d.t.q2B3rq) : d.intl.string(d.t.JKGi6u),
-        u = () => {
-            (0, s.zG)(t, { showAllStreams: !n });
-        };
-    return (0, i.jsx)(a.ua7, {
-        text: l,
-        'aria-label': l,
+function h(e) {
+    let { id: i, pinned: t } = e,
+        n = t ? o.intl.string(o.t.cSu80t) : o.intl.string(o.t.cM8Vnp);
+    return (0, l.jsx)(s.ua7, {
+        text: n,
+        'aria-label': n,
         children: (e) =>
-            (0, i.jsx)(a.P3F, {
+            (0, l.jsx)(s.P3F, {
                 ...e,
-                className: r()(c.button, n && c.active),
-                onClick: u,
-                children: (0, i.jsx)(a.pzj, {
+                className: a()(u.button, t && u.active),
+                onClick: () => (0, d.xh)(i),
+                children: (0, l.jsx)(s.k5M, {
                     size: 'xxs',
-                    color: n ? o.Z.colors.BG_BRAND : o.Z.colors.INTERACTIVE_ACTIVE
-                })
-            })
-    });
-}
-function p(e) {
-    let { id: t, pinned: n } = e,
-        l = n ? d.intl.string(d.t.cSu80t) : d.intl.string(d.t.cM8Vnp);
-    return (0, i.jsx)(a.ua7, {
-        text: l,
-        'aria-label': l,
-        children: (e) =>
-            (0, i.jsx)(a.P3F, {
-                ...e,
-                className: r()(c.button, n && c.active),
-                onClick: () => (0, s.xh)(t),
-                children: (0, i.jsx)(a.k5M, {
-                    size: 'xxs',
-                    color: n ? o.Z.colors.BG_BRAND : o.Z.colors.INTERACTIVE_ACTIVE
+                    color: t ? r.Z.colors.BG_BRAND : r.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });

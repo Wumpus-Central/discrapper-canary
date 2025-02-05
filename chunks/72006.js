@@ -29,15 +29,15 @@ var i = n(5148),
     d = n(115129),
     u = n.n(d),
     m = n(357062),
-    h = n.n(m),
-    _ = n(34399),
-    p = n.n(_),
+    _ = n.n(m),
+    h = n(34399),
+    p = n.n(h),
     g = n(157202),
     f = n.n(g),
     x = n(473552),
-    E = n.n(x),
-    C = n(634523),
-    v = n.n(C),
+    C = n.n(x),
+    v = n(634523),
+    E = n.n(v),
     I = n(302648),
     N = n.n(I);
 function S(e, t, n, l) {
@@ -75,11 +75,11 @@ function T(e, t, n, l) {
 function b(e, t) {
     switch (e) {
         case 'delete':
-            return v()(t);
-        case 'delete-word':
-            return h()(t);
-        case 'backspace':
             return E()(t);
+        case 'delete-word':
+            return _()(t);
+        case 'backspace':
+            return C()(t);
         case 'backspace-word':
             return u()(t);
         case 'backspace-to-start-of-line':

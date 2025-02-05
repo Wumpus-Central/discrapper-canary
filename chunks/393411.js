@@ -168,10 +168,10 @@ let G = function (e) {
         K = (0, b.t7)(),
         X = (0, b.lr)(),
         q = (0, o.e7)([E.ZP], () => E.ZP.inReverseTrial()),
-        Q = () => {
+        J = () => {
             (s.status === D.O0b.ACTIVE || s.status === D.O0b.PAST_DUE || s.status === D.O0b.PAUSED) && ee(O.R.PAUSE_SELECT);
         },
-        J = () => {
+        Q = () => {
             (s.status === D.O0b.ACTIVE || s.status === D.O0b.PAST_DUE || s.status === D.O0b.PAUSE_PENDING || H) && ee();
         },
         $ = () => {
@@ -326,7 +326,7 @@ let G = function (e) {
                                   look: c.iLD.LINK,
                                   color: c.Ttl.WHITE,
                                   submitting: R,
-                                  onClick: Q,
+                                  onClick: J,
                                   children: y.intl.string(y.t.eFlYVF)
                               })
                             : (0, i.jsx)(c.zxk, {
@@ -335,7 +335,7 @@ let G = function (e) {
                                   look: c.iLD.LINK,
                                   color: c.Ttl.WHITE,
                                   submitting: R,
-                                  onClick: J,
+                                  onClick: Q,
                                   children: y.intl.string(y.t['ETE/oK'])
                               }),
                         (0, i.jsx)(c.ua7, {
@@ -388,7 +388,7 @@ let G = function (e) {
                                 look: c.iLD.LINK,
                                 color: c.Ttl.WHITE,
                                 submitting: R,
-                                onClick: J,
+                                onClick: Q,
                                 children: y.intl.string(y.t.cM1H0N)
                             }),
                             (0, i.jsx)(c.zxk, {

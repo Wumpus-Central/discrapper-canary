@@ -2,16 +2,16 @@ n.d(t, {
     Z: () => s,
     o: () => o
 });
-var i = n(442837),
-    l = n(522474),
-    a = n(658785),
-    r = n(981631);
+var l = n(442837),
+    i = n(522474),
+    r = n(658785),
+    a = n(981631);
 function s(e) {
     let { location: t, options: n } = e,
-        i = o(),
-        { showKeybindIndicators: l } = a.Z.useExperiment({ location: t }, n);
-    return l && i;
+        l = o(),
+        { showKeybindIndicators: i } = r.Z.useExperiment({ location: t }, n);
+    return i && l;
 }
 function o() {
-    return !(0, i.e7)([l.Z], () => l.Z.getWindowVisible(r.KJ3.ACTIVITY_POPOUT));
+    return !(0, l.e7)([i.Z], () => i.Z.getWindowVisible(a.KJ3.ACTIVITY_POPOUT));
 }

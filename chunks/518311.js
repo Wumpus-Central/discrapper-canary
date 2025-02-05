@@ -25,8 +25,8 @@ var i,
     T = n(43267),
     S = n(933557),
     j = n(600164),
-    A = n(313201),
-    y = n(366980),
+    y = n(313201),
+    A = n(366980),
     P = n(703656),
     R = n(93127),
     M = n(428598),
@@ -43,12 +43,12 @@ var i,
     V = n(572004),
     z = n(585483),
     W = n(823379),
-    Y = n(709054),
-    q = n(51144),
+    q = n(709054),
+    Y = n(51144),
     K = n(73752),
     X = n(665149),
-    J = n(575464),
-    Q = n(981631),
+    Q = n(575464),
+    J = n(981631),
     $ = n(388032),
     ee = n(269343),
     et = n(232186);
@@ -65,8 +65,8 @@ function en(e, t, n) {
         e
     );
 }
-let ei = (0, A.hQ)(),
-    el = (0, A.hQ)();
+let ei = (0, y.hQ)(),
+    el = (0, y.hQ)();
 function ea(e) {
     let { className: t, children: n } = e;
     return (0, l.jsxs)(j.Z, {
@@ -87,7 +87,7 @@ let er = (e) => {
             });
         return (0, l.jsx)(m.P3F, {
             onClick: () => {
-                (0, P.XU)(Q.ME, n.id), i();
+                (0, P.XU)(J.ME, n.id), i();
             },
             children: (0, l.jsxs)('div', {
                 className: ee.confirmChannelItemContainer,
@@ -103,7 +103,7 @@ let er = (e) => {
                     }),
                     (0, l.jsx)('span', {
                         className: ee.lastActiveTimestamp,
-                        children: u()(Y.default.extractTimestamp(r)).fromNow()
+                        children: u()(q.default.extractTimestamp(r)).fromNow()
                     })
                 ]
             })
@@ -136,7 +136,7 @@ let er = (e) => {
                             var n, i;
                             let l = null !== (n = e.lastMessageId) && void 0 !== n ? n : e.id,
                                 a = null !== (i = t.lastMessageId) && void 0 !== i ? i : t.id;
-                            return Y.default.compare(a, l);
+                            return q.default.compare(a, l);
                         })
                         .map((e) =>
                             (0, l.jsx)(
@@ -169,17 +169,17 @@ class eo extends (i = a.PureComponent) {
         let { channel: e } = this.props;
         f.Z.wait(() => v.Z.open(null == e ? void 0 : e.id));
         let t = (0, N.v_)(e);
-        G.default.track(Q.rMx.OPEN_POPOUT, {
+        G.default.track(J.rMx.OPEN_POPOUT, {
             ...t,
             type: this._getAnalyticsEntryPoint().entryPointType,
             source: this._getAnalyticsEntryPoint().entryPointSource,
             is_friend: !this.isNotFriends()
         }),
-            z.S.subscribe(Q.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-            z.S.subscribe(Q.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
+            z.S.subscribe(J.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
+            z.S.subscribe(J.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
     }
     componentWillUnmount() {
-        z.S.unsubscribe(Q.CkL.SCROLL_PAGE_UP, this.scrollPageUp), z.S.unsubscribe(Q.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), f.Z.wait(() => v.Z.close());
+        z.S.unsubscribe(J.CkL.SCROLL_PAGE_UP, this.scrollPageUp), z.S.unsubscribe(J.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), f.Z.wait(() => v.Z.close());
     }
     isNotFriends() {
         let { channel: e } = this.props;
@@ -192,7 +192,7 @@ class eo extends (i = a.PureComponent) {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
         let { inviteMaxAgeSeconds: t } = K.Z.getCurrentConfig({ location: '5326c5_1' }, { autoTrackExposure: !1 });
-        x.Z.createInvite(e.id, { max_age: t }, Q.t4x.GROUP_DM);
+        x.Z.createInvite(e.id, { max_age: t }, J.t4x.GROUP_DM);
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -201,7 +201,7 @@ class eo extends (i = a.PureComponent) {
     getMaxParticipants() {
         let { channel: e } = this.props,
             t = H.default.getCurrentUser();
-        return null != t && t.isStaff() ? Q.p3w : null != e && e.userLimit > 0 ? e.userLimit : Q.pAY;
+        return null != t && t.isStaff() ? J.p3w : null != e && e.userLimit > 0 ? e.userLimit : J.pAY;
     }
     getRemaining() {
         let { channel: e, selectedUsers: t } = this.props,
@@ -253,7 +253,7 @@ class eo extends (i = a.PureComponent) {
         return (
             r.forEach((e) => {
                 let t = H.default.getUser(e);
-                null != t && o.push(q.ZP.getName(t));
+                null != t && o.push(Y.ZP.getName(t));
             }),
             (0, l.jsxs)(j.Z, {
                 className: s()(ee.searchBar),
@@ -312,7 +312,7 @@ class eo extends (i = a.PureComponent) {
             if (null == t) throw Error('no recipient in DM');
             let n = H.default.getUser(t),
                 i = null != n ? n.username : '',
-                a = null != n && B.Z.getRelationshipType(n.id) === Q.OGo.PENDING_OUTGOING;
+                a = null != n && B.Z.getRelationshipType(n.id) === J.OGo.PENDING_OUTGOING;
             return (0, l.jsxs)(ea, {
                 className: ee.notFriends,
                 children: [
@@ -382,7 +382,7 @@ class eo extends (i = a.PureComponent) {
         let { channel: e, invite: t, hideInstantInvites: n } = this.props,
             { copied: i } = this.state;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
-        let r = null != t ? (0, y.Z)(t.code) : '',
+        let r = null != t ? (0, A.Z)(t.code) : '',
             o = r.length > 0;
         return (0, l.jsxs)(a.Fragment, {
             children: [
@@ -393,7 +393,7 @@ class eo extends (i = a.PureComponent) {
                 }),
                 (0, l.jsx)(m.kO8, {
                     supportsCopy: V.wS,
-                    placeholder: (0, y.Z)($.intl.string($.t.lPVBqK)),
+                    placeholder: (0, A.Z)($.intl.string($.t.lPVBqK)),
                     value: o ? (n ? $.intl.string($.t['6HzNgY']) : r) : '',
                     buttonColor: m.zxk.Colors.BRAND,
                     text: o ? (i ? $.intl.string($.t.q30c5u) : $.intl.string($.t.OpuAlJ)) : $.intl.string($.t.qzxqUV),
@@ -439,7 +439,7 @@ class eo extends (i = a.PureComponent) {
     handleAddFriend(e) {
         this.props.onClose(),
             E.Z.sendRequest({
-                discordTag: q.ZP.getUserTag(e, { identifiable: 'always' }),
+                discordTag: Y.ZP.getUserTag(e, { identifiable: 'always' }),
                 context: { location: 'Group DM' }
             });
     }
@@ -502,7 +502,7 @@ class eo extends (i = a.PureComponent) {
                 let { user: c, comparator: d } = o,
                     u = a.has(c.id);
                 return (0, l.jsx)(
-                    J.Z,
+                    Q.Z,
                     {
                         row: n,
                         user: c,
@@ -545,7 +545,7 @@ class eo extends (i = a.PureComponent) {
                 v.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
-                        G.default.track(Q.rMx.SEARCH_USER_LIST_STARTED, {
+                        G.default.track(J.rMx.SEARCH_USER_LIST_STARTED, {
                             ...n,
                             entry_point_type: this._getAnalyticsEntryPoint().entryPointType,
                             entry_point_source: this._getAnalyticsEntryPoint().entryPointSource,
@@ -563,7 +563,7 @@ class eo extends (i = a.PureComponent) {
                 t.has(e) ? v.Z.removeUser(e) : (v.Z.addUser(e), n.length > 0 && v.Z.clear(null == i ? void 0 : i.id)), this.forceFocus();
             }),
             en(this, 'handleAddFriendNavigation', () => {
-                (0, P.uL)(Q.Z5c.FRIENDS), C.Z.setSection(Q.pJs.ADD_FRIEND), this.props.onClose();
+                (0, P.uL)(J.Z5c.FRIENDS), C.Z.setSection(J.pJs.ADD_FRIEND), this.props.onClose();
             }),
             en(this, 'handleScroll', () => {
                 let e = this.scrollerRef.current;
@@ -575,7 +575,7 @@ class eo extends (i = a.PureComponent) {
                     i = (0, N.v_)(n),
                     l = !0;
                 1 === e.length && (l = null == _.Z._openCachedDMChannel(e[0])),
-                    G.default.track(Q.rMx.CREATE_DM_USER_LIST_CLICKED, {
+                    G.default.track(J.rMx.CREATE_DM_USER_LIST_CLICKED, {
                         ...i,
                         is_new_dm: l,
                         entry_point_type: this._getAnalyticsEntryPoint().entryPointType,
@@ -590,7 +590,7 @@ class eo extends (i = a.PureComponent) {
                 let n = this._searchCounter,
                     i = (0, N.v_)(e),
                     l = w.Z.getChannelId() === e.id;
-                _.Z.addRecipients(e.id, t, Q.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
+                _.Z.addRecipients(e.id, t, J.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (l) {
                         if (e.isDM() && n !== e.id) {
                             g.Z.call(n, !1, !0);
@@ -599,7 +599,7 @@ class eo extends (i = a.PureComponent) {
                         g.Z.ring(n, t);
                     }
                 }),
-                    G.default.track(Q.rMx.CREATE_DM_USER_LIST_CLICKED, {
+                    G.default.track(J.rMx.CREATE_DM_USER_LIST_CLICKED, {
                         ...i,
                         is_new_dm: !0,
                         entry_point_type: this._getAnalyticsEntryPoint().entryPointType,
@@ -651,11 +651,11 @@ class eo extends (i = a.PureComponent) {
                     (this.copyTimeout = setTimeout(() => {
                         this.setState({ copied: !1 });
                     }, 1000)),
-                    G.default.track(Q.rMx.COPY_INSTANT_INVITE, {
+                    G.default.track(J.rMx.COPY_INSTANT_INVITE, {
                         server: null,
                         channel: null != t ? t.id : null,
                         channel_type: null != t ? t.type : null,
-                        location: Q.Sbl.ADD_FRIENDS_TO_DM,
+                        location: J.Sbl.ADD_FRIENDS_TO_DM,
                         code: null != n ? n.code : null
                     });
             });
@@ -688,9 +688,9 @@ function ed(e) {
         _ = a.useCallback(() => g((e) => !e), []);
     a.useEffect(
         () => (
-            h && z.S.subscribe(Q.CkL.TOGGLE_DM_CREATE, _),
+            h && z.S.subscribe(J.CkL.TOGGLE_DM_CREATE, _),
             () => {
-                z.S.unsubscribe(Q.CkL.TOGGLE_DM_CREATE, _);
+                z.S.unsubscribe(J.CkL.TOGGLE_DM_CREATE, _);
             }
         ),
         [h, _]

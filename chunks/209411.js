@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(899742),
     d = n(493773),
     u = n(743142),
-    h = n(893607),
-    _ = n(703656),
+    _ = n(893607),
+    h = n(703656),
     g = n(314897),
     p = n(781428),
     m = n(981631),
@@ -20,14 +20,14 @@ function E(e) {
                 if (
                     (function (e) {
                         var t;
-                        let n = (0, a.LX)(e, { path: m.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
+                        let n = (0, a.LX)(e, { path: m.Z5c.CHANNEL(_.Hw.guildId(), _.Hw.channelId()) });
                         return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === f.oC.ROLE_SUBSCRIPTIONS;
                     })(t)
                 )
-                    _.dL(t);
+                    h.dL(t);
                 else {
                     var n;
-                    (null !== (n = e.transitionTo) && void 0 !== n ? n : _.uL)(t);
+                    (null !== (n = e.transitionTo) && void 0 !== n ? n : h.uL)(t);
                 }
             },
             [e.transitionTo]

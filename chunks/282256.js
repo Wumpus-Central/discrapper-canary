@@ -1,72 +1,72 @@
-n.d(t, { Z: () => f }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+n.d(t, { Z: () => p }), n(47120);
+var l = n(200651),
+    i = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(434650),
     o = n(393903),
     c = n(448986),
     u = n(353093),
     d = n(979264),
     m = n(506800);
-let f = l.memo(function (e) {
-    let { children: t, isOverlay: n, contextGuildId: a, ...f } = e,
-        p = l.useRef(null),
-        [h, g] = l.useState({ maskImage: 'none' }),
+let p = i.memo(function (e) {
+    let { children: t, isOverlay: n, contextGuildId: r, ...p } = e,
+        h = i.useRef(null),
+        [g, f] = i.useState({ maskImage: 'none' }),
         v = (0, c.Z)(() => {
             var e, t;
             if (n) {
-                g({ maskImage: 'none' });
+                f({ maskImage: 'none' });
                 return;
             }
-            let i = null === (e = _.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
-                l = null === (t = p.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
-            if (null == i || null == l) {
-                g({ maskImage: 'none' });
+            let l = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
+                i = null === (t = h.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
+            if (null == l || null == i) {
+                f({ maskImage: 'none' });
                 return;
             }
-            let a = l.right - i.right,
-                r = l.width - a;
-            if (r > l.width) {
-                g({ maskImage: 'none' });
+            let r = i.right - l.right,
+                a = i.width - r;
+            if (a > i.width) {
+                f({ maskImage: 'none' });
                 return;
             }
-            g({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(r, 'px)') });
+            f({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(a, 'px)') });
         }),
-        _ = (0, o.y)(v),
-        I = (0, u.p0)(f.userId, a),
-        S = {
+        S = (0, o.y)(v),
+        x = (0, u.p0)(p.userId, r),
+        I = {
             handleResize: v,
-            positionTrackerRef: _
+            positionTrackerRef: S
         },
-        x = l.useRef(S);
-    l.useEffect(() => {
-        x.current = S;
+        y = i.useRef(I);
+    i.useEffect(() => {
+        y.current = I;
     }),
-        l.useEffect(() => {
-            let { handleResize: e, positionTrackerRef: t } = x.current;
+        i.useEffect(() => {
+            let { handleResize: e, positionTrackerRef: t } = y.current;
             null != t.current && e();
-        }, [I]);
-    let E = (0, s.O)(v);
-    return (0, i.jsxs)('div', {
-        className: r()(m.container, n && m.isOverlayContainer),
-        ref: _,
+        }, [x]);
+    let T = (0, s.O)(v);
+    return (0, l.jsxs)('div', {
+        className: a()(m.container, n && m.isOverlayContainer),
+        ref: S,
         children: [
-            (0, i.jsx)('div', {
+            (0, l.jsx)('div', {
                 className: m.usernameContainer,
                 children: t
             }),
-            (0, i.jsx)('div', {
+            (0, l.jsx)('div', {
                 className: m.chipletParent,
-                ref: E,
-                children: (0, i.jsx)('span', {
-                    className: r()(m.chipletContainer, !I && n && m.noPadding),
-                    ref: p,
-                    style: h,
-                    children: (0, i.jsx)(d.ZP, {
-                        ...f,
-                        contextGuildId: a,
-                        className: r()(f.className, n && m.isOverlayTag)
+                ref: T,
+                children: (0, l.jsx)('span', {
+                    className: a()(m.chipletContainer, !x && n && m.noPadding),
+                    ref: h,
+                    style: g,
+                    children: (0, l.jsx)(d.ZP, {
+                        ...p,
+                        contextGuildId: r,
+                        className: a()(p.className, n && m.isOverlayTag)
                     })
                 })
             })
