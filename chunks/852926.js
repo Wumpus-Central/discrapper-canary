@@ -41,7 +41,7 @@ let p = async (e, t, n) => {
         if (((0, c.YK)(e, t), (null == n || '' === n) && (0, c.s9)(t))) return (e.authorization.scopes = [d.cE, d.CN]), Promise.resolve();
         if (null == n || '' === n) return Promise.reject(new o.Z({ closeCode: u.$VG.INVALID_CLIENTID }, 'No Client ID Specified'));
         let i = a.ZP.releaseChannel !== u.R5N.CANARY && !h.includes(n) && e.transport !== d.He.POST_MESSAGE;
-        return await (0, c.vv)(n, i), (0, c.fy)(e, n, t);
+        return await (0, c.vv)(n, i), (0, c.YS)(e, n, t);
     },
     g = () =>
         (0, c.tr)((e) => {
