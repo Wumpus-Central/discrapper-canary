@@ -153,6 +153,17 @@ class Z extends (i = o.yh) {
     hasFetchedForApplicationIds(e) {
         return e.every((e) => T.has(e));
     }
+    getReverseTrialEntitlement(e) {
+        let t = new Date(),
+            n = this.getForApplication(p.CL);
+        if (null != n)
+            for (let i of n) {
+                let n = null != i.endsAt && i.endsAt < t,
+                    r = null != i.startsAt;
+                if (i.type === _.qc2.FRACTIONAL_REDEMPTION && i.sourceType === _.kNB.REVERSE_TRIAL && (!n || e) && r) return i;
+            }
+        return null;
+    }
     getFractionalPremium(e) {
         var t;
         let n = [],
