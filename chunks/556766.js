@@ -31,8 +31,10 @@ function T() {
     let e = (0, l.Wu)([m.Z, p.Z, c.ZP], () =>
             m.Z.getIncomingCalls().filter((e) => {
                 let { channel: t } = e,
-                    n = c.ZP.getConnectedActivityChannelId() === t.id && p.Z.getVoiceChannelId() !== t.id && c.ZP.getActivityPanelMode() === E.Ez.PANEL;
-                return p.Z.getChannelId() !== t.id || n;
+                    n = p.Z.getChannelId() === t.id,
+                    i = null == t.guild_id && n,
+                    r = c.ZP.getConnectedActivityChannelId() === t.id && p.Z.getVoiceChannelId() !== t.id && c.ZP.getActivityPanelMode() === E.Ez.PANEL;
+                return !i || r;
             })
         ),
         t = (0, l.e7)([m.Z], () => m.Z.hasIncomingCalls()),

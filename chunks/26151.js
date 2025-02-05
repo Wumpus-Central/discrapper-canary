@@ -61,7 +61,14 @@ let h = {
                 body: { recipients: t },
                 oldFormErrors: !0,
                 rejectWithError: !0
-            });
+            }),
+                n.type === _.d4z.GUILD_VOICE &&
+                    null != t &&
+                    r.Z.dispatch({
+                        type: 'GUILD_LOCAL_RING_START',
+                        ringing: t,
+                        guildId: n.guild_id
+                    });
             return;
         }
         l &&
