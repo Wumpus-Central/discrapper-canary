@@ -1,6 +1,5 @@
 var i = {
     header: 'header__03630',
-    label: 'label__03630',
     currentUser: 'currentUser__03630',
     currentUserTag: 'currentUserTag__03630',
     currentUserDiscriminator: 'currentUserDiscriminator__03630',
