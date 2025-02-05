@@ -1,4 +1,4 @@
-n.d(t, { y: () => I }), n(47120);
+n.d(t, { y: () => b }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(120356),
@@ -24,20 +24,26 @@ let x = {
     v = {
         mass: 1,
         friction: 28,
-        tension: 500
+        tension: 700,
+        clamp: !0
     },
     E = {
         mass: 1,
         friction: 28,
+        tension: 500
+    },
+    I = {
+        mass: 1,
+        friction: 28,
         tension: 800
     };
-function I(e) {
+function b(e) {
     var t;
     let {} = e,
         { activeVoice: n } = (0, g.o)(),
         a = (0, d.Z)(n),
-        I = (0, f.z)(n),
-        { toggleLoopback: b, isLoopbackEnabled: Z } = (function () {
+        b = (0, f.z)(n),
+        { toggleLoopback: Z, isLoopbackEnabled: N } = (function () {
             let e = (0, o.e7)([u.Z], () => u.Z.getVoiceFilterLoopbackEnabled()),
                 t = l.useCallback(() => {
                     (0, p.GN)(e ? 'voice_filter_loopback_off' : 'voice_filter_loopback_on'), (0, m._j)(!e);
@@ -47,33 +53,35 @@ function I(e) {
                 toggleLoopback: t
             };
         })(),
-        N = Z ? c.Iy5 : c.X_q,
-        T = l.useCallback(() => (0, m.v6)(null), []),
-        S = (0, c.dQu)(c.TVs.colors.BACKGROUND_SECONDARY).hex(),
-        j = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
-        A = (0, o.e7)([h.Z], () => h.Z.isConnected()),
-        y = l.useRef(0),
-        P = n !== a ? y.current + 1 : y.current;
+        T = N ? c.Iy5 : c.X_q,
+        S = l.useCallback(() => (0, m.v6)(null), []),
+        j = (0, c.dQu)(c.TVs.colors.BACKGROUND_SECONDARY).hex(),
+        A = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
+        y = (0, o.e7)([h.Z], () => h.Z.isConnected()),
+        P = l.useRef(0),
+        R = n !== a ? P.current + 1 : P.current;
     l.useEffect(() => {
-        y.current = P;
-    }, [P]);
-    let R = (0, c.q_F)(
+        P.current = R;
+    }, [R]);
+    let M = null != n && null != a,
+        L = null == n && null != a,
+        k = (0, c.q_F)(
             {
                 opacity: null != n ? 1 : 0,
                 height: null != n ? 72 : 0,
-                backgroundColor: null !== (t = null == I ? void 0 : I.baseColor) && void 0 !== t ? t : S,
+                backgroundColor: null !== (t = null == b ? void 0 : b.baseColor) && void 0 !== t ? t : j,
                 config: x,
-                delay: null != n && null != a ? 150 : 0
+                delay: M ? 150 : L ? 100 : 0
             },
             'respect-motion-settings'
         ),
-        M = (0, c.Yzy)(
-            null == I ? void 0 : I.id,
+        O = (0, c.Yzy)(
+            null == b ? void 0 : b.id,
             {
-                key: P,
+                key: R,
                 from: {
                     opacity: 0,
-                    background: null == I ? void 0 : I.splashGradient
+                    background: null == b ? void 0 : b.splashGradient
                 },
                 enter: {
                     opacity: 1,
@@ -87,7 +95,7 @@ function I(e) {
             },
             'respect-motion-settings'
         ),
-        [L] = (0, c.bYB)(
+        [D] = (0, c.bYB)(
             3,
             (e) => ({
                 from:
@@ -115,25 +123,25 @@ function I(e) {
                                 {
                                     translateY: -4,
                                     config: {
-                                        ...E,
+                                        ...I,
                                         restVelocity: 0.5
                                     }
                                 },
                                 {
                                     translateY: 0,
-                                    config: E
+                                    config: I
                                 }
                             ],
-                config: v,
-                delay: 150 + 50 * e
+                config: E,
+                delay: L ? 100 - 50 * e : 150 + 50 * e
             }),
             'respect-motion-settings',
             [n]
         ),
-        k = (0, c.Yzy)(
-            null == I ? void 0 : I.iconURL,
+        w = (0, c.Yzy)(
+            null == b ? void 0 : b.iconURL,
             {
-                key: P,
+                key: R,
                 from: {
                     opacity: 0,
                     scale: 0.5,
@@ -143,22 +151,22 @@ function I(e) {
                     opacity: 1,
                     scale: 1,
                     translateX: 0,
-                    delay: null == a ? 50 : 100
+                    delay: null == a ? 0 : 200
                 },
                 leave: {
                     opacity: 0,
                     scale: null == n ? 0.5 : 1,
-                    translateX: null == n ? 0 : 44,
-                    delay: 50
+                    translateX: null == n ? 0 : 32,
+                    delay: 0
                 },
                 config: x
             },
             'respect-motion-settings'
         ),
-        O = (0, c.Yzy)(
-            null == I ? void 0 : I.name,
+        U = (0, c.Yzy)(
+            null == b ? void 0 : b.name,
             {
-                key: P,
+                key: R,
                 from: {
                     opacity: 0,
                     scale: null == a ? 1 : 0.5,
@@ -169,29 +177,29 @@ function I(e) {
                     scale: 1,
                     translateX: 0,
                     translateY: 0,
-                    delay: null == a ? 100 : 150,
-                    config: null == a ? v : x
+                    delay: null == a ? 100 : 275,
+                    config: null == a ? E : v
                 },
                 leave: {
                     opacity: 0,
                     translateX: null == n ? 0 : 40,
                     translateY: null == n ? 16 : 0,
-                    delay: 150,
-                    config: null == a ? v : x
+                    delay: L ? 200 : 150,
+                    config: null == a ? E : v
                 },
-                config: v
+                config: E
             },
             'respect-motion-settings'
         ),
-        D = _.intl.string(Z ? _.t.esVyo6 : _.t.UQqFCA);
+        B = _.intl.string(N ? _.t.esVyo6 : _.t.UQqFCA);
     return (0, i.jsxs)(s.animated.div, {
         className: C.voiceFilterHero,
-        style: R,
+        style: k,
         children: [
             (0, i.jsx)('div', {
                 className: r()([C.bgGradient, C.bgGradientHighlight])
             }),
-            M((e) =>
+            O((e) =>
                 (0, i.jsx)(s.animated.div, {
                     className: C.bgGradient,
                     style: e
@@ -199,7 +207,7 @@ function I(e) {
             ),
             (0, i.jsx)('div', {
                 className: C.iconWrapper,
-                children: k((e, t) =>
+                children: w((e, t) =>
                     (0, i.jsx)(
                         s.animated.img,
                         {
@@ -214,7 +222,7 @@ function I(e) {
             }),
             (0, i.jsx)('div', {
                 className: C.descriptionWrapper,
-                children: O((e, t) =>
+                children: U((e, t) =>
                     (0, i.jsxs)(s.animated.div, {
                         className: C.description,
                         style: e,
@@ -238,7 +246,7 @@ function I(e) {
                 className: C.buttonWrapper,
                 children: [
                     (0, i.jsx)(c.ua7, {
-                        'aria-label': D,
+                        'aria-label': B,
                         tooltipClassName: C.tooltip,
                         tooltipContentClassName: C.tooltipContent,
                         shouldShow: !0,
@@ -248,15 +256,15 @@ function I(e) {
                                     variant: 'heading-sm/normal',
                                     color: 'header-primary',
                                     className: C.tooltipHeader,
-                                    children: D
+                                    children: B
                                 }),
                                 (0, i.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'header-muted',
-                                    children: _.intl.string(Z ? _.t['0NnojY'] : _.t.raWNzM)
+                                    children: _.intl.string(N ? _.t['0NnojY'] : _.t.raWNzM)
                                 }),
-                                Z &&
-                                    !A &&
+                                N &&
+                                    !y &&
                                     (0, i.jsx)(c.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-muted',
@@ -267,16 +275,16 @@ function I(e) {
                         children: (e) =>
                             (0, i.jsx)(s.animated.div, {
                                 className: C.buttonWrapper,
-                                style: L[0],
+                                style: D[0],
                                 children: (0, i.jsx)(c.P3F, {
                                     className: C.button,
                                     ...e,
-                                    onClick: b,
-                                    children: (0, i.jsx)(N, {
+                                    onClick: Z,
+                                    children: (0, i.jsx)(T, {
                                         size: 'custom',
                                         width: 20,
                                         height: 20,
-                                        color: j
+                                        color: A
                                     })
                                 })
                             })
@@ -286,16 +294,16 @@ function I(e) {
                         children: (e) =>
                             (0, i.jsx)(s.animated.div, {
                                 className: C.buttonWrapper,
-                                style: L[1],
+                                style: D[1],
                                 children: (0, i.jsx)(c.P3F, {
                                     className: C.button,
                                     ...e,
-                                    onClick: T,
+                                    onClick: S,
                                     children: (0, i.jsx)(c.k$p, {
                                         size: 'custom',
                                         width: 20,
                                         height: 20,
-                                        color: j
+                                        color: A
                                     })
                                 })
                             })
