@@ -1,6 +1,5 @@
 e.exports = {
     headerContainer: 'headerContainer__675e5',
-    textContainer: 'textContainer__675e5',
     container: 'container__675e5',
     iconCard: 'iconCard__675e5',
     tooltipContent: 'tooltipContent__675e5',
