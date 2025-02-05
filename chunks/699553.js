@@ -1,21 +1,48 @@
-t.d(n, {
-    C: () => s,
-    V: () => o
-});
+t.d(n, { C: () => o });
 var l = t(544891),
     i = t(570140),
-    r = t(405222),
-    a = t(981631);
-async function s(e) {
-    let n = await l.tn.get({
-        url: a.ANM.GUILD_PROFILE(e),
-        rejectWithError: !1
-    });
-    return (0, r.x)(n.body);
-}
-function o(e) {
-    i.Z.dispatch({
-        type: 'GUILD_PROFILE_FETCH_SUCCESS',
-        profile: e
-    });
+    r = t(314852),
+    a = t(405222),
+    s = t(981631);
+function o(e, n) {
+    var t;
+    if (null == e) return Promise.resolve(null);
+    let o = r.Z.getIsFetching(e),
+        c = r.Z.getLastSyncTimestamp(e),
+        d = r.Z.getProfile(e),
+        u = ((t = c), Date.now() - (null != t ? t : 0) > 60000);
+    return o && !n
+        ? Promise.resolve(null)
+        : null == d || u || n
+          ? (i.Z.dispatch({
+                type: 'GUILD_PROFILE_FETCH',
+                guildId: e
+            }),
+            l.tn
+                .get({
+                    url: s.ANM.GUILD_PROFILE(e),
+                    rejectWithError: !1
+                })
+                .then((n) => {
+                    let t = (0, a.x)(n.body);
+                    return (
+                        i.Z.dispatch({
+                            type: 'GUILD_PROFILE_FETCH_SUCCESS',
+                            guildId: e,
+                            profile: t
+                        }),
+                        t
+                    );
+                })
+                .catch(
+                    (n) => (
+                        i.Z.dispatch({
+                            type: 'GUILD_PROFILE_FETCH_FAILURE',
+                            guildId: e,
+                            error: n.message
+                        }),
+                        null
+                    )
+                ))
+          : Promise.resolve(d);
 }
