@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(724458);
+n.d(t, { Z: () => O }), n(724458);
 var i,
     l = n(442837),
     r = n(570140),
@@ -10,7 +10,7 @@ var i,
     c = n(539573),
     h = n(825829),
     g = n(981631);
-function f(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function f(e, t, n) {
         e
     );
 }
-let C = {},
+let f = {},
     p = 0,
     v = {},
     E = {},
@@ -35,11 +35,11 @@ let C = {},
                 messageData: e,
                 errorMessage: (0, c.uF)(e, t)
             };
-        (C[n] = i), p++;
+        (f[n] = i), p++;
     },
-    I = (e) => C[e],
+    I = (e) => f[e],
     m = (e) => {
-        null != C[e] && delete C[e], p++;
+        null != f[e] && delete f[e], p++;
     };
 function S(e) {
     let { messageData: t, errorResponseBody: n } = e;
@@ -69,11 +69,11 @@ function T(e) {
 }
 class N extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(d.Z), null != e && ((C = e.automodFailedMessages), (v = e.mentionRaidDetectionByGuild));
+        this.waitFor(d.Z), null != e && ((f = e.automodFailedMessages), (v = e.mentionRaidDetectionByGuild));
     }
     getState() {
         return {
-            automodFailedMessages: C,
+            automodFailedMessages: f,
             mentionRaidDetectionByGuild: v,
             lastIncidentAlertMessage: E
         };
@@ -94,10 +94,10 @@ class N extends (i = l.ZP.PersistedStore) {
         return null !== (t = E[e]) && void 0 !== t ? t : null;
     }
 }
-f(N, 'displayName', 'GuildAutomodMessageStore'), f(N, 'persistKey', 'GuildAutomodMessages');
-let y = new N(r.Z, {
+C(N, 'displayName', 'GuildAutomodMessageStore'), C(N, 'persistKey', 'GuildAutomodMessages');
+let O = new N(r.Z, {
     CONNECTION_OPEN: function (e) {
-        return (C = {}), p++, !0;
+        return (f = {}), p++, !0;
     },
     LOAD_MESSAGES_SUCCESS: T,
     LOCAL_MESSAGES_LOADED: T,

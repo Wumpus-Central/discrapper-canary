@@ -12,12 +12,12 @@ var l = n(873546),
     h = n(74538),
     m = n(374023),
     p = n(775412),
-    g = n(913976),
-    _ = n(533990),
-    f = n(104494),
-    E = n(29920),
-    I = n(346497),
-    C = n(278945),
+    g = n(695349),
+    _ = n(913976),
+    f = n(533990),
+    E = n(104494),
+    I = n(29920),
+    C = n(346497),
     v = n(727310),
     N = n(318199),
     T = n(474936);
@@ -51,7 +51,7 @@ class x extends o.Z {
                 });
                 return (
                     null != l &&
-                    !!(!1 !== t || (null == l ? void 0 : l.contentIdentifier) !== 'summer_bogo_content' || (await (0, I.k)())) &&
+                    !!(!1 !== t || (null == l ? void 0 : l.contentIdentifier) !== 'summer_bogo_content' || (await (0, C.k)())) &&
                     ((0, a.Mr3)(Z),
                     (0, a.ZDy)(
                         async () => {
@@ -76,24 +76,24 @@ class x extends o.Z {
                 if ((0, h.I5)(e)) return {};
                 let t = [T.hs, T.RU, T.rB, T.ih]
                     .map((e) => u.Z.getUserDiscountOffer(e))
-                    .filter((e) => null != e && !(0, f.kA)(e))
+                    .filter((e) => null != e && !(0, E.kA)(e))
                     .shift();
                 if (null != t) return { userDiscountOffer: t };
                 let n = (0, p.J0)();
                 return null != n ? { userTrialOffer: n } : {};
             }),
             S(this, 'mayShowAnnouncementModal', async () => {
-                if ((await (0, I.l2)(), m.s.isDisallowPopupsSet())) return;
+                if ((await (0, C.l2)(), m.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
-                    t = _.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).inExperiment || _.Z.isAAMode({ location: 'announcementManager' }),
+                    t = f.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).inExperiment || f.Z.isAAMode({ location: 'announcementManager' }),
                     n = (0, c.un)(r.z.REVERSE_TRIAL_ENDED_UPSELL),
                     i = d.default.getCurrentUser();
                 if (t && !n && !(0, a.$sL)() && !(0, h.I5)(i)) {
-                    let t = await (0, C.r)(e.userTrialOffer);
+                    let t = await (0, g.r)(e.userTrialOffer);
                     null != t && (0, v.Z)({ upsellType: t });
                 }
-                if ((null == i || i.verified) && !(0, a.$sL)() && g.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !l.tq) {
-                    for (let t of await (0, E.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
+                if ((null == i || i.verified) && !(0, a.$sL)() && _.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !l.tq) {
+                    for (let t of await (0, I.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                 }
             });
     }

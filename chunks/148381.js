@@ -18,7 +18,7 @@ function m(e) {
             null != e && (h(!e.isScrolledToTop()), Z(!e.isScrolledToBottom()));
         }, []);
     return (
-        (0, o.N)(() => S()),
+        (0, o.Ng)(() => S()),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)('div', {

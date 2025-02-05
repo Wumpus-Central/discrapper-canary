@@ -30,7 +30,7 @@ var l = t(200651),
     B = t(388032),
     A = t(837199);
 function R(e) {
-    let { channelId: n, baseChannelId: R, channelViewSource: k = 'Split View', isResourceChannelView: P } = e,
+    let { channelId: n, baseChannelId: R, channelViewSource: P = 'Split View', isResourceChannelView: k } = e,
         L = (0, a.e7)([j.Z], () => j.Z.getChannel(n)),
         O = (0, a.e7)([b.Z], () => b.Z.getGuild(null == L ? void 0 : L.getGuildId())),
         M = (0, a.e7)([w.default], () => w.default.getCurrentUser()),
@@ -51,10 +51,10 @@ function R(e) {
                 ((z.current = !0),
                 (0, c.yw)(T.rMx.CHANNEL_OPENED, {
                     ...(0, c.$H)(L.id),
-                    channel_view: k
+                    channel_view: P
                 }),
                 (0, u.a)(T.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: L.id }));
-        }, [L, k]),
+        }, [L, P]),
         null == L || null == O)
     )
         return null;
@@ -99,7 +99,7 @@ function R(e) {
                           },
                           handleClick: () => {
                               let e = E.Z.getMessages(L.id);
-                              if (P) {
+                              if (k) {
                                   (0, v.uL)(T.Z5c.CHANNEL(L.guild_id, L.id)), (0, h.C3)(L.guild_id, null);
                                   return;
                               }

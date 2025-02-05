@@ -20,7 +20,7 @@ function p(e) {
         [w, T] = (0, c.Y5)(b, S),
         O = performance.now() - f.current < c.MC,
         j = y(v, I.current);
-    (0, d.Z)(
+    (0, d.ZP)(
         () => (
             w(),
             () => {

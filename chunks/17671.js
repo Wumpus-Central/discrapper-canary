@@ -52,7 +52,7 @@ function S(e) {
             let i = v.ZP.getDefaultChannel(S);
             null != i && g.c(i.id);
         }, [S]),
-        (0, d.Z)(() => {
+        (0, d.ZP)(() => {
             C.default.track(_.rMx.OPEN_MODAL, {
                 type: T.zw,
                 guild_id: S,

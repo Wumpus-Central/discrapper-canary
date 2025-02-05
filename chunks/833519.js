@@ -93,7 +93,7 @@ function B(e) {
         en = null != K ? (0, g.Z)(K, J, J.id === Y, et) : null,
         ei = L < 195;
     if (
-        ((0, d.Z)(() => {
+        ((0, d.ZP)(() => {
             !Q && (null == X ? void 0 : X.isGuildStageVoice()) && !ee && ((0, u.rn)(H), c.Z.updateStageStreamSize(H.channelId, !1));
         }),
         l.useEffect(() => {

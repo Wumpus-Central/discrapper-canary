@@ -46,7 +46,7 @@ let x = l.memo(function (e) {
                     (0, c.Ot)(t.id);
                 }, 5000));
     }, [t, E, x, v]),
-        (0, o.Z)(() => {
+        (0, o.ZP)(() => {
             null != x &&
                 (0, p.KQ)({
                     channelId: t.id,

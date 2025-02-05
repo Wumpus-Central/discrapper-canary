@@ -24,18 +24,18 @@ function A(n) {
         m = (0, r.e7)([c.default], () => c.default.getId()),
         R = (0, r.e7)([_.ZP], () => _.ZP.getMember(E, m), [E, m]),
         O = (0, r.e7)([g.Z], () => g.Z.getGuild(E), [E]),
-        p = null !== (t = null == O ? void 0 : O.name) && void 0 !== t ? t : '',
-        v = (0, N.no)(R),
-        { analyticsLocations: L } = (0, d.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [M, P] = (0, I.ww)({
+        P = null !== (t = null == O ? void 0 : O.name) && void 0 !== t ? t : '',
+        p = (0, N.no)(R),
+        { analyticsLocations: v } = (0, d.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
+        [L, M] = (0, I.ww)({
             guildId: E,
-            analyticsLocations: L,
+            analyticsLocations: v,
             openWithoutBackstack: !0
         }),
-        U = v.has(x.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? C.intl.string(C.t.SpDXIy) : C.intl.string(C.t['QRN+Sk']);
-    P || (U = C.intl.string(C.t.FFj5Dg));
-    let j = P ? C.intl.string(C.t['/PGQf3']) : C.intl.string(C.t.WikgZ2);
-    return ((0, o.Z)(() => {
+        U = p.has(x.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? C.intl.string(C.t.SpDXIy) : C.intl.string(C.t['QRN+Sk']);
+    M || (U = C.intl.string(C.t.FFj5Dg));
+    let j = M ? C.intl.string(C.t['/PGQf3']) : C.intl.string(C.t.WikgZ2);
+    return ((0, o.ZP)(() => {
         h.default.track(k.rMx.OPEN_MODAL, {
             type: f.dc,
             guild_id: E,
@@ -79,7 +79,7 @@ function A(n) {
                               (0, i.jsx)(s.X6q, {
                                   color: 'header-primary',
                                   variant: 'heading-md/semibold',
-                                  children: C.intl.format(C.t.kcYdTk, { guildName: p })
+                                  children: C.intl.format(C.t.kcYdTk, { guildName: P })
                               })
                           ]
                       })
@@ -98,7 +98,7 @@ function A(n) {
                       children: [
                           (0, i.jsx)(s.zxk, {
                               onClick: () => {
-                                  M(), e();
+                                  L(), e();
                               },
                               color: s.zxk.Colors.BRAND,
                               look: s.zxk.Looks.FILLED,

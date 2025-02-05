@@ -23,7 +23,7 @@ function v(e) {
         [p, C] = (0, l.useState)(!1),
         x = (0, g.bK)(),
         [v, I] = (0, l.useState)(!1);
-    (0, d.Z)(() => {
+    (0, d.ZP)(() => {
         t.isHDStreamSplashed && I(!0);
     }),
         (0, g.Uu)(t),

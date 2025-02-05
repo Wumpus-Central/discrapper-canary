@@ -14,7 +14,7 @@ let c = r.memo(
             P = r.useRef(null),
             w = r.useRef(0),
             M = r.useRef(-1);
-        (0, l.N)(() => {
+        (0, l.Ng)(() => {
             var e;
             let t = null === (e = P.current) || void 0 === e ? void 0 : e.getScrollerNode();
             null != t && (t.scrollTop = C);

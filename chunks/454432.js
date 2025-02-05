@@ -27,7 +27,7 @@ let m = (e, t) => {
             [e]
         );
     return (
-        (0, l.Z)(() => {
+        (0, l.ZP)(() => {
             (async () => {
                 m(!0),
                     await c._Q(

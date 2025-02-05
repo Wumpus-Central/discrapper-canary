@@ -48,7 +48,7 @@ function T(e) {
         a.useEffect(() => {
             s().isEqual(A, E) || F((0, C.B)(E, k));
         }, [E, A, k]),
-        (0, d.Z)(() => () => {
+        (0, d.ZP)(() => () => {
             K.current({
                 problem: X.current,
                 dontShowAgain: H.current,

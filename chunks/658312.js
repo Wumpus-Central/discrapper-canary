@@ -37,7 +37,7 @@ let o = 1000 / 24,
             i.useEffect(() => {
                 f.current = t;
             }, [t]),
-            (0, s.Z)(() => ((_.current = requestAnimationFrame(I)), () => y())),
+            (0, s.ZP)(() => ((_.current = requestAnimationFrame(I)), () => y())),
             {
                 stop: y,
                 reset: b,

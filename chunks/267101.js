@@ -2,8 +2,8 @@ n.d(t, {
     SO: () => p,
     eD: () => h,
     hO: () => g,
-    r: () => C,
-    ue: () => f
+    r: () => f,
+    ue: () => C
 }),
     n(47120);
 var i = n(192379),
@@ -42,9 +42,9 @@ let h = (e) => {
             (0, l.e7)([u.Z], () => u.Z.getGuildProduct(t))
         );
     },
-    f = function (e) {
+    C = function (e) {
         let { publishedOnly: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         return (0, l.e7)([u.Z, s.Z], () => u.Z.getGuildProductsForGuild(e, { publishedOnly: null != t ? t : !s.Z.isViewingServerShop(e) }));
     },
-    C = (e) => (0, l.e7)([u.Z], () => (null == e ? void 0 : u.Z.getGuildProduct(e))),
+    f = (e) => (0, l.e7)([u.Z], () => (null == e ? void 0 : u.Z.getGuildProduct(e))),
     p = (e) => (0, l.e7)([a.Z], () => null != e && a.Z.can(c.Plq.ADMINISTRATOR, e));

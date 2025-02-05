@@ -16,9 +16,9 @@ function x(n, t) {
         g = (0, d.ZP)(n),
         v = (0, c.W)(n),
         j = (0, l.e7)([u.Z], () => u.Z.getChannelStatus(n)),
-        f = null != j && j.length > 0;
+        C = null != j && j.length > 0;
     return n.isGuildVoice() && (x || g)
-        ? !v && x && f
+        ? !v && x && C
             ? (0, e.jsx)(a.sNh, {
                   id: 'clear-status',
                   label: h.intl.string(h.t['22CYiY']),

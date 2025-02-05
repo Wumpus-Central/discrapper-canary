@@ -38,7 +38,7 @@ function g(e) {
         ),
         A = (0, u.dQu)(d.Z.colors.BACKGROUND_MODIFIER_ACCENT),
         R = (0, u.dQu)(d.Z.unsafe_rawColors.BRAND_500),
-        k = (0, u.q_F)(
+        P = (0, u.q_F)(
             {
                 from: { color: R.spring() },
                 color: A.spring({ opacity: I ? 0.5 : 0.25 }),
@@ -47,7 +47,7 @@ function g(e) {
             },
             'animate-always'
         ),
-        P = (0, u.Yzy)(
+        k = (0, u.Yzy)(
             Z,
             {
                 from: {
@@ -80,7 +80,7 @@ function g(e) {
             [f.selected]: a,
             [f.pressed]: L
         }),
-        D = T ? { borderColor: k.color } : {};
+        D = T ? { borderColor: P.color } : {};
     return (0, l.jsx)(l.Fragment, {
         children: (0, l.jsx)(o.animated.div, {
             style: D,
@@ -128,7 +128,7 @@ function g(e) {
                             color: d.Z.unsafe_rawColors.WHITE_500.css
                         })
                     }),
-                    P(
+                    k(
                         (e, n) =>
                             y > 0 &&
                             n &&

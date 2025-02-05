@@ -51,7 +51,7 @@ function k(e) {
                 }
             }
         }, [U, D, k, I, b, A, j, E]);
-    return ((0, c.Z)(() => {
+    return ((0, c.ZP)(() => {
         null != D &&
             _.default.track(T.rMx.OPEN_MODAL, {
                 type: m.Cl,

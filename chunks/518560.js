@@ -21,7 +21,7 @@ function f() {
         e = (0, x.e)(),
         s = (0, m.P)(),
         f = (0, u.i)();
-    (0, r.Z)(() => {
+    (0, r.ZP)(() => {
         d.yq();
     });
     let T = a.useRef(s);

@@ -26,7 +26,7 @@ var n = i(120356),
 function O(t) {
     let { analyticsLocations: a, transitionState: i, onClose: n, giftRecipient: o, analyticsObject: r } = t;
     return (
-        (0, c.Z)(() => {
+        (0, c.ZP)(() => {
             m.default.track(C.rMx.GIFT_CATEGORY_SELECT_MODAL_OPENED, {
                 location: r,
                 location_stack: a

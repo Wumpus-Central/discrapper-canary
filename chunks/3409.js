@@ -735,7 +735,7 @@ function ey(e) {
         paymentSources: G.Z.paymentSources,
         hasFetchedPaymentSources: G.Z.hasFetchedPaymentSources
     }));
-    (0, I.Z)(() => {
+    (0, I.ZP)(() => {
         null == Y.Z.cashAppPayComponent && (0, H.eI)(), (0, f.eI)(), i || (0, d.tZ)();
     });
     let [a, s] = r.useState(t);

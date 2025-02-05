@@ -191,7 +191,7 @@ function L(e) {
             });
             (d.current = l[l.length - 1].id), v(!1);
         }, [s.id, t.id, n.emoji]);
-    (0, u.Z)(() => {
+    (0, u.ZP)(() => {
         h();
     });
     let x = a.useCallback(() => {

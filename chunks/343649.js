@@ -175,7 +175,7 @@ function el(e) {
                     }
             })();
         }, [eO]),
-        (0, h.Z)(() => {
+        (0, h.ZP)(() => {
             w.ZP.hasFetchedSubscriptions() || (0, _.jg)(),
                 (0, k.U)({
                     ...eB,

@@ -39,7 +39,7 @@ function p(e) {
         a.useEffect(() => {
             (t || n) && t && !n && (i(!0), c());
         }, [c, n, t, e]),
-        (0, l.N)(() => {
+        (0, l.Ng)(() => {
             n && c();
         }),
         n

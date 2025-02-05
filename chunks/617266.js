@@ -40,7 +40,7 @@ function k(e) {
             c || null == h || h(t);
         }, [h, c, t]);
     return (
-        (0, m.Z)(() => () => () => {
+        (0, m.ZP)(() => () => () => {
             p.current &&
                 ((p.current = !1),
                 null == h ||

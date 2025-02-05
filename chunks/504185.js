@@ -238,7 +238,7 @@ function ed(e) {
         ),
         y = (0, o.e7)([k.Z], () => k.Z.getGuild(t.guild_id), [t.guild_id]),
         { hasParticipantsPanel: P } = (0, I.Z)({ location: 'StageChannelCall' });
-    (0, p.Z)(() => {
+    (0, p.ZP)(() => {
         null == c.K.get(ei) &&
             ((0, d.ZDy)(async () => {
                 let { default: e } = await n.e('37194').then(n.bind(n, 947422));

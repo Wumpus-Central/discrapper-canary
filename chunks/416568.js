@@ -231,7 +231,7 @@ function el(e) {
         { pathname: eN } = (0, c.TH)(),
         ej = eN.startsWith(X.Z5c.GUILD_DISCOVERY) || eN.startsWith(X.Z5c.GLOBAL_DISCOVERY),
         eE = eN.startsWith(X.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
-    (0, v.N)(() => {
+    (0, v.Ng)(() => {
         if (!eu.current && 0 !== p.size) {
             if (ej) eb.scrollToGuild(null, !1);
             else {

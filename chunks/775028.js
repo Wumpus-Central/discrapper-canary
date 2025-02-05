@@ -80,10 +80,10 @@ function R(e) {
         ]
     });
 }
-let k = i.memo(function () {
+let P = i.memo(function () {
         return (0, l.jsx)('div', { className: T.separator });
     }),
-    P = i.memo(function (e) {
+    k = i.memo(function (e) {
         let { index: n } = e;
         return (0, l.jsx)(
             c.Text,
@@ -170,7 +170,7 @@ let k = i.memo(function () {
                                 'topic'
                             )
                         ),
-                    [t.map((e, n) => [e, (0, l.jsx)(P, { index: n }, 'subtitle-separator-'.concat(n))])].flat(2).slice(0, -1)
+                    [t.map((e, n) => [e, (0, l.jsx)(k, { index: n }, 'subtitle-separator-'.concat(n))])].flat(2).slice(0, -1)
                 );
             })(n, D),
             W = (e) => (
@@ -271,7 +271,7 @@ let k = i.memo(function () {
                             ]
                         })
                 }),
-                !h && (0, l.jsx)(k, {})
+                !h && (0, l.jsx)(P, {})
             ]
         });
     });

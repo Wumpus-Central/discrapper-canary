@@ -47,8 +47,8 @@ var i = n(200651),
     K = n(511480),
     q = n(460461),
     X = n(29605),
-    J = n(365307),
-    Q = n(497666),
+    Q = n(365307),
+    J = n(497666),
     $ = n(324330),
     ee = n(495300),
     et = n(312397),
@@ -248,10 +248,10 @@ let eb = {
                     impressionName: r.ImpressionNames.GUILD_SETTINGS_INTEGRATION,
                     label: eI.intl.string(eI.t.CIsNZ2),
                     ariaLabel: eI.intl.string(eI.t.CIsNZ2),
-                    element: J.Z,
+                    element: Q.Z,
                     notice: {
                         stores: [D.default, k.Z],
-                        element: J.j
+                        element: Q.j
                     },
                     predicate: () => t.canManageGuild || t.canManageWebhooks || t.canUnlinkChannels
                 };
@@ -486,7 +486,7 @@ let eb = {
                     section: ev.pNK.INSTANT_INVITES,
                     impressionName: r.ImpressionNames.GUILD_SETTINGS_INVITES,
                     label: eI.intl.string(eI.t['9F90iY']),
-                    element: Q.Z,
+                    element: J.Z,
                     type: o.bT.CUSTOM,
                     predicate: () => t.canManageGuild
                 };

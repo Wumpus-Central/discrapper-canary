@@ -5,20 +5,20 @@ n.d(i, {
 });
 var t = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
+var r = n(120356),
+    l = n.n(r),
     a = n(481060),
     s = n(489813),
     o = n(592286),
     u = n(119866);
 function c(e) {
-    let { value: i, placeholder: n, onChange: l, disabled: s, className: c, autofocus: d } = e;
+    let { value: i, placeholder: n, onChange: r, disabled: s, className: c, autofocus: d } = e;
     return (0, t.jsx)(a.Kx8, {
-        className: r()(u.paragraphFieldBody, c),
+        className: l()(u.paragraphFieldBody, c),
         maxLength: o.RS,
         value: null != i ? i : '',
         placeholder: null != n ? n : '',
-        onChange: l,
+        onChange: r,
         disabled: s,
         autoFocus: d,
         autosize: !0,
@@ -37,13 +37,13 @@ function d(e) {
     });
 }
 function E(e) {
-    let { formField: i, autofocus: n, onChange: l } = e;
+    let { formField: i, autofocus: n, onChange: r } = e;
     return (0, t.jsx)(s.hK, {
         title: i.label,
         children: (0, t.jsx)(c, {
             className: u.fieldBackground,
             value: i.response,
-            onChange: l,
+            onChange: r,
             autofocus: n
         })
     });

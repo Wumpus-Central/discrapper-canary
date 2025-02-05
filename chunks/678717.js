@@ -26,11 +26,11 @@ var g = n(392750),
     y = n(916790),
     S = n(645973),
     k = n(903502),
-    Z = n(912072),
-    I = n(272193),
+    I = n(912072),
+    Z = n(272193),
     O = n(735959),
-    w = n(246992),
-    R = n(496025),
+    R = n(246992),
+    w = n(496025),
     P = n(442954),
     A = n(633001),
     L = n(702904),
@@ -143,17 +143,17 @@ function $() {
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, a.jsx)(Z.Z, { devSettingsCategory: _.zU.OVERLAYS })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: _.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
                     name: 'Messaging',
-                    render: () => (0, a.jsx)(R.Z, {})
+                    render: () => (0, a.jsx)(w.Z, {})
                 }),
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, a.jsx)(Z.Z, { devSettingsCategory: _.zU.REPORTING })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: _.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -210,7 +210,7 @@ function $() {
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
-                    render: () => (0, a.jsx)(I.Z, {})
+                    render: () => (0, a.jsx)(Z.Z, {})
                 }),
                 e.push({
                     id: 'voice_filters',
@@ -240,7 +240,7 @@ function $() {
             name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: i }
         }),
-        (0, a.jsxs)(w.Gk, {
+        (0, a.jsxs)(R.Gk, {
             children: [
                 (0, a.jsxs)(h.ZP, {
                     className: J.headerBar,
@@ -259,7 +259,7 @@ function $() {
                 }),
                 (0, a.jsx)(n, {}),
                 r(),
-                (0, a.jsx)(w.Br, { className: K.layerContainer })
+                (0, a.jsx)(R.Br, { className: K.layerContainer })
             ]
         })
     );

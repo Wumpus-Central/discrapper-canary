@@ -127,11 +127,11 @@ function Z(e, t) {
             t()),
             L === N.i.ERRORED && f(O.intl.string(O.t.uJgdEh));
     }, [g, L, t, i]);
-    let { applicationIconURL: b, applicationName: D } = R(n);
+    let { applicationIconURL: b, applicationName: P } = R(n);
     return {
         components: E,
         applicationIconURL: b,
-        applicationName: D,
+        applicationName: P,
         submissionState: L,
         error: S,
         validators: Z,

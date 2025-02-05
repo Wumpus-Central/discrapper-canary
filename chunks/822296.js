@@ -13,7 +13,7 @@ function f(e) {
     let { stream: t, width: n, noArt: f = !1, selected: _ = !1 } = e,
         p = (0, r.e7)([l.Z], () => l.Z.getChannel(t.channelId));
     return (
-        (0, s.Z)(() => {
+        (0, s.ZP)(() => {
             (null == p ? void 0 : p.isGuildStageVoice()) && (0, a.aP)((0, o.V9)(t), !1);
         }),
         (0, i.jsx)(u.Z, {

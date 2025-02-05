@@ -214,7 +214,7 @@ function y(e) {
 function P(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: d } = e,
         m = (0, C.Q3)('MultiUserTile');
-    (0, u.Z)(() => {
+    (0, u.ZP)(() => {
         E.default.track(b.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: 'activity suggestion',
             n_participants: d

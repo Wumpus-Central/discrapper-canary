@@ -17,7 +17,7 @@ function c(e) {
     let { renderModal: t, onCloseRequest: n, onCloseCallback: r } = e,
         [u] = i.useState(() => a()()),
         c = (0, l.v)();
-    (0, s.N)(
+    (0, s.Ng)(
         () => (
             (0, o.h7)(
                 t,

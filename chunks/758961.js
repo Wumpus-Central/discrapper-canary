@@ -142,7 +142,7 @@ function S(e) {
                 X('ready'), H(!1), T(1), U(1);
             }
         }, [el, k, K, M, P, R, F, z, es, U]);
-    (0, c.Z)(() => {
+    (0, c.ZP)(() => {
         L(null),
             h.default.track(N.rMx.OPEN_MODAL, {
                 type: 'Soundboard Upload Sound',

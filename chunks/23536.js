@@ -25,7 +25,7 @@ function _(e) {
         }),
         v = (0, a.e7)([h.ZP], () => h.ZP.hasUnreadPins(t.id));
     return (
-        (0, c.Z)(() => {
+        (0, c.ZP)(() => {
             C.some(d.k5) && o.Z.fetchPins(t.id, !0);
         }),
         l.useEffect(() => {

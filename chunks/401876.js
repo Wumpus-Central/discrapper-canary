@@ -10,8 +10,8 @@ function d(e) {
     let { startDate: n, recurrenceRule: t, onRecurrenceChange: d } = e,
         u = i.useMemo(() => (0, s.zi)(n, t), [t, n]),
         _ = (0, s.P8)(n),
-        h = (e) => e.toString(),
-        m = (0, l.jsxs)('div', {
+        m = (e) => e.toString(),
+        h = (0, l.jsxs)('div', {
             className: c.title,
             children: [
                 o.intl.string(o.t['59TVxM']),
@@ -22,14 +22,14 @@ function d(e) {
             ]
         });
     return (0, l.jsx)(r.xJW, {
-        title: m,
+        title: h,
         required: !0,
         children: (0, l.jsx)(r.PhF, {
             placeholder: 'gaming',
             options: _,
             select: d,
-            serialize: h,
-            isSelected: (e) => null != u && h(e) === h(u)
+            serialize: m,
+            isSelected: (e) => null != u && m(e) === m(u)
         })
     });
 }

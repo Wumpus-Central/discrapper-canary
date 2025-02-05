@@ -49,7 +49,7 @@ let y = l.memo(function (e) {
     P = l.memo(function (e) {
         let { channel: t, participant: a, tempDisableOnInit: s = !1 } = e,
             [f, x] = l.useState(s);
-        (0, p.Z)(() => {
+        (0, p.ZP)(() => {
             if (!f) return;
             let e = setTimeout(() => x(!1), 1000);
             return () => clearTimeout(e);

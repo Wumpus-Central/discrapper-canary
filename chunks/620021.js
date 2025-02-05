@@ -83,19 +83,19 @@ let b = function (l) {
         }),
         [f, I] = t.useState(!1),
         [M, Z] = t.useState(null !== (n = null == j ? void 0 : j.nick) && void 0 !== n ? n : ''),
-        [z, G] = t.useState({});
-    (0, u.Z)(() => {
+        [z, P] = t.useState({});
+    (0, u.ZP)(() => {
         g.default.track(_.rMx.OPEN_MODAL, {
             type: 'Change Server Identity',
             location: _.ZY5.GUILD_CHANNEL,
             source: h
         });
     });
-    let L = (0, c.sE)(a, {
+    let G = (0, c.sE)(a, {
             location: null == b ? void 0 : b[0],
             targetUserId: r.id
         }),
-        P = t.useCallback(
+        L = t.useCallback(
             async (l) => {
                 var n, e, i, t, s, d, u, v, k;
                 l.preventDefault();
@@ -111,22 +111,22 @@ let b = function (l) {
                             body: N,
                             rejectWithError: !1
                         }),
-                        L(c.jQ.CHANGE_NICKNAME),
+                        G(c.jQ.CHANGE_NICKNAME),
                         x();
                 } catch (r) {
                     let l;
                     I(!1);
                     let n = null !== (i = null === (e = r.body) || void 0 === e ? void 0 : e.errors) && void 0 !== i ? i : null;
-                    (null == n ? void 0 : n.nick) != null ? (l = (null === (d = n.nick) || void 0 === d ? void 0 : null === (s = d._errors) || void 0 === s ? void 0 : null === (t = s[0]) || void 0 === t ? void 0 : t.message) || C.intl.string(C.t.xex86u)) : (null == n ? void 0 : n.username) != null && (l = (null === (k = n.username) || void 0 === k ? void 0 : null === (v = k._errors) || void 0 === v ? void 0 : null === (u = v[0]) || void 0 === u ? void 0 : u.message) || C.intl.string(C.t.xex86u)), G({ nick: l });
+                    (null == n ? void 0 : n.nick) != null ? (l = (null === (d = n.nick) || void 0 === d ? void 0 : null === (s = d._errors) || void 0 === s ? void 0 : null === (t = s[0]) || void 0 === t ? void 0 : t.message) || C.intl.string(C.t.xex86u)) : (null == n ? void 0 : n.username) != null && (l = (null === (k = n.username) || void 0 === k ? void 0 : null === (v = k._errors) || void 0 === v ? void 0 : null === (u = v[0]) || void 0 === u ? void 0 : u.message) || C.intl.string(C.t.xex86u)), P({ nick: l });
                 }
             },
-            [a, M, x, r, j, L]
+            [a, M, x, r, j, G]
         );
     return (0, i.jsx)(d.Y0X, {
         'aria-label': C.intl.string(C.t['PKQB/P']),
         transitionState: e,
         children: (0, i.jsxs)('form', {
-            onSubmit: P,
+            onSubmit: L,
             children: [
                 (0, i.jsx)(d.xBx, {
                     separator: !1,

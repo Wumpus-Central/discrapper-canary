@@ -51,11 +51,11 @@ var a,
     y = n(53796),
     S = n(402332),
     k = n(375924),
-    Z = n(596136),
-    I = n(341901),
+    I = n(596136),
+    Z = n(341901),
     O = n(856308),
-    w = n(665352),
-    R = n(394900),
+    R = n(665352),
+    w = n(394900),
     P = n(661105),
     A = n(525169),
     L = n(433517),
@@ -85,12 +85,12 @@ let M = {
         ProPhoto: y.Z,
         REC_2020: S.Z,
         REC_2100_HLG: k.Z,
-        REC_2100_PQ: Z.Z,
-        XYZ_D50: I.Z,
+        REC_2100_PQ: I.Z,
+        XYZ_D50: Z.Z,
         XYZ_D65: O.Z
     },
     z = Object.fromEntries(Object.keys(M).map((e) => [e, e]));
-Object.values(M).forEach((e) => w.Z.register(e));
+Object.values(M).forEach((e) => R.Z.register(e));
 let { SemanticColors: F } = D.V,
     U = F,
     G = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
@@ -142,7 +142,7 @@ function X(e) {
     };
 }
 function Y(e) {
-    return (0, R.Z)((0, P.Z)(e, i.Z), { format: 'hex' });
+    return (0, w.Z)((0, P.Z)(e, i.Z), { format: 'hex' });
 }
 var K = (((a = {}).TOKENS = 'Tokens'), (a.PALETTES = 'Palettes'), a);
 function J() {

@@ -233,7 +233,7 @@ let B = (e) => e.filter(j.z6).slice(0, 5),
                     officialGuildId: null == M ? void 0 : null === (i = M.guild) || void 0 === i ? void 0 : i.id
                 });
             };
-        return ((0, p.Z)(() => {
+        return ((0, p.ZP)(() => {
             (0, A.IS)({
                 source: a,
                 viewId: C,
@@ -259,7 +259,7 @@ let B = (e) => e.filter(j.z6).slice(0, 5),
                 }
             })();
         }, [n, j]),
-        (0, p.Z)(() => () => {
+        (0, p.ZP)(() => () => {
             var e;
             let t = Date.now(),
                 i = y.map((e) => {

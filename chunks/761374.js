@@ -205,7 +205,7 @@ function y(e) {
     l.useEffect(() => {
         s.Z.setGpuBoostRequested(E.zS.OVERLAY_VIDEO_STREAM_RENDERING, !X);
     }, [X]),
-    (0, c.Z)(() => () => {
+    (0, c.ZP)(() => () => {
         s.Z.setGpuBoostRequested(E.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
     }),
     X && y)

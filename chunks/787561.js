@@ -75,7 +75,7 @@ let y = 'dismissedCommunityFeaturesUpsell',
                 return null !== (e = _.Z.getMemberCount(l.id)) && void 0 !== e ? e : 0;
             }),
             [g, p] = r.useState(!1);
-        (0, m.Z)(() => {
+        (0, m.ZP)(() => {
             o.tn
                 .get({
                     url: T.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id),

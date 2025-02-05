@@ -62,7 +62,7 @@ function k(e) {
         ]
     });
 }
-let Z = [
+let I = [
         {
             id: 'details',
             name: 'Details',
@@ -139,11 +139,11 @@ let Z = [
             }
         }
     ],
-    I = {
+    Z = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(I)
+                Object.entries(Z)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -172,7 +172,7 @@ function O() {
         [t, n] = l.useState(''),
         r = (0, d.e7)([b.Z], () => b.Z.loggedEventsVersion),
         s = l.useMemo(() => b.Z.loggedEvents, [r]),
-        [c, m] = l.useState(Object.keys(I)),
+        [c, m] = l.useState(Object.keys(Z)),
         [h, p] = l.useState(s),
         f = l.useRef(null),
         g = l.useMemo(
@@ -203,7 +203,7 @@ function O() {
         S = l.useMemo(
             () =>
                 h.filter((e) => {
-                    for (let t of c) if (I[t].filter(e)) return !0;
+                    for (let t of c) if (Z[t].filter(e)) return !0;
                     return !1;
                 }),
             [h, c]
@@ -212,8 +212,8 @@ function O() {
         g(t, s);
     }, [t, g, s]);
     let [k, O] = l.useState(void 0),
-        w = S.find((e) => e.key === k),
-        { TabBar: R, renderSelectedTab: P } = (0, C.Z)({ tabs: Z }, []);
+        R = S.find((e) => e.key === k),
+        { TabBar: w, renderSelectedTab: P } = (0, C.Z)({ tabs: I }, []);
     return (0, a.jsxs)('div', {
         ref: e,
         className: i()(E.panel, T.panel),
@@ -238,7 +238,7 @@ function O() {
                     (0, a.jsx)('div', { className: T.toolbarDivider }),
                     (0, a.jsx)('div', {
                         className: T.filters,
-                        children: Object.entries(I).map((e) => {
+                        children: Object.entries(Z).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 u.P3F,
@@ -271,15 +271,15 @@ function O() {
                 selectedRowKey: k,
                 onClickRow: (e) => O(e.key)
             }),
-            null != w &&
+            null != R &&
                 (0, a.jsxs)(v.Z, {
                     className: T.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
-                        (0, a.jsx)(R, {}),
+                        (0, a.jsx)(w, {}),
                         P({
-                            loggedEvent: w,
+                            loggedEvent: R,
                             onClose: () => O(void 0)
                         })
                     ]

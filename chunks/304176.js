@@ -25,7 +25,7 @@ let S = 40,
     A = (e) => {
         let { roleIcon: t, guild: n } = e,
             { name: A } = t;
-        (0, s.Z)(() => {
+        (0, s.ZP)(() => {
             E.default.track(y.rMx.OPEN_POPOUT, {
                 type: 'Role Icon Popout',
                 guild_id: n.id,

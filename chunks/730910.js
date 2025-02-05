@@ -107,7 +107,7 @@ function P(e) {
                 }
             return !0;
         },
-        J = async () => {
+        Q = async () => {
             p.default.track(L.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                 ...(0, g.hH)(l),
                 step: T.PG[C],
@@ -117,7 +117,7 @@ function P(e) {
                 (0, v.Nb)((0, T.lg)(C)),
                 (await X()) && (0, v.IG)(l, C);
         },
-        Q = async () => {
+        J = async () => {
             p.default.track(L.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                 ...(0, g.hH)(l),
                 step: T.PG[C],
@@ -133,7 +133,7 @@ function P(e) {
             color: m.zxk.Colors.PRIMARY,
             look: m.zxk.Looks.OUTLINED,
             size: m.zxk.Sizes.SMALL,
-            onClick: Q,
+            onClick: J,
             disabled: U || M,
             children: (0, i.jsxs)('span', {
                 className: O.button,
@@ -151,7 +151,7 @@ function P(e) {
             color: w ? m.zxk.Colors.BRAND : m.zxk.Colors.PRIMARY,
             look: m.zxk.Looks.FILLED,
             size: m.zxk.Sizes.SMALL,
-            onClick: J,
+            onClick: Q,
             disabled: U || M,
             children: (0, i.jsxs)(a.animated.span, {
                 className: O.button,

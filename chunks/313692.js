@@ -34,7 +34,7 @@ function N(e) {
         }),
         k = (0, o.e7)([C.default], () => C.default.getUser(a), [a]),
         O = (0, o.e7)([_.ZP], () => _.ZP.getMember(N, a), [N, a]);
-    (0, d.N)(() => {
+    (0, d.Ng)(() => {
         let e = null == y ? void 0 : y.details.scrollOffset;
         if (null != e) {
             var t;

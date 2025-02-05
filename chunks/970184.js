@@ -1,5 +1,5 @@
 n.d(t, {
-    CJ: () => D,
+    CJ: () => P,
     Ee: () => b,
     Il: () => M
 }),
@@ -140,7 +140,7 @@ function Z(e, t, n) {
             [e.customId, t.id, a]
         );
     return (
-        (0, c.Z)(() => {
+        (0, c.ZP)(() => {
             d(n);
         }),
         {
@@ -181,6 +181,6 @@ function M(e) {
 function b(e, t) {
     return i.useContext(y).useComponentState(e, t);
 }
-function D() {
+function P() {
     return i.useContext(y);
 }

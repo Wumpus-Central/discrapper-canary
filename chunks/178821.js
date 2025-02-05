@@ -138,7 +138,7 @@ function k(e) {
         [I, F] = j(w, y),
         C = performance.now() - c.current < p,
         E = R(o, k.current);
-    (0, u.Z)(
+    (0, u.ZP)(
         () => (
             I(),
             () => {

@@ -307,7 +307,7 @@ function X(e) {
         [u, h] = o.useState(l.showActivity),
         [C, p] = o.useState(1 === l.metadataVisibility),
         [N, _] = o.useState(1 === l.visibility);
-    (0, f.Z)(() => {
+    (0, f.ZP)(() => {
         i(!N), r(C);
     });
     let v = b.Z.get(l.type);

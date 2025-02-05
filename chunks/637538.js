@@ -7,7 +7,7 @@ var a = n(192379),
 function s(e) {
     let t = a.useRef(!0);
     return (
-        (0, r.Z)(() => () => {
+        (0, r.ZP)(() => () => {
             t.current && (null == e || e(c.CaptchaError.CANCEL));
         }),
         a.useEffect(

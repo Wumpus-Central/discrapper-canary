@@ -10,7 +10,7 @@ function c(e) {
         { guildProductListing: t, guildId: r } = (0, a._)(),
         { selectedSkuPricePreview: c } = (0, s.JL)();
     return (
-        (0, l.Z)(() => {
+        (0, l.ZP)(() => {
             o()(null != c, 'selectedSkuPricePreview cannot be null'),
                 (0, u.u)({
                     guildId: r,

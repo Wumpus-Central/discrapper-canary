@@ -151,7 +151,7 @@ function P(a) {
         (l.current = !0), x();
     };
     return (
-        (0, p.Z)(() => {
+        (0, p.ZP)(() => {
             setTimeout(() => {
                 c();
             }, 3000);

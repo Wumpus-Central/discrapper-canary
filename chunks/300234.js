@@ -67,7 +67,7 @@ function v(e) {
             return null !== (e = m.Z.getMemberCount(t.id)) && void 0 !== e ? e : 0;
         }),
         r = (0, s.Wu)([h.default], () => n.map((e) => h.default.getUser(e)));
-    return ((0, o.Z)(() => {
+    return ((0, o.ZP)(() => {
         n.filter((e, t) => null == r[t]).forEach((e) => {
             u.Z.requestMember(t.guild_id, e);
         });

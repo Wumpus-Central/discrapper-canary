@@ -11,7 +11,7 @@ function d(e) {
 }
 function u(e) {
     let t,
-        { channel: n, unread: u = !1, mentionCount: c = 0, userCount: h, embeddedActivitiesCount: g, isSubscriptionGated: f, needSubscriptionToAccess: C } = e,
+        { channel: n, unread: u = !1, mentionCount: c = 0, userCount: h, embeddedActivitiesCount: g, isSubscriptionGated: C, needSubscriptionToAccess: f } = e,
         p = (0, s.F6)(n, r.default, l.Z);
     switch (n.type) {
         case a.d4z.DM:
@@ -44,8 +44,8 @@ function u(e) {
             }
             null != g && g > 0 && v.push(o.intl.formatToPlainString(o.t.O6PLYW, { activitiesCount: g }));
             let E = d({
-                isSubscriptionGated: f,
-                needSubscriptionToAccess: C
+                isSubscriptionGated: C,
+                needSubscriptionToAccess: f
             });
             return null != E && v.push(E), v.join(', ');
         case a.d4z.GUILD_STAGE_VOICE:
@@ -61,8 +61,8 @@ function u(e) {
             })
         ],
         I = d({
-            isSubscriptionGated: f,
-            needSubscriptionToAccess: C
+            isSubscriptionGated: C,
+            needSubscriptionToAccess: f
         });
     return null != I && _.push(I), _.join(', ');
 }

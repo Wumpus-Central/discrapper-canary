@@ -568,13 +568,13 @@ function ed(e) {
                 children: [
                     null != A
                         ? (0, i.jsx)(h.zx, {
-                              look: h.zx.Looks.LINK,
+                              look: h.zx.Looks.FILLED,
                               color: h.zx.Colors.PRIMARY,
                               onClick: () => ek(A),
                               children: es.intl.string(es.t['13/7kZ'])
                           })
                         : (0, i.jsx)(h.zx, {
-                              look: h.zx.Looks.LINK,
+                              look: h.zx.Looks.FILLED,
                               color: h.zx.Colors.PRIMARY,
                               onClick: () => tn(!1),
                               children: es.intl.string(es.t['ETE/oK'])

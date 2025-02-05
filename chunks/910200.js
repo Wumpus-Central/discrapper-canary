@@ -9,8 +9,8 @@ var l = t(200651),
     d = t(686546),
     u = t(706454),
     _ = t(768581),
-    h = t(709054),
-    m = t(997431),
+    m = t(709054),
+    h = t(997431),
     x = t(686369),
     g = t(388032),
     v = t(950039);
@@ -26,15 +26,15 @@ function b(e) {
                 l = (0, o.ZP)(t, n);
             return null != e.brandColorPrimary ? e.brandColorPrimary : l;
         })(n, (0, a.dQu)(r.Z.colors.BG_BASE_TERTIARY).hex()),
-        f = (0, i.e7)([u.default], () => u.default.locale),
-        N = (0, x.d)(t, b),
-        j = (0, m.M)(h.default.extractTimestamp(n.id), f);
+        N = (0, i.e7)([u.default], () => u.default.locale),
+        j = (0, x.d)(t, b),
+        C = (0, h.M)(m.default.extractTimestamp(n.id), N);
     return (0, l.jsxs)('div', {
         className: v.container,
         children: [
             (0, l.jsx)('div', {
                 className: v.banner,
-                style: { background: N }
+                style: { background: j }
             }),
             (0, l.jsx)('div', {
                 className: v.avatarContainer,
@@ -93,7 +93,7 @@ function b(e) {
                         children: (0, l.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
-                            children: g.intl.format(g.t['zb2Q5+'], { createdAtDate: j })
+                            children: g.intl.format(g.t['zb2Q5+'], { createdAtDate: C })
                         })
                     })
                 ]

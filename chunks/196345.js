@@ -7,17 +7,17 @@ n.d(i, {
     n(47120);
 var t = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
+var r = n(120356),
+    l = n.n(r),
     a = n(481060),
     s = n(454585),
     o = n(489813),
     u = n(388032),
     c = n(119866);
 function d(e) {
-    let { terms: i, channelId: n, className: l } = e;
+    let { terms: i, channelId: n, className: r } = e;
     return (0, t.jsx)('div', {
-        className: r()(c.termsFieldBody, l),
+        className: l()(c.termsFieldBody, r),
         children: i.map((e, i) =>
             (0, t.jsxs)(
                 'div',
@@ -42,13 +42,13 @@ function d(e) {
     });
 }
 function E(e) {
-    let { onChange: i, checked: n, disabled: l } = e;
+    let { onChange: i, checked: n, disabled: r } = e;
     return (0, t.jsx)(a.XZJ, {
         size: 20,
         type: a.XZJ.Types.INVERTED,
         value: n,
         onChange: i,
-        disabled: l,
+        disabled: r,
         style: { borderWidth: 2 },
         className: c.checkbox,
         children: (0, t.jsx)(a.Text, {
@@ -66,7 +66,7 @@ function I(e) {
     });
 }
 let f = (e) => {
-    let { channelId: i, formField: n, onChange: l } = e;
+    let { channelId: i, formField: n, onChange: r } = e;
     return (0, t.jsxs)(o.hK, {
         title: u.intl.string(u.t.Q8OFNz),
         children: [
@@ -76,7 +76,7 @@ let f = (e) => {
                 channelId: i
             }),
             (0, t.jsx)(E, {
-                onChange: l,
+                onChange: r,
                 checked: n.response
             })
         ]

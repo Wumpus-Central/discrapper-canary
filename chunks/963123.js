@@ -228,7 +228,7 @@ function K(e) {
             },
             [ec, el.id, e8, ei, tu, ev]
         );
-    (0, v.N)(() => {
+    (0, v.Ng)(() => {
         e4.current && ((e4.current = !1), eF(S.Z.getEffectiveConnectionSpeed()), e9 && eW.timestampSec >= eW.duration && e$(el.id, 0, eW.duration));
     }),
         l.useEffect(() => {

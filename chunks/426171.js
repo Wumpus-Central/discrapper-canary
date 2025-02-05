@@ -80,7 +80,7 @@ let m = ''.concat('#').concat('itemSkuId', '='),
             m = (0, l.TH)(),
             f = m.pathname === p.Z5c.COLLECTIBLES_SHOP ? o.Z.HOME_PAGE_SHOP_TAB : m.pathname === p.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN : o.Z.COLLECTIBLES_SHOP,
             { analyticsLocations: x } = (0, d.ZP)(f);
-        (0, s.Z)(() => {
+        (0, s.ZP)(() => {
             if (n) return;
             let e = g.exec(m.hash);
             if (null != e) {

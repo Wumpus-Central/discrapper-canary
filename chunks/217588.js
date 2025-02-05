@@ -209,7 +209,7 @@ let w = (e) => {
             let { refreshPositionKey: e } = K.current;
             e();
         }, [b, S]),
-        (0, d.Z)(() => {
+        (0, d.ZP)(() => {
             I.default.track(y.rMx.OPEN_POPOUT, {
                 type: Q,
                 ...z

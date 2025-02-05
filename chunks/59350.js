@@ -30,8 +30,8 @@ var l = t(200651),
     B = t(51144),
     A = t(998502),
     R = t(549817),
-    k = t(745752),
-    P = t(45966),
+    P = t(745752),
+    k = t(45966),
     L = t(637853),
     O = t(905204),
     M = t(968644),
@@ -75,7 +75,7 @@ function $(e) {
             .orderBy('position', 'desc')
             .value(),
         j = (0, N.ZP)(i.id, t.id);
-    (0, _.Z)(() => {
+    (0, _.ZP)(() => {
         (0, b.Z)(i.id, i.getAvatarURL(t.id, (0, m.pxk)(K)), { guildId: t.id });
     });
     let S = (0, I.parseBioReact)(null == j ? void 0 : j.bio),
@@ -170,7 +170,7 @@ function ee(e) {
         h = null == t ? void 0 : null === (n = t.options) || void 0 === n ? void 0 : n.filter((e) => d.has(e.id)),
         x = (0, L.L6)(h),
         _ = (0, L.dX)(h),
-        p = (0, c.Wu)([P.Z], () => P.Z.getOnboardingResponsesForPrompt(a.id, t.id)),
+        p = (0, c.Wu)([k.Z], () => k.Z.getOnboardingResponsesForPrompt(a.id, t.id)),
         { helpText: f, helpTextAdditional: g } = (0, M.p)({
             guild: a,
             prompt: t,
@@ -258,7 +258,7 @@ function en(e) {
         h = null == t ? void 0 : null === (n = t.options) || void 0 === n ? void 0 : n.filter((e) => d.has(e.id)),
         x = (0, L.L6)(h),
         _ = (0, L.dX)(h),
-        p = (0, c.Wu)([P.Z], () => P.Z.getOnboardingResponsesForPrompt(a.id, t.id)),
+        p = (0, c.Wu)([k.Z], () => k.Z.getOnboardingResponsesForPrompt(a.id, t.id)),
         { helpText: f, helpTextAdditional: g } = (0, M.p)({
             guild: a,
             prompt: t,
@@ -347,12 +347,12 @@ function et(e) {
         f = (0, c.e7)([S.ZP], () => S.ZP.hasUnread(n, q.W.GUILD_ONBOARDING_QUESTION)),
         { onboardingPromptsRaw: g, newOnboardingPrompts: I, onboardingPromptsWithNewAnswers: N, newAnswersCount: Z, onboardingPrompts: b } = (0, D.Z)(n);
     i.useEffect(() => {
-        (null == o ? void 0 : o.id) != null && !v.Z.isFullServerPreview(o.id) && (P.Z.shouldFetchPrompts(o.id) || f) && (0, k.eM)(o.id);
+        (null == o ? void 0 : o.id) != null && !v.Z.isFullServerPreview(o.id) && (k.Z.shouldFetchPrompts(o.id) || f) && (0, P.eM)(o.id);
     }, [null == o ? void 0 : o.id, f]),
         i.useEffect(() => {
             if ((null == o ? void 0 : o.id) != null && !v.Z.isFullServerPreview(o.id))
                 return () => {
-                    (0, h.Ju)(o.id, q.W.GUILD_ONBOARDING_QUESTION, P.Z.ackIdForGuild(o.id)), R.Z.updateOnboardingResponses(o.id);
+                    (0, h.Ju)(o.id, q.W.GUILD_ONBOARDING_QUESTION, k.Z.ackIdForGuild(o.id)), R.Z.updateOnboardingResponses(o.id);
                 };
         }, [null == o ? void 0 : o.id]);
     let E = i.useCallback(

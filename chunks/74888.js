@@ -63,7 +63,7 @@ function j(e) {
         n = d.Y.useExperiment({ location: 'notification_settings_modal_redesign' }, { autoTrackExposure: !0 }).enabled,
         l = s.useRef(null);
     return (
-        (0, o.N)(() => {
+        (0, o.Ng)(() => {
             let n = setTimeout(() => {
                 e.scrollToChannels &&
                     null != t.current &&

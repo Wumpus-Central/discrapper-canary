@@ -22,7 +22,7 @@ function x(e) {
     let { location: t, transitionTo: l = I } = e,
         [o, x] = r.useState('submitting'),
         C = r.useRef(void 0);
-    (0, c.Z)(() => {
+    (0, c.ZP)(() => {
         (0, _.e)('verify_email');
         let e = (0, d.Z)(t);
         if (null == e) {

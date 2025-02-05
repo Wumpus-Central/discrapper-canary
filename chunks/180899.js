@@ -8,7 +8,7 @@ function o(e) {
     let { stageInstance: n, defaultStep: t, error: i, onSave: o } = e,
         [c, d] = l.useState(t),
         [u, _] = l.useState(),
-        [h, m] = l.useState(null);
+        [m, h] = l.useState(null);
     return (
         l.useEffect(() => {
             null != i && d(a.lv.STAGE_CHANNEL_SETTINGS);
@@ -16,9 +16,9 @@ function o(e) {
         {
             modalStep: c,
             setModalStep: d,
-            readySlide: h,
+            readySlide: m,
             handleSlideReady: function (e) {
-                return m(e);
+                return h(e);
             },
             savedOptions: u,
             handleSettingsSave: function (e) {

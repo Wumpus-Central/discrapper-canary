@@ -120,7 +120,7 @@ function F(e) {
                 );
             }
         }, []),
-        (0, u.Z)(() => () => {
+        (0, u.ZP)(() => () => {
             let e = {
                     activity_tiles_viewed: el.current,
                     duration_ms: Date.now() - ea.current,

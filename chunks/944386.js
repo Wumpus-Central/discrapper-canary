@@ -16,7 +16,7 @@ let f = (e) => {
             ...(0, a.v_)(s.Z.getChannel(o.Z.getChannelId(n)))
         });
     return (
-        (0, r.Z)(() => {
+        (0, r.ZP)(() => {
             var e;
             (0, u.x)(c.qR.TrackOpenPopoutUsed),
                 p ||

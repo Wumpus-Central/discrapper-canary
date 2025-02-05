@@ -9,24 +9,24 @@ var i = t(913527),
     c = t(388032),
     d = t(297229);
 function u(e) {
-    let { className: n, onScheduleChange: t, onRecurrenceChange: i, onTimeChange: u, timeSelected: _ = !0, schedule: h, recurrenceRule: m, showEndDate: x = !1, requireEndDate: g = !1, disableStartDateTime: v = !1 } = e;
-    if (null == h) return null;
+    let { className: n, onScheduleChange: t, onRecurrenceChange: i, onTimeChange: u, timeSelected: _ = !0, schedule: m, recurrenceRule: h, showEndDate: x = !1, requireEndDate: g = !1, disableStartDateTime: v = !1 } = e;
+    if (null == m) return null;
     let b = null,
-        f = h.startDate,
-        N = r()(),
-        j = r()().add(s.G3, 'days'),
-        C = r()().add(s.Ib, 'days');
-    null != m && (j.add(s.hn, 'years'), C.add(s.hn, 'years'));
-    let I = (e) => {
+        N = m.startDate,
+        j = r()(),
+        C = r()().add(s.G3, 'days'),
+        I = r()().add(s.Ib, 'days');
+    null != h && (C.add(s.hn, 'years'), I.add(s.hn, 'years'));
+    let f = (e) => {
         t({
-            ...h,
+            ...m,
             endDate: e
         });
     };
     return (
         x &&
             (b =
-                null != h.endDate || g
+                null != m.endDate || g
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsxs)('div', {
@@ -36,18 +36,18 @@ function u(e) {
                                           title: c.intl.string(c.t.CTLgZG),
                                           required: g,
                                           children: (0, l.jsx)(a.Wrb, {
-                                              value: h.endDate,
-                                              onSelect: I,
-                                              minDate: h.startDate,
-                                              maxDate: C
+                                              value: m.endDate,
+                                              onSelect: f,
+                                              minDate: m.startDate,
+                                              maxDate: I
                                           })
                                       }),
                                       (0, l.jsx)(a.xJW, {
                                           title: c.intl.string(c.t.j2RuXF),
                                           required: g,
                                           children: (0, l.jsx)(a.MGJ, {
-                                              value: h.endDate,
-                                              onChange: I
+                                              value: m.endDate,
+                                              onChange: f
                                           })
                                       })
                                   ]
@@ -56,7 +56,7 @@ function u(e) {
                                   ? null
                                   : (0, l.jsx)(a.zxk, {
                                         onClick: () => {
-                                            I(void 0);
+                                            f(void 0);
                                         },
                                         look: a.zxk.Looks.BLANK,
                                         size: a.zxk.Sizes.MIN,
@@ -83,7 +83,7 @@ function u(e) {
                           look: a.zxk.Looks.BLANK,
                           size: a.zxk.Sizes.MIN,
                           onClick: () => {
-                              I(r()(h.startDate).add(1, 'hour'));
+                              f(r()(m.startDate).add(1, 'hour'));
                           },
                           children: (0, l.jsxs)('div', {
                               className: d.link,
@@ -112,15 +112,15 @@ function u(e) {
                             title: c.intl.string(c.t.kKOIwM),
                             required: !0,
                             children: (0, l.jsx)(a.Wrb, {
-                                value: h.startDate,
+                                value: m.startDate,
                                 onSelect: (e) => {
                                     t({
-                                        ...h,
+                                        ...m,
                                         startDate: e
                                     });
                                 },
-                                minDate: N,
-                                maxDate: j,
+                                minDate: j,
+                                maxDate: C,
                                 disabled: v
                             })
                         }),
@@ -128,12 +128,12 @@ function u(e) {
                             title: c.intl.string(c.t['6dGmCA']),
                             required: !0,
                             children: (0, l.jsx)(a.MGJ, {
-                                value: h.startDate,
+                                value: m.startDate,
                                 onChange: (e) => {
                                     e.isValid() &&
                                         (null == u || u(!0),
                                         t({
-                                            ...h,
+                                            ...m,
                                             startDate: e
                                         }));
                                 },
@@ -144,12 +144,12 @@ function u(e) {
                     ]
                 }),
                 b,
-                null != f &&
+                null != N &&
                     null != i &&
                     (0, l.jsx)(o.Z, {
                         onRecurrenceChange: i,
-                        startDate: f,
-                        recurrenceRule: m
+                        startDate: N,
+                        recurrenceRule: h
                     })
             ]
         })

@@ -17,7 +17,7 @@ function g(e) {
     let { title: t, description: n, onButtonClick: a, trackSettingsUpsellsAction: s } = e,
         [o, u] = r.useState(!1);
     return (
-        (0, l.Z)(() => {
+        (0, l.ZP)(() => {
             s(_.M4.SETTINGS_UPSELLS_VIEWED);
         }),
         (0, i.jsx)(c.ZP, {

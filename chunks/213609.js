@@ -77,7 +77,7 @@ function v(e) {
                 }
             );
         };
-    (0, c.Z)(() => {
+    (0, c.ZP)(() => {
         if (t.trackOnInitialLoad) return l();
     }),
         i.useEffect(() => {

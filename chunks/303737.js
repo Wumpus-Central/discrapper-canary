@@ -21,8 +21,8 @@ var i = n(991637),
     c = n(944537),
     h = n(144507),
     g = n(853439),
-    f = n(981631),
-    C = n(176505);
+    C = n(981631),
+    f = n(176505);
 l().shim();
 let p = {};
 function v(e) {
@@ -78,7 +78,7 @@ function I(e) {
     let t = _(e);
     (p[e] = t),
         t.forEach((e) => {
-            let t = e.set('flags', C.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+            let t = e.set('flags', f.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
             s.Z.dispatch({
                 type: 'CHANNEL_CREATE',
                 channel: t
@@ -168,5 +168,5 @@ function T(e, t) {
     };
 }
 function N(e) {
-    return (0, h.H2)(e) && e.hasFeature(f.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, d.$F)() && (0, d.hQ)(e.id);
+    return (0, h.H2)(e) && e.hasFeature(C.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, d.$F)() && (0, d.hQ)(e.id);
 }

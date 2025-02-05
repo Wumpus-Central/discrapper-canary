@@ -22,7 +22,7 @@ function _(e) {
         v = (0, s.Z)(t),
         N = (0, o.Z)(t);
     return (
-        (0, r.Z)(() => {
+        (0, r.ZP)(() => {
             let e = t.currentActivities
                 .filter((e) => {
                     var t, n;

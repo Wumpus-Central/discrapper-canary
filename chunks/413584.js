@@ -197,7 +197,7 @@ let P = 'WELCOME_CHANNEL',
                 null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), (0, I.VP)({ channels: r })), n ? (M(r), h(null)) : h(t);
             },
             z = r.useRef(!1);
-        (0, x.Z)(
+        (0, x.ZP)(
             () => (
                 null != t &&
                     l &&

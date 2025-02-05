@@ -32,7 +32,7 @@ function p(e) {
         [Z, E] = i.useState(null == _ ? void 0 : _.moderated),
         T = (0, o.e7)([m.ZP], () => ((null == B ? void 0 : B.id) != null ? m.ZP.getUsableCustomEmojiById(B.id) : null)),
         R = (null == _ ? void 0 : _.name) !== I || (null == _ ? void 0 : _.emojiId) !== (null == B ? void 0 : B.id) || (null == _ ? void 0 : _.emojiName) !== (null == B ? void 0 : B.name) || Z !== (null == _ ? void 0 : _.moderated),
-        S = () => {
+        P = () => {
             if (null != I && R) {
                 if (z) {
                     x.Z.updateForumTag(
@@ -60,7 +60,7 @@ function p(e) {
                     p();
             }
         },
-        D = (e) => {
+        S = (e) => {
             null != e &&
                 y(
                     null != e.id
@@ -74,10 +74,10 @@ function p(e) {
                           }
                 );
         },
-        P = i.useCallback((e) => f(e), []),
+        D = i.useCallback((e) => f(e), []),
         w = i.createRef();
     return (
-        (0, s.Z)(() => {
+        (0, s.ZP)(() => {
             null != w.current && w.current.focus();
         }),
         (0, t.jsxs)(a.Y0X, {
@@ -111,7 +111,7 @@ function p(e) {
                                                 guildId: g,
                                                 closePopout: n,
                                                 onSelectEmoji: (e, l) => {
-                                                    D(e), l && n();
+                                                    S(e), l && n();
                                                 },
                                                 pickerIntention: h.Hz.COMMUNITY_CONTENT,
                                                 onNavigateAway: p,
@@ -152,10 +152,10 @@ function p(e) {
                                     value: I,
                                     inputClassName: C.input,
                                     placeholder: k.intl.string(k.t['5vpeb2']),
-                                    onChange: P,
+                                    onChange: D,
                                     autoFocus: !0,
                                     onKeyDown: (e) => {
-                                        e.keyCode === v.yXg.ENTER && I.length > 0 && (I.length > 0 && S(), e.preventDefault());
+                                        e.keyCode === v.yXg.ENTER && I.length > 0 && (I.length > 0 && P(), e.preventDefault());
                                     }
                                 }),
                                 I.length > 0 || null != B
@@ -203,7 +203,7 @@ function p(e) {
                                     children: k.intl.string(k.t['ETE/oK'])
                                 }),
                                 (0, t.jsx)(a.zxk, {
-                                    onClick: S,
+                                    onClick: P,
                                     disabled: 0 === I.length || !R,
                                     autoFocus: !0,
                                     children: k.intl.string(k.t.R3BPHx)

@@ -157,7 +157,7 @@ function Y() {
         f = b.default.getCurrentUser(),
         I = null != e,
         S = r && null != f && !I;
-    (0, h.Z)(() => {
+    (0, h.ZP)(() => {
         (0, N.e)('family-center'),
             j.ZP.initialPageLoad(),
             n ||
@@ -227,7 +227,7 @@ function W() {
         H = b.default.getCurrentUser(),
         Y = null != t,
         W = a && null != H && !Y;
-    (0, h.Z)(() => {
+    (0, h.ZP)(() => {
         m.Y(B.Z5c.FAMILY_CENTER),
             (0, N.e)('family-center'),
             !A.Z.isLoading() && A.Z.canRefetch() && j.ZP.initialPageLoad(),

@@ -16,7 +16,7 @@ let h = function (e) {
     let { guild: t, message: n, onClose: h } = e,
         m = u.Z.getChannel(c.Z.getChannelId(t.id));
     if (
-        ((0, a.Z)(() => {
+        ((0, a.ZP)(() => {
             d.default.track(f.rMx.OPEN_POPOUT, {
                 type: 'New Member Badge Popout',
                 guild_id: t.id,

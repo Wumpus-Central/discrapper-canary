@@ -63,7 +63,7 @@ function P(e) {
         z = async (e, t) => {
             U(!0), null != m && S(), (await (0, u.B1)(e.id, t)) || S(R.intl.string(R.t['4kgVqa'])), U(!1);
         };
-    (0, s.Z)(() => {
+    (0, s.ZP)(() => {
         null != G && null != P && (y.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: G }), z(P, G));
     });
     let q = (e) => {

@@ -871,7 +871,7 @@ function ee() {
         t = (0, d.e7)([O.Z], () => O.Z.getForcedRenderMode()),
         [n, r] = s.useState(!1),
         [l, a] = s.useState(''),
-        o = e || t === C.R5.OUT_OF_PROCESS_V2 || t === C.R5.OUT_OF_PROCESS_V3;
+        o = e || t === C.R5.OUT_OF_PROCESS_V2 || t === C.R5.OUT_OF_PROCESS_V3 || t === C.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
     return (s.useEffect(() => {
         (async () => {
             a(await (0, Z.Y)());

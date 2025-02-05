@@ -43,7 +43,7 @@ function I(e) {
             1 === e && (await N({ width: '100%' }), s());
         };
     return (
-        (0, u.Z)(() => {
+        (0, u.ZP)(() => {
             null != p && d.default.track(h.rMx.QUEST_SURVEY_DISPLAYED, S(p, n));
         }),
         null == p && s(),

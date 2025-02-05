@@ -1,4 +1,4 @@
-t.d(n, { Z: () => A }), t(47120);
+t.d(n, { Z: () => y }), t(47120);
 var l = t(200651),
     i = t(192379),
     r = t(913527),
@@ -9,24 +9,24 @@ var l = t(200651),
     d = t(933557),
     u = t(540059),
     _ = t(77810),
-    h = t(854698),
-    m = t(13664),
+    m = t(854698),
+    h = t(13664),
     x = t(440371),
     g = t(810788),
     v = t(699516),
     b = t(594174),
-    f = t(626135),
-    N = t(570188),
-    j = t(427679),
-    C = t(930180),
-    I = t(46920),
+    N = t(626135),
+    j = t(570188),
+    C = t(427679),
+    I = t(930180),
+    f = t(46920),
     p = t(157925),
     E = t(981631),
     S = t(765305),
     T = t(190378),
     k = t(388032),
     Z = t(400059);
-function y(e) {
+function A(e) {
     let { stageChannelsInGuild: n, channel: t, onSelectChannel: i } = e;
     return null == i
         ? null
@@ -55,41 +55,41 @@ function y(e) {
               })
           });
 }
-function A(e) {
-    var n, t, r, v, b, A;
-    let { channel: P, guild: R, header: D, error: w, loading: G, onSave: B, onEventSave: L, onClose: z, onSelectChannel: O, isEvent: M = !1, defaultOptions: U, isSlideReady: F = !0 } = e,
-        W = i.useMemo(() => j.Z.getStageInstanceByChannel(P.id), [P.id]),
+function y(e) {
+    var n, t, r, v, b, y;
+    let { channel: P, guild: R, header: D, error: w, loading: L, onSave: G, onEventSave: B, onClose: z, onSelectChannel: O, isEvent: M = !1, defaultOptions: U, isSlideReady: F = !0 } = e,
+        W = i.useMemo(() => C.Z.getStageInstanceByChannel(P.id), [P.id]),
         [V, H] = i.useState(null !== (t = null !== (n = null == U ? void 0 : U.topic) && void 0 !== n ? n : null == W ? void 0 : W.topic) && void 0 !== t ? t : ''),
         [q, J] = i.useState(null !== (r = null == U ? void 0 : U.description) && void 0 !== r ? r : ''),
         [K] = i.useState(M),
-        [Q, Y] = i.useState(null !== (v = null == U ? void 0 : U.schedule) && void 0 !== v ? v : { startDate: (0, h.ib)() }),
+        [Q, Y] = i.useState(null !== (v = null == U ? void 0 : U.schedule) && void 0 !== v ? v : { startDate: (0, m.ib)() }),
         [X, $] = i.useState(K && (null == U ? void 0 : U.schedule) != null),
-        ee = (0, N.J)(P),
-        en = (0, N.U)(P),
+        ee = (0, j.J)(P),
+        en = (0, j.U)(P),
         et = null == W && ee && !K,
         [el, ei] = i.useState(et && en),
         er = (0, s.e7)([g.Z], () => g.Z.hasHotspot(T.v.LIVE_STAGE_NOTIFICATION_BADGE)),
         ea = S.j8.GUILD_ONLY,
-        [es] = i.useState(null !== (A = null !== (b = null == U ? void 0 : U.privacyLevel) && void 0 !== b ? b : null == W ? void 0 : W.privacy_level) && void 0 !== A ? A : ea),
+        [es] = i.useState(null !== (y = null !== (b = null == U ? void 0 : U.privacyLevel) && void 0 !== b ? b : null == W ? void 0 : W.privacy_level) && void 0 !== y ? y : ea),
         [eo, ec] = i.useState(null == U ? void 0 : U.recurrenceRule),
-        ed = (0, C._d)(P.id),
-        eu = (0, C.K3)(P.id),
-        [e_, eh] = i.useState(!1),
-        em = (0, u.Q3)('StageChannelSettings'),
+        ed = (0, I._d)(P.id),
+        eu = (0, I.K3)(P.id),
+        [e_, em] = i.useState(!1),
+        eh = (0, u.Q3)('StageChannelSettings'),
         ex = (0, d.ZP)(P),
         eg = (0, _.q)(R),
         ev = null != O,
         eb = eg.length > 1;
-    (0, c.Z)(() => {
-        f.default.track(E.rMx.START_STAGE_OPENED, {
+    (0, c.ZP)(() => {
+        N.default.track(E.rMx.START_STAGE_OPENED, {
             stage_instance_id: null == W ? void 0 : W.id,
             can_start_public_stage: !1,
             guild_id: P.guild_id
         });
     });
-    let ef = (e) => {
+    let eN = (e) => {
             if ((e.preventDefault(), es === S.j8.PUBLIC && V.length < 20 && !e_)) {
-                eh(!0);
+                em(!0);
                 return;
             }
             let n = {
@@ -99,8 +99,8 @@ function A(e) {
             };
             if (K) {
                 if (!X) return;
-                null == L ||
-                    L({
+                null == B ||
+                    B({
                         ...n,
                         schedule: Q,
                         description: q,
@@ -108,9 +108,9 @@ function A(e) {
                     });
                 return;
             }
-            null == B || B(n);
+            null == G || G(n);
         },
-        { color: eN, text: ej } = K
+        { color: ej, text: eC } = K
             ? {
                   color: o.zxk.Colors.BRAND,
                   text: k.intl.string(k.t['60lJ0N'])
@@ -122,19 +122,19 @@ function A(e) {
                 }
               : null == W
                 ? {
-                      color: em ? o.zxk.Colors.BRAND : o.zxk.Colors.GREEN,
+                      color: eh ? o.zxk.Colors.BRAND : o.zxk.Colors.GREEN,
                       text: k.intl.string(k.t.s8mM8P)
                   }
                 : {
                       color: o.zxk.Colors.BRAND,
                       text: k.intl.string(k.t.K344S0)
                   },
-        eC = i.useRef(null);
+        eI = i.useRef(null);
     i.useEffect(() => {
         var e;
-        F && (null === (e = eC.current) || void 0 === e || e.focus());
+        F && (null === (e = eI.current) || void 0 === e || e.focus());
     }, [F]);
-    let eI = X && null != Q.startDate && Q.startDate >= a()();
+    let ef = X && null != Q.startDate && Q.startDate >= a()();
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(o.hzk, {
@@ -143,10 +143,10 @@ function A(e) {
                     D,
                     (0, l.jsx)('div', {
                         className: Z.blockedUsersContainer,
-                        children: null == W && (ed > 0 || eu > 0) && (0, l.jsx)(I.mv, { channelId: P.id })
+                        children: null == W && (ed > 0 || eu > 0) && (0, l.jsx)(f.mv, { channelId: P.id })
                     }),
                     (0, l.jsxs)('form', {
-                        onSubmit: ef,
+                        onSubmit: eN,
                         className: Z.form,
                         children: [
                             (0, l.jsxs)(o.xJW, {
@@ -161,7 +161,7 @@ function A(e) {
                                         maxLength: p.xA,
                                         value: V,
                                         autoComplete: 'off',
-                                        inputRef: eC
+                                        inputRef: eI
                                     }),
                                     e_ &&
                                         (0, l.jsx)(o.Text, {
@@ -181,7 +181,7 @@ function A(e) {
                                 ]
                             }),
                             ev && eb
-                                ? (0, l.jsx)(y, {
+                                ? (0, l.jsx)(A, {
                                       stageChannelsInGuild: eg,
                                       channel: P,
                                       onSelectChannel: O
@@ -195,7 +195,7 @@ function A(e) {
                                             onScheduleChange: Y,
                                             onRecurrenceChange: (e) => {
                                                 let n = Q.startDate;
-                                                null != n && ec((0, h.mF)(e, n));
+                                                null != n && ec((0, m.mF)(e, n));
                                             },
                                             schedule: Q,
                                             recurrenceRule: eo,
@@ -224,7 +224,7 @@ function A(e) {
                                     })
                                 }),
                             et
-                                ? (0, l.jsx)(m.Z, {
+                                ? (0, l.jsx)(h.Z, {
                                       sendStartNotification: el,
                                       setSendStartNotification: ei,
                                       showNotificationNewBadge: er
@@ -256,11 +256,11 @@ function A(e) {
             (0, l.jsxs)(o.mzw, {
                 children: [
                     (0, l.jsx)(o.zxk, {
-                        color: eN,
-                        onClick: ef,
-                        disabled: '' === V || null == es || (M && !eI),
-                        submitting: G,
-                        children: ej
+                        color: ej,
+                        onClick: eN,
+                        disabled: '' === V || null == es || (M && !ef),
+                        submitting: L,
+                        children: eC
                     }),
                     (0, l.jsx)(o.zxk, {
                         color: o.zxk.Colors.PRIMARY,

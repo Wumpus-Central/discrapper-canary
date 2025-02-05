@@ -29,7 +29,7 @@ function v() {
             unactivatedUnits: []
         });
     return (
-        (0, c.Z)(() => {
+        (0, c.ZP)(() => {
             ((null != t && (0, h.I5)(t)) || e) && (_.Z.fetchingAllEntitlements || (0, u.p0)({ entitlementType: g.qc2.FRACTIONAL_REDEMPTION }));
         }),
         i.useEffect(() => {

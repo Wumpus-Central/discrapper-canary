@@ -10,15 +10,15 @@ var i = n(200651),
     c = n(3148),
     h = n(753206),
     g = n(594174),
-    f = n(5192),
-    C = n(981631),
+    C = n(5192),
+    f = n(981631),
     p = n(388032),
     v = n(674055);
 function E(e) {
     var t;
     let { guildId: n, role: r, theme: E, content: _ = p.intl.string(p.t['6OSasb']), className: I } = e,
         m = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-        S = f.ZP.useName(n, null, m),
+        S = C.ZP.useName(n, null, m),
         T = (0, d.Kz)(r),
         N = l.useMemo(
             () =>
@@ -32,12 +32,12 @@ function E(e) {
                         allowedMentions: void 0,
                         author: m
                     }),
-                    state: C.yb.SENT,
+                    state: f.yb.SENT,
                     id: '0'
                 }),
             [m, _]
         ),
-        y = {
+        O = {
             nick: S,
             colorString: null !== (t = r.colorString) && void 0 !== t ? t : void 0
         };
@@ -48,7 +48,7 @@ function E(e) {
                 className: s()(e, v.container, I),
                 children: (0, i.jsx)(h.Z, {
                     hideTimestamp: !0,
-                    author: y,
+                    author: O,
                     roleIcon: T,
                     message: N,
                     isGroupStart: !0,

@@ -158,7 +158,7 @@ function W(e) {
 function X(e, n) {
     let t = (0, a.Wu)([A.default], () => n.map((e) => A.default.getUser(e)).filter(p.lm));
     return (
-        (0, s.Z)(() => {
+        (0, s.ZP)(() => {
             t.forEach((n) => {
                 T.Z.requestMember(e.guild_id, n.id);
             });

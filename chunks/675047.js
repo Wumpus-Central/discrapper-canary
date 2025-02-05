@@ -44,7 +44,7 @@ function N() {
 }
 function I() {
     return (
-        (0, r.Z)(() => {
+        (0, r.ZP)(() => {
             (0, s.I)(), (0, o.A)();
         }),
         (0, i.jsxs)(c.N, {

@@ -31,7 +31,7 @@ let f = () => {
                 }
             );
         return (
-            (0, a.Z)(() => {
+            (0, a.ZP)(() => {
                 t &&
                     _.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: p.cd.APP_ICON_UPSELL,

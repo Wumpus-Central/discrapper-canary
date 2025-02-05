@@ -28,7 +28,7 @@ function C(t) {
         b = E ? m.p1.CANCELED : m.p1.SCHEDULED;
     f === n && (b = N.status);
     let Z = (null == N ? void 0 : N.scheduled_start_time) != null ? (0, k.lh)(p, S, new Date(null == N ? void 0 : N.scheduled_start_time)) : null,
-        I = (t) => {
+        P = (t) => {
             t.stopPropagation(),
                 null != L &&
                     (0, a.jW)(t, async () => {
@@ -53,7 +53,7 @@ function C(t) {
         onClick: (t) => {
             t.stopPropagation(), E || null == v || v(n);
         },
-        onContextMenu: I,
+        onContextMenu: P,
         'aria-label': '',
         children: [
             (0, e.jsx)(h.z, {
@@ -78,7 +78,7 @@ function C(t) {
                 children: (t) =>
                     (0, e.jsx)(o.P3F, {
                         ...t,
-                        onClick: I,
+                        onClick: P,
                         className: g.iconButton,
                         children: (0, e.jsx)(o.xhG, {
                             size: 'custom',

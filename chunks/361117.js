@@ -7,7 +7,7 @@ var i = n(399606),
 let o = (e) => {
     let [t, n] = (0, i.Wu)([r.Z], () => [r.Z.usernameSuggestion(), r.Z.usernameSuggestionLoading()]);
     return (
-        (0, a.Z)(
+        (0, a.ZP)(
             () => (
                 r.Z.wasSuggestionsFetched()
                     ? s.Z.dispatch({

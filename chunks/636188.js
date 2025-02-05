@@ -222,7 +222,7 @@ function Z(e) {
         n = (0, d.O)(),
         { analyticsLocations: s } = (0, h.ZP)(m.Z.VIDEO_BACKGROUND_CUSTOM_UPSELL);
     return (
-        (0, u.Z)(() => {
+        (0, u.ZP)(() => {
             p.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: v.cd.VIDEO_BACKGROUNDS_INLINE,
                 location: n.location,

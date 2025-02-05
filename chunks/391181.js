@@ -14,11 +14,11 @@ var l = n(120356),
     c = n(48691),
     h = n(231338),
     g = n(388032),
-    f = n(24753);
-function C(e) {
-    let { showEditProduct: t, showUnpublishProduct: n, showCopyLink: l, showTestDownload: r, showDeleteProduct: a, showReportProduct: o, onEditProduct: d, onUnpublishProduct: u, onDeleteProduct: c, onCopyLink: h, onTestDownload: C, onReportProduct: p, closePopout: v, onSelect: E } = e;
+    C = n(24753);
+function f(e) {
+    let { showEditProduct: t, showUnpublishProduct: n, showCopyLink: l, showTestDownload: r, showDeleteProduct: a, showReportProduct: o, onEditProduct: d, onUnpublishProduct: u, onDeleteProduct: c, onCopyLink: h, onTestDownload: f, onReportProduct: p, closePopout: v, onSelect: E } = e;
     return (0, i.jsx)('div', {
-        className: f.menuContainer,
+        className: C.menuContainer,
         children: (0, i.jsxs)(s.v2r, {
             navId: 'guild-product-context',
             onClose: v,
@@ -45,7 +45,7 @@ function C(e) {
                                 id: 'guild-product-test-download',
                                 label: g.intl.string(g.t.aXoI6e),
                                 icon: s._8t,
-                                action: C
+                                action: f
                             })
                     ]
                 }),
@@ -92,7 +92,7 @@ function p(e) {
             spacing: -8,
             animation: s.yRy.Animation.FADE,
             renderPopout: (e) =>
-                (0, i.jsx)(C, {
+                (0, i.jsx)(f, {
                     ...e,
                     guildId: n,
                     productId: t.id,
@@ -116,11 +116,11 @@ function p(e) {
                     'aria-label': g.intl.formatToPlainString(g.t.RtqjeH, { productName: t.name }),
                     'aria-haspopup': 'listbox',
                     'aria-expanded': l,
-                    className: f.productActionMenuButton,
+                    className: C.productActionMenuButton,
                     children: (0, i.jsx)(s.Huf, {
                         size: 'md',
                         color: 'currentColor',
-                        className: f.productActionMenuIcon,
+                        className: C.productActionMenuIcon,
                         'aria-hidden': !0
                     })
                 });
@@ -135,12 +135,12 @@ function v(e) {
         N = (0, u.C)(t);
     return (0, i.jsxs)(s.kL8, {
         tag: 'article',
-        className: r()(f.productCardClickable, f.productCard, { [f.disabled]: m }),
+        className: r()(C.productCardClickable, C.productCard, { [C.disabled]: m }),
         onClick: m ? void 0 : l,
         onContextMenu: function (e) {
             (0, a.jW)(e, () =>
                 Promise.resolve((e) =>
-                    (0, i.jsx)(C, {
+                    (0, i.jsx)(f, {
                         ...e,
                         closePopout: a.Zy,
                         guildId: n,
@@ -166,23 +166,23 @@ function v(e) {
             (0, i.jsx)('img', {
                 alt: '',
                 src: S,
-                className: f.productThumbnail
+                className: C.productThumbnail
             }),
             (0, i.jsxs)('div', {
-                className: f.productInfo,
+                className: C.productInfo,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: f.productInfoContent,
+                        className: C.productInfoContent,
                         children: [
                             (0, i.jsx)(s.X6q, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                className: f.productName,
+                                className: C.productName,
                                 children: t.name
                             }),
                             (0, i.jsx)(s.LZC, { size: 8 }),
                             (0, i.jsxs)('div', {
-                                className: f.productDetails,
+                                className: C.productDetails,
                                 children: [
                                     (0, i.jsx)(s.Text, {
                                         variant: 'text-md/normal',
@@ -192,7 +192,7 @@ function v(e) {
                                     null != N
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  (0, i.jsx)('div', { className: f.dotSeparator }),
+                                                  (0, i.jsx)('div', { className: C.dotSeparator }),
                                                   (0, i.jsx)(s.Text, {
                                                       variant: 'text-md/normal',
                                                       color: 'header-secondary',

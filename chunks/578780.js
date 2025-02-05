@@ -12,9 +12,9 @@ var o = t(100527),
     h = t(380898),
     _ = t(710094),
     x = t(865921),
-    p = t(853872),
-    I = t(806984),
-    P = t(464797),
+    P = t(853872),
+    p = t(806984),
+    I = t(464797),
     C = t(946211),
     f = t(231338);
 let j = [
@@ -28,7 +28,7 @@ let j = [
             (0, r.jsx)(i.J, {
                 ...e,
                 onReturn: () => {
-                    0 === Object.keys(p.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(a.h8.REVIEW, { trackedFromStep: a.h8.ADD_PAYMENT_STEPS });
+                    0 === Object.keys(P.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(a.h8.REVIEW, { trackedFromStep: a.h8.ADD_PAYMENT_STEPS });
                 }
             })
     },
@@ -46,13 +46,13 @@ let j = [
     },
     {
         key: a.h8.CONFIRM,
-        renderStep: (e) => (0, r.jsx)(I.Z, { ...e })
+        renderStep: (e) => (0, r.jsx)(p.Z, { ...e })
     }
 ];
 function v(e) {
     let { guildProductContext: n, sourceAnalyticsLocations: t, applicationId: a, ...i } = e,
         { analyticsLocations: d } = (0, l.ZP)(t, o.Z.GUILD_PRODUCT_PAYMENT_MODAL);
-    return (0, r.jsx)(P.R, {
+    return (0, r.jsx)(I.R, {
         ...n,
         children: (0, r.jsx)(l.Gt, {
             value: d,

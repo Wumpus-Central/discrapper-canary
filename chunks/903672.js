@@ -68,7 +68,7 @@ function L(e) {
         }
         ((null != k && S !== k) || (null != O && T !== O) || (null != D && Z !== D)) && R(p, !0);
     }, [k, S, O, T, D, Z, p, !0]),
-        (0, m.Z)(() => {
+        (0, m.ZP)(() => {
             (null == f ? void 0 : f.some(_.k5)) && (d.Z.clearMentions(), R(p, !0));
         }),
         l.useEffect(

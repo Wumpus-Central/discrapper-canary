@@ -22,14 +22,14 @@ var a = n(200651),
     I = n(388032),
     p = n(316931);
 function E(e) {
-    return e.isActiveThread() ? (0, a.jsx)(k, { channel: e }) : (0, a.jsx)(w, { channel: e });
+    return e.isActiveThread() ? (0, a.jsx)(k, { channel: e }) : (0, a.jsx)(_, { channel: e });
 }
 function k(e) {
     let { channel: t } = e,
         n = (0, s.e7)([N.Z], () => N.Z.getMostRecentMessage(t.id));
     return null == n
         ? (0, a.jsx)(S, { channel: t })
-        : (0, a.jsx)(_, {
+        : (0, a.jsx)(P, {
               channel: t,
               message: n
           });
@@ -44,7 +44,7 @@ function S(e) {
         children: [I.intl.string(I.t.Jmh6n5), '\xA0 \u2022 \xA0', (0, T.Ye)(n)]
     });
 }
-function _(e) {
+function P(e) {
     let { channel: t, message: n } = e;
     (0, o.$)({ [t.guild_id]: [n.author.id] });
     let c = (0, s.e7)([Z.default], () => {
@@ -105,7 +105,7 @@ function _(e) {
         ]
     });
 }
-function w(e) {
+function _(e) {
     var t, n, l;
     let { channel: d } = e,
         u = (0, s.e7)([x.ZP], () => x.ZP.lastMessageId(d.id)),

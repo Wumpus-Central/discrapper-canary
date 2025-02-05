@@ -694,7 +694,7 @@ function et() {
         s = Z.L1.useSetting(),
         r = Z.hg.useSetting(),
         l = Z.YC.useSetting();
-    (0, g.Z)(() => {
+    (0, g.ZP)(() => {
         ee(o.z.CLIENT_THEMES_SETTINGS_BADGE), ee(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), ee(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     });
     let c = (0, a.cj)([D.Z, y.ZP, p.Z, R.default, C.Z], () => {

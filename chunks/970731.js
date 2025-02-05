@@ -39,7 +39,7 @@ function f(e) {
         caretPosition: I = 'caretTopCenter',
         buttonLayout: b = 0
     } = e;
-    (0, o.Z)(() => {
+    (0, o.ZP)(() => {
         null == E || E();
     });
     let T = null != _,

@@ -62,7 +62,7 @@ function k(e) {
         [v, _] = l.useState(!1),
         [x, E] = l.useState(!1),
         C = (0, d.e7)([I.default], () => I.default.getCurrentUser());
-    (0, g.Z)(
+    (0, g.ZP)(
         () => (
             (h.current = setTimeout(Z, R)),
             p.Z.track(T.rMx.NOTIFICATION_VIEWED, { notif_type: N.n0.OverlayCrashed }),

@@ -38,7 +38,7 @@ function A() {
         O = l.useCallback(() => {
             P(t.map((e) => e.channel.id));
         }, [t, P]);
-    (0, u.Z)(() => {
+    (0, u.ZP)(() => {
         g.default.track(S.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), p.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     });
     let R = l.useCallback(

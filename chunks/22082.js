@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(47120);
+n.d(t, { Z: () => P }), n(47120);
 var i,
     l,
     r,
@@ -10,8 +10,8 @@ var i,
     c = n(314897),
     h = n(592125),
     g = n(984933),
-    f = n(271383),
-    C = n(430824),
+    C = n(271383),
+    f = n(430824),
     p = n(306680),
     v = n(9156),
     E = n(70956),
@@ -27,11 +27,11 @@ function N(e, t) {
         !v.ZP.isOptInEnabled(e) || (null === (i = h.Z.getChannel(t)) || void 0 === i ? void 0 : i.isThread()) || null != p.ZP.ackMessageId(t) || a.Z.wait(() => (0, o.In)(t, !0, !0, _.default.atPreviousMillisecond(t)));
     }
 }
-function y(e) {
+function O(e) {
     var t;
     if (null != S[e]) return;
     let n = g.ZP.getChannels(e)[g.sH].map((e) => e.channel.id),
-        i = null === (t = f.ZP.getMember(e, c.default.getId())) || void 0 === t ? void 0 : t.joinedAt;
+        i = null === (t = C.ZP.getMember(e, c.default.getId())) || void 0 === t ? void 0 : t.joinedAt;
     if (null == i) return;
     S[e] = new Set();
     let l = new Date(i).getTime();
@@ -44,37 +44,37 @@ function y(e) {
         )),
         (T[e] = Date.now()));
 }
-function O() {
+function y() {
     _.default.keys(S).forEach((e) => {
         let t = S[e];
         S[e] = new Set([...t].filter((t) => !v.ZP.isChannelOrParentOptedIn(e, t)));
     });
 }
-class P extends (i = s.ZP.Store) {
+class A extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(g.ZP, c.default, f.ZP, v.ZP, p.ZP, u.Z), this.syncWith([v.ZP], O);
+        this.waitFor(g.ZP, c.default, C.ZP, v.ZP, p.ZP, u.Z), this.syncWith([v.ZP], y);
     }
     getNewChannelIds(e) {
         var t;
-        return null != e && null == S[e] && y(e), null != e && null !== (t = S[e]) && void 0 !== t ? t : m;
+        return null != e && null == S[e] && O(e), null != e && null !== (t = S[e]) && void 0 !== t ? t : m;
     }
     shouldIndicateNewChannel(e, t) {
         var n;
         if (null == e) return !1;
-        let i = C.Z.getGuild(e);
-        return !!(null != i && i.hasFeature(I.oNc.COMMUNITY)) && (null != e && null == S[e] && y(e), (null === (n = S[e]) || void 0 === n ? void 0 : n.has(t)) && null == p.ZP.getTrackedAckMessageId(t));
+        let i = f.Z.getGuild(e);
+        return !!(null != i && i.hasFeature(I.oNc.COMMUNITY)) && (null != e && null == S[e] && O(e), (null === (n = S[e]) || void 0 === n ? void 0 : n.has(t)) && null == p.ZP.getTrackedAckMessageId(t));
     }
 }
 (r = 'NewChannelsStore'),
-    (l = 'displayName') in P
-        ? Object.defineProperty(P, l, {
+    (l = 'displayName') in A
+        ? Object.defineProperty(A, l, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (P[l] = r);
-let A = new P(a.Z, {
+        : (A[l] = r);
+let P = new A(a.Z, {
     BULK_CLEAR_RECENTS: function (e) {
         let { guildId: t, channelIds: n } = e;
         if (null == S[t]) return !1;
@@ -83,7 +83,7 @@ let A = new P(a.Z, {
     CHANNEL_ACK: () => !0,
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
-        return null != t && (null == S[t] || T[t] < Date.now() - E.Z.Millis.HOUR ? (y(t), !0) : (null != n && N(t, n), !1));
+        return null != t && (null == S[t] || T[t] < Date.now() - E.Z.Millis.HOUR ? (O(t), !0) : (null != n && N(t, n), !1));
     },
     SIDEBAR_VIEW_CHANNEL: function (e) {
         let { guildId: t, channelId: n, sidebarType: i } = e;

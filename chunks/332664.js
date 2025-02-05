@@ -71,23 +71,23 @@ function S(e) {
         R = (0, d.Z)(x),
         [T, B] = l.useState(!1),
         [z, M] = l.useState(O),
-        [F, K] = l.useState(null),
-        [P, G] = l.useState(c().shuffle(x)),
+        [P, F] = l.useState(null),
+        [K, G] = l.useState(c().shuffle(x)),
         [H, U] = l.useState(''),
         V = (0, _.Dt)(),
         J = (0, h.Z)(z),
         X = (0, h.Z)(T),
-        q = (0, h.Z)(F),
+        q = (0, h.Z)(P),
         W = (0, h.Z)(E),
         Q = (0, h.Z)(H),
-        Y = null != F && C.includes(F),
+        Y = null != P && C.includes(P),
         $ = null != z && z !== b.aZ.GOOD,
         ee = Y || !I;
     return (
         l.useEffect(() => {
             c().isEqual(R, x) || G((0, v.B)(x, y));
         }, [x, R, y]),
-        (0, u.Z)(
+        (0, u.ZP)(
             () => (
                 p.default.track(f.rMx.OPEN_MODAL, {
                     type: t,
@@ -145,10 +145,10 @@ function S(e) {
                                       title: s,
                                       className: Z.problemInfo,
                                       children: (0, i.jsx)(g.Z, {
-                                          options: P,
+                                          options: K,
                                           onClick: function (e) {
                                               let { value: t } = e;
-                                              K(t), C.includes(t) || w();
+                                              F(t), C.includes(t) || w();
                                           },
                                           hideCaret: (e) => {
                                               let { value: t } = e;
@@ -185,7 +185,7 @@ function S(e) {
                                           look: r.zxk.Looks.LINK,
                                           color: r.zxk.Colors.PRIMARY,
                                           onClick: () => {
-                                              K(null), U('');
+                                              F(null), U('');
                                           },
                                           children: j.intl.string(j.t['13/7kZ'])
                                       }),

@@ -47,7 +47,7 @@ function E(e) {
         }),
             N(!1);
     }
-    return ((0, d.Z)(() => {
+    return ((0, d.ZP)(() => {
         if (null != I) {
             let { handoff_key: e, handoff_token: t } = (0, l.parse)(I.search);
             if (null != e && null != t) {

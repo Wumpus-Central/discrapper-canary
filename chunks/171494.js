@@ -23,23 +23,23 @@ function k(t) {
         D = null !== (e = null !== (n = null == _ ? void 0 : _[0]) && void 0 !== n ? n : null == j ? void 0 : j[0]) && void 0 !== e ? e : null,
         T = (0, a.e7)([h.default], () => h.default.getUser(g), [g]),
         [N, I] = (0, p.ZP)(g, k),
-        [z, E] = s.useState(!1),
-        P = s.useCallback(async () => {
+        [P, z] = s.useState(!1),
+        E = s.useCallback(async () => {
             if (null != T) {
-                E(!0);
+                z(!0);
                 try {
                     await o.Z.setCommunicationDisabledDuration(k, g, null, null, D), (0, i.showToast)((0, i.createToast)(b.intl.string(b.t['/Mmbfn']), i.ToastType.SUCCESS)), w();
                 } catch (t) {
                     (0, i.showToast)((0, i.createToast)(b.intl.string(b.t.epyCur), i.ToastType.FAILURE));
                 } finally {
-                    E(!1);
+                    z(!1);
                 }
             }
         }, [k, T, g, w, D]),
         S = s.useCallback(() => {
             I || w();
         }, [I, w]);
-    return ((0, r.Z)(() => {
+    return ((0, r.ZP)(() => {
         null != T &&
             m.default.track(f.rMx.OPEN_MODAL, {
                 type: x.av,
@@ -107,8 +107,8 @@ function k(t) {
                       children: [
                           (0, l.jsx)(i.zxk, {
                               color: i.zxk.Colors.RED,
-                              onClick: P,
-                              submitting: z,
+                              onClick: E,
+                              submitting: P,
                               children: b.intl.string(b.t.qXtNtb)
                           }),
                           (0, l.jsx)(i.zxk, {

@@ -28,7 +28,7 @@ function x(t) {
     let { onInviteClick: n, canInvite: l, isChannelPublic: a } = t,
         d = new s.V7(),
         [x, k] = i.useState(!1);
-    (0, o.Z)(() => () => {
+    (0, o.ZP)(() => () => {
         d.stop();
     });
     let h = (t) => {

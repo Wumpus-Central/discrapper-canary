@@ -73,7 +73,7 @@ function g(e) {
             let t = new Date(e);
             return u.default.fromTimestamp(t.getTime());
         },
-        Z = async (e) => {
+        I = async (e) => {
             let { status: t = g.status, premiumStreakStart: n, endedAt: a } = e,
                 l = {
                     subscription_status: t,
@@ -87,7 +87,7 @@ function g(e) {
             }),
                 v();
         },
-        I = async () => {
+        Z = async () => {
             try {
                 await o.tn.post({
                     url: '/debug/subscriptions/'.concat(g.id, '/transition'),
@@ -105,8 +105,8 @@ function g(e) {
             v();
         },
         O = (null === (t = x.GP[g.planIdFromItems]) || void 0 === t ? void 0 : t.premiumType) === x.p9.TIER_0,
-        w = null === (n = g.metadata) || void 0 === n ? void 0 : n.ended_at,
-        R = null != w ? new Date(w).toISOString().substring(0, 10) : '';
+        R = null === (n = g.metadata) || void 0 === n ? void 0 : n.ended_at,
+        w = null != R ? new Date(R).toISOString().substring(0, 10) : '';
     return (0, a.jsx)(a.Fragment, {
         children: (0, a.jsxs)('div', {
             className: i()(f.card, O ? f.gradientWrapperTier0 : f.gradientWrapperTier2),
@@ -210,7 +210,7 @@ function g(e) {
                                             serialize: (e) => S(e),
                                             isSelected: (e) => e === g.status,
                                             options: _,
-                                            select: (e) => Z({ status: e }),
+                                            select: (e) => I({ status: e }),
                                             popoutLayerContext: m.O$
                                         })
                                     }),
@@ -221,7 +221,7 @@ function g(e) {
                                         children: [
                                             (0, a.jsx)(s.zxk, {
                                                 size: s.zxk.Sizes.SMALL,
-                                                onClick: (e) => I(),
+                                                onClick: (e) => Z(),
                                                 children: 'Renew Subscription'
                                             }),
                                             null !== E &&
@@ -239,7 +239,7 @@ function g(e) {
                                         children: (0, a.jsx)('input', {
                                             type: 'date',
                                             value: null === (r = g.premiumSince) || void 0 === r ? void 0 : r.toISOString().substring(0, 10),
-                                            onChange: (e) => Z({ premiumStreakStart: e.target.value })
+                                            onChange: (e) => I({ premiumStreakStart: e.target.value })
                                         })
                                     }),
                                     (0, a.jsx)(s.hjN, {
@@ -248,8 +248,8 @@ function g(e) {
                                         className: p.formSection,
                                         children: (0, a.jsx)('input', {
                                             type: 'date',
-                                            value: R,
-                                            onChange: (e) => Z({ endedAt: e.target.value })
+                                            value: w,
+                                            onChange: (e) => I({ endedAt: e.target.value })
                                         })
                                     })
                                 ]

@@ -1,12 +1,12 @@
 n.d(i, { ZP: () => d });
 var t,
-    l,
     r,
+    l,
     a = n(442837),
     s = n(570140);
 let o = {},
     u = !1;
-class c extends (r = a.ZP.Store) {
+class c extends (l = a.ZP.Store) {
     isLoading() {
         return u;
     }
@@ -22,15 +22,15 @@ class c extends (r = a.ZP.Store) {
         return o[e];
     }
 }
-(l = 'DiscoverGuildChecklistStore'),
+(r = 'DiscoverGuildChecklistStore'),
     (t = 'displayName') in c
         ? Object.defineProperty(c, t, {
-              value: l,
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (c[t] = l);
+        : (c[t] = r);
 let d = new c(s.Z, {
     DISCOVER_CHECKLIST_FETCH_START: function (e) {
         u = !0;

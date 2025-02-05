@@ -1,6 +1,6 @@
 n.d(t, {
-    N: () => a,
-    Z: () => r
+    Ng: () => a,
+    ZP: () => r
 });
 var i = n(192379);
 function r(e) {

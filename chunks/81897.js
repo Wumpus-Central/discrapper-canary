@@ -4,7 +4,7 @@ var i = n(211266),
 function a() {
     let e = (0, i.Z)(() => new AbortController());
     return (
-        (0, r.Z)(() => () => {
+        (0, r.ZP)(() => () => {
             e.abort();
         }),
         e.signal
