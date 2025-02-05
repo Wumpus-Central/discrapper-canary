@@ -63,15 +63,16 @@ function b(e) {
     l.useEffect(() => {
         P.current = R;
     }, [R]);
-    let M = null != n && null != a,
+    let M = null != n,
         L = null == n && null != a,
         k = (0, c.q_F)(
             {
-                opacity: null != n ? 1 : 0,
-                height: null != n ? 72 : 0,
+                opacity: M ? 1 : 0,
+                height: M ? 72 : 0,
+                pointerEvents: M ? 'auto' : 'none',
                 backgroundColor: null !== (t = null == b ? void 0 : b.baseColor) && void 0 !== t ? t : j,
                 config: x,
-                delay: M ? 150 : L ? 100 : 0
+                delay: M && null != a ? 150 : L ? 100 : 0
             },
             'respect-motion-settings'
         ),
