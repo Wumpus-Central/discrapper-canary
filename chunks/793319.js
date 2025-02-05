@@ -463,12 +463,23 @@ let eM = function (e) {
                                                             wide: !0,
                                                             showOutputDevices: !0
                                                         })
-                                                      : (0, i.jsx)(T.default, {
-                                                            onClose: t,
-                                                            renderInputDevices: !0,
-                                                            renderOutputDevices: !0,
-                                                            renderInputModes: !0
-                                                        })
+                                                      : g
+                                                        ? (0, i.jsx)(T.default, {
+                                                              onClose: t,
+                                                              renderInputDevices: !0,
+                                                              renderOutputDevices: !0,
+                                                              renderInputModes: !0,
+                                                              renderInputVolume: !0,
+                                                              renderOutputVolume: !0,
+                                                              renderDeafen: !0,
+                                                              simplified: !0
+                                                          })
+                                                        : (0, i.jsx)(T.default, {
+                                                              onClose: t,
+                                                              renderInputDevices: !0,
+                                                              renderOutputDevices: !0,
+                                                              renderInputModes: !0
+                                                          })
                                               });
                                           },
                                           align: 'right',
@@ -500,7 +511,12 @@ let eM = function (e) {
                                           (0, i.jsx)(p.yRy, {
                                               renderPopout: (e) => {
                                                   let { closePopout: t } = e;
-                                                  return (0, i.jsx)(q.Z, { children: (0, i.jsx)(S.Z, { onClose: t }) });
+                                                  return (0, i.jsx)(q.Z, {
+                                                      children: (0, i.jsx)(S.Z, {
+                                                          onClose: t,
+                                                          simplified: g
+                                                      })
+                                                  });
                                               },
                                               position: 'top',
                                               align: 'right',

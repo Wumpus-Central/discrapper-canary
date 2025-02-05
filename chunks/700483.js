@@ -328,7 +328,12 @@ let eu = l.memo(function (e) {
             (0, i.jsx)(o.yRy, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, i.jsx)(y.Z, { children: (0, i.jsx)(m.Z, { onClose: t }) });
+                    return (0, i.jsx)(y.Z, {
+                        children: (0, i.jsx)(m.Z, {
+                            onClose: t,
+                            simplified: q
+                        })
+                    });
                 },
                 position: 'top',
                 align: W ? 'right' : 'center',
@@ -377,11 +382,23 @@ let eu = l.memo(function (e) {
                                         renderPopout: (e) => {
                                             let { closePopout: t } = e;
                                             return (0, i.jsx)(y.Z, {
-                                                children: (0, i.jsx)(p.default, {
-                                                    onClose: t,
-                                                    renderInputDevices: !0,
-                                                    renderOutputDevices: !0
-                                                })
+                                                children: q
+                                                    ? (0, i.jsx)(p.default, {
+                                                          onClose: t,
+                                                          renderInputDevices: !0,
+                                                          renderInputModes: !0,
+                                                          renderOutputDevices: !0,
+                                                          renderInputVolume: !0,
+                                                          renderOutputVolume: !0,
+                                                          renderDeafen: !0,
+                                                          simplified: !0
+                                                      })
+                                                    : (0, i.jsx)(p.default, {
+                                                          onClose: t,
+                                                          renderInputDevices: !0,
+                                                          renderOutputDevices: !0,
+                                                          renderInputModes: !0
+                                                      })
                                             });
                                         },
                                         align: 'right',

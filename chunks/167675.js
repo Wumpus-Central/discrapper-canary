@@ -1,33 +1,34 @@
-t.d(n, { Z: () => _ }), t(47120);
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    a = t(481060),
-    r = t(740492),
-    d = t(27584),
-    o = t(295510),
-    u = t(394059),
-    s = t(65154),
-    c = t(388032);
-function _(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Yn.DEFAULT,
-        [t, _, E] = (0, d.Z)(e, n),
-        f = (0, l.e7)([r.ZP], () => r.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
-    return t
+n.d(t, { Z: () => f }), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    s = n(740492),
+    o = n(27584),
+    l = n(295510),
+    u = n(394059),
+    c = n(65154),
+    d = n(388032);
+function f(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Yn.DEFAULT,
+        [n, f, _] = (0, o.Z)(e, t),
+        p = (0, r.e7)([s.ZP], () => s.ZP.disableHideSelfStreamAndVideoConfirmationAlert),
+        h = () => {
+            if (p || f) return _(!f);
+            (0, a.h7j)((e) =>
+                (0, i.jsx)(l.Z, {
+                    ...e,
+                    type: u.K.VIDEO,
+                    onConfirm: () => _(!f)
+                })
+            );
+        };
+    return n
         ? (0, i.jsx)(a.S89, {
               id: 'self-video-hide',
-              label: c.intl.string(c.t.MH8ESU),
-              checked: !_,
-              action: () => {
-                  if (f || _) return E(!_);
-                  (0, a.h7j)((e) =>
-                      (0, i.jsx)(o.Z, {
-                          ...e,
-                          type: u.K.VIDEO,
-                          onConfirm: () => E(!_)
-                      })
-                  );
-              }
+              label: d.intl.string(d.t.MH8ESU),
+              checked: !f,
+              action: h
           })
         : null;
 }

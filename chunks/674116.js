@@ -42,14 +42,13 @@ let G = ''.concat(g.Z.getArticleURL(M.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_so
 function F() {
     let { inputMode: e } = (0, a.cj)([m.Z], () => ({ inputMode: m.Z.getMode() })),
         t = (0, a.e7)([h.Z], () => h.Z.getSubsection()),
-        n = s.createRef();
+        n = s.createRef(),
+        r = s.createRef();
     s.useEffect(() => {
-        if (t === L.GA) {
-            var e;
-            null == n || null === (e = n.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection();
-        }
-    }, [n, t]);
-    let r = (0, x.Z)();
+        var e, i;
+        t === L.GA && (null == n || null === (e = n.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection()), t === L.gP && (null == r || null === (i = r.current) || void 0 === i || i.scrollIntoView(), d.Z.clearSubsection());
+    }, [n, r, t]);
+    let g = (0, x.Z)();
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H1,
         title: V.intl.string(V.t.NiTd0d),
@@ -99,9 +98,15 @@ function F() {
                 setting: B.s6.VOICE_AND_VIDEO_SOUNDS,
                 children: (0, i.jsx)(f.Z, {})
             }),
-            (0, i.jsx)(u.F, {
+            (0, i.jsxs)(u.F, {
                 setting: B.s6.VOICE_AND_VIDEO_VIDEO,
-                children: (0, i.jsx)(P.Z, {})
+                children: [
+                    (0, i.jsx)('div', {
+                        style: { scrollMarginTop: '48px' },
+                        ref: r
+                    }),
+                    (0, i.jsx)(P.Z, {})
+                ]
             }),
             (0, i.jsx)(u.F, {
                 setting: B.s6.VOICE_AND_VIDEO_ADVANCED,
@@ -121,7 +126,7 @@ function F() {
                         (0, i.jsx)(O.Z, {}),
                         (0, i.jsx)(b.Z, {}),
                         (0, i.jsx)(p.Z, {}),
-                        r && (0, i.jsx)(j.Z, {}),
+                        g && (0, i.jsx)(j.Z, {}),
                         (0, i.jsx)(C.Z, {}),
                         (0, i.jsx)(v.Z, {}),
                         (0, i.jsx)(A.Z, {}),
