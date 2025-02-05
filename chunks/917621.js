@@ -188,15 +188,17 @@ class b extends l.PureComponent {
                 : this.isActionType(C.mFx.JOIN_REQUEST)
                   ? this.isPartyFull()
                       ? I.intl.string(I.t.jfrMtr)
-                      : I.intl.formatToPlainString(I.t.XWapnZ, { number: u - c })
+                      : this.hasPartySize() && 0 !== u
+                        ? I.intl.formatToPlainString(I.t.XWapnZ, { number: u - c })
+                        : null
                   : this.isInParty()
                     ? I.intl.string(I.t.KC26NT)
                     : t || n || l || this.isEmbeddedActivityApplication()
                       ? this.isPartyFull()
                           ? I.intl.string(I.t.jfrMtr)
-                          : this.hasPartySize()
+                          : this.hasPartySize() && 0 !== u
                             ? I.intl.formatToPlainString(I.t.XWapnZ, { number: u - c })
-                            : I.intl.string(I.t.VJlc0d)
+                            : null
                       : I.intl.formatToPlainString(I.t.SqJBnJ, { name: r })
             : I.intl.string(I.t.c3EWuL);
     }
