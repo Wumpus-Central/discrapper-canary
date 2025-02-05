@@ -27,7 +27,7 @@ var r = n(200651),
     E = n(474936),
     S = n(388032),
     T = n(539181);
-let I = (0, x.IC)(96),
+let I = (0, x.IC)(90),
     Z = (e) => {
         let { category: t } = e,
             { analyticsLocations: n } = (0, u.ZP)(),
@@ -118,7 +118,7 @@ function B(e) {
                       alt: p.name,
                       style: { maxWidth: null === (u = L.Ve[p.skuId]) || void 0 === u ? void 0 : u.logoMaxWidth }
                   })
-                : (0, r.jsx)(d.LZC, { size: 96 }),
+                : (0, r.jsx)(d.LZC, { size: 90 }),
             (0, r.jsx)(d.Text, {
                 className: s()(T.summary, { [T.blackSummary]: P }),
                 variant: 'text-md/normal',
