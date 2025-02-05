@@ -1,31 +1,42 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var i = n(200651),
     r = n(192379),
     a = n(120356),
     s = n.n(a),
     o = n(78891),
     l = n(766004),
-    u = n(47305);
-function c(e) {
-    let { children: t, namePlate: n, hover: a, selected: c } = e,
-        { canSee: d } = (0, o.D)('NamePlate'),
-        f = (0, r.useMemo)(() => ((a || c) && (null == n ? void 0 : n.animatedSrc) != null ? (null == n ? void 0 : n.animatedSrc) : null == n ? void 0 : n.src), [a, c, n]),
-        _ = (0, l.M)(n, a, c);
-    return null != n && d && null != f
+    u = n(318870),
+    c = n(47305);
+function d(e) {
+    let { children: t, namePlate: n, hover: a, selected: d, placement: f } = e,
+        { canSee: _ } = (0, o.D)('NamePlate'),
+        p = (0, r.useMemo)(() => ((a || d) && (null == n ? void 0 : n.animatedSrc) != null ? (null == n ? void 0 : n.animatedSrc) : null == n ? void 0 : n.src), [a, d, n]),
+        h = (0, l.M)(n, a, d);
+    return null != n && _ && null != p
         ? (0, i.jsxs)('div', {
-              className: s()(u.container, { [u.bordered]: null != _.borderColor }),
-              style: _,
+              className: s()(c.container, {
+                  [c.bordered]: null != h.borderColor,
+                  [c.memberslist]: f === u.QY.Memberlist,
+                  [c.privateChannel]: f === u.QY.PrivateChannel
+              }),
               children: [
-                  (0, i.jsx)('img', {
-                      className: s()(u.img, {
-                          [u.hover]: a,
-                          [u.selected]: c
-                      }),
-                      src: f,
-                      alt: n.imgAlt
+                  (0, i.jsx)('div', {
+                      style: h,
+                      className: c.gradientLayer
                   }),
                   (0, i.jsx)('div', {
-                      className: u.content,
+                      className: c.imgLayer,
+                      children: (0, i.jsx)('img', {
+                          className: s()(c.img, {
+                              [c.hover]: a,
+                              [c.selected]: d
+                          }),
+                          src: p,
+                          alt: n.imgAlt
+                      })
+                  }),
+                  (0, i.jsx)('div', {
+                      className: c.content,
                       children: t
                   })
               ]

@@ -2,6 +2,7 @@ e.exports = {
     inputs: 'inputs_f9e1d5',
     hexInput: 'hexInput_f9e1d5',
     preview: 'preview_f9e1d5',
+    simArea: 'simArea_f9e1d5',
     toggleButton: 'toggleButton_f9e1d5',
     themePicker: 'themePicker_f9e1d5',
     controls: 'controls_f9e1d5',
@@ -13,5 +14,8 @@ e.exports = {
     uploadedImg: 'uploadedImg_f9e1d5',
     uploadedArea: 'uploadedArea_f9e1d5',
     uploadedControls: 'uploadedControls_f9e1d5',
-    xicon: 'xicon_f9e1d5'
+    xicon: 'xicon_f9e1d5',
+    previews: 'previews_f9e1d5',
+    label: 'label_f9e1d5',
+    resizer: 'resizer_f9e1d5'
 };

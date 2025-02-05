@@ -19,17 +19,16 @@ function x(e, t) {
     let { reducedMotion: n } = l.useContext(s.Sfi),
         f = (0, c.$R)(t),
         x = (0, a.e7)([g.Z], () => (t.isPrivate() || g.Z.can(E.Plq.ADD_REACTIONS, t)) && f, [t, f]),
-        p = (0, r.MZ)(t.getGuildId());
+        N = (0, r.MZ)(t.getGuildId());
     if (!u.nc.getSetting() || !x || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
-    let S = p
-        .filter(
-            (e) =>
-                !h.ZP.isEmojiFilteredOrLocked({
-                    emoji: e,
-                    channel: t,
-                    intention: v.Hz.REACTION
-                })
-        )
+    let I = N.filter(
+        (e) =>
+            !h.ZP.isEmojiFilteredOrLocked({
+                emoji: e,
+                channel: t,
+                intention: v.Hz.REACTION
+            })
+    )
         .slice(0, 12)
         .map((l, a) => {
             var r, c;
@@ -40,7 +39,7 @@ function x(e, t) {
                     id: null !== (c = null !== (r = l.id) && void 0 !== r ? r : l.optionallyDiverseSequence) && void 0 !== c ? c : l.name,
                     label: ':'.concat(l.name, ':'),
                     icon: (e) =>
-                        (0, i.jsx)(N, {
+                        (0, i.jsx)(S, {
                             ...e,
                             reducedMotionEnabled: n.enabled,
                             emoji: l
@@ -62,7 +61,7 @@ function x(e, t) {
         color: 'default',
         children: (0, i.jsxs)(i.Fragment, {
             children: [
-                S,
+                I,
                 (0, i.jsx)(s.Clw, {}),
                 (0, i.jsx)(s.sNh, {
                     color: 'default',
@@ -77,7 +76,7 @@ function x(e, t) {
         })
     });
 }
-function N(e) {
+function S(e) {
     var t;
     let { emoji: n, reducedMotionEnabled: l, className: a = '', isFocused: s = !1 } = e;
     return (0, i.jsx)('img', {
