@@ -136,7 +136,7 @@ function D(e) {
         ]
     });
 }
-let y = () => {
+let Z = () => {
         let e = (0, E.Z)(),
             t = (0, C.mq)(v.ne.ACTIVE),
             n = (0, g.o)(A.intl.formatToPlainString(A.t['7hqFl5'], { activeLinks: t.length }), A.intl.string(A.t['Q/D/0d'])),
@@ -163,7 +163,7 @@ let y = () => {
                   ]
               });
     },
-    Z = (e) => {
+    y = (e) => {
         let { userId: t, subText: n, avatarSize: s = o.EFr.SIZE_40 } = e,
             r = (0, p.I)(t);
         return void 0 === r
@@ -201,7 +201,7 @@ let y = () => {
             })),
             l = s.useCallback(
                 (e) =>
-                    (0, i.jsx)(Z, {
+                    (0, i.jsx)(y, {
                         userId: e.value,
                         avatarSize: o.EFr.SIZE_24
                     }),
@@ -230,7 +230,7 @@ let y = () => {
             l = (0, C.Rd)(r);
         return n && 1 !== s.length
             ? (0, i.jsx)(k, {})
-            : (0, i.jsx)(Z, {
+            : (0, i.jsx)(y, {
                   userId: t,
                   subText: l
               });
@@ -246,7 +246,7 @@ let y = () => {
             children: [
                 (0, i.jsxs)('div', {
                     className: O.connectedCounter,
-                    children: [(0, i.jsx)(y, {}), (0, i.jsx)(P, {})]
+                    children: [(0, i.jsx)(Z, {}), (0, i.jsx)(P, {})]
                 }),
                 (0, i.jsxs)('div', {
                     className: R.box,

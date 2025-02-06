@@ -57,8 +57,8 @@ let M = l.memo((e) => {
         V = (0, s.e7)([u.Z], () => ((null == G ? void 0 : G.application_id) != null ? u.Z.getApplication(null == G ? void 0 : G.application_id) : void 0));
     null != V && j.ZP.trackExposure({ location: 'voice_users' });
     let [z, W] = (0, s.Wu)([_.Z], () => [_.Z.getStreamForUser(E, r.getGuildId()), _.Z.getActiveStreamForUser(E, r.getGuildId())], [r, E]),
-        q = (0, s.e7)([Z.Z], () => Z.Z.getSessionById(o)),
-        Y = S.ZP.useName(a),
+        Y = (0, s.e7)([Z.Z], () => Z.Z.getSessionById(o)),
+        q = S.ZP.useName(a),
         K = (0, s.e7)([T.Z], () => T.Z.getVoicePlatformForChannel(r.id, E), [r.id, E]),
         X = (0, f.Eu)(r.id, E);
     return (0, i.jsx)(m.Z, {
@@ -66,9 +66,9 @@ let M = l.memo((e) => {
         isShaking: D,
         children: (0, i.jsx)(y.ZP, {
             ...e,
-            nick: null != g ? g : Y,
+            nick: null != g ? g : q,
             canDrag: e.canDrag && !w,
-            otherClientSessionType: null == q ? void 0 : null === (t = q.clientInfo) || void 0 === t ? void 0 : t.os,
+            otherClientSessionType: null == Y ? void 0 : null === (t = Y.clientInfo) || void 0 === t ? void 0 : t.os,
             voicePlatform: K,
             localMute: M && !R,
             localVideoDisabled: k,

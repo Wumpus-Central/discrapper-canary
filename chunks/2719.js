@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(51144),
     P = n(998502),
     D = n(695346),
-    y = n(461877),
-    Z = n(726985),
+    Z = n(461877),
+    y = n(726985),
     k = n(981631),
     L = n(815660),
     B = n(801461),
@@ -255,7 +255,7 @@ function H(e) {
                 buttonColor: u.zxk.Colors.PRIMARY,
                 valueMessage: (0, i.jsx)(F, {
                     text: e,
-                    censor: y.E,
+                    censor: Z.E,
                     revealLabel: M.intl.string(M.t['Zvx+yc']),
                     hideLabel: M.intl.string(M.t.nqTD4e)
                 }),
@@ -317,7 +317,7 @@ function z(e) {
         (t = c
             ? (0, i.jsx)(F, {
                   text: a,
-                  censor: y.n,
+                  censor: Z.n,
                   revealLabel: M.intl.string(M.t.eY3xlZ),
                   hideLabel: M.intl.string(M.t.jllbv7)
               })
@@ -510,25 +510,25 @@ function K() {
                         className: w.fieldList,
                         children: [
                             (0, i.jsx)(T.F, {
-                                setting: Z.s6.ACCOUNT_DISPLAY_NAME,
+                                setting: y.s6.ACCOUNT_DISPLAY_NAME,
                                 children: (0, i.jsx)(G, {
                                     className: w.fieldSpacerBottom,
                                     user: t
                                 })
                             }),
                             (0, i.jsx)(T.F, {
-                                setting: Z.s6.ACCOUNT_USERNAME,
+                                setting: y.s6.ACCOUNT_USERNAME,
                                 children: (0, i.jsx)(U, { user: t })
                             }),
                             (0, i.jsx)(T.F, {
-                                setting: Z.s6.ACCOUNT_EMAIL,
+                                setting: y.s6.ACCOUNT_EMAIL,
                                 children: (0, i.jsx)(H, {
                                     className: w.fieldSpacer,
                                     user: t
                                 })
                             }),
                             (0, i.jsx)(T.F, {
-                                setting: Z.s6.ACCOUNT_PHONE_NUMBER,
+                                setting: y.s6.ACCOUNT_PHONE_NUMBER,
                                 children: (0, i.jsx)(z, {
                                     className: w.fieldSpacer,
                                     user: t

@@ -25,15 +25,15 @@ function T(e) {
         R = c.ZP.canUseCustomBackgrounds(v),
         P = (0, r.cj)([u.Z], () => (R ? u.Z.videoFilterAssets : {})),
         D = s.useMemo(() => Object.values(P).filter((e) => e.type === x.xV.BACKGROUND), [P]),
-        y = (0, a.O)(),
-        Z = {
+        Z = (0, a.O)(),
+        y = {
             isVideoBackgroundSupported: O,
             onSelectBackgroundOption: N,
             selectedBackgroundOption: T
         },
-        k = s.useRef(Z);
+        k = s.useRef(y);
     s.useEffect(() => {
-        k.current = Z;
+        k.current = y;
     }),
         s.useEffect(() => {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = k.current;
@@ -41,10 +41,10 @@ function T(e) {
         }, [I]);
     let L = (e) => {
         N(e),
-            (0, h.FU)(e, I, { location: y.location })
+            (0, h.FU)(e, I, { location: Z.location })
                 .then(() => A(null))
                 .catch(() => {
-                    A(C.intl.string(C.t.ejrSLS)), (0, h.FU)(null, I, { location: y.location });
+                    A(C.intl.string(C.t.ejrSLS)), (0, h.FU)(null, I, { location: Z.location });
                 });
     };
     return O
@@ -71,7 +71,7 @@ function T(e) {
                                       ...n,
                                       onLearnMore: t,
                                       analyticsSource: {
-                                          ...y.location,
+                                          ...Z.location,
                                           object: p.qAy.BUTTON_CTA
                                       }
                                   });

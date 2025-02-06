@@ -108,7 +108,7 @@ let P = (e) => {
             ]
         });
     },
-    y = () => {
+    Z = () => {
         let { headingText: e } = k();
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -138,7 +138,7 @@ let P = (e) => {
             ]
         });
     },
-    [Z, k] = (0, g.Z)(),
+    [y, k] = (0, g.Z)(),
     L = (e) => {
         let { className: t, location: n } = e,
             { analyticsLocations: s } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
@@ -152,7 +152,7 @@ let P = (e) => {
             R = !1,
             { fractionalState: k, endsAt: L } = (0, u.Z)(),
             B = (0, d.Z)(L, d.a.ENDS_IN);
-        a ? ((O = j.intl.string(j.t.ifwQZW)), (S = (0, i.jsx)(y, {}))) : (f || N) && ((p = j.intl.string(j.t.qYKftb)), (O = j.intl.string(j.t.ifwQZW)), (S = (0, i.jsx)(D, { location: n })));
+        a ? ((O = j.intl.string(j.t.ifwQZW)), (S = (0, i.jsx)(Z, {}))) : (f || N) && ((p = j.intl.string(j.t.qYKftb)), (O = j.intl.string(j.t.ifwQZW)), (S = (0, i.jsx)(D, { location: n })));
         let M = null;
         if (k !== b.a$.NONE) {
             (g = !0), (p = j.intl.string(j.t.vaqFvb)), (R = !0);
@@ -186,7 +186,7 @@ let P = (e) => {
                 : (0, i.jsx)(T.Cy, { ...w });
         return (0, i.jsx)(c.Gt, {
             value: s,
-            children: (0, i.jsx)(Z.Provider, {
+            children: (0, i.jsx)(y.Provider, {
                 value: {
                     headingText: O,
                     headingTop: V,

@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(626135),
     P = n(63063),
     D = n(706454),
-    y = n(349728),
-    Z = n(494620),
+    Z = n(349728),
+    y = n(494620),
     k = n(205266),
     L = n(216153),
     B = n(981631),
@@ -144,11 +144,11 @@ function H(e) {
     function Q() {
         let e = E.Z.get(o.type),
             t = V.intl.string(V.t.apVJu7);
-        (0, y.Z)(o) &&
+        (0, Z.Z)(o) &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
                     t,
-                    (0, i.jsx)(Z.Z, {
+                    (0, i.jsx)(y.Z, {
                         className: U.infoBox,
                         children: V.intl.format(V.t.COW3Xl, { platformName: e.name })
                     })

@@ -29,11 +29,11 @@ let I = (e) => {
         R = (0, m.Nx)(),
         P = (0, u.rO)(),
         D = s.useRef(null),
-        [y, Z] = s.useState(!1);
+        [Z, y] = s.useState(!1);
     return (
         s.useEffect(() => {
-            !I || b || y || null == D.current || D.current.play();
-        }, [I, b, y]),
+            !I || b || Z || null == D.current || D.current.play();
+        }, [I, b, Z]),
         (0, i.jsx)(c.Gt, {
             value: v,
             children: (0, i.jsxs)('div', {
@@ -60,7 +60,7 @@ let I = (e) => {
                             poster: T.Z,
                             className: l()(C.footerArt),
                             onEnded: () => {
-                                Z(!0);
+                                y(!0);
                             },
                             ref: D,
                             children: (0, i.jsx)('source', {

@@ -116,7 +116,7 @@ function T(e) {
                           userParticipantCount: O
                       })
                   ));
-    let q = l.useCallback(
+    let Y = l.useCallback(
         (e) => {
             var t, n;
             return null !== (n = null === (t = D[e]) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : 'empty-tile';
@@ -125,7 +125,7 @@ function T(e) {
     );
     return (0, i.jsx)(g.Z, {
         className: y,
-        keyExtractor: q,
+        keyExtractor: Y,
         paddingTop: 64,
         paddingBottom: 64,
         children: W

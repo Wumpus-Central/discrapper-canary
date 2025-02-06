@@ -10,13 +10,13 @@ var i = n(200651),
     u = n(451603),
     h = n(885714),
     p = n(155409),
-    m = n(430824),
-    g = n(594174),
+    g = n(430824),
+    m = n(594174),
     f = n(40153),
     _ = n(603592),
     v = n(981631),
-    x = n(675999),
-    C = n(388032),
+    C = n(675999),
+    x = n(388032),
     Z = n(940722);
 let I = {
     origin: {
@@ -38,14 +38,14 @@ function b(e) {
 }
 function S(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
-        o = (0, r.e7)([m.Z], () => m.Z.getGuilds()),
+        o = (0, r.e7)([g.Z], () => g.Z.getGuilds()),
         S = l.useMemo(() => Object.values(o), [o]),
-        N = (0, r.e7)([g.default], () => g.default.getCurrentUser()),
-        j = l.useMemo(() => S.some((e) => e.isOwner(N)), [S, N]),
-        E = (0, a.s9z)((e) => (0, a.DEQ)(e, x.PU)),
+        N = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
+        E = l.useMemo(() => S.some((e) => e.isOwner(N)), [S, N]),
+        j = (0, a.s9z)((e) => (0, a.DEQ)(e, C.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
         P = (0, d.Q3)('CreateJoinGuildButton'),
-        T = (0, i.jsx)(_.Z, {
+        A = (0, i.jsx)(_.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -60,24 +60,24 @@ function S(e) {
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: E,
+            selected: j,
             onContextMenu: b,
-            tooltip: C.intl.string(C.t.l5WIbW),
+            tooltip: x.intl.string(x.t.l5WIbW),
             icon: P ? a.oFk : a.BRu
         });
     return t
-        ? T
+        ? A
         : (0, i.jsx)('div', {
               className: Z.tutorialContainer,
               children: (0, i.jsxs)(p.Z, {
-                  tutorialId: j ? 'create-more-servers' : 'create-first-server',
+                  tutorialId: E ? 'create-more-servers' : 'create-first-server',
                   inlineSpecs: I,
                   position: 'right',
                   children: [
-                      T,
+                      A,
                       null != n &&
                           (0, i.jsx)(f.ZP, {
-                              name: C.intl.string(C.t['45xjMz']),
+                              name: x.intl.string(x.t['45xjMz']),
                               targetNode: n,
                               below: !0,
                               noCombine: !0

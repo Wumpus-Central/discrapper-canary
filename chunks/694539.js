@@ -35,7 +35,7 @@ let f = (e) => {
             [j, A] = s.useState(!1),
             [O, R] = s.useState(!1),
             [P, D] = s.useState([]),
-            [y, Z] = s.useState(t.name);
+            [Z, y] = s.useState(t.name);
         s.useEffect(() => {
             let e = t.config.effects;
             e.length > 0 &&
@@ -59,10 +59,10 @@ let f = (e) => {
             let { effect: e, upsertConfig: t } = L.current;
             t({
                 id: e.id,
-                name: y,
+                name: Z,
                 config: { effects: P }
             });
-        }, [P, y]),
+        }, [P, Z]),
         null == T)
             ? (0, i.jsx)('div', {})
             : (0, i.jsxs)('div', {
@@ -113,10 +113,10 @@ let f = (e) => {
                                               }),
                                               (0, i.jsx)('input', {
                                                   type: 'text',
-                                                  value: y,
+                                                  value: Z,
                                                   className: p.input,
                                                   onChange: (e) => {
-                                                      Z(e.target.value);
+                                                      y(e.target.value);
                                                   }
                                               })
                                           ]

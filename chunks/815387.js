@@ -422,7 +422,7 @@ let eR = Object.freeze({
                         let a = M.Z.getChannel(null === (l = t.messageReference) || void 0 === l ? void 0 : l.channel_id);
                         null != a &&
                             (0, s.jW)(e, async () => {
-                                let { default: e } = await Promise.all([n.e('38902'), n.e('77564'), n.e('75206')]).then(n.bind(n, 422200));
+                                let { default: e } = await Promise.all([n.e('38902'), n.e('40157')]).then(n.bind(n, 422200));
                                 return (t) =>
                                     (0, i.jsx)(e, {
                                         ...t,

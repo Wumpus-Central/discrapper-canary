@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i,
     l,
     r,
@@ -10,11 +10,11 @@ var i,
     u = n(306680),
     h = n(944486),
     p = n(55589);
-let m = [],
-    g = new Set();
+let g = [],
+    m = new Set();
 function f() {
     let e = p.Z.getPrivateChannelIds().filter((e) => u.ZP.getMentionCount(e) > 0);
-    return e.length > 20 && (e.length = 20), !(0, c.EF)(e, m) && ((m = e), (g = new Set(e)), !0);
+    return e.length > 20 && (e.length = 20), !(0, c.EF)(e, g) && ((g = e), (m = new Set(e)), !0);
 }
 function _() {
     return f();
@@ -24,24 +24,24 @@ function v(e) {
         n = d.Z.getChannel(t);
     return !!(null != n && (0, s.hv)(n.type)) && f();
 }
-class x extends (i = a.ZP.Store) {
+class C extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, d.Z, h.Z, u.ZP);
     }
     getUnreadPrivateChannelIds() {
-        return m;
+        return g;
     }
 }
 (r = 'PrivateChannelReadStateStore'),
-    (l = 'displayName') in x
-        ? Object.defineProperty(x, l, {
+    (l = 'displayName') in C
+        ? Object.defineProperty(C, l, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (x[l] = r);
-let C = new x(o.Z, {
+        : (C[l] = r);
+let x = new C(o.Z, {
     CONNECTION_OPEN: _,
     OVERLAY_INITIALIZE: _,
     MESSAGE_CREATE: v,
@@ -55,7 +55,7 @@ let C = new x(o.Z, {
         let {
             channel: { id: t }
         } = e;
-        return !!g.has(t) && f();
+        return !!m.has(t) && f();
     },
     WINDOW_FOCUS: function () {
         let e = d.Z.getChannel(h.Z.getChannelId());

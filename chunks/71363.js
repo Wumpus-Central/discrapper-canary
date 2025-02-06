@@ -32,8 +32,8 @@ let b = (e) => {
         }, {}),
         { analyticsLocations: R } = (0, m.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [P, D] = s.useState(!1),
-        y = (0, g.ZP)('perks-discoverability'),
-        Z = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
+        Z = (0, g.ZP)('perks-discoverability'),
+        y = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         k = (0, f.mN)(),
         { fractionalState: L } = (0, h.Z)();
     return (
@@ -41,7 +41,7 @@ let b = (e) => {
         (0, i.jsx)(c.yWw, {
             className: l()(I.allPerksScroller, {
                 [I.open]: r,
-                [I.openCloseReduceMotion]: Z
+                [I.openCloseReduceMotion]: y
             }),
             ref: A,
             children: (0, i.jsx)('div', {
@@ -74,7 +74,7 @@ let b = (e) => {
                                     cards: (0, f.sP)({
                                         perksCards: O,
                                         variant: C.R0.CARD_CAROUSEL_FIRST_ROW,
-                                        shopMarketingVariation: y,
+                                        shopMarketingVariation: Z,
                                         isPremiumSubscriber: k,
                                         isFullScreen: j,
                                         fractionalState: L
@@ -92,7 +92,7 @@ let b = (e) => {
                                     cards: (0, f.sP)({
                                         perksCards: O,
                                         variant: C.R0.CARD_CAROUSEL_SECOND_ROW,
-                                        shopMarketingVariation: y,
+                                        shopMarketingVariation: Z,
                                         isPremiumSubscriber: k,
                                         isFullScreen: j,
                                         fractionalState: L
@@ -110,7 +110,7 @@ let b = (e) => {
                                     cards: (0, f.sP)({
                                         perksCards: O,
                                         variant: C.R0.CARD_CAROUSEL_THIRD_ROW,
-                                        shopMarketingVariation: y,
+                                        shopMarketingVariation: Z,
                                         isPremiumSubscriber: k,
                                         isFullScreen: j,
                                         fractionalState: L

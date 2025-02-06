@@ -1,6 +1,6 @@
 n.d(t, {
     g: () => k,
-    i: () => y
+    i: () => Z
 });
 var i = n(200651),
     s = n(192379),
@@ -39,7 +39,7 @@ let D = () => {
             (0, g.Kq)(),
             (0, c.xf)();
     },
-    y = () => {
+    Z = () => {
         var e, t;
         let { analyticsLocations: n } = (0, h.ZP)(m.Z.USER_SETTINGS),
             l = (0, r.e7)([_.Z], () => _.Z.isPreview),
@@ -94,13 +94,13 @@ let D = () => {
                                           className: P.basicThemeSelectors,
                                           renderCTAButtons: v
                                       }),
-                                      E && (0, i.jsx)(Z, {})
+                                      E && (0, i.jsx)(y, {})
                                   ]
                               })
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(x.ZP.Basic, { className: P.basicThemeSelectors }),
-                                      E && (0, i.jsx)(Z, {}),
+                                      E && (0, i.jsx)(y, {}),
                                       (0, i.jsxs)(S.Z, {
                                           className: P.featureBorder,
                                           isShown: l,
@@ -137,7 +137,7 @@ let D = () => {
             })
         );
     };
-function Z() {
+function y() {
     let {
         theme: e,
         useForcedColors: t,

@@ -35,8 +35,8 @@ function O(e) {
         }),
         {
             pendingAvatar: D,
-            pendingNickname: y,
-            pendingBanner: Z,
+            pendingNickname: Z,
+            pendingBanner: y,
             pendingBio: k,
             pendingPronouns: L,
             pendingThemeColors: B,
@@ -62,7 +62,7 @@ function O(e) {
         F = (0, l.e7)([p.Z], () => p.Z.getGuildMemberProfile(P.id, V.id)),
         H = f.ZP.canUsePremiumProfileCustomization(P),
         z = (0, c.gd)(D, null == G ? void 0 : G.avatar),
-        Y = (0, c.f$)(Z, null == F ? void 0 : F.banner),
+        Y = (0, c.f$)(y, null == F ? void 0 : F.banner),
         W = (0, S.p)(B, null == F ? void 0 : F.themeColors),
         K = null !== (t = null == F ? void 0 : F.bio) && void 0 !== t ? t : '',
         X = null !== (n = null == F ? void 0 : F.pronouns) && void 0 !== n ? n : '',
@@ -77,7 +77,7 @@ function O(e) {
                 {
                     errors: null !== (s = null == M ? void 0 : M.nick) && void 0 !== s ? s : null == U ? void 0 : U.nick,
                     username: T.ZP.getName(P),
-                    pendingNick: y,
+                    pendingNick: Z,
                     currentNick: null == G ? void 0 : G.nick,
                     guild: V
                 },

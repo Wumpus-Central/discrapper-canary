@@ -1,6 +1,6 @@
 n.d(t, {
     P: () => h,
-    Z: () => v
+    Z: () => x
 }),
     n(47120);
 var i = n(200651),
@@ -26,7 +26,7 @@ function h(e) {
         }
     });
 }
-function v(e) {
+function x(e) {
     let { application: t, onSelect: n } = e,
         s = r.Sb.useSetting(),
         c = (0, o.Z)({

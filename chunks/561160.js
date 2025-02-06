@@ -13,7 +13,7 @@ function m(e) {
     let { searchQuery: t, textContent: n, type: m } = e,
         p = (0, s.Q3)('AppLauncherEmptyState'),
         h = (0, o.ZP)(),
-        v = (0, l.ap)(h) ? u : d;
+        x = (0, l.ap)(h) ? u : d;
     return (
         (0, r.Bm)(m, t),
         (0, i.jsxs)('div', {
@@ -23,7 +23,7 @@ function m(e) {
                     ? null
                     : (0, i.jsx)('img', {
                           className: c.emptyStateImage,
-                          src: v,
+                          src: x,
                           alt: 'empty state'
                       }),
                 (0, i.jsx)(a.Text, {

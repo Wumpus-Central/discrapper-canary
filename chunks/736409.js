@@ -10,36 +10,36 @@ var i = n(200651),
     u = n(100527),
     h = n(906732),
     p = n(243778),
-    m = n(667105),
-    g = n(695346),
+    g = n(667105),
+    m = n(695346),
     f = n(626135),
     _ = n(316496),
     v = n(903002),
-    x = n(214492),
-    C = n(981631),
+    C = n(214492),
+    x = n(981631),
     Z = n(921944),
     I = n(46140),
     b = n(388032),
     S = n(61260),
     N = n(204794);
-let j = {
+let E = {
         topLeftDark: 'rgba(62, 22, 137, 0.8)',
         topRightDark: 'rgba(160, 86, 242, 0.4)',
         topLeftLight: 'rgba(159, 86, 242, 0.4)',
         topRightLight: 'rgba(222, 194, 252, 0.5)'
     },
-    E = (e) => {
+    j = (e) => {
         let { closePopout: t, setToggleDefaultState: n } = e,
             { analyticsLocations: l } = (0, h.ZP)(u.Z.SHARING_CONTROLS_COACHMARK),
             a = (0, d.ZP)(),
-            p = g.G6.useSetting(),
-            { assets: m, count: f } = (0, x.fq)();
+            p = m.G6.useSetting(),
+            { assets: g, count: f } = (0, C.fq)();
         return (0, i.jsxs)('div', {
             className: S.wrapper,
             children: [
                 (0, i.jsx)('div', {
                     className: S.gradient,
-                    style: { background: 'radial-gradient(75% 75% at 0% 0%, '.concat((0, o.wj)(a) ? j.topLeftDark : j.topLeftLight, ' 0%, transparent 100%),\n    radial-gradient(70% 50% at 100% 0%, ').concat((0, o.wj)(a) ? j.topRightDark : j.topRightLight, ' 0%, transparent 100%)') }
+                    style: { background: 'radial-gradient(75% 75% at 0% 0%, '.concat((0, o.wj)(a) ? E.topLeftDark : E.topLeftLight, ' 0%, transparent 100%),\n    radial-gradient(70% 50% at 100% 0%, ').concat((0, o.wj)(a) ? E.topRightDark : E.topRightLight, ' 0%, transparent 100%)') }
                 }),
                 (0, i.jsxs)('div', {
                     className: S.content,
@@ -77,7 +77,7 @@ let j = {
                                         }),
                                         (0, i.jsx)(s.rsf, {
                                             onChange: (e) => {
-                                                g.G6.updateSetting(e), e && n(e);
+                                                m.G6.updateSetting(e), e && n(e);
                                             },
                                             checked: p
                                         })
@@ -88,14 +88,14 @@ let j = {
                                     children: b.intl.string(b.t.GnhKNz)
                                 }),
                                 (0, i.jsx)(v.D, {
-                                    assets: m,
+                                    assets: g,
                                     assetCount: f
                                 })
                             ]
                         }),
                         (0, i.jsx)(s.Qjf, {
                             onClick: () => {
-                                t(), c.Z.open(C.oAB.ACTIVITY_PRIVACY, null, { analyticsLocations: l });
+                                t(), c.Z.open(x.oAB.ACTIVITY_PRIVACY, null, { analyticsLocations: l });
                             },
                             text: b.intl.string(b.t.g8usuL)
                         })
@@ -107,11 +107,11 @@ let j = {
     y = (e) => {
         let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: r } = e,
             { rtcPopoutEnabled: o } = (0, _.S)('SharingPrivacyPopout'),
-            c = (0, m.Ws)({ location: I.dr.CONFLICT_CHECKS }),
-            d = g.G6.useSetting(),
+            c = (0, g.Ws)({ location: I.dr.CONFLICT_CHECKS }),
+            d = m.G6.useSetting(),
             [u, h] = (0, l.useState)(!1);
         return ((0, l.useEffect)(() => {
-            n && f.default.track(C.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });
+            n && f.default.track(x.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });
         }, [n]),
         o && c && (!d || u))
             ? (0, i.jsx)(p.ZP, {
@@ -128,7 +128,7 @@ let j = {
                                 },
                                 renderPopout: (e) => {
                                     let { closePopout: t } = e;
-                                    return (0, i.jsx)(E, {
+                                    return (0, i.jsx)(j, {
                                         closePopout: t,
                                         setToggleDefaultState: h
                                     });

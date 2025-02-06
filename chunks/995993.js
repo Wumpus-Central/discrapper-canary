@@ -10,32 +10,32 @@ var i = n(200651),
     u = n(45966),
     h = n(31445),
     p = n(22082),
-    m = n(703656),
-    g = n(306680),
+    g = n(703656),
+    m = n(306680),
     f = n(709054),
     _ = n(540126),
     v = n(434479),
-    x = n(981631),
-    C = n(176505),
+    C = n(981631),
+    x = n(176505),
     Z = n(490897),
     I = n(388032),
     b = n(518360);
 function S(e) {
     let { guild: t, selected: S } = e,
         N = (0, h.Z)(t),
-        j = (0, d.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
-        E = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
-        y = (0, r.e7)([g.ZP], () => g.ZP.hasUnread(t.id, Z.W.GUILD_ONBOARDING_QUESTION)),
-        P = E.length > _.Cb,
-        T = (0, r.e7)([u.Z, g.ZP], () => {
+        E = (0, d.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
+        j = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
+        y = (0, r.e7)([m.ZP], () => m.ZP.hasUnread(t.id, Z.W.GUILD_ONBOARDING_QUESTION)),
+        P = j.length > _.Cb,
+        A = (0, r.e7)([u.Z, m.ZP], () => {
             let e = u.Z.lastFetchedAt(t.id),
-                n = g.ZP.lastMessageId(t.id, Z.W.GUILD_ONBOARDING_QUESTION);
+                n = m.ZP.lastMessageId(t.id, Z.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
             let i = f.default.extractTimestamp(n);
             return null != e && e > i;
         }),
-        A = l.useCallback(() => {
-            (0, m.uL)(x.Z5c.CHANNEL(t.id, N ? C.oC.CUSTOMIZE_COMMUNITY : C.oC.CHANNEL_BROWSER));
+        T = l.useCallback(() => {
+            (0, g.uL)(C.Z5c.CHANNEL(t.id, N ? x.oC.CUSTOMIZE_COMMUNITY : x.oC.CHANNEL_BROWSER));
         }, [t.id, N]),
         w = l.useCallback(
             (e) => {
@@ -52,9 +52,9 @@ function S(e) {
         ),
         R = null;
     return (
-        (j && !y && !P) ||
+        (E && !y && !P) ||
             S ||
-            T ||
+            A ||
             (R = (0, i.jsx)(s.IGR, {
                 color: o.Z.colors.BADGE_BRAND_BG.css,
                 text: I.intl.string(I.t.y2b7CA),
@@ -70,7 +70,7 @@ function S(e) {
                 }),
             text: N ? I.intl.string(I.t.h9mGOD) : I.intl.string(I.t.et6wam),
             selected: S,
-            onClick: A,
+            onClick: T,
             onContextMenu: w,
             trailing: R
         })

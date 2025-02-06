@@ -47,7 +47,7 @@ function D(e) {
         })
     );
 }
-function y() {
+function Z() {
     let e = v.G6.useSetting(),
         t = v.Wz.useSetting(),
         n = (0, S.Yd)('activity privacy tab'),
@@ -116,7 +116,7 @@ function y() {
         })
     });
 }
-function Z() {
+function y() {
     let e = v.cP.useSetting(),
         t = v.Ou.useSetting();
     return (0, i.jsx)(E.F, {
@@ -256,6 +256,6 @@ function w(e) {
               className: t,
               tag: m.RB0.H1,
               title: n ? O.intl.string(O.t.Cq98yM) : null,
-              children: [(0, i.jsx)(y, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(k, {}), s && (0, i.jsx)(M, {})]
+              children: [(0, i.jsx)(Z, {}), (0, i.jsx)(y, {}), (0, i.jsx)(k, {}), s && (0, i.jsx)(M, {})]
           });
 }

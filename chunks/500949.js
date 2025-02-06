@@ -39,8 +39,8 @@ var a,
     x = n(567027),
     p = n(461195),
     f = n(857702),
-    b = n(20450),
-    _ = n(312976),
+    _ = n(20450),
+    b = n(312976),
     g = n(147591),
     v = n(135164),
     j = n(940172),
@@ -54,8 +54,8 @@ var a,
     I = n(596136),
     Z = n(341901),
     O = n(856308),
-    R = n(665352),
-    w = n(394900),
+    w = n(665352),
+    R = n(394900),
     P = n(661105),
     A = n(525169),
     L = n(433517),
@@ -73,8 +73,8 @@ let M = {
         HWB: x.Z,
         ICTCP: p.Z,
         JzCzHz: f.Z,
-        Jzazbz: b.Z,
-        LCH: _.Z,
+        Jzazbz: _.Z,
+        LCH: b.Z,
         LCHuv: g.Z,
         Lab: v.Z,
         Lab_D65: j.Z,
@@ -90,7 +90,7 @@ let M = {
         XYZ_D65: O.Z
     },
     z = Object.fromEntries(Object.keys(M).map((e) => [e, e]));
-Object.values(M).forEach((e) => R.Z.register(e));
+Object.values(M).forEach((e) => w.Z.register(e));
 let { SemanticColors: F } = D.V,
     U = F,
     G = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
@@ -142,7 +142,7 @@ function X(e) {
     };
 }
 function Y(e) {
-    return (0, w.Z)((0, P.Z)(e, i.Z), { format: 'hex' });
+    return (0, R.Z)((0, P.Z)(e, i.Z), { format: 'hex' });
 }
 var K = (((a = {}).TOKENS = 'Tokens'), (a.PALETTES = 'Palettes'), a);
 function J() {

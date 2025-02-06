@@ -48,8 +48,8 @@ var i = n(200651),
     V = n(611845),
     z = n(800966),
     W = n(641015),
-    q = n(618158),
-    Y = n(390322),
+    Y = n(618158),
+    q = n(390322),
     K = n(791592),
     X = n(136995),
     Q = n(402113),
@@ -190,11 +190,11 @@ function ey(e) {
                         dismissed: x.hqStreamingOptInPopoutDismissed,
                         onDismiss: L
                     }),
-            (0, i.jsx)(q.Z, {
+            (0, i.jsx)(Y.Z, {
                 children: (0, i.jsx)(p.yRy, {
                     renderPopout: (e) => {
                         let { closePopout: l } = e;
-                        return (0, i.jsx)(Y.Z, {
+                        return (0, i.jsx)(q.Z, {
                             children: (0, i.jsx)(ex.Z, {
                                 channel: t,
                                 currentUser: n,
@@ -420,7 +420,7 @@ let eM = function (e) {
             return (null !== (e = null == F ? void 0 : F.channelId) && void 0 !== e ? e : es.Z.getVoiceChannelId()) === a.id;
         }),
         z = (0, N.Z)(a, !0),
-        q = (0, u.e7)([x.ZP], () => x.ZP.getSelfEmbeddedActivityForChannel(a.id)),
+        Y = (0, u.e7)([x.ZP], () => x.ZP.getSelfEmbeddedActivityForChannel(a.id)),
         { reachedLimit: K, limit: X } = (0, ep.Z)(a),
         { analyticsLocations: Q } = (0, I.ZP)(E.Z.VOICE_CONTROL_TRAY),
         J = (0, eh.Z)(a),
@@ -456,7 +456,7 @@ let eM = function (e) {
                                       (0, i.jsx)(p.yRy, {
                                           renderPopout: (e) => {
                                               let { closePopout: t } = e;
-                                              return (0, i.jsx)(Y.Z, {
+                                              return (0, i.jsx)(q.Z, {
                                                   children: ee
                                                       ? (0, i.jsx)(ei.l, {
                                                             short: !0,
@@ -511,7 +511,7 @@ let eM = function (e) {
                                           (0, i.jsx)(p.yRy, {
                                               renderPopout: (e) => {
                                                   let { closePopout: t } = e;
-                                                  return (0, i.jsx)(Y.Z, {
+                                                  return (0, i.jsx)(q.Z, {
                                                       children: (0, i.jsx)(S.Z, {
                                                           onClose: t,
                                                           simplified: g
@@ -583,7 +583,7 @@ let eM = function (e) {
                                   ]
                               }),
                               (0, i.jsx)(eP, {
-                                  connectedEmbeddedActivity: q,
+                                  connectedEmbeddedActivity: Y,
                                   currentUser: b,
                                   channel: a,
                                   onDisconnectCall: c
@@ -609,7 +609,7 @@ let eM = function (e) {
                                   ? (0, i.jsx)(p.yRy, {
                                         renderPopout: (e) => {
                                             let { closePopout: t } = e;
-                                            return (0, i.jsx)(Y.Z, {
+                                            return (0, i.jsx)(q.Z, {
                                                 children: ee
                                                     ? (0, i.jsx)(ei.l, {
                                                           short: !0,
@@ -648,7 +648,7 @@ let eM = function (e) {
                                   (0, i.jsx)(p.yRy, {
                                       renderPopout: (e) => {
                                           let { closePopout: t } = e;
-                                          return (0, i.jsx)(Y.Z, { children: (0, i.jsx)(S.Z, { onClose: t }) });
+                                          return (0, i.jsx)(q.Z, { children: (0, i.jsx)(S.Z, { onClose: t }) });
                                       },
                                       position: 'top',
                                       align: 'center',
@@ -688,7 +688,7 @@ let eM = function (e) {
                                   ? (0, i.jsx)(p.yRy, {
                                         renderPopout: (e) => {
                                             let { closePopout: t } = e;
-                                            return (0, i.jsx)(Y.Z, {
+                                            return (0, i.jsx)(q.Z, {
                                                 children: ee
                                                     ? (0, i.jsx)(ei.l, {
                                                           short: !0,
@@ -730,7 +730,7 @@ let eM = function (e) {
                                     })
                                   : null,
                               (0, i.jsx)(eP, {
-                                  connectedEmbeddedActivity: q,
+                                  connectedEmbeddedActivity: Y,
                                   currentUser: b,
                                   channel: a,
                                   onDisconnectCall: c

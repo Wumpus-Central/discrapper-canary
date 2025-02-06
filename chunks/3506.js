@@ -68,8 +68,8 @@ function A(e) {
             shouldShowKeybindIndicators: C.Z.showKeybindIndicators
         })),
         D = (0, o.e7)([p.Z], () => p.Z.getOverlayKeybind()),
-        y = (0, _.Z)({ location: 'overlay_user_settings' }),
-        Z = (0, h.$1)();
+        Z = (0, _.Z)({ location: 'overlay_user_settings' }),
+        y = (0, h.$1)();
     return (
         !(function () {
             let e = v(b);
@@ -92,8 +92,8 @@ function A(e) {
                                     children: (0, i.jsx)(c.j7V, {
                                         className: S.enableSwitch,
                                         value: l,
-                                        disabled: Z,
-                                        note: Z ? I.intl.string(I.t.Eb0lnJ) : null,
+                                        disabled: y,
+                                        note: y ? I.intl.string(I.t.Eb0lnJ) : null,
                                         hideBorder: !0,
                                         onChange: function (e) {
                                             u.Z.setEnabled(e, s),
@@ -186,7 +186,7 @@ function A(e) {
                                 value: A
                             })
                         }),
-                        y &&
+                        Z &&
                             (0, i.jsx)(j, {
                                 children: (0, i.jsx)(c.j7V, {
                                     value: P,

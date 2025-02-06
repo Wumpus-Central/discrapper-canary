@@ -11,8 +11,8 @@ var l = n(442837),
     u = n(9156),
     h = n(434479),
     p = n(490897),
-    m = n(388032),
-    g = n(193877);
+    g = n(388032),
+    m = n(193877);
 function f(e) {
     let { guild: t, selected: f } = e,
         { hasUnread: _, mentionCount: v } = (0, l.cj)(
@@ -23,8 +23,8 @@ function f(e) {
             }),
             [t.id]
         ),
-        x = (0, l.e7)([u.ZP], () => u.ZP.isMuteScheduledEventsEnabled(t.id));
-    async function C() {
+        C = (0, l.e7)([u.ZP], () => u.ZP.isMuteScheduledEventsEnabled(t.id));
+    async function x() {
         await (0, a.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('22506')]).then(n.bind(n, 17671));
             return (n) =>
@@ -36,7 +36,7 @@ function f(e) {
             (0, s.EW)(r.z.GUILD_HEADER_EVENT_UPSELL);
     }
     let Z = (0, c.ZP)(t.id),
-        I = Z.length > 0 ? m.intl.formatToPlainString(m.t.IBdqSk, { number: Z.length }) : m.intl.string(m.t.tlopTE);
+        I = Z.length > 0 ? g.intl.formatToPlainString(g.t.IBdqSk, { number: Z.length }) : g.intl.string(g.t.tlopTE);
     return (0, i.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
@@ -47,7 +47,7 @@ function f(e) {
             }),
         text: I,
         selected: f,
-        onClick: C,
+        onClick: x,
         onContextMenu: (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await n.e('95307').then(n.bind(n, 867757));
@@ -58,11 +58,11 @@ function f(e) {
                     });
             });
         },
-        showUnread: _ && !x,
+        showUnread: _ && !C,
         trailing:
-            !x && v > 0
+            !C && v > 0
                 ? (0, i.jsx)(a.mAB, {
-                      className: g.numberBadge,
+                      className: m.numberBadge,
                       disableColor: !0,
                       count: v
                   })

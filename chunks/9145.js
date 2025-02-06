@@ -47,8 +47,8 @@ function B(e) {
         V = (0, s.Wu)([N.ZP], () => N.ZP.getEmbeddedActivitiesForLocation(B), [B]),
         z = (0, j.p)(B),
         W = (0, s.e7)([C.Z], () => C.Z.getChannel(z)),
-        q = (0, T.gb)(V),
-        Y = (0, T.uF)(q),
+        Y = (0, T.gb)(V),
+        q = (0, T.uF)(Y),
         K = l.useCallback(() => {
             (0, Z.tg)(L.Ez.PIP);
         }, []),
@@ -84,7 +84,7 @@ function B(e) {
             t = ei.height;
         ea ? ((t = ei.width / L.I0) > ei.height && (e = (t = ei.height) * L.I0), (es = (ei.height - t) / 2)) : ((e = Math.min(ei.height * L.I0)) > ei.width && (t = (e = ei.width) / L.I0), (er = (ei.width - e) / 2));
     }
-    let ec = Y.get(null !== (n = null == G ? void 0 : G.id) && void 0 !== n ? n : ''),
+    let ec = q.get(null !== (n = null == G ? void 0 : G.id) && void 0 !== n ? n : ''),
         ed = (0, s.e7)([v.Z], () => v.Z.getChannelId()),
         eu = (0, s.Wu)(
             [x.ZP],

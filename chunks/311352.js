@@ -11,19 +11,19 @@ var l = n(399606),
     u = n(556296),
     h = n(13140),
     p = n(924557),
-    m = n(435064),
-    g = n(39604),
+    g = n(435064),
+    m = n(39604),
     f = n(981631),
     _ = n(388032),
     v = n(703757);
-function x(e) {
+function C(e) {
     (0, o.jW)(e, async () => {
         let { default: e } = await n.e('21960').then(n.bind(n, 999466));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function C() {
-    (0, g.C1)();
+function x() {
+    (0, m.C1)();
 }
 let Z = (e) => {
         let { keybindString: t, children: n } = e,
@@ -83,9 +83,9 @@ let Z = (e) => {
     I = () => {
         let e = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
             t = (0, p.Go)(),
-            { clipsEnabled: n, isAtMaxSavingClipsOperations: r } = (0, l.cj)([m.Z], () => ({
-                clipsEnabled: m.Z.getSettings().clipsEnabled,
-                isAtMaxSavingClipsOperations: m.Z.getIsAtMaxSaveClipOperations()
+            { clipsEnabled: n, isAtMaxSavingClipsOperations: r } = (0, l.cj)([g.Z], () => ({
+                clipsEnabled: g.Z.getSettings().clipsEnabled,
+                isAtMaxSavingClipsOperations: g.Z.getIsAtMaxSaveClipOperations()
             })),
             o = (0, l.e7)([u.Z], () => u.Z.getKeybindForAction(f.kg4.SAVE_CLIP));
         if (!(t && n) || null == o || e) return null;
@@ -95,8 +95,8 @@ let Z = (e) => {
             children: (0, i.jsx)(c.Z, {
                 disabled: r,
                 tooltipText: null != o ? _.intl.formatToPlainString(_.t.HIMcv7, { hotkey: h.BB(null == o ? void 0 : o.shortcut, !0) }) : _.intl.string(_.t.s52pjo),
-                onClick: C,
-                onContextMenu: x,
+                onClick: x,
+                onContextMenu: C,
                 icon: a.AlX
             })
         });

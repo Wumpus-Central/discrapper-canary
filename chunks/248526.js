@@ -42,8 +42,8 @@ let h = [
 function f() {
     let e = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
         [t, n] = l.useState(!1),
-        [f, b] = l.useState(!1),
-        [_, g] = l.useState(1);
+        [f, _] = l.useState(!1),
+        [b, g] = l.useState(1);
     return (0, a.jsxs)('div', {
         className: m.container,
         children: [
@@ -68,7 +68,7 @@ function f() {
                     options: x,
                     value: f,
                     onChange: (e) => {
-                        b(e);
+                        _(e);
                     },
                     popoutLayerContext: u.O$
                 })
@@ -79,7 +79,7 @@ function f() {
                 tag: o.RB0.H3,
                 children: (0, a.jsx)(o.q4e, {
                     options: p,
-                    value: _,
+                    value: b,
                     onChange: (e) => {
                         g(e);
                     },
@@ -94,7 +94,7 @@ function f() {
                         user: e,
                         available: t,
                         activateSuccess: f,
-                        demoDuration: _
+                        demoDuration: b
                     }),
                     (0, c.Vk)()),
                 children: 'Update'

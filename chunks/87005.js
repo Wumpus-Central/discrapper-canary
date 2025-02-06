@@ -1,4 +1,4 @@
-n.d(t, { f: () => x }), n(47120);
+n.d(t, { f: () => v }), n(47120);
 var i = n(192379),
     l = n(243814),
     a = n(442837),
@@ -14,17 +14,17 @@ var m = n(783097),
 let h = {
         commandTypes: [s.yU.CHAT, s.yU.PRIMARY_ENTRY_POINT]
     },
-    v = {
+    x = {
         placeholderCount: 0,
         limit: p.tn,
         includeFrecency: !0
     };
-function x(e) {
-    let { context: t, onlyActivityApps: n, allowCommandFetch: s, includeAuthorizedAppsAndFetch: x } = e,
+function v(e) {
+    let { context: t, onlyActivityApps: n, allowCommandFetch: s, includeAuthorizedAppsAndFetch: v } = e,
         { sectionDescriptors: f, loading: N } = r.wi({
             context: t,
             filters: h,
-            options: v,
+            options: x,
             allowFetch: s
         });
     return {
@@ -35,18 +35,18 @@ function x(e) {
             i.useEffect(() => {
                 r && h === u.M.NOT_FETCHED && o.Z.fetch();
             }, [r, h]);
-            let v = (0, a.Wu)([u.Z], () => {
+            let x = (0, a.Wu)([u.Z], () => {
                     var e, t;
                     return r && null !== (t = null === (e = u.Z.getApps()) || void 0 === e ? void 0 : e.filter((e) => e.scopes.includes(l.x.APPLICATIONS_COMMANDS))) && void 0 !== t ? t : [];
                 }),
-                x = t.filter((e) => e.id !== p.bi.FRECENCY && e.id !== p.bi.BUILT_IN),
-                f = (0, d.h)(x, v);
+                v = t.filter((e) => e.id !== p.bi.FRECENCY && e.id !== p.bi.BUILT_IN),
+                f = (0, d.h)(v, x);
             return i.useMemo(() => (s ? f.filter((e) => null != e.application && (0, m.ye)(e.application) && null != (0, c.Xu)(n, e.id)) : f), [f, n, s]);
         })({
             sectionDescriptors: f,
             context: t,
             onlyActivityApps: n,
-            includeAuthorizedAppsAndFetch: x
+            includeAuthorizedAppsAndFetch: v
         })
     };
 }

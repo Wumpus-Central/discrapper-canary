@@ -43,8 +43,8 @@ var i = n(200651),
     V = n(436660),
     z = n(603009),
     W = n(540059),
-    q = n(28546),
-    Y = n(295474),
+    Y = n(28546),
+    q = n(295474),
     K = n(521476),
     X = n(69882),
     Q = n(71619),
@@ -97,8 +97,8 @@ var i = n(200651),
     eV = n(1397),
     ez = n(981631),
     eW = n(388032),
-    eq = n(247627),
-    eY = n(89111);
+    eY = n(247627),
+    eq = n(89111);
 function eK(e, t, n) {
     return (
         t in e
@@ -188,7 +188,7 @@ class e$ extends l.PureComponent {
                 textValue: this.state.textValue,
                 richValue: this.state.richValue,
                 focused: t,
-                className: eq.channelTextArea,
+                className: eY.channelTextArea,
                 channel: e,
                 placeholder: d,
                 accessibilityLabel: u,
@@ -232,7 +232,7 @@ class e$ extends l.PureComponent {
                     ? (0, i.jsx)(h.UkV, {
                           isShaking: p > 0,
                           intensity: p,
-                          className: eq.shaker,
+                          className: eY.shaker,
                           children: E
                       })
                     : E
@@ -542,11 +542,11 @@ class e0 extends l.PureComponent {
             P = c === U.Ie.SIDEBAR;
         t = P && n.type === ez.d4z.GUILD_VOICE ? eW.t.pnnyFR : P && n.type === ez.d4z.GUILD_STAGE_VOICE ? eW.t.YInSkp : d.T.THREADS.has(n.type) ? eW.t['OkzL+f'] : eW.t.UbNmGR;
         let R = (0, i.jsx)('div', {
-                className: eq.channelBottomBarArea,
+                className: eY.channelBottomBarArea,
                 children: (0, i.jsx)(eH.Z, {})
             }),
             M = (0, i.jsxs)('div', {
-                className: eq.channelBottomBarArea,
+                className: eY.channelBottomBarArea,
                 children: [
                     (0, i.jsx)(eC.Z, {
                         tutorialId: 'writing-messages',
@@ -581,8 +581,8 @@ class e0 extends l.PureComponent {
             L = Z && N,
             k = L && N ? R : M,
             O = r()({
-                [eY.barWithAppLauncherButton]: b,
-                [eY.barWithAppsDMsUI]: Z
+                [eq.barWithAppLauncherButton]: b,
+                [eq.barWithAppsDMsUI]: Z
             });
         return (0, i.jsx)(
             x.Z,
@@ -611,7 +611,7 @@ class e0 extends l.PureComponent {
                                 }),
                                 (0, i.jsxs)(eJ, {
                                     isSidebar: P,
-                                    className: eq.chatContent,
+                                    className: eY.chatContent,
                                     'aria-label': eW.intl.formatToPlainString(t, { channelName: n.name }),
                                     onMouseDown: this.handleChatInteract,
                                     onKeyDown: this.handleKeyDown,
@@ -646,7 +646,7 @@ class e0 extends l.PureComponent {
                                                       : (0, i.jsxs)('form', {
                                                             ref: this.inputFormRef,
                                                             onSubmit: eX,
-                                                            className: r()(eq.form, { [eq.formWithLoadedChatInput]: !L }),
+                                                            className: r()(eY.form, { [eY.formWithLoadedChatInput]: !L }),
                                                             children: [
                                                                 v && (0, i.jsx)(ec.Z, { channelId: n.id }),
                                                                 n.isPrivate()
@@ -730,7 +730,7 @@ class e0 extends l.PureComponent {
             }),
             eK(this, 'handleOpenExpressionPicker', (e) => {
                 let { activeView: t } = e;
-                (0, q.PG)(t, this.props.chatInputType);
+                (0, Y.PG)(t, this.props.chatInputType);
             }),
             eK(this, 'handleOpenAppLauncher', (e) => {
                 let { applicationId: t } = e;
@@ -770,7 +770,7 @@ class e0 extends l.PureComponent {
                 let { showAppDMsUI: e, isFailedAppDMLoad: t, channel: n, entryPointCommandButtonRef: l, chatInputType: a } = this.props;
                 return e && !t
                     ? (0, i.jsx)('div', {
-                          className: eq.entryPointButtonContainer,
+                          className: eY.entryPointButtonContainer,
                           children: (0, i.jsx)(eF.ZP, {
                               context: {
                                   channel: n,
@@ -789,7 +789,7 @@ let e1 = l.memo(function (e) {
         { placeholder: s, accessibilityLabel: o } = (0, eD.Z)({ channel: t }),
         c = (0, eu.S)(ej.default.getCurrentUser(), t),
         [d] = (0, Q.AB)(null == n ? void 0 : n.id),
-        p = (0, Y.Ux)(null == n ? void 0 : n.id),
+        p = (0, q.Ux)(null == n ? void 0 : n.id),
         m = (0, u.e7)([ej.default], () => ej.default.getCurrentUser()),
         f = (0, u.e7)([eb.ZP], () => {
             var e, t, i;

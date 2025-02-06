@@ -10,23 +10,23 @@ var i = n(200651),
     u = n(239091),
     h = n(111028),
     p = n(540059),
-    m = n(569471),
-    g = n(488131),
+    g = n(569471),
+    m = n(488131),
     f = n(592125),
     _ = n(306680),
     v = n(979651),
-    x = n(938475),
-    C = n(714794),
+    C = n(938475),
+    x = n(714794),
     Z = n(876548),
     I = n(25601),
     b = n(207055),
     S = n(981631),
     N = n(124368),
-    j = n(388032),
-    E = n(831746),
+    E = n(388032),
+    j = n(831746),
     y = n(193877),
     P = n(329986);
-function T(e) {
+function A(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
         r = {
             className: a()(P.spine, { [P.spineWithGuildIcon]: n }, { [P.invertedSpine]: l }),
@@ -71,7 +71,7 @@ function T(e) {
               ]
           });
 }
-function A(e) {
+function T(e) {
     let { style: t, withGuildIcon: n } = e;
     return (0, i.jsx)('svg', {
         className: a()(P.spine, { [P.spineWithGuildIcon]: n }),
@@ -89,7 +89,7 @@ function A(e) {
 }
 let w = l.memo(function (e) {
     let { thread: t, isSelectedChannel: r, isSelectedVoice: P, isLast: w, withGuildIcon: R } = e,
-        L = (0, s.e7)([x.ZP], () => x.ZP.getVoiceStatesForChannel(t), [t]),
+        L = (0, s.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]),
         M = (0, s.e7)([v.Z], () => v.Z.hasVideo(t.id)),
         {
             unread: D,
@@ -100,10 +100,10 @@ let w = l.memo(function (e) {
             mentionCount: _.ZP.getMentionCount(t.id),
             isMentionLowImportance: _.ZP.getIsMentionLowImportance(t.id)
         })),
-        B = (0, s.e7)([m.Z], () => m.Z.isMuted(t.id)),
+        B = (0, s.e7)([g.Z], () => g.Z.isMuted(t.id)),
         O = l.useCallback(
             (e) => {
-                (0, g.ok)(t, !e.shiftKey, N.on.CHANNEL_LIST);
+                (0, m.ok)(t, !e.shiftKey, N.on.CHANNEL_LIST);
             },
             [t]
         ),
@@ -115,7 +115,7 @@ let w = l.memo(function (e) {
                 let l = f.Z.getChannel(t.id);
                 null != l &&
                     (0, u.jW)(e, async () => {
-                        let { default: e } = await n.e('40157').then(n.bind(n, 422200));
+                        let { default: e } = await n.e('78650').then(n.bind(n, 422200));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -130,17 +130,17 @@ let w = l.memo(function (e) {
         W = l.useRef(null),
         q =
             G > 0
-                ? j.intl.formatToPlainString(j.t['ZL7+Iy'], {
+                ? E.intl.formatToPlainString(E.t['ZL7+Iy'], {
                       channelName: t.name,
                       mentionCount: G
                   })
                 : D
-                  ? j.intl.formatToPlainString(j.t.YlVvmZ, { channelName: t.name })
-                  : j.intl.formatToPlainString(j.t['0nZpiI'], { channelName: t.name }),
-        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? T : A;
+                  ? E.intl.formatToPlainString(E.t.YlVvmZ, { channelName: t.name })
+                  : E.intl.formatToPlainString(E.t['0nZpiI'], { channelName: t.name }),
+        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? A : T;
     return (0, i.jsxs)('li', {
         role: H,
-        className: a()(E.containerDefault, { [E.selected]: r }),
+        className: a()(j.containerDefault, { [j.selected]: r }),
         children: [
             (0, i.jsx)(Y, { withGuildIcon: R }),
             w
@@ -159,7 +159,7 @@ let w = l.memo(function (e) {
                     right: 4
                 },
                 children: (0, i.jsxs)('div', {
-                    className: a()(E.iconVisibility, y.wrapper, y.typeThread, {
+                    className: a()(j.iconVisibility, y.wrapper, y.typeThread, {
                         [y.modeSelected]: r,
                         [y.modeMuted]: !r && B,
                         [y.modeUnreadImportant]: !B && !r && D,
@@ -194,7 +194,7 @@ let w = l.memo(function (e) {
                                                       channel: t
                                                   })
                                                 : null,
-                                            (0, C.Z)(G)
+                                            (0, x.Z)(G)
                                                 ? (0, i.jsx)(I.Z, {
                                                       mentionsCount: G,
                                                       isMentionLowImportance: k

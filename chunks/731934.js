@@ -242,7 +242,7 @@ let D = () => {
                       })
         });
     },
-    y = () => {
+    Z = () => {
         let e = (0, _.VM)(),
             t = (0, g.Z)() ? T.AG : T.i0,
             n = (0, m.o)(I.intl.formatToPlainString(I.t['1/PzIi'], { maxConnections: t }), I.intl.formatToPlainString(I.t.RcTgiI, { maxConnections: t }));
@@ -257,7 +257,7 @@ let D = () => {
               })
             : null;
     },
-    Z = () => {
+    y = () => {
         let e = (0, h.o)(),
             t = (0, h.Q)(),
             n = (0, a.EQ)({
@@ -300,6 +300,6 @@ let D = () => {
         let e = (0, g.Z)();
         return (0, i.jsxs)('div', {
             className: b.container,
-            children: [e ? (0, i.jsx)(O, {}) : (0, i.jsx)(R, {}), (0, i.jsx)(D, {}), (0, i.jsx)(k, {}), (0, i.jsx)(y, {}), (0, i.jsx)(Z, {})]
+            children: [e ? (0, i.jsx)(O, {}) : (0, i.jsx)(R, {}), (0, i.jsx)(D, {}), (0, i.jsx)(k, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(y, {})]
         });
     };

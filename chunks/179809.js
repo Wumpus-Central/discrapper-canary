@@ -10,22 +10,22 @@ var i = n(200651),
     u = n(481060),
     h = n(153867),
     p = n(540059),
-    m = n(771845),
-    g = n(624138),
+    g = n(771845),
+    m = n(624138),
     f = n(727258),
     _ = n(276952),
     v = n(199540),
-    x = n(40153),
-    C = n(252686),
+    C = n(40153),
+    x = n(252686),
     Z = n(682662),
     I = n(662146),
     b = n(388032),
     S = n(10448),
     N = n(284923);
-let j = (0, g.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    E = (0, s.animated)(u.Kqy);
+let E = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    j = (0, s.animated)(u.Kqy);
 function y(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: d, mentionCount: g = 0, isMentionLowImportance: y, unread: P = !1, defaultFolderName: T, useCircleMask: A = !1, draggable: w = !1, sorting: R = !1, onDragStart: L, onDragEnd: M, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: O } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: d, mentionCount: m = 0, isMentionLowImportance: y, unread: P = !1, defaultFolderName: A, useCircleMask: T = !1, draggable: w = !1, sorting: R = !1, onDragStart: L, onDragEnd: M, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: O } = e,
         { id: U, name: V, children: F } = t,
         H = (0, p.Q3)('FolderItem'),
         [z, W] = l.useState(!1),
@@ -44,7 +44,7 @@ function y(e) {
                 }
             ),
             end() {
-                null == M || M(), (0, h.V1)(m.ZP.getCompatibleGuildFolders());
+                null == M || M(), (0, h.V1)(g.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
@@ -57,7 +57,7 @@ function y(e) {
             },
             [D, s]
         ),
-        ee = null != V && '' !== V ? V : null != T && '' !== T ? T : b.intl.string(b.t.xV9hVl),
+        ee = null != V && '' !== V ? V : null != A && '' !== A ? A : b.intl.string(b.t.xV9hVl),
         et = (0, c.Ie)(''.concat(U)),
         en = 'folder-items-'.concat(U),
         ei = (function (e) {
@@ -72,7 +72,7 @@ function y(e) {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
-            config: { duration: j }
+            config: { duration: E }
         }),
         er = l.useCallback((e) => (null == n ? void 0 : n(U, e)), [n, U]),
         ea = (0, i.jsxs)(Z.H, {
@@ -94,14 +94,14 @@ function y(e) {
                         className: a()(S.folderIcon, { [N.wobble]: !J && q && !s }),
                         'data-dnd-name': ee,
                         children: J
-                            ? (0, i.jsx)(C.Z, {})
+                            ? (0, i.jsx)(x.Z, {})
                             : (0, i.jsx)(v.Z, {
                                   folderNode: t,
                                   expanded: s,
-                                  forceCircular: A,
+                                  forceCircular: T,
                                   sorting: R,
                                   mediaState: d,
-                                  mentionCount: g,
+                                  mentionCount: m,
                                   isMentionLowImportance: y,
                                   tooltipName: ee,
                                   folderGroupId: en,
@@ -116,7 +116,7 @@ function y(e) {
                     })
                 }),
                 w
-                    ? (0, i.jsx)(x.ZP, {
+                    ? (0, i.jsx)(C.ZP, {
                           name: ee,
                           targetNode: t,
                           onDragOverChanged: X
@@ -142,7 +142,7 @@ function y(e) {
                 return (
                     t &&
                     (0, i.jsx)(
-                        E,
+                        j,
                         {
                             as: 'ul',
                             gap: H ? 'xxs' : 0,
@@ -159,7 +159,7 @@ function y(e) {
                 );
             }),
             w && s
-                ? (0, i.jsx)(x.Zu, {
+                ? (0, i.jsx)(C.Zu, {
                       name: ee,
                       targetNode: t
                   })

@@ -53,10 +53,10 @@ function j() {
 function A(e) {
     let { hideDeviceSelector: t = !1, hideDeviceHeader: n = !1, hideCameraSettingsLink: r = !1, onLearnMore: a, selectedBackgroundOption: d, onSelectBackgroundOption: j, renderCamera: A, hidePreviewToggle: O = !1, showSmallBackgroundOptions: R = !1, onCancelPreview: P } = e,
         { analyticsLocations: D } = (0, g.ZP)(),
-        y = (0, c.e7)([C.Z], () => C.Z.getVideoDeviceId()),
-        Z = (0, c.Wu)([C.Z], () => Object.values(C.Z.getVideoDevices())),
+        Z = (0, c.e7)([C.Z], () => C.Z.getVideoDeviceId()),
+        y = (0, c.Wu)([C.Z], () => Object.values(C.Z.getVideoDevices())),
         k = x.qF.useSetting(),
-        L = Z.map((e) => {
+        L = y.map((e) => {
             let { id: t, name: n } = e;
             return {
                 value: t,
@@ -69,7 +69,7 @@ function A(e) {
         }, []),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                A(y),
+                A(Z),
                 C.Z.isEnabled()
                     ? null
                     : (0, i.jsx)(u.Text, {
@@ -103,7 +103,7 @@ function A(e) {
                                     placeholder: S.intl.string(S.t['t9eQ/v']),
                                     className: l()(b.selector, { [b.selectorNoHeader]: n }),
                                     options: L,
-                                    value: y,
+                                    value: Z,
                                     onChange: (e) => m.Z.setVideoDevice(e),
                                     'aria-label': S.intl.string(S.t['t9eQ/v'])
                                 }),
@@ -116,7 +116,7 @@ function A(e) {
                                         children: S.intl.format(S.t.aJYgRk, {
                                             onCameraSettingsClick: () => {
                                                 var e;
-                                                null == P || P(), window.open(((e = y), (0, T.getPlatform)() === T.PlatformTypes.WINDOWS ? 'ms-settings:camera' + (null != e ? '?cameraId='.concat(encodeURIComponent(e.replace(v, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '') : '')), f.default.track(N.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: D });
+                                                null == P || P(), window.open(((e = Z), (0, T.getPlatform)() === T.PlatformTypes.WINDOWS ? 'ms-settings:camera' + (null != e ? '?cameraId='.concat(encodeURIComponent(e.replace(v, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '') : '')), f.default.track(N.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: D });
                                             }
                                         })
                                     })
@@ -130,7 +130,7 @@ function A(e) {
                         onLearnMore: a,
                         selectedBackgroundOption: d,
                         onSelectBackgroundOption: j,
-                        currentDeviceId: y,
+                        currentDeviceId: Z,
                         smallerBackgroundOptions: R
                     })
                 })

@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(532432),
     P = n(504983),
     D = n(134795),
-    y = n(513901),
-    Z = n(451392),
+    Z = n(513901),
+    y = n(451392),
     k = n(490220),
     L = n(981631),
     B = n(474936),
@@ -140,7 +140,7 @@ function U(e) {
                                           })
                                       ]
                                   }),
-                                  (0, i.jsx)(Z.Z, {
+                                  (0, i.jsx)(y.Z, {
                                       className: V.customizationSection,
                                       user: U,
                                       pendingAvatar: null != K ? K : z,
@@ -175,7 +175,7 @@ function U(e) {
                                       'decoration'
                                   ),
                                   (0, i.jsx)(
-                                      y.Z,
+                                      Z.Z,
                                       {
                                           className: V.customizationSection,
                                           isTryItOutFlow: !0,

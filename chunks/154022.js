@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(996073),
     P = n(526761),
     D = n(726985),
-    y = n(981631),
-    Z = n(611480),
+    Z = n(981631),
+    y = n(611480),
     k = n(653477),
     L = n(388032),
     B = n(871751),
@@ -102,7 +102,7 @@ function z(e) {
                         variant: 'text-md/normal',
                         children: L.intl.format(L.t.DHpTjY, {
                             onAppearanceClick() {
-                                u.Z.open(y.oAB.APPEARANCE);
+                                u.Z.open(Z.oAB.APPEARANCE);
                             }
                         })
                     })
@@ -119,7 +119,7 @@ function Y() {
                     channelId: '1337',
                     content: L.intl.formatToPlainString(L.t.bB80LC, { previewLink: 'https://discord.com/accessibility' })
                 }),
-                state: y.yb.SENT,
+                state: Z.yb.SENT,
                 id: ''.concat(0)
             });
             return (e.colorString = 'green'), e;
@@ -139,7 +139,7 @@ function Y() {
                         }),
                         (0, i.jsx)('div', {
                             className: B.previewAvatars,
-                            children: [y.Skl.ONLINE, y.Skl.DND, y.Skl.IDLE].map((e) =>
+                            children: [Z.Skl.ONLINE, Z.Skl.DND, Z.Skl.IDLE].map((e) =>
                                 (0, i.jsx)(
                                     d.Xo$,
                                     {
@@ -191,7 +191,7 @@ function W() {
             (0, i.jsx)(d.iRW, {
                 'aria-labelledby': V,
                 'aria-describedby': U,
-                markers: y.yqN.SATURATION_INCREMENTS,
+                markers: Z.yqN.SATURATION_INCREMENTS,
                 equidistant: !0,
                 stickToMarkers: !0,
                 maxValue: 1,
@@ -296,7 +296,7 @@ function J() {
                 children: (0, i.jsx)(d.j7V, {
                     note: L.intl.format(L.t.u6UjrK, {
                         onThemeClick() {
-                            u.Z.open(y.oAB.APPEARANCE);
+                            u.Z.open(Z.oAB.APPEARANCE);
                         }
                     }),
                     className: M.marginTop20,
@@ -318,7 +318,7 @@ function Q() {
     s.useEffect(() => {
         null != r.current && (clearTimeout(r.current), (r.current = null)), t !== e && (r.current = setTimeout(() => (0, h.qz)(t), 150));
     }, [t, e]);
-    let l = L.intl.format(L.t.GwEVEx, { learnMoreLink: j.Z.getArticleURL(y.BhN.FORCED_COLORS) });
+    let l = L.intl.format(L.t.GwEVEx, { learnMoreLink: j.Z.getArticleURL(Z.BhN.FORCED_COLORS) });
     return (0, i.jsx)(d.xJW, {
         title: L.intl.string(L.t.TYyfOz),
         className: M.marginTop20,
@@ -368,7 +368,7 @@ function $() {
             (0, i.jsx)(d.R94, {
                 type: d.R94.Types.DESCRIPTION,
                 className: M.marginBottom8,
-                children: L.intl.format(L.t['2l9U2t'], { helpdeskArticle: j.Z.getArticleURL(y.BhN.REDUCED_MOTION) })
+                children: L.intl.format(L.t['2l9U2t'], { helpdeskArticle: j.Z.getArticleURL(Z.BhN.REDUCED_MOTION) })
             }),
             (0, i.jsx)(d.XZJ, {
                 className: l()(M.marginTop20, M.marginBottom20),
@@ -431,16 +431,16 @@ function ee() {
                 options: [
                     {
                         name: L.intl.string(L.t['Xp+X2d']),
-                        value: Z.yr.ALWAYS_ANIMATE
+                        value: y.yr.ALWAYS_ANIMATE
                     },
                     {
                         name: L.intl.string(L.t.IlLT7e),
                         desc: L.intl.string(L.t.bIW9Tk),
-                        value: Z.yr.ANIMATE_ON_INTERACTION
+                        value: y.yr.ANIMATE_ON_INTERACTION
                     },
                     {
                         name: L.intl.string(L.t.IGu8x8),
-                        value: Z.yr.NEVER_ANIMATE
+                        value: y.yr.NEVER_ANIMATE
                     }
                 ],
                 onChange: n,
@@ -479,9 +479,9 @@ function et() {
                         value: t,
                         note: L.intl.string(L.t.Q7wgHR),
                         onChange: (e) => {
-                            v.default.track(y.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                            v.default.track(Z.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                 enabled: e,
-                                location: { section: y.jXE.SETTINGS_ACCESSIBILITY }
+                                location: { section: Z.jXE.SETTINGS_ACCESSIBILITY }
                             }),
                                 A.dN.updateSetting(e);
                         },

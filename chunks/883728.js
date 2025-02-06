@@ -12,7 +12,7 @@ let s = (e) => {
         },
         handleRightClick: (e) =>
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([i.e('38902'), i.e('77564'), i.e('18383')]).then(i.bind(i, 422200));
+                let { default: e } = await Promise.all([i.e('38902'), i.e('11300')]).then(i.bind(i, 422200));
                 return (t) =>
                     (0, n.jsx)(e, {
                         ...t,

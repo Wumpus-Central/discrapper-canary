@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(243487),
     P = n(430561),
     D = n(131704),
-    y = n(598077),
-    Z = n(189786),
+    Z = n(598077),
+    y = n(189786),
     k = n(77498),
     L = n(283595),
     B = n(594174),
@@ -222,8 +222,8 @@ function en(e) {
     let A = (0, N.$1)(),
         R = !(0, H.VS)(),
         { legacyEnabled: P, oopEnabled: D } = (0, h.cj)([O.Z], () => O.Z.getGlobalEnabledStatus()),
-        [y] = (0, I.Z)([null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : void 0]),
-        Z = (e, t, n) => {
+        [Z] = (0, I.Z)([null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : void 0]),
+        y = (e, t, n) => {
             et(n), null != r && (_.Z.toggleOverlay(r, e, t), x(t), E(e));
         },
         B = A && R,
@@ -324,7 +324,7 @@ function en(e) {
               className: S ? K.expandedContainer : void 0,
               title: (0, i.jsxs)(i.Fragment, {
                   children: [
-                      null !== (n = null == y ? void 0 : y.name) && void 0 !== n ? n : '',
+                      null !== (n = null == Z ? void 0 : Z.name) && void 0 !== n ? n : '',
                       null != u && u.verified
                           ? (0, i.jsx)(g.ua7, {
                                 text: W.intl.string(W.t['4PJP5u']),
@@ -368,7 +368,7 @@ function en(e) {
                   children: (0, i.jsx)(g.rsf, {
                       checked: m || p,
                       disabled: B || M || w || V,
-                      onChange: (e, t) => Z(e, e, t)
+                      onChange: (e, t) => y(e, e, t)
                   })
               }),
               children: [
@@ -382,7 +382,7 @@ function en(e) {
                               (0, i.jsx)(g.rsf, {
                                   checked: m,
                                   disabled: R || !D,
-                                  onChange: (e, t) => Z(p, e, t)
+                                  onChange: (e, t) => y(p, e, t)
                               }),
                               (0, i.jsx)('div', { className: K.emptySpacer })
                           ]
@@ -398,7 +398,7 @@ function en(e) {
                               (0, i.jsx)(g.rsf, {
                                   checked: p,
                                   disabled: A || !P,
-                                  onChange: (e, t) => Z(e, m, t)
+                                  onChange: (e, t) => y(e, m, t)
                               }),
                               (0, i.jsx)('div', { className: K.emptySpacer })
                           ]
@@ -649,7 +649,7 @@ function ec(e) {
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         s = '456' + Math.floor(1000000 * Math.random());
     return {
-        voiceState: new Z.Z({
+        voiceState: new y.Z({
             channelId: '123',
             userId: s,
             sessionId: '789',
@@ -661,7 +661,7 @@ function ec(e) {
             selfStream: !1,
             discoverable: i
         }),
-        user: new y.Z({
+        user: new Z.Z({
             id: s,
             username: e
         }),

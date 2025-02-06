@@ -11,8 +11,8 @@ var i = n(200651),
     m = n(783097),
     p = n(890280),
     h = n(176412),
-    v = n(981631),
-    x = n(388032),
+    x = n(981631),
+    v = n(388032),
     f = n(129571);
 function N(e) {
     let { context: t, application: n, sectionName: N, primaryEntryPointCommand: C, buttonSize: E = a.PhG.MEDIUM } = e,
@@ -20,14 +20,14 @@ function N(e) {
         I = l.useCallback(() => {
             c.yT(d.ti.ACTIVITY);
         }, []),
-        { submitting: g, wasSubmitting: _ } = (0, p.Z)({
+        { submitting: _, wasSubmitting: g } = (0, p.Z)({
             applicationId: n.id,
             context: t,
             launchingComponentId: A,
             onSubmissionComplete: I
         }),
-        [P, j] = l.useState(!1),
-        y = (0, o.Qv)({
+        [P, y] = l.useState(!1),
+        j = (0, o.Qv)({
             applicationId: n.id,
             context: t
         }),
@@ -42,19 +42,19 @@ function N(e) {
             location: s.Vh.APP_LAUNCHER_APPLICATION_VIEW,
             sectionName: N,
             commandName: T,
-            autoDismissOnClick: y === o.JS.LEAVE,
+            autoDismissOnClick: j === o.JS.LEAVE,
             launchingComponentId: A,
-            submitting: null != _ ? _ : g
+            submitting: null != g ? g : _
         }),
-        { disabled: R, reason: Z } = (0, u.Z)({
+        { disabled: R, reason: M } = (0, u.Z)({
             context: t,
             application: n,
-            activityAction: y
+            activityAction: j
         });
     return (0, i.jsx)(a.ua7, {
-        shouldShow: null != Z,
+        shouldShow: null != M,
         tooltipContentClassName: f.tooltipContent,
-        text: Z,
+        text: M,
         children: (e) => {
             let { onClick: t, ...l } = e;
             return (0, i.jsx)(a.zxk, {
@@ -65,15 +65,15 @@ function N(e) {
                 disabled: R,
                 submitting: P,
                 onClick: () => {
-                    j(!0),
+                    y(!0),
                         S(),
                         null == t || t(),
-                        r.default.track(v.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+                        r.default.track(x.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                             application_id: n.id,
                             button_action: d._y.USE_APP_COMMAND
                         });
                 },
-                'aria-label': x.intl.formatToPlainString(x.t['XjP/R0'], {
+                'aria-label': v.intl.formatToPlainString(v.t['XjP/R0'], {
                     buttonText: b,
                     applicationName: n.name
                 }),

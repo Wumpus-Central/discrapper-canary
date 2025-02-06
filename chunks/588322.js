@@ -49,7 +49,7 @@ function E(e) {
                     inSidebar: !0,
                     handleContextMenu: function (e) {
                         (0, r.jW)(e, async () => {
-                            let { default: e } = await n.e('40157').then(n.bind(n, 422200));
+                            let { default: e } = await n.e('78650').then(n.bind(n, 422200));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,

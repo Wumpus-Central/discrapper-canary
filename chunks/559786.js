@@ -9,33 +9,33 @@ var i = n(200651),
     d = n(720196);
 function u(e) {
     let { transitionTo: t, token: n, width: u } = e,
-        [_, h] = r.useState(d.n.START),
+        [h, _] = r.useState(d.n.START),
         [g, p] = r.useState(null),
         [m, f] = r.useState(''),
-        E = { impression_group: l.ImpressionGroups.ACCOUNT_REVERT_FLOW };
+        x = { impression_group: l.ImpressionGroups.ACCOUNT_REVERT_FLOW };
     return (0, i.jsx)('div', {
         style: { margin: '8px' },
         children: (0, i.jsxs)(a.MyZ, {
-            activeSlide: _,
+            activeSlide: h,
             width: u,
             onSlideReady: p,
             children: [
                 (0, i.jsx)(a.Mi4, {
                     id: d.n.START,
-                    impressionProperties: E,
+                    impressionProperties: x,
                     impressionName: l.ImpressionNames.ACCOUNT_REVERT_EXPLAINER,
                     children: (0, i.jsx)(s.Z, {
-                        setSlide: h,
+                        setSlide: _,
                         transitionTo: t
                     })
                 }),
                 (0, i.jsx)(a.Mi4, {
                     id: d.n.PASSWORD,
-                    impressionProperties: E,
+                    impressionProperties: x,
                     impressionName: l.ImpressionNames.ACCOUNT_REVERT_CHANGE_PASSWORD,
                     children: (0, i.jsx)(o.Z, {
                         setOriginalEmail: f,
-                        setSlide: h,
+                        setSlide: _,
                         transitionTo: t,
                         ready: g === d.n.PASSWORD,
                         token: n
@@ -43,7 +43,7 @@ function u(e) {
                 }),
                 (0, i.jsx)(a.Mi4, {
                     id: d.n.SUCCESS,
-                    impressionProperties: E,
+                    impressionProperties: x,
                     impressionName: l.ImpressionNames.ACCOUNT_REVERT_SUCCESS,
                     children: (0, i.jsx)(c.Z, { email: m })
                 })

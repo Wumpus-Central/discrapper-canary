@@ -30,11 +30,11 @@ function R() {
     let e = (0, a.e7)([g.Z], () => g.Z.getHardwareEncoding()),
         { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: r, clipsLength: R, clipsQuality: P } = (0, a.cj)([p.Z], () => p.Z.getSettings()),
         D = (0, a.e7)([p.Z], () => p.Z.getHardwareClassification()),
-        y = (0, a.e7)([_.Z], () => _.Z.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
-        Z = p.Z.isDecoupledGameClippingEnabled(),
+        Z = (0, a.e7)([_.Z], () => _.Z.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
+        y = p.Z.isDecoupledGameClippingEnabled(),
         k = (0, C.Z)(g.Z),
         { showClipsHeaderEntrypoint: L } = x.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
-    l()(null != y, 'Save clip keybind unset');
+    l()(null != Z, 'Save clip keybind unset');
     let B = (0, a.e7)([m.default], () => m.default.locale),
         M = s.useMemo(
             () => [
@@ -98,11 +98,11 @@ function R() {
         U = s.useCallback(
             (e) => {
                 c.Z.setKeybind({
-                    ...y,
+                    ...Z,
                     shortcut: e
                 });
             },
-            [y]
+            [Z]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -142,7 +142,7 @@ function R() {
                         })
                 ]
             }),
-            Z &&
+            y &&
                 k &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -226,7 +226,7 @@ function R() {
                         children: (0, i.jsx)('div', {
                             className: j.keyRecorder,
                             children: (0, i.jsx)(u.Z, {
-                                defaultValue: y.shortcut,
+                                defaultValue: Z.shortcut,
                                 onChange: U
                             })
                         })

@@ -116,7 +116,7 @@ function x(e) {
                         children: [
                             (0, i.jsx)(S.Z, {
                                 users: G,
-                                guildId: n.guild_id
+                                channel: n
                             }),
                             Z(),
                             L === R.y0.FULL_SIZE && F()

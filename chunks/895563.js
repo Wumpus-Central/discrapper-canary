@@ -1,6 +1,6 @@
 i.d(e, {
     P: () => v,
-    l: () => x
+    l: () => j
 }),
     i(47120);
 var t = i(200651);
@@ -16,28 +16,28 @@ var l = i(392711),
     h = i(362658),
     Z = i(981631),
     f = i(388032);
-function j(n, e) {
+function x(n, e) {
     return n.type === Z.d4z.GROUP_DM ? (e ? f.intl.string(f.t['0BWmSE']) : f.intl.string(f.t.uuVTOD)) : n.type === Z.d4z.DM ? (e ? f.intl.string(f.t['2wfKGh']) : f.intl.string(f.t.wPbAsb)) : e ? f.intl.string(f.t.Bou7lZ) : f.intl.string(f.t['4wcdEx']);
 }
-function x(n) {
+function j(n) {
     let e = (0, a.e7)([s.ZP], () => s.ZP.getChannels(Z.I_8))[Z.d4z.GUILD_CATEGORY],
         { isFavoritesPerk: i } = (0, h.z)('58e21a_1'),
         { notifyFavoriteAdded: l } = (0, u.up)();
     if (!(0, u.li)(n)) return null;
     let [[o], f] = r().partition(e, (n) => 'null' === n.channel.id);
-    function x(e) {
+    function j(e) {
         l(), (0, c.kj)(n.id, e);
     }
     return 0 === f.length
         ? (0, t.jsx)(d.sNh, {
               id: 'favorite-channel',
-              label: j(n, !1),
-              action: () => x(null)
+              label: x(n, !1),
+              action: () => j(null)
           })
         : (0, t.jsxs)(d.sNh, {
               id: 'favorite-channel',
-              label: j(n, !1),
-              action: () => x(null),
+              label: x(n, !1),
+              action: () => j(null),
               children: [
                   i &&
                       (0, t.jsx)(d.kSQ, {
@@ -46,7 +46,7 @@ function x(n) {
                               {
                                   id: 'favorite-'.concat(o.channel.id),
                                   label: o.channel.name,
-                                  action: () => x('null' === o.channel.id ? null : o.channel.id)
+                                  action: () => j('null' === o.channel.id ? null : o.channel.id)
                               },
                               o.channel.id
                           )
@@ -58,7 +58,7 @@ function x(n) {
                               {
                                   id: 'favorite-'.concat(n.channel.id),
                                   label: n.channel.name,
-                                  action: () => x(n.channel.id)
+                                  action: () => j(n.channel.id)
                               },
                               n.channel.id
                           )
@@ -73,7 +73,7 @@ function v(n) {
         ? null
         : (0, t.jsx)(d.sNh, {
               id: 'favorite-channel',
-              label: j(n, !0),
+              label: x(n, !0),
               color: 'danger',
               action: () =>
                   n.type === Z.d4z.GUILD_CATEGORY

@@ -56,18 +56,18 @@ let D = function () {
         [E] = (0, l.Wu)([v.Z], () => [v.Z.getGuilds()]),
         [D] = (0, l.Wu)([j.ZP], () => [j.ZP.getPremiumSubscription()]);
     (0, I.t)();
-    let y = Object.values(E).map((e) => ({
+    let Z = Object.values(E).map((e) => ({
             value: e,
             label: e.name
         })),
-        [Z, k] = s.useState(y.length > 0 ? y[0].value : null),
+        [y, k] = s.useState(Z.length > 0 ? Z[0].value : null),
         [L, B] = s.useState(''),
         [M, w] = s.useState({
             plan_id: O.Xh.PREMIUM_MONTH_TIER_2,
             gift: 'true'
         }),
         V = 'true' !== M.gift && null != D,
-        [U, G] = s.useState(y.length > 0 ? y[0].value : null),
+        [U, G] = s.useState(Z.length > 0 ? Z[0].value : null),
         { analyticsLocations: F } = (0, m.ZP)(u.Z.PAYMENT_FLOW_TEST_PAGE),
         [H, z] = s.useState(''),
         [Y, W] = s.useState(A.lds),
@@ -160,13 +160,13 @@ let D = function () {
                     className: R.formItem,
                     children: [
                         (0, i.jsx)(a.q4e, {
-                            value: Z,
-                            options: y,
+                            value: y,
+                            options: Z,
                             onChange: (e) => k(e)
                         }),
-                        null != Z
+                        null != y
                             ? (0, i.jsx)(_.Z, {
-                                  guild: Z,
+                                  guild: y,
                                   analyticsLocation: {}
                               })
                             : (0, i.jsx)('div', { children: 'No Guild to boost' })
@@ -341,7 +341,7 @@ let D = function () {
                         }),
                         (0, i.jsx)(a.q4e, {
                             value: U,
-                            options: y,
+                            options: Z,
                             onChange: (e) => G(e)
                         })
                     ]

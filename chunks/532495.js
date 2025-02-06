@@ -29,7 +29,7 @@ var s = n(512722),
     O = n(388032),
     R = n(91768);
 function P() {
-    var e, t, n, s, P, D, y, Z;
+    var e, t, n, s, P, D, Z, y;
     let k = (0, l.e7)([j.default], () => {
             let e = j.default.getCurrentUser();
             return r()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
@@ -87,7 +87,7 @@ function P() {
                     errors: H.pronouns,
                     onPronounsChange: I.ID,
                     pendingPronouns: U,
-                    currentPronouns: null !== (y = null == L ? void 0 : L.pronouns) && void 0 !== y ? y : ''
+                    currentPronouns: null !== (Z = null == L ? void 0 : L.pronouns) && void 0 !== Z ? Z : ''
                 },
                 'pronouns'
             ),
@@ -157,7 +157,7 @@ function P() {
                     errors: $,
                     onBioChange: (e) => (0, m.xQ)(e, null == L ? void 0 : L.bio),
                     pendingBio: V,
-                    currentBio: null !== (Z = null == L ? void 0 : L.bio) && void 0 !== Z ? Z : ''
+                    currentBio: null !== (y = null == L ? void 0 : L.bio) && void 0 !== y ? y : ''
                 },
                 'bio'
             ),

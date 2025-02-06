@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => x });
 var i = n(200651),
     l = n(192379),
     a = n(120356),
@@ -11,8 +11,8 @@ var i = n(200651),
     m = n(772606),
     p = n(388032),
     h = n(661630);
-function v(e) {
-    let { context: t, entrypoint: n, title: a, look: v, items: x, sectionName: f, sectionOverallPosition: N } = e,
+function x(e) {
+    let { context: t, entrypoint: n, title: a, look: x, items: v, sectionName: f, sectionOverallPosition: N } = e,
         C = (0, d.s)('AppLauncherApplicationListViewScreen'),
         E = l.useMemo(() => (n === c._b.TEXT ? u.kA : u.qR), [n]);
     return (0, i.jsxs)('section', {
@@ -33,17 +33,17 @@ function v(e) {
             (0, i.jsx)(s.Ttm, {
                 children: (0, i.jsx)('div', {
                     className: o()({
-                        [h.appGrid]: v !== u.U4.ROW,
-                        [h.rows]: v === u.U4.ROW
+                        [h.appGrid]: x !== u.U4.ROW,
+                        [h.rows]: x === u.U4.ROW
                     }),
-                    children: x.map((e, n) => {
+                    children: v.map((e, n) => {
                         let { application: l, installOnDemand: a, showsPromoted: o } = e;
                         return (0, i.jsx)(
                             E,
                             {
                                 context: t,
                                 application: l,
-                                look: v,
+                                look: x,
                                 sectionName: f,
                                 resultsPosition: n,
                                 location: r.Vh.APP_LAUNCHER_LIST_VIEW_ALL,

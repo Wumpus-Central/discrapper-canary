@@ -74,7 +74,7 @@ function W(e) {
                                   (0, i.jsx)(b.ZP.Title, { children: H.intl.string(H.t['4WNcpq']) })
                               ]
                           }),
-                          (0, i.jsx)(q, {
+                          (0, i.jsx)(Y, {
                               parentChannel: a,
                               parentMessageId: n,
                               location: l
@@ -84,7 +84,7 @@ function W(e) {
               })
           });
 }
-function q(e) {
+function Y(e) {
     let { parentChannel: t, parentMessageId: n, location: a } = e,
         d = (0, s.e7)([p.Z], () => p.Z.messageGroupSpacing),
         h = (function () {
@@ -270,7 +270,7 @@ function q(e) {
                                             disabled: j
                                         }),
                                         t.type === F.d4z.GUILD_TEXT
-                                            ? (0, i.jsx)(Y, {
+                                            ? (0, i.jsx)(q, {
                                                   startedFromMessage: null != n,
                                                   threadSettings: m,
                                                   updateThreadSettings: g,
@@ -309,7 +309,7 @@ function q(e) {
         })
     });
 }
-function Y(e) {
+function q(e) {
     let { startedFromMessage: t, threadSettings: n, updateThreadSettings: l, privateThreadMode: a } = e,
         s = (0, D.oD)(n, a),
         c = (0, i.jsx)('div', {

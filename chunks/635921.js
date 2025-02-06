@@ -73,9 +73,9 @@ let R = (e) => {
     var t, n;
     let { isFullscreen: s, className: d, buttonClassName: f, subscriptionTier: I, entrypoint: R, isDarkMode: P } = e,
         { analyticsLocations: D } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
-        y = (0, h._O)(),
-        Z = (0, _.Ng)(),
-        k = (0, _.Wp)(Z, S.Si.TIER_2) ? S.Si.TIER_2 : void 0,
+        Z = (0, h._O)(),
+        y = (0, _.Ng)(),
+        k = (0, _.Wp)(y, S.Si.TIER_2) ? S.Si.TIER_2 : void 0,
         L = (0, x.N)(),
         B = (0, m.Nx)(),
         M = (0, E.Vi)(),
@@ -112,7 +112,7 @@ let R = (e) => {
                                     })
                                 })
                               : (0, i.jsx)(O, {}),
-                        M || y
+                        M || Z
                             ? (0, i.jsx)('div', {
                                   className: r()(v.buttonContainer),
                                   children: (0, i.jsx)(N.Z, {

@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => L,
     __: () => k,
-    dm: () => Z
+    dm: () => y
 });
 var i,
     s = n(230711),
@@ -33,8 +33,8 @@ var i,
     R = n(385874),
     P = n(371000),
     D = n(377679),
-    y = n(825087),
-    Z = (((i = {}).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits'), i);
+    Z = n(825087),
+    y = (((i = {}).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits'), i);
 let k = () => {
         let e = (0, o.rO)();
         return {
@@ -114,7 +114,7 @@ let k = () => {
                     descriptionCta: m.intl.string(m.t.jVcuVV),
                     previewImage: _,
                     onClick: i,
-                    videoUrl: h ? D.Z : y.Z
+                    videoUrl: h ? D.Z : Z.Z
                 }
             };
         return e ? f : C;

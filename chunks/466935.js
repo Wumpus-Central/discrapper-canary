@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -10,29 +10,29 @@ var i = n(200651),
     u = n(98493),
     h = n(703656),
     p = n(496675),
-    m = n(785195),
-    g = n(434479),
+    g = n(785195),
+    m = n(434479),
     f = n(981631),
     _ = n(176505),
     v = n(388032);
-function x(e) {
+function C(e) {
     let { guild: t, selected: n } = e,
-        x = (0, r.e7)([p.Z], () => p.Z.can(f.Plq.KICK_MEMBERS, t)),
-        C = (0, r.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
-        Z = x && null != C ? C : 0;
+        C = (0, r.e7)([p.Z], () => p.Z.can(f.Plq.KICK_MEMBERS, t)),
+        x = (0, r.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
+        Z = C && null != x ? x : 0;
     return (
         l.useEffect(() => {
-            x &&
+            C &&
                 s.Z.fetchGuildJoinRequests({
                     guildId: t.id,
                     status: d.wB.SUBMITTED,
                     limit: u.p
                 });
-        }, [x, t.id]),
-        (0, i.jsx)(g.m, {
+        }, [C, t.id]),
+        (0, i.jsx)(m.m, {
             id: 'application-review-'.concat(t.id),
             renderIcon: (e) =>
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     className: e,
                     width: 24,
                     height: 24

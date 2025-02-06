@@ -1,9 +1,9 @@
-n.d(t, { D: () => o });
+n.d(t, { D: () => r });
 var l = n(200651);
 n(192379);
 var i = n(793030),
     a = n(750472);
-let o = (e) => {
+let r = (e) => {
     let { assets: t, assetCount: n } = e;
     return (0, l.jsxs)('div', {
         className: a.iconRow,

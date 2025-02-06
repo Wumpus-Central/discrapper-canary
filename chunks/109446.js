@@ -10,27 +10,27 @@ var i = n(200651),
     u = n(601070),
     h = n(91159),
     p = n(488131),
-    m = n(496675),
-    g = n(306680),
+    g = n(496675),
+    m = n(306680),
     f = n(594174),
     _ = n(768581),
     v = n(709054),
-    x = n(981631),
-    C = n(124368),
+    C = n(981631),
+    x = n(124368),
     Z = n(388032),
     I = n(247472);
 function b(e) {
     let { channel: t } = e,
-        r = (0, o.Wu)([u.Z, g.ZP, m.Z], () => {
+        r = (0, o.Wu)([u.Z, m.ZP, g.Z], () => {
             let e = u.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
             return a()(u.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
                 .values()
                 .map((e) => e.channel)
                 .concat(a().values(u.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
-                .filter((t) => !(t.id in e) && m.Z.can(x.Plq.VIEW_CHANNEL, t))
+                .filter((t) => !(t.id in e) && g.Z.can(C.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
-                    let n = g.ZP.lastMessageId(e.id),
-                        i = g.ZP.lastMessageId(t.id);
+                    let n = m.ZP.lastMessageId(e.id),
+                        i = m.ZP.lastMessageId(t.id);
                     return v.default.compare(n, i);
                 })
                 .reverse()
@@ -86,7 +86,7 @@ function S(e) {
     return (0, i.jsxs)(s.P3F, {
         className: I.row,
         onClick: (e) => {
-            (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, C.on.POPOUT);
+            (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, x.on.POPOUT);
         },
         children: [
             null == n

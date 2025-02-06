@@ -64,7 +64,7 @@ let b = (0, r.Z)((e) => {
         G = T ? b - 32 : Math.min(b - 64, 3 * F + 8),
         V = (e) => e === w.length - 1 || (0 === y && 1 === e),
         [z, W] = l.useState(!1),
-        [q, Y] = l.useState(!1);
+        [Y, q] = l.useState(!1);
     return (0, i.jsx)(p.Z, {
         sections: B,
         renderSection: (e) => {
@@ -95,8 +95,8 @@ let b = (0, r.Z)((e) => {
                                 participantCount: y,
                                 label: _.intl.string(_.t['3foUu7']),
                                 className: C.header,
-                                onClick: () => Y(!q),
-                                collapsed: q,
+                                onClick: () => q(!Y),
+                                collapsed: Y,
                                 channel: r
                             },
                             'audience-header-'.concat(t)
@@ -138,7 +138,7 @@ let b = (0, r.Z)((e) => {
                         'speakers-'.concat(t, '-').concat(n)
                     );
                 case 2:
-                    if (q) return null;
+                    if (Y) return null;
                     return (0, i.jsx)(
                         h.Z,
                         {
@@ -152,7 +152,7 @@ let b = (0, r.Z)((e) => {
                     return null;
             }
         },
-        rowHeight: (e) => (null == U[e][0] ? 0 : 0 === e ? G / g.Q + 8 : 1 === e ? (z ? 0 : H) : q ? 0 : 98),
+        rowHeight: (e) => (null == U[e][0] ? 0 : 0 === e ? G / g.Q + 8 : 1 === e ? (z ? 0 : H) : Y ? 0 : 98),
         renderFooter: (e) => {
             let { section: t } = e;
             return V(t) ? (0, i.jsx)('div', { className: C.spacer }, 'bottom-spacer') : null;

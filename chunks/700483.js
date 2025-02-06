@@ -43,8 +43,8 @@ var i = n(200651),
     V = n(146085),
     z = n(88751),
     W = n(427679),
-    q = n(368442),
-    Y = n(600518),
+    Y = n(368442),
+    q = n(600518),
     K = n(485287),
     X = n(754277),
     Q = n(719100),
@@ -296,13 +296,13 @@ function ed(e) {
               isActive: n,
               label: n ? en.intl.string(en.t.ScHlfn) : en.intl.string(en.t.zqxfra),
               iconComponent: n ? o.xjP : o.RZG,
-              onClick: () => (0, Y.v)(!n)
+              onClick: () => (0, q.v)(!n)
           })
         : (0, i.jsx)(P.d, {
               isActive: a,
               label: a ? en.intl.string(en.t.zqxfra) : en.intl.string(en.t.ScHlfn),
               iconComponent: a ? o.RZG : o.xjP,
-              onClick: () => (0, Y.z)(!a)
+              onClick: () => (0, q.z)(!a)
           });
 }
 let eu = l.memo(function (e) {
@@ -317,11 +317,11 @@ let eu = l.memo(function (e) {
         k = (0, s.e7)([O.Z], () => (0, _.Z)(O.Z)),
         D = (0, s.e7)([w.Z], () => w.Z.getVoiceChannelId() === t.id, [t.id]),
         B = (0, s.e7)([u.Z], () => u.Z.getStreamParticipants(t.id)[0], [t.id]),
-        H = (0, q.PK)(t.id),
+        H = (0, Y.PK)(t.id),
         V = E > 0,
         z = (P && !H) || (null != B && B.user.id !== (null == R ? void 0 : R.id)),
         { groupedButtons: W } = (0, I.ZP)({ location: 'SpeakerControlTray' }),
-        { enabled: Y } = (0, h.Z)({ location: 'SpeakerControlTray' });
+        { enabled: q } = (0, h.Z)({ location: 'SpeakerControlTray' });
     if (null == R) return null;
     let K = (0, i.jsxs)(i.Fragment, {
         children: [
@@ -331,7 +331,7 @@ let eu = l.memo(function (e) {
                     return (0, i.jsx)(A.Z, {
                         children: (0, i.jsx)(m.Z, {
                             onClose: t,
-                            simplified: Y
+                            simplified: q
                         })
                     });
                 },
@@ -382,7 +382,7 @@ let eu = l.memo(function (e) {
                                         renderPopout: (e) => {
                                             let { closePopout: t } = e;
                                             return (0, i.jsx)(A.Z, {
-                                                children: Y
+                                                children: q
                                                     ? (0, i.jsx)(p.default, {
                                                           onClose: t,
                                                           renderInputDevices: !0,
@@ -448,7 +448,7 @@ let eu = l.memo(function (e) {
                           D && (0, i.jsx)(ea, { channel: t }),
                           D && c && n && (0, i.jsx)(es, { onClick: () => (0, F.RK)(t, !1) }),
                           D && !n && (0, i.jsx)(ec, { onClick: () => (0, F.yi)(t) }),
-                          Y ? (0, i.jsx)(j.Z, { channel: t }) : null
+                          q ? (0, i.jsx)(j.Z, { channel: t }) : null
                       ]
                   }),
                   (0, i.jsx)(eo, { channel: t })

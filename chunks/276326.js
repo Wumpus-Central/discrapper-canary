@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     gatedContent: 'gatedContent__7184c',
     image: 'image__7184c',
     title: 'title__7184c',

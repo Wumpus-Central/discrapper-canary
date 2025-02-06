@@ -153,8 +153,8 @@ function v(e) {
                 row: P
             });
     }, [P]);
-    let y = null != R ? R.length : O.length,
-        Z = (() => {
+    let Z = null != R ? R.length : O.length,
+        y = (() => {
             if (null != R) {
                 var e;
                 return null === (e = R[P]) || void 0 === e ? void 0 : e.id;
@@ -193,29 +193,29 @@ function v(e) {
                                         break;
                                     }
                                     case 'arrowup':
-                                        0 === P ? D(y - 1) : D(P - 1);
+                                        0 === P ? D(Z - 1) : D(P - 1);
                                         break;
                                     case 'arrowdown':
-                                        P >= y - 1 ? D(0) : D(P + 1);
+                                        P >= Z - 1 ? D(0) : D(P + 1);
                                 }
                         },
                         placeholder: x.intl.string(x.t.tG0r7u),
                         role: 'combobox',
                         'aria-controls': c,
-                        'aria-expanded': y > 0,
-                        'aria-activedescendant': y > 0 && null != Z ? Z : void 0,
+                        'aria-expanded': Z > 0,
+                        'aria-activedescendant': Z > 0 && null != y ? y : void 0,
                         'aria-autocomplete': 'list',
                         spellCheck: !1
                     })
                 }),
-                0 === y && '' !== j && (0, i.jsx)(S, {}),
-                (y > 0 || '' === j) &&
+                0 === Z && '' !== j && (0, i.jsx)(S, {}),
+                (Z > 0 || '' === j) &&
                     (0, i.jsx)(l.Tvr, {
                         innerId: c,
                         innerRole: 'listbox',
                         'aria-label': x.intl.string(x.t['+N3fW1']),
                         ref: E,
-                        sections: [y],
+                        sections: [Z],
                         renderRow: function (e) {
                             let { row: t } = e,
                                 s = (() => {

@@ -1,4 +1,4 @@
-i.d(e, { Z: () => j }), i(47120);
+i.d(e, { Z: () => x }), i(47120);
 var t = i(200651);
 i(192379);
 var l = i(442837),
@@ -12,7 +12,7 @@ var l = i(442837),
     h = i(306680),
     Z = i(981631),
     f = i(388032);
-function j(n) {
+function x(n) {
     let e = (function (n) {
         let e = (0, d.n2)(n.guild_id, n.id),
             i = (0, l.e7)(

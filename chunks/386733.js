@@ -123,10 +123,10 @@ let v = (e) => {
             j = (0, T.uv)('ReferralProgramProgressBar'),
             O = (0, T.TW)('ReferralProgramProgressBar'),
             { referralSentUsers: R, hasSentAllReferrals: P, refreshAt: D } = (0, E.G)(),
-            y = s.useMemo(() => R.map((e) => new m.Z(e)), [R]),
-            { subscriberHomeVariant: Z } = p.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
+            Z = s.useMemo(() => R.map((e) => new m.Z(e)), [R]),
+            { subscriberHomeVariant: y } = p.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
             k = j === N.g2L.UNAPPLIED || j === N.g2L.QUALIFIED,
-            L = Z === p.p.VARIANT_2,
+            L = y === p.p.VARIANT_2,
             B = {
                 redeemed: 0,
                 converted: 0,
@@ -184,7 +184,7 @@ let v = (e) => {
                                       ]
                                   })
                                 : (0, i.jsx)(A, {
-                                      userRecords: y,
+                                      userRecords: Z,
                                       recipientStatus: v
                                   }),
                             (0, i.jsx)(o.Text, {

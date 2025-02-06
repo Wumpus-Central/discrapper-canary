@@ -91,8 +91,8 @@ function w(e) {
         {
             handleInvite: z,
             handleMessage: W,
-            handlePersonalize: q,
-            handleDownload: Y,
+            handlePersonalize: Y,
+            handleDownload: q,
             handleAddApplication: K
         } = (function (e) {
             let t = l.useCallback(() => {
@@ -269,7 +269,7 @@ function w(e) {
                             iconUrl: en ? d.$_T : k,
                             header: A.intl.string(A.t.c5kxPj),
                             completed: V,
-                            onClick: q
+                            onClick: Y
                         })
                     },
                     'customize'
@@ -303,7 +303,7 @@ function w(e) {
                             iconUrl: en ? d.yIb : M,
                             header: A.intl.string(A.t.pGVNIy),
                             completed: F,
-                            onClick: Y
+                            onClick: q
                         })
                     },
                     'download'

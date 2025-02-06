@@ -27,11 +27,11 @@ var i = n(200651),
     A = n(652849);
 function O(e) {
     let { subscription: t, onPaymentSourceAdded: n, highlightAddPaymentMethodButton: r, dropdownClassName: a, analyticsLocation: O, currentInvoicePreview: P, disabled: D = !1 } = e,
-        y = (0, c.e7)([E.Z], () => E.Z.hidePersonalInformation),
-        [Z, k] = (0, c.Wu)([C.Z], () => [C.Z.paymentSources, C.Z.hasFetchedPaymentSources]),
+        Z = (0, c.e7)([E.Z], () => E.Z.hidePersonalInformation),
+        [y, k] = (0, c.Wu)([C.Z], () => [C.Z.paymentSources, C.Z.hasFetchedPaymentSources]),
         L = (0, p.V)((0, I.yb)(t)),
         { analyticsLocations: B } = (0, x.ZP)(),
-        M = s.useMemo(() => Object.values(Z).filter((e) => !e.invalid), [Z]),
+        M = s.useMemo(() => Object.values(y).filter((e) => !e.invalid), [y]),
         [w, V] = s.useState(!1),
         [U, G] = s.useState(t.currency),
         F = async (e, n) => {
@@ -134,7 +134,7 @@ function O(e) {
                                 : null,
                         className: a,
                         paymentSources: M,
-                        hidePersonalInformation: y,
+                        hidePersonalInformation: Z,
                         selectedPaymentSourceId: e,
                         onChange: Y,
                         onPaymentSourceAdd: K,

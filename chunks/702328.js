@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(568126),
     P = n(605289),
     D = n(346497),
-    y = n(218390),
-    Z = n(823188),
+    Z = n(218390),
+    y = n(823188),
     k = n(241158),
     L = n(135785),
     B = n(498765),
@@ -140,7 +140,7 @@ let ec = (e) => {
             eR = null !== eO && eO !== J.Si.TIER_2 ? J.Si.TIER_2 : null,
             eP = (0, j.n)(),
             eD = null != eP,
-            [ey, eZ] = s.useState(!1),
+            [eZ, ey] = s.useState(!1),
             ek = (0, A.N)(),
             eL = null == ek ? void 0 : null === (t = ek.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
             eB = (0, S.Nx)(),
@@ -168,8 +168,8 @@ let ec = (e) => {
                     onChange: (e) => eT(e),
                     threshold: 0.1,
                     active: !0,
-                    children: (0, i.jsx)(Z.ZP, {
-                        variant: e_ ? Z.NN.MARKETING_PAGE_V2 : Z.NN.DEFAULT,
+                    children: (0, i.jsx)(y.ZP, {
+                        variant: e_ ? y.NN.MARKETING_PAGE_V2 : y.NN.DEFAULT,
                         showWumpus: !e_,
                         tier0CTAButton: e_
                             ? (0, i.jsx)(W.Z, {
@@ -297,14 +297,14 @@ let ec = (e) => {
                     !e_ && eG,
                     k === J.EZ.UserSettings &&
                         null != ew &&
-                        (0, i.jsx)(y.C, {
+                        (0, i.jsx)(Z.C, {
                             className: et.giftPromoCard,
                             config: ew
                         }),
                     (0, i.jsx)(eu, {
                         isFullscreen: r,
                         inOfferExperience: eB,
-                        setIsAllPerksVisible: eZ,
+                        setIsAllPerksVisible: ey,
                         hasRenderedOnce: eb,
                         isMarketingPageV2Enabled: e_,
                         isReducedMotion: U
@@ -386,8 +386,8 @@ let ec = (e) => {
                       }),
                       (0, i.jsx)(X.Z, {
                           previousComponent: K.MQ.MARKETING,
-                          isAllPerksVisible: ey,
-                          setIsAllPerksVisible: eZ,
+                          isAllPerksVisible: eZ,
+                          setIsAllPerksVisible: ey,
                           isFullScreen: r
                       })
                   ]

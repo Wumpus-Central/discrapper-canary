@@ -45,9 +45,9 @@ function y(e) {
         V = (0, o.O)(),
         z = (0, c.bp)() === N.IlC.POPOUT,
         { analyticsLocations: W } = (0, C.ZP)(),
-        q = W.length > 0 ? W[W.length - 1] : 'open-activity-shelf';
-    x.m1.useExperiment({ location: q }, { autoTrackExposure: !0 });
-    let Y = l.useCallback(() => {
+        Y = W.length > 0 ? W[W.length - 1] : 'open-activity-shelf';
+    x.m1.useExperiment({ location: Y }, { autoTrackExposure: !0 });
+    let q = l.useCallback(() => {
             (0, _.Z)({
                 channel: t,
                 guildId: t.guild_id,
@@ -113,7 +113,7 @@ function y(e) {
                                                 isActivityActive: F || (!U && k),
                                                 className: U ? '' : j.controlButton,
                                                 onClick: () => {
-                                                    Y(), (l === r.z.ACTIVITIES_MINI_SHELF_SPARKLES || l === r.z.ACTIVITY_GDM_ROCKET_SPARKLE || l === r.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || l === r.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || l === r.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && a(T.L.TAKE_ACTION);
+                                                    q(), (l === r.z.ACTIVITIES_MINI_SHELF_SPARKLES || l === r.z.ACTIVITY_GDM_ROCKET_SPARKLE || l === r.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || l === r.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || l === r.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && a(T.L.TAKE_ACTION);
                                                 },
                                                 onMouseEnter: G,
                                                 onMouseLeave: w

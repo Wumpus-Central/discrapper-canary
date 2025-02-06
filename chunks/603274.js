@@ -11,19 +11,19 @@ var l = n(120356),
     u = n(884338),
     h = n(540059),
     p = n(565799),
-    m = n(501655),
-    g = n(199902),
+    g = n(501655),
+    m = n(199902),
     f = n(592125),
     _ = n(594174),
     v = n(938475),
-    x = n(823379),
-    C = n(709054),
+    C = n(823379),
+    x = n(709054),
     Z = n(853856),
     I = n(981631),
     b = n(388032),
     S = n(782451),
     N = n(572488);
-function j(e, t) {
+function E(e, t) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
@@ -41,12 +41,12 @@ function j(e, t) {
               ]
           });
 }
-function E() {
+function j() {
     let e = (0, s.Wu)([Z.Z, f.Z], () =>
-            C.default
+            x.default
                 .keys(Z.Z.getFavoriteChannels())
                 .map((e) => f.Z.getChannel(e))
-                .filter(x.lm)
+                .filter(C.lm)
         ),
         t = e.map((e) => e.id),
         n = e.filter((e) => e.type === I.d4z.GUILD_VOICE),
@@ -64,8 +64,8 @@ function E() {
         ),
         a = (0, s.Wu)([p.Z], () =>
             o().flatMap(l, (e) =>
-                p.Z.getMutableParticipants(e, m.pV.SPEAKER)
-                    .filter((e) => e.type === m.Ui.VOICE)
+                p.Z.getMutableParticipants(e, g.pV.SPEAKER)
+                    .filter((e) => e.type === g.Ui.VOICE)
                     .map((e) => {
                         let { user: t } = e;
                         return t;
@@ -74,13 +74,13 @@ function E() {
         ),
         h = (0, s.e7)([p.Z], () => {
             let e = 0;
-            for (let t of l) e += p.Z.getParticipantCount(t, m.pV.AUDIENCE);
+            for (let t of l) e += p.Z.getParticipantCount(t, g.pV.AUDIENCE);
             return e;
         }),
         b = (0, s.Wu)(
-            [g.Z],
+            [m.Z],
             () =>
-                g.Z.getAllApplicationStreams()
+                m.Z.getAllApplicationStreams()
                     .filter((e) => t.includes(e.channelId))
                     .map((e) => e.ownerId),
             [t]
@@ -98,13 +98,13 @@ function E() {
             },
             [t]
         ),
-        E = (0, s.Wu)([_.default], () => N.map((e) => _.default.getUser(e)), [N]),
+        j = (0, s.Wu)([_.default], () => N.map((e) => _.default.getUser(e)), [N]),
         y = (0, s.Wu)([_.default], () => b.map((e) => _.default.getUser(e)), [b]),
-        P = j(
+        P = E(
             c.gj8,
             r.filter((e) => !b.includes(e.id) && !N.includes(e.id))
         ),
-        T =
+        A =
             0 === a.length
                 ? null
                 : (0, i.jsxs)('div', {
@@ -137,13 +137,13 @@ function E() {
                           })
                       ]
                   }),
-        A = j(
+        T = E(
             c.hGI,
             y.filter((e) => null != e && !N.includes(e.id))
         ),
-        w = j(c.nG3, E);
+        w = E(c.nG3, j);
     return (0, i.jsxs)(i.Fragment, {
-        children: [T, P, A, w]
+        children: [A, P, T, w]
     });
 }
 function y() {
@@ -156,7 +156,7 @@ function y() {
                     children: b.intl.string(b.t.wMWycn)
                 })
             }),
-            (0, i.jsx)(E, {})
+            (0, i.jsx)(j, {})
         ]
     });
 }

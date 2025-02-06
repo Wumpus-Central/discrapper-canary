@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(594174),
     P = n(358085),
     D = n(210887),
-    y = n(740492),
-    Z = n(695346),
+    Z = n(740492),
+    y = n(695346),
     k = n(329013),
     L = n(333859),
     B = n(726985),
@@ -443,7 +443,7 @@ class Q extends s.Component {
                         value: c.hg.H23
                     }
                 ],
-                onChange: (e) => Z.hg.updateSetting(e.value),
+                onChange: (e) => y.hg.updateSetting(e.value),
                 value: e
             })
         });
@@ -535,11 +535,11 @@ class Q extends s.Component {
             }),
             H(this, 'handleMessageDisplayModeChange', (e) => {
                 let { value: t } = e;
-                Z.jU.updateSetting(t === z.COMPACT), (0, x.ZZ)();
+                y.jU.updateSetting(t === z.COMPACT), (0, x.ZZ)();
             }),
             H(this, 'handleUIDensityChange', (e) => {
                 let { value: t } = e;
-                t !== c.Pi.UNSET_UI_DENSITY && Z.YC.updateSetting(t);
+                t !== c.Pi.UNSET_UI_DENSITY && y.YC.updateSetting(t);
             });
     }
 }
@@ -688,26 +688,26 @@ let ee = (e) => {
         });
 };
 function et() {
-    let e = Z.jU.useSetting(),
-        t = Z.RS.useSetting(),
-        n = Z.NA.useSetting(),
-        s = Z.L1.useSetting(),
-        r = Z.hg.useSetting(),
-        l = Z.YC.useSetting();
+    let e = y.jU.useSetting(),
+        t = y.RS.useSetting(),
+        n = y.NA.useSetting(),
+        s = y.L1.useSetting(),
+        r = y.hg.useSetting(),
+        l = y.YC.useSetting();
     (0, g.ZP)(() => {
         ee(o.z.CLIENT_THEMES_SETTINGS_BADGE), ee(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), ee(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     });
-    let c = (0, a.cj)([D.Z, y.ZP, p.Z, R.default, C.Z], () => {
+    let c = (0, a.cj)([D.Z, Z.ZP, p.Z, R.default, C.Z], () => {
             var e, t;
             return {
                 theme: D.Z.theme,
                 useForcedColors: p.Z.useForcedColors,
-                useSystemTheme: y.ZP.useSystemTheme,
+                useSystemTheme: Z.ZP.useSystemTheme,
                 darkSidebar: D.Z.darkSidebar,
                 fontSize: p.Z.fontSize,
                 zoom: p.Z.zoom,
                 messageGroupSpacing: p.Z.messageGroupSpacing,
-                displayCompactAvatars: y.ZP.displayCompactAvatars,
+                displayCompactAvatars: Z.ZP.displayCompactAvatars,
                 isStaff: null !== (t = null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
                 gradientPreset: C.Z.gradientPreset
             };

@@ -13,8 +13,8 @@ var a = n(200651),
     x = n(906467),
     p = n(259580),
     f = n(31336),
-    b = n(19759),
-    _ = n(432877);
+    _ = n(19759),
+    b = n(432877);
 n(381996);
 var g = n(392750),
     v = n(926976),
@@ -29,8 +29,8 @@ var g = n(392750),
     I = n(912072),
     Z = n(272193),
     O = n(735959),
-    R = n(246992),
-    w = n(496025),
+    w = n(246992),
+    R = n(496025),
     P = n(442954),
     A = n(633001),
     L = n(702904),
@@ -51,7 +51,7 @@ var g = n(392750),
 function q(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: l } = e,
         r = (0, d.Z)({
-            minDimension: b.h,
+            minDimension: _.h,
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: l,
@@ -143,17 +143,17 @@ function $() {
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: _.zU.OVERLAYS })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: b.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
                     name: 'Messaging',
-                    render: () => (0, a.jsx)(w.Z, {})
+                    render: () => (0, a.jsx)(R.Z, {})
                 }),
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: _.zU.REPORTING })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: b.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -227,7 +227,7 @@ function $() {
         } = (0, X.Z)(
             {
                 tabs: t,
-                initialSelectedTabId: null !== (e = b.Z.lastOpenTabId) && void 0 !== e ? e : void 0,
+                initialSelectedTabId: null !== (e = _.Z.lastOpenTabId) && void 0 !== e ? e : void 0,
                 onChangeTab: (e) => {
                     (0, f.Qh)({ lastOpenTabId: e });
                 }
@@ -240,7 +240,7 @@ function $() {
             name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: i }
         }),
-        (0, a.jsxs)(R.Gk, {
+        (0, a.jsxs)(w.Gk, {
             children: [
                 (0, a.jsxs)(h.ZP, {
                     className: J.headerBar,
@@ -259,14 +259,14 @@ function $() {
                 }),
                 (0, a.jsx)(n, {}),
                 r(),
-                (0, a.jsx)(R.Br, { className: K.layerContainer })
+                (0, a.jsx)(w.Br, { className: K.layerContainer })
             ]
         })
     );
 }
 function Q() {
     let e = l.useRef(null),
-        t = (0, s.e7)([b.Z], () => b.Z.sidebarWidth),
+        t = (0, s.e7)([_.Z], () => _.Z.sidebarWidth),
         [n, r] = l.useState(null),
         o = l.useCallback((e) => (0, f.Qh)({ sidebarWidth: e }), []);
     return (l.useEffect(() => {
@@ -278,7 +278,7 @@ function Q() {
               ref: e,
               className: i()(K.container),
               style: {
-                  minWidth: b.h,
+                  minWidth: _.h,
                   width: n
               },
               'data-app-right-panel': !0,
@@ -296,7 +296,7 @@ function Q() {
           });
 }
 function ee() {
-    return (0, s.e7)([b.Z], () => b.Z.displayTools)
+    return (0, s.e7)([_.Z], () => _.Z.displayTools)
         ? (0, a.jsx)('div', {
               className: i()(K.container, K.mobileContainerExpanded),
               children: (0, a.jsx)('div', {

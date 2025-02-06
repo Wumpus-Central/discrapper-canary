@@ -24,7 +24,7 @@ function h(e) {
         h = l.useRef(0),
         x = l.useRef(new Map()),
         [p, f] = l.useState([]),
-        b = l.useCallback(() => {
+        _ = l.useCallback(() => {
             var e, a, l, r;
             if (null == i.current) return;
             let o = [],
@@ -34,17 +34,17 @@ function h(e) {
                 f(o);
             }
         }, [t, n]),
-        _ = l.useRef(null);
+        b = l.useRef(null);
     l.useEffect(
         () => (
-            (_.current = new ResizeObserver(() => b())),
-            null != i.current && _.current.observe(i.current),
+            (b.current = new ResizeObserver(() => _())),
+            null != i.current && b.current.observe(i.current),
             () => {
                 var e;
-                null === (e = _.current) || void 0 === e || e.disconnect();
+                null === (e = b.current) || void 0 === e || e.disconnect();
             }
         ),
-        [b]
+        [_]
     );
     let g = l.useCallback(
         (e) => {

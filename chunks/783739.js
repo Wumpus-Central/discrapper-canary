@@ -32,9 +32,9 @@ function v(e) {
         R = (0, r.e7)([h.ZP], () => h.ZP.getFlattenedGuildIds()),
         P = O.length > 0 || R.length > 0,
         D = v.length > 0,
-        y = s.useMemo(() => v.filter((e) => null != e.premiumGuildSubscription), [v]),
-        Z = y.length > 0,
-        k = v.length > y.length,
+        Z = s.useMemo(() => v.filter((e) => null != e.premiumGuildSubscription), [v]),
+        y = Z.length > 0,
+        k = v.length > Z.length,
         L = (0, r.e7)([u.Z], () => u.Z.getCurrentUserAppliedBoosts()),
         { fractionalState: B } = (0, l.Z)({ forceFetch: !0 }),
         M = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && B === S.a$.NONE,
@@ -45,13 +45,13 @@ function v(e) {
             (0, i.jsx)(a.oQ, { className: b.blockedPaymentsWarning }),
             (0, i.jsx)(C.Z, {
                 hasGuildBoostSlots: D,
-                hasAppliedGuildBoosts: Z,
+                hasAppliedGuildBoosts: y,
                 hasBoostPerk: V,
                 canAddBoosts: w
             }),
             B === S.a$.NONE &&
                 (0, i.jsx)(N.Z, {
-                    hasAppliedGuildBoosts: Z,
+                    hasAppliedGuildBoosts: y,
                     hasBoostPerk: V,
                     hasGuildAffinitiesOrInGuild: P,
                     subscriptionIsPausedOrPausePending: M
@@ -76,7 +76,7 @@ function v(e) {
                 fractionalPremiumState: B
             }),
             (0, i.jsx)(T.Z, {
-                canAddBoosts: Z && w,
+                canAddBoosts: y && w,
                 canApplyBoosts: k
             }),
             (0, i.jsx)(d.Z, {

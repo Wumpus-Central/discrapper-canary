@@ -29,7 +29,7 @@ var i = n(200651),
     R = n(231338),
     P = n(388032),
     D = n(322389);
-function y(e) {
+function Z(e) {
     let { premiumSubscription: t, isInventory: n, onNext: s, onClose: r } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -80,7 +80,7 @@ function y(e) {
         ]
     });
 }
-async function Z(e, t, n, i) {
+async function y(e, t, n, i) {
     let s =
         null != i
             ? i
@@ -99,7 +99,7 @@ function k(e) {
     var t, n, r;
     let { premiumSubscription: l, guildBoostSlotId: c, onBack: d, onNext: E, onClose: N } = e,
         [S, b] = s.useState(!1),
-        [R, y] = s.useState(null),
+        [R, Z] = s.useState(null),
         [k, L] = s.useMemo(() => {
             try {
                 return [(0, p.g)(l, -1), !1];
@@ -203,10 +203,10 @@ function k(e) {
                         disabled: S,
                         onClick: async () => {
                             try {
-                                b(!0), y(null), await Z(l, k, V, c), E();
+                                b(!0), Z(null), await y(l, k, V, c), E();
                             } catch (t) {
                                 let e = t instanceof u.HF ? t : new u.HF(t, t.code);
-                                y(P.intl.string(e.code === m.SM.BILLING_PAUSE_INVALID_UPDATE ? P.t.dq4vq6 : P.t['5mlOCQ'])), b(!1);
+                                Z(P.intl.string(e.code === m.SM.BILLING_PAUSE_INVALID_UPDATE ? P.t.dq4vq6 : P.t['5mlOCQ'])), b(!1);
                             }
                         },
                         children: P.intl.string(P.t['/AS/gI'])
@@ -257,7 +257,7 @@ function B(e) {
     else
         switch (u) {
             case 1:
-                t = (0, i.jsx)(y, {
+                t = (0, i.jsx)(Z, {
                     premiumSubscription: d,
                     isInventory: null == n.premiumGuildSubscription,
                     onNext: () => m(2),

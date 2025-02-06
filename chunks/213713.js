@@ -13,8 +13,8 @@ var a = n(200651),
     x = n(570140),
     p = n(812206),
     f = n(835473),
-    b = n(246992),
-    _ = n(681619),
+    _ = n(246992),
+    b = n(681619),
     g = n(810568),
     v = n(168524),
     j = n(77498),
@@ -28,7 +28,7 @@ var a = n(200651),
     I = n(206583),
     Z = n(298149),
     O = n(941469);
-let R = [
+let w = [
     {
         key: 'type',
         cellClassName: i()(Z.cell, Z.cellType),
@@ -58,11 +58,11 @@ let R = [
         cellClassName: Z.cell,
         render(e) {
             let { type: t } = e;
-            return (0, a.jsx)(w, { type: t });
+            return (0, a.jsx)(R, { type: t });
         }
     }
 ];
-function w(e) {
+function R(e) {
     var t, n;
     let { type: l } = e,
         r = (0, u.e7)([E.Z], () => E.Z.getFilters()),
@@ -98,7 +98,7 @@ function P() {
                 };
             });
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
-        w = (0, u.e7)([E.Z], () => {
+        R = (0, u.e7)([E.Z], () => {
             var e;
             return (null === (e = E.Z.getFeedState(I.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
@@ -136,8 +136,8 @@ function P() {
                     children: [
                         (0, a.jsx)(h.vwX, { children: 'Inventory' }),
                         c.length > 0 &&
-                            (0, a.jsx)(_.Z, {
-                                columns: R,
+                            (0, a.jsx)(b.Z, {
+                                columns: w,
                                 data: c
                             }),
                         (0, a.jsx)(h.LZC, { size: 8 }),
@@ -151,7 +151,7 @@ function P() {
                                     feature: d.L.INBOX
                                 });
                             },
-                            submitting: w,
+                            submitting: R,
                             children: 'Refresh Now'
                         })
                     ]
@@ -229,7 +229,7 @@ function P() {
                                 });
                             },
                             serialize: (e) => e,
-                            popoutLayerContext: b.O$
+                            popoutLayerContext: _.O$
                         })
                     ]
                 })

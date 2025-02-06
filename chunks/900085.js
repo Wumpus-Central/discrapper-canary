@@ -301,7 +301,7 @@ class F extends r.PureComponent {
                             case b.d4z.PUBLIC_THREAD:
                             case b.d4z.PRIVATE_THREAD:
                                 return (0, u.jW)(e, async () => {
-                                    let { default: e } = await n.e('40157').then(n.bind(n, 422200));
+                                    let { default: e } = await n.e('78650').then(n.bind(n, 422200));
                                     return (t) =>
                                         (0, l.jsx)(e, {
                                             ...t,
@@ -333,7 +333,7 @@ class F extends r.PureComponent {
                         break;
                     case h.h8.GROUP_DM:
                         return (0, u.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('25421')]).then(n.bind(n, 354741));
+                            let { default: e } = await Promise.all([n.e('79695'), n.e('25421'), n.e('95491')]).then(n.bind(n, 354741));
                             return (n) =>
                                 (0, l.jsx)(e, {
                                     ...n,

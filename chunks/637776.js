@@ -8,20 +8,20 @@ var i = n(200651),
     c = n(703656),
     d = n(108427),
     u = n(844800),
-    _ = n(580497),
-    h = n(981631),
+    h = n(580497),
+    _ = n(981631),
     g = n(388032),
     p = n(841094);
 function m(e) {
     let { location: t } = e,
         [m, f] = r.useState(!1),
-        { verifySuccess: E, verifyErrors: I, redirectGuildId: x } = (0, l.e7)([u.Z], () => u.Z.getState());
+        { verifySuccess: x, verifyErrors: E, redirectGuildId: I } = (0, l.e7)([u.Z], () => u.Z.getState());
     r.useEffect(() => {
         let e = (0, o.Z)(t);
         a.Z.verify(e), (0, d.e)('verify_hub_email');
     }, [t]);
-    let C = () => {
-        (0, _.Z)(x), f(!0);
+    let v = () => {
+        (0, h.Z)(I), f(!0);
     };
     return m
         ? (0, i.jsxs)(s.ZP, {
@@ -36,12 +36,12 @@ function m(e) {
                   }),
                   (0, i.jsx)(s.zx, {
                       className: p.spacedButton,
-                      onClick: () => (0, c.uL)(h.Z5c.CHANNEL(x)),
+                      onClick: () => (0, c.uL)(_.Z5c.CHANNEL(I)),
                       children: g.intl.string(g.t.fIv16O)
                   })
               ]
           })
-        : E
+        : x
           ? (0, i.jsxs)(s.ZP, {
                 children: [
                     (0, i.jsx)(s.Ee, {
@@ -53,12 +53,12 @@ function m(e) {
                         children: g.intl.string(g.t.dAfGb2)
                     }),
                     (0, i.jsx)(s.zx, {
-                        onClick: C,
+                        onClick: v,
                         children: g.intl.string(g.t.uJWIj4)
                     })
                 ]
             })
-          : null != I
+          : null != E
             ? (0, i.jsxs)(s.ZP, {
                   children: [
                       (0, i.jsx)(s.Ee, {
@@ -74,7 +74,7 @@ function m(e) {
                           children: g.intl.string(g.t.tQpeAw)
                       }),
                       (0, i.jsx)(s.zx, {
-                          onClick: C,
+                          onClick: v,
                           children: g.intl.string(g.t.uJWIj4)
                       })
                   ]

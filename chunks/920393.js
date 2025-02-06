@@ -20,7 +20,7 @@ function l(e) {
             },
             [s]
         ),
-        C = (0, r.useCallback)(() => {
+        p = (0, r.useCallback)(() => {
             if (null != t.current && l && i) {
                 let e = Date.now(),
                     n = t.current.currentTime;
@@ -33,7 +33,7 @@ function l(e) {
                     (v.current = !0);
             }
         }, [t, l, i]),
-        p = (0, r.useCallback)(() => {
+        C = (0, r.useCallback)(() => {
             if (null == t.current || null == u) return;
             let e = Date.now();
             if (e - m.current < o) return;
@@ -58,9 +58,9 @@ function l(e) {
         }, [l, i]),
         (0, r.useEffect)(() => {
             if (n && l && i)
-                v.current || C(),
+                v.current || p(),
                     (d.current = window.setInterval(() => {
-                        p();
+                        C();
                     }, 200));
             else {
                 if (null != u && null != t.current) {
@@ -78,7 +78,7 @@ function l(e) {
             return () => {
                 null != d.current && (clearInterval(d.current), (d.current = null));
             };
-        }, [n, l, i, u, p, E, t, C]),
+        }, [n, l, i, u, C, E, t, p]),
         {
             forceSendCurrentSegment: (0, r.useCallback)(() => {
                 if (null != u && null != t.current) {

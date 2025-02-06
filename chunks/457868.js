@@ -43,7 +43,7 @@ var i = n(200651),
     V = n(973249);
 let z = U.ZP.getEnableHardwareAcceleration(),
     W = 44 + B.x,
-    q = l.memo(function (e) {
+    Y = l.memo(function (e) {
         let { channel: t, sectionId: a, userId: r, guildOwnerId: s } = e,
             o = (0, h.e7)([R.Z], () => R.Z.isTyping(t.id, r)),
             d = (0, h.e7)([j.ZP], () => j.ZP.getMember(t.guild_id, r)),
@@ -105,7 +105,7 @@ let z = U.ZP.getEnableHardwareAcceleration(),
                 [t.guild_id]
             );
         if (null == _) return null;
-        let q = null == d ? void 0 : d.premiumSince;
+        let Y = null == d ? void 0 : d.premiumSince;
         return (0, i.jsx)(p.yRy, {
             preload: () =>
                 (0, N.Z)(_, {
@@ -140,7 +140,7 @@ let z = U.ZP.getEnableHardwareAcceleration(),
                     isMobile: I,
                     selected: l,
                     applicationStream: L,
-                    premiumSince: null == q ? null : new Date(q),
+                    premiumSince: null == Y ? null : new Date(Y),
                     onClickPremiumGuildIcon: W,
                     itemProps: k,
                     lostPermissionTooltipText: D ? void 0 : H.intl.string(H.t['/QcoT0']),
@@ -150,7 +150,7 @@ let z = U.ZP.getEnableHardwareAcceleration(),
             }
         });
     }),
-    Y = l.memo(function (e) {
+    q = l.memo(function (e) {
         let { id: t, label: n, count: l, guildId: a } = e,
             r = (0, I.p9)({
                 roleId: t,
@@ -307,7 +307,7 @@ function X(e) {
                                     let { section: t } = e,
                                         l = u[t];
                                     return (0, i.jsx)(
-                                        Y,
+                                        q,
                                         {
                                             id: l.id,
                                             label: l.label,
@@ -322,7 +322,7 @@ function X(e) {
                                     let { section: n, row: l } = e,
                                         { userIds: a, id: r } = u[n];
                                     return (0, i.jsx)(
-                                        q,
+                                        Y,
                                         {
                                             channel: t,
                                             sectionId: r,

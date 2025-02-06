@@ -32,7 +32,7 @@ function v() {
         { subsection: A, setSubsection: O } = (0, f.Z)(),
         { analyticsLocations: R } = (0, o.ZP)(),
         { hasSearchResults: P, searchResults: D } = (0, _.E)();
-    function y(t) {
+    function Z(t) {
         if (A !== t) {
             if (n) {
                 E.S.dispatch(T.CkL.SHAKE_APP, {
@@ -48,10 +48,10 @@ function v() {
     s.useEffect(() => {
         null != j && (0, h.Z)(j.id, j.getAvatarURL(null == v ? void 0 : v.id, 80), { guildId: null == v ? void 0 : v.id });
     }, [null == v ? void 0 : v.id, j]);
-    let Z = !0,
+    let y = !0,
         k = !0;
     return (
-        P && 1 === D.length && (D.includes(I.s6.PROFILE_SERVER_PROFILES) ? (y(N.NB.GUILD), (k = !1)) : D.includes(I.s6.PROFILE_USER_PROFILE) && (y(N.NB.USER_PROFILE), (Z = !1))),
+        P && 1 === D.length && (D.includes(I.s6.PROFILE_SERVER_PROFILES) ? (Z(N.NB.GUILD), (k = !1)) : D.includes(I.s6.PROFILE_USER_PROFILE) && (Z(N.NB.USER_PROFILE), (y = !1))),
         (0, i.jsx)(o.Gt, {
             value: R,
             children: (0, i.jsxs)(l.y5t, {
@@ -65,7 +65,7 @@ function v() {
                         type: 'top',
                         look: 'brand',
                         selectedItem: A,
-                        onItemSelect: y,
+                        onItemSelect: Z,
                         children: [
                             k
                                 ? (0, i.jsx)(
@@ -78,7 +78,7 @@ function v() {
                                       N.NB.USER_PROFILE
                                   )
                                 : null,
-                            Z
+                            y
                                 ? (0, i.jsx)(
                                       l.njP.Item,
                                       {

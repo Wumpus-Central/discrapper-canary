@@ -25,7 +25,7 @@ function m(e) {
             },
             allowFetch: !0
         }),
-        v = i.useMemo(
+        x = i.useMemo(
             () =>
                 p.reduce((e, t) => {
                     let { section: n, data: i } = t;
@@ -33,16 +33,16 @@ function m(e) {
                 }, new Set()),
             [p]
         ),
-        x = i.useMemo(() => {
+        v = i.useMemo(() => {
             var e, t;
             return Object.values(null !== (t = null === (e = m.result) || void 0 === e ? void 0 : e.sections) && void 0 !== t ? t : {})
                 .map((e) => {
                     let { descriptor: t } = e;
                     return t;
                 })
-                .filter((e) => !(e.id in s.Tm) && v.has(e.id));
-        }, [null === (t = m.result) || void 0 === t ? void 0 : t.sections, v]),
-        f = (0, d.h)(x);
+                .filter((e) => !(e.id in s.Tm) && x.has(e.id));
+        }, [null === (t = m.result) || void 0 === t ? void 0 : t.sections, x]),
+        f = (0, d.h)(v);
     return {
         appsInThisServer: i.useMemo(
             () =>

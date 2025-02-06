@@ -1,25 +1,25 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var l = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    i = n(46973),
-    o = n(481060),
+    i = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    a = n(46973),
+    r = n(481060),
     c = n(304680),
     u = n(706619),
     d = n(695346),
     h = n(131951),
-    x = n(626135),
-    g = n(572004),
-    N = n(63063),
-    C = n(476221),
-    f = n(981631),
-    m = n(65154),
-    E = n(388032),
-    p = n(51100);
-let T = () => {
-        h.Z.getMediaEngine().once(i.aB.ConnectionStats, (e) => {
-            let t = Object.values(m.Yn)
+    N = n(626135),
+    f = n(572004),
+    g = n(63063),
+    x = n(476221),
+    C = n(981631),
+    p = n(65154),
+    I = n(388032),
+    v = n(51100);
+let m = () => {
+        h.Z.getMediaEngine().once(a.aB.ConnectionStats, (e) => {
+            let t = Object.values(p.Yn)
                 .map((t) => {
                     let n = e
                         .filter((e) => {
@@ -37,27 +37,27 @@ let T = () => {
                     return n;
                 })
                 .filter((e) => e.length > 0);
-            (0, g.JG)(JSON.stringify(t, null, 2)), (0, o.showToast)((0, o.createToast)(E.intl.string(E.t['t5VZ8/']), o.ToastType.SUCCESS));
+            (0, f.JG)(JSON.stringify(t, null, 2)), (0, r.showToast)((0, r.createToast)(I.intl.string(I.t['t5VZ8/']), r.ToastType.SUCCESS));
         });
     },
-    v = function (e) {
-        (0, s.useEffect)(() => {
-            x.default.track(f.rMx.OPEN_POPOUT, { type: 'RTC Connection' });
+    T = function (e) {
+        (0, i.useEffect)(() => {
+            N.default.track(C.rMx.OPEN_POPOUT, { type: 'RTC Connection' });
         }, []);
-        let t = (0, s.useCallback)(() => {
+        let t = (0, i.useCallback)(() => {
                 let { closePopout: t } = e;
                 null != t && t(), c.bA();
             }, [e]),
-            n = (0, s.useCallback)(() => {
-                let { hostname: t, averagePing: n, lastPing: r, outboundLossRate: i } = e,
-                    o = d.Sb.getSetting();
-                return (0, l.jsxs)(s.Fragment, {
+            n = (0, i.useCallback)(() => {
+                let { hostname: t, averagePing: n, lastPing: s, outboundLossRate: a } = e,
+                    r = d.Sb.getSetting();
+                return (0, l.jsxs)(i.Fragment, {
                     children: [
-                        o &&
+                        r &&
                             (0, l.jsxs)('div', {
                                 children: [
                                     (0, l.jsx)('div', {
-                                        className: p.graphContainer,
+                                        className: v.graphContainer,
                                         children: (0, l.jsx)(u.Z, {
                                             dataPoints: e.pings,
                                             width: 258,
@@ -65,33 +65,33 @@ let T = () => {
                                         })
                                     }),
                                     (0, l.jsx)('div', {
-                                        className: p.popoutText,
-                                        children: (0, l.jsx)('strong', { children: C.Z.getShortHostname(t) })
+                                        className: v.popoutText,
+                                        children: (0, l.jsx)('strong', { children: x.Z.getShortHostname(t) })
                                     })
                                 ]
                             }),
                         (0, l.jsx)('div', {
-                            className: p.popoutText,
-                            children: E.intl.format(E.t['X58/lJ'], { averagePing: n.toFixed(0) })
+                            className: v.popoutText,
+                            children: I.intl.format(I.t['X58/lJ'], { averagePing: n.toFixed(0) })
                         }),
-                        null != r
+                        null != s
                             ? (0, l.jsx)('div', {
-                                  className: p.popoutText,
-                                  children: E.intl.format(E.t['6iv2TE'], { lastPing: r.toFixed(0) })
+                                  className: v.popoutText,
+                                  children: I.intl.format(I.t['6iv2TE'], { lastPing: s.toFixed(0) })
                               })
                             : null,
-                        null != i
+                        null != a
                             ? (0, l.jsx)('div', {
-                                  className: p.popoutText,
-                                  children: E.intl.format(E.t.VIBJMz, { outboundLossRate: i.toFixed(1) })
+                                  className: v.popoutText,
+                                  children: I.intl.format(I.t.VIBJMz, { outboundLossRate: a.toFixed(1) })
                               })
                             : null,
                         (0, l.jsxs)('div', {
-                            className: a()(p.popoutText, p.popoutTextDetails),
+                            className: o()(v.popoutText, v.popoutTextDetails),
                             children: [
-                                null == i ? E.intl.formatToPlainString(E.t.vggaMj, { badPing: 250 }) : null,
-                                null != i
-                                    ? E.intl.formatToPlainString(E.t['3pFz1N'], {
+                                null == a ? I.intl.formatToPlainString(I.t.vggaMj, { badPing: 250 }) : null,
+                                null != a
+                                    ? I.intl.formatToPlainString(I.t['3pFz1N'], {
                                           badPing: 250,
                                           badLossRate: 10
                                       })
@@ -101,81 +101,81 @@ let T = () => {
                     ]
                 });
             }, [e]),
-            { connectionState: r, connectionTypeText: i } = e,
-            g = d.Sb.getSetting(),
-            v = {
-                [f.hes.AWAITING_ENDPOINT]: E.intl.format(E.t.Eu2vUV, { url: f.yXt.STATUS }),
-                [f.hes.CONNECTING]: E.intl.string(E.t['y+E8aG']),
-                [f.hes.AUTHENTICATING]: E.intl.string(E.t['5lGIZG']),
-                [f.hes.DISCONNECTED]: E.intl.string(E.t.fOX25O),
-                [f.hes.RTC_CONNECTING]: E.intl.string(E.t.b5Ubd3),
-                [f.hes.ICE_CHECKING]: E.intl.format(E.t.SyoYUV, { url: N.Z.getArticleURL(f.BhN.VOICE_CONNECTION_ERRORS) }),
-                [f.hes.DTLS_CONNECTING]: E.intl.format(E.t.SyoYUV, { url: N.Z.getArticleURL(f.BhN.VOICE_CONNECTION_ERRORS) }),
-                [f.hes.RTC_CONNECTED]: n,
-                [f.hes.NO_ROUTE]: E.intl.format(E.t['2tgQnp'], { url: N.Z.getArticleURL(f.BhN.VOICE_CONNECTION_ERRORS) }),
-                [f.hes.RTC_DISCONNECTED]: E.intl.string(E.t.fOX25O)
-            }[r];
+            { connectionState: s, connectionTypeText: a } = e,
+            f = d.Sb.getSetting(),
+            T = {
+                [C.hes.AWAITING_ENDPOINT]: I.intl.format(I.t.Eu2vUV, { url: C.yXt.STATUS }),
+                [C.hes.CONNECTING]: I.intl.string(I.t['y+E8aG']),
+                [C.hes.AUTHENTICATING]: I.intl.string(I.t['5lGIZG']),
+                [C.hes.DISCONNECTED]: I.intl.string(I.t.fOX25O),
+                [C.hes.RTC_CONNECTING]: I.intl.string(I.t.b5Ubd3),
+                [C.hes.ICE_CHECKING]: I.intl.format(I.t.SyoYUV, { url: g.Z.getArticleURL(C.BhN.VOICE_CONNECTION_ERRORS) }),
+                [C.hes.DTLS_CONNECTING]: I.intl.format(I.t.SyoYUV, { url: g.Z.getArticleURL(C.BhN.VOICE_CONNECTION_ERRORS) }),
+                [C.hes.RTC_CONNECTED]: n,
+                [C.hes.NO_ROUTE]: I.intl.format(I.t['2tgQnp'], { url: g.Z.getArticleURL(C.BhN.VOICE_CONNECTION_ERRORS) }),
+                [C.hes.RTC_DISCONNECTED]: I.intl.string(I.t.fOX25O)
+            }[s];
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                'function' == typeof v
-                    ? v()
+                'function' == typeof T
+                    ? T()
                     : (0, l.jsx)('p', {
-                          className: a()(p.popoutText, p.popoutTextDetails),
-                          children: v
+                          className: o()(v.popoutText, v.popoutTextDetails),
+                          children: T
                       }),
-                (0, l.jsx)('hr', { className: p.separator }),
+                (0, l.jsx)('hr', { className: v.separator }),
                 (0, l.jsxs)('div', {
-                    className: p.popoutBottom,
+                    className: v.popoutBottom,
                     children: [
                         (0, l.jsxs)('span', {
-                            className: a()(p.secured, p.textWithIcon),
+                            className: o()(v.secured, v.textWithIcon),
                             children: [
-                                (0, l.jsx)(o.mBM, {
+                                (0, l.jsx)(r.mBM, {
                                     size: 'xxs',
-                                    color: o.TVs.colors.TEXT_POSITIVE.css,
-                                    className: p.__invalid_icon
+                                    color: r.TVs.colors.TEXT_POSITIVE.css,
+                                    className: v.__invalid_icon
                                 }),
-                                i
+                                a
                             ]
                         }),
-                        g &&
-                            h.Z.supports(m.AN.DIAGNOSTICS) &&
+                        f &&
+                            h.Z.supports(p.AN.DIAGNOSTICS) &&
                             !__OVERLAY__ &&
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
-                                    (0, l.jsxs)(o.eee, {
-                                        className: a()(p.debugButton, p.textWithIcon),
+                                    (0, l.jsxs)(r.eee, {
+                                        className: o()(v.debugButton, v.textWithIcon),
                                         onClick: t,
                                         children: [
-                                            E.intl.string(E.t.KBoWg4),
-                                            (0, l.jsx)(o.rgF, {
+                                            I.intl.string(I.t.KBoWg4),
+                                            (0, l.jsx)(r.rgF, {
                                                 size: 'xxs',
                                                 color: 'currentColor',
-                                                className: p.__invalid_icon
+                                                className: v.__invalid_icon
                                             })
                                         ]
                                     }),
-                                    (0, l.jsxs)(o.eee, {
-                                        className: a()(p.copyStatsButton, p.textWithIcon),
-                                        onClick: T,
+                                    (0, l.jsxs)(r.eee, {
+                                        className: o()(v.copyStatsButton, v.textWithIcon),
+                                        onClick: m,
                                         title: 'Copy to clipboard',
                                         children: [
-                                            E.intl.string(E.t['XEb+Sk']),
-                                            (0, l.jsx)(o.TIy, {
+                                            I.intl.string(I.t['XEb+Sk']),
+                                            (0, l.jsx)(r.TIy, {
                                                 size: 'xxs',
                                                 color: 'currentColor',
-                                                className: p.__invalid_icon
+                                                className: v.__invalid_icon
                                             })
                                         ]
                                     })
                                 ]
                             }),
-                        !g &&
+                        !f &&
                             !__OVERLAY__ &&
-                            (0, l.jsx)(o.eee, {
-                                className: p.debugButton,
-                                href: N.Z.getArticleURL(f.BhN.VOICE_VIDEO_TROUBLESHOOTING),
-                                children: E.intl.string(E.t.hvVgAQ)
+                            (0, l.jsx)(r.eee, {
+                                className: v.debugButton,
+                                href: g.Z.getArticleURL(C.BhN.VOICE_VIDEO_TROUBLESHOOTING),
+                                children: I.intl.string(I.t.hvVgAQ)
                             })
                     ]
                 })

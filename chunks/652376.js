@@ -13,10 +13,10 @@ function c(e) {
         u = !1,
         h = !1,
         p = !1,
-        m = (0, l.e7)([o.Z], () => o.Z.getChannelId()),
-        g = null === (t = (0, r.Z)()) || void 0 === t ? void 0 : t.guild_id,
-        f = null != g && c.includes(g),
-        _ = (0, l.e7)([s.Z], () => null != m && s.Z.hasVideo(m), [m]),
+        g = (0, l.e7)([o.Z], () => o.Z.getChannelId()),
+        m = null === (t = (0, r.Z)()) || void 0 === t ? void 0 : t.guild_id,
+        f = null != m && c.includes(m),
+        _ = (0, l.e7)([s.Z], () => null != g && s.Z.hasVideo(g), [g]),
         v = (0, l.e7)([a.Z], () => a.Z.getCurrentUserActiveStream());
     return (
         d && ((u = !_), (h = _), (p = null != v && null != v.guildId && c.includes(v.guildId))),

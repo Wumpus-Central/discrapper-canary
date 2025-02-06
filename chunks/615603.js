@@ -109,7 +109,7 @@ function D(e) {
         t.id
     );
 }
-function y(e) {
+function Z(e) {
     (0, c.ZDy)(
         async () => (t) =>
             (0, i.jsx)(_.default, {
@@ -118,7 +118,7 @@ function y(e) {
             })
     );
 }
-function Z(e) {
+function y(e) {
     (0, c.ZDy)(
         async () => (t) =>
             (0, i.jsx)(x.default, {
@@ -322,8 +322,8 @@ let k = function (e) {
                                     {
                                         guildBoostSlot: e,
                                         isCancellable: K,
-                                        onCancel: y,
-                                        onUncancel: Z,
+                                        onCancel: Z,
+                                        onUncancel: y,
                                         premiumSubscription: x,
                                         useReducedMotion: k,
                                         fractionalPremiumState: _

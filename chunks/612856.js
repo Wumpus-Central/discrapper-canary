@@ -4,12 +4,12 @@ e(192379);
 var a = e(442837),
     l = e(481060),
     r = e(569471),
-    o = e(346479),
-    d = e(723170),
+    d = e(346479),
+    o = e(723170),
     s = e(124368),
     u = e(388032);
 function c(n) {
-    let t = (0, d.B)(n);
+    let t = (0, o.B)(n);
     return (0, a.e7)([r.Z], () => r.Z.hasJoined(n.id))
         ? (0, i.jsx)(l.sNh, {
               id: 'thread-notifications',
@@ -22,7 +22,7 @@ function c(n) {
                           group: 'thread-notifications',
                           id: ''.concat(a),
                           label: r,
-                          action: () => o.Z.setNotificationSettings(n, { flags: a }),
+                          action: () => d.Z.setNotificationSettings(n, { flags: a }),
                           checked: a === t
                       },
                       a

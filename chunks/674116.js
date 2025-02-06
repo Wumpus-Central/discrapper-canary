@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(459674),
     P = n(167540),
     D = n(267006),
-    y = n(803567),
-    Z = n(269876),
+    Z = n(803567),
+    y = n(269876),
     k = n(976758),
     L = n(526761),
     B = n(726985),
@@ -82,7 +82,7 @@ function F() {
                     }),
                     (0, i.jsx)(u.F, {
                         setting: B.s6.VOICE_AND_VIDEO_SENSITIVITY,
-                        children: e === w.pM.VOICE_ACTIVITY && (0, i.jsx)(Z.Z, {})
+                        children: e === w.pM.VOICE_ACTIVITY && (0, i.jsx)(y.Z, {})
                     }),
                     (0, i.jsx)(o.$i$, { className: U.marginBottom40 })
                 ]
@@ -121,7 +121,7 @@ function F() {
                         (0, i.jsx)(D.Z, {}),
                         (0, i.jsx)(u.F, {
                             setting: B.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                            children: (0, i.jsx)(y.Z, {})
+                            children: (0, i.jsx)(Z.Z, {})
                         }),
                         (0, i.jsx)(O.Z, {}),
                         (0, i.jsx)(b.Z, {}),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var a = n(200651),
     l = n(192379),
     r = n(120356),
@@ -23,7 +23,7 @@ let f = async () =>
                 rejectWithError: !1
             })
         ).body.map((e) => c.Z.createFromServer(e)),
-    b = [
+    _ = [
         {
             label: 'Nitro Monthly',
             value: h.Xh.PREMIUM_MONTH_TIER_2
@@ -57,11 +57,11 @@ let f = async () =>
             value: h.xT
         }
     ];
-function _() {
+function b() {
     let [e, t] = l.useState('511651880837840896'),
         [n, r] = l.useState([]),
         [c, h] = l.useState(!1),
-        _ = async () => {
+        b = async () => {
             try {
                 h(!0);
                 let e = await f();
@@ -71,7 +71,7 @@ function _() {
             }
         };
     l.useEffect(() => {
-        _();
+        b();
     }, []);
     let g = l.useMemo(() => n.find((e) => e.status === m.O0b.ACTIVE), [n]),
         v = l.useMemo(() => n.filter((e) => e.status !== m.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [n]),
@@ -81,14 +81,14 @@ function _() {
                 body: { plan_id: e },
                 rejectWithError: !1
             }),
-                await _();
+                await b();
         },
         C = async () => {
             await o.tn.del({
                 url: '/debug/subscription',
                 rejectWithError: !1
             }),
-                await _();
+                await b();
         };
     return (0, a.jsx)(s.zJl, {
         className: i()(x.panel),
@@ -110,7 +110,7 @@ function _() {
                                 disabled: c,
                                 look: s.zxk.Looks.BLANK,
                                 size: s.zxk.Sizes.ICON,
-                                onClick: _,
+                                onClick: b,
                                 children: (0, a.jsx)('span', {
                                     title: 'Refresh',
                                     children: (0, a.jsx)(s.DuK, {
@@ -135,7 +135,7 @@ function _() {
                                 (0, a.jsx)(s.PhF, {
                                     serialize: (e) => e,
                                     isSelected: (t) => t === e,
-                                    options: b,
+                                    options: _,
                                     select: t,
                                     popoutLayerContext: d.O$
                                 }),
@@ -170,7 +170,7 @@ function _() {
                             }),
                             (0, a.jsx)(u.Z, {
                                 subscription: g,
-                                onUpdated: _
+                                onUpdated: b
                             })
                         ]
                     }),
@@ -188,7 +188,7 @@ function _() {
                                     u.Z,
                                     {
                                         subscription: e,
-                                        onUpdated: _
+                                        onUpdated: b
                                     },
                                     e.id
                                 )

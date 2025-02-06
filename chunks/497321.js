@@ -1,16 +1,16 @@
-n.d(t, { Z: () => m }), n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i,
-    r = n(200651),
-    a = n(192379),
-    l = n(120356),
-    u = n.n(l),
+    l = n(200651),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     o = n(481060),
     d = n(37234),
-    s = n(230711),
+    u = n(230711),
     c = n(981631),
-    f = n(388032),
-    _ = n(261121);
-function E(e, t, n) {
+    h = n(388032),
+    g = n(261121);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,26 +23,26 @@ function E(e, t, n) {
         e
     );
 }
-class p extends (i = a.Component) {
+class f extends (i = r.Component) {
     render() {
-        return (0, r.jsxs)('div', {
-            className: _.streamerModeEnabled,
+        return (0, l.jsxs)('div', {
+            className: g.streamerModeEnabled,
             children: [
-                (0, r.jsx)('div', { className: _.streamerModeEnabledImage }),
-                (0, r.jsx)(o.P3F, {
-                    className: u()(_.streamerModeEnabledBtn, { [_.disabled]: this.props.disableButton }),
+                (0, l.jsx)('div', { className: g.streamerModeEnabledImage }),
+                (0, l.jsx)(o.P3F, {
+                    className: a()(g.streamerModeEnabledBtn, { [g.disabled]: this.props.disableButton }),
                     onClick: this.handleClick,
-                    children: f.intl.string(f.t.Br1ls7)
+                    children: h.intl.string(h.t.Br1ls7)
                 })
             ]
         });
     }
     constructor(...e) {
         super(...e),
-            E(this, 'handleClick', () => {
-                this.props.disableButton || ((0, d.jN)(c.S9g.USER_SETTINGS), s.Z.setSection(c.oAB.STREAMER_MODE));
+            C(this, 'handleClick', () => {
+                this.props.disableButton || ((0, d.jN)(c.S9g.USER_SETTINGS), u.Z.setSection(c.oAB.STREAMER_MODE));
             });
     }
 }
-E(p, 'defaultProps', { disableButton: !1 });
-let m = p;
+C(f, 'defaultProps', { disableButton: !1 });
+let p = f;

@@ -84,7 +84,7 @@ function E(e) {
                 },
                 onContextMenu: function (e) {
                     (0, o.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('38902'), n.e('77564'), n.e('75206')]).then(n.bind(n, 422200));
+                        let { default: e } = await Promise.all([n.e('38902'), n.e('40157')]).then(n.bind(n, 422200));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 channel: t,

@@ -43,8 +43,8 @@ var i = n(200651),
     V = n(607744),
     z = n(496675),
     W = n(626135),
-    q = n(572004),
-    Y = n(176354),
+    Y = n(572004),
+    q = n(176354),
     K = n(823379),
     X = n(970257),
     Q = n(418476),
@@ -88,7 +88,7 @@ let ep = l.memo(function (e) {
     let { channel: t, message: n } = e,
         l = (0, g.q5)(t.guild_id).filter(
             (e) =>
-                !Y.ZP.isEmojiFilteredOrLocked({
+                !q.ZP.isEmojiFilteredOrLocked({
                     emoji: e,
                     channel: t,
                     intention: es.Hz.REACTION,
@@ -165,7 +165,7 @@ function em(e) {
             canForward: M,
             isExpanded: L,
             showMoreUtilities: F,
-            showEmojiPicker: Y,
+            showEmojiPicker: q,
             showMessageBookmarksActions: K,
             isMessageBookmark: ei,
             setPopout: es,
@@ -212,7 +212,7 @@ function em(e) {
                 }),
                 F = t.type === ea.d4z.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(ea.oNc.NEWS) && (y || x) && (0, m.Z)(n),
                 W = t.getGuildId(),
-                Y = null != W && (n.type === ea.uaV.USER_JOIN || n.type === ea.uaV.GUILD_INVITE_REMINDER) && z.Z.canWithPartialContext(ea.Plq.MANAGE_GUILD, { guildId: W }),
+                q = null != W && (n.type === ea.uaV.USER_JOIN || n.type === ea.uaV.GUILD_INVITE_REMINDER) && z.Z.canWithPartialContext(ea.Plq.MANAGE_GUILD, { guildId: W }),
                 { canForwardMessages: K } = (0, v.yk)({ location: 'useMessageUtilitiesProps' }, { autoTrackExposure: !1 }),
                 ee = (0, E.a)(n),
                 { enabled: et } = O.Z.useExperiment({ location: 'message_utilities' }),
@@ -230,11 +230,11 @@ function em(e) {
                 canStartThread: Z,
                 canViewThread: T,
                 canForward: K && ee,
-                canCopy: q.wS,
+                canCopy: Y.wS,
                 hasDeveloperMode: _,
                 canReact: !L && g,
                 canPublish: F,
-                canConfigureJoin: Y,
+                canConfigureJoin: q,
                 isExpanded: ei && !er && !i && !l && !a,
                 showEmojiPicker: i,
                 showEmojiBurstPicker: l,
@@ -255,8 +255,8 @@ function em(e) {
                 es({ moreUtilities: !F });
         }, [F, es, n]),
         ef = l.useCallback(() => {
-            es({ emojiPicker: !Y });
-        }, [Y, es]),
+            es({ emojiPicker: !q });
+        }, [q, es]),
         eg = (0, w.$R)(t),
         eC = n.hasFlag(ea.iLy.CROSSPOSTED),
         [ex, ev] = (0, f.cv)(M ? [d.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
@@ -402,7 +402,7 @@ function em(e) {
                           (0, i.jsx)(en.Z, {
                               togglePopout: ef,
                               renderEmojiPicker: e_,
-                              shouldShow: Y,
+                              shouldShow: q,
                               isFocused: eu,
                               channel: t,
                               message: n

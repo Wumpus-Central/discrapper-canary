@@ -31,7 +31,7 @@ let I = {
         let { showNotificationBadge: t, ctaText: r, ctaOnClick: S, isCoachmarkEnabled: b = !0, linkText: v = T.intl.string(T.t['7f4H7O']), linkTo: j, cardAlignment: A = I.START, className: O } = e,
             { balance: R } = (0, _.A)(),
             [P, D] = s.useState(x.b.DEFAULT),
-            [y, Z] = s.useState(!1),
+            [Z, y] = s.useState(!1),
             [k, L] = s.useState(!1),
             B = (0, a.TH)(),
             { analyticsLocations: M } = (0, u.ZP)(d.Z.VIRTUAL_CURRENCY_BALANCE_WIDGET),
@@ -69,14 +69,14 @@ let I = {
                 }
             }),
             U = () => {
-                Z(!y);
+                y(!Z);
             };
         return (
             s.useEffect(() => {
-                D(y ? x.b.SELECTED : x.b.DEFAULT);
-            }, [y, D]),
+                D(Z ? x.b.SELECTED : x.b.DEFAULT);
+            }, [Z, D]),
             s.useEffect(() => {
-                b && ((0, g.wH)() || V ? (L(!0), Z(!1)) : L(!1));
+                b && ((0, g.wH)() || V ? (L(!0), y(!1)) : L(!1));
             }, [b, V]),
             (0, i.jsxs)('div', {
                 className: l()(N.container, O, {
@@ -92,7 +92,7 @@ let I = {
                         onClick: U,
                         showNotificationBadge: t
                     }),
-                    y &&
+                    Z &&
                         (0, i.jsx)('div', {
                             className: l()(N.cardContainer, A),
                             children: (0, i.jsx)(p.L, {

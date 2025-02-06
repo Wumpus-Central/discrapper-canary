@@ -14,21 +14,21 @@ var l = n(120356),
     x = n(914010),
     p = n(233608),
     f = n(71080),
-    b = n(182682),
-    _ = n(941469);
+    _ = n(182682),
+    b = n(941469);
 function g(e) {
     let { title: t, can: n } = e,
         l = n ? s.dz2 : s.Dio,
         i = (0, a.jsx)('div', {
-            className: r()(b.iconOuter, n ? b.iconCheck : b.iconCross),
-            children: (0, a.jsx)(l, { className: b.icon })
+            className: r()(_.iconOuter, n ? _.iconCheck : _.iconCross),
+            children: (0, a.jsx)(l, { className: _.icon })
         });
     return (0, a.jsxs)('div', {
-        className: b.scope,
+        className: _.scope,
         children: [
             i,
             (0, a.jsx)('div', {
-                className: b.scopeInner,
+                className: _.scopeInner,
                 children: (0, a.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     children: t
@@ -72,12 +72,12 @@ function v() {
             );
         });
     return (0, a.jsx)('div', {
-        className: r()(_.panel, b.panel),
+        className: r()(b.panel, _.panel),
         children: (0, a.jsxs)('div', {
-            className: b.panelInner,
+            className: _.panelInner,
             children: [
                 (0, a.jsxs)('section', {
-                    className: b.section,
+                    className: _.section,
                     children: [
                         (0, a.jsx)(s.X6q, {
                             variant: 'heading-md/semibold',
@@ -87,7 +87,7 @@ function v() {
                     ]
                 }),
                 (0, a.jsxs)('section', {
-                    className: b.section,
+                    className: _.section,
                     children: [
                         (0, a.jsx)(s.X6q, {
                             variant: 'heading-md/semibold',

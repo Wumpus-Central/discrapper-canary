@@ -13,8 +13,8 @@ var a = n(200651),
     x = n(301801),
     p = n(594174),
     f = n(55935),
-    b = n(120816),
-    _ = n(31336),
+    _ = n(120816),
+    b = n(31336),
     g = n(257785),
     v = n(484036),
     j = n(681619),
@@ -170,8 +170,8 @@ let I = [
 function O() {
     let e = l.useRef(null),
         [t, n] = l.useState(''),
-        r = (0, d.e7)([b.Z], () => b.Z.loggedEventsVersion),
-        s = l.useMemo(() => b.Z.loggedEvents, [r]),
+        r = (0, d.e7)([_.Z], () => _.Z.loggedEventsVersion),
+        s = l.useMemo(() => _.Z.loggedEvents, [r]),
         [c, m] = l.useState(Object.keys(Z)),
         [h, p] = l.useState(s),
         f = l.useRef(null),
@@ -212,8 +212,8 @@ function O() {
         g(t, s);
     }, [t, g, s]);
     let [k, O] = l.useState(void 0),
-        R = S.find((e) => e.key === k),
-        { TabBar: w, renderSelectedTab: P } = (0, C.Z)({ tabs: I }, []);
+        w = S.find((e) => e.key === k),
+        { TabBar: R, renderSelectedTab: P } = (0, C.Z)({ tabs: I }, []);
     return (0, a.jsxs)('div', {
         ref: e,
         className: i()(E.panel, T.panel),
@@ -225,7 +225,7 @@ function O() {
                         className: T.toolbarButton,
                         look: u.zxk.Looks.BLANK,
                         size: u.zxk.Sizes.ICON,
-                        onClick: _.Zw,
+                        onClick: b.Zw,
                         children: (0, a.jsx)('span', {
                             title: N.intl.string(N.t.VkKicX),
                             children: (0, a.jsx)(u.XHJ, {
@@ -271,15 +271,15 @@ function O() {
                 selectedRowKey: k,
                 onClickRow: (e) => O(e.key)
             }),
-            null != R &&
+            null != w &&
                 (0, a.jsxs)(v.Z, {
                     className: T.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
-                        (0, a.jsx)(w, {}),
+                        (0, a.jsx)(R, {}),
                         P({
-                            loggedEvent: R,
+                            loggedEvent: w,
                             onClose: () => O(void 0)
                         })
                     ]

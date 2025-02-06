@@ -1,39 +1,39 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var l = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    a = n(743483);
-function o(e) {
-    let { selected: t, muted: n = !1, highlighted: l = !1, wrapContent: o = !1, avatar: s, decorators: c, name: d, subText: u, avatarClassName: h, innerClassName: p } = e;
-    return (0, i.jsxs)('div', {
-        className: r()(p, a.layout, {
-            [a.muted]: !t && n,
-            [a.highlighted]: l,
-            [a.wrappedLayout]: o
+var i = n(120356),
+    a = n.n(i),
+    r = n(743483);
+function s(e) {
+    let { selected: t, muted: n = !1, highlighted: i = !1, wrapContent: s = !1, avatar: o, decorators: u, name: d, subText: c, avatarClassName: E, innerClassName: _ } = e;
+    return (0, l.jsxs)('div', {
+        className: a()(_, r.layout, {
+            [r.muted]: !t && n,
+            [r.highlighted]: i,
+            [r.wrappedLayout]: s
         }),
         children: [
-            (0, i.jsx)('div', {
-                className: r()(a.avatar, h),
-                children: s
+            (0, l.jsx)('div', {
+                className: a()(r.avatar, E),
+                children: o
             }),
-            (0, i.jsxs)('div', {
-                className: a.content,
+            (0, l.jsxs)('div', {
+                className: r.content,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: a.nameAndDecorators,
+                    (0, l.jsxs)('div', {
+                        className: r.nameAndDecorators,
                         children: [
-                            (0, i.jsx)('div', {
-                                className: r()(a.name, { [a.wrappedName]: o }),
+                            (0, l.jsx)('div', {
+                                className: a()(r.name, { [r.wrappedName]: s }),
                                 children: d
                             }),
-                            c
+                            u
                         ]
                     }),
-                    null != u
-                        ? (0, i.jsx)('div', {
-                              className: a.subText,
-                              children: u
+                    null != c
+                        ? (0, l.jsx)('div', {
+                              className: r.subText,
+                              children: c
                           })
                         : null
                 ]

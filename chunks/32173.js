@@ -33,8 +33,8 @@ var r = n(399606),
     R = n(391110),
     P = n(75077),
     D = n(474936),
-    y = n(735825),
-    Z = n(981631),
+    Z = n(735825),
+    y = n(981631),
     k = n(526761),
     L = n(332325),
     B = n(388032),
@@ -85,7 +85,7 @@ let e_ = () => {
         eN = (0, u.Z)(x.Z),
         eI = (0, S.ZP)(),
         eS = (0, S.aJ)(),
-        eb = (0, I.Kb)(y.qY),
+        eb = (0, I.Kb)(Z.qY),
         { fractionalState: ev } = (0, d.Z)(),
         ej = ev === D.a$.FP_ONLY,
         eA = (0, h.Z)({
@@ -93,16 +93,16 @@ let e_ = () => {
             analyticsLocations: e
         }),
         eO = () => {
-            l.Z.open(Z.oAB.VOICE, k.GA, {
+            l.Z.open(y.oAB.VOICE, k.GA, {
                 openWithoutBackstack: !0,
                 analyticsLocations: e
             });
         },
         eR = () => {
-            (0, g.uL)(Z.Z5c.COLLECTIBLES_SHOP);
+            (0, g.uL)(y.Z5c.COLLECTIBLES_SHOP);
         },
         eP = () => {
-            l.Z.open(Z.oAB.APPEARANCE, null, { scrollPosition: k.h1.CUSTOM_APP_ICONS });
+            l.Z.open(y.oAB.APPEARANCE, null, { scrollPosition: k.h1.CUSTOM_APP_ICONS });
         },
         eD = {
             clientThemes: {
@@ -112,7 +112,7 @@ let e_ = () => {
                 description: B.intl.string(B.t.jBTTws),
                 descriptionCta: B.intl.string(B.t.jVcuVV),
                 onCtaClick: () => {
-                    l.Z.open(Z.oAB.APPEARANCE, null, {
+                    l.Z.open(y.oAB.APPEARANCE, null, {
                         openWithoutBackstack: !0,
                         analyticsLocations: e
                     });
@@ -135,7 +135,7 @@ let e_ = () => {
                                 });
                             }
                           : () => {
-                                window.open(f.Z.getArticleURL(Z.BhN.CLIPS), '_blank');
+                                window.open(f.Z.getArticleURL(y.BhN.CLIPS), '_blank');
                             },
                       perkImage: W
                   }
@@ -248,7 +248,7 @@ let e_ = () => {
                 onCtaClick: ej
                     ? void 0
                     : () => {
-                          l.Z.open(Z.oAB.GUILD_BOOSTING, null, {
+                          l.Z.open(y.oAB.GUILD_BOOSTING, null, {
                               openWithoutBackstack: !0,
                               analyticsLocations: e
                           });
@@ -424,7 +424,7 @@ let e_ = () => {
                 name: 'referralProgram',
                 title: B.intl.string(B.t.tPY4o6),
                 subtitle: B.intl.string(B.t.JY0grK),
-                description: B.intl.format(B.t['2JqTFx'], { helpdeskArticle: f.Z.getArticleURL(Z.BhN.REFERRAL_PROGRAM) }),
+                description: B.intl.format(B.t['2JqTFx'], { helpdeskArticle: f.Z.getArticleURL(y.BhN.REFERRAL_PROGRAM) }),
                 descriptionCta: B.intl.string(B.t.JST6jo),
                 isPremiumGetCta: !e_ || void 0,
                 perkImage: en
@@ -445,7 +445,7 @@ let e_ = () => {
                 className: M.cardComponent,
                 children: (0, s.jsx)(O.ZP, {
                     progressCircleVariation: O.Qo.AVATAR_DECO,
-                    avatarDecoAssetId: y.VA,
+                    avatarDecoAssetId: Z.VA,
                     avatarDecoAssetDescription: B.intl.string(B.t['9o4F4+']),
                     showAnimations: !0,
                     percentage: eT,
@@ -491,18 +491,18 @@ let e_ = () => {
             perkComponent: c,
             descriptionCta: a,
             onCtaClick: () => {
-                l.Z.open(Z.oAB.GUILD_BOOSTING, null, { analyticsLocations: e });
+                l.Z.open(y.oAB.GUILD_BOOSTING, null, { analyticsLocations: e });
             },
             cardVariant: R.zW.REWARD,
             pillText: r,
             dismissibleContentType: o
         };
     }
-    let ey = (0, v.kG)(),
-        { enabled: eZ } = (0, b.D)();
+    let eZ = (0, v.kG)(),
+        { enabled: ey } = (0, b.D)();
     return (
-        null != ey &&
-            eZ &&
+        null != eZ &&
+            ey &&
             (eD.tenureBadge = {
                 name: 'tenureBadge',
                 title: B.intl.string(B.t.rnsqpa),

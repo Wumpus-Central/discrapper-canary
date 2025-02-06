@@ -175,7 +175,7 @@ function D() {
         ]
     });
 }
-function y(e) {
+function Z(e) {
     let { onClick: t, tooltipText: n, disabled: s = !1 } = e,
         r = (0, a.e7)([x.Z], () => x.Z.hasHotspot(S.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
     function l() {
@@ -217,7 +217,7 @@ function y(e) {
         ]
     });
 }
-function Z(e) {
+function y(e) {
     let { onClick: t } = e,
         n = (0, d.O)(),
         { analyticsLocations: s } = (0, h.ZP)(m.Z.VIDEO_BACKGROUND_CUSTOM_UPSELL);
@@ -229,7 +229,7 @@ function Z(e) {
                 location_stack: s
             });
         }),
-        (0, i.jsx)(y, {
+        (0, i.jsx)(Z, {
             onClick: t,
             tooltipText: j.intl.string(j.t.IqE0T0)
         })
@@ -245,7 +245,7 @@ function k(e) {
                 extensions: ['jpg', 'jpeg', 'png', 'gif', 'mp4']
             }
         ];
-    return (0, i.jsx)(y, {
+    return (0, i.jsx)(Z, {
         disabled: s,
         onClick: function () {
             (0, o.ZDy)(
@@ -300,7 +300,7 @@ function L(e) {
                           onAddBackgroundImage: c,
                           disabled: g
                       })
-                    : (0, i.jsx)(Z, { onClick: a }),
+                    : (0, i.jsx)(y, { onClick: a }),
                 u.map((e) =>
                     (0, i.jsx)(
                         o.ua7,

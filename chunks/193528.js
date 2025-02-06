@@ -24,10 +24,10 @@ function p(e) {
         O = (0, m.Lq)(v ? g.Ilk.WHITE_500 : g.Ilk.PRIMARY_530),
         R = (0, u.Z)(f),
         P = (0, u.Z)(T),
-        [D, y] = s.useState((0, a.Z)());
+        [D, Z] = s.useState((0, a.Z)());
     return (
         s.useEffect(() => {
-            (R !== f || P !== T) && y((0, a.Z)());
+            (R !== f || P !== T) && Z((0, a.Z)());
         }, [T, f, P, R]),
         (0, i.jsx)(d.yRy, {
             positionKey: D,

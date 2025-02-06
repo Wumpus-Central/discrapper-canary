@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(47120), n(653041), n(724458);
+n.d(t, { Z: () => R }), n(47120), n(653041), n(724458);
 var a = n(200651),
     l = n(192379),
     r = n(120356),
@@ -13,8 +13,8 @@ var a = n(200651),
     x = n(306381),
     p = n(371651),
     f = n(829907),
-    b = n(610394),
-    _ = n(355863),
+    _ = n(610394),
+    b = n(355863),
     g = n(449224),
     v = n(808506),
     j = n(70956),
@@ -37,7 +37,7 @@ let k = {
                 width: 100,
                 height: 100
             },
-            ..._.Z.getWidgetDefaultSettings(T.Odu.CLICK_ZONE_DEBUG),
+            ...b.Z.getWidgetDefaultSettings(T.Odu.CLICK_ZONE_DEBUG),
             pinned: !0
         }),
         [T.Odu.PERFORMANCE_DEBUG]: (e) => ({
@@ -53,7 +53,7 @@ let k = {
                 width: 'auto',
                 height: 'auto'
             },
-            ..._.Z.getWidgetDefaultSettings(T.Odu.PERFORMANCE_DEBUG),
+            ...b.Z.getWidgetDefaultSettings(T.Odu.PERFORMANCE_DEBUG),
             pinned: !0
         })
     },
@@ -225,8 +225,8 @@ function O(e) {
         ]
     });
 }
-function R(e) {
-    let t = I(Object.values((0, s.Wu)([_.Z], () => _.Z.getWidgetsForLayout(E.OVERLAY_V3_LAYOUT_ID))), e);
+function w(e) {
+    let t = I(Object.values((0, s.Wu)([b.Z], () => b.Z.getWidgetsForLayout(E.OVERLAY_V3_LAYOUT_ID))), e);
     return [
         t,
         () => {
@@ -240,15 +240,15 @@ function R(e) {
         }
     ];
 }
-function w() {
+function R() {
     var e, t;
-    let [n, r] = R(T.Odu.CLICK_ZONE_DEBUG),
-        [o, d] = R(T.Odu.PERFORMANCE_DEBUG),
-        _ = (0, s.e7)([b.ZP], () => b.ZP.hasRenderDebugMode(x.G.ClickZones)),
-        g = (0, s.e7)([b.ZP], () => b.ZP.hasRenderDebugMode(x.G.WidgetAreas)),
+    let [n, r] = w(T.Odu.CLICK_ZONE_DEBUG),
+        [o, d] = w(T.Odu.PERFORMANCE_DEBUG),
+        b = (0, s.e7)([_.ZP], () => _.ZP.hasRenderDebugMode(x.G.ClickZones)),
+        g = (0, s.e7)([_.ZP], () => _.ZP.hasRenderDebugMode(x.G.WidgetAreas)),
         E = (0, s.e7)([p.Z], () => p.Z.getForcedRenderMode()),
         [k, I] = l.useState({}),
-        [w, P] = l.useState(E),
+        [R, P] = l.useState(E),
         A = (e) => {
             P(e), u.Z.forceRenderMode(e);
         },
@@ -328,7 +328,7 @@ function w() {
         []
     );
     let V = (e) => {
-            u.Z.setRenderDebugMode(!b.ZP.hasRenderDebugMode(e), e);
+            u.Z.setRenderDebugMode(!_.ZP.hasRenderDebugMode(e), e);
         },
         X = () => {
             V(x.G.ClickZones);
@@ -359,7 +359,7 @@ function w() {
                                 (0, a.jsx)('div', {
                                     ...e,
                                     children: (0, a.jsx)(c.XZJ, {
-                                        value: _,
+                                        value: b,
                                         onChange: () => X(),
                                         size: 18,
                                         type: c.XZJ.Types.INVERTED,
@@ -447,7 +447,7 @@ function w() {
                             className: y.panelGroup,
                             children: (0, a.jsx)(c.PhF, {
                                 serialize: (e) => e,
-                                isSelected: (e) => e === w,
+                                isSelected: (e) => e === R,
                                 options: L,
                                 select: A,
                                 popoutLayerContext: N.O$

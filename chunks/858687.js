@@ -3,13 +3,13 @@ var i = e(200651),
     l = e(192379),
     a = e(481060),
     r = e(493683),
-    d = e(699516),
+    s = e(699516),
     o = e(594174),
-    s = e(933557),
+    d = e(933557),
     u = e(388032);
 function c(n, t) {
     let c = l.useCallback(() => {
-        let l = (0, s.F6)(n, o.default, d.Z),
+        let l = (0, d.F6)(n, o.default, s.Z),
             c = u.intl.formatToPlainString(u.t.hJ5Ap6, { name: l }),
             h = u.intl.format(u.t.SSIVOj, { name: l });
         n.isManaged() && ((c = u.intl.formatToPlainString(u.t.hVGjER, { name: l })), (h = u.intl.format(u.t.IK1Qvr, { name: l })));

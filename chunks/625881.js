@@ -44,7 +44,7 @@ let N = function (e) {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
-        y = (0, h.T4)(D.amount, D.currency);
+        Z = (0, h.T4)(D.amount, D.currency);
     return null == I
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -75,7 +75,7 @@ let N = function (e) {
                                           children: E.intl.format(E.t.Eq1RHB, {
                                               percent: I.discount.amount,
                                               numMonths: I.discount.user_usage_limit,
-                                              price: y
+                                              price: Z
                                           })
                                       })
                                   ]
@@ -89,7 +89,7 @@ let N = function (e) {
                                           discountedPrice: P,
                                           billingPeriod: (0, m.JP)(I.discount.user_usage_limit_interval),
                                           numMonths: I.discount.user_usage_limit,
-                                          fullPrice: y,
+                                          fullPrice: Z,
                                           helpdeskArticle: u.Z.getArticleURL(p.BhN.PAID_TERMS)
                                       })
                                   })

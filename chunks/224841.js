@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -9,7 +9,7 @@ var r = n(481060),
     c = n(388032),
     d = n(514491);
 let u = () => (0, a.uL)(s.Z5c.LOGIN),
-    _ = (e) => {
+    h = (e) => {
         let { authBoxClassName: t, underageMessage: a } = e;
         return (0, i.jsxs)(l.ZP, {
             className: t,

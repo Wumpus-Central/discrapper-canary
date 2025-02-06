@@ -43,8 +43,8 @@ var i = n(200651),
     V = n(823379),
     z = n(51144),
     W = n(998502),
-    q = n(981631),
-    Y = n(388032),
+    Y = n(981631),
+    q = n(388032),
     K = n(973249);
 function X(e, t, n) {
     return (
@@ -137,7 +137,7 @@ class ee extends l.Component {
                 let { user: e, channel: t } = this.props,
                     n = '@'.concat(z.ZP.getUserTag(e, { decoration: 'never' })),
                     i = '<@'.concat(e.id, '>');
-                G.S.dispatchToLastSubscribed(q.CkL.INSERT_TEXT, {
+                G.S.dispatchToLastSubscribed(Y.CkL.INSERT_TEXT, {
                     plainText: n,
                     rawText: i
                 }),
@@ -150,8 +150,8 @@ class ee extends l.Component {
                     (0, M.f)({
                         guildId: t,
                         location: {
-                            section: q.jXE.MEMBER_LIST,
-                            object: q.qAy.BOOST_GEM_ICON
+                            section: Y.jXE.MEMBER_LIST,
+                            object: Y.qAy.BOOST_GEM_ICON
                         }
                     }));
             }),
@@ -195,7 +195,7 @@ let et = l.memo((e) => {
                 guildId: a,
                 size: 16
             });
-        return t === q.Skl.UNKNOWN
+        return t === Y.Skl.UNKNOWN
             ? (0, i.jsx)('div', {
                   className: K.membersGroup,
                   children: (0, i.jsx)('div', { className: K.memberGroupsPlaceholder })
@@ -204,7 +204,7 @@ let et = l.memo((e) => {
                   className: K.membersGroup,
                   children: [
                       (0, i.jsx)(f.nn4, {
-                          children: Y.intl.format(Y.t.UaqbkZ, {
+                          children: q.intl.format(q.t.UaqbkZ, {
                               title: n,
                               count: l
                           })
@@ -284,7 +284,7 @@ class el extends l.Component {
                                 component: (0, i.jsx)(f.nn4, {
                                     children: (0, i.jsx)(f.H, {
                                         id: a,
-                                        children: Y.intl.format(Y.t.JBQxV1, { channel: n.name })
+                                        children: q.intl.format(q.t.JBQxV1, { channel: n.name })
                                     })
                                 }),
                                 children: (0, i.jsx)(c.SJ, {
@@ -294,7 +294,7 @@ class el extends l.Component {
                                             f.aVo,
                                             {
                                                 innerRole: s,
-                                                innerAriaLabel: Y.intl.string(Y.t['9Oq93t']),
+                                                innerAriaLabel: q.intl.string(q.t['9Oq93t']),
                                                 ref: (e) => {
                                                     var t;
                                                     (this._list = e), (this.props.listRef.current = e), (a.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
@@ -476,14 +476,14 @@ class el extends l.Component {
                     .slice(0, n + 1)
                     .filter(V.lm);
                 if (0 === i.length) return;
-                let l = i.reduce((e, t) => (t.type !== U.so.MEMBER || (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some((e) => e.type === q.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++), e), {
+                let l = i.reduce((e, t) => (t.type !== U.so.MEMBER || (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some((e) => e.type === Y.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++), e), {
                     num_users_visible: 0,
                     num_users_visible_with_mobile_indicator: 0,
                     num_users_visible_with_game_activity: 0,
                     num_users_visible_with_activity: 0,
                     num_users_visible_with_avatar_decoration: 0
                 });
-                (this.lastReportedAnalyticsChannel = this.props.channel.id), I.ZP.trackWithMetadata(q.rMx.MEMBER_LIST_VIEWED, { ...l });
+                (this.lastReportedAnalyticsChannel = this.props.channel.id), I.ZP.trackWithMetadata(Y.rMx.MEMBER_LIST_VIEWED, { ...l });
             });
     }
 }

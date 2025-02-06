@@ -15,7 +15,7 @@ var a = n(200651),
 function f(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function b(e) {
+function _(e) {
     let { store: t, dataGetter: n } = e,
         [r, i] = l.useState(n(t));
     return (
@@ -35,7 +35,7 @@ function b(e) {
         })
     );
 }
-let _ = [
+let b = [
         {
             key: 'name',
             cellClassName: p.__invalid_eventColumn,
@@ -56,7 +56,7 @@ let _ = [
                           className: p.inspectorContainer,
                           children: ['Store is missing ', (0, a.jsx)('code', { children: '__getLocalVars' }), ' method.']
                       })
-                    : (0, a.jsx)(b, {
+                    : (0, a.jsx)(_, {
                           store: t,
                           dataGetter: (e) => e.__getLocalVars()
                       });
@@ -67,7 +67,7 @@ let _ = [
             name: 'Store Instance',
             render(e) {
                 let { store: t } = e;
-                return (0, a.jsx)(b, {
+                return (0, a.jsx)(_, {
                     store: t,
                     dataGetter: (e) => e
                 });
@@ -137,7 +137,7 @@ function j() {
                 })
             }),
             (0, a.jsx)(m.Z, {
-                columns: _,
+                columns: b,
                 data: c,
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key)

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
@@ -41,11 +41,11 @@ function E(e) {
     return (0, r.jsxs)('div', {
         className: d.endScreenCtaContainer,
         children: [
-            (0, r.jsx)(C, {
+            (0, r.jsx)(p, {
                 title: n,
                 subtitle: l
             }),
-            (0, r.jsx)(p, {
+            (0, r.jsx)(C, {
                 label: t,
                 icon: o.d4D,
                 onClick: i
@@ -53,7 +53,7 @@ function E(e) {
         ]
     });
 }
-function C(e) {
+function p(e) {
     let { title: t, subtitle: n } = e;
     return (0, r.jsxs)('div', {
         className: d.endScreenCtaTitleContainer,
@@ -71,7 +71,7 @@ function C(e) {
         ]
     });
 }
-function p(e) {
+function C(e) {
     let { label: t, icon: n, onClick: i, className: a } = e,
         [u, c] = l.useState(!1),
         m = () => {
@@ -101,7 +101,7 @@ function p(e) {
         ]
     });
 }
-let S = function (e) {
+let f = function (e) {
     let { quest: t, ctaBtnLabel: n, title: i, subtitle: s, onCTAClick: o } = e,
         a = l.useMemo(() => (0, u.z)(u.i.VIDEO_PLAYER_THUMBNAIL, t), [t]);
     return (0, r.jsxs)(r.Fragment, {

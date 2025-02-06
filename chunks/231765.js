@@ -101,7 +101,7 @@ function D(e) {
         children: t
     });
 }
-function y(e) {
+function Z(e) {
     let {
             settings: { enabled: t, warningSeen: n },
             updateSettings: s
@@ -139,7 +139,7 @@ function y(e) {
         children: N.intl.string(N.t.vuiXm5)
     });
 }
-function Z(e) {
+function y(e) {
     let {
             settings: { enabled: t, confettiEnabled: n, confettiCount: s, confettiSize: r, confettiEnabledLocations: l },
             updateSettings: a
@@ -425,7 +425,7 @@ function V(e) {
                     className: I.title,
                     children: N.intl.string(N.t.AtCukJ)
                 }),
-                (0, i.jsx)(y, {
+                (0, i.jsx)(Z, {
                     settings: r,
                     updateSettings: _
                 }),
@@ -438,7 +438,7 @@ function V(e) {
                     settings: r,
                     updateSettings: _
                 }),
-                (0, i.jsx)(Z, {
+                (0, i.jsx)(y, {
                     settings: r,
                     updateSettings: _
                 }),

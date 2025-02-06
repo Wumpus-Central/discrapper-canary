@@ -10,8 +10,8 @@ var i = n(200651),
 function u(e) {
     let { botUserId: t, applicationId: n, buttonSize: u, analyticsLocations: m } = e,
         [p, h] = l.useState(!1),
-        v = l.useRef(null),
-        x = l.useCallback(async () => {
+        x = l.useRef(null),
+        v = l.useCallback(async () => {
             o.default.track(c.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                 application_id: n,
                 button_action: s._y.OPEN_APP_DM
@@ -24,14 +24,14 @@ function u(e) {
                     analyticsLocations: m
                 });
             } catch (e) {}
-            clearTimeout(v.current), h(!1);
+            clearTimeout(x.current), h(!1);
         }, [t, n, m]);
     return (0, i.jsx)(a.zxk, {
         type: 'submit',
         size: u,
         color: a.zxk.Colors.PRIMARY,
         submitting: p,
-        onClick: x,
+        onClick: v,
         'aria-label': d.intl.string(d.t.AUM8hY),
         children: d.intl.string(d.t.AUM8hY)
     });

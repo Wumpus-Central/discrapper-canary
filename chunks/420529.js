@@ -7,22 +7,22 @@ var l = n(399606),
     d = n(397639),
     s = n(19780),
     u = n(979651),
-    _ = n(951206),
-    o = n(446226),
-    E = n(937393),
-    c = n(721351),
+    o = n(951206),
+    _ = n(446226),
+    c = n(937393),
+    E = n(721351),
     g = n(981631),
     I = n(388032);
 function T(t) {
     let e = (0, l.e7)([s.Z], () => s.Z.getChannelId() === t.id),
-        T = (0, o.Z)(),
+        T = (0, _.Z)(),
         p = (null == T ? void 0 : T.channelId) === t.id,
-        m = (0, d.V)(t) && !t.isPrivate(),
-        C = (0, d.Z)(t),
-        L = (!(0, l.e7)([u.Z], () => u.Z.isInChannel(t.id)) && C) || m,
-        S = (0, E.Z)();
-    if (!p && 0 === S.length) return null;
-    let U = (e) => {
+        C = (0, d.V)(t) && !t.isPrivate(),
+        m = (0, d.Z)(t),
+        N = (!(0, l.e7)([u.Z], () => u.Z.isInChannel(t.id)) && m) || C,
+        L = (0, c.Z)();
+    if (!p && 0 === L.length) return null;
+    let S = (e) => {
         if (!e.twoWayLink || e.revoked) {
             (0, a.Z)({
                 platformType: e.type,
@@ -56,21 +56,21 @@ function T(t) {
                   label: I.intl.string(I.t.PlwgdX),
                   id: 'handoff',
                   action: () => {
-                      (0, _.F)(T);
+                      (0, o.F)(T);
                   },
-                  icon: (0, c.Z)(void 0),
-                  disabled: L
+                  icon: (0, E.Z)(void 0),
+                  disabled: N
               })
-            : S.map((t) => {
+            : L.map((t) => {
                   var n, l;
                   return (0, i.jsx)(
                       r.sNh,
                       {
                           id: 'transfer-'.concat(t.type, '-').concat(t.id),
                           label: ((n = t.type), (l = e), n === g.ABu.XBOX ? (l ? I.intl.string(I.t['f+Aijo']) : I.intl.string(I.t.E8euSk)) : n === g.ABu.PLAYSTATION ? (l ? I.intl.string(I.t.vzfxmZ) : I.intl.string(I.t.QxEYDg)) : n === g.ABu.PLAYSTATION_STAGING ? (l ? I.intl.string(I.t.BDiXtb) : I.intl.string(I.t['bhdB9/'])) : void 0),
-                          action: () => U(t),
-                          icon: (0, c.Z)(t.type),
-                          disabled: L
+                          action: () => S(t),
+                          icon: (0, E.Z)(t.type),
+                          disabled: N
                       },
                       t.id
                   );

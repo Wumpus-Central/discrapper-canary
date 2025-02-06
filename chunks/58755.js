@@ -1,4 +1,4 @@
-n.d(t, { P: () => b }), n(724458), n(47120);
+n.d(t, { P: () => _ }), n(724458), n(47120);
 var a = n(200651),
     l = n(192379),
     r = n(394900),
@@ -26,7 +26,7 @@ let p = Object.keys(h.jQ).map((e) => ({
         value: e,
         label: e
     }));
-function b(e) {
+function _(e) {
     let { state: t, setState: n } = e,
         { scales: r } = t,
         [i, o] = l.useState(null),
@@ -87,7 +87,7 @@ function b(e) {
         u = r.find((e) => e.name === i),
         p =
             null != u
-                ? (0, a.jsx)(_, {
+                ? (0, a.jsx)(b, {
                       onClose: () => o(null),
                       scale: u,
                       setState: n
@@ -95,9 +95,9 @@ function b(e) {
                 : s;
     return (0, a.jsx)('div', { children: p });
 }
-function _(e) {
+function b(e) {
     let { scale: t, setState: n, onClose: l } = e,
-        { name: c, base: f, darkness: b, lightness: _, showColumnarPalettePreview: g, colorSpace: j, easingStrength: C = 1, useP3ColorSpace: N, steps: T = 26 } = t,
+        { name: c, base: f, darkness: _, lightness: b, showColumnarPalettePreview: g, colorSpace: j, easingStrength: C = 1, useP3ColorSpace: N, steps: T = 26 } = t,
         E = (0, h.XM)(t),
         y = (0, h.W6)(E, c);
     return (0, a.jsxs)(d.hjN, {
@@ -170,7 +170,7 @@ function _(e) {
                 children: [
                     (0, a.jsx)(d.xJW, {}),
                     (0, a.jsxs)(d.xJW, {
-                        title: 'Lighten ('.concat((100 * _).toFixed(), '%)'),
+                        title: 'Lighten ('.concat((100 * b).toFixed(), '%)'),
                         children: [
                             (0, a.jsx)(d.R94, {
                                 type: d.geA.DESCRIPTION,
@@ -178,7 +178,7 @@ function _(e) {
                             }),
                             (0, a.jsx)(d.iRW, {
                                 onValueRender: () => null,
-                                initialValue: _,
+                                initialValue: b,
                                 stickToMarkers: !0,
                                 markers: Array.from({ length: 21 }, (e, t) => t / 10),
                                 minValue: 0,
@@ -189,7 +189,7 @@ function _(e) {
                         ]
                     }),
                     (0, a.jsxs)(d.xJW, {
-                        title: 'Darken ('.concat((100 * b).toFixed(), '%)'),
+                        title: 'Darken ('.concat((100 * _).toFixed(), '%)'),
                         children: [
                             (0, a.jsx)(d.R94, {
                                 type: d.geA.DESCRIPTION,

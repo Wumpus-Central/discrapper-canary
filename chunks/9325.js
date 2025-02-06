@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => I });
 var i = n(200651),
     r = n(192379),
     l = n(442837),
@@ -8,26 +8,26 @@ var i = n(200651),
     c = n(962220),
     d = n(306453),
     u = n(108427),
-    _ = n(314897),
-    h = n(626135),
+    h = n(314897),
+    _ = n(626135),
     g = n(587444),
     p = n(981631),
     m = n(58346),
     f = n(388032),
-    E = n(232186);
-function I(e, t, n) {
+    x = n(232186);
+function E(e, t, n) {
     e.preventDefault(),
-        h.default.track(p.rMx.GUILD_TEMPLATE_APP_OPENED, {
+        _.default.track(p.rMx.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
             guild_template_name: n.name,
             guild_template_description: n.description,
             guild_template_guild_id: n.sourceGuildId
         });
-    let i = _.default.getFingerprint(),
-        r = null != i ? i : _.default.getId();
+    let i = h.default.getFingerprint(),
+        r = null != i ? i : h.default.getId();
     c.Z.openMobileApp(n.state === m.Rj.RESOLVED ? t : void 0, r);
 }
-function x(e) {
+function I(e) {
     let { code: t } = e,
         n = (0, l.e7)([s.Z], () => s.Z.getGuildTemplate(t));
     return (r.useEffect(() => {
@@ -43,8 +43,8 @@ function x(e) {
                         tall: !0
                     }),
                     (0, i.jsx)(o.zx, {
-                        onClick: (e) => I(e, t, n),
-                        className: E.marginTop20,
+                        onClick: (e) => E(e, t, n),
+                        className: x.marginTop20,
                         children: f.intl.string(f.t['a3Gl+f'])
                     })
                 ]
@@ -52,7 +52,7 @@ function x(e) {
           : (0, i.jsx)(g.Z, {
                 text: f.intl.string(f.t['e/rZ2t']),
                 buttonCta: f.intl.string(f.t.HAvYn5),
-                onClick: (e) => I(e, t, n)
+                onClick: (e) => E(e, t, n)
             });
 }
 l.ZP.initialize();

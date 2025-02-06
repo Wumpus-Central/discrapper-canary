@@ -39,8 +39,8 @@ var i = n(192379),
     R = n(594174),
     P = n(202527),
     D = n(413182),
-    y = n(695346),
-    Z = n(620163),
+    Z = n(695346),
+    y = n(620163),
     k = n(406613),
     L = n(168308),
     B = n(839469),
@@ -112,7 +112,7 @@ function G() {
         { enabled: J } = E.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
         Q = (0, s.e7)([j.Z], () => j.Z.hasLibraryApplication()),
         $ = (0, s.e7)([v.default], () => v.default.hasTOTPEnabled()),
-        ee = y.Sb.useSetting(),
+        ee = Z.Sb.useSetting(),
         et = (0, _.Z)(),
         { hypeSquadRemoved: en } = h.Z.useExperiment({ location: 'settings' }),
         ei = null === (i = (0, x.Z)()) || void 0 === i || i,
@@ -128,7 +128,7 @@ function G() {
             autoTrackExposure: !1
         }),
         { updatedSettingsPageEnabled: ed } = (0, o.S)('SettingRendererUtils');
-    return (0, Z.i)({
+    return (0, y.i)({
         unseenGiftCount: l,
         showPrepaidPaymentPastDueWarning: D,
         impressionSource: B,

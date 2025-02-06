@@ -43,8 +43,8 @@ var i = n(200651),
     V = n(513449),
     z = n(153349),
     W = n(901434),
-    q = n(302270),
-    Y = n(308177),
+    Y = n(302270),
+    q = n(308177),
     K = n(700483),
     X = n(686468),
     Q = n(801405),
@@ -152,7 +152,7 @@ function ec(e) {
                   }
               })
             : g
-              ? (0, i.jsx)(Y.Z, {
+              ? (0, i.jsx)(q.Z, {
                     channel: n,
                     onScroll: (e) => {
                         let { scrollTop: t } = e.target;
@@ -190,7 +190,7 @@ function ec(e) {
                       })
                     : null,
             renderHeader: () =>
-                (0, i.jsx)(q.Z, {
+                (0, i.jsx)(Y.Z, {
                     inPopout: f === $.IlC.POPOUT,
                     toggleRequestToSpeakSidebar: a,
                     showRequestToSpeakSidebar: c,

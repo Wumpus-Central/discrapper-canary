@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => x });
 var i = n(200651),
     l = n(192379),
     a = n(481060),
@@ -11,13 +11,13 @@ var i = n(200651),
     m = n(532309),
     p = n(51688),
     h = n(413097);
-function v(e) {
+function x(e) {
     var t;
-    let { command: n, application: v, onClick: x, query: f, searchResultsPosition: N } = e,
+    let { command: n, application: x, onClick: v, query: f, searchResultsPosition: N } = e,
         C = l.useCallback(
             (e) => {
-                if ((0, r.BQ)(v)) {
-                    let t = v instanceof s.ZP ? v : s.ZP.createFromServer(v);
+                if ((0, r.BQ)(x)) {
+                    let t = x instanceof s.ZP ? x : s.ZP.createFromServer(x);
                     (0, o.vq)(e, (e) =>
                         (0, i.jsx)(d.Z, {
                             application: t,
@@ -26,24 +26,24 @@ function v(e) {
                     );
                 }
             },
-            [v]
+            [x]
         ),
-        { iconURL: E, name: A, description: I } = l.useMemo(() => (0, r.sl)(v, { fakeAppIconURL: h }), [v]),
-        g = l.useMemo(() => {
+        { iconURL: E, name: A, description: I } = l.useMemo(() => (0, r.sl)(x, { fakeAppIconURL: h }), [x]),
+        _ = l.useMemo(() => {
             var e;
             let t = null !== (e = null == n ? void 0 : n.displayDescription) && void 0 !== e ? e : I;
             return null == t ? null : (0, c.ae)(t, void 0);
         }, [I, null == n ? void 0 : n.displayDescription]),
-        { trackSearchResultsItemImpressionRef: _ } = (0, m.Z)({
-            applicationId: v.id,
+        { trackSearchResultsItemImpressionRef: g } = (0, m.Z)({
+            applicationId: x.id,
             commandId: null == n ? void 0 : n.id,
             query: f,
             searchResultsPosition: N
         });
     return (0, i.jsx)(a.P3F, {
         className: p.clickable,
-        innerRef: (e) => (_.current = e),
-        onClick: x,
+        innerRef: (e) => (g.current = e),
+        onClick: v,
         onContextMenu: C,
         children: (0, i.jsxs)(a.Rny, {
             className: p.focusBlock,
@@ -67,7 +67,7 @@ function v(e) {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             lineClamp: 1,
-                            children: g
+                            children: _
                         })
                     ]
                 }),

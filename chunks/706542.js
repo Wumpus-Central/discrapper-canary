@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(653041);
+n.d(t, { Z: () => Z }), n(653041);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -105,7 +105,7 @@ let A = () =>
             ]
         });
     },
-    y = (e) => {
+    Z = (e) => {
         var t;
         let n,
             { className: r, hidePill: o = !1, selectedPlanColumnClassName: c, selectedPlanTier: u = T.p9.TIER_2 } = e,
@@ -123,13 +123,13 @@ let A = () =>
             });
         let j = (0, E.N)(),
             R = null == j ? void 0 : null === (t = j.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-            y = (0, p.Ng)(),
-            Z = null != y && (0, p.Wp)(y, T.Si.TIER_2),
+            Z = (0, p.Ng)(),
+            y = null != Z && (0, p.Wp)(Z, T.Si.TIER_2),
             k = (0, C.A)(T.Xh.PREMIUM_MONTH_TIER_2),
             L = ''.concat(k, '/').concat((0, x.eP)(T.rV.MONTH)),
             B = (0, x.CY)(T.Xh.PREMIUM_MONTH_TIER_0),
             M = (0, x.CY)(T.Xh.PREMIUM_MONTH_TIER_2),
-            w = (0, f.a)(B, M, Z, L);
+            w = (0, f.a)(B, M, y, L);
         if (!S || !b) return null;
         w.push({
             label: null,

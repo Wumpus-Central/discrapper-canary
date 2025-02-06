@@ -54,13 +54,13 @@ let f = (e) => {
             R = (0, m.vi)(O),
             P = (0, d.ZP)('perks-discoverability'),
             D = T === x.R0.WHATS_NEW,
-            y = (0, u.IY)(),
-            Z = (0, g.x)();
+            Z = (0, u.IY)(),
+            y = (0, g.x)();
         s.useEffect(() => {
-            D && !R && (y(), Z());
-        }, [y, Z, D, R]);
+            D && !R && (Z(), y());
+        }, [Z, y, D, R]);
         let k = () => {
-                D && R && y();
+                D && R && Z();
             },
             L = R && D;
         (0, h.r)({

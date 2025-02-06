@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(682662),
     h = n(662146),
     p = n(678513),
-    m = n(981631),
-    g = n(388032),
+    g = n(981631),
+    m = n(388032),
     f = n(477090);
 function _(e) {
     let { target: t } = e,
@@ -40,7 +40,7 @@ function _(e) {
             [t]
         ),
         v = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
-        x = (0, i.jsxs)('div', {
+        C = (0, i.jsxs)('div', {
             className: f.tooltipContainer,
             children: [
                 (0, i.jsx)('div', {
@@ -53,21 +53,21 @@ function _(e) {
                 }),
                 (0, i.jsx)(a.Text, {
                     variant: 'text-xs/normal',
-                    children: g.intl.string(g.t.IIbwAg)
+                    children: m.intl.string(m.t.IIbwAg)
                 })
             ]
         }),
-        C = (0, c.Fg)();
+        x = (0, c.Fg)();
     return (0, i.jsxs)(u.H, {
         children: [
             (0, i.jsx)(a.ze6, {
-                theme: m.BRd.DARK,
+                theme: g.BRd.DARK,
                 children: (0, i.jsx)(h.Z, {
-                    text: x,
+                    text: C,
                     tooltipClass: f.tooltip,
                     tooltipContentClass: f.tooltipContent,
                     children: (0, i.jsx)(a.ze6, {
-                        theme: C,
+                        theme: x,
                         children: (0, i.jsx)(a.aRk, {
                             lowerBadge: (0, i.jsx)(a.mAB, {
                                 count: 1,

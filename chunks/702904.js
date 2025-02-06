@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var a = n(200651),
     l = n(192379),
     r = n(120356),
@@ -54,7 +54,7 @@ let f = [
         value: 'pm_card_pl'
     }
 ];
-function b() {
+function _() {
     let [e, t] = l.useState('pm_card_us'),
         n = Object.values((0, o.e7)([m.Z], () => m.Z.paymentSources)),
         r = async () => {
@@ -74,7 +74,7 @@ function b() {
             }),
                 await (0, d.tZ)();
         },
-        b = async () => {
+        _ = async () => {
             await s.tn.del({
                 url: '/debug/rate-limits',
                 rejectWithError: !1
@@ -122,7 +122,7 @@ function b() {
                                 }),
                             (0, a.jsx)(c.zxk, {
                                 size: c.zxk.Sizes.SMALL,
-                                onClick: b,
+                                onClick: _,
                                 children: 'Reset API Rate limits and reload app'
                             })
                         ]
@@ -135,13 +135,13 @@ function b() {
                         variant: 'text-md/normal',
                         children: 'Existing Payment Sources'
                     }),
-                    n.map((e) => (0, a.jsx)(_, { paymentSource: e }, e.id))
+                    n.map((e) => (0, a.jsx)(b, { paymentSource: e }, e.id))
                 ]
             })
         })
     );
 }
-function _(e) {
+function b(e) {
     let { paymentSource: t } = e;
     return (0, a.jsxs)('div', {
         className: p.inputRow,

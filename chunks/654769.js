@@ -13,8 +13,8 @@ var l,
     x = n(592125),
     p = n(292959),
     f = n(699516),
-    b = n(246946),
-    _ = n(594174),
+    _ = n(246946),
+    b = n(594174),
     g = n(626135),
     v = n(5192),
     j = n(358085),
@@ -55,20 +55,20 @@ async function O() {
     }
     return a;
 }
-async function R() {
+async function w() {
     let e = await O();
     return (null == e ? void 0 : e.authorizationStatus) === 'authorized' && (null == e ? void 0 : e.sound) === !0;
 }
-function w(e, t) {
+function R(e, t) {
     var n;
     return null !== (n = (0, h.Z)(null != t ? t : m.Z.getSoundpack())[e]) && void 0 !== n ? n : e;
 }
 async function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    if (await R())
+    if (await w())
         try {
-            await N.ZP.invoke('NOTIFICATIONS_SEND_NOTIFICATION', { sound: w(e, n) });
+            await N.ZP.invoke('NOTIFICATIONS_SEND_NOTIFICATION', { sound: R(e, n) });
             return;
         } catch (e) {
             I.warn('Native notification sound failed with error: ', e);
@@ -148,7 +148,7 @@ function z(e) {
     e.includes('message') ? A(e, t, n) : P(e, t, n);
 }
 async function F(e) {
-    return (b.Z.disableNotifications && null == e.overrideStreamerMode) || !(await M()) || (j.isPlatformEmbedded && !N.ZP.shouldDisplayNotifications());
+    return (_.Z.disableNotifications && null == e.overrideStreamerMode) || !(await M()) || (j.isPlatformEmbedded && !N.ZP.shouldDisplayNotifications());
 }
 let U = {
     hasPermission: M,
@@ -184,26 +184,26 @@ let U = {
         let u = null !== (i = null == l ? void 0 : l.tag) && void 0 !== i ? i : null,
             m = await O(),
             h = (null == m ? void 0 : m.authorizationStatus) === 'authorized',
-            b = h && (null == m ? void 0 : m.sound) === !0,
+            _ = h && (null == m ? void 0 : m.sound) === !0,
             C = (e) => {
                 var t;
                 null === (t = l.onShown) || void 0 === t || t.call(l), l.omitViewTracking || g.default.track(T.rMx.NOTIFICATION_VIEWED, a), Z && setTimeout(() => e.close(), 5000);
             };
-        if ((null == l.sound || b || z(l.sound, null !== (o = l.volume) && void 0 !== o ? o : 1, l.soundpack), h)) {
+        if ((null == l.sound || _ || z(l.sound, null !== (o = l.volume) && void 0 !== o ? o : 1, l.soundpack), h)) {
             let r = {
                 title: t,
                 body: n
             };
-            null != e && (r.icon = e), (null == l ? void 0 : l.sound) != null && (r.sound = w(l.sound, l.soundpack)), (null == l ? void 0 : l.tag) != null && (r.identifier = l.tag);
+            null != e && (r.icon = e), (null == l ? void 0 : l.sound) != null && (r.sound = R(l.sound, l.soundpack)), (null == l ? void 0 : l.tag) != null && (r.identifier = l.tag);
             let i = 'string' == typeof (null == a ? void 0 : a.guild_id) ? a.guild_id : null,
                 o = 'string' == typeof (null == a ? void 0 : a.channel_id) ? a.channel_id : null,
                 s = 'string' == typeof (null == a ? void 0 : a.notif_user_id) ? a.notif_user_id : null;
             if (null != o) {
                 r.threadIdentifier = o;
                 let e = x.Z.getChannel(o);
-                null != e && (r.groupName = (0, d.F6)(e, _.default, f.Z));
+                null != e && (r.groupName = (0, d.F6)(e, b.default, f.Z));
             }
-            null != s && ((r.senderIdentifier = s), null != i && (r.senderDisplayName = v.ZP.getName(i, o, _.default.getUser(s))));
+            null != s && ((r.senderIdentifier = s), null != i && (r.senderDisplayName = v.ZP.getName(i, o, b.default.getUser(s))));
             try {
                 let e = await N.ZP.invoke('NOTIFICATIONS_SEND_NOTIFICATION', r);
                 B[e] = {

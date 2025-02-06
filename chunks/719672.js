@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var a = n(200651);
 n(192379);
 var l = n(913527),
@@ -33,7 +33,7 @@ let p = (e) => {
             }
         }
     ],
-    b = [
+    _ = [
         {
             key: 'candidates',
             render(e) {
@@ -42,7 +42,7 @@ let p = (e) => {
             }
         }
     ];
-function _() {
+function b() {
     let e = (0, i.e7)([c.Z], () => c.Z.getDCFEvents()),
         t = (0, u.ZP)((e) => e.candidates),
         n = (0, u.ZP)((e) => e.lastWinnerTime),
@@ -55,7 +55,7 @@ function _() {
                 dismissibleContent: n
             };
         }),
-        _ = Array.from(t.keys()).map((e) => ({
+        b = Array.from(t.keys()).map((e) => ({
             key: e.toString(),
             dismissibleContent: e
         }));
@@ -92,8 +92,8 @@ function _() {
                 className: x.candidatesTableContainer,
                 children: (0, a.jsx)(h.Z, {
                     className: x.candidatesTable,
-                    columns: b,
-                    data: _
+                    columns: _,
+                    data: b
                 })
             }),
             (0, a.jsx)('br', {}),

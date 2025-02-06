@@ -284,7 +284,7 @@ function D(e) {
         ]
     });
 }
-function y() {
+function Z() {
     return (0, i.jsx)('div', {
         className: l()(v.flexCenter, S.notDetected, S.activeGame),
         children: (0, i.jsxs)('div', {
@@ -302,7 +302,7 @@ function y() {
         })
     });
 }
-function Z(e) {
+function y(e) {
     let { children: t } = e;
     return (0, i.jsxs)(O, {
         className: A.marginTop40,
@@ -345,7 +345,7 @@ let k = (0, C.oH)(function () {
                               },
                               (0, h.rH)(o)
                           )
-                        : (0, i.jsx)(y, {}),
+                        : (0, i.jsx)(Z, {}),
                     (0, i.jsxs)('div', {
                         className: l()(S.nowPlayingAdd, A.marginReset, A.marginTop8, A.marginBottom20),
                         children: [
@@ -369,7 +369,7 @@ let k = (0, C.oH)(function () {
                         ]
                     }),
                     0 === r.length
-                        ? (0, i.jsx)(Z, { children: (0, i.jsx)(c.OZU, { children: I.intl.string(I.t['1yiJws']) }) })
+                        ? (0, i.jsx)(y, { children: (0, i.jsx)(c.OZU, { children: I.intl.string(I.t['1yiJws']) }) })
                         : (0, i.jsxs)(c.hjN, {
                               className: A.marginTop40,
                               children: [

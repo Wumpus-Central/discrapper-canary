@@ -10,33 +10,33 @@ var i = n(200651),
     u = n(888369),
     h = n(430824),
     p = n(451478),
-    m = n(61634),
-    g = n(325257),
+    g = n(61634),
+    m = n(325257),
     f = n(771557);
 let _ = l.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
         _ = t.id,
         v = (0, r.e7)([h.Z], () => h.Z.getGuild(_)),
-        x = (0, o.E)(v),
-        C = (0, r.e7)([p.Z], () => p.Z.isFocused()),
+        C = (0, o.E)(v),
+        x = (0, r.e7)([p.Z], () => p.Z.isFocused()),
         Z = (0, r.e7)([d.Z], () => d.Z.isUnavailable(_)),
         I = (0, c.Z)((e) => e.guildId),
-        b = (0, m.Z)(_),
+        b = (0, g.Z)(_),
         {
             badge: S,
             unread: N,
-            isMentionLowImportance: j
+            isMentionLowImportance: E
         } = (0, r.cj)([u.default], () => ({
             badge: u.default.getMentionCount(_),
             isMentionLowImportance: u.default.getIsMentionLowImportance(_),
             unread: u.default.hasUnread(_)
         })),
-        E = (0, s.I)(v) && 0 === S,
+        j = (0, s.I)(v) && 0 === S,
         y = l.useMemo(
             () =>
                 null != n
                     ? n
-                    : E
+                    : j
                       ? (0, i.jsx)('div', {
                             className: f.pauseBackground,
                             children: (0, i.jsx)(a.fpf, {
@@ -48,19 +48,19 @@ let _ = l.memo(function (e) {
                             })
                         })
                       : null,
-            [n, E]
+            [n, j]
         );
-    return (0, i.jsx)(g.Z, {
+    return (0, i.jsx)(m.Z, {
         ...e,
         guild: v,
         unavailable: Z,
-        animatable: C,
+        animatable: x,
         selected: I === _,
         badge: S,
-        isMentionLowImportance: j,
+        isMentionLowImportance: E,
         lowerBadge: y,
         unread: N,
         mediaState: b,
-        guildJoinRequestStatus: x
+        guildJoinRequestStatus: C
     });
 });

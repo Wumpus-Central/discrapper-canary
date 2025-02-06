@@ -41,7 +41,7 @@ function D(e, t, n) {
         e
     );
 }
-function y(e) {
+function Z(e) {
     let {
             code: { code: t, consumed: n }
         } = e,
@@ -75,7 +75,7 @@ function y(e) {
         })
     });
 }
-class Z extends s.PureComponent {
+class y extends s.PureComponent {
     maskPhoneNumber(e) {
         return null == e ? '' : ''.concat('*'.repeat(e.length - 4)).concat(e.slice(-4));
     }
@@ -173,7 +173,7 @@ class Z extends s.PureComponent {
                     children: O.intl.string(O.t.qZZUy8)
                 })
             });
-            let s = (e) => e.map((e) => (0, i.jsx)(y, { code: e }, e.code));
+            let s = (e) => e.map((e) => (0, i.jsx)(Z, { code: e }, e.code));
             e = (0, i.jsxs)(o.hjN, {
                 title: O.intl.string(O.t.GfqHPj),
                 children: [
@@ -414,7 +414,7 @@ function k(e) {
         togglingSMS: f.Z.togglingSMS,
         hasTOTPEnabled: C.default.hasTOTPEnabled()
     }));
-    return (0, i.jsx)(Z, {
+    return (0, i.jsx)(y, {
         currentUser: t,
         ...n,
         ...e

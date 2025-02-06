@@ -96,8 +96,8 @@ function F(e) {
     if (
         ((C[c] = r),
         u().forEach(P, (e) => {
-            let { analyticsContext: t } = e;
-            t.setActionContext(r), t.setNativePickerStyleUsed(o), t.trackStart();
+            let { analyticsContext: t, isOwner: n } = e;
+            t.setActionContext(r), t.setNativePickerStyleUsed(o), n && t.trackStart();
         }),
         (D[c] = s),
         (O[c] = a),
@@ -118,8 +118,8 @@ function V(e) {
     let { appContext: t, streamKey: n } = e;
     (C[n] = t),
         u().forEach(P, (e) => {
-            let { analyticsContext: n } = e;
-            n.setActionContext(t), n.trackEnd();
+            let { analyticsContext: n, isOwner: i } = e;
+            n.setActionContext(t), i && n.trackEnd();
         }),
         (D[n] = null),
         (O[n] = null),

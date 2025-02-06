@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(420212),
     P = n(388032),
     D = n(877615),
-    y = n(684309),
-    Z = n(232186);
+    Z = n(684309),
+    y = n(232186);
 function k(e, t, n) {
     return (
         t in e
@@ -81,7 +81,7 @@ class w extends s.PureComponent {
         let { managed: e, enabled: t } = this.props.keybind;
         return (0, i.jsxs)(C.Z, {
             direction: C.Z.Direction.VERTICAL,
-            className: l()(D.keybindGroup, y.card),
+            className: l()(D.keybindGroup, Z.card),
             children: [
                 !e &&
                     (0, i.jsx)(h.Z, {
@@ -91,7 +91,7 @@ class w extends s.PureComponent {
                         look: h.Z.Looks.FILLED
                     }),
                 (0, i.jsxs)(C.Z, {
-                    className: Z.marginBottom8,
+                    className: y.marginBottom8,
                     children: [
                         (0, i.jsx)(C.Z.Child, {
                             basis: '45%',
@@ -310,7 +310,7 @@ class V extends s.PureComponent {
     renderEmpty(e) {
         if (0 === e.length)
             return (0, i.jsx)(M, {
-                className: Z.marginTop60,
+                className: y.marginTop60,
                 children: (0, i.jsx)(u.oxh, {
                     darkSrc: n(572279),
                     lightSrc: n(871803),
@@ -338,7 +338,7 @@ class V extends s.PureComponent {
                               children: [
                                   (0, i.jsxs)(C.Z, {
                                       justify: C.Z.Justify.BETWEEN,
-                                      className: Z.marginBottom20,
+                                      className: y.marginBottom20,
                                       children: [
                                           (0, i.jsx)(C.Z.Child, {
                                               grow: 0,
@@ -375,7 +375,7 @@ class V extends s.PureComponent {
                 (0, i.jsxs)(u.hjN, {
                     tag: u.RB0.H1,
                     title: P.intl.string(P.t.Lz5KHB),
-                    className: Z.marginTop60,
+                    className: y.marginTop60,
                     children: [
                         (0, i.jsxs)('div', {
                             className: D.defaultKeybind,

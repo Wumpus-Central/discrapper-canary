@@ -43,8 +43,8 @@ var i = n(200651),
     V = n(191302),
     z = n(703656),
     W = n(648384),
-    q = n(740492),
-    Y = n(793319),
+    Y = n(740492),
+    q = n(793319),
     K = n(3861),
     X = n(493754),
     Q = n(937995),
@@ -338,7 +338,7 @@ class eV extends l.PureComponent {
             eF(this, '_contentRef', l.createRef()),
             eF(this, '_videoBackgroundTooltipTimeout', new h.V7()),
             eF(this, '_lastIdleProps', null),
-            eF(this, 'state', { resizedHeight: q.ZP.callHeaderHeight }),
+            eF(this, 'state', { resizedHeight: Y.ZP.callHeaderHeight }),
             eF(this, 'handleFullScreenChange', () => {
                 let e = this.getRootNode();
                 null == e || (0, eb.rB)(e, this.currentDocument) || this.props.layout !== ew.AEg.FULL_SCREEN || this.handleFullScreen();
@@ -410,7 +410,7 @@ class eV extends l.PureComponent {
                                     return (0, _.jW)(
                                         t,
                                         async () => {
-                                            let { default: e } = await Promise.all([n.e('79695'), n.e('70205'), n.e('98783'), n.e('56826'), n.e('95324')]).then(n.bind(n, 131404));
+                                            let { default: e } = await Promise.all([n.e('79695'), n.e('70205'), n.e('98783'), n.e('56826'), n.e('75217')]).then(n.bind(n, 131404));
                                             return (t) =>
                                                 (0, i.jsx)(e, {
                                                     ...t,
@@ -507,7 +507,7 @@ class eV extends l.PureComponent {
             eF(this, 'renderBottomCenter', () => {
                 let { channel: e, inCall: t, layout: n } = this.props;
                 return t || n === ew.AEg.MINIMUM || n === ew.AEg.NORMAL
-                    ? (0, i.jsx)(Y.ZP, {
+                    ? (0, i.jsx)(q.ZP, {
                           exitFullScreen: this.maybeLeaveFullScreen,
                           channel: e,
                           onDisconnectCall: this.handleDisconnect,
@@ -737,7 +737,7 @@ let ez = function (e) {
         { selectedStream: V } = (0, d.cj)([eo.Z], () => ({ selectedStream: null != F ? eo.Z.getActiveStreamForStreamKey(F.id) : null }), [F]),
         z = (0, d.e7)([eh.Z], () => eh.Z.getGuild(n.getGuildId())),
         W = (0, d.e7)([eu.Z], () => eu.Z.getCall(n.id), [n.id]),
-        Y = (0, d.e7)([em.ZP], () => em.ZP.getMentionCount(n.id), [n.id]),
+        q = (0, d.e7)([em.ZP], () => em.ZP.getMentionCount(n.id), [n.id]),
         K = (0, d.e7)([ec.default], () => ec.default.getId()),
         { popoutWindow: X, popoutWindowAlwaysOnTop: Q } = (0, d.cj)([G.Z], () => ({
             popoutWindow: G.Z.getWindow(ew.KJ3.CHANNEL_CALL_POPOUT),
@@ -746,7 +746,7 @@ let ez = function (e) {
         J = (0, d.e7)([ep.Z], () => ep.Z.can(ew.Plq.CONNECT, n)),
         $ = (0, d.e7)([ed.Z], () => ed.Z.getToastsEnabled(n.id)),
         ee = (0, d.e7)([D.Z], () => D.Z.getAwaitingRemoteSessionInfo()),
-        et = (0, d.e7)([q.ZP], () => q.ZP.callHeaderHeight),
+        et = (0, d.e7)([Y.ZP], () => Y.ZP.callHeaderHeight),
         en = l.useCallback((e) => {
             v.ZP.updatedUnsyncedSettings({ callHeaderHeight: e });
         }, []),
@@ -797,7 +797,7 @@ let ez = function (e) {
                             call: W,
                             popoutWindow: X,
                             popoutWindowAlwaysOnTop: Q,
-                            mentionCount: Y,
+                            mentionCount: q,
                             selectedStream: V,
                             mode: A,
                             inCall: C,

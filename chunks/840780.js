@@ -10,24 +10,24 @@ var i = n(200651),
     u = n(570140),
     h = n(475179),
     p = n(925549),
-    m = n(438139),
-    g = n(730749),
+    g = n(438139),
+    m = n(730749),
     f = n(607070),
     _ = n(636449),
     v = n(214629),
-    x = n(566620),
-    C = n(317381),
+    C = n(566620),
+    x = n(317381),
     Z = n(736409),
     I = n(835473),
     b = n(413523),
     S = n(933557),
     N = n(194082),
-    j = n(550532),
-    E = n(436774),
+    E = n(550532),
+    j = n(436774),
     y = n(594190),
     P = n(925329),
-    T = n(102172),
-    A = n(74299),
+    A = n(102172),
+    T = n(74299),
     w = n(914923),
     R = n(165393),
     L = n(989941),
@@ -55,7 +55,7 @@ var i = n(200651),
     en = n(981631),
     ei = n(918559),
     el = n(395144);
-let er = (0, m.Z)(function (e) {
+let er = (0, g.Z)(function (e) {
     let { message: t } = e;
     return (0, i.jsx)(X.Z, { children: t });
 });
@@ -110,7 +110,7 @@ class ea extends l.PureComponent {
                                 children: [
                                     (0, i.jsx)(d.SrA, {
                                         size: 'xxs',
-                                        color: E.JX.PREMIUM_TIER_2
+                                        color: j.JX.PREMIUM_TIER_2
                                     }),
                                     (0, i.jsx)(G.Z, {
                                         className: el.perksDemoText,
@@ -187,7 +187,7 @@ class ea extends l.PureComponent {
             (n = () => {
                 var e;
                 let { channel: t, embeddedActivity: n } = this.props;
-                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), p.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : en.ME, t.id), (0, _.R)() ? u.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }) : ((0, k.vd)(t.type) && h.Z.selectParticipant(t.id, (0, b.oW)(n.applicationId)), (0, k.Qm)(t.type) && (0, x.tg)(ei.Ez.PANEL));
+                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), p.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : en.ME, t.id), (0, _.R)() ? u.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }) : ((0, k.vd)(t.type) && h.Z.selectParticipant(t.id, (0, b.oW)(n.applicationId)), (0, k.Qm)(t.type) && (0, C.tg)(ei.Ez.PANEL));
             }),
             t in this
                 ? Object.defineProperty(this, t, {
@@ -199,24 +199,24 @@ class ea extends l.PureComponent {
                 : (this[t] = n);
     }
 }
-let eo = (0, g.Z)(function (e) {
+let eo = (0, m.Z)(function (e) {
     var t;
     let { guildId: n, ...r } = e,
         a = (0, c.e7)([O.default], () => O.default.getId()),
         o = (0, c.e7)([y.ZP, J.Z], () => (0, L.Z)(y.ZP, J.Z)),
         s = (0, c.e7)([Y.Z, U.Z], () => U.Z.getChannel(Y.Z.getVoiceChannelId())),
-        d = (0, c.e7)([C.ZP], () => C.ZP.getConnectedActivityChannelId()),
+        d = (0, c.e7)([x.ZP], () => x.ZP.getConnectedActivityChannelId()),
         u = (0, c.e7)([U.Z], () => U.Z.getChannel(d)),
         h = (0, c.e7)([F.Z], () => F.Z.getGuild(null == u ? void 0 : u.guild_id)),
-        [p, m] = (0, c.Wu)([B.Z], () => [B.Z.getCurrentUserActiveStream(), B.Z.getStreamerActiveStreamMetadata()]),
-        g = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
-        x = (0, c.e7)([C.ZP], () => (null != u ? C.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
-        Z = (0, c.e7)([F.Z, z.Z, V.ZP], () => (null != s ? T.JL(s, F.Z, z.Z, !1) : null != n && T.h_(V.ZP.getChannels(n), F.Z, z.Z).length > 0)),
-        [b] = (0, I.Z)([null !== (t = null != m && null != m.id ? m.id : null != o && null != o.id ? o.id : null != x ? x.applicationId : void 0) && void 0 !== t ? t : '']),
-        N = (0, c.e7)([j.Z], () => j.Z.getFakeGameData()),
-        E = (0, c.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
-        P = (0, v.Z0)() && null != E && (0, _.R)(),
-        w = (0, c.e7)([H.Z], () => (0, A.Z)(H.Z) && (0, K.isWindows)()),
+        [p, g] = (0, c.Wu)([B.Z], () => [B.Z.getCurrentUserActiveStream(), B.Z.getStreamerActiveStreamMetadata()]),
+        m = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
+        C = (0, c.e7)([x.ZP], () => (null != u ? x.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
+        Z = (0, c.e7)([F.Z, z.Z, V.ZP], () => (null != s ? A.JL(s, F.Z, z.Z, !1) : null != n && A.h_(V.ZP.getChannels(n), F.Z, z.Z).length > 0)),
+        [b] = (0, I.Z)([null !== (t = null != g && null != g.id ? g.id : null != o && null != o.id ? o.id : null != C ? C.applicationId : void 0) && void 0 !== t ? t : '']),
+        N = (0, c.e7)([E.Z], () => E.Z.getFakeGameData()),
+        j = (0, c.e7)([x.ZP], () => x.ZP.getCurrentEmbeddedActivity()),
+        P = (0, v.Z0)() && null != j && (0, _.R)(),
+        w = (0, c.e7)([H.Z], () => (0, T.Z)(H.Z) && (0, K.isWindows)()),
         R = (0, c.e7)([W.Z], () => (null != a ? W.Z.findActivity(a, (e) => e.type === en.IIU.PLAYING) : null)),
         M = null != p && p.ownerId === a && p.state !== en.jm8.ENDED,
         G = (0, c.e7)([Q.default, q.Z], () => (null != u ? (0, S.F6)(u, Q.default, q.Z) : void 0)),
@@ -227,16 +227,16 @@ let eo = (0, g.Z)(function (e) {
         guildId: n,
         canGoLive: w || P || void 0 !== N,
         activity: R,
-        embeddedActivity: x,
+        embeddedActivity: C,
         userId: a,
         runningGame: null != N ? N : o,
         application: b,
-        useReducedMotion: g,
+        useReducedMotion: m,
         isStreaming: M,
         channel: u,
         canStream: Z,
         stream: p,
-        streamMetadata: m,
+        streamMetadata: g,
         channelName: G,
         guildForConnectedChannel: h,
         streamQualityIndicator: k,

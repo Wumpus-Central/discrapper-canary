@@ -11,12 +11,12 @@ var i = n(200651),
     m = n(981631),
     p = n(388032),
     h = n(860156),
-    v = n(983008),
-    x = n(478408);
+    x = n(983008),
+    v = n(478408);
 function f(e) {
     let { showImage: t = !0, padding: n = !1 } = e,
         f = (0, s.ZP)(),
-        N = (0, a.ap)(f) ? x : v,
+        N = (0, a.ap)(f) ? v : x,
         C = l.useCallback(() => {
             (0, r.Z)(c.Z.getAppsSupportURL(m.BhN.APPS_LEARN_MORE));
         }, []),

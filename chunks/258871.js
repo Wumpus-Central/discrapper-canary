@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(944486),
     h = n(147754),
     p = n(688438),
-    m = n(981631),
-    g = n(388032);
+    g = n(981631),
+    m = n(388032);
 let f = [
         {
             key: 'EVENTS',
@@ -23,7 +23,7 @@ let f = [
                 }),
             getName: (e) => {
                 let { numEvents: t } = e;
-                return t > 0 ? g.intl.formatToPlainString(g.t.IBdqSk, { number: t }) : g.intl.string(g.t.tlopTE);
+                return t > 0 ? m.intl.formatToPlainString(m.t.IBdqSk, { number: t }) : m.intl.string(m.t.tlopTE);
             },
             handler: (e) =>
                 (0, a.ZDy)(async () => {
@@ -43,7 +43,7 @@ let f = [
                     color: 'currentColor',
                     className: e
                 }),
-            getName: () => g.intl.string(g.t.K50GHR),
+            getName: () => m.intl.string(m.t.K50GHR),
             handler: (e, t) => (0, d.XU)(e.id, t.id)
         },
         {
@@ -54,7 +54,7 @@ let f = [
                     color: 'currentColor',
                     className: e
                 }),
-            getName: () => g.intl.string(g.t.emRpdX),
+            getName: () => m.intl.string(m.t.emRpdX),
             handler: (e, t) =>
                 (0, a.ZDy)(async () => {
                     let { default: l } = await n.e('79764').then(n.bind(n, 533202));
@@ -70,7 +70,7 @@ let f = [
         {
             key: 'INVITE_MEMBERS',
             renderIcon: (e) => (0, i.jsx)(a.ejJ, { className: e }),
-            getName: () => g.intl.string(g.t.MJQOuL),
+            getName: () => m.intl.string(m.t.MJQOuL),
             handler: (e, t) =>
                 (0, a.ZDy)(async () => {
                     let { default: l } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
@@ -79,7 +79,7 @@ let f = [
                             ...n,
                             guild: e,
                             channel: t,
-                            source: m.t4x.HUB_SIDEBAR
+                            source: g.t4x.HUB_SIDEBAR
                         });
                 })
         }
@@ -100,8 +100,8 @@ let f = [
                 },
                 { autoTrackExposure: !1 }
             ),
-            m = (0, r.e7)([u.Z], () => null != n && u.Z.getChannelId() === n.id),
-            g = l.useMemo(() => ({ numEvents: a.length }), [a.length]),
+            g = (0, r.e7)([u.Z], () => null != n && u.Z.getChannelId() === n.id),
+            m = l.useMemo(() => ({ numEvents: a.length }), [a.length]),
             _ = (0, p.t)(n);
         return (0, i.jsx)(i.Fragment, {
             children: f.map((e) => {
@@ -113,8 +113,8 @@ let f = [
                     {
                         id: u,
                         renderIcon: o,
-                        text: r(g),
-                        selected: m && 'JOIN_SERVERS' === l,
+                        text: r(m),
+                        selected: g && 'JOIN_SERVERS' === l,
                         onClick: null != n ? () => a(t, n) : void 0,
                         trailing: 'JOIN_SERVERS' === l && _ > 0 ? (0, c.N)(_) : null
                     },

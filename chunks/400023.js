@@ -83,8 +83,8 @@ let B = l.memo(
                 {
                     channelStreamMarkup: z,
                     newMessagesBar: W,
-                    jumpToPresentBar: q,
-                    forumPostActionBar: Y,
+                    jumpToPresentBar: Y,
+                    forumPostActionBar: q,
                     safetyWarningBanner: K
                 } = (0, O.Z)({
                     channel: m,
@@ -162,7 +162,7 @@ let B = l.memo(
                                 tabIndex: -1,
                                 role: 'group',
                                 children: [
-                                    Y,
+                                    q,
                                     (0, i.jsxs)('ol', {
                                         className: U.scrollerInner,
                                         'aria-label': w.intl.formatToPlainString(w.t.XarRiI, { channelName: m.name }),
@@ -186,7 +186,7 @@ let B = l.memo(
                                     })
                                 ]
                             }),
-                            q
+                            Y
                         ]
                     })
                 ]

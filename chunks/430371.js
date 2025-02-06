@@ -30,8 +30,8 @@ function T(e) {
         H = p.Z.getVideoComponent(),
         G = h.default.getId(),
         [V, z] = l.useState(null),
-        [W, q] = l.useState(!0),
-        [Y, K] = l.useState(!1),
+        [W, Y] = l.useState(!0),
+        [q, K] = l.useState(!1),
         X = M.type === E.fO.ACTIVITY || M.type === E.fO.PRESENCE_EMBEDDED_ACTIVITY,
         Q = (0, d.Z)(X ? M.applicationId : void 0),
         J = !X && null != M.streamId,
@@ -52,7 +52,7 @@ function T(e) {
     (n = ee || X ? (ee ? -16 : -8) : 40 + Math.max(0, 72 - (w - ed) / 2)),
         l.useEffect(() => {
             let e = setTimeout(() => {
-                q(!1);
+                Y(!1);
             }, 250);
             return () => {
                 clearTimeout(e);
@@ -120,7 +120,7 @@ function T(e) {
             'animate-always'
         ),
         e_ = l.useCallback((e) => {
-            z(e), q(!1);
+            z(e), Y(!1);
         }, []),
         eC = ee || O ? [] : (0, C.n3)(j, M, G),
         { visibleParticipants: ex, participantTileWidth: ev } = (0, x.ZB)(D, y);
@@ -201,7 +201,7 @@ function T(e) {
                             participantTileWidth: ev,
                             selectedParticipantId: M.id,
                             inCall: P,
-                            paused: O || Y || !L,
+                            paused: O || q || !L,
                             popoutWindow: A
                         })
                     })

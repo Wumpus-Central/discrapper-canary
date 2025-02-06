@@ -70,7 +70,7 @@ function G(e) {
                 authorizedAppsFetchState: v.Z.getFetchState()
             };
         }),
-        q = c.Z.useExperiment({ location: 'EmptyMessages' }).enabledDesktop;
+        Y = c.Z.useExperiment({ location: 'EmptyMessages' }).enabledDesktop;
     if (
         (l.useEffect(() => {
             E === D.d4z.DM && null == O && null != S && s.Z.wait(() => (0, C.Z)(h.getRecipientId(), S.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
@@ -106,7 +106,7 @@ function G(e) {
                               channel: h,
                               oauth2Token: z
                           }),
-                          q &&
+                          Y &&
                               (0, i.jsx)(m.Z, {
                                   buttonSize: r.PhG.SMALL,
                                   color: r.zxk.Colors.PRIMARY,

@@ -1,37 +1,37 @@
 n.d(t, { Z: () => h });
 var l = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    a = n(481060),
-    i = n(570928),
-    o = n(540059),
+var i = n(120356),
+    s = n.n(i),
+    o = n(481060),
+    a = n(570928),
+    r = n(540059),
     c = n(977059),
     u = n(388032),
     d = n(586802);
 let h = function (e) {
-    let { className: t, hasVideo: n, text: s, hasConnectedChannel: h, textVariant: x = 'text-md/medium' } = e,
-        g = (0, o.Q3)('RTCConnectionStatusText'),
-        { enabled: N } = (0, c.S)({ location: 'RTCConnectionStatusText' }),
-        C = n ? u.intl.string(u.t.IlHdW1) : u.intl.string(u.t.WsOisr);
-    return (0, l.jsx)(i.Z, {
-        className: r()(t, N ? d.hoverableStatus : d.status),
+    let { className: t, hasVideo: n, text: i, hasConnectedChannel: h, textVariant: N = 'text-md/medium' } = e,
+        f = (0, r.Q3)('RTCConnectionStatusText'),
+        { enabled: g } = (0, c.S)({ location: 'RTCConnectionStatusText' }),
+        x = n ? u.intl.string(u.t.IlHdW1) : u.intl.string(u.t.WsOisr);
+    return (0, l.jsx)(a.Z, {
+        className: s()(t, g ? d.hoverableStatus : d.status),
         hoverText:
-            N && h
-                ? g
-                    ? (0, l.jsx)(a.Text, {
-                          variant: x,
+            g && h
+                ? f
+                    ? (0, l.jsx)(o.Text, {
+                          variant: N,
                           color: 'currentColor',
-                          children: C
+                          children: x
                       })
-                    : C
+                    : x
                 : null,
-        children: g
-            ? (0, l.jsx)(a.Text, {
-                  variant: x,
+        children: f
+            ? (0, l.jsx)(o.Text, {
+                  variant: N,
                   color: 'currentColor',
-                  children: s
+                  children: i
               })
-            : s
+            : i
     });
 };

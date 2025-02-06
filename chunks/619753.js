@@ -231,7 +231,7 @@ function w(e) {
         V = null !== (n = null == G ? void 0 : G.name) && void 0 !== n ? n : null,
         z = null !== (a = (0, f.KS)(r)) && void 0 !== a ? a : o.VL1,
         W = T.Z.can(M.Plq.MANAGE_MESSAGES, r),
-        { content: q } = (0, x.ZP)(
+        { content: Y } = (0, x.ZP)(
             {
                 content: F,
                 embeds: []
@@ -241,10 +241,10 @@ function w(e) {
                 shouldFilterKeywords: U
             }
         ),
-        Y = l.useRef(null),
+        q = l.useRef(null),
         [K, X] = l.useState(!1);
     l.useEffect(() => {
-        let e = Y.current;
+        let e = q.current;
         null != e && null != e.offsetWidth && null != e.scrollWidth && X(e.offsetWidth < e.scrollWidth);
     }, []);
     let Q = [F, V, H].filter((e) => null != e).join(', ');
@@ -271,9 +271,9 @@ function w(e) {
                                 children: (e) =>
                                     (0, i.jsxs)('span', {
                                         ...e,
-                                        ref: Y,
+                                        ref: q,
                                         className: k.channelNameText,
-                                        children: [O && null !== H && ''.concat(H, ' : '), q]
+                                        children: [O && null !== H && ''.concat(H, ' : '), Y]
                                     })
                             }),
                             (0, i.jsx)(D, {

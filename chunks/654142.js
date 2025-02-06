@@ -10,12 +10,12 @@ var i = n(200651),
     u = n(430824),
     h = n(823379),
     p = n(179809),
-    m = n(652376),
-    g = n(981631);
+    g = n(652376),
+    m = n(981631);
 let f = l.memo(function (e) {
     let { folderNode: t, ...f } = e,
-        { id: _, name: v, color: x, children: C } = t,
-        Z = C.map((e) => e.id),
+        { id: _, name: v, color: C, children: x } = t,
+        Z = x.map((e) => e.id),
         I = (0, s.Z)((e) => e.guildId),
         b = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(_)),
         S = (function (e) {
@@ -26,15 +26,15 @@ let f = l.memo(function (e) {
                         return null != n ? n.name : null;
                     })
                     .filter(h.lm),
-                n = 2 * g.dYL,
+                n = 2 * m.dYL,
                 i = [];
             for (let e of t) (e.length < n || 0 === i.length) && (i.push(e), (n -= e.length));
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
         })(t),
-        N = (0, m.Z)(t),
+        N = (0, g.Z)(t),
         {
-            mentionCount: j,
-            isMentionLowImportance: E,
+            mentionCount: E,
+            isMentionLowImportance: j,
             unread: y
         } = (0, r.cj)([d.default], () => ({
             mentionCount: Z.map((e) => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
@@ -44,7 +44,7 @@ let f = l.memo(function (e) {
         P = l.useCallback(() => {
             o.Z.toggleGuildFolderExpand(_);
         }, [_]),
-        T = l.useCallback(
+        A = l.useCallback(
             (e) => {
                 (0, a.jW)(e, async () => {
                     let { default: e } = await n.e('52590').then(n.bind(n, 205784));
@@ -53,24 +53,24 @@ let f = l.memo(function (e) {
                             ...t,
                             folderId: _,
                             folderName: v,
-                            folderColor: x,
-                            unread: y || j > 0
+                            folderColor: C,
+                            unread: y || E > 0
                         });
                 });
             },
-            [_, v, x, y, j]
+            [_, v, C, y, E]
         );
     return (0, i.jsx)(p.Z, {
         ...f,
         folderNode: t,
         expanded: b,
         selected: null != I && Z.includes(I),
-        mentionCount: j,
-        isMentionLowImportance: E,
+        mentionCount: E,
+        isMentionLowImportance: j,
         unread: y,
         mediaState: N,
         defaultFolderName: S,
         onExpandCollapse: P,
-        onContextMenu: T
+        onContextMenu: A
     });
 });

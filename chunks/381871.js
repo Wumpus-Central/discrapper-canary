@@ -60,7 +60,7 @@ function U(e) {
         z = (null !== (t = b.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !V.slice(0, A.e5 - 1).some((t) => t.name === e.name));
     z.length > 0 && V.splice(V.length - 1, 1, z[0]);
     let W = (0, Z.Iu)(F),
-        q = (e) => {
+        Y = (e) => {
             c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
                 emoji: e
@@ -74,7 +74,7 @@ function U(e) {
                     isPremium: B
                 });
         },
-        Y = () => {
+        q = () => {
             (0, T.h)({
                 analytics: {
                     type: R.cd.EMOJI_PICKER_EMOJI_CLICKED,
@@ -130,8 +130,8 @@ function U(e) {
                         title: L.intl.string(L.t.Nn8lPz),
                         channel: n,
                         closePopout: f,
-                        onSelectEmoji: q,
-                        onSelectDisabledEmoji: Y,
+                        onSelectEmoji: Y,
+                        onSelectDisabledEmoji: q,
                         onFocus: x,
                         onExpandedToggle: K,
                         analyticsOverride: D,

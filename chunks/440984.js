@@ -36,12 +36,12 @@ function f(e) {
         null == I || null == O)
     )
         return null;
-    let y = x.intl.format(x.t.gPzMHR, {
+    let Z = x.intl.format(x.t.gPzMHR, {
             numMonths: I.discount.user_usage_limit,
             discountedPrice: O,
             regularPrice: P
         }),
-        Z = (0, i.jsx)('div', {
+        y = (0, i.jsx)('div', {
             className: p.whatYouLoseButtonContainer,
             children: (0, i.jsx)(a.zxk, {
                 color: a.zxk.Colors.BRAND,
@@ -80,9 +80,9 @@ function f(e) {
                                       }),
                                       (0, i.jsx)('div', {
                                           className: p.bodyString,
-                                          children: y
+                                          children: Z
                                       }),
-                                      Z
+                                      y
                                   ]
                               })
                             : (0, i.jsx)(a.$jN, {})

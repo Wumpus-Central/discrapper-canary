@@ -11,8 +11,8 @@ var i = n(200651),
     m = n(361917),
     p = n(684256),
     h = n(314734),
-    v = n(981631),
-    x = n(814894);
+    x = n(981631),
+    v = n(814894);
 let f = {
         width: h.Gy,
         height: h.lv
@@ -24,7 +24,7 @@ let f = {
                 { analyticsLocations: u } = (0, r.ZP)(o.Z.APP_LAUNCHER);
             return (
                 l.useEffect(() => {
-                    (0, s.yw)(v.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
+                    (0, s.yw)(x.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
                         source: a,
                         location: 'app_launcher'
                     });
@@ -32,7 +32,7 @@ let f = {
                 l.useEffect(() => {
                     let e = Date.now();
                     return () => {
-                        (0, s.yw)(v.rMx.APP_LAUNCHER_CLOSED, {
+                        (0, s.yw)(x.rMx.APP_LAUNCHER_CLOSED, {
                             reason: c.Z.closeReason(),
                             time_spent: Date.now() - e,
                             source: a
@@ -40,11 +40,11 @@ let f = {
                     };
                 }, [a]),
                 (0, i.jsx)('div', {
-                    className: x.drawerSizingWrapper,
+                    className: v.drawerSizingWrapper,
                     ref: t,
                     style: f,
                     children: (0, i.jsx)('div', {
-                        className: x.contentWrapper,
+                        className: v.contentWrapper,
                         children: (0, i.jsx)(r.Gt, {
                             value: u,
                             children: (0, i.jsx)(E, {
@@ -81,7 +81,7 @@ function E(e) {
                           }
                 );
         }, []),
-        v = l.useCallback(
+        x = l.useCallback(
             (e) => {
                 var t;
                 return null !== (t = a.findLast((t) => t.type === e)) && void 0 !== t ? t : s[e];
@@ -95,7 +95,7 @@ function E(e) {
             currentView: c,
             pushHistory: p,
             goBack: h,
-            getMostRecentHistoryItemByType: v,
+            getMostRecentHistoryItemByType: x,
             isSlideReady: u,
             setSlideReady: m
         },
@@ -132,25 +132,25 @@ function A(e) {
                 }
             );
         })(o),
-        { currentView: v, getMostRecentHistoryItemByType: f, setSlideReady: C } = (0, d.hH)();
+        { currentView: x, getMostRecentHistoryItemByType: f, setSlideReady: C } = (0, d.hH)();
     l.useEffect(() => {
         C(!1);
-    }, [null == v ? void 0 : v.type, C]);
+    }, [null == x ? void 0 : x.type, C]);
     let E = l.useCallback(() => {
         C(!0);
     }, [C]);
-    if (null == v) return null;
+    if (null == x) return null;
     let A = f(d.gc.LIST),
         I = f(d.gc.APPLICATION);
     return (0, i.jsxs)(a.MyZ, {
-        activeSlide: v.type,
+        activeSlide: x.type,
         width: h.Gy,
         onSlideReady: E,
         children: [
             (0, i.jsx)(a.Mi4, {
                 id: d.gc.HOME,
                 children: (0, i.jsx)('div', {
-                    className: x.slideContent,
+                    className: v.slideContent,
                     style: N,
                     children: (0, i.jsx)(m.Z, {
                         isScrollCloseToBottom: c,
@@ -165,7 +165,7 @@ function A(e) {
             (0, i.jsx)(a.Mi4, {
                 id: d.gc.LIST,
                 children: (0, i.jsx)('div', {
-                    className: x.slideContent,
+                    className: v.slideContent,
                     style: N,
                     children:
                         null != A &&
@@ -183,7 +183,7 @@ function A(e) {
             (0, i.jsx)(a.Mi4, {
                 id: d.gc.APPLICATION,
                 children: (0, i.jsx)('div', {
-                    className: x.slideContent,
+                    className: v.slideContent,
                     style: N,
                     children:
                         null != I &&

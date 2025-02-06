@@ -7,7 +7,7 @@ var l = n(120356),
     o = n(686546),
     s = n(32986);
 function c(e) {
-    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: d, icon: u, iconForeground: h, innerClassName: p, className: m, tooltipClassName: g, onMouseEnter: f, onMouseLeave: _, 'aria-label': v, 'aria-checked': x, role: C, tooltipColor: Z, tooltipForceOpen: I, tooltipContentClassName: b } = e,
+    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: d, icon: u, iconForeground: h, innerClassName: p, className: g, tooltipClassName: m, onMouseEnter: f, onMouseLeave: _, 'aria-label': v, 'aria-checked': C, role: x, tooltipColor: Z, tooltipForceOpen: I, tooltipContentClassName: b } = e,
         S =
             'function' == typeof u
                 ? (0, i.jsx)(u, {
@@ -19,22 +19,22 @@ function c(e) {
                   })
                 : u;
     return (0, i.jsx)(a.ua7, {
-        tooltipClassName: g,
+        tooltipClassName: m,
         text: t,
         'aria-label': v,
         color: Z,
         tooltipContentClassName: b,
         forceOpen: I,
         children: (e) => {
-            let { onClick: t, onMouseEnter: u, onMouseLeave: h, ...g } = e;
+            let { onClick: t, onMouseEnter: u, onMouseLeave: h, ...m } = e;
             return (0, i.jsxs)(a.zxk, {
-                ...g,
+                ...m,
                 look: a.zxk.Looks.BLANK,
                 size: a.zxk.Sizes.NONE,
                 disabled: d,
                 innerClassName: p,
-                wrapperClassName: r()(s.button, m),
-                className: r()(s.button, m, {
+                wrapperClassName: r()(s.button, g),
+                className: r()(s.button, g, {
                     [s.disabled]: d,
                     [s.enabled]: !d
                 }),
@@ -48,8 +48,8 @@ function c(e) {
                     null == h || h(), null == _ || _();
                 },
                 onContextMenu: l,
-                role: C,
-                'aria-checked': x,
+                role: x,
+                'aria-checked': C,
                 children: [
                     null != n
                         ? (0, i.jsx)(o.ZP, {

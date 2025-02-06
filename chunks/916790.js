@@ -13,8 +13,8 @@ var a = n(200651),
     x = n(4912),
     p = n(55935),
     f = n(428530),
-    b = n(257785),
-    _ = n(484036),
+    _ = n(257785),
+    b = n(484036),
     g = n(681619),
     v = n(621060),
     j = n(912130),
@@ -67,10 +67,10 @@ let y = [
                 l = c()(n.createdAt);
             return (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsxs)(b.E, {
+                    (0, a.jsxs)(_.E, {
                         className: j.actionProperties,
                         children: [
-                            (0, a.jsx)(b.Z9, {
+                            (0, a.jsx)(_.Z9, {
                                 name: 'Created at',
                                 children: (0, a.jsx)('time', {
                                     dateTime: null === (t = n.createdAt) || void 0 === t ? void 0 : t.toISOString(),
@@ -78,7 +78,7 @@ let y = [
                                     children: (0, p.Y4)(l)
                                 })
                             }),
-                            (0, a.jsxs)(b.Z9, {
+                            (0, a.jsxs)(_.Z9, {
                                 name: 'Total Time',
                                 children: [N(n.totalTime), ' ms']
                             })
@@ -142,7 +142,7 @@ function S(e) {
             [t]
         ),
         { TabBar: o, renderSelectedTab: s } = (0, v.Z)({ tabs: r }, [r]);
-    return (0, a.jsxs)(_.Z, {
+    return (0, a.jsxs)(b.Z, {
         className: j.subPanel,
         minHeight: 100,
         initialHeight: n,
@@ -215,8 +215,8 @@ function I() {
         ),
         [c, m] = l.useState(s),
         [x, p] = l.useState(s),
-        [f, b] = l.useState(!1),
-        [_, v] = l.useState(),
+        [f, _] = l.useState(!1),
+        [b, v] = l.useState(),
         N = l.useRef(null),
         T = l.useMemo(
             () =>
@@ -245,7 +245,7 @@ function I() {
         ),
         E = l.useCallback(
             (e) => {
-                m(s), b(e);
+                m(s), _(e);
             },
             [s]
         );
@@ -288,12 +288,12 @@ function I() {
             (0, a.jsx)(g.Z, {
                 columns: k,
                 data: I,
-                selectedRowKey: null == _ ? void 0 : _.id.toString(),
+                selectedRowKey: null == b ? void 0 : b.id.toString(),
                 onClickRow: (e) => v(e.actionLog)
             }),
-            null != _ &&
+            null != b &&
                 (0, a.jsx)(S, {
-                    actionLog: _,
+                    actionLog: b,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })
         ]

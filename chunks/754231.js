@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(47120);
+n.d(t, { Z: () => E }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -10,13 +10,13 @@ var i = n(200651),
     u = n(884338),
     h = n(528144),
     p = n(424678),
-    m = n(594174),
-    g = n(81063),
+    g = n(594174),
+    m = n(81063),
     f = n(768581),
     _ = n(823379),
     v = n(51144),
-    x = n(823469);
-let C = u.u.SIZE_24;
+    C = n(823469);
+let x = u.u.SIZE_24;
 function Z(e) {
     var t, n;
     let { activity: r, user: a, embeddedApp: o, onOpenSpotifyAlbum: d } = e,
@@ -37,25 +37,25 @@ function Z(e) {
                           (0, i.jsx)('img', {
                               alt: n,
                               src: t,
-                              className: x.applicationLargeImage
+                              className: C.applicationLargeImage
                           })
                   });
               })(o)
             : null;
     let p = null !== (t = u.large_image) && void 0 !== t ? t : u.small_image,
-        m = (0, c.Z)(r),
-        _ = m ? x.spotifyLargeImage : x.applicationLargeImage,
+        g = (0, c.Z)(r),
+        _ = g ? C.spotifyLargeImage : C.applicationLargeImage,
         v =
             null != p
                 ? (0, i.jsx)('img', {
                       alt: null !== (n = u.large_text) && void 0 !== n ? n : '',
-                      src: (0, g.getAssetImage)(h, p, [128, 128]),
+                      src: (0, m.getAssetImage)(h, p, [128, 128]),
                       className: _
                   })
                 : null;
-    return m && null != d
+    return g && null != d
         ? ((v = (0, i.jsx)(s.P3F, {
-              className: x.clickable,
+              className: C.clickable,
               onClick: () => {
                   d(r, a.id);
               },
@@ -81,7 +81,7 @@ function I(e) {
         if (!(null != t && (0, c.Z)(t)) || null == t.sync_id || null == r || null == l) return null;
         (a = r),
             (o = (0, i.jsx)(s.P3F, {
-                className: x.headerLink,
+                className: C.headerLink,
                 onClick: () => {
                     l(t);
                 },
@@ -90,7 +90,7 @@ function I(e) {
     }
     return (0, i.jsx)(h.Z, {
         title: a,
-        className: x.header,
+        className: C.header,
         children: o
     });
 }
@@ -107,7 +107,7 @@ function b(e) {
                 p.Z,
                 {
                     artists: o,
-                    linkClassName: x.bodyLink,
+                    linkClassName: C.bodyLink,
                     canOpen: null != t.sync_id,
                     onOpenSpotifyArtist: (e) => {
                         null == l || l(t, n.id, e);
@@ -119,7 +119,7 @@ function b(e) {
     null == s || '' === s)
         ? null
         : (0, i.jsx)('div', {
-              className: a()(x.ellipsisRow, x.colorHeaderSecondary, x.bodyTextSize),
+              className: a()(C.ellipsisRow, C.colorHeaderSecondary, C.bodyTextSize),
               children: s
           });
 }
@@ -129,7 +129,7 @@ function S(e) {
     return null == n || '' === n || (0, c.Z)(t)
         ? null
         : (0, i.jsx)('div', {
-              className: a()(x.ellipsisRow, x.colorHeaderSecondary, x.bodyTextSize, x.__invalid_activity),
+              className: a()(C.ellipsisRow, C.colorHeaderSecondary, C.bodyTextSize, C.__invalid_activity),
               children: n
           });
 }
@@ -142,21 +142,21 @@ function N(e) {
     return (0, i.jsx)(d.Z, {
         start: l,
         end: r,
-        className: x.timeBar,
+        className: C.timeBar,
         themed: !0,
         singleLine: !0
     });
 }
-function j(e) {
-    let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: d, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: g } = e,
+function E(e) {
+    let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: d, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: m } = e,
         f = [];
     null != n ? (f = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != d && (f = d.map((e) => e.user.id));
-    let j = (0, o.Wu)([m.default], () => f.map((e) => m.default.getUser(e)).filter(_.lm)),
-        E = null != n || (0, c.Z)(t),
+    let E = (0, o.Wu)([g.default], () => f.map((e) => g.default.getUser(e)).filter(_.lm)),
+        j = null != n || (0, c.Z)(t),
         y = l.useMemo(() => {
             let e = new Map();
             return (
-                E &&
+                j &&
                     null != d &&
                     d.forEach((t) => {
                         let n = t.member;
@@ -164,22 +164,22 @@ function j(e) {
                     }),
                 e
             );
-        }, [d, E]);
-    return E
+        }, [d, j]);
+    return j
         ? (0, i.jsxs)('div', {
-              className: x.flexColumn,
+              className: C.flexColumn,
               children: [
                   (0, i.jsxs)('div', {
-                      className: x.flexRow,
+                      className: C.flexRow,
                       children: [
                           (0, i.jsx)(Z, {
                               activity: t,
                               user: r,
                               embeddedApp: n,
-                              onOpenSpotifyAlbum: g
+                              onOpenSpotifyAlbum: m
                           }),
                           (0, i.jsxs)('div', {
-                              className: x.detailsAndAvatarsContainer,
+                              className: C.detailsAndAvatarsContainer,
                               children: [
                                   (0, i.jsx)(I, {
                                       activity: t,
@@ -194,10 +194,10 @@ function j(e) {
                                   (0, i.jsx)(S, { activity: t }),
                                   f.length > 0 &&
                                       (0, i.jsx)(u.Z, {
-                                          className: x.usersSummary,
+                                          className: C.usersSummary,
                                           guildId: a.guild_id,
-                                          users: j,
-                                          size: C,
+                                          users: E,
+                                          size: x,
                                           max: 7,
                                           renderUser: (e) => {
                                               var t;
@@ -212,9 +212,9 @@ function j(e) {
                                                       children: (0, i.jsx)(
                                                           'img',
                                                           {
-                                                              src: e.getAvatarURL(a.guild_id, C),
+                                                              src: e.getAvatarURL(a.guild_id, x),
                                                               alt: l,
-                                                              className: x.avatar
+                                                              className: C.avatar
                                                           },
                                                           e.id
                                                       )

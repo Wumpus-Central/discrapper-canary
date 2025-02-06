@@ -10,37 +10,37 @@ var i = n(200651),
     u = n(938475),
     h = n(823379),
     p = n(734190),
-    m = n(388032),
-    g = n(329986);
+    g = n(388032),
+    m = n(329986);
 let f = l.memo(function (e) {
     let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: r, withGuildIcon: f } = e,
         { density: _ } = (0, s.TCT)(),
         v = (0, c.Q3)('GuildSidebarThreadList'),
-        x = (0, o.Wu)([d.Z], () => r.map((e) => d.Z.getChannel(e)).filter(h.lm), [r]),
-        C = (0, o.e7)([u.ZP], () => {
-            let e = x[x.length - 1];
+        C = (0, o.Wu)([d.Z], () => r.map((e) => d.Z.getChannel(e)).filter(h.lm), [r]),
+        x = (0, o.e7)([u.ZP], () => {
+            let e = C[C.length - 1];
             if (null == e) return 0;
             let t = u.ZP.getVoiceStates(e.guild_id)[e.id];
             return null == t || 0 === t.length ? 0 : l !== e.id ? 40 : 32 * t.length + 8;
         });
     return (0, i.jsx)('li', {
-        className: g.container,
+        className: m.container,
         children: (0, i.jsxs)('ul', {
             role: 'group',
-            'aria-label': m.intl.formatToPlainString(m.t.EiyIi4, { channelName: t.name }),
+            'aria-label': g.intl.formatToPlainString(g.t.EiyIi4, { channelName: t.name }),
             children: [
                 (0, i.jsx)('div', {
-                    className: a()(g.spineBorder, { [g.spineBorderWithGuildIcon]: f }),
-                    style: { bottom: (v && 'cozy' === _ ? 28 : 24) + C }
+                    className: a()(m.spineBorder, { [m.spineBorderWithGuildIcon]: f }),
+                    style: { bottom: (v && 'cozy' === _ ? 28 : 24) + x }
                 }),
-                x.map((e, t) =>
+                C.map((e, t) =>
                     (0, i.jsx)(
                         p.Z,
                         {
                             thread: e,
                             isSelectedChannel: (null == n ? void 0 : n.id) === e.id,
                             isSelectedVoice: l === e.id,
-                            isLast: t === x.length - 1,
+                            isLast: t === C.length - 1,
                             withGuildIcon: f
                         },
                         e.id

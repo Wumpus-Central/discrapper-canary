@@ -10,19 +10,19 @@ var i = n(200651),
     u = n(111028),
     h = n(454585),
     p = n(626135),
-    m = n(981631),
-    g = n(388032),
+    g = n(981631),
+    m = n(388032),
     f = n(316249),
     _ = n(665162);
 function v(e) {
-    let { channel: t, connected: n, hovered: r, subtitle: v, onClick: x } = e,
-        C = (0, o.e7)([d.Z], () => d.Z.getChannelStatus(t)),
-        Z = null != C && C.length > 0,
+    let { channel: t, connected: n, hovered: r, subtitle: v, onClick: C } = e,
+        x = (0, o.e7)([d.Z], () => d.Z.getChannelStatus(t)),
+        Z = null != x && x.length > 0,
         I = (0, c.ZP)(t, !0),
         b = null != v && v.length > 0;
     l.useEffect(() => {
         Z &&
-            p.default.track(m.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+            p.default.track(g.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id
             });
@@ -33,22 +33,22 @@ function v(e) {
     return Z
         ? (0, i.jsx)(s.P3F, {
               className: N,
-              onClick: I ? x : void 0,
+              onClick: I ? C : void 0,
               children: (0, i.jsx)(s.Text, {
                   variant: 'text-xs/medium',
                   className: a()(f.statusText, _.markup),
-                  children: (0, i.jsx)(u.Z, { children: h.Z.parseVoiceChannelStatus(C, !0, { channelId: t.id }) })
+                  children: (0, i.jsx)(u.Z, { children: h.Z.parseVoiceChannelStatus(x, !0, { channelId: t.id }) })
               })
           })
         : n && I && (!b || r)
           ? (0, i.jsxs)(s.P3F, {
                 className: N,
-                onClick: x,
+                onClick: C,
                 children: [
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/medium',
                         className: f.statusText,
-                        children: g.intl.string(g.t.Mgpxi4)
+                        children: m.intl.string(m.t.Mgpxi4)
                     }),
                     (0, i.jsx)(s.vdY, {
                         size: 'custom',

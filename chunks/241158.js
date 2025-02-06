@@ -49,10 +49,10 @@ let C = (e) => {
             R = (0, d.ZP)(),
             P = (0, o.wj)(R),
             D = P ? c.Ttl.WHITE : c.Ttl.BRAND,
-            y = (0, a.debounce)(() => {
+            Z = (0, a.debounce)(() => {
                 m.default.track(_.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, a.snakeCase)(t) });
             }, 800),
-            Z = () => {
+            y = () => {
                 null == j.current || S || ((j.current.currentTime = A.current), j.current.play());
             },
             k = () => {
@@ -87,7 +87,7 @@ let C = (e) => {
                                 color: D,
                                 className: l()(E.whatsNewBoxButton, P ? E.whatsNewBoxButtonWhite : E.whatsNewBoxButtonBrand),
                                 onClick: () => {
-                                    y(), b();
+                                    Z(), b();
                                 },
                                 children: p
                             })
@@ -129,8 +129,8 @@ let C = (e) => {
                 [E.whatsNewBoxContainer]: !I,
                 [E.compactBoxContainer]: I
             }),
-            onMouseEnter: Z,
-            onFocus: Z,
+            onMouseEnter: y,
+            onFocus: y,
             onBlur: k,
             onMouseLeave: k,
             children: M

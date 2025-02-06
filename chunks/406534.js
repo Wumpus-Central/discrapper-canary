@@ -43,8 +43,8 @@ var i = n(200651),
     V = n(511010),
     z = n(524444),
     W = n(977391),
-    q = n(921235),
-    Y = n(97352),
+    Y = n(921235),
+    q = n(97352),
     K = n(226027),
     X = n(959517),
     Q = n(981631),
@@ -118,7 +118,7 @@ function en(e) {
                 : null),
         eT = en.isForumPost() && !eC ? (0, i.jsx)(g.Z, { postId: en.id }) : null,
         eS = (0, C.Z)(en.id);
-    (0, Y.Z)();
+    (0, q.Z)();
     let ej = null,
         ey = [],
         eA = es.map((e, t) => {
@@ -274,7 +274,7 @@ function en(e) {
                     'has-more-after'
                 )
             ),
-        !eh && e_ && eg() && ey.push((0, i.jsx)(q.Z, { channel: en })),
+        !eh && e_ && eg() && ey.push((0, i.jsx)(Y.Z, { channel: en })),
         el > 0 && ea && eg())
     ) {
         let e, t;

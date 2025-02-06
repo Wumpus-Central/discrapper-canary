@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(47120);
+n.d(t, { Z: () => y }), n(47120);
 var i = n(200651);
 n(192379);
 var s = n(319147),
@@ -30,7 +30,7 @@ var s = n(319147),
     R = n(26517),
     P = n(93125),
     D = n(278583);
-let y = new Map([
+let Z = new Map([
     ['BG', l],
     ['CZ', c],
     ['HU', p],
@@ -62,10 +62,10 @@ let y = new Map([
     ['PL', A],
     ['HR', x]
 ]);
-function Z(e) {
+function y(e) {
     let { className: t, countryCode: n } = e;
-    if (null == n || !y.has(n)) return null;
-    let s = y.get(n);
+    if (null == n || !Z.has(n)) return null;
+    let s = Z.get(n);
     return (0, i.jsx)('img', {
         className: t,
         'aria-hidden': !0,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -10,33 +10,33 @@ var i = n(200651),
     u = n(63568),
     h = n(246364),
     p = n(98493),
-    m = n(434479),
-    g = n(496675),
+    g = n(434479),
+    m = n(496675),
     f = n(527379),
     _ = n(981631),
     v = n(388032);
-function x(e) {
+function C(e) {
     let { guild: t, selected: n } = e,
-        x = (0, u.jS)(t.id, 'Guild Sidebar'),
-        C = (0, r.e7)([g.Z], () => g.Z.can(_.Plq.KICK_MEMBERS, t)),
+        C = (0, u.jS)(t.id, 'Guild Sidebar'),
+        x = (0, r.e7)([m.Z], () => m.Z.can(_.Plq.KICK_MEMBERS, t)),
         Z = (0, r.e7)([d.Z], () => d.Z.getSubmittedGuildJoinRequestTotal(t.id)),
-        I = x && C && null != Z ? Z : 0;
+        I = C && x && null != Z ? Z : 0;
     l.useEffect(() => {
-        C &&
-            x &&
+        x &&
+            C &&
             c.Z.fetchGuildJoinRequests({
                 guildId: t.id,
                 status: h.wB.SUBMITTED,
                 limit: p.p
             });
-    }, [C, t.id, x]);
+    }, [x, t.id, C]);
     let b = l.useCallback(() => {
             (0, f._X)(t.id);
         }, [t.id]),
         S = (0, s.XL)(t.id, a.z.MEMBERS_LAUNCH_UPSELL);
     return (0, i.jsx)('div', {
         ref: S,
-        children: (0, i.jsx)(m.m, {
+        children: (0, i.jsx)(g.m, {
             id: 'members-'.concat(t.id),
             renderIcon: (e) =>
                 (0, i.jsx)(o.BFJ, {

@@ -8,13 +8,13 @@ var i = n(544891),
     c = n(626135),
     d = n(317770),
     u = n(981631);
-function _(e, t) {
+function h(e, t) {
     c.default.track(u.rMx.BROWSER_HANDOFF_SUCCEEDED, {
         authenticated: e,
         handoff_source: t
     });
 }
-class h extends d.Z {
+class _ extends d.Z {
     _initialize() {
         r.Z.subscribe('BROWSER_HANDOFF_END', this.handleEnd), r.Z.subscribe('BROWSER_HANDOFF_FROM_APP', this.handleHandoff);
     }
@@ -36,10 +36,10 @@ class h extends d.Z {
                   .then(
                       (e) => {
                           let { body: t } = e;
-                          (0, a.Vb)(t.user), l.Z.loginToken(t.token, !1), _(!0, s);
+                          (0, a.Vb)(t.user), l.Z.loginToken(t.token, !1), h(!0, s);
                       },
                       (e) => {
-                          if ((null != r && _(!1, s), l.Z.setFingerprint(r), (0, a.lx)(), s === o.F.ROLE_SUBSCRIPTION)) {
+                          if ((null != r && h(!1, s), l.Z.setFingerprint(r), (0, a.lx)(), s === o.F.ROLE_SUBSCRIPTION)) {
                               var t;
                               c.default.track(u.rMx.MOBILE_WEB_HANDOFF_FAILURE, {
                                   reason: null !== (t = e.message) && void 0 !== t ? t : e.text,
@@ -49,7 +49,7 @@ class h extends d.Z {
                       }
                   )
             : null != r
-              ? (l.Z.setFingerprint(r), _(!1, s), (0, a.lx)())
+              ? (l.Z.setFingerprint(r), h(!1, s), (0, a.lx)())
               : (l.Z.setFingerprint(r), (0, a.by)());
     }
     constructor(...e) {
@@ -78,4 +78,4 @@ class h extends d.Z {
                 : (this[t] = n);
     }
 }
-let g = new h();
+let g = new _();

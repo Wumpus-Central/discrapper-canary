@@ -1,7 +1,7 @@
 n.d(t, {
-    $_: () => _,
+    $_: () => s,
     KQ: () => u,
-    MU: () => E,
+    MU: () => c,
     RF: () => d
 }),
     n(315314),
@@ -12,50 +12,50 @@ n.d(t, {
     n(815648),
     n(47120),
     n(860911);
-var l = n(477690);
+var a = n(477690);
 n(481060);
-var i = n(911969);
+var r = n(911969);
 n(703656);
-var a = n(736408),
-    r = n(981631),
-    o = n(388032);
-let E = 0;
+var l = n(736408),
+    o = n(981631),
+    i = n(388032);
+let c = 0;
 function u() {
     return {
-        id: E,
-        name: o.intl.string(o.t.E407b2)
+        id: c,
+        name: i.intl.string(i.t.E407b2)
     };
 }
-function _(e) {
-    let { itemId: t, hash: n, containerWidth: i = parseFloat(l.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) } = e;
-    return (0, a.$)({
+function s(e) {
+    let { itemId: t, hash: n, containerWidth: r = parseFloat(a.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) } = e;
+    return (0, l.$)({
         itemId: t,
         hash: n,
-        containerWidth: i
+        containerWidth: r
     });
 }
-let c = (e) => {
+let p = (e) => {
     if (null == e) return null;
     let t = e.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
     return null != t ? t[1] : null;
 };
 function d(e) {
     switch (e.type) {
-        case i.ee.MEDIA_PROXY:
+        case r.ee.MEDIA_PROXY:
             var t;
             let n = null !== (t = e.proxy_url) && void 0 !== t ? t : e.url;
             return {
-                type: r.s9s.IMG,
+                type: o.s9s.IMG,
                 width: 0,
                 height: 0,
                 src: n
             };
-        case i.ee.YOUTUBE:
-            let l = c(e.url);
-            if (null != l)
+        case r.ee.YOUTUBE:
+            let a = p(e.url);
+            if (null != a)
                 return {
-                    type: r.s9s.YOUTUBE_VIDEO,
-                    youtubeVideoId: l
+                    type: o.s9s.YOUTUBE_VIDEO,
+                    youtubeVideoId: a
                 };
     }
     return console.warn('Unsupported carousel item', e), null;

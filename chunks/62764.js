@@ -39,7 +39,7 @@ function L(e) {
         G = (0, o.e7)([N.Z], () => N.Z.getChannel(t), [t]),
         { firstMessage: V } = (0, j.cl)(G),
         z = (0, o.e7)([b.Z], () => b.Z.hasJoined(t)),
-        { disableReactionUpdates: W, disableReactionCreates: q, isLurking: Y, isGuest: K, isPendingMember: X } = (0, C.Z)(G),
+        { disableReactionUpdates: W, disableReactionCreates: Y, isLurking: q, isGuest: K, isPendingMember: X } = (0, C.Z)(G),
         Q = (0, o.e7)([N.Z], () => N.Z.getChannel(L)),
         J = (0, S.Bs)(Q),
         $ = (0, o.e7)([f.Z], () => f.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
@@ -104,7 +104,7 @@ function L(e) {
                         className: r()(R.reactButtons, { [R.loading]: et }),
                         children: [
                             !ei &&
-                                !q &&
+                                !Y &&
                                 null != J &&
                                 (0, i.jsx)('div', {
                                     className: M.reactions,
@@ -112,7 +112,7 @@ function L(e) {
                                         message: V,
                                         readOnly: !1,
                                         useChatFontScaling: !1,
-                                        isLurking: Y,
+                                        isLurking: q,
                                         isGuest: K,
                                         isPendingMember: X,
                                         emoji: J,
@@ -130,7 +130,7 @@ function L(e) {
                                 channel: G,
                                 disableReactionCreates: !0,
                                 disableReactionUpdates: W,
-                                isLurking: Y,
+                                isLurking: q,
                                 isGuest: K,
                                 isPendingMember: X,
                                 maxReactions: D,
@@ -139,7 +139,7 @@ function L(e) {
                                 isForumToolbar: !0,
                                 forceHideReactionCreates: !0
                             }),
-                            !q &&
+                            !Y &&
                                 (0, i.jsx)(x.X, {
                                     type: _.O.NORMAL,
                                     message: V,

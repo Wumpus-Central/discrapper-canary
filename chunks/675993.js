@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120);
+n.d(t, { Z: () => j }), n(47120);
 var i = n(200651),
     l = n(192379),
     a = n(120356),
@@ -11,26 +11,26 @@ var i = n(200651),
     m = n(906732),
     p = n(706302),
     h = n(812236),
-    v = n(835473),
-    x = n(70097),
+    x = n(835473),
+    v = n(70097),
     f = n(240991),
     N = n(973616),
     C = n(783097),
     E = n(695676),
     A = n(520315),
     I = n(29380),
-    g = n(783685),
-    _ = n(388032),
+    _ = n(783685),
+    g = n(388032),
     P = n(580062),
-    j = n(665162);
-function y(e) {
+    y = n(665162);
+function j(e) {
     let { context: t, application: n, videoUrl: a, imageCoverUrl: r, sectionName: d, hasCommands: m } = e,
         p = l.useMemo(() => {
             var e;
             return null !== (e = (0, C.jD)(n)) && void 0 !== e ? e : '';
         }, [n]),
         h = (0, s.e7)([c.Z], () => c.Z.inDevModeForApplication(n.id)),
-        v = null != a,
+        x = null != a,
         { isSlideReady: f } = (0, E.hH)(),
         [N, A] = l.useState(!1);
     return (
@@ -42,12 +42,12 @@ function y(e) {
             children: [
                 (0, i.jsxs)('div', {
                     children: [
-                        v
+                        x
                             ? (0, i.jsxs)('div', {
                                   className: P.videoContainer,
                                   children: [
                                       N
-                                          ? (0, i.jsx)(x.Z, {
+                                          ? (0, i.jsx)(v.Z, {
                                                 className: o()(P.videoCover, P.video),
                                                 loop: !0,
                                                 muted: !0,
@@ -59,17 +59,17 @@ function y(e) {
                                       (0, i.jsx)('img', {
                                           className: P.videoCover,
                                           src: r,
-                                          'aria-label': _.intl.string(_.t.X4IxWF)
+                                          'aria-label': g.intl.string(g.t.X4IxWF)
                                       })
                                   ]
                               })
                             : null,
                         (0, i.jsxs)('div', {
-                            className: v ? P.overviewContainerWithVideo : P.overviewContainerNoVideo,
+                            className: x ? P.overviewContainerWithVideo : P.overviewContainerNoVideo,
                             children: [
                                 (0, i.jsx)(S, { application: n }),
                                 (0, i.jsx)(L, { application: n }),
-                                p.length > 0 ? (0, i.jsx)(Z, { description: p }) : null,
+                                p.length > 0 ? (0, i.jsx)(M, { description: p }) : null,
                                 h
                                     ? (0, i.jsx)('div', {
                                           className: P.developerShelfControlsContainer,
@@ -114,7 +114,7 @@ function T(e) {
                                 (0, i.jsx)(r.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: _.intl.string(_.t['8z5B2d'])
+                                    children: g.intl.string(g.t['8z5B2d'])
                                 })
                             ]
                         })
@@ -130,7 +130,7 @@ function T(e) {
                                 (0, i.jsx)(r.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: _.intl.string(_.t['5khEk5'])
+                                    children: g.intl.string(g.t['5khEk5'])
                                 })
                             ]
                         })
@@ -158,7 +158,7 @@ function S(e) {
                       children: (0, i.jsx)(r.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
-                          children: _.intl.string(_.t.LO4f0N)
+                          children: g.intl.string(g.t.LO4f0N)
                       })
                   })
                 : null
@@ -218,9 +218,9 @@ function R(e) {
     var t;
     let { context: n, application: l, sectionName: a, hasCommands: o, isDeveloperOfThisApp: s } = e,
         c = (0, h.Fs)(n, l.id),
-        d = (0, v.q)(l.id),
+        d = (0, x.q)(l.id),
         u = null == d ? void 0 : null === (t = d.bot) || void 0 === t ? void 0 : t.id,
-        x = (0, p.Z)({
+        v = (0, p.Z)({
             context: n,
             applicationId: l.id,
             botUserId: u
@@ -242,10 +242,10 @@ function R(e) {
                           buttonSize: N
                       })
                   }),
-                  x && null != u
+                  v && null != u
                       ? (0, i.jsx)('div', {
                             className: P.entryPointContainerFlexChild,
-                            children: (0, i.jsx)(g.Z, {
+                            children: (0, i.jsx)(_.Z, {
                                 botUserId: u,
                                 applicationId: l.id,
                                 buttonSize: N,
@@ -259,11 +259,11 @@ function R(e) {
           ? (0, i.jsx)(r.Wn, {
                 className: P.primaryEntryPointWarningMessage,
                 messageType: r.QYI.WARNING,
-                children: _.intl.format(_.t['s/3hjI'], {})
+                children: g.intl.format(g.t['s/3hjI'], {})
             })
           : null;
 }
-function Z(e) {
+function M(e) {
     let { description: t } = e,
         [n, a] = l.useState(!0);
     l.useLayoutEffect(() => a(!1), []);
@@ -307,7 +307,7 @@ function Z(e) {
             isExpanded: n,
             ...u
         }),
-        v = n || p;
+        x = n || p;
     return (0, i.jsxs)('div', {
         className: P.descriptionContainer,
         children: [
@@ -317,10 +317,10 @@ function Z(e) {
                 onTransitionEnd: h,
                 children: (0, i.jsx)(r.Text, {
                     ref: s,
-                    className: j.markup,
+                    className: y.markup,
                     variant: 'text-sm/medium',
-                    lineClamp: v ? void 0 : 1,
-                    style: { maxHeight: v ? void 0 : u.minHeightOverride },
+                    lineClamp: x ? void 0 : 1,
+                    style: { maxHeight: x ? void 0 : u.minHeightOverride },
                     children: o
                 })
             }),
@@ -332,9 +332,9 @@ function Z(e) {
                           (0, i.jsx)(r.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: v ? _.intl.string(_.t.u4YJ8v) : _.intl.string(_.t['N/tajI'])
+                              children: x ? g.intl.string(g.t.u4YJ8v) : g.intl.string(g.t['N/tajI'])
                           }),
-                          v
+                          x
                               ? (0, i.jsx)(r.u04, {
                                     size: 'sm',
                                     color: r.TVs.colors.TEXT_BRAND

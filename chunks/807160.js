@@ -29,8 +29,8 @@ var i,
     R = n(378233),
     P = n(419922),
     D = n(46141),
-    y = n(430824),
-    Z = n(853872),
+    Z = n(430824),
+    y = n(853872),
     k = n(509545),
     L = n(230307),
     B = n(259580),
@@ -117,7 +117,7 @@ function er(e) {
     let { guildId: t, guildProductListingId: n } = e,
         i = (0, f.hO)(t, n, { requireCurrentGuild: !1 }),
         l = (0, N.C)(i),
-        a = (0, m.e7)([y.Z], () => y.Z.getGuild(t)),
+        a = (0, m.e7)([Z.Z], () => Z.Z.getGuild(t)),
         o = (null == i ? void 0 : i.role_id) != null && (null == i ? void 0 : i.attachments_count) === 0 ? X.intl.string(X.t.H11qcX) : l,
         c = r.useCallback(async () => {
             (null == a ? void 0 : a.hasFeature(Y.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, v.Z)(Y.Z5c.GUILD_PRODUCT(t, n)) : await (0, v.Z)(Y.Z5c.CHANNEL(t)), (0, g.xf)();
@@ -146,7 +146,7 @@ function el(e) {
         l = (0, f.hO)(i, r, { requireCurrentGuild: !1 }),
         a = (0, m.e7)([T.Z], () => T.Z.getGuildProductFetchState(r) === T.M.FETCHING),
         o = null == l ? void 0 : l.role_id,
-        c = (0, m.e7)([y.Z], () => (null != o ? y.Z.getRole(i, o) : void 0), [i, o]),
+        c = (0, m.e7)([Z.Z], () => (null != o ? Z.Z.getRole(i, o) : void 0), [i, o]),
         d = (null !== (n = null == l ? void 0 : null === (t = l.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0) > 0,
         u = null != c;
     return a
@@ -758,19 +758,19 @@ function eo(e) {
             applicationStatistics: g,
             gameApplication: _,
             paymentSources: p
-        } = (0, m.cj)([Z.Z, L.Z, x.Z], () => {
+        } = (0, m.cj)([y.Z, L.Z, x.Z], () => {
             var e, t;
             return {
                 applicationStatistics: null != d ? L.Z.getCurrentUserStatisticsForApplication(d) : null,
                 gameApplication: null !== (t = x.Z.getApplication(null != d ? d : '')) && void 0 !== t ? t : null === (e = i.sku) || void 0 === e ? void 0 : e.application,
-                paymentSources: Z.Z.paymentSources
+                paymentSources: y.Z.paymentSources
             };
         }),
         E = (0, m.e7)([x.Z], () => (null != u ? x.Z.getApplication(u) : null));
     r.useEffect(() => {
         h && null != u && (0, O.UM)(u);
     }, [u, h]);
-    let C = (0, m.e7)([y.Z], () => y.Z.getGuild(null == _ ? void 0 : _.guildId)),
+    let C = (0, m.e7)([Z.Z], () => Z.Z.getGuild(null == _ ? void 0 : _.guildId)),
         f = c ? _ : void 0,
         T = i.subscription,
         N = (0, m.e7)([k.Z], () => (null != T && T.type !== Y.NYc.PREMIUM ? k.Z.get(T.items[0].planId) : null));

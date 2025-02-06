@@ -13,8 +13,8 @@ var a = n(200651),
     x = n(699516),
     p = n(594174),
     f = n(55589),
-    b = n(630388),
-    _ = n(98357),
+    _ = n(630388),
+    b = n(98357),
     g = n(432877),
     v = n(246992),
     j = n(821843),
@@ -23,7 +23,7 @@ function N() {
     var e;
     let t = (0, s.Wu)([f.Z], () => f.Z.getSortedChannels()[1]),
         [n, r] = l.useState(t.length > 0 ? t[0].channelId : void 0),
-        { selectedChannel: i, options: _ } = (0, s.cj)([h.Z, p.default, x.Z], () => ({
+        { selectedChannel: i, options: b } = (0, s.cj)([h.Z, p.default, x.Z], () => ({
             selectedChannel: h.Z.getChannel(n),
             options: t.map((e) => {
                 let t = h.Z.getChannel(e.channelId);
@@ -36,10 +36,10 @@ function N() {
         g = l.useCallback(() => {
             var e;
             if (null == i || !i.isPrivate()) return;
-            let t = (0, b.x9)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            let t = (0, _.x9)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
             m.Z.updatePrivateChannelRecipientFlags(i.id, t);
         }, [i]),
-        C = null != i && !!i.isPrivate() && (0, b.yE)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+        C = null != i && !!i.isPrivate() && (0, _.yE)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(c.Text, {
@@ -51,7 +51,7 @@ function N() {
                 children: [
                     (0, a.jsx)(c.VcW, {
                         wrapperClassName: j.search,
-                        options: _,
+                        options: b,
                         placeholder: 'Select DM',
                         value: n,
                         onChange: r,
@@ -86,7 +86,7 @@ function T() {
             c.j7V,
             {
                 value: n,
-                onChange: (e) => (0, _.Z)(t, e),
+                onChange: (e) => (0, b.Z)(t, e),
                 hideBorder: !0,
                 className: j.switch,
                 children: l

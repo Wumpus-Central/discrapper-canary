@@ -1,4 +1,4 @@
-n.d(t, { Z: () => i });
+n.d(e, { Z: () => i });
 let i = (0, n(818083).B)({
     kind: 'guild',
     id: '2021-11_hub_events',

@@ -9,12 +9,12 @@ var r = n(120356),
     c = n(720196),
     d = n(981631),
     u = n(388032),
-    _ = n(114969),
-    h = n(232186);
+    h = n(114969),
+    _ = n(232186);
 function g(e) {
     let { children: t } = e;
     return (0, i.jsx)('li', {
-        className: _.listItem,
+        className: h.listItem,
         children: (0, i.jsx)(a.Text, {
             variant: 'text-sm/medium',
             color: 'text-normal',
@@ -28,10 +28,10 @@ function p(e) {
         children: [
             (0, i.jsx)(o.Ee, {
                 src: n(26230),
-                className: l()(h.marginBottom20, h.marginTop8)
+                className: l()(_.marginBottom20, _.marginTop8)
             }),
             (0, i.jsx)(o.Dx, {
-                className: h.marginBottom8,
+                className: _.marginBottom8,
                 children: u.intl.string(u.t['8UcxIy'])
             }),
             (0, i.jsx)(a.Text, {
@@ -39,17 +39,17 @@ function p(e) {
                 children: u.intl.string(u.t.O37hMj)
             }),
             (0, i.jsxs)(o.gO, {
-                className: l()(h.marginBottom20, h.marginTop20),
+                className: l()(_.marginBottom20, _.marginTop20),
                 children: [
                     (0, i.jsx)(a.Text, { variant: 'text-sm/normal' }),
                     (0, i.jsxs)('ul', {
-                        className: _.listContainer,
+                        className: h.listContainer,
                         children: [(0, i.jsx)(g, { children: u.intl.string(u.t.Gj1Zr6) }), (0, i.jsx)(s.Z, {}), (0, i.jsx)(g, { children: u.intl.string(u.t['8C6t3N']) }), (0, i.jsx)(s.Z, {}), (0, i.jsx)(g, { children: u.intl.string(u.t.mToZMD) }), (0, i.jsx)(s.Z, {}), (0, i.jsx)(g, { children: u.intl.string(u.t.TPEvkZ) }), (0, i.jsx)(s.Z, {}), (0, i.jsx)(g, { children: u.intl.string(u.t.H8Y1Li) })]
                     })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: _.buttonContainer,
+                className: h.buttonContainer,
                 children: [
                     (0, i.jsx)(o.zx, {
                         onClick: () => t(c.n.PASSWORD),

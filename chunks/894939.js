@@ -73,7 +73,7 @@ function D(e) {
         }, []);
     let S = s.useCallback((e, t) => {
             let { inDropdown: n } = t;
-            return null == e ? null : n ? (0, i.jsx)(y, { guildId: e.value }) : null;
+            return null == e ? null : n ? (0, i.jsx)(Z, { guildId: e.value }) : null;
         }, []),
         P = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -125,7 +125,7 @@ function D(e) {
         });
     return t ? (0, i.jsx)(T.Z, { children: P }) : P;
 }
-function y(e) {
+function Z(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([f.Z], () => {
             var e, n, i;

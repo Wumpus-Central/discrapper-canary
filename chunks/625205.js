@@ -77,7 +77,7 @@ function T() {
             r
         );
     }
-    function y(e) {
+    function Z(e) {
         return D(e[0]);
     }
     return (0, i.jsxs)('div', {
@@ -103,7 +103,7 @@ function T() {
                                 };
                             }),
                             isDisabled: O,
-                            renderOptionValue: y,
+                            renderOptionValue: Z,
                             renderOptionLabel: D
                         }),
                         e
@@ -130,7 +130,7 @@ function T() {
                                 };
                             }),
                             isDisabled: P,
-                            renderOptionValue: y,
+                            renderOptionValue: Z,
                             renderOptionLabel: D
                         }),
                         t

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -34,8 +34,8 @@ let R = {
     },
     P = s.memo((e) => {
         let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: C, cardType: I, confettiCanvas: S } = e,
-            y = null == e ? void 0 : e.onCtaClick,
-            Z = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
+            Z = null == e ? void 0 : e.onCtaClick,
+            y = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
             [k, L] = s.useState(!1),
             [B, M] = s.useState(!1),
             w = (0, p.yQ)(),
@@ -69,10 +69,10 @@ let R = {
                 });
             }, 800),
             et = (0, a.debounce)(() => {
-                null != y &&
+                null != Z &&
                     x.default.track(v.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
                         card_type: (0, a.snakeCase)(t),
-                        function_name: (0, a.snakeCase)(y.name)
+                        function_name: (0, a.snakeCase)(Z.name)
                     });
             }, 800),
             en = s.useRef(null);
@@ -80,16 +80,16 @@ let R = {
             onMouseEnter: ee,
             ...e,
             onCtaClick:
-                null != y
+                null != Z
                     ? () => {
-                          null == y || y(), et();
+                          null == Z || Z(), et();
                       }
                     : void 0
         };
         let ei = K !== r || null == r || B || r === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
         return (s.useEffect(() => {
-            Z && k && (M(!0), x.default.track(v.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && X(j.L.TAKE_ACTION));
-        }, [Z, k, r, t, X]),
+            y && k && (M(!0), x.default.track(v.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && X(j.L.TAKE_ACTION));
+        }, [y, k, r, t, X]),
         (0, h.Z)(
             {
                 type: o.ImpressionTypes.VIEW,
@@ -122,7 +122,7 @@ let R = {
                               [O.partialFlipCard]: !J,
                               [O.ultraFlipCard]: J,
                               [O.rotateCard]: J && 3 === q,
-                              [O.reducedMotion]: Z
+                              [O.reducedMotion]: y
                           }),
                           children: [
                               (0, i.jsx)('div', {
@@ -149,7 +149,7 @@ let R = {
                                 [O.noFlipCardContainer]: !Y,
                                 [O.noFlipCardContainerCarousel]: Y,
                                 [O.forceShadow]: C,
-                                [O.reducedMotion]: Z
+                                [O.reducedMotion]: y
                             }),
                             children: [
                                 (0, i.jsx)(D, {
@@ -180,7 +180,7 @@ let R = {
                             className: l()(O.flipCard, O.clickable, {
                                 [O.flipped]: k,
                                 [O.partialFlipCard]: !B && !k,
-                                [O.reducedMotion]: Z
+                                [O.reducedMotion]: y
                             }),
                             onTransitionEnd: (e) => {
                                 k && 'transform' === e.propertyName && e.target.classList.contains(O.flipCard) && (M(!0), x.default.track(v.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && X(j.L.TAKE_ACTION));
@@ -276,4 +276,4 @@ let D = s.forwardRef((e, t) => {
     });
 });
 D.displayName = 'PerkCardContent';
-let y = P;
+let Z = P;

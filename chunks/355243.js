@@ -15,18 +15,18 @@ function v(e, t, n) {
     return n.left + (e / t) * n.width;
 }
 function E(e) {
-    let { percent: t, animate: n, interactionEnabled: i, backgroundColor: E, preloadedBuffers: C, duration: p, maxSeekableTime: S, onClick: f, onScrubBack: g, onScrubForward: x } = e,
-        [h, _] = l.useState(null),
-        [T, N] = l.useState(null),
-        [D, j] = l.useState(null),
+    let { percent: t, animate: n, interactionEnabled: i, backgroundColor: E, preloadedBuffers: p, duration: C, maxSeekableTime: f, onClick: S, onScrubBack: g, onScrubForward: x } = e,
+        [_, h] = l.useState(null),
+        [T, D] = l.useState(null),
+        [N, j] = l.useState(null),
         [I, A] = l.useState(!1),
         b = l.useRef(null),
         L = (e) => {
-            (b.current = e), _(e);
+            (b.current = e), h(e);
         };
     l.useEffect(() => {
-        null != h && (null == S ? j(null) : j(v(S, p, h)));
-    }, [h, S, p]);
+        null != _ && (null == f ? j(null) : j(v(f, C, _)));
+    }, [_, f, C]);
     let O = (0, a.y)(() => {
         null != O.current && L(O.current.getBoundingClientRect());
     });
@@ -40,7 +40,7 @@ function E(e) {
             return window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
         }, [O]);
     let R = (e) => {
-            N(e.clientX);
+            D(e.clientX);
         },
         k = l.useCallback(
             (e) => {
@@ -49,11 +49,11 @@ function E(e) {
             },
             [g, x]
         ),
-        M = null != T && null != h ? m(T, h, p) : 0,
+        M = null != T && null != _ ? m(T, _, C) : 0,
         P = (0, u.yv)(M),
-        q = null != h ? h.right - v((t / 100) * p, p, h) : null,
-        y = null != T && null != h ? h.right - T : null,
-        w = null != D && null != h ? h.right - D : null;
+        q = null != _ ? _.right - v((t / 100) * C, C, _) : null,
+        y = null != T && null != _ ? _.right - T : null,
+        w = null != N && null != _ ? _.right - N : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
         ref: O,
@@ -62,13 +62,13 @@ function E(e) {
                 className: s()(d.hitboxArea, { [d.interactionEnabled]: i }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
-                    i && null != f && f(m(e.clientX, e.currentTarget.getBoundingClientRect(), p));
+                    i && null != S && S(m(e.clientX, e.currentTarget.getBoundingClientRect(), C));
                 },
                 onMouseEnter: (e) => {
                     i && (null != O.current && L(O.current.getBoundingClientRect()), A(!0), R(e));
                 },
                 onMouseLeave: (e) => {
-                    i && (A(!1), N(null));
+                    i && (A(!1), D(null));
                 },
                 onMouseMove: (e) => {
                     i && I && R(e);
@@ -82,9 +82,9 @@ function E(e) {
                     }
                 },
                 children: [
-                    null == C
+                    null == p
                         ? void 0
-                        : C.map((e) =>
+                        : p.map((e) =>
                               (0, r.jsx)(
                                   'div',
                                   {

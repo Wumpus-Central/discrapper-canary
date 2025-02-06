@@ -5,9 +5,9 @@ n.d(t, {
     IY: () => B,
     JR: () => M,
     Kb: () => V,
-    Vp: () => y,
+    Vp: () => Z,
     bq: () => R,
-    rM: () => Z,
+    rM: () => y,
     yQ: () => O
 }),
     n(47120);
@@ -44,7 +44,7 @@ function O() {
             let n = (0, l.cj)([S.Z], () => S.Z.getState());
             if (null != n) return null !== (t = null !== (e = n.userTenureRewardStatusByRewardId[j.Ft.FREE_AVATAR_DECO_1_MONTH]) && void 0 !== e ? e : n.userTenureRewardStatusByRewardId[j.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== t ? t : n.userTenureRewardStatusByRewardId[j.Ft.FREE_GUILD_BOOST_3_MONTHS];
         })(),
-        s = y(),
+        s = Z(),
         a = D([j.Ft.FREE_AVATAR_DECO_1_MONTH]),
         o = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
         c = (0, l.e7)([p.Z], () => p.Z.boostSlots),
@@ -156,10 +156,10 @@ function D(e) {
         });
     if (null != (0, b.kG)(t) || n) return (0, b.MR)(e, t);
 }
-function y() {
+function Z() {
     return D([j.Ft.FREE_GUILD_BOOST_1_MONTH, j.Ft.FREE_GUILD_BOOST_3_MONTHS]);
 }
-let Z = (e) => {
+let y = (e) => {
         if (null == e || (null == e ? void 0 : e.showNotification) === !1) return [];
         switch (e.nitroTenureStatus) {
             case j.EB.PENDING:
@@ -172,10 +172,10 @@ let Z = (e) => {
     },
     k = () => {
         let e = O(),
-            [t, n] = i.useState(Z(e)),
+            [t, n] = i.useState(y(e)),
             s = (0, N.cG)({ location: 'Home' });
         i.useEffect(() => {
-            !1 !== s && n(Z(e));
+            !1 !== s && n(y(e));
         }, [e, s]);
         let [r] = (0, _.US)(s ? t : []);
         return s && null != e && !0 === e.showNotification && (r === a.z.TENURE_REWARD_REDEEMABLE || r === a.z.TENURE_REWARD_PENDING) ? (0, b.Wb)(e.nitroTenureStatus) : null;
@@ -189,7 +189,7 @@ let Z = (e) => {
     },
     B = () => {
         let e = O(),
-            t = i.useMemo(() => Z(e), [e]),
+            t = i.useMemo(() => y(e), [e]),
             [n] = (0, g.cv)(t),
             s = i.useRef(!1);
         return i.useCallback(() => {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -8,43 +8,43 @@ var i = n(200651),
     c = n(144114),
     d = n(742458),
     u = n(541692),
-    _ = n(952802),
-    h = n(388905),
+    h = n(952802),
+    _ = n(388905),
     g = n(815660),
     p = n(388032),
     m = n(652849),
     f = n(232186);
-let E = () => {
+let x = () => {
     let [e, t] = r.useState(''),
-        [l, E] = r.useState(''),
-        [I, x] = r.useState(!1),
-        [C, N] = r.useState(!1),
-        [v, T] = r.useState(null),
-        [S, A] = r.useState(null),
-        b = (0, o.e7)([u.Z], () => u.Z.getCountryCode()),
-        Z = b.code.split(' ')[0],
-        R = async () => {
+        [l, x] = r.useState(''),
+        [E, I] = r.useState(!1),
+        [v, N] = r.useState(!1),
+        [b, C] = r.useState(null),
+        [T, S] = r.useState(null),
+        A = (0, o.e7)([u.Z], () => u.Z.getCountryCode()),
+        Z = A.code.split(' ')[0],
+        j = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                A(e.body.message);
+                S(e.body.message);
             }
         },
-        L = async () => {
-            x(!0);
+        R = async () => {
+            I(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(Z + e, l);
-                T(null), A(null), N(!0), c.Z.validatePhoneForSupport(t);
+                C(null), S(null), N(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (T(null), A(e.body.message)) : (T(e.body.phone), A(e.body.code));
+                e.body.message ? (C(null), S(e.body.message)) : (C(e.body.phone), S(e.body.code));
             } finally {
-                x(!1);
+                I(!1);
             }
         },
-        j = (0, i.jsxs)(h.ZP, {
+        L = (0, i.jsxs)(_.ZP, {
             children: [
-                (0, i.jsx)(h.Ee, { src: n(292824) }),
-                (0, i.jsxs)(h.Dx, {
+                (0, i.jsx)(_.Ee, { src: n(292824) }),
+                (0, i.jsxs)(_.Dx, {
                     className: a()(f.marginTop20, m.flex, m.justifyCenter, m.alignCenter),
                     children: [
                         p.intl.string(p.t.WWzQtb),
@@ -57,47 +57,47 @@ let E = () => {
                 })
             ]
         });
-    return C
-        ? j
-        : (0, i.jsxs)(h.ZP, {
+    return v
+        ? L
+        : (0, i.jsxs)(_.ZP, {
               children: [
-                  (0, i.jsx)(h.Dx, { children: p.intl.string(p.t.o4JNrK) }),
-                  (0, i.jsx)(h.DK, {
+                  (0, i.jsx)(_.Dx, { children: p.intl.string(p.t.o4JNrK) }),
+                  (0, i.jsx)(_.DK, {
                       className: f.marginTop8,
                       children: p.intl.string(p.t.y0tVbm)
                   }),
-                  (0, i.jsxs)(h.gO, {
+                  (0, i.jsxs)(_.gO, {
                       className: f.marginTop20,
                       children: [
-                          (0, i.jsx)(_.Z, {
+                          (0, i.jsx)(h.Z, {
                               label: p.intl.string(p.t.eJnn09),
-                              alpha2: b.alpha2,
+                              alpha2: A.alpha2,
                               countryCode: Z,
                               value: e,
                               autoComplete: 'off',
                               spellCheck: 'false',
                               onChange: t,
                               forceMode: d.Nz.PHONE,
-                              error: v
+                              error: b
                           }),
-                          (0, i.jsx)(h.II, {
+                          (0, i.jsx)(_.II, {
                               className: f.marginTop20,
                               label: p.intl.string(p.t.OdzNbm),
                               value: l,
-                              onChange: E,
+                              onChange: x,
                               maxLength: g.z,
-                              error: S
+                              error: T
                           }),
-                          (0, i.jsx)(h.zx, {
-                              size: h.zx.Sizes.SMALL,
-                              look: h.zx.Looks.LINK,
-                              onClick: R,
+                          (0, i.jsx)(_.zx, {
+                              size: _.zx.Sizes.SMALL,
+                              look: _.zx.Looks.LINK,
+                              onClick: j,
                               children: p.intl.string(p.t['5b60go'])
                           }),
-                          (0, i.jsx)(h.zx, {
+                          (0, i.jsx)(_.zx, {
                               className: f.marginTop20,
-                              onClick: L,
-                              submitting: I,
+                              onClick: R,
+                              submitting: E,
                               children: p.intl.string(p.t.i4jeWV)
                           })
                       ]

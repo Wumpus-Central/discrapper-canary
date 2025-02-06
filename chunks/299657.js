@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(91802),
     P = n(104494),
     D = n(639119),
-    y = n(943180),
-    Z = n(2359),
+    Z = n(943180),
+    y = n(2359),
     k = n(132547),
     L = n(474936),
     B = n(981631),
@@ -51,7 +51,7 @@ let w = function (e) {
         X = (0, j.M5)(U, L.p9.TIER_2),
         q = (0, R.n)(),
         J = null == q ? void 0 : q.countryCode,
-        { enabled: Q } = (0, y.D)(),
+        { enabled: Q } = (0, Z.D)(),
         $ = (0, a.e7)([N.Z], () => (null != U ? N.Z.getUserProfile(U.id) : null)),
         ee = (0, a.e7)([A.Z], () => A.Z.hasFetched);
     return (s.useEffect(() => {
@@ -90,7 +90,7 @@ let w = function (e) {
             : V && z && !Y
               ? (0, i.jsx)(x.Gt, {
                     value: w,
-                    children: (0, i.jsx)(Z.Z, { entrypoint: t })
+                    children: (0, i.jsx)(y.Z, { entrypoint: t })
                 })
               : (0, i.jsx)('div', {
                     className: l()(M.container, M.loading),

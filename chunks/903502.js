@@ -31,7 +31,7 @@ function x() {
     let [e, t] = l.useState(null),
         [n, x] = l.useState(0),
         [p, f] = l.useState(1000),
-        [b, _] = l.useState(0),
+        [_, b] = l.useState(0),
         g = (0, r.e7)([c.Z], () => {
             var t;
             return null === e ? null : null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : s.R[e];
@@ -40,7 +40,7 @@ function x() {
             label: e,
             value: e
         })),
-        j = l.useMemo(() => null != e && b >= 0 && b <= 100 && n >= 0, [e, b, n]);
+        j = l.useMemo(() => null != e && _ >= 0 && _ <= 100 && n >= 0, [e, _, n]);
     return (0, a.jsxs)('div', {
         className: m.container,
         children: [
@@ -154,9 +154,9 @@ function x() {
                             (0, a.jsx)(i.oil, {
                                 min: 0,
                                 max: 100,
-                                value: b.toString(),
+                                value: _.toString(),
                                 type: 'number',
-                                onChange: (e) => _(parseFloat(e))
+                                onChange: (e) => b(parseFloat(e))
                             }),
                             (0, a.jsx)(i.Text, {
                                 variant: 'text-md/normal',
@@ -175,7 +175,7 @@ function x() {
                                 type: 'FEEDBACK_OVERRIDE_SET',
                                 feedbackType: e,
                                 cooldown: n * p,
-                                chance: b / 100
+                                chance: _ / 100
                             }),
                         disabled: !j,
                         children: 'Update'
@@ -203,7 +203,7 @@ function x() {
                     color: 'text-danger',
                     children: 'Error: cooldown needs to be a number greater than 0'
                 }),
-            !(b >= 0 && b <= 100) &&
+            !(_ >= 0 && _ <= 100) &&
                 (0, a.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-danger',

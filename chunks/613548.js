@@ -43,8 +43,8 @@ var i = n(200651),
     V = n(185935),
     z = n(354459),
     W = n(981631),
-    q = n(388032),
-    Y = n(960840);
+    Y = n(388032),
+    q = n(960840);
 function K(e) {
     let { channelId: t, guildId: n } = e,
         l = (0, d.Wu)([D.Z, U.Z], () => {
@@ -65,11 +65,11 @@ function K(e) {
                       {
                           position: 'bottom',
                           color: u.ua7.Colors.GREY,
-                          text: q.intl.formatToPlainString(q.t.JjdizM, { username: e.user.username }),
+                          text: Y.intl.formatToPlainString(Y.t.JjdizM, { username: e.user.username }),
                           children: (a) =>
                               (0, i.jsx)(O.ZP, {
                                   ...a,
-                                  className: r()(Y.speaker, { [Y.last]: t === l.length - 1 }),
+                                  className: r()(q.speaker, { [q.last]: t === l.length - 1 }),
                                   user: e.user,
                                   speaking: !0,
                                   collapsed: !0,
@@ -86,7 +86,7 @@ function X(e) {
         { enabled: O } = (0, B.Z)({ location: 'ChannelCallHeaderToolbar' }),
         D = n.id,
         {
-            voiceParticipantsHidden: q,
+            voiceParticipantsHidden: Y,
             selectedParticipant: X,
             userParticipantCount: Q,
             participantsListOpen: J
@@ -119,7 +119,7 @@ function X(e) {
             (0, i.jsx)(
                 M.Z,
                 {
-                    className: Y.button,
+                    className: q.button,
                     channel: n,
                     applicationId: t,
                     stream: e,
@@ -131,7 +131,7 @@ function X(e) {
         );
     }
     return (
-        q &&
+        Y &&
             eh.push(
                 (0, i.jsx)(
                     K,
@@ -146,7 +146,7 @@ function X(e) {
             (0, i.jsx)(
                 f.Z,
                 {
-                    className: Y.button,
+                    className: q.button,
                     channelId: D
                 },
                 'clips-enabled-indicator'
@@ -157,7 +157,7 @@ function X(e) {
                 (0, i.jsx)(
                     S.Z,
                     {
-                        className: Y.button,
+                        className: q.button,
                         participant: X
                     },
                     'warning'
@@ -168,7 +168,7 @@ function X(e) {
                     C.Z,
                     {
                         size: p.ZP.Sizes.LARGE,
-                        className: Y.button,
+                        className: q.button,
                         participant: X,
                         showQuality: !0,
                         premiumIndicator: et || ei.enabled
@@ -176,7 +176,7 @@ function X(e) {
                     'live-indicator'
                 )
             )),
-        q &&
+        Y &&
             !ea &&
             eh.push(
                 (0, i.jsx)(
@@ -191,7 +191,7 @@ function X(e) {
                                 isActive: n,
                                 count: Q,
                                 key: 'call-members',
-                                className: Y.button
+                                className: q.button
                             });
                         }
                     },
@@ -205,7 +205,7 @@ function X(e) {
                     ? (0, i.jsx)(
                           R.Z,
                           {
-                              className: Y.button,
+                              className: q.button,
                               channelId: D
                           },
                           'deselect-participant'
@@ -213,7 +213,7 @@ function X(e) {
                     : (0, i.jsx)(
                           k.Z,
                           {
-                              className: Y.button,
+                              className: q.button,
                               channelId: D,
                               isHorizontal: !0
                           },
@@ -221,7 +221,7 @@ function X(e) {
                       )
             ),
         ec ||
-            (t || eh.push((0, i.jsx)(m.Z, { className: Y.button }, 'clips')),
+            (t || eh.push((0, i.jsx)(m.Z, { className: q.button }, 'clips')),
             O ||
                 eh.push(
                     (0, i.jsx)(
@@ -229,12 +229,12 @@ function X(e) {
                         {
                             onOpen: ed,
                             onClose: eu,
-                            className: Y.button
+                            className: q.button
                         },
                         'recents'
                     )
                 )),
-        es && !eo && eh.push((0, i.jsx)(N.Z, { className: Y.button }, 'for-later')),
+        es && !eo && eh.push((0, i.jsx)(N.Z, { className: q.button }, 'for-later')),
         O ||
             eh.push(
                 (0, i.jsx)(
@@ -258,20 +258,20 @@ function X(e) {
                                 ...e,
                                 key: 'more-options',
                                 isActive: n,
-                                className: Y.lastButton
+                                className: q.lastButton
                             });
                         }
                     },
                     'more-options-popout'
                 )
             ),
-        (er || el) && !O && eh.push((0, i.jsx)(x.ZP.Divider, { className: Y.divider }, 'divider')),
+        (er || el) && !O && eh.push((0, i.jsx)(x.ZP.Divider, { className: q.divider }, 'divider')),
         er &&
             eh.push(
                 (0, i.jsx)(
                     L.Z,
                     {
-                        className: r()(Y.button, { [Y.lastButton]: o }),
+                        className: r()(q.button, { [q.lastButton]: o }),
                         onClick: () => h.Z.toggleParticipantsList(n.id, !J)
                     },
                     'participants-list-button'
@@ -283,7 +283,7 @@ function X(e) {
                     A.T,
                     {
                         channelId: n.id,
-                        className: r()(Y.button, { [Y.lastButton]: J }),
+                        className: r()(q.button, { [q.lastButton]: J }),
                         disabled: o
                     },
                     'chat-spacer'
