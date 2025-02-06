@@ -75,27 +75,28 @@ class A extends c.Z {
 class b {
     reset() {
         let e = new Set(),
-            t = r().map(
+            t = (0, h.r8)({ location: 'FriendsStore' }),
+            n = r().map(
                 I.Z.getRelationships(),
-                (t, n) => (
-                    t === v.OGo.FRIEND && e.add(n),
+                (n, i) => (
+                    n === v.OGo.FRIEND && e.add(i),
                     new A({
-                        key: n,
-                        type: t,
-                        userId: n,
-                        nickname: I.Z.getNickname(n),
-                        ...S(n),
-                        ...Z(n),
-                        ...x(n),
-                        spam: I.Z.isSpam(n),
-                        ignoredUser: I.Z.isIgnored(n),
-                        giftIntentType: t === v.OGo.FRIEND && p.Z.isTopAffinityFriendAnniversary({ userId: n }) ? N.hX.FRIEND_ANNIVERSARY : void 0
+                        key: i,
+                        type: n,
+                        userId: i,
+                        nickname: I.Z.getNickname(i),
+                        ...S(i),
+                        ...Z(i),
+                        ...x(i),
+                        spam: I.Z.isSpam(i),
+                        ignoredUser: I.Z.isIgnored(i),
+                        giftIntentType: n === v.OGo.FRIEND && p.Z.isTopAffinityFriendAnniversary({ userId: i }) ? N.hX.FRIEND_ANNIVERSARY : void 0,
+                        applicationId: t ? I.Z.getOriginApplicationId(i) : void 0
                     })
                 )
             ),
-            n = (0, h.r8)({ location: 'FriendsStore' }),
             i = [];
-        if (n) {
+        if (t) {
             let t = m.Z.getGameRelationships().values(),
                 n = new Set();
             t.forEach((t) => {
@@ -133,7 +134,7 @@ class b {
                     ...x(e.key)
                 })
         );
-        return new b(r().concat(t, i, l));
+        return new b(r().concat(n, i, l));
     }
     clone() {
         return new b(this._rows);
