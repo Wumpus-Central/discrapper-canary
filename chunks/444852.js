@@ -54,15 +54,16 @@ class x {
         this.nativePickerStyleUsed = e;
     }
     trackStart() {
-        this.startTime = new Date().getTime();
+        this.startTime = performance.now();
     }
     trackEnd() {
-        this.endTime = new Date().getTime();
+        this.endTime = performance.now();
     }
     getDuration() {
-        var e, t;
-        let n = new Date().getTime();
-        return (null !== (e = this.endTime) && void 0 !== e ? e : n) - (null !== (t = this.startTime) && void 0 !== t ? t : n);
+        var e;
+        if (null == this.startTime) return null;
+        let t = performance.now();
+        return (null !== (e = this.endTime) && void 0 !== e ? e : t) - this.startTime;
     }
     constructor({ streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: i, numViewers: r, goLiveModalDurationMs: a }) {
         C(this, 'streamRegion', void 0), C(this, 'streamApplication', void 0), C(this, 'streamSourceType', void 0), C(this, 'actionContext', void 0), C(this, 'maxViewers', void 0), C(this, 'nativePickerStyleUsed', void 0), C(this, 'startTime', void 0), C(this, 'endTime', void 0), C(this, 'goLiveModalDurationMs', void 0), (this.streamRegion = e), (this.streamApplication = t), (this.streamSourceType = n), (this.actionContext = i), (this.maxViewers = r), (this.goLiveModalDurationMs = a);
