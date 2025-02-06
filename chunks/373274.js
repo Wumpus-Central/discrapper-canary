@@ -30,8 +30,8 @@ var i,
     E = n(486311),
     j = n(220444),
     y = n(31022),
-    P = n(10401),
-    A = n(131704),
+    A = n(10401),
+    P = n(131704),
     T = n(592125),
     w = n(796974),
     R = n(984933),
@@ -148,7 +148,7 @@ class eh extends (i = r.PureComponent) {
                 let r = e.getChannelFromSectionRow(i, l);
                 if (null == r) return !1;
                 let { channel: a, category: o } = r;
-                return !!(0, A.vc)(a.record.type) && (!o.isCollapsed || !o.isMuted) && !a.isMuted && !!t.isItemVisible(i, l, !0) && (0, j.d)(a.record);
+                return !!(0, P.vc)(a.record.type) && (!o.isCollapsed || !o.isMuted) && !a.isMuted && !!t.isItemVisible(i, l, !0) && (0, j.d)(a.record);
             })
         );
     }
@@ -721,7 +721,7 @@ class eh extends (i = r.PureComponent) {
                 }
             }),
             ec(this, 'testShouldSkipTutorial', () => {
-                if (!P.Z.shouldShow('voice-conversations')) return;
+                if (!A.Z.shouldShow('voice-conversations')) return;
                 let { guildChannels: e } = this.props,
                     t = e.getFirstVoiceChannel();
                 if (null == t) {
@@ -790,7 +790,7 @@ let ep = (e) => {
         null != n && E(n);
     }, [n, E]);
     let j = (0, y.Z)(t),
-        P = (0, C.Q3)('NavigableChannels');
+        A = (0, C.Q3)('NavigableChannels');
     return (0, l.jsx)(_.Gt, {
         value: o,
         children: (0, l.jsx)(g.Z, {
@@ -806,7 +806,7 @@ let ep = (e) => {
                     stageChannelSpeakerVoiceStates: j,
                     selectedGuildId: p,
                     optInEnabled: v,
-                    isRefreshEnabled: P
+                    isRefreshEnabled: A
                 })
             })
         })

@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(41776),
     j = n(905423),
     y = n(802718),
-    P = n(796974),
-    A = n(271383),
+    A = n(796974),
+    P = n(271383),
     T = n(430824),
     w = n(771845),
     R = n(358085),
@@ -179,7 +179,7 @@ function el(e) {
         }),
         _ = (0, h.e7)([E.Z], () => E.Z.lurkingGuildIds()),
         C = l.useMemo(() => (n ? [] : _), [_, n]),
-        et = (0, h.Wu)([T.Z, A.ZP], () => L.default.keys(T.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
+        et = (0, h.Wu)([T.Z, P.ZP], () => L.default.keys(T.Z.getGuilds()).filter((e) => P.ZP.isCurrentUserGuest(e))),
         el = C.concat(et),
         er = (0, h.e7)([I.Z], () => I.Z.isFullscreenInContext()),
         ea = (0, h.e7)([T.Z], () => T.Z.getGeoRestrictedGuilds()),
@@ -235,7 +235,7 @@ function el(e) {
         if (!eu.current && 0 !== p.size) {
             if (eE) eb.scrollToGuild(null, !1);
             else {
-                let { scrollTop: e } = P.Z.getGuildListDimensions();
+                let { scrollTop: e } = A.Z.getGuildListDimensions();
                 eb.scrollTo({
                     to: e,
                     animate: !1
@@ -260,7 +260,7 @@ function el(e) {
             animate: !1
         });
     }, [eb]);
-    function eP(e) {
+    function eA(e) {
         switch (e.type) {
             case M.eD.FOLDER:
                 return (0, i.jsx)(
@@ -272,7 +272,7 @@ function el(e) {
                         sorting: eo,
                         onDragStart: ec,
                         onDragEnd: ed,
-                        renderChildNode: eP
+                        renderChildNode: eA
                     },
                     e.id
                 );
@@ -294,7 +294,7 @@ function el(e) {
         }
     }
     (0, D.Z)(eb.scrollToGuild);
-    let eA = p.getRoots(),
+    let eP = p.getRoots(),
         eT = (0, S.Z)(),
         ew = (0, y.U)(),
         eR = ea.map((e) =>
@@ -355,18 +355,18 @@ function el(e) {
                                                 ? (0, i.jsx)(f.Kqy, {
                                                       gap: 'xs',
                                                       'aria-label': $.intl.string($.t['7hB4kp']),
-                                                      children: eA.map(eP)
+                                                      children: eP.map(eA)
                                                   })
                                                 : (0, i.jsx)('div', {
                                                       'aria-label': $.intl.string($.t['7hB4kp']),
-                                                      children: eA.map(eP)
+                                                      children: eP.map(eA)
                                                   }),
                                             eR,
                                             n
                                                 ? null
                                                 : (0, i.jsx)(O.Z, {
                                                       disableTooltip: C.length > 0,
-                                                      lastTargetNode: eA[eA.length - 1]
+                                                      lastTargetNode: eP[eP.length - 1]
                                                   }),
                                             (0, i.jsx)(q.Z, {}),
                                             !n && s

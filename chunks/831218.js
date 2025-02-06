@@ -25,8 +25,8 @@ var i,
     E = n(333984),
     j = n(210887),
     y = n(592125),
-    P = n(158776),
-    A = n(55589),
+    A = n(158776),
+    P = n(55589),
     T = n(515753),
     w = n(981631),
     R = n(388032),
@@ -294,7 +294,7 @@ class G extends (i = r.Component) {
                     c = n.some((e) => (0, _.Z)(e)),
                     d = {
                         num_users_visible: o.length,
-                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && P.Z.isMobileOnline(e)).length
+                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && A.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
                     m.ZP.trackWithMetadata(w.rMx.DM_LIST_VIEWED, {
@@ -406,9 +406,9 @@ let k = (e) => {
         m = y.Z.getMutablePrivateChannels(),
         f = (0, N.k1)(m),
         _ = (0, d.Wu)(
-            [A.Z, S.Z, E.Z],
+            [P.Z, S.Z, E.Z],
             () => {
-                let e = A.Z.getPrivateChannelIds();
+                let e = P.Z.getPrivateChannelIds();
                 return (0, N.tU)(e, [S.Z, E.Z]);
             },
             []
@@ -420,7 +420,7 @@ let k = (e) => {
             version: null != i ? ''.concat(i, ':').concat(y.Z.getPrivateChannelsVersion()) : y.Z.getPrivateChannelsVersion()
         })),
         b = r.useRef(null),
-        P = r.useCallback((e) => {
+        A = r.useCallback((e) => {
             let t = b.current,
                 n = document.querySelector(e);
             null != t &&
@@ -464,7 +464,7 @@ let k = (e) => {
             scrollToStart: T,
             scrollToEnd: R,
             defaultFocused: (p + (u ? 1 : 0)).toString(),
-            setFocus: P
+            setFocus: A
         });
     return (0, l.jsx)(s.bG, {
         navigator: M,

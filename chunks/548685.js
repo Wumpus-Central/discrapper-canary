@@ -2,8 +2,8 @@ n.d(t, { Z: () => x }), n(47120);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
-    s = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    s = n(442837),
     o = n(481060),
     d = n(594174),
     c = n(381585),
@@ -16,7 +16,7 @@ var r = n(200651),
     f = n(218142);
 let x = (e) => {
     let { isLoading: t, rankedSkuIds: n, handleTransition: i, numVisibleItems: x } = e,
-        _ = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        _ = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
         v = l.createRef(),
         b = (0, m.u)(),
         k = l.useMemo(() => b(n), [t, b, n]),
@@ -24,7 +24,7 @@ let x = (e) => {
     return null == _
         ? null
         : (0, r.jsxs)('div', {
-              className: s()(f.row, f.between, f.section, f.popularPicksSection),
+              className: a()(f.row, f.between, f.section, f.popularPicksSection),
               children: [
                   (0, r.jsxs)('div', {
                       className: f.popularPicksHeader,

@@ -180,7 +180,7 @@ let A = Object.freeze({
         COLLECTIBLES_PRODUCTS: (t) => '/collectibles-products/'.concat(t),
         COLLECTIBLES_VALID_GIFT_RECIPIENT: '/users/@me/valid-collectibles-gift-recipient',
         COLLECTIBLES_MARKETING: '/users/@me/collectibles-marketing',
-        COLLECTIBLES_SHOP_HOME: '/collectibles-shop-home',
+        COLLECTIBLES_SHOP: '/collectibles-shop',
         CONSUMABLE_FETCH_PRICE: (t) => '/store/consumable/pricing/'.concat(t),
         CONSUME_HD_STREAMING_POTION: '/users/@me/consumable/hd-streaming',
         FETCH_HD_STREAMING_ENTITLEMENT: '/users/@me/consumable/hd-streaming',

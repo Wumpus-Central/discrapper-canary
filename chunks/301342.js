@@ -1,9 +1,9 @@
 n.d(t, {
     P: () => y,
-    Qo: () => P,
+    Qo: () => A,
     ZP: () => j,
     kw: () => T,
-    rj: () => A
+    rj: () => P
 });
 var i = n(200651),
     l = n(192379),
@@ -32,8 +32,8 @@ function N(e) {
 }
 let E = l.memo(function (e) {
         let t,
-            { channel: r, connectChannelDragSource: h, connectChannelDropTarget: x, disableManageChannels: Z, position: E, sortingPosition: j, hideIcon: y, children: P } = e,
-            A = (0, m.Q3)('CategoryChannel'),
+            { channel: r, connectChannelDragSource: h, connectChannelDropTarget: x, disableManageChannels: Z, position: E, sortingPosition: j, hideIcon: y, children: A } = e,
+            P = (0, m.Q3)('CategoryChannel'),
             T = (0, s.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
             w = (0, s.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
             R = (0, s.e7)([v.Z], () => v.Z.can(I.Plq.MANAGE_CHANNELS, r));
@@ -107,7 +107,7 @@ let E = l.memo(function (e) {
                                     'aria-expanded': !w,
                                     focusProps: { enabled: !1 },
                                     children: [
-                                        A || y
+                                        P || y
                                             ? null
                                             : (0, i.jsx)(c.CJ0, {
                                                   size: 'md',
@@ -118,7 +118,7 @@ let E = l.memo(function (e) {
                                             className: S.name,
                                             children: (0, i.jsx)(g.Z, { children: r.name })
                                         }),
-                                        A && !y
+                                        P && !y
                                             ? (0, i.jsx)(c.CJ0, {
                                                   size: 'md',
                                                   color: 'currentColor',
@@ -153,7 +153,7 @@ let E = l.memo(function (e) {
                                                                   left: -4
                                                               }
                                                           },
-                                                          children: A
+                                                          children: P
                                                               ? (0, i.jsx)(c.BRu, {
                                                                     size: 'xs',
                                                                     color: 'currentColor',
@@ -172,7 +172,7 @@ let E = l.memo(function (e) {
                             ]
                         })
                     }),
-                    P
+                    A
                 ]
             });
         return null != x && null != h ? x(h(V)) : V;
@@ -211,7 +211,7 @@ let E = l.memo(function (e) {
             })
         });
     }),
-    P = l.memo(function (e) {
+    A = l.memo(function (e) {
         let { category: t } = e,
             n = (0, s.e7)([x.Z], () => x.Z.isVoiceCategoryCollapsed(t.guild.id)),
             r = (0, m.Q3)('VoiceChannelCategoryButton'),
@@ -253,7 +253,7 @@ let E = l.memo(function (e) {
                   ]
               });
     }),
-    A = l.memo(function (e) {
+    P = l.memo(function (e) {
         let { category: t, channel: n } = e,
             l = (0, s.e7)([x.Z], () => x.Z.isVoiceCategoryCollapsed(t.guild.id));
         return l || null == n || n.record.type === I.d4z.GUILD_CATEGORY

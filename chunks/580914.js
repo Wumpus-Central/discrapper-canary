@@ -1,9 +1,9 @@
-n.d(t, { Z: () => T }), n(47120);
+n.d(t, { Z: () => S }), n(47120);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
-    s = n.n(i),
-    a = n(685816),
+    a = n.n(i),
+    s = n(685816),
     o = n(442837),
     d = n(481060),
     c = n(607070),
@@ -20,8 +20,8 @@ var r = n(200651),
     b = n(957058),
     k = n(215023),
     j = n(388032),
-    L = n(218142);
-let E = {
+    E = n(218142);
+let L = {
         rankedSkuIds: [],
         name: '',
         unpublishedAt: void 0,
@@ -30,13 +30,13 @@ let E = {
         bannerAsset: void 0,
         fallbackBannerUrl: '',
         summary: '',
-        type: a.z.HERO,
+        type: s.z.HERO,
         categoryStoreListingId: ''
     },
-    S = (e) => {
+    T = (e) => {
         var t, n, r, l;
         return null == e
-            ? E
+            ? L
             : {
                   rankedSkuIds: null !== (t = e.heroRanking) && void 0 !== t ? t : [],
                   name: e.name,
@@ -49,82 +49,82 @@ let E = {
                       format: 'jpg'
                   }),
                   summary: e.summary,
-                  type: a.z.HERO,
+                  type: s.z.HERO,
                   categoryStoreListingId: e.storeListingId
               };
     },
-    T = (e) => {
-        var t, n, i, a, g;
-        let { isLoading: x, handleTransition: T, category: I, heroBlock: Z } = e,
+    S = (e) => {
+        var t, n, i, s, g;
+        let { isLoading: x, handleTransition: S, category: B, heroBlock: I } = e,
             y = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-            B = (0, o.e7)([h.Z], () => h.Z.isFocused()),
+            Z = (0, o.e7)([h.Z], () => h.Z.isFocused()),
             F = (0, o.e7)([C.default], () => C.default.getCurrentUser()),
             N = (0, b.u)(),
-            P = l.useMemo(() => (null != Z ? Z : S(I)), [Z, I]),
-            A = l.useMemo(() => N(P.rankedSkuIds), [x, N, P.rankedSkuIds]),
-            w = (0, f.l)(A).slice(0, 4),
-            O = j.intl.formatToPlainString(j.t.wvKYCg, { category_name: P.name });
-        if (null == F || (!x && P === E)) return null;
-        let R = null != P.categorySkuId ? (0, k.ZS)(P.categorySkuId) : void 0,
+            w = l.useMemo(() => (null != I ? I : T(B)), [I, B]),
+            P = l.useMemo(() => N(w.rankedSkuIds), [x, N, w.rankedSkuIds]),
+            A = (0, f.l)(P).slice(0, 4),
+            O = j.intl.formatToPlainString(j.t.wvKYCg, { category_name: w.name });
+        if (null == F || (!x && w === L)) return null;
+        let R = null != w.categorySkuId ? (0, k.ZS)(w.categorySkuId) : void 0,
             H = null !== (i = null == R ? void 0 : R.heroBanner) && void 0 !== i ? i : void 0,
-            M = null !== (a = null == H ? void 0 : H.animationSource) && void 0 !== a ? a : null === (t = P.bannerAsset) || void 0 === t ? void 0 : t.animated,
-            V = null !== (g = null === (n = P.bannerAsset) || void 0 === n ? void 0 : n.static) && void 0 !== g ? g : P.fallbackBannerUrl;
+            M = null !== (s = null == H ? void 0 : H.animationSource) && void 0 !== s ? s : null === (t = w.bannerAsset) || void 0 === t ? void 0 : t.animated,
+            V = null !== (g = null === (n = w.bannerAsset) || void 0 === n ? void 0 : n.static) && void 0 !== g ? g : w.fallbackBannerUrl;
         return (0, r.jsxs)('div', {
-            className: L.heroBlock,
+            className: E.heroBlock,
             children: [
                 (0, r.jsxs)('div', {
-                    className: L.banner,
+                    className: E.banner,
                     children: [
-                        null != M && !y && B
+                        null != M && !y && Z
                             ? (0, r.jsx)(u.Z, {
-                                  className: L.bannerVideoBackground,
+                                  className: E.bannerVideoBackground,
                                   src: M,
                                   autoPlay: !0,
                                   loop: !0
                               })
                             : (0, r.jsx)('div', {
-                                  className: L.bannerImage,
+                                  className: E.bannerImage,
                                   style: { backgroundImage: 'url('.concat(V, ')') }
                               }),
                         (0, r.jsx)('div', {
-                            className: s()(L.bannerShadow, L.left, { [L.darker]: null == H ? void 0 : H.darker }),
+                            className: a()(E.bannerShadow, E.left, { [E.darker]: null == H ? void 0 : H.darker }),
                             style: (null == H ? void 0 : H.gradientLeft) != null ? { background: null == H ? void 0 : H.gradientLeft } : void 0
                         }),
                         (0, r.jsx)('div', {
-                            className: s()(L.bannerShadow, L.right, { [L.darker]: null == H ? void 0 : H.darker }),
+                            className: a()(E.bannerShadow, E.right, { [E.darker]: null == H ? void 0 : H.darker }),
                             style: (null == H ? void 0 : H.gradientRight) != null ? { background: null == H ? void 0 : H.gradientRight } : void 0
                         })
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: L.heroBlockContent,
+                    className: E.heroBlockContent,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: s()(L.heroHeaderContainer),
+                            className: a()(E.heroHeaderContainer),
                             children: [
                                 x
-                                    ? (0, r.jsx)('div', { className: s()(L.heroHeaderBadgeLogoSummaryContainer) })
+                                    ? (0, r.jsx)('div', { className: a()(E.heroHeaderBadgeLogoSummaryContainer) })
                                     : (0, r.jsxs)('div', {
-                                          className: s()(L.heroHeaderBadgeLogoSummaryContainer),
+                                          className: a()(E.heroHeaderBadgeLogoSummaryContainer),
                                           children: [
-                                              null != P.unpublishedAt &&
+                                              null != w.unpublishedAt &&
                                                   (0, r.jsx)(d.IGR, {
                                                       disableColor: !0,
                                                       text: j.intl.string(j.t['h/uBCQ']),
-                                                      className: L.limitedTimeBadge
+                                                      className: E.limitedTimeBadge
                                                   }),
                                               (0, r.jsxs)('div', {
-                                                  className: s()(L.heroLogoNameContainer),
+                                                  className: a()(E.heroLogoNameContainer),
                                                   children: [
                                                       (0, r.jsx)('img', {
-                                                          className: L.heroHeaderLogo,
-                                                          src: P.logoUrl,
-                                                          alt: P.name
+                                                          className: E.heroHeaderLogo,
+                                                          src: w.logoUrl,
+                                                          alt: w.name
                                                       }),
                                                       (0, r.jsx)(d.Text, {
                                                           variant: 'text-md/normal',
-                                                          className: null != R && R.showDarkBannerText ? L.subHeaderTextDark : L.subHeaderText,
-                                                          children: P.summary
+                                                          className: null != R && R.showDarkBannerText ? E.subHeaderTextDark : E.subHeaderText,
+                                                          children: w.summary
                                                       })
                                                   ]
                                               })
@@ -132,24 +132,24 @@ let E = {
                                       }),
                                 !x &&
                                     (0, r.jsx)('div', {
-                                        className: L.heroHeaderButtonContainer,
+                                        className: E.heroHeaderButtonContainer,
                                         children: (0, r.jsx)(d.zxk, {
-                                            className: L.heroHeaderButton,
+                                            className: E.heroHeaderButton,
                                             color: d.Ttl.WHITE,
-                                            onClick: () => T('shop latest category hero', P.categorySkuId),
+                                            onClick: () => S('shop latest category hero', w.categorySkuId),
                                             children: O
                                         })
                                     })
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: s()(L.row, L.feed, L.feedSingleRow),
+                            className: a()(E.row, E.feed, E.feedSingleRow),
                             children: x
                                 ? (0, r.jsx)(r.Fragment, {
                                       children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(_.K, {}, t))
                                   })
                                 : (0, r.jsx)(r.Fragment, {
-                                      children: w.map((e, t) => {
+                                      children: A.map((e, t) => {
                                           let n = m.Z.getCategoryForProduct(e.skuId);
                                           return null == e || null == n
                                               ? null

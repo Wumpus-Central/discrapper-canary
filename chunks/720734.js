@@ -43,7 +43,7 @@ var i = n(200651),
     F = n(243778),
     z = n(258609),
     W = n(427347),
-    Y = n(443669),
+    Y = n(331541),
     K = n(332473),
     q = n(240504),
     X = n(637906),
@@ -123,10 +123,10 @@ function eG(e) {
                           className: eD.accountProfilePopoutWrapper,
                           children: (0, i.jsx)(Y.Z, {
                               currentUser: l,
-                              setPopoutRef: n,
                               onClose: () => {
                                   s(), null == t || t();
-                              }
+                              },
+                              setPopoutRef: n
                           })
                       });
                   },

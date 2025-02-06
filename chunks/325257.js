@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(40153),
     j = n(593618),
     y = n(252686),
-    P = n(682662),
-    A = n(674552),
+    A = n(682662),
+    P = n(674552),
     T = n(981631),
     w = n(388032),
     R = n(284923);
@@ -52,9 +52,9 @@ let D = l.memo(function (e) {
     let { guildNode: G, setRef: k, onDragStart: B, onDragEnd: O, route: U, guild: V, animatable: F, selected: H = !1, unread: z = !1, mediaState: W, unavailable: q = !1, badge: Y = 0, isMentionLowImportance: Q, contextMenu: J = M, draggable: K = !1, sorting: X = !1, preloadOnClick: $ = !0, guildJoinRequestStatus: ee, height: et } = e,
         { id: en, parentId: ei } = G,
         el = (0, _.Q3)('GuildItem'),
-        er = null !== (t = e.upperBadge) && void 0 !== t ? t : q ? (0, A.Ny)() : null != W ? (0, A.Or)(W) : void 0,
+        er = null !== (t = e.upperBadge) && void 0 !== t ? t : q ? (0, P.Ny)() : null != W ? (0, P.Or)(W) : void 0,
         ea = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-    null == ea && Y > 0 ? (ea = null !== (r = (0, A.Ne)(Y, Q ? f.Z.BACKGROUND_ACCENT : f.Z.STATUS_DANGER)) && void 0 !== r ? r : void 0) : null == ea && null != ee && (ea = null !== (g = (0, A.jt)({ guildJoinRequestStatus: ee })) && void 0 !== g ? g : void 0);
+    null == ea && Y > 0 ? (ea = null !== (r = (0, P.Ne)(Y, Q ? f.Z.BACKGROUND_ACCENT : f.Z.STATUS_DANGER)) && void 0 !== r ? r : void 0) : null == ea && null != ee && (ea = null !== (g = (0, P.jt)({ guildJoinRequestStatus: ee })) && void 0 !== g ? g : void 0);
     let eo = null !== (D = e.lowerBadgeSize) && void 0 !== D ? D : { width: (0, h.OVM)(Y) },
         [{ dragging: es }, ec] = (0, o.c)({
             type: b.eD.GUILD,
@@ -178,7 +178,7 @@ let D = l.memo(function (e) {
                       children: ej
                   })
               });
-    return (0, i.jsxs)(P.H, {
+    return (0, i.jsxs)(A.H, {
         ref: eN,
         children: [
             (0, i.jsx)(S.Z, {

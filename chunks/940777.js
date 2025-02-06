@@ -25,15 +25,15 @@ var i = n(200651),
     E = n(593214),
     j = n(919755),
     y = n(110977),
-    P = n(603274),
-    A = n(981631),
+    A = n(603274),
+    P = n(981631),
     T = n(388032),
     w = n(120555);
 let R = {
     analyticsSource: {
-        page: A.ZY5.GUILD_CHANNEL,
-        section: A.jXE.CHANNEL_LIST,
-        object: A.qAy.CHANNEL
+        page: P.ZY5.GUILD_CHANNEL,
+        section: P.jXE.CHANNEL_LIST,
+        object: P.qAy.CHANNEL
     }
 };
 function L() {
@@ -44,9 +44,9 @@ function L() {
             favoriteChannels: N.Z.getFavoriteChannels(),
             favoriteServerMuted: N.Z.favoriteServerMuted
         })),
-        k = (0, s.e7)([I.Z], () => I.Z.getChannelId(A.I_8)),
+        k = (0, s.e7)([I.Z], () => I.Z.getChannelId(P.I_8)),
         B = (0, s.e7)([Z.Z], () => Z.Z.getChannel(k)),
-        O = (0, C.Z)((e) => e.guildId) === A.I_8,
+        O = (0, C.Z)((e) => e.guildId) === P.I_8,
         { badge: U, unread: V } = (0, j.Z)(G),
         F = (function (e) {
             let t = (0, s.e7)([I.Z], () => I.Z.getVoiceChannelId()),
@@ -96,7 +96,7 @@ function L() {
                 unread: V && !D,
                 className: w.pill
             }),
-            (0, i.jsx)(P.Z, {
+            (0, i.jsx)(A.Z, {
                 onShow: W,
                 children: (0, i.jsx)(y.S, {
                     children: (0, i.jsx)(c.aRk, {
@@ -110,7 +110,7 @@ function L() {
                                 mentions: U
                             }),
                             to: {
-                                pathname: A.Z5c.CHANNEL(A.I_8, k),
+                                pathname: P.Z5c.CHANNEL(P.I_8, k),
                                 state: R
                             },
                             selected: O || L,

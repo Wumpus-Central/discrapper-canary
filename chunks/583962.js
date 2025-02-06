@@ -30,8 +30,8 @@ var i = n(200651),
     E = n(981631),
     j = n(388032),
     y = n(976019);
-let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-    A = (e) => {
+let A = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+    P = (e) => {
         let { guild: t, onSelect: n } = e,
             [r, a] = l.useState(t.premiumProgressBarEnabled),
             [o, s] = l.useState(!1),
@@ -54,7 +54,7 @@ let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         });
     },
     T = 57,
-    w = 57 + P,
+    w = 57 + A,
     R = {
         tension: 180,
         friction: 80
@@ -64,10 +64,10 @@ let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             r = (0, f.Q3)('GuildBoostingSidebarDisplay'),
             { analyticsLocations: d } = (0, m.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
             { premiumSubscriberCount: _, id: Z } = t,
-            P = (0, x.rF)(_, Z),
-            T = (0, x.FZ)(P, t.id),
+            A = (0, x.rF)(_, Z),
+            T = (0, x.FZ)(A, t.id),
             w = null == T,
-            L = null != T ? T : P,
+            L = null != T ? T : A,
             M = (0, c.e7)([b.Z], () => {
                 var e;
                 return null !== (e = b.Z.getCountForGuild(Z)) && void 0 !== e ? e : 0;
@@ -137,7 +137,7 @@ let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                         onContextMenu: (e) => {
                             D &&
                                 (0, h.vq)(e, (e) =>
-                                    (0, i.jsx)(A, {
+                                    (0, i.jsx)(P, {
                                         ...e,
                                         guild: t
                                     })

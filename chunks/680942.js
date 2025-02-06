@@ -2,8 +2,8 @@ n.d(t, { Z: () => x });
 var r = n(200651),
     l = n(192379),
     i = n(481060),
-    s = n(727637),
-    a = n(906732),
+    a = n(727637),
+    s = n(906732),
     o = n(333867),
     d = n(677232),
     c = n(884697),
@@ -77,11 +77,11 @@ let f = {
     },
     x = (e) => {
         let { product: t, selectedVariantIndex: n, returnRef: x, onSuccess: _, tooltipDelay: v, isGiftEasterEggEnabled: b, disableCustomColor: k = !1 } = e,
-            { analyticsLocations: j } = (0, a.ZP)(),
-            L = l.useRef(null),
-            E = (0, s.Z)(L),
-            S = k ? p.BR.DARK : p.BR.LIGHT,
-            T = (0, u.hv)('CollectiblesShopGiftButton');
+            { analyticsLocations: j } = (0, s.ZP)(),
+            E = l.useRef(null),
+            L = (0, a.Z)(E),
+            T = k ? p.BR.DARK : p.BR.LIGHT,
+            S = (0, u.hv)('CollectiblesShopGiftButton');
         return (0, c.x6)(t)
             ? null
             : (0, r.jsx)(i.ua7, {
@@ -90,7 +90,7 @@ let f = {
                   children: (e) =>
                       (0, r.jsx)(i.zxk, {
                           ...e,
-                          buttonRef: L,
+                          buttonRef: E,
                           className: g.giftButton,
                           color: k ? i.Ttl.BRAND : i.Ttl.CUSTOM,
                           look: i.zxk.Looks.FILLED,
@@ -108,7 +108,7 @@ let f = {
                                       giftingOrigin: h.Wt.SHOP_PAGE,
                                       analyticsLocations: j,
                                       returnRef: x,
-                                      variantsReturnStyle: T,
+                                      variantsReturnStyle: S,
                                       onClose:
                                           null != _
                                               ? (e) => {
@@ -119,9 +119,9 @@ let f = {
                           },
                           children: b
                               ? (0, r.jsx)(d.Z, {
-                                    hovered: E,
+                                    hovered: L,
                                     isContentDismissed: !0,
-                                    themeOverride: S,
+                                    themeOverride: T,
                                     boxColors: f
                                 })
                               : (0, r.jsx)(i.OgN, {

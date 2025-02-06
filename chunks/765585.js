@@ -11,7 +11,7 @@ var i = n(200651),
     h = n(388032),
     p = n(410842);
 let g = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: g, headerClassName: m, contentClassName: f, tryItText: _, dismissText: v, onTryFeature: C, onClose: x, className: Z, inlineArt: I = !1, isPremiumFeature: b = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: N = !1, dismissibleContent: E, position: j = 'top', align: y = 'center', art: P, isPremiumEarlyAccess: A = !1, maxWidth: T = 280, hideDismissButton: w = !1, pointerClassName: R, dismissIconClassName: L, dismissIcon: M, onDismissIconClick: D } = e,
+    let { body: n, header: r, artClassName: g, headerClassName: m, contentClassName: f, tryItText: _, dismissText: v, onTryFeature: C, onClose: x, className: Z, inlineArt: I = !1, isPremiumFeature: b = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: N = !1, dismissibleContent: E, position: j = 'top', align: y = 'center', art: A, isPremiumEarlyAccess: P = !1, maxWidth: T = 280, hideDismissButton: w = !1, pointerClassName: R, dismissIconClassName: L, dismissIcon: M, onDismissIconClick: D } = e,
         G = S ? o.zxk.Sizes.LARGE : o.zxk.Sizes.MAX,
         [k, B] = l.useState(!1),
         { ref: O, width: U } = (0, s.Z)();
@@ -33,7 +33,7 @@ let g = l.forwardRef(function (e, t) {
             children: (0, i.jsxs)('div', {
                 className: a()(p.content, f, {
                     [p.contentNoArt]: null == g || I,
-                    [p.contentPremium]: b || A
+                    [p.contentPremium]: b || P
                 }),
                 children: [
                     null != M &&
@@ -44,7 +44,7 @@ let g = l.forwardRef(function (e, t) {
                         }),
                     (0, i.jsxs)('div', {
                         className: a()(g, I ? p.artInline : p.artAbsolute),
-                        children: [N && (0, i.jsx)(d.Z, { className: p.gifTag }), P]
+                        children: [N && (0, i.jsx)(d.Z, { className: p.gifTag }), A]
                     }),
                     (0, i.jsxs)('div', {
                         className: p.body,
@@ -54,14 +54,14 @@ let g = l.forwardRef(function (e, t) {
                                 variant: 'heading-md/bold',
                                 color: 'always-white',
                                 children: [
-                                    b && !A
+                                    b && !P
                                         ? (0, i.jsx)(o.SrA, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: p.premiumIcon
                                           })
                                         : null,
-                                    A
+                                    P
                                         ? (0, i.jsxs)(o.Text, {
                                               color: 'always-white',
                                               variant: 'eyebrow',
@@ -106,7 +106,7 @@ let g = l.forwardRef(function (e, t) {
                                               onClick: (e) => {
                                                   null == x || x(e), C(e), V(u.L.PRIMARY);
                                               },
-                                              color: b || A ? o.zxk.Colors.BRAND_INVERTED : o.zxk.Colors.WHITE,
+                                              color: b || P ? o.zxk.Colors.BRAND_INVERTED : o.zxk.Colors.WHITE,
                                               children: null != _ ? _ : h.intl.string(h.t.IHf1RE)
                                           }),
                                           !w &&
@@ -116,8 +116,8 @@ let g = l.forwardRef(function (e, t) {
                                                   onClick: (e) => {
                                                       null == x || x(e), V(u.L.DISMISS);
                                                   },
-                                                  color: b || A ? o.zxk.Colors.WHITE : o.zxk.Colors.BRAND,
-                                                  look: b || A ? o.zxk.Looks.LINK : o.zxk.Looks.FILLED,
+                                                  color: b || P ? o.zxk.Colors.WHITE : o.zxk.Colors.BRAND,
+                                                  look: b || P ? o.zxk.Looks.LINK : o.zxk.Looks.FILLED,
                                                   children: null != v ? v : h.intl.string(h.t.om7Ovr)
                                               })
                                       ]

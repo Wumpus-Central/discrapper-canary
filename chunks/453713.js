@@ -2,9 +2,9 @@ n.d(t, { P: () => v });
 var r = n(200651),
     l = n(192379),
     i = n(120356),
-    s = n.n(i),
-    a = n(404759),
-    o = n.n(a),
+    a = n.n(i),
+    s = n(404759),
+    o = n.n(s),
     d = n(91192),
     c = n(536895),
     u = n(866442),
@@ -23,7 +23,7 @@ let x = o()((e) => {
         return t ? C.TVs.unsafe_rawColors.PRIMARY_700.css : C.TVs.unsafe_rawColors.PRIMARY_200.css;
     }),
     _ = (e) => {
-        let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: a, selectedVariantIndex: o, onEnter: u, onLeave: h, minimal: _ } = e,
+        let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: s, selectedVariantIndex: o, onEnter: u, onLeave: h, minimal: _ } = e,
             { isPurchased: v } = (0, m.L)(n),
             { onFocus: b, ...k } = (0, d.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(i)),
             j = l.useCallback(
@@ -62,13 +62,13 @@ let x = o()((e) => {
                     },
                     className: f.colorVariant,
                     children: (0, r.jsx)('div', {
-                        className: s()(f.colorSwatch, {
+                        className: a()(f.colorSwatch, {
                             [f.open]: !_,
                             [f.selected]: i === o
                         }),
                         style: {
                             backgroundColor: n.variantValue,
-                            zIndex: a - i
+                            zIndex: s - i
                         },
                         children: v
                             ? (0, r.jsx)(C.kSu, {
@@ -82,16 +82,16 @@ let x = o()((e) => {
     },
     v = (e) => {
         var t, n;
-        let { variantGroupProduct: l, className: i, previewingVariantIndexProps: a, setIsHoveringOnSwitch: o, minimal: u, purchases: m, alternativeBackgroundColor: x } = e,
+        let { variantGroupProduct: l, className: i, previewingVariantIndexProps: s, setIsHoveringOnSwitch: o, minimal: u, purchases: m, alternativeBackgroundColor: x } = e,
             v = (0, p.o)(l, m),
-            b = a.previewingVariantIndex,
+            b = s.previewingVariantIndex,
             k = null === (t = l.variants) || void 0 === t ? void 0 : t[v],
             j = null !== b ? (null === (n = l.variants) || void 0 === n ? void 0 : n[b]) : void 0,
-            L = (0, h.Z)('shop-variants-group-'.concat(l.storeListingId), c.hy.HORIZONTAL);
+            E = (0, h.Z)('shop-variants-group-'.concat(l.storeListingId), c.hy.HORIZONTAL);
         if (null == k) return null;
-        let E = null != j ? j.variantLabel : null == k ? void 0 : k.variantLabel;
+        let L = null != j ? j.variantLabel : null == k ? void 0 : k.variantLabel;
         return (0, r.jsx)(d.bG, {
-            navigator: L,
+            navigator: E,
             children: (0, r.jsx)(d.SJ, {
                 children: (e) => {
                     var t;
@@ -99,7 +99,7 @@ let x = o()((e) => {
                     return (0, r.jsxs)('div', {
                         ref: n,
                         ...d,
-                        className: s()(f.variantsPanel, i, {
+                        className: a()(f.variantsPanel, i, {
                             [f.minimalState]: u,
                             [f.alternativeColor]: x
                         }),
@@ -121,8 +121,8 @@ let x = o()((e) => {
                                                       variantIndex: t,
                                                       selectedVariantIndex: v,
                                                       totalVariants: null !== (i = null === (n = l.variants) || void 0 === n ? void 0 : n.length) && void 0 !== i ? i : 0,
-                                                      onEnter: () => a.handleEntering(t),
-                                                      onLeave: a.handleLeaving,
+                                                      onEnter: () => s.handleEntering(t),
+                                                      onLeave: s.handleLeaving,
                                                       minimal: u
                                                   },
                                                   t
@@ -133,7 +133,7 @@ let x = o()((e) => {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: f.variantLabel,
-                                children: u ? g.intl.string(g.t.wbgaj4) : E
+                                children: u ? g.intl.string(g.t.wbgaj4) : L
                             })
                         ]
                     });

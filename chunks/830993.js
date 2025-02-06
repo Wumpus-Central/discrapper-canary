@@ -80,7 +80,7 @@ function y(e) {
         : (0, i.jsxs)(s.Ttm, {
               className: E.container,
               children: [
-                  (0, i.jsx)(P, {
+                  (0, i.jsx)(A, {
                       channel: a,
                       isChannelSelected: _,
                       voiceStatesCount: null !== (r = null == m ? void 0 : m.length) && void 0 !== r ? r : 0
@@ -140,7 +140,7 @@ function y(e) {
               ]
           });
 }
-function P(e) {
+function A(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
         r = (0, o.e7)([m.Z], () => !m.Z.can(S.Plq.CONNECT, t)),
         s = (0, o.e7)([_.Z], () => _.Z.hasVideo(t.id)),

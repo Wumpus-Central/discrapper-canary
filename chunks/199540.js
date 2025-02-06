@@ -66,10 +66,10 @@ function N(e) {
             },
             'animate-always'
         ),
-        P = C ? y : void 0;
+        A = C ? y : void 0;
     (C || N) &&
         (t = (0, i.jsx)(o.animated.div, {
-            style: P,
+            style: A,
             className: x.expandedFolderIconWrapper,
             children: (0, i.jsx)(u.ROc, {
                 size: d ? 'sm' : 'md',
@@ -79,7 +79,7 @@ function N(e) {
         })),
         (C || !N) &&
             (n = (0, i.jsx)(o.animated.div, {
-                style: P,
+                style: A,
                 className: x.closedFolderIconWrapper,
                 children: _.slice(0, 4).map((e, t) =>
                     (0, i.jsx)(
@@ -93,10 +93,10 @@ function N(e) {
                     )
                 )
             }));
-    let A = { backgroundColor: d && f ? u.TVs.colors.BACKGROUND_PRIMARY.css : (0, s.br)(m, 0.4) };
+    let P = { backgroundColor: d && f ? u.TVs.colors.BACKGROUND_PRIMARY.css : (0, s.br)(m, 0.4) };
     return (0, i.jsxs)('div', {
         'aria-hidden': !0,
-        style: c ? void 0 : A,
+        style: c ? void 0 : P,
         className: x.folderIconWrapper,
         children: [t, n]
     });
@@ -120,12 +120,12 @@ function E(e) {
             onKeyDown: S,
             treeItemProps: { onFocus: E, ...j }
         } = e,
-        [y, P] = l.useState(!1),
-        A = l.useCallback(() => {
-            o || P(!0), null == b || b(!0);
+        [y, A] = l.useState(!1),
+        P = l.useCallback(() => {
+            o || A(!0), null == b || b(!0);
         }, [o, b]),
         T = l.useCallback(() => {
-            o || P(!1), null == b || b(!1);
+            o || A(!1), null == b || b(!1);
         }, [o, b]),
         w = (0, p.Q3)('FolderHeader'),
         R = r || null == s ? null : (0, _.Or)(s),
@@ -147,7 +147,7 @@ function E(e) {
             className: a()(x.folder, { [x.hover]: y }),
             onClick: Z,
             onContextMenu: I,
-            onMouseEnter: A,
+            onMouseEnter: P,
             onMouseLeave: T,
             onKeyDown: S,
             onFocus: E,

@@ -1,56 +1,56 @@
-t.d(n, { Z: () => f }), t(653041);
-var i = t(442837),
-    l = t(158776),
-    o = t(308406),
-    s = t(697927),
-    r = t(200634),
-    a = t(369566),
-    d = t(29899),
-    c = t(326094),
-    u = t(708108),
-    m = t(146078),
-    x = t(228168),
-    p = t(981631),
-    I = t(388032);
-function f(e) {
-    var n, t;
-    let { user: f, currentUser: h, guildId: v, initialSubsection: Z } = e,
+i.d(n, { Z: () => I }), i(653041);
+var t = i(442837),
+    l = i(158776),
+    o = i(308406),
+    s = i(697927),
+    r = i(200634),
+    a = i(369566),
+    d = i(29899),
+    c = i(326094),
+    u = i(708108),
+    m = i(146078),
+    x = i(228168),
+    p = i(981631),
+    f = i(388032);
+function I(e) {
+    var n, i;
+    let { user: I, currentUser: h, guildId: v, initialSubsection: Z } = e,
         { voiceActivityCardEnabled: g } = (0, o.o)({ location: 'useUserProfileModalTabBarItems' }),
-        { live: _, recent: j, stream: E, outbox: N } = (0, a.Z)(f.id),
+        { live: _, recent: j, stream: E, outbox: N } = (0, a.Z)(I.id),
         { voiceChannel: y, voiceActivity: T } = (0, d.Z)({
-            userId: f.id,
+            userId: I.id,
             guildId: v
         }),
-        P = (0, i.e7)([l.Z], () => {
-            let e = l.Z.getStatus(f.id);
+        b = (0, t.e7)([l.Z], () => {
+            let e = l.Z.getStatus(I.id);
             return e === p.Skl.OFFLINE || e === p.Skl.INVISIBLE;
         }),
         S = null != E || _.length > 0,
-        b = j.length > 0,
-        L = null === (n = (0, s.Z)(f.id, f.id !== (null == h ? void 0 : h.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
-        C = null === (t = (0, r.Z)(f.id, f.id !== (null == h ? void 0 : h.id)).mutualGuilds) || void 0 === t ? void 0 : t.length,
-        A = f.id === (null == h ? void 0 : h.id),
+        P = j.length > 0,
+        L = null === (n = (0, s.Z)(I.id, I.id !== (null == h ? void 0 : h.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
+        C = null === (i = (0, r.Z)(I.id, I.id !== (null == h ? void 0 : h.id)).mutualGuilds) || void 0 === i ? void 0 : i.length,
+        A = I.id === (null == h ? void 0 : h.id),
         O = (0, c.Z)({
-            user: f,
+            user: I,
             currentUser: h,
             location: p.Sbl.PROFILE_MODAL_TABS
         }),
         M = [
             {
                 section: x.oh.USER_INFO,
-                text: I.intl.string(I.t.jGoPJS)
+                text: f.intl.string(f.t.jGoPJS)
             }
         ];
     return (
-        !P && (S || (g && null == E && null == T && null != y))
+        !b && (S || (g && null == E && null == T && null != y))
             ? M.push({
                   section: x.oh.ACTIVITY,
-                  text: I.intl.string(I.t.chq59f)
+                  text: f.intl.string(f.t.chq59f)
               })
-            : (b || (null == N && Z === x.Tb.RECENT_ACTIVITY)) &&
+            : (P || (null == N && Z === x.Tb.RECENT_ACTIVITY)) &&
               M.push({
                   section: x.oh.ACTIVITY,
-                  text: I.intl.string(I.t.chq59f)
+                  text: f.intl.string(f.t.chq59f)
               }),
         !A &&
             O &&

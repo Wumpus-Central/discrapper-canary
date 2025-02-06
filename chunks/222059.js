@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(682662),
     j = n(662146),
     y = n(674552),
-    P = n(981631),
-    A = n(474936),
+    A = n(981631),
+    P = n(474936),
     T = n(871465),
     w = n(388032),
     R = n(491708);
@@ -48,7 +48,7 @@ function M(e) {
         [v, C] = l.useState(!1),
         [x, Z] = l.useState(!1),
         [I, S] = l.useState(null),
-        [A, M] = l.useState(0),
+        [P, M] = l.useState(0),
         D = (0, r.Ie)('home'),
         G = (0, h.Q3)('DefaultHomeButton'),
         k = () => {
@@ -56,7 +56,7 @@ function M(e) {
         };
     if (null == n) return null;
     let B = w.intl.string(w.t.YUU0RE);
-    x && (B = o.K.get(P.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
+    x && (B = o.K.get(A.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
     let O = null;
     !t &&
         f &&
@@ -74,10 +74,10 @@ function M(e) {
                 onMouseEnter: () => C(!0),
                 onMouseLeave: () => C(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != I && clearTimeout(I), S(setTimeout(k, 500)), M(A + 1), 15 === A)) {
+                    if (!__OVERLAY__ && (null != I && clearTimeout(I), S(setTimeout(k, 500)), M(P + 1), 15 === P)) {
                         k();
-                        let e = !o.K.get(P.wli);
-                        o.K.set(P.wli, e),
+                        let e = !o.K.get(A.wli);
+                        o.K.set(A.wli, e),
                             e && o.K.set(T.O5, !0),
                             e ? (0, b.GN)('discodo') : (0, b.GN)('user_leave'),
                             Z(!0),
@@ -93,9 +93,9 @@ function M(e) {
                     pathname: g,
                     state: {
                         analyticsSource: {
-                            page: P.ZY5.GUILD_CHANNEL,
-                            section: P.jXE.NAVIGATION,
-                            object: P.qAy.BUTTON_HOME
+                            page: A.ZY5.GUILD_CHANNEL,
+                            section: A.jXE.NAVIGATION,
+                            object: A.qAy.BUTTON_HOME
                         }
                     }
                 },
@@ -136,7 +136,7 @@ function D() {
             return i > 0 && i < 100;
         }),
         n = (0, g.If)(),
-        l = Object.keys(A.nG),
+        l = Object.keys(P.nG),
         { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([v.Z], () => ({
             unviewedTrialCount: v.Z.getUnacknowledgedOffers(l).length,
             unviewedDiscountCount: v.Z.getUnacknowledgedDiscountOffers().length
@@ -148,11 +148,11 @@ function D() {
         m = h === s && s > 0 && n + u === 0,
         b = C.Z.getHomeLink();
     return (
-        m && (b = P.Z5c.APPLICATION_STORE),
+        m && (b = A.Z5c.APPLICATION_STORE),
         (0, i.jsx)(M, {
             selected: e,
             user: d,
-            selectedChannelId: f.Z.getChannelId(P.ME),
+            selectedChannelId: f.Z.getChannelId(A.ME),
             badge: h,
             link: b,
             showProgressBadge: t

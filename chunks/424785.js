@@ -26,8 +26,8 @@ var l = n(120356),
     E = n(592125),
     j = n(430824),
     y = n(607744),
-    P = n(496675),
-    A = n(306680),
+    A = n(496675),
+    P = n(306680),
     T = n(9156),
     w = n(979651),
     R = n(934415),
@@ -218,20 +218,20 @@ class H extends L.ZP {
 let z = (0, d.B)((0, u.Q)(H));
 function W(e) {
     let { guild: t, channel: n, disableSorting: l, isFavoriteCategory: r, collapsed: o, voiceStates: s } = e,
-        c = (0, a.cj)([A.ZP], () => ({
-            unread: A.ZP.hasUnread(n.id),
-            mentionCount: A.ZP.getMentionCount(n.id)
+        c = (0, a.cj)([P.ZP], () => ({
+            unread: P.ZP.hasUnread(n.id),
+            mentionCount: P.ZP.getMentionCount(n.id)
         })),
         d = (0, a.e7)([T.ZP], () => T.ZP.resolveUnreadSetting(n)),
-        u = (0, a.cj)([E.Z, y.Z, P.Z], () => {
+        u = (0, a.cj)([E.Z, y.Z, A.Z], () => {
             let e = E.Z.getChannel(n.parent_id),
                 i = y.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: null != t && P.Z.can(k.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== l && (t.id === B._ || (null != e ? P.Z.can(k.Plq.MANAGE_CHANNELS, e) : P.Z.can(k.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: P.Z.can(k.Plq.MOVE_MEMBERS, n),
-                locked: !P.Z.can(k.Plq.CONNECT, n),
-                bypassLimit: P.Z.can(k.Plq.MOVE_MEMBERS, n),
+                canManageChannel: null != t && A.Z.can(k.Plq.MANAGE_CHANNELS, n),
+                canReorderChannel: !0 !== l && (t.id === B._ || (null != e ? A.Z.can(k.Plq.MANAGE_CHANNELS, e) : A.Z.can(k.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: A.Z.can(k.Plq.MOVE_MEMBERS, n),
+                locked: !A.Z.can(k.Plq.CONNECT, n),
+                bypassLimit: A.Z.can(k.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat
             };
         }),
