@@ -63,5 +63,6 @@ e.exports = {
     playPauseAnimation: 'playPauseAnimation_de2fa0',
     transcriptBodySpinner: 'transcriptBodySpinner_de2fa0',
     pauseText: 'pauseText_de2fa0',
-    copyLinkBtn: 'copyLinkBtn_de2fa0'
+    copyLinkBtn: 'copyLinkBtn_de2fa0',
+    footerBtn: 'footerBtn_de2fa0'
 };

@@ -146,6 +146,7 @@ function R(e) {
                                     onClick: h,
                                     color: u.zxk.Colors.PRIMARY,
                                     size: u.zxk.Sizes.MEDIUM,
+                                    className: O.footerBtn,
                                     children: L.intl.string(L.t.cpT0Cg)
                                 }),
                                 (0, r.jsxs)('div', {
@@ -155,7 +156,7 @@ function R(e) {
                                             color: u.zxk.Colors.PRIMARY,
                                             onClick: Q,
                                             size: u.zxk.Sizes.NONE,
-                                            className: O.copyLinkBtn,
+                                            className: s()(O.copyLinkBtn, O.footerBtn),
                                             children: G
                                         }),
                                         (0, r.jsx)(x.i0, {
