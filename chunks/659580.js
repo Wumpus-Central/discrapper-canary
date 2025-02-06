@@ -16,51 +16,51 @@ var i = n(990547),
     v = n(358085),
     g = n(947150),
     E = n(488021),
-    Z = n(822556),
-    x = n(981631),
+    x = n(822556),
+    Z = n(981631),
     S = n(388032),
     C = n(126741);
 function b(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: b = !1, renderInputModes: I = !1, renderInputVolume: _ = !1, renderOutputVolume: N = !1, renderDeafen: R = !1, simplified: y = !1, onSelect: T } = e,
-        { analyticsLocations: j } = (0, c.ZP)();
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: b = !1, renderInputModes: I = !1, renderInputVolume: _ = !1, renderOutputVolume: R = !1, renderDeafen: j = !1, simplified: y = !1, onSelect: N } = e,
+        { analyticsLocations: w } = (0, c.ZP)();
     (0, d.Z)({
         type: i.ImpressionTypes.MENU,
         name: i.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: j }
+        properties: { location_stack: w }
     });
-    let w = (0, Z.Z)(),
-        A = (0, g.Z)(j, y),
-        O = (0, E.Z)(j, y),
-        P = (0, m.Z)(j),
-        k = (0, f.Z)(j),
-        M = (0, h.Z)(j),
+    let A = (0, x.Z)(),
+        T = (0, g.Z)(w, y),
+        k = (0, E.Z)(w, y),
+        O = (0, m.Z)(w),
+        P = (0, f.Z)(w),
+        M = (0, h.Z)(w),
         D = a.Yn.DEFAULT,
         L = p.Z.isSelfDeaf(D),
         F = (0, r.e7)([p.Z], () => p.Z.getMode()),
-        U = F === x.pM4.VOICE_ACTIVITY ? x.pM4.PUSH_TO_TALK : x.pM4.VOICE_ACTIVITY;
+        U = F === Z.pM4.VOICE_ACTIVITY ? Z.pM4.PUSH_TO_TALK : Z.pM4.VOICE_ACTIVITY;
     return (0, l.jsx)(u.Z, {
-        object: x.qAy.CONTEXT_MENU,
+        object: Z.qAy.CONTEXT_MENU,
         children: (0, l.jsxs)(s.v2r, {
-            onSelect: T,
+            onSelect: N,
             className: C.menu,
             onClose: t,
             navId: 'audio-device-context',
             'aria-label': S.intl.string(S.t.ZR1Ss7),
             children: [
-                b ? A : null,
-                n ? O : null,
+                b ? T : null,
+                n ? k : null,
                 !y && I
                     ? (0, l.jsx)(s.kSQ, {
                           label: S.intl.string(S.t['pS+K2N']),
-                          children: P
+                          children: O
                       })
                     : null,
                 (0, l.jsxs)(s.kSQ, {
                     children: [
-                        _ ? k : null,
-                        N ? M : null,
+                        _ ? P : null,
+                        R ? M : null,
                         y ? (0, l.jsx)(s.Clw, {}) : null,
-                        y && R
+                        y && j
                             ? (0, l.jsx)(
                                   s.S89,
                                   {
@@ -78,13 +78,13 @@ function b(e) {
                             : null,
                         y && b && v.isPlatformEmbedded
                             ? (0, l.jsx)(s.S89, {
-                                  checked: F === x.pM4.PUSH_TO_TALK,
+                                  checked: F === Z.pM4.PUSH_TO_TALK,
                                   id: 'input-mode',
                                   label: S.intl.string(S.t.Q8gkVF),
-                                  action: () => o.Z.setMode(U, void 0, void 0, { analyticsLocations: j })
+                                  action: () => o.Z.setMode(U, void 0, void 0, { analyticsLocations: w })
                               })
                             : null,
-                        w
+                        A
                     ]
                 })
             ]

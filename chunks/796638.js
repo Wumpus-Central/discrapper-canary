@@ -44,8 +44,8 @@ function g(e, t) {
             clearTimeout(e);
         };
     }, [t]);
-    let Z = i.useRef({}),
-        { visibleParticipants: x, participantTileWidth: S } = i.useMemo(() => {
+    let x = i.useRef({}),
+        { visibleParticipants: Z, participantTileWidth: S } = i.useMemo(() => {
             let n = Date.now(),
                 i = (0, r.sortBy)(t, (e) =>
                     (function (e) {
@@ -80,40 +80,40 @@ function g(e, t) {
                 g = f.findIndex(v),
                 E = null;
             -1 !== g && ((E = f[g]), f.splice(g, 1));
-            let x = null == E || m ? e : e - l - o,
-                S = Math.max(0, Math.min(Math.floor((x - o) / (s + o)), c, t.length)),
-                C = Math.min((x - o) / S - o, l),
+            let Z = null == E || m ? e : e - l - o,
+                S = Math.max(0, Math.min(Math.floor((Z - o) / (s + o)), c, t.length)),
+                C = Math.min((Z - o) / S - o, l),
                 b = Math.max(0, S - h.length),
                 I = h.slice(0, S),
                 _ = f.slice(0, b),
-                N = Array(b);
+                R = Array(b);
             if (b > 0) {
                 let e = [];
                 for (let t of _) {
-                    let n = Z.current[t.id];
-                    null != n && n < b ? (N[n] = t) : e.push(t);
+                    let n = x.current[t.id];
+                    null != n && n < b ? (R[n] = t) : e.push(t);
                 }
-                for (let t = 0; t < N.length; t++) {
-                    if (null != N[t]) continue;
+                for (let t = 0; t < R.length; t++) {
+                    if (null != R[t]) continue;
                     let n = e.shift();
                     if (null == n) break;
-                    N[t] = n;
+                    R[t] = n;
                 }
             }
-            let R = N.filter(u.lm),
-                y = (0, r.keyBy)((0, r.range)(R.length), (e) => R[e].id);
-            Z.current = y;
-            let T = [...I, ...R];
+            let j = R.filter(u.lm),
+                y = (0, r.keyBy)((0, r.range)(j.length), (e) => j[e].id);
+            x.current = y;
+            let N = [...I, ...j];
             return (
-                null != E && (m && T.length >= S ? (T[Math.max(0, T.length - 1)] = E) : T.push(E)),
+                null != E && (m && N.length >= S ? (N[Math.max(0, N.length - 1)] = E) : N.push(E)),
                 {
-                    visibleParticipants: T,
+                    visibleParticipants: N,
                     participantTileWidth: C
                 }
             );
         }, [e, t, g, f, m, c, o, s, l]);
     return {
-        visibleParticipants: x,
+        visibleParticipants: Z,
         participantTileWidth: S
     };
 }

@@ -6,7 +6,7 @@ var i = n(763472),
     a = n(591759),
     s = n(915863);
 function o(e) {
-    let { activity: t, color: n, user: o, look: c, onAction: u } = e;
+    let { activity: t, color: n, user: o, look: u, onAction: c } = e;
     if ((null == t ? void 0 : t.buttons) == null || t.buttons.length < 1) return null;
     async function d(e, t, n) {
         try {
@@ -28,9 +28,9 @@ function o(e) {
                 s.Z,
                 {
                     color: n,
-                    look: c,
+                    look: u,
                     onClick: () => {
-                        null == u || u(), d(t, o.id, i);
+                        null == c || c(), d(t, o.id, i);
                     },
                     children: e
                 },

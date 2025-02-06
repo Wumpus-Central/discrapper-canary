@@ -15,7 +15,7 @@ function a(e) {
         v(t.points[t.points.length - 1]) || m.push(t);
         return;
     }
-    let Z = (e, t) => {
+    let x = (e, t) => {
             let l = null;
             (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(E.x, E.y);
             for (let e = 1; e < f.length; e++) {
@@ -24,8 +24,8 @@ function a(e) {
             }
             return n.stroke(), l;
         },
-        { fillColor: x, outlineColor: S } = (0, l.bg)(t.userId, u, c, o),
-        C = Z(S, 6 + r.q2),
+        { fillColor: Z, outlineColor: S } = (0, l.bg)(t.userId, u, c, o),
+        C = x(S, 6 + r.q2),
         b = null != C && g(C);
-    b && (0, i.I)(n, C.x, C.y, S, r.q2), Z(x, 6), b && (0, i.T)(n, C.x, C.y, t.userId);
+    b && (0, i.I)(n, C.x, C.y, S, r.q2), x(Z, 6), b && (0, i.T)(n, C.x, C.y, t.userId);
 }

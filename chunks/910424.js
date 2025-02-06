@@ -6,36 +6,36 @@ var i = n(442837),
     a = n(572691),
     s = n(287734),
     o = n(872810),
-    c = n(40851),
-    u = n(102172),
+    u = n(40851),
+    c = n(102172),
     d = n(199902),
     m = n(592125),
-    p = n(585483),
-    h = n(915863),
+    h = n(585483),
+    f = n(915863),
     g = n(981631),
-    f = n(388032),
+    p = n(388032),
     v = n(951908);
 function S(e) {
-    let { isCurrentUser: t, color: n, look: S, applicationStream: x, onAction: I } = e,
-        { activeStream: y, watchingOtherStream: T } = (0, i.cj)([d.Z], () => ({
-            activeStream: d.Z.getActiveStreamForApplicationStream(x),
+    let { isCurrentUser: t, color: n, look: S, applicationStream: I, onAction: x } = e,
+        { activeStream: T, watchingOtherStream: Z } = (0, i.cj)([d.Z], () => ({
+            activeStream: d.Z.getActiveStreamForApplicationStream(I),
             watchingOtherStream:
-                null != x &&
-                d.Z.getAllActiveStreamsForChannel(x.channelId).filter((e) => {
+                null != I &&
+                d.Z.getAllActiveStreamsForChannel(I.channelId).filter((e) => {
                     let { ownerId: t } = e;
-                    return t !== x.ownerId;
+                    return t !== I.ownerId;
                 }).length > 0
         })),
-        N = (0, i.e7)([m.Z], () => m.Z.getChannel(null == x ? void 0 : x.channelId)),
-        [A, E] = (0, u.wq)(N),
-        Z = (0, c.Aq)(),
-        C = null != y && null != x && y.state !== g.jm8.ENDED && y.ownerId === x.ownerId,
+        y = (0, i.e7)([m.Z], () => m.Z.getChannel(null == I ? void 0 : I.channelId)),
+        [N, E] = (0, c.wq)(y),
+        C = (0, u.Aq)(),
+        A = null != T && null != I && T.state !== g.jm8.ENDED && T.ownerId === I.ownerId,
         j = (e) => {
-            null != x && (null == I || I(), s.default.selectVoiceChannel(x.channelId), C || (0, o.iV)(x, { forceMultiple: e }), Z.dispatch(g.CkL.POPOUT_CLOSE), p.S.dispatch(g.CkL.MODAL_CLOSE), a.Z.popAll());
+            null != I && (null == x || x(), s.default.selectVoiceChannel(I.channelId), A || (0, o.iV)(I, { forceMultiple: e }), C.dispatch(g.CkL.POPOUT_CLOSE), h.S.dispatch(g.CkL.MODAL_CLOSE), a.Z.popAll());
         };
-    if (null == x) return null;
-    let P = (0, u.P9)(E);
-    t ? (P = f.intl.string(f.t.XvBdeX)) : C && (P = f.intl.string(f.t.JH1SJy));
+    if (null == I) return null;
+    let P = (0, c.P9)(E);
+    t ? (P = p.intl.string(p.t.XvBdeX)) : A && (P = p.intl.string(p.t.JH1SJy));
     let b = {
         color: n,
         look: S
@@ -43,9 +43,9 @@ function S(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(
-                h.Z,
+                f.Z,
                 {
-                    disabled: t || C || !A,
+                    disabled: t || A || !N,
                     onClick: () => j(!1),
                     ...b,
                     fullWidth: !0,
@@ -60,11 +60,11 @@ function S(e) {
                 },
                 'play'
             ),
-            T && !C
+            Z && !A
                 ? (0, l.jsx)(r.ua7, {
-                      text: f.intl.string(f.t.wCrzur),
+                      text: p.intl.string(p.t.wCrzur),
                       children: (e) =>
-                          (0, l.jsx)(h.Z, {
+                          (0, l.jsx)(f.Z, {
                               ...e,
                               onClick: () => {
                                   var t;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var l = n(200651),
     i = n(192379),
     r = n(120356),
@@ -15,12 +15,12 @@ let p = 6 * m.Z.Millis.SECOND,
     v = 2 * m.Z.Millis.SECOND,
     g = 2 * m.Z.Millis.SECOND,
     E = (e) => 'scale('.concat(1 - -(e / 120), ') rotate(').concat(e, 'deg)');
-function Z(e) {
+function x(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: r } = e,
-        { emoji: m, sentAt: Z } = n,
-        x = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        { emoji: m, sentAt: x } = n,
+        Z = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         [S, C] = i.useState(!0),
-        b = !x,
+        b = !Z,
         I = (0, u.Yzy)(S, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
@@ -34,7 +34,7 @@ function Z(e) {
     return (i.useEffect(() => {
         let e;
         return (
-            Date.now() - Z >= g
+            Date.now() - x >= g
                 ? (0, f.H)(t)
                 : (e = setTimeout(
                       () => {
@@ -46,7 +46,7 @@ function Z(e) {
                 null != e && clearTimeout(e);
             }
         );
-    }, [Z, t, b]),
+    }, [x, t, b]),
     b)
         ? null
         : I((e, t) => {

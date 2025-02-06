@@ -13,7 +13,7 @@ function d(e) {
         v = (0, i.e7)([r.Z], () => r.Z.getDrawMode()),
         g = (0, o.Z)((0, u.Z)(t.id, n, d), m),
         E = (0, o.Z)((0, c.Z)(t.id, n, d), m),
-        Z = l.useCallback(
+        x = l.useCallback(
             (e, t, n) => {
                 if (null == h) return;
                 let { x: l, y: i } = (0, s.hn)(h, n);
@@ -26,37 +26,37 @@ function d(e) {
             },
             [h, g, E]
         ),
-        x = l.useCallback(
+        Z = l.useCallback(
             (e) => {
-                f && null != v && (e.stopPropagation(), (p.current = !0), Z('handleMouseDown', v, e));
+                f && null != v && (e.stopPropagation(), (p.current = !0), x('handleMouseDown', v, e));
             },
-            [Z, v, f]
+            [x, v, f]
         ),
         S = l.useCallback(
             (e) => {
-                f && null != v && (e.stopPropagation(), p.current && Z('handleMouseMove', v, e));
+                f && null != v && (e.stopPropagation(), p.current && x('handleMouseMove', v, e));
             },
-            [Z, v, f]
+            [x, v, f]
         ),
         C = l.useCallback(
             (e) => {
-                f && null != v && (e.stopPropagation(), (p.current = !1), Z('handleMouseUp', v, e));
+                f && null != v && (e.stopPropagation(), (p.current = !1), x('handleMouseUp', v, e));
             },
-            [Z, v, f]
+            [x, v, f]
         ),
         b = l.useCallback(
             (e) => {
-                p.current && null != v && Z('handleMouseEnter', v, e);
+                p.current && null != v && x('handleMouseEnter', v, e);
             },
-            [Z, v]
+            [x, v]
         );
     return (
         l.useEffect(() => {
             let e = (e) => {
-                null != v && ((p.current = !1), Z('handleMouseUp', v, e));
+                null != v && ((p.current = !1), x('handleMouseUp', v, e));
             };
             return window.addEventListener('mouseup', e), () => window.removeEventListener('mouseup', e);
-        }, [Z, v]),
+        }, [x, v]),
         {
             handleClick: l.useCallback(
                 (e) => {
@@ -64,7 +64,7 @@ function d(e) {
                 },
                 [v, f]
             ),
-            handleMouseDown: x,
+            handleMouseDown: Z,
             handleMouseEnter: b,
             handleMouseMove: S,
             handleMouseUp: C

@@ -89,8 +89,8 @@ let p = function (e) {
             },
             [Z, G, J]
         ),
-        q = Q ? (R ? 'side' : 'footer') : 'none',
-        X = (0, i.jsxs)(i.Fragment, {
+        X = Q ? (R ? 'side' : 'footer') : 'none',
+        q = (0, i.jsxs)(i.Fragment, {
             children: [
                 !N && (0, i.jsx)(m.ZP, { guild: n }),
                 (0, i.jsx)(u.Z, {
@@ -118,7 +118,7 @@ let p = function (e) {
                         updateFormField: O,
                         updateFormFieldOrder: U,
                         canRemove: !0,
-                        actionsLocation: q,
+                        actionsLocation: X,
                         fieldStyle: o.it.REGULAR
                     })
                 )
@@ -127,7 +127,7 @@ let p = function (e) {
     return H
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  !R && X,
+                  !R && q,
                   !L &&
                       (0, i.jsx)(d.Z, {
                           addFormField: z,
@@ -147,7 +147,7 @@ let p = function (e) {
                           updateFormField: O,
                           updateFormFieldOrder: U,
                           canRemove: !(R && A.length <= 1) && Q,
-                          actionsLocation: q,
+                          actionsLocation: X,
                           fieldStyle: o.it.REGULAR
                       })
                   ),
@@ -163,5 +163,5 @@ let p = function (e) {
                       })
               ]
           })
-        : X;
+        : q;
 };

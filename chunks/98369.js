@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(47120), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(724458);
+n.d(t, { Z: () => R }), n(47120), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(724458);
 var l,
     i,
     r,
@@ -15,8 +15,8 @@ var l,
     v = n(981631);
 let g = new Map(),
     E = new Map(),
-    Z = !1,
-    x = null;
+    x = !1,
+    Z = null;
 function S() {
     return m.Z.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, u.my)(t),
@@ -35,8 +35,8 @@ function C() {
             l = !1;
             break;
         }
-    let i = l !== Z;
-    return (Z = l), i;
+    let i = l !== x;
+    return (x = l), i;
 }
 function b(e) {
     let { userId: t } = e;
@@ -56,14 +56,14 @@ function b(e) {
     return n || l || i;
 }
 function I() {
-    g.clear(), E.clear(), (Z = !1);
+    g.clear(), E.clear(), (x = !1);
 }
 class _ extends (l = a.ZP.Store) {
     initialize() {
         this.waitFor(h.Z, p.Z, d.Z, m.Z);
     }
     isCallVerified() {
-        return Z;
+        return x;
     }
     isStreamVerified(e) {
         return E.get(e);
@@ -81,12 +81,12 @@ class _ extends (l = a.ZP.Store) {
               writable: !0
           })
         : (_[i] = r);
-let N = new _(o.Z, {
+let R = new _(o.Z, {
     CONNECTION_OPEN: I,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        if (t === x) return !1;
-        (x = t), I();
+        if (t === Z) return !1;
+        (Z = t), I();
     },
     RTC_CONNECTION_STATE: function (e) {
         let { streamKey: t, state: n, context: l } = e;

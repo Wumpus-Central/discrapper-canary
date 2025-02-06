@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z });
+n.d(t, { Z: () => x });
 var l = n(200651),
     i = n(192379),
     r = n(642128),
@@ -23,10 +23,10 @@ let p = { visibility: 'hidden' },
         bounce: 0
     },
     E = { duration: 1000 };
-function Z(e) {
+function x(e) {
     let { stream: t, inPopout: n } = e,
-        { reducedMotion: Z } = i.useContext(s.Sf),
-        x = (0, i.useRef)(null),
+        { reducedMotion: x } = i.useContext(s.Sf),
+        Z = (0, i.useRef)(null),
         S = d.n.getState().clipsButtonRef,
         C = (0, m.V9)(t),
         b = (0, a.e7)([u.Z], () => u.Z.getActiveAnimation()),
@@ -38,9 +38,9 @@ function Z(e) {
         },
         [C]
     );
-    let N = () => {
+    let R = () => {
             var e;
-            let t = null === (e = x.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+            let t = null === (e = Z.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             return null == t || n
                 ? p
                 : {
@@ -50,7 +50,7 @@ function Z(e) {
                       left: t.left
                   };
         },
-        R = (e) => {
+        j = (e) => {
             let t = null == S ? void 0 : S.getBoundingClientRect();
             if (((_.current = t), e.timestamp !== b || null == t || n)) return p;
             let { top: l, left: i } = t;
@@ -62,7 +62,7 @@ function Z(e) {
             };
         },
         y = (0, i.useRef)(null),
-        T = (0, o.Yzy)(
+        N = (0, o.Yzy)(
             I,
             {
                 keys: (e) => e.timestamp,
@@ -73,28 +73,28 @@ function Z(e) {
             },
             'animate-always'
         ),
-        j = (0, i.useRef)(null),
-        w = (0, o.Yzy)(
+        w = (0, i.useRef)(null),
+        A = (0, o.Yzy)(
             I,
             {
-                ref: j,
+                ref: w,
                 keys: (e) => e.timestamp,
                 from: (e) => ({
                     position: 'fixed',
                     visibility: 'hidden',
                     opacity: 1,
-                    ...(Z.enabled ? R(e) : N())
+                    ...(x.enabled ? j(e) : R())
                 }),
                 enter: (e) => [
                     {
                         opacity: 1,
                         visibility: 'visible',
-                        ...R(e)
+                        ...j(e)
                     }
                 ],
                 leave: {
                     opacity: 0,
-                    ...(!Z.enabled && {
+                    ...(!x.enabled && {
                         height: 0,
                         width: 0,
                         ...(() => {
@@ -106,7 +106,7 @@ function Z(e) {
                         })()
                     })
                 },
-                config: Z.enabled ? E : g,
+                config: x.enabled ? E : g,
                 onRest: (e, t) => {
                     null != t.item && null != I.find((e) => e.timestamp === t.item.timestamp) && (0, c.Gh)(C, t.item.timestamp);
                 }
@@ -114,14 +114,14 @@ function Z(e) {
             'animate-always'
         );
     return (
-        (0, r.useChain)([y, j], [0, 0.1], 3000),
+        (0, r.useChain)([y, w], [0, 0.1], 3000),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)('div', {
                     className: h.hidden,
-                    ref: x
+                    ref: Z
                 }),
-                T(
+                N(
                     (e, t) =>
                         null != t &&
                         (0, l.jsx)(r.animated.div, {
@@ -132,7 +132,7 @@ function Z(e) {
                 (0, l.jsx)(f.ZP, {
                     children: (0, l.jsx)('div', {
                         className: h.hidden,
-                        children: w(
+                        children: A(
                             (e, t, n, i) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
                                 (0, l.jsx)(r.animated.img, {

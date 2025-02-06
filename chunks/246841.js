@@ -6,23 +6,23 @@ var i = n(481060),
     a = n(733597),
     s = n(629257);
 function o(e) {
-    let { activity: t, user: n, source: o, className: c, size: u, look: d, color: m, fullWidth: p, onAction: h } = e,
-        { label: g, tooltip: f, loading: v, disabled: S, onClick: x } = (0, a.Ih)(t, n, o),
-        I = () => {
-            null == h || h(), x();
+    let { activity: t, user: n, source: o, className: u, size: c, look: d, color: m, fullWidth: h, onAction: f } = e,
+        { label: g, tooltip: p, loading: v, disabled: S, onClick: I } = (0, a.Ih)(t, n, o),
+        x = () => {
+            null == f || f(), I();
         };
     return (0, l.jsx)(i.ua7, {
-        text: f,
+        text: p,
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n } = e;
             return (0, l.jsxs)(i.zxk, {
-                className: c,
+                className: u,
                 innerClassName: s.playButtonInner,
-                size: u,
+                size: c,
                 look: d,
                 color: m,
-                fullWidth: p,
-                onClick: I,
+                fullWidth: h,
+                onClick: x,
                 onMouseEnter: t,
                 onMouseLeave: n,
                 disabled: S,

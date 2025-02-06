@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => S,
-    R: () => x
+    R: () => I
 });
 var l = n(512722),
     i = n.n(l),
@@ -8,67 +8,67 @@ var l = n(512722),
     a = n(726542),
     s = n(122810),
     o = n(503438),
-    c = n(693824),
-    u = n(690725),
+    u = n(693824),
+    c = n(690725),
     d = n(90712),
     m = n(592125),
-    p = n(81063),
-    h = n(201133),
+    h = n(81063),
+    f = n(201133),
     g = n(55000),
-    f = n(314091),
+    p = n(314091),
     v = n(981631);
 let S = async (e) => {
         let { reaction: t, altText: n, ...l } = e,
-            i = await y(l);
-        (0, h.a)({
+            i = await T(l);
+        (0, f.a)({
             file: i,
             altText: n,
             user: l.user,
             reaction: t
         });
     },
-    x = async (e) => {
+    I = async (e) => {
         let { reply: t, altText: n, ...l } = e,
-            a = await y(l),
+            a = await T(l),
             s = await r.Z.openPrivateChannel(l.user.id, !1, !1),
             o = m.Z.getChannel(s);
         i()(null != o, 'Channel cannot be null'),
-            (0, h.B)({
+            (0, f.B)({
                 file: a,
                 altText: n,
                 channel: o,
                 reply: t
             });
     },
-    I = (e) => {
+    x = (e) => {
         let { activity: t, application: l, user: i } = e,
-            { theme: r } = (0, f.j3)(i, 'black'),
+            { theme: r } = (0, p.j3)(i, 'black'),
             a = 'dark' === r,
             s = (0, d.Z)(t),
-            { assets: o, application_id: c } = t,
-            u = (0, p.getAssetImage)(c, null == o ? void 0 : o.large_image, 64),
+            { assets: o, application_id: u } = t,
+            c = (0, h.getAssetImage)(u, null == o ? void 0 : o.large_image, 64),
             m = null == l ? void 0 : l.getIconURL(64),
-            h = null != s ? (a ? s.icon.darkPNG : s.icon.lightPNG) : t.type === v.IIU.PLAYING ? (a ? n(414575) : n(807612)) : null;
+            f = null != s ? (a ? s.icon.darkPNG : s.icon.lightPNG) : t.type === v.IIU.PLAYING ? (a ? n(414575) : n(807612)) : null;
         return {
-            ...(null != h && { Platform: h }),
-            ...(null != u && { AssetImage: u.includes('http') ? u : n(869469)(u) }),
+            ...(null != f && { Platform: f }),
+            ...(null != c && { AssetImage: c.includes('http') ? c : n(869469)(c) }),
             ...(null != m && { ApplicationImage: m })
         };
     },
-    y = async (e) => {
+    T = async (e) => {
         let { user: t, activity: n, application: l, stream: i } = e,
             d = await r.Z.openPrivateChannel(t.id, !1, !1),
-            m = I({
+            m = x({
                 activity: n,
                 application: l,
                 user: t
             });
-        return await (0, u.f)({
+        return await (0, c.f)({
             assetsToLoad: m,
             drawImage: (e) => {
                 var l;
-                e.setFont({ truncate: c.GX.Truncate }),
-                    null != i ? Z(e, n, t) : (0, o.Z)(n) ? A(e, n, t) : (0, s.Z)(n) && n.name === a.Z.get(v.ABu.LEAGUE_OF_LEGENDS).name ? E(e, n, t) : N(e, n, t),
+                e.setFont({ truncate: u.GX.Truncate }),
+                    null != i ? C(e, n, t) : (0, o.Z)(n) ? N(e, n, t) : (0, s.Z)(n) && n.name === a.Z.get(v.ABu.LEAGUE_OF_LEGENDS).name ? E(e, n, t) : y(e, n, t),
                     (null === (l = e.assetMap) || void 0 === l ? void 0 : l.has('Platform')) &&
                         e.drawImage(
                             'Platform',
@@ -83,7 +83,7 @@ let S = async (e) => {
                         );
             },
             exportConfigs: {
-                format: c.kH.CloudUpload,
+                format: u.kH.CloudUpload,
                 quality: 1,
                 fileName: 'user-reacting-to-'.concat(n.name, '.png').toLowerCase(),
                 fileType: 'png',
@@ -91,7 +91,7 @@ let S = async (e) => {
             }
         });
     },
-    T = (e, t) => {
+    Z = (e, t) => {
         e.setColor('dark' === t ? 'white' : 'black'),
             e.drawPath(
                 g.Cv,
@@ -103,13 +103,13 @@ let S = async (e) => {
                 2 + 2 / 3
             );
     },
-    N = (e, t, n) => {
+    y = (e, t, n) => {
         var l, i, r;
         e.setSize({
             w: g.En,
             h: g.dI
         });
-        let { color: a, theme: s } = (0, f.j3)(n, 'black');
+        let { color: a, theme: s } = (0, p.j3)(n, 'black');
         e.setColor(a),
             e.drawRoundedRect(
                 {
@@ -158,7 +158,7 @@ let S = async (e) => {
                         },
                         8
                     )
-                  : T(e, s);
+                  : Z(e, s);
         let o = g.vS + g.o3 + g.sB;
         e.setColor('dark' === s ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
@@ -181,7 +181,7 @@ let S = async (e) => {
                     weight: 400
                 }),
                 e.drawText(
-                    'for '.concat((0, f.b6)(t.timestamps)),
+                    'for '.concat((0, p.b6)(t.timestamps)),
                     {
                         x: o,
                         y: g.SG + 2 * g.Nv
@@ -189,13 +189,13 @@ let S = async (e) => {
                     !0
                 ));
     },
-    A = (e, t, n) => {
+    N = (e, t, n) => {
         var l, i;
         e.setSize({
             w: g.En,
             h: g.dI
         });
-        let { color: r, theme: a } = (0, f.j3)(n, 'black');
+        let { color: r, theme: a } = (0, p.j3)(n, 'black');
         e.setColor(r),
             e.drawRoundedRect(
                 {
@@ -266,7 +266,7 @@ let S = async (e) => {
             w: g.En,
             h: g.dI
         });
-        let { color: i, theme: r } = (0, f.j3)(n, 'black');
+        let { color: i, theme: r } = (0, p.j3)(n, 'black');
         e.setColor(i),
             e.drawRoundedRect(
                 {
@@ -301,7 +301,7 @@ let S = async (e) => {
                     h: g.vS
                 },
                 8
-            ) === c.vP.Failure &&
+            ) === u.vP.Failure &&
                 e.drawPath(
                     g.Cv,
                     {
@@ -340,13 +340,13 @@ let S = async (e) => {
                 !0
             );
     },
-    Z = (e, t, n) => {
+    C = (e, t, n) => {
         var l, i, r;
         e.setSize({
             w: g.En,
             h: g.dI
         });
-        let { color: a, theme: s } = (0, f.j3)(n, 'black');
+        let { color: a, theme: s } = (0, p.j3)(n, 'black');
         e.setColor(a),
             e.drawRoundedRect(
                 {
@@ -395,7 +395,7 @@ let S = async (e) => {
                         },
                         8
                     )
-                  : T(e, s);
+                  : Z(e, s);
         let o = g.vS + g.o3 + g.sB;
         e.setColor('dark' === s ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
@@ -418,7 +418,7 @@ let S = async (e) => {
                     weight: 500
                 }),
                 e.drawText(
-                    'for '.concat((0, f.b6)(t.timestamps)),
+                    'for '.concat((0, p.b6)(t.timestamps)),
                     {
                         x: o,
                         y: g.SG + 2 * g.Nv

@@ -15,7 +15,7 @@ let h = {},
     v = {},
     g = !0,
     E = null;
-function Z(e) {
+function x(e) {
     if (null == p[e]) {
         let t = u.default.getUser(e);
         if (null == t) return;
@@ -24,7 +24,7 @@ function Z(e) {
         (l.src = n), (p[e] = l);
     }
 }
-class x extends (l = a.ZP.Store) {
+class Z extends (l = a.ZP.Store) {
     get visibleOverlayCanvas() {
         return g;
     }
@@ -42,15 +42,15 @@ class x extends (l = a.ZP.Store) {
     }
 }
 (r = 'SharedCanvasStore'),
-    (i = 'displayName') in x
-        ? Object.defineProperty(x, i, {
+    (i = 'displayName') in Z
+        ? Object.defineProperty(Z, i, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (x[i] = r);
-let S = new x(s.Z, {
+        : (Z[i] = r);
+let S = new Z(s.Z, {
     SHARED_CANVAS_UPDATE_LINE_POINTS: function (e) {
         let { lineId: t, newPoints: n, userId: l, streamerId: i } = e,
             r = h[i];
@@ -74,7 +74,7 @@ let S = new x(s.Z, {
                   })
                 : (0, m.P7)(e) && e.points.push(...n);
         }
-        Z(l);
+        x(l);
     },
     SHARED_CANVAS_UPDATE_EMOJI_HOSE: function (e) {
         var t, n, l;
@@ -106,7 +106,7 @@ let S = new x(s.Z, {
                     f.qh
                 ));
         }
-        Z(a);
+        x(a);
     },
     SHARED_CANVAS_CLEAR_DRAWABLES: function (e) {
         let { drawables: t, streamerId: n } = e;

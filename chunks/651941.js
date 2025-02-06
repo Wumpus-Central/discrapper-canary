@@ -17,52 +17,52 @@ function o(e, t, n) {
         e
     );
 }
-let c = {};
-class u extends (l = i.ZP.PersistedStore) {
+let u = {};
+class c extends (l = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        c = null !== (t = null == e ? void 0 : e.users) && void 0 !== t ? t : {};
+        u = null !== (t = null == e ? void 0 : e.users) && void 0 !== t ? t : {};
     }
     getState() {
-        return { users: c };
+        return { users: u };
     }
     getKeyTrustedAt(e, t) {
         var n;
         let l = (0, r.MK)(t);
-        return null === (n = c[e]) || void 0 === n ? void 0 : n[l];
+        return null === (n = u[e]) || void 0 === n ? void 0 : n[l];
     }
     isKeyVerified(e, t) {
         return null != this.getKeyTrustedAt(e, t);
     }
     getUserIds() {
-        return s.default.keys(c);
+        return s.default.keys(u);
     }
     getUserVerifiedKeys(e) {
-        return c[e];
+        return u[e];
     }
 }
-o(u, 'displayName', 'VerifiedKeyStore'), o(u, 'persistKey', 'VerifiedKeyStore');
-let d = new u(a.Z, {
+o(c, 'displayName', 'VerifiedKeyStore'), o(c, 'persistKey', 'VerifiedKeyStore');
+let d = new c(a.Z, {
     SECURE_FRAMES_VERIFIED_KEY_CREATE: function (e) {
         let { userId: t, key: n } = e,
             l = (function (e) {
                 var t;
-                let n = null !== (t = c[e]) && void 0 !== t ? t : {};
-                return (c[e] = n), n;
+                let n = null !== (t = u[e]) && void 0 !== t ? t : {};
+                return (u[e] = n), n;
             })(t),
             i = new Uint8Array(n);
         l[(0, r.MK)(i)] = Date.now();
     },
     SECURE_FRAMES_VERIFIED_KEY_DELETE: function (e) {
         let { userId: t, serializedKey: n } = e,
-            l = c[t];
+            l = u[t];
         if (null == l) return !1;
         let i = delete l[n],
             r = !1;
-        return 0 === Object.keys(l).length && (delete c[t], (r = !0)), i || r;
+        return 0 === Object.keys(l).length && (delete u[t], (r = !0)), i || r;
     },
     SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: function (e) {
         let { userId: t } = e;
-        return null != c[t] && delete c[t];
+        return null != u[t] && delete u[t];
     }
 });

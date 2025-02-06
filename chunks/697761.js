@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var l = n(200651);
 n(192379);
 var i = n(710845),
@@ -6,14 +6,14 @@ var i = n(710845),
     a = n(915863),
     s = n(981631),
     o = n(388032);
-function c(e) {
-    let { activity: t, user: n, look: c, color: u, onAction: d } = e;
+function u(e) {
+    let { activity: t, user: n, look: u, color: c, onAction: d } = e;
     return (0, r.Z)(t, s.xjy.INSTANCE)
         ? (0, l.jsx)(
               a.Z,
               {
-                  look: c,
-                  color: u,
+                  look: u,
+                  color: c,
                   onClick: () => {
                       null == d || d(), new i.Z('UserActivityActions').log('notify', n.id, t);
                   },

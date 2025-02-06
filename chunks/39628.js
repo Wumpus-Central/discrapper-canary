@@ -1,12 +1,12 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var l,
     i = n(200651),
     r = n(192379),
     a = n(120356),
     s = n.n(a),
     o = n(846519),
-    c = n(600164),
-    u = n(969577);
+    u = n(600164),
+    c = n(969577);
 function d(e, t, n) {
     return (
         t in e
@@ -24,24 +24,24 @@ function m(e) {
     let { percentage: t, isSingleLine: n } = e;
     return (0, i.jsx)('div', {
         className: s()({
-            [u.bar]: n,
-            [u.barInMultiLine]: !n
+            [c.bar]: n,
+            [c.barInMultiLine]: !n
         }),
         children: (0, i.jsx)('div', {
-            className: u.barInner,
+            className: c.barInner,
             style: { width: ''.concat(100 * Math.max(Math.min(t, 1), 0), '%') }
         })
     });
 }
-function p(e) {
+function h(e) {
     return String(e).padStart(2, '0');
 }
-function h(e) {
+function f(e) {
     let { time: t, padLargestUnit: n } = e,
         l = Math.floor(t) % 60,
         i = Math.floor(t / 60) % 60,
         r = Math.floor(t / 3600);
-    return 0 === r ? (n ? ''.concat(p(i), ':').concat(p(l)) : ''.concat(i, ':').concat(p(l))) : n ? ''.concat(p(r), ':').concat(p(i), ':').concat(p(l)) : ''.concat(r, ':').concat(p(i), ':').concat(p(l));
+    return 0 === r ? (n ? ''.concat(h(i), ':').concat(h(l)) : ''.concat(i, ':').concat(h(l))) : n ? ''.concat(h(r), ':').concat(h(i), ':').concat(h(l)) : ''.concat(r, ':').concat(h(i), ':').concat(h(l));
 }
 class g extends (l = r.PureComponent) {
     componentDidMount() {
@@ -59,25 +59,25 @@ class g extends (l = r.PureComponent) {
             d = Math.max(Math.min((a - e) / 1000, o), 0);
         return r
             ? (0, i.jsxs)('div', {
-                  className: s()(n, { [u.themed]: l }, u.singleLineContainer),
+                  className: s()(n, { [c.themed]: l }, c.singleLineContainer),
                   children: [
                       (0, i.jsx)('div', {
-                          className: u.textLeftInSingleLine,
-                          children: h({
+                          className: c.textLeftInSingleLine,
+                          children: f({
                               time: d,
                               padLargestUnit: !0
                           })
                       }),
                       (0, i.jsx)('div', {
-                          className: u.barInSingleLine,
+                          className: c.barInSingleLine,
                           children: (0, i.jsx)(m, {
                               percentage: d / o,
                               isSingleLine: !0
                           })
                       }),
                       (0, i.jsx)('div', {
-                          className: u.textRight,
-                          children: h({
+                          className: c.textRight,
+                          children: f({
                               time: o,
                               padLargestUnit: !0
                           })
@@ -85,26 +85,26 @@ class g extends (l = r.PureComponent) {
                   ]
               })
             : (0, i.jsxs)('div', {
-                  className: s()(n, { [u.themed]: l }),
+                  className: s()(n, { [c.themed]: l }),
                   children: [
                       (0, i.jsx)(m, {
                           percentage: d / o,
                           isSingleLine: !1
                       }),
-                      (0, i.jsxs)(c.Z, {
+                      (0, i.jsxs)(u.Z, {
                           children: [
-                              (0, i.jsx)(c.Z.Child, {
+                              (0, i.jsx)(u.Z.Child, {
                                   grow: 1,
-                                  className: u.textLeft,
-                                  children: h({
+                                  className: c.textLeft,
+                                  children: f({
                                       time: d,
                                       padLargestUnit: !1
                                   })
                               }),
-                              (0, i.jsx)(c.Z.Child, {
+                              (0, i.jsx)(u.Z.Child, {
                                   grow: 0,
-                                  className: u.textRight,
-                                  children: h({
+                                  className: c.textRight,
+                                  children: f({
                                       time: o,
                                       padLargestUnit: !1
                                   })
@@ -119,4 +119,4 @@ class g extends (l = r.PureComponent) {
     }
 }
 d(g, 'defaultProps', { themed: !1 });
-let f = g;
+let p = g;

@@ -15,13 +15,13 @@ var l,
     m = (((l = {}).CONTAIN = 'contain'), (l.COVER = 'cover'), l);
 let f = r.memo(function (e) {
     let { streamId: t, onResize: n, wrapperClassName: l, videoComponent: a, className: m, fit: f = 'contain', mirror: h = !1, paused: p = !1, streamPreviewURL: v, videoSpinnerContext: g, userId: E } = e,
-        [Z, x] = r.useState(!0),
+        [x, Z] = r.useState(!0),
         [S] = r.useState(() => new u.o('VideoStream'));
     r.useEffect(() => {
-        p || (Z ? S.onSpinnerStarted() : null != t && S.trackSpinnerDuration(g, E, t));
-    }, [Z, p, t, S, g, E]);
+        p || (x ? S.onSpinnerStarted() : null != t && S.trackSpinnerDuration(g, E, t));
+    }, [x, p, t, S, g, E]);
     let C = r.useCallback(() => {
-        x(!1);
+        Z(!1);
     }, []);
     return (0, i.jsxs)('div', {
         className: s()(d.wrapper, l),
@@ -37,9 +37,9 @@ let f = r.memo(function (e) {
             p
                 ? null
                 : (0, i.jsx)('div', {
-                      className: s()(d.previewWrapper, { [d.loading]: Z }),
+                      className: s()(d.previewWrapper, { [d.loading]: x }),
                       children:
-                          Z &&
+                          x &&
                           (0, i.jsxs)(r.Fragment, {
                               children: [
                                   null != v
