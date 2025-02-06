@@ -60,7 +60,8 @@ function _(e) {
                               children: [
                                   (0, i.jsx)(o.D, {
                                       assets: a,
-                                      assetCount: c
+                                      assetCount: c,
+                                      size: o.F.MEDIUM
                                   }),
                                   (0, i.jsx)(r.zxk, {
                                       onClick: h,
