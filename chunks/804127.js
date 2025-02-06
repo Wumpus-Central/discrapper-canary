@@ -9,16 +9,14 @@ var n = r(192379),
 function s(e) {
     let { isClaimingReward: t, isFetchingRewardCode: r, questContent: a, quest: s, requiresPlatformSelection: i, rewardCode: l, selectedPlatformType: d, preview: c } = e,
         [u, p] = n.useState(!1),
-        _ = n.useCallback((e, t, r) => {
-            p(!1);
+        _ = n.useCallback(async (e, t, r) => {
             try {
-                (0, o.QB)(e, t, r);
+                await (0, o.QB)(e, t, r), p(!1);
             } catch (e) {
                 p(!0);
             }
         }, []),
         m = n.useCallback((e) => {
-            p(!1);
             try {
                 (0, o.pf)(e);
             } catch (e) {
@@ -28,7 +26,7 @@ function s(e) {
     return (
         n.useEffect(() => {
             var e, n;
-            !0 !== c && null == l && !u && !t && !r && !i && ((null === (e = s.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != d ? _(s.id, d, a) : (null === (n = s.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null && m(s.id));
+            !0 !== c && null == l && !u && !t && !r && !i && (p(!1), (null === (e = s.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != d ? _(s.id, d, a) : (null === (n = s.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null && m(s.id));
         }, [_, m, u, t, r, a, s, i, l, d, c]),
         {
             claimCode: _,
