@@ -347,7 +347,13 @@ class en extends u.Z {
                                 location: t,
                                 applicationId: i
                             });
-                    t.code !== F.$VG.CLOSE_NORMAL && this.showErrorModal(t, i);
+                    t.code !== F.$VG.CLOSE_NORMAL &&
+                        (A.default.track(F.rMx.ACTIVITY_CLOSED_RPC_ERROR, {
+                            rpc_close_code: t.code,
+                            rpc_message: t.message,
+                            application_id: i
+                        }),
+                        this.showErrorModal(t, i));
                 }
             }),
             j(this, 'handleCallDelete', (e) => {
