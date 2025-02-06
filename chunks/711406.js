@@ -15,15 +15,20 @@ function d(e) {
     return null != n && _ && null != p
         ? (0, i.jsxs)('div', {
               className: s()(c.container, {
-                  [c.bordered]: null != h.borderColor,
                   [c.memberslist]: f === u.QY.Memberlist,
                   [c.privateChannel]: f === u.QY.PrivateChannel
               }),
               children: [
-                  (0, i.jsx)('div', {
-                      style: h,
-                      className: c.gradientLayer
-                  }),
+                  null != h.borderColor &&
+                      (0, i.jsx)('div', {
+                          style: { borderColor: h.borderColor },
+                          className: c.borderLayer
+                      }),
+                  null != h.background &&
+                      (0, i.jsx)('div', {
+                          style: { background: h.background },
+                          className: c.gradientLayer
+                      }),
                   (0, i.jsx)('div', {
                       className: c.imgLayer,
                       children: (0, i.jsx)('img', {
