@@ -18,11 +18,11 @@ function u(e) {
 }
 function c(e) {
     let { guildId: t, children: n, refetchOnMount: u, includeSoftDeleted: c, countryCode: h, dontFetchWhileTrue: g } = e,
-        C = (0, r.e7)([s.Z], () => s.Z.isConnected()),
-        f = (0, r.e7)([o.Z], () => (null != t ? o.Z.getSubscriptionGroupListingsForGuildFetchState(t) : o.M.FETCHED)),
+        f = (0, r.e7)([s.Z], () => s.Z.isConnected()),
+        C = (0, r.e7)([o.Z], () => (null != t ? o.Z.getSubscriptionGroupListingsForGuildFetchState(t) : o.M.FETCHED)),
         p = l.useRef(u),
         v = l.useCallback(() => {
-            if (null == t || !C || !0 === g) return;
+            if (null == t || !f || !0 === g) return;
             let e = o.Z.getSubscriptionGroupListingsForGuildFetchState(t);
             (p.current || e === o.M.NOT_FETCHED) &&
                 ((p.current = !1),
@@ -30,8 +30,8 @@ function c(e) {
                     includeSoftDeleted: c,
                     countryCode: h
                 }));
-        }, [C, t, c, h, g]),
-        E = l.useMemo(() => f === o.M.FETCHED && !0 !== p.current, [f, p]);
+        }, [f, t, c, h, g]),
+        E = l.useMemo(() => C === o.M.FETCHED && !0 !== p.current, [C, p]);
     return (0, i.jsx)(d.Provider, {
         value: {
             listingsLoaded: E,

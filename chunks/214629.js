@@ -49,11 +49,11 @@ let s = (0, i.B)({
     }),
     o = s;
 function l() {
-    let e = (0, r.Rb)('ActivityPopout');
+    let e = (0, r.Rb)('ActivityPopout').overlayV3UI;
     return s.getCurrentConfig({ location: 'getIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && e;
 }
 function u() {
-    let e = (0, r.o4)('ActivityPopout');
+    let e = (0, r.o4)('ActivityPopout').overlayV3UI;
     return s.useExperiment({ location: 'useIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && e;
 }
 function c() {

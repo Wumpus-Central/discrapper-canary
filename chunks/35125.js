@@ -2,8 +2,8 @@ n.d(t, {
     PA: () => c,
     Tn: () => u,
     _i: () => v,
-    eI: () => f,
-    vp: () => C,
+    eI: () => C,
+    vp: () => f,
     y8: () => p
 });
 var i = n(367907),
@@ -64,12 +64,12 @@ function g(e) {
         }
     };
 }
-function C(e) {
+function f(e) {
     let t,
         { username: n, usernameOnClickHandler: i = d, roleSubscriptionOnClickHandler: l = a.dG4, guildId: r, roleSubscriptionData: s } = e,
-        { guild: u, totalMonthsSubscribed: c, showWithDuration: g, isRenewal: C } = h(r, s);
+        { guild: u, totalMonthsSubscribed: c, showWithDuration: g, isRenewal: f } = h(r, s);
     return (
-        (t = g ? (C ? o.t.OQ0OU1 : o.t['+N9bxs']) : C ? o.t.OxP1ND : o.t['6Z1E+/']),
+        (t = g ? (f ? o.t.OQ0OU1 : o.t['+N9bxs']) : f ? o.t.OxP1ND : o.t['6Z1E+/']),
         o.intl.formatToParts(t, {
             guildName: null == u ? void 0 : u.name,
             tierName: null == s ? void 0 : s.tier_name,
@@ -80,7 +80,7 @@ function C(e) {
         })
     );
 }
-function f(e) {
+function C(e) {
     return (0, l.l)(e);
 }
 function p(e, t, n, l) {

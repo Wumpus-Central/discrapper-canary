@@ -1,5 +1,5 @@
 t.d(n, {
-    i0: () => B,
+    i0: () => S,
     yD: () => k
 });
 var o = t(200651);
@@ -46,7 +46,7 @@ let x = (e) => {
             children: (0, c.pO)(n) ? v.intl.string(v.t.hvVgAQ) : v.intl.string(v.t.lwQdjI)
         });
     },
-    S = (e) => {
+    B = (e) => {
         var n;
         let { quest: t } = e,
             a = null === (n = (0, s.WD)()) || void 0 === n ? void 0 : n.getId();
@@ -66,7 +66,7 @@ let x = (e) => {
             children: v.intl.string(v.t.csptqa)
         });
     },
-    B = (e) => {
+    S = (e) => {
         let { quest: n, useReducedMotion: t, isExpanded: a, className: i, ctaLabel: s, ...c } = e,
             f = (0, p.hf)({
                 quest: n,
@@ -90,7 +90,7 @@ let x = (e) => {
             v = (0, f.P)({ location: C.dr.QUESTS_BAR }),
             m = (0, c.q8)(t);
         return u
-            ? (0, o.jsx)(B, {
+            ? (0, o.jsx)(S, {
                   quest: t,
                   useReducedMotion: a,
                   isExpanded: r
@@ -101,7 +101,7 @@ let x = (e) => {
                     taskDetails: _
                 })
               : p === l.LI.CONSOLE && d && !v
-                ? (0, o.jsx)(S, { quest: t })
+                ? (0, o.jsx)(B, { quest: t })
                 : p === l.LI.SELECT || i || s
                   ? null
                   : (0, o.jsx)(x, { quest: t });

@@ -2,17 +2,17 @@ t.d(n, { Z: () => s });
 var l = t(200651);
 t(192379);
 var i = t(481060),
-    r = t(388032),
-    a = t(246774);
+    a = t(388032),
+    r = t(246774);
 function s(e) {
     let { sendStartNotification: n, setSendStartNotification: t } = e,
-        s = n ? r.intl.string(r.t.xAT8lJ) : r.intl.string(r.t['Y+18hY']);
+        s = n ? a.intl.string(a.t.xAT8lJ) : a.intl.string(a.t['Y+18hY']);
     return (0, l.jsx)('div', {
-        className: a.notificationToggle,
+        className: r.notificationToggle,
         children: (0, l.jsx)(i.XZJ, {
             type: i.XZJ.Types.INVERTED,
             size: 14,
-            className: a.__invalid_checkbox,
+            className: r.__invalid_checkbox,
             value: n,
             onChange: function () {
                 t(!n);
@@ -22,9 +22,9 @@ function s(e) {
                 variant: 'text-sm/normal',
                 children: (0, l.jsx)(i.ua7, {
                     position: 'bottom',
-                    tooltipClassName: a.tooltip,
-                    text: r.intl.string(r.t['4A/xnZ']),
-                    'aria-label': r.intl.string(r.t['4A/xnZ']),
+                    tooltipClassName: r.tooltip,
+                    text: a.intl.string(a.t['4A/xnZ']),
+                    'aria-label': a.intl.string(a.t['4A/xnZ']),
                     children: (e) =>
                         (0, l.jsx)('span', {
                             ...e,

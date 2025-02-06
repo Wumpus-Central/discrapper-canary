@@ -1,5 +1,5 @@
 n.d(t, {
-    W: () => I,
+    W: () => R,
     r: () => b
 }),
     n(47120);
@@ -24,7 +24,7 @@ var i = n(200651),
     p = n(644929),
     N = n(814960),
     F = n(981631);
-function R(e) {
+function I(e) {
     let { guildId: t, formFields: n, updateFormFields: l, v2Enabled: o } = e,
         a = (0, r.e7)([s.Z], () => {
             var e;
@@ -152,7 +152,7 @@ function R(e) {
         };
     return (0, i.jsx)(i.Fragment, { children: n.map((e, t) => (o ? T(e, t) : j(e, t))) });
 }
-function I(e) {
+function R(e) {
     let t,
         { guildId: n, formFields: l, updateFormFields: s, disableVerification: u } = e,
         m = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
@@ -163,7 +163,7 @@ function I(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   !u && null != t && (0, i.jsx)(t, {}),
-                  (0, i.jsx)(R, {
+                  (0, i.jsx)(I, {
                       guildId: n,
                       formFields: l,
                       updateFormFields: s,
@@ -188,7 +188,7 @@ function b(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   !m && !N.current && null != t && (0, i.jsx)(t, { isUserVerified: p }),
-                  (0, i.jsx)(R, {
+                  (0, i.jsx)(I, {
                       guildId: n,
                       formFields: s,
                       updateFormFields: u,

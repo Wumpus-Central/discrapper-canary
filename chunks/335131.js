@@ -39,8 +39,8 @@ let y = (e) => {
         });
     },
     I = (e) => {
-        let { openInLayer: t = !0, ...n } = e;
-        y(n), t ? (0, l.jN)(v.S9g.COLLECTIBLES_SHOP) : (0, c.uL)(v.Z5c.COLLECTIBLES_SHOP);
+        let { openInLayer: t = !0, tab: n, ...i } = e;
+        y(i), t ? (0, l.jN)(v.S9g.COLLECTIBLES_SHOP) : (0, c.uL)(n ? v.Z5c.COLLECTIBLES_SHOP_WITH_TAB(n) : v.Z5c.COLLECTIBLES_SHOP);
     },
     b = () => {
         o.Z.dispatch({ type: 'COLLECTIBLES_SHOP_CLOSE' }), (0, l.xf)();

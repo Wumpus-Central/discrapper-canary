@@ -10,7 +10,7 @@ var i,
     c = n(981631),
     h = n(388032),
     g = n(261121);
-function C(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function C(e, t, n) {
         e
     );
 }
-class f extends (i = r.Component) {
+class C extends (i = r.Component) {
     render() {
         return (0, l.jsxs)('div', {
             className: g.streamerModeEnabled,
@@ -39,10 +39,10 @@ class f extends (i = r.Component) {
     }
     constructor(...e) {
         super(...e),
-            C(this, 'handleClick', () => {
+            f(this, 'handleClick', () => {
                 this.props.disableButton || ((0, d.jN)(c.S9g.USER_SETTINGS), u.Z.setSection(c.oAB.STREAMER_MODE));
             });
     }
 }
-C(f, 'defaultProps', { disableButton: !1 });
-let p = f;
+f(C, 'defaultProps', { disableButton: !1 });
+let p = C;

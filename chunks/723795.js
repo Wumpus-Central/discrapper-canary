@@ -8,9 +8,9 @@ var o = n(200651),
     c = n(313201),
     d = n(863249),
     u = n(944163),
-    p = n(246364),
-    _ = n(983736),
-    m = n(937111),
+    m = n(246364),
+    p = n(983736),
+    _ = n(937111),
     f = n(200305),
     h = n(271383),
     b = n(594174),
@@ -20,12 +20,12 @@ var o = n(200651),
     v = n(308083),
     E = n(388032),
     F = n(687651);
-let y = {
+let I = {
         mass: 1,
         tension: 600,
         friction: 60
     },
-    I = {
+    y = {
         mass: 1,
         tension: 300,
         friction: 25
@@ -65,9 +65,9 @@ let T = function (e) {
         [Y, Z] = i.useState(!1),
         V = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
         H = (0, l.e7)([h.ZP], () => h.ZP.isMember(T.id, null == V ? void 0 : V.id), [T, V]),
-        U = (0, l.e7)([m.Z], () => {
+        U = (0, l.e7)([_.Z], () => {
             var e;
-            return (null === (e = m.Z.getRequest(T.id)) || void 0 === e ? void 0 : e.applicationStatus) === p.wB.SUBMITTED;
+            return (null === (e = _.Z.getRequest(T.id)) || void 0 === e ? void 0 : e.applicationStatus) === m.wB.SUBMITTED;
         }),
         [L, W] = i.useState(''),
         z = i.useRef(() =>
@@ -124,7 +124,7 @@ let T = function (e) {
                 W(null == e ? void 0 : e.message), D(!1);
             }
         }, [K, S, P, q]),
-        Q = q.some((e) => !(0, _.OA)(e)),
+        Q = q.some((e) => !(0, p.OA)(e)),
         J = (null !== (f = null == P ? void 0 : null === (t = P.guild) || void 0 === t ? void 0 : t.approximate_member_count) && void 0 !== f ? f : 0) >= v.Du,
         $ = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         ee = (0, a.q_F)(
@@ -137,7 +137,7 @@ let T = function (e) {
                     opacity: 1,
                     transform: 'translateY(0px)'
                 },
-                config: y,
+                config: I,
                 delay: 500
             },
             'animate-always'
@@ -155,7 +155,7 @@ let T = function (e) {
                 opacity: 0,
                 scale: 0
             },
-            config: I
+            config: y
         }),
         en = i.useRef(null);
     return (0, o.jsxs)(a.Y0X, {

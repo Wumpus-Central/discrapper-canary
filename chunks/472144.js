@@ -13,15 +13,15 @@ let p = a.forwardRef((e, n) => {
         m = (0, l.E)(t, a > 0),
         g = r / 2,
         x = r / 2 - p / 2,
-        S = 2 * Math.PI * x,
-        B = S - a * S,
+        B = 2 * Math.PI * x,
+        S = B - a * B,
         b = {
-            strokeDasharray: ''.concat(S, ' ').concat(S),
-            strokeDashoffset: B
+            strokeDasharray: ''.concat(B, ' ').concat(B),
+            strokeDashoffset: S
         },
         k = {
-            strokeDasharray: ''.concat(S, ' ').concat(S),
-            strokeDashoffset: -a * S
+            strokeDasharray: ''.concat(B, ' ').concat(B),
+            strokeDashoffset: -a * B
         },
         h = { boxShadow: '0 0 30px 0px '.concat(m.glow) },
         { progressTextAnimation: y } = (0, s.q_F)({

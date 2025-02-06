@@ -1,15 +1,15 @@
 t.d(n, { C: () => o });
 var l = t(544891),
     i = t(570140),
-    r = t(314852),
-    a = t(405222),
+    a = t(314852),
+    r = t(405222),
     s = t(981631);
 function o(e, n) {
     var t;
     if (null == e) return Promise.resolve(null);
-    let o = r.Z.getIsFetching(e),
-        c = r.Z.getLastSyncTimestamp(e),
-        d = r.Z.getProfile(e),
+    let o = a.Z.getIsFetching(e),
+        c = a.Z.getLastSyncTimestamp(e),
+        d = a.Z.getProfile(e),
         u = ((t = c), Date.now() - (null != t ? t : 0) > 60000);
     return o && !n
         ? Promise.resolve(null)
@@ -24,7 +24,7 @@ function o(e, n) {
                     rejectWithError: !1
                 })
                 .then((n) => {
-                    let t = (0, a.x)(n.body);
+                    let t = (0, r.x)(n.body);
                     return (
                         i.Z.dispatch({
                             type: 'GUILD_PROFILE_FETCH_SUCCESS',

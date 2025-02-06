@@ -34,25 +34,12 @@ async function y() {
             outOfProcessOverlay: !0,
             focusable: !1
         },
-        t = (0, g.Rb)('openOverlayPopout'),
+        t = (0, g.Rb)('openOverlayPopout').overlayV3UI,
         a = E.Z.getForcedRenderMode(),
         s = (0, g.b4)('openOverlayPopout');
     if (!(t || s) && a === l.R5.UNSET) return;
     let u = (e) => null;
-    if (s || a === l.R5.OUT_OF_PROCESS_V2) {
-        let e = (0, r.Un)({
-            createPromise: () => Promise.all([n.e('50506'), n.e('68880'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('26893'), n.e('51269'), n.e('22878'), n.e('90508'), n.e('13351'), n.e('66711'), n.e('78447'), n.e('53937'), n.e('83366'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('86282'), n.e('18543'), n.e('22173'), n.e('68240'), n.e('30243'), n.e('99393'), n.e('33862'), n.e('68241'), n.e('80284'), n.e('47903'), n.e('40103'), n.e('60691'), n.e('41070'), n.e('38902'), n.e('63158'), n.e('70205'), n.e('84466'), n.e('86133'), n.e('7590'), n.e('93382'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('75878'), n.e('97266'), n.e('23919'), n.e('52409'), n.e('84804'), n.e('95910'), n.e('37220'), n.e('82158'), n.e('91315'), n.e('17434'), n.e('46815'), n.e('92922'), n.e('91523'), n.e('45442'), n.e('33179'), n.e('70151'), n.e('74976'), n.e('45585'), n.e('54030')]).then(n.bind(n, 969383)),
-            webpackId: 969383,
-            name: 'AppOverlayV2Tech'
-        });
-        (u = (t) =>
-            (0, i.jsx)(e, {
-                withTitleBar: !1,
-                windowKey: t
-            })),
-            (0, o.te)(m.qU, p.Z.getDefaultLayout(m.qU, 0), 0);
-    } else {
-        if (!t && a !== l.R5.OUT_OF_PROCESS_V3 && a !== l.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION) return;
+    if (t || a === l.R5.OUT_OF_PROCESS_V3 || a === l.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION) {
         let e = (0, r.Un)({
             createPromise: () => Promise.all([n.e('50506'), n.e('35535'), n.e('90508'), n.e('13351'), n.e('78447'), n.e('83366'), n.e('68240'), n.e('41070'), n.e('70205'), n.e('93382'), n.e('52409'), n.e('46815'), n.e('92922'), n.e('33179'), n.e('70151'), n.e('13368')]).then(n.bind(n, 989373)),
             webpackId: 989373,
@@ -64,6 +51,19 @@ async function y() {
                 windowKey: t
             })),
             (0, o.te)(v.OVERLAY_V3_LAYOUT_ID, p.Z.getDefaultLayout(v.OVERLAY_V3_LAYOUT_ID, 1), 1);
+    } else {
+        if (!s && a !== l.R5.OUT_OF_PROCESS_V2) return;
+        let e = (0, r.Un)({
+            createPromise: () => Promise.all([n.e('50506'), n.e('68880'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('26893'), n.e('51269'), n.e('22878'), n.e('90508'), n.e('13351'), n.e('66711'), n.e('78447'), n.e('53937'), n.e('83366'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('86282'), n.e('18543'), n.e('22173'), n.e('68240'), n.e('30243'), n.e('99393'), n.e('33862'), n.e('68241'), n.e('80284'), n.e('47903'), n.e('40103'), n.e('60691'), n.e('41070'), n.e('38902'), n.e('63158'), n.e('70205'), n.e('84466'), n.e('86133'), n.e('7590'), n.e('93382'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('75878'), n.e('13001'), n.e('23919'), n.e('52409'), n.e('84804'), n.e('95910'), n.e('37220'), n.e('82158'), n.e('91315'), n.e('17434'), n.e('46815'), n.e('92922'), n.e('91523'), n.e('45442'), n.e('33179'), n.e('70151'), n.e('74976'), n.e('45585'), n.e('54030')]).then(n.bind(n, 969383)),
+            webpackId: 969383,
+            name: 'AppOverlayV2Tech'
+        });
+        (u = (t) =>
+            (0, i.jsx)(e, {
+                withTitleBar: !1,
+                windowKey: t
+            })),
+            (0, o.te)(m.qU, p.Z.getDefaultLayout(m.qU, 0), 0);
     }
     await _.bA(v.$J, u, e);
 }

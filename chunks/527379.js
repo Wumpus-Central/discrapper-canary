@@ -1,8 +1,8 @@
 n.d(t, {
-    Dr: () => f,
+    Dr: () => C,
     YO: () => g,
     _X: () => p,
-    _o: () => C,
+    _o: () => f,
     nb: () => v,
     zO: () => h
 });
@@ -27,7 +27,7 @@ function g(e) {
         guildId: e
     });
 }
-function C(e, t) {
+function f(e, t) {
     let { continuationToken: n, ...l } = t;
     i.Z.dispatch({
         type: 'MEMBER_SAFETY_PAGINATION_UPDATE',
@@ -35,7 +35,7 @@ function C(e, t) {
         pagination: l
     });
 }
-async function f(e, t) {
+async function C(e, t) {
     await i.Z.dispatch({
         type: 'MEMBER_SAFETY_SEARCH_STATE_UPDATE',
         guildId: e,

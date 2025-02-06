@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => I,
-    f: () => m
+    Z: () => m,
+    f: () => I
 }),
     n(47120);
 var i,
@@ -14,25 +14,25 @@ var i,
     c = n(239091),
     h = n(596454),
     g = n(607070),
-    C = n(339085),
-    f = n(695346),
+    f = n(339085),
+    C = n(695346),
     p = n(572004),
     v = n(388032),
     E = n(680475),
     _ = (((i = _ || {})[(i.SMALL = 0)] = 'SMALL'), (i[(i.MEDIUM = 1)] = 'MEDIUM'), i);
-function I(e) {
-    let { tag: t, size: i = 1, disabled: s, className: _, onClick: I, onRemove: m, selected: S, ariaLabel: T } = e,
-        { name: N, emojiId: O, emojiName: y } = t,
-        A = null != m,
+function m(e) {
+    let { tag: t, size: i = 1, disabled: s, className: _, onClick: m, onRemove: I, selected: S, ariaLabel: T } = e,
+        { name: N, emojiId: y, emojiName: O } = t,
+        A = null != I,
         [P, b] = r.useState(!1),
-        L = (0, d.e7)([C.ZP], () => (null != O ? C.ZP.getUsableCustomEmojiById(O) : null)),
-        R = A || null != I,
-        Z = (!A || !P) && (null != O || null != y),
+        L = (0, d.e7)([f.ZP], () => (null != y ? f.ZP.getUsableCustomEmojiById(y) : null)),
+        R = A || null != m,
+        Z = (!A || !P) && (null != y || null != O),
         D = 0 === i,
         w = r.useRef(null),
         M = (0, d.e7)([g.Z], () => g.Z.keyboardModeEnabled),
-        U = (e) => {
-            let i = f.Sb.getSetting();
+        x = (e) => {
+            let i = C.Sb.getSetting();
             p.wS &&
                 i &&
                 (0, c.jW)(e, async () => {
@@ -44,13 +44,13 @@ function I(e) {
                         });
                 });
         },
-        x = (0, l.jsxs)(l.Fragment, {
+        U = (0, l.jsxs)(l.Fragment, {
             children: [
                 Z
                     ? (0, l.jsx)(h.Z, {
                           className: a()(E.emoji, { [E.small]: D }),
-                          emojiId: O,
-                          emojiName: y,
+                          emojiId: y,
+                          emojiName: O,
                           animated: !!(null == L ? void 0 : L.animated),
                           size: 'reaction'
                       })
@@ -73,7 +73,7 @@ function I(e) {
                 })
             ]
         }),
-        G = {
+        j = {
             key: t.id,
             className: a()(
                 E.pill,
@@ -86,30 +86,30 @@ function I(e) {
                 _
             ),
             onClick: (e) => {
-                null == I || I(e), null == m || m(t), M || null == w.current || w.current.blur();
+                null == m || m(e), null == I || I(t), M || null == w.current || w.current.blur();
             },
-            onContextMenu: (e) => U(e),
+            onContextMenu: (e) => x(e),
             onMouseEnter: () => A && b(!0),
             onMouseLeave: () => A && b(!1)
         },
-        F = (0, o.JA)('forum-tag-'.concat(t.id));
+        G = (0, o.JA)('forum-tag-'.concat(t.id));
     return R
         ? (0, l.jsx)(u.P3F, {
-              ...F,
+              ...G,
               innerRef: w,
               focusProps: { ringTarget: w },
               'aria-label': null != T ? T : v.intl.formatToPlainString(v.t.iyRTLi, { tagName: N }),
               role: 'button',
               'aria-pressed': S,
-              ...G,
-              children: x
+              ...j,
+              children: U
           })
         : (0, l.jsx)('div', {
-              ...G,
-              children: x
+              ...j,
+              children: U
           });
 }
-function m(e) {
+function I(e) {
     let { tags: t, count: n, size: i = 1 } = e,
         r = 0 === i;
     return (0, l.jsx)(u.ua7, {
@@ -117,11 +117,11 @@ function m(e) {
         text: (0, l.jsx)(l.Fragment, {
             children: t.map((e) =>
                 (0, l.jsx)(
-                    I,
+                    m,
                     {
                         tag: e,
                         className: E.tooltipPill,
-                        size: I.Sizes.SMALL
+                        size: m.Sizes.SMALL
                     },
                     e.id
                 )
@@ -138,4 +138,4 @@ function m(e) {
             })
     });
 }
-I.Sizes = _;
+m.Sizes = _;

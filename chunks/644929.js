@@ -42,7 +42,7 @@ function d(e) {
 function m(e) {
     let { onChange: t, checked: n, disabled: l } = e;
     return (0, i.jsx)(s.XZJ, {
-        size: 20,
+        size: 24,
         type: s.XZJ.Types.INVERTED,
         value: n,
         onChange: t,
@@ -50,7 +50,7 @@ function m(e) {
         style: { borderWidth: 2 },
         className: c.checkbox,
         children: (0, i.jsx)(s.Text, {
-            variant: 'text-sm/normal',
+            variant: 'text-md/normal',
             children: u.intl.string(u.t['2EXfGB'])
         })
     });

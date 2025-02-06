@@ -1,10 +1,10 @@
 t.d(n, {
     k: () => i,
-    x: () => r
+    x: () => a
 });
 var l,
     i = (((l = {}).PUBLIC = 'PUBLIC'), (l.RESTRICTED = 'RESTRICTED'), l);
-function r(e) {
+function a(e) {
     return {
         id: e.id,
         name: e.name,

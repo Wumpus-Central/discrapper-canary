@@ -1,7 +1,7 @@
 n.d(t, {
-    $D: () => f,
+    $D: () => C,
     H2: () => p,
-    MO: () => C,
+    MO: () => f,
     X$: () => g,
     d5: () => c
 });
@@ -29,11 +29,11 @@ function h(e) {
 function g(e) {
     return 0 !== h(e);
 }
-function C(e) {
+function f(e) {
     let t = (0, d.Bt)(null == e ? void 0 : e.id),
         n = (0, r.Ob)(e),
         i = (0, r.gS)(null == e ? void 0 : e.id),
-        a = f(e),
+        a = C(e),
         u = (0, l.e7)([o.default], () => {
             let t = o.default.getCurrentUser();
             return null != t && (null == e ? void 0 : e.isOwner(t)) === !0;
@@ -53,7 +53,7 @@ function C(e) {
               shouldRestrictUpdatingRoleSubscriptionSettings: g
           });
 }
-function f(e) {
+function C(e) {
     return (0, l.e7)([a.Z], () => p(e), [e]);
 }
 function p(e) {

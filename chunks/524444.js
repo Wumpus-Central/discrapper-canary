@@ -130,10 +130,10 @@ function q(e) {
     );
 }
 function Q(e) {
-    let { alt: t, hiddenSpoilers: n, renderAdjacentContent: a, containerClassName: o, imageContainerClassName: l, disableAltTextDisplay: u = !1, mediaLayoutType: c, imageContainerStyle: f } = e,
-        _ = c === G.hV.MOSAIC,
-        h = !u && O.H1.getSetting() && null != t && '' !== t && !0 !== n,
-        m = (e) => {
+    let { alt: t, hiddenSpoilers: n, renderAdjacentContent: a, containerClassName: o, imageContainerClassName: l, disableAltTextDisplay: u = !1, reducedSizeAltTextButton: c = !1, mediaLayoutType: f, imageContainerStyle: _ } = e,
+        h = f === G.hV.MOSAIC,
+        m = !u && O.H1.getSetting() && null != t && '' !== t && !0 !== n,
+        g = (e) => {
             let { altText: t } = e;
             return (0, i.jsxs)(d.VqE, {
                 'aria-label': V.intl.string(V.t.fSiQ3N),
@@ -142,7 +142,7 @@ function Q(e) {
                     e.key === Z.mR.Escape &&
                         setTimeout(() => {
                             var e;
-                            return null === (e = g.current) || void 0 === e ? void 0 : e.focus();
+                            return null === (e = E.current) || void 0 === e ? void 0 : e.focus();
                         }, 0);
                 },
                 children: [
@@ -157,38 +157,38 @@ function Q(e) {
                 ]
             });
         },
-        g = r.createRef();
+        E = r.createRef();
     return (0, i.jsxs)('div', {
         className: s()(j.imageContent, o),
         children: [
             (0, i.jsxs)('div', {
                 className: s()(j.imageContainer, l),
-                style: f,
+                style: _,
                 children: [(0, i.jsx)(p.Z, { ...e }), null != a && a()]
             }),
-            _ &&
-                h &&
+            h &&
+                m &&
                 (0, i.jsx)('div', {
                     className: j.mediaMosaicAltTextContainer,
                     children: (0, i.jsx)(d.yRy, {
                         animation: d.yRy.Animation.FADE,
-                        renderPopout: () => (0, i.jsx)(m, { altText: t }),
+                        renderPopout: () => (0, i.jsx)(g, { altText: t }),
                         children: (e) =>
                             (0, i.jsx)(d.tEY, {
                                 offset: 4,
                                 children: (0, i.jsx)('button', {
                                     ...e,
                                     type: 'button',
-                                    ref: g,
+                                    ref: E,
                                     'aria-label': V.intl.string(V.t.fSiQ3N),
-                                    className: j.mediaMosaicAltText,
+                                    className: s()(j.mediaMosaicAltText, { [j.reducedSize]: c }),
                                     children: V.intl.string(V.t.jCV1T0)
                                 })
                             })
                     })
                 }),
-            !_ &&
-                h &&
+            !h &&
+                m &&
                 (0, i.jsx)('span', {
                     className: j.altText,
                     children: t
