@@ -53,6 +53,7 @@ function u(e) {
     else if (e <= o.rsA.HOME_SETTINGS_UPDATE) return o.KFR.HOME_SETTINGS;
     else if (e <= o.rsA.VOICE_CHANNEL_STATUS_DELETE) return o.KFR.VOICE_CHANNEL_STATUS;
     else if (e <= o.rsA.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) return o.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION;
+    else if (e <= o.rsA.GUILD_MEMBER_VERIFICATION_UPDATE) return o.KFR.GUILD_MEMBER_VERIFICATION;
     return a.Z.captureMessage('Unknown target type for: '.concat(e)), o.KFR.UNKNOWN;
 }
 function c(e) {
@@ -133,6 +134,7 @@ function c(e) {
         case o.rsA.ONBOARDING_UPDATE:
         case o.rsA.SOUNDBOARD_SOUND_UPDATE:
         case o.rsA.HOME_SETTINGS_UPDATE:
+        case o.rsA.GUILD_MEMBER_VERIFICATION_UPDATE:
             return o.vB8.UPDATE;
     }
     return o.vB8.ALL;

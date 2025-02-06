@@ -21,22 +21,22 @@ var r = n(200651),
     N = n(594174),
     g = n(934415),
     O = n(823379),
-    S = n(624138),
-    R = n(51144),
-    f = n(909746),
-    U = n(981631),
+    R = n(624138),
+    S = n(51144),
+    U = n(909746),
+    f = n(981631),
     D = n(388032),
     C = n(52330);
 function L(e, t) {
-    let n = f.vc[e.targetType];
+    let n = U.vc[e.targetType];
     return null != n && !0 === n[t.key];
 }
-let h = {
-    [U.vB8.CREATE]: C.typeCreate,
-    [U.vB8.UPDATE]: C.typeUpdate,
-    [U.vB8.DELETE]: C.typeDelete
+let M = {
+    [f.vB8.CREATE]: C.typeCreate,
+    [f.vB8.UPDATE]: C.typeUpdate,
+    [f.vB8.DELETE]: C.typeDelete
 };
-function M(e) {
+function h(e) {
     let { applicationId: t } = e,
         n = (0, d.q)(t);
     return null == n
@@ -49,38 +49,39 @@ function M(e) {
 class p extends l.PureComponent {
     render() {
         let { actionType: e, targetType: t, action: n, themeOverride: l } = this.props,
-            i = null != l ? C['themeOverride'.concat((0, S.De)(l))] : null,
+            i = null != l ? C['themeOverride'.concat((0, R.De)(l))] : null,
             s = a()(
                 C.icon,
-                h[e],
-                n === U.rsA.MESSAGE_DELETE
+                M[e],
+                n === f.rsA.MESSAGE_DELETE
                     ? C.targetMessage
-                    : n === U.rsA.AUTO_MODERATION_BLOCK_MESSAGE || n === U.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || n === U.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || n === U.rsA.AUTO_MODERATION_QUARANTINE_USER
+                    : n === f.rsA.AUTO_MODERATION_BLOCK_MESSAGE || n === f.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || n === f.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || n === f.rsA.AUTO_MODERATION_QUARANTINE_USER
                       ? C.autoModerationBlockMessage
                       : {
-                            [U.KFR.ALL]: C.targetAll,
-                            [U.KFR.GUILD]: C.targetGuild,
-                            [U.KFR.CHANNEL]: C.targetChannel,
-                            [U.KFR.CHANNEL_OVERWRITE]: C.targetChannel,
-                            [U.KFR.USER]: C.targetMember,
-                            [U.KFR.ROLE]: C.targetRole,
-                            [U.KFR.ONBOARDING_PROMPT]: C.targetOnboarding,
-                            [U.KFR.GUILD_ONBOARDING]: C.targetOnboarding,
-                            [U.KFR.HOME_SETTINGS]: C.targetOnboarding,
-                            [U.KFR.INTEGRATION]: C.targetIntegration,
-                            [U.KFR.INVITE]: C.targetInvite,
-                            [U.KFR.WEBHOOK]: C.targetWebhook,
-                            [U.KFR.EMOJI]: C.targetEmoji,
-                            [U.KFR.STICKER]: C.targetSticker,
-                            [U.KFR.STAGE_INSTANCE]: C.targetStageInstance,
-                            [U.KFR.GUILD_SCHEDULED_EVENT]: C.targetGuildScheduledEvent,
-                            [U.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION]: C.targetGuildScheduledEvent,
-                            [U.KFR.THREAD]: C.thread,
-                            [U.KFR.APPLICATION_COMMAND]: C.applicationCommand,
-                            [U.KFR.AUTO_MODERATION_RULE]: C.autoModerationRule,
-                            [U.KFR.GUILD_HOME]: C.targetGuildHome,
-                            [U.KFR.GUILD_SOUNDBOARD]: C.targetGuildSoundboard,
-                            [U.KFR.VOICE_CHANNEL_STATUS]: C.targetChannel
+                            [f.KFR.ALL]: C.targetAll,
+                            [f.KFR.GUILD]: C.targetGuild,
+                            [f.KFR.CHANNEL]: C.targetChannel,
+                            [f.KFR.CHANNEL_OVERWRITE]: C.targetChannel,
+                            [f.KFR.USER]: C.targetMember,
+                            [f.KFR.ROLE]: C.targetRole,
+                            [f.KFR.ONBOARDING_PROMPT]: C.targetOnboarding,
+                            [f.KFR.GUILD_ONBOARDING]: C.targetOnboarding,
+                            [f.KFR.HOME_SETTINGS]: C.targetOnboarding,
+                            [f.KFR.INTEGRATION]: C.targetIntegration,
+                            [f.KFR.INVITE]: C.targetInvite,
+                            [f.KFR.WEBHOOK]: C.targetWebhook,
+                            [f.KFR.EMOJI]: C.targetEmoji,
+                            [f.KFR.STICKER]: C.targetSticker,
+                            [f.KFR.STAGE_INSTANCE]: C.targetStageInstance,
+                            [f.KFR.GUILD_SCHEDULED_EVENT]: C.targetGuildScheduledEvent,
+                            [f.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION]: C.targetGuildScheduledEvent,
+                            [f.KFR.THREAD]: C.thread,
+                            [f.KFR.APPLICATION_COMMAND]: C.applicationCommand,
+                            [f.KFR.AUTO_MODERATION_RULE]: C.autoModerationRule,
+                            [f.KFR.GUILD_HOME]: C.targetGuildHome,
+                            [f.KFR.GUILD_SOUNDBOARD]: C.targetGuildSoundboard,
+                            [f.KFR.VOICE_CHANNEL_STATUS]: C.targetChannel,
+                            [f.KFR.GUILD_MEMBER_VERIFICATION]: C.targetMember
                         }[t],
                 i
             );
@@ -98,29 +99,29 @@ function m(e) {
                             t.changes.map((i) => {
                                 if (L(t, i)) return null;
                                 let { oldValue: a, newValue: s } = (() => {
-                                        if ((t.action === U.rsA.CHANNEL_UPDATE || t.action === U.rsA.CHANNEL_CREATE) && i.key === U.zUn.TYPE) {
+                                        if ((t.action === f.rsA.CHANNEL_UPDATE || t.action === f.rsA.CHANNEL_CREATE) && i.key === f.zUn.TYPE) {
                                             var e, n;
                                             return {
                                                 oldValue: null !== (e = i.oldValue) && void 0 !== e ? e : (0, g.a5)({ type: i.oldValue }),
                                                 newValue: null !== (n = i.newValue) && void 0 !== n ? n : (0, g.a5)({ type: i.newValue })
                                             };
                                         }
-                                        if (t.action === U.rsA.MEMBER_UPDATE && i.key === U.zUn.COMMUNICATION_DISABLED_UNTIL) {
+                                        if (t.action === f.rsA.MEMBER_UPDATE && i.key === f.zUn.COMMUNICATION_DISABLED_UNTIL) {
                                             let e = u()(i.newValue);
                                             return {
                                                 oldValue: i.oldValue,
                                                 newValue: e.isValid() ? e.calendar() : i.newValue
                                             };
                                         }
-                                        return t.action === U.rsA.GUILD_UPDATE && i.key === U.zUn.OWNER_ID
+                                        return t.action === f.rsA.GUILD_UPDATE && i.key === f.zUn.OWNER_ID
                                             ? {
-                                                  oldValue: R.ZP.getUserTag(i.oldValue, { mode: 'username' }),
-                                                  newValue: R.ZP.getUserTag(i.newValue, { mode: 'username' })
+                                                  oldValue: S.ZP.getUserTag(i.oldValue, { mode: 'username' }),
+                                                  newValue: S.ZP.getUserTag(i.newValue, { mode: 'username' })
                                               }
                                             : i;
                                     })(),
                                     E = (() => {
-                                        if (t.action === U.rsA.MEMBER_ROLE_UPDATE)
+                                        if (t.action === f.rsA.MEMBER_ROLE_UPDATE)
                                             return (function (e) {
                                                 let { newValue: t } = e;
                                                 return Array.isArray(t)
@@ -136,7 +137,7 @@ function m(e) {
                                                       )
                                                     : null;
                                             })(i);
-                                        if (t.targetType === U.KFR.ROLE || t.action === U.rsA.CHANNEL_OVERWRITE_CREATE || t.action === U.rsA.CHANNEL_OVERWRITE_UPDATE)
+                                        if (t.targetType === f.KFR.ROLE || t.action === f.rsA.CHANNEL_OVERWRITE_CREATE || t.action === f.rsA.CHANNEL_OVERWRITE_UPDATE)
                                             return (function (e, t) {
                                                 let { newValue: n } = e;
                                                 return Array.isArray(n)
@@ -145,14 +146,14 @@ function m(e) {
                                                               'div',
                                                               {
                                                                   className: C.subListItem,
-                                                                  children: f.hQ(e, t)
+                                                                  children: U.hQ(e, t)
                                                               },
                                                               n
                                                           )
                                                       )
                                                     : null;
                                             })(i, t);
-                                        if ((t.action === U.rsA.CHANNEL_UPDATE || t.action === U.rsA.THREAD_UPDATE) && i.key === U.zUn.FLAGS)
+                                        if ((t.action === f.rsA.CHANNEL_UPDATE || t.action === f.rsA.THREAD_UPDATE) && i.key === f.zUn.FLAGS)
                                             return (function (e) {
                                                 let { newValue: t, oldValue: n } = e,
                                                     l = [];
@@ -163,7 +164,7 @@ function m(e) {
                                                                 'div',
                                                                 {
                                                                     className: C.subListItem,
-                                                                    children: f.cT(e)
+                                                                    children: U.cT(e)
                                                                 },
                                                                 e
                                                             )
@@ -176,7 +177,7 @@ function m(e) {
                                                                 'div',
                                                                 {
                                                                     className: C.subListItem,
-                                                                    children: f.em(e)
+                                                                    children: U.em(e)
                                                                 },
                                                                 e
                                                             )
@@ -186,7 +187,7 @@ function m(e) {
                                                     ? l
                                                     : null;
                                             })(i);
-                                        if ((t.action === U.rsA.ONBOARDING_PROMPT_UPDATE || t.action === U.rsA.ONBOARDING_PROMPT_CREATE) && i.key === U.zUn.OPTIONS)
+                                        if ((t.action === f.rsA.ONBOARDING_PROMPT_UPDATE || t.action === f.rsA.ONBOARDING_PROMPT_CREATE) && i.key === f.zUn.OPTIONS)
                                             return (function (e, t, n) {
                                                 let { newValue: l, oldValue: i } = e,
                                                     a = (e) => {
@@ -220,7 +221,7 @@ function m(e) {
                                                                               className: C.onboardingChangeLogItemTitle,
                                                                               children: [
                                                                                   (0, r.jsx)(p, {
-                                                                                      actionType: U.vB8.UPDATE,
+                                                                                      actionType: f.vB8.UPDATE,
                                                                                       targetType: t.targetType,
                                                                                       action: t.action
                                                                                   }),
@@ -300,7 +301,7 @@ function m(e) {
                                                                                 className: C.onboardingChangeLogItemTitle,
                                                                                 children: [
                                                                                     (0, r.jsx)(p, {
-                                                                                        actionType: U.vB8.CREATE,
+                                                                                        actionType: f.vB8.CREATE,
                                                                                         targetType: t.targetType,
                                                                                         action: t.action
                                                                                     }),
@@ -338,7 +339,7 @@ function m(e) {
                                                                             className: C.onboardingChangeLogItemTitle,
                                                                             children: [
                                                                                 (0, r.jsx)(p, {
-                                                                                    actionType: U.vB8.DELETE,
+                                                                                    actionType: f.vB8.DELETE,
                                                                                     targetType: t.targetType,
                                                                                     action: t.action
                                                                                 }),
@@ -358,12 +359,12 @@ function m(e) {
                                                     'options'
                                                 );
                                             })(i, t, n);
-                                        if (t.action === U.rsA.HOME_SETTINGS_CREATE || t.action === U.rsA.HOME_SETTINGS_UPDATE)
+                                        if (t.action === f.rsA.HOME_SETTINGS_CREATE || t.action === f.rsA.HOME_SETTINGS_UPDATE)
                                             return (function (e, t) {
                                                 let { oldValue: n, newValue: l, key: i } = e,
                                                     { targetType: a, action: s } = t;
                                                 switch (i) {
-                                                    case U.zUn.WELCOME_MESSAGE:
+                                                    case f.zUn.WELCOME_MESSAGE:
                                                         return ((e, t) => {
                                                             var n, l, i, a, s;
                                                             let o = N.default.getUser(null == t ? void 0 : null === (n = t.author_ids) || void 0 === n ? void 0 : n[0]),
@@ -402,7 +403,7 @@ function m(e) {
                                                                 children: [u, _]
                                                             });
                                                         })(l, n);
-                                                    case U.zUn.NEW_MEMBER_ACTIONS:
+                                                    case f.zUn.NEW_MEMBER_ACTIONS:
                                                         return ((e, t) => {
                                                             let n = e.map((e) => e.channel_id),
                                                                 l = t.map((e) => e.channel_id),
@@ -420,7 +421,7 @@ function m(e) {
                                                                                     className: C.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, r.jsx)(p, {
-                                                                                            actionType: U.vB8.CREATE,
+                                                                                            actionType: f.vB8.CREATE,
                                                                                             targetType: a,
                                                                                             action: s
                                                                                         }),
@@ -442,7 +443,7 @@ function m(e) {
                                                                                     className: C.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, r.jsx)(p, {
-                                                                                            actionType: U.vB8.DELETE,
+                                                                                            actionType: f.vB8.DELETE,
                                                                                             targetType: a,
                                                                                             action: s
                                                                                         }),
@@ -459,7 +460,7 @@ function m(e) {
                                                                 ]
                                                             });
                                                         })(null != n ? n : [], l);
-                                                    case U.zUn.RESOURCE_CHANNELS:
+                                                    case f.zUn.RESOURCE_CHANNELS:
                                                         return ((e, t) => {
                                                             let n = e.map((e) => e.channel_id),
                                                                 l = t.map((e) => e.channel_id),
@@ -477,7 +478,7 @@ function m(e) {
                                                                                     className: C.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, r.jsx)(p, {
-                                                                                            actionType: U.vB8.CREATE,
+                                                                                            actionType: f.vB8.CREATE,
                                                                                             targetType: a,
                                                                                             action: s
                                                                                         }),
@@ -499,7 +500,7 @@ function m(e) {
                                                                                     className: C.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, r.jsx)(p, {
-                                                                                            actionType: U.vB8.DELETE,
+                                                                                            actionType: f.vB8.DELETE,
                                                                                             targetType: a,
                                                                                             action: s
                                                                                         }),
@@ -572,7 +573,7 @@ function m(e) {
                                         newEmojiHook: (e, t) => (0, r.jsx)(_.Z, { emojiId: E }, t),
                                         applicationHook: (e, t) => {
                                             var n;
-                                            return (0, r.jsx)(M, { applicationId: null !== (n = null == o ? void 0 : o.application_id) && void 0 !== n ? n : null == E ? void 0 : E.application_id }, t);
+                                            return (0, r.jsx)(h, { applicationId: null !== (n = null == o ? void 0 : o.application_id) && void 0 !== n ? n : null == E ? void 0 : E.application_id }, t);
                                         }
                                     });
                                     return null == d
@@ -591,9 +592,9 @@ function m(e) {
                                                           variant: 'code',
                                                           color: (function (e) {
                                                               switch (e) {
-                                                                  case U.vB8.CREATE:
+                                                                  case f.vB8.CREATE:
                                                                       return 'text-positive';
-                                                                  case U.vB8.DELETE:
+                                                                  case f.vB8.DELETE:
                                                                       return 'status-danger';
                                                                   default:
                                                                       return 'text-warning';
@@ -643,47 +644,49 @@ function m(e) {
         ),
         d = l.useMemo(() => {
             switch (t.targetType) {
-                case U.KFR.GUILD:
-                    return E(f.pY());
-                case U.KFR.CHANNEL:
-                case U.KFR.CHANNEL_OVERWRITE:
-                    return E(f.ML());
-                case U.KFR.USER:
-                    return E(f.lU());
-                case U.KFR.ROLE:
-                    return E(f.HE());
-                case U.KFR.ONBOARDING_PROMPT:
-                    return E(f.oD());
-                case U.KFR.GUILD_ONBOARDING:
-                    return E(f.EN());
-                case U.KFR.HOME_SETTINGS:
-                    return E(f.hx());
-                case U.KFR.INVITE:
-                    return E(f.HN());
-                case U.KFR.WEBHOOK:
-                    return E(f.lR());
-                case U.KFR.EMOJI:
-                    return E(f.N$());
-                case U.KFR.STICKER:
-                    return E(f.Bq());
-                case U.KFR.INTEGRATION:
-                    return E(f.K());
-                case U.KFR.STAGE_INSTANCE:
-                    return E(f.C2());
-                case U.KFR.GUILD_SCHEDULED_EVENT:
-                    return E(f.uB());
-                case U.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION:
-                    return E(f.pi());
-                case U.KFR.THREAD:
-                    return E(f.pA());
-                case U.KFR.APPLICATION_COMMAND:
-                    return E(f.vm(t.changes));
-                case U.KFR.AUTO_MODERATION_RULE:
-                    return E(f.rK());
-                case U.KFR.GUILD_SOUNDBOARD:
-                    return E(f.C0());
-                case U.KFR.VOICE_CHANNEL_STATUS:
-                    return E(f.F1());
+                case f.KFR.GUILD:
+                    return E(U.pY());
+                case f.KFR.CHANNEL:
+                case f.KFR.CHANNEL_OVERWRITE:
+                    return E(U.ML());
+                case f.KFR.USER:
+                    return E(U.lU());
+                case f.KFR.ROLE:
+                    return E(U.HE());
+                case f.KFR.ONBOARDING_PROMPT:
+                    return E(U.oD());
+                case f.KFR.GUILD_ONBOARDING:
+                    return E(U.EN());
+                case f.KFR.HOME_SETTINGS:
+                    return E(U.hx());
+                case f.KFR.INVITE:
+                    return E(U.HN());
+                case f.KFR.WEBHOOK:
+                    return E(U.lR());
+                case f.KFR.EMOJI:
+                    return E(U.N$());
+                case f.KFR.STICKER:
+                    return E(U.Bq());
+                case f.KFR.INTEGRATION:
+                    return E(U.K());
+                case f.KFR.STAGE_INSTANCE:
+                    return E(U.C2());
+                case f.KFR.GUILD_SCHEDULED_EVENT:
+                    return E(U.uB());
+                case f.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION:
+                    return E(U.pi());
+                case f.KFR.THREAD:
+                    return E(U.pA());
+                case f.KFR.APPLICATION_COMMAND:
+                    return E(U.vm(t.changes));
+                case f.KFR.AUTO_MODERATION_RULE:
+                    return E(U.rK());
+                case f.KFR.GUILD_SOUNDBOARD:
+                    return E(U.C0());
+                case f.KFR.VOICE_CHANNEL_STATUS:
+                    return E(U.F1());
+                case f.KFR.GUILD_MEMBER_VERIFICATION:
+                    return E(U.JA());
             }
         }, [t.targetType, t.changes, E]);
     return (0, r.jsx)(r.Fragment, { children: d });
