@@ -1,6 +1,6 @@
 t.d(n, {
-    Md: () => h,
-    a0: () => m
+    Md: () => m,
+    a0: () => x
 });
 var i = t(200651);
 t(192379);
@@ -11,29 +11,28 @@ var l = t(392711),
     o = t(382574),
     c = t(279988),
     d = t(786127),
-    u = t(981631),
-    x = t(388032);
-function m(e) {
-    let { dropHoveredIndex: n, formField: u, guild: m, index: h, isDragEnabled: v, submittedGuildJoinRequestsCount: g, removeFormField: j, updateFormField: C, updateFormFieldOrder: p, canRemove: N, actionsLocation: R, fieldStyle: y } = e,
+    u = t(388032);
+function x(e) {
+    let { dropHoveredIndex: n, formField: x, guild: m, index: f, isDragEnabled: v, submittedGuildJoinRequestsCount: g, removeFormField: j, updateFormField: C, updateFormFieldOrder: p, canRemove: N, actionsLocation: R, fieldStyle: y } = e,
         w = async () => {
-            await j(h);
+            await j(f);
         },
         E = async (e) => {
-            await C(h, e);
+            await C(f, e);
         },
         T = async (e, n, t) => {
             await p(e, n, t);
         },
         F = (0, l.uniqueId)(),
-        b = n === h,
+        b = n === f,
         Z = {
             key: F,
-            index: h,
+            index: f,
             isDragEnabled: v,
             isDropHovered: b,
             onEdit: () => {
                 0 === g
-                    ? f(u, E, m)
+                    ? h(x, E, m)
                     : (0, s.ZDy)(async () => {
                           let { default: e } = await t.e('74673').then(t.bind(t, 394045));
                           return (n) =>
@@ -41,7 +40,7 @@ function m(e) {
                                   ...n,
                                   guildId: m.id,
                                   submittedGuildJoinRequestsCount: g,
-                                  onConfirm: () => f(u, E, m)
+                                  onConfirm: () => h(x, E, m)
                               });
                       });
             },
@@ -51,35 +50,34 @@ function m(e) {
             actionsLocation: R,
             fieldStyle: y
         };
-    switch (u.field_type) {
+    switch (x.field_type) {
         case a.QJ.TERMS:
             return (0, i.jsx)(c.Z, {
                 channelId: m.rulesChannelId,
-                title: y === a.it.COMPACT ? x.intl.string(x.t['55+giY']) : x.intl.string(x.t['53vNcH']),
-                formField: u,
+                title: y === a.it.COMPACT ? u.intl.string(u.t['55+giY']) : u.intl.string(u.t['53vNcH']),
+                formField: x,
                 ...Z
             });
         case a.QJ.PARAGRAPH:
             return (0, i.jsx)(o.Z, {
-                formField: u,
+                formField: x,
                 ...Z
             });
         case a.QJ.TEXT_INPUT:
             return (0, i.jsx)(d.Z, {
-                formField: u,
+                formField: x,
                 ...Z
             });
         case a.QJ.MULTIPLE_CHOICE:
             return (0, i.jsx)(r.Z, {
-                formField: u,
+                formField: x,
                 ...Z
             });
         default:
             return null;
     }
 }
-function h(e, n, l) {
-    let r = { onCloseRequest: u.dG4 };
+function m(e, n, l) {
     switch (e) {
         case a.QJ.TERMS:
             return (0, s.ZDy)(async () => {
@@ -91,7 +89,7 @@ function h(e, n, l) {
                         onSave: n,
                         guild: l
                     });
-            }, r);
+            });
         case a.QJ.PARAGRAPH:
             return (0, s.ZDy)(async () => {
                 let { ParagraphFormFieldModal: e } = await t.e('6595').then(t.bind(t, 457042));
@@ -101,7 +99,7 @@ function h(e, n, l) {
                         field: void 0,
                         onSave: n
                     });
-            }, r);
+            });
         case a.QJ.TEXT_INPUT:
             return (0, s.ZDy)(async () => {
                 let { TextInputFormFieldModal: e } = await t.e('6595').then(t.bind(t, 457042));
@@ -111,7 +109,7 @@ function h(e, n, l) {
                         field: void 0,
                         onSave: n
                     });
-            }, r);
+            });
         case a.QJ.MULTIPLE_CHOICE:
             return (0, s.ZDy)(async () => {
                 let { default: e } = await t.e('94064').then(t.bind(t, 607569));
@@ -121,11 +119,10 @@ function h(e, n, l) {
                         field: void 0,
                         onSave: n
                     });
-            }, r);
+            });
     }
 }
-function f(e, n, l) {
-    let r = { onCloseRequest: u.dG4 };
+function h(e, n, l) {
     switch (e.field_type) {
         case a.QJ.TERMS:
             return (0, s.ZDy)(async () => {
@@ -137,7 +134,7 @@ function f(e, n, l) {
                         onSave: n,
                         guild: l
                     });
-            }, r);
+            });
         case a.QJ.PARAGRAPH:
             return (0, s.ZDy)(async () => {
                 let { ParagraphFormFieldModal: l } = await t.e('6595').then(t.bind(t, 457042));
@@ -147,7 +144,7 @@ function f(e, n, l) {
                         field: e,
                         onSave: n
                     });
-            }, r);
+            });
         case a.QJ.TEXT_INPUT:
             return (0, s.ZDy)(async () => {
                 let { TextInputFormFieldModal: l } = await t.e('6595').then(t.bind(t, 457042));
@@ -157,7 +154,7 @@ function f(e, n, l) {
                         field: e,
                         onSave: n
                     });
-            }, r);
+            });
         case a.QJ.MULTIPLE_CHOICE:
             return (0, s.ZDy)(async () => {
                 let { default: l } = await t.e('94064').then(t.bind(t, 607569));
@@ -167,6 +164,6 @@ function f(e, n, l) {
                         field: e,
                         onSave: n
                     });
-            }, r);
+            });
     }
 }
