@@ -1,4 +1,9 @@
-n.d(t, { Z: () => z }), n(47120), n(653041);
+n.d(t, {
+    Z: () => z,
+    f: () => R
+}),
+    n(47120),
+    n(653041);
 var i,
     r = n(348327),
     a = n.n(r),
@@ -259,7 +264,7 @@ function H(e) {
 function Y(e) {
     let t = f.default.getId();
     if (E[t] === e.status && v[t] === e.activities) return !1;
-    (E[t] = e.status), (v[t] = e.activities), delete I[t];
+    (E[t] = e.status), (v[t] = [...e.activities].sort(R)), delete I[t];
 }
 function W(e) {
     let { userId: t, metadata: n } = e;
@@ -270,7 +275,7 @@ class K extends (i = l.ZP.Store) {
         this.waitFor(f.default);
     }
     setCurrentUserOnConnectionOpen(e, t) {
-        (E[f.default.getId()] = e), (v[f.default.getId()] = t);
+        (E[f.default.getId()] = e), (v[f.default.getId()] = [...t].sort(R));
     }
     getStatus(e) {
         var t, n;

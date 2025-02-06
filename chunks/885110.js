@@ -77,21 +77,11 @@ function k() {
         n = O || S === I.Skl.INVISIBLE ? [] : E.Z.getActivities().filter(w);
     a()(C, n) || ((C = n), (t = !0));
     let i = y.Z.getRemoteActivities();
-    if ((D !== i && ((D = i), (t = !0)), t)) {
-        let e = C.find((e) => e.type === I.IIU.CUSTOM_STATUS);
-        x =
-            C.filter((e) => e.type !== I.IIU.CUSTOM_STATUS).length > 0
-                ? C
-                : null != e
-                  ? [
-                        e,
-                        ...o()(D)
-                            .filter((e) => e.type !== I.IIU.CUSTOM_STATUS)
-                            .uniqBy((e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name))
-                            .value()
-                    ]
-                  : o().uniqBy(D, (e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name));
-    }
+    D !== i && ((D = i), (t = !0)),
+        t &&
+            (x = o()([...C, ...D.filter((e) => e.type !== I.IIU.CUSTOM_STATUS)].sort(v.f))
+                .uniqBy((e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name))
+                .value());
 }
 function U(e) {
     return (T = e.invisible), k();
