@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => O });
 var i = n(200651),
     l = n(192379),
     r = n(990547),
@@ -25,19 +25,20 @@ var i = n(200651),
     x = n(452081),
     A = n(46140),
     b = n(981631),
-    L = n(388032),
-    y = n(359643);
-let P = function () {
+    L = n(215023),
+    y = n(388032),
+    P = n(359643);
+let O = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, x.z)(),
-        { onScroll: P, scrollPosition: O } = (0, u.M)(),
-        R = T.Z.getState().getUtmCurrentContext(),
-        j = (0, N._)({ location: A.dr.QUEST_HOME_DESKTOP }) ? Z.Z : Z.j,
-        D = l.useRef(R);
+        { onScroll: O, scrollPosition: R } = (0, u.M)(),
+        j = T.Z.getState().getUtmCurrentContext(),
+        D = (0, N._)({ location: A.dr.QUEST_HOME_DESKTOP }) ? Z.Z : Z.j,
+        w = l.useRef(j);
     l.useEffect(() => {
-        D.current = R;
+        w.current = j;
     }),
         l.useEffect(() => {
-            let { current: t } = D;
+            let { current: t } = w;
             (0, o.h)({
                 name: r.ImpressionNames.QUEST_HOME,
                 type: r.ImpressionTypes.VIEW,
@@ -50,51 +51,52 @@ let P = function () {
                 }
             });
         }, [e]);
-    let w = l.useCallback(() => {
+    let M = l.useCallback(() => {
         window.open(C.Z.getArticleURL(b.BhN.QUESTS_LEARN_MORE));
     }, []);
-    (0, d.Tt)({ location: L.intl.string(L.t.JALI2N) });
-    let { enabled: M } = (0, E.W)({ location: A.dr.QUEST_HOME_DESKTOP });
+    (0, d.Tt)({ location: y.intl.string(y.t.JALI2N) });
+    let { enabled: k } = (0, E.W)({ location: A.dr.QUEST_HOME_DESKTOP });
     return (0, i.jsxs)('div', {
-        className: y.container,
+        className: P.container,
         children: [
             (0, i.jsxs)(_.ZP, {
                 variant: _._6.OVERLAY,
-                children: [(0, i.jsx)('div', { className: y.dragRegion }), (0, i.jsx)(_.z6, { scrollPosition: O }), (0, i.jsx)(_.aV, { icon: a.qDn })]
+                children: [(0, i.jsx)('div', { className: P.dragRegion }), (0, i.jsx)(_.z6, { scrollPosition: R }), (0, i.jsx)(_.aV, { icon: a.qDn })]
             }),
             (0, i.jsxs)(f.Z, {
-                onScroll: P,
+                onScroll: O,
                 children: [
                     (0, i.jsx)(m.Z, {
-                        title: L.intl.format(L.t.lmMBf3, {}),
-                        description: L.intl.string(L.t.oWCrBg),
+                        title: y.intl.format(y.t.lmMBf3, {}),
+                        description: y.intl.string(y.t.oWCrBg),
                         button: (0, i.jsx)(h.u, {
-                            text: L.intl.string(L.t.hvVgAQ),
-                            onClick: w
+                            text: y.intl.string(y.t.hvVgAQ),
+                            onClick: M
                         }),
-                        className: y.bannerContainer,
+                        className: P.bannerContainer,
                         children: (0, i.jsx)('div', {
-                            className: y.bannerImage,
-                            children: (0, i.jsx)('div', { className: y.bannerGradient })
+                            className: P.bannerImage,
+                            children: (0, i.jsx)('div', { className: P.bannerGradient })
                         })
                     }),
                     (0, i.jsxs)(p.Z, {
                         children: [
                             (0, i.jsxs)('div', {
-                                className: y.tabs,
+                                className: P.tabs,
                                 children: [
                                     (0, i.jsx)(g.Z, {
                                         tabs: n,
                                         selectedTab: e,
                                         onTabSelect: t
                                     }),
-                                    M &&
+                                    k &&
                                         (0, i.jsx)(I.V9, {
                                             cardAlignment: I.ek.END,
-                                            ctaText: L.intl.string(L.t.iEw2Nz),
+                                            ctaText: y.intl.string(y.t.iEw2Nz),
                                             ctaOnClick: () => {
                                                 (0, c.mK)({
                                                     openInLayer: !1,
+                                                    tab: L.AW.ORBS,
                                                     analyticsLocations: [],
                                                     analyticsSource: s.Z.QUEST_HOME_PAGE
                                                 });
@@ -102,7 +104,7 @@ let P = function () {
                                         })
                                 ]
                             }),
-                            e === v.e5.CLAIMED ? (0, i.jsx)(j, { onSelectTab: t }) : (0, i.jsx)(S.Z, {})
+                            e === v.e5.CLAIMED ? (0, i.jsx)(D, { onSelectTab: t }) : (0, i.jsx)(S.Z, {})
                         ]
                     })
                 ]

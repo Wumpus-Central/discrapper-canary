@@ -43637,6 +43637,17 @@ img.thumbnail__0f2e8 {
     color: var(--header-primary)
 }
 
+.icon__9e06a {
+    margin-right: var(--spacing-8);
+    width: 16px;
+    height: 16px
+}
+
+.controlText__9e06a {
+    display: flex;
+    align-items: center
+}
+
 .select__3f413 {
     border: 1px solid transparent;
     padding: 8px 8px 8px 12px;
