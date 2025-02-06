@@ -270,7 +270,7 @@ let r = {
         hasStoreChangeListeners: !0
     },
     VoiceFilterManager: {
-        actions: ['VOICE_FILTER_DOWNLOAD_READY', 'VOICE_FILTER_REQUEST_SWITCH'],
+        actions: ['VOICE_FILTER_DOWNLOAD_READY', 'VOICE_FILTER_REQUEST_SWITCH', 'VOICE_FILTER_DOWNLOAD_CANCELED'],
         inlineRequire: () => n(230385).Z
     },
     VoicePermissionManager: {

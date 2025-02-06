@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(682662),
     h = n(662146),
     p = n(678513),
-    g = n(981631),
-    m = n(388032),
+    m = n(981631),
+    g = n(388032),
     f = n(477090);
 function _(e) {
     let { target: t } = e,
@@ -53,7 +53,7 @@ function _(e) {
                 }),
                 (0, i.jsx)(a.Text, {
                     variant: 'text-xs/normal',
-                    children: m.intl.string(m.t.IIbwAg)
+                    children: g.intl.string(g.t.IIbwAg)
                 })
             ]
         }),
@@ -61,7 +61,7 @@ function _(e) {
     return (0, i.jsxs)(u.H, {
         children: [
             (0, i.jsx)(a.ze6, {
-                theme: g.BRd.DARK,
+                theme: m.BRd.DARK,
                 children: (0, i.jsx)(h.Z, {
                     text: C,
                     tooltipClass: f.tooltip,

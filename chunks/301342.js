@@ -16,8 +16,8 @@ var i = n(200651),
     u = n(239091),
     h = n(146773),
     p = n(82295),
-    g = n(111028),
-    m = n(540059),
+    m = n(111028),
+    g = n(540059),
     f = n(680089),
     _ = n(430824),
     v = n(496675),
@@ -33,7 +33,7 @@ function N(e) {
 let E = l.memo(function (e) {
         let t,
             { channel: r, connectChannelDragSource: h, connectChannelDropTarget: x, disableManageChannels: Z, position: E, sortingPosition: j, hideIcon: y, children: A } = e,
-            P = (0, m.Q3)('CategoryChannel'),
+            P = (0, g.Q3)('CategoryChannel'),
             T = (0, s.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
             w = (0, s.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
             R = (0, s.e7)([v.Z], () => v.Z.can(I.Plq.MANAGE_CHANNELS, r));
@@ -116,7 +116,7 @@ let E = l.memo(function (e) {
                                               }),
                                         (0, i.jsx)(p.Z, {
                                             className: S.name,
-                                            children: (0, i.jsx)(g.Z, { children: r.name })
+                                            children: (0, i.jsx)(m.Z, { children: r.name })
                                         }),
                                         P && !y
                                             ? (0, i.jsx)(c.CJ0, {
@@ -189,7 +189,7 @@ let E = l.memo(function (e) {
                         className: S.mainContent,
                         children: (0, i.jsx)(p.Z, {
                             className: S.name,
-                            children: (0, i.jsx)(g.Z, { children: t })
+                            children: (0, i.jsx)(m.Z, { children: t })
                         })
                     }),
                     null != n
@@ -214,7 +214,7 @@ let E = l.memo(function (e) {
     A = l.memo(function (e) {
         let { category: t } = e,
             n = (0, s.e7)([x.Z], () => x.Z.isVoiceCategoryCollapsed(t.guild.id)),
-            r = (0, m.Q3)('VoiceChannelCategoryButton'),
+            r = (0, g.Q3)('VoiceChannelCategoryButton'),
             a = l.useCallback(() => {
                 n ? (0, Z.s)(t.guild.id) : (0, Z.M)(t.guild.id);
             }, [t.guild.id, n]);
@@ -264,7 +264,7 @@ let E = l.memo(function (e) {
                           className: a()(S.iconVisibility, S.wrapperStatic),
                           children: (0, i.jsx)(p.Z, {
                               className: S.name,
-                              children: (0, i.jsx)(g.Z, { children: b.intl.string(b.t['V/u9Dw']) })
+                              children: (0, i.jsx)(m.Z, { children: b.intl.string(b.t['V/u9Dw']) })
                           })
                       })
                   })
@@ -279,7 +279,7 @@ let E = l.memo(function (e) {
                 className: a()(S.iconVisibility, S.wrapperStatic),
                 children: (0, i.jsx)(p.Z, {
                     className: S.name,
-                    children: (0, i.jsx)(g.Z, { children: t.name })
+                    children: (0, i.jsx)(m.Z, { children: t.name })
                 })
             })
         });

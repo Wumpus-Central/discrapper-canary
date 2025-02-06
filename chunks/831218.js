@@ -10,8 +10,8 @@ var i,
     u = n(902704),
     h = n(481060),
     p = n(925549),
-    g = n(607070),
-    m = n(367907),
+    m = n(607070),
+    g = n(367907),
     f = n(453542),
     _ = n(702321),
     v = n(82295),
@@ -297,7 +297,7 @@ class G extends (i = r.Component) {
                         num_users_visible_with_mobile_indicator: s.filter((e) => null != e && A.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
-                    m.ZP.trackWithMetadata(w.rMx.DM_LIST_VIEWED, {
+                    g.ZP.trackWithMetadata(w.rMx.DM_LIST_VIEWED, {
                         ...d,
                         ...(0, f.X)(),
                         visible_user_ids: s.filter((e) => null != e),
@@ -403,8 +403,8 @@ let k = (e) => {
         { density: n } = (0, h.TCT)(),
         { version: i, theme: a, children: o, showDMHeader: u } = e,
         p = r.Children.count(o),
-        m = y.Z.getMutablePrivateChannels(),
-        f = (0, N.k1)(m),
+        g = y.Z.getMutablePrivateChannels(),
+        f = (0, N.k1)(g),
         _ = (0, d.Wu)(
             [P.Z, S.Z, E.Z],
             () => {
@@ -414,9 +414,9 @@ let k = (e) => {
             []
         );
     (0, I.z)(Z.R);
-    let v = (0, d.cj)([g.Z, j.Z, y.Z], () => ({
+    let v = (0, d.cj)([m.Z, j.Z, y.Z], () => ({
             theme: j.Z.darkSidebar ? w.BRd.DARK : a,
-            keyboardModeEnabled: g.Z.keyboardModeEnabled,
+            keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version: null != i ? ''.concat(i, ':').concat(y.Z.getPrivateChannelsVersion()) : y.Z.getPrivateChannelsVersion()
         })),
         b = r.useRef(null),

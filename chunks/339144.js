@@ -13,8 +13,8 @@ var i = n(200651),
     u = n(513202),
     h = n(311352),
     p = n(803647),
-    g = n(131704),
-    m = n(626135),
+    m = n(131704),
+    g = n(626135),
     f = n(870569),
     _ = n(981631),
     v = n(388032),
@@ -31,7 +31,7 @@ let Z = l.memo(function (e) {
         R = x(T, P, A),
         L = l.useCallback(() => {
             a()(null != P, 'Received null activity'),
-                m.default.track(_.rMx.OPEN_MODAL, {
+                g.default.track(_.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
                     application_id: P.application_id,
                     location: w.location
@@ -52,7 +52,7 @@ let Z = l.memo(function (e) {
             (0, p.Z)(I);
         }, [I]),
         G = l.useCallback(() => {
-            let e = null != E && (0, g.vd)(E.type) ? E : null,
+            let e = null != E && (0, m.vd)(E.type) ? E : null,
                 t = null != e ? e.getGuildId() : S;
             (0, o.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('80176')]).then(n.bind(n, 60594));
@@ -67,7 +67,7 @@ let Z = l.memo(function (e) {
         }, [E, S]),
         k =
             (null != y || null == A || (0, c.R)()) && (N || b)
-                ? (N ? ((t = !1), (r = D), (d = o.g5r), (Z = v.intl.string(v.t.S5anIS))) : j ? ((t = !1), (r = G), (d = o.hGI), (Z = null != y ? v.intl.formatToPlainString(v.t.AB5gT0, { game: y.name }) : v.intl.string(v.t.FeUKeH))) : ((t = !0), (r = null), (d = o.hGI), (Z = null != E && (0, g.vd)(E.type) ? v.intl.string(v.t.uQn9Bw) : null != S ? v.intl.string(v.t.fBXEoK) : v.intl.string(v.t.n3feND))),
+                ? (N ? ((t = !1), (r = D), (d = o.g5r), (Z = v.intl.string(v.t.S5anIS))) : j ? ((t = !1), (r = G), (d = o.hGI), (Z = null != y ? v.intl.formatToPlainString(v.t.AB5gT0, { game: y.name }) : v.intl.string(v.t.FeUKeH))) : ((t = !0), (r = null), (d = o.hGI), (Z = null != E && (0, m.vd)(E.type) ? v.intl.string(v.t.uQn9Bw) : null != S ? v.intl.string(v.t.fBXEoK) : v.intl.string(v.t.n3feND))),
                   (0, i.jsx)('div', {
                       className: C.panelButtonContainer,
                       children: (0, i.jsx)(f.Z, {

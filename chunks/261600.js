@@ -12,19 +12,19 @@ function h(e) {
     var t, n;
     let { activity: h } = e,
         { channelId: p } = null !== (t = (0, c.rq)(h)) && void 0 !== t ? t : {},
-        g = (0, r.e7)([d.Z], () => d.Z.getStageInstanceByChannel(p), [p]),
-        m = l.useRef(null),
+        m = (0, r.e7)([d.Z], () => d.Z.getStageInstanceByChannel(p), [p]),
+        g = l.useRef(null),
         f = l.useCallback(() => {
             let e = o.Z.getChannel(p);
             null != e && s.Cq(e);
         }, [p]),
-        _ = null !== (n = null == g ? void 0 : g.topic) && void 0 !== n ? n : h.name,
+        _ = null !== (n = null == m ? void 0 : m.topic) && void 0 !== n ? n : h.name,
         v = u.intl.formatToPlainString(u.t['T+DNAA'], { channel: _ });
     return (0, i.jsx)('div', {
-        ref: m,
+        ref: g,
         children: (0, i.jsx)(a.P3F, {
             onClick: f,
-            focusProps: { ringTarget: m },
+            focusProps: { ringTarget: g },
             children: (0, i.jsx)(a.X6q, {
                 variant: 'heading-sm/semibold',
                 children: v

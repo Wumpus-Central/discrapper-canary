@@ -1,8 +1,8 @@
 n.d(t, {
     Ne: () => h,
     Ny: () => p,
-    Or: () => g,
-    jt: () => m
+    Or: () => m,
+    jt: () => g
 }),
     n(47120);
 var i = n(200651);
@@ -28,7 +28,7 @@ function p() {
         className: u.unavailableBadge
     });
 }
-function g(e) {
+function m(e) {
     let t,
         { audio: n, video: i, screenshare: l, isCurrentUserConnected: r, liveStage: o, activeEvent: s, activity: c } = e;
     if (s) t = a.Que;
@@ -45,7 +45,7 @@ function g(e) {
         isCurrentUserConnected: r
     });
 }
-function m(e) {
+function g(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, i] = (function (e) {
             switch (e) {

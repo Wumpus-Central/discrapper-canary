@@ -10,8 +10,8 @@ var i,
     u = n(782769),
     h = n(527805),
     p = n(841784),
-    g = n(503438),
-    m = n(802856),
+    m = n(503438),
+    g = n(802856),
     f = n(420660),
     _ = n(728345),
     v = n(812206),
@@ -77,9 +77,9 @@ function ee(e) {
     Q.has(e) || Y.add(e);
 }
 function et(e) {
-    if ((0, g.Z)(e)) return N.r9;
+    if ((0, m.Z)(e)) return N.r9;
     let t = null != e.application_id ? v.Z.getApplication(e.application_id) : null;
-    return null != t ? t : (0, m.Z)(e) ? X(e.name) : (0, f.Z)(e) && null != e.url ? $(e.url) : (null != e.application_id && ee(e.application_id), t);
+    return null != t ? t : (0, g.Z)(e) ? X(e.name) : (0, f.Z)(e) && null != e.url ? $(e.url) : (null != e.application_id && ee(e.application_id), t);
 }
 function en(e) {
     let t = k.Z.getVoiceStateForUser(e);
@@ -92,8 +92,8 @@ function el(e, t, n) {
     var i, l, r, a, s;
     let c;
     let d = G.default.getCurrentUser(),
-        g = null !== (i = null == d ? void 0 : d.nsfwAllowed) && void 0 !== i && i,
-        m = t.map((e) => e.id),
+        m = null !== (i = null == d ? void 0 : d.nsfwAllowed) && void 0 !== i && i,
+        g = t.map((e) => e.id),
         f = t.filter((t) => e.has(t.id)),
         _ = !1,
         C = [],
@@ -103,7 +103,7 @@ function el(e, t, n) {
     for (let e of t) {
         let n = y.Z.getAnyStreamForUser(e.id),
             i = A.Z.getChannel(null == n ? void 0 : n.channelId);
-        if ((null == i ? void 0 : i.isNSFW()) && (!g || !w.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
+        if ((null == i ? void 0 : i.isNSFW()) && (!m || !w.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
         let s = K(e.id);
         if (
             (null != n &&
@@ -118,7 +118,7 @@ function el(e, t, n) {
         let c = (0, I.Z)(s);
         if (null == c) continue;
         S = c === N.XB;
-        let m = (function (e) {
+        let g = (function (e) {
                 let t = v.Z.getApplication(e);
                 return null != t ? t : 'string' != typeof e ? (new x.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), { tags: { source: 'ACTIVITIES' } }), null) : e === N.XB ? N.r9 : e.startsWith(j.H) ? X(e.slice(j.H.length)) : e.startsWith(E._) ? $(e.slice(E._.length)) : (ee(e), null);
             })(c),
@@ -129,7 +129,7 @@ function el(e, t, n) {
                 (0, h.ZP)({
                     activity: s,
                     userId: e.id,
-                    application: m,
+                    application: g,
                     channelId: null === (r = k.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
                     currentUser: d,
                     isActivitiesEnabledForCurrentPlatform: t,
@@ -141,9 +141,9 @@ function el(e, t, n) {
             )
                 continue;
         } else if (null == f) continue;
-        if (!b.JE(s) || null == m || Z.has(m.id)) continue;
+        if (!b.JE(s) || null == g || Z.has(g.id)) continue;
         let M = null != s ? et(s) : null;
-        (null == M || M.id !== m.id) && (s = null);
+        (null == M || M.id !== g.id) && (s = null);
         let D = [];
         (D =
             null != s && null != s.party && null != s.party.id
@@ -154,12 +154,12 @@ function el(e, t, n) {
                 : t.filter((e) => {
                       let t = K(e.id),
                           n = null != t ? et(t) : null;
-                      return null != n && n.id === m.id;
+                      return null != n && n.id === g.id;
                   })),
             (D = o().orderBy(D, [ei], ['desc'])).length !== t.length && (_ = !0),
-            Z.add(m.id),
+            Z.add(g.id),
             C.push({
-                game: m,
+                game: g,
                 activity: s,
                 activityUser: e,
                 startedPlayingTime: f,
@@ -186,7 +186,7 @@ function el(e, t, n) {
                     .filter(O.lm)
                     .orderBy([ei], ['desc'])
                     .value();
-            a.filter((e) => !m.includes(e.id)).forEach((e) => t.push(e)),
+            a.filter((e) => !g.includes(e.id)).forEach((e) => t.push(e)),
                 D ? V.has(l) || (c = null) : ((c = r), (D = !0)),
                 V.add(l),
                 U.add(n),

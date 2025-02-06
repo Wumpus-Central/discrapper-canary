@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(481060),
     h = n(377171),
     p = n(540059),
-    g = n(565138),
-    m = n(430824),
+    m = n(565138),
+    g = n(430824),
     f = n(624138),
     _ = n(674552),
     v = n(981631),
@@ -22,7 +22,7 @@ let Z = (0, f.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     b = ['13px 4px 4px 4px', '4px 13px 4px 4px', '4px 4px 4px 13px', '4px 4px 13px 4px'];
 function S(e) {
     let { guildId: t, animate: n, index: l } = e,
-        r = (0, c.e7)([m.Z], () => m.Z.getGuild(t), [t]),
+        r = (0, c.e7)([g.Z], () => g.Z.getGuild(t), [t]),
         a = (0, p.Q3)('GuildIcon'),
         o = (0, u.dQu)(u.TVs.modules.guildbar.AVATAR_SIZE);
     return null == r
@@ -30,10 +30,10 @@ function S(e) {
               className: x.guildIconUnavailable,
               children: '!'
           })
-        : (0, i.jsx)(g.Z, {
+        : (0, i.jsx)(m.Z, {
               guild: r,
               animate: n,
-              size: a ? g.Z.Sizes.MINI : g.Z.Sizes.SMOL,
+              size: a ? m.Z.Sizes.MINI : m.Z.Sizes.SMOL,
               iconSize: a ? o : void 0,
               lossless: a,
               className: x.guildIcon,
@@ -46,10 +46,10 @@ function N(e) {
         n,
         { folderNode: r, hovered: a, expanded: c } = e,
         d = (0, p.Q3)('FolderIconContent'),
-        { color: h, children: g } = r,
-        m = null != h ? h : v.Wyy,
-        f = m === v.Wyy,
-        _ = g.map((e) => e.id),
+        { color: h, children: m } = r,
+        g = null != h ? h : v.Wyy,
+        f = g === v.Wyy,
+        _ = m.map((e) => e.id),
         [C, b] = l.useState(!1),
         [N, E] = l.useState(c),
         j = d ? (c ? 22 : -11) : c ? 0 : -I,
@@ -74,7 +74,7 @@ function N(e) {
             children: (0, i.jsx)(u.ROc, {
                 size: d ? 'sm' : 'md',
                 color: 'currentColor',
-                style: { color: (0, s.Rf)(m) }
+                style: { color: (0, s.Rf)(g) }
             })
         })),
         (C || !N) &&
@@ -93,7 +93,7 @@ function N(e) {
                     )
                 )
             }));
-    let P = { backgroundColor: d && f ? u.TVs.colors.BACKGROUND_PRIMARY.css : (0, s.br)(m, 0.4) };
+    let P = { backgroundColor: d && f ? u.TVs.colors.BACKGROUND_PRIMARY.css : (0, s.br)(g, 0.4) };
     return (0, i.jsxs)('div', {
         'aria-hidden': !0,
         style: c ? void 0 : P,
@@ -110,8 +110,8 @@ function E(e) {
             mediaState: s,
             mentionCount: c = 0,
             isMentionLowImportance: d,
-            tooltipName: g,
-            folderGroupId: m,
+            tooltipName: m,
+            folderGroupId: g,
             folderIconContentClassName: f,
             folderIconContent: v,
             onClick: Z,
@@ -152,11 +152,11 @@ function E(e) {
             onKeyDown: S,
             onFocus: E,
             'aria-label': C.intl.formatToPlainString(C.t['90/DwM'], {
-                folderName: g,
+                folderName: m,
                 mentions: c
             }),
             'aria-expanded': r,
-            'aria-owns': m,
+            'aria-owns': g,
             focusProps: { enabled: !1 },
             ...j,
             role: 'treeitem',

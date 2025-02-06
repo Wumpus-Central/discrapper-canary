@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(921944),
     h = n(388032),
     p = n(410842);
-let g = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: g, headerClassName: m, contentClassName: f, tryItText: _, dismissText: v, onTryFeature: C, onClose: x, className: Z, inlineArt: I = !1, isPremiumFeature: b = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: N = !1, dismissibleContent: E, position: j = 'top', align: y = 'center', art: A, isPremiumEarlyAccess: P = !1, maxWidth: T = 280, hideDismissButton: w = !1, pointerClassName: R, dismissIconClassName: L, dismissIcon: M, onDismissIconClick: D } = e,
+let m = l.forwardRef(function (e, t) {
+    let { body: n, header: r, artClassName: m, headerClassName: g, contentClassName: f, tryItText: _, dismissText: v, onTryFeature: C, onClose: x, className: Z, inlineArt: I = !1, isPremiumFeature: b = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: N = !1, dismissibleContent: E, position: j = 'top', align: y = 'center', art: A, isPremiumEarlyAccess: P = !1, maxWidth: T = 280, hideDismissButton: w = !1, pointerClassName: R, dismissIconClassName: L, dismissIcon: M, onDismissIconClick: D } = e,
         G = S ? o.zxk.Sizes.LARGE : o.zxk.Sizes.MAX,
         [k, B] = l.useState(!1),
         { ref: O, width: U } = (0, s.Z)();
@@ -32,7 +32,7 @@ let g = l.forwardRef(function (e, t) {
             ref: t,
             children: (0, i.jsxs)('div', {
                 className: a()(p.content, f, {
-                    [p.contentNoArt]: null == g || I,
+                    [p.contentNoArt]: null == m || I,
                     [p.contentPremium]: b || P
                 }),
                 children: [
@@ -43,14 +43,14 @@ let g = l.forwardRef(function (e, t) {
                             children: M
                         }),
                     (0, i.jsxs)('div', {
-                        className: a()(g, I ? p.artInline : p.artAbsolute),
+                        className: a()(m, I ? p.artInline : p.artAbsolute),
                         children: [N && (0, i.jsx)(d.Z, { className: p.gifTag }), A]
                     }),
                     (0, i.jsxs)('div', {
                         className: p.body,
                         children: [
                             (0, i.jsxs)(o.X6q, {
-                                className: a()(b ? p.headerWithPremiumIcon : p.header, m),
+                                className: a()(b ? p.headerWithPremiumIcon : p.header, g),
                                 variant: 'heading-md/bold',
                                 color: 'always-white',
                                 children: [

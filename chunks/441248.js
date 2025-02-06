@@ -1,4 +1,4 @@
-n.d(t, { k: () => m });
+n.d(t, { k: () => g });
 var i = n(200651);
 n(192379);
 var l = n(120356),
@@ -11,7 +11,7 @@ var l = n(120356),
     u = n(115530),
     h = n(388032),
     p = n(832926);
-function g(e) {
+function m(e) {
     let { name: t, applicationId: n } = e,
         l = (0, d.Z)({
             location: 'ActivityPanelGameCard',
@@ -28,7 +28,7 @@ function g(e) {
         })
     });
 }
-function m(e) {
+function g(e) {
     let { isStreaming: t, application: n, game: l, onClickNotSharing: r } = e,
         c = null != n ? n.name : null != l ? l.name : h.intl.string(h.t['UQMV/P']);
     return (0, i.jsxs)('div', {
@@ -56,7 +56,7 @@ function m(e) {
                 children: [
                     null != c
                         ? (0, i.jsx)(i.Fragment, {
-                              children: (0, i.jsx)(g, {
+                              children: (0, i.jsx)(m, {
                                   name: c,
                                   applicationId: null == n ? void 0 : n.id
                               })

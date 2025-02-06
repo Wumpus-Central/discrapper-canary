@@ -1,6 +1,6 @@
 n.d(t, {
-    E: () => em,
-    j: () => eg
+    E: () => eg,
+    j: () => em
 }),
     n(47120),
     n(653041);
@@ -15,8 +15,8 @@ var i,
     u = n(481060),
     h = n(925549),
     p = n(260300),
-    g = n(410575),
-    m = n(607070),
+    m = n(410575),
+    g = n(607070),
     f = n(100527),
     _ = n(906732),
     v = n(313201),
@@ -465,7 +465,7 @@ class eh extends (i = r.PureComponent) {
             }),
             ec(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e,
-                    { guild: i, selectedChannel: a, selectedChannelId: o, selectedVoiceChannel: s, selectedVoiceChannelId: c, guildChannels: d, voiceStates: u, disableManageChannels: h, stageChannelSpeakerVoiceStates: p, optInEnabled: g, withGuildIcon: m } = this.props;
+                    { guild: i, selectedChannel: a, selectedChannelId: o, selectedVoiceChannel: s, selectedVoiceChannelId: c, guildChannels: d, voiceStates: u, disableManageChannels: h, stageChannelSpeakerVoiceStates: p, optInEnabled: m, withGuildIcon: g } = this.props;
                 if (t === M.wZ) {
                     let e = d.getGuildActionSection(),
                         t = e.getRow(n);
@@ -604,13 +604,13 @@ class eh extends (i = r.PureComponent) {
                                         muted: v.isMuted,
                                         subtitle: v.subtitle,
                                         disableManageChannels: h,
-                                        canBeNewChannel: g && t === d.recentsSectionNumber,
+                                        canBeNewChannel: m && t === d.recentsSectionNumber,
                                         isFavoriteCategory: C,
-                                        withGuildIcon: m
+                                        withGuildIcon: g
                                     }),
                                     v.threadCount > 0
                                         ? (0, l.jsx)(Q.Z, {
-                                              withGuildIcon: m,
+                                              withGuildIcon: g,
                                               channel: x,
                                               sortedThreadIds: v.threadIds,
                                               selectedChannel: null != a && (a.id === v.id || a.parent_id === x.id) ? a : null,
@@ -654,7 +654,7 @@ class eh extends (i = r.PureComponent) {
                                 disableManageChannels: h,
                                 showTutorial: v.isFirstVoiceChannel,
                                 isFavoriteCategory: C,
-                                withGuildIcon: m
+                                withGuildIcon: g
                             },
                             S
                         );
@@ -736,7 +736,7 @@ class eh extends (i = r.PureComponent) {
 ec(eh, 'contextType', s.qB);
 let ep = (e) => {
     let { guildId: t, selectedChannelId: n, selectedVoiceChannelId: i } = e,
-        a = (0, d.e7)([m.Z], () => m.Z.keyboardModeEnabled),
+        a = (0, d.e7)([g.Z], () => g.Z.keyboardModeEnabled),
         { analyticsLocations: o } = (0, _.ZP)(f.Z.GUILD_CHANNEL_LIST),
         u = (0, d.e7)([T.Z], () => T.Z.getChannel(n)),
         h = (0, d.e7)([T.Z], () => T.Z.getChannel(i)),
@@ -793,7 +793,7 @@ let ep = (e) => {
         A = (0, C.Q3)('NavigableChannels');
     return (0, l.jsx)(_.Gt, {
         value: o,
-        children: (0, l.jsx)(g.Z, {
+        children: (0, l.jsx)(m.Z, {
             section: er.jXE.GUILD_CHANNEL_LIST,
             children: (0, l.jsx)(s.bG, {
                 navigator: S,
@@ -812,7 +812,7 @@ let ep = (e) => {
         })
     });
 };
-function eg(e) {
+function em(e) {
     let t = (0, G.o)(),
         { isFavoritesPerk: n } = (0, x.z)('favorites-channel-list'),
         { density: i } = (0, u.TCT)();
@@ -824,7 +824,7 @@ function eg(e) {
         density: i
     });
 }
-function em(e) {
+function eg(e) {
     let t = (0, k.Z)(e.guild),
         n = (0, d.cj)([D.Z], () => D.Z.getGuild(e.guildId, { guildActionRows: t })),
         i = (0, C.Q3)('GuildChannelList'),

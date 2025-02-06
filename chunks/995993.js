@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(45966),
     h = n(31445),
     p = n(22082),
-    g = n(703656),
-    m = n(306680),
+    m = n(703656),
+    g = n(306680),
     f = n(709054),
     _ = n(540126),
     v = n(434479),
@@ -25,17 +25,17 @@ function S(e) {
         N = (0, h.Z)(t),
         E = (0, d.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         j = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
-        y = (0, r.e7)([m.ZP], () => m.ZP.hasUnread(t.id, Z.W.GUILD_ONBOARDING_QUESTION)),
+        y = (0, r.e7)([g.ZP], () => g.ZP.hasUnread(t.id, Z.W.GUILD_ONBOARDING_QUESTION)),
         A = j.length > _.Cb,
-        P = (0, r.e7)([u.Z, m.ZP], () => {
+        P = (0, r.e7)([u.Z, g.ZP], () => {
             let e = u.Z.lastFetchedAt(t.id),
-                n = m.ZP.lastMessageId(t.id, Z.W.GUILD_ONBOARDING_QUESTION);
+                n = g.ZP.lastMessageId(t.id, Z.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
             let i = f.default.extractTimestamp(n);
             return null != e && e > i;
         }),
         T = l.useCallback(() => {
-            (0, g.uL)(C.Z5c.CHANNEL(t.id, N ? x.oC.CUSTOMIZE_COMMUNITY : x.oC.CHANNEL_BROWSER));
+            (0, m.uL)(C.Z5c.CHANNEL(t.id, N ? x.oC.CUSTOMIZE_COMMUNITY : x.oC.CHANNEL_BROWSER));
         }, [t.id, N]),
         w = l.useCallback(
             (e) => {

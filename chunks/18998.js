@@ -10,7 +10,7 @@ var i,
     u = n(902704),
     h = n(481060),
     p = n(109489);
-function g(e, t, n) {
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function g(e, t, n) {
         e
     );
 }
-let m = {
+let g = {
     friction: 10,
     tension: 300
 };
@@ -52,7 +52,7 @@ class f extends r.Component {
         this._timeout = setTimeout(() => {
             d.Z.spring(e, {
                 toValue: 0,
-                ...m
+                ...g
             }).start();
         }, 100);
     }
@@ -64,7 +64,7 @@ class f extends r.Component {
         }
         d.Z.spring(e, {
             toValue: 1,
-            ...m
+            ...g
         }).start();
     }
     render() {
@@ -96,7 +96,7 @@ class f extends r.Component {
     }
     constructor(e) {
         super(e),
-            g(this, '_timeout', void 0),
+            m(this, '_timeout', void 0),
             (this.state = {
                 translateY: new d.Z.Value(),
                 reduceMotion: !1
@@ -131,11 +131,11 @@ class _ extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            g(this, 'state', {
+            m(this, 'state', {
                 unread: null,
                 mention: null
             }),
-            g(
+            m(
                 this,
                 'calculateState',
                 c()(() => {
@@ -175,7 +175,7 @@ class _ extends (i = r.PureComponent) {
                         });
                 }, 200)
             ),
-            g(this, 'handleClick', (e) => {
+            m(this, 'handleClick', (e) => {
                 e.preventDefault(), e.stopPropagation();
                 let { unread: t, mention: n } = this.state,
                     { onJumpTo: i } = this.props,
@@ -184,8 +184,8 @@ class _ extends (i = r.PureComponent) {
             });
     }
 }
-g(_, 'contextType', h.Sfi),
-    g(_, 'defaultProps', {
+m(_, 'contextType', h.Sfi),
+    m(_, 'defaultProps', {
         className: p.container,
         reverse: !1,
         hide: !1,

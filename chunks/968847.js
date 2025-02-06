@@ -14,8 +14,8 @@ var i,
     u = n(220444),
     h = n(565799),
     p = n(501655),
-    g = n(569471),
-    m = n(592125),
+    m = n(569471),
+    g = n(592125),
     f = n(430824),
     _ = n(306680),
     v = n(914010),
@@ -37,11 +37,11 @@ let N = {
     j = {},
     y = {};
 function A(e) {
-    let t = m.Z.getChannel(e);
-    return !(null == t || null == t.getGuildId() || t.isGuildVocal()) && !(t.isThread() ? g.Z.isMuted(t.id) : C.ZP.isChannelMuted(t.getGuildId(), t.id)) && (0, u.d)(t);
+    let t = g.Z.getChannel(e);
+    return !(null == t || null == t.getGuildId() || t.isGuildVocal()) && !(t.isThread() ? m.Z.isMuted(t.id) : C.ZP.isChannelMuted(t.getGuildId(), t.id)) && (0, u.d)(t);
 }
 function P(e) {
-    let t = m.Z.getChannel(e);
+    let t = g.Z.getChannel(e);
     if (null == t) return !1;
     let n = t.getGuildId();
     if (null == n) return !1;
@@ -64,12 +64,12 @@ function w(e) {
         u = !0,
         h = !0,
         p = !1,
-        g = l.getCategoryFromSection(l.voiceChannelsSectionNumber),
-        m = null !== (n = null == g ? void 0 : g.getShownChannelIds()) && void 0 !== n ? n : [],
+        m = l.getCategoryFromSection(l.voiceChannelsSectionNumber),
+        g = null !== (n = null == m ? void 0 : m.getShownChannelIds()) && void 0 !== n ? n : [],
         [f, v, C] = l.getSlicedChannels(r);
     for (let e = 0; e < v.length; e++) {
         let t = v[e];
-        if (((A(t.id) || s().some(t.threadIds, A)) && (h = !1), (P(t.id) || s().some(t.threadIds, P)) && (u = !1), m.includes(t.id) && (p = !0), !h && !u && p)) break;
+        if (((A(t.id) || s().some(t.threadIds, A)) && (h = !1), (P(t.id) || s().some(t.threadIds, P)) && (u = !1), g.includes(t.id) && (p = !0), !h && !u && p)) break;
     }
     let x = 0,
         Z = !1,
@@ -88,7 +88,7 @@ function w(e) {
         }
     let E = null,
         w = null,
-        R = null !== (i = null == g ? void 0 : g.getChannelRecords()) && void 0 !== i ? i : [];
+        R = null !== (i = null == m ? void 0 : m.getChannelRecords()) && void 0 !== i ? i : [];
     u && b > 0
         ? (E = {
               mode: 'mentions',
@@ -139,21 +139,21 @@ function L(e) {
 }
 function M(e) {
     let { id: t } = e,
-        n = m.Z.getChannel(t);
+        n = g.Z.getChannel(t);
     if (null == n) return !1;
     let i = f.Z.getGuild(n.guild_id);
     return !!(null != i && i.hasFeature(b.oNc.COMMUNITY)) && R(n.guild_id);
 }
 function D(e) {
     let { channel: t } = e,
-        n = m.Z.getChannel(t.id);
+        n = g.Z.getChannel(t.id);
     if (null == n) return !1;
     let i = f.Z.getGuild(t.guild_id);
     return !!(null != i && i.hasFeature(b.oNc.COMMUNITY)) && R(n.guild_id);
 }
 function G(e) {
     let { channelId: t } = e,
-        n = m.Z.getChannel(t);
+        n = g.Z.getChannel(t);
     if (null == n) return !1;
     let i = f.Z.getGuild(n.guild_id);
     return !!(null != i && i.hasFeature(b.oNc.COMMUNITY)) && v.Z.getGuildId() === n.guild_id && R(n.guild_id);
@@ -164,7 +164,7 @@ function k(e) {
 }
 class B extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, _.ZP, C.ZP, g.Z, x.ZP, v.Z, f.Z);
+        this.waitFor(I.Z, _.ZP, C.ZP, m.Z, x.ZP, v.Z, f.Z);
     }
     getUnreadStateForGuildId(e) {
         var t;
@@ -194,7 +194,7 @@ let O = new B(d.Z, {
                 .map((e) => {
                     var t;
                     let { channelId: n } = e;
-                    return null === (t = m.Z.getChannel(n)) || void 0 === t ? void 0 : t.guild_id;
+                    return null === (t = g.Z.getChannel(n)) || void 0 === t ? void 0 : t.guild_id;
                 })
                 .filter(Z.lm)
                 .uniq()

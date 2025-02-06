@@ -11,8 +11,8 @@ var l = n(120356),
     u = n(884338),
     h = n(540059),
     p = n(565799),
-    g = n(501655),
-    m = n(199902),
+    m = n(501655),
+    g = n(199902),
     f = n(592125),
     _ = n(594174),
     v = n(938475),
@@ -64,8 +64,8 @@ function j() {
         ),
         a = (0, s.Wu)([p.Z], () =>
             o().flatMap(l, (e) =>
-                p.Z.getMutableParticipants(e, g.pV.SPEAKER)
-                    .filter((e) => e.type === g.Ui.VOICE)
+                p.Z.getMutableParticipants(e, m.pV.SPEAKER)
+                    .filter((e) => e.type === m.Ui.VOICE)
                     .map((e) => {
                         let { user: t } = e;
                         return t;
@@ -74,13 +74,13 @@ function j() {
         ),
         h = (0, s.e7)([p.Z], () => {
             let e = 0;
-            for (let t of l) e += p.Z.getParticipantCount(t, g.pV.AUDIENCE);
+            for (let t of l) e += p.Z.getParticipantCount(t, m.pV.AUDIENCE);
             return e;
         }),
         b = (0, s.Wu)(
-            [m.Z],
+            [g.Z],
             () =>
-                m.Z.getAllApplicationStreams()
+                g.Z.getAllApplicationStreams()
                     .filter((e) => t.includes(e.channelId))
                     .map((e) => e.ownerId),
             [t]

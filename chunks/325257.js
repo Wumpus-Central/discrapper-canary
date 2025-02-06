@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(846519),
     h = n(481060),
     p = n(493683),
-    g = n(239091),
-    m = n(153867),
+    m = n(239091),
+    g = n(153867),
     f = n(377171),
     _ = n(540059),
     v = n(35225),
@@ -38,7 +38,7 @@ let L = {
     }
 };
 function M(e, t) {
-    (0, g.jW)(e, async () => {
+    (0, m.jW)(e, async () => {
         let { default: e } = await Promise.all([n.e('68445'), n.e('7654'), n.e('44156'), n.e('53967'), n.e('16806'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('66593'), n.e('94107'), n.e('33213'), n.e('58389')]).then(n.bind(n, 545135));
         return (n) =>
             (0, i.jsx)(e, {
@@ -48,13 +48,13 @@ function M(e, t) {
     });
 }
 let D = l.memo(function (e) {
-    var t, n, r, g, D;
+    var t, n, r, m, D;
     let { guildNode: G, setRef: k, onDragStart: B, onDragEnd: O, route: U, guild: V, animatable: F, selected: H = !1, unread: z = !1, mediaState: W, unavailable: q = !1, badge: Y = 0, isMentionLowImportance: Q, contextMenu: J = M, draggable: K = !1, sorting: X = !1, preloadOnClick: $ = !0, guildJoinRequestStatus: ee, height: et } = e,
         { id: en, parentId: ei } = G,
         el = (0, _.Q3)('GuildItem'),
         er = null !== (t = e.upperBadge) && void 0 !== t ? t : q ? (0, P.Ny)() : null != W ? (0, P.Or)(W) : void 0,
         ea = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-    null == ea && Y > 0 ? (ea = null !== (r = (0, P.Ne)(Y, Q ? f.Z.BACKGROUND_ACCENT : f.Z.STATUS_DANGER)) && void 0 !== r ? r : void 0) : null == ea && null != ee && (ea = null !== (g = (0, P.jt)({ guildJoinRequestStatus: ee })) && void 0 !== g ? g : void 0);
+    null == ea && Y > 0 ? (ea = null !== (r = (0, P.Ne)(Y, Q ? f.Z.BACKGROUND_ACCENT : f.Z.STATUS_DANGER)) && void 0 !== r ? r : void 0) : null == ea && null != ee && (ea = null !== (m = (0, P.jt)({ guildJoinRequestStatus: ee })) && void 0 !== m ? m : void 0);
     let eo = null !== (D = e.lowerBadgeSize) && void 0 !== D ? D : { width: (0, h.OVM)(Y) },
         [{ dragging: es }, ec] = (0, o.c)({
             type: b.eD.GUILD,
@@ -68,14 +68,14 @@ let D = l.memo(function (e) {
                 }
             ),
             end() {
-                null == O || O(), (0, m.V1)(I.ZP.getCompatibleGuildFolders());
+                null == O || O(), (0, g.V1)(I.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
         ed = (0, c.Ie)(null != en ? en : T.lds),
         [eu, eh] = l.useState(!1),
         ep = !X && eu,
-        [eg, em] = l.useState(!1),
+        [em, eg] = l.useState(!1),
         [ef, e_] = l.useState(!1),
         [ev] = l.useState(() => new u.sW(70, () => e_(!0)));
     l.useEffect(() => () => ev.cancel(), [ev]);
@@ -126,16 +126,16 @@ let D = l.memo(function (e) {
         eE = (0, h.dQu)(h.TVs.modules.guildbar.AVATAR_SIZE);
     if (null == V) return null;
     let ej =
-            ef || eg
+            ef || em
                 ? (0, i.jsx)(N.Z, {
                       guild: V,
                       show: ef,
                       active: H,
                       onAnimationStart: function () {
-                          em(ef);
+                          eg(ef);
                       },
                       onAnimationRest: function () {
-                          ef || em(!1);
+                          ef || eg(!1);
                       }
                   })
                 : (0, i.jsx)(h.LYs, {

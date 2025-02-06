@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var l = n(512969),
@@ -11,21 +11,21 @@ var l = n(512969),
     u = n(603592),
     h = n(981631),
     p = n(388032);
-function g(e) {
+function m(e) {
     var t;
     let { isOnHubVerificationRoute: n } = e,
-        g = (0, l.LX)(null !== (t = window.location.pathname) && void 0 !== t ? t : '', { path: h.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(o.Hw.guildId(), ':inviteCode') }),
-        m = (0, r.e7)([c.Z], () => {
-            if (null == g) return null;
-            let { inviteCode: e } = g.params;
+        m = (0, l.LX)(null !== (t = window.location.pathname) && void 0 !== t ? t : '', { path: h.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(o.Hw.guildId(), ':inviteCode') }),
+        g = (0, r.e7)([c.Z], () => {
+            if (null == m) return null;
+            let { inviteCode: e } = m.params;
             return null != e ? c.Z.getInvite(e) : null;
         }),
-        f = (null == m ? void 0 : m.guild) != null ? new s.ZP(null == m ? void 0 : m.guild) : null;
+        f = (null == g ? void 0 : g.guild) != null ? new s.ZP(null == g ? void 0 : g.guild) : null;
     return n
-        ? null != f && null != m
+        ? null != f && null != g
             ? (0, i.jsx)(d.Z, {
                   guild: f,
-                  invite: m
+                  invite: g
               })
             : (0, i.jsx)(u.Z, {
                   tooltip: p.intl.string(p.t.rn9HIS),

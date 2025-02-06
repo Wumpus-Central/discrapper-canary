@@ -10,8 +10,8 @@ var i = n(399606),
     u = n(460347),
     h = n(994592),
     p = n(265418),
-    g = n(398758),
-    m = n(50101),
+    m = n(398758),
+    g = n(50101),
     f = n(330791),
     _ = n(443063),
     v = n(981631);
@@ -28,9 +28,9 @@ function C(e) {
         E = [],
         j = e.hasFeature(v.oNc.HUB),
         y = e.hasFeature(v.oNc.COMMUNITY),
-        A = (0, f.lN)(!(0, g.r1)(e.id)),
+        A = (0, f.lN)(!(0, m.r1)(e.id)),
         P = e.hasFeature(v.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
         T = (0, r.jS)(e.id, 'Guild Sidebar'),
-        w = (0, m.Ek)(e, 'useGuildActionRow');
+        w = (0, g.Ek)(e, 'useGuildActionRow');
     return j && E.push(_.z.GUILD_HUB_HEADER_OPTIONS), !S && Z && b && null != I && I.length > 0 ? E.push(_.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && E.push(_.z.GUILD_PREMIUM_PROGRESS_BAR), !j && Z && E.push(_.z.GUILD_HOME), t && E.push(_.z.GUILD_SCHEDULED_EVENTS), !j && y && A && E.push(_.z.CHANNELS_AND_ROLES), C && E.push(_.z.GUILD_ROLE_SUBSCRIPTIONS), x && E.push(_.z.GUILD_SHOP), !T && n && E.push(_.z.GUILD_MEMBER_APPLICATIONS), N && (y || P || (T && e.hasFeature(v.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL))) && E.push(_.z.GUILD_MOD_DASH_MEMBER_SAFETY), w && E.push(_.z.GUILD_BOOSTS), E;
 }

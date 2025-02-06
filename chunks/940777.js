@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(239091),
     h = n(317381),
     p = n(16609),
-    g = n(540059),
-    m = n(276952),
+    m = n(540059),
+    g = n(276952),
     f = n(682662),
     _ = n(674552),
     v = n(593364),
@@ -69,28 +69,28 @@ function L() {
                 c = a.length > 0,
                 d = !1,
                 u = !1,
-                g = !1,
-                m = !1;
+                m = !1,
+                g = !1;
             return (
-                n ? ((d = !r), (u = r), (g = i), (m = o)) : ((g = l), (m = c)),
+                n ? ((d = !r), (u = r), (m = i), (g = o)) : ((m = l), (g = c)),
                 (0, _.Or)({
                     audio: d,
                     video: u,
-                    screenshare: g,
+                    screenshare: m,
                     liveStage: !1,
                     isCurrentUserConnected: n,
-                    activity: m
+                    activity: g
                 })
             );
         })(G),
         H = U > 0 ? (0, v.N)(U) : null,
-        z = (0, g.Q3)('FavoritesButton'),
+        z = (0, m.Q3)('FavoritesButton'),
         W = l.useCallback(() => {
             r();
         }, [r]);
     return (0, i.jsxs)(f.H, {
         children: [
-            (0, i.jsx)(m.Z, {
+            (0, i.jsx)(g.Z, {
                 selected: O,
                 hovered: L,
                 unread: V && !D,

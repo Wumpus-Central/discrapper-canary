@@ -11,8 +11,8 @@ var l = n(120356),
     u = n(888651),
     h = n(201895),
     p = n(111028),
-    g = n(305325),
-    m = n(281956),
+    m = n(305325),
+    g = n(281956),
     f = n(66999),
     _ = n(378844),
     v = n(359110),
@@ -82,7 +82,7 @@ class H extends L.ZP {
         return this.props.channelInfo;
     }
     render() {
-        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: d, canReorderChannel: u, canMoveMembers: p, stageInstance: g, isSubscriptionGated: m, needSubscriptionToAccess: f, unread: _, resolvedUnreadSetting: v, mentionCount: C, isFavoriteSuggestion: x } = this.props,
+        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: d, canReorderChannel: u, canMoveMembers: p, stageInstance: m, isSubscriptionGated: g, needSubscriptionToAccess: f, unread: _, resolvedUnreadSetting: v, mentionCount: C, isFavoriteSuggestion: x } = this.props,
             { shouldShowGuildVerificationPopout: Z } = this.state,
             I = this.getVoiceStatesCount(),
             b = (0, i.jsxs)('li', {
@@ -102,7 +102,7 @@ class H extends L.ZP {
                                     let { onClick: o, onContextMenu: s, ...c } = a;
                                     return (0, i.jsxs)(D.Z, {
                                         className: U.iconVisibility,
-                                        iconClassName: r()({ [V.iconLive]: null != g }),
+                                        iconClassName: r()({ [V.iconLive]: null != m }),
                                         channel: e,
                                         selected: !x && t,
                                         connected: n,
@@ -124,7 +124,7 @@ class H extends L.ZP {
                                             unread: _,
                                             mentionCount: C,
                                             userCount: I,
-                                            isSubscriptionGated: m,
+                                            isSubscriptionGated: g,
                                             needSubscriptionToAccess: f
                                         }),
                                         ...c,
@@ -147,7 +147,7 @@ class H extends L.ZP {
             F(this, 'handleClick', () => {
                 let { channel: e, locked: t, connected: n, unverifiedAccount: i } = this.props,
                     l = e.getGuildId();
-                null != l && (0, m.n)(l) && (0, g.hk)(l), i && this.setState({ shouldShowGuildVerificationPopout: !0 }), t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, C.Cq)(e), __OVERLAY__ || (0, v.Kh)(e.id);
+                null != l && (0, g.n)(l) && (0, m.hk)(l), i && this.setState({ shouldShowGuildVerificationPopout: !0 }), t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, C.Cq)(e), __OVERLAY__ || (0, v.Kh)(e.id);
             }),
             F(this, 'handleClickChat', () => {
                 let { channel: e, locked: t } = this.props;
@@ -237,8 +237,8 @@ function W(e) {
         }),
         h = (0, a.e7)([N.Z], () => N.Z.isCollapsed(n.parent_id)),
         p = (0, S.ZP)(n.id),
-        g = (0, a.e7)([I.Z], () => I.Z.getStageInstanceByChannel(n.id), [n.id]),
-        m = (0, x.Rk)(n.id, Z.pV.AUDIENCE),
+        m = (0, a.e7)([I.Z], () => I.Z.getStageInstanceByChannel(n.id), [n.id]),
+        g = (0, x.Rk)(n.id, Z.pV.AUDIENCE),
         { isSubscriptionGated: _, needSubscriptionToAccess: v } = (0, f.Z)(n.id),
         C = (0, a.e7)([T.ZP], () => T.ZP.isFavorite(t.id, n.id)),
         j = (0, b.xJ)(n.id),
@@ -255,8 +255,8 @@ function W(e) {
     return (0, i.jsx)(z, {
         categoryCollapsed: h,
         connectAction: p,
-        numAudience: m,
-        stageInstance: g,
+        numAudience: g,
+        stageInstance: m,
         isSubscriptionGated: _,
         needSubscriptionToAccess: v,
         ...c,

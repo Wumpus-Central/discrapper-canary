@@ -13,21 +13,21 @@ function h(e) {
         n = l.useMemo(() => (0, c.Mg)(t), [t]),
         h = (0, r.e7)([o.Z], () => o.Z.getGuild(t)),
         p = (0, r.e7)([s.Z], () => s.Z.isFocused()),
-        g =
+        m =
             t ===
             (0, a.Z)((e) => {
                 let { guildId: t } = e;
                 return t;
             }),
-        m = (0, d.Z)(t);
+        g = (0, d.Z)(t);
     return null == h
         ? null
         : (0, i.jsx)(u.Z, {
               guildNode: n,
               guild: h,
               animatable: p,
-              selected: g,
+              selected: m,
               draggable: !1,
-              mediaState: m
+              mediaState: g
           });
 }

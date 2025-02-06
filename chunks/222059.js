@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(864682),
     h = n(540059),
     p = n(899740),
-    g = n(849862),
-    m = n(155409),
+    m = n(849862),
+    g = n(155409),
     f = n(944486),
     _ = n(594174),
     v = n(431),
@@ -43,7 +43,7 @@ let L = {
     }
 };
 function M(e) {
-    let { selected: t, user: n, badge: p, link: g, showProgressBadge: f } = e,
+    let { selected: t, user: n, badge: p, link: m, showProgressBadge: f } = e,
         _ = (0, a.e7)([d.Z], () => d.Z.isEditorOpen),
         [v, C] = l.useState(!1),
         [x, Z] = l.useState(!1),
@@ -90,7 +90,7 @@ function M(e) {
                 ariaLabel: w.intl.string(w.t.YUU0RE),
                 ...D,
                 to: {
-                    pathname: g,
+                    pathname: m,
                     state: {
                         analyticsSource: {
                             page: A.ZY5.GUILD_CHANNEL,
@@ -104,7 +104,7 @@ function M(e) {
         });
     return (0, i.jsx)('div', {
         className: R.tutorialContainer,
-        children: (0, i.jsx)(m.Z, {
+        children: (0, i.jsx)(g.Z, {
             inlineSpecs: L,
             tutorialId: 'friends-list',
             position: 'right',
@@ -135,7 +135,7 @@ function D() {
                 i = I.xI(n, t);
             return i > 0 && i < 100;
         }),
-        n = (0, g.If)(),
+        n = (0, m.If)(),
         l = Object.keys(P.nG),
         { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([v.Z], () => ({
             unviewedTrialCount: v.Z.getUnacknowledgedOffers(l).length,
@@ -145,10 +145,10 @@ function D() {
         d = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
         u = (0, p.q)(),
         h = n + s + u,
-        m = h === s && s > 0 && n + u === 0,
+        g = h === s && s > 0 && n + u === 0,
         b = C.Z.getHomeLink();
     return (
-        m && (b = A.Z5c.APPLICATION_STORE),
+        g && (b = A.Z5c.APPLICATION_STORE),
         (0, i.jsx)(M, {
             selected: e,
             user: d,

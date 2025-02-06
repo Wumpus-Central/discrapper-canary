@@ -11,8 +11,8 @@ var l = n(120356),
     u = n(146773),
     h = n(888651),
     p = n(619915),
-    g = n(339340),
-    m = n(201895),
+    m = n(339340),
+    g = n(201895),
     f = n(718589),
     _ = n(933557),
     v = n(557135),
@@ -140,7 +140,7 @@ class X extends U.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: o, locked: c, sorting: d, isUserOver: u, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: g, connectDragPreview: _, canReorderChannel: v, canMoveMembers: C, showTutorial: x, hasActiveEvent: Z, embeddedApps: I, isSubscriptionGated: b, isFavoriteSuggestion: S, withGuildIcon: N } = this.props,
+        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: o, locked: c, sorting: d, isUserOver: u, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: m, connectDragPreview: _, canReorderChannel: v, canMoveMembers: C, showTutorial: x, hasActiveEvent: Z, embeddedApps: I, isSubscriptionGated: b, isFavoriteSuggestion: S, withGuildIcon: N } = this.props,
             { shouldShowActivities: j, shouldShowGuildVerificationPopout: y } = this.state,
             P = this.getVoiceStatesCount(),
             T = (0, i.jsxs)('li', {
@@ -183,7 +183,7 @@ class X extends U.ZP {
                                                 },
                                                 connectDragPreview: _,
                                                 isFavoriteSuggestion: S,
-                                                'aria-label': (0, m.ZP)({
+                                                'aria-label': (0, g.ZP)({
                                                     channel: e,
                                                     unread: l,
                                                     mentionCount: o,
@@ -208,7 +208,7 @@ class X extends U.ZP {
                 ]
             });
         return (
-            C && (T = g(T)),
+            C && (T = m(T)),
             v && (T = h(p(T))),
             x &&
                 (T = (0, i.jsx)(A.Z, {
@@ -291,7 +291,7 @@ class X extends U.ZP {
                                     ...t
                                 });
                         },
-                        { modalKey: g.a }
+                        { modalKey: m.a }
                     ));
             }),
             K(this, 'renderPopout', () => {
@@ -368,8 +368,8 @@ function ee(e) {
                 unverifiedAccount: !i.canChat
             };
         }),
-        g = (0, a.e7)([k.Z], () => k.Z.hasVideo(n.id)),
-        m = (0, p.ZP)(n),
+        m = (0, a.e7)([k.Z], () => k.Z.hasVideo(n.id)),
+        g = (0, p.ZP)(n),
         f = (0, _.ZP)(n),
         v = (0, S.qY)(n.id),
         { isSubscriptionGated: C, needSubscriptionToAccess: Z } = (0, b.Z)(n.id),
@@ -389,9 +389,9 @@ function ee(e) {
         y = E && null == j;
     return (0, i.jsx)($, {
         channelName: f,
-        embeddedApps: m,
+        embeddedApps: g,
         embeddedActivityType: q.IIU.PLAYING,
-        video: g,
+        video: m,
         hasActiveEvent: null != v,
         isSubscriptionGated: C,
         needSubscriptionToAccess: Z,

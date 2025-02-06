@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(374470),
     h = n(442837),
     p = n(902704),
-    g = n(846519),
-    m = n(692547),
+    m = n(846519),
+    g = n(692547),
     f = n(481060),
     _ = n(925549),
     v = n(493773),
@@ -96,7 +96,7 @@ class ei {
             (this.sizes = r),
             (this.scrollerRef = l.createRef()),
             (this.nodeRefs = {}),
-            (this.timeout = new g.V7()),
+            (this.timeout = new m.V7()),
             (this.setResizeObserver = () => {
                 var e;
                 let t = null === (e = this.scrollerRef.current) || void 0 === e ? void 0 : e.getScrollerNode();
@@ -187,14 +187,14 @@ function el(e) {
         ec = l.useCallback(() => es(!0), []),
         ed = l.useCallback(() => es(!1), []),
         eu = l.useRef(!1),
-        [eh] = l.useState(() => new g.V7()),
+        [eh] = l.useState(() => new m.V7()),
         ep = l.useRef(null),
-        eg = l.useRef(null),
-        { ref: em, ...ef } = (0, d.OP)(),
+        em = l.useRef(null),
+        { ref: eg, ...ef } = (0, d.OP)(),
         e_ = (0, f.mFp)(),
         [ev, eC] = l.useState(!1),
         [ex, eZ] = l.useState(!1),
-        eI = (0, f.dQu)(m.Z.modules.guildbar.AVATAR_SIZE),
+        eI = (0, f.dQu)(g.Z.modules.guildbar.AVATAR_SIZE),
         eb = l.useMemo(
             () =>
                 new ei(
@@ -203,7 +203,7 @@ function el(e) {
                     eZ,
                     () => {
                         var e, t;
-                        null === (e = ep.current) || void 0 === e || e.calculateState(), null === (t = eg.current) || void 0 === t || t.calculateState();
+                        null === (e = ep.current) || void 0 === e || e.calculateState(), null === (t = em.current) || void 0 === t || t.calculateState();
                     },
                     (function (e, t, n) {
                         let i = 2 + (t ? 4 : 8);
@@ -317,7 +317,7 @@ function el(e) {
                     className: a()(ee.wrapper, r, e, { [ee.hidden]: er }),
                     'aria-label': $.intl.string($.t.PjnF2t),
                     children: (0, i.jsxs)('ul', {
-                        ref: em,
+                        ref: eg,
                         ...ef,
                         ...e_,
                         role: 'tree',
@@ -391,7 +391,7 @@ function el(e) {
                             }),
                             (0, i.jsx)(G.Z, {
                                 reverse: !0,
-                                ref: eg,
+                                ref: em,
                                 isVisible: eb.isItemVisible,
                                 onJumpTo: eb.handleJumpToGuild,
                                 className: a()(ee.unreadMentionsIndicatorBottom, { [ee.unreadMentionsFixedFooter]: !n }),
