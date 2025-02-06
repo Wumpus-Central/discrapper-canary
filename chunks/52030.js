@@ -1,9 +1,8 @@
-let i, r, a;
-n.d(t, { Z: () => v });
-var s,
-    o = n(442837),
-    l = n(570140);
-function u(e, t, n) {
+n.d(t, { Z: () => v }), n(47120);
+var i,
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,45 +15,48 @@ function u(e, t, n) {
         e
     );
 }
-let c = [],
-    d = {},
-    f = !1,
-    _ = c,
+let o = [],
+    l = new Map(),
+    u = new Map(),
+    c = new Map(),
+    d = new Map(),
+    f = new Map(),
+    _ = new Map(),
     p = (e) => {
-        (f = !0), (a = void 0), (d = e.options), (r = void 0);
+        f.set(e.tab, !0), d.set(e.tab, void 0), c.set(e.tab, e.options), c.set(e.tab, e.options), u.set(e.tab, void 0);
     },
     h = (e) => {
-        (_ = e.shopHome.shopBlocks), (i = Date.now()), (f = !1), (a = void 0), (r = void 0);
+        _.set(e.tab, e.shopHome.shopBlocks), l.set(e.tab, Date.now()), f.set(e.tab, !1), d.set(e.tab, void 0), u.set(e.tab, void 0);
     },
     m = (e) => {
-        let { error: t } = e;
-        (_ = c), (f = !1), (a = t), (r = Date.now());
+        _.set(e.tab, o), f.set(e.tab, !1), d.set(e.tab, e.error), u.set(e.tab, Date.now());
     },
     g = () => {
-        (_ = c), (d = {}), (a = void 0), (f = !1), (i = void 0), (r = void 0);
+        _.clear(), c.clear(), d.clear(), f.clear(), l.clear(), u.clear();
     };
-class E extends (s = o.ZP.Store) {
-    get lastSuccessfulFetch() {
-        return i;
+class E extends (i = r.ZP.Store) {
+    getLastSuccessfulFetch(e) {
+        return l.get(e);
     }
-    get lastErrorTimestamp() {
-        return r;
+    getLastErrorTimestamp(e) {
+        return u.get(e);
     }
-    get lastFetchOptions() {
-        return d;
+    getLastFetchOptions(e) {
+        return c.get(e);
     }
-    get fetchShopHomeError() {
-        return a;
+    getFetchShopHomeError(e) {
+        return d.get(e);
     }
-    get isFetchingShopHome() {
-        return f;
+    getIsFetchingShopHome(e) {
+        return f.get(e);
     }
-    get shopBlocks() {
-        return _;
+    getShopBlocks(e) {
+        var t;
+        return null !== (t = _.get(e)) && void 0 !== t ? t : o;
     }
 }
-u(E, 'displayName', 'CollectiblesShopHomesStore');
-let v = new E(l.Z, {
+s(E, 'displayName', 'CollectiblesShopHomesStore');
+let v = new E(a.Z, {
     COLLECTIBLES_SHOP_HOME_FETCH: p,
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: h,
     COLLECTIBLES_SHOP_HOME_FETCH_FAILURE: m,

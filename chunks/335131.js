@@ -202,28 +202,31 @@ let y = (e) => {
             (0, E.G)(new u.Hx(e)), o.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH_FAILURE' });
         }
     },
-    P = async (e) => {
+    P = async (e, t) => {
         o.Z.dispatch({
             type: 'COLLECTIBLES_SHOP_HOME_FETCH',
-            options: null != e ? e : {}
+            tab: e,
+            options: null != t ? t : {}
         });
-        let t = (0, g.n)(e);
+        let n = (0, g.n)(t, e);
         try {
-            let e = await s.tn.get({
-                url: v.ANM.COLLECTIBLES_SHOP_HOME,
-                query: t,
+            let t = await s.tn.get({
+                url: v.ANM.COLLECTIBLES_SHOP,
+                query: n,
                 rejectWithError: !0
             });
             o.Z.dispatch({
                 type: 'COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS',
-                shopHome: m.Y.fromServer(e.body)
+                tab: e,
+                shopHome: m.Y.fromServer(t.body)
             });
-        } catch (t) {
-            let e = new u.Hx(t);
-            (0, E.G)(e),
+        } catch (n) {
+            let t = new u.Hx(n);
+            (0, E.G)(t),
                 o.Z.dispatch({
                     type: 'COLLECTIBLES_SHOP_HOME_FETCH_FAILURE',
-                    error: e
+                    tab: e,
+                    error: t
                 });
         }
     };

@@ -24,41 +24,41 @@ var r = n(200651),
     E = n(388032),
     S = n(218142);
 let T = (e) => {
-        let { handleTransition: t, numVisibleItems: n, isFetchingCategories: i } = e,
-            { noCache: s, includeUnpublished: a } = (0, v.Z)(),
+        let { handleTransition: t, numVisibleItems: n, isFetchingCategories: i, tab: s } = e,
+            { noCache: a, includeUnpublished: d } = (0, v.Z)(),
             {
-                isFetchingShopHome: d,
-                fetchShopHomeError: c,
-                shopBlocks: u,
-                refreshShopHome: C
-            } = (0, x.E)({
-                noCache: s,
-                includeUnpublished: a,
+                isFetchingShopHome: c,
+                fetchShopHomeError: u,
+                shopBlocks: C,
+                refreshShopHome: h
+            } = (0, x.E)(s, {
+                noCache: a,
+                includeUnpublished: d,
                 includeBundles: !0
             }),
-            h = l.useCallback(() => {
-                C();
-            }, [C]);
-        return null != c
+            p = l.useCallback(() => {
+                h();
+            }, [h]);
+        return null != u
             ? (0, r.jsx)(_.Z, {
-                  onRetry: h,
+                  onRetry: p,
                   errorOrigin: _.i.SHOP_PAGE,
-                  errorMessage: c.message
+                  errorMessage: u.message
               })
-            : d || 0 === u.length
+            : c || 0 === C.length
               ? (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(j.Z, {
-                            isLoading: d,
+                            isLoading: c,
                             handleTransition: t
                         }),
                         (0, r.jsx)(b.Z, {
-                            isLoading: d,
+                            isLoading: c,
                             handleTransition: t,
                             categories: []
                         }),
                         (0, r.jsx)(k.Z, {
-                            isLoading: d,
+                            isLoading: c,
                             handleTransition: t,
                             numVisibleItems: n,
                             rankedSkuIds: []
@@ -67,14 +67,14 @@ let T = (e) => {
                 })
               : (0, r.jsxs)(r.Fragment, {
                     children: [
-                        u.map((e, l) => {
+                        C.map((e, l) => {
                             if (null == e) return null;
                             switch (e.type) {
                                 case o.z.HERO:
                                     return (0, r.jsx)(
                                         j.Z,
                                         {
-                                            isLoading: d,
+                                            isLoading: c,
                                             handleTransition: t,
                                             heroBlock: e
                                         },
@@ -84,7 +84,7 @@ let T = (e) => {
                                     return (0, r.jsx)(
                                         b.Z,
                                         {
-                                            isLoading: d,
+                                            isLoading: c,
                                             handleTransition: t,
                                             featuredBlockRecord: e
                                         },
@@ -94,7 +94,7 @@ let T = (e) => {
                                     return (0, r.jsx)(
                                         k.Z,
                                         {
-                                            isLoading: d || i,
+                                            isLoading: c || i,
                                             handleTransition: t,
                                             numVisibleItems: n,
                                             rankedSkuIds: e.rankedSkuIds
@@ -105,7 +105,7 @@ let T = (e) => {
                                     return null;
                             }
                         }),
-                        !u.some((e) => (null == e ? void 0 : e.type) === o.z.FEED) &&
+                        !C.some((e) => (null == e ? void 0 : e.type) === o.z.FEED) &&
                             (0, r.jsx)(k.Z, {
                                 isLoading: i,
                                 numVisibleItems: n,
@@ -117,38 +117,38 @@ let T = (e) => {
     },
     I = (e) => {
         var t;
-        let { isFullScreen: n, handleTransition: i, numVisibleItems: o } = e,
-            { categories: x, isFetchingCategories: I, fetchCategoriesError: Z, fetchPurchasesError: y, claimError: B, refreshCategories: F } = (0, f.ZP)({ location: 'CollectiblesFeedShop' }),
-            N = null !== (t = null != Z ? Z : y) && void 0 !== t ? t : B,
-            P = Array.from(x.values()),
-            A = (0, d.e7)([u.default], () => u.default.getCurrentUser()),
-            w = (0, m.n)('CollectiblesFeedShop'),
-            O = (0, p.c)('CollectiblesFeedShop') && null != h.Z.getCategory(a.T.ROBERT),
-            R = (0, g.b)('Collectibles Shop Button'),
-            { noCache: H, includeUnpublished: M } = (0, v.Z)(),
-            V = P[0],
-            D = [P[1], h.Z.getCategory(O ? a.T.ROBERT : a.T.ANIME_V2)],
-            W = l.useCallback(() => {
-                F();
-            }, [F]);
-        if (null == A) return null;
-        if (null != N) {
+        let { isFullScreen: n, handleTransition: i, numVisibleItems: o, tab: x } = e,
+            { categories: I, isFetchingCategories: Z, fetchCategoriesError: y, fetchPurchasesError: B, claimError: F, refreshCategories: N } = (0, f.ZP)({ location: 'CollectiblesFeedShop' }),
+            P = null !== (t = null != y ? y : B) && void 0 !== t ? t : F,
+            A = Array.from(I.values()),
+            w = (0, d.e7)([u.default], () => u.default.getCurrentUser()),
+            O = (0, m.n)('CollectiblesFeedShop'),
+            R = (0, p.c)('CollectiblesFeedShop') && null != h.Z.getCategory(a.T.ROBERT),
+            H = (0, g.b)('Collectibles Shop Button'),
+            { noCache: M, includeUnpublished: V } = (0, v.Z)(),
+            D = A[0],
+            W = [A[1], h.Z.getCategory(R ? a.T.ROBERT : a.T.ANIME_V2)],
+            U = l.useCallback(() => {
+                N();
+            }, [N]);
+        if (null == w) return null;
+        if (null != P) {
             let e = [];
-            null != Z ? e.push('shop load fetch categories error: '.concat(N.message)) : null != y ? e.push('shop load fetch purchase error: '.concat(N.message)) : e.push('shop load claim error: '.concat(N.message)),
+            null != y ? e.push('shop load fetch categories error: '.concat(P.message)) : null != B ? e.push('shop load fetch purchase error: '.concat(P.message)) : e.push('shop load claim error: '.concat(P.message)),
                 C.Z.captureMessage(e.join('\n'), {
                     tags: {
-                        isStaff: A.isStaff().toString(),
-                        preloadEnabled: R.toString(),
-                        disableCache: H.toString(),
-                        includeUnpublished: M.toString()
+                        isStaff: w.isStaff().toString(),
+                        preloadEnabled: H.toString(),
+                        disableCache: M.toString(),
+                        includeUnpublished: V.toString()
                     }
                 });
         }
-        return null != Z
+        return null != y
             ? (0, r.jsx)(_.Z, {
-                  onRetry: W,
+                  onRetry: U,
                   errorOrigin: _.i.SHOP_PAGE,
-                  errorMessage: Z.message
+                  errorMessage: y.message
               })
             : (0, r.jsx)(r.Fragment, {
                   children: (0, r.jsx)('div', {
@@ -156,26 +156,27 @@ let T = (e) => {
                       children: (0, r.jsxs)('div', {
                           className: s()(S.content, S.mainContent),
                           children: [
-                              w
+                              O
                                   ? (0, r.jsx)(T, {
                                         handleTransition: i,
                                         numVisibleItems: o,
-                                        isFetchingCategories: I
+                                        isFetchingCategories: Z,
+                                        tab: x
                                     })
                                   : (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(j.Z, {
-                                                isLoading: I,
+                                                isLoading: Z,
                                                 handleTransition: i,
-                                                category: V
+                                                category: D
                                             }),
                                             (0, r.jsx)(b.Z, {
-                                                isLoading: I,
+                                                isLoading: Z,
                                                 handleTransition: i,
-                                                categories: D
+                                                categories: W
                                             }),
                                             (0, r.jsx)(k.Z, {
-                                                isLoading: I,
+                                                isLoading: Z,
                                                 numVisibleItems: o,
                                                 handleTransition: () => i('shop all top'),
                                                 rankedSkuIds: L.yo

@@ -295,10 +295,12 @@ let er = function (e) {
                                 (function (e) {
                                     switch (e) {
                                         case $.AW.HOME:
+                                        case $.AW.ORBS:
                                             return (0, r.jsx)(G.Z, {
                                                 isFullScreen: n,
                                                 handleTransition: eN,
-                                                numVisibleItems: el
+                                                numVisibleItems: el,
+                                                tab: e
                                             });
                                         case $.AW.CATALOG:
                                             return (0, r.jsx)('div', {
