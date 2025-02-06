@@ -1,63 +1,64 @@
-n.d(i, { Z: () => p });
-var t = n(200651),
-    a = n(120356),
-    r = n.n(a),
-    o = n(793030),
-    s = n(481060),
-    c = n(413335),
-    l = n(291775),
-    d = n(388032),
-    u = n(770964);
+i.d(n, { Z: () => p });
+var t = i(200651),
+    a = i(120356),
+    r = i.n(a),
+    o = i(793030),
+    s = i(481060),
+    c = i(413335),
+    l = i(773),
+    d = i(291775),
+    u = i(388032),
+    m = i(770964);
 function p(e) {
-    let { onClick: i, powerup: n } = e;
+    let { onClick: n, powerup: i } = e;
     return (0, t.jsxs)(s.P3F, {
-        onClick: i,
-        className: r()(u.container, { [u.active]: n.active }),
+        onClick: n,
+        className: r()(m.container, { [m.active]: i.active }),
         children: [
             (0, t.jsx)('div', {
-                className: u.imageContainer,
+                className: m.imageContainer,
                 children: (0, t.jsx)('img', { alt: '' })
             }),
             (0, t.jsxs)('div', {
-                className: u.contentContainer,
+                className: m.contentContainer,
                 children: [
                     (0, t.jsxs)('div', {
-                        className: u.headerContainer,
+                        className: m.headerContainer,
                         children: [
                             (0, t.jsx)(o.X6, {
                                 variant: 'heading-md/bold',
-                                children: n.title
+                                children: i.title
                             }),
-                            n.bundle &&
+                            i.bundle &&
                                 (0, t.jsx)(o.xv, {
-                                    className: r()(u.bundle, { [u.active]: n.active }),
+                                    className: r()(m.bundle, { [m.active]: i.active }),
                                     variant: 'text-xs/semibold',
-                                    children: d.intl.string(l.Z.j2jUjY)
+                                    children: u.intl.string(d.Z.j2jUjY)
                                 })
                         ]
                     }),
                     (0, t.jsx)(o.xv, {
-                        className: u.description,
+                        className: m.description,
                         variant: 'text-sm/medium',
-                        children: n.description
+                        children: i.description
                     }),
                     (0, t.jsxs)('div', {
-                        className: u.labelContainer,
+                        className: m.labelContainer,
                         children: [
                             (0, t.jsxs)('div', {
-                                className: u.inline,
+                                className: m.inline,
                                 children: [
                                     (0, t.jsx)(c.Z, {}),
                                     (0, t.jsx)(o.xv, {
                                         tag: 'div',
                                         variant: 'heading-md/bold',
-                                        children: n.cost
+                                        children: i.cost
                                     })
                                 ]
                             }),
-                            n.active &&
+                            i.active &&
                                 (0, t.jsxs)('div', {
-                                    className: u.inline,
+                                    className: m.inline,
                                     children: [
                                         (0, t.jsx)(s.owK, {
                                             size: 'xs',
@@ -66,13 +67,20 @@ function p(e) {
                                         (0, t.jsx)(o.xv, {
                                             color: 'text-positive',
                                             variant: 'text-sm/bold',
-                                            children: d.intl.string(l.Z.FFLkm5)
+                                            children: u.intl.string(d.Z.FFLkm5)
                                         })
                                     ]
                                 })
                         ]
                     })
                 ]
+            }),
+            (0, t.jsx)('div', {
+                className: m.buttonContainer,
+                children: (0, t.jsx)(l.Z, {
+                    skuId: i.skuId,
+                    active: i.active
+                })
             })
         ]
     });
