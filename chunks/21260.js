@@ -1,6 +1,6 @@
 n.d(t, {
     AJ: () => p,
-    Ep: () => h,
+    Ep: () => m,
     te: () => _,
     zP: () => f
 }),
@@ -126,19 +126,22 @@ function p(e) {
     );
 }
 function h(e) {
-    let { className: t, items: n, renderItem: a, itemGapPx: o = 0, maxLines: c, renderOverflow: h } = e,
-        { ref: m, width: g } = d(),
+    return 'string' == typeof e ? e : e.key;
+}
+function m(e) {
+    let { className: t, items: n, renderItem: a, itemGapPx: o = 0, maxLines: c, renderOverflow: m } = e,
+        { ref: g, width: E } = d(),
         {
-            lastVisibleIndex: E,
-            onItemLayout: v,
-            overflowItemsRef: y
+            lastVisibleIndex: v,
+            onItemLayout: y,
+            overflowItemsRef: I
         } = f({
             items: n,
             itemGapPx: o,
             maxLines: c,
-            containerWidth: g
+            containerWidth: E
         }),
-        I = r.useCallback(
+        b = r.useCallback(
             (e) =>
                 (0, i.jsx)(_, {
                     items: e,
@@ -146,12 +149,12 @@ function h(e) {
                 }),
             [a]
         ),
-        b = null != h ? h : I,
-        T = r.useMemo(() => n.slice(0, E + 1), [n, E]),
-        S = r.useMemo(() => n.slice(E + 1), [n, E]);
+        T = null != m ? m : b,
+        S = r.useMemo(() => n.slice(0, v + 1), [n, v]),
+        A = r.useMemo(() => n.slice(v + 1), [n, v]);
     return (0, i.jsxs)('div', {
         className: s()(t, u.items),
-        ref: m,
+        ref: g,
         children: [
             (0, i.jsxs)('div', {
                 'aria-hidden': !0,
@@ -164,22 +167,22 @@ function h(e) {
                                 p,
                                 {
                                     index: t,
-                                    onItemLayout: v,
+                                    onItemLayout: y,
                                     children: a(e)
                                 },
-                                e
+                                h(e)
                             )
                         )
                     }),
                     (0, i.jsx)('div', {
                         className: u.overflowMeasurement,
-                        ref: y,
+                        ref: I,
                         children: a(l.intl.formatToPlainString(l.t.vGclWl, { count: Number('1'.concat(n.length)) }))
                     })
                 ]
             }),
-            T.map(a),
-            S.length > 0 && b(S)
+            S.map(a),
+            A.length > 0 && T(A)
         ]
     });
 }
