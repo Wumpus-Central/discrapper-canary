@@ -1,10 +1,9 @@
 n.d(t, {
-    Ht: () => _,
-    ef: () => p,
+    ef: () => _,
     kF: () => d,
-    oY: () => h,
+    oY: () => p,
     tG: () => f,
-    y: () => m
+    y: () => h
 });
 var i = n(200651);
 n(192379);
@@ -51,25 +50,6 @@ function f(e) {
     });
 }
 function _(e) {
-    let { text: t, icon: n, ...r } = e;
-    return (0, i.jsxs)(d, {
-        'aria-label': t,
-        className: u.textBanner,
-        innerClassName: u.textBanner,
-        color: u.bannerColor,
-        themeColor: 'none',
-        ...r,
-        children: [
-            null != n &&
-                (0, i.jsx)(n, {
-                    size: 'xs',
-                    color: 'currentColor'
-                }),
-            t
-        ]
-    });
-}
-function p(e) {
     let { icon: t, tooltipText: n, tooltipPosition: r, tooltipAlign: l, tooltipDelay: c, tooltipClassName: f, tooltipContainerClassName: _, ariaLabel: p, className: h, innerClassName: m, shouldShowTooltip: g = !0, ...E } = e;
     return (0, i.jsx)(o.DY3, {
         text: n,
@@ -95,9 +75,9 @@ function p(e) {
         })
     });
 }
-function h(e) {
+function p(e) {
     let { className: t, innerClassName: n, ...r } = e;
-    return (0, i.jsx)(p, {
+    return (0, i.jsx)(_, {
         className: a()(u.banner, t),
         innerClassName: a()(u.banner, n),
         color: u.bannerColor,
@@ -105,9 +85,9 @@ function h(e) {
         ...r
     });
 }
-function m(e) {
+function h(e) {
     let { isHovering: t, className: n, innerClassName: r, ...o } = e;
-    return (0, i.jsx)(p, {
+    return (0, i.jsx)(_, {
         className: a()(u.hover, { [u.visible]: t }, n),
         innerClassName: a()(u.hover, r),
         color: u.hoverColor,

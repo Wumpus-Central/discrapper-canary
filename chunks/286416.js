@@ -3,7 +3,6 @@ var i = {
     icon: 'icon_fb7f94',
     banner: 'banner_fb7f94',
     hover: 'hover_fb7f94',
-    textBanner: 'textBanner_fb7f94',
     visible: 'visible_fb7f94',
     buttonInner: 'buttonInner_fb7f94',
     themeColor: 'themeColor_fb7f94',
