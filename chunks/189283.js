@@ -34,17 +34,18 @@ function f(e) {
     }
 }
 function _(e) {
-    let { option: t, selected: n, onClick: a, look: u, className: c, selectedClassName: _ } = e,
-        p = { [f(u)]: n };
-    null != _ && (p[_] = n);
-    let h = r.useCallback((e) => a(t, e), [a, t]);
+    let { option: t, selected: n, onClick: a, look: c, className: _, selectedClassName: p } = e,
+        h = { [f(c)]: n };
+    null != p && (h[p] = n);
+    let m = r.useCallback((e) => a(t, e), [a, t]);
     return (0, i.jsx)(o.P, {
-        className: s()(d(u), c, p),
-        onClick: h,
-        children: (0, i.jsx)(l.x, {
+        className: s()(d(c), _, h),
+        onClick: m,
+        children: (0, i.jsxs)(l.x, {
+            className: u.controlText,
             variant: 'text-sm/medium',
             color: 'none',
-            children: t.name
+            children: [null != t.icon ? (0, i.jsx)(t.icon, { className: u.icon }) : null, t.name]
         })
     });
 }
