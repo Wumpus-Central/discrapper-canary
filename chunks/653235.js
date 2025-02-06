@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(47120);
+n.d(t, { Z: () => O }), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -8,19 +8,20 @@ var i = n(200651),
     u = n(442837),
     c = n(377108),
     d = n(692547),
-    f = n(481060),
-    _ = n(68405),
-    p = n(527429),
-    h = n(656733),
-    m = n(251625),
-    g = n(985375),
-    E = n(132748),
-    v = n(353903),
-    y = n(215016),
-    I = n(981631),
-    b = n(388032),
-    T = n(337602);
-function S(e, t, n) {
+    f = n(552075),
+    _ = n(481060),
+    p = n(68405),
+    h = n(527429),
+    m = n(656733),
+    g = n(251625),
+    E = n(985375),
+    v = n(132748),
+    y = n(353903),
+    I = n(215016),
+    b = n(981631),
+    T = n(388032),
+    S = n(337602);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,41 +34,41 @@ function S(e, t, n) {
         e
     );
 }
-let A = (e, t) => (0, i.jsx)(v.G0, { columns: e }, t);
-function N(e) {
+let N = (e, t) => (0, i.jsx)(y.G0, { columns: e }, t);
+function C(e) {
     var t;
     let n = l().sample(l().values(e));
     return {
-        type: I.wI2.FAVORITES,
-        name: b.intl.string(b.t.y3LQCA),
-        icon: f.r7p,
+        type: b.wI2.FAVORITES,
+        name: T.intl.string(T.t.y3LQCA),
+        icon: _.r7p,
         src: null != n ? n.src : 'https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif',
         format: null !== (t = null == n ? void 0 : n.format) && void 0 !== t ? t : c.EO.IMAGE
     };
 }
-class C extends r.PureComponent {
+class R extends r.PureComponent {
     componentDidMount() {
-        0 === this.props.trendingCategories.length && (0, _.Tg)();
+        0 === this.props.trendingCategories.length && (0, p.Tg)();
     }
     getData() {
         return this.memoizedData(this.state.favoritesTile, this.props.trendingCategories, this.props.hideFavoritesTile);
     }
     renderCategoryExtras(e) {
-        let { name: t, icon: n, type: a } = e;
+        let { name: t, type: n } = e;
         return (0, i.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)('div', { className: a === I.wI2.FAVORITES ? T.categoryFadeBlurple : T.categoryFade }),
+                (0, i.jsx)('div', { className: n === b.wI2.FAVORITES ? S.categoryFadeBlurple : S.categoryFade }),
                 (0, i.jsxs)('div', {
-                    className: T.categoryText,
+                    className: S.categoryText,
                     children: [
-                        null != n
-                            ? (0, i.jsx)(n, {
-                                  className: T.categoryIcon,
+                        n === b.wI2.TRENDING_GIFS
+                            ? (0, i.jsx)(f.I, {
+                                  className: S.categoryIcon,
                                   color: 'currentColor'
                               })
                             : null,
                         (0, i.jsx)('span', {
-                            className: T.categoryName,
+                            className: S.categoryName,
                             children: t
                         })
                     ]
@@ -76,12 +77,12 @@ class C extends r.PureComponent {
         });
     }
     render() {
-        return (0, i.jsx)(p.Z, {
+        return (0, i.jsx)(h.Z, {
             getItemGrid: this.getItemGrid,
             getCoordsMap: this.getCoordsMap,
             onFocus: this.handleFocus,
             onSelect: this.handleSelect,
-            children: (0, i.jsx)(E.Z, {
+            children: (0, i.jsx)(v.Z, {
                 desiredItemWidth: 200,
                 maxColumns: 6,
                 children: this.renderContent
@@ -90,16 +91,16 @@ class C extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            S(this, '_masonryRef', r.createRef()),
-            S(this, 'state', {
-                favoritesTile: N(this.props.favorites),
+            A(this, '_masonryRef', r.createRef()),
+            A(this, 'state', {
+                favoritesTile: C(this.props.favorites),
                 selectedIndex: {
                     column: 0,
                     row: 0
                 },
                 focusedId: null
             }),
-            S(this, 'handleFocus', (e) => {
+            A(this, 'handleFocus', (e) => {
                 let { current: t } = this._masonryRef;
                 if (null == t) return;
                 let n = t.getCoordsMap()[e];
@@ -110,32 +111,32 @@ class C extends r.PureComponent {
                     }),
                     this.setState({ focusedId: e }));
             }),
-            S(this, 'handleSelect', (e) => {
+            A(this, 'handleSelect', (e) => {
                 let { onSelectItem: t } = this.props,
                     n = this.getData().find((t) => t.name === e);
                 null != n && null != t && t(n.type, n.name);
             }),
-            S(this, 'getItemKey', (e, t) => {
+            A(this, 'getItemKey', (e, t) => {
                 if (e > 0) return null;
                 let n = this.getData()[t];
                 return null != n ? n.name : null;
             }),
-            S(
+            A(
                 this,
                 'memoizedData',
-                (0, m.oH)(function (e, t) {
+                (0, g.oH)(function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                     return n ? [...t] : [e, ...t];
                 })
             ),
-            S(this, 'renderItem', (e, t, n, r) => {
+            A(this, 'renderItem', (e, t, n, r) => {
                 if (e > 0) return null;
                 let a = this.getData()[t];
                 if (null == a) return;
                 let { onSelectItem: s, imagePool: o, videoPool: l } = this.props,
                     { focusedId: u } = this.state;
                 return (0, i.jsx)(
-                    y.iR,
+                    I.iR,
                     {
                         format: a.format,
                         color: d.Z.unsafe_rawColors.PRIMARY_800.css,
@@ -152,18 +153,18 @@ class C extends r.PureComponent {
                     r
                 );
             }),
-            S(this, 'renderContent', (e, t, n) => {
+            A(this, 'renderContent', (e, t, n) => {
                 let { className: r, trendingCategories: a } = this.props;
                 return 0 === a.length
-                    ? (0, i.jsx)(v.u$, {
+                    ? (0, i.jsx)(y.u$, {
                           columns: e,
                           width: t,
-                          renderColumn: A
+                          renderColumn: N
                       })
-                    : (0, i.jsx)(f.GMG, {
+                    : (0, i.jsx)(_.GMG, {
                           ref: this._masonryRef,
                           fade: !0,
-                          className: s()(T.container, r),
+                          className: s()(S.container, r),
                           itemGutter: 12,
                           getItemKey: this.getItemKey,
                           columns: e,
@@ -173,21 +174,21 @@ class C extends r.PureComponent {
                           chunkSize: 50
                       });
             }),
-            S(this, 'getItemGrid', () => {
+            A(this, 'getItemGrid', () => {
                 let { current: e } = this._masonryRef;
                 return null != e ? e.getItemGrid() : [];
             }),
-            S(this, 'getCoordsMap', () => {
+            A(this, 'getCoordsMap', () => {
                 let { current: e } = this._masonryRef;
                 return null != e ? e.getCoordsMap() : {};
             });
     }
 }
-function R(e) {
-    let t = (0, u.e7)([h.Z], () => h.Z.getTrendingCategories()),
-        n = (0, g.gG)(),
-        r = (0, y.PY)();
-    return (0, i.jsx)(C, {
+function O(e) {
+    let t = (0, u.e7)([m.Z], () => m.Z.getTrendingCategories()),
+        n = (0, E.gG)(),
+        r = (0, I.PY)();
+    return (0, i.jsx)(R, {
         ...e,
         ...r,
         trendingCategories: t,
