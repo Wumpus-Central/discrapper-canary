@@ -21,6 +21,7 @@ var i = {
     altText: 'altText__0f481',
     mediaMosaicAltTextContainer: 'mediaMosaicAltTextContainer__0f481',
     mediaMosaicAltText: 'mediaMosaicAltText__0f481',
+    reducedSize: 'reducedSize__0f481',
     mediaMosaicAltTextPopout: 'mediaMosaicAltTextPopout__0f481',
     mediaMosaicAltTextPopoutTitle: 'mediaMosaicAltTextPopoutTitle__0f481',
     mediaMosaicAltTextPopoutDescription: 'mediaMosaicAltTextPopoutDescription__0f481',
