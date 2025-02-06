@@ -1,9 +1,9 @@
 n.r(t), n.d(t, { default: () => A });
 var i = n(200651),
     a = n(192379),
-    l = n(442837),
+    s = n(442837),
     o = n(37234),
-    s = n(230711),
+    l = n(230711),
     r = n(410575),
     u = n(503089),
     c = n(110924),
@@ -11,8 +11,8 @@ var i = n(200651),
     Z = n(367907),
     f = n(906732),
     _ = n(254901),
-    p = n(45493),
-    g = n(332473),
+    g = n(45493),
+    p = n(332473),
     E = n(113434),
     h = n(663389),
     S = n(210887),
@@ -22,15 +22,15 @@ var i = n(200651),
     m = n(981631),
     P = n(388032);
 let T = a.forwardRef(function () {
-        p.Z.trackExposure({ location: 'cd25e4_1' }), _.Z.useExperiment({ location: 'user_setting_auto' }, { autoTrackExposure: !1 }), _.Z.trackExposure({ location: 'user_setting_manual' });
-        let e = (0, l.e7)([S.Z], () => S.Z.theme),
-            t = (0, l.e7)([S.Z], () => (S.Z.darkSidebar ? m.BRd.DARK : void 0)),
+        g.Z.trackExposure({ location: 'cd25e4_1' }), _.Z.useExperiment({ location: 'user_setting_auto' }, { autoTrackExposure: !1 }), _.Z.trackExposure({ location: 'user_setting_manual' });
+        let e = (0, s.e7)([S.Z], () => S.Z.theme),
+            t = (0, s.e7)([S.Z], () => (S.Z.darkSidebar ? m.BRd.DARK : void 0)),
             {
                 section: n,
                 subsection: T,
                 analyticsLocation: A,
                 analyticsLocations: j
-            } = (0, l.cj)([h.Z], () => {
+            } = (0, s.cj)([h.Z], () => {
                 let e = h.Z.getSection(),
                     t = h.Z.getSubsection(),
                     { analyticsLocation: n, analyticsLocations: i } = h.Z.getProps();
@@ -44,17 +44,17 @@ let T = a.forwardRef(function () {
             y = (0, c.Z)(n),
             R = (0, c.Z)(T),
             v = (0, b.Z7)(),
-            { analyticsLocations: C } = (0, f.ZP)(d.Z.USER_SETTINGS);
+            { analyticsLocations: w } = (0, f.ZP)(d.Z.USER_SETTINGS);
         a.useEffect(() => {
             null != n &&
                 (n !== y || T !== R) &&
                 !(function (e) {
-                    let { destinationPane: t, originPane: n = null, source: i = null, subsection: a = null, locationStack: l = null, searchQuery: o = null } = e;
+                    let { destinationPane: t, originPane: n = null, source: i = null, subsection: a = null, locationStack: s = null, searchQuery: o = null } = e;
                     Z.ZP.trackWithMetadata(m.rMx.SETTINGS_PANE_VIEWED, {
                         settings_type: 'user',
                         origin_pane: n,
                         destination_pane: t,
-                        location_stack: l,
+                        location_stack: s,
                         source: i,
                         subsection: a,
                         search_query: o
@@ -68,17 +68,17 @@ let T = a.forwardRef(function () {
                     searchQuery: '' !== v ? v : null
                 });
         }, [n, y, T, R, A, j, v]);
-        let { hasSearchResults: G, searchResults: I } = (0, x.E)(),
-            N = (0, k.VO)(),
-            w = (0, k.q8)(I),
-            q = a.useMemo(() => (G ? w : N), [G, w, N]),
-            B = (0, g.b)(),
-            L = (0, E.iO)(),
-            M = a.useCallback((e) => {
-                s.Z.setSection(e);
+        let { hasSearchResults: C, searchResults: G } = (0, x.E)(),
+            I = (0, k.VO)(),
+            N = (0, k.q8)(G),
+            U = a.useMemo(() => (C ? N : I), [C, N, I]),
+            q = (0, p.b)(),
+            B = (0, E.iO)(),
+            L = a.useCallback((e) => {
+                l.Z.setSection(e);
             }, []);
         return (0, i.jsx)(f.Gt, {
-            value: C,
+            value: w,
             children: (0, i.jsx)(r.Z, {
                 root: !0,
                 page: m.ZY5.USER_SETTINGS,
@@ -87,17 +87,18 @@ let T = a.forwardRef(function () {
                     title: P.intl.string(P.t.cduTBA),
                     sidebarTheme: t,
                     section: n,
-                    onSetSection: M,
+                    onSetSection: L,
                     onClose: o.xf,
-                    sections: q,
-                    isEligibleForPomelo: B,
-                    questsForBadge: L
+                    sections: U,
+                    isEligibleForPomelo: q,
+                    questsForBadge: B,
+                    showUserSettingsSearch: !0
                 })
             })
         });
     }),
     A = a.forwardRef(function () {
-        let e = (0, l.e7)([h.Z], () => h.Z.getProps().analyticsLocations),
+        let e = (0, s.e7)([h.Z], () => h.Z.getProps().analyticsLocations),
             { analyticsLocations: t } = (0, f.ZP)(e);
         return (0, i.jsx)(f.Gt, {
             value: t,
