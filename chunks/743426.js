@@ -560,7 +560,7 @@ class v extends s.Z {
         return 0 === this.connections.size;
     }
     constructor() {
-        var e, t, n, i, r;
+        var e, t, n, i, r, s;
         super(),
             (e = this),
             m(this, 'Video', _.Z),
@@ -624,18 +624,18 @@ class v extends s.Z {
             m(this, 'handleAudioDeviceModuleErrorCallback', (e, t) => {
                 -100 !== e && this.emit(o.aB.AudioDeviceModuleError, 'RustAudioDeviceModule', e, t);
             });
-        let s = (0, d.zS)();
-        s.setDeviceChangeCallback(this.handleDeviceChange),
-            s.setVolumeChangeCallback(this.handleVolumeChange),
-            s.setOnVoiceCallback(this.handleVoiceActivity),
-            null === (t = s.setVideoInputInitializationCallback) || void 0 === t || t.call(s, this.handleVideoInputInitialization),
-            null === (n = s.setAudioInputInitializationCallback) || void 0 === n || n.call(s, this.handleAudioInputInitialization),
-            s.setTransportOptions({
+        let u = (0, d.zS)();
+        u.setDeviceChangeCallback(this.handleDeviceChange),
+            u.setVolumeChangeCallback(this.handleVolumeChange),
+            u.setOnVoiceCallback(this.handleVoiceActivity),
+            null === (t = u.setVideoInputInitializationCallback) || void 0 === t || t.call(u, this.handleVideoInputInitialization),
+            null === (n = u.setAudioInputInitializationCallback) || void 0 === n || n.call(u, this.handleAudioInputInitialization),
+            u.setTransportOptions({
                 idleJitterBufferFlush: !0,
                 ducking: !1
             }),
-            null === (i = s.setNativeScreenSharePickerCallbacks) || void 0 === i || i.call(s, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError),
-            null === (r = s.setAudioDeviceModuleErrorCallback) || void 0 === r || r.call(s, this.handleAudioDeviceModuleErrorCallback),
+            null === (i = u.setNativeScreenSharePickerCallbacks) || void 0 === i || i.call(u, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError),
+            null === (r = u.setAudioDeviceModuleErrorCallback) || void 0 === r || r.call(u, this.handleAudioDeviceModuleErrorCallback),
             this.on('removeListener', this.handleRemoveListener),
             this.on('newListener', this.handleNewListener),
             null != (0, d.zS)().getAudioSubsystem
@@ -643,8 +643,9 @@ class v extends s.Z {
                       (this.audioSubsystem = e), (this.audioLayer = t);
                   })
                 : null != (0, d.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? h.iA.LEGACY : h.iA.STANDARD),
-            null != s.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(),
-            null != s.setActiveSinksChangeCallback && s.setActiveSinksChangeCallback(this.handleActiveSinksChange),
+            null != u.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(),
+            null != u.setActiveSinksChangeCallback && u.setActiveSinksChangeCallback(this.handleActiveSinksChange),
+            null === (s = u.setLoopbackPlaybackGainMultiplier) || void 0 === s || s.call(u, h.Jk),
             (0, l.Z)(this);
     }
 }
