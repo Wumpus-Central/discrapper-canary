@@ -1,4 +1,4 @@
-n.d(t, { R: () => g });
+n.d(t, { R: () => f });
 var i = n(200651),
     l = n(392711),
     a = n(642128),
@@ -11,15 +11,9 @@ var i = n(200651),
     h = n(378441),
     p = n(388032),
     m = n(656563);
-let f = (e) => Math.floor(e / 1024 / 1024);
-function g() {
+function f() {
     let { mostRecentlyRequestedVoiceId: e } = (0, h.o)(),
-        {
-            showProgressBar: t,
-            downloaded: n,
-            total: g,
-            progress: _
-        } = (function (e) {
+        { showProgressBar: t, progress: n } = (function (e) {
             let t = (0, u.z)(e),
                 n = (0, r.Wu)([c.Z], () => (0, l.values)(null == t ? void 0 : t.modelIds).map((e) => c.Z.getModelState(e))),
                 i = n.filter(o.lm).some((e) => {
@@ -41,12 +35,10 @@ function g() {
                 });
             return {
                 showProgressBar: i,
-                downloaded: a,
-                total: s,
-                progress: 0 === s ? 0 : (a / s) * 100
+                progress: 0 === s ? 0 : Math.floor((a / s) * 100)
             };
         })(e),
-        C = (0, s.dQu)(s.TVs.colors.WHITE);
+        f = (0, s.dQu)(s.TVs.colors.WHITE);
     return (0, s.Yzy)(
         t,
         {
@@ -72,27 +64,17 @@ function g() {
                   children: (0, i.jsxs)('div', {
                       className: m.visibleFloater,
                       children: [
-                          (0, i.jsxs)('div', {
+                          (0, i.jsx)('div', {
                               className: m.progressText,
-                              children: [
-                                  (0, i.jsx)(s.Text, {
-                                      variant: 'text-sm/medium',
-                                      color: 'always-white',
-                                      children: p.intl.format(p.t.APQhQ0, {
-                                          downloaded: f(n),
-                                          total: f(g)
-                                      })
-                                  }),
-                                  (0, i.jsxs)(s.Text, {
-                                      variant: 'text-sm/medium',
-                                      color: 'always-white',
-                                      children: [Math.floor(_), '%']
-                                  })
-                              ]
+                              children: (0, i.jsx)(s.Text, {
+                                  variant: 'text-sm/medium',
+                                  color: 'always-white',
+                                  children: p.intl.format(p.t['r+uZYW'], { progress: n })
+                              })
                           }),
                           (0, i.jsx)(s.Exd, {
-                              percent: _,
-                              foregroundColor: C.hex(),
+                              percent: n,
+                              foregroundColor: f.hex(),
                               backgroundColor: 'rgba(255,255,255,0.10)',
                               size: s.Exd.Sizes.LARGE
                           })
