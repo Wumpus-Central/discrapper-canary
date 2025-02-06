@@ -1,4 +1,4 @@
-n.d(t, { R: () => f });
+n.d(t, { R: () => g });
 var i = n(200651),
     l = n(392711),
     a = n(642128),
@@ -9,9 +9,10 @@ var i = n(200651),
     d = n(750180),
     u = n(56848),
     h = n(378441),
-    p = n(388032),
-    m = n(656563);
-function f() {
+    p = n(358820),
+    m = n(388032),
+    f = n(656563);
+function g() {
     let { mostRecentlyRequestedVoiceId: e } = (0, h.o)(),
         { showProgressBar: t, progress: n } = (function (e) {
             let t = (0, u.z)(e),
@@ -38,7 +39,7 @@ function f() {
                 progress: 0 === s ? 0 : Math.floor((a / s) * 100)
             };
         })(e),
-        f = (0, s.dQu)(s.TVs.colors.WHITE);
+        g = (0, s.dQu)(s.TVs.colors.WHITE);
     return (0, s.Yzy)(
         t,
         {
@@ -60,21 +61,33 @@ function f() {
         t
             ? (0, i.jsx)(a.animated.div, {
                   style: e,
-                  className: m.floaterWrapper,
+                  className: f.floaterWrapper,
                   children: (0, i.jsxs)('div', {
-                      className: m.visibleFloater,
+                      className: f.visibleFloater,
                       children: [
-                          (0, i.jsx)('div', {
-                              className: m.progressText,
-                              children: (0, i.jsx)(s.Text, {
-                                  variant: 'text-sm/medium',
-                                  color: 'always-white',
-                                  children: p.intl.format(p.t['r+uZYW'], { progress: n })
-                              })
+                          (0, i.jsxs)('div', {
+                              className: f.progressText,
+                              children: [
+                                  (0, i.jsx)(s.Text, {
+                                      variant: 'text-sm/semibold',
+                                      color: 'always-white',
+                                      children: m.intl.format(m.t['r+uZYW'], { progress: n })
+                                  }),
+                                  (0, i.jsx)(s.zxk, {
+                                      look: s.zxk.Looks.LINK,
+                                      size: s.zxk.Sizes.MIN,
+                                      onClick: p.ge,
+                                      children: (0, i.jsx)(s.Text, {
+                                          variant: 'text-sm/normal',
+                                          color: 'always-white',
+                                          children: m.intl.string(m.t['ETE/oK'])
+                                      })
+                                  })
+                              ]
                           }),
                           (0, i.jsx)(s.Exd, {
                               percent: n,
-                              foregroundColor: f.hex(),
+                              foregroundColor: g.hex(),
                               backgroundColor: 'rgba(255,255,255,0.10)',
                               size: s.Exd.Sizes.LARGE
                           })

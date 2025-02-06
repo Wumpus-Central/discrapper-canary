@@ -279,6 +279,9 @@ let L = {
     async downloadVoiceFilterFile(e, t, n) {
         l()(h.isPlatformEmbedded, 'Download voice filter file method called outside native app'), null != m.Z.toURLSafe(e) && (await v.fileManager.maybeDownloadVoiceFilterFile(e, t, n));
     },
+    stopDownloads() {
+        v.fileManager.stopDownloads();
+    },
     canCopyImage() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
         if (null != e) {

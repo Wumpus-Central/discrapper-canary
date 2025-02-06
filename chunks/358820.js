@@ -1,5 +1,6 @@
 n.d(t, {
     fz: () => h,
+    ge: () => E,
     rk: () => m,
     wV: () => g
 });
@@ -39,10 +40,12 @@ function h(e) {
                 });
             })
             .catch((t) => {
-                _.error('Failed to fetch voice filter model', {
-                    err: t,
-                    ...e
-                }),
+                (null == t ? void 0 : t.USER_CANCELED_DOWNLOAD)
+                    ? _.info('User canceled the download for Voice Filter dependency', e)
+                    : _.error('Failed to fetch voice filter model', {
+                          reason: t,
+                          ...e
+                      }),
                     s.Z.dispatch({
                         type: 'VOICE_FILTER_DOWNLOAD_FAILED',
                         ...e,
@@ -88,4 +91,7 @@ async function g() {
     } finally {
         p = !1;
     }
+}
+function E() {
+    s.Z.dispatch({ type: 'VOICE_FILTER_DOWNLOAD_CANCELED' });
 }
