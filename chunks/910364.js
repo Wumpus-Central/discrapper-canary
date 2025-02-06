@@ -34,7 +34,7 @@ var t = i(200651),
     R = i(388032),
     U = i(171865);
 function F(e) {
-    let { user: n, currentUser: i, guildId: F, channelId: B, messageId: D, roleId: w, sessionId: G, friendToken: k, initialSection: V, initialSubsection: W, transitionState: K, onClose: z, showGuildProfile: Y = !0, sourceAnalyticsLocations: q = [] } = e,
+    let { user: n, currentUser: i, guildId: F, channelId: B, messageId: D, roleId: w, sessionId: G, friendToken: k, initialSection: V, initialSubsection: W, transitionState: K, onClose: Y, showGuildProfile: z = !0, sourceAnalyticsLocations: q = [] } = e,
         { analyticsLocations: J } = (0, u.ZP)([...q, c.Z.SIMPLIFIED_PROFILE_MODAL]),
         X = (0, v.Z)({
             user: n,
@@ -49,14 +49,14 @@ function F(e) {
             channelId: B,
             messageId: D,
             roleId: w,
-            showGuildProfile: Y
+            showGuildProfile: z
         }),
         Q = (0, Z.$m)(),
         $ = (0, r.q_F)({
             opacity: null != Q.interactionType ? 1 : 0,
             config: { duration: 150 }
         }),
-        ee = (0, h.ZP)(n.id, Y ? F : void 0),
+        ee = (0, h.ZP)(n.id, z ? F : void 0),
         en = (0, h.ZP)(n.id, F),
         ei = (0, s.e7)([x.Z], () => x.Z.getRelationshipType(n.id)),
         et = n.id === i.id,
@@ -90,7 +90,7 @@ function F(e) {
                                             user: n,
                                             guildId: F,
                                             channelId: B,
-                                            onClose: z
+                                            onClose: Y
                                         }),
                                         (0, t.jsx)(T.Z, {
                                             shouldShowTooltip: null === Q.interactionType,
@@ -110,7 +110,7 @@ function F(e) {
                                                             label: R.intl.string(R.t.GISTtb),
                                                             subtext: R.intl.formatToPlainString(R.t['mn/nW1'], { displayName: p.ZP.getName(void 0, void 0, n) }),
                                                             action: () => {
-                                                                z(),
+                                                                Y(),
                                                                     (0, L.openUserProfileModal)({
                                                                         ...H,
                                                                         showGuildProfile: !1,
@@ -129,7 +129,7 @@ function F(e) {
                                                             label: R.intl.string(R.t.DisZzM),
                                                             subtext: R.intl.formatToPlainString(R.t['mn/nW1'], { displayName: p.ZP.getName(F, B, n) }),
                                                             action: () => {
-                                                                z(),
+                                                                Y(),
                                                                     (0, L.openUserProfileModal)({
                                                                         ...H,
                                                                         showGuildProfile: !0,
@@ -155,7 +155,7 @@ function F(e) {
                                         }),
                                         (0, t.jsx)(j.Z, {
                                             userId: n.id,
-                                            onClose: z,
+                                            onClose: Y,
                                             className: U.toast
                                         }),
                                         null != Q.interactionType &&
@@ -181,7 +181,7 @@ function F(e) {
                                                     channelId: B,
                                                     profileType: O.y0.FULL_SIZE,
                                                     hasEntered: K === r.Dvm.ENTERED,
-                                                    onCloseProfile: z
+                                                    onCloseProfile: Y
                                                 }),
                                                 (0, t.jsxs)('div', {
                                                     className: U.headerButtons,
@@ -191,12 +191,12 @@ function F(e) {
                                                             user: n,
                                                             relationshipType: ei,
                                                             friendToken: k,
-                                                            onClose: z
+                                                            onClose: Y
                                                         }),
                                                         (0, t.jsx)(y.Z, {
                                                             user: n,
                                                             guildId: F,
-                                                            onClose: z
+                                                            onClose: Y
                                                         })
                                                     ]
                                                 })
@@ -213,7 +213,7 @@ function F(e) {
                                     initialSection: V,
                                     initialSubsection: W,
                                     friendToken: k,
-                                    onClose: z
+                                    onClose: Y
                                 })
                             ]
                         }),

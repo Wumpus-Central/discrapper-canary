@@ -1,14 +1,14 @@
-n.d(t, { Z: () => i }), n(47120);
-var l = n(192379);
-function i(e) {
-    let t = l.useRef(e);
+r.d(t, { Z: () => a }), r(47120);
+var n = r(192379);
+function a(e) {
+    let t = n.useRef(e);
     return (
-        l.useInsertionEffect(() => {
+        n.useInsertionEffect(() => {
             t.current = e;
         }),
-        l.useCallback(function () {
-            for (var e = arguments.length, n = Array(e), l = 0; l < e; l++) n[l] = arguments[l];
-            return t.current(...n);
+        n.useCallback(function () {
+            for (var e = arguments.length, r = Array(e), n = 0; n < e; n++) r[n] = arguments[n];
+            return t.current(...r);
         }, [])
     );
 }

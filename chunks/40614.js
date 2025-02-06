@@ -30,7 +30,7 @@ let m = (e) => {
                       className: g.text,
                       children: p.intl.string(p.t.jfrLLS)
                   }),
-                  (0, i.jsx)(l.Fbu, { size: 'xs' })
+                  (0, i.jsx)(l.Fbu, { size: 'xxs' })
               ]
           });
 };

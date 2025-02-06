@@ -118,7 +118,7 @@ function p(e) {
 }
 function S(e) {
     let { headerVariant: t, descriptionClassName: n, creator: r, name: i, description: a, imageSource: s, isHub: c = !1, truncate: o, guildId: d, isNew: m, guildEvent: x, eventPreview: h, recurrenceId: v } = e,
-        g = (0, u.R6)('GuildEventDetails');
+        g = (0, u.Q3)('GuildEventDetails');
     return (0, l.jsxs)('div', {
         className: T.container,
         children: [

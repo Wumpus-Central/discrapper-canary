@@ -29,11 +29,11 @@ function _() {
                         className: g.note,
                         children: [
                             (0, i.jsx)(l.Text, {
-                                variant: 'text-md/semibold',
+                                variant: 'text-sm/medium',
                                 children: h.intl.string(h.t.mDJcn5)
                             }),
                             (0, i.jsx)(l.Text, {
-                                variant: 'text-xs/normal',
+                                variant: 'text-xs/medium',
                                 children: h.intl.string(h.t.JzMvOj)
                             })
                         ]
@@ -43,11 +43,11 @@ function _() {
                         className: g.note,
                         children: [
                             (0, i.jsx)(l.Text, {
-                                variant: 'text-md/semibold',
+                                variant: 'text-sm/medium',
                                 children: h.intl.string(h.t.BzqoHB)
                             }),
                             (0, i.jsx)(l.Text, {
-                                variant: 'text-xs/normal',
+                                variant: 'text-xs/medium',
                                 children: h.intl.string(h.t.RgzRPD)
                             })
                         ]
@@ -57,11 +57,11 @@ function _() {
                         className: g.note,
                         children: [
                             (0, i.jsx)(l.Text, {
-                                variant: 'text-md/semibold',
+                                variant: 'text-sm/medium',
                                 children: h.intl.string(h.t['C2uz/v'])
                             }),
                             (0, i.jsx)(l.Text, {
-                                variant: 'text-xs/normal',
+                                variant: 'text-xs/medium',
                                 children: h.intl.string(h.t.VN4Spq)
                             })
                         ]

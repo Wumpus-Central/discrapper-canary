@@ -50,7 +50,7 @@ function j(e) {
         _ = (0, d.O0)(g.tP.TEXT_DANGER);
     null == j && (j = i === v.WX.EXTERNAL ? N.intl.string(N.t.IyZxjI) : N.intl.string(N.t['X2K3//']));
     let C = (0, m.Z)(I, b),
-        [{ startDateTimeString: L, endDateTimeString: D, currentOrPastEvent: R, upcomingEvent: A, diffMinutes: O }, k] = r.useState((0, x.ub)(t, c));
+        [{ startDateTimeString: L, endDateTimeString: D, currentOrPastEvent: A, upcomingEvent: O, diffMinutes: R }, k] = r.useState((0, x.ub)(t, c));
     r.useEffect(() => {
         k((0, x.ub)(t, c));
         let e = setInterval(() => k((0, x.ub)(t, c)), 1000);
@@ -65,7 +65,7 @@ function j(e) {
             start: L,
             end: D
         }));
-    let y = r.useMemo(() => (n === v.p1.CANCELED || (null == C ? void 0 : C.is_canceled) ? 5 : n === v.p1.ACTIVE ? 3 : v.$I.has(n) ? 4 : R ? 2 : A ? 1 : 0), [n, null == C ? void 0 : C.is_canceled, R, A]),
+    let y = r.useMemo(() => (n === v.p1.CANCELED || (null == C ? void 0 : C.is_canceled) ? 5 : n === v.p1.ACTIVE ? 3 : v.$I.has(n) ? 4 : A ? 2 : O ? 1 : 0), [n, null == C ? void 0 : C.is_canceled, A, O]),
         B = (function (e, t, n, r, i) {
             switch (e) {
                 case 1:
@@ -91,7 +91,7 @@ function j(e) {
                 default:
                     return t;
             }
-        })(y, z, j, D, O),
+        })(y, z, j, D, R),
         {
             Icon: K,
             iconColor: X,
