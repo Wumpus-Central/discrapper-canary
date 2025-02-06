@@ -45,8 +45,8 @@ var i = n(200651),
     H = n(371651),
     Y = n(610394),
     K = n(388627),
-    Q = n(561064),
-    X = n(987650),
+    X = n(561064),
+    Q = n(987650),
     J = n(981631),
     q = n(206583),
     $ = n(388032),
@@ -130,7 +130,7 @@ function eu(e) {
     'alt' !== e.key.toLowerCase() || t || ('keyup' === e.type.toLowerCase() ? P.S.dispatch(J.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }) : 'keydown' === e.type.toLowerCase() && P.S.dispatch(J.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }));
 }
 function es() {
-    let e = (0, Q.Z)(),
+    let e = (0, X.Z)(),
         {
             locked: t,
             focused: n,
@@ -143,10 +143,11 @@ function es() {
             [Y.ZP, N.Z, A.Z, T.Z],
             () => {
                 let t = A.Z.windowSize((0, W.ZY)(e)),
-                    n = T.Z.getOverlayKeybind();
+                    n = T.Z.getOverlayKeybind(),
+                    i = (0, R.QF)();
                 return {
-                    locked: Y.ZP.isInputLocked((0, R.QF)()),
-                    focused: Y.ZP.isFocused((0, R.QF)()),
+                    locked: Y.ZP.isInputLocked(i),
+                    focused: i === R.Js ? N.Z.isFocused(i) : Y.ZP.isFocused(i),
                     incompatibleApp: N.Z.incompatibleApp,
                     hasValidResolution: (0, R.Te)(t),
                     isPreviewingInGame: N.Z.isPreviewingInGame(),
@@ -210,20 +211,20 @@ function es() {
                 let i = null;
                 (i = _
                     ? {
-                          type: X.nc.KEYBIND_INDICATORS,
+                          type: Q.nc.KEYBIND_INDICATORS,
                           markAsDismissed: f
                       }
-                    : { type: X.nc.WELCOME }),
+                    : { type: Q.nc.WELCOME }),
                     c && d
                         ? (i = {
-                              type: X.nc.GO_LIVE_VOICE,
+                              type: Q.nc.GO_LIVE_VOICE,
                               game: t,
                               voiceChannelId: n,
                               voiceGuild: r
                           })
                         : c &&
                           (i = {
-                              type: X.nc.GO_LIVE_NON_VOICE,
+                              type: Q.nc.GO_LIVE_NON_VOICE,
                               game: t
                           }),
                     u.Z.overlayMounted(i);

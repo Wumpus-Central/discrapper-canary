@@ -43,6 +43,7 @@ let m = [],
                         if (null == e) continue;
                         let i = h.Z[e.type];
                         null != i &&
+                            (null == i.predicate || i.predicate()) &&
                             t.push({
                                 widget: e,
                                 ...i
