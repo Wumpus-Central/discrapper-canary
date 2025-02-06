@@ -1,6 +1,6 @@
 n.d(t, {
-    Ji: () => c,
-    XN: () => u
+    Ji: () => u,
+    XN: () => l
 });
 var i = n(818083),
     r = n(638395);
@@ -39,56 +39,7 @@ let s = (0, i.B)({
             }
         ]
     }),
-    o = (0, i.B)({
-        kind: 'user',
-        id: '2024-10_icymi_sorting_fe',
-        label: 'FE experiment for sorting on ICYMI',
-        commonTriggerPoint: a.$P.CONNECTION_OPEN_MOBILE,
-        defaultConfig: { enabled: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: 'Enables ICYMI - (heuristic) sorting will be controlled by backend exp',
-                config: { enabled: !0 }
-            },
-            {
-                id: 2,
-                label: 'Enables ICYMI - (ml) sorting will be controlled by backend exp',
-                config: { enabled: !0 }
-            },
-            {
-                id: 3,
-                label: 'Enables ICYMI - (ml) sorting will be controlled by backend exp',
-                config: { enabled: !0 }
-            },
-            {
-                id: 4,
-                label: 'Enables ICYMI - (ml) sorting will be controlled by backend exp',
-                config: { enabled: !0 }
-            },
-            {
-                id: 5,
-                label: 'Enables ICYMI - (ml) sorting will be controlled by backend exp',
-                config: { enabled: !0 }
-            },
-            {
-                id: 6,
-                label: 'Enables ICYMI - (ml) sorting will be controlled by backend exp',
-                config: { enabled: !0 }
-            },
-            {
-                id: 7,
-                label: 'Enables ICYMI - (ml) sorting will be controlled by backend exp',
-                config: { enabled: !0 }
-            },
-            {
-                id: 8,
-                label: 'Enables ICYMI - (ml) sorting will be controlled by backend exp',
-                config: { enabled: !0 }
-            }
-        ]
-    }),
-    l =
+    o =
         ((0, i.B)({
             kind: 'user',
             id: '2024-12_icymi_status_with_media',
@@ -150,15 +101,15 @@ let s = (0, i.B)({
                 }
             ]
         }));
-function u(e) {
+function l(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         i = r.Z.get('hide_icymi_tab'),
-        a = c(t, !1),
+        a = u(t, !1),
         {
             enabled: s,
-            tabBadgeVariant: o,
-            removeHomeMentionBadges: u
-        } = l.getCurrentConfig(
+            tabBadgeVariant: l,
+            removeHomeMentionBadges: c
+        } = o.getCurrentConfig(
             { location: t },
             {
                 autoTrackExposure: n,
@@ -167,27 +118,19 @@ function u(e) {
         );
     return {
         enabled: s && !i && a,
-        tabBadgeVariant: o,
-        removeHomeMentionBadges: u
+        tabBadgeVariant: l,
+        removeHomeMentionBadges: c
     };
 }
-function c(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = s.getCurrentConfig(
-            { location: e },
-            {
-                disable: !0,
-                autoTrackExposure: t
-            }
-        ).enabled,
-        i = o.getCurrentConfig(
-            { location: e },
-            {
-                disable: !0,
-                autoTrackExposure: t
-            }
-        ).enabled;
-    return n || i;
+function u(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return s.getCurrentConfig(
+        { location: e },
+        {
+            disable: !0,
+            autoTrackExposure: t
+        }
+    ).enabled;
 }
 (0, i.B)({
     kind: 'user',
