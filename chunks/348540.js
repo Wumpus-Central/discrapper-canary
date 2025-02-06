@@ -1,9 +1,10 @@
 n.d(t, { Z: () => A });
-var i = n(200651),
-    l = n(192379),
-    a = n(442837),
-    r = n(372460),
-    s = n(320582),
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    a = n(372460),
+    r = n(320582),
+    s = n(246016),
     o = n(189156),
     c = n(699516),
     d = n(246946),
@@ -28,17 +29,18 @@ var i = n(200651),
     y = n(866669);
 function A(e) {
     let { user: t, currentUser: n, displayProfile: A, channel: P, isHovering: R, onOpenProfile: M } = e,
-        { relationshipType: L, originApplicationId: k } = (0, a.cj)([c.Z], () => ({
+        { relationshipType: L, originApplicationId: k } = (0, l.cj)([c.Z], () => ({
             relationshipType: c.Z.getRelationshipType(t.id),
             originApplicationId: c.Z.getOriginApplicationId(t.id)
         })),
-        O = (0, s.vh)(t.id),
-        D = (0, s.ML)(t.id),
-        w = l.useMemo(() => D.map((e) => e.applicationId), [D]),
-        U = (0, r.wn)({ location: 'UserProfilePanelBody' }),
-        B = U && D.length > 0,
-        F = (0, a.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        H = (0, a.e7)([h.Z], () => {
+        O = (0, r.vh)(t.id),
+        D = (0, s.Y)({
+            userId: t.id,
+            location: 'UserProfilePanelBody'
+        }),
+        w = (0, a.wn)({ location: 'UserProfilePanelBody' }),
+        U = (0, l.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        B = (0, l.e7)([h.Z], () => {
             var e;
             return null === (e = h.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });
@@ -58,7 +60,7 @@ function A(e) {
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(_.Z, { userId: t.id }),
-                        !F &&
+                        !U &&
                             (0, i.jsx)(N.Z, {
                                 userId: t.id,
                                 isHovering: R,
@@ -72,10 +74,10 @@ function A(e) {
                     children: (0, i.jsx)(x.Z, {
                         user: t,
                         channelId: P.id,
-                        applicationId: U ? k : void 0
+                        applicationId: w ? k : void 0
                     })
                 }),
-            U &&
+            w &&
                 O.map((e) =>
                     (0, i.jsx)(
                         b.Z.Overlay,
@@ -108,7 +110,7 @@ function A(e) {
             (0, i.jsxs)(b.Z.Overlay, {
                 className: y.overlay,
                 children: [
-                    !F &&
+                    !U &&
                         (null == A ? void 0 : A.bio) != null &&
                         (null == A ? void 0 : A.bio) !== '' &&
                         (0, i.jsx)(I.Z, {
@@ -121,17 +123,17 @@ function A(e) {
                                 userId: t.id
                             })
                         }),
-                    (null == H ? void 0 : H.popularApplicationCommandIds) != null &&
+                    (null == B ? void 0 : B.popularApplicationCommandIds) != null &&
                         (0, i.jsx)(p.Z, {
-                            applicationId: H.id,
-                            commandIds: H.popularApplicationCommandIds,
+                            applicationId: B.id,
+                            commandIds: B.popularApplicationCommandIds,
                             channel: P
                         }),
-                    B &&
+                    D.length > 0 &&
                         (0, i.jsx)(I.Z, {
                             heading: j.intl.string(j.t['Uv/eT0']),
                             headingColor: 'header-primary',
-                            children: (0, i.jsx)(C.Z, { applicationIds: w })
+                            children: (0, i.jsx)(C.Z, { applicationIds: D })
                         }),
                     (0, i.jsx)(I.Z, {
                         heading: t.bot ? j.intl.string(j.t['A//N4u']) : j.intl.string(j.t.a6XYDw),
