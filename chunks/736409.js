@@ -73,6 +73,7 @@ let E = {
                                     children: [
                                         (0, i.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
+                                            color: 'header-primary',
                                             children: b.intl.string(b.t.drIYTU)
                                         }),
                                         (0, i.jsx)(s.rsf, {
