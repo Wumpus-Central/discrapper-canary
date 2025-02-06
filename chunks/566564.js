@@ -2,8 +2,8 @@ n.d(t, { Z: () => I }), n(47120), n(653041);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
-    s = n.n(i),
-    a = n(180650),
+    a = n.n(i),
+    s = n(180650),
     o = n(685816),
     d = n(442837),
     c = n(481060),
@@ -20,19 +20,20 @@ var r = n(200651),
     b = n(953655),
     k = n(548685),
     j = n(580914),
+    E = n(384067),
     L = n(215023),
-    E = n(388032),
+    T = n(388032),
     S = n(218142);
-let T = (e) => {
-        let { handleTransition: t, numVisibleItems: n, isFetchingCategories: i, tab: s } = e,
-            { noCache: a, includeUnpublished: d } = (0, v.Z)(),
+let B = (e) => {
+        let { handleTransition: t, numVisibleItems: n, isFetchingCategories: i, tab: a } = e,
+            { noCache: s, includeUnpublished: d } = (0, v.Z)(),
             {
                 isFetchingShopHome: c,
                 fetchShopHomeError: u,
                 shopBlocks: C,
                 refreshShopHome: h
-            } = (0, x.E)(s, {
-                noCache: a,
+            } = (0, x.E)(a, {
+                noCache: s,
                 includeUnpublished: d,
                 includeBundles: !0
             }),
@@ -101,6 +102,15 @@ let T = (e) => {
                                         },
                                         l
                                     );
+                                case o.z.WIDE_BANNER:
+                                    return (0, r.jsx)(
+                                        E.Z,
+                                        {
+                                            handleTransition: t,
+                                            wideBannerBlock: e
+                                        },
+                                        l
+                                    );
                                 default:
                                     return null;
                             }
@@ -118,26 +128,26 @@ let T = (e) => {
     I = (e) => {
         var t;
         let { isFullScreen: n, handleTransition: i, numVisibleItems: o, tab: x } = e,
-            { categories: I, isFetchingCategories: Z, fetchCategoriesError: y, fetchPurchasesError: B, claimError: F, refreshCategories: N } = (0, f.ZP)({ location: 'CollectiblesFeedShop' }),
-            P = null !== (t = null != y ? y : B) && void 0 !== t ? t : F,
-            A = Array.from(I.values()),
-            w = (0, d.e7)([u.default], () => u.default.getCurrentUser()),
+            { categories: E, isFetchingCategories: I, fetchCategoriesError: y, fetchPurchasesError: Z, claimError: F, refreshCategories: N } = (0, f.ZP)({ location: 'CollectiblesFeedShop' }),
+            w = null !== (t = null != y ? y : Z) && void 0 !== t ? t : F,
+            P = Array.from(E.values()),
+            A = (0, d.e7)([u.default], () => u.default.getCurrentUser()),
             O = (0, m.n)('CollectiblesFeedShop'),
-            R = (0, p.c)('CollectiblesFeedShop') && null != h.Z.getCategory(a.T.ROBERT),
+            R = (0, p.c)('CollectiblesFeedShop') && null != h.Z.getCategory(s.T.ROBERT),
             H = (0, g.b)('Collectibles Shop Button'),
             { noCache: M, includeUnpublished: V } = (0, v.Z)(),
-            D = A[0],
-            W = [A[1], h.Z.getCategory(R ? a.T.ROBERT : a.T.ANIME_V2)],
+            D = P[0],
+            W = [P[1], h.Z.getCategory(R ? s.T.ROBERT : s.T.ANIME_V2)],
             U = l.useCallback(() => {
                 N();
             }, [N]);
-        if (null == w) return null;
-        if (null != P) {
+        if (null == A) return null;
+        if (null != w) {
             let e = [];
-            null != y ? e.push('shop load fetch categories error: '.concat(P.message)) : null != B ? e.push('shop load fetch purchase error: '.concat(P.message)) : e.push('shop load claim error: '.concat(P.message)),
+            null != y ? e.push('shop load fetch categories error: '.concat(w.message)) : null != Z ? e.push('shop load fetch purchase error: '.concat(w.message)) : e.push('shop load claim error: '.concat(w.message)),
                 C.Z.captureMessage(e.join('\n'), {
                     tags: {
-                        isStaff: w.isStaff().toString(),
+                        isStaff: A.isStaff().toString(),
                         preloadEnabled: H.toString(),
                         disableCache: M.toString(),
                         includeUnpublished: V.toString()
@@ -152,31 +162,31 @@ let T = (e) => {
               })
             : (0, r.jsx)(r.Fragment, {
                   children: (0, r.jsx)('div', {
-                      className: s()(S.shop, { [S.shopFullscreen]: n }),
+                      className: a()(S.shop, { [S.shopFullscreen]: n }),
                       children: (0, r.jsxs)('div', {
-                          className: s()(S.content, S.mainContent),
+                          className: a()(S.content, S.mainContent),
                           children: [
                               O
-                                  ? (0, r.jsx)(T, {
+                                  ? (0, r.jsx)(B, {
                                         handleTransition: i,
                                         numVisibleItems: o,
-                                        isFetchingCategories: Z,
+                                        isFetchingCategories: I,
                                         tab: x
                                     })
                                   : (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(j.Z, {
-                                                isLoading: Z,
+                                                isLoading: I,
                                                 handleTransition: i,
                                                 category: D
                                             }),
                                             (0, r.jsx)(b.Z, {
-                                                isLoading: Z,
+                                                isLoading: I,
                                                 handleTransition: i,
                                                 categories: W
                                             }),
                                             (0, r.jsx)(k.Z, {
-                                                isLoading: Z,
+                                                isLoading: I,
                                                 numVisibleItems: o,
                                                 handleTransition: () => i('shop all top'),
                                                 rankedSkuIds: L.yo
@@ -189,7 +199,7 @@ let T = (e) => {
                                       children: [
                                           (0, r.jsx)(c.X6q, {
                                               variant: 'heading-md/semibold',
-                                              children: E.intl.string(E.t.Yr70c3)
+                                              children: T.intl.string(T.t.Yr70c3)
                                           }),
                                           (0, r.jsx)(c.zxk, {
                                               className: S.endOfFeedButton,
@@ -199,7 +209,7 @@ let T = (e) => {
                                               children: (0, r.jsx)(c.Text, {
                                                   variant: 'text-md/medium',
                                                   color: 'always-white',
-                                                  children: E.intl.string(E.t.AfrvRE)
+                                                  children: T.intl.string(T.t.AfrvRE)
                                               })
                                           })
                                       ]

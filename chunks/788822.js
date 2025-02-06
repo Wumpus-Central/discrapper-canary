@@ -3,8 +3,8 @@ var r = n(200651);
 n(192379);
 var l = n(120356),
     i = n.n(l),
-    s = n(622535),
-    a = n(481060),
+    a = n(622535),
+    s = n(481060),
     o = n(597688),
     d = n(884697),
     c = n(297651),
@@ -12,36 +12,44 @@ var l = n(120356),
     C = n(388032),
     h = n(218142);
 let p = (e) => {
-    var t, n, l, p;
-    let m,
-        { category: g, subblock: f, badgeText: x, handleTransition: _ } = e;
-    null != f && (m = null === (t = o.Z.getCategoryByStoreListingId(null == f ? void 0 : f.categoryStoreListingId)) || void 0 === t ? void 0 : t.skuId);
-    let v = null !== (n = null != m ? m : null == g ? void 0 : g.skuId) && void 0 !== n ? n : '',
-        { handleCardVisibilityChange: b } = (0, c.E)(v, 'home', 'marketing'),
-        k =
-            null !== (p = null == f ? void 0 : f.bannerUrl) && void 0 !== p
+    var t, n, l, p, m;
+    let g,
+        { category: f, subblock: x, badgeText: _, handleTransition: v } = e;
+    null != x && (g = null === (t = o.Z.getCategoryByStoreListingId(null == x ? void 0 : x.categoryStoreListingId)) || void 0 === t ? void 0 : t.skuId);
+    let b = null !== (n = null != g ? g : null == f ? void 0 : f.skuId) && void 0 !== n ? n : '',
+        { handleCardVisibilityChange: k } = (0, c.E)(b, 'home', 'marketing'),
+        j =
+            null !== (p = null == x ? void 0 : x.bannerUrl) && void 0 !== p
                 ? p
-                : (0, d.uV)(null !== (l = null == g ? void 0 : g.featuredBlock) && void 0 !== l ? l : '', {
+                : (0, d.uV)(null !== (l = null == f ? void 0 : f.featuredBlock) && void 0 !== l ? l : '', {
                       size: u.J0,
                       format: 'png'
                   });
-    return (0, r.jsx)(s.$, {
-        onChange: b,
+    return (0, r.jsx)(a.$, {
+        onChange: k,
         threshold: 0,
-        children: (0, r.jsxs)(a.P3F, {
+        children: (0, r.jsxs)(s.P3F, {
             className: i()(h.featuredBlock),
-            style: { backgroundImage: 'url('.concat(k, ')') },
-            onClick: () => _('shop marketing tile', v),
+            style: { backgroundImage: 'url('.concat(j, ')') },
+            onClick: () => v('shop marketing tile', b),
             children: [
-                null != x &&
-                    (0, r.jsx)(a.IGR, {
+                null != _ &&
+                    (0, r.jsx)(s.IGR, {
                         disableColor: !0,
-                        text: x,
+                        text: _,
                         className: h.featuredBlockBadge
                     }),
-                (0, r.jsx)(a.zxk, {
+                (null == x ? void 0 : x.bodyText) != null &&
+                    (0, r.jsx)(s.X6q, {
+                        lineClamp: 4,
+                        className: h.featuredBlockBodyText,
+                        style: { color: null !== (m = x.bannerTextColor) && void 0 !== m ? m : 'white' },
+                        variant: 'heading-lg/semibold',
+                        children: x.bodyText
+                    }),
+                (0, r.jsx)(s.zxk, {
                     className: h.featuredBlockButton,
-                    color: a.Ttl.WHITE,
+                    color: s.Ttl.WHITE,
                     onClick: () => {},
                     children: C.intl.string(C.t.jVcuVV)
                 })

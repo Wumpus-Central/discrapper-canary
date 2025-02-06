@@ -16,6 +16,7 @@ e.exports = {
     darker: 'darker__08415',
     featuredBlocksContainer: 'featuredBlocksContainer__08415',
     featuredBlock: 'featuredBlock__08415',
+    featuredBlockBodyText: 'featuredBlockBodyText__08415',
     featuredBlockBadge: 'featuredBlockBadge__08415',
     featuredBlockButton: 'featuredBlockButton__08415',
     heroBlock: 'heroBlock__08415',
@@ -38,5 +39,10 @@ e.exports = {
     endOfFeed: 'endOfFeed__08415',
     endOfFeedButton: 'endOfFeedButton__08415',
     skeleton: 'skeleton__08415',
-    skeletonBody: 'skeletonBody__08415'
+    skeletonBody: 'skeletonBody__08415',
+    bannerBlockContainer: 'bannerBlockContainer__08415',
+    wideBannerBackgroundImg: 'wideBannerBackgroundImg__08415',
+    wideBannerBlockButton: 'wideBannerBlockButton__08415',
+    wideBannerTextContainer: 'wideBannerTextContainer__08415',
+    wideBannerContentContainer: 'wideBannerContentContainer__08415'
 };
