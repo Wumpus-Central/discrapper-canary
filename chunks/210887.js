@@ -41,12 +41,12 @@ function R() {
     var e, t;
     if (__OVERLAY__) return I.BRd.DARK;
     if (d.Z.syncForcedColors && 'active' === d.Z.systemForcedColors && null != i) return i;
-    if (E.ZP.useSystemTheme === y.K.ON && null != i) return (0, _.i9)('ThemeStore') ? ((0, u.wj)(i) ? (null != A ? A : I.BRd.DARK) : I.BRd.LIGHT) : i;
+    if (E.ZP.useSystemTheme === y.K.ON && null != i) return (0, _.O_)('ThemeStore') ? ((0, u.wj)(i) ? (null != A ? A : I.BRd.DARK) : I.BRd.LIGHT) : i;
     let n = null === (e = g.Z.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
     if (null != n) return n;
     let r = null === (t = v.Z.settings.appearance) || void 0 === t ? void 0 : t.theme;
     if (null == r) return S;
-    if (!(0, _.i9)('ThemeStore')) return r === o.Q2.LIGHT ? I.BRd.LIGHT : I.BRd.DARK;
+    if (!(0, _.O_)('ThemeStore')) return r === o.Q2.LIGHT ? I.BRd.LIGHT : I.BRd.DARK;
     switch (r) {
         case o.Q2.DARK:
         case o.Q2.DARKER:

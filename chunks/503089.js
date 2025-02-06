@@ -106,20 +106,20 @@ class _ extends i.PureComponent {
             : ((this._intensity = E), !0);
     }
     renderSidebar(e) {
-        let { section: t, title: s } = this.props,
-            i = e.flatMap((e) => e.newIndicatorDismissibleContentTypes).filter((e) => null != e),
-            r = null != t ? t : e[0].section;
+        let { section: t, title: s, showUserSettingsSearch: i } = this.props,
+            r = e.flatMap((e) => e.newIndicatorDismissibleContentTypes).filter((e) => null != e),
+            o = null != t ? t : e[0].section;
         return (0, n.jsx)(u.ZP, {
-            contentTypes: i,
+            contentTypes: r,
             children: (t) => {
-                let { visibleContent: i } = t;
+                let { visibleContent: r } = t;
                 return (0, n.jsxs)(l.njP, {
-                    selectedItem: r,
+                    selectedItem: o,
                     onItemSelect: this.handleSetSection,
                     orientation: 'vertical',
                     'aria-label': s,
                     children: [
-                        (0, n.jsx)(f.Z, { style: b.searchBar }),
+                        i ? (0, n.jsx)(f.Z, { style: b.searchBar }) : null,
                         e.map((e, t) => {
                             if (null != e.tabPredicate && !e.tabPredicate()) return null;
                             switch (e.section) {
@@ -129,10 +129,10 @@ class _ extends i.PureComponent {
                                     return (0, n.jsx)(l.njP.Separator, {}, t);
                                 case h.ID.CUSTOM:
                                     var s;
-                                    let o = null !== (s = e.element) && void 0 !== s ? s : m.VqG;
-                                    return (0, n.jsx)(o, {}, t);
+                                    let i = null !== (s = e.element) && void 0 !== s ? s : m.VqG;
+                                    return (0, n.jsx)(i, {}, t);
                                 default:
-                                    return this.renderSettingsSectionTabBarItem(e, r === e.section, i);
+                                    return this.renderSettingsSectionTabBarItem(e, o === e.section, r);
                             }
                         })
                     ]
