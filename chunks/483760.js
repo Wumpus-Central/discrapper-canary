@@ -18,7 +18,8 @@ function d(e) {
                 m.map((e, t) => ({
                     name: e,
                     value: t,
-                    radioItemIconClassName: s()(c.multipleChoiceIcon, u)
+                    radioItemIconClassName: s()(c.multipleChoiceIcon, u),
+                    radioBarClassName: c.multipleChoiceItem
                 })),
             [m, u]
         );

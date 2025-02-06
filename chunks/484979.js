@@ -9,5 +9,6 @@ e.exports = {
     paragraphFieldBody: 'paragraphFieldBody__523ab',
     multipleChoiceIcon: 'multipleChoiceIcon__523ab',
     editableRequirementContainer: 'editableRequirementContainer__523ab',
-    multipleChoiceTitle: 'multipleChoiceTitle__523ab'
+    multipleChoiceTitle: 'multipleChoiceTitle__523ab',
+    multipleChoiceItem: 'multipleChoiceItem__523ab'
 };
