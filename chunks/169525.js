@@ -46,11 +46,12 @@ let E = (e, t) => {
     },
     y = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            { contentScanMetadata: i } = e;
+            i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            { contentScanMetadata: r } = e;
         if (t) {
-            if ((0, s.oh)(i)) return 'potential_explicit_content';
-            let { flags: e } = i;
-            if ((0, _.yE)(e, u.Cb.EXPLICIT) || a.ZP.get('obscure_blur_effect_enabled')) return 'explicit_content';
+            if (!i && (0, s.oh)(r)) return 'potential_explicit_content';
+            let e = null == r ? void 0 : r.flags;
+            if ((null != e && (0, _.yE)(e, u.Cb.EXPLICIT)) || a.ZP.get('obscure_blur_effect_enabled')) return 'explicit_content';
         }
         return n ? 'spoiler' : null;
     };

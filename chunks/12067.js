@@ -39,9 +39,10 @@ function v(e) {
                       srcToOnClickOverride: {},
                       srcToHandlePreloadImage: {}
                   };
-    function I(e, n) {
-        let l = e.originalItem;
-        return (0, a.lK)(l.media, n, l.spoiler);
+    function I(e, l) {
+        var t;
+        let i = e.originalItem;
+        return (0, a.lK)(i.media, l, i.spoiler, null !== (t = null == n ? void 0 : n.author.bot) && void 0 !== t && t);
     }
     let Z = e.items.map((e, l) => {
         let t = e.media,
