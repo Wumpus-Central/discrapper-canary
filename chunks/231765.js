@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(37234),
     d = n(607070),
     u = n(578361),
-    m = n(585483),
-    h = n(557177),
+    m = n(460181),
+    h = n(585483),
     g = n(57562),
     _ = n(955204),
     x = n(64078),
@@ -390,8 +390,8 @@ function V(e) {
             if (e.enabled && !1 === r.enabled) {
                 var t;
                 n(!0),
-                    (0, h.GN)('poggermode_enabled'),
-                    m.S.dispatch(T.CkL.SHAKE_APP, {
+                    (0, m.GN)('poggermode_enabled'),
+                    h.S.dispatch(T.CkL.SHAKE_APP, {
                         duration: 2000,
                         intensity: null !== (t = e.shakeIntensity) && void 0 !== t ? t : r.shakeIntensity
                     });
@@ -404,7 +404,7 @@ function V(e) {
             let i = u(r.screenshakeEnabled, e.screenshakeEnabled, r.enabled, e.enabled);
             if (1 === t && i) {
                 var s;
-                m.S.dispatch(T.CkL.SHAKE_APP, {
+                h.S.dispatch(T.CkL.SHAKE_APP, {
                     duration: 1000,
                     intensity: null !== (s = e.shakeIntensity) && void 0 !== s ? s : r.shakeIntensity
                 });

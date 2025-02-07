@@ -10,8 +10,8 @@ var l,
     d = n(5192),
     m = n(592125),
     h = n(19780),
-    f = n(594174),
-    g = n(979651),
+    g = n(594174),
+    f = n(979651),
     p = n(938475),
     v = n(981631),
     S = n(354459);
@@ -55,11 +55,11 @@ function N() {
         l = !1;
     return (
         T.forEach((e) => {
-            if (null != g.Z.getVoiceStateForChannel(t, e)) {
+            if (null != f.Z.getVoiceStateForChannel(t, e)) {
                 T.delete(e);
                 return;
             }
-            let i = f.default.getUser(e);
+            let i = g.default.getUser(e);
             null != i && ((l = !0), T.delete(e), Z(i, n, t));
         }),
         l
@@ -70,7 +70,7 @@ function E() {
 }
 class C extends (l = a.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, f.default, m.Z, h.Z), this.syncWith([f.default], N);
+        this.waitFor(f.Z, g.default, m.Z, h.Z), this.syncWith([g.default], N);
     }
     get desyncedVoiceStatesCount() {
         return I.size();
@@ -120,8 +120,8 @@ let A = new C(o.Z, {
         return (
             i === s.Yn.DEFAULT &&
             t.reduce((e, t) => {
-                if (null != g.Z.getVoiceStateForChannel(l, t)) return e;
-                let i = f.default.getUser(t);
+                if (null != f.Z.getVoiceStateForChannel(l, t)) return e;
+                let i = g.default.getUser(t);
                 return null == i ? (T.add(t), e) : (Z(i, n, l), !0);
             }, !1)
         );

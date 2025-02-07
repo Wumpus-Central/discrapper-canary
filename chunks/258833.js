@@ -1,13 +1,13 @@
 n.d(t, { Z: () => I }), n(47120);
 var i = n(147913),
-    r = n(474873),
-    a = n(523746),
-    s = n(592125),
-    o = n(292959),
-    l = n(246946),
-    u = n(979651),
-    c = n(938475),
-    d = n(557177);
+    r = n(460181),
+    a = n(474873),
+    s = n(523746),
+    o = n(592125),
+    l = n(292959),
+    u = n(246946),
+    c = n(979651),
+    d = n(938475);
 function f(e, t) {
     if (t.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
 }
@@ -38,11 +38,11 @@ function g(e, t, n) {
         e
     );
 }
-let E = (0, d.uk)('call_calling', r.Z.getSoundpack());
+let E = (0, r.uk)('call_calling', a.Z.getSoundpack());
 var v = new WeakMap();
 class y extends i.Z {
     _initialize() {
-        this.stores = new Map().set(a.Z, this.handleRingUpdate).set(o.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(r.Z, this.handleSoundpackUpdate);
+        this.stores = new Map().set(s.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(c.Z, this.handleRingUpdate).set(a.Z, this.handleSoundpackUpdate);
     }
     constructor(...e) {
         super(...e),
@@ -55,16 +55,16 @@ class y extends i.Z {
                 GUILD_RING_STOP: (e) => this.handleGuildRingStop(e)
             }),
             g(this, '_handleRing', (e, t) => {
-                let n = u.Z.getCurrentClientVoiceChannelId(t),
-                    i = s.Z.getChannel(n),
-                    r = null != n && (null == i ? void 0 : i.guild_id) == null && c.ZP.countVoiceStatesForChannel(n) >= 2;
-                null == n || r || !e || o.Z.isSoundDisabled('call_calling') || l.Z.disableSounds ? E.stop() : E.loop();
+                let n = c.Z.getCurrentClientVoiceChannelId(t),
+                    i = o.Z.getChannel(n),
+                    r = null != n && (null == i ? void 0 : i.guild_id) == null && d.ZP.countVoiceStatesForChannel(n) >= 2;
+                null == n || r || !e || l.Z.isSoundDisabled('call_calling') || u.Z.disableSounds ? E.stop() : E.loop();
             }),
             g(this, 'handleSoundpackUpdate', () => {
-                E.stop(), (E = (0, d.uk)('call_calling', r.Z.getSoundpack()));
+                E.stop(), (E = (0, r.uk)('call_calling', a.Z.getSoundpack()));
             }),
             g(this, 'handleRingUpdate', () => {
-                let e = a.Z.getCalls().some((e) => e.ringing.length > 0 && u.Z.getCurrentClientVoiceChannelId(null) === e.channelId);
+                let e = s.Z.getCalls().some((e) => e.ringing.length > 0 && c.Z.getCurrentClientVoiceChannelId(null) === e.channelId);
                 this._handleRing(e, null);
             }),
             g(this, 'handleGuildRingStart', (e) => {

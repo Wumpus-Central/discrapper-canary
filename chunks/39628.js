@@ -36,14 +36,14 @@ function m(e) {
 function h(e) {
     return String(e).padStart(2, '0');
 }
-function f(e) {
+function g(e) {
     let { time: t, padLargestUnit: n } = e,
         l = Math.floor(t) % 60,
         i = Math.floor(t / 60) % 60,
         r = Math.floor(t / 3600);
     return 0 === r ? (n ? ''.concat(h(i), ':').concat(h(l)) : ''.concat(i, ':').concat(h(l))) : n ? ''.concat(h(r), ':').concat(h(i), ':').concat(h(l)) : ''.concat(r, ':').concat(h(i), ':').concat(h(l));
 }
-class g extends (l = r.PureComponent) {
+class f extends (l = r.PureComponent) {
     componentDidMount() {
         this.timer.start(500, () => {
             this.setState({ now: Date.now() });
@@ -63,7 +63,7 @@ class g extends (l = r.PureComponent) {
                   children: [
                       (0, i.jsx)('div', {
                           className: c.textLeftInSingleLine,
-                          children: f({
+                          children: g({
                               time: d,
                               padLargestUnit: !0
                           })
@@ -77,7 +77,7 @@ class g extends (l = r.PureComponent) {
                       }),
                       (0, i.jsx)('div', {
                           className: c.textRight,
-                          children: f({
+                          children: g({
                               time: o,
                               padLargestUnit: !0
                           })
@@ -96,7 +96,7 @@ class g extends (l = r.PureComponent) {
                               (0, i.jsx)(u.Z.Child, {
                                   grow: 1,
                                   className: c.textLeft,
-                                  children: f({
+                                  children: g({
                                       time: d,
                                       padLargestUnit: !1
                                   })
@@ -104,7 +104,7 @@ class g extends (l = r.PureComponent) {
                               (0, i.jsx)(u.Z.Child, {
                                   grow: 0,
                                   className: c.textRight,
-                                  children: f({
+                                  children: g({
                                       time: o,
                                       padLargestUnit: !1
                                   })
@@ -118,5 +118,5 @@ class g extends (l = r.PureComponent) {
         super(...e), d(this, 'timer', new o.Xp()), d(this, 'state', { now: Date.now() });
     }
 }
-d(g, 'defaultProps', { themed: !1 });
-let p = g;
+d(f, 'defaultProps', { themed: !1 });
+let p = f;

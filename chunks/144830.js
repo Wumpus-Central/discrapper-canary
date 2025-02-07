@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(411104), n(47120);
+n.d(t, { Z: () => f }), n(411104), n(47120);
 var l,
     i,
     r = n(200651),
@@ -28,7 +28,7 @@ let h = (e) => (t, n) =>
                   time: t,
                   ...n
               }),
-    f = {
+    g = {
         ACTIVITY_FEED: {
             START: {
                 [s.J6.SECONDS]: () => u.intl.string(u.t.ahzZr6),
@@ -98,7 +98,7 @@ let h = (e) => (t, n) =>
             }
         }
     };
-function g(e) {
+function f(e) {
     var t, n;
     return (
         (n = class extends (t = a.PureComponent) {
@@ -122,7 +122,7 @@ function g(e) {
             getTimeUnit(e, t, n) {
                 let l = (0, s.jU)(e, (e) =>
                     (function (e, t, n) {
-                        let l = f[n];
+                        let l = g[n];
                         if (null != l) {
                             let n = l[t];
                             if (null != n) return null != n[e];
@@ -143,7 +143,7 @@ function g(e) {
                     o = this.getType();
                 if (null == o) return null;
                 let u = this.getTimeUnit(a, t, o),
-                    c = f[t][o];
+                    c = g[t][o];
                 if (null == c) return null;
                 let d = c[u],
                     m = Math.floor((0, s.A3)(a, u));

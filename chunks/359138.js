@@ -11,7 +11,7 @@ function u() {
     let e = o.Z.getCameraComponent(),
         t = (0, r.e7)([o.Z], () => o.Z.getVideoDeviceId()),
         [n, u] = s.useState(!1),
-        m = (0, r.e7)([o.Z], () => Object.values(o.Z.getVideoDevices()).length > 0);
+        m = (0, r.e7)([o.Z], () => o.Z.isVideoAvailable());
     return n
         ? (0, i.jsx)('div', {
               className: d.cameraWrapper,

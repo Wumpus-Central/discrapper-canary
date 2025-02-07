@@ -1,7 +1,7 @@
 n.d(t, {
     b6: () => h,
-    j3: () => f,
-    xC: () => g
+    j3: () => g,
+    xC: () => f
 }),
     n(47120);
 var l = n(866442),
@@ -38,7 +38,7 @@ let c = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
         let t = d(e);
         return t.hours > 0 ? ''.concat(t.hours, ' hours') : t.minutes > 0 ? ''.concat(t.minutes, ' minutes') : ''.concat(t.seconds, ' seconds');
     },
-    f = (e, t) => {
+    g = (e, t) => {
         var n;
         let i = s.Z.getUserProfile(e.id),
             [r, o] = null !== (n = null == i ? void 0 : i.themeColors) && void 0 !== n ? n : [],
@@ -49,7 +49,7 @@ let c = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
             theme: c === t ? 'dark' : u
         };
     },
-    g = (e, t) =>
+    f = (e, t) =>
         (0, i.Z)(t)
             ? u.intl.formatToPlainString(u.t.Xuqn4e, {
                   username: e.username,

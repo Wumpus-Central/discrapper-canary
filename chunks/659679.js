@@ -1,50 +1,50 @@
-n.d(i, { Z: () => m });
-var t = n(200651),
-    a = n(192379),
-    r = n(793030),
-    o = n(442837),
-    s = n(481060),
-    c = n(834129),
-    l = n(271383),
-    d = n(709586),
-    u = n(388032),
-    p = n(808524);
-function m(e) {
-    var i;
-    let { boost: n } = e,
-        { username: m, roleColor: x } = (0, o.cj)(
+i.d(n, { Z: () => p });
+var t = i(200651),
+    a = i(192379),
+    r = i(793030),
+    o = i(442837),
+    s = i(481060),
+    c = i(834129),
+    l = i(271383),
+    d = i(709586),
+    u = i(388032),
+    m = i(808524);
+function p(e) {
+    var n;
+    let { boost: i } = e,
+        { username: p, roleColor: x } = (0, o.cj)(
             [l.ZP],
             () => {
-                var e, i, t;
+                var e, n, t;
                 return {
-                    username: null !== (t = l.ZP.getNick(n.guildId, n.userId)) && void 0 !== t ? t : null === (e = n.user) || void 0 === e ? void 0 : e.username,
-                    roleColor: null === (i = l.ZP.getMember(n.guildId, n.userId)) || void 0 === i ? void 0 : i.colorString
+                    username: null !== (t = l.ZP.getNick(i.guildId, i.userId)) && void 0 !== t ? t : null === (e = i.user) || void 0 === e ? void 0 : e.username,
+                    roleColor: null === (n = l.ZP.getMember(i.guildId, i.userId)) || void 0 === n ? void 0 : n.colorString
                 };
             },
-            [n]
+            [i]
         ),
         v = a.useCallback(
             () =>
                 (0, t.jsx)(s.PUh, {
-                    name: m,
+                    name: p,
                     color: null != x ? x : void 0
                 }),
-            [m, x]
+            [p, x]
         );
     return (0, t.jsx)(c.Z, {
-        className: p.textContainer,
+        className: m.textContainer,
         iconNode: (0, t.jsx)(d.Z, {
-            className: p.icon,
+            className: m.icon,
             width: 16,
             height: 16
         }),
-        iconContainerClassName: p.iconContainer,
-        timestamp: null !== (i = n.endsAt) && void 0 !== i ? i : void 0,
+        iconContainerClassName: m.iconContainer,
+        timestamp: null !== (n = i.endsAt) && void 0 !== n ? n : void 0,
         compact: !0,
         children: (0, t.jsx)(r.xv, {
             variant: 'text-md/semibold',
             children: u.intl.format(u.t['57St//'], {
-                username: m,
+                username: p,
                 usernameHook: v
             })
         })

@@ -17,8 +17,8 @@ var l = n(200651),
     d = n(367907),
     m = n(682901),
     h = n(194082),
-    f = n(282256),
-    g = n(925329),
+    g = n(282256),
+    f = n(925329),
     p = n(648384),
     v = n(592125),
     S = n(574254),
@@ -40,7 +40,7 @@ let j = (e) => {
     });
 };
 function P(e) {
-    let { className: t, mute: n, localMute: i, localVideoDisabled: r, serverMute: o, deaf: u, serverDeaf: d, collapsed: m, video: f, isStreaming: g, disabled: p, isWatching: v, iconClassName: S, embeddedApplication: Z, otherClientSessionType: j, voicePlatform: P, application: b, guildId: R, channelId: L, user: M, disconnected: O } = e;
+    let { className: t, mute: n, localMute: i, localVideoDisabled: r, serverMute: o, deaf: u, serverDeaf: d, collapsed: m, video: g, isStreaming: f, disabled: p, isWatching: v, iconClassName: S, embeddedApplication: Z, otherClientSessionType: j, voicePlatform: P, application: b, guildId: R, channelId: L, user: M, disconnected: O } = e;
     if (m || p) return null;
     let U = [],
         D = (0, l.jsx)(_, {
@@ -51,7 +51,7 @@ function P(e) {
             deaf: u,
             serverDeaf: d
         });
-    f &&
+    g &&
         (r
             ? U.push(
                   (0, l.jsx)(
@@ -137,7 +137,7 @@ function P(e) {
                       'playstation'
                   )
               ),
-        g
+        f
             ? U.push(
                   (0, l.jsx)(
                       'div',
@@ -194,7 +194,7 @@ function P(e) {
 }
 let b = function (e) {
     let { avatarContainerClass: t = A.avatarContainer, userNameClassName: n = A.usernameFont, size: r = y.ipw.SMALL, selected: o = !1, disabled: c = !1, isOverlay: d = !1, ...h } = e,
-        { onClick: g, onKeyDown: I, onDoubleClick: x, onContextMenu: T, onMouseEnter: N, onMouseLeave: E, onMouseDown: j, priority: b, speaking: w, collapsed: _, mute: R, serverMute: L, guildId: M, nick: O, isGuest: U, flipped: D, className: k, overlap: G, 'aria-label': Y, tabIndex: z, ringing: F, user: B, channelId: V } = h,
+        { onClick: f, onKeyDown: I, onDoubleClick: x, onContextMenu: T, onMouseEnter: N, onMouseLeave: E, onMouseDown: j, priority: b, speaking: w, collapsed: _, mute: R, serverMute: L, guildId: M, nick: O, isGuest: U, flipped: D, className: k, overlap: G, 'aria-label': Y, tabIndex: z, ringing: F, user: B, channelId: V } = h,
         W = (0, u.bp)(),
         J = null != V ? v.Z.getChannel(V) : null,
         { enabled: H } = (0, m.Z)({ location: 'VoiceUser' }),
@@ -213,14 +213,14 @@ let b = function (e) {
                 [A.voiceUser]: !0,
                 [A.overlap]: G,
                 [A.selected]: o,
-                [A.clickable]: null != g,
+                [A.clickable]: null != f,
                 [A.userSmall]: r === y.ipw.SMALL,
                 [A.userLarge]: r === y.ipw.LARGE,
                 [A.disabled]: !o && c,
                 [A.ringing]: F
             }),
             onClick: (e) => {
-                null == g || g(e, B);
+                null == f || f(e, B);
             },
             onDoubleClick: (e) => {
                 null == x || x(e, B);
@@ -288,7 +288,7 @@ let b = function (e) {
                             };
                         return !_ || d
                             ? (0, l.jsx)(l.Fragment, {
-                                  children: (0, l.jsx)(f.Z, {
+                                  children: (0, l.jsx)(g.Z, {
                                       ...t,
                                       children: e
                                   })
@@ -320,7 +320,7 @@ let b = function (e) {
 function w(e) {
     let { application: t, iconClassName: n, guildId: r, channelId: u, userId: c } = e,
         [m, h] = i.useState(!1),
-        f = (0, o.O)((e) => h(e));
+        g = (0, o.O)((e) => h(e));
     return (
         i.useEffect(() => {
             m &&
@@ -335,11 +335,11 @@ function w(e) {
             'aria-label': C.intl.formatToPlainString(C.t.Sq9xJy, { game: t.name }),
             className: A.iconSpacing,
             children: (0, l.jsx)('div', {
-                ref: f,
-                children: (0, l.jsx)(g.Z, {
+                ref: g,
+                children: (0, l.jsx)(f.Z, {
                     className: a()(A.icon, n),
                     game: t,
-                    size: g.Z.Sizes.XSMALL,
+                    size: f.Z.Sizes.XSMALL,
                     onMouseEnter: () => {
                         d.ZP.trackWithMetadata(y.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
                             channel_id: u,

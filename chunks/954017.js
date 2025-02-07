@@ -13,14 +13,14 @@ var l = n(512722),
     d = n(90712),
     m = n(592125),
     h = n(81063),
-    f = n(201133),
-    g = n(55000),
+    g = n(201133),
+    f = n(55000),
     p = n(314091),
     v = n(981631);
 let S = async (e) => {
         let { reaction: t, altText: n, ...l } = e,
             i = await T(l);
-        (0, f.a)({
+        (0, g.a)({
             file: i,
             altText: n,
             user: l.user,
@@ -33,7 +33,7 @@ let S = async (e) => {
             s = await r.Z.openPrivateChannel(l.user.id, !1, !1),
             o = m.Z.getChannel(s);
         i()(null != o, 'Channel cannot be null'),
-            (0, f.B)({
+            (0, g.B)({
                 file: a,
                 altText: n,
                 channel: o,
@@ -48,9 +48,9 @@ let S = async (e) => {
             { assets: o, application_id: u } = t,
             c = (0, h.getAssetImage)(u, null == o ? void 0 : o.large_image, 64),
             m = null == l ? void 0 : l.getIconURL(64),
-            f = null != s ? (a ? s.icon.darkPNG : s.icon.lightPNG) : t.type === v.IIU.PLAYING ? (a ? n(414575) : n(807612)) : null;
+            g = null != s ? (a ? s.icon.darkPNG : s.icon.lightPNG) : t.type === v.IIU.PLAYING ? (a ? n(414575) : n(807612)) : null;
         return {
-            ...(null != f && { Platform: f }),
+            ...(null != g && { Platform: g }),
             ...(null != c && { AssetImage: c.includes('http') ? c : n(869469)(c) }),
             ...(null != m && { ApplicationImage: m })
         };
@@ -73,12 +73,12 @@ let S = async (e) => {
                         e.drawImage(
                             'Platform',
                             {
-                                x: g.En - g.o3 - g.ez,
-                                y: g.o3
+                                x: f.En - f.o3 - f.ez,
+                                y: f.o3
                             },
                             {
-                                w: g.ez,
-                                h: g.ez
+                                w: f.ez,
+                                h: f.ez
                             }
                         );
             },
@@ -94,10 +94,10 @@ let S = async (e) => {
     Z = (e, t) => {
         e.setColor('dark' === t ? 'white' : 'black'),
             e.drawPath(
-                g.Cv,
+                f.Cv,
                 {
-                    x: g.o3,
-                    y: g.o3
+                    x: f.o3,
+                    y: f.o3
                 },
                 !0,
                 2 + 2 / 3
@@ -106,8 +106,8 @@ let S = async (e) => {
     y = (e, t, n) => {
         var l, i, r;
         e.setSize({
-            w: g.En,
-            h: g.dI
+            w: f.En,
+            h: f.dI
         });
         let { color: a, theme: s } = (0, p.j3)(n, 'black');
         e.setColor(a),
@@ -115,8 +115,8 @@ let S = async (e) => {
                 {
                     x: 0,
                     y: 0,
-                    h: g.dI,
-                    w: g.En
+                    h: f.dI,
+                    w: f.En
                 },
                 8,
                 !0
@@ -126,8 +126,8 @@ let S = async (e) => {
                 {
                     x: 0,
                     y: 0,
-                    h: g.dI,
-                    w: g.En
+                    h: f.dI,
+                    w: f.En
                 },
                 8,
                 !0
@@ -136,12 +136,12 @@ let S = async (e) => {
                 ? e.drawRoundedImage(
                       'AssetImage',
                       {
-                          x: g.o3,
-                          y: g.o3
+                          x: f.o3,
+                          y: f.o3
                       },
                       {
-                          w: g.vS,
-                          h: g.vS
+                          w: f.vS,
+                          h: f.vS
                       },
                       8
                   )
@@ -149,17 +149,17 @@ let S = async (e) => {
                   ? e.drawRoundedImage(
                         'ApplicationImage',
                         {
-                            x: g.o3,
-                            y: g.o3
+                            x: f.o3,
+                            y: f.o3
                         },
                         {
-                            w: g.vS,
-                            h: g.vS
+                            w: f.vS,
+                            h: f.vS
                         },
                         8
                     )
                   : Z(e, s);
-        let o = g.vS + g.o3 + g.sB;
+        let o = f.vS + f.o3 + f.sB;
         e.setColor('dark' === s ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
                 size: 16,
@@ -170,8 +170,8 @@ let S = async (e) => {
                 ''.concat(t.name),
                 {
                     x: o,
-                    y: g.SG + 1 * g.Nv,
-                    w: (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has(g.W3.Platform)) ? g.ee : g.sp
+                    y: f.SG + 1 * f.Nv,
+                    w: (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has(f.W3.Platform)) ? f.ee : f.sp
                 },
                 !0
             ),
@@ -184,7 +184,7 @@ let S = async (e) => {
                     'for '.concat((0, p.b6)(t.timestamps)),
                     {
                         x: o,
-                        y: g.SG + 2 * g.Nv
+                        y: f.SG + 2 * f.Nv
                     },
                     !0
                 ));
@@ -192,8 +192,8 @@ let S = async (e) => {
     N = (e, t, n) => {
         var l, i;
         e.setSize({
-            w: g.En,
-            h: g.dI
+            w: f.En,
+            h: f.dI
         });
         let { color: r, theme: a } = (0, p.j3)(n, 'black');
         e.setColor(r),
@@ -201,8 +201,8 @@ let S = async (e) => {
                 {
                     x: 0,
                     y: 0,
-                    h: g.dI,
-                    w: g.En
+                    h: f.dI,
+                    w: f.En
                 },
                 8,
                 !0
@@ -212,8 +212,8 @@ let S = async (e) => {
                 {
                     x: 0,
                     y: 0,
-                    h: g.dI,
-                    w: g.En
+                    h: f.dI,
+                    w: f.En
                 },
                 8,
                 !0
@@ -222,16 +222,16 @@ let S = async (e) => {
                 e.drawRoundedImage(
                     'AssetImage',
                     {
-                        x: g.o3,
-                        y: g.o3
+                        x: f.o3,
+                        y: f.o3
                     },
                     {
-                        w: g.vS,
-                        h: g.vS
+                        w: f.vS,
+                        h: f.vS
                     },
                     8
                 );
-        let s = g.vS + g.o3 + g.sB;
+        let s = f.vS + f.o3 + f.sB;
         e.setColor('dark' === a ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
                 size: 14,
@@ -242,8 +242,8 @@ let S = async (e) => {
                 ''.concat(t.details),
                 {
                     x: s,
-                    y: g.SG + 1 * g.Nv,
-                    w: (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has(g.W3.Platform)) ? g.ee : g.sp
+                    y: f.SG + 1 * f.Nv,
+                    w: (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has(f.W3.Platform)) ? f.ee : f.sp
                 },
                 !0
             ),
@@ -255,7 +255,7 @@ let S = async (e) => {
                 'by '.concat(t.state),
                 {
                     x: s,
-                    y: g.SG + 2 * g.Nv
+                    y: f.SG + 2 * f.Nv
                 },
                 !0
             );
@@ -263,8 +263,8 @@ let S = async (e) => {
     E = (e, t, n) => {
         var l;
         e.setSize({
-            w: g.En,
-            h: g.dI
+            w: f.En,
+            h: f.dI
         });
         let { color: i, theme: r } = (0, p.j3)(n, 'black');
         e.setColor(i),
@@ -272,8 +272,8 @@ let S = async (e) => {
                 {
                     x: 0,
                     y: 0,
-                    h: g.dI,
-                    w: g.En
+                    h: f.dI,
+                    w: f.En
                 },
                 8,
                 !0
@@ -283,8 +283,8 @@ let S = async (e) => {
                 {
                     x: 0,
                     y: 0,
-                    h: g.dI,
-                    w: g.En
+                    h: f.dI,
+                    w: f.En
                 },
                 8,
                 !0
@@ -293,25 +293,25 @@ let S = async (e) => {
             e.drawRoundedImage(
                 'AssetImage',
                 {
-                    x: g.o3,
-                    y: g.o3
+                    x: f.o3,
+                    y: f.o3
                 },
                 {
-                    w: g.vS,
-                    h: g.vS
+                    w: f.vS,
+                    h: f.vS
                 },
                 8
             ) === u.vP.Failure &&
                 e.drawPath(
-                    g.Cv,
+                    f.Cv,
                     {
-                        x: g.o3,
-                        y: g.o3
+                        x: f.o3,
+                        y: f.o3
                     },
                     !0,
                     2 + 2 / 3
                 );
-        let a = g.vS + g.o3 + g.sB;
+        let a = f.vS + f.o3 + f.sB;
         e.setColor('dark' === r ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
                 size: 14,
@@ -322,8 +322,8 @@ let S = async (e) => {
                 ''.concat(t.details),
                 {
                     x: a,
-                    y: g.SG + 1 * g.Nv,
-                    w: (null === (l = e.assetMap) || void 0 === l ? void 0 : l.has('Platform')) ? g.ee : g.sp
+                    y: f.SG + 1 * f.Nv,
+                    w: (null === (l = e.assetMap) || void 0 === l ? void 0 : l.has('Platform')) ? f.ee : f.sp
                 },
                 !0
             ),
@@ -335,7 +335,7 @@ let S = async (e) => {
                 ''.concat(t.state),
                 {
                     x: a,
-                    y: g.SG + 2 * g.Nv
+                    y: f.SG + 2 * f.Nv
                 },
                 !0
             );
@@ -343,8 +343,8 @@ let S = async (e) => {
     C = (e, t, n) => {
         var l, i, r;
         e.setSize({
-            w: g.En,
-            h: g.dI
+            w: f.En,
+            h: f.dI
         });
         let { color: a, theme: s } = (0, p.j3)(n, 'black');
         e.setColor(a),
@@ -352,8 +352,8 @@ let S = async (e) => {
                 {
                     x: 0,
                     y: 0,
-                    h: g.dI,
-                    w: g.En
+                    h: f.dI,
+                    w: f.En
                 },
                 8,
                 !0
@@ -363,8 +363,8 @@ let S = async (e) => {
                 {
                     x: 0,
                     y: 0,
-                    h: g.dI,
-                    w: g.En
+                    h: f.dI,
+                    w: f.En
                 },
                 8,
                 !0
@@ -373,12 +373,12 @@ let S = async (e) => {
                 ? e.drawRoundedImage(
                       'AssetImage',
                       {
-                          x: g.o3,
-                          y: g.o3
+                          x: f.o3,
+                          y: f.o3
                       },
                       {
-                          w: g.vS,
-                          h: g.vS
+                          w: f.vS,
+                          h: f.vS
                       },
                       8
                   )
@@ -386,17 +386,17 @@ let S = async (e) => {
                   ? e.drawRoundedImage(
                         'ApplicationImage',
                         {
-                            x: g.o3,
-                            y: g.o3
+                            x: f.o3,
+                            y: f.o3
                         },
                         {
-                            w: g.vS,
-                            h: g.vS
+                            w: f.vS,
+                            h: f.vS
                         },
                         8
                     )
                   : Z(e, s);
-        let o = g.vS + g.o3 + g.sB;
+        let o = f.vS + f.o3 + f.sB;
         e.setColor('dark' === s ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
                 size: 16,
@@ -407,8 +407,8 @@ let S = async (e) => {
                 'Streaming '.concat(t.name),
                 {
                     x: o,
-                    y: g.SG + g.Nv * (null != t.timestamps ? 1 : 1.5),
-                    w: (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has(g.W3.Platform)) ? g.ee : g.sp
+                    y: f.SG + f.Nv * (null != t.timestamps ? 1 : 1.5),
+                    w: (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has(f.W3.Platform)) ? f.ee : f.sp
                 },
                 !0
             ),
@@ -421,7 +421,7 @@ let S = async (e) => {
                     'for '.concat((0, p.b6)(t.timestamps)),
                     {
                         x: o,
-                        y: g.SG + 2 * g.Nv
+                        y: f.SG + 2 * f.Nv
                     },
                     !0
                 ));

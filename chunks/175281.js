@@ -15,8 +15,8 @@ var i = n(200651),
     I = n(951483),
     m = n(714338),
     T = n(607070),
-    C = n(585483),
-    N = n(557177),
+    C = n(460181),
+    N = n(585483),
     g = n(264549),
     S = n(981631),
     f = n(388032),
@@ -35,10 +35,10 @@ function A(e, t, n) {
     );
 }
 let O = {
-    UP: d().throttle(() => (0, N.GN)('ddr-up'), 100),
-    DOWN: d().throttle(() => (0, N.GN)('ddr-down'), 100),
-    LEFT: d().throttle(() => (0, N.GN)('ddr-left'), 100),
-    RIGHT: d().throttle(() => (0, N.GN)('ddr-right'), 100)
+    UP: d().throttle(() => (0, C.GN)('ddr-up'), 100),
+    DOWN: d().throttle(() => (0, C.GN)('ddr-down'), 100),
+    LEFT: d().throttle(() => (0, C.GN)('ddr-left'), 100),
+    RIGHT: d().throttle(() => (0, C.GN)('ddr-right'), 100)
 };
 function L(e) {
     switch (e.keyCode) {
@@ -139,10 +139,10 @@ function b() {
 }
 class D extends l.PureComponent {
     componentDidMount() {
-        (this.lastInputedKeys = []), C.S.subscribe(S.CkL.SCROLL_PAGE_UP, this.scrollPageUp), C.S.subscribe(S.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
+        (this.lastInputedKeys = []), N.S.subscribe(S.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.subscribe(S.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
     componentWillUnmount() {
-        C.S.unsubscribe(S.CkL.SCROLL_PAGE_UP, this.scrollPageUp), C.S.unsubscribe(S.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
+        N.S.unsubscribe(S.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.unsubscribe(S.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
     render() {
         let { UP: e, DOWN: t, LEFT: n, RIGHT: l } = this.state;

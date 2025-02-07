@@ -12,12 +12,12 @@ var i = n(200651),
     m = n(607070),
     p = n(38618),
     g = n(197344),
-    _ = n(474873),
-    f = n(706454),
-    E = n(215427),
-    I = n(820254),
-    C = n(358085),
-    v = n(557177),
+    _ = n(460181),
+    f = n(474873),
+    E = n(706454),
+    I = n(215427),
+    C = n(820254),
+    v = n(358085),
     N = n(998502),
     T = n(905656),
     S = n(981631),
@@ -39,7 +39,7 @@ function A(e, t, n) {
 class b extends l.PureComponent {
     createSound() {
         let { soundpack: e } = this.props,
-            t = (0, v.uk)('discodo', e);
+            t = (0, _.uk)('discodo', e);
         return (t.volume = 1), t;
     }
     componentDidMount() {
@@ -138,7 +138,7 @@ class b extends l.PureComponent {
                                             className: x.statusLink,
                                             href: S.yXt.STATUS,
                                             target: '_blank',
-                                            children: [(0, i.jsx)(I.Z, { className: x.icon }), Z.intl.string(Z.t.AgXXy8)]
+                                            children: [(0, i.jsx)(C.Z, { className: x.icon }), Z.intl.string(Z.t.AgXXy8)]
                                         })
                                     ]
                                 })
@@ -338,7 +338,7 @@ class b extends l.PureComponent {
                                 )
                         })
                     ];
-                    return f.default.locale.startsWith('en-') && e.push(Z.intl.string(Z.t.dQ9Wqq)), e[o().random(e.length - 1)];
+                    return E.default.locale.startsWith('en-') && e.push(Z.intl.string(Z.t.dQ9Wqq)), e[o().random(e.length - 1)];
                 })()
             ),
             A(
@@ -350,7 +350,7 @@ class b extends l.PureComponent {
                 })()
             ),
             A(this, 'handleReady', () => {
-                this.setState({ ready: !0 }), (0, C.isDesktop)() && (N.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), N.ZP.send('UPDATE_OPEN_ON_STARTUP'));
+                this.setState({ ready: !0 }), (0, v.isDesktop)() && (N.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), N.ZP.send('UPDATE_OPEN_ON_STARTUP'));
             }),
             A(this, 'setVideoRef', (e) => {
                 this.videoRef = e;
@@ -371,11 +371,11 @@ class b extends l.PureComponent {
             (this._connectedSound.volume = 1);
     }
 }
-let L = c.ZP.connectStores([p.Z, E.Z, _.Z, m.Z], () => ({
+let L = c.ZP.connectStores([p.Z, I.Z, f.Z, m.Z], () => ({
     isTryingToConnect: p.Z.isTryingToConnect(),
     connected: p.Z.isConnected(),
-    incident: E.Z.getIncident(),
-    soundpack: _.Z.getSoundpack(),
+    incident: I.Z.getIncident(),
+    soundpack: f.Z.getSoundpack(),
     reducedMotion: m.Z.useReducedMotion
 }))((e) => {
     let { isTryingToConnect: t, connected: n, incident: l, soundpack: r, reducedMotion: a } = e;

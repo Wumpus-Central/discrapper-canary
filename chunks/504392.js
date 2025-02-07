@@ -1,19 +1,19 @@
-n.r(i), n.d(i, { default: () => m });
-var t = n(200651);
-n(192379);
-var a = n(481060),
-    r = n(413335),
-    o = n(984370),
-    s = n(166351),
-    c = n(460608),
-    l = n(953476),
-    d = n(291775),
-    u = n(388032),
-    p = n(77598);
-function m(e) {
-    let { guildId: i } = e;
+i.r(n), i.d(n, { default: () => p });
+var t = i(200651);
+i(192379);
+var a = i(481060),
+    r = i(413335),
+    o = i(984370),
+    s = i(166351),
+    c = i(460608),
+    l = i(953476),
+    d = i(291775),
+    u = i(388032),
+    m = i(77598);
+function p(e) {
+    let { guildId: n } = e;
     return (0, t.jsxs)('div', {
-        className: p.container,
+        className: m.container,
         children: [
             (0, t.jsxs)(o.Z, {
                 hideSearch: !0,
@@ -29,13 +29,13 @@ function m(e) {
                 ]
             }),
             (0, t.jsxs)('div', {
-                className: p.contentContainer,
+                className: m.contentContainer,
                 children: [
                     (0, t.jsxs)('div', {
-                        className: p.powerupsContainer,
+                        className: m.powerupsContainer,
                         children: [
                             (0, t.jsxs)('div', {
-                                className: p.powerupTextContainer,
+                                className: m.powerupTextContainer,
                                 children: [
                                     (0, t.jsx)(a.X6q, {
                                         variant: 'heading-lg/semibold',
@@ -48,7 +48,7 @@ function m(e) {
                                 ]
                             }),
                             (0, t.jsx)('div', {
-                                className: p.powerupContainer,
+                                className: m.powerupContainer,
                                 children: l.O.map((e) =>
                                     (0, t.jsx)(
                                         s.Z,
@@ -63,8 +63,8 @@ function m(e) {
                         ]
                     }),
                     (0, t.jsx)('div', {
-                        className: p.sidebarContainer,
-                        children: (0, t.jsx)(c.Z, { guildId: i })
+                        className: m.sidebarContainer,
+                        children: (0, t.jsx)(c.Z, { guildId: n })
                     })
                 ]
             })

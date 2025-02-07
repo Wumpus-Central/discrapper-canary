@@ -11,8 +11,8 @@ var i = n(442837),
     d = n(199902),
     m = n(592125),
     h = n(585483),
-    f = n(915863),
-    g = n(981631),
+    g = n(915863),
+    f = n(981631),
     p = n(388032),
     v = n(951908);
 function S(e) {
@@ -29,9 +29,9 @@ function S(e) {
         y = (0, i.e7)([m.Z], () => m.Z.getChannel(null == I ? void 0 : I.channelId)),
         [N, E] = (0, c.wq)(y),
         C = (0, u.Aq)(),
-        A = null != T && null != I && T.state !== g.jm8.ENDED && T.ownerId === I.ownerId,
+        A = null != T && null != I && T.state !== f.jm8.ENDED && T.ownerId === I.ownerId,
         j = (e) => {
-            null != I && (null == x || x(), s.default.selectVoiceChannel(I.channelId), A || (0, o.iV)(I, { forceMultiple: e }), C.dispatch(g.CkL.POPOUT_CLOSE), h.S.dispatch(g.CkL.MODAL_CLOSE), a.Z.popAll());
+            null != I && (null == x || x(), s.default.selectVoiceChannel(I.channelId), A || (0, o.iV)(I, { forceMultiple: e }), C.dispatch(f.CkL.POPOUT_CLOSE), h.S.dispatch(f.CkL.MODAL_CLOSE), a.Z.popAll());
         };
     if (null == I) return null;
     let P = (0, c.P9)(E);
@@ -43,7 +43,7 @@ function S(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(
-                f.Z,
+                g.Z,
                 {
                     disabled: t || A || !N,
                     onClick: () => j(!1),
@@ -64,7 +64,7 @@ function S(e) {
                 ? (0, l.jsx)(r.ua7, {
                       text: p.intl.string(p.t.wCrzur),
                       children: (e) =>
-                          (0, l.jsx)(f.Z, {
+                          (0, l.jsx)(g.Z, {
                               ...e,
                               onClick: () => {
                                   var t;

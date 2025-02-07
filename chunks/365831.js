@@ -7,9 +7,9 @@ var i = n(200651),
     o = n(442837),
     c = n(481060),
     d = n(110924),
-    u = n(131951),
-    h = n(19780),
-    p = n(557177),
+    u = n(460181),
+    h = n(131951),
+    p = n(19780),
     m = n(743498),
     f = n(56848),
     g = n(378441),
@@ -44,9 +44,9 @@ function b(e) {
         a = (0, d.Z)(n),
         b = (0, f.z)(n),
         { toggleLoopback: Z, isLoopbackEnabled: N } = (function () {
-            let e = (0, o.e7)([u.Z], () => u.Z.getVoiceFilterLoopbackEnabled()),
+            let e = (0, o.e7)([h.Z], () => h.Z.getVoiceFilterLoopbackEnabled()),
                 t = l.useCallback(() => {
-                    (0, p.GN)(e ? 'voice_filter_loopback_off' : 'voice_filter_loopback_on'), (0, m._j)(!e);
+                    (0, u.GN)(e ? 'voice_filter_loopback_off' : 'voice_filter_loopback_on'), (0, m._j)(!e);
                 }, [e]);
             return {
                 isLoopbackEnabled: e,
@@ -57,7 +57,7 @@ function b(e) {
         S = l.useCallback(() => (0, m.v6)(null), []),
         j = (0, c.dQu)(c.TVs.colors.BACKGROUND_SECONDARY).hex(),
         y = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
-        A = (0, o.e7)([h.Z], () => h.Z.isConnected()),
+        A = (0, o.e7)([p.Z], () => p.Z.isConnected()),
         P = l.useRef(0),
         R = n !== a ? P.current + 1 : P.current;
     l.useEffect(() => {

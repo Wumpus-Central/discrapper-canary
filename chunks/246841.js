@@ -6,10 +6,10 @@ var i = n(481060),
     a = n(733597),
     s = n(629257);
 function o(e) {
-    let { activity: t, user: n, source: o, className: u, size: c, look: d, color: m, fullWidth: h, onAction: f } = e,
-        { label: g, tooltip: p, loading: v, disabled: S, onClick: I } = (0, a.Ih)(t, n, o),
+    let { activity: t, user: n, source: o, className: u, size: c, look: d, color: m, fullWidth: h, onAction: g } = e,
+        { label: f, tooltip: p, loading: v, disabled: S, onClick: I } = (0, a.Ih)(t, n, o),
         x = () => {
-            null == f || f(), I();
+            null == g || g(), I();
         };
     return (0, l.jsx)(i.ua7, {
         text: p,
@@ -32,7 +32,7 @@ function o(e) {
                         width: 16,
                         height: 16
                     }),
-                    g
+                    f
                 ]
             });
         }

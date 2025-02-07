@@ -14,8 +14,8 @@ var i = n(120356),
     d = n(812206),
     m = n(202458),
     h = n(220779),
-    f = n(142550),
-    g = n(954017),
+    g = n(142550),
+    f = n(954017),
     p = n(314091),
     v = n(159244),
     S = n(952164),
@@ -99,9 +99,9 @@ let P = u.Z.Types,
                                                     interaction_type: l,
                                                     ...P
                                                 }),
-                                                    l === f.L.ReactSubmit &&
+                                                    l === g.L.ReactSubmit &&
                                                         null != i &&
-                                                        (0, g.H)({
+                                                        (0, f.H)({
                                                             reaction: i,
                                                             user: n,
                                                             activity: t,
@@ -109,9 +109,9 @@ let P = u.Z.Types,
                                                             altText: (0, p.xC)(n, t),
                                                             stream: _
                                                         }),
-                                                    l === f.L.ReplySubmit &&
+                                                    l === g.L.ReplySubmit &&
                                                         null != r &&
-                                                        (0, g.R)({
+                                                        (0, f.R)({
                                                             reply: r,
                                                             user: n,
                                                             activity: t,

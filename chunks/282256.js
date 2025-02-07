@@ -11,8 +11,8 @@ var l = n(200651),
     m = n(506800);
 let h = i.memo(function (e) {
     let { children: t, isOverlay: n, contextGuildId: r, ...h } = e,
-        f = i.useRef(null),
-        [g, p] = i.useState({ maskImage: 'none' }),
+        g = i.useRef(null),
+        [f, p] = i.useState({ maskImage: 'none' }),
         v = (0, u.Z)(() => {
             var e, t;
             if (n) {
@@ -20,7 +20,7 @@ let h = i.memo(function (e) {
                 return;
             }
             let l = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
-                i = null === (t = f.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
+                i = null === (t = g.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
             if (null == l || null == i) {
                 p({ maskImage: 'none' });
                 return;
@@ -61,8 +61,8 @@ let h = i.memo(function (e) {
                 ref: Z,
                 children: (0, l.jsx)('span', {
                     className: a()(m.chipletContainer, !I && n && m.noPadding),
-                    ref: f,
-                    style: g,
+                    ref: g,
+                    style: f,
                     children: (0, l.jsx)(d.ZP, {
                         ...h,
                         contextGuildId: r,

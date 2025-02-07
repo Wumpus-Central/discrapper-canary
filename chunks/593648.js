@@ -25,12 +25,12 @@ var i = n(200651),
     v = n(106371),
     j = n(995774),
     A = n(921801),
-    O = n(292959),
-    R = n(9156),
-    P = n(912101),
-    D = n(358085),
-    Z = n(709054),
-    y = n(557177),
+    O = n(460181),
+    R = n(292959),
+    P = n(9156),
+    D = n(912101),
+    Z = n(358085),
+    y = n(709054),
     k = n(695346),
     L = n(675478),
     B = n(33656),
@@ -88,7 +88,7 @@ function Y(e) {
         a = s.useRef(),
         o = (0, T.p)(),
         c = s.useCallback((e, t) => {
-            t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = y.GN(e));
+            t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = (0, O.GN)(e));
         }, []),
         d = s.useCallback(
             (e, n) => {
@@ -246,7 +246,7 @@ function Y(e) {
 function W() {
     let e = (0, c.e7)([E.Z], () => E.Z.getGuildAlertSettings()),
         [t, n] = s.useState(null),
-        r = Z.default.keys(e).map((t) => {
+        r = y.default.keys(e).map((t) => {
             let n = e[t];
             return {
                 label: n.guildName,
@@ -342,7 +342,7 @@ class K extends s.PureComponent {
         if (t !== w.qrD.NEVER) {
             var n;
             (n = 'UserSettingsModal'),
-                P.Z.requestPermission((e) => {
+                D.Z.requestPermission((e) => {
                     let t = e ? w.$Ab.ENABLED : w.$Ab.BLOCKED;
                     h.default.setPermissionsState(t, n);
                 });
@@ -354,7 +354,7 @@ class K extends s.PureComponent {
     }
     render() {
         let { desktopType: e, afkTimeout: t, disableUnreadBadge: n, taskbarFlash: s, disabledSounds: r, disableAllSounds: a, notifyMessagesInSelectedChannel: c, focusMode: d } = this.props,
-            m = D.isPlatformEmbedded && (0, D.isWindows)(),
+            m = Z.isPlatformEmbedded && (0, Z.isWindows)(),
             h = o()
                 .range(1, 11)
                 .map((e) => ({
@@ -495,7 +495,7 @@ let X = (0, x.B)({
 });
 function q() {
     let e = X.useExperiment({ location: 'settings' }, { autoTrackExposure: !1 }).enabled,
-        t = (0, c.e7)([R.ZP], () => R.ZP.mentionOnAllMessages);
+        t = (0, c.e7)([P.ZP], () => P.ZP.mentionOnAllMessages);
     return e
         ? (0, i.jsx)(A.F, {
               setting: M.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
@@ -514,7 +514,7 @@ function q() {
 function J() {
     let e = I.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
         { manuallyOpen: t } = I.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
-        n = (0, c.e7)([R.ZP], () => R.ZP.useNewNotifications),
+        n = (0, c.e7)([P.ZP], () => P.ZP.useNewNotifications),
         [r, a] = s.useState(!1);
     return e && (n || t)
         ? (0, i.jsxs)(i.Fragment, {
@@ -616,14 +616,14 @@ function $(e) {
     });
 }
 function ee() {
-    let e = (0, c.cj)([O.Z], () => ({
-        disableUnreadBadge: O.Z.getDisableUnreadBadge(),
-        taskbarFlash: O.Z.taskbarFlash,
-        disabledSounds: O.Z.getDisabledSounds(),
-        disableAllSounds: O.Z.getDisableAllSounds(),
-        desktopType: O.Z.getDesktopType(),
-        ttsType: O.Z.getTTSType(),
-        notifyMessagesInSelectedChannel: O.Z.getNotifyMessagesInSelectedChannel()
+    let e = (0, c.cj)([R.Z], () => ({
+        disableUnreadBadge: R.Z.getDisableUnreadBadge(),
+        taskbarFlash: R.Z.taskbarFlash,
+        disabledSounds: R.Z.getDisabledSounds(),
+        disableAllSounds: R.Z.getDisableAllSounds(),
+        desktopType: R.Z.getDesktopType(),
+        ttsType: R.Z.getTTSType(),
+        notifyMessagesInSelectedChannel: R.Z.getNotifyMessagesInSelectedChannel()
     }));
     return (0, i.jsx)($, {
         ...e,

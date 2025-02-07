@@ -21,7 +21,7 @@ function E(e) {
         N = s.useRef(!1),
         I = s.useRef(f),
         S = (0, o.O)(),
-        b = (0, r.e7)([h.Z], () => Object.values(h.Z.getVideoDevices()).length > 0);
+        b = (0, r.e7)([h.Z], () => h.Z.isVideoAvailable());
     return (
         s.useEffect(
             () => () => {
