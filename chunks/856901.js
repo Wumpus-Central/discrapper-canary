@@ -1,15 +1,16 @@
-(n.stringSimilarity = void 0),
-    (n.stringSimilarity = function (e, n, t, l) {
-        if ((void 0 === t && (t = 2), void 0 === l && (l = !1), l || ((e = e.toLowerCase()), (n = n.toLowerCase())), e.length < t || n.length < t)) return 0;
-        for (var i = new Map(), s = 0; s < e.length - (t - 1); s++) {
-            var a = e.substr(s, t);
-            i.set(a, i.has(a) ? i.get(a) + 1 : 1);
+(n = { value: !0 }), (t.stringSimilarity = void 0);
+var n,
+    i = function (e, t, n, i) {
+        if ((void 0 === n && (n = 2), void 0 === i && (i = !1), i || ((e = e.toLowerCase()), (t = t.toLowerCase())), e.length < n || t.length < n)) return 0;
+        for (var r = new Map(), a = 0; a < e.length - (n - 1); a++) {
+            var s = e.substr(a, n);
+            r.set(s, r.has(s) ? r.get(s) + 1 : 1);
         }
-        for (var r = 0, o = 0; o < n.length - (t - 1); o++) {
-            var u = n.substr(o, t),
-                c = i.has(u) ? i.get(u) : 0;
-            c > 0 && (i.set(u, c - 1), r++);
+        for (var o = 0, l = 0; l < t.length - (n - 1); l++) {
+            var u = t.substr(l, n),
+                c = r.has(u) ? r.get(u) : 0;
+            c > 0 && (r.set(u, c - 1), o++);
         }
-        return (2 * r) / (e.length + n.length - (t - 1) * 2);
-    }),
-    n.stringSimilarity;
+        return (2 * o) / (e.length + t.length - (n - 1) * 2);
+    };
+(t.stringSimilarity = i), t.stringSimilarity;
