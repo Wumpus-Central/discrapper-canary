@@ -16,8 +16,8 @@ var l = n(200651),
     v = n(278399),
     C = n(297781),
     j = n(591853),
-    f = n(410441),
-    I = n(981631),
+    I = n(410441),
+    f = n(981631),
     P = n(616922),
     y = n(388032);
 let N = (e, t, n, l) => {
@@ -58,7 +58,7 @@ let N = (e, t, n, l) => {
                     badges: (0, h.UU)(n)
                 });
             }, [A, _, t, n, R, w, k, S]),
-            b = (0, p.Z)(I.ABu.SPOTIFY);
+            b = (0, p.Z)(f.ABu.SPOTIFY);
         if (null == S || !(0, u.Hi)(w, v.y9)) return null;
         let M = () => {
             let e = P.Hw.ALBUM,
@@ -79,7 +79,7 @@ let N = (e, t, n, l) => {
                     entry: n,
                     headerIcons:
                         E === r.p.SPOTIFY
-                            ? (0, l.jsx)(f.Z, {
+                            ? (0, l.jsx)(I.Z, {
                                   onClick: b,
                                   Icon: d.Z,
                                   'aria-label': y.intl.string(y.t['0ZB/XF'])

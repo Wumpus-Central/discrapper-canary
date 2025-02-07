@@ -16,8 +16,8 @@ var l = n(200651),
     v = n(192918),
     C = n(561308),
     j = n(907152),
-    f = n(206295),
-    I = n(297781),
+    I = n(206295),
+    f = n(297781),
     P = n(591853),
     y = n(797342),
     N = n(981631),
@@ -57,7 +57,7 @@ let T = (e, t) =>
                 showCoverImage: !1
             }),
             { user: R, details: k, activity: w, embeddedActivity: O } = (0, y.n)(n),
-            { primaryColor: b, secondaryColor: M } = (0, f.Z)(null == S ? void 0 : S.src),
+            { primaryColor: b, secondaryColor: M } = (0, I.Z)(null == S ? void 0 : S.src),
             L = (0, i.e7)([x.default], () => x.default.locale),
             { displayParticipants: z, participant1: B, participant2: H, numOtherParticipants: U } = (0, v.Z)(n, 3),
             D = () => {
@@ -88,8 +88,8 @@ let T = (e, t) =>
                 [null == S ? void 0 : S.src, t, z, n, L, U, B, H, b, M, R]
             );
         if (null == R) return null;
-        let F = (0, l.jsx)(I.PZ, {
-                location: I.Gt.POPOUT,
+        let F = (0, l.jsx)(f.PZ, {
+                location: f.Gt.POPOUT,
                 entry: n
             }),
             V = (0, l.jsx)(P.wG, {

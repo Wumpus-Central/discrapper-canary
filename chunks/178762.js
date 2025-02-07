@@ -22,8 +22,8 @@ var l = n(200651),
     v = n(475676),
     C = n(662594),
     j = n(594174),
-    f = n(69259),
-    I = n(370370),
+    I = n(69259),
+    f = n(370370),
     P = n(107062),
     y = n(91140),
     N = n(227172),
@@ -71,7 +71,7 @@ let z = (e) => {
                     entry: t
                 });
             case s.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(I.Z, {
+                return (0, l.jsx)(f.Z, {
                     ...n,
                     entry: t
                 });
@@ -156,7 +156,7 @@ let z = (e) => {
         let { index: i, ...h } = e,
             [g, v] = a.useState('default'),
             C = (0, o.JA)(''.concat(i)),
-            I = null === (t = j.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
+            f = null === (t = j.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
             { isRich: P, appName: y } = (0, w.n)(h.entry),
             N = a.useMemo(
                 () => ({
@@ -177,7 +177,7 @@ let z = (e) => {
         }, [T, S]);
         let R = a.useCallback(
                 (e) => {
-                    I &&
+                    f &&
                         (0, m.jW)(e, async () => {
                             let { default: e } = await n.e('153').then(n.bind(n, 330150));
                             return () =>
@@ -187,7 +187,7 @@ let z = (e) => {
                                 });
                         });
                 },
-                [h, I]
+                [h, f]
             ),
             k = a.useCallback(() => {
                 v(String(Date.now()));
@@ -195,7 +195,7 @@ let z = (e) => {
             M = a.useCallback(
                 function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    (0, f.L)(e, {
+                    (0, I.L)(e, {
                         ...N,
                         ...t
                     });
@@ -206,7 +206,7 @@ let z = (e) => {
                 () =>
                     r().throttle(
                         (e) => {
-                            (0, f.L)(O.xP.CARD_POPOUT_OPEN, e);
+                            (0, I.L)(O.xP.CARD_POPOUT_OPEN, e);
                         },
                         2000,
                         {

@@ -16,8 +16,8 @@ var l = n(200651),
     v = n(335326),
     C = n(297781),
     j = n(591853),
-    f = n(410441),
-    I = n(981631),
+    I = n(410441),
+    f = n(981631),
     P = n(388032);
 let y = (e, t, n) => {
         let l = P.t.LHF6Dw,
@@ -42,7 +42,7 @@ let y = (e, t, n) => {
             { largeImage: E } = (0, m.rv)({ entry: n }),
             { primaryColor: A, secondaryColor: _ } = (0, g.Z)(null == E ? void 0 : E.src),
             S = (0, i.e7)([o.default], () => o.default.locale),
-            R = (0, p.Z)(I.ABu.CRUNCHYROLL),
+            R = (0, p.Z)(f.ABu.CRUNCHYROLL),
             k = (0, x.ap)(n.extra.media_assets_large_text),
             w = a.useCallback(
                 (e) => {
@@ -81,7 +81,7 @@ let y = (e, t, n) => {
                           userDescription: (0, x.kr)(n) ? P.t['LH+Z39'] : P.t.YuKgmp,
                           title: n.extra.media_title,
                           subtitle: n.extra.media_subtitle,
-                          headerIcons: (0, l.jsx)(f.Z, {
+                          headerIcons: (0, l.jsx)(I.Z, {
                               onClick: R,
                               Icon: r.omf,
                               'aria-label': P.intl.string(P.t.jdJYX1)

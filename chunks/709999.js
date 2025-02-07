@@ -16,15 +16,15 @@ var r = n(200651),
     f = n(37234),
     x = n(727637),
     _ = n(607070),
-    v = n(100527),
-    b = n(906732),
+    b = n(100527),
+    v = n(906732),
     k = n(1585),
     j = n(333867),
     E = n(197115),
     L = n(300284),
-    T = n(876917),
-    S = n(642619),
-    B = n(210887),
+    S = n(876917),
+    B = n(642619),
+    T = n(210887),
     I = n(74538),
     y = n(335131),
     Z = n(1870),
@@ -85,7 +85,7 @@ let er = (e) => {
         let { profileEffectId: t, isHighlighted: n, isPurchased: l } = e;
         return (0, r.jsx)('div', {
             className: en.profileEffectShopPreview,
-            children: (0, r.jsx)(T.Z, {
+            children: (0, r.jsx)(S.Z, {
                 profileEffectId: t,
                 isHovering: n,
                 isPurchased: l && !n,
@@ -106,8 +106,8 @@ let er = (e) => {
         });
     },
     es = function (e) {
-        let { product: t, user: n, category: i, onMount: s, isGiftEasterEggEnabled: T, isInFeedView: q } = e,
-            { analyticsLocations: es } = (0, b.ZP)([...(q ? [v.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), v.Z.COLLECTIBLES_SHOP_CARD]),
+        let { product: t, user: n, category: i, onMount: s, isGiftEasterEggEnabled: S, isInFeedView: q } = e,
+            { analyticsLocations: es } = (0, v.ZP)([...(q ? [b.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), b.Z.COLLECTIBLES_SHOP_CARD]),
             eo = l.useRef(null),
             ed = (0, x.Z)(eo),
             [ec, eu] = l.useState(!1),
@@ -119,13 +119,13 @@ let er = (e) => {
             ef = I.ZP.canUseCollectibles(n),
             ex = l.useMemo(() => (0, N.BH)(t, ef), [t, ef]),
             e_ = (0, N.G1)(t),
-            ev = (0, N.rN)(t),
-            [eb, ek, ej] = (0, h.Wu)([Z.Z], () => [Z.Z.isClaiming === t.skuId, null != Z.Z.isClaiming && Z.Z.isClaiming !== t.skuId, Z.Z.purchases]),
+            eb = (0, N.rN)(t),
+            [ev, ek, ej] = (0, h.Wu)([Z.Z], () => [Z.Z.isClaiming === t.skuId, null != Z.Z.isClaiming && Z.Z.isClaiming !== t.skuId, Z.Z.purchases]),
             eE = (0, J.o)(t, ej, ep),
-            eL = (0, h.e7)([B.Z], () => (0, m.wj)(B.Z.theme)),
-            eT = (0, P.m)('CollectiblesCollectedModal'),
-            eS = (0, N.x6)(t) || eT,
-            eB = (0, N.Yq)(t.skuId),
+            eL = (0, h.e7)([T.Z], () => (0, m.wj)(T.Z.theme)),
+            eS = (0, P.m)('CollectiblesCollectedModal'),
+            eB = (0, N.x6)(t) || eS,
+            eT = (0, N.Yq)(t.skuId),
             { hoverVariant: eI } = (0, w.E)('CollectiblesShopTallCard'),
             ey = i.skuId === u.T.STORM && '1268362891946627103' === t.skuId,
             eZ = (0, A.hv)('CollectiblesShopTallCard'),
@@ -164,7 +164,7 @@ let er = (e) => {
                     return;
                 }
                 t.type === C.Z.PROFILE_EFFECT &&
-                    (0, S.H)({
+                    (0, B.H)({
                         initialSelectedEffectId: eE.id,
                         analyticsLocations: es
                     });
@@ -179,8 +179,8 @@ let er = (e) => {
                         returnRef: eD
                     });
             },
-            eq = ez(v.Z.COLLECTIBLES_SHOP_CARD),
-            e$ = ez(v.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+            eq = ez(b.Z.COLLECTIBLES_SHOP_CARD),
+            e$ = ez(b.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
             eK = () =>
                 (0, r.jsx)('div', {
                     className: en.hoverUpsellContainer,
@@ -196,13 +196,13 @@ let er = (e) => {
             eY = () =>
                 e_ || c.tq
                     ? null
-                    : ev
+                    : eb
                       ? (0, r.jsx)(el, { onClick: e$ })
                       : (0, r.jsx)(W.Z, {
                             product: t,
                             selectedVariantIndex: eF,
                             returnRef: eo,
-                            isGiftEasterEggEnabled: T,
+                            isGiftEasterEggEnabled: S,
                             disableCustomColor: !0,
                             tooltipDelay: 250
                         });
@@ -359,10 +359,10 @@ let er = (e) => {
                                               (0, r.jsx)('div', {
                                                   className: en.innerHover,
                                                   children: (() => {
-                                                      if (e_ && !ef && !ev) return eK();
+                                                      if (e_ && !ef && !eb) return eK();
                                                       let e = e_
                                                           ? {
-                                                                submitting: eb,
+                                                                submitting: ev,
                                                                 submittingStartedLabel: et.intl.string(et.t['TYw+9v']),
                                                                 submittingFinishedLabel: et.intl.string(et.t.Pg1UPz),
                                                                 onClick: async () => {
@@ -393,7 +393,7 @@ let er = (e) => {
                                                                   : eP
                                                                     ? (0, r.jsx)(er, {
                                                                           disabled: ek,
-                                                                          onClick: eS ? eW : eG,
+                                                                          onClick: eB ? eW : eG,
                                                                           submitting: eU,
                                                                           children: et.intl.string(et.t.MAS7uL)
                                                                       })
@@ -416,7 +416,7 @@ let er = (e) => {
                                   className: en.limitedTimeBadge,
                                   display: 'card'
                               }),
-                              eB &&
+                              eT &&
                                   !eA &&
                                   !eP &&
                                   i.skuId !== u.T.ROBERT &&

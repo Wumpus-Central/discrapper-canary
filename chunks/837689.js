@@ -93,7 +93,7 @@ class x extends o.Z {
                     null != t && (0, v.Z)({ upsellType: t });
                 }
                 if ((null == i || i.verified) && !(0, a.$sL)() && _.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !l.tq) {
-                    for (let t of await (0, I.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
+                    for (let t of await (0, I.He)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                 }
             });
     }

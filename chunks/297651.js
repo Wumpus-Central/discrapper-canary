@@ -17,16 +17,16 @@ function h(e, t) {
         g = a.ZP.canUseCollectibles(m),
         f = r.useRef(null),
         [x, _] = r.useState(!1),
-        [v, b] = r.useState(!1),
+        [b, v] = r.useState(!1),
         k = (0, c.B)('shop_product_card');
     return (
         r.useEffect(
             () => (
                 x && null === f.current
                     ? (f.current = setTimeout(() => {
-                          b(!0);
+                          v(!0);
                       }, 1000))
-                    : x || (null !== f.current && (clearTimeout(f.current), (f.current = null)), b(!1)),
+                    : x || (null !== f.current && (clearTimeout(f.current), (f.current = null)), v(!1)),
                 () => {
                     null !== f.current && (clearTimeout(f.current), (f.current = null));
                 }
@@ -34,7 +34,7 @@ function h(e, t) {
             [x]
         ),
         r.useEffect(() => {
-            if (v && k) {
+            if (b && k) {
                 let r = null != p ? (0, d.Vw)(p, g, !1) : null,
                     l = null != p ? (0, d.eu)(p, g, !1) : void 0;
                 i.default.track(C.rMx.COLLECTIBLES_TILE_IMPRESSION, {
@@ -51,7 +51,7 @@ function h(e, t) {
                     category_position: null == h ? void 0 : h.categoryPosition
                 });
             }
-        }, [null == h ? void 0 : h.sessionId, null == h ? void 0 : h.categoryPosition, null == h ? void 0 : h.pageCategory, null == h ? void 0 : h.pageSection, null == h ? void 0 : h.tilePosition, v, g, k, t, p, e, n]),
+        }, [null == h ? void 0 : h.sessionId, null == h ? void 0 : h.categoryPosition, null == h ? void 0 : h.pageCategory, null == h ? void 0 : h.pageSection, null == h ? void 0 : h.tilePosition, b, g, k, t, p, e, n]),
         {
             handleCardVisibilityChange: (e) => {
                 _(e);

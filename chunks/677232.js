@@ -113,8 +113,8 @@ let u = [
                     friction: 24
                 }
             }),
-            v = i ? x : 0,
-            b = (0, a.wj)(null != t ? t : c) ? d.dark[v] : d.light[v];
+            b = i ? x : 0,
+            v = (0, a.wj)(null != t ? t : c) ? d.dark[b] : d.light[b];
         return !n && i
             ? (0, r.jsx)(g, {})
             : i && f
@@ -123,8 +123,8 @@ let u = [
                     style: _
                 })
               : (0, r.jsx)(p, {
-                    boxColor: b.box,
-                    ribbonColor: b.ribbon,
+                    boxColor: v.box,
+                    ribbonColor: v.ribbon,
                     style: _
                 });
     });

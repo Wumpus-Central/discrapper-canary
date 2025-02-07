@@ -16,15 +16,15 @@ var r = n(200651),
     f = n(605236),
     x = n(977395),
     _ = n(214852),
-    v = n(479446),
-    b = n(981632),
+    b = n(479446),
+    v = n(981632),
     k = n(290026),
     j = n(819640),
     E = n(594174),
     L = n(626135),
-    T = n(74538),
-    S = n(335131),
-    B = n(381585),
+    S = n(74538),
+    B = n(335131),
+    T = n(381585),
     I = n(597688),
     y = n(328347),
     Z = n(223143),
@@ -69,7 +69,7 @@ function ee(e) {
                       className: Q.cardsContainer,
                       children: t.map((e, t) =>
                           (0, r.jsx)(
-                              B.k0,
+                              T.k0,
                               {
                                   newValue: { tilePosition: t },
                                   children: (0, r.jsx)(
@@ -130,8 +130,8 @@ function en(e) {
                     className: a()(Q.hiddenWumpus, { [Q.hiddenWumpusEnabled]: s }),
                     onClick: () => o(!0),
                     style: { left: ''.concat(C.current, '%') },
-                    children: (0, r.jsx)(b.Z, {
-                        idleAnimationState: v.SR.IDLE,
+                    children: (0, r.jsx)(v.Z, {
+                        idleAnimationState: b.SR.IDLE,
                         giftStyle: X.Cj.BOX
                     })
                 }),
@@ -160,8 +160,8 @@ let er = function (e) {
     var t;
     let { isFullScreen: n = !0, tab: i = $.AW.HOME } = e;
     (0, _.z)(x.f);
-    let { analyticsSource: h, analyticsLocations: v } = (0, o.cj)([y.Z], () => y.Z.getAnalytics()),
-        { analyticsLocations: b } = (0, m.ZP)([...v, p.Z.COLLECTIBLES_SHOP]),
+    let { analyticsSource: h, analyticsLocations: b } = (0, o.cj)([y.Z], () => y.Z.getAnalytics()),
+        { analyticsLocations: v } = (0, m.ZP)([...b, p.Z.COLLECTIBLES_SHOP]),
         { sessionId: N, scrollerRef: P, scrollHandler: O } = (0, g._)(K.rMx.COLLECTIBLES_SHOP_SCROLLED, h),
         { selectedTab: D, transitionState: q, transitionToTab: ee } = (0, w.B)(P, i, n),
         [et, er] = l.useState(!1),
@@ -172,9 +172,9 @@ let er = function (e) {
         eu = (0, c.f9)(),
         { onClose: eC } = (0, M.Db)(),
         eh = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
-        ep = T.ZP.canUseCollectibles(eh),
-        { categories: em, isFetchingCategories: eg, fetchCategoriesError: ef, fetchPurchasesError: ex, claimError: e_, refreshCategories: ev } = (0, Z.ZP)({ location: 'CollectiblesShop.web' }),
-        eb = null !== (t = null != ef ? ef : ex) && void 0 !== t ? t : e_;
+        ep = S.ZP.canUseCollectibles(eh),
+        { categories: em, isFetchingCategories: eg, fetchCategoriesError: ef, fetchPurchasesError: ex, claimError: e_, refreshCategories: eb } = (0, Z.ZP)({ location: 'CollectiblesShop.web' }),
+        ev = null !== (t = null != ef ? ef : ex) && void 0 !== t ? t : e_;
     (0, k.P)();
     let ek = (0, F.O)(em),
         ej = l.useRef(null),
@@ -190,7 +190,7 @@ let er = function (e) {
                 let t;
                 (t = D === $.AW.CATALOG ? eo : h),
                     L.default.track(K.rMx.COLLECTIBLES_SHOP_VIEWED, {
-                        location_stack: b,
+                        location_stack: v,
                         source: t,
                         page_session_id: N,
                         page_type: D === $.AW.HOME ? 'home' : 'full',
@@ -200,24 +200,24 @@ let er = function (e) {
             ep ||
                 L.default.track(K.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: X.cd.COLLECTIBLES_SHOP,
-                    location_stack: b
+                    location_stack: v
                 });
-        }, [ep, b, h, N, ea, es, eo, q, D]);
-    let { dismissCollectiblesShopTabNewBadge: eT } = (0, U.Z)();
+        }, [ep, v, h, N, ea, es, eo, q, D]);
+    let { dismissCollectiblesShopTabNewBadge: eS } = (0, U.Z)();
     l.useEffect(() => {
-        eT(),
+        eS(),
             !(0, f.un)(d.z.COLLECTIBLES_GIFTING_COACHMARK) &&
                 (0, f.EW)(d.z.COLLECTIBLES_GIFTING_COACHMARK, {
                     dismissAction: Y.L.AUTO_DISMISS,
                     forceTrack: !0
                 });
-    }, [eT]),
+    }, [eS]),
         l.useEffect(() => {
             n || (0, C.Y)(K.Z5c.COLLECTIBLES_SHOP);
         }, [n]),
         l.useEffect(
             () => () => {
-                (0, S.K$)({
+                (0, B.K$)({
                     categories: [...em.values()],
                     itemTypes: [s.Z.AVATAR_DECORATION, s.Z.PROFILE_EFFECT]
                 });
@@ -231,10 +231,10 @@ let er = function (e) {
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
         }, [n, ec, eu, eC]);
-    let eS = l.useCallback(() => {
-            ev();
-        }, [ev]),
-        { setCategoryRef: eB, handleScrollToCategory: eI } = (0, A.xV)(P.current),
+    let eB = l.useCallback(() => {
+            eb();
+        }, [eb]),
+        { setCategoryRef: eT, handleScrollToCategory: eI } = (0, A.xV)(P.current),
         { reducedMotion: ey } = l.useContext(u.Sfi),
         eZ = l.useRef(null),
         eF = l.useRef(null);
@@ -257,8 +257,8 @@ let er = function (e) {
             return null === (e = I.Z.getCategory(ea)) || void 0 === e ? void 0 : e.name;
         });
     return (0, r.jsx)(m.Gt, {
-        value: b,
-        children: (0, r.jsxs)(B.k0, {
+        value: v,
+        children: (0, r.jsxs)(T.k0, {
             newValue: {
                 sessionId: N,
                 pageCategory: ew
@@ -309,9 +309,9 @@ let er = function (e) {
                                                     className: a()(Q.page, { [Q.pageFullscreen]: n }),
                                                     children: eg
                                                         ? (0, r.jsx)(V.Z, {})
-                                                        : null != eb
+                                                        : null != ev
                                                           ? (0, r.jsx)(R.Z, {
-                                                                onRetry: eS,
+                                                                onRetry: eB,
                                                                 errorOrigin: R.i.SHOP_PAGE
                                                             })
                                                           : (0, r.jsx)('div', {
@@ -326,8 +326,8 @@ let er = function (e) {
                                                                         (0, r.jsx)(
                                                                             'div',
                                                                             {
-                                                                                ref: (t) => eB(e.skuId, t),
-                                                                                children: (0, r.jsx)(B.k0, {
+                                                                                ref: (t) => eT(e.skuId, t),
+                                                                                children: (0, r.jsx)(T.k0, {
                                                                                     newValue: { categoryPosition: t },
                                                                                     children: (0, r.jsx)(en, {
                                                                                         isPremiumUser: ep,

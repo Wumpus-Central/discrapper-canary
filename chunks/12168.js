@@ -20,11 +20,11 @@ var l = n(200651),
     v = n(806966),
     C = n(176354),
     j = n(823379),
-    f = n(354459),
-    I = n(185923),
+    I = n(354459),
+    f = n(185923),
     P = n(420212),
     y = n(191315);
-let N = I.Hz.CHAT,
+let N = f.Hz.CHAT,
     Z = [g.ZP.getByName('thumbsup'), g.ZP.getByName('eyes'), g.ZP.getByName('laughing'), g.ZP.getByName('watermelon'), g.ZP.getByName('fork_and_knife'), g.ZP.getByName('yum')].filter(j.lm);
 function T(e) {
     let { emoji: t, isDisabled: n = !1, onClick: i, className: o } = e,
@@ -92,7 +92,7 @@ function A(e) {
                         intention: N
                     })
             )
-            .slice(0, f.e5);
+            .slice(0, I.e5);
     null != j && j.length > 0 && w.splice(w.length - 1, 1, j[0]);
     let O = (e) => {
             R(e), null == h || h(e);
@@ -150,7 +150,7 @@ function A(e) {
                                 let n = C.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,
-                                    intention: I.Hz.CHAT
+                                    intention: f.Hz.CHAT
                                 });
                                 return (0, l.jsx)(
                                     'div',

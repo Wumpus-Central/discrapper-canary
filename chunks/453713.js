@@ -1,4 +1,4 @@
-n.d(t, { P: () => v });
+n.d(t, { P: () => b });
 var r = n(200651),
     l = n(192379),
     i = n(120356),
@@ -24,18 +24,18 @@ let x = o()((e) => {
     }),
     _ = (e) => {
         let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: s, selectedVariantIndex: o, onEnter: u, onLeave: h, minimal: _ } = e,
-            { isPurchased: v } = (0, m.L)(n),
-            { onFocus: b, ...k } = (0, d.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(i)),
+            { isPurchased: b } = (0, m.L)(n),
+            { onFocus: v, ...k } = (0, d.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(i)),
             j = l.useCallback(
                 (e) => {
-                    e.preventDefault(), e.stopPropagation(), (0, p.$)(t, i), b();
+                    e.preventDefault(), e.stopPropagation(), (0, p.$)(t, i), v();
                 },
-                [b, t, i]
+                [v, t, i]
             );
         return (0, r.jsx)(C.ua7, {
             text: g.intl.string(g.t['/bUsx8']),
             'aria-label': !1,
-            shouldShow: !_ && v,
+            shouldShow: !_ && b,
             children: (e) =>
                 (0, r.jsx)(C.P3F, {
                     ...k,
@@ -70,7 +70,7 @@ let x = o()((e) => {
                             backgroundColor: n.variantValue,
                             zIndex: s - i
                         },
-                        children: v
+                        children: b
                             ? (0, r.jsx)(C.kSu, {
                                   className: f.purchasedIndicator,
                                   color: x(n.variantValue)
@@ -80,13 +80,13 @@ let x = o()((e) => {
                 })
         });
     },
-    v = (e) => {
+    b = (e) => {
         var t, n;
         let { variantGroupProduct: l, className: i, previewingVariantIndexProps: s, setIsHoveringOnSwitch: o, minimal: u, purchases: m, alternativeBackgroundColor: x } = e,
-            v = (0, p.o)(l, m),
-            b = s.previewingVariantIndex,
-            k = null === (t = l.variants) || void 0 === t ? void 0 : t[v],
-            j = null !== b ? (null === (n = l.variants) || void 0 === n ? void 0 : n[b]) : void 0,
+            b = (0, p.o)(l, m),
+            v = s.previewingVariantIndex,
+            k = null === (t = l.variants) || void 0 === t ? void 0 : t[b],
+            j = null !== v ? (null === (n = l.variants) || void 0 === n ? void 0 : n[v]) : void 0,
             E = (0, h.Z)('shop-variants-group-'.concat(l.storeListingId), c.hy.HORIZONTAL);
         if (null == k) return null;
         let L = null != j ? j.variantLabel : null == k ? void 0 : k.variantLabel;
@@ -119,7 +119,7 @@ let x = o()((e) => {
                                                       variantGroupProduct: l,
                                                       variant: e,
                                                       variantIndex: t,
-                                                      selectedVariantIndex: v,
+                                                      selectedVariantIndex: b,
                                                       totalVariants: null !== (i = null === (n = l.variants) || void 0 === n ? void 0 : n.length) && void 0 !== i ? i : 0,
                                                       onEnter: () => s.handleEntering(t),
                                                       onLeave: s.handleLeaving,

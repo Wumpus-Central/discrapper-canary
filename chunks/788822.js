@@ -14,10 +14,10 @@ var l = n(120356),
 let p = (e) => {
     var t, n, l, p, m;
     let g,
-        { category: f, subblock: x, badgeText: _, handleTransition: v } = e;
+        { category: f, subblock: x, badgeText: _, handleTransition: b } = e;
     null != x && (g = null === (t = o.Z.getCategoryByStoreListingId(null == x ? void 0 : x.categoryStoreListingId)) || void 0 === t ? void 0 : t.skuId);
-    let b = null !== (n = null != g ? g : null == f ? void 0 : f.skuId) && void 0 !== n ? n : '',
-        { handleCardVisibilityChange: k } = (0, c.E)(b, 'home', 'marketing'),
+    let v = null !== (n = null != g ? g : null == f ? void 0 : f.skuId) && void 0 !== n ? n : '',
+        { handleCardVisibilityChange: k } = (0, c.E)(v, 'home', 'marketing'),
         j =
             null !== (p = null == x ? void 0 : x.bannerUrl) && void 0 !== p
                 ? p
@@ -31,7 +31,7 @@ let p = (e) => {
         children: (0, r.jsxs)(s.P3F, {
             className: i()(h.featuredBlock),
             style: { backgroundImage: 'url('.concat(j, ')') },
-            onClick: () => v('shop marketing tile', b),
+            onClick: () => b('shop marketing tile', v),
             children: [
                 null != _ &&
                     (0, r.jsx)(s.IGR, {

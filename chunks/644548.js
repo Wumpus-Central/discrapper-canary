@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(627494), n(757143);
+n.d(t, { Z: () => f }), n(627494), n(757143);
 var l = n(200651),
     a = n(192379),
     i = n(317261),
@@ -28,13 +28,13 @@ let j = (e, t, n, l) => {
             })
             .replaceAll('*', '');
     },
-    f = (e, t) =>
+    I = (e, t) =>
         C.intl.formatToPlainString(C.t.tAwI1t, {
             username: t.username,
             activity: e.extra.game_name
         }),
-    I = (e) => {
-        let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: o, onVoiceChannelPreview: I } = e,
+    f = (e) => {
+        let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: o, onVoiceChannelPreview: f } = e,
             { largeImage: P } = (0, s.rv)({ entry: n }),
             { user: y, details: N, appName: Z } = (0, v.n)(n),
             { primaryColor: T, secondaryColor: E } = (0, u.Z)(null == P ? void 0 : P.src),
@@ -81,11 +81,11 @@ let j = (e, t, n, l) => {
                 (0, l.jsx)(p.St, {
                     children: (0, l.jsx)(p.WT, {
                         onReaction: o,
-                        onVoiceChannelPreview: I,
+                        onVoiceChannelPreview: f,
                         user: y,
                         channel: t,
                         generateReactionImage: S,
-                        reactionImageAltText: f(n, y),
+                        reactionImageAltText: I(n, y),
                         entry: n
                     })
                 })

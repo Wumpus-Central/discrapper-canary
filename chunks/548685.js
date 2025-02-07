@@ -17,9 +17,9 @@ var r = n(200651),
 let x = (e) => {
     let { isLoading: t, rankedSkuIds: n, handleTransition: i, numVisibleItems: x } = e,
         _ = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
-        v = l.createRef(),
-        b = (0, m.u)(),
-        k = l.useMemo(() => b(n), [t, b, n]),
+        b = l.createRef(),
+        v = (0, m.u)(),
+        k = l.useMemo(() => v(n), [t, v, n]),
         j = (0, C.l)(k);
     return null == _
         ? null
@@ -48,7 +48,7 @@ let x = (e) => {
                   }),
                   (0, r.jsx)('div', {
                       className: f.feed,
-                      ref: v,
+                      ref: b,
                       children: t
                           ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(h.K, {}, t + 1)) })
                           : (0, r.jsx)(r.Fragment, {

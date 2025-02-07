@@ -1,7 +1,7 @@
 n.d(t, {
-    Kp: () => v,
+    Kp: () => b,
     u9: () => x,
-    xV: () => b
+    xV: () => v
 }),
     n(757143),
     n(653041),
@@ -73,7 +73,7 @@ let m = ''.concat('#').concat('itemSkuId', '='),
         }
         return () => {};
     },
-    v = (e) => {
+    b = (e) => {
         let { isFetchingCategories: t, isLayer: n, initialItemCardRef: c } = e,
             C = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
             h = r.useRef(null),
@@ -88,11 +88,11 @@ let m = ''.concat('#').concat('itemSkuId', '='),
                 h.current = t;
             }
         });
-        let v = (0, i.e7)([u.Z], () => u.Z.initialProductSkuId);
+        let b = (0, i.e7)([u.Z], () => u.Z.initialProductSkuId);
         r.useEffect(() => {
             if (t) return;
             let e = null;
-            if ((n && null != v && (e = v), n || null == h.current || (e = h.current), null != e)) {
+            if ((n && null != b && (e = b), n || null == h.current || (e = h.current), null != e)) {
                 let t = [],
                     n = setTimeout(() => {
                         let n = _({
@@ -111,9 +111,9 @@ let m = ''.concat('#').concat('itemSkuId', '='),
                     }
                 );
             }
-        }, [n, x, f, t, v, c, C]);
+        }, [n, x, f, t, b, c, C]);
     },
-    b = (e) => {
+    v = (e) => {
         let t = r.useRef({}),
             n = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
             l = (0, i.e7)([c.Z], () => c.Z.isFetchingCategories),

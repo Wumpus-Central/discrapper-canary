@@ -76,17 +76,17 @@ let f = {
         ]
     },
     x = (e) => {
-        let { product: t, selectedVariantIndex: n, returnRef: x, onSuccess: _, tooltipDelay: v, isGiftEasterEggEnabled: b, disableCustomColor: k = !1 } = e,
+        let { product: t, selectedVariantIndex: n, returnRef: x, onSuccess: _, tooltipDelay: b, isGiftEasterEggEnabled: v, disableCustomColor: k = !1 } = e,
             { analyticsLocations: j } = (0, s.ZP)(),
             E = l.useRef(null),
             L = (0, a.Z)(E),
-            T = k ? p.BR.DARK : p.BR.LIGHT,
-            S = (0, u.hv)('CollectiblesShopGiftButton');
+            S = k ? p.BR.DARK : p.BR.LIGHT,
+            B = (0, u.hv)('CollectiblesShopGiftButton');
         return (0, c.x6)(t)
             ? null
             : (0, r.jsx)(i.ua7, {
                   text: m.intl.string(m.t['JCFN//']),
-                  delay: v,
+                  delay: b,
                   children: (e) =>
                       (0, r.jsx)(i.zxk, {
                           ...e,
@@ -108,7 +108,7 @@ let f = {
                                       giftingOrigin: h.Wt.SHOP_PAGE,
                                       analyticsLocations: j,
                                       returnRef: x,
-                                      variantsReturnStyle: S,
+                                      variantsReturnStyle: B,
                                       onClose:
                                           null != _
                                               ? (e) => {
@@ -117,11 +117,11 @@ let f = {
                                               : void 0
                                   });
                           },
-                          children: b
+                          children: v
                               ? (0, r.jsx)(d.Z, {
                                     hovered: L,
                                     isContentDismissed: !0,
-                                    themeOverride: T,
+                                    themeOverride: S,
                                     boxColors: f
                                 })
                               : (0, r.jsx)(i.OgN, {

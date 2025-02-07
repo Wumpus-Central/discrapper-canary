@@ -16,47 +16,47 @@ var r = n(200651),
     f = n(594174),
     x = n(471731),
     _ = n(335131),
-    v = n(215023),
-    b = n(46140),
+    b = n(215023),
+    v = n(46140),
     k = n(388032),
     j = n(2381);
 function E(e) {
-    let { isFullScreen: t, isLayer: n, onClose: i, selectedTab: E, handleTransition: L, transparent: T } = e,
-        S = (0, C.ZP)(),
-        B = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
-        I = (null == B ? void 0 : B.isStaff()) || (null == B ? void 0 : B.isStaffPersonal()) || !1,
+    let { isFullScreen: t, isLayer: n, onClose: i, selectedTab: E, handleTransition: L, transparent: S } = e,
+        B = (0, C.ZP)(),
+        T = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
+        I = (null == T ? void 0 : T.isStaff()) || (null == T ? void 0 : T.isStaffPersonal()) || !1,
         { enabled: y } = (0, m.W)({ location: 'collectibles_shop_header_bar' });
     return (0, r.jsx)(c.f6W, {
-        theme: S,
+        theme: B,
         children: (e) =>
             (0, r.jsxs)(h.Z, {
                 className: a()(e, j.headerBar, {
                     [j.fullscreenHeaderBar]: t,
-                    [j.headerBarRegularBackground]: !T,
-                    [j.headerBarTransparentLightBackground]: T && !(0, d.wj)(S),
-                    [j.headerBarTransparentDarkBackground]: T && (0, d.wj)(S)
+                    [j.headerBarRegularBackground]: !S,
+                    [j.headerBarTransparentLightBackground]: S && !(0, d.wj)(B),
+                    [j.headerBarTransparentDarkBackground]: S && (0, d.wj)(B)
                 }),
                 innerClassname: y ? j.headerBarInner : void 0,
-                transparent: T,
+                transparent: S,
                 toolbar: t || !I ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            E === v.AW.CATALOG &&
+                            E === b.AW.CATALOG &&
                                 (0, r.jsx)(c.P3F, {
-                                    onClick: () => L(v.AW.HOME),
+                                    onClick: () => L(b.AW.HOME),
                                     className: j.back,
                                     'aria-label': k.intl.string(k.t['13/7kZ']),
                                     children: (0, r.jsx)(c.j9r, {})
                                 }),
                             (0, r.jsx)(x.Z, {
-                                color: T ? ((0, d.wj)(S) ? 'white' : 'black') : void 0,
+                                color: S ? ((0, d.wj)(B) ? 'white' : 'black') : void 0,
                                 className: j.discordLogo
                             })
                         ]
                     }),
                     (0, r.jsx)(h.Z.Title, { children: k.intl.string(k.t.pWG4zc) }),
-                    E === v.AW.CATALOG &&
+                    E === b.AW.CATALOG &&
                         (0, r.jsx)(h.Z.Title, {
                             className: j.shopAllHeader,
                             children: k.intl.string(k.t.xFcotb)
@@ -70,7 +70,7 @@ function E(e) {
                                         cardAlignment: g.V9.CardAlignment.END,
                                         className: a()(j.balanceWidgetMenu, { [j.fullScreenAlignedRightContent]: t }),
                                         ctaText: k.intl.string(k.t['H57f4+']),
-                                        ctaOnClick: () => (0, p.navigateToQuestHome)(b.dr.COLLECTIBLES_SHOP_HEADER_BAR, s.j.ACTIVITY_PANEL)
+                                        ctaOnClick: () => (0, p.navigateToQuestHome)(v.dr.COLLECTIBLES_SHOP_HEADER_BAR, s.j.ACTIVITY_PANEL)
                                     }),
                                 t &&
                                     (0, r.jsx)(u.Z, {
