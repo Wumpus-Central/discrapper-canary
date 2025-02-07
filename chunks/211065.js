@@ -1,4 +1,4 @@
-n.d(e, { Z: () => I }), n(47120);
+n.d(e, { Z: () => E }), n(47120);
 var a = n(200651),
     l = n(192379),
     i = n(512722),
@@ -14,14 +14,14 @@ var a = n(200651),
     f = n(293273),
     p = n(594174),
     g = n(626135),
-    _ = n(51144),
     b = n(720449),
-    j = n(684269),
-    x = n(875425),
-    C = n(981631),
+    _ = n(684269),
+    j = n(691258),
+    v = n(875425),
+    x = n(981631),
     N = n(185923),
-    v = n(388032),
-    k = n(58448);
+    C = n(388032),
+    O = n(58448);
 function D(t, e, n) {
     return (
         e in t
@@ -35,82 +35,31 @@ function D(t, e, n) {
         t
     );
 }
-function O(t) {
+function T(t) {
     return (0, a.jsxs)('div', {
-        className: k.statusOptionItem,
+        className: O.statusOptionItem,
         children: [
             (0, a.jsx)(r.qbd, {
                 status: t.value,
                 size: 10,
-                className: k.statusIcon
+                className: O.statusIcon
             }),
             t.label
         ]
     });
 }
-let T = [
-    {
-        key: 1,
-        value: r.Skl.ONLINE,
-        label: (0, _.u5)(r.Skl.ONLINE)
-    },
-    {
-        key: 2,
-        value: r.Skl.IDLE,
-        label: (0, _.u5)(r.Skl.IDLE)
-    },
-    {
-        key: 3,
-        value: r.Skl.DND,
-        label: (0, _.u5)(r.Skl.DND)
-    },
-    {
-        key: 4,
-        value: r.Skl.INVISIBLE,
-        label: (0, _.u5)(r.Skl.INVISIBLE)
-    }
-];
-class A extends l.PureComponent {
+class k extends l.PureComponent {
     componentDidMount() {
         let { sourceAnalyticsLocations: t, sourceAnalyticsContext: e } = this.props;
-        g.default.track(C.rMx.OPEN_MODAL, {
+        g.default.track(x.rMx.OPEN_MODAL, {
             source: null == e ? void 0 : e.location,
-            type: C.jXE.CUSTOM_STATUS_MODAL,
+            type: x.jXE.CUSTOM_STATUS_MODAL,
             load_id: null == e ? void 0 : e.loadId,
             location_stack: t
         });
     }
-    get clearAfterOptions() {
-        return [
-            {
-                key: 1,
-                value: x.F.TODAY,
-                label: v.intl.string(v.t.GQmLra)
-            },
-            {
-                key: 2,
-                value: x.F.HOURS_4,
-                label: v.intl.formatToPlainString(v.t.Rea2gY, { hours: 4 })
-            },
-            {
-                key: 3,
-                value: x.F.HOURS_1,
-                label: v.intl.formatToPlainString(v.t.Rea2gY, { hours: 1 })
-            },
-            {
-                key: 4,
-                value: x.F.MINUTES_30,
-                label: v.intl.formatToPlainString(v.t.TS3eJS, { minutes: 30 })
-            },
-            {
-                key: 5,
-                value: x.F.DONT_CLEAR,
-                label: v.intl.string(v.t.bRn8cn)
-            }
-        ];
-    }
     get analyticsLocation() {
-        return { page: C.ZY5.CUSTOM_STATUS_MODAL };
+        return { page: x.ZY5.CUSTOM_STATUS_MODAL };
     }
     getEmojiButtonRenderer() {
         let { emojiInfo: t } = this.state;
@@ -118,7 +67,7 @@ class A extends l.PureComponent {
             ? null
             : () =>
                   (0, a.jsx)(u.Z, {
-                      className: k.emoji,
+                      className: O.emoji,
                       emojiId: t.id,
                       emojiName: t.name,
                       animated: !!t.animated
@@ -128,13 +77,13 @@ class A extends l.PureComponent {
         let { user: t } = this.props,
             { text: e, emojiInfo: n } = this.state;
         return (0, a.jsx)(r.hjN, {
-            className: k.formGroup,
-            title: v.intl.formatToPlainString(v.t['/w9pHx'], { username: t.username }),
+            className: O.formGroup,
+            title: C.intl.formatToPlainString(C.t['/w9pHx'], { username: t.username }),
             children: (0, a.jsxs)('div', {
-                className: k.inputContainer,
+                className: O.inputContainer,
                 children: [
                     (0, a.jsx)('div', {
-                        className: k.emojiButtonContainer,
+                        className: O.emojiButtonContainer,
                         children: (0, a.jsx)(r.yRy, {
                             renderPopout: this.renderEmojiPicker,
                             position: 'left',
@@ -145,7 +94,7 @@ class A extends l.PureComponent {
                                 return (0, a.jsx)(c.Z, {
                                     ...t,
                                     active: n,
-                                    className: k.emojiButton,
+                                    className: O.emojiButton,
                                     tabIndex: 0,
                                     renderButtonContents: this.getEmojiButtonRenderer()
                                 });
@@ -153,10 +102,10 @@ class A extends l.PureComponent {
                         })
                     }),
                     (0, a.jsx)(r.oil, {
-                        maxLength: x.s,
+                        maxLength: v.s0,
                         value: e,
-                        inputClassName: k.input,
-                        placeholder: v.intl.string(v.t['zYR38/']),
+                        inputClassName: O.input,
+                        placeholder: C.intl.string(C.t['zYR38/']),
                         onChange: this.handleStatusChange,
                         onKeyPress: this.handleKeyPress,
                         autoFocus: !0
@@ -171,14 +120,14 @@ class A extends l.PureComponent {
                                       right: -2
                                   }
                               },
-                              className: k.clearButton,
+                              className: O.clearButton,
                               onClick: this.handleClearStatus,
                               look: r.zxk.Looks.BLANK,
                               size: r.zxk.Sizes.NONE,
                               children: (0, a.jsx)(r.k$p, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: k.clearIcon
+                                  className: O.clearIcon
                               })
                           })
                         : null
@@ -189,13 +138,18 @@ class A extends l.PureComponent {
     renderClearAfter() {
         let { clearAfter: t } = this.state;
         return (0, a.jsx)(r.hjN, {
-            className: k.formGroup,
-            title: v.intl.string(v.t.E45wvL),
+            className: O.formGroup,
+            title: C.intl.string(C.t.E45wvL),
             children: (0, a.jsx)(r.q4e, {
-                placeholder: v.intl.string(v.t.E45wvL),
+                placeholder: C.intl.string(C.t.E45wvL),
                 maxVisibleItems: 5,
                 value: t,
-                options: this.clearAfterOptions,
+                options: v.wS.map((t) => ({
+                    ...t,
+                    value: t.value,
+                    key: t.value,
+                    label: t.label()
+                })),
                 onChange: this.handleChangeClearAfter
             })
         });
@@ -203,14 +157,19 @@ class A extends l.PureComponent {
     renderStatusInput() {
         let { status: t } = this.state;
         return (0, a.jsx)(r.hjN, {
-            className: k.formGroup,
-            title: v.intl.string(v.t.zOdg0N),
+            className: O.formGroup,
+            title: C.intl.string(C.t.zOdg0N),
             children: (0, a.jsx)(r.q4e, {
                 maxVisibleItems: 4,
                 value: t,
-                options: T,
+                options: v.Df.map((t) => ({
+                    ...t,
+                    value: t.value,
+                    key: t.value,
+                    label: t.label()
+                })),
                 onChange: this.handleChangeStatus,
-                renderOptionLabel: O
+                renderOptionLabel: T
             })
         });
     }
@@ -220,41 +179,41 @@ class A extends l.PureComponent {
             ...this.analyticsLocation,
             children: (0, a.jsxs)(r.Y0X, {
                 transitionState: t,
-                className: k.modalRoot,
-                'aria-label': v.intl.string(v.t['/UonHB']),
+                className: O.modalRoot,
+                'aria-label': C.intl.string(C.t['/UonHB']),
                 children: [
                     (0, a.jsxs)(r.xBx, {
                         separator: !1,
-                        className: k.headerContainer,
+                        className: O.headerContainer,
                         children: [
-                            (0, a.jsx)('div', { className: k.art }),
+                            (0, a.jsx)('div', { className: O.art }),
                             (0, a.jsx)('div', {
-                                className: k.header,
+                                className: O.header,
                                 children: (0, a.jsx)(r.H, {
-                                    className: k.headerText,
-                                    children: v.intl.string(v.t['/UonHB'])
+                                    className: O.headerText,
+                                    children: C.intl.string(C.t['/UonHB'])
                                 })
                             }),
                             (0, a.jsx)(r.olH, {
                                 onClick: e,
-                                className: k.modalCloseButton
+                                className: O.modalCloseButton
                             })
                         ]
                     }),
                     (0, a.jsxs)(r.hzk, {
-                        children: [this.renderCustomStatusInput(), this.renderClearAfter(), (0, a.jsx)(r.$i$, { className: k.formDivider }), this.renderStatusInput()]
+                        children: [this.renderCustomStatusInput(), this.renderClearAfter(), (0, a.jsx)(r.$i$, { className: O.formDivider }), this.renderStatusInput()]
                     }),
                     (0, a.jsxs)(r.mzw, {
                         children: [
                             (0, a.jsx)(r.zxk, {
                                 onClick: this.handleSubmit,
-                                children: v.intl.string(v.t.R3BPHx)
+                                children: C.intl.string(C.t.R3BPHx)
                             }),
                             (0, a.jsx)(r.zxk, {
                                 onClick: e,
                                 look: r.zxk.Looks.LINK,
-                                color: k.cancelButton,
-                                children: v.intl.string(v.t['ETE/oK'])
+                                color: O.cancelButton,
+                                children: C.intl.string(C.t['ETE/oK'])
                             })
                         ]
                     })
@@ -267,11 +226,8 @@ class A extends l.PureComponent {
             D(this, 'state', {
                 emojiInfo: null != this.props.customStatus ? this.props.customStatus.emoji : null,
                 text: null != this.props.customStatus && null != this.props.customStatus.state ? this.props.customStatus.state : '',
-                clearAfter: (0, j.Z)(),
-                status: (function () {
-                    let t = S.co.getSetting();
-                    return T.some((e) => e.value === t) ? t : r.Skl.ONLINE;
-                })()
+                clearAfter: (0, _.Z)(),
+                status: (0, j.Z)()
             }),
             D(this, 'handleClearStatus', () => {
                 this.setState({
@@ -314,7 +270,7 @@ class A extends l.PureComponent {
                 s !== i && (0, m.Z)(i, s, t), (0, b.Z)(a, n, l, t), e();
             }),
             D(this, 'handleKeyPress', (t) => {
-                t.which === C.yXg.ENTER && this.handleSaveStatus();
+                t.which === x.yXg.ENTER && this.handleSaveStatus();
             }),
             D(this, 'renderEmojiPicker', (t) => {
                 let { closePopout: e } = t,
@@ -330,7 +286,7 @@ class A extends l.PureComponent {
             });
     }
 }
-let I = o.ZP.connectStores(
+let E = o.ZP.connectStores(
     [f.Z, p.default],
     () => {
         let t = p.default.getCurrentUser();
@@ -343,4 +299,4 @@ let I = o.ZP.connectStores(
         );
     },
     { forwardRef: !0 }
-)(A);
+)(k);
