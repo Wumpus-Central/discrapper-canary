@@ -1,110 +1,119 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => w });
 var i = n(200651),
     l = n(192379),
     r = n(990547),
-    a = n(481060),
-    s = n(100527),
-    o = n(213609),
-    c = n(335131),
-    d = n(252618),
-    u = n(979233),
-    h = n(175307),
-    m = n(17845),
-    p = n(374939),
-    g = n(233374),
-    _ = n(611928),
-    f = n(283293),
-    E = n(822857),
-    I = n(775451),
-    C = n(63063),
+    a = n(442837),
+    s = n(481060),
+    o = n(100527),
+    c = n(213609),
+    d = n(335131),
+    u = n(252618),
+    h = n(979233),
+    m = n(175307),
+    p = n(17845),
+    g = n(374939),
+    _ = n(233374),
+    f = n(611928),
+    E = n(283293),
+    I = n(822857),
+    C = n(775451),
+    N = n(63063),
     v = n(113434),
-    N = n(833435),
-    T = n(150560),
-    S = n(558652),
-    Z = n(736683),
-    x = n(452081),
-    A = n(46140),
-    b = n(981631),
-    L = n(215023),
-    y = n(388032),
-    P = n(359643);
-let O = function () {
-    let { selectedTab: e, onSelectTab: t, tabs: n } = (0, x.z)(),
-        { onScroll: O, scrollPosition: R } = (0, u.M)(),
-        j = T.Z.getState().getUtmCurrentContext(),
-        D = (0, N._)({ location: A.dr.QUEST_HOME_DESKTOP }) ? Z.Z : Z.j,
-        w = l.useRef(j);
+    T = n(569984),
+    S = n(833435),
+    Z = n(918701),
+    A = n(150560),
+    x = n(558652),
+    b = n(736683),
+    L = n(452081),
+    y = n(46140),
+    P = n(642145),
+    O = n(981631),
+    R = n(215023),
+    j = n(388032),
+    D = n(359643);
+let w = function () {
+    var e;
+    let { selectedTab: t, onSelectTab: n, tabs: w } = (0, L.z)(),
+        { onScroll: M, scrollPosition: k } = (0, h.M)(),
+        U = A.Z.getState().getUtmCurrentContext(),
+        G = (0, S._)({ location: y.dr.QUEST_HOME_DESKTOP }) ? b.Z : b.j,
+        B = l.useRef(U);
     l.useEffect(() => {
-        w.current = j;
+        B.current = U;
     }),
         l.useEffect(() => {
-            let { current: t } = w;
-            (0, o.h)({
+            let { current: e } = B;
+            (0, c.h)({
                 name: r.ImpressionNames.QUEST_HOME,
                 type: r.ImpressionTypes.VIEW,
                 properties: {
-                    utm_source_current: t.utmSourceCurrent,
-                    utm_medium_current: t.utmMediumCurrent,
-                    utm_campaign_current: t.utmCampaignCurrent,
-                    utm_content_current: t.utmContentCurrent,
-                    tab: e
+                    utm_source_current: e.utmSourceCurrent,
+                    utm_medium_current: e.utmMediumCurrent,
+                    utm_campaign_current: e.utmCampaignCurrent,
+                    utm_content_current: e.utmContentCurrent,
+                    tab: t
                 }
             });
-        }, [e]);
-    let M = l.useCallback(() => {
-        window.open(C.Z.getArticleURL(b.BhN.QUESTS_LEARN_MORE));
+        }, [t]);
+    let V = l.useCallback(() => {
+        window.open(N.Z.getArticleURL(O.BhN.QUESTS_LEARN_MORE));
     }, []);
-    (0, d.Tt)({ location: y.intl.string(y.t.JALI2N) });
-    let { enabled: k } = (0, E.W)({ location: A.dr.QUEST_HOME_DESKTOP });
+    (0, u.Tt)({ location: j.intl.string(j.t.JALI2N) });
+    let { enabled: H } = (0, I.W)({ location: y.dr.QUEST_HOME_DESKTOP }),
+        F = null !== (e = (0, a.e7)([T.Z], () => T.Z.getQuest(P.V), [])) && void 0 !== e ? e : null,
+        z = null !== F && !(0, Z.zi)(F),
+        W = z ? j.intl.format(j.t.BCBIlp, {}) : j.intl.format(j.t.lmMBf3, {}),
+        Y = z ? j.intl.format(j.t.U9FY0N, {}) : j.intl.string(j.t.oWCrBg);
     return (0, i.jsxs)('div', {
-        className: P.container,
+        className: D.container,
         children: [
-            (0, i.jsxs)(_.ZP, {
-                variant: _._6.OVERLAY,
-                children: [(0, i.jsx)('div', { className: P.dragRegion }), (0, i.jsx)(_.z6, { scrollPosition: R }), (0, i.jsx)(_.aV, { icon: a.qDn })]
+            (0, i.jsxs)(f.ZP, {
+                variant: f._6.OVERLAY,
+                children: [(0, i.jsx)('div', { className: D.dragRegion }), (0, i.jsx)(f.z6, { scrollPosition: k }), (0, i.jsx)(f.aV, { icon: s.qDn })]
             }),
-            (0, i.jsxs)(f.Z, {
-                onScroll: O,
+            (0, i.jsxs)(E.Z, {
+                onScroll: M,
                 children: [
-                    (0, i.jsx)(m.Z, {
-                        title: y.intl.format(y.t.lmMBf3, {}),
-                        description: y.intl.string(y.t.oWCrBg),
-                        button: (0, i.jsx)(h.u, {
-                            text: y.intl.string(y.t.hvVgAQ),
-                            onClick: M
+                    (0, i.jsx)(p.Z, {
+                        title: W,
+                        description: Y,
+                        button: (0, i.jsx)(m.u, {
+                            text: j.intl.string(j.t.hvVgAQ),
+                            onClick: V
                         }),
-                        className: P.bannerContainer,
+                        className: D.bannerContainer,
                         children: (0, i.jsx)('div', {
-                            className: P.bannerImage,
-                            children: (0, i.jsx)('div', { className: P.bannerGradient })
+                            className: D.bannerImage,
+                            children: (0, i.jsx)('div', { className: D.bannerGradient })
                         })
                     }),
-                    (0, i.jsxs)(p.Z, {
+                    (0, i.jsxs)(g.Z, {
                         children: [
                             (0, i.jsxs)('div', {
-                                className: P.tabs,
+                                className: D.tabs,
                                 children: [
-                                    (0, i.jsx)(g.Z, {
-                                        tabs: n,
-                                        selectedTab: e,
-                                        onTabSelect: t
+                                    (0, i.jsx)(_.Z, {
+                                        tabs: w,
+                                        selectedTab: t,
+                                        onTabSelect: n
                                     }),
-                                    k &&
-                                        (0, i.jsx)(I.V9, {
-                                            cardAlignment: I.ek.END,
-                                            ctaText: y.intl.string(y.t.iEw2Nz),
+                                    H &&
+                                        (0, i.jsx)(C.V9, {
+                                            cardAlignment: C.ek.END,
+                                            ctaText: j.intl.string(j.t.iEw2Nz),
                                             ctaOnClick: () => {
-                                                (0, c.mK)({
+                                                (0, d.mK)({
                                                     openInLayer: !1,
-                                                    tab: L.AW.ORBS,
+                                                    tab: R.AW.ORBS,
                                                     analyticsLocations: [],
-                                                    analyticsSource: s.Z.QUEST_HOME_PAGE
+                                                    analyticsSource: o.Z.QUEST_HOME_PAGE
                                                 });
                                             }
                                         })
                                 ]
                             }),
-                            e === v.e5.CLAIMED ? (0, i.jsx)(D, { onSelectTab: t }) : (0, i.jsx)(S.Z, {})
+                            t === v.e5.CLAIMED ? (0, i.jsx)(G, { onSelectTab: n }) : (0, i.jsx)(x.Z, {})
                         ]
                     })
                 ]
