@@ -1,36 +1,32 @@
-n.d(t, { Z: () => c }), n(47120);
+n.d(t, { Z: () => u });
 var i = n(192379),
     r = n(442837),
-    a = n(607070),
-    s = n(654904),
-    o = n(271383),
-    l = n(451478),
-    u = n(369111);
-function c(e) {
-    let { user: t, guildId: n, size: c, showPending: d = !1, animateOnHover: f = !1, avatarOverride: _ } = e,
-        [p, h] = i.useState(!1),
-        m = (0, r.e7)([a.Z], () => a.Z.useReducedMotion),
-        g = (0, r.e7)([l.Z], () => l.Z.isFocused()) && (p || (!m && !f)),
-        { pendingAvatar: E } = (0, u.Z)({}),
-        v = d ? E : void 0,
-        y = void 0 !== _ ? _ : v,
-        I = (0, r.e7)([o.ZP], () => (null != n && null != t ? o.ZP.getMember(n, t.id) : null)),
-        b = i.useMemo(
+    a = n(654904),
+    s = n(271383),
+    o = n(369111),
+    l = n(442552);
+function u(e) {
+    let { user: t, guildId: n, size: u, showPending: c = !1, animateOnHover: d = !1, avatarOverride: f } = e,
+        { onMouseEnter: _, onMouseLeave: p, shouldAnimate: h } = (0, l.Z)(d),
+        { pendingAvatar: m } = (0, o.Z)({}),
+        g = c ? m : void 0,
+        E = void 0 !== f ? f : g,
+        v = (0, r.e7)([s.ZP], () => (null != n && null != t ? s.ZP.getMember(n, t.id) : null));
+    return {
+        avatarSrc: i.useMemo(
             () =>
                 null != t
-                    ? (0, s.SG)(y, I, t, {
-                          canAnimate: g,
-                          size: c
+                    ? (0, a.SG)(E, v, t, {
+                          canAnimate: h,
+                          size: u
                       })
                     : void 0,
-            [y, I, t, g, c]
-        );
-    return {
-        avatarSrc: b,
-        isAvatarAnimating: g,
+            [E, v, t, h, u]
+        ),
+        isAvatarAnimating: h,
         eventHandlers: {
-            onMouseEnter: i.useCallback(() => h(!0), []),
-            onMouseLeave: i.useCallback(() => h(!1), [])
+            onMouseEnter: _,
+            onMouseLeave: p
         }
     };
 }

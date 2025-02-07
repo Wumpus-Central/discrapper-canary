@@ -168,6 +168,10 @@ let A = Object.freeze({
             let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'jpg';
             return '/users/'.concat(t, '/avatars/').concat(e, '.').concat(a);
         },
+        ARCHIVED_AVATAR: function (t, e, a) {
+            let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'jpg';
+            return '/avatars/'.concat(t, '/archived/').concat(e, '/').concat(a, '.').concat(r);
+        },
         USER_BANNER: (t, e, a) => '/users/'.concat(t, '/banners/').concat(e, '.').concat(a),
         AVATAR_DECORATION_PRESETS: function (t) {
             let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'png';
