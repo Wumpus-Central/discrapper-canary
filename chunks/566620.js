@@ -142,7 +142,7 @@ async function J(e) {
                 joinSecret: S,
                 isContextlessActivity: N
             });
-            if ((null == m || m(), !e)) throw new I.Z(I.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
+            if ((null == m || m(), 'failure' === e.result)) throw new I.Z(I.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED, e.reason);
         }
         a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_SUCCESS',
@@ -247,13 +247,32 @@ async function et(e) {
         p = N.default.getSessionId(),
         h = D.default.getCurrentUser(),
         m = n;
-    if (null == m) return !1;
+    if (null == m)
+        return {
+            result: 'failure',
+            reason: 1
+        };
     let g = (0, U.sq)(),
         v = await (0, F.Z)(m, r);
-    if (null == h || null == v) return !1;
-    if (!g && null == r) return L.S.dispatch(K.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: m }), !1;
+    if (null == h || null == v)
+        return {
+            result: 'failure',
+            reason: 2
+        };
+    if (!g && null == r)
+        return (
+            L.S.dispatch(K.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: m }),
+            {
+                result: 'failure',
+                reason: 3
+            }
+        );
     let y = C.Z.getChannel(r);
-    if (!g && null == y) return !1;
+    if (!g && null == y)
+        return {
+            result: 'failure',
+            reason: 3
+        };
     let I = (0, V.e4)({
         channelId: r,
         ChannelStore: C.Z,
@@ -261,18 +280,24 @@ async function et(e) {
         PermissionStore: O.Z,
         VoiceStateStore: x.Z
     });
-    if (I !== V.jy.CAN_LAUNCH)
+    if (I !== V.jy.CAN_LAUNCH) {
+        let e = 4;
         return (
             I === V.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
-                ? (0, S.w)()
+                ? ((e = 5), (0, S.w)())
                 : I === V.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
+                  ((e = 6),
                   o.Z.show({
                       title: Q.intl.string(Q.t['IOy+Iy']),
                       body: Q.intl.string(Q.t.UXoQTk),
                       hideActionSheet: !1
-                  }),
-            !1
+                  })),
+            {
+                result: 'failure',
+                reason: e
+            }
         );
+    }
     let b = G.ZP.getCurrentEmbeddedActivity();
     if (
         ((null == b ? void 0 : b.applicationId) != null && (t = E.Z.getApplication(null == b ? void 0 : b.applicationId)),
@@ -288,7 +313,10 @@ async function et(e) {
             }))
         ))
     )
-        return !1;
+        return {
+            result: 'failure',
+            reason: 7
+        };
     if (null != y) {
         let e = (0, j.Z)(y.id),
             n = W.wP.includes(y.type);
@@ -299,8 +327,15 @@ async function et(e) {
                     bypassChangeModal: null != t
                 }))
             )
-                return !1;
-        } else if (!(0, k.WS)(y) || !n) return !1;
+                return {
+                    result: 'failure',
+                    reason: 8
+                };
+        } else if (!(0, k.WS)(y) || !n)
+            return {
+                result: 'failure',
+                reason: 9
+            };
     }
     return (null == f && null != c && null != d && !0 === _ && (f = await s.Z.getJoinSecret(c, d, n)), null != r && null == f)
         ? (await M.Z.post({
@@ -322,23 +357,27 @@ async function et(e) {
               oldFormErrors: !0,
               rejectWithError: !0
           }),
-          !0)
-        : null != f &&
-              (await M.Z.post({
-                  url: K.ANM.ACTIVITY_JOIN_INSTANCE(n, f),
-                  body: { session_id: p },
-                  trackedActionData: {
-                      event: i.NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH,
-                      properties: {
-                          application_id: n,
-                          session_id: p
-                      }
-                  },
-                  retries: 3,
-                  oldFormErrors: !0,
-                  rejectWithError: !0
-              }),
-              !0);
+          { result: 'success' })
+        : null != f
+          ? (await M.Z.post({
+                url: K.ANM.ACTIVITY_JOIN_INSTANCE(n, f),
+                body: { session_id: p },
+                trackedActionData: {
+                    event: i.NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH,
+                    properties: {
+                        application_id: n,
+                        session_id: p
+                    }
+                },
+                retries: 3,
+                oldFormErrors: !0,
+                rejectWithError: !0
+            }),
+            { result: 'success' })
+          : {
+                result: 'failure',
+                reason: 0
+            };
 }
 function en(e) {
     let { location: t, applicationId: n, showFeedback: i = !0 } = e,

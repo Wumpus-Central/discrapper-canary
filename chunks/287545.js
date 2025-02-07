@@ -288,6 +288,9 @@ class en extends u.Z {
                             break;
                         case h.Z.Reasons.INVALID_CHANNEL:
                             c = V.intl.string(V.t.j29zCg);
+                            break;
+                        case h.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED:
+                            n = r.detailCode;
                     }
                 } else if (r instanceof m.Z) {
                     var d;
