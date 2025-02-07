@@ -39,5 +39,6 @@ e.exports = {
     notice: 'notice_b962dc',
     rejectionReasonLabel: 'rejectionReasonLabel_b962dc',
     disclaimerFooter: 'disclaimerFooter_b962dc',
-    rejectText: 'rejectText_b962dc'
+    statusTextContainer: 'statusTextContainer_b962dc',
+    incompleteButtonsContainer: 'incompleteButtonsContainer_b962dc'
 };

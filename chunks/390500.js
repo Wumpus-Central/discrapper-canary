@@ -22,21 +22,26 @@ let c = function (e) {
                         color: r.TVs.colors.INTERACTIVE_ACTIVE
                     })
                 }),
-                (0, i.jsx)(r.X6q, {
-                    variant: 'heading-lg/semibold',
-                    className: o.header,
-                    children: (null == n ? void 0 : n.name) != null ? s.intl.formatToPlainString(s.t['0Qlu//'], { guildName: n.name }) : s.intl.string(s.t['5iLvS0'])
-                }),
-                (0, i.jsx)(r.Text, {
-                    variant: 'text-md/medium',
-                    color: 'header-secondary',
-                    children: s.intl.string(s.t.FdsK4u)
+                (0, i.jsxs)('div', {
+                    className: o.statusTextContainer,
+                    children: [
+                        (0, i.jsx)(r.X6q, {
+                            variant: 'heading-lg/semibold',
+                            color: 'header-primary',
+                            children: (null == n ? void 0 : n.name) != null ? s.intl.formatToPlainString(s.t['0Qlu//'], { guildName: n.name }) : s.intl.string(s.t['5iLvS0'])
+                        }),
+                        (0, i.jsx)(r.Text, {
+                            variant: 'text-md/medium',
+                            color: 'header-secondary',
+                            children: s.intl.string(s.t.FdsK4u)
+                        })
+                    ]
                 }),
                 (0, i.jsx)(r.zxk, {
                     fullWidth: !0,
                     onClick: t,
                     look: r.zxk.Looks.FILLED,
-                    color: r.zxk.Colors.PRIMARY,
+                    color: r.zxk.Colors.RED,
                     size: r.zxk.Sizes.LARGE,
                     children: s.intl.string(s.t.g9tK0t)
                 })
