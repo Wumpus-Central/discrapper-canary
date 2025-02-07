@@ -12,7 +12,7 @@ var i = n(192379),
     r = n(392711),
     a = n(866442),
     s = n(399606),
-    o = n(692547),
+    o = n(900089),
     l = n(780384),
     u = n(607070),
     c = n(44315),
@@ -20,51 +20,25 @@ var i = n(192379),
     f = n(981631);
 function _(e) {
     let t = (0, s.e7)([u.Z], () => u.Z.saturation);
-    return (0, i.useMemo)(
-        () =>
-            null == e
-                ? null
-                : {
-                      overlaySyncedWithUserTheme: o.Z.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve({
-                          theme: e,
-                          saturation: t
-                      }).hsl(),
-                      overlay: o.Z.colors.PROFILE_GRADIENT_OVERLAY.resolve({
-                          theme: e,
-                          saturation: t
-                      }).hsl(),
-                      sectionBox: o.Z.colors.PROFILE_GRADIENT_SECTION_BOX.resolve({
-                          theme: e,
-                          saturation: t
-                      }).hsl(),
-                      messageInputBorder: o.Z.colors.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER.resolve({
-                          theme: e,
-                          saturation: t
-                      }).hsl(),
-                      dividerOpacity: e === o.Z.themes.DARK ? 0.24 : 0.12,
-                      noteBackgroundColor: o.Z.colors.PROFILE_GRADIENT_NOTE_BACKGROUND.resolve({
-                          theme: e,
-                          saturation: t
-                      }).hsl(),
-                      profileBodyBackgroundHover: o.Z.colors.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER.resolve({
-                          theme: e,
-                          saturation: t
-                      }).hsl(),
-                      rolePillBackgroundColor: o.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve({
-                          theme: e,
-                          saturation: t
-                      }).hsl(),
-                      rolePillBorderColor: o.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BORDER.resolve({
-                          theme: e,
-                          saturation: t
-                      }).hsl(),
-                      icon: o.Z.colors.INTERACTIVE_NORMAL.resolve({
-                          theme: e,
-                          saturation: t
-                      }).hsl()
-                  },
-        [e, t]
-    );
+    return (0, i.useMemo)(() => {
+        if (null == e) return null;
+        let n = {
+            theme: e,
+            saturation: t
+        };
+        return {
+            overlaySyncedWithUserTheme: (0, o.uJ)('PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME', n),
+            overlay: (0, o.uJ)('PROFILE_GRADIENT_OVERLAY', n),
+            sectionBox: (0, o.uJ)('PROFILE_GRADIENT_SECTION_BOX', n),
+            messageInputBorder: (0, o.uJ)('PROFILE_GRADIENT_MESSAGE_INPUT_BORDER', n),
+            dividerOpacity: e === (0, o.RC)().DARK ? 0.24 : 0.12,
+            noteBackgroundColor: (0, o.uJ)('PROFILE_GRADIENT_NOTE_BACKGROUND', n),
+            profileBodyBackgroundHover: (0, o.uJ)('PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER', n),
+            rolePillBackgroundColor: (0, o.uJ)('PROFILE_GRADIENT_ROLE_PILL_BACKGROUND', n),
+            rolePillBorderColor: (0, o.uJ)('PROFILE_GRADIENT_ROLE_PILL_BORDER', n),
+            icon: (0, o.uJ)('INTERACTIVE_NORMAL', n)
+        };
+    }, [e, t]);
 }
 function p(e) {
     return null == e ? null : (0, a.Bd)(e) > 0.5 ? f.BRd.DARK : f.BRd.LIGHT;

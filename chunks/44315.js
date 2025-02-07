@@ -10,14 +10,14 @@ var i = n(192379),
     a = n.n(r),
     s = n(691324),
     o = n(399606),
-    l = n(692547),
+    l = n(900089),
     u = n(410030),
     c = n(607070);
 function d(e) {
     return e.toUpperCase().replace(/-/g, '_');
 }
 function f(e) {
-    return l.Z.unsafe_rawColors[d(e)].css;
+    return (0, l.Fw)(d(e));
 }
 function _(e) {
     return null != e ? s.b[e] : null;
@@ -39,12 +39,10 @@ function h(e, t) {
             null == e
                 ? null
                 : {
-                      hex: l.Z.colors[d(e)]
-                          .resolve({
-                              theme: null != t ? t : n,
-                              saturation: r
-                          })
-                          .hex()
+                      hex: (0, l.uJ)(d(e), {
+                          theme: null != t ? t : n,
+                          saturation: r
+                      })
                   },
         [e, r, n, t]
     );

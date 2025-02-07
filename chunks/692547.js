@@ -50,7 +50,10 @@ let { Themes: m } = n(15202).V,
                 i = S[n];
             return {
                 css: O(n),
-                resolve: (e) => N(i, e.saturation)
+                resolve(e) {
+                    var t;
+                    return N(i, null !== (t = null == e ? void 0 : e.saturation) && void 0 !== t ? t : 1);
+                }
             };
         }),
         shadows: l()(y, (e, t) => ({
