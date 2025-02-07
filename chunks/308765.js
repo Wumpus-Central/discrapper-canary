@@ -273,6 +273,11 @@ let r = {
         actions: ['VOICE_FILTER_DOWNLOAD_READY', 'VOICE_FILTER_REQUEST_SWITCH', 'VOICE_FILTER_DOWNLOAD_CANCELED'],
         inlineRequire: () => n(230385).Z
     },
+    VoiceFilterFeedbackManager: {
+        actions: ['VOICE_FILTER_APPLIED', 'VOICE_CHANNEL_SELECT'],
+        inlineRequire: () => n(752370).Z,
+        hasStoreChangeListeners: !0
+    },
     VoicePermissionManager: {
         actions: ['VOICE_CHANNEL_SELECT', 'VOICE_STATE_UPDATES'],
         inlineRequire: () => n(39846).Z
