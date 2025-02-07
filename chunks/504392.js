@@ -1,31 +1,32 @@
-i.r(n), i.d(n, { default: () => p });
+i.r(n), i.d(n, { default: () => v });
 var t = i(200651);
 i(192379);
-var a = i(481060),
-    r = i(413335),
-    o = i(984370),
-    s = i(166351),
-    c = i(460608),
-    l = i(953476),
-    d = i(291775),
-    u = i(388032),
+var r = i(481060),
+    a = i(413335),
+    s = i(984370),
+    o = i(166351),
+    c = i(953478),
+    l = i(460608),
+    d = i(953476),
+    u = i(291775),
+    x = i(388032),
     m = i(77598);
-function p(e) {
+function v(e) {
     let { guildId: n } = e;
     return (0, t.jsxs)('div', {
         className: m.container,
         children: [
-            (0, t.jsxs)(o.Z, {
+            (0, t.jsxs)(s.Z, {
                 hideSearch: !0,
                 toolbar: (0, t.jsx)('div', {}),
                 children: [
-                    (0, t.jsx)(o.Z.Icon, {
-                        icon: (0, a.GSL)(r.Z),
+                    (0, t.jsx)(s.Z.Icon, {
+                        icon: (0, r.GSL)(a.Z),
                         disabled: !0,
                         'aria-label': ''
                     }),
-                    (0, t.jsx)(o.Z.Title, { children: u.intl.string(d.Z.yv3DJC) }),
-                    (0, t.jsx)(o.Z.Divider, {})
+                    (0, t.jsx)(s.Z.Title, { children: x.intl.string(u.Z.yv3DJC) }),
+                    (0, t.jsx)(s.Z.Divider, {})
                 ]
             }),
             (0, t.jsxs)('div', {
@@ -37,21 +38,21 @@ function p(e) {
                             (0, t.jsxs)('div', {
                                 className: m.powerupTextContainer,
                                 children: [
-                                    (0, t.jsx)(a.X6q, {
+                                    (0, t.jsx)(r.X6q, {
                                         variant: 'heading-lg/semibold',
-                                        children: u.intl.string(d.Z['TXY/b2'])
+                                        children: x.intl.string(u.Z['TXY/b2'])
                                     }),
-                                    (0, t.jsx)(a.Text, {
+                                    (0, t.jsx)(r.Text, {
                                         variant: 'text-sm/medium',
-                                        children: u.intl.string(d.Z.aJv4PD)
+                                        children: x.intl.string(u.Z.aJv4PD)
                                     })
                                 ]
                             }),
                             (0, t.jsx)('div', {
                                 className: m.powerupContainer,
-                                children: l.O.map((e) =>
+                                children: d.O.map((e) =>
                                     (0, t.jsx)(
-                                        s.Z,
+                                        o.Z,
                                         {
                                             powerup: e,
                                             onClick: () => {}
@@ -62,9 +63,9 @@ function p(e) {
                             })
                         ]
                     }),
-                    (0, t.jsx)('div', {
+                    (0, t.jsxs)('div', {
                         className: m.sidebarContainer,
-                        children: (0, t.jsx)(c.Z, { guildId: n })
+                        children: [(0, t.jsx)(c.Z, {}), (0, t.jsx)(l.Z, { guildId: n })]
                     })
                 ]
             })
