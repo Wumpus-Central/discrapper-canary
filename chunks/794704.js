@@ -9,10 +9,10 @@ var i = n(200651),
     d = n.n(c),
     u = n(392711),
     m = n.n(u),
-    h = n(442837),
-    g = n(481060),
-    _ = n(224706),
-    x = n(660216),
+    g = n(442837),
+    h = n(481060),
+    x = n(224706),
+    _ = n(660216),
     p = n(13245),
     E = n(825209),
     C = n(615287),
@@ -65,10 +65,10 @@ function X(e) {
 }
 function J(e) {
     let { children: t, title: n } = e;
-    return (0, i.jsxs)(g.xJW, {
+    return (0, i.jsxs)(h.xJW, {
         children: [
             null != n &&
-                (0, i.jsx)(g.Text, {
+                (0, i.jsx)(h.Text, {
                     variant: 'text-sm/medium',
                     color: 'text-muted',
                     className: K.formItemTitle,
@@ -83,7 +83,7 @@ function J(e) {
 }
 function Q(e) {
     let { header: t, icon: n, title: s, description: r, action: a, hint: o, onClick: c, 'aria-label': d, className: u } = e;
-    return (0, i.jsxs)(g.kL8, {
+    return (0, i.jsxs)(h.kL8, {
         'aria-label': d,
         onClick: c,
         className: l()(K.groupContainer, u),
@@ -104,20 +104,20 @@ function Q(e) {
                     (0, i.jsxs)('div', {
                         className: K.groupMainContent,
                         children: [
-                            (0, i.jsx)(g.Text, {
+                            (0, i.jsx)(h.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-primary',
                                 className: K.groupTitle,
                                 children: s
                             }),
                             null != r &&
-                                (0, i.jsx)(g.Text, {
+                                (0, i.jsx)(h.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
                                     children: r
                                 }),
                             null != o &&
-                                (0, i.jsx)(g.Text, {
+                                (0, i.jsx)(h.Text, {
                                     variant: 'text-xxs/medium',
                                     color: 'text-muted',
                                     children: o
@@ -139,7 +139,7 @@ function $(e) {
         d = (e) => {
             c(e), null == r || r(e);
         };
-    return (0, i.jsx)(g.zF9, {
+    return (0, i.jsx)(h.zF9, {
         className: l()(K.collapseable),
         collapsibleContent: (0, i.jsx)('div', {
             className: K.groupCollapsedContainer,
@@ -158,13 +158,13 @@ function $(e) {
                     children: [
                         a.action,
                         o
-                            ? (0, i.jsx)(g.CJ0, {
+                            ? (0, i.jsx)(h.CJ0, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
                                   color: 'var(--interactive-active)'
                               })
-                            : (0, i.jsx)(g.Fbu, {
+                            : (0, i.jsx)(h.Fbu, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
@@ -182,7 +182,7 @@ let ee = new Set([C.mM.INITIALIZING, C.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION, C.
     };
 function en(e) {
     var t, n;
-    let r = (0, h.e7)(
+    let r = (0, g.e7)(
             [b.ZP],
             () => {
                 let e = b.ZP.getVisibleGame();
@@ -192,8 +192,8 @@ function en(e) {
             o()
         ),
         l = null == r ? void 0 : r.pid,
-        a = (0, h.e7)([O.Z], () => (null == r || null == l ? null : O.Z.getTrackedGameByPid(l)), [r, l], o()),
-        { enabledLegacy: c, enabledOOP: d } = (0, h.cj)(
+        a = (0, g.e7)([O.Z], () => (null == r || null == l ? null : O.Z.getTrackedGameByPid(l)), [r, l], o()),
+        { enabledLegacy: c, enabledOOP: d } = (0, g.cj)(
             [k.Z, L.Z],
             () => {
                 if (null == r && null == a)
@@ -212,19 +212,19 @@ function en(e) {
             },
             [r, a]
         ),
-        u = (0, h.e7)([b.ZP, k.Z, L.Z], () => (null == r ? null : (0, b.FZ)(r, [b.ZP, k.Z, L.Z])), [r], o()),
-        [m, x] = s.useState(d),
+        u = (0, g.e7)([b.ZP, k.Z, L.Z], () => (null == r ? null : (0, b.FZ)(r, [b.ZP, k.Z, L.Z])), [r], o()),
+        [m, _] = s.useState(d),
         [p, E] = s.useState(c),
         [I, v] = s.useState(!1);
     s.useEffect(() => {
-        x(d), E(c);
+        _(d), E(c);
     }, [d, c]);
     let A = (0, N.$1)(),
         R = !(0, H.VS)(),
-        { legacyEnabled: P, oopEnabled: D } = (0, h.cj)([O.Z], () => O.Z.getGlobalEnabledStatus()),
+        { legacyEnabled: P, oopEnabled: D } = (0, g.cj)([O.Z], () => O.Z.getGlobalEnabledStatus()),
         [y] = (0, S.Z)([null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : void 0]),
         Z = (e, t, n) => {
-            et(n), null != r && (_.Z.toggleOverlay(r, e, t), x(t), E(e));
+            et(n), null != r && (x.Z.toggleOverlay(r, e, t), _(t), E(e));
         },
         B = A && R,
         M = !P && !D,
@@ -245,7 +245,7 @@ function en(e) {
                             overlayMethod: W.intl.string(W.t.a3eXS0),
                             overlayMethodHook: function (e, t) {
                                 return (0, i.jsx)(
-                                    g.Text,
+                                    h.Text,
                                     {
                                         tag: 'span',
                                         variant: 'text-sm/medium',
@@ -264,7 +264,7 @@ function en(e) {
                             overlayMethod: W.intl.string(W.t.bvlpDQ),
                             overlayMethodHook: function (e, t) {
                                 return (0, i.jsx)(
-                                    g.Text,
+                                    h.Text,
                                     {
                                         tag: 'span',
                                         variant: 'text-sm/medium',
@@ -315,7 +315,7 @@ function en(e) {
             }
         })();
     return ((0, T.ZP)(() => {
-        _.Z.getDetectableGames();
+        x.Z.getDetectableGames();
     }),
     null == r)
         ? null
@@ -326,18 +326,18 @@ function en(e) {
                   children: [
                       null !== (n = null == y ? void 0 : y.name) && void 0 !== n ? n : '',
                       null != u && u.verified
-                          ? (0, i.jsx)(g.ua7, {
+                          ? (0, i.jsx)(h.ua7, {
                                 text: W.intl.string(W.t['4PJP5u']),
                                 children: (e) =>
                                     (0, i.jsx)(j.Z, {
                                         size: 16,
-                                        color: g.TVs.colors.BG_BRAND.css,
+                                        color: h.TVs.colors.BG_BRAND.css,
                                         ...e,
-                                        children: (0, i.jsx)(g.kmB, {
+                                        children: (0, i.jsx)(h.kmB, {
                                             size: 'custom',
                                             width: 16,
                                             height: 16,
-                                            color: g.TVs.colors.WHITE.css
+                                            color: h.TVs.colors.WHITE.css
                                         })
                                     })
                             })
@@ -349,12 +349,12 @@ function en(e) {
               header: (0, i.jsxs)(i.Fragment, {
                   children: [
                       G || F
-                          ? (0, i.jsx)(g.pzj, {
+                          ? (0, i.jsx)(h.pzj, {
                                 size: 'xxs',
-                                color: F ? g.TVs.colors.TEXT_MUTED.css : z ? g.TVs.colors.TEXT_POSITIVE.css : g.TVs.colors.INTERACTIVE_NORMAL.css
+                                color: F ? h.TVs.colors.TEXT_MUTED.css : z ? h.TVs.colors.TEXT_POSITIVE.css : h.TVs.colors.INTERACTIVE_NORMAL.css
                             })
                           : (0, i.jsx)('div', { className: K.playingDot }),
-                      (0, i.jsx)(g.Text, {
+                      (0, i.jsx)(h.Text, {
                           variant: 'text-xs/semibold',
                           color: 'text-positive',
                           children: W.intl.string(W.t.CDOx39)
@@ -363,9 +363,9 @@ function en(e) {
               }),
               icon: (0, i.jsx)(ei, { game: r }),
               'aria-label': W.intl.string(W.t['87O5GB']),
-              action: (0, i.jsx)(g.P3F, {
+              action: (0, i.jsx)(h.P3F, {
                   onClick: (e) => et(e),
-                  children: (0, i.jsx)(g.rsf, {
+                  children: (0, i.jsx)(h.rsf, {
                       checked: m || p,
                       disabled: B || M || w || V,
                       onChange: (e, t) => Z(e, e, t)
@@ -379,7 +379,7 @@ function en(e) {
                       'aria-label': W.intl.string(W.t['7BlVIi']),
                       action: (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(g.rsf, {
+                              (0, i.jsx)(h.rsf, {
                                   checked: m,
                                   disabled: R || !D,
                                   onChange: (e, t) => Z(p, e, t)
@@ -395,7 +395,7 @@ function en(e) {
                       'aria-label': W.intl.string(W.t.BfFpW1),
                       action: (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(g.rsf, {
+                              (0, i.jsx)(h.rsf, {
                                   checked: p,
                                   disabled: A || !P,
                                   onChange: (e, t) => Z(e, m, t)
@@ -421,14 +421,14 @@ function ei(e) {
 }
 function es(e) {
     let { rawGame: t, legacySupportDisabled: n } = e,
-        r = (0, h.cj)([b.ZP, k.Z, L.Z], () => (0, b.FZ)(t, [b.ZP, k.Z, L.Z])),
-        { enabledLegacy: l, enabledOOP: a } = (0, h.cj)([k.Z, L.Z], () => (0, b.b6)(t, !1, [k.Z, L.Z]), [t]),
+        r = (0, g.cj)([b.ZP, k.Z, L.Z], () => (0, b.FZ)(t, [b.ZP, k.Z, L.Z])),
+        { enabledLegacy: l, enabledOOP: a } = (0, g.cj)([k.Z, L.Z], () => (0, b.b6)(t, !1, [k.Z, L.Z]), [t]),
         [o, c] = s.useState(l);
     s.useEffect(() => {
         c(l);
     }, [l]);
     let d = (e, t) => {
-        et(t), _.Z.toggleOverlay(r, e, a), c(e);
+        et(t), x.Z.toggleOverlay(r, e, a), c(e);
     };
     return (0, i.jsx)(Q, {
         title: t.name,
@@ -436,7 +436,7 @@ function es(e) {
         'aria-label': W.intl.format(W.t.hvPYsL, { gameName: r.name }).toString(),
         action: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(g.rsf, {
+                (0, i.jsx)(h.rsf, {
                     checked: o,
                     disabled: n,
                     onChange: (e, t) => d(e, t)
@@ -448,8 +448,8 @@ function es(e) {
 }
 function er(e) {
     let [t, n] = s.useState(!1),
-        { legacyEnabled: r, oopEnabled: l } = (0, h.cj)([O.Z], () => O.Z.getGlobalEnabledStatus()),
-        a = (0, h.Wu)([b.ZP], () => b.ZP.getGamesSeen(!0)),
+        { legacyEnabled: r, oopEnabled: l } = (0, g.cj)([O.Z], () => O.Z.getGlobalEnabledStatus()),
+        a = (0, g.Wu)([b.ZP], () => b.ZP.getGamesSeen(!0)),
         o = (0, N.$1)(),
         c = (e, t) => {
             et(t),
@@ -468,7 +468,7 @@ function er(e) {
               className: K.standaloneContainer,
               action: (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(g.rsf, {
+                      (0, i.jsx)(h.rsf, {
                           checked: r,
                           disabled: o,
                           onChange: (e, t) => c(e, t)
@@ -483,9 +483,9 @@ function er(e) {
               title: W.intl.string(W.t.BfFpW1),
               description: d,
               'aria-label': W.intl.string(W.t.BfFpW1),
-              action: (0, i.jsx)(g.P3F, {
+              action: (0, i.jsx)(h.P3F, {
                   onClick: (e) => et(e),
-                  children: (0, i.jsx)(g.rsf, {
+                  children: (0, i.jsx)(h.rsf, {
                       checked: r,
                       disabled: o,
                       onChange: (e, t) => c(e, t)
@@ -494,13 +494,13 @@ function er(e) {
               children: [
                   (0, i.jsx)('div', {
                       className: K.subtitleContainer,
-                      children: (0, i.jsx)(g.Text, {
+                      children: (0, i.jsx)(h.Text, {
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
                           children: W.intl.string(W.t.FzoWRk)
                       })
                   }),
-                  (0, i.jsx)(g.zJl, {
+                  (0, i.jsx)(h.zJl, {
                       className: K.scroller,
                       children: a.map((e) =>
                           (0, i.jsx)(
@@ -518,11 +518,11 @@ function er(e) {
 }
 function el(e) {
     let { rawGame: t, oopSupportDisabled: n } = e,
-        r = (0, h.cj)([b.ZP, k.Z, L.Z], () => (0, b.FZ)(t, [b.ZP, k.Z, L.Z])),
-        { enabledLegacy: l, enabledOOP: a } = (0, h.cj)([k.Z, L.Z], () => (0, b.b6)(t, !0, [k.Z, L.Z]), [t]),
+        r = (0, g.cj)([b.ZP, k.Z, L.Z], () => (0, b.FZ)(t, [b.ZP, k.Z, L.Z])),
+        { enabledLegacy: l, enabledOOP: a } = (0, g.cj)([k.Z, L.Z], () => (0, b.b6)(t, !0, [k.Z, L.Z]), [t]),
         [o, c] = s.useState(a),
         d = (e, t) => {
-            et(t), _.Z.toggleOverlay(r, l, e), c(e);
+            et(t), x.Z.toggleOverlay(r, l, e), c(e);
         };
     return (
         s.useEffect(() => {
@@ -534,7 +534,7 @@ function el(e) {
             'aria-label': W.intl.format(W.t.nByTd3, { gameName: r.name }).toString(),
             action: (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(g.rsf, {
+                    (0, i.jsx)(h.rsf, {
                         checked: o,
                         disabled: n,
                         onChange: (e, t) => d(e, t)
@@ -547,9 +547,9 @@ function el(e) {
 }
 function ea(e) {
     let [t, n] = s.useState(!1),
-        { oopEnabled: r, legacyEnabled: l } = (0, h.cj)([O.Z], () => O.Z.getGlobalEnabledStatus()),
+        { oopEnabled: r, legacyEnabled: l } = (0, g.cj)([O.Z], () => O.Z.getGlobalEnabledStatus()),
         a = !(0, H.VS)(),
-        o = (0, h.Wu)([b.ZP], () => b.ZP.getGamesSeen(!0)),
+        o = (0, g.Wu)([b.ZP], () => b.ZP.getGamesSeen(!0)),
         c = (e, t) => {
             et(t),
                 p.Z.setEnabled(l, e),
@@ -567,7 +567,7 @@ function ea(e) {
               className: K.standaloneContainer,
               action: (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(g.rsf, {
+                      (0, i.jsx)(h.rsf, {
                           checked: r,
                           disabled: a,
                           onChange: (e, t) => c(e, t)
@@ -582,9 +582,9 @@ function ea(e) {
               title: W.intl.string(W.t['7BlVIi']),
               description: d,
               'aria-label': W.intl.string(W.t['7BlVIi']),
-              action: (0, i.jsx)(g.P3F, {
+              action: (0, i.jsx)(h.P3F, {
                   onClick: (e) => et(e),
-                  children: (0, i.jsx)(g.rsf, {
+                  children: (0, i.jsx)(h.rsf, {
                       checked: r,
                       disabled: a,
                       onChange: (e, t) => c(e, t)
@@ -593,13 +593,13 @@ function ea(e) {
               children: [
                   (0, i.jsx)('div', {
                       className: K.subtitleContainer,
-                      children: (0, i.jsx)(g.Text, {
+                      children: (0, i.jsx)(h.Text, {
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
                           children: W.intl.string(W.t.FzoWRk)
                       })
                   }),
-                  (0, i.jsx)(g.zJl, {
+                  (0, i.jsx)(h.zJl, {
                       className: K.scroller,
                       children: o.map((e) =>
                           (0, i.jsx)(
@@ -616,31 +616,51 @@ function ea(e) {
           });
 }
 function eo() {
-    let e = (0, h.e7)([M.Z], () => M.Z.getOverlayKeybind()),
+    let e = (0, g.e7)([M.Z], () => M.Z.getOverlayKeybind()),
         t = (0, N.$1)(),
-        n = !(0, H.VS)();
-    return (0, i.jsxs)(J, {
-        children: [
-            (0, i.jsx)(g.Text, {
-                variant: 'text-md/semibold',
-                color: 'header-primary',
-                children: W.intl.string(W.t.VsAZcH)
-            }),
-            (0, i.jsx)('div', {
-                className: K.keybindContainer,
-                children: (0, i.jsx)(E.Z, {
-                    disabled: t && n,
-                    defaultValue: null != e ? e.shortcut : [],
-                    onChange: function (t) {
-                        d()(null != e, 'Keybind should never be undefined'),
-                            x.Z.setKeybind({
-                                ...e,
-                                shortcut: t
-                            });
-                    }
-                })
-            })
-        ]
+        n = !(0, H.VS)(),
+        [s, r] = (0, g.Wu)([b.ZP], () => [b.ZP.canShowAdminWarning, b.ZP.getVisibleGame()], []),
+        l = null != r && r.elevated && s;
+    return (0, i.jsx)(J, {
+        children: (0, i.jsxs)('div', {
+            className: K.keybindMainContainer,
+            children: [
+                (0, i.jsxs)('div', {
+                    className: K.keybindContainer,
+                    children: [
+                        (0, i.jsx)('div', {
+                            className: K.keybindHeaderContainer,
+                            children: (0, i.jsx)(h.Text, {
+                                variant: 'text-md/semibold',
+                                color: 'header-primary',
+                                children: W.intl.string(W.t.VsAZcH)
+                            })
+                        }),
+                        (0, i.jsx)('div', {
+                            className: K.keybindRecorderContainer,
+                            children: (0, i.jsx)(E.Z, {
+                                disabled: t && n,
+                                defaultValue: null != e ? e.shortcut : [],
+                                onChange: function (t) {
+                                    d()(null != e, 'Keybind should never be undefined'),
+                                        _.Z.setKeybind({
+                                            ...e,
+                                            shortcut: t
+                                        });
+                                }
+                            })
+                        })
+                    ]
+                }),
+                l &&
+                    (0, i.jsx)(h.Text, {
+                        variant: 'text-xs/normal',
+                        color: 'text-warning',
+                        className: K.keybindAdminWarning,
+                        children: W.intl.string(W.t.NsowVV)
+                    })
+            ]
+        })
     });
 }
 function ec(e) {
@@ -690,7 +710,7 @@ function ed(e) {
             textChatNotificationMode: c,
             disableClickableRegions: d,
             shouldShowKeybindIndicators: u
-        } = (0, h.cj)([V.Z], () => ({
+        } = (0, g.cj)([V.Z], () => ({
             avatarSizeMode: V.Z.getAvatarSizeMode(),
             displayNameMode: V.Z.getDisplayNameMode(),
             displayUserMode: V.Z.getDisplayUserMode(),
@@ -699,8 +719,8 @@ function ed(e) {
             disableClickableRegions: V.Z.disableClickableRegions,
             shouldShowKeybindIndicators: V.Z.showKeybindIndicators
         })),
-        _ = (0, h.e7)([B.default], () => B.default.getCurrentUser()),
-        x = (0, A.Z)({ location: 'overlay_user_settings' });
+        x = (0, g.e7)([B.default], () => B.default.getCurrentUser()),
+        _ = (0, A.Z)({ location: 'overlay_user_settings' });
     (0, T.ZP)(() => {
         if (G.isPlatformEmbedded) return (0, v.Ky)(), v.P7;
     }),
@@ -709,24 +729,24 @@ function ed(e) {
             m().isEqual(e, q) || (U.default.track(z.rMx.OVERLAY_SETTINGS_UPDATED, e), (q = e));
         })();
     let [E] = s.useState(() =>
-        null == _
+        null == x
             ? []
             : [
                   (function (e) {
                       let t = ec(e.username);
                       return (t.user = e), t;
-                  })(_),
+                  })(x),
                   ec(W.intl.string(W.t.C0ZDvr), !0, !1),
                   ec(W.intl.string(W.t.iOtj8P), !1, !1, !0),
                   ec(W.intl.string(W.t['0oqNgI']), !1, !0)
               ]
     );
-    return null == _
+    return null == x
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsxs)(g.hjN, {
-                      tag: g.RB0.H1,
+                  (0, i.jsxs)(h.hjN, {
+                      tag: h.RB0.H1,
                       title: W.intl.string(W.t['9cb1U1']),
                       children: [
                           (0, i.jsxs)('div', {
@@ -736,15 +756,15 @@ function ed(e) {
                           (0, i.jsx)('div', { className: K.settingsDivider })
                       ]
                   }),
-                  (0, i.jsxs)(g.hjN, {
+                  (0, i.jsxs)(h.hjN, {
                       children: [
                           (0, i.jsxs)('div', {
                               className: K.overlayEnabledSettingsContainer,
                               children: [
                                   (0, i.jsx)(eo, {}),
-                                  x &&
+                                  _ &&
                                       (0, i.jsx)(J, {
-                                          children: (0, i.jsx)(g.j7V, {
+                                          children: (0, i.jsx)(h.j7V, {
                                               value: u,
                                               onChange: (e) => p.Z.setShowKeybindIndicators(e),
                                               hideBorder: !0,
@@ -753,12 +773,12 @@ function ed(e) {
                                       }),
                                   (0, i.jsxs)(J, {
                                       children: [
-                                          (0, i.jsx)(g.Text, {
+                                          (0, i.jsx)(h.Text, {
                                               variant: 'text-md/semibold',
                                               color: 'header-primary',
                                               children: W.intl.string(W.t.Fy5kPj)
                                           }),
-                                          (0, i.jsx)(g.j7V, {
+                                          (0, i.jsx)(h.j7V, {
                                               value: o !== z._vf.DISABLED && c === z.Ypu.ENABLED,
                                               disabled: o === z._vf.DISABLED,
                                               onChange: function () {
@@ -771,12 +791,12 @@ function ed(e) {
                                   }),
                                   (0, i.jsxs)(J, {
                                       children: [
-                                          (0, i.jsx)(g.Text, {
+                                          (0, i.jsx)(h.Text, {
                                               variant: 'text-md/semibold',
                                               color: 'header-primary',
                                               children: W.intl.string(W.t['+eFXxs'])
                                           }),
-                                          (0, i.jsx)(g.j7V, {
+                                          (0, i.jsx)(h.j7V, {
                                               value: !d,
                                               onChange: function () {
                                                   p.Z.setDisableClickableRegions(!d);
@@ -790,14 +810,14 @@ function ed(e) {
                           (0, i.jsx)('div', { className: K.settingsDivider })
                       ]
                   }),
-                  (0, i.jsx)(g.hjN, {
+                  (0, i.jsx)(h.hjN, {
                       title: 'Voice Widget',
                       children: (0, i.jsxs)('div', {
                           className: K.voiceSettingsContainer,
                           children: [
                               (0, i.jsx)(J, {
                                   title: W.intl.string(W.t.dnvZSk),
-                                  children: (0, i.jsx)(g.q4e, {
+                                  children: (0, i.jsx)(h.q4e, {
                                       options: [
                                           {
                                               label: W.intl.string(W.t.YcOxtr),
@@ -815,7 +835,7 @@ function ed(e) {
                               }),
                               (0, i.jsx)(J, {
                                   title: W.intl.string(W.t.J0dpcH),
-                                  children: (0, i.jsx)(g.q4e, {
+                                  children: (0, i.jsx)(h.q4e, {
                                       options: [
                                           {
                                               label: W.intl.string(W.t.nBmDra),
@@ -880,7 +900,7 @@ function ed(e) {
                               }),
                               (0, i.jsx)(J, {
                                   title: W.intl.string(W.t.swsWWF),
-                                  children: (0, i.jsx)(g.q4e, {
+                                  children: (0, i.jsx)(h.q4e, {
                                       options: [
                                           {
                                               label: W.intl.string(W.t.nBmDra),
