@@ -15,5 +15,7 @@ e.exports = {
     header: 'header__956c6',
     headerWithoutMargin: 'headerWithoutMargin__956c6',
     description: 'description__956c6',
-    textOverflowBlur: 'textOverflowBlur__956c6'
+    textOverflowBlur: 'textOverflowBlur__956c6',
+    questRewardTileContainer: 'questRewardTileContainer__956c6',
+    questOrbQuantity: 'questOrbQuantity__956c6'
 };

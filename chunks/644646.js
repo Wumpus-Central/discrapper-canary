@@ -40,10 +40,9 @@ let I = function (e) {
         ),
         C = r.useRef(null),
         R = r.useRef(I),
-        O = (0, _.Bg)(a.config),
-        D = (0, _.xN)(a.config);
-    if (
-        (r.useEffect(() => {
+        O = (0, _.Bg)(a.config);
+    return (
+        r.useEffect(() => {
             if (null != C.current) {
                 if (!A.isAnimated || S) {
                     (C.current.currentTime = 0), C.current.pause();
@@ -52,27 +51,38 @@ let I = function (e) {
                 I && !R.current ? C.current.play() : !I && R.current && ((C.current.currentTime = 0), C.current.pause()), (R.current = I);
             }
         }, [I, A, S]),
-        O)
-    )
-        t = (0, i.jsx)(g.Fl, {
-            id: 'QuestRewardTile_rewardTileNitro',
-            children: (e) =>
-                (0, i.jsx)(m.Z, {
-                    ref: e,
-                    className: y.questRewardTileAsset
+        (t = O
+            ? (0, i.jsx)(g.Fl, {
+                  id: 'QuestRewardTile_rewardTileNitro',
+                  children: (e) =>
+                      (0, i.jsx)(m.Z, {
+                          ref: e,
+                          className: y.questRewardTileAsset
+                      })
+              })
+            : A.isAnimated
+              ? (0, i.jsx)(g.Fl, {
+                    id: 'QuestRewardTile_rewardTileAnimated',
+                    children: (e) => {
+                        var t;
+                        return (0, i.jsx)(d.Z, {
+                            ref: (t) => {
+                                (e.current = t), (C.current = t);
+                            },
+                            autoPlay: !S && I,
+                            loop: !0,
+                            muted: !0,
+                            playsInline: !0,
+                            className: y.questRewardTileAsset,
+                            controls: !1,
+                            children: (0, i.jsx)('source', {
+                                src: A.url,
+                                type: null !== (t = A.mimetype) && void 0 !== t ? t : void 0
+                            })
+                        });
+                    }
                 })
-        });
-    else if (D) {
-        let e = (0, _.LM)(a.config);
-        t = (0, i.jsxs)(i.Fragment, {
-            children: [
-                (0, i.jsxs)(u.Text, {
-                    color: 'always-white',
-                    variant: 'text-xs/bold',
-                    className: y.questRewardTileOrbQuantity,
-                    children: ['+', e]
-                }),
-                (0, i.jsx)(g.Fl, {
+              : (0, i.jsx)(g.Fl, {
                     id: 'QuestRewardTile_rewardTileStatic',
                     children: (e) =>
                         (0, i.jsx)('img', {
@@ -81,71 +91,37 @@ let I = function (e) {
                             className: s()(y.questRewardTileAsset, y.questRewardTileAssetStatic),
                             src: A.url
                         })
-                })
-            ]
-        });
-    } else
-        t = A.isAnimated
-            ? (0, i.jsx)(g.Fl, {
-                  id: 'QuestRewardTile_rewardTileAnimated',
-                  children: (e) => {
-                      var t;
-                      return (0, i.jsx)(d.Z, {
-                          ref: (t) => {
-                              (e.current = t), (C.current = t);
-                          },
-                          autoPlay: !S && I,
-                          loop: !0,
-                          muted: !0,
-                          playsInline: !0,
-                          className: y.questRewardTileAsset,
-                          controls: !1,
-                          children: (0, i.jsx)('source', {
-                              src: A.url,
-                              type: null !== (t = A.mimetype) && void 0 !== t ? t : void 0
-                          })
-                      });
-                  }
+                })),
+        null == b
+            ? (0, i.jsx)('div', {
+                  className: s()(y.questRewardTile, n),
+                  children: t
               })
-            : (0, i.jsx)(g.Fl, {
-                  id: 'QuestRewardTile_rewardTileStatic',
-                  children: (e) =>
-                      (0, i.jsx)('img', {
-                          ref: e,
-                          alt: h.r.build(a.config).defaultReward.messages.name,
-                          className: s()(y.questRewardTileAsset, y.questRewardTileAssetStatic),
-                          src: A.url
-                      })
-              });
-    return null == b
-        ? (0, i.jsx)('div', {
-              className: s()(y.questRewardTile, n),
-              children: t
-          })
-        : (0, i.jsxs)(u.P3F, {
-              className: s()(y.questRewardTileInteractive, y.questRewardTile, y.rewardHighlight, n),
-              onClick: N,
-              children: [
-                  t,
-                  (0, i.jsx)(u.ZX5, {
-                      className: y.shine,
-                      shineSize: u.rHe.SMALL
-                  }),
-                  'text' === b &&
-                      (0, i.jsx)(u.Text, {
-                          color: 'always-white',
-                          variant: 'text-xs/normal',
-                          className: y.questRewardTileDetailsLearnMore,
-                          children: v.intl.format(v.t.DYAleX, {})
+            : (0, i.jsxs)(u.P3F, {
+                  className: s()(y.questRewardTileInteractive, y.questRewardTile, y.rewardHighlight, n),
+                  onClick: N,
+                  children: [
+                      t,
+                      (0, i.jsx)(u.ZX5, {
+                          className: y.shine,
+                          shineSize: u.rHe.SMALL
                       }),
-                  'icon' === b &&
-                      (0, i.jsx)('div', {
-                          className: y.questRewardTileDetailsLearnMore,
-                          children: (0, i.jsx)(u.d3s, {
-                              size: 'xxs',
-                              color: u.TVs.colors.WHITE.css
+                      'text' === b &&
+                          (0, i.jsx)(u.Text, {
+                              color: 'always-white',
+                              variant: 'text-xs/normal',
+                              className: y.questRewardTileDetailsLearnMore,
+                              children: v.intl.format(v.t.DYAleX, {})
+                          }),
+                      'icon' === b &&
+                          (0, i.jsx)('div', {
+                              className: y.questRewardTileDetailsLearnMore,
+                              children: (0, i.jsx)(u.d3s, {
+                                  size: 'xxs',
+                                  color: u.TVs.colors.WHITE.css
+                              })
                           })
-                      })
-              ]
-          });
+                  ]
+              })
+    );
 };
