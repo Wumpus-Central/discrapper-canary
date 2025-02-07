@@ -22,35 +22,35 @@ var r = n(200651),
     T = n(644646),
     D = n(604162),
     N = n(747717),
-    j = n(963123),
-    I = n(281055),
+    I = n(963123),
+    j = n(281055),
     A = n(46140),
     b = n(981631),
     L = n(388032),
     O = n(451680);
 function R(e) {
     var t, n, i;
-    let { transitionState: p, onClose: h, quest: I, autoplay: R, videoSessionId: k, impressionRef: M } = e,
-        P = (0, f.il)(I),
-        q = (0, o.e7)([d.Z], () => d.Z.getState().theme),
-        y = (0, a.wj)(q) ? b.BRd.DARK : b.BRd.LIGHT,
-        w = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+    let { transitionState: p, onClose: h, quest: j, autoplay: R, videoSessionId: k, impressionRef: M, startTime: P } = e,
+        q = (0, f.il)(j),
+        y = (0, o.e7)([d.Z], () => d.Z.getState().theme),
+        w = (0, a.wj)(y) ? b.BRd.DARK : b.BRd.LIGHT,
+        F = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         B = (0, v.aM)(),
-        [F, U] = l.useState(P.progressSeconds),
-        [Z, V] = l.useState(!1),
-        { completedRatio: Y, completedRatioDisplay: z } = (0, E.I)(I),
-        [G, H] = (0, D.G6)(L.intl.string(L.t.RDE0SU), L.intl.string(L.t['+5kSoa']), 1700),
-        K = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? L.intl.string(L.t.vTgCW1) : L.intl.string(L.t.cfY4PD),
-        Q = l.useCallback(() => {
-            (0, f.f2)(I.id, {
+        [U, Z] = l.useState(q.progressSeconds),
+        [V, Y] = l.useState(!1),
+        { completedRatio: z, completedRatioDisplay: G } = (0, E.I)(j),
+        [H, K] = (0, D.G6)(L.intl.string(L.t.RDE0SU), L.intl.string(L.t['+5kSoa']), 1700),
+        Q = (null === (t = j.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? L.intl.string(L.t.vTgCW1) : L.intl.string(L.t.cfY4PD),
+        X = l.useCallback(() => {
+            (0, f.f2)(j.id, {
                 content: C.jn.VIDEO_MODAL,
                 ctaContent: m.jZ.COPY_QUEST_URL,
                 impressionId: B
             }),
-                H();
-        }, [B, I.id, H]),
-        X = l.useMemo(() => g.r.build(I.config).defaultReward.messages.name, [I]),
-        W = L.intl.formatToPlainString(L.t['12IWPz'], { rewardName: X });
+                K();
+        }, [B, j.id, K]),
+        W = l.useMemo(() => g.r.build(j.config).defaultReward.messages.name, [j]),
+        $ = L.intl.formatToPlainString(L.t['12IWPz'], { rewardName: W });
     return (0, r.jsx)(u.Y0X, {
         transitionState: p,
         size: u.CgR.DYNAMIC,
@@ -71,7 +71,7 @@ function R(e) {
                                 (0, r.jsxs)(u.P3F, {
                                     className: O.contentHeaderGameInfo,
                                     onClick: () => {
-                                        (0, f.FE)(I, {
+                                        (0, f.FE)(j, {
                                             content: C.jn.VIDEO_MODAL,
                                             ctaContent: m.jZ.OPEN_GAME_LINK,
                                             impressionId: B
@@ -79,9 +79,9 @@ function R(e) {
                                     },
                                     children: [
                                         (0, r.jsx)('img', {
-                                            alt: I.config.messages.gameTitle,
+                                            alt: j.config.messages.gameTitle,
                                             className: s()(O.contentHeaderLogotype, O.accentOnHover),
-                                            src: (0, S.fh)(I, S.eC.LOGO_TYPE, y).url
+                                            src: (0, S.fh)(j, S.eC.LOGO_TYPE, w).url
                                         }),
                                         (0, r.jsx)(N.Z, {}),
                                         (0, r.jsxs)('div', {
@@ -90,12 +90,12 @@ function R(e) {
                                                 (0, r.jsx)(u.X6q, {
                                                     variant: 'heading-md/semibold',
                                                     color: 'header-primary',
-                                                    children: L.intl.format(L.t.EQa7oq, { questName: I.config.messages.questName })
+                                                    children: L.intl.format(L.t.EQa7oq, { questName: j.config.messages.questName })
                                                 }),
                                                 (0, r.jsx)(u.Text, {
                                                     variant: 'text-sm/medium',
                                                     color: 'header-secondary',
-                                                    children: I.config.messages.gameTitle
+                                                    children: j.config.messages.gameTitle
                                                 })
                                             ]
                                         })
@@ -103,26 +103,26 @@ function R(e) {
                                 }),
                                 (0, r.jsx)(u.ua7, {
                                     position: 'left',
-                                    text: W,
+                                    text: $,
                                     onTooltipShow: () => {
-                                        V(!0);
+                                        Y(!0);
                                     },
                                     onTooltipHide: () => {
-                                        V(!1);
+                                        Y(!1);
                                     },
                                     children: (e) =>
                                         (0, r.jsx)(u.P3F, {
                                             className: O.progressCont,
                                             ...e,
                                             children: (0, r.jsx)(_.Z, {
-                                                quest: I,
+                                                quest: j,
                                                 size: 48,
-                                                percentComplete: Y,
-                                                percentCompleteText: Z ? z : void 0,
+                                                percentComplete: z,
+                                                percentCompleteText: V ? G : void 0,
                                                 percentCompleteTextVariant: 'text-sm/medium',
                                                 children: (0, r.jsx)(T.Z, {
                                                     className: O.questProgressRewardTile,
-                                                    quest: I,
+                                                    quest: j,
                                                     questContent: C.jn.VIDEO_MODAL,
                                                     autoplay: !1,
                                                     location: A.dr.VIDEO_MODAL
@@ -132,12 +132,13 @@ function R(e) {
                                 })
                             ]
                         }),
-                        (0, r.jsx)(j.Z, {
-                            quest: I,
+                        (0, r.jsx)(I.Z, {
+                            quest: j,
                             videoSessionId: k,
                             parentTransitionState: p,
-                            onOptimisticProgressUpdate: U,
-                            autoplay: R
+                            onOptimisticProgressUpdate: Z,
+                            autoplay: R,
+                            startTime: P
                         }),
                         (0, r.jsxs)('div', {
                             className: O.contentFooter,
@@ -154,19 +155,19 @@ function R(e) {
                                     children: [
                                         (0, r.jsx)(u.zxk, {
                                             color: u.zxk.Colors.PRIMARY,
-                                            onClick: Q,
+                                            onClick: X,
                                             size: u.zxk.Sizes.NONE,
                                             className: s()(O.copyLinkBtn, O.footerBtn),
-                                            children: G
+                                            children: H
                                         }),
                                         (0, r.jsx)(x.i0, {
                                             className: O.claimBtn,
                                             size: u.zxk.Sizes.MEDIUM,
-                                            quest: I,
-                                            useReducedMotion: w,
-                                            isExpanded: (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-                                            disabled: (null === (i = I.userStatus) || void 0 === i ? void 0 : i.completedAt) == null,
-                                            ctaLabel: K
+                                            quest: j,
+                                            useReducedMotion: F,
+                                            isExpanded: (null === (n = j.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+                                            disabled: (null === (i = j.userStatus) || void 0 === i ? void 0 : i.completedAt) == null,
+                                            ctaLabel: Q
                                         })
                                     ]
                                 })
@@ -179,20 +180,21 @@ function R(e) {
     });
 }
 function k(e) {
-    let { questId: t, overrideQuest: n, autoplay: l, ...i } = e,
-        s = (0, o.e7)([p.Z], () => p.Z.getQuest(t)),
-        a = null != n ? n : s;
-    return null != a
+    let { questId: t, overrideQuest: n, autoplay: l, startTime: i, ...s } = e,
+        a = (0, o.e7)([p.Z], () => p.Z.getQuest(t)),
+        u = null != n ? n : a;
+    return null != u
         ? (0, r.jsx)(h.A, {
-              questOrQuests: a,
+              questOrQuests: u,
               questContent: C.jn.VIDEO_MODAL,
-              minViewTimeSeconds: I.zw,
+              minViewTimeSeconds: j.zw,
               trackGuildAndChannelMetadata: !0,
               children: (e) =>
                   (0, r.jsx)(R, {
-                      ...i,
+                      ...s,
+                      startTime: i,
                       impressionRef: e,
-                      quest: a,
+                      quest: u,
                       autoplay: l
                   })
           })

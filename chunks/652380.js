@@ -787,6 +787,7 @@ function Z() {
                                                 var n;
                                                 return (0, s.jsx)(e, {
                                                     ...t,
+                                                    startTime: 0,
                                                     videoSessionId: 'fake-quest-session-id',
                                                     questId: null !== (n = z.id) && void 0 !== n ? n : 'fake-quest-id',
                                                     overrideQuest: z,

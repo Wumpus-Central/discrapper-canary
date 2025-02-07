@@ -122,13 +122,15 @@ function k() {
 }
 function U(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = (0, r.Z)();
+        n = (0, r.Z)(),
+        a = performance.now();
     (0, o.ZDy)(
         async () => {
             let { default: r } = await k();
-            return (a) =>
+            return (s) =>
                 (0, i.jsx)(r, {
-                    ...a,
+                    ...s,
+                    startTime: a,
                     questId: e.id,
                     autoplay: t,
                     videoSessionId: n
