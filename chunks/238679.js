@@ -1,49 +1,40 @@
 n.d(t, {
-    HU: () => _,
-    KW: () => p,
-    dO: () => m,
-    gQ: () => g
+    KW: () => m,
+    dO: () => h,
+    gQ: () => p
 });
 var i = n(392711),
     l = n.n(i),
-    r = n(570140),
-    a = n(317381),
-    s = n(16609),
-    o = n(594174),
-    c = n(823379),
-    d = n(5192),
-    u = n(863141),
-    h = n(186901);
-function m() {
-    let e = a.ZP.getCurrentEmbeddedActivity();
+    r = n(317381),
+    a = n(16609),
+    s = n(594174),
+    o = n(823379),
+    c = n(5192),
+    d = n(863141),
+    u = n(186901);
+function h() {
+    let e = r.ZP.getCurrentEmbeddedActivity();
     if (null == e) return { participants: [] };
-    let t = (0, s.j)(e.location),
-        n = (0, s.p)(e.location);
+    let t = (0, a.j)(e.location),
+        n = (0, a.p)(e.location);
     return {
         participants: Array.from(e.userIds, (e) => {
-            let i = o.default.getUser(e);
+            let i = s.default.getUser(e);
             if (null == i) return;
-            let l = (0, d.y)(t, n, i);
+            let l = (0, c.y)(t, n, i);
             return {
-                ...(0, u.Z)(i),
+                ...(0, d.Z)(i),
                 nickname: null != l ? l : void 0
             };
-        }).filter(c.lm)
+        }).filter(o.lm)
     };
 }
-let p = { [h.Gp.ANY]: [h.wE] },
-    g = {
-        scope: p,
+let m = { [u.Gp.ANY]: [u.wE] },
+    p = {
+        scope: m,
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                i = m();
+                i = h();
             return l().isEqual(i, t) || n(i), i;
         }
     };
-function _(e) {
-    let t = 'EMBEDDED_ACTIVITY_UPDATE',
-        n = () => {
-            e(m());
-        };
-    return r.Z.subscribe(t, n), () => r.Z.unsubscribe(t, n);
-}
