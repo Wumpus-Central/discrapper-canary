@@ -33747,23 +33747,7 @@ html:not(.visual-refresh) .root_e5f3a9 {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    height: 144px;
-    width: 144px
-}
-
-.full-motion .avatarDecoration__78e61 {
-    animation: zoomin__78e61 1.5s
-}
-
-@keyframes zoomin__78e61 {
-    0% {
-        transform: translate(-50%, -50%) scale(.25)
-    }
-
-    to {
-        transform: translate(-50%, -50%) scale(1)
-    }
+    transform: translate(-50%, -50%)
 }
 
 .decorationBanner__78e61 {
