@@ -15,11 +15,12 @@ var r = n(120356),
 let h = 300,
     m = (e) =>
         (0, o.ZDy)(async () => {
-            let { default: t } = await n.e('51714').then(n.bind(n, 211065));
+            let { default: t } = await n.e('31649').then(n.bind(n, 475613));
             return (n) =>
                 (0, i.jsx)(t, {
                     ...n,
-                    sourceAnalyticsLocations: e
+                    sourceAnalyticsLocations: e,
+                    location: 'UserProfileCustomStatusBubbleEditBar'
                 });
         });
 function g(e) {

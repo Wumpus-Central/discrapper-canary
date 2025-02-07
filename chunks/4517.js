@@ -43,11 +43,12 @@ function w(e) {
             o({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
                 null == r || r(),
                 (0, c.ZDy)(async () => {
-                    let { default: e } = await n.e('51714').then(n.bind(n, 211065));
+                    let { default: e } = await n.e('31649').then(n.bind(n, 475613));
                     return (t) =>
                         (0, i.jsx)(e, {
                             ...t,
-                            sourceAnalyticsLocations: a
+                            sourceAnalyticsLocations: a,
+                            location: 'UserProfileCustomStatusBubble'
                         });
                 });
         };
