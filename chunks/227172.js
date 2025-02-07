@@ -19,8 +19,8 @@ var l = n(200651),
     v = n(379357),
     C = n(192918),
     j = n(22211),
-    f = n(561308),
-    I = n(919394),
+    I = n(561308),
+    f = n(919394),
     P = n(438226),
     y = n(31074),
     N = n(206295),
@@ -65,12 +65,12 @@ let k = {
                                   countOthers: J
                               })
                             : (0, P.HV)(n, t, L);
-                    return (0, I.SO)({
+                    return (0, f.SO)({
                         entry: n,
                         applicationImageSrc: null == M ? void 0 : M.src,
                         avatarSrcs: Y.map((e) => e.getAvatarURL(t.guild_id, 128)),
                         description: l,
-                        timestamp: (0, f.yh)(n, G),
+                        timestamp: (0, I.yh)(n, G),
                         colors: [U, D],
                         channelId: e
                     });
@@ -83,7 +83,7 @@ let k = {
                 children: Z.W.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
             }),
             en =
-                null == F
+                null == V
                     ? (0, l.jsx)(E.wG, {
                           channel: t,
                           headerIcons:
@@ -94,7 +94,7 @@ let k = {
                                         Icon: K,
                                         'aria-label': R.intl.string(R.t.YR4cHB)
                                     }),
-                          userDescription: (0, f.kr)(n) ? R.t.vPg1JS : R.t.rPqqtr,
+                          userDescription: (0, I.kr)(n) ? R.t.vPg1JS : R.t.rPqqtr,
                           title: B,
                           subtitle: z,
                           badges: et,
@@ -105,7 +105,6 @@ let k = {
                       })
                     : (0, l.jsx)(E.jL, {
                           channel: t,
-                          streamPreviewSrc: F,
                           title: n.extra.game_name,
                           subtitle: z,
                           badges: et,
