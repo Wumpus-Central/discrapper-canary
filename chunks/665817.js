@@ -15,6 +15,7 @@ e.exports = {
     lazyImgContainer: 'lazyImgContainer_f4758a',
     twoByTwoGrid: 'twoByTwoGrid_f4758a',
     visualMediaItemContainer: 'visualMediaItemContainer_f4758a',
+    isInAppComponentsV2: 'isInAppComponentsV2_f4758a',
     nonVisualMediaItemContainer: 'nonVisualMediaItemContainer_f4758a',
     nonVisualMediaItem: 'nonVisualMediaItem_f4758a',
     hasFooter: 'hasFooter_f4758a',

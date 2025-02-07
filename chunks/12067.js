@@ -80,5 +80,10 @@ function v(e) {
             });
         return a in S && ((r.onClick = S[a]), (r.handlePreloadImage = E[a])), r;
     });
-    return (0, t.jsx)('div', { children: (0, t.jsx)(c.Z, { items: Z }) });
+    return (0, t.jsx)('div', {
+        children: (0, t.jsx)(c.Z, {
+            items: Z,
+            isInAppComponentsV2: !0
+        })
+    });
 }
