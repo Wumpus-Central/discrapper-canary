@@ -4,7 +4,6 @@ var i = {
     modalInner: 'modalInner__78e61',
     modalCloseButton: 'modalCloseButton__78e61',
     avatarDecoration: 'avatarDecoration__78e61',
-    zoomin: 'zoomin__78e61',
     decorationBanner: 'decorationBanner__78e61',
     bannerContainer: 'bannerContainer__78e61',
     collectedInfoContainer: 'collectedInfoContainer__78e61',
