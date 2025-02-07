@@ -1,10 +1,9 @@
 n.d(t, {
-    Ep: () => l,
-    F4: () => o,
-    nS: () => s
+    Ep: () => a,
+    nS: () => l
 });
 var i = n(818083);
-let r = (0, i.B)({
+let s = (0, i.B)({
         kind: 'user',
         id: '2025-02_dm_defaults_new_users',
         label: 'Default DM Settings - New Users',
@@ -34,7 +33,7 @@ let r = (0, i.B)({
             }
         ]
     }),
-    a = (0, i.B)({
+    r = (0, i.B)({
         kind: 'user',
         id: '2025-02_dm_defaults',
         label: 'Default DM Settings',
@@ -64,18 +63,13 @@ let r = (0, i.B)({
             }
         ]
     }),
-    s = (e) => {
-        let t = a.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-            n = r.useExperiment({ location: e }, { autoTrackExposure: !1 });
+    l = (e) => {
+        let t = r.useExperiment({ location: e }, { autoTrackExposure: !1 }),
+            n = s.useExperiment({ location: e }, { autoTrackExposure: !1 });
         return t.dmOffByDefault || n.dmOffByDefault;
     },
-    o = (e) => {
-        let t = a.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-            n = r.useExperiment({ location: e }, { autoTrackExposure: !1 });
-        return t.messageRequestOnByDefault || n.messageRequestOnByDefault;
-    },
-    l = (e) => {
-        let t = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }),
-            n = r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+    a = (e) => {
+        let t = r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }),
+            n = s.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
         return t.messageRequestOnByDefault || n.messageRequestOnByDefault;
     };
