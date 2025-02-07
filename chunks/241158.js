@@ -16,7 +16,7 @@ var i = n(200651),
     p = n(388032),
     E = n(909007);
 let C = (e) => {
-        let { name: t, title: n, description: r, descriptionCta: p, previewImage: C, videoUrl: f, shouldLoadVideo: T, index: N, isCompact: I, isReducedMotion: S, onClick: b } = e,
+        let { name: t, title: n, description: r, descriptionCta: p, previewImage: C, videoUrl: f, shouldLoadVideo: T, index: N, isCompact: S, isReducedMotion: I, onClick: b } = e,
             v = (0, h.rO)(),
             j = s.useRef(null),
             A = s.useRef(0),
@@ -49,28 +49,28 @@ let C = (e) => {
             R = (0, d.ZP)(),
             P = (0, o.wj)(R),
             D = P ? c.Ttl.WHITE : c.Ttl.BRAND,
-            Z = (0, a.debounce)(() => {
+            y = (0, a.debounce)(() => {
                 m.default.track(_.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, a.snakeCase)(t) });
             }, 800),
-            y = () => {
-                null == j.current || S || ((j.current.currentTime = A.current), j.current.play());
+            Z = () => {
+                null == j.current || I || ((j.current.currentTime = A.current), j.current.play());
             },
             k = () => {
-                null == j.current || S || ((A.current = j.current.currentTime), j.current.pause());
+                null == j.current || I || ((A.current = j.current.currentTime), j.current.pause());
             },
             L = () =>
                 (0, i.jsxs)('div', {
                     className: l()({
-                        [E.whatsNewTextBoxOuter]: !I,
-                        [E.compactTextBox]: I
+                        [E.whatsNewTextBoxOuter]: !S,
+                        [E.compactTextBox]: S
                     }),
                     children: [
                         (0, i.jsx)(c.X6q, {
                             variant: 'heading-xxl/extrabold',
                             color: 'header-primary',
                             className: l()({
-                                [E.whatsNewBoxHeader]: !I,
-                                [E.compactBoxHeader]: I
+                                [E.whatsNewBoxHeader]: !S,
+                                [E.compactBoxHeader]: S
                             }),
                             children: n
                         }),
@@ -87,7 +87,7 @@ let C = (e) => {
                                 color: D,
                                 className: l()(E.whatsNewBoxButton, P ? E.whatsNewBoxButtonWhite : E.whatsNewBoxButtonBrand),
                                 onClick: () => {
-                                    Z(), b();
+                                    y(), b();
                                 },
                                 children: p
                             })
@@ -97,8 +97,8 @@ let C = (e) => {
                 let { isLeft: t } = e;
                 return (0, i.jsx)('div', {
                     className: l()({
-                        [E.whatsNewArtContainer]: !I,
-                        [E.compactBoxArtContainer]: I
+                        [E.whatsNewArtContainer]: !S,
+                        [E.compactBoxArtContainer]: S
                     }),
                     children: (0, i.jsx)(
                         u.Z,
@@ -109,9 +109,9 @@ let C = (e) => {
                             poster: C,
                             loop: !0,
                             className: l()({
-                                [E.perkBoxVideo]: !I,
-                                [E.leftSideArt]: t && !I,
-                                [E.compactBoxVideo]: I
+                                [E.perkBoxVideo]: !S,
+                                [E.leftSideArt]: t && !S,
+                                [E.compactBoxVideo]: S
                             }),
                             ref: j,
                             children: (0, i.jsx)('source', {
@@ -126,11 +126,11 @@ let C = (e) => {
             M = N % 2 == 0;
         return (0, i.jsx)('div', {
             className: l()(O, {
-                [E.whatsNewBoxContainer]: !I,
-                [E.compactBoxContainer]: I
+                [E.whatsNewBoxContainer]: !S,
+                [E.compactBoxContainer]: S
             }),
-            onMouseEnter: y,
-            onFocus: y,
+            onMouseEnter: Z,
+            onFocus: Z,
             onBlur: k,
             onMouseLeave: k,
             children: M

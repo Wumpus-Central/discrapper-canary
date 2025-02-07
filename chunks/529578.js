@@ -29,7 +29,7 @@ function p() {
                       }
             );
         }, []),
-        I = (0, s.useCallback)((e) => {
+        S = (0, s.useCallback)((e) => {
             c((t) =>
                 null == t
                     ? { animatedSrc: e }
@@ -39,7 +39,7 @@ function p() {
                       }
             );
         }, []),
-        S = (0, s.useCallback)((e) => {
+        I = (0, s.useCallback)((e) => {
             g((t) => t.filter((t) => t !== e));
         }, []);
     return (0, i.jsxs)(i.Fragment, {
@@ -138,8 +138,8 @@ function p() {
                                         {
                                             src: e,
                                             onSetStatic: p,
-                                            onSetAnimated: I,
-                                            removeAsset: S
+                                            onSetAnimated: S,
+                                            removeAsset: I
                                         },
                                         e
                                     )

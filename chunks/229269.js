@@ -55,7 +55,7 @@ function f() {
             }),
             (0, i.jsx)(_.E_, {
                 label: 'Google Pay - Add Payment Step Body Connector View',
-                children: (0, i.jsx)(I, { paymentRequestWallet: 'googlePay' })
+                children: (0, i.jsx)(S, { paymentRequestWallet: 'googlePay' })
             }),
             (0, i.jsx)(o.X6q, {
                 variant: 'heading-xl/semibold',
@@ -74,7 +74,7 @@ function f() {
             }),
             (0, i.jsx)(_.E_, {
                 label: 'Apple Pay - Add Payment Step Body Connector View',
-                children: (0, i.jsx)(I, { paymentRequestWallet: 'applePay' })
+                children: (0, i.jsx)(S, { paymentRequestWallet: 'applePay' })
             })
         ]
     });
@@ -129,7 +129,7 @@ function N(e) {
         })
     });
 }
-function I(e) {
+function S(e) {
     let { paymentRequestWallet: t } = e,
         n = s.useRef(null),
         [r, l] = s.useState(!1),
@@ -153,7 +153,7 @@ function I(e) {
         })
     });
 }
-function S(e) {
+function I(e) {
     let { children: t } = e;
     return (0, i.jsx)(N, {
         className: p.choosePaymentTypeModal,
@@ -179,7 +179,7 @@ function b() {
             }),
             (0, i.jsx)(_.E_, {
                 label: 'All Payment Request Wallets Enabled',
-                children: (0, i.jsx)(S, {
+                children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(c.ZP, {
                         ...e,
                         onChooseType: () => {},
@@ -189,7 +189,7 @@ function b() {
             }),
             (0, i.jsx)(_.E_, {
                 label: 'No Payment Wallets Enabled',
-                children: (0, i.jsx)(S, {
+                children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(c.ZP, {
                         ...e,
                         onChooseType: () => {},
@@ -199,7 +199,7 @@ function b() {
             }),
             (0, i.jsx)(_.E_, {
                 label: 'Is Eligible for Trial',
-                children: (0, i.jsx)(S, {
+                children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(c.ZP, {
                         ...e,
                         isEligibleForTrial: !0,

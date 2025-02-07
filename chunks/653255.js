@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => b });
 var o,
     r,
     c,
@@ -12,7 +12,7 @@ var o,
 let f = !1,
     g = !0,
     p = !1;
-class b extends (c = i.ZP.Store) {
+class h extends (c = i.ZP.Store) {
     initialize() {
         !_.isPlatformEmbedded ||
             __OVERLAY__ ||
@@ -38,15 +38,15 @@ class b extends (c = i.ZP.Store) {
     }
 }
 (r = 'StreamingCapabilitiesStore'),
-    (o = 'displayName') in b
-        ? Object.defineProperty(b, o, {
+    (o = 'displayName') in h
+        ? Object.defineProperty(h, o, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (b[o] = r);
-let h = new b(d.Z, {
+        : (h[o] = r);
+let b = new h(d.Z, {
     OVERLAY_INITIALIZE: function (e) {
         let { streamingCapabilitiesStoreState: t } = e;
         (f = t.GPUDriversOutdated), (g = t.canUseHardwareAcceleration);

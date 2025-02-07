@@ -110,8 +110,8 @@ function N(e) {
     let { premiumSubscription: t, premiumType: n, onClose: r, pauseDuration: a, analyticsLocation: d } = e,
         [u, _] = s.useState(!1),
         { analyticsLocations: T } = (0, h.ZP)(),
-        [N, I] = s.useState(!1),
-        S = (0, m.ZP)(),
+        [N, S] = s.useState(!1),
+        I = (0, m.ZP)(),
         b = null,
         v = null,
         j = [p.O0b.PAST_DUE, p.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
@@ -179,7 +179,7 @@ function N(e) {
                                     await f({
                                         premiumSubscription: t,
                                         pauseDuration: a,
-                                        setIsCancelling: I,
+                                        setIsCancelling: S,
                                         setHasError: _,
                                         onClose: r,
                                         analyticsLocations: T,
@@ -190,7 +190,7 @@ function N(e) {
                             }),
                             (0, i.jsx)(c.zxk, {
                                 look: c.zxk.Looks.LINK,
-                                color: (0, o.wj)(S) ? c.zxk.Colors.WHITE : c.zxk.Colors.PRIMARY,
+                                color: (0, o.wj)(I) ? c.zxk.Colors.WHITE : c.zxk.Colors.PRIMARY,
                                 onClick: r,
                                 children: E.intl.string(E.t.h9tkAA)
                             })

@@ -16,11 +16,11 @@ var s = n(120356),
     x = n(388032),
     p = n(139019);
 function E(e) {
-    let { user: t, pendingAvatar: n, pendingColors: s, onThemeColorsChange: l, preventDisabled: E, guildId: C, className: f, showPremiumIcon: T = !0, showResetThemeButton: N = !1, forcedDivider: I } = e,
-        S = (0, u.ZP)(t.id, C),
+    let { user: t, pendingAvatar: n, pendingColors: s, onThemeColorsChange: l, preventDisabled: E, guildId: C, className: f, showPremiumIcon: T = !0, showResetThemeButton: N = !1, forcedDivider: S } = e,
+        I = (0, u.ZP)(t.id, C),
         { primaryColor: b, secondaryColor: v } = (0, m.Z)({
             user: t,
-            displayProfile: S,
+            displayProfile: I,
             pendingThemeColors: s,
             isPreview: !0
         }),
@@ -30,14 +30,14 @@ function E(e) {
         R = (0, d.Cf)(A, O, !1);
     if (null == b || null == v) return null;
     let P = (e) => {
-        l(a()(e, null == S ? void 0 : S.themeColors) ? void 0 : e);
+        l(a()(e, null == I ? void 0 : I.themeColors) ? void 0 : e);
     };
     return (0, i.jsx)(_.Z, {
         title: x.intl.string(x.t.DMeO2d),
         disabled: !j && !E,
         className: r()(p.__invalid_profileThemesSection, f),
         showPremiumIcon: T,
-        forcedDivider: I,
+        forcedDivider: S,
         children: (0, i.jsxs)('div', {
             className: p.sectionContainer,
             children: [

@@ -8,11 +8,11 @@ let a = {},
     c = null,
     u = [],
     d = !1,
-    p = !1,
-    f = null,
+    f = !1,
+    p = null,
     g = null;
 function x() {
-    p = !0;
+    f = !0;
 }
 class h extends (n = o.ZP.Store) {
     getAppliedGuildBoostsForGuild(e) {
@@ -28,10 +28,10 @@ class h extends (n = o.ZP.Store) {
         return u.find((t) => t.id === e);
     }
     get isModifyingAppliedBoost() {
-        return p;
+        return f;
     }
     get applyBoostError() {
-        return f;
+        return p;
     }
     get unapplyBoostError() {
         return g;
@@ -73,19 +73,19 @@ let m = new h(l.Z, {
     GUILD_APPLY_BOOST_SUCCESS: function (e) {
         let { appliedGuildBoost: t } = e,
             s = new Set(t.map((e) => e.id));
-        (u = [...t, ...u.filter((e) => !s.has(e.id))]), (f = null), (p = !1);
+        (u = [...t, ...u.filter((e) => !s.has(e.id))]), (p = null), (f = !1);
     },
     GUILD_APPLY_BOOST_FAIL: function (e) {
         let { error: t } = e;
-        (p = !1), (f = t);
+        (f = !1), (p = t);
     },
     GUILD_UNAPPLY_BOOST_SUCCESS: function (e) {
         let { boostId: t } = e;
-        (u = u.filter((e) => e.id !== t)), (p = !1);
+        (u = u.filter((e) => e.id !== t)), (f = !1);
     },
     GUILD_UNAPPLY_BOOST_FAIL: function (e) {
         let { error: t } = e;
-        (p = !1), (g = t);
+        (f = !1), (g = t);
     },
     USER_APPLIED_BOOSTS_FETCH_START: function () {
         d = !0;

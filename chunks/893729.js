@@ -11,12 +11,12 @@ var i = n(200651),
     h = n(753206),
     g = n(594174),
     f = n(5192),
-    C = n(981631),
-    p = n(388032),
+    p = n(981631),
+    C = n(388032),
     v = n(674055);
 function E(e) {
     var t;
-    let { guildId: n, role: r, theme: E, content: _ = p.intl.string(p.t['6OSasb']), className: m } = e,
+    let { guildId: n, role: r, theme: E, content: m = C.intl.string(C.t['6OSasb']), className: _ } = e,
         I = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
         S = f.ZP.useName(n, null, I),
         T = (0, d.Kz)(r),
@@ -25,17 +25,17 @@ function E(e) {
                 (0, u.e5)({
                     ...(0, c.ZP)({
                         channelId: '0',
-                        content: _,
+                        content: m,
                         tts: void 0,
                         type: void 0,
                         messageReference: void 0,
                         allowedMentions: void 0,
                         author: I
                     }),
-                    state: C.yb.SENT,
+                    state: p.yb.SENT,
                     id: '0'
                 }),
-            [I, _]
+            [I, m]
         ),
         y = {
             nick: S,
@@ -45,7 +45,7 @@ function E(e) {
         theme: E,
         children: (e) =>
             (0, i.jsx)('div', {
-                className: s()(e, v.container, m),
+                className: s()(e, v.container, _),
                 children: (0, i.jsx)(h.Z, {
                     hideTimestamp: !0,
                     author: y,

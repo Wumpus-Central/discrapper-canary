@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X }), n(47120), n(653041), n(773603);
+n.d(t, { Z: () => q }), n(47120), n(653041), n(773603);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(275759),
     T = n(231757),
     N = n(888496),
-    I = n(605236),
-    S = n(565138),
+    S = n(605236),
+    I = n(565138),
     b = n(297700),
     v = n(553795),
     j = n(430824),
@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(626135),
     P = n(63063),
     D = n(706454),
-    Z = n(349728),
-    y = n(494620),
+    y = n(349728),
+    Z = n(494620),
     k = n(205266),
     L = n(216153),
     B = n(981631),
@@ -72,8 +72,8 @@ let F = (e) => {
                 (0, i.jsxs)('div', {
                     className: U.integration,
                     children: [
-                        (0, i.jsx)(S.Z, {
-                            size: S.Z.Sizes.SMALL,
+                        (0, i.jsx)(I.Z, {
+                            size: I.Z.Sizes.SMALL,
                             guild: r.guild,
                             className: U.guildIcon
                         }),
@@ -116,7 +116,7 @@ function H(e) {
         l,
         { onDisconnect: a, account: o, theme: m, locale: g } = e,
         [_, p] = s.useState(o.friendSync),
-        [I, S] = s.useState(o.visibility),
+        [S, I] = s.useState(o.visibility),
         [v, j] = s.useState(o.metadataVisibility),
         [A, O] = s.useState(o.showActivity),
         [R, D] = s.useState(null),
@@ -124,31 +124,31 @@ function H(e) {
         [H, z] = s.useState(!1),
         [Y, W] = s.useState([]),
         K = (0, C.rR)(o.type),
-        X = E.Z.get(K);
+        q = E.Z.get(K);
     s.useEffect(() => {
-        p(o.friendSync), S(o.visibility), j(o.metadataVisibility), O(o.showActivity);
+        p(o.friendSync), I(o.visibility), j(o.metadataVisibility), O(o.showActivity);
     }, [o]);
-    let q = {
+    let X = {
             inProgressVisibility: R,
             inProgressMetadataVisibility: w
         },
-        J = s.useRef(q);
+        J = s.useRef(X);
     s.useEffect(() => {
-        J.current = q;
+        J.current = X;
     }),
         s.useEffect(() => {
             if (!1 === o.verified) return;
             let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
-            null != e && (S(e), h.Z.setVisibility(o.type, o.id, e), D(null)), null != t && (j(t), h.Z.setMetadataVisibility(o.type, o.id, t), G(null));
+            null != e && (I(e), h.Z.setVisibility(o.type, o.id, e), D(null)), null != t && (j(t), h.Z.setMetadataVisibility(o.type, o.id, t), G(null));
         }, [o]);
     function Q() {
         let e = E.Z.get(o.type),
             t = V.intl.string(V.t.apVJu7);
-        (0, Z.Z)(o) &&
+        (0, y.Z)(o) &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
                     t,
-                    (0, i.jsx)(y.Z, {
+                    (0, i.jsx)(Z.Z, {
                         className: U.infoBox,
                         children: V.intl.format(V.t.COW3Xl, { platformName: e.name })
                     })
@@ -378,7 +378,7 @@ function H(e) {
                     },
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
-                        children: V.intl.format(V.t['6u6J0t'], { platform: X.name })
+                        children: V.intl.format(V.t['6u6J0t'], { platform: q.name })
                     })
                 })),
             (null === (t = E.Z.get(o.type)) || void 0 === t ? void 0 : t.hasMetadata) === !0 &&
@@ -399,7 +399,7 @@ function H(e) {
                         }
                         j(n), h.Z.setMetadataVisibility(o.type, o.id, n);
                     },
-                    disabled: 1 !== I || null == o.metadata,
+                    disabled: 1 !== S || null == o.metadata,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
                         children: V.intl.string(V.t.FYKGsL)
@@ -413,7 +413,7 @@ function H(e) {
                         (0, i.jsx)(u.j7V, {
                             className: U.connectionOptionSwitch,
                             hideBorder: !0,
-                            value: 1 === I,
+                            value: 1 === S,
                             onChange: function (e) {
                                 let { verified: t } = o,
                                     n = e ? 1 : 0;
@@ -425,7 +425,7 @@ function H(e) {
                                         });
                                     return;
                                 }
-                                S(n), h.Z.setVisibility(o.type, o.id, n);
+                                I(n), h.Z.setVisibility(o.type, o.id, n);
                             },
                             children: (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
@@ -478,7 +478,7 @@ function z() {
     return (
         s.useEffect(
             () => () => {
-                (0, I.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: w.L.AUTO });
+                (0, S.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: w.L.AUTO });
             },
             []
         ),
@@ -612,7 +612,7 @@ function K(e) {
         })
     );
 }
-let X = () => {
+let q = () => {
     let e = (0, a.e7)([O.Z], () => O.Z.hidePersonalInformation),
         t = (0, a.e7)([v.Z], () => v.Z.isFetching()),
         n = (0, a.e7)([v.Z], () => v.Z.getAccounts()),

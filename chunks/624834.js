@@ -70,8 +70,8 @@ function b(e) {
         I = (0, s.e7)([E.default, v.default], () => ((0, d.J)(r, v.default) ? null : E.default.getUser(r.userId))),
         _ = i.useMemo(() => (null != I ? [I] : []), [I]),
         R = (0, p.q)(m),
-        { analyticsLocations: j } = (0, h.ZP)(),
-        y = (0, u.O)(),
+        { analyticsLocations: y } = (0, h.ZP)(),
+        j = (0, u.O)(),
         N = r.sessionId,
         [w, A] = i.useState(!1),
         T = null == I ? void 0 : I.id,
@@ -84,14 +84,14 @@ function b(e) {
                         await (0, c.Z)({
                             applicationId: m,
                             activityChannelId: void 0,
-                            locationObject: y.location,
-                            analyticsLocations: j,
+                            locationObject: j.location,
+                            analyticsLocations: y,
                             joinUserId: T,
                             joinSessionId: N
                         }),
                         A(!1));
             },
-            [m, T, y.location, j, N]
+            [m, T, j.location, y, N]
         );
     return null == b || null == I || null == R
         ? null

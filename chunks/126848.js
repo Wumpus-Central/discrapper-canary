@@ -9,8 +9,8 @@ var i = s(120356),
     c = s(639119),
     u = s(655525),
     d = s(52188),
-    p = s(346497),
-    f = s(924540),
+    f = s(346497),
+    p = s(924540),
     g = s(351402),
     x = s(170671),
     h = s(474936),
@@ -19,41 +19,41 @@ function v(e) {
     let t,
         { decoration: s, label: i, isSelected: v } = e,
         b = (0, c.N)(),
-        S = (0, a.Ng)(),
-        C = (0, p.Vi)(),
+        C = (0, a.Ng)(),
+        S = (0, f.Vi)(),
         E = (0, o.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == b && null == s,
-        { enabled: N } = l._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
-        j = N && (null == b ? void 0 : b.trial_id) === h.a7;
+        { enabled: j } = l._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
+        N = j && (null == b ? void 0 : b.trial_id) === h.a7;
     return (
-        (t = C
+        (t = S
             ? (0, n.jsx)(u.Z, {})
-            : null != S
-              ? (0, n.jsx)(f.GN, {
+            : null != C
+              ? (0, n.jsx)(p.GN, {
                     isTabSelected: v,
-                    userDiscount: S,
+                    userDiscount: C,
                     includesAmountOff: !1
                 })
-              : null == b || j
+              : null == b || N
                 ? null != s
                     ? s
                     : E
                       ? (0, n.jsx)(d.k, { entryPoint: d.U.SettingsMenu })
                       : (0, n.jsx)(x.Z, { isSelected: v })
-                : (0, n.jsx)(f.$H, {
+                : (0, n.jsx)(p.$H, {
                       isTabSelected: v,
                       trialOffer: b
                   })),
         (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)('div', {
-                    className: r()(m.premiumLabel, { [m.selected]: (v || E) && !C }),
+                    className: r()(m.premiumLabel, { [m.selected]: (v || E) && !S }),
                     children: [i, t]
                 }),
                 (0, n.jsx)('div', {
                     className: r()(m.background, {
                         [m.auPromo]: E && !v,
                         [m.auPromoSelected]: E && v,
-                        [m.selectedBackground]: !E && !C && v
+                        [m.selectedBackground]: !E && !S && v
                     })
                 })
             ]

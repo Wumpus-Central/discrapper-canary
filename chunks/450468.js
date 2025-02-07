@@ -19,14 +19,14 @@ var i = n(200651),
     f = n(74538),
     T = n(388032),
     N = n(69049);
-async function I(e, t, n, i) {
+async function S(e, t, n, i) {
     await (0, u.bG)(n), await (0, d.Mg)(e, { items: (0, f.MY)(e, t) }, i);
 }
-function S(e) {
+function I(e) {
     let { premiumSubscription: t, guildBoostSlotId: n, onNext: r, onClose: d } = e,
         [u, g] = s.useState(!1),
         C = (0, a.e7)([E.Z], () => E.Z.theme),
-        { analyticsLocations: S } = (0, _.ZP)(),
+        { analyticsLocations: I } = (0, _.ZP)(),
         [b, v] = s.useState(null);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -59,7 +59,7 @@ function S(e) {
                             try {
                                 g(!0), v(null);
                                 let e = (0, p.g)(t, 1);
-                                l()((0, f.uV)(e) <= (0, f.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await I(t, e, n, S), r();
+                                l()((0, f.uV)(e) <= (0, f.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await S(t, e, n, I), r();
                             } catch (t) {
                                 let e = t instanceof m.HF ? t : new m.HF(t, t.code);
                                 v(T.intl.string(e.code === h.SM.BILLING_PAUSE_INVALID_UPDATE ? T.t.dq4vq6 : T.t['5mlOCQ'])), g(!1);
@@ -120,7 +120,7 @@ function v(e) {
     else
         switch (m) {
             case 1:
-                t = (0, i.jsx)(S, {
+                t = (0, i.jsx)(I, {
                     premiumSubscription: u,
                     guildBoostSlotId: n,
                     onNext: () => h(2),

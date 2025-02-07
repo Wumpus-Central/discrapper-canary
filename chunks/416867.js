@@ -8,18 +8,18 @@ var i = s(481060),
     a = s(139266);
 function c(e) {
     let { transitionState: t, Icon: s, title: c, body: u, onClose: d } = e,
-        p = (0, r.Dt)();
+        f = (0, r.Dt)();
     return (0, n.jsxs)(i.Y0X, {
         className: a.container,
         transitionState: t,
-        'aria-labelledby': p,
+        'aria-labelledby': f,
         children: [
             (0, n.jsxs)(i.hzk, {
                 children: [
                     (0, n.jsx)(o.Z, { Icon: s }),
                     (0, n.jsx)(i.LZC, { size: 24 }),
                     (0, n.jsx)(i.X6q, {
-                        id: p,
+                        id: f,
                         className: a.__invalid_title,
                         variant: 'heading-xl/semibold',
                         children: c

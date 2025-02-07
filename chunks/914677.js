@@ -51,8 +51,8 @@ let c = 'url(#gradient)',
         }, [t]);
         let T = (0, l.ZP)(),
             N = (0, r.ap)(T),
-            I = u(_),
-            S = d(_, N),
+            S = u(_),
+            I = d(_, N),
             b = null != x ? x : m(N, _);
         return (0, i.jsxs)('div', {
             className: o.circleContainer,
@@ -68,8 +68,8 @@ let c = 'url(#gradient)',
                             r: ''.concat(p),
                             cx: '50%',
                             cy: '50%',
-                            stroke: I,
-                            strokeOpacity: S
+                            stroke: S,
+                            strokeOpacity: I
                         }),
                         (0, i.jsx)('circle', {
                             stroke: b,

@@ -20,8 +20,8 @@ var s = n(120356),
     f = n(197115),
     T = n(823188),
     N = n(184176),
-    I = n(938736),
-    S = n(386733),
+    S = n(938736),
+    I = n(386733),
     b = n(474936),
     v = n(981631),
     j = n(388032),
@@ -101,14 +101,14 @@ let P = (e) => {
                                         isGift: !0
                                     })
                                 }),
-                            (0, i.jsx)(S.Z, {})
+                            (0, i.jsx)(I.Z, {})
                         ]
                     })
                 })
             ]
         });
     },
-    Z = () => {
+    y = () => {
         let { headingText: e } = k();
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -138,7 +138,7 @@ let P = (e) => {
             ]
         });
     },
-    [y, k] = (0, g.Z)(),
+    [Z, k] = (0, g.Z)(),
     L = (e) => {
         let { className: t, location: n } = e,
             { analyticsLocations: s } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
@@ -146,13 +146,13 @@ let P = (e) => {
             g = (0, x._O)(),
             p = j.intl.string(j.t.qYKftb),
             f = (0, C.b)(n),
-            N = (0, I.pn)(n),
-            S = (0, i.jsx)(P, { className: t }),
+            N = (0, S.pn)(n),
+            I = (0, i.jsx)(P, { className: t }),
             O = j.intl.string(j.t.ifwQZW),
             R = !1,
             { fractionalState: k, endsAt: L } = (0, u.Z)(),
             B = (0, d.Z)(L, d.a.ENDS_IN);
-        a ? ((O = j.intl.string(j.t.ifwQZW)), (S = (0, i.jsx)(Z, {}))) : (f || N) && ((p = j.intl.string(j.t.qYKftb)), (O = j.intl.string(j.t.ifwQZW)), (S = (0, i.jsx)(D, { location: n })));
+        a ? ((O = j.intl.string(j.t.ifwQZW)), (I = (0, i.jsx)(y, {}))) : (f || N) && ((p = j.intl.string(j.t.qYKftb)), (O = j.intl.string(j.t.ifwQZW)), (I = (0, i.jsx)(D, { location: n })));
         let M = null;
         if (k !== b.a$.NONE) {
             (g = !0), (p = j.intl.string(j.t.vaqFvb)), (R = !0);
@@ -186,13 +186,13 @@ let P = (e) => {
                 : (0, i.jsx)(T.Cy, { ...w });
         return (0, i.jsx)(c.Gt, {
             value: s,
-            children: (0, i.jsx)(y.Provider, {
+            children: (0, i.jsx)(Z.Provider, {
                 value: {
                     headingText: O,
                     headingTop: V,
                     headingBottom: M
                 },
-                children: S
+                children: I
             })
         });
     };

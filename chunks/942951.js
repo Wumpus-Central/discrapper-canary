@@ -10,8 +10,8 @@ var r = t(200651),
     s = t(91047);
 function _(e) {
     let { user: n, channelId: t, guildId: _, messageId: f, stopPropagation: m = !1, ariaLabel: p } = e,
-        { analyticsLocations: x } = (0, i.ZP)(a.Z.USERNAME),
-        g = o.useCallback(
+        { analyticsLocations: g } = (0, i.ZP)(a.Z.USERNAME),
+        h = o.useCallback(
             (e) => {
                 let r = u.Z.getChannel(t);
                 null != r && null != n && (0, s.Pv)(e, n, r);
@@ -23,7 +23,7 @@ function _(e) {
             let u = (n) =>
                     (0, r.jsx)(l.rz2, {
                         ...(null != n ? n : {}),
-                        onContextMenu: g,
+                        onContextMenu: h,
                         name: o,
                         color: null == e ? void 0 : e.colorString,
                         roleName: null == e ? void 0 : e.colorRoleName,
@@ -35,7 +35,7 @@ function _(e) {
             return (0, r.jsx)(
                 i.Gt,
                 {
-                    value: x,
+                    value: g,
                     children:
                         null != n
                             ? (0, r.jsx)(l.yRy, {
@@ -67,6 +67,6 @@ function _(e) {
                 a
             );
         },
-        [x, n, t, _, f, g, m, p]
+        [g, n, t, _, f, h, m, p]
     );
 }

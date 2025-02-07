@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => L,
     __: () => k,
-    dm: () => y
+    dm: () => Z
 });
 var i,
     s = n(230711),
@@ -23,8 +23,8 @@ var i,
     f = n(181708),
     T = n(821721),
     N = n(158897),
-    I = n(290650),
-    S = n(751125),
+    S = n(290650),
+    I = n(751125),
     b = n(904505),
     v = n(712626),
     j = n(386014),
@@ -33,8 +33,8 @@ var i,
     R = n(385874),
     P = n(371000),
     D = n(377679),
-    Z = n(825087),
-    y = (((i = {}).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits'), i);
+    y = n(825087),
+    Z = (((i = {}).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits'), i);
 let k = () => {
         let e = (0, o.rO)();
         return {
@@ -51,7 +51,7 @@ let k = () => {
                 title: m.intl.string(m.t['6b3ydH']),
                 description: m.intl.string(m.t['Y+IJys']),
                 previewImage: g,
-                videoUrl: e ? I.Z : S.Z,
+                videoUrl: e ? S.Z : I.Z,
                 isCompact: !0
             }
         };
@@ -114,7 +114,7 @@ let k = () => {
                     descriptionCta: m.intl.string(m.t.jVcuVV),
                     previewImage: _,
                     onClick: i,
-                    videoUrl: h ? D.Z : Z.Z
+                    videoUrl: h ? D.Z : y.Z
                 }
             };
         return e ? f : C;

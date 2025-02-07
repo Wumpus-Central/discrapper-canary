@@ -2,14 +2,14 @@ a.d(i, {
     L9: () => b,
     ZK: () => x,
     d4: () => w,
-    dS: () => g,
+    dS: () => C,
     jY: () => M,
     q7: () => B,
-    vZ: () => C
+    vZ: () => g
 }),
     a(789020);
-var t = a(200651),
-    n = a(192379),
+var n = a(200651),
+    t = a(192379),
     o = a(442837),
     s = a(993365),
     l = a(981729),
@@ -25,7 +25,7 @@ var t = a(200651),
     h = a(981631),
     v = a(388032),
     y = a(418135);
-function g(e) {
+function C(e) {
     var i;
     let a = e.item.originalItem;
     return (0, I.Yi)({
@@ -52,21 +52,21 @@ function g(e) {
         analyticsSource: 'ImageComponentForMessageAttachment'
     });
 }
-function C(e) {
+function g(e) {
     var i;
     let a = e.item.originalItem,
-        o = n.useCallback(() => {
+        o = t.useCallback(() => {
             var e;
             return (0, m.yE)(null !== (e = a.flags) && void 0 !== e ? e : 0, h.J0y.IS_CLIP)
-                ? (0, t.jsxs)(l.DY, {
+                ? (0, n.jsxs)(l.DY, {
                       text: v.intl.string(v.t['/fgfWl']),
                       className: y.clipPill,
                       children: [
-                          (0, t.jsx)(r.AlX, {
+                          (0, n.jsx)(r.AlX, {
                               size: 'xs',
                               color: 'currentColor'
                           }),
-                          (0, t.jsx)(s.x, {
+                          (0, n.jsx)(s.x, {
                               variant: 'text-xs/semibold',
                               color: 'always-white',
                               children: v.intl.string(v.t.oA4afH)
@@ -112,22 +112,22 @@ function B(e) {
 }
 function M(e) {
     let { message: i, item: a } = e,
-        t = a.originalItem,
-        o = n.useCallback(
-            (e, a, n) => {
+        n = a.originalItem,
+        o = t.useCallback(
+            (e, a, t) => {
                 var o;
-                (0, d.tb)(i.id, null !== (o = t.duration_secs) && void 0 !== o ? o : null, a, i.author.id);
+                (0, d.tb)(i.id, null !== (o = n.duration_secs) && void 0 !== o ? o : null, a, i.author.id);
             },
-            [i, t.duration_secs]
+            [i, n.duration_secs]
         ),
-        s = n.useCallback(
+        s = t.useCallback(
             (e, a) => {
-                var n;
-                (0, d.EW)(i.id, null !== (n = t.duration_secs) && void 0 !== n ? n : null, e, i.author.id, a);
+                var t;
+                (0, d.EW)(i.id, null !== (t = n.duration_secs) && void 0 !== t ? t : null, e, i.author.id, a);
             },
-            [i, t.duration_secs]
+            [i, n.duration_secs]
         ),
-        l = n.useCallback(
+        l = t.useCallback(
             (e) => {
                 var a;
                 (0, d.Np)(i.id, null !== (a = null == e ? void 0 : e.message) && void 0 !== a ? a : null);
@@ -136,11 +136,11 @@ function M(e) {
         );
     return (0, I.wj)({
         ...e,
-        fileSize: t.size,
-        fileName: (0, p.Z)(t),
-        src: t.url,
-        durationSecs: t.duration_secs,
-        waveform: t.waveform,
+        fileSize: n.size,
+        fileName: (0, p.Z)(n),
+        src: n.url,
+        durationSecs: n.duration_secs,
+        waveform: n.waveform,
         onPlay: o,
         onPause: s,
         onError: l
@@ -167,22 +167,22 @@ function x(e) {
 }
 function b(e) {
     return 'CLIP' === e.item.type
-        ? (0, t.jsx)(E, {
+        ? (0, n.jsx)(A, {
               attachment: e.item.originalItem,
               message: e.message
           })
         : null;
 }
-function E(e) {
+function A(e) {
     var i;
-    let { attachment: a, message: n } = e,
-        s = n.channel_id,
+    let { attachment: a, message: t } = e,
+        s = t.channel_id,
         l = (0, o.e7)([u.Z], () => {
             var e;
             return null === (e = u.Z.getBasicChannel(s)) || void 0 === e ? void 0 : e.guild_id;
         }),
         { clip_created_at: r, clip_participants: d, title: _, application: m } = a;
-    return (0, t.jsx)(c.Z, {
+    return (0, n.jsx)(c.Z, {
         createdAt: null != r ? Date.parse(r) : void 0,
         participantIds:
             null !==

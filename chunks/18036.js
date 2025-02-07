@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i,
     l = n(442837),
     r = n(570140),
@@ -58,7 +58,7 @@ class f extends (i = l.ZP.PersistedStore) {
     }
 }
 d(f, 'displayName', 'FavoritesSuggestionStore'), d(f, 'persistKey', 'FavoritesSuggestionStore');
-let C = new f(r.Z, {
+let p = new f(r.Z, {
     DISMISS_FAVORITE_SUGGESTION: function (e) {
         let { guildId: t, channelId: n } = e;
         return null == c[t] && (c[t] = new Set()), c[t].add(n), u[t].delete(n), !0;

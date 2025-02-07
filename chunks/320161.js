@@ -17,7 +17,7 @@ function p(e) {
     let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': p, delay: E = _ } = e,
         [C, f] = s.useState(0),
         [T, N] = s.useState(!1),
-        [I, S] = s.useState(!1),
+        [S, I] = s.useState(!1),
         [b] = s.useState(() => new l.V7()),
         [v] = s.useState(() => new l.V7());
     if (
@@ -34,7 +34,7 @@ function p(e) {
         A = j ? a.FGA.RED : a.FGA.GREEN,
         O = T ? A : a.FGA.PRIMARY,
         R = () => {
-            null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), I || f(C + 1), S(!0), N(!0), b.start(h, () => S(!1)), v.start(g, () => f(0));
+            null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), S || f(C + 1), I(!0), N(!0), b.start(h, () => I(!1)), v.start(g, () => f(0));
         };
     return (0, i.jsx)(a.ua7, {
         text: (() => {
@@ -50,9 +50,9 @@ function p(e) {
         delay: E,
         'aria-label': p,
         color: O,
-        forceOpen: I,
+        forceOpen: S,
         onAnimationRest: (e, t) => {
-            !I && T && t.phase === u.UkZ.LEAVE && N(!1);
+            !S && T && t.phase === u.UkZ.LEAVE && N(!1);
         },
         children: (e) => {
             let { onClick: t, onMouseEnter: n, ...i } = e;
@@ -66,7 +66,7 @@ function p(e) {
                         null == n || n();
                         return;
                     }
-                    b.stop(), S(!1);
+                    b.stop(), I(!1);
                 }
             });
         }

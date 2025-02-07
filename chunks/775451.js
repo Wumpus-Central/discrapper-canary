@@ -1,6 +1,6 @@
 n.d(t, {
     V9: () => b,
-    ek: () => S
+    ek: () => I
 }),
     n(47120);
 var i = n(200651),
@@ -23,16 +23,16 @@ var i = n(200651),
     f = n(215023),
     T = n(46140),
     N = n(388032),
-    I = n(900377);
-let S = {
-        START: I.alignLeft,
-        END: I.alignRight
+    S = n(900377);
+let I = {
+        START: S.alignLeft,
+        END: S.alignRight
     },
     b = (e) => {
-        let { showNotificationBadge: t, ctaText: r, ctaOnClick: b, isCoachmarkEnabled: v = !0, linkText: j = N.intl.string(N.t['7f4H7O']), linkTo: A, cardAlignment: O = S.START, className: R } = e,
+        let { showNotificationBadge: t, ctaText: r, ctaOnClick: b, isCoachmarkEnabled: v = !0, linkText: j = N.intl.string(N.t['7f4H7O']), linkTo: A, cardAlignment: O = I.START, className: R } = e,
             { balance: P } = (0, _.A)(),
-            [D, Z] = s.useState(x.b.DEFAULT),
-            [y, k] = s.useState(!1),
+            [D, y] = s.useState(x.b.DEFAULT),
+            [Z, k] = s.useState(!1),
             [L, B] = s.useState(!1),
             M = (0, a.TH)(),
             { analyticsLocations: w } = (0, u.ZP)(d.Z.VIRTUAL_CURRENCY_BALANCE_WIDGET),
@@ -71,19 +71,19 @@ let S = {
                 }
             }),
             G = () => {
-                k(!y);
+                k(!Z);
             };
         return (
             s.useEffect(() => {
-                Z(y ? x.b.SELECTED : x.b.DEFAULT);
-            }, [y, Z]),
+                y(Z ? x.b.SELECTED : x.b.DEFAULT);
+            }, [Z, y]),
             s.useEffect(() => {
                 v && ((0, g.wH)() || U ? (B(!0), k(!1)) : B(!1));
             }, [v, U]),
             (0, i.jsxs)('div', {
-                className: l()(I.container, R, {
-                    [I.hidden]: L,
-                    [I.visible]: !L
+                className: l()(S.container, R, {
+                    [S.hidden]: L,
+                    [S.visible]: !L
                 }),
                 children: [
                     (0, i.jsx)(E.A4, {
@@ -94,9 +94,9 @@ let S = {
                         onClick: G,
                         showNotificationBadge: t
                     }),
-                    y &&
+                    Z &&
                         (0, i.jsx)('div', {
-                            className: l()(I.cardContainer, O),
+                            className: l()(S.cardContainer, O),
                             children: (0, i.jsx)(p.L, {
                                 ctaText: r,
                                 ctaOnClick: () => {
@@ -110,4 +110,4 @@ let S = {
             })
         );
     };
-b.CardAlignment = S;
+b.CardAlignment = I;

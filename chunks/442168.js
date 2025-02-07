@@ -50,7 +50,7 @@ function x(e) {
                       left: t.left
                   };
         },
-        j = (e) => {
+        y = (e) => {
             let t = null == S ? void 0 : S.getBoundingClientRect();
             if (((_.current = t), e.timestamp !== b || null == t || n)) return p;
             let { top: l, left: i } = t;
@@ -61,12 +61,12 @@ function x(e) {
                 width: 268
             };
         },
-        y = (0, i.useRef)(null),
+        j = (0, i.useRef)(null),
         N = (0, o.Yzy)(
             I,
             {
                 keys: (e) => e.timestamp,
-                ref: y,
+                ref: j,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
                 config: v
@@ -83,13 +83,13 @@ function x(e) {
                     position: 'fixed',
                     visibility: 'hidden',
                     opacity: 1,
-                    ...(x.enabled ? j(e) : R())
+                    ...(x.enabled ? y(e) : R())
                 }),
                 enter: (e) => [
                     {
                         opacity: 1,
                         visibility: 'visible',
-                        ...j(e)
+                        ...y(e)
                     }
                 ],
                 leave: {
@@ -114,7 +114,7 @@ function x(e) {
             'animate-always'
         );
     return (
-        (0, r.useChain)([y, w], [0, 0.1], 3000),
+        (0, r.useChain)([j, w], [0, 0.1], 3000),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)('div', {

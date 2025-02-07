@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(74299),
     T = n(131951),
     N = n(556296),
-    I = n(808506),
-    S = n(63063),
+    S = n(808506),
+    I = n(63063),
     b = n(358085),
     v = n(13140),
     j = n(210887),
@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(420212),
     P = n(388032),
     D = n(877615),
-    Z = n(684309),
-    y = n(232186);
+    y = n(684309),
+    Z = n(232186);
 function k(e, t, n) {
     return (
         t in e
@@ -69,7 +69,7 @@ class w extends s.PureComponent {
                     className: D.keybindMessage,
                     type: u.geA.DESCRIPTION,
                     style: { color: d.Z.unsafe_rawColors.RED_400.css },
-                    children: P.intl.format(P.t.MOIaNT, { keyboardNavArticle: S.Z.getArticleURL(O.BhN.KEYBOARD_NAVIGATION) })
+                    children: P.intl.format(P.t.MOIaNT, { keyboardNavArticle: I.Z.getArticleURL(O.BhN.KEYBOARD_NAVIGATION) })
                 })
               : (0, i.jsx)(u.R94, {
                     className: D.keybindMessage,
@@ -81,7 +81,7 @@ class w extends s.PureComponent {
         let { managed: e, enabled: t } = this.props.keybind;
         return (0, i.jsxs)(C.Z, {
             direction: C.Z.Direction.VERTICAL,
-            className: l()(D.keybindGroup, Z.card),
+            className: l()(D.keybindGroup, y.card),
             children: [
                 !e &&
                     (0, i.jsx)(h.Z, {
@@ -91,7 +91,7 @@ class w extends s.PureComponent {
                         look: h.Z.Looks.FILLED
                     }),
                 (0, i.jsxs)(C.Z, {
-                    className: y.marginBottom8,
+                    className: Z.marginBottom8,
                     children: [
                         (0, i.jsx)(C.Z.Child, {
                             basis: '45%',
@@ -310,7 +310,7 @@ class V extends s.PureComponent {
     renderEmpty(e) {
         if (0 === e.length)
             return (0, i.jsx)(M, {
-                className: y.marginTop60,
+                className: Z.marginTop60,
                 children: (0, i.jsx)(u.oxh, {
                     darkSrc: n(572279),
                     lightSrc: n(871803),
@@ -338,7 +338,7 @@ class V extends s.PureComponent {
                               children: [
                                   (0, i.jsxs)(C.Z, {
                                       justify: C.Z.Justify.BETWEEN,
-                                      className: y.marginBottom20,
+                                      className: Z.marginBottom20,
                                       children: [
                                           (0, i.jsx)(C.Z.Child, {
                                               grow: 0,
@@ -375,7 +375,7 @@ class V extends s.PureComponent {
                 (0, i.jsxs)(u.hjN, {
                     tag: u.RB0.H1,
                     title: P.intl.string(P.t.Lz5KHB),
-                    className: y.marginTop60,
+                    className: Z.marginTop60,
                     children: [
                         (0, i.jsxs)('div', {
                             className: D.defaultKeybind,
@@ -465,7 +465,7 @@ class V extends s.PureComponent {
 function U() {
     let e = (0, c.e7)([N.Z], () => N.Z.getState()),
         t = (0, c.e7)([T.Z], () => (0, f.Z)(T.Z)),
-        n = (0, c.e7)([I.Z], () => I.Z.isSupported()),
+        n = (0, c.e7)([S.Z], () => S.Z.isSupported()),
         s = (0, E.Go)();
     return (0, i.jsx)(V, {
         keybinds: e,

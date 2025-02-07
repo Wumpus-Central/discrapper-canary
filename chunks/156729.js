@@ -31,8 +31,8 @@ function N(e, t, n) {
         e
     );
 }
-let I = 'isDefault';
-class S extends (i = r.PureComponent) {
+let S = 'isDefault';
+class I extends (i = r.PureComponent) {
     componentWillUnmount() {
         u.Z.wait(() => {
             (0, m._H)(), (0, m.w7)();
@@ -192,9 +192,9 @@ class S extends (i = r.PureComponent) {
                     this.renderCardExpirationSection(),
                     this.renderBillingAddressSection(),
                     (0, s.jsx)(d.XZJ, {
-                        name: I,
+                        name: S,
                         value: l,
-                        onChange: (e, t) => this.handleFieldChange(t, I),
+                        onChange: (e, t) => this.handleFieldChange(t, S),
                         type: d.XZJ.Types.INVERTED,
                         className: T.defaultSection,
                         children: (0, s.jsx)(d.Text, {
@@ -278,7 +278,7 @@ class S extends (i = r.PureComponent) {
         };
     }
 }
-N(S, 'defaultProps', {
+N(I, 'defaultProps', {
     onDelete: () => {},
     onSubmit: () => {},
     onCancel: () => {}
@@ -286,4 +286,4 @@ N(S, 'defaultProps', {
 let b = c.ZP.connectStores([_.Z], () => ({
     updateError: _.Z.editSourceError,
     removeError: _.Z.removeSourceError
-}))(S);
+}))(I);

@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(78839),
     T = n(626135),
     N = n(526167),
-    I = n(74538),
-    S = n(140465),
+    S = n(74538),
+    I = n(140465),
     b = n(278605),
     v = n(286961),
     j = n(91802),
@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(568126),
     P = n(605289),
     D = n(346497),
-    Z = n(218390),
-    y = n(823188),
+    y = n(218390),
+    Z = n(823188),
     k = n(241158),
     L = n(135785),
     B = n(498765),
@@ -45,8 +45,8 @@ var i = n(200651),
     Y = n(304576),
     W = n(409100),
     K = n(391110),
-    X = n(71363),
-    q = n(781800),
+    q = n(71363),
+    X = n(781800),
     J = n(474936),
     Q = n(981631),
     $ = n(869783),
@@ -93,7 +93,7 @@ let ec = (e) => {
                           (0, i.jsx)(V.Z, {
                               isFullScreen: t,
                               showAllPerksButton: t
-                                  ? (0, i.jsx)(q.Z, {
+                                  ? (0, i.jsx)(X.Z, {
                                         setIsAllPerksVisible: s,
                                         previousComponent: K.MQ.MARKETING
                                     })
@@ -123,27 +123,27 @@ let ec = (e) => {
             w = s.useRef(null),
             V = s.useRef(null),
             U = (0, a.e7)([h.Z], () => h.Z.useReducedMotion),
-            q = (0, m.ZP)(),
-            em = (0, c.wj)(q),
+            X = (0, m.ZP)(),
+            em = (0, c.wj)(X),
             eh = C.default.getCurrentUser(),
-            eg = (0, I.I5)(eh),
+            eg = (0, S.I5)(eh),
             e_ = (0, b.xP)('PremiumMarketingHome') && !eg && B,
             [ex, ep] = s.useState(!1),
             [eE, eC] = s.useState(!1),
             [ef, eT] = s.useState(!1),
-            [eN, eI] = s.useState(!1),
-            eS = (0, N.rO)(),
+            [eN, eS] = s.useState(!1),
+            eI = (0, N.rO)(),
             [eb, ev] = s.useState(!1),
             ej = (0, a.e7)([f.ZP], () => f.ZP.getPremiumTypeSubscription()),
-            eA = null != ej ? (0, I.Af)(ej) : null,
-            eO = null != eA ? I.ZP.getSkuIdForPlan(eA.planId) : null,
+            eA = null != ej ? (0, S.Af)(ej) : null,
+            eO = null != eA ? S.ZP.getSkuIdForPlan(eA.planId) : null,
             eR = null !== eO && eO !== J.Si.TIER_2 ? J.Si.TIER_2 : null,
             eP = (0, j.n)(),
             eD = null != eP,
-            [eZ, ey] = s.useState(!1),
+            [ey, eZ] = s.useState(!1),
             ek = (0, A.N)(),
             eL = null == ek ? void 0 : null === (t = ek.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-            eB = (0, S.Nx)(),
+            eB = (0, I.Nx)(),
             eM = (0, D.Vi)(),
             ew = null === (n = (0, v.Z)()) || void 0 === n ? void 0 : n.billingSettingsMarketingBanner,
             { analyticsLocations: eV } = (0, _.ZP)(g.Z.PREMIUM_MARKETING),
@@ -168,8 +168,8 @@ let ec = (e) => {
                     onChange: (e) => eT(e),
                     threshold: 0.1,
                     active: !0,
-                    children: (0, i.jsx)(y.ZP, {
-                        variant: e_ ? y.NN.MARKETING_PAGE_V2 : y.NN.DEFAULT,
+                    children: (0, i.jsx)(Z.ZP, {
+                        variant: e_ ? Z.NN.MARKETING_PAGE_V2 : Z.NN.DEFAULT,
                         showWumpus: !e_,
                         tier0CTAButton: e_
                             ? (0, i.jsx)(W.Z, {
@@ -283,8 +283,8 @@ let ec = (e) => {
                                               className: l()(et.heroHeadingV2Art),
                                               ref: V,
                                               children: (0, i.jsx)('source', {
-                                                  src: eS ? el.Z : eo.Z,
-                                                  type: eS ? $.m.MP4 : $.m.WEBM
+                                                  src: eI ? el.Z : eo.Z,
+                                                  type: eI ? $.m.MP4 : $.m.WEBM
                                               })
                                           })
                                       })
@@ -297,14 +297,14 @@ let ec = (e) => {
                     !e_ && eG,
                     k === J.EZ.UserSettings &&
                         null != ew &&
-                        (0, i.jsx)(Z.C, {
+                        (0, i.jsx)(y.C, {
                             className: et.giftPromoCard,
                             config: ew
                         }),
                     (0, i.jsx)(eu, {
                         isFullscreen: r,
                         inOfferExperience: eB,
-                        setIsAllPerksVisible: ey,
+                        setIsAllPerksVisible: eZ,
                         hasRenderedOnce: eb,
                         isMarketingPageV2Enabled: e_,
                         isReducedMotion: U
@@ -351,7 +351,7 @@ let ec = (e) => {
                     }),
                     (0, i.jsx)(o.$, {
                         onChange: (e) => {
-                            e && !eN && (T.default.track(Q.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eV }), eI(!0));
+                            e && !eN && (T.default.track(Q.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eV }), eS(!0));
                         },
                         children: (0, i.jsx)('div', { className: et.bottomOfPageVisibilitySensor })
                     }),
@@ -384,10 +384,10 @@ let ec = (e) => {
                           ref: w,
                           children: eF
                       }),
-                      (0, i.jsx)(X.Z, {
+                      (0, i.jsx)(q.Z, {
                           previousComponent: K.MQ.MARKETING,
-                          isAllPerksVisible: eZ,
-                          setIsAllPerksVisible: ey,
+                          isAllPerksVisible: ey,
+                          setIsAllPerksVisible: eZ,
                           isFullScreen: r
                       })
                   ]

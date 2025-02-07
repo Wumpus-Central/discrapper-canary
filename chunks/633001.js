@@ -289,17 +289,17 @@ function R() {
             return e;
         });
     }, [D]);
-    let [G, H] = l.useState({}),
-        W = l.useRef();
+    let [G, W] = l.useState({}),
+        H = l.useRef();
     l.useEffect(
         () => (
-            (W.current = setInterval(async () => {
+            (H.current = setInterval(async () => {
                 let e = h.ZP.getRunningGames(),
                     t = [],
                     n = Date.now();
                 for (let a of e) t.push((0, f.hj)(a.pid, 0).then((e) => [a.pid, e, n]));
                 let a = await Promise.all(t);
-                H((e) =>
+                W((e) =>
                     a.reduce(
                         (e, t) => {
                             var n;
@@ -323,7 +323,7 @@ function R() {
                     )
                 );
             }, 10 * j.Z.Millis.SECOND)),
-            () => clearInterval(W.current)
+            () => clearInterval(H.current)
         ),
         []
     );

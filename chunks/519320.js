@@ -3,10 +3,10 @@ a.d(i, {
     Np: () => l,
     tb: () => o
 });
-var t = a(626135),
-    n = a(981631);
+var n = a(626135),
+    t = a(981631);
 function o(e, i, a, o) {
-    t.default.track(n.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
+    n.default.track(t.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
         message_id: e,
         total_duration_secs: i,
         start_duration_secs: Math.min(null != i ? i : a, a),
@@ -14,7 +14,7 @@ function o(e, i, a, o) {
     });
 }
 function s(e, i, a, o, s) {
-    t.default.track(n.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
+    n.default.track(t.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
         message_id: e,
         total_duration_secs: i,
         end_duration_secs: Math.min(null != i ? i : a, a),
@@ -23,7 +23,7 @@ function s(e, i, a, o, s) {
     });
 }
 function l(e, i) {
-    t.default.track(n.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
+    n.default.track(t.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
         message_id: e,
         error_message: i
     });

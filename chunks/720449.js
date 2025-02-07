@@ -13,7 +13,7 @@ function d(t, e, n, a, d) {
         let t = i.Ok.updateSetting({
             text: c.length > 0 ? c : '',
             expiresAtMs:
-                null != n && n !== r.F.DONT_CLEAR
+                null != n && n !== r.FO.DONT_CLEAR
                     ? String(
                           l()()
                               .add((0, o.Z)(n), 'ms')

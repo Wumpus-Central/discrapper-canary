@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(581883),
     T = n(738486),
     N = n(918257),
-    I = n(970813),
-    S = n(726985),
+    S = n(970813),
+    I = n(726985),
     b = n(981631),
     v = n(710111),
     j = n(388032),
@@ -38,11 +38,11 @@ function P(e) {
         n = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(h.F, {
-                    setting: S.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                    children: [(0, i.jsx)(N.Z, { refreshStyles: t }), (0, i.jsx)(I.Z, { refreshStyles: t })]
+                    setting: I.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+                    children: [(0, i.jsx)(N.Z, { refreshStyles: t }), (0, i.jsx)(S.Z, { refreshStyles: t })]
                 }),
                 (0, i.jsxs)(h.F, {
-                    setting: S.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
+                    setting: I.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
                     children: [t ? null : (0, i.jsx)(o.$i$, { className: A.callSoundsDivider }), (0, i.jsx)(D, { refreshStyles: t })]
                 })
             ]
@@ -64,16 +64,16 @@ function D(e) {
         h = (0, p.tT)(r),
         f = R(h),
         N = (null == h ? void 0 : h.type) === p.zx.GLOBAL,
-        I = (0, a.e7)([_.Z], () => _.Z.hasFetchedAllSounds()) && null != h && null == f;
+        S = (0, a.e7)([_.Z], () => _.Z.hasFetchedAllSounds()) && null != h && null == f;
     s.useEffect(() => {
-        I && (0, x.tt)({ location: n });
-    }, [I, n]),
+        S && (0, x.tt)({ location: n });
+    }, [S, n]),
         s.useEffect(() => {
             (0, g.w)();
         }, []);
-    let S = s.useCallback((e, t) => {
+    let I = s.useCallback((e, t) => {
             let { inDropdown: n } = t;
-            return null == e ? null : n ? (0, i.jsx)(Z, { guildId: e.value }) : null;
+            return null == e ? null : n ? (0, i.jsx)(y, { guildId: e.value }) : null;
         }, []),
         P = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -91,7 +91,7 @@ function D(e) {
                     onChange: (e) => {
                         c(null == e ? v.hY : e.id);
                     },
-                    renderOptionSuffix: S,
+                    renderOptionSuffix: I,
                     hideDivider: !0
                 }),
                 (0, i.jsxs)(m.Z, {
@@ -113,7 +113,7 @@ function D(e) {
                                 null == e ? (0, x.aC)(r, n) : (0, x.SZ)(r, e, n);
                             }
                         }),
-                        I &&
+                        S &&
                             (0, i.jsx)(o.Wn, {
                                 className: A.notice,
                                 messageType: o.QYI.WARNING,
@@ -125,7 +125,7 @@ function D(e) {
         });
     return t ? (0, i.jsx)(T.Z, { children: P }) : P;
 }
-function Z(e) {
+function y(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([f.Z], () => {
             var e, n, i;

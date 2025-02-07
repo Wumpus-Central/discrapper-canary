@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(982404),
     T = n(299156);
 let N = function (e) {
-    let { premiumSubscription: t, premiumType: n, onClose: r, onConfirm: N, userDiscountOffer: I } = e,
-        [S, b] = s.useState(!1),
+    let { premiumSubscription: t, premiumType: n, onClose: r, onConfirm: N, userDiscountOffer: S } = e,
+        [I, b] = s.useState(!1),
         [v, j] = s.useState(!1),
         A = async (e) => {
             try {
@@ -39,13 +39,13 @@ let N = function (e) {
         },
         O = (0, d.ZP)(),
         R = (0, o.wj)(O) ? f : T,
-        P = (0, g._)(t, x.Xh.PREMIUM_MONTH_TIER_2, I),
+        P = (0, g._)(t, x.Xh.PREMIUM_MONTH_TIER_2, S),
         D = (0, m.aS)(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
-        Z = (0, h.T4)(D.amount, D.currency);
-    return null == I
+        y = (0, h.T4)(D.amount, D.currency);
+    return null == S
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -60,7 +60,7 @@ let N = function (e) {
                           children: [
                               (0, i.jsx)(c.X6q, {
                                   variant: 'heading-xl/bold',
-                                  children: E.intl.format(E.t.q9Vxu7, { percent: I.discount.amount })
+                                  children: E.intl.format(E.t.q9Vxu7, { percent: S.discount.amount })
                               }),
                               (0, i.jsxs)('div', {
                                   className: C.confirmDiscountDescription,
@@ -73,9 +73,9 @@ let N = function (e) {
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/medium',
                                           children: E.intl.format(E.t.Eq1RHB, {
-                                              percent: I.discount.amount,
-                                              numMonths: I.discount.user_usage_limit,
-                                              price: Z
+                                              percent: S.discount.amount,
+                                              numMonths: S.discount.user_usage_limit,
+                                              price: y
                                           })
                                       })
                                   ]
@@ -87,14 +87,14 @@ let N = function (e) {
                                       className: C.confirmDiscountLegaleseText,
                                       children: E.intl.format(E.t.hrGTjI, {
                                           discountedPrice: P,
-                                          billingPeriod: (0, m.JP)(I.discount.user_usage_limit_interval),
-                                          numMonths: I.discount.user_usage_limit,
-                                          fullPrice: Z,
+                                          billingPeriod: (0, m.JP)(S.discount.user_usage_limit_interval),
+                                          numMonths: S.discount.user_usage_limit,
+                                          fullPrice: y,
                                           helpdeskArticle: u.Z.getArticleURL(p.BhN.PAID_TERMS)
                                       })
                                   })
                               }),
-                              S &&
+                              I &&
                                   (0, i.jsx)('div', {
                                       className: C.redemptionFailedMessage,
                                       children: (0, i.jsx)(c.Text, {
@@ -105,8 +105,8 @@ let N = function (e) {
                                   }),
                               (0, i.jsxs)('div', {
                                   className: l()(C.confirmDiscountButtons, {
-                                      [C.confrimDiscountsButtonsError]: S,
-                                      [C.confrimDiscountsButtonsNoError]: !S
+                                      [C.confrimDiscountsButtonsError]: I,
+                                      [C.confrimDiscountsButtonsNoError]: !I
                                   }),
                                   children: [
                                       (0, i.jsx)(c.zxk, {
@@ -117,7 +117,7 @@ let N = function (e) {
                                       (0, i.jsx)(c.zxk, {
                                           size: c.PhG.SMALL,
                                           submitting: v,
-                                          onClick: () => A(I.id),
+                                          onClick: () => A(S.id),
                                           children: E.intl.string(E.t.CKSuZG)
                                       })
                                   ]

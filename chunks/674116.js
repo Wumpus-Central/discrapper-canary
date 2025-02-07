@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(894939),
     T = n(710808),
     N = n(625205),
-    I = n(325808),
-    S = n(823087),
+    S = n(325808),
+    I = n(823087),
     b = n(232388),
     v = n(546997),
     j = n(186934),
@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(459674),
     P = n(167540),
     D = n(267006),
-    Z = n(803567),
-    y = n(269876),
+    y = n(803567),
+    Z = n(269876),
     k = n(976758),
     L = n(526761),
     B = n(726985),
@@ -67,7 +67,7 @@ function F() {
                     (0, i.jsxs)(u.F, {
                         setting: B.s6.VOICE_AND_VIDEO_MIC_TEST,
                         children: [
-                            (0, i.jsx)(S.Z, {}),
+                            (0, i.jsx)(I.Z, {}),
                             (0, i.jsx)(o.R94, {
                                 className: U.marginBottom20,
                                 type: o.R94.Types.DESCRIPTION,
@@ -78,11 +78,11 @@ function F() {
                     }),
                     (0, i.jsx)(u.F, {
                         setting: B.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                        children: (0, i.jsx)(I.Z, {})
+                        children: (0, i.jsx)(S.Z, {})
                     }),
                     (0, i.jsx)(u.F, {
                         setting: B.s6.VOICE_AND_VIDEO_SENSITIVITY,
-                        children: e === w.pM.VOICE_ACTIVITY && (0, i.jsx)(y.Z, {})
+                        children: e === w.pM.VOICE_ACTIVITY && (0, i.jsx)(Z.Z, {})
                     }),
                     (0, i.jsx)(o.$i$, { className: U.marginBottom40 })
                 ]
@@ -121,7 +121,7 @@ function F() {
                         (0, i.jsx)(D.Z, {}),
                         (0, i.jsx)(u.F, {
                             setting: B.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                            children: (0, i.jsx)(Z.Z, {})
+                            children: (0, i.jsx)(y.Z, {})
                         }),
                         (0, i.jsx)(O.Z, {}),
                         (0, i.jsx)(b.Z, {}),

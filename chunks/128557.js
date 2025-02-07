@@ -168,7 +168,7 @@ function w(e) {
             };
         })(a),
         X = !(F || H || G || V),
-        { titleAnimatedStyle: Q, opacities: J } = (function (e) {
+        { titleAnimatedStyle: J, opacities: Q } = (function (e) {
             let t = (0, u.Z)(() => new s.Z.Value(0)),
                 n = (0, u.Z)(() => new s.Z.Value(0)),
                 i = (0, u.Z)(() => [new s.Z.Value(0), new s.Z.Value(0), new s.Z.Value(0), new s.Z.Value(0)]);
@@ -247,7 +247,7 @@ function w(e) {
                     s.Z.div,
                     {
                         className: P.cardWrapper,
-                        style: X ? { opacity: J[ei.length] } : {},
+                        style: X ? { opacity: Q[ei.length] } : {},
                         children: (0, i.jsx)(D, {
                             iconUrl: en ? d.YvY : L,
                             header: A.intl.string(A.t.q9n0TU),
@@ -264,7 +264,7 @@ function w(e) {
                     s.Z.div,
                     {
                         className: P.cardWrapper,
-                        style: X ? { opacity: J[ei.length] } : {},
+                        style: X ? { opacity: Q[ei.length] } : {},
                         children: (0, i.jsx)(D, {
                             iconUrl: en ? d.$_T : k,
                             header: A.intl.string(A.t.c5kxPj),
@@ -281,7 +281,7 @@ function w(e) {
                     s.Z.div,
                     {
                         className: P.cardWrapper,
-                        style: X ? { opacity: J[ei.length] } : {},
+                        style: X ? { opacity: Q[ei.length] } : {},
                         children: (0, i.jsx)(D, {
                             iconUrl: en ? d.qMX : O,
                             header: A.intl.string(A.t['SoP7+v']),
@@ -298,7 +298,7 @@ function w(e) {
                     s.Z.div,
                     {
                         className: P.cardWrapper,
-                        style: X ? { opacity: J[ei.length] } : {},
+                        style: X ? { opacity: Q[ei.length] } : {},
                         children: (0, i.jsx)(D, {
                             iconUrl: en ? d.yIb : M,
                             header: A.intl.string(A.t.pGVNIy),
@@ -314,7 +314,7 @@ function w(e) {
                 s.Z.div,
                 {
                     className: P.cardWrapper,
-                    style: X ? { opacity: J[ei.length] } : {},
+                    style: X ? { opacity: Q[ei.length] } : {},
                     children: (0, i.jsx)(D, {
                         iconUrl: en ? d.vdZ : R,
                         header: A.intl.string(A.t.IhHDEB),
@@ -336,7 +336,7 @@ function w(e) {
                 className: P.inner,
                 children: [
                     (0, i.jsxs)(s.Z.div, {
-                        style: Q,
+                        style: J,
                         children: [
                             (0, i.jsx)(d.X6q, {
                                 className: P.titleName,

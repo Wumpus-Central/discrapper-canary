@@ -20,8 +20,8 @@ var s = n(120356),
     f = n(981631),
     T = n(388032),
     N = n(232186);
-let I = n(775322),
-    S = n(853453),
+let S = n(775322),
+    I = n(853453),
     b = (0, u.hQ)(),
     v = {
         page: f.ZY5.USER_SETTINGS,
@@ -95,7 +95,7 @@ function A(e) {
                         className: N.marginBottom8,
                         type: o.Dd5.PRIMARY,
                         imageData: {
-                            src: (0, a.ap)(n) ? I : S,
+                            src: (0, a.ap)(n) ? S : I,
                             width: 70,
                             height: 40
                         },
@@ -131,7 +131,7 @@ function O(e) {
         {
             hasEchoCancellation: x,
             hasNoiseSuppression: p,
-            hasAutomaticGainControl: I
+            hasAutomaticGainControl: S
         } = (0, l.cj)(
             [h.Z],
             () => ({
@@ -141,10 +141,10 @@ function O(e) {
             }),
             [s]
         ),
-        S = n === f.pM4.VOICE_ACTIVITY && u,
+        I = n === f.pM4.VOICE_ACTIVITY && u,
         b = (0, i.jsxs)(E.Z, {
             children: [
-                (x || p || I) &&
+                (x || p || S) &&
                     (0, i.jsx)(o.R94, {
                         className: t ? void 0 : N.marginBottom20,
                         type: o.R94.Types.DESCRIPTION,
@@ -175,7 +175,7 @@ function O(e) {
                         value: _,
                         onChange: (e) => c.Z.setMode(n, { vadUseKrisp: e }),
                         note: T.intl.string(T.t.LoOB1N),
-                        disabled: !S,
+                        disabled: !I,
                         hideBorder: t,
                         children: T.intl.string(T.t.BbESsr)
                     })
@@ -190,7 +190,7 @@ function O(e) {
                                 section: f.jXE.SETTINGS_VOICE_AND_VIDEO
                             }),
                         note: T.intl.string(T.t['6EjbvL']),
-                        disabled: I,
+                        disabled: S,
                         hideBorder: t,
                         children: T.intl.string(T.t.cUMdHx)
                     })

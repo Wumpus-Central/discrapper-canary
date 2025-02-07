@@ -22,7 +22,7 @@ function _(e) {
         C = null === (t = e.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
         f = (0, l.e7)([o.Z], () => o.Z.getGuild(C), [C]),
         [T, N] = i.useState(!1),
-        I =
+        S =
             null == s
                 ? void 0
                 : (function (e) {
@@ -55,6 +55,6 @@ function _(e) {
         listing: s,
         storeListing: _,
         groupListing: x,
-        subscriptionInfo: I
+        subscriptionInfo: S
     };
 }

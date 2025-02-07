@@ -285,7 +285,7 @@ function X(e) {
         }, [t.guild_id, t.id, t.type]),
         v)
     )
-        return (0, i.jsx)(Q, { channel: t });
+        return (0, i.jsx)(J, { channel: t });
     let E = o().omit(f.containerProps, ['ref']),
         I = D.iJ(n);
     return (0, i.jsx)(C.Gt, {
@@ -348,7 +348,7 @@ function X(e) {
         })
     });
 }
-function Q(e) {
+function J(e) {
     let { channel: t } = e;
     return (0, i.jsxs)('div', {
         className: r()(V.membersWrap, V.hiddenMembers, V.members, G.emptyState),

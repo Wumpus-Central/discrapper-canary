@@ -9,11 +9,11 @@ function o(e) {
             f = ((l >> 6) & 63) / 31.5 - 1,
             g = ((l >> 12) & 63) / 31.5 - 1,
             p = l >> 23,
-            b = s >> 15,
-            h = d(3, b ? (p ? 5 : 7) : 7 & s),
-            v = d(3, b ? 7 & s : p ? 5 : 7),
-            m = p ? (15 & e[5]) / 15 : 1,
-            w = (e[5] >> 4) / 15,
+            h = s >> 15,
+            b = d(3, h ? (p ? 5 : 7) : 7 & s),
+            v = d(3, h ? 7 & s : p ? 5 : 7),
+            w = p ? (15 & e[5]) / 15 : 1,
+            m = (e[5] >> 4) / 15,
             I = p ? 6 : 5,
             x = 0,
             T = (t, n, o) => {
@@ -21,40 +21,40 @@ function o(e) {
                 for (let c = 0; c < n; c++) for (let i = c ? 0 : 1; i * n < t * (n - c); i++) r.push((((e[I + (x >> 1)] >> ((1 & x++) << 2)) & 15) / 7.5 - 1) * o);
                 return r;
             },
-            C = T(h, v, ((l >> 18) & 31) / 31),
-            S = T(3, 3, (((s >> 3) & 63) / 63) * 1.25),
+            S = T(b, v, ((l >> 18) & 31) / 31),
+            C = T(3, 3, (((s >> 3) & 63) / 63) * 1.25),
             W = T(3, 3, (((s >> 9) & 63) / 63) * 1.25),
-            y = p && T(5, 5, w),
+            y = p && T(5, 5, m),
             O = ((n = (t = e)[3]), (o = 128 & t[2]), ((r = 128 & t[4]) ? (o ? 5 : 7) : 7 & n) / (r ? 7 & n : o ? 5 : 7)),
             P = a(O > 1 ? 32 : 32 * O),
             k = a(O > 1 ? 32 / O : 32),
-            B = new Uint8Array(P * k * 4),
-            H = [],
-            D = [];
+            H = new Uint8Array(P * k * 4),
+            B = [],
+            N = [];
         for (let e = 0, t = 0; e < k; e++)
             for (let n = 0; n < P; n++, t += 4) {
                 let o = u,
                     r = f,
                     a = g,
-                    l = m;
-                for (let e = 0, t = d(h, p ? 5 : 3); e < t; e++) H[e] = _((c / P) * (n + 0.5) * e);
-                for (let t = 0, n = d(v, p ? 5 : 3); t < n; t++) D[t] = _((c / k) * (e + 0.5) * t);
-                for (let e = 0, t = 0; e < v; e++) for (let n = e ? 0 : 1, r = 2 * D[e]; n * v < h * (v - e); n++, t++) o += C[t] * H[n] * r;
+                    l = w;
+                for (let e = 0, t = d(b, p ? 5 : 3); e < t; e++) B[e] = _((c / P) * (n + 0.5) * e);
+                for (let t = 0, n = d(v, p ? 5 : 3); t < n; t++) N[t] = _((c / k) * (e + 0.5) * t);
+                for (let e = 0, t = 0; e < v; e++) for (let n = e ? 0 : 1, r = 2 * N[e]; n * v < b * (v - e); n++, t++) o += S[t] * B[n] * r;
                 for (let e = 0, t = 0; e < 3; e++)
-                    for (let n = e ? 0 : 1, o = 2 * D[e]; n < 3 - e; n++, t++) {
-                        let e = H[n] * o;
-                        (r += S[t] * e), (a += W[t] * e);
+                    for (let n = e ? 0 : 1, o = 2 * N[e]; n < 3 - e; n++, t++) {
+                        let e = B[n] * o;
+                        (r += C[t] * e), (a += W[t] * e);
                     }
-                if (p) for (let e = 0, t = 0; e < 5; e++) for (let n = e ? 0 : 1, o = 2 * D[e]; n < 5 - e; n++, t++) l += y[t] * H[n] * o;
+                if (p) for (let e = 0, t = 0; e < 5; e++) for (let n = e ? 0 : 1, o = 2 * N[e]; n < 5 - e; n++, t++) l += y[t] * B[n] * o;
                 let s = o - (2 / 3) * r,
-                    b = (3 * o - s + a) / 2,
-                    w = b - a;
-                (B[t] = d(0, 255 * i(1, b))), (B[t + 1] = d(0, 255 * i(1, w))), (B[t + 2] = d(0, 255 * i(1, s))), (B[t + 3] = d(0, 255 * i(1, l)));
+                    h = (3 * o - s + a) / 2,
+                    m = h - a;
+                (H[t] = d(0, 255 * i(1, h))), (H[t + 1] = d(0, 255 * i(1, m))), (H[t + 2] = d(0, 255 * i(1, s))), (H[t + 3] = d(0, 255 * i(1, l)));
             }
         return {
             w: P,
             h: k,
-            rgba: B
+            rgba: H
         };
     })(e);
     return (function (e, t, n) {

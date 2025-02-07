@@ -26,10 +26,10 @@ function T(e) {
 function N() {
     return (0, i.jsx)(T, { height: 16 }, 'footer');
 }
-function I() {
+function S() {
     return (0, i.jsx)(T, { height: 8 }, 'header');
 }
-function S() {
+function I() {
     return (0, i.jsx)('div', {
         className: p.voiceListSearchEmpty,
         children: (0, i.jsx)(l.Text, {
@@ -153,8 +153,8 @@ function v(e) {
                 row: P
             });
     }, [P]);
-    let Z = null != R ? R.length : O.length,
-        y = (() => {
+    let y = null != R ? R.length : O.length,
+        Z = (() => {
             if (null != R) {
                 var e;
                 return null === (e = R[P]) || void 0 === e ? void 0 : e.id;
@@ -193,29 +193,29 @@ function v(e) {
                                         break;
                                     }
                                     case 'arrowup':
-                                        0 === P ? D(Z - 1) : D(P - 1);
+                                        0 === P ? D(y - 1) : D(P - 1);
                                         break;
                                     case 'arrowdown':
-                                        P >= Z - 1 ? D(0) : D(P + 1);
+                                        P >= y - 1 ? D(0) : D(P + 1);
                                 }
                         },
                         placeholder: x.intl.string(x.t.tG0r7u),
                         role: 'combobox',
                         'aria-controls': c,
-                        'aria-expanded': Z > 0,
-                        'aria-activedescendant': Z > 0 && null != y ? y : void 0,
+                        'aria-expanded': y > 0,
+                        'aria-activedescendant': y > 0 && null != Z ? Z : void 0,
                         'aria-autocomplete': 'list',
                         spellCheck: !1
                     })
                 }),
-                0 === Z && '' !== j && (0, i.jsx)(S, {}),
-                (Z > 0 || '' === j) &&
+                0 === y && '' !== j && (0, i.jsx)(I, {}),
+                (y > 0 || '' === j) &&
                     (0, i.jsx)(l.Tvr, {
                         innerId: c,
                         innerRole: 'listbox',
                         'aria-label': x.intl.string(x.t['+N3fW1']),
                         ref: E,
-                        sections: [Z],
+                        sections: [y],
                         renderRow: function (e) {
                             let { row: t } = e,
                                 s = (() => {
@@ -249,7 +249,7 @@ function v(e) {
                                 s.id
                             );
                         },
-                        renderListHeader: I,
+                        renderListHeader: S,
                         renderFooter: N,
                         sectionHeight: 0,
                         rowHeight: 34,

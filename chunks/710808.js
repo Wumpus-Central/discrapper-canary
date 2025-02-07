@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(981631),
     T = n(65154),
     N = n(388032),
-    I = n(232186);
-async function S() {
+    S = n(232186);
+async function I() {
     let e = await d.Z.fileManager.getLogPath();
     d.Z.fileManager.showItemInFolder(e);
 }
@@ -128,7 +128,7 @@ function v(e) {
                     }),
                     (0, i.jsx)(l.xJW, {
                         children: (0, i.jsx)(u.Z, {
-                            className: I.marginBottom20,
+                            className: S.marginBottom20,
                             children: (0, i.jsx)(u.Z.Child, {
                                 grow: 0,
                                 shrink: 0,
@@ -140,7 +140,7 @@ function v(e) {
                             })
                         })
                     }),
-                    t ? null : (0, i.jsx)(l.$i$, { className: I.marginBottom20 })
+                    t ? null : (0, i.jsx)(l.$i$, { className: S.marginBottom20 })
                 ]
             }),
             (0, i.jsx)(h.F, {
@@ -172,7 +172,7 @@ function v(e) {
                                         shrink: 0,
                                         children: (0, i.jsx)(l.zxk, {
                                             size: l.zxk.Sizes.SMALL,
-                                            onClick: S,
+                                            onClick: I,
                                             children: N.intl.string(N.t.nuPtYm)
                                         })
                                     })
@@ -187,7 +187,7 @@ function v(e) {
     return t
         ? P
         : (0, i.jsx)(l.hjN, {
-              className: I.marginBottom40,
+              className: S.marginBottom40,
               title: N.intl.string(N.t.OFpL3d),
               children: P
           });

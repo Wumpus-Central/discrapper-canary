@@ -23,8 +23,8 @@ var l = n(200651),
     I = n(333031),
     _ = n(610394),
     R = n(380736),
-    j = n(987650),
-    y = n(981631),
+    y = n(987650),
+    j = n(981631),
     N = n(388032),
     w = n(806128);
 function A(e, t, n) {
@@ -65,7 +65,7 @@ function O(e) {
     (0, v.ZP)(
         () => (
             (p.current = setTimeout(I, k)),
-            h.Z.track(y.rMx.NOTIFICATION_VIEWED, { notif_type: j.n0.OverlayCrashed }),
+            h.Z.track(j.rMx.NOTIFICATION_VIEWED, { notif_type: y.n0.OverlayCrashed }),
             () => {
                 null != p.current && clearTimeout(p.current);
             }
@@ -80,9 +80,9 @@ function O(e) {
                     (C(!0),
                     null == a || a(),
                     h.Z.track(
-                        y.rMx.NOTIFICATION_CLICKED,
+                        j.rMx.NOTIFICATION_CLICKED,
                         {
-                            notif_type: j.n0.OverlayCrashed,
+                            notif_type: y.n0.OverlayCrashed,
                             action_type: 'reload'
                         },
                         !0
@@ -155,7 +155,7 @@ function O(e) {
         locked: !0,
         notificationId: 'overlay-crashed',
         index: 0,
-        status: y._1z.ACTIVE,
+        status: j._1z.ACTIVE,
         containerRef: null,
         contentOpacity: f,
         className: w.errorNotificationContainer,
@@ -172,7 +172,7 @@ class P extends i.PureComponent {
         let l = (0, b.QF)();
         h.Z.setOverlayCrashed(l, e), h.Z.setInputLocked(!0, l);
         let i = C.Z.captureCrash(e, { extra: t });
-        h.Z.track(y.rMx.APP_CRASHED, {
+        h.Z.track(j.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,

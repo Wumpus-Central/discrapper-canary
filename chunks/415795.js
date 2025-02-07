@@ -29,7 +29,7 @@ var i,
     f = n(51144),
     T = n(388032),
     N = n(431872);
-function I(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function I(e, t, n) {
         e
     );
 }
-class S extends r.PureComponent {
+class I extends r.PureComponent {
     componentDidMount() {
         let { focused: e, onFocus: t } = this.props,
             { node: n } = this;
@@ -80,19 +80,19 @@ class S extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'node', void 0),
-            I(this, 'handleClick', (e) => {
+            S(this, 'node', void 0),
+            S(this, 'handleClick', (e) => {
                 e.preventDefault();
                 let { onClick: t } = this.props,
                     { node: n } = this;
                 null != n && t(e, n);
             }),
-            I(this, 'handleMouseEnter', (e) => {
+            S(this, 'handleMouseEnter', (e) => {
                 let { onMouseEnter: t } = this.props,
                     { node: n } = this;
                 null != n && t(e, n);
             }),
-            I(this, 'setRef', (e) => {
+            S(this, 'setRef', (e) => {
                 this.node = e;
             });
     }
@@ -140,7 +140,7 @@ class b extends r.Component {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: i, focused: r, score: l, id: a } = this.props;
-        return (0, s.jsx)(S, {
+        return (0, s.jsx)(I, {
             id: a,
             'aria-label': this.getAccessibilityLabel(),
             onMouseEnter: e,
@@ -244,7 +244,7 @@ class v extends (i = r.Component) {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: i, focused: r, score: l, id: a } = this.props;
-        return (0, s.jsx)(S, {
+        return (0, s.jsx)(I, {
             id: a,
             'aria-label': this.getAccessibilityLabel(),
             onMouseEnter: e,
@@ -257,7 +257,7 @@ class v extends (i = r.Component) {
         });
     }
 }
-I(v, 'defaultProps', { unread: !1 });
+S(v, 'defaultProps', { unread: !1 });
 class j extends r.Component {
     renderIcon() {
         let { channel: e } = this.props;
@@ -318,7 +318,7 @@ class j extends r.Component {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: i, focused: r, score: l, id: a } = this.props;
-        return (0, s.jsx)(S, {
+        return (0, s.jsx)(I, {
             id: a,
             'aria-label': this.getAccessibilityLabel(),
             onMouseEnter: e,
@@ -407,7 +407,7 @@ class A extends r.Component {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: i, focused: r, score: l, id: a } = this.props;
-        return (0, s.jsx)(S, {
+        return (0, s.jsx)(I, {
             id: a,
             'aria-label': this.getAccessibilityLabel(),
             onMouseEnter: e,
@@ -445,7 +445,7 @@ class O extends r.Component {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, focused: i, id: r } = this.props;
-        return (0, s.jsx)(S, {
+        return (0, s.jsx)(I, {
             id: r,
             onMouseEnter: e,
             onClick: t,
@@ -510,7 +510,7 @@ class P extends r.Component {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: i, focused: r, score: l, id: a } = this.props;
-        return (0, s.jsx)(S, {
+        return (0, s.jsx)(I, {
             id: a,
             onMouseEnter: e,
             onClick: t,
@@ -579,7 +579,7 @@ class D extends r.Component {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: i, focused: r, score: l, id: a } = this.props;
-        return (0, s.jsx)(S, {
+        return (0, s.jsx)(I, {
             id: a,
             onMouseEnter: e,
             onClick: t,

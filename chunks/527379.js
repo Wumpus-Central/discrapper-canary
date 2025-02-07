@@ -1,7 +1,7 @@
 n.d(t, {
-    Dr: () => C,
+    Dr: () => p,
     YO: () => g,
-    _X: () => p,
+    _X: () => C,
     _o: () => f,
     nb: () => v,
     zO: () => h
@@ -35,14 +35,14 @@ function f(e, t) {
         pagination: l
     });
 }
-async function C(e, t) {
+async function p(e, t) {
     await i.Z.dispatch({
         type: 'MEMBER_SAFETY_SEARCH_STATE_UPDATE',
         guildId: e,
         searchState: t
     });
 }
-function p(e) {
+function C(e) {
     let t = (0, o.lv)(e),
         n = a.Z.getGuild(e);
     return !!t && null != n && (((0, l.K2)(e, 'Guild Sidebar') && n.hasFeature(u.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) || n.hasFeature(u.oNc.COMMUNITY) || n.hasFeature(u.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? (0, s.uL)(u.Z5c.CHANNEL(e, c.oC.MEMBER_SAFETY)) : r.Z.open(n.id, u.pNK.MEMBERS), !0);

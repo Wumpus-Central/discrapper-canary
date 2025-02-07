@@ -40,8 +40,8 @@ function L(e) {
         { firstMessage: V } = (0, j.cl)(G),
         z = (0, o.e7)([b.Z], () => b.Z.hasJoined(t)),
         { disableReactionUpdates: W, disableReactionCreates: Y, isLurking: q, isGuest: K, isPendingMember: X } = (0, C.Z)(G),
-        Q = (0, o.e7)([N.Z], () => N.Z.getChannel(L)),
-        J = (0, S.Bs)(Q),
+        J = (0, o.e7)([N.Z], () => N.Z.getChannel(L)),
+        Q = (0, S.Bs)(J),
         $ = (0, o.e7)([f.Z], () => f.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         ee = l.useCallback(
             (e) => {
@@ -82,7 +82,7 @@ function L(e) {
                 postId: G.id,
                 location: { section: A.jXE.CHANNEL_HEADER }
             }),
-                (0, s.J)((0, T.EO)(G, Q)),
+                (0, s.J)((0, T.EO)(G, J)),
                 H(!0);
         },
         er = () => {
@@ -105,7 +105,7 @@ function L(e) {
                         children: [
                             !ei &&
                                 !Y &&
-                                null != J &&
+                                null != Q &&
                                 (0, i.jsx)('div', {
                                     className: M.reactions,
                                     children: (0, i.jsx)(I.le, {
@@ -115,7 +115,7 @@ function L(e) {
                                         isLurking: q,
                                         isGuest: K,
                                         isPendingMember: X,
-                                        emoji: J,
+                                        emoji: Q,
                                         type: _.O.NORMAL,
                                         hideCount: !0,
                                         count: 0,

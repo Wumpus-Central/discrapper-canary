@@ -1,6 +1,6 @@
 n.d(t, {
-    AP: () => Q,
-    Ru: () => J,
+    AP: () => J,
+    Ru: () => Q,
     ZP: () => ee
 });
 var i = n(200651),
@@ -51,10 +51,10 @@ var i = n(200651),
     q = n(981631),
     K = n(388032),
     X = n(46124);
-function Q(e, t, n) {
+function J(e, t, n) {
     return e.getElementById((0, j.p)(t, n));
 }
-function J(e) {
+function Q(e) {
     var t;
     let {
         id: n,
@@ -117,8 +117,8 @@ function $(e) {
         { onFocus: N, ...T } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''),
         { isFocused: j, handleFocus: P, handleBlur: w } = (0, L.bb)(N),
         { popouts: B, selected: F, setPopout: V } = (0, O.Z)(s.id, Y.d$),
-        Q = I.RS.useSetting(),
-        J = I.NA.useSetting(),
+        J = I.RS.useSetting(),
+        Q = I.NA.useSetting(),
         $ = (0, d.e7)([v.Z], () => v.Z.getMessageByReference(Z)),
         ee = (0, f.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()),
         {
@@ -135,7 +135,7 @@ function $(e) {
         ea = F || (el && j),
         er = ea || ei,
         { content: es, hasSpoilerEmbeds: eo } = (0, D.Z)(s, {
-            hideSimpleEmbedContent: Q && J,
+            hideSimpleEmbedContent: J && Q,
             isInteracting: er,
             formatInline: !1,
             allowList: ee,
@@ -227,8 +227,8 @@ let ee = l.memo(function (e) {
         id: s,
         message: E,
         message: { id: j },
-        channel: Q,
-        channel: { id: J },
+        channel: J,
+        channel: { id: Q },
         compact: $ = !1,
         className: ee,
         flashKey: et,
@@ -243,8 +243,8 @@ let ee = l.memo(function (e) {
         ec = I.NA.useSetting(),
         ed = (0, d.e7)([v.Z], () => v.Z.getMessageByReference(el)),
         { popouts: eu, selected: eh, setPopout: ep } = (0, O.Z)(E.id, Y.d$),
-        em = (0, L.qo)(E, Q, ep),
-        ef = (0, L.Go)(E, Q),
+        em = (0, L.qo)(E, J, ep),
+        ef = (0, L.Go)(E, J),
         {
             handleMouseEnter: eg,
             handleMouseLeave: e_,
@@ -269,12 +269,12 @@ let ee = l.memo(function (e) {
             },
             [eb, e_]
         ),
-        eT = (0, d.e7)([N.Z], () => N.Z.isEditing(J, j), [J, j]),
+        eT = (0, d.e7)([N.Z], () => N.Z.isEditing(Q, j), [Q, j]),
         eS = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
         ej = eh || eT || (eS && ev),
         ey = ej || ex,
         eA = (0, d.e7)([b.Z], () => E.hasFlag(q.iLy.HAS_THREAD) && b.Z.getChannel(T.default.castMessageIdAsChannelId(E.id))),
-        eP = E.isFirstMessageInForumPost(Q),
+        eP = E.isFirstMessageInForumPost(J),
         eR = (0, f.A)((null !== (n = E.editedTimestamp) && void 0 !== n ? n : E.timestamp).valueOf()),
         eM = (0, d.e7)([Z.Z], () => Z.Z.isDeveloper),
         { content: eL, hasSpoilerEmbeds: ek } = (0, D.Z)(E, {
@@ -287,15 +287,15 @@ let ee = l.memo(function (e) {
             allowDevLinks: eM,
             previewLinkTarget: !0
         }),
-        eO = (0, k.Z)(j, J, eS),
+        eO = (0, k.Z)(j, Q, eS),
         eD = (0, A.ZP)(E),
-        ew = (0, d.e7)([x.Z], () => x.Z.getPendingReply(J)),
+        ew = (0, d.e7)([x.Z], () => x.Z.getPendingReply(Q)),
         eU = (function (e) {
             let t = l.useRef(e);
             return l.useEffect(() => void (t.current = null != e ? e : t.current)), null != e ? e : t.current;
         })(et),
         eB = (0, m.p9)({
-            guildId: Q.guild_id,
+            guildId: J.guild_id,
             roleId: eD.iconRoleId
         }),
         eF = (0, M.iG)(E, en),
@@ -303,7 +303,7 @@ let ee = l.memo(function (e) {
         eG = (0, d.e7)([p.Z], () => p.Z.getMessage(j), [j]),
         eV = (0, w.Z)({
             message: E,
-            channel: Q
+            channel: J
         }),
         ez = null != eG,
         eW = l.useMemo(() => Object.values(eu).some((e) => e), [eu]);

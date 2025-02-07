@@ -9,16 +9,16 @@ var t = l(200651),
     c = l(481060),
     d = l(410575),
     m = l(2052),
-    g = l(924557),
-    x = l(600164),
+    x = l(924557),
+    g = l(600164),
     h = l(436774),
     Z = l(140465),
     v = l(774026),
     S = l(592125),
     C = l(944486),
     j = l(594174),
-    f = l(74538),
-    N = l(451467),
+    N = l(74538),
+    f = l(451467),
     p = l(122186),
     T = l(37113),
     I = l(981631),
@@ -58,8 +58,8 @@ function b() {
 function M(e) {
     let n,
         l,
-        { type: i, selected: s, needsPremium: r, needsDemo: o, analyticsLocation: u, onClick: d, onClose: m, setIsHovering: g } = e,
-        { value: x, label: h } = i;
+        { type: i, selected: s, needsPremium: r, needsDemo: o, analyticsLocation: u, onClick: d, onClose: m, setIsHovering: x } = e,
+        { value: g, label: h } = i;
     return (
         r
             ? ((n = (0, t.jsx)(c.DY3, {
@@ -69,8 +69,8 @@ function M(e) {
                   text: (0, t.jsx)(b, {}),
                   children: (0, t.jsx)('div', {
                       className: R.textContainer,
-                      onMouseEnter: () => g(!0),
-                      onMouseLeave: () => g(!1),
+                      onMouseEnter: () => x(!0),
+                      onMouseLeave: () => x(!1),
                       children: (0, t.jsx)(c.Text, {
                           variant: 'text-xs/bold',
                           className: a()(R.selectorNitroText, R.enhancedSelectorNitroText),
@@ -91,7 +91,7 @@ function M(e) {
                       children: h
                   })
               })),
-              (l = () => d(x))),
+              (l = () => d(g))),
         {
             content: n,
             className: a()(R.selectorButton, {
@@ -110,17 +110,17 @@ function D(e) {
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
         }),
         z = (0, u.e7)([C.Z, S.Z], () => S.Z.getChannel(C.Z.getVoiceChannelId())),
-        w = f.ZP.canStreamQuality(f.U2.MID, L),
-        { location: y } = (0, m.O)(),
-        U = (0, g.Zq)({ autoTrackExposure: !1 }),
+        w = N.ZP.canStreamQuality(N.U2.MID, L),
+        { location: U } = (0, m.O)(),
+        y = (0, x.Zq)({ autoTrackExposure: !1 }),
         G = (0, Z.B4)({ location: 'StreamSettings' }),
         O = j.default.getUser(null == z ? void 0 : z.hdStreamingBuyerId),
         W = null != z && null != z.hdStreamingUntil && new Date(z.hdStreamingUntil) > new Date() && null != O,
-        F = !w && !U,
+        F = !w && !y,
         [J, B] = i.useState(!1),
         V = _ ? T.z8 : T.WC,
         X = {
-            ...y,
+            ...U,
             section: I.jXE.STREAM_SETTINGS
         },
         Y = (0, t.jsx)(c.hE2, {
@@ -128,7 +128,7 @@ function D(e) {
                 M({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, N.Z)(l, e.value, a, L, D, z),
+                    needsPremium: !(0, f.Z)(l, e.value, a, L, D, z),
                     needsDemo: G && e.value !== T.LY.RESOLUTION_720,
                     analyticsLocation: X,
                     onClick: () => r(e.value),
@@ -142,7 +142,7 @@ function D(e) {
                 M({
                     type: e,
                     selected: e.value === a,
-                    needsPremium: !(0, N.Z)(l, s, e.value, L, D, z),
+                    needsPremium: !(0, f.Z)(l, s, e.value, L, D, z),
                     needsDemo: G && e.value === T.ws.FPS_60,
                     analyticsLocation: X,
                     onClick: () => h(e.value),
@@ -173,7 +173,7 @@ function D(e) {
             l === T.tI.PRESET_DOCUMENTS
                 ? (0, t.jsxs)(t.Fragment, {
                       children: [
-                          (0, t.jsx)(x.Z, {
+                          (0, t.jsx)(g.Z, {
                               children: (0, t.jsx)(c.xJW, {
                                   title: E.intl.string(E.t.rHyPXl),
                                   titleClassName: P.formItemTitleSlim,
@@ -203,7 +203,7 @@ function D(e) {
                   })
                 : (0, t.jsxs)(t.Fragment, {
                       children: [
-                          (0, t.jsxs)(x.Z, {
+                          (0, t.jsxs)(g.Z, {
                               children: [
                                   (0, t.jsx)(c.xJW, {
                                       title: E.intl.string(E.t.rHyPXl),

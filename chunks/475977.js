@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(388032),
     T = n(782376),
     N = n(786792),
-    I = n(161594);
-let S = (e) => {
+    S = n(161594);
+let I = (e) => {
         var t, n, s, r, a;
         let { displayOptions: o, marketingVariant: c } = e;
         return (0, i.jsxs)(i.Fragment, {
@@ -30,7 +30,7 @@ let S = (e) => {
                     'aria-hidden': !0,
                     role: 'presentation',
                     children: (0, i.jsx)('img', {
-                        src: null !== (s = null == o ? void 0 : o.artSrc) && void 0 !== s ? s : I,
+                        src: null !== (s = null == o ? void 0 : o.artSrc) && void 0 !== s ? s : S,
                         className: l()(T.art, { [T.tideArt]: null != c && c === x.C5.TIDE }),
                         alt: ''
                     })
@@ -59,7 +59,7 @@ let S = (e) => {
         let t;
         let { analyticsLocations: n } = (0, m.ZP)(u.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
             r = s.useRef(null),
-            I = (0, x.ZP)('CollectiblesUpsellBanner'),
+            S = (0, x.ZP)('CollectiblesUpsellBanner'),
             b = (0, c.e7)([_.Z], () => _.Z.getMarketingBySurface(a.K.EDIT_PROFILE_SETTINGS));
         return (
             (t =
@@ -71,7 +71,7 @@ let S = (e) => {
                           description: () => b.body,
                           revertTextColor: b.revertTextColor
                       }
-                    : p.GX[I]),
+                    : p.GX[S]),
             s.useEffect(() => {
                 h.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: C.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
@@ -81,12 +81,12 @@ let S = (e) => {
             }, [n, null == b ? void 0 : b.version]),
             (0, i.jsxs)('div', {
                 ref: r,
-                className: l()(T.container, { [T.robertContainer]: I === x.C5.ROBERT }),
+                className: l()(T.container, { [T.robertContainer]: S === x.C5.ROBERT }),
                 style: { backgroundImage: 'url('.concat(null !== (e = null == t ? void 0 : t.backgroundSrc) && void 0 !== e ? e : N, ')') },
                 children: [
-                    (0, i.jsx)(S, {
+                    (0, i.jsx)(I, {
                         displayOptions: t,
-                        marketingVariant: I
+                        marketingVariant: S
                     }),
                     (0, i.jsx)(d.zxk, {
                         onClick: () => {

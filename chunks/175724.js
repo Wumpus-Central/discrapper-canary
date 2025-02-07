@@ -19,17 +19,17 @@ var i = n(374470),
     f = n(306680),
     T = n(944486),
     N = n(914010),
-    I = n(574254),
-    S = n(451478),
+    S = n(574254),
+    I = n(451478),
     b = n(585483),
     v = n(981631);
 let j = {
     binds: ['esc', 'shift+pagedown'],
     comboKeysBindGlobal: !0,
     action(e) {
-        if (S.Z.isElementFullScreen()) return !1;
+        if (I.Z.isElementFullScreen()) return !1;
         if (b.S.hasSubscribers(v.CkL.CALL_DECLINE)) return b.S.dispatch(v.CkL.CALL_DECLINE), !1;
-        if (I.Z.close()) return !1;
+        if (S.Z.close()) return !1;
         if (b.S.hasSubscribers(v.CkL.MEDIA_MODAL_CLOSE)) return b.S.dispatch(v.CkL.MEDIA_MODAL_CLOSE), !1;
         if ((0, i.k)(e.target)) {
             let t = (0, a.J5)(e.target);

@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(593472),
     T = n(493773),
     N = n(887278),
-    I = n(835473),
-    S = n(442550),
+    S = n(835473),
+    I = n(442550),
     b = n(594190),
     v = n(320724),
     j = n(297700),
@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(243487),
     P = n(430561),
     D = n(131704),
-    Z = n(598077),
-    y = n(189786),
+    y = n(598077),
+    Z = n(189786),
     k = n(77498),
     L = n(283595),
     B = n(594174),
@@ -45,8 +45,8 @@ var i = n(200651),
     Y = n(987650),
     W = n(388032),
     K = n(601195);
-let X = q(null);
-function q(e) {
+let q = X(null);
+function X(e) {
     var t;
     let n = V.Z.getNotificationPositionMode(),
         i = n !== z._vf.DISABLED,
@@ -215,15 +215,15 @@ function en(e) {
         u = (0, h.e7)([b.ZP, k.Z, L.Z], () => (null == r ? null : (0, b.FZ)(r, [b.ZP, k.Z, L.Z])), [r], o()),
         [m, x] = s.useState(d),
         [p, E] = s.useState(c),
-        [S, v] = s.useState(!1);
+        [I, v] = s.useState(!1);
     s.useEffect(() => {
         x(d), E(c);
     }, [d, c]);
     let A = (0, N.$1)(),
         R = !(0, H.VS)(),
         { legacyEnabled: P, oopEnabled: D } = (0, h.cj)([O.Z], () => O.Z.getGlobalEnabledStatus()),
-        [Z] = (0, I.Z)([null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : void 0]),
-        y = (e, t, n) => {
+        [y] = (0, S.Z)([null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : void 0]),
+        Z = (e, t, n) => {
             et(n), null != r && (_.Z.toggleOverlay(r, e, t), x(t), E(e));
         },
         B = A && R,
@@ -235,8 +235,8 @@ function en(e) {
         F = (null == a ? void 0 : a.state) != null && ee.has(a.state) && !U,
         z = (null == a ? void 0 : a.overlayMethod) === C.gl.OutOfProcess || (null == a ? void 0 : a.overlayMethod) === C.gl.OutOfProcessLimitedInteraction,
         Y = (null == a ? void 0 : a.overlayMethod) === C.gl.Hook,
-        X = (null == a ? void 0 : a.state) === C.mM.OVERLAY_CRASHED || (null == a ? void 0 : a.state) === C.mM.OVERLAY_CRASHED_DISABLED,
-        q = !m && !p,
+        q = (null == a ? void 0 : a.state) === C.mM.OVERLAY_CRASHED || (null == a ? void 0 : a.state) === C.mM.OVERLAY_CRASHED_DISABLED,
+        X = !m && !p,
         [J, en] = (() => {
             switch (!0) {
                 case G && z:
@@ -293,13 +293,13 @@ function en(e) {
                             }
                         })()
                     ];
-                case X:
+                case q:
                     return [W.intl.string(W.t.OFC2a2), null];
                 case B:
                     return [W.intl.string(W.t.m7X4a2), null];
                 case M:
                     return [W.intl.string(W.t['9DUS5u']), null];
-                case q:
+                case X:
                     return [W.intl.string(W.t.nQ9EdH), null];
                 case w:
                 case V:
@@ -321,10 +321,10 @@ function en(e) {
         ? null
         : (0, i.jsxs)($, {
               onExpand: v,
-              className: S ? K.expandedContainer : void 0,
+              className: I ? K.expandedContainer : void 0,
               title: (0, i.jsxs)(i.Fragment, {
                   children: [
-                      null !== (n = null == Z ? void 0 : Z.name) && void 0 !== n ? n : '',
+                      null !== (n = null == y ? void 0 : y.name) && void 0 !== n ? n : '',
                       null != u && u.verified
                           ? (0, i.jsx)(g.ua7, {
                                 text: W.intl.string(W.t['4PJP5u']),
@@ -368,7 +368,7 @@ function en(e) {
                   children: (0, i.jsx)(g.rsf, {
                       checked: m || p,
                       disabled: B || M || w || V,
-                      onChange: (e, t) => y(e, e, t)
+                      onChange: (e, t) => Z(e, e, t)
                   })
               }),
               children: [
@@ -382,7 +382,7 @@ function en(e) {
                               (0, i.jsx)(g.rsf, {
                                   checked: m,
                                   disabled: R || !D,
-                                  onChange: (e, t) => y(p, e, t)
+                                  onChange: (e, t) => Z(p, e, t)
                               }),
                               (0, i.jsx)('div', { className: K.emptySpacer })
                           ]
@@ -398,7 +398,7 @@ function en(e) {
                               (0, i.jsx)(g.rsf, {
                                   checked: p,
                                   disabled: A || !P,
-                                  onChange: (e, t) => y(e, m, t)
+                                  onChange: (e, t) => Z(e, m, t)
                               }),
                               (0, i.jsx)('div', { className: K.emptySpacer })
                           ]
@@ -410,9 +410,9 @@ function en(e) {
 function ei(e) {
     var t, n;
     let { game: s } = e,
-        [r] = (0, I.Z)([null == s ? void 0 : s.id], !0),
+        [r] = (0, S.Z)([null == s ? void 0 : s.id], !0),
         l = null !== (t = null == r ? void 0 : r.getIconURL(32)) && void 0 !== t ? t : void 0;
-    return (0, i.jsx)(S.f, {
+    return (0, i.jsx)(I.f, {
         src: l,
         size: 32,
         showTooltip: !1,
@@ -649,7 +649,7 @@ function ec(e) {
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         s = '456' + Math.floor(1000000 * Math.random());
     return {
-        voiceState: new y.Z({
+        voiceState: new Z.Z({
             channelId: '123',
             userId: s,
             sessionId: '789',
@@ -661,7 +661,7 @@ function ec(e) {
             selfStream: !1,
             discoverable: i
         }),
-        user: new Z.Z({
+        user: new y.Z({
             id: s,
             username: e
         }),
@@ -705,8 +705,8 @@ function ed(e) {
         if (G.isPlatformEmbedded) return (0, v.Ky)(), v.P7;
     }),
         (function () {
-            let e = q(X);
-            m().isEqual(e, X) || (U.default.track(z.rMx.OVERLAY_SETTINGS_UPDATED, e), (X = e));
+            let e = X(q);
+            m().isEqual(e, q) || (U.default.track(z.rMx.OVERLAY_SETTINGS_UPDATED, e), (q = e));
         })();
     let [E] = s.useState(() =>
         null == _

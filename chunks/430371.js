@@ -33,8 +33,8 @@ function T(e) {
         [W, Y] = l.useState(!0),
         [q, K] = l.useState(!1),
         X = M.type === E.fO.ACTIVITY || M.type === E.fO.PRESENCE_EMBEDDED_ACTIVITY,
-        Q = (0, d.Z)(X ? M.applicationId : void 0),
-        J = !X && null != M.streamId,
+        J = (0, d.Z)(X ? M.applicationId : void 0),
+        Q = !X && null != M.streamId,
         $ = w <= 2 * N + 144,
         ee = L && !$,
         et = (0, c.Z)(ee),
@@ -44,9 +44,9 @@ function T(e) {
         ea = (null !== (t = (0, c.Z)(M.id)) && void 0 !== t ? t : M.id) !== M.id,
         er = 0;
     (X || ee) && (er += 72), X && !ee && (ei ? (er += 48) : (er += 8)), ee && (er += 0.5 * N + 8);
-    let es = l.useMemo(() => (X && Q ? D / (w - 2 * er) : J && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : Z), [J, V, X, D, w, er, Q]),
+    let es = l.useMemo(() => (X && J ? D / (w - 2 * er) : Q && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : Z), [Q, V, X, D, w, er, J]),
         eo = w - 2 * er,
-        ec = X && Q ? D : eo * es,
+        ec = X && J ? D : eo * es,
         ed = Math.floor(Math.min(D, ec) / es),
         eu = w > D / es + 72 + N + 8;
     (n = ee || X ? (ee ? -16 : -8) : 40 + Math.max(0, 72 - (w - ed) / 2)),
@@ -129,7 +129,7 @@ function T(e) {
         children: [
             (0, i.jsxs)('div', {
                 className: b.tileWrapper,
-                style: { opacity: J && W ? 0 : 1 },
+                style: { opacity: Q && W ? 0 : 1 },
                 children: [
                     (0, i.jsxs)(s.animated.div, {
                         className: b.videoFrame,

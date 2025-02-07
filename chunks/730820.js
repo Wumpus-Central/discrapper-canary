@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(325067),
     T = n(594174),
     N = n(572004),
-    I = n(287880),
-    S = n(714565),
+    S = n(287880),
+    I = n(714565),
     b = n(202858),
     v = n(726985),
     j = n(981631),
@@ -41,7 +41,7 @@ function D(e, t, n) {
         e
     );
 }
-function Z(e) {
+function y(e) {
     let {
             code: { code: t, consumed: n }
         } = e,
@@ -75,7 +75,7 @@ function Z(e) {
         })
     });
 }
-class y extends s.PureComponent {
+class Z extends s.PureComponent {
     maskPhoneNumber(e) {
         return null == e ? '' : ''.concat('*'.repeat(e.length - 4)).concat(e.slice(-4));
     }
@@ -113,7 +113,7 @@ class y extends s.PureComponent {
                 })
             });
         else {
-            let t = (0, S.c)(s);
+            let t = (0, I.c)(s);
             e = (0, i.jsxs)(g.Z, {
                 className: l ? '' : P.marginTop8,
                 children: [
@@ -173,7 +173,7 @@ class y extends s.PureComponent {
                     children: O.intl.string(O.t.qZZUy8)
                 })
             });
-            let s = (e) => e.map((e) => (0, i.jsx)(Z, { code: e }, e.code));
+            let s = (e) => e.map((e) => (0, i.jsx)(y, { code: e }, e.code));
             e = (0, i.jsxs)(o.hjN, {
                 title: O.intl.string(O.t.GfqHPj),
                 children: [
@@ -283,7 +283,7 @@ class y extends s.PureComponent {
     }
     render() {
         let { currentUser: e } = this.props;
-        return I.uZ
+        return S.uZ
             ? e.verified
                 ? e.mfaEnabled
                     ? this.renderEnabled()
@@ -414,7 +414,7 @@ function k(e) {
         togglingSMS: f.Z.togglingSMS,
         hasTOTPEnabled: C.default.hasTOTPEnabled()
     }));
-    return (0, i.jsx)(y, {
+    return (0, i.jsx)(Z, {
         currentUser: t,
         ...n,
         ...e

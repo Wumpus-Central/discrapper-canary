@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(55563),
     T = n(259580),
     N = n(572004),
-    I = n(669079),
-    S = n(296848),
+    S = n(669079),
+    I = n(296848),
     b = n(474936),
     v = n(388032),
     j = n(531822);
@@ -63,7 +63,7 @@ class O extends s.PureComponent {
             children: [
                 (0, i.jsx)(c.kO8, {
                     className: j.codeText,
-                    value: (0, I.Nz)(t.code),
+                    value: (0, S.Nz)(t.code),
                     text: this.copyButtonText,
                     mode: n,
                     supportsCopy: N.wS,
@@ -96,7 +96,7 @@ class O extends s.PureComponent {
             A(this, 'state', { copyMode: c.uA3.DEFAULT }),
             A(this, 'handleCopy', (e) => {
                 let { giftCode: t, sku: n } = this.props;
-                (0, I.dM)(t, n);
+                (0, S.dM)(t, n);
                 try {
                     (0, N.JG)(e), this.setState({ copyMode: c.uA3.SUCCESS });
                 } catch (e) {
@@ -272,7 +272,7 @@ let P = a.ZP.connectStores([f.Z, E.Z, p.Z, m.Z, C.Z, x.default], (e) => {
         isFetching: p.Z.getUserGiftCodesFetchingForSKUAndPlan(t, n),
         loadedAt: p.Z.getUserGiftCodesLoadedAtForSKUAndPlan(t, n),
         application: m.Z.getApplication(s.applicationId),
-        subscriptionPlan: null != n ? (0, S.oE)(n) : null,
+        subscriptionPlan: null != n ? (0, I.oE)(n) : null,
         giftCodes: r
     };
 })(R);

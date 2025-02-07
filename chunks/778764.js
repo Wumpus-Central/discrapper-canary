@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(47120), n(773603);
+n.d(t, { Z: () => I }), n(47120), n(773603);
 var i = n(200651),
     s = n(192379),
     r = n(849055),
@@ -22,7 +22,7 @@ function N(e) {
     let { transitionState: t, onClose: l, ticket: o, challenge: c } = e,
         m = (0, d.Dt)(),
         [p, N] = s.useState(''),
-        [I, S] = s.useState(!0),
+        [S, I] = s.useState(!0),
         [b, v] = s.useState(E.x.INIT),
         [j, A] = s.useState(''),
         [O, R] = s.useState(null),
@@ -158,7 +158,7 @@ function N(e) {
                                                     className: T.input,
                                                     value: p,
                                                     onChange: (e) => {
-                                                        N(e), S(0 === e.length);
+                                                        N(e), I(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -172,7 +172,7 @@ function N(e) {
                                     children: [
                                         (0, i.jsx)(a.zxk, {
                                             type: 'submit',
-                                            disabled: I,
+                                            disabled: S,
                                             children: f.intl.string(f.t['5dyZ1d'])
                                         }),
                                         (0, i.jsx)(a.zxk, {
@@ -193,7 +193,7 @@ function N(e) {
         ]
     });
 }
-function I(e) {
+function S(e) {
     let { onSelect: t, credential: s } = e;
     return (0, i.jsxs)(a.v2r, {
         navId: 'webauthn-credential-actions',
@@ -226,7 +226,7 @@ function I(e) {
         ]
     });
 }
-function S() {
+function I() {
     let { credentials: e, hasFetchedCredentials: t } = (0, l.cj)([p.Z], () => ({
         hasFetchedCredentials: p.Z.hasFetchedCredentials(),
         credentials: p.Z.getCredentials()
@@ -256,7 +256,7 @@ function S() {
                                 className: T.credentialItem,
                                 onContextMenu: (t) => {
                                     (0, o.vq)(t, (t) =>
-                                        (0, i.jsx)(I, {
+                                        (0, i.jsx)(S, {
                                             ...t,
                                             credential: e
                                         })
@@ -268,7 +268,7 @@ function S() {
                                     size: a.zxk.Sizes.ICON,
                                     onClick: (t) => {
                                         (0, o.vq)(t, (t) =>
-                                            (0, i.jsx)(I, {
+                                            (0, i.jsx)(S, {
                                                 ...t,
                                                 credential: e
                                             })

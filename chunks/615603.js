@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(78839),
     T = n(267642),
     N = n(63063),
-    I = n(74538),
-    S = n(283029),
+    S = n(74538),
+    I = n(283029),
     b = n(357956),
     v = n(275909),
     j = n(981631),
@@ -109,7 +109,7 @@ function D(e) {
         t.id
     );
 }
-function Z(e) {
+function y(e) {
     (0, c.ZDy)(
         async () => (t) =>
             (0, i.jsx)(_.default, {
@@ -118,7 +118,7 @@ function Z(e) {
             })
     );
 }
-function y(e) {
+function Z(e) {
     (0, c.ZDy)(
         async () => (t) =>
             (0, i.jsx)(x.default, {
@@ -167,14 +167,14 @@ let k = function (e) {
         Y = null != x ? (0, h.G)(x, B) : 0,
         W = Math.max(0, Y - U.length),
         K = F > Y,
-        X = Y === r.length,
-        q = X ? W : 1,
+        q = Y === r.length,
+        X = q ? W : 1,
         J = s.useMemo(() => {
             let e = [];
-            for (let t = 0; t < q; t++)
+            for (let t = 0; t < X; t++)
                 e.push(
                     (0, i.jsx)(
-                        S.Z,
+                        I.Z,
                         {
                             className: P.headerBoostGem,
                             useReducedMotion: k
@@ -183,13 +183,13 @@ let k = function (e) {
                     )
                 );
             return e;
-        }, [q, k]),
+        }, [X, k]),
         Q = null != B,
         $ = s.useMemo(() => G.find((e) => e.isAvailable()), [G]);
     if (0 === G.length) return null;
     let ee = G.length;
-    if (((t = X ? (1 === ee && Q ? R.intl.string(R.t['65r43N']) : R.intl.formatToPlainString(z ? R.t['3DW6DQ'] : R.t['/u15QU'], { numUnappliedGuildBoostSlots: ee })) : R.intl.formatToPlainString(z ? R.t['3DW6DQ'] : R.t.BPadnJ, { numUnappliedGuildBoostSlots: ee })), I.ZP.isPremium(L))) {
-        if (X && 1 === ee && Q) n = B.skuId === O.Ft.FREE_GUILD_BOOST_1_MONTH ? R.intl.string(R.t.dm8r0t) : R.intl.string(R.t.VGJ9IC);
+    if (((t = q ? (1 === ee && Q ? R.intl.string(R.t['65r43N']) : R.intl.formatToPlainString(z ? R.t['3DW6DQ'] : R.t['/u15QU'], { numUnappliedGuildBoostSlots: ee })) : R.intl.formatToPlainString(z ? R.t['3DW6DQ'] : R.t.BPadnJ, { numUnappliedGuildBoostSlots: ee })), S.ZP.isPremium(L))) {
+        if (q && 1 === ee && Q) n = B.skuId === O.Ft.FREE_GUILD_BOOST_1_MONTH ? R.intl.string(R.t.dm8r0t) : R.intl.string(R.t.VGJ9IC);
         else {
             let e = (e, t) =>
                 (0, i.jsx)(
@@ -313,7 +313,7 @@ let k = function (e) {
                             })
                         ]
                     }),
-                    (!X || H) &&
+                    (!q || H) &&
                         (0, i.jsx)('ul', {
                             className: P.unappliedBoostSlots,
                             children: G.map((e) =>
@@ -322,8 +322,8 @@ let k = function (e) {
                                     {
                                         guildBoostSlot: e,
                                         isCancellable: K,
-                                        onCancel: Z,
-                                        onUncancel: y,
+                                        onCancel: y,
+                                        onUncancel: Z,
                                         premiumSubscription: x,
                                         useReducedMotion: k,
                                         fractionalPremiumState: _

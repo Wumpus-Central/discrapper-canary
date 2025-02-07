@@ -47,8 +47,8 @@ var i = n(200651),
     q = n(793319),
     K = n(3861),
     X = n(493754),
-    Q = n(937995),
-    J = n(618158),
+    J = n(937995),
+    Q = n(618158),
     $ = n(880831),
     ee = n(73563),
     et = n(751843),
@@ -289,7 +289,7 @@ class eV extends l.PureComponent {
                             ref: (e) => {
                                 (this._callContainerRef.current = e), (this.props.callContainerRef.current = e);
                             },
-                            children: (0, i.jsx)(Q.ZP, {
+                            children: (0, i.jsx)(J.ZP, {
                                 timeout: 2000,
                                 children: (e) => this.renderContent(e)
                             })
@@ -571,7 +571,7 @@ class eV extends l.PureComponent {
                             : null,
                         ((null == s ? void 0 : s.type) !== eD.fO.STREAM && (null == s ? void 0 : s.type) !== eD.fO.ACTIVITY) || o
                             ? null
-                            : (0, i.jsx)(J.Z, {
+                            : (0, i.jsx)(Q.Z, {
                                   children: (0, i.jsx)(eR.Z, {
                                       className: r()(eB.leftTrayIcon, eB.viewersButton),
                                       participant: s,
@@ -663,7 +663,7 @@ class eV extends l.PureComponent {
                 let { renderExternalHeader: e, channel: t, guild: n, appContext: l, chatOpen: a, inCall: r } = this.props,
                     { useExternalHeader: s, canSelectRegion: o, renderHeader: c } = this.viewProperties;
                 return c
-                    ? (0, i.jsxs)(J.Z, {
+                    ? (0, i.jsxs)(Q.Z, {
                           children: [
                               (0, i.jsx)('div', {
                                   className: eB.headerWrapper,
@@ -739,11 +739,11 @@ let ez = function (e) {
         W = (0, d.e7)([eu.Z], () => eu.Z.getCall(n.id), [n.id]),
         q = (0, d.e7)([em.ZP], () => em.ZP.getMentionCount(n.id), [n.id]),
         K = (0, d.e7)([ec.default], () => ec.default.getId()),
-        { popoutWindow: X, popoutWindowAlwaysOnTop: Q } = (0, d.cj)([G.Z], () => ({
+        { popoutWindow: X, popoutWindowAlwaysOnTop: J } = (0, d.cj)([G.Z], () => ({
             popoutWindow: G.Z.getWindow(ew.KJ3.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: G.Z.getIsAlwaysOnTop(ew.KJ3.CHANNEL_CALL_POPOUT)
         })),
-        J = (0, d.e7)([ep.Z], () => ep.Z.can(ew.Plq.CONNECT, n)),
+        Q = (0, d.e7)([ep.Z], () => ep.Z.can(ew.Plq.CONNECT, n)),
         $ = (0, d.e7)([ed.Z], () => ed.Z.getToastsEnabled(n.id)),
         ee = (0, d.e7)([D.Z], () => D.Z.getAwaitingRemoteSessionInfo()),
         et = (0, d.e7)([Y.ZP], () => Y.ZP.callHeaderHeight),
@@ -788,7 +788,7 @@ let ez = function (e) {
                         (0, i.jsx)(eV, {
                             channel: n,
                             guild: z,
-                            hasConnectPermission: J,
+                            hasConnectPermission: Q,
                             participantsOpen: L,
                             participantsListOpen: k && eC,
                             enableSimplifiedCallSettings: ex,
@@ -796,7 +796,7 @@ let ez = function (e) {
                             appContext: g,
                             call: W,
                             popoutWindow: X,
-                            popoutWindowAlwaysOnTop: Q,
+                            popoutWindowAlwaysOnTop: J,
                             mentionCount: q,
                             selectedStream: V,
                             mode: A,

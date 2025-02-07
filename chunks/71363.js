@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(75077),
     T = n(981631),
     N = n(388032),
-    I = n(368549),
-    S = n(865215);
+    S = n(368549),
+    I = n(865215);
 let b = (e) => {
     let t,
         n,
@@ -32,25 +32,25 @@ let b = (e) => {
         }, {}),
         { analyticsLocations: R } = (0, m.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [P, D] = s.useState(!1),
-        Z = (0, g.ZP)('perks-discoverability'),
-        y = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
+        y = (0, g.ZP)('perks-discoverability'),
+        Z = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         k = (0, f.mN)(),
         { fractionalState: L } = (0, h.Z)();
     return (
         k ? ((t = N.intl.string(N.t['+vt7w8'])), (n = N.intl.string(N.t.LgHbnJ))) : ((t = N.intl.string(N.t.LgHbnJ)), (n = N.intl.string(N.t['+vt7w8']))),
         (0, i.jsx)(c.yWw, {
-            className: l()(I.allPerksScroller, {
-                [I.open]: r,
-                [I.openCloseReduceMotion]: y
+            className: l()(S.allPerksScroller, {
+                [S.open]: r,
+                [S.openCloseReduceMotion]: Z
             }),
             ref: A,
             children: (0, i.jsx)('div', {
-                className: I.container,
+                className: S.container,
                 children: (0, i.jsxs)(m.Gt, {
                     value: R,
                     children: [
                         (0, i.jsx)(x.Z, {
-                            className: I.heroHeading,
+                            className: S.heroHeading,
                             onBackClick: () => {
                                 b(!1),
                                     _.default.track(T.rMx.NITRO_HOME_NAVIGATION, {
@@ -61,20 +61,20 @@ let b = (e) => {
                             }
                         }),
                         (0, i.jsxs)('div', {
-                            className: I.column,
+                            className: S.column,
                             children: [
                                 (0, i.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: I.heading,
+                                    className: S.heading,
                                     children: t
                                 }),
                                 (0, i.jsx)(p.Z, {
-                                    className: I.cardCarousel,
+                                    className: S.cardCarousel,
                                     cards: (0, f.sP)({
                                         perksCards: O,
                                         variant: C.R0.CARD_CAROUSEL_FIRST_ROW,
-                                        shopMarketingVariation: Z,
+                                        shopMarketingVariation: y,
                                         isPremiumSubscriber: k,
                                         isFullScreen: j,
                                         fractionalState: L
@@ -84,15 +84,15 @@ let b = (e) => {
                                 (0, i.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: I.heading,
+                                    className: S.heading,
                                     children: n
                                 }),
                                 (0, i.jsx)(p.Z, {
-                                    className: I.cardCarousel,
+                                    className: S.cardCarousel,
                                     cards: (0, f.sP)({
                                         perksCards: O,
                                         variant: C.R0.CARD_CAROUSEL_SECOND_ROW,
-                                        shopMarketingVariation: Z,
+                                        shopMarketingVariation: y,
                                         isPremiumSubscriber: k,
                                         isFullScreen: j,
                                         fractionalState: L
@@ -102,15 +102,15 @@ let b = (e) => {
                                 (0, i.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: I.heading,
+                                    className: S.heading,
                                     children: N.intl.string(N.t.LTaxu7)
                                 }),
                                 (0, i.jsx)(p.Z, {
-                                    className: I.cardCarousel,
+                                    className: S.cardCarousel,
                                     cards: (0, f.sP)({
                                         perksCards: O,
                                         variant: C.R0.CARD_CAROUSEL_THIRD_ROW,
-                                        shopMarketingVariation: Z,
+                                        shopMarketingVariation: y,
                                         isPremiumSubscriber: k,
                                         isFullScreen: j,
                                         fractionalState: L
@@ -119,16 +119,16 @@ let b = (e) => {
                                 })
                             ]
                         }),
-                        (0, i.jsx)('div', { className: I.footerSpacing }),
+                        (0, i.jsx)('div', { className: S.footerSpacing }),
                         (0, i.jsx)(o.$, {
                             onChange: (e) => {
                                 e && !P && (_.default.track(T.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: R }), D(!0));
                             },
-                            children: (0, i.jsx)('div', { className: I.bottomOfPageVisibilitySensor })
+                            children: (0, i.jsx)('div', { className: S.bottomOfPageVisibilitySensor })
                         }),
                         (0, i.jsx)('img', {
-                            src: S,
-                            className: I.bottomIllustration,
+                            src: I,
+                            className: S.bottomIllustration,
                             width: 112,
                             height: 85,
                             alt: N.intl.string(N.t.X4IxWF)

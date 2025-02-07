@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(647177),
     T = n(63985),
     N = n(678916),
-    I = n(981631),
-    S = n(190378),
+    S = n(981631),
+    I = n(190378),
     b = n(486324),
     v = n(474936),
     j = n(388032),
@@ -94,7 +94,7 @@ function R(e) {
 }
 function P(e) {
     let { option: t, source: s, selected: r = !1, onSelectOption: u, isAnimatedImage: E, isVideo: C, hotspotLocation: T, ...N } = e,
-        S = (0, d.O)(),
+        I = (0, d.O)(),
         { analyticsLocations: b } = (0, h.ZP)(m.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
         O = (0, a.e7)([x.Z], () => null != T && x.Z.hasHotspot(T)),
         P = C
@@ -114,9 +114,9 @@ function P(e) {
         null != T &&
             O &&
             (_.Kw(T),
-            p.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
+            p.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: v.cd.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
-                location: S.location,
+                location: I.location,
                 location_stack: b
             }));
     }
@@ -175,11 +175,11 @@ function D() {
         ]
     });
 }
-function Z(e) {
+function y(e) {
     let { onClick: t, tooltipText: n, disabled: s = !1 } = e,
-        r = (0, a.e7)([x.Z], () => x.Z.hasHotspot(S.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
+        r = (0, a.e7)([x.Z], () => x.Z.hasHotspot(I.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
     function l() {
-        _.Kw(S.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
+        _.Kw(I.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
     let c = r ? j.intl.string(j.t['5TUJOj']) : n;
     return (0, i.jsxs)(o.DY3, {
@@ -217,19 +217,19 @@ function Z(e) {
         ]
     });
 }
-function y(e) {
+function Z(e) {
     let { onClick: t } = e,
         n = (0, d.O)(),
         { analyticsLocations: s } = (0, h.ZP)(m.Z.VIDEO_BACKGROUND_CUSTOM_UPSELL);
     return (
         (0, u.ZP)(() => {
-            p.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
+            p.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: v.cd.VIDEO_BACKGROUNDS_INLINE,
                 location: n.location,
                 location_stack: s
             });
         }),
-        (0, i.jsx)(Z, {
+        (0, i.jsx)(y, {
             onClick: t,
             tooltipText: j.intl.string(j.t.IqE0T0)
         })
@@ -245,7 +245,7 @@ function k(e) {
                 extensions: ['jpg', 'jpeg', 'png', 'gif', 'mp4']
             }
         ];
-    return (0, i.jsx)(Z, {
+    return (0, i.jsx)(y, {
         disabled: s,
         onClick: function () {
             (0, o.ZDy)(
@@ -300,7 +300,7 @@ function L(e) {
                           onAddBackgroundImage: c,
                           disabled: g
                       })
-                    : (0, i.jsx)(y, { onClick: a }),
+                    : (0, i.jsx)(Z, { onClick: a }),
                 u.map((e) =>
                     (0, i.jsx)(
                         o.ua7,

@@ -29,13 +29,13 @@ let f = (e) => {
         let { effect: t, back: n } = e,
             { upsertConfig: r } = (0, g.E)(),
             T = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
-            [N, I] = s.useState(!0),
-            S = s.useRef(null),
+            [N, S] = s.useState(!0),
+            I = s.useRef(null),
             [b, v] = s.useState(!1),
             [j, A] = s.useState(!1),
             [O, R] = s.useState(!1),
             [P, D] = s.useState([]),
-            [Z, y] = s.useState(t.name);
+            [y, Z] = s.useState(t.name);
         s.useEffect(() => {
             let e = t.config.effects;
             e.length > 0 &&
@@ -59,10 +59,10 @@ let f = (e) => {
             let { effect: e, upsertConfig: t } = L.current;
             t({
                 id: e.id,
-                name: Z,
+                name: y,
                 config: { effects: P }
             });
-        }, [P, Z]),
+        }, [P, y]),
         null == T)
             ? (0, i.jsx)('div', {})
             : (0, i.jsxs)('div', {
@@ -113,10 +113,10 @@ let f = (e) => {
                                               }),
                                               (0, i.jsx)('input', {
                                                   type: 'text',
-                                                  value: Z,
+                                                  value: y,
                                                   className: p.input,
                                                   onChange: (e) => {
-                                                      y(e.target.value);
+                                                      Z(e.target.value);
                                                   }
                                               })
                                           ]
@@ -188,7 +188,7 @@ let f = (e) => {
                                                           children: 'Upload Layer'
                                                       }),
                                                       (0, i.jsx)(d.Z, {
-                                                          ref: S,
+                                                          ref: I,
                                                           onChange: (e) => {
                                                               let t = e.currentTarget.files;
                                                               if (null == t) return;
@@ -225,7 +225,7 @@ let f = (e) => {
                                               (0, i.jsx)(c.zxk, {
                                                   color: c.Ttl.BRAND,
                                                   onClick: () => {
-                                                      I(!1), setTimeout(() => I(!0), 100);
+                                                      S(!1), setTimeout(() => S(!0), 100);
                                                   },
                                                   children: 'Replay Animation'
                                               }),
@@ -449,7 +449,7 @@ let f = (e) => {
                                                                       children: 'Add Alternative'
                                                                   }),
                                                                   (0, i.jsx)(d.Z, {
-                                                                      ref: S,
+                                                                      ref: I,
                                                                       onChange: (e) => {
                                                                           let n = e.currentTarget.files;
                                                                           if (null == n) return;

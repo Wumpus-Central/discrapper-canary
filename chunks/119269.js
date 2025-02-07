@@ -32,7 +32,7 @@ let p = (e) => {
         });
     },
     E = (e) => {
-        let { showAnimations: t = !0, iconClassName: n, staticPercentage: i, innerCircleClassName: r, progressCircleStrokeSize: l, backgroundCircleSize: c, percentage: u, initialPercentage: x, progressCircleVariation: E = 0, avatarDecoAssetId: C, avatarDecoAssetDescription: f, ellipseOpacity: T, customAnimationClassName: N, circleColor: I, circleStroke: S } = e,
+        let { showAnimations: t = !0, iconClassName: n, staticPercentage: i, innerCircleClassName: r, progressCircleStrokeSize: l, backgroundCircleSize: c, percentage: u, initialPercentage: x, progressCircleVariation: E = 0, avatarDecoAssetId: C, avatarDecoAssetDescription: f, ellipseOpacity: T, customAnimationClassName: N, circleColor: S, circleStroke: I } = e,
             b = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
             v = t && !b;
         return (0, s.jsx)('div', {
@@ -42,7 +42,7 @@ let p = (e) => {
                     [_.activeProgressCircleAnimation]: v,
                     [null != N ? N : '']: v
                 }),
-                progressCircleStroke: S,
+                progressCircleStroke: I,
                 progressCircleStrokeSize: l,
                 percentage: null != i ? i : u,
                 initialPercentage: null != i ? i : x,
@@ -57,7 +57,7 @@ let p = (e) => {
                             });
                         case 1:
                             return (0, s.jsx)(h.Z, {
-                                circleColor: I,
+                                circleColor: S,
                                 ellipseOpacity: T
                             });
                         case 2:

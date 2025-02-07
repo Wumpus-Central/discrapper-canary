@@ -34,11 +34,11 @@ function p(e) {
     let T = f.subscriptionPlanId,
         N = c.Z.get(T);
     r()(null != N, 'Missing plan');
-    let I = (0, u.T4)(E.total, E.currency);
+    let S = (0, u.T4)(E.total, E.currency);
     return (
         N.interval === h.rV.YEAR
             ? (t = _.intl.format(_.t['jPz/39'], {
-                  price: I,
+                  price: S,
                   termsUrl: g.EYA.TERMS,
                   paidURL: g.EYA.PAID_TERMS,
                   privacyUrl: g.EYA.PRIVACY
@@ -47,13 +47,13 @@ function p(e) {
               (t =
                   1 === N.intervalCount
                       ? _.intl.format(_.t.m27GpK, {
-                            price: I,
+                            price: S,
                             termsUrl: g.EYA.TERMS,
                             paidURL: g.EYA.PAID_TERMS,
                             privacyUrl: g.EYA.PRIVACY
                         })
                       : _.intl.format(_.t['9xf5V1'], {
-                            price: I,
+                            price: S,
                             termsUrl: g.EYA.TERMS,
                             paidURL: g.EYA.PAID_TERMS,
                             privacyUrl: g.EYA.PRIVACY,

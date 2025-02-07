@@ -100,10 +100,10 @@ function g(e, t) {
                     R[t] = n;
                 }
             }
-            let j = R.filter(u.lm),
-                y = (0, r.keyBy)((0, r.range)(j.length), (e) => j[e].id);
-            x.current = y;
-            let N = [...I, ...j];
+            let y = R.filter(u.lm),
+                j = (0, r.keyBy)((0, r.range)(y.length), (e) => y[e].id);
+            x.current = j;
+            let N = [...I, ...y];
             return (
                 null != E && (m && N.length >= S ? (N[Math.max(0, N.length - 1)] = E) : N.push(E)),
                 {

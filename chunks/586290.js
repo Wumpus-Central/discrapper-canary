@@ -1,73 +1,73 @@
-t.d(n, { Z: () => S }), t(724458), t(47120);
-var l = t(200651),
-    i = t(192379),
-    s = t(512722),
-    a = t.n(s),
-    r = t(392711),
-    o = t.n(r),
-    u = t(856901),
-    c = t(481060),
-    d = t(687058),
-    m = t(537135),
-    x = t(176940),
-    g = t(388032),
-    h = t(378967),
-    v = t(456963),
-    Z = t(232186);
+l.d(n, { Z: () => S }), l(724458), l(47120);
+var t = l(200651),
+    i = l(192379),
+    s = l(512722),
+    a = l.n(s),
+    r = l(392711),
+    o = l.n(r),
+    u = l(856901),
+    c = l(481060),
+    d = l(687058),
+    m = l(537135),
+    x = l(176940),
+    g = l(388032),
+    h = l(378967),
+    Z = l(456963),
+    v = l(232186);
 function S(e) {
-    let { selectedSource: n, onChangeVideoDeviceSource: t, onChangeAudioDevice: s } = e;
+    let { selectedSource: n, onChangeVideoDeviceSource: l, onChangeAudioDevice: s } = e;
     a()(null != n, 'Camera capture device cannot be null');
     let r = (0, x.Z)(),
         S = (0, d.Z)(),
-        [j, C] = i.useState(
-            (function (e, n, t) {
-                if (null != n && null != t) {
-                    let l = n.find((n) => n.id === e);
-                    if (null == l) return;
-                    let i = o().reduce(t, (e, n) => ((0, u.stringSimilarity)(l.name, n.name) > (0, u.stringSimilarity)(l.name, e.name) ? n : e));
+        [C, j] = i.useState(
+            (function (e, n, l) {
+                if (null != n && null != l) {
+                    let t = n.find((n) => n.id === e);
+                    if (null == t) return;
+                    let i = o().reduce(l, (e, n) => ((0, u.stringSimilarity)(t.name, n.name) > (0, u.stringSimilarity)(t.name, e.name) ? n : e));
                     if (null != i) return i.id;
                 }
             })(n.id, r, S)
         );
     return (
-        null != j && s(j),
-        (0, l.jsx)(i.Fragment, {
-            children: (0, l.jsxs)(c.xJW, {
+        null != C && s(C),
+        (0, t.jsx)(i.Fragment, {
+            children: (0, t.jsxs)(c.xJW, {
                 title: 'Capture Device',
-                className: v.modalContent,
+                className: Z.modalContent,
                 children: [
-                    (0, l.jsx)(c.xJW, {
-                        className: Z.marginTop8,
-                        children: (0, l.jsxs)(m.Z, {
+                    (0, t.jsx)(c.xJW, {
+                        className: v.marginTop8,
+                        children: (0, t.jsxs)(m.Z, {
                             children: [
-                                (0, l.jsx)('span', {
+                                (0, t.jsx)('span', {
                                     className: h.ellipsisText,
                                     children: n.name
                                 }),
-                                (0, l.jsx)(c.zxk, {
+                                (0, t.jsx)(c.zxk, {
                                     className: h.changeButton,
                                     color: c.zxk.Colors.PRIMARY,
                                     size: c.zxk.Sizes.SMALL,
-                                    onClick: t,
+                                    onClick: l,
                                     children: g.intl.string(g.t.GEgsAw)
                                 })
                             ]
                         })
                     }),
-                    (0, l.jsx)(c.xJW, {
-                        className: Z.marginTop8,
+                    (0, t.jsx)(c.xJW, {
+                        className: v.marginTop8,
                         title: g.intl.string(g.t.y4ooen),
-                        children: (0, l.jsx)(c.q4e, {
-                            value: j,
-                            className: Z.__invalid_marginaTop8,
+                        children: (0, t.jsx)(c.q4e, {
+                            value: C,
+                            className: v.__invalid_marginaTop8,
                             onChange: (e) => {
-                                C(e), s(e);
+                                j(e), s(e);
                             },
                             options: o().map(S, (e) => {
-                                let { id: n, name: t } = e;
+                                let { id: n, name: l } = e;
                                 return {
                                     value: n,
-                                    label: t
+                                    label: l
                                 };
                             })
                         })

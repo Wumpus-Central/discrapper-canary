@@ -1,4 +1,4 @@
-n.d(t, { O: () => S }), n(47120);
+n.d(t, { O: () => I }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(693789),
@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(450272),
     T = n(981631),
     N = n(388032),
-    I = n(441490);
-function S() {
+    S = n(441490);
+function I() {
     return (0, i.jsxs)('div', {
         children: [(0, i.jsx)(b, {}), (0, i.jsx)(v, {})]
     });
@@ -123,7 +123,7 @@ function b() {
                         children: 'Enter a number to see the balance widget pill update:'
                     }),
                     (0, i.jsx)(l.FiK, {
-                        className: I.numberInput,
+                        className: S.numberInput,
                         value: e,
                         onChange: (e) => t(e)
                     }),

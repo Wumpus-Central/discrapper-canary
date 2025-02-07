@@ -19,10 +19,10 @@ var i = n(200651),
     f = n(726985),
     T = n(736530),
     N = n(981631),
-    I = n(388032);
-function S(e) {
+    S = n(388032);
+function I(e) {
     let { ingress: t, guildId: n } = e,
-        S = (0, g.c_)(),
+        I = (0, g.c_)(),
         b = (0, m.q)(),
         v = h.h2.useSetting().includes(n),
         j = h.mX.useSetting(),
@@ -53,10 +53,10 @@ function S(e) {
                 ? O(e)
                 : ((n = !e),
                   (0, p.V)({
-                      header: I.intl.string(I.t.yAfu1t),
-                      body: I.intl.string(I.t['Ry2z7+']),
-                      confirmText: I.intl.string(I.t.gm1Ven),
-                      cancelText: I.intl.string(I.t.p89ACg),
+                      header: S.intl.string(S.t.yAfu1t),
+                      body: S.intl.string(S.t['Ry2z7+']),
+                      confirmText: S.intl.string(S.t.gm1Ven),
+                      cancelText: S.intl.string(S.t.p89ACg),
                       confirmButtonColor: r.zxk.Colors.BRAND,
                       onConfirm: () => {
                           h.mX.updateSetting(n), R(n, !1);
@@ -73,25 +73,25 @@ function S(e) {
         children:
             n === T.T
                 ? (0, i.jsx)(x.Z, {
-                      title: I.intl.string(I.t['3o2ojo']),
+                      title: S.intl.string(S.t['3o2ojo']),
                       value: !b && !j,
                       onChange: (e) => P(e, !1),
                       disabled: b,
-                      note: I.intl.format(I.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(N.BhN.MESSAGE_REQUESTS) })
+                      note: S.intl.format(S.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(N.BhN.MESSAGE_REQUESTS) })
                   })
                 : (0, i.jsx)(x.Z, {
-                      title: I.intl.string(I.t['3o2ojo']),
+                      title: S.intl.string(S.t['3o2ojo']),
                       value: !A,
                       onChange: (e) => P(e, !0),
                       disabled: v,
-                      note: S ? I.intl.format(I.t.WpnWLS, { helpdeskArticle: o.Z.getArticleURL(N.BhN.MESSAGE_REQUESTS) }) : I.intl.format(I.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(N.BhN.MESSAGE_REQUESTS) })
+                      note: I ? S.intl.format(S.t.WpnWLS, { helpdeskArticle: o.Z.getArticleURL(N.BhN.MESSAGE_REQUESTS) }) : S.intl.format(S.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(N.BhN.MESSAGE_REQUESTS) })
                   })
     });
 }
 function b(e) {
     let { ingress: t = C.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
         s = (0, g.is)();
-    return (0, i.jsx)(S, {
+    return (0, i.jsx)(I, {
         ingress: t,
         guildId: null != n ? n : s
     });

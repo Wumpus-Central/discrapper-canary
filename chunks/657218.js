@@ -279,7 +279,7 @@ function Y(e) {
                                             : null
                                     ]
                                 }),
-                                (0, i.jsx)(Q, {
+                                (0, i.jsx)(J, {
                                     parentChannel: t,
                                     parentMessageId: n
                                 })
@@ -445,7 +445,7 @@ function X(e) {
         ]
     });
 }
-function Q(e) {
+function J(e) {
     let { parentChannel: t, parentMessageId: n } = e,
         l = (0, s.e7)([A.Z], () => (null == n ? null : A.Z.getMessage(t.id, n))),
         a = S.jU.useSetting();

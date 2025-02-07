@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => C }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -27,7 +27,7 @@ function f() {
         children: [(0, i.jsx)('div', { className: s()(h.sparkleWhite, c.sparkleOne) }), (0, i.jsx)('div', { className: s()(h.sparkleWhite, c.sparkleTwo) }), (0, i.jsx)('div', { className: s()(h.lightWhite, c.lightOne) }), (0, i.jsx)('div', { className: s()(h.lightWhite, c.lightTwo) }), (0, i.jsx)('div', { className: s()(h.crossWhite, c.crossOne) }), (0, i.jsx)('div', { className: s()(h.crossWhite, c.crossTwo) }), (0, i.jsx)('div', { className: s()(h.popWhite, c.popOne) })]
     });
 }
-class C extends l.Component {
+class p extends l.Component {
     componentDidMount() {
         let e = this.elementDOMRef.current;
         null != e && (e.ownerDocument.body.addEventListener('dragover', this.handleDragOver, !1), e.ownerDocument.body.addEventListener('drop', this.handleDragLeave, !1), e.addEventListener('dragover', this.handleDragOverZone, !1), e.addEventListener('dragleave', this.handleDragLeaveZone, !1), e.addEventListener('drop', this.handleDrop, !1));
@@ -152,4 +152,4 @@ class C extends l.Component {
             });
     }
 }
-let p = C;
+let C = p;

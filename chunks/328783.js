@@ -65,7 +65,7 @@ let x = (0, a.hQ)(),
             f = s.useCallback((e) => (0, d.nE)(e, !0, h.Sbl.USER_SETTINGS), []),
             T = s.useCallback((e) => e === a, [a]),
             N = s.useCallback((e) => e, []),
-            I = s.useCallback(() => (0, d.nE)(null, !1), []);
+            S = s.useCallback(() => (0, d.nE)(null, !1), []);
         return (0, i.jsxs)(o.Z, {
             title: g.intl.string(g.t.umdfaG),
             titleId: x,
@@ -84,7 +84,7 @@ let x = (0, a.hQ)(),
                     renderOptionValue: C,
                     renderOptionLabel: E,
                     serialize: N,
-                    clear: I,
+                    clear: S,
                     clearable: null != a
                 })
             ]

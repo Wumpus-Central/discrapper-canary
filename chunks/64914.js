@@ -29,7 +29,7 @@ function E() {
         N = s.useCallback((e) => {
             o.ZP.updatedUnsyncedSettings({ showPlayAgain: e });
         }, []),
-        I = s.useCallback((e) => {
+        S = s.useCallback((e) => {
             (0, l.h7j)((t) =>
                 (0, i.jsx)(l.ConfirmModal, {
                     header: p.intl.string(p.t.aqpAvr),
@@ -61,7 +61,7 @@ function E() {
                 setting: _.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
                 children: (0, i.jsx)(l.j7V, {
                     value: e,
-                    onChange: I,
+                    onChange: S,
                     note: p.intl.string(p.t.Afc7l5),
                     children: p.intl.string(p.t['eOC/Fx'])
                 })

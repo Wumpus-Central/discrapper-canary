@@ -24,8 +24,8 @@ var i = n(200651),
     f = n(981631),
     T = n(474936),
     N = n(388032),
-    I = n(525530);
-function S(e) {
+    S = n(525530);
+function I(e) {
     let { guildTier: t, guildBoostSlot: n, showAltText: l, isCanceled: o, premiumSubscription: c } = e,
         d = s.useMemo(() => {
             if (o) return N.intl.format(N.t.Z4ULRE, { date: c.currentPeriodEnd });
@@ -67,7 +67,7 @@ function S(e) {
         );
     return o || t === f.Eu4.NONE
         ? (0, i.jsx)('div', {
-              className: I.boostDescriptionInnerContainer,
+              className: S.boostDescriptionInnerContainer,
               children: (0, i.jsx)(a.Text, {
                   variant: 'text-sm/medium',
                   color: 'text-muted',
@@ -77,7 +77,7 @@ function S(e) {
         : m((e, t) =>
               (0, i.jsx)(r.animated.div, {
                   style: e,
-                  className: I.boostDescriptionInnerContainer,
+                  className: S.boostDescriptionInnerContainer,
                   children: (0, i.jsx)(a.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-muted',
@@ -94,10 +94,10 @@ function b(e) {
         f = (0, _.tl)(n),
         { fractionalState: T } = (0, c.Z)();
     return (0, i.jsxs)('div', {
-        className: I.boostContainer,
+        className: S.boostContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: I.boostInnerContainer,
+                className: S.boostInnerContainer,
                 children: [
                     (0, i.jsx)(E.Z, {
                         isCanceled: f,
@@ -105,14 +105,14 @@ function b(e) {
                         useReducedMotion: g
                     }),
                     (0, i.jsx)('div', {
-                        className: I.boostDescriptionContainer,
+                        className: S.boostDescriptionContainer,
                         children:
                             null != x && C && !f
                                 ? (0, i.jsx)(p.Z, {
-                                      className: I.boostDescriptionInnerContainer,
+                                      className: S.boostDescriptionInnerContainer,
                                       cooldown: x.getTime()
                                   })
-                                : (0, i.jsx)(S, {
+                                : (0, i.jsx)(I, {
                                       guildTier: t,
                                       guildBoostSlot: n,
                                       showAltText: m,
@@ -137,7 +137,7 @@ function b(e) {
                             (0, i.jsx)(a.P3F, {
                                 ...e,
                                 'aria-label': N.intl.string(N.t.PdRCRk),
-                                className: I.boostSlotMenuIcon,
+                                className: S.boostSlotMenuIcon,
                                 children: (0, i.jsx)(a.Huf, {
                                     size: 'md',
                                     color: 'currentColor'
@@ -146,7 +146,7 @@ function b(e) {
                     })
                 ]
             }),
-            !h && (0, i.jsx)('div', { className: I.boostContainerSeparator })
+            !h && (0, i.jsx)('div', { className: S.boostContainerSeparator })
         ]
     });
 }
@@ -154,7 +154,7 @@ function v(e) {
     let { guildId: t, guildBoostSlotRecords: n, premiumSubscription: s, hasCancelableGuildBoostSlot: r, showAltText: a } = e,
         o = (0, l.e7)([g.Z], () => g.Z.getGuild(t), [t]);
     return (0, i.jsxs)('div', {
-        className: I.appliedBoostContainer,
+        className: S.appliedBoostContainer,
         children: [
             (0, i.jsx)(C.Z, {
                 guildId: t,
@@ -202,7 +202,7 @@ function j(e) {
         s
     );
     return (0, i.jsxs)('div', {
-        className: I.appliedBoostContainer,
+        className: S.appliedBoostContainer,
         children: [
             (0, i.jsx)(C.Z, {
                 guildId: t,
@@ -240,10 +240,10 @@ function A(e) {
     return null == n || 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
-              className: I.wrapper,
+              className: S.wrapper,
               children: [
                   (0, i.jsx)('div', {
-                      className: I.container,
+                      className: S.container,
                       children: x.default.keys(r).map((e) =>
                           (0, i.jsx)(
                               j,
@@ -256,7 +256,7 @@ function A(e) {
                           )
                       )
                   }),
-                  (0, i.jsx)('div', { className: I.mainSeparator })
+                  (0, i.jsx)('div', { className: S.mainSeparator })
               ]
           });
 }
@@ -296,10 +296,10 @@ function O(e) {
     if (null == n || 0 === Object.keys(o).length) return null;
     let u = c > (0, d.G)(n, a);
     return (0, i.jsxs)('div', {
-        className: I.wrapper,
+        className: S.wrapper,
         children: [
             (0, i.jsx)('div', {
-                className: I.container,
+                className: S.container,
                 children: x.default.keys(o).map((e) =>
                     (0, i.jsx)(
                         v,
@@ -314,7 +314,7 @@ function O(e) {
                     )
                 )
             }),
-            (0, i.jsx)('div', { className: I.mainSeparator })
+            (0, i.jsx)('div', { className: S.mainSeparator })
         ]
     });
 }

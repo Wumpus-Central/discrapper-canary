@@ -15,19 +15,19 @@ var i = n(200651),
     x = n(602750);
 function p(e) {
     let { onChange: t, onClose: n, color: r, suggestedColors: p, disabled: E, label: C, colorPickerMiddle: f, colorPickerFooter: T, showEyeDropper: N } = e,
-        I = s.useRef(null),
-        S = (0, d.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
+        S = s.useRef(null),
+        I = (0, d.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         b = c.Z.colors.BACKGROUND_ACCENT.css,
         v = (0, h.DP)(r),
         j = (0, o.Rf)(r),
-        A = j === S ? b : j,
+        A = j === I ? b : j,
         O = (0, m.Lq)(v ? g.Ilk.WHITE_500 : g.Ilk.PRIMARY_530),
         R = (0, u.Z)(f),
         P = (0, u.Z)(T),
-        [D, Z] = s.useState((0, a.Z)());
+        [D, y] = s.useState((0, a.Z)());
     return (
         s.useEffect(() => {
-            (R !== f || P !== T) && Z((0, a.Z)());
+            (R !== f || P !== T) && y((0, a.Z)());
         }, [T, f, P, R]),
         (0, i.jsx)(d.yRy, {
             positionKey: D,
@@ -45,7 +45,7 @@ function p(e) {
             children: (e) => {
                 let { onClick: t, ...n } = e;
                 return (0, i.jsxs)('div', {
-                    ref: I,
+                    ref: S,
                     className: l()(x.colorSwatch, { [x.disabled]: E }),
                     children: [
                         (0, i.jsx)(d.P3F, {
@@ -58,7 +58,7 @@ function p(e) {
                             },
                             className: x.swatch,
                             'aria-label': _.intl.string(_.t.Qp04hI),
-                            focusProps: { ringTarget: I },
+                            focusProps: { ringTarget: S },
                             children: (0, i.jsx)(d.vdY, {
                                 size: 'custom',
                                 className: x.editPencilIcon,

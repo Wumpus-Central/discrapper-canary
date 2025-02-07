@@ -12,8 +12,8 @@ var t = l(200651),
     c = l(436774),
     d = l(639119),
     m = l(197115),
-    g = l(74538),
-    x = l(981631),
+    x = l(74538),
+    g = l(981631),
     h = l(474936),
     Z = l(388032),
     v = l(468888);
@@ -23,7 +23,7 @@ function S(e) {
         r = i.useCallback(() => {
             if (null != s) {
                 var e;
-                return null !== (e = (0, g.fr)(s)) && void 0 !== e ? e : Z.intl.string(Z.t.Y2WKTk);
+                return null !== (e = (0, x.fr)(s)) && void 0 !== e ? e : Z.intl.string(Z.t.Y2WKTk);
             }
             return Z.intl.string(Z.t.Y2WKTk);
         }, [s]);
@@ -60,9 +60,9 @@ function C() {
 function j(e) {
     let { message: n, onClose: l, openStreamUpsellModal: i, glow: s = !1 } = e,
         r = {
-            section: x.jXE.STREAM_SETTINGS,
-            object: x.qAy.PREMIUM_UPSELL_BANNER,
-            objectType: x.Qqv.BUY
+            section: g.jXE.STREAM_SETTINGS,
+            object: g.qAy.PREMIUM_UPSELL_BANNER,
+            objectType: g.Qqv.BUY
         };
     return (0, t.jsxs)('div', {
         className: a()(v.upsellBanner, v.enhancedBanner, { [v.gradientGlow]: s }),

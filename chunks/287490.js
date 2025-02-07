@@ -77,7 +77,7 @@ function E(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        I = (0, i.jsx)(o.P3F, {
+        S = (0, i.jsx)(o.P3F, {
             onClick: C,
             children: (0, i.jsxs)(o.vwX, {
                 tag: o.RB0.H3,
@@ -106,7 +106,7 @@ function E(e) {
               children: [
                   (0, i.jsxs)(o.hjN, {
                       children: [
-                          I,
+                          S,
                           (0, i.jsxs)('div', {
                               children: [
                                   (0, i.jsx)(o.xJW, {
@@ -195,7 +195,7 @@ function E(e) {
           })
         : (0, i.jsx)('div', {
               className: _.group,
-              children: (0, i.jsx)(o.hjN, { children: I })
+              children: (0, i.jsx)(o.hjN, { children: S })
           });
 }
 function C(e) {
@@ -217,7 +217,7 @@ function C(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        [N, I] = (0, a.Wu)([u.Z, d.Z], () => {
+        [N, S] = (0, a.Wu)([u.Z, d.Z], () => {
             let e = l().sortBy(l().values(u.Z.getGuilds()), (e) => e.name.toLowerCase()),
                 t = {},
                 i = [];
@@ -235,7 +235,7 @@ function C(e) {
                 .join(', ');
             return [i.join('\n'), r];
         }),
-        S = (0, i.jsx)(o.P3F, {
+        I = (0, i.jsx)(o.P3F, {
             onClick: C,
             children: (0, i.jsxs)(o.vwX, {
                 tag: o.RB0.H3,
@@ -264,7 +264,7 @@ function C(e) {
               children: [
                   (0, i.jsxs)(o.hjN, {
                       children: [
-                          S,
+                          I,
                           (0, i.jsxs)('div', {
                               children: [
                                   (0, i.jsx)(o.xJW, {
@@ -294,7 +294,7 @@ function C(e) {
                               children: [
                                   (0, i.jsxs)(o.R94, {
                                       type: o.geA.DESCRIPTION,
-                                      children: ['Current Assignments: ', I]
+                                      children: ['Current Assignments: ', S]
                                   }),
                                   null == f
                                       ? (0, i.jsx)(o.R94, {
@@ -363,6 +363,6 @@ function C(e) {
           })
         : (0, i.jsx)('div', {
               className: _.group,
-              children: (0, i.jsx)(o.hjN, { children: S })
+              children: (0, i.jsx)(o.hjN, { children: I })
           });
 }

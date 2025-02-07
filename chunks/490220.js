@@ -20,8 +20,8 @@ function u(e) {
             tryItOutThemeColors: f,
             tryItOutAvatar: T,
             tryItOutBanner: N,
-            tryItOutAvatarDecoration: I,
-            tryItOutProfileEffectId: S
+            tryItOutAvatarDecoration: S,
+            tryItOutProfileEffectId: I
         } = (0, r.cj)([o.Z], () => {
             let e = o.Z.getAllPending(),
                 t = o.Z.getAllTryItOut();
@@ -30,7 +30,7 @@ function u(e) {
                 ...t
             };
         }),
-        b = (0, a.Z)(I, !1);
+        b = (0, a.Z)(S, !1);
     return (0, i.jsx)(c.Z, {
         containerClassName: h,
         user: u,
@@ -40,7 +40,7 @@ function u(e) {
         pendingAvatar: null != T ? T : _,
         pendingThemeColors: null != f ? f : p,
         pendingAvatarDecoration: b,
-        pendingProfileEffectId: S,
+        pendingProfileEffectId: I,
         avatarClassName: null != T || null != _ || g.enabled ? void 0 : d.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,

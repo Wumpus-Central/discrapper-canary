@@ -20,10 +20,10 @@ var s = n(442837),
     f = n(269876),
     T = n(976758),
     N = n(726985),
-    I = n(981631),
-    S = n(65154),
+    S = n(981631),
+    I = n(65154),
     b = n(388032);
-let v = ''.concat(o.Z.getArticleURL(I.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
+let v = ''.concat(o.Z.getArticleURL(S.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 function j() {
     let { inputMode: e } = (0, s.cj)([a.Z], () => ({ inputMode: a.Z.getMode() }));
     return (0, i.jsxs)(i.Fragment, {
@@ -61,7 +61,7 @@ function j() {
                             }),
                             (0, i.jsx)(l.F, {
                                 setting: N.s6.VOICE_AND_VIDEO_SENSITIVITY,
-                                children: e === S.pM.VOICE_ACTIVITY && (0, i.jsx)(f.Z, {})
+                                children: e === I.pM.VOICE_ACTIVITY && (0, i.jsx)(f.Z, {})
                             })
                         ]
                     })

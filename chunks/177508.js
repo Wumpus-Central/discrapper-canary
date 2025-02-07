@@ -34,7 +34,7 @@ function T() {
             (0, i.jsx)(O, {}),
             (0, i.jsx)(k, {}),
             (0, i.jsx)(L, {}),
-            (0, i.jsx)(Z, {}),
+            (0, i.jsx)(y, {}),
             (0, i.jsx)(D, {}),
             (0, i.jsx)(P, {}),
             (0, i.jsx)(R, {}),
@@ -44,8 +44,8 @@ function T() {
     });
 }
 let N = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'],
-    I = ['background-surface-highest', 'background-surface-higher', 'background-surface-high', 'background-base-low', 'background-base-lower', 'background-base-lowest'],
-    S = ['background-mod-subtle', 'background-mod-normal', 'background-mod-strong'],
+    S = ['background-surface-highest', 'background-surface-higher', 'background-surface-high', 'background-base-low', 'background-base-lower', 'background-base-lowest'],
+    I = ['background-mod-subtle', 'background-mod-normal', 'background-mod-strong'],
     b = ['critical', 'warning', 'positive', 'info'],
     v = ['text-default', 'text-primary', 'text-secondary', 'text-tertiary', 'text-feedback-critical', 'text-feedback-warning', 'text-feedback-positive', 'text-feedback-info'];
 function j() {
@@ -56,7 +56,7 @@ function j() {
                 className: p.heading,
                 children: 'Background Colors'
             }),
-            I.map((e) =>
+            S.map((e) =>
                 (0, i.jsxs)(
                     'div',
                     {
@@ -76,7 +76,7 @@ function j() {
                                     gap: 8,
                                     gridTemplateColumns: 'repeat(3, 1fr)'
                                 },
-                                children: S.map((e) =>
+                                children: I.map((e) =>
                                     (0, i.jsxs)(
                                         'div',
                                         {
@@ -353,7 +353,7 @@ function O() {
                     children: 'Large'
                 })
             }),
-            (0, i.jsx)(y, {})
+            (0, i.jsx)(Z, {})
         ]
     });
 }
@@ -569,7 +569,7 @@ function D() {
         ]
     });
 }
-function Z() {
+function y() {
     let [e, t] = s.useState(!1),
         [n, r] = s.useState(!1),
         [l, a] = s.useState('auto');
@@ -771,7 +771,7 @@ function Z() {
         ]
     });
 }
-function y() {
+function Z() {
     return (0, i.jsxs)('div', {
         className: p.shinyButtonExamples,
         children: [

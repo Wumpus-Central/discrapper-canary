@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651);
 n(192379);
 var s = n(319147),
@@ -20,8 +20,8 @@ var s = n(319147),
     f = n(156129),
     T = n(799303),
     N = n(245630),
-    I = n(842272),
-    S = n(486731),
+    S = n(842272),
+    I = n(486731),
     b = n(346943),
     v = n(55826),
     j = n(218776),
@@ -30,7 +30,7 @@ var s = n(319147),
     R = n(26517),
     P = n(93125),
     D = n(278583);
-let Z = new Map([
+let y = new Map([
     ['BG', l],
     ['CZ', c],
     ['HU', p],
@@ -40,10 +40,10 @@ let Z = new Map([
     ['EE', u],
     ['IS', C],
     ['IE', E],
-    ['LV', S],
+    ['LV', I],
     ['LI', T],
     ['LT', N],
-    ['LU', I],
+    ['LU', S],
     ['MT', b],
     ['SK', n(814437)],
     ['SI', D],
@@ -62,10 +62,10 @@ let Z = new Map([
     ['PL', A],
     ['HR', x]
 ]);
-function y(e) {
+function Z(e) {
     let { className: t, countryCode: n } = e;
-    if (null == n || !Z.has(n)) return null;
-    let s = Z.get(n);
+    if (null == n || !y.has(n)) return null;
+    let s = y.get(n);
     return (0, i.jsx)('img', {
         className: t,
         'aria-hidden': !0,

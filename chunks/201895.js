@@ -11,8 +11,8 @@ function d(e) {
 }
 function u(e) {
     let t,
-        { channel: n, unread: u = !1, mentionCount: c = 0, userCount: h, embeddedActivitiesCount: g, isSubscriptionGated: f, needSubscriptionToAccess: C } = e,
-        p = (0, s.F6)(n, r.default, l.Z);
+        { channel: n, unread: u = !1, mentionCount: c = 0, userCount: h, embeddedActivitiesCount: g, isSubscriptionGated: f, needSubscriptionToAccess: p } = e,
+        C = (0, s.F6)(n, r.default, l.Z);
     switch (n.type) {
         case a.d4z.DM:
             t = u ? o.t.F2MZsr : o.t.fYqXVV;
@@ -45,7 +45,7 @@ function u(e) {
             null != g && g > 0 && v.push(o.intl.formatToPlainString(o.t.O6PLYW, { activitiesCount: g }));
             let E = d({
                 isSubscriptionGated: f,
-                needSubscriptionToAccess: C
+                needSubscriptionToAccess: p
             });
             return null != E && v.push(E), v.join(', ');
         case a.d4z.GUILD_STAGE_VOICE:
@@ -54,15 +54,15 @@ function u(e) {
         default:
             t = i.Ec.has(n.type) ? (c > 0 ? o.t['ZL7+Iy'] : u ? o.t.YlVvmZ : o.t['0nZpiI']) : c > 0 ? o.t.g8ONMz : u ? o.t.smf1CQ : o.t.s0JADg;
     }
-    let _ = [
+    let m = [
             o.intl.formatToPlainString(t, {
-                channelName: p,
+                channelName: C,
                 mentionCount: c
             })
         ],
-        m = d({
+        _ = d({
             isSubscriptionGated: f,
-            needSubscriptionToAccess: C
+            needSubscriptionToAccess: p
         });
-    return null != m && _.push(m), _.join(', ');
+    return null != _ && m.push(_), m.join(', ');
 }

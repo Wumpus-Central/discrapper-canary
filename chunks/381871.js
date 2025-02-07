@@ -88,20 +88,20 @@ function U(e) {
                 e &&
                     h.ZP.trackWithMetadata(y.rMx.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
                         channel_id: X,
-                        guild_id: Q
+                        guild_id: J
                     });
         },
-        { id: X, guild_id: Q } = n;
+        { id: X, guild_id: J } = n;
     l.useEffect(() => {
         h.ZP.trackWithMetadata(y.rMx.VOICE_CHANNEL_EFFECT_BAR_VIEWED, {
             channel_id: X,
-            guild_id: Q
+            guild_id: J
         });
-    }, [X, Q]);
-    let J = P ? [s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
+    }, [X, J]);
+    let Q = P ? [s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
         $ = F === j.q.PREMIUM;
     return (0, i.jsx)(p.ZP, {
-        contentTypes: J,
+        contentTypes: Q,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: l } = e,
                 a = P && t === s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
@@ -144,7 +144,7 @@ function U(e) {
                                         return (
                                             h.ZP.trackWithMetadata(y.rMx.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
                                                 channel_id: X,
-                                                guild_id: Q,
+                                                guild_id: J,
                                                 enabled: !$
                                             }),
                                             c.Z.dispatch({ type: 'VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE' })

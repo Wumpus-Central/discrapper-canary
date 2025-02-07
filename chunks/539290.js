@@ -1,6 +1,6 @@
 s.d(t, {
-    E: () => p,
-    Z: () => f
+    E: () => f,
+    Z: () => p
 });
 var n = s(200651);
 s(192379);
@@ -12,12 +12,12 @@ var i = s(120356),
     c = s(696936),
     u = s(903773),
     d = s(529819);
-let p = {
+let f = {
     RIGHT: d.horizontalStatusWarningBlock,
     BOTTOM: d.verticalStatusWarningBlock
 };
-function f(e) {
-    let { className: t, color: s = c.W.YELLOW, buttonPosition: i = p.BOTTOM, notice: f, ctaLabel: g, ctaLoading: x, ctaDisabled: h, ctaClassName: m, onClick: v } = e,
+function p(e) {
+    let { className: t, color: s = c.W.YELLOW, buttonPosition: i = f.BOTTOM, notice: p, ctaLabel: g, ctaLoading: x, ctaDisabled: h, ctaClassName: m, onClick: v } = e,
         b = (0, a.ZP)();
     return (0, n.jsx)(u.Z, {
         className: r()(d.statusWarningBlock, { [d.statusWarningBlockWithCta]: null != g }, t),
@@ -28,7 +28,7 @@ function f(e) {
                 (0, n.jsx)(l.Text, {
                     variant: 'text-sm/normal',
                     color: 'interactive-active',
-                    children: f
+                    children: p
                 }),
                 null != g &&
                     null != v &&

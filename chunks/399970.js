@@ -25,8 +25,8 @@ function p(e) {
             authorizing: m.Z.isFetchingAuthorization
         })),
         [f, T] = s.useState(null != p ? p : ''),
-        [N, I] = s.useState('8080'),
-        [S, b] = s.useState('localhost'),
+        [N, S] = s.useState('8080'),
+        [I, b] = s.useState('localhost'),
         v = (0, u.Dt)(),
         j = x.test(f);
     async function A() {
@@ -39,7 +39,7 @@ function p(e) {
                 case 'proxy':
                     return (0, c.Z)(n);
             }
-        })(S, N, f);
+        })(I, N, f);
         null != (await o.Wt(f, e)) && t();
     }
     s.useEffect(() => () => a.Z.wait(() => o.q$()), []);
@@ -107,7 +107,7 @@ function p(e) {
                                     title: h.intl.string(h.t['/GTqXF']),
                                     children: (0, i.jsx)(l.q4e, {
                                         isDisabled: !j || '' === f,
-                                        value: S,
+                                        value: I,
                                         options: [
                                             {
                                                 value: 'localhost',
@@ -126,7 +126,7 @@ function p(e) {
                                         placeholder: 'URL Origin Type'
                                     })
                                 }),
-                                'localhost' !== S
+                                'localhost' !== I
                                     ? null
                                     : (0, i.jsx)(l.xJW, {
                                           className: g.inputWrapper,
@@ -135,14 +135,14 @@ function p(e) {
                                           children: (0, i.jsx)(l.oil, {
                                               value: N,
                                               maxLength: 5,
-                                              onChange: (e) => I(e),
+                                              onChange: (e) => S(e),
                                               disabled: C
                                           })
                                       }),
                                 (0, i.jsx)(l.zxk, {
                                     submitting: C,
                                     type: 'submit',
-                                    disabled: !j || 0 === f.length || ('localhost' === S && 0 === N.length),
+                                    disabled: !j || 0 === f.length || ('localhost' === I && 0 === N.length),
                                     color: O ? l.zxk.Colors.RED : l.zxk.Colors.GREEN,
                                     children: O ? h.intl.string(h.t.d6TR3N) : h.intl.string(h.t.qwuK5O)
                                 })

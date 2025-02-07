@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(433811),
     T = n(214852),
     N = n(621853),
-    I = n(246946),
-    S = n(594174),
+    S = n(246946),
+    I = n(594174),
     b = n(78839),
     v = n(626135),
     j = n(111361),
@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(91802),
     P = n(104494),
     D = n(639119),
-    Z = n(943180),
-    y = n(2359),
+    y = n(943180),
+    Z = n(2359),
     k = n(132547),
     L = n(474936),
     B = n(981631),
@@ -41,17 +41,17 @@ let w = function (e) {
     let n = (0, p.Q)(),
         { sourceAnalyticsLocations: r, analyticsLocations: w } = (0, x.ZP)(_.Z.PREMIUM_MARKETING),
         V = (0, a.e7)([b.ZP], () => b.ZP.hasFetchedSubscriptions()),
-        U = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
+        U = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
         G = null == U ? void 0 : U.id,
         F = (0, D.N)(),
         H = (0, P.Ng)(),
         z = (0, E.V)(),
         [Y, W] = s.useState(!0),
         K = s.useRef(0),
-        X = (0, j.M5)(U, L.p9.TIER_2),
-        q = (0, R.n)(),
-        J = null == q ? void 0 : q.countryCode,
-        { enabled: Q } = (0, Z.D)(),
+        q = (0, j.M5)(U, L.p9.TIER_2),
+        X = (0, R.n)(),
+        J = null == X ? void 0 : X.countryCode,
+        { enabled: Q } = (0, y.D)(),
         $ = (0, a.e7)([N.Z], () => (null != U ? N.Z.getUserProfile(U.id) : null)),
         ee = (0, a.e7)([A.Z], () => A.Z.hasFetched);
     return (s.useEffect(() => {
@@ -60,9 +60,9 @@ let w = function (e) {
     s.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(J, null, B.JjL.DISCOVERY), null != G && Q && X && (0, h.In)(G)]), (K.current = Date.now() - e), W(!1);
+            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(J, null, B.JjL.DISCOVERY), null != G && Q && q && (0, h.In)(G)]), (K.current = Date.now() - e), W(!1);
         });
-    }, [J, G, Q, X]),
+    }, [J, G, Q, q]),
     s.useEffect(() => {
         n && (null != F || null != H) && (0, O.a)(F, H);
     }, [n, F, H]),
@@ -73,11 +73,11 @@ let w = function (e) {
                 load_duration_ms: K.current
             });
     }, [r, Y]),
-    (0, a.e7)([I.Z], () => I.Z.enabled))
+    (0, a.e7)([S.Z], () => S.Z.enabled))
         ? (0, i.jsx)(g.Z, {})
         : n
           ? (0, i.jsx)(C.c8, {})
-          : t === L.EZ.ApplicationStoreHome && X
+          : t === L.EZ.ApplicationStoreHome && q
             ? Q && null == $
                 ? (0, i.jsx)('div', {
                       className: l()(M.container, M.loading),
@@ -90,7 +90,7 @@ let w = function (e) {
             : V && z && !Y
               ? (0, i.jsx)(x.Gt, {
                     value: w,
-                    children: (0, i.jsx)(y.Z, { entrypoint: t })
+                    children: (0, i.jsx)(Z.Z, { entrypoint: t })
                 })
               : (0, i.jsx)('div', {
                     className: l()(M.container, M.loading),

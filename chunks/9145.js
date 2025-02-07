@@ -53,8 +53,8 @@ function B(e) {
             (0, Z.tg)(L.Ez.PIP);
         }, []),
         X = l.useRef(null),
-        Q = (0, s.e7)([N.ZP], () => N.ZP.getFocusedLayout()),
-        J = Q !== L.MI.NO_CHAT,
+        J = (0, s.e7)([N.ZP], () => N.ZP.getFocusedLayout()),
+        Q = J !== L.MI.NO_CHAT,
         [$, ee] = l.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : a),
         et = l.useCallback((e) => {
             d.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
@@ -130,7 +130,7 @@ function B(e) {
                       }
                     : i;
             }, [o, e, n, t]);
-        })(J, $, a);
+        })(Q, $, a);
     if (null == G) return null;
     let em = [];
     null != ec &&
@@ -164,7 +164,7 @@ function B(e) {
         theme: k.BRd.DARK,
         children: (e) =>
             (0, i.jsxs)('div', {
-                className: r()(D.wrapper, U[Q], e),
+                className: r()(D.wrapper, U[J], e),
                 ref: X,
                 style: ep,
                 children: [
@@ -172,7 +172,7 @@ function B(e) {
                     (0, i.jsxs)('div', {
                         className: D.activityPanelContainer,
                         children: [
-                            J
+                            Q
                                 ? null
                                 : (0, i.jsx)('div', {
                                       className: D.header,
@@ -259,7 +259,7 @@ function B(e) {
                                 : null
                         ]
                     }),
-                    J
+                    Q
                         ? (0, i.jsx)(p.Z, {
                               minHeight: 480,
                               maxHeight: a,

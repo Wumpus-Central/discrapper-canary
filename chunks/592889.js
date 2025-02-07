@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(47120);
+n.d(t, { Z: () => I }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -19,12 +19,12 @@ var i = n(200651),
     f = n(937615),
     T = n(388032),
     N = n(104489);
-function I(e) {
+function S(e) {
     let { subscription: t, renewalMutations: n, transitionState: s, onClose: r, analyticsLocation: l } = e,
         a = (0, c.e7)([x.Z], () => x.Z.theme),
-        { analyticsLocations: I } = (0, g.ZP)(h.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
-    async function S() {
-        await (0, m.dP)(t, t.planId, I, l), r();
+        { analyticsLocations: S } = (0, g.ZP)(h.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
+    async function I() {
+        await (0, m.dP)(t, t.planId, S, l), r();
     }
     let b = E.Z.get(t.planId);
     o()(null != b, 'Missing subscriptionPlan');
@@ -64,7 +64,7 @@ function I(e) {
             (0, i.jsxs)(u.mzw, {
                 children: [
                     (0, i.jsx)(u.zxk, {
-                        onClick: S,
+                        onClick: I,
                         children: T.intl.string(T.t.frE8KC)
                     }),
                     (0, i.jsx)(u.zxk, {
@@ -78,7 +78,7 @@ function I(e) {
         ]
     });
 }
-function S(e) {
+function I(e) {
     let { subscription: t, renewalMutations: n, className: r, analyticsLocation: a } = e,
         [o, c] = s.useState(!1);
     return (0, i.jsxs)('div', {
@@ -111,7 +111,7 @@ function S(e) {
                 ? (0, i.jsx)(u.u_l, {
                       renderModal: (e) => {
                           let { transitionState: s } = e;
-                          return (0, i.jsx)(I, {
+                          return (0, i.jsx)(S, {
                               subscription: t,
                               renewalMutations: n,
                               transitionState: s,

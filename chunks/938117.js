@@ -18,33 +18,33 @@ var i = n(200651),
     C = n(388032),
     f = n(858495);
 function T(e) {
-    let { onLearnMore: t, selectedBackgroundOption: T, onSelectBackgroundOption: N, currentDeviceId: I, smallerBackgroundOptions: S, className: b } = e,
+    let { onLearnMore: t, selectedBackgroundOption: T, onSelectBackgroundOption: N, currentDeviceId: S, smallerBackgroundOptions: I, className: b } = e,
         v = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
         [j, A] = s.useState(null),
         O = (0, g.Z)(),
         R = c.ZP.canUseCustomBackgrounds(v),
         P = (0, r.cj)([u.Z], () => (R ? u.Z.videoFilterAssets : {})),
         D = s.useMemo(() => Object.values(P).filter((e) => e.type === x.xV.BACKGROUND), [P]),
-        Z = (0, a.O)(),
-        y = {
+        y = (0, a.O)(),
+        Z = {
             isVideoBackgroundSupported: O,
             onSelectBackgroundOption: N,
             selectedBackgroundOption: T
         },
-        k = s.useRef(y);
+        k = s.useRef(Z);
     s.useEffect(() => {
-        k.current = y;
+        k.current = Z;
     }),
         s.useEffect(() => {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = k.current;
-            e ? (0, h.FU)(n, I, { track: !1 }).catch(() => t(null)) : null != n && t(null);
-        }, [I]);
+            e ? (0, h.FU)(n, S, { track: !1 }).catch(() => t(null)) : null != n && t(null);
+        }, [S]);
     let L = (e) => {
         N(e),
-            (0, h.FU)(e, I, { location: Z.location })
+            (0, h.FU)(e, S, { location: y.location })
                 .then(() => A(null))
                 .catch(() => {
-                    A(C.intl.string(C.t.ejrSLS)), (0, h.FU)(null, I, { location: Z.location });
+                    A(C.intl.string(C.t.ejrSLS)), (0, h.FU)(null, S, { location: y.location });
                 });
     };
     return O
@@ -71,7 +71,7 @@ function T(e) {
                                       ...n,
                                       onLearnMore: t,
                                       analyticsSource: {
-                                          ...Z.location,
+                                          ...y.location,
                                           object: p.qAy.BUTTON_CTA
                                       }
                                   });
@@ -89,7 +89,7 @@ function T(e) {
                               i();
                           });
                       },
-                      smallerOptions: S
+                      smallerOptions: I
                   })
               ]
           })

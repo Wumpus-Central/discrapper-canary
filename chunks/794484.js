@@ -48,19 +48,19 @@ let f = (e) => {
     },
     T = (e) => {
         var t, n;
-        let { className: r, variant: T = x.R0.PERKS_DISCOVERABILITY, noBackground: N = !1, leftAlignHeaders: I = !1, showAllPerksButton: S, headerClassname: b, isFullScreen: v = !0, shouldAutoScroll: j = !1 } = e,
+        let { className: r, variant: T = x.R0.PERKS_DISCOVERABILITY, noBackground: N = !1, leftAlignHeaders: S = !1, showAllPerksButton: I, headerClassname: b, isFullScreen: v = !0, shouldAutoScroll: j = !1 } = e,
             A = s.useRef(null),
             O = (0, u.yQ)(),
             R = (0, m.vi)(O),
             P = (0, d.ZP)('perks-discoverability'),
             D = T === x.R0.WHATS_NEW,
-            Z = (0, u.IY)(),
-            y = (0, g.x)();
+            y = (0, u.IY)(),
+            Z = (0, g.x)();
         s.useEffect(() => {
-            D && !R && (Z(), y());
-        }, [Z, y, D, R]);
+            D && !R && (y(), Z());
+        }, [y, Z, D, R]);
         let k = () => {
-                D && R && Z();
+                D && R && y();
             },
             L = R && D;
         (0, h.r)({
@@ -98,15 +98,15 @@ let f = (e) => {
                     className: l()(
                         C.section,
                         {
-                            [C.centerAlignSection]: !I,
-                            [C.leftAlignSection]: I
+                            [C.centerAlignSection]: !S,
+                            [C.leftAlignSection]: S
                         },
                         r
                     ),
                     children: [
                         (0, i.jsx)(f, {
-                            showAllPerksButton: S,
-                            leftAlignHeaders: I,
+                            showAllPerksButton: I,
+                            leftAlignHeaders: S,
                             title: B.title,
                             headerClassname: b
                         }),
@@ -114,20 +114,20 @@ let f = (e) => {
                             variant: 'text-lg/normal',
                             color: 'header-primary',
                             className: l()(C.subtitle, {
-                                [C.subtitle]: null == S || I,
-                                [C.subtitleWithButton]: null != S && !I,
-                                [C.fullWidth]: D || I,
+                                [C.subtitle]: null == I || S,
+                                [C.subtitleWithButton]: null != I && !S,
+                                [C.fullWidth]: D || S,
                                 [C.moreSubtitleMargin]: G,
-                                [C.leftAlignSubtitle]: I,
-                                [C.centerAlignSubtitle]: !I
+                                [C.leftAlignSubtitle]: S,
+                                [C.centerAlignSubtitle]: !S
                             }),
                             children: B.subtitle
                         }),
-                        !I &&
-                            null != S &&
+                        !S &&
+                            null != I &&
                             (0, i.jsx)('div', {
                                 className: l()(C.showAllPerksButtonCenter),
-                                children: S
+                                children: I
                             }),
                         (0, i.jsx)('div', {
                             className: l()({

@@ -1,6 +1,6 @@
 n.d(t, {
     GN: () => I,
-    be: () => m,
+    be: () => _,
     g4: () => E,
     m7: () => v,
     r4: () => S,
@@ -22,9 +22,9 @@ var i = n(991637),
     h = n(144507),
     g = n(853439),
     f = n(981631),
-    C = n(176505);
+    p = n(176505);
 l().shim();
-let p = {};
+let C = {};
 function v(e) {
     let t = (0, r.e7)([o.Z], () => o.Z.getChannel(e)),
         n = (0, r.e7)([g.Z], () => g.Z.getChannel(e));
@@ -51,7 +51,7 @@ function E(e, t, n) {
     for (let e = h + 1; e < t.length && (d.has(t[e]) || g.push(t[e]), 3 !== g.length); e++);
     return g;
 }
-function _(e) {
+function m(e) {
     let t = c.n.getState().editStateIdsForGroup[e],
         n = c.n.getState().listings,
         i = new Set();
@@ -74,11 +74,11 @@ function _(e) {
     }
     return l;
 }
-function m(e) {
-    let t = _(e);
-    (p[e] = t),
+function _(e) {
+    let t = m(e);
+    (C[e] = t),
         t.forEach((e) => {
-            let t = e.set('flags', C.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+            let t = e.set('flags', p.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
             s.Z.dispatch({
                 type: 'CHANNEL_CREATE',
                 channel: t
@@ -87,7 +87,7 @@ function m(e) {
 }
 function I(e) {
     var t;
-    (null !== (t = p[e]) && void 0 !== t ? t : _(e)).forEach((e) => {
+    (null !== (t = C[e]) && void 0 !== t ? t : m(e)).forEach((e) => {
         s.Z.dispatch({
             type: 'CHANNEL_DELETE',
             channel: e

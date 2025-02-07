@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(53691),
     T = n(165583),
     N = n(267717),
-    I = n(350327),
-    S = n(996073),
+    S = n(350327),
+    I = n(996073),
     b = n(25990),
     v = n(626135),
     j = n(74538),
@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(532432),
     P = n(504983),
     D = n(134795),
-    Z = n(513901),
-    y = n(451392),
+    y = n(513901),
+    Z = n(451392),
     k = n(490220),
     L = n(981631),
     B = n(474936),
@@ -46,8 +46,8 @@ function U(e) {
             pendingThemeColors: Y,
             tryItOutThemeColors: W,
             tryItOutAvatar: K,
-            tryItOutBanner: X,
-            tryItOutProfileEffectId: q,
+            tryItOutBanner: q,
+            tryItOutProfileEffectId: X,
             tryItOutAvatarDecoration: J
         } = (0, r.cj)([b.Z], () => {
             let e = b.Z.getAllPending(),
@@ -59,14 +59,14 @@ function U(e) {
                 errors: t
             };
         }),
-        Q = (0, _.Z)(q),
+        Q = (0, _.Z)(X),
         $ = s.useRef(null);
-    (0, S.Z)($, M.Y_.TRY_IT_OUT);
+    (0, I.Z)($, M.Y_.TRY_IT_OUT);
     let { analyticsLocations: ee, sourceAnalyticsLocations: et } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
         [en, ei] = s.useState(Math.floor(Math.random() * E.J2.length)),
         es = (e) => {
             if (e) {
-                if (((0, a.I5)(K), (0, I.z5)(W), (0, I.ho)(X), null != J)) {
+                if (((0, a.I5)(K), (0, S.z5)(W), (0, S.ho)(q), null != J)) {
                     let e = m.Z.getProduct(J.skuId);
                     null != e && (0, g.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(J)) : null != h.Z.getPurchase(J.skuId) && (0, a.cV)(J);
                 }
@@ -140,26 +140,26 @@ function U(e) {
                                           })
                                       ]
                                   }),
-                                  (0, i.jsx)(y.Z, {
+                                  (0, i.jsx)(Z.Z, {
                                       className: V.customizationSection,
                                       user: U,
                                       pendingAvatar: null != K ? K : z,
                                       pendingColors: null != W ? W : Y,
-                                      onThemeColorsChange: I.rf,
+                                      onThemeColorsChange: S.rf,
                                       showPremiumIcon: !1,
                                       preventDisabled: !0
                                   }),
                                   (0, i.jsx)(D.Z, {
                                       className: V.customizationSection,
                                       isTryItOutFlow: !0,
-                                      showRemoveBannerButton: null != X,
-                                      onBannerChange: I.f4,
+                                      showRemoveBannerButton: null != q,
+                                      onBannerChange: S.f4,
                                       showPremiumIcon: !1
                                   }),
                                   (0, i.jsx)(R.Z, {
                                       className: V.customizationSection,
                                       isTryItOutFlow: !0,
-                                      onAvatarChange: I.c_,
+                                      onAvatarChange: S.c_,
                                       showRemoveAvatarButton: !1,
                                       changeAvatarButtonText: w.intl.string(w.t['7z0D1d']),
                                       sectionTitle: w.intl.string(w.t.vtFfPT)
@@ -175,7 +175,7 @@ function U(e) {
                                       'decoration'
                                   ),
                                   (0, i.jsx)(
-                                      Z.Z,
+                                      y.Z,
                                       {
                                           className: V.customizationSection,
                                           isTryItOutFlow: !0,

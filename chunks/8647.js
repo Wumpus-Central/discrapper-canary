@@ -23,7 +23,7 @@ let T = function (e) {
         { promotion: T } = (0, x.mq)(),
         N = (0, l.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
     if (!(0, g.Vi)()) return null;
-    let I = new Date(T.endDate);
+    let S = new Date(T.endDate);
     return (0, i.jsx)(c.O, {
         newLocations: [o.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, i.jsxs)('div', {
@@ -50,7 +50,7 @@ let T = function (e) {
                                 (0, i.jsx)(a.Text, {
                                     className: f.countdown,
                                     variant: 'text-sm/bold',
-                                    children: (0, i.jsx)(h.Z, { endDate: I })
+                                    children: (0, i.jsx)(h.Z, { endDate: S })
                                 }),
                                 (0, i.jsx)(a.Text, {
                                     variant: 'text-sm/medium',

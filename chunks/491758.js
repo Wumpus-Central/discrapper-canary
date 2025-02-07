@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(39604),
     T = n(442334),
     N = n(356659),
-    I = n(981631),
-    S = n(37113),
+    S = n(981631),
+    I = n(37113),
     b = n(526761),
     v = n(388032),
     j = n(713903),
@@ -30,11 +30,11 @@ function R() {
     let e = (0, a.e7)([g.Z], () => g.Z.getHardwareEncoding()),
         { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: r, clipsLength: R, clipsQuality: P } = (0, a.cj)([p.Z], () => p.Z.getSettings()),
         D = (0, a.e7)([p.Z], () => p.Z.getHardwareClassification()),
-        Z = (0, a.e7)([_.Z], () => _.Z.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
-        y = p.Z.isDecoupledGameClippingEnabled(),
+        y = (0, a.e7)([_.Z], () => _.Z.getKeybindForAction(S.kg4.SAVE_CLIP, !0)),
+        Z = p.Z.isDecoupledGameClippingEnabled(),
         k = (0, C.Z)(g.Z),
         { showClipsHeaderEntrypoint: L } = x.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
-    l()(null != Z, 'Save clip keybind unset');
+    l()(null != y, 'Save clip keybind unset');
     let B = (0, a.e7)([m.default], () => m.default.locale),
         M = s.useMemo(
             () => [
@@ -56,23 +56,23 @@ function R() {
         w = s.useMemo(
             () => [
                 {
-                    value: S.LY.RESOLUTION_480,
-                    label: v.intl.formatToPlainString(v.t.TEOC0N, { resolution: S.LY.RESOLUTION_480 })
+                    value: I.LY.RESOLUTION_480,
+                    label: v.intl.formatToPlainString(v.t.TEOC0N, { resolution: I.LY.RESOLUTION_480 })
                 },
                 {
-                    value: S.LY.RESOLUTION_720,
-                    label: v.intl.formatToPlainString(v.t.TEOC0N, { resolution: S.LY.RESOLUTION_720 })
+                    value: I.LY.RESOLUTION_720,
+                    label: v.intl.formatToPlainString(v.t.TEOC0N, { resolution: I.LY.RESOLUTION_720 })
                 },
                 {
-                    value: S.LY.RESOLUTION_1080,
-                    label: v.intl.formatToPlainString(v.t.TEOC0N, { resolution: S.LY.RESOLUTION_1080 })
+                    value: I.LY.RESOLUTION_1080,
+                    label: v.intl.formatToPlainString(v.t.TEOC0N, { resolution: I.LY.RESOLUTION_1080 })
                 },
                 {
-                    value: S.LY.RESOLUTION_1440,
-                    label: v.intl.formatToPlainString(v.t.TEOC0N, { resolution: S.LY.RESOLUTION_1440 })
+                    value: I.LY.RESOLUTION_1440,
+                    label: v.intl.formatToPlainString(v.t.TEOC0N, { resolution: I.LY.RESOLUTION_1440 })
                 },
                 {
-                    value: S.LY.RESOLUTION_SOURCE,
+                    value: I.LY.RESOLUTION_SOURCE,
                     label: v.intl.string(v.t.XjXqzs)
                 }
             ],
@@ -81,16 +81,16 @@ function R() {
         V = s.useMemo(
             () => [
                 {
-                    value: S.ws.FPS_15,
-                    label: v.intl.formatToPlainString(v.t.Qb44XF, { fps: S.ws.FPS_15 })
+                    value: I.ws.FPS_15,
+                    label: v.intl.formatToPlainString(v.t.Qb44XF, { fps: I.ws.FPS_15 })
                 },
                 {
-                    value: S.ws.FPS_30,
-                    label: v.intl.formatToPlainString(v.t.Qb44XF, { fps: S.ws.FPS_30 })
+                    value: I.ws.FPS_30,
+                    label: v.intl.formatToPlainString(v.t.Qb44XF, { fps: I.ws.FPS_30 })
                 },
                 {
-                    value: S.ws.FPS_60,
-                    label: v.intl.formatToPlainString(v.t.Qb44XF, { fps: S.ws.FPS_60 })
+                    value: I.ws.FPS_60,
+                    label: v.intl.formatToPlainString(v.t.Qb44XF, { fps: I.ws.FPS_60 })
                 }
             ],
             [B]
@@ -98,11 +98,11 @@ function R() {
         U = s.useCallback(
             (e) => {
                 c.Z.setKeybind({
-                    ...Z,
+                    ...y,
                     shortcut: e
                 });
             },
-            [Z]
+            [y]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -113,7 +113,7 @@ function R() {
                         (0, i.jsx)(h.Z, {
                             look: h.z.WARNING,
                             className: A.formItem,
-                            children: v.intl.format(v.t.kiaF4e, { onClick: () => d.Z.open(I.oAB.VOICE, null, { scrollPosition: b.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
+                            children: v.intl.format(v.t.kiaF4e, { onClick: () => d.Z.open(S.oAB.VOICE, null, { scrollPosition: b.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
                     D === E.x.BELOW_MINIMUM
                         ? (0, i.jsx)(h.Z, {
@@ -142,7 +142,7 @@ function R() {
                         })
                 ]
             }),
-            y &&
+            Z &&
                 k &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -226,7 +226,7 @@ function R() {
                         children: (0, i.jsx)('div', {
                             className: j.keyRecorder,
                             children: (0, i.jsx)(u.Z, {
-                                defaultValue: Z.shortcut,
+                                defaultValue: y.shortcut,
                                 onChange: U
                             })
                         })

@@ -53,8 +53,8 @@ function N() {
             theme: p.Z.theme,
             platformZoom: h.Z.zoom
         })),
-        [N, I] = s.useState('upright'),
-        S = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
+        [N, S] = s.useState('upright'),
+        I = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
         b = new Map([
             ['normal', 400],
             ['medium', 500],
@@ -178,7 +178,7 @@ function N() {
                                     }
                                 ],
                                 onChange: (e) => {
-                                    I(e.value);
+                                    S(e.value);
                                 },
                                 value: N
                             })
@@ -193,7 +193,7 @@ function N() {
                     className: f.textGrid,
                     children: [
                         (0, i.jsx)('div', {}),
-                        S.map((e) =>
+                        I.map((e) =>
                             (0, i.jsx)(
                                 'div',
                                 {
@@ -231,7 +231,7 @@ function N() {
                                             },
                                             e
                                         ),
-                                        S.map((t) => {
+                                        I.map((t) => {
                                             var n;
                                             let s = null !== (n = 'custom' === R ? A : R) && void 0 !== n ? n : '';
                                             return (0, i.jsx)(

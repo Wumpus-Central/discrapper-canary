@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(386506),
     T = n(865427),
     N = n(802098),
-    I = n(663993),
-    S = n(600164),
+    S = n(663993),
+    I = n(600164),
     b = n(118012),
     v = n(482215),
     j = n(38618),
@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(388627),
     P = n(921801),
     D = n(857192),
-    Z = n(558724),
-    y = n(808506),
+    y = n(558724),
+    Z = n(808506),
     k = n(998502),
     L = n(210887),
     B = n(601948),
@@ -68,21 +68,21 @@ let Y = ['discord_web', 'discord_marketing', 'discord_developers', 'discord_ios'
 function K(e) {
     return 'discord_ios' in e || 'discord_android' in e;
 }
-class X extends s.Component {
+class q extends s.Component {
     render() {
         let { project: e, overrideType: t, overrideId: n, disabled: s, error: r } = this.props;
-        return (0, i.jsxs)(S.Z, {
-            direction: S.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(I.Z, {
+            direction: I.Z.Direction.VERTICAL,
             className: l()(U.buildOverrideGroup, F.marginBottom20, G.card, U.row),
             children: [
                 (0, i.jsx)(p.Z, {
                     className: l()(U.removeBuildOverride, { [U.removeBuildOverrideDisabled]: s }),
                     onClick: s ? void 0 : this.handleRemoveBuildOverride
                 }),
-                (0, i.jsxs)(S.Z, {
+                (0, i.jsxs)(I.Z, {
                     className: F.marginBottom8,
                     children: [
-                        (0, i.jsx)(S.Z.Child, {
+                        (0, i.jsx)(I.Z.Child, {
                             basis: '50%',
                             children: (0, i.jsx)(m.xJW, {
                                 title: 'Override Type',
@@ -95,7 +95,7 @@ class X extends s.Component {
                                 })
                             })
                         }),
-                        (0, i.jsx)(S.Z.Child, {
+                        (0, i.jsx)(I.Z.Child, {
                             basis: '50%',
                             children: (0, i.jsx)(m.xJW, {
                                 title: 'branch' === t ? 'Branch Name' : 'Commit SHA',
@@ -109,7 +109,7 @@ class X extends s.Component {
                         })
                     ]
                 }),
-                (0, i.jsxs)(S.Z.Child, {
+                (0, i.jsxs)(I.Z.Child, {
                     children: [
                         null != r &&
                             '' !== r &&
@@ -145,7 +145,7 @@ class X extends s.Component {
             });
     }
 }
-class q extends s.Component {
+class X extends s.Component {
     async refreshBuildOverrides() {
         this.setState({ loading: !0 });
         let e = await (0, T.Ce)();
@@ -190,7 +190,7 @@ class q extends s.Component {
             ? null
             : o().map(e, (e, s) =>
                   (0, i.jsx)(
-                      X,
+                      q,
                       {
                           project: s,
                           overrideType: e.type,
@@ -207,10 +207,10 @@ class q extends s.Component {
     renderRefreshButton() {
         return !this.state.didSave || this.isDirty()
             ? null
-            : (0, i.jsx)(S.Z, {
+            : (0, i.jsx)(I.Z, {
                   grow: 0,
-                  direction: S.Z.Direction.HORIZONTAL_REVERSE,
-                  children: (0, i.jsx)(S.Z.Child, {
+                  direction: I.Z.Direction.HORIZONTAL_REVERSE,
+                  children: (0, i.jsx)(I.Z.Child, {
                       grow: 0,
                       children: (0, i.jsx)(m.zxk, {
                           onClick: () => location.reload(),
@@ -224,10 +224,10 @@ class q extends s.Component {
         let { buildOverrides: e } = this.state;
         return null == e || 0 === Object.keys(e).length
             ? null
-            : (0, i.jsx)(S.Z, {
+            : (0, i.jsx)(I.Z, {
                   grow: 0,
-                  direction: S.Z.Direction.HORIZONTAL_REVERSE,
-                  children: (0, i.jsx)(S.Z.Child, {
+                  direction: I.Z.Direction.HORIZONTAL_REVERSE,
+                  children: (0, i.jsx)(I.Z.Child, {
                       grow: 0,
                       children: (0, i.jsx)(m.zxk, {
                           onClick: this.handleLinkGeneration,
@@ -240,11 +240,11 @@ class q extends s.Component {
     renderSaveButton() {
         if (!this.isDirty()) return null;
         let { saving: e, buildOverrides: t } = this.state;
-        return (0, i.jsxs)(S.Z, {
+        return (0, i.jsxs)(I.Z, {
             grow: 0,
-            direction: S.Z.Direction.HORIZONTAL_REVERSE,
+            direction: I.Z.Direction.HORIZONTAL_REVERSE,
             children: [
-                (0, i.jsx)(S.Z.Child, {
+                (0, i.jsx)(I.Z.Child, {
                     grow: 0,
                     children: (0, i.jsx)(m.zxk, {
                         disabled: K(null != t ? t : {}),
@@ -254,7 +254,7 @@ class q extends s.Component {
                         children: 'Save Build Overrides'
                     })
                 }),
-                (0, i.jsx)(S.Z.Child, {
+                (0, i.jsx)(I.Z.Child, {
                     grow: 0,
                     children: (0, i.jsx)(m.zxk, {
                         onClick: this.handleDiscardChanges,
@@ -284,16 +284,16 @@ class q extends s.Component {
             children: (0, i.jsxs)(m.hjN, {
                 className: F.marginTop60,
                 children: [
-                    (0, i.jsxs)(S.Z, {
+                    (0, i.jsxs)(I.Z, {
                         className: F.marginBottom20,
                         children: [
-                            (0, i.jsx)(S.Z.Child, {
+                            (0, i.jsx)(I.Z.Child, {
                                 children: (0, i.jsx)(m.vwX, {
                                     tag: m.RB0.H1,
                                     children: 'Build Overrides'
                                 })
                             }),
-                            (0, i.jsx)(S.Z.Child, {
+                            (0, i.jsx)(I.Z.Child, {
                                 grow: 0,
                                 children: (0, i.jsx)(m.zxk, {
                                     size: m.PhG.SMALL,
@@ -305,14 +305,14 @@ class q extends s.Component {
                         ]
                     }),
                     (0, i.jsx)(m.$i$, {}),
-                    (0, i.jsxs)(S.Z, {
-                        direction: S.Z.Direction.VERTICAL,
+                    (0, i.jsxs)(I.Z, {
+                        direction: I.Z.Direction.VERTICAL,
                         children: [
                             l,
                             e,
-                            (0, i.jsxs)(S.Z, {
+                            (0, i.jsxs)(I.Z, {
                                 grow: 0,
-                                direction: S.Z.Direction.HORIZONTAL_REVERSE,
+                                direction: I.Z.Direction.HORIZONTAL_REVERSE,
                                 children: [this.renderRefreshButton(), this.renderSaveButton(), this.renderLinkButton()]
                             })
                         ]
@@ -462,7 +462,7 @@ class J extends s.Component {
                 label: e,
                 value: e
             }));
-        return (0, i.jsxs)(S.Z.Child, {
+        return (0, i.jsxs)(I.Z.Child, {
             basis: '70%',
             children: [
                 (0, i.jsx)(m.xJW, {
@@ -491,10 +491,10 @@ class J extends s.Component {
                               (0, i.jsx)(m.xJW, {
                                   title: 'Add allowed app version (required)',
                                   className: F.marginBottom20,
-                                  children: (0, i.jsxs)(S.Z, {
-                                      direction: S.Z.Direction.HORIZONTAL,
+                                  children: (0, i.jsxs)(I.Z, {
+                                      direction: I.Z.Direction.HORIZONTAL,
                                       children: [
-                                          (0, i.jsx)(S.Z.Child, {
+                                          (0, i.jsx)(I.Z.Child, {
                                               wrap: !0,
                                               basis: '90%',
                                               children: (0, i.jsx)(m.oil, {
@@ -533,9 +533,9 @@ class J extends s.Component {
                               title: 'Limit to User IDs (optional)',
                               className: F.marginBottom20,
                               children: [
-                                  (0, i.jsx)(S.Z, {
-                                      direction: S.Z.Direction.HORIZONTAL,
-                                      children: (0, i.jsx)(S.Z.Child, {
+                                  (0, i.jsx)(I.Z, {
+                                      direction: I.Z.Direction.HORIZONTAL,
+                                      children: (0, i.jsx)(I.Z.Child, {
                                           wrap: !0,
                                           basis: '90%',
                                           children: (0, i.jsx)(m.Kx8, {
@@ -559,9 +559,9 @@ class J extends s.Component {
                     title: 'Client Experiment Override',
                     className: F.marginBottom20,
                     children: [
-                        (0, i.jsx)(S.Z, {
-                            direction: S.Z.Direction.HORIZONTAL,
-                            children: (0, i.jsx)(S.Z.Child, {
+                        (0, i.jsx)(I.Z, {
+                            direction: I.Z.Direction.HORIZONTAL,
+                            children: (0, i.jsx)(I.Z.Child, {
                                 wrap: !0,
                                 basis: '90%',
                                 children: (0, i.jsx)(m.Kx8, {
@@ -591,7 +591,7 @@ class J extends s.Component {
     renderPayloadBlock() {
         let e = JSON.stringify(this.generatePayload(), null, 2),
             t = () => e,
-            s = (0, i.jsx)(I.GI, {
+            s = (0, i.jsx)(S.GI, {
                 createPromise: () => Promise.resolve().then(n.bind(n, 364964)),
                 webpackId: 364964,
                 renderFallback: t,
@@ -605,7 +605,7 @@ class J extends s.Component {
                           });
                 }
             });
-        return (0, i.jsx)(S.Z.Child, { children: (0, i.jsx)(m.Zbd, { children: (0, i.jsx)('pre', { children: s }) }) });
+        return (0, i.jsx)(I.Z.Child, { children: (0, i.jsx)(m.Zbd, { children: (0, i.jsx)('pre', { children: s }) }) });
     }
     renderLinkForm() {
         let { statusTextColor: e, statusText: t, publicLink: n } = this.state;
@@ -613,9 +613,9 @@ class J extends s.Component {
             children: [
                 (0, i.jsx)(m.xJW, {
                     title: 'Signed Link',
-                    children: (0, i.jsxs)(S.Z, {
+                    children: (0, i.jsxs)(I.Z, {
                         children: [
-                            (0, i.jsx)(S.Z.Child, {
+                            (0, i.jsx)(I.Z.Child, {
                                 wrap: !0,
                                 basis: '75%',
                                 children: (0, i.jsx)(E.Z, { value: n })
@@ -643,7 +643,7 @@ class J extends s.Component {
             'aria-label': 'Generate Public Build Override Link',
             children: [
                 (0, i.jsxs)(m.xBx, {
-                    justify: S.Z.Justify.BETWEEN,
+                    justify: I.Z.Justify.BETWEEN,
                     separator: !1,
                     children: [
                         (0, i.jsx)(m.X6q, {
@@ -655,7 +655,7 @@ class J extends s.Component {
                 }),
                 (0, i.jsxs)(m.hzk, {
                     children: [
-                        (0, i.jsxs)(S.Z, {
+                        (0, i.jsxs)(I.Z, {
                             children: [this.renderSettingsForm(), this.renderPayloadBlock()]
                         }),
                         this.renderLinkForm()
@@ -874,7 +874,7 @@ function ee() {
         o = e || t === C.R5.OUT_OF_PROCESS_V2 || t === C.R5.OUT_OF_PROCESS_V3 || t === C.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
     return (s.useEffect(() => {
         (async () => {
-            a(await (0, y.Y)());
+            a(await (0, Z.Y)());
         })();
     }, []),
     n)
@@ -1151,7 +1151,7 @@ let et = d.ZP.connectStores([D.default], () => ({
     });
 });
 function en() {
-    let e = (0, d.e7)([Z.Z], () => Z.Z.getSurveyOverride()),
+    let e = (0, d.e7)([y.Z], () => y.Z.getSurveyOverride()),
         [t, n] = s.useState(null != e ? e : '');
     return (0, i.jsx)(P.F, {
         setting: M.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
@@ -1218,7 +1218,7 @@ function ei() {
 class es extends s.PureComponent {
     render() {
         return (0, i.jsxs)(s.Fragment, {
-            children: [(0, i.jsx)(et, {}), (0, i.jsx)(ee, {}), (0, i.jsx)(en, {}), (0, i.jsx)(ei, {}), (0, i.jsx)(q, {})]
+            children: [(0, i.jsx)(et, {}), (0, i.jsx)(ee, {}), (0, i.jsx)(en, {}), (0, i.jsx)(ei, {}), (0, i.jsx)(X, {})]
         });
     }
 }

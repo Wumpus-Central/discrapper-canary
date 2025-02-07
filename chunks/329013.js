@@ -1,6 +1,6 @@
 n.d(t, {
     g: () => k,
-    i: () => Z
+    i: () => y
 });
 var i = n(200651),
     s = n(192379),
@@ -22,8 +22,8 @@ var i = n(200651),
     f = n(639119),
     T = n(311476),
     N = n(165583),
-    I = n(197115),
-    S = n(504983),
+    S = n(197115),
+    I = n(504983),
     b = n(626135),
     v = n(210887),
     j = n(981631),
@@ -39,7 +39,7 @@ let D = () => {
             (0, g.Kq)(),
             (0, c.xf)();
     },
-    Z = () => {
+    y = () => {
         var e, t;
         let { analyticsLocations: n } = (0, h.ZP)(m.Z.USER_SETTINGS),
             l = (0, r.e7)([_.Z], () => _.Z.isPreview),
@@ -67,7 +67,7 @@ let D = () => {
                                   onClick: () => D(),
                                   children: g ? R.intl.string(R.t.SKNnqq) : R.intl.string(R.t['E+COuL'])
                               }),
-                              (0, i.jsx)(I.Z, {
+                              (0, i.jsx)(S.Z, {
                                   showGradient: g,
                                   subscriptionTier: O.Si.TIER_2,
                                   buttonText: g ? R.intl.string(R.t.pj0XBA) : d ? R.intl.formatToPlainString(R.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : R.intl.string(R.t.mr4K7O),
@@ -94,17 +94,17 @@ let D = () => {
                                           className: P.basicThemeSelectors,
                                           renderCTAButtons: v
                                       }),
-                                      E && (0, i.jsx)(y, {})
+                                      E && (0, i.jsx)(Z, {})
                                   ]
                               })
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(x.ZP.Basic, { className: P.basicThemeSelectors }),
-                                      E && (0, i.jsx)(y, {}),
-                                      (0, i.jsxs)(S.Z, {
+                                      E && (0, i.jsx)(Z, {}),
+                                      (0, i.jsxs)(I.Z, {
                                           className: P.featureBorder,
                                           isShown: l,
-                                          type: S.Y.PREMIUM,
+                                          type: I.Y.PREMIUM,
                                           children: [
                                               (0, i.jsx)(x.ZP.Gradient, {
                                                   disabled: l,
@@ -137,7 +137,7 @@ let D = () => {
             })
         );
     };
-function y() {
+function Z() {
     let {
         theme: e,
         useForcedColors: t,

@@ -20,7 +20,7 @@ let p = function (e) {
         f = null === (t = (0, u.N)()) || void 0 === t ? void 0 : t.subscription_trial,
         T = (0, d.Ng)(),
         N = (0, d.Wp)(T, g.Si.TIER_2) ? g.Si.TIER_2 : void 0,
-        I = (0, o.q_F)({
+        S = (0, o.q_F)({
             transform: s ? 'translateY(-100%)' : 'translateY(0%)',
             opacity: s ? 1 : 0,
             config: {
@@ -28,7 +28,7 @@ let p = function (e) {
                 friction: 12
             }
         }),
-        S = { section: _.jXE.MARKETING_FLOATING_CTA },
+        I = { section: _.jXE.MARKETING_FLOATING_CTA },
         b = (0, c.ZP)(),
         v = (0, a.wj)(b);
     return (0, i.jsx)(l.animated.div, {
@@ -36,19 +36,19 @@ let p = function (e) {
             [x.fullscreenWrapper]: p,
             [x.invisible]: !s
         }),
-        style: I,
+        style: S,
         children: (0, i.jsxs)('div', {
             className: C ? x.innerWrapperV2 : x.innerWrapperV1,
             children: [
                 (0, i.jsx)(h.Z, {
                     className: r()(x.button, { [x.subButton]: v }),
                     subscriptionTier: null !== (n = null != E ? E : null == f ? void 0 : f.sku_id) && void 0 !== n ? n : N,
-                    premiumModalAnalyticsLocation: S,
+                    premiumModalAnalyticsLocation: I,
                     isPersistentCTA: !0
                 }),
                 (0, i.jsx)(m.Z, {
                     className: x.button,
-                    premiumModalAnalyticsLocation: S
+                    premiumModalAnalyticsLocation: I
                 })
             ]
         })

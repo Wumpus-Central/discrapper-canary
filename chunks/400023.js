@@ -136,10 +136,10 @@ let B = l.memo(
                     });
             })(H.ref);
             let X = (0, c.mFp)(),
-                { ref: Q, ...J } = (0, s.l2)(G),
+                { ref: J, ...Q } = (0, s.l2)(G),
                 $ = (0, h.Z)((e) => {
                     var t;
-                    (H.ref.current = e), (Q.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
+                    (H.ref.current = e), (J.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
                 });
             return (0, i.jsxs)(s.bG, {
                 navigator: G,
@@ -166,7 +166,7 @@ let B = l.memo(
                                     (0, i.jsxs)('ol', {
                                         className: U.scrollerInner,
                                         'aria-label': w.intl.formatToPlainString(w.t.XarRiI, { channelName: m.name }),
-                                        ...J,
+                                        ...Q,
                                         children: [
                                             (0, i.jsx)('span', {
                                                 className: U.navigationDescription,

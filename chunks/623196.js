@@ -35,8 +35,8 @@ function T() {
         [r, T] = s.useState(!1);
     if (null == e) return null;
     let N = (0, m.$6)(t, e) || n,
-        I = null != t && l()().diff(l()(t.created_at), 'days') < p.eBq,
-        S = N && I,
+        S = null != t && l()().diff(l()(t.created_at), 'days') < p.eBq,
+        I = N && S,
         b = () => {
             f({
                 header: E.intl.string(E.t.jxXMEx),
@@ -73,7 +73,7 @@ function T() {
                 header: E.intl.string(E.t.XAHCgI),
                 description: E.intl.format(E.t.P3kNfn, { helpdeskArticle: u.Z.getArticleURL(p.BhN.GDPR_REQUEST_DATA) })
             }),
-            S
+            I
                 ? (0, i.jsx)(o.Zbd, {
                       className: C.card,
                       children: (0, i.jsx)(o.Text, {

@@ -61,15 +61,15 @@ function y(e) {
     L || K.push(r.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.Z)(t.id) && !L && K.push(r.z.ACTIVITY_GDM_ROCKET_SPARKLE);
     let { enabled: X } = x.nS.useExperiment({ location: 'CenterControlTrayActivityButton' });
     X && !L && K.push(r.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
-    let Q = l.useRef(!1);
+    let J = l.useRef(!1);
     return (0, i.jsx)(v.ZP, {
         contentTypes: K,
         children: (e) => {
             let { visibleContent: l, markAsDismissed: a } = e,
                 o = l === r.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !k;
             return (
-                !0 === Q.current && !1 === o && a(T.L.AUTO_DISMISS),
-                Q.current !== o && (Q.current = o),
+                !0 === J.current && !1 === o && a(T.L.AUTO_DISMISS),
+                J.current !== o && (J.current = o),
                 (0, i.jsx)(s.yRy, {
                     fixed: !0,
                     shouldShow: k && (y === Z.D.ACTIVITY || null == y),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i,
     l,
     r,
@@ -29,7 +29,7 @@ class f extends (i = a.ZP.Store) {
               writable: !0
           })
         : (f[l] = r);
-let C = new f(o.Z, {
+let p = new f(o.Z, {
     GUILD_CREATE: g,
     GUILD_DELETE: g,
     CONNECTION_RESUMED: h,

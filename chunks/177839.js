@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(47120);
+n.d(t, { Z: () => S }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -77,14 +77,14 @@ let f = (e) => (e ? E.intl.string(E.t.QX14gI) : E.intl.string(E.t.RGadQU)),
             })
         });
     },
-    I = (e) => {
+    S = (e) => {
         let { className: t, isSubscriberNitroHome: n = !1 } = e,
             [r, d] = s.useState(!1),
             m = (0, x.N)({ styles: C }),
             h = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
             { analyticsLocations: E } = (0, u.ZP)(),
-            I = (0, g._f)(),
-            S = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, I ? m.remix : m.videoBackground, m.superReactions, m.stickersPerkDiscoverability, m.badgeAlt];
+            S = (0, g._f)(),
+            I = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, S ? m.remix : m.videoBackground, m.superReactions, m.stickersPerkDiscoverability, m.badgeAlt];
         return (0, i.jsxs)('div', {
             className: l()(C.perksContainer, t, {
                 [C.partiallyHidden]: n && !r,
@@ -99,7 +99,7 @@ let f = (e) => (e ? E.intl.string(E.t.QX14gI) : E.intl.string(E.t.RGadQU)),
                 }),
                 (0, i.jsx)('div', {
                     className: l()(C.perkCardContainer, { [C.perkCardContainerExpanded]: r }),
-                    children: S.map((e) => null != e && (0, i.jsx)(N, { ...e }, e.title))
+                    children: I.map((e) => null != e && (0, i.jsx)(N, { ...e }, e.title))
                 }),
                 n &&
                     (0, i.jsxs)(i.Fragment, {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X }), n(47120);
+n.d(t, { Z: () => q }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(347649),
     T = n(332473),
     N = n(303172),
-    I = n(518560),
-    S = n(921801),
+    S = n(518560),
+    I = n(921801),
     b = n(484459),
     v = n(430824),
     j = n(325067),
@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(594174),
     P = n(626135),
     D = n(709054),
-    Z = n(706454),
-    y = n(210887),
+    y = n(706454),
+    Z = n(210887),
     k = n(418632),
     L = n(10298),
     B = n(526156),
@@ -163,7 +163,7 @@ class K extends s.PureComponent {
                           })
                       })
                     : null,
-                (0, i.jsx)(S.F, {
+                (0, i.jsx)(I.F, {
                     setting: G.s6.ACCOUNT_CHANGE_PASSWORD,
                     children: (0, i.jsx)('div', {
                         children: (0, i.jsx)(u.zxk, {
@@ -180,7 +180,7 @@ class K extends s.PureComponent {
                         })
                     })
                 }),
-                (0, i.jsx)(S.F, {
+                (0, i.jsx)(I.F, {
                     setting: G.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
                     children: (0, i.jsxs)(p.Z, {
                         align: p.Z.Align.STRETCH,
@@ -273,15 +273,15 @@ class K extends s.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 this.renderConfirmModals(),
-                (0, i.jsx)(S.F, {
+                (0, i.jsx)(I.F, {
                     setting: G.s6.ACCOUNT_PROFILE,
                     children: this.renderAccountSettings(!1)
                 }),
-                (0, i.jsx)(S.F, {
+                (0, i.jsx)(I.F, {
                     setting: G.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
                     children: this.renderSecuritySettings()
                 }),
-                (0, i.jsx)(S.F, {
+                (0, i.jsx)(I.F, {
                     setting: G.s6.ACCOUNT_REMOVAL,
                     children: this.renderAccountRemovalSettings()
                 })
@@ -308,7 +308,7 @@ class K extends s.PureComponent {
                     },
                     {
                         title: z.intl.string(z.t['Vov/9v']),
-                        component: I.Z,
+                        component: S.Z,
                         setting: G.s6.PRIVACY_AND_SAFETY_STANDING
                     }
                 ]
@@ -358,17 +358,17 @@ class K extends s.PureComponent {
             });
     }
 }
-let X = () => {
+let q = () => {
     let e = (0, c.e7)([R.default], () => {
             let e = R.default.getCurrentUser();
             return o()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e;
         }),
         t = (0, c.e7)([j.Z], () => j.Z.getBackupCodes()),
         n = (0, c.e7)([A.Z], () => A.Z.hidePersonalInformation),
-        s = (0, c.e7)([y.Z], () => y.Z.theme),
+        s = (0, c.e7)([Z.Z], () => Z.Z.theme),
         r = (0, T.b)(),
         l = (0, f.CC)(),
-        a = (0, c.e7)([Z.default], () => Z.default.locale),
+        a = (0, c.e7)([y.default], () => y.default.locale),
         d = (0, c.e7)([O.Z], () => O.Z.getSubsection());
     return (0, i.jsx)(K, {
         theme: s,

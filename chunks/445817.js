@@ -19,20 +19,20 @@ function E(e) {
         C = h.Z.getCameraComponent(),
         [f, T] = s.useState((0, c.P)(g.default.getCurrentUser())),
         N = s.useRef(!1),
-        I = s.useRef(f),
-        S = (0, o.O)(),
+        S = s.useRef(f),
+        I = (0, o.O)(),
         b = (0, r.e7)([h.Z], () => h.Z.isVideoAvailable());
     return (
         s.useEffect(
             () => () => {
-                N.current && a.Z.wait(() => (0, d.Up)(I.current));
+                N.current && a.Z.wait(() => (0, d.Up)(S.current));
             },
             []
         ),
         (0, i.jsx)(m.Z, {
             selectedBackgroundOption: f,
             onSelectBackgroundOption: (e) => {
-                (N.current = !0), (I.current = e), T(e), (0, u.wG)(e, { location: S.location }).catch(_.dG4);
+                (N.current = !0), (S.current = e), T(e), (0, u.wG)(e, { location: I.location }).catch(_.dG4);
             },
             onCancelPreview: E,
             renderCamera: (e) =>

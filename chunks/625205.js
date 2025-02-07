@@ -24,8 +24,8 @@ function T() {
         T = (0, l.e7)([_.Z], () => _.Z.theme),
         {
             canSetInputDevice: N,
-            canSetOutputDevice: I,
-            inputDeviceId: S,
+            canSetOutputDevice: S,
+            inputDeviceId: I,
             outputDeviceId: b
         } = (0, l.cj)([g.Z], () => ({
             canSetInputDevice: g.Z.supports(p.AN.AUDIO_INPUT_DEVICE),
@@ -41,7 +41,7 @@ function T() {
             className: f.marginTop8,
             children: E.intl.format(E.t['1iK6UV'], { onDownloadClick: () => (0, x.y)('Help Text Input Devices') })
         })),
-        I ||
+        S ||
             (t = (0, i.jsx)(o.R94, {
                 type: o.R94.Types.DESCRIPTION,
                 className: f.marginTop8,
@@ -77,7 +77,7 @@ function T() {
             r
         );
     }
-    function Z(e) {
+    function y(e) {
         return D(e[0]);
     }
     return (0, i.jsxs)('div', {
@@ -89,7 +89,7 @@ function T() {
                     title: E.intl.string(E.t.hHMYbW),
                     children: [
                         (0, i.jsx)(o.q4e, {
-                            value: S,
+                            value: I,
                             onChange: (e) =>
                                 c.Z.setInputDevice(e, {
                                     location: 'Settings',
@@ -103,7 +103,7 @@ function T() {
                                 };
                             }),
                             isDisabled: O,
-                            renderOptionValue: Z,
+                            renderOptionValue: y,
                             renderOptionLabel: D
                         }),
                         e
@@ -130,7 +130,7 @@ function T() {
                                 };
                             }),
                             isDisabled: P,
-                            renderOptionValue: Z,
+                            renderOptionValue: y,
                             renderOptionLabel: D
                         }),
                         t

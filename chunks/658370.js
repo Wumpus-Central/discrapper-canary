@@ -17,7 +17,7 @@ var s = n(120356),
 let p = (e) => {
     var t;
     let n;
-    let { title: s, titleClassName: p = '', buttonClassName: E = '', subtitle: C = '', description: f = '', descriptionCta: T = '', isPremiumGetCta: N, onCtaClick: I, cardVariant: S } = e,
+    let { title: s, titleClassName: p = '', buttonClassName: E = '', subtitle: C = '', description: f = '', descriptionCta: T = '', isPremiumGetCta: N, onCtaClick: S, cardVariant: I } = e,
         b = (0, d.N)(),
         v = null == b ? void 0 : b.subscription_trial,
         j = (0, c.Ng)(),
@@ -32,7 +32,7 @@ let p = (e) => {
             onTier0TrialOffer: A,
             onDiscountOffer: _.intl.formatToPlainString(_.t.bkQ4bG, { percent: null == j ? void 0 : j.discount.amount })
         }),
-        R = (0, u._)(S);
+        R = (0, u._)(I);
     return (0, i.jsxs)('div', {
         className: r()(x.cardDescription, null == R ? void 0 : null === (t = R.description) || void 0 === t ? void 0 : t.className),
         children: [
@@ -53,10 +53,10 @@ let p = (e) => {
                 }),
             0 !== T.length &&
                 (null == (n = null == R ? void 0 : R.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
-                null != I &&
+                null != S &&
                 (0, i.jsx)(l.zxk, {
                     className: E,
-                    onClick: I,
+                    onClick: S,
                     children: T
                 })
         ]

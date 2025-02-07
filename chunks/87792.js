@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(240351),
     T = n(792258),
     N = n(657825),
-    I = n(198952),
-    S = n(329242),
+    S = n(198952),
+    I = n(329242),
     b = n(895328),
     v = n(292352),
     j = n(981631),
@@ -57,8 +57,8 @@ function D(e) {
         { loadMore: u, isMoreLoading: g } = (0, _.G)({ onError: n }),
         p = v.tx.get(t),
         [C, f] = s.useState(v.iB),
-        I = (0, h.Xi)({ location: 'family_center_activity_section_web' }),
-        S = s.useCallback(() => {
+        S = (0, h.Xi)({ location: 'family_center_activity_section_web' }),
+        I = s.useCallback(() => {
             f((e) => e + v.iB), u(t);
         }, [t, u]);
     l()(p, 'No text for action type');
@@ -98,12 +98,12 @@ function D(e) {
                                   className: O.sectionDescription,
                                   variant: 'text-md/medium',
                                   color: 'text-muted',
-                                  children: p.sectionDescription(null != r && r, I)
+                                  children: p.sectionDescription(null != r && r, S)
                               })
                             : null
                     ]
                 }),
-            [b, p, r, I]
+            [b, p, r, S]
         );
     if (0 === a.length) return null;
     let P = a.slice(0, C);
@@ -119,7 +119,7 @@ function D(e) {
             P.length !== c
                 ? (0, i.jsx)(o.P3F, {
                       className: O.loadMoreBar,
-                      onClick: S,
+                      onClick: I,
                       role: 'button',
                       children: g
                           ? (0, i.jsx)(o.$jN, {
@@ -136,7 +136,7 @@ function D(e) {
         ]
     });
 }
-let Z = () => {
+let y = () => {
         let e = (0, E.Z)(),
             t = (0, C.mq)(v.ne.ACTIVE),
             n = (0, g.o)(A.intl.formatToPlainString(A.t['7hqFl5'], { activeLinks: t.length }), A.intl.string(A.t['Q/D/0d'])),
@@ -163,7 +163,7 @@ let Z = () => {
                   ]
               });
     },
-    y = (e) => {
+    Z = (e) => {
         let { userId: t, subText: n, avatarSize: s = o.EFr.SIZE_40 } = e,
             r = (0, p.I)(t);
         return void 0 === r
@@ -171,14 +171,14 @@ let Z = () => {
             : (0, i.jsxs)('div', {
                   className: O.accountRow,
                   children: [
-                      (0, i.jsx)(I.r, {
+                      (0, i.jsx)(S.r, {
                           user: r,
                           avatarSize: s
                       }),
                       (0, i.jsxs)('div', {
                           className: O.headerText,
                           children: [
-                              (0, i.jsx)(S.Z, { user: r }),
+                              (0, i.jsx)(I.Z, { user: r }),
                               void 0 !== n
                                   ? (0, i.jsx)(o.Text, {
                                         variant: 'text-sm/medium',
@@ -201,7 +201,7 @@ let Z = () => {
             })),
             l = s.useCallback(
                 (e) =>
-                    (0, i.jsx)(y, {
+                    (0, i.jsx)(Z, {
                         userId: e.value,
                         avatarSize: o.EFr.SIZE_24
                     }),
@@ -230,7 +230,7 @@ let Z = () => {
             l = (0, C.Rd)(r);
         return n && 1 !== s.length
             ? (0, i.jsx)(k, {})
-            : (0, i.jsx)(y, {
+            : (0, i.jsx)(Z, {
                   userId: t,
                   subText: l
               });
@@ -246,7 +246,7 @@ let Z = () => {
             children: [
                 (0, i.jsxs)('div', {
                     className: O.connectedCounter,
-                    children: [(0, i.jsx)(Z, {}), (0, i.jsx)(P, {})]
+                    children: [(0, i.jsx)(y, {}), (0, i.jsx)(P, {})]
                 }),
                 (0, i.jsxs)('div', {
                     className: R.box,

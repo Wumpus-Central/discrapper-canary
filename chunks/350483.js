@@ -34,12 +34,12 @@ let E = r().throttle(function (e, t) {
         { channelPredicate: m = () => !0, guildPredicate: x = () => !0, guildFeaturePredicate: E = () => !1, ensureChatIsVisible: C = () => !1, withVoiceChannels: f = !1 } = t,
         T = null !== (s = o.Z.getState().guildId) && void 0 !== s ? s : _.ME,
         N = o.Z.getState().channelId,
-        I = (function (e, t) {
+        S = (function (e, t) {
             let n = [_.ME, ...u.ZP.getFlattenedGuildIds()],
                 i = n.indexOf(e);
             return t > 0 ? n.slice(i).concat(n.slice(0, i), e) : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)));
         })(T, e),
-        S = e > 0 ? 0 : I.length - 1,
+        I = e > 0 ? 0 : S.length - 1,
         b = p(T, f),
         v = b.indexOf(N) + e;
     for (; null != T && '' !== T; ) {
@@ -61,7 +61,7 @@ let E = r().throttle(function (e, t) {
                     );
                 (v += e), (a = b[v]);
             }
-        if (((S += e), null == (T = I[S]) || '' === T)) break;
+        if (((I += e), null == (T = S[I]) || '' === T)) break;
         (b = p(T, f)), (v = e < 0 ? b.length - 1 : 0);
     }
     h.S.dispatch(_.CkL.SHAKE_APP, {

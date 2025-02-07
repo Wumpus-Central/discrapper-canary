@@ -59,8 +59,8 @@ function X(e, t, n) {
         e
     );
 }
-let Q = W.ZP.getEnableHardwareAcceleration(),
-    J = 44 + x.x,
+let J = W.ZP.getEnableHardwareAcceleration(),
+    Q = 44 + x.x,
     $ = {
         origin: {
             x: 38,
@@ -95,7 +95,7 @@ class ee extends l.Component {
                 return (0, i.jsx)(x.Z, {
                     className: K.member,
                     onContextMenu: this.renderUserContextMenu,
-                    shouldAnimateStatus: Q,
+                    shouldAnimateStatus: J,
                     user: a,
                     currentUser: r,
                     nick: l,
@@ -505,7 +505,7 @@ function ea(e) {
         _ = l.useRef(null),
         C = (0, R.Q3)('ChannelMembers'),
         { density: x } = (0, f.TCT)(),
-        I = C ? ('compact' === x ? 42 : 50) : J,
+        I = C ? ('compact' === x ? 42 : 50) : Q,
         Z = l.useCallback(
             (e, t) => {
                 let n = _.current;

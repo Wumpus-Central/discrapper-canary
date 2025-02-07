@@ -47,8 +47,8 @@ var i = n(200651),
     q = n(176354),
     K = n(823379),
     X = n(970257),
-    Q = n(418476),
-    J = n(151007),
+    J = n(418476),
+    Q = n(151007),
     $ = n(432376),
     ee = n(373662),
     et = n(996861),
@@ -199,8 +199,8 @@ function em(e) {
                 A = (x || n.canDeleteOwnMessage(u)) && h && !ea.V$x.UNDELETABLE.has(n.type);
             n.type === ea.uaV.AUTO_MODERATION_ACTION && (A = A && x);
             let P = (0, X.a4)(n),
-                R = (0, J.Z)(n, t, x),
-                M = !t.isSystemDM() && (0, Q.Z)(n, u) && h && !f,
+                R = (0, Q.Z)(n, t, x),
+                M = !t.isSystemDM() && (0, J.Z)(n, u) && h && !f,
                 { disableReactionCreates: L } = (0, $.Z)({
                     channel: t,
                     canChat: C,

@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(476756),
     T = n(734934),
     N = n(223683),
-    I = n(312400),
-    S = n(115345),
+    S = n(312400),
+    I = n(115345),
     b = n(392888),
     v = n(106371),
     j = n(995774),
@@ -29,8 +29,8 @@ var i = n(200651),
     R = n(292959),
     P = n(9156),
     D = n(912101),
-    Z = n(358085),
-    y = n(709054),
+    y = n(358085),
+    Z = n(709054),
     k = n(695346),
     L = n(675478),
     B = n(33656),
@@ -246,7 +246,7 @@ function Y(e) {
 function W() {
     let e = (0, c.e7)([E.Z], () => E.Z.getGuildAlertSettings()),
         [t, n] = s.useState(null),
-        r = y.default.keys(e).map((t) => {
+        r = Z.default.keys(e).map((t) => {
             let n = e[t];
             return {
                 label: n.guildName,
@@ -354,7 +354,7 @@ class K extends s.PureComponent {
     }
     render() {
         let { desktopType: e, afkTimeout: t, disableUnreadBadge: n, taskbarFlash: s, disabledSounds: r, disableAllSounds: a, notifyMessagesInSelectedChannel: c, focusMode: d } = this.props,
-            m = Z.isPlatformEmbedded && (0, Z.isWindows)(),
+            m = y.isPlatformEmbedded && (0, y.isWindows)(),
             h = o()
                 .range(1, 11)
                 .map((e) => ({
@@ -377,7 +377,7 @@ class K extends s.PureComponent {
                         children: U.intl.string(U.t['/0WClp'])
                     })
                 }),
-                (0, i.jsx)(q, {}),
+                (0, i.jsx)(X, {}),
                 (0, i.jsx)(A.F, {
                     setting: M.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                     children: (0, i.jsx)(u.j7V, {
@@ -480,7 +480,7 @@ class K extends s.PureComponent {
             });
     }
 }
-let X = (0, x.B)({
+let q = (0, x.B)({
     kind: 'user',
     id: '2024-01_mention_on_all_messages',
     label: 'Mention on all messages',
@@ -493,8 +493,8 @@ let X = (0, x.B)({
         }
     ]
 });
-function q() {
-    let e = X.useExperiment({ location: 'settings' }, { autoTrackExposure: !1 }).enabled,
+function X() {
+    let e = q.useExperiment({ location: 'settings' }, { autoTrackExposure: !1 }).enabled,
         t = (0, c.e7)([P.ZP], () => P.ZP.mentionOnAllMessages);
     return e
         ? (0, i.jsx)(A.F, {
@@ -512,8 +512,8 @@ function q() {
         : null;
 }
 function J() {
-    let e = I.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
-        { manuallyOpen: t } = I.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
+    let e = S.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
+        { manuallyOpen: t } = S.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
         n = (0, c.e7)([P.ZP], () => P.ZP.useNewNotifications),
         [r, a] = s.useState(!1);
     return e && (n || t)
@@ -598,13 +598,13 @@ async function Q(e) {
     e(!0);
     let t = await (0, N.Tn)();
     0 === t.length
-        ? await (0, S.oL)()
+        ? await (0, I.oL)()
         : m.Z.show({
               title: U.intl.string(U.t['cY+Ooa']),
               body: U.intl.format(U.t['7zTJJS'], { date: new Date(t[t.length - 1].recorded_at) }),
               cancelText: U.intl.string(U.t['ETE/oK']),
               confirmText: U.intl.string(U.t.Rm96T0),
-              onConfirm: S.oL
+              onConfirm: I.oL
           }),
         e(!1);
 }

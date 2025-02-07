@@ -25,8 +25,8 @@ function C() {
         f = g.R$.useSetting(),
         T = g.cC.useSetting(),
         N = g.vF.useSetting(),
-        I = g.H1.useSetting(),
-        S = g.ev.useSetting(),
+        S = g.H1.useSetting(),
+        I = g.ev.useSetting(),
         b = g.x4.useSetting(),
         v = g.RS.useSetting(),
         j = g.NA.useSetting(),
@@ -66,7 +66,7 @@ function C() {
                         setting: _.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
                         children: (0, i.jsx)(l.j7V, {
                             className: r()(E.marginTop8, E.marginBottom40),
-                            value: I,
+                            value: S,
                             note: p.intl.string(p.t.T0rbtL),
                             onChange: g.H1.updateSetting,
                             children: p.intl.string(p.t['w8j+yc'])
@@ -112,7 +112,7 @@ function C() {
                         setting: _.s6.CHAT_EMOJI_EMOTICONS,
                         children: (0, i.jsx)(l.j7V, {
                             className: E.marginBottom40,
-                            value: S,
+                            value: I,
                             note: d.Z.parse(p.intl.string(p.t['20dvub'])),
                             onChange: g.ev.updateSetting,
                             children: p.intl.string(p.t['79qal5'])

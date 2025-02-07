@@ -33,8 +33,8 @@ var l,
     I = n(906732),
     _ = n(890280),
     R = n(835473),
-    j = n(522474),
-    y = n(314897),
+    y = n(522474),
+    j = n(314897),
     N = n(819640),
     w = n(594174),
     A = n(823379),
@@ -97,9 +97,9 @@ function V(e) {
     let { participants: l, application: a, channel: h, width: v } = e,
         g = L(v),
         [E] = F(v),
-        x = (0, o.Wu)([w.default, y.default], () =>
+        x = (0, o.Wu)([w.default, j.default], () =>
             Array.from(l)
-                .map((e) => ((0, f.J)(e, y.default) ? null : w.default.getUser(e.userId)))
+                .map((e) => ((0, f.J)(e, j.default) ? null : w.default.getUser(e.userId)))
                 .filter(A.lm)
         ),
         Z = (0, o.e7)([d.ZP], () => d.ZP.getEmbeddedActivitiesForChannel(h.id).find((e) => e.applicationId === a.id)),
@@ -112,7 +112,7 @@ function V(e) {
                 channelId: h.id,
                 application: a
             }) === p.Fw.CAN_JOIN,
-        j = null !== (n = h.getGuildId()) && void 0 !== n ? n : void 0,
+        y = null !== (n = h.getGuildId()) && void 0 !== n ? n : void 0,
         N = r.useId(),
         P = a.id,
         M = r.useMemo(
@@ -132,7 +132,7 @@ function V(e) {
         children: [
             (0, i.jsx)(U, {
                 avatarSize: E,
-                guildId: j,
+                guildId: y,
                 channelId: h.id,
                 users: x
             }),
@@ -199,11 +199,11 @@ function W(e) {
         }),
         Z = !l && m,
         _ = !m,
-        y = !m && !l,
-        w = (0, o.e7)([N.Z, j.Z], () =>
+        j = !m && !l,
+        w = (0, o.e7)([N.Z, y.Z], () =>
             (0, C.Z)({
                 LayerStore: N.Z,
-                PopoutWindowStore: j.Z
+                PopoutWindowStore: y.Z
             })
         );
     return (
@@ -232,7 +232,7 @@ function W(e) {
                                   src: p
                               })
                             : null,
-                        y &&
+                        j &&
                             null != f &&
                             (0, i.jsx)(V, {
                                 width: n,

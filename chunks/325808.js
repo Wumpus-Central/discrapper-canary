@@ -19,10 +19,10 @@ var i = n(200651),
     f = n(232186);
 let T = !_.isPlatformEmbedded,
     N = (0, h.hQ)();
-function I(e) {
+function S(e) {
     return e >= 1000 ? ((e /= 1000), ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), ' ms');
 }
-function S(e) {
+function I(e) {
     let t,
         { inputMode: n } = e,
         { shortcut: s, delay: r } = (0, a.cj)([g.Z], () => g.Z.getModeOptions());
@@ -68,7 +68,7 @@ function S(e) {
                                     (0, i.jsx)(o.iRW, {
                                         initialValue: r,
                                         onValueChange: (e) => c.Z.setMode(n, { delay: e }),
-                                        onValueRender: I,
+                                        onValueRender: S,
                                         maxValue: p.qhL,
                                         'aria-labelledby': N
                                     })
@@ -127,7 +127,7 @@ function b() {
                     value: t
                 })
             }),
-            t === p.pM4.PUSH_TO_TALK && (0, i.jsx)(S, { inputMode: t })
+            t === p.pM4.PUSH_TO_TALK && (0, i.jsx)(I, { inputMode: t })
         ]
     });
 }

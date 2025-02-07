@@ -47,8 +47,8 @@ var i = n(200651),
     q = n(295474),
     K = n(521476),
     X = n(69882),
-    Q = n(71619),
-    J = n(185145),
+    J = n(71619),
+    Q = n(185145),
     $ = n(736052),
     ee = n(146128),
     et = n(549006),
@@ -115,8 +115,8 @@ function eK(e, t, n) {
 function eX(e) {
     e.preventDefault();
 }
-let eQ = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
-function eJ(e) {
+let eJ = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
+function eQ(e) {
     let { isSidebar: t, ...n } = e;
     return t
         ? (0, i.jsx)('section', {
@@ -314,7 +314,7 @@ class e$ extends l.PureComponent {
                 } = this.props;
                 p.Z.changeDraft(l, t, eE.d.ChannelMessage);
                 let a = '' !== t && n !== this.state.richValue,
-                    r = a && !eQ.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
+                    r = a && !eJ.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
                 (this.isFirstChange = !1),
                     r && this.state.textValue.length < t.length && this.handleIncrementCombo(),
                     r ? f.Z.startTyping(l) : '' === t && f.Z.stopTyping(l),
@@ -609,7 +609,7 @@ class e0 extends l.PureComponent {
                                     event: ez.CkL.OPEN_APP_LAUNCHER,
                                     handler: this.handleOpenAppLauncher
                                 }),
-                                (0, i.jsxs)(eJ, {
+                                (0, i.jsxs)(eQ, {
                                     isSidebar: P,
                                     className: eY.chatContent,
                                     'aria-label': eW.intl.formatToPlainString(t, { channelName: n.name }),
@@ -749,7 +749,7 @@ class e0 extends l.PureComponent {
                 return t.type === ez.d4z.DM && n
                     ? (0, i.jsx)(eu.Z, {})
                     : null != a && (0, X.J)(a) && null != l && !eN.Z.can(ez.Plq.ADMINISTRATOR, l)
-                      ? (0, i.jsx)(J.T, {
+                      ? (0, i.jsx)(Q.T, {
                             guild: l,
                             disabledUntil: a
                         })
@@ -788,7 +788,7 @@ let e1 = l.memo(function (e) {
     let { channel: t, guild: n, chatInputType: a, filterAfterTimestamp: r } = e,
         { placeholder: s, accessibilityLabel: o } = (0, eD.Z)({ channel: t }),
         c = (0, eu.S)(ej.default.getCurrentUser(), t),
-        [d] = (0, Q.AB)(null == n ? void 0 : n.id),
+        [d] = (0, J.AB)(null == n ? void 0 : n.id),
         p = (0, q.Ux)(null == n ? void 0 : n.id),
         m = (0, u.e7)([ej.default], () => ej.default.getCurrentUser()),
         f = (0, u.e7)([eb.ZP], () => {

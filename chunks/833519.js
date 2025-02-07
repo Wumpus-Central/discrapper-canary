@@ -27,8 +27,8 @@ var l = n(200651),
     I = n(314897),
     _ = n(592125),
     R = n(131951),
-    j = n(451478),
-    y = n(685203),
+    y = n(451478),
+    j = n(685203),
     N = n(112560),
     w = n(442168),
     A = n(822296),
@@ -87,7 +87,7 @@ function H(e) {
         J = (0, s.e7)([_.Z], () => _.Z.getChannel(K.channelId)),
         Q = (0, s.e7)([b.Z], () => b.Z.getActiveStreamForUser(q.id, K.guildId), [q.id, K.guildId]),
         X = (0, s.e7)([b.Z], () => b.Z.getAllActiveStreams().length > 0),
-        $ = (0, s.e7)([j.Z], () => j.Z.isFocused()),
+        $ = (0, s.e7)([y.Z], () => y.Z.isFocused()),
         ee = (null == Q ? void 0 : Q.ownerId) === Y,
         et = ee && !$ && !E,
         en = null != Q ? (0, v.Z)(Q, q, q.id === Y, et) : null,
@@ -145,7 +145,7 @@ function H(e) {
                     ? null
                     : (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(y.a, {
+                              (0, l.jsx)(j.a, {
                                   isSmall: el,
                                   children: (0, l.jsx)(o.Text, {
                                       variant: el ? 'text-sm/semibold' : 'text-md/semibold',
@@ -154,7 +154,7 @@ function H(e) {
                                   })
                               }),
                               X
-                                  ? (0, l.jsx)(y.a, {
+                                  ? (0, l.jsx)(j.a, {
                                         className: z.addCTA,
                                         tooltip: U.intl.string(U.t.wCrzur),
                                         onClick: (e) => {

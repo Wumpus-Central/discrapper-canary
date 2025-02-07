@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(430824),
     T = n(63063),
     N = n(358085),
-    I = n(709054),
-    S = n(362352),
+    S = n(709054),
+    I = n(362352),
     b = n(413182),
     v = n(695346),
     j = n(726985),
@@ -30,7 +30,7 @@ var i = n(200651),
     P = n(232186);
 function D(e) {
     let t = () => {
-        v.SE.updateSetting(e ? I.default.keys(f.Z.getGuilds()) : []);
+        v.SE.updateSetting(e ? S.default.keys(f.Z.getGuilds()) : []);
     };
     (0, m.h7j)((e) =>
         (0, i.jsx)(m.ConfirmModal, {
@@ -47,10 +47,10 @@ function D(e) {
         })
     );
 }
-function Z() {
+function y() {
     let e = v.G6.useSetting(),
         t = v.Wz.useSetting(),
-        n = (0, S.Yd)('activity privacy tab'),
+        n = (0, I.Yd)('activity privacy tab'),
         s = N.isPlatformEmbedded ? O.intl.string(O.t.MznbeH) : O.intl.string(O.t.oKqC4u),
         r = (e) => {
             v.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), D(e);
@@ -116,7 +116,7 @@ function Z() {
         })
     });
 }
-function y() {
+function Z() {
     let e = v.cP.useSetting(),
         t = v.Ou.useSetting();
     return (0, i.jsx)(E.F, {
@@ -256,6 +256,6 @@ function w(e) {
               className: t,
               tag: m.RB0.H1,
               title: n ? O.intl.string(O.t.Cq98yM) : null,
-              children: [(0, i.jsx)(Z, {}), (0, i.jsx)(y, {}), (0, i.jsx)(k, {}), s && (0, i.jsx)(M, {})]
+              children: [(0, i.jsx)(y, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(k, {}), s && (0, i.jsx)(M, {})]
           });
 }

@@ -4,12 +4,12 @@ n.d(t, {
     Gw: () => N,
     Op: () => O,
     gx: () => b,
-    iG: () => S,
+    iG: () => I,
     k3: () => p,
     mN: () => R,
     oo: () => f,
     sP: () => A,
-    t2: () => I,
+    t2: () => S,
     vZ: () => C
 }),
     n(653041),
@@ -98,7 +98,7 @@ let p = (e) => {
                 return;
         }
     };
-function I(e, t) {
+function S(e, t) {
     switch (e) {
         case _.EB.PENDING:
             return null != t ? x.intl.formatToPlainString(x.t.FULtam, { days: t }) : '';
@@ -110,7 +110,7 @@ function I(e, t) {
             return '';
     }
 }
-function S(e, t) {
+function I(e, t) {
     switch (e) {
         case _.EB.PENDING:
             return null != t ? x.intl.formatToPlainString(x.t.a1eKDg, { days: t }) : '';

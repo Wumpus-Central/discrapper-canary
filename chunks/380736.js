@@ -42,7 +42,7 @@ function Z(e) {
     e.currentTarget.scrollTo(0, 0);
 }
 let S = i.memo(function (e) {
-    let { maxBodyLines: t, expand: n = !1, onNotificationShow: r, onDismissClick: u, onConfirmClick: c, onCancelClick: m, onNotificationClick: f, hint: h, cancelText: E, confirmText: x, icon: S, body: C, title: b, renderFooter: I, contentOpacity: _, status: R, containerRef: j, className: y, wrapperClassName: N } = e,
+    let { maxBodyLines: t, expand: n = !1, onNotificationShow: r, onDismissClick: u, onConfirmClick: c, onCancelClick: m, onNotificationClick: f, hint: h, cancelText: E, confirmText: x, icon: S, body: C, title: b, renderFooter: I, contentOpacity: _, status: R, containerRef: y, className: j, wrapperClassName: N } = e,
         [w, A] = i.useState(!1),
         T = n || w || R === p._1z.FOCUSED;
     i.useEffect(() => {
@@ -78,12 +78,12 @@ let S = i.memo(function (e) {
                 className: a()(g.overflowWrapper, N),
                 onScroll: Z,
                 children: (0, l.jsx)(o.P3F, {
-                    innerRef: j,
+                    innerRef: y,
                     ignoreKeyPress: !0,
                     onMouseOver: M,
                     onMouseLeave: D,
                     onClick: f,
-                    className: a()(g.container, { [g.clickable]: null != f }, y),
+                    className: a()(g.container, { [g.clickable]: null != f }, j),
                     children: (function () {
                         let e = null == I ? void 0 : I(T);
                         return (0, l.jsxs)(l.Fragment, {
@@ -238,7 +238,7 @@ function b(e) {
         ),
         R = i.useCallback((e) => (null == E ? void 0 : E(e, o)), [E, o]),
         {
-            props: { onNotificationShow: j, onDismissClick: y, renderFooter: N, onNotificationClick: w, onConfirmClick: A, onCancelClick: T, ...k },
+            props: { onNotificationShow: y, onDismissClick: j, renderFooter: N, onNotificationClick: w, onConfirmClick: A, onCancelClick: T, ...k },
             status: O
         } = t,
         { ref: P, springs: M } = (0, h.X4)(t.id, a, s);

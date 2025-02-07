@@ -21,7 +21,7 @@ var i = n(990547),
     S = n(388032),
     C = n(126741);
 function b(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: b = !1, renderInputModes: I = !1, renderInputVolume: _ = !1, renderOutputVolume: R = !1, renderDeafen: j = !1, simplified: y = !1, onSelect: N } = e,
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: b = !1, renderInputModes: I = !1, renderInputVolume: _ = !1, renderOutputVolume: R = !1, renderDeafen: y = !1, simplified: j = !1, onSelect: N } = e,
         { analyticsLocations: w } = (0, c.ZP)();
     (0, d.Z)({
         type: i.ImpressionTypes.MENU,
@@ -29,8 +29,8 @@ function b(e) {
         properties: { location_stack: w }
     });
     let A = (0, x.Z)(),
-        T = (0, g.Z)(w, y),
-        k = (0, E.Z)(w, y),
+        T = (0, g.Z)(w, j),
+        k = (0, E.Z)(w, j),
         O = (0, m.Z)(w),
         P = (0, f.Z)(w),
         M = (0, h.Z)(w),
@@ -49,7 +49,7 @@ function b(e) {
             children: [
                 b ? T : null,
                 n ? k : null,
-                !y && I
+                !j && I
                     ? (0, l.jsx)(s.kSQ, {
                           label: S.intl.string(S.t['pS+K2N']),
                           children: O
@@ -59,8 +59,8 @@ function b(e) {
                     children: [
                         _ ? P : null,
                         R ? M : null,
-                        y ? (0, l.jsx)(s.Clw, {}) : null,
-                        y && j
+                        j ? (0, l.jsx)(s.Clw, {}) : null,
+                        j && y
                             ? (0, l.jsx)(
                                   s.S89,
                                   {
@@ -76,7 +76,7 @@ function b(e) {
                                   'self-deafen'
                               )
                             : null,
-                        y && b && v.isPlatformEmbedded
+                        j && b && v.isPlatformEmbedded
                             ? (0, l.jsx)(s.S89, {
                                   checked: F === Z.pM4.PUSH_TO_TALK,
                                   id: 'input-mode',

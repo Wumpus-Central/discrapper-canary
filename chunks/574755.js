@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => I });
 var i = n(200651),
     s = n(192379),
     r = n(442837),
@@ -19,10 +19,10 @@ var i = n(200651),
     f = n(388032),
     T = n(644517),
     N = n(277253),
-    I = n(232186);
-function S(e) {
+    S = n(232186);
+function I(e) {
     let { className: t, showHeader: n = !0 } = e,
-        S = u.tU.useSetting(),
+        I = u.tU.useSetting(),
         { enableViewerClipping: b } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
         { analyticsLocations: v } = (0, o.ZP)(),
         j = (0, h.Go)(),
@@ -54,12 +54,12 @@ function S(e) {
                     }),
                 j && (0, i.jsx)(a.$i$, {}),
                 (0, i.jsxs)(a.hjN, {
-                    className: n || j ? I.marginTop20 : t,
+                    className: n || j ? S.marginTop20 : t,
                     children: [
                         (0, i.jsx)(a.j7V, {
                             hideBorder: !0,
                             className: N.formItem,
-                            value: S,
+                            value: I,
                             note: f.intl.string(f.t['wW9/zc']),
                             onChange: (e) => x.yg({ allowVoiceRecording: e }),
                             children: f.intl.string(f.t.AGDDkJ)

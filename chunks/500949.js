@@ -1,5 +1,5 @@
 n.d(t, {
-    $R: () => W,
+    $R: () => H,
     A0: () => Q,
     GU: () => X,
     H8: () => K,
@@ -94,7 +94,7 @@ Object.values(M).forEach((e) => w.Z.register(e));
 let { SemanticColors: F } = D.V,
     U = F,
     G = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
-function H(e, t) {
+function W(e, t) {
     let [n, a] = r.useState(() => {
         let n = L.K.get(e);
         return null != n ? n : t;
@@ -106,7 +106,7 @@ function H(e, t) {
         [n, a]
     );
 }
-function W(e) {
+function H(e) {
     let t = U[e];
     return {
         name: e,
@@ -147,8 +147,8 @@ function Y(e) {
 var K = (((a = {}).TOKENS = 'Tokens'), (a.PALETTES = 'Palettes'), a);
 function J() {
     return (function (e, t) {
-        let [n, a] = H(''.concat(e, '-states'), [t]),
-            [l, i] = H(''.concat(e, '-index'), 0),
+        let [n, a] = W(''.concat(e, '-states'), [t]),
+            [l, i] = W(''.concat(e, '-index'), 0),
             o = n[l],
             s = r.useCallback(
                 (e) => {

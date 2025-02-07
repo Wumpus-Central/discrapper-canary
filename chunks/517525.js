@@ -23,11 +23,11 @@ var l = n(200651),
     I = n(388032),
     _ = n(891252);
 let R = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
-    j = {
+    y = {
         opacity: 0,
         transform: 'translate3d(100%, 0, 0)'
     },
-    y = {
+    j = {
         opacity: 1,
         transform: 'translate3d(0%, 0, 0)'
     },
@@ -44,7 +44,7 @@ let R = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     O = (e) => {
         let t,
             r,
-            { participant: s, isUpsellEnabled: o, shape: d, size: v, didTrackUpsellViewed: R, setDidTrackUpsellViewed: j, className: y, premiumIndicator: N } = e,
+            { participant: s, isUpsellEnabled: o, shape: d, size: v, didTrackUpsellViewed: R, setDidTrackUpsellViewed: y, className: j, premiumIndicator: N } = e,
             w = (0, Z.Wc)(s),
             { analyticsLocations: A } = (0, h.ZP)(),
             T = null != (0, S.Z)(s);
@@ -84,8 +84,8 @@ let R = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         has_premium_stream_resolution: r,
                         location_stack: A
                     }),
-                    j(!0));
-            }, [t, r, k, R, j, A]),
+                    y(!0));
+            }, [t, r, k, R, y, A]),
             null == w)
         )
             return null;
@@ -116,7 +116,7 @@ let R = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         });
         return (0, l.jsx)(m.IGR, {
             text: L,
-            className: a()(y, _.qualityIndicatorBadge, { [_.qualityIndicatorBadgePremium]: k && N }),
+            className: a()(j, _.qualityIndicatorBadge, { [_.qualityIndicatorBadgePremium]: k && N }),
             color: c.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: d
         });
@@ -134,10 +134,10 @@ let R = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 E,
                 {
                     enter: {
-                        from: g.enabled ? N : j,
-                        to: g.enabled ? w : y
+                        from: g.enabled ? N : y,
+                        to: g.enabled ? w : j
                     },
-                    leave: g.enabled ? N : j,
+                    leave: g.enabled ? N : y,
                     config: k
                 },
                 'animate-always'

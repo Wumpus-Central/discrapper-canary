@@ -32,16 +32,16 @@ let _ = (e) => {
         let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: p = !1, isPersistentCTA: E = !1, useShorterCTA: C = !1, ...f } = e,
             T = (0, l.ZP)(),
             N = (0, s.wj)(T) || t,
-            I = (0, d.N)(),
-            S = null == I ? void 0 : I.subscription_trial,
+            S = (0, d.N)(),
+            I = null == S ? void 0 : S.subscription_trial,
             b = (0, a.a5)({
-                intervalType: null == S ? void 0 : S.interval,
-                intervalCount: null == S ? void 0 : S.interval_count
+                intervalType: null == I ? void 0 : I.interval,
+                intervalCount: null == I ? void 0 : I.interval_count
             }),
             v = (0, c.Ng)(),
-            j = null != S && n === S.sku_id,
+            j = null != I && n === I.sku_id,
             { enabled: A } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
-            O = A && (null == I ? void 0 : I.trial_id) === m.a7,
+            O = A && (null == S ? void 0 : S.trial_id) === m.a7,
             R = p
                 ? h.intl.string(h.t.J61px8)
                 : null != v
@@ -53,7 +53,7 @@ let _ = (e) => {
                         trialDurationCopy: b,
                         isPersistentCTA: E,
                         shouldShowReferralTrialCopy: O,
-                        subscriptionTrial: S
+                        subscriptionTrial: I
                     });
         return (0, i.jsx)(u.Z, {
             color: N ? r.Ttl.BRAND_INVERTED : r.Ttl.BRAND,

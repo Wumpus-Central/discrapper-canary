@@ -47,8 +47,8 @@ var i = n(200651),
     q = n(600518),
     K = n(485287),
     X = n(754277),
-    Q = n(719100),
-    J = n(184805),
+    J = n(719100),
+    Q = n(184805),
     $ = n(643632),
     ee = n(270295),
     et = n(981631),
@@ -56,7 +56,7 @@ var i = n(200651),
     ei = n(614826);
 function el(e) {
     let { channel: t, appContext: n } = e;
-    if ((0, Q.Z)(t)) {
+    if ((0, J.Z)(t)) {
         (0, B.Us)(t, n);
         return;
     }
@@ -64,7 +64,7 @@ function el(e) {
 }
 function ea(e) {
     let { channel: t } = e,
-        n = (0, J.Z)(t.id),
+        n = (0, Q.Z)(t.id),
         [l, a] = (0, ee.Z)(t),
         r = (0, s.e7)([D.Z], () => D.Z.can(et.Plq.REQUEST_TO_SPEAK, t)),
         { groupedButtons: c } = (0, I.ZP)({ location: 'AudienceRaiseHandButton' });
@@ -523,7 +523,7 @@ function eh(e) {
 }
 let ep = l.memo(function (e) {
     let { channel: t, isOnStartStageScreen: n } = e,
-        l = (0, J.Z)(t.id),
+        l = (0, Q.Z)(t.id),
         a = (0, G.B)(t.id),
         r = (0, s.e7)([D.Z], () => D.Z.can(V.yP, t), [t]),
         o = (0, $.Z)(t.id),

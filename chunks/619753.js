@@ -247,13 +247,13 @@ function w(e) {
         let e = q.current;
         null != e && null != e.offsetWidth && null != e.scrollWidth && X(e.offsetWidth < e.scrollWidth);
     }, []);
-    let Q = [F, V, H].filter((e) => null != e).join(', ');
+    let J = [F, V, H].filter((e) => null != e).join(', ');
     return (0, i.jsx)(g.a.Provider, {
         value: (0, C.Z)(w, W),
         children: (0, i.jsxs)('ul', {
             role: 'group',
             className: k.searchResultGroup,
-            'aria-label': Q,
+            'aria-label': J,
             children: [
                 (0, i.jsx)(o.P3F, {
                     onClick: () => B(r.id),

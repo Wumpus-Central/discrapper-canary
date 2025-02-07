@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(391110),
     T = n(71363),
     N = n(781800),
-    I = n(981631),
-    S = n(388032),
+    S = n(981631),
+    I = n(388032),
     b = n(368549),
     v = n(865215);
 let j = 'SubscriberNitroHome',
@@ -70,14 +70,14 @@ let j = 'SubscriberNitroHome',
                                         className: b.giftNitro,
                                         location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                         analyticsLocation: {
-                                            page: I.ZY5.NITRO_HOME,
-                                            section: I.jXE.GIFT_BANNER
+                                            page: S.ZY5.NITRO_HOME,
+                                            section: S.jXE.GIFT_BANNER
                                         }
                                     }),
                                     (0, i.jsx)('div', { className: b.footerSpacing }),
                                     (0, i.jsx)(a.$, {
                                         onChange: (e) => {
-                                            e && !A && (h.default.track(I.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), O(!0));
+                                            e && !A && (h.default.track(S.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), O(!0));
                                         },
                                         children: (0, i.jsx)('div', { className: b.bottomOfPageVisibilitySensor })
                                     }),
@@ -86,7 +86,7 @@ let j = 'SubscriberNitroHome',
                                         className: b.bottomIllustration,
                                         width: 112,
                                         height: 85,
-                                        alt: S.intl.string(S.t.X4IxWF)
+                                        alt: I.intl.string(I.t.X4IxWF)
                                     })
                                 ]
                             })
