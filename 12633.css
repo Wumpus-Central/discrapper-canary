@@ -7754,7 +7754,8 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     width: 240px;
     background-color: var(--background-secondary);
     border-radius: 8px;
-    max-height: calc(100vh - 20px)
+    max-height: calc(100vh - 20px);
+    display: flex
 }
 
 .roleHeader__75297 {
