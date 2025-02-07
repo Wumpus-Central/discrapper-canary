@@ -149,6 +149,7 @@ function A(e) {
     return (0, i.jsx)(g.Gt, {
         value: h,
         children: (0, i.jsx)(c.f6W, {
+            disableAdaptiveTheme: !0,
             theme: b.BRd.MIDNIGHT,
             children: (e) =>
                 (0, i.jsxs)(I.Z, {
