@@ -300,14 +300,12 @@ function ea(e, t, n, i) {
     l.dispatchEvent(o);
 }
 function es() {
-    if (null != w) {
-        let e = G[w] === o.gl.OutOfProcessLimitedInteraction;
+    if (null != w)
         try {
-            'function' == typeof (null == L ? void 0 : L.setLimitedInteraction) ? (C.info('Setting limited interaction', e), L.setLimitedInteraction(e), h.ZP.setFocusable(b.$J, !e)) : C.info('No setLimitedInteraction function found, skipping');
+            'function' == typeof (null == L ? void 0 : L.setLimitedInteraction) || C.info('No setLimitedInteraction function found, skipping');
         } catch (e) {
             C.error('Error setting limited interaction mode:', e);
         }
-    }
     s.Z.setFocusedPID(w);
 }
 function eo(e) {

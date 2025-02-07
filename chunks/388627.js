@@ -30,10 +30,7 @@ var m = n(145597),
 n(340101);
 var v = n(501787);
 async function y() {
-    let e = {
-            outOfProcessOverlay: !0,
-            focusable: !1
-        },
+    let e = { outOfProcessOverlay: !0 },
         t = (0, g.Rb)('openOverlayPopout').overlayV3UI,
         a = E.Z.getForcedRenderMode(),
         s = (0, g.b4)('openOverlayPopout');
