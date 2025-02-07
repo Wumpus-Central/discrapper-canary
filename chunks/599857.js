@@ -1,7 +1,8 @@
 n.d(t, {
     Z: () => h,
     _: () => d
-});
+}),
+    n(47120);
 var a = n(200651),
     r = n(192379),
     i = n(29978),
@@ -10,23 +11,34 @@ var a = n(200651),
     s = n(756148),
     p = n(981631);
 function d(e) {
+    let { sitekey: t, action: n, onVerify: i } = e,
+        [c, p] = r.useState(!1),
+        d = r.useCallback(
+            (e) => {
+                i(e);
+            },
+            [i]
+        ),
+        l = r.useCallback(() => {
+            var e, a, r;
+            null === (r = window) ||
+                void 0 === r ||
+                null === (a = r.grecaptcha) ||
+                void 0 === a ||
+                null === (e = a.enterprise) ||
+                void 0 === e ||
+                e.ready(async () => {
+                    var e;
+                    d(await (null === (e = window) || void 0 === e ? void 0 : e.grecaptcha).enterprise.execute(t, null != n ? { action: n } : void 0)), p(!1);
+                });
+        }, [t, n, d]),
+        h = r.useCallback(() => {
+            p(!0), s.I.loadRecaptchaScript(t, l);
+        }, [t, l]);
     return (
         r.useEffect(() => {
-            s.I.loadRecaptchaScript(e.sitekey, () => {
-                var t, n, a;
-                return null === (a = window) || void 0 === a
-                    ? void 0
-                    : null === (n = a.grecaptcha) || void 0 === n
-                      ? void 0
-                      : null === (t = n.enterprise) || void 0 === t
-                        ? void 0
-                        : t.ready(async () => {
-                              var t;
-                              let n = await (null === (t = window) || void 0 === t ? void 0 : t.grecaptcha).enterprise.execute(e.sitekey, null != e.action ? { action: e.action } : void 0);
-                              e.onVerify(n);
-                          });
-            });
-        }, [e]),
+            c || h();
+        }, [c, h]),
         (0, a.jsx)(o.$jN, {})
     );
 }
