@@ -1,19 +1,23 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => m });
 var i = n(200651),
     s = n(192379),
     r = n(442837),
     l = n(481060),
     a = n(846027),
     o = n(906732),
-    c = n(131951),
-    d = n(388032);
-function u() {
-    let e = (0, r.Wu)([c.Z], () => Object.values(c.Z.getVideoDevices())),
-        t = (0, r.e7)([c.Z], () => c.Z.getVideoDeviceId()),
-        { analyticsLocations: n } = (0, o.ZP)(),
-        u = s.useMemo(
+    c = n(920321),
+    d = n(131951),
+    u = n(388032);
+function m() {
+    let e = (0, c.Z)(),
+        { currentDeviceId: t, isVideoAvailable: n } = (0, r.cj)([d.Z], () => ({
+            currentDeviceId: d.Z.getVideoDeviceId(),
+            isVideoAvailable: d.Z.isVideoAvailable()
+        })),
+        { analyticsLocations: m } = (0, o.ZP)(),
+        h = s.useMemo(
             () =>
-                e.map((e) => {
+                Object.values(e).map((e) => {
                     let { id: t, name: n } = e;
                     return {
                         value: t,
@@ -23,13 +27,14 @@ function u() {
             [e]
         );
     return (0, i.jsx)(l.xJW, {
-        title: d.intl.string(d.t.FsQ3OT),
+        title: u.intl.string(u.t.FsQ3OT),
         children: (0, i.jsx)(l.q4e, {
-            placeholder: d.intl.string(d.t['t9eQ/v']),
-            options: u,
+            placeholder: u.intl.string(u.t['t9eQ/v']),
+            options: h,
             value: t,
-            onChange: (e) => a.Z.setVideoDevice(e, { analyticsLocations: n }),
-            'aria-label': d.intl.string(d.t['t9eQ/v'])
+            isDisabled: !n,
+            onChange: (e) => a.Z.setVideoDevice(e, { analyticsLocations: m }),
+            'aria-label': u.intl.string(u.t['t9eQ/v'])
         })
     });
 }
