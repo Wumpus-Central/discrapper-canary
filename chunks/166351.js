@@ -1,19 +1,21 @@
-i.d(n, { Z: () => p });
+i.d(e, { Z: () => v });
 var t = i(200651),
-    a = i(120356),
-    r = i.n(a),
-    o = i(793030),
-    s = i(481060),
+    r = i(120356),
+    a = i.n(r),
+    s = i(793030),
+    o = i(481060),
     c = i(413335),
     l = i(773),
-    d = i(291775),
-    u = i(388032),
+    d = i(394512),
+    u = i(291775),
+    x = i(388032),
     m = i(770964);
-function p(e) {
-    let { onClick: n, powerup: i } = e;
-    return (0, t.jsxs)(s.P3F, {
-        onClick: n,
-        className: r()(m.container, { [m.active]: i.active }),
+function v(n) {
+    let { onClick: e, powerup: i } = n,
+        r = (0, d.Z)(i);
+    return (0, t.jsxs)(o.P3F, {
+        onClick: e,
+        className: a()(m.container, { [m.active]: i.active }),
         children: [
             (0, t.jsx)('div', {
                 className: m.imageContainer,
@@ -25,19 +27,19 @@ function p(e) {
                     (0, t.jsxs)('div', {
                         className: m.headerContainer,
                         children: [
-                            (0, t.jsx)(o.X6, {
+                            (0, t.jsx)(s.X6, {
                                 variant: 'heading-md/bold',
                                 children: i.title
                             }),
                             i.bundle &&
-                                (0, t.jsx)(o.xv, {
-                                    className: r()(m.bundle, { [m.active]: i.active }),
+                                (0, t.jsx)(s.xv, {
+                                    className: a()(m.bundle, { [m.active]: i.active }),
                                     variant: 'text-xs/semibold',
-                                    children: u.intl.string(d.Z.j2jUjY)
+                                    children: x.intl.string(u.Z.j2jUjY)
                                 })
                         ]
                     }),
-                    (0, t.jsx)(o.xv, {
+                    (0, t.jsx)(s.xv, {
                         className: m.description,
                         variant: 'text-sm/medium',
                         children: i.description
@@ -49,7 +51,7 @@ function p(e) {
                                 className: m.inline,
                                 children: [
                                     (0, t.jsx)(c.Z, {}),
-                                    (0, t.jsx)(o.xv, {
+                                    (0, t.jsx)(s.xv, {
                                         tag: 'div',
                                         variant: 'heading-md/bold',
                                         children: i.cost
@@ -60,14 +62,14 @@ function p(e) {
                                 (0, t.jsxs)('div', {
                                     className: m.inline,
                                     children: [
-                                        (0, t.jsx)(s.owK, {
+                                        (0, t.jsx)(o.owK, {
                                             size: 'xs',
-                                            color: s.TVs.colors.TEXT_POSITIVE
+                                            color: o.TVs.colors.TEXT_POSITIVE
                                         }),
-                                        (0, t.jsx)(o.xv, {
+                                        (0, t.jsx)(s.xv, {
                                             color: 'text-positive',
                                             variant: 'text-sm/bold',
-                                            children: u.intl.string(d.Z.FFLkm5)
+                                            children: x.intl.string(u.Z.FFLkm5)
                                         })
                                     ]
                                 })
@@ -79,7 +81,8 @@ function p(e) {
                 className: m.buttonContainer,
                 children: (0, t.jsx)(l.Z, {
                     skuId: i.skuId,
-                    active: i.active
+                    active: i.active,
+                    onPrimaryClick: r
                 })
             })
         ]
