@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var i,
     r = n(442837),
     l = n(570140);
@@ -30,11 +30,12 @@ class s extends (i = r.ZP.PersistedStore) {
 }
 a(s, 'displayName', 'NewUserStore'), a(s, 'persistKey', 'nuf');
 let c = new s(l.Z, {
-    NUF_NEW_USER: function (e) {
-        let { newUserType: t } = e;
-        o = t;
-    },
-    NUF_COMPLETE: function () {
-        o = null;
-    }
-});
+        NUF_NEW_USER: function (e) {
+            let { newUserType: t } = e;
+            (o = t), c.persist();
+        },
+        NUF_COMPLETE: function () {
+            (o = null), c.persist();
+        }
+    }),
+    d = 12633 == n.j ? c : null;
