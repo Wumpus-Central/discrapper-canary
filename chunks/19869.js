@@ -1,4 +1,4 @@
-n.d(t, { O: () => I }), n(47120);
+n.d(t, { O: () => S }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(693789),
@@ -19,28 +19,29 @@ var i = n(200651),
     f = n(450272),
     T = n(981631),
     N = n(388032),
-    S = n(441490);
-function I() {
+    I = n(441490);
+function S() {
     return (0, i.jsxs)('div', {
         children: [(0, i.jsx)(b, {}), (0, i.jsx)(v, {})]
     });
 }
 function b() {
     let [e, t] = s.useState(150),
-        [n, p] = s.useState(g.b.DEFAULT),
-        E = () => {
-            switch (n) {
+        [n, p] = s.useState(150),
+        [E, C] = s.useState(g.b.DEFAULT),
+        S = () => {
+            switch (E) {
                 case g.b.DEFAULT:
-                    p(g.b.HIGHLIGHTED);
+                    C(g.b.HIGHLIGHTED);
                     break;
                 case g.b.HIGHLIGHTED:
-                    p(g.b.SELECTED);
+                    C(g.b.SELECTED);
                     break;
                 case g.b.SELECTED:
-                    p(g.b.DEFAULT);
+                    C(g.b.DEFAULT);
             }
         },
-        { analyticsLocations: C } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
+        { analyticsLocations: b } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
     return (0, i.jsxs)(f.$0, {
         children: [
             (0, i.jsx)(l.X6q, {
@@ -80,7 +81,7 @@ function b() {
                                 (0, u.s1)().location.pathname.includes(T.Z5c.COLLECTIBLES_SHOP) ||
                                     (0, d.mK)({
                                         openInLayer: !1,
-                                        analyticsLocations: C,
+                                        analyticsLocations: b,
                                         analyticsSource: o.Z.REVENUE_STORYBOOK_TEST_PAGE
                                     }),
                                 setTimeout(() => {
@@ -123,14 +124,18 @@ function b() {
                         children: 'Enter a number to see the balance widget pill update:'
                     }),
                     (0, i.jsx)(l.FiK, {
-                        className: S.numberInput,
+                        className: I.numberInput,
                         value: e,
                         onChange: (e) => t(e)
                     }),
+                    (0, i.jsx)(r.zx, {
+                        onClick: () => p(e),
+                        children: 'Set Balance'
+                    }),
                     (0, i.jsx)(_.A4, {
-                        balance: e,
-                        balanceWidgetMode: n,
-                        onClick: () => E()
+                        balance: n,
+                        balanceWidgetMode: E,
+                        onClick: () => S()
                     })
                 ]
             }),
