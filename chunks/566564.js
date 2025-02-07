@@ -105,7 +105,8 @@ let L = (e) => {
                                         b.Z,
                                         {
                                             handleTransition: t,
-                                            wideBannerBlock: e
+                                            wideBannerBlock: e,
+                                            tab: a
                                         },
                                         l
                                     );
