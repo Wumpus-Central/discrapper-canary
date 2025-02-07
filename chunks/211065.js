@@ -1,4 +1,4 @@
-n.d(e, { Z: () => E }), n(47120);
+n.d(e, { Z: () => I }), n(47120);
 var a = n(200651),
     l = n(192379),
     i = n(512722),
@@ -10,19 +10,20 @@ var a = n(200651),
     c = n(318766),
     h = n(907040),
     m = n(246133),
-    S = n(695346),
-    f = n(293273),
+    S = n(233200),
+    f = n(695346),
+    g = n(293273),
     p = n(594174),
-    g = n(626135),
-    b = n(720449),
-    _ = n(684269),
-    j = n(691258),
+    b = n(626135),
+    _ = n(720449),
+    j = n(684269),
+    C = n(691258),
     v = n(875425),
     x = n(981631),
     N = n(185923),
-    C = n(388032),
-    O = n(58448);
-function D(t, e, n) {
+    O = n(388032),
+    D = n(58448);
+function T(t, e, n) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -35,23 +36,23 @@ function D(t, e, n) {
         t
     );
 }
-function T(t) {
+function k(t) {
     return (0, a.jsxs)('div', {
-        className: O.statusOptionItem,
+        className: D.statusOptionItem,
         children: [
             (0, a.jsx)(r.qbd, {
                 status: t.value,
                 size: 10,
-                className: O.statusIcon
+                className: D.statusIcon
             }),
             t.label
         ]
     });
 }
-class k extends l.PureComponent {
+class E extends l.PureComponent {
     componentDidMount() {
         let { sourceAnalyticsLocations: t, sourceAnalyticsContext: e } = this.props;
-        g.default.track(x.rMx.OPEN_MODAL, {
+        b.default.track(x.rMx.OPEN_MODAL, {
             source: null == e ? void 0 : e.location,
             type: x.jXE.CUSTOM_STATUS_MODAL,
             load_id: null == e ? void 0 : e.loadId,
@@ -61,13 +62,16 @@ class k extends l.PureComponent {
     get analyticsLocation() {
         return { page: x.ZY5.CUSTOM_STATUS_MODAL };
     }
+    get canShowStatusSelector() {
+        return !(0, S.A)({ location: 'CustomStatusModal' });
+    }
     getEmojiButtonRenderer() {
         let { emojiInfo: t } = this.state;
         return null == t
             ? null
             : () =>
                   (0, a.jsx)(u.Z, {
-                      className: O.emoji,
+                      className: D.emoji,
                       emojiId: t.id,
                       emojiName: t.name,
                       animated: !!t.animated
@@ -77,13 +81,13 @@ class k extends l.PureComponent {
         let { user: t } = this.props,
             { text: e, emojiInfo: n } = this.state;
         return (0, a.jsx)(r.hjN, {
-            className: O.formGroup,
-            title: C.intl.formatToPlainString(C.t['/w9pHx'], { username: t.username }),
+            className: D.formGroup,
+            title: O.intl.formatToPlainString(O.t['/w9pHx'], { username: t.username }),
             children: (0, a.jsxs)('div', {
-                className: O.inputContainer,
+                className: D.inputContainer,
                 children: [
                     (0, a.jsx)('div', {
-                        className: O.emojiButtonContainer,
+                        className: D.emojiButtonContainer,
                         children: (0, a.jsx)(r.yRy, {
                             renderPopout: this.renderEmojiPicker,
                             position: 'left',
@@ -94,7 +98,7 @@ class k extends l.PureComponent {
                                 return (0, a.jsx)(c.Z, {
                                     ...t,
                                     active: n,
-                                    className: O.emojiButton,
+                                    className: D.emojiButton,
                                     tabIndex: 0,
                                     renderButtonContents: this.getEmojiButtonRenderer()
                                 });
@@ -104,8 +108,8 @@ class k extends l.PureComponent {
                     (0, a.jsx)(r.oil, {
                         maxLength: v.s0,
                         value: e,
-                        inputClassName: O.input,
-                        placeholder: C.intl.string(C.t['zYR38/']),
+                        inputClassName: D.input,
+                        placeholder: O.intl.string(O.t['zYR38/']),
                         onChange: this.handleStatusChange,
                         onKeyPress: this.handleKeyPress,
                         autoFocus: !0
@@ -120,14 +124,14 @@ class k extends l.PureComponent {
                                       right: -2
                                   }
                               },
-                              className: O.clearButton,
+                              className: D.clearButton,
                               onClick: this.handleClearStatus,
                               look: r.zxk.Looks.BLANK,
                               size: r.zxk.Sizes.NONE,
                               children: (0, a.jsx)(r.k$p, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: O.clearIcon
+                                  className: D.clearIcon
                               })
                           })
                         : null
@@ -138,10 +142,10 @@ class k extends l.PureComponent {
     renderClearAfter() {
         let { clearAfter: t } = this.state;
         return (0, a.jsx)(r.hjN, {
-            className: O.formGroup,
-            title: C.intl.string(C.t.E45wvL),
+            className: D.formGroup,
+            title: O.intl.string(O.t.E45wvL),
             children: (0, a.jsx)(r.q4e, {
-                placeholder: C.intl.string(C.t.E45wvL),
+                placeholder: O.intl.string(O.t.E45wvL),
                 maxVisibleItems: 5,
                 value: t,
                 options: v.wS.map((t) => ({
@@ -157,8 +161,8 @@ class k extends l.PureComponent {
     renderStatusInput() {
         let { status: t } = this.state;
         return (0, a.jsx)(r.hjN, {
-            className: O.formGroup,
-            title: C.intl.string(C.t.zOdg0N),
+            className: D.formGroup,
+            title: O.intl.string(O.t.zOdg0N),
             children: (0, a.jsx)(r.q4e, {
                 maxVisibleItems: 4,
                 value: t,
@@ -169,7 +173,7 @@ class k extends l.PureComponent {
                     label: t.label()
                 })),
                 onChange: this.handleChangeStatus,
-                renderOptionLabel: T
+                renderOptionLabel: k
             })
         });
     }
@@ -179,41 +183,48 @@ class k extends l.PureComponent {
             ...this.analyticsLocation,
             children: (0, a.jsxs)(r.Y0X, {
                 transitionState: t,
-                className: O.modalRoot,
-                'aria-label': C.intl.string(C.t['/UonHB']),
+                className: D.modalRoot,
+                'aria-label': O.intl.string(O.t['/UonHB']),
                 children: [
                     (0, a.jsxs)(r.xBx, {
                         separator: !1,
-                        className: O.headerContainer,
+                        className: D.headerContainer,
                         children: [
-                            (0, a.jsx)('div', { className: O.art }),
+                            (0, a.jsx)('div', { className: D.art }),
                             (0, a.jsx)('div', {
-                                className: O.header,
+                                className: D.header,
                                 children: (0, a.jsx)(r.H, {
-                                    className: O.headerText,
-                                    children: C.intl.string(C.t['/UonHB'])
+                                    className: D.headerText,
+                                    children: O.intl.string(O.t['/UonHB'])
                                 })
                             }),
                             (0, a.jsx)(r.olH, {
                                 onClick: e,
-                                className: O.modalCloseButton
+                                className: D.modalCloseButton
                             })
                         ]
                     }),
                     (0, a.jsxs)(r.hzk, {
-                        children: [this.renderCustomStatusInput(), this.renderClearAfter(), (0, a.jsx)(r.$i$, { className: O.formDivider }), this.renderStatusInput()]
+                        children: [
+                            this.renderCustomStatusInput(),
+                            this.renderClearAfter(),
+                            this.canShowStatusSelector &&
+                                (0, a.jsxs)(a.Fragment, {
+                                    children: [(0, a.jsx)(r.$i$, { className: D.formDivider }), this.renderStatusInput()]
+                                })
+                        ]
                     }),
                     (0, a.jsxs)(r.mzw, {
                         children: [
                             (0, a.jsx)(r.zxk, {
                                 onClick: this.handleSubmit,
-                                children: C.intl.string(C.t.R3BPHx)
+                                children: O.intl.string(O.t.R3BPHx)
                             }),
                             (0, a.jsx)(r.zxk, {
                                 onClick: e,
                                 look: r.zxk.Looks.LINK,
-                                color: O.cancelButton,
-                                children: C.intl.string(C.t['ETE/oK'])
+                                color: D.cancelButton,
+                                children: O.intl.string(O.t['ETE/oK'])
                             })
                         ]
                     })
@@ -223,25 +234,25 @@ class k extends l.PureComponent {
     }
     constructor(...t) {
         super(...t),
-            D(this, 'state', {
+            T(this, 'state', {
                 emojiInfo: null != this.props.customStatus ? this.props.customStatus.emoji : null,
                 text: null != this.props.customStatus && null != this.props.customStatus.state ? this.props.customStatus.state : '',
-                clearAfter: (0, _.Z)(),
-                status: (0, j.Z)()
+                clearAfter: (0, j.Z)(),
+                status: (0, C.Z)()
             }),
-            D(this, 'handleClearStatus', () => {
+            T(this, 'handleClearStatus', () => {
                 this.setState({
                     emojiInfo: null,
                     text: ''
                 });
             }),
-            D(this, 'handleSubmit', (t) => {
+            T(this, 'handleSubmit', (t) => {
                 t.preventDefault(), this.handleSaveStatus();
             }),
-            D(this, 'handleStatusChange', (t) => {
+            T(this, 'handleStatusChange', (t) => {
                 this.setState({ text: t });
             }),
-            D(this, 'handleEmojiChange', (t) => {
+            T(this, 'handleEmojiChange', (t) => {
                 if (null == t) return;
                 let e =
                     null != t.id
@@ -257,22 +268,22 @@ class k extends l.PureComponent {
                           };
                 this.setState({ emojiInfo: e });
             }),
-            D(this, 'handleChangeClearAfter', (t) => {
+            T(this, 'handleChangeClearAfter', (t) => {
                 this.setState({ clearAfter: t });
             }),
-            D(this, 'handleChangeStatus', (t) => {
+            T(this, 'handleChangeStatus', (t) => {
                 this.setState({ status: t });
             }),
-            D(this, 'handleSaveStatus', () => {
+            T(this, 'handleSaveStatus', () => {
                 let { sourceAnalyticsContext: t, onClose: e } = this.props,
                     { emojiInfo: n, text: a, clearAfter: l, status: i } = this.state,
-                    s = S.co.getSetting();
-                s !== i && (0, m.Z)(i, s, t), (0, b.Z)(a, n, l, t), e();
+                    s = f.co.getSetting();
+                s !== i && (0, m.Z)(i, s, t), (0, _.Z)(a, n, l, t), e();
             }),
-            D(this, 'handleKeyPress', (t) => {
+            T(this, 'handleKeyPress', (t) => {
                 t.which === x.yXg.ENTER && this.handleSaveStatus();
             }),
-            D(this, 'renderEmojiPicker', (t) => {
+            T(this, 'renderEmojiPicker', (t) => {
                 let { closePopout: e } = t,
                     { onClose: n } = this.props;
                 return (0, a.jsx)(h.Z, {
@@ -286,17 +297,17 @@ class k extends l.PureComponent {
             });
     }
 }
-let E = o.ZP.connectStores(
-    [f.Z, p.default],
+let I = o.ZP.connectStores(
+    [g.Z, p.default],
     () => {
         let t = p.default.getCurrentUser();
         return (
             s()(null != t, 'CustomStatusModal: user cannot be null'),
             {
-                customStatus: f.Z.getCustomStatusActivity(),
+                customStatus: g.Z.getCustomStatusActivity(),
                 user: t
             }
         );
     },
     { forwardRef: !0 }
-)(k);
+)(E);
