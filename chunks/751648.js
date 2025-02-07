@@ -1,55 +1,58 @@
 n.d(t, {
+    U9: () => u,
     ZO: () => o,
-    df: () => a,
+    df: () => s,
     hF: () => c,
-    j2: () => d
+    j2: () => d,
+    jM: () => m,
+    l: () => h
 });
-var i = n(544891),
-    l = n(570140),
-    r = n(881052),
-    s = n(981631);
+var a = n(544891),
+    r = n(570140),
+    l = n(881052),
+    i = n(981631);
 async function o() {
-    l.Z.wait(() => {
-        l.Z.dispatch({ type: 'VIRTUAL_CURRENCY_BALANCE_FETCH' });
+    r.Z.wait(() => {
+        r.Z.dispatch({ type: 'VIRTUAL_CURRENCY_BALANCE_FETCH' });
     });
     try {
-        let e = await i.tn.get({
-                url: s.ANM.VIRTUAL_CURRENCY_USER_BALANCE,
+        let e = await a.tn.get({
+                url: i.ANM.VIRTUAL_CURRENCY_USER_BALANCE,
                 rejectWithError: !1
             }),
             t = e.body.balance;
         return (
-            l.Z.dispatch({
+            r.Z.dispatch({
                 type: 'VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS',
                 balance: t
             }),
             e.body
         );
     } catch (t) {
-        let e = t instanceof r.HF ? t : new r.HF(t);
-        l.Z.dispatch({
+        let e = t instanceof l.HF ? t : new l.HF(t);
+        r.Z.dispatch({
             type: 'VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL',
             error: e
         });
     }
 }
-async function a(e) {
+async function s(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    l.Z.wait(() => {
-        l.Z.dispatch({
+    r.Z.wait(() => {
+        r.Z.dispatch({
             type: 'VIRTUAL_CURRENCY_REDEEM_START',
             skuId: e
         });
     });
     try {
         let n = (
-            await i.tn.post({
-                url: s.ANM.VIRTUAL_CURRENCY_SKU_REDEEM(e),
+            await a.tn.post({
+                url: i.ANM.VIRTUAL_CURRENCY_SKU_REDEEM(e),
                 rejectWithError: !1
             })
         ).body;
         return (
-            l.Z.dispatch({
+            r.Z.dispatch({
                 type: 'VIRTUAL_CURRENCY_REDEEM_SUCCESS',
                 skuId: e,
                 entitlements: n
@@ -57,9 +60,9 @@ async function a(e) {
             t && o(),
             n
         );
-    } catch (i) {
-        let n = i instanceof r.HF ? i : new r.HF(i);
-        l.Z.dispatch({
+    } catch (a) {
+        let n = a instanceof l.HF ? a : new l.HF(a);
+        r.Z.dispatch({
             type: 'VIRTUAL_CURRENCY_REDEEM_FAIL',
             skuId: e,
             error: n
@@ -69,11 +72,20 @@ async function a(e) {
 }
 function c(e) {
     let { earnedOrbsQuantity: t } = e;
-    return l.Z.dispatch({
+    return r.Z.dispatch({
         type: 'VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_OPEN',
         earnedOrbsQuantity: t
     });
 }
 function d() {
-    return l.Z.dispatch({ type: 'VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_CLOSE' });
+    return r.Z.dispatch({ type: 'VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_CLOSE' });
+}
+function u() {
+    return r.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_COACHMARK_OPEN' });
+}
+function h() {
+    return r.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_COACHMARK_CLOSE' });
+}
+function m() {
+    return r.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_COACHMARK_SKIP' });
 }

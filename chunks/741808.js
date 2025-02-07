@@ -1,15 +1,19 @@
-n.d(t, { X: () => o }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(392711);
-let s = (e, t) => (void 0 !== t && t > e ? t : e);
-function o(e) {
-    let { children: t, className: n, ...o } = e,
-        { baseStyles: a, offsets: c } = (function (e) {
-            let { backgroundElementRef: t, getOffsetsRelativeToElement: n, fallbackAbsoluteOffsets: i, debounceTime: o = 60, minimumOffsets: a } = e,
-                [c, d] = l.useState(null),
-                u = l.useCallback(() => {
-                    let e = t.current;
+n.d(t, { X: () => s }), n(47120);
+var a = n(200651),
+    r = n(192379),
+    l = n(392711);
+let i = (e, t) => (void 0 !== t && t > e ? t : e),
+    o = {
+        position: 'absolute',
+        pointerEvents: 'all'
+    };
+function s(e) {
+    let { children: t, className: n, key: s, ...c } = e,
+        { baseStyles: d, offsets: u } = (function (e) {
+            let { key: t, backgroundElementRef: n, getOffsetsRelativeToElement: a, fallbackAbsoluteOffsets: s, onGetBoundingRect: c = () => {}, debounceTime: d = 60, minimumOffsets: u } = e,
+                [h, m] = r.useState(null),
+                x = r.useCallback(() => {
+                    let e = n.current;
                     return null === e
                         ? {
                               height: 0,
@@ -19,57 +23,56 @@ function o(e) {
                               height: e.offsetHeight,
                               width: e.offsetWidth
                           };
-                }, [t]),
-                _ = l.useCallback(() => {
-                    let e = t.current,
-                        l = { ...i };
-                    if (null === e) return l;
-                    let o = n(u()),
-                        _ = e.getBoundingClientRect();
-                    return void 0 !== o.top && (l.top = s(_.top + o.top, null == a ? void 0 : a.top)), void 0 !== o.left && (l.left = s(_.left + o.left, null == a ? void 0 : a.left)), void 0 !== o.right && (l.right = s(window.innerWidth - _.right + o.right, null == a ? void 0 : a.right)), void 0 !== o.bottom && (l.bottom = s(window.innerHeight - _.bottom + o.bottom, null == a ? void 0 : a.bottom)), (0, r.isEqual)(l, c) || d(l), l;
-                }, [n, i, c, u, a, t]),
-                E = l.useMemo(
-                    () =>
-                        (0, r.debounce)(() => {
-                            let e = _();
-                            !(0, r.isEqual)(e, c) && d(e);
-                        }, o),
-                    [c, _, o]
-                );
+                }, [n]),
+                _ = r.useCallback(() => {
+                    let e = n.current;
+                    if (null === e) return s;
+                    let t = { ...a(x()) },
+                        r = e.getBoundingClientRect();
+                    return void 0 !== t.top && (t.top = i(r.top + t.top, null == u ? void 0 : u.top)), void 0 !== t.left && (t.left = i(r.left + t.left, null == u ? void 0 : u.left)), void 0 !== t.right && (t.right = i(window.innerWidth - r.right + t.right, null == u ? void 0 : u.right)), void 0 !== t.bottom && (t.bottom = i(window.innerHeight - r.bottom + t.bottom, null == u ? void 0 : u.bottom)), (0, l.isEqual)(t, h) || m(t), c(r), t;
+                }, [a, s, h, x, u, n, c]);
+            r.useEffect(() => {
+                _();
+            }, [t, _]);
+            let p = r.useMemo(
+                () =>
+                    (0, l.debounce)(() => {
+                        _();
+                    }, d),
+                [_, d]
+            );
             return (
-                l.useEffect(() => {
-                    null === c && null !== t.current && _();
-                }, [c, _, t]),
-                l.useEffect(
+                r.useEffect(
                     () => (
-                        window.addEventListener('resize', E),
+                        window.addEventListener('resize', p),
                         () => {
-                            window.removeEventListener('resize', E);
+                            window.removeEventListener('resize', p);
                         }
                     ),
-                    [E]
+                    [p]
                 ),
                 {
-                    offsets: c,
-                    baseStyles: {
-                        position: 'absolute',
-                        pointerEvents: 'all'
-                    },
-                    getElementDimensions: u,
-                    getAbsoluteOffsets: _
+                    offsets: h,
+                    baseStyles: o,
+                    getElementDimensions: x,
+                    updateElementOffsets: _
                 }
             );
-        })(o),
-        d = {
-            ...a,
-            ...c
+        })({ ...c }),
+        h = {
+            ...d,
+            ...u
         };
-    return null === c
+    return null === u
         ? null
-        : (0, i.jsx)('div', {
-              style: { ...d },
-              className: n,
-              children: t
-          });
+        : (0, a.jsx)(
+              'div',
+              {
+                  style: { ...h },
+                  className: n,
+                  children: t
+              },
+              s
+          );
 }
-o.displayName = 'ElementOffsetModalContentWrapper';
+s.displayName = 'ElementOffsetModalContentWrapper';

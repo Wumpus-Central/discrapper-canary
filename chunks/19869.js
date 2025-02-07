@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(335131),
     u = n(703656),
     m = n(751648),
-    h = n(317257),
-    g = n(120786),
-    _ = n(775451),
-    x = n(970815),
+    g = n(317257),
+    h = n(120786),
+    x = n(775451),
+    _ = n(970815),
     p = n(720463),
     E = n(536703),
     C = n(431286),
@@ -27,17 +27,17 @@ function I() {
 }
 function b() {
     let [e, t] = s.useState(150),
-        [n, p] = s.useState(h.b.DEFAULT),
+        [n, p] = s.useState(g.b.DEFAULT),
         E = () => {
             switch (n) {
-                case h.b.DEFAULT:
-                    p(h.b.HIGHLIGHTED);
+                case g.b.DEFAULT:
+                    p(g.b.HIGHLIGHTED);
                     break;
-                case h.b.HIGHLIGHTED:
-                    p(h.b.SELECTED);
+                case g.b.HIGHLIGHTED:
+                    p(g.b.SELECTED);
                     break;
-                case h.b.SELECTED:
-                    p(h.b.DEFAULT);
+                case g.b.SELECTED:
+                    p(g.b.DEFAULT);
             }
         },
         { analyticsLocations: C } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
@@ -49,7 +49,7 @@ function b() {
             }),
             (0, i.jsx)(f.E_, {
                 label: 'Balance Widget Menu',
-                children: (0, i.jsx)(_.V9, {
+                children: (0, i.jsx)(x.V9, {
                     ctaText: N.intl.string(N.t['H57f4+']),
                     ctaOnClick: T.dG4,
                     isCoachmarkEnabled: !1
@@ -94,21 +94,21 @@ function b() {
             (0, i.jsxs)(f.E_, {
                 label: 'Balance Widget Pill',
                 children: [
-                    (0, i.jsx)(x.A4, {
+                    (0, i.jsx)(_.A4, {
                         balance: 150,
-                        balanceWidgetMode: h.b.DEFAULT
+                        balanceWidgetMode: g.b.DEFAULT
                     }),
-                    (0, i.jsx)(x.A4, {
+                    (0, i.jsx)(_.A4, {
                         balance: 150,
-                        balanceWidgetMode: h.b.HIGHLIGHTED
+                        balanceWidgetMode: g.b.HIGHLIGHTED
                     }),
-                    (0, i.jsx)(x.A4, {
+                    (0, i.jsx)(_.A4, {
                         balance: 150,
-                        balanceWidgetMode: h.b.SELECTED
+                        balanceWidgetMode: g.b.SELECTED
                     }),
-                    (0, i.jsx)(x.A4, {
+                    (0, i.jsx)(_.A4, {
                         balance: 0,
-                        balanceWidgetMode: h.b.DEFAULT,
+                        balanceWidgetMode: g.b.DEFAULT,
                         showNotificationBadge: !0
                     })
                 ]
@@ -127,7 +127,7 @@ function b() {
                         value: e,
                         onChange: (e) => t(e)
                     }),
-                    (0, i.jsx)(x.A4, {
+                    (0, i.jsx)(_.A4, {
                         balance: e,
                         balanceWidgetMode: n,
                         onClick: () => E()
@@ -136,7 +136,7 @@ function b() {
             }),
             (0, i.jsx)(f.E_, {
                 label: 'Balance Widget Card',
-                children: (0, i.jsx)(g.L, {
+                children: (0, i.jsx)(h.L, {
                     ctaText: N.intl.string(N.t['H57f4+']),
                     linkText: N.intl.string(N.t['7f4H7O']),
                     ctaOnClick: T.dG4
@@ -146,7 +146,6 @@ function b() {
     });
 }
 function v() {
-    let e = (0, C.i)();
     return (0, i.jsxs)(f.$0, {
         children: [
             (0, i.jsx)(l.X6q, {
@@ -175,20 +174,25 @@ function v() {
             (0, i.jsx)(f.E_, {
                 label: 'Announcement Modal [Dismissible Content]',
                 children: (0, i.jsx)(r.zx, {
-                    onClick: e,
+                    onClick: C.i,
                     children: 'Open SINGLE Use Announcement Modal'
                 })
             }),
             (0, i.jsxs)(f.E_, {
                 label: 'Onboarding Coachmark',
                 children: [
-                    (0, i.jsx)(E.d, {
+                    (0, i.jsx)(E.mG, {
                         onClose: T.dG4,
                         renderTail: !1
                     }),
-                    (0, i.jsx)(E.d, {
+                    (0, i.jsx)(E.mG, {
                         onClose: T.dG4,
                         renderTail: !0
+                    }),
+                    (0, i.jsx)(E.mG, {
+                        onClose: T.dG4,
+                        renderTail: !0,
+                        invertTail: !0
                     })
                 ]
             }),
