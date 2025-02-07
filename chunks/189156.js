@@ -37,7 +37,7 @@ function p(e) {
             () =>
                 null != g
                     ? d.intl.format(d.t.rSUACQ, {
-                          helpdeskArticle: l.Z.getArticleURL(''),
+                          helpdeskArticle: l.Z.getArticleURL(c.BhN.SLAYER_PROVISIONAL_ACCOUNTS),
                           applicationName: () => (0, i.jsx)(s.Z, { application: g }, g.id)
                       })
                     : d.intl.format(d.t['q+N8Ly'], { helpdeskArticle: l.Z.getArticleURL(c.BhN.SLAYER_PROVISIONAL_ACCOUNTS) }),

@@ -1,4 +1,4 @@
-n.d(t, { I: () => E });
+n.d(t, { I: () => L });
 var r = n(200651),
     l = n(192379),
     i = n(120356),
@@ -20,8 +20,8 @@ var r = n(200651),
     v = n(46140),
     k = n(388032),
     j = n(2381);
-function E(e) {
-    let { isFullScreen: t, isLayer: n, onClose: i, selectedTab: E, handleTransition: L, transparent: S } = e,
+function L(e) {
+    let { isFullScreen: t, isLayer: n, onClose: i, selectedTab: L, handleTransition: E, transparent: S } = e,
         B = (0, C.ZP)(),
         T = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         I = (null == T ? void 0 : T.isStaff()) || (null == T ? void 0 : T.isStaffPersonal()) || !1,
@@ -42,9 +42,9 @@ function E(e) {
                 children: [
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            E === b.AW.CATALOG &&
+                            L === b.AW.CATALOG &&
                                 (0, r.jsx)(c.P3F, {
-                                    onClick: () => L(b.AW.HOME),
+                                    onClick: () => E(b.AW.HOME),
                                     className: j.back,
                                     'aria-label': k.intl.string(k.t['13/7kZ']),
                                     children: (0, r.jsx)(c.j9r, {})
@@ -56,7 +56,7 @@ function E(e) {
                         ]
                     }),
                     (0, r.jsx)(h.Z.Title, { children: k.intl.string(k.t.pWG4zc) }),
-                    E === b.AW.CATALOG &&
+                    L === b.AW.CATALOG &&
                         (0, r.jsx)(h.Z.Title, {
                             className: j.shopAllHeader,
                             children: k.intl.string(k.t.xFcotb)

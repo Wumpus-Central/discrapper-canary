@@ -20,8 +20,8 @@ var r = n(200651),
     v = n(981632),
     k = n(290026),
     j = n(819640),
-    E = n(594174),
-    L = n(626135),
+    L = n(594174),
+    E = n(626135),
     S = n(74538),
     B = n(335131),
     T = n(381585),
@@ -52,7 +52,7 @@ var r = n(200651),
     Q = n(697526);
 function ee(e) {
     let { products: t, handleShopCardMount: n, header: l, category: i, isPremiumUser: a, isGiftEasterEggEnabled: s } = e,
-        d = (0, o.e7)([E.default], () => E.default.getCurrentUser());
+        d = (0, o.e7)([L.default], () => L.default.getCurrentUser());
     return null == d || 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
@@ -171,14 +171,14 @@ let er = function (e) {
         ec = (0, o.e7)([j.Z], () => j.Z.getLayers().includes(K.S9g.COLLECTIBLES_SHOP)),
         eu = (0, c.f9)(),
         { onClose: eC } = (0, M.Db)(),
-        eh = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
+        eh = (0, o.e7)([L.default], () => L.default.getCurrentUser()),
         ep = S.ZP.canUseCollectibles(eh),
         { categories: em, isFetchingCategories: eg, fetchCategoriesError: ef, fetchPurchasesError: ex, claimError: e_, refreshCategories: eb } = (0, Z.ZP)({ location: 'CollectiblesShop.web' }),
         ev = null !== (t = null != ef ? ef : ex) && void 0 !== t ? t : e_;
     (0, k.P)();
     let ek = (0, F.O)(em),
         ej = l.useRef(null),
-        [eE, eL] = l.useState(!1);
+        [eL, eE] = l.useState(!1);
     (0, A.Kp)({
         isFetchingCategories: eg,
         isLayer: ec,
@@ -189,7 +189,7 @@ let er = function (e) {
                 var e;
                 let t;
                 (t = D === $.AW.CATALOG ? eo : h),
-                    L.default.track(K.rMx.COLLECTIBLES_SHOP_VIEWED, {
+                    E.default.track(K.rMx.COLLECTIBLES_SHOP_VIEWED, {
                         location_stack: v,
                         source: t,
                         page_session_id: N,
@@ -198,7 +198,7 @@ let er = function (e) {
                     });
             }
             ep ||
-                L.default.track(K.rMx.PREMIUM_UPSELL_VIEWED, {
+                E.default.track(K.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: X.cd.COLLECTIBLES_SHOP,
                     location_stack: v
                 });
@@ -333,8 +333,8 @@ let er = function (e) {
                                                                                         isPremiumUser: ep,
                                                                                         category: e,
                                                                                         initialItemCardRef: ej,
-                                                                                        setIsGiftEasterEggEnabled: eL,
-                                                                                        isGiftEasterEggEnabled: eE,
+                                                                                        setIsGiftEasterEggEnabled: eE,
+                                                                                        isGiftEasterEggEnabled: eL,
                                                                                         isFullScreen: n
                                                                                     })
                                                                                 })
@@ -353,7 +353,7 @@ let er = function (e) {
                         })
                     })
                 }),
-                eE && (0, r.jsx)(W.Z, {}),
+                eL && (0, r.jsx)(W.Z, {}),
                 !n &&
                     D === $.AW.HOME &&
                     (0, r.jsxs)(r.Fragment, {

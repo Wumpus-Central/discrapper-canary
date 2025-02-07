@@ -87,11 +87,11 @@ let x = o()((e) => {
             v = s.previewingVariantIndex,
             k = null === (t = l.variants) || void 0 === t ? void 0 : t[b],
             j = null !== v ? (null === (n = l.variants) || void 0 === n ? void 0 : n[v]) : void 0,
-            E = (0, h.Z)('shop-variants-group-'.concat(l.storeListingId), c.hy.HORIZONTAL);
+            L = (0, h.Z)('shop-variants-group-'.concat(l.storeListingId), c.hy.HORIZONTAL);
         if (null == k) return null;
-        let L = null != j ? j.variantLabel : null == k ? void 0 : k.variantLabel;
+        let E = null != j ? j.variantLabel : null == k ? void 0 : k.variantLabel;
         return (0, r.jsx)(d.bG, {
-            navigator: E,
+            navigator: L,
             children: (0, r.jsx)(d.SJ, {
                 children: (e) => {
                     var t;
@@ -133,7 +133,7 @@ let x = o()((e) => {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: f.variantLabel,
-                                children: u ? g.intl.string(g.t.wbgaj4) : L
+                                children: u ? g.intl.string(g.t.wbgaj4) : E
                             })
                         ]
                     });

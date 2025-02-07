@@ -78,8 +78,8 @@ let f = {
     x = (e) => {
         let { product: t, selectedVariantIndex: n, returnRef: x, onSuccess: _, tooltipDelay: b, isGiftEasterEggEnabled: v, disableCustomColor: k = !1 } = e,
             { analyticsLocations: j } = (0, s.ZP)(),
-            E = l.useRef(null),
-            L = (0, a.Z)(E),
+            L = l.useRef(null),
+            E = (0, a.Z)(L),
             S = k ? p.BR.DARK : p.BR.LIGHT,
             B = (0, u.hv)('CollectiblesShopGiftButton');
         return (0, c.x6)(t)
@@ -90,7 +90,7 @@ let f = {
                   children: (e) =>
                       (0, r.jsx)(i.zxk, {
                           ...e,
-                          buttonRef: E,
+                          buttonRef: L,
                           className: g.giftButton,
                           color: k ? i.Ttl.BRAND : i.Ttl.CUSTOM,
                           look: i.zxk.Looks.FILLED,
@@ -119,7 +119,7 @@ let f = {
                           },
                           children: v
                               ? (0, r.jsx)(d.Z, {
-                                    hovered: L,
+                                    hovered: E,
                                     isContentDismissed: !0,
                                     themeOverride: S,
                                     boxColors: f

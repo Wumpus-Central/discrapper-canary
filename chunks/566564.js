@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(653041);
+n.d(t, { Z: () => E }), n(653041);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
@@ -20,7 +20,7 @@ var r = n(200651),
     v = n(215023),
     k = n(388032),
     j = n(218142);
-let E = (e) => {
+let L = (e) => {
         let { handleTransition: t, numVisibleItems: n, isFetchingCategories: i, tab: a } = e,
             { noCache: o, includeUnpublished: d } = (0, g.Z)(),
             {
@@ -123,17 +123,17 @@ let E = (e) => {
                     ]
                 });
     },
-    L = (e) => {
+    E = (e) => {
         var t;
         let { isFullScreen: n, handleTransition: i, numVisibleItems: s, tab: p } = e,
-            { isFetchingCategories: f, fetchCategoriesError: x, fetchPurchasesError: _, claimError: b, refreshCategories: L } = (0, h.ZP)({ location: 'CollectiblesFeedShop' }),
+            { isFetchingCategories: f, fetchCategoriesError: x, fetchPurchasesError: _, claimError: b, refreshCategories: E } = (0, h.ZP)({ location: 'CollectiblesFeedShop' }),
             S = null !== (t = null != x ? x : _) && void 0 !== t ? t : b,
             B = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
             T = (0, C.b)('Collectibles Shop Button'),
             { noCache: I, includeUnpublished: y } = (0, g.Z)(),
             Z = l.useCallback(() => {
-                L();
-            }, [L]);
+                E();
+            }, [E]);
         if (null == B) return null;
         if (null != S) {
             let e = [];
@@ -159,7 +159,7 @@ let E = (e) => {
                       children: (0, r.jsxs)('div', {
                           className: a()(j.content, j.mainContent),
                           children: [
-                              (0, r.jsx)(E, {
+                              (0, r.jsx)(L, {
                                   handleTransition: i,
                                   numVisibleItems: s,
                                   isFetchingCategories: f,
