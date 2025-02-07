@@ -424,6 +424,7 @@ let A = Object.freeze({
         BILLING_SUBSCRIPTION_PREVIEW: (t) => '/users/@me/billing/subscriptions/'.concat(t, '/preview'),
         BILLING_SUBSCRIPTION_INVOICE: (t) => '/users/@me/billing/subscriptions/'.concat(t, '/invoices'),
         BILLING_INVOICE_MANUAL_PAYMENT: (t, e) => '/users/@me/billing/subscriptions/'.concat(t, '/invoices/').concat(e, '/pay'),
+        Billing_SUBSCRIPTION_REWARD_ELIGIBILITY: (t) => '/users/@me/billing/subscriptions/'.concat(t, '/reward-eligibility'),
         BILLING_COUNTRY_CODE: '/users/@me/billing/country-code',
         BILLING_LOCALIZED_PROMO: '/users/@me/billing/localized-pricing-promo',
         VERIFY_PURCHASE: '/google-play/verify-purchase-token',
