@@ -81,6 +81,7 @@ function et(e) {
         popoutDisabled: u,
         label: l,
         fullRegionButton: g,
+        forceGroupedButtons: !0,
         onMouseEnter: (e) => {
             null == _ || _(e);
         },

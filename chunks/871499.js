@@ -97,38 +97,39 @@ let I = {
         premiumGradient: E.premiumGradient
     };
 function T(e) {
-    let { color: t, ignoreColorForCaret: n = !1, isActive: a = !1, className: o, iconClassName: T, onPopoutClick: S, popoutOpen: A = !1, popoutDisabled: N = !1, premiumGlow: C = !1, fullRegionButton: R = !1, ...O } = e,
-        D = (0, m.Z)(t, a),
-        x = (0, m.Z)(n ? void 0 : t, !1),
-        L = (0, u.Z)('(max-width: 456px)'),
-        P = r.useRef(null),
-        w = r.useContext(p.h9);
+    let { color: t, ignoreColorForCaret: n = !1, isActive: a = !1, className: o, iconClassName: T, onPopoutClick: S, popoutOpen: A = !1, popoutDisabled: N = !1, premiumGlow: C = !1, fullRegionButton: R = !1, forceGroupedButtons: O = !1, ...D } = e,
+        x = (0, m.Z)(t, a),
+        L = (0, m.Z)(n ? void 0 : t, !1),
+        P = (0, u.Z)('(max-width: 456px)'),
+        w = r.useRef(null),
+        M = r.useContext(p.h9);
     r.useEffect(() => {
-        null != P.current && (w ? P.current.pause() : P.current.play());
-    }, [w]);
-    let { groupedButtons: M } = (0, f.ZP)({ location: 'CenterControlButton' }),
-        k = M ? [E.experimentButton, b[D], R && null == S && E.fullRegionButton] : [I[D]],
-        U = (0, i.jsx)(y, {
-            ...O,
+        null != w.current && (M ? w.current.pause() : w.current.play());
+    }, [M]);
+    let { groupedButtons: k } = (0, f.ZP)({ location: 'CenterControlButton' }),
+        U = O || k,
+        G = U ? [E.experimentButton, b[x], R && null == S && E.fullRegionButton] : [I[x]],
+        B = (0, i.jsx)(y, {
+            ...D,
             grow: !1,
             onContextMenu: S,
-            iconClassName: s()(T, E.centerIcon, M && E.experimentControlIcon, M && R && null == S && E.fullRegionIcon),
-            className: s()(L ? o : null, E.staticButton, E.centerButton, a && E.active, ...k)
+            iconClassName: s()(T, E.centerIcon, U && E.experimentControlIcon, U && R && null == S && E.fullRegionIcon),
+            className: s()(P ? o : null, E.staticButton, E.centerButton, a && E.active, ...G)
         });
-    return L
-        ? U
-        : M
+    return P
+        ? B
+        : U
           ? (0, i.jsxs)('div', {
-                className: s()(E.caretButtonContainer, o, R && null != S && [E.fullRegionDropdownButton, b[D]]),
+                className: s()(E.caretButtonContainer, o, R && null != S && [E.fullRegionDropdownButton, b[x]]),
                 children: [
-                    U,
+                    B,
                     null != S
                         ? (0, i.jsx)(h.Z, {
                               children: (0, i.jsx)(l.P3F, {
                                   'aria-label': g.intl.string(g.t.PdRCRk),
                                   onClick: N ? void 0 : S,
                                   onContextMenu: N ? void 0 : S,
-                                  className: s()(E.contextMenuNubExperiment, b[x], {
+                                  className: s()(E.contextMenuNubExperiment, b[L], {
                                       [E.active]: A,
                                       [E.disabled]: N
                                   }),
@@ -148,13 +149,13 @@ function T(e) {
                                 mask: null == S ? null : c.QS.CHANNEL_CALL_CONTROL_BUTTON,
                                 width: 56,
                                 height: 56,
-                                children: U
+                                children: B
                             }),
                             C &&
                                 (0, i.jsx)('div', {
                                     className: E.glow,
                                     children: (0, i.jsx)(d.Z, {
-                                        ref: P,
+                                        ref: w,
                                         loop: !0,
                                         autoPlay: !0,
                                         className: E.glowVideo,
@@ -172,7 +173,7 @@ function T(e) {
                                   'aria-label': g.intl.string(g.t.PdRCRk),
                                   onClick: S,
                                   onContextMenu: S,
-                                  className: s()(E.contextMenuNub, I[D], { [E.active]: A }),
+                                  className: s()(E.contextMenuNub, I[x], { [E.active]: A }),
                                   children: (0, i.jsx)(_.Z, { className: s()(E.contextMenuCaret, { [E.open]: A }) })
                               })
                           })
