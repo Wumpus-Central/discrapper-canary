@@ -36,7 +36,7 @@ let r = (0, i.B)({
     }),
     a = (0, i.B)({
         kind: 'user',
-        id: '2025-01_sensitive_content_defaults',
+        id: '2025-01_sensitive_content_defaults_new_users',
         label: 'Sensitive Content Defaults - New Users',
         defaultConfig: {
             enabled: !1,

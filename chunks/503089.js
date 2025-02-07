@@ -16,8 +16,8 @@ var n = s(200651),
     c = s(252618),
     u = s(243778),
     d = s(126848),
-    f = s(207874),
-    p = s(585483),
+    p = s(207874),
+    f = s(585483),
     g = s(960048),
     x = s(410575),
     h = s(493544),
@@ -96,12 +96,12 @@ class _ extends i.PureComponent {
         let { section: t } = this.props,
             { notice: s } = null !== (e = this.getPredicateSections().find((e) => t === e.section)) && void 0 !== e ? e : {};
         return null != s && s.stores.some((e) => e.showNotice() && !(null != e.canCloseEarly && e.canCloseEarly()))
-            ? (p.S.dispatch(m.CkL.SHAKE_APP, {
+            ? (f.S.dispatch(m.CkL.SHAKE_APP, {
                   duration: 300,
                   intensity: this._intensity
               }),
               (this._intensity = Math.min(this._intensity + j, N)),
-              p.S.dispatch(m.CkL.EMPHASIZE_NOTICE),
+              f.S.dispatch(m.CkL.EMPHASIZE_NOTICE),
               !1)
             : ((this._intensity = E), !0);
     }
@@ -119,7 +119,7 @@ class _ extends i.PureComponent {
                     orientation: 'vertical',
                     'aria-label': s,
                     children: [
-                        i ? (0, n.jsx)(f.Z, { style: b.searchBar }) : null,
+                        i ? (0, n.jsx)(p.Z, { style: b.searchBar }) : null,
                         e.map((e, t) => {
                             if (null != e.tabPredicate && !e.tabPredicate()) return null;
                             switch (e.section) {
@@ -231,7 +231,7 @@ class _ extends i.PureComponent {
                 !this._unmounted && ((this._intensity = E), this.forceUpdate());
             }),
             S(this, 'renderSettingsSectionTabBarItem', (e, t, s) => {
-                let { section: i, label: r = null, ariaLabel: a, onClick: c, color: u, icon: f, className: p, newIndicator: g, newIndicatorDismissibleContentTypes: x, badgeCount: h } = e,
+                let { section: i, label: r = null, ariaLabel: a, onClick: c, color: u, icon: p, className: f, newIndicator: g, newIndicatorDismissibleContentTypes: x, badgeCount: h } = e,
                     S = null;
                 i === m.oAB.ACCOUNT && this.props.isEligibleForPomelo
                     ? (S = (0, n.jsx)(l.P4T, {
@@ -248,8 +248,8 @@ class _ extends i.PureComponent {
                         }))
                       : null != s && (null == x ? void 0 : x.includes(s)) && !t
                         ? (S = null != g ? g : (0, n.jsx)(l.IGR, { text: v.intl.string(v.t.y2b7CA) }))
-                        : null != f
-                          ? (S = f)
+                        : null != p
+                          ? (S = p)
                           : null != h && h > 0 && (S = (0, n.jsx)(l.mAB, { count: h }));
                 let C =
                     i === m.oAB.PREMIUM
@@ -270,7 +270,7 @@ class _ extends i.PureComponent {
                         color: u,
                         id: i,
                         onClick: c,
-                        className: p,
+                        className: f,
                         'aria-label': a,
                         children: C
                     },

@@ -23,8 +23,8 @@ var l = i(442837),
     E = i(388032),
     N = i(64406);
 function y(e) {
-    let { user: n, currentUser: i, displayProfile: y, subsection: T, onClose: b } = e,
-        { theme: S } = (0, g.z)(),
+    let { user: n, currentUser: i, displayProfile: y, subsection: T, onClose: S } = e,
+        { theme: b } = (0, g.z)(),
         { trackUserProfileAction: P } = (0, m.KZ)(),
         L = null == y ? void 0 : y.guildId,
         C = (0, l.e7)([c.Z], () => (null != L ? c.Z.getGuild(L) : null)),
@@ -79,7 +79,7 @@ function y(e) {
                         connectedAccounts: R,
                         className: N.connections,
                         userId: n.id,
-                        theme: S,
+                        theme: b,
                         locale: M
                     })
                 }),
@@ -94,7 +94,7 @@ function y(e) {
                                 applicationRoleConnection: e,
                                 locale: M,
                                 onApplicationClicked: () => {
-                                    P({ action: 'PRESS_APP_CONNECTION' }), b();
+                                    P({ action: 'PRESS_APP_CONNECTION' }), S();
                                 },
                                 selectedGuildId: null != A ? A : void 0
                             },

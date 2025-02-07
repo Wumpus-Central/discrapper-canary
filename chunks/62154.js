@@ -21,7 +21,7 @@ var l = i(442837),
     _ = i(171865);
 function j(e) {
     var n;
-    let { user: i, currentUser: j, guildId: E, channelId: N, displayProfile: y, initialSection: T, initialSubsection: b, friendToken: S, onClose: P } = e,
+    let { user: i, currentUser: j, guildId: E, channelId: N, displayProfile: y, initialSection: T, initialSubsection: S, friendToken: b, onClose: P } = e,
         { relationshipType: L, originApplicationId: C } = (0, l.cj)([r.Z], () => ({
             relationshipType: r.Z.getRelationshipType(i.id),
             originApplicationId: r.Z.getOriginApplicationId(i.id)
@@ -35,7 +35,7 @@ function j(e) {
             user: i,
             currentUser: j,
             guildId: E,
-            initialSubsection: b
+            initialSubsection: S
         });
     return (0, t.jsxs)('div', {
         className: _.body,
@@ -61,7 +61,7 @@ function j(e) {
                         applicationId: O ? C : void 0,
                         guildId: null !== (n = null == y ? void 0 : y.guildId) && void 0 !== n ? n : void 0,
                         channelId: N,
-                        friendToken: S,
+                        friendToken: b,
                         className: _.friendRequestBanner
                     })
                 }),
@@ -100,7 +100,7 @@ function j(e) {
                     guildId: E,
                     items: F,
                     initialSection: T,
-                    initialSubsection: b,
+                    initialSubsection: S,
                     onClose: P
                 })
             })

@@ -4,7 +4,7 @@ var i = n(200651),
     a = n(120356),
     s = n.n(a),
     o = n(399606),
-    l = n(376345),
+    l = n(692547),
     u = n(607070),
     c = n(302221),
     d = n(884697),
@@ -37,7 +37,7 @@ let p = (e) => null != e && /^http/i.test(e),
                         backgroundPosition: 'center',
                         ...i
                     };
-                let r = (0, c.aD)(l.ZP.unsafe_rawColors.BLACK_500, 1 - E);
+                let r = (0, c.aD)(l.Z.unsafe_rawColors.BLACK_500.resolve().hex(), 1 - E);
                 return {
                     ...h,
                     backgroundImage: 'linear-gradient('.concat(r, ', ').concat(r, '), url(').concat(e, ')'),

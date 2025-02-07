@@ -21,8 +21,8 @@ let I = [T.Plq.KICK_MEMBERS, T.Plq.BAN_MEMBERS, T.Plq.ADMINISTRATOR, T.Plq.MANAG
     U = [],
     f = [],
     D = [],
-    C = [],
-    L = !0,
+    L = [],
+    C = !0,
     M = !1,
     h = !1,
     p = !0,
@@ -124,10 +124,10 @@ class y extends (r = E.ZP.Store) {
         return D;
     }
     get applicationCommands() {
-        return C;
+        return L;
     }
     get isInitialLoading() {
-        return L;
+        return C;
     }
     get isLoading() {
         return M;
@@ -175,7 +175,7 @@ let B = new y(u.Z, {
     },
     AUDIT_LOG_FETCH_SUCCESS: function (e) {
         var t;
-        (G = 0), (L = !1), (M = !1), (p = !0), (m = !1), (g = F(e.logs)), (O = e.integrations), (S = e.webhooks), (U = e.guildScheduledEvents), (f = null !== (t = e.automodRules) && void 0 !== t ? t : []), (D = e.threads), (C = e.applicationCommands), e.logs.length < T.Rg9 && (p = !1);
+        (G = 0), (C = !1), (M = !1), (p = !0), (m = !1), (g = F(e.logs)), (O = e.integrations), (S = e.webhooks), (U = e.guildScheduledEvents), (f = null !== (t = e.automodRules) && void 0 !== t ? t : []), (D = e.threads), (L = e.applicationCommands), e.logs.length < T.Rg9 && (p = !1);
     },
     AUDIT_LOG_FETCH_FAIL: function () {
         (M = !1), (m = !0), (g = []);
@@ -186,7 +186,7 @@ let B = new y(u.Z, {
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function (e) {
         let { logs: t, integrations: n, webhooks: r, guildScheduledEvents: l, automodRules: i, threads: a, applicationCommands: s } = e;
-        if (((h = !1), (O = n), (S = r), (U = l), (f = i), (D = a), (C = s), (0 === t.length || t.length < T.Rg9) && (p = !1), t.length > 0)) {
+        if (((h = !1), (O = n), (S = r), (U = l), (f = i), (D = a), (L = s), (0 === t.length || t.length < T.Rg9) && (p = !1), t.length > 0)) {
             let e = F(t);
             g = [...g, ...e];
         }
@@ -212,6 +212,6 @@ let B = new y(u.Z, {
         return (N = t), (b = null), V({ section: n });
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (g = []), (R = []), (P = T.rsA.ALL), (v = null), (b = null), (x = {}), (G = 0), (L = !0), (O = []), (S = []), (U = []), (f = []), (D = []);
+        (g = []), (R = []), (P = T.rsA.ALL), (v = null), (b = null), (x = {}), (G = 0), (C = !0), (O = []), (S = []), (U = []), (f = []), (D = []);
     }
 });

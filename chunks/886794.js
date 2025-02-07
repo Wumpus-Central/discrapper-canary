@@ -23,8 +23,8 @@ var t = i(200651),
     N = i(981631),
     y = i(388032),
     T = i(171865),
-    b = i(64406),
-    S = i(893302);
+    S = i(64406),
+    b = i(893302);
 function P(e) {
     let { user: n, guildId: i, channelId: P, messageId: L, roleId: C, sessionId: A, transitionState: O, onClose: M, sourceAnalyticsLocations: R = [] } = e,
         U = i === N.ME ? void 0 : i,
@@ -98,17 +98,17 @@ function P(e) {
                                     (0, t.jsx)(Z.Z.Overlay, {
                                         className: T.overlay,
                                         children: (0, t.jsxs)('div', {
-                                            className: S.container,
+                                            className: b.container,
                                             children: [
                                                 (0, t.jsx)(o.njP, {
-                                                    className: S.tabBar,
+                                                    className: b.tabBar,
                                                     type: 'top',
                                                     selectedItem: E.oh.BOT_INFO,
                                                     onItemSelect: N.dG4,
                                                     children: (0, t.jsx)(
                                                         o.njP.Item,
                                                         {
-                                                            className: S.tabBarItem,
+                                                            className: b.tabBarItem,
                                                             id: E.oh.BOT_INFO,
                                                             'aria-label': y.intl.string(y.t.jGoPJS),
                                                             children: (0, t.jsx)(o.Text, {
@@ -121,7 +121,7 @@ function P(e) {
                                                 }),
                                                 (0, t.jsxs)(o.zJl, {
                                                     fade: !0,
-                                                    className: b.scroller,
+                                                    className: S.scroller,
                                                     children: [
                                                         (0, t.jsx)(I.Z, {
                                                             userId: n.id,

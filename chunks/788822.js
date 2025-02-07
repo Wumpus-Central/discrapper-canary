@@ -17,7 +17,7 @@ let p = (e) => {
         { category: f, subblock: x, badgeText: _, handleTransition: b } = e;
     null != x && (g = null === (t = o.Z.getCategoryByStoreListingId(null == x ? void 0 : x.categoryStoreListingId)) || void 0 === t ? void 0 : t.skuId);
     let v = null !== (n = null != g ? g : null == f ? void 0 : f.skuId) && void 0 !== n ? n : '',
-        { handleCardVisibilityChange: k } = (0, c.E)(v, 'home', 'marketing'),
+        { handleCardVisibilityChange: k } = (0, c.E)(v, 'home', 'marketing featured block'),
         j =
             null !== (p = null == x ? void 0 : x.bannerUrl) && void 0 !== p
                 ? p

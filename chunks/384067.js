@@ -29,7 +29,7 @@ let h = (e) => {
         );
     }, []);
     let f = null != h ? h : '',
-        { handleCardVisibilityChange: x } = (0, c.E)(f, 'home', 'wide banner'),
+        { handleCardVisibilityChange: x } = (0, c.E)(f, 'home', 'marketing wide banner'),
         _ = n.bannerUrl;
     return null == _
         ? null

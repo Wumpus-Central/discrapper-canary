@@ -1,6 +1,6 @@
 i.d(n, {
-    W: () => S,
-    Z: () => b
+    W: () => b,
+    Z: () => S
 }),
     i(47120);
 var t = i(200651),
@@ -27,14 +27,14 @@ var t = i(200651),
     N = i(388032),
     y = i(409308),
     T = i(161068);
-function b(e) {
+function S(e) {
     let { user: n, guildId: i, channelId: o, messageId: s, roleId: r, transitionState: m, onViewBlockedProfileClick: x, showGuildProfile: Z = !0, sourceAnalyticsLocations: g = [] } = e,
-        b = i === E.ME ? void 0 : i,
-        { analyticsLocations: S } = (0, c.ZP)([...g, d.Z.BLOCKED_PROFILE_MODAL]),
+        S = i === E.ME ? void 0 : i,
+        { analyticsLocations: b } = (0, c.ZP)([...g, d.Z.BLOCKED_PROFILE_MODAL]),
         P = (0, p.ZB)({
             layout: 'BLOCKED_PROFILE_MODAL',
             userId: n.id,
-            guildId: b,
+            guildId: S,
             channelId: o,
             messageId: s,
             roleId: r,
@@ -50,10 +50,10 @@ function b(e) {
                 description: N.intl.string(N.t.QxrDY2)
             }
         ],
-        C = (0, I.ZP)(n.id, Z ? b : void 0),
+        C = (0, I.ZP)(n.id, Z ? S : void 0),
         A = l.createRef();
     return (0, t.jsx)(c.Gt, {
-        value: S,
+        value: b,
         children: (0, t.jsx)(p.Mt, {
             value: P,
             children: (0, t.jsx)(a.Y0X, {
@@ -80,7 +80,7 @@ function b(e) {
                                 children: [
                                     (0, t.jsx)(h.Z, {
                                         user: n,
-                                        guildId: b
+                                        guildId: S
                                     }),
                                     (0, t.jsx)(a.X6q, {
                                         variant: 'heading-xl/bold',
@@ -120,7 +120,7 @@ function b(e) {
                                             null == x || x(),
                                                 (0, f.pQ)({
                                                     action: 'VIEW_BLOCKED_PROFILE',
-                                                    analyticsLocations: S,
+                                                    analyticsLocations: b,
                                                     ...P
                                                 });
                                         }
@@ -134,8 +134,8 @@ function b(e) {
         })
     });
 }
-function S(e) {
-    let { user: n, guildId: i, channelId: o, messageId: _, roleId: b, transitionState: S, onViewBlockedProfileClick: P, showGuildProfile: L = !0, sourceAnalyticsLocations: C = [] } = e,
+function b(e) {
+    let { user: n, guildId: i, channelId: o, messageId: _, roleId: S, transitionState: b, onViewBlockedProfileClick: P, showGuildProfile: L = !0, sourceAnalyticsLocations: C = [] } = e,
         A = i === E.ME ? void 0 : i,
         O = (0, r.e7)([m.Z], () => m.Z.isBlocked(n.id)),
         { analyticsLocations: M } = (0, c.ZP)([...C, O ? d.Z.BLOCKED_PROFILE_MODAL : d.Z.IGNORED_PROFILE_MODAL]),
@@ -145,7 +145,7 @@ function S(e) {
             guildId: A,
             channelId: o,
             messageId: _,
-            roleId: b,
+            roleId: S,
             showGuildProfile: L
         }),
         U = [
@@ -165,7 +165,7 @@ function S(e) {
         children: (0, t.jsx)(p.Mt, {
             value: R,
             children: (0, t.jsx)(a.Y0X, {
-                transitionState: S,
+                transitionState: b,
                 className: y.root,
                 hideShadow: !0,
                 'aria-label': N.intl.string(N.t['3N/J2t']),

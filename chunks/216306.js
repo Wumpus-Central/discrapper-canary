@@ -29,8 +29,8 @@ var r = n(192379),
     U = n(176505),
     f = n(443063),
     D = n(490897),
-    C = n(388032);
-function L(e, t) {
+    L = n(388032);
+function C(e, t) {
     e.index = t;
 }
 function M(e, t, n, l) {
@@ -48,7 +48,7 @@ function M(e, t, n, l) {
                 'null' === r.id && (e.null = t.null.filter((e) => s(e, l))), (e[r.id] = t[r.id].filter((e) => s(e, l)));
             }),
             (e._categories = t._categories.filter((t) => 'null' === t.channel.id || 0 === l.length || e[t.channel.id].length > 0)),
-            (0, c.Z)(e._categories, e).forEach(L),
+            (0, c.Z)(e._categories, e).forEach(C),
             e
         );
     }, [t, n, s, l]);
@@ -130,5 +130,5 @@ function v(e) {
 }
 function P(e) {
     var t;
-    return C.intl.formatToPlainString(C.t['8N0BHR'], { timeAgo: s()(R.default.extractTimestamp(null !== (t = O.ZP.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow() });
+    return L.intl.formatToPlainString(L.t['8N0BHR'], { timeAgo: s()(R.default.extractTimestamp(null !== (t = O.ZP.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow() });
 }

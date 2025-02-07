@@ -128,7 +128,7 @@ let U = l.memo(function () {
             hasTooltip: !1
         }
     };
-function C(e) {
+function L(e) {
     var t;
     let { guildId: n, inviterUser: i, joinSourceType: E, className: c, onClickInviter: d } = e,
         A = (0, s.e7)([_.ZP], () => (null == i ? null : _.ZP.getMember(n, i.id)), [i, n]),
@@ -167,13 +167,13 @@ function C(e) {
               ]
           });
 }
-function L(e) {
+function C(e) {
     let { children: t, hasTooltip: n, guildId: l, inviterUser: i, joinSourceType: a } = e;
     return n && null != i
         ? (0, r.jsx)(o.ua7, {
               'aria-label': a !== O.gq.BOT ? R.intl.string(R.t.azhY2t) : R.intl.string(R.t['2ByN2t']),
               allowOverflow: !0,
-              text: (0, r.jsx)(C, {
+              text: (0, r.jsx)(L, {
                   guildId: l,
                   inviterUser: i,
                   joinSourceType: a
@@ -264,7 +264,7 @@ function h(e) {
                         ]
                     }),
                     s &&
-                        (0, r.jsx)(C, {
+                        (0, r.jsx)(L, {
                             guildId: E,
                             inviterUser: u,
                             joinSourceType: n,
@@ -288,12 +288,12 @@ let p = l.memo(function (e) {
     }, [a, T]);
     let g = (0, s.e7)([d.Z], () => d.Z.hideInstantInvites, []);
     if (null == _) return (0, r.jsx)(U, {});
-    let { sourceInviteCode: R, joinSourceType: S, integrationType: C } = _,
+    let { sourceInviteCode: R, joinSourceType: S, integrationType: L } = _,
         M = null != S ? D[S] : null,
         p = null !== (n = null == M ? void 0 : M.hasTooltip) && void 0 !== n && n;
     return (S === O.gq.INVITE || S === O.gq.VANITY_URL || (S === O.gq.MANUAL_MEMBER_VERIFICATION && null != R)) && g
         ? (0, r.jsx)(f, {})
-        : (0, r.jsx)(L, {
+        : (0, r.jsx)(C, {
               hasTooltip: p && !o,
               inviterUser: null != I ? I : null,
               guildId: a,
@@ -302,7 +302,7 @@ let p = l.memo(function (e) {
                   (0, r.jsx)(h, {
                       sourceInviteCode: R,
                       joinSourceType: S,
-                      integrationType: C,
+                      integrationType: L,
                       showInviterAsFooter: o,
                       inviterUser: null != I ? I : null,
                       guildId: a,

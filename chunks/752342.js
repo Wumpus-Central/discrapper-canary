@@ -1,4 +1,4 @@
-i.d(n, { Z: () => S }), i(47120);
+i.d(n, { Z: () => b }), i(47120);
 var t = i(200651);
 i(192379);
 var l = i(481060),
@@ -24,10 +24,10 @@ var l = i(481060),
     N = i(228168),
     y = i(981631),
     T = i(388032),
-    b = i(171865);
-function S(e) {
-    let { user: n, currentUser: i, guildId: S, channelId: P, messageId: L, roleId: C, sessionId: A, initialSection: O, initialSubsection: M, transitionState: R, onClose: U, sourceAnalyticsLocations: F = [] } = e,
-        B = S === y.ME ? void 0 : S,
+    S = i(171865);
+function b(e) {
+    let { user: n, currentUser: i, guildId: b, channelId: P, messageId: L, roleId: C, sessionId: A, initialSection: O, initialSubsection: M, transitionState: R, onClose: U, sourceAnalyticsLocations: F = [] } = e,
+        B = b === y.ME ? void 0 : b,
         D = (0, d.ZP)(n.id, B),
         { analyticsLocations: w } = (0, s.ZP)([...F, o.Z.SIMPLIFIED_PROFILE_MODAL]),
         G = (0, a.ZB)({
@@ -46,7 +46,7 @@ function S(e) {
             value: G,
             children: (0, t.jsx)(l.Y0X, {
                 transitionState: R,
-                className: b.root,
+                className: S.root,
                 hideShadow: !0,
                 'aria-label': T.intl.string(T.t['3N/J2t']),
                 children: (0, t.jsxs)(p.Z, {
@@ -69,7 +69,7 @@ function S(e) {
                                     profileType: N.y0.FULL_SIZE
                                 }),
                                 (0, t.jsxs)('div', {
-                                    className: b.headerInner,
+                                    className: S.headerInner,
                                     children: [
                                         (0, t.jsx)(c.Z, {
                                             user: n,
@@ -86,17 +86,17 @@ function S(e) {
                                             onCloseProfile: U
                                         }),
                                         (0, t.jsxs)('div', {
-                                            className: b.headerButtons,
+                                            className: S.headerButtons,
                                             children: [
                                                 (0, t.jsx)(g.c, {
                                                     userId: n.id,
                                                     onClose: U,
-                                                    className: b.messageTextButton
+                                                    className: S.messageTextButton
                                                 }),
                                                 (0, t.jsx)(g.v, {
                                                     userId: n.id,
                                                     onClose: U,
-                                                    tooltipContainerClassName: b.messageIconButton
+                                                    tooltipContainerClassName: S.messageIconButton
                                                 }),
                                                 (0, t.jsx)(v.Z, {
                                                     user: n,
@@ -110,7 +110,7 @@ function S(e) {
                             ]
                         }),
                         (0, t.jsxs)('div', {
-                            className: b.body,
+                            className: S.body,
                             children: [
                                 (0, t.jsx)(f.Z, {
                                     user: n,
@@ -126,7 +126,7 @@ function S(e) {
                                     })
                                 }),
                                 (0, t.jsx)(p.Z.Overlay, {
-                                    className: b.overlay,
+                                    className: S.overlay,
                                     children: (0, t.jsx)(j.Z, {
                                         user: n,
                                         currentUser: i,

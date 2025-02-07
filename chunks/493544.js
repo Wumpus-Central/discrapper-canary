@@ -14,8 +14,8 @@ var n,
     c = s(120356),
     u = s.n(c),
     d = s(642128),
-    f = s(608863),
-    p = s(873546),
+    p = s(608863),
+    f = s(873546),
     g = s(215569),
     x = s(481060),
     h = s(110924),
@@ -134,7 +134,7 @@ let O = function (e) {
         null != N.current && O !== i && N.current.scrollTo({ to: 0 });
     }, [i, O, N]);
     let R = (0, l.jsx)(_, {
-        isMobile: p.tq,
+        isMobile: f.tq,
         mobileSidebarOpen: v,
         closeAction: r
     });
@@ -164,16 +164,16 @@ let O = function (e) {
                                   children: (e) =>
                                       (0, l.jsx)('div', {
                                           className: u()(b.sidebarRegion, e, {
-                                              [b.flexFullWidth]: p.tq,
-                                              [b.hidden]: p.tq && !1 === v
+                                              [b.flexFullWidth]: f.tq,
+                                              [b.hidden]: f.tq && !1 === v
                                           }),
                                           children: (0, l.jsx)(x.h21, {
                                               className: b.sidebarRegionScroller,
                                               fade: !0,
                                               children: (0, l.jsxs)('nav', {
-                                                  className: u()(b.sidebar, { [b.mobileSidebar]: p.tq }),
+                                                  className: u()(b.sidebar, { [b.mobileSidebar]: f.tq }),
                                                   children: [
-                                                      p.tq &&
+                                                      f.tq &&
                                                           (0, l.jsx)('div', {
                                                               className: b.mobileSidebarHeader,
                                                               children: R
@@ -187,16 +187,16 @@ let O = function (e) {
                     (function () {
                         let e = null != S && null != r && v,
                             t =
-                                p.tq &&
+                                f.tq &&
                                 (0, l.jsxs)('div', {
                                     className: u()(b.mobileContentHeader, { [b.hideHamburger]: !e }),
-                                    children: [e && (0, l.jsx)(f.r, { onClick: S }), R]
+                                    children: [e && (0, l.jsx)(p.r, { onClick: S }), R]
                                 });
                         if ('custom' === c)
                             return (0, l.jsxs)(g.W, {
                                 component: 'div',
                                 className: b.contentRegion,
-                                children: [t, s, !p.tq && R, I()]
+                                children: [t, s, !f.tq && R, I()]
                             });
                         if ('scrollableCustom' === c)
                             return (0, l.jsxs)(g.W, {
@@ -212,7 +212,7 @@ let O = function (e) {
                                                 value: N.current,
                                                 children: s
                                             }),
-                                            !p.tq && R
+                                            !f.tq && R
                                         ]
                                     }),
                                     I()
@@ -221,7 +221,7 @@ let O = function (e) {
                         let n = T[null != c ? c : 'default'];
                         return (0, l.jsxs)(g.W, {
                             component: 'div',
-                            className: u()(b.contentRegion, { [b.hidden]: p.tq && !0 === v }),
+                            className: u()(b.contentRegion, { [b.hidden]: f.tq && !0 === v }),
                             children: [
                                 (0, l.jsxs)('div', {
                                     className: b.contentTransitionWrap,
@@ -235,9 +235,9 @@ let O = function (e) {
                                                     value: N.current,
                                                     children: (0, l.jsx)(x.njP.Panel, {
                                                         id: i,
-                                                        className: u()(b.contentColumn, b[n], { [b.mobileContent]: p.tq }),
+                                                        className: u()(b.contentColumn, b[n], { [b.mobileContent]: f.tq }),
                                                         ref: j,
-                                                        style: p.tq ? { maxWidth: window.innerWidth } : void 0,
+                                                        style: f.tq ? { maxWidth: window.innerWidth } : void 0,
                                                         children: E
                                                             ? s
                                                             : (0, l.jsx)(x.JcV, {
@@ -246,7 +246,7 @@ let O = function (e) {
                                                               })
                                                     })
                                                 }),
-                                                !p.tq && R
+                                                !f.tq && R
                                             ]
                                         })
                                     ]

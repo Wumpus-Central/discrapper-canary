@@ -26,7 +26,7 @@ function g(e) {
             var e;
             return null === (e = u.Z.getUserProfile(i.id)) || void 0 === e ? void 0 : e.application;
         }),
-        b = (0, l.e7)([r.Z, d.Z], () => r.Z.getChannel(d.Z.getChannelId()));
+        S = (0, l.e7)([r.Z, d.Z], () => r.Z.getChannel(d.Z.getChannelId()));
     return (0, t.jsxs)(o.zJl, {
         fade: !0,
         className: Z.scroller,
@@ -38,11 +38,11 @@ function g(e) {
                     setLineClamp: !1
                 }),
             (null == T ? void 0 : T.popularApplicationCommandIds) != null &&
-                null != b &&
+                null != S &&
                 (0, t.jsx)(m.Z, {
                     applicationId: T.id,
                     commandIds: T.popularApplicationCommandIds,
-                    channel: b,
+                    channel: S,
                     guildId: null !== (n = null == _ ? void 0 : _.guildId) && void 0 !== n ? n : void 0,
                     onClick: E
                 }),

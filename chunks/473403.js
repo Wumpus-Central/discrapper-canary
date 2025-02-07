@@ -24,14 +24,14 @@ var r = n(200651),
     U = n(981631),
     f = n(490897),
     D = n(831746),
-    C = n(193877);
-let L = {
-    SELECTED: C.modeSelected,
-    CONNECTED: C.modeConnected,
-    UNREAD_IMPORTANT: C.modeUnreadImportant,
-    UNREAD_LESS_IMPORTANT: C.modeUnreadLessImportant,
-    MUTED: C.modeMuted,
-    LOCKED: C.modeLocked
+    L = n(193877);
+let C = {
+    SELECTED: L.modeSelected,
+    CONNECTED: L.modeConnected,
+    UNREAD_IMPORTANT: L.modeUnreadImportant,
+    UNREAD_LESS_IMPORTANT: L.modeUnreadLessImportant,
+    MUTED: L.modeMuted,
+    LOCKED: L.modeLocked
 };
 function M(e) {
     e.preventDefault(), e.stopPropagation();
@@ -78,8 +78,8 @@ let v = (e) => {
     if (s && null != u && !c)
         d = (0, r.jsx)(T.Z, {
             size: T.E.SMALL_32,
-            className: C.iconContainerWithGuildIcon,
-            iconClassName: C.iconWithGuildIcon,
+            className: L.iconContainerWithGuildIcon,
+            iconClassName: L.iconWithGuildIcon,
             channel: n,
             guild: u,
             locked: l,
@@ -106,7 +106,7 @@ let v = (e) => {
         if (null == e) return null;
         d = (0, r.jsx)(e, {
             color: 'currentColor',
-            className: a()(C.icon, t)
+            className: a()(L.icon, t)
         });
     }
     let A = s ? (null == u ? void 0 : u.name) : (0, _.bT)(n, u, l, i),
@@ -119,7 +119,7 @@ let v = (e) => {
                 ...e,
                 role: 'img',
                 'aria-label': I,
-                className: a()(C.iconContainer),
+                className: a()(L.iconContainer),
                 children: d
             })
     });
@@ -167,21 +167,21 @@ function P(e) {
         et = (0, c.ZP)(n),
         en = n.isGuildVocal(),
         er = (0, r.jsx)('div', {
-            className: a()({ [C.favoritesSuggestion]: K }),
+            className: a()({ [L.favoritesSuggestion]: K }),
             ref: Q,
             children: (0, r.jsxs)(I.Z, {
                 role: en && !_ ? 'button' : 'link',
                 href: en ? void 0 : ee,
                 target: '_blank',
                 ref: J,
-                className: C.link,
+                className: L.link,
                 onClick: () => (null == O ? void 0 : O(n)),
                 ...X,
                 'aria-label': y,
                 focusProps: { enabled: !1 },
                 children: [
                     (0, r.jsxs)('div', {
-                        className: C.linkTop,
+                        className: L.linkTop,
                         children: [
                             (0, r.jsx)(v, {
                                 className: P,
@@ -192,14 +192,14 @@ function P(e) {
                                 withGuildIcon: Z
                             }),
                             (0, r.jsx)(d.Z, {
-                                className: a()(C.name, { [C.activeEvent]: W }),
+                                className: a()(L.name, { [L.activeEvent]: W }),
                                 'aria-hidden': !0,
                                 children: null == i ? et : i
                             }),
                             l.Children.count(B) > 0
                                 ? (0, r.jsx)('div', {
                                       onClick: M,
-                                      className: C.children,
+                                      className: L.children,
                                       children: B
                                   })
                                 : null
@@ -207,11 +207,11 @@ function P(e) {
                     }),
                     null != b
                         ? (0, r.jsx)('div', {
-                              className: a()(C.linkBottom, { [C.withGuildIcon]: Z }),
+                              className: a()(L.linkBottom, { [L.withGuildIcon]: Z }),
                               children: (0, r.jsx)(E.Text, {
                                   color: null != x ? x : 'text-muted',
                                   variant: 'text-xs/medium',
-                                  className: C.subtitle,
+                                  className: L.subtitle,
                                   children: b
                               })
                           })
@@ -230,24 +230,24 @@ function P(e) {
         children: (0, r.jsxs)('div', {
             className: a()(
                 m,
-                null != O || null != S || null != R || H ? C.wrapper : C.notInteractive,
-                u ? a()(D.selectedChannel, L.SELECTED) : _ ? a()(D.selectedChannel, L.CONNECTED) : N ? L.LOCKED : o ? L.MUTED : T ? (Y ? L.UNREAD_IMPORTANT : L.UNREAD_LESS_IMPORTANT) : null,
+                null != O || null != S || null != R || H ? L.wrapper : L.notInteractive,
+                u ? a()(D.selectedChannel, C.SELECTED) : _ ? a()(D.selectedChannel, C.CONNECTED) : N ? C.LOCKED : o ? C.MUTED : T ? (Y ? C.UNREAD_IMPORTANT : C.UNREAD_LESS_IMPORTANT) : null,
                 (function (e) {
                     switch (e) {
                         case U.d4z.GUILD_STAGE_VOICE:
                         case U.d4z.GUILD_VOICE:
-                            return C.typeVoice;
+                            return L.typeVoice;
                         case U.d4z.ANNOUNCEMENT_THREAD:
                         case U.d4z.PUBLIC_THREAD:
                         case U.d4z.PRIVATE_THREAD:
-                            return C.typeThread;
+                            return L.typeThread;
                         case U.d4z.GUILD_ANNOUNCEMENT:
                         case U.d4z.GUILD_TEXT:
                         case U.d4z.GUILD_STORE:
                         case U.d4z.GUILD_FORUM:
                         case U.d4z.GUILD_MEDIA:
                         default:
-                            return C.typeDefault;
+                            return L.typeDefault;
                     }
                 })(null != z ? z : G)
             ),
@@ -256,7 +256,7 @@ function P(e) {
             onContextMenu: (e) => (null == h ? void 0 : h(e, n)),
             onMouseEnter: F,
             onMouseLeave: V,
-            children: [o || !T ? null : (0, r.jsx)('div', { className: a()(C.unread, Y ? C.unreadImportant : void 0) }), null !== (t = null == p ? void 0 : p(er)) && void 0 !== t ? t : er]
+            children: [o || !T ? null : (0, r.jsx)('div', { className: a()(L.unread, Y ? L.unreadImportant : void 0) }), null !== (t = null == p ? void 0 : p(er)) && void 0 !== t ? t : er]
         })
     });
 }

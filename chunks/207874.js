@@ -13,16 +13,16 @@ function d(e) {
         d = i.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), (0, c.QH)(e);
         }, []),
-        f = i.useCallback(() => {
+        p = i.useCallback(() => {
             (0, c.QH)(!1), (0, c.yN)('');
         }, []),
-        p = i.useRef(null),
+        f = i.useRef(null),
         g = (0, r.e7)([l.Z], () => l.Z.getSection());
     return (
         i.useEffect(() => {
             let e = (e) => {
                 var t;
-                let s = p.current;
+                let s = f.current;
                 (null === (t = (0, a.uB)(e)) || void 0 === t ? void 0 : t.activeElement) === document.body && (null == s || s.focus());
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
@@ -30,10 +30,10 @@ function d(e) {
         (0, n.jsx)('div', {
             style: { marginBottom: '8px' },
             children: (0, n.jsx)(o.ZP, {
-                ref: p,
+                ref: f,
                 size: o.ZP.Sizes.MEDIUM,
                 query: s,
-                onClear: f,
+                onClear: p,
                 onQueryChange: c.yN,
                 placeholder: u.intl.string(u.t['5h0QOD']),
                 className: t,

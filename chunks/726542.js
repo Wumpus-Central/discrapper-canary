@@ -1,14 +1,14 @@
 n.d(t, { Z: () => d }), n(627494), n(757143);
 var i = n(392711),
     r = n.n(i),
-    a = n(692547),
+    a = n(900089),
     s = n(591759),
     o = n(981631);
 let l = [
         {
             type: o.ABu.TWITCH,
             name: 'Twitch',
-            color: a.Z.unsafe_rawColors.TWITCH.css,
+            color: (0, a.Fw)('TWITCH'),
             icon: {
                 lightPNG: n(635643),
                 darkPNG: n(635643),
@@ -27,7 +27,7 @@ let l = [
         {
             type: o.ABu.YOUTUBE,
             name: 'YouTube',
-            color: a.Z.unsafe_rawColors.YOUTUBE.css,
+            color: (0, a.Fw)('YOUTUBE'),
             icon: {
                 lightPNG: n(459862),
                 darkPNG: n(459862),
@@ -46,7 +46,7 @@ let l = [
         {
             type: o.ABu.BATTLENET,
             name: 'Battle.net',
-            color: a.Z.unsafe_rawColors.BATTLENET.css,
+            color: (0, a.Fw)('BATTLENET'),
             icon: {
                 lightPNG: n(414680),
                 darkPNG: n(414680),
@@ -79,7 +79,7 @@ let l = [
         {
             type: o.ABu.BUNGIE,
             name: 'Bungie.net',
-            color: a.Z.unsafe_rawColors.BUNGIE.css,
+            color: (0, a.Fw)('BUNGIE'),
             icon: {
                 lightPNG: n(953522),
                 darkPNG: n(706264),
@@ -93,7 +93,7 @@ let l = [
         {
             type: o.ABu.SKYPE,
             name: 'Skype',
-            color: a.Z.unsafe_rawColors.SKYPE.css,
+            color: (0, a.Fw)('SKYPE'),
             icon: {
                 lightPNG: n(575439),
                 darkPNG: n(575439),
@@ -111,7 +111,7 @@ let l = [
         {
             type: o.ABu.LEAGUE_OF_LEGENDS,
             name: 'League of Legends',
-            color: a.Z.unsafe_rawColors.LOL.css,
+            color: (0, a.Fw)('LOL'),
             icon: {
                 lightPNG: n(275556),
                 darkPNG: n(275556),
@@ -125,7 +125,7 @@ let l = [
         {
             type: o.ABu.STEAM,
             name: 'Steam',
-            color: a.Z.unsafe_rawColors.STEAM.css,
+            color: (0, a.Fw)('STEAM'),
             icon: {
                 lightPNG: n(929234),
                 darkPNG: n(170131),
@@ -144,7 +144,7 @@ let l = [
         {
             type: o.ABu.REDDIT,
             name: 'Reddit',
-            color: a.Z.unsafe_rawColors.REDDIT.css,
+            color: (0, a.Fw)('REDDIT'),
             icon: {
                 lightPNG: n(211434),
                 darkPNG: n(211434),
@@ -164,7 +164,7 @@ let l = [
         {
             type: o.ABu.FACEBOOK,
             name: 'Facebook',
-            color: a.Z.unsafe_rawColors.FACEBOOK.css,
+            color: (0, a.Fw)('FACEBOOK'),
             icon: {
                 lightPNG: n(762019),
                 darkPNG: n(762019),
@@ -179,7 +179,7 @@ let l = [
         {
             type: o.ABu.TWITTER_LEGACY,
             name: 'Twitter',
-            color: a.Z.unsafe_rawColors.TWITTER.css,
+            color: (0, a.Fw)('TWITTER'),
             icon: {
                 lightPNG: n(954549),
                 darkPNG: n(954549),
@@ -199,7 +199,7 @@ let l = [
         {
             type: o.ABu.TWITTER,
             name: 'X',
-            color: a.Z.unsafe_rawColors.TWITTER.css,
+            color: (0, a.Fw)('TWITTER'),
             icon: {
                 lightPNG: n(327555),
                 darkPNG: n(126776),
@@ -219,7 +219,7 @@ let l = [
         {
             type: o.ABu.SPOTIFY,
             name: 'Spotify',
-            color: a.Z.unsafe_rawColors.SPOTIFY.css,
+            color: (0, a.Fw)('SPOTIFY'),
             icon: {
                 lightPNG: n(182553),
                 darkPNG: n(182553),
@@ -237,7 +237,7 @@ let l = [
         {
             type: o.ABu.XBOX,
             name: 'Xbox',
-            color: a.Z.unsafe_rawColors.XBOX.css,
+            color: (0, a.Fw)('XBOX'),
             icon: {
                 lightPNG: n(979660),
                 darkPNG: n(157981),
@@ -252,7 +252,7 @@ let l = [
         {
             type: o.ABu.SAMSUNG,
             name: 'Samsung Galaxy',
-            color: a.Z.unsafe_rawColors.SAMSUNG.css,
+            color: (0, a.Fw)('SAMSUNG'),
             icon: {
                 lightPNG: n(664982),
                 darkPNG: n(664982),
@@ -266,7 +266,7 @@ let l = [
         {
             type: o.ABu.GITHUB,
             name: 'GitHub',
-            color: a.Z.unsafe_rawColors.GITHUB.css,
+            color: (0, a.Fw)('GITHUB'),
             icon: {
                 lightPNG: n(843605),
                 darkPNG: n(789822),
@@ -285,7 +285,7 @@ let l = [
         {
             type: o.ABu.PLAYSTATION,
             name: 'PlayStation Network',
-            color: a.Z.unsafe_rawColors.PLAYSTATION.css,
+            color: (0, a.Fw)('PLAYSTATION'),
             icon: {
                 lightPNG: n(385751),
                 darkPNG: n(399592),
@@ -299,7 +299,7 @@ let l = [
         {
             type: o.ABu.PLAYSTATION_STAGING,
             name: 'PlayStation Network (Staging)',
-            color: a.Z.unsafe_rawColors.PLAYSTATION.css,
+            color: (0, a.Fw)('PLAYSTATION'),
             icon: {
                 lightPNG: n(399592),
                 darkPNG: n(385751),
@@ -444,7 +444,7 @@ let l = [
         {
             type: o.ABu.CRUNCHYROLL,
             name: 'Crunchyroll',
-            color: a.Z.unsafe_rawColors.CRUNCHYROLL.css,
+            color: (0, a.Fw)('CRUNCHYROLL'),
             icon: {
                 lightPNG: n(469024),
                 darkPNG: n(469024),

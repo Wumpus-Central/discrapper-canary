@@ -102,7 +102,7 @@ function E(e) {
             },
             [_, o.id, n.id, r]
         ),
-        b = l.useCallback(
+        S = l.useCallback(
             (e) => {
                 r({ action: 'ADD_ROLE' });
                 let i = null != _ ? _ : [];
@@ -110,8 +110,8 @@ function E(e) {
             },
             [_, o.id, n.id, r]
         ),
-        S = y && null != I;
-    return 0 !== E.length || S
+        b = y && null != I;
+    return 0 !== E.length || b
         ? (0, t.jsx)(h.Z, {
               heading: g.intl.string(g.t.LPJmLy),
               scrollIntoView: s,
@@ -123,7 +123,7 @@ function E(e) {
                   roles: E,
                   highestRole: N,
                   canManageRoles: y,
-                  onAddRole: b,
+                  onAddRole: S,
                   onRemoveRole: T
               })
           })

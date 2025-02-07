@@ -4,7 +4,7 @@ var r,
     a,
     s = n(442837),
     o = n(524437),
-    l = n(692547),
+    l = n(900089),
     u = n(780384),
     c = n(570140),
     d = n(607070),
@@ -101,7 +101,7 @@ function B() {
     return e !== S && ((S = e), !0);
 }
 function Z() {
-    !__OVERLAY__ && m.isPlatformEmbedded && h.Z.setApplicationBackgroundColor((0, u.wj)(O()) ? l.Z.unsafe_rawColors.PRIMARY_700.resolve({ saturation: d.Z.saturation }).hsl() : l.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: d.Z.saturation }).hsl());
+    !__OVERLAY__ && m.isPlatformEmbedded && h.Z.setApplicationBackgroundColor((0, u.wj)(O()) ? (0, l.x3)('PRIMARY_700', { saturation: d.Z.saturation }) : (0, l.x3)('WHITE_500', { saturation: d.Z.saturation }));
 }
 class F extends (a = s.ZP.PersistedStore) {
     initialize(e) {

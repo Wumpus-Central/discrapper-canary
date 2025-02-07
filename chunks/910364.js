@@ -23,8 +23,8 @@ var t = i(200651),
     N = i(544989),
     y = i(705556),
     T = i(481932),
-    b = i(195387),
-    S = i(272510),
+    S = i(195387),
+    b = i(272510),
     P = i(4517),
     L = i(171368),
     C = i(62154),
@@ -85,7 +85,7 @@ function F(e) {
                                 (0, t.jsxs)(N.Z, {
                                     profileType: O.y0.FULL_SIZE,
                                     children: [
-                                        (0, t.jsx)(b.Z, {
+                                        (0, t.jsx)(S.Z, {
                                             shouldShowTooltip: null === Q.interactionType,
                                             user: n,
                                             guildId: F,
@@ -98,7 +98,7 @@ function F(e) {
                                             user: n,
                                             friendToken: k
                                         }),
-                                        (0, t.jsx)(S.Z, {
+                                        (0, t.jsx)(b.Z, {
                                             user: n,
                                             guildId: F,
                                             viewProfileItem:
