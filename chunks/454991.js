@@ -31,7 +31,7 @@ class o {
             legacyEnabled: this.legacyEnabled,
             oopEnabled: this.oopEnabled
         };
-        i.K.set('OverlayStore4', e);
+        i.K.set('OverlayStore5', e);
     }
     static load() {
         return null == o._loaded && (o._loaded = o.loadInternal()), o._loaded;
@@ -51,13 +51,18 @@ class o {
         }
         let d = i.K.get('OverlayStore3');
         if (null != d) {
-            let n = new o(null !== (t = null !== (e = d.legacyEnabled) && void 0 !== e ? e : d.enabled) && void 0 !== t ? t : a.iP, a.iP && l);
-            return n.save(), i.K.remove('OverlayStore3'), n;
+            let t = new o(null !== (e = d.enabled || d.legacyEnabled) && void 0 !== e ? e : a.iP, a.iP && l);
+            return t.save(), i.K.remove('OverlayStore3'), t;
         }
         let f = i.K.get('OverlayStore4');
-        if (null != f) return new o(null !== (n = f.legacyEnabled) && void 0 !== n ? n : a.iP, null !== (s = f.oopEnabled) && void 0 !== s ? s : a.iP && l);
-        let _ = new o(a.iP, l);
-        return _.save(), _;
+        if (null != f) {
+            let e = new o(f.legacyEnabled || a.iP, null !== (t = f.oopEnabled) && void 0 !== t ? t : a.iP && l);
+            return e.save(), i.K.remove('OverlayStore4'), e;
+        }
+        let _ = i.K.get('OverlayStore5');
+        if (null != _) return new o(null !== (n = _.legacyEnabled) && void 0 !== n ? n : a.iP, null !== (s = _.oopEnabled) && void 0 !== s ? s : a.iP && l);
+        let p = new o(a.iP, l);
+        return p.save(), p;
     }
     constructor(e, t) {
         s(this, 'legacyEnabled', void 0), s(this, 'oopEnabled', void 0), (this.legacyEnabled = e), (this.oopEnabled = t);
