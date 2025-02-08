@@ -501,7 +501,7 @@ let eD = (e, t) => {
         return {
             progressSeconds: f,
             targetSeconds: d,
-            targetMinutes: Math.round(d / m.Z.Seconds.MINUTE),
+            targetMinutes: Math.ceil(d / m.Z.Seconds.MINUTE),
             percentComplete: ex(d, f),
             taskType: l
         };
