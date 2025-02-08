@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120), n(642549);
+n.d(t, { Z: () => x }), n(47120), n(642549);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -9,7 +9,7 @@ var i = n(200651),
     d = n(451593),
     u = n(694539),
     m = n(658234);
-let h = (e) => {
+let g = (e) => {
         var t, n, s;
         let { effect: r, onClick: a } = e,
             { deleteConfig: c } = (0, d.E)();
@@ -43,16 +43,16 @@ let h = (e) => {
             ]
         });
     },
-    g = () => ({
+    h = () => ({
         id: (0, a.Z)(),
         name: 'New Profile Effect',
         config: { effects: [] }
     });
-function _() {
+function x() {
     let { profileEffects: e, upsertConfig: t } = (0, d.E)(),
         [n, r] = s.useState(),
         a = s.useRef(null),
-        _ = (e) => {
+        x = (e) => {
             (0, o.showToast)((0, o.createToast)(e, o.ToastType.FAILURE));
         };
     return (0, i.jsxs)('div', {
@@ -75,7 +75,7 @@ function _() {
                                     className: m.grid,
                                     children: Object.values(e).map((e) =>
                                         (0, i.jsx)(
-                                            h,
+                                            g,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
@@ -107,9 +107,9 @@ function _() {
                                                 let i = n[0],
                                                     s = new FileReader();
                                                 (s.onload = (e) => {
-                                                    if (null == e.target || 'string' != typeof e.target.result) return _('Something went wrong, try again!');
+                                                    if (null == e.target || 'string' != typeof e.target.result) return x('Something went wrong, try again!');
                                                     let [n, i] = e.target.result.split(',');
-                                                    if (!n.includes('text/plain')) return _("Make sure you're only uploading text files!");
+                                                    if (!n.includes('text/plain')) return x("Make sure you're only uploading text files!");
                                                     t(JSON.parse(atob(i))), (0, o.showToast)((0, o.createToast)('Profile Effect (maybe??) imported!', o.ToastType.SUCCESS));
                                                 }),
                                                     s.readAsDataURL(i);
@@ -120,7 +120,7 @@ function _() {
                                 }),
                                 (0, i.jsx)(o.zxk, {
                                     onClick: () => {
-                                        t(g());
+                                        t(h());
                                     },
                                     children: 'Create New Effect'
                                 })

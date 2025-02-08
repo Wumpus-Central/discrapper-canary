@@ -9,19 +9,19 @@ var i = n(200651),
     d = n(481060),
     u = n(699682),
     m = n(44315),
-    h = n(654904),
-    g = n(981631),
-    _ = n(388032),
-    x = n(602750);
+    g = n(654904),
+    h = n(981631),
+    x = n(388032),
+    _ = n(602750);
 function p(e) {
     let { onChange: t, onClose: n, color: r, suggestedColors: p, disabled: E, label: C, colorPickerMiddle: f, colorPickerFooter: T, showEyeDropper: N } = e,
-        S = s.useRef(null),
-        I = (0, d.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
+        I = s.useRef(null),
+        S = (0, d.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         b = c.Z.colors.BACKGROUND_ACCENT.css,
-        v = (0, h.DP)(r),
+        v = (0, g.DP)(r),
         j = (0, o.Rf)(r),
-        A = j === I ? b : j,
-        O = (0, m.Lq)(v ? g.Ilk.WHITE_500 : g.Ilk.PRIMARY_530),
+        A = j === S ? b : j,
+        O = (0, m.Lq)(v ? h.Ilk.WHITE_500 : h.Ilk.PRIMARY_530),
         R = (0, u.Z)(f),
         P = (0, u.Z)(T),
         [D, y] = s.useState((0, a.Z)());
@@ -45,23 +45,23 @@ function p(e) {
             children: (e) => {
                 let { onClick: t, ...n } = e;
                 return (0, i.jsxs)('div', {
-                    ref: S,
-                    className: l()(x.colorSwatch, { [x.disabled]: E }),
+                    ref: I,
+                    className: l()(_.colorSwatch, { [_.disabled]: E }),
                     children: [
                         (0, i.jsx)(d.P3F, {
                             ...n,
                             tabIndex: E ? -1 : 0,
-                            onClick: E ? g.dG4 : t,
+                            onClick: E ? h.dG4 : t,
                             style: {
                                 backgroundColor: j,
                                 borderColor: A
                             },
-                            className: x.swatch,
-                            'aria-label': _.intl.string(_.t.Qp04hI),
-                            focusProps: { ringTarget: S },
+                            className: _.swatch,
+                            'aria-label': x.intl.string(x.t.Qp04hI),
+                            focusProps: { ringTarget: I },
                             children: (0, i.jsx)(d.vdY, {
                                 size: 'custom',
-                                className: x.editPencilIcon,
+                                className: _.editPencilIcon,
                                 width: 14,
                                 height: 14,
                                 color: O

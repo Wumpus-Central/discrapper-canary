@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(192379),
     l = n(166516),
     r = n.n(l),
@@ -17,17 +17,17 @@ var i = n(192379),
     E = n(981631),
     I = n(388032);
 let C = new Set(['Blink', 'Gecko', 'WebKit']),
-    v = E.dG4;
-if (g.isPlatformEmbedded) v = (e) => _.ZP.setBadge(e);
+    N = E.dG4;
+if (g.isPlatformEmbedded) N = (e) => _.ZP.setBadge(e);
 else if (C.has(s().layout)) {
     let e = new (r())({ animation: 'none' });
-    v = (t) => {
+    N = (t) => {
         try {
             (0, f.PR)(t), e.badge(-1 === t ? '\u2022' : t);
         } catch (e) {}
     };
 }
-function N() {
+function v() {
     let e = (0, o.e7)([p.Z], () => p.Z.hasIncomingCalls()),
         t = (0, o.e7)([u.default, m.Z, h.Z, c.Z], () => {
             let e = u.default.getTotalMentionCount(),
@@ -49,7 +49,7 @@ function N() {
         };
     }, [e]),
         i.useEffect(() => {
-            v(t);
+            N(t);
         }, [t]),
-        i.useEffect(() => () => v(0), []);
+        i.useEffect(() => () => N(0), []);
 }

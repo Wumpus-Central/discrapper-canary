@@ -21,13 +21,13 @@ var i = n(200651),
     E = n(906732),
     I = n(87005),
     C = n(753972),
-    v = n(895924),
-    N = n(812236),
+    N = n(895924),
+    v = n(812236),
     T = n(82295),
     S = n(984370),
     Z = n(740492),
-    x = n(973616),
-    A = n(592125),
+    A = n(973616),
+    x = n(592125),
     b = n(626135),
     L = n(823379),
     y = n(728345),
@@ -42,14 +42,14 @@ async function w(e, t, n) {
     if (null == i)
         try {
             var l, r, a;
-            i = null !== (a = null === (l = P.Z.getApplication(e.id)) || void 0 === l ? void 0 : l.bot) && void 0 !== a ? a : null === (r = x.ZP.createFromServer(await (0, y.UM)(e.id))) || void 0 === r ? void 0 : r.bot;
+            i = null !== (a = null === (l = P.Z.getApplication(e.id)) || void 0 === l ? void 0 : l.bot) && void 0 !== a ? a : null === (r = A.ZP.createFromServer(await (0, y.UM)(e.id))) || void 0 === r ? void 0 : r.bot;
         } catch (e) {
             t(void 0);
             return;
         }
     if (null != i) {
         let l;
-        let r = null == A.Z.getDMFromUserId(i.id);
+        let r = null == x.Z.getDMFromUserId(i.id);
         try {
             l = await c.Z.openPrivateChannel([i.id], !1, !1, f.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
@@ -67,9 +67,9 @@ async function w(e, t, n) {
             return;
         }
         try {
-            await (0, N.ZP)(l, e.id);
+            await (0, v.ZP)(l, e.id);
         } catch (e) {
-            if (e.message === N.sV) {
+            if (e.message === v.sV) {
                 t(void 0);
                 return;
             }
@@ -78,7 +78,7 @@ async function w(e, t, n) {
             targetApplicationId: e.id,
             channelId: l,
             analyticsLocations: n,
-            commandOrigin: v.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
+            commandOrigin: N.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
             onExecutedCallback() {
                 t(void 0);
             }
@@ -105,7 +105,7 @@ function M(e) {
 }
 function k(e) {
     let { application: t, loadingAppId: n, setLoadingAppId: l, botUserId: r, analyticsLocations: c } = e,
-        d = (0, s.e7)([A.Z], () => A.Z.getDMFromUserId(r)),
+        d = (0, s.e7)([x.Z], () => x.Z.getDMFromUserId(r)),
         u = (0, s.e7)([m.ZP], () => m.ZP.getCurrentEmbeddedActivity()),
         p = (0, h.GK)(),
         _ = null != u && u.applicationId === t.id && (p || (0, g.p)(u.location) === d),

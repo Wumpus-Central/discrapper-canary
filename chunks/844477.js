@@ -18,16 +18,16 @@ let c = {
         lg: 'md'
     };
 function u(e) {
-    let { role: t = 'button', variant: n = 'primary', size: s = 'md', text: u, icon: m, iconPosition: h = 'end', iconOpticalOffsetMargin: g = 0, focusProps: _, ...x } = e;
+    let { role: t = 'button', variant: n = 'primary', size: s = 'md', text: u, icon: m, iconPosition: g = 'end', iconOpticalOffsetMargin: h = 0, focusProps: x, ..._ } = e;
     function p() {
         if (null == m) return;
         let e = (function () {
-            if (0 === g) return {};
-            switch (h) {
+            if (0 === h) return {};
+            switch (g) {
                 case 'start':
-                    return { marginLeft: g };
+                    return { marginLeft: h };
                 case 'end':
-                    return { marginRight: g };
+                    return { marginRight: h };
             }
             return {};
         })();
@@ -38,13 +38,13 @@ function u(e) {
         });
     }
     return (0, i.jsx)(l.t, {
-        ..._,
+        ...x,
         children: (0, i.jsxs)('button', {
             role: t,
             className: r()(o.button, o[s], o[n]),
-            ...x,
+            ..._,
             children: [
-                null != m && 'start' === h && (0, i.jsx)(p, {}),
+                null != m && 'start' === g && (0, i.jsx)(p, {}),
                 (0, i.jsx)(a.x, {
                     tag: 'span',
                     variant: c[s],
@@ -53,7 +53,7 @@ function u(e) {
                     lineClamp: 1,
                     children: u
                 }),
-                null != m && 'end' === h && (0, i.jsx)(p, {})
+                null != m && 'end' === g && (0, i.jsx)(p, {})
             ]
         })
     });

@@ -10,18 +10,18 @@ var s = n(512722),
     d = n(126631),
     u = n(433411),
     m = n(532432),
-    h = n(134795),
-    g = n(513901),
-    _ = n(451392),
-    x = n(906364),
+    g = n(134795),
+    h = n(513901),
+    x = n(451392),
+    _ = n(906364),
     p = n(621853),
     E = n(271383),
     C = n(594174),
     f = n(74538),
     T = n(51144),
     N = n(18438),
-    S = n(778825),
-    I = n(52597),
+    I = n(778825),
+    S = n(52597),
     b = n(430131),
     v = n(133484),
     j = n(388032),
@@ -42,8 +42,8 @@ function O(e) {
             pendingThemeColors: B,
             errors: M,
             guild: w
-        } = (0, l.cj)([S.Z], () => {
-            let { pendingAvatar: e, pendingNickname: t, pendingBio: n, pendingPronouns: i, pendingBanner: s, pendingThemeColors: r } = S.Z.getAllPending();
+        } = (0, l.cj)([I.Z], () => {
+            let { pendingAvatar: e, pendingNickname: t, pendingBio: n, pendingPronouns: i, pendingBanner: s, pendingThemeColors: r } = I.Z.getAllPending();
             return {
                 pendingAvatar: e,
                 pendingNickname: t,
@@ -51,8 +51,8 @@ function O(e) {
                 pendingBio: n,
                 pendingPronouns: i,
                 pendingThemeColors: r,
-                errors: S.Z.getErrors(),
-                guild: S.Z.getGuild()
+                errors: I.Z.getErrors(),
+                guild: I.Z.getGuild()
             };
         }),
         V = null != R ? R : w;
@@ -63,7 +63,7 @@ function O(e) {
         H = f.ZP.canUsePremiumProfileCustomization(P),
         z = (0, c.gd)(D, null == G ? void 0 : G.avatar),
         Y = (0, c.f$)(Z, null == F ? void 0 : F.banner),
-        W = (0, I.p)(B, null == F ? void 0 : F.themeColors),
+        W = (0, S.p)(B, null == F ? void 0 : F.themeColors),
         K = null !== (t = null == F ? void 0 : F.bio) && void 0 !== t ? t : '',
         q = null !== (n = null == F ? void 0 : F.pronouns) && void 0 !== n ? n : '',
         X = (e, t, n) => {
@@ -84,12 +84,12 @@ function O(e) {
                 'nick'
             ),
             (0, i.jsx)(
-                x.Z,
+                _.Z,
                 {
                     sectionTitle: j.intl.string(j.t['+T3RIy']),
                     errors: null == M ? void 0 : M.pronouns,
                     onPronounsChange: (e) => {
-                        (0, I.xs)(e, q);
+                        (0, S.xs)(e, q);
                     },
                     pendingPronouns: L,
                     currentPronouns: q
@@ -150,7 +150,7 @@ function O(e) {
                         'decoration'
                     ),
                     (0, i.jsx)(
-                        g.Z,
+                        h.Z,
                         {
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
@@ -173,7 +173,7 @@ function O(e) {
                         'effect'
                     ),
                     (0, i.jsx)(
-                        h.Z,
+                        g.Z,
                         {
                             showRemoveBannerButton: Y,
                             errors: null == M ? void 0 : M.banner,
@@ -183,12 +183,12 @@ function O(e) {
                         },
                         'banner'
                     ),
-                    (0, i.jsx)(_.Z, {
+                    (0, i.jsx)(x.Z, {
                         user: P,
                         pendingAvatar: D,
                         pendingColors: B,
                         onThemeColorsChange: (e) => {
-                            (0, I.ce)(e, null == F ? void 0 : F.themeColors);
+                            (0, S.ce)(e, null == F ? void 0 : F.themeColors);
                         },
                         guildId: null == V ? void 0 : V.id,
                         showResetThemeButton: W
@@ -212,7 +212,7 @@ function O(e) {
                                     })
                                 ]
                             }),
-                            onBioChange: (e) => (0, I.qN)(e, K),
+                            onBioChange: (e) => (0, S.qN)(e, K),
                             errors: null !== (O = null == M ? void 0 : M.bio) && void 0 !== O ? O : null == U ? void 0 : U.bio,
                             pendingBio: k,
                             currentBio: K,

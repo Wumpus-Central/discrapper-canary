@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(47120), n(411104), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
+n.d(t, { Z: () => A }), n(47120), n(411104), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -17,38 +17,38 @@ var i = n(200651),
     E = n(565216),
     I = n(981631),
     C = n(921944),
-    v = n(388032),
-    N = n(966156);
+    N = n(388032),
+    v = n(966156);
 let T = [],
     S = (e) => {
         let { tagText: t, className: n } = e;
         return (0, i.jsx)(o.IGR, {
-            className: a()(N.tag, n),
+            className: a()(v.tag, n),
             text: t
         });
     },
     Z = (e) => {
         let { header: t, subHeader: n, imageSrc: l, tagText: r, wideStyle: s } = e;
         return (0, i.jsxs)('div', {
-            className: a()(N.featureCard, { [N.wideStyle]: s }),
+            className: a()(v.featureCard, { [v.wideStyle]: s }),
             children: [
                 null != r
                     ? (0, i.jsx)(S, {
                           tagText: r,
-                          className: N.featureCardTag
+                          className: v.featureCardTag
                       })
                     : null,
                 (0, i.jsx)('img', {
                     alt: '',
-                    className: a()(N.featureCardImg, { [N.wideStyle]: s }),
+                    className: a()(v.featureCardImg, { [v.wideStyle]: s }),
                     src: l
                 }),
                 (0, i.jsxs)('div', {
-                    className: N.featureCardTextGroup,
+                    className: v.featureCardTextGroup,
                     children: [
                         (0, i.jsx)(o.X6q, {
                             variant: 'heading-md/extrabold',
-                            className: N.featureCardTextHeader,
+                            className: v.featureCardTextHeader,
                             children: t
                         }),
                         (0, i.jsx)(o.Text, {
@@ -60,8 +60,8 @@ let T = [],
             ]
         });
     };
-function x(e) {
-    let { className: t, renderModalProps: n, heroArt: r, heroArtClassName: S, modalDismissibleContent: x, modalTopExtra: A, header: b, headerClassName: L, subHeader: y, subHeaderExtra: P, featureCards: O, changeLogId: R, button: j, body: D } = e,
+function A(e) {
+    let { className: t, renderModalProps: n, heroArt: r, heroArtClassName: S, modalDismissibleContent: A, modalTopExtra: x, header: b, headerClassName: L, subHeader: y, subHeaderExtra: P, featureCards: O, changeLogId: R, button: j, body: D } = e,
         { onClose: w, transitionState: M } = n,
         k = (0, h.Dt)(),
         U = O.length % 2 == 0,
@@ -141,7 +141,7 @@ function x(e) {
             [R, r.type]
         ),
         l.useEffect(() => {
-            null != x && (0, p.kk)(x);
+            null != A && (0, p.kk)(A);
             let e = Date.now();
             return (
                 _.default.track(I.rMx.CHANGE_LOG_OPENED, { change_log_id: R }),
@@ -150,32 +150,32 @@ function x(e) {
                         change_log_id: R,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != x && (0, p.EW)(x, { dismissAction: C.L.DISMISS });
+                        null != A && (0, p.EW)(A, { dismissAction: C.L.DISMISS });
                 }
             );
-        }, [x, R]),
+        }, [A, R]),
         (0, i.jsxs)(o.Y0X, {
-            className: a()(N.root, t),
+            className: a()(v.root, t),
             transitionState: M,
             'aria-labelledby': k,
             children: [
                 (0, i.jsx)(o.olH, {
-                    className: N.closeButton,
+                    className: v.closeButton,
                     onClick: w
                 }),
-                (0, i.jsx)(E.Z, { className: N.splash }),
-                null == A ? void 0 : A(),
+                (0, i.jsx)(E.Z, { className: v.splash }),
+                null == x ? void 0 : x(),
                 (0, i.jsxs)(o.hzk, {
-                    className: N.content,
+                    className: v.content,
                     children: [
                         (0, i.jsx)(o.X6q, {
                             variant: 'display-md',
-                            className: a()(N.headerText, L),
+                            className: a()(v.headerText, L),
                             children: b
                         }),
                         'video' === r.type
                             ? (0, i.jsx)(m.Z, {
-                                  className: a()(N.video, S),
+                                  className: a()(v.video, S),
                                   autoPlay: !G,
                                   loop: !0,
                                   muted: !0,
@@ -200,7 +200,7 @@ function x(e) {
                                       null == en
                                           ? void 0
                                           : en.map((e) => {
-                                                let t = (0, v.getLanguages)().find((t) => t.code === e.locale);
+                                                let t = (0, N.getLanguages)().find((t) => t.code === e.locale);
                                                 return null == t
                                                     ? null
                                                     : (0, i.jsx)(
@@ -218,7 +218,7 @@ function x(e) {
                               })
                             : 'embed' === r.type
                               ? (0, i.jsx)(d.BC, {
-                                    className: a()(N.video, S),
+                                    className: a()(v.video, S),
                                     allowFullScreen: !1,
                                     href: r.href,
                                     thumbnail: r.thumbnail,
@@ -236,24 +236,24 @@ function x(e) {
                               : 'image' === r.type
                                 ? (0, i.jsx)('img', {
                                       alt: '',
-                                      className: a()(N.video, S),
+                                      className: a()(v.video, S),
                                       src: r.src
                                   })
                                 : null,
                         (0, i.jsxs)(o.X6q, {
                             variant: 'heading-lg/semibold',
-                            className: N.subHeader,
+                            className: v.subHeader,
                             children: [y, null == P ? void 0 : P()]
                         }),
                         null != D &&
                             (0, i.jsx)(o.X6q, {
                                 variant: 'heading-md/medium',
-                                className: N.bodyText,
+                                className: v.bodyText,
                                 children: D
                             }),
                         O.length > 0 &&
                             (0, i.jsx)('div', {
-                                className: a()(N.featureCardGroup, { [N.wideStyle]: U }),
+                                className: a()(v.featureCardGroup, { [v.wideStyle]: U }),
                                 children: O.map((e, t) =>
                                     (0, i.jsx)(
                                         Z,

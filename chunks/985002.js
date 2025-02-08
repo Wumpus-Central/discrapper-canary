@@ -8,16 +8,16 @@ function o(e) {
     let { onError: t, onSuccess: n } = null != e ? e : {},
         [o, c] = i.useState(!1),
         [d, u] = i.useState(!1),
-        [m, h] = i.useState(!1),
-        [g, _] = i.useState(!1),
-        [x, p] = i.useState(!1),
+        [m, g] = i.useState(!1),
+        [h, x] = i.useState(!1),
+        [_, p] = i.useState(!1),
         [E, C] = i.useState(!1),
         [f, T] = i.useState(!1),
-        [N, S] = i.useState(!1),
-        I = o || d || m || g || E || N,
+        [N, I] = i.useState(!1),
+        S = o || d || m || h || E || N,
         b = i.useCallback(
             async (e) => {
-                if (!I) {
+                if (!S) {
                     c(!0);
                     try {
                         await (0, r.Yw)(e.id, a.ne.ACTIVE), null == n || n();
@@ -29,11 +29,11 @@ function o(e) {
                     }
                 }
             },
-            [I, t, n]
+            [S, t, n]
         ),
         v = i.useCallback(
             async (e) => {
-                if (!I) {
+                if (!S) {
                     u(!0);
                     try {
                         await (0, r.Yw)(e.id, a.ne.DECLINED), null == n || n();
@@ -45,42 +45,42 @@ function o(e) {
                     }
                 }
             },
-            [I, t, n]
+            [S, t, n]
         ),
         j = i.useCallback(
             async (e) => {
-                if (!I) {
-                    h(!0);
+                if (!S) {
+                    g(!0);
                     try {
                         await (0, r.Yw)(e.id, a.ne.INACTIVE), null == n || n();
                     } catch (n) {
                         let e = new s.Hx(n);
                         null == t || t(e);
                     } finally {
-                        h(!1);
+                        g(!1);
                     }
                 }
             },
-            [I, t, n]
+            [S, t, n]
         ),
         A = i.useCallback(
             async (e) => {
-                if (!I) {
-                    _(!0);
+                if (!S) {
+                    x(!0);
                     try {
                         await (0, r.fc)(e.id), null == n || n();
                     } catch (n) {
                         let e = new s.Hx(n);
                         null == t || t(e);
                     } finally {
-                        _(!1);
+                        x(!1);
                     }
                 }
             },
-            [I, t, n]
+            [S, t, n]
         ),
         O = i.useCallback(async () => {
-            if (!x) {
+            if (!_) {
                 p(!0);
                 try {
                     await (0, r.qd)(), null == n || n();
@@ -91,7 +91,7 @@ function o(e) {
                     p(!1);
                 }
             }
-        }, [x, t, n]),
+        }, [_, t, n]),
         R = i.useCallback(
             async (e) => {
                 if (!f) {
@@ -138,14 +138,14 @@ function o(e) {
                     a = l.Z.getStartId(),
                     o = l.Z.getSelectedTeenId();
                 if (!N && null != a && null != o) {
-                    S(!0);
+                    I(!0);
                     try {
                         await r.ZP.fetchMoreTeenActivity(o, e, a, i.event_id);
                     } catch (n) {
                         let e = new s.Hx(n);
                         null == t || t(e);
                     } finally {
-                        S(!1);
+                        I(!1);
                     }
                 }
             },
@@ -154,8 +154,8 @@ function o(e) {
         isAcceptLoading: o,
         isDeclineLoading: d,
         isDisconnectLoading: m,
-        isCancelLoading: g,
-        isGetLinkCodeLoading: x,
+        isCancelLoading: h,
+        isGetLinkCodeLoading: _,
         isSelectTeenUserLoading: f,
         isRequestingLink: E,
         isMoreLoading: N

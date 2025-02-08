@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var i = n(200651),
     s = n(192379),
     r = n(442837),
@@ -9,25 +9,25 @@ var i = n(200651),
     d = n(441167),
     u = n(695346),
     m = n(131951),
-    h = n(924557),
-    g = n(435064),
-    _ = n(779618),
-    x = n(39604),
+    g = n(924557),
+    h = n(435064),
+    x = n(779618),
+    _ = n(39604),
     p = n(703288),
     E = n(491758),
     C = n(233685),
     f = n(388032),
     T = n(644517),
     N = n(277253),
-    S = n(232186);
-function I(e) {
+    I = n(232186);
+function S(e) {
     let { className: t, showHeader: n = !0 } = e,
-        I = u.tU.useSetting(),
+        S = u.tU.useSetting(),
         { enableViewerClipping: b } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
         { analyticsLocations: v } = (0, o.ZP)(),
-        j = (0, h.Go)(),
-        { viewerClipsEnabled: A } = (0, r.cj)([g.Z], () => g.Z.getSettings()),
-        O = (0, _.Z)(m.Z);
+        j = (0, g.Go)(),
+        { viewerClipsEnabled: A } = (0, r.cj)([h.Z], () => h.Z.getSettings()),
+        O = (0, x.Z)(m.Z);
     return (
         s.useEffect(() => {
             (0, c.EW)(l.z.CLIPS_SETTINGS_BETA_TAG);
@@ -54,14 +54,14 @@ function I(e) {
                     }),
                 j && (0, i.jsx)(a.$i$, {}),
                 (0, i.jsxs)(a.hjN, {
-                    className: n || j ? S.marginTop20 : t,
+                    className: n || j ? I.marginTop20 : t,
                     children: [
                         (0, i.jsx)(a.j7V, {
                             hideBorder: !0,
                             className: N.formItem,
-                            value: I,
+                            value: S,
                             note: f.intl.string(f.t['wW9/zc']),
-                            onChange: (e) => x.yg({ allowVoiceRecording: e }),
+                            onChange: (e) => _.yg({ allowVoiceRecording: e }),
                             children: f.intl.string(f.t.AGDDkJ)
                         }),
                         b &&
@@ -72,7 +72,7 @@ function I(e) {
                                 value: A,
                                 note: f.intl.string(f.t['0vjy8P']),
                                 onChange: (e) =>
-                                    x.yl({
+                                    _.yl({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),

@@ -14,13 +14,13 @@ function m(e) {
         {
             videoHook: n,
             experimentalSoundshare: m,
-            useSystemScreensharePicker: h
+            useSystemScreensharePicker: g
         } = (0, s.cj)([o.Z], () => ({
             videoHook: o.Z.getVideoHook(),
             experimentalSoundshare: o.Z.getExperimentalSoundshare(),
             useSystemScreensharePicker: o.Z.getUseSystemScreensharePicker()
         })),
-        g = (0, i.jsxs)(i.Fragment, {
+        h = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(a.F, {
                     setting: c.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_VIDEO_HOOK,
@@ -44,7 +44,7 @@ function m(e) {
                 (0, i.jsx)(a.F, {
                     setting: c.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_SYSTEM_PICKER,
                     children: (0, i.jsx)(r.j7V, {
-                        value: h,
+                        value: g,
                         onChange: (e) => l.Z.setUseSystemScreensharePicker(e),
                         hideBorder: t,
                         children: d.intl.string(d.t.ie1mgY)
@@ -55,11 +55,11 @@ function m(e) {
     return (0, i.jsx)(a.F, {
         setting: c.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
         children: t
-            ? g
+            ? h
             : (0, i.jsx)(r.hjN, {
                   className: u.marginBottom20,
                   title: d.intl.string(d.t.NMCIf3),
-                  children: g
+                  children: h
               })
     });
 }

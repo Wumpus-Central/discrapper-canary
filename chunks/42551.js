@@ -6,25 +6,25 @@ var n = l(200651),
     s = l(658722),
     r = l.n(s),
     c = l(954955),
-    C = l.n(c),
-    d = l(498607),
-    u = l.n(d),
+    d = l.n(c),
+    C = l(498607),
+    u = l.n(C),
     m = l(399606),
     h = l(481060),
     x = l(563115),
     g = l(910693),
-    H = l(893966),
-    b = l(527379),
-    p = l(285173),
-    _ = l(388032),
+    p = l(893966),
+    _ = l(527379),
+    b = l(285173),
+    f = l(388032),
     j = l(137899),
-    f = l(216412);
+    H = l(216412);
 let v = new Set();
 function N(e) {
     let { guildId: t, onClose: l } = e,
         i = (0, g.BG)(t),
-        s = (0, m.e7)([H.Z], () => H.Z.getSearchStateByGuildId(t), [t], u()),
-        [c, d] = a.useState(s.selectedRoleIds),
+        s = (0, m.e7)([p.Z], () => p.Z.getSearchStateByGuildId(t), [t], u()),
+        [c, C] = a.useState(s.selectedRoleIds),
         N = (0, x.h)(t, v, !0),
         Z = (e, l) => {
             let { record: a } = e;
@@ -41,9 +41,9 @@ function N(e) {
                                     (0, n.jsx)('div', { className: o()(j.labelBackground, l && j.selected) }),
                                     (0, n.jsx)(h.lo1.Label, {
                                         children: (0, n.jsx)(
-                                            p.Z,
+                                            b.Z,
                                             {
-                                                className: o()(f.roleTooltipItem),
+                                                className: o()(H.roleTooltipItem),
                                                 role: a,
                                                 guildId: t
                                             },
@@ -70,23 +70,23 @@ function N(e) {
             }, []),
         R = a.useCallback(
             (e) => {
-                (0, b.Dr)(t, { selectedRoleIds: e }), i(e);
+                (0, _.Dr)(t, { selectedRoleIds: e }), i(e);
             },
             [t, i]
         ),
-        M = a.useMemo(() => C()(R, 300), [R]),
-        I = a.useCallback(
+        I = a.useMemo(() => d()(R, 300), [R]),
+        M = a.useCallback(
             (e) => {
                 let t;
-                d((t = new Set(c.has(e) ? [...c].filter((t) => t !== e) : [...c, e]))), M(t);
+                C((t = new Set(c.has(e) ? [...c].filter((t) => t !== e) : [...c, e]))), I(t);
             },
-            [c, M]
+            [c, I]
         );
     return (0, n.jsx)(h.DBG, {
         className: o()(j.rolePopout),
-        placeholder: _.intl.string(_.t.ZveC7e),
+        placeholder: f.intl.string(f.t.ZveC7e),
         value: c,
-        onChange: I,
+        onChange: M,
         onClose: () => {
             l();
         },

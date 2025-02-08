@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(355467),
     u = n(179360),
     m = n(821849),
-    h = n(232567),
-    g = n(497321),
-    _ = n(100527),
-    x = n(906732),
+    g = n(232567),
+    h = n(497321),
+    x = n(100527),
+    _ = n(906732),
     p = n(211242),
     E = n(15640),
     C = n(89057),
     f = n(433811),
     T = n(214852),
     N = n(621853),
-    S = n(246946),
-    I = n(594174),
+    I = n(246946),
+    S = n(594174),
     b = n(78839),
     v = n(626135),
     j = n(111361),
@@ -39,9 +39,9 @@ let w = function (e) {
     let { entrypoint: t = L.EZ.UserSettings } = e;
     (0, T.z)(f.X);
     let n = (0, p.Q)(),
-        { sourceAnalyticsLocations: r, analyticsLocations: w } = (0, x.ZP)(_.Z.PREMIUM_MARKETING),
+        { sourceAnalyticsLocations: r, analyticsLocations: w } = (0, _.ZP)(x.Z.PREMIUM_MARKETING),
         V = (0, a.e7)([b.ZP], () => b.ZP.hasFetchedSubscriptions()),
-        U = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
+        U = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
         G = null == U ? void 0 : U.id,
         F = (0, D.N)(),
         H = (0, P.Ng)(),
@@ -60,7 +60,7 @@ let w = function (e) {
     s.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(J, null, B.JjL.DISCOVERY), null != G && Q && q && (0, h.In)(G)]), (K.current = Date.now() - e), W(!1);
+            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(J, null, B.JjL.DISCOVERY), null != G && Q && q && (0, g.In)(G)]), (K.current = Date.now() - e), W(!1);
         });
     }, [J, G, Q, q]),
     s.useEffect(() => {
@@ -73,8 +73,8 @@ let w = function (e) {
                 load_duration_ms: K.current
             });
     }, [r, Y]),
-    (0, a.e7)([S.Z], () => S.Z.enabled))
-        ? (0, i.jsx)(g.Z, {})
+    (0, a.e7)([I.Z], () => I.Z.enabled))
+        ? (0, i.jsx)(h.Z, {})
         : n
           ? (0, i.jsx)(C.c8, {})
           : t === L.EZ.ApplicationStoreHome && q
@@ -83,12 +83,12 @@ let w = function (e) {
                       className: l()(M.container, M.loading),
                       children: (0, i.jsx)(o.$jN, {})
                   })
-                : (0, i.jsx)(x.Gt, {
+                : (0, i.jsx)(_.Gt, {
                       value: w,
                       children: (0, i.jsx)(k.Z, {})
                   })
             : V && z && !Y
-              ? (0, i.jsx)(x.Gt, {
+              ? (0, i.jsx)(_.Gt, {
                     value: w,
                     children: (0, i.jsx)(Z.Z, { entrypoint: t })
                 })

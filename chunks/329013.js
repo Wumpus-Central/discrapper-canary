@@ -12,18 +12,18 @@ var i = n(200651),
     d = n(857595),
     u = n(607070),
     m = n(100527),
-    h = n(906732),
-    g = n(238302),
-    _ = n(514361),
-    x = n(705262),
+    g = n(906732),
+    h = n(238302),
+    x = n(514361),
+    _ = n(705262),
     p = n(540059),
     E = n(605236),
     C = n(104494),
     f = n(639119),
     T = n(311476),
     N = n(165583),
-    S = n(197115),
-    I = n(504983),
+    I = n(197115),
+    S = n(504983),
     b = n(626135),
     v = n(210887),
     j = n(981631),
@@ -36,18 +36,18 @@ let D = () => {
             dismissAction: A.L.PRIMARY,
             forceTrack: !0
         }),
-            (0, g.Kq)(),
+            (0, h.Kq)(),
             (0, c.xf)();
     },
     y = () => {
         var e, t;
-        let { analyticsLocations: n } = (0, h.ZP)(m.Z.USER_SETTINGS),
-            l = (0, r.e7)([_.Z], () => _.Z.isPreview),
+        let { analyticsLocations: n } = (0, g.ZP)(m.Z.USER_SETTINGS),
+            l = (0, r.e7)([x.Z], () => x.Z.isPreview),
             a = (null === (t = (0, f.N)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2,
             c = (0, C.Ng)(),
             d = (0, C.Wp)(c, O.Si.TIER_2),
             u = !l || a,
-            { enabled: g } = T.Z.getCurrentConfig(
+            { enabled: h } = T.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceClientThemes' },
                 {
                     autoTrackExposure: !u,
@@ -63,14 +63,14 @@ let D = () => {
                           children: [
                               (0, i.jsx)(o.zxk, {
                                   size: o.zxk.Sizes.MEDIUM,
-                                  color: g ? o.zxk.Colors.BRAND : o.zxk.Colors.PRIMARY,
+                                  color: h ? o.zxk.Colors.BRAND : o.zxk.Colors.PRIMARY,
                                   onClick: () => D(),
-                                  children: g ? R.intl.string(R.t.SKNnqq) : R.intl.string(R.t['E+COuL'])
+                                  children: h ? R.intl.string(R.t.SKNnqq) : R.intl.string(R.t['E+COuL'])
                               }),
-                              (0, i.jsx)(S.Z, {
-                                  showGradient: g,
+                              (0, i.jsx)(I.Z, {
+                                  showGradient: h,
                                   subscriptionTier: O.Si.TIER_2,
-                                  buttonText: g ? R.intl.string(R.t.pj0XBA) : d ? R.intl.formatToPlainString(R.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : R.intl.string(R.t.mr4K7O),
+                                  buttonText: h ? R.intl.string(R.t.pj0XBA) : d ? R.intl.formatToPlainString(R.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : R.intl.string(R.t.mr4K7O),
                                   className: P.premiumCta
                               })
                           ]
@@ -85,12 +85,12 @@ let D = () => {
             }, [l, n]),
             (0, i.jsxs)('div', {
                 children: [
-                    (0, i.jsx)(x.ZP, {
-                        type: x.yH.SETTINGS,
-                        children: g
+                    (0, i.jsx)(_.ZP, {
+                        type: _.yH.SETTINGS,
+                        children: h
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(x.ZP.BasicAndGradient, {
+                                      (0, i.jsx)(_.ZP.BasicAndGradient, {
                                           className: P.basicThemeSelectors,
                                           renderCTAButtons: v
                                       }),
@@ -99,14 +99,14 @@ let D = () => {
                               })
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(x.ZP.Basic, { className: P.basicThemeSelectors }),
+                                      (0, i.jsx)(_.ZP.Basic, { className: P.basicThemeSelectors }),
                                       E && (0, i.jsx)(Z, {}),
-                                      (0, i.jsxs)(I.Z, {
+                                      (0, i.jsxs)(S.Z, {
                                           className: P.featureBorder,
                                           isShown: l,
-                                          type: I.Y.PREMIUM,
+                                          type: S.Y.PREMIUM,
                                           children: [
-                                              (0, i.jsx)(x.ZP.Gradient, {
+                                              (0, i.jsx)(_.ZP.Gradient, {
                                                   disabled: l,
                                                   renderCTAButtons: v
                                               }),
@@ -143,11 +143,11 @@ function Z() {
         useForcedColors: t,
         gradientPreset: n,
         darkSidebar: s
-    } = (0, r.cj)([v.Z, u.Z, _.Z], () => ({
+    } = (0, r.cj)([v.Z, u.Z, x.Z], () => ({
         theme: v.Z.theme,
         useForcedColors: u.Z.useForcedColors,
         darkSidebar: v.Z.darkSidebar,
-        gradientPreset: _.Z.gradientPreset
+        gradientPreset: x.Z.gradientPreset
     }));
     return e !== j.BRd.LIGHT
         ? null
@@ -164,7 +164,7 @@ function Z() {
           });
 }
 let k = () => {
-    let e = (0, r.e7)([_.Z], () => _.Z.isPreview),
+    let e = (0, r.e7)([x.Z], () => x.Z.isPreview),
         t = (0, p.Q3)('ClientThemesSidebarButton');
     return e
         ? null

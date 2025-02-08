@@ -370,7 +370,7 @@ class e2 extends (i = a.Component) {
     renderAttachments(e) {
         let { channel: t, hasInlineForwardButton: n, gifAutoPlay: i, canDeleteAttachments: a, inlineAttachmentMedia: r, onMediaItemContextMenu: s, shouldRedactExplicitContent: o, shouldHideMediaOptions: c } = this.props,
             { attachments: d, flags: u } = e;
-        if (0 === d.length || e.isPoll() || e.isUIKitComponents()) return null;
+        if (0 === d.length || e.isPoll() || e.isComponentsV2()) return null;
         let m = d.filter((e) => null == e.flags || !(0, eC.yE)(e.flags, eV.J0y.IS_THUMBNAIL));
         if (0 === m.length) return null;
         let _ = m

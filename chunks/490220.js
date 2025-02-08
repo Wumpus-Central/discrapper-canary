@@ -9,19 +9,19 @@ var i = n(200651),
     d = n(617630);
 function u(e) {
     var t;
-    let { user: u, disabledInputs: m, containerClassName: h } = e,
-        { reducedMotion: g } = s.useContext(l.Sfi),
+    let { user: u, disabledInputs: m, containerClassName: g } = e,
+        { reducedMotion: h } = s.useContext(l.Sfi),
         {
-            pendingAvatar: _,
-            pendingBanner: x,
+            pendingAvatar: x,
+            pendingBanner: _,
             pendingThemeColors: p,
             pendingPronouns: E,
             pendingBio: C,
             tryItOutThemeColors: f,
             tryItOutAvatar: T,
             tryItOutBanner: N,
-            tryItOutAvatarDecoration: S,
-            tryItOutProfileEffectId: I
+            tryItOutAvatarDecoration: I,
+            tryItOutProfileEffectId: S
         } = (0, r.cj)([o.Z], () => {
             let e = o.Z.getAllPending(),
                 t = o.Z.getAllTryItOut();
@@ -30,18 +30,18 @@ function u(e) {
                 ...t
             };
         }),
-        b = (0, a.Z)(S, !1);
+        b = (0, a.Z)(I, !1);
     return (0, i.jsx)(c.Z, {
-        containerClassName: h,
+        containerClassName: g,
         user: u,
         pendingPronouns: E,
         pendingBio: C,
-        pendingBanner: null !== (t = null != N ? N : x) && void 0 !== t ? t : n(466045),
-        pendingAvatar: null != T ? T : _,
+        pendingBanner: null !== (t = null != N ? N : _) && void 0 !== t ? t : n(466045),
+        pendingAvatar: null != T ? T : x,
         pendingThemeColors: null != f ? f : p,
         pendingAvatarDecoration: b,
-        pendingProfileEffectId: I,
-        avatarClassName: null != T || null != _ || g.enabled ? void 0 : d.spinningAvatar,
+        pendingProfileEffectId: S,
+        avatarClassName: null != T || null != x || h.enabled ? void 0 : d.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         hideExampleButton: !0,

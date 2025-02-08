@@ -44,7 +44,7 @@ function b(e) {
         a = (0, d.Z)(n),
         b = (0, f.z)(n),
         { toggleLoopback: Z, isLoopbackEnabled: N } = (function () {
-            let e = (0, o.e7)([h.Z], () => h.Z.getVoiceFilterLoopbackEnabled()),
+            let e = (0, o.e7)([h.Z], () => h.Z.getVoiceFilterPlaybackEnabled()),
                 t = l.useCallback(() => {
                     (0, u.GN)(e ? 'voice_filter_loopback_off' : 'voice_filter_loopback_on'), (0, m._j)(!e);
                 }, [e]);

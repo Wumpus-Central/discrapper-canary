@@ -17,8 +17,8 @@ var i,
     E = n(158776),
     I = n(699516),
     C = n(594174),
-    v = n(981631),
-    N = n(474936);
+    N = n(981631),
+    v = n(474936);
 function T(e, t, n) {
     return (
         t in e
@@ -47,7 +47,7 @@ function Z(e) {
         applicationStream: g.Z.getAnyStreamForUser(e)
     };
 }
-function x(e) {
+function A(e) {
     let t = [];
     return (
         r()(_.ZP.memberOf(e))
@@ -62,7 +62,7 @@ function x(e) {
         }
     );
 }
-class A extends c.Z {
+class x extends c.Z {
     get comparator() {
         var e, t, n, i, l;
         return [this.type, null != this.giftIntentType ? 0 : 1, null !== (l = null !== (i = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== i ? i : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== l ? l : this.usernameLower];
@@ -79,18 +79,18 @@ class b {
             n = r().map(
                 I.Z.getRelationships(),
                 (n, i) => (
-                    n === v.OGo.FRIEND && e.add(i),
-                    new A({
+                    n === N.OGo.FRIEND && e.add(i),
+                    new x({
                         key: i,
                         type: n,
                         userId: i,
                         nickname: I.Z.getNickname(i),
                         ...S(i),
                         ...Z(i),
-                        ...x(i),
+                        ...A(i),
                         spam: I.Z.isSpam(i),
                         ignoredUser: I.Z.isIgnored(i),
-                        giftIntentType: n === v.OGo.FRIEND && p.Z.isTopAffinityFriendAnniversary({ userId: i }) ? N.hX.FRIEND_ANNIVERSARY : void 0,
+                        giftIntentType: n === N.OGo.FRIEND && p.Z.isTopAffinityFriendAnniversary({ userId: i }) ? v.hX.FRIEND_ANNIVERSARY : void 0,
                         applicationId: t ? I.Z.getOriginApplicationId(i) : void 0
                     })
                 )
@@ -102,10 +102,10 @@ class b {
             t.forEach((t) => {
                 let { id: l, applicationId: r, type: a } = t;
                 !e.has(l) &&
-                    ((a === v.OGo.FRIEND && n.has(l)) ||
-                        (a === v.OGo.FRIEND && n.add(l),
+                    ((a === N.OGo.FRIEND && n.has(l)) ||
+                        (a === N.OGo.FRIEND && n.add(l),
                         i.push(
-                            new A({
+                            new x({
                                 key: ''.concat(l, '-').concat(r),
                                 type: a,
                                 userId: l,
@@ -113,7 +113,7 @@ class b {
                                 nickname: I.Z.getNickname(l),
                                 ...S(l),
                                 ...Z(l),
-                                ...x(l),
+                                ...A(l),
                                 spam: I.Z.isSpam(l),
                                 ignoredUser: I.Z.isIgnored(l),
                                 isGameRelationship: !0
@@ -124,14 +124,14 @@ class b {
         let l = r().map(
             u.Z.getSuggestions(),
             (e) =>
-                new A({
+                new x({
                     key: e.key,
                     userId: e.key,
                     type: 99,
                     nickname: e.name,
                     ...S(e.key),
                     ...Z(e.key),
-                    ...x(e.key)
+                    ...A(e.key)
                 })
         );
         return new b(r().concat(n, i, l));
@@ -160,21 +160,21 @@ class b {
             })
             .filter((t) => {
                 switch (e) {
-                    case v.pJs.ONLINE:
-                        return t.type === v.OGo.FRIEND && t.status !== v.Skl.OFFLINE;
-                    case v.pJs.PENDING:
-                        return (t.type === v.OGo.PENDING_INCOMING && !t.spam && !t.ignoredUser) || t.type === v.OGo.PENDING_OUTGOING;
-                    case v.pJs.SPAM:
-                        return t.type === v.OGo.PENDING_INCOMING && t.spam;
-                    case v.pJs.PENDING_IGNORED:
-                        return t.type === v.OGo.PENDING_INCOMING && t.ignoredUser;
-                    case v.pJs.SUGGESTIONS:
+                    case N.pJs.ONLINE:
+                        return t.type === N.OGo.FRIEND && t.status !== N.Skl.OFFLINE;
+                    case N.pJs.PENDING:
+                        return (t.type === N.OGo.PENDING_INCOMING && !t.spam && !t.ignoredUser) || t.type === N.OGo.PENDING_OUTGOING;
+                    case N.pJs.SPAM:
+                        return t.type === N.OGo.PENDING_INCOMING && t.spam;
+                    case N.pJs.PENDING_IGNORED:
+                        return t.type === N.OGo.PENDING_INCOMING && t.ignoredUser;
+                    case N.pJs.SUGGESTIONS:
                         return 99 === t.type;
-                    case v.pJs.BLOCKED:
-                        return t.type === v.OGo.BLOCKED;
-                    case v.pJs.ALL:
+                    case N.pJs.BLOCKED:
+                        return t.type === N.OGo.BLOCKED;
+                    case N.pJs.ALL:
                     default:
-                        return t.type === v.OGo.FRIEND;
+                        return t.type === N.OGo.FRIEND;
                 }
             })
             .sortBy((e) => e.comparator)
@@ -182,11 +182,11 @@ class b {
     }
     getRelationshipCounts() {
         let e = {
-            [v.OGo.FRIEND]: 0,
-            [v.OGo.PENDING_INCOMING]: 0,
-            [v.OGo.PENDING_OUTGOING]: 0,
+            [N.OGo.FRIEND]: 0,
+            [N.OGo.PENDING_INCOMING]: 0,
+            [N.OGo.PENDING_OUTGOING]: 0,
             99: 0,
-            [v.OGo.BLOCKED]: 0
+            [N.OGo.BLOCKED]: 0
         };
         return (
             this._rows.forEach((t) => {
@@ -201,18 +201,18 @@ class b {
 }
 let L = !0,
     y = !1,
-    P = v.pJs.ONLINE,
+    P = N.pJs.ONLINE,
     O = new b(),
     R = !0,
     j = !1;
 function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    L && (e || (P !== v.pJs.ONLINE && P !== v.pJs.ADD_FRIEND)) && !y && ((L = !1), (y = !0), o.Z.fetchRelationships());
+    L && (e || (P !== N.pJs.ONLINE && P !== N.pJs.ADD_FRIEND)) && !y && ((L = !1), (y = !0), o.Z.fetchRelationships());
 }
 function w() {
     if (((L = !0), R ? (y = !1) : D(), (O = O.reset()), j)) return;
     let e = O.getRelationshipCounts();
-    P = 0 === e[v.OGo.FRIEND] ? (0 !== e[v.OGo.PENDING_INCOMING] ? v.pJs.PENDING : v.pJs.ADD_FRIEND) : v.pJs.ONLINE;
+    P = 0 === e[N.OGo.FRIEND] ? (0 !== e[N.OGo.PENDING_INCOMING] ? N.pJs.PENDING : N.pJs.ADD_FRIEND) : N.pJs.ONLINE;
 }
 function M() {
     O = R ? new b() : O.reset();

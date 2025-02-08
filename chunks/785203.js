@@ -20,12 +20,12 @@ var i,
     E = n(192513),
     I = n(255791),
     C = n(70956),
-    v = n(267642),
-    N = n(981631),
+    N = n(267642),
+    v = n(981631),
     T = (((i = {})[(i.ENABLE_PUBLIC_GUILD = 0)] = 'ENABLE_PUBLIC_GUILD'), (i[(i.APPLIED_GUILD_BOOST_GRACE_PERIOD = 1)] = 'APPLIED_GUILD_BOOST_GRACE_PERIOD'), (i[(i.MAX_MEMBER_COUNT = 2)] = 'MAX_MEMBER_COUNT'), (i[(i.GUILD_LIVE_CHANNEL = 3)] = 'GUILD_LIVE_CHANNEL'), (i[(i.GUILD_MFA_WARNING = 4)] = 'GUILD_MFA_WARNING'), (i[(i.COMMANDS_MIGRATION = 5)] = 'COMMANDS_MIGRATION'), (i[(i.APPLICATION_SUBSCRIPTION_EXPIRATION = 6)] = 'APPLICATION_SUBSCRIPTION_EXPIRATION'), (i[(i.HUB_STUDY_ROOM = 7)] = 'HUB_STUDY_ROOM'), (i[(i.SIGNUP = 8)] = 'SIGNUP'), (i[(i.CLAN_UPSELL = 9)] = 'CLAN_UPSELL'), i);
 function S(e) {
     var t;
-    let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : N.lds,
+    let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : v.lds,
         { lastFetchedAt: i } = (0, r.cj)([g.Z], () => ({
             appliedGuildBoosts: g.Z.getAppliedGuildBoostsForGuild(n),
             lastFetchedAt: g.Z.getLastFetchedAtForGuild(n)
@@ -35,19 +35,19 @@ function S(e) {
             isGracePeriodVisible: f.Z.isVisible(n)
         })),
         Z = (0, r.e7)([m.Z], () => m.Z.isVisible(e)),
-        x = (0, r.e7)([I.Z], () => I.Z.isVisible(e)),
-        A = (0, r.e7)([_.Z], () => _.Z.can(N.Plq.ADMINISTRATOR, e)),
-        b = null != T && Date.now() - T <= N.Dge,
+        A = (0, r.e7)([I.Z], () => I.Z.isVisible(e)),
+        x = (0, r.e7)([_.Z], () => _.Z.can(v.Plq.ADMINISTRATOR, e)),
+        b = null != T && Date.now() - T <= v.Dge,
         L = null != e ? e.premiumSubscriberCount : 0,
-        y = (0, v.rF)(L, n) !== N.Eu4.NONE,
-        P = !(null != i && Date.now() - i <= 43200000) && !b && A && y,
+        y = (0, N.rF)(L, n) !== v.Eu4.NONE,
+        P = !(null != i && Date.now() - i <= 43200000) && !b && x && y,
         O = (0, o.m)(n),
         R = (0, r.e7)([E.Z], () => E.Z.isVisible(e)),
         j = u.Z.useShouldShowChannelNotice(n),
         D = (0, h.h6)(e),
         { enableStudyGroup: w } = (0, d.s)(e),
         M = D.length > 0,
-        k = w && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)),
+        k = w && !(null == e ? void 0 : e.hasFeature(v.oNc.HUB)),
         U = (0, c.Vm)(n),
         G = (0, r.e7)([p.Z], () => null != p.Z.getActiveGuildSignUp(n));
     if (
@@ -73,7 +73,7 @@ function S(e) {
     )
         return 0;
     if (S) return 1;
-    if (x) return 2;
+    if (A) return 2;
     if (O || null != U) return 3;
     if (R) return 4;
     else if (j) return 5;

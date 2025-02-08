@@ -22,9 +22,9 @@ let I = n(349181),
         success: null,
         error: null
     },
-    v = (0, u.hQ)(),
-    N = ''.concat(v, '-decription'),
-    T = ''.concat(v, '-error');
+    N = (0, u.hQ)(),
+    v = ''.concat(N, '-decription'),
+    T = ''.concat(N, '-error');
 function S(e, t) {
     switch (t.type) {
         case 'RESET':
@@ -52,8 +52,8 @@ function Z() {
     let e = l.createRef(),
         t = l.createRef(),
         [n, r] = l.useReducer(S, C),
-        { canSend: s, hint: u, success: Z, error: x } = n,
-        A = (0, h.Q3)('AddFriendInput');
+        { canSend: s, hint: u, success: Z, error: A } = n,
+        x = (0, h.Q3)('AddFriendInput');
     return (
         l.useEffect(() => {
             null != Z && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
@@ -95,7 +95,7 @@ function Z() {
                     className: f.addFriendWumpusWrapper,
                     children: [
                         (0, i.jsx)(c.R94, {
-                            id: N,
+                            id: v,
                             type: c.R94.Types.DESCRIPTION,
                             children: (0, i.jsx)(c.Text, {
                                 tag: 'div',
@@ -103,7 +103,7 @@ function Z() {
                                 children: _.intl.string(_.t['Rn/sLi'])
                             })
                         }),
-                        A
+                        x
                             ? (0, i.jsx)('img', {
                                   src: I,
                                   alt: 'Wumpus Waving'
@@ -119,11 +119,11 @@ function Z() {
                         ref: t,
                         className: a()(f.addFriendInputWrapper, {
                             [f.success]: Z,
-                            [f.error]: x
+                            [f.error]: A
                         }),
                         children: [
                             (0, i.jsx)(c.oil, {
-                                id: v,
+                                id: N,
                                 inputRef: e,
                                 className: f.addFriendInput,
                                 inputClassName: f.input,
@@ -160,8 +160,8 @@ function Z() {
                                 'data-1p-ignore': !0,
                                 placeholder: _.intl.string(_.t['Rn/sLi']),
                                 'aria-label': _.intl.string(_.t['Rn/sLi']),
-                                'aria-invalid': null != x || void 0,
-                                'aria-describedby': null != x ? T : N
+                                'aria-invalid': null != A || void 0,
+                                'aria-describedby': null != A ? T : v
                             }),
                             null != u &&
                                 (0, i.jsx)('div', {
@@ -178,13 +178,13 @@ function Z() {
                         ]
                     })
                 }),
-                null != x &&
+                null != A &&
                     (0, i.jsx)(c.R94, {
                         role: 'alert',
                         id: T,
                         type: c.R94.Types.ERROR,
                         className: E.marginTop8,
-                        children: x
+                        children: A
                     }),
                 null != Z &&
                     (0, i.jsx)(c.R94, {

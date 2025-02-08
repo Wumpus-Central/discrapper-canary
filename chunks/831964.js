@@ -13,18 +13,18 @@ var i,
     d = n(981631),
     u = n(526761),
     m = n(388032),
-    h = n(509614),
-    g = n(880511),
-    _ = n(985443),
-    x = n(612253),
+    g = n(509614),
+    h = n(880511),
+    x = n(985443),
+    _ = n(612253),
     p = n(832287),
     E = n(872532),
     C = n(91342),
     f = n(181708),
     T = n(821721),
     N = n(158897),
-    S = n(290650),
-    I = n(751125),
+    I = n(290650),
+    S = n(751125),
     b = n(904505),
     v = n(712626),
     j = n(386014),
@@ -42,7 +42,7 @@ let k = () => {
                 name: 'emojis',
                 title: m.intl.string(m.t.zY5PPT),
                 description: m.intl.string(m.t.R5Xag4),
-                previewImage: h,
+                previewImage: g,
                 videoUrl: e ? C.Z : f.Z,
                 isCompact: !0
             },
@@ -50,8 +50,8 @@ let k = () => {
                 name: 'noLimits',
                 title: m.intl.string(m.t['6b3ydH']),
                 description: m.intl.string(m.t['Y+IJys']),
-                previewImage: g,
-                videoUrl: e ? S.Z : I.Z,
+                previewImage: h,
+                videoUrl: e ? I.Z : S.Z,
                 isCompact: !0
             }
         };
@@ -68,8 +68,8 @@ let k = () => {
                     analyticsLocations: t
                 });
             },
-            h = (0, o.rO)(),
-            g = c.Z.getArticleURL(d.BhN.REFERRAL_PROGRAM),
+            g = (0, o.rO)(),
+            h = c.Z.getArticleURL(d.BhN.REFERRAL_PROGRAM),
             C = {
                 serverProfiles: {
                     name: 'serverProfiles',
@@ -78,14 +78,14 @@ let k = () => {
                     descriptionCta: m.intl.string(m.t.jVcuVV),
                     onClick: n,
                     previewImage: E,
-                    videoUrl: h ? A.Z : O.Z
+                    videoUrl: g ? A.Z : O.Z
                 },
                 referralProgram: {
                     name: 'referralProgram',
                     title: m.intl.string(m.t.tPY4o6),
-                    description: m.intl.format(m.t.jRPQUF, { learnMoreLink: g }),
+                    description: m.intl.format(m.t.jRPQUF, { learnMoreLink: h }),
                     previewImage: v.Z,
-                    videoUrl: h ? b.Z : j.Z
+                    videoUrl: g ? b.Z : j.Z
                 },
                 newAppStyles: {
                     name: 'newAppStyles',
@@ -94,7 +94,7 @@ let k = () => {
                     descriptionCta: m.intl.string(m.t.jVcuVV),
                     onClick: i,
                     previewImage: p,
-                    videoUrl: h ? T.Z : N.Z
+                    videoUrl: g ? T.Z : N.Z
                 }
             },
             f = {
@@ -103,18 +103,18 @@ let k = () => {
                     title: m.intl.string(m.t.Ij3Zmp),
                     description: m.intl.string(m.t.UsOUxc),
                     descriptionCta: m.intl.string(m.t.jVcuVV),
-                    previewImage: x,
+                    previewImage: _,
                     onClick: n,
-                    videoUrl: h ? R.Z : P.Z
+                    videoUrl: g ? R.Z : P.Z
                 },
                 yourSpace: {
                     name: 'yourSpace',
                     title: m.intl.string(m.t.Wme3nZ),
                     description: m.intl.string(m.t['/aAIqa']),
                     descriptionCta: m.intl.string(m.t.jVcuVV),
-                    previewImage: _,
+                    previewImage: x,
                     onClick: i,
-                    videoUrl: h ? D.Z : y.Z
+                    videoUrl: g ? D.Z : y.Z
                 }
             };
         return e ? f : C;

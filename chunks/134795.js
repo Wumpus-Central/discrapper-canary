@@ -10,14 +10,14 @@ var s = n(120356),
     d = n(388032),
     u = n(25836);
 function m(e) {
-    let { showRemoveBannerButton: t, errors: n, onBannerChange: s, guildId: m, className: h, disabled: g = !1, showPremiumIcon: _ = !0, isTryItOutFlow: x = !1, forcedDivider: p, withHighlight: E = !1 } = e,
+    let { showRemoveBannerButton: t, errors: n, onBannerChange: s, guildId: m, className: g, disabled: h = !1, showPremiumIcon: x = !0, isTryItOutFlow: _ = !1, forcedDivider: p, withHighlight: E = !1 } = e,
         C = E ? l.gtL : l.zxk;
     return (0, i.jsx)(o.Z, {
-        className: h,
+        className: g,
         title: d.intl.string(d.t.Vgdusr),
-        showPremiumIcon: _,
+        showPremiumIcon: x,
         errors: n,
-        disabled: g,
+        disabled: h,
         forcedDivider: p,
         children: (0, i.jsxs)('div', {
             className: u.buttonsContainer,
@@ -25,7 +25,7 @@ function m(e) {
                 (0, i.jsx)(C, {
                     className: r()({ [u.buttonHighlighted]: E }),
                     size: l.zxk.Sizes.SMALL,
-                    onClick: () => (0, a.$r)(c.pC.BANNER, m, x, void 0),
+                    onClick: () => (0, a.$r)(c.pC.BANNER, m, _, void 0),
                     children: d.intl.string(d.t.N0bC3N)
                 }),
                 t &&

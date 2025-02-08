@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(237583),
     h = n(451478),
     p = n(934415),
-    m = n(968847),
-    g = n(388032),
+    g = n(968847),
+    m = n(388032),
     f = n(706091);
 let _ = {
     friction: 30,
@@ -28,9 +28,9 @@ function v(e) {
             },
             [r]
         ),
-        m = null !== (t = null == o ? void 0 : o.getChannelRecords()) && void 0 !== t ? t : [],
+        g = null !== (t = null == o ? void 0 : o.getChannelRecords()) && void 0 !== t ? t : [],
         _ = (0, p.c4)({
-            channels: m,
+            channels: g,
             selectedChannelId: null,
             selectedVoiceChannelId: null,
             voiceStates: s
@@ -50,7 +50,7 @@ function v(e) {
                 variant: 'text-xs/semibold',
                 color: 'text-positive',
                 className: f.barText,
-                children: g.intl.format(g.t['fDlr+P'], { count: _.length })
+                children: m.intl.format(m.t['fDlr+P'], { count: _.length })
             }),
             (0, i.jsx)(u.Z, {
                 guildId: n.id,
@@ -65,10 +65,10 @@ function v(e) {
 }
 function C(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: d, jumpToChannel: u } = e,
-        { bottomBar: p, topBar: C } = (0, s.cj)([m.Z], () => m.Z.getUnreadStateForGuildId(n.id)),
+        { bottomBar: p, topBar: C } = (0, s.cj)([g.Z], () => g.Z.getUnreadStateForGuildId(n.id)),
         x = (0, s.e7)([h.Z], () => h.Z.isFocused()),
         { mode: Z, mentionCount: I, targetChannelId: b } = 'bottom' === t ? p : C,
-        S = Z === m.x.HIDDEN,
+        S = Z === g.x.HIDDEN,
         N = (0, c.q_F)(
             {
                 to: { transform: S ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
@@ -92,9 +92,9 @@ function C(e) {
             style: N,
             'aria-hidden': S,
             children:
-                Z === m.x.HIDDEN
+                Z === g.x.HIDDEN
                     ? (0, i.jsx)('div', { className: a()(f.bar, f.emptyBar) })
-                    : Z === m.x.UNREAD
+                    : Z === g.x.UNREAD
                       ? (0, i.jsxs)(c.P3F, {
                             className: f.bar,
                             onClick: E,
@@ -118,11 +118,11 @@ function C(e) {
                                     variant: 'text-xs/semibold',
                                     color: 'interactive-normal',
                                     className: f.barText,
-                                    children: g.intl.string(g.t.FCRiT0)
+                                    children: m.intl.string(m.t.FCRiT0)
                                 })
                             ]
                         })
-                      : Z === m.x.MENTIONS
+                      : Z === g.x.MENTIONS
                         ? (0, i.jsx)(c.P3F, {
                               className: a()(f.bar, f.mentionsBar),
                               onClick: E,
@@ -130,10 +130,10 @@ function C(e) {
                                   variant: 'text-xs/semibold',
                                   color: 'status-danger-text',
                                   className: f.barText,
-                                  children: g.intl.format(g.t.EQcLys, { count: I })
+                                  children: m.intl.format(m.t.EQcLys, { count: I })
                               })
                           })
-                        : Z === m.x.VOICE_CHANNELS
+                        : Z === g.x.VOICE_CHANNELS
                           ? (0, i.jsx)(v, {
                                 jumpToVoiceChannels: d,
                                 guildChannels: n,

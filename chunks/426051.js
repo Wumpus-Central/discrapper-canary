@@ -22,22 +22,22 @@ function f(e) {
         C = l.useCallback(() => {
             c.Z.closeChannelSidebar(d.uZ);
         }, []),
-        v = l.useCallback(() => {
+        N = l.useCallback(() => {
             c.Z.closeChannelSidebar(d.uZ), E && (0, o.Kh)(f.id);
         }, [f.id, E]),
         {
-            acceptMessageRequest: N,
+            acceptMessageRequest: v,
             isAcceptLoading: T,
             isUserProfileLoading: S,
             isOptimisticAccepted: Z
         } = (0, h.m)({
             user: n,
-            onAcceptSuccess: v,
+            onAcceptSuccess: N,
             onRejectSuccess: C,
             onError: I
         }),
-        x = T || S,
-        A = x || Z;
+        A = T || S,
+        x = A || Z;
     return (0, i.jsxs)('div', {
         className: _.container,
         children: [
@@ -54,10 +54,10 @@ function f(e) {
                         color: a.Ttl.PRIMARY,
                         size: a.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            N(f.id), e.stopPropagation();
+                            v(f.id), e.stopPropagation();
                         },
-                        disabled: A,
-                        submitting: x,
+                        disabled: x,
+                        submitting: A,
                         children: g.intl.string(g.t.vicfl5)
                     }),
                     (0, i.jsx)(p.Z, {

@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(2052),
     u = n(493773),
     m = n(100527),
-    h = n(906732),
-    g = n(70097),
-    _ = n(142497),
-    x = n(810788),
+    g = n(906732),
+    h = n(70097),
+    x = n(142497),
+    _ = n(810788),
     p = n(626135),
     E = n(768581),
     C = n(709054),
     f = n(647177),
     T = n(63985),
     N = n(678916),
-    S = n(981631),
-    I = n(190378),
+    I = n(981631),
+    S = n(190378),
     b = n(486324),
     v = n(474936),
     j = n(388032),
@@ -94,11 +94,11 @@ function R(e) {
 }
 function P(e) {
     let { option: t, source: s, selected: r = !1, onSelectOption: u, isAnimatedImage: E, isVideo: C, hotspotLocation: T, ...N } = e,
-        I = (0, d.O)(),
-        { analyticsLocations: b } = (0, h.ZP)(m.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
-        O = (0, a.e7)([x.Z], () => null != T && x.Z.hasHotspot(T)),
+        S = (0, d.O)(),
+        { analyticsLocations: b } = (0, g.ZP)(m.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
+        O = (0, a.e7)([_.Z], () => null != T && _.Z.hasHotspot(T)),
         P = C
-            ? (0, i.jsx)(g.Z, {
+            ? (0, i.jsx)(h.Z, {
                   className: A.backgroundImageOption,
                   src: s,
                   loop: !0,
@@ -113,10 +113,10 @@ function P(e) {
     function D() {
         null != T &&
             O &&
-            (_.Kw(T),
-            p.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
+            (x.Kw(T),
+            p.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: v.cd.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
-                location: I.location,
+                location: S.location,
                 location_stack: b
             }));
     }
@@ -177,9 +177,9 @@ function D() {
 }
 function y(e) {
     let { onClick: t, tooltipText: n, disabled: s = !1 } = e,
-        r = (0, a.e7)([x.Z], () => x.Z.hasHotspot(I.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
+        r = (0, a.e7)([_.Z], () => _.Z.hasHotspot(S.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
     function l() {
-        _.Kw(I.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
+        x.Kw(S.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
     let c = r ? j.intl.string(j.t['5TUJOj']) : n;
     return (0, i.jsxs)(o.DY3, {
@@ -220,10 +220,10 @@ function y(e) {
 function Z(e) {
     let { onClick: t } = e,
         n = (0, d.O)(),
-        { analyticsLocations: s } = (0, h.ZP)(m.Z.VIDEO_BACKGROUND_CUSTOM_UPSELL);
+        { analyticsLocations: s } = (0, g.ZP)(m.Z.VIDEO_BACKGROUND_CUSTOM_UPSELL);
     return (
         (0, u.ZP)(() => {
-            p.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
+            p.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: v.cd.VIDEO_BACKGROUNDS_INLINE,
                 location: n.location,
                 location_stack: s
@@ -273,11 +273,11 @@ function k(e) {
 function L(e) {
     let { canUseCustomBackgrounds: t, customBackgroundOptions: n, selectedOption: r, onSelectOption: l, onUpsellClick: a, onAddBackgroundImage: c, smallerOptions: d } = e,
         u = s.useMemo(() => n.sort((e, t) => (null == e.last_used || null == t.last_used ? C.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime())), [n]),
-        g = u.length >= 25,
-        { analyticsLocations: _ } = (0, h.ZP)(m.Z.VIDEO_BACKGROUND_OPTIONS),
-        x = Object.values((0, T.Z)()).sort((e, t) => N.E1[e.id] - N.E1[t.id]);
-    return (0, i.jsx)(h.Gt, {
-        value: _,
+        h = u.length >= 25,
+        { analyticsLocations: x } = (0, g.ZP)(m.Z.VIDEO_BACKGROUND_OPTIONS),
+        _ = Object.values((0, T.Z)()).sort((e, t) => N.E1[e.id] - N.E1[t.id]);
+    return (0, i.jsx)(g.Gt, {
+        value: x,
         children: (0, i.jsxs)('div', {
             className: d ? A.backgroundOptionsSmall : A.backgroundOptionsLarge,
             children: [
@@ -298,7 +298,7 @@ function L(e) {
                 t
                     ? (0, i.jsx)(k, {
                           onAddBackgroundImage: c,
-                          disabled: g
+                          disabled: h
                       })
                     : (0, i.jsx)(Z, { onClick: a }),
                 u.map((e) =>
@@ -331,7 +331,7 @@ function L(e) {
                         e.id
                     )
                 ),
-                x.map((e) => {
+                _.map((e) => {
                     let t = !0 === e.isVideo;
                     return (0, i.jsx)(
                         o.ua7,

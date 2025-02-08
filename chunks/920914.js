@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(780384),
     u = n(481060),
     m = n(570140),
-    h = n(457330),
-    g = n(497321),
-    _ = n(23551),
-    x = n(468026),
+    g = n(457330),
+    h = n(497321),
+    x = n(23551),
+    _ = n(468026),
     p = n(410030),
     E = n(726542),
     C = n(122021),
     f = n(275759),
     T = n(231757),
     N = n(888496),
-    S = n(605236),
-    I = n(565138),
+    I = n(605236),
+    S = n(565138),
     b = n(297700),
     v = n(553795),
     j = n(430824),
@@ -61,7 +61,7 @@ let F = (e) => {
             (s = (0, i.jsx)(u.zxk, {
                 size: u.PhG.SMALL,
                 onClick: function () {
-                    h.Z.joinServer(r.id, () => {});
+                    g.Z.joinServer(r.id, () => {});
                 },
                 disabled: l,
                 children: (0, i.jsx)('span', { children: l ? V.intl.string(V.t.RXvQQk) : V.intl.string(V.t.XpeFYm) })
@@ -72,8 +72,8 @@ let F = (e) => {
                 (0, i.jsxs)('div', {
                     className: U.integration,
                     children: [
-                        (0, i.jsx)(I.Z, {
-                            size: I.Z.Sizes.SMALL,
+                        (0, i.jsx)(S.Z, {
+                            size: S.Z.Sizes.SMALL,
                             guild: r.guild,
                             className: U.guildIcon
                         }),
@@ -114,9 +114,9 @@ function H(e) {
     let n,
         r,
         l,
-        { onDisconnect: a, account: o, theme: m, locale: g } = e,
-        [_, p] = s.useState(o.friendSync),
-        [S, I] = s.useState(o.visibility),
+        { onDisconnect: a, account: o, theme: m, locale: h } = e,
+        [x, p] = s.useState(o.friendSync),
+        [I, S] = s.useState(o.visibility),
         [v, j] = s.useState(o.metadataVisibility),
         [A, O] = s.useState(o.showActivity),
         [R, D] = s.useState(null),
@@ -126,7 +126,7 @@ function H(e) {
         K = (0, C.rR)(o.type),
         q = E.Z.get(K);
     s.useEffect(() => {
-        p(o.friendSync), I(o.visibility), j(o.metadataVisibility), O(o.showActivity);
+        p(o.friendSync), S(o.visibility), j(o.metadataVisibility), O(o.showActivity);
     }, [o]);
     let X = {
             inProgressVisibility: R,
@@ -139,7 +139,7 @@ function H(e) {
         s.useEffect(() => {
             if (!1 === o.verified) return;
             let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
-            null != e && (I(e), h.Z.setVisibility(o.type, o.id, e), D(null)), null != t && (j(t), h.Z.setMetadataVisibility(o.type, o.id, t), G(null));
+            null != e && (S(e), g.Z.setVisibility(o.type, o.id, e), D(null)), null != t && (j(t), g.Z.setMetadataVisibility(o.type, o.id, t), G(null));
         }, [o]);
     function Q() {
         let e = E.Z.get(o.type),
@@ -155,7 +155,7 @@ function H(e) {
                 ]
             })),
             (0, u.h7j)((n) =>
-                (0, i.jsx)(x.default, {
+                (0, i.jsx)(_.default, {
                     title: V.intl.formatToPlainString(V.t.U5x12d, { name: e.name }),
                     body: t,
                     confirmText: V.intl.string(V.t.bsbMV1),
@@ -260,7 +260,7 @@ function H(e) {
                 var t;
                 let n = null !== (t = e.metadata) && void 0 !== t ? t : {},
                     s = null,
-                    r = (0, f.FI)(n[M.PC.CREATED_AT], g);
+                    r = (0, f.FI)(n[M.PC.CREATED_AT], h);
                 switch (e.type) {
                     case B.ABu.REDDIT:
                         s = (0, N.oP)(n, U.metadataItem);
@@ -338,7 +338,7 @@ function H(e) {
                                     ? void 0
                                     : () => {
                                           z(!0),
-                                              h.Z.refresh(e.type, e.id).finally(() => {
+                                              g.Z.refresh(e.type, e.id).finally(() => {
                                                   setTimeout(() => {
                                                       Y.push(e.id), W(Y), z(!1);
                                                   }, 2000);
@@ -359,9 +359,9 @@ function H(e) {
                 (n = (0, i.jsx)(u.j7V, {
                     className: U.connectionOptionSwitch,
                     hideBorder: !0,
-                    value: _,
+                    value: x,
                     onChange: function (e) {
-                        p(e), h.Z.setFriendSync(o.type, o.id, e);
+                        p(e), g.Z.setFriendSync(o.type, o.id, e);
                     },
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -374,7 +374,7 @@ function H(e) {
                     hideBorder: !0,
                     value: A,
                     onChange: function (e) {
-                        O(e), h.Z.setShowActivity(o.type, o.id, e);
+                        O(e), g.Z.setShowActivity(o.type, o.id, e);
                     },
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -397,9 +397,9 @@ function H(e) {
                                 });
                             return;
                         }
-                        j(n), h.Z.setMetadataVisibility(o.type, o.id, n);
+                        j(n), g.Z.setMetadataVisibility(o.type, o.id, n);
                     },
-                    disabled: 1 !== S || null == o.metadata,
+                    disabled: 1 !== I || null == o.metadata,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
                         children: V.intl.string(V.t.FYKGsL)
@@ -413,7 +413,7 @@ function H(e) {
                         (0, i.jsx)(u.j7V, {
                             className: U.connectionOptionSwitch,
                             hideBorder: !0,
-                            value: 1 === S,
+                            value: 1 === I,
                             onChange: function (e) {
                                 let { verified: t } = o,
                                     n = e ? 1 : 0;
@@ -425,7 +425,7 @@ function H(e) {
                                         });
                                     return;
                                 }
-                                I(n), h.Z.setVisibility(o.type, o.id, n);
+                                S(n), g.Z.setVisibility(o.type, o.id, n);
                             },
                             children: (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
@@ -478,7 +478,7 @@ function z() {
     return (
         s.useEffect(
             () => () => {
-                (0, S.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: w.L.AUTO });
+                (0, I.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: w.L.AUTO });
             },
             []
         ),
@@ -524,7 +524,7 @@ function W() {
         children: [
             t.slice(0, 10).map((e) =>
                 (0, i.jsx)(
-                    _.Z,
+                    x.Z,
                     {
                         type: e.type,
                         className: U.__invalid_accountButton,
@@ -600,7 +600,7 @@ function K(e) {
                                 onDisconnect: () =>
                                     (function (e) {
                                         let { type: t, id: n } = e;
-                                        h.Z.disconnect(t, n);
+                                        g.Z.disconnect(t, n);
                                     })(e)
                             },
                             t
@@ -620,10 +620,10 @@ let q = () => {
     (0, a.e7)([A.ZP], () => A.ZP.getFlattenedGuildIds());
     let l = (0, a.e7)([D.default], () => D.default.locale);
     return (s.useEffect(() => {
-        h.Z.fetch();
+        g.Z.fetch();
     }, []),
     e)
-        ? (0, i.jsx)(g.Z, {})
+        ? (0, i.jsx)(h.Z, {})
         : (0, i.jsxs)(u.hjN, {
               className: U.__invalid_connections,
               tag: u.RB0.H1,

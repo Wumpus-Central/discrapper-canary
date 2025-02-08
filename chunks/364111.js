@@ -17,7 +17,7 @@ function u(e, t) {
             var t, n;
             return [o.Z.getShopBlocks(e), null !== (t = o.Z.getLastSuccessfulFetch(e)) && void 0 !== t ? t : 0, null !== (n = o.Z.getLastErrorTimestamp(e)) && void 0 !== n ? n : 0, o.Z.getLastFetchOptions(e), o.Z.getFetchShopHomeError(e), o.Z.getIsFetchingShopHome(e)];
         }),
-        v = (0, i.useMemo)(
+        N = (0, i.useMemo)(
             () => ({
                 ...t,
                 variantsReturnStyle: u,
@@ -27,21 +27,21 @@ function u(e, t) {
             }),
             [t, u, p, m, !0]
         ),
-        N = (0, i.useMemo)(() => !(0, s.oc)(E, v), [E, v]),
+        v = (0, i.useMemo)(() => !(0, s.oc)(E, N), [E, N]),
         T = (0, i.useMemo)(() => Date.now() - _ < 600000, [_]);
     return (
         (0, i.useEffect)(() => {
             if (!n || !h || C) return;
             let t = Date.now() - f < 600000;
-            (null == I || !t) && (N || !T) && (0, s.Ov)(e, v);
-        }, [n, h, C, I, f, T, N, v, e]),
+            (null == I || !t) && (v || !T) && (0, s.Ov)(e, N);
+        }, [n, h, C, I, f, T, v, N, e]),
         {
             isFetchingShopHome: C,
             fetchShopHomeError: I,
             shopBlocks: g,
             refreshShopHome: (0, i.useCallback)(() => {
-                (0, s.Ov)(e, v);
-            }, [e, v])
+                (0, s.Ov)(e, N);
+            }, [e, N])
         }
     );
 }

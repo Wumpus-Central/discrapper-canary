@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
 var s = n(120356),
@@ -10,7 +10,7 @@ var s = n(120356),
     d = n(885026),
     u = n(441685),
     m = n(128216);
-let h = () => {
+let g = () => {
     let e = (0, a.o)(c.intl.string(c.t.i4XFEB), c.intl.string(c.t.eHQZuL));
     return (0, i.jsxs)('div', {
         className: r()(d.container, u.box, u),

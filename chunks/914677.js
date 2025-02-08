@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(780384),
@@ -38,11 +38,11 @@ let c = 'url(#gradient)',
                 return;
         }
     },
-    h = (e) => {
-        let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: h = 0, progressCircleStrokeSize: g = 2, progressCircleVariation: _, progressCircleStroke: x } = e,
-            p = 43 + g / 2,
+    g = (e) => {
+        let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: g = 0, progressCircleStrokeSize: h = 2, progressCircleVariation: x, progressCircleStroke: _ } = e,
+            p = 43 + h / 2,
             E = 2 * Math.PI * p,
-            [C, f] = s.useState(h);
+            [C, f] = s.useState(g);
         s.useEffect(() => {
             let e = setTimeout(() => {
                 f(t);
@@ -51,9 +51,9 @@ let c = 'url(#gradient)',
         }, [t]);
         let T = (0, l.ZP)(),
             N = (0, r.ap)(T),
-            S = u(_),
-            I = d(_, N),
-            b = null != x ? x : m(N, _);
+            I = u(x),
+            S = d(x, N),
+            b = null != _ ? _ : m(N, x);
         return (0, i.jsxs)('div', {
             className: o.circleContainer,
             children: [
@@ -62,18 +62,18 @@ let c = 'url(#gradient)',
                     className: o.circleSVG,
                     children: [
                         (0, i.jsx)('circle', {
-                            className: _ === a.Qo.NITRO_GEM || _ === a.Qo.AVATAR_DECO ? o.baseProgressCircle : void 0,
+                            className: x === a.Qo.NITRO_GEM || x === a.Qo.AVATAR_DECO ? o.baseProgressCircle : void 0,
                             fill: 'transparent',
-                            strokeWidth: g,
+                            strokeWidth: h,
                             r: ''.concat(p),
                             cx: '50%',
                             cy: '50%',
-                            stroke: S,
-                            strokeOpacity: I
+                            stroke: I,
+                            strokeOpacity: S
                         }),
                         (0, i.jsx)('circle', {
                             stroke: b,
-                            strokeWidth: g,
+                            strokeWidth: h,
                             strokeLinecap: 'round',
                             strokeDasharray: ''.concat(E, ' ').concat(E),
                             className: c,

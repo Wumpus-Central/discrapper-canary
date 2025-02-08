@@ -1,6 +1,6 @@
 n.d(t, {
     Nv: () => C,
-    pd: () => x,
+    pd: () => _,
     uX: () => f,
     wk: () => p
 });
@@ -14,16 +14,16 @@ var i = n(350483),
     d = n(9156),
     u = n(981631),
     m = n(490897);
-let h = (e, t) => {
+let g = (e, t) => {
         let n = a.Z.getChannel(t);
         return null != n && ((0, l.hv)(n.type) || u.TPd.GUILD_VOCAL.has(n.type) ? o.ZP.getMentionCount(t) > 0 || c.Z.getVoiceChannelId() === t : (!d.ZP.isChannelMuted(e, t) || o.ZP.getMentionCount(t) > 0) && (0, s.d)(n));
     },
-    g = (e, t) => (t === m.W.GUILD_EVENT ? !d.ZP.isMuteScheduledEventsEnabled(e) && o.ZP.hasUnread(e, t) : o.ZP.hasUnread(e, t)),
-    _ = (e, t) => {
+    h = (e, t) => (t === m.W.GUILD_EVENT ? !d.ZP.isMuteScheduledEventsEnabled(e) && o.ZP.hasUnread(e, t) : o.ZP.hasUnread(e, t)),
+    x = (e, t) => {
         let n = a.Z.getChannel(t);
         return !!(null != n && u.TPd.GUILD_VOCAL.has(n.type)) && (o.ZP.getMentionCount(t) > 0 || (c.Z.getVoiceChannelId() === t && o.ZP.getUnreadCount(t) > 0));
     },
-    x = {
+    _ = {
         binds: ['alt+shift+down'],
         comboKeysBindGlobal: !0,
         action() {
@@ -31,10 +31,10 @@ let h = (e, t) => {
             let t = null !== (e = r.Z.getState().guildId) && void 0 !== e ? e : u.ME;
             return (
                 (0, i.Z)(1, {
-                    channelPredicate: h,
+                    channelPredicate: g,
                     guildPredicate: (e) => e === t || !d.ZP.isMuted(e),
-                    guildFeaturePredicate: g,
-                    ensureChatIsVisible: _,
+                    guildFeaturePredicate: h,
+                    ensureChatIsVisible: x,
                     withVoiceChannels: !0
                 }),
                 !1
@@ -49,10 +49,10 @@ let h = (e, t) => {
             let t = null !== (e = r.Z.getState().guildId) && void 0 !== e ? e : u.ME;
             return (
                 (0, i.Z)(-1, {
-                    channelPredicate: h,
+                    channelPredicate: g,
                     guildPredicate: (e) => e === t || !d.ZP.isMuted(e),
-                    guildFeaturePredicate: g,
-                    ensureChatIsVisible: _,
+                    guildFeaturePredicate: h,
+                    ensureChatIsVisible: x,
                     withVoiceChannels: !0
                 }),
                 !1
@@ -66,7 +66,7 @@ let h = (e, t) => {
         action: () => (
             (0, i.Z)(1, {
                 channelPredicate: E,
-                ensureChatIsVisible: _,
+                ensureChatIsVisible: x,
                 withVoiceChannels: !0
             }),
             !1
@@ -78,7 +78,7 @@ let h = (e, t) => {
         action: () => (
             (0, i.Z)(-1, {
                 channelPredicate: E,
-                ensureChatIsVisible: _,
+                ensureChatIsVisible: x,
                 withVoiceChannels: !0
             }),
             !1

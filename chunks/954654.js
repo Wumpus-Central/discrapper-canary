@@ -95,7 +95,7 @@ function Z(e) {
                           children: (e) =>
                               (0, t.jsx)('div', {
                                   ref: e,
-                                  className: r()([E.container, { [E.containerUikit]: n.isUIKitComponents() }]),
+                                  className: r()([E.container, { [E.isComponentsV2]: n.isComponentsV2() }]),
                                   children: I(i)
                               })
                       })

@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(692547),
     u = n(481060),
     m = n(660216),
-    h = n(225433),
-    g = n(825209),
-    _ = n(721383),
-    x = n(612226),
+    g = n(225433),
+    h = n(825209),
+    x = n(721383),
+    _ = n(612226),
     p = n(714338),
     E = n(924557),
     C = n(600164),
     f = n(74299),
     T = n(131951),
     N = n(556296),
-    S = n(808506),
-    I = n(63063),
+    I = n(808506),
+    S = n(63063),
     b = n(358085),
     v = n(13140),
     j = n(210887),
@@ -46,9 +46,9 @@ function k(e, t, n) {
 }
 function L(e) {
     let { children: t } = e;
-    return t([x.Q2.MESSAGE, x.Q2.NAVIGATION, x.Q2.DND, x.Q2.CHAT, x.Q2.VOICE_AND_VIDEO, x.Q2.MISCELLANEOUS]);
+    return t([_.Q2.MESSAGE, _.Q2.NAVIGATION, _.Q2.DND, _.Q2.CHAT, _.Q2.VOICE_AND_VIDEO, _.Q2.MISCELLANEOUS]);
 }
-let B = o()((0, x.Rv)())
+let B = o()((0, _.Rv)())
         .filter((e) => e.description !== P.intl.string(P.t.HnNtEB))
         .groupBy((e) => e.group)
         .value(),
@@ -69,7 +69,7 @@ class w extends s.PureComponent {
                     className: D.keybindMessage,
                     type: u.geA.DESCRIPTION,
                     style: { color: d.Z.unsafe_rawColors.RED_400.css },
-                    children: P.intl.format(P.t.MOIaNT, { keyboardNavArticle: I.Z.getArticleURL(O.BhN.KEYBOARD_NAVIGATION) })
+                    children: P.intl.format(P.t.MOIaNT, { keyboardNavArticle: S.Z.getArticleURL(O.BhN.KEYBOARD_NAVIGATION) })
                 })
               : (0, i.jsx)(u.R94, {
                     className: D.keybindMessage,
@@ -84,11 +84,11 @@ class w extends s.PureComponent {
             className: l()(D.keybindGroup, y.card),
             children: [
                 !e &&
-                    (0, i.jsx)(h.Z, {
+                    (0, i.jsx)(g.Z, {
                         'aria-label': P.intl.string(P.t.qEHmmJ),
                         className: D.removeKeybind,
                         onClick: this.handleDeleteKeybind,
-                        look: h.Z.Looks.FILLED
+                        look: g.Z.Looks.FILLED
                     }),
                 (0, i.jsxs)(C.Z, {
                     className: Z.marginBottom8,
@@ -111,7 +111,7 @@ class w extends s.PureComponent {
                             children: (0, i.jsx)(u.xJW, {
                                 title: P.intl.string(P.t['1La4tL']),
                                 className: D.item,
-                                children: (0, i.jsx)(g.Z, {
+                                children: (0, i.jsx)(h.Z, {
                                     defaultValue: this.props.keybind.shortcut,
                                     onChange: this.handleShortcutChange
                                 })
@@ -387,7 +387,7 @@ class V extends s.PureComponent {
                                 (0, i.jsx)('div', {
                                     className: D.defaultKeybindShortcutGroup,
                                     children: (0, i.jsx)(u.M2$, {
-                                        shortcut: _._.binds['0'],
+                                        shortcut: x._.binds['0'],
                                         className: D.__invalid_defaultKeybindShortcut
                                     })
                                 })
@@ -398,8 +398,8 @@ class V extends s.PureComponent {
                             children: (e) =>
                                 (0, i.jsx)(i.Fragment, {
                                     children: e.map((e, t) => {
-                                        let n = (0, x.UD)(e),
-                                            r = (0, x.U6)(e),
+                                        let n = (0, _.UD)(e),
+                                            r = (0, _.U6)(e),
                                             a = B[e];
                                         return (0, i.jsxs)(
                                             'div',
@@ -465,7 +465,7 @@ class V extends s.PureComponent {
 function U() {
     let e = (0, c.e7)([N.Z], () => N.Z.getState()),
         t = (0, c.e7)([T.Z], () => (0, f.Z)(T.Z)),
-        n = (0, c.e7)([S.Z], () => S.Z.isSupported()),
+        n = (0, c.e7)([I.Z], () => I.Z.isSupported()),
         s = (0, E.Go)();
     return (0, i.jsx)(V, {
         keybinds: e,

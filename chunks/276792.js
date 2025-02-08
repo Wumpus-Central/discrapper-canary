@@ -16,12 +16,12 @@ var l = n(704215),
     _ = n(74316);
 function f(e) {
     var t, n;
-    let { content: f, renderModalProps: E, analyticsLocations: I, analyticsLocation: C, isLightTheme: v } = e,
-        N = 'AnnouncementModalVariant1_'.concat(l.z[Number(f.dismissKey)]),
+    let { content: f, renderModalProps: E, analyticsLocations: I, analyticsLocation: C, isLightTheme: N } = e,
+        v = 'AnnouncementModalVariant1_'.concat(l.z[Number(f.dismissKey)]),
         { onClose: T } = E,
         S = null != f.button && '' !== f.button.copy ? f.button.copy : p.intl.string(p.t.YScQSE),
         Z = (null === (t = f.button) || void 0 === t ? void 0 : t.buttonAction) === r.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
-        x =
+        A =
             (null === (n = f.button) || void 0 === n ? void 0 : n.buttonAction) === r.Wc.OPEN_MARKETING_PAGE
                 ? () => {
                       (0, o.uL)(m.Z5c.APPLICATION_STORE), T();
@@ -39,7 +39,7 @@ function f(e) {
                               e && T();
                           }
                       }),
-        A =
+        x =
             '' !== f.helpArticleId
                 ? () =>
                       (0, i.jsxs)(i.Fragment, {
@@ -55,7 +55,7 @@ function f(e) {
                 : void 0,
         b = {
             type: 'video',
-            src: v ? f.heroArtVideoLinkLightTheme : f.videoLink
+            src: N ? f.heroArtVideoLinkLightTheme : f.videoLink
         };
     null != f.heroArtVideoSubtitles &&
         (b.subtitles = f.heroArtVideoSubtitles.map((e) => ({
@@ -66,9 +66,9 @@ function f(e) {
         ('' !== f.heroArtImageLinkDarkTheme || '' !== f.heroArtImageLinkLightTheme) &&
             (b = {
                 type: 'image',
-                src: v ? f.heroArtImageLinkLightTheme : f.heroArtImageLinkDarkTheme
+                src: N ? f.heroArtImageLinkLightTheme : f.heroArtImageLinkDarkTheme
             });
-    let L = v ? u.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
+    let L = N ? u.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
         y =
             '' !== f.modalTopPill
                 ? () =>
@@ -83,16 +83,16 @@ function f(e) {
         header: f.header,
         modalTopExtra: y,
         subHeader: f.subheader,
-        subHeaderExtra: A,
+        subHeaderExtra: x,
         body: f.body,
         heroArt: b,
         featureCards: f.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
-            imageSrc: v ? e.imageLinkLightTheme : e.imageLink,
+            imageSrc: N ? e.imageLinkLightTheme : e.imageLink,
             tagText: '' !== e.pill ? e.pill : void 0
         })),
-        changeLogId: N,
+        changeLogId: v,
         button: () => {
             let e = Date.now();
             return (0, i.jsxs)(a.gtL, {
@@ -102,12 +102,12 @@ function f(e) {
                 size: a.zxk.Sizes.SMALL,
                 onClick: () => {
                     c.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: N,
+                        change_log_id: v,
                         cta_type: Z,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: N
+                        target: v
                     }),
-                        x();
+                        A();
                 },
                 children: [
                     (0, i.jsx)('img', {

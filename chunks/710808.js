@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(579806),
     u = n(600164),
     m = n(729345),
-    h = n(921801),
-    g = n(857192),
-    _ = n(131951),
-    x = n(226961),
+    g = n(921801),
+    h = n(857192),
+    x = n(131951),
+    _ = n(226961),
     p = n(12647),
     E = n(569550),
     C = n(726985),
     f = n(981631),
     T = n(65154),
     N = n(388032),
-    S = n(232186);
-async function I() {
+    I = n(232186);
+async function S() {
     let e = await d.Z.fileManager.getLogPath();
     d.Z.fileManager.showItemInFolder(e);
 }
@@ -43,18 +43,18 @@ function b(e) {
 function v(e) {
     let { refreshStyles: t = !1 } = e,
         [n, d] = s.useState(!1),
-        { debugLogging: v, aecDumpEnabled: j } = (0, r.cj)([_.Z], () => ({
-            aecDumpSupported: _.Z.isAecDumpSupported(),
-            debugLogging: _.Z.getDebugLogging(),
-            aecDumpEnabled: _.Z.getAecDump(),
-            supportsConnectionReplay: _.Z.supports(T.AN.CONNECTION_REPLAY)
+        { debugLogging: v, aecDumpEnabled: j } = (0, r.cj)([x.Z], () => ({
+            aecDumpSupported: x.Z.isAecDumpSupported(),
+            debugLogging: x.Z.getDebugLogging(),
+            aecDumpEnabled: x.Z.getAecDump(),
+            supportsConnectionReplay: x.Z.supports(T.AN.CONNECTION_REPLAY)
         })),
-        A = (0, r.e7)([g.default], () => g.default.isStreamInfoOverlayEnabled),
-        O = (0, r.e7)([x.ZP], () => x.ZP.shouldRecordNextConnection());
+        A = (0, r.e7)([h.default], () => h.default.isStreamInfoOverlayEnabled),
+        O = (0, r.e7)([_.ZP], () => _.ZP.shouldRecordNextConnection());
     async function R() {
         d(!0);
         try {
-            await _.Z.getMediaEngine().writeAudioDebugState(),
+            await x.Z.getMediaEngine().writeAudioDebugState(),
                 await p.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }),
                 await (0, m.E)(f.GU0.RTC),
                 (function () {
@@ -94,7 +94,7 @@ function v(e) {
     }
     let P = (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(h.F, {
+            (0, i.jsx)(g.F, {
                 setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
                 children: (0, i.jsx)(l.j7V, {
                     value: A,
@@ -106,7 +106,7 @@ function v(e) {
                     children: N.intl.string(N.t['0CEP6e'])
                 })
             }),
-            (0, i.jsx)(h.F, {
+            (0, i.jsx)(g.F, {
                 setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
                 children: (0, i.jsx)(l.j7V, {
                     value: j,
@@ -116,7 +116,7 @@ function v(e) {
                     children: N.intl.string(N.t['r6K+TE'])
                 })
             }),
-            (0, i.jsxs)(h.F, {
+            (0, i.jsxs)(g.F, {
                 setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
                 children: [
                     (0, i.jsx)(l.j7V, {
@@ -128,7 +128,7 @@ function v(e) {
                     }),
                     (0, i.jsx)(l.xJW, {
                         children: (0, i.jsx)(u.Z, {
-                            className: S.marginBottom20,
+                            className: I.marginBottom20,
                             children: (0, i.jsx)(u.Z.Child, {
                                 grow: 0,
                                 shrink: 0,
@@ -140,10 +140,10 @@ function v(e) {
                             })
                         })
                     }),
-                    t ? null : (0, i.jsx)(l.$i$, { className: S.marginBottom20 })
+                    t ? null : (0, i.jsx)(l.$i$, { className: I.marginBottom20 })
                 ]
             }),
-            (0, i.jsx)(h.F, {
+            (0, i.jsx)(g.F, {
                 setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
                 children: (0, i.jsxs)('div', {
                     children: [
@@ -172,7 +172,7 @@ function v(e) {
                                         shrink: 0,
                                         children: (0, i.jsx)(l.zxk, {
                                             size: l.zxk.Sizes.SMALL,
-                                            onClick: I,
+                                            onClick: S,
                                             children: N.intl.string(N.t.nuPtYm)
                                         })
                                     })
@@ -187,7 +187,7 @@ function v(e) {
     return t
         ? P
         : (0, i.jsx)(l.hjN, {
-              className: S.marginBottom40,
+              className: I.marginBottom40,
               title: N.intl.string(N.t.OFpL3d),
               children: P
           });

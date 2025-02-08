@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(906732),
     u = n(433811),
     m = n(214852),
-    h = n(626135),
-    g = n(533525),
-    _ = n(314684),
-    x = n(794484),
+    g = n(626135),
+    h = n(533525),
+    x = n(314684),
+    _ = n(794484),
     p = n(536844),
     E = n(342414),
     C = n(938736),
     f = n(391110),
     T = n(71363),
     N = n(781800),
-    S = n(981631),
-    I = n(388032),
+    I = n(981631),
+    S = n(388032),
     b = n(368549),
     v = n(865215);
 let j = 'SubscriberNitroHome',
@@ -30,8 +30,8 @@ let j = 'SubscriberNitroHome',
             [t, n] = s.useState(!1),
             { analyticsLocations: r } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
             [A, O] = s.useState(!1);
-        (0, _.FM)();
-        let R = (0, g.b)(j),
+        (0, x.FM)();
+        let R = (0, h.b)(j),
             P = (0, C.TW)(j),
             D = 'true' === new URLSearchParams(window.location.search).get('autoScroll');
         return (
@@ -50,14 +50,14 @@ let j = 'SubscriberNitroHome',
                                         className: b.heroHeading,
                                         location: f.MQ.HOME
                                     }),
-                                    (0, i.jsx)(x.Z, {
+                                    (0, i.jsx)(_.Z, {
                                         variant: f.R0.WHATS_NEW,
                                         className: l()(b.whatsNew, { [b.whatsNewWithOriginalHeroHeading]: !(R || P) }),
                                         noBackground: !0,
                                         leftAlignHeaders: !0,
                                         shouldAutoScroll: D
                                     }),
-                                    (0, i.jsx)(x.Z, {
+                                    (0, i.jsx)(_.Z, {
                                         className: b.perksDiscoverability,
                                         noBackground: !0,
                                         leftAlignHeaders: !0,
@@ -70,14 +70,14 @@ let j = 'SubscriberNitroHome',
                                         className: b.giftNitro,
                                         location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                         analyticsLocation: {
-                                            page: S.ZY5.NITRO_HOME,
-                                            section: S.jXE.GIFT_BANNER
+                                            page: I.ZY5.NITRO_HOME,
+                                            section: I.jXE.GIFT_BANNER
                                         }
                                     }),
                                     (0, i.jsx)('div', { className: b.footerSpacing }),
                                     (0, i.jsx)(a.$, {
                                         onChange: (e) => {
-                                            e && !A && (h.default.track(S.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), O(!0));
+                                            e && !A && (g.default.track(I.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), O(!0));
                                         },
                                         children: (0, i.jsx)('div', { className: b.bottomOfPageVisibilitySensor })
                                     }),
@@ -86,7 +86,7 @@ let j = 'SubscriberNitroHome',
                                         className: b.bottomIllustration,
                                         width: 112,
                                         height: 85,
-                                        alt: I.intl.string(I.t.X4IxWF)
+                                        alt: S.intl.string(S.t.X4IxWF)
                                     })
                                 ]
                             })

@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(634894),
     u = n(410030),
     m = n(100527),
-    h = n(906732),
-    g = n(975298),
-    _ = n(15640),
-    x = n(594174),
+    g = n(906732),
+    h = n(975298),
+    x = n(15640),
+    _ = n(594174),
     p = n(78839),
     E = n(74538),
     C = n(775412),
     f = n(104494),
     T = n(639119),
     N = n(230916),
-    S = n(346497),
-    I = n(823188),
+    I = n(346497),
+    S = n(823188),
     b = n(21023),
     v = n(318747),
     j = n(409100),
@@ -32,11 +32,11 @@ var i = n(200651),
     y = n(314907),
     Z = n(826701);
 let k = () => {
-        let e = (0, S.W1)();
-        return (0, i.jsx)(I.Cy, {
+        let e = (0, I.W1)();
+        return (0, i.jsx)(S.Cy, {
             text: e,
             className: R.bogoPillWithSparkles,
-            colorOptions: I.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+            colorOptions: S.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
         });
     },
     L = () =>
@@ -118,9 +118,9 @@ let k = () => {
         var t;
         let n,
             { className: r, hideCTAs: P = !1, headingOverride: D, hidePill: y = !1, selectedPlanColumnClassName: Z, selectedPlanTier: V = A.p9.TIER_2 } = e,
-            { analyticsLocations: U } = (0, h.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+            { analyticsLocations: U } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             G = (0, a.e7)([p.ZP], () => p.ZP.hasFetchedSubscriptions()),
-            F = (0, _.V)(),
+            F = (0, x.V)(),
             H = 'PlanComparisonTable';
         (0, d.j)({
             location: H + ' auto on',
@@ -132,7 +132,7 @@ let k = () => {
             });
         let z = (0, u.ZP)(),
             Y = (0, o.ap)(z),
-            W = (0, a.e7)([x.default], () => x.default.getCurrentUser()),
+            W = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
             K = (0, E.M5)(W, A.p9.TIER_2),
             q = (0, T.N)(),
             X = null == q ? void 0 : null === (t = q.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
@@ -143,9 +143,9 @@ let k = () => {
             et = ''.concat(ee, '/').concat((0, E.eP)(A.rV.MONTH)),
             en = (0, E.CY)(A.Xh.PREMIUM_MONTH_TIER_0),
             ei = (0, E.CY)(A.Xh.PREMIUM_MONTH_TIER_2),
-            es = (0, g.Z)(),
+            es = (0, h.Z)(),
             er = (0, b.n)(en, ei, $, et, es.fractionalState),
-            el = (0, S.Vi)();
+            el = (0, I.Vi)();
         if (!G || !F) return null;
         let ea = {
             label: (0, i.jsx)(c.X6q, {
@@ -224,16 +224,16 @@ let k = () => {
             (n = y
                 ? null
                 : null != X || null != J
-                  ? (0, i.jsx)(I.Cy, {
+                  ? (0, i.jsx)(S.Cy, {
                         text: null != X ? O.intl.string(O.t.IBYG5e) : O.intl.string(O.t.ce1v3d),
                         className: R.freeTrialPillWithSparkles,
-                        colorOptions: X === A.Si.TIER_0 ? (Y ? I.VE.PREMIUM_TIER_0_GRADIENT_FILL : I.VE.PREMIUM_TIER_0_WHITE_FILL) : Y ? (K ? I.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : I.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : I.VE.PREMIUM_TIER_2_WHITE_FILL
+                        colorOptions: X === A.Si.TIER_0 ? (Y ? S.VE.PREMIUM_TIER_0_GRADIENT_FILL : S.VE.PREMIUM_TIER_0_WHITE_FILL) : Y ? (K ? S.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : S.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : S.VE.PREMIUM_TIER_2_WHITE_FILL
                     })
                   : el
                     ? (0, i.jsx)(k, {})
                     : (0, i.jsx)(L, {}));
         let eo = X === A.Si.TIER_0 || J === A.p9.TIER_0 || V === A.p9.TIER_0;
-        return (0, i.jsx)(h.Gt, {
+        return (0, i.jsx)(g.Gt, {
             value: U,
             children: (0, i.jsxs)('div', {
                 className: l()(R.root, r),

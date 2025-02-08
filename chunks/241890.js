@@ -3,8 +3,8 @@ n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var s = n(481060),
-    o = n(570140),
-    a = n(341382),
+    a = n(570140),
+    o = n(341382),
     c = n(981631);
 let d = null;
 function u(e) {
@@ -12,7 +12,7 @@ function u(e) {
 }
 let _ = {
     init() {
-        o.Z.subscribe('PREMIUM_REQUIRED_MODAL_OPEN', (e) => {
+        a.Z.subscribe('PREMIUM_REQUIRED_MODAL_OPEN', (e) => {
             if ((u(!1), (d = e.context), (i = e.resolve), (l = e.reject), c.e3s === e.context)) {
                 let e;
                 (e = !1),
@@ -31,17 +31,17 @@ let _ = {
                         },
                         {
                             onCloseCallback: () => {
-                                (0, a.M)(e);
+                                (0, o.M)(e);
                             }
                         }
                     );
             }
         }),
-            o.Z.subscribe('PREMIUM_REQUIRED_MODAL_CLOSE', (e) => {
+            a.Z.subscribe('PREMIUM_REQUIRED_MODAL_CLOSE', (e) => {
                 let { shouldContinue: t } = e;
                 (d = null), u(t);
             }),
-            o.Z.subscribe('OVERLAY_SET_INPUT_LOCKED', (e) => {
+            a.Z.subscribe('OVERLAY_SET_INPUT_LOCKED', (e) => {
                 let { locked: t } = e;
                 t && null != d && ((d = null), u(!1));
             });

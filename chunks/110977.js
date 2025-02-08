@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(388032),
     h = n(134123),
     p = n(782451),
-    m = n(572488);
-function g() {
+    g = n(572488);
+function m() {
     return (0, i.jsx)('div', {
         className: a()(p.row, p.rowGuildName),
         children: (0, i.jsx)('span', {
@@ -46,9 +46,9 @@ let f = l.memo(function (e) {
         spacing: r ? 12 : 20,
         position: 'right',
         align: 'center',
-        text: (0, i.jsx)(g, {}),
+        text: (0, i.jsx)(m, {}),
         'aria-label': t,
-        tooltipClassName: m.listItemTooltip,
+        tooltipClassName: g.listItemTooltip,
         children: (e) =>
             (0, i.jsx)('div', {
                 ...e,

@@ -11,8 +11,8 @@ var l = n(442837),
     u = n(9156),
     h = n(434479),
     p = n(490897),
-    m = n(388032),
-    g = n(193877);
+    g = n(388032),
+    m = n(193877);
 function f(e) {
     let { guild: t, selected: f } = e,
         { hasUnread: _, mentionCount: v } = (0, l.cj)(
@@ -36,7 +36,7 @@ function f(e) {
             (0, s.EW)(r.z.GUILD_HEADER_EVENT_UPSELL);
     }
     let Z = (0, c.ZP)(t.id),
-        I = Z.length > 0 ? m.intl.formatToPlainString(m.t.IBdqSk, { number: Z.length }) : m.intl.string(m.t.tlopTE);
+        I = Z.length > 0 ? g.intl.formatToPlainString(g.t.IBdqSk, { number: Z.length }) : g.intl.string(g.t.tlopTE);
     return (0, i.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
@@ -62,7 +62,7 @@ function f(e) {
         trailing:
             !C && v > 0
                 ? (0, i.jsx)(a.mAB, {
-                      className: g.numberBadge,
+                      className: m.numberBadge,
                       disableColor: !0,
                       count: v
                   })

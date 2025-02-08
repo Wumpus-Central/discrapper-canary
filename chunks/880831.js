@@ -134,8 +134,8 @@ function P(e) {
                 }, []);
             l.useEffect(() => {
                 function e(e) {
-                    let { channelId: t, message: i } = e;
-                    t === n && i.type !== T.uaV.STAGE_START && i.type !== T.uaV.STAGE_END && i.type !== T.uaV.STAGE_TOPIC && i.type !== T.uaV.STAGE_SPEAKER && i.type !== T.uaV.STAGE_RAISE_HAND && (clearTimeout(m.current), (m.current = setTimeout(f, r)), o((e) => [...e, i.id]));
+                    let { channelId: t, message: i, optimistic: l } = e;
+                    t === n && i.type !== T.uaV.STAGE_START && i.type !== T.uaV.STAGE_END && i.type !== T.uaV.STAGE_TOPIC && i.type !== T.uaV.STAGE_SPEAKER && i.type !== T.uaV.STAGE_RAISE_HAND && !l && (clearTimeout(m.current), (m.current = setTimeout(f, r)), o((e) => [...e, i.id]));
                 }
                 return (
                     u.Z.subscribe('MESSAGE_CREATE', e),

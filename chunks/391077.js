@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
 var s = n(120356),
@@ -12,16 +12,16 @@ var s = n(120356),
 function m(e) {
     let { showChargingUpState: t, rowValueText: n, endsAt: s, fractionalState: a, activationDate: o } = e,
         m = t ? d.intl.string(d.t['hT6i//']) : d.intl.string(d.t['3G0CTE']),
-        h = t ? (void 0 === o ? null : d.intl.format(d.t['0Vwb/v'], { activateDate: o })) : a === c.a$.FP_SUB_PAUSED ? d.intl.format(d.t.MMvaIC, { resumeDate: s.toDate() }) : null,
-        g = r()({
+        g = t ? (void 0 === o ? null : d.intl.format(d.t['0Vwb/v'], { activateDate: o })) : a === c.a$.FP_SUB_PAUSED ? d.intl.format(d.t.MMvaIC, { resumeDate: s.toDate() }) : null,
+        h = r()({
             [u.fractionalUnactivatedPill]: t,
             [u.fractionalTimeRemainingPill]: !t
         }),
-        _ = r()({
+        x = r()({
             [u.fractionalUnactivatedPillText]: t,
             [u.fractionalTimeRemainingPillText]: !t
         }),
-        x = r()({ [u.fractionalTimeRemainingRowHeader]: !t });
+        _ = r()({ [u.fractionalTimeRemainingRowHeader]: !t });
     return (0, i.jsxs)('div', {
         className: u.fractionalTimeRemainingRow,
         children: [
@@ -30,23 +30,23 @@ function m(e) {
                 children: [
                     (0, i.jsx)(l.X6q, {
                         variant: 'heading-md/semibold',
-                        className: x,
+                        className: _,
                         children: m
                     }),
-                    null !== h &&
+                    null !== g &&
                         (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: h
+                            children: g
                         })
                 ]
             }),
             (0, i.jsx)('div', {
                 className: u.fractionalTimeRemainingPillWrapper,
                 children: (0, i.jsx)('div', {
-                    className: g,
+                    className: h,
                     children: (0, i.jsx)(l.Text, {
                         variant: 'text-sm/semibold',
-                        className: _,
+                        className: x,
                         children: n
                     })
                 })
@@ -54,12 +54,12 @@ function m(e) {
         ]
     });
 }
-let h = function (e) {
+let g = function (e) {
     let { fractionalPremiumInfo: t, className: n, activationDate: s } = e,
         c = (0, o.Am)(t),
-        h = c.length > 0,
-        g = (0, a.Z)(t.endsAt, a.a.SHORT_TIME),
-        _ = h ? c : g;
+        g = c.length > 0,
+        h = (0, a.Z)(t.endsAt, a.a.SHORT_TIME),
+        x = g ? c : h;
     return (0, i.jsx)('div', {
         children: (0, i.jsxs)('div', {
             className: r()(n, u.fractionalPremiumAccountCredit),
@@ -93,8 +93,8 @@ let h = function (e) {
                     })
                 }),
                 (0, i.jsx)(m, {
-                    showChargingUpState: h,
-                    rowValueText: _,
+                    showChargingUpState: g,
+                    rowValueText: x,
                     endsAt: t.endsAt,
                     fractionalState: t.fractionalState,
                     activationDate: s

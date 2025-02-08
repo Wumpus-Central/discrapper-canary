@@ -17,13 +17,13 @@ var i = n(913527),
     E = n(131951),
     I = n(292959),
     C = n(699516),
-    v = n(944486),
-    N = n(9156),
+    N = n(944486),
+    v = n(9156),
     T = n(594174),
     S = n(51144),
     Z = n(196051),
-    x = n(441729),
-    A = n(653477),
+    A = n(441729),
+    x = n(653477),
     b = n(981631),
     L = n(388032);
 let y = [],
@@ -109,27 +109,27 @@ function V(e) {
     if (c || E.Z.isSelfDeaf()) return !1;
     let d = g.Z.getChannel(s);
     if (null == d) return !1;
-    let u = v.Z.getChannelId(),
+    let u = N.Z.getChannelId(),
         f = p.ZP.getCurrentSidebarChannelId(u),
         T = s === u || s === f,
         Z = h.OW.getSetting() && o.tts && T,
-        x = I.Z.getTTSType(),
-        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (x === b.PrB.ALL_CHANNELS || (x === b.PrB.SELECTED_CHANNEL && T));
+        A = I.Z.getTTSType(),
+        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (A === b.PrB.ALL_CHANNELS || (A === b.PrB.SELECTED_CHANNEL && T));
     if ((Z || L) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
         if (y.indexOf(o.id) >= 0) return !1;
         y.unshift(o.id) > 10 && y.pop();
         let e = d.getGuildId();
-        if (null != e && N.ZP.getMutedChannels(e).has(s)) return !1;
+        if (null != e && v.ZP.getMutedChannels(e).has(s)) return !1;
         let t = null !== (r = null !== (l = _.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : S.ZP.getName(o.author)) && void 0 !== r ? r : '',
             c = o.type === b.uaV.REPLY ? (null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author) : null,
             u = null != c ? (null !== (a = _.ZP.getNick(e, null == c ? void 0 : c.id)) && void 0 !== a ? a : S.ZP.getName(c)) : null;
-        k(D(o.content, t, e, u), !1, d.id, o.id, A.f);
+        k(D(o.content, t, e, u), !1, d.id, o.id, x.f);
     }
     return !1;
 }
 function H(e) {
     let { id: t, channelId: n } = e,
-        i = x.Z.currentMessage;
+        i = A.Z.currentMessage;
     return null != i && t === i.messageId && n === i.channelId && ((0, Z.NB)(), !0);
 }
 function F() {

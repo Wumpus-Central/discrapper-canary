@@ -10,10 +10,10 @@ var s = n(392711),
     d = n(906732),
     u = n(687058),
     m = n(253052),
-    h = n(463395),
-    g = n(131951),
-    _ = n(210887),
-    x = n(962100),
+    g = n(463395),
+    h = n(131951),
+    x = n(210887),
+    _ = n(962100),
     p = n(65154),
     E = n(388032),
     C = n(43824),
@@ -21,17 +21,17 @@ var s = n(392711),
 function T() {
     let e, t;
     let { analyticsLocations: s } = (0, d.ZP)(),
-        T = (0, l.e7)([_.Z], () => _.Z.theme),
+        T = (0, l.e7)([x.Z], () => x.Z.theme),
         {
             canSetInputDevice: N,
-            canSetOutputDevice: S,
-            inputDeviceId: I,
+            canSetOutputDevice: I,
+            inputDeviceId: S,
             outputDeviceId: b
-        } = (0, l.cj)([g.Z], () => ({
-            canSetInputDevice: g.Z.supports(p.AN.AUDIO_INPUT_DEVICE),
-            canSetOutputDevice: g.Z.supports(p.AN.AUDIO_OUTPUT_DEVICE),
-            inputDeviceId: g.Z.getInputDeviceId(),
-            outputDeviceId: g.Z.getOutputDeviceId()
+        } = (0, l.cj)([h.Z], () => ({
+            canSetInputDevice: h.Z.supports(p.AN.AUDIO_INPUT_DEVICE),
+            canSetOutputDevice: h.Z.supports(p.AN.AUDIO_OUTPUT_DEVICE),
+            inputDeviceId: h.Z.getInputDeviceId(),
+            outputDeviceId: h.Z.getOutputDeviceId()
         })),
         v = (0, u.Z)(),
         j = (0, m.Z)();
@@ -39,13 +39,13 @@ function T() {
         (e = (0, i.jsx)(o.R94, {
             type: o.R94.Types.DESCRIPTION,
             className: f.marginTop8,
-            children: E.intl.format(E.t['1iK6UV'], { onDownloadClick: () => (0, x.y)('Help Text Input Devices') })
+            children: E.intl.format(E.t['1iK6UV'], { onDownloadClick: () => (0, _.y)('Help Text Input Devices') })
         })),
-        S ||
+        I ||
             (t = (0, i.jsx)(o.R94, {
                 type: o.R94.Types.DESCRIPTION,
                 className: f.marginTop8,
-                children: E.intl.format(E.t.Ow0dbG, { onDownloadClick: () => (0, x.y)('Help Text Output Devices') })
+                children: E.intl.format(E.t.Ow0dbG, { onDownloadClick: () => (0, _.y)('Help Text Output Devices') })
             }));
     let A = r()(v).values().first(),
         O = null != A ? A.disabled : null != e,
@@ -54,7 +54,7 @@ function T() {
     function D(e) {
         let t,
             { label: s, value: r } = e;
-        if (h.Z.isCertified(r)) {
+        if (g.Z.isCertified(r)) {
             let e = (0, a.ap)(T) ? n(561259) : n(887695);
             t = (0, i.jsx)('img', {
                 src: e,
@@ -69,7 +69,7 @@ function T() {
                 children: [
                     (0, i.jsx)('span', {
                         className: C.deviceOptionLabel,
-                        children: h.Z.getCertifiedDeviceName(r, s)
+                        children: g.Z.getCertifiedDeviceName(r, s)
                     }),
                     t
                 ]
@@ -89,7 +89,7 @@ function T() {
                     title: E.intl.string(E.t.hHMYbW),
                     children: [
                         (0, i.jsx)(o.q4e, {
-                            value: I,
+                            value: S,
                             onChange: (e) =>
                                 c.Z.setInputDevice(e, {
                                     location: 'Settings',

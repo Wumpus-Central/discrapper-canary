@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(131704),
     u = n(993413),
     m = n(981631),
-    h = n(388032),
-    g = n(341258);
-let _ = (0, c.hQ)(),
-    x = (0, d.kt)({
+    g = n(388032),
+    h = n(341258);
+let x = (0, c.hQ)(),
+    _ = (0, d.kt)({
         id: '1',
         type: m.d4z.DM
     }),
@@ -20,35 +20,35 @@ let _ = (0, c.hQ)(),
 function E(e) {
     let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: E, currentBio: C, disabled: f = !1 } = e,
         [T, N] = s.useState(null != d ? d : C),
-        [S, I] = s.useState((0, a.JM)(T)),
+        [I, S] = s.useState((0, a.JM)(T)),
         b = s.useRef(!1);
     return (
         s.useEffect(() => {
             if (void 0 === d) {
                 let e = (0, a.JM)(C);
-                N(C), I(e);
+                N(C), S(e);
             }
         }, [d, C]),
         (0, i.jsxs)(u.Z, {
             title: t,
-            titleId: _,
-            description: h.intl.string(h.t.Bbw6AQ),
+            titleId: x,
+            description: g.intl.string(g.t.Bbw6AQ),
             errors: n,
             disabled: f,
             children: [
                 (0, i.jsx)(o.Z, {
                     'aria-describedby': p,
-                    'aria-labelledby': _,
-                    className: g.bioTextAreaContainer,
-                    innerClassName: g.bioTextArea,
+                    'aria-labelledby': x,
+                    className: h.bioTextAreaContainer,
+                    innerClassName: h.bioTextArea,
                     maxCharacterCount: m.tPV,
                     onChange: function (e, t, n) {
-                        t !== T && (N(t), I(n), c(t));
+                        t !== T && (N(t), S(n), c(t));
                     },
                     placeholder: E,
-                    channel: x,
+                    channel: _,
                     textValue: T,
-                    richValue: S,
+                    richValue: I,
                     type: l.Ie.PROFILE_BIO_INPUT,
                     onBlur: () => {
                         b.current = !1;
@@ -68,7 +68,7 @@ function E(e) {
                 }),
                 (0, i.jsx)(r.nn4, {
                     id: p,
-                    children: h.intl.format(h.t['+DFxLS'], { maxLength: m.tPV })
+                    children: g.intl.format(g.t['+DFxLS'], { maxLength: m.tPV })
                 })
             ]
         })

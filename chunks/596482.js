@@ -1,4 +1,4 @@
-l.d(t, { Z: () => p });
+l.d(t, { Z: () => b });
 var n = l(200651),
     a = l(192379),
     i = l(722770),
@@ -6,8 +6,8 @@ var n = l(200651),
     s = l(100527),
     r = l(666657),
     c = l(533244),
-    C = l(664452),
-    d = l(226192),
+    d = l(664452),
+    C = l(226192),
     u = l(223606),
     m = l(388032),
     h = l(210054);
@@ -97,7 +97,7 @@ function g(e) {
         ]
     });
 }
-function H(e) {
+function p(e) {
     let { onHandleEnableLockdown: t, incidentData: l, guildName: a } = e;
     return (0, n.jsxs)('div', {
         className: h.subheaderContainer,
@@ -151,7 +151,7 @@ function H(e) {
         ]
     });
 }
-function b(e) {
+function _(e) {
     let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: l, incidentData: a, guildName: s } = e;
     return (0, n.jsxs)('div', {
         className: h.subheaderContainer,
@@ -219,7 +219,7 @@ function b(e) {
         ]
     });
 }
-function p(e) {
+function b(e) {
     let { guild: t, incidentData: l, isUnderLockdown: i, isRaidDetected: m } = e,
         h = a.useCallback(() => {
             (0, o.ZDy)(async () => {
@@ -229,7 +229,7 @@ function p(e) {
                     alertType: (0, c.T1)(l)
                 };
                 return (l) =>
-                    (0, n.jsx)(C.default, {
+                    (0, n.jsx)(d.default, {
                         ...l,
                         guildId: t.id,
                         analyticsData: e
@@ -238,9 +238,9 @@ function p(e) {
         }, [t.id, l]),
         x = a.useCallback(() => {
             let e = u.Z.getLastIncidentAlertMessage(t.id);
-            (0, d.kW)(e, t.id);
+            (0, C.kW)(e, t.id);
         }, [t.id]),
-        p = (() => {
+        b = (() => {
             switch (!0) {
                 case m && i:
                     return 3;
@@ -253,7 +253,7 @@ function p(e) {
             }
         })();
     if (null == t || null == l) return null;
-    switch (p) {
+    switch (b) {
         case 1:
             return (0, n.jsx)(g, {
                 onHandleEnableLockdown: h,
@@ -261,13 +261,13 @@ function p(e) {
                 incidentData: l
             });
         case 2:
-            return (0, n.jsx)(H, {
+            return (0, n.jsx)(p, {
                 onHandleEnableLockdown: h,
                 incidentData: l,
                 guildName: t.name
             });
         case 3:
-            return (0, n.jsx)(b, {
+            return (0, n.jsx)(_, {
                 onHandleEnableLockdown: h,
                 onHandleReportFalseAlarm: x,
                 incidentData: l,

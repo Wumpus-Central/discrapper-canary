@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(906732),
     u = n(335131),
     m = n(597688),
-    h = n(1870),
-    g = n(884697),
-    _ = n(175756),
-    x = n(104494),
+    g = n(1870),
+    h = n(884697),
+    x = n(175756),
+    _ = n(104494),
     p = n(639119),
     E = n(211712),
     C = n(629654),
     f = n(53691),
     T = n(165583),
     N = n(267717),
-    S = n(350327),
-    I = n(996073),
+    I = n(350327),
+    S = n(996073),
     b = n(25990),
     v = n(626135),
     j = n(74538),
@@ -59,16 +59,16 @@ function U(e) {
                 errors: t
             };
         }),
-        Q = (0, _.Z)(X),
+        Q = (0, x.Z)(X),
         $ = s.useRef(null);
-    (0, I.Z)($, M.Y_.TRY_IT_OUT);
+    (0, S.Z)($, M.Y_.TRY_IT_OUT);
     let { analyticsLocations: ee, sourceAnalyticsLocations: et } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
         [en, ei] = s.useState(Math.floor(Math.random() * E.J2.length)),
         es = (e) => {
             if (e) {
-                if (((0, a.I5)(K), (0, S.z5)(W), (0, S.ho)(q), null != J)) {
+                if (((0, a.I5)(K), (0, I.z5)(W), (0, I.ho)(q), null != J)) {
                     let e = m.Z.getProduct(J.skuId);
-                    null != e && (0, g.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(J)) : null != h.Z.getPurchase(J.skuId) && (0, a.cV)(J);
+                    null != e && (0, h.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(J)) : null != g.Z.getPurchase(J.skuId) && (0, a.cV)(J);
                 }
                 v.default.track(L.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: E.J2[en].presetName });
             }
@@ -82,8 +82,8 @@ function U(e) {
             });
     }, [et, U, G]);
     let er = (null === (n = (0, p.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === B.Si.TIER_2,
-        el = (0, x.Ng)(),
-        ea = (0, x.Wp)(el, B.Si.TIER_2),
+        el = (0, _.Ng)(),
+        ea = (0, _.Wp)(el, B.Si.TIER_2),
         eo = 'TryOutPremiumSection';
     return ((0, o.j)({
         location: eo + ' auto on',
@@ -145,7 +145,7 @@ function U(e) {
                                       user: U,
                                       pendingAvatar: null != K ? K : z,
                                       pendingColors: null != W ? W : Y,
-                                      onThemeColorsChange: S.rf,
+                                      onThemeColorsChange: I.rf,
                                       showPremiumIcon: !1,
                                       preventDisabled: !0
                                   }),
@@ -153,13 +153,13 @@ function U(e) {
                                       className: V.customizationSection,
                                       isTryItOutFlow: !0,
                                       showRemoveBannerButton: null != q,
-                                      onBannerChange: S.f4,
+                                      onBannerChange: I.f4,
                                       showPremiumIcon: !1
                                   }),
                                   (0, i.jsx)(R.Z, {
                                       className: V.customizationSection,
                                       isTryItOutFlow: !0,
-                                      onAvatarChange: S.c_,
+                                      onAvatarChange: I.c_,
                                       showRemoveAvatarButton: !1,
                                       changeAvatarButtonText: w.intl.string(w.t['7z0D1d']),
                                       sectionTitle: w.intl.string(w.t.vtFfPT)

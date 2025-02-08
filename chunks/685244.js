@@ -6,8 +6,8 @@ var n = l(200651),
     s = l(642128),
     r = l(748780),
     c = l(692547),
-    C = l(481060),
-    d = l(110924);
+    d = l(481060),
+    C = l(110924);
 let u = {
         duration: 100,
         easing: r.Z.Easing.inOut(r.Z.Easing.back()),
@@ -20,32 +20,32 @@ let u = {
     };
 function h(e) {
     let { value: t, children: l, equalityFn: i = o(), style: r, ...h } = e,
-        x = (0, d.Z)(t),
-        [{ spring: g }, H] = (0, C.q_F)(() => ({ spring: 0 }), 'animate-always'),
-        b = (0, C.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
-        p = (0, C.dQu)(c.Z.colors.CONTROL_BRAND_FOREGROUND).hex(),
-        _ = a.useCallback(() => {
-            H({
+        x = (0, C.Z)(t),
+        [{ spring: g }, p] = (0, d.q_F)(() => ({ spring: 0 }), 'animate-always'),
+        _ = (0, d.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
+        b = (0, d.dQu)(c.Z.colors.CONTROL_BRAND_FOREGROUND).hex(),
+        f = a.useCallback(() => {
+            p({
                 spring: 1,
                 config: u
             }),
-                H({
+                p({
                     spring: 0,
                     config: m,
                     delay: 300
                 });
-        }, [H]);
+        }, [p]);
     a.useEffect(() => {
-        !(null == t || null == x || i(t, x)) && _();
-    }, [_, t, x, i]);
+        !(null == t || null == x || i(t, x)) && f();
+    }, [f, t, x, i]);
     let j =
             null == g
                 ? void 0
                 : g.to({
                       range: [0, 1],
-                      output: [''.concat(b, '00'), ''.concat(p, '27')]
+                      output: [''.concat(_, '00'), ''.concat(b, '27')]
                   }),
-        f =
+        H =
             null != r
                 ? {
                       ...r,
@@ -54,7 +54,7 @@ function h(e) {
                 : { backgroundColor: j };
     return (0, n.jsx)(s.animated.tr, {
         ...h,
-        style: f,
+        style: H,
         children: l
     });
 }

@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(430824),
     h = n(823379),
     p = n(179809),
-    m = n(652376),
-    g = n(981631);
+    g = n(652376),
+    m = n(981631);
 let f = l.memo(function (e) {
     let { folderNode: t, ...f } = e,
         { id: _, name: v, color: C, children: x } = t,
@@ -26,12 +26,12 @@ let f = l.memo(function (e) {
                         return null != n ? n.name : null;
                     })
                     .filter(h.lm),
-                n = 2 * g.dYL,
+                n = 2 * m.dYL,
                 i = [];
             for (let e of t) (e.length < n || 0 === i.length) && (i.push(e), (n -= e.length));
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
         })(t),
-        N = (0, m.Z)(t),
+        N = (0, g.Z)(t),
         {
             mentionCount: E,
             isMentionLowImportance: j,
@@ -41,10 +41,10 @@ let f = l.memo(function (e) {
             isMentionLowImportance: Z.every((e) => d.default.getIsMentionLowImportance(e)),
             unread: Z.some((e) => d.default.hasUnread(e))
         })),
-        A = l.useCallback(() => {
+        P = l.useCallback(() => {
             o.Z.toggleGuildFolderExpand(_);
         }, [_]),
-        P = l.useCallback(
+        T = l.useCallback(
             (e) => {
                 (0, a.jW)(e, async () => {
                     let { default: e } = await n.e('52590').then(n.bind(n, 205784));
@@ -70,7 +70,7 @@ let f = l.memo(function (e) {
         unread: y,
         mediaState: N,
         defaultFolderName: S,
-        onExpandCollapse: A,
-        onContextMenu: P
+        onExpandCollapse: P,
+        onContextMenu: T
     });
 });

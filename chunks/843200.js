@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
 var s = n(120356),
@@ -10,13 +10,13 @@ var s = n(120356),
     d = n(600164),
     u = n(594174),
     m = n(418632),
-    h = n(388032),
-    g = n(167836);
-function _(e) {
+    g = n(388032),
+    h = n(167836);
+function x(e) {
     let { unclaimedNotice: t, unverifiedNotice: s, className: l } = e,
         {
-            isClaimed: _,
-            isVerified: x,
+            isClaimed: x,
+            isVerified: _,
             hasEmail: p
         } = (0, o.cj)([u.default], () => {
             let e = u.default.getCurrentUser();
@@ -35,15 +35,15 @@ function _(e) {
             return (t) => (0, i.jsx)(e, { ...t });
         });
     }
-    return _ && x
+    return x && _
         ? null
         : (0, i.jsx)(c.Zbd, {
-              className: r()(g.wrapper, l),
+              className: r()(h.wrapper, l),
               children: (0, i.jsxs)(d.Z, {
                   align: d.Z.Align.CENTER,
                   children: [
                       (0, i.jsx)(d.Z.Child, {
-                          className: g.image,
+                          className: h.image,
                           grow: 0,
                           shrink: 0
                       }),
@@ -51,13 +51,13 @@ function _(e) {
                           children: [
                               (0, i.jsx)(c.Text, {
                                   variant: 'text-sm/normal',
-                                  children: _ ? (null != s ? s : h.intl.string(h.t.WuyBbG)) : null != t ? t : h.intl.string(h.t['f+Zaoq'])
+                                  children: x ? (null != s ? s : g.intl.string(g.t.WuyBbG)) : null != t ? t : g.intl.string(g.t['f+Zaoq'])
                               }),
                               (0, i.jsxs)(d.Z, {
                                   justify: d.Z.Justify.CENTER,
-                                  className: g.content,
+                                  className: h.content,
                                   children: [
-                                      _
+                                      x
                                           ? p
                                               ? (0, i.jsx)(d.Z.Child, {
                                                     grow: 0,
@@ -68,7 +68,7 @@ function _(e) {
                                                     size: c.zxk.Sizes.MEDIUM,
                                                     color: c.zxk.Colors.BRAND,
                                                     onClick: E,
-                                                    children: h.intl.string(h.t.ydw5nZ)
+                                                    children: g.intl.string(g.t.ydw5nZ)
                                                 })
                                           : (0, i.jsx)(d.Z.Child, {
                                                 grow: 0,
@@ -82,10 +82,10 @@ function _(e) {
                                                             return (t) => (0, i.jsx)(e, { ...t });
                                                         });
                                                     },
-                                                    children: h.intl.string(h.t.fiNVio)
+                                                    children: g.intl.string(g.t.fiNVio)
                                                 })
                                             }),
-                                      _ && p
+                                      x && p
                                           ? (0, i.jsx)(d.Z.Child, {
                                                 grow: 0,
                                                 shrink: 0,
@@ -93,7 +93,7 @@ function _(e) {
                                                     color: c.zxk.Colors.PRIMARY,
                                                     look: c.zxk.Looks.LINK,
                                                     onClick: E,
-                                                    children: h.intl.string(h.t.Vm8akJ)
+                                                    children: g.intl.string(g.t.Vm8akJ)
                                                 })
                                             })
                                           : null

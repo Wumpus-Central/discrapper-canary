@@ -17,23 +17,23 @@ var i = n(200651),
     E = n(626135),
     I = n(70956),
     C = n(225559),
-    v = n(910436),
-    N = n(203028),
+    N = n(910436),
+    v = n(203028),
     T = n(358924),
     S = n(292140),
     Z = n(525296),
-    x = n(981631),
-    A = n(674563),
+    A = n(981631),
+    x = n(674563),
     b = n(388032),
     L = n(721925);
 let y = 15 * I.Z.Millis.MINUTE,
     P = (0, Z.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: r, quest: a } = e,
-            s = (0, i.jsx)(N.Z, {
+            s = (0, i.jsx)(v.Z, {
                 party: t,
                 onUserContextMenu: n
             }),
-            c = (0, i.jsx)(v.Z, {
+            c = (0, i.jsx)(N.Z, {
                 party: t,
                 onChannelContextMenu: r,
                 quest: a
@@ -47,10 +47,10 @@ let y = 15 * I.Z.Millis.MINUTE,
                 let e = m
                     .filter((e) => {
                         var t, n;
-                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === A.wW.GAME;
+                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === x.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                E.default.track(x.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(A.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: _,
                     num_activities: f,

@@ -1,11 +1,11 @@
 n.d(t, {
-    Z: () => r,
+    Z: () => l,
     q: () => i
 });
 var a = n(570140),
-    l = n(91311);
-function r(e, t) {
-    let n = 'boolean' == typeof t ? t : !l.Z.get(e);
+    r = n(91311);
+function l(e, t) {
+    let n = 'boolean' == typeof t ? t : !r.Z.get(e);
     a.Z.dispatch({
         type: 'DEV_TOOLS_DESIGN_TOGGLE_WEB_SET',
         toggle: e,
@@ -13,5 +13,5 @@ function r(e, t) {
     });
 }
 function i() {
-    for (let e in l.Z.all()) r(e, !1);
+    for (let e in r.Z.all()) l(e, !1);
 }

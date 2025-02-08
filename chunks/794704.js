@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(593472),
     T = n(493773),
     N = n(887278),
-    S = n(835473),
-    I = n(442550),
+    I = n(835473),
+    S = n(442550),
     b = n(594190),
     v = n(320724),
     j = n(297700),
@@ -215,14 +215,14 @@ function en(e) {
         u = (0, g.e7)([b.ZP, k.Z, L.Z], () => (null == r ? null : (0, b.FZ)(r, [b.ZP, k.Z, L.Z])), [r], o()),
         [m, _] = s.useState(d),
         [p, E] = s.useState(c),
-        [I, v] = s.useState(!1);
+        [S, v] = s.useState(!1);
     s.useEffect(() => {
         _(d), E(c);
     }, [d, c]);
     let A = (0, N.$1)(),
         R = !(0, H.VS)(),
         { legacyEnabled: P, oopEnabled: D } = (0, g.cj)([O.Z], () => O.Z.getGlobalEnabledStatus()),
-        [y] = (0, S.Z)([null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : void 0]),
+        [y] = (0, I.Z)([null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : void 0]),
         Z = (e, t, n) => {
             et(n), null != r && (x.Z.toggleOverlay(r, e, t), _(t), E(e));
         },
@@ -321,7 +321,7 @@ function en(e) {
         ? null
         : (0, i.jsxs)($, {
               onExpand: v,
-              className: I ? K.expandedContainer : void 0,
+              className: S ? K.expandedContainer : void 0,
               title: (0, i.jsxs)(i.Fragment, {
                   children: [
                       null !== (n = null == y ? void 0 : y.name) && void 0 !== n ? n : '',
@@ -410,9 +410,9 @@ function en(e) {
 function ei(e) {
     var t, n;
     let { game: s } = e,
-        [r] = (0, S.Z)([null == s ? void 0 : s.id], !0),
+        [r] = (0, I.Z)([null == s ? void 0 : s.id], !0),
         l = null !== (t = null == r ? void 0 : r.getIconURL(32)) && void 0 !== t ? t : void 0;
-    return (0, i.jsx)(I.f, {
+    return (0, i.jsx)(S.f, {
         src: l,
         size: 32,
         showTooltip: !1,

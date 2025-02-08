@@ -1,17 +1,17 @@
 n.d(t, { Z: () => g });
 var i,
     r,
-    l,
-    a = n(973361),
+    a,
+    l = n(973361),
     o = n(442837),
     s = n(570140),
     c = n(358085),
     d = n(723359);
 let u = null,
     h = 'underage';
-class _ extends (l = o.ZP.Store) {
+class _ extends (a = o.ZP.Store) {
     isUnderageAnonymous() {
-        return c.isPlatformEmbedded ? !!(null != u && u + d.k0 > Date.now()) : null != a.parse(document.cookie)[h];
+        return c.isPlatformEmbedded ? !!(null != u && u + d.k0 > Date.now()) : null != l.parse(document.cookie)[h];
     }
 }
 (r = 'AgeGateStore'),

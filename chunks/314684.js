@@ -21,18 +21,18 @@ var i = n(192379),
     d = n(335131),
     u = n(1870),
     m = n(228624),
-    h = n(605236),
-    g = n(706140),
-    _ = n(243778),
-    x = n(594174),
+    g = n(605236),
+    h = n(706140),
+    x = n(243778),
+    _ = n(594174),
     p = n(314884),
     E = n(580130),
     C = n(626135),
     f = n(823379),
     T = n(111361),
     N = n(595878),
-    S = n(944880),
-    I = n(513785),
+    I = n(944880),
+    S = n(513785),
     b = n(106255),
     v = n(474936),
     j = n(735825),
@@ -41,18 +41,18 @@ function O() {
     var e, t;
     let n = (function () {
             var e, t;
-            let n = (0, l.cj)([I.Z], () => I.Z.getState());
+            let n = (0, l.cj)([S.Z], () => S.Z.getState());
             if (null != n) return null !== (t = null !== (e = n.userTenureRewardStatusByRewardId[j.Ft.FREE_AVATAR_DECO_1_MONTH]) && void 0 !== e ? e : n.userTenureRewardStatusByRewardId[j.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== t ? t : n.userTenureRewardStatusByRewardId[j.Ft.FREE_GUILD_BOOST_3_MONTHS];
         })(),
         s = y(),
         a = D([j.Ft.FREE_AVATAR_DECO_1_MONTH]),
-        o = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
+        o = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
         c = (0, l.e7)([p.Z], () => p.Z.boostSlots),
         d = i.useMemo(() => Object.values(c).some((e) => null == e.premiumGuildSubscription), [c]),
         u = null != s,
         m = u && !1 === d,
-        h = null != a,
-        g = (function () {
+        g = null != a,
+        h = (function () {
             let e = (0, l.e7)(
                 [E.Z],
                 () => {
@@ -64,7 +64,7 @@ function O() {
             );
             return (0, b.Cl)(j.qY, e);
         })(),
-        _ = h && null != g && (0, b.C3)(g.skuId, o),
+        x = g && null != h && (0, b.C3)(h.skuId, o),
         C = null !== (t = null !== (e = null == n ? void 0 : n.next_tenure_reward_id) && void 0 !== e ? e : null == a ? void 0 : a.skuId) && void 0 !== t ? t : null == s ? void 0 : s.skuId;
     return i.useMemo(() => {
         let e = {
@@ -88,7 +88,7 @@ function O() {
                 showNotification: !0,
                 showCard: !0
             };
-        if (_)
+        if (x)
             return {
                 ...e,
                 nitroTenureStatus: j.EB.REDEEMED,
@@ -97,7 +97,7 @@ function O() {
                 showCard: !0
             };
         {
-            if (h)
+            if (g)
                 return {
                     ...e,
                     nitroTenureStatus: j.EB.REDEEMABLE,
@@ -123,7 +123,7 @@ function O() {
                 }
             );
         }
-    }, [u, s, n, m, h, _, a, C]);
+    }, [u, s, n, m, g, x, a, C]);
 }
 function R(e) {
     let { showAnimations: t } = e,
@@ -150,8 +150,8 @@ function D(e) {
             [],
             f.OL
         ),
-        n = (0, l.e7)([x.default], () => {
-            let e = x.default.getCurrentUser();
+        n = (0, l.e7)([_.default], () => {
+            let e = _.default.getCurrentUser();
             return null != e && (0, T.M5)(e, v.p9.TIER_2);
         });
     if (null != (0, b.kG)(t) || n) return (0, b.MR)(e, t);
@@ -177,26 +177,26 @@ let Z = (e) => {
         i.useEffect(() => {
             !1 !== s && n(Z(e));
         }, [e, s]);
-        let [r] = (0, _.US)(s ? t : []);
+        let [r] = (0, x.US)(s ? t : []);
         return s && null != e && !0 === e.showNotification && (r === a.z.TENURE_REWARD_REDEEMABLE || r === a.z.TENURE_REWARD_PENDING) ? (0, b.Wb)(e.nitroTenureStatus) : null;
     },
     L = () => {
         var e;
         let t = null === (e = O()) || void 0 === e ? void 0 : e.nitroTenureStatus,
             n = (0, N.cG)({ location: 'Home' }) && null != t && t === j.EB.REDEEMABLE,
-            [i] = (0, _.US)(n ? [a.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
+            [i] = (0, x.US)(n ? [a.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
         return !!n && i === a.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
     },
     B = () => {
         let e = O(),
             t = i.useMemo(() => Z(e), [e]),
-            [n] = (0, g.cv)(t),
+            [n] = (0, h.cv)(t),
             s = i.useRef(!1);
         return i.useCallback(() => {
             null != e &&
                 !0 === e.showNotification &&
                 (n === a.z.TENURE_REWARD_REDEEMABLE || n === a.z.TENURE_REWARD_PENDING) &&
-                ((0, h.EW)(n),
+                ((0, g.EW)(n),
                 n === a.z.TENURE_REWARD_PENDING &&
                     !1 === s.current &&
                     (C.default.track(A.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
@@ -212,8 +212,8 @@ function M() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.CL,
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = (0, l.e7)([E.Z], () => E.Z.isFetchingForApplication(e)),
-        s = (0, l.e7)([x.default], () => {
-            let e = x.default.getCurrentUser();
+        s = (0, l.e7)([_.default], () => {
+            let e = _.default.getCurrentUser();
             return null != e && (0, T.M5)(e, v.p9.TIER_2);
         }),
         r = i.useRef(!1);
@@ -228,7 +228,7 @@ function w() {
     let n = O(),
         s = null !== (e = null == n ? void 0 : n.showCard) && void 0 !== e && e;
     i.useEffect(() => {
-        s && S.Z.forceRefreshIfOutdated();
+        s && I.Z.forceRefreshIfOutdated();
     }, [s]);
 }
 function V(e) {

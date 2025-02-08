@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(239091),
     h = n(111028),
     p = n(540059),
-    m = n(569471),
-    g = n(488131),
+    g = n(569471),
+    m = n(488131),
     f = n(592125),
     _ = n(306680),
     v = n(979651),
@@ -25,11 +25,11 @@ var i = n(200651),
     E = n(388032),
     j = n(831746),
     y = n(193877),
-    A = n(329986);
-function P(e) {
+    P = n(329986);
+function T(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
         r = {
-            className: a()(A.spine, { [A.spineWithGuildIcon]: n }, { [A.invertedSpine]: l }),
+            className: a()(P.spine, { [P.spineWithGuildIcon]: n }, { [P.invertedSpine]: l }),
             style: t
         },
         { density: o } = (0, c.TCT)();
@@ -71,10 +71,10 @@ function P(e) {
               ]
           });
 }
-function T(e) {
+function A(e) {
     let { style: t, withGuildIcon: n } = e;
     return (0, i.jsx)('svg', {
-        className: a()(A.spine, { [A.spineWithGuildIcon]: n }),
+        className: a()(P.spine, { [P.spineWithGuildIcon]: n }),
         width: '12',
         height: '11',
         viewBox: '0 0 12 11',
@@ -88,7 +88,7 @@ function T(e) {
     });
 }
 let w = l.memo(function (e) {
-    let { thread: t, isSelectedChannel: r, isSelectedVoice: A, isLast: w, withGuildIcon: R } = e,
+    let { thread: t, isSelectedChannel: r, isSelectedVoice: P, isLast: w, withGuildIcon: R } = e,
         L = (0, s.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]),
         M = (0, s.e7)([v.Z], () => v.Z.hasVideo(t.id)),
         {
@@ -100,10 +100,10 @@ let w = l.memo(function (e) {
             mentionCount: _.ZP.getMentionCount(t.id),
             isMentionLowImportance: _.ZP.getIsMentionLowImportance(t.id)
         })),
-        B = (0, s.e7)([m.Z], () => m.Z.isMuted(t.id)),
+        B = (0, s.e7)([g.Z], () => g.Z.isMuted(t.id)),
         O = l.useCallback(
             (e) => {
-                (0, g.ok)(t, !e.shiftKey, N.on.CHANNEL_LIST);
+                (0, m.ok)(t, !e.shiftKey, N.on.CHANNEL_LIST);
             },
             [t]
         ),
@@ -137,7 +137,7 @@ let w = l.memo(function (e) {
                 : D
                   ? E.intl.formatToPlainString(E.t.YlVvmZ, { channelName: t.name })
                   : E.intl.formatToPlainString(E.t['0nZpiI'], { channelName: t.name }),
-        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? P : T;
+        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? T : A;
     return (0, i.jsxs)('li', {
         role: H,
         className: a()(j.containerDefault, { [j.selected]: r }),
@@ -210,7 +210,7 @@ let w = l.memo(function (e) {
             }),
             (0, i.jsx)(b.Z, {
                 channel: t,
-                collapsed: !A,
+                collapsed: !P,
                 collapsedMax: 6,
                 voiceStates: L,
                 location: S.Sbl.GUILD_CHANNEL_LIST

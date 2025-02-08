@@ -1,6 +1,6 @@
 n.d(t, {
-    default: () => g,
-    y: () => h
+    default: () => h,
+    y: () => g
 });
 var i = n(200651);
 n(192379);
@@ -13,7 +13,7 @@ var s = n(481060),
     d = n(981631),
     u = n(388032),
     m = n(761346);
-function h(e) {
+function g(e) {
     let t = l.default.getCurrentUser();
     null != t &&
         (0, s.ZDy)(async () => {
@@ -31,7 +31,7 @@ function h(e) {
                 });
         });
 }
-function g(e) {
+function h(e) {
     let { user: t, onClose: n, ...s } = e;
     return (0, i.jsx)(o.Z, {
         modalClassName: m.modal,

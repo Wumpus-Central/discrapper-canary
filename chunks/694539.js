@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(53281),
     u = n(921813),
     m = n(594174),
-    h = n(572004),
-    g = n(451593),
-    _ = n(477146),
-    x = n(329156),
+    g = n(572004),
+    h = n(451593),
+    x = n(477146),
+    _ = n(329156),
     p = n(658234),
     E = n(346537),
     C = n(830318);
@@ -27,10 +27,10 @@ let f = (e) => {
     },
     T = (e) => {
         let { effect: t, back: n } = e,
-            { upsertConfig: r } = (0, g.E)(),
+            { upsertConfig: r } = (0, h.E)(),
             T = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
-            [N, S] = s.useState(!0),
-            I = s.useRef(null),
+            [N, I] = s.useState(!0),
+            S = s.useRef(null),
             [b, v] = s.useState(!1),
             [j, A] = s.useState(!1),
             [O, R] = s.useState(!1),
@@ -87,14 +87,14 @@ let f = (e) => {
                                           width: 450
                                       }),
                                       N &&
-                                          (0, i.jsx)(x.Z, {
+                                          (0, i.jsx)(_.Z, {
                                               config: {
                                                   type: a.Z.PROFILE_EFFECT,
                                                   title: 'debug',
                                                   description: 'debug',
                                                   accessibilityLabel: 'debug',
                                                   reducedMotionSrc: '',
-                                                  effects: O ? (0, _.Tp)(P) : P,
+                                                  effects: O ? (0, x.Tp)(P) : P,
                                                   animationType: 0
                                               },
                                               profileEffectId: 'debug'
@@ -188,7 +188,7 @@ let f = (e) => {
                                                           children: 'Upload Layer'
                                                       }),
                                                       (0, i.jsx)(d.Z, {
-                                                          ref: I,
+                                                          ref: S,
                                                           onChange: (e) => {
                                                               let t = e.currentTarget.files;
                                                               if (null == t) return;
@@ -196,7 +196,7 @@ let f = (e) => {
                                                                   i = new FileReader();
                                                               (i.onload = async (e) => {
                                                                   if (null == e.target || 'string' != typeof e.target.result) return;
-                                                                  let t = await (0, _.Xv)(URL.createObjectURL(n), e.target.result, n, P.length);
+                                                                  let t = await (0, x.Xv)(URL.createObjectURL(n), e.target.result, n, P.length);
                                                                   D((e) => [...e, t]);
                                                               }),
                                                                   i.readAsDataURL(n);
@@ -225,14 +225,14 @@ let f = (e) => {
                                               (0, i.jsx)(c.zxk, {
                                                   color: c.Ttl.BRAND,
                                                   onClick: () => {
-                                                      S(!1), setTimeout(() => S(!0), 100);
+                                                      I(!1), setTimeout(() => I(!0), 100);
                                                   },
                                                   children: 'Replay Animation'
                                               }),
                                               (0, i.jsx)(c.zxk, {
                                                   color: c.Ttl.BRAND,
                                                   onClick: () => {
-                                                      (0, h.JG)((0, _.HV)(P, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                      (0, g.JG)((0, x.HV)(P, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
                                                   },
                                                   children: 'Export'
                                               })
@@ -255,7 +255,7 @@ let f = (e) => {
                                               (0, i.jsx)(c.zxk, {
                                                   color: c.Ttl.GREEN,
                                                   onClick: () => {
-                                                      (0, h.JG)(JSON.stringify(t)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                      (0, g.JG)(JSON.stringify(t)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
                                                   },
                                                   children: 'Share'
                                               })
@@ -290,14 +290,14 @@ let f = (e) => {
                                                           canUsePremiumCustomization: !0,
                                                           isTryItOutFlow: !0
                                                       }),
-                                                      (0, i.jsx)(x.Z, {
+                                                      (0, i.jsx)(_.Z, {
                                                           config: {
                                                               type: a.Z.PROFILE_EFFECT,
                                                               title: 'debug',
                                                               description: 'debug',
                                                               accessibilityLabel: 'debug',
                                                               reducedMotionSrc: '',
-                                                              effects: O ? (0, _.Tp)(P) : P,
+                                                              effects: O ? (0, x.Tp)(P) : P,
                                                               animationType: 0
                                                           },
                                                           profileEffectId: 'debug'
@@ -449,7 +449,7 @@ let f = (e) => {
                                                                       children: 'Add Alternative'
                                                                   }),
                                                                   (0, i.jsx)(d.Z, {
-                                                                      ref: I,
+                                                                      ref: S,
                                                                       onChange: (e) => {
                                                                           let n = e.currentTarget.files;
                                                                           if (null == n) return;

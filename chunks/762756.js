@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => N }), n(47120);
 var i,
     l = n(200651),
     r = n(192379),
@@ -121,4 +121,4 @@ E(C, 'defaultProps', {
     onCaptchaVerify: p.dG4,
     onLogout: p.dG4
 });
-let v = C;
+let N = C;

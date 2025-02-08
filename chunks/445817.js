@@ -9,30 +9,30 @@ var i = n(200651),
     d = n(716161),
     u = n(672339),
     m = n(747545),
-    h = n(131951),
-    g = n(594174),
-    _ = n(981631),
-    x = n(388032),
+    g = n(131951),
+    h = n(594174),
+    x = n(981631),
+    _ = n(388032),
     p = n(31181);
 function E(e) {
     let { previewEnabled: t, onEnablePreview: n, onCancelPreview: E } = e,
-        C = h.Z.getCameraComponent(),
-        [f, T] = s.useState((0, c.P)(g.default.getCurrentUser())),
+        C = g.Z.getCameraComponent(),
+        [f, T] = s.useState((0, c.P)(h.default.getCurrentUser())),
         N = s.useRef(!1),
-        S = s.useRef(f),
-        I = (0, o.O)(),
-        b = (0, r.e7)([h.Z], () => h.Z.isVideoAvailable());
+        I = s.useRef(f),
+        S = (0, o.O)(),
+        b = (0, r.e7)([g.Z], () => g.Z.isVideoAvailable());
     return (
         s.useEffect(
             () => () => {
-                N.current && a.Z.wait(() => (0, d.Up)(S.current));
+                N.current && a.Z.wait(() => (0, d.Up)(I.current));
             },
             []
         ),
         (0, i.jsx)(m.Z, {
             selectedBackgroundOption: f,
             onSelectBackgroundOption: (e) => {
-                (N.current = !0), (S.current = e), T(e), (0, u.wG)(e, { location: I.location }).catch(_.dG4);
+                (N.current = !0), (I.current = e), T(e), (0, u.wG)(e, { location: S.location }).catch(x.dG4);
             },
             onCancelPreview: E,
             renderCamera: (e) =>
@@ -57,13 +57,13 @@ function E(e) {
                           children: [
                               (0, i.jsx)('div', { className: p.previewImage }),
                               (0, i.jsx)(l.ua7, {
-                                  text: b ? null : x.intl.string(x.t['8jSzSU']),
+                                  text: b ? null : _.intl.string(_.t['8jSzSU']),
                                   children: (e) =>
                                       (0, i.jsx)(l.zxk, {
                                           ...e,
                                           onClick: n,
                                           disabled: !b,
-                                          children: x.intl.string(x.t.JIf4v7)
+                                          children: _.intl.string(_.t.JIf4v7)
                                       })
                               })
                           ]

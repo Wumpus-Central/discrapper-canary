@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(733860);
+n.d(t, { Z: () => _ }), n(733860);
 var i = n(200651),
     s = n(192379),
     r = n(442837),
@@ -9,27 +9,27 @@ var i = n(200651),
     d = n(823379),
     u = n(997950),
     m = n(816108),
-    h = n(388032),
-    g = n(266759);
-let _ = {
-    label: () => h.intl.string(h.t['32u1Dw']),
+    g = n(388032),
+    h = n(266759);
+let x = {
+    label: () => g.intl.string(g.t['32u1Dw']),
     value: u.Th
 };
-function x() {
+function _() {
     let { selectedGuildId: e, setSelectedGuildId: t } = (0, u.xu)(),
         n = (0, r.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
-        h = (0, r.e7)([o.Z], () => o.Z.getGuilds()),
-        { hideGuildOptions: x, hideGlobalOption: p } = (0, m.b)(),
+        g = (0, r.e7)([o.Z], () => o.Z.getGuilds()),
+        { hideGuildOptions: _, hideGlobalOption: p } = (0, m.b)(),
         E = n[0];
     s.useEffect(() => {
-        (!p || !x) && (e === u.Th && e !== E && p && t(E), e !== u.Th && x && t(u.Th));
-    }, [e, t, p, x, E]);
+        (!p || !_) && (e === u.Th && e !== E && p && t(E), e !== u.Th && _ && t(u.Th));
+    }, [e, t, p, _, E]);
     let C = s.useMemo(() => {
-            let e = x
+            let e = _
                 ? []
                 : n
                       .map((e) => {
-                          let t = h[e];
+                          let t = g[e];
                           return null == t
                               ? null
                               : {
@@ -41,36 +41,36 @@ function x() {
             return (
                 p ||
                     e.unshift({
-                        ..._,
-                        label: _.label()
+                        ...x,
+                        label: x.label()
                     }),
                 e
             );
-        }, [x, n, p, h]),
+        }, [_, n, p, g]),
         f = s.useCallback(
             (e) => {
-                let t = (null == e ? void 0 : e.label) === _.label() && (null == e ? void 0 : e.value) === _.value;
+                let t = (null == e ? void 0 : e.label) === x.label() && (null == e ? void 0 : e.value) === x.value;
                 return null == e || '' === e.value || t
                     ? (0, i.jsx)('div', {
-                          className: g.clydeIconContainer,
+                          className: h.clydeIconContainer,
                           children: (0, i.jsx)(l.gw7, {
                               size: 'sm',
                               color: 'white',
                               'aria-hidden': !0,
-                              className: g.guildSelectOptionIcon
+                              className: h.guildSelectOptionIcon
                           })
                       })
                     : (0, i.jsx)(a.Z, {
-                          className: g.guildSelectOptionIcon,
-                          guild: h[e.value],
+                          className: h.guildSelectOptionIcon,
+                          guild: g[e.value],
                           size: a.Z.Sizes.SMALLER,
                           active: !0
                       });
             },
-            [h]
+            [g]
         );
     return (0, i.jsx)(l.VcW, {
-        wrapperClassName: g.searchableSelect,
+        wrapperClassName: h.searchableSelect,
         onChange: (e) => {
             t(e);
         },

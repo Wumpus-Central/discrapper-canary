@@ -1,6 +1,6 @@
 n.d(t, {
-    C: () => b,
-    h: () => g
+    C: () => C,
+    h: () => j
 }),
     n(47120),
     n(411104);
@@ -14,99 +14,99 @@ var a = n(200651),
     d = n(239091),
     u = n(598077),
     m = n(768581),
-    _ = n(693546),
-    x = n(246364),
-    f = n(388032),
-    h = n(372819);
-function p(e) {
+    x = n(693546),
+    h = n(246364),
+    _ = n(388032),
+    p = n(372819);
+function f(e) {
     let { icon: t, onClick: n, submitting: i, disabled: r } = e;
     return (0, a.jsx)(c.P3F, {
-        className: l()(h.actionIconContainer, { [h.disabled]: r || i }),
+        className: l()(p.actionIconContainer, { [p.disabled]: r || i }),
         onClick: n,
         children: i
             ? (0, a.jsx)(c.bbz, {
-                  className: h.icon,
+                  className: p.icon,
                   dotRadius: 2,
                   themed: !0
               })
             : (0, a.jsx)(t, {
-                  className: h.icon,
+                  className: p.icon,
                   size: 'xxs',
                   color: 'currentColor'
               })
     });
 }
-function b(e) {
-    let { applicationStatus: t, guild: r, guildJoinRequest: o, className: b, onClick: g, atMaxMemberCapacity: C } = e,
-        [v, j] = i.useState(null),
-        { user: I, createdAt: T } = o;
-    if (null == I) throw Error('Missing user on this guild join request!');
-    let R = i.useMemo(() => new u.Z(I), [I]),
-        E = m.ZP.getUserAvatarURL(R),
-        P = t === x.wB.SUBMITTED,
+function C(e) {
+    let { applicationStatus: t, guild: r, guildJoinRequest: o, className: C, onClick: j, atMaxMemberCapacity: v } = e,
+        [b, g] = i.useState(null),
+        { user: T, createdAt: I } = o;
+    if (null == T) throw Error('Missing user on this guild join request!');
+    let R = i.useMemo(() => new u.Z(T), [T]),
+        N = m.ZP.getUserAvatarURL(R),
+        E = t === h.wB.SUBMITTED,
         w = i.useCallback(
             async (e, t) => {
                 let { guildId: n, userId: a } = e;
-                if (null == v) {
-                    j(t);
+                if (null == b) {
+                    g(t);
                     try {
-                        await _.Z.updateGuildJoinRequest(n, a, o.joinRequestId, t);
+                        await x.Z.updateGuildJoinRequest(n, a, o.joinRequestId, t);
                     } catch (e) {
-                        (0, c.showToast)((0, c.createToast)(f.intl.string(f.t.R0RpRU), c.ToastType.FAILURE)), j(null);
+                        (0, c.showToast)((0, c.createToast)(_.intl.string(_.t.R0RpRU), c.ToastType.FAILURE)), g(null);
                     }
                 }
             },
-            [v, o.joinRequestId]
+            [b, o.joinRequestId]
         ),
-        N = async () => {
-            await w(o, x.wB.APPROVED);
+        B = async () => {
+            await w(o, h.wB.APPROVED);
         },
         S = async () => {
-            await w(o, x.wB.REJECTED);
+            await w(o, h.wB.REJECTED);
         };
     return (0, a.jsxs)(c.P3F, {
-        className: l()(h.container, b),
-        onClick: g,
+        className: l()(p.container, C),
+        onClick: j,
         children: [
             (0, a.jsx)(c.qEK, {
-                src: E,
+                src: N,
                 size: c.EFr.SIZE_40,
-                'aria-label': I.username,
-                className: h.__invalid_spacer
+                'aria-label': T.username,
+                className: p.__invalid_spacer
             }),
             (0, a.jsxs)('div', {
-                className: h.userDetails,
+                className: p.userDetails,
                 children: [
                     (0, a.jsx)(c.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: I.username
+                        children: T.username
                     }),
                     (0, a.jsx)(c.Text, {
-                        className: h.createdAt,
+                        className: p.createdAt,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: s()(T).format('lll')
+                        children: s()(I).format('lll')
                     })
                 ]
             }),
-            P &&
-                !C &&
-                (0, a.jsx)(p, {
+            E &&
+                !v &&
+                (0, a.jsx)(f, {
                     icon: c.dz2,
-                    onClick: N,
-                    submitting: v === x.wB.APPROVED,
-                    disabled: null != v && v !== x.wB.APPROVED
+                    onClick: B,
+                    submitting: b === h.wB.APPROVED,
+                    disabled: null != b && b !== h.wB.APPROVED
                 }),
-            P &&
-                (0, a.jsx)(p, {
+            E &&
+                (0, a.jsx)(f, {
                     icon: c.Dio,
                     onClick: S,
-                    submitting: v === x.wB.REJECTED,
-                    disabled: null != v && v !== x.wB.REJECTED
+                    submitting: b === h.wB.REJECTED,
+                    disabled: null != b && b !== h.wB.REJECTED
                 }),
             (0, a.jsx)(c.P3F, {
-                className: l()(h.overflowMenuContainer, { [h.disabled]: null != v }),
+                className: l()(p.overflowMenuContainer, { [p.disabled]: null != b }),
                 onClick: (e) => {
                     (0, d.jW)(
                         e,
@@ -128,29 +128,29 @@ function b(e) {
                 children: (0, a.jsx)(c.xhG, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: h.icon,
+                    className: p.icon,
                     width: 18
                 })
             })
         ]
     });
 }
-function g() {
+function j() {
     let e = ''.concat(Math.floor(50 * Math.random()) + 100, 'px'),
         t = ''.concat(Math.floor(25 * Math.random()) + 50, 'px');
     return (0, a.jsxs)('div', {
-        className: h.placeholder,
+        className: p.placeholder,
         children: [
-            (0, a.jsx)('div', { className: l()(h.placeholderAvatar) }),
+            (0, a.jsx)('div', { className: l()(p.placeholderAvatar) }),
             (0, a.jsxs)('div', {
-                className: h.userDetails,
+                className: p.userDetails,
                 children: [
                     (0, a.jsx)('div', {
-                        className: h.placeholderUsername,
+                        className: p.placeholderUsername,
                         style: { maxWidth: e }
                     }),
                     (0, a.jsx)('div', {
-                        className: h.placeholderCreatedAt,
+                        className: p.placeholderCreatedAt,
                         style: { maxWidth: t }
                     })
                 ]

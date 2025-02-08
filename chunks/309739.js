@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(524437),
     u = n(780384),
     m = n(481060),
-    h = n(457330),
-    g = n(410030),
-    _ = n(726542),
-    x = n(316496),
+    g = n(457330),
+    h = n(410030),
+    x = n(726542),
+    _ = n(316496),
     p = n(295377),
     E = n(921801),
     C = n(553795),
     f = n(430824),
     T = n(63063),
     N = n(358085),
-    S = n(709054),
-    I = n(362352),
+    I = n(709054),
+    S = n(362352),
     b = n(413182),
     v = n(695346),
     j = n(726985),
@@ -30,7 +30,7 @@ var i = n(200651),
     P = n(232186);
 function D(e) {
     let t = () => {
-        v.SE.updateSetting(e ? S.default.keys(f.Z.getGuilds()) : []);
+        v.SE.updateSetting(e ? I.default.keys(f.Z.getGuilds()) : []);
     };
     (0, m.h7j)((e) =>
         (0, i.jsx)(m.ConfirmModal, {
@@ -50,7 +50,7 @@ function D(e) {
 function y() {
     let e = v.G6.useSetting(),
         t = v.Wz.useSetting(),
-        n = (0, I.Yd)('activity privacy tab'),
+        n = (0, S.Yd)('activity privacy tab'),
         s = N.isPlatformEmbedded ? O.intl.string(O.t.MznbeH) : O.intl.string(O.t.oKqC4u),
         r = (e) => {
             v.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), D(e);
@@ -173,11 +173,11 @@ let L = (e) => {
 function B(e) {
     let { account: t } = e,
         [n, r] = s.useState(t.showActivity),
-        l = (0, g.ZP)();
+        l = (0, h.ZP)();
     s.useEffect(() => {
         r(t.showActivity);
     }, [t]);
-    let a = _.Z.get(t.type);
+    let a = x.Z.get(t.type);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.j7V, {
@@ -185,7 +185,7 @@ function B(e) {
                 hideBorder: !0,
                 value: n,
                 onChange: function (e) {
-                    r(e), h.Z.setShowActivity(t.type, t.id, e);
+                    r(e), g.Z.setShowActivity(t.type, t.id, e);
                 },
                 children: (0, i.jsxs)('div', {
                     className: R.activitySwitchRow,
@@ -217,11 +217,11 @@ function B(e) {
 }
 function M() {
     let e = (0, c.e7)([C.Z], () => C.Z.getAccounts()),
-        t = s.useMemo(() => e.filter((e) => _.Z.isSupported(e.type) && A.vbS.has(e.type)), [e]),
+        t = s.useMemo(() => e.filter((e) => x.Z.isSupported(e.type) && A.vbS.has(e.type)), [e]),
         [n, r] = s.useState(''),
         l = s.useMemo(() => {
             let e = n.trim().toLowerCase();
-            return '' === e ? t : t.filter((t) => o()(e, _.Z.get(t.type).name.toLowerCase()));
+            return '' === e ? t : t.filter((t) => o()(e, x.Z.get(t.type).name.toLowerCase()));
         }, [t, n]);
     return 0 === t.length
         ? null
@@ -249,7 +249,7 @@ function M() {
 function w(e) {
     let { className: t, showHeader: n = !0 } = e,
         { showRedesign: s } = b.b.useExperiment({ location: 'activity privacy tab' }),
-        { updatedSettingsPageEnabled: r } = (0, x.S)('UserSettingsActivityPrivacy');
+        { updatedSettingsPageEnabled: r } = (0, _.S)('UserSettingsActivityPrivacy');
     return r
         ? (0, i.jsx)(p.Z, {})
         : (0, i.jsxs)(m.hjN, {

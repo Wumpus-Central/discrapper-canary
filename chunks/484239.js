@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
 var s = n(120356),
@@ -10,25 +10,25 @@ var s = n(120356),
     d = n(735825),
     u = n(506829),
     m = n(721239),
-    h = n(557634),
-    g = n(992429);
-let _ = (e) => {
+    g = n(557634),
+    h = n(992429);
+let x = (e) => {
     var t;
     let n,
         s,
-        { title: _, titleClassName: x, buttonClassName: p, perkImage: E, isCarousel: C, onCtaClick: f, perkComponent: T, subtitle: N = '', descriptionCta: S = '', cardVariant: I, subtitleClassName: b, imageOverlayText: v } = e,
-        j = (0, o._)(I),
+        { title: x, titleClassName: _, buttonClassName: p, perkImage: E, isCarousel: C, onCtaClick: f, perkComponent: T, subtitle: N = '', descriptionCta: I = '', cardVariant: S, subtitleClassName: b, imageOverlayText: v } = e,
+        j = (0, o._)(S),
         A = (0, a.yQ)(),
         O = (null == A ? void 0 : A.nitroTenureStatus) === d.EB.REDEEMABLE;
     switch (null == A ? void 0 : A.nitroTenureStatus) {
         case d.EB.REDEEMABLE:
-            (n = g), (s = 'unlocked icon');
+            (n = h), (s = 'unlocked icon');
             break;
         case d.EB.PENDING:
             (n = m), (s = 'locked icon');
             break;
         case d.EB.REDEEMED:
-            (n = h), (s = 'thumbs up icon');
+            (n = g), (s = 'thumbs up icon');
             break;
         default:
             (n = void 0), (s = '');
@@ -38,10 +38,10 @@ let _ = (e) => {
         children: [
             (0, i.jsx)('div', { className: r()(u.cover, u.below) }),
             (0, i.jsx)(c.Z, {
-                title: _,
+                title: x,
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
                 cardVariantStyleInfo: j,
-                titleClassName: x,
+                titleClassName: _,
                 subtitle: N,
                 subtitleClassName: b
             }),
@@ -72,7 +72,7 @@ let _ = (e) => {
                         className: u.cardIllustrationNoHover,
                         children: [
                             T,
-                            0 !== S.length &&
+                            0 !== I.length &&
                                 null != f &&
                                 (0, i.jsx)(l.zxk, {
                                     className: p,
@@ -86,7 +86,7 @@ let _ = (e) => {
                                                 alt: s,
                                                 src: n
                                             }),
-                                            S
+                                            I
                                         ]
                                     })
                                 })

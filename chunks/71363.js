@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(607070),
     u = n(100527),
     m = n(906732),
-    h = n(975298),
-    g = n(410154),
-    _ = n(626135),
-    x = n(103433),
+    g = n(975298),
+    h = n(410154),
+    x = n(626135),
+    _ = n(103433),
     p = n(166021),
     E = n(32173),
     C = n(391110),
     f = n(75077),
     T = n(981631),
     N = n(388032),
-    S = n(368549),
-    I = n(865215);
+    I = n(368549),
+    S = n(865215);
 let b = (e) => {
     let t,
         n,
@@ -32,28 +32,28 @@ let b = (e) => {
         }, {}),
         { analyticsLocations: R } = (0, m.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [P, D] = s.useState(!1),
-        y = (0, g.ZP)('perks-discoverability'),
+        y = (0, h.ZP)('perks-discoverability'),
         Z = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         k = (0, f.mN)(),
-        { fractionalState: L } = (0, h.Z)();
+        { fractionalState: L } = (0, g.Z)();
     return (
         k ? ((t = N.intl.string(N.t['+vt7w8'])), (n = N.intl.string(N.t.LgHbnJ))) : ((t = N.intl.string(N.t.LgHbnJ)), (n = N.intl.string(N.t['+vt7w8']))),
         (0, i.jsx)(c.yWw, {
-            className: l()(S.allPerksScroller, {
-                [S.open]: r,
-                [S.openCloseReduceMotion]: Z
+            className: l()(I.allPerksScroller, {
+                [I.open]: r,
+                [I.openCloseReduceMotion]: Z
             }),
             ref: A,
             children: (0, i.jsx)('div', {
-                className: S.container,
+                className: I.container,
                 children: (0, i.jsxs)(m.Gt, {
                     value: R,
                     children: [
-                        (0, i.jsx)(x.Z, {
-                            className: S.heroHeading,
+                        (0, i.jsx)(_.Z, {
+                            className: I.heroHeading,
                             onBackClick: () => {
                                 b(!1),
-                                    _.default.track(T.rMx.NITRO_HOME_NAVIGATION, {
+                                    x.default.track(T.rMx.NITRO_HOME_NAVIGATION, {
                                         current_component: C.MQ.SEE_ALL,
                                         next_component: v,
                                         interaction_component: 'Back Button'
@@ -61,16 +61,16 @@ let b = (e) => {
                             }
                         }),
                         (0, i.jsxs)('div', {
-                            className: S.column,
+                            className: I.column,
                             children: [
                                 (0, i.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: S.heading,
+                                    className: I.heading,
                                     children: t
                                 }),
                                 (0, i.jsx)(p.Z, {
-                                    className: S.cardCarousel,
+                                    className: I.cardCarousel,
                                     cards: (0, f.sP)({
                                         perksCards: O,
                                         variant: C.R0.CARD_CAROUSEL_FIRST_ROW,
@@ -84,11 +84,11 @@ let b = (e) => {
                                 (0, i.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: S.heading,
+                                    className: I.heading,
                                     children: n
                                 }),
                                 (0, i.jsx)(p.Z, {
-                                    className: S.cardCarousel,
+                                    className: I.cardCarousel,
                                     cards: (0, f.sP)({
                                         perksCards: O,
                                         variant: C.R0.CARD_CAROUSEL_SECOND_ROW,
@@ -102,11 +102,11 @@ let b = (e) => {
                                 (0, i.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: S.heading,
+                                    className: I.heading,
                                     children: N.intl.string(N.t.LTaxu7)
                                 }),
                                 (0, i.jsx)(p.Z, {
-                                    className: S.cardCarousel,
+                                    className: I.cardCarousel,
                                     cards: (0, f.sP)({
                                         perksCards: O,
                                         variant: C.R0.CARD_CAROUSEL_THIRD_ROW,
@@ -119,16 +119,16 @@ let b = (e) => {
                                 })
                             ]
                         }),
-                        (0, i.jsx)('div', { className: S.footerSpacing }),
+                        (0, i.jsx)('div', { className: I.footerSpacing }),
                         (0, i.jsx)(o.$, {
                             onChange: (e) => {
-                                e && !P && (_.default.track(T.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: R }), D(!0));
+                                e && !P && (x.default.track(T.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: R }), D(!0));
                             },
-                            children: (0, i.jsx)('div', { className: S.bottomOfPageVisibilitySensor })
+                            children: (0, i.jsx)('div', { className: I.bottomOfPageVisibilitySensor })
                         }),
                         (0, i.jsx)('img', {
-                            src: I,
-                            className: S.bottomIllustration,
+                            src: S,
+                            className: I.bottomIllustration,
                             width: 112,
                             height: 85,
                             alt: N.intl.string(N.t.X4IxWF)

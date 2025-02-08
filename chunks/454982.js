@@ -41,24 +41,24 @@ function u(e) {
     });
 }
 let m = function (e) {
-    let { onClose: t, onClaim: n, code: m, outboundPromotion: h, transitionState: g } = e,
-        [_, x] = s.useState(null),
+    let { onClose: t, onClaim: n, code: m, outboundPromotion: g, transitionState: h } = e,
+        [x, _] = s.useState(null),
         p = (0, a.Dt)();
     return (
         s.useEffect(() => {
             null == m &&
-                (0, o.A2)(h.id)
+                (0, o.A2)(g.id)
                     .then((e) => n(e))
                     .catch((e) => {
                         var t;
-                        return x(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code);
+                        return _(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code);
                     });
-        }, [m, h.id, n]),
+        }, [m, g.id, n]),
         (0, i.jsx)(r.Y0X, {
-            transitionState: g,
+            transitionState: h,
             'aria-labelledby': p,
             children:
-                null != _
+                null != x
                     ? (0, i.jsx)(u, { onClose: t })
                     : null == m
                       ? (0, i.jsx)(r.hzk, { children: (0, i.jsx)(r.$jN, { className: d.loading }) })
@@ -80,7 +80,7 @@ let m = function (e) {
                                         (0, i.jsx)(r.Text, {
                                             variant: 'text-md/normal',
                                             className: d.bodyText,
-                                            children: h.outboundRedemptionModalBody
+                                            children: g.outboundRedemptionModalBody
                                         }),
                                         (0, i.jsx)(r.$i$, { className: d.formDivider }),
                                         (0, i.jsxs)(r.hjN, {
@@ -108,7 +108,7 @@ let m = function (e) {
                                         (0, i.jsx)(r.zxk, {
                                             color: r.zxk.Colors.BRAND,
                                             onClick: () => {
-                                                let e = (0, o.BU)(m, h);
+                                                let e = (0, o.BU)(m, g);
                                                 window.open(e, '_blank');
                                             },
                                             children: c.intl.string(c.t['+zx47e'])

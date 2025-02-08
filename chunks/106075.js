@@ -17,15 +17,15 @@ var i = n(200651),
     E = n(590771),
     I = n(273596),
     C = n(128449),
-    v = n(49898),
-    N = n(388032),
+    N = n(49898),
+    v = n(388032),
     T = n(608576);
 function S() {
     let e = l.useRef((0, m.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: S } = (0, a.M)(),
-        { tabs: Z, selectedTab: x, setSelectedTab: A } = (0, f.Y)(),
-        b = (0, m.lg)(x),
-        L = !C.MU.has(x),
+        { tabs: Z, selectedTab: A, setSelectedTab: x } = (0, f.Y)(),
+        b = (0, m.lg)(A),
+        L = !C.MU.has(A),
         { searchQuery: y, onSearchTextChange: P, onClearSearch: O, onSearchSubmit: R, isSearchVisible: j } = (0, _.H)({ loadId: e.current }),
         D = p.Z.useField('searchBarState'),
         {
@@ -42,9 +42,9 @@ function S() {
         G = u.Z.useField('fetchedQuery'),
         B = l.useCallback(
             (e) => {
-                A(e), j && O();
+                x(e), j && O();
             },
-            [j, O, A]
+            [j, O, x]
         ),
         V = l.useMemo(
             () =>
@@ -67,7 +67,7 @@ function S() {
         }, [b]),
         l.useEffect(() => {
             S();
-        }, [x, S]),
+        }, [A, S]),
         l.useEffect(() => {
             j || u.Z.setState({ scrollPosition: null });
         }, [j]),
@@ -88,7 +88,7 @@ function S() {
                             (0, i.jsx)(c.Z, {
                                 className: U,
                                 tabs: V,
-                                selectedTab: j ? null : x,
+                                selectedTab: j ? null : A,
                                 onTabSelect: B,
                                 onAvailableWidthChange: w
                             }),
@@ -97,17 +97,17 @@ function S() {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 className: T.searchResultsHeader,
-                                children: N.intl.format(N.t.zHdzqa, { query: G })
+                                children: v.intl.format(v.t.zHdzqa, { query: G })
                             }),
                         L &&
                             (0, i.jsx)(d.Z, {
                                 query: y,
-                                placeholder: N.intl.string(N.t['5h0QOD']),
+                                placeholder: v.intl.string(v.t['5h0QOD']),
                                 onTextChange: P,
                                 onClear: O,
                                 onSubmit: R,
                                 onCollapsedClick: M,
-                                state: j ? v.GlobalDiscoverySearchBarState.DEFAULT : D,
+                                state: j ? N.GlobalDiscoverySearchBarState.DEFAULT : D,
                                 onBlur: k
                             })
                     ]
@@ -119,7 +119,7 @@ function S() {
                           onGuildCardSeen: F
                       })
                     : (0, i.jsx)(E.Z, {
-                          selectedTab: x,
+                          selectedTab: A,
                           onScroll: t,
                           onGuildCardClick: z,
                           onGuildCardSeen: F

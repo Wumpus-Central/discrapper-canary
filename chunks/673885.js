@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => h });
 var a = n(200651);
 n(192379);
 var i = n(120356),
@@ -10,17 +10,17 @@ var i = n(120356),
     d = n(51144),
     u = n(981631),
     m = n(388032),
-    _ = n(64371);
-function x(e) {
+    x = n(64371);
+function h(e) {
     let { user: t, joinRequestId: n, className: i } = e,
-        { username: x } = t,
-        f = c.ZP.getUserAvatarURL(t),
-        { analyticsLocations: h } = (0, o.ZP)(),
-        p = () => {
+        { username: h } = t,
+        _ = c.ZP.getUserAvatarURL(t),
+        { analyticsLocations: p } = (0, o.ZP)(),
+        f = () => {
             (0, s.openUserProfileModal)({
                 userId: t.id,
                 joinRequestId: n,
-                sourceAnalyticsLocations: h,
+                sourceAnalyticsLocations: p,
                 analyticsLocation: {
                     section: u.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
                     object: u.qAy.JOIN_REQUEST
@@ -28,26 +28,26 @@ function x(e) {
             });
         };
     return (0, a.jsxs)('div', {
-        className: r()(_.container, i),
+        className: r()(x.container, i),
         children: [
             (0, a.jsx)(l.eee, {
-                onClick: p,
+                onClick: f,
                 children: (0, a.jsx)(l.qEK, {
-                    src: f,
+                    src: _,
                     size: l.EFr.SIZE_80,
-                    'aria-label': x,
-                    className: _.avatar
+                    'aria-label': h,
+                    className: x.avatar
                 })
             }),
             (0, a.jsx)('div', {
-                className: _.username,
+                className: x.username,
                 children: (0, a.jsx)(l.X6q, {
                     variant: 'heading-lg/semibold',
                     children: d.ZP.getFormattedName(t)
                 })
             }),
             (0, a.jsx)(l.eee, {
-                onClick: p,
+                onClick: f,
                 children: m.intl.string(m.t.iXAna2)
             })
         ]

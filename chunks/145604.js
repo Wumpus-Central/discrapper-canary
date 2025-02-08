@@ -17,13 +17,13 @@ var i = n(200651),
     E = n(594190),
     I = n(38618),
     C = n(501640),
-    v = n(924301),
-    N = n(734307),
+    N = n(924301),
+    v = n(734307),
     T = n(355298),
     S = n(371651),
     Z = n(829907),
-    x = n(427679),
-    A = n(695346),
+    A = n(427679),
+    x = n(695346),
     b = n(592125),
     L = n(77498),
     y = n(271383),
@@ -55,8 +55,8 @@ class K extends l.PureComponent {
         if (e.voiceChannelId !== r && null != e.voiceChannelId) {
             let t = E.ZP.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : '',
-                i = x.Z.getStageInstanceByChannel(e.voiceChannelId),
-                l = v.ZP.getActiveEventByChannel(e.voiceChannelId);
+                i = A.Z.getStageInstanceByChannel(e.voiceChannelId),
+                l = N.ZP.getActiveEventByChannel(e.voiceChannelId);
             F.default.track(Y.rMx.LEAVE_VOICE_CHANNEL, {
                 channel_id: e.voiceChannelId,
                 channel_type: e.voiceChannelType,
@@ -78,8 +78,8 @@ class K extends l.PureComponent {
         if (e.voiceChannelId !== r && null != r) {
             let e = E.ZP.getCurrentGameForAnalytics(),
                 t = null != e ? e.name : '',
-                n = x.Z.getStageInstanceByChannel(r),
-                i = v.ZP.getActiveEventByChannel(r);
+                n = A.Z.getStageInstanceByChannel(r),
+                i = N.ZP.getActiveEventByChannel(r);
             (0, d.yw)(Y.rMx.CHANNEL_OPENED, { ...(0, d.$H)(r) }), (0, h.a)(Y.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: r });
             let l = null,
                 a = H.Z.getFocusedPID();
@@ -103,7 +103,7 @@ class K extends l.PureComponent {
             let e = L.Z.getGameByName(O.name),
                 n = E.ZP.getOverrideForGame(O),
                 i = P.Z.getGuildIds(),
-                l = A.SE.getSetting(),
+                l = x.SE.getSetting(),
                 d = i.filter((e) => !l.includes(e)).slice(0, 200),
                 u = null;
             u = null != n ? 'custom_override' : null != e ? 'verified_game' : 'launcher';
@@ -114,8 +114,8 @@ class K extends l.PureComponent {
                 (setTimeout(async () => {
                     var t, n, i;
                     let l = await (0, Z.hj)(O.pid),
-                        { gameName: a, gameId: g, exe: _, distributor: v } = (0, f.G8)(O),
-                        N = null !== (t = (null == m ? void 0 : m.legacyEnabled) || (null == m ? void 0 : m.oopEnabled)) && void 0 !== t && t;
+                        { gameName: a, gameId: g, exe: _, distributor: N } = (0, f.G8)(O),
+                        v = null !== (t = (null == m ? void 0 : m.legacyEnabled) || (null == m ? void 0 : m.oopEnabled)) && void 0 !== t && t;
                     F.default.track(Y.rMx.LAUNCH_GAME, {
                         game: a,
                         game_id: g,
@@ -124,13 +124,13 @@ class K extends l.PureComponent {
                         is_launcher: null !== (n = null == O ? void 0 : O.isLauncher) && void 0 !== n && n,
                         game_platform: Y.M7m.DESKTOP,
                         detection_method: u,
-                        distributor: v,
+                        distributor: N,
                         is_overlay_enabled: V.Z.enabled,
-                        is_overlay_game_enabled: N,
+                        is_overlay_game_enabled: v,
                         is_overlay_game_source: null !== (i = null == m ? void 0 : m.source) && void 0 !== i ? i : h.source,
                         fullscreen_type: null != l ? o.Jx[l] : o.Jx.UNKNOWN.toString(),
                         overlay_method: s.gl[p],
-                        activity_status_enabled: A.G6.getSetting(),
+                        activity_status_enabled: x.G6.getSetting(),
                         activity_status_shared_guilds: d,
                         current_user_status: M.Z.getStatus(),
                         game_detection_enabled: (0, E.ik)(O),
@@ -159,7 +159,7 @@ class K extends l.PureComponent {
                     video_input_type: e,
                     video_toggle_source: __OVERLAY__ ? 'overlay' : 'app',
                     enabled_inputs: t,
-                    preview_enabled: A.qF.getSetting(),
+                    preview_enabled: x.qF.getSetting(),
                     ...n,
                     ...this.getGameMetadata(),
                     ...(0, d.AB)(r)
@@ -176,7 +176,7 @@ class K extends l.PureComponent {
                 postable_channels: $,
                 premium_progress_bar_enabled: null !== (i = null === (n = P.Z.getGuild(w.Z.getGuildId())) || void 0 === n ? void 0 : n.premiumProgressBarEnabled) && void 0 !== i && i,
                 viewing_all_channels: !k.ZP.isOptInEnabled(G),
-                num_recent_channels: N.Z.recentsChannelCount(G)
+                num_recent_channels: v.Z.recentsChannelCount(G)
             };
             (0, d.yw)(Y.rMx.GUILD_VIEWED, e), (0, h.a)(Y.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: G });
         } else B && null == G && K === Y.Z5c.FRIENDS && (!e.connected || q !== e.friendsTabSection || K !== e.homeLink) ? (0, m.Z)({ tab_opened: q }) : !B || null != G || K !== Y.Z5c.MESSAGE_REQUESTS || (e.connected && K === e.homeLink) || this.isMessageRequestsInitialized || ((this.isMessageRequestsInitialized = !0), F.default.track(Y.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: et }));
@@ -254,12 +254,12 @@ function q() {
         m = (0, r.e7)([B.ZP], () => B.ZP.getState().section, []),
         p = (0, r.e7)([G.Z], () => G.Z.getHomeLink(), []),
         _ = (0, r.e7)([I.Z], () => I.Z.isConnected(), []),
-        [f, v] = (0, r.Wu)([O.Z], () => [O.Z.isVideoEnabled(), O.Z.isScreenSharing()], []),
-        N = (0, r.e7)([M.Z], () => M.Z.getPrimaryActivity(), []),
+        [f, N] = (0, r.Wu)([O.Z], () => [O.Z.isVideoEnabled(), O.Z.isScreenSharing()], []),
+        v = (0, r.e7)([M.Z], () => M.Z.getPrimaryActivity(), []),
         S = (0, r.e7)([E.ZP], () => E.ZP.getCurrentGameForAnalytics(), []),
         Z = (0, C.Z)(o),
-        x = (0, r.e7)([T.Z], () => T.Z.getMessageRequestsCount(), []),
-        A = {
+        A = (0, r.e7)([T.Z], () => T.Z.getMessageRequestsCount(), []),
+        x = {
             selectedChannelId: t,
             isNSFWChannel: a,
             selectedGuildId: o,
@@ -267,22 +267,22 @@ function q() {
             homeLink: p,
             connected: _,
             videoEnabled: f,
-            isScreenSharing: v,
+            isScreenSharing: N,
             voiceChannelId: null == s ? void 0 : s.id,
             voiceChannelGuildId: null == s ? void 0 : s.getGuildId(),
             voiceChannelType: null == s ? void 0 : s.type,
             voiceChannelBitrate: null == s ? void 0 : s.bitrate,
             runningGame: S,
             runningGamePid: null != S ? S.pid : null,
-            gamePlatform: (0, c.Z)(N),
-            gameName: null != N ? N.name : null,
-            gameId: null != N ? N.application_id : null,
+            gamePlatform: (0, c.Z)(v),
+            gameName: null != v ? v.name : null,
+            gameId: null != v ? v.application_id : null,
             gameExeName: null != S ? S.exeName : null,
             hasPreviewEnabled: null == d ? void 0 : d.features.has(Y.oNc.PREVIEW_ENABLED),
             isMemberPending: h,
             postableChannelCount: Z,
             isTextInVoice: l,
-            numMessageRequests: x
+            numMessageRequests: A
         };
-    return (0, i.jsx)(K, { ...A });
+    return (0, i.jsx)(K, { ...x });
 }

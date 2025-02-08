@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
 var s = n(120356),
@@ -15,12 +15,12 @@ let m = [
         extensions: ['gif']
     }
 ];
-function h(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: h, changeAvatarButtonText: g, guildId: _, className: x, disabled: p = !1, isTryItOutFlow: E = !1, forcedDivider: C, withHighlight: f = !1 } = e,
+function g(e) {
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: g, changeAvatarButtonText: h, guildId: x, className: _, disabled: p = !1, isTryItOutFlow: E = !1, forcedDivider: C, withHighlight: f = !1 } = e,
         T = f ? l.gtL : l.zxk;
     return (0, i.jsx)(o.Z, {
-        className: x,
-        title: h,
+        className: _,
+        title: g,
         errors: n,
         disabled: p,
         forcedDivider: C,
@@ -30,8 +30,8 @@ function h(e) {
                 (0, i.jsx)(T, {
                     className: r()({ [u.buttonHighlighted]: f }),
                     size: l.zxk.Sizes.SMALL,
-                    onClick: () => (0, a.$r)(c.pC.AVATAR, _, E, E ? m : void 0),
-                    children: null != g ? g : d.intl.string(d.t['4OynCA'])
+                    onClick: () => (0, a.$r)(c.pC.AVATAR, x, E, E ? m : void 0),
+                    children: null != h ? h : d.intl.string(d.t['4OynCA'])
                 }),
                 t &&
                     (0, i.jsx)(l.zxk, {
@@ -40,7 +40,7 @@ function h(e) {
                         look: l.zxk.Looks.LINK,
                         size: l.zxk.Sizes.SMALL,
                         onClick: () => s(null),
-                        children: null != _ ? d.intl.string(d.t.TDjKDg) : d.intl.string(d.t.twB3f3)
+                        children: null != x ? d.intl.string(d.t.TDjKDg) : d.intl.string(d.t.twB3f3)
                     })
             ]
         })

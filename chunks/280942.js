@@ -9,7 +9,7 @@ var i = n(200651),
     d = n(388032),
     u = n(629777);
 function m(e) {
-    let { guildBoostSlot: t, onClose: m, hasCancelableGuildBoostSlot: h, premiumSubscription: g, onSelect: _, fractionalState: x } = e,
+    let { guildBoostSlot: t, onClose: m, hasCancelableGuildBoostSlot: g, premiumSubscription: h, onSelect: x, fractionalState: _ } = e,
         p = {
             transfer: {
                 label: null != t.premiumGuildSubscription ? d.intl.string(d.t['PR0n//']) : d.intl.string(d.t['+fmEYG']),
@@ -18,8 +18,8 @@ function m(e) {
             },
             cancel: {
                 label: d.intl.string(d.t.twFU3d),
-                subtext: h ? null : d.intl.string(d.t.oQ9lOj),
-                disabled: !h
+                subtext: g ? null : d.intl.string(d.t.oQ9lOj),
+                disabled: !g
             },
             uncancel: {
                 label: d.intl.string(d.t['2glQNj']),
@@ -27,18 +27,18 @@ function m(e) {
                 disabled: !1
             }
         };
-    switch (g.status) {
+    switch (h.status) {
         case o.O0b.PAST_DUE:
             (p.cancel.disabled = !0), (p.cancel.subtext = d.intl.string(d.t.WnL6DQ)), (p.uncancel.disabled = !0);
             break;
         case o.O0b.PAUSE_PENDING:
         case o.O0b.PAUSED:
-            x === c.a$.NONE && ((p.transfer.disabled = !0), (p.transfer.subtext = d.intl.string(d.t.LiLRRU))), (p.cancel.subtext = d.intl.string(d.t['1ywaWF'])), (p.cancel.disabled = !0), (p.uncancel.disabled = !0);
+            _ === c.a$.NONE && ((p.transfer.disabled = !0), (p.transfer.subtext = d.intl.string(d.t.LiLRRU))), (p.cancel.subtext = d.intl.string(d.t['1ywaWF'])), (p.cancel.disabled = !0), (p.uncancel.disabled = !0);
     }
-    x !== c.a$.NONE && ((p.cancel.subtext = d.intl.string(d.t.dq4vq6)), (p.cancel.disabled = !0), (p.uncancel.disabled = !0));
+    _ !== c.a$.NONE && ((p.cancel.subtext = d.intl.string(d.t.dq4vq6)), (p.cancel.disabled = !0), (p.uncancel.disabled = !0));
     let E = s.useMemo(
         () =>
-            g.isPausedOrPausePending && x === c.a$.NONE
+            h.isPausedOrPausePending && _ === c.a$.NONE
                 ? (0, i.jsx)(r.sNh, {
                       id: 'manage-subscription',
                       label: d.intl.string(d.t.obRG6e),
@@ -47,10 +47,10 @@ function m(e) {
                       className: u.manageSubscription
                   })
                 : null,
-        [x, g]
+        [_, h]
     );
     return (0, i.jsxs)(r.v2r, {
-        onSelect: _,
+        onSelect: x,
         navId: 'subscription-context',
         variant: 'fixed',
         'aria-label': d.intl.string(d.t.ogxXGh),

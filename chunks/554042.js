@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(153867),
     u = n(425493),
     m = n(918222),
-    h = n(607070),
-    g = n(304761),
-    _ = n(865427),
-    x = n(358085),
+    g = n(607070),
+    h = n(304761),
+    x = n(865427),
+    _ = n(358085),
     p = n(210887),
     E = n(981631),
     C = n(388032),
@@ -49,12 +49,12 @@ let T = [
 ];
 function N() {
     let [e, t] = s.useState(Math.round((window.outerWidth / window.innerWidth) * 100)),
-        { platformZoom: n, theme: r } = (0, a.cj)([p.Z, h.Z], () => ({
+        { platformZoom: n, theme: r } = (0, a.cj)([p.Z, g.Z], () => ({
             theme: p.Z.theme,
-            platformZoom: h.Z.zoom
+            platformZoom: g.Z.zoom
         })),
-        [N, S] = s.useState('upright'),
-        I = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
+        [N, I] = s.useState('upright'),
+        S = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
         b = new Map([
             ['normal', 400],
             ['medium', 500],
@@ -63,15 +63,15 @@ function N() {
             ['extrabold', 800]
         ]);
     s.useEffect(() => {
-        x.isPlatformEmbedded ||
+        _.isPlatformEmbedded ||
             window.addEventListener('resize', () => {
                 t(Math.round((window.outerWidth / window.innerWidth) * 100));
             });
     }, []);
-    let v = x.isPlatformEmbedded ? n : e,
-        j = (0, a.e7)([g.C], () => {
+    let v = _.isPlatformEmbedded ? n : e,
+        j = (0, a.e7)([h.C], () => {
             var e, t;
-            return (0, _.fD)() ? (null === (t = g.C.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, x.fD)() ? (null === (t = h.C.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         [A, O] = (0, m.R)('playground-overrideText', null),
         [R, P] = (0, m.R)('playground-defaultText', T[0].value),
@@ -178,7 +178,7 @@ function N() {
                                     }
                                 ],
                                 onChange: (e) => {
-                                    S(e.value);
+                                    I(e.value);
                                 },
                                 value: N
                             })
@@ -193,7 +193,7 @@ function N() {
                     className: f.textGrid,
                     children: [
                         (0, i.jsx)('div', {}),
-                        I.map((e) =>
+                        S.map((e) =>
                             (0, i.jsx)(
                                 'div',
                                 {
@@ -231,7 +231,7 @@ function N() {
                                             },
                                             e
                                         ),
-                                        I.map((t) => {
+                                        S.map((t) => {
                                             var n;
                                             let s = null !== (n = 'custom' === R ? A : R) && void 0 !== n ? n : '';
                                             return (0, i.jsx)(

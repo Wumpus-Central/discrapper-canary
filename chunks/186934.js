@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
 var s = n(120356),
@@ -10,17 +10,17 @@ var s = n(120356),
     d = n(131951),
     u = n(726985),
     m = n(388032),
-    h = n(232186);
-function g(e) {
+    g = n(232186);
+function h(e) {
     let { refreshStyles: t = !1 } = e,
         { sidechainEnabled: n, sidechainStrength: s } = (0, l.cj)([d.Z], () => ({
             sidechainEnabled: d.Z.getSidechainCompression(),
             sidechainStrength: d.Z.getSidechainCompressionStrength()
         })),
-        g = (0, i.jsxs)(i.Fragment, {
+        h = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(a.j7V, {
-                    className: t ? null : r()(h.marginTop8, h.marginBottom20),
+                    className: t ? null : r()(g.marginTop8, g.marginBottom20),
                     value: n,
                     onChange: (e) => o.Z.setSidechainCompression(e),
                     note: m.intl.string(m.t.IwZbbG),
@@ -40,10 +40,10 @@ function g(e) {
     return (0, i.jsx)(c.F, {
         setting: u.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
         children: t
-            ? g
+            ? h
             : (0, i.jsx)(a.hjN, {
-                  className: h.marginBottom20,
-                  children: g
+                  className: g.marginBottom20,
+                  children: h
               })
     });
 }

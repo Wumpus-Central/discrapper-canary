@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(880257),
     u = n(631885),
     m = n(933970),
-    h = n(340453),
-    g = n(292352),
-    _ = n(388032),
-    x = n(659506);
+    g = n(340453),
+    h = n(292352),
+    x = n(388032),
+    _ = n(659506);
 function p(e) {
     let { user: t } = e,
         r = (0, d.Z)(),
@@ -55,22 +55,22 @@ function p(e) {
                 });
         }, [E, t]);
     return (0, i.jsxs)('div', {
-        className: x.container,
+        className: _.container,
         children: [
             (0, i.jsx)('div', {
-                className: x.details,
-                children: (0, i.jsx)(h.Z, {
+                className: _.details,
+                children: (0, i.jsx)(g.Z, {
                     otherUser: t,
-                    status: g.ne.PENDING
+                    status: h.ne.PENDING
                 })
             }),
             (0, i.jsx)('div', {
-                className: x.actions,
+                className: _.actions,
                 children: r
                     ? (0, i.jsx)(m.Z, {
                           icon: o.Dio,
-                          className: x.__invalid_actionDeny,
-                          tooltip: _.intl.string(_.t.e5iHmZ),
+                          className: _.__invalid_actionDeny,
+                          tooltip: x.intl.string(x.t.e5iHmZ),
                           onClick: T
                       })
                     : (0, i.jsxs)(i.Fragment, {
@@ -79,14 +79,14 @@ function p(e) {
                                   ? null
                                   : (0, i.jsx)(m.Z, {
                                         icon: o.dz2,
-                                        className: x.__invalid_actionAccept,
-                                        tooltip: _.intl.string(_.t.krWQZG),
+                                        className: _.__invalid_actionAccept,
+                                        tooltip: x.intl.string(x.t.krWQZG),
                                         onClick: C
                                     }),
                               (0, i.jsx)(m.Z, {
                                   icon: o.Dio,
-                                  className: x.__invalid_actionDeny,
-                                  tooltip: _.intl.string(_.t.bBDeND),
+                                  className: _.__invalid_actionDeny,
+                                  tooltip: x.intl.string(x.t.bBDeND),
                                   onClick: f
                               })
                           ]

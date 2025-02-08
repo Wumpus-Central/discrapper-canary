@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => x });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -17,18 +17,18 @@ var i = n(200651),
     E = n(922409),
     I = n(727813),
     C = n(355350),
-    v = n(307947),
-    N = n(125855),
+    N = n(307947),
+    v = n(125855),
     T = n(687683),
     S = n(981631),
     Z = n(388032),
-    x = n(300755);
-function A() {
+    A = n(300755);
+function x() {
     let e = l.useRef(null),
         t = (0, I.Z)(),
         n = (0, C.w)(),
         r = (0, _.V)(),
-        A = (0, d.N)(),
+        x = (0, d.N)(),
         b = (0, h.Z)('message-requests-spam-list'),
         { channelId: L } = (0, E._)(),
         y = l.useCallback(() => {
@@ -49,12 +49,12 @@ function A() {
                     c = null === (l = t[s + 1]) || void 0 === l ? void 0 : null === (n = l.channel) || void 0 === n ? void 0 : n.id,
                     d = o.channel.id;
                 return (0, i.jsx)(
-                    N.Z,
+                    v.Z,
                     {
                         index: s,
                         className: a()({
-                            [x.selected]: null != L && L === d,
-                            [x.siblingSelected]: null != L && L === c
+                            [A.selected]: null != L && L === d,
+                            [A.siblingSelected]: null != L && L === c
                         }),
                         channel: o.channel,
                         user: o.user,
@@ -70,14 +70,14 @@ function A() {
                 (0, i.jsxs)(
                     m.Z,
                     {
-                        className: x.sectionTitle,
+                        className: A.sectionTitle,
                         children: [
                             Z.intl.format(Z.t.C79Edn, { count: n }),
-                            A && n > 0
+                            x && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.Text, {
-                                              className: x.titleDivider,
+                                              className: A.titleDivider,
                                               variant: 'eyebrow',
                                               color: 'header-secondary',
                                               tag: 'span',
@@ -88,7 +88,7 @@ function A() {
                                               look: c.iLD.LINK,
                                               color: c.Ttl.LINK,
                                               size: c.PhG.SMALL,
-                                              className: x.clearAllButton,
+                                              className: A.clearAllButton,
                                               'aria-label': Z.intl.string(Z.t.p6t7RE),
                                               children: Z.intl.string(Z.t.p6t7RE)
                                           })
@@ -99,10 +99,10 @@ function A() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, O, A]
+            [n, O, x]
         );
     return 0 === t.length
-        ? (0, i.jsx)(v.Z, { section: T.pS.SPAM })
+        ? (0, i.jsx)(N.Z, { section: T.pS.SPAM })
         : (0, i.jsx)(s.bG, {
               navigator: b,
               children: (0, i.jsx)(s.SJ, {
@@ -111,7 +111,7 @@ function A() {
                       return (0, i.jsx)(
                           c.aVo,
                           {
-                              className: x.list,
+                              className: A.list,
                               innerRole: r,
                               innerAriaLabel: Z.intl.string(Z.t.e7GWjY),
                               ref: (t) => {

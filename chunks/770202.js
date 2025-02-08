@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(201895),
     h = n(703656),
     p = n(592125),
-    m = n(430824),
-    g = n(496675),
+    g = n(430824),
+    m = n(496675),
     f = n(98597),
     _ = n(473403),
     v = n(981631),
@@ -60,7 +60,7 @@ class b extends f.ZP {
         super(...e),
             Z(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    l = m.Z.getGuild(t.getGuildId());
+                    l = g.Z.getGuild(t.getGuildId());
                 null != l &&
                     (0, c.jW)(e, async () => {
                         let { default: e } = await n.e('99905').then(n.bind(n, 649400));
@@ -92,11 +92,11 @@ class b extends f.ZP {
 let S = (0, d.B)(b),
     N = l.memo(function (e) {
         let { channel: t, guild: n, disableSorting: l } = e,
-            r = (0, o.cj)([p.Z, g.Z], () => {
+            r = (0, o.cj)([p.Z, m.Z], () => {
                 let e = p.Z.getChannel(t.parent_id);
                 return {
-                    canManageChannel: g.Z.can(v.Plq.MANAGE_CHANNELS, t),
-                    canReorderChannel: !0 !== l && null != e ? g.Z.can(v.Plq.MANAGE_CHANNELS, e) : g.Z.can(v.Plq.MANAGE_CHANNELS, n)
+                    canManageChannel: m.Z.can(v.Plq.MANAGE_CHANNELS, t),
+                    canReorderChannel: !0 !== l && null != e ? m.Z.can(v.Plq.MANAGE_CHANNELS, e) : m.Z.can(v.Plq.MANAGE_CHANNELS, n)
                 };
             });
         return (0, i.jsx)(S, {

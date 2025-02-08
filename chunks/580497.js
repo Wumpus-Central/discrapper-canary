@@ -1,8 +1,8 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => p });
 var i = n(512722),
     r = n.n(i),
-    l = n(525654),
-    a = n.n(l),
+    a = n(525654),
+    l = n.n(a),
     o = n(39612),
     s = n(271579),
     c = n(756647),
@@ -11,11 +11,11 @@ var i = n(512722),
     h = n(896797),
     _ = n(626135),
     g = n(954824),
-    p = n(981631);
-function m(e) {
+    m = n(981631);
+function p(e) {
     let t = (function (e) {
             var t;
-            let n = null === (t = a().os) || void 0 === t ? void 0 : t.family;
+            let n = null === (t = l().os) || void 0 === t ? void 0 : t.family;
             if ('Android' === n || 'iOS' === n) {
                 let t = u.default.getFingerprint(),
                     n = (0, s.WS)();
@@ -32,7 +32,7 @@ function m(e) {
         })(e),
         n = (0, s.zS)(t);
     null != n &&
-        _.default.track(p.rMx.DEEP_LINK_CLICKED, {
+        _.default.track(m.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, c.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource

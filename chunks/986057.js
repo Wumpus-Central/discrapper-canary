@@ -26,13 +26,13 @@ function f() {
 }
 class _ extends r.Z {
     handleExperimentStateChange() {
-        !f() && s.Z.getVoiceFilterLoopbackEnabled() && (0, l._j)(!1);
+        !f() && s.Z.getVoiceFilterPlaybackEnabled() && (0, l._j)(!1);
     }
     handleRtcConnectionState(e) {
         let { state: t } = e,
             n = s.Z.getActiveVoiceFilter();
         if (!f() || null == n) return;
-        let r = s.Z.getVoiceFilterLoopbackEnabled();
+        let r = s.Z.getVoiceFilterPlaybackEnabled();
         t === c.hes.RTC_CONNECTED ? i.Z.setLoopback(r) : t === c.hes.RTC_DISCONNECTED && i.Z.setLoopback(!1);
     }
     handleLoopbackToggle(e) {
@@ -41,7 +41,7 @@ class _ extends r.Z {
     }
     handleVoiceFilterRequestSwitch(e) {
         let { newVoiceFilterId: t } = e,
-            n = s.Z.getVoiceFilterLoopbackEnabled();
+            n = s.Z.getVoiceFilterPlaybackEnabled();
         if (null == t) {
             let e = s.Z.getLoopback();
             n && e && i.Z.setLoopback(!1);

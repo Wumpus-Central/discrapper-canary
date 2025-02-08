@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(570140),
     u = n(232567),
     m = n(809206),
-    h = n(497321),
-    g = n(634894),
-    _ = n(100527),
-    x = n(906732),
+    g = n(497321),
+    h = n(634894),
+    x = n(100527),
+    _ = n(906732),
     p = n(475977),
     E = n(957730),
     C = n(53691),
     f = n(267717),
     T = n(296810),
     N = n(921813),
-    S = n(610794),
-    I = n(935147),
+    I = n(610794),
+    S = n(935147),
     b = n(246946),
     v = n(25990),
     j = n(594174),
@@ -46,14 +46,14 @@ function B() {
         B = (0, a.e7)([v.Z], () => v.Z.showNotice()),
         M = P.dN.useSetting() && null != n ? E.ZP.parse(void 0, n).content : n,
         w = O.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: V } = (0, x.ZP)(_.Z.PROFILE);
+        { analyticsLocations: V } = (0, _.ZP)(x.Z.PROFILE);
     s.useEffect(() => () => d.Z.wait(m.W3), []);
     let U = 'UserSettingsProfileCustomization';
-    (0, g.j)({
+    (0, h.j)({
         location: U + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, g.j)({
+        (0, h.j)({
             location: U + ' auto off',
             autoTrackExposure: !1
         });
@@ -62,8 +62,8 @@ function B() {
         z = !w,
         Y = s.useRef(null);
     return t
-        ? (0, i.jsx)(h.Z, {})
-        : (0, i.jsxs)(x.Gt, {
+        ? (0, i.jsx)(g.Z, {})
+        : (0, i.jsxs)(_.Gt, {
               value: V,
               children: [
                   (0, i.jsx)(p.Z, {}),
@@ -77,14 +77,14 @@ function B() {
                       }),
                       children: (0, i.jsx)(y.Z, {})
                   }),
-                  H && (0, i.jsx)(S.Z, {}),
+                  H && (0, i.jsx)(I.Z, {}),
                   (0, i.jsx)(o.$, {
                       onChange: (e) => F(e),
                       threshold: 0.25,
                       active: z,
                       children: (0, i.jsx)('div', {
                           ref: Y,
-                          children: (0, i.jsx)(I.Z, {
+                          children: (0, i.jsx)(S.Z, {
                               user: e,
                               shouldShow: z,
                               isVisible: G

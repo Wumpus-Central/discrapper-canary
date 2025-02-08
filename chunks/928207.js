@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
 var l = n(120356),
@@ -18,35 +18,35 @@ var l = n(120356),
     E = n(984370),
     I = n(278605),
     C = n(299657),
-    v = n(594174),
-    N = n(74538),
+    N = n(594174),
+    v = n(74538),
     T = n(981631),
     S = n(474936),
     Z = n(388032),
-    x = n(707858);
-let A = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
+    A = n(707858);
+let x = o.ZP.connectStores([N.default], () => ({ user: N.default.getCurrentUser() }))(
     (0, m.Z)(
         (0, h.Z)((e) => {
             let { isAuthenticated: t, user: n } = e,
                 { analyticsLocations: l } = (0, _.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
                 o = (0, I.xP)('ApplicationStoreHome'),
-                h = (0, N.I5)(n),
+                h = (0, v.I5)(n),
                 m = o && !h,
-                v = (0, p.ZP)();
+                N = (0, p.ZP)();
             return t
                 ? (0, i.jsxs)('div', {
-                      className: x.homeWrapperNormal,
+                      className: A.homeWrapperNormal,
                       children: [
                           (0, i.jsx)(u.Z, {
                               section: T.jXE.NAVIGATION,
                               children: (0, i.jsx)(d.f6W, {
-                                  theme: v,
+                                  theme: N,
                                   children: (e) =>
                                       (0, i.jsxs)(E.Z, {
                                           isAuthenticated: t,
-                                          className: r()(x.headerBar, e, {
-                                              [x.headerBarV2LightBackground]: m && !(0, c.wj)(v),
-                                              [x.headerBarV2DarkBackground]: m && (0, c.wj)(v)
+                                          className: r()(A.headerBar, e, {
+                                              [A.headerBarV2LightBackground]: m && !(0, c.wj)(N),
+                                              [A.headerBarV2DarkBackground]: m && (0, c.wj)(N)
                                           }),
                                           role: 'navigation',
                                           children: [
@@ -68,7 +68,7 @@ let A = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser(
                                       ? (0, i.jsx)(f.Z, {
                                             align: f.Z.Align.CENTER,
                                             justify: f.Z.Justify.CENTER,
-                                            children: (0, i.jsx)(d.$jN, { className: x.spinner })
+                                            children: (0, i.jsx)(d.$jN, { className: A.spinner })
                                         })
                                       : (0, i.jsx)(C.Z, { entrypoint: S.EZ.ApplicationStoreHome })
                           })

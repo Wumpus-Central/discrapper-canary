@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => r,
-    S: () => l
+    R: () => l,
+    S: () => r
 });
 let a = (0, n(987170).Z)({
     kind: 'user',
@@ -15,11 +15,11 @@ let a = (0, n(987170).Z)({
         }
     ]
 });
-function l(e) {
+function r(e) {
     let { location: t } = e;
     return a.useExperiment({ location: t }, { autoTrackExposure: !0 });
 }
-function r(e) {
+function l(e) {
     let { location: t } = e;
     return a.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
 }

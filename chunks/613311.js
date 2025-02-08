@@ -17,13 +17,13 @@ var i = n(200651),
     E = n(666743),
     I = n(115130),
     C = n(812206),
-    v = n(770146),
-    N = n(600164),
+    N = n(770146),
+    v = n(600164),
     T = n(606081),
     S = n(252618),
     Z = n(100159),
-    x = n(646288),
-    A = n(984370),
+    A = n(646288),
+    x = n(984370),
     b = n(706454),
     L = n(210887),
     y = n(430824),
@@ -134,24 +134,24 @@ class ec extends l.PureComponent {
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: r } = this.props;
-        return (0, i.jsx)(A.Z, {
+        return (0, i.jsx)(x.Z, {
             isAuthenticated: r,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
                     ? (0, i.jsxs)(l.Fragment, {
                           children: [
-                              (0, i.jsx)(A.Z.Icon, {
+                              (0, i.jsx)(x.Z.Icon, {
                                   icon: d.lO_,
                                   'aria-label': ea.intl.string(ea.t['P1/Erq'])
                               }),
-                              (0, i.jsx)(A.Z.Title, { children: n.name })
+                              (0, i.jsx)(x.Z.Title, { children: n.name })
                           ]
                       })
                     : null != t && t.premium
                       ? (0, i.jsxs)(l.Fragment, {
                             children: [
-                                (0, i.jsx)(A.Z.Icon, {
+                                (0, i.jsx)(x.Z.Icon, {
                                     icon: d.SrA,
                                     'aria-label': ea.intl.string(ea.t.Ipxkoq)
                                 }),
@@ -161,11 +161,11 @@ class ec extends l.PureComponent {
                       : null != t
                         ? (0, i.jsxs)(l.Fragment, {
                               children: [
-                                  (0, i.jsx)(A.Z.Icon, {
+                                  (0, i.jsx)(x.Z.Icon, {
                                       icon: d.lO_,
                                       'aria-label': ea.intl.string(ea.t['P1/Erq'])
                                   }),
-                                  (0, i.jsx)(A.Z.Title, { children: t.name })
+                                  (0, i.jsx)(x.Z.Title, { children: t.name })
                               ]
                           })
                         : null
@@ -257,7 +257,7 @@ class ec extends l.PureComponent {
         if (null == r) throw Error('Rendering ApplicationStoreListing without description');
         return (0, i.jsxs)(l.Fragment, {
             children: [
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(N.Z, {
                     tag: 'h1',
                     children: ea.intl.format(ea.t.tluX4O, { name: n.name })
                 }),
@@ -344,9 +344,9 @@ class ec extends l.PureComponent {
             return (0, i.jsxs)(l.Fragment, {
                 children: [
                     this.renderHeader(e, t),
-                    (0, i.jsx)(N.Z, {
-                        align: N.Z.Align.CENTER,
-                        justify: N.Z.Justify.CENTER,
+                    (0, i.jsx)(v.Z, {
+                        align: v.Z.Align.CENTER,
+                        justify: v.Z.Justify.CENTER,
                         children: (0, i.jsx)(d.$jN, { className: es.spinner })
                     })
                 ]
@@ -513,7 +513,7 @@ class ec extends l.PureComponent {
                             children: (0, i.jsxs)('div', {
                                 className: a()(es.headerPurchase, { [es.active]: o }),
                                 children: [
-                                    null != t ? (0, x.Z)(t) : null,
+                                    null != t ? (0, A.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
                                     (0, i.jsx)(Q.Z, {
                                         messageStyle: Q.G.SHORT,
@@ -543,9 +543,9 @@ class ec extends l.PureComponent {
             eo(this, 'renderListing', () => {
                 let { application: e, storeListing: t, sku: n, pageSize: l } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
-                    ? (0, i.jsx)(N.Z, {
-                          align: N.Z.Align.CENTER,
-                          justify: N.Z.Justify.CENTER,
+                    ? (0, i.jsx)(v.Z, {
+                          align: v.Z.Align.CENTER,
+                          justify: v.Z.Justify.CENTER,
                           children: (0, i.jsx)(d.$jN, {})
                       })
                     : l === ei.b.SMALL

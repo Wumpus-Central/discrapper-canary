@@ -60,8 +60,8 @@ function N(e) {
 function D(e) {
     var n, t, r;
     let { items: l, fit: o, startIndex: h = 0, shouldRedactExplicitContent: E = !1, shouldHideMediaOptions: D = !1, shouldAnimateCarousel: R = !1 } = e,
-        [k, T] = (0, i.useState)(h),
-        M = (0, i.useRef)(h),
+        [k, M] = (0, i.useState)(h),
+        T = (0, i.useRef)(h),
         [y, P] = (0, i.useState)([]);
     (0, i.useEffect)(() => {
         var e, n;
@@ -72,17 +72,17 @@ function D(e) {
     let I = (0, i.useCallback)(
         (e) => {
             var n;
-            let t = e - M.current;
-            T((e = ((e % (n = l.length)) + n) % n)), (M.current = e), P((e) => [...e, t]), (0, m.yg)(m.uG.SELECTED_ITEM_CHANGE);
+            let t = e - T.current;
+            M((e = ((e % (n = l.length)) + n) % n)), (T.current = e), P((e) => [...e, t]), (0, m.yg)(m.uG.SELECTED_ITEM_CHANGE);
         },
         [l]
     );
     (0, i.useEffect)(() => {
         let e = s()(() => {
-                I(M.current + 1);
+                I(T.current + 1);
             }, 300),
             n = s()(() => {
-                I(M.current - 1);
+                I(T.current - 1);
             }, 300);
         return (
             g.S.subscribe(O.CkL.MODAL_CAROUSEL_NEXT, e),
@@ -96,10 +96,10 @@ function D(e) {
         j = null !== (r = w.sourceMetadata) && void 0 !== r ? r : {},
         Z = null == j ? void 0 : null === (n = j.message) || void 0 === n ? void 0 : n.id,
         F = null == j ? void 0 : null === (t = j.message) || void 0 === t ? void 0 : t.channel_id,
-        U = (0, u.e7)([S.Z], () => (null != F && null != Z ? S.Z.getMessage(F, Z) : null), [F, Z]),
-        W = null != U ? U : null == j ? void 0 : j.message,
-        G = (0, i.useCallback)(() => (0, m.yg)(m.uG.FORWARD_PRESSED), []),
-        z = null != W && null != j.identifier ? (0, p.s)(W, j.identifier, G) : null,
+        W = (0, u.e7)([S.Z], () => (null != F && null != Z ? S.Z.getMessage(F, Z) : null), [F, Z]),
+        G = null != W ? W : null == j ? void 0 : j.message,
+        U = (0, i.useCallback)(() => (0, m.yg)(m.uG.FORWARD_PRESSED), []),
+        z = null != G && null != j.identifier ? (0, p.s)(G, j.identifier, U) : null,
         H = (0, f.KP)(
             {
                 type: f.lJ.GenericMedia,
@@ -117,7 +117,7 @@ function D(e) {
             let n = ['translateX(100px)', 'translateX(-100px)'];
             return e > 0 ? n : n.toReversed();
         })(y[y.length - 1]),
-        K = (0, d.Yzy)(
+        V = (0, d.Yzy)(
             w,
             {
                 key: w.url,
@@ -149,7 +149,7 @@ function D(e) {
                       onClick: () => g.S.dispatch(O.CkL.MODAL_CAROUSEL_PREV)
                   })
                 : null,
-            K((e, n) => {
+            V((e, n) => {
                 var t;
                 return (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsx)(

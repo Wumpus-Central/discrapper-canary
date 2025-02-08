@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(653041), n(47120);
+n.d(t, { Z: () => A }), n(653041), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -17,15 +17,15 @@ var i = n(200651),
     E = n(283595),
     I = n(417363),
     C = n(626135),
-    v = n(804739),
-    N = n(346329),
+    N = n(804739),
+    v = n(346329),
     T = n(981631),
     S = n(388032);
 let Z = d.Z.get(T.ABu.XBOX).name;
-function x(e) {
+function A(e) {
     let { currentActivities: t } = e,
         n = t.length > 1,
-        x = (function (e) {
+        A = (function (e) {
             let { currentActivities: t } = e,
                 n = (0, r.e7)([_.Z], () => _.Z.getAccounts().some((e) => e.type === d.Z.get(T.ABu.XBOX).type)),
                 l = t.some((e) => {
@@ -40,7 +40,7 @@ function x(e) {
                       label: S.intl.formatToPlainString(S.t.XWSHTU, { platform: Z })
                   });
         })(e),
-        A = (function (e) {
+        x = (function (e) {
             let { currentActivities: t } = e,
                 n = l.useContext(C.AnalyticsContext);
             return (0, r.Wu)(
@@ -55,7 +55,7 @@ function x(e) {
                                 ...e,
                                 libraryApplication: l,
                                 canJoin: null != t && (0, u.Z)(t, T.xjy.JOIN) && t.type === T.IIU.PLAYING,
-                                canPlay: (0, v.t)({
+                                canPlay: (0, N.t)({
                                     LibraryApplicationStore: E.Z,
                                     LaunchableGameStore: g.Z,
                                     DispatchApplicationStore: I.Z,
@@ -72,7 +72,7 @@ function x(e) {
             );
         })(e),
         b = [];
-    for (let e of A) {
+    for (let e of x) {
         let { activity: t } = e;
         null != t &&
             null != t.type &&
@@ -103,7 +103,7 @@ function x(e) {
                     return (0, i.jsx)(a.sNh, {
                         id: 'play-'.concat(n.session_id),
                         action: function () {
-                            (0, N.playApplication)(l.id, r, {
+                            (0, v.playApplication)(l.id, r, {
                                 analyticsParams: {
                                     location: {
                                         ...s,
@@ -118,5 +118,5 @@ function x(e) {
                 })(e, n)
             );
     }
-    return [x, ...b];
+    return [A, ...b];
 }

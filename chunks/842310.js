@@ -1,45 +1,45 @@
 n.d(t, {
-    l: () => c,
-    v: () => d
+    l: () => d,
+    v: () => c
 });
 var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(144114),
     s = n(476770),
-    o = n(815660),
-    a = n(388032),
-    u = n(484979);
-function c() {
+    u = n(815660),
+    o = n(388032),
+    a = n(484979);
+function d() {
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(s.PU, {
-            className: u.editableRequirementContainer,
+            className: a.editableRequirementContainer,
             icon: l.AtH,
-            text: a.intl.string(a.t.woMjLS),
-            footnote: a.intl.string(a.t['jMh+TU']),
+            text: o.intl.string(o.t.woMjLS),
+            footnote: o.intl.string(o.t['jMh+TU']),
             meetsRequirement: !1,
             children: (0, i.jsx)(l.ua7, {
-                text: a.intl.string(a.t.mGlP39),
+                text: o.intl.string(o.t.mGlP39),
                 children: (e) =>
                     (0, i.jsx)(l.zxk, {
                         ...e,
                         size: l.zxk.Sizes.SMALL,
                         disabled: !0,
-                        children: a.intl.string(a.t['13ofGh'])
+                        children: o.intl.string(o.t['13ofGh'])
                     })
             })
         })
     });
 }
-function d(e) {
+function c(e) {
     let { isUserVerified: t } = e,
-        c = t ? a.intl.string(a.t.WWzQtb) : a.intl.string(a.t.woMjLS);
+        d = t ? o.intl.string(o.t.WWzQtb) : o.intl.string(o.t.woMjLS);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(s.PU, {
-            className: u.editableRequirementContainer,
+            className: a.editableRequirementContainer,
             icon: l.AtH,
-            text: c,
-            footnote: a.intl.string(a.t['jMh+TU']),
+            text: d,
+            footnote: o.intl.string(o.t['jMh+TU']),
             meetsRequirement: t,
             children: (0, i.jsx)(l.zxk, {
                 size: l.zxk.Sizes.SMALL,
@@ -53,10 +53,10 @@ function d(e) {
                                     ...t
                                 });
                         },
-                        { modalKey: o.M }
+                        { modalKey: u.M }
                     );
                 },
-                children: a.intl.string(a.t['13ofGh'])
+                children: o.intl.string(o.t['13ofGh'])
             })
         })
     });

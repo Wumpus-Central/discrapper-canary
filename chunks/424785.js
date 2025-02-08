@@ -11,8 +11,8 @@ var l = n(120356),
     u = n(888651),
     h = n(201895),
     p = n(111028),
-    m = n(305325),
-    g = n(281956),
+    g = n(305325),
+    m = n(281956),
     f = n(66999),
     _ = n(378844),
     v = n(359110),
@@ -26,9 +26,9 @@ var l = n(120356),
     E = n(592125),
     j = n(430824),
     y = n(607744),
-    A = n(496675),
-    P = n(306680),
-    T = n(9156),
+    P = n(496675),
+    T = n(306680),
+    A = n(9156),
     w = n(979651),
     R = n(934415),
     L = n(98597),
@@ -82,7 +82,7 @@ class H extends L.ZP {
         return this.props.channelInfo;
     }
     render() {
-        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: d, canReorderChannel: u, canMoveMembers: p, stageInstance: m, isSubscriptionGated: g, needSubscriptionToAccess: f, unread: _, resolvedUnreadSetting: v, mentionCount: C, isFavoriteSuggestion: x } = this.props,
+        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: d, canReorderChannel: u, canMoveMembers: p, stageInstance: g, isSubscriptionGated: m, needSubscriptionToAccess: f, unread: _, resolvedUnreadSetting: v, mentionCount: C, isFavoriteSuggestion: x } = this.props,
             { shouldShowGuildVerificationPopout: Z } = this.state,
             I = this.getVoiceStatesCount(),
             b = (0, i.jsxs)('li', {
@@ -102,7 +102,7 @@ class H extends L.ZP {
                                     let { onClick: o, onContextMenu: s, ...c } = a;
                                     return (0, i.jsxs)(D.Z, {
                                         className: U.iconVisibility,
-                                        iconClassName: r()({ [V.iconLive]: null != m }),
+                                        iconClassName: r()({ [V.iconLive]: null != g }),
                                         channel: e,
                                         selected: !x && t,
                                         connected: n,
@@ -124,7 +124,7 @@ class H extends L.ZP {
                                             unread: _,
                                             mentionCount: C,
                                             userCount: I,
-                                            isSubscriptionGated: g,
+                                            isSubscriptionGated: m,
                                             needSubscriptionToAccess: f
                                         }),
                                         ...c,
@@ -147,7 +147,7 @@ class H extends L.ZP {
             F(this, 'handleClick', () => {
                 let { channel: e, locked: t, connected: n, unverifiedAccount: i } = this.props,
                     l = e.getGuildId();
-                null != l && (0, g.n)(l) && (0, m.hk)(l), i && this.setState({ shouldShowGuildVerificationPopout: !0 }), t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, C.Cq)(e), __OVERLAY__ || (0, v.Kh)(e.id);
+                null != l && (0, m.n)(l) && (0, g.hk)(l), i && this.setState({ shouldShowGuildVerificationPopout: !0 }), t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, C.Cq)(e), __OVERLAY__ || (0, v.Kh)(e.id);
             }),
             F(this, 'handleClickChat', () => {
                 let { channel: e, locked: t } = this.props;
@@ -218,29 +218,29 @@ class H extends L.ZP {
 let z = (0, d.B)((0, u.Q)(H));
 function W(e) {
     let { guild: t, channel: n, disableSorting: l, isFavoriteCategory: r, collapsed: o, voiceStates: s } = e,
-        c = (0, a.cj)([P.ZP], () => ({
-            unread: P.ZP.hasUnread(n.id),
-            mentionCount: P.ZP.getMentionCount(n.id)
+        c = (0, a.cj)([T.ZP], () => ({
+            unread: T.ZP.hasUnread(n.id),
+            mentionCount: T.ZP.getMentionCount(n.id)
         })),
-        d = (0, a.e7)([T.ZP], () => T.ZP.resolveUnreadSetting(n)),
-        u = (0, a.cj)([E.Z, y.Z, A.Z], () => {
+        d = (0, a.e7)([A.ZP], () => A.ZP.resolveUnreadSetting(n)),
+        u = (0, a.cj)([E.Z, y.Z, P.Z], () => {
             let e = E.Z.getChannel(n.parent_id),
                 i = y.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: null != t && A.Z.can(k.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== l && (t.id === B._ || (null != e ? A.Z.can(k.Plq.MANAGE_CHANNELS, e) : A.Z.can(k.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: A.Z.can(k.Plq.MOVE_MEMBERS, n),
-                locked: !A.Z.can(k.Plq.CONNECT, n),
-                bypassLimit: A.Z.can(k.Plq.MOVE_MEMBERS, n),
+                canManageChannel: null != t && P.Z.can(k.Plq.MANAGE_CHANNELS, n),
+                canReorderChannel: !0 !== l && (t.id === B._ || (null != e ? P.Z.can(k.Plq.MANAGE_CHANNELS, e) : P.Z.can(k.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: P.Z.can(k.Plq.MOVE_MEMBERS, n),
+                locked: !P.Z.can(k.Plq.CONNECT, n),
+                bypassLimit: P.Z.can(k.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat
             };
         }),
         h = (0, a.e7)([N.Z], () => N.Z.isCollapsed(n.parent_id)),
         p = (0, S.ZP)(n.id),
-        m = (0, a.e7)([I.Z], () => I.Z.getStageInstanceByChannel(n.id), [n.id]),
-        g = (0, x.Rk)(n.id, Z.pV.AUDIENCE),
+        g = (0, a.e7)([I.Z], () => I.Z.getStageInstanceByChannel(n.id), [n.id]),
+        m = (0, x.Rk)(n.id, Z.pV.AUDIENCE),
         { isSubscriptionGated: _, needSubscriptionToAccess: v } = (0, f.Z)(n.id),
-        C = (0, a.e7)([T.ZP], () => T.ZP.isFavorite(t.id, n.id)),
+        C = (0, a.e7)([A.ZP], () => A.ZP.isFavorite(t.id, n.id)),
         j = (0, b.xJ)(n.id),
         w = (0, M.Z)({
             channel: n,
@@ -255,8 +255,8 @@ function W(e) {
     return (0, i.jsx)(z, {
         categoryCollapsed: h,
         connectAction: p,
-        numAudience: g,
-        stageInstance: m,
+        numAudience: m,
+        stageInstance: g,
         isSubscriptionGated: _,
         needSubscriptionToAccess: v,
         ...c,

@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(984933),
     h = n(496675),
     p = n(98597),
-    m = n(473403),
-    g = n(981631),
+    g = n(473403),
+    m = n(981631),
     f = n(490897),
     _ = n(831746);
 let v = (0, c.B)(function (e) {
@@ -22,8 +22,8 @@ let v = (0, c.B)(function (e) {
         }),
         E = (0, o.e7)([d.Z], () => d.Z.getChannel(null == N ? void 0 : N.parent_id)),
         j = r === (null == N ? void 0 : N.id),
-        y = (0, o.e7)([h.Z], () => (null != E ? h.Z.can(g.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
-        A = l.useCallback(
+        y = (0, o.e7)([h.Z], () => (null != E ? h.Z.can(m.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(m.Plq.MANAGE_CHANNELS, t))),
+        P = l.useCallback(
             (e) => {
                 null != N &&
                     (0, s.jW)(e, async () => {
@@ -38,20 +38,20 @@ let v = (0, c.B)(function (e) {
             [N]
         );
     if (null == N) return null;
-    let P = (0, p.jo)(c, Z),
-        T = (0, p.CN)(N, C, x),
+    let T = (0, p.jo)(c, Z),
+        A = (0, p.CN)(N, C, x),
         w = (0, i.jsx)('div', {
-            className: a()(P, {
-                [_.disabled]: T,
+            className: a()(T, {
+                [_.disabled]: A,
                 [_.selected]: j
             }),
             'data-dnd-name': N.name,
-            children: (0, i.jsxs)(m.Z, {
+            children: (0, i.jsxs)(g.Z, {
                 className: _.iconVisibility,
                 channel: N,
                 guild: t,
                 selected: j,
-                onContextMenu: A,
+                onContextMenu: P,
                 forceInteractable: !0,
                 resolvedUnreadSetting: f.i.ONLY_MENTIONS,
                 children: [

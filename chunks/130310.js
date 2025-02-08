@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
 var s = n(120356),
@@ -36,7 +36,7 @@ let m = (e) => {
             ]
         });
     },
-    h = (e) => {
+    g = (e) => {
         let { inModal: t } = e,
             n = (0, a.o)(c.intl.string(c.t.Sm8Gq6), c.intl.string(c.t.YU7aaW)),
             s = (0, a.o)(c.intl.string(c.t['TCzk/f']), c.intl.string(c.t['2OqtJC'])),

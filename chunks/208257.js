@@ -9,20 +9,20 @@ var a = n(200651),
     d = n(430824),
     u = n(496675),
     m = n(693546),
-    _ = n(246364),
-    x = n(98493),
-    f = n(985159),
-    h = n(328977),
-    p = n(412222),
-    b = n(223312),
-    g = n(571728),
-    C = n(572940),
-    v = n(80487),
-    j = n(146463),
-    I = n(981631),
-    T = n(388032),
+    x = n(246364),
+    h = n(98493),
+    _ = n(985159),
+    p = n(328977),
+    f = n(412222),
+    C = n(223312),
+    j = n(571728),
+    v = n(572940),
+    b = n(80487),
+    g = n(146463),
+    T = n(981631),
+    I = n(388032),
     R = n(991154);
-function E(e) {
+function N(e) {
     let { guild: t } = e;
     return (0, a.jsxs)('div', {
         className: R.setupHeader,
@@ -32,13 +32,13 @@ function E(e) {
                 children: [
                     (0, a.jsx)(l.X6q, {
                         variant: 'heading-lg/bold',
-                        children: T.intl.string(T.t.aOQWKi)
+                        children: I.intl.string(I.t.aOQWKi)
                     }),
                     (0, a.jsxs)(l.zxk, {
                         color: l.zxk.Colors.TRANSPARENT,
                         onClick: () => {
                             (0, l.ZDy)(async () => {
-                                let { default: e } = await n.e('52657').then(n.bind(n, 645264));
+                                let { default: e } = await Promise.all([n.e('99916'), n.e('81038'), n.e('52657')]).then(n.bind(n, 645264));
                                 return (n) =>
                                     (0, a.jsx)(e, {
                                         ...n,
@@ -48,14 +48,14 @@ function E(e) {
                             });
                         },
                         size: l.PhG.SMALL,
-                        'aria-label': T.intl.string(T.t.rqfRdX),
+                        'aria-label': I.intl.string(I.t.rqfRdX),
                         innerClassName: R.previewButton,
                         children: [
                             (0, a.jsx)(l.tEF, {
                                 size: 'xs',
                                 color: 'currentColor'
                             }),
-                            T.intl.string(T.t.rqfRdX)
+                            I.intl.string(I.t.rqfRdX)
                         ]
                     })
                 ]
@@ -64,96 +64,96 @@ function E(e) {
                 className: R.description,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
-                children: T.intl.format(T.t.xpB4Ym, { guildName: t.name })
+                children: I.intl.format(I.t.xpB4Ym, { guildName: t.name })
             })
         ]
     });
 }
-function P(e) {
+function E(e) {
     var t, n;
-    let { guildId: P, isSidebarOpen: w } = e,
-        N = i.useRef(null),
-        [S, A] = i.useState((0, f.z)({ guildId: P })),
-        Z = (0, p.C)({ guildId: P }),
-        B = (0, h.L)({ guildId: P }),
-        k = null !== (t = (0, g.A)({ guildId: P })) && void 0 !== t ? t : 0,
-        { guildJoinRequests: y } = (0, b.j)({
-            guildId: P,
-            applicationStatus: 'REVIEW_APPLICATION' === S ? _.wB.SUBMITTED : S,
-            sortOrder: Z
+    let { guildId: E, isSidebarOpen: w } = e,
+        B = i.useRef(null),
+        [S, P] = i.useState((0, _.z)({ guildId: E })),
+        F = (0, f.C)({ guildId: E }),
+        y = (0, p.L)({ guildId: E }),
+        q = null !== (t = (0, j.A)({ guildId: E })) && void 0 !== t ? t : 0,
+        { guildJoinRequests: Z } = (0, C.j)({
+            guildId: E,
+            applicationStatus: 'REVIEW_APPLICATION' === S ? x.wB.SUBMITTED : S,
+            sortOrder: F
         }),
-        F = (0, r.e7)([d.Z], () => d.Z.getGuild(P), [P]),
-        M = (0, r.e7)([c.Z], () => c.Z.getMemberCount(P)),
-        U = null != F && (null != M ? M : 0) >= F.maxMembers,
-        { fetchNextPage: D } = (0, x.m)({
-            guildId: P,
-            guildJoinRequests: y
+        k = (0, r.e7)([d.Z], () => d.Z.getGuild(E), [E]),
+        A = (0, r.e7)([c.Z], () => c.Z.getMemberCount(E)),
+        M = null != k && (null != A ? A : 0) >= k.maxMembers,
+        { fetchNextPage: L } = (0, h.m)({
+            guildId: E,
+            guildJoinRequests: Z
         }),
-        L = (0, r.e7)([u.Z], () => u.Z.can(I.Plq.KICK_MEMBERS, F)),
-        q = i.useRef(!1);
-    q.current || ((q.current = !0), D(Z, 'REVIEW_APPLICATION' === S ? _.wB.SUBMITTED : S)),
+        U = (0, r.e7)([u.Z], () => u.Z.can(T.Plq.KICK_MEMBERS, k)),
+        D = i.useRef(!1);
+    D.current || ((D.current = !0), L(F, 'REVIEW_APPLICATION' === S ? x.wB.SUBMITTED : S)),
         i.useEffect(() => {
-            L || A('REVIEW_APPLICATION');
-        }, [L]);
-    let J = i.useRef(!1);
+            U || P('REVIEW_APPLICATION');
+        }, [U]);
+    let z = i.useRef(!1);
     i.useEffect(() => {
-        J.current = !0;
-    }, [Z, S]),
+        z.current = !0;
+    }, [F, S]),
         i.useEffect(() => {
-            if (J.current && 0 !== y.length && 'REVIEW_APPLICATION' !== S) {
+            if (z.current && 0 !== Z.length && 'REVIEW_APPLICATION' !== S) {
                 var e;
-                (J.current = !1), m.Z.setSelectedGuildJoinRequest(P, y[0]), null === (e = N.current) || void 0 === e || e.scrollToTop();
+                (z.current = !1), m.Z.setSelectedGuildJoinRequest(E, Z[0]), null === (e = B.current) || void 0 === e || e.scrollToTop();
             }
-        }, [P, y, B, S]);
-    let O = i.useCallback(
+        }, [E, Z, y, S]);
+    let J = i.useCallback(
             async (e) => {
-                'REVIEW_APPLICATION' !== S && Z !== e && (m.Z.setSelectedSortOrder(P, e), await D(e, S));
+                'REVIEW_APPLICATION' !== S && F !== e && (m.Z.setSelectedSortOrder(E, e), await L(e, S));
             },
-            [S, Z, P, D]
+            [S, F, E, L]
         ),
-        V = i.useCallback(
+        O = i.useCallback(
             async (e) => {
                 S !== e &&
-                    (A(e),
+                    (P(e),
                     (0, o.Q2)({
-                        guildId: P,
-                        source: I.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+                        guildId: E,
+                        source: T.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
                         tab: e
                     }),
-                    m.Z.setSelectedGuildJoinRequest(P, null),
-                    'REVIEW_APPLICATION' !== e && (m.Z.setSelectedApplicationTab(P, e), await D(Z, e)));
+                    m.Z.setSelectedGuildJoinRequest(E, null),
+                    'REVIEW_APPLICATION' !== e && (m.Z.setSelectedApplicationTab(E, e), await L(F, e)));
             },
-            [S, Z, P, D]
+            [S, F, E, L]
         ),
-        z = i.useCallback(async () => {
+        W = i.useCallback(async () => {
             var e;
             if ('REVIEW_APPLICATION' === S) return;
-            let t = null === (e = N.current) || void 0 === e ? void 0 : e.getScrollerState();
-            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && (await D(Z, S));
-        }, [S, Z, D]),
-        W = null !== (n = null == F ? void 0 : F.hasFeature(I.oNc.CLAN)) && void 0 !== n && n;
+            let t = null === (e = B.current) || void 0 === e ? void 0 : e.getScrollerState();
+            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && (await L(F, S));
+        }, [S, F, L]),
+        G = null !== (n = null == k ? void 0 : k.hasFeature(T.oNc.CLAN)) && void 0 !== n && n;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(v.Z, {
+            (0, a.jsx)(b.Z, {
                 currentTab: S,
-                onTabItemSelect: V,
-                pendingGuildJoinRequestsTotal: k,
-                showSetupTab: W,
-                canActionJoinRequests: L,
+                onTabItemSelect: O,
+                pendingGuildJoinRequestsTotal: q,
+                showSetupTab: G,
+                canActionJoinRequests: U,
                 isSidebarOpen: w
             }),
             (0, a.jsx)('div', {
                 className: R.content,
                 children:
                     'REVIEW_APPLICATION' === S
-                        ? null != F
+                        ? null != k
                             ? (0, a.jsx)(l.zJl, {
                                   children: (0, a.jsxs)('div', {
                                       className: R.scrollerContent,
                                       children: [
-                                          (0, a.jsx)(E, { guild: F }),
+                                          (0, a.jsx)(N, { guild: k }),
                                           (0, a.jsx)(s.Z, {
-                                              guild: F,
+                                              guild: k,
                                               isClanContext: !0
                                           })
                                       ]
@@ -162,35 +162,35 @@ function P(e) {
                             : null
                         : (0, a.jsxs)(a.Fragment, {
                               children: [
-                                  L &&
-                                      U &&
+                                  U &&
+                                      M &&
                                       (0, a.jsx)(l.Wn, {
                                           messageType: l.QYI.WARNING,
                                           textVariant: 'text-sm/medium',
                                           className: R.headerWarning,
-                                          children: T.intl.format(T.t.o3mLzM, { count: null == F ? void 0 : F.maxMembers })
+                                          children: I.intl.format(I.t.o3mLzM, { count: null == k ? void 0 : k.maxMembers })
                                       }),
                                   (0, a.jsx)('div', {
                                       className: R.listControls,
-                                      children: (0, a.jsx)(C.Z, {
+                                      children: (0, a.jsx)(v.Z, {
                                           className: R.sortSelect,
-                                          sortOrder: Z,
-                                          onSortChange: O
+                                          sortOrder: F,
+                                          onSortChange: J
                                       })
                                   }),
                                   (0, a.jsx)(l.Text, {
                                       className: R.description,
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
-                                      children: T.intl.string(T.t.OCorGR)
+                                      children: I.intl.string(I.t.OCorGR)
                                   }),
-                                  (0, a.jsx)(j.Z, {
+                                  (0, a.jsx)(g.Z, {
                                       applicationStatus: S,
-                                      guildJoinRequests: y,
-                                      guildId: P,
-                                      onScroll: z,
-                                      listRef: N,
-                                      atMaxMemberCapacity: U
+                                      guildJoinRequests: Z,
+                                      guildId: E,
+                                      onScroll: W,
+                                      listRef: B,
+                                      atMaxMemberCapacity: M
                                   })
                               ]
                           })
@@ -200,7 +200,7 @@ function P(e) {
 }
 let w = i.memo(function (e) {
     let { guildId: t, isSidebarOpen: n } = e;
-    return (0, a.jsx)(P, {
+    return (0, a.jsx)(E, {
         guildId: t,
         isSidebarOpen: n
     });

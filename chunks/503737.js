@@ -4,14 +4,14 @@ n(192379);
 var l = n(481060),
     r = n(570140),
     s = n(468026),
-    o = n(317770),
-    a = n(981631),
+    a = n(317770),
+    o = n(981631),
     c = n(388032);
 let d = 'ActivityInviteManager',
     u = () => {
         r.Z.dispatch({ type: 'ACTIVITY_INVITE_MODAL_CLOSE' });
     };
-class _ extends o.Z {
+class _ extends a.Z {
     _initialize() {
         r.Z.subscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), r.Z.subscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
     }
@@ -19,8 +19,8 @@ class _ extends o.Z {
         r.Z.unsubscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), r.Z.unsubscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
     }
     handleModalOpen(e) {
-        let { activity: t, isPrivate: r, context: o } = e,
-            _ = o === a.IlC.POPOUT ? l.u1M : l.z1l;
+        let { activity: t, isPrivate: r, context: a } = e,
+            _ = a === o.IlC.POPOUT ? l.u1M : l.z1l;
         r
             ? (0, l.h7j)(
                   (e) =>

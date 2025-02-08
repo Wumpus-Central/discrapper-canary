@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => N });
 var i = n(209739),
     l = n.n(i),
     r = n(872810),
@@ -17,7 +17,7 @@ var i = n(209739),
     E = n(299570),
     I = n(989941),
     C = n(70722);
-function v() {
+function N() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (!(0, f.Z)(u.Z) || null != o.Z.getCurrentUserActiveStream()) return !1;
     let t = m.Z.getVoiceChannelId(),

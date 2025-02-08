@@ -1,36 +1,36 @@
 n.d(t, {
-    QC: () => x,
-    dd: () => f
+    QC: () => _,
+    dd: () => h
 }),
     n(47120);
-var i = n(200651);
+var o = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    s = n(481060),
-    o = n(454585),
-    a = n(476770),
-    u = n(388032),
-    c = n(484979);
-function d(e) {
-    let { terms: t, channelId: n, className: l } = e;
-    return (0, i.jsx)('div', {
-        className: r()(c.termsFieldBody, l),
+var r = n(120356),
+    i = n.n(r),
+    a = n(481060),
+    s = n(454585),
+    l = n(476770),
+    c = n(388032),
+    d = n(484979);
+function u(e) {
+    let { terms: t, channelId: n, className: r } = e;
+    return (0, o.jsx)('div', {
+        className: i()(d.termsFieldBody, r),
         children: t.map((e, t) =>
-            (0, i.jsxs)(
+            (0, o.jsxs)(
                 'div',
                 {
-                    className: c.termsRow,
+                    className: d.termsRow,
                     children: [
-                        (0, i.jsx)(s.Text, {
+                        (0, o.jsx)(a.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
                             children: ''.concat(t + 1, '.')
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, o.jsx)(a.Text, {
                             variant: 'text-md/normal',
-                            className: c.termsRowContent,
-                            children: o.Z.parseGuildVerificationFormRule(e, !0, { channelId: n })
+                            className: d.termsRowContent,
+                            children: s.Z.parseGuildVerificationFormRule(e, !0, { channelId: n })
                         })
                     ]
                 },
@@ -40,41 +40,41 @@ function d(e) {
     });
 }
 function m(e) {
-    let { onChange: t, checked: n, disabled: l } = e;
-    return (0, i.jsx)(s.XZJ, {
+    let { onChange: t, checked: n, disabled: r } = e;
+    return (0, o.jsx)(a.XZJ, {
         size: 24,
-        type: s.XZJ.Types.INVERTED,
+        type: a.XZJ.Types.INVERTED,
         value: n,
         onChange: t,
-        disabled: l,
+        disabled: r,
         style: { borderWidth: 2 },
-        className: c.checkbox,
-        children: (0, i.jsx)(s.Text, {
+        className: d.checkbox,
+        children: (0, o.jsx)(a.Text, {
             variant: 'text-md/normal',
-            children: u.intl.string(u.t['2EXfGB'])
+            children: c.intl.string(c.t['2EXfGB'])
         })
     });
 }
-function x(e) {
+function _(e) {
     let { formField: t } = e;
-    return (0, i.jsx)(a.Ih, {
-        icon: s.snC,
-        text: u.intl.string(u.t['2xbmoK']),
+    return (0, o.jsx)(l.Ih, {
+        icon: a.snC,
+        text: c.intl.string(c.t['2xbmoK']),
         meetsRequirement: !!t.response
     });
 }
-let f = (e) => {
-    let { channelId: t, formField: n, onChange: l } = e;
-    return (0, i.jsxs)(a.hK, {
-        title: u.intl.string(u.t.Q8OFNz),
+let h = (e) => {
+    let { channelId: t, formField: n, onChange: r } = e;
+    return (0, o.jsxs)(l.hK, {
+        title: c.intl.string(c.t.Q8OFNz),
         children: [
-            (0, i.jsx)(d, {
-                className: c.disabledFieldBackground,
+            (0, o.jsx)(u, {
+                className: d.disabledFieldBackground,
                 terms: n.values,
                 channelId: t
             }),
-            (0, i.jsx)(m, {
-                onChange: l,
+            (0, o.jsx)(m, {
+                onChange: r,
                 checked: n.response
             })
         ]

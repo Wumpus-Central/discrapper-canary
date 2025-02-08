@@ -15,30 +15,30 @@ function s(e, t, n) {
         e
     );
 }
-function o() {
+function a() {
     return { lastTriggered: 0 };
 }
-let a = o();
+let o = a();
 class c extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        a = {
-            ...o(),
+        o = {
+            ...a(),
             ...(null != e ? e : {})
         };
     }
     getState() {
-        return a;
+        return o;
     }
     cooldownIsActive() {
-        return a.lastTriggered >= Date.now() - 172800000;
+        return o.lastTriggered >= Date.now() - 172800000;
     }
 }
 s(c, 'displayName', 'HDStreamingViewerStore'), s(c, 'persistKey', 'HDStreamingViewerStore');
 let d = new c(r.Z, {
     LOGOUT: function () {
-        a = o();
+        o = a();
     },
     HD_STREAMING_VIEWER_UPDATE_LAST_TRIGGERED: function (e) {
-        a.lastTriggered = Date.now();
+        o.lastTriggered = Date.now();
     }
 });

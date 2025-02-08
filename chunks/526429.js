@@ -1,22 +1,22 @@
-i.d(t, { Z: () => m }), i(653041), i(47120), i(392711);
-var r,
+r.d(t, { Z: () => A }), r(653041), r(47120), r(392711);
+var i,
     n,
     a,
-    l = i(442837),
-    s = i(570140),
-    o = i(823379),
-    c = i(128449),
-    d = i(388032);
-let u = null,
-    _ = [],
+    s = r(442837),
+    l = r(570140),
+    o = r(823379),
+    c = r(128449),
+    d = r(388032);
+let _ = null,
     E = [],
+    u = [],
     p = {};
-class I extends (r = l.ZP.Store) {
+class I extends (i = s.ZP.Store) {
     getPrimaryCategories() {
-        return _;
+        return E;
     }
     getDiscoveryCategories() {
-        let e = c.L3.map((e) => E.find((t) => t.categoryId === e)).filter(o.lm);
+        let e = c.L3.map((e) => u.find((t) => t.categoryId === e)).filter(o.lm);
         return [
             {
                 categoryId: c.Hk,
@@ -26,7 +26,7 @@ class I extends (r = l.ZP.Store) {
         ];
     }
     getClanDiscoveryCategories() {
-        let e = c.L3.map((e) => E.find((t) => t.categoryId === e)).filter(o.lm);
+        let e = c.L3.map((e) => u.find((t) => t.categoryId === e)).filter(o.lm);
         return [
             {
                 categoryId: c.Hk,
@@ -36,10 +36,10 @@ class I extends (r = l.ZP.Store) {
         ];
     }
     getAllCategories() {
-        return E;
+        return u;
     }
     getFetchedLocale() {
-        return u;
+        return _;
     }
     getCategoryName(e) {
         return e === c.Hk ? d.intl.string(d.t.Ym2Ri4) : p[e];
@@ -54,46 +54,46 @@ class I extends (r = l.ZP.Store) {
               writable: !0
           })
         : (I[n] = a);
-let m = new I(s.Z, {
+let A = new I(l.Z, {
     GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
         let t,
-            { categories: i, locale: r } = e,
+            { categories: r, locale: i } = e,
             n = [],
             a = [];
         if (
-            (i
+            (r
                 .sort((e, t) => (e.name < t.name ? -1 : 1))
                 .forEach((e) => {
-                    let { id: i, name: r, is_primary: l } = e;
-                    if (i !== c.o3) {
-                        if (i === c.dc) {
+                    let { id: r, name: i, is_primary: s } = e;
+                    if (r !== c.o3) {
+                        if (r === c.dc) {
                             t = {
-                                categoryId: i,
-                                name: r
+                                categoryId: r,
+                                name: i
                             };
                             return;
                         }
-                        !0 === l &&
+                        !0 === s &&
                             n.push({
-                                categoryId: i,
-                                name: r
+                                categoryId: r,
+                                name: i
                             }),
                             a.push({
-                                categoryId: i,
-                                name: r
+                                categoryId: r,
+                                name: i
                             }),
-                            (p[i] = r);
+                            (p[r] = i);
                     }
                 }),
             null != t)
         ) {
-            let { categoryId: e, name: i } = t;
+            let { categoryId: e, name: r } = t;
             n.push({
                 categoryId: e,
-                name: i
+                name: r
             }),
-                (p[e] = i);
+                (p[e] = r);
         }
-        (u = r), (_ = n), (E = a);
+        (_ = i), (E = n), (u = a);
     }
 });

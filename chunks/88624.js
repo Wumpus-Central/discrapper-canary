@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => _ });
 var i = n(200651);
 n(192379);
 var s = n(512722),
@@ -10,10 +10,10 @@ var s = n(512722),
     d = n(792423),
     u = n(674985),
     m = n(594174),
-    h = n(843200),
-    g = n(388032),
-    _ = n(906405);
-function x() {
+    g = n(843200),
+    h = n(388032),
+    x = n(906405);
+function _() {
     let {
         houseMembership: e,
         isClaimed: t,
@@ -31,24 +31,24 @@ function x() {
     });
     return (0, i.jsxs)(a.y5t, {
         component: (0, i.jsxs)('div', {
-            className: _.intro,
+            className: x.intro,
             children: [
                 (0, i.jsx)(a.X6q, {
                     variant: 'heading-xxl/semibold',
-                    className: _.introHeader,
-                    children: null == e ? g.intl.string(g.t.iZowCQ) : g.intl.string(g.t.e7fL7O)
+                    className: x.introHeader,
+                    children: null == e ? h.intl.string(h.t.iZowCQ) : h.intl.string(h.t.e7fL7O)
                 }),
                 (0, i.jsx)(a.Text, {
                     variant: 'text-lg/normal',
-                    children: g.intl.string(g.t['6FaVFB'])
+                    children: h.intl.string(h.t['6FaVFB'])
                 })
             ]
         }),
         children: [
-            (0, i.jsx)(h.Z, {
-                className: _.verificationNotice,
-                unclaimedNotice: g.intl.string(g.t.vZU8Ki),
-                unverifiedNotice: g.intl.string(g.t.T7TYEB)
+            (0, i.jsx)(g.Z, {
+                className: x.verificationNotice,
+                unclaimedNotice: h.intl.string(h.t.vZU8Ki),
+                unverifiedNotice: h.intl.string(h.t.T7TYEB)
             }),
             (0, i.jsx)(c.Z, {
                 houseMembership: e,

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => T }), n(653041), n(47120);
+n.d(t, { Z: () => C }), n(653041), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
     s = n.n(r),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     c = n(714338),
     d = n(585483),
     u = n(981631),
@@ -156,9 +156,9 @@ class I extends l.PureComponent {
     }
     render() {
         let { renderSecondary: e, offsetX: t, offsetY: n, animating: l, scale: r } = this.state,
-            o = [this.renderPrimary()];
+            a = [this.renderPrimary()];
         return (
-            e && o.push(this.renderSecondary(t, n)),
+            e && a.push(this.renderSecondary(t, n)),
             (0, i.jsx)('div', {
                 className: s()(_.container, { [_.animate]: l }),
                 style: {
@@ -166,7 +166,7 @@ class I extends l.PureComponent {
                     left: this.props.left,
                     transform: 'scale('.concat(r, ')')
                 },
-                children: o
+                children: a
             })
         );
     }
@@ -177,9 +177,9 @@ class I extends l.PureComponent {
             E(this, 'state', {
                 animating: !1,
                 renderSecondary: !1,
-                scale: a().random(0.6, 1, !0),
-                offsetX: a().random(0, 140, !1) - 70,
-                offsetY: a().random(0, 140, !1) - 70
+                scale: o().random(0.6, 1, !0),
+                offsetX: o().random(0, 140, !1) - 70,
+                offsetY: o().random(0, 140, !1) - 70
             }),
             E(this, 'done', () => {
                 this.props.onAnimationComplete(this.props.componentId);
@@ -234,8 +234,8 @@ class m extends l.PureComponent {
                             I,
                             {
                                 componentId: l,
-                                top: a().random(n - 100, n + 100, !1),
-                                left: a().random(t - 200, t + 200, !1),
+                                top: o().random(n - 100, n + 100, !1),
+                                left: o().random(t - 200, t + 200, !1),
                                 onAnimationComplete: this.removeExplosion
                             },
                             l
@@ -253,4 +253,4 @@ class m extends l.PureComponent {
             });
     }
 }
-let T = m;
+let C = m;

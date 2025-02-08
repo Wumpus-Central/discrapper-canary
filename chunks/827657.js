@@ -6,8 +6,8 @@ var n = l(200651),
     s = l(481060),
     r = l(994463),
     c = l(472596),
-    C = l(918192),
-    d = l(388032),
+    d = l(918192),
+    C = l(388032),
     u = l(720703);
 function m(e) {
     let { searchState: t } = e,
@@ -16,11 +16,11 @@ function m(e) {
                 [c.po.LOADING]: null,
                 [c.po.SUCCESS_STILL_INDEXING]: {
                     icon: (0, n.jsx)(r.Z, {}),
-                    message: d.intl.string(d.t.AXPbZm)
+                    message: C.intl.string(C.t.AXPbZm)
                 },
                 [c.po.SUCCESS_EMPTY]: {
-                    icon: (0, n.jsx)(C.Z, {}),
-                    message: d.intl.string(d.t['wdyR5+'])
+                    icon: (0, n.jsx)(d.Z, {}),
+                    message: C.intl.string(C.t['wdyR5+'])
                 },
                 [c.po.SUCCESS_FULL]: null
             }),

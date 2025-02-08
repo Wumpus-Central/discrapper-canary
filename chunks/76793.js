@@ -11,13 +11,13 @@ var c = n(630759),
 n(921157);
 var u = n(171368),
     m = n(594174),
-    h = n(51144),
-    g = n(388032),
-    _ = n(47074);
-function x(e) {
+    g = n(51144),
+    h = n(388032),
+    x = n(47074);
+function _(e) {
     let { userId: t, count: n } = e,
         d = (0, r.e7)([m.default], () => m.default.getUser(t)),
-        x = h.ZP.getFormattedName(d),
+        _ = g.ZP.getFormattedName(d),
         p = s.useCallback(() => {
             (0, c.Zn)(t);
         }, [t]),
@@ -27,36 +27,36 @@ function x(e) {
             (0, a.PR)(t);
         }, [t]),
         (0, i.jsxs)('div', {
-            className: _.section,
+            className: x.section,
             children: [
                 null != d &&
                     (0, i.jsx)(o.Z, {
-                        className: _.avatar,
+                        className: x.avatar,
                         user: d,
                         size: l.EFr.SIZE_40
                     }),
                 (0, i.jsxs)('div', {
-                    className: _.text,
+                    className: x.text,
                     children: [
                         (0, i.jsx)(l.P3F, {
-                            className: _.username,
+                            className: x.username,
                             onClick: E,
                             children: (0, i.jsx)(l.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'interactive-active',
-                                children: x
+                                children: _
                             })
                         }),
                         (0, i.jsx)(l.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: g.intl.format(g.t['/MBjYG'], { count: n })
+                            children: h.intl.format(h.t['/MBjYG'], { count: n })
                         })
                     ]
                 }),
                 (0, i.jsx)(l.P3F, {
                     onClick: p,
-                    className: _.sectionIconContainer,
+                    className: x.sectionIconContainer,
                     children: (0, i.jsx)(l.XHJ, { size: 'xs' })
                 })
             ]
@@ -73,12 +73,12 @@ function p(e) {
         className: t,
         children: [
             (0, i.jsxs)('div', {
-                className: _.text,
+                className: x.text,
                 children: [
                     (0, i.jsx)(l.Text, {
                         variant: 'text-sm/semibold',
                         color: 'interactive-active',
-                        children: g.intl.format(g.t.N4qBBA, { index: a + 1 })
+                        children: h.intl.format(h.t.N4qBBA, { index: a + 1 })
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-sm/medium',
@@ -88,7 +88,7 @@ function p(e) {
                 ]
             }),
             (0, i.jsx)(l.P3F, {
-                className: _.icon,
+                className: x.icon,
                 onClick: d,
                 children: (0, i.jsx)(l.Dio, {
                     size: 'md',
@@ -103,7 +103,7 @@ function E(e) {
         n = (0, d._)(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(x, {
+            (0, i.jsx)(_, {
                 userId: t,
                 count: n.length
             }),
@@ -113,12 +113,12 @@ function E(e) {
                     {
                         children: [
                             (0, i.jsx)(p, {
-                                className: _.row,
+                                className: x.row,
                                 userId: t,
                                 index: r,
                                 verification: e
                             }),
-                            r !== n.length - 1 && (0, i.jsx)('div', { className: _.divider })
+                            r !== n.length - 1 && (0, i.jsx)('div', { className: x.divider })
                         ]
                     },
                     ''.concat(r, '-').concat(e.timestamp)

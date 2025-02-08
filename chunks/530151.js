@@ -17,13 +17,13 @@ var i = n(200651),
     E = n(112724),
     I = n(812206),
     C = n(44315),
-    v = n(600164),
-    N = n(167533),
+    N = n(600164),
+    v = n(167533),
     T = n(925329),
     S = n(707409),
     Z = n(210887),
-    x = n(283595),
-    A = n(417363),
+    A = n(283595),
+    x = n(417363),
     b = n(941128),
     L = n(451478),
     y = n(424218),
@@ -240,8 +240,8 @@ class z extends l.PureComponent {
     }
     renderBody(e) {
         let { percent: t, foregroundColor: n, foregroundGradientColor: l, message: r } = e;
-        return (0, i.jsxs)(v.Z, {
-            direction: v.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(N.Z, {
+            direction: N.Z.Direction.VERTICAL,
             children: [
                 (0, i.jsx)(h.Exd, {
                     percent: t,
@@ -259,8 +259,8 @@ class z extends l.PureComponent {
     }
     renderStackedProgress(e) {
         let { percents: t, message: n } = e;
-        return (0, i.jsxs)(v.Z, {
-            direction: v.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(N.Z, {
+            direction: N.Z.Direction.VERTICAL,
             children: [
                 (0, i.jsx)(h.yGy, {
                     percents: t,
@@ -342,7 +342,7 @@ class z extends l.PureComponent {
     }
     renderProgressPatching() {
         return (0, i.jsx)(O.Z, {
-            getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
+            getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
         });
@@ -441,8 +441,8 @@ let W = () =>
             key: 'name',
             cellClassName: w.nameCell,
             render: (e) =>
-                (0, i.jsxs)(v.Z, {
-                    align: v.Z.Align.CENTER,
+                (0, i.jsxs)(N.Z, {
+                    align: N.Z.Align.CENTER,
                     children: [
                         (0, i.jsx)(T.Z, {
                             game: e.application,
@@ -486,8 +486,8 @@ let W = () =>
                         : null != e.state
                           ? e.state.type !== j.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, i.jsx)(K, { item: e }) : null != t && t.paused ? (0, i.jsx)(W, {}) : (0, i.jsx)(Y, { item: e })), (l = (0, i.jsx)(q, { item: e })))
                           : (l = (0, i.jsx)(q, { item: e })),
-                    (0, i.jsxs)(v.Z, {
-                        justify: v.Z.Justify.END,
+                    (0, i.jsxs)(N.Z, {
+                        justify: N.Z.Justify.END,
                         children: [n, l]
                     })
                 );
@@ -525,20 +525,20 @@ class Q extends l.PureComponent {
                               (0, i.jsx)(R.Z, {
                                   className: a()(w.headerCell, w.networkProgress),
                                   title: D.intl.string(D.t.ytoXKi),
-                                  getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesDownloaded,
+                                  getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesDownloaded,
                                   color: j.Ilk.GREEN_360,
                                   animate: l
                               }),
                               (0, i.jsx)(R.Z, {
                                   className: a()(w.headerCell, w.diskProgress),
                                   title: D.intl.string(D.t.SjohhI),
-                                  getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
+                                  getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
                                   color: j.Ilk.BLUE_345,
                                   animate: l
                               })
                           ]
                       }),
-                      (0, i.jsx)(N.Z, {
+                      (0, i.jsx)(v.Z, {
                           hasHeader: !1,
                           columns: X,
                           data: e,
@@ -598,7 +598,7 @@ function J(e, t, n, i) {
                     branchId: s,
                     state: c,
                     application: o,
-                    libraryApplication: x.Z.getLibraryApplication(a, s),
+                    libraryApplication: A.Z.getLibraryApplication(a, s),
                     finished: t,
                     index: r
                 }),
@@ -607,8 +607,8 @@ function J(e, t, n, i) {
     }, []);
 }
 let $ = (0, E.Z)(
-    c.ZP.connectStores([I.Z, A.Z, b.Z, Z.Z, L.Z], () => ({
-        applications: [...J(b.Z.activeItems, !1, I.Z, A.Z), ...J(b.Z.finishedItems, !0, I.Z, A.Z)],
+    c.ZP.connectStores([I.Z, x.Z, b.Z, Z.Z, L.Z], () => ({
+        applications: [...J(b.Z.activeItems, !1, I.Z, x.Z), ...J(b.Z.finishedItems, !0, I.Z, x.Z)],
         paused: b.Z.paused,
         isFocused: L.Z.isFocused(),
         theme: Z.Z.theme

@@ -1,4 +1,4 @@
-l.d(t, { Z: () => b });
+l.d(t, { Z: () => _ });
 var n = l(200651),
     a = l(192379),
     i = l(120356),
@@ -6,18 +6,18 @@ var n = l(200651),
     s = l(913527),
     r = l.n(s),
     c = l(399606),
-    C = l(481060),
-    d = l(740900),
+    d = l(481060),
+    C = l(740900),
     u = l(241559),
     m = l(893966),
     h = l(527379),
     x = l(388032),
     g = l(216412),
-    H = l(115251);
-function b(e) {
+    p = l(115251);
+function _(e) {
     let { guild: t, onSubmit: i } = e,
-        s = (0, c.e7)([m.Z], () => m.Z.getMembersCountByGuildId(t.id, d.R_.NEW_GUILD_MEMBER), [t.id]),
-        b = (0, c.e7)(
+        s = (0, c.e7)([m.Z], () => m.Z.getMembersCountByGuildId(t.id, C.R_.NEW_GUILD_MEMBER), [t.id]),
+        _ = (0, c.e7)(
             [m.Z],
             () => {
                 let e = m.Z.getNewMemberTimestamp(t.id);
@@ -25,40 +25,40 @@ function b(e) {
             },
             [t.id]
         ),
-        p = (0, c.e7)([m.Z], () => m.Z.hasDefaultSearchStateByGuildId(t.id), [t.id]),
-        _ = a.useCallback(() => {
+        b = (0, c.e7)([m.Z], () => m.Z.hasDefaultSearchStateByGuildId(t.id), [t.id]),
+        f = a.useCallback(() => {
             (0, h.YO)(t.id), null == i || i();
         }, [t.id, i]),
         j = a.useCallback(() => {
-            p
-                ? _()
-                : (0, C.ZDy)(async () => {
+            b
+                ? f()
+                : (0, d.ZDy)(async () => {
                       let { default: e } = await l.e('24478').then(l.bind(l, 319481));
                       return (t) =>
                           (0, n.jsx)(e, {
                               ...t,
-                              onConfirm: _
+                              onConfirm: f
                           });
                   });
-        }, [_, p]),
-        f = new Intl.NumberFormat(x.intl.currentLocale).format(s),
+        }, [f, b]),
+        H = new Intl.NumberFormat(x.intl.currentLocale).format(s),
         v = (0, u.nX)(t.id),
         N = (0, u.xC)(t.id),
         Z = a.useMemo(() => 1 + (v ? 1 : 0) + (N ? 1 : 0), [v, N]);
     return 0 === s
         ? null
         : (0, n.jsxs)('tr', {
-              className: o()(H.newMembersNotice),
+              className: o()(p.newMembersNotice),
               onClick: j,
               children: [
                   (0, n.jsx)('td', {
                       colSpan: 3,
-                      children: (0, n.jsx)(C.Text, {
+                      children: (0, n.jsx)(d.Text, {
                           variant: 'text-sm/normal',
                           color: 'always-white',
                           children: x.intl.format(x.t['/i5uJy'], {
-                              count: f,
-                              date: b
+                              count: H,
+                              date: _
                           })
                       })
                   }),
@@ -67,23 +67,23 @@ function b(e) {
                       colSpan: 2,
                       children: (0, n.jsx)('div', {
                           className: o()(g.actionCell),
-                          children: (0, n.jsx)(C.zxk, {
-                              size: C.zxk.Sizes.SMALL,
-                              color: C.zxk.Colors.TRANSPARENT,
-                              look: C.zxk.Looks.LINK,
-                              className: o()(H.memberNoticeActionButton),
-                              children: (0, n.jsxs)(C.Text, {
+                          children: (0, n.jsx)(d.zxk, {
+                              size: d.zxk.Sizes.SMALL,
+                              color: d.zxk.Colors.TRANSPARENT,
+                              look: d.zxk.Looks.LINK,
+                              className: o()(p.memberNoticeActionButton),
+                              children: (0, n.jsxs)(d.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'always-white',
-                                  className: o()(H.memberNoticeAction),
+                                  className: o()(p.memberNoticeAction),
                                   children: [
                                       (0, n.jsx)('div', { children: x.intl.string(x.t.rkyOzM) }),
-                                      (0, n.jsx)(C.tBG, {
+                                      (0, n.jsx)(d.tBG, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 20,
                                           height: 20,
-                                          className: o()(H.memberNoticeActionIcon)
+                                          className: o()(p.memberNoticeActionIcon)
                                       })
                                   ]
                               })

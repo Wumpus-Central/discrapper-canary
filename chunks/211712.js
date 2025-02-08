@@ -1,6 +1,6 @@
 n.d(t, {
-    J2: () => g,
-    _h: () => _
+    J2: () => h,
+    _h: () => x
 });
 var i = n(388032),
     s = n(201016),
@@ -12,8 +12,8 @@ var i = n(388032),
     d = n(808236),
     u = n(265665),
     m = n(181793),
-    h = n(338430);
-let g = [
+    g = n(338430);
+let h = [
     {
         presetName: 'above_the_clouds',
         presetBackgroundUrl: c.Z,
@@ -43,12 +43,12 @@ let g = [
     },
     {
         presetName: 'neon_space',
-        presetBackgroundUrl: h.Z,
+        presetBackgroundUrl: g.Z,
         themeColors: [6094952, 1007678],
         bannerImageUrl: o.Z
     }
 ];
-function _(e) {
+function x(e) {
     switch (e) {
         case 'above_the_clouds':
             return i.intl.string(i.t['TFc+iI']);

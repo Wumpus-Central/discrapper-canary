@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(240872),
     u = n(23645),
     m = n(712364),
-    h = n(279837),
-    g = n(600164),
-    _ = n(144114),
-    x = n(921801),
+    g = n(279837),
+    h = n(600164),
+    x = n(144114),
+    _ = n(921801),
     p = n(607018),
     E = n(778764),
     C = n(314897),
     f = n(325067),
     T = n(594174),
     N = n(572004),
-    S = n(287880),
-    I = n(714565),
+    I = n(287880),
+    S = n(714565),
     b = n(202858),
     v = n(726985),
     j = n(981631),
@@ -101,7 +101,7 @@ class Z extends s.PureComponent {
             });
         }
         if (a)
-            e = (0, i.jsx)(g.Z, {
+            e = (0, i.jsx)(h.Z, {
                 className: l ? '' : P.marginTop8,
                 children: (0, i.jsx)(o.zxk, {
                     color: o.zxk.Colors.RED,
@@ -113,8 +113,8 @@ class Z extends s.PureComponent {
                 })
             });
         else {
-            let t = (0, I.c)(s);
-            e = (0, i.jsxs)(g.Z, {
+            let t = (0, S.c)(s);
+            e = (0, i.jsxs)(h.Z, {
                 className: l ? '' : P.marginTop8,
                 children: [
                     (0, i.jsx)(o.zxk, {
@@ -136,7 +136,7 @@ class Z extends s.PureComponent {
                 ]
             });
         }
-        return (0, i.jsx)(x.F, {
+        return (0, i.jsx)(_.F, {
             setting: v.s6.ACCOUNT_SMS_BACKUP,
             children: (0, i.jsxs)(o.hjN, {
                 className: P.marginTop40,
@@ -155,7 +155,7 @@ class Z extends s.PureComponent {
     renderEnabled() {
         let e;
         let { backupCodes: t } = this.props,
-            n = (0, i.jsx)(x.F, {
+            n = (0, i.jsx)(_.F, {
                 setting: v.s6.ACCOUNT_VIEW_BACKUP_CODES,
                 children: (0, i.jsx)(o.zxk, {
                     onClick: this.sendMFABackupCodesVerificationKeyEmail,
@@ -182,15 +182,15 @@ class Z extends s.PureComponent {
                         className: P.marginBottom20,
                         children: O.intl.format(O.t.OhmvYm, {})
                     }),
-                    (0, i.jsxs)(g.Z, {
+                    (0, i.jsxs)(h.Z, {
                         children: [
-                            (0, i.jsx)(g.Z.Child, {
+                            (0, i.jsx)(h.Z.Child, {
                                 children: (0, i.jsx)('ul', {
                                     className: R.checkboxGroup,
                                     children: s(t.slice(0, t.length / 2))
                                 })
                             }),
-                            (0, i.jsx)(g.Z.Child, {
+                            (0, i.jsx)(h.Z.Child, {
                                 children: (0, i.jsx)('ul', {
                                     className: R.checkboxGroup,
                                     children: s(t.slice(t.length / 2))
@@ -218,19 +218,19 @@ class Z extends s.PureComponent {
                     className: P.marginBottom20,
                     children: O.intl.string(O.t.bQwxiY)
                 }),
-                (0, i.jsxs)(g.Z, {
-                    justify: g.Z.Justify.START,
+                (0, i.jsxs)(h.Z, {
+                    justify: h.Z.Justify.START,
                     className: P.marginBottom20,
                     children: [
-                        (0, i.jsx)(g.Z.Child, {
+                        (0, i.jsx)(h.Z.Child, {
                             wrap: !0,
                             grow: 0,
                             children: n
                         }),
-                        (0, i.jsxs)(g.Z.Child, {
+                        (0, i.jsxs)(h.Z.Child, {
                             wrap: !0,
                             children: [
-                                (0, i.jsx)(x.F, {
+                                (0, i.jsx)(_.F, {
                                     setting: v.s6.ACCOUNT_REMOVE_2FA,
                                     children: (0, i.jsx)(o.zxk, {
                                         onClick: this.handleDisableMFA,
@@ -240,7 +240,7 @@ class Z extends s.PureComponent {
                                         children: O.intl.string(O.t['D+aE7u'])
                                     })
                                 }),
-                                (0, i.jsx)(x.F, {
+                                (0, i.jsx)(_.F, {
                                     setting: v.s6.ACCOUNT_ENABLE_2FA,
                                     children: (0, i.jsx)(o.zxk, {
                                         onClick: b.ZP.enableMFA,
@@ -254,7 +254,7 @@ class Z extends s.PureComponent {
                 }),
                 e,
                 this.renderMFASMS(),
-                (0, i.jsx)(x.F, {
+                (0, i.jsx)(_.F, {
                     setting: v.s6.ACCOUNT_SECURITY_KEYS,
                     children: (0, i.jsx)(E.Z, {})
                 })
@@ -283,7 +283,7 @@ class Z extends s.PureComponent {
     }
     render() {
         let { currentUser: e } = this.props;
-        return S.uZ
+        return I.uZ
             ? e.verified
                 ? e.mfaEnabled
                     ? this.renderEnabled()
@@ -308,7 +308,7 @@ class Z extends s.PureComponent {
         (0, o.h7j)(
             (t) =>
                 (0, i.jsx)(p.default, {
-                    reason: _.L.USER_SETTINGS_UPDATE,
+                    reason: x.L.USER_SETTINGS_UPDATE,
                     ...t,
                     ...e
                 }),
@@ -338,7 +338,7 @@ class Z extends s.PureComponent {
             }),
             D(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
                 (0, o.h7j)((e) =>
-                    (0, i.jsx)(h.default, {
+                    (0, i.jsx)(g.default, {
                         ...e,
                         handleSubmit: (e) =>
                             c.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
@@ -386,7 +386,7 @@ class Z extends s.PureComponent {
                 let { currentUser: e } = this.props,
                     t = () => {
                         (0, o.h7j)((e) =>
-                            (0, i.jsx)(h.default, {
+                            (0, i.jsx)(g.default, {
                                 ...e,
                                 handleSubmit: c.Z.enableSMS,
                                 title: O.intl.string(O.t.DZQe29)
@@ -397,7 +397,7 @@ class Z extends s.PureComponent {
             }),
             D(this, 'handleDisableSMS', () => {
                 (0, o.h7j)((e) =>
-                    (0, i.jsx)(h.default, {
+                    (0, i.jsx)(g.default, {
                         ...e,
                         handleSubmit: c.Z.disableSMS,
                         title: O.intl.string(O.t.KLWnio),

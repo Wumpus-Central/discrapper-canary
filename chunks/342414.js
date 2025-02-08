@@ -10,18 +10,18 @@ var s = n(120356),
     d = n(927359),
     u = n(975298),
     m = n(125529),
-    h = n(78839),
-    g = n(975104),
-    _ = n(63063),
-    x = n(775412),
+    g = n(78839),
+    h = n(975104),
+    x = n(63063),
+    _ = n(775412),
     p = n(520540),
     E = n(501862),
     C = n(533525),
     f = n(197115),
     T = n(823188),
     N = n(184176),
-    S = n(938736),
-    I = n(386733),
+    I = n(938736),
+    S = n(386733),
     b = n(474936),
     v = n(981631),
     j = n(388032),
@@ -101,7 +101,7 @@ let P = (e) => {
                                         isGift: !0
                                     })
                                 }),
-                            (0, i.jsx)(I.Z, {})
+                            (0, i.jsx)(S.Z, {})
                         ]
                     })
                 })
@@ -138,25 +138,25 @@ let P = (e) => {
             ]
         });
     },
-    [Z, k] = (0, g.Z)(),
+    [Z, k] = (0, h.Z)(),
     L = (e) => {
         let { className: t, location: n } = e,
             { analyticsLocations: s } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
-            a = (0, l.e7)([h.ZP], () => h.ZP.inReverseTrial()),
-            g = (0, x._O)(),
+            a = (0, l.e7)([g.ZP], () => g.ZP.inReverseTrial()),
+            h = (0, _._O)(),
             p = j.intl.string(j.t.qYKftb),
             f = (0, C.b)(n),
-            N = (0, S.pn)(n),
-            I = (0, i.jsx)(P, { className: t }),
+            N = (0, I.pn)(n),
+            S = (0, i.jsx)(P, { className: t }),
             O = j.intl.string(j.t.ifwQZW),
             R = !1,
             { fractionalState: k, endsAt: L } = (0, u.Z)(),
             B = (0, d.Z)(L, d.a.ENDS_IN);
-        a ? ((O = j.intl.string(j.t.ifwQZW)), (I = (0, i.jsx)(y, {}))) : (f || N) && ((p = j.intl.string(j.t.qYKftb)), (O = j.intl.string(j.t.ifwQZW)), (I = (0, i.jsx)(D, { location: n })));
+        a ? ((O = j.intl.string(j.t.ifwQZW)), (S = (0, i.jsx)(y, {}))) : (f || N) && ((p = j.intl.string(j.t.qYKftb)), (O = j.intl.string(j.t.ifwQZW)), (S = (0, i.jsx)(D, { location: n })));
         let M = null;
         if (k !== b.a$.NONE) {
-            (g = !0), (p = j.intl.string(j.t.vaqFvb)), (R = !0);
-            let e = j.intl.format(j.t['yR+oDA'], { helpCenterLink: _.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) });
+            (h = !0), (p = j.intl.string(j.t.vaqFvb)), (R = !0);
+            let e = j.intl.format(j.t['yR+oDA'], { helpCenterLink: x.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) });
             M = (0, i.jsx)(m.Z, {
                 text: e,
                 'aria-label': e.toString(),
@@ -174,7 +174,7 @@ let P = (e) => {
             });
         }
         let w = {
-                className: r()(A.trialPill, { [A.hidden]: !g }),
+                className: r()(A.trialPill, { [A.hidden]: !h }),
                 text: p,
                 colorOptions: T.VE.PREMIUM_TIER_2_WHITE_FILL
             },
@@ -192,7 +192,7 @@ let P = (e) => {
                     headingTop: V,
                     headingBottom: M
                 },
-                children: I
+                children: S
             })
         });
     };

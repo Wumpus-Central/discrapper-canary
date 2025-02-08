@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(47120);
+n.d(t, { Z: () => S }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(481060),
@@ -9,21 +9,21 @@ var i = n(200651),
     d = n(750832),
     u = n(976978),
     m = n(695346),
-    h = n(639814),
-    g = n(838436),
-    _ = n(51331),
-    x = n(922628),
+    g = n(639814),
+    h = n(838436),
+    x = n(51331),
+    _ = n(922628),
     p = n(703115),
     E = n(526761),
     C = n(726985),
     f = n(736530),
     T = n(981631),
     N = n(388032);
-function S(e) {
+function I(e) {
     let { ingress: t, guildId: n } = e,
-        E = (0, h.c_)(),
-        S = m.h2.useSetting().includes(n),
-        I = (0, u.q)(),
+        E = (0, g.c_)(),
+        I = m.h2.useSetting().includes(n),
+        S = (0, u.q)(),
         b = (0, d.nS)('ServerSpecificDMSetting'),
         v = s.useCallback(
             (e) => {
@@ -46,7 +46,7 @@ function S(e) {
         });
     }
     let A = (e) => {
-        (0, x.V)({
+        (0, _.V)({
             header: N.intl.string(N.t['uUr+GR']),
             body: N.intl.string(N.t.hjGJBg),
             confirmText: N.intl.string(N.t.gm1Ven),
@@ -60,30 +60,30 @@ function S(e) {
             }
         });
     };
-    return (0, i.jsx)(g.U, {
+    return (0, i.jsx)(h.U, {
         setting: C.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
         children:
             n === f.T
-                ? (0, i.jsx)(_.Z, {
+                ? (0, i.jsx)(x.Z, {
                       title: N.intl.string(N.t.RAQUSE),
                       note: N.intl.string(N.t.wbYDfX),
-                      value: !I,
+                      value: !S,
                       onChange: (e) => {
                           !b && A(!e);
                       }
                   })
-                : (0, i.jsx)(_.Z, {
+                : (0, i.jsx)(x.Z, {
                       title: N.intl.string(N.t.RAQUSE),
                       note: E ? N.intl.string(N.t.V0ka0d) : N.intl.string(N.t.G7c3Xl),
-                      value: !S,
+                      value: !I,
                       onChange: v
                   })
     });
 }
-function I(e) {
+function S(e) {
     let { ingress: t = E.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
-        s = (0, h.is)();
-    return (0, i.jsx)(S, {
+        s = (0, g.is)();
+    return (0, i.jsx)(I, {
         ingress: t,
         guildId: null != n ? n : s
     });

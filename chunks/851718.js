@@ -10,17 +10,17 @@ var i = n(200651),
     u = n(388032);
 function m(e) {
     let { subscriptions: t, updateHeader: n } = e,
-        [m, h] = s.useState({ route: c.j.HOME }),
-        { route: g } = m,
-        _ = () => {
-            h({ route: c.j.HOME });
+        [m, g] = s.useState({ route: c.j.HOME }),
+        { route: h } = m,
+        x = () => {
+            g({ route: c.j.HOME });
         },
-        x = (e) => {
-            h({
+        _ = (e) => {
+            g({
                 route: c.j.SWITCH_APP_PLANS,
                 ...e
             }),
-                n(u.intl.string(u.t.VFqtkJ), _);
+                n(u.intl.string(u.t.VFqtkJ), x);
         },
         [p, E] = s.useState({});
     s.useEffect(() => {
@@ -49,7 +49,7 @@ function m(e) {
     }, [t]);
     let { loadState: C } = (0, a.qz)(),
         f = C !== a.jd.LOADED;
-    switch (g) {
+    switch (h) {
         case c.j.HOME:
             return (0, i.jsx)(i.Fragment, {
                 children: t.map((e) => {
@@ -58,7 +58,7 @@ function m(e) {
                         o.Z,
                         {
                             subscription: e,
-                            navigateToSwitchPlan: x,
+                            navigateToSwitchPlan: _,
                             loadingState: f ? o.G.LOADING : null !== (t = p[e.id]) && void 0 !== t ? t : o.G.LOADING
                         },
                         e.id
@@ -69,9 +69,9 @@ function m(e) {
             let { route: T, ...N } = m;
             return (0, i.jsx)(d.Z, {
                 ...N,
-                navigateToHome: _
+                navigateToHome: x
             });
         default:
-            (0, r.vE)(g);
+            (0, r.vE)(h);
     }
 }

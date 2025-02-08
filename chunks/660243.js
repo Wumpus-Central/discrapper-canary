@@ -1,4 +1,4 @@
-n.d(t, { r: () => x });
+n.d(t, { r: () => _ });
 var i = n(200651);
 n(192379);
 var s = n(793030),
@@ -10,10 +10,10 @@ var s = n(793030),
     d = n(981631),
     u = n(388032),
     m = n(707288),
-    h = n(146036),
-    g = n(510176);
-function _(e) {
-    let { headerAssetSrc: t, headerText: n, description: l, assets: a = [], assetCount: c = 0, disabled: d = !1, onClick: h } = e;
+    g = n(146036),
+    h = n(510176);
+function x(e) {
+    let { headerAssetSrc: t, headerText: n, description: l, assets: a = [], assetCount: c = 0, disabled: d = !1, onClick: g } = e;
     return (0, i.jsxs)('div', {
         className: m.container,
         children: [
@@ -64,7 +64,7 @@ function _(e) {
                                       size: o.F.MEDIUM
                                   }),
                                   (0, i.jsx)(r.zxk, {
-                                      onClick: h,
+                                      onClick: g,
                                       color: r.zxk.Colors.PRIMARY,
                                       children: 'Manage'
                                   })
@@ -75,15 +75,15 @@ function _(e) {
         ]
     });
 }
-function x() {
+function _() {
     let e = !a.G6.useSetting(),
         { assets: t, count: n } = (0, c.oF)(),
         { assets: s, count: r } = (0, c.hs)();
     return (0, i.jsxs)('div', {
         className: m.cardsContainer,
         children: [
-            (0, i.jsx)(_, {
-                headerAssetSrc: h,
+            (0, i.jsx)(x, {
+                headerAssetSrc: g,
                 headerText: u.intl.string(u.t.URyqtL),
                 description: u.intl.string(u.t['3uTjaG']),
                 assets: t,
@@ -91,8 +91,8 @@ function x() {
                 onClick: () => l.Z.open(d.oAB.REGISTERED_GAMES),
                 disabled: e
             }),
-            (0, i.jsx)(_, {
-                headerAssetSrc: g,
+            (0, i.jsx)(x, {
+                headerAssetSrc: h,
                 headerText: u.intl.string(u.t['3fe7U1']),
                 description: u.intl.string(u.t.IoN1am),
                 assets: s,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
 var s = n(120356),
@@ -10,10 +10,10 @@ var s = n(120356),
     d = n(122021),
     u = n(231757),
     m = n(626135),
-    h = n(981631),
-    g = n(915976);
-let _ = (e) => {
-    let { disabled: t = !1, type: n, className: s, innerClassName: _, onConnect: x } = e,
+    g = n(981631),
+    h = n(915976);
+let x = (e) => {
+    let { disabled: t = !1, type: n, className: s, innerClassName: x, onConnect: _ } = e,
         p = (0, o.ZP)(),
         E = c.Z.get((0, d.rR)(n));
     return (0, i.jsx)(a.ua7, {
@@ -21,18 +21,18 @@ let _ = (e) => {
         children: (e) => {
             let { onMouseEnter: o, onMouseLeave: d } = e;
             return (0, i.jsx)('div', {
-                className: r()(g.wrapper, s),
+                className: r()(h.wrapper, s),
                 children: (0, i.jsx)(a.tEY, {
                     children: (0, i.jsx)('button', {
                         onMouseEnter: o,
                         onMouseLeave: d,
-                        className: r()(g.inner, _),
+                        className: r()(h.inner, x),
                         type: 'button',
                         disabled: t,
                         style: { backgroundImage: "url('".concat((0, l.wj)(p) ? E.icon.darkSVG : E.icon.lightSVG, "')") },
                         onClick:
-                            null != x
-                                ? x
+                            null != _
+                                ? _
                                 : () =>
                                       (function (e) {
                                           let t = c.Z.get(e);
@@ -40,7 +40,7 @@ let _ = (e) => {
                                               platformType: t.type,
                                               location: 'Friends List'
                                           }),
-                                              m.default.track(h.rMx.ACCOUNT_LINK_STEP, {
+                                              m.default.track(g.rMx.ACCOUNT_LINK_STEP, {
                                                   previous_step: 'desktop connections',
                                                   current_step: 'desktop oauth',
                                                   platform_type: t.type

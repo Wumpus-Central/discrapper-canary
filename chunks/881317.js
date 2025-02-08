@@ -1,8 +1,8 @@
-n.d(t, { Z: () => N }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(990547),
-    a = n(442837),
+    a = n(990547),
+    l = n(442837),
     o = n(481060),
     s = n(893776),
     c = n(232567),
@@ -11,26 +11,26 @@ var i = n(200651),
     h = n(82554),
     _ = n(726521),
     g = n(185625),
-    p = n(314897),
-    m = n(63063),
+    m = n(314897),
+    p = n(63063),
     f = n(981631),
-    x = n(388032),
-    E = n(57717),
+    E = n(388032),
+    x = n(57717),
     I = n(232186);
-a.ZP.initialize();
-let v = (e) => {
+l.ZP.initialize();
+let C = (e) => {
         let { title: t, menuType: r } = e,
-            a = () => {
+            l = () => {
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('93288').then(n.bind(n, 396410));
                     return (t) =>
                         (0, i.jsx)(e, {
                             ...t,
                             onSuccess: s,
-                            headerText: x.intl.string(x.t.ZLRYGR),
-                            confirmButtonText: x.intl.string(x.t.PDTjLC),
+                            headerText: E.intl.string(E.t.ZLRYGR),
+                            confirmButtonText: E.intl.string(E.t.PDTjLC),
                             confirmButtonColor: o.zxk.Colors.BRAND,
-                            impressionName: l.ImpressionNames.URF_ENTER_EMAIL
+                            impressionName: a.ImpressionNames.URF_ENTER_EMAIL
                         });
                 });
             },
@@ -38,7 +38,7 @@ let v = (e) => {
                 let t = async () => {
                         await (0, g.yL)(r, e);
                     },
-                    a = async (t) => await (0, g.RV)(r, e, t),
+                    l = async (t) => await (0, g.RV)(r, e, t),
                     s = (e) => {
                         let t = null == e ? void 0 : e.token;
                         r === h.BM.MESSAGE ? (0, _.eE)(t) : r === h.BM.USER && (0, _.JM)(t);
@@ -49,39 +49,39 @@ let v = (e) => {
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                onFormSubmit: a,
+                                onFormSubmit: l,
                                 onResend: t,
                                 onSuccess: s,
-                                headerText: x.intl.string(x.t.H3Q7U1),
-                                confirmButtonText: x.intl.string(x.t['13ofGh']),
+                                headerText: E.intl.string(E.t.H3Q7U1),
+                                confirmButtonText: E.intl.string(E.t['13ofGh']),
                                 confirmButtonColor: o.zxk.Colors.BRAND,
-                                impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE
+                                impressionName: a.ImpressionNames.URF_CONFIRM_EMAIL_CODE
                             });
                     });
             };
         return (0, i.jsx)('div', {
-            className: E.buttonColumn,
+            className: x.buttonColumn,
             children: (0, i.jsx)(o.zxk, {
                 className: I.__invalid_reportButton,
                 fullWidth: !0,
                 color: o.zxk.Colors.BRAND,
-                onClick: () => a(),
+                onClick: () => l(),
                 children: t
             })
         });
     },
-    N = () => {
+    v = () => {
         let [e, t] = r.useState(!0),
-            [n, l] = r.useState(!1),
-            _ = (0, a.e7)([p.default], () => p.default.isAuthenticated()),
-            N = (0, a.e7)([u.Z], () => u.Z.hasLoadedExperiments),
-            b = () => {
+            [n, a] = r.useState(!1),
+            _ = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
+            v = (0, l.e7)([u.Z], () => u.Z.hasLoadedExperiments),
+            N = () => {
                 (0, g.qJ)()
                     .then(() => {
-                        t(!1), l(!0);
+                        t(!1), a(!0);
                     })
                     .catch(() => {
-                        t(!1), l(!1);
+                        t(!1), a(!1);
                     });
             };
         return (
@@ -90,37 +90,37 @@ let v = (e) => {
                     ? (t(!0),
                       c
                           .k({ withAnalyticsToken: !0 })
-                          .then(() => b())
+                          .then(() => N())
                           .catch(() => t(!1)))
-                    : b();
+                    : N();
             }, [_]),
             r.useEffect(() => {
                 (async () => {
-                    N || (await s.Z.getLocationMetadata(), s.Z.getExperiments());
+                    v || (await s.Z.getLocationMetadata(), s.Z.getExperiments());
                 })();
-            }, [N]),
-            e || !N
+            }, [v]),
+            e || !v
                 ? (0, i.jsx)(d.ZP, { children: (0, i.jsx)(o.$jN, {}) })
                 : n &&
                   (0, i.jsxs)(d.ZP, {
                       children: [
                           (0, i.jsx)(d.Dx, {
                               className: I.marginBottom8,
-                              children: x.intl.string(x.t.Z11w19)
+                              children: E.intl.string(E.t.Z11w19)
                           }),
                           (0, i.jsx)(d.DK, {
                               className: I.marginBottom8,
-                              children: x.intl.format(x.t['532l+v'], { supportURL: m.Z.getArticleURL(f.BhN.COPYRIGHT_AND_IP_POLICY) })
+                              children: E.intl.format(E.t['532l+v'], { supportURL: p.Z.getArticleURL(f.BhN.COPYRIGHT_AND_IP_POLICY) })
                           }),
                           (0, i.jsxs)('div', {
-                              className: E.container,
+                              className: x.container,
                               children: [
-                                  (0, i.jsx)(v, {
-                                      title: x.intl.string(x.t.fuqnBA),
+                                  (0, i.jsx)(C, {
+                                      title: E.intl.string(E.t.fuqnBA),
                                       menuType: h.BM.MESSAGE
                                   }),
-                                  (0, i.jsx)(v, {
-                                      title: x.intl.string(x.t.F4jrRU),
+                                  (0, i.jsx)(C, {
+                                      title: E.intl.string(E.t.F4jrRU),
                                       menuType: h.BM.USER
                                   })
                               ]

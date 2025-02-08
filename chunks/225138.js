@@ -30,8 +30,8 @@ var l = n(374470),
     j = n(536639),
     b = n(720904),
     A = n(88791),
-    P = n(385302),
-    C = n(873699),
+    C = n(385302),
+    P = n(873699),
     y = n(134323),
     D = n(429260),
     L = n(1626),
@@ -93,8 +93,8 @@ function K(e) {
         ec = (0, A.Z)(t),
         eu = (0, x.Z)(t, n),
         eg = (0, S.Z)(t, n),
-        ef = (0, P.Z)(t, n),
-        em = (0, C.Z)(t, n),
+        ef = (0, C.Z)(t, n),
+        em = (0, P.Z)(t, n),
         eh = (0, I.Z)(t, n),
         eE = (0, D.Z)(t),
         ev = (0, D.e)(t),
@@ -114,8 +114,8 @@ function K(e) {
         ej = (0, E.Z)(t),
         eb = (0, N.Z)(t),
         eA = (0, w.Z)(t),
-        eP = (0, v.Z)(t, n),
-        eC = (0, m.Z)({
+        eC = (0, v.Z)(t, n),
+        eP = (0, m.Z)({
             commandType: r.yU.MESSAGE,
             commandTargetId: t.id,
             channel: n,
@@ -133,13 +133,13 @@ function K(e) {
             (0, i.jsx)(a.kSQ, { children: et }),
             (0, i.jsx)(a.kSQ, { children: en }),
             (0, i.jsxs)(a.kSQ, {
-                children: ['' === s ? ei : null, el, ec, eP]
+                children: ['' === s ? ei : null, el, ec, eC]
             }),
             (0, i.jsxs)(a.kSQ, {
                 children: [ea, ep, e_, eT]
             }),
             (0, i.jsxs)(a.kSQ, {
-                children: [eb, es, ej, eC, eo, ed, eu, eg, eZ, eD, ey]
+                children: [eb, es, ej, eP, eo, ed, eu, eg, eZ, eD, ey]
             }),
             (0, i.jsxs)(a.kSQ, {
                 children: [em, ef, eh, J && eE, J && ev]

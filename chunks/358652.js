@@ -10,11 +10,11 @@ var i,
     u = n(306680),
     h = n(944486),
     p = n(55589);
-let m = [],
-    g = new Set();
+let g = [],
+    m = new Set();
 function f() {
     let e = p.Z.getPrivateChannelIds().filter((e) => u.ZP.getMentionCount(e) > 0);
-    return e.length > 20 && (e.length = 20), !(0, c.EF)(e, m) && ((m = e), (g = new Set(e)), !0);
+    return e.length > 20 && (e.length = 20), !(0, c.EF)(e, g) && ((g = e), (m = new Set(e)), !0);
 }
 function _() {
     return f();
@@ -29,7 +29,7 @@ class C extends (i = a.ZP.Store) {
         this.waitFor(p.Z, d.Z, h.Z, u.ZP);
     }
     getUnreadPrivateChannelIds() {
-        return m;
+        return g;
     }
 }
 (r = 'PrivateChannelReadStateStore'),
@@ -55,7 +55,7 @@ let x = new C(o.Z, {
         let {
             channel: { id: t }
         } = e;
-        return !!g.has(t) && f();
+        return !!m.has(t) && f();
     },
     WINDOW_FOCUS: function () {
         let e = d.Z.getChannel(h.Z.getChannelId());

@@ -17,13 +17,13 @@ var i = n(200651),
     E = n(922611),
     I = n(699516),
     C = n(974042),
-    v = n(451478),
-    N = n(434184),
+    N = n(451478),
+    v = n(434184),
     T = n(701861),
     S = n(437314),
     Z = n(696577),
-    x = n(163417),
-    A = n(830880),
+    A = n(163417),
+    x = n(830880),
     b = n(492347),
     L = n(42575),
     y = n(617015),
@@ -59,7 +59,7 @@ let k = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, m.ZP)(h.Z.FRIENDS_LIST),
         { rows: r, section: c } = (0, s.cj)([C.ZP], () => C.ZP.getState()),
-        D = (0, s.e7)([v.Z], () => v.Z.isFocused()),
+        D = (0, s.e7)([N.Z], () => N.Z.isFocused()),
         { relationshipCount: k, hasBlockedOrIgnored: U } = (0, s.cj)([I.Z], () => ({
             relationshipCount: I.Z.getRelationshipCount(),
             hasBlockedOrIgnored: I.Z.getBlockedOrIgnoredIDs().length > 0
@@ -77,7 +77,7 @@ let k = function (e) {
             (e) => {
                 switch (c) {
                     case P.pJs.BLOCKED:
-                        return (0, i.jsx)(N.Z, {
+                        return (0, i.jsx)(v.Z, {
                             ...e,
                             isFocused: D
                         });
@@ -224,7 +224,7 @@ let k = function (e) {
         children: (0, i.jsxs)(u.Z, {
             section: P.jXE.FRIENDS_LIST,
             children: [
-                G && U && (0, i.jsx)(A.R, {}),
+                G && U && (0, i.jsx)(x.R, {}),
                 (0, i.jsx)(o.E1j, {
                     className: a()(R.searchBar, er ? R.searchEmptyState : null),
                     query: F[c],
@@ -232,7 +232,7 @@ let k = function (e) {
                     onClear: K,
                     size: o.E1j.Sizes.MEDIUM
                 }),
-                (0, i.jsx)(x.Z, {
+                (0, i.jsx)(A.Z, {
                     rows: $,
                     renderRow: W,
                     renderSection: ei,

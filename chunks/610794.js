@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(47120), n(773603);
+n.d(t, { Z: () => I }), n(47120), n(773603);
 var i = n(200651),
     s = n(192379),
     r = n(442837),
@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(726542),
     u = n(275759),
     m = n(231757),
-    h = n(888496),
-    g = n(706454),
-    _ = n(553795),
-    x = n(63063),
+    g = n(888496),
+    h = n(706454),
+    x = n(553795),
+    _ = n(63063),
     p = n(981631),
     E = n(856651),
     C = n(388032),
@@ -22,7 +22,7 @@ function T(e) {
     let { account: n, refreshed: l, handleRefresh: o } = e,
         [c, d] = s.useState(!1),
         m = null !== (t = n.metadata) && void 0 !== t ? t : {},
-        _ = (0, r.e7)([g.default], () => g.default.locale),
+        x = (0, r.e7)([h.default], () => h.default.locale),
         T = s.useCallback(async () => {
             d(!0);
             try {
@@ -34,35 +34,35 @@ function T(e) {
         N = null;
     switch (n.type) {
         case p.ABu.REDDIT:
-            N = (0, h.oP)(m, f.metadataItem);
+            N = (0, g.oP)(m, f.metadataItem);
             break;
         case p.ABu.STEAM:
-            N = (0, h.Dq)(m, f.metadataItem);
+            N = (0, g.Dq)(m, f.metadataItem);
             break;
         case p.ABu.TWITTER:
-            N = (0, h.rJ)(m, f.metadataItem);
+            N = (0, g.rJ)(m, f.metadataItem);
             break;
         case p.ABu.EBAY:
-            N = (0, h.ul)(m, f.metadataItem);
+            N = (0, g.ul)(m, f.metadataItem);
             break;
         case p.ABu.PAYPAL:
-            N = (0, h.li)(m, f.metadataItem);
+            N = (0, g.li)(m, f.metadataItem);
             break;
         case p.ABu.TIKTOK:
-            N = (0, h.hf)(m, f.metadataItem);
+            N = (0, g.hf)(m, f.metadataItem);
     }
-    let S = (0, u.FI)(m[E.PC.CREATED_AT], _),
-        I = null,
+    let I = (0, u.FI)(m[E.PC.CREATED_AT], x),
+        S = null,
         b = C.intl.string(C.t.wzzjk5);
     return (
         (null == N || 0 === N.length) &&
-            null == S &&
-            ((I = (0, i.jsx)(
+            null == I &&
+            ((S = (0, i.jsx)(
                 a.Text,
                 {
                     variant: 'text-xs/normal',
                     color: 'header-secondary',
-                    children: C.intl.format(C.t.Up2ni4, { helpdeskUrl: x.Z.getArticleURL(p.BhN.CONNECTION_DETAILS) })
+                    children: C.intl.format(C.t.Up2ni4, { helpdeskUrl: _.Z.getArticleURL(p.BhN.CONNECTION_DETAILS) })
                 },
                 'label'
             )),
@@ -71,7 +71,7 @@ function T(e) {
         (0, i.jsxs)('div', {
             className: f.metadataContainer,
             children: [
-                I,
+                S,
                 null == N
                     ? void 0
                     : N.map((e, t) =>
@@ -79,14 +79,14 @@ function T(e) {
                               children: [e, t < N.length - 1 ? (0, i.jsx)('span', { className: f.dot }) : null]
                           })
                       ),
-                null != N && N.length > 0 && null != S ? (0, i.jsx)('div', { className: f.dot }) : null,
-                null != S
+                null != N && N.length > 0 && null != I ? (0, i.jsx)('div', { className: f.dot }) : null,
+                null != I
                     ? (0, i.jsx)(
                           a.Text,
                           {
                               variant: 'text-xs/normal',
                               color: 'header-secondary',
-                              children: C.intl.format(C.t['9rfonp'], { date: S })
+                              children: C.intl.format(C.t['9rfonp'], { date: I })
                           },
                           'member-since'
                       )
@@ -112,11 +112,11 @@ function T(e) {
 }
 function N(e) {
     let { account: t, handleRefresh: n, refreshedAccountIds: r } = e,
-        [u, h] = s.useState(t.visibility),
-        [g, _] = s.useState(t.metadataVisibility),
-        x = (0, c.ZP)();
+        [u, g] = s.useState(t.visibility),
+        [h, x] = s.useState(t.metadataVisibility),
+        _ = (0, c.ZP)();
     s.useEffect(() => {
-        h(t.visibility), _(t.metadataVisibility);
+        g(t.visibility), x(t.metadataVisibility);
     }, [t]);
     let p = d.Z.get(t.type),
         E = !0 === p.hasMetadata;
@@ -128,7 +128,7 @@ function N(e) {
                     (0, i.jsx)('img', {
                         alt: p.name,
                         className: f.connectionIcon,
-                        src: (0, l.wj)(x) ? p.icon.darkSVG : p.icon.lightSVG
+                        src: (0, l.wj)(_) ? p.icon.darkSVG : p.icon.lightSVG
                     }),
                     (0, i.jsxs)('div', {
                         className: f.activitySettings,
@@ -141,14 +141,14 @@ function N(e) {
                                     let { verified: n } = t,
                                         i = e ? 1 : 0;
                                     if (e && !n) {
-                                        h(i),
+                                        g(i),
                                             (0, m.Z)({
                                                 platformType: t.type,
                                                 location: 'User Settings'
                                             });
                                         return;
                                     }
-                                    h(i), o.Z.setVisibility(t.type, t.id, i);
+                                    g(i), o.Z.setVisibility(t.type, t.id, i);
                                 },
                                 children: [
                                     (0, i.jsx)(a.Text, {
@@ -169,19 +169,19 @@ function N(e) {
                                     className: f.additionalDetailsSwitch,
                                     hideBorder: !0,
                                     disabled: 1 !== u || null == t.metadata,
-                                    value: 1 === g,
+                                    value: 1 === h,
                                     onChange: function (e) {
                                         let { verified: n } = t,
                                             i = e ? 1 : 0;
                                         if (e && !n) {
-                                            _(i),
+                                            x(i),
                                                 (0, m.Z)({
                                                     platformType: t.type,
                                                     location: 'User Settings'
                                                 });
                                             return;
                                         }
-                                        _(i), o.Z.setMetadataVisibility(t.type, t.id, i);
+                                        x(i), o.Z.setMetadataVisibility(t.type, t.id, i);
                                     },
                                     children: (0, i.jsx)(a.Text, {
                                         variant: 'text-md/normal',
@@ -197,8 +197,8 @@ function N(e) {
         ]
     });
 }
-function S() {
-    let e = (0, r.e7)([_.Z], () => _.Z.getAccounts()),
+function I() {
+    let e = (0, r.e7)([x.Z], () => x.Z.getAccounts()),
         t = s.useMemo(() => e.filter((e) => d.Z.isSupported(e.type)), [e]),
         [n, l] = s.useState([]),
         c = s.useCallback(

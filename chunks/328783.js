@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(931240),
     u = n(353093),
     m = n(170871),
-    h = n(981631),
-    g = n(388032),
-    _ = n(735696);
-let x = (0, a.hQ)(),
+    g = n(981631),
+    h = n(388032),
+    x = n(735696);
+let _ = (0, a.hQ)(),
     p = s.memo(function (e) {
         let { availableClans: t } = e,
             n = s.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
@@ -62,29 +62,29 @@ let x = (0, a.hQ)(),
                 },
                 [E]
             ),
-            f = s.useCallback((e) => (0, d.nE)(e, !0, h.Sbl.USER_SETTINGS), []),
+            f = s.useCallback((e) => (0, d.nE)(e, !0, g.Sbl.USER_SETTINGS), []),
             T = s.useCallback((e) => e === a, [a]),
             N = s.useCallback((e) => e, []),
-            S = s.useCallback(() => (0, d.nE)(null, !1), []);
+            I = s.useCallback(() => (0, d.nE)(null, !1), []);
         return (0, i.jsxs)(o.Z, {
-            title: g.intl.string(g.t.umdfaG),
-            titleId: x,
+            title: h.intl.string(h.t.umdfaG),
+            titleId: _,
             children: [
                 (0, i.jsx)(l.Text, {
-                    className: _.subtitle,
+                    className: x.subtitle,
                     variant: 'text-sm/normal',
-                    children: g.intl.string(g.t.Mrf7fX)
+                    children: h.intl.string(h.t.Mrf7fX)
                 }),
                 (0, i.jsx)(l.PhF, {
-                    className: _.select,
-                    optionClassName: _.selectPopout,
+                    className: x.select,
+                    optionClassName: x.selectPopout,
                     isSelected: T,
                     options: p,
                     select: f,
                     renderOptionValue: C,
                     renderOptionLabel: E,
                     serialize: N,
-                    clear: S,
+                    clear: I,
                     clearable: null != a
                 })
             ]

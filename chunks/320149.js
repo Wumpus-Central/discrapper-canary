@@ -17,19 +17,19 @@ var i = n(200651),
     E = n(933557),
     I = n(287746),
     C = n(388032),
-    v = n(837199),
-    N = n(215191);
+    N = n(837199),
+    v = n(215191);
 function T(e) {
     let { channel: t, baseChannelId: n } = e,
         T = (0, E.ZP)(t),
         S = (0, h.K)(),
         Z = (0, h.V)(),
-        x = (0, r.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
-        A = (0, r.e7)([u.Z], () => u.Z.isSpam(t.id)),
+        A = (0, r.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
+        x = (0, r.e7)([u.Z], () => u.Z.isSpam(t.id)),
         b = (0, p.V)(t.id, t.getRecipientId()),
         L = l.useCallback(() => {
-            _.Z.closeChannelSidebar(f.uZ), x && S && (0, g.Kh)(t.id), A && Z && (0, g.Kh)(t.id);
-        }, [t.id, A, Z, x, S]),
+            _.Z.closeChannelSidebar(f.uZ), A && S && (0, g.Kh)(t.id), x && Z && (0, g.Kh)(t.id);
+        }, [t.id, x, Z, A, S]),
         y = l.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
@@ -60,17 +60,17 @@ function T(e) {
                     inSidebar: !0
                 })
             }),
-            A &&
+            x &&
                 (0, i.jsxs)('div', {
-                    className: N.hamBanner,
+                    className: v.hamBanner,
                     children: [
                         (0, i.jsx)(a.Text, {
-                            className: N.__invalid_hamBannerText,
+                            className: v.__invalid_hamBannerText,
                             variant: 'text-sm/normal',
                             children: C.intl.string(C.t.XVOKgo)
                         }),
                         (0, i.jsx)(a.zxk, {
-                            className: N.hamBannerButton,
+                            className: v.hamBannerButton,
                             size: a.PhG.SMALL,
                             onClick: () => P(t, b),
                             children: C.intl.string(C.t.koqL3d)
@@ -78,7 +78,7 @@ function T(e) {
                     ]
                 }),
             (0, i.jsx)('div', {
-                className: v.chat,
+                className: N.chat,
                 children: (0, i.jsx)(
                     I.Z,
                     {

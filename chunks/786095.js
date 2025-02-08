@@ -23,12 +23,12 @@ function S(e, t) {
         [_, T] = l.useState(!1),
         [M, j] = (0, o.I2)(t),
         { rulesByTriggerType: b, updateRule: A } = (0, o.pH)(t),
-        P = l.useMemo(() => {
+        C = l.useMemo(() => {
             var e;
             return null !== (e = b[x]) && void 0 !== e ? e : [];
         }, [b]),
-        C = 0 === P.length,
-        y = n > P.length && !C;
+        P = 0 === C.length,
+        y = n > C.length && !P;
     if (!l.useMemo(() => (0, c.ze)(t), [t]) || null == e || 0 === e.length || null == t) return null;
     let D = e.split(' '),
         L = D.length;
@@ -61,7 +61,7 @@ function S(e, t) {
                     keywordFilter: [...(null !== (i = null === (n = t.triggerMetadata) || void 0 === n ? void 0 : n.keywordFilter) && void 0 !== i ? i : []), e]
                 }
             };
-            await N(l, P), A(l), null != I ? (0, a.showToast)((0, a.createToast)(v.intl.string(v.t.wH6L0t), a.ToastType.FAILURE)) : (0, a.showToast)((0, a.createToast)(v.intl.string(v.t['0rdYm5']), a.ToastType.SUCCESS));
+            await N(l, C), A(l), null != I ? (0, a.showToast)((0, a.createToast)(v.intl.string(v.t.wH6L0t), a.ToastType.FAILURE)) : (0, a.showToast)((0, a.createToast)(v.intl.string(v.t['0rdYm5']), a.ToastType.SUCCESS));
         },
         G = (0, i.jsx)(i.Fragment, {
             children: (0, i.jsx)(a.sNh, {
@@ -73,14 +73,14 @@ function S(e, t) {
         M ||
             (G = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    C &&
+                    P &&
                         (0, i.jsx)(a.sNh, {
                             id: 'add-first-rule',
                             label: v.intl.string(v.t.f72Zqa),
                             action: O,
                             disabled: S
                         }),
-                    P.map((e) => {
+                    C.map((e) => {
                         let t = (0, d.V9)(x).reduce((t, n) => {
                             let i = e.actions.find((e) => {
                                 let { type: t } = e;

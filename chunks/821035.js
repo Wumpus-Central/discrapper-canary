@@ -10,10 +10,10 @@ var s = n(524437),
     d = n(63063),
     u = n(838436),
     m = n(526761),
-    h = n(726985),
-    g = n(981631),
-    _ = n(388032),
-    x = n(835552);
+    g = n(726985),
+    h = n(981631),
+    x = n(388032),
+    _ = n(835552);
 function p() {
     var e;
     let t = null === (e = (0, c.Z)()) || void 0 === e || e,
@@ -24,37 +24,37 @@ function p() {
         f = [
             {
                 value: s.Q4.BLUR,
-                label: _.intl.string(_.t.S49UaW)
+                label: x.intl.string(x.t.S49UaW)
             },
             {
                 value: s.Q4.BLOCK,
-                label: _.intl.string(_.t['D/157e'])
+                label: x.intl.string(x.t['D/157e'])
             }
         ],
         T = [
             {
                 value: s.Q4.BLUR,
-                label: _.intl.string(_.t.S49UaW)
+                label: x.intl.string(x.t.S49UaW)
             }
         ],
         N = {
             value: s.Q4.SHOW,
-            label: _.intl.string(_.t['5k5OFh'])
+            label: x.intl.string(x.t['5k5OFh'])
         };
     return (
         t && (f.unshift(N), T.unshift(N)),
         (0, i.jsxs)(u.U, {
-            setting: h.s6.PRIVACY_SENSITIVE_MEDIA_V2,
+            setting: g.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: m.FY.EXPLICIT_MEDIA_REDACTION_V2,
             children: [
                 (0, i.jsx)(u.H, {
-                    header: _.intl.string(_.t['c/UOwM']),
-                    description: _.intl.format(_.t.ZUvrwM, { learnMoreLink: d.Z.getArticleURL(g.BhN.EXPLICIT_MEDIA_REDACTION) })
+                    header: x.intl.string(x.t['c/UOwM']),
+                    description: x.intl.format(x.t.ZUvrwM, { learnMoreLink: d.Z.getArticleURL(h.BhN.EXPLICIT_MEDIA_REDACTION) })
                 }),
                 (0, i.jsx)(r.xJW, {
                     tag: r.RB0.H3,
-                    title: _.intl.string(_.t['6k0AgI']),
-                    titleClassName: x.selectItemTitle,
+                    title: x.intl.string(x.t['6k0AgI']),
+                    titleClassName: _.selectItemTitle,
                     children: (0, i.jsx)(r.q4e, {
                         options: f,
                         value: p,
@@ -63,8 +63,8 @@ function p() {
                 }),
                 (0, i.jsx)(r.xJW, {
                     tag: r.RB0.H3,
-                    title: _.intl.string(_.t.D2EGSk),
-                    titleClassName: x.selectItemTitle,
+                    title: x.intl.string(x.t.D2EGSk),
+                    titleClassName: _.selectItemTitle,
                     children: (0, i.jsx)(r.q4e, {
                         options: f,
                         value: E,
@@ -74,8 +74,8 @@ function p() {
                 t &&
                     (0, i.jsx)(r.xJW, {
                         tag: r.RB0.H3,
-                        title: _.intl.string(_.t['FP+a4+']),
-                        titleClassName: x.selectItemTitle,
+                        title: x.intl.string(x.t['FP+a4+']),
+                        titleClassName: _.selectItemTitle,
                         children: (0, i.jsx)(r.q4e, {
                             options: T,
                             value: n,

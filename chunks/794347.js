@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => E,
-    _: () => _
+    _: () => x
 });
 var i,
     s = n(200651),
@@ -12,20 +12,20 @@ var i,
     d = n(393238),
     u = n(162168),
     m = n(624138),
-    h = n(261886);
-let g = (0, m.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH);
-var _ = (((i = {}).BLACK = 'BLACK'), (i.GRAY = 'GRAY'), i);
-let x = {
-    BLACK: h.black,
-    GRAY: h.gray
+    g = n(261886);
+let h = (0, m.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH);
+var x = (((i = {}).BLACK = 'BLACK'), (i.GRAY = 'GRAY'), i);
+let _ = {
+    BLACK: g.black,
+    GRAY: g.gray
 };
 function p(e) {
-    return Math.round(e / g) * g;
+    return Math.round(e / h) * h;
 }
 function E(e) {
     let { notchBackground: t, progress: n, gradientStart: i = o.Z.unsafe_rawColors.YELLOW_260.css, gradientEnd: l = o.Z.unsafe_rawColors.GREEN_360.css, className: c, children: m } = e,
-        { ref: g, width: _ } = (0, d.Z)(),
-        E = r.useMemo(() => (null != _ ? p(_) : 0), [_]),
+        { ref: h, width: x } = (0, d.Z)(),
+        E = r.useMemo(() => (null != x ? p(x) : 0), [x]),
         C = r.useMemo(() => {
             let e = Math.abs(p((E * (100 - Math.max(0, Math.min(100, n)))) / 100) - E);
             return { transform: 'translateX('.concat(e, 'px)') };
@@ -38,21 +38,21 @@ function E(e) {
             [l, i, n, E]
         );
     return (0, s.jsxs)('div', {
-        className: h.wrapper,
-        ref: g,
+        className: g.wrapper,
+        ref: h,
         children: [
             (0, s.jsxs)('div', {
-                className: a()(h.container, c),
+                className: a()(g.container, c),
                 style: f,
                 children: [
                     (0, s.jsx)('div', {
-                        className: h.progress,
+                        className: g.progress,
                         style: C
                     }),
                     0 !== E &&
                         (0, s.jsx)(u.Z, {
                             width: E,
-                            className: a()(h.notches, x[t])
+                            className: a()(g.notches, _[t])
                         })
                 ]
             }),

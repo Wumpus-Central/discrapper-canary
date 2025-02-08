@@ -1,36 +1,36 @@
 n.d(t, {
-    B: () => m,
-    b: () => d
+    B: () => f,
+    b: () => c
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(481060),
     s = n(893776),
-    o = n(489813),
-    a = n(388032),
-    u = n(119866);
-function c() {
+    u = n(489813),
+    o = n(388032),
+    a = n(119866);
+function d() {
     let [e, t] = l.useState(!1),
-        [n, o] = l.useState(!1),
-        [c, d] = l.useState(!1);
+        [n, u] = l.useState(!1),
+        [d, c] = l.useState(!1);
     l.useEffect(() => {
         let e;
         return (
             n &&
                 (e = setTimeout(() => {
-                    o(!1);
+                    u(!1);
                 }, 2000)),
             () => {
                 null != e && clearTimeout(e);
             }
         );
     }, [n]);
-    let m = async () => {
+    let f = async () => {
         if (!e) {
             t(!0);
             try {
-                await s.Z.verifyResend(), o(!0), d(!0);
+                await s.Z.verifyResend(), u(!0), c(!0);
             } catch (e) {
             } finally {
                 t(!1);
@@ -39,44 +39,44 @@ function c() {
     };
     return n
         ? (0, i.jsx)(r.Text, {
-              className: u.verifyConfirmText,
+              className: a.verifyConfirmText,
               variant: 'text-sm/normal',
               color: 'text-positive',
-              children: a.intl.string(a.t.H3Q7U1)
+              children: o.intl.string(o.t.H3Q7U1)
           })
         : (0, i.jsx)(r.zxk, {
               size: r.zxk.Sizes.SMALL,
               submitting: e,
-              onClick: m,
-              children: c ? a.intl.string(a.t.WnX4Jy) : a.intl.string(a.t['13ofGh'])
+              onClick: f,
+              children: d ? o.intl.string(o.t.WnX4Jy) : o.intl.string(o.t['13ofGh'])
           });
 }
-function d() {
-    return (0, i.jsx)(o.PU, {
+function c() {
+    return (0, i.jsx)(u.PU, {
         icon: r._XJ,
-        text: a.intl.string(a.t.c6EUJC),
-        footnote: a.intl.string(a.t['jMh+TU']),
+        text: o.intl.string(o.t.c6EUJC),
+        footnote: o.intl.string(o.t['jMh+TU']),
         meetsRequirement: !1,
         children: (0, i.jsx)(r.ua7, {
-            text: a.intl.string(a.t.mGlP39),
+            text: o.intl.string(o.t.mGlP39),
             children: (e) =>
                 (0, i.jsx)(r.zxk, {
                     ...e,
                     size: r.zxk.Sizes.SMALL,
                     disabled: !0,
-                    children: a.intl.string(a.t['13ofGh'])
+                    children: o.intl.string(o.t['13ofGh'])
                 })
         })
     });
 }
-function m(e) {
+function f(e) {
     let { isUserVerified: t } = e,
-        n = t ? a.intl.string(a.t.qY1jHB) : a.intl.string(a.t.c6EUJC);
-    return (0, i.jsx)(o.PU, {
+        n = t ? o.intl.string(o.t.qY1jHB) : o.intl.string(o.t.c6EUJC);
+    return (0, i.jsx)(u.PU, {
         icon: r._XJ,
         text: n,
-        footnote: a.intl.string(a.t['jMh+TU']),
+        footnote: o.intl.string(o.t['jMh+TU']),
         meetsRequirement: t,
-        children: (0, i.jsx)(c, {})
+        children: (0, i.jsx)(d, {})
     });
 }

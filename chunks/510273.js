@@ -3,8 +3,8 @@ var i = n(200651),
     l = n(192379),
     r = n(120356),
     s = n.n(r),
-    o = n(481060),
-    a = n(955204),
+    a = n(481060),
+    o = n(955204),
     c = n(818765),
     d = n(674680),
     u = n(941253);
@@ -67,7 +67,7 @@ let _ = (e) => {
 function E(e) {
     let { achievement: t, unlocked: n } = e,
         { name: r, description: E, rarity: h, hideDescriptionUntilUnlock: p, onAction: I } = t,
-        { color: m } = (0, a.F7)(h);
+        { color: m } = (0, o.F7)(h);
     l.useEffect(() => {
         let e = setTimeout(() => {
             c.Z.playAchievementUnlockSound();
@@ -76,12 +76,12 @@ function E(e) {
             clearTimeout(e);
         };
     }, []);
-    let T = null != I && n,
-        C = T ? o.P3F : 'div';
-    return (0, i.jsxs)(C, {
-        className: s()(u.container, T && u.actionable),
+    let C = null != I && n,
+        T = C ? a.P3F : 'div';
+    return (0, i.jsxs)(T, {
+        className: s()(u.container, C && u.actionable),
         onClick: () => {
-            T && I();
+            C && I();
         },
         children: [
             (0, i.jsx)('div', {
@@ -95,12 +95,12 @@ function E(e) {
             (0, i.jsxs)('div', {
                 className: u.__invalid_nameContainer,
                 children: [
-                    (0, i.jsx)(o.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: r()
                     }),
-                    (0, i.jsx)(o.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
                         children: p && !n ? '?????' : E()

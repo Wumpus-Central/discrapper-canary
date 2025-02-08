@@ -23,13 +23,13 @@ var i,
     E = n(501655),
     I = n(192079),
     C = n(427679),
-    v = n(448206),
-    N = n(496675),
+    N = n(448206),
+    v = n(496675),
     T = n(938475),
     S = n(626135),
     Z = n(823379),
-    x = n(15274),
-    A = n(924301),
+    A = n(15274),
+    x = n(924301),
     b = n(504160),
     L = n(151864),
     y = n(835184),
@@ -148,7 +148,7 @@ function H(e) {
 function F(e) {
     let { guildEvent: t, noticeType: n } = e,
         i = (0, w.DK)(t),
-        r = (0, o.e7)([A.ZP], () => A.ZP.isInterestedInEventRecurrence(t.id, i), [t.id, i]),
+        r = (0, o.e7)([x.ZP], () => x.ZP.isInterestedInEventRecurrence(t.id, i), [t.id, i]),
         a = (0, o.e7)([y.Z], () => y.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
         r || null != a || (0, b._6)(t.id),
@@ -212,7 +212,7 @@ function z(e) {
                     className: B.textBlock,
                     children: [
                         (0, l.jsx)(c.P3F, {
-                            onClick: () => (0, x.bO)({ eventId: n.id }),
+                            onClick: () => (0, A.bO)({ eventId: n.id }),
                             className: B.eventNameClickable,
                             children: (0, l.jsx)(c.Text, {
                                 color: 'header-primary',
@@ -311,7 +311,7 @@ function W(e) {
 function Y(e) {
     let { guildEvent: t } = e,
         n = r.useCallback(() => {
-            (0, x.bO)({ eventId: t.id });
+            (0, A.bO)({ eventId: t.id });
         }, [t]);
     return (0, l.jsx)(c.zxk, {
         fullWidth: !0,
@@ -372,8 +372,8 @@ function Q(e) {
     let { channel: t, speakers: n, voiceType: i } = e,
         a = t.getGuildId(),
         u = r.useMemo(() => n.slice(0, 3), [n]),
-        h = (0, o.e7)([N.Z], () => N.Z.can(U.Plq.CONNECT, t)),
-        m = (0, v.Z)(t.id),
+        h = (0, o.e7)([v.Z], () => v.Z.can(U.Plq.CONNECT, t)),
+        m = (0, N.Z)(t.id),
         p = G.intl.string(G.t.VJlc0d);
     switch (i) {
         case 1:

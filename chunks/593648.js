@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(524437),
     u = n(481060),
     m = n(668781),
-    h = n(292556),
-    g = n(87051),
-    _ = n(419363),
-    x = n(818083),
+    g = n(292556),
+    h = n(87051),
+    x = n(419363),
+    _ = n(818083),
     p = n(688465),
     E = n(487419),
     C = n(197344),
     f = n(476756),
     T = n(734934),
     N = n(223683),
-    S = n(312400),
-    I = n(115345),
+    I = n(312400),
+    S = n(115345),
     b = n(392888),
     v = n(106371),
     j = n(995774),
@@ -93,7 +93,7 @@ function Y(e) {
         d = s.useCallback(
             (e, n) => {
                 let i = t.filter((t) => t !== e);
-                n || i.push(e), h.default.setDisabledSounds(i);
+                n || i.push(e), g.default.setDisabledSounds(i);
             },
             [t]
         );
@@ -192,12 +192,12 @@ function Y(e) {
                 sound: 'reconnect'
             }
         ],
-        g = null != C.Z.useHolidaySoundpack();
+        h = null != C.Z.useHolidaySoundpack();
     return (0, i.jsx)(A.F, {
         setting: M.s6.NOTIFICATIONS_SOUNDS,
         children: (0, i.jsxs)(u.hjN, {
             children: [
-                g
+                h
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(u.vwX, {
@@ -215,13 +215,13 @@ function Y(e) {
                 (0, i.jsx)(u.j7V, {
                     note: U.intl.string(U.t['7oXUio']),
                     value: r,
-                    onChange: h.default.setNotifyMessagesInSelectedChannel,
+                    onChange: g.default.setNotifyMessagesInSelectedChannel,
                     children: U.intl.string(U.t.lF5GGR)
                 }),
                 (0, i.jsx)(u.j7V, {
                     note: U.intl.string(U.t['+B0XLC']),
                     value: n,
-                    onChange: h.default.toggleDisableAllSounds,
+                    onChange: g.default.toggleDisableAllSounds,
                     children: U.intl.string(U.t['2ZhCOT'])
                 }),
                 m.map((e) => {
@@ -344,18 +344,18 @@ class K extends s.PureComponent {
             (n = 'UserSettingsModal'),
                 D.Z.requestPermission((e) => {
                     let t = e ? w.$Ab.ENABLED : w.$Ab.BLOCKED;
-                    h.default.setPermissionsState(t, n);
+                    g.default.setPermissionsState(t, n);
                 });
-        } else h.default.setDesktopType(t);
+        } else g.default.setDesktopType(t);
     }
     handleTTSChange(e) {
         let t = e.value;
-        h.default.setTTSType(t);
+        g.default.setTTSType(t);
     }
     render() {
         let { desktopType: e, afkTimeout: t, disableUnreadBadge: n, taskbarFlash: s, disabledSounds: r, disableAllSounds: a, notifyMessagesInSelectedChannel: c, focusMode: d } = this.props,
             m = y.isPlatformEmbedded && (0, y.isWindows)(),
-            h = o()
+            g = o()
                 .range(1, 11)
                 .map((e) => ({
                     value: 60 * e,
@@ -408,7 +408,7 @@ class K extends s.PureComponent {
                             (0, i.jsx)(u.q4e, {
                                 value: t,
                                 onChange: k.CM.updateSetting,
-                                options: h
+                                options: g
                             }),
                             (0, i.jsx)(u.R94, {
                                 type: u.geA.DESCRIPTION,
@@ -435,13 +435,13 @@ class K extends s.PureComponent {
     constructor(...e) {
         super(...e),
             H(this, 'handleToggleShowUnreadBadge', () => {
-                h.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
+                g.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
             }),
             H(this, 'handleToggleShowFlash', () => {
-                h.default.setTaskbarFlash(!this.props.taskbarFlash);
+                g.default.setTaskbarFlash(!this.props.taskbarFlash);
             }),
             H(this, 'renderTTS', () => {
-                if (!_.Zh) return null;
+                if (!x.Zh) return null;
                 let e = [
                     {
                         name: U.intl.string(U.t.B1AGeH),
@@ -480,7 +480,7 @@ class K extends s.PureComponent {
             });
     }
 }
-let q = (0, x.B)({
+let q = (0, _.B)({
     kind: 'user',
     id: '2024-01_mention_on_all_messages',
     label: 'Mention on all messages',
@@ -503,7 +503,7 @@ function X() {
                   className: F.marginBottom20,
                   value: t,
                   onChange: (e) => {
-                      g.Z.setAccountFlag(V.c.MENTION_ON_ALL_MESSAGES, e);
+                      h.Z.setAccountFlag(V.c.MENTION_ON_ALL_MESSAGES, e);
                   },
                   note: "Increments the mention count when receiving a message in a channel set to 'All Messages'",
                   children: 'Mention on all messages?'
@@ -512,8 +512,8 @@ function X() {
         : null;
 }
 function J() {
-    let e = S.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
-        { manuallyOpen: t } = S.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
+    let e = I.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
+        { manuallyOpen: t } = I.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
         n = (0, c.e7)([P.ZP], () => P.ZP.useNewNotifications),
         [r, a] = s.useState(!1);
     return e && (n || t)
@@ -540,7 +540,7 @@ function J() {
                                   disabled: r || n,
                                   note: 'Turns on the new notification system',
                                   onChange: (e) => {
-                                      g.Z.setAccountFlag(V.c.USE_NEW_NOTIFICATIONS, e);
+                                      h.Z.setAccountFlag(V.c.USE_NEW_NOTIFICATIONS, e);
                                   },
                                   children: U.intl.string(U.t.z21l8P)
                               })
@@ -579,7 +579,7 @@ function J() {
                                               hideBorder: !0,
                                               value: n,
                                               onChange: (e) => {
-                                                  g.Z.setAccountFlag(V.c.USE_NEW_NOTIFICATIONS, e);
+                                                  h.Z.setAccountFlag(V.c.USE_NEW_NOTIFICATIONS, e);
                                               },
                                               children: 'Toggle new system on/off'
                                           })
@@ -598,13 +598,13 @@ async function Q(e) {
     e(!0);
     let t = await (0, N.Tn)();
     0 === t.length
-        ? await (0, I.oL)()
+        ? await (0, S.oL)()
         : m.Z.show({
               title: U.intl.string(U.t['cY+Ooa']),
               body: U.intl.format(U.t['7zTJJS'], { date: new Date(t[t.length - 1].recorded_at) }),
               cancelText: U.intl.string(U.t['ETE/oK']),
               confirmText: U.intl.string(U.t.Rm96T0),
-              onConfirm: I.oL
+              onConfirm: S.oL
           }),
         e(!1);
 }

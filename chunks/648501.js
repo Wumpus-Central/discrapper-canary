@@ -11,8 +11,8 @@ var l = n(442837),
     u = n(601070),
     h = n(430824),
     p = n(496675),
-    m = n(306680),
-    g = n(979651),
+    g = n(306680),
+    m = n(979651),
     f = n(968358),
     _ = n(790901),
     v = n(714794),
@@ -26,12 +26,12 @@ var l = n(442837),
     E = n(518360);
 function j(e) {
     var t;
-    let { channel: n, isChannelSelected: j, isChannelCollapsed: y, voiceStates: A, enableConnectedUserLimit: P, enableActivities: T, isSubscriptionGated: w, needSubscriptionToAccess: R, isNewChannel: L, muted: M, resolvedUnreadSetting: D } = e,
-        G = (0, l.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
-        k = (0, l.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
+    let { channel: n, isChannelSelected: j, isChannelCollapsed: y, voiceStates: P, enableConnectedUserLimit: T, enableActivities: A, isSubscriptionGated: w, needSubscriptionToAccess: R, isNewChannel: L, muted: M, resolvedUnreadSetting: D } = e,
+        G = (0, l.e7)([g.ZP], () => g.ZP.getMentionCount(n.id)),
+        k = (0, l.e7)([g.ZP], () => g.ZP.getIsMentionLowImportance(n.id)),
         B = (0, o.ZP)(n),
         O = (0, l.e7)([p.Z], () => !p.Z.can(b.Plq.CONNECT, n)),
-        U = (0, l.e7)([g.Z], () => g.Z.hasVideo(n.id)),
+        U = (0, l.e7)([m.Z], () => m.Z.hasVideo(n.id)),
         V = (0, d.PK)(n.id) && n.isGuildStageVoice(),
         F = (0, C.ZP)({
             channel: n,
@@ -69,19 +69,19 @@ function j(e) {
             color: 'text-muted',
             children: (0, a.NGo)(z)
         });
-    let q = null !== (t = null == A ? void 0 : A.length) && void 0 !== t ? t : 0;
-    return null != P && P && F
+    let q = null !== (t = null == P ? void 0 : P.length) && void 0 !== t ? t : 0;
+    return null != T && T && F
         ? (0, i.jsx)(Z.Z, {
               userCount: q,
               video: U || V,
               channel: n
           })
-        : y && (0, f.a)(A) && W
+        : y && (0, f.a)(P) && W
           ? (0, i.jsx)(a.IGR, {
                 text: N.intl.string(N.t.dI3q4u),
                 color: r.Z.unsafe_rawColors.RED_400.css
             })
-          : null != T && T && (0, _.u)(B)
+          : null != A && A && (0, _.u)(B)
             ? (0, i.jsx)(x.Z, {
                   embeddedApps: B,
                   muted: M

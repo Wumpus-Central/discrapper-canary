@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => e_,
-    u: () => eg
+    Z: () => ex,
+    u: () => eh
 });
 var i,
     s = n(200651);
@@ -13,18 +13,18 @@ var r = n(399606),
     d = n(975298),
     u = n(779618),
     m = n(832149),
-    h = n(300284),
-    g = n(703656),
-    _ = n(547972),
-    x = n(131951),
+    g = n(300284),
+    h = n(703656),
+    x = n(547972),
+    _ = n(131951),
     p = n(594174),
     E = n(78839),
     C = n(424218),
     f = n(63063),
     T = n(74538),
     N = n(860489),
-    S = n(314684),
-    I = n(687362),
+    I = n(314684),
+    S = n(687362),
     b = n(943180),
     v = n(848572),
     j = n(229555),
@@ -67,28 +67,28 @@ var r = n(399606),
     ed = n(698173),
     eu = n(926262),
     em = n(371435),
-    eh = n(83663),
-    eg = (((i = {}).CLIENT_THEMES = 'clientThemes'), (i.CLIPS = 'clips'), (i.EARLY_ACCESS = 'earlyAccess'), (i.ENTRANCE_SOUNDS = 'entranceSounds'), (i.PROFILES = 'profiles'), (i.REMIXING = 'remixing'), (i.SERVER_BOOSTS = 'serverBoosts'), (i.GREY_SERVER_BOOSTS = 'greyServerBoosts'), (i.SPECIAL_MEMBER_PRICING = 'specialMemberPricing'), (i.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant'), (i.SPECIAL_SHOP_PERKS = 'specialShopPerks'), (i.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions'), (i.SUPER_REACTIONS = 'superReactions'), (i.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed'), (i.CUSTOM_APP_ICONS = 'customAppIcons'), (i.MORE_EMOJI_POWER = 'moreEmojiPower'), (i.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere'), (i.SPECIAL_STICKER_ACCESS = 'specialStickerAccess'), (i.LARGE_UPLOADS = 'largeUploads'), (i.HD_VIDEO = 'hdVideo'), (i.BADGE = 'badge'), (i.GREY_BADGE = 'greyBadge'), (i.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation'), (i.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant'), (i.FREE_BOOST = 'freeBoost'), (i.TENURE_REWARD_COLLECTIBLE = 'tenureRewardCollectible'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHY_PROJECT = 'shyProject'), (i.TENURE_BADGE = 'tenureBadge'), i);
-let e_ = () => {
+    eg = n(83663),
+    eh = (((i = {}).CLIENT_THEMES = 'clientThemes'), (i.CLIPS = 'clips'), (i.EARLY_ACCESS = 'earlyAccess'), (i.ENTRANCE_SOUNDS = 'entranceSounds'), (i.PROFILES = 'profiles'), (i.REMIXING = 'remixing'), (i.SERVER_BOOSTS = 'serverBoosts'), (i.GREY_SERVER_BOOSTS = 'greyServerBoosts'), (i.SPECIAL_MEMBER_PRICING = 'specialMemberPricing'), (i.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant'), (i.SPECIAL_SHOP_PERKS = 'specialShopPerks'), (i.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions'), (i.SUPER_REACTIONS = 'superReactions'), (i.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed'), (i.CUSTOM_APP_ICONS = 'customAppIcons'), (i.MORE_EMOJI_POWER = 'moreEmojiPower'), (i.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere'), (i.SPECIAL_STICKER_ACCESS = 'specialStickerAccess'), (i.LARGE_UPLOADS = 'largeUploads'), (i.HD_VIDEO = 'hdVideo'), (i.BADGE = 'badge'), (i.GREY_BADGE = 'greyBadge'), (i.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation'), (i.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant'), (i.FREE_BOOST = 'freeBoost'), (i.TENURE_REWARD_COLLECTIBLE = 'tenureRewardCollectible'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHY_PROJECT = 'shyProject'), (i.TENURE_BADGE = 'tenureBadge'), i);
+let ex = () => {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, a.ZP)(),
         n = (0, C.BU)(D.Uq / 1024, { useKibibytes: !0 }),
         i = (0, r.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
-        eg = null != i ? T.ZP.getPremiumPlanItem(i) : null,
-        e_ = (null != eg ? T.ZP.getSkuIdForPlan(eg.planId) : null) === D.Si.TIER_2,
-        ex = p.default.getCurrentUser(),
-        ep = (0, T.I5)(ex, D.p9.TIER_2),
-        eE = (0, T.I5)(ex, D.p9.TIER_0),
-        eC = (0, S.bq)({ showAnimations: !0 }),
+        eh = null != i ? T.ZP.getPremiumPlanItem(i) : null,
+        ex = (null != eh ? T.ZP.getSkuIdForPlan(eh.planId) : null) === D.Si.TIER_2,
+        e_ = p.default.getCurrentUser(),
+        ep = (0, T.I5)(e_, D.p9.TIER_2),
+        eE = (0, T.I5)(e_, D.p9.TIER_0),
+        eC = (0, I.bq)({ showAnimations: !0 }),
         ef = null != eC ? eC.initialPercentage : void 0,
         eT = null != eC ? eC.percentage : void 0,
-        eN = (0, u.Z)(x.Z),
-        eS = (0, I.ZP)(),
-        eI = (0, I.aJ)(),
-        eb = (0, S.Kb)(y.qY),
+        eN = (0, u.Z)(_.Z),
+        eI = (0, S.ZP)(),
+        eS = (0, S.aJ)(),
+        eb = (0, I.Kb)(y.qY),
         { fractionalState: ev } = (0, d.Z)(),
         ej = ev === D.a$.FP_ONLY,
-        eA = (0, h.Z)({
+        eA = (0, g.Z)({
             scrollPosition: k.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
@@ -99,7 +99,7 @@ let e_ = () => {
             });
         },
         eR = () => {
-            (0, g.uL)(Z.Z5c.COLLECTIBLES_SHOP);
+            (0, h.uL)(Z.Z5c.COLLECTIBLES_SHOP);
         },
         eP = () => {
             l.Z.open(Z.oAB.APPEARANCE, null, { scrollPosition: k.h1.CUSTOM_APP_ICONS });
@@ -129,7 +129,7 @@ let e_ = () => {
                       pillText: B.intl.string(B.t.EYxi0t),
                       onCtaClick: eN
                           ? () => {
-                                (0, _.Z)(L.Z.CLIPS, {
+                                (0, x.Z)(L.Z.CLIPS, {
                                     openWithoutBackstack: !0,
                                     analyticsLocations: e
                                 });
@@ -362,7 +362,7 @@ let e_ = () => {
                 name: 'greyBadge',
                 title: B.intl.string(B.t.dcFfSE),
                 subtitle: B.intl.string(B.t['37MFFh']),
-                perkImage: eh.Z,
+                perkImage: eg.Z,
                 description: B.intl.string(B.t.T1IS4u),
                 imageOverlayText: B.intl.string(B.t.lcYttb)
             },
@@ -426,7 +426,7 @@ let e_ = () => {
                 subtitle: B.intl.string(B.t.JY0grK),
                 description: B.intl.format(B.t['2JqTFx'], { helpdeskArticle: f.Z.getArticleURL(Z.BhN.REFERRAL_PROGRAM) }),
                 descriptionCta: B.intl.string(B.t.JST6jo),
-                isPremiumGetCta: !e_ || void 0,
+                isPremiumGetCta: !ex || void 0,
                 perkImage: en
             },
             serverProfiles: {
@@ -439,8 +439,8 @@ let e_ = () => {
                 perkImage: es
             }
         };
-    if (null != eI) {
-        let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: l, dismissibleContentType: a } = eI,
+    if (null != eS) {
+        let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: l, dismissibleContentType: a } = eS,
             o = (0, s.jsx)('div', {
                 className: M.cardComponent,
                 children: (0, s.jsx)(O.ZP, {
@@ -463,8 +463,8 @@ let e_ = () => {
                 null != eb &&
                     (0, m.Z)({
                         product: eb,
-                        title: B.intl.string(B.t.wRAXra),
-                        description: B.intl.string(B.t.sQX6HR),
+                        overrideTitle: B.intl.string(B.t.wRAXra),
+                        overrideDescription: B.intl.string(B.t.sQX6HR),
                         analyticsLocations: e
                     });
             },
@@ -473,8 +473,8 @@ let e_ = () => {
             dismissibleContentType: a
         };
     }
-    if (null != eS) {
-        let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: a, dismissibleContentType: o } = eS,
+    if (null != eI) {
+        let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: a, dismissibleContentType: o } = eI,
             c = (0, s.jsx)('div', {
                 className: M.cardComponent,
                 children: (0, s.jsx)(O.ZP, {

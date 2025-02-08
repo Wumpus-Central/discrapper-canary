@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(780384),
     u = n(481060),
     m = n(153867),
-    h = n(230711),
-    g = n(493773),
-    _ = n(714338),
-    x = n(857595),
+    g = n(230711),
+    h = n(493773),
+    x = n(714338),
+    _ = n(857595),
     p = n(607070),
     E = n(627845),
     C = n(514361),
     f = n(600164),
     T = n(313201),
     N = n(540059),
-    S = n(605236),
-    I = n(786761),
+    I = n(605236),
+    S = n(786761),
     b = n(3148),
     v = n(739566),
     j = n(753206),
@@ -64,7 +64,7 @@ let z = {
     X = (e) => {
         let t = 0;
         return [
-            (0, I.e5)({
+            (0, S.e5)({
                 ...(0, b.ZP)({
                     channelId: q,
                     content: U.intl.string(U.t.oZxkEh)
@@ -72,7 +72,7 @@ let z = {
                 state: M.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, I.e5)({
+            (0, S.e5)({
                 ...(0, b.ZP)({
                     channelId: q,
                     content: (0, d.wj)(e) ? U.intl.string(U.t['WGb/v7']) : U.intl.string(U.t['62m4m5'])
@@ -80,7 +80,7 @@ let z = {
                 state: M.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, I.e5)({
+            (0, S.e5)({
                 ...(0, b.ZP)({
                     channelId: q,
                     content: U.intl.string(U.t.a0Byo6)
@@ -88,7 +88,7 @@ let z = {
                 state: M.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, I.e5)({
+            (0, S.e5)({
                 ...(0, b.ZP)({
                     channelId: q,
                     content: U.intl.string(U.t.bmwEWF)
@@ -96,7 +96,7 @@ let z = {
                 state: M.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, I.e5)({
+            (0, S.e5)({
                 ...(0, b.ZP)({
                     channelId: q,
                     content: U.intl.string(U.t.hK9QW1)
@@ -171,7 +171,7 @@ class Q extends s.Component {
                       }),
                       (0, i.jsx)(u.R94, {
                           type: u.R94.Types.DESCRIPTION,
-                          children: U.intl.format(U.t.OMkSUl, { modKey: _.Z.modKey })
+                          children: U.intl.format(U.t.OMkSUl, { modKey: x.Z.modKey })
                       })
                   ]
               })
@@ -293,7 +293,7 @@ class Q extends s.Component {
                       children: (0, E.b)()
                           ? U.intl.format(U.t.Jae48P, {
                                 onClick: () => {
-                                    h.Z.open(M.oAB.ACCESSIBILITY);
+                                    g.Z.open(M.oAB.ACCESSIBILITY);
                                 }
                             })
                           : U.intl.string(U.t.AUMSZG)
@@ -410,7 +410,7 @@ class Q extends s.Component {
             : null;
     }
     handleDarkSidebarChecked() {
-        (0, x.lq)();
+        (0, _.lq)();
     }
     renderScalingAndSpacing() {
         return (0, i.jsxs)(i.Fragment, {
@@ -491,7 +491,7 @@ class Q extends s.Component {
                     className: F.marginTop20,
                     children: U.intl.format(U.t['5LEQdX'], {
                         onAccessibilityClick() {
-                            h.Z.open(M.oAB.ACCESSIBILITY);
+                            g.Z.open(M.oAB.ACCESSIBILITY);
                         }
                     })
                 })
@@ -508,7 +508,7 @@ class Q extends s.Component {
         return U.intl.formatToPlainString(U.t['0hpvOT'], { value: e });
     }
     handleFontSizeChange(e) {
-        (0, x.oL)(e);
+        (0, _.oL)(e);
     }
     handleMessageSpacingChange(e) {
         switch (e) {
@@ -517,11 +517,11 @@ class Q extends s.Component {
             case 8:
             case 16:
             case 24:
-                (0, x.ZZ)(e);
+                (0, _.ZZ)(e);
         }
     }
     handleZoomChange(e) {
-        (0, x.cq)(e);
+        (0, _.cq)(e);
     }
     constructor(...e) {
         super(...e),
@@ -535,7 +535,7 @@ class Q extends s.Component {
             }),
             H(this, 'handleMessageDisplayModeChange', (e) => {
                 let { value: t } = e;
-                Z.jU.updateSetting(t === z.COMPACT), (0, x.ZZ)();
+                Z.jU.updateSetting(t === z.COMPACT), (0, _.ZZ)();
             }),
             H(this, 'handleUIDensityChange', (e) => {
                 let { value: t } = e;
@@ -669,7 +669,7 @@ class $ extends Q {
                 className: G.a11yCallout,
                 children: U.intl.format(U.t['5LEQdX'], {
                     onAccessibilityClick() {
-                        h.Z.open(M.oAB.ACCESSIBILITY);
+                        g.Z.open(M.oAB.ACCESSIBILITY);
                     }
                 })
             });
@@ -681,8 +681,8 @@ class $ extends Q {
     }
 }
 let ee = (e) => {
-    (0, S.un)(e) ||
-        (0, S.EW)(e, {
+    (0, I.un)(e) ||
+        (0, I.EW)(e, {
             dismissAction: w.L.AUTO,
             forceTrack: !0
         });
@@ -694,7 +694,7 @@ function et() {
         s = Z.L1.useSetting(),
         r = Z.hg.useSetting(),
         l = Z.YC.useSetting();
-    (0, g.ZP)(() => {
+    (0, h.ZP)(() => {
         ee(o.z.CLIENT_THEMES_SETTINGS_BADGE), ee(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), ee(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     });
     let c = (0, a.cj)([D.Z, y.ZP, p.Z, R.default, C.Z], () => {

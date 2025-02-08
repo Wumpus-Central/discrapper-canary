@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(906732),
     u = n(171368),
     m = n(981631),
-    h = n(197831);
-let g = (e) => {
-    let { userId: t, children: n, isLast: r, className: g } = e,
-        [_, x] = s.useState(!1),
+    g = n(197831);
+let h = (e) => {
+    let { userId: t, children: n, isLast: r, className: h } = e,
+        [x, _] = s.useState(!1),
         { analyticsLocations: p } = (0, d.ZP)(),
         E = s.useCallback(() => {
             (0, u.openUserProfileModal)({
@@ -22,10 +22,10 @@ let g = (e) => {
             });
         }, [t, p]),
         C = () => {
-            x(!0);
+            _(!0);
         },
         f = () => {
-            x(!1);
+            _(!1);
         };
     return (0, i.jsx)(c.mh, {
         id: t,
@@ -37,15 +37,15 @@ let g = (e) => {
                 },
                 children: (0, i.jsx)(o.Z.div, {
                     style: { opacity: 1 },
-                    className: l()(h.rowItem, g, {
-                        [h.last]: r,
-                        [h.active]: _
+                    className: l()(g.rowItem, h, {
+                        [g.last]: r,
+                        [g.active]: x
                     }),
                     onMouseEnter: C,
                     onMouseLeave: f,
                     onClick: E,
                     ...e,
-                    children: n(_)
+                    children: n(x)
                 })
             })
     });

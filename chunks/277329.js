@@ -10,10 +10,10 @@ var s = n(442837),
     d = n(293389),
     u = n(327885),
     m = n(326528),
-    h = n(332325),
-    g = n(981631),
-    _ = n(388032),
-    x = n(16344);
+    g = n(332325),
+    h = n(981631),
+    x = n(388032),
+    _ = n(16344);
 function p() {
     let e = (0, m.b)(),
         t = (0, s.e7)([o.Z], () => o.Z.getSubsection()),
@@ -21,15 +21,15 @@ function p() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(r.X6q, {
-                className: x.heading,
+                className: _.heading,
                 variant: 'heading-xl/semibold',
-                children: _.intl.string(_.t.URyqtL)
+                children: x.intl.string(x.t.URyqtL)
             }),
             (0, i.jsx)(r.njP, {
-                className: x.tabBar,
+                className: _.tabBar,
                 selectedItem: n,
                 onItemSelect: (e) => {
-                    l.Z.setSection(g.oAB.GAMES, e);
+                    l.Z.setSection(h.oAB.GAMES, e);
                 },
                 orientation: 'horizontal',
                 type: 'top',
@@ -38,16 +38,16 @@ function p() {
                     (0, i.jsxs)(
                         r.njP.Item,
                         {
-                            className: x.tab,
+                            className: _.tab,
                             id: e.id,
                             'aria-label': e.title,
                             children: [
                                 (0, i.jsx)(e.icon, {
-                                    className: x.tabIcon,
+                                    className: _.tabIcon,
                                     color: 'currentColor'
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: x.iconTitle,
+                                    className: _.iconTitle,
                                     children: e.title
                                 })
                             ]
@@ -58,25 +58,25 @@ function p() {
             }),
             (() => {
                 switch (n) {
-                    case h.Z.CLIPS:
+                    case g.Z.CLIPS:
                         return (0, i.jsx)(a.Z, {
-                            className: x.body,
+                            className: _.body,
                             showHeader: !1
                         });
-                    case h.Z.OVERLAY:
+                    case g.Z.OVERLAY:
                         return (0, i.jsx)(u.Z, {
-                            className: x.body,
+                            className: _.body,
                             showHeader: !1
                         });
-                    case h.Z.ACTIVITY_PRIVACY:
+                    case g.Z.ACTIVITY_PRIVACY:
                         return (0, i.jsx)(c.Z, {
-                            className: x.body,
+                            className: _.body,
                             showHeader: !1
                         });
-                    case h.Z.MY_GAMES:
+                    case g.Z.MY_GAMES:
                     default:
                         return (0, i.jsx)(d.Z, {
-                            className: x.body,
+                            className: _.body,
                             showHeader: !1
                         });
                 }

@@ -18,14 +18,14 @@ function E(e) {
     let { percent: t, animate: n, interactionEnabled: i, backgroundColor: E, preloadedBuffers: p, duration: C, maxSeekableTime: f, onClick: S, onScrubBack: g, onScrubForward: x } = e,
         [_, h] = l.useState(null),
         [T, D] = l.useState(null),
-        [N, j] = l.useState(null),
-        [I, A] = l.useState(!1),
+        [N, I] = l.useState(null),
+        [j, A] = l.useState(!1),
         b = l.useRef(null),
         L = (e) => {
             (b.current = e), h(e);
         };
     l.useEffect(() => {
-        null != _ && (null == f ? j(null) : j(v(f, C, _)));
+        null != _ && (null == f ? I(null) : I(v(f, C, _)));
     }, [_, f, C]);
     let O = (0, a.y)(() => {
         null != O.current && L(O.current.getBoundingClientRect());
@@ -71,7 +71,7 @@ function E(e) {
                     i && (A(!1), D(null));
                 },
                 onMouseMove: (e) => {
-                    i && I && R(e);
+                    i && j && R(e);
                 },
                 onKeyDown: k,
                 tabIndex: i ? void 0 : -1,
@@ -88,7 +88,7 @@ function E(e) {
                               (0, r.jsx)(
                                   'div',
                                   {
-                                      className: s()(d.buffer, { [d.bufferHovered]: I }),
+                                      className: s()(d.buffer, { [d.bufferHovered]: j }),
                                       style: {
                                           width: ''.concat(100 * e.size, '%'),
                                           left: ''.concat(100 * e.start, '%')
@@ -112,10 +112,10 @@ function E(e) {
                         percent: t,
                         foregroundColor: '#FFFFFF',
                         backgroundColor: null != E ? E : void 0,
-                        size: I ? o.Exd.Sizes.XSMALL : o.Exd.Sizes.XXSMALL,
+                        size: j ? o.Exd.Sizes.XSMALL : o.Exd.Sizes.XXSMALL,
                         animate: n
                     }),
-                    I &&
+                    j &&
                         null != P &&
                         (0, r.jsx)(o.Text, {
                             className: d.timeDisplay,
@@ -126,7 +126,7 @@ function E(e) {
                             },
                             children: P
                         }),
-                    I &&
+                    j &&
                         i &&
                         null != q &&
                         (0, r.jsx)('div', {

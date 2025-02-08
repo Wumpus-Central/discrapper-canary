@@ -1,23 +1,23 @@
 n.d(t, { Z: () => l });
-var i = n(442837),
-    a = n(314897),
-    r = n(131951),
+var r = n(442837),
+    i = n(314897),
+    a = n(131951),
     o = n(979651);
 function l(e) {
-    return (0, i.cj)(
-        [o.Z, r.Z, a.default],
+    return (0, r.cj)(
+        [o.Z, a.Z, i.default],
         () =>
             (function (e) {
                 var t;
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.Z,
-                    i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.Z,
-                    l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.default,
+                    r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.Z,
+                    l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.default,
                     c = null != e ? n.getVoiceState(e.getGuildId(), l.getId()) : null;
                 return {
-                    selfDeaf: i.isSelfDeaf(),
+                    selfDeaf: r.isSelfDeaf(),
                     deaf: null !== (t = null == c ? void 0 : c.deaf) && void 0 !== t && t
                 };
-            })(e, o.Z, r.Z, a.default),
+            })(e, o.Z, a.Z, i.default),
         [e]
     );
 }

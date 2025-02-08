@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(72924),
     u = n(100527),
     m = n(906732),
-    h = n(228624),
-    g = n(883904),
-    _ = n(678558),
-    x = n(730647),
+    g = n(228624),
+    h = n(883904),
+    x = n(678558),
+    _ = n(730647),
     p = n(584825),
     E = n(305342),
     C = n(333867),
     f = n(963249),
     T = n(87484),
     N = n(197115),
-    S = n(911367),
-    I = n(43747),
+    I = n(911367),
+    S = n(43747),
     b = n(970815),
     v = n(430824),
     j = n(78839),
@@ -55,7 +55,7 @@ let D = function () {
         [n, p] = s.useState(null),
         [E] = (0, l.Wu)([v.Z], () => [v.Z.getGuilds()]),
         [D] = (0, l.Wu)([j.ZP], () => [j.ZP.getPremiumSubscription()]);
-    (0, S.t)();
+    (0, I.t)();
     let y = Object.values(E).map((e) => ({
             value: e,
             label: e.name
@@ -71,13 +71,13 @@ let D = function () {
         { analyticsLocations: F } = (0, m.ZP)(u.Z.PAYMENT_FLOW_TEST_PAGE),
         [H, z] = s.useState(''),
         [Y, W] = s.useState(A.lds),
-        { balance: K, isFetching: q, error: X } = (0, I.A)(),
-        { isSubmitting: J, responseMessage: Q, redeemVirtualCurrency: $ } = (0, I.f)(),
+        { balance: K, isFetching: q, error: X } = (0, S.A)(),
+        { isSubmitting: J, responseMessage: Q, redeemVirtualCurrency: $ } = (0, S.f)(),
         [ee, et] = s.useState(A.lds),
         [en, ei] = s.useState(''),
         [es, er] = s.useState(A.lds),
         [el, ea] = s.useState(A.lds),
-        eo = (0, h.hv)('PaymentFlowModalTestPage');
+        eo = (0, g.hv)('PaymentFlowModalTestPage');
     return (0, i.jsx)(m.Gt, {
         value: F,
         children: (0, i.jsxs)(a.hjN, {
@@ -165,7 +165,7 @@ let D = function () {
                             onChange: (e) => k(e)
                         }),
                         null != Z
-                            ? (0, i.jsx)(_.Z, {
+                            ? (0, i.jsx)(x.Z, {
                                   guild: Z,
                                   analyticsLocation: {}
                               })
@@ -346,7 +346,7 @@ let D = function () {
                         })
                     ]
                 }),
-                (0, i.jsx)(x.l, {
+                (0, i.jsx)(_.l, {
                     guildId: null == U ? void 0 : U.id,
                     children: (0, i.jsx)(P, { selectedGuildForGuildSub: U })
                 }),
@@ -446,7 +446,7 @@ let D = function () {
                 (0, i.jsx)(a.xJW, {
                     className: R.formItem,
                     children: (0, i.jsx)(a.zxk, {
-                        onClick: () => (0, g.EG)(),
+                        onClick: () => (0, h.EG)(),
                         children: 'Reset DismissibleContentFrameworkStore'
                     })
                 })

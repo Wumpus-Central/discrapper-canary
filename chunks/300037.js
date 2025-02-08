@@ -10,17 +10,17 @@ var s = n(120356),
     d = n(623624),
     u = n(678558),
     m = n(430824),
-    h = n(709586),
-    g = n(267642),
-    _ = n(981631),
-    x = n(474936),
+    g = n(709586),
+    h = n(267642),
+    x = n(981631),
+    _ = n(474936),
     p = n(388032),
     E = n(719721);
 let C = function (e) {
     let { className: t, guildId: n, boostingVariant: s } = e,
         C = (0, l.e7)([m.Z], () => m.Z.getGuild(n), [n]),
         { fractionalState: f } = (0, o.Z)(),
-        T = f === x.a$.FP_ONLY;
+        T = f === _.a$.FP_ONLY;
     return null == C
         ? (0, i.jsx)('div', {
               className: r()(t, E.guildContainer),
@@ -50,7 +50,7 @@ let C = function (e) {
                           (0, i.jsxs)('div', {
                               className: E.guildBoostStatsContainer,
                               children: [
-                                  (0, i.jsx)(h.Z, {
+                                  (0, i.jsx)(g.Z, {
                                       className: E.guildBoostBadge,
                                       width: 16,
                                       height: 16
@@ -64,7 +64,7 @@ let C = function (e) {
                                   (0, i.jsx)(a.Text, {
                                       variant: 'text-sm/bold',
                                       color: 'text-muted',
-                                      children: (0, g.nW)(C.premiumTier, { useLevels: !1 })
+                                      children: (0, h.nW)(C.premiumTier, { useLevels: !1 })
                                   })
                               ]
                           })
@@ -74,10 +74,10 @@ let C = function (e) {
                       ? (0, i.jsx)(u.Z, {
                             guild: C,
                             analyticsLocation: {
-                                page: _.ZY5.GUILD_BOOSTING_USER_SETTINGS,
-                                section: _.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
-                                object: _.qAy.BUTTON_CTA,
-                                objectType: _.Qqv.BUY
+                                page: x.ZY5.GUILD_BOOSTING_USER_SETTINGS,
+                                section: x.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
+                                object: x.qAy.BUTTON_CTA,
+                                objectType: x.Qqv.BUY
                             },
                             pauseAnimation: !0,
                             size: a.zxk.Sizes.MEDIUM,
@@ -90,7 +90,7 @@ let C = function (e) {
                             onClick: () => {
                                 (0, d.f)({
                                     guildId: C.id,
-                                    location: { section: _.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA }
+                                    location: { section: x.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA }
                                 });
                             },
                             size: a.zxk.Sizes.MEDIUM,

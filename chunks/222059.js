@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(864682),
     h = n(540059),
     p = n(899740),
-    m = n(849862),
-    g = n(460181),
+    g = n(849862),
+    m = n(460181),
     f = n(155409),
     _ = n(944486),
     v = n(594174),
@@ -25,9 +25,9 @@ var i = n(200651),
     E = n(682662),
     j = n(662146),
     y = n(674552),
-    A = n(981631),
-    P = n(474936),
-    T = n(871465),
+    P = n(981631),
+    T = n(474936),
+    A = n(871465),
     w = n(388032),
     R = n(491708);
 let L = {
@@ -43,12 +43,12 @@ let L = {
     }
 };
 function M(e) {
-    let { selected: t, user: n, badge: p, link: m, showProgressBadge: _ } = e,
+    let { selected: t, user: n, badge: p, link: g, showProgressBadge: _ } = e,
         v = (0, a.e7)([d.Z], () => d.Z.isEditorOpen),
         [C, x] = l.useState(!1),
         [Z, I] = l.useState(!1),
         [b, S] = l.useState(null),
-        [P, M] = l.useState(0),
+        [T, M] = l.useState(0),
         D = (0, r.Ie)('home'),
         G = (0, h.Q3)('DefaultHomeButton'),
         k = () => {
@@ -56,7 +56,7 @@ function M(e) {
         };
     if (null == n) return null;
     let B = w.intl.string(w.t.YUU0RE);
-    Z && (B = o.K.get(A.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
+    Z && (B = o.K.get(P.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
     let O = null;
     !t &&
         _ &&
@@ -74,12 +74,12 @@ function M(e) {
                 onMouseEnter: () => x(!0),
                 onMouseLeave: () => x(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != b && clearTimeout(b), S(setTimeout(k, 500)), M(P + 1), 15 === P)) {
+                    if (!__OVERLAY__ && (null != b && clearTimeout(b), S(setTimeout(k, 500)), M(T + 1), 15 === T)) {
                         k();
-                        let e = !o.K.get(A.wli);
-                        o.K.set(A.wli, e),
-                            e && o.K.set(T.O5, !0),
-                            e ? (0, g.GN)('discodo') : (0, g.GN)('user_leave'),
+                        let e = !o.K.get(P.wli);
+                        o.K.set(P.wli, e),
+                            e && o.K.set(A.O5, !0),
+                            e ? (0, m.GN)('discodo') : (0, m.GN)('user_leave'),
                             I(!0),
                             setTimeout(() => {
                                 I(!1);
@@ -90,12 +90,12 @@ function M(e) {
                 ariaLabel: w.intl.string(w.t.YUU0RE),
                 ...D,
                 to: {
-                    pathname: m,
+                    pathname: g,
                     state: {
                         analyticsSource: {
-                            page: A.ZY5.GUILD_CHANNEL,
-                            section: A.jXE.NAVIGATION,
-                            object: A.qAy.BUTTON_HOME
+                            page: P.ZY5.GUILD_CHANNEL,
+                            section: P.jXE.NAVIGATION,
+                            object: P.qAy.BUTTON_HOME
                         }
                     }
                 },
@@ -135,8 +135,8 @@ function D() {
                 i = b.xI(n, t);
             return i > 0 && i < 100;
         }),
-        n = (0, m.If)(),
-        l = Object.keys(P.nG),
+        n = (0, g.If)(),
+        l = Object.keys(T.nG),
         { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([C.Z], () => ({
             unviewedTrialCount: C.Z.getUnacknowledgedOffers(l).length,
             unviewedDiscountCount: C.Z.getUnacknowledgedDiscountOffers().length
@@ -145,14 +145,14 @@ function D() {
         d = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
         u = (0, p.q)(),
         h = n + s + u,
-        g = h === s && s > 0 && n + u === 0,
+        m = h === s && s > 0 && n + u === 0,
         f = x.Z.getHomeLink();
     return (
-        g && (f = A.Z5c.APPLICATION_STORE),
+        m && (f = P.Z5c.APPLICATION_STORE),
         (0, i.jsx)(M, {
             selected: e,
             user: d,
-            selectedChannelId: _.Z.getChannelId(A.ME),
+            selectedChannelId: _.Z.getChannelId(P.ME),
             badge: h,
             link: f,
             showProgressBadge: t

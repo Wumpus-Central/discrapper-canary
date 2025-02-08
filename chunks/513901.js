@@ -9,14 +9,14 @@ var i = n(200651),
     d = n(626135),
     u = n(74538),
     m = n(150039),
-    h = n(993413),
-    g = n(504983),
-    _ = n(981631),
-    x = n(474936),
+    g = n(993413),
+    h = n(504983),
+    x = n(981631),
+    _ = n(474936),
     p = n(388032),
     E = n(184057);
 function C(e) {
-    let { user: t, guild: n, className: r, sectionTitle: C, forcedDivider: f = !1, withTutorial: T = !1, showBorder: N = !1, isTryItOutFlow: S = !1, initialSelectedEffectId: I } = e,
+    let { user: t, guild: n, className: r, sectionTitle: C, forcedDivider: f = !1, withTutorial: T = !1, showBorder: N = !1, isTryItOutFlow: I = !1, initialSelectedEffectId: S } = e,
         b = (0, m.Kg)(t, n),
         v = u.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: j } = (0, o.ZP)(),
@@ -25,23 +25,23 @@ function C(e) {
             () =>
                 (0, c.H)({
                     analyticsLocations: j,
-                    initialSelectedEffectId: I,
+                    initialSelectedEffectId: S,
                     guild: n
                 }),
-            [j, I, n]
+            [j, S, n]
         );
     s.useEffect(() => {
         v &&
-            d.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: x.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
+            d.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: _.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
                 location_stack: j
             });
     }, [v, j]);
     let P = null != n,
         D = T ? a.gtL : a.zxk;
-    return (0, i.jsx)(h.Z, {
+    return (0, i.jsx)(g.Z, {
         forcedDivider: f,
-        borderType: g.Y.PREMIUM,
+        borderType: h.Y.PREMIUM,
         hasBackground: !0,
         title: C,
         showBorder: N,
@@ -56,7 +56,7 @@ function C(e) {
                     className: l()({ [E.buttonHighlighted]: T }),
                     children: p.intl.string(p.t['0nEVoK'])
                 }),
-                (S || void 0 !== A ? null != A : null != b) &&
+                (I || void 0 !== A ? null != A : null != b) &&
                     (0, i.jsx)(a.zxk, {
                         className: E.removeButton,
                         color: a.zxk.Colors.PRIMARY,

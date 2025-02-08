@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(607070),
     u = n(578361),
     m = n(460181),
-    h = n(585483),
-    g = n(57562),
-    _ = n(955204),
-    x = n(64078),
+    g = n(585483),
+    h = n(57562),
+    x = n(955204),
+    _ = n(64078),
     p = n(351780),
     E = n(954794),
     C = n(112843),
     f = n(524484),
     T = n(981631),
     N = n(388032),
-    S = n(218768);
-let I = {
+    I = n(218768);
+let S = {
         enabled: !0,
         combosEnabled: !0,
         screenshakeEnabled: !1,
@@ -95,7 +95,7 @@ function P(e) {
 function D(e) {
     let { children: t } = e;
     return (0, i.jsx)(o.Text, {
-        className: S.sliderDescription,
+        className: I.sliderDescription,
         variant: 'text-sm/normal',
         color: 'header-secondary',
         children: t
@@ -111,7 +111,7 @@ function y(e) {
         value: t,
         note: N.intl.string(N.t.KuYbWF),
         onChange: (e) => {
-            e || (0, g.T)(_.hn.DISABLE_POGGERMODE),
+            e || (0, h.T)(x.hn.DISABLE_POGGERMODE),
                 e && (!n || r)
                     ? (0, o.h7j)((e) =>
                           (0, i.jsx)(o.ConfirmModal, {
@@ -121,7 +121,7 @@ function y(e) {
                               onConfirm: () =>
                                   s(
                                       r
-                                          ? I
+                                          ? S
                                           : {
                                                 enabled: !0,
                                                 warningSeen: !0
@@ -159,7 +159,7 @@ function Z(e) {
             (0, i.jsxs)(o.xJW, {
                 disabled: c,
                 title: N.intl.string(N.t['vd0D8/']),
-                className: S.formItem,
+                className: I.formItem,
                 children: [
                     (0, i.jsx)(D, { children: N.intl.string(N.t.a18Sur) }),
                     (0, i.jsx)(o.iRW, {
@@ -177,7 +177,7 @@ function Z(e) {
             (0, i.jsxs)(o.xJW, {
                 disabled: c,
                 title: N.intl.string(N.t.sPO3io),
-                className: S.formItem,
+                className: I.formItem,
                 children: [
                     (0, i.jsx)(D, { children: N.intl.string(N.t.xoldVl) }),
                     (0, i.jsx)(o.iRW, {
@@ -228,7 +228,7 @@ function k(e) {
             (0, i.jsxs)(o.xJW, {
                 disabled: a,
                 title: N.intl.string(N.t.L0oQur),
-                className: S.formItem,
+                className: I.formItem,
                 children: [
                     (0, i.jsx)(D, { children: N.intl.string(N.t['/OOFpK']) }),
                     (0, i.jsx)(o.iRW, {
@@ -243,7 +243,7 @@ function k(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(o.$i$, { className: S.divider })
+            (0, i.jsx)(o.$i$, { className: I.divider })
         ]
     });
 }
@@ -255,7 +255,7 @@ function L(e) {
         c = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         u = !t || !n || c,
         m = (e, t) => {
-            null != e.shakeIntensity && e.shakeIntensity > s && (0, g.T)(_.hn.MORE), a(e, t);
+            null != e.shakeIntensity && e.shakeIntensity > s && (0, h.T)(x.hn.MORE), a(e, t);
         };
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H1,
@@ -272,7 +272,7 @@ function L(e) {
             (0, i.jsxs)(o.xJW, {
                 disabled: u,
                 title: N.intl.string(N.t.UxnnCw),
-                className: S.formItem,
+                className: I.formItem,
                 children: [
                     (0, i.jsx)(D, { children: N.intl.string(N.t.CEOEOT) }),
                     (0, i.jsx)(o.iRW, {
@@ -303,14 +303,14 @@ function B(e) {
         tag: o.RB0.H1,
         title: N.intl.string(N.t.EuXv2t),
         children: (0, i.jsxs)(o.xJW, {
-            className: S.formItem,
+            className: I.formItem,
             children: [
                 (0, i.jsx)(o.R94, {
-                    className: S.formItem,
+                    className: I.formItem,
                     children: N.intl.string(N.t['1SLnkp'])
                 }),
                 (0, i.jsx)(o.zxk, {
-                    className: S.hideButton,
+                    className: I.hideButton,
                     size: o.zxk.Sizes.SMALL,
                     onClick: () => {
                         t({
@@ -331,17 +331,17 @@ function M(e) {
         children: [
             (0, i.jsxs)(o.P3F, {
                 onClick: () => t(1),
-                className: S.achievementContainer,
+                className: I.achievementContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        className: S.achievementIconContainer,
+                        className: I.achievementIconContainer,
                         children: (0, i.jsx)(o.rm8, {
                             size: 'md',
                             color: a.Z.unsafe_rawColors.ORANGE_345.css
                         })
                     }),
                     (0, i.jsxs)('div', {
-                        className: S.achievementTextContainer,
+                        className: I.achievementTextContainer,
                         children: [
                             (0, i.jsx)(o.X6q, {
                                 variant: 'heading-md/semibold',
@@ -359,11 +359,11 @@ function M(e) {
                         size: 'custom',
                         color: 'currentColor',
                         width: 16,
-                        className: S.rightCaretIcon
+                        className: I.rightCaretIcon
                     })
                 ]
             }),
-            (0, i.jsx)(o.$i$, { className: S.divider })
+            (0, i.jsx)(o.$i$, { className: I.divider })
         ]
     });
 }
@@ -386,25 +386,25 @@ function V(e) {
     function u(e, t, n, i) {
         return (null != t ? t : e) && (null != i ? i : n);
     }
-    let g = (e) => {
+    let h = (e) => {
             if (e.enabled && !1 === r.enabled) {
                 var t;
                 n(!0),
                     (0, m.GN)('poggermode_enabled'),
-                    h.S.dispatch(T.CkL.SHAKE_APP, {
+                    g.S.dispatch(T.CkL.SHAKE_APP, {
                         duration: 2000,
                         intensity: null !== (t = e.shakeIntensity) && void 0 !== t ? t : r.shakeIntensity
                     });
             }
         },
-        _ = (e, t) => {
-            if ((g(e), (0, x.AI)(e), null == t)) return;
+        x = (e, t) => {
+            if ((h(e), (0, _.AI)(e), null == t)) return;
             let n = u(r.confettiEnabled, e.confettiEnabled, r.enabled, e.enabled);
             0 === t && n && d.fire(a.x, a.y, { settings: e });
             let i = u(r.screenshakeEnabled, e.screenshakeEnabled, r.enabled, e.enabled);
             if (1 === t && i) {
                 var s;
-                h.S.dispatch(T.CkL.SHAKE_APP, {
+                g.S.dispatch(T.CkL.SHAKE_APP, {
                     duration: 1000,
                     intensity: null !== (s = e.shakeIntensity) && void 0 !== s ? s : r.shakeIntensity
                 });
@@ -422,27 +422,27 @@ function V(e) {
             children: [
                 (0, i.jsx)(o.X6q, {
                     variant: 'heading-lg/semibold',
-                    className: S.title,
+                    className: I.title,
                     children: N.intl.string(N.t.AtCukJ)
                 }),
                 (0, i.jsx)(y, {
                     settings: r,
-                    updateSettings: _
+                    updateSettings: x
                 }),
                 (0, i.jsx)(M, { onChangePage: t }),
                 (0, i.jsx)(k, {
                     settings: r,
-                    updateSettings: _
+                    updateSettings: x
                 }),
                 (0, i.jsx)(L, {
                     settings: r,
-                    updateSettings: _
+                    updateSettings: x
                 }),
                 (0, i.jsx)(Z, {
                     settings: r,
-                    updateSettings: _
+                    updateSettings: x
                 }),
-                (0, i.jsx)(B, { updateSettings: _ })
+                (0, i.jsx)(B, { updateSettings: x })
             ]
         })
     );
@@ -469,7 +469,7 @@ function F() {
         [n, r] = s.useState(G(e)),
         [a, c] = s.useState(!1),
         m = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        h = a && !m;
+        g = a && !m;
     return (
         s.useEffect(() => {
             let t = setTimeout(() => {
@@ -478,22 +478,22 @@ function F() {
             return () => clearTimeout(t);
         }, [e]),
         s.useEffect(() => {
-            Math.random() > 0.99 && (0, g.T)(_.hn.VISITOR_100);
+            Math.random() > 0.99 && (0, h.T)(x.hn.VISITOR_100);
         }, []),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(u.Z, {
-                    className: S.slideAnimator,
+                    className: I.slideAnimator,
                     step: e,
                     direction: n,
                     children: U(e, t, c)
                 }),
                 (0, i.jsx)('div', {
-                    className: h ? S.enableAnimationOverlayVisible : S.enableAnimationOverlayHidden,
+                    className: g ? I.enableAnimationOverlayVisible : I.enableAnimationOverlayHidden,
                     children: (0, i.jsx)(o.Fmz, {
-                        className: S.enableAnimation,
+                        className: I.enableAnimation,
                         importData: w,
-                        shouldAnimate: h,
+                        shouldAnimate: g,
                         autoplay: !1,
                         resetOnPlay: !0,
                         loop: !1,

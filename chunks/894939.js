@@ -9,40 +9,40 @@ var i = n(200651),
     d = n(906732),
     u = n(856768),
     m = n(993413),
-    h = n(921801),
-    g = n(208049),
-    _ = n(763296),
-    x = n(242291),
+    g = n(921801),
+    h = n(208049),
+    x = n(763296),
+    _ = n(242291),
     p = n(893663),
     E = n(331642),
     C = n(63063),
     f = n(581883),
     T = n(738486),
     N = n(918257),
-    S = n(970813),
-    I = n(726985),
+    I = n(970813),
+    S = n(726985),
     b = n(981631),
     v = n(710111),
     j = n(388032),
     A = n(518782),
     O = n(232186);
 function R(e) {
-    return (0, a.e7)([_.Z], () => {
+    return (0, a.e7)([x.Z], () => {
         if (null == e) return null;
         let { guildId: t, soundId: n } = e;
-        return _.Z.getSound(t === v.hY ? v.X8 : t, n);
+        return x.Z.getSound(t === v.hY ? v.X8 : t, n);
     });
 }
 function P(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(h.F, {
-                    setting: I.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                    children: [(0, i.jsx)(N.Z, { refreshStyles: t }), (0, i.jsx)(S.Z, { refreshStyles: t })]
+                (0, i.jsxs)(g.F, {
+                    setting: S.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+                    children: [(0, i.jsx)(N.Z, { refreshStyles: t }), (0, i.jsx)(I.Z, { refreshStyles: t })]
                 }),
-                (0, i.jsxs)(h.F, {
-                    setting: I.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
+                (0, i.jsxs)(g.F, {
+                    setting: S.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
                     children: [t ? null : (0, i.jsx)(o.$i$, { className: A.callSoundsDivider }), (0, i.jsx)(D, { refreshStyles: t })]
                 })
             ]
@@ -61,17 +61,17 @@ function D(e) {
     let { refreshStyles: t } = e,
         { analyticsLocations: n } = (0, d.ZP)(),
         [r, c] = s.useState(v.hY),
-        h = (0, p.tT)(r),
-        f = R(h),
-        N = (null == h ? void 0 : h.type) === p.zx.GLOBAL,
-        S = (0, a.e7)([_.Z], () => _.Z.hasFetchedAllSounds()) && null != h && null == f;
+        g = (0, p.tT)(r),
+        f = R(g),
+        N = (null == g ? void 0 : g.type) === p.zx.GLOBAL,
+        I = (0, a.e7)([x.Z], () => x.Z.hasFetchedAllSounds()) && null != g && null == f;
     s.useEffect(() => {
-        S && (0, x.tt)({ location: n });
-    }, [S, n]),
+        I && (0, _.tt)({ location: n });
+    }, [I, n]),
         s.useEffect(() => {
-            (0, g.w)();
+            (0, h.w)();
         }, []);
-    let I = s.useCallback((e, t) => {
+    let S = s.useCallback((e, t) => {
             let { inDropdown: n } = t;
             return null == e ? null : n ? (0, i.jsx)(y, { guildId: e.value }) : null;
         }, []),
@@ -91,7 +91,7 @@ function D(e) {
                     onChange: (e) => {
                         c(null == e ? v.hY : e.id);
                     },
-                    renderOptionSuffix: I,
+                    renderOptionSuffix: S,
                     hideDivider: !0
                 }),
                 (0, i.jsxs)(m.Z, {
@@ -110,10 +110,10 @@ function D(e) {
                             sound: f,
                             isGlobal: N,
                             onSelect: (e) => {
-                                null == e ? (0, x.aC)(r, n) : (0, x.SZ)(r, e, n);
+                                null == e ? (0, _.aC)(r, n) : (0, _.SZ)(r, e, n);
                             }
                         }),
-                        S &&
+                        I &&
                             (0, i.jsx)(o.Wn, {
                                 className: A.notice,
                                 messageType: o.QYI.WARNING,

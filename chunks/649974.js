@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => N });
 var i,
     l,
     r,
@@ -118,7 +118,7 @@ class C extends (r = a.ZP.Store) {
               writable: !0
           })
         : (C[i] = l);
-let v = new C(s.Z, {
+let N = new C(s.Z, {
     CONNECTION_OPEN: function () {
         (p = {}), (g = {});
     },

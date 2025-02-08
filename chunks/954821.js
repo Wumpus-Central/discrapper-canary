@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(906732),
     u = n(313201),
     m = n(73346),
-    h = n(584825),
-    g = n(305342),
-    _ = n(293810),
-    x = n(388032),
+    g = n(584825),
+    h = n(305342),
+    x = n(293810),
+    _ = n(388032),
     p = n(196844);
 let E = (e) => {
         let [t, n] = s.useState(!1),
@@ -35,17 +35,17 @@ let E = (e) => {
         var t;
         let { transitionState: n, groupListing: s, guildId: r, listing: o, subscription: C, onClose: f } = e,
             T = (0, u.Dt)(),
-            N = (0, h.YB)(r),
-            S = (null == N ? void 0 : null === (t = N.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(N.cover_image_asset.application_id, N.cover_image_asset, 440) : void 0,
-            { analyticsLocations: I } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: b, error: v, submitting: j } = E(I),
+            N = (0, g.YB)(r),
+            I = (null == N ? void 0 : null === (t = N.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(N.cover_image_asset.application_id, N.cover_image_asset, 440) : void 0,
+            { analyticsLocations: S } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
+            { cancelSubscription: b, error: v, submitting: j } = E(S),
             A = async () => {
                 (await b(C.id)) && f();
             },
-            O = o.role_benefits.benefits.filter((e) => e.ref_type === _.Qs.CHANNEL),
-            R = o.role_benefits.benefits.filter((e) => e.ref_type === _.Qs.INTANGIBLE),
+            O = o.role_benefits.benefits.filter((e) => e.ref_type === x.Qs.CHANNEL),
+            R = o.role_benefits.benefits.filter((e) => e.ref_type === x.Qs.INTANGIBLE),
             P = l()(C.currentPeriodEnd).format('MMMM Do, YYYY'),
-            D = x.intl.formatToPlainString(x.t.KsMRPz, {
+            D = _.intl.formatToPlainString(_.t.KsMRPz, {
                 numChannels: O.length,
                 numAdditionalBenefits: R.length,
                 subscriptionEndDate: P
@@ -58,7 +58,7 @@ let E = (e) => {
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)('img', {
-                            src: S,
+                            src: I,
                             alt: '',
                             className: p.headerImage
                         }),
@@ -77,14 +77,14 @@ let E = (e) => {
                             id: T,
                             variant: 'text-md/medium',
                             className: p.title,
-                            children: x.intl.string(x.t.O6l5tL)
+                            children: _.intl.string(_.t.O6l5tL)
                         }),
                         (0, i.jsx)(a.Text, {
                             className: p.description,
                             variant: 'text-sm/normal',
                             children: D
                         }),
-                        (0, i.jsx)(g.c, {
+                        (0, i.jsx)(h.c, {
                             listingId: o.id,
                             guildId: s.guild_id,
                             className: p.benefits
@@ -98,14 +98,14 @@ let E = (e) => {
                             color: a.zxk.Colors.RED,
                             onClick: A,
                             submitting: j,
-                            children: x.intl.string(x.t.F6lUDA)
+                            children: _.intl.string(_.t.F6lUDA)
                         }),
                         (0, i.jsx)(a.zxk, {
                             look: a.zxk.Looks.LINK,
                             color: a.zxk.Colors.WHITE,
                             className: p.goBackButton,
                             onClick: f,
-                            children: x.intl.string(x.t.EP6EPT)
+                            children: _.intl.string(_.t.EP6EPT)
                         })
                     ]
                 })

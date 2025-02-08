@@ -9,33 +9,33 @@ var i = n(200651),
     d = n(692547),
     u = n(481060),
     m = n(846027),
-    h = n(313201),
-    g = n(131951),
-    _ = n(65154),
-    x = n(388032),
+    g = n(313201),
+    h = n(131951),
+    x = n(65154),
+    _ = n(388032),
     p = n(897237),
     E = n(587987),
     C = n(652849),
     f = n(232186);
-let T = (0, h.hQ)();
+let T = (0, g.hQ)();
 function N() {
     let [e, t] = s.useState(-100),
         [n, r] = s.useState(!1),
-        { threshold: N, autoThreshold: S } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
+        { threshold: N, autoThreshold: I } = (0, a.cj)([h.Z], () => h.Z.getModeOptions()),
         {
-            inputMode: I,
+            inputMode: S,
             automaticVADSupported: b,
             isEnabled: v
-        } = (0, a.cj)([g.Z], () => ({
-            inputMode: g.Z.getMode(),
-            automaticVADSupported: g.Z.supports(_.AN.AUTOMATIC_VAD),
-            isEnabled: g.Z.isEnabled()
+        } = (0, a.cj)([h.Z], () => ({
+            inputMode: h.Z.getMode(),
+            automaticVADSupported: h.Z.supports(x.AN.AUTOMATIC_VAD),
+            isEnabled: h.Z.isEnabled()
         }));
     function j(e, n) {
-        t(e), r((n & _.Dg.VOICE) === _.Dg.VOICE);
+        t(e), r((n & x.Dg.VOICE) === x.Dg.VOICE);
     }
     function A(e, t) {
-        m.Z.setMode(I, {
+        m.Z.setMode(S, {
             threshold: e,
             autoThreshold: t
         });
@@ -44,10 +44,10 @@ function N() {
         let e = new c.V7();
         return (
             e.start(1000, () => {
-                g.Z.getMediaEngine().on(o.aB.VoiceActivity, j), e.stop();
+                h.Z.getMediaEngine().on(o.aB.VoiceActivity, j), e.stop();
             }),
             () => {
-                g.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, j), e.stop();
+                h.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, j), e.stop();
             }
         );
     }, []);
@@ -56,7 +56,7 @@ function N() {
         children: (0, i.jsx)(u.iRW, {
             initialValue: N + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-            onValueChange: (e) => A(-((100 - e) * 1), S),
+            onValueChange: (e) => A(-((100 - e) * 1), I),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
             'aria-labelledby': T,
@@ -73,7 +73,7 @@ function N() {
         })
     });
     return (
-        S &&
+        I &&
             (O = (0, i.jsxs)('section', {
                 className: p.inputSensitivityToggle,
                 children: [
@@ -84,17 +84,17 @@ function N() {
                     (0, i.jsx)(u.R94, {
                         type: u.R94.Types.DESCRIPTION,
                         className: f.marginBottom8,
-                        children: x.intl.string(x.t.W3K5Ii)
+                        children: _.intl.string(_.t.W3K5Ii)
                     })
                 ]
             })),
         (0, i.jsxs)(u.xJW, {
-            title: x.intl.string(x.t['sqUm+v']),
+            title: _.intl.string(_.t['sqUm+v']),
             titleId: T,
             className: p.sensitivity,
             children: [
                 b &&
-                    (0, i.jsx)(h.FG, {
+                    (0, i.jsx)(g.FG, {
                         children: (e) =>
                             (0, i.jsxs)('div', {
                                 className: l()(C.horizontal, f.marginBottom4),
@@ -104,12 +104,12 @@ function N() {
                                         className: f.marginReset,
                                         children: (0, i.jsx)('label', {
                                             htmlFor: e,
-                                            children: x.intl.string(x.t.I1Zuq6)
+                                            children: _.intl.string(_.t.I1Zuq6)
                                         })
                                     }),
                                     (0, i.jsx)(u.rsf, {
                                         id: e,
-                                        checked: S,
+                                        checked: I,
                                         onChange: (e) => A(N, e)
                                     })
                                 ]
@@ -120,7 +120,7 @@ function N() {
                     (0, i.jsx)(u.R94, {
                         type: u.R94.Types.DESCRIPTION,
                         className: l()(p.inputDisabledWarning, f.marginBottom8),
-                        children: x.intl.format(x.t['O13I+P'], { onEnableClick: () => m.Z.enable(!0) })
+                        children: _.intl.format(_.t['O13I+P'], { onEnableClick: () => m.Z.enable(!0) })
                     })
             ]
         })

@@ -9,27 +9,27 @@ var i = n(200651),
     d = n(695103),
     u = n(998502),
     m = n(740492),
-    h = n(695346),
-    g = n(399970),
-    _ = n(726985),
-    x = n(981631),
+    g = n(695346),
+    h = n(399970),
+    x = n(726985),
+    _ = n(981631),
     p = n(388032);
 function E() {
     let [e] = s.useState(() => u.ZP.getEnableHardwareAcceleration()),
-        t = h.bm.useSetting(),
-        n = h.Sb.useSetting(),
+        t = g.bm.useSetting(),
+        n = g.Sb.useSetting(),
         E = (0, r.e7)([d.Z], () => d.Z.testModeApplicationId),
         C = (0, r.e7)([m.ZP], () => m.ZP.showPlayAgain),
         f = s.useCallback((e) => {
-            h.bm.updateSetting(!e);
+            g.bm.updateSetting(!e);
         }, []),
         T = s.useCallback((e) => {
-            e ? (0, l.h7j)((e) => (0, i.jsx)(g.Z, { ...e })) : a.mc();
+            e ? (0, l.h7j)((e) => (0, i.jsx)(h.Z, { ...e })) : a.mc();
         }, []),
         N = s.useCallback((e) => {
             o.ZP.updatedUnsyncedSettings({ showPlayAgain: e });
         }, []),
-        S = s.useCallback((e) => {
+        I = s.useCallback((e) => {
             (0, l.h7j)((t) =>
                 (0, i.jsx)(l.ConfirmModal, {
                     header: p.intl.string(p.t.aqpAvr),
@@ -49,25 +49,25 @@ function E() {
         title: p.intl.string(p.t['8/udY2']),
         children: [
             (0, i.jsx)(c.F, {
-                setting: _.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
+                setting: x.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
                 children: (0, i.jsx)(l.j7V, {
                     value: n,
-                    onChange: h.Sb.updateSetting,
-                    note: p.intl.format(p.t['CY6q/f'], { apiDocsUrl: x.EYA.API_DOCS }),
+                    onChange: g.Sb.updateSetting,
+                    note: p.intl.format(p.t['CY6q/f'], { apiDocsUrl: _.EYA.API_DOCS }),
                     children: p.intl.string(p.t.ObIb1d)
                 })
             }),
             (0, i.jsx)(c.F, {
-                setting: _.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
+                setting: x.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
                 children: (0, i.jsx)(l.j7V, {
                     value: e,
-                    onChange: S,
+                    onChange: I,
                     note: p.intl.string(p.t.Afc7l5),
                     children: p.intl.string(p.t['eOC/Fx'])
                 })
             }),
             (0, i.jsx)(c.F, {
-                setting: _.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
+                setting: x.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
                 children: (0, i.jsx)(l.j7V, {
                     value: !t,
                     onChange: f,
@@ -76,7 +76,7 @@ function E() {
                 })
             }),
             (0, i.jsx)(c.F, {
-                setting: _.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
+                setting: x.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
                 children: (0, i.jsx)(l.j7V, {
                     value: null != E,
                     note: p.intl.string(p.t['52hMnJ']),
@@ -85,7 +85,7 @@ function E() {
                 })
             }),
             (0, i.jsx)(c.F, {
-                setting: _.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
+                setting: x.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
                 children: (0, i.jsx)(l.j7V, {
                     value: C,
                     note: p.intl.string(p.t['B/qU4O']),

@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(23434),
     I = n(1964),
     C = n(762756),
-    v = n(308569),
-    N = n(981631),
+    N = n(308569),
+    v = n(981631),
     T = n(815660),
     S = n(388032);
 function Z() {
@@ -27,7 +27,7 @@ function Z() {
             theme: f.Z.theme
         })),
         Z = I.Z.getVerificationTypes(e),
-        [x, A] = l.useState(0),
+        [A, x] = l.useState(0),
         b = (0, h.Z)(Z);
     (0, p.Z)(
         {
@@ -49,7 +49,7 @@ function Z() {
                         return (t) => (0, i.jsx)(e, { ...t });
                     },
                     {
-                        modalKey: v.F0,
+                        modalKey: N.F0,
                         Layer: g.ZP
                     }
                 );
@@ -81,8 +81,8 @@ function Z() {
             []
         ),
         l.useEffect(() => {
-            (null == b ? void 0 : b[0]) === N.PUi.PHONE &&
-                (null == Z ? void 0 : Z[0]) === N.PUi.EMAIL &&
+            (null == b ? void 0 : b[0]) === v.PUi.PHONE &&
+                (null == Z ? void 0 : Z[0]) === v.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
@@ -95,7 +95,7 @@ function Z() {
                             });
                     },
                     {
-                        modalKey: v.HR,
+                        modalKey: N.HR,
                         Layer: g.ZP,
                         onCloseCallback: L
                     }
@@ -103,22 +103,22 @@ function Z() {
         }, [Z, b]),
         (0, i.jsx)(C.Z, {
             types: Z,
-            captchaKey: x,
+            captchaKey: A,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({
-                        url: N.ANM.CAPTCHA,
+                        url: v.ANM.CAPTCHA,
                         body: { captcha_key: e },
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
                     .then(d.xf, () => {
-                        A((e) => e + 1);
+                        x((e) => e + 1);
                     });
             },
             theme: t,
             onClick: (e) => {
-                e === N.PUi.EMAIL_OR_PHONE || e === N.PUi.EMAIL || e === N.PUi.REVERIFY_EMAIL ? L() : y();
+                e === v.PUi.EMAIL_OR_PHONE || e === v.PUi.EMAIL || e === v.PUi.REVERIFY_EMAIL ? L() : y();
             },
             onLogout: () => {
                 (0, o.ZDy)(

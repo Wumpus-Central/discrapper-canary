@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(47120), n(653041);
+n.d(t, { Z: () => I }), n(47120), n(653041);
 var i = n(200651),
     s = n(192379),
     r = n(392711),
@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(372460),
     u = n(91896),
     m = n(768581),
-    h = n(136015),
-    g = n(695346),
-    _ = n(546957),
-    x = n(838436),
+    g = n(136015),
+    h = n(695346),
+    x = n(546957),
+    _ = n(838436),
     p = n(51331),
     E = n(726985),
     C = n(981631),
@@ -42,24 +42,24 @@ function N() {
                 ];
             },
             [],
-            h.Q
+            g.Q
         ),
         n = (0, d.wn)({ location: 'GameFriendDMsSettingHeader' }),
-        g = (0, c.Z)(t, n),
-        _ = s.useMemo(() => {
+        h = (0, c.Z)(t, n),
+        x = s.useMemo(() => {
             let e = [];
             for (let t = 0; t < 2; t++) {
-                let n = g[t];
+                let n = h[t];
                 if (null == n) break;
                 e.push(n.name);
             }
-            let t = g.length - 2;
+            let t = h.length - 2;
             return t > 0 && e.push(f.intl.format(f.t['EADv+/'], { count: t })), e.join(', ');
-        }, [g]),
-        x = s.useMemo(() => {
+        }, [h]),
+        _ = s.useMemo(() => {
             let e = [];
-            for (let t = 0; t < g.length; t++) {
-                let n = g[t];
+            for (let t = 0; t < h.length; t++) {
+                let n = h[t];
                 if (null == n) continue;
                 let { icon: s, name: r } = n;
                 if (null == s) continue;
@@ -84,7 +84,7 @@ function N() {
                     break;
             }
             return e;
-        }, [g]),
+        }, [h]),
         p = s.useCallback(() => {
             o.Z.open(C.oAB.AUTHORIZED_APPS);
         }, []);
@@ -105,13 +105,13 @@ function N() {
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-muted',
-                                children: _
+                                children: x
                             })
                         ]
                     }),
                     (0, i.jsx)('div', {
                         className: T.gameRelationshipIcons,
-                        children: x
+                        children: _
                     })
                 ]
             }),
@@ -127,18 +127,18 @@ function N() {
         ]
     });
 }
-function S() {
-    let e = g._j.useSetting();
-    return (0, i.jsxs)(_.Z, {
+function I() {
+    let e = h._j.useSetting();
+    return (0, i.jsxs)(x.Z, {
         children: [
             (0, i.jsx)(N, {}),
-            (0, i.jsx)(x.U, {
+            (0, i.jsx)(_.U, {
                 setting: E.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
                 children: (0, i.jsx)(p.Z, {
                     title: f.intl.string(f.t['/U8Iwc']),
                     note: f.intl.string(f.t.WO2Hlp),
                     value: e,
-                    onChange: g._j.updateSetting
+                    onChange: h._j.updateSetting
                 })
             })
         ]

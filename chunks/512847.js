@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(292959),
     I = n(19780),
     C = n(944486),
-    v = n(606304),
-    N = n(979651),
+    N = n(606304),
+    v = n(979651),
     T = n(938475),
     S = n(823379),
     Z = n(981631);
-function x(e, t, n, i) {
+function A(e, t, n, i) {
     l.useEffect(() => {
         let l = t(),
             a = new r.Fh(e, () => {
@@ -33,9 +33,9 @@ function x(e, t, n, i) {
         return a.attach('useSound'), () => a.detach();
     });
 }
-function A() {
+function x() {
     return (
-        x(
+        A(
             [f.Z, C.Z],
             () => ({
                 inVoiceChannel: null != C.Z.getVoiceChannelId(),
@@ -61,7 +61,7 @@ function A() {
 }
 function b() {
     return (
-        x(
+        A(
             [g.Z, I.Z, C.Z, o.Z],
             () => {
                 let e = g.Z.getChannel(C.Z.getVoiceChannelId()),
@@ -98,9 +98,9 @@ function b() {
 }
 function L() {
     return (
-        x(
-            [v.Z],
-            () => v.Z.isCurrentUserSpeaking(),
+        A(
+            [N.Z],
+            () => N.Z.isCurrentUserSpeaking(),
             (e, t) => {
                 if (e !== t) {
                     let e = f.Z.isSelfMute();
@@ -113,7 +113,7 @@ function L() {
 }
 function y() {
     return (
-        x(
+        A(
             [f.Z],
             () => f.Z.getActiveVoiceFilter(),
             (e, t) => {
@@ -125,7 +125,7 @@ function y() {
 }
 function P() {
     return (
-        x(
+        A(
             [f.Z],
             () => f.Z.isSelfMutedTemporarily(),
             (e, t) => {
@@ -140,9 +140,9 @@ function P() {
 }
 function O() {
     return (
-        x(
-            [N.Z],
-            () => N.Z.userHasBeenMovedVersion,
+        A(
+            [v.Z],
+            () => v.Z.userHasBeenMovedVersion,
             (e, t) => {
                 if (e !== t) return 'user_moved';
             }
@@ -152,12 +152,12 @@ function O() {
 }
 function R() {
     return (
-        x(
-            [C.Z, N.Z],
+        A(
+            [C.Z, v.Z],
             () => {
                 let e = C.Z.getVoiceChannelId();
                 if (null == e) return u.xO.NONE;
-                let t = N.Z.getVoiceStateForChannel(e);
+                let t = v.Z.getVoiceStateForChannel(e);
                 return (0, u.gf)(t);
             },
             (e, t) => {
@@ -169,8 +169,8 @@ function R() {
 }
 function j() {
     return (
-        x(
-            [C.Z, m.Z, p.default, N.Z, g.Z],
+        A(
+            [C.Z, m.Z, p.default, v.Z, g.Z],
             () => {
                 let e, t;
                 let n = C.Z.getVoiceChannelId(),
@@ -181,7 +181,7 @@ function j() {
                     s = m.Z.getAllActiveStreams();
                 if (null != n) {
                     let i = g.Z.getChannel(n);
-                    null != i && ((e = i.type), (t = T.ZP.countVoiceStatesForChannel(i.id) - (N.Z.isInChannel(i.id) ? 1 : 0)), (l = m.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
+                    null != i && ((e = i.type), (t = T.ZP.countVoiceStatesForChannel(i.id) - (v.Z.isInChannel(i.id) ? 1 : 0)), (l = m.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
                 }
                 let o = null;
                 return (
@@ -232,7 +232,7 @@ function j() {
 }
 function D() {
     return (
-        x(
+        A(
             [C.Z, a.ZP, p.default],
             () => {
                 let e = C.Z.getVoiceChannelId(),
@@ -276,6 +276,6 @@ function D() {
 }
 function w() {
     return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(A, {}), (0, i.jsx)(b, {}), (0, i.jsx)(L, {}), (0, i.jsx)(P, {}), (0, i.jsx)(O, {}), (0, i.jsx)(j, {}), (0, i.jsx)(R, {}), (0, i.jsx)(D, {}), (0, i.jsx)(y, {})]
+        children: [(0, i.jsx)(x, {}), (0, i.jsx)(b, {}), (0, i.jsx)(L, {}), (0, i.jsx)(P, {}), (0, i.jsx)(O, {}), (0, i.jsx)(j, {}), (0, i.jsx)(R, {}), (0, i.jsx)(D, {}), (0, i.jsx)(y, {})]
     });
 }

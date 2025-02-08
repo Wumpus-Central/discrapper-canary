@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(451603),
     h = n(885714),
     p = n(155409),
-    m = n(430824),
-    g = n(594174),
+    g = n(430824),
+    m = n(594174),
     f = n(40153),
     _ = n(603592),
     v = n(981631),
@@ -38,14 +38,14 @@ function b(e) {
 }
 function S(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
-        o = (0, r.e7)([m.Z], () => m.Z.getGuilds()),
+        o = (0, r.e7)([g.Z], () => g.Z.getGuilds()),
         S = l.useMemo(() => Object.values(o), [o]),
-        N = (0, r.e7)([g.default], () => g.default.getCurrentUser()),
+        N = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
         E = l.useMemo(() => S.some((e) => e.isOwner(N)), [S, N]),
         j = (0, a.s9z)((e) => (0, a.DEQ)(e, C.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
-        A = (0, d.Q3)('CreateJoinGuildButton'),
-        P = (0, i.jsx)(_.Z, {
+        P = (0, d.Q3)('CreateJoinGuildButton'),
+        T = (0, i.jsx)(_.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -63,10 +63,10 @@ function S(e) {
             selected: j,
             onContextMenu: b,
             tooltip: x.intl.string(x.t.l5WIbW),
-            icon: A ? a.oFk : a.BRu
+            icon: P ? a.oFk : a.BRu
         });
     return t
-        ? P
+        ? T
         : (0, i.jsx)('div', {
               className: Z.tutorialContainer,
               children: (0, i.jsxs)(p.Z, {
@@ -74,7 +74,7 @@ function S(e) {
                   inlineSpecs: I,
                   position: 'right',
                   children: [
-                      P,
+                      T,
                       null != n &&
                           (0, i.jsx)(f.ZP, {
                               name: x.intl.string(x.t['45xjMz']),

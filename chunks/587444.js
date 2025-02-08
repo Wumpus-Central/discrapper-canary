@@ -1,12 +1,12 @@
 n.d(t, {
-    Z: () => m,
-    u: () => p
+    Z: () => p,
+    u: () => m
 });
 var i = n(200651);
 n(192379);
 var r = n(120356),
-    l = n.n(r),
-    a = n(692547),
+    a = n.n(r),
+    l = n(692547),
     o = n(481060),
     s = n(388905),
     c = n(600164),
@@ -15,13 +15,13 @@ var r = n(120356),
     h = n(897927),
     _ = n(652849),
     g = n(232186);
-function p(e) {
+function m(e) {
     let { text: t, buttonCta: r, onClick: d } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(s.Ee, { src: n(689411) }),
             (0, i.jsx)(s.Dx, {
-                className: l()(g.marginTop20, g.marginBottom8, _.flexCenter),
+                className: a()(g.marginTop20, g.marginBottom8, _.flexCenter),
                 children: u.intl.string(u.t.eL5z0t)
             }),
             (0, i.jsx)(s.DK, {
@@ -52,7 +52,7 @@ function p(e) {
                                 tag: 'strong',
                                 className: h.buttonTitle,
                                 variant: 'text-md/normal',
-                                style: { color: a.Z.unsafe_rawColors.PRIMARY_300.css },
+                                style: { color: l.Z.unsafe_rawColors.PRIMARY_300.css },
                                 children: t
                             }),
                             (0, i.jsx)(s.zx, {
@@ -67,14 +67,14 @@ function p(e) {
         ]
     });
 }
-function m(e) {
-    let { text: t, buttonCta: n, theme: r = d.BRd.DARK, onClick: l } = e;
+function p(e) {
+    let { text: t, buttonCta: n, theme: r = d.BRd.DARK, onClick: a } = e;
     return (0, i.jsx)(s.ZP, {
         theme: r,
-        children: (0, i.jsx)(p, {
+        children: (0, i.jsx)(m, {
             text: t,
             buttonCta: n,
-            onClick: l
+            onClick: a
         })
     });
 }

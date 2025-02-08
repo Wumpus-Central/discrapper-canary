@@ -18,9 +18,9 @@ var l = n(481060),
 let E = (0, g.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: v, guildId: N, channelId: T, prompt: S, disableGuildSelect: Z, disclosures: x, integrationType: A, pid: b } = e,
-            L = 'OAuth2Authorize_'.concat(n, '_').concat(N, '_').concat(T),
-            y = null != A ? (null == d ? void 0 : d.get(A)) : void 0,
+        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: N, guildId: v, channelId: T, prompt: S, disableGuildSelect: Z, disclosures: A, integrationType: x, pid: b } = e,
+            L = 'OAuth2Authorize_'.concat(n, '_').concat(v, '_').concat(T),
+            y = null != x ? (null == d ? void 0 : d.get(x)) : void 0,
             P = null !== (t = null == y ? void 0 : y.application) && void 0 !== t ? t : s.Z.getApplication(n);
         return new Promise((e, t) => {
             let s = (0, _.jU)(b),
@@ -38,18 +38,18 @@ let E = (0, g.Z)(
                             authorizations: d,
                             clientId: n,
                             scopes: null != u ? u : [],
-                            disclosures: null != x ? x : [],
+                            disclosures: null != A ? A : [],
                             responseType: g,
                             redirectUri: E,
                             codeChallenge: I,
                             codeChallengeMethod: C,
-                            state: v,
+                            state: N,
                             permissions: h.toString(),
-                            guildId: N,
+                            guildId: v,
                             channelId: T,
                             prompt: S,
                             disableGuildSelect: 'boolean' == typeof Z ? Z : 'true' === Z,
-                            integrationType: A
+                            integrationType: x
                         }
                     });
                 return;
@@ -70,19 +70,19 @@ let E = (0, g.Z)(
                             authorizations: d,
                             clientId: n,
                             scopes: null != u ? u : [],
-                            disclosures: null != x ? x : [],
+                            disclosures: null != A ? A : [],
                             callback: y,
                             responseType: g,
                             redirectUri: E,
                             codeChallenge: I,
                             codeChallengeMethod: C,
-                            state: v,
+                            state: N,
                             permissions: h,
-                            guildId: N,
+                            guildId: v,
                             channelId: T,
                             prompt: S,
                             disableGuildSelect: 'boolean' == typeof Z ? Z : 'true' === Z,
-                            integrationType: A
+                            integrationType: x
                         }),
                     {
                         modalKey: L,

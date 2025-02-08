@@ -1,19 +1,19 @@
 n.d(t, { Z: () => O }), n(47120);
 var a = n(200651),
-    l = n(192379),
-    r = n(120356),
-    i = n.n(r),
+    r = n(192379),
+    l = n(120356),
+    i = n.n(l),
     o = n(392711),
     s = n(913527),
     c = n.n(s),
     d = n(442837),
     u = n(481060),
-    m = n(129861),
-    h = n(665149),
+    h = n(129861),
+    m = n(665149),
     x = n(301801),
-    p = n(594174),
-    f = n(55935),
-    _ = n(120816),
+    _ = n(594174),
+    p = n(55935),
+    f = n(120816),
     b = n(31336),
     g = n(257785),
     v = n(484036),
@@ -62,31 +62,31 @@ function k(e) {
         ]
     });
 }
-let I = [
+let R = [
         {
             id: 'details',
             name: 'Details',
             render: (e) => {
                 let {
-                        loggedEvent: { event: t, properties: n, timestamp: l, fingerprint: r },
+                        loggedEvent: { event: t, properties: n, timestamp: r, fingerprint: l },
                         onClose: o
                     } = e,
-                    s = p.default.getUser(r),
-                    d = c()(l);
+                    s = _.default.getUser(l),
+                    d = c()(r);
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsxs)(h.ZP, {
+                        (0, a.jsxs)(m.ZP, {
                             className: i()(E.headerBar, T.subPanelHeaderBar),
                             children: [
-                                (0, a.jsx)(h.ZP.Icon, {
+                                (0, a.jsx)(m.ZP.Icon, {
                                     icon: u.IeX,
                                     tooltip: t
                                 }),
-                                (0, a.jsx)(h.ZP.Title, {
+                                (0, a.jsx)(m.ZP.Title, {
                                     wrapperClassName: E.headerTitle,
                                     children: t
                                 }),
-                                (0, a.jsx)(h.ZP.Icon, {
+                                (0, a.jsx)(m.ZP.Icon, {
                                     icon: u.k$p,
                                     tooltip: 'Close',
                                     onClick: o
@@ -99,19 +99,19 @@ let I = [
                                 (0, a.jsx)(g.Z9, {
                                     name: 'Timestamp (local)',
                                     children: (0, a.jsxs)('time', {
-                                        dateTime: l.toISOString(),
-                                        title: (0, f.vc)(d, 'LLLL'),
-                                        children: [c().locale(), (0, f.Y4)(d)]
+                                        dateTime: r.toISOString(),
+                                        title: (0, p.vc)(d, 'LLLL'),
+                                        children: [c().locale(), (0, p.Y4)(d)]
                                     })
                                 }),
                                 null != s &&
                                     (0, a.jsx)(g.Z9, {
                                         name: 'User',
-                                        children: (0, a.jsx)(m.Z, { user: s })
+                                        children: (0, a.jsx)(h.Z, { user: s })
                                     }),
                                 (0, a.jsx)(g.Z9, {
                                     name: 'Fingerprint',
-                                    children: (0, a.jsx)('code', { children: r })
+                                    children: (0, a.jsx)('code', { children: l })
                                 })
                             ]
                         }),
@@ -139,11 +139,11 @@ let I = [
             }
         }
     ],
-    Z = {
+    I = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(Z)
+                Object.entries(I)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -168,22 +168,22 @@ let I = [
         }
     };
 function O() {
-    let e = l.useRef(null),
-        [t, n] = l.useState(''),
-        r = (0, d.e7)([_.Z], () => _.Z.loggedEventsVersion),
-        s = l.useMemo(() => _.Z.loggedEvents, [r]),
-        [c, m] = l.useState(Object.keys(Z)),
-        [h, p] = l.useState(s),
-        f = l.useRef(null),
-        g = l.useMemo(
+    let e = r.useRef(null),
+        [t, n] = r.useState(''),
+        l = (0, d.e7)([f.Z], () => f.Z.loggedEventsVersion),
+        s = r.useMemo(() => f.Z.loggedEvents, [l]),
+        [c, h] = r.useState(Object.keys(I)),
+        [m, _] = r.useState(s),
+        p = r.useRef(null),
+        g = r.useMemo(
             () =>
                 (0, o.throttle)(
                     async (e, t) => {
                         if ('' === e) {
-                            p(t);
+                            _(t);
                             return;
                         }
-                        f.current = (0, o.uniqueId)();
+                        p.current = (0, o.uniqueId)();
                         let n = await (0, x.H)(
                             t,
                             (e) => {
@@ -193,27 +193,27 @@ function O() {
                             e,
                             !0
                         );
-                        null != f.current && p(n);
+                        null != p.current && _(n);
                     },
                     300,
                     { leading: !0 }
                 ),
             []
         ),
-        S = l.useMemo(
+        S = r.useMemo(
             () =>
-                h.filter((e) => {
-                    for (let t of c) if (Z[t].filter(e)) return !0;
+                m.filter((e) => {
+                    for (let t of c) if (I[t].filter(e)) return !0;
                     return !1;
                 }),
-            [h, c]
+            [m, c]
         );
-    l.useEffect(() => {
+    r.useEffect(() => {
         g(t, s);
     }, [t, g, s]);
-    let [k, O] = l.useState(void 0),
-        w = S.find((e) => e.key === k),
-        { TabBar: R, renderSelectedTab: P } = (0, C.Z)({ tabs: I }, []);
+    let [k, O] = r.useState(void 0),
+        Z = S.find((e) => e.key === k),
+        { TabBar: w, renderSelectedTab: A } = (0, C.Z)({ tabs: R }, []);
     return (0, a.jsxs)('div', {
         ref: e,
         className: i()(E.panel, T.panel),
@@ -238,14 +238,14 @@ function O() {
                     (0, a.jsx)('div', { className: T.toolbarDivider }),
                     (0, a.jsx)('div', {
                         className: T.filters,
-                        children: Object.entries(Z).map((e) => {
+                        children: Object.entries(I).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 u.P3F,
                                 {
                                     className: i()(T.filter, c.includes(t) && T.activeFilter),
                                     onClick: () => {
-                                        m((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
+                                        h((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
                                     children: n.label
                                 },
@@ -271,15 +271,15 @@ function O() {
                 selectedRowKey: k,
                 onClickRow: (e) => O(e.key)
             }),
-            null != w &&
+            null != Z &&
                 (0, a.jsxs)(v.Z, {
                     className: T.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
-                        (0, a.jsx)(R, {}),
-                        P({
-                            loggedEvent: w,
+                        (0, a.jsx)(w, {}),
+                        A({
+                            loggedEvent: Z,
                             onClose: () => O(void 0)
                         })
                     ]

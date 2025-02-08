@@ -1,7 +1,7 @@
 n.d(t, { Z: () => c });
 var a = n(512969),
-    l = n(65400),
-    r = n(731965),
+    r = n(65400),
+    l = n(731965),
     i = n(893607),
     o = n(981631);
 function s(e) {
@@ -24,14 +24,14 @@ function s(e) {
               channelId: null
           };
 }
-let c = (0, l.F)((e) => ({
+let c = (0, r.F)((e) => ({
     path: null,
     basePath: '/',
     guildId: null,
     channelId: null,
     updatePath(t) {
         let { guildId: n, channelId: a } = s(t);
-        (0, r.j)(() =>
+        (0, l.j)(() =>
             e({
                 path: t,
                 guildId: n,
@@ -41,7 +41,7 @@ let c = (0, l.F)((e) => ({
     },
     resetPath(t) {
         let { guildId: n, channelId: a } = s(t);
-        (0, r.j)(() =>
+        (0, l.j)(() =>
             e({
                 path: null,
                 guildId: n,

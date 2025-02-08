@@ -5,25 +5,25 @@ var l = t(200651),
     a = t.n(r),
     s = t(642128),
     o = t(399606),
-    d = t(481060),
-    c = t(201070),
+    c = t(481060),
+    d = t(201070),
     u = t(893966),
     m = t(472596),
     x = t(598948),
     h = t(428936),
     j = t(41586),
-    _ = t(676391);
-function C(e) {
+    C = t(676391);
+function _(e) {
     let { guild: n } = e,
-        t = (0, c.$j)(n.id),
-        i = (0, d.q_F)({
+        t = (0, d.$j)(n.id),
+        i = (0, c.q_F)({
             height: t ? 3 : 0,
             config: s.config.stiff
         });
     return (0, l.jsx)('div', {
-        className: _.loaderContainer,
+        className: C.loaderContainer,
         children: (0, l.jsx)(s.animated.div, {
-            className: _.loaderBar,
+            className: C.loaderBar,
             style: i
         })
     });
@@ -31,41 +31,41 @@ function C(e) {
 function f(e) {
     let { guild: n, className: t, onPageChange: r, onMemberSelect: s } = e,
         f = n.id,
-        v = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(f), [f]),
-        N = (0, c.$j)(f),
-        b = (0, c.M3)(f),
-        E = i.useCallback(
+        b = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(f), [f]),
+        v = (0, d.$j)(f),
+        N = (0, d.M3)(f),
+        g = i.useCallback(
             (e) => {
                 null != e && (null == s || s(e));
             },
             [s]
         ),
-        g = (0, m.xb)(b, N, v),
-        T = i.useRef(null),
+        T = (0, m.xb)(N, v, b),
+        p = i.useRef(null),
         I = i.useRef(null),
-        S = i.useCallback(() => {
+        E = i.useCallback(() => {
             var e;
-            null === (e = T.current) || void 0 === e || e.resetSearchText();
+            null === (e = p.current) || void 0 === e || e.resetSearchText();
         }, []);
     return (0, l.jsx)('div', {
-        className: a()(_.mainTableContainer, t),
-        children: (0, l.jsxs)(d.Den, {
-            className: a()(_.horizatonalScroller),
+        className: a()(C.mainTableContainer, t),
+        children: (0, l.jsxs)(c.Den, {
+            className: a()(C.horizatonalScroller),
             ref: I,
             orientation: 'horizontal',
             children: [
                 (0, l.jsx)(j.Z, {
                     guild: n,
-                    ref: T
+                    ref: p
                 }),
-                (0, l.jsx)(C, { guild: n }),
+                (0, l.jsx)(_, { guild: n }),
                 (0, l.jsx)(x.Z, {
                     guild: n,
-                    onSelectRow: E,
-                    searchState: g,
-                    onResetForNewMembers: S
+                    onSelectRow: g,
+                    searchState: T,
+                    onResetForNewMembers: E
                 }),
-                g !== m.po.SUCCESS_STILL_INDEXING &&
+                T !== m.po.SUCCESS_STILL_INDEXING &&
                     (0, l.jsx)(h.Z, {
                         guildId: n.id,
                         onPageChange: r

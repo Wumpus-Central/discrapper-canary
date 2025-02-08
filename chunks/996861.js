@@ -4,14 +4,14 @@ n.d(t, {
     F4: () => T,
     HH: () => D,
     Hd: () => b,
-    Xl: () => C,
+    Xl: () => P,
     dF: () => R,
     eM: () => G,
     fB: () => M,
     gK: () => L,
     mG: () => y,
     qe: () => O,
-    rY: () => P,
+    rY: () => C,
     ts: () => k,
     zW: () => _
 }),
@@ -63,14 +63,14 @@ function b(e, t) {
 function A(e, t) {
     (0, N.Z)(e.id, t.id);
 }
-function P(e, t, n) {
+function C(e, t, n) {
     if (!1 === t.pinned) {
         n.shiftKey ? i.Z.pinMessage(e, t.id) : a.Z.confirmPin(e, t);
         return;
     }
     n.shiftKey ? i.Z.unpinMessage(e, t.id) : a.Z.confirmUnpin(e, t);
 }
-function C(e, t) {
+function P(e, t) {
     (0, s.Z)(e.id, t.id);
 }
 function y(e, t) {

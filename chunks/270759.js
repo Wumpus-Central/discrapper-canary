@@ -17,13 +17,13 @@ var i = n(200651),
     E = n(984370),
     I = n(518311),
     C = n(199104),
-    v = n(922611),
-    N = n(108427),
+    N = n(922611),
+    v = n(108427),
     T = n(210887),
     S = n(974042),
     Z = n(849862),
-    x = n(666286),
-    A = n(596957),
+    A = n(666286),
+    x = n(596957),
     b = n(981631),
     L = n(723359),
     y = n(388032),
@@ -36,7 +36,7 @@ function O() {
 }
 let R = function (e) {
     let { initialSection: t } = e,
-        n = (0, v.Do)({ location: 'PeoplePage' }),
+        n = (0, N.Do)({ location: 'PeoplePage' }),
         r = (0, s.TH)(),
         I = (0, s.k6)(),
         R = (0, _.Q3)('PeoplePage');
@@ -50,7 +50,7 @@ let R = function (e) {
             });
     }, [I, r]),
         l.useEffect(() => {
-            h.Y(b.Z5c.FRIENDS), (0, N.e)('friends');
+            h.Y(b.Z5c.FRIENDS), (0, v.e)('friends');
         }, []);
     let j = (0, c.e7)([T.Z], () => T.Z.theme),
         D = (0, Z.If)(),
@@ -176,7 +176,7 @@ let R = function (e) {
                         id: w,
                         className: P.peopleColumn,
                         'aria-labelledby': V,
-                        children: w === b.pJs.ADD_FRIEND ? (0, i.jsx)(x.Z, {}) : (0, i.jsx)(A.Z, { titleId: V })
+                        children: w === b.pJs.ADD_FRIEND ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)(x.Z, { titleId: V })
                     }),
                     (0, i.jsx)('div', {
                         className: P.nowPlayingColumn,

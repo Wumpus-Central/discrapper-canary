@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(47120);
+n.d(t, { Z: () => S }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -9,22 +9,22 @@ var i = n(200651),
     d = n(780384),
     u = n(481060),
     m = n(355467),
-    h = n(100527),
-    g = n(906732),
-    _ = n(600164),
-    x = n(210887),
+    g = n(100527),
+    h = n(906732),
+    x = n(600164),
+    _ = n(210887),
     p = n(301766),
     E = n(509545),
     C = n(74538),
     f = n(937615),
     T = n(388032),
     N = n(104489);
-function S(e) {
+function I(e) {
     let { subscription: t, renewalMutations: n, transitionState: s, onClose: r, analyticsLocation: l } = e,
-        a = (0, c.e7)([x.Z], () => x.Z.theme),
-        { analyticsLocations: S } = (0, g.ZP)(h.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
-    async function I() {
-        await (0, m.dP)(t, t.planId, S, l), r();
+        a = (0, c.e7)([_.Z], () => _.Z.theme),
+        { analyticsLocations: I } = (0, h.ZP)(g.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
+    async function S() {
+        await (0, m.dP)(t, t.planId, I, l), r();
     }
     let b = E.Z.get(t.planId);
     o()(null != b, 'Missing subscriptionPlan');
@@ -38,7 +38,7 @@ function S(e) {
         'aria-label': T.intl.string(T.t['E9kB4+']),
         children: [
             (0, i.jsxs)(u.xBx, {
-                justify: _.Z.Justify.BETWEEN,
+                justify: x.Z.Justify.BETWEEN,
                 separator: !1,
                 children: [
                     (0, i.jsx)(u.vwX, {
@@ -64,7 +64,7 @@ function S(e) {
             (0, i.jsxs)(u.mzw, {
                 children: [
                     (0, i.jsx)(u.zxk, {
-                        onClick: I,
+                        onClick: S,
                         children: T.intl.string(T.t.frE8KC)
                     }),
                     (0, i.jsx)(u.zxk, {
@@ -78,7 +78,7 @@ function S(e) {
         ]
     });
 }
-function I(e) {
+function S(e) {
     let { subscription: t, renewalMutations: n, className: r, analyticsLocation: a } = e,
         [o, c] = s.useState(!1);
     return (0, i.jsxs)('div', {
@@ -111,7 +111,7 @@ function I(e) {
                 ? (0, i.jsx)(u.u_l, {
                       renderModal: (e) => {
                           let { transitionState: s } = e;
-                          return (0, i.jsx)(S, {
+                          return (0, i.jsx)(I, {
                               subscription: t,
                               renewalMutations: n,
                               transitionState: s,

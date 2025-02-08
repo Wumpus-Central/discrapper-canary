@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(533307),
     u = n(189907),
     m = n(812206),
-    h = n(600164),
-    g = n(925329),
-    _ = n(981632),
-    x = n(314897),
+    g = n(600164),
+    h = n(925329),
+    x = n(981632),
+    _ = n(314897),
     p = n(82142),
     E = n(246946),
     C = n(509545),
     f = n(55563),
     T = n(259580),
     N = n(572004),
-    S = n(669079),
-    I = n(296848),
+    I = n(669079),
+    S = n(296848),
     b = n(474936),
     v = n(388032),
     j = n(531822);
@@ -57,13 +57,13 @@ class O extends s.PureComponent {
     render() {
         let { hideCode: e, giftCode: t } = this.props,
             { copyMode: n } = this.state;
-        return (0, i.jsxs)(h.Z, {
-            direction: h.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(g.Z, {
+            direction: g.Z.Direction.VERTICAL,
             className: j.giftCodeRow,
             children: [
                 (0, i.jsx)(c.kO8, {
                     className: j.codeText,
-                    value: (0, S.Nz)(t.code),
+                    value: (0, I.Nz)(t.code),
                     text: this.copyButtonText,
                     mode: n,
                     supportsCopy: N.wS,
@@ -96,7 +96,7 @@ class O extends s.PureComponent {
             A(this, 'state', { copyMode: c.uA3.DEFAULT }),
             A(this, 'handleCopy', (e) => {
                 let { giftCode: t, sku: n } = this.props;
-                (0, S.dM)(t, n);
+                (0, I.dM)(t, n);
                 try {
                     (0, N.JG)(e), this.setState({ copyMode: c.uA3.SUCCESS });
                 } catch (e) {
@@ -137,9 +137,9 @@ class R extends s.PureComponent {
         );
     }
     renderGenerateGiftCodeRow() {
-        return (0, i.jsxs)(h.Z, {
-            justify: h.Z.Justify.BETWEEN,
-            align: h.Z.Align.CENTER,
+        return (0, i.jsxs)(g.Z, {
+            justify: g.Z.Justify.BETWEEN,
+            align: g.Z.Align.CENTER,
             className: j.generateCodeRow,
             children: [
                 (0, i.jsx)(c.Text, {
@@ -175,18 +175,18 @@ class R extends s.PureComponent {
                         children: (0, i.jsxs)('div', {
                             className: j.cardHeader,
                             children: [
-                                (0, i.jsxs)(h.Z, {
-                                    align: h.Z.Align.CENTER,
+                                (0, i.jsxs)(g.Z, {
+                                    align: g.Z.Align.CENTER,
                                     children: [
                                         null != d
-                                            ? (0, i.jsx)(_.Z, {
+                                            ? (0, i.jsx)(x.Z, {
                                                   giftStyle: d,
                                                   className: j.seasonalGiftBox,
                                                   shouldAnimate: this.state.isHovered
                                               })
-                                            : (0, i.jsx)(g.Z, {
+                                            : (0, i.jsx)(h.Z, {
                                                   game: t,
-                                                  size: g.Z.Sizes.MEDIUM,
+                                                  size: h.Z.Sizes.MEDIUM,
                                                   skuId: l.id
                                               }),
                                         (0, i.jsxs)('div', {
@@ -259,11 +259,11 @@ class R extends s.PureComponent {
             });
     }
 }
-let P = a.ZP.connectStores([f.Z, E.Z, p.Z, m.Z, C.Z, x.default], (e) => {
+let P = a.ZP.connectStores([f.Z, E.Z, p.Z, m.Z, C.Z, _.default], (e) => {
     let { skuId: t, subscriptionPlanId: n, giftStyle: i } = e,
         s = f.Z.get(t);
     if (null == s) throw Error('SKU was unavailable while rendering gift.');
-    let r = p.Z.getForGifterSKUAndPlan(x.default.getId(), t, n)
+    let r = p.Z.getForGifterSKUAndPlan(_.default.getId(), t, n)
         .filter((e) => !e.isClaimed)
         .filter((e) => e.giftStyle === i);
     return {
@@ -272,7 +272,7 @@ let P = a.ZP.connectStores([f.Z, E.Z, p.Z, m.Z, C.Z, x.default], (e) => {
         isFetching: p.Z.getUserGiftCodesFetchingForSKUAndPlan(t, n),
         loadedAt: p.Z.getUserGiftCodesLoadedAtForSKUAndPlan(t, n),
         application: m.Z.getApplication(s.applicationId),
-        subscriptionPlan: null != n ? (0, I.oE)(n) : null,
+        subscriptionPlan: null != n ? (0, S.oE)(n) : null,
         giftCodes: r
     };
 })(R);

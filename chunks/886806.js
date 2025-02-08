@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(442837),
     s = n(893776),
     c = n(493773),
@@ -11,17 +11,17 @@ var i = n(200651),
     h = n(17894),
     _ = n(108427),
     g = n(626135),
-    p = n(981631),
-    m = n(388032),
+    m = n(981631),
+    p = n(388032),
     f = n(823793),
-    x = n(232186);
-function E(e) {
+    E = n(232186);
+function x(e) {
     n.g.location.assign(e);
 }
 function I(e) {
-    let { location: t, transitionTo: l = E } = e,
+    let { location: t, transitionTo: a = x } = e,
         [o, I] = r.useState('submitting'),
-        v = r.useRef(void 0);
+        C = r.useRef(void 0);
     (0, c.ZP)(() => {
         (0, _.e)('verify_email');
         let e = (0, d.Z)(t);
@@ -32,36 +32,36 @@ function I(e) {
         (async () => {
             try {
                 let t = await s.Z.verify(e);
-                I('succeeded'), (v.current = t);
+                I('succeeded'), (C.current = t);
             } catch (e) {
                 I('failed');
             }
         })();
     });
-    let N = r.useCallback(() => {
-            l(p.Z5c.LOGIN);
-        }, [l]),
-        b = r.useCallback(() => {
-            g.default.track(p.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: v.current }), (0, h.Z)('verify_email');
+    let v = r.useCallback(() => {
+            a(m.Z5c.LOGIN);
+        }, [a]),
+        N = r.useCallback(() => {
+            g.default.track(m.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: C.current }), (0, h.Z)('verify_email');
         }, []);
     return 'failed' === o
         ? (0, i.jsxs)(u.ZP, {
               children: [
                   (0, i.jsx)(u.Ee, {
                       src: n(375673),
-                      className: a()(f.image, x.marginBottom20)
+                      className: l()(f.image, E.marginBottom20)
                   }),
                   (0, i.jsx)(u.Dx, {
-                      className: x.marginBottom8,
-                      children: m.intl.string(m.t.PCgG39)
+                      className: E.marginBottom8,
+                      children: p.intl.string(p.t.PCgG39)
                   }),
                   (0, i.jsx)(u.DK, {
-                      className: x.marginBottom40,
-                      children: m.intl.string(m.t.tQpeAw)
+                      className: E.marginBottom40,
+                      children: p.intl.string(p.t.tQpeAw)
                   }),
                   (0, i.jsx)(u.zx, {
-                      onClick: N,
-                      children: m.intl.string(m.t.dKhVQE)
+                      onClick: v,
+                      children: p.intl.string(p.t.dKhVQE)
                   })
               ]
           })
@@ -70,15 +70,15 @@ function I(e) {
                 children: [
                     (0, i.jsx)(u.Ee, {
                         src: n(73962),
-                        className: a()(f.image, x.marginBottom20)
+                        className: l()(f.image, E.marginBottom20)
                     }),
                     (0, i.jsx)(u.Dx, {
-                        className: x.marginBottom40,
-                        children: m.intl.string(m.t.dAfGb2)
+                        className: E.marginBottom40,
+                        children: p.intl.string(p.t.dAfGb2)
                     }),
                     (0, i.jsx)(u.zx, {
-                        onClick: b,
-                        children: m.intl.string(m.t.uJWIj4)
+                        onClick: N,
+                        children: p.intl.string(p.t.uJWIj4)
                     })
                 ]
             })
@@ -86,15 +86,15 @@ function I(e) {
                 children: [
                     (0, i.jsx)(u.Ee, {
                         src: n(892235),
-                        className: a()(f.image, x.marginBottom20)
+                        className: l()(f.image, E.marginBottom20)
                     }),
                     (0, i.jsx)(u.Dx, {
-                        className: x.marginBottom8,
-                        children: m.intl.string(m.t['0c8+5u'])
+                        className: E.marginBottom8,
+                        children: p.intl.string(p.t['0c8+5u'])
                     }),
                     (0, i.jsx)(u.DK, {
-                        className: x.marginBottom40,
-                        children: m.intl.string(m.t.ULTCBA)
+                        className: E.marginBottom40,
+                        children: p.intl.string(p.t.ULTCBA)
                     }),
                     (0, i.jsx)(u.zx, {
                         submitting: !0,

@@ -9,22 +9,22 @@ var i = n(200651),
     d = n(981631),
     u = n(388032),
     m = n(187033);
-let h = {
+let g = {
         [d.gkr.HOUSE_1]: m.membershipDialogHouse1,
         [d.gkr.HOUSE_2]: m.membershipDialogHouse2,
         [d.gkr.HOUSE_3]: m.membershipDialogHouse3
     },
-    g = {
+    h = {
         [d.gkr.HOUSE_1]: m.houseLogoHouse1,
         [d.gkr.HOUSE_2]: m.__invalid_houseLogoHouse2,
         [d.gkr.HOUSE_3]: m.__invalid_houseLogoHouse3
     },
-    _ = {
+    x = {
         [d.gkr.HOUSE_1]: n(246300),
         [d.gkr.HOUSE_2]: n(797148),
         [d.gkr.HOUSE_3]: n(374347)
     },
-    x = (e) =>
+    _ = (e) =>
         ({
             [d.gkr.HOUSE_1]: u.intl.string(u.t.CpG10d),
             [d.gkr.HOUSE_2]: u.intl.string(u.t.VNPE6u),
@@ -37,7 +37,7 @@ class p extends s.Component {
         if (null != e) {
             let t = u.intl.formatToPlainString(u.t.yG0XAA, { houseName: (0, c.X8)(e) });
             return (0, i.jsx)('div', {
-                className: l()(m.membershipDialog, h[e]),
+                className: l()(m.membershipDialog, g[e]),
                 children: (0, i.jsxs)('div', {
                     className: m.membershipDialogContent,
                     children: [
@@ -60,7 +60,7 @@ class p extends s.Component {
                                         (0, i.jsx)(a.Text, {
                                             className: m.membershipDialogHouseDescription,
                                             variant: 'text-md/normal',
-                                            children: x(e)
+                                            children: _(e)
                                         })
                                     ]
                                 }),
@@ -70,8 +70,8 @@ class p extends s.Component {
                                     shrink: 0,
                                     wrap: !0,
                                     children: (0, i.jsx)('img', {
-                                        className: l()(m.houseLogo, g[e]),
-                                        src: _[e],
+                                        className: l()(m.houseLogo, h[e]),
+                                        src: x[e],
                                         alt: t
                                     })
                                 })

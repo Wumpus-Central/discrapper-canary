@@ -9,13 +9,13 @@ var i = n(200651),
     d = n(609173);
 function u(e) {
     let { children: t, lineClamp: n = 2, ...u } = e,
-        [m, h] = s.useState(!1),
-        [g, _] = s.useState(null),
-        x =
-            null != g &&
+        [m, g] = s.useState(!1),
+        [h, x] = s.useState(null),
+        _ =
+            null != h &&
             (0, i.jsx)('button', {
                 className: d.button,
-                onClick: () => h((e) => !e),
+                onClick: () => g((e) => !e),
                 children: (0, i.jsxs)(o.Text, {
                     className: d.seeMore,
                     variant: 'text-sm/medium',
@@ -39,7 +39,7 @@ function u(e) {
             if (null == p) return;
             let { scrollHeight: e, clientHeight: t } = p;
             e > t &&
-                _({
+                x({
                     truncatedHeight: t,
                     expandedHeight: e
                 });
@@ -49,7 +49,7 @@ function u(e) {
     }, [C, t, n]);
     let f = 'auto';
     return (
-        null != g && (f = m ? ''.concat(g.expandedHeight, 'px') : ''.concat(g.truncatedHeight, 'px')),
+        null != h && (f = m ? ''.concat(h.expandedHeight, 'px') : ''.concat(h.truncatedHeight, 'px')),
         (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)(o.Text, {
@@ -60,7 +60,7 @@ function u(e) {
                     style: { height: f },
                     children: t
                 }),
-                x
+                _
             ]
         })
     );

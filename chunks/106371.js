@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
+n.d(t, { Z: () => l });
 var a = n(818083);
-let l = (0, a.B)({
+let r = (0, a.B)({
     kind: 'user',
     id: '2024-08_reaction_push_notifications_user',
     label: 'In App Notifications for Reactions',
@@ -48,4 +48,4 @@ let l = (0, a.B)({
         }
     ]
 });
-let r = l;
+let l = r;

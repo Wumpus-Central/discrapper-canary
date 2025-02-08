@@ -6,18 +6,18 @@ var n = l(200651),
     s = l(399606),
     r = l(481060),
     c = l(823596),
-    C = l(201070),
-    d = l(893966),
+    d = l(201070),
+    C = l(893966),
     u = l(527379),
     m = l(388032),
     h = l(77714);
 function x(e) {
     let { guildId: t, onPageChange: l } = e,
         [i, x] = a.useTransition(),
-        g = (0, s.e7)([d.Z], () => d.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
-        H = (0, s.cj)([d.Z], () => d.Z.getPaginationStateByGuildId(t), [t]),
-        b = (0, C.$j)(t),
-        p = a.useMemo(
+        g = (0, s.e7)([C.Z], () => C.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        p = (0, s.cj)([C.Z], () => C.Z.getPaginationStateByGuildId(t), [t]),
+        _ = (0, d.$j)(t),
+        b = a.useMemo(
             () =>
                 c.LU.map((e) => ({
                     value: e,
@@ -25,9 +25,9 @@ function x(e) {
                 })),
             []
         ),
-        _ = new Intl.NumberFormat(m.intl.currentLocale).format(g),
-        j = m.intl.formatToPlainString(m.t.RNDnQ0, { count: b ? '...' : _ }),
-        f = g > H.pageSize || b,
+        f = new Intl.NumberFormat(m.intl.currentLocale).format(g),
+        j = m.intl.formatToPlainString(m.t.RNDnQ0, { count: _ ? '...' : f }),
+        H = g > p.pageSize || _,
         v = g > c.LU['0'];
     return (0, n.jsxs)('div', {
         className: o()(h.paginationContainer),
@@ -45,12 +45,12 @@ function x(e) {
                               (0, n.jsx)(r.PhF, {
                                   'aria-label': j,
                                   className: h.pageSizeInput,
-                                  options: p,
-                                  isSelected: (e) => e === H.pageSize,
+                                  options: b,
+                                  isSelected: (e) => e === p.pageSize,
                                   select: (e) => {
                                       x(() => {
                                           (0, u._o)(t, {
-                                              ...H,
+                                              ...p,
                                               pageSize: e
                                           });
                                       });
@@ -61,7 +61,7 @@ function x(e) {
                               }),
                               (0, n.jsx)(r.ua7, {
                                   text: m.intl.string(m.t.ZTNur6),
-                                  shouldShow: b,
+                                  shouldShow: _,
                                   children: (e) =>
                                       (0, n.jsx)(r.Text, {
                                           variant: 'text-md/normal',
@@ -82,20 +82,20 @@ function x(e) {
             (0, n.jsx)('div', {
                 className: o()(h.pagination),
                 children:
-                    f &&
+                    H &&
                     (0, n.jsx)(r.DsT, {
                         className: o()(h.paginationInput),
                         totalCount: g,
-                        pageSize: H.pageSize,
+                        pageSize: p.pageSize,
                         disablePaginationGap: !0,
                         hideMaxPage: !0,
-                        currentPage: H.currentPage,
+                        currentPage: p.currentPage,
                         onPageChange: (e) => {
                             null == l || l(e),
                                 requestIdleCallback(() => {
                                     x(() => {
                                         (0, u._o)(t, {
-                                            ...H,
+                                            ...p,
                                             currentPage: e
                                         });
                                     });

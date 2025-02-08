@@ -1,16 +1,16 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var a = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
+var r = n(120356),
+    l = n.n(r),
     i = n(442837),
     o = n(481060),
     s = n(570140),
     c = n(441623),
     d = n(246992),
     u = n(562708),
-    m = n(941469);
-function h() {
+    h = n(941469);
+function m() {
     let e = (0, i.e7)([c.Z], () => c.Z.getDevToolTotalFriendAnniversaries()),
         t = (e) => {
             s.Z.dispatch({
@@ -19,7 +19,7 @@ function h() {
             });
         };
     return (0, a.jsx)(o.zJl, {
-        className: r()(m.panel),
+        className: l()(h.panel),
         children: (0, a.jsxs)('div', {
             className: u.panelInner,
             children: [

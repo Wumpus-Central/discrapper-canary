@@ -17,13 +17,13 @@ var i = n(200651),
     E = n(213609),
     I = n(143757),
     C = n(463119),
-    v = n(377171),
-    N = n(540059),
+    N = n(377171),
+    v = n(540059),
     T = n(243778),
     S = n(922409),
     Z = n(899740),
-    x = n(28476),
-    A = n(880257),
+    A = n(28476),
+    x = n(880257),
     b = n(631885),
     L = n(849862),
     y = n(522558),
@@ -135,7 +135,7 @@ let ee = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
             { channelId: l } = (0, S._)();
-        if (!(0, x.a)()) return null;
+        if (!(0, A.a)()) return null;
         let r = null == l ? void 0 : () => g.Z.preload(q.ME, l);
         return (0, i.jsx)(W.Qj, {
             selected: t,
@@ -193,7 +193,7 @@ let ee = (e) => {
                         return t === h.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, i.jsx)(p.IGR, {
                                   text: J.intl.string(J.t.y2b7CA),
-                                  color: v.Z.BG_BRAND
+                                  color: N.Z.BG_BRAND
                               })
                             : null;
                     }
@@ -319,16 +319,16 @@ function ed() {
         { theme: l } = (0, u.cj)([k.Z], () => ({ theme: k.Z.theme })),
         r = (0, u.e7)([G.Z], () => G.Z.hasLibraryApplication()),
         a = (0, u.e7)([B.Z], () => B.Z.getCurrentPath()),
-        o = (0, N.Q3)('PrivateChannels'),
+        o = (0, v.Q3)('PrivateChannels'),
         [c, d] = (0, w.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, s.X),
         h = (0, R.i)({ selected: null == d ? t : d.startsWith(q.Z5c.APPLICATION_STORE) }),
-        m = (0, x.a)(),
+        m = (0, A.a)(),
         p = (function () {
             let e = U.Ex.useSetting(),
-                t = (0, A.Z)();
+                t = (0, x.Z)();
             return !0 === e && !0 === t;
         })(),
         g = (0, I.n)();

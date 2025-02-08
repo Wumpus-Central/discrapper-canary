@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
 var s = n(120356),
@@ -10,15 +10,15 @@ var s = n(120356),
     d = n(388032),
     u = n(587362),
     m = n(568147),
-    h = n(332796);
-let g = (e) => {
-    let { className: t, imageClassName: n, textContainerOverrideStyles: s, location: g, analyticsLocation: _ } = e,
-        { analyticsLocations: x } = (0, a.ZP)(g),
+    g = n(332796);
+let h = (e) => {
+    let { className: t, imageClassName: n, textContainerOverrideStyles: s, location: h, analyticsLocation: x } = e,
+        { analyticsLocations: _ } = (0, a.ZP)(h),
         p = (0, o.rK)(),
         { enabled: E } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: p }),
         C = E && p;
     return (0, i.jsx)(a.Gt, {
-        value: x,
+        value: _,
         children: (0, i.jsxs)('div', {
             className: r()(u.container, t),
             children: [
@@ -42,12 +42,12 @@ let g = (e) => {
                             buttonText: d.intl.string(d.t.Ve9Ge3),
                             buttonTextClassName: u.giftButtonCTA,
                             color: l.zxk.Colors.CUSTOM,
-                            premiumModalAnalyticsLocation: _
+                            premiumModalAnalyticsLocation: x
                         })
                     ]
                 }),
                 (0, i.jsx)('img', {
-                    src: C ? h : m,
+                    src: C ? g : m,
                     className: r()(u.bannerImage, n),
                     alt: 'gift nitro banner'
                 })

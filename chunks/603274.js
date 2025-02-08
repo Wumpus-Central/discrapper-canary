@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(47120), n(390547), n(653041);
+n.d(t, { Z: () => P }), n(47120), n(390547), n(653041);
 var i = n(200651);
 n(192379);
 var l = n(120356),
@@ -11,8 +11,8 @@ var l = n(120356),
     u = n(884338),
     h = n(540059),
     p = n(565799),
-    m = n(501655),
-    g = n(199902),
+    g = n(501655),
+    m = n(199902),
     f = n(592125),
     _ = n(594174),
     v = n(938475),
@@ -64,8 +64,8 @@ function j() {
         ),
         a = (0, s.Wu)([p.Z], () =>
             o().flatMap(l, (e) =>
-                p.Z.getMutableParticipants(e, m.pV.SPEAKER)
-                    .filter((e) => e.type === m.Ui.VOICE)
+                p.Z.getMutableParticipants(e, g.pV.SPEAKER)
+                    .filter((e) => e.type === g.Ui.VOICE)
                     .map((e) => {
                         let { user: t } = e;
                         return t;
@@ -74,13 +74,13 @@ function j() {
         ),
         h = (0, s.e7)([p.Z], () => {
             let e = 0;
-            for (let t of l) e += p.Z.getParticipantCount(t, m.pV.AUDIENCE);
+            for (let t of l) e += p.Z.getParticipantCount(t, g.pV.AUDIENCE);
             return e;
         }),
         b = (0, s.Wu)(
-            [g.Z],
+            [m.Z],
             () =>
-                g.Z.getAllApplicationStreams()
+                m.Z.getAllApplicationStreams()
                     .filter((e) => t.includes(e.channelId))
                     .map((e) => e.ownerId),
             [t]
@@ -100,11 +100,11 @@ function j() {
         ),
         j = (0, s.Wu)([_.default], () => N.map((e) => _.default.getUser(e)), [N]),
         y = (0, s.Wu)([_.default], () => b.map((e) => _.default.getUser(e)), [b]),
-        A = E(
+        P = E(
             c.gj8,
             r.filter((e) => !b.includes(e.id) && !N.includes(e.id))
         ),
-        P =
+        T =
             0 === a.length
                 ? null
                 : (0, i.jsxs)('div', {
@@ -137,13 +137,13 @@ function j() {
                           })
                       ]
                   }),
-        T = E(
+        A = E(
             c.hGI,
             y.filter((e) => null != e && !N.includes(e.id))
         ),
         w = E(c.nG3, j);
     return (0, i.jsxs)(i.Fragment, {
-        children: [P, A, T, w]
+        children: [T, P, A, w]
     });
 }
 function y() {
@@ -160,7 +160,7 @@ function y() {
         ]
     });
 }
-function A(e) {
+function P(e) {
     let { 'aria-label': t = !1, onShow: n, children: l } = e,
         r = (0, h.Q3)('FavoritesTooltip');
     return (0, i.jsx)(c.ua7, {

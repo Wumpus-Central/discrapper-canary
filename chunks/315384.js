@@ -1,7 +1,7 @@
-n.d(t, { Z: () => m }), n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var a = n(200651),
-    l = n(192379),
-    r = n(544891),
+    r = n(192379),
+    l = n(544891),
     i = n(481060),
     o = n(317951),
     s = n(959546),
@@ -11,24 +11,24 @@ let d = '/users/@me/debug/consumables/',
         [o.FX]: 'HD Streaming Potion',
         [o.D1]: 'Confetti Potion'
     };
-function m() {
+function h() {
     let e;
-    let [t, n] = (0, l.useState)([]),
-        [m, h] = (0, l.useState)(null),
-        [x, p] = (0, l.useState)(!1);
+    let [t, n] = (0, r.useState)([]),
+        [h, m] = (0, r.useState)(null),
+        [x, _] = (0, r.useState)(!1);
     return (
-        (0, l.useEffect)(
+        (0, r.useEffect)(
             () => (
                 (async () => {
                     try {
-                        let e = (await r.tn.get(d)).body.entitlements.map((e) => s.Z.createFromServer(e));
+                        let e = (await l.tn.get(d)).body.entitlements.map((e) => s.Z.createFromServer(e));
                         n(e);
                     } catch (e) {
-                        h('Failed to fetch entitlements');
+                        m('Failed to fetch entitlements');
                     }
                 })(),
                 () => {
-                    n([]), h(null);
+                    n([]), m(null);
                 }
             ),
             []
@@ -36,10 +36,10 @@ function m() {
         (0, a.jsx)('div', {
             className: c.panel,
             children:
-                null != m
+                null != h
                     ? (0, a.jsx)(i.Text, {
                           variant: 'text-md/normal',
-                          children: m
+                          children: h
                       })
                     : (0, a.jsx)(a.Fragment, {
                           children:
@@ -54,19 +54,19 @@ function m() {
                                                 onClick:
                                                     ((e = o.D1),
                                                     async () => {
-                                                        p(!0);
+                                                        _(!0);
                                                         try {
-                                                            let a = await r.tn.post({
+                                                            let a = await l.tn.post({
                                                                     url: d,
                                                                     query: { sku_id: e },
                                                                     rejectWithError: !0
                                                                 }),
-                                                                l = new s.Z(a.body.entitlement);
-                                                            n([...t, l]);
+                                                                r = new s.Z(a.body.entitlement);
+                                                            n([...t, r]);
                                                         } catch (e) {
-                                                            h('Failed to create entitlement');
+                                                            m('Failed to create entitlement');
                                                         } finally {
-                                                            p(!1);
+                                                            _(!1);
                                                         }
                                                     }),
                                                 className: c.button,

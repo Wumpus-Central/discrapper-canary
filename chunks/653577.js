@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(111028),
     h = n(454585),
     p = n(626135),
-    m = n(981631),
-    g = n(388032),
+    g = n(981631),
+    m = n(388032),
     f = n(316249),
     _ = n(665162);
 function v(e) {
@@ -22,7 +22,7 @@ function v(e) {
         b = null != v && v.length > 0;
     l.useEffect(() => {
         Z &&
-            p.default.track(m.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+            p.default.track(g.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id
             });
@@ -48,7 +48,7 @@ function v(e) {
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/medium',
                         className: f.statusText,
-                        children: g.intl.string(g.t.Mgpxi4)
+                        children: m.intl.string(m.t.Mgpxi4)
                     }),
                     (0, i.jsx)(s.vdY, {
                         size: 'custom',

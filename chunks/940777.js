@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(239091),
     h = n(317381),
     p = n(16609),
-    m = n(540059),
-    g = n(276952),
+    g = n(540059),
+    m = n(276952),
     f = n(682662),
     _ = n(674552),
     v = n(593364),
@@ -25,15 +25,15 @@ var i = n(200651),
     E = n(593214),
     j = n(919755),
     y = n(110977),
-    A = n(603274),
-    P = n(981631),
-    T = n(388032),
+    P = n(603274),
+    T = n(981631),
+    A = n(388032),
     w = n(120555);
 let R = {
     analyticsSource: {
-        page: P.ZY5.GUILD_CHANNEL,
-        section: P.jXE.CHANNEL_LIST,
-        object: P.qAy.CHANNEL
+        page: T.ZY5.GUILD_CHANNEL,
+        section: T.jXE.CHANNEL_LIST,
+        object: T.qAy.CHANNEL
     }
 };
 function L() {
@@ -44,9 +44,9 @@ function L() {
             favoriteChannels: N.Z.getFavoriteChannels(),
             favoriteServerMuted: N.Z.favoriteServerMuted
         })),
-        k = (0, s.e7)([I.Z], () => I.Z.getChannelId(P.I_8)),
+        k = (0, s.e7)([I.Z], () => I.Z.getChannelId(T.I_8)),
         B = (0, s.e7)([Z.Z], () => Z.Z.getChannel(k)),
-        O = (0, C.Z)((e) => e.guildId) === P.I_8,
+        O = (0, C.Z)((e) => e.guildId) === T.I_8,
         { badge: U, unread: V } = (0, j.Z)(G),
         F = (function (e) {
             let t = (0, s.e7)([I.Z], () => I.Z.getVoiceChannelId()),
@@ -69,34 +69,34 @@ function L() {
                 c = a.length > 0,
                 d = !1,
                 u = !1,
-                m = !1,
-                g = !1;
+                g = !1,
+                m = !1;
             return (
-                n ? ((d = !r), (u = r), (m = i), (g = o)) : ((m = l), (g = c)),
+                n ? ((d = !r), (u = r), (g = i), (m = o)) : ((g = l), (m = c)),
                 (0, _.Or)({
                     audio: d,
                     video: u,
-                    screenshare: m,
+                    screenshare: g,
                     liveStage: !1,
                     isCurrentUserConnected: n,
-                    activity: g
+                    activity: m
                 })
             );
         })(G),
         H = U > 0 ? (0, v.N)(U) : null,
-        z = (0, m.Q3)('FavoritesButton'),
+        z = (0, g.Q3)('FavoritesButton'),
         W = l.useCallback(() => {
             r();
         }, [r]);
     return (0, i.jsxs)(f.H, {
         children: [
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(m.Z, {
                 selected: O,
                 hovered: L,
                 unread: V && !D,
                 className: w.pill
             }),
-            (0, i.jsx)(A.Z, {
+            (0, i.jsx)(P.Z, {
                 onShow: W,
                 children: (0, i.jsx)(y.S, {
                     children: (0, i.jsx)(c.aRk, {
@@ -105,12 +105,12 @@ function L() {
                         lowerBadge: H,
                         children: (0, i.jsx)(c.LYs, {
                             ...e,
-                            ariaLabel: T.intl.formatToPlainString(T.t['/uzRsr'], {
-                                guildName: T.intl.string(T.t.wMWycn),
+                            ariaLabel: A.intl.formatToPlainString(A.t['/uzRsr'], {
+                                guildName: A.intl.string(A.t.wMWycn),
                                 mentions: U
                             }),
                             to: {
-                                pathname: P.Z5c.CHANNEL(P.I_8, k),
+                                pathname: T.Z5c.CHANNEL(T.I_8, k),
                                 state: R
                             },
                             selected: O || L,

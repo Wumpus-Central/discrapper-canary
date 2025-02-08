@@ -1,19 +1,19 @@
 n.r(t), n.d(t, { default: () => ee }), n(653041), n(47120);
 var a = n(200651),
-    l = n(192379),
-    r = n(120356),
-    i = n.n(r),
+    r = n(192379),
+    l = n(120356),
+    i = n.n(l),
     o = n(990547),
     s = n(442837),
     c = n(481060),
     d = n(347469),
     u = n(213609),
-    m = n(213713),
-    h = n(665149),
+    h = n(213713),
+    m = n(665149),
     x = n(906467),
-    p = n(259580),
-    f = n(31336),
-    _ = n(19759),
+    _ = n(259580),
+    p = n(31336),
+    f = n(19759),
     b = n(432877);
 n(381996);
 var g = n(392750),
@@ -26,44 +26,44 @@ var g = n(392750),
     y = n(916790),
     S = n(645973),
     k = n(903502),
-    I = n(912072),
-    Z = n(272193),
+    R = n(912072),
+    I = n(272193),
     O = n(735959),
-    w = n(246992),
-    R = n(496025),
-    P = n(442954),
-    A = n(633001),
-    L = n(702904),
+    Z = n(246992),
+    w = n(496025),
+    A = n(442954),
+    L = n(633001),
+    P = n(702904),
     D = n(178821),
     B = n(958328),
-    M = n(315384),
-    z = n(514866),
-    F = n(678639),
+    F = n(315384),
+    M = n(514866),
+    z = n(678639),
     U = n(351930),
     G = n(771751),
-    W = n(596768),
-    H = n(56706),
-    V = n(621060),
-    X = n(388032),
-    Y = n(771466),
+    H = n(596768),
+    V = n(56706),
+    W = n(621060),
+    Y = n(388032),
+    X = n(771466),
     K = n(941469);
 function J(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: l } = e,
-        r = (0, d.Z)({
-            minDimension: _.h,
+    let { resizableNode: t, onResize: n, onResizeEnd: r } = e,
+        l = (0, d.Z)({
+            minDimension: f.h,
             resizableDomNodeRef: t,
             onElementResize: n,
-            onElementResizeEnd: l,
+            onElementResizeEnd: r,
             orientation: d.y.HORIZONTAL_LEFT
         });
     return (0, a.jsx)('div', {
-        onMouseDown: r,
-        className: Y.resizeHandle
+        onMouseDown: l,
+        className: X.resizeHandle
     });
 }
 function q() {
     var e;
-    let t = l.useMemo(() => {
+    let t = r.useMemo(() => {
             let e = [
                 {
                     id: 'analytics',
@@ -73,12 +73,12 @@ function q() {
                 {
                     id: 'triggers',
                     name: 'Triggers',
-                    render: () => (0, a.jsx)(W.Z, {})
+                    render: () => (0, a.jsx)(H.Z, {})
                 },
                 {
                     id: 'stores',
                     name: 'Stores',
-                    render: () => (0, a.jsx)(F.Z, {})
+                    render: () => (0, a.jsx)(z.Z, {})
                 },
                 {
                     id: 'dispatcher',
@@ -91,7 +91,7 @@ function q() {
                     e.push({
                         id: 'quick_actions',
                         name: 'Quick Actions',
-                        render: () => (0, a.jsx)(z.Z, {})
+                        render: () => (0, a.jsx)(M.Z, {})
                     }),
                 x.Z.isDeveloper &&
                     (e.push({
@@ -117,7 +117,7 @@ function q() {
                     e.push({
                         id: 'overlay',
                         name: 'Overlay v3',
-                        render: () => (0, a.jsx)(A.Z, {})
+                        render: () => (0, a.jsx)(L.Z, {})
                     })),
                 e.push({
                     id: 'intl',
@@ -137,17 +137,17 @@ function q() {
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: b.zU.OVERLAYS })
+                    render: () => (0, a.jsx)(R.Z, { devSettingsCategory: b.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
                     name: 'Messaging',
-                    render: () => (0, a.jsx)(R.Z, {})
+                    render: () => (0, a.jsx)(w.Z, {})
                 }),
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: b.zU.REPORTING })
+                    render: () => (0, a.jsx)(R.Z, { devSettingsCategory: b.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -157,7 +157,7 @@ function q() {
                 e.push({
                     id: 'modals',
                     name: 'Modals',
-                    render: () => (0, a.jsx)(P.Z, {})
+                    render: () => (0, a.jsx)(A.Z, {})
                 }),
                 e.push({
                     id: 'affinity',
@@ -168,7 +168,7 @@ function q() {
                     e.push({
                         id: 'content_inventory',
                         name: 'Content Inventory',
-                        render: () => (0, a.jsx)(m.Z, {})
+                        render: () => (0, a.jsx)(h.Z, {})
                     }),
                 e.push({
                     id: 'dcf',
@@ -178,7 +178,7 @@ function q() {
                 e.push({
                     id: 'potions',
                     name: 'Potions',
-                    render: () => (0, a.jsx)(M.Z, {})
+                    render: () => (0, a.jsx)(F.Z, {})
                 }),
                 window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') &&
                     (e.push({
@@ -189,7 +189,7 @@ function q() {
                     e.push({
                         id: 'payments',
                         name: 'Payments',
-                        render: () => (0, a.jsx)(L.Z, {})
+                        render: () => (0, a.jsx)(P.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
@@ -204,26 +204,26 @@ function q() {
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
-                    render: () => (0, a.jsx)(Z.Z, {})
+                    render: () => (0, a.jsx)(I.Z, {})
                 }),
                 e.push({
                     id: 'voice_filters',
                     name: 'Voice Filters',
-                    render: () => (0, a.jsx)(H.Z, {})
+                    render: () => (0, a.jsx)(V.Z, {})
                 }),
                 e
             );
         }, []),
         {
             TabBar: n,
-            renderSelectedTab: r,
+            renderSelectedTab: l,
             selectedTabId: i
-        } = (0, V.Z)(
+        } = (0, W.Z)(
             {
                 tabs: t,
-                initialSelectedTabId: null !== (e = _.Z.lastOpenTabId) && void 0 !== e ? e : void 0,
+                initialSelectedTabId: null !== (e = f.Z.lastOpenTabId) && void 0 !== e ? e : void 0,
                 onChangeTab: (e) => {
-                    (0, f.Qh)({ lastOpenTabId: e });
+                    (0, p.Qh)({ lastOpenTabId: e });
                 }
             },
             [t]
@@ -234,83 +234,83 @@ function q() {
             name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: i }
         }),
-        (0, a.jsxs)(w.Gk, {
+        (0, a.jsxs)(Z.Gk, {
             children: [
-                (0, a.jsxs)(h.ZP, {
+                (0, a.jsxs)(m.ZP, {
                     className: K.headerBar,
-                    toolbar: (0, a.jsx)(h.ZP.Icon, {
+                    toolbar: (0, a.jsx)(m.ZP.Icon, {
                         icon: c.Dio,
-                        tooltip: X.intl.string(X.t.cpT0Cg),
-                        onClick: f.SO
+                        tooltip: Y.intl.string(Y.t.cpT0Cg),
+                        onClick: p.SO
                     }),
                     children: [
-                        (0, a.jsx)(h.ZP.Icon, {
+                        (0, a.jsx)(m.ZP.Icon, {
                             icon: c.Ymb,
                             tooltip: 'DevTools'
                         }),
-                        (0, a.jsx)(h.ZP.Title, { children: 'DevTools' })
+                        (0, a.jsx)(m.ZP.Title, { children: 'DevTools' })
                     ]
                 }),
                 (0, a.jsx)(n, {}),
-                r(),
-                (0, a.jsx)(w.Br, { className: Y.layerContainer })
+                l(),
+                (0, a.jsx)(Z.Br, { className: X.layerContainer })
             ]
         })
     );
 }
 function $() {
-    let e = l.useRef(null),
-        t = (0, s.e7)([_.Z], () => _.Z.sidebarWidth),
-        [n, r] = l.useState(null),
-        o = l.useCallback((e) => (0, f.Qh)({ sidebarWidth: e }), []);
-    return (l.useEffect(() => {
-        null === n && null !== t && r(t);
+    let e = r.useRef(null),
+        t = (0, s.e7)([f.Z], () => f.Z.sidebarWidth),
+        [n, l] = r.useState(null),
+        o = r.useCallback((e) => (0, p.Qh)({ sidebarWidth: e }), []);
+    return (r.useEffect(() => {
+        null === n && null !== t && l(t);
     }, [t, n]),
     null === n)
         ? null
         : (0, a.jsxs)('div', {
               ref: e,
-              className: i()(Y.container),
+              className: i()(X.container),
               style: {
-                  minWidth: _.h,
+                  minWidth: f.h,
                   width: n
               },
               'data-app-right-panel': !0,
               children: [
                   (0, a.jsx)(J, {
                       resizableNode: e,
-                      onResize: r,
+                      onResize: l,
                       onResizeEnd: o
                   }),
                   (0, a.jsx)('div', {
-                      className: Y.sidebarContent,
+                      className: X.sidebarContent,
                       children: (0, a.jsx)(q, {})
                   })
               ]
           });
 }
 function Q() {
-    return (0, s.e7)([_.Z], () => _.Z.displayTools)
+    return (0, s.e7)([f.Z], () => f.Z.displayTools)
         ? (0, a.jsx)('div', {
-              className: i()(Y.container, Y.mobileContainerExpanded),
+              className: i()(X.container, X.mobileContainerExpanded),
               children: (0, a.jsx)('div', {
-                  className: Y.sidebarContent,
+                  className: X.sidebarContent,
                   children: (0, a.jsx)(q, {})
               })
           })
         : (0, a.jsx)('div', {
-              className: Y.container,
+              className: X.container,
               children: (0, a.jsx)(c.P3F, {
-                  onClick: f.SO,
-                  children: (0, a.jsxs)(h.ZP, {
-                      className: i()(K.headerBar, Y.mobileHeaderCollapsed),
-                      toolbar: (0, a.jsx)(p.Z, { direction: p.Z.Directions.UP }),
+                  onClick: p.SO,
+                  children: (0, a.jsxs)(m.ZP, {
+                      className: i()(K.headerBar, X.mobileHeaderCollapsed),
+                      toolbar: (0, a.jsx)(_.Z, { direction: _.Z.Directions.UP }),
                       children: [
-                          (0, a.jsx)(h.ZP.Icon, {
+                          (0, a.jsx)(m.ZP.Icon, {
                               icon: c.Ymb,
                               tooltip: 'DevTools'
                           }),
-                          (0, a.jsx)(h.ZP.Title, { children: 'DevTools' })
+                          (0, a.jsx)(m.ZP.Title, { children: 'DevTools' })
                       ]
                   })
               })

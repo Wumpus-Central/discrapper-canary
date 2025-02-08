@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(525654),
-    a = n.n(l),
+    a = n(525654),
+    l = n.n(a),
     o = n(442837),
     s = n(893776),
     c = n(493773),
@@ -11,18 +11,18 @@ var i = n(200651),
     h = n(108427),
     _ = n(981631),
     g = n(388032),
-    p = n(232186);
-function m(e) {
+    m = n(232186);
+function p(e) {
     return n.g.location.assign(e);
 }
 function f(e) {
-    let { location: t, transitionTo: l = m } = e,
+    let { location: t, transitionTo: a = p } = e,
         [o, f] = r.useState('submitting');
-    function x() {
-        return 'Android' === a().os.family || 'iOS' === a().os.family
+    function E() {
+        return 'Android' === l().os.family || 'iOS' === l().os.family
             ? null
             : (0, i.jsx)(u.zx, {
-                  onClick: () => l(_.Z5c.LOGIN),
+                  onClick: () => a(_.Z5c.LOGIN),
                   children: g.intl.string(g.t.dKhVQE)
               });
     }
@@ -47,17 +47,17 @@ function f(e) {
                   (0, i.jsx)('img', {
                       alt: '',
                       src: n(262467),
-                      className: p.marginBottom20
+                      className: m.marginBottom20
                   }),
                   (0, i.jsx)(u.Dx, {
-                      className: p.marginBottom8,
+                      className: m.marginBottom8,
                       children: g.intl.string(g.t['f/54a2'])
                   }),
                   (0, i.jsx)(u.DK, {
-                      className: p.marginBottom40,
+                      className: m.marginBottom40,
                       children: g.intl.string(g.t.i3ehMj)
                   }),
-                  x()
+                  E()
               ]
           })
         : 'succeeded' === o
@@ -66,17 +66,17 @@ function f(e) {
                     (0, i.jsx)('img', {
                         alt: '',
                         src: n(640356),
-                        className: p.marginBottom20
+                        className: m.marginBottom20
                     }),
                     (0, i.jsx)(u.Dx, {
-                        className: p.marginBottom8,
+                        className: m.marginBottom8,
                         children: g.intl.string(g.t.iG0SlJ)
                     }),
                     (0, i.jsx)(u.DK, {
-                        className: p.marginBottom40,
+                        className: m.marginBottom40,
                         children: g.intl.string(g.t['Elv+qq'])
                     }),
-                    x()
+                    E()
                 ]
             })
           : (0, i.jsxs)(u.ZP, {

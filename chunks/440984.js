@@ -9,21 +9,21 @@ var i = n(200651),
     d = n(530618),
     u = n(74538),
     m = n(937615),
-    h = n(230916),
-    g = n(798769),
-    _ = n(474936),
-    x = n(388032),
+    g = n(230916),
+    h = n(798769),
+    x = n(474936),
+    _ = n(388032),
     p = n(783899),
     E = n(982404),
     C = n(299156);
 function f(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: f, confettiCanvas: T, userWasChurned: N = !1, userDiscountOffer: S } = e,
-        I = (0, o.ZP)(),
-        b = (0, l.wj)(I) ? E : C,
+    let { premiumSubscription: t, premiumType: n, onClose: f, confettiCanvas: T, userWasChurned: N = !1, userDiscountOffer: I } = e,
+        S = (0, o.ZP)(),
+        b = (0, l.wj)(S) ? E : C,
         v = s.useRef(null),
         [j, A] = s.useState(!1),
-        O = (0, h._)(t, _.Xh.PREMIUM_MONTH_TIER_2, S),
-        R = (0, u.aS)(_.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+        O = (0, g._)(t, x.Xh.PREMIUM_MONTH_TIER_2, I),
+        R = (0, u.aS)(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
@@ -33,11 +33,11 @@ function f(e) {
         (s.useEffect(() => {
             null != v.current && null != O && A(!0);
         }, [v, j, O]),
-        null == S || null == O)
+        null == I || null == O)
     )
         return null;
-    let y = x.intl.format(x.t.gPzMHR, {
-            numMonths: S.discount.user_usage_limit,
+    let y = _.intl.format(_.t.gPzMHR, {
+            numMonths: I.discount.user_usage_limit,
             discountedPrice: O,
             regularPrice: P
         }),
@@ -46,12 +46,12 @@ function f(e) {
             children: (0, i.jsx)(a.zxk, {
                 color: a.zxk.Colors.BRAND,
                 onClick: f,
-                children: x.intl.string(x.t['/r8g/v'])
+                children: _.intl.string(_.t['/r8g/v'])
             })
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(h.Z, {
                 premiumType: n,
                 className: p.cancellationHeader,
                 onClose: f
@@ -74,7 +74,7 @@ function f(e) {
                                               }),
                                               (0, i.jsx)(a.X6q, {
                                                   variant: 'heading-xl/bold',
-                                                  children: N ? x.intl.string(x.t.gOOPaG) : x.intl.string(x.t.PZSyRk)
+                                                  children: N ? _.intl.string(_.t.gOOPaG) : _.intl.string(_.t.PZSyRk)
                                               })
                                           ]
                                       }),

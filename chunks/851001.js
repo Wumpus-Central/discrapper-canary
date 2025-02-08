@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(47120);
+n.d(t, { Z: () => I }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
@@ -9,31 +9,31 @@ var i = n(200651),
     d = n(70097),
     u = n(526167),
     m = n(140465),
-    h = n(104494),
-    g = n(639119),
-    _ = n(635921),
-    x = n(474936),
+    g = n(104494),
+    h = n(639119),
+    x = n(635921),
+    _ = n(474936),
     p = n(869783),
     E = n(388032),
     C = n(255346),
     f = n(839526),
     T = n(4046),
     N = n(423741);
-let S = (e) => {
+let I = (e) => {
     var t, n;
-    let { className: r, isFooterVisible: S, isDarkMode: I, isReducedMotion: b } = e,
+    let { className: r, isFooterVisible: I, isDarkMode: S, isReducedMotion: b } = e,
         { analyticsLocations: v } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
-        j = (0, h.Ng)(),
-        A = (0, h.Wp)(j, x.Si.TIER_2) ? x.Si.TIER_2 : void 0,
-        O = (0, g.N)(),
+        j = (0, g.Ng)(),
+        A = (0, g.Wp)(j, _.Si.TIER_2) ? _.Si.TIER_2 : void 0,
+        O = (0, h.N)(),
         R = (0, m.Nx)(),
         P = (0, u.rO)(),
         D = s.useRef(null),
         [y, Z] = s.useState(!1);
     return (
         s.useEffect(() => {
-            !S || b || y || null == D.current || D.current.play();
-        }, [S, b, y]),
+            !I || b || y || null == D.current || D.current.play();
+        }, [I, b, y]),
         (0, i.jsx)(c.Gt, {
             value: v,
             children: (0, i.jsxs)('div', {
@@ -45,12 +45,12 @@ let S = (e) => {
                         color: 'header-primary',
                         children: E.intl.string(E.t.lEw32t)
                     }),
-                    (0, i.jsx)(_.PK, {
+                    (0, i.jsx)(x.PK, {
                         subscriptionTier: null !== (n = null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : A,
                         inOfferExperience: R,
                         containerClassName: l()(C.footerCTAContainer),
                         isMarketingPageV2Enabled: !0,
-                        isDarkMode: I
+                        isDarkMode: S
                     }),
                     (0, i.jsx)('div', {
                         className: C.footerArtContainer,

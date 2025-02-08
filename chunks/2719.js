@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(692547),
     u = n(481060),
     m = n(230711),
-    h = n(129861),
-    g = n(279837),
-    _ = n(952306),
-    x = n(299206),
+    g = n(129861),
+    h = n(279837),
+    x = n(952306),
+    _ = n(299206),
     p = n(295474),
     E = n(144114),
     C = n(918505),
     f = n(332473),
     T = n(921801),
     N = n(485341),
-    S = n(687158),
-    I = n(518950),
+    I = n(687158),
+    S = n(518950),
     b = n(184325),
     v = n(867176),
     j = n(25990),
@@ -42,16 +42,16 @@ function U(e) {
     let { className: a, user: o } = e,
         c = s.useRef(null),
         m = (0, C.o9)(),
-        h = (0, f.b)(),
-        g = (0, p.gS)(),
-        _ = null !== (r = null == g ? void 0 : null === (t = g.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : null,
-        [x, E] = s.useState(!1);
+        g = (0, f.b)(),
+        h = (0, p.gS)(),
+        x = null !== (r = null == h ? void 0 : null === (t = h.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : null,
+        [_, E] = s.useState(!1);
     s.useEffect(() => {
         E(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [o.username]);
     let T = !o.isClaimed(),
         N = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || T,
-        S = N ? M.intl.string(M.t['7Ngnys']) : void 0;
+        I = N ? M.intl.string(M.t['7Ngnys']) : void 0;
     return (0, i.jsxs)('div', {
         className: l()(w.field, a),
         children: [
@@ -86,7 +86,7 @@ function U(e) {
                     ]
                 })
             }),
-            h &&
+            g &&
                 (0, i.jsx)('div', {
                     className: w.pomeloWarning,
                     children: (0, i.jsx)(u.ua7, {
@@ -101,11 +101,11 @@ function U(e) {
                             })
                     })
                 }),
-            null != _ &&
+            null != x &&
                 (0, i.jsx)('div', {
                     className: w.pomeloWarning,
                     children: (0, i.jsx)(u.ua7, {
-                        text: _,
+                        text: x,
                         'aria-label': !1,
                         children: (e) =>
                             (0, i.jsx)(u.P4T, {
@@ -118,7 +118,7 @@ function U(e) {
                     })
                 }),
             (0, i.jsx)(u.ua7, {
-                text: S,
+                text: I,
                 children: (e) =>
                     (0, i.jsx)(u.zxk, {
                         ...e,
@@ -129,7 +129,7 @@ function U(e) {
                         'aria-label': M.intl.string(M.t['JECa9/']),
                         onClick: () =>
                             (0, u.ZDy)(async () => {
-                                if (h) {
+                                if (g) {
                                     let { default: e } = await Promise.all([n.e('85342'), n.e('55508')]).then(n.bind(n, 193049));
                                     return (t) =>
                                         (0, i.jsx)(e, {
@@ -142,7 +142,7 @@ function U(e) {
                                     return (t) => (0, i.jsx)(e, { ...t });
                                 }
                             }),
-                        children: x ? M.intl.string(M.t['16kTw8']) : M.intl.string(M.t.bt75u7)
+                        children: _ ? M.intl.string(M.t['16kTw8']) : M.intl.string(M.t.bt75u7)
                     })
             })
         ]
@@ -154,11 +154,11 @@ function G(e) {
         o = (0, p.gS)(),
         c = null !== (n = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== n ? n : null,
         m = R.ZP.getGlobalName(r),
-        h = s.useRef(null),
-        [g, _] = s.useState(!1);
+        g = s.useRef(null),
+        [h, x] = s.useState(!1);
     return (
         s.useEffect(() => {
-            _(null != h.current && h.current.scrollWidth > h.current.clientWidth);
+            x(null != g.current && g.current.scrollWidth > g.current.clientWidth);
         }, [m]),
         (0, i.jsxs)('div', {
             className: l()(w.field, a),
@@ -174,7 +174,7 @@ function G(e) {
                             }),
                             (0, i.jsx)('div', {
                                 className: w.usernameInnerRow,
-                                ref: h,
+                                ref: g,
                                 children: (0, i.jsx)(u.Text, {
                                     tag: 'span',
                                     color: 'header-primary',
@@ -207,7 +207,7 @@ function G(e) {
                     color: u.zxk.Colors.PRIMARY,
                     'aria-label': M.intl.string(M.t.YXeWYG),
                     onClick: W,
-                    children: g ? M.intl.string(M.t['16kTw8']) : M.intl.string(M.t.bt75u7)
+                    children: h ? M.intl.string(M.t['16kTw8']) : M.intl.string(M.t.bt75u7)
                 })
             ]
         })
@@ -272,7 +272,7 @@ function H(e) {
             buttonAriaLabel: M.intl.string(M.t.BleMPD),
             buttonColor: u.zxk.Colors.BRAND,
             valueMessage: M.intl.string(M.t.qxk9zs),
-            handleClick: () => _.Z.openClaimAccountModal()
+            handleClick: () => x.Z.openClaimAccountModal()
         };
     return (0, i.jsxs)('div', {
         className: l()(w.field, s),
@@ -356,7 +356,7 @@ function z(e) {
                                   'aria-label': M.intl.string(M.t.Rpn4Aw),
                                   onClick: function () {
                                       (0, u.h7j)((e) =>
-                                          (0, i.jsx)(g.default, {
+                                          (0, i.jsx)(h.default, {
                                               ...e,
                                               title: M.intl.string(M.t['3CTiKi']),
                                               children: r.hasFlag(k.xW$.MFA_SMS) ? M.intl.string(M.t.jrhJys) : void 0,
@@ -396,7 +396,7 @@ function z(e) {
 }
 function Y(e) {
     let { user: t } = e,
-        n = (0, x.Z)({
+        n = (0, _.Z)({
             id: t.id,
             label: M.intl.string(M.t['/AXYnJ'])
         });
@@ -435,12 +435,12 @@ function K() {
             let e = A.default.getCurrentUser();
             return o()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
         }),
-        n = (0, S.ZP)(t.id),
+        n = (0, I.ZP)(t.id),
         s = (0, N.Z)(n),
         r = D.co.useSetting(),
         l = (0, c.e7)([j.Z], () => j.Z.getErrors()),
         a = null == l ? void 0 : null === (e = l.avatar) || void 0 === e ? void 0 : e[0],
-        { avatarSrc: d, avatarDecorationSrc: m } = (0, I.Z)({
+        { avatarSrc: d, avatarDecorationSrc: m } = (0, S.Z)({
             user: t,
             size: u.EFr.SIZE_80
         });
@@ -473,7 +473,7 @@ function K() {
                             (0, i.jsxs)('div', {
                                 className: w.profileCardUsernameRow,
                                 children: [
-                                    (0, i.jsx)(h.Z, {
+                                    (0, i.jsx)(g.Z, {
                                         user: t,
                                         className: w.userTag,
                                         discriminatorClass: w.discriminator

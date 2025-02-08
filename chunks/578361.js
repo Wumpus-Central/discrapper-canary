@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => g,
+    Z: () => h,
     n: () => u
 });
 var i,
@@ -16,7 +16,7 @@ let m = {
     tension: 40,
     clamp: !0
 };
-class h extends r.PureComponent {
+class g extends r.PureComponent {
     componentWillEnter(e) {
         this._animated.setValue(-this.props.direction),
             o.Z.spring(this._animated, {
@@ -75,13 +75,13 @@ class h extends r.PureComponent {
             (this._animated = new o.Z.Value(-1 * e.direction));
     }
 }
-let g = (e) => {
+let h = (e) => {
     let { children: t, step: n, direction: i, className: r, springSettings: l = m, fadeInOut: o = !1 } = e;
     return (0, s.jsx)(c.W, {
         component: 'div',
         className: a()(d.animator, r),
         children: (0, s.jsx)(
-            h,
+            g,
             {
                 direction: i,
                 springSettings: l,

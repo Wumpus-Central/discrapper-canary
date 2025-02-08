@@ -11,10 +11,10 @@ function u(e) {
     let { joinRequest: t } = e,
         [n, u] = i.useState(!1),
         m = (0, r.e7)([s.Z], () => s.Z.getChannel(t.interviewChannelId)),
-        _ = i.useCallback(() => {
+        x = i.useCallback(() => {
             (0, l.showToast)((0, l.createToast)(d.intl.string(d.t.R0RpRU), l.ToastType.FAILURE));
         }, []),
-        x = i.useCallback(async () => {
+        h = i.useCallback(async () => {
             if (null != m) {
                 o.default.selectPrivateChannel(m.id);
                 return;
@@ -24,16 +24,16 @@ function u(e) {
                 try {
                     await c.Z.createOrEnterJoinRequestInterview(t.joinRequestId);
                 } catch {
-                    _();
+                    x();
                 } finally {
                     u(!1);
                 }
             }
-        }, [m, t.joinRequestId, _, n]);
+        }, [m, t.joinRequestId, x, n]);
     return (0, a.jsx)(l.zxk, {
         color: l.zxk.Colors.BRAND,
         submitting: n,
-        onClick: x,
+        onClick: h,
         children: d.intl.string(d.t.aqiUAA)
     });
 }

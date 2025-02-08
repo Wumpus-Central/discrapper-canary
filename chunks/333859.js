@@ -10,10 +10,10 @@ var s = n(442837),
     d = n(94795),
     u = n(327943),
     m = n(539873),
-    h = n(311476),
-    g = n(197115),
-    _ = n(626135),
-    x = n(981631),
+    g = n(311476),
+    h = n(197115),
+    x = n(626135),
+    _ = n(981631),
     p = n(474936),
     E = n(388032),
     C = n(352545);
@@ -23,7 +23,7 @@ let f = () => {
     T = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
             t = (0, s.e7)([u.Z], () => u.Z.isUpsellPreview),
-            { enabled: n } = h.Z.getCurrentConfig(
+            { enabled: n } = g.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceInAppIcon' },
                 {
                     autoTrackExposure: t,
@@ -33,7 +33,7 @@ let f = () => {
         return (
             (0, a.ZP)(() => {
                 t &&
-                    _.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
+                    x.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: p.cd.APP_ICON_UPSELL,
                         location_stack: e
                     });
@@ -54,7 +54,7 @@ let f = () => {
                                         children: n ? E.intl.string(E.t.SKNnqq) : E.intl.string(E.t['hb/wEx'])
                                     }),
                                     t
-                                        ? (0, i.jsx)(g.Z, {
+                                        ? (0, i.jsx)(h.Z, {
                                               className: C.tryItOutButton,
                                               showGradient: n,
                                               subscriptionTier: p.Si.TIER_2,

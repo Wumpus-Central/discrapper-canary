@@ -20,8 +20,8 @@ function s(e, t, l, n) {
     );
 }
 function r(e) {
-    let { guildId: t, selectedRoleIds: l, onChange: a, placeholder: i, disableEveryoneRole: r, helperText: c, className: C, selectableRoleFilter: d } = e,
-        u = s(t, l, r, d);
+    let { guildId: t, selectedRoleIds: l, onChange: a, placeholder: i, disableEveryoneRole: r, helperText: c, className: d, selectableRoleFilter: C } = e,
+        u = s(t, l, r, C);
     return (0, n.jsx)(o.ZP, {
         roleRows: u,
         guildId: t,
@@ -29,6 +29,6 @@ function r(e) {
         onChange: (e, t) => a(t),
         placeholder: i,
         helperText: c,
-        className: C
+        className: d
     });
 }

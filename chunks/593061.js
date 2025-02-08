@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(544891),
@@ -22,36 +22,36 @@ async function m(e) {
         throw e;
     }
 }
-function h(e) {
+function g(e) {
     let { payment: t } = e,
         [n, r] = s.useState(null),
-        [o, h] = s.useState(null),
-        g = async (e) => {
+        [o, g] = s.useState(null),
+        h = async (e) => {
             try {
                 let n = await m(t.id);
                 r(n);
                 let i = e ? n.refundInvoiceLinks[0] : n.invoiceLink;
-                window.open(i, '_blank'), h(null);
+                window.open(i, '_blank'), g(null);
             } catch (e) {
                 var n;
-                h(null === (n = e.body) || void 0 === n ? void 0 : n.message);
+                g(null === (n = e.body) || void 0 === n ? void 0 : n.message);
             }
         },
-        _ = null != t.paymentSource && t.status === c.Py.COMPLETED,
-        x = null == n ? void 0 : n.invoiceLink,
+        x = null != t.paymentSource && t.status === c.Py.COMPLETED,
+        _ = null == n ? void 0 : n.invoiceLink,
         p = null == n ? void 0 : n.refundInvoiceLinks;
     return t.hasInvoiceURL && null == n
         ? (0, i.jsxs)('div', {
               className: u.downloadInvoice,
               children: [
                   (0, i.jsx)(l.eee, {
-                      onClick: () => g(!1),
+                      onClick: () => h(!1),
                       children: d.intl.string(d.t.R0xzCA)
                   }),
                   t.hasRefundInvoiceURLs
                       ? (0, i.jsx)(l.eee, {
                             className: u.downloadRefundInvoice,
-                            onClick: () => g(!0),
+                            onClick: () => h(!0),
                             children: d.intl.string(d.t['3x6NGx'])
                         })
                       : null,
@@ -67,7 +67,7 @@ function h(e) {
                 className: u.downloadInvoice,
                 children: [
                     (0, i.jsx)(l.eee, {
-                        href: x,
+                        href: _,
                         children: d.intl.string(d.t.R0xzCA)
                     }),
                     null != p
@@ -90,7 +90,7 @@ function h(e) {
                     })
                 ]
             })
-          : _
+          : x
             ? (0, i.jsx)('div', {
                   className: u.downloadInvoice,
                   children: (0, i.jsx)(l.eee, {

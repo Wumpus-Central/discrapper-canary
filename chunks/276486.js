@@ -1,42 +1,42 @@
 n.d(t, {
-    l: () => u,
-    v: () => c
+    l: () => a,
+    v: () => d
 });
 var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(144114),
     s = n(489813),
-    o = n(815660),
-    a = n(388032);
-function u() {
+    u = n(815660),
+    o = n(388032);
+function a() {
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(s.PU, {
             icon: l.AtH,
-            text: a.intl.string(a.t.woMjLS),
-            footnote: a.intl.string(a.t['jMh+TU']),
+            text: o.intl.string(o.t.woMjLS),
+            footnote: o.intl.string(o.t['jMh+TU']),
             meetsRequirement: !1,
             children: (0, i.jsx)(l.ua7, {
-                text: a.intl.string(a.t.mGlP39),
+                text: o.intl.string(o.t.mGlP39),
                 children: (e) =>
                     (0, i.jsx)(l.zxk, {
                         ...e,
                         size: l.zxk.Sizes.SMALL,
                         disabled: !0,
-                        children: a.intl.string(a.t['13ofGh'])
+                        children: o.intl.string(o.t['13ofGh'])
                     })
             })
         })
     });
 }
-function c(e) {
+function d(e) {
     let { isUserVerified: t } = e,
-        u = t ? a.intl.string(a.t.WWzQtb) : a.intl.string(a.t.woMjLS);
+        a = t ? o.intl.string(o.t.WWzQtb) : o.intl.string(o.t.woMjLS);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(s.PU, {
             icon: l.AtH,
-            text: u,
-            footnote: a.intl.string(a.t['jMh+TU']),
+            text: a,
+            footnote: o.intl.string(o.t['jMh+TU']),
             meetsRequirement: t,
             children: (0, i.jsx)(l.zxk, {
                 size: l.zxk.Sizes.SMALL,
@@ -50,10 +50,10 @@ function c(e) {
                                     ...t
                                 });
                         },
-                        { modalKey: o.M }
+                        { modalKey: u.M }
                     );
                 },
-                children: a.intl.string(a.t['13ofGh'])
+                children: o.intl.string(o.t['13ofGh'])
             })
         })
     });

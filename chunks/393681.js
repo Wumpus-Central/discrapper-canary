@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(780384),
     u = n(481060),
     m = n(816814),
-    h = n(809206),
-    g = n(497321),
-    _ = n(279837),
-    x = n(952306),
+    g = n(809206),
+    h = n(497321),
+    x = n(279837),
+    _ = n(952306),
     p = n(600164),
     E = n(690221),
     C = n(346585),
     f = n(347649),
     T = n(332473),
     N = n(303172),
-    S = n(518560),
-    I = n(921801),
+    I = n(518560),
+    S = n(921801),
     b = n(484459),
     v = n(430824),
     j = n(325067),
@@ -50,7 +50,7 @@ class K extends s.PureComponent {
         (0, b.Z)(e.id, e.getAvatarURL(void 0, 80));
     }
     componentWillUnmount() {
-        m.Z.clearBackupCodes(), (0, h.Zy)();
+        m.Z.clearBackupCodes(), (0, g.Zy)();
     }
     renderAccountWarning() {
         let { currentUser: e } = this.props;
@@ -65,7 +65,7 @@ class K extends s.PureComponent {
                         look: u.iLD.OUTLINED,
                         size: u.PhG.SMALL,
                         color: u.zxk.Colors.WHITE,
-                        onClick: () => x.Z.openClaimAccountModal(),
+                        onClick: () => _.Z.openClaimAccountModal(),
                         children: z.intl.string(z.t['7psymp'])
                     })
                 ]
@@ -163,7 +163,7 @@ class K extends s.PureComponent {
                           })
                       })
                     : null,
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(S.F, {
                     setting: G.s6.ACCOUNT_CHANGE_PASSWORD,
                     children: (0, i.jsx)('div', {
                         children: (0, i.jsx)(u.zxk, {
@@ -180,7 +180,7 @@ class K extends s.PureComponent {
                         })
                     })
                 }),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(S.F, {
                     setting: G.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
                     children: (0, i.jsxs)(p.Z, {
                         align: p.Z.Align.STRETCH,
@@ -232,7 +232,7 @@ class K extends s.PureComponent {
                 confirmText: z.intl.string(z.t['8lQ2ra']),
                 cancelText: z.intl.string(z.t['ETE/oK']),
                 onCancel: e,
-                onConfirm: () => (0, h.ss)('', !0).then(e),
+                onConfirm: () => (0, g.ss)('', !0).then(e),
                 children: (0, i.jsx)(u.Text, {
                     variant: 'text-md/normal',
                     children: z.intl.string(z.t.FB4H1N)
@@ -273,15 +273,15 @@ class K extends s.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 this.renderConfirmModals(),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(S.F, {
                     setting: G.s6.ACCOUNT_PROFILE,
                     children: this.renderAccountSettings(!1)
                 }),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(S.F, {
                     setting: G.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
                     children: this.renderSecuritySettings()
                 }),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(S.F, {
                     setting: G.s6.ACCOUNT_REMOVAL,
                     children: this.renderAccountRemovalSettings()
                 })
@@ -308,7 +308,7 @@ class K extends s.PureComponent {
                     },
                     {
                         title: z.intl.string(z.t['Vov/9v']),
-                        component: S.Z,
+                        component: I.Z,
                         setting: G.s6.PRIVACY_AND_SAFETY_STANDING
                     }
                 ]
@@ -316,7 +316,7 @@ class K extends s.PureComponent {
         });
     }
     render() {
-        return this.props.hide ? (0, i.jsx)(g.Z, {}) : this.renderUnhidden();
+        return this.props.hide ? (0, i.jsx)(h.Z, {}) : this.renderUnhidden();
     }
     handleDisableAccountError(e) {
         if (e.body.code === F.evJ.INVALID_PASSWORD) throw e;
@@ -326,7 +326,7 @@ class K extends s.PureComponent {
         });
     }
     handleSubmitDisableAccount(e, t) {
-        return (0, h.ss)(e, t).then(F.dG4, this.handleDisableAccountError);
+        return (0, g.ss)(e, t).then(F.dG4, this.handleDisableAccountError);
     }
     handleDisableAccount() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -338,7 +338,7 @@ class K extends s.PureComponent {
         }
         t.isClaimed()
             ? (0, u.h7j)((t) =>
-                  (0, i.jsx)(_.default, {
+                  (0, i.jsx)(x.default, {
                       ...t,
                       handleSubmit: (t) => this.handleSubmitDisableAccount(t, e),
                       title: e ? z.intl.string(z.t['8lQ2ra']) : z.intl.string(z.t.jf5GGR),

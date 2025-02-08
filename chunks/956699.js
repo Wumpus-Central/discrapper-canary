@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(442837),
     u = n(692547),
     m = n(481060),
-    h = n(570140),
-    g = n(661111),
-    _ = n(179658),
-    x = n(491428),
+    g = n(570140),
+    h = n(661111),
+    x = n(179658),
+    _ = n(491428),
     p = n(225433),
     E = n(484614),
     C = n(615287),
     f = n(386506),
     T = n(865427),
     N = n(802098),
-    S = n(663993),
-    I = n(600164),
+    I = n(663993),
+    S = n(600164),
     b = n(118012),
     v = n(482215),
     j = n(38618),
@@ -71,18 +71,18 @@ function K(e) {
 class q extends s.Component {
     render() {
         let { project: e, overrideType: t, overrideId: n, disabled: s, error: r } = this.props;
-        return (0, i.jsxs)(I.Z, {
-            direction: I.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(S.Z, {
+            direction: S.Z.Direction.VERTICAL,
             className: l()(U.buildOverrideGroup, F.marginBottom20, G.card, U.row),
             children: [
                 (0, i.jsx)(p.Z, {
                     className: l()(U.removeBuildOverride, { [U.removeBuildOverrideDisabled]: s }),
                     onClick: s ? void 0 : this.handleRemoveBuildOverride
                 }),
-                (0, i.jsxs)(I.Z, {
+                (0, i.jsxs)(S.Z, {
                     className: F.marginBottom8,
                     children: [
-                        (0, i.jsx)(I.Z.Child, {
+                        (0, i.jsx)(S.Z.Child, {
                             basis: '50%',
                             children: (0, i.jsx)(m.xJW, {
                                 title: 'Override Type',
@@ -95,7 +95,7 @@ class q extends s.Component {
                                 })
                             })
                         }),
-                        (0, i.jsx)(I.Z.Child, {
+                        (0, i.jsx)(S.Z.Child, {
                             basis: '50%',
                             children: (0, i.jsx)(m.xJW, {
                                 title: 'branch' === t ? 'Branch Name' : 'Commit SHA',
@@ -109,7 +109,7 @@ class q extends s.Component {
                         })
                     ]
                 }),
-                (0, i.jsxs)(I.Z.Child, {
+                (0, i.jsxs)(S.Z.Child, {
                     children: [
                         null != r &&
                             '' !== r &&
@@ -207,10 +207,10 @@ class X extends s.Component {
     renderRefreshButton() {
         return !this.state.didSave || this.isDirty()
             ? null
-            : (0, i.jsx)(I.Z, {
+            : (0, i.jsx)(S.Z, {
                   grow: 0,
-                  direction: I.Z.Direction.HORIZONTAL_REVERSE,
-                  children: (0, i.jsx)(I.Z.Child, {
+                  direction: S.Z.Direction.HORIZONTAL_REVERSE,
+                  children: (0, i.jsx)(S.Z.Child, {
                       grow: 0,
                       children: (0, i.jsx)(m.zxk, {
                           onClick: () => location.reload(),
@@ -224,10 +224,10 @@ class X extends s.Component {
         let { buildOverrides: e } = this.state;
         return null == e || 0 === Object.keys(e).length
             ? null
-            : (0, i.jsx)(I.Z, {
+            : (0, i.jsx)(S.Z, {
                   grow: 0,
-                  direction: I.Z.Direction.HORIZONTAL_REVERSE,
-                  children: (0, i.jsx)(I.Z.Child, {
+                  direction: S.Z.Direction.HORIZONTAL_REVERSE,
+                  children: (0, i.jsx)(S.Z.Child, {
                       grow: 0,
                       children: (0, i.jsx)(m.zxk, {
                           onClick: this.handleLinkGeneration,
@@ -240,11 +240,11 @@ class X extends s.Component {
     renderSaveButton() {
         if (!this.isDirty()) return null;
         let { saving: e, buildOverrides: t } = this.state;
-        return (0, i.jsxs)(I.Z, {
+        return (0, i.jsxs)(S.Z, {
             grow: 0,
-            direction: I.Z.Direction.HORIZONTAL_REVERSE,
+            direction: S.Z.Direction.HORIZONTAL_REVERSE,
             children: [
-                (0, i.jsx)(I.Z.Child, {
+                (0, i.jsx)(S.Z.Child, {
                     grow: 0,
                     children: (0, i.jsx)(m.zxk, {
                         disabled: K(null != t ? t : {}),
@@ -254,7 +254,7 @@ class X extends s.Component {
                         children: 'Save Build Overrides'
                     })
                 }),
-                (0, i.jsx)(I.Z.Child, {
+                (0, i.jsx)(S.Z.Child, {
                     grow: 0,
                     children: (0, i.jsx)(m.zxk, {
                         onClick: this.handleDiscardChanges,
@@ -284,16 +284,16 @@ class X extends s.Component {
             children: (0, i.jsxs)(m.hjN, {
                 className: F.marginTop60,
                 children: [
-                    (0, i.jsxs)(I.Z, {
+                    (0, i.jsxs)(S.Z, {
                         className: F.marginBottom20,
                         children: [
-                            (0, i.jsx)(I.Z.Child, {
+                            (0, i.jsx)(S.Z.Child, {
                                 children: (0, i.jsx)(m.vwX, {
                                     tag: m.RB0.H1,
                                     children: 'Build Overrides'
                                 })
                             }),
-                            (0, i.jsx)(I.Z.Child, {
+                            (0, i.jsx)(S.Z.Child, {
                                 grow: 0,
                                 children: (0, i.jsx)(m.zxk, {
                                     size: m.PhG.SMALL,
@@ -305,14 +305,14 @@ class X extends s.Component {
                         ]
                     }),
                     (0, i.jsx)(m.$i$, {}),
-                    (0, i.jsxs)(I.Z, {
-                        direction: I.Z.Direction.VERTICAL,
+                    (0, i.jsxs)(S.Z, {
+                        direction: S.Z.Direction.VERTICAL,
                         children: [
                             l,
                             e,
-                            (0, i.jsxs)(I.Z, {
+                            (0, i.jsxs)(S.Z, {
                                 grow: 0,
-                                direction: I.Z.Direction.HORIZONTAL_REVERSE,
+                                direction: S.Z.Direction.HORIZONTAL_REVERSE,
                                 children: [this.renderRefreshButton(), this.renderSaveButton(), this.renderLinkButton()]
                             })
                         ]
@@ -458,11 +458,11 @@ class J extends s.Component {
     renderSettingsForm() {
         let { ttlSeconds: e, releaseChannel: t, userIdEntry: n, userIdEntryError: s, allowedVersions: r, allowedVersionEntry: l, allowedVersionEntryError: a, allowLoggedOut: o, experiments: c, experimentsError: d } = this.state,
             u = V.S6.find((t) => t.value === e),
-            h = r.map((e) => ({
+            g = r.map((e) => ({
                 label: e,
                 value: e
             }));
-        return (0, i.jsxs)(I.Z.Child, {
+        return (0, i.jsxs)(S.Z.Child, {
             basis: '70%',
             children: [
                 (0, i.jsx)(m.xJW, {
@@ -491,10 +491,10 @@ class J extends s.Component {
                               (0, i.jsx)(m.xJW, {
                                   title: 'Add allowed app version (required)',
                                   className: F.marginBottom20,
-                                  children: (0, i.jsxs)(I.Z, {
-                                      direction: I.Z.Direction.HORIZONTAL,
+                                  children: (0, i.jsxs)(S.Z, {
+                                      direction: S.Z.Direction.HORIZONTAL,
                                       children: [
-                                          (0, i.jsx)(I.Z.Child, {
+                                          (0, i.jsx)(S.Z.Child, {
                                               wrap: !0,
                                               basis: '90%',
                                               children: (0, i.jsx)(m.oil, {
@@ -518,7 +518,7 @@ class J extends s.Component {
                                   className: F.marginBottom20,
                                   children: (0, i.jsx)(m.q4e, {
                                       value: null,
-                                      options: h,
+                                      options: g,
                                       onChange: this.handleRemoveAllowedVersion,
                                       isDisabled: 0 === r.length
                                   })
@@ -533,9 +533,9 @@ class J extends s.Component {
                               title: 'Limit to User IDs (optional)',
                               className: F.marginBottom20,
                               children: [
-                                  (0, i.jsx)(I.Z, {
-                                      direction: I.Z.Direction.HORIZONTAL,
-                                      children: (0, i.jsx)(I.Z.Child, {
+                                  (0, i.jsx)(S.Z, {
+                                      direction: S.Z.Direction.HORIZONTAL,
+                                      children: (0, i.jsx)(S.Z.Child, {
                                           wrap: !0,
                                           basis: '90%',
                                           children: (0, i.jsx)(m.Kx8, {
@@ -559,9 +559,9 @@ class J extends s.Component {
                     title: 'Client Experiment Override',
                     className: F.marginBottom20,
                     children: [
-                        (0, i.jsx)(I.Z, {
-                            direction: I.Z.Direction.HORIZONTAL,
-                            children: (0, i.jsx)(I.Z.Child, {
+                        (0, i.jsx)(S.Z, {
+                            direction: S.Z.Direction.HORIZONTAL,
+                            children: (0, i.jsx)(S.Z.Child, {
                                 wrap: !0,
                                 basis: '90%',
                                 children: (0, i.jsx)(m.Kx8, {
@@ -591,7 +591,7 @@ class J extends s.Component {
     renderPayloadBlock() {
         let e = JSON.stringify(this.generatePayload(), null, 2),
             t = () => e,
-            s = (0, i.jsx)(S.GI, {
+            s = (0, i.jsx)(I.GI, {
                 createPromise: () => Promise.resolve().then(n.bind(n, 364964)),
                 webpackId: 364964,
                 renderFallback: t,
@@ -605,7 +605,7 @@ class J extends s.Component {
                           });
                 }
             });
-        return (0, i.jsx)(I.Z.Child, { children: (0, i.jsx)(m.Zbd, { children: (0, i.jsx)('pre', { children: s }) }) });
+        return (0, i.jsx)(S.Z.Child, { children: (0, i.jsx)(m.Zbd, { children: (0, i.jsx)('pre', { children: s }) }) });
     }
     renderLinkForm() {
         let { statusTextColor: e, statusText: t, publicLink: n } = this.state;
@@ -613,9 +613,9 @@ class J extends s.Component {
             children: [
                 (0, i.jsx)(m.xJW, {
                     title: 'Signed Link',
-                    children: (0, i.jsxs)(I.Z, {
+                    children: (0, i.jsxs)(S.Z, {
                         children: [
-                            (0, i.jsx)(I.Z.Child, {
+                            (0, i.jsx)(S.Z.Child, {
                                 wrap: !0,
                                 basis: '75%',
                                 children: (0, i.jsx)(E.Z, { value: n })
@@ -643,7 +643,7 @@ class J extends s.Component {
             'aria-label': 'Generate Public Build Override Link',
             children: [
                 (0, i.jsxs)(m.xBx, {
-                    justify: I.Z.Justify.BETWEEN,
+                    justify: S.Z.Justify.BETWEEN,
                     separator: !1,
                     children: [
                         (0, i.jsx)(m.X6q, {
@@ -655,7 +655,7 @@ class J extends s.Component {
                 }),
                 (0, i.jsxs)(m.hzk, {
                     children: [
-                        (0, i.jsxs)(I.Z, {
+                        (0, i.jsxs)(S.Z, {
                             children: [this.renderSettingsForm(), this.renderPayloadBlock()]
                         }),
                         this.renderLinkForm()
@@ -797,7 +797,7 @@ function Q(e) {
                     value: n,
                     note: 'Display raw colors as pink. Toggling this will refresh the browser.',
                     onChange: (e) => {
-                        (0, _.y)({ cssDebuggingEnabled: e }), setTimeout(() => location.reload(), 500);
+                        (0, x.y)({ cssDebuggingEnabled: e }), setTimeout(() => location.reload(), 500);
                     },
                     children: 'Enable CSS Debugging'
                 })
@@ -808,7 +808,7 @@ function Q(e) {
                     value: t,
                     note: 'Renders a grid on top of the app to help debug layout alignment issues.',
                     onChange: (e) => {
-                        (0, _.y)({ layoutDebuggingEnabled: e });
+                        (0, x.y)({ layoutDebuggingEnabled: e });
                     },
                     children: 'Enable Layout Debugging'
                 })
@@ -910,7 +910,7 @@ function ee() {
                               setting: M.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
                               children: (0, i.jsx)(m.zxk, {
                                   onClick: () => {
-                                      h.Z.dispatch({
+                                      g.Z.dispatch({
                                           type: 'CLEAR_CACHES',
                                           reason: 'Requested by user',
                                           preventWritingCachesAgainThisSession: !0,
@@ -1013,7 +1013,7 @@ let et = d.ZP.connectStores([D.default], () => ({
     disableAppCollectionsCache: D.default.disableAppCollectionsCache,
     preventPopoutClose: D.default.preventPopoutClose
 }))((e) => {
-    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: s, isLoggingOverlayEvents: r, isLoggingAnalyticsEvents: l, isAxeEnabled: a, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: h, onlyShowPreviewAppCollections: g, disableAppCollectionsCache: x, preventPopoutClose: p } = e;
+    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: s, isLoggingOverlayEvents: r, isLoggingAnalyticsEvents: l, isAxeEnabled: a, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: g, onlyShowPreviewAppCollections: h, disableAppCollectionsCache: _, preventPopoutClose: p } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(P.F, {
@@ -1027,7 +1027,7 @@ let et = d.ZP.connectStores([D.default], () => ({
                             children: (0, i.jsx)(m.j7V, {
                                 value: t,
                                 note: 'Force trace all client requests with APM',
-                                onChange: (e) => (0, _.y)({ trace: e }),
+                                onChange: (e) => (0, x.y)({ trace: e }),
                                 children: 'Enable Tracing Requests'
                             })
                         }),
@@ -1036,7 +1036,7 @@ let et = d.ZP.connectStores([D.default], () => ({
                             children: (0, i.jsx)(m.j7V, {
                                 value: n,
                                 note: 'Force all API requests to canary instances',
-                                onChange: (e) => (0, _.y)({ canary: e }),
+                                onChange: (e) => (0, x.y)({ canary: e }),
                                 children: 'Enable Forced Canary'
                             })
                         }),
@@ -1045,7 +1045,7 @@ let et = d.ZP.connectStores([D.default], () => ({
                             children: (0, i.jsx)(m.j7V, {
                                 value: s,
                                 note: 'Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.',
-                                onChange: (e) => (0, _.y)({ logGatewayEvents: e }),
+                                onChange: (e) => (0, x.y)({ logGatewayEvents: e }),
                                 children: 'Enable Logging of Gateway Events to Console'
                             })
                         }),
@@ -1054,7 +1054,7 @@ let et = d.ZP.connectStores([D.default], () => ({
                             children: (0, i.jsx)(m.j7V, {
                                 value: r,
                                 note: 'Logs all overlay related RPC events. Super noisy if an overlay is connected',
-                                onChange: (e) => (0, _.y)({ logOverlayEvents: e }),
+                                onChange: (e) => (0, x.y)({ logOverlayEvents: e }),
                                 children: 'Enable Logging of Overlay RPC Events & Commands'
                             })
                         }),
@@ -1063,7 +1063,7 @@ let et = d.ZP.connectStores([D.default], () => ({
                             children: (0, i.jsx)(m.j7V, {
                                 value: l,
                                 note: 'Logs all analytics events to the developer console',
-                                onChange: (e) => (0, _.y)({ logAnalyticsEvents: e }),
+                                onChange: (e) => (0, x.y)({ logAnalyticsEvents: e }),
                                 children: 'Enable Logging of Analytics Events'
                             })
                         }),
@@ -1072,7 +1072,7 @@ let et = d.ZP.connectStores([D.default], () => ({
                             children: (0, i.jsx)(m.j7V, {
                                 value: d,
                                 note: 'Only enable on devices you trust.',
-                                onChange: (e) => (0, _.y)({ sourceMapsEnabled: e }),
+                                onChange: (e) => (0, x.y)({ sourceMapsEnabled: e }),
                                 children: 'Enable source maps to be loaded on this client'
                             })
                         }),
@@ -1081,16 +1081,16 @@ let et = d.ZP.connectStores([D.default], () => ({
                             children: (0, i.jsx)(m.j7V, {
                                 value: u,
                                 note: 'Displays a floating debugger with viewed impressions',
-                                onChange: (e) => (0, _.y)({ analyticsDebuggerEnabled: e }),
+                                onChange: (e) => (0, x.y)({ analyticsDebuggerEnabled: e }),
                                 children: 'Enable standard analytics debugger view'
                             })
                         }),
                         (0, i.jsx)(P.F, {
                             setting: M.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
                             children: (0, i.jsx)(m.j7V, {
-                                value: h,
+                                value: g,
                                 note: 'Displays a floating idle status indicator',
-                                onChange: (e) => (0, _.y)({ idleStatusIndicatorEnabled: e }),
+                                onChange: (e) => (0, x.y)({ idleStatusIndicatorEnabled: e }),
                                 children: 'Enable idle status indicator'
                             })
                         }),
@@ -1099,7 +1099,7 @@ let et = d.ZP.connectStores([D.default], () => ({
                             children: (0, i.jsx)(m.j7V, {
                                 value: a,
                                 note: 'Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development',
-                                onChange: (e) => (0, _.y)({ axeEnabled: e }),
+                                onChange: (e) => (0, x.y)({ axeEnabled: e }),
                                 children: 'Enable Accessibility Auditing'
                             })
                         }),
@@ -1108,25 +1108,25 @@ let et = d.ZP.connectStores([D.default], () => ({
                             children: (0, i.jsx)(m.j7V, {
                                 value: p,
                                 note: 'This is to enable viewing console logs for popout crashes. This may leave your app/popout in a weird state.',
-                                onChange: (e) => (0, _.y)({ preventPopoutClose: e }),
+                                onChange: (e) => (0, x.y)({ preventPopoutClose: e }),
                                 children: 'Prevent Popouts From Closing Automatically'
                             })
                         }),
                         (0, i.jsx)(P.F, {
                             setting: M.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
                             children: (0, i.jsx)(m.j7V, {
-                                value: g,
+                                value: h,
                                 note: "Only show application collections (e.g. in App Directory, App Launcher in text) that have the 'preview' active state. This disables application collections cache, too, so you can see collections updates immediately.",
-                                onChange: (e) => (0, _.y)({ onlyShowPreviewAppCollections: e }),
+                                onChange: (e) => (0, x.y)({ onlyShowPreviewAppCollections: e }),
                                 children: 'Preview unpublished application collections'
                             })
                         }),
                         (0, i.jsx)(P.F, {
                             setting: M.s6.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE,
                             children: (0, i.jsx)(m.j7V, {
-                                value: x,
+                                value: _,
                                 note: 'Disable application collections cache so that you can see updates to collections immediately.',
-                                onChange: (e) => (0, _.y)({ disableAppCollectionsCache: e }),
+                                onChange: (e) => (0, x.y)({ disableAppCollectionsCache: e }),
                                 children: 'Disable application collections cache'
                             })
                         }),
@@ -1164,7 +1164,7 @@ function en() {
                 (0, i.jsxs)('form', {
                     className: U.surveyOverride,
                     onSubmit: (e) => {
-                        e.preventDefault(), t.length > 0 ? x.Xq(t) : x.Xq(null);
+                        e.preventDefault(), t.length > 0 ? _.Xq(t) : _.Xq(null);
                     },
                     children: [
                         (0, i.jsx)(m.oil, {
@@ -1204,7 +1204,7 @@ function ei() {
                         }),
                         (0, i.jsx)(m.zxk, {
                             onClick: () => {
-                                '' === n ? g.Z.setChangelogOverride(null) : g.Z.setChangelogOverride(n);
+                                '' === n ? h.Z.setChangelogOverride(null) : h.Z.setChangelogOverride(n);
                             },
                             disabled: t === n,
                             children: 'Update Changelog'

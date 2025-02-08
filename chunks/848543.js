@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(47120);
+n.d(t, { Z: () => A }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -17,13 +17,13 @@ var i = n(200651),
     E = n(459273),
     I = n(242291),
     C = n(792165),
-    v = n(603074),
-    N = n(981631),
+    N = n(603074),
+    v = n(981631),
     T = n(921944),
     S = n(388032),
     Z = n(382290);
-function x(e) {
-    let { channel: t, iconClassName: r, className: x, innerClassName: A, ...b } = e,
+function A(e) {
+    let { channel: t, iconClassName: r, className: A, innerClassName: x, ...b } = e,
         L = (0, p.Q3)('SoundBoardRTCPanelButton'),
         { mute: y, suppress: P } = (0, _.Z)(t),
         O = (0, s.e7)([f.Z], () => f.Z.isDeaf()),
@@ -57,7 +57,7 @@ function x(e) {
                 onRequestClose: () => D(!1),
                 renderPopout: (e) => {
                     let { closePopout: n } = e;
-                    return (0, i.jsx)(v.Z, {
+                    return (0, i.jsx)(N.Z, {
                         guildId: w,
                         channel: t,
                         onClose: n,
@@ -75,12 +75,12 @@ function x(e) {
                         children: (0, i.jsx)(d.zxk, {
                             ...e,
                             ...t,
-                            className: a()(x, {
+                            className: a()(A, {
                                 [Z.buttonActive]: j,
                                 [Z.disabled]: R
                             }),
-                            wrapperClassName: x,
-                            innerClassName: A,
+                            wrapperClassName: A,
+                            innerClassName: x,
                             disabled: R,
                             onClick: () => {
                                 var t;
@@ -111,7 +111,7 @@ function x(e) {
         }, [R, j]);
     return (
         (0, E.yp)({
-            event: N.CkL.TOGGLE_SOUNDBOARD,
+            event: v.CkL.TOGGLE_SOUNDBOARD,
             handler: Y
         }),
         (0, i.jsx)(m.Gt, {

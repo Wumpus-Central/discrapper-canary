@@ -112,8 +112,8 @@ var i = n(200651),
     e4 = n(921944),
     e6 = n(440493),
     e9 = n(157925),
-    e5 = n(388032),
-    e8 = n(247627);
+    e8 = n(388032),
+    e5 = n(247627);
 function te(e, t, n) {
     return (
         t in e
@@ -132,7 +132,7 @@ let tt = (0, k.Un)({
     webpackId: 434878,
     renderLoader: () =>
         (0, i.jsx)('div', {
-            className: e8.loader,
+            className: e5.loader,
             children: (0, i.jsx)(f.$jN, {})
         }),
     name: 'ForumChannel'
@@ -375,7 +375,7 @@ class tn extends l.PureComponent {
                 let { guildId: e, userId: t } = a.details;
                 return (0, i.jsx)('div', {
                     style: { width: e2.$Y6 },
-                    className: e8.guildSidebar,
+                    className: e5.guildSidebar,
                     children: (0, i.jsx)(z.Z, {
                         guildId: e,
                         userId: t,
@@ -416,15 +416,15 @@ class tn extends l.PureComponent {
                 }),
                 (0, i.jsxs)('div', {
                     'data-has-border': e.type !== e2.d4z.GUILD_VOICE,
-                    className: r()(e8.chat, {
-                        [e8.threadSidebarOpen]: m || f,
-                        [e8.threadSidebarFloating]: m && h
+                    className: r()(e5.chat, {
+                        [e5.threadSidebarOpen]: m || f,
+                        [e5.threadSidebarFloating]: m && h
                     }),
                     children: [
                         g
                             ? (0, i.jsx)(E.Z, {
                                   style: { right: m ? u : void 0 },
-                                  className: e8.uploadArea,
+                                  className: e5.uploadArea,
                                   channel: e,
                                   draftType: eD.d.ChannelMessage
                               })
@@ -433,7 +433,7 @@ class tn extends l.PureComponent {
                         this.renderCall(),
                         this.renderEmbeddedActivityPanel(),
                         (0, i.jsxs)('div', {
-                            className: r()(e8.content, { [e8.noChat]: a === e2.AEg.NO_CHAT }),
+                            className: r()(e5.content, { [e5.noChat]: a === e2.AEg.NO_CHAT }),
                             children: [this.renderChat(), this.renderSidebar()]
                         })
                     ]
@@ -541,7 +541,7 @@ class tn extends l.PureComponent {
                                     er.Z,
                                     {
                                         channel: e,
-                                        tooltip: e5.intl.string(e5.t.Xjlbvr)
+                                        tooltip: e8.intl.string(e8.t.Xjlbvr)
                                     },
                                     'invite'
                                 )
@@ -560,7 +560,7 @@ class tn extends l.PureComponent {
                         break;
                     case e2.d4z.GROUP_DM:
                         if ((r.push(this.renderJoinRequestInterviewButtons()), r.push(this.renderClipsEnabledIndicatorToolbarItem()), r.push(this.renderStreamQualityLiveIndicatorToolbarItem()), r.push((0, i.jsx)(ea.Z, { channel: e }, 'calls')), r.push((0, i.jsx)(ee.Z, { channel: e }, 'pins')), !e.isManaged())) {
-                            let t = e5.intl.string(e5.t.Xjlbvr);
+                            let t = e8.intl.string(e8.t.Xjlbvr);
                             r.push(
                                 (0, i.jsx)(
                                     er.Z,
@@ -625,7 +625,7 @@ class tn extends l.PureComponent {
                     ? (0, i.jsx)(f.zxk, {
                           size: f.zxk.Sizes.MIN,
                           color: f.zxk.Colors.PRIMARY,
-                          className: e8.followButton,
+                          className: e5.followButton,
                           onClick: () =>
                               (0, f.ZDy)(async () => {
                                   let { default: e } = await n.e('54642').then(n.bind(n, 720589));
@@ -635,7 +635,7 @@ class tn extends l.PureComponent {
                                           ...n
                                       });
                               }),
-                          children: e5.intl.string(e5.t['3aOv+v'])
+                          children: e8.intl.string(e8.t['3aOv+v'])
                       })
                     : null;
             }),
@@ -645,7 +645,7 @@ class tn extends l.PureComponent {
                 let p = e.isDM() && !e.isSystemDM() ? this.openUserProfile : void 0,
                     m = (null == n ? void 0 : n.guild_id) != null && (null == n ? void 0 : n.id) != null ? this.handleTitleParentClick : void 0;
                 return (0, i.jsxs)('div', {
-                    className: e8.subtitleContainer,
+                    className: e5.subtitleContainer,
                     children: [
                         (0, i.jsx)(f.f6W, {
                             theme: d && s ? e2.BRd.DARK : void 0,
@@ -660,9 +660,9 @@ class tn extends l.PureComponent {
                                         showDivider: h && !(0, eC.X)(),
                                         toolbar: this.renderHeaderToolbar(),
                                         mobileToolbar: this.renderMobileToolbar(),
-                                        className: r()(e8.title, o),
+                                        className: r()(e5.title, o),
                                         transparent: s || c,
-                                        'aria-label': e5.intl.string(e5.t.BIYAqa),
+                                        'aria-label': e8.intl.string(e8.t.BIYAqa),
                                         children: [
                                             'left' === u &&
                                                 (0, i.jsx)(el.TS, {

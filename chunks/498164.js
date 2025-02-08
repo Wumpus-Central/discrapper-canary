@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(47120);
+n.d(t, { Z: () => x }), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(47120);
 var i = n(200651);
 n(192379);
 var l = n(756647),
@@ -18,12 +18,12 @@ var l = n(756647),
     E = n(594174),
     I = n(626135),
     C = n(585483),
-    v = n(591759),
-    N = n(998502),
+    N = n(591759),
+    v = n(998502),
     T = n(996106),
     S = n(186901),
     Z = n(981631);
-function x(e, t) {
+function A(e, t) {
     null != e &&
         I.default.track(Z.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
             invite_code: null,
@@ -33,7 +33,7 @@ function x(e, t) {
             link_type: t
         });
 }
-let A = {
+let x = {
     [Z.Etm.INVITE_BROWSER]: {
         scope: S.cE,
         async handler(e) {
@@ -68,7 +68,7 @@ let A = {
             let { guildTemplate: l } = await m.Z.resolveGuildTemplate(t);
             if (null == l) throw new T.Z({ errorCode: Z.lTL.INVALID_GUILD_TEMPLATE }, 'Invalid guild template id: '.concat(t));
             return (
-                N.ZP.focus(),
+                v.ZP.focus(),
                 (0, r.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e('10778'), n.e('22769')]).then(n.bind(n, 766775));
                     return (t) =>
@@ -95,7 +95,7 @@ let A = {
                     d.Z.resolveGiftCode(t, !0, !0)
                         .then((l) => {
                             let { giftCode: a } = l;
-                            N.ZP.focus(),
+                            v.ZP.focus(),
                                 I.default.track(Z.rMx.OPEN_MODAL, {
                                     type: 'gift_accept',
                                     location: Z.SaU
@@ -121,21 +121,21 @@ let A = {
             let {
                 args: { type: t, params: n }
             } = e;
-            switch ((N.ZP.focus(), t)) {
+            switch ((v.ZP.focus(), t)) {
                 case S.jE.USER_SETTINGS:
-                    null != n && ((0, g.dL)(Z.Z5c.SETTINGS(n.section, n.subsection)), x(n.fingerprint, 'settings'));
+                    null != n && ((0, g.dL)(Z.Z5c.SETTINGS(n.section, n.subsection)), A(n.fingerprint, 'settings'));
                     break;
                 case S.jE.CHANGELOG:
-                    null != n && ((0, g.dL)(v.Z.formatPathWithQuery(Z.Z5c.CHANGELOGS(n.date), n.query)), x(n.fingerprint, 'changelog'));
+                    null != n && ((0, g.dL)(N.Z.formatPathWithQuery(Z.Z5c.CHANGELOGS(n.date), n.query)), A(n.fingerprint, 'changelog'));
                     break;
                 case S.jE.LIBRARY:
-                    (0, g.dL)(Z.Z5c.APPLICATION_LIBRARY), null != n && x(n.fingerprint, 'library');
+                    (0, g.dL)(Z.Z5c.APPLICATION_LIBRARY), null != n && A(n.fingerprint, 'library');
                     break;
                 case S.jE.STORE_HOME:
-                    (0, g.dL)(Z.Z5c.APPLICATION_STORE), null != n && x(n.fingerprint, 'store');
+                    (0, g.dL)(Z.Z5c.APPLICATION_STORE), null != n && A(n.fingerprint, 'store');
                     break;
                 case S.jE.STORE_LISTING:
-                    null != n && ((0, g.dL)(Z.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), x(n.fingerprint, 'store'));
+                    null != n && ((0, g.dL)(Z.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), A(n.fingerprint, 'store'));
                     break;
                 case S.jE.PICK_GUILD_SETTINGS:
                     null != n &&
@@ -143,7 +143,7 @@ let A = {
                             pathname: Z.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
                             search: n.search
                         }),
-                        x(n.fingerprint, 'guild_settings'));
+                        A(n.fingerprint, 'guild_settings'));
                     break;
                 case S.jE.CHANNEL:
                     null != n &&
@@ -151,7 +151,7 @@ let A = {
                             pathname: Z.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
                             search: n.search
                         }),
-                        x(n.fingerprint, 'channel'));
+                        A(n.fingerprint, 'channel'));
                     break;
                 case S.jE.QUEST_HOME:
                     null != n
@@ -159,7 +159,7 @@ let A = {
                               pathname: Z.Z5c.QUEST_HOME,
                               hash: n.questId
                           }),
-                          x(n.fingerprint, 'quest_home'))
+                          A(n.fingerprint, 'quest_home'))
                         : (0, g.dL)(Z.Z5c.QUEST_HOME);
                     break;
                 case S.jE.DISCOVERY_GAME_RESULTS:
@@ -168,7 +168,7 @@ let A = {
                             pathname: Z.Z5c.GLOBAL_DISCOVERY_SERVERS,
                             search: '?game='.concat(n.gameId)
                         }),
-                        x(n.fingerprint, 'discovery_game'));
+                        A(n.fingerprint, 'discovery_game'));
                     break;
                 case S.jE.OAUTH2:
                     let i = new URL(Z.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
@@ -185,7 +185,7 @@ let A = {
             let {
                 args: { handoffToken: t, fingerprint: n }
             } = e;
-            N.ZP.focus(null, !0), (0, o.lx)(t, n);
+            v.ZP.focus(null, !0), (0, o.lx)(t, n);
         }
     },
     [Z.Etm.CONNECTIONS_CALLBACK]: {

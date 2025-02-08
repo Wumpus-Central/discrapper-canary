@@ -1,8 +1,8 @@
 let i;
 n.d(t, { Z: () => h });
 var r,
-    l = n(442837),
-    a = n(570140),
+    a = n(442837),
+    l = n(570140),
     o = n(133080);
 function s(e, t, n) {
     return (
@@ -23,7 +23,7 @@ function d(e) {
     let { countryCode: n } = e;
     null != n && (c = null !== (t = (0, o.Zz)(n)) && void 0 !== t ? t : (0, o.K4)());
 }
-class u extends (r = l.ZP.DeviceSettingsStore) {
+class u extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         null != e && (i = e.selectedCountryCode);
     }
@@ -35,7 +35,7 @@ class u extends (r = l.ZP.DeviceSettingsStore) {
     }
 }
 s(u, 'displayName', 'PhoneStore'), s(u, 'persistKey', 'PhoneStore');
-let h = new u(a.Z, {
+let h = new u(l.Z, {
     PHONE_SET_COUNTRY_CODE: function (e) {
         let { countryCode: t } = e;
         i = t;

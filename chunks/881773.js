@@ -35,7 +35,7 @@ let D = '-:--',
             label: h.intl.string(h.t.hsvh0t)
         }
     };
-function j(e) {
+function I(e) {
     let { current: t, duration: n } = e,
         l = null != t ? (0, x.yv)(t) : D,
         i = null != n ? (0, x.yv)(n) : D;
@@ -63,7 +63,7 @@ function j(e) {
         })
     );
 }
-let I = l.forwardRef(function (e, t) {
+let j = l.forwardRef(function (e, t) {
     let { iconComponent: n, animationTime: l, visible: i, ariaLabel: a, active: c, disabled: m, tooltipLabel: v, tooltipDelayMs: E = 1500, shortcut: p, onClick: C } = e,
         f = (e) =>
             (0, r.jsx)(d.P3F, {
@@ -119,8 +119,8 @@ let I = l.forwardRef(function (e, t) {
 function A(e) {
     var t, n;
     let { videoRef: i, quest: x, playerState: D, animSpring: A, visible: b, seekForwardEnabled: L, hideCaptionBtn: O, handlePlaybackBtnClick: R, handleTranscriptBtnClick: k, handleCaptionBtnClick: M, handleFullScreenBtnClick: P, handleSeekBackBtnClick: q, handleSeekForwardBtnClick: y, handleControlBarPendingInteraction: w } = e,
-        B = (0, v.Q3)('ListSectionItem'),
-        F = (0, p.km)((e) => e.volume),
+        F = (0, v.Q3)('ListSectionItem'),
+        B = (0, p.km)((e) => e.volume),
         U = (0, p.km)((e) => e.setVolume),
         Z = (0, p.km)((e) => e.muted),
         V = (0, p.km)((e) => e.setMuted),
@@ -129,7 +129,7 @@ function A(e) {
         G = (0, p.km)((e) => e.fullScreenEnabled),
         H = (0, a.e7)([m.Z], () => m.Z.useReducedMotion),
         K = (0, a.e7)([m.Z], () => m.Z.keyboardModeEnabled),
-        [Q, X] = l.useState(Z ? 0 : F),
+        [Q, X] = l.useState(Z ? 0 : B),
         [W, $] = l.useState(!1),
         [J, ee] = l.useState(!1),
         [{ volumeAnimSpring: et }, en] = (0, d.q_F)(() => ({
@@ -159,8 +159,8 @@ function A(e) {
             [el]
         ),
         eo = l.useCallback(() => {
-            null != i.current && (0 === Q ? (ei(F), V(!1), es(x.id, F)) : (U(Q), ei(0), V(!0), es(x.id, 0)));
-        }, [i, Q, ei, F, V, es, x.id, U]),
+            null != i.current && (0 === Q ? (ei(B), V(!1), es(x.id, B)) : (U(Q), ei(0), V(!0), es(x.id, 0)));
+        }, [i, Q, ei, B, V, es, x.id, U]),
         ea = () => {
             $(!0);
         },
@@ -225,7 +225,7 @@ function A(e) {
             (0, r.jsxs)('div', {
                 className: T.videoControlsGroup,
                 children: [
-                    (0, r.jsx)(I, {
+                    (0, r.jsx)(j, {
                         iconComponent: em,
                         animationTime: A,
                         visible: b,
@@ -235,7 +235,7 @@ function A(e) {
                         onClick: R,
                         ref: er
                     }),
-                    (0, r.jsx)(I, {
+                    (0, r.jsx)(j, {
                         iconComponent: f.d,
                         animationTime: A,
                         visible: b,
@@ -244,7 +244,7 @@ function A(e) {
                         tooltipLabel: h.intl.string(h.t.r9s3Ul),
                         shortcut: g.Y1.SEEK_BACK
                     }),
-                    (0, r.jsx)(I, {
+                    (0, r.jsx)(j, {
                         iconComponent: S.o,
                         animationTime: A,
                         visible: b,
@@ -278,7 +278,7 @@ function A(e) {
                         onBlur: eu,
                         className: T.volumeControlGroup,
                         children: [
-                            (0, r.jsx)(I, {
+                            (0, r.jsx)(j, {
                                 iconComponent: ed,
                                 animationTime: A,
                                 visible: b,
@@ -311,7 +311,7 @@ function A(e) {
                                 },
                                 children: (0, r.jsx)(c.i, {
                                     mini: !0,
-                                    ...(B
+                                    ...(F
                                         ? {}
                                         : {
                                               barStyles: {
@@ -342,7 +342,7 @@ function A(e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)(j, {
+                    (0, r.jsx)(I, {
                         current: null == i ? void 0 : null === (t = i.current) || void 0 === t ? void 0 : t.currentTime,
                         duration: null == i ? void 0 : null === (n = i.current) || void 0 === n ? void 0 : n.duration
                     })
@@ -351,7 +351,7 @@ function A(e) {
             (0, r.jsxs)('div', {
                 className: s()(T.videoControlsGroup, T.videoControlsGroupEnd),
                 children: [
-                    (0, r.jsx)(I, {
+                    (0, r.jsx)(j, {
                         iconComponent: d.hH0,
                         animationTime: A,
                         visible: b,
@@ -362,7 +362,7 @@ function A(e) {
                         tooltipLabel: h.intl.string(h.t.KCzjTk)
                     }),
                     !O &&
-                        (0, r.jsx)(I, {
+                        (0, r.jsx)(j, {
                             iconComponent: C.c,
                             animationTime: A,
                             visible: b,
@@ -372,7 +372,7 @@ function A(e) {
                             tooltipLabel: h.intl.string(h.t.bDSZOz),
                             shortcut: g.Y1.CAPTION
                         }),
-                    (0, r.jsx)(I, {
+                    (0, r.jsx)(j, {
                         iconComponent: G ? d.wvt : d.NpZ,
                         animationTime: A,
                         visible: b,

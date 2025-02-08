@@ -9,16 +9,16 @@ var i,
     d = n(570140);
 let u = !1,
     m = [],
-    h = '',
     g = '',
-    _ = !1,
-    x = {
+    h = '',
+    x = !1,
+    _ = {
         viewNonce: '',
         regenerateNonce: ''
     };
 class p extends (r = c.ZP.Store) {
     getVerificationKey() {
-        return h;
+        return g;
     }
     getBackupCodes() {
         return m;
@@ -27,13 +27,13 @@ class p extends (r = c.ZP.Store) {
         return u;
     }
     getNonces() {
-        return x;
+        return _;
     }
     get emailToken() {
-        return g;
+        return h;
     }
     get hasSeenBackupPrompt() {
-        return _;
+        return x;
     }
 }
 (s = 'MFAStore'),
@@ -52,7 +52,7 @@ let E = new p(d.Z, {
     },
     MFA_ENABLE_EMAIL_TOKEN: function (e) {
         let { token: t } = e;
-        g = t;
+        h = t;
     },
     MFA_DISABLE_SUCCESS: function (e) {
         let { token: t } = e;
@@ -69,13 +69,13 @@ let E = new p(d.Z, {
     },
     MFA_VIEW_BACKUP_CODES: function (e) {
         let { codes: t, key: n } = e;
-        (m = a().sortBy(t, 'code')), (h = n);
+        (m = a().sortBy(t, 'code')), (g = n);
     },
     MFA_SEND_VERIFICATION_KEY: function (e) {
         let { nonces: t } = e;
-        x = t;
+        _ = t;
     },
     MFA_SEEN_BACKUP_CODE_PROMPT: function () {
-        _ = !0;
+        x = !0;
     }
 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => v });
 var a = n(200651);
 n(192379);
 var i = n(442837),
@@ -10,39 +10,39 @@ var i = n(442837),
     d = n(186078),
     u = n(73880),
     m = n(196345),
-    _ = n(707592),
-    x = n(476770),
-    f = n(483760),
-    h = n(465588),
-    p = n(644929),
-    b = n(814960),
-    g = n(388032);
-let C = function (e) {
-    let { guildId: t, formFields: n, user: C, showRequirements: v = !0 } = e,
-        j = (0, i.e7)([l.default], () => (null != C ? C : l.default.getCurrentUser())),
-        I = (0, o.jS)(t, 'DisabledFormRenderer');
-    if (null == j) return null;
-    let T = I ? x.Ih : c.Ih;
+    x = n(707592),
+    h = n(476770),
+    _ = n(483760),
+    p = n(465588),
+    f = n(644929),
+    C = n(814960),
+    j = n(388032);
+let v = function (e) {
+    let { guildId: t, formFields: n, user: v, showRequirements: b = !0 } = e,
+        g = (0, i.e7)([l.default], () => (null != v ? v : l.default.getCurrentUser())),
+        T = (0, o.jS)(t, 'DisabledFormRenderer');
+    if (null == g) return null;
+    let I = T ? h.Ih : c.Ih;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            v &&
-                (0, a.jsx)(T, {
+            b &&
+                (0, a.jsx)(I, {
                     icon: r.b7C,
-                    text: g.intl.string(g.t.v2z4c3),
+                    text: j.intl.string(j.t.v2z4c3),
                     meetsRequirement: !0
                 }),
             n.map((e, t) =>
-                I
+                T
                     ? (function (e, t) {
                           switch (e.field_type) {
                               case s.QJ.TERMS:
-                                  return (0, a.jsx)(p.QC, { formField: e }, t);
+                                  return (0, a.jsx)(f.QC, { formField: e }, t);
                               case s.QJ.TEXT_INPUT:
-                                  return (0, a.jsx)(b.YJ, { formField: e }, t);
+                                  return (0, a.jsx)(C.YJ, { formField: e }, t);
                               case s.QJ.PARAGRAPH:
-                                  return (0, a.jsx)(h.jn, { formField: e }, t);
+                                  return (0, a.jsx)(p.jn, { formField: e }, t);
                               case s.QJ.MULTIPLE_CHOICE:
-                                  return (0, a.jsx)(f.QH, { formField: e }, t);
+                                  return (0, a.jsx)(_.QH, { formField: e }, t);
                           }
                       })(e, t)
                     : (function (e, t) {
@@ -50,7 +50,7 @@ let C = function (e) {
                               case s.QJ.TERMS:
                                   return (0, a.jsx)(m.QC, { formField: e }, t);
                               case s.QJ.TEXT_INPUT:
-                                  return (0, a.jsx)(_.YJ, { formField: e }, t);
+                                  return (0, a.jsx)(x.YJ, { formField: e }, t);
                               case s.QJ.PARAGRAPH:
                                   return (0, a.jsx)(u.jn, { formField: e }, t);
                               case s.QJ.MULTIPLE_CHOICE:

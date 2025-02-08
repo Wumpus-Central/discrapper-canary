@@ -18,13 +18,13 @@ var r = n(481060),
     E = n(914010),
     I = n(594174),
     C = n(823379),
-    v = n(358085),
-    N = n(929809),
+    N = n(358085),
+    v = n(929809),
     T = n(179645),
     S = n(701476),
     Z = n(785997),
-    x = n(981631),
-    A = n(188785),
+    A = n(981631),
+    x = n(188785),
     b = n(630724);
 function L() {
     null != i && (0, r.Mr3)(i);
@@ -57,7 +57,7 @@ class y extends s.Z {
             let e = f.Z.getGuild(L);
             null != e && (0, u.Dc)(e) && ((s = !0), (0, p.RM)(e.id));
         }
-        let y = () => 0 === _.Z.totalGuilds && !v.isPlatformEmbedded,
+        let y = () => 0 === _.Z.totalGuilds && !N.isPlatformEmbedded,
             P = o.b();
         (e = [
             {
@@ -102,25 +102,25 @@ class y extends s.Z {
                                 });
                         },
                         {
-                            onCloseRequest: x.dG4,
+                            onCloseRequest: A.dG4,
                             onCloseCallback: e,
                             modalKey: i
                         }
                     );
                 },
-                predicate: () => y() && !A.a
+                predicate: () => y() && !x.a
             },
             {
                 key: 'New User Age Gate',
                 open: c.i,
-                predicate: () => P && !y() && !A.a
+                predicate: () => P && !y() && !x.a
             },
             {
                 key: 'Claim Account Modal',
-                open: (e) => c.j(v.isPlatformEmbedded, e),
+                open: (e) => c.j(N.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
-                    return !s && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !A.a && !(0, h.g)('new_user_manager');
+                    return !s && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !x.a && !(0, h.g)('new_user_manager');
                 }
             },
             {
@@ -128,7 +128,7 @@ class y extends s.Z {
                 open: (e) => (0, d.hk)(L, null != e ? e : void 0),
                 predicate: () => {
                     var e;
-                    return s && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !A.a;
+                    return s && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !x.a;
                 }
             },
             {
@@ -149,7 +149,7 @@ class y extends s.Z {
             }
         ]),
             (t = () => {
-                N.H(), m.Z.flowStep(b.MK.ANY, b.EW.NUF_COMPLETE, !0);
+                v.H(), m.Z.flowStep(b.MK.ANY, b.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;

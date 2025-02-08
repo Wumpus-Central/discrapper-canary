@@ -6,29 +6,29 @@ var n = l(200651),
     s = l(442837),
     r = l(481060),
     c = l(48210),
-    C = l(605436),
-    d = l(430824),
+    d = l(605436),
+    C = l(430824),
     u = l(496675),
     m = l(388032),
     h = l(321883);
 let x = (e) => {
     let { guild: t, transitionState: l, onClose: i } = e,
         [x, g] = a.useState(7),
-        [H, b] = a.useState(null),
-        [p, _] = a.useState([]),
+        [p, _] = a.useState(null),
+        [b, f] = a.useState([]),
         j = a.useCallback(async () => {
-            b(null), b(await c.Z.updateEstimate(t.id, x, p));
-        }, [x, t.id, p]);
+            _(null), _(await c.Z.updateEstimate(t.id, x, b));
+        }, [x, t.id, b]);
     a.useEffect(() => {
         j();
     }, [j]);
-    let f = (0, s.Wu)(
-        [u.Z, d.Z],
+    let H = (0, s.Wu)(
+        [u.Z, C.Z],
         () => {
             let e = u.Z.getHighestRole(t);
-            return o()(d.Z.getRoles(t.id))
+            return o()(C.Z.getRoles(t.id))
                 .sortBy((e) => e.position)
-                .filter((e) => !(0, C.pM)(t.id, e.id))
+                .filter((e) => !(0, d.pM)(t.id, e.id))
                 .filter((l) => u.Z.isRoleHigher(t, e, l))
                 .value()
                 .map((e) => {
@@ -82,9 +82,9 @@ let x = (e) => {
                             children: (0, n.jsx)(r.VcW, {
                                 maxVisibleItems: 10,
                                 multi: !0,
-                                value: p,
-                                onChange: (e) => _(e),
-                                options: f
+                                value: b,
+                                onChange: (e) => f(e),
+                                options: H
                             })
                         })
                     }),
@@ -92,13 +92,13 @@ let x = (e) => {
                         type: r.R94.Types.DESCRIPTION,
                         className: h.spacing,
                         children:
-                            p.length > 0
+                            b.length > 0
                                 ? m.intl.format(m.t['5WxHHh'], {
-                                      members: H,
+                                      members: p,
                                       days: x
                                   })
                                 : m.intl.format(m.t.f13az8, {
-                                      members: H,
+                                      members: p,
                                       days: x
                                   })
                     })
@@ -108,7 +108,7 @@ let x = (e) => {
                 children: [
                     (0, n.jsx)(r.zxk, {
                         onClick: () => {
-                            c.Z.prune(t.id, x, p), i();
+                            c.Z.prune(t.id, x, b), i();
                         },
                         children: m.intl.string(m.t['2mIlKS'])
                     }),

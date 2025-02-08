@@ -17,7 +17,7 @@ var i = n(200651),
     E = n(388032),
     I = n(525270);
 let C = { offset: 2 },
-    v = {
+    N = {
         serverDeaf: {
             icon: o.Vm4,
             colorize: !0,
@@ -44,17 +44,17 @@ let C = { offset: 2 },
             getStatus: () => E.intl.string(E.t['9F+xJS'])
         }
     };
-function N(e) {
+function v(e) {
     var t, l;
-    let { channel: r, user: p, nick: N, mute: T, deaf: S, serverMute: Z, serverDeaf: x } = e,
-        A = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
+    let { channel: r, user: p, nick: v, mute: T, deaf: S, serverMute: Z, serverDeaf: A } = e,
+        x = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         b = (0, d.Z)({
             userId: p.id,
             checkSoundSharing: !0
         }),
         L = null !== (t = r.getGuildId()) && void 0 !== t ? t : void 0,
         y = p.getAvatarURL(r.guild_id, 24),
-        P = null != N ? N : _.ZP.getName(p),
+        P = null != v ? v : _.ZP.getName(p),
         {
             icon: O,
             colorize: R,
@@ -62,17 +62,17 @@ function N(e) {
         } = null !==
             (l = (function (e) {
                 let { serverDeaf: t, deaf: n, serverMute: i, mute: l, localMute: r } = e;
-                if (t) return v.serverDeaf;
-                if (n) return v.deaf;
-                if (i) return v.serverMute;
-                if (r) return v.localMute;
-                if (l) return v.mute;
+                if (t) return N.serverDeaf;
+                if (n) return N.deaf;
+                if (i) return N.serverMute;
+                if (r) return N.localMute;
+                if (l) return N.mute;
             })({
-                serverDeaf: x,
+                serverDeaf: A,
                 deaf: S,
                 serverMute: Z,
                 mute: T,
-                localMute: A
+                localMute: x
             })) && void 0 !== l
             ? l
             : {},
@@ -191,7 +191,7 @@ function T(e) {
                           let { user: t, nick: l, voiceState: r } = e;
                           return t.id !== m
                               ? (0, i.jsx)(
-                                    N,
+                                    v,
                                     {
                                         channel: n,
                                         user: t,

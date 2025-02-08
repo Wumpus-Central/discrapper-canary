@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     container: 'container__89463',
     contentContainer: 'contentContainer__89463',
     powerupsContainer: 'powerupsContainer__89463',

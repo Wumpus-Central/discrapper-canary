@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(410154),
     u = n(314684),
     m = n(687362),
-    h = n(675619),
-    g = n(119850),
-    _ = n(32173),
-    x = n(391110),
+    g = n(675619),
+    h = n(119850),
+    x = n(32173),
+    _ = n(391110),
     p = n(75077),
     E = n(320319),
     C = n(761518);
@@ -48,14 +48,14 @@ let f = (e) => {
     },
     T = (e) => {
         var t, n;
-        let { className: r, variant: T = x.R0.PERKS_DISCOVERABILITY, noBackground: N = !1, leftAlignHeaders: S = !1, showAllPerksButton: I, headerClassname: b, isFullScreen: v = !0, shouldAutoScroll: j = !1 } = e,
+        let { className: r, variant: T = _.R0.PERKS_DISCOVERABILITY, noBackground: N = !1, leftAlignHeaders: I = !1, showAllPerksButton: S, headerClassname: b, isFullScreen: v = !0, shouldAutoScroll: j = !1 } = e,
             A = s.useRef(null),
             O = (0, u.yQ)(),
             R = (0, m.vi)(O),
             P = (0, d.ZP)('perks-discoverability'),
-            D = T === x.R0.WHATS_NEW,
+            D = T === _.R0.WHATS_NEW,
             y = (0, u.IY)(),
-            Z = (0, g.x)();
+            Z = (0, h.x)();
         s.useEffect(() => {
             D && !R && (y(), Z());
         }, [y, Z, D, R]);
@@ -63,14 +63,14 @@ let f = (e) => {
                 D && R && y();
             },
             L = R && D;
-        (0, h.r)({
+        (0, g.r)({
             ref: A,
             shouldScroll: L || j,
             onScrollEnd: k,
             onCleanup: k
         });
         let B = (0, p.Op)(D),
-            M = (0, _.Z)(),
+            M = (0, x.Z)(),
             w = (0, p.mN)(),
             { fractionalState: V } = (0, c.Z)(),
             U = (0, p.sP)({
@@ -87,7 +87,7 @@ let f = (e) => {
             z = s.useRef(new a.qA());
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                ((null == M ? void 0 : null === (t = M.freeBoost) || void 0 === t ? void 0 : t.name) === _.u.FREE_BOOST || (null == M ? void 0 : null === (n = M.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === _.u.TENURE_REWARD_COLLECTIBLE) &&
+                ((null == M ? void 0 : null === (t = M.freeBoost) || void 0 === t ? void 0 : t.name) === x.u.FREE_BOOST || (null == M ? void 0 : null === (n = M.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === x.u.TENURE_REWARD_COLLECTIBLE) &&
                     (0, i.jsx)(a.O_, {
                         ref: H,
                         className: C.confettiCanvas,
@@ -98,15 +98,15 @@ let f = (e) => {
                     className: l()(
                         C.section,
                         {
-                            [C.centerAlignSection]: !S,
-                            [C.leftAlignSection]: S
+                            [C.centerAlignSection]: !I,
+                            [C.leftAlignSection]: I
                         },
                         r
                     ),
                     children: [
                         (0, i.jsx)(f, {
-                            showAllPerksButton: I,
-                            leftAlignHeaders: S,
+                            showAllPerksButton: S,
+                            leftAlignHeaders: I,
                             title: B.title,
                             headerClassname: b
                         }),
@@ -114,20 +114,20 @@ let f = (e) => {
                             variant: 'text-lg/normal',
                             color: 'header-primary',
                             className: l()(C.subtitle, {
-                                [C.subtitle]: null == I || S,
-                                [C.subtitleWithButton]: null != I && !S,
-                                [C.fullWidth]: D || S,
+                                [C.subtitle]: null == S || I,
+                                [C.subtitleWithButton]: null != S && !I,
+                                [C.fullWidth]: D || I,
                                 [C.moreSubtitleMargin]: G,
-                                [C.leftAlignSubtitle]: S,
-                                [C.centerAlignSubtitle]: !S
+                                [C.leftAlignSubtitle]: I,
+                                [C.centerAlignSubtitle]: !I
                             }),
                             children: B.subtitle
                         }),
-                        !S &&
-                            null != I &&
+                        !I &&
+                            null != S &&
                             (0, i.jsx)('div', {
                                 className: l()(C.showAllPerksButtonCenter),
-                                children: I
+                                children: S
                             }),
                         (0, i.jsx)('div', {
                             className: l()({
@@ -138,7 +138,7 @@ let f = (e) => {
                                 (0, i.jsx)(
                                     E.Z,
                                     {
-                                        confettiCanvas: e.name === _.u.FREE_BOOST || e.name === _.u.TENURE_REWARD_COLLECTIBLE ? F : void 0,
+                                        confettiCanvas: e.name === x.u.FREE_BOOST || e.name === x.u.TENURE_REWARD_COLLECTIBLE ? F : void 0,
                                         ...e,
                                         forceShadow: N
                                     },

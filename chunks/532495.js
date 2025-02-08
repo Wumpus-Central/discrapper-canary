@@ -10,18 +10,18 @@ var s = n(512722),
     d = n(328783),
     u = n(295474),
     m = n(150039),
-    h = n(126631),
-    g = n(433411),
-    _ = n(532432),
-    x = n(349177),
+    g = n(126631),
+    h = n(433411),
+    x = n(532432),
+    _ = n(349177),
     p = n(872736),
     E = n(134795),
     C = n(610966),
     f = n(513901),
     T = n(451392),
     N = n(906364),
-    S = n(350327),
-    I = n(621853),
+    I = n(350327),
+    S = n(621853),
     b = n(687158),
     v = n(25990),
     j = n(594174),
@@ -34,7 +34,7 @@ function P() {
             let e = j.default.getCurrentUser();
             return r()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
         }),
-        L = (0, l.e7)([I.Z], () => I.Z.getUserProfile(k.id)),
+        L = (0, l.e7)([S.Z], () => S.Z.getUserProfile(k.id)),
         {
             pendingAvatar: B,
             pendingGlobalName: M,
@@ -73,7 +73,7 @@ function P() {
     return (0, i.jsxs)('div', {
         className: R.sectionsContainer,
         children: [
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(_.Z, {
                 placeholder: k.username,
                 errors: Q,
                 currentGlobalName: k.globalName,
@@ -85,14 +85,14 @@ function P() {
                 {
                     sectionTitle: O.intl.string(O.t['+T3RIy']),
                     errors: H.pronouns,
-                    onPronounsChange: S.ID,
+                    onPronounsChange: I.ID,
                     pendingPronouns: U,
                     currentPronouns: null !== (y = null == L ? void 0 : L.pronouns) && void 0 !== y ? y : ''
                 },
                 'pronouns'
             ),
             (0, i.jsx)(
-                _.Z,
+                x.Z,
                 {
                     onAvatarChange: a.I5,
                     showRemoveAvatarButton: W,
@@ -103,7 +103,7 @@ function P() {
                 'avatar'
             ),
             (0, i.jsx)(
-                g.Z,
+                h.Z,
                 {
                     user: k,
                     sectionTitle: O.intl.string(O.t['7v0T9P'])
@@ -126,7 +126,7 @@ function P() {
                               {
                                   showRemoveBannerButton: K,
                                   errors: H.banner,
-                                  onBannerChange: S.g_,
+                                  onBannerChange: I.g_,
                                   forcedDivider: !0
                               },
                               'banner'
@@ -135,7 +135,7 @@ function P() {
                               user: k,
                               pendingAvatar: B,
                               pendingColors: F,
-                              onThemeColorsChange: S.z5,
+                              onThemeColorsChange: I.z5,
                               forcedDivider: !0
                           })
                       ]
@@ -146,12 +146,12 @@ function P() {
                           user: k,
                           savedUserColor: null == L ? void 0 : L.accentColor,
                           pendingColor: G,
-                          setPendingAccentColor: S.CM
+                          setPendingAccentColor: I.CM
                       },
                       'color'
                   ),
             (0, i.jsx)(
-                h.Z,
+                g.Z,
                 {
                     sectionTitle: O.intl.string(O.t.NepzEx),
                     errors: $,

@@ -243,8 +243,8 @@ class h extends _ {
         var e, t;
         return (null !== (t = null === (e = this.potions) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0) > 0;
     }
-    isUIKitComponents() {
-        return (0, u.yE)(this.flags, d.iLy.IS_UIKIT_COMPONENTS);
+    isComponentsV2() {
+        return (0, u.yE)(this.flags, d.iLy.IS_COMPONENTS_V2);
     }
     isInteractionPlaceholder() {
         return null != this.interaction && this.author.isNonUserBot();

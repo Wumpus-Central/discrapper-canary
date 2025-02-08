@@ -5,14 +5,14 @@ n.d(t, {
 });
 var a = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
+var r = n(120356),
+    l = n.n(r),
     i = n(481060),
     o = n(941469);
 function s(e) {
     let { className: t, children: n } = e;
     return (0, a.jsx)('dl', {
-        className: r()(o.properties, t),
+        className: l()(o.properties, t),
         children: n
     });
 }

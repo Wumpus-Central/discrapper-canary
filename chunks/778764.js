@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(47120), n(773603);
+n.d(t, { Z: () => S }), n(47120), n(773603);
 var i = n(200651),
     s = n(192379),
     r = n(849055),
@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(313201),
     u = n(202858),
     m = n(287880),
-    h = n(358085),
-    g = n(960048),
-    _ = n(998502),
-    x = n(365007),
+    g = n(358085),
+    h = n(960048),
+    x = n(998502),
+    _ = n(365007),
     p = n(15980),
     E = n(755733),
     C = n(981631),
@@ -22,18 +22,18 @@ function N(e) {
     let { transitionState: t, onClose: l, ticket: o, challenge: c } = e,
         m = (0, d.Dt)(),
         [p, N] = s.useState(''),
-        [S, I] = s.useState(!0),
+        [I, S] = s.useState(!0),
         [b, v] = s.useState(E.x.INIT),
         [j, A] = s.useState(''),
         [O, R] = s.useState(null),
         P = async () => {
             let e;
             v(E.x.REGISTER);
-            let t = h.isPlatformEmbedded && _.ZP.supportsFeature(C.eRX.WEBAUTHN) ? _.ZP.webAuthnRegister(c) : r.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
+            let t = g.isPlatformEmbedded && x.ZP.supportsFeature(C.eRX.WEBAUTHN) ? x.ZP.webAuthnRegister(c) : r.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
-                g.Z.captureException(e), R(f.intl.string(f.t.xSCvBQ)), v(E.x.INIT);
+                h.Z.captureException(e), R(f.intl.string(f.t.xSCvBQ)), v(E.x.INIT);
                 return;
             }
             A(e), v(E.x.NAME);
@@ -128,7 +128,7 @@ function N(e) {
                         children: (0, i.jsxs)('form', {
                             onSubmit: (e) => {
                                 e.preventDefault(),
-                                    (0, x.Sr)(p, o, j)
+                                    (0, _.Sr)(p, o, j)
                                         .then(async () => {
                                             await (0, u.Yn)(!1);
                                         })
@@ -158,7 +158,7 @@ function N(e) {
                                                     className: T.input,
                                                     value: p,
                                                     onChange: (e) => {
-                                                        N(e), I(0 === e.length);
+                                                        N(e), S(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -172,7 +172,7 @@ function N(e) {
                                     children: [
                                         (0, i.jsx)(a.zxk, {
                                             type: 'submit',
-                                            disabled: S,
+                                            disabled: I,
                                             children: f.intl.string(f.t['5dyZ1d'])
                                         }),
                                         (0, i.jsx)(a.zxk, {
@@ -193,7 +193,7 @@ function N(e) {
         ]
     });
 }
-function S(e) {
+function I(e) {
     let { onSelect: t, credential: s } = e;
     return (0, i.jsxs)(a.v2r, {
         navId: 'webauthn-credential-actions',
@@ -220,19 +220,19 @@ function S(e) {
                 label: f.intl.string(f.t['+xgS+P']),
                 color: 'danger',
                 action: () => {
-                    (0, x.cT)(s);
+                    (0, _.cT)(s);
                 }
             })
         ]
     });
 }
-function I() {
+function S() {
     let { credentials: e, hasFetchedCredentials: t } = (0, l.cj)([p.Z], () => ({
         hasFetchedCredentials: p.Z.hasFetchedCredentials(),
         credentials: p.Z.getCredentials()
     }));
     s.useEffect(() => {
-        t || (0, x.hL)();
+        t || (0, _.hL)();
     }, [t]);
     let [n, r] = s.useState(!1);
     return (0, i.jsxs)(a.hjN, {
@@ -256,7 +256,7 @@ function I() {
                                 className: T.credentialItem,
                                 onContextMenu: (t) => {
                                     (0, o.vq)(t, (t) =>
-                                        (0, i.jsx)(S, {
+                                        (0, i.jsx)(I, {
                                             ...t,
                                             credential: e
                                         })
@@ -268,7 +268,7 @@ function I() {
                                     size: a.zxk.Sizes.ICON,
                                     onClick: (t) => {
                                         (0, o.vq)(t, (t) =>
-                                            (0, i.jsx)(S, {
+                                            (0, i.jsx)(I, {
                                                 ...t,
                                                 credential: e
                                             })
@@ -293,7 +293,7 @@ function I() {
                 children: (0, i.jsx)(a.zxk, {
                     onClick: () => {
                         r(!0),
-                            (0, x.L$)()
+                            (0, _.L$)()
                                 .then((e) => {
                                     let { ticket: t, challenge: n } = e;
                                     (0, a.h7j)((e) =>
@@ -305,7 +305,7 @@ function I() {
                                     );
                                 })
                                 .catch((e) => {
-                                    e.message !== f.intl.string(f.t.N2yb9f) && g.Z.captureException(e);
+                                    e.message !== f.intl.string(f.t.N2yb9f) && h.Z.captureException(e);
                                 })
                                 .finally(() => {
                                     r(!1);

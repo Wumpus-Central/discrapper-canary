@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(230711),
     u = n(921801),
     m = n(131951),
-    h = n(663389),
-    g = n(63063),
-    _ = n(680924),
-    x = n(58765),
+    g = n(663389),
+    h = n(63063),
+    x = n(680924),
+    _ = n(58765),
     p = n(429789),
     E = n(726763),
     C = n(208113),
     f = n(894939),
     T = n(710808),
     N = n(625205),
-    S = n(325808),
-    I = n(823087),
+    I = n(325808),
+    S = n(823087),
     b = n(232388),
     v = n(546997),
     j = n(186934),
@@ -38,17 +38,17 @@ var i = n(200651),
     w = n(65154),
     V = n(388032),
     U = n(232186);
-let G = ''.concat(g.Z.getArticleURL(M.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
+let G = ''.concat(h.Z.getArticleURL(M.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 function F() {
     let { inputMode: e } = (0, a.cj)([m.Z], () => ({ inputMode: m.Z.getMode() })),
-        t = (0, a.e7)([h.Z], () => h.Z.getSubsection()),
+        t = (0, a.e7)([g.Z], () => g.Z.getSubsection()),
         n = s.createRef(),
         r = s.createRef();
     s.useEffect(() => {
         var e, i;
         t === L.GA && (null == n || null === (e = n.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection()), t === L.gP && (null == r || null === (i = r.current) || void 0 === i || i.scrollIntoView(), d.Z.clearSubsection());
     }, [n, r, t]);
-    let g = (0, x.Z)();
+    let h = (0, _.Z)();
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H1,
         title: V.intl.string(V.t.NiTd0d),
@@ -67,7 +67,7 @@ function F() {
                     (0, i.jsxs)(u.F, {
                         setting: B.s6.VOICE_AND_VIDEO_MIC_TEST,
                         children: [
-                            (0, i.jsx)(I.Z, {}),
+                            (0, i.jsx)(S.Z, {}),
                             (0, i.jsx)(o.R94, {
                                 className: U.marginBottom20,
                                 type: o.R94.Types.DESCRIPTION,
@@ -78,7 +78,7 @@ function F() {
                     }),
                     (0, i.jsx)(u.F, {
                         setting: B.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                        children: (0, i.jsx)(S.Z, {})
+                        children: (0, i.jsx)(I.Z, {})
                     }),
                     (0, i.jsx)(u.F, {
                         setting: B.s6.VOICE_AND_VIDEO_SENSITIVITY,
@@ -126,7 +126,7 @@ function F() {
                         (0, i.jsx)(O.Z, {}),
                         (0, i.jsx)(b.Z, {}),
                         (0, i.jsx)(p.Z, {}),
-                        g && (0, i.jsx)(j.Z, {}),
+                        h && (0, i.jsx)(j.Z, {}),
                         (0, i.jsx)(C.Z, {}),
                         (0, i.jsx)(v.Z, {}),
                         (0, i.jsx)(A.Z, {}),
@@ -143,7 +143,7 @@ function F() {
                                     look: o.zxk.Looks.OUTLINED,
                                     color: o.zxk.Colors.RED,
                                     onClick: () => {
-                                        (0, _.Z)(V.intl.string(V.t['/RXu6+']), V.intl.string(V.t.sQ42iY), c.Z.reset);
+                                        (0, x.Z)(V.intl.string(V.t['/RXu6+']), V.intl.string(V.t.sQ42iY), c.Z.reset);
                                     },
                                     size: o.zxk.Sizes.SMALL,
                                     children: V.intl.string(V.t['/RXu6+'])

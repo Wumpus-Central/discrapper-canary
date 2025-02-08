@@ -12,18 +12,18 @@ var i = n(200651),
     d = n(704215),
     u = n(481060),
     m = n(150063),
-    h = n(493773),
-    g = n(758119),
-    _ = n(100527),
-    x = n(906732),
+    g = n(493773),
+    h = n(758119),
+    x = n(100527),
+    _ = n(906732),
     p = n(252618),
     E = n(313201),
     C = n(605236),
     f = n(984370),
     T = n(797614),
     N = n(108427),
-    S = n(210887),
-    I = n(695346),
+    I = n(210887),
+    S = n(695346),
     b = n(594174),
     v = n(626135),
     j = n(260722),
@@ -152,12 +152,12 @@ function Y() {
         n = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         r = (0, c.e7)([A.Z], () => A.Z.getIsInitialized()),
         a = (0, R.M)(),
-        { selectedTab: m, handleTabChange: _ } = (0, O.Z)(),
-        x = (0, E.Dt)(),
+        { selectedTab: m, handleTabChange: x } = (0, O.Z)(),
+        _ = (0, E.Dt)(),
         f = b.default.getCurrentUser(),
-        S = null != e,
-        I = r && null != f && !S;
-    (0, h.ZP)(() => {
+        I = null != e,
+        S = r && null != f && !I;
+    (0, g.ZP)(() => {
         (0, N.e)('family-center'),
             j.ZP.initialPageLoad(),
             n ||
@@ -177,7 +177,7 @@ function Y() {
         Z.current = y;
     }),
     s.useEffect(() => {
-        if (r && S) {
+        if (r && I) {
             let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: i } = Z.current;
             v.default.track(B.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
@@ -188,11 +188,11 @@ function Y() {
             }),
                 T.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
         }
-    }, [r, S]),
+    }, [r, I]),
     s.useEffect(() => {
-        I && (0, g.mN)(M.L0.FAMILY_CENTER);
-    }, [I]),
-    I)
+        S && (0, h.mN)(M.L0.FAMILY_CENTER);
+    }, [S]),
+    S)
         ? null
         : (0, i.jsxs)('main', {
               className: l()(U.container),
@@ -202,12 +202,12 @@ function Y() {
                   (0, i.jsx)(H, {
                       section: m,
                       handleItemSelect: (e) => {
-                          _(e);
+                          x(e);
                       }
                   }),
                   (0, i.jsx)(u.njP.Panel, {
                       id: m,
-                      'aria-labelledby': x,
+                      'aria-labelledby': _,
                       className: U.contentPanel,
                       children: (0, i.jsx)('div', { children: G[m]() })
                   })
@@ -215,19 +215,19 @@ function Y() {
           });
 }
 function W() {
-    let { analyticsLocations: e } = (0, x.ZP)(_.Z.FAMILY_CENTER),
+    let { analyticsLocations: e } = (0, _.ZP)(x.Z.FAMILY_CENTER),
         t = (0, P.Z)(),
         n = (0, D.M8)(),
         r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         a = (0, c.e7)([A.Z], () => A.Z.getIsInitialized()),
         f = (0, R.M)(),
-        y = (0, c.e7)([S.Z], () => S.Z.theme),
+        y = (0, c.e7)([I.Z], () => I.Z.theme),
         { selectedTab: Z, handleTabChange: k } = (0, O.Z)(),
         G = (0, E.Dt)(),
         H = b.default.getCurrentUser(),
         Y = null != t,
         W = a && null != H && !Y;
-    (0, h.ZP)(() => {
+    (0, g.ZP)(() => {
         m.Y(B.Z5c.FAMILY_CENTER),
             (0, N.e)('family-center'),
             !A.Z.isLoading() && A.Z.canRefetch() && j.ZP.initialPageLoad(),
@@ -262,18 +262,18 @@ function W() {
             }
         }, [a, Y]),
         s.useEffect(() => {
-            let e = I.Ex.getSetting();
-            a && t && void 0 === e && I.Ex.updateSetting(!0);
+            let e = S.Ex.getSetting();
+            a && t && void 0 === e && S.Ex.updateSetting(!0);
         }, [a, t]),
         s.useEffect(() => {
-            W && (0, g.mN)(M.L0.FAMILY_CENTER);
+            W && (0, h.mN)(M.L0.FAMILY_CENTER);
         }, [W]),
         W)
     )
         return null;
     let X = Z !== L.dG.SETTINGS ? Z : L.dG.ACTIVITY,
         J = F[X];
-    return (0, i.jsx)(x.Gt, {
+    return (0, i.jsx)(_.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
             className: l()(U.container, U.containerSidenav),

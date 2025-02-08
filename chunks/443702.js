@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(355467),
     u = n(230711),
     m = n(497321),
-    h = n(231428),
-    g = n(390954),
-    _ = n(89057),
-    x = n(921801),
+    g = n(231428),
+    h = n(390954),
+    x = n(89057),
+    _ = n(921801),
     p = n(246946),
     E = n(594174),
     C = n(351402),
     f = n(853872),
     T = n(78839),
     N = n(706454),
-    S = n(726985),
-    I = n(981631),
+    I = n(726985),
+    S = n(981631),
     b = n(388032),
     v = n(729061);
 class j extends s.PureComponent {
@@ -30,7 +30,7 @@ class j extends s.PureComponent {
         });
     }
     handleRedemptionRedirect() {
-        u.Z.setSection(I.oAB.INVENTORY);
+        u.Z.setSection(S.oAB.INVENTORY);
     }
     render() {
         let { syncing: e, hide: t, paymentSources: n, defaultPaymentSourceId: s, locale: r, premiumSubscription: l, isRemovingPaymentSource: a, isUpdatingPaymentSource: c } = this.props;
@@ -44,19 +44,19 @@ class j extends s.PureComponent {
                                 className: v.syncing,
                                 children: (0, i.jsx)(o.$jN, {})
                             })
-                          : (0, i.jsx)(x.F, {
-                                setting: S.s6.BILLING_PAYMENT_METHODS,
-                                children: (0, i.jsx)(g.Z, {
+                          : (0, i.jsx)(_.F, {
+                                setting: I.s6.BILLING_PAYMENT_METHODS,
+                                children: (0, i.jsx)(h.Z, {
                                     paymentSources: n,
                                     defaultPaymentSourceId: s,
-                                    premiumSubscriptionPaymentSourceId: null != l && l.status !== I.O0b.CANCELED ? l.paymentSourceId : null,
+                                    premiumSubscriptionPaymentSourceId: null != l && l.status !== S.O0b.CANCELED ? l.paymentSourceId : null,
                                     locale: r,
                                     removing: a,
                                     submitting: c
                                 })
                             }),
-                      (0, i.jsx)(x.F, {
-                          setting: S.s6.BILLING_TRANSACTION_HISTORY,
+                      (0, i.jsx)(_.F, {
+                          setting: I.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, i.jsx)('div', {
                               className: v.paymentHistory,
                               children: (0, i.jsxs)(o.y5t, {
@@ -64,7 +64,7 @@ class j extends s.PureComponent {
                                       tag: 'h1',
                                       children: b.intl.string(b.t.obLrcH)
                                   }),
-                                  children: [(0, i.jsx)(_.oQ, {}), (0, i.jsx)(h.Z, { locale: r })]
+                                  children: [(0, i.jsx)(x.oQ, {}), (0, i.jsx)(g.Z, { locale: r })]
                               })
                           })
                       }),

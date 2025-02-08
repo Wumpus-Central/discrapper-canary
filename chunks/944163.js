@@ -1,13 +1,13 @@
 t.d(n, {
-    Z: () => p,
+    Z: () => x,
     t: () => u
 });
-var o,
-    r,
+var r,
+    o,
     i,
-    a = t(392711),
-    l = t.n(a),
-    s = t(442837),
+    s = t(392711),
+    a = t.n(s),
+    l = t(442837),
     c = t(570140),
     d = t(246364);
 let u = {
@@ -15,38 +15,38 @@ let u = {
         description: '',
         formFields: []
     },
-    _ = {};
-class m extends (i = s.ZP.Store) {
+    m = {};
+class h extends (i = l.ZP.Store) {
     get(e) {
-        if (null != e) return _[e];
+        if (null != e) return m[e];
     }
     getRulesPrompt(e) {
         var n;
-        return l().find(null === (n = _[e]) || void 0 === n ? void 0 : n.formFields, d.J);
+        return a().find(null === (n = m[e]) || void 0 === n ? void 0 : n.formFields, d.J);
     }
 }
-(r = 'MemberVerificationFormStore'),
-    (o = 'displayName') in m
-        ? Object.defineProperty(m, o, {
-              value: r,
+(o = 'MemberVerificationFormStore'),
+    (r = 'displayName') in h
+        ? Object.defineProperty(h, r, {
+              value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (m[o] = r);
-let p = new m(c.Z, {
+        : (h[r] = o);
+let x = new h(c.Z, {
     INVITE_ACCEPT_SUCCESS: function (e) {
         let { invite: n } = e,
             { member_verification_form: t } = n,
-            { guild: o } = n;
-        if (null != o && null != t) {
-            var r;
+            { guild: r } = n;
+        if (null != r && null != t) {
+            var o;
             return (
-                (_[o.id] = {
+                (m[r.id] = {
                     version: t.version,
-                    description: null !== (r = t.description) && void 0 !== r ? r : '',
+                    description: null !== (o = t.description) && void 0 !== o ? o : '',
                     formFields: t.form_fields,
-                    guild: o
+                    guild: r
                 }),
                 !0
             );
@@ -55,11 +55,11 @@ let p = new m(c.Z, {
     },
     MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
         let { form: n, guildId: t } = e;
-        if (null == n) _[t] = u;
+        if (null == n) m[t] = u;
         else {
-            var o;
-            let e = null !== (o = _[t]) && void 0 !== o ? o : u;
-            _[t] = {
+            var r;
+            let e = null !== (r = m[t]) && void 0 !== r ? r : u;
+            m[t] = {
                 ...e,
                 ...n
             };
@@ -68,10 +68,10 @@ let p = new m(c.Z, {
     MEMBER_VERIFICATION_FORM_FETCH_FAIL: function (e) {
         var n;
         let { guildId: t } = e;
-        _[t] = null !== (n = _[t]) && void 0 !== n ? n : u;
+        m[t] = null !== (n = m[t]) && void 0 !== n ? n : u;
     },
     GUILD_DELETE: function (e) {
         let { guild: n } = e;
-        delete _[null == n ? void 0 : n.id];
+        delete m[null == n ? void 0 : n.id];
     }
 });

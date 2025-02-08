@@ -14,7 +14,7 @@ function u(e) {
         {
             avatarSrc: u,
             avatarDecorationSrc: m,
-            eventHandlers: h
+            eventHandlers: g
         } = (0, r.Z)({
             user: t,
             size: s.EFr.SIZE_40,
@@ -23,7 +23,7 @@ function u(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                ...h,
+                ...g,
                 children: (0, i.jsx)(d, {
                     className: c.avatar,
                     src: u,

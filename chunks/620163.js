@@ -10,18 +10,18 @@ var s = n(990547),
     d = n(37234),
     u = n(809206),
     m = n(230711),
-    h = n(493544),
-    g = n(579806),
-    _ = n(782568),
-    x = n(758182),
+    g = n(493544),
+    h = n(579806),
+    x = n(782568),
+    _ = n(758182),
     p = n(163379),
     E = n(703288),
     C = n(574755),
     f = n(377171),
     T = n(540059),
     N = n(621628),
-    S = n(18438),
-    I = n(778825),
+    I = n(18438),
+    S = n(778825),
     b = n(665166),
     v = n(529578),
     j = n(351780),
@@ -64,18 +64,18 @@ var s = n(990547),
     ed = n(956699),
     eu = n(54942),
     em = n(293389),
-    eh = n(88624),
-    eg = n(387747),
-    e_ = n(389650),
-    ex = n(649157),
+    eg = n(88624),
+    eh = n(387747),
+    ex = n(389650),
+    e_ = n(649157),
     ep = n(593648),
     eE = n(327885),
     eC = n(595242),
     ef = n(463153),
     eT = n(36192),
     eN = n(889029),
-    eS = n(400287),
-    eI = n(554042),
+    eI = n(400287),
+    eS = n(554042),
     eb = n(936982),
     ev = n(200645),
     ej = n(287490),
@@ -97,7 +97,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
         let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eG, impressionSource: eF, numOfPendingFamilyRequests: eH, isOverlaySupported: ez, isClipsBetaTagShowing: eY = !1, shouldMergeGameSettings: eW, isKeywordFilteringEnabled: eK, isStaff: eq, isInappropriateConversationWarningEnabled: eX, isInapproprateConversationsDefaultOn: eJ, paymentsBlocked: eQ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e6, developerMode: e3, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e8, hypeSquadRemoved: e7, stealthRemediationEnabled: e9, hasIgnoredUsers: e5, hasBlockedUsers: te, isAllowGameFriendDMsVisible: tt, useRefreshedVoiceAndVideo: tn, hasRedesignedActivitySharing: ti } = e;
         return Object.freeze({
             [eZ.s6.SEARCH_NO_RESULTS]: {
-                section: h.ID.CUSTOM,
+                section: g.ID.CUSTOM,
                 element: ef.Z
             },
             [eZ.s6.ACCOUNT_SECURITY_TAB]: {
@@ -229,19 +229,19 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
             },
             [eZ.s6.PROFILE_CUSTOMIZATION]: {
                 section: ek.oAB.PROFILE_CUSTOMIZATION,
-                type: h.bT.WIDE,
+                type: g.bT.WIDE,
                 searchableTitles: [eM.intl.string(eM.t['vi7f+v'])],
                 label: eM.intl.string(eM.t['vi7f+v']),
                 ariaLabel: eM.intl.string(eM.t['vi7f+v']),
                 element: P.Z,
                 newIndicator: (0, i.jsx)(a.lBU, { text: eM.intl.string(eM.t.y2b7CA) }),
                 notice: {
-                    stores: [w.Z, I.Z],
+                    stores: [w.Z, S.Z],
                     element: R.Z
                 },
                 onSettingsClose: () => {
                     o.Z.wait(() => {
-                        (0, S.It)(), (0, u.P6)(), m.Z.clearSubsection(ek.oAB.PROFILE_CUSTOMIZATION);
+                        (0, I.It)(), (0, u.P6)(), m.Z.clearSubsection(ek.oAB.PROFILE_CUSTOMIZATION);
                     });
                 }
             },
@@ -540,7 +540,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ek.oAB.INVENTORY,
                 searchableTitles: [eM.intl.string(eM.t['jcSP+v'])],
                 label: eM.intl.string(eM.t['jcSP+v']),
-                element: eg.Z,
+                element: eh.Z,
                 ariaLabel: eM.intl.string(eM.t['jcSP+v']),
                 badgeCount: t
             },
@@ -1027,7 +1027,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ek.oAB.VOICE,
                 searchableTitles: [eM.intl.string(eM.t['726JHB'])],
                 parent: eZ.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => F.isPlatformEmbedded && M.Z.supports(eB.AN.DEBUG_LOGGING) && null != g.Z.fileManager.readLogFiles
+                predicate: () => F.isPlatformEmbedded && M.Z.supports(eB.AN.DEBUG_LOGGING) && null != h.Z.fileManager.readLogFiles
             },
             [eZ.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS]: {
                 section: ek.oAB.VOICE,
@@ -1052,7 +1052,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eM.intl.string(eM.t['/VQax8'])],
                 label: eM.intl.string(eM.t['/VQax8']),
                 ariaLabel: eM.intl.string(eM.t['/VQax8']),
-                element: eS.Z
+                element: eI.Z
             },
             [eZ.s6.CHAT_INLINE_MEDIA]: {
                 section: ek.oAB.TEXT,
@@ -1280,13 +1280,13 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ek.oAB.KEYBINDS,
                 searchableTitles: [eM.intl.string(eM.t.T9DA2N)],
                 label: eM.intl.string(eM.t.T9DA2N),
-                element: e_.Z
+                element: ex.Z
             },
             [eZ.s6.LANGUAGE]: {
                 section: ek.oAB.LOCALE,
                 searchableTitles: [eM.intl.string(eM.t.IHMsPj)],
                 label: eM.intl.string(eM.t.IHMsPj),
-                element: ex.Z
+                element: e_.Z
             },
             [eZ.s6.WINDOW_SETTINGS]: {
                 section: ek.oAB.WINDOWS,
@@ -1345,7 +1345,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eZ.s6.STREAMER_MODE,
                 predicate: () => {
                     var e, t, n;
-                    return null !== (n = null === g.Z || void 0 === g.Z ? void 0 : null === (t = g.Z.window) || void 0 === t ? void 0 : null === (e = t.supportsContentProtection) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n && n;
+                    return null !== (n = null === h.Z || void 0 === h.Z ? void 0 : null === (t = h.Z.window) || void 0 === t ? void 0 : null === (e = t.supportsContentProtection) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n && n;
                 }
             },
             [eZ.s6.SETTINGS_ADVANCED]: {
@@ -1441,7 +1441,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                             href: e,
                             shouldConfirm: !0,
                             onConfirm: () => {
-                                V.default.track(ek.rMx.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, _.Z)(e);
+                                V.default.track(ek.rMx.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, x.Z)(e);
                             }
                         });
                 },
@@ -1453,7 +1453,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ek.oAB.HYPESQUAD_ONLINE,
                 searchableTitles: [eM.intl.string(eM.t['k0R+4e'])],
                 label: eM.intl.string(eM.t['k0R+4e']),
-                element: eh.Z,
+                element: eg.Z,
                 predicate: () => !e7
             },
             [eZ.s6.TOWNHALL]: {
@@ -1462,7 +1462,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 label: eM.intl.string(eM.t.dnZNER),
                 predicate: () => e7,
                 onClick: () => {
-                    (0, _.Z)('https://discord.gg/discord-townhall'), (0, d.xf)();
+                    (0, x.Z)('https://discord.gg/discord-townhall'), (0, d.xf)();
                 }
             },
             [eZ.s6.EXPERIMENTS]: {
@@ -1604,7 +1604,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ek.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Clear Caches'],
                 parent: eZ.s6.DEVELOPER_OPTIONS,
-                predicate: () => x.q && L.Z.isDeveloper
+                predicate: () => _.q && L.Z.isDeveloper
             },
             [eZ.s6.DEVELOPER_OPTIONS_CRASHES]: {
                 section: ek.oAB.DEVELOPER_OPTIONS,
@@ -1682,7 +1682,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ek.oAB.TEXT_PLAYGROUND,
                 searchableTitles: ['Text Playground'],
                 label: 'Text Playground',
-                element: eI.Z,
+                element: eS.Z,
                 predicate: () => (0, Q.D)() || L.Z.isDeveloper
             },
             [eZ.s6.DESIGN_SYSTEMS]: {
@@ -1774,11 +1774,11 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 })
             },
             [eZ.s6.SOCIAL_LINKS]: {
-                section: h.ID.CUSTOM,
+                section: g.ID.CUSTOM,
                 element: X.Z
             },
             [eZ.s6.CLIENT_DEBUG_INFO]: {
-                section: h.ID.CUSTOM,
+                section: g.ID.CUSTOM,
                 element: Y.Z
             }
         });

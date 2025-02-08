@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(497321),
     u = n(100527),
     m = n(367907),
-    h = n(906732),
-    g = n(296810),
-    _ = n(921813),
-    x = n(621853),
+    g = n(906732),
+    h = n(296810),
+    x = n(921813),
+    _ = n(621853),
     p = n(246946),
     E = n(594174),
     C = n(63063),
     f = n(74538),
     T = n(18438),
     N = n(778825),
-    S = n(856607),
-    I = n(594496),
+    I = n(856607),
+    S = n(594496),
     b = n(856768),
     v = n(981631),
     j = n(388032);
@@ -39,12 +39,12 @@ function A(e) {
 }
 function O(e) {
     let { selectedGuild: t } = e,
-        { analyticsLocations: n } = (0, h.ZP)(u.Z.GUILD_PROFILE),
+        { analyticsLocations: n } = (0, g.ZP)(u.Z.GUILD_PROFILE),
         r = (0, a.e7)([E.default], () => {
             let e = E.default.getCurrentUser();
             return l()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
-        O = (0, a.e7)([x.Z], () => !x.Z.isFetchingProfile(r.id, null == t ? void 0 : t.id)),
+        O = (0, a.e7)([_.Z], () => !_.Z.isFetchingProfile(r.id, null == t ? void 0 : t.id)),
         R = (0, a.e7)([p.Z], () => p.Z.hidePersonalInformation),
         { source: P, ...D } = (0, a.cj)([N.Z], () => ({
             ...N.Z.getAllPending(),
@@ -62,7 +62,7 @@ function O(e) {
     R)
         ? (0, i.jsx)(d.Z, {})
         : O
-          ? (0, i.jsxs)(h.Gt, {
+          ? (0, i.jsxs)(g.Gt, {
                 value: n,
                 children: [
                     (0, i.jsx)(o.Text, {
@@ -78,20 +78,20 @@ function O(e) {
                                           null != e && (0, T.HP)(e);
                                       }
                                   }),
-                                  (0, i.jsx)(g.Z, {
+                                  (0, i.jsx)(h.Z, {
                                       previewTitle: j.intl.formatToPlainString(j.t.Tc0slJ, { guildName: null == t ? void 0 : t.name }),
-                                      profilePreview: (0, i.jsx)(_.Z, {
+                                      profilePreview: (0, i.jsx)(x.Z, {
                                           user: r,
                                           guild: t,
                                           canUsePremiumCustomization: f.ZP.canUsePremiumProfileCustomization(r),
                                           onUpsellClick: A,
                                           ...D
                                       }),
-                                      children: (0, i.jsx)(I.Z, {})
+                                      children: (0, i.jsx)(S.Z, {})
                                   })
                               ]
                           })
-                        : (0, i.jsx)(S.Z, {})
+                        : (0, i.jsx)(I.Z, {})
                 ]
             })
           : (0, i.jsx)(o.$jN, {});

@@ -1,15 +1,15 @@
 n.d(t, { Z: () => x }), n(47120);
 var a = n(200651),
-    l = n(192379),
-    r = n(442837),
+    r = n(192379),
+    l = n(442837),
     i = n(481060),
     o = n(570140),
     s = n(178635),
     c = n(115470),
     d = n(511010),
     u = n(246992),
-    m = n(719);
-let h = [
+    h = n(719);
+let m = [
     {
         label: 'second(s)',
         value: 1000
@@ -28,11 +28,11 @@ let h = [
     }
 ];
 function x() {
-    let [e, t] = l.useState(null),
-        [n, x] = l.useState(0),
-        [p, f] = l.useState(1000),
-        [_, b] = l.useState(0),
-        g = (0, r.e7)([c.Z], () => {
+    let [e, t] = r.useState(null),
+        [n, x] = r.useState(0),
+        [_, p] = r.useState(1000),
+        [f, b] = r.useState(0),
+        g = (0, l.e7)([c.Z], () => {
             var t;
             return null === e ? null : null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : s.R[e];
         }),
@@ -40,13 +40,13 @@ function x() {
             label: e,
             value: e
         })),
-        j = l.useMemo(() => null != e && _ >= 0 && _ <= 100 && n >= 0, [e, _, n]);
+        j = r.useMemo(() => null != e && f >= 0 && f <= 100 && n >= 0, [e, f, n]);
     return (0, a.jsxs)('div', {
-        className: m.container,
+        className: h.container,
         children: [
             (0, a.jsx)(i.hjN, {
                 title: 'Feedback Survey',
-                className: m.formElement,
+                className: h.formElement,
                 tag: i.RB0.H3,
                 children: (0, a.jsx)(i.q4e, {
                     options: v,
@@ -60,14 +60,14 @@ function x() {
             }),
             (0, a.jsxs)(i.hjN, {
                 title: 'Override Survey Cooldown',
-                className: m.formElement,
+                className: h.formElement,
                 tag: i.RB0.H3,
                 children: [
                     null != g &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(d.Z, {
-                                    className: m.formDividerTitle,
+                                    className: h.formDividerTitle,
                                     children: (0, a.jsx)(i.Text, {
                                         variant: 'text-sm/semibold',
                                         children: 'Current cooldown'
@@ -92,14 +92,14 @@ function x() {
                             ]
                         }),
                     (0, a.jsx)(d.Z, {
-                        className: m.formDividerTitle,
+                        className: h.formDividerTitle,
                         children: (0, a.jsx)(i.Text, {
                             variant: 'text-sm/semibold',
                             children: 'Override cooldown'
                         })
                     }),
                     (0, a.jsxs)('div', {
-                        className: m.formRow,
+                        className: h.formRow,
                         children: [
                             (0, a.jsx)(i.oil, {
                                 min: 0,
@@ -109,10 +109,10 @@ function x() {
                                 onChange: (e) => x(parseFloat(e))
                             }),
                             (0, a.jsx)(i.q4e, {
-                                options: h,
-                                value: p,
+                                options: m,
+                                value: _,
                                 onChange: (e) => {
-                                    f(e);
+                                    p(e);
                                 },
                                 popoutLayerContext: u.O$
                             })
@@ -122,14 +122,14 @@ function x() {
             }),
             (0, a.jsxs)(i.hjN, {
                 title: 'Override Survey Chance',
-                className: m.formElement,
+                className: h.formElement,
                 tag: i.RB0.H3,
                 children: [
                     null != g &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(d.Z, {
-                                    className: m.formDividerTitle,
+                                    className: h.formDividerTitle,
                                     children: (0, a.jsx)(i.Text, {
                                         variant: 'text-sm/semibold',
                                         children: 'Current chance'
@@ -142,19 +142,19 @@ function x() {
                             ]
                         }),
                     (0, a.jsx)(d.Z, {
-                        className: m.formDividerTitle,
+                        className: h.formDividerTitle,
                         children: (0, a.jsx)(i.Text, {
                             variant: 'text-sm/semibold',
                             children: 'Override chance'
                         })
                     }),
                     (0, a.jsxs)('div', {
-                        className: m.formRow,
+                        className: h.formRow,
                         children: [
                             (0, a.jsx)(i.oil, {
                                 min: 0,
                                 max: 100,
-                                value: _.toString(),
+                                value: f.toString(),
                                 type: 'number',
                                 onChange: (e) => b(parseFloat(e))
                             }),
@@ -167,15 +167,15 @@ function x() {
                 ]
             }),
             (0, a.jsxs)('div', {
-                className: m.formRow,
+                className: h.formRow,
                 children: [
                     (0, a.jsx)(i.zxk, {
                         onClick: () =>
                             void o.Z.dispatch({
                                 type: 'FEEDBACK_OVERRIDE_SET',
                                 feedbackType: e,
-                                cooldown: n * p,
-                                chance: _ / 100
+                                cooldown: n * _,
+                                chance: f / 100
                             }),
                         disabled: !j,
                         children: 'Update'
@@ -203,7 +203,7 @@ function x() {
                     color: 'text-danger',
                     children: 'Error: cooldown needs to be a number greater than 0'
                 }),
-            !(_ >= 0 && _ <= 100) &&
+            !(f >= 0 && f <= 100) &&
                 (0, a.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-danger',

@@ -12,7 +12,7 @@ var a = n(200651),
     u = n(599857),
     f = n(981631);
 let v = (e) => {
-    let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: v, onRender: m, onVerify: y, onError: C, onOpen: E, onClose: _, onChalExpired: b, size: R, userflow: x, ...g } = e,
+    let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: v, onRender: m, onVerify: y, onError: C, onOpen: E, onClose: b, onChalExpired: _, size: R, userflow: x, ...g } = e,
         w = r.useRef(null),
         A = (0, o.Z)(),
         [k, S] = r.useState(!1),
@@ -67,11 +67,11 @@ let v = (e) => {
             j('open'), I('open'), (0, h.emitCaptchaDistributionMetric)(x), null == E || E();
         }, [I, E, j, x]),
         Z = r.useCallback(() => {
-            j('close'), null == _ || _(), N();
-        }, [_, j, N]),
+            j('close'), null == b || b(), N();
+        }, [b, j, N]),
         D = r.useCallback(() => {
-            j('chal-expire'), null == b || b();
-        }, [b, j]);
+            j('chal-expire'), null == _ || _();
+        }, [_, j]);
     return ((null == n || '' === n) && (n = f.OL7), t === p.hP.RECAPTCHA)
         ? (0, a.jsx)(c.Z, {
               ...g,

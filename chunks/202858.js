@@ -1,6 +1,6 @@
 n.d(t, {
-    Yn: () => h,
-    ZP: () => g
+    Yn: () => g,
+    ZP: () => h
 }),
     n(411104),
     n(47120);
@@ -41,7 +41,7 @@ function m(e, t) {
         });
     });
 }
-function h() {
+function g() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return new Promise((t) => {
         (0, l.ZDy)(
@@ -60,7 +60,7 @@ function h() {
         );
     });
 }
-let g = {
+let h = {
     enableMFA: async function () {
         let e = await new Promise((e, t) => {
             (0, l.ZDy)(async () => {
@@ -93,6 +93,6 @@ let g = {
             });
             await m(e, null == t ? void 0 : t.token);
         } else await m(e);
-        await h();
+        await g();
     }
 };

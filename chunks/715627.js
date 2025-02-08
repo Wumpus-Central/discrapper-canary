@@ -1,4 +1,4 @@
-o.d(e, { Z: () => f }), o(47120);
+o.d(t, { Z: () => f }), o(47120);
 var i = o(200651),
     n = o(192379),
     a = o(119617),
@@ -10,9 +10,9 @@ let u = {
         yMin: -40,
         yMax: -70
     },
-    s = (t, e, o) => (null == o ? e : (t * o) / 100),
-    f = n.memo(function (t) {
-        let { confettiTarget: e, colors: o, emojiURL: f, numBursts: c, particlesPerBurst: d, offsetXPercentageMax: _, offsetXPercentageMin: m, offsetYPercentageMax: p, offsetYPercentageMin: h, customConfettiCanvas: x, speedValues: y = u, dragCoefficientValue: v = 1.66, onAnimationEnd: g } = t,
+    s = (e, t, o) => (null == o ? t : (e * o) / 100),
+    f = n.memo(function (e) {
+        let { confettiTarget: t, colors: o, emojiURL: f, numBursts: c, particlesPerBurst: d, offsetXPercentageMax: _, offsetXPercentageMin: m, offsetYPercentageMax: p, offsetYPercentageMin: h, customConfettiCanvas: x, speedValues: y = u, dragCoefficientValue: v = 1.66, onAnimationEnd: g } = e,
             [w, b] = n.useState(null),
             { confettiCanvas: C } = n.useContext(l.h),
             G = (0, a.uR)(null != x ? x : C, w),
@@ -31,31 +31,31 @@ let u = {
         }, [f]);
         return (
             n.useEffect(() => {
-                if (null == e) return;
-                let t = Array(null != c ? c : 4).fill(0);
+                if (null == t) return;
+                let e = Array(null != c ? c : 4).fill(0);
                 return (
-                    (t = t.map((o, i) =>
+                    (e = e.map((o, i) =>
                         setTimeout(() => {
                             G.createMultipleConfetti(
-                                (function (t, e, o, i, n) {
+                                (function (e, t, o, i, n) {
                                     let a = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : u,
                                         l = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
-                                        f = s(t.width, 100, o),
-                                        c = s(t.height, 75, n),
-                                        d = s(t.width, 350, e),
-                                        _ = s(t.height, 75, i),
+                                        f = s(e.width, 100, o),
+                                        c = s(e.height, 75, n),
+                                        d = s(e.width, 350, t),
+                                        _ = s(e.height, 75, i),
                                         { xMin: m, xMax: p, yMin: h, yMax: x } = a;
                                     return {
                                         ...r.We,
                                         position: {
                                             type: 'static-random',
                                             minValue: {
-                                                x: t.left + f,
-                                                y: t.top + c
+                                                x: e.left + f,
+                                                y: e.top + c
                                             },
                                             maxValue: {
-                                                x: t.left + d,
-                                                y: t.top + _
+                                                x: e.left + d,
+                                                y: e.top + _
                                             }
                                         },
                                         velocity: {
@@ -79,17 +79,17 @@ let u = {
                                             value: l
                                         }
                                     };
-                                })(e.getBoundingClientRect(), _, m, p, h, y, v),
+                                })(t.getBoundingClientRect(), _, m, p, h, y, v),
                                 null != d ? d : 50
                             ),
-                                i === t.length - 1 && null != g && k(!0);
+                                i === e.length - 1 && null != g && k(!0);
                         }, 60 * i)
                     )),
                     () => {
-                        for (let e of t) clearTimeout(e);
+                        for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [G, e, c, d, _, m, p, h, y, v, g]),
+            }, [G, t, c, d, _, m, p, h, y, v, g]),
             (0, i.jsx)(a.Ji, {
                 ref: b,
                 sprites: null != P ? P : r.CA,

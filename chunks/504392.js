@@ -1,4 +1,4 @@
-i.r(n), i.d(n, { default: () => v });
+i.r(e), i.d(e, { default: () => v });
 var t = i(200651);
 i(192379);
 var r = i(481060),
@@ -11,8 +11,8 @@ var r = i(481060),
     u = i(291775),
     x = i(388032),
     m = i(77598);
-function v(e) {
-    let { guildId: n } = e;
+function v(n) {
+    let { guildId: e } = n;
     return (0, t.jsxs)('div', {
         className: m.container,
         children: [
@@ -50,14 +50,14 @@ function v(e) {
                             }),
                             (0, t.jsx)('div', {
                                 className: m.powerupContainer,
-                                children: d.O.map((e) =>
+                                children: d.O.map((n) =>
                                     (0, t.jsx)(
                                         o.Z,
                                         {
-                                            powerup: e,
+                                            powerup: n,
                                             onClick: () => {}
                                         },
-                                        'powerup-'.concat(e.skuId)
+                                        'powerup-'.concat(n.skuId)
                                     )
                                 )
                             })
@@ -65,7 +65,7 @@ function v(e) {
                     }),
                     (0, t.jsxs)('div', {
                         className: m.sidebarContainer,
-                        children: [(0, t.jsx)(c.Z, {}), (0, t.jsx)(l.Z, { guildId: n })]
+                        children: [(0, t.jsx)(c.Z, {}), (0, t.jsx)(l.Z, { guildId: e })]
                     })
                 ]
             })

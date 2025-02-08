@@ -117,7 +117,7 @@ function eP() {
         automaticGainControl: !0,
         noiseCancellation: !0,
         mostRecentlyRequestedVoiceFilter: null,
-        voiceFilterLoopbackEnabled: !1,
+        voiceFilterPlaybackEnabled: !0,
         experimentalEncoders: !1,
         hardwareH264: !0,
         hardwareEnabledVersion: 0,
@@ -1174,7 +1174,7 @@ function nD() {
 }
 function nx(e) {
     let { enabled: t } = e;
-    tC({ voiceFilterLoopbackEnabled: t });
+    tC({ voiceFilterPlaybackEnabled: t });
 }
 function nL(e) {
     let { newVoiceFilterId: t } = e;
@@ -1586,8 +1586,8 @@ class n6 extends (o = h.ZP.Store) {
     getMostRecentlyRequestedVoiceFilter() {
         return t_().mostRecentlyRequestedVoiceFilter;
     }
-    getVoiceFilterLoopbackEnabled() {
-        return t_().voiceFilterLoopbackEnabled;
+    getVoiceFilterPlaybackEnabled() {
+        return t_().voiceFilterPlaybackEnabled;
     }
     getShortcuts() {
         let e = {};

@@ -17,13 +17,13 @@ var i = n(200651),
     E = n(377171),
     I = n(633302),
     C = n(153066),
-    v = n(335131),
-    N = n(67696),
+    N = n(335131),
+    v = n(67696),
     T = n(744112),
     S = n(267097),
     Z = n(364111),
-    x = n(81136),
-    A = n(141594),
+    A = n(81136),
+    x = n(141594),
     b = n(302800),
     L = n(215023),
     y = n(981631),
@@ -38,7 +38,7 @@ let R = (e) => {
         });
     },
     j = () => {
-        let { noCache: e, includeUnpublished: t } = (0, x.Z)();
+        let { noCache: e, includeUnpublished: t } = (0, A.Z)();
         return (
             (0, Z.E)(L.AW.HOME, {
                 noCache: e,
@@ -53,11 +53,11 @@ let R = (e) => {
             m = (0, s.JA)('shop'),
             p = g.Z.HOME_PAGE_SHOP_TAB,
             { analyticsLocations: f } = (0, _.ZP)(p),
-            E = (0, N.n)('ShopLinkButton'),
+            E = (0, v.n)('ShopLinkButton'),
             [I, C] = l.useState(!1),
             T = l.useCallback(() => {
                 E && C(!0),
-                    (0, v.Sm)({
+                    (0, N.Sm)({
                         analyticsSource: p,
                         analyticsLocations: f
                     });
@@ -128,31 +128,31 @@ let R = (e) => {
         });
     }),
     k = (e) => {
-        var t, n, r, s, u, h, g, _, f, E, I, v;
-        let N, T;
-        let { selected: S, locationState: Z, displayOptions: x } = e,
-            A = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
+        var t, n, r, s, u, h, g, _, f, E, I, N;
+        let v, T;
+        let { selected: S, locationState: Z, displayOptions: A } = e,
+            x = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
             [b, L] = l.useState(0),
             [y, j] = l.useState(!1),
             w = (0, m.ZP)(),
-            k = x.entrypointDecorationAssets,
+            k = A.entrypointDecorationAssets,
             U = (0, c.wj)(w);
-        y ? (U ? ((N = null === (t = x.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (T = null === (r = x.entrypointBackgroundStyle) || void 0 === r ? void 0 : null === (n = r.hovered) || void 0 === n ? void 0 : n.dark)) : ((N = null === (s = x.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (T = null === (h = x.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((N = null === (g = x.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (T = null === (f = x.entrypointBackgroundStyle) || void 0 === f ? void 0 : null === (_ = f.resting) || void 0 === _ ? void 0 : _.dark)) : ((N = null === (E = x.entryPointBackgroundAssets) || void 0 === E ? void 0 : E.srcLight), (T = null === (v = x.entrypointBackgroundStyle) || void 0 === v ? void 0 : null === (I = v.resting) || void 0 === I ? void 0 : I.light));
+        y ? (U ? ((v = null === (t = A.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (T = null === (r = A.entrypointBackgroundStyle) || void 0 === r ? void 0 : null === (n = r.hovered) || void 0 === n ? void 0 : n.dark)) : ((v = null === (s = A.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (T = null === (h = A.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((v = null === (g = A.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (T = null === (f = A.entrypointBackgroundStyle) || void 0 === f ? void 0 : null === (_ = f.resting) || void 0 === _ ? void 0 : _.dark)) : ((v = null === (E = A.entryPointBackgroundAssets) || void 0 === E ? void 0 : E.srcLight), (T = null === (N = A.entrypointBackgroundStyle) || void 0 === N ? void 0 : null === (I = N.resting) || void 0 === I ? void 0 : I.light));
         let G = l.useCallback(
                 (e) => {
-                    L((e) => (e + 1) % x.assetIds.length), j(!0), null == e || e();
+                    L((e) => (e + 1) % A.assetIds.length), j(!0), null == e || e();
                 },
-                [x.assetIds.length]
+                [A.assetIds.length]
             ),
             B = l.useCallback((e) => {
                 j(!1), null == e || e();
             }, []),
-            V = x.title();
+            V = A.title();
         return (0, i.jsx)(d.ua7, {
             text: (0, i.jsx)(M, {
-                displayOptions: x,
-                assetId: x.assetIds[b],
-                reducedMotion: A
+                displayOptions: A,
+                assetId: A.assetIds[b],
+                reducedMotion: x
             }),
             tooltipClassName: O.marketingBadgeTooltip,
             position: 'right',
@@ -162,10 +162,10 @@ let R = (e) => {
             'aria-label': 'string' == typeof V ? V : P.intl.string(P.t.rSXaxc),
             children: (e) =>
                 (0, i.jsxs)(D, {
-                    className: null != x.entryPointClassName ? (0, C.l)(O, x.entryPointClassName) : void 0,
+                    className: null != A.entryPointClassName ? (0, C.l)(O, A.entryPointClassName) : void 0,
                     selected: S,
                     locationState: Z,
-                    icon: x.entryPointIcon,
+                    icon: A.entryPointIcon,
                     ...e,
                     onMouseEnter: () => G(e.onMouseEnter),
                     onMouseLeave: () => B(e.onMouseLeave),
@@ -174,23 +174,23 @@ let R = (e) => {
                             className: O.marketingButtonBackground,
                             style: { background: T },
                             children:
-                                null != N &&
+                                null != v &&
                                 (0, i.jsx)('img', {
-                                    src: N,
+                                    src: v,
                                     className: O.marketingButtonBackgroundImage,
                                     alt: '',
                                     'aria-hidden': !0
                                 })
                         }),
                         null != k &&
-                            !A &&
+                            !x &&
                             (0, i.jsx)('img', {
                                 src: (0, c.wj)(w) ? k.srcDark : k.srcLight,
                                 className: a()(O.marketingButtonImage, { [O.marketingButtonImageHovered]: y }),
                                 alt: '',
                                 'aria-hidden': !0
                             }),
-                        (0, i.jsx)(R, { color: x.badgeColor })
+                        (0, i.jsx)(R, { color: A.badgeColor })
                     ]
                 })
         });
@@ -225,7 +225,7 @@ let R = (e) => {
     G = () => ((0, S.Z)(), null),
     B = (e) => {
         let { selected: t, locationState: n } = e,
-            { collectiblesShopTabNewBadgeDisplayOptions: l } = (0, A.Z)(),
+            { collectiblesShopTabNewBadgeDisplayOptions: l } = (0, x.Z)(),
             r = (0, T.b)('Collectibles Shop Button');
         if (null != l)
             switch (l.type) {

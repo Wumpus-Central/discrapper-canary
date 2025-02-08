@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var i = n(200651),
     r = n(192379),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     o = n(388905),
     s = n(409059),
     c = n(962220),
@@ -11,13 +11,13 @@ var i = n(200651),
     h = n(314897),
     _ = n(626135),
     g = n(587444),
-    p = n(981631),
-    m = n(58346),
+    m = n(981631),
+    p = n(58346),
     f = n(388032),
-    x = n(232186);
-function E(e, t, n) {
+    E = n(232186);
+function x(e, t, n) {
     e.preventDefault(),
-        _.default.track(p.rMx.GUILD_TEMPLATE_APP_OPENED, {
+        _.default.track(m.rMx.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
             guild_template_name: n.name,
             guild_template_description: n.description,
@@ -25,17 +25,17 @@ function E(e, t, n) {
         });
     let i = h.default.getFingerprint(),
         r = null != i ? i : h.default.getId();
-    c.Z.openMobileApp(n.state === m.Rj.RESOLVED ? t : void 0, r);
+    c.Z.openMobileApp(n.state === p.Rj.RESOLVED ? t : void 0, r);
 }
 function I(e) {
     let { code: t } = e,
-        n = (0, l.e7)([s.Z], () => s.Z.getGuildTemplate(t));
+        n = (0, a.e7)([s.Z], () => s.Z.getGuildTemplate(t));
     return (r.useEffect(() => {
         (0, u.e)('guild_template_mobile');
     }, []),
-    null == n || n.state === m.Rj.RESOLVING)
-        ? (0, i.jsx)(o.ZP, { children: (0, i.jsx)(a.$jN, {}) })
-        : n.state === m.Rj.RESOLVED
+    null == n || n.state === p.Rj.RESOLVING)
+        ? (0, i.jsx)(o.ZP, { children: (0, i.jsx)(l.$jN, {}) })
+        : n.state === p.Rj.RESOLVED
           ? (0, i.jsxs)(o.ZP, {
                 children: [
                     (0, i.jsx)(d.Z, {
@@ -43,8 +43,8 @@ function I(e) {
                         tall: !0
                     }),
                     (0, i.jsx)(o.zx, {
-                        onClick: (e) => E(e, t, n),
-                        className: x.marginTop20,
+                        onClick: (e) => x(e, t, n),
+                        className: E.marginTop20,
                         children: f.intl.string(f.t['a3Gl+f'])
                     })
                 ]
@@ -52,7 +52,7 @@ function I(e) {
           : (0, i.jsx)(g.Z, {
                 text: f.intl.string(f.t['e/rZ2t']),
                 buttonCta: f.intl.string(f.t.HAvYn5),
-                onClick: (e) => E(e, t, n)
+                onClick: (e) => x(e, t, n)
             });
 }
-l.ZP.initialize();
+a.ZP.initialize();

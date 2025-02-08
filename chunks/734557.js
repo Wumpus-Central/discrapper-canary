@@ -7,8 +7,8 @@ function s(e) {
     let [t, l] = n.useState(o.has(e) ? Array.from(o.get(e)) : []),
         [s, r] = n.useState(!1),
         c = n.useMemo(() => t.map((e) => e.code), [t]),
-        C = n.useMemo(() => t.reduce((e, t) => ((e[t.code] = t), e), {}), [t]),
-        d = n.useCallback(async () => {
+        d = n.useMemo(() => t.reduce((e, t) => ((e[t.code] = t), e), {}), [t]),
+        C = n.useCallback(async () => {
             r(!0);
             let t = (
                 await a.tn.get({
@@ -20,12 +20,12 @@ function s(e) {
         }, [e]);
     return (
         n.useEffect(() => {
-            d();
-        }, [e, d]),
+            C();
+        }, [e, C]),
         {
             invitesRaw: t,
             inviteCodes: c,
-            invitesByCode: C,
+            invitesByCode: d,
             loading: s
         }
     );

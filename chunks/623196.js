@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(594174),
     u = n(63063),
     m = n(88658),
-    h = n(398826),
-    g = n(575356),
-    _ = n(838436),
-    x = n(726985),
+    g = n(398826),
+    h = n(575356),
+    x = n(838436),
+    _ = n(726985),
     p = n(981631),
     E = n(388032),
     C = n(565696);
@@ -28,15 +28,15 @@ let f = (e) => {
 };
 function T() {
     let e = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        { currentHarvestType: t, awaitingInitialRequest: n } = (0, a.cj)([g.Z], () => ({
-            currentHarvestType: g.Z.harvestType,
-            awaitingInitialRequest: g.Z.requestingHarvest
+        { currentHarvestType: t, awaitingInitialRequest: n } = (0, a.cj)([h.Z], () => ({
+            currentHarvestType: h.Z.harvestType,
+            awaitingInitialRequest: h.Z.requestingHarvest
         })),
         [r, T] = s.useState(!1);
     if (null == e) return null;
     let N = (0, m.$6)(t, e) || n,
-        S = null != t && l()().diff(l()(t.created_at), 'days') < p.eBq,
-        I = N && S,
+        I = null != t && l()().diff(l()(t.created_at), 'days') < p.eBq,
+        S = N && I,
         b = () => {
             f({
                 header: E.intl.string(E.t.jxXMEx),
@@ -46,7 +46,7 @@ function T() {
                 confirmButtonColor: o.zxk.Colors.BRAND,
                 onConfirm: (e) => {
                     T(!0),
-                        (0, h.h)(e)
+                        (0, g.h)(e)
                             .then(
                                 (e) => {
                                     null != e && null != e.body
@@ -66,14 +66,14 @@ function T() {
                 }
             });
         };
-    return (0, i.jsxs)(_.U, {
-        setting: x.s6.PRIVACY_DATA_REQUEST_V2,
+    return (0, i.jsxs)(x.U, {
+        setting: _.s6.PRIVACY_DATA_REQUEST_V2,
         children: [
-            (0, i.jsx)(_.H, {
+            (0, i.jsx)(x.H, {
                 header: E.intl.string(E.t.XAHCgI),
                 description: E.intl.format(E.t.P3kNfn, { helpdeskArticle: u.Z.getArticleURL(p.BhN.GDPR_REQUEST_DATA) })
             }),
-            I
+            S
                 ? (0, i.jsx)(o.Zbd, {
                       className: C.card,
                       children: (0, i.jsx)(o.Text, {

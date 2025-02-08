@@ -1,6 +1,6 @@
 n.d(t, {
-    Sr: () => f,
-    Xq: () => R,
+    Sr: () => R,
+    Xq: () => f,
     Zg: () => A
 }),
     n(411104);
@@ -8,8 +8,8 @@ var i = n(186070),
     l = n(185514),
     r = n(360038),
     s = n(175724),
-    o = n(705371),
-    a = n(138976),
+    a = n(705371),
+    o = n(138976),
     c = n(167042),
     d = n(239748),
     u = n(337482),
@@ -19,49 +19,49 @@ var i = n(186070),
     p = n(673553),
     I = n(280492),
     m = n(746887),
-    T = n(721383),
-    C = n(743810),
+    C = n(721383),
+    T = n(743810),
     N = n(981631),
     g = n(388032);
 function S() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t.map((e) => {
-        let t = f[e];
+        let t = R[e];
         if (null == t) throw Error('getBindsFor(...): No bind for '.concat(t));
         return t.binds[0];
     });
 }
-let f = {
+let R = {
         [N.EkH.SERVER_NEXT]: E.nq,
         [N.EkH.SERVER_PREV]: E.X3,
         [N.EkH.CHANNEL_NEXT]: l.tQ,
         [N.EkH.CHANNEL_PREV]: l.x5,
         [N.EkH.NAVIGATE_BACK]: l.Nx,
         [N.EkH.NAVIGATE_FORWARD]: l.On,
-        [N.EkH.UNREAD_NEXT]: C.pd,
-        [N.EkH.UNREAD_PREV]: C.wk,
-        [N.EkH.MENTION_CHANNEL_NEXT]: C.Nv,
-        [N.EkH.MENTION_CHANNEL_PREV]: C.uX,
+        [N.EkH.UNREAD_NEXT]: T.pd,
+        [N.EkH.UNREAD_PREV]: T.wk,
+        [N.EkH.MENTION_CHANNEL_NEXT]: T.Nv,
+        [N.EkH.MENTION_CHANNEL_PREV]: T.uX,
         [N.EkH.TOGGLE_PREVIOUS_GUILD]: l.$c,
         [N.EkH.JUMP_TO_GUILD]: r.u,
         [N.EkH.SUBMIT]: h.z,
         [N.EkH.TEXTAREA_FOCUS]: p.U,
         [N.EkH.MARK_CHANNEL_READ]: s.f,
-        [N.EkH.MARK_SERVER_READ]: o.l,
+        [N.EkH.MARK_SERVER_READ]: a.l,
         [N.EkH.TOGGLE_MUTE]: I.iN,
         [N.EkH.TOGGLE_DEAFEN]: I.oV,
         [N.EkH.TOGGLE_CATEGORY_COLLAPSED]: m.u,
         [N.EkH.SCROLL_UP]: u.B2,
         [N.EkH.SCROLL_DOWN]: u.gN,
         [N.EkH.SEARCH_EMOJIS]: _.S,
-        [N.EkH.TOGGLE_HOTKEYS]: T._,
-        [N.EkH.JUMP_TO_FIRST_UNREAD]: a.O,
+        [N.EkH.TOGGLE_HOTKEYS]: C._,
+        [N.EkH.JUMP_TO_FIRST_UNREAD]: o.O,
         [N.EkH.RETURN_TO_AUDIO_CHANNEL]: d.F,
         [N.EkH.CALL_ACCEPT]: i.IL,
         [N.EkH.CALL_START]: i.FI,
         [N.EkH.QUICKSWITCHER_SHOW]: c.$
     },
-    R = { [N.EkH.QUICKSWITCHER_SHOW]: c.$ };
+    f = { [N.EkH.QUICKSWITCHER_SHOW]: c.$ };
 function A() {
     return [
         {

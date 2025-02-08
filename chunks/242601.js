@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eN }), n(47120), n(653041);
+n.d(t, { Z: () => ev }), n(47120), n(653041);
 var i = n(200651),
     l = n(192379),
     r = n(392711),
@@ -17,13 +17,13 @@ var i = n(200651),
     E = n(100527),
     I = n(906732),
     C = n(211242),
-    v = n(785203),
-    N = n(745837),
+    N = n(785203),
+    v = n(745837),
     T = n(13228),
     S = n(540059),
     Z = n(211644),
-    x = n(605236),
-    A = n(243778),
+    A = n(605236),
+    x = n(243778),
     b = n(492162),
     L = n(818634),
     y = n(596557),
@@ -94,7 +94,7 @@ let ef = 88 + ec.pm,
             y: 0
         }
     };
-class ev extends l.PureComponent {
+class eN extends l.PureComponent {
     static getDerivedStateFromProps(e) {
         let { guild: t, hasChannelNotice: n } = e;
         return null == t || null == t.banner || n
@@ -241,11 +241,11 @@ class ev extends l.PureComponent {
     }
     renderFooter() {
         let { shouldRenderClipsEducation: e } = this.props;
-        return (0, i.jsx)(A.ZP, {
+        return (0, i.jsx)(x.ZP, {
             contentTypes: [],
             children: (t) => {
                 let { visibleContent: n } = t;
-                return e ? (0, i.jsx)(N.Z, {}) : (0, i.jsx)(i.Fragment, {});
+                return e ? (0, i.jsx)(v.Z, {}) : (0, i.jsx)(i.Fragment, {});
             }
         });
     }
@@ -309,7 +309,7 @@ class ev extends l.PureComponent {
                 let { guild: t } = this.props;
                 null != t &&
                     (0, p.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('7654'), n.e('44156'), n.e('16806'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('66593'), n.e('33213'), n.e('43954')]).then(n.bind(n, 545135));
+                        let { default: e } = await Promise.all([n.e('7654'), n.e('44156'), n.e('16806'), n.e('6850'), n.e('58227'), n.e('16114'), n.e('54408'), n.e('86369'), n.e('33213'), n.e('93318')]).then(n.bind(n, 545135));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -322,9 +322,9 @@ class ev extends l.PureComponent {
             }),
             e_(this, 'handleCloseStudentHubPrivacySettingsTooltip', () => {
                 var e;
-                let t = (0, x.un)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+                let t = (0, A.un)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
                     n = null === (e = this.props.guild) || void 0 === e ? void 0 : e.hasFeature(ed.oNc.HUB);
-                !t && n && (0, x.EW)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: eh.L.AUTO });
+                !t && n && (0, A.EW)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: eh.L.AUTO });
             }),
             e_(this, 'handleCloseSubscribeTooltip', () => {
                 this.showTimeout.stop(), this.state.shouldShowSubscribeTooltip && this.setState({ shouldShowSubscribeTooltip: !1 });
@@ -397,7 +397,7 @@ class ev extends l.PureComponent {
             });
     }
 }
-function eN(e) {
+function ev(e) {
     var t;
     let { guildId: n, hideSelectedChannel: r, selectedChannelId: s } = e,
         u = (0, c.e7)([X.Z], () => X.Z.getGuild(n));
@@ -405,7 +405,7 @@ function eN(e) {
     let m = (0, b.Z)(n),
         p = (0, c.e7)([W.Z], () => W.Z.getGuildDimensions(n).scrollTo),
         g = (0, c.e7)([ee.Z], () => ee.Z.getChannelId()),
-        [N, A, R] = (0, c.Wu)([J.Z], () => [J.Z.can(ed.Plq.MANAGE_GUILD, u), J.Z.can(ed.Plq.MANAGE_ROLES, u), J.Z.can(ed.Plq.MANAGE_THREADS, u)]),
+        [v, x, R] = (0, c.Wu)([J.Z], () => [J.Z.can(ed.Plq.MANAGE_GUILD, u), J.Z.can(ed.Plq.MANAGE_ROLES, u), J.Z.can(ed.Plq.MANAGE_THREADS, u)]),
         w = (0, c.e7)([Y.Z], () => Y.Z.isUnavailable(n)),
         U = (0, c.e7)([et.default], () => et.default.getCurrentUser()),
         B = (0, c.e7)([F.Z], () => (F.Z.darkSidebar ? ed.BRd.DARK : F.Z.theme)),
@@ -419,20 +419,20 @@ function eN(e) {
         n !== ea && er(!K);
     }, [n, ea, K]);
     let [ec, em] = (0, Z.ZP)((e) => [eu.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eh.R.GUILD_HEADER_TOOLTIPS)], o.X),
-        ep = (0, v.Z)(u),
+        ep = (0, N.Z)(u),
         eg = (0, h.s9z)(h.JQI),
         e_ = (0, c.e7)([Q.Z], () => Q.Z.hasLayers()),
         ef = (0, c.e7)([V.Z], () => V.Z.shouldShow(eI)),
-        eE = N && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
+        eE = v && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
         eC = (0, c.e7)([q.Z], () => q.Z.getMemberCount(n)),
-        eN = N && null != eC && eC >= 30 && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
-        eT = A && null != u && (u.hasFeature(ed.oNc.COMMUNITY) || (null != eC && eC > 50)),
+        ev = v && null != eC && eC >= 30 && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
+        eT = x && null != u && (u.hasFeature(ed.oNc.COMMUNITY) || (null != eC && eC > 50)),
         eS = (0, O.Z)(n),
         eZ = (null == u ? void 0 : u.hasFeature(ed.oNc.HUB)) === !0,
-        ex = N && (null == u ? void 0 : u.hasFeature(ed.oNc.DISCOVERABLE)) === !0,
-        eA = (0, C.Q)(),
-        eb = (N || (null == u ? void 0 : u.premiumTier) === ed.Eu4.NONE) && !ei.s.isDisallowPopupsSet() && !eA,
-        eL = (0, c.e7)([j.Z, Q.Z], () => null != u && null != U && N && !Q.Z.hasLayers() && j.Z.shouldShowGuildTemplateDirtyTooltip(n)),
+        eA = v && (null == u ? void 0 : u.hasFeature(ed.oNc.DISCOVERABLE)) === !0,
+        ex = (0, C.Q)(),
+        eb = (v || (null == u ? void 0 : u.premiumTier) === ed.Eu4.NONE) && !ei.s.isDisallowPopupsSet() && !ex,
+        eL = (0, c.e7)([j.Z, Q.Z], () => null != u && null != U && v && !Q.Z.hasLayers() && j.Z.shouldShowGuildTemplateDirtyTooltip(n)),
         ey = (0, c.e7)([z.Z], () => z.Z.getChannel(s)),
         { isPopoutOpen: eP } = (0, L.y)(),
         eO = null !== (t = null == u ? void 0 : u.hasFeature(ed.oNc.COMMUNITY)) && void 0 !== t && t,
@@ -441,14 +441,14 @@ function eN(e) {
         eD = el && !ej,
         ew = (0, T.Z)(U);
     (0, y.Z)(u);
-    let eM = (0, x.wE)(d.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
+    let eM = (0, A.wE)(d.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         ek = (0, M.Z)(n),
         eU = (0, P.Z)(n),
         eG = (0, c.e7)([ee.Z], () => ee.Z.getChannelId()),
         eB = (0, c.e7)([$.Z], () => $.Z.desyncedVoiceStatesCount),
         eV = k.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled,
         eH = (0, S.Q3)('GuildSidebar');
-    return (0, i.jsx)(ev, {
+    return (0, i.jsx)(eN, {
         guildId: n,
         hideSelectedChannel: r,
         guild: u,
@@ -465,9 +465,9 @@ function eN(e) {
         hasChannelNotice: null != ep || ec,
         anyLayerOpen: eg || e_,
         showGuildBoostingProgressBarUpsell: eE,
-        showGuildBoostingProgressBarSizeUpsell: eN,
+        showGuildBoostingProgressBarSizeUpsell: ev,
         showInviteSplashUpsell: eb,
-        showDiscoveryLandingPageSettingsUpsell: ex,
+        showDiscoveryLandingPageSettingsUpsell: eA,
         showGuildHeaderTutorial: ef,
         showGuildTemplateDirtyTooltip: eL,
         showRoleSubscriptionUpsell: eS,

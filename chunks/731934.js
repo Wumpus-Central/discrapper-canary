@@ -9,18 +9,18 @@ var i = n(200651),
     d = n(209613),
     u = n(82295),
     m = n(785681),
-    h = n(485664),
-    g = n(880257),
-    _ = n(631885),
-    x = n(895328),
+    g = n(485664),
+    h = n(880257),
+    x = n(631885),
+    _ = n(895328),
     p = n(568671),
     E = n(419821),
     C = n(367515),
     f = n(250285),
     T = n(292352),
     N = n(134612),
-    S = n(388032),
-    I = n(441685),
+    I = n(388032),
+    S = n(441685),
     b = n(259289),
     v = n(232186),
     j = n(926895);
@@ -55,7 +55,7 @@ function A(e) {
 }
 function O() {
     return (0, i.jsxs)('div', {
-        className: l()(b.box, I.box, b.linkingBanner, b.linkingBannerParent),
+        className: l()(b.box, S.box, b.linkingBanner, b.linkingBannerParent),
         children: [
             (0, i.jsxs)('div', {
                 className: l()(b.linkingBannerUpper),
@@ -65,20 +65,20 @@ function O() {
                             (0, i.jsx)(c.X6q, {
                                 className: v.marginBottom8,
                                 variant: 'heading-xl/medium',
-                                children: (0, i.jsx)(c.y5t, { children: S.intl.string(S.t.pHEnV1) })
+                                children: (0, i.jsx)(c.y5t, { children: I.intl.string(I.t.pHEnV1) })
                             }),
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-muted',
                                 className: v.marginBottom20,
-                                children: S.intl.string(S.t['1J/gZ2'])
+                                children: I.intl.string(I.t['1J/gZ2'])
                             })
                         ]
                     }),
                     (0, i.jsx)('img', {
                         className: b.bannerArt,
                         src: j,
-                        alt: S.intl.string(S.t['r+PDmp'])
+                        alt: I.intl.string(I.t['r+PDmp'])
                     })
                 ]
             }),
@@ -86,18 +86,18 @@ function O() {
                 className: b.steps,
                 children: [
                     (0, i.jsx)(A, {
-                        header: S.intl.string(S.t['7xxAnp']),
-                        description: S.intl.string(S.t['1M9So6']),
+                        header: I.intl.string(I.t['7xxAnp']),
+                        description: I.intl.string(I.t['1M9So6']),
                         stepNumber: 1
                     }),
                     (0, i.jsx)(A, {
-                        header: S.intl.string(S.t['AXgx+f']),
-                        description: S.intl.string(S.t.GzMFnZ),
+                        header: I.intl.string(I.t['AXgx+f']),
+                        description: I.intl.string(I.t.GzMFnZ),
                         stepNumber: 2
                     }),
                     (0, i.jsx)(A, {
-                        header: S.intl.string(S.t.MZn1tL),
-                        description: S.intl.string(S.t['8rLBxM']),
+                        header: I.intl.string(I.t.MZn1tL),
+                        description: I.intl.string(I.t['8rLBxM']),
                         stepNumber: 3
                     })
                 ]
@@ -106,22 +106,22 @@ function O() {
     });
 }
 function R() {
-    let e = (0, _.VM)();
+    let e = (0, x.VM)();
     return (0, i.jsxs)('div', {
-        className: l()(b.box, I.box, b.linkingBanner),
+        className: l()(b.box, S.box, b.linkingBanner),
         children: [
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)(c.X6q, {
                         className: v.marginBottom8,
                         variant: 'heading-xl/medium',
-                        children: (0, i.jsx)(c.y5t, { children: S.intl.string(S.t.zUCWEB) })
+                        children: (0, i.jsx)(c.y5t, { children: I.intl.string(I.t.zUCWEB) })
                     }),
                     (0, i.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
                         className: v.marginBottom20,
-                        children: S.intl.format(S.t.yMnoDg, { link: 'https://support.discord.com/hc/articles/14155060633623' })
+                        children: I.intl.format(I.t.yMnoDg, { link: 'https://support.discord.com/hc/articles/14155060633623' })
                     }),
                     e ? null : (0, i.jsx)(p.Z, {})
                 ]
@@ -129,7 +129,7 @@ function R() {
             (0, i.jsx)('img', {
                 className: b.bannerArt,
                 src: j,
-                alt: S.intl.string(S.t['r+PDmp'])
+                alt: I.intl.string(I.t['r+PDmp'])
             })
         ]
     });
@@ -139,7 +139,7 @@ function P(e) {
         l = s.useRef(null),
         a = ''.concat(t, '-list'),
         m = (0, d.Z)(a),
-        h = s.useCallback(
+        g = s.useCallback(
             (e) => {
                 let { row: n, listIndex: s } = e,
                     l = r[n],
@@ -158,7 +158,7 @@ function P(e) {
             },
             [r, t]
         ),
-        g = s.useCallback(
+        h = s.useCallback(
             () =>
                 (0, i.jsx)(
                     u.Z,
@@ -194,8 +194,8 @@ function P(e) {
                             },
                             sectionHeight: T.zE,
                             rowHeight: T.ip,
-                            renderSection: g,
-                            renderRow: h,
+                            renderSection: h,
+                            renderRow: g,
                             sections: [r.length],
                             chunkSize: 30,
                             fade: !0,
@@ -209,14 +209,14 @@ function P(e) {
     });
 }
 let D = () => {
-        let e = (0, g.Z)(),
-            t = (0, _.mq)(T.ne.ACTIVE),
+        let e = (0, h.Z)(),
+            t = (0, x.mq)(T.ne.ACTIVE),
             n = e ? T.AG : T.i0,
             s = {
                 count: t.length,
                 max: n
             },
-            r = (0, m.o)(S.intl.formatToPlainString(S.t['+tnO39'], s), S.intl.formatToPlainString(S.t['pu6/U1'], s));
+            r = (0, m.o)(I.intl.formatToPlainString(I.t['+tnO39'], s), I.intl.formatToPlainString(I.t['pu6/U1'], s));
         return (0, i.jsx)(i.Fragment, {
             children:
                 t.length > 0
@@ -236,16 +236,16 @@ let D = () => {
                               }),
                               (0, i.jsx)('div', {
                                   className: b.box,
-                                  children: (0, i.jsx)(x.Z, { text: S.intl.string(S.t.C4ScLC) })
+                                  children: (0, i.jsx)(_.Z, { text: I.intl.string(I.t.C4ScLC) })
                               })
                           ]
                       })
         });
     },
     y = () => {
-        let e = (0, _.VM)(),
-            t = (0, g.Z)() ? T.AG : T.i0,
-            n = (0, m.o)(S.intl.formatToPlainString(S.t['1/PzIi'], { maxConnections: t }), S.intl.formatToPlainString(S.t.RcTgiI, { maxConnections: t }));
+        let e = (0, x.VM)(),
+            t = (0, h.Z)() ? T.AG : T.i0,
+            n = (0, m.o)(I.intl.formatToPlainString(I.t['1/PzIi'], { maxConnections: t }), I.intl.formatToPlainString(I.t.RcTgiI, { maxConnections: t }));
         return e
             ? (0, i.jsx)('div', {
                   className: b.maxConnectionInfo,
@@ -258,14 +258,14 @@ let D = () => {
             : null;
     },
     Z = () => {
-        let e = (0, h.o)(),
-            t = (0, h.Q)(),
+        let e = (0, g.o)(),
+            t = (0, g.Q)(),
             n = (0, a.EQ)({
                 helpline: e,
                 throughline: t
             })
-                .with({ helpline: !0 }, () => S.intl.format(S.t.KOwsf3, { helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
-                .with({ throughline: !0 }, () => S.intl.format(S.t['6tsC8v'], { helpLink: N.$l }))
+                .with({ helpline: !0 }, () => I.intl.format(I.t.KOwsf3, { helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
+                .with({ throughline: !0 }, () => I.intl.format(I.t['6tsC8v'], { helpLink: N.$l }))
                 .otherwise(() => null);
         return null == n
             ? null
@@ -275,7 +275,7 @@ let D = () => {
                       (0, i.jsx)(c.X6q, {
                           className: b.supportHeader,
                           variant: 'heading-sm/semibold',
-                          children: (0, i.jsx)(c.y5t, { children: S.intl.string(S.t['7/tVho']) })
+                          children: (0, i.jsx)(c.y5t, { children: I.intl.string(I.t['7/tVho']) })
                       }),
                       (0, i.jsx)(c.Text, {
                           variant: 'text-xs/medium',
@@ -286,8 +286,8 @@ let D = () => {
               });
     },
     k = () => {
-        let e = (0, _.mq)(T.ne.PENDING),
-            t = (0, m.o)(S.intl.formatToPlainString(S.t.IkAgkJ, { count: e.length }), S.intl.formatToPlainString(S.t.Q8XnAQ, { count: e.length }));
+        let e = (0, x.mq)(T.ne.PENDING),
+            t = (0, m.o)(I.intl.formatToPlainString(I.t.IkAgkJ, { count: e.length }), I.intl.formatToPlainString(I.t.Q8XnAQ, { count: e.length }));
         return 0 === e.length
             ? null
             : (0, i.jsx)(P, {
@@ -297,7 +297,7 @@ let D = () => {
               });
     },
     L = () => {
-        let e = (0, g.Z)();
+        let e = (0, h.Z)();
         return (0, i.jsxs)('div', {
             className: b.container,
             children: [e ? (0, i.jsx)(O, {}) : (0, i.jsx)(R, {}), (0, i.jsx)(D, {}), (0, i.jsx)(k, {}), (0, i.jsx)(y, {}), (0, i.jsx)(Z, {})]

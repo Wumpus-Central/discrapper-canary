@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(74538),
     u = n(242291),
     m = n(830253),
-    h = n(792165),
-    g = n(409673),
-    _ = n(603074),
-    x = n(388032),
+    g = n(792165),
+    h = n(409673),
+    x = n(603074),
+    _ = n(388032),
     p = n(477733);
 function E(e) {
     let { onSelect: t } = e,
@@ -29,25 +29,25 @@ function E(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)(a.VqE, {
-                children: (0, i.jsx)(_.Z, {
+                children: (0, i.jsx)(x.Z, {
                     suppressPlaySound: !0,
                     shouldShowUpsell: !1,
                     guildId: null,
                     channel: null,
                     onClose: t,
                     onSelect: m,
-                    gridNotice: u ? null : (0, i.jsx)(h.o, {}),
+                    gridNotice: u ? null : (0, i.jsx)(g.o, {}),
                     analyticsSource: 'call sounds edit setting'
                 })
             });
         },
         children: (e) =>
-            (0, i.jsx)(g.hU, {
+            (0, i.jsx)(h.hU, {
                 ...e,
                 onClick: () => {
                     l(!n);
                 },
-                text: x.intl.string(x.t.uOe0Aw),
+                text: _.intl.string(_.t.uOe0Aw),
                 children: (0, i.jsx)(a.vdY, {
                     size: 'md',
                     color: 'currentColor',
@@ -61,12 +61,12 @@ function C(e) {
         { previewSound: n } = (0, m.Z)(t, null),
         s =
             0 === (0, u.pI)()
-                ? x.intl.string(x.t.OASXjo)
-                : x.intl.formatToPlainString(x.t['/8fYOz'], {
+                ? _.intl.string(_.t.OASXjo)
+                : _.intl.formatToPlainString(_.t['/8fYOz'], {
                       emojiName: t.emojiName,
                       soundName: t.name
                   });
-    return (0, i.jsx)(g.hU, {
+    return (0, i.jsx)(h.hU, {
         onClick: n,
         text: s,
         children: (0, i.jsx)(a.gj8, {
@@ -100,9 +100,9 @@ function f(e) {
                         className: p.soundText,
                         children:
                             null == t
-                                ? x.intl.string(x.t.PoWNfX)
+                                ? _.intl.string(_.t.PoWNfX)
                                 : n
-                                  ? x.intl.format(x.t.B6HU6O, {
+                                  ? _.intl.format(_.t.B6HU6O, {
                                         soundName: t.name,
                                         subtextHook: (e) =>
                                             (0, i.jsx)(a.Text, {
@@ -129,9 +129,9 @@ function f(e) {
                     (0, i.jsx)(E, { onSelect: s }),
                     r &&
                         !n &&
-                        (0, i.jsx)(g.hU, {
+                        (0, i.jsx)(h.hU, {
                             onClick: () => s(null),
-                            text: x.intl.string(x.t.jmtcGB),
+                            text: _.intl.string(_.t.jmtcGB),
                             children: (0, i.jsx)(a.XHJ, {
                                 size: 'md',
                                 color: l.Z.unsafe_rawColors.RED_400.css,

@@ -10,8 +10,8 @@ var i,
     u = n(358221),
     h = n(43267),
     p = n(933557),
-    m = n(540059),
-    g = n(93687),
+    g = n(540059),
+    m = n(93687),
     f = n(266076),
     _ = n(199902),
     v = n(19780),
@@ -25,7 +25,7 @@ var i,
     E = n(674552),
     j = n(981631),
     y = n(646819);
-function A(e, t, n) {
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,20 +38,20 @@ function A(e, t, n) {
         e
     );
 }
-let P = {
+let T = {
     friction: 28,
     tension: 600
 };
-function T(e) {
+function A(e) {
     switch (e) {
         case 'height':
         case 'opacity':
             return {
                 duration: 150,
-                ...P
+                ...T
             };
         case 'scale':
-            return { ...P };
+            return { ...T };
         default:
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
@@ -66,7 +66,7 @@ class w extends (i = r.PureComponent) {
                     height: 1,
                     opacity: 1,
                     scale: 1,
-                    config: T
+                    config: A
                 })
                 .start()
                 .then(() => this.setState({ animating: !1 }));
@@ -78,7 +78,7 @@ class w extends (i = r.PureComponent) {
             scale: 1,
             opacity: 1,
             height: 1,
-            config: T
+            config: A
         })
             .start()
             .then(e);
@@ -92,7 +92,7 @@ class w extends (i = r.PureComponent) {
                     height: 0,
                     opacity: 0,
                     scale: 0,
-                    config: T
+                    config: A
                 })
                 .start()
                 .then(e)
@@ -118,23 +118,23 @@ class w extends (i = r.PureComponent) {
     }
     render() {
         let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: s, stream: d, isCurrentUserInThisDMCall: u, unread: h, isGDMFacepileEnabled: p } = this.props,
-            { hovered: m, animating: g } = this.state,
+            { hovered: g, animating: m } = this.state,
             _ = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, l.jsxs)(S.H, {
                 children: [
                     (0, l.jsx)(b.Z, {
-                        hovered: !g && m,
-                        selected: !g && n,
-                        unread: !g && h,
+                        hovered: !m && g,
+                        selected: !m && n,
+                        unread: !m && h,
                         className: y.pill
                     }),
                     (0, l.jsx)(N.Z, {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, l.jsx)(c.aRk, {
-                            selected: n || m,
+                            selected: n || g,
                             lowerBadge: i > 0 ? (0, E.Ne)(i) : null,
                             upperBadge: (0, E.Or)({
                                 audio: r,
@@ -150,7 +150,7 @@ class w extends (i = r.PureComponent) {
                                         to: j.Z5c.CHANNEL(j.ME, e.id),
                                         onMouseEnter: () => this.setState({ hovered: !0 }),
                                         onMouseLeave: () => this.setState({ hovered: !1 }),
-                                        selected: n || m,
+                                        selected: n || g,
                                         ariaLabel: null != t ? t : '',
                                         onContextMenu: this.handleContextMenu,
                                         icon: _ ? void 0 : this.getChannelIcon(),
@@ -175,17 +175,17 @@ class w extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            A(this, 'state', {
+            P(this, 'state', {
                 hovered: !1,
                 animating: !0,
                 controller: new a.Controller({
                     scale: 0,
                     height: 0,
                     opacity: 0,
-                    config: T
+                    config: A
                 })
             }),
-            A(this, 'handleContextMenu', (e) => {
+            P(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     i = t.type === j.d4z.DM ? Z.default.getUser(t.getRecipientId()) : null;
                 null != i
@@ -210,7 +210,7 @@ class w extends (i = r.PureComponent) {
             });
     }
 }
-A(w, 'defaultProps', {
+P(w, 'defaultProps', {
     badge: 0,
     audio: !1,
     video: !1,
@@ -224,13 +224,13 @@ let R = r.forwardRef(function (e, t) {
         o = (0, s.e7)([_.Z], () => _.Z.getAllApplicationStreamsForChannel(n).length > 0),
         d = (0, s.e7)([x.Z], () => x.Z.getChannelId(), []),
         h = (0, s.e7)([C.ZP], () => C.ZP.getMentionCount(n), [n]),
-        { isFacepileEnabled: f } = g.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
+        { isFacepileEnabled: f } = m.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
         Z = r === n,
         I = !1,
         b = !1;
     Z && ((I = a === j.WtW.VOICE), (b = a === j.WtW.VIDEO));
     let S = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE),
-        N = (0, m.Q3)('DirectMessage');
+        N = (0, g.Q3)('DirectMessage');
     return (0, l.jsx)(w, {
         ...e,
         ref: t,

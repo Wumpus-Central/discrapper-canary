@@ -17,13 +17,13 @@ var i = n(392711),
     E = n(914946),
     I = n(238679),
     C = n(452426),
-    v = n(295424),
-    N = n(277272),
+    N = n(295424),
+    v = n(277272),
     T = n(863141),
     S = n(186901),
     Z = n(981631);
-let x = (e) => (0, C.Z)(e).required().keys({ channel_id: e.string().required() });
-function A(e) {
+let A = (e) => (0, C.Z)(e).required().keys({ channel_id: e.string().required() });
+function x(e) {
     var t;
     let {
             args: { channel_id: n },
@@ -166,18 +166,18 @@ let y = {
     },
     [Z.zMe.MESSAGE_CREATE]: {
         scope: r.x.RPC,
-        validation: x,
-        handler: A
+        validation: A,
+        handler: x
     },
     [Z.zMe.MESSAGE_UPDATE]: {
         scope: r.x.RPC,
-        validation: x,
-        handler: A
+        validation: A,
+        handler: x
     },
     [Z.zMe.MESSAGE_DELETE]: {
         scope: r.x.RPC,
-        validation: x,
-        handler: A
+        validation: A,
+        handler: x
     },
     [Z.zMe.SPEAKING_START]: {
         scope: {
@@ -293,7 +293,7 @@ let y = {
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     l = { currentGuildMember: u.ZP.getSelfMember(t) };
-                return null == l.currentGuildMember || (null != n && (0, a.Z)(l, n)) || i((0, N.Z)(l.currentGuildMember)), l;
+                return null == l.currentGuildMember || (null != n && (0, a.Z)(l, n)) || i((0, v.Z)(l.currentGuildMember)), l;
             };
         }
     },
@@ -319,7 +319,7 @@ let y = {
                 a = c.Z.getStreamerActiveStreamMetadata(),
                 d = (null == a ? void 0 : a.pid) != null ? o.ZP.getGameForPID(a.pid) : null,
                 u = (null == d ? void 0 : d.id) != null ? s.Z.getApplication(d.id) : null,
-                h = null != u ? (0, v.Z)(u) : null,
+                h = null != u ? (0, N.Z)(u) : null,
                 m = null == a ? void 0 : a.sourceName,
                 p = {
                     active: null != a,

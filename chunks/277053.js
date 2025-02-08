@@ -16,13 +16,13 @@ var r,
 let E = new Set(),
     I = _.QZA.CLOSED,
     C = !1,
-    v = null,
     N = null,
+    v = null,
     T = null,
     S = null,
     Z = null,
-    x = null,
-    A = u.K.get(f.kf) || !1;
+    A = null,
+    x = u.K.get(f.kf) || !1;
 function b(e) {
     let t = e.getGuildId(),
         n = { ...e.permissionOverwrites };
@@ -31,7 +31,7 @@ function b(e) {
 function L() {
     if (((T = p.Z.getChannel()), (S = p.Z.getCategory()), null == T)) return !1;
     let e = T.getGuildId();
-    (N = v = b(T)), null == v[Z] && (Z = e), (l = null != S), (i = m.o4(T, S)), (x = null), (C = !1), (I = _.QZA.CLOSED), E.clear();
+    (v = N = b(T)), null == N[Z] && (Z = e), (l = null != S), (i = m.o4(T, S)), (A = null), (C = !1), (I = _.QZA.CLOSED), E.clear();
 }
 class y extends (r = d.ZP.Store) {
     initialize() {
@@ -44,13 +44,13 @@ class y extends (r = d.ZP.Store) {
         return this.hasChanges();
     }
     getPermissionOverwrite(e) {
-        return null == v ? void 0 : v[e];
+        return null == N ? void 0 : N[e];
     }
     get editedPermissionIds() {
         return Array.from(E);
     }
     get permissionOverwrites() {
-        return v;
+        return N;
     }
     get selectedOverwriteId() {
         return Z;
@@ -71,7 +71,7 @@ class y extends (r = d.ZP.Store) {
         return S;
     }
     get advancedMode() {
-        return A;
+        return x;
     }
 }
 (s = 'ChannelSettingsPermissionsStore'),
@@ -92,32 +92,32 @@ let P = new y(h.Z, {
     CHANNEL_SETTINGS_PERMISSIONS_INIT: L,
     CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
         let { id: t, allow: n, deny: l } = e,
-            r = null == v ? void 0 : v[t];
+            r = null == N ? void 0 : N[t];
         if (null == r || null == T) return !1;
         (r = {
             ...r,
             allow: n,
             deny: l
         }),
-            (v = {
-                ...v,
+            (N = {
+                ...N,
                 [t]: r
             }),
             E.add(t),
             (I = _.QZA.OPEN),
-            (C = !c().isEqual(v, N)),
+            (C = !c().isEqual(N, v)),
             (i = m.o4(T, S));
     },
     CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
         let { id: t } = e;
-        if (null != v && null != v[t]) Z = t;
+        if (null != N && null != N[t]) Z = t;
         else {
             if (null == T) return !1;
-            x = t;
+            A = t;
         }
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        (I = _.QZA.CLOSED), (v = null), (N = null), (T = null), (S = null), (C = !1), E.clear(), (Z = null), (x = null);
+        (I = _.QZA.CLOSED), (N = null), (v = null), (T = null), (S = null), (C = !1), E.clear(), (Z = null), (A = null);
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
@@ -130,20 +130,20 @@ let P = new y(h.Z, {
                     S = p.Z.getCategory();
                     let t = T.getGuildId();
                     if (null == t) return !1;
-                    N = b(T);
+                    v = b(T);
                     let n = {};
                     return (
                         E.forEach((e) => {
-                            null != v && (n[e] = v[e]);
+                            null != N && (n[e] = N[e]);
                         }),
                         null == n[t] && null == T.permissionOverwrites[t] && (n[t] = m.we(t)),
                         null ==
-                        (v = {
+                        (N = {
                             ...T.permissionOverwrites,
                             ...n
                         })[Z]
                             ? (Z = t)
-                            : null != x && null != v[x] && ((Z = x), (x = null)),
+                            : null != A && null != N[A] && ((Z = A), (A = null)),
                         (i = m.o4(T, S)),
                         !0
                     );
@@ -159,6 +159,6 @@ let P = new y(h.Z, {
     },
     CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
         let { advancedMode: t } = e;
-        (A = t), u.K.set(f.kf, t);
+        (x = t), u.K.set(f.kf, t);
     }
 });

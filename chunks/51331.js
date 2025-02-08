@@ -8,15 +8,15 @@ var i = n(200651),
     c = n(241107);
 function d(e) {
     let { value: t, onChange: n, className: r, note: d, title: u, disabled: m } = e,
-        h = s.useRef(null),
         g = s.useRef(null),
-        _ = s.useId(),
-        x = (0, i.jsx)(a.rsf, {
-            id: _,
+        h = s.useRef(null),
+        x = s.useId(),
+        _ = (0, i.jsx)(a.rsf, {
+            id: x,
             checked: t,
             onChange: n,
             focusProps: { enabled: !1 },
-            innerRef: h,
+            innerRef: g,
             disabled: m
         });
     return (0, i.jsx)('div', {
@@ -24,8 +24,8 @@ function d(e) {
         children: (0, i.jsx)(a.tEY, {
             within: !0,
             offset: -4,
-            focusTarget: h,
-            ringTarget: g,
+            focusTarget: g,
+            ringTarget: h,
             children: (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)('div', {
@@ -33,13 +33,13 @@ function d(e) {
                         children: (0, i.jsx)(o.H, {
                             header: u,
                             description: d,
-                            relatedId: _,
+                            relatedId: x,
                             disabled: m
                         })
                     }),
                     (0, i.jsx)('div', {
                         className: c.control,
-                        children: x
+                        children: _
                     })
                 ]
             })

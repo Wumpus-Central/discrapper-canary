@@ -4,8 +4,8 @@ n(192379);
 var l = n(481060),
     r = n(570140),
     s = n(317770),
-    o = n(731971),
-    a = n(626135),
+    a = n(731971),
+    o = n(626135),
     c = n(472365),
     d = n(379164),
     u = n(590965),
@@ -24,9 +24,9 @@ class h extends s.Z {
             (0, l.h7j)((e) => (0, i.jsx)(c.Z, { ...e }), {
                 modalKey: E,
                 onCloseRequest: () => {
-                    let e = (0, o.e7)(),
-                        t = (0, o._J)();
-                    a.default.track(_.rMx.INVITE_ACCEPT_DISMISSED, {
+                    let e = (0, a.e7)(),
+                        t = (0, a._J)();
+                    o.default.track(_.rMx.INVITE_ACCEPT_DISMISSED, {
                         invite_code: e,
                         guild_id: t
                     }),

@@ -4,8 +4,8 @@ n(192379);
 var l = n(780384),
     r = n(481060),
     s = n(410030),
-    o = n(44315),
-    a = n(889901),
+    a = n(44315),
+    o = n(889901),
     c = n(955204),
     d = n(231338),
     u = n(262284);
@@ -26,18 +26,18 @@ function h(e) {
         I = (0, c.oX)(n);
     if (null == I) return null;
     let m = (0, r.UCu)(h),
-        { name: T, rarity: C } = I,
-        { color: N } = (0, c.F7)(C),
+        { name: C, rarity: T } = I,
+        { color: N } = (0, c.F7)(T),
         g = (0, l.wj)(p) ? _ : E,
         S = (m.size - m.offset - 2 * m.stroke) * 0.8,
-        f = m.size - m.stroke,
-        R = {
+        R = m.size - m.stroke,
+        f = {
             width: 0.4 * S,
             height: 0.4 * S
         },
         A = {
-            width: R.width + 1,
-            height: R.height + 1,
+            width: f.width + 1,
+            height: f.height + 1,
             right: m.stroke + 1,
             bottom: m.stroke + 1,
             padding: 0
@@ -45,17 +45,17 @@ function h(e) {
     return (0, i.jsxs)('div', {
         className: u.container,
         style: {
-            width: f,
-            height: f,
+            width: R,
+            height: R,
             padding: m.stroke
         },
-        'aria-label': ''.concat(null !== (t = T()) && void 0 !== t ? t : ''),
+        'aria-label': ''.concat(null !== (t = C()) && void 0 !== t ? t : ''),
         children: [
             (0, i.jsx)('div', {
                 className: u.trophyIconContainer,
                 children: (0, i.jsx)(r.rm8, {
                     size: 'custom',
-                    color: d ? N : (0, o.Lq)(g.trophy),
+                    color: d ? N : (0, a.Lq)(g.trophy),
                     width: S,
                     height: S
                 })
@@ -66,18 +66,18 @@ function h(e) {
                     style: A,
                     children: (0, i.jsx)(r.mBM, {
                         size: 'custom',
-                        color: (0, o.Lq)(g.locked),
-                        ...R
+                        color: (0, a.Lq)(g.locked),
+                        ...f
                     })
                 }),
             d &&
-                C === c.EP.LEGENDARY &&
+                T === c.EP.LEGENDARY &&
                 (0, i.jsx)('div', {
                     className: u.lockContainer,
                     style: A,
-                    children: (0, i.jsx)(a.Z, {
+                    children: (0, i.jsx)(o.Z, {
                         className: u.confettiIcon,
-                        ...R
+                        ...f
                     })
                 })
         ]

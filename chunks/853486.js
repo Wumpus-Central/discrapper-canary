@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var a = n(200651),
     i = n(192379),
     r = n(481060),
@@ -9,17 +9,17 @@ var a = n(200651),
     d = n(50662),
     u = n(395716),
     m = n(673885),
-    _ = n(981631),
-    x = n(388032),
-    f = n(337424);
-let h = function (e) {
-    let { guild: t, guildJoinRequest: h, guildJoinRequestUser: p, onClose: b } = e,
-        g = i.useMemo(() => {
+    x = n(981631),
+    h = n(388032),
+    _ = n(337424);
+let p = function (e) {
+    let { guild: t, guildJoinRequest: p, guildJoinRequestUser: f, onClose: C } = e,
+        j = i.useMemo(() => {
             var e;
-            return null !== (e = h.formResponses) && void 0 !== e ? e : [];
-        }, [h.formResponses]),
-        C = t.hasFeature(_.oNc.CLAN) && h.applicationStatus === s.wB.SUBMITTED,
-        v = i.useCallback(
+            return null !== (e = p.formResponses) && void 0 !== e ? e : [];
+        }, [p.formResponses]),
+        v = t.hasFeature(x.oNc.CLAN) && p.applicationStatus === s.wB.SUBMITTED,
+        b = i.useCallback(
             () =>
                 (0, r.ZDy)(async () => {
                     let { default: e } = await n.e('17945').then(n.bind(n, 223926));
@@ -27,66 +27,66 @@ let h = function (e) {
                         (0, a.jsx)(e, {
                             ...n,
                             guild: t,
-                            guildJoinRequest: h,
-                            user: p
+                            guildJoinRequest: p,
+                            user: f
                         });
                 }),
-            [t, h, p]
+            [t, p, f]
         );
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)(l.ZP, {
                 toolbar: (0, a.jsx)(l.ZP.Icon, {
                     icon: r.Dio,
-                    onClick: b,
-                    tooltip: x.intl.string(x.t.cpT0Cg)
+                    onClick: C,
+                    tooltip: h.intl.string(h.t.cpT0Cg)
                 }),
                 children: [
                     (0, a.jsx)(l.ZP.Icon, {
                         icon: r.tBG,
                         disabled: !0,
-                        'aria-label': x.intl.string(x.t.PuCkTU)
+                        'aria-label': h.intl.string(h.t.PuCkTU)
                     }),
                     (0, a.jsx)(r.X6q, {
                         variant: 'heading-md/semibold',
-                        children: o.ZP.getName(p)
+                        children: o.ZP.getName(f)
                     })
                 ]
             }),
             (0, a.jsx)(d.Z, {
-                guildJoinRequest: h,
-                guildJoinRequestUser: p,
+                guildJoinRequest: p,
+                guildJoinRequestUser: f,
                 guild: t
             }),
             (0, a.jsxs)(r.Ttm, {
                 children: [
                     (0, a.jsxs)('div', {
-                        className: f.container,
+                        className: _.container,
                         children: [
                             (0, a.jsx)(m.Z, {
-                                user: p,
-                                joinRequestId: h.joinRequestId
+                                user: f,
+                                joinRequestId: p.joinRequestId
                             }),
-                            C &&
+                            v &&
                                 (0, a.jsxs)('div', {
-                                    className: f.actionButtons,
+                                    className: _.actionButtons,
                                     children: [
-                                        (0, a.jsx)(u.Z, { joinRequest: h }),
+                                        (0, a.jsx)(u.Z, { joinRequest: p }),
                                         (0, a.jsx)(r.zxk, {
                                             color: r.Ttl.PRIMARY,
-                                            onClick: v,
-                                            children: x.intl.string(x.t['6DpJRU'])
+                                            onClick: b,
+                                            children: h.intl.string(h.t['6DpJRU'])
                                         })
                                     ]
                                 })
                         ]
                     }),
                     (0, a.jsx)('div', {
-                        className: f.disabledFormRenderer,
+                        className: _.disabledFormRenderer,
                         children: (0, a.jsx)(c.Z, {
                             guildId: t.id,
-                            formFields: g,
-                            user: p
+                            formFields: j,
+                            user: f
                         })
                     })
                 ]

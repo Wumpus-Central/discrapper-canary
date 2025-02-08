@@ -1,11 +1,11 @@
-n.d(t, { Z: () => w }), n(411104), n(47120);
+n.d(t, { Z: () => F }), n(411104), n(47120);
 var i = n(200651);
 n(192379);
 var l = n(392711),
     r = n(481060),
     s = n(570140),
-    o = n(904245),
-    a = n(317770),
+    a = n(904245),
+    o = n(317770),
     c = n(100527),
     d = n(358221),
     u = n(963249),
@@ -15,25 +15,25 @@ var l = n(392711),
     p = n(431),
     I = n(626135),
     m = n(74538),
-    T = n(557457),
-    C = n(970645),
+    C = n(557457),
+    T = n(970645),
     N = n(30684),
     g = n(514701),
     S = n(6242),
-    f = n(467721),
-    R = n(757692),
+    R = n(467721),
+    f = n(757692),
     A = n(281494),
     O = n(276444),
     L = n(937579),
-    P = n(522558),
-    x = n(879463),
-    b = n(822070),
+    b = n(522558),
+    P = n(879463),
+    x = n(822070),
     D = n(520540),
     M = n(11352),
     v = n(474936),
     U = n(981631),
-    y = n(354459),
-    k = n(37113),
+    k = n(354459),
+    y = n(37113),
     Z = n(388032);
 function V(e, t, n) {
     return (
@@ -48,7 +48,7 @@ function V(e, t, n) {
         e
     );
 }
-class j extends a.Z {
+class j extends o.Z {
     _initialize() {
         __OVERLAY__ ? s.Z.subscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen) : (s.Z.subscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose), s.Z.subscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell), s.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer), s.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery), s.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchUserAffinities), s.Z.subscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure), s.Z.subscribe('MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED', this.maybeShowHDStreamingViewerUpsellMessage));
     }
@@ -72,7 +72,7 @@ class j extends a.Z {
         if (O.Z.getIsFetchingReferralIncentiveEligibility() || !(0, m.I5)(e)) return;
         let t = { location: 'PremiumManager' },
             n = { autoTrackExposure: !1 };
-        D.g.getCurrentConfig(t, n).enabled && !x.eP.getCurrentConfig(t, n).enabled && b.$.getCurrentConfig(t, n).enabled && (0, A.bq)();
+        D.g.getCurrentConfig(t, n).enabled && !P.eP.getCurrentConfig(t, n).enabled && x.$.getCurrentConfig(t, n).enabled && (0, A.bq)();
     }
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
@@ -114,10 +114,10 @@ class j extends a.Z {
             }),
             V(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = h.default.getCurrentUser();
-                null != e && e.verified && !(0, m.I5)(e) && N.Z.shouldFetchCheckoutRecovery() && (await (0, C.o)());
+                null != e && e.verified && !(0, m.I5)(e) && N.Z.shouldFetchCheckoutRecovery() && (await (0, T.o)());
             }),
             V(this, '_maybeFetchUserAffinities', () => {
-                let { enabled: e } = P.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
+                let { enabled: e } = b.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
                 e && (0, _.W)();
             }),
             V(this, '_trackCustomNotificationSoundsExposure', () => {
@@ -149,17 +149,17 @@ class j extends a.Z {
                 (0, l.debounce)((e, t, n) => {
                     var i, l;
                     let r = d.Z.getSelectedParticipant(e),
-                        s = (0, R.o)(r, n),
-                        { sendNitroMessage: a } = (0, S.TD)(s),
+                        s = (0, f.o)(r, n),
+                        { sendNitroMessage: o } = (0, S.TD)(s),
                         c = null !== (l = null === (i = E.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : U.Eu4.NONE;
-                    if (f.Z.cooldownIsActive() || !a || c >= U.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== y.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
+                    if (R.Z.cooldownIsActive() || !o || c >= U.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== k.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
                     g.I();
                     let u = Z.intl.formatToPlainString(Z.t.AbyeZG, {
                         nickname: r.userNick,
-                        resolution: (0, k.o6)(r.maxResolution.height),
-                        fps: (0, T.bp)(r.maxFrameRate)
+                        resolution: (0, y.o6)(r.maxResolution.height),
+                        fps: (0, C.bp)(r.maxFrameRate)
                     });
-                    o.Z.sendNitroSystemMessage(e, u),
+                    a.Z.sendNitroSystemMessage(e, u),
                         I.default.track(U.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
                             type: v.cd.HD_STREAMING_VIEWER_UPSELL,
                             location_section: null != t ? U.jXE.TEXT_IN_VOICE : U.jXE.CHANNEL_TEXT_AREA,
@@ -170,4 +170,4 @@ class j extends a.Z {
             );
     }
 }
-let w = new j();
+let F = new j();
