@@ -65,8 +65,8 @@ let p = (e) => {
     });
 };
 function E(e) {
-    let { earnedOrbsQuantity: t, balance: n, backgroundElementRef: s, onClose: r, onClickPill: l, ctaOnClick: a, linkOnClick: o, ...x } = e,
-        E = async () => {
+    let { earnedOrbsQuantity: t, balance: n, backgroundElementRef: s, onClose: r, onClickPill: l, ctaOnClick: a, linkOnClick: o, ...h } = e,
+        x = async () => {
             await (0, c.j2)(), await r();
         };
     return (0, i.jsxs)(m.X, {
@@ -85,7 +85,7 @@ function E(e) {
         children: [
             (0, i.jsx)(u.A4, {
                 onClick: async () => {
-                    await E(), l();
+                    await x(), l();
                 },
                 balance: n,
                 placeholderBalance: null != n ? n : 0,
@@ -93,13 +93,11 @@ function E(e) {
             }),
             (0, i.jsx)(p, {
                 earnedOrbsQuantity: t,
-                ctaText: h.intl.string(h.t['H57f4+']),
-                linkText: h.intl.string(h.t['7f4H7O']),
                 ctaOnClick: async () => {
-                    await E(), a();
+                    await x(), a();
                 },
                 linkOnClick: async () => {
-                    await E(), o();
+                    await x(), o();
                 }
             })
         ]
