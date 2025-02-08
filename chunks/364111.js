@@ -1,47 +1,44 @@
-n.d(t, { E: () => u }), n(47120);
+n.d(t, { E: () => d }), n(47120);
 var i = n(192379),
     l = n(442837),
     r = n(353926),
     a = n(358085),
     s = n(335131),
     o = n(52030),
-    c = n(67696),
-    d = n(228624);
-function u(e, t) {
+    c = n(228624);
+function d(e, t) {
     let n = (0, l.e7)([r.Z], () => r.Z.hasLoadedExperiments),
-        u = (0, d.hv)('useMaybeFetchCollectiblesShopHome'),
-        h = (0, c.n)('useMaybeFetchCollectiblesShopHome'),
-        m = (0, c.N)('useMaybeFetchCollectiblesShopHome'),
-        p = (0, a.isDesktop)() || (0, a.isWeb)(),
-        [g, _, f, E, I, C] = (0, l.Wu)([o.Z], () => {
+        d = (0, c.hv)('useMaybeFetchCollectiblesShopHome'),
+        u = (0, a.isDesktop)() || (0, a.isWeb)(),
+        [h, m, p, g, _, f] = (0, l.Wu)([o.Z], () => {
             var t, n;
             return [o.Z.getShopBlocks(e), null !== (t = o.Z.getLastSuccessfulFetch(e)) && void 0 !== t ? t : 0, null !== (n = o.Z.getLastErrorTimestamp(e)) && void 0 !== n ? n : 0, o.Z.getLastFetchOptions(e), o.Z.getFetchShopHomeError(e), o.Z.getIsFetchingShopHome(e)];
         }),
-        N = (0, i.useMemo)(
+        E = (0, i.useMemo)(
             () => ({
                 ...t,
-                variantsReturnStyle: u,
-                includeBundles: p,
-                includePopularPicks: m,
+                variantsReturnStyle: d,
+                includeBundles: u,
+                includePopularPicks: !0,
                 includeDynamicBlocks: !0
             }),
-            [t, u, p, m, !0]
+            [t, d, u]
         ),
-        v = (0, i.useMemo)(() => !(0, s.oc)(E, N), [E, N]),
-        T = (0, i.useMemo)(() => Date.now() - _ < 600000, [_]);
+        I = (0, i.useMemo)(() => !(0, s.oc)(g, E), [g, E]),
+        C = (0, i.useMemo)(() => Date.now() - m < 600000, [m]);
     return (
         (0, i.useEffect)(() => {
-            if (!n || !h || C) return;
-            let t = Date.now() - f < 600000;
-            (null == I || !t) && (v || !T) && (0, s.Ov)(e, N);
-        }, [n, h, C, I, f, T, v, N, e]),
+            if (!n || f) return;
+            let t = Date.now() - p < 600000;
+            (null == _ || !t) && (I || !C) && (0, s.Ov)(e, E);
+        }, [n, f, _, p, C, I, E, e]),
         {
-            isFetchingShopHome: C,
-            fetchShopHomeError: I,
-            shopBlocks: g,
+            isFetchingShopHome: f,
+            fetchShopHomeError: _,
+            shopBlocks: h,
             refreshShopHome: (0, i.useCallback)(() => {
-                (0, s.Ov)(e, N);
-            }, [e, N])
+                (0, s.Ov)(e, E);
+            }, [e, E])
         }
     );
 }
