@@ -1,4 +1,4 @@
-i.d(e, { Z: () => m });
+i.d(n, { Z: () => m });
 var t = i(200651),
     r = i(192379),
     a = i(793030),
@@ -9,16 +9,16 @@ var t = i(200651),
     d = i(709586),
     u = i(388032),
     x = i(808524);
-function m(n) {
-    var e;
-    let { boost: i } = n,
+function m(e) {
+    var n;
+    let { boost: i } = e,
         { username: m, roleColor: v } = (0, s.cj)(
             [l.ZP],
             () => {
-                var n, e, t;
+                var e, n, t;
                 return {
-                    username: null !== (t = l.ZP.getNick(i.guildId, i.userId)) && void 0 !== t ? t : null === (n = i.user) || void 0 === n ? void 0 : n.username,
-                    roleColor: null === (e = l.ZP.getMember(i.guildId, i.userId)) || void 0 === e ? void 0 : e.colorString
+                    username: null !== (t = l.ZP.getNick(i.guildId, i.userId)) && void 0 !== t ? t : null === (e = i.user) || void 0 === e ? void 0 : e.username,
+                    roleColor: null === (n = l.ZP.getMember(i.guildId, i.userId)) || void 0 === n ? void 0 : n.colorString
                 };
             },
             [i]
@@ -39,7 +39,7 @@ function m(n) {
             height: 16
         }),
         iconContainerClassName: x.iconContainer,
-        timestamp: null !== (e = i.endsAt) && void 0 !== e ? e : void 0,
+        timestamp: null !== (n = i.endsAt) && void 0 !== n ? n : void 0,
         compact: !0,
         children: (0, t.jsx)(a.xv, {
             variant: 'text-md/semibold',

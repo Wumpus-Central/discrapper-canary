@@ -1,4 +1,4 @@
-i.d(e, {
+i.d(n, {
     Z: () => u,
     b: () => d
 });
@@ -7,12 +7,12 @@ var t,
 i(192379);
 var a = i(793030),
     s = i(413335),
-    o = i(291775),
+    o = i(306685),
     c = i(388032),
     l = i(407915),
     d = (((t = {})[(t.AVAILABLE = 0)] = 'AVAILABLE'), (t[(t.SPENT = 1)] = 'SPENT'), (t[(t.TOTAL = 2)] = 'TOTAL'), t);
-function u(n) {
-    let { count: e, type: i } = n;
+function u(e) {
+    let { count: n, type: i } = e;
     return (0, r.jsxs)('div', {
         className: l.container,
         children: [
@@ -22,7 +22,7 @@ function u(n) {
                     (0, r.jsx)(s.Z, { fill: 0 !== i ? 'currentColor' : void 0 }),
                     (0, r.jsx)(a.X6, {
                         variant: 'heading-lg/semibold',
-                        children: e
+                        children: n
                     })
                 ]
             }),
