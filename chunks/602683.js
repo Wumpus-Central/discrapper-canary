@@ -1,25 +1,25 @@
-n.d(t, { Z: () => o }), n(47120);
-var s = n(200651),
-    r = n(192379),
-    a = n(481060);
-let o = function (e) {
-    let { assetKey: t, initialValue: n, onMessageChange: o, title: i } = e,
-        [l, c] = r.useState('');
+a.d(s, { Z: () => l }), a(47120);
+var i = a(200651),
+    t = a(192379),
+    n = a(481060);
+let l = function (e) {
+    let { assetKey: s, initialValue: a, onMessageChange: l, title: r } = e,
+        [o, d] = t.useState('');
     return (
-        r.useEffect(() => {
-            c(null != n ? n : '');
-        }, [n]),
-        (0, s.jsxs)(a.xJW, {
+        t.useEffect(() => {
+            d(null != a ? a : '');
+        }, [a]),
+        (0, i.jsxs)(n.xJW, {
             children: [
-                (0, s.jsx)(a.vwX, {
-                    tag: a.RB0.H5,
-                    children: i
+                (0, i.jsx)(n.vwX, {
+                    tag: n.RB0.H5,
+                    children: r
                 }),
-                (0, s.jsx)(a.R94, {
-                    children: (0, s.jsx)(a.oil, {
-                        value: l,
+                (0, i.jsx)(n.R94, {
+                    children: (0, i.jsx)(n.oil, {
+                        value: o,
                         onChange: function (e) {
-                            c(e), o(t, e);
+                            d(e), l(s, e);
                         }
                     })
                 })

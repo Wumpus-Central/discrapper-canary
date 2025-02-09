@@ -10,8 +10,8 @@ var i,
     u = n(358221),
     h = n(43267),
     p = n(933557),
-    g = n(540059),
-    m = n(93687),
+    m = n(540059),
+    g = n(93687),
     f = n(266076),
     _ = n(199902),
     v = n(19780),
@@ -24,7 +24,7 @@ var i,
     N = n(662146),
     E = n(674552),
     j = n(981631),
-    y = n(646819);
+    y = n(553497);
 function P(e, t, n) {
     return (
         t in e
@@ -38,20 +38,20 @@ function P(e, t, n) {
         e
     );
 }
-let T = {
+let A = {
     friction: 28,
     tension: 600
 };
-function A(e) {
+function T(e) {
     switch (e) {
         case 'height':
         case 'opacity':
             return {
                 duration: 150,
-                ...T
+                ...A
             };
         case 'scale':
-            return { ...T };
+            return { ...A };
         default:
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
@@ -66,7 +66,7 @@ class w extends (i = r.PureComponent) {
                     height: 1,
                     opacity: 1,
                     scale: 1,
-                    config: A
+                    config: T
                 })
                 .start()
                 .then(() => this.setState({ animating: !1 }));
@@ -78,7 +78,7 @@ class w extends (i = r.PureComponent) {
             scale: 1,
             opacity: 1,
             height: 1,
-            config: A
+            config: T
         })
             .start()
             .then(e);
@@ -92,7 +92,7 @@ class w extends (i = r.PureComponent) {
                     height: 0,
                     opacity: 0,
                     scale: 0,
-                    config: A
+                    config: T
                 })
                 .start()
                 .then(e)
@@ -118,23 +118,23 @@ class w extends (i = r.PureComponent) {
     }
     render() {
         let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: s, stream: d, isCurrentUserInThisDMCall: u, unread: h, isGDMFacepileEnabled: p } = this.props,
-            { hovered: g, animating: m } = this.state,
+            { hovered: m, animating: g } = this.state,
             _ = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, l.jsxs)(S.H, {
                 children: [
                     (0, l.jsx)(b.Z, {
-                        hovered: !m && g,
-                        selected: !m && n,
-                        unread: !m && h,
+                        hovered: !g && m,
+                        selected: !g && n,
+                        unread: !g && h,
                         className: y.pill
                     }),
                     (0, l.jsx)(N.Z, {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, l.jsx)(c.aRk, {
-                            selected: n || g,
+                            selected: n || m,
                             lowerBadge: i > 0 ? (0, E.Ne)(i) : null,
                             upperBadge: (0, E.Or)({
                                 audio: r,
@@ -150,7 +150,7 @@ class w extends (i = r.PureComponent) {
                                         to: j.Z5c.CHANNEL(j.ME, e.id),
                                         onMouseEnter: () => this.setState({ hovered: !0 }),
                                         onMouseLeave: () => this.setState({ hovered: !1 }),
-                                        selected: n || g,
+                                        selected: n || m,
                                         ariaLabel: null != t ? t : '',
                                         onContextMenu: this.handleContextMenu,
                                         icon: _ ? void 0 : this.getChannelIcon(),
@@ -182,7 +182,7 @@ class w extends (i = r.PureComponent) {
                     scale: 0,
                     height: 0,
                     opacity: 0,
-                    config: A
+                    config: T
                 })
             }),
             P(this, 'handleContextMenu', (e) => {
@@ -190,7 +190,7 @@ class w extends (i = r.PureComponent) {
                     i = t.type === j.d4z.DM ? Z.default.getUser(t.getRecipientId()) : null;
                 null != i
                     ? (0, d.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('56826'), n.e('5606')]).then(n.bind(n, 131404));
+                          let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('56826'), n.e('76586')]).then(n.bind(n, 131404));
                           return (n) =>
                               (0, l.jsx)(e, {
                                   ...n,
@@ -199,7 +199,7 @@ class w extends (i = r.PureComponent) {
                               });
                       })
                     : (0, d.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('79695'), n.e('25421'), n.e('95491')]).then(n.bind(n, 354741));
+                          let { default: e } = await Promise.all([n.e('79695'), n.e('25421'), n.e('40979')]).then(n.bind(n, 354741));
                           return (n) =>
                               (0, l.jsx)(e, {
                                   ...n,
@@ -224,13 +224,13 @@ let R = r.forwardRef(function (e, t) {
         o = (0, s.e7)([_.Z], () => _.Z.getAllApplicationStreamsForChannel(n).length > 0),
         d = (0, s.e7)([x.Z], () => x.Z.getChannelId(), []),
         h = (0, s.e7)([C.ZP], () => C.ZP.getMentionCount(n), [n]),
-        { isFacepileEnabled: f } = m.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
+        { isFacepileEnabled: f } = g.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
         Z = r === n,
         I = !1,
         b = !1;
     Z && ((I = a === j.WtW.VOICE), (b = a === j.WtW.VIDEO));
     let S = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE),
-        N = (0, g.Q3)('DirectMessage');
+        N = (0, m.Q3)('DirectMessage');
     return (0, l.jsx)(w, {
         ...e,
         ref: t,

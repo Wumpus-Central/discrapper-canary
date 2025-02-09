@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(47120);
+n.d(t, { Z: () => P }), n(47120);
 var i = n(913527),
     r = n.n(i),
     a = n(570140),
@@ -30,8 +30,8 @@ function E(e, t, n) {
 let v = null,
     y = !1,
     I = 1209600000,
-    b = 86400000;
-function T(e) {
+    T = 86400000;
+function b(e) {
     let t = u.Z.createFromServer(e.entitlement);
     (0, m._k)(t)
         ? S({ forceRefresh: !0 })
@@ -99,28 +99,28 @@ async function O() {
 function D() {
     clearTimeout(v), (v = null);
 }
-function x() {
+function L() {
     D();
 }
-function L() {
+function x() {
     S();
 }
-class P extends s.Z {
+class w extends s.Z {
     forceRefreshIfOutdated() {
         let e = h.Z.getState();
-        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > b && S({ forceRefresh: !0 });
+        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > T && S({ forceRefresh: !0 });
     }
     constructor(...e) {
         super(...e),
             E(this, 'actions', {
-                POST_CONNECTION_OPEN: L,
-                CONNECTION_CLOSED: x,
+                POST_CONNECTION_OPEN: x,
+                CONNECTION_CLOSED: L,
                 ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => S(),
-                ENTITLEMENT_CREATE: T,
+                ENTITLEMENT_CREATE: b,
                 ENTITLEMENT_UPDATE: () => S(),
                 ENTITLEMENT_DELETE: () => S(),
                 LOGOUT: D
             });
     }
 }
-let w = new P();
+let P = new w();

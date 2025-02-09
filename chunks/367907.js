@@ -1,9 +1,9 @@
 n.d(t, {
     $H: () => B,
     AB: () => k,
-    JS: () => w,
+    JS: () => P,
     ZP: () => V,
-    hH: () => L,
+    hH: () => x,
     kO: () => Z,
     oG: () => F,
     v_: () => M,
@@ -28,8 +28,8 @@ var i = n(392711),
     v = n(306680),
     y = n(944486),
     I = n(914010),
-    b = n(9156),
-    T = n(594174),
+    T = n(9156),
+    b = n(594174),
     S = n(979651),
     A = n(626135),
     N = n(70956),
@@ -37,12 +37,12 @@ var i = n(392711),
     R = n(546416),
     O = n(981631),
     D = n(176505);
-function x(e) {
+function L(e) {
     let t = 0;
     for (let n in e) t += 1;
     return t;
 }
-function L(e) {
+function x(e) {
     var t;
     if (null == e) return null;
     let n = p.Z.getGuild(e);
@@ -60,21 +60,21 @@ function L(e) {
         guild_num_channels: o + l,
         guild_num_text_channels: o,
         guild_num_voice_channels: l,
-        guild_num_roles: x(i),
+        guild_num_roles: L(i),
         guild_member_num_roles: null != a ? a.roles.length : 0,
         guild_member_perms: String(null !== (t = m.Z.getGuildPermissions(n)) && void 0 !== t ? t : C.Hn),
         guild_is_vip: n.hasFeature(O.oNc.VIP_REGIONS),
         is_member: null != a,
-        num_voice_channels_active: x(c)
+        num_voice_channels_active: L(c)
     };
 }
-function P(e, t) {
+function w(e, t) {
     return {
         channel_static_route: t,
         channel_hidden: !1
     };
 }
-function w(e) {
+function P(e) {
     if (null == e) return null;
     let t = c.Z.getChannel(e);
     return null == t ? null : M(t);
@@ -130,8 +130,8 @@ function G(e) {
         o = U(s, r),
         l = {
             ...t,
-            ...L(o),
-            ...(null != r && null != a && (0, D.AB)(a) ? P(r, a) : M(s))
+            ...x(o),
+            ...(null != r && null != a && (0, D.AB)(a) ? w(r, a) : M(s))
         };
     A.default.track(e, l, { flush: n });
 }
@@ -142,7 +142,7 @@ function B(e) {
     if (null == n) {
         let n = !1;
         if (t.isDM()) {
-            let e = T.default.getUser(t.recipients[0]);
+            let e = b.default.getUser(t.recipients[0]);
             null != e && (n = e.bot);
         }
         return {
@@ -155,16 +155,16 @@ function B(e) {
         channel_id: e,
         channel_was_unread: i.unread,
         channel_mention_count: i.mentionCount,
-        channel_is_muted: b.ZP.isChannelMuted(t.guild_id, t.id),
+        channel_is_muted: T.ZP.isChannelMuted(t.guild_id, t.id),
         channel_is_nsfw: t.isNSFW(),
-        channel_resolved_unread_setting: b.ZP.resolveUnreadSetting(t),
-        channel_preset: (0, o.gs)(b.ZP.resolveUnreadSetting(t), b.ZP.resolvedMessageNotifications(t)),
+        channel_resolved_unread_setting: T.ZP.resolveUnreadSetting(t),
+        channel_preset: (0, o.gs)(T.ZP.resolveUnreadSetting(t), T.ZP.resolvedMessageNotifications(t)),
         guild_id: t.guild_id,
         guild_was_unread: i.guildUnread,
         guild_mention_count: i.guildMentionCount,
-        guild_is_muted: b.ZP.isMuted(t.guild_id),
-        guild_resolved_unread_setting: b.ZP.resolveGuildUnreadSetting(n),
-        guild_preset: (0, o.gs)(b.ZP.resolveGuildUnreadSetting(n), b.ZP.getMessageNotifications(t.guild_id)),
+        guild_is_muted: T.ZP.isMuted(t.guild_id),
+        guild_resolved_unread_setting: T.ZP.resolveGuildUnreadSetting(n),
+        guild_preset: (0, o.gs)(T.ZP.resolveGuildUnreadSetting(n), T.ZP.getMessageNotifications(t.guild_id)),
         parent_id: t.parent_id,
         parent_channel_type: t.parentChannelThreadType,
         has_pending_member_action: (0, s.P)(t.guild_id, e),

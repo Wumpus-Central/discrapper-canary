@@ -1,77 +1,77 @@
-n.d(t, {
-    Z: () => f,
-    j: () => d
+i.d(t, {
+    Z: () => d,
+    j: () => m
 });
-var i = n(200651);
-n(192379);
-var r = n(913527),
-    a = n.n(r),
-    s = n(481060),
-    o = n(925329),
-    l = n(388032),
-    u = n(319900);
-function c(e) {
-    let { application: t, timestamp: n } = e;
-    return (0, i.jsxs)(i.Fragment, {
+var n = i(200651);
+i(192379);
+var a = i(913527),
+    l = i.n(a),
+    r = i(481060),
+    s = i(925329),
+    o = i(388032),
+    c = i(969148);
+function u(e) {
+    let { application: t, timestamp: i } = e;
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, i.jsx)(o.Z, {
-                size: o.Z.Sizes.LARGE,
+            (0, n.jsx)(s.Z, {
+                size: s.Z.Sizes.LARGE,
                 game: t
             }),
-            (0, i.jsxs)('div', {
-                className: u.textContainer,
+            (0, n.jsxs)('div', {
+                className: c.textContainer,
                 children: [
-                    (0, i.jsx)(s.Text, {
-                        className: u.timestamp,
+                    (0, n.jsx)(r.Text, {
+                        className: c.timestamp,
                         variant: 'text-xs/medium',
                         color: 'text-muted',
-                        children: a()(n).format('LLLL')
+                        children: l()(i).format('LLLL')
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, n.jsx)(r.Text, {
                         variant: 'text-md/normal',
                         color: 'interactive-active',
-                        children: l.intl.format(l.t.J3s8JC, { applicationName: t.name })
+                        children: o.intl.format(o.t.J3s8JC, { applicationName: t.name })
                     })
                 ]
             })
         ]
     });
 }
-function d(e) {
-    let { application: t, timestamp: n, children: r } = e;
-    return (0, i.jsx)(s.ua7, {
+function m(e) {
+    let { application: t, timestamp: i, children: a } = e;
+    return (0, n.jsx)(r.ua7, {
         hideOnClick: !0,
         position: 'top',
-        'aria-label': l.intl.string(l.t['5nMcv7']),
-        tooltipClassName: u.gameMessageTooltip,
-        tooltipContentClassName: u.gameMessageTooltipContent,
-        text: (0, i.jsx)(c, {
+        'aria-label': o.intl.string(o.t['5nMcv7']),
+        tooltipClassName: c.gameMessageTooltip,
+        tooltipContentClassName: c.gameMessageTooltipContent,
+        text: (0, n.jsx)(u, {
             application: t,
-            timestamp: n
+            timestamp: i
         }),
         children: (e) =>
-            (0, i.jsx)(s.P3F, {
+            (0, n.jsx)(r.P3F, {
                 tag: 'span',
                 ...e,
-                children: r
+                children: a
             })
     });
 }
-function f(e) {
-    let { application: t, timestamp: n, compact: r, children: a } = e;
-    return (0, i.jsxs)(d, {
+function d(e) {
+    let { application: t, timestamp: i, compact: a, children: l } = e;
+    return (0, n.jsxs)(m, {
         application: t,
-        timestamp: n,
+        timestamp: i,
         children: [
-            r
+            a
                 ? null
-                : (0, i.jsx)(s.iWm, {
-                      className: u.gameIcon,
+                : (0, n.jsx)(r.iWm, {
+                      className: c.gameIcon,
                       size: 'custom',
                       width: 14,
                       height: 14
                   }),
-            a
+            l
         ]
     });
 }

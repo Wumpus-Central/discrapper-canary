@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(757143), n(47120);
+n.d(t, { Z: () => L }), n(757143), n(47120);
 var i,
     r = n(442837),
     a = n(377108),
@@ -46,10 +46,10 @@ let c = {
 function I(e) {
     _ = e.analyticsID;
 }
-function b(e) {
+function T(e) {
     '' === (p = e.query) && ((h = ''), (m = []), (v = []));
 }
-function T(e) {
+function b(e) {
     switch (e) {
         case d.FIXED_HEIGHT_MP4:
         case d.FIXED_HEIGHT_SMALL_MP4:
@@ -83,7 +83,7 @@ function A(e) {
                 gifSrc: S(r),
                 url: s,
                 id: o,
-                format: T(E) ? a.EO.VIDEO : a.EO.IMAGE
+                format: b(E) ? a.EO.VIDEO : a.EO.IMAGE
             };
         }));
 }
@@ -148,9 +148,9 @@ class D extends (i = r.ZP.Store) {
     }
 }
 u(D, 'displayName', 'GIFPickerViewStore');
-let x = new D(s.Z, {
+let L = new D(s.Z, {
     GIF_PICKER_INITIALIZE: I,
-    GIF_PICKER_QUERY: b,
+    GIF_PICKER_QUERY: T,
     GIF_PICKER_QUERY_SUCCESS: A,
     GIF_PICKER_QUERY_FAILURE: N,
     GIF_PICKER_TRENDING_FETCH_SUCCESS: C,

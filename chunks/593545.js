@@ -11,8 +11,8 @@ var i = n(200651),
     f = n(259580),
     _ = n(424218),
     p = n(388032),
-    h = n(454231),
-    m = n(763971);
+    h = n(373989),
+    m = n(595468);
 function g(e) {
     var t;
     let n = 'utf-8',
@@ -142,7 +142,7 @@ function I(e) {
         ]
     });
 }
-function b(e) {
+function T(e) {
     let { language: t, setLanguage: n } = e;
     return (0, i.jsx)(l.yRy, {
         position: 'left',
@@ -189,7 +189,7 @@ function b(e) {
             })
     });
 }
-function T(e) {
+function b(e) {
     return (0, i.jsx)(l.ua7, {
         text: p.intl.string(p.t['0PQYk5']),
         children: (t) =>
@@ -222,7 +222,7 @@ function S(e) {
     C && u && A > N ? (R = '\n...') : C || (R = '...'), '' !== R && (C ? (R += ' ' + p.intl.formatToPlainString(p.t.DQnFp6, { lines: A - N })) : (R += ' ' + p.intl.formatToPlainString(p.t['1+gGcH'], { formattedBytes: (0, _.IC)(g) })));
     let O = (null == S ? void 0 : S.slice(0, N).join('\n')) + R,
         D = (0, c.yx)(O),
-        x = u || N < A;
+        L = u || N < A;
     return (0, i.jsxs)('div', {
         className: s()(E, h.container),
         children: [
@@ -241,7 +241,7 @@ function S(e) {
                 className: h.footer,
                 variant: 'text-sm/normal',
                 children: [
-                    x
+                    L
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(y, {
@@ -250,7 +250,7 @@ function S(e) {
                                       isWholeFile: C,
                                       numLines: A
                                   }),
-                                  (0, i.jsx)(T, {
+                                  (0, i.jsx)(b, {
                                       url: n,
                                       fileName: r,
                                       fileSize: a,
@@ -267,7 +267,7 @@ function S(e) {
                         fileName: r,
                         fileSize: a
                     }),
-                    (0, i.jsx)(b, {
+                    (0, i.jsx)(T, {
                         language: f,
                         setLanguage: m
                     })
@@ -311,7 +311,7 @@ function A(e) {
                                 fileName: n,
                                 fileSize: a
                             }),
-                            (0, i.jsx)(b, {
+                            (0, i.jsx)(T, {
                                 language: d,
                                 setLanguage: f
                             })

@@ -6,7 +6,7 @@ var r = n(481060),
 async function s(e) {
     let t = await (0, r.ZDy)(
         async () => {
-            let { default: t } = await Promise.all([n.e('8739'), n.e('57650')]).then(n.bind(n, 677012));
+            let { default: t } = await Promise.all([n.e('8739'), n.e('60301')]).then(n.bind(n, 677012));
             return (n) =>
                 (0, i.jsx)(t, {
                     ...n,

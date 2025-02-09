@@ -28,7 +28,7 @@ var i = n(200651),
     y = n(223021),
     Z = n(981631),
     R = n(388032),
-    L = n(507304);
+    L = n(562797);
 function P(e) {
     let { width: t = 6, height: n = 10, color: l = 'currentColor', className: a, foreground: r } = e;
     return (0, i.jsx)('svg', {

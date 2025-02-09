@@ -13,28 +13,28 @@ var i = n(200651),
     g = n(442550),
     m = n(297781),
     f = n(371991),
-    v = n(656709),
-    Z = n(561308),
+    _ = n(656709),
+    v = n(561308),
     x = n(593481),
-    S = n(371651),
-    E = n(703656),
-    C = n(199902),
-    y = n(592125),
-    N = n(158776),
-    I = n(594174),
-    _ = n(237997),
-    j = n(5192),
-    T = n(145597),
+    Z = n(371651),
+    S = n(703656),
+    E = n(199902),
+    C = n(592125),
+    I = n(158776),
+    y = n(594174),
+    N = n(237997),
+    T = n(5192),
+    b = n(145597),
     O = n(312839),
-    k = n(981631),
-    M = n(701488),
-    b = n(987650),
-    P = n(388032),
-    w = n(522634);
+    j = n(981631),
+    k = n(701488),
+    M = n(987650),
+    w = n(388032),
+    P = n(78868);
 function R(e) {
     let { game: t, trackClick: n, onDismissClick: l } = e,
         a = (0, h.q)(t.id),
-        d = (0, r.e7)([_.Z], () => _.Z.showInviteNotification),
+        d = (0, r.e7)([N.Z], () => N.Z.showInviteNotification),
         u = s.useCallback(
             (e) => {
                 e.stopPropagation(), n(d ? 'muted' : 'unmuted'), c.Z.setShowGameInviteNotification(!d);
@@ -42,19 +42,19 @@ function R(e) {
             [d, n]
         );
     if (null == a) return null;
-    let p = a.getIconURL(M.Si.LARGE);
+    let p = a.getIconURL(k.Si.LARGE);
     return (0, i.jsxs)('div', {
-        className: w.header,
+        className: P.header,
         children: [
             (0, i.jsxs)('div', {
-                className: w.headerLeft,
+                className: P.headerLeft,
                 children: [
                     (0, i.jsx)(g.f, {
                         src: p,
                         size: 16
                     }),
                     (0, i.jsx)(o.Text, {
-                        className: w.gameInfo,
+                        className: P.gameInfo,
                         variant: 'text-sm/semibold',
                         color: 'header-primary',
                         children: a.name
@@ -62,34 +62,34 @@ function R(e) {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: w.headerRight,
+                className: P.headerRight,
                 children: [
                     (0, i.jsx)(o.zxk, {
                         look: o.zxk.Looks.BLANK,
                         size: o.zxk.Sizes.NONE,
-                        className: w.muteButton,
+                        className: P.muteButton,
                         onClick: u,
                         children: d
                             ? (0, i.jsx)(o.Dkj, {
                                   size: 'xs',
                                   color: o.TVs.colors.WHITE,
-                                  className: w.muteIcon
+                                  className: P.muteIcon
                               })
                             : (0, i.jsx)(o.owu, {
                                   size: 'xs',
                                   color: o.TVs.colors.WHITE,
-                                  className: w.muteIcon
+                                  className: P.muteIcon
                               })
                     }),
                     (0, i.jsx)(o.zxk, {
                         look: o.zxk.Looks.BLANK,
                         size: o.zxk.Sizes.NONE,
                         onClick: l,
-                        className: w.dismissButton,
+                        className: P.dismissButton,
                         children: (0, i.jsx)(o.CTb, {
                             size: 'xs',
                             color: o.TVs.colors.WHITE,
-                            className: w.dismissIcon
+                            className: P.dismissIcon
                         })
                     })
                 ]
@@ -99,15 +99,15 @@ function R(e) {
 }
 function D(e) {
     let { entry: t, idx: n } = e,
-        l = (0, r.e7)([I.default], () => I.default.getUser(t.author_id)),
-        h = (0, Z.kr)(t),
+        l = (0, r.e7)([y.default], () => y.default.getUser(t.author_id)),
+        h = (0, v.kr)(t),
         g = h ? o.TVs.colors.TEXT_POSITIVE : o.TVs.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
-        [x, S] = s.useState('unsent'),
-        [T, O] = s.useState(!1),
-        M = (0, r.e7)([_.Z], () => _.Z.customInviteMessage),
-        b = (0, r.e7)([C.Z], () => (null != l ? C.Z.getAnyStreamForUser(l.id) : null), [l]),
+        [x, Z] = s.useState('unsent'),
+        [b, O] = s.useState(!1),
+        k = (0, r.e7)([N.Z], () => N.Z.customInviteMessage),
+        M = (0, r.e7)([E.Z], () => (null != l ? E.Z.getAnyStreamForUser(l.id) : null), [l]),
         { isMobileOnline: R, status: D } = (0, r.cj)(
-            [N.Z],
+            [I.Z],
             () =>
                 null == l
                     ? {
@@ -115,8 +115,8 @@ function D(e) {
                           status: void 0
                       }
                     : {
-                          isMobileOnline: N.Z.isMobileOnline(l.id),
-                          status: N.Z.getStatus(l.id)
+                          isMobileOnline: I.Z.isMobileOnline(l.id),
+                          status: I.Z.getStatus(l.id)
                       },
             [l]
         );
@@ -131,26 +131,26 @@ function D(e) {
                 e.stopPropagation();
                 try {
                     var i;
-                    S('sending');
+                    Z('sending');
                     let e = await d.Z.getOrEnsurePrivateChannel(l.id),
-                        s = null !== (i = y.Z.getChannel(e)) && void 0 !== i ? i : null;
+                        s = null !== (i = C.Z.getChannel(e)) && void 0 !== i ? i : null;
                     a()(null != s, 'Send channel must be defined'),
-                        (0, E.uL)(k.Z5c.CHANNEL(s.guild_id, s.id)),
-                        await (0, v.p)({
+                        (0, S.uL)(j.Z5c.CHANNEL(s.guild_id, s.id)),
+                        await (0, _.p)({
                             channel: s,
-                            content: null != M ? M : P.intl.string(P.t.DwAcMz),
+                            content: null != k ? k : w.intl.string(w.t.DwAcMz),
                             entry: t,
                             whenReady: !0
                         }),
-                        c.Z.track(k.rMx.OVERLAY_GAME_INVITE_SENT, {
+                        c.Z.track(j.rMx.OVERLAY_GAME_INVITE_SENT, {
                             target_user_id: l.id,
                             target_content_entry_id: t.id,
                             target_index: n,
-                            sent_custom_message: null != M
+                            sent_custom_message: null != k
                         }),
-                        S('sent');
+                        Z('sent');
                 } catch (e) {
-                    S('unsent');
+                    Z('unsent');
                 }
             }
         },
@@ -158,33 +158,33 @@ function D(e) {
             var e;
             if (null == l) return;
             let t = await d.Z.getOrEnsurePrivateChannel(l.id),
-                n = null !== (e = y.Z.getChannel(t)) && void 0 !== e ? e : null;
-            a()(null != n, 'Send channel must be defined'), (0, E.uL)(k.Z5c.CHANNEL(n.guild_id, n.id));
+                n = null !== (e = C.Z.getChannel(t)) && void 0 !== e ? e : null;
+            a()(null != n, 'Send channel must be defined'), (0, S.uL)(j.Z5c.CHANNEL(n.guild_id, n.id));
         };
     return null == l
         ? null
         : (0, i.jsxs)('div', {
-              className: w.userRow,
+              className: P.userRow,
               children: [
                   (0, i.jsx)(u.Z, {
-                      className: w.avatarContainer,
+                      className: P.avatarContainer,
                       user: l,
                       isMobile: R,
                       status: D
                   }),
                   (0, i.jsxs)('div', {
-                      className: w.userInfo,
+                      className: P.userInfo,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: w.usernameWrapper,
+                              className: P.usernameWrapper,
                               children: [
                                   (0, i.jsx)(o.Text, {
-                                      className: w.username,
+                                      className: P.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: j.ZP.getName(void 0, void 0, l)
+                                      children: T.ZP.getName(void 0, void 0, l)
                                   }),
-                                  null != b && (0, i.jsx)(p.ZP, {})
+                                  null != M && (0, i.jsx)(p.ZP, {})
                               ]
                           }),
                           (0, i.jsxs)(m.m7, {
@@ -203,17 +203,17 @@ function D(e) {
                       ]
                   }),
                   (0, i.jsx)('div', {
-                      className: w.inviteButtonWrapper,
+                      className: P.inviteButtonWrapper,
                       children: (0, i.jsx)(o.zxk, {
                           submitting: 'sending' === x,
-                          onClick: T ? L : A,
-                          className: w.inviteButton,
+                          onClick: b ? L : A,
+                          className: P.inviteButton,
                           color: o.Ttl.PRIMARY,
                           look: 'sent' === x ? o.iLD.OUTLINED : o.iLD.FILLED,
                           size: o.PhG.MAX,
                           children:
                               'sent' === x
-                                  ? T
+                                  ? b
                                       ? (0, i.jsx)(o.kBi, { size: 'sm' })
                                       : (0, i.jsx)(o.kSu, {
                                             size: 'sm',
@@ -227,15 +227,15 @@ function D(e) {
 }
 function A(e) {
     let { onCancel: t, onSave: n } = e,
-        l = (0, r.e7)([_.Z], () => _.Z.customInviteMessage),
+        l = (0, r.e7)([N.Z], () => N.Z.customInviteMessage),
         a = s.createRef(),
-        [d, u] = s.useState(null != l ? l : P.intl.string(P.t.DwAcMz)),
+        [d, u] = s.useState(null != l ? l : w.intl.string(w.t.DwAcMz)),
         [h, p] = s.useState(d.length),
         g = (e) => {
             e.stopPropagation(), c.Z.setInviteMessage(d), n(e);
         };
     return (0, i.jsxs)('div', {
-        className: w.editMessageContainer,
+        className: P.editMessageContainer,
         children: [
             (0, i.jsx)(o.oil, {
                 autoFocus: !0,
@@ -261,27 +261,27 @@ function A(e) {
                 value: d
             }),
             (0, i.jsxs)('div', {
-                className: w.editMessageButtons,
+                className: P.editMessageButtons,
                 children: [
                     (0, i.jsxs)(o.Text, {
-                        className: w.charCount,
+                        className: P.charCount,
                         variant: 'text-xs/normal',
                         color: 'header-muted',
                         children: [h, '/', 99]
                     }),
                     (0, i.jsx)(o.zxk, {
                         onClick: t,
-                        className: w.cancelButton,
+                        className: P.cancelButton,
                         look: o.zxk.Looks.BLANK,
                         size: o.zxk.Sizes.TINY,
-                        children: P.intl.string(P.t['ETE/oK'])
+                        children: w.intl.string(w.t['ETE/oK'])
                     }),
                     (0, i.jsx)(o.zxk, {
                         onClick: g,
                         color: o.zxk.Colors.PRIMARY,
                         look: o.zxk.Looks.FILLED,
                         size: o.zxk.Sizes.TINY,
-                        children: P.intl.string(P.t.R3BPHx)
+                        children: w.intl.string(w.t.R3BPHx)
                     })
                 ]
             })
@@ -291,14 +291,14 @@ function A(e) {
 function L(e) {
     let { entries: t } = e,
         n = t.slice(0, 5),
-        l = (0, r.e7)([_.Z], () => _.Z.customInviteMessage),
-        a = P.intl.formatToPlainString(P.t['5uzKGB'], { inviteMessage: null != l ? l : P.intl.string(P.t.DwAcMz) }),
+        l = (0, r.e7)([N.Z], () => N.Z.customInviteMessage),
+        a = w.intl.formatToPlainString(w.t['5uzKGB'], { inviteMessage: null != l ? l : w.intl.string(w.t.DwAcMz) }),
         [d, u] = s.useState(!1);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(x.iz, {}),
             (0, i.jsxs)(o.Text, {
-                className: w.helpText,
+                className: P.helpText,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
                 children: [
@@ -307,7 +307,7 @@ function L(e) {
                         onClick: (e) => {
                             e.stopPropagation(), u(!d), c.Z.setInstanceLocked(d);
                         },
-                        className: w.editButton,
+                        className: P.editButton,
                         look: o.zxk.Looks.BLANK,
                         size: o.zxk.Sizes.NONE,
                         children: (0, i.jsx)(o.vdY, {
@@ -341,7 +341,7 @@ function L(e) {
     });
 }
 function z(e, t) {
-    let { trackView: n, trackClick: s } = (0, O.R)(b.n0.SendGameInvitesNotification, { notif_type: b.n0.SendGameInvitesNotification });
+    let { trackView: n, trackClick: s } = (0, O.R)(M.n0.SendGameInvitesNotification, { notif_type: M.n0.SendGameInvitesNotification });
     return (
         a()(t.length > 0, 'Some entries must be present'),
         {
@@ -355,13 +355,13 @@ function z(e, t) {
             body: (0, i.jsx)(L, { entries: t }),
             onNotificationShow: () => {
                 n(),
-                    c.Z.track(k.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
+                    c.Z.track(j.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
                         user_ids: t.map((e) => e.author_id),
                         entry_ids: t.map((e) => e.id)
                     });
             },
             onNotificationClick: (e, t) => {
-                e.stopPropagation(), s('unlock'), S.Z.isOverlayOOPEnabledForPid((0, T.QF)()) ? c.Z.setInputLocked(!1, (0, T.QF)()) : c.Z.setInstanceLocked(!1);
+                e.stopPropagation(), s('unlock'), Z.Z.isOverlayOOPEnabledForPid((0, b.QF)()) ? c.Z.setInputLocked(!1, (0, b.QF)()) : c.Z.setInstanceLocked(!1);
             },
             onDismissClick: () => {
                 s('dismiss');

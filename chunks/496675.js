@@ -18,8 +18,8 @@ var i,
     v = n(592125),
     y = n(271383),
     I = n(430824),
-    b = n(594174),
-    T = n(981631),
+    T = n(594174),
+    b = n(981631),
     S = n(478743);
 function A(e, t, n) {
     return (
@@ -42,7 +42,7 @@ function D(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = N[e];
     if (null != n) return n;
-    let i = b.default.getCurrentUser();
+    let i = T.default.getCurrentUser();
     if (null == i) return E.Hn;
     let r = I.Z.getGuild(e);
     return null == r
@@ -53,10 +53,10 @@ function D(e) {
               checkElevated: t
           }));
 }
-function x(e) {
+function L(e) {
     var t;
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        i = b.default.getCurrentUser();
+        i = T.default.getCurrentUser();
     if (null == i) return E.Hn;
     let r = v.Z.getChannel(e);
     if (null == r) return E.Hn;
@@ -70,35 +70,35 @@ function x(e) {
               checkElevated: n
           });
 }
-function L(e) {
+function x(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = C[e];
-    return null != n ? n : (C[e] = x(e, t));
+    return null != n ? n : (C[e] = L(e, t));
 }
-function P(e) {
+function w(e) {
     if (null != e) {
         var t;
         R[e] = (null !== (t = R[e]) && void 0 !== t ? t : 0) + 1;
     }
 }
-function w() {
+function P() {
     for (let e in ((N = {}), (C = {}), R)) R[e] += 1;
     O += 1;
 }
 function M() {
-    w();
+    P();
 }
 function k() {
     J();
 }
 function U() {
-    w();
+    P();
 }
 function G(e) {
     var t;
     let { user: n } = e;
-    if (n.id !== (null === (t = b.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
-    w();
+    if (n.id !== (null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
+    P();
 }
 function B(e) {
     let {
@@ -106,13 +106,13 @@ function B(e) {
         } = e,
         n = v.Z.getChannel(t);
     if (null == n || n.isPrivate()) return !1;
-    let i = b.default.getCurrentUser(),
+    let i = T.default.getCurrentUser(),
         r = E.uB({
             user: i,
             context: n
         });
     if (C[n.id] === r) return !1;
-    (C[n.id] = r), (O += 1), P(n.getGuildId());
+    (C[n.id] = r), (O += 1), w(n.getGuildId());
 }
 function Z(e) {
     let { channels: t } = e,
@@ -120,12 +120,12 @@ function Z(e) {
     for (let { id: e } of t) {
         let t = v.Z.getChannel(e);
         if (null == t || t.isPrivate()) continue;
-        let i = b.default.getCurrentUser(),
+        let i = T.default.getCurrentUser(),
             r = E.uB({
                 user: i,
                 context: t
             });
-        C[t.id] !== r && ((C[t.id] = r), P(t.getGuildId()), (n = !0));
+        C[t.id] !== r && ((C[t.id] = r), w(t.getGuildId()), (n = !0));
     }
     return !!n && ((O += 1), n);
 }
@@ -134,10 +134,10 @@ function F() {
 }
 function V(e) {
     var t;
-    return (null === (t = b.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (P(e.guildId), !0);
+    return (null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (w(e.guildId), !0);
 }
 function j(e) {
-    return !!(0, _.s)(e) && (P(e.guildId), !0);
+    return !!(0, _.s)(e) && (w(e.guildId), !0);
 }
 function H(e) {
     let { messages: t } = e;
@@ -149,7 +149,7 @@ function Y(e) {
 }
 function W(e) {
     let { channel: t } = e;
-    return delete C[t.id], (O += 1), P(t.guild_id), !1;
+    return delete C[t.id], (O += 1), w(t.guild_id), !1;
 }
 function K(e) {
     let { guildId: t } = e;
@@ -159,13 +159,13 @@ function K(e) {
         delete C[e.id];
     }),
         (O += 1),
-        P(t);
+        w(t);
 }
 function z(e) {
     let { instance: t } = e,
         n = v.Z.getChannel(t.channel_id);
     if (null == n) return !1;
-    let i = b.default.getCurrentUser(),
+    let i = T.default.getCurrentUser(),
         r = E.uB({
             user: i,
             context: n
@@ -181,7 +181,7 @@ function q(e) {
         delete C[e.id];
     }),
         (O += 1),
-        P(t);
+        w(t);
 }
 function Q(e, t, n, i) {
     let r = E.Hn;
@@ -190,11 +190,11 @@ function Q(e, t, n, i) {
             let r = v.Z.getChannel(e.parent_id);
             return null == r ? E.Hn : E.Og(e, Q(r, t, n, i), f.Z.hasJoined(e.id));
         }
-        r = L(e.id);
+        r = x(e.id);
     } else e instanceof h.ZP && (r = D(e.id));
     return void 0 !== t || void 0 !== n || void 0 !== i
         ? E.uB({
-              user: b.default.getCurrentUser(),
+              user: T.default.getCurrentUser(),
               context: e,
               overwrites: t,
               roles: n,
@@ -205,29 +205,29 @@ function Q(e, t, n, i) {
 }
 class X extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(b.default, I.Z, v.Z, y.ZP, f.Z, d.Z, u.Z);
+        this.waitFor(T.default, I.Z, v.Z, y.ZP, f.Z, d.Z, u.Z);
     }
     getChannelPermissions(e) {
-        return p.Ec.has(e.type) ? x(e.id) : L(e.id);
+        return p.Ec.has(e.type) ? L(e.id) : x(e.id);
     }
     getGuildPermissions(e) {
         return D(e.id);
     }
     getGuildPermissionProps(e) {
-        let t = b.default.getCurrentUser();
+        let t = T.default.getCurrentUser();
         return {
-            canManageGuild: this.can(T.Plq.MANAGE_GUILD, e),
-            canManageChannels: this.can(T.Plq.MANAGE_CHANNELS, e),
-            canManageRoles: this.can(T.Plq.MANAGE_ROLES, e),
-            canManageBans: this.can(T.Plq.BAN_MEMBERS, e),
-            canManageNicknames: this.can(T.Plq.MANAGE_NICKNAMES, e),
-            canManageGuildExpressions: this.can(T.Plq.MANAGE_GUILD_EXPRESSIONS, e) || this.can(T.Plq.CREATE_GUILD_EXPRESSIONS, e),
-            canViewAuditLog: this.can(T.Plq.VIEW_AUDIT_LOG, e),
-            canViewAuditLogV2: this.can(T.Plq.VIEW_AUDIT_LOG, e),
-            canManageWebhooks: this.can(T.Plq.MANAGE_WEBHOOKS, e),
-            canViewGuildAnalytics: this.can(T.Plq.VIEW_GUILD_ANALYTICS, e),
+            canManageGuild: this.can(b.Plq.MANAGE_GUILD, e),
+            canManageChannels: this.can(b.Plq.MANAGE_CHANNELS, e),
+            canManageRoles: this.can(b.Plq.MANAGE_ROLES, e),
+            canManageBans: this.can(b.Plq.BAN_MEMBERS, e),
+            canManageNicknames: this.can(b.Plq.MANAGE_NICKNAMES, e),
+            canManageGuildExpressions: this.can(b.Plq.MANAGE_GUILD_EXPRESSIONS, e) || this.can(b.Plq.CREATE_GUILD_EXPRESSIONS, e),
+            canViewAuditLog: this.can(b.Plq.VIEW_AUDIT_LOG, e),
+            canViewAuditLogV2: this.can(b.Plq.VIEW_AUDIT_LOG, e),
+            canManageWebhooks: this.can(b.Plq.MANAGE_WEBHOOKS, e),
+            canViewGuildAnalytics: this.can(b.Plq.VIEW_GUILD_ANALYTICS, e),
             canAccessMembersPage: this.canAccessMemberSafetyPage(e),
-            isGuildAdmin: this.can(T.Plq.ADMINISTRATOR, e),
+            isGuildAdmin: this.can(b.Plq.ADMINISTRATOR, e),
             isOwner: null != t && e.isOwner(t),
             isOwnerWithRequiredMfaLevel: null != t && e.isOwnerWithRequiredMfaLevel(t),
             guild: e
@@ -258,24 +258,24 @@ class X extends (i = o.ZP.Store) {
     canManageUser(e, t, n) {
         let i = t instanceof m.Z ? t.id : t;
         if (n.isOwner(i)) return !1;
-        let r = b.default.getCurrentUser();
+        let r = T.default.getCurrentUser();
         if (!this.can(e, n)) return !1;
         let a = null != r ? E.e9(n, r.id) : void 0,
             s = E.e9(n, i);
         return null != r && E.r6(n, r.id, a, s);
     }
     getHighestRole(e) {
-        let t = b.default.getCurrentUser();
+        let t = T.default.getCurrentUser();
         return null != t ? E.e9(e, t.id) : null;
     }
     isRoleHigher(e, t, n) {
-        let i = b.default.getCurrentUser(),
+        let i = T.default.getCurrentUser(),
             r = u.Z.isViewingRoles(e.id);
         return E.r6(e, r ? void 0 : null == i ? void 0 : i.id, t, n);
     }
     canImpersonateRole(e, t) {
         let n = this.getHighestRole(e),
-            i = this.can(T.Plq.MANAGE_GUILD, e) && this.can(T.Plq.MANAGE_ROLES, e),
+            i = this.can(b.Plq.MANAGE_GUILD, e) && this.can(b.Plq.MANAGE_ROLES, e),
             r = this.isRoleHigher(e, n, t);
         return i && (r || t.id === (null == n ? void 0 : n.id));
     }

@@ -5,22 +5,22 @@ var i = n(200651),
     s = n(74538),
     o = n(28546),
     l = n(98528),
-    u = n(695606);
+    u = n(88076);
 let c = 20,
     d = r.forwardRef(function (e, t) {
-        let { categories: n, store: d, hasSearchResults: f, listPadding: _, renderRow: p, renderSection: h, renderSectionHeader: m, renderSectionFooter: g, renderInspector: E, renderEmptySearchState: v, rowCount: y, rowCountBySection: I, rowHeight: b, sectionHeaderHeight: T, sectionFooterHeight: S, renderUpsell: A, setShowUpsell: N } = e,
+        let { categories: n, store: d, hasSearchResults: f, listPadding: _, renderRow: p, renderSection: h, renderSectionHeader: m, renderSectionFooter: g, renderInspector: E, renderEmptySearchState: v, rowCount: y, rowCountBySection: I, rowHeight: T, sectionHeaderHeight: b, sectionFooterHeight: S, renderUpsell: A, setShowUpsell: N } = e,
             C = r.useRef(!1),
             R = r.useRef(null),
             O = (0, o.Iu)((e) => e.searchQuery),
             D = d.useStore((e) => e.activeCategoryIndex),
-            x = n.map((e) => ((0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
-            L = (0, l.Uf)({
+            L = n.map((e) => ((0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
+            x = (0, l.Uf)({
                 listRef: R,
                 searchQuery: O,
-                nitroLockedSectionStates: x,
+                nitroLockedSectionStates: L,
                 setShowUpsell: N
             }),
-            P = (0, l.Qs)({
+            w = (0, l.Qs)({
                 activeCategoryIndex: D,
                 isScrolling: C,
                 listRef: R,
@@ -28,11 +28,11 @@ let c = 20,
                 scrollOffset: c,
                 searchQuery: O
             }),
-            w = r.useCallback(
+            P = r.useCallback(
                 (e) => {
-                    L(e), P(e);
+                    x(e), w(e);
                 },
-                [L, P]
+                [x, w]
             );
         return (
             (0, l.Xs)({
@@ -91,15 +91,15 @@ let c = 20,
                         : (0, i.jsx)(a.Z, {
                               role: 'none presentation',
                               listPadding: _,
-                              onScroll: w,
+                              onScroll: P,
                               renderRow: p,
                               renderSection: h,
                               renderSectionHeader: m,
                               renderSectionFooter: g,
                               rowCount: y,
                               rowCountBySection: I,
-                              rowHeight: b,
-                              sectionHeaderHeight: T,
+                              rowHeight: T,
+                              sectionHeaderHeight: b,
                               sectionFooterHeight: S,
                               stickyHeaders: !0,
                               ref: R

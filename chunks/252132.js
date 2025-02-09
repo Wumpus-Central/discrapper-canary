@@ -3,7 +3,7 @@ var i = n(200651);
 n(192379);
 var l = n(27457),
     a = n(131951),
-    r = n(518063);
+    r = n(573080);
 function s(e) {
     let { aspectRatio: t, blocked: n, ignored: s, channel: o, className: c, focused: d, children: u, inCall: h, inPopout: p, noBorder: m, onClick: f, onContextMenu: g, onDoubleClick: _, onVideoResize: C, paused: x, pulseSpeakingIndicator: v, participant: E, width: I, ...b } = e,
         Z = a.Z.getVideoComponent();

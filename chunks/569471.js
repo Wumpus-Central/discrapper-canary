@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(47120), n(789020);
+n.d(t, { Z: () => L }), n(47120), n(789020);
 var i,
     r = n(392711),
     a = n.n(r),
@@ -78,11 +78,11 @@ function I(e) {
     let { guild: t } = e;
     h(t.id), m(t);
 }
-function b(e) {
+function T(e) {
     let { guild: t } = e;
     h(t.id);
 }
-function T(e) {
+function b(e) {
     let { channel: t } = e;
     g(t);
 }
@@ -187,8 +187,8 @@ let D = new O(o.Z, {
         CONNECTION_OPEN: v,
         OVERLAY_INITIALIZE: y,
         GUILD_CREATE: I,
-        GUILD_DELETE: b,
-        THREAD_CREATE: T,
+        GUILD_DELETE: T,
+        THREAD_CREATE: b,
         THREAD_LIST_SYNC: S,
         SEARCH_FINISH: S,
         MOD_VIEW_SEARCH_FINISH: S,
@@ -199,4 +199,4 @@ let D = new O(o.Z, {
         THREAD_MEMBER_LOCAL_UPDATE: C,
         THREAD_MEMBERS_UPDATE: R
     }),
-    x = D;
+    L = D;

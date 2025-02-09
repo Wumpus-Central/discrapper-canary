@@ -50,8 +50,8 @@ let m = new o.h(
     v = new Set(),
     y = {},
     I = {},
-    b = {},
     T = {},
+    b = {},
     S = new Map();
 function A(e) {
     return m.values(f(e));
@@ -64,7 +64,7 @@ function C(e) {
     g.set(e.id, e);
 }
 function R() {
-    m.clear(), g.clear(), (E = {}), v.clear(), (y = {}), (I = {}), (b = {}), (T = {}), S.clear();
+    m.clear(), g.clear(), (E = {}), v.clear(), (y = {}), (I = {}), (T = {}), (b = {}), S.clear();
 }
 function O(e) {
     let { settings: t } = e;
@@ -74,20 +74,20 @@ function D(e) {
     let { guildId: t } = e;
     for (let e of ((E[t] = 1), A(t))) for (let t of (m.delete(e.id), e.subscription_listings_ids)) g.delete(t);
 }
-function x(e) {
+function L(e) {
     let { guildId: t, groupListings: n, settings: i, subscriptionTrials: r } = e;
     for (let e of ((E[t] = 2), n)) N(e);
     for (let e of ((y[t] = i), r)) I[e.id] = e;
 }
-function L(e) {
+function x(e) {
     let { guildId: t } = e;
     E[t] = 2;
 }
-function P(e) {
+function w(e) {
     let { listing: t } = e;
     N(t);
 }
-function w(e) {
+function P(e) {
     let { groupListingId: t } = e;
     m.delete(t);
 }
@@ -117,19 +117,19 @@ function Z(e) {
 }
 function F(e) {
     let { guildId: t } = e;
-    T[t] = 1;
+    b[t] = 1;
 }
 function V(e) {
     let { guildId: t, restrictions: n } = e;
-    (b[t] = n), (T[t] = 2);
+    (T[t] = n), (b[t] = 2);
 }
 function j(e) {
     let { guildId: t } = e;
-    (T[t] = 2), (b[t] = u.m);
+    (b[t] = 2), (T[t] = u.m);
 }
 function H(e) {
     let { guildId: t } = e;
-    T[t] = 0;
+    b[t] = 0;
 }
 let Y = [];
 class W extends (i = s.ZP.Store) {
@@ -169,11 +169,11 @@ class W extends (i = s.ZP.Store) {
         return I[e];
     }
     getMonetizationRestrictions(e) {
-        return b[e];
+        return T[e];
     }
     getMonetizationRestrictionsFetchState(e) {
         var t;
-        return null !== (t = T[e]) && void 0 !== t ? t : 0;
+        return null !== (t = b[e]) && void 0 !== t ? t : 0;
     }
     getApplicationIdForGuild(e) {
         return S.get(e);
@@ -184,10 +184,10 @@ let K = new W(l.Z, {
     CONNECTION_OPEN: R,
     GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: O,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS: D,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: x,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: L,
-    GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING: P,
-    GUILD_ROLE_SUBSCRIPTIONS_DELETE_GROUP_LISTING: w,
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: L,
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: x,
+    GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING: w,
+    GUILD_ROLE_SUBSCRIPTIONS_DELETE_GROUP_LISTING: P,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN: M,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: k,
     GUILD_ROLE_SUBSCRIPTIONS_CREATE_LISTING: U,

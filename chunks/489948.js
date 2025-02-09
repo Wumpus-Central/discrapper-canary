@@ -205,8 +205,8 @@ function I(e) {
     }
     return t.push(new E(255, 255, 255, 1)), t.reduce(v);
 }
-let b = '--__adaptive-focus-ring-color',
-    T = '--__adaptive-focus-ring-radius';
+let T = '--__adaptive-focus-ring-color',
+    b = '--__adaptive-focus-ring-radius';
 function S(e) {
     e !== i && (null == i || i.hide(), (i = e));
 }
@@ -298,8 +298,8 @@ class N {
             t = {
                 ...this.makePositionFromDOMRect(this.targetElement.getBoundingClientRect()),
                 zIndex: null != (e = this.zIndex) ? e : this.getNextZIndexForAncestry(this.targetAncestry),
-                [b]: y(n, this.themeOptions),
-                [T]: this.getBorderRadius(this.targetAncestry)
+                [T]: y(n, this.themeOptions),
+                [b]: this.getBorderRadius(this.targetAncestry)
             };
         }
         return t;
@@ -326,26 +326,26 @@ var O = function (e, t, n, i) {
     return !0;
 };
 let D = !1,
-    x,
-    L = {};
-function P() {
+    L,
+    x = {};
+function w() {
     if (!D) return;
     let e = null == i ? void 0 : i.getStyle();
-    null == e || O(e, L) ? null != x && cancelAnimationFrame(x) : ((L = e), null == i || i.invalidate()), (x = requestAnimationFrame(P));
+    null == e || O(e, x) ? null != L && cancelAnimationFrame(L) : ((x = e), null == i || i.invalidate()), (L = requestAnimationFrame(w));
 }
-let w = !1,
+let P = !1,
     M = {
         get ringsEnabled() {
-            return w;
+            return P;
         },
         setRingsEnabled(e) {
-            (w = e), null == i || i.invalidate();
+            (P = e), null == i || i.invalidate();
         },
         enableAnimationTracking() {
-            (D = !0), (x = requestAnimationFrame(P));
+            (D = !0), (L = requestAnimationFrame(w));
         },
         disableAnimationTracking() {
-            (D = !1), null != x && cancelAnimationFrame(x);
+            (D = !1), null != L && cancelAnimationFrame(L);
         }
     };
 var k = { exports: {} },
@@ -430,7 +430,7 @@ function H(e) {
         g = s.useContext(R),
         E = s.Children.only(_),
         { onBlur: v, onFocus: y, ...I } = E.props,
-        b = s.useMemo(
+        T = s.useMemo(
             () => ({
                 className: l,
                 offset: r
@@ -451,8 +451,8 @@ function H(e) {
         ),
         s.useEffect(() => {
             let e = null == o ? void 0 : o.current;
-            null == i || null == e || ((p.current = i), i ? g.showElement(e, b) : !1 === i && g.hide());
-        }, [i, b, g, o]),
+            null == i || null == e || ((p.current = i), i ? g.showElement(e, T) : !1 === i && g.hide());
+        }, [i, T, g, o]),
         j(() => {
             if (null != i) return;
             let e = null == a ? void 0 : a.current,
@@ -468,17 +468,17 @@ function H(e) {
             function r(e) {
                 if (null != n) {
                     if (e.currentTarget === e.target) {
-                        (p.current = !0), g.showElement(n, b);
+                        (p.current = !0), g.showElement(n, T);
                         return;
                     }
-                    m(!0), t && g.showElement(n, b);
+                    m(!0), t && g.showElement(n, T);
                 }
             }
             function s() {
                 g.hide(), (p.current = !1), m(!1);
             }
-        }, [t, b, i, g, a, o]);
-    let T = s.useCallback(
+        }, [t, T, i, g, a, o]);
+    let b = s.useCallback(
             (e) => {
                 g.hide(), (p.current = !1), m(!1), null == v || v(e);
             },
@@ -487,15 +487,15 @@ function H(e) {
         S = s.useCallback(
             (e) => {
                 let n = null == o ? void 0 : o.current;
-                e.currentTarget === e.target ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, b)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, b)), null == y || y(e);
+                e.currentTarget === e.target ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, T)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, T)), null == y || y(e);
             },
-            [o, t, y, g, b]
+            [o, t, y, g, T]
         );
     return n && null == a && null == i
         ? s.cloneElement(E, {
               ...I,
               className: d(I.className, p.current ? u : void 0, h ? c : void 0),
-              onBlur: T,
+              onBlur: b,
               onFocus: S
           })
         : E;

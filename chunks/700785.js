@@ -2,16 +2,16 @@ n.d(t, {
     BT: () => Z,
     Hn: () => y,
     Hu: () => G,
-    I0: () => x,
-    Og: () => P,
-    TP: () => b,
+    I0: () => L,
+    Og: () => w,
+    TP: () => T,
     Uu: () => F,
     e9: () => U,
     iJ: () => M,
-    o4: () => w,
+    o4: () => P,
     oz: () => V,
     r6: () => k,
-    uB: () => L,
+    uB: () => x,
     we: () => B,
     ym: () => C
 }),
@@ -35,8 +35,8 @@ var i = n(392711),
     v = n(981631);
 let y = a.vB(0),
     I = a.$e(...r().values(v.Plq)),
-    b = a.$e(v.Plq.CREATE_INSTANT_INVITE, v.Plq.CHANGE_NICKNAME, v.Plq.VIEW_CHANNEL, v.Plq.SEND_MESSAGES, v.Plq.EMBED_LINKS, v.Plq.ATTACH_FILES, v.Plq.READ_MESSAGE_HISTORY, v.Plq.MENTION_EVERYONE, v.Plq.USE_EXTERNAL_EMOJIS, v.Plq.USE_EXTERNAL_STICKERS, v.Plq.ADD_REACTIONS, v.Plq.CREATE_PUBLIC_THREADS, v.Plq.CREATE_PRIVATE_THREADS, v.Plq.SEND_MESSAGES_IN_THREADS, v.Plq.SEND_POLLS, v.Plq.CONNECT, v.Plq.SPEAK, v.Plq.USE_VAD, v.Plq.STREAM, v.Plq.USE_EMBEDDED_ACTIVITIES, v.Plq.USE_SOUNDBOARD, v.Plq.REQUEST_TO_SPEAK, v.Plq.USE_APPLICATION_COMMANDS, v.Plq.CREATE_GUILD_EXPRESSIONS, v.Plq.CREATE_EVENTS, v.Plq.USE_EXTERNAL_APPS),
-    T = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.READ_MESSAGE_HISTORY),
+    T = a.$e(v.Plq.CREATE_INSTANT_INVITE, v.Plq.CHANGE_NICKNAME, v.Plq.VIEW_CHANNEL, v.Plq.SEND_MESSAGES, v.Plq.EMBED_LINKS, v.Plq.ATTACH_FILES, v.Plq.READ_MESSAGE_HISTORY, v.Plq.MENTION_EVERYONE, v.Plq.USE_EXTERNAL_EMOJIS, v.Plq.USE_EXTERNAL_STICKERS, v.Plq.ADD_REACTIONS, v.Plq.CREATE_PUBLIC_THREADS, v.Plq.CREATE_PRIVATE_THREADS, v.Plq.SEND_MESSAGES_IN_THREADS, v.Plq.SEND_POLLS, v.Plq.CONNECT, v.Plq.SPEAK, v.Plq.USE_VAD, v.Plq.STREAM, v.Plq.USE_EMBEDDED_ACTIVITIES, v.Plq.USE_SOUNDBOARD, v.Plq.REQUEST_TO_SPEAK, v.Plq.USE_APPLICATION_COMMANDS, v.Plq.CREATE_GUILD_EXPRESSIONS, v.Plq.CREATE_EVENTS, v.Plq.USE_EXTERNAL_APPS),
+    b = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.READ_MESSAGE_HISTORY),
     S = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.SEND_MESSAGES, v.Plq.CONNECT, v.Plq.SPEAK, v.Plq.STREAM, v.Plq.USE_EMBEDDED_ACTIVITIES, v.Plq.USE_EXTERNAL_APPS, v.Plq.USE_EXTERNAL_EMOJIS, v.Plq.USE_EXTERNAL_SOUNDS, v.Plq.USE_EXTERNAL_STICKERS, v.Plq.USE_SOUNDBOARD, v.Plq.USE_VAD),
     A = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.READ_MESSAGE_HISTORY),
     N = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.READ_MESSAGE_HISTORY, v.Plq.CHANGE_NICKNAME),
@@ -67,7 +67,7 @@ function O(e, t, n, i) {
     return n;
 }
 function D(e) {
-    let { userId: t, member: n, guild: i, overwrites: r, roles: s, checkElevated: o = !0, excludeGuildPermissions: l = !1, lurkerPermissionsMask: u = T } = e;
+    let { userId: t, member: n, guild: i, overwrites: r, roles: s, checkElevated: o = !0, excludeGuildPermissions: l = !1, lurkerPermissionsMask: u = b } = e;
     if (l) return O(i.id, n, y, r);
     let d = (s =
             null != s
@@ -76,7 +76,7 @@ function D(e) {
                       ...s
                   }
                 : m.Z.getRoles(i.id))[i.getEveryoneRoleId()],
-        f = null != d ? d.permissions : b;
+        f = null != d ? d.permissions : T;
     if (null != n)
         for (let e = 0; e < n.roles.length; e++) {
             let t = s[n.roles[e]];
@@ -84,10 +84,10 @@ function D(e) {
         }
     return (f = a.e$(f, v.Plq.ADMINISTRATOR) ? I : O(i.id, n, f, r)), (c.Z.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (f = a.hX(f, u)), h.ZP.isCurrentUserGuest(i.id) && (f = a.hX(f, S)), R(f, i, t, o);
 }
-function x(e) {
+function L(e) {
     let t,
         { forceRoles: n, context: i, overwrites: r, roles: a, checkElevated: s = !0, excludeGuildPermissions: o } = e,
-        l = T;
+        l = b;
     if (i instanceof f.Sf) {
         var u;
         if (i.isScheduledForDeletion()) return y;
@@ -95,9 +95,9 @@ function x(e) {
             let e = p.Z.getChannel(i.parent_id);
             return null == e
                 ? y
-                : P(
+                : w(
                       i,
-                      x({
+                      L({
                           forceRoles: n,
                           context: e,
                           overwrites: r,
@@ -144,22 +144,22 @@ function x(e) {
         lurkerPermissionsMask: l
     });
 }
-function L(e) {
+function x(e) {
     var t, n, i;
     let r,
         { user: a, context: s, overwrites: o, roles: l, checkElevated: c = !0, excludeGuildPermissions: _ = !1 } = e;
     if (null == a) return y;
     let E = 'string' == typeof a ? a : a.id,
-        v = T;
+        v = b;
     if (s instanceof f.Sf) {
         if (s.isScheduledForDeletion()) return y;
         if (f.Ec.has(s.type)) {
             let e = p.Z.getChannel(s.parent_id);
             if (null == e || e.isScheduledForDeletion()) return y;
             let t = E === (null === (n = g.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && d.Z.hasJoined(s.id);
-            return P(
+            return w(
                 s,
-                L({
+                x({
                     user: a,
                     context: e,
                     overwrites: o,
@@ -183,10 +183,10 @@ function L(e) {
     } else (o = null != o ? o : {}), (r = s);
     if (null == r) return y;
     if (!(E === (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.Z.isViewingRoles(r.id)) && r.isOwner(E)) return R(I, r, E, c);
-    let b = h.ZP.getMember(r.id, E);
+    let T = h.ZP.getMember(r.id, E);
     return D({
         userId: E,
-        member: b,
+        member: T,
         guild: r,
         overwrites: o,
         roles: l,
@@ -195,10 +195,10 @@ function L(e) {
         lurkerPermissionsMask: v
     });
 }
-function P(e, t, n) {
+function w(e, t, n) {
     return e.type !== v.d4z.PRIVATE_THREAD || n || a.e$(t, v.Plq.MANAGE_THREADS) ? (a.e$(t, v.Plq.SEND_MESSAGES_IN_THREADS) ? (e.isLockedThread() && !a.e$(t, v.Plq.MANAGE_THREADS) ? a.Od(t, v.Plq.SEND_MESSAGES) : a.$e(t, v.Plq.SEND_MESSAGES)) : a.Od(t, v.Plq.SEND_MESSAGES)) : y;
 }
-function w(e, t) {
+function P(e, t) {
     if (f.Ec.has(e.type)) return !0;
     let { guild_id: n } = e;
     if (null == t || null == n || n !== t.guild_id) return !1;
@@ -250,7 +250,7 @@ function B(e) {
 function Z(e) {
     let { permission: t, user: n, context: i, overwrites: r, roles: s, excludeGuildPermissions: o } = e;
     return a.e$(
-        L({
+        x({
             user: n,
             context: i,
             overwrites: r,

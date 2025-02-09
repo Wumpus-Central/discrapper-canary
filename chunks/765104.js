@@ -15,8 +15,8 @@ var o,
     v = n(944486),
     y = n(9156),
     I = n(594174),
-    b = n(70956),
-    T = n(709054),
+    T = n(70956),
+    b = n(709054),
     S = n(418088),
     A = n(814249);
 function N(e, t, n) {
@@ -36,18 +36,18 @@ let C = {},
     R = {},
     O = {},
     D = [],
-    x = {},
-    L = {
+    L = {},
+    x = {
         status: 'ok',
         lastRequest: null,
         lastResponse: null
     },
-    P = [],
     w = [],
+    P = [],
     M = 75,
     k = 25;
 function U() {
-    P = h.Z.getProps()
+    w = h.Z.getProps()
         .results.filter((e) => e.type === _.h8.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
@@ -65,12 +65,12 @@ class G extends (o = c.ZP.PersistedStore) {
     topSummaries() {
         return Object.values(C)
             .flat()
-            .filter((e) => e.people.length > 1 && T.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * b.Z.Millis.HOUR)
-            .sort((e, t) => T.default.extractTimestamp(t.endId) - T.default.extractTimestamp(e.endId));
+            .filter((e) => e.people.length > 1 && b.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * T.Z.Millis.HOUR)
+            .sort((e, t) => b.default.extractTimestamp(t.endId) - b.default.extractTimestamp(e.endId));
     }
     summaries(e) {
         var t;
-        return null !== (t = C[e]) && void 0 !== t ? t : w;
+        return null !== (t = C[e]) && void 0 !== t ? t : P;
     }
     shouldShowTopicsBar() {
         return i;
@@ -109,19 +109,19 @@ class G extends (o = c.ZP.PersistedStore) {
         return D;
     }
     channelAffinitiesById() {
-        return x;
-    }
-    channelAffinitiesStatus() {
         return L;
     }
+    channelAffinitiesStatus() {
+        return x;
+    }
     shouldFetchChannelAffinities() {
-        return !('fetching' === L.status || (null != L.lastResponse && Date.now() - L.lastResponse < 30 * b.Z.Millis.SECOND));
+        return !('fetching' === x.status || (null != x.lastResponse && Date.now() - x.lastResponse < 30 * T.Z.Millis.SECOND));
     }
     defaultChannelIds(e) {
         let { withQuickSwitcher: t, withChannelAffinities: n, withUnreads: i, numChannels: r = k } = e,
             a = [];
         return (
-            t && (a = a.concat(P)),
+            t && (a = a.concat(w)),
             n && (a = a.concat(D.map((e) => e.channel_id))),
             i &&
                 (a = a.filter((e) => {
@@ -186,7 +186,7 @@ let Z = new G(d.Z, {
             let e = (null !== (o = C[n]) && void 0 !== o ? o : []).find((e) => e.id === (null == s ? void 0 : s.summaryId));
             null != e && a.push(e);
         }
-        C[n] = (0, l.sortBy)(a, (e) => T.default.extractTimestamp(e.startId)).reverse();
+        C[n] = (0, l.sortBy)(a, (e) => b.default.extractTimestamp(e.startId)).reverse();
         let u = {
             ...R[n],
             fetching: !1,
@@ -250,8 +250,8 @@ let Z = new G(d.Z, {
         null != n ? (O[t.id] = n) : delete O[t.id];
     },
     REQUEST_CHANNEL_AFFINITIES() {
-        L = {
-            ...L,
+        x = {
+            ...x,
             status: 'fetching',
             lastRequest: Date.now()
         };
@@ -261,18 +261,18 @@ let Z = new G(d.Z, {
         let { affinities: n, error: i } = e;
         if (null != i) {
             (D = []),
-                (x = {}),
-                (L = {
-                    ...L,
+                (L = {}),
+                (x = {
+                    ...x,
                     status: 'error',
                     lastResponse: Date.now()
                 });
             return;
         }
         (D = null != n ? n : []),
-            (x = null !== (t = null == n ? void 0 : n.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {})) && void 0 !== t ? t : {}),
-            (L = {
-                ...L,
+            (L = null !== (t = null == n ? void 0 : n.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {})) && void 0 !== t ? t : {}),
+            (x = {
+                ...x,
                 status: 'ok',
                 lastResponse: Date.now()
             });
@@ -310,7 +310,7 @@ let Z = new G(d.Z, {
                     let [n, i] = t,
                         r = u()
                             .chain(i.map((e) => (0, S.b)(e, n)))
-                            .sortBy((e) => T.default.extractTimestamp(e.startId))
+                            .sortBy((e) => b.default.extractTimestamp(e.startId))
                             .takeRight(M)
                             .reverse()
                             .filter((e) => Object.keys(e).length > 0)
@@ -353,7 +353,7 @@ let Z = new G(d.Z, {
             o = Date.now(),
             l = u()
                 .chain(a)
-                .sortBy((e) => T.default.extractTimestamp(e.start_id))
+                .sortBy((e) => b.default.extractTimestamp(e.start_id))
                 .filter((e) => Object.keys(e).length > 0)
                 .map((e) => (0, S.b)(e, r))
                 .reverse()
@@ -362,7 +362,7 @@ let Z = new G(d.Z, {
             d = u()
                 .chain(l)
                 .concat(c)
-                .sortBy((e) => T.default.extractTimestamp(e.startId))
+                .sortBy((e) => b.default.extractTimestamp(e.startId))
                 .takeRight(M)
                 .uniqBy('id')
                 .reverse()

@@ -1,20 +1,20 @@
-n.d(t, { Z: () => s });
-var i = n(442837),
-    r = n(311687),
-    a = n(873128);
-function s(e) {
-    let { userId: t, guildId: n, leaderboardId: s, intervalOffset: o = 0, statisticId: l } = e,
-        u = (0, i.e7)([r.Z], () => r.Z.getLastUpdateRequested(s)),
-        c = null != u ? new Date(1000 * u) : void 0,
-        d = (0, a.Z)({
-            guildId: n,
-            leaderboardId: s,
+c.d(e, { Z: () => n });
+var d = c(442837),
+    a = c(311687),
+    s = c(873128);
+function n(t) {
+    let { userId: e, guildId: c, leaderboardId: n, intervalOffset: o = 0, statisticId: f } = t,
+        i = (0, d.e7)([a.Z], () => a.Z.getLastUpdateRequested(n)),
+        p = null != i ? new Date(1000 * i) : void 0,
+        r = (0, s.Z)({
+            guildId: c,
+            leaderboardId: n,
             intervalOffset: o
         }),
-        f = null == d ? void 0 : d.users.find((e) => e.user_id === t),
-        _ = null == f ? void 0 : f.statistics[l];
+        b = null == r ? void 0 : r.users.find((t) => t.user_id === e),
+        u = null == b ? void 0 : b.statistics[f];
     return {
-        lastUpdateRequested: c,
-        statisticLastUpdatedDate: null != _ ? new Date(_.updated_at) : void 0
+        lastUpdateRequested: p,
+        statisticLastUpdatedDate: null != u ? new Date(u.updated_at) : void 0
     };
 }

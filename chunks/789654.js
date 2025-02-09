@@ -39,7 +39,7 @@ var a = n(200651),
     p = n(58755),
     f = n(246992),
     b = n(500949),
-    g = n(833999);
+    g = n(923432);
 let { SemanticColors: v } = d.V;
 function j(e) {
     return e.replaceAll(/_|\./g, '-').toLowerCase();
@@ -63,7 +63,7 @@ function T() {
     let e = (0, m.Fg)(),
         [t, n, l, o, d, u] = (0, b.zn)(),
         { semanticColorOverrides: f, rawColorOverrides: v, tab: C, scales: T } = t,
-        y = r.useMemo(() => {
+        S = r.useMemo(() => {
             let t = Object.entries(f).map((t) => {
                     let [n, a] = t,
                         { colors: r, highlight: l } = a,
@@ -230,7 +230,7 @@ function T() {
             (0, a.jsx)(c.ql, {
                 children: (0, a.jsx)('style', {
                     id: 'devtools-color-overrides',
-                    children: y
+                    children: S
                 })
             })
         ]
@@ -364,7 +364,7 @@ function E(e) {
                         c = i.opacity,
                         d = b.jC[t][l];
                     return (0, a.jsx)(
-                        y,
+                        S,
                         {
                             title: j(t),
                             subtitle: 1 === d.opacity ? C(d.raw) : ''.concat(C(d.raw), ' @ ').concat(100 * d.opacity, '%'),
@@ -479,7 +479,7 @@ function E(e) {
                 children: Object.entries(o).map((e) => {
                     let [t, r] = e;
                     return (0, a.jsxs)(
-                        y,
+                        S,
                         {
                             title: t,
                             subtitle: u.b[t].hex,
@@ -567,7 +567,7 @@ function E(e) {
         ]
     });
 }
-function y(e) {
+function S(e) {
     let { title: t, subtitle: n, highlight: r, onReset: l, onRemove: i, onHighlightToggle: o, children: s } = e;
     return (0, a.jsxs)('li', {
         className: g.override,

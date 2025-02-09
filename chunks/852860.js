@@ -1,20 +1,20 @@
 t.d(n, { Z: () => d }), t(47120);
-var r = t(200651),
-    o = t(192379),
+var o = t(200651),
+    r = t(192379),
     i = t(481060),
     s = t(585483),
     a = t(981631),
     l = t(388032),
-    c = t(840814);
+    c = t(207254);
 let d = function (e) {
     var n;
-    let { message: t, errorMessage: d, submitting: u, onReset: m, onSave: h, onSaveText: x, onResetText: _, onSaveButtonColor: p, disabled: C, saveButtonTooltip: f } = e,
-        b = o.useRef(null),
-        [v, j] = o.useState(!1);
+    let { message: t, errorMessage: d, submitting: u, onReset: m, onSave: _, onSaveText: h, onResetText: b, onSaveButtonColor: p, disabled: x, saveButtonTooltip: C } = e,
+        f = r.useRef(null),
+        [N, g] = r.useState(!1);
     return (
-        o.useEffect(() => {
+        r.useEffect(() => {
             function e() {
-                j(!0), setTimeout(() => j(!1), 1000);
+                g(!0), setTimeout(() => g(!1), 1000);
             }
             return (
                 s.S.subscribe(a.CkL.EMPHASIZE_NOTICE, e),
@@ -23,46 +23,46 @@ let d = function (e) {
                 }
             );
         }, []),
-        (0, r.jsx)('div', {
+        (0, o.jsx)('div', {
             className: c.container,
-            'data-emphasized': v,
-            children: (0, r.jsx)('div', {
+            'data-emphasized': N,
+            children: (0, o.jsx)('div', {
                 className: c.flexContainer,
-                ref: b,
-                children: (0, r.jsxs)(i.JcV, {
-                    containerRef: b,
+                ref: f,
+                children: (0, o.jsxs)(i.JcV, {
+                    containerRef: f,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, o.jsx)('div', {
                             className: c.shrinkingContainer,
-                            children: (0, r.jsx)('div', {
+                            children: (0, o.jsx)('div', {
                                 className: c.message,
                                 children: null !== (n = null != d ? d : t) && void 0 !== n ? n : l.intl.string(l.t.GP7JLC)
                             })
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, o.jsxs)('div', {
                             className: c.actions,
                             children: [
                                 null != m &&
-                                    (0, r.jsx)(i.zxk, {
+                                    (0, o.jsx)(i.zxk, {
                                         className: c.resetButton,
                                         size: i.zxk.Sizes.SMALL,
                                         color: i.zxk.Colors.PRIMARY,
                                         look: i.zxk.Looks.LINK,
                                         onClick: m,
-                                        children: (0, r.jsx)('span', { children: null != _ ? _ : l.intl.string(l.t.yBZMsb) })
+                                        children: (0, o.jsx)('span', { children: null != b ? b : l.intl.string(l.t.yBZMsb) })
                                     }),
-                                null != h
-                                    ? (0, r.jsx)(i.ua7, {
-                                          text: f,
+                                null != _
+                                    ? (0, o.jsx)(i.ua7, {
+                                          text: C,
                                           children: (e) =>
-                                              (0, r.jsx)(i.zxk, {
+                                              (0, o.jsx)(i.zxk, {
                                                   size: i.zxk.Sizes.SMALL,
                                                   color: null != p ? p : i.zxk.Colors.GREEN,
                                                   submitting: u,
-                                                  disabled: C,
-                                                  onClick: h,
+                                                  disabled: x,
+                                                  onClick: _,
                                                   ...e,
-                                                  children: null != x ? x : l.intl.string(l.t.K344S0)
+                                                  children: null != h ? h : l.intl.string(l.t.K344S0)
                                               })
                                       })
                                     : null

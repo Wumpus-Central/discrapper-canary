@@ -1,4 +1,4 @@
-var i = {
+var a = {
     './2017-11-16.mp4': '221825',
     './channel-following.png': '247815',
     './discovery.jpg': '778608',
@@ -18,19 +18,19 @@ var i = {
     './stickers-launch/2020_PMM_STICKERS_Mrkt_Mobile_FooterCTA_343x78.png': '199612',
     './store.jpg': '926213'
 };
-function r(e) {
-    return n(a(e));
+function o(e) {
+    return n(i(e));
 }
-function a(e) {
-    if (!n.o(i, e)) {
+function i(e) {
+    if (!n.o(a, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = 'MODULE_NOT_FOUND'), t);
     }
-    return i[e];
+    return a[e];
 }
-(r.keys = function () {
-    return Object.keys(i);
+(o.keys = function () {
+    return Object.keys(a);
 }),
-    (r.resolve = a),
-    (e.exports = r),
-    (r.id = 595173);
+    (o.resolve = i),
+    (e.exports = o),
+    (o.id = 595173);

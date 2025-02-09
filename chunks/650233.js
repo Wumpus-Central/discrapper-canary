@@ -1,5 +1,5 @@
 n.d(t, {
-    H: () => v,
+    H: () => _,
     default: () => h
 });
 var l = n(200651),
@@ -12,7 +12,7 @@ var l = n(200651),
     d = n(161836),
     u = n(630724),
     m = n(388032),
-    x = n(798508);
+    x = n(75151);
 function h(e) {
     let { transitionState: t, onClose: n, isNUXFlow: h } = e;
     return (
@@ -57,7 +57,7 @@ function h(e) {
         })
     );
 }
-let v = (e) => {
+let _ = (e) => {
     let { invite: t } = e;
     return (0, l.jsxs)('div', {
         className: x.container,

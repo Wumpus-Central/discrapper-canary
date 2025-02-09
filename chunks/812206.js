@@ -45,16 +45,16 @@ function v(e) {
 }
 function y(e) {
     let { application: t } = e;
-    b(t);
+    T(t);
 }
 function I(e) {
     let { application: t } = e;
-    b(t);
-}
-function b(e) {
-    m(s.ZP.createFromServer(e));
+    T(t);
 }
 function T(e) {
+    m(s.ZP.createFromServer(e));
+}
+function b(e) {
     let { userId: t, applicationId: n } = e,
         i = p.botUserIdToAppUsage[t];
     null == i
@@ -109,7 +109,7 @@ function O(e) {
     let { user: t, application: n } = e;
     t.bot &&
         null != n &&
-        T({
+        b({
             userId: t.id,
             applicationId: n.id
         });
@@ -123,7 +123,7 @@ function D(e) {
             lastUsedMs: Date.now()
         });
 }
-function x(e) {
+function L(e) {
     let { applicationIds: t } = e,
         n = !1;
     for (let e of t) {
@@ -132,19 +132,19 @@ function x(e) {
     }
     return n;
 }
-function L(e) {
+function x(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (m(s.ZP.createFromServer(e.application)), (n = !0));
     return n;
 }
-function P(e) {
+function w(e) {
     let { guildId: t, applications: n } = e,
         i = [];
     for (let e of n) i.push(e.id), m(s.ZP.createFromServer(e));
     c[t] = i;
 }
-function w(e) {
+function P(e) {
     let { payments: t } = e,
         n = new Set();
     for (let e of t) {
@@ -193,7 +193,7 @@ function F(e) {
         m(s.ZP.createFromServer(e.application));
         let t = e.application.bot;
         null != t &&
-            T({
+            b({
                 userId: t.id,
                 applicationId: e.application.id
             });
@@ -268,13 +268,13 @@ let j = new V(a.Z, {
     APPLICATION_FETCH_FAIL: S,
     APPLICATIONS_FETCH: A,
     APPLICATIONS_FETCH_SUCCESS: C,
-    APPLICATIONS_FETCH_FAIL: x,
+    APPLICATIONS_FETCH_FAIL: L,
     APPLICATION_UPDATE: y,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: L,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: L,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: L,
-    GUILD_APPLICATIONS_FETCH_SUCCESS: P,
-    BILLING_PAYMENTS_FETCH_SUCCESS: w,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: x,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: x,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: x,
+    GUILD_APPLICATIONS_FETCH_SUCCESS: w,
+    BILLING_PAYMENTS_FETCH_SUCCESS: P,
     PAYMENT_UPDATE: M,
     INVITE_RESOLVE_SUCCESS: U,
     GIFT_CODE_RESOLVE_SUCCESS: k,

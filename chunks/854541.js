@@ -23,9 +23,9 @@ var i = n(200651),
     E = n(534828),
     v = n(981631),
     y = n(388032),
-    I = n(379100);
-let b = 7,
-    T = () => Promise.resolve();
+    I = n(733146);
+let T = 7,
+    b = () => Promise.resolve();
 function S(e) {
     return null == e ? null : 'string' == typeof e ? ((0, u.FX)(e) ? (0, u._i)(e) : null) : e;
 }
@@ -107,13 +107,13 @@ class C extends r.PureComponent {
     }
 }
 function R(e) {
-    let { value: t, eagerUpdate: n = !1, onChange: a, onClose: o, suggestedColors: l, middle: f, footer: m, showEyeDropper: v, wrapperComponentType: T, className: A } = e,
+    let { value: t, eagerUpdate: n = !1, onChange: a, onClose: o, suggestedColors: l, middle: f, footer: m, showEyeDropper: v, wrapperComponentType: b, className: A } = e,
         N = (0, h.Z)(),
         C = S(t),
         R = null != C ? C : 0,
         O = (0, u.Rf)(R),
         D = (0, u.O)(R),
-        [x, L] = r.useState({
+        [L, x] = r.useState({
             current: R,
             pending: {
                 hex: O,
@@ -122,10 +122,10 @@ function R(e) {
             input: O
         });
     r.useEffect(() => {
-        if (null == C || C === x.current) return;
+        if (null == C || C === L.current) return;
         let e = (0, u.Rf)(C),
             t = (0, u.O)(C);
-        L({
+        x({
             current: C,
             pending: {
                 hex: e,
@@ -133,12 +133,12 @@ function R(e) {
             },
             input: e
         });
-    }, [C, x]),
+    }, [C, L]),
         r.useEffect(() => o, [o]);
-    let P = (e) => {
+    let w = (e) => {
             let t = '#' === e[0] ? e : '#'.concat(e);
             if (!(0, u.FX)(t)) {
-                L((e) => ({
+                x((e) => ({
                     ...e,
                     input: t
                 }));
@@ -146,7 +146,7 @@ function R(e) {
             }
             let n = (0, u._i)(t),
                 i = (0, u.O)(n);
-            L({
+            x({
                 current: n,
                 pending: {
                     hex: t,
@@ -156,16 +156,16 @@ function R(e) {
             }),
                 a(n);
         },
-        w = async () => {
+        P = async () => {
             if (null != N)
                 try {
                     let { sRGBHex: e } = await N.open();
-                    P(e);
+                    w(e);
                 } catch {}
         },
         M = r.useCallback(
             (e) => {
-                L((t) => ({
+                x((t) => ({
                     ...t,
                     pending: e,
                     input: e.hex
@@ -185,7 +185,7 @@ function R(e) {
                         let { hex: t } = e;
                         return k(t);
                     },
-                    color: x.pending.hsl
+                    color: L.pending.hsl
                 }),
                 f,
                 (0, i.jsxs)('div', {
@@ -194,7 +194,7 @@ function R(e) {
                         v &&
                             null != N &&
                             (0, i.jsx)(g.JO, {
-                                onClick: w,
+                                onClick: P,
                                 tooltip: y.intl.string(y.t['0dU9Nz']),
                                 tooltipPosition: 'top',
                                 className: I.customColorPickerEyeDropper,
@@ -202,9 +202,9 @@ function R(e) {
                             }),
                         (0, i.jsx)(_.o, {
                             className: I.customColorPickerInput,
-                            value: x.input,
-                            onChange: P,
-                            maxLength: b
+                            value: L.input,
+                            onChange: w,
+                            maxLength: T
                         })
                     ]
                 }),
@@ -219,7 +219,7 @@ function R(e) {
                                     'aria-label': '',
                                     style: { backgroundColor: e },
                                     className: I.suggestedColor,
-                                    onClick: () => P(e)
+                                    onClick: () => w(e)
                                 },
                                 ''.concat(e, '-').concat(t)
                             )
@@ -228,7 +228,7 @@ function R(e) {
                 m
             ]
         }),
-        G = null != T ? T : d.V;
+        G = null != b ? b : d.V;
     return (0, i.jsx)(G, {
         'aria-label': y.intl.string(y.t.WTqQ5e),
         className: s()(I.customColorPicker, A),
@@ -259,8 +259,8 @@ function D(e) {
         E = (0, l.ZP)({
             id: 'color-picker',
             isEnabled: !0,
-            scrollToStart: T,
-            scrollToEnd: T
+            scrollToStart: b,
+            scrollToEnd: b
         });
     return (0, i.jsx)(o.bG, {
         navigator: E,

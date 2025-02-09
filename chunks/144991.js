@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(411104);
+n.d(t, { Z: () => g }), n(411104);
 var i = n(200651),
     l = n(192379),
     a = n(120356),
@@ -8,8 +8,8 @@ var i = n(200651),
     d = n(208884),
     c = n(453628),
     u = n(996987),
-    m = n(226701),
-    h = n(232186);
+    m = n(417510),
+    h = n(814632);
 class x extends l.PureComponent {
     getOverwriteValue(e) {
         let { allow: t, deny: n } = this.props;
@@ -43,22 +43,22 @@ class x extends l.PureComponent {
         let { title: t, description: n, helpdeskArticleId: l, flag: a } = e,
             { permissions: s, locked: c, permissionRender: h } = this.props,
             x = null == h ? void 0 : h(a),
-            p = !!(c || x),
-            g = 'string' == typeof x ? this.renderDisabledIndicator(x) : null,
-            f = r()({ [m.title]: null != g });
+            g = !!(c || x),
+            p = 'string' == typeof x ? this.renderDisabledIndicator(x) : null,
+            b = r()({ [m.title]: null != p });
         return null == s
             ? (0, i.jsxs)(
                   u.Z,
                   {
-                      disabled: p,
+                      disabled: g,
                       value: this.getOverwriteValue(a),
                       onChange: (e) => this.handleChange(a, e),
                       note: (0, d._u)(n),
                       helpdeskArticleId: l,
                       children: [
-                          g,
+                          p,
                           (0, i.jsx)('span', {
-                              className: f,
+                              className: b,
                               children: t
                           })
                       ]
@@ -68,14 +68,14 @@ class x extends l.PureComponent {
             : (0, i.jsxs)(
                   o.j7V,
                   {
-                      disabled: p,
+                      disabled: g,
                       value: this.getPermissionValue(a, s),
                       onChange: (e) => this.handleChange(a, e),
                       note: (0, d._u)(n),
                       children: [
-                          g,
+                          p,
                           (0, i.jsx)('span', {
-                              className: f,
+                              className: b,
                               children: t
                           })
                       ]
@@ -107,4 +107,4 @@ class x extends l.PureComponent {
         });
     }
 }
-let p = x;
+let g = x;

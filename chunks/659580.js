@@ -19,25 +19,25 @@ var i = n(990547),
     x = n(822556),
     Z = n(981631),
     S = n(388032),
-    C = n(126741);
+    C = n(362356);
 function b(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: b = !1, renderInputModes: I = !1, renderInputVolume: _ = !1, renderOutputVolume: R = !1, renderDeafen: y = !1, simplified: j = !1, onSelect: N } = e,
-        { analyticsLocations: w } = (0, c.ZP)();
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: b = !1, renderInputModes: I = !1, renderInputVolume: _ = !1, renderOutputVolume: R = !1, renderDeafen: y = !1, simplified: j = !1, onSelect: N, appContext: w } = e,
+        { analyticsLocations: A } = (0, c.ZP)();
     (0, d.Z)({
         type: i.ImpressionTypes.MENU,
         name: i.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: w }
+        properties: { location_stack: A }
     });
-    let A = (0, x.Z)(),
-        T = (0, g.Z)(w, j),
-        k = (0, E.Z)(w, j),
-        O = (0, m.Z)(w),
-        P = (0, f.Z)(w),
-        M = (0, h.Z)(w),
-        D = a.Yn.DEFAULT,
-        L = p.Z.isSelfDeaf(D),
-        F = (0, r.e7)([p.Z], () => p.Z.getMode()),
-        U = F === Z.pM4.VOICE_ACTIVITY ? Z.pM4.PUSH_TO_TALK : Z.pM4.VOICE_ACTIVITY;
+    let T = (0, x.Z)(w),
+        k = (0, g.Z)(A, j),
+        O = (0, E.Z)(A, j),
+        P = (0, m.Z)(A),
+        M = (0, f.Z)(A),
+        D = (0, h.Z)(A),
+        L = a.Yn.DEFAULT,
+        F = p.Z.isSelfDeaf(L),
+        U = (0, r.e7)([p.Z], () => p.Z.getMode()),
+        z = U === Z.pM4.VOICE_ACTIVITY ? Z.pM4.PUSH_TO_TALK : Z.pM4.VOICE_ACTIVITY;
     return (0, l.jsx)(u.Z, {
         object: Z.qAy.CONTEXT_MENU,
         children: (0, l.jsxs)(s.v2r, {
@@ -47,18 +47,18 @@ function b(e) {
             navId: 'audio-device-context',
             'aria-label': S.intl.string(S.t.ZR1Ss7),
             children: [
-                b ? T : null,
-                n ? k : null,
+                b ? k : null,
+                n ? O : null,
                 !j && I
                     ? (0, l.jsx)(s.kSQ, {
                           label: S.intl.string(S.t['pS+K2N']),
-                          children: O
+                          children: P
                       })
                     : null,
                 (0, l.jsxs)(s.kSQ, {
                     children: [
-                        _ ? P : null,
-                        R ? M : null,
+                        _ ? M : null,
+                        R ? D : null,
                         j ? (0, l.jsx)(s.Clw, {}) : null,
                         j && y
                             ? (0, l.jsx)(
@@ -68,23 +68,23 @@ function b(e) {
                                       label: S.intl.string(S.t.wjcRFR),
                                       action: () =>
                                           o.Z.toggleSelfDeaf({
-                                              context: D,
+                                              context: L,
                                               location: 'AudioDeviceMenu'
                                           }),
-                                      checked: L
+                                      checked: F
                                   },
                                   'self-deafen'
                               )
                             : null,
                         j && b && v.isPlatformEmbedded
                             ? (0, l.jsx)(s.S89, {
-                                  checked: F === Z.pM4.PUSH_TO_TALK,
+                                  checked: U === Z.pM4.PUSH_TO_TALK,
                                   id: 'input-mode',
                                   label: S.intl.string(S.t.Q8gkVF),
-                                  action: () => o.Z.setMode(U, void 0, void 0, { analyticsLocations: w })
+                                  action: () => o.Z.setMode(z, void 0, void 0, { analyticsLocations: A })
                               })
                             : null,
-                        A
+                        T
                     ]
                 })
             ]

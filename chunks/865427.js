@@ -99,8 +99,8 @@ function I(e) {
         expiresAt: 'Mon, 1 Jan 2038 00:00:00 GMT'
     };
 }
-let b = 's',
-    T = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
+let T = 's',
+    b = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
     S = new Set(['/__development/link', '/__development/link/']);
 function A(e) {
     if (y(e))
@@ -109,10 +109,10 @@ function A(e) {
             url: e
         };
     let t = o.Z.safeParseWithQuery(e);
-    if (null == t || !T.has(t.hostname) || !(b in t.query) || !S.has(t.pathname)) return null;
-    for (let e in t.query) e !== b && delete t.query[e];
+    if (null == t || !b.has(t.hostname) || !(T in t.query) || !S.has(t.pathname)) return null;
+    for (let e in t.query) e !== T && delete t.query[e];
     return {
-        payload: t.query[b],
+        payload: t.query[T],
         url: r.format(t)
     };
 }

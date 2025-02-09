@@ -14,7 +14,7 @@ var l = n(200651),
     v = n(765305),
     g = n(231338),
     N = n(388032),
-    f = n(98764);
+    f = n(331338);
 function E() {
     return (0, l.jsx)(o.IGR, {
         className: f.newBadge,

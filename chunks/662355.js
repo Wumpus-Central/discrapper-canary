@@ -1,5 +1,5 @@
-var i = {
-    icon: 'icon_bd6d20',
-    placeholder: 'placeholder_bd6d20'
+a.d(e, { A: () => n });
+var r = a(395848);
+let n = (t) => {
+    r.m.document && r.m.document.prerendering ? addEventListener('prerenderingchange', () => t(), !0) : t();
 };
-e.exports = i;

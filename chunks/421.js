@@ -20,7 +20,7 @@ var a = n(200651),
     C = n(431136),
     I = n(226799),
     T = n(388032),
-    Z = n(550773);
+    Z = n(616399);
 function S(e) {
     var t;
     let { applicationId: n, guildId: l, channelId: r, onActivityLaunch: u } = e,

@@ -4,7 +4,7 @@ var i = n(200651),
     a = n(481060),
     s = n(15127),
     o = n(512983),
-    l = n(734141);
+    l = n(17411);
 let u = r.forwardRef(function (e, t) {
     var n;
     let { children: u, className: c, titleClassName: d, title: f, icon: _, disabled: p, htmlFor: h, tag: m = 'h5', ...g } = e,

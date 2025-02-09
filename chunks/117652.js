@@ -1,4 +1,4 @@
-n.d(t, { Dd: () => x });
+n.d(t, { Dd: () => L });
 var i = n(200651);
 n(192379);
 var r = n(442837),
@@ -19,26 +19,26 @@ var r = n(442837),
     v = n(855775),
     y = n(626135),
     I = n(937615),
-    b = n(987209),
-    T = n(563132),
+    T = n(987209),
+    b = n(563132),
     S = n(409813),
     A = n(614277),
     N = n(981631),
     C = n(474936),
     R = n(388032),
-    O = n(463313),
-    D = n(461405);
-let x = {
+    O = n(196236),
+    D = n(355620);
+let L = {
     key: S.h8.GIFT_CUSTOMIZATION,
-    renderStep: (e) => (0, i.jsx)(P, { ...e }),
+    renderStep: (e) => (0, i.jsx)(w, { ...e }),
     options: {
         isLargeModal: !0,
         useBreadcrumbLabel: () => R.intl.string(R.t['W685+f'])
     }
 };
-function L(e) {
+function x(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: r = !1, disabled: s = !1, loading: o = !1 } = e,
-        { hasPaymentSources: l } = (0, T.JL)(),
+        { hasPaymentSources: l } = (0, b.JL)(),
         u = l ? S.h8.REVIEW : S.h8.ADD_PAYMENT_STEPS;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -52,10 +52,10 @@ function L(e) {
         ]
     });
 }
-function P(e) {
+function w(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { customGiftMessage: o = '', setCustomGiftMessage: l, giftRecipientError: m, setGiftRecipientError: S, validatingGiftRecipient: x, giftRecipient: P, recommendedGiftSkuIds: M, giftingOrigin: k, setValidatingGiftRecipient: U } = (0, b.wD)(),
-        { selectedSkuId: G, setSelectedSkuId: B, selectedSkuPricePreview: Z, paymentSourceId: F, skuPricePreviewsById: V } = (0, T.JL)(),
+        { customGiftMessage: o = '', setCustomGiftMessage: l, giftRecipientError: m, setGiftRecipientError: S, validatingGiftRecipient: L, giftRecipient: w, recommendedGiftSkuIds: M, giftingOrigin: k, setValidatingGiftRecipient: U } = (0, T.wD)(),
+        { selectedSkuId: G, setSelectedSkuId: B, selectedSkuPricePreview: Z, paymentSourceId: F, skuPricePreviewsById: V } = (0, b.JL)(),
         j = (0, r.e7)([E.default], () => E.default.getCurrentUser()),
         { enabled: H, giftRecommendationAlgorithm: Y } = _.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
         W = H && k === C.Wt.DM_CHANNEL,
@@ -64,10 +64,10 @@ function P(e) {
             U(!0), null != m && S(), (await (0, u.B1)(e.id, t)) || S(R.intl.string(R.t['4kgVqa'])), U(!1);
         };
     (0, s.ZP)(() => {
-        null != G && null != P && (y.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: G }), z(P, G));
+        null != G && null != w && (y.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: G }), z(w, G));
     });
     let q = (e) => {
-            y.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != P && z(P, e), B(e);
+            y.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != w && z(w, e), B(e);
         },
         Q = (e) => {
             let t = V[e],
@@ -112,7 +112,7 @@ function P(e) {
                               children: K.toLocaleUpperCase()
                           }),
                           M.map((e) => Q(e)),
-                          (0, i.jsx)(w, { handleClose: n })
+                          (0, i.jsx)(P, { handleClose: n })
                       ]
                   })
                 : (0, i.jsx)('div', {
@@ -124,7 +124,7 @@ function P(e) {
                 return (0, i.jsxs)('div', {
                     className: O.bodyColumnRight,
                     children: [
-                        (0, i.jsx)(g.s, { giftRecipient: P }),
+                        (0, i.jsx)(g.s, { giftRecipient: w }),
                         (0, i.jsx)(h.q, {
                             isShopGift: !0,
                             className: D.adjustedGiftMainAnimation,
@@ -166,18 +166,18 @@ function P(e) {
                 children: (0, i.jsx)(a.mzw, {
                     justify: f.Z.Justify.BETWEEN,
                     align: f.Z.Align.CENTER,
-                    children: (0, i.jsx)(L, {
+                    children: (0, i.jsx)(x, {
                         onStepChange: t,
                         onBackClick: n,
-                        disabled: null != m || null == P || P.id === (null == j ? void 0 : j.id) || o.length > C.$n,
-                        loading: x
+                        disabled: null != m || null == w || w.id === (null == j ? void 0 : j.id) || o.length > C.$n,
+                        loading: L
                     })
                 })
             })
         ]
     });
 }
-function w(e) {
+function P(e) {
     let { handleClose: t } = e,
         { analyticsLocations: n } = (0, l.ZP)(o.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
     function r() {

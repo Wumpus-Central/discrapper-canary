@@ -15,25 +15,25 @@ var r = n(120356),
     h = n(981631),
     m = n(474936),
     g = n(388032),
-    E = n(454816);
+    E = n(483400);
 function v(e) {
     var t, n, r, v;
-    let { type: y, textValue: I, maxCharacterCount: b, showRemainingCharsAfterCount: T, className: S } = e,
+    let { type: y, textValue: I, maxCharacterCount: T, showRemainingCharsAfterCount: b, className: S } = e,
         A = (0, s.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
         N = (0, c.Z)(),
-        C = null != b ? b : N,
-        R = null !== (v = null != T ? T : b) && void 0 !== v ? v : N / 10,
+        C = null != T ? T : N,
+        R = null !== (v = null != b ? b : T) && void 0 !== v ? v : N / 10,
         O = I.length,
         D = null != y.upsellLongMessages && (null != O ? O : 0) > h.J6R && A,
-        x = null != y.upsellLongMessages && !A,
-        L = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_2,
-        P = C - O,
-        w = P > R,
-        M = P < 0 && L,
-        k = 0 === P ? g.intl.string(g.t.tU6YQ0) : P > 0 ? g.intl.formatToPlainString(g.t.qH8uFR, { count: P }) : g.intl.string(g.t.YSRIqa),
+        L = null != y.upsellLongMessages && !A,
+        x = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_2,
+        w = C - O,
+        P = w > R,
+        M = w < 0 && x,
+        k = 0 === w ? g.intl.string(g.t.tU6YQ0) : w > 0 ? g.intl.formatToPlainString(g.t.qH8uFR, { count: w }) : g.intl.string(g.t.YSRIqa),
         { analyticsLocations: U } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
-    if (!((D && P >= 0) || !w || (x && !w))) return null;
-    let G = P >= 0;
+    if (!((D && w >= 0) || !P || (L && !P))) return null;
+    let G = w >= 0;
     return (0, i.jsx)(u.Gt, {
         value: U,
         children: (0, i.jsxs)('div', {
@@ -55,7 +55,7 @@ function v(e) {
                                       })
                               })
                             : null,
-                        w || M
+                        P || M
                             ? null
                             : (0, i.jsx)(o.ua7, {
                                   text: k,
@@ -67,17 +67,17 @@ function v(e) {
                                           'aria-hidden': !0,
                                           ...e,
                                           color: G ? 'text-normal' : 'text-danger',
-                                          children: P
+                                          children: w
                                       })
                               })
                     ]
                 }),
-                (0, i.jsx)(o.nn4, { children: g.intl.format(g.t.qH8uFR, { count: P }) }),
-                x && !w
+                (0, i.jsx)(o.nn4, { children: g.intl.format(g.t.qH8uFR, { count: w }) }),
+                L && !P
                     ? (0, i.jsx)(p.Z, {
                           className: E.upsell,
                           iconOnly: (null === (r = y.upsellLongMessages) || void 0 === r ? void 0 : r.iconOnly) || !1,
-                          remaining: P
+                          remaining: w
                       })
                     : null
             ]

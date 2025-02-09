@@ -1,6 +1,6 @@
 n.r(t),
     n.d(t, {
-        AnalyticEventConfigs: () => x,
+        AnalyticEventConfigs: () => L,
         AnalyticsContext: () => E,
         AnalyticsSchema: () => d,
         addExtraAnalyticsDecorator: () => D,
@@ -8,7 +8,7 @@ n.r(t),
         debugLogEvent: () => B,
         default: () => X,
         expandEventProperties: () => G,
-        expandLocation: () => L,
+        expandLocation: () => x,
         getAnalyticsEventsRecording: () => H,
         getNewAnalyticsLoadId: () => Q,
         setUTMContext: () => U,
@@ -37,8 +37,8 @@ let g = { location: {} },
     v = {},
     y = 10000,
     I = 60000,
-    b = 120000,
-    T = 300000,
+    T = 120000,
+    b = 300000,
     S = 900000,
     A = 3600000,
     N = 86400000,
@@ -48,13 +48,13 @@ let g = { location: {} },
 function D(e) {
     O.push(e);
 }
-let x = {
+let L = {
     [p.rMx.APP_OPENED]: {
-        throttlePeriod: T,
+        throttlePeriod: b,
         throttleKeys: () => []
     },
     [p.rMx.APP_BACKGROUND]: {
-        throttlePeriod: b,
+        throttlePeriod: T,
         throttleKeys: () => []
     },
     [p.rMx.ACK_MESSAGES]: {
@@ -111,7 +111,7 @@ let x = {
         throttleKeys: () => []
     },
     [p.rMx.KEYBOARD_SHORTCUT_USED]: {
-        throttlePeriod: b,
+        throttlePeriod: T,
         throttleKeys: (e) => {
             var t;
             return [e.shortcut_name, e.location_object, ...(null !== (t = e.source_class_list) && void 0 !== t ? t : [])];
@@ -126,15 +126,15 @@ let x = {
         throttleKeys: (e) => [e.type]
     },
     [p.rMx.ROLE_PAGE_VIEWED]: {
-        throttlePeriod: b,
+        throttlePeriod: T,
         throttleKeys: (e) => [e.role_id, e.tab_opened]
     },
     [p.rMx.VIDEO_INPUT_INITIALIZED]: {
-        throttlePeriod: T,
+        throttlePeriod: b,
         throttleKeys: () => []
     },
     [p.rMx.AUDIO_INPUT_INITIALIZED]: {
-        throttlePeriod: T,
+        throttlePeriod: b,
         throttleKeys: () => []
     },
     [p.rMx.HUB_ONBOARDING_CAROUSEL_SCROLLED]: {
@@ -188,7 +188,7 @@ let x = {
         throttleKeys: () => []
     },
     [p.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
-        throttlePeriod: T,
+        throttlePeriod: b,
         throttleKeys: (e) => [e.channel_id]
     },
     [p.rMx.ACTIVITY_CARDS_VIEWED]: {
@@ -224,11 +224,11 @@ let x = {
         throttleKeys: (e) => [e.message_id]
     },
     [p.rMx.MEDIA_INPUT_VOLUME_CHANGED]: {
-        throttlePeriod: T,
+        throttlePeriod: b,
         throttleKeys: (e) => [e.location_stack]
     },
     [p.rMx.MEDIA_OUTPUT_VOLUME_CHANGED]: {
-        throttlePeriod: T,
+        throttlePeriod: b,
         throttleKeys: (e) => [e.location_stack]
     },
     [p.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION]: {
@@ -236,12 +236,12 @@ let x = {
         throttleKeys: (e) => [e.channel_id]
     },
     [p.rMx.USER_VOICE_ACTIVITY_VIEWED]: {
-        throttlePeriod: T,
+        throttlePeriod: b,
         throttleKeys: (e) => [e.activity_user_id, e.surface],
         deduplicate: !0
     },
     [p.rMx.PARTY_VOICE_ACTIVITY_VIEWED]: {
-        throttlePeriod: T,
+        throttlePeriod: b,
         throttleKeys: (e) => [e.voice_channel_id],
         deduplicate: !0
     },
@@ -257,7 +257,7 @@ let x = {
               }
             : void 0
 };
-function L(e) {
+function x(e) {
     return 'string' == typeof e
         ? { location: e }
         : {
@@ -268,7 +268,7 @@ function L(e) {
               location_object_type: e.objectType
           };
 }
-function P(e) {
+function w(e) {
     return 'string' == typeof e
         ? { source: e }
         : {
@@ -279,12 +279,12 @@ function P(e) {
               source_promotion_id: e.promotionId
           };
 }
-let w = () => h.E.NONE;
+let P = () => h.E.NONE;
 function M(e) {
-    w = e;
+    P = e;
 }
 let k = (0, a.trackMaker)({
-    analyticEventConfigs: x,
+    analyticEventConfigs: L,
     dispatcher: s.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
@@ -298,17 +298,17 @@ function G(e) {
         let { location: e, ...t } = a;
         a = {
             ...t,
-            ...L(e)
+            ...x(e)
         };
     }
     if (null != a.source) {
         let { source: e, ...t } = a;
         a = {
             ...t,
-            ...P(e)
+            ...w(e)
         };
     }
-    (a.client_performance_cpu = f.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = f.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = f.Z.getCPUCoreCount()), (a.accessibility_features = w()), (a.rendered_locale = m.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - R) / 1000));
+    (a.client_performance_cpu = f.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = f.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = f.Z.getCPUCoreCount()), (a.accessibility_features = P()), (a.rendered_locale = m.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - R) / 1000));
     let s = f.Z.getProcessUptime();
     null != s && (a.uptime_process_renderer = Math.floor(s));
     let { utmSource: o, utmMedium: l, utmCampaign: u, utmContent: c } = v;
@@ -360,7 +360,7 @@ function K(e, t) {
     );
 }
 let z = (0, a.trackMaker)({
-    analyticEventConfigs: x,
+    analyticEventConfigs: L,
     dispatcher: s.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });

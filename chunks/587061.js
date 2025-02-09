@@ -36,7 +36,7 @@ function E(e, t) {
     let r = (0, f.VG)(null === (n = (0, f.uB)(e)) || void 0 === n ? void 0 : n.activeElement);
     if ((r && e.key !== h.mR.Tab) || e.ctrlKey || e.altKey || e.metaKey || (e.key !== h.mR.Tab && e.shiftKey)) return;
     let a = g(e);
-    null == a || d.Z.hasExactKeybind(a) || o.Z.hasBind(null !== (i = _.H9(a[0])) && void 0 !== i ? i : '') || ((0, l.Qj)(), r && !t && e.preventDefault());
+    null == a || d.ZP.hasExactKeybind(a) || o.Z.hasBind(null !== (i = _.H9(a[0])) && void 0 !== i ? i : '') || ((0, l.Qj)(), r && !t && e.preventDefault());
 }
 function v() {
     (0, l.rf)();

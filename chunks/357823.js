@@ -2,95 +2,95 @@ t.d(n, { default: () => T });
 var i = t(200651);
 t(192379);
 var l = t(481060),
-    a = t(239091),
-    r = t(883385),
-    d = t(108843),
-    u = t(100527),
+    r = t(239091),
+    a = t(883385),
+    u = t(108843),
+    d = t(100527),
     o = t(299206),
     s = t(819403),
     c = t(286694),
-    _ = t(314897),
-    E = t(933409),
+    E = t(314897),
+    _ = t(933409),
     g = t(389052),
     f = t(158508),
-    h = t(991307),
-    v = t(37258),
-    Z = t(700994),
+    v = t(991307),
+    Z = t(37258),
+    h = t(700994),
     A = t(981631),
     S = t(388032);
-let T = (0, d.Z)(
-    (0, r.Z)(
+let T = (0, u.Z)(
+    (0, a.Z)(
         function (e) {
-            let { user: n, guildId: t, channel: r, onSelect: d } = e,
-                u = r.id,
-                A = (0, v.Z)({
+            let { user: n, guildId: t, channel: a, onSelect: u } = e,
+                d = a.id,
+                A = (0, Z.Z)({
                     userId: n.id,
                     guildId: t,
-                    channelId: u,
+                    channelId: d,
                     showGuildProfile: !0,
                     icon: (0, i.jsx)(l.tBG, { size: 'sm' }),
                     label: S.intl.string(S.t.iXAna2)
                 }),
-                T = (0, Z.Z)(n.id),
-                I = (0, h.Z)(n.id),
-                M = (0, f.Z)({
+                T = (0, h.Z)(n.id),
+                M = (0, v.Z)(n.id),
+                m = (0, f.Z)({
                     user: n,
                     guildId: t,
-                    channelId: u,
+                    channelId: d,
                     location: 'GuildVoiceUserContextMenu'
                 }),
-                m = (0, g.Z)({
+                I = (0, g.Z)({
                     user: n,
                     guildId: t,
-                    channelId: u,
+                    channelId: d,
                     location: 'GuildChannelUserContextMenu'
                 }),
-                C = (0, E.Z)(n, t, u),
-                N = (0, o.Z)({
+                C = (0, _.Z)(n, t, d),
+                b = (0, o.Z)({
                     id: n.id,
                     label: S.intl.string(S.t['/AXYnJ'])
                 }),
-                b = (0, s.Z)(n),
-                x = (0, c.Z)(n, t, u),
-                P = n.isNonUserBot(),
-                y = n.id === _.default.getId();
+                N = (0, s.Z)(n),
+                P = (0, c.Z)(n, t, d),
+                D = n.isNonUserBot(),
+                U = n.id === E.default.getId();
             return (0, i.jsx)(l.v2r, {
                 navId: 'user-context',
-                onClose: a.Zy,
+                onClose: r.Zy,
                 'aria-label': S.intl.string(S.t.liqwPD),
-                onSelect: d,
+                onSelect: u,
                 variant: 'fixed',
                 children:
-                    !P &&
+                    !D &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsxs)(l.kSQ, {
-                                children: [b, x]
+                                children: [N, P]
                             }),
                             (0, i.jsx)(l.kSQ, { children: A }),
                             (0, i.jsxs)(l.kSQ, {
-                                children: [T, I]
+                                children: [T, M]
                             }),
-                            !y &&
+                            !U &&
                                 (0, i.jsx)(l.kSQ, {
                                     children: (0, i.jsxs)(l.sNh, {
                                         id: 'more-options',
                                         label: S.intl.string(S.t.PdRCRk),
                                         children: [
-                                            (0, i.jsx)(l.kSQ, { children: N }),
+                                            (0, i.jsx)(l.kSQ, { children: b }),
                                             (0, i.jsxs)(l.kSQ, {
-                                                children: [M, m]
+                                                children: [m, I]
                                             }),
                                             (0, i.jsx)(l.kSQ, { children: C })
                                         ]
                                     })
                                 }),
-                            y && (0, i.jsx)(l.kSQ, { children: (0, i.jsx)(l.kSQ, { children: N }) })
+                            U && (0, i.jsx)(l.kSQ, { children: (0, i.jsx)(l.kSQ, { children: b }) })
                         ]
                     })
             });
         },
         { object: A.qAy.CONTEXT_MENU }
     ),
-    [u.Z.VOICE_USER]
+    [d.Z.VOICE_USER]
 );

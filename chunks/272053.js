@@ -30,8 +30,8 @@ let g = '33kozedd0zs6fbauka98psnc7zwom2s',
     v = (e) => 'https://youtube.com/watch?v='.concat(e),
     y = 5 * f.Z.Millis.MINUTE,
     I = 'https://api.twitch.tv/helix',
-    b = /live_user_(.*)-\{width\}/,
-    T = 128,
+    T = /live_user_(.*)-\{width\}/,
+    b = 128,
     S = null,
     A = 0,
     N = null,
@@ -39,7 +39,7 @@ let g = '33kozedd0zs6fbauka98psnc7zwom2s',
     R = {};
 function O(e) {
     var t;
-    return null === (t = b.exec(e)) || void 0 === t ? void 0 : t[1];
+    return null === (t = T.exec(e)) || void 0 === t ? void 0 : t[1];
 }
 function D(e, t, n) {
     return o.tn.get({
@@ -52,7 +52,7 @@ function D(e, t, n) {
         rejectWithError: !1
     });
 }
-async function x(e, t) {
+async function L(e, t) {
     var n;
     let i = R[e];
     if (null != i) return i;
@@ -62,7 +62,7 @@ async function x(e, t) {
         a = null === (n = r[0]) || void 0 === n ? void 0 : n.name;
     return (R[e] = a), a;
 }
-class L {
+class x {
     start() {
         this._started || ((this._started = !0), _.Z.isFetching() ? u.Z.fetch() : this._check());
     }
@@ -95,11 +95,11 @@ class L {
             if (null == s || 'live' !== s.type) throw Error('no stream');
             let { thumbnail_url: o, game_id: l, title: u } = s,
                 f = { large_image: null != o && null !== (i = (0, d.getAssetFromImageURL)(h.ABu.TWITCH, o)) && void 0 !== i ? i : void 0 },
-                _ = await x(l, t),
+                _ = await L(l, t),
                 p = c.Z.get(h.ABu.TWITCH),
                 m = null !== (r = O(o)) && void 0 !== r ? r : e.name,
-                g = null != u && '' !== u ? u.slice(0, T) : void 0,
-                E = null != _ && '' !== _ ? _.slice(0, T) : void 0;
+                g = null != u && '' !== u ? u.slice(0, b) : void 0,
+                E = null != _ && '' !== _ ? _.slice(0, b) : void 0;
             return {
                 url:
                     null === (n = p.getPlatformUserUrl) || void 0 === n
@@ -145,7 +145,7 @@ class L {
                     snippet: { title: a, thumbnails: s }
                 } = i[0],
                 l = { large_image: null !== (n = (0, d.getAssetFromImageURL)(h.ABu.YOUTUBE, s.high.url)) && void 0 !== n ? n : void 0 },
-                u = null != a && '' !== a ? a.slice(0, T) : void 0;
+                u = null != a && '' !== a ? a.slice(0, b) : void 0;
             return (N = {
                 url: v(r),
                 name: c.Z.get(h.ABu.YOUTUBE).name,
@@ -188,9 +188,9 @@ class L {
         m(this, '_nextCheck', void 0), m(this, '_started', void 0), (this._started = !1);
     }
 }
-let P = new L();
-function w() {
-    p.Z.enabled ? P.start() : P.stop();
+let w = new x();
+function P() {
+    p.Z.enabled ? w.start() : w.stop();
 }
 function M(e) {
     var t;
@@ -199,7 +199,7 @@ function M(e) {
 }
 class k extends (i = s.ZP.Store) {
     initialize() {
-        w(), this.waitFor(_.Z), this.syncWith([p.Z], w);
+        P(), this.waitFor(_.Z), this.syncWith([p.Z], P);
     }
     getStream() {
         return S;
@@ -208,5 +208,5 @@ class k extends (i = s.ZP.Store) {
 m(k, 'displayName', 'ExternalStreamingStore');
 let U = new k(l.Z, {
     STREAMING_UPDATE: M,
-    USER_CONNECTIONS_UPDATE: () => P._check()
+    USER_CONNECTIONS_UPDATE: () => w._check()
 });

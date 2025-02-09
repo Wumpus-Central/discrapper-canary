@@ -1,22 +1,22 @@
-n.d(t, { Z: () => m }), n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var i = n(200651),
     s = n(192379),
-    r = n(823379),
-    l = n(106976),
+    l = n(823379),
+    r = n(106976),
     a = n(270144),
     o = n(301935),
     c = n(630656),
     d = n(10970),
     u = n(388032);
-function m(e) {
+function h(e) {
     let { subscriptions: t, updateHeader: n } = e,
-        [m, g] = s.useState({ route: c.j.HOME }),
-        { route: h } = m,
+        [h, m] = s.useState({ route: c.j.HOME }),
+        { route: g } = h,
         x = () => {
-            g({ route: c.j.HOME });
+            m({ route: c.j.HOME });
         },
         _ = (e) => {
-            g({
+            m({
                 route: c.j.SWITCH_APP_PLANS,
                 ...e
             }),
@@ -32,7 +32,7 @@ function m(e) {
                     ...e,
                     [n.id]: o.G.LOADING
                 })),
-                (0, l.vY)(t)
+                (0, r.vY)(t)
                     .then(() => {
                         E((e) => ({
                             ...e,
@@ -48,8 +48,8 @@ function m(e) {
         }
     }, [t]);
     let { loadState: C } = (0, a.qz)(),
-        f = C !== a.jd.LOADED;
-    switch (h) {
+        N = C !== a.jd.LOADED;
+    switch (g) {
         case c.j.HOME:
             return (0, i.jsx)(i.Fragment, {
                 children: t.map((e) => {
@@ -59,19 +59,19 @@ function m(e) {
                         {
                             subscription: e,
                             navigateToSwitchPlan: _,
-                            loadingState: f ? o.G.LOADING : null !== (t = p[e.id]) && void 0 !== t ? t : o.G.LOADING
+                            loadingState: N ? o.G.LOADING : null !== (t = p[e.id]) && void 0 !== t ? t : o.G.LOADING
                         },
                         e.id
                     );
                 })
             });
         case c.j.SWITCH_APP_PLANS:
-            let { route: T, ...N } = m;
+            let { route: f, ...I } = h;
             return (0, i.jsx)(d.Z, {
-                ...N,
+                ...I,
                 navigateToHome: x
             });
         default:
-            (0, r.vE)(h);
+            (0, l.vE)(g);
     }
 }

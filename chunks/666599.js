@@ -7,7 +7,7 @@ var t = a(642128),
     l = a(118012),
     o = a(313201),
     d = a(388032),
-    c = a(720664);
+    c = a(910091);
 let m = (e) => {
         let { currentNumber: r, thresholdNumber: a, currentLabel: o, isPercent: m = !1 } = e,
             h = null != a ? Math.floor((r / a) * 100) : 0,

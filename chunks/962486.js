@@ -9,7 +9,7 @@ var i = n(200651),
     d = n(726115),
     u = n(294330),
     h = n(981631),
-    m = n(874892);
+    m = n(489014);
 let p = {
     page: h.ZY5.GUILD_DISCOVERY,
     object: h.qAy.CARD,
@@ -20,8 +20,8 @@ function g(e) {
         E = (0, d.Mf)(t),
         I = (0, d.a$)(t),
         C = (0, d.QW)(t),
-        N = (0, d.lg)(t),
-        v = l.useMemo(() => {
+        v = (0, d.lg)(t),
+        N = l.useMemo(() => {
             let e = h ? 30 : n.length,
                 t = [];
             for (let a = 0; a < e; a++) {
@@ -32,15 +32,15 @@ function g(e) {
                         {
                             guildId: null !== (l = n[a]) && void 0 !== l ? l : null,
                             index: a,
-                            onClick: (e) => _(e, a, N, p),
-                            onView: (e) => f(e, N)
+                            onClick: (e) => _(e, a, v, p),
+                            onView: (e) => f(e, v)
                         },
                         null !== (r = n[a]) && void 0 !== r ? r : a
                     )
                 );
             }
             return t;
-        }, [N, n, h, _, f]);
+        }, [v, n, h, _, f]);
     return (0, i.jsxs)(c.Z, {
         onScroll: g,
         children: [
@@ -59,7 +59,7 @@ function g(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: m.content,
-                        children: v
+                        children: N
                     })
                 ]
             })

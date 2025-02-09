@@ -1,15 +1,15 @@
-n.d(t, { Z: () => l });
-var i = n(106351),
-    r = n(524437),
-    a = n(695346),
-    s = n(82554),
-    o = n(388032);
-let l = {
-    getTitle: () => o.intl.string(o.t.vJOqMD),
-    getDisabledTitle: () => o.intl.string(o.t.B5ZvY2),
-    getDescription: () => o.intl.string(o.t['43UEUl']),
-    eligibleReportSubtypes: [s.i5.SUB_SPAM],
-    eligibleChannelTypes: [i.d.DM, i.d.GROUP_DM],
-    onApply: () => a.Xr.updateSetting(r.Xr.NON_FRIENDS),
-    predicate: () => a.Xr.getSetting() === r.Xr.DISABLED
+n.d(t, { Z: () => o });
+var l = n(106351),
+    i = n(524437),
+    r = n(695346),
+    a = n(82554),
+    s = n(388032);
+let o = {
+    getTitle: () => s.intl.string(s.t.vJOqMD),
+    getDisabledTitle: () => s.intl.string(s.t.B5ZvY2),
+    getDescription: () => s.intl.string(s.t['43UEUl']),
+    eligibleReportSubtypes: [a.i5.SUB_SPAM],
+    eligibleChannelTypes: [l.d.DM, l.d.GROUP_DM],
+    onApply: () => r.Xr.updateSetting(i.Xr.NON_FRIENDS),
+    predicate: () => r.Xr.getSetting() === i.Xr.DISABLED
 };

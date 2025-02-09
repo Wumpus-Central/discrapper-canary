@@ -1,29 +1,29 @@
-s.d(t, {
-    W: () => a,
-    Z: () => c
+e.d(s, {
+    W: () => o,
+    Z: () => l
 });
-var n = s(200651);
-s(192379);
-var i = s(120356),
-    r = s.n(i),
-    o = s(481060),
-    l = s(759821);
-let a = {
-    RED: l.redMessageBlock,
-    YELLOW: l.yellowMessageBlock,
-    BROWN: l.brownMessageBlock
+var n = e(200651);
+e(192379);
+var i = e(120356),
+    r = e.n(i),
+    a = e(481060),
+    c = e(734991);
+let o = {
+    RED: c.redMessageBlock,
+    YELLOW: c.yellowMessageBlock,
+    BROWN: c.brownMessageBlock
 };
-function c(e) {
-    let { color: t, icon: s, children: i, className: a } = e;
-    return (0, n.jsx)(o.kzN, {
-        icon: (e) =>
-            (0, n.jsx)(s, {
+function l(t) {
+    let { color: s, icon: e, children: i, className: o } = t;
+    return (0, n.jsx)(a.kzN, {
+        icon: (t) =>
+            (0, n.jsx)(e, {
                 height: 20,
                 width: 20,
-                ...e
+                ...t
             }),
-        iconClassName: l.messageBlockIcon,
-        className: r()(t, a),
+        iconClassName: c.messageBlockIcon,
+        className: r()(s, o),
         children: i
     });
 }

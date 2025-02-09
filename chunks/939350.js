@@ -1,5 +1,5 @@
 n.d(t, { _: () => r });
-var i = n(450793);
+var i = n(335765);
 let r = {
     default: i.colorDefault,
     brand: i.colorBrand,

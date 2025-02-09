@@ -1,68 +1,68 @@
-n.d(t, { Z: () => Z }), n(653041);
+n.d(t, { Z: () => S }), n(653041);
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(524437),
+var o = n(442837),
+    r = n(524437),
     a = n(481060),
-    s = n(153867),
-    c = n(857595),
-    o = n(607070),
-    u = n(906732),
-    d = n(705262),
-    g = n(540059),
-    p = n(210887),
-    h = n(740492),
-    x = n(695346),
-    j = n(874893),
-    m = n(981631),
-    S = n(388032);
-function Z() {
-    let e = x.jU.useSetting(),
-        { analyticsLocations: t } = (0, u.ZP)(),
+    l = n(153867),
+    s = n(857595),
+    c = n(607070),
+    d = n(906732),
+    u = n(705262),
+    _ = n(540059),
+    g = n(210887),
+    b = n(740492),
+    m = n(695346),
+    E = n(874893),
+    h = n(981631),
+    p = n(388032);
+function S() {
+    let e = m.jU.useSetting(),
+        { analyticsLocations: t } = (0, d.ZP)(),
         {
             theme: n,
-            useSystemTheme: Z,
-            useForcedColors: b
-        } = (0, r.cj)([p.Z, h.ZP, o.Z], () => ({
-            theme: p.Z.theme,
-            useSystemTheme: h.ZP.useSystemTheme,
-            useForcedColors: o.Z.useForcedColors
+            useSystemTheme: S,
+            useForcedColors: f
+        } = (0, o.cj)([g.Z, b.ZP, c.Z], () => ({
+            theme: g.Z.theme,
+            useSystemTheme: b.ZP.useSystemTheme,
+            useForcedColors: c.Z.useForcedColors
         })),
-        f = x.YC.useSetting(),
-        v = (0, g.Q3)('appearance_settings'),
-        k = (0, g.o9)('appearance_settings'),
-        E = (0, g.nm)('appearance_settings'),
-        y = (e, r) =>
+        R = m.YC.useSetting(),
+        C = (0, _.Q3)('appearance_settings'),
+        k = (0, _.o9)('appearance_settings'),
+        x = (0, _.nm)('appearance_settings'),
+        B = (e, o) =>
             (0, i.jsx)(a.k5B, {
                 id: e,
                 group: 'input-modes',
-                label: r,
-                disabled: b,
-                checked: Z === j.K.ON ? 'system' === e : e === n,
+                label: o,
+                disabled: f,
+                checked: S === E.K.ON ? 'system' === e : e === n,
                 action: () => {
-                    (0, d.Yk)({
+                    (0, u.Yk)({
                         isPersisted: !0,
                         analyticsLocations: t,
                         themeName: 'default '.concat(e)
                     }),
-                        (0, s.ZI)({ theme: e });
+                        (0, l.ZI)({ theme: e });
                 }
             }),
-        C = y(m.BRd.DARK, v ? S.intl.string(S.t.GEaO9P) : S.intl.string(S.t.b8Cei4)),
-        I = y(m.BRd.LIGHT, S.intl.string(S.t.K2sFfn)),
-        N = [
+        T = B(h.BRd.DARK, C ? p.intl.string(p.t.GEaO9P) : p.intl.string(p.t.b8Cei4)),
+        Z = B(h.BRd.LIGHT, p.intl.string(p.t.K2sFfn)),
+        j = [
             (0, i.jsxs)(
                 a.kSQ,
                 {
                     children: [
-                        v
+                        C
                             ? (0, i.jsxs)(i.Fragment, {
-                                  children: [I, C, y(m.BRd.DARKER, S.intl.string(S.t.b8Cei4)), y(m.BRd.MIDNIGHT, S.intl.string(S.t.pQwSpa))]
+                                  children: [Z, T, B(h.BRd.DARKER, p.intl.string(p.t.b8Cei4)), B(h.BRd.MIDNIGHT, p.intl.string(p.t.pQwSpa))]
                               })
                             : (0, i.jsxs)(i.Fragment, {
-                                  children: [C, I]
+                                  children: [T, Z]
                               }),
-                        y('system', S.intl.string(S.t['7rOU6u']))
+                        B('system', p.intl.string(p.t['7rOU6u']))
                     ]
                 },
                 'theme-items'
@@ -71,7 +71,7 @@ function Z() {
         ];
     return (
         k
-            ? (N.push(
+            ? (j.push(
                   (0, i.jsxs)(
                       a.kSQ,
                       {
@@ -80,19 +80,19 @@ function Z() {
                               (0, i.jsx)(a.k5B, {
                                   id: 'cozy-ui',
                                   group: 'list-density',
-                                  label: S.intl.string(S.t['4cuYHx']),
-                                  checked: f === l.Pi.COZY,
+                                  label: p.intl.string(p.t['4cuYHx']),
+                                  checked: R === r.Pi.COZY,
                                   action: () => {
-                                      x.YC.updateSetting(l.Pi.COZY);
+                                      m.YC.updateSetting(r.Pi.COZY);
                                   }
                               }),
                               (0, i.jsx)(a.k5B, {
                                   id: 'compact-ui',
                                   group: 'list-density',
-                                  label: S.intl.string(S.t['7iegX1']),
-                                  checked: f === l.Pi.COMPACT,
+                                  label: p.intl.string(p.t['7iegX1']),
+                                  checked: R === r.Pi.COMPACT,
                                   action: () => {
-                                      x.YC.updateSetting(l.Pi.COMPACT);
+                                      m.YC.updateSetting(r.Pi.COMPACT);
                                   }
                               })
                           ]
@@ -100,7 +100,7 @@ function Z() {
                       'list-density'
                   )
               ),
-              N.push(
+              j.push(
                   (0, i.jsxs)(
                       a.kSQ,
                       {
@@ -109,19 +109,19 @@ function Z() {
                               (0, i.jsx)(a.k5B, {
                                   id: 'cozy-chat',
                                   group: 'chat-density',
-                                  label: S.intl.string(S.t.Jqj4cX),
+                                  label: p.intl.string(p.t.Jqj4cX),
                                   checked: !e,
                                   action: () => {
-                                      x.jU.updateSetting(!1), (0, c.ZZ)();
+                                      m.jU.updateSetting(!1), (0, s.ZZ)();
                                   }
                               }),
                               (0, i.jsx)(a.k5B, {
                                   id: 'compact-chat',
                                   group: 'chat-density',
-                                  label: S.intl.string(S.t['1JNcPT']),
+                                  label: p.intl.string(p.t['1JNcPT']),
                                   checked: e,
                                   action: () => {
-                                      x.jU.updateSetting(!0), (0, c.ZZ)();
+                                      m.jU.updateSetting(!0), (0, s.ZZ)();
                                   }
                               })
                           ]
@@ -129,8 +129,8 @@ function Z() {
                       'chat-density'
                   )
               ),
-              E &&
-                  N.push(
+              x &&
+                  j.push(
                       (0, i.jsx)(
                           a.kSQ,
                           {
@@ -138,29 +138,29 @@ function Z() {
                                   id: 'desktop-refresh-override',
                                   label: 'Enable Desktop Refresh',
                                   action: () => {
-                                      s.ZP.updatedUnsyncedSettings({ disableVisualRefresh: v });
+                                      l.ZP.updatedUnsyncedSettings({ disableVisualRefresh: C });
                                   },
-                                  checked: v
+                                  checked: C
                               })
                           },
                           'refresh-experiment'
                       )
                   ))
-            : N.push(
+            : j.push(
                   (0, i.jsx)(
                       a.kSQ,
                       {
                           children: (0, i.jsx)(a.sNh, {
                               id: 'compact-mode',
-                              label: e ? S.intl.string(S.t.CTpwDw) : S.intl.string(S.t['J/FISU']),
+                              label: e ? p.intl.string(p.t.CTpwDw) : p.intl.string(p.t['J/FISU']),
                               action: () => {
-                                  x.jU.updateSetting(!e), (0, c.ZZ)();
+                                  m.jU.updateSetting(!e), (0, s.ZZ)();
                               }
                           })
                       },
                       'compact-mode'
                   )
               ),
-        N
+        j
     );
 }

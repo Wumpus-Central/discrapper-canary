@@ -9,7 +9,7 @@ var r = n(200651),
     c = n(297651),
     u = n(215023),
     C = n(388032),
-    h = n(218142);
+    h = n(957726);
 let p = (e) => {
     var t;
     let { wideBannerBlock: n, handleTransition: i, tab: p } = e,

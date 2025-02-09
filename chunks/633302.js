@@ -45,8 +45,8 @@ let u = null,
     v = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
     y = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
     I = n(523558),
-    b = /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
-    T = /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
+    T = /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
+    b = /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
     S = /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g;
 for (let e = 0; e < E.length; e++) {
     let t = E[e];
@@ -160,16 +160,16 @@ function O() {
 function D() {
     return Object.keys(c);
 }
-function x(e) {
+function L(e) {
     return Object.prototype.hasOwnProperty.call(d, e) ? d[e] : null;
 }
-function L(e) {
+function x(e) {
     return c[e];
 }
-function P(e) {
-    return T.test(e);
-}
 function w(e) {
+    return b.test(e);
+}
+function P(e) {
     return e.replace(y, (e, t) => V(t, e));
 }
 function M(e) {
@@ -190,7 +190,7 @@ let k = String.fromCodePoint(917631),
     G = /^[\u{E0061}-\u{E007A}]$/u;
 function B(e, t) {
     var n;
-    if (!0 !== t && !P(e))
+    if (!0 !== t && !w(e))
         return [
             {
                 type: 'text',
@@ -230,7 +230,7 @@ function Z(e) {
         .join('');
 }
 function F(e) {
-    if (!P(e)) return null;
+    if (!w(e)) return null;
     let t = B(e, !0)
         .map((e) => ('text' === e.type ? e.text : e.emojiName))
         .join('');
@@ -247,7 +247,7 @@ function j(e) {
     return Object.prototype.hasOwnProperty.call(_, e) && (i = _[e]), t ? ':'.concat(i, ':') : i;
 }
 function H(e) {
-    return x(
+    return L(
         j(
             E.reduce((e, t) => e.replace(t, ''), e),
             !1
@@ -258,10 +258,10 @@ let Y = {
     getDefaultDiversitySurrogate: O,
     setDefaultDiversitySurrogate: R,
     getCategories: D,
-    getByName: x,
-    getByCategory: L,
-    contentHasUnicodeOrEmoji: P,
-    translateInlineEmojiToSurrogates: w,
+    getByName: L,
+    getByCategory: x,
+    contentHasUnicodeOrEmoji: w,
+    translateInlineEmojiToSurrogates: P,
     maybeTranslateSurrogatesToInlineEmoji: F,
     findInlineEmojisFromSurrogates: B,
     translateSurrogatesToInlineEmoji: Z,
@@ -280,7 +280,7 @@ let Y = {
     numNonDiversitySprites: m,
     EMOJI_NAME_RE: v,
     EMOJI_NAME_AND_DIVERSITY_RE: y,
-    EMOJI_SHORTCUT_RE: b,
+    EMOJI_SHORTCUT_RE: T,
     hasSurrogates: function e(e) {
         return r()
             .toArray(e)

@@ -1,15 +1,15 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => _ });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(793030),
-    a = n(553896),
+var r = n(120356),
+    a = n.n(r),
+    s = n(793030),
+    l = n(553896),
     o = n(848572),
     c = n(787528),
     d = n(474936),
     u = n(388032),
-    m = n(459850);
+    m = n(431979);
 let g = (e) => {
         switch (e) {
             case d.JN.PREMIUM_TENURE_1_MONTH:
@@ -41,36 +41,36 @@ let g = (e) => {
                 return;
         }
     },
-    h = () => {
+    _ = () => {
         var e;
         let t = (0, o.Rw)(),
             n = null !== (e = (0, o.GG)()) && void 0 !== e ? e : new Date();
         if (null == t) return null;
-        let s = (0, c.J)(t.id),
-            { id: d, badgeVersion: h, nameUnformatted: x, tenureReqNumMonths: _, hasWideArt: p } = t,
-            E = u.intl.string(x),
-            C = (0, a.q)(d, _);
-        if (1 === h) {
+        let r = (0, c.J)(t.id),
+            { id: d, badgeVersion: _, nameUnformatted: p, tenureReqNumMonths: f, hasWideArt: h } = t,
+            x = u.intl.string(p),
+            E = (0, l.q)(d, f);
+        if (1 === _) {
             let e = t.status === o.Vq.EARNED ? t.earnedOnDate : null;
             return (0, i.jsxs)('div', {
-                className: r()(m.container, g(d)),
+                className: a()(m.container, g(d)),
                 children: [
                     (0, i.jsx)('div', {}),
                     ' ',
                     (0, i.jsx)('img', {
-                        src: s,
-                        alt: E,
+                        src: r,
+                        alt: x,
                         className: m.badgeImage
                     }),
                     (0, i.jsxs)('div', {
                         className: m.textColumn,
                         children: [
-                            (0, i.jsx)(l.xv, {
+                            (0, i.jsx)(s.xv, {
                                 variant: 'text-lg/semibold',
                                 className: m.badgeText,
-                                children: E
+                                children: x
                             }),
-                            (0, i.jsx)(l.xv, {
+                            (0, i.jsx)(s.xv, {
                                 variant: 'text-xs/normal',
                                 children: u.intl.format(u.t.zl7yMD, { date: e })
                             })
@@ -80,29 +80,29 @@ let g = (e) => {
             });
         }
         return (0, i.jsxs)('div', {
-            className: r()(m.container, g(d)),
+            className: a()(m.container, g(d)),
             children: [
                 (0, i.jsx)('div', {}),
                 ' ',
                 (0, i.jsx)('img', {
-                    src: s,
-                    alt: E,
-                    className: r()(m.badgeImage, m.badgeImageV2, { [m.wide]: p })
+                    src: r,
+                    alt: x,
+                    className: a()(m.badgeImage, m.badgeImageV2, { [m.wide]: h })
                 }),
                 (0, i.jsxs)('div', {
                     className: m.textColumn,
                     children: [
-                        (0, i.jsx)(l.xv, {
+                        (0, i.jsx)(s.xv, {
                             variant: 'text-lg/semibold',
+                            className: m.badgeText,
+                            children: x
+                        }),
+                        (0, i.jsx)(s.xv, {
+                            variant: 'text-md/normal',
                             className: m.badgeText,
                             children: E
                         }),
-                        (0, i.jsx)(l.xv, {
-                            variant: 'text-md/normal',
-                            className: m.badgeText,
-                            children: C
-                        }),
-                        (0, i.jsx)(l.xv, {
+                        (0, i.jsx)(s.xv, {
                             variant: 'text-xs/normal',
                             children: u.intl.formatToPlainString(u.t['8zbGNT'], { date: n })
                         })

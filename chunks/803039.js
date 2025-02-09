@@ -91,11 +91,11 @@ function t(e) {
                 }
             ]
         },
-        b = t.concat(i, '\\b(?!\\()'),
-        T = {
+        T = t.concat(i, '\\b(?!\\()'),
+        b = {
             variants: [
                 {
-                    match: [t.concat(/::/, t.lookahead(/(?!class\b)/)), b],
+                    match: [t.concat(/::/, t.lookahead(/(?!class\b)/)), T],
                     scope: { 2: 'variable.constant' }
                 },
                 {
@@ -103,7 +103,7 @@ function t(e) {
                     scope: { 2: 'variable.language' }
                 },
                 {
-                    match: [r, t.concat(/::/, t.lookahead(/(?!class\b)/)), b],
+                    match: [r, t.concat(/::/, t.lookahead(/(?!class\b)/)), T],
                     scope: {
                         1: 'title.class',
                         3: 'variable.constant'
@@ -131,7 +131,7 @@ function t(e) {
             begin: /\(/,
             end: /\)/,
             keywords: v,
-            contains: [S, s, T, e.C_BLOCK_COMMENT_MODE, p, h, I]
+            contains: [S, s, b, e.C_BLOCK_COMMENT_MODE, p, h, I]
         },
         N = {
             relevance: 0,
@@ -140,7 +140,7 @@ function t(e) {
             contains: [A]
         };
     A.contains.push(N);
-    let C = [S, T, e.C_BLOCK_COMMENT_MODE, p, h, I],
+    let C = [S, b, e.C_BLOCK_COMMENT_MODE, p, h, I],
         R = {
             begin: t.concat(/#\[\s*\\?/, t.either(r, a)),
             beginScope: 'meta',
@@ -204,7 +204,7 @@ function t(e) {
             },
             s,
             N,
-            T,
+            b,
             {
                 match: [/const/, /\s/, i],
                 scope: {
@@ -234,7 +234,7 @@ function t(e) {
                         excludeBegin: !0,
                         excludeEnd: !0,
                         keywords: v,
-                        contains: ['self', R, s, T, e.C_BLOCK_COMMENT_MODE, p, h]
+                        contains: ['self', R, s, b, e.C_BLOCK_COMMENT_MODE, p, h]
                     }
                 ]
             },

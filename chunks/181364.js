@@ -38,7 +38,7 @@ function g(e) {
             }
             return e;
         })(h(), e),
-        { trackView: f, trackClick: v } = (0, d.R)(m, { notif_type: m });
+        { trackView: f, trackClick: _ } = (0, d.R)(m, { notif_type: m });
     return {
         icon: n,
         title: l,
@@ -56,10 +56,10 @@ function g(e) {
             f();
         },
         onNotificationClick: (e, n) => {
-            v('unlock'), t === c.nc.NEWS && s.Z.updateNotificationStatus(n), a.Z.isOverlayOOPEnabledForPid((0, o.QF)()) ? s.Z.setInputLocked(!1, (0, o.QF)()) : r.Z.isInstanceLocked() && s.Z.setInstanceLocked(!1);
+            _('unlock'), t === c.nc.NEWS && s.Z.updateNotificationStatus(n), a.Z.isOverlayOOPEnabledForPid((0, o.QF)()) ? s.Z.setInputLocked(!1, (0, o.QF)()) : r.Z.isInstanceLocked() && s.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            v('dismiss');
+            _('dismiss');
         }
     };
 }

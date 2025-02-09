@@ -1,26 +1,26 @@
-n.d(t, {
-    ZP: () => S,
-    dL: () => f,
-    hC: () => g,
-    hl: () => m,
-    qx: () => E
+l.d(t, {
+    ZP: () => E,
+    dL: () => m,
+    hC: () => p,
+    hl: () => x,
+    qx: () => g
 }),
-    n(47120),
-    n(653041);
-var l = n(392711),
-    i = n(493683),
-    a = n(212819),
-    s = n(938078),
-    r = n(823385),
-    o = n(592125),
-    c = n(496675),
-    u = n(594174),
-    d = n(823379),
-    _ = n(41837),
-    h = n(981631);
-function f(e) {
-    let t = o.Z.getChannel(e);
-    return (null == t ? void 0 : t.type) === h.d4z.DM
+    l(47120),
+    l(653041);
+var n = l(392711),
+    s = l(493683),
+    r = l(212819),
+    a = l(938078),
+    i = l(823385),
+    u = l(592125),
+    o = l(496675),
+    c = l(594174),
+    d = l(823379),
+    h = l(41837),
+    f = l(981631);
+function m(e) {
+    let t = u.Z.getChannel(e);
+    return (null == t ? void 0 : t.type) === f.d4z.DM
         ? {
               type: 'user',
               id: t.recipients[0]
@@ -30,65 +30,65 @@ function f(e) {
               id: e
           };
 }
-function g(e) {
+function p(e) {
     return ''.concat(e.type, '-').concat(e.id);
 }
-function m(e) {
+function x(e) {
     if ('channel' === e.type) return e.id;
-    let t = o.Z.getDMFromUserId(e.id);
+    let t = u.Z.getDMFromUserId(e.id);
     if (null != t) return t;
 }
-async function E(e) {
-    let t = m(e);
+async function g(e) {
+    let t = x(e);
     if (null != t) return t;
     if ('user' === e.type)
         try {
-            return await i.Z.getOrEnsurePrivateChannel(e.id);
+            return await s.Z.getOrEnsurePrivateChannel(e.id);
         } catch (e) {
             return;
         }
 }
-function p(e) {
-    if ('user' !== e.type) return (0, s.Z)(e.id);
+function b(e) {
+    if ('user' !== e.type) return (0, a.Z)(e.id);
     {
-        let t = u.default.getUser(e.id);
+        let t = c.default.getUser(e.id);
         return null != t
             ? {
-                  type: a.h8.USER,
+                  type: r.h8.USER,
                   record: t,
                   score: 0
               }
             : null;
     }
 }
-function I(e, t) {
-    let n;
-    let l = new Set();
-    if (null != t) for (let e of t) l.add(e);
-    let i = [];
+function _(e, t) {
+    let l;
+    let n = new Set();
+    if (null != t) for (let e of t) n.add(e);
+    let s = [];
     for (let t of e)
         if (null != t) {
-            if (t.type === a.h8.HEADER) n = t;
+            if (t.type === r.h8.HEADER) l = t;
             else {
                 let { id: e } = t.record;
-                l.has(e) || (l.add(e), null != n && (i.push(n), (n = void 0)), i.push(t));
+                n.has(e) || (n.add(e), null != l && (s.push(l), (l = void 0)), s.push(t));
             }
         }
-    return i;
+    return s;
 }
-function A(e, t) {
-    return e.filter((e) => (0, d.lm)(e) && (e.type === a.h8.HEADER || ((0, _.o)(e) && (e.type === a.h8.USER ? t || null != o.Z.getDMChannelFromUserId(e.record.id) : e.type === a.h8.GROUP_DM || (e.record.type !== h.d4z.GUILD_FORUM && e.record.type !== h.d4z.GUILD_MEDIA && c.Z.can(h.Plq.VIEW_CHANNEL, e.record) && c.Z.can(h.Plq.SEND_MESSAGES, e.record))))));
+function y(e, t) {
+    return e.filter((e) => (0, d.lm)(e) && (e.type === r.h8.HEADER || ((0, h.o)(e) && (e.type === r.h8.USER ? t || null != u.Z.getDMChannelFromUserId(e.record.id) : e.type === r.h8.GROUP_DM || (e.record.type !== f.d4z.GUILD_FORUM && e.record.type !== f.d4z.GUILD_MEDIA && o.Z.can(f.Plq.VIEW_CHANNEL, e.record) && o.Z.can(f.Plq.SEND_MESSAGES, e.record))))));
 }
-function S(e) {
-    let { results: t, hasQuery: n, queryMode: i, frequentChannels: a, targetDestination: o, selectedDestinations: c, pinnedDestinations: u, originDestination: d, includeMissingDMs: _ } = e;
-    if (n) return I(A(t, _));
-    let h = null != u && u.length > 0 ? u.map((e) => p(e)) : [],
-        f = r.Z.getChannelHistory(),
-        g = f.length > 0 ? f.map((e) => (0, s.Z)(e)) : [],
-        m = a.length > 0 ? a.map((e) => (0, s.Z)(e.id)) : [],
-        E = A([...h, null != o ? p(o) : null, ...g, ...m], _),
-        S = (null == c ? void 0 : c.find((e) => (0, l.isEqual)(e, d))) != null,
-        C = null == d || S ? [] : [d.id];
-    return null != i ? I(E.filter((e) => e.type === i)) : I(E, C).slice(0, 15);
+function E(e) {
+    let { results: t, hasQuery: l, queryMode: s, frequentChannels: r, targetDestination: u, selectedDestinations: o, pinnedDestinations: c, originDestination: d, includeMissingDMs: h } = e;
+    if (l) return _(y(t, h));
+    let f = null != c && c.length > 0 ? c.map((e) => b(e)) : [],
+        m = i.Z.getChannelHistory(),
+        p = m.length > 0 ? m.map((e) => (0, a.Z)(e)) : [],
+        x = r.length > 0 ? r.map((e) => (0, a.Z)(e.id)) : [],
+        g = y([...f, null != u ? b(u) : null, ...p, ...x], h),
+        E = (null == o ? void 0 : o.find((e) => (0, n.isEqual)(e, d))) != null,
+        S = null == d || E ? [] : [d.id];
+    return null != s ? _(g.filter((e) => e.type === s)) : _(g, S).slice(0, 15);
 }
-n(388032);
+l(388032);

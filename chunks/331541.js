@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(899007),
     I = n(648052),
     C = n(867176),
-    N = n(537006),
-    v = n(483424),
+    v = n(537006),
+    N = n(483424),
     T = n(681837),
     S = n(502762),
-    Z = n(530),
-    A = n(309494),
+    A = n(530),
+    Z = n(309494),
     x = n(4517),
     b = n(171368),
     L = n(420654),
@@ -40,8 +40,8 @@ var i = n(200651),
     B = n(981631),
     V = n(228168),
     H = n(388032),
-    F = n(602654),
-    z = n(591156);
+    F = n(949990),
+    z = n(112650);
 function W(e) {
     let { currentUser: t, onClose: n, setPopoutRef: W } = e,
         Y = __OVERLAY__,
@@ -115,7 +115,7 @@ function W(e) {
                         (0, i.jsxs)(o.Ttm, {
                             className: F.body,
                             children: [
-                                (0, i.jsx)(Z.Z, {
+                                (0, i.jsx)(A.Z, {
                                     user: t,
                                     className: F.username,
                                     profileType: V.y0.BITE_SIZE,
@@ -130,7 +130,7 @@ function W(e) {
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(T.Z, { userId: t.id }),
-                                            (0, i.jsx)(A.Z, {
+                                            (0, i.jsx)(Z.Z, {
                                                 user: t,
                                                 isHovering: J
                                             })
@@ -143,11 +143,11 @@ function W(e) {
                                     hidePersonalInformation: ee,
                                     onClose: n
                                 }),
-                                (0, i.jsx)(N.Z, {
+                                (0, i.jsx)(v.Z, {
                                     isPremiumUser: ea,
                                     onInteraction: n
                                 }),
-                                (0, i.jsx)(v.Z, {
+                                (0, i.jsx)(N.Z, {
                                     user: t,
                                     currentUser: t,
                                     displayProfile: K,

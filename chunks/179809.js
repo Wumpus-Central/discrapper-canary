@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(481060),
     h = n(153867),
     p = n(540059),
-    g = n(771845),
-    m = n(624138),
+    m = n(771845),
+    g = n(624138),
     f = n(727258),
     _ = n(276952),
     v = n(199540),
@@ -20,12 +20,12 @@ var i = n(200651),
     Z = n(682662),
     I = n(662146),
     b = n(388032),
-    S = n(10448),
-    N = n(284923);
-let E = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    S = n(893539),
+    N = n(914217);
+let E = (0, g.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     j = (0, s.animated)(u.Kqy);
 function y(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: d, mentionCount: m = 0, isMentionLowImportance: y, unread: P = !1, defaultFolderName: T, useCircleMask: A = !1, draggable: w = !1, sorting: R = !1, onDragStart: L, onDragEnd: M, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: O } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: d, mentionCount: g = 0, isMentionLowImportance: y, unread: P = !1, defaultFolderName: A, useCircleMask: T = !1, draggable: w = !1, sorting: R = !1, onDragStart: L, onDragEnd: M, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: O } = e,
         { id: U, name: V, children: F } = t,
         H = (0, p.Q3)('FolderItem'),
         [z, W] = l.useState(!1),
@@ -44,7 +44,7 @@ function y(e) {
                 }
             ),
             end() {
-                null == M || M(), (0, h.V1)(g.ZP.getCompatibleGuildFolders());
+                null == M || M(), (0, h.V1)(m.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
@@ -57,7 +57,7 @@ function y(e) {
             },
             [D, s]
         ),
-        ee = null != V && '' !== V ? V : null != T && '' !== T ? T : b.intl.string(b.t.xV9hVl),
+        ee = null != V && '' !== V ? V : null != A && '' !== A ? A : b.intl.string(b.t.xV9hVl),
         et = (0, c.Ie)(''.concat(U)),
         en = 'folder-items-'.concat(U),
         ei = (function (e) {
@@ -98,10 +98,10 @@ function y(e) {
                             : (0, i.jsx)(v.Z, {
                                   folderNode: t,
                                   expanded: s,
-                                  forceCircular: A,
+                                  forceCircular: T,
                                   sorting: R,
                                   mediaState: d,
-                                  mentionCount: m,
+                                  mentionCount: g,
                                   isMentionLowImportance: y,
                                   tooltipName: ee,
                                   folderGroupId: en,

@@ -189,7 +189,7 @@ var r = n(698091),
             t
         );
     })(y),
-    b = (function (e) {
+    T = (function (e) {
         function t(t) {
             var n;
             return ((n = e.call(this, null) || this).update = t), (n.dirty = !1), n;
@@ -219,12 +219,12 @@ var r = n(698091),
             t
         );
     })(y),
-    T = function (e, t) {
+    b = function (e, t) {
         return u.forwardRef(function (n, i) {
             var a = u.useRef(null),
                 s = !r.is.fun(e) || (e.prototype && e.prototype.isReactComponent),
                 l = r.useForceUpdate(),
-                d = new b(function () {
+                d = new T(function () {
                     var e = a.current;
                     (!s || e) && !1 === (!!e && t.applyAnimatedValues(e, d.getValue(!0))) && l();
                 }),
@@ -292,7 +292,7 @@ var A = Symbol.for('AnimatedComponent'),
             },
             c = function (e) {
                 var t = C(e) || 'Anonymous';
-                return ((e = r.is.str(e) ? T(e, u) : e[A] || (e[A] = T(e, u))).displayName = 'Animated(' + t + ')'), e;
+                return ((e = r.is.str(e) ? b(e, u) : e[A] || (e[A] = b(e, u))).displayName = 'Animated(' + t + ')'), e;
             };
         return (
             r.each(e, function (e, t) {
@@ -304,4 +304,4 @@ var A = Symbol.for('AnimatedComponent'),
     C = function (e) {
         return r.is.str(e) ? e : e && r.is.str(e.displayName) ? e.displayName : (r.is.fun(e) && e.name) || null;
     };
-(t.Animated = m), (t.AnimatedArray = I), (t.AnimatedObject = y), (t.AnimatedProps = b), (t.AnimatedString = E), (t.AnimatedValue = g), (t.createHost = N), (t.getAnimated = _), (t.getPayload = h), (t.isAnimated = f), (t.setAnimated = p);
+(t.Animated = m), (t.AnimatedArray = I), (t.AnimatedObject = y), (t.AnimatedProps = T), (t.AnimatedString = E), (t.AnimatedValue = g), (t.createHost = N), (t.getAnimated = _), (t.getPayload = h), (t.isAnimated = f), (t.setAnimated = p);

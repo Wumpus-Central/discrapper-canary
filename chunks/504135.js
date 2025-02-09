@@ -10,32 +10,32 @@ var i = n(200651),
     d = n(525220),
     f = n(481060),
     _ = n(939350),
-    p = n(450793);
+    p = n(335765);
 function h(e) {
-    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: m = 'md', hint: g, subtext: E, subtextLineClamp: v, hasSubmenu: y, disabled: I, isFocused: b, menuItemProps: T, action: S, onClose: A, onFocus: N, className: C, focusedClassName: R, subMenuIconClassName: O, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: x, iconProps: L, sparkle: P } = e,
-        w = r.useContext(u.r),
+    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: m = 'md', hint: g, subtext: E, subtextLineClamp: v, hasSubmenu: y, disabled: I, isFocused: T, menuItemProps: b, action: S, onClose: A, onFocus: N, className: C, focusedClassName: R, subMenuIconClassName: O, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: x, sparkle: w } = e,
+        P = r.useContext(u.r),
         M = r.useRef(null),
         k = r.useCallback(
             (e) => {
                 if (null == S) return !1;
-                (e.shiftKey && D) || x || A(), e.persist(), null == w || w(), requestAnimationFrame(() => S(e));
+                (e.shiftKey && D) || L || A(), e.persist(), null == P || P(), requestAnimationFrame(() => S(e));
             },
-            [S, A, w, D, x]
+            [S, A, P, D, L]
         );
     return (
         r.useEffect(() => {
-            b && ((0, c.F)(M), null == N || N());
-        }, [b, N]),
+            T && ((0, c.F)(M), null == N || N());
+        }, [T, N]),
         (0, i.jsxs)(o.P, {
             innerRef: M,
             className: s()(p.item, p.labelContainer, _._[t], C, {
                 [p.disabled]: I,
-                [p.focused]: b,
-                [null != R ? R : '']: b
+                [p.focused]: T,
+                [null != R ? R : '']: T
             }),
             onClick: I ? void 0 : k,
             'aria-disabled': I,
-            ...T,
+            ...b,
             'data-menu-item': 'true',
             children: [
                 null != h &&
@@ -43,9 +43,9 @@ function h(e) {
                         className: s()(p.iconContainerLeft, { [p.iconContainerLarge]: 'lg' === m }),
                         children: (0, i.jsx)(h, {
                             color: 'currentColor',
-                            ...L,
-                            className: s()(p.icon, null == L ? void 0 : L.className),
-                            isFocused: b
+                            ...x,
+                            className: s()(p.icon, null == x ? void 0 : x.className),
+                            isFocused: T
                         })
                     }),
                 (0, i.jsxs)('div', {
@@ -73,9 +73,9 @@ function h(e) {
                           className: s()(p.iconContainer),
                           children: (0, i.jsx)(a, {
                               color: 'currentColor',
-                              ...L,
-                              className: s()(p.icon, null == L ? void 0 : L.className),
-                              isFocused: b
+                              ...x,
+                              className: s()(p.icon, null == x ? void 0 : x.className),
+                              isFocused: T
                           })
                       }),
                 y &&
@@ -87,7 +87,7 @@ function h(e) {
                                 color: 'currentColor',
                                 className: s()(p.caret, O)
                             }),
-                            P && (0, i.jsx)(f.K1N, { className: p.sparkles })
+                            w && (0, i.jsx)(f.K1N, { className: p.sparkles })
                         ]
                     })
             ]

@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => N,
-    wB: () => v
+    ZP: () => I,
+    wB: () => _
 }),
     n(411104);
 var i,
@@ -14,18 +14,18 @@ var i,
     u = n.n(c),
     h = n(481060),
     p = n(981631),
-    g = n(513473),
-    m = n(652849);
+    g = n(975530),
+    m = n(801194);
 let f = p.t_t.DEFAULT,
-    v = 1,
-    Z = r.createContext({
+    _ = 1,
+    v = r.createContext({
         type: f,
-        opacity: v
+        opacity: _
     }),
     x = r.createContext(void 0),
-    S = (e) => {
+    Z = (e) => {
         let { children: t, className: n, ...i } = e;
-        return (0, a.jsx)(Z.Consumer, {
+        return (0, a.jsx)(v.Consumer, {
             children: (e) => {
                 let { type: s } = e;
                 return (0, a.jsx)(x.Consumer, {
@@ -40,12 +40,12 @@ let f = p.t_t.DEFAULT,
             }
         });
     };
-class E extends (i = r.PureComponent) {
+class S extends (i = r.PureComponent) {
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
         return (0, a.jsx)(x.Consumer, {
             children: (i) =>
-                (0, a.jsx)(Z.Consumer, {
+                (0, a.jsx)(v.Consumer, {
                     children: (s) => {
                         let l = d()(g.body, g[u()(s.type)], n);
                         return e
@@ -65,17 +65,17 @@ class E extends (i = r.PureComponent) {
     }
 }
 (l = { disableScroll: !1 }),
-    (s = 'defaultProps') in E
-        ? Object.defineProperty(E, s, {
+    (s = 'defaultProps') in S
+        ? Object.defineProperty(S, s, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (E[s] = l);
-let C = (e) => {
-        let { type: t = f, width: n, height: i, children: s, className: l, opacity: r = v, onClick: o } = e;
-        return (0, a.jsx)(Z.Provider, {
+        : (S[s] = l);
+let E = (e) => {
+        let { type: t = f, width: n, height: i, children: s, className: l, opacity: r = _, onClick: o } = e;
+        return (0, a.jsx)(v.Provider, {
             value: {
                 type: t,
                 opacity: r
@@ -91,7 +91,7 @@ let C = (e) => {
             })
         });
     },
-    y = (e) => {
+    C = (e) => {
         let { children: t, className: n, dynamicSize: i = !1 } = e;
         return (0, a.jsx)(x.Consumer, {
             children: (e) =>
@@ -102,11 +102,11 @@ let C = (e) => {
                 })
         });
     };
-(C.Background = (e) => {
+(E.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
-    let i = [S, E, y];
-    return (0, a.jsx)(Z.Consumer, {
+    let i = [Z, S, C];
+    return (0, a.jsx)(v.Consumer, {
         children: (e) => {
             let { opacity: s } = e,
                 l = { backgroundColor: 'rgba(54, 57, 63, '.concat('' + (null != n ? n : s), ')') };
@@ -123,9 +123,9 @@ let C = (e) => {
         }
     });
 }),
-    (C.Body = E),
-    (C.Content = y),
-    (C.Icon = (e) => {
+    (E.Body = S),
+    (E.Content = C),
+    (E.Icon = (e) => {
         let { icon: t, label: n, onClick: i, isActive: s, tooltipPosition: l = 'top', size: r = 20, isTutorial: o = !1 } = e;
         return (0, a.jsx)(h.ua7, {
             text: o
@@ -160,5 +160,5 @@ let C = (e) => {
             }
         });
     }),
-    (C.Bar = S);
-let N = C;
+    (E.Bar = Z);
+let I = E;

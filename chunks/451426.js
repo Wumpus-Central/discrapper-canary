@@ -10,9 +10,9 @@ var i = t(200651),
     x = t(788080),
     m = t(613734),
     u = t(981631),
-    C = t(388032),
-    h = t(734517),
-    _ = t(816742);
+    h = t(388032),
+    _ = t(472261),
+    C = t(5517);
 function N(e) {
     let { className: n, isDsaEligible: t, onClose: N, onNext: p, onBack: g } = e,
         j = (0, l.e7)([d.Z], () => d.Z.getAppealClassificationId()),
@@ -22,8 +22,8 @@ function N(e) {
         T = (0, l.e7)([d.Z], () => d.Z.getAppealSignal()),
         v = (0, l.e7)([d.Z], () => d.Z.getFreeTextAppealReason()),
         [f, S] = s.useState(!1),
-        [A, Z] = s.useState(''),
-        L = s.useCallback((e) => {
+        [A, L] = s.useState(''),
+        Z = s.useCallback((e) => {
             r.Z.dispatch({
                 type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
                 userInput: e
@@ -32,33 +32,33 @@ function N(e) {
         b = s.useCallback(async () => {
             if (null !== j)
                 try {
-                    Z(''), await c.uR(j, T, v), null == p || p();
+                    L(''), await c.uR(j, T, v), null == p || p();
                 } catch (n) {
                     var e;
-                    Z((0, x.Zs)(null === (e = n.body) || void 0 === e ? void 0 : e.code));
+                    L((0, x.Zs)(null === (e = n.body) || void 0 === e ? void 0 : e.code));
                 }
         }, [j, T, v, p]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(a.xBx, {
                 direction: o.Z.Direction.VERTICAL,
-                className: _.header,
+                className: C.header,
                 separator: !1,
                 children: [
                     (0, i.jsx)(a.X6q, {
-                        className: _.title,
+                        className: C.title,
                         variant: 'heading-xl/semibold',
-                        children: C.intl.string(C.t['C5q+pa'])
+                        children: h.intl.string(h.t['C5q+pa'])
                     }),
                     (0, i.jsx)(a.Text, {
-                        className: _.subtitle,
+                        className: C.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: C.intl.string(C.t['G2g/g4'])
+                        children: h.intl.string(h.t['G2g/g4'])
                     }),
                     null != N &&
                         (0, i.jsx)(a.olH, {
-                            className: _.closeButton,
+                            className: C.closeButton,
                             onClick: N
                         })
                 ]
@@ -68,14 +68,14 @@ function N(e) {
                 paddingFix: !1,
                 children: [
                     (0, i.jsx)('ul', {
-                        className: h.listContainer,
+                        className: _.listContainer,
                         children: [(0, x.ox)(T), v]
                             .filter((e) => e.length > 0)
                             .map((e, n) =>
                                 (0, i.jsx)(
                                     'li',
                                     {
-                                        className: h.listItem,
+                                        className: _.listItem,
                                         children: (0, i.jsx)(a.Text, {
                                             tag: 'span',
                                             variant: 'text-md/normal',
@@ -88,27 +88,27 @@ function N(e) {
                     }),
                     t &&
                         (0, i.jsx)('div', {
-                            className: h.anchorContainer,
+                            className: _.anchorContainer,
                             children: (0, i.jsx)(a.eee, {
                                 onClick: () => S((e) => !e),
                                 children: (0, i.jsx)(a.X6q, {
                                     variant: 'heading-md/normal',
                                     color: 'text-link',
-                                    children: v.length > 0 ? C.intl.string(C.t.tnE3bW) : C.intl.string(C.t.uoQFIi)
+                                    children: v.length > 0 ? h.intl.string(h.t.tnE3bW) : h.intl.string(h.t.uoQFIi)
                                 })
                             })
                         }),
                     f &&
                         t &&
                         (0, i.jsx)('div', {
-                            className: h.inputContainer,
+                            className: _.inputContainer,
                             children: (0, i.jsx)(a.Kx8, {
                                 value: v,
-                                onChange: L
+                                onChange: Z
                             })
                         }),
                     (0, i.jsx)('div', {
-                        className: _.policyContainer,
+                        className: C.policyContainer,
                         children: (0, i.jsx)(a.Text, {
                             variant: 'text-md/semibold',
                             children: k
@@ -117,8 +117,8 @@ function N(e) {
                     (0, i.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
-                        className: h.footerText,
-                        children: C.intl.string(C.t.d6qgY2)
+                        className: _.footerText,
+                        children: h.intl.string(h.t.d6qgY2)
                     })
                 ]
             }),
@@ -127,26 +127,26 @@ function N(e) {
                 children: [
                     '' !== A &&
                         (0, i.jsx)(a.Text, {
-                            className: h.errorText,
+                            className: _.errorText,
                             variant: 'text-lg/normal',
                             color: 'text-danger',
                             children: A
                         }),
                     (0, i.jsxs)('div', {
-                        className: h.buttonContainer,
+                        className: _.buttonContainer,
                         children: [
                             (0, i.jsx)(a.zxk, {
                                 look: a.zxk.Looks.LINK,
                                 color: a.zxk.Colors.PRIMARY,
                                 onClick: g,
                                 disabled: E,
-                                children: C.intl.string(C.t['13/7kZ'])
+                                children: h.intl.string(h.t['13/7kZ'])
                             }),
                             (0, i.jsx)(a.zxk, {
                                 onClick: b,
                                 color: a.zxk.Colors.RED,
                                 submitting: E,
-                                children: C.intl.string(C.t.geKm7u)
+                                children: h.intl.string(h.t.geKm7u)
                             })
                         ]
                     })

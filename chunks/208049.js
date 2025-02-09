@@ -1,16 +1,16 @@
 n.d(t, {
     $d: () => S,
     AA: () => A,
-    Db: () => P,
-    Dx: () => T,
-    R: () => x,
+    Db: () => w,
+    Dx: () => b,
+    R: () => L,
     TB: () => N,
     XE: () => O,
     hs: () => C,
-    w: () => b,
+    w: () => T,
     xR: () => D,
     xU: () => R,
-    xz: () => L
+    xz: () => x
 }),
     n(47120),
     n(653041);
@@ -72,8 +72,8 @@ let E = async (e) => {
             t
         );
     },
-    b = () => (__OVERLAY__ ? (s.Z.dispatch({ type: 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST' }), Promise.all([])) : Promise.all([y(), I()]));
-async function T(e) {
+    T = () => (__OVERLAY__ ? (s.Z.dispatch({ type: 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST' }), Promise.all([])) : Promise.all([y(), I()]));
+async function b(e) {
     let { guildId: t, name: n, sound: i, volume: r, emojiId: s, emojiName: o } = e,
         l = await a.tn.post({
             url: h.ANM.GUILD_SOUNDBOARD_SOUNDS(t),
@@ -158,20 +158,20 @@ function D(e, t) {
         userId: t
     });
 }
-function x(e, t) {
+function L(e, t) {
     s.Z.dispatch({
         type: 'GUILD_SOUNDBOARD_SOUND_PLAY_END',
         soundId: e,
         userId: t
     });
 }
-function L(e) {
+function x(e) {
     s.Z.dispatch({
         type: 'USER_SOUNDBOARD_SET_VOLUME',
         volume: e
     });
 }
-function P(e) {
+function w(e) {
     s.Z.dispatch({
         type: 'SOUNDBOARD_MUTE_JOIN_SOUND',
         channelId: e

@@ -5,7 +5,7 @@ var i = n(200651),
     r = n(283836),
     s = n(728345),
     o = n(388032),
-    c = n(22650);
+    c = n(661467);
 function d(e) {
     let { applicationId: t, guildId: n } = e,
         { data: l } = (0, s.IX)(t);
@@ -21,7 +21,7 @@ function u(e) {
     (0, r.q)(t.id);
     let d = l.useCallback(() => {
         (0, a.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e('77803'), n.e('7657')]).then(n.bind(n, 7225));
+            let { default: e } = await Promise.all([n.e('77803'), n.e('24829')]).then(n.bind(n, 7225));
             return (n) =>
                 (0, i.jsx)(e, {
                     appId: t.id,

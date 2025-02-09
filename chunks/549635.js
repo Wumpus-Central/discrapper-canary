@@ -17,7 +17,7 @@ var i = n(200651),
     h = n(591759),
     m = n(254109),
     g = n(212459),
-    E = n(427244);
+    E = n(65330);
 function v(e) {
     let t = h.Z.toURLSafe(e);
     return null == t ? null : (t.searchParams.append('format', 'webp'), t.toString());
@@ -25,10 +25,10 @@ function v(e) {
 function y(e) {
     var t, n, r, a, o;
     let f,
-        { media: h, obscured: y = !1, padding: I, onContextMenu: T } = e,
-        { width: S, height: A, url: N, proxyUrl: C, alt: R, type: O, maxWidth: D, maxHeight: x, ...L } = h,
-        { zoomed: P, setZoomed: w } = (0, g.Y)(),
-        M = b(P, N, C),
+        { media: h, obscured: y = !1, padding: I, onContextMenu: b } = e,
+        { width: S, height: A, url: N, proxyUrl: C, alt: R, type: O, maxWidth: D, maxHeight: L, ...x } = h,
+        { zoomed: w, setZoomed: P } = (0, g.Y)(),
+        M = T(w, N, C),
         k = {
             vertical: (null !== (t = null == I ? void 0 : I.top) && void 0 !== t ? t : 0) + (null !== (n = null == I ? void 0 : I.bottom) && void 0 !== n ? n : 0),
             horizontal: (null !== (r = null == I ? void 0 : I.left) && void 0 !== r ? r : 0) + (null !== (a = null == I ? void 0 : I.right) && void 0 !== a ? a : 0)
@@ -40,7 +40,7 @@ function y(e) {
         if (null == e) return null;
         let t = null !== (o = h.renderLinkComponent) && void 0 !== o ? o : d.iT;
         return (0, i.jsx)(u.Z, {
-            ...L,
+            ...x,
             src: M,
             width: S,
             height: A,
@@ -56,14 +56,14 @@ function y(e) {
             renderLinkComponent: t,
             autoPlay: !y,
             alt: R,
-            onContextMenu: T
+            onContextMenu: b
         });
     }
     return (
         'IMAGE' === O &&
             (f = B
                 ? (0, i.jsx)(l.ZP, {
-                      ...L,
+                      ...x,
                       src: M,
                       width: S,
                       height: A,
@@ -75,12 +75,12 @@ function y(e) {
                       autoPlay: !y,
                       alt: R,
                       zoomThumbnailPlaceholder: h.zoomThumbnailPlaceholder,
-                      onContextMenu: T
+                      onContextMenu: b
                   })
                 : (0, i.jsx)('img', {
                       src: M,
                       alt: R,
-                      onContextMenu: T,
+                      onContextMenu: b,
                       className: E.dimensionlessImage
                   })),
         null != f
@@ -89,11 +89,11 @@ function y(e) {
                   height: A,
                   maxWidth: U,
                   maxHeight: G,
-                  active: P,
-                  className: s()(E.wrapper, { [E.zoomed]: P }),
+                  active: w,
+                  className: s()(E.wrapper, { [E.zoomed]: w }),
                   panPadding: I,
                   onClick: () => {
-                      w(!P), (0, m.yg)(P ? m.uG.ZOOM_OUT_IMAGE_PRESSED : m.uG.ZOOM_IN_IMAGE_PRESSED);
+                      P(!w), (0, m.yg)(w ? m.uG.ZOOM_OUT_IMAGE_PRESSED : m.uG.ZOOM_IN_IMAGE_PRESSED);
                   },
                   children: f
               })
@@ -101,7 +101,7 @@ function y(e) {
     );
 }
 let I = r.memo(y);
-function b(e, t, n) {
+function T(e, t, n) {
     return e && (0, o.rV)(t)
         ? (0, o.s$)(t)
         : (0, f.q)({

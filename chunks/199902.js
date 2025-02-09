@@ -15,8 +15,8 @@ var o,
     v = n(131951),
     y = n(496675),
     I = n(19780),
-    b = n(944486),
-    T = n(979651),
+    T = n(944486),
+    b = n(979651),
     S = n(981631),
     A = n(70722);
 function N(e, t, n) {
@@ -38,19 +38,19 @@ let C = null,
 function D() {
     (i = new Map()), (r = {}), (a = {}), (s = {});
 }
-function x(e) {
+function L(e) {
     var t;
     null == r[e.ownerId] && (r[e.ownerId] = {}), (r[e.ownerId][null !== (t = e.guildId) && void 0 !== t ? t : S.kod] = e);
 }
-function L(e, t) {
+function x(e, t) {
     var n;
     let i = null != t ? t : S.kod;
     return (null === (n = r[e]) || void 0 === n ? void 0 : n[i]) != null && (delete r[e][i], !0);
 }
-function P(e) {
+function w(e) {
     i.delete(e);
 }
-function w() {
+function P() {
     let e = [];
     for (let t in r) {
         let n = r[t];
@@ -68,7 +68,7 @@ function k(e) {
         let { userId: n, guildId: i, channelId: r, sessionId: a, selfStream: s, discoverable: o } = t;
         if (s && null != r)
             return (
-                x({
+                L({
                     streamType: null != i ? A.lo.GUILD : A.lo.CALL,
                     ownerId: n,
                     guildId: i,
@@ -79,7 +79,7 @@ function k(e) {
             );
         {
             let t = m.default.getSessionId();
-            return n === m.default.getId() && a !== t && null != I.Z.getChannelId() ? e : L(n, i) || e;
+            return n === m.default.getId() && a !== t && null != I.Z.getChannelId() ? e : x(n, i) || e;
         }
     }, !1);
 }
@@ -136,13 +136,13 @@ function Z(e) {
 }
 function F(e) {
     let { streamKey: t } = e;
-    P(t);
+    w(t);
 }
 function V(e) {
     let { id: t, channelId: n } = e;
     (C = t),
         Array.from(i.values()).forEach((e) => {
-            (0, f.V9)(e) !== C && e.state === S.jm8.ENDED && P((0, f.V9)(e));
+            (0, f.V9)(e) !== C && e.state === S.jm8.ENDED && w((0, f.V9)(e));
         }),
         null != t && (0, f.DB)(t) && t.includes(m.default.getId()) && (R[n] = !1);
 }
@@ -169,7 +169,7 @@ function j(e) {
         ...o,
         state: l
     }),
-        l === S.jm8.ENDED && C !== t && P(t);
+        l === S.jm8.ENDED && C !== t && w(t);
 }
 function H(e) {
     let { streamKey: t } = e,
@@ -214,7 +214,7 @@ function z(e, t) {
 function q(e) {
     if (z(e.streamType, e.channelId)) return !0;
     let t = g.Z.getBasicChannel(e.channelId);
-    return null != t && (0, _.p9)(t, T.Z, E.Z, y.Z, c.Z)[0];
+    return null != t && (0, _.p9)(t, b.Z, E.Z, y.Z, c.Z)[0];
 }
 D();
 class Q extends (o = l.ZP.PersistedStore) {
@@ -249,7 +249,7 @@ class Q extends (o = l.ZP.PersistedStore) {
         return null !== (t = this.getActiveStreamForStreamKey(n)) && void 0 !== t ? t : null;
     }
     getCurrentUserActiveStream() {
-        let e = b.Z.getVoiceChannelId(),
+        let e = T.Z.getVoiceChannelId(),
             t = g.Z.getChannel(e);
         return null == t ? null : this.getActiveStreamForUser(m.default.getId(), t.getGuildId());
     }
@@ -260,7 +260,7 @@ class Q extends (o = l.ZP.PersistedStore) {
     }
     getStreamerActiveStreamMetadata() {
         var e;
-        let t = b.Z.getVoiceChannelId(),
+        let t = T.Z.getVoiceChannelId(),
             n = g.Z.getChannel(t);
         if (null == n) return null;
         let i = this.getActiveStreamForUser(m.default.getId(), n.getGuildId());
@@ -298,10 +298,10 @@ class Q extends (o = l.ZP.PersistedStore) {
         return (0, p.Z)(v.Z) && null !== (t = a[e]) && void 0 !== t ? t : null;
     }
     getAllApplicationStreams() {
-        return (0, p.Z)(v.Z) ? w().filter((e) => null != e && z(e.streamType, e.channelId)) : [];
+        return (0, p.Z)(v.Z) ? P().filter((e) => null != e && z(e.streamType, e.channelId)) : [];
     }
     getAllApplicationStreamsForChannel(e) {
-        return (0, p.Z)(v.Z) ? w().filter((t) => null != t && t.channelId === e && z(t.streamType, t.channelId)) : [];
+        return (0, p.Z)(v.Z) ? P().filter((t) => null != t && t.channelId === e && z(t.streamType, t.channelId)) : [];
     }
     getViewerIds(e) {
         if (!(0, p.Z)(v.Z)) return [];

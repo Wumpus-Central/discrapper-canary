@@ -5,7 +5,7 @@ var t = l(481060),
     r = l(630388),
     s = l(981631),
     d = l(388032),
-    a = l(755522);
+    a = l(379341);
 let u = {
     size: 'md',
     color: t.TVs.colors.INTERACTIVE_NORMAL

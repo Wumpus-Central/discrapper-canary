@@ -1,8 +1,8 @@
 n.d(t, {
-    Ji: () => L,
+    Ji: () => x,
     O_: () => D,
     qA: () => u,
-    uR: () => P
+    uR: () => w
 });
 var i = n(192379),
     r = n(772848);
@@ -376,12 +376,12 @@ var h = function (e) {
 function I(e, t) {
     return e === t ? e : Math.random() * (t - e + 1) + e;
 }
-function b(e) {
+function T(e) {
     var t = Math.floor(I(0, e.length - 1));
     return [e[t], t];
 }
-function T(e, t) {
-    return b([e, t])[0];
+function b(e, t) {
+    return T([e, t])[0];
 }
 function S(e) {
     return 'number' == typeof e
@@ -414,7 +414,7 @@ function N(e) {
             case 'oscillating':
                 return new y(e.value, e.start, e.final, e.duration, e.direction, e.easingFunction);
             case 'oscillating-random':
-                return new y(I(e.minValue, e.maxValue), I(e.minStart, e.maxStart), I(e.minFinal, e.maxFinal), I(e.minDuration, e.maxDuration), T(e.minDirection, e.maxDirection), b(e.easingFunctions)[0]);
+                return new y(I(e.minValue, e.maxValue), I(e.minStart, e.maxStart), I(e.minFinal, e.maxFinal), I(e.minDuration, e.maxDuration), b(e.minDirection, e.maxDirection), T(e.easingFunctions)[0]);
         }
     })(f(f({}, e), { valueType: 'number' }));
 }
@@ -454,7 +454,7 @@ function C(e) {
                     g = S(e.maxDuration),
                     A = S(e.minDirection),
                     N = S(e.maxDirection);
-                return new m(new y(I(n.x, i.x), I(d.x, f.x), I(_.x, p.x), I(h.x, g.x), T(A.x, N.x), b(e.easingFunctions)[0]), new y(I(n.y, i.y), I(d.y, f.y), I(_.y, p.y), I(h.y, g.y), T(A.y, N.y), b(e.easingFunctions)[0]), e.uniformVectorValues);
+                return new m(new y(I(n.x, i.x), I(d.x, f.x), I(_.x, p.x), I(h.x, g.x), b(A.x, N.x), T(e.easingFunctions)[0]), new y(I(n.y, i.y), I(d.y, f.y), I(_.y, p.y), I(h.y, g.y), b(A.y, N.y), T(e.easingFunctions)[0]), e.uniformVectorValues);
         }
     })(f(f({}, e), { valueType: 'Vector2' }));
 }
@@ -494,7 +494,7 @@ function R(e) {
                     m = A(e.maxDuration),
                     S = A(e.minDirection),
                     N = A(e.maxDirection);
-                return new g(new y(I(n.x, i.x), I(d.x, f.x), I(_.x, p.x), I(h.x, m.x), T(S.x, N.x), b(e.easingFunctions)[0]), new y(I(n.y, i.y), I(d.y, f.y), I(_.y, p.y), I(h.y, m.y), T(S.y, N.y), b(e.easingFunctions)[0]), new y(I(n.z, i.z), I(d.z, f.z), I(_.z, p.z), I(h.z, m.z), T(S.z, N.z), b(e.easingFunctions)[0]), e.uniformVectorValues);
+                return new g(new y(I(n.x, i.x), I(d.x, f.x), I(_.x, p.x), I(h.x, m.x), b(S.x, N.x), T(e.easingFunctions)[0]), new y(I(n.y, i.y), I(d.y, f.y), I(_.y, p.y), I(h.y, m.y), b(S.y, N.y), T(e.easingFunctions)[0]), new y(I(n.z, i.z), I(d.z, f.z), I(_.z, p.z), I(h.z, m.z), b(S.z, N.z), T(e.easingFunctions)[0]), e.uniformVectorValues);
         }
     })(f(f({}, e), { valueType: 'Vector3' }));
 }
@@ -510,7 +510,7 @@ function O(e, t, n, i, r) {
                 });
                 if (-1 !== n) return [e, n];
             }
-            return b(t.sprites);
+            return T(t.sprites);
         })(i, n),
         u = s[0],
         c = s[1],
@@ -595,7 +595,7 @@ var D = i.forwardRef(function (e, t) {
             },
             [I]
         );
-        var b = i.useCallback(
+        var T = i.useCallback(
                 function (e, t) {
                     g.current.set(e.id, {
                         confetti: e,
@@ -605,13 +605,13 @@ var D = i.forwardRef(function (e, t) {
                 },
                 [I]
             ),
-            T = i.useCallback(
+            b = i.useCallback(
                 function (e, t, n, i, a) {
                     var s,
                         o = O(null !== (s = e.id) && void 0 !== s ? s : (0, r.Z)(), e, n, i, a);
-                    return b(o, t), o;
+                    return T(o, t), o;
                 },
-                [b]
+                [T]
             ),
             S = i.useCallback(function (e) {
                 g.current.delete(e);
@@ -626,14 +626,14 @@ var D = i.forwardRef(function (e, t) {
             t,
             function () {
                 return {
-                    createConfetti: T,
-                    addConfetti: b,
+                    createConfetti: b,
+                    addConfetti: T,
                     deleteConfetti: S,
                     clearConfetti: A,
                     getCanvas: N
                 };
             },
-            [T, b, S, A, N]
+            [b, T, S, A, N]
         );
         var C = i.useCallback(
                 function (e, t) {
@@ -699,13 +699,13 @@ var D = i.forwardRef(function (e, t) {
                 },
                 [C, u]
             ),
-            x = i.useCallback(
+            L = i.useCallback(
                 function (e) {
                     return C(e, { mouseHandler: c });
                 },
                 [C, c]
             ),
-            L = i.useCallback(
+            x = i.useCallback(
                 function (e) {
                     return C(e, { mouseHandler: d });
                 },
@@ -720,14 +720,14 @@ var D = i.forwardRef(function (e, t) {
                     return (
                         e('click', R, l),
                         e('mousedown', D, u),
-                        e('mousemove', x, c),
-                        e('mouseup', L, d),
+                        e('mousemove', L, c),
+                        e('mouseup', x, d),
                         function () {
-                            window.removeEventListener('click', R), window.removeEventListener('mousedown', D), window.removeEventListener('mousemove', x), window.removeEventListener('mouseup', x);
+                            window.removeEventListener('click', R), window.removeEventListener('mousedown', D), window.removeEventListener('mousemove', L), window.removeEventListener('mouseup', L);
                         }
                     );
                 },
-                [R, D, x, L, l, u, c, d]
+                [R, D, L, x, l, u, c, d]
             ),
             i.useEffect(function () {
                 var e = m.current,
@@ -757,14 +757,14 @@ var D = i.forwardRef(function (e, t) {
             )
         );
     }),
-    x = {
+    L = {
         display: 'none',
         position: 'absolute',
         width: 0,
         height: 0,
         left: '-100%'
     },
-    L = i.forwardRef(function (e, t) {
+    x = i.forwardRef(function (e, t) {
         var n = e.className,
             a = e.visible,
             s = void 0 !== a && a,
@@ -918,11 +918,11 @@ var D = i.forwardRef(function (e, t) {
             i.createElement('canvas', {
                 ref: d,
                 className: n,
-                style: s ? void 0 : x
+                style: s ? void 0 : L
             })
         );
     });
-function P(e, t) {
+function w(e, t) {
     var n,
         r = i.useState(null !== (n = null == t ? void 0 : t.isReady) && void 0 !== n && n),
         a = r[0],

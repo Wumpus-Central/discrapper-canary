@@ -37,8 +37,8 @@ var v = (function (e) {
 })({});
 let y = !1,
     I = 0,
-    b = 0,
-    T = !1,
+    T = 0,
+    b = !1,
     S = {};
 function A() {
     return d.Z.supports(g.AN.NATIVE_SCREENSHARE_PICKER);
@@ -47,10 +47,10 @@ function N() {
     return d.Z.getUseSystemScreensharePicker();
 }
 function C() {
-    let e = N() && (b > 0 || (y && 0 === I));
-    if (e !== T) {
+    let e = N() && (T > 0 || (y && 0 === I));
+    if (e !== b) {
         var t, n;
-        (T = e), null === (n = d.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, T);
+        (b = e), null === (n = d.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, b);
     }
 }
 function R() {
@@ -68,10 +68,10 @@ function R() {
 function O() {
     return (0, r.useEffect)(
         () => (
-            b++,
+            T++,
             C(),
             () => {
-                --b, C();
+                --T, C();
             }
         ),
         []
@@ -81,7 +81,7 @@ function D() {
     let e = u.Z.getChannel(_.Z.getVoiceChannelId());
     return (y = null != e && (0, h.Z)(d.Z) && (0, p.JL)(e, c.Z, f.Z, !1)), C(), !1;
 }
-class x extends (i = a.ZP.Store) {
+class L extends (i = a.ZP.Store) {
     initialize() {
         this.syncWith([d.Z, _.Z, u.Z, c.Z, f.Z], D), l.Z.subscribe({ location: 'NativeScreenSharePickerStore_initialize' }, C), D();
     }
@@ -98,7 +98,7 @@ class x extends (i = a.ZP.Store) {
         return S;
     }
 }
-function L(e) {
+function x(e) {
     let { existing: t } = e;
     if (((S = { lastPickerAction: 1 }), 0 === I && !t)) {
         let e = u.Z.getChannel(_.Z.getVoiceChannelId());
@@ -111,10 +111,10 @@ function L(e) {
             });
     }
 }
-function P() {
+function w() {
     S = { lastPickerAction: 2 };
 }
-function w(e) {
+function P(e) {
     let { error: t } = e;
     S = {
         lastPickerAction: 3,
@@ -131,11 +131,11 @@ function M(e) {
 function k() {
     S = {};
 }
-E(x, 'displayName', 'NativeScreenSharePickerStore');
-let U = new x(s.Z, {
-    NATIVE_SCREEN_SHARE_PICKER_UPDATE: L,
-    NATIVE_SCREEN_SHARE_PICKER_CANCEL: P,
-    NATIVE_SCREEN_SHARE_PICKER_ERROR: w,
+E(L, 'displayName', 'NativeScreenSharePickerStore');
+let U = new L(s.Z, {
+    NATIVE_SCREEN_SHARE_PICKER_UPDATE: x,
+    NATIVE_SCREEN_SHARE_PICKER_CANCEL: w,
+    NATIVE_SCREEN_SHARE_PICKER_ERROR: P,
     NATIVE_SCREEN_SHARE_PICKER_PRESENT: M,
     NATIVE_SCREEN_SHARE_PICKER_RELEASE: k
 });

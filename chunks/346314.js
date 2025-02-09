@@ -10,7 +10,7 @@ var r = n(120356),
     o = n(756715),
     l = n(607070),
     u = n(109161),
-    c = n(213275);
+    c = n(420185);
 function d(e) {
     let { roleStyle: t, name: n, color: r, roleName: s, dotAlignment: o = 'left', className: l } = e,
         d = 'username' === t,

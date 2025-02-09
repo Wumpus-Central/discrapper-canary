@@ -1,23 +1,23 @@
 n.d(t, { Z: () => p }), n(47120);
 var i = n(200651),
     s = n(192379),
-    r = n(120356),
-    l = n.n(r),
+    l = n(120356),
+    r = n.n(l),
     a = n(481060),
     o = n(600164),
     c = n(490529),
     d = n(981631),
     u = n(388032),
-    m = n(187033);
-let g = {
-        [d.gkr.HOUSE_1]: m.membershipDialogHouse1,
-        [d.gkr.HOUSE_2]: m.membershipDialogHouse2,
-        [d.gkr.HOUSE_3]: m.membershipDialogHouse3
+    h = n(563876);
+let m = {
+        [d.gkr.HOUSE_1]: h.membershipDialogHouse1,
+        [d.gkr.HOUSE_2]: h.membershipDialogHouse2,
+        [d.gkr.HOUSE_3]: h.membershipDialogHouse3
     },
-    h = {
-        [d.gkr.HOUSE_1]: m.houseLogoHouse1,
-        [d.gkr.HOUSE_2]: m.__invalid_houseLogoHouse2,
-        [d.gkr.HOUSE_3]: m.__invalid_houseLogoHouse3
+    g = {
+        [d.gkr.HOUSE_1]: h.houseLogoHouse1,
+        [d.gkr.HOUSE_2]: h.__invalid_houseLogoHouse2,
+        [d.gkr.HOUSE_3]: h.__invalid_houseLogoHouse3
     },
     x = {
         [d.gkr.HOUSE_1]: n(246300),
@@ -37,9 +37,9 @@ class p extends s.Component {
         if (null != e) {
             let t = u.intl.formatToPlainString(u.t.yG0XAA, { houseName: (0, c.X8)(e) });
             return (0, i.jsx)('div', {
-                className: l()(m.membershipDialog, g[e]),
+                className: r()(h.membershipDialog, m[e]),
                 children: (0, i.jsxs)('div', {
-                    className: m.membershipDialogContent,
+                    className: h.membershipDialogContent,
                     children: [
                         (0, i.jsxs)(o.Z, {
                             children: [
@@ -48,29 +48,29 @@ class p extends s.Component {
                                     shrink: 1,
                                     children: [
                                         (0, i.jsx)(a.Text, {
-                                            className: m.membershipDialogHeading,
+                                            className: h.membershipDialogHeading,
                                             variant: 'text-xs/bold',
                                             children: u.intl.string(u.t.KZoEIy)
                                         }),
                                         (0, i.jsx)(a.X6q, {
-                                            className: m.membershipDialogHouseName,
+                                            className: h.membershipDialogHouseName,
                                             variant: 'heading-sm/semibold',
                                             children: t
                                         }),
                                         (0, i.jsx)(a.Text, {
-                                            className: m.membershipDialogHouseDescription,
+                                            className: h.membershipDialogHouseDescription,
                                             variant: 'text-md/normal',
                                             children: _(e)
                                         })
                                     ]
                                 }),
                                 (0, i.jsx)(o.Z.Child, {
-                                    className: m.houseLogoWrapper,
+                                    className: h.houseLogoWrapper,
                                     grow: 0,
                                     shrink: 0,
                                     wrap: !0,
                                     children: (0, i.jsx)('img', {
-                                        className: l()(m.houseLogo, h[e]),
+                                        className: r()(h.houseLogo, g[e]),
                                         src: x[e],
                                         alt: t
                                     })
@@ -78,12 +78,12 @@ class p extends s.Component {
                             ]
                         }),
                         (0, i.jsxs)(a.Text, {
-                            className: m.membershipDialogSwitchHouses,
+                            className: h.membershipDialogSwitchHouses,
                             variant: 'text-md/normal',
                             children: [
                                 u.intl.string(u.t.zD3mqK),
                                 (0, i.jsx)(a.P3F, {
-                                    className: m.membershipDialogSwitchHousesAction,
+                                    className: h.membershipDialogSwitchHousesAction,
                                     onClick: this.handleJoinHypeSquadClick,
                                     tag: 'span',
                                     children: u.intl.string(u.t.LzBgrq)
@@ -95,10 +95,10 @@ class p extends s.Component {
             });
         }
         return (0, i.jsxs)('div', {
-            className: m.joinCTAWrapper,
+            className: h.joinCTAWrapper,
             children: [
                 (0, i.jsxs)(o.Z, {
-                    className: m.joinCTA,
+                    className: h.joinCTA,
                     align: o.Z.Align.CENTER,
                     justify: o.Z.Justify.CENTER,
                     direction: o.Z.Direction.HORIZONTAL,
@@ -122,7 +122,7 @@ class p extends s.Component {
                     ]
                 }),
                 (0, i.jsx)(a.Text, {
-                    className: m.newsletterWarning,
+                    className: h.newsletterWarning,
                     variant: 'text-sm/normal',
                     children: u.intl.string(u.t['3kUvgo'])
                 })

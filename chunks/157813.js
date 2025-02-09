@@ -7,7 +7,7 @@ var i = n(200651),
     l = n(475179),
     u = n(871499),
     c = n(388032),
-    d = n(89554);
+    d = n(994533);
 function f(e) {
     let { className: t, isVertical: n } = e;
     return (0, i.jsxs)('div', {

@@ -23,7 +23,7 @@ var i = n(200651),
     E = n(707076),
     b = n(213956),
     T = n(388032),
-    S = n(646231);
+    S = n(883450);
 function R() {
     let e = (0, a.e7)([m.Z], () => m.Z.getGuildId());
     return null == e ? null : (0, i.jsx)(Z, { guildId: e });

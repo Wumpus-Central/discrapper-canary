@@ -1,17 +1,17 @@
-n.d(t, { Z: () => c });
-var r = n(200651);
+n.d(t, { Z: () => u });
+var i = n(200651);
 n(192379);
-var i = n(481060),
+var r = n(481060),
     a = n(846027),
-    o = n(468026),
-    l = n(388032);
-function c(e, t) {
+    l = n(468026),
+    o = n(388032);
+function u(e, t) {
     if (e) {
-        (0, i.h7j)((e) =>
-            (0, r.jsx)(o.default, {
+        (0, r.h7j)((e) =>
+            (0, i.jsx)(l.default, {
                 ...e,
-                title: l.intl.string(l.t.QZ7WSU),
-                body: l.intl.string(l.t.Tl9JpK)
+                title: o.intl.string(o.t.QZ7WSU),
+                body: o.intl.string(o.t.Tl9JpK)
             })
         );
         return;

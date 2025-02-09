@@ -1,14 +1,14 @@
 n.d(t, {
-    J: () => P,
+    J: () => w,
     Ou: () => U,
-    R2: () => x,
+    R2: () => L,
     T$: () => O,
-    Uu: () => w,
+    Uu: () => P,
     ZC: () => Z,
     Zm: () => D,
     bK: () => M,
     mx: () => k,
-    t6: () => L,
+    t6: () => x,
     tv: () => G,
     vY: () => B
 }),
@@ -32,8 +32,8 @@ var i = n(192379),
     v = n(626135),
     y = n(980463),
     I = n(823961),
-    b = n(896835),
-    T = n(477931),
+    T = n(896835),
+    b = n(477931),
     S = n(981631),
     A = n(37113);
 let N = 3500000,
@@ -76,11 +76,11 @@ let N = 3500000,
                 return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
             }),
             i = (0, o.Wu)([f.Z], () => (null == e ? [] : f.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
-            r = (0, b.j)(t),
+            r = (0, T.j)(t),
             a = O(e);
         return r && a && i.length > 0;
     };
-function x(e) {
+function L(e) {
     let [t, n, r] = (0, o.Wu)([I.Z], () => [I.Z.isFetchingPrice(e), I.Z.getPrice(e), I.Z.getErrored(e)]);
     return (
         (0, i.useEffect)(() => {
@@ -93,7 +93,7 @@ function x(e) {
         }
     );
 }
-function L(e) {
+function x(e) {
     let [t, n, r, a, s] = (0, o.Wu)([I.Z], () => [I.Z.isEntitlementFetched(e), I.Z.fetchPotionCount(e), I.Z.isEntitlementFetching(e), I.Z.getEntitlement(e), I.Z.getErrored(e)]);
     return (
         (0, i.useEffect)(() => {
@@ -107,7 +107,7 @@ function L(e) {
         }
     );
 }
-function P(e, t) {
+function w(e, t) {
     let n = (0, i.useRef)(!0),
         r = null == e ? void 0 : e.hdStreamingUntil,
         a = (0, i.useRef)(t);
@@ -122,8 +122,8 @@ function P(e, t) {
             if (null != r && new Date(r) > new Date()) return a.current();
         }, [r]);
 }
-function w(e) {
-    P(e, () => {
+function P(e) {
+    w(e, () => {
         let t = f.Z.getCurrentUserActiveStream();
         if (null != t && t.channelId === e.id) {
             let e = p.Z.getState().goLiveSource;
@@ -145,7 +145,7 @@ function k(e) {
 }
 function U(e) {
     let t = (0, o.e7)([_.Z], () => _.Z.getGuild(null == e ? void 0 : e.guild_id)),
-        n = (0, b.j)('VoiceEffectsActionBar');
+        n = (0, T.j)('VoiceEffectsActionBar');
     return ((null == t ? void 0 : t.premiumTier) === S.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === S.Eu4.TIER_1) && (null == e ? void 0 : e.type) === S.d4z.GUILD_VOICE && !(null == e ? void 0 : e.isHDStreamSplashed) && n;
 }
 function G(e, t, n, i) {
@@ -164,7 +164,7 @@ function Z(e) {
     if (null == e || null == e.potions || 0 === e.potions.length) return null;
     for (let i of e.potions) {
         var t, n;
-        if (i.type === T.B.CONFETTI && i.used_by === (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (null === (n = i.emoji) || void 0 === n ? void 0 : n.length) > 0) return i.emoji[0];
+        if (i.type === b.B.CONFETTI && i.used_by === (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (null === (n = i.emoji) || void 0 === n ? void 0 : n.length) > 0) return i.emoji[0];
     }
     return null;
 }

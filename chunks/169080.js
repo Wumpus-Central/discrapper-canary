@@ -1,78 +1,78 @@
-n.d(t, {
-    M: () => g,
-    Z: () => E
+c.d(e, {
+    M: () => h,
+    Z: () => j
 });
-var i = n(200651),
-    r = n(192379),
-    a = n(512722),
-    s = n.n(a),
-    o = n(442837),
-    l = n(481060),
-    u = n(297781),
-    c = n(594174),
-    d = n(5192),
-    f = n(709737),
-    _ = n(986398),
-    p = n(69589),
-    h = n(388032),
-    m = n(417776);
-let g = [n(191420), n(774621), n(49274), n(904141)];
-function E(e) {
-    var t, n;
-    let { generateImageRef: a, leaderboard: g, userId: E, guildId: v } = e,
-        y = (0, o.e7)([c.default], () => c.default.getUser(E)),
-        I = g.guild_settings.sort_by_statistic_id,
-        b = r.useMemo(() => g.users.findIndex((e) => e.user_id === E) + 1, [g, E]),
-        T = r.useMemo(() => g.users.find((e) => e.user_id === E), [g, E]);
-    s()(null != T, 'User row should not be null'), s()(null != y, 'User must exist');
-    let S = d.ZP.getName(v, void 0, y),
-        A = null !== (n = null === (t = T.statistics[I]) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : 0;
-    return (0, i.jsxs)('div', {
-        ref: a,
-        className: m.container,
+var d = c(200651),
+    a = c(192379),
+    s = c(512722),
+    n = c.n(s),
+    o = c(442837),
+    f = c(481060),
+    i = c(297781),
+    p = c(594174),
+    r = c(5192),
+    b = c(709737),
+    u = c(986398),
+    l = c(69589),
+    m = c(388032),
+    g = c(968281);
+let h = [c(191420), c(774621), c(49274), c(904141)];
+function j(t) {
+    var e, c;
+    let { generateImageRef: s, leaderboard: h, userId: j, guildId: _ } = t,
+        v = (0, o.e7)([p.default], () => p.default.getUser(j)),
+        x = h.guild_settings.sort_by_statistic_id,
+        N = a.useMemo(() => h.users.findIndex((t) => t.user_id === j) + 1, [h, j]),
+        Z = a.useMemo(() => h.users.find((t) => t.user_id === j), [h, j]);
+    n()(null != Z, 'User row should not be null'), n()(null != v, 'User must exist');
+    let T = r.ZP.getName(_, void 0, v),
+        E = null !== (c = null === (e = Z.statistics[x]) || void 0 === e ? void 0 : e.value) && void 0 !== c ? c : 0;
+    return (0, d.jsxs)('div', {
+        ref: s,
+        className: g.container,
         children: [
-            (0, i.jsx)(p.Z, {
-                user: y,
-                rank: b,
-                avatarClassName: m.avatar,
+            (0, d.jsx)(l.Z, {
+                user: v,
+                rank: N,
+                avatarClassName: g.avatar,
                 rankBadgeVisibility: 'visibleWithoutBorder'
             }),
-            (0, i.jsxs)('div', {
+            (0, d.jsxs)('div', {
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: m.gameTitleContainer,
+                    (0, d.jsxs)('div', {
+                        className: g.gameTitleContainer,
                         children: [
-                            (0, i.jsx)(_.Z, {
-                                className: m.winnerImage,
-                                leaderboard: g
+                            (0, d.jsx)(u.Z, {
+                                className: g.winnerImage,
+                                leaderboard: h
                             }),
-                            (0, i.jsx)(l.Text, {
+                            (0, d.jsx)(f.Text, {
                                 variant: 'text-sm/medium',
-                                className: m.gameTitle,
+                                className: g.gameTitle,
                                 children: 'League of Legends'
                             })
                         ]
                     }),
-                    (0, i.jsx)(l.LZC, { size: 4 }),
-                    (0, i.jsx)(l.Text, {
-                        className: m.title,
+                    (0, d.jsx)(f.LZC, { size: 4 }),
+                    (0, d.jsx)(f.Text, {
+                        className: g.title,
                         variant: 'text-md/semibold',
-                        children: h.intl.format(h.t.tluICw, {
-                            username: S,
-                            rank: b
+                        children: m.intl.format(m.t.tluICw, {
+                            username: T,
+                            rank: N
                         })
                     }),
-                    (0, i.jsx)(l.LZC, { size: 2 }),
-                    (0, i.jsxs)(u.Gk, {
-                        location: u.Gt.EMBED,
+                    (0, d.jsx)(f.LZC, { size: 2 }),
+                    (0, d.jsxs)(i.Gk, {
+                        location: i.Gt.EMBED,
                         children: [
-                            (0, i.jsx)(f.DC, {
-                                value: A,
-                                statisticId: I
+                            (0, d.jsx)(b.DC, {
+                                value: E,
+                                statisticId: x
                             }),
-                            (0, i.jsx)(f.Js, {
-                                intervalStart: g.interval_start,
-                                intervalEnd: g.interval_end
+                            (0, d.jsx)(b.Js, {
+                                intervalStart: h.interval_start,
+                                intervalEnd: h.interval_end
                             })
                         ]
                     })

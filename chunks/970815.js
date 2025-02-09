@@ -1,48 +1,48 @@
 n.d(t, {
-    A4: () => E,
-    b6: () => o.b
+    A4: () => h,
+    b6: () => c.b
 });
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(481060),
-    o = n(317257),
-    c = n(583478),
+var e = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    o = n(481060),
+    c = n(317257),
+    a = n(583478),
     d = n(960919),
-    u = n(289173);
+    E = n(369120);
 let _ = () =>
-        (0, i.jsx)('img', {
-            className: u.notificationBadge,
+        (0, e.jsx)('img', {
+            className: E.notificationBadge,
             src: n(808824),
             alt: ''
         }),
-    E = (0, l.forwardRef)(function (e, t) {
-        let { balance: n, placeholderBalance: l = 0, balanceWidgetMode: r = o.b.DEFAULT, showNotificationBadge: E, onClick: h, onMouseEnter: p, onMouseLeave: I, className: m } = e,
-            C = u.default;
-        switch (r) {
-            case o.b.HIGHLIGHTED:
-                C = u.highlighted;
+    h = (0, r.forwardRef)(function (i, t) {
+        let { balance: n, placeholderBalance: r = 0, balanceWidgetMode: l = c.b.DEFAULT, showNotificationBadge: h, onClick: L, onMouseEnter: u, onMouseLeave: O, className: p } = i,
+            T = E.default;
+        switch (l) {
+            case c.b.HIGHLIGHTED:
+                T = E.highlighted;
                 break;
-            case o.b.SELECTED:
-                C = u.selected;
+            case c.b.SELECTED:
+                T = E.selected;
         }
-        return (0, i.jsx)(a.P3F, {
-            onClick: void 0 !== h ? h : () => {},
-            className: u.clickable,
-            children: (0, i.jsxs)('span', {
-                onMouseEnter: void 0 !== p ? p : () => {},
-                onMouseLeave: void 0 !== I ? I : () => {},
+        return (0, e.jsx)(o.P3F, {
+            onClick: void 0 !== L ? L : () => {},
+            className: E.clickable,
+            children: (0, e.jsxs)('span', {
+                onMouseEnter: void 0 !== u ? u : () => {},
+                onMouseLeave: void 0 !== O ? O : () => {},
                 id: 'balance-widget-pill',
                 ref: t,
-                className: s()(u.container, C, m),
+                className: s()(E.container, T, p),
                 children: [
-                    (0, i.jsx)(d.M, {}),
-                    (0, i.jsx)(c.Z, {
+                    (0, e.jsx)(d.M, {}),
+                    (0, e.jsx)(a.Z, {
                         value: n,
-                        placeholderValue: l
+                        placeholderValue: r
                     }),
-                    E && (0, i.jsx)(_, {})
+                    h && (0, e.jsx)(_, {})
                 ]
             })
         });

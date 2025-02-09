@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(696689),
     l = n.n(o),
     u = n(692547),
-    c = n(537054),
-    d = n(770151);
+    c = n(675050),
+    d = n(139370);
 let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
     _ = r.forwardRef(function (e, t) {
         let n,
@@ -40,7 +40,7 @@ let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
                     var I;
                     n = null === (I = u.Z.colors[f[p]]) || void 0 === I ? void 0 : I.css;
             }
-        let b = {
+        let T = {
             color: n,
             ...y,
             ...g.style
@@ -59,7 +59,7 @@ let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
                 l
             ),
             ...g,
-            style: Object.values(b).filter(Boolean).length > 0 ? b : void 0,
+            style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
             'data-text-variant': r
         });
     });

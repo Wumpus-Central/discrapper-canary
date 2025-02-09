@@ -1,40 +1,40 @@
 n.d(t, { Z: () => p });
 var i = n(200651),
     s = n(192379),
-    r = n(120356),
-    l = n.n(r),
+    l = n(120356),
+    r = n.n(l),
     a = n(481060),
     o = n(906732),
     c = n(864106),
     d = n(1585),
     u = n(580747),
-    m = n(345861),
-    g = n(150039),
-    h = n(993413),
+    h = n(345861),
+    m = n(150039),
+    g = n(993413),
     x = n(388032),
-    _ = n(887669);
+    _ = n(625285);
 function p(e) {
-    let { user: t, guild: n, className: r, sectionTitle: m, forcedDivider: p = !1, withTutorial: C = !1, isTryItOutFlow: f = !1 } = e,
-        { analyticsLocations: T } = (0, o.ZP)(),
-        N = null != n,
-        { userAvatarDecoration: I, guildAvatarDecoration: S, pendingAvatarDecoration: b, pendingErrors: v } = (0, g.$U)(t, n),
-        j = (0, u.Z)('enable_avatar_decoration_uploads'),
+    let { user: t, guild: n, className: l, sectionTitle: h, forcedDivider: p = !1, withTutorial: C = !1, isTryItOutFlow: N = !1 } = e,
+        { analyticsLocations: f } = (0, o.ZP)(),
+        I = null != n,
+        { userAvatarDecoration: T, guildAvatarDecoration: S, pendingAvatarDecoration: j, pendingErrors: v } = (0, m.$U)(t, n),
+        b = (0, u.Z)('enable_avatar_decoration_uploads'),
         A = s.useCallback(
             () =>
                 (0, d.ps)({
-                    analyticsLocations: T,
-                    isTryItOutFlow: f,
+                    analyticsLocations: f,
+                    isTryItOutFlow: N,
                     guild: n
                 }),
-            [T, f, n]
+            [f, N, n]
         ),
-        O = f || void 0 !== b ? null != b : (N ? S : I) != null,
+        O = N || void 0 !== j ? null != j : (I ? S : T) != null,
         R = C ? a.gtL : a.zxk;
-    return (0, i.jsxs)(h.Z, {
-        className: r,
+    return (0, i.jsxs)(g.Z, {
+        className: l,
         forcedDivider: p,
         hasBackground: !0,
-        title: m,
+        title: h,
         errors: v,
         children: [
             (0, i.jsxs)('div', {
@@ -43,7 +43,7 @@ function p(e) {
                     (0, i.jsx)(R, {
                         size: a.zxk.Sizes.SMALL,
                         onClick: A,
-                        className: l()({ [_.buttonHighlighted]: C }),
+                        className: r()({ [_.buttonHighlighted]: C }),
                         children: x.intl.string(x.t['Tna/TU'])
                     }),
                     O &&
@@ -53,13 +53,13 @@ function p(e) {
                             look: a.zxk.Looks.LINK,
                             size: a.zxk.Sizes.SMALL,
                             onClick: function () {
-                                (0, g.PO)(null == n ? void 0 : n.id, null);
+                                (0, m.PO)(null == n ? void 0 : n.id, null);
                             },
                             children: (0, c.ad)(t, n) ? x.intl.string(x.t['GsW4/v']) : x.intl.string(x.t.GReZ6O)
                         })
                 ]
             }),
-            t.isStaff() && j && (0, i.jsx)(E, { user: t })
+            t.isStaff() && b && (0, i.jsx)(E, { user: t })
         ]
     });
 }
@@ -72,7 +72,7 @@ let E = (e) => {
                 variant: 'text-xs/bold',
                 children: 'STAFF ONLY and Experimental. Upload a decoration to view throughout the app.'
             }),
-            (0, i.jsx)(m.Z, {
+            (0, i.jsx)(h.Z, {
                 onChange: (e) => {
                     null != e &&
                         (t.avatarDecoration = {

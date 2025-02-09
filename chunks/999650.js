@@ -27,14 +27,14 @@ var i = n(658722),
     v = n(51144),
     y = n(981631),
     I = n(388032);
-function b() {
+function T() {
     return new Set(
         l()
             .months()
             .map((e) => e.toLowerCase())
     );
 }
-function T() {
+function b() {
     return new Set(
         l()
             .weekdays()
@@ -70,10 +70,10 @@ function R() {
 }
 let O = '([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})',
     D = '\\d{4}',
-    x = '([0-9]{4})-([0-9]{1,2})',
-    L = '([^\\d\\s]+)',
-    P = RegExp('(?:\\s*('.concat(O, '|').concat(x, '|').concat(D, '|').concat(L, '))'), 'i'),
-    w = RegExp('\\s*(true|false)', 'i');
+    L = '([0-9]{4})-([0-9]{1,2})',
+    x = '([^\\d\\s]+)',
+    w = RegExp('(?:\\s*('.concat(O, '|').concat(L, '|').concat(D, '|').concat(x, '))'), 'i'),
+    P = RegExp('\\s*(true|false)', 'i');
 function M(e) {
     return ''.concat(e, ':');
 }
@@ -90,7 +90,7 @@ function G(e, t) {
     let n, i;
     let r = e.getFullMatch().trim().toLowerCase(),
         a = R()[r];
-    return null != a ? ([n, i] = a()) : b().has(r) ? ([n, i] = C(r, 'MMMM', 'month')) : T().has(r) ? ([n, i] = C(r, 'dddd', 'day')) : S().has(r) ? ([n, i] = C(r, 'YYYY', 'year')) : ([n, i] = C(r, y.b2L, 'day')), !!(n.isValid() && i.isValid()) && ('before' === t ? ((i = n), (n = null)) : 'after' === t && ((n = i), (i = null)), e.setData('start', n), e.setData('end', i), !0);
+    return null != a ? ([n, i] = a()) : T().has(r) ? ([n, i] = C(r, 'MMMM', 'month')) : b().has(r) ? ([n, i] = C(r, 'dddd', 'day')) : S().has(r) ? ([n, i] = C(r, 'YYYY', 'year')) : ([n, i] = C(r, y.b2L, 'day')), !!(n.isValid() && i.isValid()) && ('before' === t ? ((i = n), (n = null)) : 'after' === t && ((n = i), (i = null)), e.setData('start', n), e.setData('end', i), !0);
 }
 function B(e) {
     let t = e.getMatch(1),
@@ -125,7 +125,7 @@ function Z(e) {
     return null != t && '' !== t && (e.setData('has', t), !0);
 }
 function F() {
-    return [...Array.from(b()), ...Array.from(T()), ...Array.from(S()), ...Object.keys(R())];
+    return [...Array.from(T()), ...Array.from(b()), ...Array.from(S()), ...Object.keys(R())];
 }
 function V() {
     return s().sample(F());
@@ -307,21 +307,21 @@ function Q() {
             getAutocompletions: (e, t, n) => j(e, n, y.dCx.FILTER_AFTER)
         },
         [y.dCx.ANSWER_BEFORE]: {
-            regex: P,
+            regex: w,
             follows: [y.dCx.FILTER_BEFORE],
             componentType: 'ANSWER',
             mutable: !0,
             validator: (e) => G(e, 'before')
         },
         [y.dCx.ANSWER_ON]: {
-            regex: P,
+            regex: w,
             follows: [y.dCx.FILTER_ON],
             componentType: 'ANSWER',
             mutable: !0,
             validator: (e) => G(e, 'on')
         },
         [y.dCx.ANSWER_AFTER]: {
-            regex: P,
+            regex: w,
             follows: [y.dCx.FILTER_AFTER],
             componentType: 'ANSWER',
             mutable: !0,
@@ -388,7 +388,7 @@ function Q() {
             getAutocompletions: () => [{ text: 'true' }, { text: 'false' }]
         },
         [y.dCx.ANSWER_PINNED]: {
-            regex: w,
+            regex: P,
             componentType: 'ANSWER',
             follows: [y.dCx.FILTER_PINNED],
             queryKey: 'pinned',

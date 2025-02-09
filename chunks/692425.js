@@ -1,4 +1,4 @@
-var i = {
+var d = {
     './champion_1.jpg': '337818',
     './champion_10.jpg': '489367',
     './champion_101.jpg': '744865',
@@ -17,7 +17,7 @@ var i = {
     './champion_115.jpg': '328986',
     './champion_117.jpg': '220417',
     './champion_119.jpg': '466555',
-    './champion_12.jpg': '733146',
+    './champion_12.jpg': '188019',
     './champion_120.jpg': '101997',
     './champion_121.jpg': '778192',
     './champion_122.jpg': '626638',
@@ -169,19 +169,19 @@ var i = {
     './champion_98.jpg': '988032',
     './champion_99.jpg': '974179'
 };
-function r(e) {
-    return n(a(e));
+function a(t) {
+    return c(s(t));
 }
-function a(e) {
-    if (!n.o(i, e)) {
-        var t = Error("Cannot find module '" + e + "'");
-        throw ((t.code = 'MODULE_NOT_FOUND'), t);
+function s(t) {
+    if (!c.o(d, t)) {
+        var e = Error("Cannot find module '" + t + "'");
+        throw ((e.code = 'MODULE_NOT_FOUND'), e);
     }
-    return i[e];
+    return d[t];
 }
-(r.keys = function () {
-    return Object.keys(i);
+(a.keys = function () {
+    return Object.keys(d);
 }),
-    (r.resolve = a),
-    (e.exports = r),
-    (r.id = 692425);
+    (a.resolve = s),
+    (t.exports = a),
+    (a.id = 692425);

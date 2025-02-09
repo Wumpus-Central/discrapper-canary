@@ -1,11 +1,11 @@
-n.d(t, { j: () => l });
+n.d(t, { j: () => s });
 var i = n(544891),
-    s = n(570140),
-    r = n(981631);
-let l = () =>
+    r = n(570140),
+    a = n(981631);
+let s = () =>
     i.tn
         .get({
-            url: r.ANM.GUILD_AFFINITIES,
+            url: a.ANM.GUILD_AFFINITIES,
             oldFormErrors: !0,
             rejectWithError: !1
         })
@@ -14,12 +14,12 @@ let l = () =>
                 let {
                     body: { guild_affinities: t }
                 } = e;
-                s.Z.dispatch({
+                r.Z.dispatch({
                     type: 'LOAD_GUILD_AFFINITIES_SUCCESS',
                     guildAffinities: t
                 });
             },
             () => {
-                s.Z.dispatch({ type: 'LOAD_GUILD_AFFINITIES_FAILURE' });
+                r.Z.dispatch({ type: 'LOAD_GUILD_AFFINITIES_FAILURE' });
             }
         );

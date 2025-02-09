@@ -8,7 +8,7 @@ var r = n(120356),
     l = n(633302),
     u = n(695346),
     c = n(556638),
-    d = n(748442);
+    d = n(694978);
 function f(e) {
     let { emoji: t, className: n, animate: r = !0, hideTooltip: f = !1, tooltipDelay: _ = c.X } = e,
         p = u.Yk.useSetting(),

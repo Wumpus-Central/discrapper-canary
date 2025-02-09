@@ -14,7 +14,7 @@ var r = n(392711),
     p = n(590921),
     h = n(689079),
     m = n(388032),
-    g = n(49508),
+    g = n(438083),
     E = n(239840);
 let v = { results: { choices: [] } },
     y = {
@@ -28,13 +28,13 @@ let v = { results: { choices: [] } },
         displayName: '',
         value: ''
     })),
-    b = {
+    T = {
         results: {
             choices: [],
             isError: !0
         }
     },
-    T = a().debounce(c.Z, h.Fu, {
+    b = a().debounce(c.Z, h.Fu, {
         leading: !0,
         trailing: !0
     });
@@ -55,7 +55,7 @@ let A = {
         if (s.autocomplete) {
             if (
                 (r &&
-                    T({
+                    b({
                         command: u.Z.getActiveCommand(e.id),
                         optionValues: i.getCommandOptionValues(),
                         context: {
@@ -69,7 +69,7 @@ let A = {
                     }),
                 l.Z.getLastErrored(e.id))
             )
-                return b;
+                return T;
             let a = l.Z.getAutocompleteChoices(e.id, s.name, n);
             return null == a ? y : { results: { choices: a } };
         }

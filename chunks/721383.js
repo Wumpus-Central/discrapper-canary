@@ -1,9 +1,9 @@
-n.d(e, { _: () => a });
-var l = n(481060),
-    i = n(191980),
-    c = n(285371);
-let a = {
+t.d(n, { _: () => l });
+var i = t(481060),
+    r = t(191980),
+    s = t(285371);
+let l = {
     binds: ['mod+/', 'mod+shift+/'],
     comboKeysBindGlobal: !0,
-    action: () => ((0, l.nfh)(c.J) ? i.C() : i.$(), !1)
+    action: () => ((0, i.nfh)(s.J) ? r.C() : r.$(), !1)
 };

@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(614223),
     y = n(246946),
     I = n(351402),
-    b = n(509545),
-    T = n(74538),
+    T = n(509545),
+    b = n(74538),
     S = n(296848),
     A = n(374649),
     N = n(642530),
@@ -27,19 +27,19 @@ var i = n(200651),
     R = n(585602),
     O = n(314182),
     D = n(314404),
-    x = n(42818),
-    L = n(981631),
-    P = n(388032),
-    w = n(311583),
-    M = n(809186);
+    L = n(42818),
+    x = n(981631),
+    w = n(388032),
+    P = n(917569),
+    M = n(987434);
 function k(e) {
     var t;
     let n,
-        { premiumSubscription: a, paymentSources: p, priceOptions: h, onPaymentSourceChange: A, onPaymentSourceAdd: R, planId: x, setHasAcceptedTerms: w, legalTermsNodeRef: k, hasLegalTermsFlash: V, onInvoiceError: j, planGroup: H, currencies: Y, onCurrencyChange: W, hasOpenInvoice: K, purchaseState: z, handleClose: q } = e,
+        { premiumSubscription: a, paymentSources: p, priceOptions: h, onPaymentSourceChange: A, onPaymentSourceAdd: R, planId: L, setHasAcceptedTerms: P, legalTermsNodeRef: k, hasLegalTermsFlash: V, onInvoiceError: j, planGroup: H, currencies: Y, onCurrencyChange: W, hasOpenInvoice: K, purchaseState: z, handleClose: q } = e,
         { selectedSkuId: Q, defaultPlanId: X, isPremium: J, startedPaymentFlowWithPaymentSourcesRef: $ } = (0, g.JL)(),
         { isGift: ee } = (0, m.wD)(),
         et = h.paymentSourceId,
-        en = (0, l.e7)([b.Z], () => b.Z.get(x));
+        en = (0, l.e7)([T.Z], () => T.Z.get(L));
     s()(null != en, 'Missing newPlan');
     let ei = (0, l.e7)([y.Z], () => y.Z.hidePersonalInformation),
         er = o.M.EEA_COUNTRIES.has(I.Z.ipCountryCodeWithFallback),
@@ -50,10 +50,10 @@ function k(e) {
             selectedSkuId: Q,
             startedPaymentFlowWithPaymentSources: $.current
         }),
-        eo = (null == a ? void 0 : a.status) === L.O0b.PAUSED,
+        eo = (null == a ? void 0 : a.status) === x.O0b.PAUSED,
         el = r.useMemo(
             () =>
-                (0, T.V7)({
+                (0, b.V7)({
                     skuId: Q,
                     isPremium: J,
                     multiMonthPlans: [],
@@ -65,7 +65,7 @@ function k(e) {
                 }),
             [Q, a, X, J, ee]
         );
-    n = K || eo ? P.intl.string(P.t.nyzoFR) : (0, T.PV)(x) ? (0, T.W_)(a, en) : P.intl.formatToPlainString(P.t['sBpy9/'], { planName: en.name });
+    n = K || eo ? w.intl.string(w.t.nyzoFR) : (0, b.PV)(L) ? (0, b.W_)(a, en) : w.intl.formatToPlainString(w.t['sBpy9/'], { planName: en.name });
     let eu = null;
     return (
         null != a &&
@@ -83,7 +83,7 @@ function k(e) {
                         priceOptions: h,
                         preventFetch: ea
                     })
-                  : (0, S.R4)(a, x, H)
+                  : (0, S.R4)(a, L, H)
                     ? (0, i.jsx)(G, {
                           premiumSubscription: a,
                           newPlan: en,
@@ -114,7 +114,7 @@ function k(e) {
                             (0, i.jsx)(D.O, {
                                 planOptions: el,
                                 eligibleForMultiMonthPlans: !1,
-                                selectedPlanId: x,
+                                selectedPlanId: L,
                                 showTotal: !1,
                                 handleClose: q
                             }),
@@ -131,7 +131,7 @@ function k(e) {
                     children: [
                         (0, i.jsx)(u.vwX, {
                             tag: u.RB0.H5,
-                            children: P.intl.string(P.t.mmDvV1)
+                            children: w.intl.string(w.t.mmDvV1)
                         }),
                         (0, i.jsx)(f.Z, {
                             paymentSources: Object.values(p),
@@ -149,7 +149,7 @@ function k(e) {
                     children: [
                         (0, i.jsx)(u.vwX, {
                             tag: u.RB0.H5,
-                            children: P.intl.string(P.t['/AAR09'])
+                            children: w.intl.string(w.t['/AAR09'])
                         }),
                         (0, i.jsx)(c.Z, {
                             selectedCurrency: h.currency,
@@ -163,7 +163,7 @@ function k(e) {
                     isActive: V,
                     ref: k,
                     children:
-                        null != a && (0, S.R4)(a, x, H)
+                        null != a && (0, S.R4)(a, L, H)
                             ? (0, i.jsx)(B, {
                                   premiumSubscription: a,
                                   newPlan: en,
@@ -174,19 +174,19 @@ function k(e) {
                                   disabled: ea,
                                   isEEA: er,
                                   paymentSources: p,
-                                  setHasAcceptedTerms: w
+                                  setHasAcceptedTerms: P
                               })
                             : (0, i.jsx)(_.Z, {
-                                  onChange: w,
+                                  onChange: P,
                                   finePrint: (0, i.jsx)(d.Z, {
                                       subscriptionPlan: en,
                                       paymentSourceType: null === (t = p[null != et ? et : '']) || void 0 === t ? void 0 : t.type,
-                                      basePrice: (0, T.aS)(en.id, !1, ee, h),
+                                      basePrice: (0, b.aS)(en.id, !1, ee, h),
                                       currentSubscription: a,
                                       planGroup: H
                                   }),
                                   forceShow: !0,
-                                  showPricingLink: en.currency !== L.pKx.USD,
+                                  showPricingLink: en.currency !== x.pKx.USD,
                                   showWithdrawalWaiver: er,
                                   disabled: ea,
                                   subscriptionPlan: en,
@@ -207,16 +207,16 @@ function U(e) {
     r.useEffect(() => {
         n(l);
     }, [n, l]);
-    let c = (0, T.Ap)(a.paymentSourceId);
+    let c = (0, b.Ap)(a.paymentSourceId);
     return null != o
         ? (0, i.jsxs)(C.PO, {
-              className: w.__invalid_invoice,
+              className: P.__invalid_invoice,
               children: [
-                  (0, i.jsx)(x.By, {
+                  (0, i.jsx)(L.By, {
                       invoice: o,
                       isPrepaidPaymentSource: c
                   }),
-                  (0, i.jsx)(x.nd, {
+                  (0, i.jsx)(L.nd, {
                       premiumSubscription: t,
                       renewalInvoice: o,
                       isUpdate: !0,
@@ -231,7 +231,7 @@ function G(e) {
         { selectedSkuId: c, startedPaymentFlowWithPaymentSourcesRef: d } = (0, g.JL)(),
         { isGift: f } = (0, m.wD)(),
         { analyticsLocations: _ } = (0, h.ZP)(),
-        E = (0, T.al)(t, n.id, 1, new Set(s)),
+        E = (0, b.al)(t, n.id, 1, new Set(s)),
         [y, I] = (0, A.ED)({
             subscriptionId: t.id,
             items: E,
@@ -243,7 +243,7 @@ function G(e) {
             analyticsLocations: _,
             analyticsLocation: p.Z.BILLING_SWITCH_PLAN_IMMEDIATE_PRORATED_INVOICE_PREVIEW
         }),
-        [b, S] = (0, A.ED)({
+        [T, S] = (0, A.ED)({
             subscriptionId: t.id,
             items: E,
             renewal: !0,
@@ -268,27 +268,27 @@ function G(e) {
             startedPaymentFlowWithPaymentSources: d.current
         }),
         O = (0, v.$g)(R, y, n);
-    if (null == y || null == b || O) return (0, i.jsx)(u.$jN, { className: M.__invalid_spinner });
-    let D = (0, T.Ap)(o.paymentSourceId);
+    if (null == y || null == T || O) return (0, i.jsx)(u.$jN, { className: M.__invalid_spinner });
+    let D = (0, b.Ap)(o.paymentSourceId);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(x.hG, {
+            (0, i.jsx)(L.hG, {
                 proratedInvoice: y,
-                renewalInvoice: b
+                renewalInvoice: T
             }),
             (0, i.jsxs)(C.PO, {
                 className: M.invoice,
                 children: [
-                    (0, i.jsx)(C.q9, { children: P.intl.string(P.t['2eh+Cg']) }),
-                    (0, i.jsx)(x.Lu, {
+                    (0, i.jsx)(C.q9, { children: w.intl.string(w.t['2eh+Cg']) }),
+                    (0, i.jsx)(L.Lu, {
                         invoice: y,
                         newPlan: n,
                         isPrepaidPaymentSource: D
                     }),
-                    (0, i.jsx)(x.nd, {
+                    (0, i.jsx)(L.nd, {
                         premiumSubscription: t,
                         proratedInvoice: y,
-                        renewalInvoice: b,
+                        renewalInvoice: T,
                         isUpdate: !0,
                         isPrepaidPaymentSource: D
                     })
@@ -302,10 +302,10 @@ function B(e) {
     let a,
         { premiumSubscription: s, newPlan: o, onInvoiceError: l, planGroup: c, priceOptions: f, preventFetch: m, disabled: g, isEEA: E, paymentSources: v, setHasAcceptedTerms: y } = e,
         { analyticsLocations: I } = (0, h.ZP)(),
-        b = (0, T.al)(s, o.id, 1, new Set(c)),
+        T = (0, b.al)(s, o.id, 1, new Set(c)),
         [S, N] = (0, A.ED)({
             subscriptionId: s.id,
-            items: b,
+            items: T,
             renewal: !0,
             paymentSourceId: f.paymentSourceId,
             currency: f.currency,
@@ -338,7 +338,7 @@ function B(e) {
                     planGroup: c
                 }),
                 forceShow: !0,
-                showPricingLink: o.currency !== L.pKx.USD,
+                showPricingLink: o.currency !== x.pKx.USD,
                 showWithdrawalWaiver: E,
                 disabled: g,
                 subscriptionPlan: o,
@@ -377,22 +377,22 @@ function Z(e) {
     )
         return (0, i.jsx)(u.kzN, { children: _.message });
     if (null == l || null == d) return (0, i.jsx)(u.$jN, { className: M.__invalid_spinner });
-    let m = (0, T.Ap)(n.paymentSourceId);
+    let m = (0, b.Ap)(n.paymentSourceId);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: w.renewalInvoiceDate,
-                children: P.intl.string(P.t.spIYoq)
+                className: P.renewalInvoiceDate,
+                children: w.intl.string(w.t.spIYoq)
             }),
             (0, i.jsxs)(C.PO, {
                 className: M.invoice,
                 children: [
-                    (0, i.jsx)(C.q9, { children: P.intl.string(P.t['2eh+Cg']) }),
-                    (0, i.jsx)(x.By, {
+                    (0, i.jsx)(C.q9, { children: w.intl.string(w.t['2eh+Cg']) }),
+                    (0, i.jsx)(L.By, {
                         invoice: l,
                         isPrepaidPaymentSource: m
                     }),
-                    (0, i.jsx)(x.nd, {
+                    (0, i.jsx)(L.nd, {
                         premiumSubscription: t,
                         renewalInvoice: d,
                         isUpdate: !0,
@@ -409,7 +409,7 @@ function F(e) {
         { analyticsLocations: l } = (0, h.ZP)(),
         [c, d] = (0, A.ED)({
             subscriptionId: n.id,
-            items: (0, T.al)(n, r.id, 1, new Set(a)),
+            items: (0, b.al)(n, r.id, 1, new Set(a)),
             renewal: !0,
             applyEntitlements: !1,
             paymentSourceId: s.paymentSourceId,
@@ -420,26 +420,26 @@ function F(e) {
         });
     if (null != d) return (0, i.jsx)(u.kzN, { children: d.message });
     if (null == c) return (0, i.jsx)('div', { children: (0, i.jsx)(u.$jN, {}) });
-    t = n.type === L.NYc.PREMIUM ? (0, T.Gf)(r.id) : r.name;
-    let f = (0, T.Ap)(s.paymentSourceId);
+    t = n.type === x.NYc.PREMIUM ? (0, b.Gf)(r.id) : r.name;
+    let f = (0, b.Ap)(s.paymentSourceId);
     return (0, i.jsxs)('div', {
         className: M.bodyText,
         children: [
             (0, i.jsx)('div', {
-                className: w.renewalInvoiceDate,
-                children: P.intl.format(P.t['+y0Tj4'], { renewalDate: c.subscriptionPeriodStart })
+                className: P.renewalInvoiceDate,
+                children: w.intl.format(w.t['+y0Tj4'], { renewalDate: c.subscriptionPeriodStart })
             }),
             (0, i.jsxs)(C.PO, {
                 className: M.invoice,
                 children: [
-                    (0, i.jsx)(C.q9, { children: P.intl.string(P.t.iqhIp6) }),
+                    (0, i.jsx)(C.q9, { children: w.intl.string(w.t.iqhIp6) }),
                     (0, i.jsx)(C.R$, {
                         label: t,
-                        value: (0, T.PK)(r, s, !0)
+                        value: (0, b.PK)(r, s, !0)
                     }),
                     (0, i.jsx)(R.Z, { invoice: c }),
                     (0, i.jsx)(C.KU, {}),
-                    (0, i.jsx)(x.nd, {
+                    (0, i.jsx)(L.nd, {
                         premiumSubscription: n,
                         renewalInvoice: c,
                         isUpdate: !0,

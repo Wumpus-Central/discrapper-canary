@@ -7,7 +7,7 @@ var r = n(120356),
     a = n(481060),
     o = n(385499),
     c = n(246946),
-    d = n(933018);
+    d = n(385383);
 function u(e) {
     let { className: t, avatarURL: n, name: r, bot: u, verifiedBot: m, userTag: h } = e,
         g = (0, s.e7)([c.Z], () => c.Z.hidePersonalInformation);

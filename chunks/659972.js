@@ -13,7 +13,7 @@ var a = t(120356),
     d = t(857395),
     u = t(131154),
     m = t(38981),
-    _ = t(820331),
+    _ = t(491795),
     x = (((l = {})[(l.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (l[(l.TRENDING = 1)] = 'TRENDING'), (l[(l.PERSONALIZED = 2)] = 'PERSONALIZED'), (l[(l.USER_GUILDS = 3)] = 'USER_GUILDS'), (l[(l.FRIENDS_GUILDS = 4)] = 'FRIENDS_GUILDS'), (l[(l.INTRO_CARD = 5)] = 'INTRO_CARD'), (l[(l.FEATURED = 6)] = 'FEATURED'), l);
 function h(e) {
     let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: a, handleGuildNameClick: x, source: h, speakers: g, speakerCount: v, audienceCount: b, channelName: j } = e,

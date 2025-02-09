@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -12,7 +12,7 @@ var i = n(200651),
     m = n(843445),
     p = n(981631),
     g = n(388032),
-    _ = n(803157);
+    _ = n(795049);
 let f = {
     [p.TaA.WINDOWS]: h.PlatformTypes.WINDOWS,
     [p.TaA.MACOS]: h.PlatformTypes.OSX,
@@ -181,4 +181,4 @@ class C extends l.PureComponent {
         this.state = { selectedOperatingSystem: r };
     }
 }
-let N = C;
+let v = C;

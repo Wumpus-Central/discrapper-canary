@@ -83,7 +83,7 @@ class r {
             } catch (e) {
                 return !1;
             }
-        for (let t = 0; t < this.set.length; t++) if (x(this.set[t], e, this.options)) return !0;
+        for (let t = 0; t < this.set.length; t++) if (L(this.set[t], e, this.options)) return !0;
         return !1;
     }
 }
@@ -104,15 +104,15 @@ let a = new (n(147567))(),
         for (; n && i.length; ) (n = i.every((e) => r.intersects(e, t))), (r = i.pop());
         return n;
     },
-    y = (e, t) => (l('comp', e, t), l('caret', (e = S(e, t))), l('tildes', (e = b(e, t))), l('xrange', (e = N(e, t))), l('stars', (e = R(e, t))), e),
+    y = (e, t) => (l('comp', e, t), l('caret', (e = S(e, t))), l('tildes', (e = T(e, t))), l('xrange', (e = N(e, t))), l('stars', (e = R(e, t))), e),
     I = (e) => !e || 'x' === e.toLowerCase() || '*' === e,
-    b = (e, t) =>
+    T = (e, t) =>
         e
             .trim()
             .split(/\s+/)
-            .map((e) => T(e, t))
+            .map((e) => b(e, t))
             .join(' '),
-    T = (e, t) => {
+    b = (e, t) => {
         let n = t.loose ? c[d.TILDELOOSE] : c[d.TILDE];
         return e.replace(n, (t, n, i, r, a) => {
             let s;
@@ -156,7 +156,7 @@ let a = new (n(147567))(),
     R = (e, t) => (l('replaceStars', e, t), e.trim().replace(c[d.STAR], '')),
     O = (e, t) => (l('replaceGTE0', e, t), e.trim().replace(c[t.includePrerelease ? d.GTE0PRE : d.GTE0], '')),
     D = (e) => (t, n, i, r, a, s, o, l, u, c, d, f) => ((n = I(i) ? '' : I(r) ? `>=${i}.0.0${e ? '-0' : ''}` : I(a) ? `>=${i}.${r}.0${e ? '-0' : ''}` : s ? `>=${n}` : `>=${n}${e ? '-0' : ''}`), (l = I(u) ? '' : I(c) ? `<${+u + 1}.0.0-0` : I(d) ? `<${u}.${+c + 1}.0-0` : f ? `<=${u}.${c}.${d}-${f}` : e ? `<${u}.${c}.${+d + 1}-0` : `<=${l}`), `${n} ${l}`.trim()),
-    x = (e, t, n) => {
+    L = (e, t, n) => {
         for (let n = 0; n < e.length; n++) if (!e[n].test(t)) return !1;
         if (t.prerelease.length && !n.includePrerelease) {
             for (let n = 0; n < e.length; n++)

@@ -12,14 +12,14 @@ var i = n(200651),
     _ = n(981631),
     p = n(182294),
     h = n(388032),
-    m = n(256405);
+    m = n(491644);
 function g(e) {
     let { id: t, user: n, application: g, bot: E, accountScopes: v, showLogout: y, location: I } = e,
-        b = c.ZP.getApplicationIconURL({
+        T = c.ZP.getApplicationIconURL({
             id: g.id,
             icon: g.icon
         }),
-        T = c.ZP.getUserAvatarURL(n),
+        b = c.ZP.getUserAvatarURL(n),
         S = r.useMemo(() => {
             var e;
             return (0, d.yE)(null !== (e = g.flags) && void 0 !== e ? e : 0, _.udG.SOCIAL_LAYER_INTEGRATION)
@@ -75,7 +75,7 @@ function g(e) {
                 children: [
                     (0, i.jsx)(s.qE, {
                         className: m.avatar,
-                        src: b,
+                        src: T,
                         size: p.EF.SIZE_80,
                         'aria-label': g.name
                     }),
@@ -85,7 +85,7 @@ function g(e) {
                     }),
                     (0, i.jsx)(s.qE, {
                         className: m.avatar,
-                        src: T,
+                        src: b,
                         size: p.EF.SIZE_80,
                         'aria-label': n.username
                     })

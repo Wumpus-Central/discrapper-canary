@@ -10,7 +10,7 @@ var i = n(200651),
     u = n(865427),
     h = n(820254),
     m = n(388032),
-    p = n(820076);
+    p = n(133220);
 let g = 'isHideDevBanner',
     _ = () => {
         var e;
@@ -42,7 +42,7 @@ let g = 'isHideDevBanner',
             : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL
               ? (0, i.jsxs)('div', {
                     className: a()(p.devBanner, p.staging),
-                    children: [(0, i.jsx)(h.Z, { className: p.icon }), m.intl.format(m.t.uyrfYG, { buildNumber: '366967' }), (0, i.jsx)(f, {})]
+                    children: [(0, i.jsx)(h.Z, { className: p.icon }), m.intl.format(m.t.uyrfYG, { buildNumber: '367043' }), (0, i.jsx)(f, {})]
                 })
               : null;
     };

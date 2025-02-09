@@ -14,9 +14,9 @@ var r = n(120356),
     p = n(170187),
     h = n(937008),
     m = n(556638),
-    g = n(748442);
+    g = n(694978);
 function E(e) {
-    let { user: t, activities: n, applicationStream: r, emojiClassName: E, textClassName: v, animate: y = !0, hasQuest: I = !1, hideEmoji: b = !1, hideTooltip: T = !1, fullWidth: S = !1 } = e,
+    let { user: t, activities: n, applicationStream: r, emojiClassName: E, textClassName: v, animate: y = !0, hasQuest: I = !1, hideEmoji: T = !1, hideTooltip: b = !1, fullWidth: S = !1 } = e,
         A = 'live-activity-status-web',
         { blockeeExperimentEnabled: N, blockerExperimentEnabled: C } = (0, l.NR)(A);
     (0, u.Z)(null == t ? void 0 : t.id, A);
@@ -24,17 +24,17 @@ function E(e) {
             activity: R,
             text: O,
             tooltip: D,
-            customStatus: x
+            customStatus: L
         } = (0, d.Z)({
             activities: n,
             stream: N && (null == r ? void 0 : r.discoverable) === !1 ? null : r
         }),
-        L = (0, s.e7)([c.Z], () => c.Z.isBlocked(null == t ? void 0 : t.id));
-    if ((C && L) || (null == O && null == x)) return null;
-    let P = (null == x ? void 0 : x.text) != null && !S,
-        w = S ? 'sm' : 'xs',
+        x = (0, s.e7)([c.Z], () => c.Z.isBlocked(null == t ? void 0 : t.id));
+    if ((C && x) || (null == O && null == L)) return null;
+    let w = (null == L ? void 0 : L.text) != null && !S,
+        P = S ? 'sm' : 'xs',
         M = () =>
-            null == O || ((null == t ? void 0 : t.bot) && (null == x ? void 0 : x.text) != null)
+            null == O || ((null == t ? void 0 : t.bot) && (null == L ? void 0 : L.text) != null)
                 ? null
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
@@ -42,35 +42,35 @@ function E(e) {
                               (0, i.jsx)(h.Z, {
                                   activity: R,
                                   stream: r,
-                                  tooltip: P && !T ? D : void 0,
+                                  tooltip: w && !b ? D : void 0,
                                   className: S ? g.fullWidth : void 0
                               }),
-                          !P &&
+                          !w &&
                               (0, i.jsx)(p.Z, {
-                                  variant: 'text-'.concat(w, '/medium'),
+                                  variant: 'text-'.concat(P, '/medium'),
                                   className: v,
                                   children: O
                               })
                       ]
                   }),
         k = () =>
-            null == x
+            null == L
                 ? null
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          null != x.emoji &&
-                              !b &&
+                          null != L.emoji &&
+                              !T &&
                               (0, i.jsx)(f.Z, {
-                                  emoji: x.emoji,
+                                  emoji: L.emoji,
                                   animate: y,
-                                  hideTooltip: T,
+                                  hideTooltip: b,
                                   className: a()(S ? g.fullWidth : void 0, E)
                               }),
-                          null != x.text &&
+                          null != L.text &&
                               (0, i.jsx)(p.Z, {
-                                  variant: 'text-'.concat(w, '/medium'),
+                                  variant: 'text-'.concat(P, '/medium'),
                                   className: v,
-                                  children: x.text
+                                  children: L.text
                               })
                       ]
                   });
@@ -79,7 +79,7 @@ function E(e) {
         children: [
             M(),
             (0, i.jsx)(o.Text, {
-                variant: 'text-'.concat(w, '/normal'),
+                variant: 'text-'.concat(P, '/normal'),
                 className: a()(g.text, g.dot, v),
                 children: m.l
             }),

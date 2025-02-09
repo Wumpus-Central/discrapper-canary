@@ -1,11 +1,11 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var i = n(200651),
     s = n(192379),
-    r = n(481060),
-    l = n(707558),
+    l = n(481060),
+    r = n(707558),
     a = n(577720),
     o = n(388032),
-    c = n(57916);
+    c = n(92201);
 let d = () => [
     {
         icon: c.perkNewsletter,
@@ -32,14 +32,14 @@ class u extends s.Component {
                     className: c.video,
                     videoID: 'SWzB1mx2o5k'
                 }),
-                (0, i.jsx)(r.X6q, {
+                (0, i.jsx)(l.X6q, {
                     className: c.perksHeading,
                     variant: 'heading-sm/semibold',
                     children: o.intl.string(o.t['ITh5+/'])
                 }),
-                (0, i.jsx)(l.Z, { features: d() })
+                (0, i.jsx)(r.Z, { features: d() })
             ]
         });
     }
 }
-let m = u;
+let h = u;

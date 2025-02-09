@@ -5,23 +5,23 @@ n.d(t, {
     KK: () => j,
     Qi: () => F,
     Ro: () => E,
-    U2: () => T,
+    U2: () => b,
     Vx: () => k,
     _k: () => U,
     _p: () => R,
-    aq: () => w,
+    aq: () => P,
     cP: () => A,
     e9: () => C,
-    f2: () => L,
+    f2: () => x,
     gZ: () => Z,
     ge: () => O,
-    ig: () => b,
+    ig: () => T,
     nW: () => N,
     rF: () => D,
-    tb: () => x,
+    tb: () => L,
     tl: () => H,
     vn: () => G,
-    vx: () => P,
+    vx: () => w,
     yw: () => V
 }),
     n(411104),
@@ -64,8 +64,8 @@ let v = [p.Eu4.NONE, p.Eu4.TIER_1, p.Eu4.TIER_2, p.Eu4.TIER_3],
         return e === p.Eu4.NONE ? p.Eu4.TIER_1 : null === (n = B(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
     },
     I = (e, t) => (null != t && t.hasFeature(p.oNc.MORE_STICKERS) && e === p.Eu4.TIER_3 ? s.D.MAX_STICKER_SLOTS : h.$8[e]),
-    b = (e) => h.pH[e],
-    T = (e, t) => (null != t && t.hasFeature(p.oNc.MORE_SOUNDBOARD) ? g : h._k[e]),
+    T = (e) => h.pH[e],
+    b = (e, t) => (null != t && t.hasFeature(p.oNc.MORE_SOUNDBOARD) ? g : h._k[e]),
     S = (e) => {
         if (e === p.Eu4.NONE) return h._k[e];
         let t = v[v.indexOf(e) - 1];
@@ -86,7 +86,7 @@ let v = [p.Eu4.NONE, p.Eu4.TIER_1, p.Eu4.TIER_2, p.Eu4.TIER_3],
                 },
                 {
                     title: m.intl.formatToPlainString(m.t['/9p2/v'], {
-                        adding: b(p.Eu4.TIER_1),
+                        adding: T(p.Eu4.TIER_1),
                         total: I(p.Eu4.TIER_1)
                     }),
                     description: m.intl.string(m.t.JfsnDQ),
@@ -95,7 +95,7 @@ let v = [p.Eu4.NONE, p.Eu4.TIER_1, p.Eu4.TIER_2, p.Eu4.TIER_3],
                 {
                     title: m.intl.formatToPlainString(m.t.NRuk5u, {
                         soundCount: S(p.Eu4.TIER_1),
-                        totalSoundCount: T(p.Eu4.TIER_1)
+                        totalSoundCount: b(p.Eu4.TIER_1)
                     }),
                     description: m.intl.string(m.t.Oq7OVl),
                     icon: 13
@@ -136,7 +136,7 @@ let v = [p.Eu4.NONE, p.Eu4.TIER_1, p.Eu4.TIER_2, p.Eu4.TIER_3],
                 },
                 {
                     title: m.intl.formatToPlainString(m.t['/9p2/v'], {
-                        adding: b(p.Eu4.TIER_2),
+                        adding: T(p.Eu4.TIER_2),
                         total: I(p.Eu4.TIER_2)
                     }),
                     description: m.intl.string(m.t.t4TM29),
@@ -145,7 +145,7 @@ let v = [p.Eu4.NONE, p.Eu4.TIER_1, p.Eu4.TIER_2, p.Eu4.TIER_3],
                 {
                     title: m.intl.formatToPlainString(m.t.NRuk5u, {
                         soundCount: S(p.Eu4.TIER_2),
-                        totalSoundCount: T(p.Eu4.TIER_2)
+                        totalSoundCount: b(p.Eu4.TIER_2)
                     }),
                     description: m.intl.string(m.t.pEYlPT),
                     icon: 13
@@ -198,7 +198,7 @@ let v = [p.Eu4.NONE, p.Eu4.TIER_1, p.Eu4.TIER_2, p.Eu4.TIER_3],
                 },
                 {
                     title: m.intl.formatToPlainString(m.t['/9p2/v'], {
-                        adding: b(p.Eu4.TIER_3),
+                        adding: T(p.Eu4.TIER_3),
                         total: I(p.Eu4.TIER_3)
                     }),
                     description: m.intl.string(m.t['+ZI4QU']),
@@ -207,7 +207,7 @@ let v = [p.Eu4.NONE, p.Eu4.TIER_1, p.Eu4.TIER_2, p.Eu4.TIER_3],
                 {
                     title: m.intl.formatToPlainString(m.t.NRuk5u, {
                         soundCount: S(p.Eu4.TIER_3),
-                        totalSoundCount: T(p.Eu4.TIER_3)
+                        totalSoundCount: b(p.Eu4.TIER_3)
                     }),
                     description: m.intl.string(m.t['8omJSU']),
                     icon: 13
@@ -278,22 +278,22 @@ function D(e, t) {
     for (let n of B(t)) if (e >= n.amount) return n.tier;
     return p.Eu4.NONE;
 }
-function x(e, t) {
+function L(e, t) {
     return null == t || (null != e && e >= t);
 }
-function L(e, t) {
-    return x(e.premiumTier, t);
+function x(e, t) {
+    return L(e.premiumTier, t);
 }
-function P(e) {
+function w(e) {
     return r()
         .values(e)
         .filter((e) => e.isAvailable());
 }
-function w(e) {
+function P(e) {
     let { fractionalState: t } = e,
         n = u.ZP.getPremiumTypeSubscription();
     l.Z.hasFetched || (0, o.X8)();
-    let i = P(l.Z.boostSlots),
+    let i = w(l.Z.boostSlots),
         r = null == n ? void 0 : n.isPausedOrPausePending,
         s = i.length > 0,
         c = m.intl.format(m.t.kJ1AZG, { helpCenterLink: f.Z.getArticleURL(p.BhN.FRACTIONAL_PREMIUM_ABOUT) }),
@@ -389,7 +389,7 @@ function Z(e, t) {
     return null;
 }
 function F(e, t) {
-    let n = b(t),
+    let n = T(t),
         i = v.indexOf(t);
     if (-1 === i) return 0;
     let r = v[i - 1],
@@ -398,7 +398,7 @@ function F(e, t) {
     return Math.max(0, n - e.slice(a, s).length);
 }
 function V(e, t, n) {
-    return -1 === v.indexOf(n) ? 0 : Math.max(0, T(n, e) - t.length);
+    return -1 === v.indexOf(n) ? 0 : Math.max(0, b(n, e) - t.length);
 }
 function j(e, t) {
     let n = e.premiumSubscriberCount;

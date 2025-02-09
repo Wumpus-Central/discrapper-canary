@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(239091),
     h = n(317381),
     p = n(16609),
-    g = n(540059),
-    m = n(276952),
+    m = n(540059),
+    g = n(276952),
     f = n(682662),
     _ = n(674552),
     v = n(593364),
@@ -26,14 +26,14 @@ var i = n(200651),
     j = n(919755),
     y = n(110977),
     P = n(603274),
-    T = n(981631),
-    A = n(388032),
-    w = n(120555);
+    A = n(981631),
+    T = n(388032),
+    w = n(148599);
 let R = {
     analyticsSource: {
-        page: T.ZY5.GUILD_CHANNEL,
-        section: T.jXE.CHANNEL_LIST,
-        object: T.qAy.CHANNEL
+        page: A.ZY5.GUILD_CHANNEL,
+        section: A.jXE.CHANNEL_LIST,
+        object: A.qAy.CHANNEL
     }
 };
 function L() {
@@ -44,9 +44,9 @@ function L() {
             favoriteChannels: N.Z.getFavoriteChannels(),
             favoriteServerMuted: N.Z.favoriteServerMuted
         })),
-        k = (0, s.e7)([I.Z], () => I.Z.getChannelId(T.I_8)),
+        k = (0, s.e7)([I.Z], () => I.Z.getChannelId(A.I_8)),
         B = (0, s.e7)([Z.Z], () => Z.Z.getChannel(k)),
-        O = (0, C.Z)((e) => e.guildId) === T.I_8,
+        O = (0, C.Z)((e) => e.guildId) === A.I_8,
         { badge: U, unread: V } = (0, j.Z)(G),
         F = (function (e) {
             let t = (0, s.e7)([I.Z], () => I.Z.getVoiceChannelId()),
@@ -69,28 +69,28 @@ function L() {
                 c = a.length > 0,
                 d = !1,
                 u = !1,
-                g = !1,
-                m = !1;
+                m = !1,
+                g = !1;
             return (
-                n ? ((d = !r), (u = r), (g = i), (m = o)) : ((g = l), (m = c)),
+                n ? ((d = !r), (u = r), (m = i), (g = o)) : ((m = l), (g = c)),
                 (0, _.Or)({
                     audio: d,
                     video: u,
-                    screenshare: g,
+                    screenshare: m,
                     liveStage: !1,
                     isCurrentUserConnected: n,
-                    activity: m
+                    activity: g
                 })
             );
         })(G),
         H = U > 0 ? (0, v.N)(U) : null,
-        z = (0, g.Q3)('FavoritesButton'),
+        z = (0, m.Q3)('FavoritesButton'),
         W = l.useCallback(() => {
             r();
         }, [r]);
     return (0, i.jsxs)(f.H, {
         children: [
-            (0, i.jsx)(m.Z, {
+            (0, i.jsx)(g.Z, {
                 selected: O,
                 hovered: L,
                 unread: V && !D,
@@ -105,12 +105,12 @@ function L() {
                         lowerBadge: H,
                         children: (0, i.jsx)(c.LYs, {
                             ...e,
-                            ariaLabel: A.intl.formatToPlainString(A.t['/uzRsr'], {
-                                guildName: A.intl.string(A.t.wMWycn),
+                            ariaLabel: T.intl.formatToPlainString(T.t['/uzRsr'], {
+                                guildName: T.intl.string(T.t.wMWycn),
                                 mentions: U
                             }),
                             to: {
-                                pathname: T.Z5c.CHANNEL(T.I_8, k),
+                                pathname: A.Z5c.CHANNEL(A.I_8, k),
                                 state: R
                             },
                             selected: O || L,

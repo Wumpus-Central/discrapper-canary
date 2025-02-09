@@ -1,7 +1,7 @@
 n.d(t, { Z: () => h });
 var i = n(278323),
-    r = n(13245),
-    o = n(45114),
+    o = n(13245),
+    r = n(45114),
     l = n(237997),
     a = n(145597),
     s = n(620954),
@@ -38,10 +38,10 @@ function h(e, t, n, h) {
                 location: l.Z.isLocked((0, a.QF)()) ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY
             }),
                 m('join'),
-                r.Z.updateNotificationStatus(n);
+                o.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, o.In)(e.id, !0, !0), r.Z.updateNotificationStatus(n), m('decline');
+            (0, r.In)(e.id, !0, !0), o.Z.updateNotificationStatus(n), m('decline');
         },
         onDismissClick: () => {
             m('dismiss');

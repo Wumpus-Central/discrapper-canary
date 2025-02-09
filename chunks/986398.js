@@ -1,15 +1,15 @@
-n.d(t, { Z: () => s });
-var i = n(200651),
-    r = n(81063),
-    a = n(388032);
-function s(e) {
-    let { leaderboard: t, className: n } = e,
-        s = (0, r.getAssetImage)(t.settings.application_id, t.settings.winner_asset_id);
-    return null == s
+c.d(e, { Z: () => n });
+var d = c(200651),
+    a = c(81063),
+    s = c(388032);
+function n(t) {
+    let { leaderboard: e, className: c } = t,
+        n = (0, a.getAssetImage)(e.settings.application_id, e.settings.winner_asset_id);
+    return null == n
         ? null
-        : (0, i.jsx)('img', {
-              className: n,
-              src: s,
-              alt: a.intl.string(a.t.QyRmzc)
+        : (0, d.jsx)('img', {
+              className: c,
+              src: n,
+              alt: s.intl.string(s.t.QyRmzc)
           });
 }

@@ -14,7 +14,7 @@ var i,
     h = n(215569),
     m = n(481060),
     g = n(540059),
-    E = n(11868);
+    E = n(979113);
 function v(e, t, n) {
     return (
         t in e
@@ -30,8 +30,8 @@ function v(e, t, n) {
 }
 let y = 10800000,
     I = 18000000,
-    b = 16,
-    T = 2,
+    T = 16,
+    b = 2,
     S = {
         friction: 13,
         tension: 240,
@@ -59,7 +59,7 @@ let y = 10800000,
     },
     O = (e) => e / 2,
     D = (e) => (e ? 2 : 4),
-    x = (e) => {
+    L = (e) => {
         switch (e) {
             case 52:
                 return 'M0 25.6C0 16.6392 0 12.1587 1.7439 8.73615C3.27787 5.72556 5.72556 3.27787 8.73615 1.7439C12.1587 0 16.6392 0 25.6 0H26.4C35.3608 0 39.8413 0 43.2638 1.7439C46.2744 3.27787 48.7221 5.72556 50.2561 8.73615C52 12.1587 52 16.6392 52 25.6V26.4C52 35.3608 52 39.8413 50.2561 43.2638C48.7221 46.2744 46.2744 48.7221 43.2638 50.2561C39.8413 52 35.3608 52 26.4 52H25.6C16.6392 52 12.1587 52 8.73615 50.2561C5.72556 48.7221 3.27787 46.2744 1.7439 43.2638C0 39.8413 0 35.3608 0 26.4V25.6Z';
@@ -73,7 +73,7 @@ let y = 10800000,
                 throw Error('Unsupported BlobMask squicle size: '.concat(e));
         }
     },
-    L = (e) => {
+    x = (e) => {
         switch (e) {
             case 48:
                 return 'M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z';
@@ -85,16 +85,16 @@ let y = 10800000,
                 throw Error('Unsupported BlobMask circle size: '.concat(e));
         }
     },
-    P = (null === (i = window.SVGPathElement) || void 0 === i ? void 0 : i.prototype.getTotalLength) != null,
-    w = new Map();
+    w = (null === (i = window.SVGPathElement) || void 0 === i ? void 0 : i.prototype.getTotalLength) != null,
+    P = new Map();
 function M(e, t) {
     let n = ''.concat(e, '-').concat(t);
-    if (w.has(n)) return w.get(n);
+    if (P.has(n)) return P.get(n);
     let i = k(e, t);
-    return w.set(n, i), i;
+    return P.set(n, i), i;
 }
 function k(e, t) {
-    return P ? (0, l.interpolate)(L(e), x(t), { maxSegmentLength: 1.5 }) : U;
+    return w ? (0, l.interpolate)(x(e), L(t), { maxSegmentLength: 1.5 }) : U;
 }
 function U(e) {
     return e.toString();
@@ -135,8 +135,8 @@ function Z(e) {
     let {
             selected: t = !1,
             lowerBadgeSize: n = {
-                width: b,
-                height: b
+                width: T,
+                height: T
             },
             highlight: i = !1,
             ...a
@@ -272,7 +272,7 @@ class F extends a.Component {
     }
     getBadgePositionInterpolation(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : b + D(this.props.isVisualRefreshEnabled);
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T + D(this.props.isVisualRefreshEnabled);
         if (null == e) return;
         let { spring: i } = e.springs;
         return i.to([0, 1], [n, 0]).to((e) => 'translate('.concat(e, ' ').concat(e * t, ')'));
@@ -282,8 +282,8 @@ class F extends a.Component {
             { lowerBadgeSize: t } = this.props;
         if (null == e) return;
         let { spring: n } = e.springs,
-            i = (null == t ? void 0 : t.width) != null ? t.width : b,
-            r = (null == t ? void 0 : t.height) != null ? t.height : b;
+            i = (null == t ? void 0 : t.width) != null ? t.width : T,
+            r = (null == t ? void 0 : t.height) != null ? t.height : T;
         return {
             opacity: n.to([0, 0.5, 1], [0, 0, 1]),
             transform: n.to((e) => 'translate('.concat(i - e * i, 'px, ').concat(r - e * r, 'px)'))
@@ -345,10 +345,10 @@ class F extends a.Component {
         let R = ''.concat(y, '-upper_badge_masks'),
             O = ''.concat(y, '-lower_badge_masks'),
             D = ''.concat(y, '-blob_mask'),
-            x = ''.concat(y, '-stroke_mask'),
-            L = ''.concat(y, '-highlight_mask'),
-            P = (null == s ? void 0 : s.width) != null ? s.width : b,
-            w = (null == s ? void 0 : s.height) != null ? s.height : b,
+            L = ''.concat(y, '-stroke_mask'),
+            x = ''.concat(y, '-highlight_mask'),
+            w = (null == s ? void 0 : s.width) != null ? s.width : T,
+            P = (null == s ? void 0 : s.height) != null ? s.height : T,
             M = {
                 width: g ? f + 8 : f,
                 height: g ? f + 8 : f,
@@ -378,7 +378,7 @@ class F extends a.Component {
                                         c &&
                                             (0, r.jsx)(d.animated.path, {
                                                 d: this.getPathInterpolation(),
-                                                id: L
+                                                id: x
                                             }),
                                         (0, r.jsx)(d.animated.path, {
                                             d: this.getPathInterpolation(),
@@ -399,13 +399,13 @@ class F extends a.Component {
                                         N
                                             ? (0, r.jsx)(d.animated.rect, {
                                                   id: O,
-                                                  x: f - (P + 2 * m) + m,
-                                                  y: f - (w + 2 * m) + m,
-                                                  width: P + 2 * m,
-                                                  height: w + 2 * m,
+                                                  x: f - (w + 2 * m) + m,
+                                                  y: f - (P + 2 * m) + m,
+                                                  width: w + 2 * m,
+                                                  height: P + 2 * m,
                                                   rx: p / 2,
                                                   ry: p / 2,
-                                                  transform: this.getBadgePositionInterpolation(I, 1, P + m)
+                                                  transform: this.getBadgePositionInterpolation(I, 1, w + m)
                                               })
                                             : null
                                     ]
@@ -420,7 +420,7 @@ class F extends a.Component {
                                     children: [
                                         c &&
                                             (0, r.jsx)('use', {
-                                                href: '#'.concat(L),
+                                                href: '#'.concat(x),
                                                 fill: 'black'
                                             }),
                                         (0, r.jsx)('use', {
@@ -446,7 +446,7 @@ class F extends a.Component {
                                 }),
                                 N
                                     ? (0, r.jsxs)('mask', {
-                                          id: x,
+                                          id: L,
                                           children: [
                                               (0, r.jsx)('rect', {
                                                   width: '150%',
@@ -471,7 +471,7 @@ class F extends a.Component {
                                           children: [
                                               (0, r.jsx)('g', {
                                                   className: E.focusStroke,
-                                                  mask: 'url(#'.concat(x, ')'),
+                                                  mask: 'url(#'.concat(L, ')'),
                                                   children: (0, r.jsx)('use', { href: '#'.concat(D) })
                                               }),
                                               (0, r.jsxs)('g', {
@@ -485,9 +485,9 @@ class F extends a.Component {
                                     (0, r.jsx)(d.animated.path, {
                                         d: this.getPathInterpolation(),
                                         stroke: _.Z.BRAND_500,
-                                        'stroke-width': T,
+                                        'stroke-width': b,
                                         className: E.highlight,
-                                        mask: 'url(#'.concat(x, ')')
+                                        mask: 'url(#'.concat(L, ')')
                                     }),
                                 (0, r.jsx)(
                                     'foreignObject',

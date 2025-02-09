@@ -28,8 +28,8 @@ var i = n(200651),
     v = n(362755),
     y = n(981631),
     I = n(474936),
-    b = n(388032),
-    T = n(13926);
+    T = n(388032),
+    b = n(723957);
 let S = 1000;
 function A(e, t, n, i, r) {
     let o = y.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, r),
@@ -59,9 +59,9 @@ let N = (e) => {
         let t,
             n,
             { step: a, onPurchaseComplete: s, onHandoffFailure: c } = e,
-            { selectedPlan: d, setSelectedPlanId: f, setSelectedSkuId: N, browserCheckoutState: C, browserCheckoutStateLoadId: R, browserCheckoutStateSkuId: O, browserCheckoutStatePlanId: D, contextMetadata: x } = (0, p.JL)(),
-            { isGift: L } = (0, _.wD)(),
-            [P, w] = r.useState(!1);
+            { selectedPlan: d, setSelectedPlanId: f, setSelectedSkuId: N, browserCheckoutState: C, browserCheckoutStateLoadId: R, browserCheckoutStateSkuId: O, browserCheckoutStatePlanId: D, contextMetadata: L } = (0, p.JL)(),
+            { isGift: x } = (0, _.wD)(),
+            [w, P] = r.useState(!1);
         switch (a) {
             case h.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
                 (t = y.i$l.GOOGLE_PAY), (n = (0, E.a)());
@@ -77,26 +77,26 @@ let N = (e) => {
                 let e = setTimeout(
                     () => {
                         var e;
-                        !P && (w(!0), (0, l.r5)(x.loadId), A(null !== (e = null == d ? void 0 : d.id) && void 0 !== e ? e : I.Xh.PREMIUM_MONTH_TIER_2, L, x.loadId, c, t));
+                        !w && (P(!0), (0, l.r5)(L.loadId), A(null !== (e = null == d ? void 0 : d.id) && void 0 !== e ? e : I.Xh.PREMIUM_MONTH_TIER_2, x, L.loadId, c, t));
                     },
                     n.delay ? S : 0
                 );
                 return () => clearTimeout(e);
-            }, [d, L, x, c, w, P, t, n.delay]),
+            }, [d, x, L, c, P, w, t, n.delay]),
             r.useEffect(() => {
-                null !== O && (I.YQ.includes(O) && ((0, u.GZ)(O), (0, l.jg)()), N(O)), null !== D && f(D), R === x.loadId && C === v.Y.DONE && s();
-            }, [N, f, C, R, O, D, x, s]),
+                null !== O && (I.YQ.includes(O) && ((0, u.GZ)(O), (0, l.jg)()), N(O)), null !== D && f(D), R === L.loadId && C === v.Y.DONE && s();
+            }, [N, f, C, R, O, D, L, s]),
             (0, i.jsxs)('div', {
-                className: T.body,
+                className: b.body,
                 children: [
                     (0, i.jsx)(o.X6q, {
                         variant: 'heading-xl/bold',
-                        children: b.intl.string(b.t.C4HYf3)
+                        children: T.intl.string(T.t.C4HYf3)
                     }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/normal',
-                        className: T.description,
-                        children: b.intl.string(b.t.xfG7Ji)
+                        className: b.description,
+                        children: T.intl.string(T.t.xfG7Ji)
                     })
                 ]
             })
@@ -111,7 +111,7 @@ let N = (e) => {
                 children: [
                     (0, i.jsx)(d.y, {
                         onClick: t,
-                        children: b.intl.string(b.t['4Qvmmp'])
+                        children: T.intl.string(T.t['4Qvmmp'])
                     }),
                     (0, i.jsx)(d.Z, { onClick: n })
                 ]

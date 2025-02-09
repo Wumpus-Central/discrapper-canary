@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(411104);
+n.d(t, { Z: () => b }), n(411104);
 var i,
     r = n(442837),
     a = n(570140),
@@ -56,7 +56,7 @@ function I(e) {
         (null === (i = t.metadata) || void 0 === i ? void 0 : i.billing_error_code) === l.SM.BILLING_INSUFFICIENT_FUNDS && (e = l.SM.BILLING_INSUFFICIENT_FUNDS), (m = new l.ZP(f.intl.string(f.t.khEaRE), e));
     } else (m = null), a.Z.wait(s.fw), a.Z.wait(o.pB);
 }
-class b extends (i = r.ZP.Store) {
+class T extends (i = r.ZP.Store) {
     get isAwaitingAuthentication() {
         return p;
     }
@@ -67,8 +67,8 @@ class b extends (i = r.ZP.Store) {
         return h;
     }
 }
-_(b, 'displayName', 'PaymentAuthenticationStore');
-let T = new b(a.Z, {
+_(T, 'displayName', 'PaymentAuthenticationStore');
+let b = new T(a.Z, {
     BILLING_SUBSCRIPTION_UPDATE_START: g,
     PAYMENT_AUTHENTICATION_CLEAR_ERROR: g,
     PREMIUM_PAYMENT_ERROR_CLEAR: g,

@@ -24,18 +24,18 @@ function g(e) {
             isBlocked: c.Z.isBlocked(E.id),
             isIgnored: c.Z.isIgnored(E.id)
         })),
-        b = (0, l.Do)({ location: 'UserProfileModalWrapper' }),
-        [T, S] = r.useState(y || (b && (I || y))),
+        T = (0, l.Do)({ location: 'UserProfileModalWrapper' }),
+        [b, S] = r.useState(y || (T && (I || y))),
         A = (0, f.sS)({ location: 'UserProfilePopoutWrapper' }),
         N = u.Rt.useSetting();
-    return T && A && !b
+    return b && A && !T
         ? (0, i.jsx)(_.Z, {
               ...a,
               user: E,
               currentUser: v,
               onViewBlockedProfileClick: () => S(!1)
           })
-        : T && b && !(I && N)
+        : b && T && !(I && N)
           ? (0, i.jsx)(_.Y, {
                 ...a,
                 user: E,

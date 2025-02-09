@@ -1,11 +1,11 @@
 n.d(t, {
     AH: () => S,
-    Ag: () => w,
+    Ag: () => P,
     CS: () => y,
-    EW: () => L,
-    OR: () => P,
+    EW: () => x,
+    OR: () => w,
     QB: () => A,
-    T0: () => x,
+    T0: () => L,
     Wf: () => O,
     cT: () => U,
     eT: () => D,
@@ -13,12 +13,12 @@ n.d(t, {
     gl: () => C,
     is: () => I,
     lL: () => G,
-    m0: () => T,
+    m0: () => b,
     nE: () => R,
     pf: () => N,
     qm: () => M,
     w: () => k,
-    xw: () => b
+    xw: () => T
 }),
     n(411104);
 var i = n(990547),
@@ -89,7 +89,7 @@ async function I(e) {
         rejectWithError: !1
     });
 }
-async function b() {
+async function T() {
     if (!d.Z.isFetchingCurrentQuests) {
         a.Z.dispatch({ type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN' }), c.Z.recordQuestRequestAttempt(g.ANM.QUESTS_CURRENT_QUESTS);
         try {
@@ -119,7 +119,7 @@ async function b() {
         }
     }
 }
-async function T(e) {
+async function b(e) {
     let { questId: t, streamKey: n, terminal: r = !1 } = e;
     try {
         var o;
@@ -333,7 +333,7 @@ async function D(e) {
         });
     }
 }
-async function x(e) {
+async function L(e) {
     try {
         a.Z.dispatch({ type: 'QUESTS_DOCK_RESET_SOFT_DISMISSAL' });
         let t = await r.tn.del({
@@ -353,20 +353,20 @@ async function x(e) {
         });
     }
 }
-function L(e) {
+function x(e) {
     a.Z.dispatch({
         type: 'QUESTS_DELIVERY_OVERRIDE',
         questId: e
     });
 }
-function P(e, t) {
+function w(e, t) {
     a.Z.dispatch({
         type: 'QUESTS_SELECT_TASK_PLATFORM',
         questId: e,
         platform: t
     });
 }
-async function w() {
+async function P() {
     if (!d.Z.isFetchingClaimedQuests) {
         a.Z.dispatch({ type: 'QUESTS_FETCH_CLAIMED_QUESTS_BEGIN' });
         try {

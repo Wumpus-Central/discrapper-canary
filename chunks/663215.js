@@ -65,7 +65,7 @@ function I(e, t, n, i, r) {
             });
     }
 }
-function b(e, t, n, i, r) {
+function T(e, t, n, i, r) {
     var a;
     if (null == t) return;
     let s = null !== (a = i.get(t.id)) && void 0 !== a ? a : [],
@@ -90,7 +90,7 @@ function b(e, t, n, i, r) {
                 items: o
             });
 }
-function T(e, t) {
+function b(e, t) {
     var n;
     let i = null !== (n = t.get(g.X8)) && void 0 !== n ? n : g.Hy;
     e.push({
@@ -126,18 +126,18 @@ function S(e) {
             },
             [O]
         ),
-        { canSeeRecentlyHeard: x, canSeeFrequentlyPlayed: L } = (0, f.k)({
+        { canSeeRecentlyHeard: L, canSeeFrequentlyPlayed: x } = (0, f.k)({
             location: 'soundboard-useSoundGrid',
             autoTrackExposure: !0
         }),
-        P = N(),
-        w = (0, r.Wu)([_.Z], () => _.Z.recentlyHeardSoundIds);
+        w = N(),
+        P = (0, r.Wu)([_.Z], () => _.Z.recentlyHeardSoundIds);
     return i.useMemo(() => {
         let e = 0,
             i = 0,
             r = [];
         return n
-            ? (T(r, g),
+            ? (b(r, g),
               {
                   categories: r,
                   isFetching: S,
@@ -155,28 +155,28 @@ function S(e) {
                   sectionType: h.bg.FAVORITES,
                   sortById: !0
               }),
-              x &&
-                  y({
-                      sections: r,
-                      guildIds: A,
-                      allSounds: g,
-                      potentialSoundIdsForSection: w,
-                      sectionType: h.bg.RECENTLY_HEARD,
-                      sortById: !1
-                  }),
               L &&
                   y({
                       sections: r,
                       guildIds: A,
                       allSounds: g,
-                      potentialSoundIdsForSection: P.map((e) => e.soundId),
+                      potentialSoundIdsForSection: P,
+                      sectionType: h.bg.RECENTLY_HEARD,
+                      sortById: !1
+                  }),
+              x &&
+                  y({
+                      sections: r,
+                      guildIds: A,
+                      allSounds: g,
+                      potentialSoundIdsForSection: w.map((e) => e.soundId),
                       sectionType: h.bg.FREQUENTLY_USED,
                       sortById: !1
                   }),
-              b(r, O, D, g, t),
-              R || T(r, g),
+              T(r, O, D, g, t),
+              R || b(r, g),
               I(r, C, null == O ? void 0 : O.id, g, d),
-              R && T(r, g),
+              R && b(r, g),
               r.forEach((t) => {
                   t.categoryInfo.type === h.bg.GUILD && (t.categoryInfo.isNitroLocked ? (i += t.items.length) : (e += t.items.length));
               }),
@@ -189,7 +189,7 @@ function S(e) {
                       lockedCustomSoundCount: i
                   }
               });
-    }, [A, g, v, w, P, L, x, O, D, t, R, C, n, S, d]);
+    }, [A, g, v, P, w, x, L, O, D, t, R, C, n, S, d]);
 }
 function A(e, t, n) {
     return i.useMemo(

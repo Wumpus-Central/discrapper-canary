@@ -7,34 +7,34 @@ var l = n(392711),
     a = n(904245),
     o = n(317770),
     c = n(100527),
-    d = n(358221),
-    u = n(963249),
-    _ = n(93127),
-    E = n(430824),
+    u = n(358221),
+    d = n(963249),
+    E = n(93127),
+    _ = n(430824),
     h = n(594174),
-    p = n(431),
-    I = n(626135),
-    m = n(74538),
-    C = n(557457),
-    T = n(970645),
-    N = n(30684),
-    g = n(514701),
-    S = n(6242),
-    R = n(467721),
-    f = n(757692),
-    A = n(281494),
-    O = n(276444),
-    L = n(937579),
-    b = n(522558),
-    P = n(879463),
-    x = n(822070),
-    D = n(520540),
-    M = n(11352),
-    v = n(474936),
-    U = n(981631),
-    k = n(354459),
-    y = n(37113),
-    Z = n(388032);
+    I = n(431),
+    T = n(626135),
+    C = n(74538),
+    N = n(557457),
+    m = n(970645),
+    p = n(30684),
+    S = n(514701),
+    R = n(6242),
+    A = n(467721),
+    g = n(757692),
+    O = n(281494),
+    f = n(276444),
+    P = n(937579),
+    L = n(522558),
+    D = n(879463),
+    M = n(822070),
+    v = n(520540),
+    Z = n(11352),
+    U = n(474936),
+    x = n(981631),
+    y = n(354459),
+    k = n(37113),
+    b = n(388032);
 function V(e, t, n) {
     return (
         t in e
@@ -69,15 +69,15 @@ class j extends o.Z {
     }
     _getReferralIncentiveEligibility() {
         let e = h.default.getCurrentUser();
-        if (O.Z.getIsFetchingReferralIncentiveEligibility() || !(0, m.I5)(e)) return;
+        if (f.Z.getIsFetchingReferralIncentiveEligibility() || !(0, C.I5)(e)) return;
         let t = { location: 'PremiumManager' },
             n = { autoTrackExposure: !1 };
-        D.g.getCurrentConfig(t, n).enabled && !P.eP.getCurrentConfig(t, n).enabled && x.$.getCurrentConfig(t, n).enabled && (0, A.bq)();
+        v.g.getCurrentConfig(t, n).enabled && !D.eP.getCurrentConfig(t, n).enabled && M.$.getCurrentConfig(t, n).enabled && (0, O.bq)();
     }
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
         return new Promise((t, n) => {
-            (0, u.Z)({
+            (0, d.Z)({
                 ...e,
                 onClose: (e) => {
                     e ? t() : n();
@@ -107,24 +107,24 @@ class j extends o.Z {
             V(this, '_maybeFetchPremiumOffer', async () => {
                 let e = h.default.getCurrentUser();
                 if (null != e && e.verified) {
-                    let t = !(0, m.I5)(e) && p.Z.shouldFetchOffer();
-                    await (0, L.T)('PremiumManager', void 0, t);
+                    let t = !(0, C.I5)(e) && I.Z.shouldFetchOffer();
+                    await (0, P.T)('PremiumManager', void 0, t);
                 }
                 s.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
             }),
             V(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = h.default.getCurrentUser();
-                null != e && e.verified && !(0, m.I5)(e) && N.Z.shouldFetchCheckoutRecovery() && (await (0, T.o)());
+                null != e && e.verified && !(0, C.I5)(e) && p.Z.shouldFetchCheckoutRecovery() && (await (0, m.o)());
             }),
             V(this, '_maybeFetchUserAffinities', () => {
-                let { enabled: e } = b.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
-                e && (0, _.W)();
+                let { enabled: e } = L.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
+                e && (0, E.W)();
             }),
             V(this, '_trackCustomNotificationSoundsExposure', () => {
-                M.Y.trackExposure({ location: 'PremiumManager' });
+                Z.Y.trackExposure({ location: 'PremiumManager' });
             }),
             V(this, '_handlePremiumPaymentModalOpen', (e) => {
-                (0, u.Z)({
+                (0, d.Z)({
                     ...e,
                     analyticsLocations: [c.Z.OVERLAY],
                     onClose: (e) => {
@@ -148,22 +148,22 @@ class j extends o.Z {
                 '_maybeSendViewerUpsellMessage',
                 (0, l.debounce)((e, t, n) => {
                     var i, l;
-                    let r = d.Z.getSelectedParticipant(e),
-                        s = (0, f.o)(r, n),
-                        { sendNitroMessage: o } = (0, S.TD)(s),
-                        c = null !== (l = null === (i = E.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : U.Eu4.NONE;
-                    if (R.Z.cooldownIsActive() || !o || c >= U.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== k.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
-                    g.I();
-                    let u = Z.intl.formatToPlainString(Z.t.AbyeZG, {
+                    let r = u.Z.getSelectedParticipant(e),
+                        s = (0, g.o)(r, n),
+                        { sendNitroMessage: o } = (0, R.TD)(s),
+                        c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : x.Eu4.NONE;
+                    if (A.Z.cooldownIsActive() || !o || c >= x.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== y.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
+                    S.I();
+                    let d = b.intl.formatToPlainString(b.t.AbyeZG, {
                         nickname: r.userNick,
-                        resolution: (0, y.o6)(r.maxResolution.height),
-                        fps: (0, C.bp)(r.maxFrameRate)
+                        resolution: (0, k.o6)(r.maxResolution.height),
+                        fps: (0, N.bp)(r.maxFrameRate)
                     });
-                    a.Z.sendNitroSystemMessage(e, u),
-                        I.default.track(U.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
-                            type: v.cd.HD_STREAMING_VIEWER_UPSELL,
-                            location_section: null != t ? U.jXE.TEXT_IN_VOICE : U.jXE.CHANNEL_TEXT_AREA,
-                            location_object: U.qAy.MESSAGE,
+                    a.Z.sendNitroSystemMessage(e, d),
+                        T.default.track(x.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
+                            type: U.cd.HD_STREAMING_VIEWER_UPSELL,
+                            location_section: null != t ? x.jXE.TEXT_IN_VOICE : x.jXE.CHANNEL_TEXT_AREA,
+                            location_object: x.qAy.MESSAGE,
                             guild_id: t
                         });
                 }, 200)

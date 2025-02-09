@@ -13,8 +13,8 @@ var l = n(442837),
 function p() {
     let e = (0, a.Q3)('AppIconHome'),
         [t, n, p] = (0, l.Wu)([o.default, c.Z], () => [c.Z.getCurrentDesktopIcon(), c.Z.isEditorOpen, s.ZP.isPremium(o.default.getCurrentUser())]),
-        g = (0, h.aW)(t),
-        m = t !== d.aH.DEFAULT && (p || n),
+        m = (0, h.aW)(t),
+        g = t !== d.aH.DEFAULT && (p || n),
         f = e ? 24 : 30,
         _ = (0, i.jsx)(r.gw7, {
             size: 'custom',
@@ -22,7 +22,7 @@ function p() {
             width: f,
             height: f
         });
-    return null != g && m
+    return null != m && g
         ? (0, i.jsx)(u.Z, {
               id: t,
               width: 48

@@ -9,7 +9,7 @@ var i = n(200651),
     d = n(486622),
     u = n(376191),
     h = n(388032),
-    m = n(573475);
+    m = n(855677);
 function p(e) {
     let { active: t, user: n, channel: p } = e,
         g = (0, c.K)(),
@@ -25,18 +25,18 @@ function p(e) {
         {
             acceptMessageRequest: I,
             rejectMessageRequest: C,
-            isAcceptLoading: N,
-            isRejectLoading: v,
+            isAcceptLoading: v,
+            isRejectLoading: N,
             isUserProfileLoading: T,
             isOptimisticAccepted: S,
-            isOptimisticRejected: Z
+            isOptimisticRejected: A
         } = (0, d.m)({
             user: n,
             onAcceptSuccess: E,
             onRejectSuccess: f,
             onError: _
         }),
-        A = N || v || T || S || Z;
+        Z = v || N || T || S || A;
     return (0, i.jsxs)('div', {
         className: m.container,
         children: [
@@ -55,8 +55,8 @@ function p(e) {
                         onClick: (e) => {
                             e.stopPropagation(), C(p.id);
                         },
-                        disabled: A,
-                        submitting: v || Z,
+                        disabled: Z,
+                        submitting: N || A,
                         children: h.intl.string(h.t.B2nygY)
                     }),
                     (0, i.jsx)(r.zxk, {
@@ -66,8 +66,8 @@ function p(e) {
                         onClick: (e) => {
                             e.stopPropagation(), I(p.id);
                         },
-                        disabled: A,
-                        submitting: N || T || S,
+                        disabled: Z,
+                        submitting: v || T || S,
                         children: h.intl.string(h.t.Kz8Pws)
                     })
                 ]

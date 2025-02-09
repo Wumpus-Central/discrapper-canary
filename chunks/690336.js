@@ -1,7 +1,7 @@
 n.d(t, { Z: () => v }), n(653041), n(47120);
 var i = n(200651),
-    r = n(192379),
-    o = n(442837),
+    o = n(192379),
+    r = n(442837),
     l = n(481060),
     a = n(355863),
     s = n(451478),
@@ -14,7 +14,7 @@ var i = n(200651),
 function f(e) {
     return e.widget.id;
 }
-function g(e, t, n, r) {
+function g(e, t, n, o) {
     return n === l.pJH.YEETED
         ? null
         : (0, i.jsx)(
@@ -22,17 +22,17 @@ function g(e, t, n, r) {
               {
                   ...t,
                   transitionState: n,
-                  cleanUp: r
+                  cleanUp: o
               },
               e
           );
 }
 let m = [],
-    v = r.memo(function (e) {
+    v = o.memo(function (e) {
         let { className: t } = e,
             n = (0, _.Z)(),
-            u = (0, o.e7)([s.Z], () => s.Z.windowSize((0, d.ZY)(n))),
-            v = (0, o.e7)(
+            u = (0, r.e7)([s.Z], () => s.Z.windowSize((0, d.ZY)(n))),
+            v = (0, r.e7)(
                 [a.Z],
                 () => {
                     let e = a.Z.getLayout(p.OVERLAY_V3_LAYOUT_ID);
@@ -54,7 +54,7 @@ let m = [],
                 [],
                 c.HP
             ),
-            x = r.useCallback(
+            x = o.useCallback(
                 (e) =>
                     (0, i.jsx)('div', {
                         className: t,

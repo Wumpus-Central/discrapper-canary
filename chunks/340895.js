@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Z: () => w }), n(47120);
+n.d(t, { Z: () => P }), n(47120);
 var r,
     a = n(442837),
     s = n(433517),
@@ -33,8 +33,8 @@ let g = 'IncomingCallStore',
     v = 10,
     y = new Set(),
     I = [],
-    b = new Map(),
-    T = new Set(),
+    T = new Map(),
+    b = new Set(),
     S = !1;
 function A() {
     let e = p.Z.windowSize();
@@ -46,8 +46,8 @@ function A() {
           };
 }
 function N(e) {
-    if (null == e || null == b.get(e)) return !1;
-    b.delete(e), (T = new Set(T)).delete(e);
+    if (null == e || null == T.get(e)) return !1;
+    T.delete(e), (b = new Set(b)).delete(e);
 }
 function C(e) {
     let { channelId: t, ringing: n } = e;
@@ -60,21 +60,21 @@ function C(e) {
     )
         return !1;
     let i = n.includes(d.default.getId());
-    if (!T.has(t) && i) {
+    if (!b.has(t) && i) {
         let e = f.Z.getChannel(t);
         if (null == e) return !1;
-        let n = v * T.size,
+        let n = v * b.size,
             { x: i, y: r } = A();
         return (
-            b.set(t, {
+            T.set(t, {
                 channel: e,
                 x: i + n,
                 y: r + n
             }),
-            void (T = new Set(T)).add(t)
+            void (b = new Set(b)).add(t)
         );
     }
-    return !!T.has(t) && !i && N(t);
+    return !!b.has(t) && !i && N(t);
 }
 function R(e) {
     let { channelId: t } = e;
@@ -104,32 +104,32 @@ function D(e) {
         !1
     );
 }
-function x(e) {
+function L(e) {
     let { channel: t } = e;
     return N(t.id);
 }
-function L() {
+function x() {
     S = _.Z.getStatus() === h.Skl.DND || l.QZ.getSetting();
 }
-class P extends (r = a.ZP.Store) {
+class w extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, _.Z), this.syncWith([_.Z], L), this.syncWith([u.Z], L);
+        this.waitFor(f.Z, _.Z), this.syncWith([_.Z], x), this.syncWith([u.Z], x);
     }
     getIncomingCalls() {
-        return S ? I : Array.from(b.values());
+        return S ? I : Array.from(T.values());
     }
     getIncomingCallChannelIds() {
-        return S ? y : T;
+        return S ? y : b;
     }
     getFirstIncomingCallId() {
-        return S ? null : T.values().next().value;
+        return S ? null : b.values().next().value;
     }
     hasIncomingCalls() {
-        return !S && T.size > 0;
+        return !S && b.size > 0;
     }
 }
-m(P, 'displayName', 'IncomingCallStore');
-let w = new P(o.Z, {
+m(w, 'displayName', 'IncomingCallStore');
+let P = new w(o.Z, {
     CALL_CREATE: C,
     CALL_UPDATE: C,
     CALL_DELETE: R,
@@ -137,5 +137,5 @@ let w = new P(o.Z, {
     GUILD_RING_STOP: R,
     VOICE_CHANNEL_SELECT: O,
     INCOMING_CALL_MOVE: D,
-    CHANNEL_DELETE: x
+    CHANNEL_DELETE: L
 });

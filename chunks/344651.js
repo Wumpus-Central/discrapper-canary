@@ -19,8 +19,8 @@ var a = n(442837),
     v = n(209747),
     y = n(598077),
     I = n(592125),
-    b = n(271383),
-    T = n(819640),
+    T = n(271383),
+    b = n(819640),
     S = n(594174),
     A = n(979651),
     N = n(509545),
@@ -28,10 +28,10 @@ var a = n(442837),
     R = n(936101),
     O = n(868158),
     D = n(483012),
-    x = n(955132);
-let L = new d.Z('ConnectionStore'),
-    P = new D.Z(
-        x.Wb,
+    L = n(955132);
+let x = new d.Z('ConnectionStore'),
+    w = new D.Z(
+        L.Wb,
         (e, t) => {
             var n;
             e =
@@ -55,8 +55,8 @@ let L = new d.Z('ConnectionStore'),
         },
         (e) => 'CHANNEL_UPDATE' !== e
     ),
-    w = new D.Z(
-        x.Wb,
+    P = new D.Z(
+        L.Wb,
         (e, t) => (
             (e =
                 null == e
@@ -82,7 +82,7 @@ let L = new d.Z('ConnectionStore'),
         (e) => 'SOUNDBOARD_SOUNDS' !== e
     ),
     M = new D.Z(
-        x.Wb,
+        L.Wb,
         (e, t) => (
             (e =
                 null != e
@@ -96,7 +96,7 @@ let L = new d.Z('ConnectionStore'),
         (e) => 'GUILD_MEMBERS_CHUNK' !== e
     ),
     k = new D.Z(
-        x.Wb,
+        L.Wb,
         (e, t) => (
             (e =
                 null == e
@@ -129,7 +129,7 @@ function Z(e) {
 }
 function F(e) {
     s.Z.dispatch(e).catch((t) =>
-        x.Wb.resetSocketOnDispatchError({
+        L.Wb.resetSocketOnDispatchError({
             error: t,
             action: e.type
         })
@@ -138,7 +138,7 @@ function F(e) {
 function V(e, t, n) {
     var i;
     let { roles: a, nick: s, avatar: o, avatar_decoration_data: l, flags: u, premium_since: d, pending: f, joined_at: _, communication_disabled_until: p, unusual_dm_activity_until: h } = n,
-        m = b.ZP.getMember(e, t.id);
+        m = T.ZP.getMember(e, t.id);
     (!(null != m && m.nick === s && m.avatar === o && r().isEqual(m.roles, a) && (0, c.sr)(m.avatarDecoration, l)) || m.premiumSince !== d || m.isPending !== f || m.joinedAt !== _ || m.communicationDisabledUntil !== p || m.flags !== u || (null !== (i = m.unusualDMActivityUntil) && void 0 !== i ? i : null) !== (null != h ? h : null)) &&
         F({
             type: 'GUILD_MEMBER_ADD',
@@ -193,7 +193,7 @@ B(
     (e) => {
         m.Z.initialGuild.measure(() => {
             a.ZP.Emitter.batched(() => {
-                let t = O.Fx(e, x.Wb.identifyStartTime);
+                let t = O.Fx(e, L.Wb.identifyStartTime);
                 null != S.default.getCurrentUser() &&
                     (F({
                         type: 'GUILD_CREATE',
@@ -220,7 +220,7 @@ B(
                             };
                         })
                     }),
-                    L.log('Dispatched INITIAL_GUILD '.concat(e.id)));
+                    x.log('Dispatched INITIAL_GUILD '.concat(e.id)));
             });
         });
     }
@@ -229,7 +229,7 @@ B(
         m.Z.readySupplemental.measure(() => {
             a.ZP.Emitter.batched(() => {
                 var t, n;
-                e = m.Z.hydrateReadySupplemental.measure(() => O.r$(e, x.Wb.identifyStartTime));
+                e = m.Z.hydrateReadySupplemental.measure(() => O.r$(e, L.Wb.identifyStartTime));
                 let i = (e) =>
                         e.map((e) => ({
                             user: e.user,
@@ -279,7 +279,7 @@ B(
                         voiceStates: l,
                         initial: !0
                     }),
-                    x.GC.update();
+                    L.GC.update();
             });
         }),
             setTimeout(() => F({ type: 'POST_CONNECTION_OPEN' }), 2000);
@@ -307,7 +307,7 @@ B(
             }
             m.Z.ready.measure(() => {
                 a.ZP.Emitter.batched(() => {
-                    let t = (e = m.Z.hydrateReady.measure(() => O.IM(e, x.Wb.identifyStartTime, n))).private_channels.map((e) => (0, E.q_)(e)),
+                    let t = (e = m.Z.hydrateReady.measure(() => O.IM(e, L.Wb.identifyStartTime, n))).private_channels.map((e) => (0, E.q_)(e)),
                         i = e.guilds.filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted).map((e) => e.id),
                         r = e.guilds.filter((e) => !0 !== e.unavailable),
                         a = e.guilds.filter((e) => !0 === e.geo_restricted);
@@ -358,14 +358,14 @@ B(
                                 token: e.auth_token,
                                 userId: e.user.id
                             }),
-                        x.RR.update(),
-                        x.GC.update();
+                        L.RR.update(),
+                        L.GC.update();
                 });
             });
         }
     ),
     G(['RESUMED'], () => {
-        x.RR.forceUpdate(), x.GC.forceUpdate(), F({ type: 'CONNECTION_RESUMED' });
+        L.RR.forceUpdate(), L.GC.forceUpdate(), F({ type: 'CONNECTION_RESUMED' });
     }),
     G(['TYPING_START'], (e) => {
         null != e.member && V(e.guild_id, e.member.user, e.member),
@@ -541,7 +541,7 @@ B(
         ['CHANNEL_UPDATE'],
         (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
-            P.add(e);
+            w.add(e);
         }
     ),
     B(
@@ -619,7 +619,7 @@ B(
             });
     }),
     G(['SOUNDBOARD_SOUNDS'], (e) => {
-        w.add(e);
+        P.add(e);
     }),
     G(['CHANNEL_RECIPIENT_ADD', 'CHANNEL_RECIPIENT_REMOVE'], (e, t) => {
         let n = I.Z.getBasicChannel(e.channel_id);
@@ -1129,10 +1129,10 @@ B(
         });
     }),
     G(['USER_PAYMENT_SOURCES_UPDATE'], () => {
-        T.Z.hasLayers() && (n(355467).tZ(), l.Gn(N.Z.getFetchedSKUIDs()));
+        b.Z.hasLayers() && (n(355467).tZ(), l.Gn(N.Z.getFetchedSKUIDs()));
     }),
     G(['USER_SUBSCRIPTIONS_UPDATE'], () => {
-        u.k(), T.Z.hasLayers() && n(355467).jg();
+        u.k(), b.Z.hasLayers() && n(355467).jg();
     }),
     G(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE'], (e) => {
         F({
@@ -1635,7 +1635,7 @@ B(
         (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             e.channels.forEach((e) => {
-                P.add(e);
+                w.add(e);
             }),
                 F({
                     type: 'CHANNEL_SYNC',

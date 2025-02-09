@@ -18,7 +18,7 @@ var i = n(348327),
     v = n(998502),
     y = n(981631),
     I = n(388032);
-function b(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function b(e, t, n) {
         e
     );
 }
-class T extends c.Z {
+class b extends c.Z {
     _initialize() {
         this.isSupported && (o.Z.subscribe('AUDIO_SET_MODE', this.handleViewUpdate), o.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleViewUpdate), o.Z.subscribe('START_SESSION', this.handleViewUpdate), o.Z.subscribe('CONNECTION_OPEN', this.handleViewUpdate), o.Z.subscribe('CONNECTION_CLOSED', this.handleViewUpdate), o.Z.subscribe('CALL_CREATE', this.handleViewUpdate), o.Z.subscribe('CALL_UPDATE', this.handleViewUpdate), o.Z.subscribe('CALL_DELETE', this.handleViewUpdate), o.Z.subscribe('CHANNEL_DELETE', this.handleViewUpdate), o.Z.subscribe('VOICE_STATE_UPDATES', this.handleViewUpdate), o.Z.subscribe('AUDIO_TOGGLE_SELF_MUTE', this.handleViewUpdate), o.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', this.handleViewUpdate), o.Z.subscribe('AUDIO_TOGGLE_LOCAL_MUTE', this.handleViewUpdate), o.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleViewUpdate), v.ZP.on('THUMBAR_BUTTONS_CLICKED', (e, t) => this.buttonClicked(t)));
     }
@@ -43,7 +43,7 @@ class T extends c.Z {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'callbackActions', {
+            T(this, 'callbackActions', {
                 [v.tS.VIDEO]: () => {
                     m.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, p.Z)(() => l.Z.setVideoEnabled(!0), y.IlC.APP);
                 },
@@ -51,16 +51,16 @@ class T extends c.Z {
                 [v.tS.DEAFEN]: () => l.Z.toggleSelfDeaf({ location: 'Thumbar' }),
                 [v.tS.DISCONNECT]: () => u.default.disconnect()
             }),
-            b(this, 'isSupported', (0, E.isMac)() || (0, E.isWindows)()),
-            b(this, 'prevButtons', []),
-            b(this, 'buttonClicked', (e) => {
+            T(this, 'isSupported', (0, E.isMac)() || (0, E.isWindows)()),
+            T(this, 'prevButtons', []),
+            T(this, 'buttonClicked', (e) => {
                 if (!(e.buttonName in this.callbackActions)) {
                     console.error('ThumbarButtonsManager: Unknown callback eventName: "'.concat(e.buttonName, '"'), e);
                     return;
                 }
                 this.callbackActions[e.buttonName]();
             }),
-            b(
+            T(
                 this,
                 'handleViewUpdate',
                 s().debounce(() => {
@@ -118,4 +118,4 @@ class T extends c.Z {
             );
     }
 }
-let S = new T();
+let S = new b();

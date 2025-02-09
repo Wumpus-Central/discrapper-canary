@@ -18,13 +18,13 @@ var i = n(200651),
     v = n(291175),
     y = n(785717),
     I = n(221292),
-    b = n(485341),
-    T = n(797321),
+    T = n(485341),
+    b = n(797321),
     S = n(228168),
     A = n(981631),
     N = n(474936),
     C = n(388032),
-    R = n(153225);
+    R = n(600787);
 let O = (e) => {
     if (null != e)
         switch (e) {
@@ -49,9 +49,9 @@ let O = (e) => {
         }
 };
 function D(e) {
-    let { badges: t, className: n, badgeClassName: a, displayProfile: D, onClose: x } = e,
-        { analyticsLocations: L } = (0, c.ZP)(u.Z.BADGE),
-        { context: P, trackUserProfileAction: w } = (0, y.KZ)(),
+    let { badges: t, className: n, badgeClassName: a, displayProfile: D, onClose: L } = e,
+        { analyticsLocations: x } = (0, c.ZP)(u.Z.BADGE),
+        { context: w, trackUserProfileAction: P } = (0, y.KZ)(),
         [M, k] = r.useState(!1),
         U = m.default.getCurrentUser(),
         G = (0, E.yd)(null == U ? void 0 : U.premiumType, N.p9.TIER_2);
@@ -63,11 +63,11 @@ function D(e) {
             let t = (0, v.fv)(e.id),
                 n = (n) => {
                     if (
-                        (w({ action: 'PRESS_BADGE' }),
+                        (P({ action: 'PRESS_BADGE' }),
                         (0, I.NE)({
                             badge: e.id,
-                            analyticsLocations: L,
-                            ...P
+                            analyticsLocations: x,
+                            ...w
                         }),
                         (null == t ? void 0 : t.badgeVersion) === 2)
                     ) {
@@ -80,26 +80,26 @@ function D(e) {
                             }),
                             !G)
                         ) {
-                            (0, f.k)(L), null == x || x();
+                            (0, f.k)(x), null == L || L();
                             return;
                         }
                         (0, h.uL)(A.Z5c.APPLICATION_STORE, {
                             source: u.Z.BADGE,
-                            sourceLocationStack: L
+                            sourceLocationStack: x
                         }),
-                            null == x || x();
+                            null == L || L();
                         return;
                     }
-                    let i = null != e.link ? (0, l.default)(e.link, { analyticsLocations: L }) : null;
-                    if (null != i) return null == x || x(), i(n);
+                    let i = null != e.link ? (0, l.default)(e.link, { analyticsLocations: x }) : null;
+                    if (null != i) return null == L || L(), i(n);
                 },
                 r = () => {
-                    e.id === b.i && g.default.track(A.rMx.QUEST_CONTENT_VIEWED, { ...(0, _.mH)(p.jn.QUEST_BADGE) }),
-                        w({ action: 'HOVER_BADGE' }),
+                    e.id === T.i && g.default.track(A.rMx.QUEST_CONTENT_VIEWED, { ...(0, _.mH)(p.jn.QUEST_BADGE) }),
+                        P({ action: 'HOVER_BADGE' }),
                         (0, I.Qf)({
                             badge: e.id,
-                            analyticsLocations: L,
-                            ...P
+                            analyticsLocations: x,
+                            ...w
                         });
                 },
                 c = O(null == t ? void 0 : t.id),
@@ -134,7 +134,7 @@ function D(e) {
                             m &&
                                 (0, i.jsxs)('div', {
                                     className: R.starContainer,
-                                    children: [(0, i.jsx)(T.Z, { className: R.topLeftStar }), (0, i.jsx)(T.Z, { className: R.bottomRightStar })]
+                                    children: [(0, i.jsx)(b.Z, { className: R.topLeftStar }), (0, i.jsx)(b.Z, { className: R.bottomRightStar })]
                                 })
                         ]
                     })

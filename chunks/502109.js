@@ -1,5 +1,5 @@
 n.d(t, {
-    Ch: () => b,
+    Ch: () => T,
     Tr: () => I
 }),
     n(47120);
@@ -16,7 +16,7 @@ var i = n(200651),
     _ = n(622999),
     p = n(981631),
     h = n(388032),
-    m = n(796953);
+    m = n(524421);
 function g(e, t, n) {
     return (
         t in e
@@ -308,7 +308,7 @@ class I extends y {
         super(...e), g(this, 'state', { ...this.initialState }), g(this, 'paymentRequestWallet', 'googlePay');
     }
 }
-class b extends y {
+class T extends y {
     isBrowserCompatible() {
         return (0, d.G6)();
     }

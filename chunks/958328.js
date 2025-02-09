@@ -14,8 +14,8 @@ var r = n(120356),
     x = n(914010),
     _ = n(233608),
     p = n(71080),
-    f = n(182682),
-    b = n(941469);
+    f = n(532054),
+    b = n(617521);
 function g(e) {
     let { title: t, can: n } = e,
         r = n ? s.dz2 : s.Dio,
@@ -59,7 +59,7 @@ function v() {
                 t
             );
         }),
-        y = Object.values(null != T ? T : {}).map((e) => {
+        S = Object.values(null != T ? T : {}).map((e) => {
             let { title: t, flag: n } = e,
                 r = i.e$(j, n);
             return (0, a.jsx)(
@@ -93,7 +93,7 @@ function v() {
                             variant: 'heading-md/semibold',
                             children: null != r ? 'Permissions in '.concat(r.name) : 'No guild selected'
                         }),
-                        y
+                        S
                     ]
                 })
             ]

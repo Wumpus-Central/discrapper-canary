@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(627341);
+n.d(t, { Z: () => b }), n(627341);
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -17,7 +17,7 @@ var r = n(120356),
     g = n(74538),
     E = n(204418),
     v = n(388032),
-    y = n(622952);
+    y = n(967182);
 let I = [
         {
             avatarSize: l.EFr.SIZE_40,
@@ -36,7 +36,7 @@ let I = [
             showStatus: !0
         }
     ],
-    b = (e) => {
+    T = (e) => {
         let { purchase: t } = e,
             n = (0, o.e7)([p.default], () => p.default.locale),
             r = (0, u.qS)(t),
@@ -96,17 +96,17 @@ let I = [
             ]
         });
     },
-    T = (e) => {
+    b = (e) => {
         let { user: t, guildId: n, avatarDecorationOverride: r, className: f } = e,
             p = (0, o.e7)([h.Z], () => h.Z.getStatus(t.id)),
-            { product: m, purchase: T } = (0, c.Z)(null == r ? void 0 : r.skuId),
+            { product: m, purchase: b } = (0, c.Z)(null == r ? void 0 : r.skuId),
             S = g.ZP.canUseCollectibles(t),
-            A = (0, u.qS)(T),
+            A = (0, u.qS)(b),
             N = (0, u.G1)(m),
             C = !S && A,
             R = (0, _.M)(!N || S),
             O = (0, d.k)(m);
-        return null != m && (null == T || C)
+        return null != m && (null == b || C)
             ? (0, i.jsxs)('div', {
                   className: a()(y.modalPreview, y.shopPreviewContainer, f),
                   children: [
@@ -176,7 +176,7 @@ let I = [
                               })
                           ]
                       }),
-                      null != T && (0, i.jsx)(b, { purchase: T })
+                      null != b && (0, i.jsx)(T, { purchase: b })
                   ]
               });
     };

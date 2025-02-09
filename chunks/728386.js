@@ -11,15 +11,15 @@ var i = n(200651),
     f = n(443603),
     _ = n(957825),
     p = n(388032),
-    h = n(553796);
+    h = n(446016);
 function m(e, t) {
     let { disabled: n, type: a } = e,
         [m, g] = (0, d.Iu)((e) => [e.activeView, e.pickerId], o.X),
         E = r.useContext(u.ZP),
         v = !1,
         [y, I] = r.useState(!1),
-        b = m === _.X1.STICKER,
-        T = !1,
+        T = m === _.X1.STICKER,
+        b = !1,
         S = r.useCallback(() => {
             (0, d.RO)(_.X1.STICKER, a);
         }, [a]);
@@ -50,18 +50,18 @@ function m(e, t) {
         className: s()(_.CT, h.buttonContainer),
         ref: t,
         children: (0, i.jsx)(f.Z, {
-            innerClassName: s()(h.button, h.stickerButton, { [h.stickerButtonTilted]: O && !b }),
+            innerClassName: s()(h.button, h.stickerButton, { [h.stickerButtonTilted]: O && !T }),
             ...N,
             onClick: () => {
                 S(), C();
             },
-            isActive: b,
+            isActive: T,
             'aria-label': p.intl.string(p.t.rZpidX),
-            'aria-expanded': b,
+            'aria-expanded': T,
             'aria-haspopup': 'dialog',
             'aria-controls': g,
             sparkle: v,
-            notification: T ? f.j.UPDATE : null,
+            notification: b ? f.j.UPDATE : null,
             children: (0, i.jsx)(A, {
                 size: R ? 'refresh_sm' : void 0,
                 color: 'currentColor'

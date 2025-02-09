@@ -8,7 +8,7 @@ var a = n(200651),
     d = n(915509),
     c = n(981631),
     u = n(388032),
-    _ = n(232186);
+    _ = n(814632);
 function b(t) {
     let { guild: e, onClose: n, hideColors: b } = t,
         [m, x] = r.useState(e.verificationLevel),

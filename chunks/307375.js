@@ -10,7 +10,7 @@ var i = n(200651),
     u = n(384632),
     m = n(981631),
     h = n(388032),
-    g = n(676919);
+    g = n(80041);
 function x(e) {
     let { activeType: t, onTypePicked: n, guild: l } = e,
         x = l.hasFeature(m.oNc.COMMUNITY),

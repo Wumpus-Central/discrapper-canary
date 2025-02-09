@@ -12,12 +12,12 @@ var i = n(200651),
     m = n(170245),
     p = n(981631),
     g = n(388032),
-    _ = n(28504);
+    _ = n(346782);
 function f(e) {
     let { user: t, nickname: n, status: f, isFocused: E } = e,
         I = l.useContext(d.AnalyticsContext),
         { analyticsLocations: C } = (0, s.ZP)(),
-        N = (e) => {
+        v = (e) => {
             null == e || e.stopPropagation(),
                 a.Z.addRelationship({
                     userId: t.id,
@@ -27,7 +27,7 @@ function f(e) {
                     fromFriendSuggestion: !0
                 });
         },
-        v = (e) => {
+        N = (e) => {
             null == e || e.stopPropagation(), o.Z.ignore(t.id);
         },
         T = f === p.Skl.OFFLINE ? p.Skl.UNKNOWN : f;
@@ -47,14 +47,14 @@ function f(e) {
                         icon: r.dz2,
                         actionType: u.Z.ActionTypes.ACCEPT,
                         tooltip: g.intl.string(g.t.ZcibdX),
-                        onClick: N,
+                        onClick: v,
                         shouldHighlight: e
                     }),
                     (0, i.jsx)(u.Z, {
                         icon: r.Dio,
                         actionType: u.Z.ActionTypes.DENY,
                         tooltip: g.intl.string(g.t.xuio0N),
-                        onClick: v,
+                        onClick: N,
                         shouldHighlight: e
                     })
                 ]

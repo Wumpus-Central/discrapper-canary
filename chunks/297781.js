@@ -1,17 +1,17 @@
 n.d(t, {
-    Af: () => L,
+    Af: () => x,
     An: () => F,
     E6: () => Z,
-    EE: () => w,
+    EE: () => P,
     Gk: () => W,
     Gt: () => C,
-    OV: () => P,
+    OV: () => w,
     PZ: () => z,
     Rg: () => Y,
     U9: () => j,
     XF: () => M,
     Yl: () => H,
-    ej: () => x,
+    ej: () => L,
     f: () => B,
     m7: () => D,
     n8: () => V,
@@ -38,16 +38,16 @@ var i = n(200651),
     v = n(22211),
     y = n(561308),
     I = n(797342),
-    b = n(371991),
-    T = n(206583),
+    T = n(371991),
+    b = n(206583),
     S = n(388032),
-    A = n(455887);
+    A = n(233855);
 let N = {
     [u.s.TOP_ARTIST]: [F],
-    [u.s.PLAYED_GAME]: [P, w, L, j, k, B, V, G, U],
+    [u.s.PLAYED_GAME]: [w, P, x, j, k, B, V, G, U],
     [u.s.TOP_GAME]: [Z],
     [u.s.WATCHED_MEDIA]: [H, Y],
-    [u.s.LAUNCHED_ACTIVITY]: [P, w, L, j, V, U]
+    [u.s.LAUNCHED_ACTIVITY]: [w, P, x, j, V, U]
 };
 var C = (function (e) {
     return (e[(e.CARD = 0)] = 'CARD'), (e[(e.POPOUT = 1)] = 'POPOUT'), (e[(e.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (e[(e.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (e[(e.USER_PROFILE = 4)] = 'USER_PROFILE'), (e[(e.EMBED = 5)] = 'EMBED'), (e[(e.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (e[(e.OVERLAY = 7)] = 'OVERLAY'), e;
@@ -64,7 +64,7 @@ function D(e) {
         children: t
     });
 }
-function x(e) {
+function L(e) {
     let { Icon: t, text: n, iconColor: r, tooltipText: a, showTooltip: s } = e,
         { defaultTextColor: o, defaultIconColor: l, location: u } = O();
     return (0, i.jsx)(_.ua7, {
@@ -89,18 +89,18 @@ function x(e) {
             })
     });
 }
-function L(e) {
+function x(e) {
     let { entry: t } = e,
         { channel: n } = (0, v.Z)(t),
         { location: r } = O();
     return null == n || (0, h.Hi)(r, [1, 2, 3, 4])
         ? null
-        : (0, i.jsx)(x, {
+        : (0, i.jsx)(L, {
               Icon: _.gj8,
               text: n.name
           });
 }
-function P(e) {
+function w(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: r, defaultIconColor: a, location: s } = O(),
         o = (0, y.Jg)(t) && (0, h.Hi)(s, [0, 4, 7]),
@@ -114,7 +114,7 @@ function P(e) {
                 size: 'xxs',
                 color: l
             }),
-            (0, i.jsx)(b.ZP, {
+            (0, i.jsx)(T.ZP, {
                 entry: t,
                 textColor: u,
                 hovered: n,
@@ -124,7 +124,7 @@ function P(e) {
         ]
     });
 }
-function w(e) {
+function P(e) {
     let { entry: t } = e,
         { defaultTextColor: n, defaultIconColor: r } = O(),
         { state: a, party: s } = (0, I.n)(t),
@@ -163,7 +163,7 @@ function M(e) {
                       size: 'xxs',
                       color: u
                   }),
-                  (0, i.jsx)(b.x3, {
+                  (0, i.jsx)(T.x3, {
                       entry: { start: p },
                       textColor: c,
                       hovered: r,
@@ -178,7 +178,7 @@ function M(e) {
                       size: 'xxs',
                       color: u
                   }),
-                  (0, i.jsx)(b.ZP, {
+                  (0, i.jsx)(T.ZP, {
                       entry: n,
                       textColor: c,
                       hovered: r,
@@ -192,7 +192,7 @@ function k(e) {
         { location: n } = O(),
         r = (0, h.Hi)(n, [0, 3]) ? _.TVs.colors.STATUS_POSITIVE : void 0;
     return (0, y.Ol)(t)
-        ? (0, i.jsx)(x, {
+        ? (0, i.jsx)(L, {
               Icon: _._IE,
               text: S.intl.string(S.t.keY6mZ),
               iconColor: r
@@ -208,7 +208,7 @@ function U(e) {
         { text: s, tooltipText: o } = (0, y.zo)(t);
     return null == s
         ? null
-        : (0, i.jsx)(x, {
+        : (0, i.jsx)(L, {
               Icon: _.ANZ,
               text: s,
               tooltipText: o,
@@ -222,7 +222,7 @@ function G(e) {
         a = (0, y.dw)(t);
     if (null == a) return null;
     let s = (0, y.GE)(a);
-    return (0, i.jsx)(x, {
+    return (0, i.jsx)(L, {
         Icon: _.Oe7,
         showTooltip: !r,
         tooltipText: s,
@@ -234,7 +234,7 @@ function B(e) {
         { location: n } = O(),
         r = (0, y.vU)(t);
     return (0, y.q_)(t)
-        ? (0, i.jsx)(x, {
+        ? (0, i.jsx)(L, {
               Icon: _.qOE,
               showTooltip: 0 === n,
               text: S.intl.formatToPlainString(S.t['Klie/P'], { days: r }),
@@ -250,7 +250,7 @@ function Z(e) {
     if (null == a) return null;
     let s = r ? ' \u2014 ' : ': ',
         o = r ? S.t.C0Axoa : S.t.SDRHgo;
-    return (0, i.jsx)(x, {
+    return (0, i.jsx)(L, {
         Icon: _.rm8,
         text: (0, i.jsxs)(i.Fragment, {
             children: [S.intl.string(S.t['/50eHh']), s, S.intl.format(o, { hours: Math.round(a / p.Z.Seconds.HOUR) })]
@@ -264,7 +264,7 @@ function F(e) {
         a = null === (t = (0, y.PJ)(n, c.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
     if (null == a) return null;
     let s = (0, h.Hi)(r, [1, 2, 5]) ? S.intl.formatToPlainString(S.t.HtifnJ, { count: a }) : S.intl.formatToPlainString(S.t['jq/Bmp'], { count: a });
-    return (0, i.jsx)(x, {
+    return (0, i.jsx)(L, {
         Icon: _.rm8,
         text: s
     });
@@ -276,7 +276,7 @@ function V(e) {
     let r = (0, y.ig)(t);
     return null == r || r === d.o.TRENDING_TYPE_UNSPECIFIED
         ? null
-        : (0, i.jsx)(x, {
+        : (0, i.jsx)(L, {
               Icon: _.YqE,
               text: S.intl.string(S.t.kAlUs7)
           });
@@ -286,9 +286,9 @@ function j(e) {
         { location: n } = O();
     if (3 === n) return null;
     let r = m.default.extractTimestamp(t.extra.application_id);
-    return l()().diff(l()(r), 'days') > T.G
+    return l()().diff(l()(r), 'days') > b.G
         ? null
-        : (0, i.jsx)(x, {
+        : (0, i.jsx)(L, {
               Icon: _.rIT,
               text: S.intl.string(S.t.vYuyWV)
           });
@@ -306,7 +306,7 @@ function H(e) {
                 size: 'xxs',
                 color: l
             }),
-            (0, i.jsx)(b.ZP, {
+            (0, i.jsx)(T.ZP, {
                 entry: t,
                 textColor: u,
                 hovered: n,
@@ -320,7 +320,7 @@ function Y(e) {
         n = (0, y.ap)(t.extra.media_assets_large_text);
     return null == n
         ? null
-        : (0, i.jsx)(x, {
+        : (0, i.jsx)(L, {
               Icon: _.sVe,
               text: n
           });

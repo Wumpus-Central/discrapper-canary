@@ -22,10 +22,10 @@ let v = g.QZA.CLOSED,
 function I(e) {
     (d = e.guild), (v = g.QZA.OPEN), (y = {}), (f = e.source), (_ = e.analyticsLocations);
 }
-function b() {
+function T() {
     (v = g.QZA.CLOSED), (y = {}), (f = void 0), (_ = []);
 }
-function T() {
+function b() {
     (v = g.QZA.SUBMITTING), (y = {});
 }
 function S(e) {
@@ -55,19 +55,19 @@ function D(e) {
     let { banner: t } = e;
     s = t;
 }
-function x(e) {
+function L(e) {
     let { bio: t } = e;
     o = t;
 }
-function L(e) {
+function x(e) {
     let { pronouns: t } = e;
     l = t;
 }
-function P(e) {
+function w(e) {
     let { nickname: t } = e;
     u = t;
 }
-function w(e) {
+function P(e) {
     let { themeColors: t } = e;
     c = t;
 }
@@ -84,7 +84,7 @@ function G() {
     y = {};
 }
 function B() {
-    M(), b();
+    M(), T();
 }
 class Z extends (p = h.ZP.Store) {
     getFormState() {
@@ -153,17 +153,17 @@ let F = new Z(m.Z, {
     GUILD_IDENTITY_SETTINGS_INIT: I,
     GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: B,
     GUILD_IDENTITY_SETTINGS_SET_GUILD: S,
-    GUILD_IDENTITY_SETTINGS_SUBMIT: T,
+    GUILD_IDENTITY_SETTINGS_SUBMIT: b,
     GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: A,
     USER_PROFILE_UPDATE_FAILURE: N,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: C,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION: R,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID: O,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: D,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: x,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: L,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: P,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: w,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: L,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: x,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: w,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: P,
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: k,
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: U,
     GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: M,

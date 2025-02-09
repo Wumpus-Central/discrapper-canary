@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(617136),
     I = n(113434),
     C = n(497505),
-    N = n(475595),
-    v = n(352084),
+    v = n(475595),
+    N = n(352084),
     T = n(685613),
     S = n(981631),
-    Z = n(388032),
-    A = n(625844);
+    A = n(388032),
+    Z = n(42540);
 let x = (0, l.memo)(function (e) {
     var t, n, r, x, b, L;
     let { quest: y } = e,
@@ -55,7 +55,7 @@ let x = (0, l.memo)(function (e) {
     });
     let Q = (0, d.wj)(H),
         J = (0, l.useMemo)(() => null != y.config.cosponsorMetadata, [y]),
-        $ = (0, l.useMemo)(() => (0, N.fh)(y, N.eC.REWARD), [y]),
+        $ = (0, l.useMemo)(() => (0, v.fh)(y, v.eC.REWARD), [y]),
         ee = P ? V + 8 : 0,
         et = () => {
             O(!0),
@@ -83,14 +83,14 @@ let x = (0, l.memo)(function (e) {
                   onBlur: en,
                   onMouseEnter: et,
                   onMouseLeave: en,
-                  className: a()(A.container, { [A.hovered]: P }),
+                  className: a()(Z.container, { [Z.hovered]: P }),
                   children: [
                       null != G &&
                           K &&
                           null != X &&
                           (0, i.jsx)('div', {
                               ref: U,
-                              className: A.decoWrapper,
+                              className: Z.decoWrapper,
                               style: { top: R },
                               children: (0, i.jsx)(p.Z, {
                                   avatarDecorationOverride: X,
@@ -99,11 +99,11 @@ let x = (0, l.memo)(function (e) {
                               })
                           }),
                       Y
-                          ? (0, i.jsx)(v.Z, { className: A.image })
+                          ? (0, i.jsx)(N.Z, { className: Z.image })
                           : $.isAnimated
                             ? (0, i.jsx)(i.Fragment, {
                                   children: (0, i.jsx)(g.Z, {
-                                      className: A.assetBlurred,
+                                      className: Z.assetBlurred,
                                       autoPlay: !1,
                                       children: (0, i.jsx)('source', {
                                           src: $.url,
@@ -113,42 +113,42 @@ let x = (0, l.memo)(function (e) {
                                   })
                               })
                             : (0, i.jsx)('img', {
-                                  className: A.image,
+                                  className: Z.image,
                                   src: $.url,
                                   alt: y.config.messages.questName,
                                   onError: () => ei($.url)
                               }),
                       (0, i.jsx)('div', {
-                          className: a()(A.overlay, {
-                              [A.darkThemeGradient]: Q,
-                              [A.lightThemeGradient]: !Q
+                          className: a()(Z.overlay, {
+                              [Z.darkThemeGradient]: Q,
+                              [Z.lightThemeGradient]: !Q
                           })
                       }),
                       (0, i.jsx)('div', {
                           ref: k,
-                          className: A.logoContainer,
+                          className: Z.logoContainer,
                           style: { transform: 'translateY(-'.concat(ee, 'px)') },
                           children: (0, i.jsx)(T.ZP, {
-                              logotypeClassName: a()(A.logo, { [A.logoWithCosponsor]: J }),
+                              logotypeClassName: a()(Z.logo, { [Z.logoWithCosponsor]: J }),
                               quest: y,
                               withGameTile: !1
                           })
                       }),
                       (0, i.jsxs)('div', {
                           ref: B,
-                          className: A.details,
+                          className: Z.details,
                           children: [
                               (0, i.jsx)(u.X6q, {
-                                  className: A.title,
+                                  className: Z.title,
                                   variant: 'heading-md/semibold',
                                   color: 'always-white',
-                                  children: Z.intl.format(Z.t.EAYZAg, { questName: y.config.messages.questName })
+                                  children: A.intl.format(A.t.EAYZAg, { questName: y.config.messages.questName })
                               }),
                               (0, i.jsx)(u.Text, {
                                   variant: 'text-sm/medium',
                                   color: Q ? 'text-muted' : 'always-white',
                                   style: { opacity: Q ? 1 : 0.75 },
-                                  children: Z.intl.format(Z.t.kXVcV1, {
+                                  children: A.intl.format(A.t.kXVcV1, {
                                       reward: W.name,
                                       claimedDate: F
                                   })

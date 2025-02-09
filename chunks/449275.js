@@ -3,7 +3,7 @@ var i = n(200651),
     l = n(192379),
     r = n(770146),
     a = n(388032),
-    s = n(238939);
+    s = n(677294);
 class o extends l.PureComponent {
     render() {
         let { className: e, sku: t } = this.props;

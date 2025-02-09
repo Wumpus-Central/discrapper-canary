@@ -13,13 +13,13 @@ var l = n(200651),
 function C() {
     let e = [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL],
         [t, C] = (0, s.US)(e, void 0, !0),
-        [h, T] = i.useState(!1),
-        { enabled: I } = (0, c.W)({ location: 'vc-announcement-modal' });
+        [h, I] = i.useState(!1),
+        { enabled: T } = (0, c.W)({ location: 'vc-announcement-modal' });
     i.useEffect(() => {
-        I &&
+        T &&
             t === a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
             !h &&
-            (T(!0),
+            (I(!0),
             (0, r.ZD)(
                 async () => {
                     let { AnnouncementModal: e } = await n.e('3073').then(n.bind(n, 520156));
@@ -40,5 +40,5 @@ function C() {
                     }
                 }
             ));
-    }, [t, I, h, C]);
+    }, [t, T, h, C]);
 }

@@ -27,7 +27,7 @@ var i = n(120356),
     N = n(153066),
     E = n(981631),
     C = n(388032),
-    A = n(243718);
+    A = n(268667);
 function j(e) {
     let { type: t, source: n, activity: i, applicationStream: r, user: a, guildId: o, channelId: u, onAction: d, actionColor: m } = e;
     return (0, l.jsx)(c.Z, {

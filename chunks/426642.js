@@ -9,7 +9,7 @@ var l = n(692547),
     s = n(481060),
     a = n(752657),
     o = n(388032),
-    c = n(668398),
+    c = n(304815),
     d = (((i = {})[(i.TOO_BIG = 0)] = 'TOO_BIG'), (i[(i.RATE_LIMIT = 1)] = 'RATE_LIMIT'), (i[(i.TOO_MANY_EMOJI = 2)] = 'TOO_MANY_EMOJI'), (i[(i.TOO_MANY_ANIMATED_EMOJI = 3)] = 'TOO_MANY_ANIMATED_EMOJI'), (i[(i.WRONG_TYPE = 4)] = 'WRONG_TYPE'), (i[(i.RESIZE_GIF = 5)] = 'RESIZE_GIF'), i);
 let u = (e) => {
     let { error: t } = e,

@@ -1,7 +1,7 @@
 n.d(t, {
     Lx: () => S,
-    kq: () => T,
-    vy: () => b,
+    kq: () => b,
+    vy: () => T,
     yX: () => y
 });
 var i = n(392711),
@@ -34,7 +34,7 @@ function I(e) {
         onRequestProgress: n
     };
 }
-function b(e, t, n) {
+function T(e, t, n) {
     var i;
     let { abortController: a, onRequestProgress: o } = I(e),
         l = null !== (i = p.Z.getState().animationType) && void 0 !== i ? i : g.q.BASIC,
@@ -55,7 +55,7 @@ function b(e, t, n) {
         }),
         (0, c.Z)([s.Z.CHANNEL_CALL], n, t, u.jy.ENTRY);
 }
-function T(e, t, n, i) {
+function b(e, t, n, i) {
     var a, s;
     let o = l.ZP.getCustomEmojiById(null !== (a = t.emojiId) && void 0 !== a ? a : ''),
         { abortController: d, onRequestProgress: f } = I(e),

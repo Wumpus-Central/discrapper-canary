@@ -81,17 +81,17 @@ function l(e, t, n, u, c, d, f) {
         if ((0, r.HI)(m)) {
             var y = m.children,
                 I = m.value,
-                b = c[I];
-            if (!o(b)) throw new a.YR(I, 'function', f);
-            var T = b(
+                T = c[I];
+            if (!o(T)) throw new a.YR(I, 'function', f);
+            var b = T(
                 l(y, t, n, u, c, d).map(function (e) {
                     return e.value;
                 })
             );
-            Array.isArray(T) || (T = [T]),
+            Array.isArray(b) || (b = [b]),
                 _.push.apply(
                     _,
-                    T.map(function (e) {
+                    b.map(function (e) {
                         return {
                             type: 'string' == typeof e ? i.literal : i.object,
                             value: e

@@ -15,8 +15,8 @@ var l = t(200651),
     C = t(889711),
     _ = t(384433),
     f = t(388032),
-    b = t(998810);
-let v = (e) => [
+    v = t(108652);
+let b = (e) => [
         {
             id: _.e.ALL_MEMBERS,
             label: f.intl.string(f.t.NOOm1d)
@@ -92,7 +92,7 @@ function g(e) {
                 ...e,
                 id: 'more',
                 color: 'text-muted',
-                className: a()(b.more, { [b.selected]: m }),
+                className: a()(v.more, { [v.selected]: m }),
                 'aria-label': f.intl.string(f.t.UKOtz8),
                 children: [
                     (0, l.jsx)(d.Text, {
@@ -120,13 +120,13 @@ function T(e) {
         u = i.useRef(null),
         N = i.useRef(a),
         T = (0, x.A)({ guildId: n }),
-        p = v(null != T ? T : 0),
+        I = b(null != T ? T : 0),
         {
-            lastVisibleIndex: I,
+            lastVisibleIndex: p,
             onItemLayout: E,
             overflowItemsRef: S
         } = (0, o.zP)({
-            items: p,
+            items: I,
             itemGapPx: 16,
             maxLines: 1,
             containerWidth: a - 200
@@ -134,8 +134,8 @@ function T(e) {
         R = (0, s.e7)([j.ZP], () => null != j.ZP.getGuildSidebarState(n), [n]),
         M = (0, m.L)({ guildId: n }),
         A = i.useMemo(() => (t === _.e.ALL_MEMBERS ? R : null != M && null != M.user), [t, R, M]),
-        Z = i.useMemo(() => p.slice(0, I + 1), [I, p]),
-        k = i.useMemo(() => p.slice(I + 1), [I, p]),
+        k = i.useMemo(() => I.slice(0, p + 1), [p, I]),
+        Z = i.useMemo(() => I.slice(p + 1), [p, I]),
         P = i.useCallback(() => {
             var e;
             let n = null === (e = u.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
@@ -151,15 +151,15 @@ function T(e) {
         }, [P, A]),
         (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(h.Z.Divider, { className: b.divider }),
+                (0, l.jsx)(h.Z.Divider, { className: v.divider }),
                 (0, l.jsxs)('div', {
-                    className: b.tabsContainer,
+                    className: v.tabsContainer,
                     ref: u,
                     children: [
                         (0, l.jsxs)('div', {
-                            className: b.measurements,
+                            className: v.measurements,
                             children: [
-                                p.map((e, n) =>
+                                I.map((e, n) =>
                                     (0, l.jsx)(
                                         o.AJ,
                                         {
@@ -177,7 +177,7 @@ function T(e) {
                                 (0, l.jsx)('div', {
                                     ref: S,
                                     children: (0, l.jsx)(g, {
-                                        tabs: k,
+                                        tabs: Z,
                                         onTabSelect: r,
                                         selectedTab: t
                                     })
@@ -190,7 +190,7 @@ function T(e) {
                             type: 'top-pill',
                             onItemSelect: r,
                             children: [
-                                Z.map((e) =>
+                                k.map((e) =>
                                     (0, l.jsx)(
                                         d.njP.Item,
                                         {
@@ -201,9 +201,9 @@ function T(e) {
                                         e.id
                                     )
                                 ),
-                                0 !== k.length
+                                0 !== Z.length
                                     ? (0, l.jsx)(g, {
-                                          tabs: k,
+                                          tabs: Z,
                                           onTabSelect: r,
                                           selectedTab: t
                                       })

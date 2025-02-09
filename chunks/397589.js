@@ -1,75 +1,75 @@
-n.d(t, { Z: () => v });
-var i = n(200651),
-    r = n(192379),
-    a = n(481060),
-    s = n(782568),
-    o = n(592125),
+n.d(t, { Z: () => x });
+var a = n(200651),
+    o = n(192379),
+    i = n(481060),
+    r = n(782568),
+    s = n(592125),
     l = n(594174),
-    u = n(63063),
-    c = n(5192),
+    c = n(63063),
+    u = n(5192),
     d = n(992970),
-    f = n(111810),
-    _ = n(287941),
-    p = n(477931),
-    h = n(235894),
-    m = n(981631),
-    g = n(388032),
-    E = n(814169);
-let v = (e) => {
+    p = n(111810),
+    m = n(287941),
+    g = n(477931),
+    _ = n(235894),
+    h = n(981631),
+    f = n(388032),
+    C = n(760426);
+let x = (e) => {
     var t;
     let { message: n } = e,
-        v = r.useRef(null),
-        y = (0, f.p7)('Message Header') && n.hasPotions(),
-        I = o.Z.getChannel(n.getChannelId()),
-        b = null === (t = n.potions) || void 0 === t ? void 0 : t[0],
-        T = r.useMemo(() => {
+        x = o.useRef(null),
+        v = (0, p.p7)('Message Header') && n.hasPotions(),
+        b = s.Z.getChannel(n.getChannelId()),
+        T = null === (t = n.potions) || void 0 === t ? void 0 : t[0],
+        I = o.useMemo(() => {
             var e;
-            if (null == b) return null;
-            let t = l.default.getUser(b.used_by);
-            return null !== (e = (0, c.y)(null == I ? void 0 : I.getGuildId(), null == I ? void 0 : I.id, t)) && void 0 !== e ? e : null == t ? void 0 : t.globalName;
-        }, [b, I]),
-        S = r.useCallback(() => {
-            if (null != v.current && (0, h.Uw)(n)) {
-                let { x: e, y: t, width: i, height: r } = v.current.getBoundingClientRect();
-                (0, _.Z)(
+            if (null == T) return null;
+            let t = l.default.getUser(T.used_by);
+            return null !== (e = (0, u.y)(null == b ? void 0 : b.getGuildId(), null == b ? void 0 : b.id, t)) && void 0 !== e ? e : null == t ? void 0 : t.globalName;
+        }, [T, b]),
+        y = o.useCallback(() => {
+            if (null != x.current && (0, _.Uw)(n)) {
+                let { x: e, y: t, width: a, height: o } = x.current.getBoundingClientRect();
+                (0, m.Z)(
                     n,
                     {
                         x: e,
                         y: t,
-                        w: i,
-                        h: r
+                        w: a,
+                        h: o
                     },
                     !0,
                     d.LL.UserTriggered
                 );
             }
         }, [n]),
-        A = r.useCallback(() => {
-            (0, s.Z)(u.Z.getArticleURL(m.BhN.CONFETTI_POTION));
+        N = o.useCallback(() => {
+            (0, r.Z)(c.Z.getArticleURL(h.BhN.CONFETTI_POTION));
         }, []);
-    return y && null != T && (null == b ? void 0 : b.type) === p.B.CONFETTI
-        ? (0, i.jsx)(a.P3F, {
-              onFocus: S,
-              onClick: A,
-              'aria-label': g.intl.string(g.t.Mp5k6O),
-              children: (0, i.jsx)(a.ua7, {
-                  text: g.intl.formatToPlainString(g.t['FE++aG'], { user: T }),
+    return v && null != I && (null == T ? void 0 : T.type) === g.B.CONFETTI
+        ? (0, a.jsx)(i.P3F, {
+              onFocus: y,
+              onClick: N,
+              'aria-label': f.intl.string(f.t.Mp5k6O),
+              children: (0, a.jsx)(i.ua7, {
+                  text: f.intl.formatToPlainString(f.t['FE++aG'], { user: I }),
                   children: (e) =>
-                      (0, i.jsxs)('div', {
-                          ref: v,
-                          className: E.potionBadge,
+                      (0, a.jsxs)('div', {
+                          ref: x,
+                          className: C.potionBadge,
                           ...e,
                           children: [
-                              (0, i.jsx)(a.l22, {
+                              (0, a.jsx)(i.l22, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: 12,
                                   height: 12
                               }),
-                              (0, i.jsx)(a.Text, {
+                              (0, a.jsx)(i.Text, {
                                   variant: 'text-xs/bold',
                                   color: 'currentColor',
-                                  children: g.intl.string(g.t['8Rrro6'])
+                                  children: f.intl.string(f.t['8Rrro6'])
                               })
                           ]
                       })

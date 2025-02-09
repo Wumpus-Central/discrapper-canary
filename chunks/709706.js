@@ -129,7 +129,7 @@ function I(e) {
         downloadedBytes: 0
     };
 }
-function b(e) {
+function T(e) {
     let { modelId: t } = e;
     _.modelState[t] = {
         ..._.modelState[t],
@@ -137,7 +137,7 @@ function b(e) {
         downloadedBytes: void 0
     };
 }
-function T(e) {
+function b(e) {
     let { modelId: t, downloadedBytes: n, totalBytes: i } = e;
     _.modelState[t] = {
         ..._.modelState[t],
@@ -161,8 +161,8 @@ function A(e) {
 d(v, 'displayName', 'VoiceFilterStore');
 let N = new v(l.Z, {
     VOICE_FILTER_DOWNLOAD_STARTED: I,
-    VOICE_FILTER_DOWNLOAD_READY: b,
-    VOICE_FILTER_DOWNLOAD_PROGRESS: T,
+    VOICE_FILTER_DOWNLOAD_READY: T,
+    VOICE_FILTER_DOWNLOAD_PROGRESS: b,
     VOICE_FILTER_DOWNLOAD_FAILED: S,
     VOICE_FILTER_CATALOG_FETCH_SUCCESS: E,
     VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES: y,

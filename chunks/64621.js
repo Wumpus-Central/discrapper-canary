@@ -17,9 +17,9 @@ var i = n(200651),
     E = n(228168),
     v = n(981631),
     y = n(388032),
-    I = n(493248),
-    b = n(425637),
-    T = n(685741);
+    I = n(33742),
+    T = n(425637),
+    b = n(685741);
 let S = 200,
     A = 32,
     N = 30;
@@ -27,27 +27,27 @@ function C(e) {
     let { sourceType: t, children: n, user: C } = e,
         { profileType: R } = (0, g.z)(),
         { recentActivityTabEnabled: O } = (0, h.O)({ location: 'UserProfilePopoutInteractionCoachmark' }),
-        { recentActivityEnabled: D, allProfileReactReplyEnabled: x } = (0, m.i)({ location: 'UserProfilePopoutInteractionCoachmark' }),
-        L = (0, s.e7)([p.default], () => {
+        { recentActivityEnabled: D, allProfileReactReplyEnabled: L } = (0, m.i)({ location: 'UserProfilePopoutInteractionCoachmark' }),
+        x = (0, s.e7)([p.default], () => {
             var e;
             return (null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === C.id;
         }),
-        P = (0, s.e7)([_.Z], () =>
+        w = (0, s.e7)([_.Z], () =>
             _.Z.findActivity(C.id, (e) => {
                 let { type: t } = e;
                 return t === v.IIU.CUSTOM_STATUS;
             })
         ),
-        w =
-            !L &&
+        P =
+            !x &&
             R === E.y0.BITE_SIZE &&
             (0, a.EQ)(t)
-                .with(E.n_.AVATAR, () => x && null == P)
-                .with(E.n_.STATUS, () => x)
-                .with(E.n_.ACTIVITY, () => !x && (O || D))
+                .with(E.n_.AVATAR, () => L && null == w)
+                .with(E.n_.STATUS, () => L)
+                .with(E.n_.ACTIVITY, () => !L && (O || D))
                 .exhaustive(),
         [M, k] = r.useState(!1);
-    (0, u.Z)(() => k(!0), w ? S : null);
+    (0, u.Z)(() => k(!0), P ? S : null);
     let {
             asset: U,
             assetClassName: G,
@@ -56,9 +56,9 @@ function C(e) {
             header: F,
             spacing: V,
             dismissibleContentType: j
-        } = x
+        } = L
             ? {
-                  asset: T,
+                  asset: b,
                   assetClassName: I.profileImage,
                   className: I.profileCoachmark,
                   content: y.intl.string(y.t.HEGlIC),
@@ -67,7 +67,7 @@ function C(e) {
                   dismissibleContentType: o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL
               }
             : {
-                  asset: b,
+                  asset: T,
                   assetClassName: void 0,
                   className: I.activityCoachmark,
                   content: y.intl.string(y.t.LQ32TU),

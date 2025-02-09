@@ -1,27 +1,27 @@
 n.d(t, { Z: () => E });
 var i,
     s,
-    r,
-    l = n(392711),
-    a = n.n(l),
+    l,
+    r = n(392711),
+    a = n.n(r),
     o = n(213919),
     c = n(442837),
     d = n(570140);
 let u = !1,
-    m = [],
+    h = [],
+    m = '',
     g = '',
-    h = '',
     x = !1,
     _ = {
         viewNonce: '',
         regenerateNonce: ''
     };
-class p extends (r = c.ZP.Store) {
+class p extends (l = c.ZP.Store) {
     getVerificationKey() {
-        return g;
+        return m;
     }
     getBackupCodes() {
-        return m;
+        return h;
     }
     get togglingSMS() {
         return u;
@@ -30,7 +30,7 @@ class p extends (r = c.ZP.Store) {
         return _;
     }
     get emailToken() {
-        return h;
+        return g;
     }
     get hasSeenBackupPrompt() {
         return x;
@@ -48,11 +48,11 @@ class p extends (r = c.ZP.Store) {
 let E = new p(d.Z, {
     MFA_ENABLE_SUCCESS: function (e) {
         let { token: t, codes: n } = e;
-        void 0 !== t && o.setToken(t), (m = n);
+        void 0 !== t && o.setToken(t), (h = n);
     },
     MFA_ENABLE_EMAIL_TOKEN: function (e) {
         let { token: t } = e;
-        h = t;
+        g = t;
     },
     MFA_DISABLE_SUCCESS: function (e) {
         let { token: t } = e;
@@ -65,11 +65,11 @@ let E = new p(d.Z, {
         u = !1;
     },
     MFA_CLEAR_BACKUP_CODES: function () {
-        m = [];
+        h = [];
     },
     MFA_VIEW_BACKUP_CODES: function (e) {
         let { codes: t, key: n } = e;
-        (m = a().sortBy(t, 'code')), (g = n);
+        (h = a().sortBy(t, 'code')), (m = n);
     },
     MFA_SEND_VERIFICATION_KEY: function (e) {
         let { nonces: t } = e;

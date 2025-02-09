@@ -1,8 +1,8 @@
-n.d(t, { w: () => r });
-var i = n(481060),
-    s = n(423932);
-let r = {
+t.d(n, { w: () => s });
+var i = t(481060),
+    r = t(423932);
+let s = {
     binds: ['mod+alt+shift+w'],
     comboKeysBindGlobal: !0,
-    action: () => ((0, s.Z)(i.pTH), !1)
+    action: () => ((0, r.Z)(i.pTH), !1)
 };

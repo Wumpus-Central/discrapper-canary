@@ -1,17 +1,17 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var a = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(388032),
-    s = n(126771);
-function o() {
-    return (0, i.jsx)(r.ua7, {
-        text: a.intl.string(a.t['RO/KYm']),
+var o = n(481060),
+    i = n(388032),
+    r = n(51924);
+function s() {
+    return (0, a.jsx)(o.ua7, {
+        text: i.intl.string(i.t['RO/KYm']),
         children: (e) =>
-            (0, i.jsx)('div', {
-                className: s.badge,
+            (0, a.jsx)('div', {
+                className: r.badge,
                 ...e,
-                children: (0, i.jsx)(r.LQn, {
+                children: (0, a.jsx)(o.LQn, {
                     color: 'currentColor',
                     size: 'custom',
                     width: '1rem',

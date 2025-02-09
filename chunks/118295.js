@@ -29,7 +29,7 @@ function p() {
         v = E.iterator || '@@iterator',
         y = E.asyncIterator || '@@asyncIterator',
         I = E.toStringTag || '@@toStringTag';
-    function b(e, t, n) {
+    function T(e, t, n) {
         return (
             r(e, t, {
                 value: n,
@@ -41,13 +41,13 @@ function p() {
         );
     }
     try {
-        b({}, '');
+        T({}, '');
     } catch (e) {
-        b = function (e, t, n) {
+        T = function (e, t, n) {
             return (e[t] = n);
         };
     }
-    function T(e, t, n, i) {
+    function b(e, t, n, i) {
         var r = s((t && t.prototype instanceof D ? t : D).prototype);
         return g(r, '_invoke', { value: B(e, n, new j(i || [])) }), r;
     }
@@ -64,27 +64,27 @@ function p() {
             };
         }
     }
-    n.wrap = T;
+    n.wrap = b;
     var A = 'suspendedStart',
         N = 'suspendedYield',
         C = 'executing',
         R = 'completed',
         O = {};
     function D() {}
-    function x() {}
     function L() {}
-    var P = {};
-    b(P, v, function () {
+    function x() {}
+    var w = {};
+    T(w, v, function () {
         return this;
     });
-    var w = o,
-        M = w && w(w(H([])));
-    M && M !== h && m.call(M, v) && (P = M);
-    var k = (L.prototype = D.prototype = s(P));
+    var P = o,
+        M = P && P(P(H([])));
+    M && M !== h && m.call(M, v) && (w = M);
+    var k = (x.prototype = D.prototype = s(w));
     function U(e) {
         var t;
         l((t = ['next', 'throw', 'return'])).call(t, function (t) {
-            b(e, t, function (e) {
+            T(e, t, function (e) {
                 return this._invoke(t, e);
             });
         });
@@ -203,34 +203,34 @@ function p() {
         throw TypeError(i(e) + ' is not iterable');
     }
     return (
-        (x.prototype = L),
+        (L.prototype = x),
         g(k, 'constructor', {
-            value: L,
-            configurable: !0
-        }),
-        g(L, 'constructor', {
             value: x,
             configurable: !0
         }),
-        (x.displayName = b(L, I, 'GeneratorFunction')),
+        g(x, 'constructor', {
+            value: L,
+            configurable: !0
+        }),
+        (L.displayName = T(x, I, 'GeneratorFunction')),
         (n.isGeneratorFunction = function (e) {
             var t = 'function' == typeof e && e.constructor;
-            return !!t && (t === x || 'GeneratorFunction' === (t.displayName || t.name));
+            return !!t && (t === L || 'GeneratorFunction' === (t.displayName || t.name));
         }),
         (n.mark = function (e) {
-            return c ? c(e, L) : ((e.__proto__ = L), b(e, I, 'GeneratorFunction')), (e.prototype = s(k)), e;
+            return c ? c(e, x) : ((e.__proto__ = x), T(e, I, 'GeneratorFunction')), (e.prototype = s(k)), e;
         }),
         (n.awrap = function (e) {
             return { __await: e };
         }),
         U(G.prototype),
-        b(G.prototype, y, function () {
+        T(G.prototype, y, function () {
             return this;
         }),
         (n.AsyncIterator = G),
         (n.async = function (e, t, i, r, a) {
             void 0 === a && (a = d);
-            var s = new G(T(e, t, i, r), a);
+            var s = new G(b(e, t, i, r), a);
             return n.isGeneratorFunction(t)
                 ? s
                 : s.next().then(function (e) {
@@ -238,11 +238,11 @@ function p() {
                   });
         }),
         U(k),
-        b(k, I, 'Generator'),
-        b(k, v, function () {
+        T(k, I, 'Generator'),
+        T(k, v, function () {
             return this;
         }),
-        b(k, 'toString', function () {
+        T(k, 'toString', function () {
             return '[object Generator]';
         }),
         (n.keys = function (e) {

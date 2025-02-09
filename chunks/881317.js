@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(990547),
-    l = n(442837),
+    l = n(990547),
+    a = n(442837),
     o = n(481060),
     s = n(893776),
     c = n(232567),
@@ -10,17 +10,17 @@ var i = n(200651),
     u = n(353926),
     h = n(82554),
     _ = n(726521),
-    g = n(185625),
-    m = n(314897),
+    m = n(185625),
+    g = n(314897),
     p = n(63063),
     f = n(981631),
     E = n(388032),
-    x = n(57717),
-    I = n(232186);
-l.ZP.initialize();
+    x = n(615196),
+    I = n(814632);
+a.ZP.initialize();
 let C = (e) => {
         let { title: t, menuType: r } = e,
-            l = () => {
+            a = () => {
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('93288').then(n.bind(n, 396410));
                     return (t) =>
@@ -30,15 +30,15 @@ let C = (e) => {
                             headerText: E.intl.string(E.t.ZLRYGR),
                             confirmButtonText: E.intl.string(E.t.PDTjLC),
                             confirmButtonColor: o.zxk.Colors.BRAND,
-                            impressionName: a.ImpressionNames.URF_ENTER_EMAIL
+                            impressionName: l.ImpressionNames.URF_ENTER_EMAIL
                         });
                 });
             },
             s = (e) => {
                 let t = async () => {
-                        await (0, g.yL)(r, e);
+                        await (0, m.yL)(r, e);
                     },
-                    l = async (t) => await (0, g.RV)(r, e, t),
+                    a = async (t) => await (0, m.RV)(r, e, t),
                     s = (e) => {
                         let t = null == e ? void 0 : e.token;
                         r === h.BM.MESSAGE ? (0, _.eE)(t) : r === h.BM.USER && (0, _.JM)(t);
@@ -49,13 +49,13 @@ let C = (e) => {
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                onFormSubmit: l,
+                                onFormSubmit: a,
                                 onResend: t,
                                 onSuccess: s,
                                 headerText: E.intl.string(E.t.H3Q7U1),
                                 confirmButtonText: E.intl.string(E.t['13ofGh']),
                                 confirmButtonColor: o.zxk.Colors.BRAND,
-                                impressionName: a.ImpressionNames.URF_CONFIRM_EMAIL_CODE
+                                impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE
                             });
                     });
             };
@@ -65,23 +65,23 @@ let C = (e) => {
                 className: I.__invalid_reportButton,
                 fullWidth: !0,
                 color: o.zxk.Colors.BRAND,
-                onClick: () => l(),
+                onClick: () => a(),
                 children: t
             })
         });
     },
     v = () => {
         let [e, t] = r.useState(!0),
-            [n, a] = r.useState(!1),
-            _ = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
-            v = (0, l.e7)([u.Z], () => u.Z.hasLoadedExperiments),
+            [n, l] = r.useState(!1),
+            _ = (0, a.e7)([g.default], () => g.default.isAuthenticated()),
+            v = (0, a.e7)([u.Z], () => u.Z.hasLoadedExperiments),
             N = () => {
-                (0, g.qJ)()
+                (0, m.qJ)()
                     .then(() => {
-                        t(!1), a(!0);
+                        t(!1), l(!0);
                     })
                     .catch(() => {
-                        t(!1), a(!1);
+                        t(!1), l(!1);
                     });
             };
         return (

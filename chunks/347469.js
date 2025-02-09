@@ -44,14 +44,14 @@ let l = (e) => {
                         r = t(i);
                     u(r, i), null == d || d(r), (v.current = !1);
                 },
-                b = p ? 'pointerup' : 'mouseup',
-                T = p ? 'pointermove' : 'mousemove',
+                T = p ? 'pointerup' : 'mouseup',
+                b = p ? 'pointermove' : 'mousemove',
                 S = n.current.ownerDocument;
             return (
-                S.addEventListener(b, I),
-                S.addEventListener(T, a),
+                S.addEventListener(T, I),
+                S.addEventListener(b, a),
                 () => {
-                    S.removeEventListener(b, I), S.removeEventListener(T, a), i.cancel();
+                    S.removeEventListener(T, I), S.removeEventListener(b, a), i.cancel();
                 }
             );
         }, [m, u, l, s, _, n, f, d, p, h, c]),

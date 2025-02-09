@@ -30,10 +30,10 @@ let E = 'BrowserHandoffStore',
 function I() {
     null != i && null != r && (window.open(''.concat(i, '&key=').concat(r)), p.Z.focus(null, !0));
 }
-function b() {
+function T() {
     (r = null), y.stop(), (v = !1), u.K.set(E, v);
 }
-function T(e) {
+function b(e) {
     (i = ''.concat(location.protocol, '//').concat(location.host, '/handoff?rpc=').concat(e.port)), I();
 }
 function S(e) {
@@ -49,7 +49,7 @@ function N(e) {
     a = new _.Z(e.user);
 }
 function C() {
-    b();
+    T();
 }
 class R extends (s = l.ZP.Store) {
     initialize() {
@@ -67,10 +67,10 @@ class R extends (s = l.ZP.Store) {
 }
 g(R, 'displayName', 'BrowserHandoffStore');
 let O = new R(d.Z, {
-    RPC_SERVER_READY: T,
+    RPC_SERVER_READY: b,
     BROWSER_HANDOFF_BEGIN: S,
     BROWSER_HANDOFF_FROM_APP: A,
-    BROWSER_HANDOFF_UNAVAILABLE: b,
+    BROWSER_HANDOFF_UNAVAILABLE: T,
     BROWSER_HANDOFF_SET_USER: N,
     LOGIN: C,
     LOGIN_SUCCESS: C,

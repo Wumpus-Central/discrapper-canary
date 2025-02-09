@@ -1,19 +1,19 @@
 n.d(t, { Z: () => _ }), n(47120);
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    o = n(352527),
+var o = n(442837),
+    r = n(352527),
     l = n(183584),
     a = n(487029),
     s = n(592125),
     d = n(944486),
     c = n(554174),
     u = n(710111),
-    h = n(714902);
+    h = n(238765);
 function _() {
-    let [e, t] = (0, r.Wu)([o.Z], () => [o.Z.enabled, o.Z.keepOpen]),
-        n = (0, r.e7)([d.Z], () => d.Z.getVoiceChannelId()),
-        _ = (0, r.e7)([s.Z], () => s.Z.getChannel(n), [n]),
+    let [e, t] = (0, o.Wu)([r.Z], () => [r.Z.enabled, r.Z.keepOpen]),
+        n = (0, o.e7)([d.Z], () => d.Z.getVoiceChannelId()),
+        _ = (0, o.e7)([s.Z], () => s.Z.getChannel(n), [n]),
         p = null == _ ? void 0 : _.getGuildId();
     return e && null != _
         ? (0, i.jsx)('div', {

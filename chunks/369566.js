@@ -21,7 +21,7 @@ function E(e) {
         v = (0, s.Z)(e, 'use-user-profile-activity'),
         y = (0, a.e7)([f.Z], () => f.Z.getActivities(e)),
         I = (0, a.e7)([o.Z], () => (E || t || n ? o.Z.getUserOutbox(e) : void 0)),
-        { live: b, recent: T } = (0, i.useMemo)(() => {
+        { live: T, recent: b } = (0, i.useMemo)(() => {
             let e = (0, r.uniqWith)(
                     y.filter((e) => {
                         let { type: t } = e;
@@ -36,8 +36,8 @@ function E(e) {
             };
         }, [y, null == I ? void 0 : I.entries]);
     return {
-        live: b,
-        recent: T,
+        live: T,
+        recent: b,
         stream: v,
         outbox: I
     };

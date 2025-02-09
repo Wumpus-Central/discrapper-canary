@@ -12,7 +12,7 @@ var l = n(120356),
     m = n(981631),
     _ = n(674563),
     h = n(388032),
-    p = n(403498);
+    p = n(611242);
 function g(e) {
     let { message: t, compact: n, usernameHook: l } = e,
         g = (0, o.ZP)(t),

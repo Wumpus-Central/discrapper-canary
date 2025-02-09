@@ -18,8 +18,8 @@ var i,
     v = n(699516),
     y = n(914010),
     I = n(9156),
-    b = n(594174),
-    T = n(981631);
+    T = n(594174),
+    b = n(981631);
 function S(e, t, n) {
     return (
         t in e
@@ -39,14 +39,14 @@ let A = 'recentMentionFilterSettings',
     R = {},
     O = !1,
     D = !0,
-    x = o.K.get(A, {
-        guildFilter: T.NgX.ALL_SERVERS,
+    L = o.K.get(A, {
+        guildFilter: b.NgX.ALL_SERVERS,
         everyoneFilter: !0,
         roleFilter: !0
     }),
-    L = !1,
-    P = 0,
-    w = !1;
+    x = !1,
+    w = 0,
+    P = !1;
 function M(e) {
     (C = {}),
         e.forEach((e) => {
@@ -66,7 +66,7 @@ function k(e) {
 }
 function U(e) {
     let { guildId: t } = e;
-    (O = !0), null == t && x.guildFilter === T.NgX.THIS_SERVER && K({ guildFilter: T.NgX.ALL_SERVERS });
+    (O = !0), null == t && L.guildFilter === b.NgX.THIS_SERVER && K({ guildFilter: b.NgX.ALL_SERVERS });
 }
 function G(e) {
     if (e instanceof p.ZP) return e;
@@ -83,30 +83,30 @@ function B(e) {
         }),
         (O = !1),
         (D = t),
-        (P = (0, l.zO)()),
-        (L = !0);
+        (w = (0, l.zO)()),
+        (x = !0);
 }
 function Z() {
     O = !1;
 }
 function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    if ((0, f.Z)(e) && !T.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
+    if ((0, f.Z)(e) && !b.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
     null == t && (t = e.channel_id);
     let n = m.Z.getChannel(t);
-    if (null == n || n.type === T.d4z.DM || (x.guildFilter === T.NgX.THIS_SERVER && n.getGuildId() !== y.Z.getGuildId())) return null;
+    if (null == n || n.type === b.d4z.DM || (L.guildFilter === b.NgX.THIS_SERVER && n.getGuildId() !== y.Z.getGuildId())) return null;
     let i = h.default.getId();
     if (v.Z.isBlockedOrIgnoredForMessage(e) || (0, _.Z)(e, i)) return null;
     e = G(e);
-    let r = !x.everyoneFilter,
-        a = !x.roleFilter;
+    let r = !L.everyoneFilter,
+        a = !L.roleFilter;
     return (0, d.ZP)({
         message: e,
         userId: i,
         suppressEveryone: r,
         suppressRoles: a
     })
-        ? (w &&
+        ? (P &&
               E.ZP.ackMessageId(n.id) !== e.id &&
               (0, d.ZP)({
                   message: e,
@@ -114,13 +114,13 @@ function F(e) {
                   suppressEveryone: I.ZP.isSuppressEveryoneEnabled(n.getGuildId()),
                   suppressRoles: I.ZP.isSuppressRolesEnabled(n.getGuildId())
               }) &&
-              (w = !1),
+              (P = !1),
           e)
         : null;
 }
 function V(e) {
     let { channelId: t, message: n } = e,
-        i = b.default.getCurrentUser();
+        i = T.default.getCurrentUser();
     if (
         null == i ||
         !(0, d.Hl)({
@@ -168,10 +168,10 @@ function W(e) {
     a().forEach(t, H);
 }
 function K(e) {
-    let t = { ...x };
-    (x = a().defaults(a().pick(e, ['guildFilter', 'roleFilter', 'everyoneFilter']), x)), o.K.set(A, x);
-    let n = (e, n) => t[e] !== x[e] && x[e] === n,
-        i = n('guildFilter', T.NgX.THIS_SERVER) || n('everyoneFilter', !1) || n('roleFilter', !1);
+    let t = { ...L };
+    (L = a().defaults(a().pick(e, ['guildFilter', 'roleFilter', 'everyoneFilter']), L)), o.K.set(A, L);
+    let n = (e, n) => t[e] !== L[e] && L[e] === n,
+        i = n('guildFilter', b.NgX.THIS_SERVER) || n('everyoneFilter', !1) || n('roleFilter', !1);
     R = {};
     let r = [];
     i &&
@@ -180,14 +180,14 @@ function K(e) {
             null != t && (r.push(t), (R[t.id] = !0));
         }),
         M((N = r)),
-        0 === N.length && (L = !1);
+        0 === N.length && (x = !1);
 }
 function z() {
-    if (x.guildFilter !== T.NgX.THIS_SERVER) return !1;
-    L = !1;
+    if (L.guildFilter !== b.NgX.THIS_SERVER) return !1;
+    x = !1;
 }
 function q() {
-    (N = []), (R = {}), (L = !1), (w = !1), (C = {});
+    (N = []), (R = {}), (x = !1), (P = !1), (C = {});
 }
 function Q(e) {
     let { guild: t } = e,
@@ -216,20 +216,20 @@ function ee(e) {
     N.length > (N = N.slice(0, t)).length && (D = !0);
 }
 function et(e) {
-    w = !0;
+    P = !0;
 }
 class en extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(b.default, m.Z, g.Z, E.ZP);
+        this.waitFor(T.default, m.Z, g.Z, E.ZP);
     }
     get hasLoadedEver() {
-        return L;
+        return x;
     }
     get lastLoaded() {
-        return P;
+        return w;
     }
     getMentions() {
-        return L || N.length > 0 ? N : null;
+        return x || N.length > 0 ? N : null;
     }
     hasMention(e) {
         return R[e];
@@ -241,16 +241,16 @@ class en extends (i = s.ZP.Store) {
         return D;
     }
     get guildFilter() {
-        return x.guildFilter;
+        return L.guildFilter;
     }
     get everyoneFilter() {
-        return x.everyoneFilter;
+        return L.everyoneFilter;
     }
     get roleFilter() {
-        return x.roleFilter;
+        return L.roleFilter;
     }
     get mentionsAreStale() {
-        return w;
+        return P;
     }
     get mentionCountByChannel() {
         return C;

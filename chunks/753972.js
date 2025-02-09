@@ -5,7 +5,7 @@ var i = n(200651),
     s = n.n(a),
     o = n(768581),
     l = n(388032),
-    u = n(662355);
+    u = n(357219);
 function c(e) {
     let { application: t, src: n, className: a, size: c, botIconFirst: d, fallbackAvatar: f, rendersPlaceholder: _ = !1 } = e,
         p = r.useMemo(

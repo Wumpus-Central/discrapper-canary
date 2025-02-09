@@ -1,47 +1,47 @@
-t.d(n, {
-    Z: () => E,
-    q: () => p
+n.d(t, {
+    Z: () => _,
+    q: () => g
 }),
-    t(47120);
-var l = t(200651);
-t(192379);
-var i = t(442837),
-    r = t(481060),
-    a = t(144144),
-    u = t(592125),
-    o = t(496675),
-    d = t(944486),
-    s = t(585483),
-    c = t(51144),
-    _ = t(981631),
-    f = t(388032);
-function p(e, n) {
-    let { id: t } = e,
-        l = '@'.concat(c.ZP.getUserTag(e, { decoration: 'never' }));
-    s.S.dispatchToLastSubscribed(_.CkL.INSERT_TEXT, {
-        plainText: l,
-        rawText: '<@'.concat(t, '>')
+    n(47120);
+var a = n(200651);
+n(192379);
+var o = n(442837),
+    i = n(481060),
+    r = n(144144),
+    s = n(592125),
+    l = n(496675),
+    c = n(944486),
+    u = n(585483),
+    d = n(51144),
+    p = n(981631),
+    m = n(388032);
+function g(e, t) {
+    let { id: n } = e,
+        a = '@'.concat(d.ZP.getUserTag(e, { decoration: 'never' }));
+    u.S.dispatchToLastSubscribed(p.CkL.INSERT_TEXT, {
+        plainText: a,
+        rawText: '<@'.concat(n, '>')
     }),
-        null != n && a.Z.startTyping(n);
+        null != t && r.Z.startTyping(t);
 }
-function E(e, n, t) {
-    let [a, s] = (0, i.Wu)(
-            [d.Z, u.Z, o.Z],
+function _(e, t, n) {
+    let [r, u] = (0, o.Wu)(
+            [c.Z, s.Z, l.Z],
             () => {
-                let e = d.Z.getChannelId(n),
-                    t = u.Z.getChannel(e);
-                return [e, null != t && (t.isMultiUserDM() || o.Z.can(_.Plq.SEND_MESSAGES, t))];
+                let e = c.Z.getChannelId(t),
+                    n = s.Z.getChannel(e);
+                return [e, null != n && (n.isMultiUserDM() || l.Z.can(p.Plq.SEND_MESSAGES, n))];
             },
-            [n]
+            [t]
         ),
-        c = t === _.IlC.POPOUT;
-    return !s || c
+        d = n === p.IlC.POPOUT;
+    return !u || d
         ? null
-        : (0, l.jsx)(r.sNh, {
+        : (0, a.jsx)(i.sNh, {
               id: 'mention',
-              label: f.intl.string(f.t.P8tvKC),
+              label: m.intl.string(m.t.P8tvKC),
               action: function () {
-                  p(e, a);
+                  g(e, r);
               }
           });
 }

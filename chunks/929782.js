@@ -1,9 +1,9 @@
 n.r(t),
     n.d(t, {
-        enable: () => b,
+        enable: () => T,
         isNotSupported: () => y,
         trackToggleSelfDeaf: () => S,
-        trackToggleSelfMute: () => T
+        trackToggleSelfMute: () => b
     });
 var i = n(200651);
 n(192379);
@@ -58,7 +58,7 @@ function I(e) {
         action: e
     });
 }
-function b() {
+function T() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return y()
         ? Promise.resolve(!1)
@@ -92,14 +92,14 @@ function b() {
               )
               .then(() => !0));
 }
-function T(e) {
+function b(e) {
     let { usedKeybind: t = !1, location: n } = e,
-        i = c.Z.getKeybindForAction(h.kg4.TOGGLE_MUTE, !1, !0),
+        i = c.ZP.getKeybindForAction(h.kg4.TOGGLE_MUTE, !1, !0),
         r = u.Z.getVoiceChannelId(),
         a = null != r ? o.Z.getChannel(r) : null;
     f.default.track(h.rMx.INPUT_MUTE_TOGGLED, {
         enabled: !l.Z.isSelfMute(),
-        custom_keybind_assigned: null != i && i.id !== c.E.id,
+        custom_keybind_assigned: null != i && i.id !== c.Ek.id,
         used_keybind: t,
         app_in_focus: d.Z.isFocused(),
         overlay_activated: null != (0, p.Z)(),
@@ -109,7 +109,7 @@ function T(e) {
 }
 function S(e) {
     let { usedKeybind: t = !1, location: n } = e,
-        i = c.Z.getKeybindForAction(h.kg4.TOGGLE_DEAFEN, !1, !0),
+        i = c.ZP.getKeybindForAction(h.kg4.TOGGLE_DEAFEN, !1, !0),
         r = u.Z.getVoiceChannelId(),
         a = null != r ? o.Z.getChannel(r) : null;
     f.default.track(h.rMx.SELF_DEAFEN_TOGGLED, {

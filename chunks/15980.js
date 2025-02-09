@@ -1,13 +1,13 @@
-n.d(t, { Z: () => m }), n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var i,
     s,
-    r,
-    l = n(442837),
+    l,
+    r = n(442837),
     a = n(570140),
     o = n(911969);
 let c = !1,
     d = [];
-class u extends (i = l.ZP.Store) {
+class u extends (i = r.ZP.Store) {
     hasFetchedCredentials() {
         return c;
     }
@@ -18,16 +18,16 @@ class u extends (i = l.ZP.Store) {
         return d;
     }
 }
-(r = 'WebAuthnStore'),
+(l = 'WebAuthnStore'),
     (s = 'displayName') in u
         ? Object.defineProperty(u, s, {
-              value: r,
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (u[s] = r);
-let m = new u(a.Z, {
+        : (u[s] = l);
+let h = new u(a.Z, {
     LOGOUT: function () {
         (d = []), (c = !1);
     },

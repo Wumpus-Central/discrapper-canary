@@ -1,47 +1,47 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => C });
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(568611),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    l = n(568611),
     o = n(435935),
     c = n(442837),
     d = n(481060),
     u = n(37234),
     m = n(960412),
     g = n(151662),
-    h = n(695346),
-    x = n(981631),
-    _ = n(930441),
-    p = n(388032),
-    E = n(660728),
-    C = n(232186);
-let f = () => {
-    let e = h.Ex.useSetting(),
+    _ = n(695346),
+    p = n(981631),
+    f = n(930441),
+    h = n(388032),
+    x = n(699675),
+    E = n(814632);
+let C = () => {
+    let e = _.Ex.useSetting(),
         { categories: t, initialized: n } = (0, c.cj)([g.Z], () => g.Z.getEmailSettings());
     return (
-        s.useEffect(() => {
+        r.useEffect(() => {
             null == n && (0, m.Y7)();
         }, [n]),
         (0, i.jsxs)('div', {
-            className: E.container,
+            className: x.container,
             children: [
                 (0, i.jsx)(d.Text, {
                     variant: 'eyebrow',
                     color: 'text-muted',
-                    children: p.intl.string(p.t.USIXU1)
+                    children: h.intl.string(h.t.USIXU1)
                 }),
                 (0, i.jsx)(d.j7V, {
-                    className: l()(C.marginTop8, C.marginBottom20),
+                    className: s()(E.marginTop8, E.marginBottom20),
                     value: e,
-                    note: p.intl.string(p.t['5MdB3t']),
+                    note: h.intl.string(h.t['5MdB3t']),
                     hideBorder: !0,
-                    onChange: h.Ex.updateSetting,
-                    children: p.intl.string(p.t.zkEceX)
+                    onChange: _.Ex.updateSetting,
+                    children: h.intl.string(h.t.zkEceX)
                 }),
                 e
                     ? (0, i.jsx)(d.Zbd, {
-                          className: E.enableCard,
+                          className: x.enableCard,
                           type: d.Zbd.Types.CUSTOM,
                           outline: !0,
                           children: (0, i.jsxs)(o.k, {
@@ -51,22 +51,22 @@ let f = () => {
                                       children: (0, i.jsx)(d.Text, {
                                           variant: 'text-sm/semibold',
                                           color: 'text-normal',
-                                          children: p.intl.string(p.t.xAVm7O)
+                                          children: h.intl.string(h.t.xAVm7O)
                                       })
                                   }),
                                   (0, i.jsx)(d.P3F, {
-                                      children: (0, i.jsx)(a.rU, {
+                                      children: (0, i.jsx)(l.rU, {
                                           onClick: u.xf,
                                           to: {
-                                              pathname: x.Z5c.FAMILY_CENTER,
+                                              pathname: p.Z5c.FAMILY_CENTER,
                                               state: { scrollRestoration: !1 }
                                           },
-                                          children: p.intl.string(p.t.cUIXFR)
+                                          children: h.intl.string(h.t.cUIXFR)
                                       })
                                   }),
                                   (0, i.jsx)(d.G2e, {
                                       icon: d.ZSh,
-                                      className: E.arrow,
+                                      className: x.arrow,
                                       disableColor: !0
                                   })
                               ]
@@ -74,14 +74,14 @@ let f = () => {
                       })
                     : null,
                 (0, i.jsx)(d.j7V, {
-                    className: l()(C.marginTop20, C.marginBottom20),
-                    value: !!t[_.$Z.FAMILY_CENTER_DIGEST],
-                    note: p.intl.string(p.t['y34S4+']),
+                    className: s()(E.marginTop20, E.marginBottom20),
+                    value: !!t[f.$Z.FAMILY_CENTER_DIGEST],
+                    note: h.intl.string(h.t['y34S4+']),
                     hideBorder: !0,
                     onChange: function (e) {
-                        (0, m.pR)(_.$Z.FAMILY_CENTER_DIGEST, e);
+                        (0, m.pR)(f.$Z.FAMILY_CENTER_DIGEST, e);
                     },
-                    children: p.intl.string(p.t.irvJKS)
+                    children: h.intl.string(h.t.irvJKS)
                 })
             ]
         })

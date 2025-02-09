@@ -67,14 +67,14 @@ function y() {
 function I() {
     (m.loading = !1), (m.initialized = !0), (m.errored = !0);
 }
-function b(e) {
+function T(e) {
     return {
         ...e,
         kind: 'notification-center-item',
         message: null != e.message ? (0, o.e5)(e.message) : void 0
     };
 }
-function T(e) {
+function b(e) {
     E();
     let t = [];
     e.relationships.forEach((e) => {
@@ -93,10 +93,10 @@ function T(e) {
 }
 function S(e) {
     let { items: t, hasMore: n, cursor: i } = e;
-    m.loading && ((m.loading = !1), (m.initialized = !0), (m.errored = !1), (m.isDataStale = !1), (null != i && m.notifCenterIds.has(i)) || ((m.paginationHasMore = t.length > 0 && n), (m.paginationCursor = t.length > 0 ? i : void 0)), (m.notifCenterItems = [...m.notifCenterItems, ...t.map(b).filter((e) => !m.notifCenterIds.has(e.id))]), m.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id)), t.forEach((e) => m.notifCenterIds.add(e.id)));
+    m.loading && ((m.loading = !1), (m.initialized = !0), (m.errored = !1), (m.isDataStale = !1), (null != i && m.notifCenterIds.has(i)) || ((m.paginationHasMore = t.length > 0 && n), (m.paginationCursor = t.length > 0 ? i : void 0)), (m.notifCenterItems = [...m.notifCenterItems, ...t.map(T).filter((e) => !m.notifCenterIds.has(e.id))]), m.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id)), t.forEach((e) => m.notifCenterIds.add(e.id)));
 }
 function A(e) {
-    let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? b(e.item) : e.item;
+    let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? T(e.item) : e.item;
     if (!m.initialized || !g(t) || m.notifCenterIds.has(t.id)) return !1;
     m.notifCenterIds.add(t.id), (m.notifCenterItems = [t, ...m.notifCenterItems]), m.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id));
 }
@@ -129,15 +129,15 @@ function D(e) {
     let { active: t } = e;
     m.notifCenterActive = t;
 }
-function x(e) {
+function L(e) {
     let { focused: t } = e;
     m.notifCenterTabFocused = t;
 }
-function L(e, t, n) {
+function x(e, t, n) {
     var i;
     return e.type === t && (null === (i = e.other_user) || void 0 === i ? void 0 : i.id) === n;
 }
-function P(e) {
+function w(e) {
     let { relationship: t } = e,
         { id: n, type: i, isSpamRequest: r, userIgnored: a, user: s, since: o } = t;
     if (i === p.OGo.PENDING_INCOMING && !r && !((0, l.JX)({ location: 'notification-center' }) && a)) {
@@ -151,7 +151,7 @@ function P(e) {
         null == t.user ||
         a ||
         (m.notifCenterLocalItems = m.notifCenterLocalItems.map((e) =>
-            L(e, f.O7.INCOMING_FRIEND_REQUESTS, t.user.id)
+            x(e, f.O7.INCOMING_FRIEND_REQUESTS, t.user.id)
                 ? {
                       ...e,
                       acked: !0,
@@ -161,10 +161,10 @@ function P(e) {
                   }
                 : e
         )),
-        (i === p.OGo.BLOCKED || a) && (m.notifCenterLocalItems = m.notifCenterLocalItems.filter((e) => !L(e, f.O7.INCOMING_FRIEND_REQUESTS, n) && !L(e, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, n)));
+        (i === p.OGo.BLOCKED || a) && (m.notifCenterLocalItems = m.notifCenterLocalItems.filter((e) => !x(e, f.O7.INCOMING_FRIEND_REQUESTS, n) && !x(e, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, n)));
 }
-function w(e) {
-    m.notifCenterLocalItems = m.notifCenterLocalItems.filter((t) => !L(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !L(t, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
+function P(e) {
+    m.notifCenterLocalItems = m.notifCenterLocalItems.filter((t) => !x(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !x(t, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
 }
 function M(e) {
     let { item_enum: t } = e;
@@ -261,7 +261,7 @@ class B extends (i = r.ZP.PersistedStore) {
 }
 h(B, 'displayName', 'NotificationCenterItemsStore'), h(B, 'persistKey', 'NotificationCenterItemsStore_v2');
 let Z = new B(a.Z, {
-    CONNECTION_OPEN: T,
+    CONNECTION_OPEN: b,
     LOGOUT: () => E(),
     NOTIFICATION_CENTER_ITEMS_ACK: R,
     NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: O,
@@ -274,10 +274,10 @@ let Z = new B(a.Z, {
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: S,
     RESET_NOTIFICATION_CENTER: () => v(),
     NOTIFICATION_CENTER_SET_ACTIVE: D,
-    NOTIFICATION_CENTER_TAB_FOCUSED: x,
-    RELATIONSHIP_ADD: P,
-    RELATIONSHIP_UPDATE: P,
-    RELATIONSHIP_REMOVE: w,
+    NOTIFICATION_CENTER_TAB_FOCUSED: L,
+    RELATIONSHIP_ADD: w,
+    RELATIONSHIP_UPDATE: w,
+    RELATIONSHIP_REMOVE: P,
     NOTIFICATION_CENTER_ITEM_COMPLETED: M,
     SET_RECENT_MENTIONS_FILTER: () => v(),
     MOBILE_NATIVE_UPDATE_CHECK_FINISHED: G

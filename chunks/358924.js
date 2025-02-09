@@ -17,12 +17,12 @@ var i,
     E = n(833664),
     I = n(503438),
     C = n(420660),
-    N = n(74433),
-    v = n(906732),
+    v = n(74433),
+    N = n(906732),
     T = n(812206),
     S = n(933557),
-    Z = n(194082),
-    A = n(264165),
+    A = n(194082),
+    Z = n(264165),
     x = n(548816),
     b = n(925329),
     L = n(102172),
@@ -42,7 +42,7 @@ var i,
     H = n(599706),
     F = n(981631),
     z = n(388032),
-    W = n(303790);
+    W = n(979457);
 let Y = {
         SMALL: 64,
         LARGE: 160
@@ -407,7 +407,7 @@ let ei = (e) => {
             { name: c, details: u, assets: h, application_id: m } = i;
         if (null != h && (0, C.Z)(i)) {
             var g;
-            t = (0, l.jsx)(A.Z, {
+            t = (0, l.jsx)(Z.Z, {
                 className: W.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, l.jsxs)(d.P3F, {
@@ -480,7 +480,7 @@ let ei = (e) => {
                     })
                 ]
             }),
-            g = null !== (n = null === (t = (0, N.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.intl.string(z.t.eXan7O);
+            g = null !== (n = null === (t = (0, v.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.intl.string(z.t.eXan7O);
         return (0, l.jsxs)(J, {
             children: [
                 (0, l.jsxs)('div', {
@@ -495,7 +495,7 @@ let ei = (e) => {
                         (0, l.jsxs)('div', {
                             children: [q(V.ZP.getName(r)), X(g)]
                         }),
-                        (0, l.jsx)(Z.ZP, { size: Z.ZP.Sizes.SMALL })
+                        (0, l.jsx)(A.ZP, { size: A.ZP.Sizes.SMALL })
                     ]
                 }),
                 p
@@ -519,7 +519,7 @@ let ei = (e) => {
                     .filter(B.lm)
             ),
             p = (0, m.O)(),
-            { analyticsLocations: _ } = (0, v.ZP)();
+            { analyticsLocations: _ } = (0, N.ZP)();
         if (null == u) return null;
         let f = T.Z.getApplication(u);
         if (null == f) return null;

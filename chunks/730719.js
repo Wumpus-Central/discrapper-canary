@@ -1,35 +1,35 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var l = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(388032),
-    s = n(96865);
-let o = (e) => {
+var i = n(481060),
+    r = n(388032),
+    a = n(895280);
+let s = (e) => {
     let { errorMessage: t, onClose: n } = e;
-    if (null == t || '' === t) return null;
-    let o = () => {
-        n();
-    };
-    return (0, i.jsxs)('div', {
-        className: s.errorContainer,
-        children: [
-            (0, i.jsx)(r.P4T, {
-                size: 'custom',
-                color: 'currentColor',
-                width: 20,
-                height: 20,
-                className: s.errorIcon
-            }),
-            (0, i.jsx)(r.Text, {
-                className: s.errorText,
-                variant: 'text-sm/normal',
-                children: t
-            }),
-            (0, i.jsx)(r.P3F, {
-                onClick: o,
-                'aria-label': a.intl.string(a.t.WAI6xs),
-                className: s.closeIcon
-            })
-        ]
-    });
+    return null == t || '' === t
+        ? null
+        : (0, l.jsxs)('div', {
+              className: a.errorContainer,
+              children: [
+                  (0, l.jsx)(i.P4T, {
+                      size: 'custom',
+                      color: 'currentColor',
+                      width: 20,
+                      height: 20,
+                      className: a.errorIcon
+                  }),
+                  (0, l.jsx)(i.Text, {
+                      className: a.errorText,
+                      variant: 'text-sm/normal',
+                      children: t
+                  }),
+                  (0, l.jsx)(i.P3F, {
+                      onClick: () => {
+                          n();
+                      },
+                      'aria-label': r.intl.string(r.t.WAI6xs),
+                      className: a.closeIcon
+                  })
+              ]
+          });
 };

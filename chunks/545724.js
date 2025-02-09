@@ -8,24 +8,24 @@ var i = n(200651),
     c = n(481060),
     d = n(239091),
     u = n(687683),
-    h = n(262755);
+    h = n(721953);
 let m = function (e) {
     let { index: t, children: r, user: m, channel: p, onClick: g, isFocused: _, isActive: f, onOtherHover: E, className: I } = e,
-        [C, N] = l.useState(!1),
-        [v, T] = l.useState(!1),
+        [C, v] = l.useState(!1),
+        [N, T] = l.useState(!1),
         S = () => {
-            N(!0), !_ || f || v || null == E || E();
+            v(!0), !_ || f || N || null == E || E();
         },
-        Z = () => {
-            N(!1);
+        A = () => {
+            v(!1);
         },
-        A = (e, t) => {
+        Z = (e, t) => {
             null != t &&
                 (T(!0),
                 (0, d.jW)(
                     e,
                     async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('95052')]).then(n.bind(n, 881351));
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('18509')]).then(n.bind(n, 881351));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -49,19 +49,19 @@ let m = function (e) {
                 },
                 children: (0, i.jsx)(s.Z.div, {
                     className: a()(h.messageRequestItem, I, {
-                        [h.active]: f || v,
+                        [h.active]: f || N,
                         [h.firstItem]: 0 === t
                     }),
-                    onContextMenu: (e) => A(e, m),
+                    onContextMenu: (e) => Z(e, m),
                     onMouseEnter: S,
-                    onMouseLeave: Z,
+                    onMouseLeave: A,
                     onClick: null != g ? g : void 0,
                     style: {
                         LIST_ROW_HEIGHT: u.WN,
                         opacity: 1
                     },
                     ...e,
-                    children: r(C || f || v)
+                    children: r(C || f || N)
                 })
             })
     });

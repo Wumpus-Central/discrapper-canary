@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a });
-var i = n(442837),
-    l = n(592125),
-    r = n(944486);
+t.d(n, { Z: () => a });
+var l = t(442837),
+    i = t(592125),
+    r = t(944486);
 function a() {
-    return (0, i.e7)([r.Z, l.Z], () => {
+    return (0, l.e7)([r.Z, i.Z], () => {
         let e = r.Z.getVoiceChannelId();
         if (null != e) {
-            let t = l.Z.getChannel(e);
-            if (null == t ? void 0 : t.isGuildStageVoice()) return t;
+            let n = i.Z.getChannel(e);
+            if (null == n ? void 0 : n.isGuildStageVoice()) return n;
         }
         return null;
     });

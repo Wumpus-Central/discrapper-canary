@@ -1,8 +1,8 @@
 n.d(t, {
     Ds: () => M,
-    YB: () => P,
+    YB: () => w,
     of: () => k,
-    q5: () => w
+    q5: () => P
 });
 var i = n(200651);
 n(192379);
@@ -24,17 +24,17 @@ var r = n(120356),
     v = n(402113),
     y = n(800965),
     I = n(157813),
-    b = n(25827),
-    T = n(131951),
+    T = n(25827),
+    b = n(131951),
     S = n(636449),
     A = n(884338),
     N = n(349619),
     C = n(981631),
     R = n(231338),
     O = n(388032),
-    D = n(953518),
-    x = n(880397);
-function L(e) {
+    D = n(49795),
+    L = n(154681);
+function x(e) {
     let { onClick: t, isExpanded: n } = e;
     return (0, i.jsx)(E.Z, {
         iconClassName: a()(D.arrowIcon, { [D.arrowIconExpanded]: n }),
@@ -43,12 +43,12 @@ function L(e) {
         label: n ? O.intl.string(O.t['2TiKgY']) : O.intl.string(O.t.oN8bqa)
     });
 }
-function P(e) {
+function w(e) {
     var t, n;
-    let { channel: r, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: I, onJumpToChannel: A, idle: O, selectedParticipant: L, embeddedActivity: P } = e,
-        w = (0, u.bp)() === C.IlC.POPOUT,
-        M = (0, s.e7)([T.Z], () => T.Z.isVideoEnabled()),
-        k = (0, s.e7)([T.Z], () => Object.values(T.Z.getVideoDevices())[0]),
+    let { channel: r, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: I, onJumpToChannel: A, idle: O, selectedParticipant: x, embeddedActivity: w } = e,
+        P = (0, u.bp)() === C.IlC.POPOUT,
+        M = (0, s.e7)([b.Z], () => b.Z.isVideoEnabled()),
+        k = (0, s.e7)([b.Z], () => Object.values(b.Z.getVideoDevices())[0]),
         U = !1 === (null === (t = null == k ? void 0 : k.disabled) || void 0 === t || t),
         G = (0, c.Z)([a])[0],
         B = (0, p.Z)(r),
@@ -62,13 +62,13 @@ function P(e) {
             (0, N.Z)(() => _.hP(r));
         };
     return (0, i.jsxs)('div', {
-        className: x.videoControls,
+        className: L.videoControls,
         onMouseMove: E,
         onMouseDown: o,
         onMouseLeave: I,
         children: [
             (0, i.jsx)('div', {
-                className: x.topControls,
+                className: L.topControls,
                 children: (0, i.jsx)(g.r, {
                     idle: O,
                     title: null !== (n = null == G ? void 0 : G.name) && void 0 !== n ? n : r.name,
@@ -77,7 +77,7 @@ function P(e) {
                 })
             }),
             (0, i.jsxs)('div', {
-                className: x.bottomControls,
+                className: L.bottomControls,
                 children: [
                     (0, i.jsxs)(f.Z, {
                         grow: 0,
@@ -85,7 +85,7 @@ function P(e) {
                         basis: '50%',
                         align: f.Z.Align.CENTER,
                         children: [
-                            (0, i.jsx)(b.C, {
+                            (0, i.jsx)(T.C, {
                                 className: D.leftPipIcon,
                                 enabled: M,
                                 cameraUnavailable: !U,
@@ -97,8 +97,8 @@ function P(e) {
                                 children: (0, i.jsx)(d.Z, {
                                     channelId: r.id,
                                     guildId: r.getGuildId(),
-                                    className: x.__invalid_leftTrayIcon,
-                                    participant: L,
+                                    className: L.__invalid_leftTrayIcon,
+                                    participant: x,
                                     compact: !0
                                 })
                             })
@@ -111,7 +111,7 @@ function P(e) {
                         basis: '50%',
                         align: f.Z.Align.CENTER,
                         children: [
-                            w || (0, S.R)()
+                            P || (0, S.R)()
                                 ? null
                                 : (0, i.jsx)(y.Z, {
                                       className: D.rightPipIcon,
@@ -121,7 +121,7 @@ function P(e) {
                                   }),
                             (0, i.jsx)(v.Z, {
                                 applicationId: a,
-                                location: P.location,
+                                location: w.location,
                                 className: D.rightPipIcon
                             })
                         ]
@@ -131,19 +131,19 @@ function P(e) {
         ]
     });
 }
-function w(e) {
+function P(e) {
     var t;
     let { channel: n, applicationId: r, onMouseDown: s, onMouseMove: l, onMouseLeave: u, onJumpToChannel: d, idle: f, users: _, embeddedActivity: p } = e,
         h = (0, c.Z)([r])[0];
     return (0, i.jsxs)(o.P3F, {
-        className: a()(x.videoControls, x.videoControlsTextActivity),
+        className: a()(L.videoControls, L.videoControlsTextActivity),
         onMouseMove: l,
         onMouseDown: s,
         onMouseLeave: u,
         onDoubleClick: d,
         children: [
             (0, i.jsx)('div', {
-                className: a()(x.topControls),
+                className: a()(L.topControls),
                 children: (0, i.jsx)(g.r, {
                     idle: f,
                     title: null !== (t = null == h ? void 0 : h.name) && void 0 !== t ? t : n.name,
@@ -152,7 +152,7 @@ function w(e) {
                 })
             }),
             (0, i.jsxs)('div', {
-                className: x.bottomControls,
+                className: L.bottomControls,
                 children: [
                     (0, i.jsx)(A.Z, {
                         renderIcon: !1,
@@ -192,7 +192,7 @@ function k(e) {
         onMouseDown: n,
         onMouseLeave: s,
         children: (0, i.jsxs)('div', {
-            className: a()(x.topControls, D.pipHeaderContent, { [D.pipHeaderContentOpen]: l }),
+            className: a()(L.topControls, D.pipHeaderContent, { [D.pipHeaderContentOpen]: l }),
             children: [
                 !l &&
                     (0, i.jsx)(o.xhG, {
@@ -214,7 +214,7 @@ function k(e) {
                                 children: [
                                     h
                                         ? null
-                                        : (0, i.jsx)(L, {
+                                        : (0, i.jsx)(x, {
                                               isExpanded: p,
                                               onClick: _
                                           }),

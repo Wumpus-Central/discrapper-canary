@@ -11,8 +11,8 @@ var a = n(200651),
     h = n(246992),
     m = n(981631),
     x = n(474936),
-    _ = n(236990),
-    p = n(509345);
+    _ = n(636463),
+    p = n(153975);
 let f = {
         [m.O0b.UNPAID]: 'Unpaid',
         [m.O0b.ACTIVE]: 'Active',
@@ -67,13 +67,13 @@ function g(e) {
     let { subscription: g, onUpdated: v } = e,
         [j, C] = r.useState(!1),
         [N, T] = r.useState(!1),
-        [E, y] = r.useState(null),
-        S = (e) => ((null == e && (e = g.status), e in f) ? f[e] : 'Unknown status '.concat(e)),
+        [E, S] = r.useState(null),
+        y = (e) => ((null == e && (e = g.status), e in f) ? f[e] : 'Unknown status '.concat(e)),
         k = (e) => {
             let t = new Date(e);
             return u.default.fromTimestamp(t.getTime());
         },
-        R = async (e) => {
+        I = async (e) => {
             let { status: t = g.status, premiumStreakStart: n, endedAt: a } = e,
                 r = {
                     subscription_status: t,
@@ -87,7 +87,7 @@ function g(e) {
             }),
                 v();
         },
-        I = async () => {
+        R = async () => {
             try {
                 await o.tn.post({
                     url: '/debug/subscriptions/'.concat(g.id, '/transition'),
@@ -100,7 +100,7 @@ function g(e) {
                     rejectWithError: !1
                 });
             } catch (e) {
-                y(e.body.message);
+                S(e.body.message);
             }
             v();
         },
@@ -134,7 +134,7 @@ function g(e) {
                 (0, a.jsxs)(s.Text, {
                     style: { marginBottom: '15px' },
                     variant: 'text-md/normal',
-                    children: ['Status: ', S()]
+                    children: ['Status: ', y()]
                 }),
                 null != g.metadata &&
                     (0, a.jsxs)('div', {
@@ -207,10 +207,10 @@ function g(e) {
                                         tag: s.RB0.H3,
                                         className: _.formSection,
                                         children: (0, a.jsx)(s.PhF, {
-                                            serialize: (e) => S(e),
+                                            serialize: (e) => y(e),
                                             isSelected: (e) => e === g.status,
                                             options: b,
-                                            select: (e) => R({ status: e }),
+                                            select: (e) => I({ status: e }),
                                             popoutLayerContext: h.O$
                                         })
                                     }),
@@ -221,13 +221,13 @@ function g(e) {
                                         children: [
                                             (0, a.jsx)(s.zxk, {
                                                 size: s.zxk.Sizes.SMALL,
-                                                onClick: (e) => I(),
+                                                onClick: (e) => R(),
                                                 children: 'Renew Subscription'
                                             }),
                                             null !== E &&
                                                 (0, a.jsx)(s.kzN, {
                                                     className: _.error,
-                                                    onDismiss: () => y(null),
+                                                    onDismiss: () => S(null),
                                                     children: E
                                                 })
                                         ]
@@ -239,7 +239,7 @@ function g(e) {
                                         children: (0, a.jsx)('input', {
                                             type: 'date',
                                             value: null === (l = g.premiumSince) || void 0 === l ? void 0 : l.toISOString().substring(0, 10),
-                                            onChange: (e) => R({ premiumStreakStart: e.target.value })
+                                            onChange: (e) => I({ premiumStreakStart: e.target.value })
                                         })
                                     }),
                                     (0, a.jsx)(s.hjN, {
@@ -249,7 +249,7 @@ function g(e) {
                                         children: (0, a.jsx)('input', {
                                             type: 'date',
                                             value: w,
-                                            onChange: (e) => R({ endedAt: e.target.value })
+                                            onChange: (e) => I({ endedAt: e.target.value })
                                         })
                                     })
                                 ]

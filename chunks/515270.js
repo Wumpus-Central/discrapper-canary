@@ -1,5 +1,5 @@
 n.d(t, {
-    L6: () => x,
+    L6: () => L,
     ZP: () => E,
     iF: () => D
 }),
@@ -47,7 +47,7 @@ function E(e) {
 }
 function v(e) {
     let t = I(e);
-    T(e, t);
+    b(e, t);
 }
 let y = /(?:<span class="([^"]*)">)|(?:<\/span>)/g;
 function I(e) {
@@ -55,11 +55,11 @@ function I(e) {
         n = null;
     for (let i of d.bN.blocks(e)) {
         let r = null != n && (n.isInCodeBlock || n.opensCodeBlock);
-        (n = b(e, i, r, null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine), null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null)), t.push(n);
+        (n = T(e, i, r, null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine), null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null)), t.push(n);
     }
     return A(t), t;
 }
-function b(e, t, n, i, r) {
+function T(e, t, n, i, r) {
     var a;
     let s = O(t),
         o = s[0],
@@ -87,7 +87,7 @@ function b(e, t, n, i, r) {
         opensCodeBlockOnOwnLine: m
     };
 }
-function T(e, t) {
+function b(e, t) {
     for (let n of t) {
         let [t, i] = n.blockEntry,
             r = S(n);
@@ -217,7 +217,7 @@ function D(e, t) {
     }
     return n % 2 != 0;
 }
-function x(e) {
+function L(e) {
     if (null == e.selection) return !1;
     let t = d.M8.start(e.selection);
     return D(e, t);

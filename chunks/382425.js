@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(449605),
     y = n(102172),
     I = n(359110),
-    b = n(769654),
-    T = n(922482),
+    T = n(769654),
+    b = n(922482),
     S = n(592125),
     A = n(430824),
     N = n(496675),
@@ -27,10 +27,10 @@ var i = n(200651),
     R = n(699516),
     O = n(938475),
     D = n(626135),
-    x = n(960870),
-    L = n(139793),
-    P = n(510659),
-    w = n(287954),
+    L = n(960870),
+    x = n(139793),
+    w = n(510659),
+    P = n(287954),
     M = n(660579),
     k = n(652853),
     U = n(64621),
@@ -44,27 +44,27 @@ var i = n(200651),
     Y = n(228168),
     W = n(981631),
     K = n(388032),
-    z = n(249942),
-    q = n(22481),
+    z = n(309584),
+    q = n(227561),
     Q = n(924482),
     X = n(774797);
 function J(e) {
     let { user: t, currentUser: n, stream: a, className: J, onClose: $, profileGuildId: ee } = e,
         { profileType: et, theme: en } = (0, k.z)(),
-        { interactionSource: ei, interactionSourceId: er } = (0, P.Xo)(),
+        { interactionSource: ei, interactionSourceId: er } = (0, w.Xo)(),
         ea = {
             [q.fullSize]: et === Y.y0.FULL_SIZE,
             [z.fullSize]: et === Y.y0.FULL_SIZE
         },
         { enabled: es, analyticsEligible: eo } = (0, m.R4)('user-profile-stream-activity-card-web'),
         { analyticsLocations: el } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        eu = (0, x.Z)({
+        eu = (0, L.Z)({
             display: 'live',
             user: t,
             stream: a,
             analyticsLocations: el
         }),
-        ec = (0, L.Z)({
+        ec = (0, x.Z)({
             userId: t.id,
             onAction: eu
         }),
@@ -96,19 +96,19 @@ function J(e) {
         }
     }, [t, ey, es, eo, a]);
     let eI = (0, d.Z)(eE ? null : eg),
-        eb = eE || null == eg ? eI : eg;
+        eT = eE || null == eg ? eI : eg;
     if (null == ed || null == ef || (es && !1 === a.discoverable) || null === et) return null;
-    let eT = () => {
+    let eb = () => {
             let e = s()(q.preview, ea),
                 t = (e) => {
                     e.stopPropagation(), eu({ action: 'PRESS_IMAGE' }), u.default.selectVoiceChannel(a.channelId), (0, c.iV)(a), null == $ || $();
                 };
-            return null == eb && eE
+            return null == eT && eE
                 ? (0, i.jsx)('div', {
                       className: e,
                       children: (0, i.jsx)(l.$jN, {})
                   })
-                : null == eb
+                : null == eT
                   ? (0, i.jsxs)(l.P3F, {
                         className: s()(e, q.overlay, { [q.clickable]: eh }),
                         onClick: eh ? t : void 0,
@@ -140,7 +140,7 @@ function J(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: eb,
+                                src: eT,
                                 className: q.image
                             }),
                             et !== Y.y0.FULL_SIZE &&
@@ -165,10 +165,10 @@ function J(e) {
         eS = () => {
             if (et !== Y.y0.FULL_SIZE) return null;
             let e = (e) => {
-                    e.stopPropagation(), null == eu || eu({ action: 'OPEN_VOICE_CHANNEL' }), ef.isGuildStageVoice() ? (0, T.Cq)(ef) : (u.default.selectVoiceChannel(ef.id), (0, I.Kh)(ef.id)), null == $ || $();
+                    e.stopPropagation(), null == eu || eu({ action: 'OPEN_VOICE_CHANNEL' }), ef.isGuildStageVoice() ? (0, b.Cq)(ef) : (u.default.selectVoiceChannel(ef.id), (0, I.Kh)(ef.id)), null == $ || $();
                 },
                 n = (e) => {
-                    e.stopPropagation(), eu({ action: 'OPEN_VOICE_GUILD' }), (0, b.X)(ed.id), null == $ || $();
+                    e.stopPropagation(), eu({ action: 'OPEN_VOICE_GUILD' }), (0, T.X)(ed.id), null == $ || $();
                 };
             return (0, i.jsxs)('div', {
                 className: z.details,
@@ -246,7 +246,7 @@ function J(e) {
         children: (0, i.jsx)(U.Z, {
             sourceType: Y.n_.ACTIVITY,
             user: t,
-            children: (0, i.jsx)(w.Z, {
+            children: (0, i.jsx)(P.Z, {
                 user: t,
                 guildId: ee,
                 profileType: et,
@@ -284,7 +284,7 @@ function J(e) {
                                     children: [
                                         (0, i.jsxs)('div', {
                                             className: s()(z.content, ea),
-                                            children: [eT(), eS(), et === Y.y0.FULL_SIZE && eN()]
+                                            children: [eb(), eS(), et === Y.y0.FULL_SIZE && eN()]
                                         }),
                                         eA()
                                     ]

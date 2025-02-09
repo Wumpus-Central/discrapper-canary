@@ -1,5 +1,5 @@
 n.d(t, {
-    $7: () => w,
+    $7: () => P,
     $8: () => eN,
     $e: () => d,
     $n: () => ez,
@@ -19,7 +19,7 @@ n.d(t, {
     GP: () => N,
     HO: () => eR,
     Hk: () => z,
-    IW: () => b,
+    IW: () => T,
     JN: () => e1,
     Lw: () => ey,
     M_: () => e$,
@@ -32,7 +32,7 @@ n.d(t, {
     RQ: () => eY,
     RU: () => eo,
     Rg: () => V,
-    Rr: () => x,
+    Rr: () => L,
     Rt: () => ee,
     Se: () => e7,
     Si: () => _,
@@ -40,10 +40,10 @@ n.d(t, {
     TD: () => eG,
     TL: () => K,
     Tp: () => eV,
-    UA: () => P,
+    UA: () => w,
     UD: () => E,
     Ue: () => M,
-    Uq: () => eb,
+    Uq: () => eT,
     Wt: () => eX,
     X2: () => eQ,
     Xh: () => m,
@@ -56,8 +56,8 @@ n.d(t, {
     a1: () => eB,
     a7: () => Q,
     b6: () => c,
-    bg: () => ew,
-    cb: () => L,
+    bg: () => eP,
+    cb: () => x,
     cd: () => eg,
     dB: () => eu,
     dJ: () => g,
@@ -69,7 +69,7 @@ n.d(t, {
     fz: () => eF,
     gW: () => e_,
     gh: () => G,
-    h1: () => ex,
+    h1: () => eL,
     h8: () => er,
     hX: () => eq,
     hs: () => es,
@@ -80,10 +80,10 @@ n.d(t, {
     jz: () => en,
     kJ: () => eW,
     m8: () => B,
-    mn: () => T,
+    mn: () => b,
     n5: () => ep,
     nG: () => em,
-    nH: () => eL,
+    nH: () => ex,
     nL: () => ek,
     np: () => e6,
     o4: () => y,
@@ -100,7 +100,7 @@ n.d(t, {
     wh: () => Y,
     xT: () => $,
     y7: () => h,
-    ys: () => eP,
+    ys: () => ew,
     zp: () => k
 }),
     n(47120);
@@ -156,7 +156,7 @@ let g = new Set(['978380692553465866', '1024422698568122368', '51165187173620121
     v = new Set(['590665532894740483', '944037355453415424', '944037391444738048', '590665538238152709']),
     y = new Set(['642251038925127690', '944037208325619722', '944037355453415424', '944037391444738048']),
     I = new Set(['978380692553465866', '511651871736201216', '511651880837840896']),
-    b = Object.freeze({
+    T = Object.freeze({
         '978380684370378762': '978380692553465866',
         '521846918637420545': '511651871736201216',
         '521847234246082599': '511651880837840896',
@@ -164,7 +164,7 @@ let g = new Set(['978380692553465866', '1024422698568122368', '51165187173620121
         '590663762298667008': void 0,
         '521842865731534868': void 0
     }),
-    T = Object.freeze({
+    b = Object.freeze({
         '978380684370378762': '1024422698568122368',
         '521846918637420545': '511651876987469824',
         '521847234246082599': '511651885459963904',
@@ -320,10 +320,10 @@ let N = Object.freeze({
     R = 16,
     O = 8,
     D = 5,
-    x = 30,
-    L = 2,
-    P = 3,
-    w = 28,
+    L = 30,
+    x = 2,
+    w = 3,
+    P = 28,
     M = 30,
     k = 7,
     U = 7,
@@ -515,8 +515,8 @@ let ev = Object.freeze({
     }),
     ey = 52428800,
     eI = 52428800,
-    eb = 524288000,
-    eT = 52428800,
+    eT = 524288000,
+    eb = 52428800,
     eS = 104857600,
     eA = {
         [r.Eu4.NONE]: 5,
@@ -570,7 +570,7 @@ let ev = Object.freeze({
             limits: {
                 emoji: 150,
                 bitrate: 256000,
-                fileSize: eT,
+                fileSize: eb,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
                 soundboardSounds: eC[r.Eu4.TIER_2],
@@ -598,20 +598,20 @@ let ev = Object.freeze({
 var eD = (function (e) {
         return (e.SOUNDBOARD_PLAY = 'soundboard play'), (e.PROFILE_THEME_COLOR = 'profile_theme_color'), (e.PROFILE_BANNER = 'profile_banner'), (e.ANIMATED_AVATAR = 'animated_avatar'), (e.AVATAR_DECORATION = 'avatar_decoration'), (e.CLIENT_THEME = 'client_theme'), (e.SHARED_CANVAS = 'shared_canvas'), (e.PROFILE_EFFECT = 'profile_effect'), (e.PRESET = 'preset'), e;
     })({}),
-    ex = (function (e) {
+    eL = (function (e) {
         return (e.FREE = 'free'), (e.PREMIUM_STANDARD = 'premium-standard'), e;
     })({});
-let eL = {
+let ex = {
     '1024422698568122368': R,
     '511651876987469824': R,
     '511651885459963904': R,
     '944037208325619722': O,
     '642251038925127690': D
 };
-var eP = (function (e) {
+var ew = (function (e) {
     return (e.HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (e.MID_STREAMING_QUALITY = 'mid_streaming_quality'), e;
 })({});
-let ew = Object.freeze({
+let eP = Object.freeze({
     high_streaming_quality: 2,
     mid_streaming_quality: 1
 });
@@ -632,7 +632,7 @@ let eG = Object.freeze({
     eB = Object.freeze({
         3: { fileSize: ey },
         1: { fileSize: eI },
-        2: { fileSize: eb }
+        2: { fileSize: eT }
     });
 var eZ = (function (e) {
         return (e.BOOST = 'boost'), (e.DISMISS = 'dismiss'), e;

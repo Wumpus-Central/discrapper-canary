@@ -8,7 +8,7 @@ var i = l(442837),
     o = l(499596),
     u = l(537135),
     c = l(388032),
-    d = l(456963);
+    d = l(760416);
 function m(e) {
     let { channel: n } = e,
         l = (0, i.e7)([a.default], () => a.default.getId()),

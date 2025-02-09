@@ -1,16 +1,16 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => r });
 var i = n(200651);
 n(192379);
 var s = n(481060),
-    r = n(388032);
-function l(e, t, n) {
-    (0, s.h7j)((l) =>
+    l = n(388032);
+function r(e, t, n) {
+    (0, s.h7j)((r) =>
         (0, i.jsx)(s.ConfirmModal, {
             header: e,
-            confirmText: r.intl.string(r.t.BddRzc),
-            cancelText: r.intl.string(r.t['ETE/oK']),
+            confirmText: l.intl.string(l.t.BddRzc),
+            cancelText: l.intl.string(l.t['ETE/oK']),
             onConfirm: n,
-            ...l,
+            ...r,
             children: (0, i.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 children: t

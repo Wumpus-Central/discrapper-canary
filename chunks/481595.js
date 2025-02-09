@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(653798),
     y = n(314182),
     I = n(251660),
-    b = n(246946),
-    T = n(351402),
+    T = n(246946),
+    b = n(351402),
     S = n(853872),
     A = n(855775),
     N = n(695103),
@@ -27,13 +27,13 @@ var i = n(200651),
     R = n(630388),
     O = n(669079),
     D = n(937615),
-    x = n(987209),
-    L = n(563132),
-    P = n(45572),
-    w = n(119226),
+    L = n(987209),
+    x = n(563132),
+    w = n(45572),
+    P = n(119226),
     M = n(981631),
     k = n(388032),
-    U = n(215409);
+    U = n(951929);
 function G(e) {
     let { sku: t, skuPricePreview: n } = e;
     s()(null != n.amount, 'SKU must have a price set.');
@@ -101,8 +101,8 @@ function B(e) {
 }
 function Z(e) {
     let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: a, handlePaymentSourceAdd: g } = e,
-        { application: D, purchaseState: Z, paymentSources: F, paymentSourceId: V, setHasAcceptedTerms: j, skusById: H, skuPricePreviewsById: Y, selectedSkuId: W, isEmbeddedIAP: K, purchaseType: z, purchasePreviewError: q, devShelfFetchState: Q, setPurchasePreviewError: X } = (0, L.JL)(),
-        { isGift: J, giftRecipient: $ } = (0, x.wD)(),
+        { application: D, purchaseState: Z, paymentSources: F, paymentSourceId: V, setHasAcceptedTerms: j, skusById: H, skuPricePreviewsById: Y, selectedSkuId: W, isEmbeddedIAP: K, purchaseType: z, purchasePreviewError: q, devShelfFetchState: Q, setPurchasePreviewError: X } = (0, x.JL)(),
+        { isGift: J, giftRecipient: $ } = (0, L.wD)(),
         ee = J && (0, O.pO)($),
         { defaultPaymentSourceId: et, hasFetchedPaymentSources: en } = (0, l.cj)([S.Z], () => ({
             defaultPaymentSourceId: S.Z.defaultPaymentSourceId,
@@ -115,9 +115,9 @@ function Z(e) {
         es = null != er ? er[ea] : null;
     s()(null != ei, 'SKU must exist and be fetched.'), s()(null != D, 'Application must exist.');
     let eo = (0, l.e7)([h.Z, N.Z], () => N.Z.inTestModeForApplication(D.id) || h.Z.inDevModeForApplication(D.id), [D.id]),
-        el = (0, l.e7)([b.Z], () => b.Z.enabled),
-        eu = o.M.EEA_COUNTRIES.has(T.Z.ipCountryCodeWithFallback),
-        ec = Z === P.A.PURCHASING || Z === P.A.COMPLETED,
+        el = (0, l.e7)([T.Z], () => T.Z.enabled),
+        eu = o.M.EEA_COUNTRIES.has(b.Z.ipCountryCodeWithFallback),
+        ec = Z === w.A.PURCHASING || Z === w.A.COMPLETED,
         ed = null != V ? F[V].type : null,
         ef = (0, m.ed)('SKUInvoice'),
         e_ = ei.productLine === M.POd.COLLECTIBLES && ef;
@@ -169,7 +169,7 @@ function Z(e) {
                     sku: ei,
                     isEmbeddedIAP: K
                 }),
-                ee && (0, i.jsx)(w.Z, { sku: ei }),
+                ee && (0, i.jsx)(P.Z, { sku: ei }),
                 null != $ ? (0, i.jsx)(I.s, { giftRecipient: $ }) : null,
                 (0, i.jsx)(u.vwX, {
                     tag: u.RB0.H5,

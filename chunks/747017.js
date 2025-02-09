@@ -14,19 +14,19 @@ var r = n(120356),
     p = n(303524),
     h = n(170187),
     m = n(981631),
-    g = n(787078);
+    g = n(629545);
 function E(e) {
     var t;
-    let { activities: n, applicationStream: r, textClassName: E, emojiClassName: v, animate: y = !0, hideTooltip: I = !1, hideEmoji: b = !1, user: T, hasQuest: S } = e,
+    let { activities: n, applicationStream: r, textClassName: E, emojiClassName: v, animate: y = !0, hideTooltip: I = !1, hideEmoji: T = !1, user: b, hasQuest: S } = e,
         A = 'activity-status-web',
         { blockeeExperimentEnabled: N, blockerExperimentEnabled: C } = (0, u.NR)(A);
-    (0, c.Z)(null == T ? void 0 : T.id, A);
-    let R = (0, s.e7)([d.Z], () => d.Z.isBlocked(null == T ? void 0 : T.id));
+    (0, c.Z)(null == b ? void 0 : b.id, A);
+    let R = (0, s.e7)([d.Z], () => d.Z.isBlocked(null == b ? void 0 : b.id));
     if (C && R) return null;
     let O = (0, l.Z)(n, r, void 0, N),
         D = null == O ? void 0 : O.activityText,
-        x = null != D && '' !== D,
-        L =
+        L = null != D && '' !== D,
+        x =
             null !==
                 (t =
                     null == n
@@ -37,20 +37,20 @@ function E(e) {
                           })) && void 0 !== t
                 ? t
                 : null,
-        P =
-            (null == L ? void 0 : L.emoji) == null || b
+        w =
+            (null == x ? void 0 : x.emoji) == null || T
                 ? null
                 : (0, i.jsx)(_.Z, {
-                      emoji: L.emoji,
+                      emoji: x.emoji,
                       animate: y,
                       hideTooltip: I,
                       className: a()(g.emoji, v)
                   });
-    return x || null != P
+    return L || null != w
         ? (0, i.jsxs)('div', {
               className: g.container,
               children: [
-                  P,
+                  w,
                   (0, i.jsx)(h.Z, {
                       className: E,
                       children: D

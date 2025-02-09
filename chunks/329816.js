@@ -14,12 +14,12 @@ var i = n(200651),
     h = n(570140),
     m = n(721037),
     g = n(490173),
-    E = n(504626),
+    E = n(114250),
     v = n(735246),
     y = n(315263),
     I = n(40851),
-    b = n(607070),
-    T = n(899663),
+    T = n(607070),
+    b = n(899663),
     S = n(793903),
     A = n(213609),
     N = n(613413),
@@ -27,10 +27,10 @@ var i = n(200651),
     R = n(327943),
     O = n(907459),
     D = n(559407),
-    x = n(556766),
-    L = n(514361),
-    P = n(724145),
-    w = n(195302),
+    L = n(556766),
+    x = n(514361),
+    w = n(724145),
+    P = n(195302),
     M = n(260035),
     k = n(482215),
     U = n(540059),
@@ -60,7 +60,7 @@ var i = n(200651),
     eo = n(151851),
     el = n(981631),
     eu = n(921944),
-    ec = n(999429);
+    ec = n(704231);
 n(167666),
     Promise.resolve()
         .then(n.bind(n, 62883))
@@ -108,8 +108,8 @@ let ed = (0, et.Un)({
         r.useEffect(() => {
             f.K.set(U.k9, String(J));
         }, [J]);
-        let et = (0, c.e7)([b.Z], () => (b.Z.useForcedColors ? 'yes' : 'no')),
-            [es, eo, ep] = (0, c.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark, L.Z.isPreview]),
+        let et = (0, c.e7)([T.Z], () => (T.Z.useForcedColors ? 'yes' : 'no')),
+            [es, eo, ep] = (0, c.Wu)([x.Z], () => [x.Z.isEditorOpen, x.Z.isCoachmark, x.Z.isPreview]),
             [eh, em] = (0, c.Wu)([R.Z], () => [R.Z.isEditorOpen, R.Z.isUpsellPreview]),
             eg = (0, c.e7)([Q.Z], () => Q.Z.getLayers().includes(el.S9g.USER_SETTINGS)),
             eE = (0, c.e7)([X.default], () => ee.ZP.canUseClientThemes(X.default.getCurrentUser())),
@@ -117,10 +117,10 @@ let ed = (0, et.Un)({
             ey = eh && !eg,
             eI = [];
         eg || !eo || eE || eI.push(d.z.CLIENT_THEMES_COACHMARK);
-        let [eb, eT] = (0, Z.US)(eI, eu.R.SIDEBAR, !0);
+        let [eT, eb] = (0, Z.US)(eI, eu.R.SIDEBAR, !0);
         eI.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-        let eS = eb === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-            eA = eb === d.z.CLIENT_THEMES_COACHMARK;
+        let eS = eT === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
+            eA = eT === d.z.CLIENT_THEMES_COACHMARK;
         r.useEffect(() => {
             null ==
                 (0, l.LX)(a, {
@@ -133,9 +133,9 @@ let ed = (0, et.Un)({
                 ((0, C.nJ)(),
                 h.Z.dispatch({
                     type: 'APP_ICON_TRACK_IMPRESSION',
-                    markAsDismissed: eT
+                    markAsDismissed: eb
                 }));
-        }, [eS, eA, eT, a]);
+        }, [eS, eA, eb, a]);
         let eN = r.useRef(document.body),
             eC = ev || eA,
             eR = ey && !eA,
@@ -147,11 +147,11 @@ let ed = (0, et.Un)({
                     disable: !eO
                 }
             ),
-            ex = ''.concat(J ? 'enabled' : 'disabled').concat(et);
+            eL = ''.concat(J ? 'enabled' : 'disabled').concat(et);
         return (0, i.jsx)(
             W.Z,
             {
-                children: (0, i.jsx)(T.Z, {
+                children: (0, i.jsx)(b.Z, {
                     children: (0, i.jsxs)(p.vWI, {
                         children: [
                             (0, i.jsx)(en.Z, { skipsSettingDefaultPageTitle: n }),
@@ -185,7 +185,7 @@ let ed = (0, et.Un)({
                                                                         children: (0, i.jsx)(j.OR, {
                                                                             children: (0, i.jsx)(S.Z.Provider, {
                                                                                 value: A.Z,
-                                                                                children: (0, i.jsxs)(w.p, {
+                                                                                children: (0, i.jsxs)(P.p, {
                                                                                     children: [
                                                                                         (0, i.jsx)('div', {
                                                                                             className: s()(y ? ec.mobileApp : ec.app),
@@ -209,13 +209,13 @@ let ed = (0, et.Un)({
                                                                         })
                                                                     })
                                                                 }),
-                                                                (0, i.jsx)(x.Z, {}),
+                                                                (0, i.jsx)(L.Z, {}),
                                                                 (0, i.jsx)(m.Z, {}),
                                                                 eC &&
                                                                     !eD &&
-                                                                    (0, i.jsx)(P.Z, {
+                                                                    (0, i.jsx)(w.Z, {
                                                                         markAsDismissed: eA
-                                                                            ? eT
+                                                                            ? eb
                                                                             : () => {
                                                                                   (0, B.EW)(d.z.CLIENT_THEMES_COACHMARK, {
                                                                                       dismissAction: eu.L.INDIRECT_ACTION,
@@ -228,13 +228,13 @@ let ed = (0, et.Un)({
                                                                     !eD &&
                                                                     (0, i.jsx)(O.Z, {
                                                                         isCoachmark: eS,
-                                                                        markAsDismissed: eT
+                                                                        markAsDismissed: eb
                                                                     }),
                                                                 (eC || eR) &&
                                                                     eD &&
                                                                     (0, i.jsx)(z.Z, {
                                                                         initialTab: eR ? z._.APP_ICONS : z._.CLIENT_THEMES,
-                                                                        markAsDismissed: eT,
+                                                                        markAsDismissed: eb,
                                                                         isCoachmark: eA
                                                                     }),
                                                                 (0, i.jsx)(G.Z, { mobile: y })
@@ -253,6 +253,6 @@ let ed = (0, et.Un)({
                     })
                 })
             },
-            ex
+            eL
         );
     };

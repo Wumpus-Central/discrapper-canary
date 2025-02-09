@@ -1,70 +1,70 @@
-n.d(t, { default: () => E }), n(47120);
-var s = n(200651),
-    i = n(192379),
-    l = n(442837),
-    o = n(279837),
-    a = n(479531),
-    r = n(144114),
-    h = n(145454),
-    c = n(23434),
-    d = n(594174),
-    u = n(1964),
-    p = n(388032);
-let E = i.forwardRef(function (e, t) {
-    let { onAddedPhone: n, onClose: E, transitionState: m, reason: R } = e,
-        C = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        f = (0, l.e7)([c.Z], () => c.Z.getAction()),
-        [g, I] = i.useState(null),
-        [y, _] = i.useState(null),
-        [x, P] = i.useState(null),
-        [N, b] = i.useState(!1),
-        v = i.useCallback(
+s.d(t, { default: () => m }), s(47120);
+var n = s(200651),
+    i = s(192379),
+    l = s(442837),
+    o = s(279837),
+    a = s(479531),
+    r = s(144114),
+    h = s(145454),
+    d = s(23434),
+    c = s(594174),
+    u = s(1964),
+    p = s(388032);
+let m = i.forwardRef(function (e, t) {
+    let { onAddedPhone: s, onClose: m, transitionState: f, reason: g } = e,
+        C = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
+        y = (0, l.e7)([d.Z], () => d.Z.getAction()),
+        [x, b] = i.useState(null),
+        [j, v] = i.useState(null),
+        [k, N] = i.useState(null),
+        [w, P] = i.useState(!1),
+        R = i.useCallback(
             async (e) => {
-                b(!0);
+                P(!0);
                 try {
-                    u.Z.isPhoneReverification(C, f) ? await r.Z.beginReverifyPhone(e, R) : await r.Z.beginAddPhone(e, R), P(null), I(e);
+                    u.Z.isPhoneReverification(C, y) ? await r.Z.beginReverifyPhone(e, g) : await r.Z.beginAddPhone(e, g), N(null), b(e);
                 } catch (e) {
-                    P(new a.Z(e));
+                    N(new a.Z(e));
                 }
-                b(!1);
+                P(!1);
             },
-            [C, R, f]
+            [C, g, y]
         ),
-        j = i.useCallback(
+        Z = i.useCallback(
             async (e) => {
-                if (null != g && null != C) {
-                    b(!0);
+                if (null != x && null != C) {
+                    P(!0);
                     try {
-                        let { token: t } = await r.Z.verifyPhone(g, e);
-                        P(null), _(t);
+                        let { token: t } = await r.Z.verifyPhone(x, e);
+                        N(null), v(t);
                     } catch (e) {
-                        P(new a.Z(e));
+                        N(new a.Z(e));
                     }
-                    b(!1);
+                    P(!1);
                 }
             },
-            [C, g]
+            [C, x]
         ),
-        k = i.useCallback(
+        S = i.useCallback(
             async (e) => {
-                null != y && (u.Z.isPhoneReverification(C, f) ? await r.Z.reverifyPhone(y, e, R) : await r.Z.addPhone(y, e, R), null == n || n(), E());
+                null != j && (u.Z.isPhoneReverification(C, y) ? await r.Z.reverifyPhone(j, e, g) : await r.Z.addPhone(j, e, g), null == s || s(), m());
             },
-            [n, E, y, R, C, f]
+            [s, m, j, g, C, y]
         );
-    return null != y
-        ? (0, s.jsx)(o.default, {
-              onClose: E,
-              transitionState: m,
+    return null != j
+        ? (0, n.jsx)(o.default, {
+              onClose: m,
+              transitionState: f,
               title: p.intl.string(p.t.ZtCDc3),
-              handleSubmit: k
+              handleSubmit: S
           })
-        : (0, s.jsx)(h.Z, {
-              onClose: E,
-              transitionState: m,
-              error: null == x ? void 0 : x.getAnyErrorMessage(),
-              working: N,
-              validPhone: null != g,
-              onAddPhone: v,
-              onVerifyPhone: j
+        : (0, n.jsx)(h.Z, {
+              onClose: m,
+              transitionState: f,
+              error: null == k ? void 0 : k.getAnyErrorMessage(),
+              working: w,
+              validPhone: null != x,
+              onAddPhone: R,
+              onVerifyPhone: Z
           });
 });

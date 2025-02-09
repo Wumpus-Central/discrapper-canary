@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(864682),
     h = n(540059),
     p = n(899740),
-    g = n(849862),
-    m = n(460181),
+    m = n(849862),
+    g = n(460181),
     f = n(155409),
     _ = n(944486),
     v = n(594174),
@@ -26,10 +26,10 @@ var i = n(200651),
     j = n(662146),
     y = n(674552),
     P = n(981631),
-    T = n(474936),
-    A = n(871465),
+    A = n(474936),
+    T = n(871465),
     w = n(388032),
-    R = n(491708);
+    R = n(337951);
 let L = {
     origin: {
         x: -16,
@@ -43,12 +43,12 @@ let L = {
     }
 };
 function M(e) {
-    let { selected: t, user: n, badge: p, link: g, showProgressBadge: _ } = e,
+    let { selected: t, user: n, badge: p, link: m, showProgressBadge: _ } = e,
         v = (0, a.e7)([d.Z], () => d.Z.isEditorOpen),
         [C, x] = l.useState(!1),
         [Z, I] = l.useState(!1),
         [b, S] = l.useState(null),
-        [T, M] = l.useState(0),
+        [A, M] = l.useState(0),
         D = (0, r.Ie)('home'),
         G = (0, h.Q3)('DefaultHomeButton'),
         k = () => {
@@ -74,12 +74,12 @@ function M(e) {
                 onMouseEnter: () => x(!0),
                 onMouseLeave: () => x(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != b && clearTimeout(b), S(setTimeout(k, 500)), M(T + 1), 15 === T)) {
+                    if (!__OVERLAY__ && (null != b && clearTimeout(b), S(setTimeout(k, 500)), M(A + 1), 15 === A)) {
                         k();
                         let e = !o.K.get(P.wli);
                         o.K.set(P.wli, e),
-                            e && o.K.set(A.O5, !0),
-                            e ? (0, m.GN)('discodo') : (0, m.GN)('user_leave'),
+                            e && o.K.set(T.O5, !0),
+                            e ? (0, g.GN)('discodo') : (0, g.GN)('user_leave'),
                             I(!0),
                             setTimeout(() => {
                                 I(!1);
@@ -90,7 +90,7 @@ function M(e) {
                 ariaLabel: w.intl.string(w.t.YUU0RE),
                 ...D,
                 to: {
-                    pathname: g,
+                    pathname: m,
                     state: {
                         analyticsSource: {
                             page: P.ZY5.GUILD_CHANNEL,
@@ -135,8 +135,8 @@ function D() {
                 i = b.xI(n, t);
             return i > 0 && i < 100;
         }),
-        n = (0, g.If)(),
-        l = Object.keys(T.nG),
+        n = (0, m.If)(),
+        l = Object.keys(A.nG),
         { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([C.Z], () => ({
             unviewedTrialCount: C.Z.getUnacknowledgedOffers(l).length,
             unviewedDiscountCount: C.Z.getUnacknowledgedDiscountOffers().length
@@ -145,10 +145,10 @@ function D() {
         d = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
         u = (0, p.q)(),
         h = n + s + u,
-        m = h === s && s > 0 && n + u === 0,
+        g = h === s && s > 0 && n + u === 0,
         f = x.Z.getHomeLink();
     return (
-        m && (f = P.Z5c.APPLICATION_STORE),
+        g && (f = P.Z5c.APPLICATION_STORE),
         (0, i.jsx)(M, {
             selected: e,
             user: d,

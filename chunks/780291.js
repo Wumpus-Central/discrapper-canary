@@ -21,11 +21,11 @@ function h(e) {
         v = null !== (t = null == m ? void 0 : m.left) && void 0 !== t ? t : 0,
         y = (null !== (n = null == m ? void 0 : m.top) && void 0 !== n ? n : 0) - _,
         I = 0 === u.length,
-        b = r.useMemo(() => Math.random() < p, [I]);
+        T = r.useMemo(() => Math.random() < p, [I]);
     return (
         r.useEffect(() => {
-            0 !== u.length && u !== h.current && E && (g.fire(v, y, b ? { sprite: f.vv } : null), (h.current = u));
-        }, [u, E, v, y, b, g]),
+            0 !== u.length && u !== h.current && E && (g.fire(v, y, T ? { sprite: f.vv } : null), (h.current = u));
+        }, [u, E, v, y, T, g]),
         null
     );
 }

@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(628692),
     y = n(590956),
     I = n(703656),
-    b = n(271383),
-    T = n(430824),
+    T = n(271383),
+    b = n(430824),
     S = n(572004),
     A = n(746878),
     N = n(285063),
@@ -27,12 +27,12 @@ var i = n(200651),
     R = n(551452),
     O = n(69626),
     D = n(142990),
-    x = n(532901),
-    L = n(311739),
-    P = n(981631),
-    w = n(176505),
-    M = n(665162),
-    k = n(763971);
+    L = n(532901),
+    x = n(311739),
+    w = n(981631),
+    P = n(176505),
+    M = n(642367),
+    k = n(595468);
 function U(e) {
     let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
     return {
@@ -83,27 +83,27 @@ function G(e) {
     };
 }
 function B(e, t, n) {
-    let i = T.Z.getGuild(e);
+    let i = b.Z.getGuild(e);
     if (null == e || null == i) return;
     let r = (t) => {
-        i.hasFeature(P.oNc.COMMUNITY) && (0, I.uL)(P.Z5c.CHANNEL(e, t));
+        i.hasFeature(w.oNc.COMMUNITY) && (0, I.uL)(w.Z5c.CHANNEL(e, t));
     };
     switch (t) {
         case 'home':
         case 'guide':
-            r(w.oC.GUILD_HOME);
+            r(P.oC.GUILD_HOME);
             break;
         case 'browse':
-            r(w.oC.CHANNEL_BROWSER);
+            r(P.oC.CHANNEL_BROWSER);
             break;
         case 'customize':
-            r(w.oC.CUSTOMIZE_COMMUNITY);
+            r(P.oC.CUSTOMIZE_COMMUNITY);
             break;
         case 'linked-roles':
             if (null != n) {
-                let t = b.ZP.getSelfMember(e);
+                let t = T.ZP.getSelfMember(e);
                 if (null == t) return null;
-                let i = T.Z.getRoles(e)[n];
+                let i = b.Z.getRoles(e)[n];
                 null == i || t.roles.includes(i.id)
                     ? u.Z.dispatch({
                           type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',
@@ -144,7 +144,7 @@ function Z(e) {
               })
     });
 }
-n(896715);
+n(229925);
 let F = {
     blockQuote: {
         react: (e, t, n) =>
@@ -295,7 +295,7 @@ let F = {
     },
     guild: {
         react: (e, t, n) => {
-            let r = T.Z.getGuild(e.guildId);
+            let r = b.Z.getGuild(e.guildId);
             return (0, i.jsx)(
                 h.Z,
                 {
@@ -332,13 +332,13 @@ let F = {
 function V(e) {
     return {
         ...F,
-        link: (0, x.Z)(e),
+        link: (0, L.Z)(e),
         devLink: (0, D.Z)(e),
         emoji: U(e),
         customEmoji: G(e),
         channelMention: (0, R.Z)(e),
         commandMention: (0, O.ZP)(e),
         attachmentLink: (0, C.Z)(e),
-        shopLink: (0, L.Z)(e)
+        shopLink: (0, x.Z)(e)
     };
 }

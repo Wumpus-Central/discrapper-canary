@@ -1,7 +1,7 @@
 n.d(t, {
-    Gg: () => L,
+    Gg: () => x,
     Kb: () => C,
-    Ww: () => w,
+    Ww: () => P,
     ZI: () => S,
     _W: () => A,
     uF: () => R
@@ -32,8 +32,8 @@ n(358085);
 var y = n(709054),
     I = n(981631);
 n(388032), l().shim();
-let b = !u.tq && !u.Em && -1 !== (0, g.vu)(),
-    T = 3;
+let T = !u.tq && !u.Em && -1 !== (0, g.vu)(),
+    b = 3;
 function S(e, t) {
     let { analyticsSource: n, analyticsProperties: i, storeListingId: r, slug: a, channelId: s, guildId: o } = t,
         l = {
@@ -64,7 +64,7 @@ function A(e, t, n, i) {
             default:
                 i = 'webp';
         }
-    'webp' !== i || b || (i = 'png');
+    'webp' !== i || T || (i = 'png');
     let o = 'string' == typeof t ? t : t.id,
         l = ((r = 'https:'), 'https:');
     return (
@@ -170,10 +170,10 @@ function D(e, t, n) {
               userInfo: r
           };
 }
-let x = [];
-function L(e, t, n, i, a) {
+let L = [];
+function x(e, t, n, i, a) {
     let s = t.get(e);
-    if (null == s) return x;
+    if (null == s) return L;
     let o = s.applicationId,
         l = [],
         u = [],
@@ -194,17 +194,17 @@ function L(e, t, n, i, a) {
     }
     return l;
 }
-let P = [];
-function w(e, t, n) {
+let w = [];
+function P(e, t, n) {
     let i = t.get(e),
         r = n.getForSKU(e);
-    if (null == i || null == r) return P;
+    if (null == i || null == r) return w;
     let a = [];
     (0, E.yE)(i.flags, I.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: I.AzA.HAS_FREE_PREMIUM_CONTENT });
     let o = i.releaseDate;
     return (
         null != o &&
-            s()().diff(o, 'months') < T &&
+            s()().diff(o, 'months') < b &&
             (i.accessType === I.kGb.EARLY_ACCESS
                 ? a.push({
                       type: I.AzA.EARLY_ACCESS,

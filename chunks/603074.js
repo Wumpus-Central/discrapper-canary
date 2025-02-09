@@ -13,22 +13,22 @@ var i = n(200651),
     p = n(522811),
     h = n(763296),
     m = n(526617),
-    g = n(620492);
+    g = n(536122);
 function E(e) {
-    let { guildId: t, channel: n, containerWidth: a, onClose: E, onSelect: v, analyticsSource: y, suppressPlaySound: I, shouldValidateSelectedSound: b, shouldShowUpsell: T = !0, gridNotice: S, inExpressionPicker: A, soundButtonOverlay: N, listPadding: C, renderHeader: R, defaultSoundsOnly: O } = e,
+    let { guildId: t, channel: n, containerWidth: a, onClose: E, onSelect: v, analyticsSource: y, suppressPlaySound: I, shouldValidateSelectedSound: T, shouldShowUpsell: b = !0, gridNotice: S, inExpressionPicker: A, soundButtonOverlay: N, listPadding: C, renderHeader: R, defaultSoundsOnly: O } = e,
         D = (0, o.e7)([h.Z], () => h.Z.isFetchingSounds() || h.Z.isFetchingDefaultSounds()),
-        { analyticsLocations: x } = (0, c.ZP)(u.Z.SOUNDBOARD_POPOUT);
+        { analyticsLocations: L } = (0, c.ZP)(u.Z.SOUNDBOARD_POPOUT);
     r.useEffect(() => {
         _.w(), f.DZ.loadIfNecessary(), A || (0, d.ql)('');
     }, [A]);
-    let { refreshEnabled: L } = (0, p.Z)({ location: 'SoundboardSoundPicker' });
+    let { refreshEnabled: x } = (0, p.Z)({ location: 'SoundboardSoundPicker' });
     return (0, i.jsx)(c.Gt, {
-        value: x,
+        value: L,
         children: (0, i.jsx)(l.VqE, {
             className: s()(g.picker, {
                 [g.fetching]: D,
                 [g.inExpressionPicker]: A,
-                [g.refresh]: L
+                [g.refresh]: x
             }),
             children: D
                 ? (0, i.jsx)(l.$jN, {})
@@ -37,17 +37,17 @@ function E(e) {
                       channel: n,
                       onClose: E,
                       onSelect: v,
-                      shouldValidateSelectedSound: b,
+                      shouldValidateSelectedSound: T,
                       containerWidth: a,
                       suppressPlaySound: I,
-                      shouldShowUpsell: T,
+                      shouldShowUpsell: b,
                       gridNotice: S,
                       soundButtonOverlay: N,
                       listPadding: C,
                       renderHeader: R,
                       defaultSoundsOnly: O,
                       inExpressionPicker: A,
-                      refreshEnabled: L,
+                      refreshEnabled: x,
                       analyticsSource: y
                   })
         })

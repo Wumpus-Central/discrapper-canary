@@ -184,8 +184,8 @@ var E = function e(t) {
     },
     y = n(390976),
     I = n(706165),
-    b = y.call(Function.call, Array.prototype.concat),
-    T = y.call(Function.apply, Array.prototype.splice),
+    T = y.call(Function.call, Array.prototype.concat),
+    b = y.call(Function.apply, Array.prototype.splice),
     S = y.call(Function.call, String.prototype.replace),
     A = y.call(Function.call, String.prototype.slice),
     N = y.call(Function.call, RegExp.prototype.exec),
@@ -229,7 +229,7 @@ e.exports = function (e, t) {
         u = a.value,
         c = !1,
         d = a.alias;
-    d && ((i = d[0]), T(n, b([0, 1], d)));
+    d && ((i = d[0]), b(n, T([0, 1], d)));
     for (var f = 1, _ = !0; f < n.length; f += 1) {
         var p = n[f],
             h = A(p, 0, 1),

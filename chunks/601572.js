@@ -9,30 +9,30 @@ var i = n(200651),
     s = n(906732),
     d = n(600164),
     u = n(313201),
-    b = n(695346),
+    f = n(695346),
     p = n(932724),
-    f = n(716161),
+    b = n(716161),
     g = n(672339),
-    h = n(898531),
-    m = n(131951),
+    m = n(898531),
+    h = n(131951),
     E = n(594174),
     C = n(626135),
     I = n(747545),
-    R = n(981631),
-    T = n(388032),
-    S = n(845569);
+    T = n(981631),
+    R = n(388032),
+    S = n(45573);
 function O(e) {
     let { transitionState: t, videoEnabled: n, onEnable: O, onClose: A } = e,
-        v = m.Z.getCameraComponent(),
+        v = h.Z.getCameraComponent(),
         N = (0, u.Dt)(),
-        k = (0, h.Z)(),
-        L = b.qF.useSetting(),
+        L = (0, m.Z)(),
+        k = f.qF.useSetting(),
         [B, y] = a.useState((0, p.P)(E.default.getCurrentUser())),
         U = (0, c.O)(),
         { analyticsLocations: D } = (0, s.ZP)(_.Z.CAMERA_PREVIEW),
         w = a.useRef(null);
     a.useEffect(() => {
-        C.default.track(R.rMx.OPEN_MODAL, { type: 'Camera Preview Modal' });
+        C.default.track(T.rMx.OPEN_MODAL, { type: 'Camera Preview Modal' });
     }, []),
         a.useEffect(() => {
             var e;
@@ -45,17 +45,17 @@ function O(e) {
             try {
                 await (0, g.wG)(B, {
                     location: {
-                        page: R.ZY5.PREVIEW_CAMERA_MODAL,
+                        page: T.ZY5.PREVIEW_CAMERA_MODAL,
                         ...U.location
                     }
                 });
             } catch (e) {}
-            await A(), (0, f.Up)(B);
+            await A(), (0, b.Up)(B);
         };
     return (0, i.jsx)(s.Gt, {
         value: D,
         children: (0, i.jsx)(l.Z, {
-            page: R.ZY5.PREVIEW_CAMERA_MODAL,
+            page: T.ZY5.PREVIEW_CAMERA_MODAL,
             children: (0, i.jsxs)(o.Y0X, {
                 className: S.modalRoot,
                 size: o.CgR.DYNAMIC,
@@ -63,14 +63,14 @@ function O(e) {
                 transitionState: t,
                 children: [
                     (0, i.jsxs)(o.hzk, {
-                        className: k ? S.contentWithVideoBackgrounds : S.content,
+                        className: L ? S.contentWithVideoBackgrounds : S.content,
                         scrollerRef: w,
                         children: [
                             (0, i.jsx)(o.X6q, {
                                 id: N,
                                 className: S.header,
                                 variant: 'heading-xl/semibold',
-                                children: n ? T.intl.string(T.t.LAwwbW) : T.intl.string(T.t['/HITVF'])
+                                children: n ? R.intl.string(R.t.LAwwbW) : R.intl.string(R.t['/HITVF'])
                             }),
                             (0, i.jsx)(I.Z, {
                                 hidePreviewToggle: !0,
@@ -104,7 +104,7 @@ function O(e) {
                         justify: d.Z.Justify.BETWEEN,
                         children: [
                             (() => {
-                                let e = n ? T.intl.string(T.t.KQENho) : T.intl.string(T.t.kgIe9f);
+                                let e = n ? R.intl.string(R.t.KQENho) : R.intl.string(R.t.kgIe9f);
                                 return (0, i.jsx)(o.zxk, {
                                     onClick: n ? x : P,
                                     size: o.zxk.Sizes.SMALL,
@@ -115,13 +115,13 @@ function O(e) {
                             (0, i.jsx)(o.XZJ, {
                                 size: 18,
                                 type: o.XZJ.Types.INVERTED,
-                                value: L,
+                                value: k,
                                 onChange: () => {
-                                    b.qF.updateSetting(!L), C.default.track(R.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !L });
+                                    f.qF.updateSetting(!k), C.default.track(T.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !k });
                                 },
                                 children: (0, i.jsx)(o.Text, {
                                     variant: 'text-sm/normal',
-                                    children: T.intl.string(T.t['3Ppr1t'])
+                                    children: R.intl.string(R.t['3Ppr1t'])
                                 })
                             })
                         ]

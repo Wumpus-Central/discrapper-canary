@@ -1,9 +1,9 @@
 n.d(t, { Z: () => m }), n(653041);
 var i,
-    s = n(442837),
-    r = n(570140),
-    l = n(381496),
-    a = n(430824);
+    r = n(442837),
+    a = n(570140),
+    s = n(381496),
+    l = n(430824);
 function o(e, t, n) {
     return (
         t in e
@@ -26,9 +26,9 @@ let c = {},
         };
     };
 d();
-class u extends (i = s.ZP.PersistedStore) {
+class u extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (c = e), this.waitFor(a.Z);
+        null != e && (c = e), this.waitFor(l.Z);
     }
     getState() {
         return c;
@@ -44,9 +44,9 @@ class u extends (i = s.ZP.PersistedStore) {
     }
 }
 o(u, 'displayName', 'GuildAffinitiesStore'), o(u, 'persistKey', 'GuildAffinitiesStore');
-let m = new u(r.Z, {
+let m = new u(a.Z, {
     CONNECTION_OPEN: function () {
-        return Date.now() - c.lastFetched > 86400000 && (0, l.j)(), !1;
+        return Date.now() - c.lastFetched > 86400000 && (0, s.j)(), !1;
     },
     LOAD_GUILD_AFFINITIES_SUCCESS: function (e) {
         let { guildAffinities: t } = e;
@@ -55,12 +55,12 @@ let m = new u(r.Z, {
             (c.lastFetched = Date.now()),
             t.forEach((e, t) => {
                 let { affinity: n, guild_id: i } = e,
-                    s = {
+                    r = {
                         score: n,
                         guildId: i,
                         index: t
                     };
-                (c.guildAffinitiesByGuildId[i] = s), c.guildAffinities.push(s);
+                (c.guildAffinitiesByGuildId[i] = r), c.guildAffinities.push(r);
             });
     },
     LOGOUT: function () {

@@ -4,14 +4,14 @@ n.d(t, {
 });
 var i = n(200651),
     s = n(192379),
-    r = n(120356),
-    l = n.n(r),
+    l = n(120356),
+    r = n.n(l),
     a = n(481060),
-    o = n(38419);
+    o = n(919939);
 function c(e) {
-    let { title: t, note: n, children: s, className: r, id: c } = e;
+    let { title: t, note: n, children: s, className: l, id: c } = e;
     return (0, i.jsxs)('div', {
-        className: l()(o.inputItem, r),
+        className: r()(o.inputItem, l),
         children: [
             (0, i.jsxs)('div', {
                 className: o.inputItemText,
@@ -36,17 +36,17 @@ function c(e) {
     });
 }
 function d(e) {
-    let { options: t, value: n, select: r, selectClassName: d, ...u } = e,
-        m = s.useId();
+    let { options: t, value: n, select: l, selectClassName: d, ...u } = e,
+        h = s.useId();
     return (0, i.jsx)(c, {
         ...u,
-        id: m,
+        id: h,
         children: (0, i.jsx)(a.PhF, {
-            'aria-labelledby': m,
-            className: l()(o.selectControl, d),
+            'aria-labelledby': h,
+            className: r()(o.selectControl, d),
             options: t,
             isSelected: (e) => e === n,
-            select: r,
+            select: l,
             serialize: (e) => String(e)
         })
     });

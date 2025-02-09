@@ -35,11 +35,11 @@ let m = Object.freeze([]),
     v = {},
     y = {},
     I = {};
-function b(e, t) {
+function T(e, t) {
     let n = g[e];
     return null != n ? n[t] : null;
 }
-let T = (e) => {
+let b = (e) => {
     switch (e.type) {
         case p.IIU.CUSTOM_STATUS:
             return 4;
@@ -54,7 +54,7 @@ let T = (e) => {
     }
 };
 function S(e, t) {
-    return T(t) - T(e);
+    return b(t) - b(e);
 }
 let A = (e) => ((0, c.Z)(e) ? 1 : 0);
 function N(e, t) {
@@ -78,7 +78,7 @@ function D(e) {
     let n = o().maxBy(Object.values(t), (e) => e.timestamp);
     n.status !== p.Skl.OFFLINE && ((E[e] = n.status), (v[e] = n.activities), null != n.clientStatus && (y[e] = n.clientStatus));
 }
-function x(e) {
+function L(e) {
     let { guildId: t, userId: n, status: i, clientStatus: r, activities: s } = e;
     if (n === f.default.getId()) return !1;
     let o = g[n];
@@ -106,7 +106,7 @@ function x(e) {
     }
     return delete I[n], O(n), !0;
 }
-function L(e) {
+function x(e) {
     let { guildId: t, userId: n, status: i, clientStatus: r, activities: a, timestamp: s } = e;
     if (n === f.default.getId()) return;
     let o = g[n];
@@ -131,14 +131,14 @@ function L(e) {
         };
     }
 }
-function P(e, t) {
+function w(e, t) {
     if (t === f.default.getId()) return !1;
     let n = g[t];
     if (null == n || null == n[e]) return !1;
     delete n[e], 0 === Object.keys(n).length && delete g[t], O(t);
 }
-function w(e) {
-    for (let t of d.default.keys(g)) P(e, t);
+function P(e) {
+    for (let t of d.default.keys(g)) w(e, t);
 }
 function M() {
     return !0;
@@ -152,7 +152,7 @@ function k(e) {
     t.forEach((e) => {
         e.presences.forEach((t) => {
             let { user: n, status: i, clientStatus: s, activities: o } = t;
-            L({
+            x({
                 guildId: e.id,
                 userId: n.id,
                 status: i,
@@ -166,7 +166,7 @@ function k(e) {
         n.forEach((e) => {
             let { user: t, status: n, clientStatus: i, activities: s } = e;
             null != t &&
-                (L({
+                (x({
                     guildId: p.ME,
                     userId: t.id,
                     status: n,
@@ -185,11 +185,11 @@ function U(e) {
 }
 function G(e) {
     let { presences: t } = e;
-    w(p.ME),
+    P(p.ME),
         t.forEach((e) => {
             let { user: t, status: n, clientStatus: i, activities: r } = e;
             null != t &&
-                x({
+                L({
                     guildId: p.ME,
                     userId: t.id,
                     status: n,
@@ -202,7 +202,7 @@ function B(e) {
     let { guild: t } = e;
     t.presences.forEach((e) => {
         let { user: n, status: i, clientStatus: r, activities: a } = e;
-        x({
+        L({
             guildId: t.id,
             userId: n.id,
             status: i,
@@ -213,18 +213,18 @@ function B(e) {
 }
 function Z(e) {
     let { guild: t } = e;
-    w(t.id);
+    P(t.id);
 }
 function F(e) {
     let { guildId: t, user: n } = e;
-    return P(t, n.id);
+    return w(t, n.id);
 }
 function V(e) {
     let { updates: t } = e;
     return t
         .map((e) => {
             let { guildId: t, user: n, status: i, clientStatus: r, activities: a } = e;
-            return x({
+            return L({
                 guildId: null != t ? t : p.ME,
                 userId: n.id,
                 status: i,
@@ -238,7 +238,7 @@ function j(e) {
     let { guildId: t, members: n } = e;
     n.forEach((e) => {
         null != e.presence &&
-            x({
+            L({
                 guildId: t,
                 userId: e.user_id,
                 status: e.presence.status,
@@ -252,7 +252,7 @@ function H(e) {
     null == n ||
         n.forEach((e) => {
             null != e.presence &&
-                x({
+                L({
                     guildId: t,
                     userId: e.userId,
                     status: e.presence.status,
@@ -284,7 +284,7 @@ class K extends (i = l.ZP.Store) {
             a = _.default.getUser(e);
         if ((null != a && a.hasFlag(p.xW$.BOT_HTTP_INTERACTIONS) && (r = p.Skl.UNKNOWN), null == a ? void 0 : a.isClyde())) return p.Skl.ONLINE;
         if (null == i) return null !== (t = E[e]) && void 0 !== t ? t : r;
-        let s = b(e, i);
+        let s = T(e, i);
         return null !== (n = null == s ? void 0 : s.status) && void 0 !== n ? n : r;
     }
     getActivities(e) {
@@ -293,7 +293,7 @@ class K extends (i = l.ZP.Store) {
             var n;
             return null !== (n = v[e]) && void 0 !== n ? n : m;
         }
-        let i = b(e, t);
+        let i = T(e, t);
         return null == i || null == i.activities ? m : i.activities;
     }
     getPrimaryActivity(e) {

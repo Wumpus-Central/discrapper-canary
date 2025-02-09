@@ -43,12 +43,12 @@ function u(e) {
         v = '[0-9](_?[0-9])*',
         y = `\\.(${v})`,
         I = '0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*',
-        b = {
+        T = {
             className: 'number',
             variants: [{ begin: `(\\b(${I})((${y})|\\.)?|(${y}))[eE][+-]?(${v})\\b` }, { begin: `\\b(${I})\\b((${y})\\b|\\.)?|(${y})\\b` }, { begin: '\\b(0|[1-9](_?[0-9])*)n\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' }, { begin: '\\b0[0-7]+n?\\b' }],
             relevance: 0
         },
-        T = {
+        b = {
             className: 'subst',
             begin: '\\$\\{',
             end: '\\}',
@@ -61,7 +61,7 @@ function u(e) {
             starts: {
                 end: '`',
                 returnEnd: !1,
-                contains: [e.BACKSLASH_ESCAPE, T],
+                contains: [e.BACKSLASH_ESCAPE, b],
                 subLanguage: 'xml'
             }
         },
@@ -71,7 +71,7 @@ function u(e) {
             starts: {
                 end: '`',
                 returnEnd: !1,
-                contains: [e.BACKSLASH_ESCAPE, T],
+                contains: [e.BACKSLASH_ESCAPE, b],
                 subLanguage: 'css'
             }
         },
@@ -81,7 +81,7 @@ function u(e) {
             starts: {
                 end: '`',
                 returnEnd: !1,
-                contains: [e.BACKSLASH_ESCAPE, T],
+                contains: [e.BACKSLASH_ESCAPE, b],
                 subLanguage: 'graphql'
             }
         },
@@ -89,7 +89,7 @@ function u(e) {
             className: 'string',
             begin: '`',
             end: '`',
-            contains: [e.BACKSLASH_ESCAPE, T]
+            contains: [e.BACKSLASH_ESCAPE, b]
         },
         R = {
             className: 'comment',
@@ -131,15 +131,15 @@ function u(e) {
                 e.C_LINE_COMMENT_MODE
             ]
         },
-        O = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, A, N, C, { match: /\$\d+/ }, b];
-    T.contains = O.concat({
+        O = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, A, N, C, { match: /\$\d+/ }, T];
+    b.contains = O.concat({
         begin: /\{/,
         end: /\}/,
         keywords: E,
         contains: ['self'].concat(O)
     });
-    let D = [].concat(R, T.contains),
-        x = D.concat([
+    let D = [].concat(R, b.contains),
+        L = D.concat([
             {
                 begin: /(\s*)\(/,
                 end: /\)/,
@@ -147,16 +147,16 @@ function u(e) {
                 contains: ['self'].concat(D)
             }
         ]),
-        L = {
+        x = {
             className: 'params',
             begin: /(\s*)\(/,
             end: /\)/,
             excludeBegin: !0,
             excludeEnd: !0,
             keywords: E,
-            contains: x
+            contains: L
         },
-        P = {
+        w = {
             variants: [
                 {
                     match: [/class/, /\s+/, d, /\s+/, /extends/, /\s+/, u.concat(d, '(', u.concat(/\./, d), ')*')],
@@ -176,7 +176,7 @@ function u(e) {
                 }
             ]
         },
-        w = {
+        P = {
             relevance: 0,
             match: u.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
             className: 'title.class',
@@ -204,7 +204,7 @@ function u(e) {
                 3: 'title.function'
             },
             label: 'func.def',
-            contains: [L],
+            contains: [x],
             illegal: /%/
         },
         U = {
@@ -234,7 +234,7 @@ function u(e) {
                 1: 'keyword',
                 3: 'title.function'
             },
-            contains: [{ begin: /\(\)/ }, L]
+            contains: [{ begin: /\(\)/ }, x]
         },
         V = '(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|' + e.UNDERSCORE_IDENT_RE + ')\\s*=>',
         j = {
@@ -244,15 +244,15 @@ function u(e) {
                 1: 'keyword',
                 3: 'title.function'
             },
-            contains: [L]
+            contains: [x]
         };
     return {
         name: 'JavaScript',
         aliases: ['js', 'jsx', 'mjs', 'cjs'],
         keywords: E,
         exports: {
-            PARAMS_CONTAINS: x,
-            CLASS_REFERENCE: w
+            PARAMS_CONTAINS: L,
+            CLASS_REFERENCE: P
         },
         illegal: /#(?![$_A-z])/,
         contains: [
@@ -270,8 +270,8 @@ function u(e) {
             C,
             R,
             { match: /\$\d+/ },
-            b,
-            w,
+            T,
+            P,
             {
                 scope: 'attr',
                 match: d + u.lookahead(':'),
@@ -309,7 +309,7 @@ function u(e) {
                                         excludeBegin: !0,
                                         excludeEnd: !0,
                                         keywords: E,
-                                        contains: x
+                                        contains: L
                                     }
                                 ]
                             }
@@ -355,7 +355,7 @@ function u(e) {
                 returnBegin: !0,
                 label: 'func.def',
                 contains: [
-                    L,
+                    x,
                     e.inherit(e.TITLE_MODE, {
                         begin: d,
                         className: 'title.function'
@@ -374,11 +374,11 @@ function u(e) {
             {
                 match: [/\bconstructor(?=\s*\()/],
                 className: { 1: 'title.function' },
-                contains: [L]
+                contains: [x]
             },
             B,
             U,
-            P,
+            w,
             F,
             { match: /\$[(.]/ }
         ]

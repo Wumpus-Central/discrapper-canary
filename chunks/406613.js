@@ -1,7 +1,7 @@
-n.d(t, { F: () => l });
+n.d(t, { F: () => r });
 var i = n(818083),
     s = n(984134);
-let r = (0, i.B)({
+let l = (0, i.B)({
     kind: 'user',
     id: '2025-01_voice_and_video_settings_refresh',
     label: 'Voice and Video Settings Refresh',
@@ -14,10 +14,10 @@ let r = (0, i.B)({
         }
     ]
 });
-function l(e) {
+function r(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: i } = s.h.useExperiment({ location: t }, { autoTrackExposure: n });
-    return r.useExperiment(
+    return l.useExperiment(
         { location: t },
         {
             disable: i,

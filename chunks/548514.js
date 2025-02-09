@@ -21,7 +21,7 @@ var i = n(200651),
     b = n(258971),
     j = n(981631),
     S = n(388032),
-    N = n(914045);
+    N = n(874910);
 let E = 'start_application_install';
 function y(e) {
     let { renderDropdown: t, size: n } = e;

@@ -1,20 +1,20 @@
-n.d(t, { n: () => o });
-var i = n(913527),
-    r = n.n(i),
-    a = n(70956),
-    s = n(388032);
-let o = (e) => {
-    let t = Math.max(0, r()(e).diff(r()(), 's'));
-    if (t < 2 * a.Z.Seconds.HOUR) {
-        let e = Math.round(t / a.Z.Seconds.MINUTE);
-        return s.intl.formatToPlainString(s.t['2JbxRE'], { count: e });
+c.d(e, { n: () => o });
+var d = c(913527),
+    a = c.n(d),
+    s = c(70956),
+    n = c(388032);
+let o = (t) => {
+    let e = Math.max(0, a()(t).diff(a()(), 's'));
+    if (e < 2 * s.Z.Seconds.HOUR) {
+        let t = Math.round(e / s.Z.Seconds.MINUTE);
+        return n.intl.formatToPlainString(n.t['2JbxRE'], { count: t });
     }
-    if (t < a.Z.Seconds.DAY) {
-        let e = Math.round(t / a.Z.Seconds.HOUR);
-        return s.intl.formatToPlainString(s.t.V9Ebys, { count: e });
+    if (e < s.Z.Seconds.DAY) {
+        let t = Math.round(e / s.Z.Seconds.HOUR);
+        return n.intl.formatToPlainString(n.t.V9Ebys, { count: t });
     }
     {
-        let e = Math.round(t / a.Z.Seconds.DAY);
-        return s.intl.formatToPlainString(s.t.OQFxHh, { count: e });
+        let t = Math.round(e / s.Z.Seconds.DAY);
+        return n.intl.formatToPlainString(n.t.OQFxHh, { count: t });
     }
 };

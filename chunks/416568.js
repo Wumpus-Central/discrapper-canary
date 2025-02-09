@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(374470),
     h = n(442837),
     p = n(902704),
-    g = n(846519),
-    m = n(692547),
+    m = n(846519),
+    g = n(692547),
     f = n(481060),
     _ = n(925549),
     v = n(493773),
@@ -26,8 +26,8 @@ var i = n(200651),
     j = n(905423),
     y = n(802718),
     P = n(751648),
-    T = n(822857),
-    A = n(34222),
+    A = n(822857),
+    T = n(34222),
     w = n(431286),
     R = n(796974),
     L = n(271383),
@@ -54,7 +54,7 @@ var i = n(200651),
     et = n(921230),
     en = n(981631),
     ei = n(388032),
-    el = n(192069);
+    el = n(105129);
 function er(e, t, n) {
     return (
         t in e
@@ -100,7 +100,7 @@ class eo {
             (this.sizes = r),
             (this.scrollerRef = l.createRef()),
             (this.nodeRefs = {}),
-            (this.timeout = new g.V7()),
+            (this.timeout = new m.V7()),
             (this.setResizeObserver = () => {
                 var e;
                 let t = null === (e = this.scrollerRef.current) || void 0 === e ? void 0 : e.getScrollerNode();
@@ -189,16 +189,16 @@ function es(e) {
         ed = (0, h.e7)([M.Z], () => M.Z.getGeoRestrictedGuilds()),
         [eu, eh] = l.useState(!1),
         ep = l.useCallback(() => eh(!0), []),
-        eg = l.useCallback(() => eh(!1), []),
-        em = l.useRef(!1),
-        [ef] = l.useState(() => new g.V7()),
+        em = l.useCallback(() => eh(!1), []),
+        eg = l.useRef(!1),
+        [ef] = l.useState(() => new m.V7()),
         e_ = l.useRef(null),
         ev = l.useRef(null),
         { ref: eC, ...ex } = (0, d.OP)(),
         eZ = (0, f.mFp)(),
         [eI, eb] = l.useState(!1),
         [eS, eN] = l.useState(!1),
-        eE = (0, f.dQu)(m.Z.modules.guildbar.AVATAR_SIZE),
+        eE = (0, f.dQu)(g.Z.modules.guildbar.AVATAR_SIZE),
         ej = l.useMemo(
             () =>
                 new eo(
@@ -233,11 +233,11 @@ function es(e) {
     );
     let { analyticsLocations: ey } = (0, Z.ZP)(x.Z.GUILDS_LIST),
         { pathname: eP } = (0, c.TH)(),
-        eT = eP.startsWith(en.Z5c.GUILD_DISCOVERY) || eP.startsWith(en.Z5c.GLOBAL_DISCOVERY),
-        eA = eP.startsWith(en.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
+        eA = eP.startsWith(en.Z5c.GUILD_DISCOVERY) || eP.startsWith(en.Z5c.GLOBAL_DISCOVERY),
+        eT = eP.startsWith(en.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
     (0, v.Ng)(() => {
-        if (!em.current && 0 !== p.size) {
-            if (eT) ej.scrollToGuild(null, !1);
+        if (!eg.current && 0 !== p.size) {
+            if (eA) ej.scrollToGuild(null, !1);
             else {
                 let { scrollTop: e } = R.Z.getGuildListDimensions();
                 ej.scrollTo({
@@ -245,11 +245,11 @@ function es(e) {
                     animate: !1
                 });
             }
-            return (em.current = !0), () => ef.stop();
+            return (eg.current = !0), () => ef.stop();
         }
     }),
         l.useEffect(() => {
-            if ((ej.setGuildsTree(p), em.current || 0 === p.size)) return;
+            if ((ej.setGuildsTree(p), eg.current || 0 === p.size)) return;
             let e = j.Z.getState().guildId;
             ej.scrollToGuild(e, !1);
             let t = null;
@@ -275,7 +275,7 @@ function es(e) {
                         draggable: !0,
                         sorting: eu,
                         onDragStart: ep,
-                        onDragEnd: eg,
+                        onDragEnd: em,
                         renderChildNode: eR
                     },
                     e.id
@@ -289,7 +289,7 @@ function es(e) {
                         draggable: !0,
                         sorting: eu,
                         onDragStart: ep,
-                        onDragEnd: eg
+                        onDragEnd: em
                     },
                     e.id
                 );
@@ -301,10 +301,10 @@ function es(e) {
     let eL = p.getRoots(),
         eM = (0, S.Z)(),
         eD = (0, y.U)(),
-        { enabled: eG } = (0, T.W)({ location: 'useShopViewTransition' });
+        { enabled: eG } = (0, A.W)({ location: 'useShopViewTransition' });
     (0, w.i)();
     let ek = l.useRef(null),
-        { shouldShowOnboardingCoachmark: eB } = (0, A.QM)({ discoveryButtonRef: ek }),
+        { shouldShowOnboardingCoachmark: eB } = (0, T.QM)({ discoveryButtonRef: ek }),
         eO = ed.map((e) =>
             (0, i.jsx)(
                 z.Z,
@@ -321,7 +321,7 @@ function es(e) {
         children: [
             eG &&
                 eB &&
-                (0, i.jsx)(A.ds, {
+                (0, i.jsx)(T.ds, {
                     backgroundElementRef: ek,
                     onClose: P.l,
                     renderTail: !0
@@ -361,7 +361,7 @@ function es(e) {
                                             children: [
                                                 (0, i.jsx)(Y.u, {}),
                                                 eM ? (0, i.jsx)(N.Z, {}) : null,
-                                                (0, i.jsx)(Q.Z, { isOnHubVerificationRoute: eA }),
+                                                (0, i.jsx)(Q.Z, { isOnHubVerificationRoute: eT }),
                                                 (0, i.jsx)(V.Z, {}),
                                                 eD,
                                                 es.map((e) => (0, i.jsx)(et.Z, { guildId: e }, e)),
@@ -388,7 +388,7 @@ function es(e) {
                                                 !n && s
                                                     ? (0, i.jsx)(W.Z, {
                                                           ref: ek,
-                                                          selected: eT,
+                                                          selected: eA,
                                                           className: el.discoveryIcon
                                                       })
                                                     : null,
@@ -401,7 +401,7 @@ function es(e) {
                                                   hideGradient: eS,
                                                   children: (0, i.jsx)(W.Z, {
                                                       ref: ek,
-                                                      selected: eT,
+                                                      selected: eA,
                                                       className: el.discoveryIcon
                                                   })
                                               })

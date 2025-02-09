@@ -1,17 +1,17 @@
 n.d(t, { Z: () => E }), n(47120), n(411104);
 var i = n(200651),
     s = n(192379),
-    r = n(442837),
-    l = n(481060),
+    l = n(442837),
+    r = n(481060),
     a = n(533307),
     o = n(600164),
     c = n(930114),
     d = n(246946),
     u = n(626135),
-    m = n(669079),
-    g = n(981631),
-    h = n(388032),
-    x = n(621550);
+    h = n(669079),
+    m = n(981631),
+    g = n(388032),
+    x = n(976974);
 function _(e, t, n) {
     return (
         t in e
@@ -32,42 +32,42 @@ class p extends s.Component {
         } = this.props;
         return {
             ...e,
-            object: g.qAy.BUTTON_CTA
+            object: m.qAy.BUTTON_CTA
         };
     }
     render() {
         let { obscureInput: e } = this.props,
-            { codeInput: t, submitting: n, hasError: s, isPromoCode: r } = this.state;
-        return (0, i.jsxs)(l.hjN, {
-            tag: l.RB0.H1,
-            title: h.intl.string(h.t['il+VCg']),
+            { codeInput: t, submitting: n, hasError: s, isPromoCode: l } = this.state;
+        return (0, i.jsxs)(r.hjN, {
+            tag: r.RB0.H1,
+            title: g.intl.string(g.t['il+VCg']),
             children: [
-                (0, i.jsx)(l.vwX, { children: h.intl.string(h.t.SeKIoa) }),
+                (0, i.jsx)(r.vwX, { children: g.intl.string(g.t.SeKIoa) }),
                 (0, i.jsx)('form', {
                     onSubmit: this.handleSubmit,
                     children: (0, i.jsxs)(o.Z, {
                         children: [
-                            (0, i.jsx)(l.oil, {
+                            (0, i.jsx)(r.oil, {
                                 type: e ? 'password' : 'text',
                                 value: t,
                                 onChange: this.handleChange,
                                 placeholder: 'WUMP-AAAAA-BBBBB-CCCCC',
-                                error: !r && s ? h.intl.string(h.t.Y11a2t) : null,
+                                error: !l && s ? g.intl.string(g.t.Y11a2t) : null,
                                 className: x.codeRedemptionInput
                             }),
-                            (0, i.jsx)(l.zxk, {
+                            (0, i.jsx)(r.zxk, {
                                 type: 'submit',
                                 submitting: n,
-                                children: h.intl.string(h.t.KIpp7O)
+                                children: g.intl.string(g.t.KIpp7O)
                             })
                         ]
                     })
                 }),
-                r
-                    ? (0, i.jsx)(l.Text, {
+                l
+                    ? (0, i.jsx)(r.Text, {
                           className: x.errorMessage,
                           variant: 'text-sm/normal',
-                          children: h.intl.format(h.t.gPt3PD, {
+                          children: g.intl.format(g.t.gPt3PD, {
                               promoLink: () => {
                                   window.open('https://discord.com/billing/promotions/'.concat(t));
                               }
@@ -95,7 +95,7 @@ class p extends s.Component {
                 e.preventDefault();
                 let { codeInput: t } = this.state;
                 if ('' === t) return;
-                let n = (0, m.JT)(t);
+                let n = (0, h.JT)(t);
                 if (null == n) {
                     this.setState({ hasError: !0 });
                     return;
@@ -104,11 +104,11 @@ class p extends s.Component {
                 try {
                     let e = await a.Z.resolveGiftCode(n);
                     if (null != e && null != e.giftCode.promotion) throw (this.setState({ isPromoCode: !0 }), Error('Cannnot redeem promotion code as gift'));
-                    u.default.track(g.rMx.OPEN_MODAL, {
+                    u.default.track(m.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
                         location: {
                             ...this.analyticsLocation,
-                            object: g.qAy.BUTTON_CTA
+                            object: m.qAy.BUTTON_CTA
                         }
                     }),
                         (0, c.V)({ processedCode: n }),
@@ -123,7 +123,7 @@ class p extends s.Component {
 }
 function E() {
     let e = s.useContext(u.AnalyticsContext),
-        t = (0, r.e7)([d.Z], () => d.Z.enabled);
+        t = (0, l.e7)([d.Z], () => d.Z.enabled);
     return (0, i.jsx)(p, {
         analyticsContext: e,
         obscureInput: t

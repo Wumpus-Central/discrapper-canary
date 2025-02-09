@@ -40,7 +40,7 @@ var y = (function (e) {
     I = (function (e) {
         return (e.VOICE = 'VOICE'), (e.STREAM = 'STREAM'), e;
     })({});
-function b(e) {
+function T(e) {
     var t;
     let { speaker: n, role: i, user: a, userNick: s, connectedOn: o, voiceState: l, type: u } = e,
         c = n ? '\0' : '\x01',
@@ -57,7 +57,7 @@ function b(e) {
         .concat(o)
         .concat((0, r.Z)(s, a));
 }
-function T(e) {
+function b(e) {
     let { user: t, voiceState: n } = e,
         i = n.requestToSpeakTimestamp;
     return null == i ? t.id : ''.concat(Date.parse(i)).concat(t.id);
@@ -79,9 +79,9 @@ class N {
         if (null == y) return v;
         let I = d.default.getUser(e);
         if (null == I) return null != this.guildId && m.Z.isPublic(this.channelId) && l.Z.requestMember(this.guildId, e), v;
-        let b = null != t ? t[0] : null,
-            T = null != this.guildId ? u.ZP.getMember(this.guildId, e) : null,
-            S = null !== (n = null == T ? void 0 : T.nick) && void 0 !== n ? n : p.ZP.getName(this.guildId, this.channelId, I),
+        let T = null != t ? t[0] : null,
+            b = null != this.guildId ? u.ZP.getMember(this.guildId, e) : null,
+            S = null !== (n = null == b ? void 0 : b.nick) && void 0 !== n ? n : p.ZP.getName(this.guildId, this.channelId, I),
             A = {
                 user: I,
                 userNick: p.ZP.getName(this.guildId, this.channelId, I),
@@ -90,11 +90,11 @@ class N {
                 voiceState: y,
                 role: (0, E.H)(this.guildId, e),
                 speaker: h.ZP.isSpeaker(e, this.channelId),
-                member: T,
+                member: b,
                 blocked: c.Z.isBlocked(I.id),
                 ignored: c.Z.isIgnored(I.id),
                 isFriend: c.Z.isFriend(I.id),
-                connectedOn: null !== (i = null == b ? void 0 : b.connectedOn) && void 0 !== i ? i : Date.now()
+                connectedOn: null !== (i = null == T ? void 0 : T.connectedOn) && void 0 !== i ? i : Date.now()
             },
             N = {
                 ...A,
@@ -159,6 +159,6 @@ class N {
     }
     constructor(e) {
         var t;
-        v(this, 'channelId', void 0), v(this, 'guildId', void 0), v(this, 'participants', {}), v(this, '_participantsIndex', new i.h(A, b)), v(this, '_requestToSpeakIndex', new i.h(() => [], T)), (this.channelId = e), (this.guildId = null === (t = o.Z.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId());
+        v(this, 'channelId', void 0), v(this, 'guildId', void 0), v(this, 'participants', {}), v(this, '_participantsIndex', new i.h(A, T)), v(this, '_requestToSpeakIndex', new i.h(() => [], b)), (this.channelId = e), (this.guildId = null === (t = o.Z.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId());
     }
 }

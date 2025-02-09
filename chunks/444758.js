@@ -21,7 +21,7 @@ let I = (e) => {
     let t = u.Z.getChannel(e);
     return null == t ? void 0 : t.getGuildId();
 };
-function b(e) {
+function T(e) {
     return {
         type: 'guild',
         guildId: e.id,
@@ -33,7 +33,7 @@ function b(e) {
         })
     };
 }
-function T(e, t) {
+function b(e, t) {
     let n;
     let i = R((0, m.aF)(e.name, 32));
     return {
@@ -135,7 +135,7 @@ function O(e) {
     return null != e ? C(e) : R('#'.concat(y.intl.string(y.t.J90oLS)));
 }
 function D() {
-    return T(
+    return b(
         {
             name: y.intl.string(y.t.zLZPmp).toLowerCase(),
             type: v.d4z.UNKNOWN,
@@ -144,7 +144,7 @@ function D() {
         'italics'
     );
 }
-function x(e, t, n, i, r) {
+function L(e, t, n, i, r) {
     let a = c.Z.getGuild(e),
         s = (null == a ? void 0 : a.id) === i;
     return {
@@ -153,13 +153,13 @@ function x(e, t, n, i, r) {
         channelId: t,
         messageId: n,
         originalLink: r,
-        inContent: null == a || s ? null : [b(a)],
+        inContent: null == a || s ? null : [T(a)],
         content: [D()]
     };
 }
-function L(e, t, n, i) {
-    let r = b(e),
-        a = T(t),
+function x(e, t, n, i) {
+    let r = T(e),
+        a = b(t),
         s = A(t.isForumPost);
     if (n && i) {
         if (t.isForumPost) {
@@ -168,7 +168,7 @@ function L(e, t, n, i) {
                 var o;
                 return {
                     inContent: [
-                        T({
+                        b({
                             name: e.name,
                             type: e.type,
                             iconType: null !== (o = (0, h.wl)(e)) && void 0 !== o ? o : 'forum'
@@ -200,7 +200,7 @@ function L(e, t, n, i) {
                   content: [a]
               };
 }
-function P(e, t, n, i) {
+function w(e, t, n, i) {
     if (!e.canViewChannel) return S(e, t);
     if (!e.isMentionable) return R('#'.concat(e.name));
     let r = {
@@ -216,7 +216,7 @@ function P(e, t, n, i) {
             ? {
                   ...r,
                   guildId: v.ME,
-                  inContent: [T(e)],
+                  inContent: [b(e)],
                   content: [A(!1)]
               }
             : O(i);
@@ -224,10 +224,10 @@ function P(e, t, n, i) {
         o = null != t;
     return {
         ...r,
-        ...L(a, e, s, o)
+        ...x(a, e, s, o)
     };
 }
-let w = {
+let P = {
         order: E.ZP.order,
         requiredFirstCharacters: ['<'],
         match: (e) => /^<#(\d+)>/.exec(e),
@@ -239,11 +239,11 @@ let w = {
                     id: i
                 };
             let r = N(i, n.mentionChannels);
-            return null == r ? x(null, i, null, I(n.channelId)) : P(r, null, I(n.channelId));
+            return null == r ? L(null, i, null, I(n.channelId)) : w(r, null, I(n.channelId));
         }
     },
     M = {
-        channelMention: w,
+        channelMention: P,
         channelOrMessageUrl: {
             order: r().defaultRules.url.order - 0.5,
             requiredFirstCharacters: ['h'],
@@ -258,7 +258,7 @@ let w = {
                     s = e[3];
                 if (null == a) return C(i);
                 let o = N(a, null);
-                return null == o ? x(r, a, s, I(n.channelId), i) : P(o, s, I(n.channelId), i);
+                return null == o ? L(r, a, s, I(n.channelId), i) : w(o, s, I(n.channelId), i);
             }
         },
         mediaPostLink: {
@@ -273,9 +273,9 @@ let w = {
                     o = e[4];
                 if (null == a || null == s) return C(i);
                 let l = N(s, null);
-                if (null != l) return P(l, o, I(n.channelId), i);
+                if (null != l) return w(l, o, I(n.channelId), i);
                 let u = N(a, null);
-                return null != u ? P(u, o, I(n.channelId), i) : x(r, a, o, I(n.channelId), i);
+                return null != u ? w(u, o, I(n.channelId), i) : L(r, a, o, I(n.channelId), i);
             }
         }
     };

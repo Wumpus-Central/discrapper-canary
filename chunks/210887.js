@@ -19,8 +19,8 @@ var h = n(12647),
     v = n(581883),
     y = n(874893),
     I = n(981631),
-    b = n(469115);
-function T(e, t, n) {
+    T = n(469115);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -65,16 +65,16 @@ function O() {
 function D() {
     return B();
 }
-function x() {
+function L() {
     return B();
 }
-function L() {
+function x() {
     return (0, u.ap)(O());
 }
-function P(e) {
+function w(e) {
     return !e.isSwitchingAccount && S !== I.BRd.DARK && ((S = I.BRd.DARK), Z(), B());
 }
-function w(e) {
+function P(e) {
     let { systemTheme: t } = e;
     return (N = t), B();
 }
@@ -84,7 +84,7 @@ function M(e) {
 function k(e) {
     var t, n;
     let { presetId: i } = e;
-    S = null != i && null !== (n = null === (t = b.qt[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : O();
+    S = null != i && null !== (n = null === (t = T.qt[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : O();
     let r = null != i;
     return C !== r ? ((C = r), !0) : G();
 }
@@ -136,9 +136,9 @@ class F extends (a = s.ZP.PersistedStore) {
         return null !== N;
     }
 }
-T(F, 'displayName', 'ThemeStore'),
-    T(F, 'persistKey', 'ThemeStore'),
-    T(F, 'migrations', [
+b(F, 'displayName', 'ThemeStore'),
+    b(F, 'persistKey', 'ThemeStore'),
+    b(F, 'migrations', [
         (e) => {
             let t = e.theme;
             return (
@@ -153,15 +153,15 @@ T(F, 'displayName', 'ThemeStore'),
 let V = new F(c.Z, {
     CACHE_LOADED: D,
     CONNECTION_OPEN: D,
-    LOGOUT: P,
+    LOGOUT: w,
     OVERLAY_INITIALIZE: D,
-    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: x,
-    UNSYNCED_USER_SETTINGS_UPDATE: x,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: L,
+    UNSYNCED_USER_SETTINGS_UPDATE: L,
     USER_SETTINGS_PROTO_UPDATE: D,
     UPDATE_BACKGROUND_GRADIENT_PRESET: k,
     RESET_PREVIEW_CLIENT_THEME: D,
-    SYSTEM_THEME_CHANGE: w,
+    SYSTEM_THEME_CHANGE: P,
     ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: M,
-    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: L,
+    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: x,
     SET_DARK_MODE_THEME: U
 });

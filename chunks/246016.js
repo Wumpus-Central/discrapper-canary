@@ -1,23 +1,23 @@
-n.d(t, { Y: () => c });
-var i = n(192379),
-    l = n(442837),
-    a = n(699516),
-    r = n(372460),
-    s = n(320582);
-let o = [];
-function c(e) {
-    let { userId: t, location: n } = e,
-        c = (0, l.e7)([a.Z], () => a.Z.isFriend(t)),
-        d = (0, s.ML)(t),
-        u = (0, r.wn)({ location: n });
-    return i.useMemo(
+s.d(l, { Y: () => o });
+var t = s(192379),
+    i = s(442837),
+    a = s(699516),
+    n = s(372460),
+    r = s(320582);
+let c = [];
+function o(e) {
+    let { userId: l, location: s } = e,
+        o = (0, i.e7)([a.Z], () => a.Z.isFriend(l)),
+        d = (0, r.ML)(l),
+        u = (0, n.wn)({ location: s });
+    return t.useMemo(
         () =>
-            !u || c
-                ? o
+            !u || o
+                ? c
                 : d.map((e) => {
-                      let { applicationId: t } = e;
-                      return t;
+                      let { applicationId: l } = e;
+                      return l;
                   }),
-        [d, c, u]
+        [d, o, u]
     );
 }

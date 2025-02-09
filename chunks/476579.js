@@ -17,8 +17,8 @@ var i = n(161581),
     v = n(537443).f,
     y = n(692994),
     I = n(175440),
-    b = n(865312),
-    T = n(644659),
+    T = n(865312),
+    b = n(644659),
     S = o.PROPER,
     A = o.CONFIGURABLE,
     N = 'ArrayBuffer',
@@ -26,11 +26,11 @@ var i = n(161581),
     R = 'prototype',
     O = 'Wrong length',
     D = 'Wrong index',
-    x = T.getterFor(N),
-    L = T.getterFor(C),
-    P = T.set,
-    w = i[N],
-    M = w,
+    L = b.getterFor(N),
+    x = b.getterFor(C),
+    w = b.set,
+    P = i[N],
+    M = P,
     k = M && M[R],
     U = i[C],
     G = U && U[R],
@@ -68,7 +68,7 @@ var i = n(161581),
         });
     },
     $ = function (e, t, n, i) {
-        var r = L(e),
+        var r = x(e),
             a = h(n),
             s = !!i;
         if (a + t > r.byteLength) throw F(D);
@@ -78,7 +78,7 @@ var i = n(161581),
         return s ? u : j(u);
     },
     ee = function (e, t, n, i, r, a) {
-        var s = L(e),
+        var s = x(e),
             o = h(n),
             l = i(+r),
             u = !!a;
@@ -86,24 +86,24 @@ var i = n(161581),
         for (var c = s.bytes, d = o + s.byteOffset, f = 0; f < t; f++) c[d + f] = l[u ? f : t - f - 1];
     };
 if (s) {
-    var et = S && w.name !== N;
+    var et = S && P.name !== N;
     if (
         !d(function () {
-            w(1);
+            P(1);
         }) ||
         !d(function () {
-            new w(-1);
+            new P(-1);
         }) ||
         d(function () {
-            return new w(), new w(1.5), new w(NaN), 1 !== w.length || (et && !A);
+            return new P(), new P(1.5), new P(NaN), 1 !== P.length || (et && !A);
         })
     ) {
         (M = function (e) {
-            return f(this, k), new w(h(e));
+            return f(this, k), new P(h(e));
         })[R] = k;
-        for (var en, ei = v(w), er = 0; ei.length > er; ) (en = ei[er++]) in M || l(M, en, w[en]);
+        for (var en, ei = v(P), er = 0; ei.length > er; ) (en = ei[er++]) in M || l(M, en, P[en]);
         k.constructor = M;
-    } else et && A && l(w, 'name', N);
+    } else et && A && l(P, 'name', N);
     E && g(G) !== B && E(G, B);
     var ea = new U(new M(2)),
         es = r(G.setInt8);
@@ -126,7 +126,7 @@ if (s) {
     (k = (M = function (e) {
         f(this, k);
         var t = h(e);
-        P(this, {
+        w(this, {
             type: N,
             bytes: V(Z(t), 0),
             byteLength: t
@@ -135,12 +135,12 @@ if (s) {
     })[R]),
         (G = (U = function (e, t, n) {
             f(this, G), f(e, k);
-            var i = x(e),
+            var i = L(e),
                 r = i.byteLength,
                 s = _(t);
             if (s < 0 || s > r) throw F('Wrong offset');
             if (((n = void 0 === n ? r - s : p(n)), s + n > r)) throw F(O);
-            P(this, {
+            w(this, {
                 type: C,
                 buffer: e,
                 byteLength: n,
@@ -149,7 +149,7 @@ if (s) {
             }),
                 a || ((this.buffer = e), (this.byteLength = n), (this.byteOffset = s));
         })[R]),
-        a && (J(M, 'byteLength', x), J(U, 'buffer', L), J(U, 'byteLength', L), J(U, 'byteOffset', L)),
+        a && (J(M, 'byteLength', L), J(U, 'buffer', x), J(U, 'byteLength', x), J(U, 'byteOffset', x)),
         c(G, {
             getInt8: function (e) {
                 return ($(this, 1, e)[0] << 24) >> 24;
@@ -202,8 +202,8 @@ if (s) {
                 ee(this, 8, e, X, t, arguments.length > 2 && arguments[2]);
             }
         });
-b(M, N),
-    b(U, C),
+T(M, N),
+    T(U, C),
     (e.exports = {
         ArrayBuffer: M,
         DataView: U

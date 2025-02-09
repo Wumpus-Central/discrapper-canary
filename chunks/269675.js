@@ -17,13 +17,13 @@ var i = n(200651),
     E = n(730647),
     I = n(772021),
     C = n(396828),
-    N = n(293423),
-    v = n(20967),
+    v = n(293423),
+    N = n(20967),
     T = n(504762),
     S = n(807152),
-    Z = n(176505),
-    A = n(388032),
-    x = n(807859);
+    A = n(176505),
+    Z = n(388032),
+    x = n(414204);
 function b(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([_.Z], () => _.Z.getGuild(t), [t]),
@@ -35,7 +35,7 @@ function b(e) {
         { shouldHideGuildPurchaseEntryPoints: R, restrictionsLoading: j } = (0, m.uP)(t),
         D = null == n || !O || P || j;
     (0, d.Tt)({
-        subsection: A.intl.string(A.t['KzCF//']),
+        subsection: Z.intl.string(Z.t['KzCF//']),
         location: null == n ? void 0 : n.name
     }),
         (0, c.Z)(r.tq ? 'role-subscriptions-overview' : void 0);
@@ -45,12 +45,12 @@ function b(e) {
             o.jg();
         }, []),
         l.useEffect(() => {
-            w && !r.tq && (0, u.M)(t, Z.oC.ROLE_SUBSCRIPTIONS);
+            w && !r.tq && (0, u.M)(t, A.oC.ROLE_SUBSCRIPTIONS);
         }, [t, w]),
         r.tq && w)
     ) {
-        let e = null == n ? v.J.NOT_GUILD_MEMBER : v.J.GUILD_NOT_ELIGIBLE;
-        return (0, i.jsx)(v.z, { errorType: e });
+        let e = null == n ? N.J.NOT_GUILD_MEMBER : N.J.GUILD_NOT_ELIGIBLE;
+        return (0, i.jsx)(N.z, { errorType: e });
     }
     return (0, i.jsxs)('div', {
         className: x.container,
@@ -63,7 +63,7 @@ function b(e) {
                         icon: (0, s.GSL)(C.Z),
                         'aria-hidden': !0
                     }),
-                    (0, i.jsx)(g.Z.Title, { children: A.intl.string(A.t['KzCF//']) })
+                    (0, i.jsx)(g.Z.Title, { children: Z.intl.string(Z.t['KzCF//']) })
                 ]
             }),
             (0, i.jsx)('div', { id: S.v }),
@@ -74,7 +74,7 @@ function b(e) {
                           className: x.scroller,
                           children: (0, i.jsx)('div', {
                               className: x.scrollerContent,
-                              children: D ? (0, i.jsx)(s.$jN, {}) : (0, i.jsx)(N.Z, { guild: n })
+                              children: D ? (0, i.jsx)(s.$jN, {}) : (0, i.jsx)(v.Z, { guild: n })
                           })
                       })
                     : (0, i.jsx)(T.Z, {})

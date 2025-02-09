@@ -63,7 +63,7 @@ class f extends i.Z {
         }
     }
     handleVoiceFilterDownloadCanceled() {
-        s.ZP.stopDownloads(), (0, o.v6)(null);
+        s.ZP.stopVoiceFilterDownloads(), (0, o.v6)(null);
     }
     constructor(...e) {
         super(...e),

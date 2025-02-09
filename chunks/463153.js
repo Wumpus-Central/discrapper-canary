@@ -2,22 +2,22 @@ n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
 var s = n(793030),
-    r = n(388032),
-    l = n(279411),
+    l = n(388032),
+    r = n(908777),
     a = n(258720);
 function o() {
     return (0, i.jsxs)('div', {
-        className: l.container,
+        className: r.container,
         children: [
             (0, i.jsx)('img', {
-                className: l.emptySearchIcon,
+                className: r.emptySearchIcon,
                 src: a,
                 alt: ''
             }),
             (0, i.jsx)(s.xv, {
                 variant: 'text-md/normal',
                 color: 'text-muted',
-                children: r.intl.string(r.t.H217fX)
+                children: l.intl.string(l.t.H217fX)
             })
         ]
     });

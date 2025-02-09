@@ -10,7 +10,7 @@ var i = n(200651),
     u = n(98880),
     m = n(772606),
     p = n(388032),
-    h = n(661630);
+    h = n(316795);
 function x(e) {
     let { context: t, entrypoint: n, title: a, look: x, items: v, sectionName: f, sectionOverallPosition: N } = e,
         C = (0, d.s)('AppLauncherApplicationListViewScreen'),

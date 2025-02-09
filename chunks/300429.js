@@ -78,13 +78,13 @@ function I(e) {
     let { channelId: t, slowmodeType: n } = e;
     return g(t, n);
 }
-function b(e) {
+function T(e) {
     let { channelId: t, slowmodeType: n, cooldownMs: i } = e,
         r = l.Z.getChannel(t);
     if (null == r) return !1;
     h(r, n, 0 === i ? 0 : i + f);
 }
-function T(e) {
+function b(e) {
     let { channels: t } = e;
     [0, 1].forEach((e) => {
         for (let i of t) {
@@ -115,10 +115,10 @@ class A extends (i = r.ZP.Store) {
 d(A, 'displayName', 'SlowmodeStore');
 let N = new A(s.Z, {
     SLOWMODE_RESET_COOLDOWN: I,
-    SLOWMODE_SET_COOLDOWN: b,
+    SLOWMODE_SET_COOLDOWN: T,
     UPLOAD_START: v,
     UPLOAD_FAIL: y,
     UPLOAD_CANCEL_REQUEST: y,
-    CHANNEL_UPDATES: T,
+    CHANNEL_UPDATES: b,
     LOGOUT: S
 });

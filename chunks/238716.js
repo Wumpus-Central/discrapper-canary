@@ -10,7 +10,7 @@ var i = s(200651),
     x = s(853856),
     u = s(117984),
     h = s(388032),
-    k = s(803224);
+    k = s(240135);
 function m(e) {
     let { channelId: n, onClose: s, transitionState: m, heading: p, formTitle: j, allowReset: f = !1 } = e,
         z = (0, c.Dt)(),

@@ -11,7 +11,7 @@ n.d(t, {
     ae: () => y,
     b3: () => f,
     cf: () => S,
-    dr: () => b,
+    dr: () => T,
     fY: () => h,
     iU: () => s,
     l7: () => m,
@@ -69,7 +69,7 @@ function I(e) {
         type: 0
     };
 }
-function b(e) {
+function T(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -94,7 +94,7 @@ function b(e) {
         type: e.type
     };
 }
-function T(e) {
+function b(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -119,7 +119,7 @@ function T(e) {
 function S(e) {
     var t, n, i;
     return {
-        prompts: e.prompts.map(T),
+        prompts: e.prompts.map(b),
         defaultChannelIds: e.default_channel_ids,
         responses: null !== (t = e.responses) && void 0 !== t ? t : [],
         mode: e.mode,

@@ -1,5 +1,5 @@
 n.d(t, {
-    KB: () => b,
+    KB: () => T,
     wD: () => y
 }),
     n(47120);
@@ -20,24 +20,24 @@ var i = n(200651),
 let g = h.Cj.STANDARD_BOX,
     E = void 0,
     [v, y, I] = (0, f.Z)();
-function b(e) {
-    let { isGift: t = !1, giftRecipient: n, giftMessage: f, giftStyle: y, giftingOrigin: I, children: b } = e,
-        { selectedSkuId: T } = (0, p.JL)(),
+function T(e) {
+    let { isGift: t = !1, giftRecipient: n, giftMessage: f, giftStyle: y, giftingOrigin: I, children: T } = e,
+        { selectedSkuId: b } = (0, p.JL)(),
         [S, A] = r.useState(n),
         [N, C] = r.useState(),
         [R, O] = r.useState(!1),
         D = (0, _.pO)(S),
-        x = (0, l.TX)(),
-        { enabled: L } = u.O.useExperiment({ location: 'gift card' }),
-        P = E;
-    D && ((P = x ? h.Cj.SEASONAL_STANDARD_BOX : null != y ? y : g), L && (P = h.Cj.NITROWEEN_STANDARD));
-    let [w, M] = r.useState(P),
+        L = (0, l.TX)(),
+        { enabled: x } = u.O.useExperiment({ location: 'gift card' }),
+        w = E;
+    D && ((w = L ? h.Cj.SEASONAL_STANDARD_BOX : null != y ? y : g), x && (w = h.Cj.NITROWEEN_STANDARD));
+    let [P, M] = r.useState(w),
         k = (0, d.iE)(),
         [U, G] = r.useState(),
         [B, Z] = r.useState(t && (0, _.MY)(S) === _.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == f ? m.intl.string(m.t.ZkOo1d) : f),
         [F, V] = r.useState(void 0),
         [j, H] = r.useState(void 0),
-        Y = (0, _.E5)(T, t),
+        Y = (0, _.E5)(b, t),
         [W, K] = r.useState(!1),
         [z, q] = r.useState(!1),
         [Q, X] = r.useState(),
@@ -76,7 +76,7 @@ function b(e) {
             setEmojiConfetti: H,
             customGiftMessage: B,
             setCustomGiftMessage: Z,
-            selectedGiftStyle: w,
+            selectedGiftStyle: P,
             setSelectedGiftStyle: M,
             sendGiftMessage: J,
             hasSentMessage: W,
@@ -89,6 +89,6 @@ function b(e) {
             selectedGiftingPromotionReward: U,
             setSelectedGiftingPromotionReward: G
         },
-        children: b
+        children: T
     });
 }

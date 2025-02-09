@@ -6,7 +6,7 @@ var i = n(200651),
     o = n(512969),
     l = n(481060),
     u = n(624138),
-    c = n(369455);
+    c = n(544379);
 let d = [18, 18, 16, 16, 14, 12, 10];
 function f(e) {
     var t;
@@ -22,24 +22,24 @@ function _(e, t) {
 let p = (e) => {
     let t,
         n,
-        { backgroundStyle: a = 'always', children: d, icon: p, name: h, ariaLabel: m, className: g, style: E, to: v, onClick: y, selected: I = !1, ...b } = e,
-        T = (0, o.k6)();
+        { backgroundStyle: a = 'always', children: d, icon: p, name: h, ariaLabel: m, className: g, style: E, to: v, onClick: y, selected: I = !1, ...T } = e,
+        b = (0, o.k6)();
     null == p && null != h && (n = f((t = (0, u.Zg)(h))));
     let S = r.useCallback(
             (e) => {
                 if (null == v);
-                else if ('string' == typeof v) T.push(v);
+                else if ('string' == typeof v) b.push(v);
                 else {
                     let { pathname: e = '', state: t } = v;
-                    T.push(e, t);
+                    b.push(e, t);
                 }
                 null != y && y(e);
             },
-            [T, v, y]
+            [b, v, y]
         ),
         A = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsxs)(l.P3F, {
-        ...b,
+        ...T,
         onClick: S,
         className: s()(g, c.wrapper, { [c.selected]: I }),
         'aria-label': null != m && '' !== m ? m : null != h ? h : '',

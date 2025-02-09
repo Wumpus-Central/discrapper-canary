@@ -20,13 +20,13 @@ e.exports = function (e, t, n) {
         v,
         y,
         I,
-        b,
-        T = n && n.that,
+        T,
+        b = n && n.that,
         S = !!(n && n.AS_ENTRIES),
         A = !!(n && n.IS_RECORD),
         N = !!(n && n.IS_ITERATOR),
         C = !!(n && n.INTERRUPTED),
-        R = i(t, T),
+        R = i(t, b),
         O = function (e) {
             return m && f(m, 'normal', e), new p(!0, e);
         },
@@ -43,9 +43,9 @@ e.exports = function (e, t, n) {
         }
         m = c(e, g);
     }
-    for (I = A ? e.next : m.next; !(b = r(I, m)).done; ) {
+    for (I = A ? e.next : m.next; !(T = r(I, m)).done; ) {
         try {
-            y = D(b.value);
+            y = D(T.value);
         } catch (e) {
             f(m, 'throw', e);
         }

@@ -2,17 +2,17 @@ n.d(t, { Z: () => a });
 var i = n(200651);
 n(192379);
 var s = n(481060),
-    r = n(921801),
-    l = n(300530);
+    l = n(921801),
+    r = n(492010);
 function a(e) {
     let { children: t, title: n, description: a, webSetting: o } = e;
-    return (0, i.jsx)(r.F, {
+    return (0, i.jsx)(l.F, {
         setting: o,
         children: (0, i.jsxs)('div', {
-            className: l.category,
+            className: r.category,
             children: [
                 (0, i.jsxs)('div', {
-                    className: l.categoryHeader,
+                    className: r.categoryHeader,
                     children: [
                         (0, i.jsx)(s.X6q, {
                             variant: 'heading-lg/semibold',
@@ -29,10 +29,10 @@ function a(e) {
                     ]
                 }),
                 (0, i.jsx)('div', {
-                    className: l.categoryContent,
+                    className: r.categoryContent,
                     children: t
                 }),
-                (0, i.jsx)(s.$i$, { className: l.categoryDivider })
+                (0, i.jsx)(s.$i$, { className: r.categoryDivider })
             ]
         })
     });

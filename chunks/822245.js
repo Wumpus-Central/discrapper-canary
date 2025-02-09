@@ -58,7 +58,7 @@ function I(e) {
         g.track(e),
         g.compute();
 }
-function b() {
+function T() {
     var e, t;
     let n = null !== (t = null === (e = d.Z.frecencyWithoutFetchingLatest.applicationFrecency) || void 0 === e ? void 0 : e.applications) && void 0 !== t ? t : {};
     g.overwriteHistory(
@@ -69,9 +69,9 @@ function b() {
         m.pendingUsages
     );
 }
-class T extends (i = s.ZP.PersistedStore) {
+class b extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (m = e), this.waitFor(c.ZP), this.syncWith([d.Z], b);
+        null != e && (m = e), this.waitFor(c.ZP), this.syncWith([d.Z], T);
     }
     getState() {
         return m;
@@ -90,8 +90,8 @@ class T extends (i = s.ZP.PersistedStore) {
         return g.frequently;
     }
 }
-p(T, 'displayName', 'ApplicationFrecencyStore'), p(T, 'persistKey', 'ApplicationFrecency');
-let S = new T(o.Z, {
+p(b, 'displayName', 'ApplicationFrecencyStore'), p(b, 'persistKey', 'ApplicationFrecency');
+let S = new b(o.Z, {
     APPLICATION_COMMAND_USED: v,
     EMBEDDED_ACTIVITY_OPEN: y,
     USER_SETTINGS_PROTO_UPDATE: E

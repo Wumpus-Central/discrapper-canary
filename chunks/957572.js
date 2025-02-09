@@ -5,7 +5,7 @@ var r = n(481060),
     s = n(847033),
     l = n(544978),
     o = n(388032),
-    a = n(224430);
+    a = n(28604);
 function c() {
     let { selectedTab: e, isPhantomPreview: t, handlePreviewDismiss: n } = (0, s.m)();
     return t

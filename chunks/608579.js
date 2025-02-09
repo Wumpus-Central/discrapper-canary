@@ -18,24 +18,24 @@ var i = n(200651),
     v = n(742956),
     y = n(346790),
     I = n(49308),
-    b = n(117652),
-    T = n(126982),
+    T = n(117652),
+    b = n(126982),
     S = n(981631),
     A = n(302800),
     N = n(231338),
-    C = n(484495);
+    C = n(135259);
 function R(e) {
     var t;
-    let { onClose: n, onComplete: a, onStepChange: R, transitionState: O, loadId: D, skuId: x, isGift: L = !1, giftRecipient: P, giftMessage: w, giftingOrigin: M, analyticsLocations: k, returnRef: U } = e,
+    let { onClose: n, onComplete: a, onStepChange: R, transitionState: O, loadId: D, skuId: L, isGift: x = !1, giftRecipient: w, giftMessage: P, giftingOrigin: M, analyticsLocations: k, returnRef: U } = e,
         { analyticsLocations: G } = (0, d.ZP)([...k, c.Z.COLLECTIBLES_PAYMENT_MODAL]),
         B = r.useRef(new o.qA()),
         [Z, F] = r.useState(null),
         [V, j] = r.useState(!1),
-        H = r.useMemo(() => (0, A.UY)(x), [x]),
+        H = r.useMemo(() => (0, A.UY)(L), [L]),
         Y = (0, l.Wu)([f.Z], () => f.Z.recommendedGiftSkuIds, []),
-        W = null != x ? [x] : Y,
+        W = null != L ? [L] : Y,
         K = null !== (t = W[0]) && void 0 !== t ? t : null,
-        z = null != x && _.Rm.has(x),
+        z = null != L && _.Rm.has(L),
         q = r.useCallback(() => {
             j(!0), null == a || a();
         }, [a]),
@@ -51,20 +51,20 @@ function R(e) {
             [n]
         ),
         X = (e, t, n) =>
-            L
+            x
                 ? (0, i.jsx)(v.Z, {
                       step: n,
                       onClose: () => t(!1),
                       giftingOrigin: M
                   })
-                : (0, i.jsx)(T.Z, {
+                : (0, i.jsx)(b.Z, {
                       step: n,
                       onClose: () => t(!1)
                   }),
         J = r.useMemo(
             () => [
                 E.WA,
-                ...(L ? [b.Dd] : []),
+                ...(x ? [T.Dd] : []),
                 y.n,
                 ...E.yp,
                 E.wo,
@@ -83,7 +83,7 @@ function R(e) {
                     }
                 }
             ],
-            [G, Z, H, L]
+            [G, Z, H, x]
         );
     return (0, i.jsxs)(d.Gt, {
         value: G,
@@ -106,13 +106,13 @@ function R(e) {
                 stepConfigs: J,
                 applicationId: S.XAJ,
                 skuIDs: W,
-                isGift: L,
+                isGift: x,
                 activeSubscription: null,
                 purchaseType: N.GZ.ONE_TIME,
                 children: (0, i.jsx)(p.KB, {
-                    isGift: L,
-                    giftRecipient: P,
-                    giftMessage: w,
+                    isGift: x,
+                    giftRecipient: w,
+                    giftMessage: P,
                     giftingOrigin: M,
                     children: (0, i.jsx)(g.PaymentModal, {
                         onClose: Q,

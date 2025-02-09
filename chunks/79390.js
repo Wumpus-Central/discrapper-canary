@@ -1,8 +1,8 @@
 n.d(t, {
     D$: () => R,
-    N4: () => w,
+    N4: () => P,
     UI: () => N,
-    Uu: () => b,
+    Uu: () => T,
     _N: () => C,
     cS: () => O,
     cZ: () => M,
@@ -10,7 +10,7 @@ n.d(t, {
     eQ: () => A,
     fw: () => S,
     uY: () => D,
-    x9: () => L
+    x9: () => x
 }),
     n(757143),
     n(47120),
@@ -34,14 +34,14 @@ var i = n(392711),
     v = n(489887),
     y = n(981631),
     I = n(388032);
-function b() {
+function T() {
     return {
         text: void 0,
         image: void 0,
-        localCreationAnswerId: T()
+        localCreationAnswerId: b()
     };
 }
-function T() {
+function b() {
     return (0, a.Z)();
 }
 function S(e) {
@@ -74,10 +74,10 @@ function D(e, t) {
     let i = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
     return t === s.C.DEFAULT && null != e.image && (null == i || 0 === i.length);
 }
-function x(e) {
+function L(e) {
     return new Date(Date.now() + e * g.Z.Millis.HOUR).toISOString();
 }
-function L(e) {
+function x(e) {
     var t;
     if (null == e) return;
     let n =
@@ -104,21 +104,21 @@ function L(e) {
                             poll_media: a
                         };
                     }),
-        i = (null == e ? void 0 : e.duration) != null ? x(e.duration) : '0';
+        i = (null == e ? void 0 : e.duration) != null ? L(e.duration) : '0';
     return {
         ...e,
         expiry: i,
         answers: n
     };
 }
-function P(e, t) {
+function w(e, t) {
     var n, i, r, a;
     let s = null !== (a = null === (r = e.embeds[0]) || void 0 === r ? void 0 : null === (i = r.fields) || void 0 === i ? void 0 : null === (n = i.find((e) => 'poll_question_text' === e.rawName)) || void 0 === n ? void 0 : n.rawValue) && void 0 !== a ? a : '';
     return null != t ? (0, o.aF)(s, t) : s;
 }
-function w(e) {
+function P(e) {
     let t = (0, d.ZH)(e),
-        n = P(e, v.Dv);
+        n = w(e, v.Dv);
     return I.intl.format(I.t.Vn97KS, {
         username: t.nick,
         title: n

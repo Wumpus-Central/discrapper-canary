@@ -9,7 +9,7 @@ var r = n(120356),
     u = n(125988),
     c = n(998502),
     d = n(388032),
-    f = n(638079);
+    f = n(609834);
 let _ = c.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
     p = (e) => {
         let { item: t, user: n, isHighlighted: r = !1, isPurchased: c = !1, avatarSize: p = o.EFr.SIZE_152, avatarPlaceholderSrc: h } = e,

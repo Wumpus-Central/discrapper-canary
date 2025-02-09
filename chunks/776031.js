@@ -30,8 +30,8 @@ function y(e, t) {
     );
 }
 function I(e, t) {
-    let { preset: n, resolution: I, fps: b } = (0, a.cj)([c.Z], () => c.Z.getState()),
-        T = (0, a.e7)([_.Z], () => _.Z.getGoLiveSource()),
+    let { preset: n, resolution: I, fps: T } = (0, a.cj)([c.Z], () => c.Z.getState()),
+        b = (0, a.e7)([_.Z], () => _.Z.getGoLiveSource()),
         S = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
         A = (0, a.e7)([f.Z], () => {
             var t;
@@ -42,7 +42,7 @@ function I(e, t) {
         R = r.useCallback(
             (e, n, i, r) => {
                 if (e) {
-                    if (null != T) {
+                    if (null != b) {
                         let e = {
                             qualityOptions: {
                                 preset: g.tI.PRESET_CUSTOM,
@@ -51,15 +51,15 @@ function I(e, t) {
                             },
                             context: E.Yn.STREAM
                         };
-                        null != T.desktopSource
+                        null != b.desktopSource
                             ? (e.desktopSettings = {
-                                  sourceId: T.desktopSource.id,
+                                  sourceId: b.desktopSource.id,
                                   sound: !0
                               })
-                            : null != T.cameraSource &&
+                            : null != b.cameraSource &&
                               (e.cameraSettings = {
-                                  videoDeviceGuid: T.cameraSource.videoDeviceGuid,
-                                  audioDeviceGuid: T.cameraSource.audioDeviceGuid
+                                  videoDeviceGuid: b.cameraSource.videoDeviceGuid,
+                                  audioDeviceGuid: b.cameraSource.audioDeviceGuid
                               }),
                             o.Z.setGoLiveSource(e);
                     }
@@ -70,10 +70,10 @@ function I(e, t) {
                         objectType: r
                     });
             },
-            [t, N, T]
+            [t, N, b]
         );
     if (null == e) return null;
-    let O = n === g.tI.PRESET_DOCUMENTS ? g.ws.FPS_30 : b,
+    let O = n === g.tI.PRESET_DOCUMENTS ? g.ws.FPS_30 : T,
         D = g.af.map((e) => {
             let { value: t, label: n } = e,
                 r = (0, u.Z)(g.tI.PRESET_CUSTOM, I, t, S, A, C);
@@ -83,13 +83,13 @@ function I(e, t) {
                     group: 'stream-settings-fps',
                     id: 'stream-settings-fps-'.concat(t),
                     label: n,
-                    checked: t === b,
+                    checked: t === T,
                     action: () => R(r, I, t, m.Qqv.RESOLUTION)
                 },
                 'stream-settings-fps-'.concat(t)
             );
         }),
-        x = g.km.map((e) => {
+        L = g.km.map((e) => {
             let { value: t, label: n } = e,
                 r = (0, u.Z)(g.tI.PRESET_CUSTOM, t, O, S, A, C);
             return (0, i.jsx)(
@@ -112,7 +112,7 @@ function I(e, t) {
             }),
             (0, i.jsx)(s.kSQ, {
                 label: v.intl.string(v.t.rHyPXl),
-                children: x
+                children: L
             })
         ]
     });

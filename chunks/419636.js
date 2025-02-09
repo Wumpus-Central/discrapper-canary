@@ -2,11 +2,11 @@ n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var s = n(481060),
-    r = n(299379),
-    l = n(447293),
+    l = n(299379),
+    r = n(447293),
     a = n(58839),
     o = n(981631),
-    c = n(274497);
+    c = n(322096);
 let d = { offset: { top: -8 } };
 function u() {
     return (0, i.jsxs)('div', {
@@ -17,7 +17,7 @@ function u() {
                 tabIndex: -1,
                 rel: 'author',
                 title: 'Twitter',
-                href: (0, r.Z)(o.RK.TWITTER),
+                href: (0, l.Z)(o.RK.TWITTER),
                 className: c.link,
                 focusProps: d,
                 children: (0, i.jsx)(s.TAi, {
@@ -80,7 +80,7 @@ function u() {
                 href: o.fK7.TIKTOK_URL,
                 className: c.link,
                 focusProps: d,
-                children: (0, i.jsx)(l.Z, {
+                children: (0, i.jsx)(r.Z, {
                     width: 16,
                     height: 16,
                     foreground: c.foreground,

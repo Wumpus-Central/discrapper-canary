@@ -28,8 +28,8 @@ let m = new Map(),
     v = new Map(),
     y = [],
     I = m,
-    b = g,
-    T = E,
+    T = g,
+    b = E,
     S = v,
     A = y,
     N = null,
@@ -37,31 +37,31 @@ let m = new Map(),
     R = new Set(),
     O = new Map(),
     D = new Map(),
-    x = {},
-    L = (e) => {
+    L = {},
+    x = (e) => {
         let { skuId: t } = e;
         (R = new Set(R)).add(t), (O = new Map(O)).delete(t), (D = new Map(D)).delete(t);
     },
-    P = (e) => {
+    w = (e) => {
         let { skuId: t, error: n } = e;
         (R = new Set(R)).delete(t), (O = new Map(O)).set(t, n), (D = new Map(D)).set(t, Date.now());
     },
-    w = (e) => {
+    P = (e) => {
         let { skuId: t, product: n } = e;
-        b.set(t, n), (R = new Set(R)).delete(t), (O = new Map(O)).delete(t), (D = new Map(D)).delete(t);
+        T.set(t, n), (R = new Set(R)).delete(t), (O = new Map(O)).delete(t), (D = new Map(D)).delete(t);
     },
     M = (e) => {
-        (C = !0), (i = void 0), (a = void 0), (x = e.options);
+        (C = !0), (i = void 0), (a = void 0), (L = e.options);
     },
     k = (e) => {
         let { error: t } = e;
-        (I = m), (b = g), (A = y), (C = !1), (R = new Set()), (i = t), (a = Date.now());
+        (I = m), (T = g), (A = y), (C = !1), (R = new Set()), (i = t), (a = Date.now());
     },
     U = (e) => {
-        0 === e.categories.length ? ((I = m), (b = g)) : (0, o.isEqual)([...I.values()], e.categories) || ((I = new Map(e.categories.map((e) => [e.skuId, e]))), (S = new Map(e.categories.map((e) => [e.storeListingId, e]))), (b = new Map((0, _.Cs)(I, !0).map((e) => [e.skuId, e]))), (T = new Map((0, _.Cs)(I, !1).map((e) => [e.storeListingId, e])))), B(e.categories, b), (r = Date.now()), (C = !1), (i = void 0), (a = void 0);
+        0 === e.categories.length ? ((I = m), (T = g)) : (0, o.isEqual)([...I.values()], e.categories) || ((I = new Map(e.categories.map((e) => [e.skuId, e]))), (S = new Map(e.categories.map((e) => [e.storeListingId, e]))), (T = new Map((0, _.Cs)(I, !0).map((e) => [e.skuId, e]))), (b = new Map((0, _.Cs)(I, !1).map((e) => [e.storeListingId, e])))), B(e.categories, T), (r = Date.now()), (C = !1), (i = void 0), (a = void 0);
     },
     G = (e) => {
-        0 !== e.shopHome.categories.length && 0 === I.size && ((I = new Map(e.shopHome.categories.map((e) => [e.skuId, e]))), (b = new Map((0, _.Cs)(I, !0).map((e) => [e.skuId, e]))));
+        0 !== e.shopHome.categories.length && 0 === I.size && ((I = new Map(e.shopHome.categories.map((e) => [e.skuId, e]))), (T = new Map((0, _.Cs)(I, !0).map((e) => [e.skuId, e]))));
     },
     B = (e, t) => {
         if (0 === e.length) {
@@ -81,7 +81,7 @@ let m = new Map(),
         }
     },
     Z = () => {
-        (I = m), (b = g), (A = y), (r = void 0), (C = !1), (R = new Set()), (i = void 0), (a = void 0), (x = {});
+        (I = m), (T = g), (A = y), (r = void 0), (C = !1), (R = new Set()), (i = void 0), (a = void 0), (L = {});
     },
     F = () => {
         if (!c.Z.hasLoadedExperiments) return;
@@ -108,13 +108,13 @@ class V extends (s = l.ZP.Store) {
         return r;
     }
     get lastFetchOptions() {
-        return x;
+        return L;
     }
     get categories() {
         return I;
     }
     get products() {
-        return b;
+        return T;
     }
     get recommendedGiftSkuIds() {
         return A;
@@ -123,7 +123,7 @@ class V extends (s = l.ZP.Store) {
         return null != e ? I.get(e) : void 0;
     }
     getProduct(e) {
-        return null != e ? b.get(e) : void 0;
+        return null != e ? T.get(e) : void 0;
     }
     getProductFetchError(e) {
         return null != e ? O.get(e) : void 0;
@@ -132,7 +132,7 @@ class V extends (s = l.ZP.Store) {
         return null != e ? D.get(e) : void 0;
     }
     getProductByStoreListingId(e) {
-        return null != e ? T.get(e) : void 0;
+        return null != e ? b.get(e) : void 0;
     }
     getCategoryByStoreListingId(e) {
         return null != e ? S.get(e) : void 0;
@@ -147,9 +147,9 @@ let j = new V(u.Z, {
     COLLECTIBLES_CATEGORIES_FETCH: M,
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: U,
     COLLECTIBLES_CATEGORIES_FETCH_FAILURE: k,
-    COLLECTIBLES_PRODUCT_FETCH: L,
-    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: w,
-    COLLECTIBLES_PRODUCT_FETCH_FAILURE: P,
+    COLLECTIBLES_PRODUCT_FETCH: x,
+    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: P,
+    COLLECTIBLES_PRODUCT_FETCH_FAILURE: w,
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: G,
     LOGOUT: Z
 });

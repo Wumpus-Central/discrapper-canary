@@ -18,11 +18,11 @@ var i = n(200651),
     v = n(563132),
     y = n(632580),
     I = n(919778),
-    b = n(612853),
-    T = n(981631),
-    S = n(374172);
+    T = n(612853),
+    b = n(981631),
+    S = n(87877);
 function A(e) {
-    let { premiumSubscription: t, setPurchaseState: n, onBack: a, onNext: A, legalTermsNodeRef: N, flashLegalTerms: C, invoiceError: R, planError: O, onPurchaseError: D, baseAnalyticsData: x, flowStartTime: L, trialId: P, planGroup: w, analyticsLocation: M, purchaseTokenAuthState: k, openInvoiceId: U, metadata: G, backButtonEligible: B, disablePurchase: Z, isTrial: F = !1 } = e,
+    let { premiumSubscription: t, setPurchaseState: n, onBack: a, onNext: A, legalTermsNodeRef: N, flashLegalTerms: C, invoiceError: R, planError: O, onPurchaseError: D, baseAnalyticsData: L, flowStartTime: x, trialId: w, planGroup: P, analyticsLocation: M, purchaseTokenAuthState: k, openInvoiceId: U, metadata: G, backButtonEligible: B, disablePurchase: Z, isTrial: F = !1 } = e,
         { selectedPlan: V, priceOptions: j, setHasAcceptedTerms: H, setPurchaseError: Y, purchaseType: W, paymentSourceId: K, paymentSources: z, selectedSkuId: q, skusById: Q, skuPricePreviewsById: X, referralCode: J, contextMetadata: $, invoicePreview: ee, inReverseTrial: et } = (0, v.JL)(),
         { isGift: en, selectedGiftStyle: ei, customGiftMessage: er, emojiConfetti: ea, soundEffect: es, giftRecipient: eo, selectedGiftingPromotionReward: el } = (0, E.wD)(),
         eu = (0, c.a5)(V),
@@ -30,18 +30,18 @@ function A(e) {
         ed = {};
     (ed.gift_style = ei), (ed.reward_sku_ids = eu && (null == el ? void 0 : el.skuId) != null ? [null == el ? void 0 : el.skuId] : []), ec === m.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (s()(null != eo, 'Gift recipient must be set at purchase review step for these gift options.'), (ed.recipient_id = eo.id), (ed.custom_message = er), (ed.emoji_id = null == ea ? void 0 : ea.id), (ed.emoji_name = (null == ea ? void 0 : ea.id) == null ? (null == ea ? void 0 : ea.surrogates) : void 0), (ed.sound_id = null == es ? void 0 : es.soundId));
     let ef = null == V ? void 0 : V.id,
-        e_ = (0, I.sE)(P, j.paymentSourceId, ef),
+        e_ = (0, I.sE)(w, j.paymentSourceId, ef),
         { analyticsLocations: ep } = (0, l.ZP)(),
         eh = null != K ? z[K] : null,
         [em, eg] = r.useState(e_),
         [eE, ev] = r.useState(!1),
         { hasEntitlements: ey } = (0, _.H)(ef, en),
         eI = (0, g.Ap)(j.paymentSourceId),
-        eb = ey || e_,
-        eT = (0, d.U)(),
+        eT = ey || e_,
+        eb = (0, d.U)(),
         eS = null,
         eA = null;
-    if (W === T.GZQ.ONE_TIME) {
+    if (W === b.GZQ.ONE_TIME) {
         var eN;
         s()(null != q, 'SKU must be selected for one-time purchases'), (eS = null !== (eN = Q[q]) && void 0 !== eN ? eN : null), s()(null != eS, 'SKU must exist and be fetched.');
         let e = X[q],
@@ -57,16 +57,16 @@ function A(e) {
                 hasRedirectURL: eE,
                 setHasRedirectURL: ev,
                 isGift: en,
-                baseAnalyticsData: x,
+                baseAnalyticsData: L,
                 analyticsLocation: M,
                 analyticsLocations: ep,
-                flowStartTime: L,
+                flowStartTime: x,
                 subscriptionPlan: V,
-                planGroup: w,
-                trialId: P,
+                planGroup: P,
+                trialId: w,
                 priceOptions: j,
                 paymentSource: eh,
-                isPrepaidPaymentPastDue: eT,
+                isPrepaidPaymentPastDue: eb,
                 openInvoiceId: U,
                 premiumSubscription: t,
                 onNext: A,
@@ -81,8 +81,8 @@ function A(e) {
             });
         },
         eR = {
-            baseAnalyticsData: x,
-            flowStartTime: L,
+            baseAnalyticsData: L,
+            flowStartTime: x,
             makePurchase: eC,
             onNext: A,
             onPurchaseError: D,
@@ -99,7 +99,7 @@ function A(e) {
             let { makePurchase: e } = eO.current;
             e_ && !en && null == t && e();
         }, [e_, en, t]);
-    let eD = null != U || (W === T.GZQ.ONE_TIME && !en);
+    let eD = null != U || (W === b.GZQ.ONE_TIME && !en);
     return e_
         ? null
         : (0, i.jsxs)(o.mzw, {
@@ -114,15 +114,15 @@ function A(e) {
                       isSubmitting: em,
                       premiumSubscription: t,
                       isGift: en,
-                      planGroup: w,
+                      planGroup: P,
                       isPrepaid: eI,
                       isTrial: F,
                       makePurchase: eC,
-                      needsPaymentSource: null == eh && !eb,
+                      needsPaymentSource: null == eh && !eT,
                       onNext: A,
                       inReverseTrial: et
                   }),
-                  (0, i.jsx)(b.Z, {}),
+                  (0, i.jsx)(T.Z, {}),
                   B && !eD
                       ? (0, i.jsx)('div', {
                             className: S.back,

@@ -5,7 +5,7 @@ var i = n(200651),
     s = n.n(a),
     o = n(530892),
     l = n.n(o),
-    u = n(943361);
+    u = n(929949);
 let c = r.forwardRef(function (e, t) {
         let { as: n = 'div', gap: r = 8, direction: a = 'vertical', align: o = 'stretch', justify: l = 'start', padding: c = 0, style: _, className: p, children: h, ...m } = e;
         return (0, i.jsx)(n, {

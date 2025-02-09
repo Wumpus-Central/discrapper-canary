@@ -354,21 +354,21 @@ function I(e, t) {
     let a = i[n.layoutId];
     return null != a && t(n, a);
 }
-function b(e) {
+function T(e) {
     let { widgetId: t, anchor: n, size: i, opacity: r } = e;
     return I(t, (e, t) => R(e, n, i, r));
 }
-function T(e) {
+function b(e) {
     let { widgetId: t } = e;
     return I(t, (e, t) => S(t, e.id));
 }
 function S(e, t) {
-    let n = w(e);
+    let n = P(e);
     n.sort((e, t) => e.zIndex - t.zIndex);
     let i = n.findIndex((e) => e.id === t);
     if (i === n.length - 1) return !1;
     n.push(n.splice(i, 1)[0]);
-    for (let e = 0; e < n.length; e++) L(n[e], e);
+    for (let e = 0; e < n.length; e++) x(n[e], e);
     return !0;
 }
 function A(e) {
@@ -392,7 +392,7 @@ function N(e, t) {
 function C(e) {
     let { widgetId: t } = e;
     return I(t, (e, t) => {
-        P(e);
+        w(e);
     });
 }
 function R(e, t, n, i) {
@@ -434,7 +434,7 @@ function D(e) {
             [n.id]: n.set('widgets', [])
         });
 }
-function x(e) {
+function L(e) {
     let { widgetConfigs: t } = e;
     t.forEach((e) => {
         let t = new _.Z(e),
@@ -452,19 +452,19 @@ function x(e) {
         };
     });
 }
-function L(e, t) {
+function x(e, t) {
     r = {
         ...r,
         [e.id]: e.set('zIndex', t)
     };
 }
-function P(e) {
+function w(e) {
     r = {
         ...r,
         [e.id]: e.set('pinned', !e.pinned)
     };
 }
-function w(e) {
+function P(e) {
     let t = [];
     return (
         e.widgets.forEach((e) => {
@@ -728,10 +728,10 @@ m(G, 'displayName', 'LayoutStore'),
 let B = new G(d.Z, {
     LAYOUT_CREATE: v,
     LAYOUT_SET_PINNED: C,
-    LAYOUT_UPDATE_WIDGET: b,
-    LAYOUT_SET_TOP_WIDGET: T,
+    LAYOUT_UPDATE_WIDGET: T,
+    LAYOUT_SET_TOP_WIDGET: b,
     LAYOUT_DELETE_WIDGET: O,
     LAYOUT_DELETE_ALL_WIDGETS: D,
-    LAYOUT_CREATE_WIDGETS: x,
+    LAYOUT_CREATE_WIDGETS: L,
     LAYOUT_SET_WIDGET_META: A
 });

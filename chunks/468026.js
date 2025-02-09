@@ -12,22 +12,22 @@ var r = n(120356),
     f = n(600164),
     _ = n(540059),
     p = n(388032),
-    h = n(222263);
+    h = n(771092);
 let m = (e) => {
     let t,
         n,
         r,
-        { body: m, cancelText: g, className: E, confirmColor: v, confirmText: y = p.intl.string(p.t.BddRzc), secondaryConfirmText: I, onCancel: b, onClose: T, onConfirm: S, onConfirmSecondary: A, title: N, transitionState: C, titleClassName: R } = e,
+        { body: m, cancelText: g, className: E, confirmColor: v, confirmText: y = p.intl.string(p.t.BddRzc), secondaryConfirmText: I, onCancel: T, onClose: b, onConfirm: S, onConfirmSecondary: A, title: N, transitionState: C, titleClassName: R } = e,
         O = (0, _.Q3)('ConfirmModal'),
         D = O ? s.zx.Sizes.MEDIUM : s.zx.Sizes.LARGE,
-        x = () => {
-            null == T || T(), null == b || b();
+        L = () => {
+            null == b || b(), null == T || T();
         },
-        L = (e) => {
-            null != e && e.preventDefault(), null == T || T(), null == S || S();
+        x = (e) => {
+            null != e && e.preventDefault(), null == b || b(), null == S || S();
         },
-        P = () => {
-            null == T || T(), null == A || A();
+        w = () => {
+            null == b || b(), null == A || A();
         };
     return (
         null != g &&
@@ -36,7 +36,7 @@ let m = (e) => {
                 type: 'button',
                 size: D,
                 color: s.zx.Colors.PRIMARY,
-                onClick: x,
+                onClick: L,
                 className: h.secondaryButton,
                 children: g
             })),
@@ -53,7 +53,7 @@ let m = (e) => {
         null != I &&
             '' !== I &&
             (r = (0, i.jsx)(o.P, {
-                onClick: P,
+                onClick: w,
                 className: h.minorContainer,
                 children: (0, i.jsx)(c.x, {
                     className: h.secondaryAction,
@@ -67,7 +67,7 @@ let m = (e) => {
             className: a()(E, h.container),
             'aria-label': N,
             children: (0, i.jsxs)('form', {
-                onSubmit: L,
+                onSubmit: x,
                 className: h.form,
                 children: [
                     (0, i.jsx)(u.xB, {

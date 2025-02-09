@@ -12,18 +12,18 @@ var r = n(442837),
     f = n(981631),
     _ = n(474936),
     p = n(388032),
-    h = n(318411);
+    h = n(896247);
 let m = function (e) {
     let t, n, m, g;
-    let { subscriptionPlan: E, isGift: v, isTrial: y, isEmbeddedIAP: I, renewalInvoice: b, paymentSourceType: T, hide: S, purchaseType: A, productLine: N, basePrice: C, currentSubscription: R } = e,
+    let { subscriptionPlan: E, isGift: v, isTrial: y, isEmbeddedIAP: I, renewalInvoice: T, paymentSourceType: b, hide: S, purchaseType: A, productLine: N, basePrice: C, currentSubscription: R } = e,
         O = (0, r.e7)([s.ZP], () => s.ZP.inReverseTrial());
     if (S) return null;
     let D = null == e.planGroup ? [] : e.planGroup;
-    if (null != b) {
-        let e = u.ZP.getIntervalForInvoice(b);
-        (t = e.intervalType), (n = e.intervalCount), (m = (0, c.og)((0, c.T4)(b.total, b.currency), t, n)), (g = (0, c.og)((0, c.T4)(b.subtotal, b.currency), t, n));
+    if (null != T) {
+        let e = u.ZP.getIntervalForInvoice(T);
+        (t = e.intervalType), (n = e.intervalCount), (m = (0, c.og)((0, c.T4)(T.total, T.currency), t, n)), (g = (0, c.og)((0, c.T4)(T.subtotal, T.currency), t, n));
     } else null != E && ((t = E.interval), (n = E.intervalCount));
-    let x = (0, a.K)({
+    let L = (0, a.K)({
             purchaseType: A || f.GZQ.SUBSCRIPTION,
             plan: E,
             premiumSubscription: null == R ? null : R,
@@ -31,28 +31,28 @@ let m = function (e) {
             planGroup: D,
             isPrepaidPaymentSource: !1
         }),
-        L = p.intl.format(p.t.Y2Rkqa, {
-            primaryText: x,
+        x = p.intl.format(p.t.Y2Rkqa, {
+            primaryText: L,
             paidURL: f.EYA.PAID_TERMS
         }),
-        P = p.intl.format(p.t.H2uH5e, {
-            primaryText: x,
+        w = p.intl.format(p.t.H2uH5e, {
+            primaryText: L,
             paidURL: f.EYA.PAID_TERMS
         }),
-        w = '',
+        P = '',
         M = '';
     if (I) {
-        if (null != m && (null == b ? void 0 : b.subscriptionPeriodEnd) != null) w = p.intl.format(p.t['2VPTa2'], { subtotalRate: g });
+        if (null != m && (null == T ? void 0 : T.subscriptionPeriodEnd) != null) P = p.intl.format(p.t['2VPTa2'], { subtotalRate: g });
         else
             switch (t) {
                 case _.rV.MONTH:
-                    w = 1 === n ? p.intl.format(p.t['+ywPmZ'], {}) : p.intl.format(p.t.oBwZfn, { intervalCount: n });
+                    P = 1 === n ? p.intl.format(p.t['+ywPmZ'], {}) : p.intl.format(p.t.oBwZfn, { intervalCount: n });
                     break;
                 case _.rV.YEAR:
-                    w = p.intl.format(p.t.y9gsX1, {});
+                    P = p.intl.format(p.t.y9gsX1, {});
                     break;
                 case void 0:
-                    (M = L), (w = p.intl.format(p.t.UxGFHx, {}));
+                    (M = x), (P = p.intl.format(p.t.UxGFHx, {}));
                     break;
                 default:
                     throw Error('Unexpected interval: '.concat(t));
@@ -60,24 +60,24 @@ let m = function (e) {
     } else if (A === f.GZQ.ONE_TIME)
         switch (N) {
             case f.POd.COLLECTIBLES:
-                (M = L), (w = v ? p.intl.format(p.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS }) : p.intl.format(p.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS }));
+                (M = x), (P = v ? p.intl.format(p.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS }) : p.intl.format(p.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS }));
                 break;
             case f.POd.GUILD_PRODUCT:
-                (M = L), (w = p.intl.format(p.t['GEAQ+v'], { paidURL: f.EYA.PAID_TERMS }));
+                (M = x), (P = p.intl.format(p.t['GEAQ+v'], { paidURL: f.EYA.PAID_TERMS }));
                 break;
             default:
-                (M = P), (w = p.intl.string(p.t['9/siSU']));
+                (M = w), (P = p.intl.string(p.t['9/siSU']));
         }
     else if (null == E || v)
-        switch ((v && (M = L), t)) {
+        switch ((v && (M = x), t)) {
             case _.rV.MONTH:
-                (w = v ? p.intl.string(p.t.IjNapq) : p.intl.string(p.t['/sGXPj'])), (w = v ? p.intl.string(p.t.IjNapq) : 1 === n ? p.intl.string(p.t['/sGXPj']) : p.intl.formatToPlainString(p.t.Fqjiho, { intervalCount: n }));
+                (P = v ? p.intl.string(p.t.IjNapq) : p.intl.string(p.t['/sGXPj'])), (P = v ? p.intl.string(p.t.IjNapq) : 1 === n ? p.intl.string(p.t['/sGXPj']) : p.intl.formatToPlainString(p.t.Fqjiho, { intervalCount: n }));
                 break;
             case _.rV.YEAR:
-                w = v ? p.intl.string(p.t.vAfbGx) : p.intl.string(p.t.IGzFc3);
+                P = v ? p.intl.string(p.t.vAfbGx) : p.intl.string(p.t.IGzFc3);
                 break;
             case void 0:
-                w = '';
+                P = '';
                 break;
             default:
                 throw Error('Unexpected interval: '.concat(t));
@@ -96,7 +96,7 @@ let m = function (e) {
             let e = Error('Missing base rate for legal fine print');
             (0, o.q2)(e, { tags: { planId: E.id } });
         }
-        w = (null == R ? void 0 : R.isPaused)
+        P = (null == R ? void 0 : R.isPaused)
             ? p.intl.format(p.t.B6oNwM, {
                   primaryText: i,
                   rate: e,
@@ -140,13 +140,13 @@ let m = function (e) {
                 (0, i.jsxs)('div', {
                     children: [(0, i.jsx)('div', { children: M }), (0, i.jsx)('div', { className: h.divider })]
                 }),
-            '' !== w && (0, i.jsx)('div', { children: w }),
-            T === f.HeQ.PAYSAFE_CARD &&
+            '' !== P && (0, i.jsx)('div', { children: P }),
+            b === f.HeQ.PAYSAFE_CARD &&
                 (0, i.jsx)('div', {
                     className: h.paymentSourceNoticeCopy,
                     children: p.intl.string(p.t.kj9VLC)
                 }),
-            T === f.HeQ.SOFORT &&
+            b === f.HeQ.SOFORT &&
                 (0, i.jsxs)('div', {
                     className: h.paymentSourceNoticeCopy,
                     children: [p.intl.string(p.t['UYy1/v']), ' ']

@@ -1,11 +1,11 @@
-n.d(t, { N: () => l });
+n.d(t, { N: () => r });
 var i = n(200651),
     s = n(481060),
-    r = n(488931);
-let l = (e) => {
+    l = n(282393);
+let r = (e) => {
     let { children: t, header: n } = e;
     return (0, i.jsxs)('div', {
-        className: r.settingsPage,
+        className: l.settingsPage,
         children: [
             (0, i.jsx)(s.y5t, {
                 children: (0, i.jsx)(s.X6q, {

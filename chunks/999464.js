@@ -10,24 +10,24 @@ var l = n(200651),
     u = n(888592),
     m = n(981631),
     x = n(388032),
-    h = n(621475);
-let v = (0, d.hQ)(),
+    h = n(299614);
+let _ = (0, d.hQ)(),
     N = (e) => {
         let { email: t, setStep: n, onBack: s, school: d, setSchool: N } = e,
-            [_, g] = i.useState(null),
-            [f, p] = i.useState(!1),
-            E = async () => {
-                g(null), p(!0);
+            [v, g] = i.useState(null),
+            [E, I] = i.useState(!1),
+            f = async () => {
+                g(null), I(!0);
                 try {
                     await o.Z.signup(t, d), n(u.tF.EMAIL_WAITLIST);
                 } catch (e) {
                     g(new c.Hx(e));
                 } finally {
-                    p(!1);
+                    I(!1);
                 }
             },
-            I = async (e) => {
-                null != d && '' !== d && e.charCode === m.yXg.ENTER && (await E());
+            S = async (e) => {
+                null != d && '' !== d && e.charCode === m.yXg.ENTER && (await f());
             };
         return (0, l.jsxs)('div', {
             className: h.container,
@@ -51,17 +51,17 @@ let v = (0, d.hQ)(),
                     className: h.formItem,
                     children: [
                         (0, l.jsx)(r.vwX, {
-                            id: v,
+                            id: _,
                             children: x.intl.string(x.t['L+AfJi'])
                         }),
                         (0, l.jsx)(r.oil, {
-                            onKeyPress: I,
+                            onKeyPress: S,
                             placeholder: x.intl.string(x.t.Y1btJS),
                             onChange: (e) => {
                                 N(e);
                             },
-                            error: null == _ ? void 0 : _.getAnyErrorMessage(),
-                            'aria-labelledby': v
+                            error: null == v ? void 0 : v.getAnyErrorMessage(),
+                            'aria-labelledby': _
                         })
                     ]
                 }),
@@ -77,11 +77,11 @@ let v = (0, d.hQ)(),
                             children: x.intl.string(x.t['13/7kZ'])
                         }),
                         (0, l.jsx)(r.zxk, {
-                            onClick: E,
+                            onClick: f,
                             size: r.zxk.Sizes.MEDIUM,
                             color: r.zxk.Colors.BRAND,
                             className: h.__invalid_submitButton,
-                            submitting: f,
+                            submitting: E,
                             children: x.intl.string(x.t.PDsYAg)
                         })
                     ]

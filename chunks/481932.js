@@ -17,9 +17,9 @@ function _(e) {
         g = (0, r.e7)([o.default], () => o.default.getId() === t.id),
         E = (0, r.e7)([l.Z], () => l.Z.getRelationshipType(t.id)),
         { gameFriends: v, hasOutgoingPendingGameFriends: y, hasIncomingPendingGameFriends: I } = (0, c.H)({ userId: t.id }),
-        b = v.length > 0 || y || I;
+        T = v.length > 0 || y || I;
     if (null == t || t.bot || g || E === f.OGo.BLOCKED) return null;
-    if (E === f.OGo.NONE && m && b)
+    if (E === f.OGo.NONE && m && T)
         return _ === d.y0.FULL_SIZE
             ? null
             : (0, i.jsx)(u.l, {

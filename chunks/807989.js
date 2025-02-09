@@ -11,7 +11,7 @@ var r = n(243814),
     d = n(713938),
     f = n(981631),
     _ = n(388032),
-    p = n(452398);
+    p = n(740542);
 let h = (e) => {
     switch (e) {
         case o.ZC.IP_LOCATION:
@@ -26,8 +26,8 @@ function m(e) {
     var t;
     let n,
         { application: a, scopes: m, redirectUri: E, approximateGuildCount: v, isEmbeddedFlow: y, disclosures: I } = e,
-        b = new Date(u.default.extractTimestamp(a.id)),
-        T = (0, d.W3)(m),
+        T = new Date(u.default.extractTimestamp(a.id)),
+        b = (0, d.W3)(m),
         S = (0, l.yE)(null !== (t = a.flags) && void 0 !== t ? t : 0, f.udG.EMBEDDED);
     if (null != E && !S && !y)
         try {
@@ -51,7 +51,7 @@ function m(e) {
             }),
             (0, i.jsx)(g, {
                 icon: s.T39,
-                text: _.intl.formatToPlainString(_.t['+1bjc3'], { date: b })
+                text: _.intl.formatToPlainString(_.t['+1bjc3'], { date: T })
             }),
             m.includes(r.x.BOT) && null != v
                 ? (0, i.jsx)(g, {
@@ -61,7 +61,7 @@ function m(e) {
                 : null,
             (0, i.jsx)(g, {
                 icon: s.b7C,
-                text: T
+                text: b
             }),
             null != I
                 ? I.map((e) => {

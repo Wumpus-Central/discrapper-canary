@@ -8,7 +8,7 @@ var r = n(481060),
     o = n(685389),
     c = n(981631),
     d = n(388032),
-    u = n(202513);
+    u = n(859949);
 function m(e) {
     let { children: t, revenue: n, revenueTrend: m, summaryMetricLabel: h, summaryMetricValue: g, summaryMetricTrend: x, summaryMetricTrendIsPercent: p } = e;
     return (0, i.jsx)(r.hjN, {

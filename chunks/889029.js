@@ -2,22 +2,22 @@ n.d(t, { Z: () => E });
 var i = n(200651);
 n(192379);
 var s = n(120356),
-    r = n.n(s),
-    l = n(442837),
+    l = n.n(s),
+    r = n(442837),
     a = n(481060),
     o = n(223245),
     c = n(230711),
     d = n(921801),
     u = n(246946),
-    m = n(358085),
-    g = n(726985),
-    h = n(981631),
+    h = n(358085),
+    m = n(726985),
+    g = n(981631),
     x = n(388032),
-    _ = n(381578),
-    p = n(232186);
+    _ = n(47673),
+    p = n(814632);
 function E() {
-    let { enabled: e, autoToggle: t, hideInstantInvites: s, hidePersonalInformation: E, disableSounds: C, disableNotifications: f, enableContentProtection: T } = (0, l.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
-        N = (e, t) => {
+    let { enabled: e, autoToggle: t, hideInstantInvites: s, hidePersonalInformation: E, disableSounds: C, disableNotifications: N, enableContentProtection: f } = (0, r.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
+        I = (e, t) => {
             o.Z.update({ [e]: t });
         };
     return (0, i.jsxs)(a.hjN, {
@@ -26,7 +26,7 @@ function E() {
         title: x.intl.string(x.t.S5GfOT),
         children: [
             (0, i.jsx)(d.F, {
-                setting: g.s6.STREAMER_MODE_INTEGRATIONS,
+                setting: m.s6.STREAMER_MODE_INTEGRATIONS,
                 children: (0, i.jsx)(a.ToO, {
                     className: p.marginBottom40,
                     iconClassName: _.noticeIcon,
@@ -38,27 +38,27 @@ function E() {
                         position: a.SwA.RIGHT
                     },
                     title: x.intl.string(x.t.bxGbHB),
-                    body: x.intl.format(x.t['4rmZn5'], { streamkitURL: h.EYA.STREAMKIT })
+                    body: x.intl.format(x.t['4rmZn5'], { streamkitURL: g.EYA.STREAMKIT })
                 })
             }),
             (0, i.jsxs)(d.F, {
-                setting: g.s6.STREAMER_MODE_ENABLE,
+                setting: m.s6.STREAMER_MODE_ENABLE,
                 children: [
                     (0, i.jsx)(a.j7V, {
                         value: e,
-                        onChange: (e) => N('enabled', e),
+                        onChange: (e) => I('enabled', e),
                         note: x.intl.format(x.t.MLVL2N, {
                             onClick: () => {
-                                c.Z.setSection(h.oAB.KEYBINDS);
+                                c.Z.setSection(g.oAB.KEYBINDS);
                             }
                         }),
                         children: x.intl.string(x.t.p9ZAJS)
                     }),
                     (() => {
-                        if (m.isPlatformEmbedded)
+                        if (h.isPlatformEmbedded)
                             return (0, i.jsx)(a.j7V, {
                                 value: t,
-                                onChange: (e) => N('autoToggle', e),
+                                onChange: (e) => I('autoToggle', e),
                                 note: x.intl.string(x.t.ZPi4lJ),
                                 children: x.intl.string(x.t.PKDAJy)
                             });
@@ -68,50 +68,50 @@ function E() {
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)(a.vwX, {
-                        className: r()(p.marginTop40, p.marginBottom8, _.sectionLabel),
+                        className: l()(p.marginTop40, p.marginBottom8, _.sectionLabel),
                         children: x.intl.string(x.t['+1H47u'])
                     }),
                     (0, i.jsx)(d.F, {
-                        setting: g.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
+                        setting: m.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
                         children: (0, i.jsx)(a.j7V, {
                             value: E,
-                            onChange: (e) => N('hidePersonalInformation', e),
+                            onChange: (e) => I('hidePersonalInformation', e),
                             note: x.intl.string(x.t['+9Lra2']),
                             children: x.intl.string(x.t.UpQziI)
                         })
                     }),
                     (0, i.jsx)(d.F, {
-                        setting: g.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
+                        setting: m.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
                         children: (0, i.jsx)(a.j7V, {
                             value: s,
-                            onChange: (e) => N('hideInstantInvites', e),
+                            onChange: (e) => I('hideInstantInvites', e),
                             note: x.intl.string(x.t.m7mS2d),
                             children: x.intl.string(x.t.q7WNGh)
                         })
                     }),
                     (0, i.jsx)(d.F, {
-                        setting: g.s6.STREAMER_MODE_DISABLE_SOUNDS,
+                        setting: m.s6.STREAMER_MODE_DISABLE_SOUNDS,
                         children: (0, i.jsx)(a.j7V, {
                             value: C,
-                            onChange: (e) => N('disableSounds', e),
+                            onChange: (e) => I('disableSounds', e),
                             note: x.intl.string(x.t.eAkaio),
                             children: x.intl.string(x.t.o56OZm)
                         })
                     }),
                     (0, i.jsx)(d.F, {
-                        setting: g.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
+                        setting: m.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
                         children: (0, i.jsx)(a.j7V, {
-                            value: f,
-                            onChange: (e) => N('disableNotifications', e),
+                            value: N,
+                            onChange: (e) => I('disableNotifications', e),
                             note: x.intl.string(x.t.ZAmpQ0),
                             children: x.intl.string(x.t.qmYiYW)
                         })
                     }),
                     (0, i.jsx)(d.F, {
-                        setting: g.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
+                        setting: m.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
                         children: (0, i.jsx)(a.j7V, {
-                            value: T,
-                            onChange: (e) => N('enableContentProtection', e),
+                            value: f,
+                            onChange: (e) => I('enableContentProtection', e),
                             note: x.intl.string(x.t.P4vj0t),
                             children: x.intl.string(x.t['iA81+f'])
                         })

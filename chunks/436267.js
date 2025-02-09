@@ -1,8 +1,8 @@
-t.d(n, {
+n.d(t, {
     O: () => r,
     Z: () => i
 });
-var l = t(159277);
+var l = n(159277);
 function i(e) {
     return l.t.XBOX_APPLICATION_ID === e || l.M.PLAYSTATION_APPLICATION_IDS.has(e);
 }

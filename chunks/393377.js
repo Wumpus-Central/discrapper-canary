@@ -54,9 +54,9 @@ var u = 13,
             I = function (e) {
                 return c(t, e);
             },
-            b = {};
+            T = {};
         return (
-            c && (b.onMouseOver = I),
+            c && (T.onMouseOver = I),
             r.default.createElement(
                 'div',
                 i(
@@ -67,7 +67,7 @@ var u = 13,
                         tabIndex: 0,
                         onKeyDown: y
                     },
-                    b
+                    T
                 ),
                 _,
                 g &&

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var l = n(200651),
     i = n(192379),
     s = n(120356),
@@ -11,30 +11,30 @@ var l = n(200651),
     m = n(888592),
     x = n(981631),
     h = n(388032),
-    v = n(569055);
+    _ = n(874635);
 let N = (0, d.hQ)(),
-    _ = (e) => {
-        let { setStep: t, setGuildsInfo: n, email: s, setEmail: d, setGuildId: _, invite: g, onClose: f, isNUXFlow: p } = e,
-            [E, I] = i.useState(null),
-            [S, j] = i.useState(!1),
-            C = async (e) => {
-                e.preventDefault(), I(null), j(!0);
+    v = (e) => {
+        let { setStep: t, setGuildsInfo: n, email: s, setEmail: d, setGuildId: v, invite: g, onClose: E, isNUXFlow: I } = e,
+            [f, S] = i.useState(null),
+            [p, C] = i.useState(!1),
+            T = async (e) => {
+                e.preventDefault(), S(null), C(!0);
                 try {
                     var l, i, a, r, d;
                     let e = null !== (d = null !== (r = null == g ? void 0 : null === (l = g.guild) || void 0 === l ? void 0 : l.id) && void 0 !== r ? r : null === (i = u.Z.getChannel(null == g ? void 0 : null === (a = g.channel) || void 0 === a ? void 0 : a.id)) || void 0 === i ? void 0 : i.getGuildId()) && void 0 !== d ? d : void 0;
                     e === m.fQ && (e = void 0);
                     let c = await o.Z.sendVerificationEmail(s, !0, e),
                         x = c.guilds_info;
-                    c.has_matching_guild ? (_(e), t(m.tF.VERIFY_PIN)) : 0 === x.length ? t(m.tF.SUBMIT_SCHOOL) : 1 === x.length ? (_(x[0].id), await o.Z.sendVerificationEmail(s, !0, x[0].id), t(m.tF.VERIFY_PIN)) : (n(x), t(m.tF.SELECT_SCHOOL));
+                    c.has_matching_guild ? (v(e), t(m.tF.VERIFY_PIN)) : 0 === x.length ? t(m.tF.SUBMIT_SCHOOL) : 1 === x.length ? (v(x[0].id), await o.Z.sendVerificationEmail(s, !0, x[0].id), t(m.tF.VERIFY_PIN)) : (n(x), t(m.tF.SELECT_SCHOOL));
                 } catch (e) {
-                    I(new c.Hx(e));
+                    S(new c.Hx(e));
                 } finally {
-                    j(!1);
+                    C(!1);
                 }
             },
             A = h.intl.string(h.t.H1jCHB),
-            T = h.intl.string(h.t.YfeHRE);
-        if (p) (A = h.intl.string(h.t.LVyxND)), (T = h.intl.string(h.t.ECd7Rk));
+            j = h.intl.string(h.t.YfeHRE);
+        if (I) (A = h.intl.string(h.t.LVyxND)), (j = h.intl.string(h.t.ECd7Rk));
         else if ((null == g ? void 0 : g.guild) != null && g.guild.id !== m.fQ && (null == g ? void 0 : g.approximate_member_count) != null) {
             let { name: e } = g.guild;
             A = h.intl.formatToPlainString(h.t['4T4+p6'], {
@@ -43,26 +43,26 @@ let N = (0, d.hQ)(),
             });
         }
         return (0, l.jsxs)('div', {
-            className: v.container,
+            className: _.container,
             children: [
-                (0, l.jsx)('div', { className: v.topImage }),
+                (0, l.jsx)('div', { className: _.topImage }),
                 (0, l.jsx)(r.X6q, {
-                    className: a()(v.centerText, v.header),
+                    className: a()(_.centerText, _.header),
                     variant: 'heading-xl/semibold',
                     children: A
                 }),
                 (0, l.jsx)('div', {
-                    className: v.descriptionWidth,
+                    className: _.descriptionWidth,
                     children: (0, l.jsx)(r.Text, {
-                        className: v.centerText,
+                        className: _.centerText,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: T
+                        children: j
                     })
                 }),
                 (0, l.jsxs)('form', {
-                    className: v.formContent,
-                    onSubmit: C,
+                    className: _.formContent,
+                    onSubmit: T,
                     children: [
                         (0, l.jsxs)(r.xJW, {
                             children: [
@@ -75,14 +75,14 @@ let N = (0, d.hQ)(),
                                     onChange: (e) => {
                                         d(e);
                                     },
-                                    error: null == E ? void 0 : E.getAnyErrorMessage(),
+                                    error: null == f ? void 0 : f.getAnyErrorMessage(),
                                     'aria-labelledby': N
                                 })
                             ]
                         }),
                         (0, l.jsx)(r.Text, {
                             color: 'header-secondary',
-                            className: v.formDescription,
+                            className: _.formDescription,
                             variant: 'text-sm/normal',
                             children: h.intl.string(h.t.Cv7mmJ)
                         }),
@@ -90,12 +90,12 @@ let N = (0, d.hQ)(),
                             type: 'submit',
                             size: r.zxk.Sizes.LARGE,
                             color: r.zxk.Colors.BRAND,
-                            className: v.submitButton,
-                            submitting: S,
+                            className: _.submitButton,
+                            submitting: p,
                             children: h.intl.string(h.t['8vmKOz'])
                         }),
                         (0, l.jsx)(r.Text, {
-                            className: v.termsPhrase,
+                            className: _.termsPhrase,
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             children: h.intl.format(h.t.RPT0vr, {
@@ -103,11 +103,11 @@ let N = (0, d.hQ)(),
                                 privacyURL: x.EYA.PRIVACY
                             })
                         }),
-                        p &&
+                        I &&
                             (0, l.jsx)(r.zxk, {
                                 look: r.zxk.Looks.LINK,
-                                onClick: f,
-                                className: v.cancelButton,
+                                onClick: E,
+                                className: _.cancelButton,
                                 children: h.intl.string(h.t.hO6qJy)
                             })
                     ]

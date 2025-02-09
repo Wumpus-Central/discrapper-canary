@@ -10,7 +10,7 @@ var i = l(913527),
     c = l(63063),
     d = l(981631),
     m = l(388032),
-    x = l(417859);
+    x = l(635745);
 function g(e) {
     var n;
     let { streamingUntil: l, user: i, channel: g } = e,

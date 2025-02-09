@@ -1,7 +1,7 @@
 n.d(t, {
     Ae: () => d,
-    Qe: () => m,
-    U0: () => g,
+    Qe: () => h,
+    U0: () => m,
     bV: () => u,
     uZ: () => c
 }),
@@ -18,9 +18,9 @@ n.d(t, {
     n(757143);
 var i,
     s,
-    r,
-    l = n(943418);
-let a = null !== (r = null === (i = window) || void 0 === i ? void 0 : i.crypto) && void 0 !== r ? r : null === (s = window) || void 0 === s ? void 0 : s.msCrypto,
+    l,
+    r = n(943418);
+let a = null !== (l = null === (i = window) || void 0 === i ? void 0 : i.crypto) && void 0 !== l ? l : null === (s = window) || void 0 === s ? void 0 : s.msCrypto,
     o = 'Uint8Array' in window,
     c = null != a && 'getRandomValues' in a && o,
     d = 'PublicKeyCredential' in window && o;
@@ -28,7 +28,7 @@ function u() {
     var e;
     return (
         (e = a.getRandomValues(new Uint8Array(20))),
-        l
+        r
             .encode(e)
             .toString('utf8')
             .replace(/=/g, '')
@@ -37,10 +37,10 @@ function u() {
             .trim()
     );
 }
-function m(e) {
+function h(e) {
     return e.replace(/[\s._-]+/g, '').toUpperCase();
 }
-function g(e, t) {
+function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'Discord';
-    return 'otpauth://totp/'.concat(encodeURI(n), ':').concat(encodeURI(e), '?secret=').concat(m(t), '&issuer=').concat(encodeURIComponent(n));
+    return 'otpauth://totp/'.concat(encodeURI(n), ':').concat(encodeURI(e), '?secret=').concat(h(t), '&issuer=').concat(encodeURIComponent(n));
 }

@@ -1,7 +1,7 @@
 n.d(t, {
     M9: () => R,
-    aW: () => L,
-    wu: () => x
+    aW: () => x,
+    wu: () => L
 }),
     n(47120);
 var i = n(997945),
@@ -23,8 +23,8 @@ var i = n(997945),
     v = n(73375),
     y = n(328664),
     I = n(328259),
-    b = n(19009),
-    T = n(234912),
+    T = n(19009),
+    b = n(234912),
     S = n(405571),
     A = n(730886),
     N = n(473974),
@@ -60,7 +60,7 @@ function D() {
         },
         {
             id: i.Ru.MATTE_LIGHT,
-            iconSource: b,
+            iconSource: T,
             name: r.intl.string(r.t.G2W309),
             isPremium: !0
         },
@@ -162,7 +162,7 @@ function D() {
         },
         {
             id: i.Ru.MIDNIGHT_PRISM,
-            iconSource: T,
+            iconSource: b,
             isPremium: !0,
             name: r.intl.string(r.t.nshUZW)
         },
@@ -174,9 +174,9 @@ function D() {
         }
     ];
 }
-function x() {
+function L() {
     return [O(), ...D()];
 }
-function L(e) {
-    return x().find((t) => t.id === e);
+function x(e) {
+    return L().find((t) => t.id === e);
 }

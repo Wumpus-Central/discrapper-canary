@@ -10,7 +10,7 @@ var l = n(200651),
     u = n(449605),
     p = n(981631),
     f = n(388032),
-    m = n(680809);
+    m = n(301847);
 function h(e) {
     let { isLoading: t, noText: n, noImage: i, previewText: r, className: o } = e;
     return (0, l.jsx)('div', {

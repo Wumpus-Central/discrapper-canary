@@ -1,34 +1,34 @@
-n.d(t, { Z: () => g }), n(47120);
-var s = n(200651),
-    i = n(192379),
-    l = n(120356),
-    o = n.n(l),
-    a = n(772848),
-    r = n(990547),
-    h = n(481060),
-    c = n(600164),
-    d = n(7557),
-    u = n(200357),
-    p = n(388032),
-    E = n(853206),
-    m = n(652849),
-    R = n(232186);
-function C(e, t, n) {
+s.d(t, { Z: () => x }), s(47120);
+var n = s(200651),
+    i = s(192379),
+    l = s(120356),
+    o = s.n(l),
+    a = s(772848),
+    r = s(990547),
+    h = s(481060),
+    d = s(600164),
+    c = s(7557),
+    u = s(200357),
+    p = s(388032),
+    m = s(603524),
+    f = s(801194),
+    g = s(814632);
+function C(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: s,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = s),
         e
     );
 }
-class f extends i.PureComponent {
+class y extends i.PureComponent {
     async componentDidMount() {
-        let [e, { default: t }] = await Promise.all([n.e('93198').then(n.t.bind(n, 140523, 19)), Promise.resolve().then(n.t.bind(n, 500923, 23))]);
+        let [e, { default: t }] = await Promise.all([s.e('93198').then(s.t.bind(s, 140523, 19)), Promise.resolve().then(s.t.bind(s, 500923, 23))]);
         null != this._lottieRef &&
             (this._animItem = t.loadAnimation({
                 container: this._lottieRef,
@@ -42,41 +42,41 @@ class f extends i.PureComponent {
         null != this._animItem && (this._animItem.destroy(), (this._animItem = void 0));
     }
     render() {
-        let e, t, n;
+        let e, t, s;
         let { error: i, working: l, transitionState: a, validPhone: C } = this.props;
         return (
             (e =
                 null != i && '' !== i
-                    ? (0, s.jsx)('div', {
-                          className: o()(E.description, E.error, R.marginBottom20),
+                    ? (0, n.jsx)('div', {
+                          className: o()(m.description, m.error, g.marginBottom20),
                           children: i
                       })
                     : C
-                      ? (0, s.jsx)('div', {
-                            className: o()(E.description, R.marginBottom20),
+                      ? (0, n.jsx)('div', {
+                            className: o()(m.description, g.marginBottom20),
                             children: p.intl.string(p.t['4qMI6O'])
                         })
-                      : (0, s.jsxs)(s.Fragment, {
+                      : (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, s.jsx)('div', {
-                                    className: o()(E.description, R.marginBottom20),
+                                (0, n.jsx)('div', {
+                                    className: o()(m.description, g.marginBottom20),
                                     children: p.intl.string(p.t.Vp9je3)
                                 }),
-                                (0, s.jsx)('div', {
-                                    className: o()(E.description, R.marginBottom20),
+                                (0, n.jsx)('div', {
+                                    className: o()(m.description, g.marginBottom20),
                                     children: p.intl.format(p.t['3BTmqa'], {})
                                 })
                             ]
                         })),
             (t = C
-                ? (0, s.jsxs)(c.Z, {
-                      className: E.field,
-                      direction: c.Z.Direction.VERTICAL,
-                      align: c.Z.Align.CENTER,
+                ? (0, n.jsxs)(d.Z, {
+                      className: m.field,
+                      direction: d.Z.Direction.VERTICAL,
+                      align: d.Z.Align.CENTER,
                       children: [
-                          (0, s.jsx)(d.Z, { onSubmit: this.handleVerifyPhone }),
-                          (0, s.jsx)(h.zxk, {
-                              className: R.marginTop8,
+                          (0, n.jsx)(c.Z, { onSubmit: this.handleVerifyPhone }),
+                          (0, n.jsx)(h.zxk, {
+                              className: g.marginTop8,
                               size: h.PhG.SMALL,
                               look: h.iLD.LINK,
                               color: h.Ttl.PRIMARY,
@@ -85,26 +85,26 @@ class f extends i.PureComponent {
                           })
                       ]
                   })
-                : (0, s.jsx)(u.Z, {
-                      className: E.field,
+                : (0, n.jsx)(u.Z, {
+                      className: m.field,
                       onSubmit: this.handleAddPhone,
                       submitting: l
                   })),
-            (n = C ? p.intl.string(p.t.Xclkxs) : p.intl.string(p.t.uR76s7)),
-            (0, s.jsxs)(h.Y0X, {
+            (s = C ? p.intl.string(p.t.Xclkxs) : p.intl.string(p.t.uR76s7)),
+            (0, n.jsxs)(h.Y0X, {
                 impression: { impressionName: r.ImpressionNames.USER_VERIFY_PHONE },
                 transitionState: a,
-                className: o()(E.phoneVerificationModal, m.vertical, m.alignCenter, m.justifyCenter, R.marginTop60),
+                className: o()(m.phoneVerificationModal, f.vertical, f.alignCenter, f.justifyCenter, g.marginTop60),
                 'aria-labelledby': this.headerId,
                 children: [
-                    (0, s.jsx)('div', {
-                        className: E.animationContainer,
+                    (0, n.jsx)('div', {
+                        className: m.animationContainer,
                         ref: this.setLottieRef
                     }),
-                    (0, s.jsx)('div', {
-                        className: o()(E.title, R.marginBottom8),
+                    (0, n.jsx)('div', {
+                        className: o()(m.title, g.marginBottom8),
                         id: this.headerId,
-                        children: n
+                        children: s
                     }),
                     e,
                     t
@@ -145,4 +145,4 @@ class f extends i.PureComponent {
             });
     }
 }
-let g = f;
+let x = y;

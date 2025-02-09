@@ -1,21 +1,21 @@
-n.r(t),
-    n.d(t, {
+t.r(n),
+    t.d(n, {
         default: () => u,
         openInteractionModal: () => p
     });
-var i = n(200651);
-n(192379);
-var o = n(481060),
-    a = n(118012),
-    r = n(970184),
-    _ = n(471073),
-    c = n(293979),
-    s = n(954654),
-    l = n(388032),
-    d = n(517753);
+var i = t(200651);
+t(192379);
+var o = t(481060),
+    r = t(118012),
+    a = t(970184),
+    l = t(471073),
+    c = t(293979),
+    s = t(954654),
+    _ = t(388032),
+    d = t(845162);
 function u(e) {
-    let { title: t, onClose: n, transitionState: u } = e,
-        { components: p, applicationIconURL: I, applicationName: f, submissionState: m, error: S, validators: C, onSubmit: T } = (0, c.X9)(e, n);
+    let { title: n, onClose: t, transitionState: u } = e,
+        { components: p, applicationIconURL: I, applicationName: f, submissionState: m, error: S, validators: C, onSubmit: T } = (0, c.X9)(e, t);
     return (0, i.jsx)('form', {
         onSubmit: (e) => {
             e.preventDefault(), T();
@@ -32,13 +32,13 @@ function u(e) {
                             'aria-label': f,
                             className: d.applicationIcon
                         }),
-                        (0, i.jsx)(a.Z, {
-                            color: a.Z.Colors.HEADER_PRIMARY,
-                            size: a.Z.Sizes.SIZE_24,
-                            children: t
+                        (0, i.jsx)(r.Z, {
+                            color: r.Z.Colors.HEADER_PRIMARY,
+                            size: r.Z.Sizes.SIZE_24,
+                            children: n
                         }),
                         (0, i.jsx)(o.olH, {
-                            onClick: n,
+                            onClick: t,
                             className: d.closeButton
                         })
                     ]
@@ -55,10 +55,10 @@ function u(e) {
                         (0, i.jsx)(o.Wn, {
                             messageType: o.QYI.WARNING,
                             className: d.submissionWarning,
-                            children: l.intl.format(l.t['dSTy//'], { applicationName: f })
+                            children: _.intl.format(_.t['dSTy//'], { applicationName: f })
                         }),
                         (0, i.jsx)(o.hjN, {
-                            children: (0, i.jsx)(r.Il, {
+                            children: (0, i.jsx)(a.Il, {
                                 modal: e,
                                 validators: C,
                                 children: (0, s.xX)(p)
@@ -72,14 +72,14 @@ function u(e) {
                             type: 'submit',
                             color: o.zxk.Colors.BRAND,
                             size: o.zxk.Sizes.MEDIUM,
-                            submitting: m === _.i.IN_FLIGHT,
-                            children: l.intl.string(l.t.geKm7u)
+                            submitting: m === l.i.IN_FLIGHT,
+                            children: _.intl.string(_.t.geKm7u)
                         }),
                         (0, i.jsx)(o.zxk, {
                             look: o.zxk.Looks.LINK,
                             color: o.zxk.Colors.PRIMARY,
-                            onClick: n,
-                            children: l.intl.string(l.t['ETE/oK'])
+                            onClick: t,
+                            children: _.intl.string(_.t['ETE/oK'])
                         })
                     ]
                 })
@@ -88,9 +88,9 @@ function u(e) {
     });
 }
 function p(e) {
-    (0, o.h7j)((t) =>
+    (0, o.h7j)((n) =>
         (0, i.jsx)(u, {
-            ...t,
+            ...n,
             ...e
         })
     );

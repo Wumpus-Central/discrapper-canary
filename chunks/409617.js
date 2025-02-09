@@ -10,10 +10,10 @@ var i = t(200651),
     x = t(236289),
     m = t(788080),
     u = t(613734),
-    C = t(800530),
-    h = t(388032),
-    _ = t(681242),
-    N = t(816742);
+    h = t(800530),
+    _ = t(388032),
+    C = t(804772),
+    N = t(5517);
 function p(e) {
     let { className: n, isDsaEligible: t = !1, onClose: l, onNext: p, onBack: g } = e,
         j = (0, u.U0)(),
@@ -21,11 +21,11 @@ function p(e) {
         [k, E] = s.useState(''),
         [T, v] = s.useState(!1);
     s.useEffect(() => {
-        E(null != I ? I : ''), v(j === C.bK.SOMETHING_ELSE);
+        E(null != I ? I : ''), v(j === h.bK.SOMETHING_ELSE);
     }, [I, j, t]);
     let f = (e) => {
-            v(e === C.bK.SOMETHING_ELSE),
-                e !== C.bK.SOMETHING_ELSE &&
+            v(e === h.bK.SOMETHING_ELSE),
+                e !== h.bK.SOMETHING_ELSE &&
                     (E(''),
                     c.Z.dispatch({
                         type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
@@ -36,7 +36,7 @@ function p(e) {
                     signal: e
                 });
         },
-        S = C.RY.map((e) => ({
+        S = h.RY.map((e) => ({
             value: e,
             name: (0, m.ox)(e)
         }));
@@ -50,13 +50,13 @@ function p(e) {
                     (0, i.jsx)(o.X6q, {
                         className: N.title,
                         variant: 'heading-xl/semibold',
-                        children: h.intl.string(h.t['C5q+pa'])
+                        children: _.intl.string(_.t['C5q+pa'])
                     }),
                     (0, i.jsx)(o.Text, {
                         className: N.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: h.intl.string(h.t.VEcRh4)
+                        children: _.intl.string(_.t.VEcRh4)
                     }),
                     null != l &&
                         (0, i.jsx)(o.olH, {
@@ -66,7 +66,7 @@ function p(e) {
                 ]
             }),
             (0, i.jsxs)(o.hzk, {
-                className: a()(_.modalContent, n),
+                className: a()(C.modalContent, n),
                 paddingFix: !1,
                 children: [
                     (0, i.jsx)(o.FXm, {
@@ -87,7 +87,7 @@ function p(e) {
                                 (0, i.jsx)(o.Kx8, {
                                     rows: 4,
                                     maxLength: 1024,
-                                    placeholder: h.intl.string(h.t.bQrZIC),
+                                    placeholder: _.intl.string(_.t.bQrZIC),
                                     value: k,
                                     onChange: E,
                                     autoFocus: !0
@@ -95,14 +95,14 @@ function p(e) {
                                 (0, i.jsx)(o.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-muted',
-                                    children: h.intl.string(h.t.xfNY3N)
+                                    children: _.intl.string(_.t.xfNY3N)
                                 })
                             ]
                         }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        className: _.disclaimer,
-                        children: h.intl.format(h.t['8k9GCQ'], {})
+                        className: C.disclaimer,
+                        children: _.intl.format(_.t['8k9GCQ'], {})
                     })
                 ]
             }),
@@ -117,7 +117,7 @@ function p(e) {
                                 null == p || p();
                         },
                         color: o.zxk.Colors.BRAND,
-                        children: h.intl.string(h.t.PDTjLC)
+                        children: _.intl.string(_.t.PDTjLC)
                     }),
                     (0, i.jsx)(o.zxk, {
                         onClick: () => {
@@ -129,7 +129,7 @@ function p(e) {
                         },
                         color: o.zxk.Colors.PRIMARY,
                         look: o.zxk.Looks.LINK,
-                        children: h.intl.string(h.t['13/7kZ'])
+                        children: _.intl.string(_.t['13/7kZ'])
                     })
                 ]
             })

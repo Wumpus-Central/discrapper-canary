@@ -1,8 +1,8 @@
 n.d(t, {
     Bg: () => M,
     Ni: () => U,
-    YH: () => w,
-    ld: () => P,
+    YH: () => P,
+    ld: () => w,
     rf: () => k
 }),
     n(47120),
@@ -26,8 +26,8 @@ var i = n(192379),
     v = n(984933),
     y = n(430824),
     I = n(914010),
-    b = n(771845),
-    T = n(594174),
+    T = n(771845),
+    b = n(594174),
     S = n(176354),
     A = n(111361),
     N = n(392552),
@@ -35,13 +35,13 @@ var i = n(192379),
     R = n(304852),
     O = n(199257),
     D = n(149203),
-    x = n(185923),
-    L = n(388032),
-    P = (function (e) {
+    L = n(185923),
+    x = n(388032),
+    w = (function (e) {
         return (e[(e.EMOJI = 0)] = 'EMOJI'), (e[(e.CREATE_EMOJI = 1)] = 'CREATE_EMOJI'), (e[(e.EXPAND_OR_COLLAPSE_EMOJIS = 2)] = 'EXPAND_OR_COLLAPSE_EMOJIS'), (e[(e.SOUNDMOJI = 3)] = 'SOUNDMOJI'), e;
     })({});
-let w = (e) => {
-    let { channel: t, collapsedSections: n, includeCreateEmojiButton: r = !0, pickerIntention: l, emojiSearchResults: p, gridWidth: h, emojiPaddingHorizontal: P, emojiSpriteSize: w, shouldShowSoundmojiInEmojiPicker: M } = e,
+let P = (e) => {
+    let { channel: t, collapsedSections: n, includeCreateEmojiButton: r = !0, pickerIntention: l, emojiSearchResults: p, gridWidth: h, emojiPaddingHorizontal: w, emojiSpriteSize: P, shouldShowSoundmojiInEmojiPicker: M } = e,
         k = (0, o.e7)([u.ZP], () => u.ZP.categories),
         U = (0, o.e7)([y.Z], () => y.Z.getGuild(null == t ? void 0 : t.getGuildId()), [t]),
         G = null == t ? null : t.getGuildId(),
@@ -59,10 +59,10 @@ let w = (e) => {
         });
     f.Xb.useExperiment({ location: 'useEmojiGrid' }, { autoTrackExposure: !0 });
     let { topEmojis: Y, newlyAddedEmojis: W } = (0, O.Z)(G, l),
-        K = (0, o.Wu)([b.ZP], () => b.ZP.getFlattenedGuildIds(), []),
+        K = (0, o.Wu)([T.ZP], () => T.ZP.getFlattenedGuildIds(), []),
         z = (0, o.e7)([u.ZP], () => u.ZP.expandedSectionsByGuildIds),
         { canCreateExpressions: q } = (0, m.XJ)(U),
-        Q = (0, o.e7)([T.default], () => T.default.getCurrentUser()),
+        Q = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         X = (0, A.I5)(Q),
         J = (0, g.B4)({ location: 'useEmojiGrid' }),
         $ = B.getCustomEmoji(),
@@ -86,7 +86,7 @@ let w = (e) => {
             c = 0,
             d = 0;
         if (null != B && null != h) {
-            let f = Math.floor(h / (w + 2 * P)),
+            let f = Math.floor(h / (P + 2 * w)),
                 m = 3 * f,
                 g = (s, _) => {
                     let p = new Map(),
@@ -101,18 +101,18 @@ let w = (e) => {
                         }),
                         v = g.concat(E),
                         y = _.guild,
-                        b = I.Z.getGuildId(),
-                        T = _.sectionId === D.En.TOP_GUILD_EMOJI,
-                        A = !T && null != y && b === y.id && v.length < y.getMaxEmojiSlots(),
-                        R = T && v.length < f && !en,
-                        O = null != y && T && en && ei === N.B.WITH_TOP_LIST && et[y.id].length < y.getMaxEmojiSlots(),
-                        x = r && q && null != y && (A || R || O);
-                    x && O && v.length === f && v.shift();
-                    let P = v.length > m && null != y && _.isNitroLocked,
-                        M = P && !z.has(y.id);
+                        T = I.Z.getGuildId(),
+                        b = _.sectionId === D.En.TOP_GUILD_EMOJI,
+                        A = !b && null != y && T === y.id && v.length < y.getMaxEmojiSlots(),
+                        R = b && v.length < f && !en,
+                        O = null != y && b && en && ei === N.B.WITH_TOP_LIST && et[y.id].length < y.getMaxEmojiSlots(),
+                        L = r && q && null != y && (A || R || O);
+                    L && O && v.length === f && v.shift();
+                    let w = v.length > m && null != y && _.isNitroLocked,
+                        M = w && !z.has(y.id);
                     M && v.splice(m - 1);
-                    let k = en && x && !h,
-                        U = Math.ceil((x || P ? v.length + 1 : v.length) / f),
+                    let k = en && L && !h,
+                        U = Math.ceil((L || w ? v.length + 1 : v.length) / f),
                         G = [];
                     for (let e = 0; e < U; e++) {
                         let t = 0 === e,
@@ -123,7 +123,7 @@ let w = (e) => {
                                 return {
                                     type: 0,
                                     emoji: e,
-                                    size: w,
+                                    size: P,
                                     isDisabled: p.get(e),
                                     rowIndex: d,
                                     columnIndex: k && t ? n + 1 : n,
@@ -140,8 +140,8 @@ let w = (e) => {
                                     {
                                         type: 1,
                                         guildId: y.id,
-                                        name: L.intl.string(L.t['Z/r7IS']),
-                                        size: w,
+                                        name: x.intl.string(x.t['Z/r7IS']),
+                                        size: P,
                                         rowIndex: d,
                                         columnIndex: 0,
                                         visibleRowIndex: c
@@ -151,25 +151,25 @@ let w = (e) => {
                             G.push(r),
                             !h)
                         ) {
-                            if (!en && x && e === U - 1) {
+                            if (!en && L && e === U - 1) {
                                 let t = G[e];
                                 t.push({
                                     type: 1,
                                     guildId: y.id,
-                                    name: L.intl.string(L.t['Z/r7IS']),
-                                    size: w,
+                                    name: x.intl.string(x.t['Z/r7IS']),
+                                    size: P,
                                     rowIndex: e,
                                     columnIndex: t.length,
                                     visibleRowIndex: c
                                 });
                             }
-                            if (P && e === U - 1) {
+                            if (w && e === U - 1) {
                                 let t = G[e];
                                 t.push({
                                     type: 2,
                                     guildId: y.id,
-                                    name: L.intl.string(L.t.NZI2Zm),
-                                    size: w,
+                                    name: x.intl.string(x.t.NZI2Zm),
+                                    size: P,
                                     rowIndex: e,
                                     columnIndex: t.length,
                                     visibleRowIndex: c,
@@ -234,7 +234,7 @@ let w = (e) => {
                                         emoji: e,
                                         channel: null != t ? t : v.ZP.getDefaultChannel(n),
                                         intention: l
-                                    }) !== x.Z5.DISALLOW_EXTERNAL
+                                    }) !== L.Z5.DISALLOW_EXTERNAL
                             );
                             if (0 === r.length) return;
                             let a = y.Z.getGuild(n),
@@ -255,7 +255,7 @@ let w = (e) => {
                                 isNitroLocked: o
                             });
                         };
-                        if ((null != U && n(U.id), (0, x.Gt)(l))) for (let e of K) (null == U || U.id !== e) && n(e);
+                        if ((null != U && n(U.id), (0, L.Gt)(l))) for (let e of K) (null == U || U.id !== e) && n(e);
                     } else if (e === D.UX.TOP_GUILD_EMOJI) {
                         if (null != U) {
                             let { allEmojis: t } = (0, R.J)({
@@ -273,7 +273,7 @@ let w = (e) => {
                                 });
                         }
                     } else if (e === D.UX.RECENT) {
-                        let n = (l === x.Hz.REACTION && (j || H) ? V : F).filter(
+                        let n = (l === L.Hz.REACTION && (j || H) ? V : F).filter(
                             (e) =>
                                 !S.ZP.isEmojiFiltered({
                                     emoji: e,
@@ -324,7 +324,7 @@ let w = (e) => {
             rowCountBySection: e,
             sectionDescriptors: i
         };
-    }, [B, h, w, P, p, n, en, ei, et, r, q, z, t, l, Y, W, X, k, U, K, j, H, V, F, Z, J, er, M]);
+    }, [B, h, P, w, p, n, en, ei, et, r, q, z, t, l, Y, W, X, k, U, K, j, H, V, F, Z, J, er, M]);
 };
 var M = (function (e) {
     return (e[(e.PREMIUM = 0)] = 'PREMIUM'), (e[(e.ROLE_SUBSCRIPTION = 1)] = 'ROLE_SUBSCRIPTION'), e;
@@ -350,15 +350,15 @@ let k = (e) => {
                             f.isFavoriteEmojiWithoutFetchingLatest(o) || null != u ? (0, l.Xe)(o) : (null == d || d(e), (0, l.$K)(o));
                             return;
                         }
-                        if (u === x.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE) return;
-                        if (u === x.Z5.PREMIUM_LOCKED) {
+                        if (u === L.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE) return;
+                        if (u === L.Z5.PREMIUM_LOCKED) {
                             a({
                                 type: 0,
                                 emojiDescriptor: e
                             });
                             return;
                         }
-                        if (u === x.Z5.ROLE_SUBSCRIPTION_LOCKED && o.type === c.B.GUILD) {
+                        if (u === L.Z5.ROLE_SUBSCRIPTION_LOCKED && o.type === c.B.GUILD) {
                             a({
                                 type: 1,
                                 guildId: o.guildId,
@@ -366,7 +366,7 @@ let k = (e) => {
                             });
                             return;
                         }
-                        if (u === x.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE) return;
+                        if (u === L.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE) return;
                         null == s || s(e), r(o, i.isFinalSelection, i.isBurst);
                     }
                 }

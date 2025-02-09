@@ -17,17 +17,17 @@ var i = n(200651),
     E = n(373370),
     I = n(475595),
     C = n(566078),
-    N = n(602667),
-    v = n(65443),
+    v = n(602667),
+    N = n(65443),
     T = n(611855),
-    S = n(64141),
-    Z = n(667105),
-    A = n(860151),
+    S = n(670638),
+    A = n(667105),
+    Z = n(860151),
     x = n(341907),
     b = n(46140),
     L = n(981631),
     y = n(388032),
-    P = n(444865);
+    P = n(152706);
 function O(e) {
     var t;
     let { quest: n } = e,
@@ -66,7 +66,7 @@ function R(e) {
     var t, n, r, o;
     let { nodeRef: d, quest: I } = e,
         C = (0, u.O5)(),
-        N = (0, s.e7)([p.Z], () => p.Z.isEnrolling(I.id), [I]),
+        v = (0, s.e7)([p.Z], () => p.Z.isEnrolling(I.id), [I]),
         [L, R] = l.useState(!1),
         j = l.useCallback(() => R(!0), []),
         D = l.useCallback(() => R(!1), []),
@@ -96,7 +96,7 @@ function R(e) {
             }),
                 (0, x.navigateToQuestHome)(b.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, I.id);
         }, [I.id, C]),
-        G = (0, Z.hf)({
+        G = (0, A.hf)({
             quest: I,
             location: g.jn.ACTIVITY_PANEL
         }),
@@ -162,7 +162,7 @@ function R(e) {
                                           children: Y
                                       }),
                                       K &&
-                                          (0, i.jsx)(v.Z, {
+                                          (0, i.jsx)(N.Z, {
                                               quest: I,
                                               textColor: 'text-muted',
                                               withRewardName: !0
@@ -173,7 +173,7 @@ function R(e) {
                       }),
                   V &&
                       !H &&
-                      (0, i.jsx)(A.Z, {
+                      (0, i.jsx)(Z.Z, {
                           autoplay: L,
                           className: P.rewardTileWithInstructions,
                           quest: I,
@@ -201,7 +201,7 @@ function R(e) {
                                           fullWidth: !0,
                                           onClick: M,
                                           size: c.zxk.Sizes.SMALL,
-                                          submitting: N,
+                                          submitting: v,
                                           children: y.intl.string(y.t.l7E81t)
                                       })
                                   ]
@@ -231,7 +231,7 @@ function R(e) {
           });
 }
 let j = function (e) {
-    return (0, i.jsx)(N.A, {
+    return (0, i.jsx)(v.A, {
         questOrQuests: e.quest,
         questContent: g.jn.ACTIVITY_PANEL,
         children: (t) =>

@@ -8,7 +8,7 @@ var l = n(200651),
     s = n(63063),
     d = n(981631),
     p = n(388032),
-    h = n(803689);
+    h = n(500981);
 function b(e) {
     var a;
     let { channel: n, onClose: b, guild: m, transitionState: x } = e,

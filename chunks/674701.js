@@ -32,7 +32,7 @@ var i,
     Z = n(182294),
     R = n(957825),
     L = n(388032),
-    P = n(981125),
+    P = n(854413),
     k = (((i = {}).SYSTEM_MESSAGE = 'system_message'), (i.COACHMARK = 'coachmark'), i);
 function M(e) {
     let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: r, onMouseLeave: k, popoutPosition: M, analyticsPage: O, analyticsSection: D, glow: w, giftIntentSecondaryAction: F } = e,

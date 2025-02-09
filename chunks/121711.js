@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(283293),
     I = n(822857),
     C = n(775451),
-    N = n(63063),
-    v = n(113434),
+    v = n(63063),
+    N = n(113434),
     T = n(569984),
     S = n(833435),
-    Z = n(918701),
-    A = n(150560),
+    A = n(918701),
+    Z = n(150560),
     x = n(558652),
     b = n(736683),
     L = n(452081),
@@ -31,12 +31,12 @@ var i = n(200651),
     O = n(981631),
     R = n(215023),
     j = n(388032),
-    D = n(359643);
+    D = n(144411);
 let w = function () {
     var e;
     let { selectedTab: t, onSelectTab: n, tabs: w } = (0, L.z)(),
         { onScroll: M, scrollPosition: k } = (0, h.M)(),
-        U = A.Z.getState().getUtmCurrentContext(),
+        U = Z.Z.getState().getUtmCurrentContext(),
         G = (0, S._)({ location: y.dr.QUEST_HOME_DESKTOP }) ? b.Z : b.j,
         B = l.useRef(U);
     l.useEffect(() => {
@@ -57,12 +57,12 @@ let w = function () {
             });
         }, [t]);
     let V = l.useCallback(() => {
-        window.open(N.Z.getArticleURL(O.BhN.QUESTS_LEARN_MORE));
+        window.open(v.Z.getArticleURL(O.BhN.QUESTS_LEARN_MORE));
     }, []);
     (0, u.Tt)({ location: j.intl.string(j.t.JALI2N) });
     let { enabled: H } = (0, I.W)({ location: y.dr.QUEST_HOME_DESKTOP }),
         F = null !== (e = (0, a.e7)([T.Z], () => T.Z.getQuest(P.V), [])) && void 0 !== e ? e : null,
-        z = null !== F && !(0, Z.zi)(F),
+        z = null !== F && !(0, A.zi)(F),
         W = z ? j.intl.format(j.t.BCBIlp, {}) : j.intl.format(j.t.lmMBf3, {}),
         Y = z ? j.intl.format(j.t.U9FY0N, {}) : j.intl.string(j.t.oWCrBg);
     return (0, i.jsxs)('div', {
@@ -113,7 +113,7 @@ let w = function () {
                                         })
                                 ]
                             }),
-                            t === v.e5.CLAIMED ? (0, i.jsx)(G, { onSelectTab: n }) : (0, i.jsx)(x.Z, {})
+                            t === N.e5.CLAIMED ? (0, i.jsx)(G, { onSelectTab: n }) : (0, i.jsx)(x.Z, {})
                         ]
                     })
                 ]

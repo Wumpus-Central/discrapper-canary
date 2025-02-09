@@ -16,28 +16,28 @@ n.d(t, {
     U2: () => f,
     wz: () => p
 });
-var a = 'copy',
-    l = 'convert';
+var l = 'copy',
+    a = 'convert';
 function o(e, t, n) {
-    if (t === a) return n;
-    if (t === l) return e(n);
+    if (t === l) return n;
+    if (t === a) return e(n);
     if (t instanceof Array) return n.map((n) => o(e, t[0], n));
     if (t instanceof Object) {
         let i = {};
-        for (let [r, a] of Object.entries(t)) {
-            if (a.derive) {
-                let e = a.derive(n);
+        for (let [r, l] of Object.entries(t)) {
+            if (l.derive) {
+                let e = l.derive(n);
                 void 0 !== e && (n[r] = e);
             }
             if (!(r in n)) {
-                if (a.required) throw Error(`Missing key: ${r}`);
+                if (l.required) throw Error(`Missing key: ${r}`);
                 continue;
             }
             if (null == n[r]) {
                 i[r] = null;
                 continue;
             }
-            i[r] = o(e, a.schema, n[r]);
+            i[r] = o(e, l.schema, n[r]);
         }
         return i;
     }
@@ -62,78 +62,78 @@ function d(e) {
     };
 }
 var u = {
-        type: c(a),
-        id: c(l),
-        transports: d(a)
+        type: c(l),
+        id: c(a),
+        transports: d(l)
     },
     h = {
-        appid: d(a),
-        appidExclude: d(a),
-        credProps: d(a)
+        appid: d(l),
+        appidExclude: d(l),
+        credProps: d(l)
     },
     _ = {
-        appid: d(a),
-        appidExclude: d(a),
-        credProps: d(a)
+        appid: d(l),
+        appidExclude: d(l),
+        credProps: d(l)
     };
 c({
-    rp: c(a),
+    rp: c(l),
     user: c({
-        id: c(l),
-        name: c(a),
-        displayName: c(a)
+        id: c(a),
+        name: c(l),
+        displayName: c(l)
     }),
-    challenge: c(l),
-    pubKeyCredParams: c(a),
-    timeout: d(a),
+    challenge: c(a),
+    pubKeyCredParams: c(l),
+    timeout: d(l),
     excludeCredentials: d([u]),
-    authenticatorSelection: d(a),
-    attestation: d(a),
+    authenticatorSelection: d(l),
+    attestation: d(l),
     extensions: d(h)
 }),
-    d(a),
-    c(a),
-    c(a),
+    d(l),
     c(l),
-    d(a),
+    c(l),
+    c(a),
+    d(l),
     c({
-        clientDataJSON: c(l),
-        attestationObject: c(l),
-        transports: s(a, (e) => {
+        clientDataJSON: c(a),
+        attestationObject: c(a),
+        transports: s(l, (e) => {
             var t;
             return (null == (t = e.getTransports) ? void 0 : t.call(e)) || [];
         })
     }),
     s(_, (e) => e.getClientExtensionResults());
-var g = {
-        mediation: d(a),
+var m = {
+        mediation: d(l),
         publicKey: c({
-            challenge: c(l),
-            timeout: d(a),
-            rpId: d(a),
+            challenge: c(a),
+            timeout: d(l),
+            rpId: d(l),
             allowCredentials: d([u]),
-            userVerification: d(a),
+            userVerification: d(l),
             extensions: d(h)
         }),
-        signal: d(a)
+        signal: d(l)
     },
-    m = {
-        type: c(a),
-        id: c(a),
-        rawId: c(l),
-        authenticatorAttachment: d(a),
+    g = {
+        type: c(l),
+        id: c(l),
+        rawId: c(a),
+        authenticatorAttachment: d(l),
         response: c({
-            clientDataJSON: c(l),
-            authenticatorData: c(l),
-            signature: c(l),
-            userHandle: c(l)
+            clientDataJSON: c(a),
+            authenticatorData: c(a),
+            signature: c(a),
+            userHandle: c(a)
         }),
         clientExtensionResults: s(_, (e) => e.getClientExtensionResults())
     };
 function p(e) {
-    return o(i, g, e);
+    return o(i, m, e);
 }
 async function f(e) {
     let t = await navigator.credentials.get(e);
-    return (t.toJSON = () => o(r, m, t)), t;
+    return (t.toJSON = () => o(r, g, t)), t;
 }

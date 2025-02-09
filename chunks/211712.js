@@ -1,19 +1,19 @@
 n.d(t, {
-    J2: () => h,
+    J2: () => g,
     _h: () => x
 });
 var i = n(388032),
     s = n(201016),
-    r = n(673497),
-    l = n(421450),
+    l = n(673497),
+    r = n(421450),
     a = n(977787),
     o = n(892814),
     c = n(947557),
     d = n(808236),
     u = n(265665),
-    m = n(181793),
-    g = n(338430);
-let h = [
+    h = n(181793),
+    m = n(338430);
+let g = [
     {
         presetName: 'above_the_clouds',
         presetBackgroundUrl: c.Z,
@@ -25,25 +25,25 @@ let h = [
         presetName: 'cyberpunk',
         presetBackgroundUrl: d.Z,
         themeColors: [1967991, 742532],
-        bannerImageUrl: r.Z
+        bannerImageUrl: l.Z
     },
     {
         presetName: 'shadow_realm',
         presetBackgroundUrl: u.Z,
         themeColors: [0, 4458504],
-        bannerImageUrl: l.Z,
+        bannerImageUrl: r.Z,
         avatarDecorationSkuId: '1144058522808614923'
     },
     {
         presetName: 'starlit_dream',
-        presetBackgroundUrl: m.Z,
+        presetBackgroundUrl: h.Z,
         themeColors: [5123751, 590625],
         bannerImageUrl: a.Z,
         avatarDecorationSkuId: '1144058844004233369'
     },
     {
         presetName: 'neon_space',
-        presetBackgroundUrl: g.Z,
+        presetBackgroundUrl: m.Z,
         themeColors: [6094952, 1007678],
         bannerImageUrl: o.Z
     }

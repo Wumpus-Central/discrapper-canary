@@ -7,9 +7,9 @@ var l = n(120356),
     s = n(600164),
     o = n(528144),
     d = n(388032),
-    c = n(747536);
+    c = n(506119);
 function u(e) {
-    let { name: t, description: n, icon: l, imageSrc: u, iconBackgroundColor: m, iconClassName: h, iconWrapperClassName: x, details: p, detailsClassName: g, isHeader: f, isPremium: b } = e;
+    let { name: t, description: n, icon: l, imageSrc: u, iconBackgroundColor: m, iconClassName: h, iconWrapperClassName: x, details: g, detailsClassName: p, isHeader: b, isPremium: _ } = e;
     return (0, i.jsxs)(s.Z, {
         justify: s.Z.Justify.CENTER,
         className: c.wrapper,
@@ -119,10 +119,10 @@ function u(e) {
             })({
                 name: t,
                 description: n,
-                details: p,
-                detailsClassName: g,
-                isHeader: f,
-                isPremium: b
+                details: g,
+                detailsClassName: p,
+                isHeader: b,
+                isPremium: _
             })
         ]
     });

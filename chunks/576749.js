@@ -1,16 +1,16 @@
-t.d(n, { Z: () => c });
+t.d(n, { Z: () => s });
 var i = t(481060),
-    o = t(40851),
-    a = t(334877),
+    a = t(40851),
+    o = t(334877),
     l = t(981631);
 let r = 'guild-event-modal',
-    c = () => {
-        let e = (0, o.bp)() === l.IlC.POPOUT ? i.u1M : i.z1l;
+    s = () => {
+        let e = (0, a.bp)() === l.IlC.POPOUT ? i.u1M : i.z1l;
         return {
             modalKey: r,
             contextKey: e,
             onCloseRequest: () => {
-                a.l.getState().canCloseModal && (0, i.Mr3)(r, e);
+                o.l.getState().canCloseModal && (0, i.Mr3)(r, e);
             }
         };
     };

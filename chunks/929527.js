@@ -104,10 +104,10 @@ m = Object.keys(m).reduce(function (e, t) {
 var v = /^(matrix|translate|scale|rotate|skew)/,
     y = /^(translate)/,
     I = /^(rotate|skew)/,
-    b = function (e, t) {
+    T = function (e, t) {
         return c.is.num(e) && 0 !== e ? e + t : e;
     },
-    T = function e(t, n) {
+    b = function e(t, n) {
         return c.is.arr(t)
             ? t.every(function (t) {
                   return e(t, n);
@@ -132,11 +132,11 @@ var v = /^(matrix|translate|scale|rotate|skew)/,
                             'translate3d(' +
                                 e
                                     .map(function (e) {
-                                        return b(e, 'px');
+                                        return T(e, 'px');
                                     })
                                     .join(',') +
                                 ')',
-                            T(e, 0)
+                            b(e, 0)
                         ];
                     })),
                 c.each(s, function (e, t) {
@@ -156,7 +156,7 @@ var v = /^(matrix|translate|scale|rotate|skew)/,
                                               i = e[1],
                                               r = e[2],
                                               a = e[3];
-                                          return ['rotate3d(' + t + ',' + i + ',' + r + ',' + b(a, n) + ')', T(a, 0)];
+                                          return ['rotate3d(' + t + ',' + i + ',' + r + ',' + T(a, n) + ')', b(a, 0)];
                                       }
                                     : function (e) {
                                           return [
@@ -164,11 +164,11 @@ var v = /^(matrix|translate|scale|rotate|skew)/,
                                                   '(' +
                                                   e
                                                       .map(function (e) {
-                                                          return b(e, n);
+                                                          return T(e, n);
                                                       })
                                                       .join(',') +
                                                   ')',
-                                              T(e, t.startsWith('scale') ? 1 : 0)
+                                              b(e, t.startsWith('scale') ? 1 : 0)
                                           ];
                                       }
                             );

@@ -6,7 +6,7 @@ var l = t(200651),
     r = t(586826),
     u = t(507419),
     o = t(388032),
-    d = t(663588);
+    d = t(367451);
 let c = a.memo(function (e) {
     let { sound: n, volume: t, disabled: a = !1, onChange: c } = e,
         { file: f } = (0, r.p)();

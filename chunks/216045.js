@@ -1,109 +1,109 @@
 n.d(t, { Z: () => B }), n(47120);
 var i = n(200651),
     s = n(192379),
-    r = n(512722),
-    l = n.n(r),
+    l = n(512722),
+    r = n.n(l),
     a = n(442837),
     o = n(622535),
     c = n(481060),
     d = n(570140),
     u = n(232567),
-    m = n(809206),
-    g = n(497321),
-    h = n(634894),
+    h = n(809206),
+    m = n(497321),
+    g = n(634894),
     x = n(100527),
     _ = n(906732),
     p = n(475977),
     E = n(957730),
     C = n(53691),
-    f = n(267717),
-    T = n(296810),
-    N = n(921813),
-    I = n(610794),
+    N = n(267717),
+    f = n(296810),
+    I = n(921813),
+    T = n(610794),
     S = n(935147),
-    b = n(246946),
+    j = n(246946),
     v = n(25990),
-    j = n(594174),
+    b = n(594174),
     A = n(626135),
     O = n(74538),
     R = n(413182),
-    P = n(695346),
-    D = n(265159),
+    D = n(695346),
+    P = n(265159),
     y = n(532495),
     Z = n(981631),
-    k = n(388032),
-    L = n(676258);
+    L = n(388032),
+    k = n(316631);
 function B() {
-    let e = (0, a.e7)([j.default], () => {
-        let e = j.default.getCurrentUser();
-        return l()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
+    let e = (0, a.e7)([b.default], () => {
+        let e = b.default.getCurrentUser();
+        return r()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
     });
     s.useEffect(() => {
         (0, u.In)(e.id);
     }, [e.id]);
-    let t = (0, a.e7)([b.Z], () => b.Z.hidePersonalInformation),
-        { pendingBio: n, ...r } = (0, a.cj)([v.Z], () => v.Z.getAllPending()),
+    let t = (0, a.e7)([j.Z], () => j.Z.hidePersonalInformation),
+        { pendingBio: n, ...l } = (0, a.cj)([v.Z], () => v.Z.getAllPending()),
         B = (0, a.e7)([v.Z], () => v.Z.showNotice()),
-        M = P.dN.useSetting() && null != n ? E.ZP.parse(void 0, n).content : n,
-        w = O.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: V } = (0, _.ZP)(x.Z.PROFILE);
-    s.useEffect(() => () => d.Z.wait(m.W3), []);
+        M = D.dN.useSetting() && null != n ? E.ZP.parse(void 0, n).content : n,
+        V = O.ZP.canUsePremiumProfileCustomization(e),
+        { analyticsLocations: w } = (0, _.ZP)(x.Z.PROFILE);
+    s.useEffect(() => () => d.Z.wait(h.W3), []);
     let U = 'UserSettingsProfileCustomization';
-    (0, h.j)({
+    (0, g.j)({
         location: U + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, h.j)({
+        (0, g.j)({
             location: U + ' auto off',
             autoTrackExposure: !1
         });
     let [G, F] = s.useState(!1),
-        { showRedesign: H } = R.b.useExperiment({ location: 'profile customization' }),
-        z = !w,
-        Y = s.useRef(null);
+        { showRedesign: z } = R.b.useExperiment({ location: 'profile customization' }),
+        Y = !V,
+        H = s.useRef(null);
     return t
-        ? (0, i.jsx)(g.Z, {})
+        ? (0, i.jsx)(m.Z, {})
         : (0, i.jsxs)(_.Gt, {
-              value: V,
+              value: w,
               children: [
                   (0, i.jsx)(p.Z, {}),
-                  (0, i.jsx)(T.Z, {
-                      profilePreview: (0, i.jsx)(N.Z, {
+                  (0, i.jsx)(f.Z, {
+                      profilePreview: (0, i.jsx)(I.Z, {
                           user: e,
-                          canUsePremiumCustomization: w,
-                          onUpsellClick: D.Z,
+                          canUsePremiumCustomization: V,
+                          onUpsellClick: P.Z,
                           pendingBio: M,
-                          ...r
+                          ...l
                       }),
                       children: (0, i.jsx)(y.Z, {})
                   }),
-                  H && (0, i.jsx)(I.Z, {}),
+                  z && (0, i.jsx)(T.Z, {}),
                   (0, i.jsx)(o.$, {
                       onChange: (e) => F(e),
                       threshold: 0.25,
-                      active: z,
+                      active: Y,
                       children: (0, i.jsx)('div', {
-                          ref: Y,
+                          ref: H,
                           children: (0, i.jsx)(S.Z, {
                               user: e,
-                              shouldShow: z,
+                              shouldShow: Y,
                               isVisible: G
                           })
                       })
                   }),
-                  z &&
+                  Y &&
                       !B &&
                       (0, i.jsx)(C.p, {
-                          className: L.floatingNitroUpsell,
-                          showUpsell: z && !G,
-                          text: k.intl.format(k.t.TmfgIy, { onClick: () => (0, f.y)() }),
+                          className: k.floatingNitroUpsell,
+                          showUpsell: Y && !G,
+                          text: L.intl.format(L.t.TmfgIy, { onClick: () => (0, N.y)() }),
                           textVariant: 'heading-md/medium',
                           button: (0, i.jsxs)(c.gtL, {
-                              className: L.floatingNitroButton,
-                              innerClassName: L.floatingNitroButtonInner,
+                              className: k.floatingNitroButton,
+                              innerClassName: k.floatingNitroButtonInner,
                               onClick: () => {
                                   var e;
-                                  A.default.track(Z.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == Y || null === (e = Y.current) || void 0 === e || e.scrollIntoView({ behavior: 'smooth' });
+                                  A.default.track(Z.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == H || null === (e = H.current) || void 0 === e || e.scrollIntoView({ behavior: 'smooth' });
                               },
                               color: c.zxk.Colors.GREEN,
                               size: c.PhG.MEDIUM,
@@ -115,7 +115,7 @@ function B() {
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'currentColor',
-                                      children: k.intl.string(k.t.uw9zIy)
+                                      children: L.intl.string(L.t.uw9zIy)
                                   })
                               ]
                           })

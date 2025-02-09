@@ -207,7 +207,7 @@ let r = {
     },
     SearchManager: {
         actions: ['USER_SETTINGS_PROTO_UPDATE', 'POST_CONNECTION_OPEN'],
-        inlineRequire: () => n(433538).Z,
+        inlineRequire: () => n(941467).Z,
         neverLoadBeforeConnectionOpen: !0
     },
     SelectedChannelManager: {
@@ -241,7 +241,7 @@ let r = {
     },
     UrgentSystemDMManagerBase: {
         actions: ['POST_CONNECTION_OPEN', 'MESSAGE_CREATE', 'CHANNEL_SELECT'],
-        inlineRequire: () => n(449195).Z,
+        inlineRequire: () => n(559523).Z,
         neverLoadBeforeConnectionOpen: !0
     },
     UserGuildSettingsManager: {

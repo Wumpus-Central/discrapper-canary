@@ -1,5 +1,5 @@
-n.d(t, { M: () => l });
-var i = n(250683);
-function l(e) {
-    return i.fromByteArray(e);
+t.d(n, { M: () => i });
+var l = t(250683);
+function i(e) {
+    return l.fromByteArray(e);
 }

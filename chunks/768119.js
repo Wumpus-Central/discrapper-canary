@@ -61,8 +61,8 @@ function v(e, t) {
 }
 let y = 'SearchStore',
     I = 'tokenized',
-    b = !1,
-    T = {},
+    T = !1,
+    b = {},
     S = null;
 function A(e) {
     let { searchId: t, editorState: n } = e;
@@ -137,9 +137,9 @@ function R(e) {
     var t;
     let { searchId: n, query: i } = e;
     if ('string' != typeof i || '' === (i = i.trim())) return;
-    let r = (T[n] = null !== (t = T[n]) && void 0 !== t ? t : []),
+    let r = (b[n] = null !== (t = b[n]) && void 0 !== t ? t : []),
         a = r.indexOf(i);
-    -1 !== a ? (r.splice(a, 1), r.unshift(i)) : null != r[0] && '' !== r[0] && i.startsWith(r[0]) ? (r[0] = i) : a < 0 && r.unshift(i), r.length > 5 && r.splice(5, r.length), o.K.set(y, { history: T });
+    -1 !== a ? (r.splice(a, 1), r.unshift(i)) : null != r[0] && '' !== r[0] && i.startsWith(r[0]) ? (r[0] = i) : a < 0 && r.unshift(i), r.length > 5 && r.splice(5, r.length), o.K.set(y, { history: b });
 }
 function O(e) {
     let { searchId: t } = e,
@@ -151,31 +151,31 @@ function D(e) {
         n = g(t);
     (n.isSearching = !1), (n.isIndexing = !1), (n.isHistoricalIndexing = e.doingHistoricalIndex || !1), (n.searchFetcher = null), (n.totalResults = e.totalResults), (n.hasError = e.hasError), (n.analyticsId = e.analyticsId), (n.documentsIndexed = null != e.documentsIndexed ? e.documentsIndexed : 0), (n.showNoResultsAlt = Math.random() < h), (n.rawResults = e.messages), null == n.query && (n.hasError = !0);
 }
-function x(e) {
+function L(e) {
     let { searchId: t } = e,
         n = m[t];
     if (null == n) return !1;
     null != n.searchFetcher && n.searchFetcher.cancel(), delete m[t];
 }
-function L(e) {
+function x(e) {
     if (e === S) return !1;
     null != e && null == m[e] && g(e), (S = e);
 }
-function P(e) {
-    let { guildId: t, channelId: n } = e;
-    L(null != t ? t : n);
-}
 function w(e) {
+    let { guildId: t, channelId: n } = e;
+    x(null != t ? t : n);
+}
+function P(e) {
     let { searchId: t } = e;
-    L(t);
+    x(t);
 }
 function M(e) {
     let { searchId: t } = e;
-    null == t ? (o.K.remove(y), (T = {})) : (delete T[t], o.K.set(y, { history: T }));
+    null == t ? (o.K.remove(y), (b = {})) : (delete b[t], o.K.set(y, { history: b }));
 }
 function k(e) {
     let { searchId: t, query: n } = e;
-    null != T[t] && ((T[t] = T[t].filter((e) => e !== n)), o.K.set(y, { history: T }));
+    null != b[t] && ((b[t] = b[t].filter((e) => e !== n)), o.K.set(y, { history: b }));
 }
 function U(e) {
     return (
@@ -195,16 +195,16 @@ function B() {
     });
 }
 function Z() {
-    o.K.remove(y), (T = {});
+    o.K.remove(y), (b = {});
 }
 function F() {
-    return null != S && x({ searchId: S });
+    return null != S && L({ searchId: S });
 }
 class V extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, d.Z);
         let e = o.K.get(y);
-        (null == e ? void 0 : e.history) != null && (T = U(e.history)), (b = !!o.K.get(I));
+        (null == e ? void 0 : e.history) != null && (b = U(e.history)), (T = !!o.K.get(I));
     }
     getCurrentSearchId() {
         return S;
@@ -214,7 +214,7 @@ class V extends (i = s.ZP.Store) {
         return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e));
     }
     isTokenized() {
-        return b;
+        return T;
     }
     getSearchType(e) {
         return v(null != e ? e : S, (e) => e.searchType);
@@ -254,7 +254,7 @@ class V extends (i = s.ZP.Store) {
         return v(e, (e) => e.editorState);
     }
     getHistory(e) {
-        return T[e];
+        return b[e];
     }
     getOffset(e) {
         var t;
@@ -294,12 +294,12 @@ let j = new V(l.Z, {
     SEARCH_START: C,
     SEARCH_INDEXING: O,
     SEARCH_FINISH: D,
-    SEARCH_EDITOR_STATE_CLEAR: x,
+    SEARCH_EDITOR_STATE_CLEAR: L,
     SEARCH_ENSURE_SEARCH_STATE: N,
     SEARCH_EDITOR_STATE_CHANGE: A,
     SEARCH_SET_SHOW_BLOCKED_RESULTS: G,
-    SEARCH_SCREEN_OPEN: w,
-    CHANNEL_SELECT: P,
+    SEARCH_SCREEN_OPEN: P,
+    CHANNEL_SELECT: w,
     CHANNEL_TOGGLE_MEMBERS_SECTION: F,
     SEARCH_CLEAR_HISTORY: M,
     SEARCH_REMOVE_HISTORY: k,

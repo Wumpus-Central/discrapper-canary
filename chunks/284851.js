@@ -1,32 +1,32 @@
 n.d(t, { U: () => l });
-var s = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(46140),
-    o = n(388032);
+var o = n(481060),
+    s = n(46140),
+    a = n(388032);
 function i(e) {
     let { onClose: t, onSelect: n, quest: i } = e;
-    return (0, s.jsx)(r.v2r, {
+    return (0, r.jsx)(o.v2r, {
         variant: 'fixed',
         onSelect: t,
         navId: 'quest-home-platform-select-'.concat(i.id),
-        'aria-label': o.intl.string(o.t.ogxXGh),
+        'aria-label': a.intl.string(a.t.ogxXGh),
         onClose: t,
-        children: (0, s.jsxs)(
-            r.kSQ,
+        children: (0, r.jsxs)(
+            o.kSQ,
             {
                 children: [
-                    (0, s.jsx)(r.sNh, {
+                    (0, r.jsx)(o.sNh, {
                         id: 'desktop',
-                        label: o.intl.string(o.t.QXc019),
-                        action: () => n(a.cd.DESKTOP),
-                        icon: r.pzj
+                        label: a.intl.string(a.t.QXc019),
+                        action: () => n(s.cd.DESKTOP),
+                        icon: o.pzj
                     }),
-                    (0, s.jsx)(r.sNh, {
+                    (0, r.jsx)(o.sNh, {
                         id: 'console',
-                        label: o.intl.string(o.t['8lAfuL']),
-                        action: () => n(a.cd.CONSOLE),
-                        icon: r.iWm
+                        label: a.intl.string(a.t['8lAfuL']),
+                        action: () => n(s.cd.CONSOLE),
+                        icon: o.iWm
                     })
                 ]
             },
@@ -36,12 +36,12 @@ function i(e) {
 }
 function l(e) {
     let { children: t, ...n } = e;
-    return (0, s.jsx)(r.yRy, {
+    return (0, r.jsx)(o.yRy, {
         position: 'bottom',
         align: 'right',
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, s.jsx)(i, {
+            return (0, r.jsx)(i, {
                 ...n,
                 onClose: t
             });

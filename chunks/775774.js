@@ -1,6 +1,6 @@
-n.d(t, { p: () => s });
-var i = n(358085);
-let s = {
+t.d(n, { p: () => r });
+var i = t(358085);
+let r = {
     binds: ['mod+alt+i'],
     comboKeysBindGlobal: !0,
     action(e) {

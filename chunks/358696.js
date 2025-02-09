@@ -10,7 +10,7 @@ var r = n(120356),
     o = n(686546),
     l = n(442550),
     u = n(388032),
-    c = n(684033);
+    c = n(445956);
 let d = {
     none: void 0,
     default: c.aspectRatio,
@@ -53,7 +53,7 @@ function h(e) {
             className: a()(c.contentImage, d[null != h ? h : 'default'], E),
             constrain: 'width'
         });
-    let b = (0, i.jsx)(l.f, {
+    let T = (0, i.jsx)(l.f, {
         src: r.src,
         alt: null !== (n = null !== (t = r.alt) && void 0 !== t ? t : r.text) && void 0 !== n ? n : u.intl.string(u.t['2B/phI']),
         size: v,
@@ -76,12 +76,12 @@ function h(e) {
                                       mask: I,
                                       width: v,
                                       height: v,
-                                      children: b
+                                      children: T
                                   })
                                 : (0, i.jsx)('div', {
                                       ...e,
                                       className: c.imageContainer,
-                                      children: b
+                                      children: T
                                   })
                     })
             }),

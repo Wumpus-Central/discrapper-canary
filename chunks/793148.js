@@ -7,7 +7,7 @@ var i,
     l = n(481060),
     u = n(540026),
     c = n(388032),
-    d = n(712402);
+    d = n(944760);
 function f(e, t, n) {
     return (
         t in e
@@ -37,9 +37,9 @@ class p extends (i = a.PureComponent) {
     render() {
         let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: i, sliderClassName: a, currentWindow: s, muted: f, minValue: p, maxValue: h, value: m, onVolumeShow: g, onVolumeHide: E } = this.props,
             { hovered: v, focused: y, dragging: I } = this.state,
-            b = l.gj8;
+            T = l.gj8;
         return (
-            f || m === p ? (b = l.OyP) : m < h / 2 && (b = l.X2j),
+            f || m === p ? (T = l.OyP) : m < h / 2 && (T = l.X2j),
             (0, r.jsxs)('div', {
                 className: o()(n, d.container),
                 onMouseEnter: () => {
@@ -80,7 +80,7 @@ class p extends (i = a.PureComponent) {
                         size: l.zxk.Sizes.NONE,
                         look: l.zxk.Looks.BLANK,
                         onClick: this.handleToggleMute,
-                        children: (0, r.jsx)(b, {
+                        children: (0, r.jsx)(T, {
                             color: t,
                             className: e
                         })

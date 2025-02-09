@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(653041), n(47120);
+n.d(t, { Z: () => w }), n(653041), n(47120);
 var i,
     r = n(392711),
     a = n.n(r),
@@ -39,13 +39,13 @@ let v = [],
         afterCompute: () => {},
         numFrequentlyItems: m.O6
     });
-function b(e) {
+function T(e) {
     let { sound: t, trigger: n } = e;
-    if (!x()) return;
+    if (!L()) return;
     let i = t.soundId.toString();
     n === h.YQ.SOUNDBOARD && A(i);
 }
-function T(e) {
+function b(e) {
     var t;
     let { soundId: n, userId: i } = e;
     if (!D()) return;
@@ -75,7 +75,7 @@ function C(e) {
 }
 function R() {
     var e;
-    if (!x()) return;
+    if (!L()) return;
     let t = null === (e = d.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
     I.overwriteHistory(C(null != t ? t : {}), v);
 }
@@ -84,7 +84,7 @@ function O(e) {
         settings: { type: t },
         wasSaved: n
     } = e;
-    x() && t === g.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (v = []);
+    L() && t === g.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (v = []);
 }
 function D() {
     return (0, _.v)({
@@ -92,13 +92,13 @@ function D() {
         autoTrackExposure: !1
     }).canSeeRecentlyHeard;
 }
-function x() {
+function L() {
     return (0, _.v)({
         location: 'soundboard_event_store',
         autoTrackExposure: !1
     }).canSeeFrequentlyPlayed;
 }
-class L extends (i = l.ZP.PersistedStore) {
+class x extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(f.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && y.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (v = e.playedEventsPendingFlush), this.syncWith([d.Z], R);
     }
@@ -121,9 +121,9 @@ class L extends (i = l.ZP.PersistedStore) {
         return I.frequently;
     }
 }
-E(L, 'displayName', 'SoundboardEventStore'), E(L, 'persistKey', 'SoundboardEventStore');
-let P = new L(u.Z, {
-    GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: b,
-    GUILD_SOUNDBOARD_SOUND_PLAY_START: T,
+E(x, 'displayName', 'SoundboardEventStore'), E(x, 'persistKey', 'SoundboardEventStore');
+let w = new x(u.Z, {
+    GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: T,
+    GUILD_SOUNDBOARD_SOUND_PLAY_START: b,
     USER_SETTINGS_PROTO_UPDATE: O
 });

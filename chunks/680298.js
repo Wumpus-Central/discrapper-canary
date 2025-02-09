@@ -6,14 +6,14 @@ var i = n(200651),
     s = n(911969),
     o = n(399860),
     d = n(388032),
-    c = n(19751);
+    c = n(887375);
 function u(e) {
     let { applicationIcon: t, applicationName: u, canNavigate: m, command: h, guildId: x } = e,
-        p = l.useMemo(() => {
+        g = l.useMemo(() => {
             var e;
             return 0 !== Object.keys(null !== (e = h.permissions) && void 0 !== e ? e : {}).length;
         }, [h.permissions]),
-        g = l.useCallback(() => {
+        p = l.useCallback(() => {
             null != h &&
                 m() &&
                 (0, a.ZDy)(async () => {
@@ -29,7 +29,7 @@ function u(e) {
                         });
                 });
         }, [t, u, m, h, x]),
-        f = l.useCallback(
+        b = l.useCallback(
             (e) => {
                 (0, r.jW)(e, async () => {
                     let { default: e } = await n.e('5396').then(n.bind(n, 731646));
@@ -43,30 +43,30 @@ function u(e) {
             },
             [h]
         ),
-        b = h.type === s.yU.CHAT ? a.SsZ : a.hH0,
-        v = (0, o.gw)(h.type, h.displayName);
+        _ = h.type === s.yU.CHAT ? a.SsZ : a.hH0,
+        f = (0, o.gw)(h.type, h.displayName);
     return (0, i.jsxs)(a.P3F, {
-        onClick: g,
+        onClick: p,
         className: c.item,
-        onContextMenu: f,
+        onContextMenu: b,
         children: [
             (0, i.jsxs)('div', {
                 className: c.identifier,
                 children: [
-                    (0, i.jsx)(b, {
+                    (0, i.jsx)(_, {
                         className: c.icon,
                         size: 'md',
                         color: 'currentColor'
                     }),
                     (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
-                        children: v
+                        children: f
                     })
                 ]
             }),
             (0, i.jsx)('div', {
                 className: c.statusContainer,
-                children: p
+                children: g
                     ? (0, i.jsxs)('div', {
                           className: c.statusLine,
                           children: [

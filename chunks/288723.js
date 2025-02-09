@@ -32,11 +32,11 @@ let d = {
                     v = n.altBoundary,
                     y = n.flipVariations,
                     I = void 0 === y || y,
-                    b = n.allowedAutoPlacements,
-                    T = t.options.placement,
-                    S = (0, r.Z)(T) === T,
-                    A = h || (S || !I ? [(0, i.Z)(T)] : c(T)),
-                    N = [T].concat(A).reduce(function (e, n) {
+                    T = n.allowedAutoPlacements,
+                    b = t.options.placement,
+                    S = (0, r.Z)(b) === b,
+                    A = h || (S || !I ? [(0, i.Z)(b)] : c(b)),
+                    N = [b].concat(A).reduce(function (e, n) {
                         return e.concat(
                             (0, r.Z)(n) === l.d7
                                 ? (0, o.Z)(t, {
@@ -45,7 +45,7 @@ let d = {
                                       rootBoundary: E,
                                       padding: m,
                                       flipVariations: I,
-                                      allowedAutoPlacements: b
+                                      allowedAutoPlacements: T
                                   })
                                 : n
                         );
@@ -54,18 +54,18 @@ let d = {
                     R = t.rects.popper,
                     O = new Map(),
                     D = !0,
-                    x = N[0],
-                    L = 0;
-                L < N.length;
-                L++
+                    L = N[0],
+                    x = 0;
+                x < N.length;
+                x++
             ) {
-                var P = N[L],
-                    w = (0, r.Z)(P),
-                    M = (0, u.Z)(P) === l.BL,
-                    k = [l.we, l.I].indexOf(w) >= 0,
+                var w = N[x],
+                    P = (0, r.Z)(w),
+                    M = (0, u.Z)(w) === l.BL,
+                    k = [l.we, l.I].indexOf(P) >= 0,
                     U = k ? 'width' : 'height',
                     G = (0, s.Z)(t, {
-                        placement: P,
+                        placement: w,
                         boundary: g,
                         rootBoundary: E,
                         altBoundary: v,
@@ -76,16 +76,16 @@ let d = {
                 var Z = (0, i.Z)(B),
                     F = [];
                 if (
-                    (f && F.push(G[w] <= 0),
+                    (f && F.push(G[P] <= 0),
                     p && F.push(G[B] <= 0, G[Z] <= 0),
                     F.every(function (e) {
                         return e;
                     }))
                 ) {
-                    (x = P), (D = !1);
+                    (L = w), (D = !1);
                     break;
                 }
-                O.set(P, F);
+                O.set(w, F);
             }
             if (D)
                 for (
@@ -98,13 +98,13 @@ let d = {
                                         return e;
                                     });
                             });
-                            if (t) return (x = t), 'break';
+                            if (t) return (L = t), 'break';
                         },
                         H = V;
                     H > 0 && 'break' !== j(H);
                     H--
                 );
-            t.placement !== x && ((t.modifiersData[a]._skip = !0), (t.placement = x), (t.reset = !0));
+            t.placement !== L && ((t.modifiersData[a]._skip = !0), (t.placement = L), (t.reset = !0));
         }
     },
     requiresIfExists: ['offset'],

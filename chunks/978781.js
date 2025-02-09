@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => w,
+    Z: () => P,
     _: () => D
 }),
     n(627341),
@@ -23,18 +23,18 @@ var i = n(200651),
     v = n(572397),
     y = n(705262),
     I = n(436774),
-    b = n(768762),
-    T = n(197115),
+    T = n(768762),
+    b = n(197115),
     S = n(727939),
     A = n(981631),
     N = n(921944),
     C = n(474936),
     R = n(388032),
-    O = n(860768),
+    O = n(870209),
     D = (function (e) {
         return (e[(e.CLIENT_THEMES = 0)] = 'CLIENT_THEMES'), (e[(e.APP_ICONS = 1)] = 'APP_ICONS'), e;
     })({});
-function x(e) {
+function L(e) {
     let { isCoachmark: t } = e,
         n = (0, v.q)();
     return (
@@ -48,7 +48,7 @@ function x(e) {
         })
     );
 }
-function L() {
+function x() {
     let e = (0, m.Z)();
     return (
         r.useEffect(() => {
@@ -57,7 +57,7 @@ function L() {
         (0, i.jsx)(h.Z, { isEditor: !0 })
     );
 }
-function P(e) {
+function w(e) {
     let { tab: t, isPreview: a, isCoachmark: l, onClose: d } = e,
         _ = r.useCallback(() => {
             d(), l || c.Z.open();
@@ -124,11 +124,11 @@ function P(e) {
                             size: u.zxk.Sizes.NONE,
                             onClick: _,
                             'aria-label': p,
-                            children: (0, i.jsx)(b.Z, { direction: b.Z.Directions.LEFT })
+                            children: (0, i.jsx)(T.Z, { direction: T.Z.Directions.LEFT })
                         })
                     }),
                     a &&
-                        (0, i.jsx)(T.Z, {
+                        (0, i.jsx)(b.Z, {
                             className: O.footerButton,
                             subscriptionTier: C.Si.TIER_2,
                             showGradient: !0,
@@ -140,7 +140,7 @@ function P(e) {
         ]
     });
 }
-function w(e) {
+function P(e) {
     let { initialTab: t, markAsDismissed: n, isCoachmark: a } = e,
         [s, o] = r.useState(t),
         c = r.useMemo(
@@ -163,14 +163,14 @@ function w(e) {
         I = r.useCallback(() => {
             f && y(), h && (0, _.O7)();
         }, [f, h, y]),
-        b = (0, d.Z)(null, m ? I : A.dG4),
-        T = r.useCallback(() => {
+        T = (0, d.Z)(null, m ? I : A.dG4),
+        b = r.useCallback(() => {
             (0, _.G8)(), (0, g.Mo)(), I(), null == n || n(N.L.DISMISS);
         }, [I, n]);
     return (0, i.jsx)(S.Z, {
         className: O.draggableContainer,
         children: (0, i.jsxs)('div', {
-            ref: b,
+            ref: T,
             className: O.container,
             children: [
                 (0, i.jsxs)('div', {
@@ -187,7 +187,7 @@ function w(e) {
                                     className: O.closeContainer,
                                     innerClassName: O.closeInner,
                                     withCircleBackground: !0,
-                                    onClick: T
+                                    onClick: b
                                 })
                             ]
                         }),
@@ -204,12 +204,12 @@ function w(e) {
                 }),
                 (0, i.jsxs)(u.Ttm, {
                     className: O.scrollContainer,
-                    children: [0 === s && (0, i.jsx)(x, { isCoachmark: a }), 1 === s && (0, i.jsx)(L, {})]
+                    children: [0 === s && (0, i.jsx)(L, { isCoachmark: a }), 1 === s && (0, i.jsx)(x, {})]
                 }),
-                (0, i.jsx)(P, {
+                (0, i.jsx)(w, {
                     tab: s,
                     isPreview: m,
-                    onClose: T,
+                    onClose: b,
                     isCoachmark: !1
                 })
             ]

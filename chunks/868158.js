@@ -2,7 +2,7 @@ n.d(t, {
     Eb: () => A,
     Fx: () => R,
     IM: () => N,
-    J2: () => P,
+    J2: () => w,
     r$: () => S
 }),
     n(653041),
@@ -27,20 +27,20 @@ var i = n(512722),
     v = n(411198);
 let y = new _.Z('ReadyPayloadUtils'),
     I = {},
-    b = null,
-    T = {};
+    T = null,
+    b = {};
 function S(e, t) {
     var n;
     let { guilds: i, merged_members: r, merged_presences: a, ...s } = e,
-        o = O(T, null == a ? void 0 : a.friends),
+        o = O(b, null == a ? void 0 : a.friends),
         l =
             null !==
                 (n =
                     null == i
                         ? void 0
                         : i.map((e, t) => {
-                              let n = O(T, null == a ? void 0 : a.guilds[t]),
-                                  i = O(T, null == r ? void 0 : r[t]);
+                              let n = O(b, null == a ? void 0 : a.guilds[t]),
+                                  i = O(b, null == r ? void 0 : r[t]);
                               return {
                                   ...e,
                                   unavailable: void 0 === e.voice_states,
@@ -60,7 +60,7 @@ function S(e, t) {
         }));
     return (
         null != u && l.push(u),
-        (T = {}),
+        (b = {}),
         {
             ...s,
             presences: o,
@@ -83,15 +83,15 @@ function A() {
 function N(e, t, n) {
     var i;
     let { users: a, relationships: o, private_channels: l, merged_members: u, guilds: c, ...d } = e;
-    x(n);
-    let f = O((T = s().keyBy(a, (e) => e.id)), o);
+    L(n);
+    let f = O((b = s().keyBy(a, (e) => e.id)), o);
     null == l ||
         l.forEach((e) => {
             let t = e.recipient_ids;
-            null != t && (e.recipients = t.map((e) => (r()(null != T[e], 'Missing user in compressed ready payload'), T[e]))), delete e.recipient_ids;
+            null != t && (e.recipients = t.map((e) => (r()(null != b[e], 'Missing user in compressed ready payload'), b[e]))), delete e.recipient_ids;
         });
-    let _ = null !== (i = null == c ? void 0 : c.map((e, t) => (!0 === e.unavailable ? e : ((e.members = O(T, null == u ? void 0 : u[t])), L(e))))) && void 0 !== i ? i : [],
-        p = C(t, c, (e) => L(e));
+    let _ = null !== (i = null == c ? void 0 : c.map((e, t) => (!0 === e.unavailable ? e : ((e.members = O(b, null == u ? void 0 : u[t])), x(e))))) && void 0 !== i ? i : [],
+        p = C(t, c, (e) => x(e));
     return (
         null != p && _.push(p),
         {
@@ -105,12 +105,12 @@ function N(e, t, n) {
     );
 }
 function C(e, t, n) {
-    return null == b || b.identifyTime !== e || (null != t && t.some((e) => e.id === b.guild.id)) ? null : n(b.guild);
+    return null == T || T.identifyTime !== e || (null != t && t.some((e) => e.id === T.guild.id)) ? null : n(T.guild);
 }
 function R(e, t) {
     var n, i, r;
     let a = g.Z.getGuild(e.id),
-        s = P(
+        s = w(
             e,
             null == a
                 ? void 0
@@ -123,7 +123,7 @@ function R(e, t) {
                   }
         );
     return (
-        (b = {
+        (T = {
             guild: e,
             identifyTime: t
         }),
@@ -146,7 +146,7 @@ function D(e) {
     let t = I[e];
     return delete I[e], t;
 }
-function x(e) {
+function L(e) {
     null != o.Z.database() && !1 === e.databaseOk && d.Z.replaceDisableAllDatabases('ReadyPayloadUtils: database was not ok'), (I = {});
     let t = Object.values(g.Z.getGuilds()),
         n = p.ZP.getGuilds(),
@@ -165,7 +165,7 @@ function x(e) {
             });
     }
 }
-function L(e) {
+function x(e) {
     var t, n, i, r, a, s, o, l, u, c, d, f;
     let _ = D(e.id);
     if ('partial' !== e.data_mode)
@@ -184,7 +184,7 @@ function L(e) {
             stage_instances: e.stage_instances,
             stickers: e.stickers,
             threads: null !== (r = null === (i = e.threads) || void 0 === i ? void 0 : i.map((t) => (0, m.q_)(t, e.id))) && void 0 !== r ? r : [],
-            threadMessages: w(e.threads),
+            threadMessages: P(e.threads),
             channels: e.channels.map((t) => ((t.guild_id = e.id), (0, m.q_)(t, e.id))),
             version: e.version,
             hasThreadsSubscription: e.has_threads_subscription
@@ -220,12 +220,12 @@ function L(e) {
         },
         unableToSyncDeletes: e.unable_to_sync_deletes,
         threads: null !== (f = null === (n = e.threads) || void 0 === n ? void 0 : n.map((t) => (0, m.q_)(t, e.id))) && void 0 !== f ? f : [],
-        threadMessages: w(e.threads),
+        threadMessages: P(e.threads),
         version: e.version,
         hasThreadsSubscription: e.has_threads_subscription
     };
 }
-function P(e, t) {
+function w(e, t) {
     var n, i, r, a, s, o, l, u, c, d, f, _;
     if ((null == t && (t = D(e.id)), 'partial' !== e.data_mode))
         return {
@@ -242,7 +242,7 @@ function P(e, t) {
             stage_instances: e.stage_instances,
             stickers: e.stickers,
             threads: null !== (a = null === (r = e.threads) || void 0 === r ? void 0 : r.map((t) => (0, m.q_)(t, e.id))) && void 0 !== a ? a : [],
-            threadMessages: w(e.threads),
+            threadMessages: P(e.threads),
             channels: e.channels.map((t) => ((t.guild_id = e.id), (0, m.q_)(t, e.id))),
             presences: e.presences,
             activity_instances: e.activity_instances,
@@ -282,13 +282,13 @@ function P(e, t) {
         },
         unableToSyncDeletes: e.unable_to_sync_deletes,
         threads: null !== (_ = null === (i = e.threads) || void 0 === i ? void 0 : i.map((t) => (0, m.q_)(t, e.id))) && void 0 !== _ ? _ : [],
-        threadMessages: w(e.threads),
+        threadMessages: P(e.threads),
         voice_states: e.voice_states,
         version: e.version,
         hasThreadsSubscription: e.has_threads_subscription
     };
 }
-function w(e) {
+function P(e) {
     let t = [];
     if (null != e) for (let n of e) null != n.most_recent_message && t.push(n.most_recent_message);
     return t;

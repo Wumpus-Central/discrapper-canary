@@ -24,17 +24,17 @@ var i,
     v = n(626135),
     y = n(70956),
     I = n(36703),
-    b = n(228488),
-    T = n(540026),
+    T = n(228488),
+    b = n(540026),
     S = n(455813),
     A = n(283756),
     N = n(793148),
     C = n(981631),
     R = n(217702),
     O = n(388032),
-    D = n(745124),
-    x = n(652849);
-function L(e, t, n) {
+    D = n(790879),
+    L = n(801194);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,8 +47,8 @@ function L(e, t, n) {
         e
     );
 }
-let P = 3000,
-    w = 1000,
+let w = 3000,
+    P = 1000,
     M = '-:--',
     k = {
         friction: 14,
@@ -200,17 +200,17 @@ class V extends (i = s.Component) {
                           duration: i
                       })
                     : null,
-                (0, a.jsx)(T.Z, {
+                (0, a.jsx)(b.Z, {
                     buffers: e,
                     value: null != i ? i : 0,
                     onDrag: s,
                     onDragEnd: o,
                     onDragStart: l,
-                    type: T.Z.Types.DURATION,
+                    type: b.Z.Types.DURATION,
                     ref: this.setDurationRef
                 }),
                 (0, a.jsx)('div', {
-                    className: x.flex,
+                    className: L.flex,
                     children: (0, a.jsx)(N.Z, {
                         ref: this.setVolumeButtonRef,
                         muted: r,
@@ -218,7 +218,7 @@ class V extends (i = s.Component) {
                         minValue: 0,
                         maxValue: 1,
                         currentWindow: window,
-                        onValueChange: (e) => s(e, T.Z.Types.VOLUME),
+                        onValueChange: (e) => s(e, b.Z.Types.VOLUME),
                         onToggleMute: u,
                         onVolumeShow: c,
                         onVolumeHide: f,
@@ -233,13 +233,13 @@ class V extends (i = s.Component) {
     }
     constructor(...e) {
         super(...e),
-            L(this, 'state', { translateY: new d.Z.Value(0) }),
-            L(this, 'volumeButton', void 0),
-            L(this, 'durationBar', void 0),
-            L(this, 'setDurationRef', (e) => {
+            x(this, 'state', { translateY: new d.Z.Value(0) }),
+            x(this, 'volumeButton', void 0),
+            x(this, 'durationBar', void 0),
+            x(this, 'setDurationRef', (e) => {
                 this.durationBar = e;
             }),
-            L(this, 'setVolumeButtonRef', (e) => {
+            x(this, 'setVolumeButtonRef', (e) => {
                 this.volumeButton = e;
             });
     }
@@ -277,7 +277,7 @@ function j(e) {
         ]
     });
 }
-L(V, 'defaultProps', { disabled: !1 });
+x(V, 'defaultProps', { disabled: !1 });
 class H extends s.Component {
     pop() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -311,12 +311,12 @@ class H extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            L(this, 'state', {
+            x(this, 'state', {
                 play: !1,
                 scale: new d.Z.Value(0),
                 opacity: new d.Z.Value(0)
             }),
-            L(this, 'popAnimation', () => {
+            x(this, 'popAnimation', () => {
                 let { opacity: e, scale: t } = this.state;
                 t.setValue(0),
                     e.setValue(0),
@@ -397,20 +397,20 @@ class W {
         (this.playTimeSec += Math.max((null !== (t = this.lastPlayingTime) && void 0 !== t ? t : e) - (null !== (n = this.playbackStartTime) && void 0 !== n ? n : 0), 0)), (this.playWallTimeMs += this.timeInState());
     }
     constructor(e) {
-        L(this, 'metadata', void 0),
-            L(this, 'playTimeSec', 0),
-            L(this, 'playWallTimeMs', 0),
-            L(this, 'firstPlayWaitingMs', 0),
-            L(this, 'stallCount', 0),
-            L(this, 'stallMs', 0),
-            L(this, 'seekCount', 0),
-            L(this, 'seekWaitingMs', 0),
-            L(this, 'stateTime', performance.now()),
-            L(this, 'currentState', 'not_started'),
-            L(this, 'playbackStartTime', void 0),
-            L(this, 'lastPlayingTime', void 0),
-            L(this, 'analyticsEnabled', void 0),
-            L(this, 'onWaiting', (e) => {
+        x(this, 'metadata', void 0),
+            x(this, 'playTimeSec', 0),
+            x(this, 'playWallTimeMs', 0),
+            x(this, 'firstPlayWaitingMs', 0),
+            x(this, 'stallCount', 0),
+            x(this, 'stallMs', 0),
+            x(this, 'seekCount', 0),
+            x(this, 'seekWaitingMs', 0),
+            x(this, 'stateTime', performance.now()),
+            x(this, 'currentState', 'not_started'),
+            x(this, 'playbackStartTime', void 0),
+            x(this, 'lastPlayingTime', void 0),
+            x(this, 'analyticsEnabled', void 0),
+            x(this, 'onWaiting', (e) => {
                 switch (this.currentState) {
                     case 'not_started':
                         this.moveToState('not_started_waiting');
@@ -430,7 +430,7 @@ class W {
                         this.assertUnreachable(this.currentState);
                 }
             }),
-            L(this, 'onSeeking', (e) => {
+            x(this, 'onSeeking', (e) => {
                 switch (this.currentState) {
                     case 'seeking':
                     case 'seeked':
@@ -451,7 +451,7 @@ class W {
                 }
                 (this.seekCount += 1), this.moveToState('seeking');
             }),
-            L(this, 'onSeeked', (e) => {
+            x(this, 'onSeeked', (e) => {
                 switch (this.currentState) {
                     case 'seeking':
                     case 'seeked':
@@ -468,7 +468,7 @@ class W {
                         this.assertUnreachable(this.currentState);
                 }
             }),
-            L(this, 'onPause', (e) => {
+            x(this, 'onPause', (e) => {
                 switch (this.currentState) {
                     case 'playing':
                         this.updatePlayTime(e.currentTarget.currentTime), this.moveToState('paused'), this.sendEvent();
@@ -488,7 +488,7 @@ class W {
                         this.assertUnreachable(this.currentState);
                 }
             }),
-            L(this, 'onPlaying', (e) => {
+            x(this, 'onPlaying', (e) => {
                 switch (this.currentState) {
                     case 'playing':
                         return;
@@ -512,7 +512,7 @@ class W {
                 }
                 (this.playbackStartTime = e.currentTarget.currentTime), this.moveToState('playing');
             }),
-            L(this, 'onTimeUpdate', (e) => {
+            x(this, 'onTimeUpdate', (e) => {
                 switch (this.currentState) {
                     case 'playing':
                         this.lastPlayingTime = e.currentTarget.currentTime;
@@ -528,10 +528,10 @@ class W {
                         this.assertUnreachable(this.currentState);
                 }
             }),
-            L(this, 'onDragStart', (e) => {
+            x(this, 'onDragStart', (e) => {
                 null != e && (this.lastPlayingTime = e);
             }),
-            L(this, 'onLoadedMetadata', (e) => {
+            x(this, 'onLoadedMetadata', (e) => {
                 this.metadata.fileDurationSec = e.currentTarget.duration;
             }),
             (this.metadata = e),
@@ -561,15 +561,15 @@ class K extends (r = s.PureComponent) {
             { current: d } = this.playPausePopRef;
         if (null == c) return;
         a && !t.playing ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && (null == d || d.pop(a))) : !a && t.playing && (c.pause(), null == d || d.pop(a), null == n || n());
-        let f = (0, b.fn)(c.parentNode, c);
-        s && !t.fullscreen && null != f ? ((0, b.Dj)(f), f.addEventListener(b.NO, this.handleFullScreenExit)) : !s && t.fullscreen && null != f && (f.removeEventListener(b.NO, this.handleFullScreenExit), (0, b.Pr)(f)), l === T.Z.Types.DURATION && t.dragging !== T.Z.Types.DURATION && a ? c.pause() : l !== T.Z.Types.DURATION && t.dragging === T.Z.Types.DURATION && a && c.play(), o !== t.muted && ((c.muted = o), null == r || r(o)), u !== t.volume && ((c.volume = u), null == i || i(u));
+        let f = (0, T.fn)(c.parentNode, c);
+        s && !t.fullscreen && null != f ? ((0, T.Dj)(f), f.addEventListener(T.NO, this.handleFullScreenExit)) : !s && t.fullscreen && null != f && (f.removeEventListener(T.NO, this.handleFullScreenExit), (0, T.Pr)(f)), l === b.Z.Types.DURATION && t.dragging !== b.Z.Types.DURATION && a ? c.pause() : l !== b.Z.Types.DURATION && t.dragging === b.Z.Types.DURATION && a && c.play(), o !== t.muted && ((c.muted = o), null == r || r(o)), u !== t.volume && ((c.volume = u), null == i || i(u));
     }
     componentWillUnmount() {
         this._unmounted = !0;
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, b.fn)(e.parentNode, e);
-        null != t && (t.removeEventListener(b.NO, this.handleFullScreenExit), (0, b.Pr)(t));
+        let t = (0, T.fn)(e.parentNode, e);
+        null != t && (t.removeEventListener(T.NO, this.handleFullScreenExit), (0, T.Pr)(t));
     }
     play() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -612,7 +612,7 @@ class K extends (r = s.PureComponent) {
     }
     updateControlsVisibility() {
         let { dragging: e, fullscreen: t } = this.state,
-            n = t ? w : P,
+            n = t ? P : w,
             i = Math.max(0, Date.now() - this._lastMove) > n;
         i !== this.state.hideControls && null == e && this.setState({ hideControls: i });
     }
@@ -712,7 +712,7 @@ class K extends (r = s.PureComponent) {
                                 iconClassName: D.controlIcon,
                                 guestWindow: window,
                                 onClick: this.toggleFullscreen,
-                                node: (0, b.fn)(null == e ? void 0 : e.parentNode, e)
+                                node: (0, T.fn)(null == e ? void 0 : e.parentNode, e)
                             })
                           : null
               })
@@ -811,42 +811,42 @@ class K extends (r = s.PureComponent) {
         var t, n;
         super(e),
             (t = this),
-            L(this, '_unmounted', !1),
-            L(this, '_lastMove', 0),
-            L(this, '_analytics', void 0),
-            L(this, 'mediaRef', s.createRef()),
-            L(this, 'controlsRef', s.createRef()),
-            L(this, 'playPausePopRef', s.createRef()),
-            L(this, 'handleFullScreenExit', () => {
+            x(this, '_unmounted', !1),
+            x(this, '_lastMove', 0),
+            x(this, '_analytics', void 0),
+            x(this, 'mediaRef', s.createRef()),
+            x(this, 'controlsRef', s.createRef()),
+            x(this, 'playPausePopRef', s.createRef()),
+            x(this, 'handleFullScreenExit', () => {
                 let { current: e } = this.mediaRef;
                 if (null == e) return;
-                let t = (0, b.fn)(e.parentNode, e);
-                (null != t && (0, b.rB)(t)) || this.setState({ fullscreen: !1 });
+                let t = (0, T.fn)(e.parentNode, e);
+                (null != t && (0, T.rB)(t)) || this.setState({ fullscreen: !1 });
             }),
-            L(this, 'toggleFullscreen', () => {
+            x(this, 'toggleFullscreen', () => {
                 let e = !this.state.fullscreen;
                 this.setState({ fullscreen: e });
             }),
-            L(this, 'setMuted', (e) => {
+            x(this, 'setMuted', (e) => {
                 this.setState({ muted: e });
             }),
-            L(this, 'toggleMuted', () => {
+            x(this, 'toggleMuted', () => {
                 this.setMuted(!this.state.muted);
             }),
-            L(this, 'setTime', function (e) {
+            x(this, 'setTime', function (e) {
                 let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     { current: i } = t.mediaRef;
                 null != i && isFinite(i.duration) && isFinite(i.currentTime) && ((i.currentTime = e), t.updateValue(e / i.duration, n), t.updateTime(e, i.duration));
             }),
-            L(this, 'handleUIUpdate', () => {
+            x(this, 'handleUIUpdate', () => {
                 if (!this.state.playing || this._unmounted) return;
                 let { current: e } = this.mediaRef;
                 null != e && (e.duration > 0 && this.updateValue(e.currentTime / e.duration), this.updateTime(e.currentTime, e.duration), this.updateControlsVisibility(), requestAnimationFrame(this.handleUIUpdate));
             }),
-            L(this, 'handleDrag', (e, t) => {
+            x(this, 'handleDrag', (e, t) => {
                 let { current: n } = this.mediaRef;
-                if (t === T.Z.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
-                else if (t === T.Z.Types.VOLUME) {
+                if (t === b.Z.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
+                else if (t === b.Z.Types.VOLUME) {
                     let t = (0, I.A)(e, 1);
                     0 === t
                         ? this.setState({
@@ -861,7 +861,7 @@ class K extends (r = s.PureComponent) {
                           : this.setState({ volume: t });
                 }
             }),
-            L(this, 'handleLoaded', (e) => {
+            x(this, 'handleLoaded', (e) => {
                 this._analytics.onLoadedMetadata(e);
                 let { current: t } = this.mediaRef;
                 null != t &&
@@ -872,11 +872,11 @@ class K extends (r = s.PureComponent) {
                         duration: t.duration
                     }));
             }),
-            L(this, 'handleDurationChange', () => {
+            x(this, 'handleDurationChange', () => {
                 let { current: e } = this.mediaRef;
                 null != e && (this.updateTime(e.currentTime, e.duration), this.setState({ duration: e.duration }));
             }),
-            L(
+            x(
                 this,
                 'handleBuffer',
                 c().debounce(() => {
@@ -888,7 +888,7 @@ class K extends (r = s.PureComponent) {
                     this.setState({ buffers: Z(e) });
                 }, 400)
             ),
-            L(this, 'handleEnded', (e) => {
+            x(this, 'handleEnded', (e) => {
                 let { onEnded: t } = this.props;
                 this.setState({
                     playing: !1,
@@ -896,16 +896,16 @@ class K extends (r = s.PureComponent) {
                 }),
                     null != t && t(e);
             }),
-            L(this, 'handleMouseMove', () => {
+            x(this, 'handleMouseMove', () => {
                 this._lastMove = Date.now();
             }),
-            L(this, 'handleMouseLeave', () => {
+            x(this, 'handleMouseLeave', () => {
                 this.state.playing && (this._lastMove = 0), this.setState({ hovering: !1 });
             }),
-            L(this, 'handleMouseEnter', () => {
+            x(this, 'handleMouseEnter', () => {
                 'none' === this.state.preload && this.setState({ preload: 'metadata' }), this.setState({ hovering: !0 });
             }),
-            L(this, 'handleVideoClick', (e) => {
+            x(this, 'handleVideoClick', (e) => {
                 let {
                     state: { hasClickedPlay: t, playing: n },
                     props: { onClick: i, autoPlay: r, autoMute: a }
@@ -922,7 +922,7 @@ class K extends (r = s.PureComponent) {
                           })
                         : this.setPlay(!this.state.playing);
             }),
-            L(this, 'setPlay', (e) => {
+            x(this, 'setPlay', (e) => {
                 let {
                     props: { autoMute: t },
                     state: { hasClickedPlay: n, muted: i }
@@ -939,14 +939,14 @@ class K extends (r = s.PureComponent) {
                               hideControls: !1
                           }));
             }),
-            L(this, 'handleDragStart', (e) => {
+            x(this, 'handleDragStart', (e) => {
                 var t, n;
                 this.setState({ dragging: e }), this._analytics.onDragStart(null !== (n = null === (t = this.mediaRef.current) || void 0 === t ? void 0 : t.currentTime) && void 0 !== n ? n : null);
             }),
-            L(this, 'handleDragEnd', () => {
+            x(this, 'handleDragEnd', () => {
                 this.setState({ dragging: null }), (this._lastMove = Date.now());
             }),
-            L(this, 'handleKeyDown', (e) => {
+            x(this, 'handleKeyDown', (e) => {
                 let { current: t } = this.mediaRef;
                 if (e.which === C.yXg.SPACE) e.preventDefault(), this.setPlay(!this.state.playing);
                 else if (e.which >= C.yXg.DIGIT_0 && e.which <= C.yXg.DIGIT_9 && null != t) {
@@ -982,8 +982,8 @@ class K extends (r = s.PureComponent) {
         };
     }
 }
-L(K, 'Types', U),
-    L(K, 'defaultProps', {
+x(K, 'Types', U),
+    x(K, 'defaultProps', {
         width: 400,
         height: 300,
         forceExternal: !1,
@@ -993,6 +993,6 @@ L(K, 'Types', U),
         autoMute: !1,
         volume: 1
     }),
-    L(K, 'minWidth', 150),
-    L(K, 'minHeight', 110);
+    x(K, 'minWidth', 150),
+    x(K, 'minHeight', 110);
 let z = K;

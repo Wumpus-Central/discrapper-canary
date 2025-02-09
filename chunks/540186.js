@@ -13,7 +13,7 @@ var i = t(442837),
     _ = t(981631),
     x = t(765305),
     h = t(388032),
-    g = t(338456);
+    g = t(761137);
 function v(e) {
     let { icon: n } = e;
     return (0, l.jsx)('div', {

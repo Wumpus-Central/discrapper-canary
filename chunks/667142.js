@@ -8,19 +8,19 @@ n.d(t, {
     xc: () => d
 });
 var i = n(972959);
-let r = {
+let o = {
         timeToLiveMs: 5000,
         reappearTimeMs: 10000
     },
-    o = (0, i.H)(() => r),
+    r = (0, i.H)(() => o),
     l = 10000,
     a = 20000,
     s = 500,
     d = 1000;
 function c(e) {
-    o.setState({ timeToLiveMs: e });
+    r.setState({ timeToLiveMs: e });
 }
 function u(e) {
-    o.setState({ reappearTimeMs: e });
+    r.setState({ reappearTimeMs: e });
 }
-let h = o;
+let h = r;

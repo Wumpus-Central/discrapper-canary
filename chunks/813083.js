@@ -9,7 +9,7 @@ var l = n(120356),
     d = n(410030),
     c = n(884697),
     u = n(388032),
-    C = n(660370);
+    C = n(920037);
 let h = (e) => {
     let { category: t, display: n, className: l } = e,
         h = (0, d.ZP)();

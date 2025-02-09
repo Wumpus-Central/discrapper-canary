@@ -18,16 +18,16 @@ var i = n(200651),
     v = n(502762),
     y = n(530),
     I = n(827313),
-    b = n(420654),
-    T = n(116854),
+    T = n(420654),
+    b = n(116854),
     S = n(166584),
     A = n(915014),
     N = n(228168),
     C = n(981631),
-    R = n(591156);
+    R = n(112650);
 function O(e) {
-    let { user: t, currentUser: n, displayProfile: O, guild: D, isHovering: x, onOpenProfile: L, channelId: P, onClose: w } = e,
-        M = d.ZP.useName(null == D ? void 0 : D.id, P, t),
+    let { user: t, currentUser: n, displayProfile: O, guild: D, isHovering: L, onOpenProfile: x, channelId: w, onClose: P } = e,
+        M = d.ZP.useName(null == D ? void 0 : D.id, w, t),
         { relationshipType: k, originApplicationId: U } = (0, r.cj)([u.Z], () => ({
             relationshipType: u.Z.getRelationshipType(t.id),
             originApplicationId: u.Z.getOriginApplicationId(t.id)
@@ -44,10 +44,10 @@ function O(e) {
             (0, i.jsx)(y.Z, {
                 user: t,
                 profileType: N.y0.BITE_SIZE,
-                onOpenProfile: L,
+                onOpenProfile: x,
                 usernameIcon:
                     t.hasAvatarForGuild(null == D ? void 0 : D.id) &&
-                    (0, i.jsx)(T.Z, {
+                    (0, i.jsx)(b.Z, {
                         user: t,
                         nickname: M
                     }),
@@ -56,7 +56,7 @@ function O(e) {
                 tags: (0, i.jsx)(_.Z, {
                     displayProfile: O,
                     profileType: N.y0.BITE_SIZE,
-                    onClose: w
+                    onClose: P
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -64,8 +64,8 @@ function O(e) {
                         !Z &&
                             (0, i.jsx)(I.Z, {
                                 userId: t.id,
-                                isHovering: x,
-                                onOpenProfile: L
+                                isHovering: L,
+                                onOpenProfile: x
                             })
                     ]
                 })
@@ -75,7 +75,7 @@ function O(e) {
                     children: (0, i.jsx)(g.Z, {
                         user: t,
                         guildId: null == D ? void 0 : D.id,
-                        channelId: P,
+                        channelId: w,
                         applicationId: B ? U : void 0
                     })
                 }),
@@ -88,7 +88,7 @@ function O(e) {
                                 user: t,
                                 isGameRelationship: !0,
                                 applicationId: e.applicationId,
-                                channelId: P
+                                channelId: w
                             })
                         },
                         e.applicationId
@@ -101,23 +101,23 @@ function O(e) {
             !F &&
                 (0, i.jsx)(A.Z, {
                     user: t,
-                    onOpenProfile: (e) => (null == L ? void 0 : L({ section: e }))
+                    onOpenProfile: (e) => (null == x ? void 0 : x({ section: e }))
                 }),
             t.isProvisional
                 ? (0, i.jsx)(l.Z, {
                       look: 'profile',
                       userId: t.id
                   })
-                : (0, i.jsx)(b.Z, {
+                : (0, i.jsx)(T.Z, {
                       user: t,
                       bio: null == O ? void 0 : O.bio,
                       hidePersonalInformation: Z,
-                      onClose: w
+                      onClose: P
                   }),
             F &&
                 (0, i.jsx)(p.Z, {
                     isPremiumUser: V,
-                    onInteraction: w,
+                    onInteraction: P,
                     className: R.upsell
                 }),
             (0, i.jsx)(h.Z, {
@@ -125,7 +125,7 @@ function O(e) {
                 currentUser: n,
                 displayProfile: O,
                 guildId: null == D ? void 0 : D.id,
-                onClose: w,
+                onClose: P,
                 className: R.activity
             }),
             null != D &&

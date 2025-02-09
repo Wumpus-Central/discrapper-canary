@@ -1,38 +1,38 @@
-n.d(e, { B: () => Z });
-var i = n(200651),
-    l = n(192379),
-    a = n(442837),
-    d = n(481060),
-    r = n(40851),
-    o = n(352954),
-    s = n(630759),
-    u = n(441894),
-    c = n(314897),
-    g = n(388032);
+e.d(n, { B: () => Z });
+var i = e(200651),
+    l = e(192379),
+    a = e(442837),
+    o = e(481060),
+    d = e(40851),
+    r = e(352954),
+    s = e(630759),
+    u = e(441894),
+    c = e(314897),
+    g = e(388032);
 function Z(t) {
-    let { userId: e, channelId: n, guildId: Z, location: f } = t,
+    let { userId: n, channelId: e, guildId: Z, location: f } = t,
         v = (0, u.J)({
-            channelId: n,
+            channelId: e,
             location: f
         }),
-        b = (0, a.e7)([c.default], () => c.default.getId() === e),
-        h = (0, r.bp)(),
+        b = (0, a.e7)([c.default], () => c.default.getId() === n),
+        h = (0, d.bp)(),
         m = l.useCallback(() => {
-            o.Z.openSecureFramesUserVerificationModal(
-                e,
+            r.Z.openSecureFramesUserVerificationModal(
                 n,
+                e,
                 () =>
                     (0, s.fz)({
-                        userId: e,
-                        channelId: n,
+                        userId: n,
+                        channelId: e,
                         guildId: Z
                     }),
                 h
             );
-        }, [h, n, Z, e]);
+        }, [h, e, Z, n]);
     return !v || b
         ? null
-        : (0, i.jsx)(d.sNh, {
+        : (0, i.jsx)(o.sNh, {
               id: 'secure-frames-user-verification',
               label: g.intl.string(g.t['8ErYvb']),
               action: m

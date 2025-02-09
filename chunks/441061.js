@@ -1,17 +1,17 @@
 t.d(n, { Z: () => d });
-var i = t(200651);
+var l = t(200651);
 t(192379);
-var l = t(442837),
-    a = t(481060),
-    r = t(475179),
+var i = t(442837),
+    r = t(481060),
+    a = t(475179),
     u = t(358221),
     o = t(388032);
 function d(e) {
-    let n = (0, l.e7)([u.Z], () => u.Z.getVoiceParticipantsHidden(e));
-    return (0, i.jsx)(a.S89, {
+    let n = (0, i.e7)([u.Z], () => u.Z.getVoiceParticipantsHidden(e));
+    return (0, l.jsx)(r.S89, {
         id: 'no-video-hide',
         label: o.intl.string(o.t.BL8ss7),
         checked: !n,
-        action: () => r.Z.toggleVoiceParticipantsHidden(e, !n)
+        action: () => a.Z.toggleVoiceParticipantsHidden(e, !n)
     });
 }

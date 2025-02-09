@@ -1,60 +1,60 @@
-n.d(t, { Z: () => m }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(384275),
-    l = n(317381),
-    u = n(513202),
+n.d(t, { Z: () => v }), n(47120);
+var l = n(200651),
+    i = n(192379),
+    r = n(442837),
+    a = n(481060),
+    s = n(384275),
+    o = n(317381),
+    d = n(513202),
     c = n(367907),
-    d = n(138201),
-    f = n(881998),
-    _ = n(585483),
-    p = n(981631),
+    u = n(138201),
+    m = n(881998),
+    x = n(585483),
+    _ = n(981631),
     h = n(388032);
-let m = (e) => {
+let v = (e) => {
     let { application: t, reportId: n } = e,
-        [m, g] = r.useState(!1),
-        E = (0, a.e7)([f.Z], () => {
-            let e = f.Z.getApps();
+        [v, g] = i.useState(!1),
+        p = (0, r.e7)([m.Z], () => {
+            let e = m.Z.getApps();
             return null != e ? e.find((e) => e.application.id === t.id) : null;
         });
-    r.useEffect(() => {
-        null != E && g(!0);
-    }, [E]);
-    let v = r.useRef(!1);
-    r.useEffect(() => {
-        v.current || (o.Z.fetch(), (v.current = !0));
+    i.useEffect(() => {
+        null != p && g(!0);
+    }, [p]);
+    let f = i.useRef(!1);
+    i.useEffect(() => {
+        f.current || (s.Z.fetch(), (f.current = !0));
     }, []);
-    let y = (0, a.e7)([l.ZP], () => l.ZP.getSelfEmbeddedActivities()),
-        I = r.useCallback(() => {
+    let b = (0, r.e7)([o.ZP], () => o.ZP.getSelfEmbeddedActivities()),
+        Z = i.useCallback(() => {
             if (
                 (g(!1),
-                c.ZP.trackWithMetadata(p.rMx.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED, {
+                c.ZP.trackWithMetadata(_.rMx.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED, {
                     application_id: t.id,
                     report_id: n
                 }),
-                null == E)
+                null == p)
             )
                 return;
-            o.Z.delete(E.id), _.S.safeDispatch(p.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { applicationId: t.id });
-            let e = y.get(t.id);
+            s.Z.delete(p.id), x.S.safeDispatch(_.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { applicationId: t.id });
+            let e = b.get(t.id);
             null != e &&
-                u.Z.leaveActivity({
+                d.Z.leaveActivity({
                     location: e.location,
                     applicationId: t.id,
                     showFeedback: !1
                 });
-        }, [t.id, E, y, n]);
+        }, [t.id, p, b, n]);
     return null == t
         ? null
-        : (0, i.jsx)(d.ZP, {
+        : (0, l.jsx)(u.ZP, {
               title: h.intl.string(h.t.ygG62N),
               description: h.intl.string(h.t.S51EKi),
-              buttonText: m ? h.intl.string(h.t.xXpoGR) : h.intl.string(h.t.JsiUnJ),
-              buttonDisabled: !m,
-              buttonColor: m ? s.zxk.Colors.RED : s.zxk.Colors.WHITE,
-              buttonLook: m ? s.zxk.Looks.FILLED : s.zxk.Looks.LINK,
-              onButtonPress: I
+              buttonText: v ? h.intl.string(h.t.xXpoGR) : h.intl.string(h.t.JsiUnJ),
+              buttonDisabled: !v,
+              buttonColor: v ? a.zxk.Colors.RED : a.zxk.Colors.WHITE,
+              buttonLook: v ? a.zxk.Looks.FILLED : a.zxk.Looks.LINK,
+              onButtonPress: Z
           });
 };

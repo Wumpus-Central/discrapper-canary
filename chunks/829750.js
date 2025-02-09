@@ -1,50 +1,50 @@
-n.d(t, {
-    Z: () => l,
+t.d(n, {
+    Z: () => r,
     t: () => c
 });
-var r = n(442837),
-    i = n(430824),
-    a = n(938475),
-    o = n(981631);
-function l(e) {
-    return (0, r.cj)(
-        [a.ZP, i.Z],
+var i = t(442837),
+    o = t(430824),
+    a = t(938475),
+    l = t(981631);
+function r(e) {
+    return (0, i.cj)(
+        [a.ZP, o.Z],
         () => {
-            let t = a.ZP.countVoiceStatesForChannel(e.id),
-                n = i.Z.getGuild(e.getGuildId());
-            return null == n
+            let n = a.ZP.countVoiceStatesForChannel(e.id),
+                t = o.Z.getGuild(e.getGuildId());
+            return null == t
                 ? {
                       reachedLimit: !1,
                       limit: -1
                   }
-                : e.type === o.d4z.GUILD_STAGE_VOICE
+                : e.type === l.d4z.GUILD_STAGE_VOICE
                   ? {
-                        reachedLimit: t > n.maxStageVideoChannelUsers,
-                        limit: n.maxStageVideoChannelUsers
+                        reachedLimit: n > t.maxStageVideoChannelUsers,
+                        limit: t.maxStageVideoChannelUsers
                     }
                   : {
-                        reachedLimit: n.maxVideoChannelUsers > 0 && t > n.maxVideoChannelUsers,
-                        limit: n.maxVideoChannelUsers
+                        reachedLimit: t.maxVideoChannelUsers > 0 && n > t.maxVideoChannelUsers,
+                        limit: t.maxVideoChannelUsers
                     };
         },
         [e]
     );
 }
 function c(e) {
-    let t = a.ZP.countVoiceStatesForChannel(e.id),
-        n = i.Z.getGuild(e.getGuildId());
-    return null == n
+    let n = a.ZP.countVoiceStatesForChannel(e.id),
+        t = o.Z.getGuild(e.getGuildId());
+    return null == t
         ? {
               reachedLimit: !1,
               limit: -1
           }
-        : e.type === o.d4z.GUILD_STAGE_VOICE
+        : e.type === l.d4z.GUILD_STAGE_VOICE
           ? {
-                reachedLimit: t > n.maxStageVideoChannelUsers,
-                limit: n.maxStageVideoChannelUsers
+                reachedLimit: n > t.maxStageVideoChannelUsers,
+                limit: t.maxStageVideoChannelUsers
             }
           : {
-                reachedLimit: n.maxVideoChannelUsers > 0 && t > n.maxVideoChannelUsers,
-                limit: n.maxVideoChannelUsers
+                reachedLimit: t.maxVideoChannelUsers > 0 && n > t.maxVideoChannelUsers,
+                limit: t.maxVideoChannelUsers
             };
 }

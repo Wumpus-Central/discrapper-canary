@@ -5,7 +5,7 @@ var r = n(120356),
     a = n.n(r),
     s = n(112560),
     o = n(388032),
-    l = n(452679);
+    l = n(914542);
 let u = n(978538);
 function c(e) {
     let { width: t, noArt: n = !1, selected: r = !1 } = e;

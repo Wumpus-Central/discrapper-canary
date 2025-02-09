@@ -22,8 +22,8 @@ var a = n(200651),
     N = n(246992),
     T = n(981631),
     E = n(501787),
-    y = n(27731),
-    S = n(941469);
+    S = n(764930),
+    y = n(617521);
 let k = {
         [T.Odu.CLICK_ZONE_DEBUG]: (e) => ({
             type: T.Odu.CLICK_ZONE_DEBUG,
@@ -57,13 +57,13 @@ let k = {
             pinned: !0
         })
     },
-    R = (e, t) => e.find((e) => e.type === t);
-function I(e) {
+    I = (e, t) => e.find((e) => e.type === t);
+function R(e) {
     let { trackedGame: t } = e,
         n = (0, s.e7)([m.ZP], () => m.ZP.getGameForPID(t.pid)),
         r = (0, s.e7)([g.Z], () => g.Z.getGameForPID(t.pid));
     return (0, a.jsxs)('div', {
-        className: y.panelGroup,
+        className: S.panelGroup,
         children: [
             (0, a.jsx)(c.Text, {
                 variant: 'text-md/bold',
@@ -226,7 +226,7 @@ function O(e) {
     });
 }
 function Z(e) {
-    let t = R(Object.values((0, s.Wu)([b.Z], () => b.Z.getWidgetsForLayout(E.OVERLAY_V3_LAYOUT_ID))), e);
+    let t = I(Object.values((0, s.Wu)([b.Z], () => b.Z.getWidgetsForLayout(E.OVERLAY_V3_LAYOUT_ID))), e);
     return [
         t,
         () => {
@@ -247,7 +247,7 @@ function w() {
         b = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(x.G.ClickZones)),
         g = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(x.G.WidgetAreas)),
         E = (0, s.e7)([_.Z], () => _.Z.getForcedRenderMode()),
-        [k, R] = r.useState({}),
+        [k, I] = r.useState({}),
         [w, A] = r.useState(E),
         L = (e) => {
             A(e), u.Z.forceRenderMode(e);
@@ -279,12 +279,12 @@ function w() {
         })),
         D = (0, s.cj)([_.Z], () => _.Z.getTrackedGames()),
         B = (0, s.e7)([v.Z], () => v.Z.getFocusedPID()),
-        F = (0, s.e7)([v.Z], () => v.Z.isFocusedPidOutOfProcess()),
-        M = (0, C.QF)(),
-        z = (0, s.e7)([_.Z], () => _.Z.isOverlayOOPEnabledForPid(M), [M]),
+        M = (0, s.e7)([v.Z], () => v.Z.isFocusedPidOutOfProcess()),
+        F = (0, C.QF)(),
+        z = (0, s.e7)([_.Z], () => _.Z.isOverlayOOPEnabledForPid(F), [F]),
         U = (0, s.e7)([m.ZP], () => m.ZP.getRunningGames());
     r.useEffect(() => {
-        R((e) => {
+        I((e) => {
             for (let t of Object.keys(D)) e[Number(t)] = D[Number(t)];
             return e;
         });
@@ -347,10 +347,10 @@ function w() {
         q = U.filter((e) => null == D[e.pid]);
     return (0, a.jsx)(c.w0Z, {
         children: (0, a.jsxs)('div', {
-            className: i()(S.panel, y.panel),
+            className: i()(y.panel, S.panel),
             children: [
                 (0, a.jsxs)('div', {
-                    className: y.panelGroup,
+                    className: S.panelGroup,
                     children: [
                         (0, a.jsx)(c.ua7, {
                             position: 'left',
@@ -444,7 +444,7 @@ function w() {
                     children: (e) =>
                         (0, a.jsx)('div', {
                             ...e,
-                            className: y.panelGroup,
+                            className: S.panelGroup,
                             children: (0, a.jsx)(c.PhF, {
                                 serialize: (e) => e,
                                 isSelected: (e) => e === w,
@@ -462,7 +462,7 @@ function w() {
                             (0, a.jsx)('div', {
                                 ...e,
                                 children: (0, a.jsxs)('div', {
-                                    className: y.panelGroup,
+                                    className: S.panelGroup,
                                     children: [
                                         (0, a.jsx)(c.Text, {
                                             variant: 'text-md/bold',
@@ -491,7 +491,7 @@ function w() {
                         (0, a.jsx)('div', {
                             ...e,
                             children: (0, a.jsxs)('div', {
-                                className: y.panelGroup,
+                                className: S.panelGroup,
                                 children: [
                                     0 === Object.keys(D).length &&
                                         (0, a.jsx)(c.Text, {
@@ -499,13 +499,13 @@ function w() {
                                             color: 'text-normal',
                                             children: 'No running games'
                                         }),
-                                    Object.values(D).map((e) => (0, a.jsx)(I, { trackedGame: e }, e.pid))
+                                    Object.values(D).map((e) => (0, a.jsx)(R, { trackedGame: e }, e.pid))
                                 ]
                             })
                         })
                 }),
                 (0, a.jsxs)('div', {
-                    className: y.panelGroup,
+                    className: S.panelGroup,
                     children: [
                         0 === Object.keys(D).length &&
                             (0, a.jsx)(c.Text, {
@@ -524,12 +524,12 @@ function w() {
                                 (0, a.jsxs)(c.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: ['isFocusedPidOutOfProcess: ', F ? 'Yes' : 'No']
+                                    children: ['isFocusedPidOutOfProcess: ', M ? 'Yes' : 'No']
                                 }),
                                 (0, a.jsxs)(c.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-primary',
-                                    children: ['processPid: ', null !== (t = null == M ? void 0 : M.toString()) && void 0 !== t ? t : 'unknown']
+                                    children: ['processPid: ', null !== (t = null == F ? void 0 : F.toString()) && void 0 !== t ? t : 'unknown']
                                 }),
                                 (0, a.jsxs)(c.Text, {
                                     variant: 'text-sm/normal',
@@ -547,7 +547,7 @@ function w() {
                         (0, a.jsx)('div', {
                             ...e,
                             children: (0, a.jsxs)('div', {
-                                className: y.panelGroup,
+                                className: S.panelGroup,
                                 children: [
                                     0 === Object.keys(D).length &&
                                         (0, a.jsx)(c.Text, {

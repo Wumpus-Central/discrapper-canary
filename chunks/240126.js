@@ -4,7 +4,7 @@ n(192379);
 var l = n(481060),
     a = n(499033),
     r = n(388032),
-    s = n(243946);
+    s = n(772062);
 function o(e) {
     let { Icon: t, header: n, tip: o, disableStars: c } = e;
     return (0, i.jsxs)('div', {

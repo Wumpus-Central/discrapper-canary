@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(47120), n(724458);
+n.d(t, { Z: () => b }), n(47120), n(724458);
 var i,
     r = n(392711),
     a = n.n(r),
@@ -67,7 +67,7 @@ function I(e) {
         }, !1)
     );
 }
-class b extends (i = s.ZP.Store) {
+class T extends (i = s.ZP.Store) {
     getPreviewURL(e, t, n) {
         let i =
             p[
@@ -107,8 +107,8 @@ class b extends (i = s.ZP.Store) {
         return m.has(i);
     }
 }
-c(b, 'displayName', 'ApplicationStreamPreviewStore');
-let T = new b(o.Z, {
+c(T, 'displayName', 'ApplicationStreamPreviewStore');
+let b = new T(o.Z, {
     CONNECTION_OPEN: g,
     LOGOUT: g,
     STREAM_PREVIEW_FETCH_START: y,

@@ -12,15 +12,15 @@ var i = n(200651),
     _ = n(859235),
     p = n(898463),
     h = n(981631),
-    m = n(379988),
+    m = n(78770),
     g = n(451328);
 function E(e) {
     let { channelId: t, option: n, keyboardModeEnabled: a } = e,
         E = r.useRef(null),
         [v, y] = r.useState(!1),
         I = f.Z.getUpload(t, n.name, d.d.SlashCommand),
-        b = r.useRef(null),
-        T = (e) => {
+        T = r.useRef(null),
+        b = (e) => {
             if (e.which === h.yXg.ENTER) {
                 var t;
                 e.preventDefault(), null === (t = E.current) || void 0 === t || t.activateUploadDialogue();
@@ -51,7 +51,7 @@ function E(e) {
             [t, n]
         );
     r.useEffect(() => {
-        let e = b.current;
+        let e = T.current;
         return (
             null == I && (null == e || e.addEventListener('dragover', S, !1), null == e || e.addEventListener('dragleave', A, !1), null == e || e.addEventListener('drop', N, !1)),
             () => {
@@ -103,10 +103,10 @@ function E(e) {
               id: n.name,
               channelId: t,
               keyboardModeEnabled: a,
-              onKeyDown: T,
+              onKeyDown: b,
               className: s()(m.emptyOption, { [m.emptyOptionActive]: v }),
               draftType: d.d.SlashCommand,
-              ref: b,
+              ref: T,
               children: [
                   (0, i.jsx)('span', {
                       className: s()(m.optionName, { [m.optionNameActive]: v }),

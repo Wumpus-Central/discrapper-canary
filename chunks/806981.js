@@ -79,23 +79,23 @@ function u(e, t) {
                 (f[h][l] = E[(y + 1) * 3 + (I + 1)]), (f[m][l] = 0), (d[h] = g);
             }
         }
-        var b = this.jpoint(null, null, null),
-            T = this._wnafT4;
+        var T = this.jpoint(null, null, null),
+            b = this._wnafT4;
         for (o = _; o >= 0; o--) {
             for (var S = 0; o >= 0; ) {
                 var A = !0;
-                for (l = 0; l < i; l++) (T[l] = 0 | f[l][o]), 0 !== T[l] && (A = !1);
+                for (l = 0; l < i; l++) (b[l] = 0 | f[l][o]), 0 !== b[l] && (A = !1);
                 if (!A) break;
                 S++, o--;
             }
-            if ((o >= 0 && S++, (b = b.dblp(S)), o < 0)) break;
+            if ((o >= 0 && S++, (T = T.dblp(S)), o < 0)) break;
             for (l = 0; l < i; l++) {
-                var N = T[l];
-                0 !== N && (N > 0 ? (u = d[l][(N - 1) >> 1]) : N < 0 && (u = d[l][(-N - 1) >> 1].neg()), (b = 'affine' === u.type ? b.mixedAdd(u) : b.add(u)));
+                var N = b[l];
+                0 !== N && (N > 0 ? (u = d[l][(N - 1) >> 1]) : N < 0 && (u = d[l][(-N - 1) >> 1].neg()), (T = 'affine' === u.type ? T.mixedAdd(u) : T.add(u)));
             }
         }
         for (o = 0; o < i; o++) d[o] = null;
-        return r ? b : b.toP();
+        return r ? T : T.toP();
     }),
     (l.BasePoint = u),
     (u.prototype.eq = function () {

@@ -1,11 +1,11 @@
 n.d(t, {
-    DH: () => x,
+    DH: () => L,
     Ks: () => D,
-    Ws: () => P,
+    Ws: () => w,
     g2: () => R,
     hf: () => N,
     k3: () => O,
-    qN: () => L,
+    qN: () => x,
     tP: () => C
 }),
     n(47120);
@@ -28,8 +28,8 @@ var i = n(200651),
     v = n(977156),
     y = n(920916),
     I = n(669041),
-    b = n(341907),
-    T = n(604162),
+    T = n(341907),
+    b = n(604162),
     S = n(642145),
     A = n(388032);
 function N(e) {
@@ -50,12 +50,12 @@ function N(e) {
             }),
             o
                 ? (0, E.Bg)(t.config)
-                    ? (0, b.openQuestsNitroRewardModal)(t, n)
+                    ? (0, T.openQuestsNitroRewardModal)(t, n)
                     : (0, E.Xv)(t.config)
                       ? (0, y.m)(t, n)
                       : (0, E.vQ)(t.config)
-                        ? (0, b.openQuestInGameRewardModal)(t, n)
-                        : (0, b.openQuestsRewardCodeModal)({
+                        ? (0, T.openQuestInGameRewardModal)(t, n)
+                        : (0, T.openQuestsRewardCodeModal)({
                               questId: t.id,
                               location: n,
                               questContentPosition: i
@@ -159,7 +159,7 @@ function D(e) {
                             questContentPosition: o,
                             questContentRowIndex: l
                         }),
-                            d && (0, b.openVideoQuestModal)(n);
+                            d && (0, T.openVideoQuestModal)(n);
                     }
                 };
             case h.OH.ACCEPTED:
@@ -182,9 +182,9 @@ function D(e) {
                     };
                 if (d)
                     return {
-                        text: (0, T.F9)(v),
+                        text: (0, b.F9)(v),
                         tooltipText: A.intl.string(A.t.hsbwjo),
-                        onClick: () => (0, b.openVideoQuestModal)(n)
+                        onClick: () => (0, T.openVideoQuestModal)(n)
                     };
                 return {
                     text: A.intl.string(A.t.cfY4PD),
@@ -225,13 +225,13 @@ function D(e) {
         }
     }, [I, i, d, g, c, m, a, n, s, o, l, R, v, C, O]);
 }
-function x() {
+function L() {
     return (0, s.e7)([m.Z], () => {
         var e, t;
         return null !== (t = null !== (e = m.Z.questDeliveryOverride) && void 0 !== e ? e : (0, E.PM)(m.Z.quests, m.Z.questToDeliverForPlacement, g.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) && void 0 !== t ? t : null;
     });
 }
-function L(e) {
+function x(e) {
     var t;
     let { location: n, quest: i } = e,
         r = (0, v.Zy)({ location: n }),
@@ -246,11 +246,11 @@ function L(e) {
         f = !u && null != i.userStatus && (0, E.zE)(i.userStatus, g.jn.QUEST_BAR);
     return r && !f && !c && !a;
 }
-function P(e) {
+function w(e) {
     let { location: t } = e,
-        n = L({
+        n = x({
             location: t,
-            quest: x()
+            quest: L()
         });
     return 0 !== (0, s.e7)([m.Z], () => m.Z.lastFetchedCurrentQuests) && !n;
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(610138), n(216116), n(78328), n(815648), n(47120);
+n.d(t, { Z: () => b }), n(610138), n(216116), n(78328), n(815648), n(47120);
 var i = n(904245),
     r = n(147913),
     a = n(710845),
@@ -33,7 +33,7 @@ function I() {
     let { enabled: e } = p.c.getCurrentConfig({ location: 'VoiceFilterFeedbackManager' }, { autoTrackExposure: !1 });
     return e;
 }
-class b extends r.Z {
+class T extends r.Z {
     handleMediaEngineStoreChange() {
         I() && this.maybeQueueFeedbackMessage();
     }
@@ -69,15 +69,15 @@ class b extends r.Z {
             g = null !== (n = null == p ? void 0 : p.name) && void 0 !== n ? n : "Don't Know",
             v = l.Z.getInputDeviceId(),
             I = null === (e = l.Z.getInputDevices()[v]) || void 0 === e ? void 0 : e.name,
-            b = l.Z.getOutputDeviceId(),
-            T = new URLSearchParams({
+            T = l.Z.getOutputDeviceId(),
+            b = new URLSearchParams({
                 usp: 'pp_url',
                 'entry.1110868176': g,
                 'entry.51879725': I,
-                'entry.45023460': null === (t = l.Z.getOutputDevices()[b]) || void 0 === t ? void 0 : t.name,
+                'entry.45023460': null === (t = l.Z.getOutputDevices()[T]) || void 0 === t ? void 0 : t.name,
                 'entry.1264180151': (0, _.isWindows)() ? 'Windows' : (0, _.isMac)() ? 'Mac' : (0, _.getPlatformName)()
             }),
-            S = 'https://docs.google.com/forms/d/e/1FAIpQLSfiEURI77Kv0pp4DR8XAaZ0eou7fmdJ6tuU2lWkNyD_aiknsg/viewform?'.concat(T);
+            S = 'https://docs.google.com/forms/d/e/1FAIpQLSfiEURI77Kv0pp4DR8XAaZ0eou7fmdJ6tuU2lWkNyD_aiknsg/viewform?'.concat(b);
         i.Z.sendMessage(a.id, s.ZP.parse(a, "-# STAFF TESTING\n<:voicefilter:1336871150252458015> I'm using the **".concat(g, '** voice filter.\nHow does it sound? [Please share feedback](').concat(S, ').'))), this.lastSentTimestamp.set(d, Date.now());
     }
     constructor(...e) {
@@ -95,4 +95,4 @@ class b extends r.Z {
             g(this, 'queuedSendTimeout', void 0);
     }
 }
-let T = new b();
+let b = new T();

@@ -38,7 +38,7 @@ function _(e) {
                             null == c || c(),
                                 (0, o.ZDy)(
                                     async () => {
-                                        let { default: e } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
+                                        let { default: e } = await Promise.all([n.e('7654'), n.e('76236')]).then(n.bind(n, 560114));
                                         return (n) =>
                                             (0, i.jsx)(e, {
                                                 ...n,

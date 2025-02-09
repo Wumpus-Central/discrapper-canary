@@ -1,38 +1,38 @@
-n.d(t, { Z: () => r });
-var a = n(200651);
+n.d(t, { Z: () => c });
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    l = n.n(i),
-    s = n(481060),
-    c = n(925329),
-    o = n(520202);
-function r(e) {
-    let { className: t, embeddedApps: n, muted: i } = e;
+var l = n(120356),
+    r = n.n(l),
+    a = n(481060),
+    o = n(925329),
+    s = n(202380);
+function c(e) {
+    let { className: t, embeddedApps: n, muted: l } = e;
     if (n.length <= 0) return null;
     if (1 === n.length)
-        return (0, a.jsx)('div', {
-            className: l()(o.container, t, i && o.modeMuted),
-            children: (0, a.jsx)(c.Z, {
+        return (0, i.jsx)('div', {
+            className: r()(s.container, t, l && s.modeMuted),
+            children: (0, i.jsx)(o.Z, {
                 game: n[0].application,
-                className: o.icon20px
+                className: s.icon20px
             })
         });
     {
         let e = n.length - 1;
-        return (0, a.jsxs)('div', {
-            className: l()(o.container, t, i && o.modeMuted),
+        return (0, i.jsxs)('div', {
+            className: r()(s.container, t, l && s.modeMuted),
             children: [
-                (0, a.jsx)(c.Z, {
+                (0, i.jsx)(o.Z, {
                     game: n[0].application,
-                    className: o.icon20px
+                    className: s.icon20px
                 }),
                 2 === n.length
-                    ? (0, a.jsx)(c.Z, {
+                    ? (0, i.jsx)(o.Z, {
                           game: n[1].application,
-                          className: o.icon20px
+                          className: s.icon20px
                       })
-                    : (0, a.jsx)(s.Text, {
-                          className: o.overflow,
+                    : (0, i.jsx)(a.Text, {
+                          className: s.overflow,
                           variant: 'text-xs/bold',
                           color: 'interactive-active',
                           children: '+'.concat(e)

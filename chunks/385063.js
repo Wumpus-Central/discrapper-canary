@@ -4,7 +4,7 @@ n(192379);
 var l = n(739566),
     a = n(834129),
     r = n(388032),
-    s = n(408106);
+    s = n(816727);
 function o(e) {
     let { message: t, usernameHook: o, compact: c, isForumPost: d } = e,
         u = (0, l.ZP)(t),

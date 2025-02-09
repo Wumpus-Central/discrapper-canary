@@ -17,8 +17,8 @@ var i,
     v = -1,
     y = 1,
     I = 2,
-    b = 3,
-    T = 4,
+    T = 3,
+    b = 4,
     S = 0,
     A = 2,
     N = 8,
@@ -26,10 +26,10 @@ var i,
     R = 15,
     O = 8,
     D = 286,
-    x = 30,
-    L = 19,
-    P = 573,
-    w = 15,
+    L = 30,
+    x = 19,
+    w = 573,
+    P = 15,
     M = 3,
     k = 258,
     U = 262,
@@ -189,7 +189,7 @@ function ef(e) {
     (e.window_size = 2 * e.w_size), $(e.head), (e.max_lazy_match = i[e.level].max_lazy), (e.good_match = i[e.level].good_length), (e.nice_match = i[e.level].nice_length), (e.max_chain_length = i[e.level].max_chain), (e.strstart = 0), (e.block_start = 0), (e.lookahead = 0), (e.insert = 0), (e.match_length = e.prev_length = M - 1), (e.match_available = 0), (e.ins_h = 0);
 }
 function e_() {
-    (this.strm = null), (this.status = 0), (this.pending_buf = null), (this.pending_buf_size = 0), (this.pending_out = 0), (this.pending = 0), (this.wrap = 0), (this.gzhead = null), (this.gzindex = 0), (this.method = N), (this.last_flush = -1), (this.w_size = 0), (this.w_bits = 0), (this.w_mask = 0), (this.window = null), (this.window_size = 0), (this.prev = null), (this.head = null), (this.ins_h = 0), (this.hash_size = 0), (this.hash_bits = 0), (this.hash_mask = 0), (this.hash_shift = 0), (this.block_start = 0), (this.match_length = 0), (this.prev_match = 0), (this.match_available = 0), (this.strstart = 0), (this.match_start = 0), (this.lookahead = 0), (this.prev_length = 0), (this.max_chain_length = 0), (this.max_lazy_match = 0), (this.level = 0), (this.strategy = 0), (this.good_match = 0), (this.nice_match = 0), (this.dyn_ltree = new r.Buf16(2 * P)), (this.dyn_dtree = new r.Buf16((2 * x + 1) * 2)), (this.bl_tree = new r.Buf16((2 * L + 1) * 2)), $(this.dyn_ltree), $(this.dyn_dtree), $(this.bl_tree), (this.l_desc = null), (this.d_desc = null), (this.bl_desc = null), (this.bl_count = new r.Buf16(w + 1)), (this.heap = new r.Buf16(2 * D + 1)), $(this.heap), (this.heap_len = 0), (this.heap_max = 0), (this.depth = new r.Buf16(2 * D + 1)), $(this.depth), (this.l_buf = 0), (this.lit_bufsize = 0), (this.last_lit = 0), (this.d_buf = 0), (this.opt_len = 0), (this.static_len = 0), (this.matches = 0), (this.insert = 0), (this.bi_buf = 0), (this.bi_valid = 0);
+    (this.strm = null), (this.status = 0), (this.pending_buf = null), (this.pending_buf_size = 0), (this.pending_out = 0), (this.pending = 0), (this.wrap = 0), (this.gzhead = null), (this.gzindex = 0), (this.method = N), (this.last_flush = -1), (this.w_size = 0), (this.w_bits = 0), (this.w_mask = 0), (this.window = null), (this.window_size = 0), (this.prev = null), (this.head = null), (this.ins_h = 0), (this.hash_size = 0), (this.hash_bits = 0), (this.hash_mask = 0), (this.hash_shift = 0), (this.block_start = 0), (this.match_length = 0), (this.prev_match = 0), (this.match_available = 0), (this.strstart = 0), (this.match_start = 0), (this.lookahead = 0), (this.prev_length = 0), (this.max_chain_length = 0), (this.max_lazy_match = 0), (this.level = 0), (this.strategy = 0), (this.good_match = 0), (this.nice_match = 0), (this.dyn_ltree = new r.Buf16(2 * w)), (this.dyn_dtree = new r.Buf16((2 * L + 1) * 2)), (this.bl_tree = new r.Buf16((2 * x + 1) * 2)), $(this.dyn_ltree), $(this.dyn_dtree), $(this.bl_tree), (this.l_desc = null), (this.d_desc = null), (this.bl_desc = null), (this.bl_count = new r.Buf16(P + 1)), (this.heap = new r.Buf16(2 * D + 1)), $(this.heap), (this.heap_len = 0), (this.heap_max = 0), (this.depth = new r.Buf16(2 * D + 1)), $(this.depth), (this.l_buf = 0), (this.lit_bufsize = 0), (this.last_lit = 0), (this.d_buf = 0), (this.opt_len = 0), (this.static_len = 0), (this.matches = 0), (this.insert = 0), (this.bi_buf = 0), (this.bi_valid = 0);
 }
 function ep(e) {
     var t;
@@ -205,7 +205,7 @@ function em(e, t) {
 function eg(e, t, n, i, a, s) {
     if (!e) return m;
     var o = 1;
-    if ((t === v && (t = 6), i < 0 ? ((o = 0), (i = -i)) : i > 15 && ((o = 2), (i -= 16)), a < 1 || a > C || n !== N || i < 8 || i > 15 || t < 0 || t > 9 || s < 0 || s > T)) return X(e, m);
+    if ((t === v && (t = 6), i < 0 ? ((o = 0), (i = -i)) : i > 15 && ((o = 2), (i -= 16)), a < 1 || a > C || n !== N || i < 8 || i > 15 || t < 0 || t > 9 || s < 0 || s > b)) return X(e, m);
     8 === i && (i = 9);
     var l = new e_();
     return (e.state = l), (l.strm = e), (l.wrap = o), (l.gzhead = null), (l.w_bits = i), (l.w_size = 1 << l.w_bits), (l.w_mask = l.w_size - 1), (l.hash_bits = a + 7), (l.hash_size = 1 << l.hash_bits), (l.hash_mask = l.hash_size - 1), (l.hash_shift = ~~((l.hash_bits + M - 1) / M)), (l.window = new r.Buf8(2 * l.w_size)), (l.head = new r.Buf16(l.hash_size)), (l.prev = new r.Buf16(l.w_size)), (l.lit_bufsize = 1 << (a + 6)), (l.pending_buf_size = 4 * l.lit_bufsize), (l.pending_buf = new r.Buf8(l.pending_buf_size)), (l.d_buf = 1 * l.lit_bufsize), (l.l_buf = 3 * l.lit_bufsize), (l.level = t), (l.strategy = s), (l.method = n), eh(e);
@@ -265,7 +265,7 @@ function ev(e, t) {
     } else if (0 === e.avail_in && J(t) <= J(n) && t !== f) return X(e, E);
     if (r.status === Y && 0 !== e.avail_in) return X(e, E);
     if (0 !== e.avail_in || 0 !== r.lookahead || (t !== u && r.status !== Y)) {
-        var y = r.strategy === I ? ec(r, t) : r.strategy === b ? eu(r, t) : i[r.level].func(r, t);
+        var y = r.strategy === I ? ec(r, t) : r.strategy === T ? eu(r, t) : i[r.level].func(r, t);
         if (((y === z || y === q) && (r.status = Y), y === W || y === z)) return 0 === e.avail_out && (r.last_flush = -1), p;
         if (y === K && (t === c ? a._tr_align(r) : t !== _ && (a._tr_stored_block(r, 0, 0, !1), t === d && ($(r.head), 0 === r.lookahead && ((r.strstart = 0), (r.block_start = 0), (r.insert = 0)))), ee(e), 0 === e.avail_out)) return (r.last_flush = -1), p;
     }

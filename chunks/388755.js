@@ -1,32 +1,32 @@
-a.d(t, { D: () => k }), a(47120);
-var n = a(200651),
-    s = a(192379),
-    l = a(557533),
-    i = a.n(l),
-    r = a(39383),
-    o = a.n(r),
-    c = a(608863),
-    d = a(66037),
-    u = a(643103),
-    _ = a(34211),
-    N = a(231338),
-    h = a(431138),
-    m = a(521667);
-function p(e, t, a) {
+s.d(t, { D: () => I }), s(47120);
+var a = s(200651),
+    n = s(192379),
+    i = s(557533),
+    r = s.n(i),
+    o = s(39383),
+    l = s.n(o),
+    c = s(608863),
+    d = s(66037),
+    u = s(643103),
+    p = s(34211),
+    _ = s(231338),
+    h = s(431138),
+    N = s(339509);
+function m(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: a,
+                  value: s,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = a),
+            : (e[t] = s),
         e
     );
 }
-let I = N.j_.MAIN_NAVIGATION_MENU;
-class k extends s.PureComponent {
+let g = _.j_.MAIN_NAVIGATION_MENU;
+class I extends n.PureComponent {
     componentDidMount() {
         window.addEventListener('keydown', this.handleKeyDown);
     }
@@ -34,56 +34,56 @@ class k extends s.PureComponent {
         window.removeEventListener('keydown', this.handleKeyDown);
     }
     render() {
-        let { className: e, TrackClick: t, onChangeLocale: a, avoidRouter: s, openNavAriaLabel: l, hideNavAriaLabel: r } = this.props,
-            { menuOpen: o } = this.state;
-        return (0, n.jsx)('header', {
-            className: i()(m.header, e),
-            children: (0, n.jsxs)('nav', {
-                className: m.headerInner,
+        let { className: e, TrackClick: t, onChangeLocale: s, avoidRouter: n, openNavAriaLabel: i, hideNavAriaLabel: o } = this.props,
+            { menuOpen: l } = this.state;
+        return (0, a.jsx)('header', {
+            className: r()(N.header, e),
+            children: (0, a.jsxs)('nav', {
+                className: N.headerInner,
                 children: [
-                    (0, n.jsx)(t, {
+                    (0, a.jsx)(t, {
                         tag: 'div',
-                        eventName: I,
-                        className: m.headerLogo,
+                        eventName: g,
+                        className: N.headerLogo,
                         data: { linkClicked: 'logo' },
-                        children: (0, n.jsx)(d.Z, {
-                            avoidRouter: s,
-                            className: m.logoWrapper,
-                            to: N.am.INDEX,
-                            from: N.j_.MAIN_NAVIGATION_MENU,
-                            children: (0, n.jsx)('img', {
-                                className: m.logo,
+                        children: (0, a.jsx)(d.Z, {
+                            avoidRouter: n,
+                            className: N.logoWrapper,
+                            to: _.am.INDEX,
+                            from: _.j_.MAIN_NAVIGATION_MENU,
+                            children: (0, a.jsx)('img', {
+                                className: N.logo,
                                 src: h.r.ASSET_LOGO_DISCORD_SVG,
                                 alt: 'Discord',
                                 itemProp: 'logo'
                             })
                         })
                     }),
-                    (0, n.jsx)(t, {
+                    (0, a.jsx)(t, {
                         tag: 'div',
-                        className: m.hamburgerButton,
-                        eventName: I,
+                        className: N.hamburgerButton,
+                        eventName: g,
                         data: { linkClicked: 'mobile-menu' },
-                        children: (0, n.jsx)(c.r, {
-                            open: o,
+                        children: (0, a.jsx)(c.r, {
+                            open: l,
                             'aria-haspopup': 'true',
-                            'aria-label': o ? r : l,
-                            'aria-expanded': o,
+                            'aria-label': l ? o : i,
+                            'aria-expanded': l,
                             'aria-controls': this._mainNavId,
                             onClick: this.toggleMenu
                         })
                     }),
-                    (0, n.jsxs)('ul', {
-                        className: o ? m.headerNavOpen : m.headerNav,
+                    (0, a.jsxs)('ul', {
+                        className: l ? N.headerNavOpen : N.headerNav,
                         children: [
-                            (0, n.jsx)(_.o, {
-                                avoidRouter: s,
+                            (0, a.jsx)(p.o, {
+                                avoidRouter: n,
                                 TrackClick: t,
-                                styles: m,
+                                styles: N,
                                 isMobile: !0,
-                                isVisible: o
+                                isVisible: l
                             }),
-                            (0, n.jsx)(u.p, { onChange: a })
+                            (0, a.jsx)(u.p, { onChange: s })
                         ]
                     })
                 ]
@@ -92,12 +92,12 @@ class k extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            p(this, '_mainNavId', o()('mainNav')),
-            p(this, 'state', { menuOpen: !1 }),
-            p(this, 'toggleMenu', () => {
+            m(this, '_mainNavId', l()('mainNav')),
+            m(this, 'state', { menuOpen: !1 }),
+            m(this, 'toggleMenu', () => {
                 this.setState({ menuOpen: !this.state.menuOpen });
             }),
-            p(this, 'handleKeyDown', (e) => {
+            m(this, 'handleKeyDown', (e) => {
                 let { menuOpen: t } = this.state;
                 ('Escape' === e.key || 'Esc' === e.key) && (e.preventDefault(), t && this.toggleMenu());
             });

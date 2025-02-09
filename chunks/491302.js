@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(653041);
+n.d(t, { Z: () => p }), n(653041);
 var i = n(200651),
     l = n(192379),
     a = n(481060),
@@ -11,10 +11,10 @@ var i = n(200651),
     m = n(486199),
     h = n(981631),
     x = n(388032),
-    p = n(88817);
-function g(e) {
-    let { webhook: t, editedWebhook: n, channelOptions: g, isExpanded: f, errors: b, onToggleExpand: v } = e,
-        _ = l.useMemo(() => {
+    g = n(915536);
+function p(e) {
+    let { webhook: t, editedWebhook: n, channelOptions: p, isExpanded: b, errors: _, onToggleExpand: f } = e,
+        v = l.useMemo(() => {
             var e;
             return null != (e = t.avatar) && /^data:/.test(e)
                 ? e
@@ -24,7 +24,7 @@ function g(e) {
                       discriminator: h.fo$
                   });
         }, [t]),
-        j = l.useCallback(() => {
+        C = l.useCallback(() => {
             (0, a.h7j)((e) =>
                 (0, i.jsx)(a.ConfirmModal, {
                     ...e,
@@ -46,24 +46,24 @@ function g(e) {
                 })
             );
         }, [t.guild_id, t.id, t.name]),
-        N = [];
+        j = [];
     null != t.source_channel &&
         null != t.source_guild &&
-        (N.push({
+        (j.push({
             icon: a.MqZ,
             text: t.source_channel.name
         }),
-        N.push({
+        j.push({
             text: (0, i.jsx)(
                 'span',
                 {
-                    className: p.guildSource,
+                    className: g.guildSource,
                     children: x.intl.format(x.t['H/jJ6e'], {
                         guildHook: () =>
                             (0, i.jsx)(
                                 'span',
                                 {
-                                    className: p.sourceName,
+                                    className: g.sourceName,
                                     children: t.source_guild.name
                                 },
                                 t.id
@@ -73,14 +73,14 @@ function g(e) {
                 'guild-source'
             )
         }));
-    let C = null;
+    let N = null;
     return (
-        f &&
+        b &&
             null != n &&
-            (C = (0, i.jsxs)('div', {
-                className: p.body,
+            (N = (0, i.jsxs)('div', {
+                className: g.body,
                 children: [
-                    (0, i.jsx)(a.$i$, { className: p.topDivider }),
+                    (0, i.jsx)(a.$i$, { className: g.topDivider }),
                     (0, i.jsx)(d.Z, {
                         children: (0, i.jsxs)(d.Z, {
                             direction: d.Z.Direction.VERTICAL,
@@ -97,7 +97,7 @@ function g(e) {
                                                         s.Z.updateWebhook({ name: e });
                                                     },
                                                     maxLength: 80,
-                                                    error: b.name
+                                                    error: _.name
                                                 })
                                             })
                                         }),
@@ -107,7 +107,7 @@ function g(e) {
                                                 title: x.intl.string(x.t['4TuWfX']),
                                                 children: (0, i.jsx)(a.q4e, {
                                                     value: n.channel_id,
-                                                    options: g,
+                                                    options: p,
                                                     onChange: (e) => {
                                                         s.Z.updateWebhook({ channelId: e });
                                                     }
@@ -116,14 +116,14 @@ function g(e) {
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(a.$i$, { className: p.bottomDivider }),
+                                (0, i.jsx)(a.$i$, { className: g.bottomDivider }),
                                 (0, i.jsx)(d.Z, {
                                     children: (0, i.jsx)(a.zxk, {
-                                        onClick: j,
+                                        onClick: C,
                                         size: a.zxk.Sizes.SMALL,
                                         color: a.zxk.Colors.RED,
                                         look: a.zxk.Looks.LINK,
-                                        className: p.removeButton,
+                                        className: g.removeButton,
                                         children: x.intl.string(x.t.CMy0Cg)
                                     })
                                 })
@@ -134,32 +134,32 @@ function g(e) {
             })),
         (0, i.jsx)(a.Zbd, {
             editable: !0,
-            className: p.card,
+            className: g.card,
             children: (0, i.jsxs)(d.Z, {
                 direction: d.Z.Direction.VERTICAL,
                 children: [
                     (0, i.jsx)(a.P3F, {
-                        className: p.header,
-                        'aria-expanded': f,
-                        onClick: v,
+                        className: g.header,
+                        'aria-expanded': b,
+                        onClick: f,
                         children: (0, i.jsxs)(d.Z, {
                             align: d.Z.Align.CENTER,
                             children: [
                                 (0, i.jsx)(m.Z, {
                                     name: t.name,
-                                    imageSrc: _,
-                                    detailsClassName: p.__invalid_description,
-                                    details: N
+                                    imageSrc: v,
+                                    detailsClassName: g.__invalid_description,
+                                    details: j
                                 }),
                                 (0, i.jsx)(c.Z, {
-                                    className: p.expandIcon,
-                                    expanded: f,
+                                    className: g.expandIcon,
+                                    expanded: b,
                                     'aria-hidden': !0
                                 })
                             ]
                         })
                     }),
-                    C
+                    N
                 ]
             })
         })

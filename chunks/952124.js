@@ -19,8 +19,8 @@ function g(e) {
         { trackUserProfileAction: E } = (0, _.KZ)(),
         { analyticsLocations: v, newestAnalyticsLocation: y } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
         I = (0, r.e7)([p.Z], () => p.Z.getUserProfile(t.id)),
-        b = null == I ? void 0 : I.application,
-        T = (0, c.Z)({
+        T = null == I ? void 0 : I.application,
+        b = (0, c.Z)({
             user: t,
             guildId: n,
             location: y,
@@ -63,7 +63,7 @@ function g(e) {
                 })
         }),
         N = (0, u.Z)({
-            id: null == b ? void 0 : b.id,
+            id: null == T ? void 0 : T.id,
             label: m.intl.string(m.t['+NP/b2']),
             onSuccess: () =>
                 E({
@@ -73,10 +73,10 @@ function g(e) {
         }),
         C = [
             [g],
-            [S, T, A],
+            [S, b, A],
             [
                 (0, l.Z)({
-                    application: b,
+                    application: T,
                     label: m.intl.string(m.t.WqhZsr),
                     onSuccess: () =>
                         E({

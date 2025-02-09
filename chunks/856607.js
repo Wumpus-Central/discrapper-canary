@@ -2,11 +2,11 @@ n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var s = n(481060),
-    r = n(37234),
-    l = n(703656),
+    l = n(37234),
+    r = n(703656),
     a = n(981631),
     o = n(388032),
-    c = n(276497),
+    c = n(89294),
     d = n(322221);
 function u() {
     return (0, i.jsxs)('div', {
@@ -30,7 +30,7 @@ function u() {
             (0, i.jsx)(s.zxk, {
                 className: c.topSpacing,
                 onClick: () => {
-                    (0, l.uL)(a.Z5c.GUILD_DISCOVERY), r.xf();
+                    (0, r.uL)(a.Z5c.GUILD_DISCOVERY), l.xf();
                 },
                 children: o.intl.string(o.t.jQ3pqq)
             })

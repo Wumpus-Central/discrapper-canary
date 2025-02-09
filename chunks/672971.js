@@ -12,7 +12,7 @@ var i = n(200651),
     _ = n(74538),
     p = n(981631),
     h = n(388032),
-    m = n(175782);
+    m = n(421842);
 function g(e, t, n) {
     return (
         t in e
@@ -39,7 +39,7 @@ class E extends r.Component {
         return (null == e.eulaId || t.hasAcceptedEULA) && (!e.showWithdrawalWaiver || t.hasAcceptedWithdrawalWaiver);
     }
     render() {
-        let { eulaId: e, applicationName: t, hasPreviouslyAcceptedEULA: r, forceShow: a, disabled: o, className: u, checkboxClassname: d, checkboxLabelClassname: g, finePrint: E, showPricingLink: v, showWithdrawalWaiver: y, isTrial: I, inReverseTrial: b, isDiscount: T, subscriptionPlan: S, finePrintClassname: A } = this.props,
+        let { eulaId: e, applicationName: t, hasPreviouslyAcceptedEULA: r, forceShow: a, disabled: o, className: u, checkboxClassname: d, checkboxLabelClassname: g, finePrint: E, showPricingLink: v, showWithdrawalWaiver: y, isTrial: I, inReverseTrial: T, isDiscount: b, subscriptionPlan: S, finePrintClassname: A } = this.props,
             { hasAcceptedEULA: N, hasAcceptedWithdrawalWaiver: C } = this.state;
         return (l()(!I || null != S, 'subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true'), a || (null != e && !r) || y)
             ? (0, i.jsxs)('div', {
@@ -121,7 +121,7 @@ class E extends r.Component {
                                   paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS)
                               })
                           }),
-                      b &&
+                      T &&
                           null != S &&
                           (0, i.jsx)(c.Text, {
                               variant: 'text-xs/medium',
@@ -133,7 +133,7 @@ class E extends r.Component {
                                   paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS)
                               })
                           }),
-                      T &&
+                      b &&
                           null != S &&
                           (0, i.jsx)(c.Text, {
                               variant: 'text-xs/medium',

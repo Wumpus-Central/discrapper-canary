@@ -18,8 +18,8 @@ var r = n(512969),
     v = n(430824),
     y = n(306680),
     I = n(944486),
-    b = n(914010),
-    T = n(70956),
+    T = n(914010),
+    b = n(70956),
     S = n(198620),
     A = n(981631),
     N = n(176505),
@@ -76,7 +76,7 @@ function D(e) {
                 jumpType: s
             });
         else {
-            if ((null == d ? void 0 : d.isThread()) && P(n))
+            if ((null == d ? void 0 : d.isThread()) && w(n))
                 return (
                     O.log('Jumping to start of thread '.concat(d.id)),
                     u.Z.fetchMessages({
@@ -118,21 +118,21 @@ function D(e) {
         }
     }
 }
-let x = 90 * T.Z.Millis.DAY,
-    L = 'viewedThreadIds';
-function P(e) {
+let L = 90 * b.Z.Millis.DAY,
+    x = 'viewedThreadIds';
+function w(e) {
     if (y.ZP.hasOpenedThread(e)) return !1;
     if (null == i) {
         var t;
-        i = null !== (t = s.K.get(L, {})) && void 0 !== t ? t : {};
+        i = null !== (t = s.K.get(x, {})) && void 0 !== t ? t : {};
     }
     if (e in i) return !1;
     i[e] = Date.now();
-    let n = Date.now() - x;
+    let n = Date.now() - L;
     for (let e in i) i[e] < n && delete i[e];
-    return s.K.set(L, i), !0;
+    return s.K.set(x, i), !0;
 }
-function w() {
+function P() {
     let e = I.Z.getChannelId();
     if (null != e) {
         let n = E.Z.getChannel(e);
@@ -198,7 +198,7 @@ function G(e, t) {
 }
 function B() {
     let e = I.Z.getChannelId(),
-        t = b.Z.getGuildId();
+        t = T.Z.getGuildId();
     if (null == t || null == e) return;
     let n = g.ZP.getSidebarState(e);
     (null == n ? void 0 : n.type) !== h.tI.VIEW_CHANNEL && G(t, e);
@@ -241,7 +241,7 @@ function H(e) {
     let { channelId: n, jump: i, isStale: r, isPreview: a = !1 } = e;
     if (a) return;
     let s = null !== (t = j[n]) && void 0 !== t ? t : 0;
-    if (Date.now() - s < 10 * T.Z.Millis.SECOND) return;
+    if (Date.now() - s < 10 * b.Z.Millis.SECOND) return;
     j[n] = Date.now();
     let o = I.Z.getChannelId(),
         l = g.ZP.getCurrentSidebarChannelId(o),
@@ -275,10 +275,10 @@ function W(e) {
 }
 class K extends d.Z {
     _initialize() {
-        o.Z.subscribe('CONNECTION_OPEN', w);
+        o.Z.subscribe('CONNECTION_OPEN', P);
     }
     _terminate() {
-        o.Z.unsubscribe('CONNECTION_OPEN', w);
+        o.Z.unsubscribe('CONNECTION_OPEN', P);
     }
     constructor(...e) {
         super(...e),
@@ -287,7 +287,7 @@ class K extends d.Z {
             R(this, 'stores', new Map().set(g.ZP, B)),
             R(this, 'actions', {
                 APP_STATE_UPDATE: W,
-                OVERLAY_INITIALIZE: w,
+                OVERLAY_INITIALIZE: P,
                 CHANNEL_SELECT: k,
                 VOICE_CHANNEL_SELECT: U,
                 THREAD_CREATE: F,

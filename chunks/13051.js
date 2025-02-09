@@ -11,28 +11,28 @@ var i = n(200651),
     m = n(139387),
     h = n(726542),
     x = n(600164),
-    p = n(339085),
-    g = n(434404),
-    f = n(598077),
-    b = n(430824),
-    v = n(246946),
-    _ = n(259580),
-    j = n(531087),
-    N = n(768581),
-    C = n(709054),
+    g = n(339085),
+    p = n(434404),
+    b = n(598077),
+    _ = n(430824),
+    f = n(246946),
+    v = n(259580),
+    C = n(531087),
+    j = n(768581),
+    N = n(709054),
     I = n(486199),
     Z = n(981631),
     T = n(388032),
-    E = n(563949),
-    S = n(232186);
+    E = n(111223),
+    S = n(814632);
 function y(e) {
     let t,
         { guild: n, integration: a, editedIntegration: s, isExpanded: y, onToggleExpand: A, onDisable: k, onEnable: R } = e,
-        L = (0, c.e7)([b.Z], () => b.Z.getRoles(n.id)),
-        [O, w] = l.useState(!1),
-        P = (0, c.e7)([v.Z], () => v.Z.hidePersonalInformation),
+        L = (0, c.e7)([_.Z], () => _.Z.getRoles(n.id)),
+        [w, O] = l.useState(!1),
+        P = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
         D = l.useCallback(() => {
-            w(!0), R(a);
+            O(!0), R(a);
         }, [a, R]),
         M = l.useCallback(() => {
             a.syncing ||
@@ -52,15 +52,15 @@ function y(e) {
                 });
         }, [a, k]),
         B = l.useCallback(() => {
-            g.Z.syncIntegration(n.id, a.id);
+            p.Z.syncIntegration(n.id, a.id);
         }, [n.id, a.id]),
         U = l.useCallback(() => {
-            null != a.role_id && (g.Z.setSection(Z.pNK.ROLES), g.Z.selectRole(a.role_id));
+            null != a.role_id && (p.Z.setSection(Z.pNK.ROLES), p.Z.selectRole(a.role_id));
         }, [a.role_id]),
         {
             serviceName: W,
-            channelURL: z,
-            expireBehaviorLabel: H,
+            channelURL: H,
+            expireBehaviorLabel: z,
             syncLabel: G,
             subscribersText: F
         } = l.useMemo(() => {
@@ -121,7 +121,7 @@ function y(e) {
             };
         }, [L, U, a.revoked, a.role_id, a.synced_at, a.type, a.user]),
         q = l.useMemo(() => {
-            let e = p.ZP.getGuildEmoji(n.id),
+            let e = g.ZP.getGuildEmoji(n.id),
                 t = Object.values(L)
                     .filter((e) => null != e.tags && e.tags.integration_id === a.id)
                     .map((e) => e.id);
@@ -129,7 +129,7 @@ function y(e) {
         }, [n.id, L, a.enable_emoticons, a.id, a.role_id]);
     if (
         (l.useEffect(() => {
-            (null == s ? void 0 : s.id) === a.id && (null == s ? void 0 : s.enabled) === !0 && w(!1);
+            (null == s ? void 0 : s.id) === a.id && (null == s ? void 0 : s.enabled) === !0 && O(!1);
         }, [s, a.id]),
         a.enabled && null != a.user)
     )
@@ -137,20 +137,20 @@ function y(e) {
             {
                 icon: u.T39,
                 text: P
-                    ? T.intl.formatToPlainString(T.t.gcdJ8P, { timestamp: C.default.extractTimestamp(a.id) })
+                    ? T.intl.formatToPlainString(T.t.gcdJ8P, { timestamp: N.default.extractTimestamp(a.id) })
                     : T.intl.formatToPlainString(T.t.Nu9sam, {
-                          user: null != a.user ? new f.Z(a.user).tag : null,
-                          timestamp: C.default.extractTimestamp(a.id)
+                          user: null != a.user ? new b.Z(a.user).tag : null,
+                          timestamp: N.default.extractTimestamp(a.id)
                       })
             }
         ];
     else {
-        let e = new URL(z);
+        let e = new URL(H);
         t = [
             {
                 text: T.intl.format(T.t.BegylZ, {
                     serviceName: W,
-                    accountUrl: z,
+                    accountUrl: H,
                     accountUrlText: e.hostname + e.pathname
                 })
             }
@@ -169,9 +169,9 @@ function y(e) {
                     ? (0, i.jsx)(x.Z.Child, {
                           shrink: 0,
                           grow: 0,
-                          children: (0, i.jsx)(_.Z, {
+                          children: (0, i.jsx)(v.Z, {
                               className: E.expandIcon,
-                              expanded: y && !O,
+                              expanded: y && !w,
                               'aria-hidden': !0
                           })
                       })
@@ -182,9 +182,9 @@ function y(e) {
                               size: u.zxk.Sizes.SMALL,
                               color: u.zxk.Colors.PRIMARY,
                               onClick: D,
-                              disabled: O,
-                              children: O
-                                  ? (0, i.jsx)(j.Z, {
+                              disabled: w,
+                              children: w
+                                  ? (0, i.jsx)(C.Z, {
                                         width: 24,
                                         height: 24
                                     })
@@ -196,7 +196,7 @@ function y(e) {
         X = null;
     return (
         y &&
-            !O &&
+            !w &&
             null != s &&
             (X = (0, i.jsxs)(x.Z, {
                 className: E.body,
@@ -254,7 +254,7 @@ function y(e) {
                                                     disabled: t.syncing || t.revoked,
                                                     onClick: s,
                                                     children: t.syncing
-                                                        ? (0, i.jsx)(j.Z, {
+                                                        ? (0, i.jsx)(C.Z, {
                                                               width: 24,
                                                               height: 24
                                                           })
@@ -328,7 +328,7 @@ function y(e) {
                         });
                     })({
                         integration: s,
-                        labelText: H,
+                        labelText: z,
                         onBehaviorChange: function (e) {
                             m.Z.updateIntegration({ expireBehavior: e });
                         },
@@ -368,7 +368,7 @@ function y(e) {
                                                                   alt: T.intl.formatToPlainString(T.t.n6ZZn5, { name: e.name }),
                                                                   draggable: !1,
                                                                   className: r()(E.emoji, 'emoji', 'jumboable'),
-                                                                  src: N.ZP.getEmojiURL({
+                                                                  src: j.ZP.getEmojiURL({
                                                                       id: e.id,
                                                                       animated: e.animated,
                                                                       size: 28
@@ -414,7 +414,7 @@ function y(e) {
                     a.enabled
                         ? (0, i.jsx)(u.P3F, {
                               className: E.expandableHeader,
-                              'aria-expanded': y && !O,
+                              'aria-expanded': y && !w,
                               onClick: A,
                               children: Y
                           })

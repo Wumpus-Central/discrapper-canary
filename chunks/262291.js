@@ -1,4 +1,4 @@
-n.d(t, { _: () => x });
+n.d(t, { _: () => L });
 var i,
     r,
     a = n(259630),
@@ -28,12 +28,12 @@ var p = !!String.prototype.startsWith && '_a'.startsWith('a', 1),
           },
     I = !0;
 try {
-    var b = O('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
-    I = (null === (i = b.exec('a')) || void 0 === i ? void 0 : i[0]) === 'a';
+    var T = O('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
+    I = (null === (i = T.exec('a')) || void 0 === i ? void 0 : i[0]) === 'a';
 } catch (e) {
     I = !1;
 }
-var T = p
+var b = p
         ? function (e, t, n) {
               return e.startsWith(t, n);
           }
@@ -105,7 +105,7 @@ if (I) {
         }
         return S.apply(void 0, n);
     };
-var x = (function () {
+var L = (function () {
     function e(e, t) {
         void 0 === t && (t = {}),
             (this.message = e),
@@ -140,7 +140,7 @@ var x = (function () {
                             location: _(l, this.clonePosition())
                         });
                 } else if (60 !== r || this.ignoreTag || 47 !== this.peek()) {
-                    if (60 === r && !this.ignoreTag && L(this.peek() || 0)) {
+                    if (60 === r && !this.ignoreTag && x(this.peek() || 0)) {
                         var a = this.parseTag(e, t);
                         if (a.err) return a;
                         i.push(a.val);
@@ -178,7 +178,7 @@ var x = (function () {
             var a = r.val,
                 l = this.clonePosition();
             if (!this.bumpIf('</')) return this.error(s.o.UNCLOSED_TAG, _(n, this.clonePosition()));
-            if (this.isEOF() || !L(this.char())) return this.error(s.o.INVALID_TAG, _(l, this.clonePosition()));
+            if (this.isEOF() || !x(this.char())) return this.error(s.o.INVALID_TAG, _(l, this.clonePosition()));
             var u = this.clonePosition();
             return i !== this.parseTagName()
                 ? this.error(s.o.UNMATCHED_CLOSING_TAG, _(u, this.clonePosition()))
@@ -196,7 +196,7 @@ var x = (function () {
         }),
         (e.prototype.parseTagName = function () {
             var e = this.offset();
-            for (this.bump(); !this.isEOF() && w(this.char()); ) this.bump();
+            for (this.bump(); !this.isEOF() && P(this.char()); ) this.bump();
             return this.message.slice(e, this.offset());
         }),
         (e.prototype.parseLiteral = function (e, t) {
@@ -229,7 +229,7 @@ var x = (function () {
             };
         }),
         (e.prototype.tryParseLeftAngleBracket = function () {
-            return this.isEOF() || 60 !== this.char() || (!this.ignoreTag && P(this.peek() || 0)) ? null : (this.bump(), '<');
+            return this.isEOF() || 60 !== this.char() || (!this.ignoreTag && w(this.peek() || 0)) ? null : (this.bump(), '<');
         }),
         (e.prototype.tryParseQuote = function (e) {
             if (this.isEOF() || 39 !== this.char()) return null;
@@ -335,7 +335,7 @@ var x = (function () {
                     var E = this.tryParseArgumentClose(i);
                     if (E.err) return E;
                     var v = _(i, this.clonePosition());
-                    if (p && T(null == p ? void 0 : p.style, '::', 0)) {
+                    if (p && b(null == p ? void 0 : p.style, '::', 0)) {
                         var y = C(p.style.slice(2));
                         if ('number' === d) {
                             var m = this.parseNumberSkeletonFromString(y, p.styleLocation);
@@ -381,8 +381,8 @@ var x = (function () {
                 case 'plural':
                 case 'selectordinal':
                 case 'select':
-                    var b = this.clonePosition();
-                    if ((this.bumpSpace(), !this.bumpIf(','))) return this.error(s.o.EXPECT_SELECT_ARGUMENT_OPTIONS, _(b, (0, a.pi)({}, b)));
+                    var T = this.clonePosition();
+                    if ((this.bumpSpace(), !this.bumpIf(','))) return this.error(s.o.EXPECT_SELECT_ARGUMENT_OPTIONS, _(T, (0, a.pi)({}, T)));
                     this.bumpSpace();
                     var S = this.parseIdentifierIfPossible(),
                         N = 0;
@@ -572,7 +572,7 @@ var x = (function () {
             }
         }),
         (e.prototype.bumpIf = function (e) {
-            if (T(this.message, e, this.offset())) {
+            if (b(this.message, e, this.offset())) {
                 for (var t = 0; t < e.length; t++) this.bump();
                 return !0;
             }
@@ -605,13 +605,13 @@ var x = (function () {
         e
     );
 })();
-function L(e) {
+function x(e) {
     return (e >= 97 && e <= 122) || (e >= 65 && e <= 90);
 }
-function P(e) {
-    return L(e) || 47 === e;
-}
 function w(e) {
+    return x(e) || 47 === e;
+}
+function P(e) {
     return 45 === e || 46 === e || (e >= 48 && e <= 57) || 95 === e || (e >= 97 && e <= 122) || (e >= 65 && e <= 90) || 183 == e || (e >= 192 && e <= 214) || (e >= 216 && e <= 246) || (e >= 248 && e <= 893) || (e >= 895 && e <= 8191) || (e >= 8204 && e <= 8205) || (e >= 8255 && e <= 8256) || (e >= 8304 && e <= 8591) || (e >= 11264 && e <= 12271) || (e >= 12289 && e <= 55295) || (e >= 63744 && e <= 64975) || (e >= 65008 && e <= 65533) || (e >= 65536 && e <= 983039);
 }
 function M(e) {

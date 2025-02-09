@@ -2,18 +2,18 @@ n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
 var s = n(120356),
-    r = n.n(s),
-    l = n(512722),
-    a = n.n(l),
+    l = n.n(s),
+    r = n(512722),
+    a = n.n(r),
     o = n(442837),
     c = n(481060),
     d = n(600164),
     u = n(594174),
-    m = n(418632),
-    g = n(388032),
-    h = n(167836);
+    h = n(418632),
+    m = n(388032),
+    g = n(55055);
 function x(e) {
-    let { unclaimedNotice: t, unverifiedNotice: s, className: l } = e,
+    let { unclaimedNotice: t, unverifiedNotice: s, className: r } = e,
         {
             isClaimed: x,
             isVerified: _,
@@ -31,19 +31,19 @@ function x(e) {
         });
     function E() {
         (0, c.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e('9343'), n.e('1861')]).then(n.bind(n, 642298));
+            let { default: e } = await Promise.all([n.e('9343'), n.e('58409')]).then(n.bind(n, 642298));
             return (t) => (0, i.jsx)(e, { ...t });
         });
     }
     return x && _
         ? null
         : (0, i.jsx)(c.Zbd, {
-              className: r()(h.wrapper, l),
+              className: l()(g.wrapper, r),
               children: (0, i.jsxs)(d.Z, {
                   align: d.Z.Align.CENTER,
                   children: [
                       (0, i.jsx)(d.Z.Child, {
-                          className: h.image,
+                          className: g.image,
                           grow: 0,
                           shrink: 0
                       }),
@@ -51,24 +51,24 @@ function x(e) {
                           children: [
                               (0, i.jsx)(c.Text, {
                                   variant: 'text-sm/normal',
-                                  children: x ? (null != s ? s : g.intl.string(g.t.WuyBbG)) : null != t ? t : g.intl.string(g.t['f+Zaoq'])
+                                  children: x ? (null != s ? s : m.intl.string(m.t.WuyBbG)) : null != t ? t : m.intl.string(m.t['f+Zaoq'])
                               }),
                               (0, i.jsxs)(d.Z, {
                                   justify: d.Z.Justify.CENTER,
-                                  className: h.content,
+                                  className: g.content,
                                   children: [
                                       x
                                           ? p
                                               ? (0, i.jsx)(d.Z.Child, {
                                                     grow: 0,
                                                     shrink: 0,
-                                                    children: (0, i.jsx)(m.Z, {})
+                                                    children: (0, i.jsx)(h.Z, {})
                                                 })
                                               : (0, i.jsx)(c.zxk, {
                                                     size: c.zxk.Sizes.MEDIUM,
                                                     color: c.zxk.Colors.BRAND,
                                                     onClick: E,
-                                                    children: g.intl.string(g.t.ydw5nZ)
+                                                    children: m.intl.string(m.t.ydw5nZ)
                                                 })
                                           : (0, i.jsx)(d.Z.Child, {
                                                 grow: 0,
@@ -82,7 +82,7 @@ function x(e) {
                                                             return (t) => (0, i.jsx)(e, { ...t });
                                                         });
                                                     },
-                                                    children: g.intl.string(g.t.fiNVio)
+                                                    children: m.intl.string(m.t.fiNVio)
                                                 })
                                             }),
                                       x && p
@@ -93,7 +93,7 @@ function x(e) {
                                                     color: c.zxk.Colors.PRIMARY,
                                                     look: c.zxk.Looks.LINK,
                                                     onClick: E,
-                                                    children: g.intl.string(g.t.Vm8akJ)
+                                                    children: m.intl.string(m.t.Vm8akJ)
                                                 })
                                             })
                                           : null

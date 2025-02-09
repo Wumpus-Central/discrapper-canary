@@ -16,7 +16,7 @@ var r = n(990547),
     m = n(981631),
     g = n(176505),
     E = n(388032),
-    v = n(559346);
+    v = n(862517);
 let y = () => {
     let e = (0, l.ZP)();
     return (0, s.ap)(e) ? n(537381) : n(341048);
@@ -34,12 +34,12 @@ function I(e) {
             emoji_id: null != s ? s : null
         }
     });
-    let b = () => {
+    let T = () => {
             (0, f.uL)(m.Z5c.CHANNEL(n, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: I });
         },
-        T = (0, a.e7)([_.Z], () => _.Z.getGuild(n)),
+        b = (0, a.e7)([_.Z], () => _.Z.getGuild(n)),
         S = (0, a.e7)([p.Z], () => null != n && p.Z.getUserSubscriptionRoles(n).size > 0),
-        A = S ? E.intl.string(E.t['GoLM9/']) : E.intl.formatToPlainString(E.t['h0u/Hh'], { serverName: null == T ? void 0 : T.name }),
+        A = S ? E.intl.string(E.t['GoLM9/']) : E.intl.formatToPlainString(E.t['h0u/Hh'], { serverName: null == b ? void 0 : b.name }),
         N = S ? E.intl.string(E.t.PjZ7DQ) : E.intl.string(E.t.p8FG1N);
     return (0, i.jsxs)('div', {
         className: v.container,
@@ -81,7 +81,7 @@ function I(e) {
                     }),
                     (0, i.jsx)(o.LZC, { size: 24 }),
                     (0, i.jsx)(h.Z, {
-                        onClick: b,
+                        onClick: T,
                         children: N
                     })
                 ]

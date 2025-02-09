@@ -3,18 +3,18 @@ n.d(t, {
     z: () => _
 });
 var i = n(200651),
-    r = n(192379),
-    o = n(120356),
-    l = n.n(o),
+    o = n(192379),
+    r = n(120356),
+    l = n.n(r),
     a = n(642128),
     s = n(481060),
     d = n(110924),
     c = n(752802),
     u = n(340101),
-    h = n(228680);
+    h = n(145396);
 let _ = 8,
     p = (e) => {
-        let { participant: t, width: n, locked: r, widgetId: o, pinned: l } = e;
+        let { participant: t, width: n, locked: o, widgetId: r, pinned: l } = e;
         return (0, i.jsx)('div', {
             className: h.tileContainer,
             children: (0, i.jsx)(
@@ -22,8 +22,8 @@ let _ = 8,
                 {
                     participant: t,
                     width: n,
-                    locked: r,
-                    widgetId: o,
+                    locked: o,
+                    widgetId: r,
                     pinned: l
                 },
                 t.user.id
@@ -36,23 +36,23 @@ let _ = 8,
         friction: 18,
         clamp: !0
     },
-    g = r.memo(function (e) {
-        let { widgetId: t, tileWidth: n, layout: r, locked: o, streamParticipants: c, participantsVersion: g, pinned: m } = e,
+    g = o.memo(function (e) {
+        let { widgetId: t, tileWidth: n, layout: o, locked: r, streamParticipants: c, participantsVersion: g, pinned: m } = e,
             v = (9 / 16) * n,
             x = c.map((e) => ({
                 participant: e,
                 key: e.user.id,
                 width: n,
-                locked: o,
+                locked: r,
                 widgetId: t,
                 height: v,
                 pinned: m
             })),
             E = (0, d.Z)(n),
-            C = r === u.C5.VERTICAL,
+            C = o === u.C5.VERTICAL,
             Z = 0,
-            S = 0,
-            I = (0, s.Yzy)(
+            I = 0,
+            S = (0, s.Yzy)(
                 C
                     ? x.map((e, t) => ({
                           ...e,
@@ -61,7 +61,7 @@ let _ = 8,
                       }))
                     : x.map((e, t) => ({
                           ...e,
-                          x: (S += e.width + (t > 0 ? _ : 0)) - e.width,
+                          x: (I += e.width + (t > 0 ? _ : 0)) - e.width,
                           y: 0
                       })),
                 {
@@ -75,22 +75,22 @@ let _ = 8,
                         opacity: 0
                     },
                     enter: (e) => {
-                        let { x: t, y: n, width: i, height: r } = e;
+                        let { x: t, y: n, width: i, height: o } = e;
                         return {
                             x: t,
                             y: n,
                             width: i,
-                            height: r,
+                            height: o,
                             opacity: 1
                         };
                     },
                     update: (e) => {
-                        let { x: t, y: n, width: i, height: r } = e;
+                        let { x: t, y: n, width: i, height: o } = e;
                         return {
                             x: t,
                             y: n,
                             width: i,
-                            height: r
+                            height: o
                         };
                     },
                     config: f,
@@ -104,14 +104,14 @@ let _ = 8,
                 [h.vertical]: C,
                 [h.horizontal]: !C
             }),
-            style: C ? { height: Z } : { width: S },
-            children: I((e, t, r, o) =>
+            style: C ? { height: Z } : { width: I },
+            children: S((e, t, o, r) =>
                 (0, i.jsx)(a.animated.div, {
                     className: h.gridItem,
                     style: Object.assign({}, e, {
                         width: n,
                         height: v,
-                        zIndex: x.length - o
+                        zIndex: x.length - r
                     }),
                     children: p(t)
                 })

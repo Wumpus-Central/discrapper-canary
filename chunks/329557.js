@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => E });
 var i = n(200651);
 n(192379);
 var l = n(481060),
@@ -7,8 +7,8 @@ var l = n(481060),
     a = n(51596),
     o = n(823385),
     c = n(900085);
-let d = 'QUICK_SWITCHER_MODAL_KEY';
-class u extends s.Z {
+let u = 'QUICK_SWITCHER_MODAL_KEY';
+class d extends s.Z {
     _initialize() {
         r.Z.subscribe('QUICKSWITCHER_SHOW', this.handleShow), r.Z.subscribe('QUICKSWITCHER_HIDE', this.handleHide);
     }
@@ -17,15 +17,15 @@ class u extends s.Z {
     }
     handleShow() {
         o.Z.isOpen() &&
-            !(0, l.nfh)(d) &&
+            !(0, l.nfh)(u) &&
             (0, l.h7j)((e) => (0, i.jsx)(c.Z, { ...e }), {
-                modalKey: d,
+                modalKey: u,
                 instant: !0,
                 onCloseCallback: a.Cp
             });
     }
     handleHide() {
-        (0, l.Mr3)(d);
+        (0, l.Mr3)(u);
     }
 }
-let _ = new u();
+let E = new d();

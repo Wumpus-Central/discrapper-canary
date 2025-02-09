@@ -1,4 +1,4 @@
-t.d(n, { default: () => _ }), t(47120);
+t.d(n, { default: () => C }), t(47120);
 var i = t(200651),
     s = t(192379),
     l = t(990547),
@@ -10,17 +10,17 @@ var i = t(200651),
     x = t(534044),
     m = t(670199),
     u = t(800530),
-    C = t(981631),
-    h = t(676566);
-function _(e) {
-    let { classificationId: n, transitionState: t, initialSlide: _ = u.Cs.SPEED_BUMP, onClose: N } = e,
-        [p, g] = s.useState(_),
-        { classification: j, isDsaEligible: I } = (0, r.YG)(null != n ? n : C.lds),
+    h = t(981631),
+    _ = t(678348);
+function C(e) {
+    let { classificationId: n, transitionState: t, initialSlide: C = u.Cs.SPEED_BUMP, onClose: N } = e,
+        [p, g] = s.useState(C),
+        { classification: j, isDsaEligible: I } = (0, r.YG)(null != n ? n : h.lds),
         k = (null == j ? void 0 : j.is_spam) || !1,
         E = (null == j ? void 0 : j.is_coppa) || !1;
     s.useEffect(() => {
-        g(_);
-    }, [g, _]);
+        g(C);
+    }, [g, C]);
     let T = s.useCallback(() => {
             d.Z.close(), N();
         }, [N]),
@@ -39,7 +39,7 @@ function _(e) {
         disableTrack: !0,
         size: a.CgR.DYNAMIC,
         children: (0, i.jsx)('div', {
-            className: h.container,
+            className: _.container,
             children: (0, i.jsxs)(a.MyZ, {
                 activeSlide: p,
                 width: 500,

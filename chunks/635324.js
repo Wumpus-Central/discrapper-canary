@@ -1,36 +1,36 @@
 n(47120);
 var i = n(200651),
-    r = n(149765),
-    a = n(481060),
-    o = n(570140),
-    s = n(700785);
+    o = n(149765),
+    r = n(481060),
+    a = n(570140),
+    c = n(700785);
 __OVERLAY__ &&
-    o.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
+    a.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
         let {
                 clientId: t,
-                authorizeProps: { authorizations: d, permissions: c, ...l }
+                authorizeProps: { authorizations: s, permissions: l, ...d }
             } = e,
-            u = 'OAuth2Authorize_'.concat(t, '_').concat(l.guildId, '_').concat(l.channelId);
+            u = 'OAuth2Authorize_'.concat(t, '_').concat(d.guildId, '_').concat(d.channelId);
         function _(e) {
             let { location: n } = e;
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE',
                 clientId: t,
                 location: n
             });
         }
-        let f = s.Hn;
+        let f = c.Hn;
         try {
-            f = r.vB(null != c ? c : 0);
+            f = o.vB(null != l ? l : 0);
         } catch (e) {}
-        (0, a.ZDy)(
+        (0, r.ZDy)(
             async () => {
                 let { OAuth2AuthorizeModal: e } = await Promise.resolve().then(n.bind(n, 69580));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,
-                        ...l,
-                        authorizations: new Map(d),
+                        ...d,
+                        authorizations: new Map(s),
                         permissions: f,
                         callback: _
                     });
@@ -38,7 +38,7 @@ __OVERLAY__ &&
             {
                 modalKey: u,
                 onCloseRequest: () => {
-                    (0, a.Mr3)(u), _({});
+                    (0, r.Mr3)(u), _({});
                 }
             }
         );

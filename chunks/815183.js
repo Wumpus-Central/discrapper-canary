@@ -1,34 +1,34 @@
-n.d(t, { Z: () => c });
-var s = n(200651);
-n(192379);
-var r = n(481060),
-    a = n(153867),
-    o = n(410030),
-    i = n(583901),
-    l = n(231338);
-let c = function () {
-    let e = (0, o.ZP)();
-    return (0, s.jsxs)(r.xJW, {
+a.d(s, { Z: () => d });
+var i = a(200651);
+a(192379);
+var t = a(481060),
+    n = a(153867),
+    l = a(410030),
+    r = a(583901),
+    o = a(231338);
+let d = function () {
+    let e = (0, l.ZP)();
+    return (0, i.jsxs)(t.xJW, {
         children: [
-            (0, s.jsx)(r.vwX, {
-                tag: r.RB0.H5,
+            (0, i.jsx)(t.vwX, {
+                tag: t.RB0.H5,
                 children: 'Theme'
             }),
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 style: {
                     display: 'flex',
                     justifyContent: 'space-between'
                 },
                 children: [
-                    (0, s.jsx)(i.bD, {
-                        theme: l.BR.LIGHT,
-                        isSelected: e === l.BR.LIGHT,
-                        onSelect: () => (0, a.ZI)({ theme: l.BR.LIGHT })
+                    (0, i.jsx)(r.bD, {
+                        theme: o.BR.LIGHT,
+                        isSelected: e === o.BR.LIGHT,
+                        onSelect: () => (0, n.ZI)({ theme: o.BR.LIGHT })
                     }),
-                    (0, s.jsx)(i.bD, {
-                        theme: l.BR.DARK,
-                        isSelected: e === l.BR.DARK,
-                        onSelect: () => (0, a.ZI)({ theme: l.BR.DARK })
+                    (0, i.jsx)(r.bD, {
+                        theme: o.BR.DARK,
+                        isSelected: e === o.BR.DARK,
+                        onSelect: () => (0, n.ZI)({ theme: o.BR.DARK })
                     })
                 ]
             })

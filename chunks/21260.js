@@ -11,7 +11,7 @@ var i = n(200651),
     s = n.n(a),
     o = n(481060),
     l = n(388032),
-    u = n(799489);
+    u = n(997118);
 function c(e) {
     let { items: t, maxLines: n, itemWidths: i, itemGapPx: r, containerWidth: a, overflowWidth: s } = e,
         o = 0,
@@ -141,7 +141,7 @@ function m(e) {
             maxLines: c,
             containerWidth: E
         }),
-        b = r.useCallback(
+        T = r.useCallback(
             (e) =>
                 (0, i.jsx)(_, {
                     items: e,
@@ -149,7 +149,7 @@ function m(e) {
                 }),
             [a]
         ),
-        T = null != m ? m : b,
+        b = null != m ? m : T,
         S = r.useMemo(() => n.slice(0, v + 1), [n, v]),
         A = r.useMemo(() => n.slice(v + 1), [n, v]);
     return (0, i.jsxs)('div', {
@@ -182,7 +182,7 @@ function m(e) {
                 ]
             }),
             S.map(a),
-            A.length > 0 && T(A)
+            A.length > 0 && b(A)
         ]
     });
 }

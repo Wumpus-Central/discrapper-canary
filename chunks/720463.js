@@ -1,61 +1,61 @@
-n.d(t, {
-    BalanceWidgetEarnedOrbsCoachmarkModal: () => E,
-    E: () => p
+a.d(t, {
+    BalanceWidgetEarnedOrbsCoachmarkModal: () => x,
+    E: () => g
 });
-var i = n(200651);
-n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(568611),
-    a = n(693789),
-    o = n(481060),
-    c = n(751648),
-    d = (n(965789), n(317257)),
-    u = n(970815),
-    m = n(741808),
-    g = n(981631),
-    h = n(388032),
-    x = n(588245),
-    _ = n(865446);
-let p = (e) => {
-    let { earnedOrbsQuantity: t, descriptionText: s = h.intl.string(h.t['4YgBe3']), ctaText: c = h.intl.string(h.t.WYchdX), linkText: d = h.intl.string(h.t['H57f4+']), ctaOnClick: u, linkOnClick: m, linkTo: g } = e;
-    return (0, i.jsxs)('div', {
-        className: r()(_.container, x.baseCardOutline),
+var e = a(200651);
+a(192379);
+var i = a(120356),
+    c = a.n(i),
+    s = a(568611),
+    o = a(693789),
+    r = a(481060),
+    l = a(751648),
+    d = (a(965789), a(317257)),
+    m = a(970815),
+    h = a(741808),
+    b = a(981631),
+    u = a(388032),
+    C = a(61822),
+    k = a(923046);
+let g = (n) => {
+    let { earnedOrbsQuantity: t, descriptionText: i = u.intl.string(u.t['4YgBe3']), ctaText: l = u.intl.string(u.t.WYchdX), linkText: d = u.intl.string(u.t['H57f4+']), ctaOnClick: m, linkOnClick: h, linkTo: b } = n;
+    return (0, e.jsxs)('div', {
+        className: c()(k.container, C.baseCardOutline),
         children: [
-            (0, i.jsx)('div', {
-                className: r()(_.gifContainer, { [_.centerContent]: !0 }),
-                children: (0, i.jsx)('img', {
-                    src: n(709538),
-                    className: _.orbSvg,
+            (0, e.jsx)('div', {
+                className: c()(k.gifContainer, { [k.centerContent]: !0 }),
+                children: (0, e.jsx)('img', {
+                    src: a(709538),
+                    className: k.orbSvg,
                     alt: 'Orb GIF'
                 })
             }),
-            (0, i.jsxs)('div', {
-                className: _.contentContainer,
+            (0, e.jsxs)('div', {
+                className: k.contentContainer,
                 children: [
-                    (0, i.jsx)('h3', {
-                        className: x.coachmarkTitle,
-                        children: h.intl.format(h.t.lA7CLi, { quantity: t })
+                    (0, e.jsx)('h3', {
+                        className: C.coachmarkTitle,
+                        children: u.intl.format(u.t.lA7CLi, { quantity: t })
                     }),
-                    (0, i.jsx)(o.Text, {
+                    (0, e.jsx)(r.Text, {
                         variant: 'text-sm/medium',
-                        className: x.coachmarkDescription,
-                        children: s
+                        className: C.coachmarkDescription,
+                        children: i
                     }),
-                    (0, i.jsx)(a.zx, {
-                        className: _.ctaButton,
-                        color: a.zx.Colors.BRAND,
-                        look: a.zx.Looks.FILLED,
-                        onClick: u,
-                        fullWidth: !0,
-                        children: c
-                    }),
-                    (0, i.jsx)(l.rU, {
-                        to: { pathname: g },
+                    (0, e.jsx)(o.zx, {
+                        className: k.ctaButton,
+                        color: o.zx.Colors.BRAND,
+                        look: o.zx.Looks.FILLED,
                         onClick: m,
-                        children: (0, i.jsx)(o.Text, {
+                        fullWidth: !0,
+                        children: l
+                    }),
+                    (0, e.jsx)(s.rU, {
+                        to: { pathname: b },
+                        onClick: h,
+                        children: (0, e.jsx)(r.Text, {
                             variant: 'text-sm/medium',
-                            className: _.link,
+                            className: k.link,
                             children: d
                         })
                     })
@@ -64,15 +64,15 @@ let p = (e) => {
         ]
     });
 };
-function E(e) {
-    let { earnedOrbsQuantity: t, balance: n, backgroundElementRef: s, onClose: r, onClickPill: l, ctaOnClick: a, linkOnClick: o, ...h } = e,
-        x = async () => {
-            await (0, c.j2)(), await r();
+function x(n) {
+    let { earnedOrbsQuantity: t, balance: a, backgroundElementRef: i, onClose: c, onClickPill: s, ctaOnClick: o, linkOnClick: r, ...u } = n,
+        C = async () => {
+            await (0, l.j2)(), await c();
         };
-    return (0, i.jsxs)(m.X, {
-        className: _.coachmarkModalContainer,
-        backgroundElementRef: s,
-        onGetBoundingRect: g.dG4,
+    return (0, e.jsxs)(h.X, {
+        className: k.coachmarkModalContainer,
+        backgroundElementRef: i,
+        onGetBoundingRect: b.dG4,
         getOffsetsRelativeToElement: () => ({
             top: 0,
             right: 0
@@ -83,21 +83,21 @@ function E(e) {
             right: 32
         },
         children: [
-            (0, i.jsx)(u.A4, {
+            (0, e.jsx)(m.A4, {
                 onClick: async () => {
-                    await x(), l();
+                    await C(), s();
                 },
-                balance: n,
-                placeholderBalance: null != n ? n : 0,
+                balance: a,
+                placeholderBalance: null != a ? a : 0,
                 balanceWidgetMode: d.b.DEFAULT
             }),
-            (0, i.jsx)(p, {
+            (0, e.jsx)(g, {
                 earnedOrbsQuantity: t,
                 ctaOnClick: async () => {
-                    await x(), a();
+                    await C(), o();
                 },
                 linkOnClick: async () => {
-                    await x(), o();
+                    await C(), r();
                 }
             })
         ]

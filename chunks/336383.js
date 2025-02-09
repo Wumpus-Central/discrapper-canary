@@ -12,14 +12,14 @@ var i = n(200651),
     _ = n(171368),
     p = n(228168),
     h = n(388032),
-    m = n(249942);
+    m = n(309584);
 let g = r.forwardRef(function (e, t) {
     let { children: n, className: r, subsection: a, onAction: g, onClose: E, ...v } = e,
         { profileType: y } = (0, f.z)(),
         { analyticsLocations: I } = (0, l.ZP)(),
-        { context: b } = (0, u.KZ)(),
-        { recentActivityEnabled: T } = (0, c.i)({ location: 'UserProfileActivityCardContainer' });
-    return y !== p.y0.FULL_SIZE && (null == b ? void 0 : b.userId) != null && T
+        { context: T } = (0, u.KZ)(),
+        { recentActivityEnabled: b } = (0, c.i)({ location: 'UserProfileActivityCardContainer' });
+    return y !== p.y0.FULL_SIZE && (null == T ? void 0 : T.userId) != null && b
         ? (0, i.jsx)(o.P3F, {
               className: m.clickableContainer,
               'aria-label': h.intl.string(h.t.pD1L1t),
@@ -29,7 +29,7 @@ let g = r.forwardRef(function (e, t) {
                           section: p.oh.ACTIVITY,
                           sourceAnalyticsLocations: I,
                           subsection: a,
-                          ...b
+                          ...T
                       }),
                       null == E || E();
               },

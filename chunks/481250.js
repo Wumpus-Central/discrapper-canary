@@ -1,77 +1,77 @@
-r.d(t, {
-    V: () => E,
-    a: () => v
+n.d(t, {
+    V: () => C,
+    a: () => f
 }),
-    r(653041),
-    r(47120);
-var n = r(200651);
-r(192379);
-var a = r(120356),
-    i = r.n(a),
-    l = r(481060),
-    s = r(304680),
-    o = r(763520),
-    d = r(600164),
-    c = r(352978),
-    u = r(131951),
-    m = r(226961),
-    p = r(513547),
-    h = r(65154),
-    y = r(378481),
-    g = r(232186);
-let f = {
+    n(653041),
+    n(47120);
+var r = n(200651);
+n(192379);
+var a = n(120356),
+    i = n.n(a),
+    o = n(481060),
+    l = n(304680),
+    s = n(763520),
+    d = n(600164),
+    c = n(352978),
+    u = n(131951),
+    m = n(226961),
+    p = n(513547),
+    h = n(65154),
+    g = n(288241),
+    b = n(814632);
+let y = {
     [h.Z.NO_OVERRIDE]: 'None',
     [h.Z.LOW]: 'Low Quality Stream',
     [h.Z.HIGH]: 'High Quality Stream'
 };
-function v(e) {
+function f(e) {
     let t = [],
-        r = 0;
+        n = 0;
     for (
         e.length % 2 != 0 &&
         e.push(
-            (0, n.jsx)(
+            (0, r.jsx)(
                 d.Z,
                 {
                     basis: '50%',
                     grow: 0
                 },
-                r++
+                n++
             )
         );
         e.length > 0;
 
     )
         t.push(
-            (0, n.jsx)(
+            (0, r.jsx)(
                 d.Z,
                 {
                     basis: '50%',
                     grow: 0,
                     children: e.splice(0, 2)
                 },
-                r++
+                n++
             )
         );
     return t;
 }
-let D = {
+let v = {
     ssrc: 1,
     codec: 2
 };
-function E(e, t, r, a, E) {
-    return e.map((C, Z) => {
-        let N = [];
-        for (let e of Object.keys(C).sort((e, t) => {
-            let r = D[e],
-                n = D[t];
-            return r !== n ? (void 0 === r ? 1 : void 0 === n ? -1 : r - n) : m.Pz[e] !== m.Pz[t] ? (m.Pz[e] ? 1 : -1) : e > t ? 1 : -1;
+function C(e, t, n, a, C) {
+    return e.map((R, D) => {
+        let S = [];
+        for (let e of Object.keys(R).sort((e, t) => {
+            let n = v[e],
+                r = v[t];
+            return n !== r ? (void 0 === n ? 1 : void 0 === r ? -1 : n - r) : m.Pz[e] !== m.Pz[t] ? (m.Pz[e] ? 1 : -1) : e > t ? 1 : -1;
         })) {
-            let t = C[e];
+            let t = R[e];
             !p.al[e] &&
                 void 0 !== t &&
-                N.push(
-                    (0, n.jsx)(
+                S.push(
+                    (0, r.jsx)(
                         p.ck,
                         {
                             section: a,
@@ -82,56 +82,56 @@ function E(e, t, r, a, E) {
                     )
                 );
         }
-        return (0, n.jsxs)(
-            l.hjN,
+        return (0, r.jsxs)(
+            o.hjN,
             {
-                className: g.marginBottom40,
-                title: C.type,
-                titleClassName: y.sectionHeader,
+                className: b.marginBottom40,
+                title: R.type,
+                titleClassName: g.sectionHeader,
                 children: [
-                    'video' === C.type &&
-                        null != r &&
+                    'video' === R.type &&
+                        null != n &&
                         null != a &&
-                        null != E &&
-                        (function (e, t, r, a) {
-                            let l = a.get(t, r, e.ssrc);
-                            return null != l
-                                ? (0, n.jsx)('div', {
-                                      className: i()(y.videoWrapper, g.marginBottom40),
-                                      children: (0, n.jsx)(c.Z, {
-                                          streamId: l,
+                        null != C &&
+                        (function (e, t, n, a) {
+                            let o = a.get(t, n, e.ssrc);
+                            return null != o
+                                ? (0, r.jsx)('div', {
+                                      className: i()(g.videoWrapper, b.marginBottom40),
+                                      children: (0, r.jsx)(c.Z, {
+                                          streamId: o,
                                           videoComponent: u.Z.getMediaEngine().Video,
                                           paused: !1,
-                                          videoSpinnerContext: o.m.REPLAY_VIDEO_STREAM,
-                                          userId: r
+                                          videoSpinnerContext: s.m.REPLAY_VIDEO_STREAM,
+                                          userId: n
                                       })
                                   })
                                 : null;
-                        })(C, r, a, E),
-                    v(N),
-                    'video' === C.type &&
-                        Z === e.length - 1 &&
-                        null != r &&
+                        })(R, n, a, C),
+                    f(S),
+                    'video' === R.type &&
+                        D === e.length - 1 &&
+                        null != n &&
                         null != a &&
-                        null != E &&
-                        (0, n.jsx)(d.Z, {
-                            className: g.marginBottom20,
-                            children: (0, n.jsxs)(d.Z.Child, {
+                        null != C &&
+                        (0, r.jsx)(d.Z, {
+                            className: b.marginBottom20,
+                            children: (0, r.jsxs)(d.Z.Child, {
                                 basis: '100%',
                                 children: [
-                                    (0, n.jsx)(l.vwX, {
-                                        tag: l.RB0.H5,
-                                        className: g.marginBottom8,
+                                    (0, r.jsx)(o.vwX, {
+                                        tag: o.RB0.H5,
+                                        className: b.marginBottom8,
                                         children: 'Simulcast Override'
                                     }),
-                                    (0, n.jsx)(l.q4e, {
+                                    (0, r.jsx)(o.q4e, {
                                         value: m.ZP.getSimulcastDebugOverride(a, t),
                                         onChange: (e) => {
-                                            s.MS(a, t, e);
+                                            l.MS(a, t, e);
                                         },
                                         options: Object.values(h.Z).map((e) => ({
                                             value: e,
-                                            label: f[e]
+                                            label: y[e]
                                         }))
                                     })
                                 ]
@@ -139,7 +139,7 @@ function E(e, t, r, a, E) {
                         })
                 ]
             },
-            ''.concat(C.type, ' + ').concat(C.ssrc)
+            ''.concat(R.type, ' + ').concat(R.ssrc)
         );
     });
 }

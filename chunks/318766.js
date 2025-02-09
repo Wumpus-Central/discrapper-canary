@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => L,
+    Z: () => x,
     u: () => O
 }),
     n(47120);
@@ -22,9 +22,9 @@ var i = n(200651),
     v = n(153066),
     y = n(981631),
     I = n(921944),
-    b = n(185923),
-    T = n(388032),
-    S = n(659650);
+    T = n(185923),
+    b = n(388032),
+    S = n(837828);
 let A = 20,
     N = 24,
     C = 18,
@@ -48,34 +48,34 @@ let A = 20,
                 (0, i.jsx)(c.Text, {
                     variant: 'text-sm/medium',
                     className: S.premiumTooltipText,
-                    children: T.intl.format(T.t['/7R4q6'], {})
+                    children: b.intl.format(b.t['/7R4q6'], {})
                 })
             ]
         });
     };
-function x(e, t) {
+function L(e, t) {
     return {
         '--custom-emoji-sprite-size': ''.concat(t ? C : N, 'px'),
         '--custom-emoji-sprite-row': Math.floor(e / A),
         '--custom-emoji-sprite-col': e % A
     };
 }
-let L = function (e) {
-    let { tabIndex: t, className: n, renderButtonContents: a, active: A, onClick: N, 'aria-controls': C, focusProps: L, shouldShowSoundmojiCoachmark: P = !1 } = e,
-        [w, M] = r.useState(!1),
+let x = function (e) {
+    let { tabIndex: t, className: n, renderButtonContents: a, active: A, onClick: N, 'aria-controls': C, focusProps: x, shouldShowSoundmojiCoachmark: w = !1 } = e,
+        [P, M] = r.useState(!1),
         [k, U] = r.useState(50),
-        G = w || A,
+        G = P || A,
         B = (0, v.l)(S, 'emojiButton', G ? 'Hovered' : 'Normal'),
-        Z = x(k, (0, f.Q3)('EmojiButton')),
+        Z = L(k, (0, f.Q3)('EmojiButton')),
         F = r.useCallback(() => {
             if (G) return;
             let e = Math.floor(Math.random() * R);
-            M(!0), U(e), (0, p.x)(b.qR.EmojiButtonMouseEntered);
+            M(!0), U(e), (0, p.x)(T.qR.EmojiButtonMouseEntered);
         }, [G, M, U]),
         V = r.useCallback(() => {
             M(!1);
         }, [M]),
-        j = r.useCallback(() => (0, p.x)(b.qR.EmojiButtonFocused), []),
+        j = r.useCallback(() => (0, p.x)(T.qR.EmojiButtonFocused), []),
         H = (0, h.B4)({ location: 'EmojiButton' }),
         [Y, W] = (0, _.US)(H ? [u.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
         K = Y === u.z.TRIAL_NUX_EMOJI_BUTTON,
@@ -84,7 +84,7 @@ let L = function (e) {
         [Q, X] = r.useState(!1),
         [J, $] = r.useState(!1),
         ee = (0, m.V2)({ location: 'EmojiButton' }),
-        [et, en] = (0, _.US)(P && ee ? [u.z.SOUNDMOJI_COACHMARK] : []),
+        [et, en] = (0, _.US)(w && ee ? [u.z.SOUNDMOJI_COACHMARK] : []),
         ei = !Q && et === u.z.SOUNDMOJI_COACHMARK && !J;
     return (0, i.jsx)(c.yRy, {
         renderPopout: () => (0, i.jsx)(g.Z, { markAsDismissed: en }),
@@ -96,7 +96,7 @@ let L = function (e) {
         children: (e) =>
             (0, i.jsx)(c.ua7, {
                 text: () => (0, i.jsx)(D, {}),
-                'aria-label': T.intl.formatToMarkdownString(T.t['/7R4q6'], {}),
+                'aria-label': b.intl.formatToMarkdownString(b.t['/7R4q6'], {}),
                 position: 'top',
                 shouldShow: z,
                 onTooltipHide: () => X(!1),
@@ -124,11 +124,11 @@ let L = function (e) {
                             var t;
                             null == N || N(e), null === (t = r.onClick) || void 0 === t || t.call(r);
                         },
-                        'aria-label': T.intl.string(T.t['59QgaG']),
+                        'aria-label': b.intl.string(b.t['59QgaG']),
                         'aria-controls': C,
                         'aria-expanded': A,
                         'aria-haspopup': 'dialog',
-                        focusProps: L,
+                        focusProps: x,
                         onContextMenu: r.onContextMenu,
                         children:
                             null != a

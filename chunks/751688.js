@@ -7,7 +7,7 @@ var r = n(120356),
     o = n(129861),
     l = n(184301),
     u = n(347475),
-    c = n(329957);
+    c = n(475300);
 function d(e) {
     let { user: t, guildId: n, channelId: r, nick: d, className: f, textClassName: _, disablePopout: p, ignoreModalClicks: h, onClick: m, onContextMenu: g, onPopoutRequestOpen: E, onPopoutRequestClose: v } = e;
     return (0, i.jsx)(s.yRy, {

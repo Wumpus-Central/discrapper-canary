@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(587446),
     y = n(594174),
     I = n(626135),
-    b = n(74538),
-    T = n(238302),
+    T = n(74538),
+    b = n(238302),
     S = n(514361),
     A = n(572397),
     N = n(705262),
@@ -27,14 +27,14 @@ var i = n(200651),
     R = n(921944),
     O = n(474936),
     D = n(388032),
-    x = n(245392);
-let L = () =>
+    L = n(939840);
+let x = () =>
         (0, i.jsx)('div', {
-            className: x.editorHeader,
+            className: L.editorHeader,
             children: (0, i.jsxs)('div', {
-                className: x.bannerUpsell,
+                className: L.bannerUpsell,
                 children: [
-                    (0, i.jsx)(v.Z, { className: x.premiumIcon }),
+                    (0, i.jsx)(v.Z, { className: L.premiumIcon }),
                     (0, i.jsx)(c.X6q, {
                         variant: 'heading-md/bold',
                         color: 'always-white',
@@ -43,22 +43,22 @@ let L = () =>
                 ]
             })
         }),
-    P = (e) => {
+    w = (e) => {
         let { markAsDismissed: t } = e,
             n = (0, A.q)(),
             r = () => {
-                null != t && t(R.L.DISMISS), n(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, T.Mo)();
+                null != t && t(R.L.DISMISS), n(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, b.Mo)();
             };
         return (0, i.jsxs)('div', {
-            className: x.editorHeader,
+            className: L.editorHeader,
             children: [
                 (0, i.jsx)(c.P3F, {
-                    className: x.closeCircleButton,
+                    className: L.closeCircleButton,
                     onClick: r,
                     children: (0, i.jsx)(c.k$p, {
                         size: 'md',
                         color: 'currentColor',
-                        className: x.closeCircle
+                        className: L.closeCircle
                     })
                 }),
                 (0, i.jsx)(c.X6q, {
@@ -68,13 +68,13 @@ let L = () =>
             ]
         });
     },
-    w = (e) => {
+    P = (e) => {
         var t, n, r;
         let { onSubscribeSuccess: a, markAsDismissed: s } = e,
             { analyticsLocations: o } = (0, m.ZP)(h.Z.CLIENT_THEMES_EDITOR),
-            [f, _] = (0, l.Wu)([y.default, S.Z], () => [S.Z.gradientPreset, b.ZP.isPremium(y.default.getCurrentUser())]),
+            [f, _] = (0, l.Wu)([y.default, S.Z], () => [S.Z.gradientPreset, T.ZP.isPremium(y.default.getCurrentUser())]),
             p = (0, g.N)(),
-            v = (0, b.Rt)({
+            v = (0, T.Rt)({
                 intervalType: null == p ? void 0 : null === (t = p.subscription_trial) || void 0 === t ? void 0 : t.interval,
                 intervalCount: null == p ? void 0 : null === (n = p.subscription_trial) || void 0 === n ? void 0 : n.interval_count
             }),
@@ -106,7 +106,7 @@ let L = () =>
             [s, u] = r.useState(!1),
             d = (0, A.q)(),
             _ = () => {
-                null != t && t(R.L.DISMISS), d(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, T.Mo)(), n || f.Z.open();
+                null != t && t(R.L.DISMISS), d(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, b.Mo)(), n || f.Z.open();
             },
             p = (0, o.EQ)({
                 isPreview: a,
@@ -117,17 +117,17 @@ let L = () =>
                 .with({ isPreview: !0 }, () => D.intl.string(D.t['dqH+qq']))
                 .otherwise(() => D.intl.string(D.t.Olc2Ky));
         return (0, i.jsxs)('div', {
-            className: x.editorFooter,
+            className: L.editorFooter,
             children: [
                 a &&
-                    (0, i.jsx)(w, {
+                    (0, i.jsx)(P, {
                         onSubscribeSuccess: () => {
                             u(!0);
                         },
                         markAsDismissed: t
                     }),
                 (0, i.jsx)(c.zxk, {
-                    className: x.footerButton,
+                    className: L.footerButton,
                     onClick: _,
                     color: c.zxk.Colors.PRIMARY,
                     size: c.zxk.Sizes.MEDIUM,
@@ -168,18 +168,18 @@ function k(e) {
             children: (0, i.jsx)('div', {
                 ref: E,
                 'data-app-right-panel': !0,
-                className: s()(x.themeEditor, d ? x.editorAnimate : null),
+                className: s()(L.themeEditor, d ? L.editorAnimate : null),
                 children: (0, i.jsxs)(c.y5t, {
                     children: [
-                        n ? (0, i.jsx)(L, {}) : (0, i.jsx)(P, { markAsDismissed: t }),
+                        n ? (0, i.jsx)(x, {}) : (0, i.jsx)(w, { markAsDismissed: t }),
                         (0, i.jsx)(c.Ttm, {
-                            className: x.editorBody,
+                            className: L.editorBody,
                             children: (0, i.jsxs)(N.ZP, {
                                 type: N.yH.EDITOR,
                                 children: [
-                                    !o && (0, i.jsx)(N.ZP.Basic, { className: x.selectionGroup }),
+                                    !o && (0, i.jsx)(N.ZP.Basic, { className: L.selectionGroup }),
                                     (0, i.jsx)(N.ZP.Gradient, {
-                                        className: x.selectionGroup,
+                                        className: L.selectionGroup,
                                         isCoachmark: n
                                     })
                                 ]

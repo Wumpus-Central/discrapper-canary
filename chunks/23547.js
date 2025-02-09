@@ -4,28 +4,28 @@ n.d(t, {
     wH: () => c
 });
 var i = n(192379),
-    s = n(442837),
-    r = n(481060),
-    l = n(751648),
-    a = n(479766);
+    r = n(442837),
+    a = n(481060),
+    s = n(751648),
+    l = n(479766);
 let o = 'balance-widget-menu-coachmark-modal',
-    c = () => (0, r.nfh)(o);
+    c = () => (0, a.nfh)(o);
 function d(e) {
     let { renderEarnedOrbsCoachmark: t } = e,
-        n = (0, s.cj)([a.Z], () => a.Z.earnedOrbsCoachmark),
-        { shouldOpen: l, earnedOrbsQuantity: d } = n;
+        n = (0, r.cj)([l.Z], () => l.Z.earnedOrbsCoachmark),
+        { shouldOpen: s, earnedOrbsQuantity: d } = n;
     return (
         (0, i.useEffect)(() => {
             let e = c();
-            l && !e ? t({ earnedOrbsQuantity: d }) : !l && e && (0, r.Mr3)(o);
-        }, [l, t, d]),
+            s && !e ? t({ earnedOrbsQuantity: d }) : !s && e && (0, a.Mr3)(o);
+        }, [s, t, d]),
         { ...n }
     );
 }
 let u = {
     modalKey: o,
-    onCloseCallback: l.j2,
+    onCloseCallback: s.j2,
     onCloseRequest: async () => {
-        await (0, l.j2)(), (0, r.Mr3)(o);
+        await (0, s.j2)(), (0, a.Mr3)(o);
     }
 };

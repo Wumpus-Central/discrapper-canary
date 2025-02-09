@@ -4,19 +4,19 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(518950),
-    l = n(998502),
-    a = n(388032),
-    o = n(866445);
-let c = l.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK,
+var r = n(481060),
+    a = n(518950),
+    s = n(998502),
+    l = n(388032),
+    o = n(613565);
+let c = s.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
     d = (e) => {
-        let { user: t, avatarSize: n = s.EFr.SIZE_48 } = e,
+        let { user: t, avatarSize: n = r.EFr.SIZE_48 } = e,
             {
-                avatarSrc: l,
+                avatarSrc: s,
                 avatarDecorationSrc: d,
                 eventHandlers: u
-            } = (0, r.Z)({
+            } = (0, a.Z)({
                 user: t,
                 size: n
             });
@@ -24,20 +24,20 @@ let c = l.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK,
             ...u,
             children: (0, i.jsx)(c, {
                 className: o.__invalid_avatar,
-                src: l,
+                src: s,
                 avatarDecoration: d,
                 size: n,
-                'aria-label': a.intl.formatToPlainString(a.t.kFj4h4, { name: t.username })
+                'aria-label': l.intl.formatToPlainString(l.t.kFj4h4, { name: t.username })
             })
         });
     },
     u = (e) => {
-        let { currentUser: t, otherUser: n, children: s } = e;
+        let { currentUser: t, otherUser: n, children: r } = e;
         return (0, i.jsx)('div', {
             className: o.avatarPairContainer,
             children: (0, i.jsxs)('div', {
                 className: o.avatarPair,
-                children: [(0, i.jsx)(d, { user: t }), s, (0, i.jsx)(d, { user: n })]
+                children: [(0, i.jsx)(d, { user: t }), r, (0, i.jsx)(d, { user: n })]
             })
         });
     };

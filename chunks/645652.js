@@ -4,7 +4,7 @@ n(192379);
 var r = n(120356),
     a = n.n(r),
     s = n(819758),
-    o = n(308513);
+    o = n(258289);
 function l(e) {
     let { className: t, children: n, forceUseColor: r = !1, hideStars: l } = e;
     return (0, i.jsxs)('span', {

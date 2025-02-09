@@ -8,7 +8,7 @@ var i = n(200651),
     s = n.n(a),
     o = n(186325),
     l = n(388032),
-    u = n(595252),
+    u = n(612825),
     c = (function (e) {
         return (e.WANDERING_CUBES = 'wanderingCubes'), (e.CHASING_DOTS = 'chasingDots'), (e.PULSING_ELLIPSIS = 'pulsingEllipsis'), (e.SPINNING_CIRCLE = 'spinningCircle'), (e.SPINNING_CIRCLE_SIMPLE = 'spinningCircleSimple'), (e.LOW_MOTION = 'lowMotion'), e;
     })({});

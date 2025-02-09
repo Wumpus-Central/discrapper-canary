@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(497656),
     I = n(554747),
     C = n(230900),
-    N = n(854698),
-    v = n(703656),
+    v = n(854698),
+    N = n(703656),
     T = n(922482),
     S = n(565799),
-    Z = n(501655),
-    A = n(427679),
+    A = n(501655),
+    Z = n(427679),
     x = n(448206),
     b = n(184301),
     L = n(347475),
@@ -32,12 +32,12 @@ var i = n(200651),
     R = n(981631),
     j = n(765305),
     D = n(388032),
-    w = n(173549);
+    w = n(364049);
 function M(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         r = (0, E.y)(t.id),
         M = (0, I.k5)(t.id),
-        k = (0, s.e7)([A.Z], () => A.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
+        k = (0, s.e7)([Z.Z], () => Z.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
         { isStageNoticeHidden: U, isEventNoticeHidden: G } = (0, s.cj)(
             [_.Z],
             () => ({
@@ -47,8 +47,8 @@ function M(e) {
             [k, M]
         ),
         B = null == r ? void 0 : r.id,
-        V = (0, s.Wu)([S.Z], () => [...new Set(S.Z.getMutableParticipants(B, Z.pV.SPEAKER).map((e) => e.user))], [B]),
-        H = (0, s.e7)([S.Z], () => (null != B ? S.Z.getParticipantCount(B, Z.pV.AUDIENCE) : 0), [B]),
+        V = (0, s.Wu)([S.Z], () => [...new Set(S.Z.getMutableParticipants(B, A.pV.SPEAKER).map((e) => e.user))], [B]),
+        H = (0, s.e7)([S.Z], () => (null != B ? S.Z.getParticipantCount(B, A.pV.AUDIENCE) : 0), [B]),
         F = (0, s.e7)([y.Z], () => y.Z.can(R.Plq.CONNECT, r)),
         z = (0, x.Z)(null == r ? void 0 : r.id),
         W = null == M ? void 0 : M.creator_id,
@@ -71,7 +71,7 @@ function M(e) {
             (function (e) {
                 let { guildEvent: t, stageInstance: n, activeChannel: l, canConnect: r, myRole: a, eventCreator: s, speakers: o, listenerCount: d, isEventNoticeHidden: u, isStageNoticeHidden: m, isStudyRoomNotice: _ } = e,
                     E = null != n && null != l && !m,
-                    I = null != t ? (0, N.DK)(t) : null;
+                    I = null != t ? (0, v.DK)(t) : null;
                 if (_ && null != l) {
                     let e = (0, h.KS)(l);
                     return {
@@ -368,7 +368,7 @@ function M(e) {
                             size: c.zxk.Sizes.SMALL,
                             color: c.zxk.Colors.GREEN,
                             onClick: () => {
-                                if (J) null != r && null != r.getGuildId() && ((0, T.Cq)(r), (0, v.XU)(r.getGuildId(), r.id));
+                                if (J) null != r && null != r.getGuildId() && ((0, T.Cq)(r), (0, N.XU)(r.getGuildId(), r.id));
                                 else {
                                     if (null == M) return;
                                     (0, m.bO)({ eventId: M.id });

@@ -1,14 +1,14 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var i = n(200651),
     s = n(192379),
-    r = n(120356),
-    l = n.n(r),
+    l = n(120356),
+    r = n.n(l),
     a = n(481060),
     o = n(358085),
     c = n(998502),
     d = n(388032),
-    u = n(232186);
-function m(e, t, n) {
+    u = n(814632);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function m(e, t, n) {
         e
     );
 }
-class g extends s.PureComponent {
+class m extends s.PureComponent {
     async componentDidMount() {
         this.setState({
             openOnStartup: await c.ZP.getSetting('OPEN_ON_STARTUP', !0),
@@ -47,7 +47,7 @@ class g extends s.PureComponent {
                 (0, o.isWindows)()
                     ? (0, i.jsx)(a.j7V, {
                           disabled: !e,
-                          className: l()(u.marginTop8, u.marginBottom20),
+                          className: r()(u.marginTop8, u.marginBottom20),
                           value: !!e && t,
                           note: d.intl.string(d.t.o2FSjI),
                           onChange: this.handleToggleStartMinimized,
@@ -55,7 +55,7 @@ class g extends s.PureComponent {
                       })
                     : null,
                 (0, i.jsx)(a.vwX, {
-                    className: l()(u.marginTop20, u.marginBottom8),
+                    className: r()(u.marginTop20, u.marginBottom8),
                     children: d.intl.string(d.t.h0hFx8)
                 }),
                 (0, i.jsx)(a.j7V, {
@@ -70,15 +70,15 @@ class g extends s.PureComponent {
     }
     constructor(e) {
         super(e),
-            m(this, 'handleToggleOpenOnStartup', () => {
+            h(this, 'handleToggleOpenOnStartup', () => {
                 let e = !this.state.openOnStartup;
                 this.setState({ openOnStartup: e }), c.ZP.send('TOGGLE_OPEN_ON_STARTUP', e);
             }),
-            m(this, 'handleToggleStartMinimized', () => {
+            h(this, 'handleToggleStartMinimized', () => {
                 let e = !this.state.startMinimized;
                 this.setState({ startMinimized: e }), c.ZP.send('TOGGLE_START_MINIMIZED', e);
             }),
-            m(this, 'handleToggleMinimizeToTray', () => {
+            h(this, 'handleToggleMinimizeToTray', () => {
                 let e = !this.state.minimizeToTray;
                 this.setState({ minimizeToTray: e }), c.ZP.send('TOGGLE_MINIMIZE_TO_TRAY', e);
             }),
@@ -89,4 +89,4 @@ class g extends s.PureComponent {
             });
     }
 }
-let h = g;
+let g = m;

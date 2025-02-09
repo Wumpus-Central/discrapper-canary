@@ -139,11 +139,11 @@ function I(e, t) {
     for (let i of e) n = !1 !== t(i) || n;
     return n;
 }
-function b(e) {
+function T(e) {
     let { messages: t } = e;
     return I(t, (e) => y(e));
 }
-function T(e) {
+function b(e) {
     let { messages: t } = e;
     return I(Object.values(t), (e) => I(Object.values(e), (e) => y(e)));
 }
@@ -187,22 +187,22 @@ function D(e, t) {
     if (!v.has(e, t)) return !1;
     v.set(e, t, { state: 2 });
 }
-function x(e) {
+function L(e) {
     let { id: t, channelId: n } = e;
     return D(n, t);
 }
-function L(e) {
+function x(e) {
     let { ids: t, channelId: n } = e;
     return I(t, (e) => D(n, e));
 }
-function P(e) {
+function w(e) {
     let { message: t } = e;
     v.set(t.channel_id, t.id, {
         state: 0,
         message: t
     });
 }
-function w() {
+function P() {
     v.clear();
 }
 function M(e) {
@@ -235,10 +235,10 @@ class U extends (i = s.ZP.Store) {
 }
 _(U, 'displayName', 'ReferencedMessageStore');
 let G = new U(o.Z, {
-    CACHE_LOADED: T,
-    LOCAL_MESSAGES_LOADED: b,
-    LOAD_MESSAGES_SUCCESS: b,
-    LOAD_MESSAGES_AROUND_SUCCESS: b,
+    CACHE_LOADED: b,
+    LOCAL_MESSAGES_LOADED: T,
+    LOAD_MESSAGES_SUCCESS: T,
+    LOAD_MESSAGES_AROUND_SUCCESS: T,
     SEARCH_FINISH: S,
     MOD_VIEW_SEARCH_FINISH: S,
     LOAD_THREADS_SUCCESS: M,
@@ -247,12 +247,12 @@ let G = new U(o.Z, {
     LOAD_FORUM_POSTS: k,
     MESSAGE_CREATE: A,
     MESSAGE_UPDATE: C,
-    MESSAGE_DELETE: x,
-    MESSAGE_DELETE_BULK: L,
-    CREATE_PENDING_REPLY: P,
+    MESSAGE_DELETE: L,
+    MESSAGE_DELETE_BULK: x,
+    CREATE_PENDING_REPLY: w,
     CHANNEL_DELETE: R,
     THREAD_DELETE: R,
     GUILD_DELETE: O,
-    CONNECTION_OPEN: w,
-    LOGOUT: w
+    CONNECTION_OPEN: P,
+    LOGOUT: P
 });

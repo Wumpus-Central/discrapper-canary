@@ -1,7 +1,7 @@
 n.d(t, {
     Bo: () => N,
     Dc: () => h,
-    OF: () => b,
+    OF: () => T,
     QB: () => A,
     Tj: () => u,
     XN: () => I,
@@ -105,8 +105,8 @@ function I(e, t, n) {
         u = l()(o, t);
     return 'boolean' == typeof u ? v : u.palette();
 }
-let b = (e) => ('number' == typeof e ? null : T(e)),
-    T = s().memoize(
+let T = (e) => ('number' == typeof e ? null : b(e)),
+    b = s().memoize(
         (e) =>
             new Promise((t, n) => {
                 let i = new Image();

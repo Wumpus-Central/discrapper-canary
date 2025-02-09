@@ -18,34 +18,34 @@ var i = n(200651),
     v = n(645896),
     y = n(905362),
     I = n(353093),
-    b = n(574410),
-    T = n(900681),
+    T = n(574410),
+    b = n(900681),
     S = n(284019),
     A = n(308083),
     N = n(981631),
     C = n(388032),
-    R = n(420930);
+    R = n(652134);
 function O(e) {
     e.stopPropagation();
 }
 let D = r.memo(function (e) {
     var t, n;
-    let { clan: D, isLoading: x, onClose: L, profileViewedAnalytics: P, userId: w } = e,
+    let { clan: D, isLoading: L, onClose: x, profileViewedAnalytics: w, userId: P } = e,
         M = null == D ? void 0 : D.identityGuildId,
         k = (0, v.Cc)(null != M ? M : null),
         U = null == D ? void 0 : D.tag,
-        { enabled: G } = b.w.useExperiment({ location: 'ClanGuildProfile' }, { autoTrackExposure: !1 }),
+        { enabled: G } = T.w.useExperiment({ location: 'ClanGuildProfile' }, { autoTrackExposure: !1 }),
         [B, Z] = r.useState(!1),
         [F, V] = r.useState(''),
-        j = (0, s.e7)([m.default], () => m.default.getUser(w)),
+        j = (0, s.e7)([m.default], () => m.default.getUser(P)),
         { newestAnalyticsLocation: H } = (0, l.ZP)(),
         Y = r.useMemo(
             () => ({
-                tagUserId: w,
+                tagUserId: P,
                 source: H,
-                ...P
+                ...w
             }),
-            [w, H, P]
+            [P, H, w]
         ),
         W = (0, s.e7)([p.default], () => p.default.getId()),
         K = (0, s.e7)([h.ZP], () => (null != M ? h.ZP.getMember(M, W) : null), [M, W]),
@@ -83,9 +83,9 @@ let D = r.memo(function (e) {
         }, [j, F]),
         en = r.useCallback(
             (e) => {
-                null != M && (e.stopPropagation(), e.preventDefault(), null == L || L(), (0, E.hM)(M, E.UE.TAG_ADOPTION), (0, y.SJ)(M));
+                null != M && (e.stopPropagation(), e.preventDefault(), null == x || x(), (0, E.hM)(M, E.UE.TAG_ADOPTION), (0, y.SJ)(M));
             },
-            [M, L]
+            [M, x]
         ),
         ei = r.useCallback(() => {
             null != M && ((0, E.hM)(M, E.UE.APPLICATION), (0, f.uL)(N.Z5c.GUILD_MEMBER_VERIFICATION(M)));
@@ -137,7 +137,7 @@ let D = r.memo(function (e) {
             }),
             []
         );
-    if (null == U || null == k || null == M || x)
+    if (null == U || null == k || null == M || L)
         return (0, i.jsx)('div', {
             ...eo,
             children: (0, i.jsx)(a.$jN, {})
@@ -150,7 +150,7 @@ let D = r.memo(function (e) {
             (0, i.jsxs)('div', {
                 ...eo,
                 children: [
-                    (0, i.jsx)(T.x, {
+                    (0, i.jsx)(b.x, {
                         clan: k,
                         className: R.cardContainer,
                         isMember: X,

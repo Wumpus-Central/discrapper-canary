@@ -6,7 +6,7 @@ var s = t(481060),
     l = t(13140),
     c = t(487029),
     d = t(388032),
-    a = t(167818);
+    a = t(491192);
 function r(e) {
     let { guildId: n, channel: r, keybind: h, transitionState: u, onClose: k } = e;
     function x() {
@@ -15,7 +15,7 @@ function r(e) {
     function _() {
         x(),
             (0, s.ZDy)(async () => {
-                let { default: e } = await t.e('5551').then(t.bind(t, 355453));
+                let { default: e } = await t.e('58120').then(t.bind(t, 355453));
                 return (n) => (0, i.jsx)(e, { ...n });
             });
     }

@@ -1,6 +1,6 @@
 n.d(t, {
     J9: () => l.J,
-    Jt: () => x,
+    Jt: () => L,
     K0: () => C,
     Pd: () => p,
     f$: () => o.f$,
@@ -73,7 +73,7 @@ function h(e, t, n, i, s) {
             }),
         null != t.context)
     ) {
-        let e = L(t.context);
+        let e = x(t.context);
         null != e && g.set('X-Context-Properties', e);
     }
     null != t.retried && 0 !== t.retried && g.set('X-Failed-Requests', ''.concat(t.retried)),
@@ -226,14 +226,14 @@ function y(e, t, n) {
     });
 }
 let I = y.bind(null, 'get'),
-    b = y.bind(null, 'post'),
-    T = y.bind(null, 'put'),
+    T = y.bind(null, 'post'),
+    b = y.bind(null, 'put'),
     S = y.bind(null, 'patch'),
     A = y.bind(null, 'del'),
     N = {
         get: I,
-        post: b,
-        put: T,
+        post: T,
+        put: b,
         patch: S,
         del: A
     };
@@ -246,7 +246,7 @@ if (n.g.isServerRendering) {
             body: null,
             text: ''
         });
-    (I = e), (b = e), (T = e), (S = e), (A = e);
+    (I = e), (T = e), (b = e), (S = e), (A = e);
 }
 function C() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -257,10 +257,10 @@ function O(e) {
     R = e;
 }
 let D = () => Promise.resolve();
-function x(e) {
+function L(e) {
     D = e;
 }
-function L(e) {
+function x(e) {
     try {
         return c.from(JSON.stringify(e)).toString('base64');
     } catch (e) {

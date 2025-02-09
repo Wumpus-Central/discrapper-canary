@@ -7,7 +7,7 @@ var i = n(200651),
     o = n(434404),
     c = n(999382),
     d = n(388032),
-    u = n(942033);
+    u = n(896421);
 function m(e) {
     let { guild: t } = e,
         n = t.id,

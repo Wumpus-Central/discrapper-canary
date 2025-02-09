@@ -1,4 +1,4 @@
-function i(e, t) {
-    return !!(null != t && e.mentions.includes(t.author.id));
+t.d(s, { Z: () => l });
+function l(e, s) {
+    return !!(null != s && e.mentions.includes(s.author.id));
 }
-n.d(t, { Z: () => i });

@@ -1,62 +1,62 @@
 n.d(t, { Z: () => E }), n(47120);
 var i = n(200651),
     s = n(192379),
-    r = n(481060),
-    l = n(541716),
+    l = n(481060),
+    r = n(541716),
     a = n(752305),
     o = n(893718),
     c = n(313201),
     d = n(131704),
     u = n(993413),
-    m = n(981631),
-    g = n(388032),
-    h = n(341258);
+    h = n(981631),
+    m = n(388032),
+    g = n(223453);
 let x = (0, c.hQ)(),
     _ = (0, d.kt)({
         id: '1',
-        type: m.d4z.DM
+        type: h.d4z.DM
     }),
     p = (0, c.hQ)();
 function E(e) {
-    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: E, currentBio: C, disabled: f = !1 } = e,
-        [T, N] = s.useState(null != d ? d : C),
-        [I, S] = s.useState((0, a.JM)(T)),
-        b = s.useRef(!1);
+    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: E, currentBio: C, disabled: N = !1 } = e,
+        [f, I] = s.useState(null != d ? d : C),
+        [T, S] = s.useState((0, a.JM)(f)),
+        j = s.useRef(!1);
     return (
         s.useEffect(() => {
             if (void 0 === d) {
                 let e = (0, a.JM)(C);
-                N(C), S(e);
+                I(C), S(e);
             }
         }, [d, C]),
         (0, i.jsxs)(u.Z, {
             title: t,
             titleId: x,
-            description: g.intl.string(g.t.Bbw6AQ),
+            description: m.intl.string(m.t.Bbw6AQ),
             errors: n,
-            disabled: f,
+            disabled: N,
             children: [
                 (0, i.jsx)(o.Z, {
                     'aria-describedby': p,
                     'aria-labelledby': x,
-                    className: h.bioTextAreaContainer,
-                    innerClassName: h.bioTextArea,
-                    maxCharacterCount: m.tPV,
+                    className: g.bioTextAreaContainer,
+                    innerClassName: g.bioTextArea,
+                    maxCharacterCount: h.tPV,
                     onChange: function (e, t, n) {
-                        t !== T && (N(t), S(n), c(t));
+                        t !== f && (I(t), S(n), c(t));
                     },
                     placeholder: E,
                     channel: _,
-                    textValue: T,
-                    richValue: I,
-                    type: l.Ie.PROFILE_BIO_INPUT,
+                    textValue: f,
+                    richValue: T,
+                    type: r.Ie.PROFILE_BIO_INPUT,
                     onBlur: () => {
-                        b.current = !1;
+                        j.current = !1;
                     },
                     onFocus: () => {
-                        b.current = !0;
+                        j.current = !0;
                     },
-                    focused: b.current,
+                    focused: j.current,
                     onSubmit: function () {
                         return new Promise((e) => {
                             e({
@@ -66,9 +66,9 @@ function E(e) {
                         });
                     }
                 }),
-                (0, i.jsx)(r.nn4, {
+                (0, i.jsx)(l.nn4, {
                     id: p,
-                    children: g.intl.format(g.t['+DFxLS'], { maxLength: m.tPV })
+                    children: m.intl.format(m.t['+DFxLS'], { maxLength: h.tPV })
                 })
             ]
         })

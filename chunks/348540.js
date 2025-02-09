@@ -26,7 +26,7 @@ var l = n(442837),
     T = n(228168),
     S = n(981631),
     j = n(388032),
-    y = n(866669);
+    y = n(430282);
 function A(e) {
     let { user: t, currentUser: n, displayProfile: A, channel: P, isHovering: R, onOpenProfile: M } = e,
         { relationshipType: L, originApplicationId: k } = (0, l.cj)([c.Z], () => ({

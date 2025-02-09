@@ -47,7 +47,7 @@ function I(e) {
         }
     }
 }
-function b(e) {
+function T(e) {
     return I(e) === d;
 }
 (t.AsyncMode = c),
@@ -64,9 +64,9 @@ function b(e) {
     (t.StrictMode = s),
     (t.Suspense = _),
     (t.isAsyncMode = function (e) {
-        return b(e) || I(e) === c;
+        return T(e) || I(e) === c;
     }),
-    (t.isConcurrentMode = b),
+    (t.isConcurrentMode = T),
     (t.isContextConsumer = function (e) {
         return I(e) === u;
     }),

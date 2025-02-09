@@ -14,7 +14,7 @@ var i = n(200651),
     p = n(217588),
     g = n(981631),
     f = n(474936),
-    x = n(540093);
+    x = n(721104);
 let C = (0, u.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
     v = (e) => {
         null != e &&

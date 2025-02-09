@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => N });
 var i = n(200651);
 n(192379);
 var l = n(120356),
@@ -15,12 +15,12 @@ var l = n(120356),
     g = n(981631),
     _ = n(332325),
     f = n(388032),
-    E = n(690924);
+    E = n(183817);
 function I(e) {
     (0, o.Z)(_.Z.CLIPS), (0, m.UW)(e);
 }
 function C() {
-    let e = (0, a.e7)([c.Z], () => c.Z.getKeybindForAction(g.kg4.SAVE_CLIP));
+    let e = (0, a.e7)([c.ZP], () => c.ZP.getKeybindForAction(g.kg4.SAVE_CLIP));
     if (null == e) return (0, i.jsx)(i.Fragment, { children: f.intl.string(f.t.miecxM) });
     let t = u.BB(e.shortcut, !0);
     return (0, i.jsx)(i.Fragment, {
@@ -34,7 +34,7 @@ function C() {
         })
     });
 }
-let N = {
+let v = {
     [p.D5.Error]: {
         textColor: 'text-primary',
         buttonLook: s.zxk.Looks.FILLED,
@@ -75,13 +75,13 @@ let N = {
         containerClass: r()(E.container, E.containerEnabled)
     }
 };
-function v() {
+function N() {
     let { decoupledClipsEnabled: e, clipsError: t } = (0, a.cj)([h.Z], () => ({
             decoupledClipsEnabled: h.Z.getSettings().decoupledClipsEnabled,
             clipsError: h.Z.getLastClipsError()
         })),
         n = null != t ? p.D5.Error : e ? p.D5.Enabled : p.D5.Disabled,
-        { bodyCopy: l, buttonCopy: r, ctaOnClick: o, textColor: c, buttonColor: d, buttonLook: u, containerClass: g } = N[n];
+        { bodyCopy: l, buttonCopy: r, ctaOnClick: o, textColor: c, buttonColor: d, buttonLook: u, containerClass: g } = v[n];
     return (0, i.jsxs)('div', {
         className: g,
         children: [

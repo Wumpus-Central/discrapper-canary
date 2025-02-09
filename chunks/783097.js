@@ -3,20 +3,20 @@ n.d(t, {
     BQ: () => v,
     Cb: () => R,
     Hu: () => O,
-    L1: () => w,
-    Ow: () => P,
+    L1: () => P,
+    Ow: () => w,
     Wx: () => E,
     X: () => M,
-    XZ: () => x,
+    XZ: () => L,
     Y$: () => N,
     Yn: () => D,
     jD: () => I,
     lf: () => S,
-    pF: () => L,
+    pF: () => x,
     sl: () => C,
-    vJ: () => T,
+    vJ: () => b,
     yJ: () => A,
-    ye: () => b
+    ye: () => T
 }),
     n(789020),
     n(627494),
@@ -48,11 +48,11 @@ function y(e) {
 function I(e) {
     return v(e) ? e.description : g.intl.string(g.t.X9fusr);
 }
-function b(e) {
+function T(e) {
     var t;
     return v(e) && (0, f.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.EMBEDDED);
 }
-function T(e) {
+function b(e) {
     var t;
     return v(e) && (0, f.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.PARTNER);
 }
@@ -61,7 +61,7 @@ function S(e) {
     return v(e) && (0, f.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.PROMOTED);
 }
 function A(e) {
-    return v(e) && b(e) ? (e instanceof u.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return v(e) && T(e) ? (e instanceof u.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function N(e) {
     let { command: t, optionValues: n, context: i, commandTargetId: u, maxSizeCallback: c, sectionName: d, commandOrigin: f = s.bB.APPLICATION_LAUNCHER } = e,
@@ -126,13 +126,13 @@ function O(e) {
 function D(e) {
     return e === p._b.TEXT;
 }
-function x(e) {
+function L(e) {
     return null == e ? '' : (e.charAt(0).toLocaleUpperCase() + e.slice(1)).replaceAll('_', ' ');
 }
-function L(e) {
+function x(e) {
     let t = [];
     for (let n of e) {
-        let e = n.application_directory_collection_items.filter((e) => e.type === i.C.APPLICATION && b(e.application));
+        let e = n.application_directory_collection_items.filter((e) => e.type === i.C.APPLICATION && T(e.application));
         0 !== e.length &&
             t.push({
                 ...n,
@@ -141,7 +141,7 @@ function L(e) {
     }
     return t;
 }
-function P(e) {
+function w(e) {
     return {
         applicationId: e.id,
         customInstallUrl: e.customInstallUrl,
@@ -149,7 +149,7 @@ function P(e) {
         integrationTypesConfig: e.integrationTypesConfig
     };
 }
-function w(e) {
+function P(e) {
     return e instanceof u.ZP
         ? {
               applicationId: e.id,

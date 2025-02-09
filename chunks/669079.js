@@ -4,7 +4,7 @@ n.d(t, {
     Fp: () => B,
     JT: () => X,
     L2: () => W,
-    MY: () => w,
+    MY: () => P,
     Nz: () => F,
     Q_: () => Z,
     TO: () => H,
@@ -15,7 +15,7 @@ n.d(t, {
     e$: () => q,
     iM: () => z,
     pO: () => M,
-    xr: () => P,
+    xr: () => w,
     z2: () => Q
 }),
     n(47120),
@@ -40,8 +40,8 @@ let E = ['discordapp.com/gifts', 'discord.com/gifts'],
     v = 3,
     y = [_.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...E.map((e) => _.Z.escape(e))].join('|'),
     I = RegExp('(?: |^|https?://)(?:'.concat(y, ')/([a-z0-9-]+)'), 'gi'),
-    b = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => _.Z.escape(e))].join('|'),
-    T = RegExp('(?: |^|https?://)(?:'.concat(b, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
+    T = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => _.Z.escape(e))].join('|'),
+    b = RegExp('(?: |^|https?://)(?:'.concat(T, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
     S = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789',
     A = (e, t) =>
         Array(t)
@@ -53,13 +53,13 @@ let E = ['discordapp.com/gifts', 'discord.com/gifts'],
     R = A(5, 3),
     O = 'WUMP-?',
     D = [N, C, R, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
-    x = new RegExp('^('.concat(O, ')?(').concat(D, ')$')),
-    L = '-';
-var P = (function (e) {
+    L = new RegExp('^('.concat(O, ')?(').concat(D, ')$')),
+    x = '-';
+var w = (function (e) {
     return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CUSTOM_STYLE = 1)] = 'CUSTOM_STYLE'), (e[(e.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = 'CUSTOM_MESSAGE_EMOJI_SOUNDBOARD'), e;
 })({});
-let w = (e, t) => (r.tq || r.Em ? 0 : null != e || t ? 2 : 1),
-    M = (e) => 0 !== w(e);
+let P = (e, t) => (r.tq || r.Em ? 0 : null != e || t ? 2 : 1),
+    M = (e) => 0 !== P(e);
 function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
@@ -85,7 +85,7 @@ let B = (e) => (null == e ? void 0 : e.type) === h.uaV.CUSTOM_GIFT && (null == e
         if (null == e) return [];
         let n = new Set();
         for (; null != (t = I.exec(e)) && n.size < v; ) n.add(G(t[1]));
-        for (; null != (t = T.exec(e)) && n.size < v; ) n.add(G(t[t.length - 1]));
+        for (; null != (t = b.exec(e)) && n.size < v; ) n.add(G(t[t.length - 1]));
         return Array.from(n);
     };
 function F() {
@@ -236,10 +236,10 @@ function Q(e, t, n) {
     return a.length === r.length ? a[0] : null;
 }
 function X(e) {
-    let t = e.trim().split('/').pop().match(x);
+    let t = e.trim().split('/').pop().match(L);
     if (null == t) return null;
     let [n, i, r] = t;
-    return null == r ? null : r.replace(RegExp(L, 'g'), '');
+    return null == r ? null : r.replace(RegExp(x, 'g'), '');
 }
 let J = (e, t) =>
     (0, a.e7)([l.Z], () => {

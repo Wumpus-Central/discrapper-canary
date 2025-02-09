@@ -1,19 +1,19 @@
 n.d(t, { Z: () => x });
 var i = n(200651),
     s = n(192379),
-    r = n(442837),
-    l = n(692547),
+    l = n(442837),
+    r = n(692547),
     a = n(481060),
     o = n(768762),
     c = n(823379),
     d = n(882029),
     u = n(955204),
-    m = n(248998),
-    g = n(388032),
-    h = n(986544);
+    h = n(248998),
+    m = n(388032),
+    g = n(896424);
 function x(e) {
     let { onBackClick: t } = e,
-        n = (0, r.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()),
+        n = (0, l.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()),
         x = s.useMemo(() => Object.values(n).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [n]),
         _ = s.useMemo(
             () =>
@@ -28,43 +28,43 @@ function x(e) {
             (0, i.jsx)(a.hjN, {
                 children: (0, i.jsxs)(a.P3F, {
                     onClick: t,
-                    className: h.backContainer,
+                    className: g.backContainer,
                     children: [
                         (0, i.jsx)(o.Z, {
                             direction: o.Z.Directions.LEFT,
-                            className: h.icon
+                            className: g.icon
                         }),
                         (0, i.jsx)(a.Text, {
                             variant: 'text-lg/normal',
                             color: 'text-normal',
-                            children: g.intl.string(g.t['13/7kZ'])
+                            children: m.intl.string(m.t['13/7kZ'])
                         })
                     ]
                 })
             }),
             (0, i.jsxs)('div', {
-                className: h.headerContainer,
+                className: g.headerContainer,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: h.headerTextContainer,
+                        className: g.headerTextContainer,
                         children: [
                             (0, i.jsx)(a.X6q, {
                                 variant: 'heading-lg/extrabold',
                                 color: 'header-primary',
-                                children: g.intl.string(g.t['6jI0hY'])
+                                children: m.intl.string(m.t['6jI0hY'])
                             }),
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-md/normal',
                                 color: 'header-secondary',
-                                children: g.intl.string(g.t.GuUItb)
+                                children: m.intl.string(m.t.GuUItb)
                             })
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: h.headerIcon,
+                        className: g.headerIcon,
                         children: (0, i.jsx)(a.rm8, {
                             size: 'custom',
-                            color: l.Z.unsafe_rawColors.ORANGE_345.css,
+                            color: r.Z.unsafe_rawColors.ORANGE_345.css,
                             width: 40,
                             height: 40
                         })
@@ -73,13 +73,13 @@ function x(e) {
             }),
             x.length > 0 &&
                 (0, i.jsx)(a.hjN, {
-                    className: h.divider,
+                    className: g.divider,
                     children: (0, i.jsx)('div', {
-                        className: h.achievementGrid,
+                        className: g.achievementGrid,
                         children: x.map((e) => {
                             let { achievementId: t, dateUnlocked: n } = e;
                             return (0, i.jsx)(
-                                m.Z,
+                                h.Z,
                                 {
                                     achievementId: t,
                                     dateUnlocked: n
@@ -91,25 +91,25 @@ function x(e) {
                 }),
             _.length > 0 &&
                 (0, i.jsxs)(a.hjN, {
-                    className: h.divider,
+                    className: g.divider,
                     children: [
                         (0, i.jsx)('div', {
-                            className: h.headerTextContainer,
+                            className: g.headerTextContainer,
                             children: (0, i.jsx)(a.Text, {
                                 variant: 'text-md/bold',
                                 color: 'header-secondary',
-                                children: g.intl.string(g.t.GFyMg4)
+                                children: m.intl.string(m.t.GFyMg4)
                             })
                         }),
                         (0, i.jsx)('div', {
-                            className: h.achievementGrid,
-                            children: _.map((e) => (0, i.jsx)(m.Z, { achievementId: e.id }, e.id))
+                            className: g.achievementGrid,
+                            children: _.map((e) => (0, i.jsx)(h.Z, { achievementId: e.id }, e.id))
                         })
                     ]
                 }),
             (0, i.jsx)(a.hjN, {
-                className: h.divider,
-                children: (0, i.jsx)('div', { className: h.bottomPadding })
+                className: g.divider,
+                children: (0, i.jsx)('div', { className: g.bottomPadding })
             })
         ]
     });

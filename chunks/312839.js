@@ -25,6 +25,6 @@ function d(e, t) {
     };
 }
 function c() {
-    let e = s.Z.getOverlayKeybind();
+    let e = s.ZP.getOverlayKeybind();
     return null != e ? (0, a.BB)(e.shortcut, !0).split(' + ') : ['???'];
 }

@@ -29,7 +29,7 @@ function d(e) {
     let v = m ? l.u1M : l.z1l;
     return (0, l.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('69057'), n.e('89754')]).then(n.bind(n, 471840));
+            let { default: e } = await Promise.all([n.e('69057'), n.e('85122')]).then(n.bind(n, 471840));
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,

@@ -1,45 +1,45 @@
 n.d(t, { Z: () => p }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    o = n(120356),
-    l = n.n(o),
+    o = n(192379),
+    r = n(120356),
+    l = n.n(r),
     a = n(442837),
     s = n(481060),
     d = n(493773),
     c = n(178821),
     u = n(38618),
     h = n(333031),
-    _ = n(992813);
+    _ = n(887466);
 function p(e) {
-    let { locked: t, pinned: n, anchorLeft: o } = e,
+    let { locked: t, pinned: n, anchorLeft: r } = e,
         p = (0, a.e7)([u.Z], () => u.Z.getSocket());
     (0, c.nU)();
     let [f, g] = (0, c.m8)(p),
-        { currentFPS: m, averageFrameTime: v, timeSinceLastDrop: x, onResetFrameData: E, droppedFramesRef: C, renderedFrameCount: Z, bufferFramecountRef: S, frameCheckerEffect: I } = (0, c.d6)(!0, f, !0),
-        [y, b, w] = (0, c.ZF)(p),
-        [N, O] = (0, c.Y5)(y, I),
+        { currentFPS: m, averageFrameTime: v, timeSinceLastDrop: x, onResetFrameData: E, droppedFramesRef: C, renderedFrameCount: Z, bufferFramecountRef: I, frameCheckerEffect: S } = (0, c.d6)(!0, f, !0),
+        [b, y, O] = (0, c.ZF)(p),
+        [w, N] = (0, c.Y5)(b, S),
         T = performance.now() - g.current < c.MC,
-        j = b(v, S.current);
+        j = y(v, I.current);
     (0, d.ZP)(
         () => (
-            N(),
+            w(),
             () => {
-                O();
+                N();
             }
         )
     );
-    let k = r.useCallback(() => {
-            E(), w(), N();
-        }, [E, w, N]),
-        [R, A] = r.useState(!0),
-        [L, P] = r.useState(!0),
-        [D, M] = r.useState(!0),
-        [z, V] = r.useState(!0),
-        [W, F] = r.useState(!0);
+    let k = o.useCallback(() => {
+            E(), O(), w();
+        }, [E, O, w]),
+        [R, A] = o.useState(!0),
+        [L, P] = o.useState(!0),
+        [D, M] = o.useState(!0),
+        [z, V] = o.useState(!0),
+        [W, F] = o.useState(!0);
     return t && !n
         ? null
         : (0, i.jsxs)('div', {
-              className: l()(_.panelGroup, !o && _.rightAligned),
+              className: l()(_.panelGroup, !r && _.rightAligned),
               children: [
                   (R || !t) &&
                       (0, i.jsxs)('div', {

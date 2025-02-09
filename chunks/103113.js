@@ -18,16 +18,16 @@ var i = n(200651),
     v = n(280885),
     y = n(502762),
     I = n(530),
-    b = n(679332),
-    T = n(544989),
+    T = n(679332),
+    b = n(544989),
     S = n(171368),
     A = n(228168),
     N = n(388032),
-    C = n(591156);
+    C = n(112650);
 function R(e) {
-    let { user: t, guildId: n, channelId: R, messageId: O, roleId: D, setPopoutRef: x, closePopout: L, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: w = [] } = e,
+    let { user: t, guildId: n, channelId: R, messageId: O, roleId: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: w = __OVERLAY__, newAnalyticsLocations: P = [] } = e,
         M = (0, h.ZP)(t.id, n),
-        { analyticsLocations: k } = (0, l.ZP)([...w, o.Z.BITE_SIZE_PROFILE_POPOUT]),
+        { analyticsLocations: k } = (0, l.ZP)([...P, o.Z.BITE_SIZE_PROFILE_POPOUT]),
         U = (0, _.ZB)({
             layout: 'BITE_SIZE_POPOUT',
             userId: t.id,
@@ -39,16 +39,16 @@ function R(e) {
         G = r.useRef(null),
         B = (0, s.Z)(G);
     r.useEffect(() => {
-        null == x || x(null == G ? void 0 : G.current);
-    }, [G, x]);
+        null == L || L(null == G ? void 0 : G.current);
+    }, [G, L]);
     let Z = () => {
-            null == L || L(),
+            null == x || x(),
                 (0, S.openUserProfileModal)({
                     sourceAnalyticsLocations: k,
                     ...U
                 });
         },
-        F = !P && (0, u.Z)(t.id),
+        F = !w && (0, u.Z)(t.id),
         V = () =>
             F
                 ? (0, i.jsx)(a.sNh, {
@@ -77,9 +77,9 @@ function R(e) {
                         displayProfile: M,
                         profileType: A.y0.BITE_SIZE,
                         children: [
-                            (0, i.jsx)(T.Z, {
+                            (0, i.jsx)(b.Z, {
                                 profileType: A.y0.BITE_SIZE,
-                                children: (0, i.jsx)(b.Z, {
+                                children: (0, i.jsx)(T.Z, {
                                     user: t,
                                     viewProfileItem: V()
                                 })
@@ -116,7 +116,7 @@ function R(e) {
                                         tags: (0, i.jsx)(g.Z, {
                                             displayProfile: M,
                                             profileType: A.y0.BITE_SIZE,
-                                            onClose: L
+                                            onClose: x
                                         })
                                     }),
                                     (0, i.jsx)(v.Z, {

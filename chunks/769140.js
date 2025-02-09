@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(449605),
     y = n(102172),
     I = n(359110),
-    b = n(769654),
-    T = n(922482),
+    T = n(769654),
+    b = n(922482),
     S = n(592125),
     A = n(430824),
     N = n(496675),
@@ -27,10 +27,10 @@ var i = n(200651),
     R = n(699516),
     O = n(938475),
     D = n(626135),
-    x = n(960870),
-    L = n(139793),
-    P = n(652853),
-    w = n(336383),
+    L = n(960870),
+    x = n(139793),
+    w = n(652853),
+    P = n(336383),
     M = n(194811),
     k = n(373826),
     U = n(315324),
@@ -40,26 +40,26 @@ var i = n(200651),
     F = n(228168),
     V = n(981631),
     j = n(388032),
-    H = n(249942),
-    Y = n(22481),
+    H = n(309584),
+    Y = n(227561),
     W = n(924482),
     K = n(774797);
 function z(e) {
     let { user: t, currentUser: n, stream: a, className: z, onClose: q } = e,
-        { profileType: Q, theme: X } = (0, P.z)(),
+        { profileType: Q, theme: X } = (0, w.z)(),
         J = {
             [Y.fullSize]: Q === F.y0.FULL_SIZE,
             [H.fullSize]: Q === F.y0.FULL_SIZE
         },
         { enabled: $, analyticsEligible: ee } = (0, m.R4)('user-profile-stream-activity-card-web'),
         { analyticsLocations: et } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        en = (0, x.Z)({
+        en = (0, L.Z)({
             display: 'live',
             user: t,
             stream: a,
             analyticsLocations: et
         }),
-        ei = (0, L.Z)({
+        ei = (0, x.Z)({
             userId: t.id,
             onAction: en
         }),
@@ -160,10 +160,10 @@ function z(e) {
         eg = () => {
             if (Q !== F.y0.FULL_SIZE) return null;
             let e = (e) => {
-                    e.stopPropagation(), null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), ea.isGuildStageVoice() ? (0, T.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
+                    e.stopPropagation(), null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), ea.isGuildStageVoice() ? (0, b.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
                 },
                 n = (e) => {
-                    e.stopPropagation(), en({ action: 'OPEN_VOICE_GUILD' }), (0, b.X)(er.id), null == q || q();
+                    e.stopPropagation(), en({ action: 'OPEN_VOICE_GUILD' }), (0, T.X)(er.id), null == q || q();
                 };
             return (0, i.jsxs)('div', {
                 className: H.details,
@@ -235,7 +235,7 @@ function z(e) {
                   });
     return (0, i.jsx)(h.Gt, {
         value: et,
-        children: (0, i.jsxs)(w.Z, {
+        children: (0, i.jsxs)(P.Z, {
             ref: ei,
             className: z,
             onAction: en,

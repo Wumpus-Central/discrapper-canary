@@ -36,12 +36,12 @@ function y(e) {
 function I(e) {
     null != e && (E[e] = Date.now());
 }
-function b(e) {
+function T(e) {
     let { guildId: t } = e;
     if (m === t) return !1;
     I(m), I(t), null != t && (g = t), (m = t);
 }
-function T(e) {
+function b(e) {
     let t = !1;
     return delete E[e], g === e && ((g = null), (t = !0)), m === e && (Object.values(f.Z.getGuilds()).find((t) => t.id !== e), (m = null), (0, u.dL)(_.Z5c.ME), (t = !0)), t;
 }
@@ -49,11 +49,11 @@ function S(e) {
     let {
         guild: { id: t, unavailable: n }
     } = e;
-    return !0 !== n && T(t);
+    return !0 !== n && b(t);
 }
 function A(e) {
     let { guildId: t, user: n } = e;
-    return n.id === c.default.getId() && T(t);
+    return n.id === c.default.getId() && b(t);
 }
 function N() {
     (m = null), (g = null);
@@ -87,7 +87,7 @@ p(C, 'displayName', 'SelectedGuildStore'), p(C, 'persistKey', 'SelectedGuildStor
 let R = new C(s.Z, {
     CONNECTION_OPEN: v,
     OVERLAY_INITIALIZE: y,
-    CHANNEL_SELECT: b,
+    CHANNEL_SELECT: T,
     GUILD_MEMBER_REMOVE: A,
     GUILD_DELETE: S,
     LOGOUT: N

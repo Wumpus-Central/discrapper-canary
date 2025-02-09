@@ -9,7 +9,7 @@ var i = n(200651),
     c = n(741247),
     u = n(75464),
     h = n(388032),
-    m = n(826080);
+    m = n(775705);
 function g(e) {
     let { role: t, guild: s } = e,
         [r, u] = l.useState(!1);
@@ -42,8 +42,8 @@ function g(e) {
         : null;
 }
 function p(e) {
-    let { color: t, id: s, role: a, guild: c, children: p, isDragging: x, selectedItem: f, onItemSelect: j, itemType: v, locked: C, lockTooltip: N, showContextMenu: b, theme: Z, roleStyle: T, 'aria-label': S } = e,
-        E = l.useCallback(
+    let { color: t, id: s, role: a, guild: c, children: p, isDragging: x, selectedItem: f, onItemSelect: v, itemType: j, locked: C, lockTooltip: N, showContextMenu: b, theme: Z, roleStyle: S, 'aria-label': E } = e,
+        T = l.useCallback(
             (e) => {
                 (0, d.jW)(e, async () => {
                     let { default: e } = await n.e('5396').then(n.bind(n, 731646));
@@ -63,13 +63,13 @@ function p(e) {
               className: m.role,
               id: s,
               selectedItem: f,
-              onItemSelect: j,
-              itemType: v,
-              'aria-label': null != N ? ''.concat(S, ', ').concat(N) : S,
+              onItemSelect: v,
+              itemType: j,
+              'aria-label': null != N ? ''.concat(E, ', ').concat(N) : E,
               children: (0, i.jsxs)('div', {
                   className: m.roleContent,
                   children: [
-                      'dot' === T
+                      'dot' === S
                           ? (0, i.jsx)(o.FhE, {
                                 color: null != t ? t : void 0,
                                 className: m.roleDot,
@@ -96,7 +96,7 @@ function p(e) {
                       })(),
                       (0, i.jsx)('div', {
                           className: m.roleInner,
-                          onContextMenu: E,
+                          onContextMenu: T,
                           children: p
                       }),
                       b && null != a

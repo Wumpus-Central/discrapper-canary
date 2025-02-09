@@ -48,10 +48,10 @@ function y(e) {
 let I = function (e) {
         return e - 48 < 10 ? e - 22 : e - 65 < 26 ? e - 65 : e - 97 < 26 ? e - 97 : n;
     },
-    b = function (e, t) {
+    T = function (e, t) {
         return e + 22 + 75 * (e < 26) - ((0 != t) << 5);
     },
-    T = function (e, t, i) {
+    b = function (e, t, i) {
         let o = 0;
         for (e = i ? h(e / s) : e >> 1, e += h(e / t); e > (p * r) >> 1; o += n) e = h(e / p);
         return h(o + ((p + 1) * e) / (e + a));
@@ -77,7 +77,7 @@ let I = function (e) {
                 a > h(t / _) && g('overflow'), (a *= _);
             }
             let u = a.length + 1;
-            (f = T(c - l, u, 0 == l)), h(c / u) > t - d && g('overflow'), (d += h(c / u)), (c %= u), a.splice(c++, 0, d);
+            (f = b(c - l, u, 0 == l)), h(c / u) > t - d && g('overflow'), (d += h(c / u)), (c %= u), a.splice(c++, 0, d);
         }
         return String.fromCodePoint(...a);
     },
@@ -102,9 +102,9 @@ let I = function (e) {
                         if (e < s) break;
                         let o = e - s,
                             l = n - s;
-                        a.push(m(b(s + (o % l), 0))), (e = h(o / l));
+                        a.push(m(T(s + (o % l), 0))), (e = h(o / l));
                     }
-                    a.push(m(b(e, 0))), (f = T(d, o, p == _)), (d = 0), ++p;
+                    a.push(m(T(e, 0))), (f = b(d, o, p == _)), (d = 0), ++p;
                 }
             ++d, ++c;
         }

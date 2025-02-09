@@ -1,4 +1,4 @@
-t.d(n, { Z: () => h }), t(47120);
+t.d(n, { Z: () => m }), t(47120);
 var l,
     u,
     i,
@@ -11,7 +11,7 @@ var l,
     f = t(306680);
 let g = {},
     Z = new Set();
-class m extends (l = d.ZP.Store) {
+class v extends (l = d.ZP.Store) {
     initialize() {
         this.waitFor(s.Z, c.Z, f.ZP);
     }
@@ -23,15 +23,15 @@ class m extends (l = d.ZP.Store) {
     }
 }
 (i = 'ForumPostUnreadCountStore'),
-    (u = 'displayName') in m
-        ? Object.defineProperty(m, u, {
+    (u = 'displayName') in v
+        ? Object.defineProperty(v, u, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (m[u] = i);
-let h = new m(o.Z, {
+        : (v[u] = i);
+let m = new v(o.Z, {
     CONNECTION_OPEN: function () {
         (g = {}), (Z = new Set());
     },

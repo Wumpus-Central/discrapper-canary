@@ -18,7 +18,7 @@ var i = n(392711),
     v = n(441623),
     y = n(474936),
     I = n(981631);
-function b(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function b(e, t, n) {
         e
     );
 }
-let T = 50,
+let b = 50,
     S = 1000;
 class A extends s.Z {
     isChannelEligible(e, t) {
@@ -42,7 +42,7 @@ class A extends s.Z {
             case r.d.GUILD_TEXT:
                 let n = f.Z.getGuild(t),
                     i = c.Z.getMemberCount(t);
-                return null != i && i <= T && (null == n ? void 0 : n.rulesChannelId) !== e.id && !e.isNSFW() && !(0, l.Z)(e) && null == e.linkedLobby;
+                return null != i && i <= b && (null == n ? void 0 : n.rulesChannelId) !== e.id && !e.isNSFW() && !(0, l.Z)(e) && null == e.linkedLobby;
             default:
                 return !1;
         }
@@ -92,7 +92,7 @@ class A extends s.Z {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'actions', {
+            T(this, 'actions', {
                 POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
                 CHANNEL_SELECT: (e) => this.onChannelSelect(e)
             });

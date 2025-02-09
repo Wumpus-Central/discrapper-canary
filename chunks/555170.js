@@ -25,8 +25,8 @@ var m = n(443551),
     v = n(531478).codes,
     y = v.ERR_INVALID_ARG_TYPE,
     I = v.ERR_STREAM_PUSH_AFTER_EOF,
-    b = v.ERR_METHOD_NOT_IMPLEMENTED,
-    T = v.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
+    T = v.ERR_METHOD_NOT_IMPLEMENTED,
+    b = v.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
 n(689118)(R, c);
 var S = g.errorOrDestroy,
     A = ['error', 'close', 'destroy', 'pause', 'resume'];
@@ -47,9 +47,9 @@ function O(e, t, n, i, a) {
     var s,
         o = e._readableState;
     if (null === t) (o.reading = !1), M(e, o);
-    else if ((a || (s = x(o, t)), s)) S(e, s);
+    else if ((a || (s = L(o, t)), s)) S(e, s);
     else if (o.objectMode || (t && t.length > 0)) {
-        if (('string' == typeof t || o.objectMode || Object.getPrototypeOf(t) === d.prototype || (t = _(t)), i)) o.endEmitted ? S(e, new T()) : D(e, o, t, !0);
+        if (('string' == typeof t || o.objectMode || Object.getPrototypeOf(t) === d.prototype || (t = _(t)), i)) o.endEmitted ? S(e, new b()) : D(e, o, t, !0);
         else if (o.ended) S(e, new I());
         else {
             if (o.destroyed) return !1;
@@ -61,7 +61,7 @@ function O(e, t, n, i, a) {
 function D(e, t, n, i) {
     t.flowing && 0 === t.length && !t.sync ? ((t.awaitDrain = 0), e.emit('data', n)) : ((t.length += t.objectMode ? 1 : n.length), i ? t.buffer.unshift(n) : t.buffer.push(n), t.needReadable && k(e)), G(e, t);
 }
-function x(e, t) {
+function L(e, t) {
     var n;
     return p(t) || 'string' == typeof t || void 0 === t || e.objectMode || (n = new y('chunk', ['string', 'Buffer', 'Uint8Array'], t)), n;
 }
@@ -97,12 +97,12 @@ Object.defineProperty(R.prototype, 'destroyed', {
         for (var i = this._readableState.buffer.head, r = ''; null !== i; ) (r += t.write(i.data)), (i = i.next);
         return this._readableState.buffer.clear(), '' !== r && this._readableState.buffer.push(r), (this._readableState.length = r.length), this;
     });
-var L = 1073741824;
-function P(e) {
-    return e >= L ? (e = L) : (e--, (e |= e >>> 1), (e |= e >>> 2), (e |= e >>> 4), (e |= e >>> 8), (e |= e >>> 16), e++), e;
+var x = 1073741824;
+function w(e) {
+    return e >= x ? (e = x) : (e--, (e |= e >>> 1), (e |= e >>> 2), (e |= e >>> 4), (e |= e >>> 8), (e |= e >>> 16), e++), e;
 }
-function w(e, t) {
-    return e <= 0 || (0 === t.length && t.ended) ? 0 : t.objectMode ? 1 : e != e ? (t.flowing && t.length ? t.buffer.head.data.length : t.length) : (e > t.highWaterMark && (t.highWaterMark = P(e)), e <= t.length) ? e : t.ended ? t.length : ((t.needReadable = !0), 0);
+function P(e, t) {
+    return e <= 0 || (0 === t.length && t.ended) ? 0 : t.objectMode ? 1 : e != e ? (t.flowing && t.length ? t.buffer.head.data.length : t.length) : (e > t.highWaterMark && (t.highWaterMark = w(e)), e <= t.length) ? e : t.ended ? t.length : ((t.needReadable = !0), 0);
 }
 function M(e, t) {
     if ((r('onEofChunk'), !t.ended)) {
@@ -178,12 +178,12 @@ function q(e, t) {
         n = this._readableState,
         i = e;
     if ((0 !== e && (n.emittedReadable = !1), 0 === e && n.needReadable && ((0 !== n.highWaterMark ? n.length >= n.highWaterMark : n.length > 0) || n.ended))) return r('read: emitReadable', n.length, n.ended), 0 === n.length && n.ended ? K(this) : k(this), null;
-    if (0 === (e = w(e, n)) && n.ended) return 0 === n.length && K(this), null;
+    if (0 === (e = P(e, n)) && n.ended) return 0 === n.length && K(this), null;
     var a = n.needReadable;
-    return r('need readable', a), (0 === n.length || n.length - e < n.highWaterMark) && r('length less than watermark', (a = !0)), n.ended || n.reading ? r('reading or ended', (a = !1)) : a && (r('do read'), (n.reading = !0), (n.sync = !0), 0 === n.length && (n.needReadable = !0), this._read(n.highWaterMark), (n.sync = !1), n.reading || (e = w(i, n))), null === (t = e > 0 ? W(e, n) : null) ? ((n.needReadable = n.length <= n.highWaterMark), (e = 0)) : ((n.length -= e), (n.awaitDrain = 0)), 0 === n.length && (n.ended || (n.needReadable = !0), i !== e && n.ended && K(this)), null !== t && this.emit('data', t), t;
+    return r('need readable', a), (0 === n.length || n.length - e < n.highWaterMark) && r('length less than watermark', (a = !0)), n.ended || n.reading ? r('reading or ended', (a = !1)) : a && (r('do read'), (n.reading = !0), (n.sync = !0), 0 === n.length && (n.needReadable = !0), this._read(n.highWaterMark), (n.sync = !1), n.reading || (e = P(i, n))), null === (t = e > 0 ? W(e, n) : null) ? ((n.needReadable = n.length <= n.highWaterMark), (e = 0)) : ((n.length -= e), (n.awaitDrain = 0)), 0 === n.length && (n.ended || (n.needReadable = !0), i !== e && n.ended && K(this)), null !== t && this.emit('data', t), t;
 }),
     (R.prototype._read = function (e) {
-        S(this, new b('_read()'));
+        S(this, new T('_read()'));
     }),
     (R.prototype.pipe = function (e, t) {
         var n = this,

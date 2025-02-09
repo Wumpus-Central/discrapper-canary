@@ -18,7 +18,7 @@ var r = n(512722),
     p = n(981631),
     h = n(231338),
     m = n(388032),
-    g = n(963074),
+    g = n(646989),
     E = n(74316);
 function v(e) {
     let { purchaseType: t, plan: n, premiumSubscription: i, isGift: r, planGroup: s, isPrepaidPaymentSource: o, inReverseTrial: l } = e;
@@ -33,14 +33,14 @@ function y(e, t) {
 }
 function I(e) {
     var t;
-    let { legalTermsNodeRef: n, invoiceError: r, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: I, isGift: b, planGroup: T, isPrepaid: S, isTrial: A, makePurchase: N, needsPaymentSource: C, inReverseTrial: R, onNext: O } = e,
-        { application: D, selectedPlan: x, hasAcceptedTerms: L, purchaseType: P, paymentSourceId: w, activeSubscription: M, devShelfFetchState: k } = (0, u.JL)(),
+    let { legalTermsNodeRef: n, invoiceError: r, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: I, isGift: T, planGroup: b, isPrepaid: S, isTrial: A, makePurchase: N, needsPaymentSource: C, inReverseTrial: R, onNext: O } = e,
+        { application: D, selectedPlan: L, hasAcceptedTerms: x, purchaseType: w, paymentSourceId: P, activeSubscription: M, devShelfFetchState: k } = (0, u.JL)(),
         U = v({
-            purchaseType: P,
-            plan: x,
+            purchaseType: w,
+            plan: L,
             premiumSubscription: I,
-            isGift: b,
-            planGroup: T,
+            isGift: T,
+            planGroup: b,
             isPrepaidPaymentSource: S,
             inReverseTrial: R
         }),
@@ -80,8 +80,8 @@ function I(e) {
     if (A)
         return (0, i.jsxs)(s.gtL, {
             innerClassName: g.innerButton,
-            'data-testid': L ? 'purchase' : 'submitButton',
-            onClick: L ? N : () => y(n, f),
+            'data-testid': x ? 'purchase' : 'submitButton',
+            onClick: x ? N : () => y(n, f),
             color: s.zxk.Colors.GREEN,
             submitting: h,
             children: [
@@ -93,7 +93,7 @@ function I(e) {
                 U
             ]
         });
-    if (!L)
+    if (!x)
         return (0, i.jsx)(s.ua7, {
             text: m.intl.string(m.t.XdvBLS),
             children: (e) =>
@@ -106,12 +106,12 @@ function I(e) {
                     children: U
                 })
         });
-    else if (R && null != M && null != w)
+    else if (R && null != M && null != P)
         return (0, i.jsx)(_.Z, {
             activeSubscription: M,
             onNext: O,
             isSubmitting: h,
-            paymentSourceId: w,
+            paymentSourceId: P,
             buttonLabel: U,
             analyticsLocations: G
         });

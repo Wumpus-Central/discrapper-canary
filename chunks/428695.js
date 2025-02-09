@@ -9,10 +9,10 @@ var i = n(200651),
     d = n(626135),
     u = n(981631),
     h = n(388032),
-    m = n(173549);
+    m = n(364049);
 let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500),
     g = function (e) {
-        let { guild: t, title: n, message: r, image: s, type: g, imageStyles: _, imageMarginX: f, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: N, onClick: v, cta: T, ctaColor: S, centerText: Z, className: A } = e;
+        let { guild: t, title: n, message: r, image: s, type: g, imageStyles: _, imageMarginX: f, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: N, cta: T, ctaColor: S, centerText: A, className: Z } = e;
         l.useEffect(() => {
             p(u.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: g,
@@ -33,7 +33,7 @@ let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500),
                               guild_id: t.id,
                               notice_type: g
                           }),
-                          null == v || v();
+                          null == N || N();
                   },
                   fullWidth: !0,
                   color: S,
@@ -46,7 +46,7 @@ let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500),
               (b = (0, i.jsx)(o.Text, {
                   variant: 'text-md/medium',
                   color: 'header-primary',
-                  className: a()(m.title, { [m.noImageTitle]: null == s }, { [m.center]: Z }),
+                  className: a()(m.title, { [m.noImageTitle]: null == s }, { [m.center]: A }),
                   children: n
               }));
         let L = null;
@@ -54,20 +54,20 @@ let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500),
             ? (L = r())
             : null != r &&
               (L = (0, i.jsx)(o.Text, {
-                  className: a()({ [m.center]: Z }),
+                  className: a()({ [m.center]: A }),
                   variant: 'text-sm/normal',
                   color: 'text-muted',
                   children: r
               }));
         let y = null != f ? ''.concat(f, 'px') : '16px';
         return (0, i.jsxs)('div', {
-            className: a()(m.container, A),
+            className: a()(m.container, Z),
             children: [
                 !0 === C
                     ? null
                     : (0, i.jsx)(o.P3F, {
                           onClick: () => {
-                              c.ZP.trackWithMetadata(u.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: g }), null == N || N();
+                              c.ZP.trackWithMetadata(u.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: g }), null == v || v();
                           },
                           className: m.close,
                           'aria-label': h.intl.string(h.t.WAI6xs),

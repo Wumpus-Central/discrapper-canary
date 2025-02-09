@@ -18,19 +18,19 @@ var i = n(200651),
     v = n(555573),
     y = n(10718),
     I = n(367790),
-    b = n(895924),
-    T = n(581364),
+    T = n(895924),
+    b = n(581364),
     S = n(56801),
     A = n(342687),
     N = n(826298),
     C = n(689079),
     R = n(981631),
     O = n(388032),
-    D = n(926030),
-    x = n(239840);
-let L = 512,
-    P = 7,
-    w = 56,
+    D = n(490165),
+    L = n(239840);
+let x = 512,
+    w = 7,
+    P = 56,
     M = 16,
     k = 32,
     U = 20,
@@ -70,7 +70,7 @@ let L = 512,
                     applicationCommands: !a
                 },
                 options: {
-                    placeholderCount: P,
+                    placeholderCount: w,
                     limit: C.tn,
                     includeFrecency: !0
                 },
@@ -91,7 +91,7 @@ let L = 512,
                 searchQuery: ''
             }),
             ei = (e) => {
-                let t = q.length * (k + M) + (Q.reduce((e, t) => e + t.data.length, 0) - (X ? P : 0)) * w - L;
+                let t = q.length * (k + M) + (Q.reduce((e, t) => e + t.data.length, 0) - (X ? w : 0)) * P - x;
                 X && e + G > t && ee(), en(e), Z(), (l.current = e);
             },
             er = r.useRef(ei);
@@ -127,7 +127,7 @@ let L = 512,
                         channelId: n.id,
                         command: e,
                         section: t,
-                        location: b.Vh.DISCOVERY,
+                        location: T.Vh.DISCOVERY,
                         triggerSection: i
                     });
                 },
@@ -145,14 +145,14 @@ let L = 512,
                         if (((t = n), F < (n += e.data.length))) {
                             let n = e.data[F - t],
                                 i = z.find((e) => e.id === n.applicationId);
-                            el(n, i, (0, T.tI)(e.section));
+                            el(n, i, (0, b.tI)(e.section));
                             break;
                         }
                     return !0;
                 },
                 onMoveSelection: (e) => {
                     if (0 === J.length) return !0;
-                    let t = X ? P : 0,
+                    let t = X ? w : 0,
                         n = J.length + t,
                         i = null == F ? 0 : F + e;
                     return i >= n ? (i = n - 1) : i < 0 && (i = 0), j(i), W(!0), !0;
@@ -200,7 +200,7 @@ let L = 512,
                                 0 === a.length &&
                                     (0, i.jsx)(u.Z, {
                                         message: O.intl.format(O.t.WoQXT0, { applicationName: r.name }),
-                                        noResultsImageURL: x,
+                                        noResultsImageURL: L,
                                         className: D.noSearchResults
                                     })
                             ]
@@ -216,7 +216,7 @@ let L = 512,
                     let a = Q[t.sectionIndex],
                         s = a.data[t.sectionRowIndex],
                         o = ''.concat(a.section.id, ':').concat(null !== (r = null == s ? void 0 : s.id) && void 0 !== r ? r : e);
-                    if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === b.iw.PLACEHOLDER) return (0, i.jsx)(A.Z, {}, o);
+                    if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === T.iw.PLACEHOLDER) return (0, i.jsx)(A.Z, {}, o);
                     let l = z.find((e) => e.id === s.applicationId);
                     return (0, i.jsx)(
                         f.ZP.NewCommand,
@@ -228,7 +228,7 @@ let L = 512,
                             selected: F === e,
                             showImage: a.section.id !== s.applicationId,
                             section: l,
-                            onClick: () => el(s, l, (0, T.tI)(a.section)),
+                            onClick: () => el(s, l, (0, b.tI)(a.section)),
                             onHover: () => {
                                 j(null), W(!1);
                             }
@@ -272,7 +272,7 @@ let L = 512,
                         renderSectionHeader: eu,
                         rowCount: q.length,
                         rowCountBySection: es,
-                        rowHeight: w,
+                        rowHeight: P,
                         sectionHeaderHeight: k,
                         sectionMarginBottom: ea,
                         ref: H,

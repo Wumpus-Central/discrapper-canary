@@ -1,54 +1,54 @@
 n.d(t, {
-    a: () => c,
-    r: () => _
+    a: () => d,
+    r: () => c
 }),
     n(47120);
-var i = n(200651),
-    s = n(481060),
+var s = n(200651),
+    i = n(481060),
     r = n(785232),
     a = n(594174),
     l = n(5192),
     o = n(388032),
-    d = n(762471);
-let _ = (e, t) => {
+    _ = n(846745);
+let c = (e, t) => {
         if (1 === e.length) {
             let n = a.default.getUser(e[0]);
             return null != n
-                ? (0, i.jsx)(s.qEK, {
+                ? (0, s.jsx)(i.qEK, {
                       src: n.getAvatarURL(t, 32),
-                      size: s.EFr.SIZE_32,
+                      size: i.EFr.SIZE_32,
                       'aria-hidden': !0
                   })
-                : (0, i.jsx)(s.tBG, {});
+                : (0, s.jsx)(i.tBG, {});
         }
-        return (0, i.jsx)(r.Z, {
+        return (0, s.jsx)(r.Z, {
             recipients: e,
-            size: s.EFr.SIZE_32
+            size: i.EFr.SIZE_32
         });
     },
-    c = (e, t, n, r) => {
-        let _ = [...e].map((e) => a.default.getUser(e)),
-            c = (e) =>
-                (0, i.jsx)(s.Text, {
+    d = (e, t, n, r) => {
+        let c = [...e].map((e) => a.default.getUser(e)),
+            d = (e) =>
+                (0, s.jsx)(i.Text, {
                     variant: 'text-md/semibold',
-                    className: d.username,
+                    className: _.username,
                     children: l.ZP.getName(n, r, e)
                 });
         return t >= 4
             ? o.intl.format(o.t.qfo6KS, {
-                  usernameHook1: () => c(_[0]),
-                  usernameHook2: () => c(_[1]),
+                  usernameHook1: () => d(c[0]),
+                  usernameHook2: () => d(c[1]),
                   numberOfOtherUsers: t - e.length
               })
             : 3 === t
               ? o.intl.format(o.t['67ZE+/'], {
-                    usernameHook1: () => c(_[0]),
-                    usernameHook2: () => c(_[1])
+                    usernameHook1: () => d(c[0]),
+                    usernameHook2: () => d(c[1])
                 })
               : 2 === t
                 ? o.intl.format(o.t.veV4IC, {
-                      usernameHook1: () => c(_[0]),
-                      usernameHook2: () => c(_[1])
+                      usernameHook1: () => d(c[0]),
+                      usernameHook2: () => d(c[1])
                   })
-                : o.intl.format(o.t['4WHCtr'], { usernameHook: () => c(_[0]) });
+                : o.intl.format(o.t['4WHCtr'], { usernameHook: () => d(c[0]) });
     };

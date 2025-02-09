@@ -12,7 +12,7 @@ var r = n(120356),
     o = n(410030),
     l = n(325767),
     u = n(474936),
-    c = n(756232);
+    c = n(139577);
 let d = 'premium_new_tier_2_gradient',
     f = 'premium_old_tier_2_gradient';
 function _(e) {

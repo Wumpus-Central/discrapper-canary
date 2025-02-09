@@ -37,8 +37,8 @@ var i = n(200651),
     v = n(249458),
     y = n(313201),
     I = n(540059),
-    b = n(688465),
-    T = n(425886),
+    T = n(688465),
+    b = n(425886),
     S = n(80966),
     A = n(593545),
     N = n(479313),
@@ -46,10 +46,10 @@ var i = n(200651),
     R = n(505953),
     O = n(695346),
     D = n(201542),
-    x = n(306680),
-    L = n(594174),
-    P = n(259580),
-    w = n(626135),
+    L = n(306680),
+    x = n(594174),
+    w = n(259580),
+    P = n(626135),
     M = n(823379),
     k = n(589530),
     U = n(709054),
@@ -58,7 +58,7 @@ var i = n(200651),
     Z = n(420212),
     F = n(814249),
     V = n(388032),
-    j = n(89111);
+    j = n(137046);
 let H = {
         delay: 300,
         position: 'top'
@@ -101,7 +101,7 @@ function z(e) {
     let f = () => !1;
     return (0, i.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(T.Z, {
+            (0, i.jsx)(b.Z, {
                 ...u,
                 onVolumeChange: c,
                 onMute: d,
@@ -263,7 +263,7 @@ let ei = (e) => {
                                                   type: 'button',
                                                   onClick: n,
                                                   className: j.barButtonAlt,
-                                                  children: [en(t), (0, i.jsx)(P.Z, { className: j.barButtonIcon })]
+                                                  children: [en(t), (0, i.jsx)(w.Z, { className: j.barButtonIcon })]
                                               })
                                     })
                                   : (0, i.jsx)(d.$jN, {
@@ -315,7 +315,7 @@ function ea(e) {
     let { content: t, channelId: n } = e,
         [a] = r.useState(() => (0, y.hQ)('NewMessagesBarJumpToNewMessages_')),
         o = r.useCallback(() => {
-            let e = x.ZP.ackMessageId(n);
+            let e = L.ZP.ackMessageId(n);
             null != e
                 ? f.Z.jumpToMessage({
                       channelId: n,
@@ -378,7 +378,7 @@ function es(e) {
     let { channel: o, content: p, scrollManager: h } = e,
         { disableInteractions: E } = r.useContext(v.G),
         [y, I] = r.useState(null),
-        T = r.useRef(null),
+        b = r.useRef(null),
         [S, A] = r.useState(null),
         O = r.useRef(null),
         D = (0, c.Wu)(
@@ -392,7 +392,7 @@ function es(e) {
         k = (0, g.Z)(D);
     r.useEffect(() => {
         l().isEqual(k, D) ||
-            w.default.track(B.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
+            P.default.track(B.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: D.length,
                 message_counts: D.map((e) => e.count),
                 start_message_ids: D.map((e) => e.startId),
@@ -404,7 +404,7 @@ function es(e) {
             });
     }, [D, k, o.guild_id, o.id, o.type]);
     let G = (0, c.e7)(
-            [L.default],
+            [x.default],
             () => {
                 var e;
                 return null !==
@@ -418,7 +418,7 @@ function es(e) {
                                       : t
                                             .map((e) => {
                                                 var t;
-                                                return null !== (t = L.default.getUser(e)) && void 0 !== t ? t : null;
+                                                return null !== (t = x.default.getUser(e)) && void 0 !== t ? t : null;
                                             })
                                             .filter(M.lm);
                               })) && void 0 !== e
@@ -458,7 +458,7 @@ function es(e) {
         ),
         [z, q] = r.useState(!1),
         Q = r.useCallback(() => {
-            w.default.track(B.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            P.default.track(B.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !z,
                 num_summaries: D.length,
                 message_counts: D.map((e) => e.count),
@@ -485,7 +485,7 @@ function es(e) {
                 };
                 h.removeAutomaticAnchorCallback(K),
                     h.addScrollCompleteCallback(i),
-                    w.default.track(B.rMx.SUMMARIES_TOPIC_CLICKED, {
+                    P.default.track(B.rMx.SUMMARIES_TOPIC_CLICKED, {
                         source: t,
                         message_id: n.startId,
                         guild_id: o.guild_id,
@@ -518,9 +518,9 @@ function es(e) {
     let $ = r.useCallback(
         (e) => {
             var t;
-            !((0, u.k)(e.target) && (null === (t = T.current) || void 0 === t ? void 0 : t.contains(e.target))) &&
+            !((0, u.k)(e.target) && (null === (t = b.current) || void 0 === t ? void 0 : t.contains(e.target))) &&
                 (z &&
-                    w.default.track(B.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+                    P.default.track(B.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
                         num_summaries: D.length,
                         message_counts: D.map((e) => e.count),
@@ -568,7 +568,7 @@ function es(e) {
             [D, G, X, J, o]
         ),
         et = r.useCallback(() => {
-            let e = x.ZP.ackMessageId(o.id);
+            let e = L.ZP.ackMessageId(o.id);
             null != e
                 ? f.Z.jumpToMessage({
                       channelId: o.id,
@@ -592,7 +592,7 @@ function es(e) {
         E
             ? null
             : (0, i.jsxs)('div', {
-                  ref: T,
+                  ref: b,
                   className: s()(j.newTopicsBarContainer, j.containerMarginTop),
                   children: [
                       (0, i.jsx)('div', {
@@ -617,10 +617,10 @@ function es(e) {
                                           className: s()(j.newTopicsBarCompact, j.newTopicsBarText),
                                           children: ei
                                       }),
-                                      (0, i.jsx)(P.Z, {
+                                      (0, i.jsx)(w.Z, {
                                           width: 16,
                                           height: 16,
-                                          direction: P.Z.Directions.DOWN,
+                                          direction: w.Z.Directions.DOWN,
                                           className: j.newTopicsBarCaret
                                       })
                                   ]
@@ -670,7 +670,7 @@ function es(e) {
                                                       lineClamp: 1,
                                                       children: V.intl.string(V.t.q21fUl)
                                                   }),
-                                                  (0, i.jsx)(b.Z, { className: j.summariesBetaTag })
+                                                  (0, i.jsx)(T.Z, { className: j.summariesBetaTag })
                                               ]
                                           }),
                                           (0, i.jsx)(d.P3F, {
@@ -708,7 +708,7 @@ function eu(e) {
         { disableInteractions: p } = r.useContext(v.G),
         [h, E] = r.useState(null),
         y = r.useRef(null),
-        [I, T] = r.useState(null),
+        [I, b] = r.useState(null),
         S = r.useRef(null),
         A = (0, c.Wu)(
             [C.Z],
@@ -721,7 +721,7 @@ function eu(e) {
         O = (0, g.Z)(A);
     r.useEffect(() => {
         l().isEqual(O, A) ||
-            w.default.track(B.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
+            P.default.track(B.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: A.length,
                 message_counts: A.map((e) => e.count),
                 start_message_ids: A.map((e) => e.startId),
@@ -733,7 +733,7 @@ function eu(e) {
             });
     }, [A, O, o.guild_id, o.id, o.type]);
     let D = (0, c.e7)(
-            [L.default],
+            [x.default],
             () => {
                 var e;
                 return null !==
@@ -747,7 +747,7 @@ function eu(e) {
                                       : t
                                             .map((e) => {
                                                 var t;
-                                                return null !== (t = L.default.getUser(e)) && void 0 !== t ? t : null;
+                                                return null !== (t = x.default.getUser(e)) && void 0 !== t ? t : null;
                                             })
                                             .filter(M.lm);
                               })) && void 0 !== e
@@ -757,11 +757,11 @@ function eu(e) {
             [A],
             el
         ),
-        x = null !== (n = (0, c.e7)([C.Z], () => C.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
-        k = null == A ? void 0 : null === (t = A[x]) || void 0 === t ? void 0 : t.topic;
+        L = null !== (n = (0, c.e7)([C.Z], () => C.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+        k = null == A ? void 0 : null === (t = A[L]) || void 0 === t ? void 0 : t.topic;
     null == k && null == h && (null == A ? void 0 : A.length) >= 1 && (k = null === (a = A[0]) || void 0 === a ? void 0 : a.topic);
-    let U = r.useMemo(() => l().get(A, x - 1), [x, A]),
-        G = r.useMemo(() => l().get(A, x + 1), [x, A]),
+    let U = r.useMemo(() => l().get(A, L - 1), [L, A]),
+        G = r.useMemo(() => l().get(A, L + 1), [L, A]),
         Z = r.useMemo(
             () =>
                 l().debounce((e) => {
@@ -789,7 +789,7 @@ function eu(e) {
         ),
         [W, K] = r.useState(!1),
         z = r.useCallback(() => {
-            w.default.track(B.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            P.default.track(B.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !W,
                 num_summaries: A.length,
                 message_counts: A.map((e) => e.count),
@@ -816,7 +816,7 @@ function eu(e) {
                 };
                 _.removeAutomaticAnchorCallback(Y),
                     _.addScrollCompleteCallback(i),
-                    w.default.track(B.rMx.SUMMARIES_TOPIC_CLICKED, {
+                    P.default.track(B.rMx.SUMMARIES_TOPIC_CLICKED, {
                         source: t,
                         message_id: n.startId,
                         guild_id: o.guild_id,
@@ -835,16 +835,16 @@ function eu(e) {
             [A, o, Y, _]
         ),
         Q = r.useCallback(() => {
-            q(x - 1, F.DZ.PILL_NEXT_ARROW);
-        }, [q, x]),
+            q(L - 1, F.DZ.PILL_NEXT_ARROW);
+        }, [q, L]),
         X = r.useCallback(() => {
-            q(x + 1, F.DZ.PILL_PREVIOUS_ARROW);
-        }, [x, q]),
+            q(L + 1, F.DZ.PILL_PREVIOUS_ARROW);
+        }, [L, q]),
         J = r.useCallback((e) => {
             var t;
             K(e);
             let n = null === (t = S.current) || void 0 === t ? void 0 : t.scrollTop;
-            null != n && T(n);
+            null != n && b(n);
         }, []);
     r.useEffect(() => {
         if (null != I && W) {
@@ -857,7 +857,7 @@ function eu(e) {
             var t;
             !((0, u.k)(e.target) && (null === (t = y.current) || void 0 === t ? void 0 : t.contains(e.target))) &&
                 (W &&
-                    w.default.track(B.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+                    P.default.track(B.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
                         num_summaries: A.length,
                         message_counts: A.map((e) => e.count),
@@ -937,10 +937,10 @@ function eu(e) {
                                               variant: 'text-sm/medium',
                                               children: et
                                           }),
-                                          (0, i.jsx)(P.Z, {
+                                          (0, i.jsx)(w.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: P.Z.Directions.DOWN,
+                                              direction: w.Z.Directions.DOWN,
                                               className: j.topicsPillDropdownCaret
                                           })
                                       ]
@@ -953,20 +953,20 @@ function eu(e) {
                                           'aria-label': V.intl.string(V.t['4huCnJ']),
                                           onClick: X,
                                           className: s()(j.topicsPillCaret, j.topicsCaretLeft, { [j.topicsPillCaretDisabled]: null == G }),
-                                          children: (0, i.jsx)(P.Z, {
+                                          children: (0, i.jsx)(w.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: P.Z.Directions.UP
+                                              direction: w.Z.Directions.UP
                                           })
                                       }),
                                       (0, i.jsx)(d.P3F, {
                                           'aria-label': V.intl.string(V.t['58KOoK']),
                                           onClick: Q,
                                           className: s()(j.topicsPillCaret, j.topicsCaretRight, { [j.topicsPillCaretDisabled]: null == U }),
-                                          children: (0, i.jsx)(P.Z, {
+                                          children: (0, i.jsx)(w.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: P.Z.Directions.DOWN
+                                              direction: w.Z.Directions.DOWN
                                           })
                                       })
                                   ]
@@ -996,7 +996,7 @@ function eu(e) {
                                                       lineClamp: 1,
                                                       children: V.intl.string(V.t.q21fUl)
                                                   }),
-                                                  (0, i.jsx)(b.Z, { className: j.summariesBetaTag })
+                                                  (0, i.jsx)(T.Z, { className: j.summariesBetaTag })
                                               ]
                                           }),
                                           (0, i.jsx)(d.P3F, {

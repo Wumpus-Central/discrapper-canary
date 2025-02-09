@@ -3,7 +3,7 @@ var i = n(200651);
 n(192379);
 var r = n(119837),
     a = n(802433),
-    s = n(264275);
+    s = n(854015);
 let o = (e) => {
     var t, n, o, l;
     let { layerConfig: u, animationType: c, ticking: d, time: f, accessibilityLabel: _, hasPlayedThrough: p, setHasPlayedThrough: h, urlQueryString: m, maxLoops: g, loopEnd: E, bannerAdjustment: v } = e,

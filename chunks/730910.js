@@ -30,7 +30,7 @@ var i = n(200651),
     A = n(976269),
     L = n(981631),
     D = n(388032),
-    O = n(203035);
+    O = n(299602);
 function k() {
     let e = (0, o.e7)([C.Z], () => C.Z.getGuild());
     return null == e ? null : (0, i.jsx)(P, { guild: e });

@@ -1,17 +1,17 @@
-n.d(t, { Z: () => h }), n(47120), n(653041);
+n.d(t, { Z: () => d }), n(47120), n(653041);
 var i = n(836560),
     s = n(358085),
     l = n(998502),
     r = n(13140),
-    o = n(981631);
-let a = [],
-    d = (e, t, n) => {
+    a = n(981631);
+let o = [],
+    c = (e, t, n) => {
         let i = (0, s.isWindows)() ? 0 : 1;
-        (e !== o.MoX.MOUSE_BUTTON || n !== i) && a.forEach((i) => i._handleEvent(e, t, n));
+        (e !== a.MoX.MOUSE_BUTTON || n !== i) && o.forEach((i) => i._handleEvent(e, t, n));
     };
-class h extends i.EventEmitter {
+class d extends i.EventEmitter {
     destroy() {
-        this.removeAllListeners(), 0 === (a = a.filter((e) => e !== this)).length && l.ZP.setOnInputEventCallback(null);
+        this.removeAllListeners(), 0 === (o = o.filter((e) => e !== this)).length && l.ZP.setOnInputEventCallback(null);
     }
     toString() {
         return (0, r.BB)(this.combo);
@@ -36,7 +36,7 @@ class h extends i.EventEmitter {
                       writable: !0
                   })
                 : (this[e] = t),
-            a.push(this),
-            1 === a.length && l.ZP.setOnInputEventCallback(d);
+            o.push(this),
+            1 === o.length && l.ZP.setOnInputEventCallback(c);
     }
 }

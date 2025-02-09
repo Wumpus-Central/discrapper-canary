@@ -18,8 +18,8 @@ var i,
     v = n(594174),
     y = n(979651),
     I = n(938475),
-    b = n(501655),
-    T = n(88751),
+    T = n(501655),
+    b = n(88751),
     S = n(427679);
 function A(e, t, n) {
     return (
@@ -45,13 +45,13 @@ function D(e) {
     var t;
     return null !== (t = e.getGuildId()) && void 0 !== t ? t : N;
 }
-function x(e) {
+function L(e) {
     return C.values(null != e ? e : void 0, !0).map((e) => {
         let { id: t } = e;
         return t;
     });
 }
-function L(e) {
+function x(e) {
     R.has(e) ||
         (R.add(e),
         o()(p.Z.getMutableGuildChannelsForGuild(e))
@@ -60,15 +60,15 @@ function L(e) {
                 M(e) && C.set(e.id, e);
             }));
 }
-function P(e) {
+function w(e) {
     let t = O[e];
     if (null != t) return t;
     let n = p.Z.getChannel(e);
-    return null != n && n.isGuildStageVoice() && (L(n.guild_id), M(n)) ? w(e) : null;
+    return null != n && n.isGuildStageVoice() && (x(n.guild_id), M(n)) ? P(e) : null;
 }
-function w(e) {
+function P(e) {
     let t = O[e];
-    return null == t && ((t = new b.ZP(e)), (O[e] = t), t.rebuild()), t;
+    return null == t && ((t = new T.ZP(e)), (O[e] = t), t.rebuild()), t;
 }
 function M(e) {
     return null != e && e.isGuildStageVoice() && I.ZP.countVoiceStatesForChannel(e.id) > 0;
@@ -78,14 +78,14 @@ function k(e, t) {
     return null != n && n.isGuildStageVoice() ? (0 === t.size() ? Z(n.id) : null == C.get(n.id) && C.set(n.id, n)) : Z(e);
 }
 function U(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x();
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L();
     return t.reduce((t, n) => {
-        let i = w(n);
+        let i = P(n);
         return e(i) ? (k(n, i), !0) : t;
     }, !1);
 }
 function G(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x();
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L();
     return U((t) => t.updateParticipant(e), t);
 }
 function B(e) {
@@ -120,7 +120,7 @@ function H(e) {
 }
 function Y(e) {
     let t = !1;
-    for (let n of x(e.guildId)) t = w(n).rebuild() || t;
+    for (let n of L(e.guildId)) t = P(n).rebuild() || t;
     return t;
 }
 function W(e) {
@@ -161,42 +161,42 @@ function J(e) {
 }
 function $(e) {
     let { guildId: t } = e;
-    if (R.has(t)) return U((e) => e.rebuild(), x(t));
+    if (R.has(t)) return U((e) => e.rebuild(), L(t));
 }
 let ee = [];
 class et extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(_.default, v.default, p.Z, E.Z, y.Z, m.Z, I.ZP, h.Z, T.ZP, g.Z, S.Z, f.Z);
+        this.waitFor(_.default, v.default, p.Z, E.Z, y.Z, m.Z, I.ZP, h.Z, b.ZP, g.Z, S.Z, f.Z);
     }
     getParticipantsVersion(e) {
         var t, n;
-        return null == e ? -1 : null !== (n = null === (t = P(e)) || void 0 === t ? void 0 : t.version) && void 0 !== n ? n : -1;
+        return null == e ? -1 : null !== (n = null === (t = w(e)) || void 0 === t ? void 0 : t.version) && void 0 !== n ? n : -1;
     }
     getMutableParticipants(e, t) {
         var n, i;
-        return null == e ? ee : null !== (i = null === (n = P(e)) || void 0 === n ? void 0 : n.toArray(t)) && void 0 !== i ? i : ee;
+        return null == e ? ee : null !== (i = null === (n = w(e)) || void 0 === n ? void 0 : n.toArray(t)) && void 0 !== i ? i : ee;
     }
     getMutableRequestToSpeakParticipants(e) {
         var t, n;
-        return null !== (n = null === (t = P(e)) || void 0 === t ? void 0 : t.getRequestToSpeakParticipants()) && void 0 !== n ? n : ee;
+        return null !== (n = null === (t = w(e)) || void 0 === t ? void 0 : t.getRequestToSpeakParticipants()) && void 0 !== n ? n : ee;
     }
     getRequestToSpeakParticipantsVersion(e) {
         var t, n;
-        return null !== (n = null === (t = P(e)) || void 0 === t ? void 0 : t.requestToSpeakVersion) && void 0 !== n ? n : -1;
+        return null !== (n = null === (t = w(e)) || void 0 === t ? void 0 : t.requestToSpeakVersion) && void 0 !== n ? n : -1;
     }
     getParticipantCount(e, t) {
         var n, i;
-        return null !== (i = null === (n = P(e)) || void 0 === n ? void 0 : n.size(t)) && void 0 !== i ? i : 0;
+        return null !== (i = null === (n = w(e)) || void 0 === n ? void 0 : n.size(t)) && void 0 !== i ? i : 0;
     }
     getChannels(e) {
-        return L(null != e ? e : N), C.values(null != e ? e : N);
+        return x(null != e ? e : N), C.values(null != e ? e : N);
     }
     getChannelsVersion() {
         return C.version;
     }
     getParticipant(e, t) {
         var n, i;
-        return null !== (i = null === (n = P(e)) || void 0 === n ? void 0 : n.getParticipant(t)) && void 0 !== i ? i : null;
+        return null !== (i = null === (n = w(e)) || void 0 === n ? void 0 : n.getParticipant(t)) && void 0 !== i ? i : null;
     }
 }
 A(et, 'displayName', 'StageChannelParticipantStore');

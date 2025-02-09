@@ -1,7 +1,7 @@
 n.d(t, {
-    En: () => L,
+    En: () => x,
     dY: () => C,
-    eC: () => x,
+    eC: () => L,
     jz: () => O,
     kC: () => S,
     l3: () => R,
@@ -39,12 +39,12 @@ function I(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function b(e, t, n) {
+function T(e, t, n) {
     if ((null != t && p.test(t.name)) || h.test(n.url)) return !1;
     let i = null != n.proxy_url || /^https:/i.test(n.url);
     return null != e && d.default.extractTimestamp(e) < g && (i = i && null != t && m.test(t.name)), i;
 }
-function T(e) {
+function b(e) {
     let { url: t, proxy_url: n, width: i, height: r, placeholder: a, placeholder_version: s, flags: o } = e,
         d = l.Z.getCurrentConfig({ location: 'embed_utils_sanitize_media' }).enabled || u.Z.getCurrentConfig({ location: 'embed_utils_sanitize_media' }).enabled;
     return {
@@ -97,13 +97,13 @@ function S(e, t, n) {
         switch (i.type) {
             case f.hBH.ARTICLE:
             case f.hBH.IMAGE:
-                i.image = T(n.thumbnail);
+                i.image = b(n.thumbnail);
                 break;
             default:
-                i.thumbnail = T(n.thumbnail);
+                i.thumbnail = b(n.thumbnail);
         }
     if (
-        (null != n.image && I(n.image) && (i.image = T(n.image)),
+        (null != n.image && I(n.image) && (i.image = b(n.image)),
         null != n.video &&
             (null == i.thumbnail &&
                 null != n.video.proxy_url &&
@@ -113,7 +113,7 @@ function S(e, t, n) {
                     height: n.video.height,
                     url: A(n.video.proxy_url, { format: 'webp' })
                 }),
-            null != i.thumbnail && I(n.video) && b(t, n.provider, n.video) && (i.video = T(n.video))),
+            null != i.thumbnail && I(n.video) && T(t, n.provider, n.video) && (i.video = b(n.video))),
         _.k.has(i.type))
     ) {
         var a;
@@ -184,9 +184,9 @@ function D(e, t, n) {
                 maxMediaHeight: 300
             };
 }
-function x(e, t) {
+function L(e, t) {
     return e.isPrivate() ? !e.isManaged() : t.can(f.Plq.EMBED_LINKS, e);
 }
-function L(e) {
+function x(e) {
     return '' !== e.content || e.messageSnapshots.some((e) => '' !== e.message.content || e.message.attachments.length > 0);
 }

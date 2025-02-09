@@ -1,11 +1,11 @@
 n.d(t, {
     R$: () => p,
-    ZP: () => m
+    ZP: () => g
 });
 var i = n(913527),
     r = n.n(i),
-    a = n(990547),
-    l = n(570140),
+    l = n(990547),
+    a = n(570140),
     o = n(479531),
     s = n(771308),
     c = n(314897),
@@ -13,8 +13,8 @@ var i = n(913527),
     u = n(573261),
     h = n(959776),
     _ = n(981631),
-    g = n(723359);
-function m(e) {
+    m = n(723359);
+function g(e) {
     let { invite: t = null, giftCodeSKUId: n = null, ...i } = e;
     return p({
         ...i,
@@ -23,14 +23,14 @@ function m(e) {
     });
 }
 function p(e) {
-    let { email: t, phoneToken: n, username: i, globalName: m, consent: p, password: f, guildTemplateCode: E, birthday: x, invite: I = null, giftCodeSKUId: C = null, promoEmailConsent: v = null, usedUsernameSuggestion: N = null } = e;
+    let { email: t, phoneToken: n, username: i, globalName: g, consent: p, password: f, guildTemplateCode: E, birthday: x, invite: I = null, giftCodeSKUId: C = null, promoEmailConsent: v = null, usedUsernameSuggestion: N = null } = e;
     return (
-        l.Z.dispatch({ type: 'REGISTER' }),
+        a.Z.dispatch({ type: 'REGISTER' }),
         null != x &&
             ((0, h.Z)(x, _.jXE.REGISTER),
             d.default.track(_.rMx.AGE_GATE_ACTION, {
-                source: g.L0.REGISTER,
-                action: g.Al.AGE_GATE_SUBMITTED
+                source: m.L0.REGISTER,
+                action: m.Al.AGE_GATE_SUBMITTED
             }),
             (function (e) {
                 let t;
@@ -43,7 +43,7 @@ function p(e) {
                 fingerprint: c.default.getFingerprint(),
                 email: t,
                 username: i,
-                global_name: m,
+                global_name: g,
                 password: f,
                 invite: I,
                 consent: p,
@@ -54,7 +54,7 @@ function p(e) {
                 promotional_email_opt_in: null == v ? void 0 : v.checked
             },
             trackedActionData: {
-                event: a.NetworkActionNames.USER_REGISTER,
+                event: l.NetworkActionNames.USER_REGISTER,
                 properties: {
                     invite_code: I,
                     used_username_suggestion: N,
@@ -66,19 +66,19 @@ function p(e) {
             rejectWithError: !1
         }).then(
             (e) => {
-                l.Z.dispatch({
+                a.Z.dispatch({
                     type: 'REGISTER_SUCCESS',
                     token: e.body.token
                 }),
                     d.default.track(_.rMx.AGE_GATE_ACTION, {
-                        source: g.L0.REGISTER,
-                        action: g.Al.AGE_GATE_SUCCESS
+                        source: m.L0.REGISTER,
+                        action: m.Al.AGE_GATE_SUCCESS
                     });
             },
             (e) => {
                 let t = new o.Z(e);
                 throw (
-                    (null != t.getFieldErrors('date_of_birth') && s.wE(g.L0.REGISTER),
+                    (null != t.getFieldErrors('date_of_birth') && s.wE(m.L0.REGISTER),
                     d.default.track(_.rMx.REGISTER_SUBMIT_ERRORED, {
                         is_unique_username_registration: !0,
                         email_error_reason: t.getFirstFieldErrorMessage('email'),

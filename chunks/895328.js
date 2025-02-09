@@ -1,23 +1,23 @@
 n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(481060),
-    a = n(719878),
-    o = n(232186),
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    l = n(758271),
+    o = n(814632),
     c = n(398008);
 let d = (e) => {
     let { text: t, className: n } = e;
     return (0, i.jsxs)('div', {
-        className: r()(n, a.empty),
+        className: a()(n, l.empty),
         children: [
             (0, i.jsx)('img', {
-                className: a.image,
+                className: l.image,
                 src: c,
                 alt: ''
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(s.Text, {
                 className: o.marginTop8,
                 variant: 'text-sm/medium',
                 color: 'text-muted',

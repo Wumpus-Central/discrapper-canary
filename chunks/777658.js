@@ -26,7 +26,7 @@ function f(e) {
     function A() {
         (0, s.ZDy)(
             async () => {
-                let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 794106));
+                let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
                 return (t) =>
                     (0, i.jsx)(e, {
                         header: d.intl.formatToPlainString(d.t.fPLvZW, { name: g }),

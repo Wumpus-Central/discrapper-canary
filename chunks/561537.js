@@ -1,11 +1,11 @@
 n.d(t, { l: () => o });
 var i = n(200651),
     s = n(192379),
-    r = n(557533),
-    l = n.n(r),
-    a = n(742493);
+    l = n(557533),
+    r = n.n(l),
+    a = n(979393);
 function o(e) {
-    let { className: t, header: n, headerClassName: r, children: o } = e,
+    let { className: t, header: n, headerClassName: l, children: o } = e,
         c = s.useMemo(() => {
             let e = !1;
             return (
@@ -16,10 +16,10 @@ function o(e) {
             );
         }, [o]);
     return (0, i.jsxs)('div', {
-        className: l()(a.wrapper, t),
+        className: r()(a.wrapper, t),
         children: [
             (0, i.jsx)('div', {
-                className: l()(a.header, r),
+                className: r()(a.header, l),
                 children: n
             }),
             c &&

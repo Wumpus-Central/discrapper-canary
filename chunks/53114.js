@@ -376,16 +376,16 @@ class E extends a.Z {
                 duration_decoder_unknown: p(e.decoderBuckets[f.gr.UNKNOWN]),
                 ...h
             },
-            { bytes: g, framesDropped: E, framesCodecError: v, framesCodec: y, framesNetwork: I, packets: b, packetsLost: T, nackCount: S, pliCount: A, qpSum: N, pauseCount: C, freezeCount: R, totalPausesDuration: O, totalFreezesDuration: D, totalFramesDuration: x, keyframes: L, passthroughCount: P, cryptorSuccessCount: w, cryptorFailureCount: M, cryptorDuration: k, cryptorAttempts: U, cryptorMissingKeyCount: G, cryptorInvalidNonceCount: B, qualityDecodeErrors: Z, qualityDecoderReboots: F, qualityScoreErrors: V, qualityFrameDrops: j, qualitySizeMismatches: H } = e.aggregatedProperties;
+            { bytes: g, framesDropped: E, framesCodecError: v, framesCodec: y, framesNetwork: I, packets: T, packetsLost: b, nackCount: S, pliCount: A, qpSum: N, pauseCount: C, freezeCount: R, totalPausesDuration: O, totalFreezesDuration: D, totalFramesDuration: L, keyframes: x, passthroughCount: w, cryptorSuccessCount: P, cryptorFailureCount: M, cryptorDuration: k, cryptorAttempts: U, cryptorMissingKeyCount: G, cryptorInvalidNonceCount: B, qualityDecodeErrors: Z, qualityDecoderReboots: F, qualityScoreErrors: V, qualityFrameDrops: j, qualitySizeMismatches: H } = e.aggregatedProperties;
         return (
-            e instanceof f.nt ? ((m.sender_freeze_count = R), (m.sender_total_freezes_duration = D), (m.sender_total_frames_duration = x)) : ((m.receiver_freeze_count = R), (m.receiver_total_freezes_duration = D), (m.receiver_total_frames_duration = x), (m.receiver_pause_count = C), (m.receiver_total_pauses_duration = O)),
+            e instanceof f.nt ? ((m.sender_freeze_count = R), (m.sender_total_freezes_duration = D), (m.sender_total_frames_duration = L)) : ((m.receiver_freeze_count = R), (m.receiver_total_freezes_duration = D), (m.receiver_total_frames_duration = L), (m.receiver_pause_count = C), (m.receiver_total_pauses_duration = O)),
             {
                 ...m,
                 avg_bitrate: i > 0 ? Math.round(((null != g ? g : 0) * 8) / i) : 0,
                 avg_fps: i > 0 ? Math.round((null != y ? y : 0) / i) : 0,
                 num_bytes: g,
-                num_packets_lost: T,
-                num_packets: b,
+                num_packets_lost: b,
+                num_packets: T,
                 num_frames: I,
                 num_frames_codec_error: v,
                 time_to_first_frame_ms: e.timeToFirstFrame,
@@ -393,9 +393,9 @@ class E extends a.Z {
                 num_nacks: S,
                 num_plis: A,
                 qp_sum: N,
-                num_keyframes: L,
-                cryptor_passthrough_count: P,
-                cryptor_success_count: w,
+                num_keyframes: x,
+                cryptor_passthrough_count: w,
+                cryptor_success_count: P,
                 cryptor_failure_count: M,
                 cryptor_duration: k,
                 cryptor_attempts: U,
@@ -440,12 +440,12 @@ class E extends a.Z {
                         v,
                         y,
                         I,
-                        b = !0;
+                        T = !0;
                     if (this.connection.context === s.Yn.STREAM) {
-                        var T = this.connection.getRemoteVideoSinkWants(t);
-                        (null == T || 0 === T) && (null == A ? void 0 : A.quality) === _ && (T = this.connection.getRemoteVideoSinkWants('any')), (b = (null != T ? T : 0) > 0);
+                        var b = this.connection.getRemoteVideoSinkWants(t);
+                        (null == b || 0 === b) && (null == A ? void 0 : A.quality) === _ && (b = this.connection.getRemoteVideoSinkWants('any')), (T = (null != b ? b : 0) > 0);
                     }
-                    let N = this.videoStopped.value || !b;
+                    let N = this.videoStopped.value || !T;
                     if ((N !== S.isVideoStopped && S.setVideoStopped(N, f.Mq.SenderStopped), !N)) {
                         S.appendAndIncrementStats(f.z4.parseOutboundStats(i, e)), S.encoderCodec !== f.u7.UNKNOWN && c.add(S.encoderCodec);
                         let t = null == A ? void 0 : A.maxBitrate;

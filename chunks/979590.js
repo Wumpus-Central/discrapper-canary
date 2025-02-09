@@ -156,12 +156,12 @@
     function I(e) {
         return u(e).desaturate(100);
     }
-    function b(e, t) {
+    function T(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = u(e).toHsl();
         return (n.l += t / 100), (n.l = U(n.l)), u(n);
     }
-    function T(e, t) {
+    function b(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = u(e).toRgb();
         return (n.r = o(0, s(255, n.r - a(-((t / 100) * 255))))), (n.g = o(0, s(255, n.g - a(-((t / 100) * 255))))), (n.b = o(0, s(255, n.b - a(-((t / 100) * 255))))), u(n);
@@ -244,7 +244,7 @@
         for (i.h = (i.h - ((r * t) >> 1) + 720) % 360; --t; ) (i.h = (i.h + r) % 360), a.push(u(i));
         return a;
     }
-    function x(e, t) {
+    function L(e, t) {
         t = t || 6;
         for (var n = u(e).toHsv(), i = n.h, r = n.s, a = n.v, s = [], o = 1 / t; t--; )
             s.push(
@@ -359,7 +359,7 @@
             return 1 == this._a ? 'rgb(' + a(100 * k(this._r, 255)) + '%, ' + a(100 * k(this._g, 255)) + '%, ' + a(100 * k(this._b, 255)) + '%)' : 'rgba(' + a(100 * k(this._r, 255)) + '%, ' + a(100 * k(this._g, 255)) + '%, ' + a(100 * k(this._b, 255)) + '%, ' + this._roundA + ')';
         },
         toName: function () {
-            return 0 === this._a ? 'transparent' : !(this._a < 1) && (P[m(this._r, this._g, this._b, !0)] || !1);
+            return 0 === this._a ? 'transparent' : !(this._a < 1) && (w[m(this._r, this._g, this._b, !0)] || !1);
         },
         toFilter: function (e) {
             var t = '#' + E(this._r, this._g, this._b, this._a),
@@ -386,10 +386,10 @@
             return (this._r = n._r), (this._g = n._g), (this._b = n._b), this.setAlpha(n._a), this;
         },
         lighten: function () {
-            return this._applyModification(b, arguments);
+            return this._applyModification(T, arguments);
         },
         brighten: function () {
-            return this._applyModification(T, arguments);
+            return this._applyModification(b, arguments);
         },
         darken: function () {
             return this._applyModification(S, arguments);
@@ -416,7 +416,7 @@
             return this._applyCombination(N, arguments);
         },
         monochromatic: function () {
-            return this._applyCombination(x, arguments);
+            return this._applyCombination(L, arguments);
         },
         splitcomplement: function () {
             return this._applyCombination(O, arguments);
@@ -496,7 +496,7 @@
                 ? o
                 : ((n.includeFallbackColors = !1), u.mostReadable(e, ['#fff', '#000'], n));
         });
-    var L = (u.names = {
+    var x = (u.names = {
             aliceblue: 'f0f8ff',
             antiquewhite: 'faebd7',
             aqua: '0ff',
@@ -647,8 +647,8 @@
             yellow: 'ff0',
             yellowgreen: '9acd32'
         }),
-        P = (u.hexNames = w(L));
-    function w(e) {
+        w = (u.hexNames = P(x));
+    function P(e) {
         var t = {};
         for (var n in e) e.hasOwnProperty(n) && (t[e[n]] = n);
         return t;
@@ -710,7 +710,7 @@
         e = e.replace(n, '').replace(i, '').toLowerCase();
         var t,
             r = !1;
-        if (L[e]) (e = L[e]), (r = !0);
+        if (x[e]) (e = x[e]), (r = !0);
         else if ('transparent' == e)
             return {
                 r: 0,

@@ -22,8 +22,8 @@ var i = n(200651),
     v = n(137412),
     y = n(893607),
     I = n(314897),
-    b = n(626135),
-    T = n(361207),
+    T = n(626135),
+    b = n(361207),
     S = n(690032),
     A = n(358085),
     N = n(998502),
@@ -36,22 +36,22 @@ let D = (0, h.Un)({
         webpackId: 576184,
         name: 'UnsupportedBrowser'
     }),
-    x = (0, h.Un)({
+    L = (0, h.Un)({
         createPromise: () => n.e('74023').then(n.bind(n, 431583)),
         webpackId: 431583,
         name: 'DownloadApps'
     }),
-    L = (0, h.Un)({
+    x = (0, h.Un)({
         createPromise: () => n.e('81226').then(n.bind(n, 484097)),
         webpackId: 484097,
         name: 'InviteProxy'
     }),
-    P = (0, h.Un)({
+    w = (0, h.Un)({
         createPromise: () => n.e('30556').then(n.bind(n, 675207)),
         webpackId: 675207,
         name: 'VerifyConnectedAccount'
     }),
-    w = (0, h.Un)({
+    P = (0, h.Un)({
         createPromise: () => n.e('3809').then(n.bind(n, 301001)),
         webpackId: 301001,
         name: 'VerifyConnectedAccountSuccess'
@@ -77,14 +77,14 @@ let D = (0, h.Un)({
         name: 'ActivateDevice'
     }),
     B = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('50506'), n.e('68880'), n.e('23217'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('34981'), n.e('51269'), n.e('8016'), n.e('22878'), n.e('90508'), n.e('13351'), n.e('66711'), n.e('78447'), n.e('17938'), n.e('53937'), n.e('83366'), n.e('6380'), n.e('46097'), n.e('76540'), n.e('8739'), n.e('58059'), n.e('86282'), n.e('18543'), n.e('22173'), n.e('68445'), n.e('99624'), n.e('30243'), n.e('99393'), n.e('49508'), n.e('22646'), n.e('33862'), n.e('68241'), n.e('3940'), n.e('25183'), n.e('80284'), n.e('42170'), n.e('6009'), n.e('48923'), n.e('30419'), n.e('18824'), n.e('60691'), n.e('41070'), n.e('38902'), n.e('28805'), n.e('77835'), n.e('70205'), n.e('7590'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('75878'), n.e('13001'), n.e('23919'), n.e('82734'), n.e('21881'), n.e('84804'), n.e('95910'), n.e('37220'), n.e('82158'), n.e('91315'), n.e('17434'), n.e('46815'), n.e('77803'), n.e('91523'), n.e('29906'), n.e('20011'), n.e('77567'), n.e('77830'), n.e('16987'), n.e('95468'), n.e('1272')]).then(n.bind(n, 457094)),
+        createPromise: () => Promise.all([n.e('50506'), n.e('68880'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('34981'), n.e('25292'), n.e('51269'), n.e('22878'), n.e('90508'), n.e('13351'), n.e('95477'), n.e('11212'), n.e('66711'), n.e('78447'), n.e('88682'), n.e('78258'), n.e('53937'), n.e('83366'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('86282'), n.e('18543'), n.e('28467'), n.e('22173'), n.e('99624'), n.e('30243'), n.e('99393'), n.e('49508'), n.e('33862'), n.e('68241'), n.e('25183'), n.e('80284'), n.e('90783'), n.e('6009'), n.e('28044'), n.e('60691'), n.e('38902'), n.e('44307'), n.e('8930'), n.e('27541'), n.e('70205'), n.e('7590'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('75878'), n.e('64190'), n.e('23919'), n.e('82734'), n.e('21881'), n.e('84804'), n.e('94989'), n.e('95910'), n.e('37220'), n.e('82158'), n.e('91315'), n.e('31748'), n.e('46815'), n.e('78553'), n.e('77803'), n.e('94168'), n.e('20011'), n.e('54327'), n.e('69217'), n.e('95468'), n.e('32926'), n.e('1272')]).then(n.bind(n, 457094)),
         webpackId: 457094,
         name: 'ViewsWithMainInterface',
         memo: !0,
         id: 457094
     }),
     Z = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('50506'), n.e('68880'), n.e('23217'), n.e('84605'), n.e('62729'), n.e('63288'), n.e('75492'), n.e('51269'), n.e('8016'), n.e('22878'), n.e('90508'), n.e('13351'), n.e('66711'), n.e('78447'), n.e('17938'), n.e('53937'), n.e('83366'), n.e('6380'), n.e('46097'), n.e('76540'), n.e('8739'), n.e('58059'), n.e('86282'), n.e('18543'), n.e('22173'), n.e('68445'), n.e('99624'), n.e('30243'), n.e('99393'), n.e('49508'), n.e('22646'), n.e('68241'), n.e('3940'), n.e('25183'), n.e('80284'), n.e('42170'), n.e('6009'), n.e('48923'), n.e('30419'), n.e('18824'), n.e('60691'), n.e('41070'), n.e('28805'), n.e('77835'), n.e('84466'), n.e('86133'), n.e('4877'), n.e('52030'), n.e('1337'), n.e('20011'), n.e('77567'), n.e('10778'), n.e('85325'), n.e('84956'), n.e('27978')]).then(n.bind(n, 822699)),
+        createPromise: () => Promise.all([n.e('50506'), n.e('23217'), n.e('68880'), n.e('84605'), n.e('62729'), n.e('63288'), n.e('75492'), n.e('25292'), n.e('33053'), n.e('8016'), n.e('17298'), n.e('51269'), n.e('76540'), n.e('17938'), n.e('22878'), n.e('90508'), n.e('13351'), n.e('95477'), n.e('81966'), n.e('11212'), n.e('66711'), n.e('78447'), n.e('22646'), n.e('3940'), n.e('88682'), n.e('78258'), n.e('48923'), n.e('53937'), n.e('30419'), n.e('83366'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18824'), n.e('86282'), n.e('18543'), n.e('28467'), n.e('72992'), n.e('22173'), n.e('99624'), n.e('30243'), n.e('99393'), n.e('49508'), n.e('68241'), n.e('25183'), n.e('80284'), n.e('90783'), n.e('6009'), n.e('28044'), n.e('60691'), n.e('44307'), n.e('8930'), n.e('27541'), n.e('84466'), n.e('71864'), n.e('4877'), n.e('52030'), n.e('1337'), n.e('20011'), n.e('10778'), n.e('85325'), n.e('84956'), n.e('27978')]).then(n.bind(n, 822699)),
         webpackId: 822699,
         name: 'ViewsWithAuth'
     }),
@@ -104,7 +104,7 @@ let D = (0, h.Un)({
         name: 'MobileWebHandoffFallback'
     }),
     H = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('50506'), n.e('68880'), n.e('23217'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('51269'), n.e('8016'), n.e('22878'), n.e('90508'), n.e('13351'), n.e('66711'), n.e('78447'), n.e('17938'), n.e('53937'), n.e('83366'), n.e('6380'), n.e('46097'), n.e('76540'), n.e('8739'), n.e('58059'), n.e('86282'), n.e('18543'), n.e('22173'), n.e('68445'), n.e('99624'), n.e('30243'), n.e('99393'), n.e('49508'), n.e('22646'), n.e('33862'), n.e('68241'), n.e('3940'), n.e('25183'), n.e('80284'), n.e('42170'), n.e('6009'), n.e('48923'), n.e('30419'), n.e('18824'), n.e('60691'), n.e('41070'), n.e('38902'), n.e('28805'), n.e('77835'), n.e('70205'), n.e('7590'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('75878'), n.e('13001'), n.e('23919'), n.e('82734'), n.e('84804'), n.e('95910'), n.e('37220'), n.e('82158'), n.e('91315'), n.e('17434'), n.e('46815'), n.e('91523'), n.e('29906'), n.e('77567'), n.e('77830'), n.e('45585'), n.e('63141')]).then(n.bind(n, 290161)),
+        createPromise: () => Promise.all([n.e('50506'), n.e('68880'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('25292'), n.e('51269'), n.e('22878'), n.e('90508'), n.e('13351'), n.e('95477'), n.e('11212'), n.e('66711'), n.e('78447'), n.e('88682'), n.e('53937'), n.e('83366'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('86282'), n.e('18543'), n.e('28467'), n.e('22173'), n.e('99624'), n.e('30243'), n.e('99393'), n.e('33862'), n.e('68241'), n.e('80284'), n.e('90783'), n.e('6009'), n.e('60691'), n.e('38902'), n.e('8930'), n.e('27541'), n.e('70205'), n.e('7590'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('75878'), n.e('64190'), n.e('23919'), n.e('82734'), n.e('84804'), n.e('94989'), n.e('95910'), n.e('37220'), n.e('82158'), n.e('91315'), n.e('31748'), n.e('46815'), n.e('78553'), n.e('94168'), n.e('54327'), n.e('21429'), n.e('63141')]).then(n.bind(n, 290161)),
         webpackId: 290161,
         name: 'Overlay'
     }),
@@ -170,7 +170,7 @@ class $ extends r.Component {
                                     (0, i.jsx)(p.Z, {
                                         exact: !0,
                                         path: C.Z5c.APPS,
-                                        component: x
+                                        component: L
                                     }),
                                     (0, i.jsx)(s.AW, {
                                         path: J([C.Z5c.LOGIN, C.Z5c.REGISTER, C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.RESET], R.a),
@@ -178,7 +178,7 @@ class $ extends r.Component {
                                     }),
                                     (0, i.jsx)(p.Z, {
                                         path: C.Z5c.INVITE_PROXY(y.Hw.channelId()),
-                                        component: L
+                                        component: x
                                     }),
                                     (0, i.jsx)(s.l_, {
                                         from: C.Z5c.INVITE(''),
@@ -220,7 +220,7 @@ class $ extends r.Component {
                                     }),
                                     (0, i.jsx)(p.Z, {
                                         path: C.Z5c.INVITE_PROXY(y.Hw.channelId()),
-                                        component: L
+                                        component: x
                                     }),
                                     (0, i.jsx)(s.l_, {
                                         from: C.Z5c.GIFT_CODE(''),
@@ -265,7 +265,7 @@ class $ extends r.Component {
                                     }),
                                     (0, i.jsx)(p.Z, {
                                         path: C.Z5c.CONNECTIONS_SUCCESS(':type'),
-                                        component: w
+                                        component: P
                                     }),
                                     (0, i.jsx)(p.Z, {
                                         path: C.Z5c.CONNECTIONS_ERROR(':type'),
@@ -273,18 +273,18 @@ class $ extends r.Component {
                                     }),
                                     (0, i.jsx)(p.Z, {
                                         path: C.Z5c.CONNECTIONS(':type'),
-                                        component: P
+                                        component: w
                                     }),
                                     (0, i.jsx)(p.Z, {
                                         path: C.Z5c.DOWNLOAD_QR_CODE_REDIRECT,
                                         render: () => {
                                             var e, t, n;
-                                            let i = null === (e = b.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                                            let i = null === (e = T.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
                                                 r = (0, a.parse)((null !== (n = window.location.search) && void 0 !== n ? n : '').substr(1)),
                                                 s = null === (t = r.referring_location) || void 0 === t ? void 0 : t.toString();
                                             return (
                                                 ('iOS' === i || 'Android' === i) &&
-                                                    b.default.track(C.rMx.DOWNLOAD_APP, {
+                                                    T.default.track(C.rMx.DOWNLOAD_APP, {
                                                         platform: i,
                                                         ptb: !1,
                                                         released: !0,
@@ -292,7 +292,7 @@ class $ extends r.Component {
                                                         referring_location: s,
                                                         qr_code: !0
                                                     }),
-                                                (window.location.href = (0, T.Gn)(null != s && '' !== s ? s : 'qr_code', i)),
+                                                (window.location.href = (0, b.Gn)(null != s && '' !== s ? s : 'qr_code', i)),
                                                 null
                                             );
                                         }
@@ -301,14 +301,14 @@ class $ extends r.Component {
                                         path: C.Z5c.OPEN_APP_FROM_EMAIL,
                                         render: () => {
                                             var e, t;
-                                            let n = null === (e = b.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                                            let n = null === (e = T.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
                                                 r = (0, S.o)(null !== (t = window.location.search) && void 0 !== t ? t : '');
                                             if ('iOS' !== n && 'Android' !== n) return (0, i.jsx)(s.l_, { to: null != r.desktop ? ''.concat(r.desktop.pathname).concat(r.desktop.search) : C.Z5c.APP });
                                             {
-                                                let e = (0, T.Gn)('app_open_from_email', n, r.mobile),
+                                                let e = (0, b.Gn)('app_open_from_email', n, r.mobile),
                                                     t = (0, u.zS)(e);
                                                 null != t &&
-                                                    b.default.track(C.rMx.DEEP_LINK_CLICKED, {
+                                                    T.default.track(C.rMx.DEEP_LINK_CLICKED, {
                                                         fingerprint: (0, c.K)(t.fingerprint),
                                                         attempt_id: t.attemptId,
                                                         source: t.utmSource,

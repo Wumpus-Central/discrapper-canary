@@ -1,31 +1,31 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => N }), n(47120);
 var i = n(200651),
     s = n(192379),
-    r = n(442837),
-    l = n(692547),
+    l = n(442837),
+    r = n(692547),
     a = n(481060),
     o = n(596454),
     c = n(594174),
     d = n(74538),
     u = n(242291),
-    m = n(830253),
-    g = n(792165),
-    h = n(409673),
+    h = n(830253),
+    m = n(792165),
+    g = n(409673),
     x = n(603074),
     _ = n(388032),
-    p = n(477733);
+    p = n(978135);
 function E(e) {
     let { onSelect: t } = e,
-        [n, l] = s.useState(!1),
-        o = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
+        [n, r] = s.useState(!1),
+        o = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         u = d.ZP.canUseCustomCallSounds(o);
-    function m(e) {
-        u && (l(!1), null == t || t(e));
+    function h(e) {
+        u && (r(!1), null == t || t(e));
     }
     return (0, i.jsx)(a.yRy, {
         shouldShow: n,
         position: 'left',
-        onRequestClose: () => l(!1),
+        onRequestClose: () => r(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)(a.VqE, {
@@ -35,17 +35,17 @@ function E(e) {
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: m,
-                    gridNotice: u ? null : (0, i.jsx)(g.o, {}),
+                    onSelect: h,
+                    gridNotice: u ? null : (0, i.jsx)(m.o, {}),
                     analyticsSource: 'call sounds edit setting'
                 })
             });
         },
         children: (e) =>
-            (0, i.jsx)(h.hU, {
+            (0, i.jsx)(g.hU, {
                 ...e,
                 onClick: () => {
-                    l(!n);
+                    r(!n);
                 },
                 text: _.intl.string(_.t.uOe0Aw),
                 children: (0, i.jsx)(a.vdY, {
@@ -58,7 +58,7 @@ function E(e) {
 }
 function C(e) {
     let { sound: t } = e,
-        { previewSound: n } = (0, m.Z)(t, null),
+        { previewSound: n } = (0, h.Z)(t, null),
         s =
             0 === (0, u.pI)()
                 ? _.intl.string(_.t.OASXjo)
@@ -66,7 +66,7 @@ function C(e) {
                       emojiName: t.emojiName,
                       soundName: t.name
                   });
-    return (0, i.jsx)(h.hU, {
+    return (0, i.jsx)(g.hU, {
         onClick: n,
         text: s,
         children: (0, i.jsx)(a.gj8, {
@@ -76,12 +76,12 @@ function C(e) {
         })
     });
 }
-function f(e) {
+function N(e) {
     let { sound: t, isGlobal: n, onSelect: s } = e,
-        r = null != t,
+        l = null != t,
         c = null == t ? void 0 : t.emojiId,
         d = null == t ? void 0 : t.emojiName,
-        u = r && (null != d || null != c);
+        u = l && (null != d || null != c);
     return (0, i.jsxs)('div', {
         className: p.soundButtonSettingContainer,
         children: [
@@ -114,7 +114,7 @@ function f(e) {
                                     })
                                   : t.name
                     }),
-                    r
+                    l
                         ? (0, i.jsx)(C, { sound: t })
                         : (0, i.jsx)(a.gj8, {
                               size: 'md',
@@ -127,14 +127,14 @@ function f(e) {
                 className: p.container,
                 children: [
                     (0, i.jsx)(E, { onSelect: s }),
-                    r &&
+                    l &&
                         !n &&
-                        (0, i.jsx)(h.hU, {
+                        (0, i.jsx)(g.hU, {
                             onClick: () => s(null),
                             text: _.intl.string(_.t.jmtcGB),
                             children: (0, i.jsx)(a.XHJ, {
                                 size: 'md',
-                                color: l.Z.unsafe_rawColors.RED_400.css,
+                                color: r.Z.unsafe_rawColors.RED_400.css,
                                 className: p.secondaryIcon
                             })
                         })

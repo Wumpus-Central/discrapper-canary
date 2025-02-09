@@ -33,12 +33,12 @@ let g = !1,
     v = {},
     y = new Set(),
     I = {},
-    b = {},
-    T = !1;
+    T = {},
+    b = !1;
 function S() {
     o.K.set(h, {
         ...m(),
-        activeLaunchOptionIds: b
+        activeLaunchOptionIds: T
     });
 }
 function A() {
@@ -68,24 +68,24 @@ function D(e) {
     let { applicationId: t, branchId: n, flags: i } = e,
         r = (0, d.Tu)(t, n),
         a = U(t, n);
-    null != a && !a.isHidden() && c.yE(i, _.eHb.HIDDEN) && (T = !0), y.add(r);
+    null != a && !a.isHidden() && c.yE(i, _.eHb.HIDDEN) && (b = !0), y.add(r);
 }
-function x(e) {
+function L(e) {
     let { libraryApplication: t } = e,
         n = u.Z.createFromServer(t),
         i = (0, d.Tu)(n.id, n.branchId);
     (E[i] = n), y.delete(i);
 }
-function L(e) {
+function x(e) {
     let { applicationId: t, branchId: n, launchOptionId: i } = e;
-    (b[(0, d.Tu)(t, n)] = i), S();
+    (T[(0, d.Tu)(t, n)] = i), S();
 }
-function P(e) {
+function w(e) {
     let { applicationId: t, branchId: n } = e;
     if (I[t] === n) return !1;
     (I[t] = n), A();
 }
-function w(e) {
+function P(e) {
     let { libraryApplications: t } = e;
     for (let e of t) v[(0, d.Tu)(e.id, e.branchId)] = e;
 }
@@ -116,7 +116,7 @@ class B extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
         let e = o.K.get(h);
-        null != e && (null == e.activeLaunchOptionIds ? S() : (b = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? A() : (I = e.activeLibraryApplicationBranchIds));
+        null != e && (null == e.activeLaunchOptionIds ? S() : (T = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? A() : (I = e.activeLibraryApplicationBranchIds));
     }
     get libraryApplications() {
         return k((e) => !e.isHidden());
@@ -157,7 +157,7 @@ class B extends (i = s.ZP.Store) {
         return y.has((0, d.Tu)(e, t));
     }
     getActiveLaunchOptionId(e, t) {
-        return b[(0, d.Tu)(e, t)];
+        return T[(0, d.Tu)(e, t)];
     }
     get fetched() {
         return g;
@@ -170,7 +170,7 @@ class B extends (i = s.ZP.Store) {
             .value();
     }
     get hasRemovedLibraryApplicationThisSession() {
-        return T;
+        return b;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
@@ -184,10 +184,10 @@ let Z = new B(l.Z, {
     LIBRARY_FETCH_SUCCESS: R,
     SKU_PURCHASE_SUCCESS: O,
     LIBRARY_APPLICATION_FLAGS_UPDATE_START: D,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: x,
-    LIBRARY_APPLICATION_UPDATE: x,
-    LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: L,
-    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: P,
-    LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: w,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
+    LIBRARY_APPLICATION_UPDATE: L,
+    LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: x,
+    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: w,
+    LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: P,
     DEVELOPER_TEST_MODE_RESET: M
 });

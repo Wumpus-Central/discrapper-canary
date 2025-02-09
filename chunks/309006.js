@@ -13,7 +13,7 @@ var i = n(200651),
     c = n(39127),
     d = n(594174),
     f = n(353368),
-    _ = n(685596);
+    _ = n(921696);
 let p = 50;
 function h(e) {
     var t;
@@ -35,7 +35,7 @@ let m = r.forwardRef(function (e, t) {
         [E, v] = r.useState([]),
         y = E.length < p,
         I = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
-        b = r.useCallback(() => {
+        T = r.useCallback(() => {
             if (!g && y && I && null != m) {
                 var e;
                 let t = (0, u._r)({
@@ -57,8 +57,8 @@ let m = r.forwardRef(function (e, t) {
                 v((e) => [...e, l]);
             }
         }, [g, y, I, m, n]);
-    r.useImperativeHandle(t, () => ({ addAnimation: b }));
-    let T = r.useCallback((e) => {
+    r.useImperativeHandle(t, () => ({ addAnimation: T }));
+    let b = r.useCallback((e) => {
         v((t) => {
             let n = [...t],
                 i = n.findIndex((t) => t.id === e);
@@ -79,7 +79,7 @@ let m = r.forwardRef(function (e, t) {
                       {
                           containerDimensions: h,
                           effect: e,
-                          onComplete: T
+                          onComplete: b
                       },
                       e.id
                   )

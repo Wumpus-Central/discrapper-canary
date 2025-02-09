@@ -1,5 +1,5 @@
 n.d(t, {
-    H: () => a,
+    H: () => l,
     c: () => r
 });
 var i = n(570140);
@@ -11,6 +11,6 @@ function r(e) {
         })
     );
 }
-function a() {
+function l() {
     i.Z.wait(() => i.Z.dispatch({ type: 'NUF_COMPLETE' }));
 }

@@ -1,22 +1,22 @@
-n.d(t, { i: () => o });
-var i = n(544891),
-    r = n(570140),
-    a = n(881052),
-    l = n(981631);
-let o = async (e) => {
+n.d(t, { i: () => l });
+var r = n(544891),
+    a = n(570140),
+    i = n(881052),
+    o = n(981631);
+let l = async (e) => {
     try {
         var t;
-        let n = await i.tn.get({
-                url: l.ANM.SIMILAR_GAMES(e),
+        let n = await r.tn.get({
+                url: o.ANM.SIMILAR_GAMES(e),
                 rejectWithError: !1
             }),
-            a = (null !== (t = n.body.similar_games) && void 0 !== t ? t : []).filter((t) => t !== e);
-        r.Z.dispatch({
+            i = (null !== (t = n.body.similar_games) && void 0 !== t ? t : []).filter((t) => t !== e);
+        a.Z.dispatch({
             type: 'GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS',
             applicationId: e,
-            games: a
+            games: i
         });
     } catch (e) {
-        throw new a.Hx(e);
+        throw new i.Hx(e);
     }
 };

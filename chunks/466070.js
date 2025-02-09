@@ -22,9 +22,9 @@ function d(e) {
                 }),
             [c, d]
         ),
-        p = u ? (null !== (t = c.getIconURL(48)) && void 0 !== t ? t : s.pK['0']) : void 0;
+        g = u ? (null !== (t = c.getIconURL(48)) && void 0 !== t ? t : s.pK['0']) : void 0;
     return (0, i.jsx)(o.Z, {
-        imageSrc: p,
+        imageSrc: g,
         onButtonClick: x,
         details: null != h ? [{ text: h }] : void 0,
         ...m

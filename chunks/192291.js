@@ -17,19 +17,19 @@ var i,
     v = n(276321),
     y = n(641236),
     I = n(457507),
-    b = n(644659),
-    T = b.enforce,
-    S = b.get,
+    T = n(644659),
+    b = T.enforce,
+    S = T.get,
     A = l.Int8Array,
     N = A && A.prototype,
     C = l.Uint8ClampedArray,
     R = C && C.prototype,
     O = A && E(A),
     D = N && E(N),
-    x = Object.prototype,
-    L = l.TypeError,
-    P = y('toStringTag'),
-    w = I('TYPED_ARRAY_TAG'),
+    L = Object.prototype,
+    x = l.TypeError,
+    w = y('toStringTag'),
+    P = I('TYPED_ARRAY_TAG'),
     M = 'TypedArrayConstructor',
     k = s && !!v && 'Opera' !== f(l.opera),
     U = !1,
@@ -67,11 +67,11 @@ var i,
     },
     j = function (e) {
         if (V(e)) return e;
-        throw L('Target is not a typed array');
+        throw x('Target is not a typed array');
     },
     H = function (e) {
         if (u(e) && (!v || g(O, e))) return e;
-        throw L(_(e) + ' is not a typed array constructor');
+        throw x(_(e) + ' is not a typed array constructor');
     },
     Y = function (e, t, n, i) {
         if (o) {
@@ -109,30 +109,30 @@ var i,
             for (i in G) (r = l[i]) && (!r[e] || n) && h(r, e, t);
         }
     };
-for (i in G) (a = (r = l[i]) && r.prototype) ? (T(a)[M] = r) : (k = !1);
-for (i in B) (a = (r = l[i]) && r.prototype) && (T(a)[M] = r);
+for (i in G) (a = (r = l[i]) && r.prototype) ? (b(a)[M] = r) : (k = !1);
+for (i in B) (a = (r = l[i]) && r.prototype) && (b(a)[M] = r);
 if (
     (!k || !u(O) || O === Function.prototype) &&
     ((O = function () {
-        throw L('Incorrect invocation');
+        throw x('Incorrect invocation');
     }),
     k)
 )
     for (i in G) l[i] && v(l[i], O);
-if ((!k || !D || D === x) && ((D = O.prototype), k)) for (i in G) l[i] && v(l[i].prototype, D);
-if ((k && E(R) !== D && v(R, D), o && !d(D, P)))
+if ((!k || !D || D === L) && ((D = O.prototype), k)) for (i in G) l[i] && v(l[i].prototype, D);
+if ((k && E(R) !== D && v(R, D), o && !d(D, w)))
     for (i in ((U = !0),
-    m(D, P, {
+    m(D, w, {
         configurable: !0,
         get: function () {
-            return c(this) ? this[w] : void 0;
+            return c(this) ? this[P] : void 0;
         }
     }),
     G))
-        l[i] && p(l[i], w, i);
+        l[i] && p(l[i], P, i);
 e.exports = {
     NATIVE_ARRAY_BUFFER_VIEWS: k,
-    TYPED_ARRAY_TAG: U && w,
+    TYPED_ARRAY_TAG: U && P,
     aTypedArray: j,
     aTypedArrayConstructor: H,
     exportTypedArrayMethod: Y,

@@ -1,40 +1,40 @@
-n.d(t, { Z: () => u });
-var i = n(200651);
+n.d(t, { Z: () => c });
+var a = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(946273),
-    s = n(441110),
-    o = n(388032),
-    l = n(673094);
-function u(e) {
+var o = n(481060),
+    i = n(946273),
+    r = n(441110),
+    s = n(388032),
+    l = n(579497);
+function c(e) {
     let { guild: t, message: n } = e;
-    return (0, a.vV)(t.id, n.author.id)
-        ? (0, i.jsx)(r.yRy, {
-              animation: r.yRy.Animation.TRANSLATE,
+    return (0, i.vV)(t.id, n.author.id)
+        ? (0, a.jsx)(o.yRy, {
+              animation: o.yRy.Animation.TRANSLATE,
               align: 'center',
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,
               position: 'right',
               renderPopout: (e) => {
-                  let { closePopout: r } = e;
-                  return (0, i.jsx)(s.Z, {
+                  let { closePopout: o } = e;
+                  return (0, a.jsx)(r.Z, {
                       guild: t,
                       message: n,
-                      onClose: r
+                      onClose: o
                   });
               },
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, i.jsx)(r.P3F, {
+                  return (0, a.jsx)(o.P3F, {
                       onClick: t,
                       tag: 'span',
-                      children: (0, i.jsx)(r.ua7, {
-                          text: o.intl.string(o.t['v/OYd3']),
+                      children: (0, a.jsx)(o.ua7, {
+                          text: s.intl.string(s.t['v/OYd3']),
                           children: (e) =>
-                              (0, i.jsx)('div', {
+                              (0, a.jsx)('div', {
                                   className: l.newMemberBadge,
                                   ...e,
-                                  children: (0, i.jsx)(r.hg2, {
+                                  children: (0, a.jsx)(o.hg2, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 20,

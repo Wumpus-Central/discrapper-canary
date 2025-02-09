@@ -49,10 +49,10 @@ function I(e) {
           )
         : s.Z.fetch();
 }
-function b(e) {
+function T(e) {
     h[e.integrationId] = e.joining;
 }
-function T(e) {
+function b(e) {
     E[e.integrationId] = void 0 !== e.error ? e.error : '';
 }
 function S(e) {
@@ -108,8 +108,8 @@ c(N, 'displayName', 'ConnectedAccountsStore');
 let C = new N(a.Z, {
     CONNECTION_OPEN: y,
     USER_CONNECTIONS_UPDATE: I,
-    USER_CONNECTIONS_INTEGRATION_JOINING: b,
+    USER_CONNECTIONS_INTEGRATION_JOINING: T,
     USER_CONNECTION_UPDATE: S,
-    USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: T,
+    USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: b,
     USER_CONNECTIONS_CALLBACK: A
 });

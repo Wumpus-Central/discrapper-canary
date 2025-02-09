@@ -34,14 +34,14 @@ function E(e, t, n) {
 let v = 25,
     y = !1,
     I = !0,
-    b = !1,
     T = !1,
+    b = !1,
     S = null,
     A = o.z.LATEST_ACTIVITY,
     N = [],
     C = 0;
 function R() {
-    (y = !1), (I = !0), (b = !1), (T = !1), (S = null), (A = o.z.LATEST_ACTIVITY), (i = new Set()), (C = 0), (N = []);
+    (y = !1), (I = !0), (T = !1), (b = !1), (S = null), (A = o.z.LATEST_ACTIVITY), (i = new Set()), (C = 0), (N = []);
 }
 function O(e, t) {
     return t === o.z.LATEST_ACTIVITY ? p.ZP.lastMessageId(e.id) : e.id;
@@ -49,7 +49,7 @@ function O(e, t) {
 function D(e) {
     (e.channelId === S && e.sortOrder === A && (0, h.OL)(e.tagFilter, i)) || R(), (S = e.channelId), (A = e.sortOrder), (i = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)), (y = !0), (I = !1);
 }
-function x(e) {
+function L(e) {
     if (e.channelId !== S || e.sortOrder !== A || !(0, h.OL)(e.tagFilter, i)) return !1;
     let t = e.threads.filter((e) => f.AW.has(e.type)).map((e) => e.id);
     N = N.concat(t);
@@ -64,18 +64,18 @@ function x(e) {
             filterTagIds: Array.from(e.tagFilter),
             sortOrder: e.sortOrder
         }),
-        P(),
-        (b = e.hasMore),
+        w(),
+        (T = e.hasMore),
         (C = e.offset + v),
         (y = !1),
         (I = !1);
 }
-function L(e) {
-    return (null == S || null == e.channelId || S === e.channelId) && P();
+function x(e) {
+    return (null == S || null == e.channelId || S === e.channelId) && w();
 }
-function P() {
+function w() {
     if (null == S) return !1;
-    let e = !b,
+    let e = !T,
         t = _.Z.getChannel(N[N.length - 1]),
         n = null == t ? null : O(t, A);
     N = s()(_.Z.getAllThreadsForParent(S))
@@ -94,9 +94,9 @@ function P() {
         .reverse()
         .value();
 }
-function w(e) {
+function P(e) {
     if (e.channelId !== S || e.sortOrder !== A || !(0, h.OL)(e.tagFilter, i)) return !1;
-    (y = !1), (T = !0), (I = !1);
+    (y = !1), (b = !0), (I = !1);
 }
 function M(e) {
     if (e.channel.id !== S) return !1;
@@ -120,7 +120,7 @@ class Z extends (r = l.ZP.Store) {
         this.waitFor(_.Z, g.Z, p.ZP);
     }
     get canLoadMore() {
-        return b && !y && !T;
+        return T && !y && !b;
     }
     get nextOffset() {
         return C;
@@ -142,7 +142,7 @@ let F = new Z(u.Z, {
     THREAD_UPDATE: G,
     CHANNEL_DELETE: M,
     LOAD_ARCHIVED_THREADS: D,
-    LOAD_ARCHIVED_THREADS_SUCCESS: x,
-    LOAD_ARCHIVED_THREADS_FAIL: w,
-    RESORT_THREADS: L
+    LOAD_ARCHIVED_THREADS_SUCCESS: L,
+    LOAD_ARCHIVED_THREADS_FAIL: P,
+    RESORT_THREADS: x
 });

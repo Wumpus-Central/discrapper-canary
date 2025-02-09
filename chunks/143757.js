@@ -21,12 +21,12 @@ var i = n(200651),
     E = n(906732),
     I = n(87005),
     C = n(753972),
-    N = n(895924),
-    v = n(812236),
+    v = n(895924),
+    N = n(812236),
     T = n(82295),
     S = n(984370),
-    Z = n(740492),
-    A = n(973616),
+    A = n(740492),
+    Z = n(973616),
     x = n(592125),
     b = n(626135),
     L = n(823379),
@@ -34,15 +34,15 @@ var i = n(200651),
     P = n(812206),
     O = n(981631),
     R = n(388032),
-    j = n(914333),
-    D = n(312565);
+    j = n(796665),
+    D = n(220704);
 async function w(e, t, n) {
     t(e.id);
     let i = e.bot;
     if (null == i)
         try {
             var l, r, a;
-            i = null !== (a = null === (l = P.Z.getApplication(e.id)) || void 0 === l ? void 0 : l.bot) && void 0 !== a ? a : null === (r = A.ZP.createFromServer(await (0, y.UM)(e.id))) || void 0 === r ? void 0 : r.bot;
+            i = null !== (a = null === (l = P.Z.getApplication(e.id)) || void 0 === l ? void 0 : l.bot) && void 0 !== a ? a : null === (r = Z.ZP.createFromServer(await (0, y.UM)(e.id))) || void 0 === r ? void 0 : r.bot;
         } catch (e) {
             t(void 0);
             return;
@@ -67,9 +67,9 @@ async function w(e, t, n) {
             return;
         }
         try {
-            await (0, v.ZP)(l, e.id);
+            await (0, N.ZP)(l, e.id);
         } catch (e) {
-            if (e.message === v.sV) {
+            if (e.message === N.sV) {
                 t(void 0);
                 return;
             }
@@ -78,7 +78,7 @@ async function w(e, t, n) {
             targetApplicationId: e.id,
             channelId: l,
             analyticsLocations: n,
-            commandOrigin: N.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
+            commandOrigin: v.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
             onExecutedCallback() {
                 t(void 0);
             }
@@ -173,7 +173,7 @@ let G = (e) => {
     });
 };
 function B() {
-    let e = (0, s.e7)([Z.ZP], () => Z.ZP.showPlayAgain),
+    let e = (0, s.e7)([A.ZP], () => A.ZP.showPlayAgain),
         { frecentApps: t } = (0, I.f)({
             context: { type: 'contextless' },
             onlyActivityApps: !0,

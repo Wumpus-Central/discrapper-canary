@@ -15,7 +15,7 @@ var i = n(200651),
     m = n(347312),
     g = n(981631),
     E = n(388032),
-    v = n(438922);
+    v = n(59453);
 let y = r.lazy(() => Promise.all([n.e('26460'), n.e('89792')]).then(n.bind(n, 711635)));
 function I(e) {
     let { played: t, duration: n, currentTime: r } = e,
@@ -27,7 +27,7 @@ function I(e) {
         children: a
     });
 }
-function b(e, t, n) {
+function T(e, t, n) {
     r.useEffect(() => {
         let i;
         function r() {
@@ -42,7 +42,7 @@ function b(e, t, n) {
         );
     }, [e, t, n]);
 }
-function T(e, t, n) {
+function b(e, t, n) {
     r.useEffect(() => {
         if (t)
             return (
@@ -62,8 +62,8 @@ let S = r.memo(function (e) {
     let t,
         { src: n, volume: a = 1, onVolumeChange: d, onMute: _, waveform: g, durationSecs: S, onVolumeShow: A, onVolumeHide: N, onPlay: C, onPause: R, onError: O } = e,
         D = r.useRef(null),
-        [x, L] = r.useState(0),
-        [P, w] = r.useState(S),
+        [L, x] = r.useState(0),
+        [w, P] = r.useState(S),
         [M, k] = r.useState(!1),
         [U, G] = r.useState(!1),
         [B, Z] = r.useState(!1),
@@ -79,7 +79,7 @@ let S = r.memo(function (e) {
         }, []),
         Q = r.useCallback((e) => {
             let t = e.currentTarget.duration;
-            !isNaN(t) && w(t);
+            !isNaN(t) && P(t);
         }, []),
         X = r.useCallback(() => {
             G(!1),
@@ -111,16 +111,16 @@ let S = r.memo(function (e) {
             Z(!0);
         }, []),
         ei = r.useCallback(() => {
-            Z(!1), x === P && X();
-        }, [x, P, X]),
+            Z(!1), L === w && X();
+        }, [L, w, X]),
         er = r.useCallback(
             (e) => {
                 let t = D.current;
-                if (null == P || null == t) return;
-                let n = e * P;
-                L(n), (t.currentTime = n), V(!0), clearTimeout(K.current), (K.current = void 0);
+                if (null == w || null == t) return;
+                let n = e * w;
+                x(n), (t.currentTime = n), V(!0), clearTimeout(K.current), (K.current = void 0);
             },
-            [P]
+            [w]
         );
     r.useEffect(() => {
         !F && U && V(!0);
@@ -128,7 +128,7 @@ let S = r.memo(function (e) {
     let ea = r.useRef(null),
         es = {
             played: F,
-            currentTime: x,
+            currentTime: L,
             onPause: R,
             onPlay: C
         },
@@ -150,8 +150,8 @@ let S = r.memo(function (e) {
                 }
             }
         }, [U]),
-        b(D, U, L),
-        T(n, U, G);
+        T(D, U, x),
+        b(n, U, G);
     let el = U ? l.fpf : l.o1U,
         eu = U ? E.intl.string(E.t.ZcgDJS) : E.intl.string(E.t.RscU7O);
     'Safari' === platform.name
@@ -207,8 +207,8 @@ let S = r.memo(function (e) {
             (0, i.jsx)(m.Z, {
                 className: v.waveform,
                 waveform: g,
-                currentTime: x,
-                duration: null != P ? P : 1,
+                currentTime: L,
+                duration: null != w ? w : 1,
                 playing: U,
                 played: F,
                 onDrag: er,
@@ -217,8 +217,8 @@ let S = r.memo(function (e) {
             }),
             (0, i.jsx)(I, {
                 played: F,
-                currentTime: x,
-                duration: P
+                currentTime: L,
+                duration: w
             }),
             (0, i.jsx)(f.Z, {
                 className: v.volumeButton,

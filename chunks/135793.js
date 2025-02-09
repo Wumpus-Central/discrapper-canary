@@ -23,19 +23,19 @@ var i = n(200651),
     v = n(328908),
     y = n(992970),
     I = n(317951),
-    b = n(84040),
-    T = n(287941),
+    T = n(84040),
+    b = n(287941),
     S = n(235894),
     A = n(883998),
     N = n(576645),
     C = n(981631),
     R = n(921944),
     O = n(388032),
-    D = n(694638),
-    x = n(99713);
-let L = 190,
-    P = 178,
-    w = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
+    D = n(238494),
+    L = n(99713);
+let x = 190,
+    w = 178,
+    P = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
     M = (e) => {
         let { channelId: t, message: r, onRedeem: a, onClose: s, buttonUseState: u = 'activate', source: c } = e,
             d = h.Z.getChannel(t);
@@ -55,7 +55,7 @@ let L = 190,
                             buttonUseState: u
                         });
                 },
-                { modalKey: w }
+                { modalKey: P }
             ));
     };
 function k(e) {
@@ -80,44 +80,44 @@ function k(e) {
 }
 function U(e) {
     let { channel: t, message: n, onRedeem: a, buttonUseState: o } = e,
-        u = (0, b.Z)(t, n),
+        u = (0, T.Z)(t, n),
         f = null != n,
         _ = f && (0, S.Uw)(n),
         h = (0, v.Qj)(t.id, f),
         { price: m, fetchingPrice: g, error: y } = (0, N.R2)(I.D1),
-        { entitlement: T, fetchedEntitlement: A, error: R } = (0, N.t6)(I.D1),
+        { entitlement: b, fetchedEntitlement: A, error: R } = (0, N.t6)(I.D1),
         O = y || R,
         { analyticsLocations: D } = (0, d.ZP)([c.Z.CONFETTI_POTION_MODAL]),
-        x = null != T && !T.consumed,
-        L = g || !A;
+        L = null != b && !b.consumed,
+        x = g || !A;
     (0, r.useEffect)(
         () => () => {
             O && (0, E.SN)(I.D1);
         },
         [O, f]
     );
-    let P = (0, r.useCallback)(() => {
+    let w = (0, r.useCallback)(() => {
             null != h && ((0, l.pTH)(), a(h));
         }, [h, a]),
-        w = (0, r.useCallback)(() => {
+        P = (0, r.useCallback)(() => {
             (0, p.Z)({
                 skuId: I.D1,
                 analyticsLocations: D,
                 onComplete: () => {
-                    P(), (0, E.gA)(I.D1);
+                    w(), (0, E.gA)(I.D1);
                 },
                 variantsReturnStyle: s.v.INDIVIDUAL_PRODUCTS
             });
-        }, [P, D]),
-        M = (0, r.useCallback)(() => (x ? P() : w()), [P, w, x]),
+        }, [w, D]),
+        M = (0, r.useCallback)(() => (L ? w() : P()), [w, P, L]),
         k = (0, r.useMemo)(() => {
-            if (null != T) {
+            if (null != b) {
                 if ('apply' === o) return 3;
-                if (T.type === C.qc2.DEVELOPER_GIFT) return 1;
-                if (x) return 2;
+                if (b.type === C.qc2.DEVELOPER_GIFT) return 1;
+                if (L) return 2;
             }
             return 0;
-        }, [T, x, o]),
+        }, [b, L, o]),
         U = (0, r.useMemo)(() => (_ ? 2 : u ? (null == h ? 3 : 0) : 1), [_, u, h]);
     return (0, i.jsx)(G, {
         channel: t,
@@ -125,7 +125,7 @@ function U(e) {
         buttonDisabledState: U,
         price: m,
         onActionClick: M,
-        loading: L,
+        loading: x,
         selectedEmoji: null != h ? h : void 0,
         isReaction: f
     });
@@ -140,7 +140,7 @@ let G = (e) => {
             if (null == t) return;
             let n = (0, S.NV)(u),
                 { x: i, y: r, width: a, height: s } = t;
-            (0, T.I)(
+            (0, b.I)(
                 n,
                 {
                     x: i,
@@ -313,7 +313,7 @@ let G = (e) => {
             children: [
                 (0, i.jsx)(l.zxk, {
                     onClick: () => {
-                        (0, l.Mr3)(w);
+                        (0, l.Mr3)(P);
                     },
                     color: l.zxk.Colors.PRIMARY,
                     children: O.intl.string(O.t.w2Qbd3)
@@ -403,9 +403,9 @@ let G = (e) => {
                 className: D.error,
                 children: [
                     (0, i.jsx)(l.Eep, {
-                        src: x,
-                        width: P,
-                        height: L
+                        src: L,
+                        width: w,
+                        height: x
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',

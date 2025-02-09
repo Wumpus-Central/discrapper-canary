@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => x });
 var i,
     r = n(442837),
     a = n(570140),
@@ -32,7 +32,7 @@ let h = Date.now(),
 function I() {
     return E || v || ((0, c.isAndroid)() && y);
 }
-function b() {
+function T() {
     Date.now() - h > Math.min(l.CM.getSetting() * u.Z.Millis.SECOND, f.OSm) || I()
         ? g ||
           a.Z.dispatch({
@@ -45,7 +45,7 @@ function b() {
               afk: !1
           });
 }
-function T() {
+function b() {
     Date.now() - h > f.OSm || I()
         ? m ||
           a.Z.dispatch({
@@ -60,7 +60,7 @@ function T() {
           });
 }
 function S() {
-    T(), b();
+    b(), T();
 }
 function A() {
     var e;
@@ -117,7 +117,7 @@ __OVERLAY__ ||
               (v = !1), D({});
           }))
         : setInterval(S, 0.25 * f.OSm));
-class x extends (i = r.ZP.Store) {
+class L extends (i = r.ZP.Store) {
     isIdle() {
         return m;
     }
@@ -128,8 +128,8 @@ class x extends (i = r.ZP.Store) {
         return m ? h : null;
     }
 }
-p(x, 'displayName', 'IdleStore');
-let L = new x(a.Z, {
+p(L, 'displayName', 'IdleStore');
+let x = new L(a.Z, {
     IDLE: N,
     AFK: C,
     SPEAKING: R,

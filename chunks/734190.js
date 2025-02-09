@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(239091),
     h = n(111028),
     p = n(540059),
-    g = n(569471),
-    m = n(488131),
+    m = n(569471),
+    g = n(488131),
     f = n(592125),
     _ = n(306680),
     v = n(979651),
@@ -23,10 +23,10 @@ var i = n(200651),
     S = n(981631),
     N = n(124368),
     E = n(388032),
-    j = n(831746),
-    y = n(193877),
-    P = n(329986);
-function T(e) {
+    j = n(467678),
+    y = n(703545),
+    P = n(193873);
+function A(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
         r = {
             className: a()(P.spine, { [P.spineWithGuildIcon]: n }, { [P.invertedSpine]: l }),
@@ -71,7 +71,7 @@ function T(e) {
               ]
           });
 }
-function A(e) {
+function T(e) {
     let { style: t, withGuildIcon: n } = e;
     return (0, i.jsx)('svg', {
         className: a()(P.spine, { [P.spineWithGuildIcon]: n }),
@@ -100,10 +100,10 @@ let w = l.memo(function (e) {
             mentionCount: _.ZP.getMentionCount(t.id),
             isMentionLowImportance: _.ZP.getIsMentionLowImportance(t.id)
         })),
-        B = (0, s.e7)([g.Z], () => g.Z.isMuted(t.id)),
+        B = (0, s.e7)([m.Z], () => m.Z.isMuted(t.id)),
         O = l.useCallback(
             (e) => {
-                (0, m.ok)(t, !e.shiftKey, N.on.CHANNEL_LIST);
+                (0, g.ok)(t, !e.shiftKey, N.on.CHANNEL_LIST);
             },
             [t]
         ),
@@ -137,7 +137,7 @@ let w = l.memo(function (e) {
                 : D
                   ? E.intl.formatToPlainString(E.t.YlVvmZ, { channelName: t.name })
                   : E.intl.formatToPlainString(E.t['0nZpiI'], { channelName: t.name }),
-        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? T : A;
+        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? A : T;
     return (0, i.jsxs)('li', {
         role: H,
         className: a()(j.containerDefault, { [j.selected]: r }),

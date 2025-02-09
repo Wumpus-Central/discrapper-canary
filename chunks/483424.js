@@ -16,27 +16,27 @@ var i = n(200651),
     g = n(864141),
     E = n(231338);
 function v(e) {
-    let { user: t, currentUser: n, displayProfile: v, guildId: y, className: I, onClose: b } = e,
-        { live: T, recent: S, stream: A } = (0, d.Z)(t.id),
-        [N] = T,
+    let { user: t, currentUser: n, displayProfile: v, guildId: y, className: I, onClose: T } = e,
+        { live: b, recent: S, stream: A } = (0, d.Z)(t.id),
+        [N] = b,
         { voiceChannel: C, voiceActivity: R } = (0, _.Z)({
             userId: t.id,
             guildId: y
         }),
         O = null != N && N === R,
         D = t.id === n.id,
-        x = (0, a.e7)([l.Z, o.Z], () => {
+        L = (0, a.e7)([l.Z, o.Z], () => {
             let e = D ? l.Z.getStatus() : o.Z.getStatus(t.id, y);
             return e === E.Sk.OFFLINE || e === E.Sk.INVISIBLE;
         }),
-        { recentActivityEnabled: L } = (0, u.i)({ location: 'UserProfileFeaturedActivity' }),
-        { voiceActivityCardEnabled: P } = (0, c.o)({ location: 'UserProfileFeaturedActivity' }),
-        w = (0, f.Z)(t.id, 'UserProfileFeaturedActivity'),
-        M = r.useMemo(() => (D ? S.find(s.Ae) : w), [D, S, w]);
-    return x || null == A
-        ? x || !P || null == C || O
-            ? x || null == N
-                ? L && null != M
+        { recentActivityEnabled: x } = (0, u.i)({ location: 'UserProfileFeaturedActivity' }),
+        { voiceActivityCardEnabled: w } = (0, c.o)({ location: 'UserProfileFeaturedActivity' }),
+        P = (0, f.Z)(t.id, 'UserProfileFeaturedActivity'),
+        M = r.useMemo(() => (D ? S.find(s.Ae) : P), [D, S, P]);
+    return L || null == A
+        ? L || !w || null == C || O
+            ? L || null == N
+                ? x && null != M
                     ? (0, i.jsx)(h.Z, {
                           location: 'UserProfileFeaturedActivity',
                           user: t,
@@ -44,7 +44,7 @@ function v(e) {
                           entry: M,
                           profileGuildId: null == v ? void 0 : v.guildId,
                           className: I,
-                          onClose: b
+                          onClose: T
                       })
                     : null
                 : (0, i.jsx)(p.Z, {
@@ -53,13 +53,13 @@ function v(e) {
                       activity: N,
                       profileGuildId: null == v ? void 0 : v.guildId,
                       className: I,
-                      onClose: b
+                      onClose: T
                   })
             : (0, i.jsx)(g.Z, {
                   user: t,
                   voiceChannel: C,
                   className: I,
-                  onClose: b
+                  onClose: T
               })
         : (0, i.jsx)(m.Z, {
               location: 'UserProfileFeaturedActivity',
@@ -68,6 +68,6 @@ function v(e) {
               stream: A,
               profileGuildId: null == v ? void 0 : v.guildId,
               className: I,
-              onClose: b
+              onClose: T
           });
 }

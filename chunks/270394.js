@@ -11,15 +11,15 @@ var i = n(200651),
     m = n(399606),
     h = n(692547),
     x = n(481060),
-    p = n(447543),
-    g = n(225433),
-    f = n(129861),
-    b = n(493544),
-    v = n(700582),
-    _ = n(410030),
-    j = n(933557),
-    N = n(346486),
-    C = n(600164),
+    g = n(447543),
+    p = n(225433),
+    b = n(129861),
+    _ = n(493544),
+    f = n(700582),
+    v = n(410030),
+    C = n(933557),
+    j = n(346486),
+    N = n(600164),
     I = n(666657),
     Z = n(487419),
     T = n(664452),
@@ -30,9 +30,9 @@ var i = n(200651),
     k = n(965638),
     R = n(981631),
     L = n(388032),
-    O = n(170465),
-    w = n(684309),
-    P = n(232186);
+    w = n(612156),
+    O = n(937551),
+    P = n(814632);
 let D = {
     INVITER: 3,
     INVITE_CODE: 3,
@@ -45,57 +45,57 @@ function M(e) {
         o = n.uses;
     return (
         n.maxUses > 0 && (o = ''.concat(n.uses, '/').concat(n.maxUses)),
-        (0, i.jsxs)(C.Z, {
-            className: r()(O.inviteSettingsInviteRow, w.card, { [O.inviteDisabledRow]: a }),
+        (0, i.jsxs)(N.Z, {
+            className: r()(w.inviteSettingsInviteRow, O.card, { [w.inviteDisabledRow]: a }),
             children: [
-                (0, i.jsxs)(C.Z, {
+                (0, i.jsxs)(N.Z, {
                     grow: D.INVITER,
                     basis: 0,
-                    align: C.Z.Align.CENTER,
-                    className: r()(O.text),
+                    align: N.Z.Align.CENTER,
+                    className: r()(w.text),
                     children: [
                         null != n.inviter &&
-                            (0, i.jsx)(v.Z, {
+                            (0, i.jsx)(f.Z, {
                                 user: n.inviter,
                                 size: x.EFr.SIZE_24,
-                                className: O.avatar
+                                className: w.avatar
                             }),
                         (0, i.jsxs)('div', {
                             children: [
                                 null != n.inviter &&
-                                    (0, i.jsx)(f.Z, {
-                                        discriminatorClass: O.discriminator,
+                                    (0, i.jsx)(b.Z, {
+                                        discriminatorClass: w.discriminator,
                                         user: n.inviter
                                     }),
                                 l &&
                                     (0, i.jsx)(x.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
-                                        children: (0, j.F6)(n.channel, y.default, S.Z, !0)
+                                        children: (0, C.F6)(n.channel, y.default, S.Z, !0)
                                     })
                             ]
                         })
                     ]
                 }),
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(N.Z, {
                     grow: D.INVITE_CODE,
                     shrink: 1,
                     basis: 0,
-                    align: C.Z.Align.CENTER,
-                    className: O.text,
+                    align: N.Z.Align.CENTER,
+                    className: w.text,
                     children: (0, i.jsxs)('div', {
                         children: [
                             (0, i.jsx)(x.Text, {
-                                className: O.inviteCode,
+                                className: w.inviteCode,
                                 variant: 'text-sm/normal',
                                 children: s ? '...' : n.code
                             }),
                             !s && (0, A.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, u.$.IS_APPLICATION_BYPASS)
                                 ? (0, i.jsxs)('div', {
-                                      className: O.bypass,
+                                      className: w.bypass,
                                       children: [
                                           (0, i.jsx)(x.Text, {
-                                              className: O.text,
+                                              className: w.text,
                                               variant: 'text-xs/normal',
                                               color: 'text-muted',
                                               children: L.intl.string(L.t['1i1bUl'])
@@ -107,7 +107,7 @@ function M(e) {
                                                       size: 'xxs',
                                                       color: 'currentColor',
                                                       ...e,
-                                                      className: O.infoIcon
+                                                      className: w.infoIcon
                                                   })
                                           })
                                       ]
@@ -116,32 +116,32 @@ function M(e) {
                         ]
                     })
                 }),
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(N.Z, {
                     grow: D.USES,
                     basis: 0,
-                    align: C.Z.Align.CENTER,
-                    className: r()(O.text),
+                    align: N.Z.Align.CENTER,
+                    className: r()(w.text),
                     children: (0, i.jsx)(x.Text, {
-                        className: O.uses,
+                        className: w.uses,
                         variant: 'text-sm/normal',
                         children: o
                     })
                 }),
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(N.Z, {
                     grow: D.EXPIRES,
                     basis: 0,
-                    align: C.Z.Align.CENTER,
-                    className: r()(O.text, O.countdownColumn),
+                    align: N.Z.Align.CENTER,
+                    className: r()(w.text, w.countdownColumn),
                     children: (0, i.jsx)(x.Text, {
-                        className: O.countdown,
+                        className: w.countdown,
                         variant: 'text-sm/normal',
-                        children: (0, i.jsx)(N.Z, { deadline: n.getExpiresAt() })
+                        children: (0, i.jsx)(j.Z, { deadline: n.getExpiresAt() })
                     })
                 }),
-                (0, i.jsx)(g.Z, {
-                    className: O.revokeInvite,
+                (0, i.jsx)(p.Z, {
+                    className: w.revokeInvite,
                     onClick: () => {
-                        p.Z.revokeInvite(n);
+                        g.Z.revokeInvite(n);
                     }
                 })
             ]
@@ -149,13 +149,13 @@ function M(e) {
     );
 }
 function B(e) {
-    let { invites: t, guild: a, hide: r, channel: s = null, showChannel: d = !1, loading: u = !1, canCreateInvites: p = !1 } = e;
+    let { invites: t, guild: a, hide: r, channel: s = null, showChannel: d = !1, loading: u = !1, canCreateInvites: g = !1 } = e;
     o()(null != a, 'guild is required');
-    let g = (0, k.M)(a),
-        f = (0, m.e7)([Z.Z], () => Z.Z.getGuildIncident(a.id)),
-        v = a.hasFeature(R.oNc.INVITES_DISABLED) || ((null == f ? void 0 : f.invitesDisabledUntil) != null && new Date(f.invitesDisabledUntil) > new Date()),
-        j = (0, _.ZP)(),
-        N = l.useMemo(
+    let p = (0, k.M)(a),
+        b = (0, m.e7)([Z.Z], () => Z.Z.getGuildIncident(a.id)),
+        f = a.hasFeature(R.oNc.INVITES_DISABLED) || ((null == b ? void 0 : b.invitesDisabledUntil) != null && new Date(b.invitesDisabledUntil) > new Date()),
+        C = (0, v.ZP)(),
+        j = l.useMemo(
             () =>
                 null == t || u
                     ? []
@@ -189,33 +189,33 @@ function B(e) {
                     })
             );
         };
-    return (0, i.jsx)(b.Xi, {
-        sections: [Math.max(1, N.length)],
+    return (0, i.jsx)(_.Xi, {
+        sections: [Math.max(1, j.length)],
         renderSection: () => {
             let e;
             return (
                 (e =
-                    0 !== N.length || u
-                        ? (0, i.jsxs)(C.Z, {
+                    0 !== j.length || u
+                        ? (0, i.jsxs)(N.Z, {
                               children: [
-                                  (0, i.jsx)(C.Z.Child, {
+                                  (0, i.jsx)(N.Z.Child, {
                                       grow: D.INVITER,
                                       basis: 0,
                                       className: P.marginReset,
                                       children: (0, i.jsx)(x.vwX, { children: L.intl.string(L.t.EgHyKy) })
                                   }),
-                                  (0, i.jsx)(C.Z.Child, {
+                                  (0, i.jsx)(N.Z.Child, {
                                       basis: 0,
                                       grow: D.INVITE_CODE,
                                       className: P.marginReset,
                                       children: (0, i.jsx)(x.vwX, { children: L.intl.string(L.t.LBlFEB) })
                                   }),
-                                  (0, i.jsx)(C.Z.Child, {
+                                  (0, i.jsx)(N.Z.Child, {
                                       grow: D.USES,
                                       basis: 0,
                                       children: (0, i.jsx)(x.vwX, { children: L.intl.string(L.t.erWrmJ) })
                                   }),
-                                  (0, i.jsx)(C.Z.Child, {
+                                  (0, i.jsx)(N.Z.Child, {
                                       grow: D.EXPIRES,
                                       basis: 0,
                                       children: (0, i.jsx)(x.vwX, { children: L.intl.string(L.t['1aM27e']) })
@@ -223,7 +223,7 @@ function B(e) {
                               ]
                           })
                         : (0, i.jsxs)(x.ubH, {
-                              theme: j,
+                              theme: C,
                               children: [
                                   (0, i.jsx)(x.oxh, {
                                       darkSrc: n(914814),
@@ -240,7 +240,7 @@ function B(e) {
                 (0, i.jsx)(
                     x.hjN,
                     {
-                        className: O.headerSection,
+                        className: w.headerSection,
                         children: (0, i.jsxs)(x.y5t, {
                             component: (0, i.jsx)(x.vwX, {
                                 tag: x.RB0.H1,
@@ -250,21 +250,21 @@ function B(e) {
                                 (0, i.jsx)(x.R94, {
                                     className: P.marginBottom20,
                                     type: x.geA.DESCRIPTION,
-                                    children: p ? L.intl.format(L.t['97VdNj'], { onCreateInvite: S }) : L.intl.string(L.t.WDw38P)
+                                    children: g ? L.intl.format(L.t['97VdNj'], { onCreateInvite: S }) : L.intl.string(L.t.WDw38P)
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: O.inviteDisabledContainer,
+                                    className: w.inviteDisabledContainer,
                                     children: [
                                         (0, i.jsx)(x.zxk, {
                                             size: x.zxk.Sizes.SMALL,
-                                            color: v ? x.zxk.Colors.BRAND : x.zxk.Colors.RED,
-                                            disabled: !g,
+                                            color: f ? x.zxk.Colors.BRAND : x.zxk.Colors.RED,
+                                            disabled: !p,
                                             onClick: y,
-                                            children: v ? L.intl.string(L.t['/dbw3N']) : L.intl.string(L.t.Uwsjn5)
+                                            children: f ? L.intl.string(L.t['/dbw3N']) : L.intl.string(L.t.Uwsjn5)
                                         }),
-                                        v &&
+                                        f &&
                                             (0, i.jsxs)('div', {
-                                                className: O.inviteDisabledTip,
+                                                className: w.inviteDisabledTip,
                                                 children: [
                                                     (0, i.jsx)(x.P4T, {
                                                         size: 'custom',
@@ -280,7 +280,7 @@ function B(e) {
                                             })
                                     ]
                                 }),
-                                (0, i.jsx)(x.$i$, { className: O.headerDivider }),
+                                (0, i.jsx)(x.$i$, { className: w.headerDivider }),
                                 e
                             ]
                         })
@@ -291,7 +291,7 @@ function B(e) {
         },
         renderRow: (e) => {
             let { section: t, row: n } = e;
-            if (0 === N.length && 0 === n && u)
+            if (0 === j.length && 0 === n && u)
                 return (0, i.jsx)(
                     x.$jN,
                     {
@@ -301,7 +301,7 @@ function B(e) {
                     'spinner'
                 );
             if (t > 0) return null;
-            let l = N[n];
+            let l = j[n];
             return null == l
                 ? null
                 : (0, i.jsx)(
@@ -310,12 +310,12 @@ function B(e) {
                           hide: r,
                           invite: l,
                           showChannel: d,
-                          inviteDisabled: v
+                          inviteDisabled: f
                       },
                       l.code
                   );
         },
-        rowHeight: (e, t) => (e > 0 ? 0 : 0 === N.length && 0 === t && u ? 62 : null != N[t] ? 62 : 0),
-        sectionHeight: () => (0 !== N.length || u ? 120 : 344)
+        rowHeight: (e, t) => (e > 0 ? 0 : 0 === j.length && 0 === t && u ? 62 : null != j[t] ? 62 : 0),
+        sectionHeight: () => (0 !== j.length || u ? 120 : 344)
     });
 }

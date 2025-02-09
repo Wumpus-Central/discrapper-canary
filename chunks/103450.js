@@ -18,8 +18,8 @@ var i = n(192379),
     v = n(275920),
     y = n(906732),
     I = n(835473),
-    b = n(592745),
-    T = n(592125),
+    T = n(592745),
+    b = n(592125),
     S = n(757266),
     A = n(650774),
     N = n(430824),
@@ -27,10 +27,10 @@ var i = n(192379),
     R = n(496675),
     O = n(699516),
     D = n(944486),
-    x = n(594174),
-    L = n(979651),
-    P = n(181106),
-    w = n(417363),
+    L = n(594174),
+    x = n(979651),
+    w = n(181106),
+    P = n(417363),
     M = n(358085),
     k = n(804739),
     U = n(981631),
@@ -44,7 +44,7 @@ function Z(e) {
         [K, z] = i.useState(!1),
         q = null !== (t = null == V ? void 0 : V.applicationId) && void 0 !== t ? t : null == F ? void 0 : F.application_id,
         Q = null != V || (0, E.Z)(F),
-        X = (0, a.e7)([x.default], () => x.default.getCurrentUser()),
+        X = (0, a.e7)([L.default], () => L.default.getCurrentUser()),
         J = j.id === (null == X ? void 0 : X.id),
         $ = (0, h.Z)({
             channelId: (0, p.p)(null == V ? void 0 : V.location),
@@ -52,14 +52,14 @@ function Z(e) {
             activity: F
         }),
         ee = (0, a.e7)(
-            [C.Z, b.Z, w.Z, S.Z],
+            [C.Z, T.Z, P.Z, S.Z],
             () =>
                 Q ||
                 (null != q &&
                     (0, k.t)({
                         LibraryApplicationStore: C.Z,
-                        LaunchableGameStore: b.Z,
-                        DispatchApplicationStore: w.Z,
+                        LaunchableGameStore: T.Z,
+                        DispatchApplicationStore: P.Z,
                         ConnectedAppsStore: S.Z,
                         applicationId: q
                     }))
@@ -70,7 +70,7 @@ function Z(e) {
                 return (t === (null == F ? void 0 : F.application_id) || t === (null == V ? void 0 : V.applicationId)) && (0, p.p)(n) === $;
             })
         ),
-        en = (0, a.e7)([P.Z], () => null != F && null != F.application_id && P.Z.getState(F.application_id, U.mFx.JOIN) === U.OcF.LOADING),
+        en = (0, a.e7)([w.Z], () => null != F && null != F.application_id && w.Z.getState(F.application_id, U.mFx.JOIN) === U.OcF.LOADING),
         [ei] = (0, I.Z)(null != q ? [q] : []),
         er = (0, m.s5)({
             userId: j.id,
@@ -79,7 +79,7 @@ function Z(e) {
             application: ei
         }),
         ea = (0, c.GK)(),
-        es = (0, a.e7)([T.Z, N.Z, A.Z, O.Z, D.Z, L.Z, R.Z], () =>
+        es = (0, a.e7)([b.Z, N.Z, A.Z, O.Z, D.Z, x.Z, R.Z], () =>
             null != V
                 ? er === m.Fw.CAN_JOIN
                 : (0, _.Z)({
@@ -89,12 +89,12 @@ function Z(e) {
                       channelId: $,
                       currentUser: X,
                       isEmbedded: Q,
-                      ChannelStore: T.Z,
+                      ChannelStore: b.Z,
                       GuildStore: N.Z,
                       GuildMemberCountStore: A.Z,
                       RelationshipStore: O.Z,
                       SelectedChannelStore: D.Z,
-                      VoiceStateStore: L.Z,
+                      VoiceStateStore: x.Z,
                       PermissionStore: R.Z
                   })
         ),
@@ -117,7 +117,7 @@ function Z(e) {
             if (null == ep || null == q) return;
             let r = (0, g.Z)(t, U.xjy.EMBEDDED),
                 a = D.Z.getVoiceChannelId(),
-                s = T.Z.getChannel(a);
+                s = b.Z.getChannel(a);
             await o.Z.join({
                 userId: e.id,
                 sessionId: ep,

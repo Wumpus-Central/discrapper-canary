@@ -1,12 +1,12 @@
 n.d(t, {
-    $l: () => x,
+    $l: () => L,
     G1: () => I,
     JR: () => N,
     U$: () => C,
-    ZP: () => L,
-    e7: () => T,
+    ZP: () => x,
+    e7: () => b,
     wv: () => S,
-    yK: () => b
+    yK: () => T
 });
 var i = n(192379),
     r = n(392711),
@@ -82,14 +82,14 @@ async function I(e) {
             receivedAt: Date.now()
         });
 }
-function b(e, t) {
+function T(e, t) {
     l.Z.dispatch({
         type: 'SET_HIGHLIGHTED_SUMMARY',
         channelId: e,
         summaryId: null != t ? t : null
     });
 }
-function T() {
+function b() {
     l.Z.dispatch({ type: 'TOGGLE_TOPICS_BAR' });
 }
 function S(e, t) {
@@ -214,7 +214,7 @@ function D() {
         }
     }, [n, t]);
 }
-async function x(e) {
+async function L(e) {
     try {
         await o.tn.del({
             url: h.Z5c.CHANNEL_SUMMARY(e.channelId, e.id),
@@ -228,17 +228,17 @@ async function x(e) {
         throw new u.Hx(e);
     }
 }
-let L = {
+let x = {
     setSummaryFeedback: C,
     updateVisibleMessages: N,
     setSelectedSummary: S,
     setGravitySelectedSummary: A,
-    setHighlightedSummary: b,
+    setHighlightedSummary: T,
     fetchSummaries: I,
     fetchSummariesBulk: O,
     useChannelSummaries: function (e) {
         let { channelIds: t = [] } = e;
         return D(t), (0, s.Wu)([p.Z], () => p.Z.topSummaries(), []);
     },
-    deleteSummary: x
+    deleteSummary: L
 };

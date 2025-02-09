@@ -44,10 +44,10 @@ function o(e, t) {
         if ((0, a.q9)(t.byweekno, -1)) y = -1;
         else {
             var I = (0, r.FO)((0, r.t2)(e - 1, 1, 1)),
-                b = (0, a.Vy)(7 - I.valueOf() + t.wkst, 7),
-                T = (0, r.Eg)(e - 1) ? 366 : 365,
+                T = (0, a.Vy)(7 - I.valueOf() + t.wkst, 7),
+                b = (0, r.Eg)(e - 1) ? 366 : 365,
                 S = void 0;
-            b >= 4 ? ((b = 0), (S = T + (0, a.Vy)(I - t.wkst, 7))) : (S = u - p), (y = Math.floor(52 + (0, a.Vy)(S, 7) / 4));
+            T >= 4 ? ((T = 0), (S = b + (0, a.Vy)(I - t.wkst, 7))) : (S = u - p), (y = Math.floor(52 + (0, a.Vy)(S, 7) / 4));
         }
         if ((0, a.q9)(t.byweekno, y)) for (var E = 0; E < p; E++) _.wnomask[E] = 1;
     }

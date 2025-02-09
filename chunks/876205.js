@@ -8,7 +8,7 @@ var s = n(120356),
     o = n(556296),
     d = n(13140),
     c = n(981631),
-    u = n(346728);
+    u = n(965037);
 let h = {
     [c.kg4.TOGGLE_MUTE]: {
         legacy: {
@@ -23,7 +23,7 @@ let h = {
 };
 function p(e) {
     let { value: t, action: n, shouldShow: s } = e,
-        c = (0, a.e7)([o.Z], () => o.Z.getKeybindForAction(n, !1, !0)),
+        c = (0, a.e7)([o.ZP], () => o.ZP.getKeybindForAction(n, !1, !0)),
         p = (0, r.bWb)().enabled;
     if (null == c || !s) return null;
     let g = d.BB(c.shortcut),

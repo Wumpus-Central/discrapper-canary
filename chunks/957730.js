@@ -18,8 +18,8 @@ var i = n(392711),
     v = n(430824),
     y = n(496675),
     I = n(699516),
-    b = n(246946),
-    T = n(594174),
+    T = n(246946),
+    b = n(594174),
     S = n(483360),
     A = n(176354),
     N = n(51144),
@@ -49,7 +49,7 @@ function D(e, t, n) {
         })
         .first();
 }
-function x(e, t, n) {
+function L(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
     if ('"' !== t[1]) return D(e, t, n, i);
@@ -78,7 +78,7 @@ function x(e, t, n) {
         })
         .first();
 }
-function L(e) {
+function x(e) {
     return {
         order: e.order,
         match: e.match,
@@ -88,7 +88,7 @@ function L(e) {
         })
     };
 }
-function P(e) {
+function w(e) {
     return {
         match: s().anyScopeRegex(e),
         parse: (e) => ({
@@ -97,7 +97,7 @@ function P(e) {
         })
     };
 }
-let w = c.Z.RULES,
+let P = c.Z.RULES,
     M = d.ZP,
     k = /^<@!?(\d+)>/,
     U = /^<@&(\d+)>/,
@@ -105,15 +105,15 @@ let w = c.Z.RULES,
     B = /^<a?:(\w+):(\d+)>/,
     Z = /(@everyone|@here|@Clyde)\b/,
     F = {
-        link: L(s().defaultRules.link),
-        autolink: L(s().defaultRules.autolink),
-        url: L(s().defaultRules.url),
-        inlineCode: L(w.inlineCode),
-        codeBlock: L(w.codeBlock),
-        rawUserMention: P(k),
-        rawRoleMention: P(U),
-        rawChannelMention: P(G),
-        rawEmoji: P(B),
+        link: x(s().defaultRules.link),
+        autolink: x(s().defaultRules.autolink),
+        url: x(s().defaultRules.url),
+        inlineCode: x(P.inlineCode),
+        codeBlock: x(P.codeBlock),
+        rawUserMention: w(k),
+        rawRoleMention: w(U),
+        rawChannelMention: w(G),
+        rawEmoji: w(B),
         mention: {
             match(e, t, n) {
                 let i = n.split(' ').pop() + e;
@@ -153,7 +153,7 @@ let w = c.Z.RULES,
             }
         },
         channel: {
-            match: (e, t) => x('#', e, t.channels),
+            match: (e, t) => L('#', e, t.channels),
             parse: (e) => ({
                 type: 'text',
                 content: '<#'.concat(e[1], '>')
@@ -172,7 +172,7 @@ let w = c.Z.RULES,
             })
         },
         emoji: {
-            order: w.emoji.order,
+            order: P.emoji.order,
             match: (e) => u.ZP.EMOJI_NAME_RE.exec(e),
             parse(e, t, n) {
                 let [i, r] = e,
@@ -225,15 +225,15 @@ let w = c.Z.RULES,
         }
     },
     V = {
-        inlineCode: L(w.inlineCode),
-        codeBlock: L(w.codeBlock),
+        inlineCode: x(P.inlineCode),
+        codeBlock: x(P.codeBlock),
         mention: {
             match: s().anyScopeRegex(k),
             parse(e, t, n) {
                 let { isNotification: i } = n,
-                    r = T.default.getUser(e[1]);
+                    r = b.default.getUser(e[1]);
                 if (null == r) return { content: e[0] };
-                let a = N.ZP.getUserTag(r, { identifiable: i && b.Z.enabled ? 'never' : 'always' });
+                let a = N.ZP.getUserTag(r, { identifiable: i && T.Z.enabled ? 'never' : 'always' });
                 if (!i) return { content: '@'.concat(a) };
                 {
                     let e = N.ZP.getGlobalName(r);
@@ -256,7 +256,7 @@ let w = c.Z.RULES,
             match: s().anyScopeRegex(G),
             parse(e) {
                 let t = m.Z.getChannel(e[1]);
-                return { content: null == t ? e[0] : (0, o.F6)(t, T.default, I.Z, !0, !0) };
+                return { content: null == t ? e[0] : (0, o.F6)(t, b.default, I.Z, !0, !0) };
             }
         },
         emoji: {
@@ -285,10 +285,10 @@ let w = c.Z.RULES,
             parse: (e) => ({ content: '<id:'.concat(e[1], '>') })
         },
         timestamp: {
-            ...w.timestamp,
+            ...P.timestamp,
             parse() {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                let i = w.timestamp.parse(...t);
+                let i = P.timestamp.parse(...t);
                 return 'text' === i.type ? { content: i.content } : { content: i.formatted };
             }
         },
@@ -358,7 +358,7 @@ function z(e) {
     let s = r()(
             t.reduce((e, t) => {
                 let { userId: n } = t,
-                    i = T.default.getUser(n);
+                    i = b.default.getUser(n);
                 return (
                     null == i ||
                         e.push({

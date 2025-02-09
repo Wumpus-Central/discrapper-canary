@@ -16,7 +16,7 @@ var t = l(200651),
     f = l(823379),
     v = l(778825),
     m = l(388032),
-    x = l(317486);
+    x = l(985892);
 function g(e) {
     let { guildId: n, className: l, globalOption: i, hideDivider: a = !1, onChange: o, renderOptionSuffix: r } = e;
     return (0, t.jsx)(s.Z, {

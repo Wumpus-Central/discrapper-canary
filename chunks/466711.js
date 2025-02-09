@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(47120);
+n.d(t, { Z: () => L }), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(442837),
@@ -18,11 +18,11 @@ var i = n(200651),
     v = n(709054),
     y = n(51144),
     I = n(443603),
-    b = n(981631),
-    T = n(921944),
+    T = n(981631),
+    b = n(921944),
     S = n(388032),
-    A = n(17823),
-    N = n(553796);
+    A = n(363706),
+    N = n(446016);
 function C(e) {
     return (0, i.jsx)(I.Z, {
         innerClassName: N.button,
@@ -84,11 +84,11 @@ function D(e) {
         { analyticsLocations: I } = (0, c.ZP)(u.Z.GIFT_BUTTON),
         [S, N] = r.useState(!1),
         D = (0, a.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
-        x = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-        L = null != x ? v.default.age(x.id) : 0,
-        { giftBoxAnimation: P, trinketsAnimation: w } = null !== (t = null == n ? void 0 : n.chatGiftIcon) && void 0 !== t ? t : {},
+        L = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
+        x = null != L ? v.default.age(L.id) : 0,
+        { giftBoxAnimation: w, trinketsAnimation: P } = null !== (t = null == n ? void 0 : n.chatGiftIcon) && void 0 !== t ? t : {},
         M = (0, p.u)(),
-        k = void 0 !== M && !o && D && L >= O,
+        k = void 0 !== M && !o && D && x >= O,
         [U, G] = (0, f.XR)(k ? s.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(s.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
         B = null != U,
         Z = S || B,
@@ -101,26 +101,26 @@ function D(e) {
                 initialPlanId: null,
                 analyticsLocations: I,
                 analyticsObject: {
-                    page: E.isPrivate() ? b.ZY5.DM_CHANNEL : b.ZY5.GUILD_CHANNEL,
-                    section: b.jXE.CHANNEL_TEXT_AREA,
-                    object: b.qAy.GIFTING_PROMOTION_BUTTON,
-                    objectType: b.Qqv.GIFT
+                    page: E.isPrivate() ? T.ZY5.DM_CHANNEL : T.ZY5.GUILD_CHANNEL,
+                    section: T.jXE.CHANNEL_TEXT_AREA,
+                    object: T.qAy.GIFTING_PROMOTION_BUTTON,
+                    objectType: T.Qqv.GIFT
                 }
             });
         },
         j = () => {
-            N(!1), G(T.L.TAKE_ACTION), V();
+            N(!1), G(b.L.TAKE_ACTION), V();
         },
         H =
-            void 0 !== P
+            void 0 !== w
                 ? (0, i.jsx)(C, {
-                      config: P,
+                      config: w,
                       hovered: Z,
                       onClick: j
                   })
-                : void 0 !== w
+                : void 0 !== P
                   ? (0, i.jsx)(R, {
-                        config: w,
+                        config: P,
                         hovered: Z,
                         onClick: j
                     })
@@ -145,4 +145,4 @@ function D(e) {
                 : H
     });
 }
-let x = r.memo(D);
+let L = r.memo(D);

@@ -11,7 +11,7 @@ var i,
     o = n(493773),
     l = n(930295),
     u = n(126306),
-    c = n(588921);
+    c = n(506858);
 function d(e, t, n) {
     return (
         t in e
@@ -49,7 +49,7 @@ function p(e) {
 }
 class h extends (i = a.Component) {
     render() {
-        let { children: e, shouldShow: t, position: n, onRequestOpen: i, onRequestClose: a, align: s, autoInvert: o, fixed: u, nudgeAlignIntoViewport: c, useRawTargetDimensions: d, spacing: f, onShiftClick: _, positionKey: h, overridePositionRef: m, preload: g, disablePointerEvents: E, ignoreModalClicks: v, closeOnScroll: y, useMouseEnter: I, renderPopout: b, layerContext: T, clickTrap: S = !1 } = this.props;
+        let { children: e, shouldShow: t, position: n, onRequestOpen: i, onRequestClose: a, align: s, autoInvert: o, fixed: u, nudgeAlignIntoViewport: c, useRawTargetDimensions: d, spacing: f, onShiftClick: _, positionKey: h, overridePositionRef: m, preload: g, disablePointerEvents: E, ignoreModalClicks: v, closeOnScroll: y, useMouseEnter: I, renderPopout: T, layerContext: b, clickTrap: S = !1 } = this.props;
         return (0, r.jsx)(l.H, {
             ref: this.ref,
             overridePositionRef: m,
@@ -62,7 +62,7 @@ class h extends (i = a.Component) {
             useRawTargetDimensions: d,
             renderPopout: this.renderPopout,
             spacing: f,
-            shouldShow: null != b && t,
+            shouldShow: null != T && t,
             onRequestOpen: i,
             onRequestClose: a,
             onShiftClick: _,
@@ -71,7 +71,7 @@ class h extends (i = a.Component) {
             ignoreModalClicks: v,
             closeOnScroll: y,
             useMouseEnter: I,
-            layerContext: T,
+            layerContext: b,
             clickTrap: S,
             children: e
         });

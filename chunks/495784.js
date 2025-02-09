@@ -11,7 +11,7 @@ var l = n(913527),
     m = n(709054),
     x = n(645792),
     h = n(981631),
-    v = n(921944);
+    _ = n(921944);
 let N = {
     init(e) {
         let { hasModalOpen: t, openModal: n } = e;
@@ -26,6 +26,6 @@ let N = {
             });
     },
     hideHubUpsell() {
-        (0, r.EW)(s.z.HUB_BACK_TO_SCHOOL_UPSELL, { dismissAction: v.L.AUTO });
+        (0, r.EW)(s.z.HUB_BACK_TO_SCHOOL_UPSELL, { dismissAction: _.L.AUTO });
     }
 };

@@ -1,30 +1,30 @@
 n.d(t, { Z: () => l });
-var s = n(200651),
-    r = n(481060),
-    a = n(388032),
-    o = n(160952);
+var r = n(200651),
+    o = n(481060),
+    s = n(388032),
+    a = n(471278);
 function i(e) {
     let { onClick: t, children: n } = e;
-    return (0, s.jsx)(r.zxk, {
+    return (0, r.jsx)(o.zxk, {
         onClick: t,
-        className: o.button,
-        innerClassName: o.buttonInner,
+        className: a.button,
+        innerClassName: a.buttonInner,
         look: 'blank',
         children: n
     });
 }
 let l = function (e) {
     let { onDesktop: t, onConsole: n } = e;
-    return (0, s.jsxs)('div', {
-        className: o.buttons,
+    return (0, r.jsxs)('div', {
+        className: a.buttons,
         children: [
-            (0, s.jsxs)(i, {
+            (0, r.jsxs)(i, {
                 onClick: t,
-                children: [a.intl.string(a.t.QXc019), (0, s.jsx)(r.pzj, { size: 'sm' })]
+                children: [s.intl.string(s.t.QXc019), (0, r.jsx)(o.pzj, { size: 'sm' })]
             }),
-            (0, s.jsxs)(i, {
+            (0, r.jsxs)(i, {
                 onClick: n,
-                children: [a.intl.string(a.t['8lAfuL']), (0, s.jsx)(r.iWm, { size: 'sm' })]
+                children: [s.intl.string(s.t['8lAfuL']), (0, r.jsx)(o.iWm, { size: 'sm' })]
             })
         ]
     });

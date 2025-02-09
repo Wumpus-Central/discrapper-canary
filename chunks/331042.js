@@ -23,8 +23,8 @@ var i = n(200651),
     v = n(300284),
     y = n(876917),
     I = n(642619),
-    b = n(594174),
-    T = n(1870),
+    T = n(594174),
+    b = n(1870),
     S = n(429368),
     A = n(884697),
     N = n(228624),
@@ -32,23 +32,23 @@ var i = n(200651),
     R = n(635552),
     O = n(905357),
     D = n(328456),
-    x = n(624377),
-    L = n(530618),
-    P = n(141011),
-    w = n(372654),
+    L = n(624377),
+    x = n(530618),
+    w = n(141011),
+    P = n(372654),
     M = n(616066),
     k = n(216541),
     U = n(58201),
     G = n(302800),
     B = n(215023),
     Z = n(388032),
-    F = n(493200);
+    F = n(205596);
 let V = 880,
     j = (e) => {
         let { product: t } = e,
             [n] = t.items,
-            r = (0, d.e7)([b.default], () => {
-                let e = b.default.getCurrentUser();
+            r = (0, d.e7)([T.default], () => {
+                let e = T.default.getCurrentUser();
                 return o()(null != e, 'User cannot be undefined'), e;
             });
         return (0, u.EQ)(t.type)
@@ -170,28 +170,28 @@ let V = 880,
         var t;
         let { product: n, onClose: a, confettiTarget: s, confettiCanvas: o, hideConfetti: l = !1, analyticsLocations: u, overrideTitle: c, overrideDescription: _, selectedVariantIndex: g, shouldShowPromotionalExperience: E } = e,
             v = (0, U.W)(n, g),
-            { confettiColors: y } = (0, x.Z)(v.styles),
+            { confettiColors: y } = (0, L.Z)(v.styles),
             I = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
-            b = r.useRef(null),
-            { analyticsLocations: T } = (0, m.ZP)([...u, h.Z.COLLECTIBLES_COLLECTED_MODAL]),
+            T = r.useRef(null),
+            { analyticsLocations: b } = (0, m.ZP)([...u, h.Z.COLLECTIBLES_COLLECTED_MODAL]),
             { category: S, isFetching: A } = (0, C.l)(v.skuId),
             N = null !== (t = null == S ? void 0 : S.successModalBg) && void 0 !== t ? t : v.banner,
             R = A ? void 0 : N;
         return (0, i.jsxs)(m.Gt, {
-            value: T,
+            value: b,
             children: [
                 (0, i.jsxs)('div', {
                     className: F.modalInner,
-                    ref: b,
+                    ref: T,
                     children: [
                         (0, i.jsxs)('div', {
                             className: F.bannerContainer,
                             children: [
                                 E
                                     ? (0, i.jsx)('div', { className: F.promotionalBanner })
-                                    : (0, i.jsx)(P.Z, {
+                                    : (0, i.jsx)(w.Z, {
                                           asset: R,
-                                          size: (0, w.ML)(V),
+                                          size: (0, P.ML)(V),
                                           className: F.decorationBanner,
                                           categoryBannerOverride: (0, B.ZS)(v.categorySkuId)
                                       }),
@@ -204,7 +204,7 @@ let V = 880,
                         (0, i.jsx)(K, {
                             product: n,
                             onClose: a,
-                            analyticsLocations: T,
+                            analyticsLocations: b,
                             overrideTitle: c,
                             overrideDescription: _,
                             selectedVariantIndex: g,
@@ -219,10 +219,10 @@ let V = 880,
                 }),
                 !l &&
                     !I &&
-                    (0, i.jsx)(L.Z, {
-                        confettiTarget: null != s ? s : b.current,
+                    (0, i.jsx)(x.Z, {
+                        confettiTarget: null != s ? s : T.current,
                         confettiCanvas: o,
-                        sprites: (0, w.vK)(v.categorySkuId),
+                        sprites: (0, P.vK)(v.categorySkuId),
                         colors: null == y ? void 0 : y.map((e) => e.toHexString())
                     })
             ]
@@ -241,8 +241,8 @@ let V = 880,
                 onError: a
             }),
             { firstAvatarDecoration: y, firstProfileEffect: I } = (0, D.R)(n),
-            b = (0, A.x6)(n) ? null != y && null != I : null != y || null != I,
-            T = r.useMemo(() => (null != o ? o : _ && !d ? Z.intl.string(Z.t['1xr2SU']) : Z.intl.format(Z.t.YNaxMj, { itemName: p })), [o, _, d, p]),
+            T = (0, A.x6)(n) ? null != y && null != I : null != y || null != I,
+            b = r.useMemo(() => (null != o ? o : _ && !d ? Z.intl.string(Z.t['1xr2SU']) : Z.intl.format(Z.t.YNaxMj, { itemName: p })), [o, _, d, p]),
             S = r.useMemo(
                 () =>
                     null != l
@@ -261,7 +261,7 @@ let V = 880,
                     children: [
                         (0, i.jsx)(f.X6q, {
                             variant: 'heading-lg/bold',
-                            children: T
+                            children: b
                         }),
                         (0, i.jsx)(f.Text, {
                             variant: 'text-sm/normal',
@@ -275,10 +275,10 @@ let V = 880,
                         (0, i.jsx)(z, {
                             product: n,
                             onClose: a,
-                            hasRequiredProductItems: b,
+                            hasRequiredProductItems: T,
                             analyticsLocations: s
                         }),
-                        b
+                        T
                             ? (0, i.jsx)(f.zxk, {
                                   onClick: g,
                                   submitting: v,
@@ -317,7 +317,7 @@ let V = 880,
     },
     q = (e) => {
         let { transitionState: t, product: n, onClose: s, analyticsLocations: o, overrideTitle: l, overrideDescription: u, shouldShowPromotionalExperience: c } = e,
-            _ = (0, d.e7)([T.Z], () => T.Z.purchases),
+            _ = (0, d.e7)([b.Z], () => b.Z.purchases),
             p = (0, S.o)(n, _),
             h = (0, U.W)(n, p),
             m = r.useRef(new a.qA()),

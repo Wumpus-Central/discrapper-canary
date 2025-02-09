@@ -10,7 +10,7 @@ var r = n(120356),
     c = n(660579),
     d = n(64621),
     f = n(228168),
-    _ = n(882636);
+    _ = n(720947);
 function p(e) {
     let { user: t, profileType: n, animateOnHover: r, onOpenProfile: p, ...h } = e,
         m = f.n_.AVATAR,

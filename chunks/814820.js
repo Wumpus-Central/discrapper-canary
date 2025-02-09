@@ -14,7 +14,7 @@ var i = n(200651),
     p = n(779139),
     g = n(981631),
     f = n(388032),
-    x = n(764349);
+    x = n(482334);
 let C = (e) => {
         let { channel: t, message: n } = e,
             [a, c] = l.useState(!1),

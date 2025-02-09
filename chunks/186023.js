@@ -1,118 +1,118 @@
-n.d(t, { Z: () => _ }), n(47120), n(653041);
-var i = n(200651),
-    r = n(192379),
-    a = n(481060),
-    s = n(367907),
-    o = n(313201),
-    l = n(82554),
-    u = n(185625),
+n.d(t, { default: () => x }), n(47120), n(653041);
+var l = n(200651),
+    i = n(192379),
+    r = n(481060),
+    a = n(367907),
+    s = n(313201),
+    o = n(82554),
+    d = n(185625),
     c = n(255514),
-    d = n(981631),
-    f = n(122602);
-let _ = (e) => {
-    let { reportType: t, menu: n, modalProps: _, onSubmit: p, onNavigate: h, emailToken: m, isAuthenticated: g = !0 } = e,
-        E = (0, o.Dt)(),
-        { nodes: v, root_node_id: y, success_node_id: I, fail_node_id: b } = n,
-        [T, S] = r.useState(y),
-        [A, N] = r.useState(void 0),
-        [C, R] = r.useState(void 0),
-        [O, D] = r.useState([]),
-        [x, L] = r.useState(void 0),
-        [P, w] = r.useState(void 0),
+    u = n(981631),
+    m = n(368616);
+let x = (e) => {
+    let { reportType: t, menu: n, modalProps: x, onSubmit: _, onNavigate: h, emailToken: v, isAuthenticated: g = !0 } = e,
+        p = (0, s.Dt)(),
+        { nodes: f, root_node_id: b, success_node_id: Z, fail_node_id: j } = n,
+        [I, T] = i.useState(b),
+        [C, N] = i.useState(void 0),
+        [E, S] = i.useState(void 0),
+        [k, A] = i.useState([]),
+        [L, R] = i.useState(void 0),
+        [y, P] = i.useState(void 0),
         M = (e) => {
             var n;
-            let { destination: i } = e,
-                [, r] = i,
-                a = v[r];
-            if (a.elements.some((e) => 'skip' === e.type) && (null === (n = a.button) || void 0 === n ? void 0 : n.type) === 'next')
+            let { destination: l } = e,
+                [, i] = l,
+                r = f[i];
+            if (r.elements.some((e) => 'skip' === e.type) && (null === (n = r.button) || void 0 === n ? void 0 : n.type) === 'next')
                 return M({
                     ...e,
-                    destination: ['', a.button.target]
+                    destination: ['', r.button.target]
                 });
-            if ((D([...O, e]), null != a.key && (null == h || h(a.key)), N(void 0), R(void 0), t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM)) {
+            if ((A([...k, e]), null != r.key && (null == h || h(r.key)), N(void 0), S(void 0), t.name === o.b.MESSAGE || t.name === o.b.FIRST_DM)) {
                 let e = t.record.id;
-                s.ZP.trackWithMetadata(d.rMx.IAR_NAVIGATE, {
+                a.ZP.trackWithMetadata(u.rMx.IAR_NAVIGATE, {
                     message_id: e,
                     content_type: t.name,
-                    report_sub_type: a.report_type,
-                    current_node: v[T].id,
-                    next_node: a.id
+                    report_sub_type: r.report_type,
+                    current_node: f[I].id,
+                    next_node: r.id
                 });
             }
-            S(r);
+            T(i);
         },
-        k = async (e) => {
-            var i;
-            let r = g ? await (0, u.ZD)(n, t, [...O, e]) : await (0, u.fw)(n, t, [...O, e], m),
-                a = null == r ? void 0 : null === (i = r.body) || void 0 === i ? void 0 : i.report_id;
-            null != a && L(a), w(v[e.nodeRef].report_type), null == p || p(a);
+        D = async (e) => {
+            var l;
+            let i = g ? await (0, d.ZD)(n, t, [...k, e]) : await (0, d.fw)(n, t, [...k, e], v),
+                r = null == i ? void 0 : null === (l = i.body) || void 0 === l ? void 0 : l.report_id;
+            null != r && R(r), P(f[e.nodeRef].report_type), null == _ || _(r);
         },
-        U = () => {
+        B = () => {
             var e, n;
-            if (O.length < 1) return;
-            let i = [...O],
-                r = i.pop(),
-                a = null !== (n = null == r ? void 0 : r.nodeRef) && void 0 !== n ? n : y;
-            if (t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
+            if (k.length < 1) return;
+            let l = [...k],
+                i = l.pop(),
+                r = null !== (n = null == i ? void 0 : i.nodeRef) && void 0 !== n ? n : b;
+            if (t.name === o.b.MESSAGE || t.name === o.b.FIRST_DM) {
                 let e = t.record.id;
-                s.ZP.trackWithMetadata(d.rMx.IAR_NAVIGATE, {
+                a.ZP.trackWithMetadata(u.rMx.IAR_NAVIGATE, {
                     message_id: e,
                     content_type: t.name,
-                    report_sub_type: v[a].report_type,
-                    current_node: v[T].id,
-                    next_node: v[a].id
+                    report_sub_type: f[r].report_type,
+                    current_node: f[I].id,
+                    next_node: f[r].id
                 });
             }
-            N(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), R(null == r ? void 0 : r.textInput), S(a), D(i), null == h || h('..');
+            N(null == i ? void 0 : null === (e = i.multiSelect) || void 0 === e ? void 0 : e.state), S(null == i ? void 0 : i.textInput), T(r), A(l), null == h || h('..');
         },
-        G = r.useMemo(() => {
+        O = i.useMemo(() => {
             let e = [],
                 t = [];
-            for (let a in v) {
-                var n, i, r;
-                let s = v[a];
-                if (s.id !== I && s.id !== b && s.id !== y) {
-                    if (s.key.endsWith('_SUBMIT') || (null === (n = s.button) || void 0 === n ? void 0 : n.type) === 'submit') {
-                        t.push(s);
+            for (let r in f) {
+                var n, l, i;
+                let a = f[r];
+                if (a.id !== Z && a.id !== j && a.id !== b) {
+                    if (a.key.endsWith('_SUBMIT') || (null === (n = a.button) || void 0 === n ? void 0 : n.type) === 'submit') {
+                        t.push(a);
                         continue;
                     }
-                    if ((e.push(s), (null === (i = s.button) || void 0 === i ? void 0 : i.type) === 'next')) {
-                        let t = null === (r = s.button) || void 0 === r ? void 0 : r.target,
-                            n = e.indexOf(v[t]);
-                        -1 !== n && (e.splice(n, 1), e.push(v[t]));
+                    if ((e.push(a), (null === (l = a.button) || void 0 === l ? void 0 : l.type) === 'next')) {
+                        let t = null === (i = a.button) || void 0 === i ? void 0 : i.target,
+                            n = e.indexOf(f[t]);
+                        -1 !== n && (e.splice(n, 1), e.push(f[t]));
                     }
                 }
             }
-            return [v[y], ...e, ...t, v[I], v[b]];
-        }, [v, y, b, I]);
-    return (0, i.jsx)(a.Y0X, {
-        transitionState: _.transitionState,
-        'aria-labelledby': E,
-        children: (0, i.jsx)(a.MyZ, {
+            return [f[b], ...e, ...t, f[Z], f[j]];
+        }, [f, b, j, Z]);
+    return (0, l.jsx)(r.Y0X, {
+        transitionState: x.transitionState,
+        'aria-labelledby': p,
+        children: (0, l.jsx)(r.MyZ, {
             width: 440,
-            activeSlide: T,
+            activeSlide: I,
             centered: !1,
-            children: G.map((e) =>
-                (0, i.jsx)(
-                    a.Mi4,
+            children: O.map((e) =>
+                (0, l.jsx)(
+                    r.Mi4,
                     {
                         id: e.id,
-                        children: (0, i.jsx)('div', {
-                            className: f.slideContainer,
-                            children: (0, i.jsx)(c.Z, {
+                        children: (0, l.jsx)('div', {
+                            className: m.slideContainer,
+                            children: (0, l.jsx)(c.Z, {
                                 node: e,
                                 reportType: t,
-                                reportSubType: P,
-                                history: O,
-                                onModalClose: _.onClose,
+                                reportSubType: y,
+                                history: k,
+                                onModalClose: x.onClose,
                                 onSelectChild: M,
-                                onNavigateBack: U,
-                                multiSelect: A,
-                                textInput: C,
-                                successNodeId: I,
-                                failNodeId: b,
-                                onSubmit: k,
-                                reportId: x
+                                onNavigateBack: B,
+                                multiSelect: C,
+                                textInput: E,
+                                successNodeId: Z,
+                                failNodeId: j,
+                                onSubmit: D,
+                                reportId: L
                             })
                         })
                     },

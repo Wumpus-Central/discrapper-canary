@@ -7,7 +7,7 @@ let i = (function () {
             className: 'emoji',
             convert: {
                 fromCodePoint: E,
-                toCodePoint: b
+                toCodePoint: T
             },
             onerror: function () {
                 this.parentNode && this.parentNode.replaceChild(l(this.alt, !1), this);
@@ -45,7 +45,7 @@ let i = (function () {
         return t;
     }
     function f(e) {
-        return b(0 > e.indexOf(r) ? e.replace(i, '') : e);
+        return T(0 > e.indexOf(r) ? e.replace(i, '') : e);
     }
     function _(e, t) {
         for (var i, r, a, s, o, u, c, _, p, h, m, g, E, v = d(e, []), y = v.length; y--; ) {
@@ -109,7 +109,7 @@ let i = (function () {
         var t = n.test(e);
         return (n.lastIndex = 0), t;
     }
-    function b(e, t) {
+    function T(e, t) {
         for (var n = [], i = 0, r = 0, a = 0; a < e.length; ) (i = e.charCodeAt(a++)), r ? (n.push((65536 + ((r - 55296) << 10) + (i - 56320)).toString(16)), (r = 0)) : 55296 <= i && i <= 56319 ? (r = i) : n.push(i.toString(16));
         return n.join(t || '-');
     }

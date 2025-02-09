@@ -1,4 +1,4 @@
-t.d(n, { Z: () => h });
+t.d(n, { Z: () => _ });
 var i = t(200651);
 t(192379);
 var s = t(120356),
@@ -9,12 +9,12 @@ var s = t(120356),
     c = t(696375),
     d = t(800530),
     x = t(388032),
-    m = t(866219),
-    u = t(816742),
-    C = t(160557);
-function h(e) {
+    m = t(891791),
+    u = t(5517),
+    h = t(160557);
+function _(e) {
     let { className: n, onNext: t, onClose: s } = e,
-        h = (0, o.n)();
+        _ = (0, o.n)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(a.xBx, {
@@ -25,7 +25,7 @@ function h(e) {
                     (0, i.jsx)('div', {
                         className: m.iconContainer,
                         children: (0, i.jsx)('img', {
-                            src: C,
+                            src: h,
                             alt: '',
                             className: m.icon
                         })
@@ -61,12 +61,12 @@ function h(e) {
                     (0, i.jsx)(c.Z, {
                         text: x.intl.string(x.t.PxL38P),
                         url: d.sQ.COMMUNITY_GUIDELINES,
-                        onClick: () => h(d.n0.ClickCommunityGuidelinesLink)
+                        onClick: () => _(d.n0.ClickCommunityGuidelinesLink)
                     }),
                     (0, i.jsx)(c.Z, {
                         text: x.intl.string(x.t.qC3XKS),
                         url: d.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
-                        onClick: () => h(d.n0.ClickWarningSystemHelpcenterLink)
+                        onClick: () => _(d.n0.ClickWarningSystemHelpcenterLink)
                     })
                 ]
             }),

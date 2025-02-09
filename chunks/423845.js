@@ -17,8 +17,8 @@ var i = n(620014),
     v = n(207757),
     y = n(397985),
     I = n(706627),
-    b = n(822480),
-    T = n(58834),
+    T = n(822480),
+    b = n(58834),
     S = n(453342),
     A = 1,
     N = 2,
@@ -26,10 +26,10 @@ var i = n(620014),
     R = '[object Arguments]',
     O = '[object Array]',
     D = '[object Boolean]',
-    x = '[object Date]',
-    L = '[object Error]',
-    P = '[object Function]',
-    w = '[object GeneratorFunction]',
+    L = '[object Date]',
+    x = '[object Error]',
+    w = '[object Function]',
+    P = '[object GeneratorFunction]',
     M = '[object Map]',
     k = '[object Number]',
     U = '[object Object]',
@@ -50,46 +50,46 @@ var i = n(620014),
     J = '[object Uint16Array]',
     $ = '[object Uint32Array]',
     ee = {};
-function et(e, t, n, O, D, x) {
-    var L,
+function et(e, t, n, O, D, L) {
+    var x,
         M = t & A,
         k = t & N,
         G = t & C;
-    if ((n && (L = D ? n(e, O, D, x) : n(e)), void 0 !== L)) return L;
+    if ((n && (x = D ? n(e, O, D, L) : n(e)), void 0 !== x)) return x;
     if (!I(e)) return e;
     var B = E(e);
     if (B) {
-        if (((L = h(e)), !M)) return u(e, L);
+        if (((x = h(e)), !M)) return u(e, x);
     } else {
         var Z = p(e),
-            F = Z == P || Z == w;
+            F = Z == w || Z == P;
         if (v(e)) return l(e, M);
         if (Z == U || Z == R || (F && !D)) {
-            if (((L = k || F ? {} : g(e)), !M)) return k ? d(e, o(L, e)) : c(e, s(L, e));
+            if (((x = k || F ? {} : g(e)), !M)) return k ? d(e, o(x, e)) : c(e, s(x, e));
         } else {
             if (!ee[Z]) return D ? e : {};
-            L = m(e, Z, M);
+            x = m(e, Z, M);
         }
     }
-    x || (x = new i());
-    var V = x.get(e);
+    L || (L = new i());
+    var V = L.get(e);
     if (V) return V;
-    x.set(e, L),
-        b(e)
+    L.set(e, x),
+        T(e)
             ? e.forEach(function (i) {
-                  L.add(et(i, t, n, i, e, x));
+                  x.add(et(i, t, n, i, e, L));
               })
             : y(e) &&
               e.forEach(function (i, r) {
-                  L.set(r, et(i, t, n, r, e, x));
+                  x.set(r, et(i, t, n, r, e, L));
               });
-    var j = G ? (k ? _ : f) : k ? S : T,
+    var j = G ? (k ? _ : f) : k ? S : b,
         H = B ? void 0 : j(e);
     return (
         r(H || e, function (i, r) {
-            H && (i = e[(r = i)]), a(L, r, et(i, t, n, r, e, x));
+            H && (i = e[(r = i)]), a(x, r, et(i, t, n, r, e, L));
         }),
-        L
+        x
     );
 }
-(ee[R] = ee[O] = ee[j] = ee[H] = ee[D] = ee[x] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[U] = ee[G] = ee[B] = ee[Z] = ee[F] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[L] = ee[P] = ee[V] = !1), (e.exports = et);
+(ee[R] = ee[O] = ee[j] = ee[H] = ee[D] = ee[L] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[U] = ee[G] = ee[B] = ee[Z] = ee[F] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[x] = ee[w] = ee[V] = !1), (e.exports = et);

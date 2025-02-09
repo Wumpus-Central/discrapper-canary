@@ -29,8 +29,8 @@ let p = 0,
     v = {},
     y = {},
     I = {},
-    b = {};
-function T(e, t) {
+    T = {};
+function b(e, t) {
     return ''.concat(e, ':').concat(t);
 }
 function S(e, t) {
@@ -67,24 +67,24 @@ function O(e, t, n) {
 function D(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
-        let [n, i, a] = P(t.guildId, t);
+        let [n, i, a] = w(t.guildId, t);
         return n ? (t.sessionId === r && null != i && null != a && a.channelId !== i.channelId && (p += 1), h++, !0) : e;
     }, !1);
 }
-function x(e) {
+function L(e) {
     let t = !1;
     for (let n of e.voiceStates) {
-        let [i] = P(e.guildId, n);
+        let [i] = w(e.guildId, n);
         t = t || i;
     }
     for (let n of e.removedVoiceStateUsers) O(e.guildId, n, () => null), (t = !0);
     return t && h++, t;
 }
-function L(e) {
+function x(e) {
     let { userId: t, channelId: n, platform: i } = e;
-    b[T(t, n)] = i;
+    T[b(t, n)] = i;
 }
-function P(e, t) {
+function w(e, t) {
     return O(e, t.userId, (e) => {
         if (null == t.channelId) return null;
         {
@@ -106,7 +106,7 @@ function P(e, t) {
         }
     });
 }
-function w(e) {
+function P(e) {
     let { guildId: t, channelId: n } = e,
         [r] = O(t, i, (e) => (null == e ? void 0 : e.set('channelId', n)));
     return r;
@@ -205,7 +205,7 @@ class F extends (a = l.ZP.Store) {
     getVoicePlatformForChannel(e, t) {
         var n, a;
         let s = null != r && (null === (a = I[i]) || void 0 === a ? void 0 : null === (n = a[r]) || void 0 === n ? void 0 : n.channelId);
-        return t === i && e === s ? f.wR.DESKTOP : b[T(t, e)];
+        return t === i && e === s ? f.wR.DESKTOP : T[b(t, e)];
     }
     get userHasBeenMovedVersion() {
         return p;
@@ -216,12 +216,12 @@ let V = new F(u.Z, {
     CONNECTION_OPEN: M,
     CONNECTION_OPEN_SUPPLEMENTAL: k,
     OVERLAY_INITIALIZE: U,
-    VOICE_CHANNEL_SELECT: w,
+    VOICE_CHANNEL_SELECT: P,
     VOICE_STATE_UPDATES: D,
     GUILD_DELETE: G,
     GUILD_CREATE: G,
     CHANNEL_DELETE: B,
     CALL_DELETE: Z,
-    PASSIVE_UPDATE_V2: x,
-    RTC_CONNECTION_PLATFORM: L
+    PASSIVE_UPDATE_V2: L,
+    RTC_CONNECTION_PLATFORM: x
 });

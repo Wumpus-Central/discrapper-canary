@@ -33,19 +33,19 @@ let c = 'no_payment_source',
     v = null,
     y = !1,
     I = !1,
-    b = !1,
     T = !1,
+    b = !1,
     S = null,
     A = new Set();
 function N(e) {
     null != i && null != g ? i(g) : null != r && r(e), (i = null), (r = null);
 }
 function C(e) {
-    N(), (d = e.skuId), (_ = e.applicationId), (I = e.isIAP), (p = e.analyticsLocation), (S = e.context), (T = e.isGift), (b = !0), (y = !1), (i = e.resolve), (r = e.reject), (v = null), (g = null), (h = e.promotionId);
+    N(), (d = e.skuId), (_ = e.applicationId), (I = e.isIAP), (p = e.analyticsLocation), (S = e.context), (b = e.isGift), (T = !0), (y = !1), (i = e.resolve), (r = e.reject), (v = null), (g = null), (h = e.promotionId);
 }
 function R(e) {
     let { error: t } = e;
-    (b = !1), (S = null), N(t);
+    (T = !1), (S = null), N(t);
 }
 function O(e) {
     let { skuId: t } = e;
@@ -62,18 +62,18 @@ function D(e) {
     }),
         A.delete(t);
 }
-function x(e) {
+function L(e) {
     let { skuId: t } = e;
     A.delete(t);
 }
-function L() {
+function x() {
     E = !0;
 }
-function P(e) {
+function w(e) {
     let { entitlements: t, giftCode: n } = e;
     (E = !1), (g = t), (f = n);
 }
-function w(e) {
+function P(e) {
     let { giftCode: t } = e;
     if (0 !== t.uses || t.sku_id !== d) return !1;
     f = t.code;
@@ -89,12 +89,12 @@ function U() {
     v = null;
 }
 function G(e) {
-    T = e.isGift;
+    b = e.isGift;
 }
 function B(e) {
     let { locked: t } = e;
     if (!t || null == S) return !1;
-    (b = !1), (S = null), N();
+    (T = !1), (S = null), N();
 }
 class Z extends (a = s.ZP.Store) {
     getPricesForSku(e) {
@@ -102,7 +102,7 @@ class Z extends (a = s.ZP.Store) {
     }
     isOpen() {
         let e = __OVERLAY__ ? l.IlC.OVERLAY : l.IlC.APP;
-        return S === e && b;
+        return S === e && T;
     }
     get isPurchasingSKU() {
         return E;
@@ -132,7 +132,7 @@ class Z extends (a = s.ZP.Store) {
         return f;
     }
     get isGift() {
-        return T;
+        return b;
     }
     isFetchingSKU(e) {
         return A.has(e);
@@ -144,13 +144,13 @@ let F = new Z(o.Z, {
     SKU_PURCHASE_MODAL_CLOSE: R,
     SKU_PURCHASE_PREVIEW_FETCH: O,
     SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: D,
-    SKU_PURCHASE_PREVIEW_FETCH_FAILURE: x,
-    SKU_PURCHASE_START: L,
-    SKU_PURCHASE_SUCCESS: P,
+    SKU_PURCHASE_PREVIEW_FETCH_FAILURE: L,
+    SKU_PURCHASE_START: x,
+    SKU_PURCHASE_SUCCESS: w,
     SKU_PURCHASE_FAIL: M,
     SKU_PURCHASE_SHOW_CONFIRMATION_STEP: k,
     SKU_PURCHASE_CLEAR_ERROR: U,
     SKU_PURCHASE_UPDATE_IS_GIFT: G,
     OVERLAY_SET_INPUT_LOCKED: B,
-    GIFT_CODE_CREATE: w
+    GIFT_CODE_CREATE: P
 });

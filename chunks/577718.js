@@ -17,28 +17,28 @@ var i = n(200651),
     E = n(970731),
     I = n(626135),
     C = n(267642),
-    N = n(337721),
-    v = n(981631),
+    v = n(337721),
+    N = n(981631),
     T = n(921944),
     S = n(30513),
-    Z = n(474936),
-    A = n(388032),
-    x = n(325382),
-    b = n(44669),
+    A = n(474936),
+    Z = n(388032),
+    x = n(255235),
+    b = n(987524),
     L = n(741160),
     y = n(829972),
     P = n(31932),
     O = n(642301);
 function R(e) {
-    null != e && m.Z.open(e.id, (0, p.r)(e.id), { section: v.jXE.PREMIUM_GUILD_PROGRESS_BAR }, v.KsC.DISPLAY);
+    null != e && m.Z.open(e.id, (0, p.r)(e.id), { section: N.jXE.PREMIUM_GUILD_PROGRESS_BAR }, N.KsC.DISPLAY);
 }
 function j(e, t) {
     null != t &&
-        ((0, C.f2)(t, v.Eu4.TIER_1)
-            ? m.Z.open(t.id, (0, p.r)(t.id), { section: v.jXE.PREMIUM_GUILD_INVITE_SPLASH }, v.KsC.INVITE)
+        ((0, C.f2)(t, N.Eu4.TIER_1)
+            ? m.Z.open(t.id, (0, p.r)(t.id), { section: N.jXE.PREMIUM_GUILD_INVITE_SPLASH }, N.KsC.INVITE)
             : (0, d.Z)({
                   analyticsLocations: e,
-                  analyticsSourceLocation: v.jXE.PREMIUM_GUILD_INVITE_SPLASH,
+                  analyticsSourceLocation: N.jXE.PREMIUM_GUILD_INVITE_SPLASH,
                   guild: t,
                   perks: (0, S.o9)()
               }));
@@ -62,15 +62,15 @@ let w = l.memo(function (e) {
     let { contentTypes: t, theme: n, guild: l, renderGuildHeaderDropdownButton: s } = e,
         { analyticsLocations: d } = (0, o.ZP)(),
         p = () => {
-            I.default.track(v.rMx.TOOLTIP_VIEWED, {
-                type: Z.cd.PREMIUM_PROGRESS_BAR,
-                location: { page: v.ZY5.GUILD_CHANNEL }
+            I.default.track(N.rMx.TOOLTIP_VIEWED, {
+                type: A.cd.PREMIUM_PROGRESS_BAR,
+                location: { page: N.ZY5.GUILD_CHANNEL }
             });
         },
         S = () => {
-            I.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: Z.cd.INVITE_SPLASH_UPSELL,
-                location: { page: v.ZY5.GUILD_CHANNEL },
+            I.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: A.cd.INVITE_SPLASH_UPSELL,
+                location: { page: N.ZY5.GUILD_CHANNEL },
                 location_stack: d
             });
         },
@@ -91,15 +91,15 @@ let w = l.memo(function (e) {
                     return (0, i.jsx)(D, {
                         renderPopout: (0, i.jsx)(E.ZP, {
                             onComponentMount: p,
-                            header: A.intl.string(A.t.nxtaFx),
+                            header: Z.intl.string(Z.t.nxtaFx),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: w,
                                 className: b.fullWidthImage
                             }),
-                            content: A.intl.format(A.t.ujItEh, {}),
-                            buttonCTA: A.intl.string(A.t.UzVPra),
-                            secondaryButtonCTA: A.intl.string(A.t['KkK/aG']),
+                            content: Z.intl.format(Z.t.ujItEh, {}),
+                            buttonCTA: Z.intl.string(Z.t.UzVPra),
+                            secondaryButtonCTA: Z.intl.string(Z.t['KkK/aG']),
                             onSecondaryClick: () => R(),
                             onClick: () => R(l),
                             markAsDismissed: k
@@ -110,15 +110,15 @@ let w = l.memo(function (e) {
                     return (0, i.jsx)(D, {
                         renderPopout: (0, i.jsx)(E.ZP, {
                             onComponentMount: p,
-                            header: A.intl.string(A.t.KAsfPT),
+                            header: Z.intl.string(Z.t.KAsfPT),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: w,
                                 className: b.fullWidthImage
                             }),
-                            content: A.intl.format(A.t.zK1hpq, {}),
-                            buttonCTA: A.intl.string(A.t.UzVPra),
-                            secondaryButtonCTA: A.intl.string(A.t['KkK/aG']),
+                            content: Z.intl.format(Z.t.zK1hpq, {}),
+                            buttonCTA: Z.intl.string(Z.t.UzVPra),
+                            secondaryButtonCTA: Z.intl.string(Z.t['KkK/aG']),
                             onSecondaryClick: () => R(),
                             onClick: () => R(l),
                             markAsDismissed: k
@@ -135,19 +135,19 @@ let w = l.memo(function (e) {
                     });
                 case r.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
                     return (0, i.jsx)(D, {
-                        renderPopout: (0, i.jsx)(N.Z, {
+                        renderPopout: (0, i.jsx)(v.Z, {
                             guild: l,
                             markAsDismissed: k
                         }),
                         renderGuildHeaderDropdownButton: s
                     });
                 case r.z.GUILD_HEADER_INVITE_SPLASH:
-                    let e = (0, C.f2)(l, v.Eu4.TIER_1) ? A.intl.format(A.t.DDzEVl, {}) : A.intl.formatToPlainString(A.t.pMftkJ, { boostCount: (0, C.KK)(l, v.Eu4.TIER_1) }),
-                        t = (0, C.f2)(l, v.Eu4.TIER_1) ? A.intl.string(A.t.rOFcBg) : A.intl.string(A.t.hvVgAQ);
+                    let e = (0, C.f2)(l, N.Eu4.TIER_1) ? Z.intl.format(Z.t.DDzEVl, {}) : Z.intl.formatToPlainString(Z.t.pMftkJ, { boostCount: (0, C.KK)(l, N.Eu4.TIER_1) }),
+                        t = (0, C.f2)(l, N.Eu4.TIER_1) ? Z.intl.string(Z.t.rOFcBg) : Z.intl.string(Z.t.hvVgAQ);
                     return (0, i.jsx)(D, {
                         renderPopout: (0, i.jsx)(E.ZP, {
                             onComponentMount: S,
-                            header: A.intl.string(A.t['36wK8/']),
+                            header: Z.intl.string(Z.t['36wK8/']),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: L,
@@ -155,7 +155,7 @@ let w = l.memo(function (e) {
                             }),
                             content: e,
                             buttonCTA: t,
-                            secondaryButtonCTA: A.intl.string(A.t.hBIHLS),
+                            secondaryButtonCTA: Z.intl.string(Z.t.hBIHLS),
                             onSecondaryClick: () => j(d),
                             onClick: () => j(d, l),
                             markAsDismissed: k
@@ -171,9 +171,9 @@ let w = l.memo(function (e) {
                     return (0, i.jsx)(D, {
                         renderPopout: (0, i.jsx)(E.ZP, {
                             className: x.tooltipOverrideColor,
-                            header: A.intl.string(A.t.hLUL3t),
-                            content: A.intl.string(A.t.ahWaPT),
-                            buttonCTA: A.intl.string(A.t['NX+WJC']),
+                            header: Z.intl.string(Z.t.hLUL3t),
+                            content: Z.intl.string(Z.t.ahWaPT),
+                            buttonCTA: Z.intl.string(Z.t['NX+WJC']),
                             onClick: () => k(T.L.UNKNOWN),
                             markAsDismissed: k
                         }),
@@ -182,17 +182,17 @@ let w = l.memo(function (e) {
                 case r.z.GUILD_HEADER_SOUNDBOARD_PERMISSION:
                     return (0, i.jsx)(D, {
                         renderPopout: (0, i.jsx)(E.ZP, {
-                            header: A.intl.string(A.t.PZNQKC),
-                            content: A.intl.string(A.t.jQIyyM),
-                            buttonCTA: A.intl.string(A.t.RzWDqa),
-                            secondaryButtonCTA: A.intl.string(A.t.f3Pet7),
+                            header: Z.intl.string(Z.t.PZNQKC),
+                            content: Z.intl.string(Z.t.jQIyyM),
+                            buttonCTA: Z.intl.string(Z.t.RzWDqa),
+                            secondaryButtonCTA: Z.intl.string(Z.t.f3Pet7),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: O,
                                 className: b.fullWidthImage
                             }),
                             onClick: () => {
-                                m.Z.open(l.id, v.pNK.ROLES), m.Z.selectRole(l.getEveryoneRoleId(), A.intl.string(A.t.Bco7ND));
+                                m.Z.open(l.id, N.pNK.ROLES), m.Z.selectRole(l.getEveryoneRoleId(), Z.intl.string(Z.t.Bco7ND));
                             },
                             markAsDismissed: k
                         }),

@@ -78,11 +78,11 @@ function I() {
     if (h.keyboardModeEnabled) return !1;
     (h = { ...h }).keyboardModeEnabled = !0;
 }
-function b() {
+function T() {
     if (!h.keyboardModeEnabled) return !1;
     (h = { ...h }).keyboardModeEnabled = !1;
 }
-function T() {
+function b() {
     (h = { ...h }).colorblindMode = !h.colorblindMode;
 }
 function S() {
@@ -106,28 +106,28 @@ function O() {
 function D() {
     (h = { ...h }).syncProfileThemeWithUserTheme = !h.syncProfileThemeWithUserTheme;
 }
-function x(e) {
+function L(e) {
     if (h.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
     h = {
         ...h,
         systemPrefersReducedMotion: e.systemPrefersReducedMotion
     };
 }
-function L(e) {
+function x(e) {
     if (h.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
     h = {
         ...h,
         systemPrefersCrossfades: e.systemPrefersCrossfades
     };
 }
-function P(e) {
+function w(e) {
     if (h.prefersReducedMotion === e.prefersReducedMotion) return !1;
     h = {
         ...h,
         prefersReducedMotion: e.prefersReducedMotion
     };
 }
-function w(e) {
+function P(e) {
     if (h.systemPrefersContrast === e.systemPrefersContrast) return !1;
     h = {
         ...h,
@@ -384,16 +384,16 @@ let j = new V(o.Z, {
     ACCESSIBILITY_SET_ZOOM: v,
     ACCESSIBILITY_RESET_TO_DEFAULT: y,
     ACCESSIBILITY_KEYBOARD_MODE_ENABLE: I,
-    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: b,
-    ACCESSIBILITY_COLORBLIND_TOGGLE: T,
+    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: T,
+    ACCESSIBILITY_COLORBLIND_TOGGLE: b,
     ACCESSIBILITY_LOW_CONTRAST_TOGGLE: S,
     ACCESSIBILITY_SET_SATURATION: N,
     ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: C,
     ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: k,
-    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: w,
-    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: x,
-    ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: L,
-    ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: P,
+    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: P,
+    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: L,
+    ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: x,
+    ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: w,
     ACCESSIBILITY_SET_SYNC_FORCED_COLORS: A,
     ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: M,
     ACCESSIBILITY_SET_ROLE_STYLE: R,

@@ -11,13 +11,13 @@ var l = n(120356),
     u = n(540059),
     h = n(952164),
     p = n(237583),
-    g = n(131704),
-    m = n(314897),
+    m = n(131704),
+    g = n(314897),
     f = n(594174),
     _ = n(768581),
     v = n(51144),
     C = n(754231),
-    x = n(787308);
+    x = n(514039);
 function Z(e) {
     let { guildId: t, member: n, className: l } = e,
         a = null != n.member ? (0, _.CA)(n.member) : null;
@@ -69,16 +69,16 @@ let b = (e) => {
         _ = (0, u.Q3)('ChannelActivityRow'),
         v = null != r,
         Z = v ? Array.from(r.embeddedActivity.userIds) : [],
-        b = (0, a.e7)([f.default, m.default], () => {
+        b = (0, a.e7)([f.default, g.default], () => {
             if (v) return f.default.getUser(Z[0]);
             if (null != l) {
                 var e, t;
-                return l.length <= 0 ? null : null !== (t = null === (e = l.find((e) => e.user.id !== m.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : l[0].user;
+                return l.length <= 0 ? null : null !== (t = null === (e = l.find((e) => e.user.id !== g.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : l[0].user;
             }
         });
     if (null == b) return null;
     let S = v || (0, c.Z)(n),
-        N = (0, g.vd)(t.type);
+        N = (0, m.vd)(t.type);
     return (0, i.jsxs)('div', {
         className: x.activity,
         children: [

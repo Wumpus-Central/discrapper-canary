@@ -5,7 +5,7 @@ var l = n(120356),
     o = n.n(l),
     a = n(481060),
     s = n(259580),
-    c = n(995181);
+    c = n(604630);
 function r(e) {
     let { options: t, onClick: n, className: l, optionClassName: r, hideCaret: u } = e;
     return (0, i.jsx)('div', {

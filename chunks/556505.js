@@ -4,7 +4,7 @@ var a = n(200651),
     l = n(481060),
     s = n(911969),
     c = n(388032),
-    o = n(750628);
+    o = n(963026);
 function r(e) {
     let { name: t, labelType: n, collapsed: r = !1, showTooltip: d = !1 } = e,
         u = n === s.ww.NEW ? c.intl.string(c.t.y2b7CA) : c.intl.string(c.t['/qdhkp']),

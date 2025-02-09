@@ -30,8 +30,8 @@ function y(e, t, n) {
     );
 }
 let I = 1 * f.Z.Millis.MINUTE,
-    b = 2,
-    T = 1 * f.Z.Millis.SECOND,
+    T = 2,
+    b = 1 * f.Z.Millis.SECOND,
     S = (0, m.T)({ location: E.dr.QUESTS_MANAGER }),
     A = (e) =>
         (0, o.V9)({
@@ -48,7 +48,7 @@ function N() {
     return null != n && R(n) ? n : null;
 }
 function C(e) {
-    return d.ZP.countVoiceStatesForChannel(e) >= b;
+    return d.ZP.countVoiceStatesForChannel(e) >= T;
 }
 function R(e) {
     return !(0, h.zi)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
@@ -62,7 +62,7 @@ function O(e) {
     if (null == c || !R(c)) return 'STOP';
     let d = null === (t = N()) || void 0 === t ? void 0 : t.config,
         f = null != l.Z.getRTCStream(i) && null != d && g.r.build(d).application.id === r && u,
-        _ = null != x(c),
+        _ = null != L(c),
         m = s.ZP.getRunningGames().map((e) => e.id),
         E = (0, h.$H)(c) && m.includes(r);
     return f || _ || E ? 'BEAT' : 'BEAT_TERMINAL';
@@ -76,10 +76,10 @@ function D(e) {
           }
         : {
               quest: t,
-              activity: x(t)
+              activity: L(t)
           };
 }
-function x(e) {
+function L(e) {
     let t = g.r.build(e.config);
     if (!(0, h.pO)(e)) return null;
     let n = a.ZP.getSelfEmbeddedActivities();
@@ -91,13 +91,13 @@ function x(e) {
     for (let e of n.values()) if (e.applicationId === t.application.id) return e;
     return null;
 }
-function L(e, t) {
+function x(e, t) {
     let n = (0, h.lQ)(e, t);
     if (null != n && (0, h.pO)(n)) return n;
     for (let [t, n] of e) if (!(0, h.zi)(n) && (0, h.KM)(n)) return n;
 }
-function P(e) {
-    let t = L(p.Z.quests, e);
+function w(e) {
+    let t = x(p.Z.quests, e);
     if (null == t)
         return {
             quest: null,
@@ -109,7 +109,7 @@ function P(e) {
         activity: null != n ? n : null
     };
 }
-class w extends r.Z {
+class P extends r.Z {
     constructor(...e) {
         super(...e),
             y(this, 'streamKeyToHeartbeatState', new Map()),
@@ -149,7 +149,7 @@ class w extends r.Z {
                 if (null == t || null == t.config || null == t.userStatus) return I;
                 let { progressSeconds: n, targetSeconds: r } = (0, h.il)(t, i.T.DESKTOP),
                     a = Math.max(0, (r - n) * f.Z.Millis.SECOND);
-                return a <= I ? a + T : I;
+                return a <= I ? a + b : I;
             }),
             y(this, 'terminateHeartbeat', (e) => {
                 let { streamKey: t, sendTerminalHeartbeat: n } = e,
@@ -324,7 +324,7 @@ class w extends r.Z {
                       }));
             }),
             y(this, 'handleEmbeddedActivityUpdate', (e) => {
-                let { quest: t, activity: n } = P(e);
+                let { quest: t, activity: n } = w(e);
                 if (null == t || !(0, h.pO)(t)) return;
                 let i = A(t.id),
                     r = null == n && this.streamKeyToHeartbeatState.has(i),
@@ -420,4 +420,4 @@ class w extends r.Z {
             });
     }
 }
-let M = new w();
+let M = new P();

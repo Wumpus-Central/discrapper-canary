@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var i,
     r = n(442837),
     a = n(570140),
@@ -143,7 +143,7 @@ class I extends (i = r.ZP.Store) {
     }
 }
 u(I, 'displayName', 'ApplicationCommandAutocompleteStore');
-let b = new I(a.Z, {
+let T = new I(a.Z, {
     CONNECTION_OPEN: p,
     LOGOUT: p,
     CHANNEL_SELECT: p,

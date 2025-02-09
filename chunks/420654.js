@@ -10,16 +10,16 @@ var i = n(200651),
     d = n(171368),
     f = n(981631),
     _ = n(388032),
-    p = n(813238);
+    p = n(515134);
 let h = 57.75,
     m = r.memo(function (e) {
         let { user: t, onClose: n, bio: a, hidePersonalInformation: m, viewFullBioDisabled: g = !1 } = e,
             { context: E } = (0, u.KZ)(),
             { analyticsLocations: v } = (0, l.ZP)(),
             [y, I] = r.useState(!1),
-            [b, T] = r.useState(!1),
+            [T, b] = r.useState(!1),
             S = (e) => {
-                null != e && (I(!b && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && T(!0));
+                null != e && (I(!T && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && b(!0));
             },
             A = () => {
                 null == n || n(),
@@ -36,14 +36,14 @@ let h = 57.75,
                   children: [
                       (0, i.jsx)('div', {
                           ref: S,
-                          className: s()(p.descriptionClamp, b && p.maxBioHeight),
+                          className: s()(p.descriptionClamp, T && p.maxBioHeight),
                           children: (0, i.jsx)(c.Z, {
                               userBio: a,
                               setLineClamp: !1,
                               textColor: 'header-primary'
                           })
                       }),
-                      (y || b) &&
+                      (y || T) &&
                           (0, i.jsx)(o.zxk, {
                               look: o.zxk.Looks.BLANK,
                               size: o.zxk.Sizes.NONE,

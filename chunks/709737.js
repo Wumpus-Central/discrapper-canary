@@ -1,41 +1,41 @@
 n.d(t, {
-    DC: () => u,
+    DC: () => d,
     Js: () => c,
-    ZR: () => d
+    ZR: () => u
 });
-var i = n(200651);
+var l = n(200651);
 n(192379);
-var r = n(657707),
-    a = n(297781),
-    s = n(709054),
-    o = n(528567);
+var i = n(657707),
+    r = n(297781),
+    a = n(709054),
+    s = n(528567);
 n(814059);
-var l = n(388032);
-function u(e) {
+var o = n(388032);
+function d(e) {
     let { value: t, statisticId: n } = e,
-        r = l.intl.formatToPlainString(l.t.yhdo8v, {
+        i = o.intl.formatToPlainString(o.t.yhdo8v, {
             value: t,
-            statisticName: (0, o.C)(n)
+            statisticName: (0, s.C)(n)
         });
-    return (0, i.jsx)(d, { text: r });
+    return (0, l.jsx)(u, { text: i });
 }
 function c(e) {
     let { intervalStart: t, intervalEnd: n } = e,
-        o = new Date(s.default.extractTimestamp(t)),
-        u = new Date(s.default.extractTimestamp(n)),
-        c = new Intl.DateTimeFormat(l.intl.currentLocale, {
+        s = new Date(a.default.extractTimestamp(t)),
+        d = new Date(a.default.extractTimestamp(n)),
+        c = new Intl.DateTimeFormat(o.intl.currentLocale, {
             month: 'numeric',
             day: 'numeric'
-        }).formatRange(o, u);
-    return (0, i.jsx)(a.ej, {
-        Icon: r.Que,
+        }).formatRange(s, d);
+    return (0, l.jsx)(r.ej, {
+        Icon: i.Que,
         text: c
     });
 }
-function d(e) {
+function u(e) {
     let { text: t } = e;
-    return (0, i.jsx)(a.ej, {
-        Icon: r.hAD,
+    return (0, l.jsx)(r.ej, {
+        Icon: i.hAD,
         text: t
     });
 }

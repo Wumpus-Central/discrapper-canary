@@ -18,8 +18,8 @@ var i,
     v = n(630388),
     y = n(709054),
     I = n(314897),
-    b = n(592125),
-    T = n(796974),
+    T = n(592125),
+    b = n(796974),
     S = n(984933),
     A = n(271383),
     N = n(430824),
@@ -27,9 +27,9 @@ var i,
     R = n(699516),
     O = n(944486),
     D = n(914010),
-    x = n(594174),
-    L = n(981631);
-function P(e, t, n) {
+    L = n(594174),
+    x = n(981631);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function P(e, t, n) {
         e
     );
 }
-let w = new Set(),
+let P = new Set(),
     M = new d.Z('MessageStore'),
     k = !1;
 function U() {
@@ -54,7 +54,7 @@ function U() {
             })
         );
     }),
-        w.clear();
+        P.clear();
 }
 function G(e) {
     let { changesByChannelId: t } = e;
@@ -80,7 +80,7 @@ function Z(e) {
 }
 function F(e) {
     let { channelId: t } = e;
-    M.log('Clearing messages for '.concat(t)), u.Z.clear(t), w.clear();
+    M.log('Clearing messages for '.concat(t)), u.Z.clear(t), P.clear();
 }
 function V(e) {
     let { channelId: t, jump: n, focus: i, before: r, after: a, limit: s, truncate: o } = e,
@@ -115,16 +115,16 @@ function H(e) {
 }
 function Y(e) {
     let { message: t } = e;
-    null != t.nonce && w.add(t.nonce);
+    null != t.nonce && P.add(t.nonce);
 }
 function W(e) {
     let { channelId: t, messageRecord: n } = e,
         i = null == n ? void 0 : n.nonce;
-    if (null != i && w.has(i)) {
+    if (null != i && P.has(i)) {
         let e = u.Z.getOrCreate(t),
             n = e.get(i);
         if (null == n) return;
-        (e = (e = e.remove(i)).merge([n])), w.delete(i), u.Z.commit(e);
+        (e = (e = e.remove(i)).merge([n])), P.delete(i), u.Z.commit(e);
     }
 }
 function K(e) {
@@ -135,14 +135,14 @@ function K(e) {
         return;
     }
     if (!r.ready) return !1;
-    null != n.nonce && n.state !== L.yb.SENDING && w.has(n.nonce) && ((r = r.remove(n.nonce)), w.delete(n.nonce)), (r = r.receiveMessage(n, !0 === T.Z.isAtBottom(t))), u.Z.commit(r);
+    null != n.nonce && n.state !== x.yb.SENDING && P.has(n.nonce) && ((r = r.remove(n.nonce)), P.delete(n.nonce)), (r = r.receiveMessage(n, !0 === b.Z.isAtBottom(t))), u.Z.commit(r);
 }
 function z(e) {
     let { channelId: t, messageId: n, reason: i } = e,
         r = u.Z.getOrCreate(t);
     if (null == r || !r.has(n)) return !1;
     let a = r.get(n, !0);
-    (r = (null == a ? void 0 : a.isPoll()) === !0 ? r.remove(n) : r.update(n, (e) => ((e = e.set('state', L.yb.SEND_FAILED)).isCommandType() ? (e = (e = e.set('interactionError', null != i ? i : '')).set('flags', (0, v.pj)(e.flags, L.iLy.EPHEMERAL))) : null != i && (e = e.set('interactionError', null != i ? i : '')), e))), u.Z.commit(r);
+    (r = (null == a ? void 0 : a.isPoll()) === !0 ? r.remove(n) : r.update(n, (e) => ((e = e.set('state', x.yb.SEND_FAILED)).isCommandType() ? (e = (e = e.set('interactionError', null != i ? i : '')).set('flags', (0, v.pj)(e.flags, x.iLy.EPHEMERAL))) : null != i && (e = e.set('interactionError', null != i ? i : '')), e))), u.Z.commit(r);
 }
 function q(e) {
     let { id: t, channelId: n } = e,
@@ -152,7 +152,7 @@ function q(e) {
         let e = i.getAfter(t);
         i = null != e && e.blocked ? i.mutate({ revealedMessageId: e.id }) : i.mutate({ revealedMessageId: null });
     }
-    (i = i.remove(t)), u.Z.commit(i), w.delete(t);
+    (i = i.remove(t)), u.Z.commit(i), P.delete(t);
 }
 function Q(e) {
     let { ids: t, channelId: n } = e,
@@ -166,7 +166,7 @@ function Q(e) {
     }
     u.Z.commit(r),
         t.forEach((e) => {
-            w.delete(e);
+            P.delete(e);
         });
 }
 function X(e) {
@@ -202,7 +202,7 @@ function ee(e) {
 function et() {
     u.Z.forEach((e) => {
         let { channelId: t } = e;
-        null == b.Z.getChannel(t) && u.Z.clear(t);
+        null == T.Z.getChannel(t) && u.Z.clear(t);
     });
 }
 function en() {
@@ -230,7 +230,7 @@ function eo(e) {
     if (null == r) return !1;
     (r = r.update(n, (e) => {
         var t;
-        return e.addReactionBatch(i, null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
+        return e.addReactionBatch(i, null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
     })),
         u.Z.commit(r);
 }
@@ -243,7 +243,7 @@ function el(e) {
     if (!s.has(r)) return !1;
     (s = s.update(r, (e) => {
         var n;
-        return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(_.K).length) > 0 && (e = e.set('embeds', [])), 'MESSAGE_SEND_FAILED_AUTOMOD' === t && (e = e.set('flags', (0, v.pj)(e.flags, L.iLy.EPHEMERAL))), e;
+        return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(_.K).length) > 0 && (e = e.set('embeds', [])), 'MESSAGE_SEND_FAILED_AUTOMOD' === t && (e = e.set('flags', (0, v.pj)(e.flags, x.iLy.EPHEMERAL))), e;
     })),
         u.Z.commit(s);
 }
@@ -263,7 +263,7 @@ function ed() {
     u.Z.forEach((e) => {
         u.Z.clear(e.channelId);
     }),
-        w.clear();
+        P.clear();
 }
 function ef(e) {
     for (let [t, n] of y.default.entries(e.messages)) {
@@ -277,18 +277,18 @@ function e_(e) {
 }
 function ep(e) {
     let { message: t } = e,
-        n = x.default.getCurrentUser();
+        n = L.default.getCurrentUser();
     null != t && null != t.author && null != n && t.author.id === n.id && (k = !0);
 }
 class eh extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(x.default, b.Z, T.Z, A.ZP, E.default, O.Z, D.Z, N.Z, R.Z, S.ZP), this.syncWith([p.Z], () => {});
+        this.waitFor(L.default, T.Z, b.Z, A.ZP, E.default, O.Z, D.Z, N.Z, R.Z, S.ZP), this.syncWith([p.Z], () => {});
     }
     getMessages(e) {
         if (p.Z.hasViewingRoles()) {
-            let t = b.Z.getChannel(e),
+            let t = T.Z.getChannel(e),
                 n = null == t ? void 0 : t.getGuildId();
-            if (p.Z.isViewingRoles(n) && !C.Z.can(L.Plq.VIEW_CHANNEL, t)) return new u.Z(e);
+            if (p.Z.isViewingRoles(n) && !C.Z.can(x.Plq.VIEW_CHANNEL, t)) return new u.Z(e);
         }
         return u.Z.getOrCreate(e);
     }
@@ -296,13 +296,13 @@ class eh extends (i = s.ZP.Store) {
         return u.Z.getOrCreate(e).get(t);
     }
     getLastEditableMessage(e) {
-        let t = x.default.getCurrentUser();
+        let t = L.default.getCurrentUser();
         return a()(this.getMessages(e).toArray())
             .reverse()
             .find((e) => (0, m.Z)(e, null == t ? void 0 : t.id));
     }
     getLastChatCommandMessage(e) {
-        let t = x.default.getCurrentUser();
+        let t = L.default.getCurrentUser();
         return this.getMessages(e)
             .toArray()
             .reverse()
@@ -315,7 +315,7 @@ class eh extends (i = s.ZP.Store) {
         return a()(this.getMessages(e).toArray()).reverse().get(0);
     }
     getLastNonCurrentUserMessage(e) {
-        let t = x.default.getCurrentUser();
+        let t = L.default.getCurrentUser();
         return a()(this.getMessages(e).toArray())
             .reverse()
             .find((e) => e.author.id !== (null == t ? void 0 : t.id));
@@ -344,14 +344,14 @@ class eh extends (i = s.ZP.Store) {
         return u.Z.getOrCreate(e).loadingMore;
     }
     hasCurrentUserSentMessage(e) {
-        let t = x.default.getCurrentUser();
+        let t = L.default.getCurrentUser();
         return null != this.getMessages(e).findNewest((e) => e.author.id === (null == t ? void 0 : t.id));
     }
     hasCurrentUserSentMessageSinceAppStart() {
         return k;
     }
 }
-P(eh, 'displayName', 'MessageStore');
+w(eh, 'displayName', 'MessageStore');
 let em = new eh(o.Z, {
     BACKGROUND_SYNC_CHANNEL_MESSAGES: G,
     CONNECTION_OPEN: U,

@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(246642),
     y = n(921227),
     I = n(314897),
-    b = n(430824),
-    T = n(699516),
+    T = n(430824),
+    b = n(699516),
     S = n(885110),
     A = n(111583),
     N = n(594174),
@@ -27,10 +27,10 @@ var i = n(200651),
     R = n(626135),
     O = n(823379),
     D = n(5192),
-    x = n(981631),
-    L = n(388032),
-    P = n(215225);
-function w(e, t, n) {
+    L = n(981631),
+    x = n(388032),
+    w = n(437047);
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ class k extends r.PureComponent {
         let e = this.props.activity.application_id;
         null != e &&
             -1 === M.indexOf(e) &&
-            (R.default.track(x.rMx.SHOW_TUTORIAL, {
+            (R.default.track(L.rMx.SHOW_TUTORIAL, {
                 tutorial: 'activity-invite-nux-inline',
                 application_id: e
             }),
@@ -69,16 +69,16 @@ class k extends r.PureComponent {
     render() {
         let { activity: e, isRefreshChatInputEnabled: t } = this.props;
         return (0, i.jsxs)('div', {
-            className: s()(P.activityInviteEducation, { [P.activityInviteEducationFadeIn]: this.state.fadeIn }),
+            className: s()(w.activityInviteEducation, { [w.activityInviteEducationFadeIn]: this.state.fadeIn }),
             children: [
                 t
                     ? (0, i.jsx)(d.whL, {
                           size: 'sm',
-                          className: P.activityInviteEducationLeftArrow
+                          className: w.activityInviteEducationLeftArrow
                       })
-                    : (0, i.jsx)('div', { className: P.activityInviteEducationArrow }),
+                    : (0, i.jsx)('div', { className: w.activityInviteEducationArrow }),
                 (0, i.jsx)('span', {
-                    children: L.intl.format(L.t['i/MoCg'], {
+                    children: x.intl.format(x.t['i/MoCg'], {
                         game: e.name,
                         dismissOnClick: this.handleDismissInviteEducation
                     })
@@ -88,9 +88,9 @@ class k extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            w(this, 'state', { fadeIn: !1 }),
-            w(this, 'timeout', null),
-            w(this, 'handleDismissInviteEducation', () => {
+            P(this, 'state', { fadeIn: !1 }),
+            P(this, 'timeout', null),
+            P(this, 'handleDismissInviteEducation', () => {
                 let { activity: e } = this.props;
                 null != e && null != e.application_id && f.Z.dismissForApplicationId(e.application_id);
             });
@@ -111,14 +111,14 @@ function G(e) {
     let { guildId: t, activity: n, showInviteEducation: r, isFocused: a, typingUsers: o, className: u, channel: c, isThreadCreation: f, renderDots: _, poggermodeEnabled: p, isComboing: g } = e,
         { rateLimitPerUser: E } = c,
         y = N.default.getCurrentUser(),
-        I = b.Z.getGuild(t),
+        I = T.Z.getGuild(t),
         S = E > 0,
         A = f
             ? []
             : l()(o)
                   .keys()
                   .filter((e) => e !== (null == y ? void 0 : y.id))
-                  .reject((e) => T.Z.isBlockedOrIgnored(e))
+                  .reject((e) => b.Z.isBlockedOrIgnored(e))
                   .map((e) => N.default.getUser(e))
                   .filter(O.lm)
                   .map((e) => D.ZP.getName(t, c.id, e))
@@ -135,45 +135,45 @@ function G(e) {
                   channel: c,
                   guild: I
               });
-    let [R, x, w] = A,
+    let [R, L, P] = A,
         M = '';
     return (
         1 === A.length
-            ? (M = L.intl.format(L.t.lJ9sZW, { a: R }))
+            ? (M = x.intl.format(x.t.lJ9sZW, { a: R }))
             : 2 === A.length
-              ? (M = L.intl.format(L.t.rB0CUV, {
+              ? (M = x.intl.format(x.t.rB0CUV, {
                     a: R,
-                    b: x
+                    b: L
                 }))
               : 3 === A.length
-                ? (M = L.intl.format(L.t.StKTho, {
+                ? (M = x.intl.format(x.t.StKTho, {
                       a: R,
-                      b: x,
-                      c: w
+                      b: L,
+                      c: P
                   }))
-                : A.length > 3 && (M = L.intl.string(L.t.uVDhqa)),
+                : A.length > 3 && (M = x.intl.string(x.t.uVDhqa)),
         (0, i.jsxs)('div', {
             className: s()(
-                P.typing,
+                w.typing,
                 {
                     'stop-animation': !a,
-                    [P.isComboing]: p && g
+                    [w.isComboing]: p && g
                 },
                 u
             ),
             children: [
                 (0, i.jsxs)('div', {
-                    className: P.typingDots,
+                    className: w.typingDots,
                     children: [
                         A.length > 0 &&
                             !1 !== _ &&
                             (0, i.jsx)(d.bbz, {
-                                className: P.ellipsis,
+                                className: w.ellipsis,
                                 dotRadius: 3.5,
                                 themed: !0
                             }),
                         (0, i.jsx)('span', {
-                            className: P.text,
+                            className: w.text,
                             'aria-live': 'polite',
                             'aria-atomic': !0,
                             children: M

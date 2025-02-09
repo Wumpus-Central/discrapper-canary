@@ -34,7 +34,7 @@ function f(e) {
     if (null == f || !_) return null;
     let p = () => {
         (0, a.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e('66711'), n.e('77803'), n.e('91902')]).then(n.bind(n, 7225));
+            let { default: e } = await Promise.all([n.e('66711'), n.e('77803'), n.e('7722')]).then(n.bind(n, 7225));
             return (t) =>
                 (0, i.jsx)(e, {
                     appId: f.id,

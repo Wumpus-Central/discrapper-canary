@@ -122,14 +122,14 @@ function I(e, t, n) {
                 return U(this, t, n);
             case 'utf8':
             case 'utf-8':
-                return L(this, t, n);
+                return x(this, t, n);
             case 'ascii':
                 return M(this, t, n);
             case 'latin1':
             case 'binary':
                 return k(this, t, n);
             case 'base64':
-                return x(this, t, n);
+                return L(this, t, n);
             case 'ucs2':
             case 'ucs-2':
             case 'utf16le':
@@ -140,11 +140,11 @@ function I(e, t, n) {
                 (e = (e + '').toLowerCase()), (i = !0);
         }
 }
-function b(e, t, n) {
+function T(e, t, n) {
     var i = e[t];
     (e[t] = e[n]), (e[n] = i);
 }
-function T(e, t, n, i, r) {
+function b(e, t, n, i, r) {
     if (0 === e.length) return -1;
     if (('string' == typeof n ? ((i = n), (n = 0)) : n > 2147483647 ? (n = 2147483647) : n < -2147483648 && (n = -2147483648), J((n = +n)) && (n = r ? 0 : e.length - 1), n < 0 && (n = e.length + n), n >= e.length)) {
         if (r) return -1;
@@ -214,10 +214,10 @@ function O(e, t, n, i) {
 function D(e, t, n, i) {
     return Q(z(t, e.length - n), e, n, i);
 }
-function x(e, t, n) {
+function L(e, t, n) {
     return 0 === t && n === e.length ? i.fromByteArray(e) : i.fromByteArray(e.slice(t, n));
 }
-function L(e, t, n) {
+function x(e, t, n) {
     n = Math.min(e.length, n);
     for (var i = [], r = t; r < n; ) {
         var a,
@@ -243,7 +243,7 @@ function L(e, t, n) {
             }
         null === c ? ((c = 65533), (d = 1)) : c > 65535 && ((c -= 65536), i.push(((c >>> 10) & 1023) | 55296), (c = 56320 | (1023 & c))), i.push(c), (r += d);
     }
-    return w(i);
+    return P(i);
 }
 (t.kMaxLength = s),
     (u.TYPED_ARRAY_SUPPORT = o()),
@@ -325,24 +325,24 @@ function L(e, t, n) {
     (u.prototype.swap16 = function () {
         var e = this.length;
         if (e % 2 != 0) throw RangeError('Buffer size must be a multiple of 16-bits');
-        for (var t = 0; t < e; t += 2) b(this, t, t + 1);
+        for (var t = 0; t < e; t += 2) T(this, t, t + 1);
         return this;
     }),
     (u.prototype.swap32 = function () {
         var e = this.length;
         if (e % 4 != 0) throw RangeError('Buffer size must be a multiple of 32-bits');
-        for (var t = 0; t < e; t += 4) b(this, t, t + 3), b(this, t + 1, t + 2);
+        for (var t = 0; t < e; t += 4) T(this, t, t + 3), T(this, t + 1, t + 2);
         return this;
     }),
     (u.prototype.swap64 = function () {
         var e = this.length;
         if (e % 8 != 0) throw RangeError('Buffer size must be a multiple of 64-bits');
-        for (var t = 0; t < e; t += 8) b(this, t, t + 7), b(this, t + 1, t + 6), b(this, t + 2, t + 5), b(this, t + 3, t + 4);
+        for (var t = 0; t < e; t += 8) T(this, t, t + 7), T(this, t + 1, t + 6), T(this, t + 2, t + 5), T(this, t + 3, t + 4);
         return this;
     }),
     (u.prototype.toString = function () {
         var e = this.length;
-        return 0 === e ? '' : 0 == arguments.length ? L(this, 0, e) : I.apply(this, arguments);
+        return 0 === e ? '' : 0 == arguments.length ? x(this, 0, e) : I.apply(this, arguments);
     }),
     (u.prototype.toLocaleString = u.prototype.toString),
     (u.prototype.equals = function (e) {
@@ -379,10 +379,10 @@ function L(e, t, n) {
         return -1 !== this.indexOf(e, t, n);
     }),
     (u.prototype.indexOf = function (e, t, n) {
-        return T(this, e, t, n, !0);
+        return b(this, e, t, n, !0);
     }),
     (u.prototype.lastIndexOf = function (e, t, n) {
-        return T(this, e, t, n, !1);
+        return b(this, e, t, n, !1);
     }),
     (u.prototype.write = function (e, t, n, i) {
         if (void 0 === t) (i = 'utf8'), (n = this.length), (t = 0);
@@ -422,11 +422,11 @@ function L(e, t, n) {
             data: Array.prototype.slice.call(this._arr || this, 0)
         };
     });
-var P = 4096;
-function w(e) {
+var w = 4096;
+function P(e) {
     var t = e.length;
-    if (t <= P) return String.fromCharCode.apply(String, e);
-    for (var n = '', i = 0; i < t; ) n += String.fromCharCode.apply(String, e.slice(i, (i += P)));
+    if (t <= w) return String.fromCharCode.apply(String, e);
+    for (var n = '', i = 0; i < t; ) n += String.fromCharCode.apply(String, e.slice(i, (i += w)));
     return n;
 }
 function M(e, t, n) {

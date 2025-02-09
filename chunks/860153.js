@@ -1,37 +1,37 @@
-n.d(t, { Z: () => p });
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
-    r = n(481060),
-    u = n(700582),
-    c = n(372900),
-    d = n(318713),
-    _ = n(123145),
-    E = n(592125),
-    m = n(369171),
-    S = n(388032),
-    h = n(795938);
-let f = l.memo(function (e) {
+a.d(t, { Z: () => S });
+var n = a(200651),
+    i = a(192379),
+    s = a(120356),
+    o = a.n(s),
+    l = a(442837),
+    r = a(481060),
+    c = a(700582),
+    d = a(372900),
+    u = a(318713),
+    m = a(123145),
+    _ = a(592125),
+    p = a(369171),
+    g = a(388032),
+    h = a(133286);
+let C = i.memo(function (e) {
     let { message: t } = e,
-        n = (0, o.e7)([E.Z], () => E.Z.getChannel(t.channel_id));
-    return null == n
+        a = (0, l.e7)([_.Z], () => _.Z.getChannel(t.channel_id));
+    return null == a
         ? null
-        : (0, i.jsx)(i.Fragment, {
-              children: (0, i.jsx)('div', {
+        : (0, n.jsx)(n.Fragment, {
+              children: (0, n.jsx)('div', {
                   className: h.messageContents,
-                  children: (0, i.jsxs)(c.Z.Provider, {
-                      value: n.guild_id,
+                  children: (0, n.jsxs)(d.Z.Provider, {
+                      value: a.guild_id,
                       children: [
-                          (0, i.jsx)(u.Z, { user: t.author }),
-                          (0, i.jsx)(r.Rny, {
-                              children: (0, i.jsx)(_.Z, {
+                          (0, n.jsx)(c.Z, { user: t.author }),
+                          (0, n.jsx)(r.Rny, {
+                              children: (0, n.jsx)(m.Z, {
                                   message: t,
-                                  channel: n
+                                  channel: a
                               })
                           }),
-                          (0, i.jsx)(d.Z, {
+                          (0, n.jsx)(u.Z, {
                               timestamp: t.timestamp,
                               className: h.timestamp
                           })
@@ -40,26 +40,26 @@ let f = l.memo(function (e) {
               })
           });
 });
-function p(e) {
+function S(e) {
     var t;
-    let { item: n, onClose: l } = e,
-        a = null === (t = n.sourceMetadata) || void 0 === t ? void 0 : t.message;
-    return (0, i.jsx)(m.ZP, {
+    let { item: a, onClose: i } = e,
+        s = null === (t = a.sourceMetadata) || void 0 === t ? void 0 : t.message;
+    return (0, n.jsx)(p.ZP, {
         children: (e) =>
-            (0, i.jsxs)('div', {
-                className: s()(h.topBar, e),
+            (0, n.jsxs)('div', {
+                className: o()(h.topBar, e),
                 children: [
-                    (0, i.jsx)(r.zxk, {
+                    (0, n.jsx)(r.zxk, {
                         look: r.iLD.BLANK,
                         color: r.Ttl.CUSTOM,
                         size: r.PhG.ICON,
                         className: h.closeButton,
                         innerClassName: h.closeButtonInner,
-                        'aria-label': S.intl.string(S.t.Xvtztr),
-                        onClick: l,
-                        children: (0, i.jsx)(r.Dio, {})
+                        'aria-label': g.intl.string(g.t.Xvtztr),
+                        onClick: i,
+                        children: (0, n.jsx)(r.Dio, {})
                     }),
-                    null != a && (0, i.jsx)(f, { message: a })
+                    null != s && (0, n.jsx)(C, { message: s })
                 ]
             })
     });

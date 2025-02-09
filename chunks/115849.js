@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(47120);
+n.d(t, { Z: () => A }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -13,8 +13,8 @@ var i = n(200651),
     p = n(981631),
     g = n(420212),
     _ = n(388032),
-    f = n(333483),
-    E = n(232186);
+    f = n(118653),
+    E = n(814632);
 let I = n(349181),
     C = {
         canSend: !1,
@@ -22,9 +22,9 @@ let I = n(349181),
         success: null,
         error: null
     },
-    N = (0, u.hQ)(),
-    v = ''.concat(N, '-decription'),
-    T = ''.concat(N, '-error');
+    v = (0, u.hQ)(),
+    N = ''.concat(v, '-decription'),
+    T = ''.concat(v, '-error');
 function S(e, t) {
     switch (t.type) {
         case 'RESET':
@@ -48,16 +48,16 @@ function S(e, t) {
             };
     }
 }
-function Z() {
+function A() {
     let e = l.createRef(),
         t = l.createRef(),
         [n, r] = l.useReducer(S, C),
-        { canSend: s, hint: u, success: Z, error: A } = n,
+        { canSend: s, hint: u, success: A, error: Z } = n,
         x = (0, h.Q3)('AddFriendInput');
     return (
         l.useEffect(() => {
-            null != Z && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
-        }, [Z, e]),
+            null != A && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
+        }, [A, e]),
         (0, i.jsxs)('form', {
             onSubmit: (t) => {
                 t.preventDefault(), o()(null != e.current, 'Input is submitted when not mounted');
@@ -95,7 +95,7 @@ function Z() {
                     className: f.addFriendWumpusWrapper,
                     children: [
                         (0, i.jsx)(c.R94, {
-                            id: v,
+                            id: N,
                             type: c.R94.Types.DESCRIPTION,
                             children: (0, i.jsx)(c.Text, {
                                 tag: 'div',
@@ -118,12 +118,12 @@ function Z() {
                     children: (0, i.jsxs)('div', {
                         ref: t,
                         className: a()(f.addFriendInputWrapper, {
-                            [f.success]: Z,
-                            [f.error]: A
+                            [f.success]: A,
+                            [f.error]: Z
                         }),
                         children: [
                             (0, i.jsx)(c.oil, {
-                                id: N,
+                                id: v,
                                 inputRef: e,
                                 className: f.addFriendInput,
                                 inputClassName: f.input,
@@ -160,8 +160,8 @@ function Z() {
                                 'data-1p-ignore': !0,
                                 placeholder: _.intl.string(_.t['Rn/sLi']),
                                 'aria-label': _.intl.string(_.t['Rn/sLi']),
-                                'aria-invalid': null != A || void 0,
-                                'aria-describedby': null != A ? T : v
+                                'aria-invalid': null != Z || void 0,
+                                'aria-describedby': null != Z ? T : N
                             }),
                             null != u &&
                                 (0, i.jsx)('div', {
@@ -178,20 +178,20 @@ function Z() {
                         ]
                     })
                 }),
-                null != A &&
+                null != Z &&
                     (0, i.jsx)(c.R94, {
                         role: 'alert',
                         id: T,
                         type: c.R94.Types.ERROR,
                         className: E.marginTop8,
-                        children: A
+                        children: Z
                     }),
-                null != Z &&
+                null != A &&
                     (0, i.jsx)(c.R94, {
                         role: 'status',
                         type: c.R94.Types.SUCCESS,
                         className: E.marginTop8,
-                        children: Z
+                        children: A
                     })
             ]
         })

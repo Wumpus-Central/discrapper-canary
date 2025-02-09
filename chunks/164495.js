@@ -1,127 +1,127 @@
-t.d(n, {
-    i0: () => S,
-    yD: () => k
+n.d(t, {
+    i0: () => j,
+    yD: () => T
 });
-var o = t(200651);
-t(192379);
-var a = t(120356),
-    r = t.n(a),
-    d = t(481060),
-    i = t(617136),
-    s = t(915750),
-    l = t(497505),
-    c = t(918701),
-    f = t(796111),
-    p = t(667105),
-    _ = t(341907),
-    u = t(604162),
-    C = t(46140),
-    v = t(388032),
-    m = t(977174);
-function g(e) {
-    let { quest: n, taskDetails: t } = e;
-    return (0, o.jsx)(d.zxk, {
-        className: m.cta,
-        color: d.zxk.Colors.BRAND,
+var r = n(200651);
+n(192379);
+var o = n(120356),
+    s = n.n(o),
+    a = n(481060),
+    i = n(617136),
+    l = n(915750),
+    c = n(497505),
+    d = n(918701),
+    u = n(796111),
+    p = n(667105),
+    m = n(341907),
+    x = n(604162),
+    h = n(46140),
+    g = n(388032),
+    f = n(698234);
+function _(e) {
+    let { quest: t, taskDetails: n } = e;
+    return (0, r.jsx)(a.zxk, {
+        className: f.cta,
+        color: a.zxk.Colors.BRAND,
         fullWidth: !0,
         onClick: () => {
-            (0, _.openVideoQuestModal)(n);
+            (0, m.openVideoQuestModal)(t);
         },
-        size: d.zxk.Sizes.SMALL,
-        children: (0, u.F9)(t)
+        size: a.zxk.Sizes.SMALL,
+        children: (0, x.F9)(n)
     });
 }
-let x = (e) => {
-        let { quest: n } = e,
-            t = (0, s.aM)();
-        return (0, o.jsx)(d.zxk, {
-            className: m.cta,
-            size: d.zxk.Sizes.SMALL,
+let C = (e) => {
+        let { quest: t } = e,
+            n = (0, l.aM)();
+        return (0, r.jsx)(a.zxk, {
+            className: f.cta,
+            size: a.zxk.Sizes.SMALL,
             onClick: () =>
-                (0, c.FE)(n, {
-                    content: l.jn.QUEST_BAR_V2,
+                (0, d.FE)(t, {
+                    content: c.jn.QUEST_BAR_V2,
                     ctaContent: i.jZ.OPEN_GAME_LINK,
-                    impressionId: t
+                    impressionId: n
                 }),
-            children: (0, c.pO)(n) ? v.intl.string(v.t.hvVgAQ) : v.intl.string(v.t.lwQdjI)
+            children: (0, d.pO)(t) ? g.intl.string(g.t.hvVgAQ) : g.intl.string(g.t.lwQdjI)
         });
     },
-    B = (e) => {
-        var n;
-        let { quest: t } = e,
-            a = null === (n = (0, s.WD)()) || void 0 === n ? void 0 : n.getId();
-        return (0, o.jsx)(d.zxk, {
+    v = (e) => {
+        var t;
+        let { quest: n } = e,
+            o = null === (t = (0, l.WD)()) || void 0 === t ? void 0 : t.getId();
+        return (0, r.jsx)(a.zxk, {
             fullWidth: !0,
-            className: m.cta,
+            className: f.cta,
             onClick: () =>
-                (0, c.gI)(
-                    { quest: t },
+                (0, d.gI)(
+                    { quest: n },
                     {
-                        content: l.jn.QUEST_BAR_V2,
+                        content: c.jn.QUEST_BAR_V2,
                         ctaContent: i.jZ.CONNECT_CONSOLE,
-                        impressionId: a
+                        impressionId: o
                     }
                 ),
-            size: d.zxk.Sizes.SMALL,
-            children: v.intl.string(v.t.csptqa)
+            size: a.zxk.Sizes.SMALL,
+            children: g.intl.string(g.t.csptqa)
         });
     },
-    S = (e) => {
-        let { quest: n, useReducedMotion: t, isExpanded: a, className: i, ctaLabel: s, ...c } = e,
-            f = (0, p.hf)({
-                quest: n,
-                location: l.jn.QUEST_BAR_V2
+    j = (e) => {
+        let { quest: t, useReducedMotion: n, isExpanded: o, className: i, ctaLabel: l, ...d } = e,
+            u = (0, p.hf)({
+                quest: t,
+                location: c.jn.QUEST_BAR_V2
             });
-        return (0, o.jsx)(d.gtL, {
+        return (0, r.jsx)(a.gtL, {
             fullWidth: !0,
-            size: d.zxk.Sizes.SMALL,
-            onClick: f,
-            pauseAnimation: t || !a,
-            className: r()(m.cta, i),
-            buttonShineClassName: m.shine,
-            ...c,
-            children: null != s ? s : v.intl.string(v.t.cfY4PD)
+            size: a.zxk.Sizes.SMALL,
+            onClick: u,
+            pauseAnimation: n || !o,
+            className: s()(f.cta, i),
+            buttonShineClassName: f.shine,
+            ...d,
+            children: null != l ? l : g.intl.string(g.t.cfY4PD)
         });
     },
     b = (e) => {
-        var n;
-        let { quest: t, useReducedMotion: a, isExpanded: r, awaitingConsoleConnections: d, hasMadeProgress: i, isProgressing: s, activeScreen: p, taskDetails: _ } = e,
-            u = (null === (n = t.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-            v = (0, f.P)({ location: C.dr.QUESTS_BAR }),
-            m = (0, c.q8)(t);
-        return u
-            ? (0, o.jsx)(S, {
-                  quest: t,
-                  useReducedMotion: a,
-                  isExpanded: r
+        var t;
+        let { quest: n, useReducedMotion: o, isExpanded: s, awaitingConsoleConnections: a, hasMadeProgress: i, isProgressing: l, activeScreen: p, taskDetails: m } = e,
+            x = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+            g = (0, u.P)({ location: h.dr.QUESTS_BAR }),
+            f = (0, d.q8)(n);
+        return x
+            ? (0, r.jsx)(j, {
+                  quest: n,
+                  useReducedMotion: o,
+                  isExpanded: s
               })
-            : m
-              ? (0, o.jsx)(g, {
-                    quest: t,
-                    taskDetails: _
+            : f
+              ? (0, r.jsx)(_, {
+                    quest: n,
+                    taskDetails: m
                 })
-              : p === l.LI.CONSOLE && d && !v
-                ? (0, o.jsx)(B, { quest: t })
-                : p === l.LI.SELECT || i || s
+              : p === c.LI.CONSOLE && a && !g
+                ? (0, r.jsx)(v, { quest: n })
+                : p === c.LI.SELECT || i || l
                   ? null
-                  : (0, o.jsx)(x, { quest: t });
+                  : (0, r.jsx)(C, { quest: n });
     };
-function k(e) {
-    return (0, o.jsxs)('div', {
-        className: m.ctaButtons,
+function T(e) {
+    return (0, r.jsxs)('div', {
+        className: f.ctaButtons,
         children: [
             e.showBackButton &&
-                (0, o.jsx)(d.zxk, {
-                    className: m.backButton,
-                    innerClassName: m.backButtonInner,
+                (0, r.jsx)(a.zxk, {
+                    className: f.backButton,
+                    innerClassName: f.backButtonInner,
                     look: 'blank',
                     grow: !1,
                     fullWidth: !1,
                     size: 'none',
                     onClick: e.onBack,
-                    children: (0, o.jsx)(d.V7D, { className: m.backIcon })
+                    children: (0, r.jsx)(a.V7D, { className: f.backIcon })
                 }),
-            (0, o.jsx)(b, { ...e })
+            (0, r.jsx)(b, { ...e })
         ]
     });
 }

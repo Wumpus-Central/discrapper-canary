@@ -6,7 +6,7 @@ var r = n(481060),
     i = n(930180),
     o = n(46920),
     c = n(388032),
-    a = n(48);
+    a = n(216470);
 function d(e) {
     let { blockedUsersCount: t, ignoredUsersCount: n } = e;
     return t > 0 && n > 0 ? c.intl.format(c.t.Uzdyho, { number: t + n }) : n > 0 ? c.intl.format(c.t.wvygk5, { number: n }) : c.intl.format(c.t.HviVAw, { number: t });

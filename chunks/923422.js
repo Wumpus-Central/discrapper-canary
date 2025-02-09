@@ -1,118 +1,118 @@
-n.d(t, { default: () => y }), n(47120), n(757143);
+n.d(t, { default: () => B }), n(47120), n(757143);
 var i = n(200651),
-    r = n(192379),
-    l = n(481060),
+    o = n(192379),
+    r = n(481060),
     a = n(239091),
-    s = n(230711),
-    c = n(493544),
-    o = n(108843),
-    u = n(100527),
-    d = n(906732),
-    g = n(386506),
-    p = n(366953),
-    h = n(991346),
-    x = n(606669),
-    j = n(53432),
-    m = n(74869),
-    S = n(45570),
-    Z = n(308512),
-    b = n(594791),
-    f = n(393431),
-    v = n(69021),
+    l = n(230711),
+    s = n(493544),
+    c = n(108843),
+    d = n(100527),
+    u = n(906732),
+    _ = n(386506),
+    g = n(366953),
+    b = n(991346),
+    m = n(606669),
+    E = n(53432),
+    h = n(74869),
+    p = n(45570),
+    S = n(308512),
+    f = n(594791),
+    R = n(393431),
+    C = n(69021),
     k = n(981631),
-    E = n(388032);
-let y = (0, o.Z)(
+    x = n(388032);
+let B = (0, c.Z)(
     function (e) {
         let { webBuildOverride: t, onSelect: n } = e,
-            [o, u] = r.useState(!1),
-            y = (0, S.Z)(),
-            C = (0, Z.Z)(),
-            I = (0, j.Z)(),
-            N = (0, x.Z)(),
-            B = (0, f.Z)(),
-            D = (0, b.Z)(),
-            O = (0, m.Z)(),
-            P = (0, v.Z)(),
-            { analyticsLocations: R } = (0, d.ZP)(),
-            T = r.useMemo(() => (0, p.j)(), []);
-        async function _() {
+            [c, d] = o.useState(!1),
+            B = (0, p.Z)(),
+            T = (0, S.Z)(),
+            Z = (0, E.Z)(),
+            j = (0, m.Z)(),
+            N = (0, R.Z)(),
+            D = (0, f.Z)(),
+            O = (0, h.Z)(),
+            I = (0, C.Z)(),
+            { analyticsLocations: v } = (0, u.ZP)(),
+            A = o.useMemo(() => (0, g.j)(), []);
+        async function y() {
             try {
-                u(!0), await (0, g.bF)(), window.location.reload(!0);
+                d(!0), await (0, _.bF)(), window.location.reload(!0);
             } catch (e) {
-                u(!1);
+                d(!1);
             }
         }
         let M = (e) => {
                 switch (e) {
                     case k.oAB.GAMES:
-                        return y;
-                    case k.oAB.STREAMER_MODE:
-                        return C;
-                    case k.oAB.APPEARANCE:
-                        return I;
-                    case k.oAB.ACCESSIBILITY:
-                        return N;
-                    case k.oAB.VOICE:
                         return B;
+                    case k.oAB.STREAMER_MODE:
+                        return T;
+                    case k.oAB.APPEARANCE:
+                        return Z;
+                    case k.oAB.ACCESSIBILITY:
+                        return j;
+                    case k.oAB.VOICE:
+                        return N;
                     case k.oAB.TEXT:
                         return D;
                     case k.oAB.EXPERIMENTS:
                         return O;
                     case k.oAB.DEVELOPER_OPTIONS:
-                        return P;
+                        return I;
                     default:
                         return null;
                 }
             },
-            A = (0, h.VO)()
+            U = (0, b.VO)()
                 .filter((e) => {
                     let { section: t } = e;
-                    return t !== c.ID.HEADER && t !== c.ID.CUSTOM && t !== c.ID.DIVIDER && 'logout' !== t;
+                    return t !== s.ID.HEADER && t !== s.ID.CUSTOM && t !== s.ID.DIVIDER && 'logout' !== t;
                 })
                 .filter((e) => null == e.predicate || e.predicate());
-        return (0, i.jsx)(d.Gt, {
-            value: R,
-            children: (0, i.jsxs)(l.v2r, {
+        return (0, i.jsx)(u.Gt, {
+            value: v,
+            children: (0, i.jsxs)(r.v2r, {
                 navId: 'user-settings-cog',
                 onClose: a.Zy,
-                'aria-label': E.intl.string(E.t.opYYHh),
+                'aria-label': x.intl.string(x.t.opYYHh),
                 onSelect: n,
                 children: [
-                    A.map((e) => {
-                        let { section: t, label: n, onClick: r } = e,
+                    U.map((e) => {
+                        let { section: t, label: n, onClick: o } = e,
                             a = t.replace(/\W/gi, '_');
                         return (0, i.jsx)(
-                            l.sNh,
+                            r.sNh,
                             {
                                 id: a,
                                 label: n,
                                 action: () =>
-                                    null != r
-                                        ? r()
+                                    null != o
+                                        ? o()
                                         : (function (e, t) {
                                               let n = Object.values(k.oAB).filter((t) => t === e)[0];
-                                              null != n && s.Z.open(n, void 0, { analyticsLocations: t });
-                                          })(t, R),
+                                              null != n && l.Z.open(n, void 0, { analyticsLocations: t });
+                                          })(t, v),
                                 children: M(t)
                             },
                             a
                         );
                     }),
-                    e.user.isStaff() && T.length > 0
-                        ? (0, i.jsx)(l.sNh, {
+                    e.user.isStaff() && A.length > 0
+                        ? (0, i.jsx)(r.sNh, {
                               label: 'Build overrides',
                               id: 'build_overrides',
-                              children: (0, i.jsx)(l.kSQ, {
-                                  children: T.map((e) =>
+                              children: (0, i.jsx)(r.kSQ, {
+                                  children: A.map((e) =>
                                       (0, i.jsx)(
-                                          l.k5B,
+                                          r.k5B,
                                           {
                                               id: 'input-'.concat(e.payload),
                                               group: 'build_overrides',
                                               label: e.id,
                                               checked: (null == t ? void 0 : t.id) === e.id,
                                               action: async () => {
-                                                  (null == t ? void 0 : t.id) !== e.id && 200 === (await (0, g.f0)(e.payload)).status && window.location.reload(!0);
+                                                  (null == t ? void 0 : t.id) !== e.id && 200 === (await (0, _.f0)(e.payload)).status && window.location.reload(!0);
                                               }
                                           },
                                           'input-'.concat(e.payload)
@@ -122,12 +122,12 @@ let y = (0, o.Z)(
                           })
                         : null,
                     null != t
-                        ? (0, i.jsx)(l.kSQ, {
-                              children: (0, i.jsx)(l.sNh, {
+                        ? (0, i.jsx)(r.kSQ, {
+                              children: (0, i.jsx)(r.sNh, {
                                   id: 'clear-build-override',
-                                  disabled: o,
-                                  label: E.intl.string(E.t['/Nz9ra']),
-                                  action: _,
+                                  disabled: c,
+                                  label: x.intl.string(x.t['/Nz9ra']),
+                                  action: y,
                                   color: 'danger'
                               })
                           })
@@ -136,5 +136,5 @@ let y = (0, o.Z)(
             })
         });
     },
-    [u.Z.CONTEXT_MENU, u.Z.USER_SETTINGS_MENU]
+    [d.Z.CONTEXT_MENU, d.Z.USER_SETTINGS_MENU]
 );

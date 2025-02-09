@@ -1,11 +1,11 @@
 n.d(t, {
-    P0: () => r,
-    ZP: () => a
+    P0: () => a,
+    ZP: () => l
 });
 var i,
-    s = n(818083),
-    r = (((i = {})[(i.DEFAULT = 0)] = 'DEFAULT'), (i[(i.SUMMER_2024 = 1)] = 'SUMMER_2024'), i);
-let l = (0, s.B)({
+    r = n(818083),
+    a = (((i = {})[(i.DEFAULT = 0)] = 'DEFAULT'), (i[(i.SUMMER_2024 = 1)] = 'SUMMER_2024'), i);
+let s = (0, r.B)({
         kind: 'user',
         id: '2024-07_shy_project',
         label: 'Shy Project Marketing Variation',
@@ -18,4 +18,4 @@ let l = (0, s.B)({
             }
         ]
     }),
-    a = (e) => l.useExperiment({ location: e }).variant;
+    l = (e) => s.useExperiment({ location: e }).variant;

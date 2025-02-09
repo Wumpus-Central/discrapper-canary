@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(93127),
     y = n(814443),
     I = n(590783),
-    b = n(699516),
-    T = n(246946),
+    T = n(699516),
+    b = n(246946),
     S = n(594174),
     A = n(572004),
     N = n(669079),
@@ -27,14 +27,14 @@ var i = n(200651),
     R = n(51144),
     O = n(987209),
     D = n(981631),
-    x = n(474936),
-    L = n(388032),
-    P = n(431852);
-let w = 1500;
+    L = n(474936),
+    x = n(388032),
+    w = n(109726);
+let P = 1500;
 function M(e) {
     let { giftCode: t, application: n, sku: a, subscriptionPlan: o, selectedGiftStyle: l, onClose: d, hasSentMessage: f, giftRecipient: h, giftMessageError: v, isSendingMessage: y } = e,
-        [b, S] = r.useState(c.kO8.Modes.DEFAULT),
-        M = (0, u.e7)([T.Z], () => T.Z.enabled),
+        [T, S] = r.useState(c.kO8.Modes.DEFAULT),
+        M = (0, u.e7)([b.Z], () => b.Z.enabled),
         U = f || (null != l && null != h),
         G = (null == a ? void 0 : a.productLine) === D.POd.COLLECTIBLES,
         B = (0, E.Z)(),
@@ -46,16 +46,16 @@ function M(e) {
         Y = () => {
             let e;
             return null != v
-                ? L.intl.string(L.t.qB8ayc)
+                ? x.intl.string(x.t.qB8ayc)
                 : null == o
                   ? null
-                  : ((e = o.interval === x.rV.MONTH ? (U ? (j ? F.monthGiftText : L.t['4ZJ+7e']) : L.t['P+z55e']) : U ? (j ? F.yearGiftText : L.t.p0pZXF) : L.t.bXqk3t),
-                    L.intl.format(e, {
+                  : ((e = o.interval === L.rV.MONTH ? (U ? (j ? F.monthGiftText : x.t['4ZJ+7e']) : x.t['P+z55e']) : U ? (j ? F.yearGiftText : x.t.p0pZXF) : x.t.bXqk3t),
+                    x.intl.format(e, {
                         skuName: (0, C.aq)(o.id),
                         intervalCount: o.intervalCount
                     }));
         },
-        W = () => (null != h || (f && null == v) ? L.intl.string(L.t.zOmK9P) : null != v ? L.intl.string(L.t.d1lrmZ) : L.intl.string(L.t['/s1xR0'])),
+        W = () => (null != h || (f && null == v) ? x.intl.string(x.t.zOmK9P) : null != v ? x.intl.string(x.t.d1lrmZ) : x.intl.string(x.t['/s1xR0'])),
         K = (e, t) => {
             null != a &&
                 (0, N.dM)(
@@ -72,40 +72,40 @@ function M(e) {
             }
             setTimeout(() => {
                 S(c.kO8.Modes.DEFAULT);
-            }, w);
+            }, P);
         },
         z = () => {
             let e;
             if (null == t) return null;
-            switch (b) {
+            switch (T) {
                 case c.kO8.Modes.SUCCESS:
-                    e = L.intl.string(L.t.XVvPjY);
+                    e = x.intl.string(x.t.XVvPjY);
                     break;
                 case c.kO8.Modes.ERROR:
-                    e = L.intl.string(L.t.i4GM3N);
+                    e = x.intl.string(x.t.i4GM3N);
                     break;
                 default:
-                    e = L.intl.string(L.t.OpuAlJ);
+                    e = x.intl.string(x.t.OpuAlJ);
             }
             return (0, i.jsxs)('div', {
-                className: P.giftCodeSection,
+                className: w.giftCodeSection,
                 children: [
-                    (0, i.jsx)(c.vwX, { children: L.intl.string(L.t['/dG4ND']) }),
+                    (0, i.jsx)(c.vwX, { children: x.intl.string(x.t['/dG4ND']) }),
                     null != t &&
                         (0, i.jsx)(c.kO8, {
-                            hideMessage: M ? L.intl.string(L.t['0RLn4+']) : null,
+                            hideMessage: M ? x.intl.string(x.t['0RLn4+']) : null,
                             value: (0, N.Nz)(t),
-                            mode: b,
+                            mode: T,
                             text: e,
                             onCopy: (e) => K(e, t),
                             supportsCopy: A.wS,
-                            className: P.__invalid_copyInput,
+                            className: w.__invalid_copyInput,
                             buttonColor: c.Ttl.LINK,
                             buttonLook: c.iLD.LINK
                         }),
                     (0, i.jsx)('div', {
-                        className: P.subtext,
-                        children: L.intl.string(L.t.QWKUpq)
+                        className: w.subtext,
+                        children: x.intl.string(x.t.QWKUpq)
                     })
                 ]
             });
@@ -123,7 +123,7 @@ function M(e) {
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)('div', {
-                        className: P.blurb,
+                        className: w.blurb,
                         children: Y()
                     }),
                     r &&
@@ -131,7 +131,7 @@ function M(e) {
                             giftCode: t,
                             onClose: d
                         }),
-                    (0, i.jsx)('div', { className: P.divider }),
+                    (0, i.jsx)('div', { className: w.divider }),
                     z()
                 ]
             });
@@ -141,32 +141,32 @@ function M(e) {
                 children: [
                     (0, i.jsx)(_.Z, {
                         user: h,
-                        className: P.giftRecipient,
+                        className: w.giftRecipient,
                         size: c.EFr.SIZE_80
                     }),
                     (0, i.jsx)(c.X6q, {
-                        className: P.giftRecipientName,
+                        className: w.giftRecipientName,
                         variant: 'heading-md/semibold',
                         children: R.ZP.getName(h)
                     }),
                     (0, i.jsxs)('div', {
-                        className: P.giftRecipientTag,
+                        className: w.giftRecipientTag,
                         children: [' ', R.ZP.getUserTag(h)]
                     }),
                     (0, i.jsx)('div', {
-                        className: P.giftSentMessage,
+                        className: w.giftSentMessage,
                         children: Y()
                     })
                 ]
             });
     return y
         ? (0, i.jsxs)('div', {
-              className: P.confirmation,
+              className: w.confirmation,
               children: [
                   null != n
                       ? (0, i.jsx)(p.Z, {
                             game: n,
-                            className: P.__invalid_icon,
+                            className: w.__invalid_icon,
                             size: p.Z.Sizes.LARGE,
                             skuId: H()
                         })
@@ -175,12 +175,12 @@ function M(e) {
               ]
           })
         : (0, i.jsxs)('div', {
-              className: s()(P.confirmation, { [P.seasonalConfirmationPadding]: j }),
+              className: s()(w.confirmation, { [w.seasonalConfirmationPadding]: j }),
               children: [
                   null != n
                       ? (0, i.jsx)(p.Z, {
                             game: n,
-                            className: P.__invalid_icon,
+                            className: w.__invalid_icon,
                             size: p.Z.Sizes.LARGE,
                             skuId: H()
                         })
@@ -188,8 +188,8 @@ function M(e) {
                   (0, i.jsx)(c.X6q, {
                       variant: 'heading-lg/semibold',
                       className: s()({
-                          [P.header]: null == l && !G,
-                          [P.headerCustomGifting]: null != l && !G
+                          [w.header]: null == l && !G,
+                          [w.headerCustomGifting]: null != l && !G
                       }),
                       children: W()
                   }),
@@ -209,24 +209,24 @@ let k = (e) => {
             userAffinities: y.Z.getUserAffinitiesUserIds(),
             isLoading: y.Z.getFetching()
         })),
-        T = Array.from(E.values()),
-        A = (0, u.e7)([b.Z], () => b.Z.getFriendIDs()),
-        N = l().difference(A, T),
-        C = [...T, ...N],
+        b = Array.from(E.values()),
+        A = (0, u.e7)([T.Z], () => T.Z.getFriendIDs()),
+        N = l().difference(A, b),
+        C = [...b, ...N],
         O = (0, u.e7)([S.default], () => S.default.filter((e) => C.includes(e.id) && !e.bot), [C]);
     if (null == O || 0 === O.length) return null;
     let D = l().sortBy(O, (e) => C.indexOf(e.id));
     return (0, i.jsxs)('div', {
-        className: P.giftRecipientSection,
+        className: w.giftRecipientSection,
         children: [
-            (0, i.jsx)(c.vwX, { children: L.intl.string(L.t.MJw05e) }),
+            (0, i.jsx)(c.vwX, { children: x.intl.string(x.t.MJw05e) }),
             (0, i.jsxs)('div', {
-                className: P.giftRecipient,
+                className: w.giftRecipient,
                 children: [
                     (0, i.jsx)(c.VcW, {
-                        placeholder: L.intl.string(L.t.J019jY),
-                        wrapperClassName: P.giftRecipientInputWrapper,
-                        className: o ? P.giftRecipientInputError : void 0,
+                        placeholder: x.intl.string(x.t.J019jY),
+                        wrapperClassName: w.giftRecipientInputWrapper,
+                        className: o ? w.giftRecipientInputError : void 0,
                         renderOptionPrefix: (e) =>
                             (null == e ? void 0 : e.value) == null
                                 ? null
@@ -247,7 +247,7 @@ let k = (e) => {
                     (0, i.jsx)(c.zxk, {
                         disabled: null == a,
                         submitting: m,
-                        className: P.sendToRecipientButton,
+                        className: w.sendToRecipientButton,
                         onClick: () => {
                             g(!0),
                                 (0, h.YD)(a, t)
@@ -258,13 +258,13 @@ let k = (e) => {
                                         p(!0), g(!1);
                                     });
                         },
-                        children: L.intl.string(L.t['+EgwQk'])
+                        children: x.intl.string(x.t['+EgwQk'])
                     })
                 ]
             }),
             (0, i.jsx)('div', {
-                className: o ? P.subtextError : P.subtext,
-                children: o ? L.intl.string(L.t.jo5Vbm) : L.intl.string(L.t['8/N3v7'])
+                className: o ? w.subtextError : w.subtext,
+                children: o ? x.intl.string(x.t.jo5Vbm) : x.intl.string(x.t['8/N3v7'])
             })
         ]
     });

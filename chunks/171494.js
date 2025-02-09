@@ -14,7 +14,7 @@ var l = e(200651),
     x = e(590433),
     f = e(981631),
     b = e(388032),
-    v = e(923333);
+    v = e(566013);
 function k(t) {
     var n, e;
     let { guildId: k, userId: g, anaylticsLocations: _, transitionState: C, onClose: w } = t,

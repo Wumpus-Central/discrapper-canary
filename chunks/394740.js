@@ -18,26 +18,26 @@ var i = n(200651),
     v = n(981631),
     y = n(474936),
     I = n(388032),
-    b = n(944634),
-    T = n(940675);
+    T = n(27191),
+    b = n(52916);
 function S(e) {
     var t;
     let { onClose: a, closePopout: S, sound: A, channel: N } = e,
         C = (0, c.ZP)(),
         [R, O] = r.useState(!1),
         { location: D } = (0, u.O)(),
-        x = r.useMemo(
+        L = r.useMemo(
             () => ({
                 ...D,
                 section: v.jXE.SOUNDBOARD_SOUND_PICKER
             }),
             [D]
         ),
-        { analyticsLocations: L } = (0, f.ZP)(d.Z.PREMIUM_UPSELL),
-        { previewSound: P } = (0, g.Z)(A, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null),
-        w = (0, E.K_)({
+        { analyticsLocations: x } = (0, f.ZP)(d.Z.PREMIUM_UPSELL),
+        { previewSound: w } = (0, g.Z)(A, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null),
+        P = (0, E.K_)({
             sound: A,
-            previewSound: P,
+            previewSound: w,
             tooltipPosition: 'left'
         }),
         M = (0, o.ap)(C) ? n(537381) : n(341048);
@@ -46,48 +46,48 @@ function S(e) {
             type: y.cd.SOUND_PICKER_SOUND_CLICKED,
             is_external: !0,
             location: {
-                ...x,
+                ...L,
                 object: v.qAy.SOUNDBOARD_SOUND
             },
-            location_stack: L,
+            location_stack: x,
             sku_id: m.ZP.getSkuIdForPremiumType(y.p9.TIER_2)
         });
-    }, [L, x]);
+    }, [x, L]);
     let k = r.useCallback(() => {
         h.default.track(v.rMx.PREMIUM_PROMOTION_OPENED, { location_section: v.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL }), (0, _.z)(), S();
     }, [S]);
     return (0, i.jsxs)('div', {
-        className: s()(T.premiumPromo, b.container),
+        className: s()(b.premiumPromo, T.container),
         children: [
             (0, i.jsx)(l.P3F, {
-                className: T.premiumPromoClose,
+                className: b.premiumPromoClose,
                 onClick: a,
                 children: I.intl.string(I.t.cpT0Cg)
             }),
             (0, i.jsx)('img', {
                 'aria-hidden': !0,
                 alt: '',
-                className: s()(T.premiumPromoImage, T.premiumPromoImageSmaller, b.image),
+                className: s()(b.premiumPromoImage, b.premiumPromoImageSmaller, T.image),
                 src: M
             }),
             (0, i.jsx)(l.X6q, {
                 variant: 'heading-lg/normal',
                 color: 'header-primary',
-                className: T.premiumPromoTitle,
+                className: b.premiumPromoTitle,
                 children: I.intl.string(I.t['/a5qY2'])
             }),
             (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: T.premiumPromoDescription,
+                className: b.premiumPromoDescription,
                 children: I.intl.format(I.t.lcSxhI, { onClick: k })
             }),
             (0, i.jsxs)('div', {
-                className: b.buttonContainer,
+                className: T.buttonContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        className: b.previewButtonContainer,
-                        children: w
+                        className: T.previewButtonContainer,
+                        children: P
                     }),
                     (0, i.jsx)(p.Z, {
                         subscriptionTier: y.Si.TIER_2,

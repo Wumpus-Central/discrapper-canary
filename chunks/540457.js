@@ -2,7 +2,7 @@ t.d(n, { A: () => a });
 var i = t(200651);
 t(192379);
 var l = t(481060),
-    s = t(826020);
+    s = t(971693);
 function a(e) {
     let { text: n, tooltipText: t, onClick: a } = e;
     return (0, i.jsx)(l.ua7, {

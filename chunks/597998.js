@@ -30,7 +30,7 @@ var l = n(200651),
     N = n(354459),
     E = n(927923),
     C = n(388032),
-    A = n(939214);
+    A = n(880598);
 let j = (e) => {
     let { children: t, collapsed: n = !1, className: i } = e;
     return (0, l.jsx)('div', {

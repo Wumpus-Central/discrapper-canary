@@ -8,15 +8,15 @@ var i = n(200651),
     u = n(481060),
     c = n(219929),
     d = n(388032),
-    f = n(919616),
-    _ = n(716722);
+    f = n(187839),
+    _ = n(487768);
 let p = function (e) {
     let t = r.useRef(null),
         { stripeType: n, flipped: s, updateCompleted: p, onFocus: h, onBlur: m } = e,
         [g, E] = r.useState(c.Qy.UNKNOWN),
         [v, y] = r.useState(!1),
-        [I, b] = r.useState(!1),
-        [T, S] = r.useState(null),
+        [I, T] = r.useState(!1),
+        [b, S] = r.useState(null),
         [A, N] = r.useState({}),
         C = (0, a.useElements)(),
         R = r.useCallback(() => {
@@ -43,17 +43,17 @@ let p = function (e) {
         }, [C, n]),
         O = r.useCallback(
             (e) => {
-                I || e.empty || b(!0), null != p && p(e.complete), null != e.error && y(!1);
+                I || e.empty || T(!0), null != p && p(e.complete), null != e.error && y(!1);
             },
             [I, p]
         ),
         D = r.useCallback(() => {
             y(!0), null == h || h();
         }, [h]),
-        x = r.useCallback(() => {
+        L = r.useCallback(() => {
             y(!1), null == m || m();
         }, [m]),
-        L = r.useCallback(() => {
+        x = r.useCallback(() => {
             if (null != C)
                 switch (n) {
                     case 'cardNumber': {
@@ -63,7 +63,7 @@ let p = function (e) {
                             g !== e.brand && E(e.brand), e.empty && I ? S(d.intl.string(d.t.eOIfu7)) : null != e.error ? S(d.intl.string(d.t.x4pWtL)) : S(null), O(e);
                         }),
                             e.on('focus', D),
-                            e.on('blur', x);
+                            e.on('blur', L);
                         break;
                     }
                     case 'cardExpiry': {
@@ -73,7 +73,7 @@ let p = function (e) {
                             null != e.error || (e.empty && I) ? S(d.intl.string(d.t['9/zZdn'])) : S(null), O(e);
                         }),
                             e.on('focus', D),
-                            e.on('blur', x);
+                            e.on('blur', L);
                         break;
                     }
                     case 'cardCvc': {
@@ -83,24 +83,24 @@ let p = function (e) {
                             null != e.error || (e.empty && I) ? S(d.intl.string(d.t.ro4isb)) : S(null), O(e);
                         }),
                             e.on('focus', D),
-                            e.on('blur', x);
+                            e.on('blur', L);
                     }
                 }
-        }, [x, O, D, g, C, I, n]);
+        }, [L, O, D, g, C, I, n]);
     r.useEffect(
         () => (
-            L(),
+            x(),
             () => {
                 R();
             }
         ),
-        [L, R]
+        [x, R]
     );
-    let P = (0, u.dQu)(l.Z.colors.TEXT_SECONDARY).hex(),
-        w = (0, u.dQu)(l.Z.colors.TEXT_PRIMARY).hex();
+    let w = (0, u.dQu)(l.Z.colors.TEXT_SECONDARY).hex(),
+        P = (0, u.dQu)(l.Z.colors.TEXT_PRIMARY).hex();
     function M() {
         return o()(f.cardInput, {
-            [f.cardInputError]: null !== T,
+            [f.cardInputError]: null !== b,
             [f.cardInputFocused]: v,
             [f.cardNumberInput]: 'cardNumber' === n
         });
@@ -153,12 +153,12 @@ let p = function (e) {
                 base: {
                     fontFamily: i,
                     fontWeight: n.getPropertyValue('font-weight'),
-                    color: w,
+                    color: P,
                     fontSize: n.getPropertyValue('font-size'),
-                    '::placeholder': { color: P }
+                    '::placeholder': { color: w }
                 }
             });
-        }, [t, P, w]),
+        }, [t, w, P]),
         (0, i.jsxs)('div', {
             className: o()(f.cardNumberWrapper),
             'data-stripe-type': n,
@@ -168,7 +168,7 @@ let p = function (e) {
                     className: o()(f.hiddenDiv, _.input)
                 }),
                 k(),
-                (0, i.jsx)(u.pdY, { error: T })
+                (0, i.jsx)(u.pdY, { error: b })
             ]
         })
     );

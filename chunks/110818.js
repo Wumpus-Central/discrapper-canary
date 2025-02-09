@@ -2,7 +2,7 @@ n.d(t, {
     Db: () => C,
     HC: () => I,
     NQ: () => E,
-    fe: () => w
+    fe: () => P
 }),
     n(47120);
 var i,
@@ -16,7 +16,7 @@ var i,
     d = n(642128),
     f = n(748780),
     _ = n(481060),
-    p = n(280099);
+    p = n(111385);
 function h(e, t, n) {
     return (
         t in e
@@ -152,10 +152,10 @@ class I extends (r = l.PureComponent) {
     }
 }
 h(I, 'Scenes', v);
-var b = (function (e) {
+var T = (function (e) {
     return (e.IDLE_ENTRY = 'idle_entry'), (e.IDLE_LOOP = 'idle_loop'), (e.BOOST_START = 'boost_start'), (e.BOOST_LOOP = 'boost_loop'), (e.BOOST_END = 'boost_end'), (e.VICTORY = 'victory'), (e.ERROR = 'error'), e;
-})(b || {});
-let T = {
+})(T || {});
+let b = {
     idle_entry: {
         BEG: 0,
         END: 50
@@ -339,7 +339,7 @@ class C extends (a = l.PureComponent) {
                     className: p.sequencedAnimation,
                     importData: this.importData,
                     nextScene: n ? 'idle_loop' : t,
-                    sceneSegments: T,
+                    sceneSegments: b,
                     onScenePlay: this.handleScenePlay,
                     onSceneComplete: i,
                     pauseWhileUnfocused: !1,
@@ -401,7 +401,7 @@ class C extends (a = l.PureComponent) {
             });
     }
 }
-h(C, 'Scenes', b);
+h(C, 'Scenes', T);
 var R = (function (e) {
     return (e.ENTRY = 'entry'), (e.IDLE = 'idle'), (e.STARS = 'stars'), (e.ERROR = 'error'), (e.SUCCESS = 'success'), e;
 })(R || {});
@@ -433,7 +433,7 @@ let O = {
         WHITE: '#ebf0f7',
         PINK: '#fa6ef6'
     }),
-    x = [
+    L = [
         {
             left: 29,
             top: 100,
@@ -465,7 +465,7 @@ let O = {
             color: D.PINK
         }
     ],
-    L = Object.freeze({
+    x = Object.freeze({
         SCALE_INITIAL: 0,
         SCALE_MIDDLE: 1,
         SCALE_END: 0,
@@ -482,18 +482,18 @@ let O = {
         EASING_MIDDLE: f.Z.Easing.bezier(0.3, 0.01, 0, 0.99),
         EASING_END: f.Z.Easing.bezier(0, -0.01, 0.99, 0)
     });
-function P(e) {
+function w(e) {
     let { animate: t } = e,
         [n, i] = l.useState(0),
         r = (0, _.bYB)(
-            x.length,
-            x.map((e, r) => {
-                let a = r > 0 ? L.DELAY_STAGGER * r + Math.random() * (L.DELAY_MAX - L.DELAY_MIN) + L.DELAY_MIN : 0,
-                    s = Math.random() * (L.SIZE_MAX - L.SIZE_MIN) + L.SIZE_MIN;
+            L.length,
+            L.map((e, r) => {
+                let a = r > 0 ? x.DELAY_STAGGER * r + Math.random() * (x.DELAY_MAX - x.DELAY_MIN) + x.DELAY_MIN : 0,
+                    s = Math.random() * (x.SIZE_MAX - x.SIZE_MIN) + x.SIZE_MIN;
                 return {
                     from: {
-                        scale: L.SCALE_INITIAL,
-                        rotate: L.ROTATE_INITIAL,
+                        scale: x.SCALE_INITIAL,
+                        rotate: x.ROTATE_INITIAL,
                         top: e.top,
                         left: e.left,
                         width: s,
@@ -502,31 +502,31 @@ function P(e) {
                     to: async (e) => {
                         t
                             ? (await e({
-                                  scale: L.SCALE_MIDDLE,
-                                  rotate: L.ROTATE_MIDDLE,
+                                  scale: x.SCALE_MIDDLE,
+                                  rotate: x.ROTATE_MIDDLE,
                                   delay: a,
                                   config: {
-                                      duration: L.DURATION_MIDDLE,
-                                      easing: L.EASING_MIDDLE
+                                      duration: x.DURATION_MIDDLE,
+                                      easing: x.EASING_MIDDLE
                                   }
                               }),
                               await e({
-                                  scale: L.SCALE_END,
-                                  rotate: L.ROTATE_END,
+                                  scale: x.SCALE_END,
+                                  rotate: x.ROTATE_END,
                                   config: {
-                                      duration: L.DURATION_END,
-                                      easing: L.EASING_END
+                                      duration: x.DURATION_END,
+                                      easing: x.EASING_END
                                   }
                               }),
                               await e({
-                                  scale: L.SCALE_INITIAL,
-                                  rotate: L.ROTATE_INITIAL,
+                                  scale: x.SCALE_INITIAL,
+                                  rotate: x.ROTATE_INITIAL,
                                   immediate: !0
                               }),
-                              r === x.length - 1 && i(n + 1))
+                              r === L.length - 1 && i(n + 1))
                             : await e({
-                                  scale: L.SCALE_INITIAL,
-                                  rotate: L.ROTATE_INITIAL
+                                  scale: x.SCALE_INITIAL,
+                                  rotate: x.ROTATE_INITIAL
                               });
                     }
                 };
@@ -534,7 +534,7 @@ function P(e) {
         );
     return (0, o.jsx)(o.Fragment, {
         children: r.map((e, t) => {
-            let n = x[t];
+            let n = L[t];
             return (0, o.jsx)(
                 d.animated.svg,
                 {
@@ -552,7 +552,7 @@ function P(e) {
         })
     });
 }
-class w extends (s = l.PureComponent) {
+class P extends (s = l.PureComponent) {
     static getNextScene(e) {
         switch (e) {
             case 'entry':
@@ -587,9 +587,9 @@ class w extends (s = l.PureComponent) {
                     pauseWhileUnfocused: a,
                     pause: n
                 }),
-                (0, o.jsx)(P, { animate: !n && 'stars' === t })
+                (0, o.jsx)(w, { animate: !n && 'stars' === t })
             ]
         });
     }
 }
-h(w, 'Scenes', R);
+h(P, 'Scenes', R);

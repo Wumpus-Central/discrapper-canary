@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -12,8 +12,8 @@ var i = n(200651),
     m = n(358085),
     p = n(998502),
     g = n(388032),
-    _ = n(762353),
-    f = n(232186);
+    _ = n(577103),
+    f = n(814632);
 function E(e, t, n) {
     return (
         t in e
@@ -281,7 +281,7 @@ class C extends l.PureComponent {
             });
     }
 }
-let N = r.ZP.connectStores([u.Z], () => ({
+let v = r.ZP.connectStores([u.Z], () => ({
     installationPaths: u.Z.installationPaths,
     installationPathsMetadata: u.Z.installationPathsMetadata,
     defaultInstallationPath: u.Z.defaultInstallationPath

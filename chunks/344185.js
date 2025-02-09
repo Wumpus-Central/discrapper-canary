@@ -64,7 +64,7 @@ function I(e) {
     let { guild: t } = e;
     h(t.id);
 }
-function b(e) {
+function T(e) {
     var t, n;
     let { channel: i } = e;
     if (!l.AW.has(i.type)) return !1;
@@ -80,7 +80,7 @@ function b(e) {
         };
     }
 }
-function T(e) {
+function b(e) {
     let { guildId: t, threads: n, channelIds: i } = e;
     for (let e in (null == i && _.add(t), (f[t] = { ...f[t] }), f[t])) f[t][e] = { ...f[t][e] };
     n.forEach((e) => g(t, e));
@@ -138,9 +138,9 @@ let O = new R(o.Z, {
     OVERLAY_INITIALIZE: v,
     GUILD_CREATE: y,
     GUILD_DELETE: I,
-    THREAD_CREATE: b,
-    THREAD_UPDATE: b,
-    THREAD_LIST_SYNC: T,
+    THREAD_CREATE: T,
+    THREAD_UPDATE: T,
+    THREAD_LIST_SYNC: b,
     THREAD_DELETE: A,
     CHANNEL_DELETE: N
 });

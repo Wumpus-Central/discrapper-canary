@@ -1,15 +1,15 @@
 n.d(t, {
     $Z: () => a,
     L$: () => o,
-    fw: () => l
+    fw: () => r
 });
 var i = n(544891),
     s = n(570140),
-    r = n(981631);
-async function l() {
+    l = n(981631);
+async function r() {
     var e;
     let t = await i.tn.get({
-        url: r.ANM.AUTH_SESSIONS,
+        url: l.ANM.AUTH_SESSIONS,
         rejectWithError: !1
     });
     return (
@@ -33,7 +33,7 @@ async function o(e) {
         if (0 === e.length) return;
     } else e = [e];
     let t = await i.tn.post({
-        url: r.ANM.AUTH_SESSIONS_LOGOUT,
+        url: l.ANM.AUTH_SESSIONS_LOGOUT,
         body: { session_id_hashes: e },
         rejectWithError: !1
     });

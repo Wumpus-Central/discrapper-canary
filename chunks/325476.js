@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => g });
+n.d(t, { ZP: () => p });
 var i,
     l,
     a = n(200651),
@@ -7,7 +7,7 @@ var i,
     o = n.n(s),
     d = n(481060),
     c = n(600164),
-    u = n(651512);
+    u = n(148442);
 function m(e, t, n) {
     return (
         t in e
@@ -58,12 +58,12 @@ class x extends r.PureComponent {
         });
     }
 }
-class p extends (l = r.PureComponent) {
+class g extends (l = r.PureComponent) {
     render() {
         return (0, a.jsx)(c.Z, { ...this.props });
     }
 }
-m(p, 'defaultProps', {
+m(g, 'defaultProps', {
     className: u.layout,
     direction: c.Z.Direction.HORIZONTAL,
     justify: c.Z.Justify.START,
@@ -73,10 +73,10 @@ m(p, 'defaultProps', {
     grow: 1,
     basis: 'auto'
 }),
-    m(p, 'Direction', c.Z.Direction),
-    m(p, 'Justify', c.Z.Justify),
-    m(p, 'Align', c.Z.Align),
-    m(p, 'Wrap', c.Z.Wrap),
-    m(p, 'Sidebar', h),
-    m(p, 'Content', x);
-let g = p;
+    m(g, 'Direction', c.Z.Direction),
+    m(g, 'Justify', c.Z.Justify),
+    m(g, 'Align', c.Z.Align),
+    m(g, 'Wrap', c.Z.Wrap),
+    m(g, 'Sidebar', h),
+    m(g, 'Content', x);
+let p = g;

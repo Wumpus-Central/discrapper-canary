@@ -1,8 +1,8 @@
 n.d(t, { k: () => a }), n(47120);
 var i = n(200651),
     s = n(192379),
-    r = n(481060),
-    l = n(574792);
+    l = n(481060),
+    r = n(226902);
 class a extends s.PureComponent {
     componentDidCatch(e, t) {
         console.error('Error rendering component (LocalErrorBoundary): ', e),
@@ -14,10 +14,10 @@ class a extends s.PureComponent {
     render() {
         return null != this.state.error
             ? (0, i.jsx)('div', {
-                  children: (0, i.jsx)(r.Text, {
+                  children: (0, i.jsx)(l.Text, {
                       color: 'text-danger',
                       variant: 'text-md/normal',
-                      className: l.labelSpacing,
+                      className: r.labelSpacing,
                       children: 'Error rendering component. Check console for more information on the error.'
                   })
               })

@@ -1,66 +1,66 @@
-r.r(t), r.d(t, { default: () => i }), r(411104);
-var n = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(429142),
-    s = r(234888);
-let i = {
+a.r(t), a.d(t, { default: () => o }), a(411104);
+var c = a(200651);
+a(192379);
+var n = a(481060),
+    i = a(429142),
+    r = a(234888);
+let o = {
     showCaptcha: function (e, t) {
-        let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            { sitekey: l, captchaService: d, options: c } = e;
-        (0, a.ZDy)(
+        let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            { sitekey: h, captchaService: p, options: s } = e;
+        (0, n.ZDy)(
             async () => {
-                let { default: e } = await r.e('12192').then(r.bind(r, 718742));
-                return (r) =>
-                    (0, n.jsx)(e, {
-                        onCaptchaVerify: (e, r) =>
+                let { default: e } = await a.e('12192').then(a.bind(a, 718742));
+                return (a) =>
+                    (0, c.jsx)(e, {
+                        onCaptchaVerify: (e, a) =>
                             t({
                                 captcha_key: e,
-                                captcha_rqtoken: r
+                                captcha_rqtoken: a
                             }),
-                        captchaService: d,
-                        sitekey: l,
-                        ...i,
-                        ...c,
-                        ...r
+                        captchaService: p,
+                        sitekey: h,
+                        ...o,
+                        ...s,
+                        ...a
                     });
             },
             {
-                Layer: o.ZP,
-                modalKey: s.A
+                Layer: i.ZP,
+                modalKey: r.A
             }
         );
     },
     showCaptchaAsync: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { sitekey: i, captchaService: l, options: d } = e;
-        return new Promise((e, c) => {
-            (0, a.ZDy)(
+            { sitekey: o, captchaService: h, options: p } = e;
+        return new Promise((e, s) => {
+            (0, n.ZDy)(
                 async () => {
-                    let { default: a } = await r.e('12192').then(r.bind(r, 718742));
-                    return (r) =>
-                        (0, n.jsx)(a, {
-                            onCaptchaVerify: (t, r) =>
+                    let { default: n } = await a.e('12192').then(a.bind(a, 718742));
+                    return (a) =>
+                        (0, c.jsx)(n, {
+                            onCaptchaVerify: (t, a) =>
                                 e({
                                     captcha_key: t,
-                                    captcha_rqtoken: r
+                                    captcha_rqtoken: a
                                 }),
-                            captchaService: l,
-                            sitekey: i,
-                            onReject: () => c(Error('cancel captcha')),
+                            captchaService: h,
+                            sitekey: o,
+                            onReject: () => s(Error('cancel captcha')),
                             ...t,
-                            ...d,
-                            ...r
+                            ...p,
+                            ...a
                         });
                 },
                 {
-                    Layer: o.ZP,
-                    modalKey: s.A
+                    Layer: i.ZP,
+                    modalKey: r.A
                 }
             );
         });
     },
     useIsCaptchaModalOpen: function () {
-        return (0, a.s9z)((e) => (0, a.DEQ)(e, s.A));
+        return (0, n.s9z)((e) => (0, n.DEQ)(e, r.A));
     }
 };

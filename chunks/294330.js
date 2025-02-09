@@ -22,13 +22,13 @@ var i = n(200651),
     E = n(371260),
     I = n(372769),
     C = n(134432),
-    N = n(695346),
-    v = n(768581),
+    v = n(695346),
+    N = n(768581),
     T = n(356164),
     S = n(890064),
-    Z = n(981631),
-    A = n(388032),
-    x = n(125285),
+    A = n(981631),
+    Z = n(388032),
+    x = n(992676),
     b = n(129512),
     L = n(330065),
     y = n(755386);
@@ -46,8 +46,8 @@ function P(e) {
                 var e;
                 let t = new h.Hx(n);
                 d.Z.show({
-                    title: A.intl.string(A.t.R0RpRU),
-                    body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : A.intl.string(A.t.eAn6z8)
+                    title: Z.intl.string(Z.t.R0RpRU),
+                    body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : Z.intl.string(Z.t.eAn6z8)
                 });
             } finally {
                 O(!1);
@@ -73,9 +73,9 @@ function P(e) {
             [t]
         ),
         k = (0, m.ZP)(),
-        U = t.features.has(Z.oNc.HUB),
+        U = t.features.has(A.oNc.HUB),
         G = l.useMemo(() => {
-            let e = v.ZP.getGuildDiscoverySplashURL({
+            let e = N.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
                 size: 300 * (0, C.x_)()
@@ -83,23 +83,23 @@ function P(e) {
             if (null != e) return e;
             if (U) return y;
             switch (k) {
-                case Z.BRd.DARK:
+                case A.BRd.DARK:
                     return b;
-                case Z.BRd.LIGHT:
+                case A.BRd.LIGHT:
                     return L;
             }
         }, [t.discoverySplash, t.id, U, k]),
         B = f ? 48 : 40,
         V = l.useMemo(
             () =>
-                v.ZP.getGuildIconURL({
+                N.ZP.getGuildIconURL({
                     id: t.id,
                     icon: t.icon,
                     size: B
                 }),
             [t.icon, t.id, B]
         ),
-        H = N.Sb.useSetting();
+        H = v.Sb.useSetting();
     return (0, i.jsxs)('div', {
         className: x.container,
         children: [
@@ -197,7 +197,7 @@ function P(e) {
                                                         className: x.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: A.intl.format(A.t['LC+S+v'], { membersOnline: t.presenceCount })
+                                                        children: Z.intl.format(Z.t['LC+S+v'], { membersOnline: t.presenceCount })
                                                     })
                                                 ]
                                             }),
@@ -210,7 +210,7 @@ function P(e) {
                                                         className: x.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: A.intl.format(A.t.zRl6XV, { count: t.memberCount })
+                                                        children: Z.intl.format(Z.t.zRl6XV, { count: t.memberCount })
                                                     })
                                                 ]
                                             })

@@ -5,8 +5,8 @@ var i = n(120356),
     r = n.n(i),
     a = n(481060),
     s = n(5192),
-    o = n(733597),
-    u = n(629257);
+    o = n(829820),
+    u = n(202122);
 function c(e) {
     let { activity: t, user: n, channelId: i, guildId: c, source: d, size: m, look: h, color: g, className: f, onAction: p } = e,
         { tooltip: v, loading: S, disabled: I, onClick: x } = (0, o.Fe)(t, n, d, s.ZP.getNickname(c, i, n)),

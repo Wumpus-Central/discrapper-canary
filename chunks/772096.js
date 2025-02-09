@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => S,
-    yw: () => T
+    yw: () => b
 }),
     n(47120),
     n(315314),
@@ -52,7 +52,7 @@ function I(e, t) {
     }
     return e;
 }
-function b(e) {
+function T(e) {
     let t = '';
     for (let n of e)
         switch (n.type) {
@@ -74,7 +74,7 @@ function b(e) {
             case d.b.UNDERLINE:
             case d.b.STRIKETHROUGH:
             case d.b.SPOILER:
-                t += b(n.content);
+                t += T(n.content);
                 break;
             case d.b.TIMESTAMP:
                 t += '<timestamp>';
@@ -90,7 +90,7 @@ function b(e) {
         }
     return t;
 }
-function T(e) {
+function b(e) {
     try {
         var t;
         let n = new URL(e),
@@ -125,23 +125,23 @@ let S = {
             N = h.fullySanitized,
             C = A.trim();
         if (0 === S.trim().length || 0 === C.length) return c();
-        let R = T(l().unescapeUrl(s)),
+        let R = b(l().unescapeUrl(s)),
             O = null == R,
             D = (0, u.ZP)(a).length > 0 || (0, u.ZP)(o).length > 0;
         if (O || D) return c();
-        let x = {
+        let L = {
                 ...n,
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0
             },
-            L = n.allowEmojiLinks ? g : m,
-            P = [...L, ...E],
-            w = [...v, ...y],
-            M = I(t(A, x), P, [d.b.EMOJI]),
-            k = I(t(N, x), w);
-        if (null == M || null == k || 0 === b(M).trim().length) return c();
-        let U = r().pick(t.rules, L),
-            G = l().parserFor(U)(_.whitespaceSanitized, x),
+            x = n.allowEmojiLinks ? g : m,
+            w = [...x, ...E],
+            P = [...v, ...y],
+            M = I(t(A, L), w, [d.b.EMOJI]),
+            k = I(t(N, L), P);
+        if (null == M || null == k || 0 === T(M).trim().length) return c();
+        let U = r().pick(t.rules, x),
+            G = l().parserFor(U)(_.whitespaceSanitized, L),
             B = h.whitespaceSanitized,
             { target: Z } = R;
         return {

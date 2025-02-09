@@ -1,6 +1,6 @@
-s.d(t, { Z: () => i });
-var n = s(200651);
-function i(e) {
+t.d(s, { Z: () => a });
+var n = t(200651);
+function a(e) {
     return (0, n.jsxs)('svg', {
         width: '14',
         height: '14',
@@ -41,4 +41,4 @@ function i(e) {
         ]
     });
 }
-s(192379);
+t(192379);

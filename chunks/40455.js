@@ -30,8 +30,8 @@ let h = 750,
     v = 25,
     y = 1,
     I = null,
-    b = new l.b(h, g),
-    T = new u.S(m),
+    T = new l.b(h, g),
+    b = new u.S(m),
     S = !1;
 class A extends s.Z {
     initialize() {
@@ -46,30 +46,30 @@ class A extends s.Z {
     }
     saveLimit(e) {
         let t = i.Z.getBasicChannel(e);
-        return null != t && (0, d.p)(t) ? E : null != t && b.has(e) ? v : y;
+        return null != t && (0, d.p)(t) ? E : null != t && T.has(e) ? v : y;
     }
     getSaveableChannels() {
         let e = i.Z.getChannelIds(null).map((e) => ({
             guildId: null,
             channelId: e
         }));
-        return o.Z.isLowDisk ? (null != I ? [...e, I] : e) : [...e, ...b.values()];
+        return o.Z.isLowDisk ? (null != I ? [...e, I] : e) : [...e, ...T.values()];
     }
     takeSnapshot() {
         return {
             version: A.LATEST_SNAPSHOT_VERSION,
             data: {
-                channels: [...b.allValues()].filter((e) => !e.fallback),
-                penalized: [...T.keys()],
+                channels: [...T.allValues()].filter((e) => !e.fallback),
+                penalized: [...b.keys()],
                 lastChannel: I
             }
         };
     }
     static mergeSnapshot(e) {
-        let t = b,
-            n = T;
-        for (let n of ((b = new l.b(b.primaryCapacity, b.extendedCapacity)), (T = new u.S(T.capacity)), (I = null != I ? I : e.lastChannel), [e.channels, t.values()])) for (let e of n) e.fallback || b.put(e.channelId, e);
-        for (let t of [e.penalized, n.keys()]) for (let e of t) T.put(e, null);
+        let t = T,
+            n = b;
+        for (let n of ((T = new l.b(T.primaryCapacity, T.extendedCapacity)), (b = new u.S(b.capacity)), (I = null != I ? I : e.lastChannel), [e.channels, t.values()])) for (let e of n) e.fallback || T.put(e.channelId, e);
+        for (let t of [e.penalized, n.keys()]) for (let e of t) b.put(e, null);
     }
     static recordChannel(e) {
         let t = i.Z.getBasicChannel(e);
@@ -80,26 +80,26 @@ class A extends s.Z {
                 channelId: e,
                 channelType: t.type
             };
-            (I = i), b.put(e, i), (0, c.Hr)(t) && null != T.put(e, null) && b.delete(e);
+            (I = i), T.put(e, i), (0, c.Hr)(t) && null != b.put(e, null) && T.delete(e);
         }
     }
     static deleteChannel(e) {
-        b.delete(e);
+        T.delete(e);
     }
     static deleteGuild(e) {
-        for (let t of b.allValues()) t.guildId === e && b.delete(t.channelId);
+        for (let t of T.allValues()) t.guildId === e && T.delete(t.channelId);
     }
     static dropUnreachableChannels() {
-        for (let e of b.keys()) {
+        for (let e of T.keys()) {
             let t = i.Z.getBasicChannel(e);
             (0, f.v)(t) || A.deleteChannel(e);
         }
     }
     static deleteUnreadableGuildChannels(e) {
-        for (let t of b.values()) e !== t.guildId || (0, f.$)(t.channelId) || A.deleteChannel(t.channelId);
+        for (let t of T.values()) e !== t.guildId || (0, f.$)(t.channelId) || A.deleteChannel(t.channelId);
     }
     static replaceLru(e) {
-        b = e;
+        T = e;
     }
     constructor() {
         super({
@@ -108,10 +108,10 @@ class A extends s.Z {
             CHANNEL_DELETE: D,
             CHANNEL_UPDATES: O,
             CONNECTION_OPEN_SUPPLEMENTAL: C,
-            GUILD_DELETE: P,
-            LOGIN_SUCCESS: w,
-            THREAD_DELETE: L,
-            THREAD_UPDATE: x
+            GUILD_DELETE: w,
+            LOGIN_SUCCESS: P,
+            THREAD_DELETE: x,
+            THREAD_UPDATE: L
         });
     }
 }
@@ -120,7 +120,7 @@ function N() {
     null != e && A.recordChannel(e);
 }
 function C() {
-    A.dropUnreachableChannels(), A.replaceLru((0, _.J)(b, h + g));
+    A.dropUnreachableChannels(), A.replaceLru((0, _.J)(T, h + g));
 }
 function R(e) {
     let t = e.id,
@@ -134,17 +134,17 @@ function O(e) {
 function D(e) {
     A.deleteChannel(e.channel.id);
 }
-function x(e) {
+function L(e) {
     R(e.channel);
 }
-function L(e) {
+function x(e) {
     A.deleteChannel(e.channel.id);
 }
-function P(e) {
+function w(e) {
     return !e.guild.unavailable && (A.deleteGuild(e.guild.id), !0);
 }
-function w(e) {
-    b.clear(), T.clear(), (S = !1);
+function P(e) {
+    T.clear(), b.clear(), (S = !1);
 }
 function M(e) {
     S = !0;

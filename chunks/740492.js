@@ -43,10 +43,10 @@ function I() {
         darkSidebar: v.darkSidebar
     };
 }
-function b() {
+function T() {
     null == v && (v = {});
 }
-function T() {}
+function b() {}
 function S() {
     return (v.darkSidebar = !v.darkSidebar), !0;
 }
@@ -196,7 +196,7 @@ p(N, 'displayName', 'UnsyncedUserSettingsStore'),
 let C = new N(l.Z, {
     UNSYNCED_USER_SETTINGS_UPDATE: y,
     LOGOUT: I,
-    LOGIN_SUCCESS: b,
-    REGISTER_SUCCESS: T,
+    LOGIN_SUCCESS: T,
+    REGISTER_SUCCESS: b,
     ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: S
 });

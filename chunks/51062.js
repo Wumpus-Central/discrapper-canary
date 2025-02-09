@@ -16,30 +16,30 @@ var i = n(192379),
     g = n(377668),
     E = n(185923);
 function v(e, t, n) {
-    var v, y, I, b, T, S, A;
+    var v, y, I, T, b, S, A;
     let { channel: N, type: C } = e,
         [R, O] = i.useState(() => (0, p.P)()),
         D = (0, r.Z)(),
-        x = (0, a.e7)([c.ZP], () => {
+        L = (0, a.e7)([c.ZP], () => {
             if (null != e.guild) {
                 var t;
                 return null != c.ZP.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, g.fL);
             }
             return !1;
         }),
-        L = (0, u.Ib)(e.guild, e.channel) && !x && !(0, u.g0)(e.guild),
-        P = (0, a.e7)([c.ZP, _.default], () => {
+        x = (0, u.Ib)(e.guild, e.channel) && !L && !(0, u.g0)(e.guild),
+        w = (0, a.e7)([c.ZP, _.default], () => {
             var e, t;
             let n = _.default.getCurrentUser();
             return null !== (t = null != N.guild_id && null != n ? (null === (e = c.ZP.getMember(N.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== t && t;
         }),
-        { canMentionEveryone: w, hidePersonalInformation: M } = (0, a.cj)(
+        { canMentionEveryone: P, hidePersonalInformation: M } = (0, a.cj)(
             [d.Z, f.Z],
             () => ({
-                canMentionEveryone: N.isPrivate() || P || C === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, N),
+                canMentionEveryone: N.isPrivate() || w || C === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, N),
                 hidePersonalInformation: f.Z.hidePersonalInformation
             }),
-            [N, C, P]
+            [N, C, w]
         ),
         { activeCommand: k, activeCommandOption: U } = (0, a.cj)([o.Z], () => ({
             activeCommand: o.Z.getActiveCommand(N.id),
@@ -57,9 +57,9 @@ function v(e, t, n) {
             navigator: G,
             activeCommand: k,
             activeCommandOption: U,
-            canMentionUsers: null !== (T = null === (y = C.users) || void 0 === y ? void 0 : y.allowMentioning) && void 0 !== T && T,
-            canMentionEveryone: w,
-            canMentionClyde: L,
+            canMentionUsers: null !== (b = null === (y = C.users) || void 0 === y ? void 0 : y.allowMentioning) && void 0 !== b && b,
+            canMentionEveryone: P,
+            canMentionClyde: x,
             hidePersonalInformation: M,
             hideMentionDescription: C === l.Ie.RULES_INPUT,
             emojiIntention: C === l.Ie.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
@@ -93,7 +93,7 @@ function v(e, t, n) {
                     for (let n of t) n.removeChangeListener(e);
                 };
             }
-        }, [F, null === (b = R.query) || void 0 === b ? void 0 : b.typeInfo]),
+        }, [F, null === (T = R.query) || void 0 === T ? void 0 : T.typeInfo]),
         [R, F, G]
     );
 }

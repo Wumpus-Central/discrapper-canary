@@ -34,12 +34,12 @@ function I(e) {
     if (y.has(t)) return !1;
     (y = new Set(y)).add(t);
 }
-function b(e) {
+function T(e) {
     let { key: t } = e;
     if (!y.has(t)) return !1;
     (y = new Set(y)).delete(t);
 }
-function T(e) {
+function b(e) {
     let { config: t, latestChangelogId: n } = e;
     (p = n), (m = t);
 }
@@ -125,8 +125,8 @@ class O extends (i = r.ZP.Store) {
 d(O, 'displayName', 'ChangelogStore');
 let D = new O(s.Z, {
     CHANGE_LOG_LOCK: I,
-    CHANGE_LOG_UNLOCK: b,
-    CHANGE_LOG_SET_CONFIG: T,
+    CHANGE_LOG_UNLOCK: T,
+    CHANGE_LOG_SET_CONFIG: b,
     CHANGE_LOG_FETCH_SUCCESS: S,
     CHANGE_LOG_FETCH_FAILED: A,
     CHANGE_LOG_SET_OVERRIDE: N,

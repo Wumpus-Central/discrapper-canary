@@ -35,10 +35,10 @@ function I(e) {
         return n && delete y[t.parentId], n;
     });
 }
-function b(e) {
+function T(e) {
     (v = a().omitBy(v, (t) => t.parentId === e)), delete y[e];
 }
-function T(e, t) {
+function b(e, t) {
     u.AW.has(e.type) && S(N(e), t);
 }
 function S(e, t) {
@@ -64,7 +64,7 @@ function N(e) {
     return v[e.id];
 }
 function C(e) {
-    T(e, (t) => {
+    b(e, (t) => {
         var n;
         null != e.messageCount && (t.count = e.messageCount);
         let i = null !== (n = t.mostRecentRawMessage) && void 0 !== n ? n : t.mostRecentMessage;
@@ -92,19 +92,19 @@ function D(e) {
             }));
     }
 }
-function x(e) {
+function L(e) {
     let { guild: t } = e;
     A(t);
 }
-function L(e) {
+function x(e) {
     let { guild: t } = e;
     I(t.id);
 }
-function P(e) {
+function w(e) {
     let { channel: t } = e;
     C(t);
 }
-function w(e) {
+function P(e) {
     let { threads: t, mostRecentMessages: n } = e;
     t.forEach(C),
         null == n ||
@@ -112,7 +112,7 @@ function w(e) {
                 let t = f.Z.getChannel(e.channel_id);
                 null != t &&
                     e.type !== m.uaV.THREAD_STARTER_MESSAGE &&
-                    T(t, (t) => {
+                    b(t, (t) => {
                         (t.mostRecentRawMessage = e), (t.mostRecentMessage = null);
                     });
             });
@@ -128,7 +128,7 @@ function k(e) {
 }
 function U(e) {
     let { channel: t } = e;
-    b(t.id);
+    T(t.id);
 }
 function G(e) {
     let { channel: t } = e;
@@ -139,7 +139,7 @@ function B(e) {
     if (n || i || null != r) return !1;
     let a = f.Z.getChannel(t.channel_id);
     if (null == a || !u.Ec.has(a.type) || !Z(a, t)) return !1;
-    T(a, (e) => {
+    b(a, (e) => {
         (e.count = Math.min(e.count + 1, h.M3)), (e.mostRecentRawMessage = t), (e.mostRecentMessage = null);
     });
 }
@@ -190,7 +190,7 @@ function H(e) {
     if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
     let n = f.Z.getChannel(e.channelId);
     if (null == n || !u.Ec.has(n.type)) return t;
-    T(n, (t) => {
+    b(n, (t) => {
         if (0 === e.messages.length) (t.mostRecentRawMessage = null), (t.mostRecentMessage = null), (t.count = 0);
         else {
             var n;
@@ -233,11 +233,11 @@ g(W, 'displayName', 'ThreadMessageStore');
 let K = new W(o.Z, {
     CONNECTION_OPEN: O,
     OVERLAY_INITIALIZE: D,
-    GUILD_CREATE: x,
-    GUILD_DELETE: L,
-    THREAD_CREATE: P,
-    THREAD_UPDATE: P,
-    THREAD_LIST_SYNC: w,
+    GUILD_CREATE: L,
+    GUILD_DELETE: x,
+    THREAD_CREATE: w,
+    THREAD_UPDATE: w,
+    THREAD_LIST_SYNC: P,
     LOAD_THREADS_SUCCESS: M,
     LOAD_ARCHIVED_THREADS_SUCCESS: M,
     RELATIONSHIP_ADD: Y,

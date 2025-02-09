@@ -1,52 +1,52 @@
 n.d(t, { Z: () => c });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(239091),
-    l = n(299206),
-    o = n(858042),
+var a = n(481060),
+    i = n(239091),
+    o = n(299206),
+    l = n(858042),
     s = n(388032);
 function c(e) {
     let { applicationId: t, className: n, viewId: c } = e,
-        d = (0, l.Z)({
+        d = (0, o.Z)({
             id: t,
             label: s.intl.string(s.t['FfCL+/'])
         }),
-        u = (0, o.M)({
+        u = (0, l.M)({
             applicationId: t,
             viewId: c
         });
     return null == d && null == u
         ? null
-        : (0, i.jsx)(r.yRy, {
+        : (0, r.jsx)(a.yRy, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, i.jsx)(r.v2r, {
+                  return (0, r.jsx)(a.v2r, {
                       navId: 'game-profile-context',
                       onClose: () => {
-                          (0, a.Zy)(), t();
+                          (0, i.Zy)(), t();
                       },
                       'aria-label': s.intl.string(s.t.PNeFgY),
                       onSelect: () => {},
-                      children: (0, i.jsxs)(i.Fragment, {
-                          children: [(0, i.jsx)(r.kSQ, { children: d }), (0, i.jsx)(r.kSQ, { children: u })]
+                      children: (0, r.jsxs)(r.Fragment, {
+                          children: [(0, r.jsx)(a.kSQ, { children: d }), (0, r.jsx)(a.kSQ, { children: u })]
                       })
                   });
               },
               children: (e) =>
-                  (0, i.jsx)(r.ua7, {
+                  (0, r.jsx)(a.ua7, {
                       text: s.intl.string(s.t.UKOtz8),
                       children: (t) =>
-                          (0, i.jsx)(r.P3F, {
+                          (0, r.jsx)(a.P3F, {
                               className: n,
                               ...t,
                               ...e,
-                              children: (0, i.jsx)(r.xhG, {
+                              children: (0, r.jsx)(a.xhG, {
                                   size: 'xs',
-                                  color: r.TVs.colors.WHITE
+                                  color: a.TVs.colors.WHITE
                               })
                           })
                   })

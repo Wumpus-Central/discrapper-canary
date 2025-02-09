@@ -4,7 +4,7 @@ l(192379);
 var i = l(481060),
     s = l(285784),
     r = l(388032),
-    o = l(935602);
+    o = l(350632);
 function a(t) {
     let { isActive: n, isUserLurking: l, rsvped: a, onContextMenu: u, onRsvpClick: c, onGoToGuildClick: d, isDetailsView: x = !1, isMember: k, onJoinGuildClick: h, guildName: m, onInviteClick: z, canInvite: g, isChannelPublic: C } = t;
     return (0, e.jsxs)('div', {

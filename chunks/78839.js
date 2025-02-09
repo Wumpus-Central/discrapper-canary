@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => U,
-    sE: () => w
+    sE: () => P
 }),
     n(653041),
     n(47120);
@@ -35,8 +35,8 @@ let p = null,
     v = !1,
     y = !1,
     I = null,
-    b = !1,
-    T = null,
+    T = !1,
+    b = null,
     S = new s.Z('SubscriptionStore');
 function A(e) {
     let { subscriptions: t } = e,
@@ -59,7 +59,7 @@ function A(e) {
             return;
         }
         let t = l.Q.createFromServer(e);
-        (n[t.id] = t), P(t) && ((i[t.id] = t), t.type === d.NYc.GUILD && t.status !== d.O0b.ENDED && r.push(t), t.type === d.NYc.APPLICATION && t.status !== d.O0b.ENDED && a.push(t));
+        (n[t.id] = t), w(t) && ((i[t.id] = t), t.type === d.NYc.GUILD && t.status !== d.O0b.ENDED && r.push(t), t.type === d.NYc.APPLICATION && t.status !== d.O0b.ENDED && a.push(t));
     }),
         (p = n),
         (h = i),
@@ -72,7 +72,7 @@ function N(e) {
     if (-1 === i) return [n, ...t];
     {
         let e = [...t];
-        return P(n) && n.status !== d.O0b.ENDED ? (e[i] = n) : e.splice(i, 1), e;
+        return w(n) && n.status !== d.O0b.ENDED ? (e[i] = n) : e.splice(i, 1), e;
     }
 }
 function C(e) {
@@ -82,7 +82,7 @@ function C(e) {
         ...p,
         [n.id]: n
     }),
-        P(n) &&
+        w(n) &&
             (h = {
                 ...h,
                 [n.id]: n
@@ -122,7 +122,7 @@ function R(e) {
 }
 function O(e) {
     let { subscription: t } = e;
-    if (((b = !0), null != t)) {
+    if (((T = !0), null != t)) {
         let e = u.default.getId();
         if (t.user_id !== e && !y) {
             S.log('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
@@ -133,7 +133,7 @@ function O(e) {
                         subscriptionUserId: t.user_id
                     }
                 }),
-                (b = !1),
+                (T = !1),
                 (y = !0);
             return;
         }
@@ -142,19 +142,19 @@ function O(e) {
 }
 function D(e) {
     let { eligible: t } = e;
-    T = t;
+    b = t;
 }
-function x(e) {
+function L(e) {
     let {} = e;
-    T = !1;
+    b = !1;
 }
-function L() {
-    (p = null), (h = null), (m = null), (g = null), (E = null), (v = !1), (y = !1), (I = null), (b = !1);
-}
-function P(e) {
-    return e.status !== d.O0b.UNPAID;
+function x() {
+    (p = null), (h = null), (m = null), (g = null), (E = null), (v = !1), (y = !1), (I = null), (T = !1);
 }
 function w(e) {
+    return e.status !== d.O0b.UNPAID;
+}
+function P(e) {
     let t = u.default.getId();
     return e.userId === t;
 }
@@ -164,7 +164,7 @@ function M(e, t) {
     if (null == i) return null;
     for (let n in i) {
         let r = i[n];
-        if (!w(r)) {
+        if (!P(r)) {
             if (!y) {
                 let e = u.default.getId();
                 S.log('user id mismatch between logged in user and SubscriptionStore user'),
@@ -191,7 +191,7 @@ class k extends (i = r.ZP.Store) {
         return v;
     }
     hasFetchedPreviousPremiumTypeSubscription() {
-        return b;
+        return T;
     }
     getPremiumSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -233,7 +233,7 @@ class k extends (i = r.ZP.Store) {
         return I;
     }
     getIsSubscriptionEligibleForReward() {
-        return T;
+        return b;
     }
 }
 _(k, 'displayName', 'SubscriptionStore');
@@ -242,8 +242,8 @@ let U = new k(a.Z, {
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: C,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: R,
     BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: O,
-    BILLING_SUBSCRIPTION_RESET: L,
+    BILLING_SUBSCRIPTION_RESET: x,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: D,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: x,
-    LOGOUT: L
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: L,
+    LOGOUT: x
 });

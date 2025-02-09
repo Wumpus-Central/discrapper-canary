@@ -41,7 +41,7 @@ var i = n(67867),
         return _ && p && d(e) && !o(e, h) && g(e), e;
     },
     I = function () {
-        (b.enable = function () {}), (p = !0);
+        (T.enable = function () {}), (p = !0);
         var e = u.f,
             t = r([].splice),
             n = {};
@@ -64,7 +64,7 @@ var i = n(67867),
                     { getOwnPropertyNames: c.f }
                 ));
     },
-    b = (e.exports = {
+    T = (e.exports = {
         enable: I,
         fastKey: E,
         getWeakData: v,

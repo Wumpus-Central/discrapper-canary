@@ -7,7 +7,7 @@ var i = n(200651),
     l = n.n(o),
     u = n(84735),
     c = n(562701),
-    d = n(448304);
+    d = n(511201);
 function f(e) {
     let t = r.useRef(e);
     return r.useEffect(() => void (t.current = e), [e]), r.useCallback(() => t.current, []);
@@ -82,7 +82,7 @@ function m(e, t, n, a) {
             });
         });
     return r.forwardRef(function (a, g) {
-        let { className: E, onScroll: v, onResize: y = null, onContentResize: I = null, dir: b = 'ltr', sections: T, sectionHeight: S, rowHeight: A, footerHeight: N = 0, sidebarHeight: C, listHeaderHeight: R = 0, renderSection: O, renderRow: D, renderFooter: x, renderSidebar: L, renderListHeader: P, stickyListHeader: w, wrapSection: M, getAnchorId: k, paddingTop: U, paddingBottom: G, fade: B = !1, customTheme: Z = !1, chunkSize: F, style: V, innerId: j, innerRole: H, innerAriaLabel: Y, innerAriaMultiselectable: W, innerAriaOrientation: K, innerClassName: z, innerTag: q = 'div', ...Q } = a,
+        let { className: E, onScroll: v, onResize: y = null, onContentResize: I = null, dir: T = 'ltr', sections: b, sectionHeight: S, rowHeight: A, footerHeight: N = 0, sidebarHeight: C, listHeaderHeight: R = 0, renderSection: O, renderRow: D, renderFooter: L, renderSidebar: x, renderListHeader: w, stickyListHeader: P, wrapSection: M, getAnchorId: k, paddingTop: U, paddingBottom: G, fade: B = !1, customTheme: Z = !1, chunkSize: F, style: V, innerId: j, innerRole: H, innerAriaLabel: Y, innerAriaMultiselectable: W, innerAriaOrientation: K, innerClassName: z, innerTag: q = 'div', ...Q } = a,
             X = r.useRef(null),
             J = r.useRef(null),
             [$, ee] = r.useState(!1),
@@ -92,7 +92,7 @@ function m(e, t, n, a) {
             className: E,
             specs: o,
             orientation: 'vertical',
-            dir: b
+            dir: T
         });
         let {
                 spacerTop: er,
@@ -103,7 +103,7 @@ function m(e, t, n, a) {
                 forceUpdateOnChunkChange: eu,
                 anchor: ec
             } = (0, c.aU)({
-                sections: T,
+                sections: b,
                 sectionHeight: S,
                 rowHeight: A,
                 footerHeight: N,
@@ -151,7 +151,7 @@ function m(e, t, n, a) {
                 listenerMap: l
             });
         let em = f(es),
-            eg = _(T);
+            eg = _(b);
         r.useImperativeHandle(
             g,
             () => ({
@@ -177,7 +177,7 @@ function m(e, t, n, a) {
         return (
             r.useLayoutEffect(() => {
                 2 !== en.current.dirty && (en.current.dirty = 2);
-            }, [es, O, D, x, M, ea, er, en]),
+            }, [es, O, D, L, M, ea, er, en]),
             (0, c.rS)({
                 scrollerRef: et,
                 anchor: ec,
@@ -213,27 +213,27 @@ function m(e, t, n, a) {
                                     containerRef: J,
                                     children: p({
                                         items: es,
-                                        renderListHeader: P,
-                                        stickyListHeader: w,
+                                        renderListHeader: w,
+                                        stickyListHeader: P,
                                         renderSection: O,
                                         renderRow: D,
-                                        renderFooter: x,
+                                        renderFooter: L,
                                         wrapSection: M,
                                         spacerTop: er
                                     })
                                 })
                             }),
-                        [q, j, H, Y, W, K, ea, z, es, P, w, O, D, x, M, er]
+                        [q, j, H, Y, W, K, ea, z, es, w, P, O, D, L, M, er]
                     ),
                     r.useMemo(
                         () =>
                             h({
                                 isSidebarVisible: eo,
-                                renderSidebar: L,
+                                renderSidebar: x,
                                 sidebarHeight: C,
                                 isListVisible: 0 !== es.length
                             }),
-                        [eo, L, C, es.length]
+                        [eo, x, C, es.length]
                     )
                 ]
             })

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(47120), n(773603);
 var i = n(200651),
     r = n(192379),
-    a = n(593473),
-    l = n(512969),
+    l = n(593473),
+    a = n(512969),
     o = n(442837),
     s = n(893776),
     c = n(899742),
@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(743142),
     h = n(893607),
     _ = n(703656),
-    g = n(314897),
-    m = n(781428),
+    m = n(314897),
+    g = n(781428),
     p = n(981631),
     f = n(176505);
 function E(e) {
@@ -20,7 +20,7 @@ function E(e) {
                 if (
                     (function (e) {
                         var t;
-                        let n = (0, l.LX)(e, { path: p.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
+                        let n = (0, a.LX)(e, { path: p.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
                         return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === f.oC.ROLE_SUBSCRIPTIONS;
                     })(t)
                 )
@@ -32,9 +32,9 @@ function E(e) {
             },
             [e.transitionTo]
         ),
-        { isAuthenticated: n, loginStatus: E } = (0, o.cj)([g.default], () => ({
-            isAuthenticated: g.default.isAuthenticated(),
-            loginStatus: g.default.getLoginStatus()
+        { isAuthenticated: n, loginStatus: E } = (0, o.cj)([m.default], () => ({
+            isAuthenticated: m.default.isAuthenticated(),
+            loginStatus: m.default.getLoginStatus()
         })),
         { location: x, redirectTo: I } = e,
         [C, v] = r.useState(n);
@@ -49,7 +49,7 @@ function E(e) {
     }
     return ((0, d.ZP)(() => {
         if (null != x) {
-            let { handoff_key: e, handoff_token: t } = (0, a.parse)(x.search);
+            let { handoff_key: e, handoff_token: t } = (0, l.parse)(x.search);
             if (null != e && null != t) {
                 let n = null != I ? (0, u.L)(I) : void 0;
                 C
@@ -69,8 +69,8 @@ function E(e) {
         }
     }),
     C || E === p.u34.LOGGING_IN)
-        ? (0, i.jsx)(m.q, {})
-        : (0, i.jsx)(m.Z, {
+        ? (0, i.jsx)(g.q, {})
+        : (0, i.jsx)(g.Z, {
               ...e,
               transitionTo: t
           });

@@ -21,7 +21,7 @@ var n = a(200651),
     b = a(356659),
     w = a(710111),
     y = a(388032),
-    k = a(249861),
+    k = a(112022),
     N = a(413135).Buffer;
 function S(e) {
     let { clip: t, channelId: i, clipName: S, onSetClipName: R, onClose: E } = e,
@@ -42,7 +42,7 @@ function S(e) {
                 voiceAudio: F
             });
             (0, s.ZDy)(async () => {
-                let { default: i } = await Promise.all([a.e('56035'), a.e('28394')]).then(a.bind(a, 758961)),
+                let { default: i } = await Promise.all([a.e('56035'), a.e('13519')]).then(a.bind(a, 758961)),
                     r = (null == l ? void 0 : l.guild_id) != null ? p.Z.getGuild(l.guild_id) : null,
                     o = null != r && (0, c.Gw)(r, v.Z, f.default).canCreateExpressions,
                     s = null == S || '' === S ? (0, b.yl)(h.default.extractTimestamp(t.id)) : S,

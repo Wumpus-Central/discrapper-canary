@@ -1,9 +1,9 @@
-n.d(t, {
-    X$: () => r,
-    _f: () => a
+i.d(t, {
+    X$: () => a,
+    _f: () => l
 }),
-    n(906732);
-let i = (0, n(818083).B)({
+    i(906732);
+let n = (0, i(818083).B)({
     kind: 'user',
     id: '2023-08_remix_ga',
     label: 'Remix General Available',
@@ -42,9 +42,9 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r() {
-    return i.useExperiment({ location: 'canSeeRemixBadge' }, { autoTrackExposure: !0 }).canSeeRemixBadge;
-}
 function a() {
-    return !!i.useExperiment({ location: 'isRemixANitroPerkHook' }, { autoTrackExposure: !0 }).isNitroPerk;
+    return n.useExperiment({ location: 'canSeeRemixBadge' }, { autoTrackExposure: !0 }).canSeeRemixBadge;
+}
+function l() {
+    return !!n.useExperiment({ location: 'isRemixANitroPerkHook' }, { autoTrackExposure: !0 }).isNitroPerk;
 }

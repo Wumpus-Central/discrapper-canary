@@ -1,13 +1,13 @@
-n.d(t, { s: () => o });
-var i = n(200651);
+n.d(t, { s: () => s });
+var l = n(200651);
 n(192379);
-var r = n(477660),
-    a = n.n(r),
-    s = n(481060);
-let o = {
-    ...a().defaultRules.link,
+var i = n(477660),
+    r = n.n(i),
+    a = n(481060);
+let s = {
+    ...r().defaultRules.link,
     react: function (e, t, n) {
-        return (0, i.jsx)(s.eee, {
+        return (0, l.jsx)(a.eee, {
             href: e.target,
             target: '_blank',
             children: t(e.content, n)

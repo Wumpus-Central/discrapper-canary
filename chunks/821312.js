@@ -9,7 +9,7 @@ var i = n(200651),
     c = n(177862),
     x = n(981631),
     h = n(388032),
-    u = n(506452);
+    u = n(431680);
 function _(e) {
     let { guildId: t, transitionState: n, onClose: r } = e,
         [_, C] = s.useState([]),

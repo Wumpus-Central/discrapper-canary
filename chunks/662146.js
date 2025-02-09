@@ -5,13 +5,13 @@ var i = n(200651),
     a = n.n(r),
     o = n(481060),
     s = n(540059),
-    c = n(743778);
+    c = n(788645);
 function d(e) {
-    let { children: t, text: n, color: r, disableWrapper: d = !1, disabled: u = !1, hideOnClick: h = !0, shouldShow: p, forceOpen: g, selected: m = !1, tooltipClass: f, tooltipContentClass: _ } = e,
+    let { children: t, text: n, color: r, disableWrapper: d = !1, disabled: u = !1, hideOnClick: h = !0, shouldShow: p, forceOpen: m, selected: g = !1, tooltipClass: f, tooltipContentClass: _ } = e,
         v = (0, s.Q3)('ListItemTooltip');
     return (0, i.jsx)(o.ua7, {
         shouldShow: p,
-        forceOpen: g,
+        forceOpen: m,
         spacing: v ? 12 : 20,
         hideOnClick: h,
         text: u ? null : n,
@@ -24,7 +24,7 @@ function d(e) {
             d
                 ? l.cloneElement(l.Children.only(t), { ...e })
                 : (0, i.jsx)('div', {
-                      className: a()(c.listItemWrapper, { [c.selected]: m }),
+                      className: a()(c.listItemWrapper, { [c.selected]: g }),
                       ...e,
                       children: t
                   })

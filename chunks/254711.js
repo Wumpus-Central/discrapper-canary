@@ -1,6 +1,6 @@
 n.d(t, {
     Kh: () => M,
-    Tm: () => x
+    Tm: () => L
 }),
     n(47120),
     n(411104);
@@ -23,8 +23,8 @@ var i = n(512722),
     v = n(592125),
     y = n(496675),
     I = n(594174),
-    b = n(70956),
-    T = n(51144),
+    T = n(70956),
+    b = n(51144),
     S = n(895924),
     A = n(689079),
     N = n(981631),
@@ -35,7 +35,7 @@ let O = n(227419).Z,
         var n;
         return null === (n = e.find((e) => e.name === t)) || void 0 === n ? void 0 : n.value;
     },
-    x = {
+    L = {
         [A.bi.BUILT_IN]: {
             id: A.bi.BUILT_IN,
             type: S.Qi.BUILT_IN,
@@ -51,7 +51,7 @@ let O = n(227419).Z,
             }
         }
     },
-    L = [
+    x = [
         ...O,
         {
             id: '-1',
@@ -400,7 +400,7 @@ let O = n(227419).Z,
                     var t;
                     let n = I.default.getUser(a);
                     if (null == n) throw Error();
-                    await c.Z.kickUser(i.id, a, null !== (t = D(e, 'reason')) && void 0 !== t ? t : ''), d.Z.sendBotMessage(r.id, R.intl.formatToPlainString(R.t['9wzHDQ'], { user: T.ZP.getUserTag(n) }));
+                    await c.Z.kickUser(i.id, a, null !== (t = D(e, 'reason')) && void 0 !== t ? t : ''), d.Z.sendBotMessage(r.id, R.intl.formatToPlainString(R.t['9wzHDQ'], { user: b.ZP.getUserTag(n) }));
                 })().catch(() => {
                     d.Z.sendBotMessage(r.id, R.intl.string(R.t.l0gNlp));
                 });
@@ -453,32 +453,32 @@ let O = n(227419).Z,
                             {
                                 name: R.intl.string(R.t.RKpitb),
                                 displayName: R.intl.string(R.t.RKpitb),
-                                value: b.Z.Seconds.HOUR
+                                value: T.Z.Seconds.HOUR
                             },
                             {
                                 name: R.intl.string(R.t['8WfJZ2']),
                                 displayName: R.intl.string(R.t['8WfJZ2']),
-                                value: 6 * b.Z.Seconds.HOUR
+                                value: 6 * T.Z.Seconds.HOUR
                             },
                             {
                                 name: R.intl.string(R.t.p1up7u),
                                 displayName: R.intl.string(R.t.p1up7u),
-                                value: 12 * b.Z.Seconds.HOUR
+                                value: 12 * T.Z.Seconds.HOUR
                             },
                             {
                                 name: R.intl.string(R.t.XuVkkJ),
                                 displayName: R.intl.string(R.t.XuVkkJ),
-                                value: b.Z.Seconds.DAY
+                                value: T.Z.Seconds.DAY
                             },
                             {
                                 name: R.intl.string(R.t.gMcDS0),
                                 displayName: R.intl.string(R.t.gMcDS0),
-                                value: 3 * b.Z.Seconds.DAY
+                                value: 3 * T.Z.Seconds.DAY
                             },
                             {
                                 name: R.intl.string(R.t.FA7IUl),
                                 displayName: R.intl.string(R.t.FA7IUl),
-                                value: 7 * b.Z.Seconds.DAY
+                                value: 7 * T.Z.Seconds.DAY
                             }
                         ];
                     }
@@ -515,7 +515,7 @@ let O = n(227419).Z,
                     let s = null !== (t = D(e, 'delete_messages')) && void 0 !== t ? t : 0,
                         o = null !== (n = D(e, 'reason')) && void 0 !== n ? n : '',
                         l = I.default.getUser(a);
-                    await c.Z.banUser(i.id, a, s, o), d.Z.sendBotMessage(r.id, R.intl.formatToPlainString(R.t.YflWdH, { user: null != l ? T.ZP.getUserTag(l) : a }));
+                    await c.Z.banUser(i.id, a, s, o), d.Z.sendBotMessage(r.id, R.intl.formatToPlainString(R.t.YflWdH, { user: null != l ? b.ZP.getUserTag(l) : a }));
                 })().catch(() => {
                     d.Z.sendBotMessage(r.id, R.intl.string(R.t.w2J6Qk));
                 });
@@ -607,7 +607,7 @@ let O = n(227419).Z,
                         d.Z.sendBotMessage(
                             i.id,
                             R.intl.formatToPlainString(R.t.BbRV6u, {
-                                user: T.ZP.getUserTag(u),
+                                user: b.ZP.getUserTag(u),
                                 duration: o
                             })
                         );
@@ -654,8 +654,8 @@ let O = n(227419).Z,
                     },
                     required: !0,
                     get maxLength() {
-                        var P;
-                        return (null === (P = I.default.getCurrentUser()) || void 0 === P ? void 0 : P.premiumType) ? N.en1 : N.J6R;
+                        var w;
+                        return (null === (w = I.default.getCurrentUser()) || void 0 === w ? void 0 : w.premiumType) ? N.en1 : N.J6R;
                     }
                 }
             ],
@@ -676,8 +676,8 @@ let O = n(227419).Z,
             }
         }
     ],
-    w = L.filter((e) => ['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.untranslatedName)),
+    P = x.filter((e) => ['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.untranslatedName)),
     M = (e, t, n) => {
-        let i = t ? L : w;
+        let i = t ? x : P;
         return i.filter((t) => e.includes(t.type) && (!n || t.inputType === S.iw.BUILT_IN_TEXT || t.inputType === S.iw.BUILT_IN_INTEGRATION));
     };

@@ -1,30 +1,30 @@
-a.d(i, {
-    EW: () => s,
-    Np: () => l,
-    tb: () => o
+n.d(t, {
+    EW: () => r,
+    Np: () => s,
+    tb: () => a
 });
-var n = a(626135),
-    t = a(981631);
-function o(e, i, a, o) {
-    n.default.track(t.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
+var i = n(626135),
+    l = n(981631);
+function a(e, t, n, a) {
+    i.default.track(l.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
         message_id: e,
-        total_duration_secs: i,
-        start_duration_secs: Math.min(null != i ? i : a, a),
-        sender_user_id: o
+        total_duration_secs: t,
+        start_duration_secs: Math.min(null != t ? t : n, n),
+        sender_user_id: a
     });
 }
-function s(e, i, a, o, s) {
-    n.default.track(t.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
+function r(e, t, n, a, r) {
+    i.default.track(l.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
         message_id: e,
-        total_duration_secs: i,
-        end_duration_secs: Math.min(null != i ? i : a, a),
-        sender_user_id: o,
-        duration_listening_secs: s
+        total_duration_secs: t,
+        end_duration_secs: Math.min(null != t ? t : n, n),
+        sender_user_id: a,
+        duration_listening_secs: r
     });
 }
-function l(e, i) {
-    n.default.track(t.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
+function s(e, t) {
+    i.default.track(l.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
         message_id: e,
-        error_message: i
+        error_message: t
     });
 }

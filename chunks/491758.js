@@ -1,59 +1,59 @@
 n.d(t, { Z: () => R });
 var i = n(200651),
     s = n(192379),
-    r = n(512722),
-    l = n.n(r),
+    l = n(512722),
+    r = n.n(l),
     a = n(442837),
     o = n(481060),
     c = n(660216),
     d = n(230711),
     u = n(825209),
-    m = n(706454),
-    g = n(494620),
-    h = n(131951),
+    h = n(706454),
+    m = n(494620),
+    g = n(131951),
     x = n(556296),
     _ = n(924557),
     p = n(435064),
     E = n(894694),
     C = n(779618),
-    f = n(39604),
-    T = n(442334),
-    N = n(356659),
-    I = n(981631),
+    N = n(39604),
+    f = n(442334),
+    I = n(356659),
+    T = n(981631),
     S = n(37113),
-    b = n(526761),
+    j = n(526761),
     v = n(388032),
-    j = n(713903),
-    A = n(277253),
-    O = n(232186);
+    b = n(635446),
+    A = n(639957),
+    O = n(814632);
 function R() {
-    let e = (0, a.e7)([h.Z], () => h.Z.getHardwareEncoding()),
-        { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: r, clipsLength: R, clipsQuality: P } = (0, a.cj)([p.Z], () => p.Z.getSettings()),
-        D = (0, a.e7)([p.Z], () => p.Z.getHardwareClassification()),
-        y = (0, a.e7)([x.Z], () => x.Z.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
+    let e = (0, a.e7)([g.Z], () => g.Z.getHardwareEncoding()),
+        { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: l, clipsLength: R, clipsQuality: D } = (0, a.cj)([p.Z], () => p.Z.getSettings()),
+        P = (0, a.e7)([p.Z], () => p.Z.getHardwareClassification()),
+        y = (0, a.e7)([x.ZP], () => x.ZP.getKeybindForAction(T.kg4.SAVE_CLIP, !0)),
         Z = p.Z.isDecoupledGameClippingEnabled(),
-        k = (0, C.Z)(h.Z),
-        { showClipsHeaderEntrypoint: L } = _.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
-    l()(null != y, 'Save clip keybind unset');
-    let B = (0, a.e7)([m.default], () => m.default.locale),
+        L = (0, C.Z)(g.Z),
+        { showClipsHeaderEntrypoint: k } = _.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
+    r()(null != y, 'Save clip keybind unset');
+    let B = (0, a.e7)([h.default], () => h.default.locale),
         M = s.useMemo(
             () => [
                 {
-                    value: N.OT.SECONDS_30,
+                    value: I.OT.SECONDS_30,
                     label: v.intl.formatToPlainString(v.t['bTFv//'], { count: 30 })
                 },
                 {
-                    value: N.OT.MINUTES_1,
+                    value: I.OT.MINUTES_1,
                     label: v.intl.formatToPlainString(v.t.ICo9Nj, { count: 1 })
                 },
                 {
-                    value: N.OT.MINUTES_2,
+                    value: I.OT.MINUTES_2,
                     label: v.intl.formatToPlainString(v.t.ICo9Nj, { count: 2 })
                 }
             ],
             [B]
         ),
-        w = s.useMemo(
+        V = s.useMemo(
             () => [
                 {
                     value: S.LY.RESOLUTION_480,
@@ -78,7 +78,7 @@ function R() {
             ],
             [B]
         ),
-        V = s.useMemo(
+        w = s.useMemo(
             () => [
                 {
                     value: S.ws.FPS_15,
@@ -110,14 +110,14 @@ function R() {
                 disabled: !e,
                 children: [
                     !e &&
-                        (0, i.jsx)(g.Z, {
-                            look: g.z.WARNING,
+                        (0, i.jsx)(m.Z, {
+                            look: m.z.WARNING,
                             className: A.formItem,
-                            children: v.intl.format(v.t.kiaF4e, { onClick: () => d.Z.open(I.oAB.VOICE, null, { scrollPosition: b.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
+                            children: v.intl.format(v.t.kiaF4e, { onClick: () => d.Z.open(T.oAB.VOICE, null, { scrollPosition: j.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
-                    D === E.x.BELOW_MINIMUM
-                        ? (0, i.jsx)(g.Z, {
-                              look: g.z.WARNING,
+                    P === E.x.BELOW_MINIMUM
+                        ? (0, i.jsx)(m.Z, {
+                              look: m.z.WARNING,
                               className: A.formItem,
                               children: v.intl.string(v.t.SIxrIC)
                           })
@@ -129,21 +129,21 @@ function R() {
                         value: t,
                         note: v.intl.string(v.t['4Qw3ND']),
                         onChange: (e) =>
-                            f.em({
+                            N.em({
                                 clipsEnabled: e,
                                 trackAnalytics: !0
                             }),
                         children: v.intl.string(v.t.h8rgrK)
                     }),
                     e &&
-                        (0, i.jsx)(g.Z, {
+                        (0, i.jsx)(m.Z, {
                             className: A.formItem,
                             children: v.intl.string(v.t['Z+Mfqa'])
                         })
                 ]
             }),
             Z &&
-                k &&
+                L &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.$i$, {}),
@@ -154,10 +154,10 @@ function R() {
                                 hideBorder: !0,
                                 disabled: !e,
                                 className: A.formItem,
-                                value: r,
+                                value: l,
                                 note: v.intl.string(v.t.YP3ujo),
                                 onChange: (e) =>
-                                    f._Q({
+                                    N._Q({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),
@@ -166,7 +166,7 @@ function R() {
                         })
                     ]
                 }),
-            L &&
+            k &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.$i$, {}),
@@ -177,7 +177,7 @@ function R() {
                                 className: A.formItem,
                                 value: n,
                                 note: v.intl.string(v.t.m4Cjj4),
-                                onChange: (e) => f.N0(e),
+                                onChange: (e) => N.N0(e),
                                 children: v.intl.string(v.t['3zwNf3'])
                             })
                         })
@@ -187,44 +187,44 @@ function R() {
             (0, i.jsxs)(o.hjN, {
                 className: O.marginTop20,
                 children: [
-                    (0, i.jsx)(T.Q, {
+                    (0, i.jsx)(f.Q, {
                         className: A.formItem,
-                        select: f.eU,
+                        select: N.eU,
                         title: v.intl.string(v.t.OgfUio),
                         note: v.intl.string(v.t.H7j4tb),
                         value: R,
                         options: M
                     }),
-                    (0, i.jsx)(T.Q, {
+                    (0, i.jsx)(f.Q, {
                         className: A.formItem,
                         select: (e) =>
-                            f.yi({
+                            N.yi({
                                 resolution: e,
-                                frameRate: P.frameRate
+                                frameRate: D.frameRate
                             }),
                         title: v.intl.string(v.t.aFudZG),
                         note: v.intl.string(v.t.nIrkW1),
-                        value: P.resolution,
-                        options: w
+                        value: D.resolution,
+                        options: V
                     }),
-                    (0, i.jsx)(T.Q, {
+                    (0, i.jsx)(f.Q, {
                         className: A.formItem,
                         select: (e) =>
-                            f.yi({
-                                resolution: P.resolution,
+                            N.yi({
+                                resolution: D.resolution,
                                 frameRate: e
                             }),
                         title: v.intl.string(v.t['2wScLy']),
                         note: v.intl.string(v.t['Rf9+f3']),
-                        value: P.frameRate,
-                        options: V
+                        value: D.frameRate,
+                        options: w
                     }),
-                    (0, i.jsx)(T.O, {
+                    (0, i.jsx)(f.O, {
                         className: A.formItem,
                         title: v.intl.string(v.t.pf54ER),
                         note: v.intl.string(v.t['QyB/jI']),
                         children: (0, i.jsx)('div', {
-                            className: j.keyRecorder,
+                            className: b.keyRecorder,
                             children: (0, i.jsx)(u.Z, {
                                 defaultValue: y.shortcut,
                                 onChange: U

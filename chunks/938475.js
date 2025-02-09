@@ -39,10 +39,10 @@ function I(e) {
     let t = y[e];
     return null == t && ((t = new C(e)), (y[e] = t)), t;
 }
-function b(e, t) {
+function T(e, t) {
     return f.ZP.getMember(e, t.id);
 }
-function T(e, t, n) {
+function b(e, t, n) {
     var i;
     let r = null !== (i = null == t ? void 0 : t.nick) && void 0 !== i ? i : m.ZP.getName(n);
     return {
@@ -57,7 +57,7 @@ function S(e, t) {
         .concat(e.userId);
 }
 function A(e, t, n) {
-    return T(n, b(e, t), t);
+    return b(n, T(e, t), t);
 }
 function N(e, t, n) {
     let i = _.default.getUser(n),
@@ -88,7 +88,7 @@ class C {
             if (null == n) return this._voiceStates.set(e, N(t, this.guildId, e)), !0;
             if (n.voiceState !== t) {
                 var r;
-                let a = b(this.guildId, i),
+                let a = T(this.guildId, i),
                     s = null !== (r = null == a ? void 0 : a.nick) && void 0 !== r ? r : m.ZP.getName(i);
                 return (
                     this._voiceStates.set(e, {
@@ -110,9 +110,9 @@ class C {
             n = _.default.getUser(e);
         if (null != t && null != n) {
             var i, r;
-            let a = b(this.guildId, n);
+            let a = T(this.guildId, n);
             if ((null == a ? void 0 : a.nick) !== (null === (i = t.member) || void 0 === i ? void 0 : i.nick) || (null == a ? void 0 : a.avatar) !== (null === (r = t.member) || void 0 === r ? void 0 : r.avatar)) {
-                let { comparator: i } = T(t.voiceState, a, n);
+                let { comparator: i } = b(t.voiceState, a, n);
                 return (
                     this._voiceStates.set(e, {
                         ...t,
@@ -193,7 +193,7 @@ function D(e) {
         return I(null != n ? n : g.ME).updateVoiceState(i) || e;
     }, !1);
 }
-function x(e) {
+function L(e) {
     var t, n;
     let i = !1,
         r = new Set(null === (t = y[e.guildId]) || void 0 === t ? void 0 : t.getUserIds()),
@@ -203,15 +203,15 @@ function x(e) {
     for (let t of r) s.has(t) || (i = I(e.guildId).updateMember(t) || i);
     return i;
 }
-function L(e) {
+function x(e) {
     let { guildId: t } = e,
         n = c.default.getId();
     return null != n && I(null != t ? t : g.ME).updateVoiceState(n);
 }
-function P() {
+function w() {
     return a().reduce(y, (e, t) => t.updateUsers() || e, !1);
 }
-function w(e) {
+function P(e) {
     let { guildId: t, user: n } = e;
     return I(t).updateMember(n.id);
 }
@@ -234,7 +234,7 @@ function U() {
 }
 class G extends (i = s.ZP.Store) {
     initialize() {
-        U(), this.waitFor(c.default, _.default, f.ZP, p.Z), this.syncWith([_.default], P);
+        U(), this.waitFor(c.default, _.default, f.ZP, p.Z), this.syncWith([_.default], w);
     }
     getVoiceStates(e) {
         return I(null != e ? e : g.ME).getVoiceStates();
@@ -264,10 +264,10 @@ E(G, 'displayName', 'SortedVoiceStateStore');
 let B = new G(l.Z, {
     CONNECTION_OPEN: R,
     OVERLAY_INITIALIZE: O,
-    VOICE_CHANNEL_SELECT: L,
+    VOICE_CHANNEL_SELECT: x,
     VOICE_STATE_UPDATES: D,
-    GUILD_MEMBER_UPDATE: w,
+    GUILD_MEMBER_UPDATE: P,
     GUILD_CREATE: M,
     GUILD_DELETE: k,
-    PASSIVE_UPDATE_V2: x
+    PASSIVE_UPDATE_V2: L
 });

@@ -1,32 +1,32 @@
-s.d(t, { B: () => u });
-var n = s(200651);
-s(192379);
-var i = s(481060),
-    r = s(313201),
-    o = s(192635),
-    l = s(388032),
-    a = s(139266);
-function c(e) {
-    let { transitionState: t, Icon: s, title: c, body: u, onClose: d } = e,
-        f = (0, r.Dt)();
+e.d(s, { B: () => u });
+var n = e(200651);
+e(192379);
+var i = e(481060),
+    r = e(313201),
+    a = e(192635),
+    c = e(388032),
+    o = e(945174);
+function l(t) {
+    let { transitionState: s, Icon: e, title: l, body: u, onClose: d } = t,
+        p = (0, r.Dt)();
     return (0, n.jsxs)(i.Y0X, {
-        className: a.container,
-        transitionState: t,
-        'aria-labelledby': f,
+        className: o.container,
+        transitionState: s,
+        'aria-labelledby': p,
         children: [
             (0, n.jsxs)(i.hzk, {
                 children: [
-                    (0, n.jsx)(o.Z, { Icon: s }),
+                    (0, n.jsx)(a.Z, { Icon: e }),
                     (0, n.jsx)(i.LZC, { size: 24 }),
                     (0, n.jsx)(i.X6q, {
-                        id: f,
-                        className: a.__invalid_title,
+                        id: p,
+                        className: o.__invalid_title,
                         variant: 'heading-xl/semibold',
-                        children: c
+                        children: l
                     }),
                     (0, n.jsx)(i.LZC, { size: 8 }),
                     (0, n.jsx)(i.Text, {
-                        className: a.body,
+                        className: o.body,
                         variant: 'text-sm/normal',
                         children: u
                     })
@@ -37,16 +37,16 @@ function c(e) {
                 size: i.zxk.Sizes.MEDIUM,
                 grow: !1,
                 onClick: d,
-                children: l.intl.string(l.t['NX+WJC'])
+                children: c.intl.string(c.t['NX+WJC'])
             })
         ]
     });
 }
-function u(e) {
-    (0, i.h7j)((t) =>
-        (0, n.jsx)(c, {
-            ...t,
-            ...e
+function u(t) {
+    (0, i.h7j)((s) =>
+        (0, n.jsx)(l, {
+            ...s,
+            ...t
         })
     );
 }

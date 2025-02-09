@@ -1,8 +1,8 @@
-n.d(t, { Z: () => _ });
-var s = n(200651),
-    r = n(192379),
-    a = n(120356),
-    o = n.n(a),
+n.d(t, { Z: () => C });
+var r = n(200651),
+    o = n(192379),
+    s = n(120356),
+    a = n.n(s),
     i = n(642128),
     l = n(481060),
     c = n(617136),
@@ -10,21 +10,21 @@ var s = n(200651),
     u = n(497505),
     p = n(918701),
     m = n(685613),
-    x = n(64141),
+    x = n(670638),
     h = n(341907),
     g = n(303385),
     f = n(388032),
-    v = n(626094);
-let _ = (e) => {
-    let { quest: t, expansionSpring: n, onCtxMenuSelect: a, onCtxMenuOpen: _, onCtxMenuClose: C, useReducedMotion: j, isExpanded: b, isExpansionAnimationComplete: T } = e,
+    _ = n(935714);
+let C = (e) => {
+    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: C, onCtxMenuClose: v, useReducedMotion: j, isExpanded: b, isExpansionAnimationComplete: T } = e,
         E = (0, d.aM)(),
-        S = r.useCallback(() => {
+        N = o.useCallback(() => {
             (0, h.openDisclosureModal)(t, {
                 content: u.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
         }, [t]),
-        N = r.useCallback(() => {
+        S = o.useCallback(() => {
             (0, p.FE)(t, {
                 content: u.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK,
@@ -32,17 +32,17 @@ let _ = (e) => {
             });
         }, [E, t]),
         y = b && T,
-        w = (0, s.jsx)(l.P3F, {
-            onClick: N,
-            className: o()(v.clickable, { [v.logo]: y }),
-            children: (0, s.jsx)(m.ZP, {
+        A = (0, r.jsx)(l.P3F, {
+            onClick: S,
+            className: a()(_.clickable, { [_.logo]: y }),
+            children: (0, r.jsx)(m.ZP, {
                 quest: t,
-                logotypeClassName: o()(v.rewardHighlightLogotype),
+                logotypeClassName: a()(_.rewardHighlightLogotype),
                 withGameTile: !1
             })
         });
-    return (0, s.jsxs)(i.animated.div, {
-        className: o()(v.wrapper, v.rewardHighlightWrapper, { [v.interactable]: y }),
+    return (0, r.jsxs)(i.animated.div, {
+        className: a()(_.wrapper, _.rewardHighlightWrapper, { [_.interactable]: y }),
         style: {
             transform: (0, i.to)(
                 [
@@ -55,8 +55,8 @@ let _ = (e) => {
             )
         },
         children: [
-            (0, s.jsx)(i.animated.div, {
-                className: v.opaqueExpandedBackground,
+            (0, r.jsx)(i.animated.div, {
+                className: _.opaqueExpandedBackground,
                 style: {
                     opacity: n.to({
                         range: [0, 1],
@@ -65,15 +65,15 @@ let _ = (e) => {
                     backdropFilter: n.to([0, 1], [0, 1]).to((e) => 'blur('.concat(10 * e, 'px) brightness(').concat(1 - e / 4, ')'))
                 }
             }),
-            (0, s.jsx)(g.Z, {
+            (0, r.jsx)(g.Z, {
                 quest: t,
                 expansionSpring: n,
                 isFullyExpanded: y,
-                partnerBranding: w,
+                partnerBranding: A,
                 useReducedMotion: j
             }),
-            (0, s.jsxs)(i.animated.div, {
-                className: v.promotedBadgeWrapper,
+            (0, r.jsxs)(i.animated.div, {
+                className: _.promotedBadgeWrapper,
                 style: {
                     opacity: n.to({
                         range: [0, 1],
@@ -81,38 +81,38 @@ let _ = (e) => {
                     })
                 },
                 children: [
-                    (0, s.jsxs)(l.P3F, {
-                        className: v.promotedBadge,
-                        onClick: S,
+                    (0, r.jsxs)(l.P3F, {
+                        className: _.promotedBadge,
+                        onClick: N,
                         children: [
-                            (0, s.jsx)(l.Text, {
+                            (0, r.jsx)(l.Text, {
                                 color: 'always-white',
                                 variant: 'text-xs/normal',
                                 children: f.intl.string(f.t.o6FLcH)
                             }),
-                            (0, s.jsx)(l.idN, {
+                            (0, r.jsx)(l.idN, {
                                 color: l.TVs.colors.WHITE,
-                                className: v.promotedBadgeIcon
+                                className: _.promotedBadgeIcon
                             })
                         ]
                     }),
-                    (0, s.jsx)(x.r, {
-                        onOpen: _,
-                        onClose: C,
-                        onSelect: a,
+                    (0, r.jsx)(x.r, {
+                        onOpen: C,
+                        onClose: v,
+                        onSelect: s,
                         questContent: u.jn.QUEST_BAR_V2,
                         quest: t,
                         shouldShowDisclosure: !0,
                         showShareLink: !0,
                         children: (e) =>
-                            (0, s.jsx)(l.P3F, {
+                            (0, r.jsx)(l.P3F, {
                                 ...e,
-                                className: v.submenuWrapper,
+                                className: _.submenuWrapper,
                                 'aria-label': f.intl.string(f.t.DEoVWV),
-                                children: (0, s.jsx)(l.xhG, {
+                                children: (0, r.jsx)(l.xhG, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: o()(v.submenuIcon, v.white)
+                                    className: a()(_.submenuIcon, _.white)
                                 })
                             })
                     })

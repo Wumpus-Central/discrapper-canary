@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(47120), n(653041);
+n.d(t, { Z: () => P }), n(47120), n(653041);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -18,16 +18,16 @@ var i = n(200651),
     v = n(117530),
     y = n(459273),
     I = n(403182),
-    b = n(541716),
-    T = n(752305),
+    T = n(541716),
+    b = n(752305),
     S = n(30465),
     A = n(140963),
     N = n(4484),
     C = n(925994),
     R = n(981631),
     O = n(388032),
-    D = n(553796);
-function x(e, t, n) {
+    D = n(446016);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,10 +41,10 @@ function x(e, t, n) {
     );
 }
 new E.Z('ChannelEditor.tsx');
-let L = function () {
+let x = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    P = {
+    w = {
         12: D.fontSize12Padding,
         14: D.fontSize14Padding,
         15: D.fontSize15Padding,
@@ -53,7 +53,7 @@ let L = function () {
         20: D.fontSize20Padding,
         24: D.fontSize24Padding
     };
-class w extends r.Component {
+class P extends r.Component {
     componentDidMount() {
         this.props.focused && requestAnimationFrame(() => this.focus()), document.addEventListener('selectionchange', this.handleSelectionChange), window.addEventListener('beforeunload', this.handleBeforeUnload);
     }
@@ -61,7 +61,7 @@ class w extends r.Component {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             var t, n;
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, C.sk)(this.props.richValue, { mode: 'plain' })), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, T.JM)(e));
+            (e = this.props.useSlate ? this.props.textValue : (0, C.sk)(this.props.richValue, { mode: 'plain' })), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, b.JM)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
@@ -156,7 +156,7 @@ class w extends r.Component {
     }
     render() {
         var e, t, n, r, a, o;
-        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: I, useNewSlashCommands: S, canOnlyUseTextCommands: C, className: O, id: x, required: L, maxCharacterCount: w, allowNewLines: M, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: G } = this.props,
+        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: I, useNewSlashCommands: S, canOnlyUseTextCommands: C, className: O, id: L, required: x, maxCharacterCount: P, allowNewLines: M, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: G } = this.props,
             { submitting: B, popup: Z } = this.state,
             F = {
                 channel: m,
@@ -164,13 +164,13 @@ class w extends r.Component {
                     [D.textAreaSlate]: v,
                     [D.textAreaDisabled]: c || B
                 }),
-                id: x,
+                id: L,
                 placeholder: this.getPlaceholder(),
-                required: L,
+                required: x,
                 accessibilityLabel: G,
                 disabled: c || !1,
                 submitting: B,
-                isEdit: g === b.Ie.EDIT,
+                isEdit: g === T.Ie.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -184,12 +184,12 @@ class w extends r.Component {
                 onResize: p,
                 onKeyDown: _,
                 onSubmit: h,
-                textAreaPaddingClassName: s()(P[E], {
-                    [D.textAreaWithoutAttachmentButton]: g !== b.Ie.NORMAL && g !== b.Ie.OVERLAY && g !== b.Ie.THREAD_CREATION && g !== b.Ie.SIDEBAR,
-                    [D.textAreaForPostCreation]: g === b.Ie.CREATE_FORUM_POST,
-                    [D.textAreaCustomGift]: g === b.Ie.CUSTOM_GIFT,
-                    [D.textAreaForUserProfile]: g === b.Ie.USER_PROFILE,
-                    [D.textAreaForOverlayInlineReply]: g === b.Ie.OVERLAY_INLINE_REPLY
+                textAreaPaddingClassName: s()(w[E], {
+                    [D.textAreaWithoutAttachmentButton]: g !== T.Ie.NORMAL && g !== T.Ie.OVERLAY && g !== T.Ie.THREAD_CREATION && g !== T.Ie.SIDEBAR,
+                    [D.textAreaForPostCreation]: g === T.Ie.CREATE_FORUM_POST,
+                    [D.textAreaCustomGift]: g === T.Ie.CUSTOM_GIFT,
+                    [D.textAreaForUserProfile]: g === T.Ie.USER_PROFILE,
+                    [D.textAreaForOverlayInlineReply]: g === T.Ie.OVERLAY_INLINE_REPLY
                 }),
                 spellcheckEnabled: I,
                 useNewSlashCommands: S,
@@ -199,7 +199,7 @@ class w extends r.Component {
                 'aria-haspopup': 'listbox',
                 'aria-expanded': null !== Z.id || void 0,
                 'aria-activedescendant': null !== (o = Z.activeDescendant) && void 0 !== o ? o : void 0,
-                'aria-invalid': l.length > w,
+                'aria-invalid': l.length > P,
                 'aria-describedby': k,
                 'aria-labelledby': U,
                 'aria-autocomplete': 'list'
@@ -209,7 +209,7 @@ class w extends r.Component {
                       ref: this.ref,
                       ...F,
                       type: g,
-                      value: c ? (0, T.JM)('') : u,
+                      value: c ? (0, b.JM)('') : u,
                       canUseCommands: null === (t = g.commands) || void 0 === t ? void 0 : t.enabled,
                       canOnlyUseTextCommands: C
                   })
@@ -236,16 +236,16 @@ class w extends r.Component {
         var t;
         super(e),
             (t = this),
-            x(this, 'ref', r.createRef()),
-            x(this, '_focusBlurQueue', Promise.resolve()),
-            x(this, '_unsubscribe', void 0),
-            x(this, 'handleSelectionChange', () => {
+            L(this, 'ref', r.createRef()),
+            L(this, '_focusBlurQueue', Promise.resolve()),
+            L(this, '_unsubscribe', void 0),
+            L(this, 'handleSelectionChange', () => {
                 if (this.props.focused) {
                     var e, t, n;
                     this.props.onSelectionChanged(null === (t = (n = document).getSelection) || void 0 === t ? void 0 : null === (e = t.call(n)) || void 0 === e ? void 0 : e.toString());
                 }
             }),
-            x(this, 'focus', () => {
+            L(this, 'focus', () => {
                 var e;
                 null === (e = this._focusBlurQueue) ||
                     void 0 === e ||
@@ -256,55 +256,55 @@ class w extends r.Component {
                         });
                     });
             }),
-            x(this, 'saveCurrentText', function () {
+            L(this, 'saveCurrentText', function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     { type: n, channel: i } = t.props;
                 n.drafts.autoSave && (e && t.saveCurrentTextThrottled.cancel(), t.handleSaveCurrentText(i.id));
             }),
-            x(this, 'handleBeforeUnload', () => this.saveCurrentText()),
-            x(this, 'saveCurrentTextThrottled', l().throttle(this.saveCurrentText.bind(this, !1), 500)),
-            x(this, 'handleEnter', (e) => {
+            L(this, 'handleBeforeUnload', () => this.saveCurrentText()),
+            L(this, 'saveCurrentTextThrottled', l().throttle(this.saveCurrentText.bind(this, !1), 500)),
+            L(this, 'handleEnter', (e) => {
                 var t, n;
                 return null === (t = (n = this.props).onEnter) || void 0 === t ? void 0 : t.call(n, e);
             }),
-            x(this, 'handleTab', () => {
+            L(this, 'handleTab', () => {
                 var e, t;
                 return null === (e = (t = this.props).onTab) || void 0 === e ? void 0 : e.call(t);
             }),
-            x(this, 'handleMoveSelection', (e) => {
+            L(this, 'handleMoveSelection', (e) => {
                 var t, n;
                 return null === (t = (n = this.props).onMoveSelection) || void 0 === t ? void 0 : t.call(n, e);
             }),
-            x(this, 'maybeShowAutocomplete', () => {
+            L(this, 'maybeShowAutocomplete', () => {
                 var e, t;
                 return null === (e = (t = this.props).onMaybeShowAutocomplete) || void 0 === e ? void 0 : e.call(t);
             }),
-            x(this, 'hideAutocomplete', () => {
+            L(this, 'hideAutocomplete', () => {
                 var e, t;
                 return null === (e = (t = this.props).onHideAutocomplete) || void 0 === e ? void 0 : e.call(t);
             }),
-            x(this, 'handleSaveCurrentText', (e) => {
+            L(this, 'handleSaveCurrentText', (e) => {
                 _.Z.saveDraft(e, this.props.textValue, this.props.type.drafts.type);
             }),
-            x(this, 'handleClearText', () => {
+            L(this, 'handleClearText', () => {
                 var e, t;
-                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, '', (0, T.JM)(''));
+                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, '', (0, b.JM)(''));
             }),
-            x(this, 'handleInsertText', (e) => {
+            L(this, 'handleInsertText', (e) => {
                 let { plainText: t, rawText: n, addSpace: i = !1 } = e;
                 this.props.disabled || (this.appendText(t, n, i), this.focus());
             }),
-            x(this, 'handleFocus', (e) => {
+            L(this, 'handleFocus', (e) => {
                 let { onFocus: t } = this.props,
                     { focused: n } = this.state;
                 null == t || t(e), n || this.setState({ focused: !0 });
             }),
-            x(this, 'handleBlur', (e) => {
+            L(this, 'handleBlur', (e) => {
                 let { onBlur: t } = this.props,
                     { focused: n } = this.state;
                 null == t || t(e), n && this.setState({ focused: !1 });
             }),
-            x(this, 'handlePaste', (e) => {
+            L(this, 'handlePaste', (e) => {
                 let { channel: t, canPasteFiles: n, uploadPromptCharacterCount: i, promptToUpload: r, maxCharacterCount: a, type: s } = this.props;
                 if (null == r || (!t.isPrivate() && !n) || (t.isPrivate() && t.isManaged())) return !1;
                 let o = (e, n) => {
@@ -341,7 +341,7 @@ class w extends r.Component {
                     l = null != i ? i : a,
                     { files: u } = M(e.clipboardData, s.uploadLongMessages ? l : null);
                 return (
-                    L(
+                    x(
                         'onPaste',
                         [...e.clipboardData.items].map((e) => {
                             if ('file' !== e.kind)

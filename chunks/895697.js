@@ -19,15 +19,15 @@ var r = n(442837),
     v = n(827313),
     y = n(420654),
     I = n(166584),
-    b = n(915014),
-    T = n(228168),
+    T = n(915014),
+    b = n(228168),
     S = n(388032),
-    A = n(410344),
-    N = n(591156);
+    A = n(914704),
+    N = n(112650);
 function C(e) {
-    let { user: t, currentUser: n, displayProfile: C, guild: R, isHovering: O, onOpenProfile: D, channelId: x, onClose: L } = e,
-        P = u.ZP.getName(null == R ? void 0 : R.id, x, t),
-        w = (0, r.e7)([c.Z], () => {
+    let { user: t, currentUser: n, displayProfile: C, guild: R, isHovering: O, onOpenProfile: D, channelId: L, onClose: x } = e,
+        w = u.ZP.getName(null == R ? void 0 : R.id, L, t),
+        P = (0, r.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         }),
@@ -39,14 +39,14 @@ function C(e) {
         children: [
             (0, i.jsx)(m.Z, {
                 user: t,
-                profileType: T.y0.BITE_SIZE,
+                profileType: b.y0.BITE_SIZE,
                 onOpenProfile: D,
-                nickname: P,
+                nickname: w,
                 pronouns: null == C ? void 0 : C.pronouns,
                 tags: (0, i.jsx)(f.Z, {
                     displayProfile: C,
-                    profileType: T.y0.BITE_SIZE,
-                    onClose: L
+                    profileType: b.y0.BITE_SIZE,
+                    onClose: x
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -60,7 +60,7 @@ function C(e) {
                     ]
                 })
             }),
-            (0, i.jsx)(b.Z, {
+            (0, i.jsx)(T.Z, {
                 user: t,
                 onOpenProfile: (e) => (null == D ? void 0 : D({ section: e }))
             }),
@@ -70,7 +70,7 @@ function C(e) {
                     (0, i.jsx)(g.Z, {
                         user: t,
                         className: A.button,
-                        closePopout: L
+                        closePopout: x
                     }),
                     (0, i.jsx)(E.Z, {
                         user: t,
@@ -83,24 +83,24 @@ function C(e) {
                 user: t,
                 bio: null == C ? void 0 : C.bio,
                 hidePersonalInformation: k,
-                onClose: L
+                onClose: x
             }),
             (0, i.jsx)(_.Z, {
                 user: t,
                 currentUser: n,
                 displayProfile: C,
                 guildId: null == R ? void 0 : R.id,
-                onClose: L,
+                onClose: x,
                 className: N.activity
             }),
-            (null == w ? void 0 : w.popularApplicationCommandIds) != null &&
+            (null == P ? void 0 : P.popularApplicationCommandIds) != null &&
                 null != M &&
                 (0, i.jsx)(d.Z, {
-                    applicationId: w.id,
-                    commandIds: w.popularApplicationCommandIds,
+                    applicationId: P.id,
+                    commandIds: P.popularApplicationCommandIds,
                     channel: M,
                     guildId: null == R ? void 0 : R.id,
-                    onClick: L
+                    onClick: x
                 }),
             null != R &&
                 (0, i.jsx)(h.Z, {

@@ -23,7 +23,7 @@ var l = n(200651),
     N = n(871118),
     E = n(981631),
     C = n(388032),
-    A = n(846450);
+    A = n(951078);
 class j extends i.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;

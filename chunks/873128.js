@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
-var i = n(442837),
-    r = n(994752);
-function a(e) {
-    let { guildId: t, leaderboardId: n, intervalOffset: a = 0 } = e;
-    return (0, i.e7)([r.Z], () => r.Z.get(t, n, a));
+n.d(t, { Z: () => r });
+var l = n(442837),
+    i = n(994752);
+function r(e) {
+    let { guildId: t, leaderboardId: n, intervalOffset: r = 0 } = e;
+    return (0, l.e7)([i.Z], () => i.Z.get(t, n, r));
 }

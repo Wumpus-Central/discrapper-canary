@@ -9,7 +9,7 @@ var l = n(481060),
     s = n(476770),
     u = n(815660),
     o = n(388032),
-    a = n(484979);
+    a = n(802044);
 function d() {
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(s.PU, {
@@ -46,7 +46,7 @@ function c(e) {
                 onClick: () => {
                     (0, l.ZDy)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e('76540'), n.e('47528')]).then(n.bind(n, 607018));
+                            let { default: e } = await Promise.all([n.e('76540'), n.e('60971')]).then(n.bind(n, 607018));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     reason: r.L.GUILD_PHONE_REQUIRED,

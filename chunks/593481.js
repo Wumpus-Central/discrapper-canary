@@ -1,7 +1,7 @@
 n.d(t, {
-    QR: () => v,
-    Yj: () => Z,
-    ZP: () => S,
+    QR: () => _,
+    Yj: () => v,
+    ZP: () => Z,
     iz: () => f
 });
 var i,
@@ -12,8 +12,8 @@ var i,
     o = n(481060),
     d = n(294033),
     c = n(388032),
-    u = n(521772),
-    h = n(232186);
+    u = n(35915),
+    h = n(814632);
 function p(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ let g = (e) => e.stopPropagation(),
             onMouseOver: g
         }),
     f = () => (0, s.jsx)('div', { className: u.divider }),
-    v = (e, t, n) =>
+    _ = (e, t, n) =>
         (0, s.jsx)('div', {
             className: u.keybindMessage,
             children: c.intl.format(n, {
@@ -52,7 +52,7 @@ let g = (e) => e.stopPropagation(),
                     )
             })
         }),
-    Z = (e, t) =>
+    v = (e, t) =>
         (0, s.jsx)('div', {
             className: u.hintSubtleText,
             children: t
@@ -274,4 +274,4 @@ p(x, 'defaultProps', {
     expand: !1,
     disabled: !1
 });
-let S = x;
+let Z = x;

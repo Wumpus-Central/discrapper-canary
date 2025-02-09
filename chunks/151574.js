@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(926491),
     y = n(373228),
     I = n(378233),
-    b = n(419922),
-    T = n(490095),
+    T = n(419922),
+    b = n(490095),
     S = n(652136),
     A = n(626135),
     N = n(280930),
@@ -27,11 +27,11 @@ var i = n(200651),
     R = n(278754),
     O = n(981631),
     D = n(388032),
-    x = n(304550);
-let L = 4,
-    P = (0, c.Mg)(d.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
-    w = (0, c.Mg)(d.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
-    M = 2 * w + (0, c.Mg)(d.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * P,
+    L = n(218221);
+let x = 4,
+    w = (0, c.Mg)(d.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
+    P = (0, c.Mg)(d.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
+    M = 2 * P + (0, c.Mg)(d.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * w,
     k = () => Promise.resolve();
 function U(e) {
     let { isFocused: t, isHidden: n, sendability: r, listIndex: a, sticker: l, onMouseOver: u, onSelectSticker: c } = e,
@@ -39,25 +39,25 @@ function U(e) {
     return (0, i.jsxs)(f.P3F, {
         ..._,
         tabIndex: n ? -1 : d,
-        className: s()(x.suggestedExpression, { [x.suggestedExpressionFocused]: t }),
+        className: s()(L.suggestedExpression, { [L.suggestedExpressionFocused]: t }),
         focusProps: { enabled: !1 },
         onClick: () => c(l, r),
         onMouseOver: u,
         children: [
             (0, i.jsx)(m.ZP, {
                 mask: m.ZP.Masks.STICKER_ROUNDED_RECT,
-                width: w + L,
-                height: w + L,
-                className: x.mask,
-                children: (0, i.jsx)('div', { className: x.maskBackground })
+                width: P + x,
+                height: P + x,
+                className: L.mask,
+                children: (0, i.jsx)('div', { className: L.maskBackground })
             }),
-            (0, i.jsx)(b.ZP, {
+            (0, i.jsx)(T.ZP, {
                 maskAsset: !0,
-                size: w,
+                size: P,
                 sticker: l,
-                className: x.__invalid_sticker
+                className: L.__invalid_sticker
             }),
-            r !== E.eb.SENDABLE && (0, i.jsx)(T.Z, { size: 14 })
+            r !== E.eb.SENDABLE && (0, i.jsx)(b.Z, { size: 14 })
         ]
     });
 }
@@ -105,22 +105,22 @@ let B = r.memo(function (e) {
     var t;
     let { editorRef: n, channel: a, isEditorFocused: l, onSelectSticker: u, stickerIconVisible: c = !1, submitButtonVisible: d = !1 } = e,
         m = r.useContext(h.ZP),
-        [b, T] = r.useState(null),
-        [L, P] = r.useState(!1),
-        [w, k] = r.useState(null),
+        [T, b] = r.useState(null),
+        [x, w] = r.useState(!1),
+        [P, k] = r.useState(null),
         B = (0, g.Iu)((e) => null != e.activeView),
         Z = r.useRef(null),
         [F, V] = r.useState(''),
         [j, H] = r.useState(''),
         [Y, W] = r.useState(!1),
         [K, z] = r.useState(!1),
-        q = (0, N.Z)(F, L, a),
+        q = (0, N.Z)(F, x, a),
         { analyticsLocations: Q } = (0, p.ZP)(_.Z.EXPRESSION_SUGGESTIONS),
         { handleTextChange: X, debouncedSetTextInputValue: J } = (0, N.m)({
             setTextInputValue: V,
-            setHasDismissed: P,
+            setHasDismissed: w,
             setHasSelection: z,
-            setFocusedSuggestionType: T
+            setFocusedSuggestionType: b
         });
     r.useEffect(() => {
         let e = (e) => {
@@ -130,7 +130,7 @@ let B = r.memo(function (e) {
                 let t = '' !== e && null != e;
                 if ((z(t), t)) {
                     var i;
-                    T(null), null === (i = n.current) || void 0 === i || i.focus();
+                    b(null), null === (i = n.current) || void 0 === i || i.focus();
                 }
             };
         return (
@@ -143,8 +143,8 @@ let B = r.memo(function (e) {
         );
     }, [X, n, m]),
         r.useLayoutEffect(() => {
-            null == b && k(null);
-        }, [b]);
+            null == T && k(null);
+        }, [T]);
     let [$, ee] = r.useState(!1);
     r.useLayoutEffect(() => {
         requestAnimationFrame(() => {
@@ -153,14 +153,14 @@ let B = r.memo(function (e) {
         });
     }, [l]);
     let et = q.length > 0,
-        en = $ && !B && !Y && !L && !K && et,
+        en = $ && !B && !Y && !x && !K && et,
         { stickersNavigator: ei } = G({
             editorRef: n,
             hasStickerResults: et,
             shouldRenderSuggestions: en,
-            focusedSuggestionType: b,
-            setFocusedSuggestionType: T,
-            setHasDismissed: P,
+            focusedSuggestionType: T,
+            setFocusedSuggestionType: b,
+            setHasDismissed: w,
             setFocusedStickerListItem: k,
             setTextInputValue: V
         }),
@@ -173,7 +173,7 @@ let B = r.memo(function (e) {
                     }),
                     t === E.eb.SENDABLE)
                 )
-                    P(!0), u(e, y.V0.EXPRESSION_SUGGESTIONS), J.cancel(), V('');
+                    w(!0), u(e, y.V0.EXPRESSION_SUGGESTIONS), J.cancel(), V('');
                 else if ((0, I.jl)(e)) {
                     let t = v.Z.getStickerPack(e.pack_id);
                     null != t &&
@@ -197,10 +197,10 @@ let B = r.memo(function (e) {
         children: (0, i.jsxs)(f.P3F, {
             tabIndex: eo ? -1 : 0,
             'aria-hidden': eo,
-            className: s()(x.container, {
-                [x.hidden]: eo,
-                [x.submitButtonOffset]: d,
-                [x.stickerIconOffset]: c
+            className: s()(L.container, {
+                [L.hidden]: eo,
+                [L.submitButtonOffset]: d,
+                [L.stickerIconOffset]: c
             }),
             innerRef: Z,
             style: { minWidth: M },
@@ -217,12 +217,12 @@ let B = r.memo(function (e) {
                                 children: (e) => {
                                     let { ref: t, tabIndex: n, ...r } = e;
                                     return (0, i.jsx)('div', {
-                                        className: x.stickerResults,
+                                        className: L.stickerResults,
                                         ref: (e) => {
                                             t.current = e;
                                         },
                                         onMouseLeave: () => {
-                                            null == b && k(null);
+                                            null == T && k(null);
                                         },
                                         tabIndex: eo ? -1 : n,
                                         ...r,
@@ -231,7 +231,7 @@ let B = r.memo(function (e) {
                                             return (0, i.jsx)(
                                                 U,
                                                 {
-                                                    isFocused: w === ''.concat(t),
+                                                    isFocused: P === ''.concat(t),
                                                     isHidden: eo,
                                                     sendability: r,
                                                     listIndex: t,
@@ -249,26 +249,26 @@ let B = r.memo(function (e) {
                             })
                         }),
                         (0, i.jsxs)('div', {
-                            className: x.bottomInformationTextContainer,
+                            className: L.bottomInformationTextContainer,
                             children: [
-                                (0, i.jsx)('div', { className: x.textDivider }),
+                                (0, i.jsx)('div', { className: L.textDivider }),
                                 (0, i.jsxs)('div', {
-                                    className: x.bottomInformationLayout,
+                                    className: L.bottomInformationLayout,
                                     children: [
                                         (0, i.jsx)(f.Text, {
-                                            className: x.descriptionText,
+                                            className: L.descriptionText,
                                             style: { maxWidth: M },
                                             variant: 'text-sm/normal',
                                             children:
-                                                null != w
-                                                    ? D.intl.format(D.t['5gglIi'], { stickerName: null === (t = q[+w]) || void 0 === t ? void 0 : t.sticker.name })
+                                                null != P
+                                                    ? D.intl.format(D.t['5gglIi'], { stickerName: null === (t = q[+P]) || void 0 === t ? void 0 : t.sticker.name })
                                                     : D.intl.format(D.t['8DjNnJ'], {
                                                           upHook: (e, t) =>
                                                               (0, i.jsx)(
                                                                   f.M2$,
                                                                   {
                                                                       shortcut: 'up',
-                                                                      className: x.keybind
+                                                                      className: L.keybind
                                                                   },
                                                                   t
                                                               )
@@ -289,7 +289,7 @@ let B = r.memo(function (e) {
                                                         size: 'md',
                                                         color: 'currentColor',
                                                         ...e,
-                                                        className: x.closeIcon
+                                                        className: L.closeIcon
                                                     })
                                             })
                                         })
@@ -299,7 +299,7 @@ let B = r.memo(function (e) {
                         })
                     ]
                 }),
-                (0, i.jsx)('div', { className: x.containerBackground })
+                (0, i.jsx)('div', { className: L.containerBackground })
             ]
         })
     });

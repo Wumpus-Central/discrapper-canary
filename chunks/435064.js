@@ -30,8 +30,8 @@ let E = 'default',
     v = [],
     y = [],
     I = [],
-    b = 0,
-    T = null,
+    T = 0,
+    b = null,
     S = null,
     A = {},
     N = null,
@@ -64,19 +64,19 @@ let E = 'default',
             numberOfTimesDismissed: 0
         }
     };
-async function x() {
+async function L() {
     if (D.clipsSettings.storageLocation !== E || null == s.Z || null == s.Z.remoteApp) return;
     let e = await s.Z.remoteApp.getPath('documents');
     (D.clipsSettings.storageLocation = e), et.emitChange();
 }
-function L(e) {
+function x(e) {
     let { classification: t } = e,
         n = D.hardwareClassification;
     (D.hardwareClassificationVersion = p.WM), (D.hardwareClassification = t), D.hardwareClassification === _.x.MEETS_AUTO_ENABLE && n !== _.x.MEETS_AUTO_ENABLE && (D.clipsSettings.clipsEnabled = !0);
     let i = D.hardwareClassificationForDecoupled;
     (D.hardwareClassificationForDecoupled = t), D.hardwareClassificationForDecoupled === _.x.MEETS_AUTO_ENABLE && i !== _.x.MEETS_AUTO_ENABLE && D.clipsSettings.clipsEnabled && (D.clipsSettings.decoupledClipsEnabled = !0);
 }
-function P(e) {
+function w(e) {
     let { clip: t } = e;
     for (let [e, n] of y.entries())
         if (n.id === t.id) {
@@ -84,7 +84,7 @@ function P(e) {
             return;
         }
 }
-function w(e) {
+function P(e) {
     let { settings: t } = e;
     D = {
         ...D,
@@ -96,7 +96,7 @@ function w(e) {
 }
 function M(e) {
     let { clipType: t, streamKey: n, thumbnail: i } = e;
-    if (((b += 1), (D.hasTakenDecoupledClip = D.hasTakenDecoupledClip || t === p.X9.DECOUPLED), null != n && null != i)) {
+    if (((T += 1), (D.hasTakenDecoupledClip = D.hasTakenDecoupledClip || t === p.X9.DECOUPLED), null != n && null != i)) {
         var r;
         let e = Date.now();
         (C = null != C ? C : e),
@@ -114,12 +114,12 @@ function k(e) {
     C === n && (C = null), null == n ? (R[t] = []) : (R[t] = R[t].filter((e) => e.timestamp !== n));
 }
 function U() {
-    b = Math.max(b - 1, 0);
+    T = Math.max(T - 1, 0);
 }
 function G(e) {
     var t, n;
     let { clip: i } = e;
-    (b = Math.max(b - 1, 0)),
+    (T = Math.max(T - 1, 0)),
         (S = {
             applicationName: i.applicationName,
             ended: !1,
@@ -150,11 +150,11 @@ function Z(e) {
 }
 function F(e) {
     let { channelId: t } = e;
-    T = t;
+    b = t;
 }
 function V(e) {
     let { channelId: t } = e;
-    t !== T && (T = null);
+    t !== b && (b = null);
 }
 function j(e) {
     let { applicationName: t } = e;
@@ -237,7 +237,7 @@ function $(e) {
 }
 class ee extends (i = r.ZP.DeviceSettingsStore) {
     initialize(e) {
-        null != e && (D = e), x(), this.waitFor(o.ZP);
+        null != e && (D = e), L(), this.waitFor(o.ZP);
     }
     getClips() {
         return y;
@@ -255,7 +255,7 @@ class ee extends (i = r.ZP.DeviceSettingsStore) {
         return S;
     }
     getClipsWarningShown(e) {
-        return T === e;
+        return b === e;
     }
     getActiveAnimation() {
         return C;
@@ -277,7 +277,7 @@ class ee extends (i = r.ZP.DeviceSettingsStore) {
         return D.hardwareClassificationVersion;
     }
     getIsAtMaxSaveClipOperations() {
-        return b >= p.Kw;
+        return T >= p.Kw;
     }
     getLastClipsError() {
         return N;
@@ -409,7 +409,7 @@ g(ee, 'displayName', 'ClipsStore'),
         })
     ]);
 let et = new ee(a.Z, {
-        CLIPS_SETTINGS_UPDATE: w,
+        CLIPS_SETTINGS_UPDATE: P,
         CLIPS_SAVE_CLIP: G,
         CLIPS_SAVE_CLIP_PLACEHOLDER: B,
         CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: Z,
@@ -422,11 +422,11 @@ let et = new ee(a.Z, {
         CLIPS_CLEAR_NEW_CLIP_IDS: Q,
         CLIPS_LOAD_DIRECTORY_SUCCESS: K,
         CLIPS_DELETE_CLIP: z,
-        CLIPS_UPDATE_METADATA: P,
+        CLIPS_UPDATE_METADATA: w,
         RTC_CONNECTION_FLAGS: X,
         CLIPS_SHOW_CALL_WARNING: F,
         VOICE_CHANNEL_SELECT: V,
-        CLIPS_CLASSIFY_HARDWARE: L,
+        CLIPS_CLASSIFY_HARDWARE: x,
         CLIPS_INIT: j,
         CLIPS_INIT_FAILURE: H,
         CLIPS_DISMISS_EDUCATION: $,

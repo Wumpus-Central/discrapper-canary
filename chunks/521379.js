@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(757143);
 var i,
     r,
-    a,
-    l = n(200651),
+    l,
+    a = n(200651),
     o = n(192379),
     s = n(442837),
     c = n(388905),
@@ -15,9 +15,9 @@ class h extends (i = o.PureComponent) {
     }
     render() {
         let { token: e } = this.props.match.params;
-        return (0, l.jsx)(c.ZP, {
+        return (0, a.jsx)(c.ZP, {
             style: { padding: 0 },
-            children: (0, l.jsx)(u.Z, {
+            children: (0, a.jsx)(u.Z, {
                 width: 464,
                 token: e,
                 ...this.props
@@ -26,15 +26,15 @@ class h extends (i = o.PureComponent) {
     }
 }
 (r = 'defaultProps'),
-    (a = {
+    (l = {
         transitionTo: (e) => n.g.location.assign(e),
         replaceWith: (e) => n.g.location.replace(e)
     }),
     r in h
         ? Object.defineProperty(h, r, {
-              value: a,
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (h[r] = a);
+        : (h[r] = l);

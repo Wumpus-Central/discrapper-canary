@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i = n(512722),
     r = n.n(i),
     a = n(846519),
@@ -18,8 +18,8 @@ var i = n(512722),
     v = n(565473),
     y = n(444092),
     I = n(927923),
-    b = n(65154),
-    T = n(388032);
+    T = n(65154),
+    b = n(388032);
 function S(e, t, n) {
     return (
         t in e
@@ -50,7 +50,7 @@ function D(e) {
         return n && r && i;
     });
 }
-class x extends l.Z {
+class L extends l.Z {
     constructor(...e) {
         super(...e),
             S(this, 'rollbackCommandTimeout', new a.V7()),
@@ -75,7 +75,7 @@ class x extends l.Z {
             }),
             S(this, 'handleAudioStateToggle', (e) => {
                 let { syncRemote: t, context: n } = e;
-                if (!t || n !== b.Yn.DEFAULT) return;
+                if (!t || n !== T.Yn.DEFAULT) return;
                 let i = d.Z.isSelfDeaf(),
                     r = d.Z.isSelfMute(),
                     a = c.default.getId(),
@@ -118,8 +118,8 @@ class x extends l.Z {
                 this.awaitRemoteTimeout.start(C, () => {
                     (0, m.s6)(),
                         s.Z.show({
-                            title: T.intl.string(T.t.wGMxr6),
-                            body: T.intl.string(T.t.i5k8b2)
+                            title: b.intl.string(b.t.wGMxr6),
+                            body: b.intl.string(b.t.i5k8b2)
                         });
                 });
             }),
@@ -136,8 +136,8 @@ class x extends l.Z {
                             ? s
                             : {
                                   id: 'id',
-                                  platform: T.intl.string(T.t['UQMV/P']),
-                                  name: T.intl.string(T.t['UQMV/P'])
+                                  platform: b.intl.string(b.t['UQMV/P']),
+                                  name: b.intl.string(b.t['UQMV/P'])
                               },
                         i,
                         r
@@ -156,4 +156,4 @@ class x extends l.Z {
             });
     }
 }
-let L = new x();
+let x = new L();

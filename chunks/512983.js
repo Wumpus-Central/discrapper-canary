@@ -7,7 +7,7 @@ n(192379);
 var r = n(120356),
     a = n.n(r),
     s = n(481060),
-    o = n(488256),
+    o = n(228622),
     l = (function (e) {
         return (e.H1 = 'h1'), (e.H2 = 'h2'), (e.H3 = 'h3'), (e.H4 = 'h4'), (e.H5 = 'h5'), (e.LABEL = 'label'), (e.LEGEND = 'legend'), e;
     })({});

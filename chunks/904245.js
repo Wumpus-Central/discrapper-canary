@@ -18,8 +18,8 @@ var i = n(278074),
     v = n(247206),
     y = n(38618),
     I = n(687516),
-    b = n(539573),
-    T = n(926526),
+    T = n(539573),
+    b = n(926526),
     S = n(826581),
     A = n(409059),
     N = n(264229),
@@ -27,10 +27,10 @@ var i = n(278074),
     R = n(779832),
     O = n(786761),
     D = n(459618),
-    x = n(541288),
-    L = n(3148),
-    P = n(48854),
-    w = n(785359),
+    L = n(541288),
+    x = n(3148),
+    w = n(48854),
+    P = n(785359),
     M = n(646504),
     k = n(64078),
     U = n(351780),
@@ -87,7 +87,7 @@ function eE(e, t, n) {
 let ev = new E.Z('MessageActionCreators'),
     ey = new E.Z('MessageQueue'),
     eI = !1;
-class eb {
+class eT {
     markComplete() {
         this.completed = !0;
     }
@@ -95,7 +95,7 @@ class eb {
         eE(this, 'completed', !1);
     }
 }
-function eT(e) {
+function eb(e) {
     let { content: t, channelId: n, messageId: i, location: r, suggested: a = null, overrideProperties: s = {} } = e;
     (0, g.ZP)(t).forEach((e) => {
         let { type: t, code: o } = e;
@@ -272,7 +272,7 @@ let eC = {
                 }),
                 eR.receiveMessage(
                     e,
-                    (0, L.cs)({
+                    (0, x.cs)({
                         messageId: i,
                         channelId: e,
                         content: t,
@@ -281,7 +281,7 @@ let eC = {
                 );
         },
         sendNitroSystemMessage(e, t, n) {
-            let i = (0, L.ZP)({
+            let i = (0, x.ZP)({
                 channelId: e,
                 nonce: n,
                 type: eh.uaV.NITRO_NOTIFICATION,
@@ -306,7 +306,7 @@ let eC = {
             );
         },
         sendGiftingPromptSystemMessage(e, t) {
-            let n = (0, L.ZP)({
+            let n = (0, x.ZP)({
                 channelId: e,
                 type: eh.uaV.GIFTING_PROMPT,
                 content: '',
@@ -361,7 +361,7 @@ let eC = {
                         message: eg.intl.string(eg.t.bNMQVF),
                         messageName: 'BOT_GUILD_EXPLICIT_CONTENT'
                     })),
-                l = (0, P.r)();
+                l = (0, w.r)();
             eR.sendBotMessage(e, a, o, l),
                 (0, v.aP)({
                     action: v.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT,
@@ -486,9 +486,9 @@ let eC = {
             let v = o.Z.getOrCreate(t).loadStart(E);
             o.Z.commit(v), s.Z.dispatch({ type: 'LOAD_MESSAGES' });
             let I = null == E ? void 0 : E.messageId,
-                b = new eb();
+                T = new eT();
             return (
-                d || this.fetchLocalMessages(t, n, i, a, b),
+                d || this.fetchLocalMessages(t, n, i, a, T),
                 r.tn
                     .get({
                         url: eh.ANM.MESSAGES(t),
@@ -531,7 +531,7 @@ let eC = {
                                     }
                                 }
                                 ev.log('Fetched '.concat(r.length, ' messages for ').concat(t, ' isBefore:').concat(o, ' isAfter:').concat(u)),
-                                    b.markComplete(),
+                                    T.markComplete(),
                                     s.Z.dispatch({
                                         type: 'LOAD_MESSAGES_SUCCESS',
                                         channelId: t,
@@ -689,7 +689,7 @@ let eC = {
             if (null != a) return eR.sendMessage(a, t, i, r);
             let s = () => eR._sendMessage(e, t, r),
                 o = R.ZP.backgroundify(s, void 0),
-                l = null !== (n = r.nonce) && void 0 !== n ? n : (0, P.r)();
+                l = null !== (n = r.nonce) && void 0 !== n ? n : (0, w.r)();
             return ((r = {
                 ...r,
                 nonce: l
@@ -817,7 +817,7 @@ let eC = {
                 })
                 .then(
                     (n) => (
-                        x.Z.donateSentMessage(n.body.content, e),
+                        L.Z.donateSentMessage(n.body.content, e),
                         eR.receiveMessage(e, n.body),
                         s.Z.dispatch({
                             type: 'STICKER_TRACK_USAGE',
@@ -884,10 +884,10 @@ let eC = {
             let R = (null === (i = n.messageReference) || void 0 === i ? void 0 : i.type) === eh.Uvt.FORWARD;
             if ('' === u && null == _ && null == m && null == y && null == I && !R) return Promise.resolve();
             let O = null != E ? eh.uaV.REPLY : eh.uaV.DEFAULT,
-                M = null !== (a = n.nonce) && void 0 !== a ? a : (0, P.r)(),
+                M = null !== (a = n.nonce) && void 0 !== a ? a : (0, w.r)(),
                 Z = M;
             if (!1 !== n.eagerDispatch) {
-                let t = (0, L.ZP)({
+                let t = (0, x.ZP)({
                     channelId: e,
                     content: u,
                     tts: f,
@@ -946,7 +946,7 @@ let eC = {
                             (o) => {
                                 let c = Date.now() - r;
                                 if (o.ok) {
-                                    x.Z.donateSentMessage(u, e),
+                                    L.Z.donateSentMessage(u, e),
                                         eR.receiveMessage(e, o.body, !0, {
                                             sendAnalytics: {
                                                 duration: c,
@@ -970,7 +970,7 @@ let eC = {
                                         l = S.Z.getRequest(r);
                                     if (null != l) {
                                         let { guildId: t, userId: n, applicationStatus: i } = l;
-                                        (0, T.pL)({
+                                        (0, b.pL)({
                                             guildId: t,
                                             channelId: e,
                                             messageId: o.body.id,
@@ -999,7 +999,7 @@ let eC = {
                                                 author: eo.default.getCurrentUser()
                                             }
                                         }),
-                                        eT({
+                                        eb({
                                             content: u,
                                             channelId: e,
                                             messageId: o.body.id,
@@ -1030,7 +1030,7 @@ let eC = {
                                                     cooldownMs: t * el.Z.Millis.SECOND
                                                 });
                                         } else
-                                            b.U8.has(o.body.code)
+                                            T.U8.has(o.body.code)
                                                 ? s.Z.dispatch({
                                                       type: 'MESSAGE_SEND_FAILED_AUTOMOD',
                                                       messageData: W,
@@ -1051,7 +1051,7 @@ let eC = {
                                               channelId: e,
                                               shouldNotify: !n.doNotNotifyOnError
                                           }),
-                                          (0, w.x)({
+                                          (0, P.x)({
                                               failureCode: o.hasErr ? void 0 : o.status,
                                               errorMessage: o.hasErr ? o.err.message : void 0
                                           }),
@@ -1111,7 +1111,7 @@ let eC = {
                     message: o
                 },
                 (n) => {
-                    let i = !n.hasErr && b.U8.has(n.body.code);
+                    let i = !n.hasErr && T.U8.has(n.body.code);
                     if (i) {
                         let e = {
                             type: l.$V.EDIT,

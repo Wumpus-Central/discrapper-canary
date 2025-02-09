@@ -20,9 +20,9 @@ var a = n(200651),
     j = n(681619),
     C = n(621060),
     N = n(388032),
-    T = n(931933),
-    E = n(941469);
-let y = [
+    T = n(180674),
+    E = n(617521);
+let S = [
     {
         key: 'event',
         cellClassName: T.eventColumn,
@@ -40,7 +40,7 @@ let y = [
         }
     }
 ];
-function S(e) {
+function y(e) {
     let { children: t } = e;
     return (0, a.jsx)(u.zJl, {
         className: T.customPropertiesContainer,
@@ -62,7 +62,7 @@ function k(e) {
         ]
     });
 }
-let R = [
+let I = [
         {
             id: 'details',
             name: 'Details',
@@ -115,7 +115,7 @@ let R = [
                                 })
                             ]
                         }),
-                        (0, a.jsx)(S, {
+                        (0, a.jsx)(y, {
                             children: Object.entries(n).map((e) => {
                                 let [t, n] = e;
                                 return (0, a.jsx)(
@@ -139,11 +139,11 @@ let R = [
             }
         }
     ],
-    I = {
+    R = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(I)
+                Object.entries(R)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -172,7 +172,7 @@ function O() {
         [t, n] = r.useState(''),
         l = (0, d.e7)([f.Z], () => f.Z.loggedEventsVersion),
         s = r.useMemo(() => f.Z.loggedEvents, [l]),
-        [c, h] = r.useState(Object.keys(I)),
+        [c, h] = r.useState(Object.keys(R)),
         [m, _] = r.useState(s),
         p = r.useRef(null),
         g = r.useMemo(
@@ -200,10 +200,10 @@ function O() {
                 ),
             []
         ),
-        S = r.useMemo(
+        y = r.useMemo(
             () =>
                 m.filter((e) => {
-                    for (let t of c) if (I[t].filter(e)) return !0;
+                    for (let t of c) if (R[t].filter(e)) return !0;
                     return !1;
                 }),
             [m, c]
@@ -212,8 +212,8 @@ function O() {
         g(t, s);
     }, [t, g, s]);
     let [k, O] = r.useState(void 0),
-        Z = S.find((e) => e.key === k),
-        { TabBar: w, renderSelectedTab: A } = (0, C.Z)({ tabs: R }, []);
+        Z = y.find((e) => e.key === k),
+        { TabBar: w, renderSelectedTab: A } = (0, C.Z)({ tabs: I }, []);
     return (0, a.jsxs)('div', {
         ref: e,
         className: i()(E.panel, T.panel),
@@ -238,7 +238,7 @@ function O() {
                     (0, a.jsx)('div', { className: T.toolbarDivider }),
                     (0, a.jsx)('div', {
                         className: T.filters,
-                        children: Object.entries(I).map((e) => {
+                        children: Object.entries(R).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 u.P3F,
@@ -266,8 +266,8 @@ function O() {
                 })
             }),
             (0, a.jsx)(j.Z, {
-                columns: y,
-                data: S,
+                columns: S,
+                data: y,
                 selectedRowKey: k,
                 onClickRow: (e) => O(e.key)
             }),

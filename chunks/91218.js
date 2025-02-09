@@ -5,7 +5,7 @@ var r = n(120356),
     a = n.n(r),
     s = n(481060),
     o = n(388032),
-    l = n(990999);
+    l = n(235750);
 function u(e) {
     let { className: t, src: n, unicodeEmoji: r, name: u, size: c = 20, enableTooltip: d = !0, enableHeight: f = !0, onClick: _ } = e;
     if (null == n && null == r) return null;

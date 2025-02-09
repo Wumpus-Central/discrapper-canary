@@ -15,19 +15,19 @@ var i = n(200651),
     m = n(91218),
     g = n(518738),
     E = n(388032),
-    v = n(756317);
+    v = n(101431);
 let y = r.forwardRef(function (e, t) {
     var a, y, I;
-    let b;
-    let { canRemove: T, className: S, role: A, onRemove: N, guildId: C, disableBorderColor: R, onMouseDown: O } = e,
-        { tabIndex: D, ...x } = (0, o.JA)(A.id),
-        L = (0, g.p9)({
+    let T;
+    let { canRemove: b, className: S, role: A, onRemove: N, guildId: C, disableBorderColor: R, onMouseDown: O } = e,
+        { tabIndex: D, ...L } = (0, o.JA)(A.id),
+        x = (0, g.p9)({
             roleId: A.id,
             size: 16,
             guildId: C
         }),
-        P = (0, u.e7)([_.Z], () => _.Z.roleStyle),
-        w = (null === (a = A.tags) || void 0 === a ? void 0 : a.guild_connections) === null,
+        w = (0, u.e7)([_.Z], () => _.Z.roleStyle),
+        P = (null === (a = A.tags) || void 0 === a ? void 0 : a.guild_connections) === null,
         M = r.useCallback(
             (e) => {
                 (0, f.jW)(e, async () => {
@@ -48,14 +48,14 @@ let y = r.forwardRef(function (e, t) {
         B = c.Z.unsafe_rawColors.WHITE_500.css,
         Z = (0, l._i)(U);
     null != Z && 0.3 > (0, l.Bd)(Z) && (B = c.Z.unsafe_rawColors.PRIMARY_630.css),
-        (b = w
+        (T = P
             ? (0, i.jsx)(p.Z, {
                   className: v.roleFlowerStar,
-                  iconClassName: T ? v.roleVerifiedIcon : void 0,
+                  iconClassName: b ? v.roleVerifiedIcon : void 0,
                   color: U,
                   size: 14
               })
-            : 'dot' === P
+            : 'dot' === w
               ? (0, i.jsx)(d.FhE, {
                     className: v.roleDot,
                     color: U,
@@ -74,7 +74,7 @@ let y = r.forwardRef(function (e, t) {
             };
         }, [G, R, e.style]),
         V = () =>
-            T
+            b
                 ? (0, i.jsx)(d.DY3, {
                       text: E.intl.string(E.t.u3RVsL),
                       children: (0, i.jsxs)(d.P3F, {
@@ -85,7 +85,7 @@ let y = r.forwardRef(function (e, t) {
                           'aria-hidden': !1,
                           'aria-label': E.intl.formatToPlainString(E.t.QrxwhY, { roleName: A.name }),
                           children: [
-                              b,
+                              T,
                               (0, i.jsx)(d.Dio, {
                                   size: 'md',
                                   color: B,
@@ -101,7 +101,7 @@ let y = r.forwardRef(function (e, t) {
                       focusProps: { focusClassName: v.roleRemoveIconFocused },
                       'aria-hidden': !0,
                       'aria-label': E.intl.formatToPlainString(E.t.QrxwhY, { roleName: A.name }),
-                      children: b
+                      children: T
                   });
     return (0, i.jsx)(d.tEY, {
         children: (0, i.jsxs)('div', {
@@ -112,13 +112,13 @@ let y = r.forwardRef(function (e, t) {
             onMouseDown: O,
             'aria-label': A.name,
             tabIndex: D,
-            ...x,
+            ...L,
             children: [
                 V(),
-                null != L
+                null != x
                     ? (0, i.jsx)(m.Z, {
                           className: v.roleIcon,
-                          ...L,
+                          ...x,
                           enableTooltip: !1
                       })
                     : null,

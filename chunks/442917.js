@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(221888),
     y = n(933557),
     I = n(569545),
-    b = n(74299),
-    T = n(863908),
+    T = n(74299),
+    b = n(863908),
     S = n(803647),
     A = n(266910),
     N = n(788983),
@@ -27,10 +27,10 @@ var i = n(200651),
     R = n(937995),
     O = n(618158),
     D = n(922745),
-    x = n(197016),
-    L = n(800965),
-    P = n(445062),
-    w = n(7188),
+    L = n(197016),
+    x = n(800965),
+    w = n(445062),
+    P = n(7188),
     M = n(199902),
     k = n(314897),
     U = n(131951),
@@ -52,8 +52,8 @@ var i = n(200651),
     $ = n(76021),
     ee = n(981631),
     et = n(354459),
-    en = n(165586),
-    ei = n(616926);
+    en = n(291705),
+    ei = n(60412);
 function er(e, t, n) {
     return (
         t in e
@@ -94,7 +94,7 @@ class ea extends r.PureComponent {
         let { participantOnScreen: e, currentUserId: t } = this.props;
         if (!(0, et._5)(e)) return null;
         let n = this.activeStreamForSelectedParticipant;
-        return null == n ? null : (0, T.Z)(n, e.user, e.user.id === t, this.streamerPaused);
+        return null == n ? null : (0, b.Z)(n, e.user, e.user.id === t, this.streamerPaused);
     }
     componentDidMount() {
         let { channel: e } = this.props;
@@ -241,10 +241,10 @@ class ea extends r.PureComponent {
                     children: [a ? this.renderViewersIcon() : null, e ? this.renderSettingsIcon() : null, t ? this.renderPopoutIcon() : null, r ? this.renderStopStreamButton() : null, n ? this.renderDisconnectButton() : null]
                 });
             }),
-            er(this, 'renderDisconnectButton', () => (0, i.jsx)(x.Z, { className: en.rightTrayIcon })),
+            er(this, 'renderDisconnectButton', () => (0, i.jsx)(L.Z, { className: en.rightTrayIcon })),
             er(this, 'renderStopStreamButton', () => {
                 let { isSelf: e } = this.viewProperties;
-                return (0, i.jsx)(P.Z, {
+                return (0, i.jsx)(w.Z, {
                     isSelfStream: e,
                     className: en.rightTrayIcon,
                     onClick: this.handleStopStream
@@ -266,7 +266,7 @@ class ea extends r.PureComponent {
                 );
             }),
             er(this, 'renderPopoutIcon', () =>
-                (0, i.jsx)(L.Z, {
+                (0, i.jsx)(x.Z, {
                     className: en.rightTrayIcon,
                     popoutOpen: !1,
                     onOpenPopout: this.handleOpenPopout,
@@ -279,7 +279,7 @@ class ea extends r.PureComponent {
                 let n = t.find((t) => (0, I.V9)(t) === e.id);
                 return null == n || n.state === ee.jm8.ENDED
                     ? null
-                    : (0, i.jsx)(w.Z, {
+                    : (0, i.jsx)(P.Z, {
                           stream: n,
                           className: en.rightTrayIcon,
                           appContext: ee.IlC.APP
@@ -296,7 +296,7 @@ let es = u.ZP.connectStores([U.Z, Z.Z, g.Z, k.default, M.Z, F.Z, V.Z], (e) => {
         s = null != i && i.type !== et.fO.ACTIVITY && i.type !== et.fO.HIDDEN_STREAM ? F.Z.getStreamId(i.user.id, t.getGuildId(), (0, E.Z)(i.type)) : null,
         o = !1 === a,
         u = !a && U.Z.isVideoEnabled(),
-        c = (0, b.Z)(U.Z),
+        c = (0, T.Z)(U.Z),
         d = k.default.getId(),
         f = M.Z.getCurrentUserActiveStream(),
         _ = !1;

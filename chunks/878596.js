@@ -1,30 +1,30 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => r });
 var i = n(200651);
 n(192379);
 var s = n(481060),
-    r = n(545951);
-let l = (e) => {
-    let { label: t, onClick: n, submitting: l } = e;
+    l = n(91729);
+let r = (e) => {
+    let { label: t, onClick: n, submitting: r } = e;
     return (0, i.jsx)(s.P3F, {
-        onClick: l ? void 0 : n,
-        className: r.button,
+        onClick: r ? void 0 : n,
+        className: l.button,
         children: (0, i.jsxs)('div', {
-            className: r.contentContainer,
+            className: l.contentContainer,
             children: [
-                l
+                r
                     ? (0, i.jsx)(s.$jN, {
                           type: s.$jN.Type.PULSING_ELLIPSIS,
-                          className: r.__invalid_spinner
+                          className: l.__invalid_spinner
                       })
                     : (0, i.jsx)(s.Text, {
                           variant: 'text-md/medium',
-                          className: r.label,
+                          className: l.label,
                           children: t
                       }),
                 (0, i.jsx)(s.CJ0, {
                     size: 'md',
                     color: 'currentColor',
-                    className: r.arrow
+                    className: l.arrow
                 })
             ]
         })

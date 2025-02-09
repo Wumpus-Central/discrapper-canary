@@ -7,7 +7,7 @@ var i = n(200651),
     o = n(481060),
     c = n(607070),
     d = n(617015),
-    u = n(732144);
+    u = n(718762);
 let h = function (e) {
     let { rows: t, renderRow: n, renderSection: h, footer: m } = e,
         p = (e) => {
@@ -55,16 +55,16 @@ let h = function (e) {
                     callback: () => (null == t ? void 0 : t.focus())
                 });
         }, []),
-        N = (0, r.ZP)({
+        v = (0, r.ZP)({
             id: 'people-list',
             isEnabled: _,
             scrollToStart: E,
             scrollToEnd: I,
             setFocus: C
         }),
-        v = l.useMemo(() => t.map((e) => e.length), [t]);
+        N = l.useMemo(() => t.map((e) => e.length), [t]);
     return (0, i.jsx)(a.bG, {
-        navigator: N,
+        navigator: v,
         children: (0, i.jsx)(a.SJ, {
             children: (e) => {
                 let { ref: t, ...n } = e;
@@ -79,7 +79,7 @@ let h = function (e) {
                             rowHeight: d.NV,
                             renderSection: g,
                             sectionHeight: d.aS,
-                            sections: v,
+                            sections: N,
                             className: u.peopleList,
                             ...n
                         }),

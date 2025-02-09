@@ -14,7 +14,7 @@ var i = n(200651),
     d = n(686546),
     f = n(540059),
     _ = n(79712),
-    p = n(815300);
+    p = n(299012);
 let h = 24,
     m = (e) => {
         let { className: t, wrapperClassName: n, children: r, onContextMenu: a, onClick: o, id: l, muted: c = !1, level: d = 1 } = e,
@@ -43,9 +43,9 @@ let h = 24,
               });
     },
     g = (e) => {
-        let { className: t, iconClassName: n, children: r, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: _, foreground: m, background: g, icon: E, iconSize: v = h, onClick: y, onContextMenu: I, tooltip: b = null, tooltipColor: T, tooltipPosition: S = 'bottom', tooltipDisabled: A, hideOnClick: N = !0, role: C, 'aria-label': R, 'aria-hidden': O, 'aria-checked': D, 'aria-expanded': x, 'aria-haspopup': L } = e,
-            P = (0, f.Q3)('BaseHeaderBar'),
-            w = (0, i.jsx)(E, {
+        let { className: t, iconClassName: n, children: r, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: _, foreground: m, background: g, icon: E, iconSize: v = h, onClick: y, onContextMenu: I, tooltip: T = null, tooltipColor: b, tooltipPosition: S = 'bottom', tooltipDisabled: A, hideOnClick: N = !0, role: C, 'aria-label': R, 'aria-hidden': O, 'aria-checked': D, 'aria-expanded': L, 'aria-haspopup': x } = e,
+            w = (0, f.Q3)('BaseHeaderBar'),
+            P = (0, i.jsx)(E, {
                 x: 0,
                 y: 0,
                 width: v,
@@ -58,15 +58,15 @@ let h = 24,
             }),
             M = R;
         return (
-            null == M && 'string' == typeof b && (M = b),
+            null == M && 'string' == typeof T && (M = T),
             (0, i.jsx)(u.ua7, {
-                text: b,
-                color: T,
+                text: T,
+                color: b,
                 position: S,
                 hideOnClick: N,
                 shouldShow: !A,
                 children: (e) => {
-                    let { onMouseEnter: f, onMouseLeave: h, onFocus: b, onBlur: T } = e;
+                    let { onMouseEnter: f, onMouseLeave: h, onFocus: T, onBlur: b } = e;
                     return null == y
                         ? (0, i.jsx)('div', {
                               className: s()(t, p.iconWrapper, { [p.iconDisabled]: o }),
@@ -83,8 +83,8 @@ let h = 24,
                                   'aria-hidden': O,
                                   onMouseEnter: f,
                                   onMouseLeave: h,
-                                  onFocus: b,
-                                  onBlur: T
+                                  onFocus: T,
+                                  onBlur: b
                               })
                           })
                         : (0, i.jsxs)(u.P3F, {
@@ -93,8 +93,8 @@ let h = 24,
                               onContextMenu: o ? void 0 : I,
                               onMouseEnter: f,
                               onMouseLeave: h,
-                              onFocus: b,
-                              onBlur: T,
+                              onFocus: T,
+                              onBlur: b,
                               className: s()(t, {
                                   [p.iconWrapper]: !0,
                                   [p.clickable]: !o && null != y,
@@ -105,18 +105,18 @@ let h = 24,
                               'aria-label': M,
                               'aria-hidden': O,
                               'aria-checked': D,
-                              'aria-haspopup': L,
-                              'aria-expanded': x,
+                              'aria-haspopup': x,
+                              'aria-expanded': L,
                               tabIndex: o || null == y ? -1 : 0,
                               children: [
                                   l
                                       ? (0, i.jsx)(d.ZP, {
                                             mask: 'top' === c ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                            height: P ? v : void 0,
-                                            width: P ? v : void 0,
-                                            children: w
+                                            height: w ? v : void 0,
+                                            width: w ? v : void 0,
+                                            children: P
                                         })
-                                      : w,
+                                      : P,
                                   l ? (0, i.jsx)('span', { className: s()(p.iconBadge, 'top' === c ? p.iconBadgeTop : p.iconBadgeBottom) }) : null,
                                   r
                               ]

@@ -30,8 +30,8 @@ function y(e, t, n) {
     );
 }
 let I = {},
-    b = new Set();
-function T(e, t) {
+    T = new Set();
+function b(e, t) {
     if (null == e) return !1;
     let n = E.default.getCurrentUser();
     if (null == n) return !1;
@@ -40,7 +40,7 @@ function T(e, t) {
 }
 function S(e) {
     let { guildId: t, role: n, isPreviewingRoles: i } = e;
-    return !!(0, d.Z)(n) && !!(i || (0, d.h)(null != n ? n : void 0) || T(n, t));
+    return !!(0, d.Z)(n) && !!(i || (0, d.h)(null != n ? n : void 0) || b(n, t));
 }
 function A(e, t) {
     if (!t.hasFeature(v.oNc.CREATOR_MONETIZABLE) && !t.hasFeature(v.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
@@ -98,7 +98,7 @@ function C(e, t) {
     return a !== s && (s ? n.add(t) : n.delete(t), !0);
 }
 function R() {
-    (I = {}), b.clear();
+    (I = {}), T.clear();
 }
 function O(e) {
     let { guild: t } = e;
@@ -108,23 +108,23 @@ function D(e) {
     let { guildId: t } = e;
     delete I[t];
 }
-function x(e) {
+function L(e) {
     let { channel: t } = e;
     return null != t.guild_id && C(t.guild_id, t.id);
 }
-function L(e) {
+function x(e) {
     let { channels: t } = e,
         n = !1;
     for (let e of t) null != e.guild_id && C(e.guild_id, e.id) && (n = !0);
     return n;
 }
-function P(e) {
-    let { guildId: t, restrictions: n } = e;
-    (0, l.uq)(n) ? b.add(t) : b.delete(t);
-}
 function w(e) {
+    let { guildId: t, restrictions: n } = e;
+    (0, l.uq)(n) ? T.add(t) : T.delete(t);
+}
+function P(e) {
     let { guildId: t } = e;
-    b.add(t);
+    T.add(t);
 }
 class M extends (i = a.ZP.Store) {
     initialize() {
@@ -136,7 +136,7 @@ class M extends (i = a.ZP.Store) {
         return null == n && (N(e), (n = I[e])), null != n && n.has(t);
     }
     isChannelGatedAndVisible(e, t) {
-        return null != e && this.isChannelGated(e, t) && !b.has(e);
+        return null != e && this.isChannelGated(e, t) && !T.has(e);
     }
     isChannelOrThreadParentGated(e, t) {
         if (null == e) return !1;
@@ -158,9 +158,9 @@ let k = new M(s.Z, {
     GUILD_ROLE_DELETE: D,
     IMPERSONATE_UPDATE: D,
     IMPERSONATE_STOP: D,
-    CHANNEL_CREATE: x,
-    CHANNEL_DELETE: x,
-    CHANNEL_UPDATES: L,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: P,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: w
+    CHANNEL_CREATE: L,
+    CHANNEL_DELETE: L,
+    CHANNEL_UPDATES: x,
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: w,
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: P
 });

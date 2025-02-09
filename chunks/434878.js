@@ -60,7 +60,7 @@ var i = n(200651),
     es = n(981631),
     eo = n(124368),
     ec = n(388032),
-    ed = n(444087);
+    ed = n(881369);
 function eu(e) {
     let { channel: t, guild: n, sidebarState: r } = e;
     return (0, i.jsx)(
@@ -647,14 +647,14 @@ function eC(e) {
             isEnabled: !ei && e$,
             channel: t
         }),
-        { ref: e1, ...e9 } = e0.containerProps,
-        e6 = k.ZP.getSidebarState(t.id),
-        e8 = null != e6 && (0, k.D5)(e6),
-        e4 = (0, g.e7)([k.ZP], () => k.ZP.getSection(t.id)) === es.ULH.MEMBERS;
+        { ref: e1, ...e6 } = e0.containerProps,
+        e9 = k.ZP.getSidebarState(t.id),
+        e8 = null != e9 && (0, k.D5)(e9),
+        e2 = (0, g.e7)([k.ZP], () => k.ZP.getSection(t.id)) === es.ULH.MEMBERS;
     return (0, i.jsx)('div', {
         className: ed.container,
         ref: eC,
-        'data-member-list-open': e4,
+        'data-member-list-open': e2,
         children: (0, i.jsx)(f.Wdt, {
             children: (e) =>
                 (0, i.jsxs)(i.Fragment, {
@@ -697,7 +697,7 @@ function eC(e) {
                                           getSectionProps: eJ,
                                           onScroll: _ ? eQ : void 0,
                                           chunkSize: 350,
-                                          ...e9,
+                                          ...e6,
                                           ...e
                                       },
                                       L

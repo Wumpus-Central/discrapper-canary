@@ -18,8 +18,8 @@ var r = n(120356),
     E = n(108989),
     v = n(474936),
     y = n(388032),
-    I = n(779655);
-function b(e, t) {
+    I = n(135362);
+function T(e, t) {
     let n = p.ZP.getDefaultPrice(e),
         { intervalType: i } = p.ZP.getInterval(e),
         r = (0, h.T4)(n.amount, n.currency);
@@ -31,7 +31,7 @@ function b(e, t) {
             return y.intl.formatToPlainString(y.t.rS8FAw, { price: r });
     }
 }
-let T = (e) => {
+let b = (e) => {
         let { isTier0: t, discountAmount: n } = e,
             r = (0, g.N)(),
             s = null != r && r.trial_id === v.a7,
@@ -52,22 +52,22 @@ let T = (e) => {
         var t;
         let n;
         let { hideCloseButton: r = !1, hideCloseOnFullScreen: p, shouldShowPrice: h, plan: g, renderAnimation: y, onClose: S, isGift: A, upgradeToPremiumType: N, headerTheme: C = v.nL.DEFAULT, className: R, showTrialBadge: O = !1, showDiscountBadge: D = !1 } = e,
-            x = N === v.p9.TIER_2;
+            L = N === v.p9.TIER_2;
         n = N === v.p9.TIER_0 ? d.Z : N === v.p9.TIER_1 ? f.Z : c.Z;
-        let L = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-            P = (0, m.Ng)(),
-            w = null == P ? void 0 : null === (t = P.discount) || void 0 === t ? void 0 : t.amount;
+        let x = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
+            w = (0, m.Ng)(),
+            P = null == w ? void 0 : null === (t = w.discount) || void 0 === t ? void 0 : t.amount;
         return (0, i.jsxs)('div', {
             'aria-hidden': !0,
             className: a()(
                 {
-                    [I.headerBackground]: !x,
-                    [I.tier2HeaderBackground]: x
+                    [I.headerBackground]: !L,
+                    [I.tier2HeaderBackground]: L
                 },
                 R
             ),
             children: [
-                L || C !== v.nL.WINTER
+                x || C !== v.nL.WINTER
                     ? null
                     : (0, i.jsx)(E.Z, {
                           className: I.snow,
@@ -82,11 +82,11 @@ let T = (e) => {
                     children: [
                         (0, i.jsxs)('div', {
                             children: [
-                                (0, i.jsx)(n, { className: a()(I.headerIcon, { [I.nonTier2]: !x }) }),
+                                (0, i.jsx)(n, { className: a()(I.headerIcon, { [I.nonTier2]: !L }) }),
                                 (O || D) &&
-                                    (0, i.jsx)(T, {
+                                    (0, i.jsx)(b, {
                                         isTier0: N === v.p9.TIER_0,
-                                        discountAmount: D ? w : void 0
+                                        discountAmount: D ? P : void 0
                                     })
                             ]
                         }),
@@ -101,7 +101,7 @@ let T = (e) => {
                 h && null != g
                     ? (0, i.jsx)('div', {
                           className: I.price,
-                          children: b(g, A)
+                          children: T(g, A)
                       })
                     : null
             ]

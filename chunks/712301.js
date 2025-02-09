@@ -1,4 +1,4 @@
-l.d(n, { Z: () => C });
+l.d(n, { Z: () => v });
 var t = l(200651);
 l(192379);
 var i = l(442837),
@@ -15,13 +15,13 @@ var i = l(442837),
     h = l(699516),
     m = l(594174),
     P = l(979651),
-    N = l(934415),
-    b = l(700785),
-    x = l(981631),
-    v = l(388032);
-function C(e, n) {
+    x = l(934415),
+    N = l(700785),
+    b = l(981631),
+    C = l(388032);
+function v(e, n) {
     let l = (0, i.e7)([c.ZP], () => c.ZP.getChannels(n)[c.Zb], [n]),
-        C = (0, i.e7)(
+        v = (0, i.e7)(
             [P.Z, o.Z],
             () => {
                 let l = P.Z.getUserVoiceChannelId(n, e.id);
@@ -29,30 +29,30 @@ function C(e, n) {
             },
             [n, e.id]
         );
-    if ((0, i.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, e.id), [n, e.id]) || null == C) return null;
+    if ((0, i.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, e.id), [n, e.id]) || null == v) return null;
     let E = e.id === u.default.getId();
-    if (!E && !f.Z.can(x.Plq.MOVE_MEMBERS, C)) return null;
+    if (!E && !f.Z.can(b.Plq.MOVE_MEMBERS, v)) return null;
     let p = l.filter((n) => {
         let { channel: l } = n;
         return (
-            l.id !== C.id &&
+            l.id !== v.id &&
             (E
-                ? f.Z.can(x.Plq.CONNECT, l) && !(0, N.rY)(l, P.Z, g.Z)
-                : f.Z.can(x.Plq.MOVE_MEMBERS, l) &&
-                  (f.Z.can(x.Plq.CONNECT, l) ||
-                      b.BT({
-                          permission: x.Plq.CONNECT,
+                ? f.Z.can(b.Plq.CONNECT, l) && !(0, x.rY)(l, P.Z, g.Z)
+                : f.Z.can(b.Plq.MOVE_MEMBERS, l) &&
+                  (f.Z.can(b.Plq.CONNECT, l) ||
+                      N.BT({
+                          permission: b.Plq.CONNECT,
                           user: e,
                           context: l
                       })) &&
-                  !(0, N.rY)(l, P.Z, g.Z))
+                  !(0, x.rY)(l, P.Z, g.Z))
         );
     });
     return 0 === p.length
         ? null
         : (0, t.jsx)(r.sNh, {
               id: 'voice-move',
-              label: v.intl.string(v.t.FAplmp),
+              label: C.intl.string(C.t.FAplmp),
               children: p.map((l) => {
                   let { channel: i } = l;
                   return (0, t.jsx)(

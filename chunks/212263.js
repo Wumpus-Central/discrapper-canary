@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(631771),
     y = n(609218),
     I = n(210887),
-    b = n(626135),
-    T = n(176354),
+    T = n(626135),
+    b = n(176354),
     S = n(74538),
     A = n(543241),
     N = n(149203),
@@ -27,14 +27,14 @@ var i = n(200651),
     R = n(185923),
     O = n(474936),
     D = n(388032),
-    x = n(940675);
-let L = (e) => {
+    L = n(52916);
+let x = (e) => {
     let t,
-        { onLearnMore: a, onClose: L, channel: P, emojiDescriptor: w, pickerIntention: M, analyticsLocation: k, containerContext: U } = e,
+        { onLearnMore: a, onClose: x, channel: w, emojiDescriptor: P, pickerIntention: M, analyticsLocation: k, containerContext: U } = e,
         G = (0, o.e7)([I.Z], () => I.Z.theme) === C.BRd.LIGHT ? 'light' : 'dark',
         [B, Z] = r.useState(!1),
         F = () => {
-            (0, A.A3)(P), (0, p.z)(), a();
+            (0, A.A3)(w), (0, p.z)(), a();
         },
         V = n(577391)('./img_premium_emoji_'.concat(G, '.svg')),
         j = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(G, '.png'),
@@ -52,14 +52,14 @@ let L = (e) => {
         ),
         Q = q.enabled || null != H,
         X = q.addSocialProof;
-    t = M === R.Hz.REACTION ? O.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == w ? O.cd.EMOJI_PICKER_FLOATING_UPSELL : w.subCategory === N.t0.TOP_GUILD_EMOJI ? O.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : w.subCategory === N.t0.NEWLY_ADDED_EMOJI ? O.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : O.cd.EMOJI_PICKER_EMOJI_CLICKED;
-    let J = null != w ? w.emoji : void 0,
+    t = M === R.Hz.REACTION ? O.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == P ? O.cd.EMOJI_PICKER_FLOATING_UPSELL : P.subCategory === N.t0.TOP_GUILD_EMOJI ? O.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : P.subCategory === N.t0.NEWLY_ADDED_EMOJI ? O.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : O.cd.EMOJI_PICKER_EMOJI_CLICKED;
+    let J = null != P ? P.emoji : void 0,
         $ = null != J && J.animated,
-        ee = null != J && !T.ZP.isInternalEmojiForGuildId(J, null == P ? void 0 : P.getGuildId()),
+        ee = null != J && !b.ZP.isInternalEmojiForGuildId(J, null == w ? void 0 : w.getGuildId()),
         et = null != J ? C.qAy.EMOJI : C.qAy.EMOJI_PICKER_FLOATING_UPSELL;
     r.useEffect(() => {
         Q ||
-            b.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
+            T.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: t,
                 is_animated: $,
                 is_external: ee,
@@ -91,7 +91,7 @@ let L = (e) => {
                 description: D.intl.string(D.t.dURIzc),
                 enableSocialProof: ea,
                 analyticsLocationSection: C.jXE.EMOJI_UPSELL_POPOUT,
-                onClose: L,
+                onClose: x,
                 upsellViewedTrackingData: {
                     type: t,
                     is_external: ee,
@@ -108,11 +108,11 @@ let L = (e) => {
     return Q
         ? es()
         : (0, i.jsxs)('div', {
-              className: s()(x.premiumPromo, { [x.unifyTrialUpsell]: W }),
+              className: s()(L.premiumPromo, { [L.unifyTrialUpsell]: W }),
               children: [
                   (0, i.jsx)(l.P3F, {
-                      className: x.premiumPromoClose,
-                      onClick: L,
+                      className: L.premiumPromoClose,
+                      onClick: x,
                       children: D.intl.string(D.t.cpT0Cg)
                   }),
                   (0, i.jsxs)(i.Fragment, {
@@ -121,7 +121,7 @@ let L = (e) => {
                               ? (0, i.jsx)(g.ZP, {
                                     type: O.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
                                     subscriptionTier: O.Si.TIER_2,
-                                    onClose: L,
+                                    onClose: x,
                                     trialOffer: H,
                                     discountOffer: Y,
                                     children: D.intl.format(D.t.se13Fh, { onClick: F })
@@ -130,15 +130,15 @@ let L = (e) => {
                                     children: [
                                         (0, i.jsx)('img', {
                                             alt: '',
-                                            className: x.premiumPromoImage,
+                                            className: L.premiumPromoImage,
                                             src: V
                                         }),
                                         (0, i.jsx)('div', {
-                                            className: x.premiumPromoTitle,
+                                            className: L.premiumPromoTitle,
                                             children: D.intl.string(D.t['1SsvhY'])
                                         }),
                                         (0, i.jsx)('div', {
-                                            className: x.premiumPromoDescription,
+                                            className: L.premiumPromoDescription,
                                             children: D.intl.format(D.t.se13Fh, { onClick: F })
                                         })
                                     ]
@@ -157,7 +157,7 @@ let L = (e) => {
                                       Z(!0);
                                   },
                                   onSubscribeModalClose: (e) => {
-                                      Z(!1), e && L();
+                                      Z(!1), e && x();
                                   },
                                   buttonText: en()
                               })

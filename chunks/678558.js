@@ -16,37 +16,37 @@ var i = n(200651),
     g = n(981631),
     E = n(474936),
     v = n(388032),
-    y = n(656634);
+    y = n(437454);
 let I = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: I, targetBoostedGuildTier: b, onClose: T = () => {}, closeLayer: S = () => {}, pauseAnimation: A = !1, applicationId: N, handleSubscribeModalClose: C, withHighlight: R = !1, ...O } = e,
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: I, targetBoostedGuildTier: T, onClose: b = () => {}, closeLayer: S = () => {}, pauseAnimation: A = !1, applicationId: N, handleSubscribeModalClose: C, withHighlight: R = !1, ...O } = e,
         { analyticsLocations: D } = (0, c.ZP)(),
-        x = (0, u.bp)() === g.IlC.POPOUT,
-        [L, P] = r.useState(!1),
-        { fractionalState: w } = (0, d.Z)();
+        L = (0, u.bp)() === g.IlC.POPOUT,
+        [x, w] = r.useState(!1),
+        { fractionalState: P } = (0, d.Z)();
     _.Z.hasFetched || (0, l.X8)();
     let M = (0, h.vx)(_.Z.boostSlots),
-        k = null != b ? Math.max((0, h.KK)(a, b), 1) : 1,
-        U = (0, h.aq)({ fractionalState: w }),
+        k = null != T ? Math.max((0, h.KK)(a, T), 1) : 1,
+        U = (0, h.aq)({ fractionalState: P }),
         G = async () => {
-            P(!0),
+            w(!0),
                 await (0, m.u)({
                     analyticsLocations: D,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
                     guild: a,
                     numberOfBoostsToAdd: k,
-                    onClose: T,
+                    onClose: b,
                     closeLayer: S,
-                    inPopout: x,
+                    inPopout: L,
                     applicationId: N,
                     handleSubscribeModalClose: C
                 }),
-                P(!1);
+                w(!1);
         },
         B = p.ZP.getPremiumTypeSubscription(),
         Z = (0, i.jsx)('span', { children: null != I ? I : v.intl.string(v.t.gKmQ1N) });
     return ((null == B ? void 0 : B.isPausedOrPausePending) &&
-        (w === E.a$.NONE || 0 === M.length) &&
+        (P === E.a$.NONE || 0 === M.length) &&
         ((Z = (0, i.jsxs)('div', {
             className: y.pausedButton,
             children: [
@@ -77,7 +77,7 @@ let I = (e) => {
               size: o.zxk.Sizes.SMALL,
               ...O,
               className: s()(O.className, { [y.buttonHighlighted]: R }),
-              submitting: L,
+              submitting: x,
               onClick: G,
               pauseAnimation: A,
               children: Z

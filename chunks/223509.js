@@ -17,8 +17,8 @@ var i,
     v = -2,
     y = -3,
     I = -4,
-    b = -5,
-    T = 8,
+    T = -5,
+    b = 8,
     S = 1,
     A = 2,
     N = 3,
@@ -26,10 +26,10 @@ var i,
     R = 5,
     O = 6,
     D = 7,
-    x = 8,
-    L = 9,
-    P = 10,
-    w = 11,
+    L = 8,
+    x = 9,
+    w = 10,
+    P = 11,
     M = 12,
     k = 13,
     U = 14,
@@ -118,14 +118,14 @@ function ep(e, t) {
         ev,
         ey,
         eI,
-        eb,
         eT,
+        eb,
         eS,
         eA = 0,
         eN = new a.Buf8(4),
         eC = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
     if (!e || !e.state || !e.output || (!e.input && 0 !== e.avail_in)) return v;
-    (n = e.state).mode === M && (n.mode = k), (en = e.next_out), (r = e.output), (ea = e.avail_out), (et = e.next_in), (i = e.input), (ei = e.avail_in), (es = n.hold), (eo = n.bits), (el = ei), (eu = ea), (eb = m);
+    (n = e.state).mode === M && (n.mode = k), (en = e.next_out), (r = e.output), (ea = e.avail_out), (et = e.next_in), (i = e.input), (ei = e.avail_in), (es = n.hold), (eo = n.bits), (el = ei), (eu = ea), (eT = m);
     i: for (;;)
         switch (n.mode) {
             case S:
@@ -145,7 +145,7 @@ function ep(e, t) {
                     (e.msg = 'incorrect header check'), (n.mode = $);
                     break;
                 }
-                if ((15 & es) !== T) {
+                if ((15 & es) !== b) {
                     (e.msg = 'unknown compression method'), (n.mode = $);
                     break;
                 }
@@ -154,14 +154,14 @@ function ep(e, t) {
                     (e.msg = 'invalid window size'), (n.mode = $);
                     break;
                 }
-                (n.dmax = 1 << eI), (e.adler = n.check = 1), (n.mode = 512 & es ? P : M), (es = 0), (eo = 0);
+                (n.dmax = 1 << eI), (e.adler = n.check = 1), (n.mode = 512 & es ? w : M), (es = 0), (eo = 0);
                 break;
             case A:
                 for (; eo < 16; ) {
                     if (0 === ei) break i;
                     ei--, (es += i[et++] << eo), (eo += 8);
                 }
-                if (((n.flags = es), (255 & n.flags) !== T)) {
+                if (((n.flags = es), (255 & n.flags) !== b)) {
                     (e.msg = 'unknown compression method'), (n.mode = $);
                     break;
                 }
@@ -202,8 +202,8 @@ function ep(e, t) {
                     while (eI && ec < ei);
                     if ((512 & n.flags && (n.check = o(n.check, i, ec, et)), (ei -= ec), (et += ec), eI)) break i;
                 } else n.head && (n.head.name = null);
-                (n.length = 0), (n.mode = x);
-            case x:
+                (n.length = 0), (n.mode = L);
+            case L:
                 if (4096 & n.flags) {
                     if (0 === ei) break i;
                     ec = 0;
@@ -211,8 +211,8 @@ function ep(e, t) {
                     while (eI && ec < ei);
                     if ((512 & n.flags && (n.check = o(n.check, i, ec, et)), (ei -= ec), (et += ec), eI)) break i;
                 } else n.head && (n.head.comment = null);
-                n.mode = L;
-            case L:
+                n.mode = x;
+            case x:
                 if (512 & n.flags) {
                     for (; eo < 16; ) {
                         if (0 === ei) break i;
@@ -226,13 +226,13 @@ function ep(e, t) {
                 }
                 n.head && ((n.head.hcrc = (n.flags >> 9) & 1), (n.head.done = !0)), (e.adler = n.check = 0), (n.mode = M);
                 break;
-            case P:
+            case w:
                 for (; eo < 32; ) {
                     if (0 === ei) break i;
                     ei--, (es += i[et++] << eo), (eo += 8);
                 }
-                (e.adler = n.check = er(es)), (es = 0), (eo = 0), (n.mode = w);
-            case w:
+                (e.adler = n.check = er(es)), (es = 0), (eo = 0), (n.mode = P);
+            case P:
                 if (0 === n.havedict) return (e.next_out = en), (e.avail_out = ea), (e.next_in = et), (e.avail_in = ei), (n.hold = es), (n.bits = eo), E;
                 (e.adler = n.check = 1), (n.mode = M);
             case M:
@@ -303,7 +303,7 @@ function ep(e, t) {
                     (n.lens[eC[n.have++]] = 7 & es), (es >>>= 3), (eo -= 3);
                 }
                 for (; n.have < 19; ) n.lens[eC[n.have++]] = 0;
-                if (((n.lencode = n.lendyn), (n.lenbits = 7), (eT = { bits: n.lenbits }), (eb = u(c, n.lens, 0, 19, n.lencode, 0, n.work, eT)), (n.lenbits = eT.bits), eb)) {
+                if (((n.lencode = n.lendyn), (n.lenbits = 7), (eb = { bits: n.lenbits }), (eT = u(c, n.lens, 0, 19, n.lencode, 0, n.work, eb)), (n.lenbits = eb.bits), eT)) {
                     (e.msg = 'invalid code lengths set'), (n.mode = $);
                     break;
                 }
@@ -351,11 +351,11 @@ function ep(e, t) {
                     (e.msg = 'invalid code -- missing end-of-block'), (n.mode = $);
                     break;
                 }
-                if (((n.lenbits = 9), (eT = { bits: n.lenbits }), (eb = u(d, n.lens, 0, n.nlen, n.lencode, 0, n.work, eT)), (n.lenbits = eT.bits), eb)) {
+                if (((n.lenbits = 9), (eb = { bits: n.lenbits }), (eT = u(d, n.lens, 0, n.nlen, n.lencode, 0, n.work, eb)), (n.lenbits = eb.bits), eT)) {
                     (e.msg = 'invalid literal/lengths set'), (n.mode = $);
                     break;
                 }
-                if (((n.distbits = 6), (n.distcode = n.distdyn), (eT = { bits: n.distbits }), (eb = u(f, n.lens, n.nlen, n.ndist, n.distcode, 0, n.work, eT)), (n.distbits = eT.bits), eb)) {
+                if (((n.distbits = 6), (n.distcode = n.distdyn), (eb = { bits: n.distbits }), (eT = u(f, n.lens, n.nlen, n.ndist, n.distcode, 0, n.work, eb)), (n.distbits = eb.bits), eT)) {
                     (e.msg = 'invalid distances set'), (n.mode = $);
                     break;
                 }
@@ -475,17 +475,17 @@ function ep(e, t) {
                 }
                 n.mode = J;
             case J:
-                eb = g;
+                eT = g;
                 break i;
             case $:
-                eb = y;
+                eT = y;
                 break i;
             case ee:
                 return I;
             default:
                 return v;
         }
-    return ((e.next_out = en), (e.avail_out = ea), (e.next_in = et), (e.avail_in = ei), (n.hold = es), (n.bits = eo), (n.wsize || (eu !== e.avail_out && n.mode < $ && (n.mode < Q || t !== _))) && e_(e, e.output, e.next_out, eu - e.avail_out)) ? ((n.mode = ee), I) : ((el -= e.avail_in), (eu -= e.avail_out), (e.total_in += el), (e.total_out += eu), (n.total += eu), n.wrap && eu && (e.adler = n.check = n.flags ? o(n.check, r, eu, e.next_out - eu) : s(n.check, r, eu, e.next_out - eu)), (e.data_type = n.bits + (n.last ? 64 : 0) + (n.mode === M ? 128 : 0) + (n.mode === j || n.mode === G ? 256 : 0)), ((0 === el && 0 === eu) || t === _) && eb === m && (eb = b), eb);
+    return ((e.next_out = en), (e.avail_out = ea), (e.next_in = et), (e.avail_in = ei), (n.hold = es), (n.bits = eo), (n.wsize || (eu !== e.avail_out && n.mode < $ && (n.mode < Q || t !== _))) && e_(e, e.output, e.next_out, eu - e.avail_out)) ? ((n.mode = ee), I) : ((el -= e.avail_in), (eu -= e.avail_out), (e.total_in += el), (e.total_out += eu), (n.total += eu), n.wrap && eu && (e.adler = n.check = n.flags ? o(n.check, r, eu, e.next_out - eu) : s(n.check, r, eu, e.next_out - eu)), (e.data_type = n.bits + (n.last ? 64 : 0) + (n.mode === M ? 128 : 0) + (n.mode === j || n.mode === G ? 256 : 0)), ((0 === el && 0 === eu) || t === _) && eT === m && (eT = T), eT);
 }
 function eh(e) {
     if (!e || !e.state) return v;
@@ -500,6 +500,6 @@ function eg(e, t) {
     var n,
         i,
         r = t.length;
-    return e && e.state && (0 === (n = e.state).wrap || n.mode === w) ? (n.mode === w && (i = s((i = 1), t, r, 0)) !== n.check ? y : e_(e, t, r, r) ? ((n.mode = ee), I) : ((n.havedict = 1), m)) : v;
+    return e && e.state && (0 === (n = e.state).wrap || n.mode === P) ? (n.mode === P && (i = s((i = 1), t, r, 0)) !== n.check ? y : e_(e, t, r, r) ? ((n.mode = ee), I) : ((n.havedict = 1), m)) : v;
 }
 (t.inflateReset = eo), (t.inflateReset2 = el), (t.inflateResetKeep = es), (t.inflateInit = ec), (t.inflateInit2 = eu), (t.inflate = ep), (t.inflateEnd = eh), (t.inflateGetHeader = em), (t.inflateSetDictionary = eg), (t.inflateInfo = 'pako inflate (from Nodeca project)');

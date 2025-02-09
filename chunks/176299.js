@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(290297),
     I = n(289341),
     C = n(765717),
-    N = n(358221),
-    v = n(823748),
+    v = n(358221),
+    N = n(823748),
     T = n(626421),
     S = n(118379),
-    Z = n(267161),
-    A = n(652515),
+    A = n(267161),
+    Z = n(652515),
     x = n(544978),
     b = n(540059),
     L = n(724383),
@@ -68,7 +68,7 @@ var i = n(200651),
     eg = n(176505),
     e_ = n(215023),
     ef = n(290511),
-    eE = n(415281);
+    eE = n(195093);
 let eI = (0, d.Un)({
         createPromise: () => Promise.resolve().then(n.bind(n, 267161)),
         webpackId: 267161
@@ -78,13 +78,13 @@ let eI = (0, d.Un)({
             className: eE.loader,
             children: (0, i.jsx)(p.$jN, {})
         }),
-    eN = (0, d.Un)({
+    ev = (0, d.Un)({
         createPromise: () => n.e('78431').then(n.bind(n, 650788)),
         webpackId: 650788,
         name: 'GuildShopPage',
         renderLoader: eC
     }),
-    ev = (0, d.Un)({
+    eN = (0, d.Un)({
         createPromise: () => Promise.all([n.e('16114'), n.e('97811')]).then(n.bind(n, 998420)),
         webpackId: 998420,
         name: 'GuildMemberApplicationReview',
@@ -102,13 +102,13 @@ let eI = (0, d.Un)({
         name: 'MemberSafetyPage',
         renderLoader: eC
     }),
-    eZ = (0, d.Un)({
+    eA = (0, d.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('58121')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
         renderLoader: eC
     }),
-    eA = (0, d.Un)({
+    eZ = (0, d.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('19878'), n.e('37709')]).then(n.bind(n, 599263)),
         webpackId: 599263,
         name: 'GuildOnboardingPage',
@@ -142,37 +142,37 @@ let eI = (0, d.Un)({
                             return;
                     }
             }),
-            u = (0, A.C4)(l, 'channel_renderer'),
+            u = (0, Z.C4)(l, 'channel_renderer'),
             m = (0, O.jS)(l, 'ChannelRenderer'),
             p = (0, Y.Ek)(s, 'ChannelRenderer');
         if (null != l && null != r && (0, eg.AB)(r))
             switch (r) {
                 case eg.oC.ROLE_SUBSCRIPTIONS:
                     return u
-                        ? (0, i.jsx)(eN, {
+                        ? (0, i.jsx)(ev, {
                               guildId: l,
                               initialTab: x.y.GUILD_ROLE_SUBSCRIPTIONS
                           })
                         : (0, i.jsx)(w.Z, { guildId: l });
                 case eg.oC.GUILD_SHOP:
-                    return (0, i.jsx)(eN, {
+                    return (0, i.jsx)(ev, {
                         guildId: l,
                         productId: a,
                         initialTab: d
                     });
                 case eg.oC.MEMBER_APPLICATIONS:
-                    return m ? (0, i.jsx)(o.l_, { to: ep.Z5c.CHANNEL(l, eg.oC.MEMBER_SAFETY) }) : (0, i.jsx)(ev, { guildId: l });
+                    return m ? (0, i.jsx)(o.l_, { to: ep.Z5c.CHANNEL(l, eg.oC.MEMBER_SAFETY) }) : (0, i.jsx)(eN, { guildId: l });
                 case eg.oC.GUILD_HOME:
                     return (0, i.jsx)(eT, { guildId: l });
                 case eg.oC.CHANNEL_BROWSER:
-                    return (0, i.jsx)(eZ, {
+                    return (0, i.jsx)(eA, {
                         guildId: l,
                         selectedSection: ef.l7.BROWSE
                     });
                 case eg.oC.GUILD_ONBOARDING:
-                    return (0, i.jsx)(eA, { guildId: l });
+                    return (0, i.jsx)(eZ, { guildId: l });
                 case eg.oC.CUSTOMIZE_COMMUNITY:
-                    return (0, i.jsx)(eZ, {
+                    return (0, i.jsx)(eA, {
                         guildId: l,
                         selectedSection: ef.l7.CUSTOMIZE
                     });
@@ -199,7 +199,7 @@ let eI = (0, d.Un)({
                 n.id
             );
         }
-        return (0, i.jsx)(v.Z, {});
+        return (0, i.jsx)(N.Z, {});
     },
     eL = l.memo(function () {
         let { guildId: e, channelId: t } = (0, q.Z)(),
@@ -297,17 +297,17 @@ function eH(e) {
     (0, _.t)(!0);
     let d = 'app view user trigger debugging';
     g.R6.useExperiment({ location: d }, { autoTrackExposure: !1 }), g.R6.trackExposure({ location: d });
-    let E = (0, h.e7)([N.Z], () => N.Z.isFullscreenInContext()),
+    let E = (0, h.e7)([v.Z], () => v.Z.isFullscreenInContext()),
         I = (0, b.TH)('ChannelSidebar'),
         C = (0, b.Q3)('ChannelSidebar'),
-        v = (0, Z.useAppSidebarState)((e) => !e.isOpen) && I;
+        N = (0, A.useAppSidebarState)((e) => !e.isOpen) && I;
     l.useLayoutEffect(() => {
         if (I) {
             var e;
             let t = parseInt(null !== (e = m.K.get(eu.nT)) && void 0 !== e ? e : '');
             Number.isNaN(t) && (t = eu.qO), (t = Math.min(Math.max(t, eu.li), eu.zx)), !I && t <= eu.p8 && (t = eu.qO), eV(t);
             let n = (e) => {
-                e.metaKey && 'b' === e.key && Z.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
+                e.metaKey && 'b' === e.key && A.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
             };
             return (
                 document.addEventListener('keydown', n),
@@ -318,13 +318,13 @@ function eH(e) {
         }
     }, [I]),
         l.useLayoutEffect(() => {
-            if (v) eV(eu.p8);
+            if (N) eV(eu.p8);
             else {
                 var e;
                 let t = parseInt(null !== (e = m.K.get(eu.nT)) && void 0 !== e ? e : '');
                 Number.isNaN(t) && (t = eu.qO), eV(t);
             }
-        }, [v]);
+        }, [N]);
     let T = l.useRef(null),
         S = l.useCallback(
             (e, t) => {
@@ -333,11 +333,11 @@ function eH(e) {
                 let i = t < eu.li / 3;
                 t <= eu.li ? document.body.classList.add(eE.draggingMin) : document.body.classList.remove(eE.draggingMin), t >= eu.zx ? document.body.classList.add(eE.draggingMax) : document.body.classList.remove(eE.draggingMax);
                 let l = t - e;
-                null === (n = T.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(l / eu.p8), 0.25))), I && (Z.useAppSidebarState.setState({ isOpen: !i }), i && eV(eu.p8));
+                null === (n = T.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(l / eu.p8), 0.25))), I && (A.useAppSidebarState.setState({ isOpen: !i }), i && eV(eu.p8));
             },
             [I]
         ),
-        A = l.useCallback(() => {
+        Z = l.useCallback(() => {
             document.body.classList.add(eE.dragging);
         }, []),
         x = l.useCallback((e) => {
@@ -349,18 +349,18 @@ function eH(e) {
             maxDimension: eu.zx,
             resizableDomNodeRef: T,
             onElementResize: S,
-            onElementResizeStart: A,
+            onElementResizeStart: Z,
             onElementResizeEnd: x,
             orientation: f.y.HORIZONTAL_RIGHT,
             throttleDuration: 0
         }),
         y = l.useCallback(() => {
-            Z.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
+            A.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
         }, []);
     if (
         (l.useLayoutEffect(() => {
-            v && eV(eu.p8);
-        }, [v]),
+            N && eV(eu.p8);
+        }, [N]),
         r || (!C && s))
     )
         return null;
@@ -371,7 +371,7 @@ function eH(e) {
         children: (e) =>
             (0, i.jsxs)('div', {
                 ref: C ? T : void 0,
-                'data-collapsed': v,
+                'data-collapsed': N,
                 className: a()(eE.sidebar, e, {
                     [eE.hasNotice]: t,
                     [eE.fullWidth]: u.tq,
@@ -455,10 +455,10 @@ function eF() {
         _ = r || a || s || d || g,
         f = l.useCallback(() => H.Z.openSidebar(), []),
         I = (0, b.Q3)('AppView'),
-        v = (0, b.TH)('AppView'),
+        N = (0, b.TH)('AppView'),
         S = I ? 'div' : l.Fragment,
-        A = (0, Z.useAppSidebarState)((e) => !e.isOpen),
-        x = (0, h.e7)([N.Z], () => N.Z.isFullscreenInContext());
+        Z = (0, A.useAppSidebarState)((e) => !e.isOpen),
+        x = (0, h.e7)([v.Z], () => v.Z.isFullscreenInContext());
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: eE.container,
@@ -492,7 +492,7 @@ function eF() {
                                     }),
                                     (0, i.jsx)(S, {
                                         className: eE.page,
-                                        'data-collapsed': !!v && A,
+                                        'data-collapsed': !!N && Z,
                                         children: (0, i.jsx)(E.Z.Provider, {
                                             value: f,
                                             children: (0, i.jsxs)(o.rs, {

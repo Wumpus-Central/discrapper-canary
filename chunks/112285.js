@@ -17,8 +17,8 @@ var i,
     v = o.setImmediate,
     y = o.clearImmediate,
     I = o.process,
-    b = o.Dispatch,
-    T = o.Function,
+    T = o.Dispatch,
+    b = o.Function,
     S = o.MessageChannel,
     A = o.String,
     N = 0,
@@ -38,16 +38,16 @@ var O = function (e) {
             O(e);
         };
     },
-    x = function (e) {
+    L = function (e) {
         O(e.data);
     },
-    L = function (e) {
+    x = function (e) {
         o.postMessage(A(e), i.protocol + '//' + i.host);
     };
 (v && y) ||
     ((v = function (e) {
         m(arguments.length, 1);
-        var t = c(e) ? e : T(e),
+        var t = c(e) ? e : b(e),
             n = p(arguments, 1);
         return (
             (C[++N] = function () {
@@ -64,14 +64,14 @@ var O = function (e) {
         ? (r = function (e) {
               I.nextTick(D(e));
           })
-        : b && b.now
+        : T && T.now
           ? (r = function (e) {
-                b.now(D(e));
+                T.now(D(e));
             })
           : S && !g
-            ? ((s = (a = new S()).port2), (a.port1.onmessage = x), (r = u(s.postMessage, s)))
-            : o.addEventListener && c(o.postMessage) && !o.importScripts && i && 'file:' !== i.protocol && !f(L)
-              ? ((r = L), o.addEventListener('message', x, !1))
+            ? ((s = (a = new S()).port2), (a.port1.onmessage = L), (r = u(s.postMessage, s)))
+            : o.addEventListener && c(o.postMessage) && !o.importScripts && i && 'file:' !== i.protocol && !f(x)
+              ? ((r = x), o.addEventListener('message', L, !1))
               : (r =
                     R in h('script')
                         ? function (e) {

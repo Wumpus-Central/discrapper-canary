@@ -6,7 +6,7 @@ var i = n(200651),
     o = n(218867),
     l = n(28546),
     u = n(981631),
-    c = n(670638);
+    c = n(58589);
 let d = (e) => {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: i } = e,
             a = r.useRef(u.xAR),
@@ -34,13 +34,13 @@ let d = (e) => {
     },
     f = function (e) {
         let { categoryListRef: t, expressionsListRef: n, categories: a, store: u, children: f, className: _, listPadding: p, rowCount: h, getScrollOffsetForIndex: m, categoryHeight: g, onScroll: E, renderCategoryListItem: v, rowCountBySection: y, renderSection: I } = e,
-            b = u.useStore((e) => e.activeCategoryIndex);
+            T = u.useStore((e) => e.activeCategoryIndex);
         d({
-            activeIndex: b,
+            activeIndex: T,
             categoryListRef: t,
             getScrollOffsetForIndex: m
         });
-        let T = r.useCallback(
+        let b = r.useCallback(
                 (e) => {
                     let { searchQuery: t } = l.Iu.getState();
                     if ((u.setActiveCategoryIndex(e), '' !== t)) (0, l.ql)('');
@@ -51,7 +51,7 @@ let d = (e) => {
                 },
                 [n, u]
             ),
-            S = r.useCallback((e) => v(a[e], e, () => T(e), b === e), [b, a, T, v]),
+            S = r.useCallback((e) => v(a[e], e, () => b(e), T === e), [T, a, b, v]),
             A = r.useMemo(() => ('function' == typeof g ? (e) => g(a[e], e) : g), [a, g]);
         return (0, i.jsxs)('div', {
             className: s()(c.wrapper, _),
@@ -67,7 +67,7 @@ let d = (e) => {
                     rowCountBySection: y,
                     renderSection: I
                 }),
-                null == f ? void 0 : f(T)
+                null == f ? void 0 : f(b)
             ]
         });
     };

@@ -1,17 +1,17 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i,
     r,
-    a,
-    l = n(973361),
+    l,
+    a = n(973361),
     o = n(442837),
     s = n(570140),
     c = n(358085),
     d = n(723359);
 let u = null,
     h = 'underage';
-class _ extends (a = o.ZP.Store) {
+class _ extends (l = o.ZP.Store) {
     isUnderageAnonymous() {
-        return c.isPlatformEmbedded ? !!(null != u && u + d.k0 > Date.now()) : null != l.parse(document.cookie)[h];
+        return c.isPlatformEmbedded ? !!(null != u && u + d.k0 > Date.now()) : null != a.parse(document.cookie)[h];
     }
 }
 (r = 'AgeGateStore'),
@@ -23,7 +23,7 @@ class _ extends (a = o.ZP.Store) {
               writable: !0
           })
         : (_[i] = r);
-let g = new _(s.Z, {
+let m = new _(s.Z, {
     AGE_GATE_PREVENT_UNDERAGE_REGISTRATION: function () {
         (u = Date.now()), (document.cookie = ''.concat(h, '=1;path=/'));
     },

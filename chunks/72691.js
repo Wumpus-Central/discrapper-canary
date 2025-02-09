@@ -25,7 +25,7 @@ var n = o(200651),
     T = o(981631),
     E = o(474936),
     L = o(388032),
-    S = o(866803);
+    S = o(67264);
 let R = (e) => {
         let { locale: r } = e;
         return (0, n.jsxs)(n.Fragment, {

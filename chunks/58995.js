@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(47120), n(653041);
+n.d(t, { Z: () => x }), n(47120), n(653041);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -18,13 +18,13 @@ var i = n(200651),
     v = n(594174),
     y = n(70956),
     I = n(709054),
-    b = n(51144),
-    T = n(443603),
+    T = n(51144),
+    b = n(443603),
     S = n(981631),
     A = n(921944),
     N = n(388032),
-    C = n(145695),
-    R = n(553796);
+    C = n(974090),
+    R = n(446016);
 let O = y.Z.Millis.DAYS_30;
 function D(e) {
     let { animatedIconComponent: t, hovered: r, isCoachmarkDismissed: a } = e,
@@ -56,20 +56,20 @@ function D(e) {
         ]
     });
 }
-function x(e) {
+function L(e) {
     let { disabled: t, channel: n } = e,
         { analyticsLocations: a } = (0, f.ZP)(d.Z.GIFT_BUTTON),
         [s, c] = r.useState(!1),
         y = (0, o.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
-        x = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
-        L = null != x ? I.default.age(x.id) : 0,
-        P = !t && y && L >= O,
-        { enabled: w } = m.O.useExperiment({ location: 'gift-button' }),
+        L = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
+        x = null != L ? I.default.age(L.id) : 0,
+        w = !t && y && x >= O,
+        { enabled: P } = m.O.useExperiment({ location: 'gift-button' }),
         M = [];
-    w && P && M.push(l.z.NITROWEEN_COACHMARKS);
+    P && w && M.push(l.z.NITROWEEN_COACHMARKS);
     let [k, U] = (0, p.US)(M),
         G = null != k,
-        B = (0, b.Ft)(n),
+        B = (0, T.Ft)(n),
         { Component: Z, events: F, play: V } = (0, u.$)();
     if (t) return null;
     let j = () => {
@@ -102,7 +102,7 @@ function x(e) {
                     onCheckItOutClick: j,
                     markAsDismissed: U
                 }),
-            (0, i.jsx)(T.Z, {
+            (0, i.jsx)(b.Z, {
                 innerClassName: R.button,
                 'aria-label': N.intl.string(N.t.Z1RnTk),
                 isActive: !1,
@@ -119,4 +119,4 @@ function x(e) {
         ]
     });
 }
-let L = r.memo(x);
+let x = r.memo(L);

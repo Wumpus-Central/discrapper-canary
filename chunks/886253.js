@@ -12,8 +12,8 @@ var s = n(442837),
     x = n(533159),
     m = n(981631),
     h = n(388032),
-    v = n(671702),
-    j = n(689762);
+    v = n(827957),
+    j = n(801013);
 function p(l) {
     let { appId: e, skuId: n, transitionState: p, onClose: N, onHeaderTitleClick: S, children: f, footer: k } = l,
         _ = (0, s.e7)(

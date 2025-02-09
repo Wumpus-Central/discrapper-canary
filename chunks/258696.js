@@ -1,5 +1,5 @@
 n.d(t, {
-    G: () => w,
+    G: () => P,
     Z: () => M
 }),
     n(47120),
@@ -23,8 +23,8 @@ var i = n(200651),
     v = n(594174),
     y = n(74538),
     I = n(94161),
-    b = n(9277),
-    T = n(58995),
+    T = n(9277),
+    b = n(58995),
     S = n(655678),
     A = n(897291),
     N = n(466711),
@@ -32,13 +32,13 @@ var i = n(200651),
     R = n(319417),
     O = n(728386),
     D = n(474936),
-    x = n(553796);
-function L(e) {
+    L = n(446016);
+function x(e) {
     let { disabled: t, channel: n } = e,
         { enabled: r } = p.O.useExperiment({ location: 'gift-button' }),
         a = (0, m.Z)();
     return r
-        ? (0, i.jsx)(T.Z, {
+        ? (0, i.jsx)(b.Z, {
               disabled: t,
               channel: n
           })
@@ -53,11 +53,11 @@ function L(e) {
                 channel: n
             });
 }
-function P(e) {
-    var t, n, r, p, m, g, E, T, A;
-    let { type: N, disabled: P, channel: M, handleSubmit: k, isEmpty: U, showAllButtons: G, children: B } = e,
+function w(e) {
+    var t, n, r, p, m, g, E, b, A;
+    let { type: N, disabled: w, channel: M, handleSubmit: k, isEmpty: U, showAllButtons: G, children: B } = e,
         Z = (0, s.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
-        F = w(M.id, N, U),
+        F = P(M.id, N, U),
         { activeCommand: V, activeCommandOption: j } = (0, s.cj)([u.Z], () => ({
             activeCommand: u.Z.getActiveCommand(M.id),
             activeCommandOption: u.Z.getActiveOption(M.id)
@@ -92,7 +92,7 @@ function P(e) {
                     (0, i.jsx)(
                         C.Z,
                         {
-                            disabled: P,
+                            disabled: w,
                             referralsRemaining: z,
                             channel: M,
                             isResending: q
@@ -106,22 +106,22 @@ function P(e) {
             (null == Q || y.ZP.isPremiumEligible(Q)) &&
             Y.push(
                 (0, i.jsx)(
-                    L,
+                    x,
                     {
-                        disabled: P,
+                        disabled: w,
                         channel: M
                     },
                     'gift'
                 )
             ),
-        (null === (T = N.gifs) || void 0 === T ? void 0 : T.button) != null &&
+        (null === (b = N.gifs) || void 0 === b ? void 0 : b.button) != null &&
             null == V &&
             G &&
             Y.push(
                 (0, i.jsx)(
-                    b.Z,
+                    T.Z,
                     {
-                        disabled: P,
+                        disabled: w,
                         type: N
                     },
                     'gif'
@@ -133,7 +133,7 @@ function P(e) {
                 (0, i.jsx)(
                     S.Z,
                     {
-                        disabled: P,
+                        disabled: w,
                         channel: M
                     },
                     'confetti'
@@ -147,7 +147,7 @@ function P(e) {
                 (0, i.jsx)(
                     O.Z,
                     {
-                        disabled: P,
+                        disabled: w,
                         type: N
                     },
                     'sticker'
@@ -159,7 +159,7 @@ function P(e) {
             (0, i.jsx)(
                 I.Z,
                 {
-                    disabled: P,
+                    disabled: w,
                     type: N
                 },
                 'emoji'
@@ -174,7 +174,7 @@ function P(e) {
                 R.Z,
                 {
                     onClick: k,
-                    disabled: P || F
+                    disabled: w || F
                 },
                 'submit'
             )
@@ -183,15 +183,15 @@ function P(e) {
     0 === Y.length)
         ? null
         : (0, i.jsx)('div', {
-              className: x.buttons,
+              className: L.buttons,
               children: Y
           });
 }
-function w(e, t, n) {
+function P(e, t, n) {
     return (0, s.e7)([g.Z, E.Z], () => {
         let i = g.Z.getStickerPreview(e, t.drafts.type),
             r = null != i && i.length > 0;
         return 0 === E.Z.getUploads(e, t.drafts.type).length && n && !r;
     });
 }
-let M = r.memo(P);
+let M = r.memo(w);

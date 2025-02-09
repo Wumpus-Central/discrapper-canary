@@ -1,21 +1,21 @@
-n.d(t, { Z: () => r }), n(789020);
-var i = n(978003);
-function r(e, t) {
-    return null == (t = null != t ? t : (0, i.Z)(e) ? e.messageSnapshots[0] : void 0)
+t.d(s, { Z: () => n }), t(789020);
+var l = t(978003);
+function n(e, s) {
+    return null == (s = null != s ? s : (0, l.Z)(e) ? e.messageSnapshots[0] : void 0)
         ? e
         : e.merge({
-              content: t.message.content,
-              attachments: t.message.attachments,
-              embeds: t.message.embeds,
-              flags: t.message.flags,
-              components: t.message.components,
+              content: s.message.content,
+              attachments: s.message.attachments,
+              embeds: s.message.embeds,
+              flags: s.message.flags,
+              components: s.message.components,
               editedTimestamp: null,
-              timestamp: t.message.timestamp,
-              codedLinks: t.message.codedLinks,
+              timestamp: s.message.timestamp,
+              codedLinks: s.message.codedLinks,
               reactions: [],
               messageSnapshots: [],
-              stickers: t.message.stickers,
-              stickerItems: t.message.stickerItems,
+              stickers: s.message.stickers,
+              stickerItems: s.message.stickerItems,
               customRenderedContent: null
           });
 }

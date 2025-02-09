@@ -16,8 +16,8 @@ var i = n(200651),
     u = n(700026),
     h = n(301342),
     p = n(327530),
-    g = n(607686);
-let m = l.memo(function (e) {
+    m = n(221734);
+let g = l.memo(function (e) {
     let { guildChannels: t, guildChannelsVersion: n } = e,
         r = l.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
     return null == r ? null : (0, i.jsx)(h.Qo, { category: r });
@@ -26,19 +26,19 @@ function f(e) {
     let { sectionIndex: t, guildChannels: n, voiceStates: i, selectedChannelId: l, selectedVoiceChannelId: r, optInEnabled: a, visualRefreshEnabled: o, density: s } = e;
     if (t === n.voiceChannelsSectionNumber) return 44;
     let { hasDivider: c, canHaveVoiceSummary: h } = (0, u.ie)(n, a, t),
-        g = c ? (o ? 9 : p.QP) : 0;
-    if (!h || t === d.wZ) return g;
-    let m = n.getNamedCategoryFromSection(t);
-    return null == m
-        ? g
+        m = c ? (o ? 9 : p.QP) : 0;
+    if (!h || t === d.wZ) return m;
+    let g = n.getNamedCategoryFromSection(t);
+    return null == g
+        ? m
         : (0, u.V5)({
-                category: m,
+                category: g,
                 selectedChannelId: l,
                 selectedVoiceChannelId: r,
                 voiceStates: i
             })
-          ? (o ? ('cozy' === s ? 42 : 34) : p.Vf) + g
-          : g;
+          ? (o ? ('cozy' === s ? 42 : 34) : p.Vf) + m
+          : m;
 }
 function _(e, t, n) {
     if (e === t.voiceChannelsSectionNumber) return 'voice-channels-button';
@@ -79,16 +79,16 @@ let v = l.memo(function (e) {
             [S, _, v, p]
         );
     if (t === n.voiceChannelsSectionNumber)
-        return (0, i.jsx)(m, {
+        return (0, i.jsx)(g, {
             guildChannels: n,
             guildChannelsVersion: h
         });
-    let E = x ? (0, i.jsx)('div', { className: g.sectionDivider }) : null;
+    let E = x ? (0, i.jsx)('div', { className: m.sectionDivider }) : null;
     return Z && 0 !== N.length
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)('div', {
-                      className: g.voiceUserSummary,
+                      className: m.voiceUserSummary,
                       children: (0, i.jsx)(a.Z, {
                           renderIcon: !0,
                           users: N,

@@ -1,25 +1,25 @@
 n.d(t, { c: () => s });
-var l = n(442837),
-    i = n(496675),
-    a = n(408433);
+var a = n(442837),
+    l = n(496675),
+    i = n(408433);
 function s(e) {
     var t, n, s;
     let { message: r, channel: o, forwardOptions: c } = e,
-        u = null == c ? void 0 : c.onlyAttachmentIds,
-        d = null == c ? void 0 : c.onlyEmbedIndices,
-        _ = null !== (s = null === (t = r.messageSnapshots[0]) || void 0 === t ? void 0 : t.message) && void 0 !== s ? s : r,
-        h = _.attachments;
-    null != u ? (h = _.attachments.filter((e) => u.includes(e.id))) : null != d && (h = []);
-    let f = [];
+        d = null == c ? void 0 : c.onlyAttachmentIds,
+        u = null == c ? void 0 : c.onlyEmbedIndices,
+        m = null !== (s = null === (t = r.messageSnapshots[0]) || void 0 === t ? void 0 : t.message) && void 0 !== s ? s : r,
+        _ = m.attachments;
+    null != d ? (_ = m.attachments.filter((e) => d.includes(e.id))) : null != u && (_ = []);
+    let h = [];
     return (
-        (0, l.e7)([i.Z], () => null != o && !(0, a.eC)(o, i.Z) && (0, a.En)(r)) || ((f = _.embeds), null != d ? (f = _.embeds.filter((e, t) => d.includes(t))) : null == u || (f = [])),
-        (null != d || ('' === _.content && f.length > 0)) && (_ = _.set('content', f.map((e) => e.url).join('\n'))),
-        '' === _.content && (null === (n = _.embeds[0]) || void 0 === n ? void 0 : n.rawDescription) != null && (_ = _.set('content', _.embeds[0].rawDescription)),
+        (0, a.e7)([l.Z], () => null != o && !(0, i.eC)(o, l.Z) && (0, i.En)(r)) || ((h = m.embeds), null != u ? (h = m.embeds.filter((e, t) => u.includes(t))) : null == d || (h = [])),
+        (null != u || ('' === m.content && h.length > 0)) && (m = m.set('content', h.map((e) => e.url).join('\n'))),
+        '' === m.content && (null === (n = m.embeds[0]) || void 0 === n ? void 0 : n.rawDescription) != null && (m = m.set('content', m.embeds[0].rawDescription)),
         {
-            attachments: h,
-            embeds: f,
-            hasContent: '' !== _.content && null == u,
-            contentMessage: _
+            attachments: _,
+            embeds: h,
+            hasContent: '' !== m.content && null == d,
+            contentMessage: m
         }
     );
 }

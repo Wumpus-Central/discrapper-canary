@@ -1,42 +1,42 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => j });
 var i = n(200651),
     s = n(192379),
-    r = n(120356),
-    l = n.n(r),
+    l = n(120356),
+    r = n.n(l),
     a = n(442837),
     o = n(481060),
     c = n(846027),
     d = n(230711),
     u = n(825209),
-    m = n(906732),
-    g = n(313201),
-    h = n(131951),
+    h = n(906732),
+    m = n(313201),
+    g = n(131951),
     x = n(358085),
     _ = n(962100),
     p = n(981631),
     E = n(388032),
-    C = n(973936),
-    f = n(232186);
-let T = !x.isPlatformEmbedded,
-    N = (0, g.hQ)();
-function I(e) {
+    C = n(223412),
+    N = n(814632);
+let f = !x.isPlatformEmbedded,
+    I = (0, m.hQ)();
+function T(e) {
     return e >= 1000 ? ((e /= 1000), ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), ' ms');
 }
 function S(e) {
     let t,
         { inputMode: n } = e,
-        { shortcut: s, delay: r } = (0, a.cj)([h.Z], () => h.Z.getModeOptions());
+        { shortcut: s, delay: l } = (0, a.cj)([g.Z], () => g.Z.getModeOptions());
     return (
         (t =
             x.isPlatformEmbedded || n !== p.pM4.PUSH_TO_TALK
                 ? (0, i.jsx)(o.R94, {
                       type: o.R94.Types.DESCRIPTION,
-                      className: l()(C.pttToolsMessage, f.marginBottom8),
+                      className: r()(C.pttToolsMessage, N.marginBottom8),
                       children: E.intl.format(E.t.HVvn5e, { onClick: () => d.Z.setSection(p.oAB.KEYBINDS) })
                   })
                 : (0, i.jsx)(o.R94, {
                       type: o.R94.Types.DESCRIPTION,
-                      className: l()(C.pttToolsMessage, C.pttToolsWarning, f.marginBottom8),
+                      className: r()(C.pttToolsMessage, C.pttToolsWarning, N.marginBottom8),
                       children: E.intl.format(E.t.zvMPOT, { onDownloadClick: () => (0, _.y)('Help Text PTT') })
                   })),
         (0, i.jsxs)('div', {
@@ -60,17 +60,17 @@ function S(e) {
                             children: (0, i.jsxs)(o.xJW, {
                                 children: [
                                     (0, i.jsx)(o.vwX, {
-                                        id: N,
+                                        id: I,
                                         tag: o.RB0.H5,
-                                        className: f.marginBottom8,
+                                        className: N.marginBottom8,
                                         children: E.intl.string(E.t.y0ShVl)
                                     }),
                                     (0, i.jsx)(o.iRW, {
-                                        initialValue: r,
+                                        initialValue: l,
                                         onValueChange: (e) => c.Z.setMode(n, { delay: e }),
-                                        onValueRender: I,
+                                        onValueRender: T,
                                         maxValue: p.qhL,
-                                        'aria-labelledby': N
+                                        'aria-labelledby': I
                                     })
                                 ]
                             })
@@ -82,24 +82,24 @@ function S(e) {
         })
     );
 }
-function b() {
-    let { analyticsLocations: e } = (0, m.ZP)(),
-        t = (0, a.e7)([h.Z], () => h.Z.getMode()),
-        r = [
+function j() {
+    let { analyticsLocations: e } = (0, h.ZP)(),
+        t = (0, a.e7)([g.Z], () => g.Z.getMode()),
+        l = [
             {
                 value: p.pM4.VOICE_ACTIVITY,
                 name: E.intl.string(E.t.cHCEOD)
             },
             {
                 value: p.pM4.PUSH_TO_TALK,
-                name: T ? E.intl.string(E.t['1AINrK']) : E.intl.string(E.t.Q8gkVF)
+                name: f ? E.intl.string(E.t['1AINrK']) : E.intl.string(E.t.Q8gkVF)
             }
         ],
-        l = s.useCallback(
+        r = s.useCallback(
             (t) => {
                 let { value: s } = t;
                 s === p.pM4.PUSH_TO_TALK &&
-                    T &&
+                    f &&
                     (0, o.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
@@ -120,10 +120,10 @@ function b() {
         children: [
             (0, i.jsx)(o.xJW, {
                 title: E.intl.string(E.t['pS+K2N']),
-                className: f.marginBottom20,
+                className: N.marginBottom20,
                 children: (0, i.jsx)(o.FXm, {
-                    onChange: l,
-                    options: r,
+                    onChange: r,
+                    options: l,
                     value: t
                 })
             }),

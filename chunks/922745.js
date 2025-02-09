@@ -19,7 +19,7 @@ var r = n(120356),
     m = n(507675),
     g = n(273716),
     E = n(388032),
-    v = n(880397);
+    v = n(154681);
 function y(e) {
     let { title: t, onJumpToChannel: n, onHide: r, idle: a, preventIdleComponent: l } = e,
         c = (0, s.e7)([p.Z], () => p.Z.getChannelId()),
@@ -65,7 +65,7 @@ function y(e) {
     });
 }
 function I(e) {
-    let { children: t, idle: n, onJumpToChannel: r, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: I, ...b } = e;
+    let { children: t, idle: n, onJumpToChannel: r, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: I, ...T } = e;
     return (0, i.jsxs)('div', {
         onMouseMove: u,
         onMouseDown: u,
@@ -99,7 +99,7 @@ function I(e) {
                                 idle: n,
                                 onJumpToChannel: r,
                                 onHide: s,
-                                ...b
+                                ...T
                             })
                         }),
                         (0, i.jsxs)('div', {

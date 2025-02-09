@@ -18,28 +18,28 @@ var i = n(200651),
     v = n(448980),
     y = n(336383),
     I = n(194811),
-    b = n(373826),
-    T = n(262210),
+    T = n(373826),
+    b = n(262210),
     S = n(666984),
     A = n(670451),
     N = n(228168),
-    C = n(249942);
+    C = n(309584);
 function R(e) {
     let { user: t, currentUser: n, activity: a, className: R, onClose: O } = e,
         { profileType: D } = (0, E.z)(),
-        x = { [C.fullSize]: D === N.y0.FULL_SIZE },
-        L = (0, _.Z)({
+        L = { [C.fullSize]: D === N.y0.FULL_SIZE },
+        x = (0, _.Z)({
             activity: a,
             user: t
         }),
-        P = (0, g.Z)(a),
-        { largeImage: w } = (0, d.FO)(a),
+        w = (0, g.Z)(a),
+        { largeImage: P } = (0, d.FO)(a),
         { analyticsLocations: M } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         k = (0, h.Z)({
             display: 'live',
             user: t,
             activity: a,
-            entry: L,
+            entry: x,
             analyticsLocations: M
         }),
         U = (0, m.Z)({
@@ -53,11 +53,11 @@ function R(e) {
             return 0 === l.length
                 ? null
                 : null == a.sync_id
-                  ? (0, i.jsx)(b.Z, {
+                  ? (0, i.jsx)(T.Z, {
                         variant: 'text-xs/normal',
                         text: l.join(', ')
                     })
-                  : (0, i.jsx)(b.Z, {
+                  : (0, i.jsx)(T.Z, {
                         variant: 'text-xs/normal',
                         text: l.map((e, n) =>
                             (0, i.jsxs)(
@@ -85,7 +85,7 @@ function R(e) {
             let { start: t, end: n } = e;
             return null == t || null == n
                 ? null
-                : (0, i.jsx)(T.Z, {
+                : (0, i.jsx)(b.Z, {
                       start: t,
                       end: n
                   });
@@ -94,7 +94,7 @@ function R(e) {
             t.id === n.id
                 ? null
                 : (0, i.jsx)('div', {
-                      className: s()(C.actions, x),
+                      className: s()(C.actions, L),
                       children: (0, i.jsx)(S.Z, {
                           user: t,
                           activity: a,
@@ -110,22 +110,22 @@ function R(e) {
             onClose: O,
             children: [
                 (0, i.jsx)(I.Z, {
-                    ...P,
+                    ...w,
                     contextMenu: (0, i.jsx)(A.Z, {
                         display: 'live',
                         user: t,
                         activity: a,
-                        entry: L,
+                        entry: x,
                         onClose: O
                     })
                 }),
                 (0, i.jsx)('div', {
                     className: C.body,
                     children: (0, i.jsxs)('div', {
-                        className: s()(C.content, x),
+                        className: s()(C.content, L),
                         children: [
                             (0, i.jsx)(f.E, {
-                                image: w,
+                                image: P,
                                 size: f.J.SIZE_60,
                                 className: C.clickableImage,
                                 onClick: (e) => {
@@ -137,7 +137,7 @@ function R(e) {
                                 children: [
                                     (0, i.jsxs)('div', {
                                         children: [
-                                            (0, i.jsx)(b.Z, {
+                                            (0, i.jsx)(T.Z, {
                                                 variant: 'heading-sm/semibold',
                                                 text: a.details,
                                                 onClick: () => {

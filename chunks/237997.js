@@ -18,8 +18,8 @@ var r,
     v = n(145597),
     y = n(372679),
     I = n(451478),
-    b = n(981631),
-    T = n(987650);
+    T = n(981631),
+    b = n(987650);
 function S(e, t, n) {
     return (
         t in e
@@ -36,16 +36,16 @@ function S(e, t, n) {
 let A = Object.freeze({
         selectedGuildId: null,
         selectedChannelId: null,
-        displayUserMode: b.OYC.ALWAYS,
-        displayNameMode: b.wC$.ALWAYS,
-        avatarSizeMode: b.ipw.LARGE,
-        notificationPositionMode: b._vf.TOP_LEFT,
-        textChatNotifications: b.Ypu.ENABLED,
+        displayUserMode: T.OYC.ALWAYS,
+        displayNameMode: T.wC$.ALWAYS,
+        avatarSizeMode: T.ipw.LARGE,
+        notificationPositionMode: T._vf.TOP_LEFT,
+        textChatNotifications: T.Ypu.ENABLED,
         disableExternalLinkAlert: !1,
         disablePinTutorial: !1,
         showKeybindIndicators: !0,
         disableClickableRegions: !1,
-        textWidgetOpacity: T.wF.LOWER,
+        textWidgetOpacity: b.wF.LOWER,
         showGameInviteNotification: !0,
         customInviteMessage: void 0
     }),
@@ -54,10 +54,10 @@ let A = Object.freeze({
     R = null,
     O = new Set(),
     D = !1,
-    x = !1,
     L = !1,
-    P = new Set(),
-    w = !1,
+    x = !1,
+    w = new Set(),
+    P = !1,
     M = new c.Z('OverlayStore');
 function k(e) {
     let t = C[e];
@@ -70,7 +70,7 @@ function Z(e) {
     return (null == e.version && 1 === v.Tq) || e.version === v.Tq || (o.Z.dispatch({ type: 'OVERLAY_INCOMPATIBLE_APP' }), (0, u.zP)(), !1);
 }
 function F(e) {
-    if (('OVERLAY_INITIALIZE' === e.type && Z(e) && (L = !0), L)) {
+    if (('OVERLAY_INITIALIZE' === e.type && Z(e) && (x = !0), x)) {
         var t, n, i, r, a;
         switch (e.type) {
             case 'CHANNEL_CREATE':
@@ -150,22 +150,22 @@ function W() {
 function K() {
     if (!__OVERLAY__) return !1;
     let e = N === (0, v.QF)(),
-        t = O.has((0, v.QF)()) || P.size > 0;
+        t = O.has((0, v.QF)()) || w.size > 0;
     e && t ? (0, l.T_)(window, !0) : (0, l.T_)(window, !1);
 }
 function z() {}
 function q(e) {
     let { locked: t, pid: n } = e;
-    t ? O.delete(n) : O.add(n), X(), K(), (w = !1);
+    t ? O.delete(n) : O.add(n), X(), K(), (P = !1);
 }
 function Q(e) {
     let { region: t } = e;
-    if (N !== (0, v.QF)() || P.has(t)) return !1;
-    P.add(t);
+    if (N !== (0, v.QF)() || w.has(t)) return !1;
+    w.add(t);
 }
 function X() {
     if (N !== (0, v.QF)()) return !1;
-    P.clear();
+    w.clear();
 }
 function J(e) {
     let { pid: t } = e;
@@ -185,11 +185,11 @@ function et() {
 function en() {
     if (__OVERLAY__) {
         let e = I.Z.windowSize();
-        (0, v.Te)(e) || (w = !1);
+        (0, v.Te)(e) || (P = !1);
     }
 }
 function ei(e) {
-    w = e.isPreviewingInGame;
+    P = e.isPreviewingInGame;
 }
 function er(e) {
     let { mode: t } = e;
@@ -242,21 +242,21 @@ function eh() {
 }
 function em() {
     o.Z.addInterceptor((e) => {
-        if (x || !B.has(e.type)) return !1;
+        if (L || !B.has(e.type)) return !1;
         if ('CHANNEL_SELECT' === e.type) {
             let { guildId: t, channelId: n } = e;
             return (
                 null != n &&
                 ((0, u.lW)({
-                    type: b.BmY.DISPATCH,
+                    type: T.BmY.DISPATCH,
                     pid: (0, v.QF)(),
                     token: (0, v.Ht)(),
                     payloads: [
                         {
                             type: 'CHANNEL_PRELOAD',
-                            guildId: t === b.ME ? null : t,
+                            guildId: t === T.ME ? null : t,
                             channelId: n,
-                            context: b.e3s
+                            context: T.e3s
                         },
                         {
                             type: 'OVERLAY_SELECT_CHANNEL',
@@ -270,7 +270,7 @@ function em() {
         }
         return (
             (0, u.lW)({
-                type: b.BmY.DISPATCH,
+                type: T.BmY.DISPATCH,
                 pid: (0, v.QF)(),
                 token: (0, v.Ht)(),
                 payloads: [e]
@@ -283,11 +283,11 @@ function eg(e) {
     let t = (0, v.QF)();
     if (null == e.pid || e.pid === t)
         switch (e.type) {
-            case b.BmY.STORAGE_SYNC:
+            case T.BmY.STORAGE_SYNC:
                 a.ZP.PersistedStore.initializeAll(e.states);
                 break;
-            case b.BmY.DISPATCH:
-                null != e.payloads && ((x = !0), e.payloads.forEach((e) => F(e)), (x = !1));
+            case T.BmY.DISPATCH:
+                null != e.payloads && ((L = !0), e.payloads.forEach((e) => F(e)), (L = !1));
         }
 }
 function eE() {
@@ -295,7 +295,7 @@ function eE() {
         (0, u.Ty)(eg, (0, v.Ht)()),
         (0, u.$j)(),
         (0, u.lW)({
-            type: b.BmY.CONNECT,
+            type: T.BmY.CONNECT,
             pid: (0, v.QF)(),
             token: (0, v.Ht)()
         });
@@ -373,7 +373,7 @@ class ey extends (r = a.ZP.PersistedStore) {
         return U.notificationPositionMode;
     }
     getTextChatNotificationMode() {
-        return U.notificationPositionMode === b._vf.DISABLED ? b.Ypu.DISABLED : U.textChatNotifications;
+        return U.notificationPositionMode === T._vf.DISABLED ? T.Ypu.DISABLED : U.textChatNotifications;
     }
     get showKeybindIndicators() {
         return null == U.showKeybindIndicators || U.showKeybindIndicators;
@@ -394,19 +394,19 @@ class ey extends (r = a.ZP.PersistedStore) {
         return N;
     }
     get initialized() {
-        return L;
+        return x;
     }
     get incompatibleApp() {
         return D;
     }
     getActiveRegions() {
-        return P;
+        return w;
     }
     getTextWidgetOpacity() {
         return U.textWidgetOpacity;
     }
     isPreviewingInGame() {
-        return w;
+        return P;
     }
 }
 S(ey, 'displayName', 'OverlayStore'),

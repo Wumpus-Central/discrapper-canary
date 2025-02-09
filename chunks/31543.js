@@ -9,7 +9,7 @@ var i = n(200651),
     c = n(453070),
     d = n(611480),
     f = n(388032),
-    _ = n(844094);
+    _ = n(969182);
 let p = r.forwardRef(function (e, t) {
     let { onKeyDown: n, stickersListRef: p, channel: h } = e,
         m = (0, c.fQ)(h),
@@ -23,14 +23,14 @@ let p = r.forwardRef(function (e, t) {
         ),
         y = l.ZN.useStore((e) => e.searchPlaceholder),
         I = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
-        b = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 var t;
                 l.ZN.setActiveCategoryIndex('' === e ? 0 : d.c), l.ZN.setInspectedExpressionPosition(0, 0), l.ZN.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = p.current) || void 0 === t || t.scrollTo(0);
             },
             [p]
         ),
-        T = r.useCallback(() => {
+        b = r.useCallback(() => {
             (0, u.ql)('');
         }, []);
     return (
@@ -55,9 +55,9 @@ let p = r.forwardRef(function (e, t) {
                 ref: g,
                 size: o.E1j.Sizes.MEDIUM,
                 placeholder: null != y ? y : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t['Pck/4e']),
-                onClear: T,
+                onClear: b,
                 onKeyDown: n,
-                onChange: b,
+                onChange: T,
                 className: _.__invalid_searchBar,
                 inputProps: {
                     'aria-haspopup': 'grid',

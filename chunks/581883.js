@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => x });
 var i,
     r = n(512722),
     a = n.n(r),
@@ -57,10 +57,10 @@ function I(e) {
         }),
         S();
 }
-function b() {
+function T() {
     S();
 }
-function T() {
+function b() {
     S(),
         Object.values(v).forEach((e) => {
             (e.proto = e.ProtoClass.create()), (e.editInfo = (0, h.JC)());
@@ -126,7 +126,7 @@ function D(e) {
             null != c && ((t.editInfo.protoToSave = c), (t.editInfo.offlineEditDataVersion = s.offlineEditDataVersion));
         });
 }
-class x extends (i = l.ZP.PersistedStore) {
+class L extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         D(e);
     }
@@ -186,15 +186,15 @@ class x extends (i = l.ZP.PersistedStore) {
         return null !== (t = null === (e = this.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : null;
     }
 }
-m(x, 'displayName', 'UserSettingsProtoStore'), m(x, 'persistKey', 'UserSettingsProtoStore-Cache');
-let L = new x(f.Z, {
+m(L, 'displayName', 'UserSettingsProtoStore'), m(L, 'persistKey', 'UserSettingsProtoStore-Cache');
+let x = new L(f.Z, {
     CACHE_LOADED: O,
     USER_SETTINGS_PROTO_UPDATE: C,
     USER_SETTINGS_PROTO_ENQUEUE_UPDATE: C,
     USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: R,
     CONNECTION_OPEN: I,
-    CONNECTION_CLOSED: b,
-    CONNECTION_RESUMED: b,
+    CONNECTION_CLOSED: T,
+    CONNECTION_RESUMED: T,
     OVERLAY_INITIALIZE: N,
-    LOGOUT: T
+    LOGOUT: b
 });

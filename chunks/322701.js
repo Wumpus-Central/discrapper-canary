@@ -8,7 +8,7 @@ var i = n(200651),
     c = n(481060),
     d = n(607070),
     u = n(981631),
-    h = n(732144);
+    h = n(718762);
 let m = function (e) {
     let { rows: t, renderRow: n, renderSection: m, hasSearchQuery: p, sectionFilter: g, footer: _ } = e,
         f = (0, s.e7)([d.Z], () => d.Z.keyboardModeEnabled),
@@ -20,13 +20,13 @@ let m = function (e) {
             async scrollToEnd() {}
         }),
         C = g !== u.pJs.ONLINE && g !== u.pJs.ALL,
-        N = E || p || C,
-        v = l.useMemo(
+        v = E || p || C,
+        N = l.useMemo(
             () =>
                 t.map((e, t) =>
                     0 === e.length
                         ? null
-                        : N
+                        : v
                           ? (0, i.jsxs)(
                                 'div',
                                 {
@@ -44,7 +44,7 @@ let m = function (e) {
                                 t
                             )
                 ),
-            [n, m, t, N]
+            [n, m, t, v]
         );
     return (0, i.jsx)(a.bG, {
         navigator: I,
@@ -55,7 +55,7 @@ let m = function (e) {
                     ref: t,
                     className: h.peopleList,
                     ...n,
-                    children: [v, _]
+                    children: [N, _]
                 });
             }
         })

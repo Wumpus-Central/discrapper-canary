@@ -1,11 +1,11 @@
 n.d(t, {
     Jh: () => O,
-    Lk: () => x,
-    Xg: () => L,
+    Lk: () => L,
+    Xg: () => x,
     ZP: () => C,
     _Z: () => D,
     c7: () => R,
-    j3: () => P
+    j3: () => w
 }),
     n(177593);
 var i = n(200651),
@@ -27,11 +27,11 @@ var i = n(200651),
     v = n(944486),
     y = n(626135),
     I = n(585483),
-    b = n(591759),
-    T = n(787025),
+    T = n(591759),
+    b = n(787025),
     S = n(981631),
     A = n(388032),
-    N = n(553410);
+    N = n(147978);
 function C(e) {
     let { message: t, footer: n, headerClassName: r, showsCloseWindowText: a, spinner: o } = e;
     return (
@@ -123,10 +123,10 @@ function D(e) {
                     I.S.dispatchToLastSubscribed(S.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), y.default.track(S.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
                 }));
         }, [null == n ? void 0 : n.id, s, l]),
-        b = (0, u.e7)([v.Z, g.Z], () => g.Z.getChannel(v.Z.getChannelId())),
-        T = (0, u.e7)([E.Z], () => E.Z.can(S.Plq.SEND_MESSAGES, b)),
+        T = (0, u.e7)([v.Z, g.Z], () => g.Z.getChannel(v.Z.getChannelId())),
+        b = (0, u.e7)([E.Z], () => E.Z.can(S.Plq.SEND_MESSAGES, T)),
         C = null != t,
-        R = null == t && T && (!d || null != l);
+        R = null == t && b && (!d || null != l);
     return null != t || null != s
         ? (0, i.jsxs)('div', {
               className: N.buttonsContainer,
@@ -163,16 +163,16 @@ function D(e) {
           })
         : null;
 }
-function x(e) {
+function L(e) {
     return (0, i.jsx)(C, {
         ...e,
         headerClassName: N.headerFailure
     });
 }
-function L() {
+function x() {
     var e, t;
     let n = (0, l.TH)();
-    return (0, i.jsx)(T.G, {
+    return (0, i.jsx)(b.G, {
         children: (0, i.jsx)(O, {
             guild: null === (e = n.state) || void 0 === e ? void 0 : e.guild,
             application: null === (t = n.state) || void 0 === t ? void 0 : t.application,
@@ -180,18 +180,18 @@ function L() {
         })
     });
 }
-function P(e) {
+function w(e) {
     var t, n;
     let { location: a } = e;
     r.useEffect(() => {
         if (null == a || '' === a.search) return;
-        let e = null != document.referrer && '' !== document.referrer ? b.Z.toURLSafe(document.referrer) : null;
+        let e = null != document.referrer && '' !== document.referrer ? T.Z.toURLSafe(document.referrer) : null;
         (null == e || e.host !== window.location.host || e.pathname !== S.Z5c.OAUTH2_AUTHORIZE) && (0, h.uL)(S.Z5c.INDEX);
     }, [a]);
     let s = null != a ? (0, o.parse)(a.search) : {},
         l = null !== (n = null !== (t = s.error_description) && void 0 !== t ? t : s.error) && void 0 !== n ? n : A.intl.string(A.t['mqn87+']);
-    return (0, i.jsx)(T.G, {
-        children: (0, i.jsx)(x, {
+    return (0, i.jsx)(b.G, {
+        children: (0, i.jsx)(L, {
             message: l,
             showsCloseWindowText: !0
         })

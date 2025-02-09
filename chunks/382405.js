@@ -19,8 +19,8 @@ var r = n(120356),
     v = n(740605),
     y = n(370370),
     I = n(91140),
-    b = n(551228),
-    T = n(555672),
+    T = n(551228),
+    b = n(555672),
     S = n(335326),
     A = n(297781),
     N = n(797342),
@@ -28,19 +28,19 @@ var r = n(120356),
     R = n(168524),
     O = n(592125),
     D = n(944486),
-    x = n(960870),
-    L = n(139793),
-    P = n(502762),
-    w = n(652853),
+    L = n(960870),
+    x = n(139793),
+    w = n(502762),
+    P = n(652853),
     M = n(336383),
     k = n(373826),
     U = n(228168),
     G = n(981631),
     B = n(616922),
-    Z = n(249942);
+    Z = n(309584);
 function F(e) {
     let { user: t, entry: n, header: r, className: s, onClose: l } = e,
-        { profileType: c } = (0, w.z)(),
+        { profileType: c } = (0, P.z)(),
         f = { [Z.fullSize]: c === U.y0.FULL_SIZE },
         { largeImage: _ } = (0, m.rv)({
             entry: n,
@@ -55,19 +55,19 @@ function F(e) {
             trackEntryPointImpression: !0
         }),
         { analyticsLocations: g } = (0, d.ZP)(),
-        v = (0, x.Z)({
+        v = (0, L.Z)({
             display: 'recent',
             user: t,
             entry: n,
             analyticsLocations: g
         }),
-        y = (0, L.Z)({
+        y = (0, x.Z)({
             userId: t.id,
             onAction: v
         }),
-        b = () => (n.content_type === o.s.TOP_GAME ? T.Hs.map((e, t) => (0, i.jsx)(e, { entry: n }, 'entry-'.concat(t))) : I.W.map((e, t) => (0, i.jsx)(e, { entry: n }, 'entry-'.concat(t))));
+        T = () => (n.content_type === o.s.TOP_GAME ? b.Hs.map((e, t) => (0, i.jsx)(e, { entry: n }, 'entry-'.concat(t))) : I.W.map((e, t) => (0, i.jsx)(e, { entry: n }, 'entry-'.concat(t))));
     return null == h
-        ? (0, i.jsxs)(P.Z.Overlay, {
+        ? (0, i.jsxs)(w.Z.Overlay, {
               className: a()(Z.card, s),
               ref: y,
               children: [
@@ -93,7 +93,7 @@ function F(e) {
                                       (0, i.jsx)(A.Gk, {
                                           location: A.Gt.USER_PROFILE,
                                           className: Z.badges,
-                                          children: b()
+                                          children: T()
                                       })
                                   ]
                               })
@@ -139,7 +139,7 @@ function F(e) {
                                       (0, i.jsx)(A.Gk, {
                                           location: A.Gt.USER_PROFILE,
                                           className: Z.badges,
-                                          children: b()
+                                          children: T()
                                       })
                                   ]
                               })
@@ -151,18 +151,18 @@ function F(e) {
 }
 function V(e) {
     let { user: t, entry: n, header: r, className: s, onClose: o } = e,
-        { profileType: l } = (0, w.z)(),
+        { profileType: l } = (0, P.z)(),
         c = { [Z.fullSize]: l === U.y0.FULL_SIZE },
         { largeImage: f } = (0, m.rv)({ entry: n }),
         { url: _ } = n.extra,
         { analyticsLocations: p } = (0, d.ZP)(),
-        h = (0, x.Z)({
+        h = (0, L.Z)({
             display: 'recent',
             user: t,
             entry: n,
             analyticsLocations: p
         }),
-        g = (0, L.Z)({
+        g = (0, x.Z)({
             userId: t.id,
             onAction: h
         }),
@@ -246,17 +246,17 @@ function V(e) {
 function j(e) {
     var t, n;
     let { user: r, entry: s, header: o, className: l, onClose: u } = e,
-        { profileType: c } = (0, w.z)(),
+        { profileType: c } = (0, P.z)(),
         f = { [Z.fullSize]: c === U.y0.FULL_SIZE },
         { largeImage: _ } = (0, m.rv)({ entry: s }),
         { analyticsLocations: p } = (0, d.ZP)(),
-        h = (0, x.Z)({
+        h = (0, L.Z)({
             display: 'recent',
             user: r,
             entry: s,
             analyticsLocations: p
         }),
-        g = (0, L.Z)({
+        g = (0, x.Z)({
             userId: r.id,
             onAction: h
         }),
@@ -309,7 +309,7 @@ function j(e) {
                                       (0, i.jsx)(A.Gk, {
                                           location: A.Gt.USER_PROFILE,
                                           className: Z.badges,
-                                          children: b.te.map((e, t) => (0, i.jsx)(e, { entry: s }, 'entry-'.concat(t)))
+                                          children: T.te.map((e, t) => (0, i.jsx)(e, { entry: s }, 'entry-'.concat(t)))
                                       })
                                   ]
                               })
@@ -321,22 +321,22 @@ function j(e) {
 }
 function H(e) {
     let { user: t, entry: n, header: r, className: s, onClose: o } = e,
-        { profileType: u } = (0, w.z)(),
+        { profileType: u } = (0, P.z)(),
         g = { [Z.fullSize]: u === U.y0.FULL_SIZE },
         { largeImage: v } = (0, m.rv)({
             entry: n,
             showCoverImage: !1
         }),
-        { analyticsLocations: I, newestAnalyticsLocation: b } = (0, d.ZP)(),
-        T = (0, x.Z)({
+        { analyticsLocations: I, newestAnalyticsLocation: T } = (0, d.ZP)(),
+        b = (0, L.Z)({
             display: 'recent',
             user: t,
             entry: n,
             analyticsLocations: I
         }),
-        S = (0, L.Z)({
+        S = (0, x.Z)({
             userId: t.id,
-            onAction: T
+            onAction: b
         }),
         N = (0, c.bp)() === G.IlC.POPOUT,
         C = (0, l.e7)([O.Z, D.Z], () => O.Z.getChannel(D.Z.getChannelId())),
@@ -348,7 +348,7 @@ function H(e) {
                               type: 'channel',
                               channel: C
                           },
-                          analyticsLocation: b,
+                          analyticsLocation: T,
                           openInPopout: N
                       })
                     : (0, f.__)(_._b.TEXT, h.Ie.NORMAL, { applicationId: n.extra.application_id });
@@ -357,7 +357,7 @@ function H(e) {
         ref: S,
         className: s,
         subsection: U.Tb.RECENT_ACTIVITY,
-        onAction: T,
+        onAction: b,
         onClose: o,
         children: [
             r,
@@ -371,7 +371,7 @@ function H(e) {
                             size: E.J.SIZE_60,
                             className: Z.clickableImage,
                             onClick: (e) => {
-                                e.stopPropagation(), T({ action: 'PRESS_IMAGE' }), R();
+                                e.stopPropagation(), b({ action: 'PRESS_IMAGE' }), R();
                             }
                         }),
                         (0, i.jsxs)('div', {
@@ -382,7 +382,7 @@ function H(e) {
                                         variant: 'heading-sm/semibold',
                                         text: n.extra.activity_name,
                                         onClick: () => {
-                                            T({ action: 'PRESS_TEXT' }), R();
+                                            b({ action: 'PRESS_TEXT' }), R();
                                         }
                                     })
                                 }),

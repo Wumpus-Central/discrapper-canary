@@ -19,8 +19,8 @@ var r = n(120356),
     v = n(769654),
     y = n(960870),
     I = n(139793),
-    b = n(994746),
-    T = n(273284),
+    T = n(994746),
+    b = n(273284),
     S = n(232174),
     A = n(510659),
     N = n(287954),
@@ -28,10 +28,10 @@ var r = n(120356),
     R = n(652853),
     O = n(64621),
     D = n(979038),
-    x = n(448980),
-    L = n(336383),
-    P = n(194811),
-    w = n(373826),
+    L = n(448980),
+    x = n(336383),
+    w = n(194811),
+    P = n(373826),
     M = n(315324),
     k = n(262210),
     U = n(103479),
@@ -41,7 +41,7 @@ var r = n(120356),
     F = n(981631),
     V = n(701488),
     j = n(388032),
-    H = n(249942);
+    H = n(309584);
 function Y(e) {
     var t;
     let { user: n, currentUser: r, activity: Y, application: W, voiceGuild: K, voiceChannel: z, profileGuildId: q, className: Q, onClose: X } = e,
@@ -74,7 +74,7 @@ function Y(e) {
             userId: n.id,
             onAction: ea
         }),
-        eo = (0, b.Z)(Y),
+        eo = (0, T.Z)(Y),
         { largeImage: el, smallImage: eu } = (0, p.FO)(Y, W),
         ec = (0, s.EQ)(Y)
             .when(c.Z, () => er)
@@ -119,25 +119,25 @@ function Y(e) {
                               color: o.TVs.colors.TEXT_NORMAL,
                               className: H.voiceIcon
                           }),
-                          (0, i.jsx)(w.Z, {
+                          (0, i.jsx)(P.Z, {
                               variant: 'heading-sm/semibold',
                               text: z.name
                           })
                       ]
                   })
                 : (0, c.Z)(Y)
-                  ? (0, i.jsx)(w.Z, {
+                  ? (0, i.jsx)(P.Z, {
                         variant: 'heading-sm/semibold',
                         text: Y.name
                     })
-                  : (0, i.jsx)(w.Z, {
+                  : (0, i.jsx)(P.Z, {
                         variant: 'heading-sm/semibold',
                         text: null !== (e = Y.details) && void 0 !== e ? e : Y.name
                     });
         },
         e_ = () =>
             (0, d.Z)(Y) && null != K
-                ? (0, i.jsx)(w.Z, {
+                ? (0, i.jsx)(P.Z, {
                       variant: 'text-xs/normal',
                       text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: K.name }),
                       onClick: () => {
@@ -145,11 +145,11 @@ function Y(e) {
                       }
                   })
                 : (0, c.Z)(Y)
-                  ? (0, i.jsx)(w.Z, {
+                  ? (0, i.jsx)(P.Z, {
                         variant: 'text-xs/normal',
                         text: Y.details
                     })
-                  : (0, i.jsx)(w.Z, {
+                  : (0, i.jsx)(P.Z, {
                         text: Y.state,
                         variant: 'text-xs/normal'
                     }),
@@ -159,7 +159,7 @@ function Y(e) {
                 ? null
                 : (0, c.Z)(Y)
                   ? eh()
-                  : (0, i.jsx)(w.Z, {
+                  : (0, i.jsx)(P.Z, {
                         text: null === (e = Y.assets) || void 0 === e ? void 0 : e.large_text,
                         variant: 'text-xs/normal'
                     });
@@ -170,11 +170,11 @@ function Y(e) {
                 ? (0, i.jsxs)('div', {
                       className: H.gameState,
                       children: [
-                          (0, i.jsx)(w.Z, {
+                          (0, i.jsx)(P.Z, {
                               variant: 'text-xs/normal',
                               text: Y.state
                           }),
-                          (0, i.jsx)(w.Z, {
+                          (0, i.jsx)(P.Z, {
                               variant: 'text-xs/normal',
                               text: j.intl.formatToPlainString(j.t['u//9Bw'], {
                                   count: '0',
@@ -187,11 +187,11 @@ function Y(e) {
                   ? (0, i.jsxs)('div', {
                         className: H.gameState,
                         children: [
-                            (0, i.jsx)(w.Z, {
+                            (0, i.jsx)(P.Z, {
                                 variant: 'text-xs/normal',
                                 text: Y.state
                             }),
-                            (0, i.jsx)(w.Z, {
+                            (0, i.jsx)(P.Z, {
                                 variant: 'text-xs/normal',
                                 text:
                                     0 === Y.party.size[1]
@@ -204,7 +204,7 @@ function Y(e) {
                         ]
                     })
                   : null == Y.party
-                    ? (0, i.jsx)(w.Z, {
+                    ? (0, i.jsx)(P.Z, {
                           variant: 'text-xs/normal',
                           text: Y.state
                       })
@@ -265,7 +265,7 @@ function Y(e) {
                 guildId: q,
                 profileType: $,
                 sourceId: ey,
-                sourceDetails: null == ei ? (0, T.Z)(Y) : null,
+                sourceDetails: null == ei ? (0, b.Z)(Y) : null,
                 entry: ei,
                 onAction: ea,
                 sourceType: Z.n_.ACTIVITY,
@@ -286,13 +286,13 @@ function Y(e) {
                                 children: e
                             }),
                         onShowToolbar: () => ea({ action: 'HOVER_ACTIVITY_CARD' }),
-                        children: (0, i.jsxs)(L.Z, {
+                        children: (0, i.jsxs)(x.Z, {
                             ref: es,
                             className: a()(Q, { [H.hoisted]: eI }),
                             onAction: ea,
                             onClose: X,
                             children: [
-                                (0, i.jsx)(P.Z, { ...eo }),
+                                (0, i.jsx)(w.Z, { ...eo }),
                                 (0, i.jsxs)('div', {
                                     className: H.body,
                                     children: [
@@ -305,7 +305,7 @@ function Y(e) {
                                                     children: [
                                                         eg(),
                                                         !n.bot &&
-                                                            (0, i.jsx)(x.Z, {
+                                                            (0, i.jsx)(L.Z, {
                                                                 user: n,
                                                                 activity: Y,
                                                                 className: H.badges

@@ -10,10 +10,10 @@ var r = n(442837),
     c = n(616030),
     d = n(474936),
     f = n(388032),
-    _ = n(622694);
+    _ = n(587911);
 function p(e) {
-    let { currentStep: t, className: n, purchaseState: p, premiumType: h, useWinterTheme: m = !1, onClose: g, hideCloseButton: E, showTrialBadge: v, showDiscountBadge: y, isGift: I, giftRecipient: b } = e,
-        T = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
+    let { currentStep: t, className: n, purchaseState: p, premiumType: h, useWinterTheme: m = !1, onClose: g, hideCloseButton: E, showTrialBadge: v, showDiscountBadge: y, isGift: I, giftRecipient: T } = e,
+        b = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
         S = m ? d.nL.WINTER : d.nL.DEFAULT,
         A = () => {
             switch (t) {
@@ -27,7 +27,7 @@ function p(e) {
                     return f.intl.string(f.t['7YWj6+']);
             }
         };
-    return I && (0, l.pO)(b) && t !== o.h8.CONFIRM
+    return I && (0, l.pO)(T) && t !== o.h8.CONFIRM
         ? (0, i.jsxs)(a.xBx, {
               className: _.modalHeaderCustomGift,
               separator: !1,
@@ -56,20 +56,20 @@ function p(e) {
                                 className: _.headerAnimation,
                                 currentStep: t,
                                 purchaseState: p,
-                                pause: T
+                                pause: b
                             })
                           : h === d.p9.TIER_1
                             ? (0, i.jsx)(c.tK, {
                                   className: _.headerAnimation,
                                   currentStep: t,
                                   purchaseState: p,
-                                  pause: T
+                                  pause: b
                               })
                             : (0, i.jsx)(c.Bk, {
                                   className: _.headerAnimation,
                                   currentStep: t,
                                   purchaseState: p,
-                                  pause: T
+                                  pause: b
                               }),
                   plan: null,
                   isGift: !1,

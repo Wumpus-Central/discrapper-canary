@@ -19,7 +19,7 @@ var r = n(200651),
     N = n(46140),
     _ = n(675654),
     w = n(388032),
-    p = n(934919);
+    p = n(911251);
 function R(e) {
     var a;
     let { transitionState: n, onClose: o, quest: h, location: g, reward: j } = e,

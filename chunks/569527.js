@@ -22,10 +22,10 @@ var i = n(200651),
     j = n(258971),
     S = n(133743),
     N = n(120549),
-    E = n(753511),
+    E = n(188607),
     y = n(979007),
     P = n(981631),
-    A = n(378105);
+    A = n(590854);
 function T(e) {
     var t;
     let { onSelectApplication: n, onScroll: T } = e,

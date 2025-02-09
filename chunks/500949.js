@@ -4,7 +4,7 @@ n.d(t, {
     GU: () => Y,
     H8: () => K,
     HI: () => X,
-    HW: () => F,
+    HW: () => M,
     Ib: () => ei,
     KB: () => ec,
     S2: () => G,
@@ -15,7 +15,7 @@ n.d(t, {
     h9: () => el,
     iw: () => ee,
     jC: () => U,
-    jQ: () => M,
+    jQ: () => F,
     lT: () => W,
     rd: () => es,
     t4: () => eo,
@@ -48,11 +48,11 @@ var a,
     N = n(981613),
     T = n(762399),
     E = n(232112),
-    y = n(53796),
-    S = n(402332),
+    S = n(53796),
+    y = n(723757),
     k = n(375924),
-    R = n(596136),
-    I = n(341901),
+    I = n(596136),
+    R = n(341901),
     O = n(856308),
     Z = n(665352),
     w = n(394900),
@@ -61,7 +61,7 @@ var a,
     P = n(433517),
     D = n(190558),
     B = n(231338);
-let F = {
+let M = {
         sRGB: i.Z,
         A98RGB: o.Z,
         ACEScc: s.Z,
@@ -82,15 +82,15 @@ let F = {
         OKLCH: N.Z,
         OKLab: T.Z,
         P3: E.Z,
-        ProPhoto: y.Z,
-        REC_2020: S.Z,
+        ProPhoto: S.Z,
+        REC_2020: y.Z,
         REC_2100_HLG: k.Z,
-        REC_2100_PQ: R.Z,
-        XYZ_D50: I.Z,
+        REC_2100_PQ: I.Z,
+        XYZ_D50: R.Z,
         XYZ_D65: O.Z
     },
-    M = Object.fromEntries(Object.keys(F).map((e) => [e, e]));
-Object.values(F).forEach((e) => Z.Z.register(e));
+    F = Object.fromEntries(Object.keys(M).map((e) => [e, e]));
+Object.values(M).forEach((e) => Z.Z.register(e));
 let { SemanticColors: z } = D.V,
     U = z,
     G = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
@@ -192,7 +192,7 @@ function et(e, t) {
 }
 function en(e) {
     let { name: t, base: n, steps: a = 26, darkness: r, lightness: l, easingStrength: o = 1 } = e,
-        s = F[e.colorSpace],
+        s = M[e.colorSpace],
         c = (0, A.Z)(n, s),
         d = (0, L.CD)(c, 'white', 1 - r, {
             space: s,

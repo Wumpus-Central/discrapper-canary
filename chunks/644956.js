@@ -18,17 +18,17 @@ var i = n(200651),
     v = n(818083),
     y = n(480608),
     I = n(124072),
-    b = n(184301),
-    T = n(347475),
+    T = n(184301),
+    b = n(347475),
     S = n(592125),
     A = n(271383),
     N = n(430824),
     C = n(594174),
     R = n(51144),
     O = n(388032),
-    D = n(665162),
-    x = n(822944);
-let L = (0, v.B)({
+    D = n(642367),
+    L = n(850454);
+let x = (0, v.B)({
     kind: 'user',
     id: '2021-07_role_popout',
     label: 'Role Popout',
@@ -41,7 +41,7 @@ let L = (0, v.B)({
         }
     ]
 });
-function P(e) {
+function w(e) {
     let { member: t, guildId: r, channelId: a, role: s } = e,
         o = (0, c.e7)(
             [N.Z],
@@ -59,12 +59,12 @@ function P(e) {
               d.yRy,
               {
                   preload: () =>
-                      (0, b.Z)(t.userId, l.getAvatarURL(r, 80), {
+                      (0, T.Z)(t.userId, l.getAvatarURL(r, 80), {
                           guildId: r,
                           channelId: a
                       }),
                   renderPopout: (e) =>
-                      (0, i.jsx)(T.Z, {
+                      (0, i.jsx)(b.Z, {
                           ...e,
                           userId: t.userId,
                           guildId: r,
@@ -88,7 +88,7 @@ function P(e) {
                               guildId: r,
                               onContextMenu: (e) => {
                                   (0, f.jW)(e, async () => {
-                                      let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('33862'), n.e('98783'), n.e('7717'), n.e('1589')]).then(n.bind(n, 757387));
+                                      let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('33862'), n.e('98783'), n.e('7717'), n.e('86779')]).then(n.bind(n, 757387));
                                       return (t) =>
                                           (0, i.jsx)(e, {
                                               ...t,
@@ -108,7 +108,7 @@ function P(e) {
               t.userId
           );
 }
-function w(e) {
+function P(e) {
     let { popoutProps: t, roleId: n, guildId: a, channelId: s } = e,
         o = r.useRef(null);
     (0, p.ZP)(() => {
@@ -158,7 +158,7 @@ function w(e) {
                 null != _
                     ? f.map((e) =>
                           (0, i.jsx)(
-                              P,
+                              w,
                               {
                                   member: e,
                                   guildId: a,
@@ -208,7 +208,7 @@ function M(e) {
         p = (0, c.e7)([h.Z], () => h.Z.roleStyle),
         E = null != t && 0 !== t && !f,
         v = E && 'dot' === p,
-        b = (e) =>
+        T = (e) =>
             (0, i.jsxs)(I.Z, {
                 className: s()(D.roleMention),
                 color: 'username' === p && E ? t : null,
@@ -217,18 +217,18 @@ function M(e) {
                     v &&
                         (0, i.jsx)(d.FhE, {
                             color: (0, u.Rf)(t),
-                            className: x.roleDot,
+                            className: L.roleDot,
                             background: !1,
                             tooltip: !1
                         }),
                     l
                 ]
             }),
-        { enabled: T } = L.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
-    return !T || f || null == r || null == o || (null == n && '@everyone' !== a)
+        { enabled: b } = x.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
+    return !b || f || null == r || null == o || (null == n && '@everyone' !== a)
         ? (0, i.jsx)(g.Gt, {
               value: _,
-              children: b()
+              children: T()
           })
         : (0, i.jsx)(g.Gt, {
               value: _,
@@ -237,14 +237,14 @@ function M(e) {
                       null != n && (await (0, y.H)(o, n));
                   },
                   renderPopout: (e) =>
-                      (0, i.jsx)(w, {
+                      (0, i.jsx)(P, {
                           guildId: o,
                           channelId: r,
                           roleId: n,
                           popoutProps: e
                       }),
                   position: 'right',
-                  children: b
+                  children: T
               })
           });
 }

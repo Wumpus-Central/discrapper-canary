@@ -17,9 +17,9 @@ var r = n(120356),
     g = n(165747),
     E = n(981631),
     v = n(228168),
-    y = n(154960);
+    y = n(514627);
 function I(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: r, onUpsellClick: I, pendingBanner: b, pendingBio: T, pendingPronouns: S, pendingAvatar: A, pendingAvatarDecoration: N, pendingNickname: C, pendingGlobalName: R, pendingThemeColors: O, pendingProfileEffectId: D, avatarClassName: x, containerClassName: L, isTryItOutFlow: P = !1, disabledInputs: w = !1, hideCustomStatus: M = !1, hideBioSection: k = !1, hideMessageInput: U = !0, hideExampleButton: G = !1 } = e,
+    let { user: t, guild: n, canUsePremiumCustomization: r, onUpsellClick: I, pendingBanner: T, pendingBio: b, pendingPronouns: S, pendingAvatar: A, pendingAvatarDecoration: N, pendingNickname: C, pendingGlobalName: R, pendingThemeColors: O, pendingProfileEffectId: D, avatarClassName: L, containerClassName: x, isTryItOutFlow: w = !1, disabledInputs: P = !1, hideCustomStatus: M = !1, hideBioSection: k = !1, hideMessageInput: U = !0, hideExampleButton: G = !1 } = e,
         B = (0, l.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: Z, avatarDecorationSrc: F } = (0, c.Z)({
             user: t,
@@ -44,7 +44,7 @@ function I(e) {
         displayProfile: B,
         profileType: v.y0.BITE_SIZE,
         pendingThemeColors: O,
-        className: a()(y.container, L),
+        className: a()(y.container, x),
         forceShowPremium: r,
         children: [
             (0, i.jsxs)('header', {
@@ -55,9 +55,9 @@ function I(e) {
                         displayProfile: B,
                         guildId: null == n ? void 0 : n.id,
                         canUsePremiumCustomization: r,
-                        pendingBanner: b,
-                        isTryItOutFlow: P,
-                        disabledInputs: w,
+                        pendingBanner: T,
+                        isTryItOutFlow: w,
+                        disabledInputs: P,
                         onUpsellClick: () => (null == I ? void 0 : I({ object: E.qAy.EDIT_PROFILE_BANNER }))
                     }),
                     (0, i.jsx)(p.Z, {
@@ -69,9 +69,9 @@ function I(e) {
                         previewAvatarDecoration: F,
                         previewTheme: j,
                         previewPrimaryColor: H,
-                        className: x,
-                        disabledInputs: w,
-                        isTryItOutFlow: P,
+                        className: L,
+                        disabledInputs: P,
+                        isTryItOutFlow: w,
                         onUpsellClick: () => (null == I ? void 0 : I({ object: E.qAy.AVATAR }))
                     }),
                     !M &&
@@ -89,9 +89,9 @@ function I(e) {
                 pendingAvatar: A,
                 pendingNickname: C,
                 pendingGlobalName: R,
-                pendingBio: T,
+                pendingBio: b,
                 pendingPronouns: S,
-                isTryItOutFlow: P,
+                isTryItOutFlow: w,
                 hideBioSection: k
             }),
             (0, i.jsx)(g.Z, {

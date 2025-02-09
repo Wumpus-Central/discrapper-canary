@@ -19,7 +19,7 @@ var r = n(200651),
     b = n(215023),
     v = n(46140),
     k = n(388032),
-    j = n(2381);
+    j = n(666530);
 function L(e) {
     let { isFullScreen: t, isLayer: n, onClose: i, selectedTab: L, handleTransition: E, transparent: S } = e,
         B = (0, C.ZP)(),

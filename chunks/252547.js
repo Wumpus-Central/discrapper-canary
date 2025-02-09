@@ -1,48 +1,48 @@
-n.d(t, { Z: () => p }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    o = n(793030),
+n.d(t, { Z: () => _ }), n(47120);
+var r = n(200651),
+    a = n(192379),
+    i = n(120356),
+    o = n.n(i),
+    l = n(793030),
     s = n(481060),
     c = n(383895),
     d = n(388032),
-    u = n(561526),
-    m = n(375605);
-function p(e) {
-    let { entries: t, viewId: n, officialGuildId: a, onClose: p } = e,
+    u = n(959559),
+    m = n(761088);
+function _(e) {
+    let { entries: t, viewId: n, officialGuildId: i, onClose: _ } = e,
         g = t.length > 7,
-        [_, h] = r.useState(!1),
-        f = r.useMemo(() => t.slice(0, g && !_ ? 6 : void 0), [t, g, _]);
-    return (0, i.jsxs)('div', {
+        [p, f] = a.useState(!1),
+        h = a.useMemo(() => t.slice(0, g && !p ? 6 : void 0), [t, g, p]);
+    return (0, r.jsxs)('div', {
         children: [
-            (0, i.jsx)(o.X6, {
+            (0, r.jsx)(l.X6, {
                 className: u.sectionHeader,
                 variant: 'text-md/semibold',
                 color: 'header-primary',
                 children: d.intl.string(d.t.ak8OHh)
             }),
             0 === t.length
-                ? (0, i.jsx)(o.xv, {
+                ? (0, r.jsx)(l.xv, {
                       variant: 'text-xs/semibold',
                       color: 'text-primary',
                       className: m.emptyState,
                       children: d.intl.string(d.t.R5fYVF)
                   })
-                : (0, i.jsxs)(i.Fragment, {
+                : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, i.jsx)('div', {
-                              className: l()(m.friends, { [m.fadedEntries]: g && !_ }),
-                              children: (0, i.jsx)('div', {
+                          (0, r.jsx)('div', {
+                              className: o()(m.friends, { [m.fadedEntries]: g && !p }),
+                              children: (0, r.jsx)('div', {
                                   className: u.column,
-                                  children: f.map((e) =>
-                                      (0, i.jsx)(
+                                  children: h.map((e) =>
+                                      (0, r.jsx)(
                                           c.Z,
                                           {
                                               entry: e,
                                               viewId: n,
-                                              onClose: p,
-                                              officialGuildId: a
+                                              onClose: _,
+                                              officialGuildId: i
                                           },
                                           e.id
                                       )
@@ -50,17 +50,17 @@ function p(e) {
                               })
                           }),
                           g &&
-                              !_ &&
-                              (0, i.jsxs)(s.P3F, {
+                              !p &&
+                              (0, r.jsxs)(s.P3F, {
                                   className: m.expandEntriesButton,
-                                  onClick: () => h(!0),
+                                  onClick: () => f(!0),
                                   children: [
-                                      (0, i.jsx)(o.xv, {
+                                      (0, r.jsx)(l.xv, {
                                           variant: 'text-xs/semibold',
                                           color: 'interactive-normal',
                                           children: d.intl.string(d.t.yohc6O)
                                       }),
-                                      (0, i.jsx)(s.CJ0, { size: 'xs' })
+                                      (0, r.jsx)(s.CJ0, { size: 'xs' })
                                   ]
                               })
                       ]

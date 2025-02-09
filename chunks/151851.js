@@ -19,8 +19,8 @@ var r = n(120356),
     v = n(358085),
     y = n(998502),
     I = n(388032),
-    b = n(882165);
-let T = '#ffffff',
+    T = n(875885);
+let b = '#ffffff',
     S = (e) => y.ZP.close(e),
     A = (e) => y.ZP.minimize(e),
     N = (e, t) => {
@@ -29,21 +29,21 @@ let T = '#ffffff',
     C = (e) => {
         let { children: t, windowKey: n, themeOverride: r, hasOpenLayer: s } = e,
             l = (0, i.jsx)(o.P3F, {
-                className: b.winButtonClose,
+                className: T.winButtonClose,
                 onClick: () => S(n),
                 'aria-label': I.intl.string(I.t.ZdNUj4),
                 tabIndex: -1,
                 children: (0, i.jsx)(_.Z, {})
             }),
             u = (0, i.jsx)(o.P3F, {
-                className: b.winButtonMinMax,
+                className: T.winButtonMinMax,
                 onClick: (e) => N(n, e),
                 'aria-label': I.intl.string(I.t.G1u0hI),
                 tabIndex: -1,
                 children: (0, i.jsx)(h.Z, {})
             }),
             c = (0, i.jsx)(o.P3F, {
-                className: b.winButtonMinMax,
+                className: T.winButtonMinMax,
                 onClick: () => A(n),
                 'aria-label': I.intl.string(I.t.CxOC4e),
                 tabIndex: -1,
@@ -56,10 +56,10 @@ let T = '#ffffff',
             theme: r,
             children: (e) =>
                 (0, i.jsxs)('div', {
-                    className: a()(b.typeWindows, e, { [b.withBackgroundOverride]: !s }),
+                    className: a()(T.typeWindows, e, { [T.withBackgroundOverride]: !s }),
                     children: [
                         (0, i.jsx)('div', {
-                            className: b.wordmarkWindows,
+                            className: T.wordmarkWindows,
                             children: (0, i.jsx)(f.Z, {})
                         }),
                         t,
@@ -74,31 +74,31 @@ let T = '#ffffff',
             theme: s,
             children: (e) =>
                 (0, i.jsxs)(o.P3F, {
-                    className: a()(r ? b.typeMacOSWithFrame : b.typeMacOS, t ? b.focused : b.unfocused, e, { [b.withBackgroundOverride]: !l }),
+                    className: a()(r ? T.typeMacOSWithFrame : T.typeMacOS, t ? T.focused : T.unfocused, e, { [T.withBackgroundOverride]: !l }),
                     onDoubleClick: () => y.ZP.maximize(n),
                     tabIndex: -1,
                     children: [
                         u.Z.window.USE_OSX_NATIVE_TRAFFIC_LIGHTS
                             ? c
                             : (0, i.jsxs)('div', {
-                                  className: b.macButtons,
+                                  className: T.macButtons,
                                   children: [
                                       (0, i.jsx)(o.P3F, {
-                                          className: b.macButtonClose,
+                                          className: T.macButtonClose,
                                           onClick: () => S(n),
                                           'aria-label': I.intl.string(I.t.ZdNUj4),
                                           tabIndex: -1,
                                           children: (0, i.jsx)(p.Z, { color: '#4c0000' })
                                       }),
                                       (0, i.jsx)(o.P3F, {
-                                          className: b.macButtonMinimize,
+                                          className: T.macButtonMinimize,
                                           onClick: () => A(n),
                                           'aria-label': I.intl.string(I.t.CxOC4e),
                                           tabIndex: -1,
                                           children: (0, i.jsx)(E.Z, { color: '#975500' })
                                       }),
                                       (0, i.jsx)(o.P3F, {
-                                          className: b.macButtonMaximize,
+                                          className: T.macButtonMaximize,
                                           onClick: (e) => N(n, e),
                                           'aria-label': I.intl.string(I.t['2nM3Pj']),
                                           tabIndex: -1,
@@ -108,8 +108,8 @@ let T = '#ffffff',
                               }),
                         r
                             ? (0, i.jsx)('div', {
-                                  className: b.wordmarkMacOS,
-                                  children: (0, i.jsx)(f.Z, { color: T })
+                                  className: T.wordmarkMacOS,
+                                  children: (0, i.jsx)(f.Z, { color: b })
                               })
                             : null
                     ]

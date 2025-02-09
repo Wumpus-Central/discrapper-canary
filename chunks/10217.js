@@ -24,35 +24,35 @@ var a = l(200651),
     b = l(572720),
     L = l(981631),
     y = l(388032),
-    I = l(272964),
-    T = l(770151);
+    I = l(451847),
+    T = l(139370);
 let M = function (e) {
     var t, l, i;
     let { clip: r, exporting: o, actionsDisabled: u, isNew: v, onDelete: C, onEdit: j, onShare: Z } = e,
         b = (0, c.Wu)([f.default], () => r.users.map((e) => f.default.getUser(e)).filter(k.lm)),
         { analyticsLocations: T } = (0, x.ZP)(p.Z.CLIPS_GALLERY_ITEM),
-        [M, _] = n.useState(!1),
-        P = n.useRef(null),
+        [M, P] = n.useState(!1),
+        z = n.useRef(null),
         w = (0, h.Z)(null !== (i = null === (t = r.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== i ? i : 0),
         R = n.useRef(
             new d.sW(500, () => {
                 var e;
-                let t = P.current;
-                null != t && t.paused && ((t.currentTime = w.current), null === (e = P.current) || void 0 === e || e.play());
+                let t = z.current;
+                null != t && t.paused && ((t.currentTime = w.current), null === (e = z.current) || void 0 === e || e.play());
             })
         ),
         A = n.useCallback(() => {
-            let e = P.current;
+            let e = z.current;
             null != e && (e.pause(), (e.src = ''));
         }, []),
         H = n.useCallback(() => {
             var e;
-            _(!0), null === (e = R.current) || void 0 === e || e.delay();
+            P(!0), null === (e = R.current) || void 0 === e || e.delay();
         }, []),
         V = n.useCallback(() => {
             var e, t, l;
-            _(!1);
-            let a = P.current;
+            P(!1);
+            let a = z.current;
             null === (e = R.current) || void 0 === e || e.cancel(), null != a && (a.pause(), (a.currentTime = null !== (l = null === (t = r.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== l ? l : 0));
         }, [null === (l = r.editMetadata) || void 0 === l ? void 0 : l.start]),
         B = n.useCallback(
@@ -88,7 +88,7 @@ let M = function (e) {
                 (0, a.jsx)(S, {
                     clip: r,
                     isNew: v,
-                    videoRef: P
+                    videoRef: z
                 }),
                 (0, a.jsxs)('div', {
                     className: I.clipFooter,
@@ -124,7 +124,7 @@ let M = function (e) {
                                     }
                                 }),
                                 M &&
-                                    (0, a.jsx)(z, {
+                                    (0, a.jsx)(_, {
                                         clip: r,
                                         actionsDisabled: u,
                                         exporting: o,
@@ -158,7 +158,7 @@ function S(e) {
     return (0, a.jsxs)('div', {
         className: I.clipThumbContainer,
         children: [
-            (0, a.jsx)(_, {
+            (0, a.jsx)(P, {
                 clip: t,
                 videoRef: i
             }),
@@ -268,7 +268,7 @@ function D(e) {
               ]
           });
 }
-function _(e) {
+function P(e) {
     let { clip: t, videoRef: l } = e,
         n = (0, b.l)(t);
     return 0 === t.length
@@ -292,7 +292,7 @@ function _(e) {
                 className: I.clipThumb
             });
 }
-function z(e) {
+function _(e) {
     let { clip: t, exporting: l, actionsDisabled: i, onBeforeDelete: s, onDelete: r, onEdit: o, onShare: c, onBlur: d } = e,
         u = (0, C.Z)(),
         p = n.useCallback(

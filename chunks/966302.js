@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(898531),
     y = n(861254),
     I = n(923973),
-    b = n(189771),
-    T = n(560688),
+    T = n(189771),
+    b = n(560688),
     S = n(88479),
     A = n(136995),
     N = n(25827),
@@ -27,15 +27,15 @@ var i = n(200651),
     R = n(131951),
     O = n(594174),
     D = n(451478),
-    x = n(768581),
-    L = n(358221),
-    P = n(584511),
-    w = n(793865),
+    L = n(768581),
+    x = n(358221),
+    w = n(584511),
+    P = n(793865),
     M = n(981631),
     k = n(65154),
     U = n(388032),
-    G = n(622492),
-    B = n(616926);
+    G = n(695642),
+    B = n(60412);
 let Z = {
         width: 232,
         height: 315
@@ -84,7 +84,7 @@ function Y(e) {
 function W(e) {
     let { canVideo: t, channel: n, numVideoDevices: r } = e,
         { cameraUnavailable: a, enabled: o } = (0, I.Z)(),
-        l = (0, b.Z)(n),
+        l = (0, T.Z)(n),
         { groupedButtons: d } = (0, y.ZP)({ location: 'CallActionButtons' });
     return (0, i.jsxs)('div', {
         className: s()(G.wrapper, d ? G.experimentActions : G.actions),
@@ -100,7 +100,7 @@ function W(e) {
                 (0, i.jsx)(u.yRy, {
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
-                        return (0, i.jsx)(w.Z, { onClose: t });
+                        return (0, i.jsx)(P.Z, { onClose: t });
                     },
                     position: 'top',
                     align: 'center',
@@ -119,7 +119,7 @@ function W(e) {
                             channel: n,
                             onPopoutClick: r > 1 ? s : null,
                             popoutOpen: u,
-                            onCameraUnavailable: T.Z,
+                            onCameraUnavailable: b.Z,
                             onChange: () => {
                                 var e;
                                 f.default.selectVoiceChannel(n.id, !0), (0, m.XU)(null !== (e = n.guild_id) && void 0 !== e ? e : M.ME, n.id);
@@ -143,19 +143,19 @@ function K(e) {
         v = (0, l.e7)([C.Z], () => C.Z.getGuild(m.guild_id)),
         y =
             null != v
-                ? x.ZP.getGuildIconURL({
+                ? L.ZP.getGuildIconURL({
                       id: v.id,
                       icon: v.icon,
                       size: H
                   })
                 : null,
         I = null !== (t = (0, p.x)(m, H, !0)) && void 0 !== t ? t : y,
-        b = (0, h.ZP)(m),
-        [T, S] = (0, l.Wu)([R.Z], () => [R.Z.supports(k.AN.VIDEO), Object.keys(R.Z.getVideoDevices()).length]),
-        A = null != v ? ''.concat(b, ', ').concat(v.name) : b,
+        T = (0, h.ZP)(m),
+        [b, S] = (0, l.Wu)([R.Z], () => [R.Z.supports(k.AN.VIDEO), Object.keys(R.Z.getVideoDevices()).length]),
+        A = null != v ? ''.concat(T, ', ').concat(v.name) : T,
         N = (0, l.e7)([D.Z], () => D.Z.isFocused()),
-        O = (0, l.e7)([L.Z], () => L.Z.getMode(m.id)),
-        w = r.useCallback((e) => {
+        O = (0, l.e7)([x.Z], () => x.Z.getMode(m.id)),
+        P = r.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
         K = (0, u.q_F)(
@@ -174,14 +174,14 @@ function K(e) {
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [m]);
-    let z = O === M.WtW.VIDEO && T && S > 0,
+    let z = O === M.WtW.VIDEO && b && S > 0,
         q = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(P.Z, {
+                (0, i.jsx)(w.Z, {
                     className: G.icon,
                     ringing: N,
                     src: null != I ? I : '',
-                    ringingType: P.Z.RingingType.INCOMING,
+                    ringingType: w.Z.RingingType.INCOMING,
                     size: g ? u.EFr.SIZE_40 : u.EFr.SIZE_80
                 }),
                 (0, i.jsxs)('div', {
@@ -214,7 +214,7 @@ function K(e) {
         },
         maxX: X.width,
         maxY: X.height,
-        onDragEnd: w,
+        onDragEnd: P,
         dragAnywhere: !0,
         children: (0, i.jsx)(u.f6W, {
             theme: g ? M.BRd.DARK : void 0,

@@ -3,8 +3,8 @@ n.d(t, { Z: () => ev }), n(47120);
 var v,
     y = n(392711),
     I = n(754700),
-    b = n(887003),
-    T = n(442837),
+    T = n(887003),
+    b = n(442837),
     S = n(570140),
     A = n(497505),
     N = n(918701),
@@ -24,22 +24,22 @@ function D(e, t, n) {
         e
     );
 }
-let x = new Map();
-function L() {
-    (i = !1), (r = !1), (a = new Map()), (s = new Map()), (o = 0), (l = new Set()), (u = new Set()), (c = new Set()), (d = new Set()), (x = new Map()), (_ = new Map()), (p = new Map()), (h = new Map()), (m = null), (g = new Map()), (f = new Set()), (E = new Map());
+let L = new Map();
+function x() {
+    (i = !1), (r = !1), (a = new Map()), (s = new Map()), (o = 0), (l = new Set()), (u = new Set()), (c = new Set()), (d = new Set()), (L = new Map()), (_ = new Map()), (p = new Map()), (h = new Map()), (m = null), (g = new Map()), (f = new Set()), (E = new Map());
 }
-function P(e, t) {
+function w(e, t) {
     var n, i, r, a;
     if (null != t.userStatus) for (let s of Object.values(null !== (i = null === (n = t.userStatus) || void 0 === n ? void 0 : n.progress) && void 0 !== i ? i : {})) !(0, y.isNil)(s) && I.T.DESKTOP.has(s.eventName) && ((null === (r = s.heartbeat) || void 0 === r ? void 0 : r.lastBeatAt) != null ? f.add(e) : (null === (a = s.heartbeat) || void 0 === a ? void 0 : a.lastBeatAt) == null && f.delete(e));
 }
-function w(e, t) {
+function P(e, t) {
     let n = (a = new Map(a)).get(e);
     if (null != n) {
         let i = {
             ...n,
             ...t
         };
-        P(e, t), a.set(e, i);
+        w(e, t), a.set(e, i);
     }
 }
 function M(e, t) {
@@ -52,7 +52,7 @@ function k(e, t) {
         i = null == n ? void 0 : n.userStatus;
     null != i &&
         null == i.claimedAt &&
-        w(e, {
+        P(e, {
             userStatus: {
                 ...i,
                 claimedAt: t.claimedAt
@@ -63,7 +63,7 @@ function U(e) {
     var t;
     let { entitlements: n } = e,
         i = null === (t = n.items[0].tenantMetadata) || void 0 === t ? void 0 : t.questRewards.reward;
-    return (null == i ? void 0 : i.tag) !== b.w.REWARD_CODE ? null : i.rewardCode;
+    return (null == i ? void 0 : i.tag) !== T.w.REWARD_CODE ? null : i.rewardCode;
 }
 function G(e, t) {
     let n = new Map(p);
@@ -74,7 +74,7 @@ function G(e, t) {
         var s;
         let n = U({ entitlements: t });
         null != n && M(e, n),
-            w(e, {
+            P(e, {
                 userStatus: {
                     ...r,
                     claimedAt: t.claimedAt,
@@ -87,7 +87,7 @@ function B(e) {
     null != h.get(e) && (h = new Map(h)).delete(e);
 }
 function Z() {
-    L();
+    x();
 }
 function F() {
     (o = Date.now()), (i = !0);
@@ -111,7 +111,7 @@ function W() {
 }
 function K(e) {
     let { questId: t, streamKey: n, userStatus: i } = e;
-    f.add(t), w(t, { userStatus: i }), B(n);
+    f.add(t), P(t, { userStatus: i }), B(n);
 }
 function z(e) {
     let { questId: t, streamKey: n } = e;
@@ -137,7 +137,7 @@ function X(e) {
 }
 function J(e) {
     let { enrolledQuestUserStatus: t } = e;
-    w(t.questId, { userStatus: t }), Q(t.questId);
+    P(t.questId, { userStatus: t }), Q(t.questId);
 }
 function $(e) {
     let { questId: t } = e;
@@ -184,7 +184,7 @@ function eo(e) {
 }
 function el(e) {
     let { dismissedQuestUserStatus: t } = e;
-    w(t.questId, { userStatus: t }), es(t.questId);
+    P(t.questId, { userStatus: t }), es(t.questId);
 }
 function eu(e) {
     let { questId: t } = e;
@@ -199,11 +199,11 @@ function ed(e) {
         n = (0, R.T)({ location: O.dr.QUESTS_STORE });
     n.log('Received user status update for '.concat(t.quest_id), t);
     let i = (0, N.U3)(t);
-    w(t.quest_id, { userStatus: i }), 0 === Object.keys(i.progress).length && x.has(i.questId) && (n.log('Removing optimistic progress for '.concat(i.questId)), x.delete(i.questId));
+    P(t.quest_id, { userStatus: i }), 0 === Object.keys(i.progress).length && L.has(i.questId) && (n.log('Removing optimistic progress for '.concat(i.questId)), L.delete(i.questId));
 }
 function ef(e) {
     let { previewQuestUserStatus: t } = e;
-    w(t.questId, { userStatus: t }), null == t.claimedAt && (_ = new Map(_)).delete(t.questId), null == t.enrolledAt && ((g = new Map(g)).delete(t.questId), C.ZP.getState().resetQuest(t.questId));
+    P(t.questId, { userStatus: t }), null == t.claimedAt && (_ = new Map(_)).delete(t.questId), null == t.enrolledAt && ((g = new Map(g)).delete(t.questId), C.ZP.getState().resetQuest(t.questId));
 }
 function e_(e) {
     let { questId: t } = e;
@@ -216,8 +216,8 @@ function ep(e) {
 function eh(e) {
     var t;
     let { questId: n, taskEventName: i, progress: r } = e,
-        a = null !== (t = x.get(n)) && void 0 !== t ? t : new Map();
-    a.set(i, r), x.set(n, a);
+        a = null !== (t = L.get(n)) && void 0 !== t ? t : new Map();
+    a.set(i, r), L.set(n, a);
 }
 function em(e) {
     let { decisionId: t, quest: n, placement: i } = e;
@@ -232,8 +232,8 @@ function eg(e) {
     let { placement: t } = e;
     E.delete(t);
 }
-L();
-class eE extends (v = T.ZP.Store) {
+x();
+class eE extends (v = b.ZP.Store) {
     get quests() {
         return a;
     }
@@ -288,7 +288,7 @@ class eE extends (v = T.ZP.Store) {
     }
     getOptimisticProgress(e, t) {
         var n;
-        return null === (n = x.get(e)) || void 0 === n ? void 0 : n.get(t);
+        return null === (n = L.get(e)) || void 0 === n ? void 0 : n.get(t);
     }
 }
 D(eE, 'displayName', 'QuestsStore');

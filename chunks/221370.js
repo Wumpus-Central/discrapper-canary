@@ -1,34 +1,34 @@
-n.d(t, { Z: () => _ }), n(47120), n(653041);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    o = n(758713),
+n.d(t, { Z: () => p }), n(47120), n(653041);
+var r = n(200651),
+    a = n(192379),
+    i = n(120356),
+    o = n.n(i),
+    l = n(758713),
     s = n(657707),
     c = n(481060),
     d = n(388032),
-    u = n(561526);
-let m = [o.z.DESKTOP, o.z.XBOX, o.z.PLAYSTATION, o.z.NINTENDO];
-function p(e) {
+    u = n(959559);
+let m = [l.z.DESKTOP, l.z.XBOX, l.z.PLAYSTATION, l.z.NINTENDO];
+function _(e) {
     let { platform: t, ...n } = e;
     switch (t) {
-        case o.z.DESKTOP:
-            return (0, i.jsx)(s.pzj, {
+        case l.z.DESKTOP:
+            return (0, r.jsx)(s.pzj, {
                 size: 'xs',
                 ...n
             });
-        case o.z.XBOX:
-            return (0, i.jsx)(s.Mko, {
+        case l.z.XBOX:
+            return (0, r.jsx)(s.Mko, {
                 size: 'xs',
                 ...n
             });
-        case o.z.PLAYSTATION:
-            return (0, i.jsx)(s.Tsp, {
+        case l.z.PLAYSTATION:
+            return (0, r.jsx)(s.Tsp, {
                 size: 'xs',
                 ...n
             });
-        case o.z.NINTENDO:
-            return (0, i.jsx)(s.aPH, {
+        case l.z.NINTENDO:
+            return (0, r.jsx)(s.aPH, {
                 size: 'xs',
                 ...n
             });
@@ -38,29 +38,29 @@ function p(e) {
 }
 function g(e) {
     let { platforms: t } = e;
-    return (0, i.jsx)('div', {
-        className: l()(u.row, u.gapSm),
+    return (0, r.jsx)('div', {
+        className: o()(u.row, u.gapSm),
         style: { alignItems: 'center' },
         children: t.map((e) =>
-            (0, i.jsx)(
+            (0, r.jsx)(
                 c.ua7,
                 {
                     text: (function (e) {
                         switch (e) {
-                            case o.z.DESKTOP:
+                            case l.z.DESKTOP:
                                 return d.intl.string(d.t.KT6uCA);
-                            case o.z.XBOX:
+                            case l.z.XBOX:
                                 return d.intl.string(d.t.DDWUJi);
-                            case o.z.PLAYSTATION:
+                            case l.z.PLAYSTATION:
                                 return d.intl.string(d.t.fzMz2t);
-                            case o.z.NINTENDO:
+                            case l.z.NINTENDO:
                                 return d.intl.string(d.t.AMW8jY);
                             default:
                                 return null;
                         }
                     })(e),
                     children: (t) =>
-                        (0, i.jsx)(p, {
+                        (0, r.jsx)(_, {
                             ...t,
                             platform: e
                         })
@@ -70,17 +70,17 @@ function g(e) {
         )
     });
 }
-function _(e) {
+function p(e) {
     let { detectedGame: t, className: n } = e,
-        a = r.useMemo(() => {
+        i = a.useMemo(() => {
             let e = new Set(t.platforms),
                 n = [...e];
-            return !e.has(o.z.DESKTOP) && (e.has(o.z.MACOS) || e.has(o.z.LINUX)) && n.push(o.z.DESKTOP), n.filter((e) => m.includes(e));
+            return !e.has(l.z.DESKTOP) && (e.has(l.z.MACOS) || e.has(l.z.LINUX)) && n.push(l.z.DESKTOP), n.filter((e) => m.includes(e));
         }, [t.platforms]);
-    return 0 === a.length
+    return 0 === i.length
         ? null
-        : (0, i.jsx)('div', {
-              className: l()(u.column, u.gapLg, n),
-              children: a.length > 0 && (0, i.jsx)(g, { platforms: a })
+        : (0, r.jsx)('div', {
+              className: o()(u.column, u.gapLg, n),
+              children: i.length > 0 && (0, r.jsx)(g, { platforms: i })
           });
 }

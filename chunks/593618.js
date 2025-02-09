@@ -23,8 +23,8 @@ var i = n(200651),
     v = n(246364),
     y = n(746916),
     I = n(965638),
-    b = n(160404),
-    T = n(777861),
+    T = n(160404),
+    b = n(777861),
     S = n(565799),
     A = n(501655),
     N = n(517334),
@@ -32,13 +32,13 @@ var i = n(200651),
     R = n(199902),
     O = n(984933),
     D = n(699516),
-    x = n(9156),
-    L = n(594174),
-    P = n(938475),
-    w = n(981631),
+    L = n(9156),
+    x = n(594174),
+    w = n(938475),
+    P = n(981631),
     M = n(388032),
-    k = n(782451),
-    U = n(572488);
+    k = n(222594),
+    U = n(577187);
 function G(e) {
     let t = e.id,
         n = (0, u.Wu)(
@@ -47,7 +47,7 @@ function G(e) {
                 ...O.ZP.getChannels(t)
                     [O.Zb].filter((e) => {
                         let { channel: t } = e;
-                        return t.type === w.d4z.GUILD_VOICE;
+                        return t.type === P.d4z.GUILD_VOICE;
                     })
                     .map((e) => {
                         let { channel: t } = e;
@@ -59,7 +59,7 @@ function G(e) {
         ),
         i = (0, N.ZP)(t),
         a = r.useMemo(() => i.map((e) => e.id), [i]),
-        s = (0, u.e7)([P.ZP], () => P.ZP.getVoiceStates(t), [t]),
+        s = (0, u.e7)([w.ZP], () => w.ZP.getVoiceStates(t), [t]),
         o = (0, u.Wu)([D.Z], () => D.Z.getBlockedOrIgnoredIDs()),
         { enabled: c } = (0, p.bA)('guild-tooltip'),
         f = l().flatMap(n, (t) => {
@@ -107,25 +107,25 @@ function G(e) {
             [t, c, o]
         ),
         v = (0, u.Wu)(
-            [L.default],
+            [x.default],
             () => {
-                let e = E.map((e) => L.default.getUser(e));
+                let e = E.map((e) => x.default.getUser(e));
                 return c ? (0, _.dq)(e) : e;
             },
             [c, E]
         ),
-        y = (0, u.Wu)([L.default], () => g.map((e) => L.default.getUser(e)), [g]),
+        y = (0, u.Wu)([x.default], () => g.map((e) => x.default.getUser(e)), [g]),
         I = f.filter((e) => !g.includes(e.id) && !E.includes(e.id)),
-        b = c ? (0, _.dq)(I) : I,
-        T = y.filter((e) => null != e && !E.includes(e.id)),
-        x = h.length > 0 || I.length > 0 || T.length > 0 || v.length > 0;
+        T = c ? (0, _.dq)(I) : I,
+        b = y.filter((e) => null != e && !E.includes(e.id)),
+        L = h.length > 0 || I.length > 0 || b.length > 0 || v.length > 0;
     return {
-        voiceUsersToShow: b,
+        voiceUsersToShow: T,
         stageSpeakers: h,
         numStageListeners: m,
-        streamUsersToShow: T,
+        streamUsersToShow: b,
         embeddedActivitiesUsers: v,
-        hasActivity: x
+        hasActivity: L
     };
 }
 function B(e, t, n) {
@@ -189,7 +189,7 @@ function F(e) {
               className: n,
               children: M.intl.string(M.t.fpKdS0)
           })
-        : (0, i.jsx)(T.Z, {
+        : (0, i.jsx)(b.Z, {
               muteConfig: t,
               className: n
           });
@@ -203,10 +203,10 @@ function V(e) {
         p = B(c.hGI, l, n),
         h = B(c.nG3, d, n),
         { isMuted: m, muteConfig: g } = (0, u.cj)(
-            [x.ZP],
+            [L.ZP],
             () => ({
-                isMuted: x.ZP.isMuted(n),
-                muteConfig: x.ZP.getMuteConfig(n)
+                isMuted: L.ZP.isMuted(n),
+                muteConfig: L.ZP.getMuteConfig(n)
             }),
             [n]
         ),
@@ -253,7 +253,7 @@ function Y(e) {
         a = (0, y.E)(t),
         o = null != a ? (0, i.jsx)(H, { guildJoinRequestStatus: a }) : null,
         l = n ? (0, i.jsx)(V, { guild: t }) : null,
-        d = (0, u.e7)([b.Z], () => b.Z.isViewingRoles(t.id)),
+        d = (0, u.e7)([T.Z], () => T.Z.isViewingRoles(t.id)),
         f = null != o ? o : l,
         _ = (0, I.I)(t);
     return (0, i.jsxs)(i.Fragment, {

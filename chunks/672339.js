@@ -1,6 +1,6 @@
 n.d(t, {
     FU: () => I,
-    eH: () => b,
+    eH: () => T,
     wG: () => y
 }),
     n(66153),
@@ -113,7 +113,7 @@ async function I(e, t, n) {
         ),
         i && (0, d.Bh)(e, r, 'Preview');
 }
-function b() {
+function T() {
     let e = s.default.getCurrentUser();
     if (null == e) return;
     let t = (0, l.P)(e);

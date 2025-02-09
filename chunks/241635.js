@@ -17,22 +17,22 @@ function x(e, t) {
             let n = u.Z.getHighestRole(e);
             return !u.Z.isRoleHigher(e, n, t);
         }),
-        p = [],
-        g = (0, m.Z)(e, t);
-    null != g && p.push(g);
-    let f = (0, c.Z)({
+        g = [],
+        p = (0, m.Z)(e, t);
+    null != p && g.push(p);
+    let b = (0, c.Z)({
         id: t.id,
         label: h.intl.string(h.t.sMsaLi)
     });
-    null != f && p.push(f);
-    let b = (null === (n = t.tags) || void 0 === n ? void 0 : n.guild_connections) === null,
-        v = t.managed && !b,
-        _ = null != t && (0, o.pM)(e.id, t.id);
+    null != b && g.push(b);
+    let _ = (null === (n = t.tags) || void 0 === n ? void 0 : n.guild_connections) === null,
+        f = t.managed && !_,
+        v = null != t && (0, o.pM)(e.id, t.id);
     return (
         x ||
+            f ||
             v ||
-            _ ||
-            p.push(
+            g.push(
                 (0, i.jsx)(
                     a.kSQ,
                     {
@@ -47,7 +47,7 @@ function x(e, t) {
                                     body: h.intl.format(h.t['9+nrUV'], { name: t.name }),
                                     cancelText: h.intl.string(h.t['ETE/oK']),
                                     onConfirm: async () => {
-                                        b && (await (0, d.L_)(e.id, t.id, [])), r.Z.deleteRole(e.id, t.id);
+                                        _ && (await (0, d.L_)(e.id, t.id, [])), r.Z.deleteRole(e.id, t.id);
                                     }
                                 });
                             }
@@ -56,6 +56,6 @@ function x(e, t) {
                     'delete-role'
                 )
             ),
-        p
+        g
     );
 }

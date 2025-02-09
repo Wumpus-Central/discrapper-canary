@@ -16,8 +16,8 @@ var s,
     v = n(314897),
     y = n(553795),
     I = n(517100),
-    b = n(158776),
-    T = n(606304),
+    T = n(158776),
+    b = n(606304),
     S = n(979651),
     A = n(626135),
     N = n(81063),
@@ -25,8 +25,8 @@ var s,
     R = n(823379),
     O = n(781518),
     D = n(616922),
-    x = n(981631);
-function L(e, t, n) {
+    L = n(981631);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,8 +39,8 @@ function L(e, t, n) {
         e
     );
 }
-let P = h.Z.get(x.ABu.SPOTIFY),
-    w = 'wss://dealer.spotify.com/?access_token=',
+let w = h.Z.get(L.ABu.SPOTIFY),
+    P = 'wss://dealer.spotify.com/?access_token=',
     M = 'hm://pusher/v1/connections/',
     k = 30 * C.Z.Millis.SECOND,
     U = 30 * C.Z.Millis.SECOND,
@@ -101,7 +101,7 @@ function el(e) {
     });
 }
 function eu(e) {
-    return b.Z.findActivity(e, (e) => null != e.party && null != e.party.id && (0, D.Ps)(e.party.id));
+    return T.Z.findActivity(e, (e) => null != e.party && null != e.party.id && (0, D.Ps)(e.party.id));
 }
 let ec = new Set([WebSocket.CONNECTING, WebSocket.OPEN]);
 class ed {
@@ -114,9 +114,9 @@ class ed {
             (q.info('WS Connecting'),
             (this._requestedDisconnect = !1),
             (this._requestedConnect = !0),
-            ew(this.accountId, this.accessToken)
+            eP(this.accountId, this.accessToken)
                 .then(() => {
-                    (this._requestedConnect = !1), (this.socket = new WebSocket(''.concat(w).concat(this.accessToken))), (this.socket.onopen = this.handleOpen.bind(this)), (this.socket.onmessage = this.handleMessage.bind(this)), (this.socket.onclose = this.socket.onerror = this.handleClose.bind(this));
+                    (this._requestedConnect = !1), (this.socket = new WebSocket(''.concat(P).concat(this.accessToken))), (this.socket.onopen = this.handleOpen.bind(this)), (this.socket.onmessage = this.handleMessage.bind(this)), (this.socket.onclose = this.socket.onerror = this.handleClose.bind(this));
                 })
                 .catch((e) => {
                     q.error(e), (this._requestedConnect = !1), this.handleClose();
@@ -162,27 +162,27 @@ class ed {
         let { type: t, event: n } = e;
         switch (t) {
             case 'PLAYER_STATE_CHANGED':
-                null != n && null != n.state && eP(this.accountId, this.accessToken, n.state);
+                null != n && null != n.state && ew(this.accountId, this.accessToken, n.state);
                 break;
             case 'DEVICE_STATE_CHANGED':
                 this.handleDeviceStateChange();
         }
     }
     constructor(e, t) {
-        L(this, 'accessToken', void 0),
-            L(this, 'accountId', void 0),
-            L(this, 'connectionId', void 0),
-            L(this, 'isPremium', void 0),
-            L(this, 'pingInterval', void 0),
-            L(this, 'backoff', void 0),
-            L(this, 'socket', void 0),
-            L(this, '_requestedDisconnect', !1),
-            L(this, '_requestedConnect', !1),
-            L(
+        x(this, 'accessToken', void 0),
+            x(this, 'accountId', void 0),
+            x(this, 'connectionId', void 0),
+            x(this, 'isPremium', void 0),
+            x(this, 'pingInterval', void 0),
+            x(this, 'backoff', void 0),
+            x(this, 'socket', void 0),
+            x(this, '_requestedDisconnect', !1),
+            x(this, '_requestedConnect', !1),
+            x(
                 this,
                 'handleDeviceStateChange',
                 l().throttle(() => {
-                    (0, O.PW)(this.accountId, this.accessToken), ew(this.accountId, this.accessToken);
+                    (0, O.PW)(this.accountId, this.accessToken), eP(this.accountId, this.accessToken);
                 }, Y)
             ),
             (this.accountId = e),
@@ -232,14 +232,14 @@ function eh(e, t, n) {
     let g = 'presence change';
     n &&
         ((g = 'started'),
-        A.default.track(x.rMx.SPOTIFY_LISTEN_ALONG_STARTED, {
+        A.default.track(L.rMx.SPOTIFY_LISTEN_ALONG_STARTED, {
             party_id: c.id,
             other_user_id: e
         })),
         q.info('Listen along '.concat(g, ': ').concat(o.accountId, ' to ').concat(e, ' playing ').concat(u, ' on ').concat(l.name));
 }
 function em() {
-    A.default.track(x.rMx.SPOTIFY_LISTEN_ALONG_ENDED, {
+    A.default.track(L.rMx.SPOTIFY_LISTEN_ALONG_ENDED, {
         party_id: null != r ? r.partyId : null,
         other_user_id: null != r ? r.userId : null
     });
@@ -255,7 +255,7 @@ function eg() {
     let e = Object.keys(et),
         t = y.Z.getAccounts().filter((e) => {
             let { type: t } = e;
-            return t === x.ABu.SPOTIFY;
+            return t === L.ABu.SPOTIFY;
         });
     if (null == t) return !1;
     let n = t.map((e) => {
@@ -295,7 +295,7 @@ function ey(e) {
         } else (en[t] = [u]), (f = !0);
     }
     n ? null == ea || ea.start(U, eC) : ((s = null), null == ea || ea.stop());
-    let p = y.Z.getAccount(t, x.ABu.SPOTIFY);
+    let p = y.Z.getAccount(t, L.ABu.SPOTIFY);
     if (null == p) return f;
     let h = ei[t],
         g =
@@ -332,8 +332,8 @@ function ey(e) {
             track: s,
             connectionId: t
         }),
-        A.default.track(x.rMx.ACTIVITY_UPDATED, {
-            party_platform: x.ABu.SPOTIFY,
+        A.default.track(L.rMx.ACTIVITY_UPDATED, {
+            party_platform: L.ABu.SPOTIFY,
             track_id: s.id,
             has_images: !0,
             details: s.album.name,
@@ -347,11 +347,11 @@ function eI(e) {
     let { id: t } = e;
     a = t;
 }
-function eb(e) {
+function eT(e) {
     let { accountId: t, devices: n } = e;
     (en[t] = n), q.info('Devices updated for '.concat(t, ':'), n);
 }
-function eT(e) {
+function eb(e) {
     let { accountId: t, deviceId: n } = e;
     ep(t, n);
 }
@@ -401,7 +401,7 @@ function eC() {
     let e = es();
     if (null == e) return;
     let { socket: t } = e;
-    (er = !0), (0, O.wO)(t.accountId, t.accessToken), A.default.track(x.rMx.SPOTIFY_AUTO_PAUSED), q.info('Playback auto paused');
+    (er = !0), (0, O.wO)(t.accountId, t.accessToken), A.default.track(L.rMx.SPOTIFY_AUTO_PAUSED), q.info('Playback auto paused');
 }
 function eR(e) {
     if (e === v.default.getId()) {
@@ -426,25 +426,25 @@ function eD(e) {
         return eR(n) || e;
     }, !1);
 }
-function ex(e) {
+function eL(e) {
     let { accountId: t, isPremium: n } = e,
         i = et[t];
     if (null == i) return !1;
     (i.isPremium = n), q.info('Profile updated for '.concat(t, ': isPremium = ').concat(n));
 }
-function eL(e) {
+function ex(e) {
     let { settings: t } = e;
     if ((null == t ? void 0 : t.desktopSettings) != null) {
         null == ea || ea.stop();
         let { sourceId: e, sound: n } = null == t ? void 0 : t.desktopSettings;
-        null != e && E.ZP.getObservedAppNameForWindow(e) === P.name && n ? (ea = new f.Xp()).start(U, eC) : (null == ea || ea.stop(), (ea = null));
+        null != e && E.ZP.getObservedAppNameForWindow(e) === w.name && n ? (ea = new f.Xp()).start(U, eC) : (null == ea || ea.stop(), (ea = null));
     } else null == t && (null == ea || ea.stop(), (ea = null));
 }
-function eP(e, t, n) {
+function ew(e, t, n) {
     var i, r, a, s, o, l, u, c, d, f, p, h, m, g;
     let E,
         v,
-        { device: y, progress_ms: I, is_playing: b, repeat_state: T, item: S, context: A } = n;
+        { device: y, progress_ms: I, is_playing: T, repeat_state: b, item: S, context: A } = n;
     if (null != S && S.type === D.Hw.TRACK) {
         let e = S.id;
         null != S.linked_from && null != S.linked_from.id && (e = S.linked_from.id),
@@ -512,15 +512,15 @@ function eP(e, t, n) {
                 accountId: e,
                 track: E,
                 volumePercent: null != y ? y.volume_percent : 0,
-                isPlaying: b,
-                repeat: 'off' !== T,
+                isPlaying: T,
+                repeat: 'off' !== b,
                 position: I,
                 context: t,
                 device: y
             });
     });
 }
-function ew(e, t) {
+function eP(e, t) {
     return O.rC
         .get(e, t, {
             url: D.C7.PLAYER,
@@ -529,13 +529,13 @@ function ew(e, t) {
         })
         .then((n) => {
             let i = n.body;
-            null != i ? eP(e, t, i).then(() => n) : el(e);
+            null != i ? ew(e, t, i).then(() => n) : el(e);
         })
         .catch(() => el(e));
 }
 class eM extends (s = c.ZP.Store) {
     initialize() {
-        this.waitFor(y.Z, T.Z), this.syncWith([b.Z], () => eN()), (0, O.k1)();
+        this.waitFor(y.Z, b.Z), this.syncWith([T.Z], () => eN()), (0, O.k1)();
     }
     hasConnectedAccount() {
         return Object.keys(et).length > 0;
@@ -596,7 +596,7 @@ class eM extends (s = c.ZP.Store) {
                 })
                 .join('; '));
         let h = {},
-            m = null != s.image ? (0, N.getAssetFromImageURL)(x.ABu.SPOTIFY, s.image.url) : null;
+            m = null != s.image ? (0, N.getAssetFromImageURL)(L.ABu.SPOTIFY, s.image.url) : null;
         null != s.image && null != m && (h.large_image = m), s.type !== z && (h.large_text = s.name), null != _ && (t = _.uri), (n = null != r && null != r.partyId ? r.partyId : ''.concat(D.lS).concat(v.default.getId()));
         let g = o.length > W ? o.substring(0, W - 3) + '...' : o,
             E = {
@@ -610,7 +610,7 @@ class eM extends (s = c.ZP.Store) {
                 button_urls: []
             },
             y = {
-                name: P.name,
+                name: w.name,
                 assets: h,
                 details: g,
                 state: e,
@@ -620,25 +620,25 @@ class eM extends (s = c.ZP.Store) {
                 },
                 party: { id: n }
             };
-        return c || ((y.sync_id = l), (y.flags = x.xjy.PLAY | x.xjy.SYNC), (y.metadata = E)), y;
+        return c || ((y.sync_id = l), (y.flags = L.xjy.PLAY | L.xjy.SYNC), (y.metadata = E)), y;
     }
 }
-L(eM, 'displayName', 'SpotifyStore');
+x(eM, 'displayName', 'SpotifyStore');
 let ek = new eM(_.Z, {
         USER_CONNECTIONS_UPDATE: eg,
         CONNECTION_OPEN: eg,
         SPOTIFY_ACCOUNT_ACCESS_TOKEN: eE,
         SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE: ev,
-        SPOTIFY_PROFILE_UPDATE: ex,
+        SPOTIFY_PROFILE_UPDATE: eL,
         SPOTIFY_PLAYER_STATE: ey,
         SPOTIFY_PLAYER_PLAY: eI,
         ACTIVITY_PLAY: eS,
         ACTIVITY_SYNC: eA,
         ACTIVITY_SYNC_STOP: em,
-        SPOTIFY_SET_DEVICES: eb,
-        SPOTIFY_SET_ACTIVE_DEVICE: eT,
+        SPOTIFY_SET_DEVICES: eT,
+        SPOTIFY_SET_ACTIVE_DEVICE: eb,
         SPEAKING: eO,
         VOICE_STATE_UPDATES: eD,
-        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: eL
+        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: ex
     }),
     eU = ek;

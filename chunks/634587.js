@@ -111,7 +111,7 @@ var y = Object.getPrototypeOf(function () {}),
         i),
         y
     ),
-    b = function (e) {
+    T = function (e) {
         var t,
             n = Object.create(
                 I,
@@ -159,4 +159,4 @@ var y = Object.getPrototypeOf(function () {}),
             n
         );
     };
-e.exports = b;
+e.exports = T;

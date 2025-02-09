@@ -1,8 +1,8 @@
 n.d(t, {
     Cy: () => C,
-    DY: () => P,
+    DY: () => w,
     FG: () => y,
-    u: () => L
+    u: () => x
 }),
     n(411104),
     n(47120);
@@ -21,7 +21,7 @@ var i,
     h = n(481060),
     m = n(607070),
     g = n(314910),
-    E = n(676937);
+    E = n(200281);
 function v(e, t, n) {
     return (
         t in e
@@ -39,8 +39,8 @@ var y = (function (e) {
     return (e.PRIMARY = 'primary'), (e.NESTED = 'nested'), (e.BLACK = 'black'), (e.GREY = 'grey'), (e.BRAND = 'brand'), (e.GREEN = 'green'), (e.YELLOW = 'yellow'), (e.RED = 'red'), (e.PREMIUM = 'premium'), e;
 })({});
 let I = 16,
-    b = 10,
-    T = 8,
+    T = 10,
+    b = 8,
     S = Object.freeze({}),
     A = Object.freeze({
         top: E.tooltipTop,
@@ -66,10 +66,10 @@ function N(e, t, n) {
         s = i ? 'bottom' : 'right',
         o = '50%',
         l = n;
-    return t === a ? ((o = '0%'), (l += I)) : t === s && ((o = '100%'), (l -= b + b)), { [r]: 'calc('.concat(o, ' + ').concat(l, 'px)') };
+    return t === a ? ((o = '0%'), (l += I)) : t === s && ((o = '100%'), (l -= T + T)), { [r]: 'calc('.concat(o, ' + ').concat(l, 'px)') };
 }
 let C = (e) => {
-        let { targetElementRef: t, align: n = 'center', position: i, color: a, children: s, onNonAccessibleClick: l, tooltipClassName: c, tooltipStyle: d, tooltipContentClassName: f, spacing: _ = T, animationStyle: p, disableTooltipPointerEvents: h = !1, allowOverflow: m = !1, tooltipPointerClassName: v } = e,
+        let { targetElementRef: t, align: n = 'center', position: i, color: a, children: s, onNonAccessibleClick: l, tooltipClassName: c, tooltipStyle: d, tooltipContentClassName: f, spacing: _ = b, animationStyle: p, disableTooltipPointerEvents: h = !1, allowOverflow: m = !1, tooltipPointerClassName: v } = e,
             y = ''.concat('string' == typeof s ? s : '', ':').concat(i);
         return (0, r.jsx)(g.W5, {
             disablePointerEvents: h,
@@ -119,7 +119,7 @@ let C = (e) => {
         scale: 1,
         opacity: 1
     },
-    x = (e) => {
+    L = (e) => {
         let { isVisible: t, onAnimationRest: n, targetElementRef: i, ...s } = e,
             { reducedMotion: o } = a.useContext(p.S);
         return (0, h.Yzy)(
@@ -143,7 +143,7 @@ let C = (e) => {
                 : null
         );
     };
-class L extends (i = a.Component) {
+class x extends (i = a.Component) {
     static getDerivedStateFromProps(e, t) {
         return t.shouldShowTooltip && null == e.text ? { shouldShowTooltip: !1 } : null;
     }
@@ -196,7 +196,7 @@ class L extends (i = a.Component) {
             v = null;
         return (
             (v = e instanceof Function ? (E ? e() : null) : e),
-            (0, r.jsx)(x, {
+            (0, r.jsx)(L, {
                 disableTooltipPointerEvents: g,
                 targetElementRef: this.domElementRef,
                 tooltipStyle: o,
@@ -262,20 +262,20 @@ class L extends (i = a.Component) {
             });
     }
 }
-v(L, 'Colors', y),
-    v(L, 'defaultProps', {
+v(x, 'Colors', y),
+    v(x, 'defaultProps', {
         hideOnClick: !0,
         position: 'top',
         color: 'primary',
         forceOpen: !1,
-        spacing: T,
+        spacing: b,
         shouldShow: !0,
         allowOverflow: !1,
         overflowOnly: !1
     });
-let P = (e) => {
+let w = (e) => {
     let { children: t, className: n, element: i = 'div', ...s } = e;
-    return (0, r.jsx)(L, {
+    return (0, r.jsx)(x, {
         ...s,
         children: (e) =>
             a.createElement(

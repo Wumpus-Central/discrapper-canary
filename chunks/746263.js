@@ -1,40 +1,40 @@
 n.d(t, { Z: () => x }), n(47120), n(642549);
 var i = n(200651),
     s = n(192379),
-    r = n(120356),
-    l = n.n(r),
+    l = n(120356),
+    r = n.n(l),
     a = n(772848),
     o = n(481060),
     c = n(53281),
     d = n(451593),
     u = n(694539),
-    m = n(658234);
-let g = (e) => {
+    h = n(396386);
+let m = (e) => {
         var t, n, s;
-        let { effect: r, onClick: a } = e,
+        let { effect: l, onClick: a } = e,
             { deleteConfig: c } = (0, d.E)();
         return (0, i.jsxs)(o.P3F, {
-            className: m.previewCard,
+            className: h.previewCard,
             onClick: () => {
-                a(r);
+                a(l);
             },
             children: [
                 (0, i.jsx)('div', {
-                    className: m.previewCardImage,
-                    style: { backgroundImage: 'url('.concat(null === (s = r.config) || void 0 === s ? void 0 : null === (n = s.effects) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.base64, ')') }
+                    className: h.previewCardImage,
+                    style: { backgroundImage: 'url('.concat(null === (s = l.config) || void 0 === s ? void 0 : null === (n = s.effects) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.base64, ')') }
                 }),
                 (0, i.jsxs)('div', {
-                    className: l()(m.previewCardFooter, m.row),
+                    className: r()(h.previewCardFooter, h.row),
                     children: [
                         (0, i.jsx)(o.Text, {
                             variant: 'text-md/bold',
-                            children: r.name
+                            children: l.name
                         }),
                         (0, i.jsx)(o.zxk, {
                             color: o.Ttl.RED,
                             look: o.iLD.LINK,
                             onClick: (e) => {
-                                e.preventDefault(), e.stopPropagation(), c(r.id);
+                                e.preventDefault(), e.stopPropagation(), c(l.id);
                             },
                             children: 'Delete'
                         })
@@ -43,43 +43,43 @@ let g = (e) => {
             ]
         });
     },
-    h = () => ({
+    g = () => ({
         id: (0, a.Z)(),
         name: 'New Profile Effect',
         config: { effects: [] }
     });
 function x() {
     let { profileEffects: e, upsertConfig: t } = (0, d.E)(),
-        [n, r] = s.useState(),
+        [n, l] = s.useState(),
         a = s.useRef(null),
         x = (e) => {
             (0, o.showToast)((0, o.createToast)(e, o.ToastType.FAILURE));
         };
     return (0, i.jsxs)('div', {
-        className: m.root,
+        className: h.root,
         children: [
             null == n &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: m.col,
+                            className: h.col,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: m.section,
+                                    className: h.section,
                                     children: (0, i.jsx)(o.X6q, {
                                         variant: 'heading-lg/bold',
                                         children: 'Profile Effects'
                                     })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: m.grid,
+                                    className: h.grid,
                                     children: Object.values(e).map((e) =>
                                         (0, i.jsx)(
-                                            g,
+                                            m,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
-                                                    r(e);
+                                                    l(e);
                                                 }
                                             },
                                             e.id
@@ -89,10 +89,10 @@ function x() {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: l()(m.row, m.end, m.section),
+                            className: r()(h.row, h.end, h.section),
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: m.uploadButton,
+                                    className: h.uploadButton,
                                     children: [
                                         (0, i.jsx)(o.Text, {
                                             variant: 'text-md/normal',
@@ -120,7 +120,7 @@ function x() {
                                 }),
                                 (0, i.jsx)(o.zxk, {
                                     onClick: () => {
-                                        t(h());
+                                        t(g());
                                     },
                                     children: 'Create New Effect'
                                 })
@@ -132,7 +132,7 @@ function x() {
                 (0, i.jsx)(u.Z, {
                     effect: n,
                     back: () => {
-                        r(void 0);
+                        l(void 0);
                     }
                 })
         ]

@@ -52,12 +52,12 @@ function I(e) {
         matchedKeys: n
     };
 }
-function b(e) {
+function T(e) {
     let { feed: t } = e,
         { updatedKeys: n } = I(t.entries);
     return n.size > 0;
 }
-function T() {
+function b() {
     E.clear();
 }
 function S() {
@@ -87,6 +87,6 @@ class A extends (i = l.ZP.Store) {
 }
 m(A, 'displayName', 'ContentInventoryActivityStore');
 let N = new A(u.Z, {
-    CONNECTION_OPEN: T,
-    CONTENT_INVENTORY_SET_FEED: b
+    CONNECTION_OPEN: b,
+    CONTENT_INVENTORY_SET_FEED: T
 });

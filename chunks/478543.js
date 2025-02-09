@@ -15,7 +15,7 @@ var i = n(200651),
     m = n(145022),
     g = n(981631),
     E = n(388032),
-    v = n(520512);
+    v = n(170196);
 function y(e, t) {
     return null != t && null != t.discord_web && e.id === t.discord_web.id && e.type === t.discord_web.type;
 }
@@ -44,7 +44,7 @@ function I(e) {
             : null
     );
 }
-function b() {
+function T() {
     return (0, i.jsxs)(r.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -55,7 +55,7 @@ function b() {
         ]
     });
 }
-function T(e) {
+function b(e) {
     let { subHead: t, buildDetails: n, buttonColor: a, buttonClick: o, buttonText: l, disabled: c = !1, submitting: d = !1 } = e;
     return (0, i.jsxs)(r.Fragment, {
         children: [
@@ -98,7 +98,7 @@ function S(e) {
     let { discord_web: g, discord_developers: v } = a.targetBuildOverride,
         I = null != g ? g : v;
     l()(null != I, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), y(I, r) ? ((n = E.intl.string(E.t.tX4xrq)), (t = o), (i = u.zxk.Colors.RED)) : ((n = E.intl.string(E.t.nOunHB)), (t = s), (i = u.zxk.Colors.GREEN));
-    let b = () => {
+    let T = () => {
         d.Z.isConnected()
             ? c.Z.show({
                   title: E.intl.string(E.t.tiu1l5),
@@ -109,17 +109,17 @@ function S(e) {
               })
             : t();
     };
-    return T({
+    return b({
         subHead: E.intl.string(E.t.RCYGoq),
         buildDetails: I.id,
-        buttonClick: b,
+        buttonClick: T,
         buttonText: n,
         buttonColor: i,
         submitting: f
     });
 }
 function A(e) {
-    return T({
+    return b({
         subHead: E.intl.string(E.t.ODXApK),
         buttonColor: u.zxk.Colors.TRANSPARENT,
         buttonText: 'Invalid',
@@ -168,7 +168,7 @@ let C = (e) => {
                 children: [
                     (0, i.jsx)(f.Z, { className: v.icon }),
                     t
-                        ? b()
+                        ? T()
                         : S({
                               currentOverrides: n,
                               linkMeta: a,

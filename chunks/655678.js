@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -16,18 +16,18 @@ var i = n(200651),
     g = n(443603),
     E = n(957825),
     v = n(388032),
-    y = n(553796);
+    y = n(446016);
 function I(e, t) {
     let { disabled: n, channel: a } = e,
         I = (0, c.Q3)('ChannelMessageConfettiButton'),
-        b = (0, f.LN)(a.id),
-        T = (0, h.V1)('ConfettiButton'),
+        T = (0, f.LN)(a.id),
+        b = (0, h.V1)('ConfettiButton'),
         S = (0, o.e7)([m.Z], () => m.Z.hasLayers()),
         A = r.useCallback(() => {
             (0, f.Rg)(a.id, _.MG.MessageComposerButtons);
         }, [a.id]),
         N = a.isThread(),
-        C = r.useMemo(() => !N && !S, [N, S]) && T ? [l.z.CONFETTI_POTION_UPSELL] : [],
+        C = r.useMemo(() => !N && !S, [N, S]) && b ? [l.z.CONFETTI_POTION_UPSELL] : [],
         [R, O] = (0, d.US)(C);
     return n
         ? null
@@ -46,9 +46,9 @@ function I(e, t) {
                       ref: t,
                       children: (0, i.jsx)(g.Z, {
                           innerClassName: s()(y.button, y.messageConfettiButton),
-                          childClassName: s()(y.messageConfettiIcon, { [y.active]: b }),
+                          childClassName: s()(y.messageConfettiIcon, { [y.active]: T }),
                           onClick: A,
-                          isActive: b,
+                          isActive: T,
                           'aria-label': v.intl.string(v.t.yvN8bG),
                           'aria-haspopup': 'false',
                           children: (0, i.jsx)(u.l22, {
@@ -59,4 +59,4 @@ function I(e, t) {
                   })
           });
 }
-let b = r.memo(r.forwardRef(I));
+let T = r.memo(r.forwardRef(I));

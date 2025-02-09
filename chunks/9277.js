@@ -15,15 +15,15 @@ var i = n(200651),
     m = n(981631),
     g = n(957825),
     E = n(388032),
-    v = n(553796);
+    v = n(446016);
 function y(e, t) {
     let { disabled: n, type: a } = e,
         [y, I] = r.useState(!1),
-        b = (0, l.e7)([_.Z], () => {
+        T = (0, l.e7)([_.Z], () => {
             var e, t;
             return y && Object.values(null !== (t = null === (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
         }),
-        [T, S, A] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
+        [b, S, A] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
         N = r.useRef(0),
         C = r.useCallback(() => {
             I(!0),
@@ -39,12 +39,12 @@ function y(e, t) {
     let R = r.useCallback(() => {
             (0, f.RO)(g.X1.GIF, a);
         }, [a]),
-        { Component: O, events: D, play: x } = (0, u.V)(),
-        L = (0, d.Q3)('ChannelGIFPickerButton');
+        { Component: O, events: D, play: L } = (0, u.V)(),
+        x = (0, d.Q3)('ChannelGIFPickerButton');
     if (n) return null;
-    let P = T === g.X1.GIF && S === a;
+    let w = b === g.X1.GIF && S === a;
     return (0, i.jsx)(c.ua7, {
-        text: b ? E.intl.string(E.t.mE2e8P) : null,
+        text: T ? E.intl.string(E.t.mE2e8P) : null,
         forceOpen: !0,
         children: (e) =>
             (0, i.jsx)('div', {
@@ -56,16 +56,16 @@ function y(e, t) {
                     onMouseEnter: D.onMouseEnter,
                     onMouseLeave: D.onMouseLeave,
                     onClick: () => {
-                        R(), x();
+                        R(), L();
                     },
-                    isActive: P,
+                    isActive: w,
                     pulse: y,
                     'aria-label': E.intl.string(E.t.PtVpk5),
-                    'aria-expanded': P,
+                    'aria-expanded': w,
                     'aria-haspopup': 'dialog',
                     'aria-controls': A,
                     children: (0, i.jsx)(O, {
-                        size: L ? 'refresh_sm' : void 0,
+                        size: x ? 'refresh_sm' : void 0,
                         color: 'currentColor'
                     })
                 })

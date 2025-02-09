@@ -6,7 +6,7 @@ var i = n(200651),
     o = n(697426),
     l = n(603074),
     u = n(388032),
-    c = n(677635);
+    c = n(832264);
 let d = [54, 8, 8, 8];
 function f(e) {
     let { onSelect: t, sound: n } = e,

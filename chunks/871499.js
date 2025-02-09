@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => y,
-    d: () => T
+    d: () => b
 }),
     n(47120);
 var i = n(200651),
@@ -18,19 +18,19 @@ var i = n(200651),
     h = n(618158),
     m = n(362267),
     g = n(388032),
-    E = n(32390);
+    E = n(45601);
 let v = 'https://cdn.discordapp.com/assets/content/3988d11030317ce331a0b327cac18a9c02a693041f9a7695bb13b3d4cb486e11.webm';
 function y(e) {
-    let { label: t, onClick: n, onKeyDown: r, onMouseEnter: a, onMouseLeave: u, onContextMenu: c, className: d, wrapperClassName: f, iconClassName: _, iconColor: p = 'currentColor', iconComponent: m, themeable: g = !1, disabled: v = !1, isActive: y = !1, tooltipPosition: I = 'top', shouldShowTooltip: b = !0, forceTooltipOpen: T = !1, buttonRef: S, grow: A, 'aria-label': N } = e;
+    let { label: t, onClick: n, onKeyDown: r, onMouseEnter: a, onMouseLeave: u, onContextMenu: c, className: d, wrapperClassName: f, iconClassName: _, iconColor: p = 'currentColor', iconComponent: m, themeable: g = !1, disabled: v = !1, isActive: y = !1, tooltipPosition: I = 'top', shouldShowTooltip: T = !0, forceTooltipOpen: b = !1, buttonRef: S, grow: A, 'aria-label': N } = e;
     return (0, i.jsx)(h.Z, {
         children: (0, i.jsx)(l.ua7, {
             position: I,
             text: t,
             'aria-label': N,
-            shouldShow: b,
-            forceOpen: T,
+            shouldShow: T,
+            forceOpen: b,
             children: (e) => {
-                let { onClick: t, onContextMenu: h, onMouseEnter: I, onMouseLeave: b, ...T } = e;
+                let { onClick: t, onContextMenu: h, onMouseEnter: I, onMouseLeave: T, ...b } = e;
                 return (0, i.jsx)(l.zxk, {
                     look: l.zxk.Looks.BLANK,
                     size: l.zxk.Sizes.NONE,
@@ -44,7 +44,7 @@ function y(e) {
                         null == I || I(), null == a || a(e);
                     },
                     onMouseLeave: (e) => {
-                        null == b || b(), null == u || u(e);
+                        null == T || T(), null == u || u(e);
                     },
                     onContextMenu: (e) => {
                         null == h || h(), null == c || c(e);
@@ -53,7 +53,7 @@ function y(e) {
                         null == I || I(), null == a || a(e);
                     },
                     onBlur: (e) => {
-                        null == b || b(), null == u || u(e);
+                        null == T || T(), null == u || u(e);
                     },
                     disabled: v,
                     innerClassName: E.lineHeightReset,
@@ -62,7 +62,7 @@ function y(e) {
                     buttonRef: S,
                     grow: A,
                     'aria-label': N,
-                    ...T,
+                    ...b,
                     children: (0, i.jsx)(m, {
                         size: o.Z.md,
                         className: s()(E.controlIcon, _, {
@@ -86,7 +86,7 @@ let I = {
         activeLight: E.activeLight,
         premiumGradient: E.premiumGradient
     },
-    b = {
+    T = {
         red: E.red,
         white: E.white,
         green: E.green,
@@ -96,31 +96,31 @@ let I = {
         activeLight: E.experimentActiveLight,
         premiumGradient: E.premiumGradient
     };
-function T(e) {
-    let { color: t, ignoreColorForCaret: n = !1, isActive: a = !1, className: o, iconClassName: T, onPopoutClick: S, popoutOpen: A = !1, popoutDisabled: N = !1, premiumGlow: C = !1, fullRegionButton: R = !1, forceGroupedButtons: O = !1, ...D } = e,
-        x = (0, m.Z)(t, a),
-        L = (0, m.Z)(n ? void 0 : t, !1),
-        P = (0, u.Z)('(max-width: 456px)'),
-        w = r.useRef(null),
+function b(e) {
+    let { color: t, ignoreColorForCaret: n = !1, isActive: a = !1, className: o, iconClassName: b, onPopoutClick: S, popoutOpen: A = !1, popoutDisabled: N = !1, premiumGlow: C = !1, fullRegionButton: R = !1, forceGroupedButtons: O = !1, ...D } = e,
+        L = (0, m.Z)(t, a),
+        x = (0, m.Z)(n ? void 0 : t, !1),
+        w = (0, u.Z)('(max-width: 456px)'),
+        P = r.useRef(null),
         M = r.useContext(p.h9);
     r.useEffect(() => {
-        null != w.current && (M ? w.current.pause() : w.current.play());
+        null != P.current && (M ? P.current.pause() : P.current.play());
     }, [M]);
     let { groupedButtons: k } = (0, f.ZP)({ location: 'CenterControlButton' }),
         U = O || k,
-        G = U ? [E.experimentButton, b[x], R && null == S && E.fullRegionButton] : [I[x]],
+        G = U ? [E.experimentButton, T[L], R && null == S && E.fullRegionButton] : [I[L]],
         B = (0, i.jsx)(y, {
             ...D,
             grow: !1,
             onContextMenu: S,
-            iconClassName: s()(T, E.centerIcon, U && E.experimentControlIcon, U && R && null == S && E.fullRegionIcon),
-            className: s()(P ? o : null, E.staticButton, E.centerButton, a && E.active, ...G)
+            iconClassName: s()(b, E.centerIcon, U && E.experimentControlIcon, U && R && null == S && E.fullRegionIcon),
+            className: s()(w ? o : null, E.staticButton, E.centerButton, a && E.active, ...G)
         });
-    return P
+    return w
         ? B
         : U
           ? (0, i.jsxs)('div', {
-                className: s()(E.caretButtonContainer, o, R && null != S && [E.fullRegionDropdownButton, b[x]]),
+                className: s()(E.caretButtonContainer, o, R && null != S && [E.fullRegionDropdownButton, T[L]]),
                 children: [
                     B,
                     null != S
@@ -129,7 +129,7 @@ function T(e) {
                                   'aria-label': g.intl.string(g.t.PdRCRk),
                                   onClick: N ? void 0 : S,
                                   onContextMenu: N ? void 0 : S,
-                                  className: s()(E.contextMenuNubExperiment, b[L], {
+                                  className: s()(E.contextMenuNubExperiment, T[x], {
                                       [E.active]: A,
                                       [E.disabled]: N
                                   }),
@@ -155,7 +155,7 @@ function T(e) {
                                 (0, i.jsx)('div', {
                                     className: E.glow,
                                     children: (0, i.jsx)(d.Z, {
-                                        ref: w,
+                                        ref: P,
                                         loop: !0,
                                         autoPlay: !0,
                                         className: E.glowVideo,
@@ -173,7 +173,7 @@ function T(e) {
                                   'aria-label': g.intl.string(g.t.PdRCRk),
                                   onClick: S,
                                   onContextMenu: S,
-                                  className: s()(E.contextMenuNub, I[x], { [E.active]: A }),
+                                  className: s()(E.contextMenuNub, I[L], { [E.active]: A }),
                                   children: (0, i.jsx)(_.Z, { className: s()(E.contextMenuCaret, { [E.open]: A }) })
                               })
                           })

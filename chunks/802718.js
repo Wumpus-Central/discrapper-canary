@@ -10,15 +10,15 @@ var i = n(200651),
     u = n(682662),
     h = n(662146),
     p = n(678513),
-    g = n(981631),
-    m = n(388032),
-    f = n(477090);
+    m = n(981631),
+    g = n(388032),
+    f = n(437524);
 function _(e) {
     let { target: t } = e,
         o = (0, r.Ie)('fakedoor'),
         p = l.useCallback(() => {
             (0, a.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('22862'), n.e('96252')]).then(n.bind(n, 646202));
+                let { default: e } = await Promise.all([n.e('22862'), n.e('52222')]).then(n.bind(n, 646202));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,
@@ -53,7 +53,7 @@ function _(e) {
                 }),
                 (0, i.jsx)(a.Text, {
                     variant: 'text-xs/normal',
-                    children: m.intl.string(m.t.IIbwAg)
+                    children: g.intl.string(g.t.IIbwAg)
                 })
             ]
         }),
@@ -61,7 +61,7 @@ function _(e) {
     return (0, i.jsxs)(u.H, {
         children: [
             (0, i.jsx)(a.ze6, {
-                theme: g.BRd.DARK,
+                theme: m.BRd.DARK,
                 children: (0, i.jsx)(h.Z, {
                     text: C,
                     tooltipClass: f.tooltip,

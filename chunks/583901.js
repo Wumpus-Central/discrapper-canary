@@ -20,7 +20,7 @@ var r = n(120356),
     p = n(798728),
     h = n(981631),
     m = n(388032),
-    g = n(37037);
+    g = n(736118);
 function E() {
     return (0, i.jsx)('div', {
         className: g.selectionCircle,
@@ -89,24 +89,24 @@ function y(e) {
             .with({ theme: h.BRd.DARKER }, () => g.darkerIcon)
             .with({ theme: h.BRd.MIDNIGHT }, () => g.midnightIcon)
             .otherwise(() => g.darkIcon),
-        b = (0, s.EQ)(t)
+        T = (0, s.EQ)(t)
             .with(h.BRd.LIGHT, () => m.intl.string(m.t.K2sFfn))
             .with(h.BRd.DARK, () => (y ? m.intl.string(m.t.GEaO9P) : m.intl.string(m.t.b8Cei4)))
             .with(h.BRd.DARKER, () => m.intl.string(m.t.b8Cei4))
             .with(h.BRd.MIDNIGHT, () => m.intl.string(m.t.pQwSpa))
             .with('system', () => m.intl.string(m.t['7rOU6u']))
             .exhaustive(),
-        T = (0, c.bWb)().enabled;
+        b = (0, c.bWb)().enabled;
     return (0, i.jsx)(v, {
         onSelect: r,
         isSelected: n,
-        name: b,
+        name: T,
         className: a()(g.defaultThemeSelection, I),
         children:
             'system' === t &&
             (0, i.jsx)('div', {
                 className: g.iconWrapper,
-                children: T ? (0, i.jsx)(c.DuK, { color: E(_) }) : (0, i.jsx)(p.Z, { fill: E(_) })
+                children: b ? (0, i.jsx)(c.DuK, { color: E(_) }) : (0, i.jsx)(p.Z, { fill: E(_) })
             })
     });
 }

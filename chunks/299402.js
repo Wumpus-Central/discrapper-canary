@@ -14,7 +14,7 @@ var i = n(200651),
     I = n(867581),
     f = n(675999),
     N = n(981631),
-    T = n(121828);
+    T = n(485864);
 function E(e) {
     let { transitionState: t, initialSlide: n = f._m.GUILD_TEMPLATES, onSuccess: r, onClose: E, onSlideChange: C, hasJoinButton: S } = e,
         [L, A] = l.useState(n),

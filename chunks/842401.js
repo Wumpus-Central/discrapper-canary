@@ -1,39 +1,39 @@
-n.d(t, { Z: () => l });
-var i = n(200651);
+n.d(t, { Z: () => o });
+var l = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(99690),
-    s = n(388032),
-    o = n(729093);
-let l = (e) => {
+var i = n(481060),
+    r = n(99690),
+    a = n(388032),
+    s = n(588631);
+let o = (e) => {
     let { user: t } = e;
-    return (0, i.jsxs)('div', {
-        className: o.container,
+    return (0, l.jsxs)('div', {
+        className: s.container,
         children: [
-            (0, i.jsx)(r.X6q, {
-                className: o.header,
+            (0, l.jsx)(i.X6q, {
+                className: s.header,
                 variant: 'heading-sm/semibold',
-                children: s.intl.string(s.t['Rsth7+'])
+                children: a.intl.string(a.t['Rsth7+'])
             }),
-            (0, i.jsx)('div', {
-                className: o.userContainer,
-                children: (0, i.jsxs)('div', {
-                    className: o.userInfo,
+            (0, l.jsx)('div', {
+                className: s.userContainer,
+                children: (0, l.jsxs)('div', {
+                    className: s.userInfo,
                     children: [
-                        (0, i.jsx)(a.Z, {
-                            className: o.userIcon,
+                        (0, l.jsx)(r.Z, {
+                            className: s.userIcon,
                             user: t,
-                            size: r.EFr.SIZE_40
+                            size: i.EFr.SIZE_40
                         }),
-                        (0, i.jsxs)('div', {
+                        (0, l.jsxs)('div', {
                             children: [
                                 null != t.globalName &&
-                                    (0, i.jsx)(r.Text, {
+                                    (0, l.jsx)(i.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
                                         children: t.globalName
                                     }),
-                                (0, i.jsx)(r.Text, {
+                                (0, l.jsx)(i.Text, {
                                     color: 'header-secondary',
                                     variant: 'text-sm/normal',
                                     children: t.username

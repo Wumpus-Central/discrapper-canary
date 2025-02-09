@@ -1,47 +1,47 @@
 n.d(t, {
-    HY: () => A,
+    HY: () => C,
     nm: () => I,
-    pU: () => S,
-    y: () => C
+    pU: () => x,
+    y: () => A
 }),
     n(47120),
     n(390547);
-var l = n(192379),
-    i = n(106351),
-    a = n(442837),
+var a = n(192379),
+    l = n(106351),
+    i = n(442837),
     s = n(933557),
     r = n(987509),
     o = n(926491),
     c = n(378233),
-    u = n(131704),
-    d = n(592125),
-    _ = n(496675),
-    h = n(699516),
-    f = n(594174),
+    d = n(131704),
+    u = n(592125),
+    m = n(496675),
+    _ = n(699516),
+    h = n(594174),
     g = n(408433),
-    m = n(823379),
-    E = n(981631),
-    p = n(388032);
+    p = n(823379),
+    f = n(981631),
+    E = n(388032);
 function I(e) {
-    let t = e.map(r.hl).find(m.lm),
-        n = (0, a.e7)([d.Z], () => d.Z.getChannel(t), [t]);
-    return l.useMemo(
+    let t = e.map(r.hl).find(p.lm),
+        n = (0, i.e7)([u.Z], () => u.Z.getChannel(t), [t]);
+    return a.useMemo(
         () =>
             null != n
                 ? n
-                : (0, u.kt)({
+                : (0, d.kt)({
                       id: '1',
-                      type: i.d.DM
+                      type: l.d.DM
                   }),
         [n]
     );
 }
-function A(e, t, n) {
-    let l = n instanceof u.Sf;
-    if (t.isNSFW() && !(l && n.isNSFW())) return { label: p.intl.string(p.t.KgPx1N) };
-    if (l && (0, u.Km)(n.type)) {
-        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !_.Z.can(E.Plq.ATTACH_FILES, n)) return { label: p.intl.string(p.t.P7yvbm) };
-        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !(0, g.eC)(n, _.Z) && !(0, g.En)(e)) return { label: p.intl.string(p.t.Wr4RIS) };
+function C(e, t, n) {
+    let a = n instanceof d.Sf;
+    if (t.isNSFW() && !(a && n.isNSFW())) return { label: E.intl.string(E.t.KgPx1N) };
+    if (a && (0, d.Km)(n.type)) {
+        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !m.Z.can(f.Plq.ATTACH_FILES, n)) return { label: E.intl.string(E.t.P7yvbm) };
+        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !(0, g.eC)(n, m.Z) && !(0, g.En)(e)) return { label: E.intl.string(E.t.Wr4RIS) };
         let t = [
             ...(0, c.cv)(e),
             ...e.messageSnapshots.flatMap((e) => {
@@ -51,7 +51,7 @@ function A(e, t, n) {
         ];
         if (
             t.length > 0 &&
-            !_.Z.can(E.Plq.USE_EXTERNAL_STICKERS, n) &&
+            !m.Z.can(f.Plq.USE_EXTERNAL_STICKERS, n) &&
             t.some((e) =>
                 (function (e, t) {
                     let n = o.Z.getStickerById(e.id);
@@ -59,25 +59,25 @@ function A(e, t, n) {
                 })(e, n)
             )
         )
-            return { label: p.intl.string(p.t['0Yyrub']) };
-        if ((e.hasFlag(E.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(E.iLy.IS_VOICE_MESSAGE))) && !_.Z.can(E.Plq.SEND_VOICE_MESSAGES, n)) return { label: p.intl.string(p.t.quj4DQ) };
+            return { label: E.intl.string(E.t['0Yyrub']) };
+        if ((e.hasFlag(f.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(f.iLy.IS_VOICE_MESSAGE))) && !m.Z.can(f.Plq.SEND_VOICE_MESSAGES, n)) return { label: E.intl.string(E.t.quj4DQ) };
     }
 }
-function S(e, t) {
-    return null != e.rateLimitPerUser && e.rateLimitPerUser > 0 && !(t.can(E.Plq.MANAGE_CHANNELS, e) || t.can(E.Plq.MANAGE_MESSAGES, e));
+function x(e, t) {
+    return null != e.rateLimitPerUser && e.rateLimitPerUser > 0 && !(t.can(f.Plq.MANAGE_CHANNELS, e) || t.can(f.Plq.MANAGE_MESSAGES, e));
 }
-function C(e) {
-    let t = (0, a.Wu)(
-        [d.Z, _.Z],
+function A(e) {
+    let t = (0, i.Wu)(
+        [u.Z, m.Z],
         () =>
             e
                 .map((e) => {
                     let { type: t, id: n } = e;
-                    return 'channel' === t ? d.Z.getChannel(n) : null;
+                    return 'channel' === t ? u.Z.getChannel(n) : null;
                 })
-                .filter(m.lm)
-                .filter((e) => S(e, _.Z)),
+                .filter(p.lm)
+                .filter((e) => x(e, m.Z)),
         [e]
     );
-    return (0, a.Wu)([f.default, h.Z], () => t.map((e) => (0, s.F6)(e, f.default, h.Z, !0)), [t]);
+    return (0, i.Wu)([h.default, _.Z], () => t.map((e) => (0, s.F6)(e, h.default, _.Z, !0)), [t]);
 }

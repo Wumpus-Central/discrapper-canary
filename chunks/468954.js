@@ -5,9 +5,9 @@ var i = n(200651),
     s = n(98528),
     o = n(429155),
     l = n(810462),
-    u = n(252084);
+    u = n(89508);
 function c(e) {
-    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: f, onSearchExpressions: _, hasSearchResults: p, defaultSearchPlaceholder: h, emptySearchPlaceholder: m, renderEmptyState: g, renderRow: E, renderSection: v, renderSectionHeader: y, renderSectionFooter: I, renderInspector: b, renderEmptySearchState: T, renderCategoryList: S, renderHeaderAccessories: A, rowHeight: N, sectionHeaderHeight: C, sectionFooterHeight: R, itemNodeWidth: O, listPaddingRight: D, itemNodeMargin: x, listPadding: L, gridNavigatorId: P, gridNotice: w, renderHeader: M, renderUpsell: k, setShowUpsell: U } = e,
+    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: f, onSearchExpressions: _, hasSearchResults: p, defaultSearchPlaceholder: h, emptySearchPlaceholder: m, renderEmptyState: g, renderRow: E, renderSection: v, renderSectionHeader: y, renderSectionFooter: I, renderInspector: T, renderEmptySearchState: b, renderCategoryList: S, renderHeaderAccessories: A, rowHeight: N, sectionHeaderHeight: C, sectionFooterHeight: R, itemNodeWidth: O, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: w, gridNotice: P, renderHeader: M, renderUpsell: k, setShowUpsell: U } = e,
         G = r.useRef(null),
         B = r.useRef(null),
         Z = r.useRef(null),
@@ -31,7 +31,7 @@ function c(e) {
             gridWidth: H,
             listPaddingRight: D,
             itemNodeWidth: O,
-            itemNodeMargin: x
+            itemNodeMargin: L
         }),
         {
             getItemProps: Q,
@@ -45,7 +45,7 @@ function c(e) {
             expressionsGrid: Y,
             onSelectItem: f,
             store: d,
-            gridNavigatorId: P
+            gridNavigatorId: w
         }),
         et = r.useCallback(
             (e, t) =>
@@ -69,8 +69,8 @@ function c(e) {
         er = r.useCallback((e) => (null == I ? void 0 : I(t[e], e)), [t, I]),
         ea = r.useCallback(() => {
             var e;
-            return null == b ? void 0 : b(null == Y ? void 0 : null === (e = Y[j.rowIndex]) || void 0 === e ? void 0 : e[j.columnIndex]);
-        }, [Y, j.columnIndex, j.rowIndex, b]);
+            return null == T ? void 0 : T(null == Y ? void 0 : null === (e = Y[j.rowIndex]) || void 0 === e ? void 0 : e[j.columnIndex]);
+        }, [Y, j.columnIndex, j.rowIndex, T]);
     r.useEffect(() => {
         _(V);
     }, [_, V]),
@@ -91,7 +91,7 @@ function c(e) {
                 hasSendableExpressions: !0,
                 onKeyDown: $,
                 expressionsListRef: B,
-                gridNavigatorId: P,
+                gridNavigatorId: w,
                 defaultSearchPlaceholder: h,
                 emptySearchPlaceholder: m
             }),
@@ -111,15 +111,15 @@ function c(e) {
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           S(B),
-                          null != w &&
+                          null != P &&
                               (0, i.jsx)('div', {
                                   className: u.gridNoticeWrapper,
-                                  children: w
+                                  children: P
                               }),
                           (0, i.jsx)('div', {
                               ref: G,
                               className: u.listWrapper,
-                              id: P,
+                              id: w,
                               ...J,
                               children:
                                   null != H
@@ -128,13 +128,13 @@ function c(e) {
                                             ref: B,
                                             store: d,
                                             hasSearchResults: p,
-                                            listPadding: L,
+                                            listPadding: x,
                                             renderRow: et,
                                             renderSection: null != v ? en : void 0,
                                             renderSectionHeader: null != y ? ei : void 0,
                                             renderSectionFooter: null != I ? er : void 0,
-                                            renderInspector: null != b ? ea : void 0,
-                                            renderEmptySearchState: T,
+                                            renderInspector: null != T ? ea : void 0,
+                                            renderEmptySearchState: b,
                                             rowCount: W,
                                             rowCountBySection: K,
                                             rowHeight: N,

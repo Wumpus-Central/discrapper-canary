@@ -1,33 +1,33 @@
 n.d(t, { Z: () => c }), n(571269), n(298267);
-var s = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(113434),
-    o = n(388032),
-    i = n(597924);
+var o = n(481060),
+    s = n(113434),
+    a = n(388032),
+    i = n(850474);
 function l(e) {
     let { header: t, children: n } = e;
-    return (0, s.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: i.card,
         children: [
-            (0, s.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: i.header,
                 children: [
-                    (0, s.jsx)(r.P4T, {
+                    (0, r.jsx)(o.P4T, {
                         size: 'custom',
                         color: 'currentColor',
                         className: i.icon,
                         width: 16,
                         height: 16
                     }),
-                    (0, s.jsx)(r.X6q, {
+                    (0, r.jsx)(o.X6q, {
                         color: 'text-normal',
                         variant: 'heading-sm/medium',
                         children: t
                     })
                 ]
             }),
-            (0, s.jsx)(r.Text, {
+            (0, r.jsx)(o.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/normal',
                 className: i.warningBody,
@@ -38,18 +38,18 @@ function l(e) {
 }
 let c = function (e) {
     let { quest: t } = e,
-        n = (0, a.qb)(t);
+        n = (0, s.qb)(t);
     if (0 === n.length) return null;
-    let r = n.at(0);
-    return r === o.intl.string(o.t.BV6xDg)
-        ? (0, s.jsx)(l, {
-              header: o.intl.string(o.t.onh6cn),
-              children: o.intl.string(o.t.arVHRE)
+    let o = n.at(0);
+    return o === a.intl.string(a.t.BV6xDg)
+        ? (0, r.jsx)(l, {
+              header: a.intl.string(a.t.onh6cn),
+              children: a.intl.string(a.t.arVHRE)
           })
-        : r === o.intl.string(o.t.MFGxFB)
-          ? (0, s.jsx)(l, {
-                header: o.intl.string(o.t.JPihZG),
-                children: o.intl.string(o.t.MFGxFB)
+        : o === a.intl.string(a.t.MFGxFB)
+          ? (0, r.jsx)(l, {
+                header: a.intl.string(a.t.JPihZG),
+                children: a.intl.string(a.t.MFGxFB)
             })
           : null;
 };

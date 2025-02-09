@@ -19,16 +19,16 @@ function a(e, t) {
             y = n[7];
         o && (i.push(o), (o = ''));
         var I = null != h && null != p && p !== h,
-            b = '+' === v || '*' === v,
-            T = '?' === v || '*' === v,
+            T = '+' === v || '*' === v,
+            b = '?' === v || '*' === v,
             S = n[2] || l,
             A = g || E;
         i.push({
             name: m || a++,
             prefix: h || '',
             delimiter: S,
-            optional: T,
-            repeat: b,
+            optional: b,
+            repeat: T,
             partial: I,
             asterisk: !!y,
             pattern: A ? d(A) : y ? '.*' : '[^' + c(S) + ']+?'

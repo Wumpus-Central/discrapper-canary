@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -14,7 +14,7 @@ var i = n(200651),
     g = n(34305),
     _ = n(981631),
     f = n(388032),
-    E = n(330580);
+    E = n(800280);
 function I(e) {
     let { applicationViewItems: t, restoreApplication: n } = e;
     if (0 === t.length) return null;
@@ -139,7 +139,7 @@ class C extends l.PureComponent {
                 : (this[t] = n);
     }
 }
-function N() {
+function v() {
     let e = {
         installShortcutDesktop: c.Xc.useSetting(),
         installShortcutStartMenu: c.Pe.useSetting(),

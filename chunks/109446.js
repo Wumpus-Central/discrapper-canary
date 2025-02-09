@@ -10,27 +10,27 @@ var i = n(200651),
     u = n(601070),
     h = n(91159),
     p = n(488131),
-    g = n(496675),
-    m = n(306680),
+    m = n(496675),
+    g = n(306680),
     f = n(594174),
     _ = n(768581),
     v = n(709054),
     C = n(981631),
     x = n(124368),
     Z = n(388032),
-    I = n(247472);
+    I = n(968484);
 function b(e) {
     let { channel: t } = e,
-        r = (0, o.Wu)([u.Z, m.ZP, g.Z], () => {
+        r = (0, o.Wu)([u.Z, g.ZP, m.Z], () => {
             let e = u.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
             return a()(u.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
                 .values()
                 .map((e) => e.channel)
                 .concat(a().values(u.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
-                .filter((t) => !(t.id in e) && g.Z.can(C.Plq.VIEW_CHANNEL, t))
+                .filter((t) => !(t.id in e) && m.Z.can(C.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
-                    let n = m.ZP.lastMessageId(e.id),
-                        i = m.ZP.lastMessageId(t.id);
+                    let n = g.ZP.lastMessageId(e.id),
+                        i = g.ZP.lastMessageId(t.id);
                     return v.default.compare(n, i);
                 })
                 .reverse()

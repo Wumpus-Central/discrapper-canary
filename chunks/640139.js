@@ -2,7 +2,7 @@ s.d(a, { default: () => d });
 var n = s(200651),
     o = s(481060),
     t = s(773),
-    i = s(601978);
+    i = s(589694);
 function d(e) {
     let { powerup: a, ...s } = e;
     return (0, n.jsxs)(o.Y0X, {

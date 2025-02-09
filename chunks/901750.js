@@ -2,30 +2,30 @@ n.d(t, { Z: () => a });
 var i = n(200651);
 n(192379);
 var s = n(481060),
-    r = n(388032),
-    l = n(597479);
+    l = n(388032),
+    r = n(684347);
 let a = function (e) {
     let { hasGuildBoostSlots: t, hasAppliedGuildBoosts: a, hasBoostPerk: o, canAddBoosts: c } = e;
     return (0, i.jsxs)('div', {
-        className: l.wrapper,
+        className: r.wrapper,
         children: [
             (0, i.jsx)('div', {
-                className: l.guildBoostGemWrapper,
+                className: r.guildBoostGemWrapper,
                 children: (0, i.jsx)('img', {
                     alt: '',
-                    className: l.guildBoostGem,
+                    className: r.guildBoostGem,
                     src: n(908635)
                 })
             }),
             (0, i.jsxs)('div', {
-                className: l.gradient,
+                className: r.gradient,
                 children: [
                     (0, i.jsx)(s.X6q, {
                         variant: 'display-md',
-                        className: l.heading,
+                        className: r.heading,
                         children: (function (e) {
                             let { hasGuildBoostSlots: t, hasAppliedGuildBoosts: n, hasBoostPerk: i, canAddBoosts: s } = e;
-                            return s ? (t ? (i && !n ? r.intl.format(r.t.s9zQyM, {}) : r.intl.format(r.t.Rb8Jho, {})) : r.intl.string(r.t['2rh0b2'])) : r.intl.format(r.t.Rb8Jho, {});
+                            return s ? (t ? (i && !n ? l.intl.format(l.t.s9zQyM, {}) : l.intl.format(l.t.Rb8Jho, {})) : l.intl.string(l.t['2rh0b2'])) : l.intl.format(l.t.Rb8Jho, {});
                         })({
                             hasGuildBoostSlots: t,
                             hasBoostPerk: o,
@@ -35,7 +35,7 @@ let a = function (e) {
                     }),
                     (0, i.jsx)('svg', {
                         viewBox: '0 0 660 210',
-                        className: l.wave,
+                        className: r.wave,
                         children: (0, i.jsx)('path', { d: 'M101.3,45.5C57.5,45.9,15.9,82.2,0,99.5V210h660V53.5c-164-137-265.2,32.4-385.8,33.6  C177.7,88.1,158.1,45,101.3,45.5z' })
                     })
                 ]

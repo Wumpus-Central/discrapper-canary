@@ -23,16 +23,16 @@ var i = n(200651),
     v = n(956664),
     y = n(254109),
     I = n(212459),
-    b = n(369171),
-    T = n(683528),
+    T = n(369171),
+    b = n(683528),
     S = n(549635),
     A = n(981631),
     N = n(388032),
-    C = n(563297);
+    C = n(846757);
 let R = 300;
 function O(e) {
     let { src: t, width: n, height: i, options: r, hasMultiple: a = !1 } = e,
-        s = (0, p.Kc)('preloadMediaViewerLazyImage') ? P + w + (a ? M : 0) : 0,
+        s = (0, p.Kc)('preloadMediaViewerLazyImage') ? w + P + (a ? M : 0) : 0,
         { width: o, height: l } = (0, v.zp)(n, i, {
             vertical: s,
             horizontal: 0
@@ -51,11 +51,11 @@ function O(e) {
 function D(e, t) {
     return ((e % t) + t) % t;
 }
-function x(e) {
+function L(e) {
     let { width: t, height: n } = e;
     return null == t || 0 === t || null == n || 0 === n;
 }
-function L(e) {
+function x(e) {
     let { children: t, isObscured: n, src: a } = e,
         [o, l] = r.useState(!1),
         u = r.useCallback(() => {
@@ -85,13 +85,13 @@ function L(e) {
           })
         : (0, i.jsx)(i.Fragment, { children: t(!1) });
 }
-let P = 112,
-    w = 144,
+let w = 112,
+    P = 144,
     M = 64;
 function k(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if ('IMAGE' === e.type) {
-        if (x(e)) {
+        if (L(e)) {
             (0, _.po)(e.url);
             return;
         }
@@ -143,7 +143,7 @@ function U(e) {
         );
     }, [v, g]);
     let O = t[_],
-        x = (0, f.KP)(
+        L = (0, f.KP)(
             {
                 type: f.lJ.GenericMedia,
                 media: O
@@ -161,7 +161,7 @@ function U(e) {
             className: C.wrapper,
             children: [
                 G
-                    ? (0, i.jsx)(b.ZP, {
+                    ? (0, i.jsx)(T.ZP, {
                           children: (e) =>
                               (0, i.jsx)(c.M0o, {
                                   className: s()(C.navPrev, e),
@@ -180,8 +180,8 @@ function U(e) {
                         'div',
                         {
                             className: s()(C.mediaWrapper, { [C.hasPreviews]: G }),
-                            children: (0, i.jsx)(L, {
-                                isObscured: !m && x,
+                            children: (0, i.jsx)(x, {
+                                isObscured: !m && L,
                                 src: O.url,
                                 children: (e) =>
                                     (0, i.jsx)(i.Fragment, {
@@ -193,8 +193,8 @@ function U(e) {
                                                 obscured: e,
                                                 onContextMenu: U,
                                                 padding: {
-                                                    top: P,
-                                                    bottom: w + (G ? M : 0)
+                                                    top: w,
+                                                    bottom: P + (G ? M : 0)
                                                 }
                                             })
                                         })
@@ -205,11 +205,11 @@ function U(e) {
                     )
                 }),
                 G
-                    ? (0, i.jsx)(b.ZP, {
+                    ? (0, i.jsx)(T.ZP, {
                           children: (e) =>
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(T.Z, {
+                                      (0, i.jsx)(b.Z, {
                                           items: t,
                                           currentIndex: _,
                                           onGalleryItemClick: p,

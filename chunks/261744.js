@@ -1,8 +1,8 @@
-n.d(t, { Z: () => l }), n(47120);
+n.d(t, { Z: () => r }), n(47120);
 var i = n(442837),
     s = n(687476),
-    r = n(293810);
-function l() {
+    l = n(293810);
+function r() {
     return (0, i.e7)([s.Z], () =>
         (function () {
             let [e] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [s.Z],
@@ -12,10 +12,10 @@ function l() {
                 e.getUserSubscriptionRoles(t).size > 0 && (n = !0);
             }),
             n)
-                ? r.PY.SUBSCRIBED
+                ? l.PY.SUBSCRIBED
                 : 0 === t.size
-                  ? r.PY.NONE
-                  : r.PY.IN_SUBSCRIPTION_SERVER;
+                  ? l.PY.NONE
+                  : l.PY.IN_SUBSCRIPTION_SERVER;
         })([s.Z])
     );
 }

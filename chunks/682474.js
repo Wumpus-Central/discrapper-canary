@@ -72,11 +72,11 @@ function I(e) {
     if (e.isPushNotification || !_(e.message)) return !1;
     e.message.channel_id === c.default.castMessageIdAsChannelId(e.message.id) ? p(e.message.channel_id, null) : p(e.message.channel_id, e.message);
 }
-function b(e) {
+function T(e) {
     if (!_(e.message) || e.message.channel_id === e.message.id) return !1;
     h(e.message.channel_id, e.message);
 }
-function T(e) {
+function b(e) {
     return m(e.channelId, e.id);
 }
 function S(e) {
@@ -106,8 +106,8 @@ d(A, 'displayName', 'ForumPostRecentMessageStore'),
     new A(a.Z, {
         CONNECTION_OPEN: v,
         MESSAGE_CREATE: I,
-        MESSAGE_UPDATE: b,
-        MESSAGE_DELETE: T,
+        MESSAGE_UPDATE: T,
+        MESSAGE_DELETE: b,
         LOAD_FORUM_POSTS: y,
         LOAD_ARCHIVED_THREADS_SUCCESS: S,
         LOAD_THREADS_SUCCESS: S

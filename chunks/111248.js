@@ -11,8 +11,8 @@ var i = n(200651),
     h = n(27457),
     p = n(981631),
     m = n(354459),
-    f = n(186895),
-    g = n(616926);
+    f = n(705135),
+    g = n(60412);
 let _ = 'CameraPreviewPosition';
 function C(e) {
     let { width: t, onContextMenuParticipant: n, height: a, channel: C, participants: x } = e,

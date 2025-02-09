@@ -18,7 +18,7 @@ var i,
     v = n(158776),
     y = n(797258),
     I = n(981631);
-function b(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function b(e, t, n) {
         e
     );
 }
-let T = !1,
+let b = !1,
     S = I.Skl.ONLINE,
     A = I.Skl.UNKNOWN,
     N = 0,
@@ -39,26 +39,26 @@ let T = !1,
     R = !1,
     O = !0,
     D = Object.freeze([]),
-    x = [];
-function L(e) {
+    L = [];
+function x(e) {
     return (0, p.OT)(e, g.Z);
 }
-function P(e) {
-    let t = h.Z.getGameByName(e);
-    return null != t ? L(t.id) : f.G6.getSetting();
-}
 function w(e) {
+    let t = h.Z.getGameByName(e);
+    return null != t ? x(t.id) : f.G6.getSetting();
+}
+function P(e) {
     switch (e.type) {
         case I.IIU.LISTENING:
             if ((0, c.Z)(e)) return d.Z.shouldShowActivity();
-            if (null != e.application_id) return L(e.application_id);
+            if (null != e.application_id) return x(e.application_id);
             return !1;
         case I.IIU.PLAYING:
-            return null != e.application_id ? L(e.application_id) : P(e.name);
+            return null != e.application_id ? x(e.application_id) : w(e.name);
         case I.IIU.STREAMING:
         case I.IIU.WATCHING:
         default:
-            return null == e.application_id || L(e.application_id);
+            return null == e.application_id || x(e.application_id);
     }
 }
 function M() {
@@ -67,30 +67,30 @@ function M() {
 function k() {
     var e;
     if (((N = null !== (e = m.Z.getIdleSince()) && void 0 !== e ? e : 0), (R = m.Z.isAFK()), O)) S = A;
-    else if (T) S = I.Skl.INVISIBLE;
+    else if (b) S = I.Skl.INVISIBLE;
     else {
         let e = f.co.getSetting();
         S = e !== I.Skl.UNKNOWN ? e : I.Skl.ONLINE;
     }
     S === I.Skl.ONLINE && N > 0 && (S = I.Skl.IDLE);
     let t = !1,
-        n = O || S === I.Skl.INVISIBLE ? [] : E.Z.getActivities().filter(w);
+        n = O || S === I.Skl.INVISIBLE ? [] : E.Z.getActivities().filter(P);
     a()(C, n) || ((C = n), (t = !0));
     let i = y.Z.getRemoteActivities();
     D !== i && ((D = i), (t = !0)),
         t &&
-            (x = o()([...C, ...D.filter((e) => e.type !== I.IIU.CUSTOM_STATUS)].sort(v.f))
+            (L = o()([...C, ...D.filter((e) => e.type !== I.IIU.CUSTOM_STATUS)].sort(v.f))
                 .uniqBy((e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name))
                 .value());
 }
 function U(e) {
-    return (T = e.invisible), k();
+    return (b = e.invisible), k();
 }
 function G() {
-    return (T = !1), k();
+    return (b = !1), k();
 }
 function B() {
-    (O = !1), (A = I.Skl.UNKNOWN), k(), v.Z.setCurrentUserOnConnectionOpen(S, x);
+    (O = !1), (A = I.Skl.UNKNOWN), k(), v.Z.setCurrentUserOnConnectionOpen(S, L);
 }
 function Z() {
     B();
@@ -112,11 +112,11 @@ class F extends (i = l.ZP.Store) {
     }
     getActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? x : C;
+        return e ? L : C;
     }
     getPrimaryActivity() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? x[0] : C[0];
+        return e ? L[0] : C[0];
     }
     getApplicationActivity(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -127,7 +127,7 @@ class F extends (i = l.ZP.Store) {
         return this.getActivities(t).find(e);
     }
 }
-b(F, 'displayName', 'SelfPresenceStore');
+T(F, 'displayName', 'SelfPresenceStore');
 let V = new F(u.Z, {
     START_SESSION: k,
     CONNECTION_OPEN: Z,

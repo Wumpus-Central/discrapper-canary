@@ -7,22 +7,22 @@ n.d(t, {
     Fg: () => z,
     G6: () => eo,
     H1: () => O,
-    I0: () => L,
+    I0: () => x,
     L1: () => eI,
     NA: () => eh,
     OW: () => er,
     Ok: () => ed,
     Ou: () => B,
     Pe: () => U,
-    QK: () => eb,
-    QZ: () => T,
+    QK: () => eT,
+    QZ: () => b,
     R$: () => m,
     RS: () => ep,
-    R_: () => ex,
+    R_: () => eL,
     Rt: () => eU,
     SE: () => eN,
     Sb: () => ey,
-    Sh: () => eP,
+    Sh: () => ew,
     T4: () => R,
     UP: () => ea,
     Wp: () => eS,
@@ -31,9 +31,9 @@ n.d(t, {
     Xk: () => D,
     Xr: () => es,
     YC: () => eG,
-    Yk: () => eT,
+    Yk: () => eb,
     _O: () => C,
-    _j: () => eL,
+    _j: () => ex,
     bh: () => $,
     bm: () => ei,
     cC: () => y,
@@ -43,13 +43,13 @@ n.d(t, {
     d4: () => N,
     dN: () => h,
     eR: () => v,
-    eo: () => P,
+    eo: () => w,
     ev: () => q,
     fq: () => E,
     fv: () => S,
-    fz: () => b,
+    fz: () => T,
     gR: () => Y,
-    gw: () => ew,
+    gw: () => eP,
     h2: () => W,
     hg: () => eM,
     iG: () => H,
@@ -60,10 +60,10 @@ n.d(t, {
     l4: () => ek,
     mX: () => V,
     nc: () => em,
-    qF: () => x,
+    qF: () => L,
     rN: () => eg,
     tU: () => ef,
-    uL: () => w,
+    uL: () => P,
     up: () => g,
     vF: () => I,
     x4: () => e_,
@@ -156,13 +156,13 @@ let h = (0, u.Zc)(
     },
     (e) => a.D5.create({ value: e })
 );
-let b = (0, u.Zc)(
+let T = (0, u.Zc)(
         'notifications',
         'reactionNotifications',
         (e) => (null != e ? e : r.Ns.NOTIFICATIONS_ENABLED),
         (e) => e
     ),
-    T = (0, u.Zc)(
+    b = (0, u.Zc)(
         'notifications',
         'quietMode',
         (e) => {
@@ -214,7 +214,7 @@ let b = (0, u.Zc)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    x = (0, u.Zc)(
+    L = (0, u.Zc)(
         'voiceAndVideo',
         'alwaysPreviewVideo',
         (e) => {
@@ -223,23 +223,23 @@ let b = (0, u.Zc)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    L = (0, u.Zc)(
+    x = (0, u.Zc)(
         'voiceAndVideo',
         'disableStreamPreviews',
         (e) => (null == e ? void 0 : e.value),
         (e) => a.D5.create({ value: e })
     ),
-    P = (0, u.Zc)(
+    w = (0, u.Zc)(
         'notifications',
         'notifyFriendsOnGoLive',
         (e) => (null == e ? void 0 : e.value),
         (e) => a.D5.create({ value: e })
     ),
-    w = '0',
+    P = '0',
     M = (0, u.Zc)(
         'notifications',
         'notificationCenterAckedBeforeId',
-        (e) => (null != e ? e : w),
+        (e) => (null != e ? e : P),
         (e) => e
     ),
     k = (0, u.Zc)(
@@ -632,7 +632,7 @@ let ey = (0, u.KM)(
         },
         (e) => ({ backgroundGradientPresetId: null != e.backgroundGradientPresetId ? a.yC.create({ value: e.backgroundGradientPresetId }) : void 0 })
     ),
-    eb = (0, u.R2)(
+    eT = (0, u.R2)(
         (0, u.KM)(
             (0, u.Zc)(
                 'textAndImages',
@@ -657,7 +657,7 @@ let ey = (0, u.KM)(
                 return null === (e = c.Z.getOverride('gifAutoPlay')) || void 0 === e ? void 0 : e.value;
             })
     ),
-    eT = (0, u.R2)(
+    eb = (0, u.R2)(
         (0, u.KM)(
             (0, u.Zc)(
                 'textAndImages',
@@ -739,7 +739,7 @@ let ey = (0, u.KM)(
         (e) => (null == e ? void 0 : e.value),
         (e) => a.D5.create({ value: e })
     ),
-    ex = (0, u.Zc)(
+    eL = (0, u.Zc)(
         'privacy',
         'hideLegacyUsername',
         (e) => {
@@ -748,7 +748,7 @@ let ey = (0, u.KM)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    eL = (0, u.Zc)(
+    ex = (0, u.Zc)(
         'privacy',
         'allowGameFriendDmsInDiscord',
         (e) => {
@@ -757,7 +757,7 @@ let ey = (0, u.KM)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    eP = (0, u.Zc)(
+    ew = (0, u.Zc)(
         'textAndImages',
         'explicitContentSettings',
         (e) => {
@@ -777,7 +777,7 @@ let ey = (0, u.KM)(
             };
         }
     ),
-    ew = (0, u.Zc)(
+    eP = (0, u.Zc)(
         'textAndImages',
         'keywordFilterSettings',
         (e) => {

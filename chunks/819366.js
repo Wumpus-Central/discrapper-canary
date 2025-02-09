@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(271383),
     y = n(430824),
     I = n(699516),
-    b = n(594174),
-    T = n(5192),
+    T = n(594174),
+    b = n(5192),
     S = n(51144),
     A = n(377668);
 function N(e) {
@@ -51,31 +51,31 @@ function N(e) {
 function C(e) {
     let { className: t, userId: r, channelId: a, parsedUserId: p, content: C, inlinePreview: R = !1, viewingChannelId: O } = e,
         { analyticsLocations: D } = (0, f.ZP)(d.Z.USER_MENTION),
-        x = (0, l.e7)([b.default], () => b.default.getUser(r)),
-        L = (0, l.e7)([E.Z], () => E.Z.getChannel(a)),
-        P = null != L ? L.getGuildId() : null,
-        w =
-            R || null == x || null == P || null == a
+        L = (0, l.e7)([T.default], () => T.default.getUser(r)),
+        x = (0, l.e7)([E.Z], () => E.Z.getChannel(a)),
+        w = null != x ? x.getGuildId() : null,
+        P =
+            R || null == L || null == w || null == a
                 ? void 0
                 : (e) => {
-                      null != L &&
+                      null != x &&
                           (0, c.jW)(e, async () => {
-                              let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('33862'), n.e('98783'), n.e('7717'), n.e('1589')]).then(n.bind(n, 757387));
+                              let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('33862'), n.e('98783'), n.e('7717'), n.e('86779')]).then(n.bind(n, 757387));
                               return (t) =>
                                   (0, i.jsx)(e, {
                                       ...t,
                                       viewingChannelId: O,
-                                      user: x,
-                                      channel: L,
-                                      guildId: P
+                                      user: L,
+                                      channel: x,
+                                      guildId: w
                                   });
                           });
                   },
-        M = S.ZP.useName(x),
-        k = (0, l.e7)([E.Z, v.ZP, I.Z], () => T.ZP.getNickname(P, a, x)),
-        U = y.Z.getGuild(P),
-        G = (0, _.Ib)(U, L) && r === A.fL ? A.jM : null;
-    if (null == x)
+        M = S.ZP.useName(L),
+        k = (0, l.e7)([E.Z, v.ZP, I.Z], () => b.ZP.getNickname(w, a, L)),
+        U = y.Z.getGuild(w),
+        G = (0, _.Ib)(U, x) && r === A.fL ? A.jM : null;
+    if (null == L)
         return (0, i.jsx)(N, {
             userId: p,
             className: t,
@@ -84,7 +84,7 @@ function C(e) {
     let B = (e) =>
         (0, i.jsx)(h.Z, {
             className: t,
-            onContextMenu: w,
+            onContextMenu: P,
             color: G,
             ...e,
             children: '@'.concat(null != k ? k : M)
@@ -98,18 +98,18 @@ function C(e) {
               value: D,
               children: (0, i.jsx)(u.yRy, {
                   preload:
-                      null == x
+                      null == L
                           ? void 0
                           : () =>
-                                (0, m.Z)(x.id, x.getAvatarURL(P, 80), {
-                                    guildId: null != P ? P : void 0,
+                                (0, m.Z)(L.id, L.getAvatarURL(w, 80), {
+                                    guildId: null != w ? w : void 0,
                                     channelId: null != a ? a : void 0
                                 }),
                   renderPopout: (e) => (
-                      s()(null != x, 'Unexpected missing user'),
+                      s()(null != L, 'Unexpected missing user'),
                       (0, i.jsx)(g.Z, {
-                          userId: x.id,
-                          guildId: null != P ? P : void 0,
+                          userId: L.id,
+                          guildId: null != w ? w : void 0,
                           channelId: a,
                           ...e
                       })

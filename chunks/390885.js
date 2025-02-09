@@ -31,7 +31,7 @@ let h = (0, l.U)()(
         }
     }))
 );
-function v(e, t) {
+function _(e, t) {
     let { [e]: n, ...l } = h.getState().flows,
         i = null != n ? n : x(e);
     ((null == i ? void 0 : i.currentStep) == null || i.currentStep !== t) &&
@@ -81,7 +81,7 @@ function N(e, t) {
             });
         });
 }
-function _() {
+function v() {
     return null != h.getState().activeFlow();
 }
 h.subscribe(
@@ -125,10 +125,10 @@ h.subscribe(
     }
 );
 let g = {
-    flowStart: v,
+    flowStart: _,
     flowStepOrStart: function (e, t) {
-        _() ? N(e, t) : v(e, t);
+        v() ? N(e, t) : _(e, t);
     },
     flowStep: N,
-    hasActiveFlow: _
+    hasActiveFlow: v
 };

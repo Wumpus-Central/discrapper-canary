@@ -6,7 +6,7 @@ var i = n(120356),
     a = n(481060),
     r = n(888592),
     o = n(388032),
-    c = n(569055);
+    c = n(874635);
 let d = (e) => {
     let { school: t, setStep: n } = e;
     return (0, l.jsxs)('div', {

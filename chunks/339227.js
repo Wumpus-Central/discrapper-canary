@@ -1,4 +1,4 @@
-n.d(t, { Q: () => L }), n(47120), n(411104), n(757143), n(653041);
+n.d(t, { Q: () => x }), n(47120), n(411104), n(757143), n(653041);
 var i = n(512722),
     r = n.n(i),
     a = n(31775),
@@ -141,7 +141,7 @@ function I(e) {
         }
     };
 }
-let b = {
+let T = {
         url: {
             parse: (e) =>
                 null == (0, c.yw)(e[1])
@@ -194,9 +194,9 @@ let b = {
                       }
         }
     },
-    T = /(-# +)/,
-    S = (0, _.Z)([v, b]),
-    A = (0, _.Z)([y, b]),
+    b = /(-# +)/,
+    S = (0, _.Z)([v, T]),
+    A = (0, _.Z)([y, T]),
     N = l._p(S),
     C = l._p(A),
     R = {
@@ -206,7 +206,7 @@ let b = {
     },
     O = new (s())(R),
     D = new (s())(R);
-function x(e, t, n) {
+function L(e, t, n) {
     let i = [],
         r = {
             returnMentionIds: !0,
@@ -230,11 +230,11 @@ function x(e, t, n) {
             type: 'paragraph',
             content: a(l, !0, r)
         };
-    w(i, l, u, 0, []);
-    let c = P(i);
+    P(i, l, u, 0, []);
+    let c = w(i);
     return s.set(e, c), c;
 }
-function L(e, t) {
+function x(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         r = m.rN(e);
@@ -255,7 +255,7 @@ function L(e, t) {
             n += 3 + (null != s.match(m.Q2) ? s : '').length;
             let l = e.substring(a, n);
             '' !== l &&
-                x(l, t, i).forEach((e) => {
+                L(l, t, i).forEach((e) => {
                     o.push({
                         ...e,
                         start: e.start + a
@@ -266,7 +266,7 @@ function L(e, t) {
     }
     return o;
 }
-function P(e) {
+function w(e) {
     if (0 === (e = e.filter((e) => e.text.length > 0)).length) return e;
     let t = [e[0]];
     for (let n = 1; n < e.length; n++) {
@@ -277,7 +277,7 @@ function P(e) {
     }
     return t;
 }
-function w(e, t, n, i, a) {
+function P(e, t, n, i, a) {
     let { content: s, type: o, originalMatch: l } = n;
     switch ((r()(null != l, 'Slate: originalMatch must be set ' + JSON.stringify(n, void 0, 2)), o)) {
         case 'newline':
@@ -398,7 +398,7 @@ function M(e, t, n, i) {
         };
     if ('subtext' === t)
         return {
-            before: T.exec(i.input)[1],
+            before: b.exec(i.input)[1],
             after: ''
         };
     let r = g['link' === t ? 'url' : t];
@@ -418,7 +418,7 @@ function k(e, t, n, i, r) {
               }))
             : (n instanceof Array || (n = [n]),
               n.forEach((n) => {
-                  i = w(e, t, n, i, r);
+                  i = P(e, t, n, i, r);
               })),
         B(t, i)
     );

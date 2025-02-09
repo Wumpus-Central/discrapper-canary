@@ -11,8 +11,8 @@ var l = n(120356),
     u = n(884338),
     h = n(540059),
     p = n(565799),
-    g = n(501655),
-    m = n(199902),
+    m = n(501655),
+    g = n(199902),
     f = n(592125),
     _ = n(594174),
     v = n(938475),
@@ -21,8 +21,8 @@ var l = n(120356),
     Z = n(853856),
     I = n(981631),
     b = n(388032),
-    S = n(782451),
-    N = n(572488);
+    S = n(222594),
+    N = n(577187);
 function E(e, t) {
     return 0 === t.length
         ? null
@@ -64,8 +64,8 @@ function j() {
         ),
         a = (0, s.Wu)([p.Z], () =>
             o().flatMap(l, (e) =>
-                p.Z.getMutableParticipants(e, g.pV.SPEAKER)
-                    .filter((e) => e.type === g.Ui.VOICE)
+                p.Z.getMutableParticipants(e, m.pV.SPEAKER)
+                    .filter((e) => e.type === m.Ui.VOICE)
                     .map((e) => {
                         let { user: t } = e;
                         return t;
@@ -74,13 +74,13 @@ function j() {
         ),
         h = (0, s.e7)([p.Z], () => {
             let e = 0;
-            for (let t of l) e += p.Z.getParticipantCount(t, g.pV.AUDIENCE);
+            for (let t of l) e += p.Z.getParticipantCount(t, m.pV.AUDIENCE);
             return e;
         }),
         b = (0, s.Wu)(
-            [m.Z],
+            [g.Z],
             () =>
-                m.Z.getAllApplicationStreams()
+                g.Z.getAllApplicationStreams()
                     .filter((e) => t.includes(e.channelId))
                     .map((e) => e.ownerId),
             [t]
@@ -104,7 +104,7 @@ function j() {
             c.gj8,
             r.filter((e) => !b.includes(e.id) && !N.includes(e.id))
         ),
-        T =
+        A =
             0 === a.length
                 ? null
                 : (0, i.jsxs)('div', {
@@ -137,13 +137,13 @@ function j() {
                           })
                       ]
                   }),
-        A = E(
+        T = E(
             c.hGI,
             y.filter((e) => null != e && !N.includes(e.id))
         ),
         w = E(c.nG3, j);
     return (0, i.jsxs)(i.Fragment, {
-        children: [T, P, A, w]
+        children: [A, P, T, w]
     });
 }
 function y() {

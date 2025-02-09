@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(100527),
     h = n(906732),
     p = n(243778),
-    g = n(667105),
-    m = n(695346),
+    m = n(667105),
+    g = n(695346),
     f = n(626135),
     _ = n(316496),
     v = n(903002),
@@ -20,7 +20,7 @@ var i = n(200651),
     Z = n(921944),
     I = n(46140),
     b = n(388032),
-    S = n(61260),
+    S = n(845722),
     N = n(204794);
 let E = {
         topLeftDark: 'rgba(62, 22, 137, 0.8)',
@@ -32,8 +32,8 @@ let E = {
         let { closePopout: t, setToggleDefaultState: n } = e,
             { analyticsLocations: l } = (0, h.ZP)(u.Z.SHARING_CONTROLS_COACHMARK),
             a = (0, d.ZP)(),
-            p = m.G6.useSetting(),
-            { assets: g, count: f } = (0, C.fq)();
+            p = g.G6.useSetting(),
+            { assets: m, count: f } = (0, C.fq)();
         return (0, i.jsxs)('div', {
             className: S.wrapper,
             children: [
@@ -78,7 +78,7 @@ let E = {
                                         }),
                                         (0, i.jsx)(s.rsf, {
                                             onChange: (e) => {
-                                                m.G6.updateSetting(e), e && n(e);
+                                                g.G6.updateSetting(e), e && n(e);
                                             },
                                             checked: p
                                         })
@@ -89,7 +89,7 @@ let E = {
                                     children: b.intl.string(b.t.GnhKNz)
                                 }),
                                 (0, i.jsx)(v.D, {
-                                    assets: g,
+                                    assets: m,
                                     assetCount: f,
                                     size: v.F.SMALL
                                 })
@@ -109,8 +109,8 @@ let E = {
     y = (e) => {
         let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: r } = e,
             { rtcPopoutEnabled: o } = (0, _.S)('SharingPrivacyPopout'),
-            c = (0, g.Ws)({ location: I.dr.CONFLICT_CHECKS }),
-            d = m.G6.useSetting(),
+            c = (0, m.Ws)({ location: I.dr.CONFLICT_CHECKS }),
+            d = g.G6.useSetting(),
             [u, h] = (0, l.useState)(!1);
         return ((0, l.useEffect)(() => {
             n && f.default.track(x.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });

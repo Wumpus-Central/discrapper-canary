@@ -1,27 +1,27 @@
 n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(780384),
-    l = n(410030),
-    a = n(119269),
-    o = n(697303);
+    r = n(192379),
+    a = n(780384),
+    s = n(410030),
+    l = n(119269),
+    o = n(176830);
 let c = 'url(#gradient)',
     d = (e, t) => {
         switch (e) {
-            case a.Qo.NITRO_LOGO:
+            case l.Qo.NITRO_LOGO:
                 return t ? '0.3' : '0.2';
-            case a.Qo.NITRO_GEM:
-            case a.Qo.AVATAR_DECO:
+            case l.Qo.NITRO_GEM:
+            case l.Qo.AVATAR_DECO:
             default:
                 return;
         }
     },
     u = (e) => {
         switch (e) {
-            case a.Qo.NITRO_GEM:
-            case a.Qo.AVATAR_DECO:
+            case l.Qo.NITRO_GEM:
+            case l.Qo.AVATAR_DECO:
                 return 'var(--background-primary)';
-            case a.Qo.NITRO_LOGO:
+            case l.Qo.NITRO_LOGO:
                 return 'var(--premium-tier-2-purple)';
             default:
                 return;
@@ -29,31 +29,31 @@ let c = 'url(#gradient)',
     },
     m = (e, t) => {
         switch (t) {
-            case a.Qo.NITRO_GEM:
-            case a.Qo.AVATAR_DECO:
+            case l.Qo.NITRO_GEM:
+            case l.Qo.AVATAR_DECO:
                 return c;
-            case a.Qo.NITRO_LOGO:
+            case l.Qo.NITRO_LOGO:
                 return e ? 'url(#gradient_nitro_logo)' : c;
             default:
                 return;
         }
     },
     g = (e) => {
-        let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: g = 0, progressCircleStrokeSize: h = 2, progressCircleVariation: x, progressCircleStroke: _ } = e,
-            p = 43 + h / 2,
-            E = 2 * Math.PI * p,
-            [C, f] = s.useState(g);
-        s.useEffect(() => {
+        let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: g = 0, progressCircleStrokeSize: _ = 2, progressCircleVariation: p, progressCircleStroke: f } = e,
+            h = 43 + _ / 2,
+            x = 2 * Math.PI * h,
+            [E, C] = r.useState(g);
+        r.useEffect(() => {
             let e = setTimeout(() => {
-                f(t);
+                C(t);
             }, 200);
             return () => clearTimeout(e);
         }, [t]);
-        let T = (0, l.ZP)(),
-            N = (0, r.ap)(T),
-            I = u(x),
-            S = d(x, N),
-            b = null != _ ? _ : m(N, x);
+        let b = (0, s.ZP)(),
+            v = (0, a.ap)(b),
+            T = u(p),
+            N = d(p, v),
+            I = null != f ? f : m(v, p);
         return (0, i.jsxs)('div', {
             className: o.circleContainer,
             children: [
@@ -62,23 +62,23 @@ let c = 'url(#gradient)',
                     className: o.circleSVG,
                     children: [
                         (0, i.jsx)('circle', {
-                            className: x === a.Qo.NITRO_GEM || x === a.Qo.AVATAR_DECO ? o.baseProgressCircle : void 0,
+                            className: p === l.Qo.NITRO_GEM || p === l.Qo.AVATAR_DECO ? o.baseProgressCircle : void 0,
                             fill: 'transparent',
-                            strokeWidth: h,
-                            r: ''.concat(p),
+                            strokeWidth: _,
+                            r: ''.concat(h),
                             cx: '50%',
                             cy: '50%',
-                            stroke: I,
-                            strokeOpacity: S
+                            stroke: T,
+                            strokeOpacity: N
                         }),
                         (0, i.jsx)('circle', {
-                            stroke: b,
-                            strokeWidth: h,
+                            stroke: I,
+                            strokeWidth: _,
                             strokeLinecap: 'round',
-                            strokeDasharray: ''.concat(E, ' ').concat(E),
+                            strokeDasharray: ''.concat(x, ' ').concat(x),
                             className: c,
-                            style: { strokeDashoffset: (1 - C / 100) * E },
-                            r: ''.concat(p),
+                            style: { strokeDashoffset: (1 - E / 100) * x },
+                            r: ''.concat(h),
                             cx: '50%',
                             cy: '50%'
                         })

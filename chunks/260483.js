@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(47120);
+n.d(t, { Z: () => L }), n(47120);
 var i,
     r = n(392711),
     a = n.n(r),
@@ -66,11 +66,11 @@ function I(e) {
     let { channel: t } = e;
     return m(t);
 }
-function b(e) {
+function T(e) {
     let { threads: t } = e;
     t.forEach(m);
 }
-function T(e) {
+function b(e) {
     let { threads: t } = e;
     t.forEach(R);
 }
@@ -126,7 +126,7 @@ class D extends (i = s.ZP.Store) {
     }
 }
 c(D, 'displayName', 'ThreadMembersStore');
-let x = new D(o.Z, {
+let L = new D(o.Z, {
     CONNECTION_OPEN: g,
     OVERLAY_INITIALIZE: E,
     GUILD_CREATE: v,
@@ -134,12 +134,12 @@ let x = new D(o.Z, {
     CHANNEL_DELETE: S,
     THREAD_CREATE: I,
     THREAD_UPDATE: I,
-    THREAD_LIST_SYNC: b,
+    THREAD_LIST_SYNC: T,
     THREAD_MEMBERS_UPDATE: O,
     SEARCH_FINISH: C,
     MOD_VIEW_SEARCH_FINISH: C,
-    LOAD_THREADS_SUCCESS: T,
-    LOAD_ARCHIVED_THREADS_SUCCESS: T,
+    LOAD_THREADS_SUCCESS: b,
+    LOAD_ARCHIVED_THREADS_SUCCESS: b,
     THREAD_DELETE: A,
     LOAD_MESSAGES_SUCCESS: N
 });

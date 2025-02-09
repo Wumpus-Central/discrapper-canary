@@ -23,7 +23,7 @@ var n,
     v = s(251423),
     N = s(981631),
     E = s(388032),
-    k = s(536554),
+    k = s(405386),
     S = (((n = {})[(n.LOGIN_REQUIRED = 0)] = 'LOGIN_REQUIRED'), (n[(n.SWITCHED = 1)] = 'SWITCHED'), (n[(n.REMOVED = 2)] = 'REMOVED'), n);
 function T(e) {
     let { actionText: t, user: s, onAction: n } = e,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var l = n(200651),
     i = n(192379),
     s = n(120356),
@@ -11,17 +11,17 @@ var l = n(200651),
     m = n(686546),
     x = n(565138),
     h = n(601964),
-    v = n(768581),
+    _ = n(768581),
     N = n(888592),
-    _ = n(388032),
-    g = n(728835),
-    f = n(216019);
-function p(e) {
+    v = n(388032),
+    g = n(793786),
+    E = n(216019);
+function I(e) {
     var t;
     let { guildInfo: n, onClick: i, submitting: s } = e,
         a =
             null !==
-                (t = v.ZP.getGuildIconURL({
+                (t = _.ZP.getGuildIconURL({
                     id: n.id,
                     icon: n.icon,
                     size: 40
@@ -53,37 +53,37 @@ function p(e) {
                 : (0, l.jsx)('img', {
                       className: g.__invalid_arrow,
                       alt: '',
-                      src: f
+                      src: E
                   })
         ]
     });
 }
-let E = (e) => {
+let f = (e) => {
     let { setStep: t, email: n, guildsInfo: s, setGuildId: r, forceGuildScrollHeight: m } = e,
         [x, h] = i.useState(null),
-        [v, f] = i.useState(void 0),
-        [E, I] = i.useState(null),
-        S = (e) => async () => {
-            h(null), r(e), I(e);
+        [_, E] = i.useState(void 0),
+        [f, S] = i.useState(null),
+        p = (e) => async () => {
+            h(null), r(e), S(e);
             try {
                 await d.Z.sendVerificationEmail(n, !0, e), t(N.tF.VERIFY_PIN);
             } catch (e) {
                 h(new u.Hx(e));
             } finally {
-                I(null);
+                S(null);
             }
         },
-        j = () => t(N.tF.SUBMIT_SCHOOL),
-        C = s;
+        C = () => t(N.tF.SUBMIT_SCHOOL),
+        T = s;
     return (
-        null != v && '' !== v && (C = s.filter((e) => o()(v.toLowerCase(), e.name.toLowerCase()))),
+        null != _ && '' !== _ && (T = s.filter((e) => o()(_.toLowerCase(), e.name.toLowerCase()))),
         (0, l.jsxs)('div', {
             className: g.container,
             children: [
                 (0, l.jsx)(c.X6q, {
                     className: a()(g.centerText, g.header),
                     variant: 'heading-xl/semibold',
-                    children: _.intl.string(_.t.mOMeiY)
+                    children: v.intl.string(v.t.mOMeiY)
                 }),
                 (0, l.jsx)('div', {
                     className: g.description,
@@ -91,7 +91,7 @@ let E = (e) => {
                         className: g.centerText,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: _.intl.format(_.t.dZeiTE, { onJoinWaitlist: j })
+                        children: v.intl.format(v.t.dZeiTE, { onJoinWaitlist: C })
                     })
                 }),
                 (0, l.jsxs)('div', {
@@ -101,18 +101,18 @@ let E = (e) => {
                             className: g.searchContainer,
                             children: [
                                 (0, l.jsx)(c.Rj2, {
-                                    placeholder: _.intl.string(_.t['5h0QOD']),
+                                    placeholder: v.intl.string(v.t['5h0QOD']),
                                     className: g.searchBox,
                                     inputClassName: g.searchBoxInput,
                                     searchIconClassName: g.searchBoxIcon,
                                     closeIconClassName: g.searchBoxIcon,
                                     onChange: (e) => {
-                                        f(e);
+                                        E(e);
                                     },
-                                    label: _.intl.string(_.t['5h0QOD']),
-                                    searchTerm: v,
+                                    label: v.intl.string(v.t['5h0QOD']),
+                                    searchTerm: _,
                                     onClear: () => {
-                                        f(void 0);
+                                        E(void 0);
                                     }
                                 }),
                                 (0, l.jsx)(c.Text, {
@@ -122,18 +122,18 @@ let E = (e) => {
                                 })
                             ]
                         }),
-                        C.length > 0
+                        T.length > 0
                             ? (0, l.jsx)(c.zJl, {
                                   className: g.scroller,
-                                  children: C.map((e) =>
+                                  children: T.map((e) =>
                                       void 0 === e
                                           ? null
                                           : (0, l.jsx)(
-                                                p,
+                                                I,
                                                 {
                                                     guildInfo: e,
-                                                    onClick: S(e.id),
-                                                    submitting: E === e.id
+                                                    onClick: p(e.id),
+                                                    submitting: f === e.id
                                                 },
                                                 e.id
                                             )
@@ -148,12 +148,12 @@ let E = (e) => {
                                           (0, l.jsx)(c.X6q, {
                                               className: a()(g.centerText, g.header),
                                               variant: 'heading-xl/semibold',
-                                              children: _.intl.string(_.t['1eUrDQ'])
+                                              children: v.intl.string(v.t['1eUrDQ'])
                                           }),
                                           (0, l.jsx)(c.Text, {
                                               className: g.centerText,
                                               variant: 'text-md/normal',
-                                              children: _.intl.format(_.t.flgDKC, { onJoinWaitlist: j })
+                                              children: v.intl.format(v.t.flgDKC, { onJoinWaitlist: C })
                                           })
                                       ]
                                   })

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(47120);
 var i,
     r = n(200651),
-    a = n(192379),
-    l = n(593473),
+    l = n(192379),
+    a = n(593473),
     o = n(442837),
     s = n(544891),
     c = n(481060),
@@ -10,11 +10,11 @@ var i,
     u = n(388905),
     h = n(108427),
     _ = n(598077),
-    g = n(896797),
-    m = n(981631),
+    m = n(896797),
+    g = n(981631),
     p = n(930441),
     f = n(388032),
-    E = n(232186);
+    E = n(814632);
 function x(e, t, n) {
     return (
         t in e
@@ -29,13 +29,13 @@ function x(e, t, n) {
     );
 }
 o.ZP.initialize();
-class I extends (i = a.PureComponent) {
+class I extends (i = l.PureComponent) {
     componentDidMount() {
         let e = (0, d.Z)(this.props.location),
-            t = (0, l.parse)(this.props.location.search);
+            t = (0, a.parse)(this.props.location.search);
         s.tn
             .post({
-                url: m.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+                url: g.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -71,14 +71,14 @@ class I extends (i = a.PureComponent) {
     }
     renderCategorySuccess(e, t) {
         let { defaultRoute: n, transitionTo: i } = this.props,
-            a = f.intl.formatToPlainString(f.t.YDAohI, { category: t });
+            l = f.intl.formatToPlainString(f.t.YDAohI, { category: t });
         return (0, r.jsxs)(u.ZP, {
             children: [
                 (0, r.jsx)(u.Dx, {
                     className: E.marginBottom8,
                     children: f.intl.string(f.t.f6rdLi)
                 }),
-                (0, r.jsx)(u.DK, { children: a }),
+                (0, r.jsx)(u.DK, { children: l }),
                 (0, r.jsx)(u.zx, {
                     className: E.marginTop20,
                     onClick: () => i(n),
@@ -88,7 +88,7 @@ class I extends (i = a.PureComponent) {
                     className: E.marginTop8,
                     color: u.zx.Colors.LINK,
                     look: u.zx.Looks.LINK,
-                    onClick: () => i(m.Z5c.SETTINGS('notifications', p.vG)),
+                    onClick: () => i(g.Z5c.SETTINGS('notifications', p.vG)),
                     children: f.intl.string(f.t.YYTira)
                 })
             ]
@@ -157,4 +157,4 @@ class I extends (i = a.PureComponent) {
     }
 }
 x(I, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
-let C = o.ZP.connectStores([g.Z], () => ({ defaultRoute: g.Z.defaultRoute }))(I);
+let C = o.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(I);

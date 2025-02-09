@@ -13,7 +13,7 @@ var s = n(481060),
     c = n(388032);
 function u() {
     let { trackView: e, trackClick: t } = (0, l.R)(d.n0.ClipsReminderNotification, { notif_type: d.n0.ClipsReminderNotification }),
-        n = a.Z.getKeybindForAction(o.kg4.SAVE_CLIP);
+        n = a.ZP.getKeybindForAction(o.kg4.SAVE_CLIP);
     if (null == n) return null;
     let u = r.BB(n.shortcut, !0);
     return {

@@ -9,7 +9,7 @@ var i = n(200651),
     c = n(481060),
     d = n(889963),
     f = n(388032),
-    _ = n(695265);
+    _ = n(92537);
 function p(e) {
     let { page: t, totalPageCount: n, disabled: a, onPageChange: o } = e,
         [d, f] = r.useState(!1),
@@ -124,7 +124,7 @@ function h(e) {
             t
         );
     }
-    function b(e) {
+    function T(e) {
         return (0, i.jsx)(
             l.P,
             {
@@ -137,7 +137,7 @@ function h(e) {
             e.key
         );
     }
-    function T(e) {
+    function b(e) {
         return (0, i.jsx)(
             p,
             {
@@ -161,9 +161,9 @@ function h(e) {
                               case d.s.BACK:
                                   return y(e);
                               case d.s.PAGE:
-                                  return b(e);
-                              case d.s.GAP:
                                   return T(e);
+                              case d.s.GAP:
+                                  return b(e);
                               case d.s.NEXT:
                                   return I(e);
                               default:

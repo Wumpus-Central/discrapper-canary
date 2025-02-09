@@ -6,7 +6,7 @@ var i = n(200651),
     a = n(481060),
     o = n(981631),
     c = n(388032),
-    d = n(524910);
+    d = n(482434);
 let u = (e) => {
     let { className: t, tags: n, value: l, onRemoveTag: u, onAddTag: m, onAddTagError: h, maxTaxLength: g, maxTags: x, disabled: p, placeholder: _, ...C } = e,
         [f, v] = r.useState(null != l ? l : ''),

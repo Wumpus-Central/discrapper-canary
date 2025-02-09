@@ -94,7 +94,7 @@ function f(e) {
     );
 }
 function _(e, n, i) {
-    if (e.customInspect && n && x(n.inspect) && n.inspect !== t.inspect && !(n.constructor && n.constructor.prototype === n)) {
+    if (e.customInspect && n && L(n.inspect) && n.inspect !== t.inspect && !(n.constructor && n.constructor.prototype === n)) {
         var r,
             a = n.inspect(i, e);
         return S(a) || (a = _(e, a, i)), a;
@@ -105,7 +105,7 @@ function _(e, n, i) {
         l = f(o);
     if ((e.showHidden && (o = Object.getOwnPropertyNames(n)), D(n) && (o.indexOf('message') >= 0 || o.indexOf('description') >= 0))) return h(n);
     if (0 === o.length) {
-        if (x(n)) {
+        if (L(n)) {
             var u = n.name ? ': ' + n.name : '';
             return e.stylize('[Function' + u + ']', 'special');
         }
@@ -116,7 +116,7 @@ function _(e, n, i) {
     var c = '',
         d = !1,
         y = ['{', '}'];
-    return (v(n) && ((d = !0), (y = ['[', ']'])), x(n) && (c = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), C(n) && (c = ' ' + RegExp.prototype.toString.call(n)), O(n) && (c = ' ' + Date.prototype.toUTCString.call(n)), D(n) && (c = ' ' + h(n)), 0 !== o.length || (d && 0 != n.length))
+    return (v(n) && ((d = !0), (y = ['[', ']'])), L(n) && (c = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), C(n) && (c = ' ' + RegExp.prototype.toString.call(n)), O(n) && (c = ' ' + Date.prototype.toUTCString.call(n)), D(n) && (c = ' ' + h(n)), 0 !== o.length || (d && 0 != n.length))
         ? i < 0
             ? C(n)
                 ? e.stylize(RegExp.prototype.toString.call(n), 'regexp')
@@ -137,7 +137,7 @@ function p(e, t) {
         var n = "'" + JSON.stringify(t).replace(/^"|"$/g, '').replace(/'/g, "\\'").replace(/\\"/g, '"') + "'";
         return e.stylize(n, 'string');
     }
-    return T(t) ? e.stylize('' + t, 'number') : y(t) ? e.stylize('' + t, 'boolean') : I(t) ? e.stylize('null', 'null') : void 0;
+    return b(t) ? e.stylize('' + t, 'number') : y(t) ? e.stylize('' + t, 'boolean') : I(t) ? e.stylize('null', 'null') : void 0;
 }
 function h(e) {
     return '[' + Error.prototype.toString.call(e) + ']';
@@ -205,10 +205,10 @@ function y(e) {
 function I(e) {
     return null === e;
 }
-function b(e) {
+function T(e) {
     return null == e;
 }
-function T(e) {
+function b(e) {
     return 'number' == typeof e;
 }
 function S(e) {
@@ -221,27 +221,27 @@ function N(e) {
     return void 0 === e;
 }
 function C(e) {
-    return R(e) && '[object RegExp]' === P(e);
+    return R(e) && '[object RegExp]' === w(e);
 }
 function R(e) {
     return 'object' == typeof e && null !== e;
 }
 function O(e) {
-    return R(e) && '[object Date]' === P(e);
+    return R(e) && '[object Date]' === w(e);
 }
 function D(e) {
-    return R(e) && ('[object Error]' === P(e) || e instanceof Error);
-}
-function x(e) {
-    return 'function' == typeof e;
+    return R(e) && ('[object Error]' === w(e) || e instanceof Error);
 }
 function L(e) {
+    return 'function' == typeof e;
+}
+function x(e) {
     return null === e || 'boolean' == typeof e || 'number' == typeof e || 'string' == typeof e || 'symbol' == typeof e || void 0 === e;
 }
-function P(e) {
+function w(e) {
     return Object.prototype.toString.call(e);
 }
-function w(e) {
+function P(e) {
     return e < 10 ? '0' + e.toString(10) : e.toString(10);
 }
 (t.debuglog = function (e) {
@@ -286,8 +286,8 @@ function w(e) {
     (t.isArray = v),
     (t.isBoolean = y),
     (t.isNull = I),
-    (t.isNullOrUndefined = b),
-    (t.isNumber = T),
+    (t.isNullOrUndefined = T),
+    (t.isNumber = b),
     (t.isString = S),
     (t.isSymbol = A),
     (t.isUndefined = N),
@@ -298,13 +298,13 @@ function w(e) {
     (t.types.isDate = O),
     (t.isError = D),
     (t.types.isNativeError = D),
-    (t.isFunction = x),
-    (t.isPrimitive = L),
+    (t.isFunction = L),
+    (t.isPrimitive = x),
     (t.isBuffer = n(102439));
 var M = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 function k() {
     var e = new Date(),
-        t = [w(e.getHours()), w(e.getMinutes()), w(e.getSeconds())].join(':');
+        t = [P(e.getHours()), P(e.getMinutes()), P(e.getSeconds())].join(':');
     return [e.getDate(), M[e.getMonth()], t].join(' ');
 }
 function U(e, t) {

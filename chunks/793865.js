@@ -14,15 +14,15 @@ var r = n(512722),
     p = n(981631),
     h = n(388032);
 function m(e) {
-    let { onClose: t, onSelect: n, simplified: r = !1 } = e,
-        m = (0, s.e7)([u.default], () => {
+    let { onClose: t, onSelect: n, simplified: r = !1, appContext: m } = e,
+        g = (0, s.e7)([u.default], () => {
             let e = u.default.getCurrentUser();
             return a()(null != e, 'VideoDeviceMenu: currentUser cannot be undefined'), e;
         }),
-        g = (0, d.Z)(r),
-        E = (0, f.Z)(m.id),
-        v = (0, _.Z)(),
-        y = (0, c.Z)(m.id);
+        E = (0, d.Z)(r),
+        v = (0, f.Z)(g.id, m),
+        y = (0, _.Z)(m),
+        I = (0, c.Z)(g.id);
     return (0, i.jsx)(l.Z, {
         object: p.qAy.CONTEXT_MENU,
         children: (0, i.jsxs)(o.v2r, {
@@ -31,9 +31,9 @@ function m(e) {
             'aria-label': h.intl.string(h.t.F122Gx),
             onSelect: n,
             children: [
-                g,
+                E,
                 (0, i.jsxs)(o.kSQ, {
-                    children: [E, r ? y : null, r ? v : null]
+                    children: [v, r ? I : null, r ? y : null]
                 })
             ]
         })

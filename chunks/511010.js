@@ -1,23 +1,23 @@
 n.d(t, { Z: () => c });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(661824),
-    l = n(46124);
-let u = r.forwardRef(function (e, t) {
-        let { className: n, isBeforeGroup: r = !1, ...a } = e,
-            { children: u } = a;
-        return (0, i.jsx)(o.Z, {
-            ...a,
+var s = n(200651),
+    i = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    l = n(661824),
+    o = n(194240);
+let _ = i.forwardRef(function (e, t) {
+        let { className: n, isBeforeGroup: i = !1, ...r } = e,
+            { children: _ } = r;
+        return (0, s.jsx)(l.Z, {
+            ...r,
             ref: t,
             role: 'separator',
-            'aria-label': 'string' == typeof u ? u : void 0,
-            className: s()(n, {
-                [l.divider]: !0,
-                [l.hasContent]: null != u,
-                [l.beforeGroup]: r
+            'aria-label': 'string' == typeof _ ? _ : void 0,
+            className: a()(n, {
+                [o.divider]: !0,
+                [o.hasContent]: null != _,
+                [o.beforeGroup]: i
             })
         });
     }),
-    c = r.memo(u);
+    c = i.memo(_);

@@ -18,9 +18,9 @@ var i = n(200651),
     v = n(132748),
     y = n(353903),
     I = n(215016),
-    b = n(981631),
-    T = n(388032),
-    S = n(337602);
+    T = n(981631),
+    b = n(388032),
+    S = n(160869);
 function A(e, t, n) {
     return (
         t in e
@@ -39,8 +39,8 @@ function C(e) {
     var t;
     let n = l().sample(l().values(e));
     return {
-        type: b.wI2.FAVORITES,
-        name: T.intl.string(T.t.y3LQCA),
+        type: T.wI2.FAVORITES,
+        name: b.intl.string(b.t.y3LQCA),
         icon: _.r7p,
         src: null != n ? n.src : 'https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif',
         format: null !== (t = null == n ? void 0 : n.format) && void 0 !== t ? t : c.EO.IMAGE
@@ -57,11 +57,11 @@ class R extends r.PureComponent {
         let { name: t, type: n } = e;
         return (0, i.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)('div', { className: n === b.wI2.FAVORITES ? S.categoryFadeBlurple : S.categoryFade }),
+                (0, i.jsx)('div', { className: n === T.wI2.FAVORITES ? S.categoryFadeBlurple : S.categoryFade }),
                 (0, i.jsxs)('div', {
                     className: S.categoryText,
                     children: [
-                        n === b.wI2.TRENDING_GIFS
+                        n === T.wI2.TRENDING_GIFS
                             ? (0, i.jsx)(f.I, {
                                   className: S.categoryIcon,
                                   color: 'currentColor'

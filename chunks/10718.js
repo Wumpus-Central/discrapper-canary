@@ -2,7 +2,7 @@ n.d(t, {
     Hf: () => E,
     JT: () => y,
     Nk: () => m,
-    Qm: () => b,
+    Qm: () => T,
     VB: () => g,
     Xq: () => p,
     YZ: () => I,
@@ -200,7 +200,7 @@ function I(e, t) {
         };
     }, [r.result, n.result, t]);
 }
-function b(e, t, n) {
+function T(e, t, n) {
     let r = (0, l.PL)(!0, !0),
         a = (0, l.em)(e, !0, !0);
     return i.useMemo(() => {
@@ -223,7 +223,7 @@ function b(e, t, n) {
         };
     }, [null == r ? void 0 : r.result, null == a ? void 0 : a.result, t, n]);
 }
-let T = {
+let b = {
     id: 'placeholder-section',
     type: c.Qi.APPLICATION,
     name: ''
@@ -243,6 +243,6 @@ function A(e, t) {
         untranslatedDescription: '',
         displayDescription: '',
         applicationId: '',
-        section: T
+        section: b
     };
 }

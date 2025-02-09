@@ -18,10 +18,10 @@ var i = n(200651),
     v = n(117530),
     y = n(459273),
     I = n(444282),
-    b = n(898463),
-    T = n(981631),
-    S = n(995987),
-    A = n(763971);
+    T = n(898463),
+    b = n(981631),
+    S = n(288348),
+    A = n(595468);
 let N = [];
 function C(e) {
     let { channelId: t, type: n } = e,
@@ -31,7 +31,7 @@ function C(e) {
         {
             isApplicationCommand: O,
             commandOptions: D,
-            commandOptionStates: x
+            commandOptionStates: L
         } = (0, u.cj)([h.Z], () => {
             let e = h.Z.getActiveCommand(t);
             if (null == e)
@@ -47,7 +47,7 @@ function C(e) {
                 commandOptionStates: n
             };
         }),
-        L = r.useMemo(() => {
+        x = r.useMemo(() => {
             var e;
             return null !==
                 (e =
@@ -55,12 +55,12 @@ function C(e) {
                         ? void 0
                         : D.filter((e) => {
                               var t;
-                              return e.type === f.jw.ATTACHMENT && (null == x ? void 0 : null === (t = x[e.name]) || void 0 === t ? void 0 : t.hasValue);
+                              return e.type === f.jw.ATTACHMENT && (null == L ? void 0 : null === (t = L[e.name]) || void 0 === t ? void 0 : t.hasValue);
                           })) && void 0 !== e
                 ? e
                 : [];
-        }, [D, x]),
-        [P, w] = r.useState([]);
+        }, [D, L]),
+        [w, P] = r.useState([]);
     r.useEffect(() => {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
@@ -71,13 +71,13 @@ function C(e) {
         C.focusFirstVisibleItem();
     }, [C]);
     (0, y.yp)({
-        event: T.CkL.FOCUS_ATTACHMENT_AREA,
+        event: b.CkL.FOCUS_ATTACHMENT_AREA,
         handler: M
     });
     let k = {
             isApplicationCommand: O,
-            previousUploadOptions: P,
-            uploadOptions: L
+            previousUploadOptions: w,
+            uploadOptions: x
         },
         U = r.useRef(k);
     r.useEffect(() => {
@@ -93,11 +93,11 @@ function C(e) {
                     e.forEach((e) => {
                         d.Z.remove(t, e.name, n.drafts.type);
                     }),
-                    w(r);
+                    P(r);
             }
-        }, [t, L.length, n]);
+        }, [t, x.length, n]);
     let G = (0, m.Q3)('ChannelAttachmentArea');
-    return (!O && 0 === R.length) || (O && 0 === L.length)
+    return (!O && 0 === R.length) || (O && 0 === x.length)
         ? null
         : (0, i.jsxs)(r.Fragment, {
               children: [
@@ -111,7 +111,7 @@ function C(e) {
                                   ...o,
                                   className: s()(S.channelAttachmentArea, A.scrollbarGhost),
                                   children: O
-                                      ? L.map((e) =>
+                                      ? x.map((e) =>
                                             (0, i.jsx)(
                                                 I.Z,
                                                 {
@@ -124,7 +124,7 @@ function C(e) {
                                         )
                                       : R.map((e) =>
                                             (0, i.jsx)(
-                                                b.Z,
+                                                T.Z,
                                                 {
                                                     channelId: t,
                                                     draftType: n.drafts.type,

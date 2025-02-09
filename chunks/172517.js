@@ -1,10 +1,10 @@
 n.d(t, {
     FW: () => _,
     Pk: () => s,
-    Rq: () => m,
-    W_: () => l,
+    Rq: () => g,
+    W_: () => a,
     dK: () => o,
-    qd: () => g
+    qd: () => m
 }),
     n(518263),
     n(970173),
@@ -23,8 +23,8 @@ n.d(t, {
     n(411104);
 var i = n(512722),
     r = n.n(i),
-    a = n(598077);
-function l() {
+    l = n(598077);
+function a() {
     return window.crypto.subtle.generateKey(
         {
             name: 'RSA-OAEP',
@@ -72,17 +72,17 @@ async function _(e, t) {
         i = await h(e, d(t));
     return n.decode(i);
 }
-async function g(e, t) {
+async function m(e, t) {
     return c(await h(e, d(t)));
 }
-async function m(e, t) {
+async function g(e, t) {
     let n = (t = await _(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == n) throw Error('Invalid encoded user record.');
-    let [, i, r, l, o] = n;
-    return new a.Z({
+    let [, i, r, a, o] = n;
+    return new l.Z({
         id: i,
         discriminator: r,
-        avatar: '0' === l ? null : l,
+        avatar: '0' === a ? null : a,
         username: o
     });
 }

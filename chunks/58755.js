@@ -10,7 +10,7 @@ var a = n(200651),
     u = n(789654),
     h = n(246992),
     m = n(500949),
-    x = n(833999);
+    x = n(923432);
 let _ = Object.keys(m.jQ).map((e) => ({
         value: e,
         label: e
@@ -99,7 +99,7 @@ function b(e) {
     let { scale: t, setState: n, onClose: r } = e,
         { name: c, base: p, darkness: f, lightness: b, showColumnarPalettePreview: g, colorSpace: j, easingStrength: C = 1, useP3ColorSpace: N, steps: T = 26 } = t,
         E = (0, m.XM)(t),
-        y = (0, m.W6)(E, c);
+        S = (0, m.W6)(E, c);
     return (0, a.jsxs)(d.hjN, {
         className: x.paletteSettings,
         children: [
@@ -269,7 +269,7 @@ function b(e) {
                                 let [r, c] = e,
                                     u = (0, m.HI)(c),
                                     h = (0, o.Z)((0, s.Z)('black'), c) > 4.5 ? 'black' : 'white',
-                                    x = y[r];
+                                    x = S[r];
                                 return (0, a.jsxs)(
                                     'div',
                                     {

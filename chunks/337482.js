@@ -1,16 +1,16 @@
-n.d(t, {
-    B2: () => r,
+t.d(n, {
+    B2: () => s,
     gN: () => l
 });
-var i = n(585483),
-    s = n(981631);
-let r = {
+var i = t(585483),
+    r = t(981631);
+let s = {
         binds: ['pageup'],
         comboKeysBindGlobal: !0,
-        action: () => (i.S.dispatchToLastSubscribed(s.CkL.SCROLL_PAGE_UP), !1)
+        action: () => (i.S.dispatchToLastSubscribed(r.CkL.SCROLL_PAGE_UP), !1)
     },
     l = {
         binds: ['pagedown'],
         comboKeysBindGlobal: !0,
-        action: () => (i.S.dispatchToLastSubscribed(s.CkL.SCROLL_PAGE_DOWN), !1)
+        action: () => (i.S.dispatchToLastSubscribed(r.CkL.SCROLL_PAGE_DOWN), !1)
     };

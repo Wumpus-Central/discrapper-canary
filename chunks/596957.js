@@ -17,19 +17,19 @@ var i = n(200651),
     E = n(922611),
     I = n(699516),
     C = n(974042),
-    N = n(451478),
-    v = n(434184),
+    v = n(451478),
+    N = n(434184),
     T = n(701861),
     S = n(437314),
-    Z = n(696577),
-    A = n(163417),
+    A = n(696577),
+    Z = n(163417),
     x = n(830880),
     b = n(492347),
     L = n(42575),
     y = n(617015),
     P = n(981631),
     O = n(388032),
-    R = n(732144);
+    R = n(718762);
 let j = [];
 function D() {
     c.Z.setSection(P.pJs.ADD_FRIEND);
@@ -59,7 +59,7 @@ let k = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, m.ZP)(h.Z.FRIENDS_LIST),
         { rows: r, section: c } = (0, s.cj)([C.ZP], () => C.ZP.getState()),
-        D = (0, s.e7)([N.Z], () => N.Z.isFocused()),
+        D = (0, s.e7)([v.Z], () => v.Z.isFocused()),
         { relationshipCount: k, hasBlockedOrIgnored: U } = (0, s.cj)([I.Z], () => ({
             relationshipCount: I.Z.getRelationshipCount(),
             hasBlockedOrIgnored: I.Z.getBlockedOrIgnoredIDs().length > 0
@@ -77,12 +77,12 @@ let k = function (e) {
             (e) => {
                 switch (c) {
                     case P.pJs.BLOCKED:
-                        return (0, i.jsx)(v.Z, {
+                        return (0, i.jsx)(N.Z, {
                             ...e,
                             isFocused: D
                         });
                     case P.pJs.PENDING:
-                        return (0, i.jsx)(Z.Z, {
+                        return (0, i.jsx)(A.Z, {
                             ...e,
                             isFocused: D,
                             disambiguateGameFriends: H
@@ -232,7 +232,7 @@ let k = function (e) {
                     onClear: K,
                     size: o.E1j.Sizes.MEDIUM
                 }),
-                (0, i.jsx)(A.Z, {
+                (0, i.jsx)(Z.Z, {
                     rows: $,
                     renderRow: W,
                     renderSection: ei,

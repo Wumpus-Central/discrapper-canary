@@ -26,11 +26,11 @@ function I(e, t, n, i, r, a) {
     var s = (t & i) ^ (~t & a);
     return s < 0 && (s += 4294967296), s;
 }
-function b(e, t, n, i, r) {
+function T(e, t, n, i, r) {
     var a = (e & n) ^ (e & r) ^ (n & r);
     return a < 0 && (a += 4294967296), a;
 }
-function T(e, t, n, i, r, a) {
+function b(e, t, n, i, r, a) {
     var s = (t & i) ^ (t & a) ^ (i & a);
     return s < 0 && (s += 4294967296), s;
 }
@@ -62,7 +62,7 @@ function D(e, t) {
     var n = s(e, t, 19) ^ s(t, e, 29) ^ l(e, t, 6);
     return n < 0 && (n += 4294967296), n;
 }
-function x(e, t) {
+function L(e, t) {
     var n = o(e, t, 19) ^ o(t, e, 29) ^ u(e, t, 6);
     return n < 0 && (n += 4294967296), n;
 }
@@ -76,7 +76,7 @@ i.inherits(v, g),
         for (var n = this.W, i = 0; i < 32; i++) n[i] = e[t + i];
         for (; i < n.length; i += 2) {
             var r = D(n[i - 4], n[i - 3]),
-                a = x(n[i - 4], n[i - 3]),
+                a = L(n[i - 4], n[i - 3]),
                 s = n[i - 14],
                 o = n[i - 13],
                 l = R(n[i - 30], n[i - 29]),
@@ -103,28 +103,28 @@ i.inherits(v, g),
             R = this.h[11],
             O = this.h[12],
             D = this.h[13],
-            x = this.h[14],
-            L = this.h[15];
+            L = this.h[14],
+            x = this.h[15];
         a(this.k.length === n.length);
-        for (var P = 0; P < n.length; P += 2) {
-            var w = x,
-                M = L,
+        for (var w = 0; w < n.length; w += 2) {
+            var P = L,
+                M = x,
                 k = N(g, E),
                 U = C(g, E),
                 G = y(g, E, v, R, O, D),
                 B = I(g, E, v, R, O, D),
-                Z = this.k[P],
-                F = this.k[P + 1],
-                V = n[P],
-                j = n[P + 1],
-                H = h(w, M, k, U, G, B, Z, F, V, j),
-                Y = m(w, M, k, U, G, B, Z, F, V, j);
-            (w = S(i, r)), (M = A(i, r));
-            var W = d(w, M, (k = b(i, r, s, o, l, u)), (U = T(i, r, s, o, l, u))),
-                K = f(w, M, k, U);
-            (x = O), (L = D), (O = v), (D = R), (v = g), (R = E), (g = d(_, p, H, Y)), (E = f(p, p, H, Y)), (_ = l), (p = u), (l = s), (u = o), (s = i), (o = r), (i = d(H, Y, W, K)), (r = f(H, Y, W, K));
+                Z = this.k[w],
+                F = this.k[w + 1],
+                V = n[w],
+                j = n[w + 1],
+                H = h(P, M, k, U, G, B, Z, F, V, j),
+                Y = m(P, M, k, U, G, B, Z, F, V, j);
+            (P = S(i, r)), (M = A(i, r));
+            var W = d(P, M, (k = T(i, r, s, o, l, u)), (U = b(i, r, s, o, l, u))),
+                K = f(P, M, k, U);
+            (L = O), (x = D), (O = v), (D = R), (v = g), (R = E), (g = d(_, p, H, Y)), (E = f(p, p, H, Y)), (_ = l), (p = u), (l = s), (u = o), (s = i), (o = r), (i = d(H, Y, W, K)), (r = f(H, Y, W, K));
         }
-        c(this.h, 0, i, r), c(this.h, 2, s, o), c(this.h, 4, l, u), c(this.h, 6, _, p), c(this.h, 8, g, E), c(this.h, 10, v, R), c(this.h, 12, O, D), c(this.h, 14, x, L);
+        c(this.h, 0, i, r), c(this.h, 2, s, o), c(this.h, 4, l, u), c(this.h, 6, _, p), c(this.h, 8, g, E), c(this.h, 10, v, R), c(this.h, 12, O, D), c(this.h, 14, L, x);
     }),
     (v.prototype._digest = function (e) {
         return 'hex' === e ? i.toHex32(this.h, 'big') : i.split32(this.h, 'big');

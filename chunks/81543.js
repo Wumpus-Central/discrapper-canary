@@ -9,7 +9,7 @@ var i,
     a = n.n(s),
     o = n(748780),
     c = n(215569),
-    d = n(400331),
+    d = n(368267),
     u = (((i = {})[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT'), i);
 let m = {
     friction: 10,

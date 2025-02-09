@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => L,
+    ZP: () => x,
     jK: () => O,
     tS: () => D
 }),
@@ -25,16 +25,16 @@ var i,
 let v = window.DiscordNative,
     y = ['jpg', 'jpeg', 'png'],
     I = null,
-    b = null,
     T = null,
+    b = null,
     S = {};
 null != v &&
     ((I = v.remoteApp
         .getVersion()
         .split('.')
         .map((e) => parseInt(e))),
-    (T = null === (i = (r = v.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r)),
-    (b = null === (a = (s = v.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
+    (b = null === (i = (r = v.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r)),
+    (T = null === (a = (s = v.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
 let A = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
     N = !1;
 async function C(e) {
@@ -56,7 +56,7 @@ var O = (function (e) {
     D = (function (e) {
         return (e.VIDEO = 'VIDEO'), (e.MUTE = 'MUTE'), (e.DEAFEN = 'DEAFEN'), (e.DISCONNECT = 'DISCONNECT'), e;
     })({});
-function x(e) {
+function L(e) {
     var t, n, i, r, a, s, o, l;
     return {
         id: S[null !== (t = e.id) && void 0 !== t ? t : ''],
@@ -78,7 +78,7 @@ function x(e) {
         fullscreenType: null !== (l = e.fullscreenType) && void 0 !== l ? l : _.Jx.UNKNOWN
     };
 }
-let L = {
+let x = {
     requireModule: (e) => v.nativeModules.requireModule(e),
     ensureModule: (e) => (h.isPlatformEmbedded ? (__OVERLAY__ && A.has(e) ? Promise.resolve() : v.nativeModules.ensureModule(e)) : Promise.reject(Error('not embedded'))),
     get canBootstrapNewUpdater() {
@@ -131,12 +131,12 @@ let L = {
                         }
                     );
                 }),
-                (e) => t(e.map(x))
+                (e) => t(e.map(L))
             );
         } catch (e) {}
     },
     setCandidateGamesCallback(e) {
-        this.getDiscordUtils().setCandidateGamesCallback((t) => e(t.map(x)));
+        this.getDiscordUtils().setCandidateGamesCallback((t) => e(t.map(L)));
     },
     clearCandidateGamesCallback() {
         this.getDiscordUtils().clearCandidateGamesCallback();
@@ -235,10 +235,10 @@ let L = {
         return I;
     },
     get buildNumber() {
-        return b;
+        return T;
     },
     get moduleVersions() {
-        return T;
+        return b;
     },
     get parsedOSRelease() {
         if (!h.isPlatformEmbedded) return [];
@@ -279,8 +279,8 @@ let L = {
     async downloadVoiceFilterFile(e, t, n) {
         l()(h.isPlatformEmbedded, 'Download voice filter file method called outside native app'), null != m.Z.toURLSafe(e) && (await v.fileManager.maybeDownloadVoiceFilterFile(e, t, n));
     },
-    stopDownloads() {
-        v.fileManager.stopDownloads();
+    stopVoiceFilterDownloads() {
+        v.fileManager.stopVoiceFilterDownloads();
     },
     canCopyImage() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;

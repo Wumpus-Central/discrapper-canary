@@ -8,7 +8,7 @@ var r = n(120356),
     a = n.n(r),
     s = n(481060),
     o = n(388032),
-    l = n(912626);
+    l = n(237152);
 let u = (e) => {
         let { className: t, onClick: n, children: r } = e;
         return (0, i.jsx)(s.eee, {

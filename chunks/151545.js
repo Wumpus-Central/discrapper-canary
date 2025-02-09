@@ -17,11 +17,11 @@ var r = n(442837),
     g = n(263059),
     E = n(981631);
 function v(e) {
-    let { user: t, currentUser: n, activity: v, className: y, onClose: I, profileGuildId: b } = e,
-        { recentActivityTabEnabled: T } = (0, f.O)({ location: 'UserProfileActivityCardWrapper' }),
+    let { user: t, currentUser: n, activity: v, className: y, onClose: I, profileGuildId: T } = e,
+        { recentActivityTabEnabled: b } = (0, f.O)({ location: 'UserProfileActivityCardWrapper' }),
         { recentActivityEnabled: S } = (0, _.i)({ location: 'UserProfileActivityCardWrapper' }),
         A = t.id === n.id,
-        N = (T || S) && !A && !t.bot,
+        N = (b || S) && !A && !t.bot,
         { voiceGuild: C, voiceChannel: R } = (0, r.cj)([c.Z, d.Z, u.Z], () => {
             var e;
             if (!(0, a.Z)(v)) return {};
@@ -42,7 +42,7 @@ function v(e) {
                     user: t,
                     currentUser: n,
                     activity: v,
-                    profileGuildId: b,
+                    profileGuildId: T,
                     className: y,
                     onClose: I
                 })
@@ -61,7 +61,7 @@ function v(e) {
                   application: O,
                   voiceGuild: C,
                   voiceChannel: R,
-                  profileGuildId: b,
+                  profileGuildId: T,
                   className: y,
                   onClose: I
               })

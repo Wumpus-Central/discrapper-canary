@@ -6,8 +6,8 @@ var t = l(200651),
     r = l(481060),
     o = l(493773),
     u = l(958707),
-    c = l(456963),
-    d = l(864073);
+    c = l(760416),
+    d = l(303057);
 function m(e) {
     let { title: n, scrollerClassName: l, scrollerInnerClassName: s, children: m } = e,
         x = i.useRef(null),

@@ -21,8 +21,8 @@ var i = n(67867),
     I = c(function () {
         g.sort(null);
     }),
-    b = f('sort'),
-    T = !c(function () {
+    T = f('sort'),
+    b = !c(function () {
         if (h) return h < 70;
         if (!_ || !(_ > 3)) {
             if (p) return !0;
@@ -74,7 +74,7 @@ i(
     {
         target: 'Array',
         proto: !0,
-        forced: y || !I || !b || !T
+        forced: y || !I || !T || !b
     },
     {
         sort: function (e) {
@@ -82,7 +82,7 @@ i(
             var t,
                 n,
                 i = s(this);
-            if (T) return void 0 === e ? E(i) : E(i, e);
+            if (b) return void 0 === e ? E(i) : E(i, e);
             var r = [],
                 u = o(i);
             for (n = 0; n < u; n++) n in i && v(r, i[n]);

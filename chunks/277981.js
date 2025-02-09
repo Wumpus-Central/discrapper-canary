@@ -16,7 +16,7 @@ var i = n(200651),
     g = n(665692),
     E = n(981631),
     v = n(388032),
-    y = n(781010);
+    y = n(23783);
 let I = {
     results: {
         command: null,
@@ -24,7 +24,7 @@ let I = {
         isLoading: !1
     }
 };
-function b(e, t, n) {
+function T(e, t, n) {
     var i, r;
     let a;
     return (
@@ -35,7 +35,7 @@ function b(e, t, n) {
         }
     );
 }
-function T(e) {
+function b(e) {
     return e.meta.url;
 }
 let S = {
@@ -45,7 +45,7 @@ let S = {
         return r.commands !== m.L8.DISABLED && (r.commands === m.L8.OLD_BUILT_INS ? n.startsWith(g.GI + 'gif') || n.startsWith(g.GI + 'tenor') : (null === (a = d.Z.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.integrationType) === E.q9n.GIF && d.Z.getOptionStates(e.id).query.hasValue);
     },
     queryResults(e, t, n, i, r) {
-        let { command: a, query: o } = b(e, n, i);
+        let { command: a, query: o } = T(e, n, i);
         if (null == a) return I;
         let l = s().findKey(E.nkL, (e) => e.command === a);
         r && null != l && o.length > 0 && u.Z.search(l, o);
@@ -70,7 +70,7 @@ let S = {
                 onHover: c,
                 onClick: f
             } = e,
-            { command: h, query: g } = b(s, l, u);
+            { command: h, query: g } = T(s, l, u);
         if (null == h || 0 === g.length) return null;
         if (n)
             return (0, i.jsx)(o.$jN, {
@@ -78,7 +78,7 @@ let S = {
                 type: o.$jN.Type.SPINNING_CIRCLE
             });
         if (null != t) {
-            var I, T;
+            var I, b;
             let e = !1,
                 n = t.map((t, n) => {
                     if (t.type === E.q9n.GIF) {
@@ -103,7 +103,7 @@ let S = {
                         );
                     }
                 }),
-                o = u.commands === m.L8.OLD_BUILT_INS ? h : null !== (T = null === (I = d.Z.getActiveCommand(s.id)) || void 0 === I ? void 0 : I.integrationTitle) && void 0 !== T ? T : h,
+                o = u.commands === m.L8.OLD_BUILT_INS ? h : null !== (b = null === (I = d.Z.getActiveCommand(s.id)) || void 0 === I ? void 0 : I.integrationTitle) && void 0 !== b ? b : h,
                 l =
                     g.length > 0 && null != o
                         ? v.intl.format(v.t['3njXz8'], {
@@ -142,7 +142,7 @@ let S = {
         if (null == t) return { type: null };
         let u = n[i];
         if (
-            (r === m.QB.INSERT ? a.replaceText(T(u)) : a.sendMessage(T(u)),
+            (r === m.QB.INSERT ? a.replaceText(b(u)) : a.sendMessage(b(u)),
             c.ZP.trackWithMetadata(E.rMx.SEARCH_RESULT_SELECTED, {
                 search_type: E.aib.GIF,
                 index_num: i,

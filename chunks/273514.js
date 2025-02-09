@@ -1,46 +1,46 @@
 n.d(t, { Z: () => c });
-var i = n(200651);
+var l = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(565138),
-    s = n(592125),
-    o = n(430824),
-    l = n(388032),
-    u = n(411773);
+var i = n(481060),
+    r = n(565138),
+    a = n(592125),
+    s = n(430824),
+    o = n(388032),
+    d = n(266469);
 let c = (e) => {
     let { entry: t } = e,
-        n = s.Z.getChannel(t.channelId);
+        n = a.Z.getChannel(t.channelId);
     if (null == n) return null;
-    let c = o.Z.getGuild(n.guild_id);
+    let c = s.Z.getGuild(n.guild_id);
     return null == c
         ? null
-        : (0, i.jsxs)('div', {
-              className: u.container,
+        : (0, l.jsxs)('div', {
+              className: d.container,
               children: [
-                  (0, i.jsx)(r.X6q, {
-                      className: u.header,
+                  (0, l.jsx)(i.X6q, {
+                      className: d.header,
                       variant: 'heading-sm/semibold',
-                      children: l.intl.string(l.t.nTe4HB)
+                      children: o.intl.string(o.t.nTe4HB)
                   }),
-                  (0, i.jsxs)('div', {
-                      className: u.guildContainer,
+                  (0, l.jsxs)('div', {
+                      className: d.guildContainer,
                       children: [
-                          (0, i.jsxs)('div', {
-                              className: u.hubInfo,
+                          (0, l.jsxs)('div', {
+                              className: d.hubInfo,
                               children: [
-                                  (0, i.jsx)(a.Z, {
+                                  (0, l.jsx)(r.Z, {
                                       guild: c,
-                                      size: a.Z.Sizes.MINI,
-                                      className: u.hubIcon
+                                      size: r.Z.Sizes.MINI,
+                                      className: d.hubIcon
                                   }),
-                                  (0, i.jsx)(r.Text, {
+                                  (0, l.jsx)(i.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
                                       children: c.name
                                   })
                               ]
                           }),
-                          (0, i.jsx)(r.Text, {
+                          (0, l.jsx)(i.Text, {
                               variant: 'text-md/semibold',
                               color: 'header-primary',
                               children: t.name

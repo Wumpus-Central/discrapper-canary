@@ -20,20 +20,20 @@ var a = l(200651),
     N = l(410426),
     k = l(207346),
     E = l(356659),
-    Z = l(436898);
+    Z = l(740803);
 function b(e) {
     let { channelId: t, onClose: i, transitionState: r } = e,
         [b, L] = n.useState(''),
         [y, I] = n.useState('descending'),
         [T, M] = n.useState(!0),
         [S, D] = n.useState(null),
-        _ = n.useDeferredValue(b),
-        z = (0, d.e7)([g.Z], () => g.Z.getClips()),
-        P = (0, d.e7)([g.Z], () => g.Z.getPendingClips()),
+        P = n.useDeferredValue(b),
+        _ = (0, d.e7)([g.Z], () => g.Z.getClips()),
+        z = (0, d.e7)([g.Z], () => g.Z.getPendingClips()),
         w = (0, d.e7)([g.Z], () => g.Z.getSettings().storageLocation),
         R = (0, d.Wu)([g.Z], () => g.Z.getNewClipIds()),
         { analyticsLocations: A } = (0, x.ZP)(p.Z.CLIPS_GALLERY),
-        H = n.useMemo(() => [...P, ...z], [z, P]);
+        H = n.useMemo(() => [...z, ..._], [_, z]);
     (0, v.Z)(
         {
             type: c.ImpressionTypes.MODAL,
@@ -56,14 +56,14 @@ function b(e) {
         () =>
             o()(H)
                 .filter((e) => {
-                    if ('' === _.trim()) return !0;
-                    let t = _.toLowerCase();
+                    if ('' === P.trim()) return !0;
+                    let t = P.toLowerCase();
                     return (null != e.name && '' !== e.name && s()(t, e.name.toLowerCase())) || s()(t, e.applicationName.toLowerCase());
                 })
                 .sort((e, t) => ('ascending' === y ? h.default.compare(e.id, t.id) : 'descending' === y ? h.default.compare(t.id, e.id) : 0))
                 .chunk(3)
                 .value(),
-        [H, _, y]
+        [H, P, y]
     );
     n.useEffect(() => {
         !(async function () {

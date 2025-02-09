@@ -1,22 +1,22 @@
 n.d(t, { Z: () => _ }), n(47120);
 var i = n(200651),
     s = n(192379),
-    r = n(442837),
-    l = n(2052),
+    l = n(442837),
+    r = n(2052),
     a = n(921801),
     o = n(932724),
     c = n(716161),
     d = n(672339),
     u = n(938117),
-    m = n(131951),
-    g = n(594174),
-    h = n(726985),
+    h = n(131951),
+    m = n(594174),
+    g = n(726985),
     x = n(981631);
 function _() {
-    let e = (0, l.O)(),
+    let e = (0, r.O)(),
         t = s.useRef(!1),
-        n = (0, r.e7)([m.Z], () => m.Z.getVideoDeviceId()),
-        [_, p] = s.useState((0, o.P)(g.default.getCurrentUser())),
+        n = (0, l.e7)([h.Z], () => h.Z.getVideoDeviceId()),
+        [_, p] = s.useState((0, o.P)(m.default.getCurrentUser())),
         E = s.useRef(_);
     return (
         s.useEffect(
@@ -26,7 +26,7 @@ function _() {
             []
         ),
         (0, i.jsx)(a.F, {
-            setting: h.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
+            setting: g.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
             children: (0, i.jsx)(u.Z, {
                 selectedBackgroundOption: _,
                 onSelectBackgroundOption: (n) => {

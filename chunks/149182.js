@@ -14,7 +14,7 @@
     }
     function d(e, t, n, i) {
         var r = Object.create((t && t.prototype instanceof E ? t : E).prototype),
-            a = new x(i || []);
+            a = new L(i || []);
         return (r._invoke = C(e, n, a)), r;
     }
     function f(e, t, n) {
@@ -43,9 +43,9 @@
     I[s] = function () {
         return this;
     };
-    var b = Object.getPrototypeOf,
-        T = b && b(b(L([])));
-    T && T !== i && r.call(T, s) && (I = T);
+    var T = Object.getPrototypeOf,
+        b = T && T(T(x([])));
+    b && b !== i && r.call(b, s) && (I = b);
     var S = (y.prototype = E.prototype = Object.create(I));
     function A(e) {
         ['next', 'throw', 'return'].forEach(function (t) {
@@ -97,7 +97,7 @@
             if (i === h) throw Error('Generator is already running');
             if (i === m) {
                 if ('throw' === r) throw a;
-                return P();
+                return w();
             }
             for (n.method = r, n.arg = a; ; ) {
                 var s = n.delegate;
@@ -148,10 +148,10 @@
         var t = e.completion || {};
         (t.type = 'normal'), delete t.arg, (e.completion = t);
     }
-    function x(e) {
+    function L(e) {
         (this.tryEntries = [{ tryLoc: 'root' }]), e.forEach(O, this), this.reset(!0);
     }
-    function L(e) {
+    function x(e) {
         if (e) {
             var t = e[s];
             if (t) return t.call(e);
@@ -165,9 +165,9 @@
                 return (a.next = a);
             }
         }
-        return { next: P };
+        return { next: w };
     }
-    function P() {
+    function w() {
         return {
             value: n,
             done: !0
@@ -221,9 +221,9 @@
                 }
             );
         }),
-        (c.values = L),
-        (x.prototype = {
-            constructor: x,
+        (c.values = x),
+        (L.prototype = {
+            constructor: L,
             reset: function (e) {
                 if (((this.prev = 0), (this.next = 0), (this.sent = this._sent = n), (this.done = !1), (this.delegate = null), (this.method = 'next'), (this.arg = n), this.tryEntries.forEach(D), !e)) for (var t in this) 't' === t.charAt(0) && r.call(this, t) && !isNaN(+t.slice(1)) && (this[t] = n);
             },
@@ -296,7 +296,7 @@
             delegateYield: function (e, t, i) {
                 return (
                     (this.delegate = {
-                        iterator: L(e),
+                        iterator: x(e),
                         resultName: t,
                         nextLoc: i
                     }),

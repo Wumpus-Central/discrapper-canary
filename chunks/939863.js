@@ -1,27 +1,27 @@
-t.d(e, { Z: () => c });
+t.d(n, { Z: () => c });
 var i = t(200651);
 t(192379);
-var a = t(120356),
-    r = t.n(a),
-    o = t(388032),
-    l = t(443644),
-    d = t(296507),
-    _ = t(866402);
-function c(n) {
-    let { className: e, children: t } = n;
+var l = t(120356),
+    a = t.n(l),
+    r = t(388032),
+    d = t(754157),
+    s = t(296507),
+    o = t(866402);
+function c(e) {
+    let { className: n, children: t } = e;
     return (0, i.jsxs)('div', {
-        className: r()(l.container, e),
+        className: a()(d.container, n),
         children: [
             (0, i.jsx)('img', {
-                alt: o.intl.string(o.t.VoB8OT),
-                src: _,
-                className: r()(l.sparkleIcon, l.sparkleBottom)
+                alt: r.intl.string(r.t.VoB8OT),
+                src: o,
+                className: a()(d.sparkleIcon, d.sparkleBottom)
             }),
             t,
             (0, i.jsx)('img', {
-                alt: o.intl.string(o.t.VoB8OT),
-                src: d,
-                className: r()(l.sparkleIcon, l.sparkleTop)
+                alt: r.intl.string(r.t.VoB8OT),
+                src: s,
+                className: a()(d.sparkleIcon, d.sparkleTop)
             })
         ]
     });

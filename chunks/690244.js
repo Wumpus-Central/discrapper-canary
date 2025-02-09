@@ -118,10 +118,10 @@ if (E)
     try {
         null.error;
     } catch (e) {
-        var b = E(E(e));
-        I['%Error.prototype%'] = b;
+        var T = E(E(e));
+        I['%Error.prototype%'] = T;
     }
-var T = function e(t) {
+var b = function e(t) {
         var n;
         if ('%AsyncFunction%' === t) n = f('async function () {}');
         else if ('%GeneratorFunction%' === t) n = f('function* () {}');
@@ -195,18 +195,18 @@ var T = function e(t) {
     R = A.call(Function.apply, Array.prototype.splice),
     O = A.call(Function.call, String.prototype.replace),
     D = A.call(Function.call, String.prototype.slice),
-    x = A.call(Function.call, RegExp.prototype.exec),
-    L = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
-    P = /\\(\\)?/g,
-    w = function (e) {
+    L = A.call(Function.call, RegExp.prototype.exec),
+    x = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
+    w = /\\(\\)?/g,
+    P = function (e) {
         var t = D(e, 0, 1),
             n = D(e, -1);
         if ('%' === t && '%' !== n) throw new l('invalid intrinsic syntax, expected closing `%`');
         if ('%' === n && '%' !== t) throw new l('invalid intrinsic syntax, expected opening `%`');
         var i = [];
         return (
-            O(e, L, function (e, t, n, r) {
-                i[i.length] = n ? O(r, P, '$1') : t || e;
+            O(e, x, function (e, t, n, r) {
+                i[i.length] = n ? O(r, w, '$1') : t || e;
             }),
             i
         );
@@ -216,7 +216,7 @@ var T = function e(t) {
             i = e;
         if ((N(S, i) && (i = '%' + (n = S[i])[0] + '%'), N(I, i))) {
             var r = I[i];
-            if ((r === v && (r = T(i)), void 0 === r && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
+            if ((r === v && (r = b(i)), void 0 === r && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
             return {
                 alias: n,
                 name: i,
@@ -228,8 +228,8 @@ var T = function e(t) {
 e.exports = function (e, t) {
     if ('string' != typeof e || 0 === e.length) throw new u('intrinsic name must be a non-empty string');
     if (arguments.length > 1 && 'boolean' != typeof t) throw new u('"allowMissing" argument must be a boolean');
-    if (null === x(/^%?[^%]*%?$/, e)) throw new l('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
-    var n = w(e),
+    if (null === L(/^%?[^%]*%?$/, e)) throw new l('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
+    var n = P(e),
         i = n.length > 0 ? n[0] : '',
         r = M('%' + i + '%', t),
         a = r.name,

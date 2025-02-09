@@ -18,10 +18,10 @@ var i = n(200651),
     v = n(388032);
 let y = 'max_uses',
     I = 'User Invite Context Menu',
-    b = 'context_menu';
-function T(e, t) {
+    T = 'context_menu';
+function b(e, t) {
     o.Z.ensurePrivateChannel(e).then((e) => {
-        null != d.Z.getChannel(e) && u.Z.sendInvite(e, t, b, null);
+        null != d.Z.getChannel(e) && u.Z.sendInvite(e, t, T, null);
     });
 }
 function S(e) {
@@ -42,18 +42,18 @@ function S(e) {
             },
             [n]
         ),
-        [b, S] = r.useState({});
+        [T, S] = r.useState({});
     function A(e, t) {
         let n = f.ZP.getDefaultChannel(e.id, !0, E.Plq.CREATE_INSTANT_INVITE);
         if (null != n) {
             if (
                 (S({
-                    ...b,
+                    ...T,
                     [e.id]: !0
                 }),
                 !p.Z.can(E.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)
             ) {
-                T(t, e.vanityURLCode);
+                b(t, e.vanityURLCode);
                 return;
             }
             l.Z.createInvite(
@@ -63,7 +63,7 @@ function S(e) {
                     unique: !0
                 },
                 I
-            ).then((e) => T(t, e.code));
+            ).then((e) => b(t, e.code));
         }
     }
     return (null == u ? void 0 : u.id) === t.id || t.bot || 0 === d.length || h.Z.isBlockedOrIgnored(t.id)
@@ -72,7 +72,7 @@ function S(e) {
               id: 'invite-to-server',
               label: v.intl.string(v.t.Sd8Ix8),
               children: d.map((e) =>
-                  b[e.id]
+                  T[e.id]
                       ? (0, i.jsx)(
                             s.sNh,
                             {

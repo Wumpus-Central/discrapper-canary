@@ -1,49 +1,49 @@
-e.d(t, { default: () => _ });
-var o = e(200651);
-e(192379);
-var a = e(990547),
-    i = e(399606),
-    r = e(481060),
-    l = e(843931),
-    s = e(1596),
-    c = e(922611),
-    m = e(478923),
-    d = e(594174),
-    u = e(626135),
-    f = e(51144),
-    C = e(981631),
-    p = e(388032);
-function _(n) {
-    let { transitionState: t, onClose: e, userId: _, onCancel: x, confirmBlock: h } = n,
-        k = (0, i.e7)([d.default], () => d.default.getUser(_)),
-        E = f.ZP.useName(k),
-        N = (0, c.Do)({ location: 'confirm_block_user_modal' }),
-        O = () => {
-            h(), u.default.track(C.rMx.BLOCK_USER_CONFIRMED);
+i.d(n, { default: () => E });
+var e = i(200651);
+i(192379);
+var o = i(990547),
+    r = i(399606),
+    l = i(481060),
+    a = i(843931),
+    s = i(1596),
+    c = i(922611),
+    d = i(478923),
+    u = i(594174),
+    x = i(626135),
+    m = i(51144),
+    f = i(981631),
+    g = i(388032);
+function E(t) {
+    let { transitionState: n, onClose: i, userId: E, onCancel: I, confirmBlock: C } = t,
+        N = (0, r.e7)([u.default], () => u.default.getUser(E)),
+        h = m.ZP.useName(N),
+        j = (0, c.Do)({ location: 'confirm_block_user_modal' }),
+        _ = () => {
+            C(), x.default.track(f.rMx.BLOCK_USER_CONFIRMED);
         };
-    if (null != k)
-        return N
-            ? (0, o.jsx)(m.Z, {
-                  transitionState: t,
-                  user: k,
-                  onBlock: O,
-                  onClose: e,
-                  onCancel: x
+    if (null != N)
+        return j
+            ? (0, e.jsx)(d.default, {
+                  transitionState: n,
+                  user: N,
+                  onBlock: _,
+                  onClose: i,
+                  onCancel: I
               })
-            : (0, o.jsx)(r.ConfirmModal, {
-                  header: p.intl.formatToPlainString(p.t.x5pOn5, { name: E }),
-                  confirmText: p.intl.string(p.t.l4EmaW),
-                  cancelText: p.intl.string(p.t['ETE/oK']),
-                  onConfirm: O,
-                  onClose: e,
-                  onCancel: x,
-                  transitionState: t,
-                  impression: { impressionName: a.ImpressionNames.BLOCK_USER_CONFIRMATION },
-                  children: (0, l.cC)({ location: 'confirm_block_modal' })
-                      ? (0, o.jsx)(s.Z, {})
-                      : (0, o.jsx)(r.Text, {
+            : (0, e.jsx)(l.ConfirmModal, {
+                  header: g.intl.formatToPlainString(g.t.x5pOn5, { name: h }),
+                  confirmText: g.intl.string(g.t.l4EmaW),
+                  cancelText: g.intl.string(g.t['ETE/oK']),
+                  onConfirm: _,
+                  onClose: i,
+                  onCancel: I,
+                  transitionState: n,
+                  impression: { impressionName: o.ImpressionNames.BLOCK_USER_CONFIRMATION },
+                  children: (0, a.cC)({ location: 'confirm_block_modal' })
+                      ? (0, e.jsx)(s.Z, {})
+                      : (0, e.jsx)(l.Text, {
                             variant: 'text-md/normal',
-                            children: p.intl.format(p.t.pegItL, { name: E })
+                            children: g.intl.format(g.t.pegItL, { name: h })
                         })
               });
 }

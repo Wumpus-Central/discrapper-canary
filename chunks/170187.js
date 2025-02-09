@@ -6,7 +6,7 @@ var r = n(120356),
     s = n(793030),
     o = n(111028),
     l = n(556638),
-    u = n(748442);
+    u = n(694978);
 function c(e) {
     let { children: t, className: n, variant: r = 'text-xs/medium' } = e;
     return (0, i.jsx)(s.xv, {

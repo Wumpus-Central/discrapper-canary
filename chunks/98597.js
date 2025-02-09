@@ -1,7 +1,7 @@
 n.d(t, {
     CN: () => j,
     ZP: () => R,
-    eP: () => T,
+    eP: () => A,
     hR: () => P,
     jo: () => y
 });
@@ -16,8 +16,8 @@ var i,
     u = n(481060),
     h = n(787014),
     p = n(924301),
-    g = n(159300),
-    m = n(152376),
+    m = n(159300),
+    g = n(152376),
     f = n(427679),
     _ = n(155409),
     v = n(131704),
@@ -28,7 +28,7 @@ var i,
     b = n(281029),
     S = n(981631),
     N = n(388032),
-    E = n(831746);
+    E = n(467678);
 function j(e, t, n) {
     return null != t && !!t && !(0, b.ig)(n, e.type);
 }
@@ -63,19 +63,19 @@ function P(e) {
         }
     });
 }
-function T(e) {
+function A(e) {
     let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: o, hasChannelInfo: s = !1 } = e,
         h = (0, d.e7)([x.Z], () => x.Z.getGuild(t.getGuildId())),
-        m = (0, d.e7)([f.Z], () => f.Z.getStageInstanceByChannel(t.id), [t.id]),
+        g = (0, d.e7)([f.Z], () => f.Z.getStageInstanceByChannel(t.id), [t.id]),
         v = (0, d.e7)([p.ZP], () => p.ZP.getActiveEventByChannel(t.id), [t.id]),
-        I = (0, d.e7)([Z.Z], () => (0, g.b)(Z.Z, h, t, m)),
+        I = (0, d.e7)([Z.Z], () => (0, m.b)(Z.Z, h, t, g)),
         b = (0, d.e7)([Z.Z], () => (Z.Z.can(S.Plq.CREATE_INSTANT_INVITE, t) ? N.intl.string(N.t.zJrgTE) : N.intl.string(N.t.Sd8Ix8)));
     if (l || !I) return null;
     function j() {
         if (null != h) {
             let e = C.Z.getAllActiveStreams().filter((e) => e.state !== S.jm8.ENDED && e.channelId === t.id);
             (0, u.ZDy)(async () => {
-                let { default: i } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
+                let { default: i } = await Promise.all([n.e('7654'), n.e('76236')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, a.jsx)(i, {
                         ...n,
@@ -115,10 +115,10 @@ function T(e) {
         })
     );
 }
-function A(e) {
+function T(e) {
     let { channel: t } = e,
         n = () => {
-            (0, m._U)(t.guild_id, t.id);
+            (0, g._U)(t.guild_id, t.id);
         };
     return (0, a.jsx)(u.ua7, {
         text: N.intl.string(N.t.ROh4T0),
@@ -139,7 +139,7 @@ function A(e) {
 function w(e) {
     let { channel: t } = e,
         n = () => {
-            (0, m.dM)(t.guild_id, t.id, !0, { section: S.jXE.CHANNEL_LIST });
+            (0, g.dM)(t.guild_id, t.id, !0, { section: S.jXE.CHANNEL_LIST });
         };
     return (0, a.jsx)(u.ua7, {
         text: N.intl.string(N.t['N2c/Ul']),
@@ -162,10 +162,10 @@ class R extends (r = o.PureComponent) {
         return (0, a.jsx)(P, { ...this.props });
     }
     renderInviteButton() {
-        return (0, a.jsx)(T, { ...this.props });
+        return (0, a.jsx)(A, { ...this.props });
     }
     renderRemoveSuggestionButton() {
-        return (0, a.jsx)(A, { ...this.props });
+        return (0, a.jsx)(T, { ...this.props });
     }
     renderAcceptSuggestionButton() {
         return (0, a.jsx)(w, { ...this.props });

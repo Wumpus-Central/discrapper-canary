@@ -15,7 +15,7 @@ var n = t(200651),
     S = t(51144),
     g = t(912332),
     h = t(388032),
-    f = t(917858);
+    f = t(607829);
 function L(e) {
     let { icon: i, label: t } = e;
     return (0, n.jsxs)('div', {

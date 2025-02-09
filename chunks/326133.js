@@ -18,28 +18,28 @@ var i = n(200651),
     v = n(436896),
     y = n(590921),
     I = n(606992),
-    b = n(51062),
-    T = n(918559),
-    S = n(144685);
+    T = n(51062),
+    b = n(918559),
+    S = n(807534);
 let A = 490,
     N = 490,
     C = 245,
     R = 200,
     O = 175,
     D = r.forwardRef(function (e, t) {
-        var n, a, D, x, L;
-        let { channel: P, type: w, editorHeight: M, onVisibilityChange: k } = e,
+        var n, a, D, L, x;
+        let { channel: w, type: P, editorHeight: M, onVisibilityChange: k } = e,
             U = (0, h.Dt)(),
             G = (0, l.e7)(
                 [E.Z],
                 () => {
                     var e;
-                    return null !== (e = E.Z.getGuild(P.guild_id)) && void 0 !== e ? e : null;
+                    return null !== (e = E.Z.getGuild(w.guild_id)) && void 0 !== e ? e : null;
                 },
-                [P.guild_id]
+                [w.guild_id]
             ),
             B = r.useRef(),
-            [Z, F, V] = (0, b.Z)(
+            [Z, F, V] = (0, T.Z)(
                 {
                     ...e,
                     guild: G
@@ -47,24 +47,24 @@ let A = 490,
                 t,
                 B
             ),
-            j = (null === (n = w.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
+            j = (null === (n = P.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
             H = (0, _.DJ)(Z.selectedIndex);
         (0, p.KR)(U, Z.isVisible, H), v.Z.trackExposure({ location: '6e9811_1' });
         let { usePopoutAutocomplete: Y } = v.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
             W = (0, I.Z)({
                 editorHeight: M,
-                type: w,
+                type: P,
                 state: Z,
                 isInPopoutExperiment: Y
             }),
             K = (0, l.e7)(
                 [d.ZP],
                 () => {
-                    let e = d.ZP.getSelfEmbeddedActivityForChannel(P.id),
+                    let e = d.ZP.getSelfEmbeddedActivityForChannel(w.id),
                         t = d.ZP.getActivityPanelMode();
-                    return (0, c.l5)(P) && null != e && (0, f.p)(e.location) === P.id && t === T.Ez.PANEL;
+                    return (0, c.l5)(w) && null != e && (0, f.p)(e.location) === w.id && t === b.Ez.PANEL;
                 },
-                [P]
+                [w]
             ),
             z = r.useMemo(() => ((null == W ? void 0 : W.top) == null && (null == W ? void 0 : W.left) == null && (null == W ? void 0 : W.bottom) == null && (null == W ? void 0 : W.right) == null ? '' : String(Date.now())), [null == W ? void 0 : W.top, null == W ? void 0 : W.left, null == W ? void 0 : W.bottom, null == W ? void 0 : W.right]);
         if (
@@ -79,7 +79,7 @@ let A = 490,
                 (a = Z.query.typeInfo.renderResults({
                     results: Z.query.results,
                     selectedIndex: Z.selectedIndex,
-                    channel: P,
+                    channel: w,
                     guild: G,
                     query: Z.query.queryText,
                     options: Z.query.options,
@@ -96,7 +96,7 @@ let A = 490,
                 [S.autocompleteTop]: K
             },
             X = A;
-        null != W && (X = (null === (D = w.autocomplete) || void 0 === D ? void 0 : D.small) ? R : (null === (x = Z.query) || void 0 === x ? void 0 : x.type) === y.eq.EMOJIS_AND_STICKERS ? N : C), (X = Math.min(window.innerHeight - O, X));
+        null != W && (X = (null === (D = P.autocomplete) || void 0 === D ? void 0 : D.small) ? R : (null === (L = Z.query) || void 0 === L ? void 0 : L.type) === y.eq.EMOJIS_AND_STICKERS ? N : C), (X = Math.min(window.innerHeight - O, X));
         let J = (0, i.jsx)(_.ZP, {
             id: U,
             className: s()(S.autocomplete, Q),
@@ -130,7 +130,7 @@ let A = 490,
                       targetRef: e.targetRef,
                       overrideTargetRect: W,
                       positionKey: z,
-                      position: null !== (L = e.position) && void 0 !== L ? L : 'top',
+                      position: null !== (x = e.position) && void 0 !== x ? x : 'top',
                       align: 'left',
                       spacing: 8,
                       autoInvert: !0,

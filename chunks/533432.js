@@ -11,11 +11,11 @@ var i = n(200651),
     f = n(149203),
     _ = n(981631),
     p = n(388032),
-    h = n(405156);
+    h = n(363131);
 let m = r.forwardRef(function (e, t) {
         let { emojiListRef: n, gridNavigatorId: a, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: v, className: y, defaultSearchPlaceholder: I } = e,
-            b = r.useRef(null),
-            T = (0, d.Iu)((e) => e.searchQuery),
+            T = r.useRef(null),
+            b = (0, d.Iu)((e) => e.searchQuery),
             [S, A] = c.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], o.X),
             N = r.useCallback(
                 (e) => {
@@ -41,13 +41,13 @@ let m = r.forwardRef(function (e, t) {
             r.useImperativeHandle(t, () => ({
                 focus: () => {
                     var e;
-                    return null === (e = b.current) || void 0 === e ? void 0 : e.focus();
+                    return null === (e = T.current) || void 0 === e ? void 0 : e.focus();
                 }
             })),
             (0, i.jsx)(u.E1j, {
                 autoFocus: v,
-                query: T,
-                ref: b,
+                query: b,
+                ref: T,
                 size: u.E1j.Sizes.MEDIUM,
                 placeholder: null != A ? A : I,
                 onClear: C,

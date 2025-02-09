@@ -18,8 +18,8 @@ var r,
     v = n(271383),
     y = n(430824),
     I = n(496675),
-    b = n(306680),
-    T = n(944486),
+    T = n(306680),
+    b = n(944486),
     S = n(914010),
     A = n(9156),
     N = n(483360),
@@ -39,10 +39,10 @@ function D(e, t, n) {
         e
     );
 }
-let x = 'seenQSTutorial',
-    L = 5,
-    P = 100,
-    w = [c.h8.USER, c.h8.GROUP_DM, c.h8.TEXT_CHANNEL, c.h8.GUILD, c.h8.APPLICATION, c.h8.LINK, c.h8.IN_APP_NAVIGATION],
+let L = 'seenQSTutorial',
+    x = 5,
+    w = 100,
+    P = [c.h8.USER, c.h8.GROUP_DM, c.h8.TEXT_CHANNEL, c.h8.GUILD, c.h8.APPLICATION, c.h8.LINK, c.h8.IN_APP_NAVIGATION],
     M = 0,
     k = !1,
     U = !1,
@@ -74,7 +74,7 @@ function W(e) {
 function K() {
     var e, t;
     let n = null !== (e = S.Z.getGuildId()) && void 0 !== e ? e : void 0,
-        i = null !== (t = T.Z.getChannelId()) && void 0 !== t ? t : void 0;
+        i = null !== (t = b.Z.getChannelId()) && void 0 !== t ? t : void 0;
     switch (G) {
         case c.h8.USER: {
             let e = h.default.getId();
@@ -121,7 +121,7 @@ function K() {
     a.length > 0 && r.push((0, c.o6)(O.intl.string(O.t['80lOZ2'])), ...a);
     let o = Y((e) => e === i || j.includes(e));
     o.length > 0 && r.push((0, c.o6)(O.intl.string(O.t['4B63jY'])), ...o);
-    let l = b.ZP.getMentionChannelIds()
+    let l = T.ZP.getMentionChannelIds()
         .filter((e) => e !== i && !j.includes(e))
         .map((e) => W(e))
         .filter(C.lm)
@@ -184,7 +184,7 @@ function q(e) {
         (i =
             null != i
                 ? i
-                : new c.ZP(J, w, null != r ? P : L, {
+                : new c.ZP(J, P, null != r ? w : x, {
                       frecencyBoosters: !0,
                       blacklist: s
                   })),
@@ -219,7 +219,7 @@ function ee(e) {
     if (null == i) return !1;
     let s = null !== (t = S.Z.getGuildId()) && void 0 !== t ? t : null;
     if (G !== a) {
-        i.setResultTypes(null != a ? [a] : w), i.setLimit(null != a ? P : L);
+        i.setResultTypes(null != a ? [a] : P), i.setLimit(null != a ? w : x);
         let e = null !== (n = S.Z.getGuildId()) && void 0 !== n ? n : void 0;
         a === c.h8.USER && null != e
             ? i.setOptions(
@@ -248,12 +248,12 @@ function et(e) {
 }
 function en() {
     if (k) return !1;
-    (k = !0), l.K.set(x, !0);
+    (k = !0), l.K.set(L, !0);
 }
 class ei extends (r = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(v.ZP, y.Z, m.Z), this.syncWith([p.Z], () => !0), (k = l.K.get(x) || !1), (j = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []);
+        this.waitFor(v.ZP, y.Z, m.Z), this.syncWith([p.Z], () => !0), (k = l.K.get(L) || !1), (j = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []);
     }
     getState() {
         return { channelHistory: j };

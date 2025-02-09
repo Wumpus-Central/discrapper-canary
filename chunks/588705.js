@@ -1,192 +1,192 @@
 n.d(t, {
-    R: () => h,
-    Z: () => C
+    R: () => S,
+    Z: () => A
 }),
     n(411104);
-var l = n(200651),
-    i = n(192379),
-    a = n(442837),
-    r = n(481060),
-    u = n(388905),
+var i = n(200651),
+    r = n(192379),
+    l = n(442837),
+    a = n(481060),
+    o = n(388905),
     s = n(686546),
-    d = n(925329),
-    o = n(372769),
-    c = n(44609),
-    E = n(47343),
+    c = n(925329),
+    d = n(372769),
+    u = n(44609),
+    h = n(47343),
     _ = n(973616),
     m = n(131704),
-    S = n(601964),
-    g = n(598077),
-    N = n(594174),
-    A = n(51144),
-    I = n(981631),
-    v = n(888592),
-    R = n(245335),
-    T = n(388032),
-    O = n(594193);
-let h = () =>
-        (0, l.jsxs)(i.Fragment, {
+    g = n(601964),
+    p = n(598077),
+    f = n(594174),
+    E = n(51144),
+    x = n(981631),
+    I = n(888592),
+    C = n(245335),
+    v = n(388032),
+    N = n(732058);
+let S = () =>
+        (0, i.jsxs)(r.Fragment, {
             children: [
-                (0, l.jsx)(u.qE, {
+                (0, i.jsx)(o.qE, {
                     src: null,
-                    size: r.EFr.DEPRECATED_SIZE_100,
-                    className: O.avatar
+                    size: a.EFr.DEPRECATED_SIZE_100,
+                    className: N.avatar
                 }),
-                (0, l.jsx)(u.DK, { children: T.intl.string(T.t['3rE1Pz']) }),
-                (0, l.jsx)(u.Dx, {
-                    className: O.inviteResolvingGuildName,
-                    children: T.intl.string(T.t.ZTNur6)
+                (0, i.jsx)(o.DK, { children: v.intl.string(v.t['3rE1Pz']) }),
+                (0, i.jsx)(o.Dx, {
+                    className: N.inviteResolvingGuildName,
+                    children: v.intl.string(v.t.ZTNur6)
                 })
             ]
         }),
-    f = (e) => {
-        let { guild: t, user: n, application: i, compact: a } = e;
-        return null != i
-            ? (0, l.jsx)(d.Z, {
-                  className: O.appIcon,
-                  game: i,
-                  size: O.appIconSize
+    T = (e) => {
+        let { guild: t, user: n, application: r, compact: l } = e;
+        return null != r
+            ? (0, i.jsx)(c.Z, {
+                  className: N.appIcon,
+                  game: r,
+                  size: N.appIconSize
               })
             : null != n
-              ? (0, l.jsx)(u.qE, {
+              ? (0, i.jsx)(o.qE, {
                     src: null != n ? n.getAvatarURL(void 0, 80) : null,
-                    size: r.EFr.SIZE_80,
-                    className: a ? O.compactAvatar : O.avatar
+                    size: a.EFr.SIZE_80,
+                    className: l ? N.compactAvatar : N.avatar
                 })
               : null != t
-                ? (0, l.jsx)(s.ZP, {
+                ? (0, i.jsx)(s.ZP, {
                       mask: s.ZP.Masks.SQUIRCLE,
                       width: 64,
                       height: 64,
-                      className: O.guildIcon,
-                      children: (0, l.jsx)(u.Vj, {
+                      className: N.guildIcon,
+                      children: (0, i.jsx)(o.Vj, {
                           guild: t,
-                          size: u.Vj.Sizes.LARGER,
+                          size: o.Vj.Sizes.LARGER,
                           animate: !0
                       })
                   })
                 : null;
     },
-    C = (e) => {
+    A = (e) => {
         var t;
         let n,
-            i,
+            r,
             s,
-            { invite: d, disableUser: h = !1, error: C, flatActivityCount: D = !1, isRegister: L = !1 } = e,
-            p = (0, c.WR)({ location: 'invite' }),
-            { currentUser: x } = (0, a.cj)([N.default], () => ({ currentUser: N.default.getCurrentUser() }));
-        if (null == d) return null;
-        let P = null != d.guild ? new S.ZP(d.guild) : null,
-            U = null != d.channel ? (0, m.jD)(d.channel) : null,
-            j = null != d.target_application ? new _.ZP(d.target_application) : null,
-            M = h || null == d.inviter ? null : new g.Z(d.inviter),
-            Z = !((null != d.approximate_member_count && d.approximate_member_count > 100) || (null != P && P.hasFeature(I.oNc.COMMUNITY))) && null != M,
-            F = null,
-            G = !1;
-        if (null != P)
-            (F = null == M ? T.intl.string(T.t['3rE1Pz']) : T.intl.formatToPlainString(T.t['5u47vb'], { username: A.ZP.getFormattedName(M) })),
-                d.target_type === R.Iq.STREAM && null != d.target_user && (F = T.intl.formatToPlainString(T.t.x2L32d, { username: A.ZP.getFormattedName(d.target_user) })),
-                d.target_type === R.Iq.EMBEDDED_APPLICATION && null != d.target_application && (F = null != M ? T.intl.formatToPlainString(T.t.UW1Cam, { username: A.ZP.getFormattedName(M) }) : T.intl.string(T.t.ENSuNz)),
-                Z &&
-                    null == j &&
-                    (n = (0, l.jsx)(u.Vj, {
-                        className: O.icon,
-                        guild: P,
-                        size: u.Vj.Sizes.SMALL
+            { invite: c, disableUser: S = !1, error: A, flatActivityCount: b = !1, isRegister: R = !1 } = e,
+            Z = (0, u.WR)({ location: 'invite' }),
+            { currentUser: j } = (0, l.cj)([f.default], () => ({ currentUser: f.default.getCurrentUser() }));
+        if (null == c) return null;
+        let O = null != c.guild ? new g.ZP(c.guild) : null,
+            L = null != c.channel ? (0, m.jD)(c.channel) : null,
+            y = null != c.target_application ? new _.ZP(c.target_application) : null,
+            P = S || null == c.inviter ? null : new p.Z(c.inviter),
+            D = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != O && O.hasFeature(x.oNc.COMMUNITY))) && null != P,
+            k = null,
+            w = !1;
+        if (null != O)
+            (k = null == P ? v.intl.string(v.t['3rE1Pz']) : v.intl.formatToPlainString(v.t['5u47vb'], { username: E.ZP.getFormattedName(P) })),
+                c.target_type === C.Iq.STREAM && null != c.target_user && (k = v.intl.formatToPlainString(v.t.x2L32d, { username: E.ZP.getFormattedName(c.target_user) })),
+                c.target_type === C.Iq.EMBEDDED_APPLICATION && null != c.target_application && (k = null != P ? v.intl.formatToPlainString(v.t.UW1Cam, { username: E.ZP.getFormattedName(P) }) : v.intl.string(v.t.ENSuNz)),
+                D &&
+                    null == y &&
+                    (n = (0, i.jsx)(o.Vj, {
+                        className: N.icon,
+                        guild: O,
+                        size: o.Vj.Sizes.SMALL
                     })),
-                (i = P.name),
-                null != j &&
-                    ((i = j.name),
-                    (s = (0, l.jsxs)('div', {
+                (r = O.name),
+                null != y &&
+                    ((r = y.name),
+                    (s = (0, i.jsxs)('div', {
                         children: [
-                            (0, l.jsx)(u.DK, {
-                                className: O.appIn,
-                                children: T.intl.string(T.t['3gg9fH'])
+                            (0, i.jsx)(o.DK, {
+                                className: N.appIn,
+                                children: v.intl.string(v.t['3gg9fH'])
                             }),
-                            (0, l.jsxs)('div', {
-                                className: O.guildContainer,
+                            (0, i.jsxs)('div', {
+                                className: N.guildContainer,
                                 children: [
-                                    (0, l.jsx)(u.Vj, {
-                                        guild: P,
-                                        size: u.Vj.Sizes.SMALL
+                                    (0, i.jsx)(o.Vj, {
+                                        guild: O,
+                                        size: o.Vj.Sizes.SMALL
                                     }),
-                                    (0, l.jsx)(r.Text, {
+                                    (0, i.jsx)(a.Text, {
                                         tag: 'span',
                                         variant: 'text-lg/normal',
                                         color: 'header-primary',
-                                        className: O.appGuildName,
-                                        children: P.name
+                                        className: N.appGuildName,
+                                        children: O.name
                                     })
                                 ]
                             })
                         ]
                     })));
-        else if (null != U) {
-            if (null == M) throw Error('no inviter in group DM invite');
-            let e = A.ZP.getFormattedName(M);
-            null != U.name && '' !== U.name
-                ? ((F = T.intl.formatToPlainString(T.t['5u47vb'], { username: e })),
-                  (i = U.name),
-                  null != U.icon &&
-                      (n = (0, l.jsx)(u.MC, {
-                          channel: U,
-                          size: r.EFr.SIZE_32
+        else if (null != L) {
+            if (null == P) throw Error('no inviter in group DM invite');
+            let e = E.ZP.getFormattedName(P);
+            null != L.name && '' !== L.name
+                ? ((k = v.intl.formatToPlainString(v.t['5u47vb'], { username: e })),
+                  (r = L.name),
+                  null != L.icon &&
+                      (n = (0, i.jsx)(o.MC, {
+                          channel: L,
+                          size: a.EFr.SIZE_32
                       })))
-                : ((F = T.intl.string(T.t.OsdY8P)), (i = e));
-        } else if (null != M) {
-            let e = A.ZP.getFormattedName(M, !0);
-            (i = T.intl.formatToPlainString(T.t['4aF92d'], { username: e })),
-                (G = !0),
+                : ((k = v.intl.string(v.t.OsdY8P)), (r = e));
+        } else if (null != P) {
+            let e = E.ZP.getFormattedName(P, !0);
+            (r = v.intl.formatToPlainString(v.t['4aF92d'], { username: e })),
+                (w = !0),
                 (s =
-                    null != C
+                    null != A
                         ? null
-                        : (0, l.jsx)(u.DK, {
-                              className: O.directInviteSubTitle,
-                              children: L ? T.intl.format(T.t['6r4JiY'], { username: e }) : T.intl.format(T.t.Quj7HR, { username: e })
+                        : (0, i.jsx)(o.DK, {
+                              className: N.directInviteSubTitle,
+                              children: R ? v.intl.format(v.t['6r4JiY'], { username: e }) : v.intl.format(v.t.Quj7HR, { username: e })
                           }));
         }
-        return (0, l.jsxs)('div', {
-            className: O.container,
+        return (0, i.jsxs)('div', {
+            className: N.container,
             children: [
-                (0, l.jsx)(f, {
-                    application: j,
-                    guild: P,
-                    user: Z ? M : null,
-                    compact: G
+                (0, i.jsx)(T, {
+                    application: y,
+                    guild: O,
+                    user: D ? P : null,
+                    compact: w
                 }),
-                null != C
-                    ? (0, l.jsxs)(l.Fragment, {
-                          children: [(0, l.jsx)(u.DK, { children: T.intl.string(T.t.mDFGFh) }), (0, l.jsx)(u.Dx, { children: C })]
+                null != A
+                    ? (0, i.jsxs)(i.Fragment, {
+                          children: [(0, i.jsx)(o.DK, { children: v.intl.string(v.t.mDFGFh) }), (0, i.jsx)(o.Dx, { children: A })]
                       })
-                    : (0, l.jsxs)(l.Fragment, {
+                    : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, l.jsx)(u.DK, { children: F }),
-                              (0, l.jsxs)(u.Dx, {
-                                  className: O.title,
+                              (0, i.jsx)(o.DK, { children: k }),
+                              (0, i.jsxs)(o.Dx, {
+                                  className: N.title,
                                   children: [
-                                      null != P
-                                          ? (0, l.jsx)(o.Z, {
-                                                guild: P,
-                                                className: O.guildBadge,
+                                      null != O
+                                          ? (0, i.jsx)(d.Z, {
+                                                guild: O,
+                                                className: N.guildBadge,
                                                 tooltipPosition: 'left'
                                             })
                                           : null,
                                       n,
-                                      i
+                                      r
                                   ]
                               })
                           ]
                       }),
                 s,
-                null != j || G || (null == d ? void 0 : null === (t = d.guild) || void 0 === t ? void 0 : t.id) === v.fQ
+                null != y || w || (null == c ? void 0 : null === (t = c.guild) || void 0 === t ? void 0 : t.id) === I.fQ
                     ? null
-                    : (0, l.jsx)(u.EJ, {
-                          className: O.activityCount,
-                          online: d.approximate_presence_count,
-                          total: d.approximate_member_count,
-                          flat: D
+                    : (0, i.jsx)(o.EJ, {
+                          className: N.activityCount,
+                          online: c.approximate_presence_count,
+                          total: c.approximate_member_count,
+                          flat: b
                       }),
-                p ? (0, l.jsx)(E.R, {}) : (0, l.jsx)(u.jQ, { user: x })
+                Z ? (0, i.jsx)(h.R, {}) : (0, i.jsx)(o.jQ, { user: j })
             ]
         });
     };

@@ -52,19 +52,19 @@ function I(e) {
         var t;
         let e = g[n.id];
         if (null == e || 'unavailable' === n.data_mode) return;
-        (g[n.id] = u.sp(n, e)), (m[n.id] = 'partial' === n.data_mode ? u.EO(n.id, null !== (t = m[n.id]) && void 0 !== t ? t : w, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : c.C5(n.id, n.roles));
+        (g[n.id] = u.sp(n, e)), (m[n.id] = 'partial' === n.data_mode ? u.EO(n.id, null !== (t = m[n.id]) && void 0 !== t ? t : P, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : c.C5(n.id, n.roles));
     }
     i = Object.keys(g).length;
 }
-function b(e) {
+function T(e) {
     for (let t of ((g = {}), (m = {}), (i = 0), e)) i++, (g[t.id] = u.cL(t)), (m[t.id] = t.roles);
 }
-function T(e) {
-    b(e.guilds);
+function b(e) {
+    T(e.guilds);
 }
 function S(e) {
     if (0 === e.guilds.length) return !1;
-    b(e.guilds);
+    T(e.guilds);
 }
 function A(e) {
     var t;
@@ -131,13 +131,13 @@ function D(e) {
         (i = c.iw(t, Object.values(i))),
         (m[t] = i);
 }
-function x(e) {
+function L(e) {
     let { guildId: t, roleId: n } = e,
         i = m[t];
     if (null == i) return !1;
     (i = { ...i }), delete i[n], (m[t] = i);
 }
-function L(e) {
+function x(e) {
     let { guildId: t, joinedAt: n, user: i } = e,
         r = f.default.getId(),
         a = g[t];
@@ -149,10 +149,10 @@ function L(e) {
         [t]: a.updateJoinedAt(s)
     };
 }
-function P() {
+function w() {
     return !0;
 }
-let w = Object.freeze({});
+let P = Object.freeze({});
 class M extends (r = a.ZP.Store) {
     getGuild(e) {
         return null == e ? void 0 : e === _.I_8 ? p.g : g[e];
@@ -177,7 +177,7 @@ class M extends (r = a.ZP.Store) {
     }
     getRoles(e) {
         var t;
-        return null !== (t = m[e]) && void 0 !== t ? t : w;
+        return null !== (t = m[e]) && void 0 !== t ? t : P;
     }
     getRole(e, t) {
         var n;
@@ -189,15 +189,15 @@ let k = new M(o.Z, {
     BACKGROUND_SYNC: I,
     CONNECTION_OPEN: y,
     OVERLAY_INITIALIZE: A,
-    CACHE_LOADED: T,
+    CACHE_LOADED: b,
     CACHE_LOADED_LAZY: S,
     GUILD_CREATE: N,
     GUILD_UPDATE: C,
     GUILD_DELETE: O,
     GUILD_ROLE_CREATE: D,
     GUILD_ROLE_UPDATE: D,
-    GUILD_ROLE_DELETE: x,
-    GUILD_MEMBER_ADD: L,
-    GUILD_SETTINGS_SUBMIT_SUCCESS: P,
+    GUILD_ROLE_DELETE: L,
+    GUILD_MEMBER_ADD: x,
+    GUILD_SETTINGS_SUBMIT_SUCCESS: w,
     GUILD_GEO_RESTRICTED: R
 });

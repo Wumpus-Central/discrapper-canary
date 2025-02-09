@@ -1,64 +1,64 @@
-a.d(n, { Z: () => b });
-var i = a(200651),
-    t = a(192379),
-    l = a(442837),
-    r = a(481060),
-    o = a(616780),
-    s = a(40851),
-    u = a(300284),
-    d = a(484459),
-    c = a(314897),
-    p = a(271383),
-    _ = a(430824),
-    f = a(496675),
-    v = a(594174),
-    h = a(981631),
-    g = a(388032),
-    A = a(497523);
-function b(e) {
-    let { guildId: n, userId: b, analyticsLocation: x, analyticsLocations: I, context: P, icon: C } = e,
-        Z = _.Z.getGuild(n),
-        N = c.default.getId(),
-        m = (0, l.e7)([v.default], () => v.default.getUser(b)),
-        y = (0, l.e7)([p.ZP], () => p.ZP.isGuestOrLurker(n, b), [n, b]);
-    (0, l.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
-    let k = t.useMemo(() => ({ [n]: [b] }), [n, b]);
-    (0, o.$)(k);
-    let w = P === h.IlC.POPOUT,
-        O = (0, u.Z)({
-            guild: Z,
-            analyticsLocation: x
+l.d(n, { Z: () => N });
+var t = l(200651),
+    i = l(192379),
+    r = l(442837),
+    a = l(481060),
+    d = l(616780),
+    s = l(40851),
+    u = l(300284),
+    o = l(484459),
+    c = l(314897),
+    Z = l(271383),
+    g = l(430824),
+    f = l(496675),
+    h = l(594174),
+    m = l(981631),
+    P = l(388032),
+    x = l(423581);
+function N(e) {
+    let { guildId: n, userId: N, analyticsLocation: b, analyticsLocations: C, context: v, icon: E } = e,
+        p = g.Z.getGuild(n),
+        O = c.default.getId(),
+        j = (0, r.e7)([h.default], () => h.default.getUser(N)),
+        T = (0, r.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, N), [n, N]);
+    (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
+    let I = i.useMemo(() => ({ [n]: [N] }), [n, N]);
+    (0, d.$)(I);
+    let _ = v === m.IlC.POPOUT,
+        U = (0, u.Z)({
+            guild: p,
+            analyticsLocation: b
         }),
-        L = (0, s.Aq)();
-    if (null == Z || w) return null;
-    let T = N === b && (f.Z.can(h.Plq.CHANGE_NICKNAME, Z) || f.Z.can(h.Plq.MANAGE_NICKNAMES, Z)),
-        W = N === b,
-        G = f.Z.canManageUser(h.Plq.MANAGE_NICKNAMES, b, Z);
-    if (!(T || G || W) || null == m || y) return null;
-    let E = Z.hasFeature(h.oNc.HUB) ? g.intl.string(g.t['+MWrWl']) : g.intl.string(g.t['PKQB/P']),
-        U = W ? E : g.intl.string(g.t.dilOFx);
-    return (0, i.jsx)(r.sNh, {
+        A = (0, s.Aq)();
+    if (null == p || _) return null;
+    let M = O === N && (f.Z.can(m.Plq.CHANGE_NICKNAME, p) || f.Z.can(m.Plq.MANAGE_NICKNAMES, p)),
+        S = O === N,
+        R = f.Z.canManageUser(m.Plq.MANAGE_NICKNAMES, N, p);
+    if (!(M || R || S) || null == j || T) return null;
+    let k = p.hasFeature(m.oNc.HUB) ? P.intl.string(P.t['+MWrWl']) : P.intl.string(P.t['PKQB/P']),
+        y = S ? k : P.intl.string(P.t.dilOFx);
+    return (0, t.jsx)(a.sNh, {
         id: 'change-nickname',
-        label: (0, i.jsx)('div', {
-            className: A.labelWrapper,
-            children: (0, i.jsx)('span', {
-                className: A.label,
-                children: U
+        label: (0, t.jsx)('div', {
+            className: x.labelWrapper,
+            children: (0, t.jsx)('span', {
+                className: x.label,
+                children: y
             })
         }),
-        icon: C,
+        icon: E,
         action: () => {
-            W
-                ? ((0, d.Z)(m.id, m.getAvatarURL(n, 80), { guildId: n }), O(), L.dispatch(h.CkL.POPOUT_CLOSE), (0, r.pTH)())
-                : (0, r.ZDy)(async () => {
-                      let { default: e } = await a.e('17712').then(a.bind(a, 620021));
-                      return (a) =>
-                          (0, i.jsx)(e, {
-                              ...a,
+            S
+                ? ((0, o.Z)(j.id, j.getAvatarURL(n, 80), { guildId: n }), U(), A.dispatch(m.CkL.POPOUT_CLOSE), (0, a.pTH)())
+                : (0, a.ZDy)(async () => {
+                      let { default: e } = await l.e('17712').then(l.bind(l, 620021));
+                      return (l) =>
+                          (0, t.jsx)(e, {
+                              ...l,
                               guildId: n,
-                              user: m,
-                              analyticsSource: x,
-                              analyticsLocations: I
+                              user: j,
+                              analyticsSource: b,
+                              analyticsLocations: C
                           });
                   });
         }

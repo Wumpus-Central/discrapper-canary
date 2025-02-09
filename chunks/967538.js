@@ -1,9 +1,9 @@
-n.d(t, { Z: () => r });
+n.d(t, { Z: () => a });
 var i = n(200651);
 n(192379);
-var s = n(325767);
-let r = (e) => {
-    let { className: t, backgroundColor: n, backgroundCircleSize: r, ...l } = e;
+var r = n(325767);
+let a = (e) => {
+    let { className: t, backgroundColor: n, backgroundCircleSize: a, ...s } = e;
     return (0, i.jsxs)('svg', {
         width: '100%',
         height: '100%',
@@ -11,10 +11,10 @@ let r = (e) => {
         fill: 'none',
         style: { overflow: 'visible' },
         xmlns: 'http://www.w3.org/2000/svg',
-        ...(0, s.Z)({ ...l }),
+        ...(0, r.Z)({ ...s }),
         children: [
             (0, i.jsx)('circle', {
-                r: null != r ? r : '40%',
+                r: null != a ? a : '40%',
                 cx: '50%',
                 cy: '50%',
                 className: n

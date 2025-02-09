@@ -18,12 +18,12 @@ var r = n(481060),
     E = n(914010),
     I = n(594174),
     C = n(823379),
-    N = n(358085),
-    v = n(929809),
+    v = n(358085),
+    N = n(929809),
     T = n(179645),
     S = n(701476),
-    Z = n(785997),
-    A = n(981631),
+    A = n(785997),
+    Z = n(981631),
     x = n(188785),
     b = n(630724);
 function L() {
@@ -57,7 +57,7 @@ class y extends s.Z {
             let e = f.Z.getGuild(L);
             null != e && (0, u.Dc)(e) && ((s = !0), (0, p.RM)(e.id));
         }
-        let y = () => 0 === _.Z.totalGuilds && !N.isPlatformEmbedded,
+        let y = () => 0 === _.Z.totalGuilds && !v.isPlatformEmbedded,
             P = o.b();
         (e = [
             {
@@ -65,25 +65,25 @@ class y extends s.Z {
                 open: async function (e) {
                     let t = (e) => {
                         switch (e) {
-                            case Z.F.AGE_GATE:
+                            case A.F.AGE_GATE:
                                 m.Z.flowStep(b.MK.ANY, b.EW.AGE_GATE);
                                 break;
-                            case Z.F.CHOOSE_TEMPLATE:
+                            case A.F.CHOOSE_TEMPLATE:
                                 m.Z.flowStep(b.MK.ANY, b.X2.GUILD_TEMPLATES);
                                 break;
-                            case Z.F.CUSTOMIZE_GUILD:
+                            case A.F.CUSTOMIZE_GUILD:
                                 m.Z.flowStep(b.MK.ANY, b.X2.GUILD_CREATE);
                                 break;
-                            case Z.F.CHANNEL_PROMPT:
+                            case A.F.CHANNEL_PROMPT:
                                 m.Z.flowStep(b.MK.ANY, b.X2.CHANNEL_PROMPT);
                                 break;
-                            case Z.F.JOIN_GUILD:
+                            case A.F.JOIN_GUILD:
                                 m.Z.flowStep(b.MK.ANY, b.X2.JOIN_GUILD);
                                 break;
-                            case Z.F.CREATION_INTENT:
+                            case A.F.CREATION_INTENT:
                                 m.Z.flowStep(b.MK.ANY, b.X2.CREATION_INTENT);
                                 break;
-                            case Z.F.COMPLETE:
+                            case A.F.COMPLETE:
                                 m.Z.flowStep(b.MK.ANY, b.X2.SUCCESS);
                                 break;
                             case null:
@@ -94,7 +94,7 @@ class y extends s.Z {
                     };
                     i = await (0, r.ZDy)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e('63288'), n.e('1337'), n.e('42483'), n.e('65182')]).then(n.bind(n, 599219));
+                            let { default: e } = await Promise.all([n.e('63288'), n.e('1337'), n.e('42483'), n.e('82077')]).then(n.bind(n, 599219));
                             return (n) =>
                                 (0, l.jsx)(e, {
                                     ...n,
@@ -102,7 +102,7 @@ class y extends s.Z {
                                 });
                         },
                         {
-                            onCloseRequest: A.dG4,
+                            onCloseRequest: Z.dG4,
                             onCloseCallback: e,
                             modalKey: i
                         }
@@ -117,7 +117,7 @@ class y extends s.Z {
             },
             {
                 key: 'Claim Account Modal',
-                open: (e) => c.j(N.isPlatformEmbedded, e),
+                open: (e) => c.j(v.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
                     return !s && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !x.a && !(0, h.g)('new_user_manager');
@@ -149,7 +149,7 @@ class y extends s.Z {
             }
         ]),
             (t = () => {
-                v.H(), m.Z.flowStep(b.MK.ANY, b.EW.NUF_COMPLETE, !0);
+                N.H(), m.Z.flowStep(b.MK.ANY, b.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;

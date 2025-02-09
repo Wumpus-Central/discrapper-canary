@@ -18,8 +18,8 @@ var i = n(512722),
     v = n(857192),
     y = n(626135),
     I = n(12647),
-    b = n(70956),
-    T = n(358085),
+    T = n(70956),
+    b = n(358085),
     S = n(960048),
     A = n(138859),
     N = n(14639),
@@ -27,10 +27,10 @@ var i = n(512722),
     R = n(610308),
     O = n(91247),
     D = n(508569),
-    x = n(183139),
-    L = n(645436),
-    P = n(833508),
-    w = n(981631);
+    L = n(183139),
+    x = n(645436),
+    w = n(833508),
+    P = n(981631);
 function M(e, t, n) {
     return (
         t in e
@@ -79,16 +79,16 @@ function G(e) {
                 (f = l.state.clientState);
         }
     }
-    null == t && ((t = (0, P.Z)(n)).binaryType = 'arraybuffer'), i(t), u && r(c, f), null != d && d.forEach(a), (t.onopen = () => r(c, f)), (t.onmessage = a), (t.onclose = o), (t.onerror = s);
+    null == t && ((t = (0, w.Z)(n)).binaryType = 'arraybuffer'), i(t), u && r(c, f), null != d && d.forEach(a), (t.onopen = () => r(c, f)), (t.onmessage = a), (t.onclose = o), (t.onerror = s);
 }
 function B() {}
 let Z = 4,
     F = 1001,
     V = 'Stream end encountered',
     j = 4004,
-    H = 30 * b.Z.Millis.SECOND,
-    Y = 3 * b.Z.Millis.MINUTE,
-    W = 1 * b.Z.Millis.MINUTE;
+    H = 30 * T.Z.Millis.SECOND,
+    Y = 3 * T.Z.Millis.MINUTE,
+    W = 1 * T.Z.Millis.MINUTE;
 function K(e, t, n) {
     let i = 0;
     e.dataReady((e) => {
@@ -113,7 +113,7 @@ function z(e) {
     return null == e ? 0 : 'string' == typeof e ? e.length : e.byteLength;
 }
 let q = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-class Q extends x.Z {
+class Q extends L.Z {
     get connectionState() {
         return this.connectionState_;
     }
@@ -134,7 +134,7 @@ class Q extends x.Z {
             k.verbose('Skipping _connect because willReconnect is false');
             return;
         }
-        if (L.a()) {
+        if (x.a()) {
             k.info('Skipping _connect because socket is paused');
             return;
         }
@@ -168,28 +168,28 @@ class Q extends x.Z {
                 onMessage: K(this.compressionHandler, this._handleClose.bind(this), (e, t) => {
                     let n = Date.now(),
                         { op: i, s: r, t: a, d: s } = U.unpack(e);
-                    if ((i !== x.j.DISPATCH && o.Z.mark('\uD83C\uDF10', 'GatewaySocket.onMessage '.concat(i, ' ').concat(x.j[i])), v.default.isLoggingGatewayEvents)) {
+                    if ((i !== L.j.DISPATCH && o.Z.mark('\uD83C\uDF10', 'GatewaySocket.onMessage '.concat(i, ' ').concat(L.j[i])), v.default.isLoggingGatewayEvents)) {
                         let e = [i];
-                        i === x.j.DISPATCH && e.push(a), e.push(s), k.verboseDangerously('<~', ...e);
+                        i === L.j.DISPATCH && e.push(a), e.push(s), k.verboseDangerously('<~', ...e);
                     }
                     let l = Date.now() - n;
                     switch (('READY' === a ? E.Z.parseReady.set(n, l) : 'READY_SUPPLEMENTAL' === a ? E.Z.parseReadySupplemental.set(n, l) : l > 10 && o.Z.mark('\uD83C\uDF10', 'Parse ' + a, l), null != r && (this.seq = r), i)) {
-                        case x.j.HELLO:
+                        case L.j.HELLO:
                             this._clearHelloTimeout(), this._handleHello(s);
                             break;
-                        case x.j.RECONNECT:
+                        case L.j.RECONNECT:
                             this._handleReconnect();
                             break;
-                        case x.j.INVALID_SESSION:
+                        case L.j.INVALID_SESSION:
                             this._handleInvalidSession(s);
                             break;
-                        case x.j.HEARTBEAT:
+                        case L.j.HEARTBEAT:
                             this._handleHeartbeatReceive();
                             break;
-                        case x.j.HEARTBEAT_ACK:
+                        case L.j.HEARTBEAT_ACK:
                             this._handleHeartbeatAck(s);
                             break;
-                        case x.j.DISPATCH:
+                        case L.j.DISPATCH:
                             this._handleDispatch(
                                 s,
                                 a,
@@ -285,7 +285,7 @@ class Q extends x.Z {
         }
     }
     _tryDetectInvalidIOSToken(e, t, n) {
-        (0, T.isIOS)() &&
+        (0, b.isIOS)() &&
             null != this.token &&
             e === F &&
             t === V &&
@@ -293,18 +293,18 @@ class Q extends x.Z {
             3 === this.iosGoingAwayEventCount &&
                 c.tn
                     .get({
-                        url: w.ANM.ME,
+                        url: P.ANM.ME,
                         headers: { authorization: this.token },
                         rejectWithError: !1
                     })
                     .then(
                         (e) => {
                             let { status: t } = e;
-                            y.default.track(w.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            y.default.track(P.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                         },
                         (e) => {
                             let { status: t } = e;
-                            401 === t && ((this.connectionState = A.Z.CLOSED), k.warn('[WS CLOSED] because of manual authentication failure, marking as closed.'), this._reset(n, j, 'invalid token manually detected')), y.default.track(w.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            401 === t && ((this.connectionState = A.Z.CLOSED), k.warn('[WS CLOSED] because of manual authentication failure, marking as closed.'), this._reset(n, j, 'invalid token manually detected')), y.default.track(P.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                         }
                     ));
     }
@@ -355,7 +355,7 @@ class Q extends x.Z {
             (this.dispatcher.resumeAnalytics = (0, O.zH)(Date.now() - this.connectionStartTime)),
             k.info('[RESUME] resuming session '.concat(null !== (e = this.sessionId) && void 0 !== e ? e : '', ', seq: ').concat(this.seq)),
             this.send(
-                x.j.RESUME,
+                L.j.RESUME,
                 {
                     token: this.token,
                     session_id: this.sessionId,
@@ -402,7 +402,7 @@ class Q extends x.Z {
                 client_state: s
             },
             d = JSON.stringify(c);
-        (this.identifyUncompressedByteSize = d.length), (this.identifyCompressedByteSize = a.deflate(d).length), (this.identifyCount += 1), this.send(x.j.IDENTIFY, c, !1);
+        (this.identifyUncompressedByteSize = d.length), (this.identifyCompressedByteSize = a.deflate(d).length), (this.identifyCount += 1), this.send(L.j.IDENTIFY, c, !1);
     }
     _doFastConnectIdentify() {
         (this.seq = 0), (this.sessionId = null);
@@ -422,7 +422,7 @@ class Q extends x.Z {
         this.lastHeartbeatAckTime = Date.now();
     }
     _sendHeartbeat() {
-        this.send(x.j.HEARTBEAT, this.seq, !1), (this.lastHeartbeatTime = Date.now());
+        this.send(L.j.HEARTBEAT, this.seq, !1), (this.lastHeartbeatTime = Date.now());
     }
     getLogger() {
         return k;
@@ -453,7 +453,7 @@ class Q extends x.Z {
                 !0
             ),
             !1 !== e.sentry && S.Z.captureException(n, { tags: { socketCrashedAction: t } }),
-            y.default.track(w.rMx.GATEWAY_SOCKET_RESET, {
+            y.default.track(P.rMx.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
                 action: t

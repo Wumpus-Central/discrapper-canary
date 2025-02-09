@@ -36,8 +36,8 @@ function E(e, t, n) {
 let v = 100,
     y = 0,
     I = { any: 100 },
-    b = 100,
-    T = 3,
+    T = 100,
+    b = 3,
     S = 30 * _.Z.Millis.SECOND,
     A = 120 * _.Z.Millis.SECOND,
     N = -1 !== (0, f.hY)();
@@ -207,7 +207,7 @@ class R extends a.Z {
                 this.delayedCall.delay();
             }),
             (this.addLru = (e, t, n) => {
-                if ((n.push(e), n.length <= T)) return;
+                if ((n.push(e), n.length <= b)) return;
                 let i = -1,
                     r = -1;
                 for (let e = 0; e < n.length; e++) {
@@ -266,7 +266,7 @@ class R extends a.Z {
             (this.incomingVideoEnabledChanged = () => {
                 this.update();
             }),
-            (this.delayedCall = new u.sW(b, this.update)),
+            (this.delayedCall = new u.sW(T, this.update)),
             (this.offscreenTimeout = new u.V7()),
             h.w.on(h.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged);
     }

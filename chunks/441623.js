@@ -30,8 +30,8 @@ function E(e, t, n) {
 let v = 5,
     y = 15,
     I = 7,
-    b = 604800000,
-    T = 1209600000;
+    T = 604800000,
+    b = 1209600000;
 function S() {
     return {
         messageGiftIntentLastShownMap: {},
@@ -53,10 +53,10 @@ function D(e, t) {
     let a = new Date(i.getTime());
     return a.setDate(i.getDate() + I), n > r && n < a;
 }
-function x(e) {
+function L(e) {
     return !D(e, e.getFullYear()) && D(e, new Date().getFullYear());
 }
-function L() {
+function x() {
     if (null != O) {
         z(O);
         return;
@@ -71,7 +71,7 @@ function L() {
                 n = d.Z.getUserAffinity(e);
             if (_.Z.getRelationshipType(e) === g.OGo.FRIEND && !_.Z.isIgnored(e) && null != n && n.affinity > 0 && null != t) {
                 let n = new Date(t);
-                x(n) && (N.push(e), (R[e] = { friendsSince: n }));
+                L(n) && (N.push(e), (R[e] = { friendsSince: n }));
             }
         }
         N.sort((e, t) => {
@@ -83,10 +83,10 @@ function L() {
             (C = new Set(N.slice(0, v)));
     }
 }
-function P(e) {
+function w(e) {
     return Math.round(o()().diff(e, 'years', !0));
 }
-function w() {
+function P() {
     return Array.from(C).some((e) => !A.lastShownFriendsListGiftIntents.includes(e));
 }
 function M() {
@@ -118,7 +118,7 @@ function V(e) {
 function j() {
     for (let e in A.messageGiftIntentLastShownMap) {
         let t = A.messageGiftIntentLastShownMap[e];
-        Date.now() - t > T && delete A.messageGiftIntentLastShownMap[e];
+        Date.now() - t > b && delete A.messageGiftIntentLastShownMap[e];
     }
 }
 function H() {
@@ -133,7 +133,7 @@ function W() {
 function K(e) {
     let { total: t } = e;
     if (null == t) {
-        (O = null), L();
+        (O = null), x();
         return;
     }
     z(t);
@@ -157,7 +157,7 @@ function z(e) {
 }
 class q extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        (A = S()), null != e && ((A.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime), (A.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)), (A.messageGiftIntentLastShownMap = { ...e.messageGiftIntentLastShownMap })), this.syncWith([_.Z, d.Z, f.Z, c.Z], L), j();
+        (A = S()), null != e && ((A.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime), (A.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)), (A.messageGiftIntentLastShownMap = { ...e.messageGiftIntentLastShownMap })), this.syncWith([_.Z, d.Z, f.Z, c.Z], x), j();
     }
     getState() {
         return A;
@@ -173,11 +173,11 @@ class q extends (i = l.ZP.PersistedStore) {
     canShowFriendsTabBadge() {
         var e;
         let t = null !== (e = A.friendsTabBadgeLastDismissedTime) && void 0 !== e ? e : 0;
-        return !(Date.now() - t <= b) && w();
+        return !(Date.now() - t <= T) && P();
     }
     getFriendAnniversaryYears(e) {
         let t = R[e];
-        return null == t ? 0 : P(t.friendsSince);
+        return null == t ? 0 : w(t.friendsSince);
     }
     isGiftIntentMessageInCooldown(e) {
         return null != A.messageGiftIntentLastShownMap[e];

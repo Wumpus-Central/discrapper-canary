@@ -5,7 +5,7 @@ n(192379);
 var l = n(120356),
     i = n.n(l),
     o = n(325767),
-    s = n(485270),
+    s = n(593077),
     c = (((a = {}).LEFT = 'LEFT'), (a.RIGHT = 'RIGHT'), (a.UP = 'UP'), (a.DOWN = 'DOWN'), (a.UP_LEFT = 'UP_LEFT'), (a.DOWN_RIGHT = 'DOWN_RIGHT'), a);
 let d = (e) => {
     let { width: t = 24, height: n = 24, color: a = 'currentColor', direction: l, foreground: c, className: d, title: u, ...h } = e;

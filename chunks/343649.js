@@ -48,7 +48,7 @@ var l = t(200651),
     q = t(474936),
     K = t(231338),
     J = t(388032),
-    $ = t(122959);
+    $ = t(256005);
 let Q = q.Xh.NONE_MONTH,
     ee = [b.h8.PLAN_SELECT, b.h8.REVIEW, b.h8.CONFIRM],
     en = [b.h8.PLAN_SELECT, b.h8.ADD_PAYMENT_STEPS, b.h8.REVIEW, b.h8.CONFIRM];
@@ -195,13 +195,13 @@ function el(e) {
         e4 = () => {
             r(e$ === C.A.COMPLETED);
         },
-        e1 = null != ep && ep.isPurchasedExternally;
+        e3 = null != ep && ep.isPurchasedExternally;
     i.useEffect(() => {
-        eb === L.wr.PENDING || eF === b.h8.CONFIRM || null == eS || (eK !== ee && eJ(ee), ee.includes(eF) || eF === b.h8.PREMIUM_UPSELL || eV(b.h8.REVIEW)), eF === b.h8.ADD_PAYMENT_STEPS && eK !== en && eJ(en), e1 && eF !== b.h8.PLAN_SELECT && eY(b.h8.PLAN_SELECT);
-    }, [eF, eV, e1, eb, ep, eS, eK]),
+        eb === L.wr.PENDING || eF === b.h8.CONFIRM || null == eS || (eK !== ee && eJ(ee), ee.includes(eF) || eF === b.h8.PREMIUM_UPSELL || eV(b.h8.REVIEW)), eF === b.h8.ADD_PAYMENT_STEPS && eK !== en && eJ(en), e3 && eF !== b.h8.PLAN_SELECT && eY(b.h8.PLAN_SELECT);
+    }, [eF, eV, e3, eb, ep, eS, eK]),
         (0, L.bp)(eF, eb, eV, eQ),
         (0, b.dZ)(eF, e$, eQ);
-    let e3 = i.useRef(null),
+    let e1 = i.useRef(null),
         [e5, e9] = (0, I.Z)(!1, 500),
         [e7, e2] = i.useState(null),
         [e6, ne] = i.useState([]),
@@ -303,7 +303,7 @@ function el(e) {
                             guildId: er,
                             priceOptions: o
                         })),
-                        e1 &&
+                        e3 &&
                             null != ep &&
                             null != ep.paymentGateway &&
                             (e = (0, l.jsxs)(l.Fragment, {
@@ -323,7 +323,7 @@ function el(e) {
                         })),
                         (r = (0, l.jsx)(d.zxk, {
                             type: 'submit',
-                            disabled: e0 || 0 === ev || e1,
+                            disabled: e0 || 0 === ev || e3,
                             onClick: () => {
                                 if (!ea && (null == em || em.premiumSubscriptionType !== q.p9.TIER_2)) {
                                     eV(b.h8.PREMIUM_UPSELL);
@@ -353,7 +353,7 @@ function el(e) {
                                 eV(b.h8.ADD_PAYMENT_STEPS), eC(null);
                             },
                             onPurchaseTermsChange: eD,
-                            legalTermsNodeRef: e3,
+                            legalTermsNodeRef: e1,
                             hasLegalTermsFlash: e5
                         })),
                         (t = b.h8.PLAN_SELECT),
@@ -424,7 +424,7 @@ function el(e) {
                                           ...e,
                                           color: d.zxk.Colors.GREEN,
                                           onClick: () => {
-                                              null != e3.current && (e3.current.scrollIntoView({ behavior: 'smooth' }), e9(!0));
+                                              null != e1.current && (e1.current.scrollIntoView({ behavior: 'smooth' }), e9(!0));
                                           },
                                           type: 'submit',
                                           children: J.intl.string(J.t.eUEeCg)

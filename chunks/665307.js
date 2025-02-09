@@ -17,15 +17,15 @@ var i,
     E = n(167533),
     I = n(925329),
     C = n(707409),
-    N = n(490983),
-    v = n(799777),
+    v = n(490983),
+    N = n(799777),
     T = n(626135),
     S = n(780570),
-    Z = n(624138),
-    A = n(645818),
+    A = n(624138),
+    Z = n(645818),
     x = n(981631),
     b = n(388032),
-    L = n(399210);
+    L = n(757087);
 function y(e, t, n) {
     return (
         t in e
@@ -39,8 +39,8 @@ function y(e, t, n) {
         e
     );
 }
-let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
-    O = (0, Z.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let P = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
+    O = (0, A.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
     R = Object.freeze({
         [x.iEv.PLATFORM]: 'Platform',
         [x.iEv.LAST_PLAYED]: 'Last Played',
@@ -164,7 +164,7 @@ let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                     icon: h.o8v,
                                     tooltip: b.intl.string(b.t.Az9eqq)
                                 }),
-                                (0, l.jsx)(A.Z, {
+                                (0, l.jsx)(Z.Z, {
                                     className: s()(L.settingIcon, { [L.hidden]: !e.supportsCloudSync }),
                                     libraryApplication: e.libraryApplication
                                 })
@@ -406,21 +406,21 @@ function k(e) {
             applicationViewItems: i,
             filterQuery: a,
             fetched: s
-        } = (0, c.cj)([N.Z], () => ({
-            applicationViewItems: N.Z.sortedFilteredLibraryApplicationViewItems,
-            filterQuery: N.Z.applicationFilterQuery,
-            fetched: N.Z.hasFetchedApplications
+        } = (0, c.cj)([v.Z], () => ({
+            applicationViewItems: v.Z.sortedFilteredLibraryApplicationViewItems,
+            filterQuery: v.Z.applicationFilterQuery,
+            fetched: v.Z.hasFetchedApplications
         })),
         {
             sortKey: d,
             sortDirection: u,
             activeRowKey: h,
             isNavigatingByKeyboard: m
-        } = (0, c.cj)([v.Z], () => ({
-            sortKey: v.Z.sortKey,
-            sortDirection: v.Z.sortDirection,
-            activeRowKey: v.Z.activeRowKey,
-            isNavigatingByKeyboard: v.Z.isNavigatingByKeyboard
+        } = (0, c.cj)([N.Z], () => ({
+            sortKey: N.Z.sortKey,
+            sortDirection: N.Z.sortDirection,
+            activeRowKey: N.Z.activeRowKey,
+            isNavigatingByKeyboard: N.Z.isNavigatingByKeyboard
         }));
     return (0, l.jsx)(M, {
         ...e,

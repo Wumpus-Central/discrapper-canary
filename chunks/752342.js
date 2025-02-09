@@ -1,141 +1,141 @@
-i.d(n, { Z: () => b }), i(47120);
-var t = i(200651);
-i(192379);
-var l = i(481060),
-    o = i(100527),
-    s = i(906732),
-    r = i(5192),
-    a = i(785717),
-    d = i(687158),
-    c = i(899007),
-    u = i(648052),
-    m = i(867176),
-    x = i(681837),
-    p = i(502762),
-    f = i(530),
-    I = i(871604),
-    h = i(952124),
-    v = i(53558),
-    Z = i(544989),
-    g = i(934861),
-    _ = i(4517),
-    j = i(740628),
-    E = i(398145),
-    N = i(228168),
-    y = i(981631),
-    T = i(388032),
-    S = i(171865);
-function b(e) {
-    let { user: n, currentUser: i, guildId: b, channelId: P, messageId: L, roleId: C, sessionId: A, initialSection: O, initialSubsection: M, transitionState: R, onClose: U, sourceAnalyticsLocations: F = [] } = e,
-        B = b === y.ME ? void 0 : b,
-        D = (0, d.ZP)(n.id, B),
-        { analyticsLocations: w } = (0, s.ZP)([...F, o.Z.SIMPLIFIED_PROFILE_MODAL]),
+t.d(n, { Z: () => P }), t(47120);
+var i = t(200651);
+t(192379);
+var l = t(481060),
+    o = t(100527),
+    s = t(906732),
+    r = t(5192),
+    a = t(785717),
+    d = t(687158),
+    c = t(899007),
+    u = t(648052),
+    I = t(867176),
+    f = t(681837),
+    p = t(502762),
+    x = t(530),
+    _ = t(871604),
+    m = t(952124),
+    h = t(53558),
+    Z = t(544989),
+    v = t(934861),
+    g = t(4517),
+    j = t(740628),
+    E = t(398145),
+    y = t(228168),
+    N = t(981631),
+    T = t(388032),
+    b = t(757672);
+function P(e) {
+    let { user: n, currentUser: t, guildId: P, channelId: S, messageId: L, roleId: C, sessionId: A, initialSection: O, initialSubsection: R, transitionState: M, onClose: B, sourceAnalyticsLocations: U = [] } = e,
+        F = P === N.ME ? void 0 : P,
+        D = (0, d.ZP)(n.id, F),
+        { analyticsLocations: w } = (0, s.ZP)([...U, o.Z.SIMPLIFIED_PROFILE_MODAL]),
         G = (0, a.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             sourceSessionId: A,
-            guildId: B,
-            channelId: P,
+            guildId: F,
+            channelId: S,
             messageId: L,
             roleId: C
         }),
         k = (0, E.Z)(n);
-    return (0, t.jsx)(s.Gt, {
+    return (0, i.jsx)(s.Gt, {
         value: w,
-        children: (0, t.jsx)(a.Mt, {
+        children: (0, i.jsx)(a.Mt, {
             value: G,
-            children: (0, t.jsx)(l.Y0X, {
-                transitionState: R,
-                className: S.root,
+            children: (0, i.jsx)(l.Y0X, {
+                transitionState: M,
+                className: b.root,
                 hideShadow: !0,
                 'aria-label': T.intl.string(T.t['3N/J2t']),
-                children: (0, t.jsxs)(p.Z, {
+                children: (0, i.jsxs)(p.Z, {
                     user: n,
                     displayProfile: D,
-                    profileType: N.y0.FULL_SIZE,
+                    profileType: y.y0.FULL_SIZE,
                     children: [
-                        (0, t.jsx)(Z.Z, {
-                            profileType: N.y0.FULL_SIZE,
-                            children: (0, t.jsx)(h.Z, {
+                        (0, i.jsx)(Z.Z, {
+                            profileType: y.y0.FULL_SIZE,
+                            children: (0, i.jsx)(m.Z, {
                                 user: n,
-                                guildId: B
+                                guildId: F
                             })
                         }),
-                        (0, t.jsxs)('header', {
+                        (0, i.jsxs)('header', {
                             children: [
-                                (0, t.jsx)(m.Z, {
+                                (0, i.jsx)(I.Z, {
                                     user: n,
                                     displayProfile: D,
-                                    profileType: N.y0.FULL_SIZE
+                                    profileType: y.y0.FULL_SIZE
                                 }),
-                                (0, t.jsxs)('div', {
-                                    className: S.headerInner,
+                                (0, i.jsxs)('div', {
+                                    className: b.headerInner,
                                     children: [
-                                        (0, t.jsx)(c.Z, {
+                                        (0, i.jsx)(c.Z, {
                                             user: n,
                                             displayProfile: D,
-                                            guildId: B,
-                                            channelId: P,
-                                            profileType: N.y0.FULL_SIZE
+                                            guildId: F,
+                                            channelId: S,
+                                            profileType: y.y0.FULL_SIZE
                                         }),
-                                        (0, t.jsx)(_.Z, {
+                                        (0, i.jsx)(g.Z, {
                                             location: 'BotUserProfileModal',
                                             user: n,
-                                            profileType: N.y0.FULL_SIZE,
-                                            hasEntered: R === l.Dvm.ENTERED,
-                                            onCloseProfile: U
+                                            profileType: y.y0.FULL_SIZE,
+                                            hasEntered: M === l.Dvm.ENTERED,
+                                            onCloseProfile: B
                                         }),
-                                        (0, t.jsxs)('div', {
-                                            className: S.headerButtons,
+                                        (0, i.jsxs)('div', {
+                                            className: b.headerButtons,
                                             children: [
-                                                (0, t.jsx)(g.c, {
+                                                (0, i.jsx)(v.c, {
                                                     userId: n.id,
-                                                    onClose: U,
-                                                    className: S.messageTextButton
+                                                    onClose: B,
+                                                    className: b.messageTextButton
                                                 }),
-                                                (0, t.jsx)(g.v, {
+                                                (0, i.jsx)(v.v, {
                                                     userId: n.id,
-                                                    onClose: U,
-                                                    tooltipContainerClassName: S.messageIconButton
+                                                    onClose: B,
+                                                    tooltipContainerClassName: b.messageIconButton
                                                 }),
-                                                (0, t.jsx)(v.Z, {
+                                                (0, i.jsx)(h.Z, {
                                                     user: n,
-                                                    guildId: B
+                                                    guildId: F
                                                 }),
-                                                (0, t.jsx)(I.Z, { user: n })
+                                                (0, i.jsx)(_.Z, { user: n })
                                             ]
                                         })
                                     ]
                                 })
                             ]
                         }),
-                        (0, t.jsxs)('div', {
-                            className: S.body,
+                        (0, i.jsxs)('div', {
+                            className: b.body,
                             children: [
-                                (0, t.jsx)(f.Z, {
+                                (0, i.jsx)(x.Z, {
                                     user: n,
-                                    profileType: N.y0.FULL_SIZE,
-                                    nickname: r.ZP.getName(B, P, n),
+                                    profileType: y.y0.FULL_SIZE,
+                                    nickname: r.ZP.getName(F, S, n),
                                     pronouns: null == D ? void 0 : D.pronouns,
                                     nicknameVariant: 'heading-xl/bold',
-                                    nicknameIcons: (0, t.jsx)(x.Z, { userId: n.id }),
-                                    tags: (0, t.jsx)(u.Z, {
+                                    nicknameIcons: (0, i.jsx)(f.Z, { userId: n.id }),
+                                    tags: (0, i.jsx)(u.Z, {
                                         displayProfile: D,
-                                        profileType: N.y0.FULL_SIZE,
-                                        onClose: U
+                                        profileType: y.y0.FULL_SIZE,
+                                        onClose: B
                                     })
                                 }),
-                                (0, t.jsx)(p.Z.Overlay, {
-                                    className: S.overlay,
-                                    children: (0, t.jsx)(j.Z, {
+                                (0, i.jsx)(p.Z.Overlay, {
+                                    className: b.overlay,
+                                    children: (0, i.jsx)(j.Z, {
                                         user: n,
-                                        currentUser: i,
+                                        currentUser: t,
                                         displayProfile: D,
-                                        guildId: B,
+                                        guildId: F,
                                         items: k,
-                                        initialSection: null != O ? O : N.oh.BOT_INFO,
-                                        initialSubsection: M,
-                                        onClose: U
+                                        initialSection: null != O ? O : y.oh.BOT_INFO,
+                                        initialSubsection: R,
+                                        onClose: B
                                     })
                                 })
                             ]

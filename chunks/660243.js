@@ -2,28 +2,28 @@ n.d(t, { r: () => _ });
 var i = n(200651);
 n(192379);
 var s = n(793030),
-    r = n(481060),
-    l = n(230711),
+    l = n(481060),
+    r = n(230711),
     a = n(695346),
     o = n(903002),
     c = n(214492),
     d = n(981631),
     u = n(388032),
-    m = n(707288),
-    g = n(146036),
-    h = n(510176);
+    h = n(676260),
+    m = n(146036),
+    g = n(510176);
 function x(e) {
-    let { headerAssetSrc: t, headerText: n, description: l, assets: a = [], assetCount: c = 0, disabled: d = !1, onClick: g } = e;
+    let { headerAssetSrc: t, headerText: n, description: r, assets: a = [], assetCount: c = 0, disabled: d = !1, onClick: m } = e;
     return (0, i.jsxs)('div', {
-        className: m.container,
+        className: h.container,
         children: [
             (0, i.jsxs)('div', {
-                className: m.headerContainer,
+                className: h.headerContainer,
                 children: [
                     (0, i.jsx)('img', {
                         src: t,
                         alt: '',
-                        className: m.headerAsset
+                        className: h.headerAsset
                     }),
                     (0, i.jsx)(s.X6, {
                         variant: 'heading-lg/normal',
@@ -33,7 +33,7 @@ function x(e) {
                     (0, i.jsx)(s.xv, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
-                        children: l
+                        children: r
                     })
                 ]
             }),
@@ -44,10 +44,10 @@ function x(e) {
                       children: u.intl.string(u.t.jfrLLS)
                   })
                 : (0, i.jsxs)('div', {
-                      className: m.sharingContainer,
+                      className: h.sharingContainer,
                       children: [
                           (0, i.jsx)('div', {
-                              className: m.sharingTitleSpacer,
+                              className: h.sharingTitleSpacer,
                               children:
                                   c > 0 &&
                                   (0, i.jsx)(s.xv, {
@@ -56,16 +56,16 @@ function x(e) {
                                   })
                           }),
                           (0, i.jsxs)('div', {
-                              className: m.manageContainer,
+                              className: h.manageContainer,
                               children: [
                                   (0, i.jsx)(o.D, {
                                       assets: a,
                                       assetCount: c,
                                       size: o.F.MEDIUM
                                   }),
-                                  (0, i.jsx)(r.zxk, {
-                                      onClick: g,
-                                      color: r.zxk.Colors.PRIMARY,
+                                  (0, i.jsx)(l.zxk, {
+                                      onClick: m,
+                                      color: l.zxk.Colors.PRIMARY,
                                       children: 'Manage'
                                   })
                               ]
@@ -78,26 +78,26 @@ function x(e) {
 function _() {
     let e = !a.G6.useSetting(),
         { assets: t, count: n } = (0, c.oF)(),
-        { assets: s, count: r } = (0, c.hs)();
+        { assets: s, count: l } = (0, c.hs)();
     return (0, i.jsxs)('div', {
-        className: m.cardsContainer,
+        className: h.cardsContainer,
         children: [
             (0, i.jsx)(x, {
-                headerAssetSrc: g,
+                headerAssetSrc: m,
                 headerText: u.intl.string(u.t.URyqtL),
                 description: u.intl.string(u.t['3uTjaG']),
                 assets: t,
                 assetCount: n,
-                onClick: () => l.Z.open(d.oAB.REGISTERED_GAMES),
+                onClick: () => r.Z.open(d.oAB.REGISTERED_GAMES),
                 disabled: e
             }),
             (0, i.jsx)(x, {
-                headerAssetSrc: h,
+                headerAssetSrc: g,
                 headerText: u.intl.string(u.t['3fe7U1']),
                 description: u.intl.string(u.t.IoN1am),
                 assets: s,
-                assetCount: r,
-                onClick: () => l.Z.open(d.oAB.CONNECTIONS),
+                assetCount: l,
+                onClick: () => r.Z.open(d.oAB.CONNECTIONS),
                 disabled: e
             })
         ]

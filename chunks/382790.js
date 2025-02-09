@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120);
+n.d(t, { Z: () => E }), n(47120);
 var i,
     s = n(200651),
     l = n(192379),
@@ -13,8 +13,8 @@ var i,
     g = n(669083),
     m = n(483962),
     f = n(711553),
-    v = n(388032),
-    Z = n(433217);
+    _ = n(388032),
+    v = n(931352);
 function x(e, t, n) {
     return (
         t in e
@@ -28,11 +28,11 @@ function x(e, t, n) {
         e
     );
 }
-function S(e) {
+function Z(e) {
     let { closePopout: t } = e;
     return (0, s.jsx)(g.Z, { onClose: t });
 }
-class E extends (i = l.PureComponent) {
+class S extends (i = l.PureComponent) {
     render() {
         let { selectedGuildId: e, locked: t, contained: n, className: i } = this.props,
             l =
@@ -46,14 +46,14 @@ class E extends (i = l.PureComponent) {
                           e
                       )
                     : (0, s.jsx)(f.Z, {
-                          title: v.intl.string(v.t.YUU0RE),
-                          renderSettings: S,
+                          title: _.intl.string(_.t.YUU0RE),
+                          renderSettings: Z,
                           onDragStart: this.onDragStart,
                           children: (0, s.jsx)(m.Z, {})
                       }),
             a = n ? 'div' : h.ZP;
         return (0, s.jsxs)(a, {
-            className: r()(Z.base, { [Z.widget]: !n }, i),
+            className: r()(v.base, { [v.widget]: !n }, i),
             children: [
                 (0, s.jsx)(c.Z, {
                     isOverlay: !0,
@@ -72,5 +72,5 @@ class E extends (i = l.PureComponent) {
             });
     }
 }
-x(E, 'defaultProps', { contained: !1 });
-let C = o.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(E);
+x(S, 'defaultProps', { contained: !1 });
+let E = o.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(S);

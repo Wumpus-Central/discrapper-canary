@@ -18,7 +18,7 @@ var r = n(120356),
     f = n(5192),
     _ = n(192918),
     p = n(388032),
-    h = n(830677);
+    h = n(112311);
 function m() {
     return (0, i.jsx)('div', {
         className: h.container,
@@ -78,17 +78,17 @@ function y(e) {
         l = r.author_id,
         m = (0, s.e7)([d.default], () => d.default.getUser(l)),
         { displayParticipants: g, participant1: E, participant2: y, numOtherParticipants: I } = (0, _.Z)(r, a),
-        b = (0, s.e7)([u.ZP], () => u.ZP.getMember(t, l)),
-        T = (0, s.e7)(
+        T = (0, s.e7)([u.ZP], () => u.ZP.getMember(t, l)),
+        b = (0, s.e7)(
             [c.Z],
             () => {
                 var e;
-                return (null == b ? void 0 : b.colorRoleId) != null ? (null === (e = c.Z.getRole(t, b.colorRoleId)) || void 0 === e ? void 0 : e.name) : void 0;
+                return (null == T ? void 0 : T.colorRoleId) != null ? (null === (e = c.Z.getRole(t, T.colorRoleId)) || void 0 === e ? void 0 : e.name) : void 0;
             },
-            [t, b]
+            [t, T]
         );
     if (null == m) return null;
-    let S = null == b ? void 0 : b.colorString,
+    let S = null == T ? void 0 : T.colorString,
         A = f.ZP.getName(t, n, m);
     return (0, i.jsxs)('div', {
         className: h.userSection,
@@ -100,7 +100,7 @@ function y(e) {
             }),
             (0, i.jsx)(o.PUh, {
                 color: null != S ? S : void 0,
-                roleName: T,
+                roleName: b,
                 name: A,
                 className: h.userName,
                 'aria-hidden': !0

@@ -9,7 +9,7 @@ var o = n(481060),
     d = n(30513),
     s = n(981631),
     u = n(388032),
-    _ = n(369576);
+    _ = n(197930);
 function g(e) {
     let { guild: i, banner: n } = e;
     return (0, t.jsx)('div', {

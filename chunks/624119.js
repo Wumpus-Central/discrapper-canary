@@ -1,4 +1,4 @@
-var i = {
+var d = {
     './champion_1.jpg': '619636',
     './champion_10.jpg': '41404',
     './champion_101.jpg': '985966',
@@ -78,7 +78,7 @@ var i = {
     './champion_29.jpg': '603640',
     './champion_3.jpg': '196',
     './champion_30.jpg': '986462',
-    './champion_31.jpg': '695298',
+    './champion_31.jpg': '735950',
     './champion_32.jpg': '713070',
     './champion_33.jpg': '882678',
     './champion_34.jpg': '629666',
@@ -133,7 +133,7 @@ var i = {
     './champion_7.jpg': '216849',
     './champion_711.jpg': '238433',
     './champion_72.jpg': '389683',
-    './champion_74.jpg': '941467',
+    './champion_74.jpg': '573161',
     './champion_75.jpg': '963635',
     './champion_76.jpg': '251748',
     './champion_77.jpg': '241239',
@@ -169,19 +169,19 @@ var i = {
     './champion_98.jpg': '761788',
     './champion_99.jpg': '751384'
 };
-function r(e) {
-    return n(a(e));
+function a(t) {
+    return c(s(t));
 }
-function a(e) {
-    if (!n.o(i, e)) {
-        var t = Error("Cannot find module '" + e + "'");
-        throw ((t.code = 'MODULE_NOT_FOUND'), t);
+function s(t) {
+    if (!c.o(d, t)) {
+        var e = Error("Cannot find module '" + t + "'");
+        throw ((e.code = 'MODULE_NOT_FOUND'), e);
     }
-    return i[e];
+    return d[t];
 }
-(r.keys = function () {
-    return Object.keys(i);
+(a.keys = function () {
+    return Object.keys(d);
 }),
-    (r.resolve = a),
-    (e.exports = r),
-    (r.id = 624119);
+    (a.resolve = s),
+    (t.exports = a),
+    (a.id = 624119);

@@ -17,7 +17,7 @@ var l = n(200651),
     E = n(594174),
     x = n(849171),
     Z = n(388032),
-    S = n(712434);
+    S = n(881489);
 function C(e) {
     let { participant: t, width: n, channelId: r } = e,
         { analyticsLocations: a } = (0, h.ZP)(f.Z.PRESENCE_ACTIVITY_TILE),

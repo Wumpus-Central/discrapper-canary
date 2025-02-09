@@ -22,16 +22,16 @@ var a = n(200651),
     N = n(550532),
     T = n(71585),
     E = n(146282),
-    y = n(780106),
-    S = n(650613),
+    S = n(780106),
+    y = n(650613),
     k = n(789086),
-    R = n(206583),
-    I = n(298149),
-    O = n(941469);
+    I = n(206583),
+    R = n(252586),
+    O = n(617521);
 let Z = [
     {
         key: 'type',
-        cellClassName: i()(I.cell, I.cellType),
+        cellClassName: i()(R.cell, R.cellType),
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(m.Text, {
@@ -42,7 +42,7 @@ let Z = [
     },
     {
         key: 'count',
-        cellClassName: i()(I.cell, I.cellCount),
+        cellClassName: i()(R.cell, R.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, a.jsx)('div', {
@@ -55,7 +55,7 @@ let Z = [
     },
     {
         key: 'only?',
-        cellClassName: I.cell,
+        cellClassName: R.cell,
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(w, { type: t });
@@ -84,7 +84,7 @@ function w(e) {
 }
 function A() {
     var e, t;
-    let n = (0, u.e7)([E.Z], () => E.Z.getFeed(R.YN.GLOBAL_FEED)),
+    let n = (0, u.e7)([E.Z], () => E.Z.getFeed(I.YN.GLOBAL_FEED)),
         l = (0, u.e7)([E.Z], () => E.Z.getDebugImpressionCappingDisabled()),
         o = (0, u.e7)([T.Z], () => T.Z.getDebugFastImpressionCappingEnabled()),
         c = (function (e) {
@@ -100,7 +100,7 @@ function A() {
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
         w = (0, u.e7)([E.Z], () => {
             var e;
-            return (null === (e = E.Z.getFeedState(R.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+            return (null === (e = E.Z.getFeedState(I.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
         [A, P] = r.useState(''),
         D = (0, u.e7)(
@@ -116,7 +116,7 @@ function A() {
             location: 'DevToolsContentInventory',
             source: g.m1.DevTools
         }),
-        F = Object.entries(null !== (t = h.K.get('GameProfileModal')) && void 0 !== t ? t : {})
+        M = Object.entries(null !== (t = h.K.get('GameProfileModal')) && void 0 !== t ? t : {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -125,12 +125,12 @@ function A() {
                 let [t] = e;
                 return t;
             }),
-        M = (0, p.Z)(F).filter(C.lm),
+        F = (0, p.Z)(M).filter(C.lm),
         z = (0, u.e7)([N.Z], () => N.Z.getFakeGameToShow());
     return (0, a.jsx)('div', {
         className: i()(O.panel),
         children: (0, a.jsxs)(m.zJl, {
-            className: I.content,
+            className: R.content,
             children: [
                 (0, a.jsxs)(m.hjN, {
                     children: [
@@ -147,7 +147,7 @@ function A() {
                             onClick: function () {
                                 x.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-                                    feedId: R.YN.GLOBAL_FEED,
+                                    feedId: I.YN.GLOBAL_FEED,
                                     feature: d.L.INBOX
                                 });
                             },
@@ -193,7 +193,7 @@ function A() {
                     ]
                 }),
                 !1,
-                (0, a.jsx)(S.Z, {}),
+                (0, a.jsx)(y.Z, {}),
                 (0, a.jsxs)(m.hjN, {
                     children: [
                         (0, a.jsx)(m.vwX, { children: 'Game Profile' }),
@@ -206,7 +206,7 @@ function A() {
                             error: A.length > 0 && null == B ? 'No game profile for '.concat(null != D ? D : A + ' - try by id', '.') : void 0,
                             style: null != B ? { border: '1px solid green' } : {}
                         }),
-                        (0, a.jsx)('ul', { children: M.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(L, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, a.jsx)('ul', { children: F.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(L, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 }),
                 (0, a.jsxs)(m.hjN, {
@@ -217,7 +217,7 @@ function A() {
                             children: 'Force show game:'
                         }),
                         (0, a.jsx)(m.PhF, {
-                            options: y.h.map((e) => ({
+                            options: S.h.map((e) => ({
                                 label: e,
                                 value: e
                             })),

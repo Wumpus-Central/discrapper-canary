@@ -17,7 +17,7 @@ var l = n(120356),
     _ = n(967128),
     C = n(981631),
     x = n(388032),
-    v = n(678606);
+    v = n(825266);
 function E(e) {
     var t, l;
     let { userId: u, channel: _ } = e,

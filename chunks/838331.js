@@ -1,6 +1,6 @@
 n.d(t, {
     A7: () => y,
-    hQ: () => T,
+    hQ: () => b,
     lo: () => A
 }),
     n(47120);
@@ -17,7 +17,7 @@ var i = n(200651),
     _ = n(993365),
     p = n(481060),
     h = n(388032),
-    m = n(53843);
+    m = n(8359);
 let g = 'data-listbox-item-id',
     E = 40,
     v = Object.freeze({
@@ -39,36 +39,36 @@ function y(e) {
 function I(e) {
     return String(e);
 }
-let b = r.createContext({
+let T = r.createContext({
     activeDescendant: null,
     selected: new Set(),
     setSelected: () => null,
     itemToString: I
 });
-function T(e) {
-    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: v, 'aria-label': y, multiSelect: T = !1, autoFocus: S = !1, maxVisibleItems: A = 5, itemToString: N = I, showScrollbar: C = !1 } = e,
+function b(e) {
+    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: v, 'aria-label': y, multiSelect: b = !1, autoFocus: S = !1, maxVisibleItems: A = 5, itemToString: N = I, showScrollbar: C = !1 } = e,
         [R, O] = r.useState(''),
         [D] = r.useState(!0),
-        [x, L] = r.useState(null),
-        P = r.useId(),
-        w = r.useRef(null);
+        [L, x] = r.useState(null),
+        w = r.useId(),
+        P = r.useRef(null);
     r.useLayoutEffect(() => {
-        let e = document.querySelector('['.concat(g, '="').concat(x, '"]')),
-            t = w.current;
+        let e = document.querySelector('['.concat(g, '="').concat(L, '"]')),
+            t = P.current;
         null != t &&
             null != e &&
             t.scrollIntoViewNode({
                 node: e,
                 padding: 12
             });
-    }, [x]);
+    }, [L]);
     let M = n(R),
         k = 0 === M.length,
         U = r.useId(),
         G = r.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = w.current;
+                    let t = P.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
@@ -77,16 +77,16 @@ function T(e) {
         B = r.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = w.current;
+                    let t = P.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             []
         ),
         Z = r.useCallback((e, t) => {
-            L(t);
+            x(t);
             let n = document.querySelector(e),
-                i = w.current;
+                i = P.current;
             null != i && null != n && i.scrollIntoViewNode({ node: n });
         }, []),
         F = (0, o.ZP)({
@@ -108,8 +108,8 @@ function T(e) {
                     role: 'combobox',
                     'aria-label': y,
                     'aria-expanded': D,
-                    'aria-controls': D ? P : void 0,
-                    'aria-owns': P,
+                    'aria-controls': D ? w : void 0,
+                    'aria-owns': w,
                     'aria-haspopup': 'listbox',
                     className: s()(m.combobox, c),
                     children: [
@@ -120,12 +120,12 @@ function T(e) {
                             query: R,
                             onChange: O,
                             onKeyDown: r,
-                            onBlur: () => L(null),
+                            onBlur: () => x(null),
                             onClear: () => O(''),
                             className: s()({ [m.searchWithScrollbar]: C }),
                             inputProps: {
                                 'aria-multiline': !1,
-                                'aria-activedescendant': null != x ? x : void 0
+                                'aria-activedescendant': null != L ? L : void 0
                             }
                         }),
                         (0, i.jsx)('div', {
@@ -146,9 +146,9 @@ function T(e) {
                                               })
                                           ]
                                       })
-                                    : (0, i.jsx)(b.Provider, {
+                                    : (0, i.jsx)(T.Provider, {
                                           value: {
-                                              activeDescendant: x,
+                                              activeDescendant: L,
                                               selected: a,
                                               setSelected: u,
                                               itemToString: N
@@ -156,9 +156,9 @@ function T(e) {
                                           children: (0, i.jsx)(V, {
                                               ...o,
                                               style: { maxHeight: A * (E + 6) },
-                                              'aria-multiselectable': T,
-                                              id: P,
-                                              ref: w,
+                                              'aria-multiselectable': b,
+                                              id: w,
+                                              ref: P,
                                               className: s()(m.list, v, { [m.scroller]: C }),
                                               sections: [M.length],
                                               sectionHeight: 0,
@@ -181,11 +181,11 @@ let S = r.createContext(null);
 function A(e) {
     var t;
     let { value: n, children: a, disabled: o = !1, selectedColor: u = v.STANDARD, ...d } = e,
-        { activeDescendant: f, selected: _, setSelected: p, itemToString: h } = r.useContext(b),
+        { activeDescendant: f, selected: _, setSelected: p, itemToString: h } = r.useContext(T),
         E = h(n),
         y = f === E,
         I = null !== (t = null == d ? void 0 : d.selected) && void 0 !== t ? t : _.has(n),
-        T = (0, l.JA)(E);
+        b = (0, l.JA)(E);
     return (0, i.jsx)(c.P, {
         tag: 'li',
         id: E,
@@ -196,7 +196,7 @@ function A(e) {
             [u]: I,
             [m.disabled]: o
         }),
-        ...T,
+        ...b,
         role: 'option',
         'aria-selected': I,
         'aria-disabled': o,
@@ -223,7 +223,7 @@ function A(e) {
     }),
     (A.Checkbox = function (e) {
         let { checked: t } = e,
-            { selected: n } = r.useContext(b),
+            { selected: n } = r.useContext(T),
             a = r.useContext(S);
         return (0, i.jsx)('span', {
             className: m.itemCheckbox,
@@ -236,7 +236,7 @@ function A(e) {
         });
     }),
     (A.Checkmark = function () {
-        let { selected: e } = r.useContext(b),
+        let { selected: e } = r.useContext(T),
             t = r.useContext(S);
         return e.has(t)
             ? (0, i.jsx)('span', {

@@ -17,8 +17,8 @@ var i = n(67867),
     v = m.IteratorPrototype,
     y = m.BUGGY_SAFARI_ITERATORS,
     I = p('iterator'),
-    b = 'keys',
-    T = 'values',
+    T = 'keys',
+    b = 'values',
     S = 'entries',
     A = function () {
         return this;
@@ -30,10 +30,10 @@ e.exports = function (e, t, n, s, p, m, N) {
         O,
         D = function (e) {
             if (e === p && M) return M;
-            if (!y && e && e in P) return P[e];
+            if (!y && e && e in w) return w[e];
             switch (e) {
-                case b:
                 case T:
+                case b:
                 case S:
                     return function () {
                         return new n(this, e);
@@ -43,44 +43,44 @@ e.exports = function (e, t, n, s, p, m, N) {
                 return new n(this);
             };
         },
-        x = t + ' Iterator',
-        L = !1,
-        P = e.prototype,
-        w = P[I] || P['@@iterator'] || (p && P[p]),
-        M = (!y && w) || D(p),
-        k = ('Array' === t && P.entries) || w;
+        L = t + ' Iterator',
+        x = !1,
+        w = e.prototype,
+        P = w[I] || w['@@iterator'] || (p && w[p]),
+        M = (!y && P) || D(p),
+        k = ('Array' === t && w.entries) || P;
     if (
-        (k && (C = u(k.call(new e()))) !== Object.prototype && C.next && (a || u(C) === v || (c ? c(C, v) : o(C[I]) || _(C, I, A)), d(C, x, !0, !0), a && (h[x] = A)),
+        (k && (C = u(k.call(new e()))) !== Object.prototype && C.next && (a || u(C) === v || (c ? c(C, v) : o(C[I]) || _(C, I, A)), d(C, L, !0, !0), a && (h[L] = A)),
         g &&
-            p === T &&
-            w &&
-            w.name !== T &&
+            p === b &&
+            P &&
+            P.name !== b &&
             (!a && E
-                ? f(P, 'name', T)
-                : ((L = !0),
+                ? f(w, 'name', b)
+                : ((x = !0),
                   (M = function () {
-                      return r(w, this);
+                      return r(P, this);
                   }))),
         p)
     ) {
         if (
             ((R = {
-                values: D(T),
-                keys: m ? M : D(b),
+                values: D(b),
+                keys: m ? M : D(T),
                 entries: D(S)
             }),
             N)
         )
-            for (O in R) (!y && !L && O in P) || _(P, O, R[O]);
+            for (O in R) (!y && !x && O in w) || _(w, O, R[O]);
         else
             i(
                 {
                     target: t,
                     proto: !0,
-                    forced: y || L
+                    forced: y || x
                 },
                 R
             );
     }
-    return (!a || N) && P[I] !== M && _(P, I, M, { name: p }), (h[t] = M), R;
+    return (!a || N) && w[I] !== M && _(w, I, M, { name: p }), (h[t] = M), R;
 };

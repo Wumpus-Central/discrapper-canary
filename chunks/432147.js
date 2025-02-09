@@ -16,7 +16,7 @@ var l = n(120356),
     g = n(488131),
     f = n(981631),
     x = n(388032),
-    C = n(363059);
+    C = n(860652);
 function v(e) {
     let { message: t, compact: n } = e,
         l = (0, r.e7)([d.Z], () => d.Z.getChannel(u.default.castMessageIdAsChannelId(t.id)));

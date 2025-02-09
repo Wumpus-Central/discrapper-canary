@@ -65,13 +65,13 @@ function y(e) {
 function I() {
     (h = {}), null != p && y(p);
 }
-function b(e) {
+function T(e) {
     let {
         guild: { id: t }
     } = e;
     (h[t] = void 0), p === t && y(t);
 }
-function T(e) {
+function b(e) {
     let {
         guild: { id: t }
     } = e;
@@ -112,42 +112,42 @@ function D(e) {
     let { channelId: t } = e;
     return null == t && null != m ? O(u.Z.getChannel(m), null) : O(u.Z.getChannel(t), t);
 }
-function x(e) {
+function L(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         let { channelId: n, sessionId: i } = t;
         return l.default.getSessionId() !== i ? e : O(u.Z.getChannel(n), n) || e;
     }, !1);
 }
-function L(e) {
+function x(e) {
     let { guildId: t } = e;
     if (((p = null != t ? t : null), null == t || null != h[t])) return !1;
     y(t);
 }
-function P() {
+function w() {
     y(f.I_8);
 }
-function w(e) {
+function P(e) {
     let t = h[e];
     return null != t ? t : y(e);
 }
 class M extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(c.ZP, d.Z, l.default, u.Z, o.Z), this.syncWith([o.Z], P);
+        this.waitFor(c.ZP, d.Z, l.default, u.Z, o.Z), this.syncWith([o.Z], w);
     }
     getCategories(e) {
-        return null != e ? w(e) : E;
+        return null != e ? P(e) : E;
     }
 }
 _(M, 'displayName', 'GuildCategoryStore');
 let k = new M(a.Z, {
-    CHANNEL_SELECT: L,
+    CHANNEL_SELECT: x,
     CONNECTION_OPEN: I,
     OVERLAY_INITIALIZE: I,
     CACHE_LOADED_LAZY: I,
-    GUILD_CREATE: b,
-    GUILD_UPDATE: b,
-    GUILD_DELETE: T,
+    GUILD_CREATE: T,
+    GUILD_UPDATE: T,
+    GUILD_DELETE: b,
     CHANNEL_CREATE: S,
     CHANNEL_DELETE: S,
     CHANNEL_UPDATES: A,
@@ -159,5 +159,5 @@ let k = new M(a.Z, {
     IMPERSONATE_UPDATE: R,
     IMPERSONATE_STOP: R,
     VOICE_CHANNEL_SELECT: D,
-    VOICE_STATE_UPDATES: x
+    VOICE_STATE_UPDATES: L
 });

@@ -11,11 +11,11 @@ var i = n(200651),
     f = n(186523),
     _ = n(553826),
     p = n(939350),
-    h = n(450793);
+    h = n(335765);
 function m(e) {
     let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: y } = e,
         I = r.useRef(null),
-        b = (0, d.Q3)('MenuRadioItem');
+        T = (0, d.Q3)('MenuRadioItem');
     return (
         r.useEffect(() => {
             E && (0, u.F)(I);
@@ -44,7 +44,7 @@ function m(e) {
                 }),
                 (0, i.jsx)('div', {
                     className: h.iconContainer,
-                    children: b
+                    children: T
                         ? (0, i.jsx)(c.Fj9, {
                               checked: a,
                               disabled: g,

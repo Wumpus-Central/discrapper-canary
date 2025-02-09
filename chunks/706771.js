@@ -17,8 +17,8 @@ var i = n(67867),
     v = n(302231),
     y = n(937443),
     I = n(777628),
-    b = n(502640),
-    T = n(65007),
+    T = n(502640),
+    b = n(65007),
     S = n(349446),
     A = n(930134),
     N = n(790248),
@@ -26,10 +26,10 @@ var i = n(67867),
     R = n(942282),
     O = n(293303),
     D = n(964653),
-    x = n(511364),
-    L = n(348343),
-    P = n(360518),
-    w = n(862602),
+    L = n(511364),
+    x = n(348343),
+    w = n(360518),
+    P = n(862602),
     M = n(187203),
     k = n(29657),
     U = n(414847),
@@ -46,7 +46,7 @@ var i = n(67867),
     z = r.RangeError,
     q = r.TypeError,
     Q = r.QObject,
-    X = T.f,
+    X = b.f,
     J = S.f,
     $ = I.f,
     ee = N.f,
@@ -123,7 +123,7 @@ var i = n(67867),
             n = [];
         return (
             B(t, function (e) {
-                d(en, e) || d(x, e) || et(n, e);
+                d(en, e) || d(L, e) || et(n, e);
             }),
             n
         );
@@ -144,7 +144,7 @@ u ||
         (K = (W = function () {
             if (f(K, this)) throw new q('Symbol is not a constructor');
             var e = arguments.length && void 0 !== arguments[0] ? m(arguments[0]) : void 0,
-                t = L(e),
+                t = x(e),
                 n = function (e) {
                     var i = void 0 === this ? r : this;
                     i === Y && a(n, ei, e), d(i, Z) && d(i[Z], t) && (i[Z][t] = !1);
@@ -172,16 +172,16 @@ u ||
         }
     ),
     C(W, 'withoutSetter', function (e) {
-        return el(L(e), e);
+        return el(x(e), e);
     }),
     (N.f = ef),
     (S.f = eu),
     (A.f = ec),
-    (T.f = e_),
+    (b.f = e_),
     (y.f = I.f = ep),
-    (b.f = eh),
-    (w.f = function (e) {
-        return el(P(e), e);
+    (T.f = eh),
+    (P.f = function (e) {
+        return el(w(e), e);
     }),
     l &&
         (R(K, 'description', {
@@ -243,4 +243,4 @@ u ||
     ),
     k(),
     U(W, F),
-    (x[Z] = !0);
+    (L[Z] = !0);

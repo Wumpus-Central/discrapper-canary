@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => g });
 var i = n(200651),
     l = n(192379),
     a = n(442837),
@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(469880),
     m = n(665578),
     h = n(388032),
-    x = n(859600);
-function p(e) {
+    x = n(218898);
+function g(e) {
     let { application: t, canNavigate: n, guildId: c } = e,
         m = (0, a.e7)([d.Z], () => d.Z.isUnavailable());
     return (l.useEffect(() => (o.I4(t.id), o.kZ), [t.id]),
@@ -34,7 +34,7 @@ function p(e) {
                       variant: 'text-sm/normal',
                       children: h.intl.string(h.t.sCkD3d)
                   }),
-                  (0, i.jsx)(g, {
+                  (0, i.jsx)(p, {
                       guildId: c,
                       applicationId: t.id
                   }),
@@ -47,7 +47,7 @@ function p(e) {
               ]
           });
 }
-function g(e) {
+function p(e) {
     let { applicationId: t, guildId: n } = e,
         { originalApplicationPermissions: l, editedTargetPermissions: a, selectedPermissionCount: r } = (0, c.Z)(n, t);
     return (0, i.jsx)('div', {

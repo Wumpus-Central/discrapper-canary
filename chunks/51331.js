@@ -1,31 +1,31 @@
 n.d(t, { Z: () => d });
 var i = n(200651),
     s = n(192379),
-    r = n(120356),
-    l = n.n(r),
+    l = n(120356),
+    r = n.n(l),
     a = n(481060),
     o = n(838436),
-    c = n(241107);
+    c = n(243505);
 function d(e) {
-    let { value: t, onChange: n, className: r, note: d, title: u, disabled: m } = e,
+    let { value: t, onChange: n, className: l, note: d, title: u, disabled: h } = e,
+        m = s.useRef(null),
         g = s.useRef(null),
-        h = s.useRef(null),
         x = s.useId(),
         _ = (0, i.jsx)(a.rsf, {
             id: x,
             checked: t,
             onChange: n,
             focusProps: { enabled: !1 },
-            innerRef: g,
-            disabled: m
+            innerRef: m,
+            disabled: h
         });
     return (0, i.jsx)('div', {
-        className: l()(c.container, r, { [c.disabled]: m }),
+        className: r()(c.container, l, { [c.disabled]: h }),
         children: (0, i.jsx)(a.tEY, {
             within: !0,
             offset: -4,
-            focusTarget: g,
-            ringTarget: h,
+            focusTarget: m,
+            ringTarget: g,
             children: (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)('div', {
@@ -34,7 +34,7 @@ function d(e) {
                             header: u,
                             description: d,
                             relatedId: x,
-                            disabled: m
+                            disabled: h
                         })
                     }),
                     (0, i.jsx)('div', {

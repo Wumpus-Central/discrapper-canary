@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var i,
     r = n(442837),
-    a = n(570140);
-function l(e, t, n) {
+    l = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,8 +28,8 @@ class s extends (i = r.ZP.PersistedStore) {
         return { type: o };
     }
 }
-l(s, 'displayName', 'NewUserStore'), l(s, 'persistKey', 'nuf');
-let c = new s(a.Z, {
+a(s, 'displayName', 'NewUserStore'), a(s, 'persistKey', 'nuf');
+let c = new s(l.Z, {
         NUF_NEW_USER: function (e) {
             let { newUserType: t } = e;
             (o = t), c.persist();

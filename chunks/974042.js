@@ -17,8 +17,8 @@ var i,
     E = n(158776),
     I = n(699516),
     C = n(594174),
-    N = n(981631),
-    v = n(474936);
+    v = n(981631),
+    N = n(474936);
 function T(e, t, n) {
     return (
         t in e
@@ -39,7 +39,7 @@ function S(e) {
         usernameLower: null != t ? t.username.toLowerCase() : null
     };
 }
-function Z(e) {
+function A(e) {
     return {
         status: E.Z.getStatus(e),
         isMobile: E.Z.isMobileOnline(e),
@@ -47,7 +47,7 @@ function Z(e) {
         applicationStream: g.Z.getAnyStreamForUser(e)
     };
 }
-function A(e) {
+function Z(e) {
     let t = [];
     return (
         r()(_.ZP.memberOf(e))
@@ -79,18 +79,18 @@ class b {
             n = r().map(
                 I.Z.getRelationships(),
                 (n, i) => (
-                    n === N.OGo.FRIEND && e.add(i),
+                    n === v.OGo.FRIEND && e.add(i),
                     new x({
                         key: i,
                         type: n,
                         userId: i,
                         nickname: I.Z.getNickname(i),
                         ...S(i),
-                        ...Z(i),
                         ...A(i),
+                        ...Z(i),
                         spam: I.Z.isSpam(i),
                         ignoredUser: I.Z.isIgnored(i),
-                        giftIntentType: n === N.OGo.FRIEND && p.Z.isTopAffinityFriendAnniversary({ userId: i }) ? v.hX.FRIEND_ANNIVERSARY : void 0,
+                        giftIntentType: n === v.OGo.FRIEND && p.Z.isTopAffinityFriendAnniversary({ userId: i }) ? N.hX.FRIEND_ANNIVERSARY : void 0,
                         applicationId: t ? I.Z.getOriginApplicationId(i) : void 0
                     })
                 )
@@ -102,8 +102,8 @@ class b {
             t.forEach((t) => {
                 let { id: l, applicationId: r, type: a } = t;
                 !e.has(l) &&
-                    ((a === N.OGo.FRIEND && n.has(l)) ||
-                        (a === N.OGo.FRIEND && n.add(l),
+                    ((a === v.OGo.FRIEND && n.has(l)) ||
+                        (a === v.OGo.FRIEND && n.add(l),
                         i.push(
                             new x({
                                 key: ''.concat(l, '-').concat(r),
@@ -112,8 +112,8 @@ class b {
                                 applicationId: r,
                                 nickname: I.Z.getNickname(l),
                                 ...S(l),
-                                ...Z(l),
                                 ...A(l),
+                                ...Z(l),
                                 spam: I.Z.isSpam(l),
                                 ignoredUser: I.Z.isIgnored(l),
                                 isGameRelationship: !0
@@ -130,8 +130,8 @@ class b {
                     type: 99,
                     nickname: e.name,
                     ...S(e.key),
-                    ...Z(e.key),
-                    ...A(e.key)
+                    ...A(e.key),
+                    ...Z(e.key)
                 })
         );
         return new b(r().concat(n, i, l));
@@ -160,21 +160,21 @@ class b {
             })
             .filter((t) => {
                 switch (e) {
-                    case N.pJs.ONLINE:
-                        return t.type === N.OGo.FRIEND && t.status !== N.Skl.OFFLINE;
-                    case N.pJs.PENDING:
-                        return (t.type === N.OGo.PENDING_INCOMING && !t.spam && !t.ignoredUser) || t.type === N.OGo.PENDING_OUTGOING;
-                    case N.pJs.SPAM:
-                        return t.type === N.OGo.PENDING_INCOMING && t.spam;
-                    case N.pJs.PENDING_IGNORED:
-                        return t.type === N.OGo.PENDING_INCOMING && t.ignoredUser;
-                    case N.pJs.SUGGESTIONS:
+                    case v.pJs.ONLINE:
+                        return t.type === v.OGo.FRIEND && t.status !== v.Skl.OFFLINE;
+                    case v.pJs.PENDING:
+                        return (t.type === v.OGo.PENDING_INCOMING && !t.spam && !t.ignoredUser) || t.type === v.OGo.PENDING_OUTGOING;
+                    case v.pJs.SPAM:
+                        return t.type === v.OGo.PENDING_INCOMING && t.spam;
+                    case v.pJs.PENDING_IGNORED:
+                        return t.type === v.OGo.PENDING_INCOMING && t.ignoredUser;
+                    case v.pJs.SUGGESTIONS:
                         return 99 === t.type;
-                    case N.pJs.BLOCKED:
-                        return t.type === N.OGo.BLOCKED;
-                    case N.pJs.ALL:
+                    case v.pJs.BLOCKED:
+                        return t.type === v.OGo.BLOCKED;
+                    case v.pJs.ALL:
                     default:
-                        return t.type === N.OGo.FRIEND;
+                        return t.type === v.OGo.FRIEND;
                 }
             })
             .sortBy((e) => e.comparator)
@@ -182,11 +182,11 @@ class b {
     }
     getRelationshipCounts() {
         let e = {
-            [N.OGo.FRIEND]: 0,
-            [N.OGo.PENDING_INCOMING]: 0,
-            [N.OGo.PENDING_OUTGOING]: 0,
+            [v.OGo.FRIEND]: 0,
+            [v.OGo.PENDING_INCOMING]: 0,
+            [v.OGo.PENDING_OUTGOING]: 0,
             99: 0,
-            [N.OGo.BLOCKED]: 0
+            [v.OGo.BLOCKED]: 0
         };
         return (
             this._rows.forEach((t) => {
@@ -201,18 +201,18 @@ class b {
 }
 let L = !0,
     y = !1,
-    P = N.pJs.ONLINE,
+    P = v.pJs.ONLINE,
     O = new b(),
     R = !0,
     j = !1;
 function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    L && (e || (P !== N.pJs.ONLINE && P !== N.pJs.ADD_FRIEND)) && !y && ((L = !1), (y = !0), o.Z.fetchRelationships());
+    L && (e || (P !== v.pJs.ONLINE && P !== v.pJs.ADD_FRIEND)) && !y && ((L = !1), (y = !0), o.Z.fetchRelationships());
 }
 function w() {
     if (((L = !0), R ? (y = !1) : D(), (O = O.reset()), j)) return;
     let e = O.getRelationshipCounts();
-    P = 0 === e[N.OGo.FRIEND] ? (0 !== e[N.OGo.PENDING_INCOMING] ? N.pJs.PENDING : N.pJs.ADD_FRIEND) : N.pJs.ONLINE;
+    P = 0 === e[v.OGo.FRIEND] ? (0 !== e[v.OGo.PENDING_INCOMING] ? v.pJs.PENDING : v.pJs.ADD_FRIEND) : v.pJs.ONLINE;
 }
 function M() {
     O = R ? new b() : O.reset();
@@ -224,7 +224,7 @@ function k(e) {
 }
 class U extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, E.Z, C.default, f.Z, _.ZP, g.Z, u.Z, d.Z), this.syncWith([I.Z], M), this.syncWith([m.Z], M), this.syncWith([u.Z], M), this.syncWith([p.Z], M), this.syncWith([C.default], k(S)), this.syncWith([E.Z, g.Z], k(Z)), w();
+        this.waitFor(I.Z, E.Z, C.default, f.Z, _.ZP, g.Z, u.Z, d.Z), this.syncWith([I.Z], M), this.syncWith([m.Z], M), this.syncWith([u.Z], M), this.syncWith([p.Z], M), this.syncWith([C.default], k(S)), this.syncWith([E.Z, g.Z], k(A)), w();
     }
     getState() {
         return {

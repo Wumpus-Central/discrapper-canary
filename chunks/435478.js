@@ -12,7 +12,7 @@ var i = n(200651),
     o = n(481060),
     c = n(209613),
     d = n(475413),
-    u = n(602654);
+    u = n(949990);
 function h(e) {
     let { id: t, label: n, icon: c, hint: h, renderSubmenu: m, ...p } = e,
         { onFocus: g, ..._ } = (0, a.JA)(t),
@@ -25,7 +25,7 @@ function h(e) {
                 I(e === t);
             });
     }, [t, f, C]);
-    let N = (e) =>
+    let v = (e) =>
         (0, i.jsxs)(d.kF, {
             ...e,
             ..._,
@@ -62,9 +62,9 @@ function h(e) {
               renderPopout: m,
               shouldShow: E,
               onRequestClose: () => I(!1),
-              children: N
+              children: v
           })
-        : N();
+        : v();
 }
 function m(e) {
     let { id: t, children: n } = e,

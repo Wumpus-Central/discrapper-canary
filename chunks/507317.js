@@ -15,7 +15,7 @@ var i = n(200651),
     p = n(486324),
     _ = n(200299),
     C = n(388032),
-    f = n(934842);
+    f = n(767837);
 let v = function (e) {
     let { guild: t } = e,
         v = t.hasFeature(g.oNc.BANNER),
@@ -26,7 +26,7 @@ let v = function (e) {
                     return;
                 }
                 (0, l.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e('70687'), n.e('48017'), n.e('94127')]).then(n.bind(n, 850085));
+                    let { default: l } = await Promise.all([n.e('70687'), n.e('48017'), n.e('18280')]).then(n.bind(n, 850085));
                     return (n) =>
                         (0, i.jsx)(l, {
                             imgURI: e,

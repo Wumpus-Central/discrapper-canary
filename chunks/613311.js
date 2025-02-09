@@ -17,12 +17,12 @@ var i = n(200651),
     E = n(666743),
     I = n(115130),
     C = n(812206),
-    N = n(770146),
-    v = n(600164),
+    v = n(770146),
+    N = n(600164),
     T = n(606081),
     S = n(252618),
-    Z = n(100159),
-    A = n(646288),
+    A = n(100159),
+    Z = n(646288),
     x = n(984370),
     b = n(706454),
     L = n(210887),
@@ -57,7 +57,7 @@ var i = n(200651),
     el = n(981631),
     er = n(186901),
     ea = n(388032),
-    es = n(358636);
+    es = n(823286);
 function eo(e, t, n) {
     return (
         t in e
@@ -128,7 +128,7 @@ class ec extends l.PureComponent {
             carousel_video_count: l.videos,
             location: i.location.page,
             source: this._analyticsSource,
-            ...(0, Z.Z)(e, !0)
+            ...(0, A.Z)(e, !0)
         }),
             (this._trackedViewed = !0);
     }
@@ -257,7 +257,7 @@ class ec extends l.PureComponent {
         if (null == r) throw Error('Rendering ApplicationStoreListing without description');
         return (0, i.jsxs)(l.Fragment, {
             children: [
-                (0, i.jsx)(N.Z, {
+                (0, i.jsx)(v.Z, {
                     tag: 'h1',
                     children: ea.intl.format(ea.t.tluX4O, { name: n.name })
                 }),
@@ -344,9 +344,9 @@ class ec extends l.PureComponent {
             return (0, i.jsxs)(l.Fragment, {
                 children: [
                     this.renderHeader(e, t),
-                    (0, i.jsx)(v.Z, {
-                        align: v.Z.Align.CENTER,
-                        justify: v.Z.Justify.CENTER,
+                    (0, i.jsx)(N.Z, {
+                        align: N.Z.Align.CENTER,
+                        justify: N.Z.Justify.CENTER,
                         children: (0, i.jsx)(d.$jN, { className: es.spinner })
                     })
                 ]
@@ -396,7 +396,7 @@ class ec extends l.PureComponent {
                 let { sku: i } = this.props;
                 null != i &&
                     U.default.track(el.rMx.STORE_LISTING_MEDIA_SCROLLED, {
-                        ...(0, Z.Z)(i),
+                        ...(0, A.Z)(i),
                         card_index: n,
                         card_type: e.type === el.s9s.IMG ? 'image' : 'video'
                     });
@@ -416,7 +416,7 @@ class ec extends l.PureComponent {
                 null != e &&
                     null != t &&
                     (0, d.ZDy)(async () => {
-                        let { default: l } = await Promise.all([n.e('7654'), n.e('54655')]).then(n.bind(n, 560114));
+                        let { default: l } = await Promise.all([n.e('7654'), n.e('76236')]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, i.jsx)(l, {
                                 ...n,
@@ -513,7 +513,7 @@ class ec extends l.PureComponent {
                             children: (0, i.jsxs)('div', {
                                 className: a()(es.headerPurchase, { [es.active]: o }),
                                 children: [
-                                    null != t ? (0, A.Z)(t) : null,
+                                    null != t ? (0, Z.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
                                     (0, i.jsx)(Q.Z, {
                                         messageStyle: Q.G.SHORT,
@@ -543,9 +543,9 @@ class ec extends l.PureComponent {
             eo(this, 'renderListing', () => {
                 let { application: e, storeListing: t, sku: n, pageSize: l } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
-                    ? (0, i.jsx)(v.Z, {
-                          align: v.Z.Align.CENTER,
-                          justify: v.Z.Justify.CENTER,
+                    ? (0, i.jsx)(N.Z, {
+                          align: N.Z.Align.CENTER,
+                          justify: N.Z.Justify.CENTER,
                           children: (0, i.jsx)(d.$jN, {})
                       })
                     : l === ei.b.SMALL

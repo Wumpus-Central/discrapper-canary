@@ -1,16 +1,16 @@
 n.d(t, {
     Th: () => s,
-    xu: () => l
+    xu: () => r
 });
 var i = n(15729);
 let s = '0',
-    r = { selectedGuildId: s },
-    l = (0, i.U)((e) => ({
-        ...r,
+    l = { selectedGuildId: s },
+    r = (0, i.U)((e) => ({
+        ...l,
         setSelectedGuildId: (t) => {
             e({ selectedGuildId: t });
         },
         reset: () => {
-            e(r);
+            e(l);
         }
     }));

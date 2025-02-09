@@ -1,14 +1,14 @@
 n.d(t, {
     Go: () => O,
-    LZ: () => L,
-    Pq: () => b,
+    LZ: () => x,
+    Pq: () => T,
     RJ: () => D,
     Sd: () => M,
-    XW: () => w,
+    XW: () => P,
     el: () => S,
     fP: () => N,
     fQ: () => A,
-    t$: () => T
+    t$: () => b
 }),
     n(653041),
     n(47120),
@@ -32,14 +32,14 @@ var i = n(192379),
     v = n(378233),
     y = n(981631),
     I = n(388032);
-let b = (e) => {
+let T = (e) => {
         N();
         let t = (0, r.e7)([g.Z], () => g.Z.hasLoadedStickerPacks);
         i.useEffect(() => {
             t && null == g.Z.getStickerPack(e) && (0, h.FQ)(e);
         }, [e, t]);
     },
-    T = (e) => {
+    b = (e) => {
         let t = s.Wp.useSetting();
         return (0, v.WD)(t, e);
     },
@@ -61,10 +61,10 @@ let b = (e) => {
                         { canCreateExpressions: s } = (0, a.Gw)(r),
                         o = u.Z.getGuildId(),
                         c = d.findIndex((e) => e.type === E.Ih.FAVORITE),
-                        b = d.findIndex((e) => e.type === E.Ih.RECENT),
-                        T = t.length;
-                    null != r && o === r.id && s && t.length < (0, f.A3)(r.premiumTier) && T++;
-                    let S = Math.ceil(T / e);
+                        T = d.findIndex((e) => e.type === E.Ih.RECENT),
+                        b = t.length;
+                    null != r && o === r.id && s && t.length < (0, f.A3)(r.premiumTier) && b++;
+                    let S = Math.ceil(b / e);
                     p[g] = i ? 0 : S;
                     for (let a = 0; a < S; a++) {
                         let s = a * e,
@@ -79,10 +79,10 @@ let b = (e) => {
                                 visibleRowIndex: y,
                                 category: n
                             }));
-                        g > b &&
+                        g > T &&
                             g > c &&
                             null != r &&
-                            T > t.length &&
+                            b > t.length &&
                             l.push({
                                 type: E.al.CREATE_STICKER,
                                 guild_id: r.id,
@@ -191,17 +191,17 @@ function D() {
     let e = O();
     return (0, r.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => null != e && (!(0, v.J8)(e) || (0, v.V9)(e))), [e]);
 }
-function x() {
+function L() {
     var e, t;
     let n = (0, o.D)(),
         i = R;
     return (null == n ? void 0 : null === (e = n.stickerFrecency) || void 0 === e ? void 0 : e.stickers) != null && (i = Object.keys(null == n ? void 0 : null === (t = n.stickerFrecency) || void 0 === t ? void 0 : t.stickers)), i;
 }
-function L() {
-    let e = x();
+function x() {
+    let e = L();
     return (0, r.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
 }
-let P = (e) => {
+let w = (e) => {
         let t = D(),
             { packs: n, frequentlyUsedStickers: a } = (0, r.cj)(
                 [g.Z, m.Z],
@@ -247,7 +247,7 @@ let P = (e) => {
             ];
         }, [n, t, a, o, s, e]);
     },
-    w = function (e) {
+    P = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = (0, r.e7)([g.Z], () => g.Z.getStickerById(e.id)),
             [a, s] = i.useState(!0),
@@ -281,6 +281,6 @@ let P = (e) => {
             : [null != n ? n : null, o];
     },
     M = (e) => {
-        let t = P(e);
+        let t = w(e);
         return i.useMemo(() => t.filter((e) => e.type === E.Ih.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [t]);
     };

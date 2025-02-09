@@ -1,9 +1,9 @@
-t.d(n, { l: () => a });
+t.d(n, { l: () => o });
 var i = t(15729),
-    o = t(731965);
-let a = (0, i.U)((e) => ({
+    a = t(731965);
+let o = (0, i.U)((e) => ({
     canCloseModal: !0,
     onUpdateCanCloseModal(n) {
-        (0, o.j)(() => e({ canCloseModal: n }));
+        (0, a.j)(() => e({ canCloseModal: n }));
     }
 }));

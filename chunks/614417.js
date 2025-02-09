@@ -22,9 +22,9 @@ var i = n(200651),
     v = n(848780),
     y = n(907179),
     I = n(475413),
-    b = n(228168),
-    T = n(388032),
-    S = n(378067),
+    T = n(228168),
+    b = n(388032),
+    S = n(559865),
     A = n(609440);
 function N(e) {
     let { user: t, guildId: n, setPopoutRef: a, channelId: s, messageId: f, roleId: _, onViewBlockedProfileClick: v, newAnalyticsLocations: y = [] } = e,
@@ -55,7 +55,7 @@ function N(e) {
                     children: (0, i.jsx)(E.Z, {
                         user: t,
                         displayProfile: O,
-                        profileType: b.y0.BITE_SIZE,
+                        profileType: T.y0.BITE_SIZE,
                         children: (0, i.jsxs)('div', {
                             className: S.container,
                             children: [
@@ -75,20 +75,20 @@ function N(e) {
                                         (0, i.jsx)(l.X6q, {
                                             variant: 'heading-lg/bold',
                                             className: S.header,
-                                            children: T.intl.string(T.t.VNJ7UF)
+                                            children: b.intl.string(b.t.VNJ7UF)
                                         }),
                                         (0, i.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: T.intl.format(T.t.LXbngo, { username: t.username })
+                                            children: b.intl.format(b.t.LXbngo, { username: t.username })
                                         }),
                                         (0, i.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: T.intl.string(T.t['20WzZ2'])
+                                            children: b.intl.string(b.t['20WzZ2'])
                                         }),
                                         (0, i.jsx)(I.tG, {
                                             className: S.centeredButton,
                                             action: 'VIEW_BLOCKED_PROFILE',
-                                            text: T.intl.string(T.t.iXAna2),
+                                            text: b.intl.string(b.t.iXAna2),
                                             autoFocus: !0,
                                             fullWidth: !1,
                                             onClick: () => {
@@ -113,8 +113,8 @@ function N(e) {
 function C(e) {
     let { user: t, guildId: n, setPopoutRef: a, channelId: I, messageId: N, roleId: C, onViewBlockedProfileClick: R, newAnalyticsLocations: O = [] } = e,
         D = (0, o.e7)([f.Z], () => f.Z.isBlocked(t.id)),
-        { analyticsLocations: x } = (0, c.ZP)([...O, D ? u.Z.BLOCKED_PROFILE_POPOUT : u.Z.IGNORED_PROFILE_POPOUT]),
-        L = (0, p.ZB)({
+        { analyticsLocations: L } = (0, c.ZP)([...O, D ? u.Z.BLOCKED_PROFILE_POPOUT : u.Z.IGNORED_PROFILE_POPOUT]),
+        x = (0, p.ZB)({
             layout: D ? 'BLOCKED_PROFILE_POPOUT' : 'IGNORED_PROFILE_POPOUT',
             userId: t.id,
             guildId: n,
@@ -122,25 +122,25 @@ function C(e) {
             messageId: N,
             roleId: C
         }),
-        P = r.useRef(null),
-        w = (0, m.ZP)(t.id, n),
+        w = r.useRef(null),
+        P = (0, m.ZP)(t.id, n),
         M = (0, o.e7)([d.ZP], () => (null != n ? d.ZP.getMember(n, t.id) : null));
     r.useEffect(() => {
-        null == a || a(null == P ? void 0 : P.current);
-    }, [P, a]);
+        null == a || a(null == w ? void 0 : w.current);
+    }, [w, a]);
     let k = D ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE';
     return (0, i.jsx)(c.Gt, {
-        value: x,
+        value: L,
         children: (0, i.jsx)(p.Mt, {
-            value: L,
+            value: x,
             shouldTrackViewOnMount: null == M || null != M.fullProfileLoadedTimestamp,
             children: (0, i.jsx)(l.VqE, {
-                ref: P,
+                ref: w,
                 'aria-label': t.username,
                 children: (0, i.jsx)(E.Z, {
                     user: t,
-                    displayProfile: w,
-                    profileType: b.y0.BITE_SIZE,
+                    displayProfile: P,
+                    profileType: T.y0.BITE_SIZE,
                     children: (0, i.jsxs)('div', {
                         className: S.container,
                         children: [
@@ -162,11 +162,11 @@ function C(e) {
                                             }),
                                             (0, i.jsx)(l.X6q, {
                                                 variant: 'heading-lg/bold',
-                                                children: T.intl.string(T.t.b33pLC)
+                                                children: b.intl.string(b.t.b33pLC)
                                             }),
                                             (0, i.jsx)(l.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: T.intl.format(D ? T.t['8F+WNz'] : T.t['/cZp5u'], { username: _.ZP.getName(n, I, t) })
+                                                children: b.intl.format(D ? b.t['8F+WNz'] : b.t['/cZp5u'], { username: _.ZP.getName(n, I, t) })
                                             })
                                         ]
                                     }),
@@ -179,8 +179,8 @@ function C(e) {
                                                     null == R || R(),
                                                         (0, h.pQ)({
                                                             action: k,
-                                                            analyticsLocations: x,
-                                                            ...L
+                                                            analyticsLocations: L,
+                                                            ...x
                                                         });
                                                 }
                                             }),
@@ -190,8 +190,8 @@ function C(e) {
                                                     null == R || R(),
                                                         (0, h.pQ)({
                                                             action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
-                                                            analyticsLocations: x,
-                                                            ...L
+                                                            analyticsLocations: L,
+                                                            ...x
                                                         });
                                                 }
                                             })

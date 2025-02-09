@@ -104,8 +104,8 @@ void 0 === v && (v = E),
             h = e.exact,
             m = e.isActive,
             I = e.location,
-            b = e.sensitive,
-            T = e.strict,
+            T = e.sensitive,
+            b = e.strict,
             S = e.style,
             A = e.to,
             N = e.innerRef,
@@ -120,22 +120,22 @@ void 0 === v && (v = E),
                     ? (0, i.LX)(n.pathname, {
                           path: R,
                           exact: h,
-                          sensitive: b,
-                          strict: T
+                          sensitive: T,
+                          strict: b
                       })
                     : null,
                 D = !!(m ? m(O, n) : O),
-                x = D ? y(p, c) : p,
-                L = D ? (0, o.Z)({}, S, {}, _) : S,
-                P = (0, o.Z)(
+                L = D ? y(p, c) : p,
+                x = D ? (0, o.Z)({}, S, {}, _) : S,
+                w = (0, o.Z)(
                     {
                         'aria-current': (D && r) || null,
-                        className: x,
-                        style: L,
+                        className: L,
+                        style: x,
                         to: s
                     },
                     C
                 );
-            return E !== v ? (P.ref = t || N) : (P.innerRef = N), a.createElement(g, P);
+            return E !== v ? (w.ref = t || N) : (w.innerRef = N), a.createElement(g, w);
         });
     });

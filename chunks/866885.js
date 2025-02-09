@@ -18,8 +18,8 @@ var i = n(200651),
     v = n(366050),
     y = n(944486),
     I = n(594174),
-    b = n(566620),
-    T = n(317381),
+    T = n(566620),
+    b = n(317381),
     S = n(531826),
     A = n(175894),
     N = n(246106),
@@ -27,19 +27,19 @@ var i = n(200651),
     R = n(917107),
     O = n(208156),
     D = n(748492),
-    x = n(701488),
-    L = n(918559),
-    P = n(981631),
-    w = n(354459),
-    M = n(38855),
-    k = n(880397),
-    U = n(616926);
+    L = n(701488),
+    x = n(918559),
+    w = n(981631),
+    P = n(354459),
+    M = n(705442),
+    k = n(154681),
+    U = n(60412);
 function G(e) {
     var t, n, a;
     let { channel: A, isLoading: N } = e,
         [G, B] = r.useState(!1),
-        Z = (0, o.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivityForChannel(A.id)),
-        F = (0, o.e7)([T.ZP], () => T.ZP.getActivityPanelMode()),
+        Z = (0, o.e7)([b.ZP], () => b.ZP.getSelfEmbeddedActivityForChannel(A.id)),
+        F = (0, o.e7)([b.ZP], () => b.ZP.getActivityPanelMode()),
         V = (0, _.q)(null == Z ? void 0 : Z.applicationId),
         j = null == Z ? void 0 : Z.launchId,
         H = (0, o.e7)([y.Z], () => y.Z.getChannelId() === A.id),
@@ -62,15 +62,15 @@ function G(e) {
         })),
         X = H || null != K,
         J = (0, R.Z)(A.id),
-        $ = J && (null == q ? void 0 : q.type) !== w.fO.ACTIVITY,
-        ee = !J && F === L.Ez.PIP,
+        $ = J && (null == q ? void 0 : q.type) !== P.fO.ACTIVITY,
+        ee = !J && F === x.Ez.PIP,
         et = X && ($ || ee) && null == Y,
         en = (!X || et) && !W,
         ei = en && null != v.Z.pipVideoWindow && null != v.Z.pipActivityWindow;
     function er() {
         var e;
         null != Z && c.Z.selectParticipant(A.id, (0, p.oW)(Z.applicationId));
-        let t = null !== (e = A.getGuildId()) && void 0 !== e ? e : P.ME;
+        let t = null !== (e = A.getGuildId()) && void 0 !== e ? e : w.ME;
         d.Z.channelListScrollTo(t, A.id), (0, m.XU)(t, A.id), null == K && (0, f.Ou)();
     }
     function ea() {
@@ -78,7 +78,7 @@ function G(e) {
     }
     function es(e, t, n, r, a) {
         var s;
-        return en && null != Z && ((null == z ? void 0 : z.type) === w.fO.ACTIVITY || r)
+        return en && null != Z && ((null == z ? void 0 : z.type) === P.fO.ACTIVITY || r)
             ? (null === (s = Z.config) || void 0 === s ? void 0 : s.useInteractivePIP)
                 ? (0, i.jsx)(D.of, {
                       onJumpToChannel: er,
@@ -101,7 +101,7 @@ function G(e) {
                             onMouseDown: e,
                             onMouseLeave: t,
                             onJumpToChannel: () => {
-                                er(), (0, b.tg)(L.Ez.PANEL);
+                                er(), (0, T.tg)(x.Ez.PANEL);
                             },
                             channel: A,
                             applicationId: Z.applicationId,
@@ -138,7 +138,7 @@ function G(e) {
     if (
         (r.useEffect(() => {
             if ((null == Z ? void 0 : Z.applicationId) != null) {
-                let e = en ? x.cE.PIP : x.cE.FOCUSED;
+                let e = en ? L.cE.PIP : L.cE.FOCUSED;
                 u.Z.dispatch({
                     type: 'ACTIVITY_LAYOUT_MODE_UPDATE',
                     layoutMode: e,
@@ -192,7 +192,7 @@ function G(e) {
                               })
                             : (0, i.jsx)(O.J, {
                                   allowPopups: (0, C.h)(V),
-                                  referrerPolicy: x.um.has(Z.applicationId) ? 'no-referrer' : 'origin',
+                                  referrerPolicy: L.um.has(Z.applicationId) ? 'no-referrer' : 'origin',
                                   url: Z.url,
                                   queryParams: el,
                                   className: s()(M.iframe, {

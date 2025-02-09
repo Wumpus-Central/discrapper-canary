@@ -1,19 +1,19 @@
-n.r(t), n.d(t, { default: () => x });
-var o = n(200651),
-    r = n(192379),
-    i = n(215569),
-    a = n(481060),
-    s = n(852860),
-    l = n(313201),
-    c = n(944163),
-    d = n(266395),
-    u = n(187565),
-    m = n(200305),
-    _ = n(592286),
-    h = n(388032),
-    b = n(832311);
+t.r(n), t.d(n, { default: () => x });
+var o = t(200651),
+    r = t(192379),
+    i = t(215569),
+    s = t(481060),
+    a = t(852860),
+    l = t(313201),
+    c = t(944163),
+    d = t(266395),
+    u = t(187565),
+    m = t(200305),
+    _ = t(592286),
+    h = t(388032),
+    b = t(652536);
 let p = () =>
-        (0, o.jsx)(s.Z, {
+        (0, o.jsx)(a.Z, {
             submitting: !1,
             message: h.intl.string(h.t['8g514e']),
             onReset: () => {
@@ -21,38 +21,38 @@ let p = () =>
             },
             onResetText: h.intl.string(h.t['ETE/oK']),
             onSave: () => {
-                (0, d.PE)(!1), (0, a.Mr3)(_.Pn);
+                (0, d.PE)(!1), (0, s.Mr3)(_.Pn);
             },
             onSaveText: h.intl.string(h.t['Xt+UaW']),
-            onSaveButtonColor: a.Ttl.RED
+            onSaveButtonColor: s.Ttl.RED
         }),
     x = (e) => {
-        let { guildId: t, transitionState: n, onClose: s, onComplete: _, isPreview: h = !1 } = e,
+        let { guildId: n, transitionState: t, onClose: a, onComplete: _, isPreview: h = !1 } = e,
             x = (0, d.rb)((e) => e.shouldShowWarning),
-            C = (0, u.ng)(t, h),
-            N = (0, l.Dt)();
+            C = (0, u.ng)(n, h),
+            f = (0, l.Dt)();
         return (r.useEffect(() => {
-            C === c.t && s();
-        }, [s, C]),
+            C === c.t && a();
+        }, [a, C]),
         C === c.t)
             ? null
             : (0, o.jsxs)(o.Fragment, {
                   children: [
-                      (0, o.jsxs)(a.Y0X, {
-                          size: a.CgR.MEDIUM,
+                      (0, o.jsxs)(s.Y0X, {
+                          size: s.CgR.MEDIUM,
                           className: b.container,
-                          transitionState: n,
-                          'aria-labelledby': N,
+                          transitionState: t,
+                          'aria-labelledby': f,
                           children: [
-                              (0, o.jsx)(a.olH, {
-                                  onClick: () => s(!1),
+                              (0, o.jsx)(s.olH, {
+                                  onClick: () => a(!1),
                                   className: b.closeButton
                               }),
                               (0, o.jsx)(m.Z, {
                                   verificationForm: C,
-                                  headerId: N,
-                                  guildId: t,
-                                  onClose: s,
+                                  headerId: f,
+                                  guildId: n,
+                                  onClose: a,
                                   onComplete: _,
                                   isPreview: h
                               })
@@ -61,7 +61,7 @@ let p = () =>
                       (0, o.jsx)(i.W, {
                           children:
                               !0 === x &&
-                              (0, o.jsx)(a.oXn, {
+                              (0, o.jsx)(s.oXn, {
                                   className: b.notice,
                                   children: (0, o.jsx)(p, {})
                               })

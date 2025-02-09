@@ -1,13 +1,13 @@
-n.d(t, { Z: () => r });
+n.d(t, { Z: () => a });
 var i = n(192379),
-    s = n(661111);
-function r(e) {
+    r = n(661111);
+function a(e) {
     i.useEffect(() => {
         if (null != e)
             return (
-                s.Z.lockChangeLog(e),
+                r.Z.lockChangeLog(e),
                 () => {
-                    s.Z.unlockChangeLog(e);
+                    r.Z.unlockChangeLog(e);
                 }
             );
     }, [e]);

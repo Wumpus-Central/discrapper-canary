@@ -9,12 +9,12 @@ var i = n(200651),
     c = n(390507),
     d = n(679400),
     f = n(580747),
-    _ = n(189954);
+    _ = n(844928);
 function p(e, t) {
     let { color: a, src: o, size: p = 'md', width: h, height: m, className: g, initialAnimation: E, markers: v } = e,
         [y, I] = r.useState(null),
-        b = r.useRef(null),
         T = r.useRef(null),
+        b = r.useRef(null),
         S = r.useRef(null),
         A =
             'custom' === p
@@ -34,7 +34,7 @@ function p(e, t) {
             () => ({
                 play: (e) => {
                     if (null != S.current) {
-                        if (((T.current = e), O)) {
+                        if (((b.current = e), O)) {
                             let t = v[e];
                             S.current.resetSegments(!0), S.current.setSegment(t.start + t.duration, t.start + t.duration), S.current.stop();
                         } else S.current.setLoop(!N && e.includes('hover')), S.current.resetSegments(!0), S.current.playSegments([v[e].start, v[e].start + v[e].duration], !0);
@@ -44,7 +44,7 @@ function p(e, t) {
                     if (null == S.current || O) return;
                 },
                 stopIfPlaying: (e) => {
-                    null == S.current || O || T.current !== e || (S.current.resetSegments(!0), S.current.setSegment(v[e].start, v[e].start), S.current.stop());
+                    null == S.current || O || b.current !== e || (S.current.resetSegments(!0), S.current.setSegment(v[e].start, v[e].start), S.current.stop());
                 }
             }),
             [O, N, v]
@@ -60,14 +60,14 @@ function p(e, t) {
                         var t;
                         let n,
                             { default: i } = e,
-                            r = null !== (t = T.current) && void 0 !== t ? t : D.current;
+                            r = null !== (t = b.current) && void 0 !== t ? t : D.current;
                         if (null != r && null != v[r]) {
                             let e = v[r];
                             n = [e.start, e.start + e.duration];
                         }
-                        null != b.current &&
+                        null != T.current &&
                             (S.current = i.loadAnimation({
-                                container: b.current,
+                                container: T.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !1,
@@ -89,7 +89,7 @@ function p(e, t) {
                 ...A
             },
             className: s()(_.lottieIcon, g),
-            ref: b
+            ref: T
         })
     );
 }

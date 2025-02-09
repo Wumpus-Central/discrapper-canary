@@ -5,7 +5,7 @@ var g,
     v = n(442837),
     y = n(570140),
     I = n(981631);
-function b(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,21 +18,21 @@ function b(e, t, n) {
         e
     );
 }
-let T = I.QZA.CLOSED,
+let b = I.QZA.CLOSED,
     S = {};
 function A() {
-    (T = I.QZA.OPEN), (S = {});
+    (b = I.QZA.OPEN), (S = {});
 }
 function N() {
-    (T = I.QZA.CLOSED), (S = {});
+    (b = I.QZA.CLOSED), (S = {});
 }
 function C() {
-    (T = I.QZA.SUBMITTING), (S = {});
+    (b = I.QZA.SUBMITTING), (S = {});
 }
 function R(e) {
     var t;
-    if (T !== I.QZA.SUBMITTING) return !1;
-    (T = I.QZA.OPEN), (S = null !== (t = e.errors) && void 0 !== t ? t : {});
+    if (b !== I.QZA.SUBMITTING) return !1;
+    (b = I.QZA.OPEN), (S = null !== (t = e.errors) && void 0 !== t ? t : {});
 }
 function O(e) {
     let { section: t } = e;
@@ -42,19 +42,19 @@ function D(e) {
     let { avatar: t } = e;
     (i = t), (_ = void 0);
 }
-function x(e) {
+function L(e) {
     let { globalName: t } = e;
     r = t;
 }
-function L(e) {
+function x(e) {
     let { avatarDecoration: t } = e;
     a = t;
 }
-function P(e) {
+function w(e) {
     let { profileEffectId: t } = e;
     s = t;
 }
-function w(e) {
+function P(e) {
     let { item: t } = e;
     (null == t ? void 0 : t.type) === E.Z.PROFILE_EFFECT ? ((p = null), (h = null == t ? void 0 : t.id)) : ((h = null), (p = t));
 }
@@ -130,7 +130,7 @@ function $() {
 }
 class ee extends (g = v.ZP.Store) {
     getFormState() {
-        return T;
+        return b;
     }
     getErrors() {
         return S;
@@ -206,7 +206,7 @@ class ee extends (g = v.ZP.Store) {
         };
     }
 }
-b(ee, 'displayName', 'UserSettingsAccountStore');
+T(ee, 'displayName', 'UserSettingsAccountStore');
 let et = new ee(y.Z, {
     USER_SETTINGS_ACCOUNT_INIT: A,
     USER_SETTINGS_MODAL_INIT: A,
@@ -217,10 +217,10 @@ let et = new ee(y.Z, {
     USER_SETTINGS_ACCOUNT_SUBMIT: C,
     USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: R,
     USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: D,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: x,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: L,
-    USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: w,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: P,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: L,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: x,
+    USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: P,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: w,
     USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: M,
     USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: k,
     USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: U,

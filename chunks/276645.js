@@ -4,7 +4,7 @@ n(192379);
 var l = n(481060),
     r = n(970731),
     a = n(388032),
-    s = n(733926);
+    s = n(371144);
 function o(e) {
     let { guildId: t, markAsDismissed: o } = e;
     return (0, i.jsx)(r.ZP, {
@@ -24,7 +24,7 @@ function o(e) {
         },
         onClick: () => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('5863'), n.e('48406')]).then(n.bind(n, 751212));
+                let { default: e } = await Promise.all([n.e('5863'), n.e('58984')]).then(n.bind(n, 751212));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

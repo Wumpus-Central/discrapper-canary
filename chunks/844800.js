@@ -1,13 +1,13 @@
 n.d(t, { Z: () => h });
 var i,
     r,
-    a,
-    l = n(442837),
+    l,
+    a = n(442837),
     o = n(570140);
 let s = !1,
     c = null,
     d = null;
-class u extends (a = l.ZP.Store) {
+class u extends (l = a.ZP.Store) {
     getState() {
         return {
             verifySuccess: s,

@@ -26,7 +26,7 @@ var s = n(200651),
     _ = n(340100),
     R = n(611855),
     b = n(644646),
-    L = n(64141),
+    L = n(670638),
     Z = n(667105),
     M = n(860151),
     y = n(341907),
@@ -34,7 +34,7 @@ var s = n(200651),
     P = n(981631),
     w = n(354459),
     D = n(388032),
-    k = n(815405);
+    k = n(289015);
 function U(e) {
     var t, n, l, h;
     let { channelId: A, quest: U, previewQuest: Q, isParticipatingOverride: O } = e,

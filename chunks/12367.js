@@ -20,11 +20,11 @@ e.exports = function (e) {
         v,
         y = a(this),
         I = s(e),
-        b = arguments.length,
-        T = b > 1 ? arguments[1] : void 0,
-        S = void 0 !== T,
+        T = arguments.length,
+        b = T > 1 ? arguments[1] : void 0,
+        S = void 0 !== b,
         A = u(I);
     if (A && !c(A)) for (v = (E = l(I, A)).next, I = []; !(g = r(v, E)).done; ) I.push(g.value);
-    for (S && b > 2 && (T = i(T, arguments[2])), n = o(I), h = d((p = new (f(y))(n))), t = 0; n > t; t++) (m = S ? T(I[t], t) : I[t]), (p[t] = h ? _(m) : +m);
+    for (S && T > 2 && (b = i(b, arguments[2])), n = o(I), h = d((p = new (f(y))(n))), t = 0; n > t; t++) (m = S ? b(I[t], t) : I[t]), (p[t] = h ? _(m) : +m);
     return p;
 };

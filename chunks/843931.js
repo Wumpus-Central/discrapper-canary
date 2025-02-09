@@ -1,8 +1,8 @@
-n.d(t, {
+e.d(t, {
     YC: () => r,
-    cC: () => a
+    cC: () => o
 });
-let i = (0, n(818083).B)({
+let i = (0, e(818083).B)({
     kind: 'user',
     id: '2024-10_blocking_context',
     label: 'Blocking Context',
@@ -29,11 +29,11 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
-    let { location: t } = e;
+function r(n) {
+    let { location: t } = n;
     return i.useExperiment({ location: t }, { autoTrackExposure: !0 }).condensed;
 }
-function a(e) {
-    let { location: t } = e;
+function o(n) {
+    let { location: t } = n;
     return i.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
 }

@@ -23,8 +23,8 @@ var i = n(525654),
     v = n(305325),
     y = n(63568),
     I = n(281956),
-    b = n(931261),
-    T = n(15274),
+    T = n(931261),
+    b = n(15274),
     S = n(924301),
     A = n(461014),
     N = n(82085),
@@ -32,10 +32,10 @@ var i = n(525654),
     R = n(652898),
     O = n(895886),
     D = n(143816),
-    x = n(703656),
-    L = n(922482),
-    P = n(131704),
-    w = n(314897),
+    L = n(703656),
+    x = n(922482),
+    w = n(131704),
+    P = n(314897),
     M = n(592125),
     k = n(984933),
     U = n(271383),
@@ -72,7 +72,7 @@ function er(e) {
         case ee.Iq.ROLE_SUBSCRIPTIONS_PURCHASE:
             l.targetType = e.target_type;
     }
-    return (!(null != G.Z.getGuild(null === (t = e.guild) || void 0 === t ? void 0 : t.id)) || e.new_member) && null != e.channel && (0, P.zi)(e.channel.type) && (l.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (l.guildScheduledEvent = e.guild_scheduled_event), (l.isGuestInvite = (0, W.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, s.$.IS_GUEST_INVITE)), (l.isApplicationBypassInvite = (0, W.yE)(null !== (o = e.flags) && void 0 !== o ? o : 0, s.$.IS_APPLICATION_BYPASS)), (l.inviterUserId = null === (n = e.inviter) || void 0 === n ? void 0 : n.id), l;
+    return (!(null != G.Z.getGuild(null === (t = e.guild) || void 0 === t ? void 0 : t.id)) || e.new_member) && null != e.channel && (0, w.zi)(e.channel.type) && (l.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (l.guildScheduledEvent = e.guild_scheduled_event), (l.isGuestInvite = (0, W.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, s.$.IS_GUEST_INVITE)), (l.isApplicationBypassInvite = (0, W.yE)(null !== (o = e.flags) && void 0 !== o ? o : 0, s.$.IS_APPLICATION_BYPASS)), (l.inviterUserId = null === (n = e.inviter) || void 0 === n ? void 0 : n.id), l;
 }
 function ea(e, t) {
     return {
@@ -83,7 +83,7 @@ function ea(e, t) {
 function es(e, t, n) {
     var i, r;
     if ((null == n ? void 0 : n.targetType) === ee.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return J.oC.ROLE_SUBSCRIPTIONS;
-    if ((null == n ? void 0 : n.targetType) == null && !P.tx.has(t.type) && (0, b.s)(e)) return J.oC.GUILD_HOME;
+    if ((null == n ? void 0 : n.targetType) == null && !w.tx.has(t.type) && (0, T.s)(e)) return J.oC.GUILD_HOME;
     let a = M.Z.getChannel(t.id);
     return F.Z.can(X.Plq.VIEW_CHANNEL, a) ? t.id : null !== (r = null === (i = k.ZP.getDefaultChannel(e, !0, X.Plq.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id;
 }
@@ -95,7 +95,7 @@ function eo(e, t) {
             source: D.Z.INVITE_ACCEPT,
             navigationReplace: !0
         };
-    return null != r && (o.welcomeModalChannelId = r), s && (o.state = et.Df), null != a && (o.guildScheduledEventId = a.id), (e) => (null != i ? i(e, o) : (0, x.uL)(e, o));
+    return null != r && (o.welcomeModalChannelId = r), s && (o.state = et.Df), null != a && (o.guildScheduledEventId = a.id), (e) => (null != i ? i(e, o) : (0, L.uL)(e, o));
 }
 function el(e) {
     let { guildId: t, channel: i, options: r, analyticsLocations: a = [] } = e,
@@ -105,34 +105,34 @@ function el(e) {
     if (!d && !f && !(null == r ? void 0 : r.forceTransition) && o && V.Z.getGuildId() !== t) return;
     let { type: _ } = i,
         g = M.Z.getChannel(i.id),
-        b = es(t, i, r),
-        T = _ === X.d4z.GUILD_STAGE_VOICE,
-        S = X.Z5c.CHANNEL(t, b);
-    P.tx.has(_)
+        T = es(t, i, r),
+        b = _ === X.d4z.GUILD_STAGE_VOICE,
+        S = X.Z5c.CHANNEL(t, T);
+    w.tx.has(_)
         ? (0, E.h)(() => {
               Promise.resolve()
                   .then(n.bind(n, 287734))
                   .then((e) => {
                       let { default: n } = e,
                           s = () => {
-                              if (T) {
-                                  (0, L.Cq)(i instanceof P.Sf ? i : (0, P.kt)(i)), (0, x.uL)(S);
+                              if (b) {
+                                  (0, x.Cq)(i instanceof w.Sf ? i : (0, w.kt)(i)), (0, L.uL)(S);
                                   return;
                               }
-                              n.selectVoiceChannel(b),
+                              n.selectVoiceChannel(T),
                                   u === ee.Iq.STREAM &&
                                       null != l &&
                                       Q.iV({
                                           streamType: $.lo.GUILD,
                                           ownerId: l,
                                           guildId: t,
-                                          channelId: b
+                                          channelId: T
                                       }),
                                   u === ee.Iq.EMBEDDED_APPLICATION &&
                                       null != c &&
-                                      ((0, x.uL)(X.Z5c.CHANNEL(null != t ? t : X.ME, b)),
+                                      ((0, L.uL)(X.Z5c.CHANNEL(null != t ? t : X.ME, T)),
                                       (0, h.Z)({
-                                          channelId: b,
+                                          channelId: T,
                                           applicationId: c,
                                           intent: null == r ? void 0 : r.intent,
                                           inviterUserId: null == r ? void 0 : r.inviterUserId,
@@ -146,9 +146,9 @@ function el(e) {
         : (0, p.l5)(g) &&
           u === ee.Iq.EMBEDDED_APPLICATION &&
           null != c &&
-          ((0, x.uL)(X.Z5c.CHANNEL(null != t ? t : X.ME, b)),
+          ((0, L.uL)(X.Z5c.CHANNEL(null != t ? t : X.ME, T)),
           (0, h.Z)({
-              channelId: b,
+              channelId: T,
               applicationId: c,
               intent: null == r ? void 0 : r.intent,
               inviterUserId: null == r ? void 0 : r.inviterUserId,
@@ -162,7 +162,7 @@ function eu(e) {
     null != t &&
         (0, E.h)(() => {
             let e = { guildScheduledEventId: t.id };
-            null != n && (e.welcomeModalChannelId = n), (0, T.P3)(t, e);
+            null != n && (e.welcomeModalChannelId = n), (0, b.P3)(t, e);
         });
 }
 function ec(e, t, n) {
@@ -370,7 +370,7 @@ let ed = function (e, t) {
             let { inviteKey: i, context: r, callback: a, skipOnboarding: s } = e,
                 o = (0, C.fU)(i),
                 l = o.baseCode,
-                u = w.default.getSessionId(),
+                u = P.default.getSessionId(),
                 f = ea(r, o),
                 p = j.default.getCurrentUser();
             return null !== (t = null == p ? void 0 : p.hasFlag(X.xW$.QUARANTINED)) && void 0 !== t && t

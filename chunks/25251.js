@@ -41,11 +41,11 @@ let c = [],
     I = () => {
         f = !0;
     },
-    b = (e) => {
+    T = (e) => {
         let { profileEffects: t } = e;
         (i = void 0), (r = Date.now() + g), (m = 0), y(0 === t.length ? c : t), (f = !1);
     },
-    T = (e) => {
+    b = (e) => {
         let { error: t } = e;
         (i = t), (r = Date.now() + Math.min(E * 2 ** m, v)), ++m, y(c), (f = !1);
     },
@@ -85,8 +85,8 @@ class C extends (a = o.ZP.Store) {
 u(C, 'displayName', 'ProfileEffectStore');
 let R = new C(l.Z, {
     USER_PROFILE_EFFECTS_FETCH: I,
-    USER_PROFILE_EFFECTS_FETCH_SUCCESS: b,
-    USER_PROFILE_EFFECTS_FETCH_FAILURE: T,
+    USER_PROFILE_EFFECTS_FETCH_SUCCESS: T,
+    USER_PROFILE_EFFECTS_FETCH_FAILURE: b,
     PROFILE_EFFECTS_SET_TRY_IT_OUT: S,
     LOGOUT: N
 });

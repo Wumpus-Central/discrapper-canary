@@ -18,9 +18,9 @@ var r = n(952265),
     E = n(665692),
     v = n(981631),
     y = n(388032),
-    I = n(929349);
-let b = 8,
-    T = 4,
+    I = n(961969);
+let T = 8,
+    b = 4,
     S = 4,
     A = 40,
     N = 6;
@@ -71,7 +71,7 @@ let D = {
         if (i.allowStickers) {
             (0, u.$p)();
             let t = h.ZP.queryStickers([n], !0, [e, (e, t) => t === l.eb.SENDABLE]),
-                i = Math.max(T, b - d.length);
+                i = Math.max(b, T - d.length);
             (f = t.slice(0, i)), '-' === n[0] && (f = t.filter((e) => e.sticker.name === n));
         }
         let _ = [];

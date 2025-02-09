@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
 var l = n(780384),
@@ -9,12 +9,12 @@ var l = n(780384),
     d = n(725875),
     c = n(981631),
     u = n(388032),
-    m = n(471199),
+    m = n(452051),
     h = n(893916),
     x = n(408942);
-function p(e) {
-    let { followedChannelWebhooks: t, editedWebhook: n, selectableWebhookChannels: p, errors: g, canNavigate: f } = e,
-        b = (0, r.ZP)();
+function g(e) {
+    let { followedChannelWebhooks: t, editedWebhook: n, selectableWebhookChannels: g, errors: p, canNavigate: b } = e,
+        _ = (0, r.ZP)();
     return (0, i.jsxs)(a.hjN, {
         children: [
             (0, i.jsx)(a.R94, {
@@ -26,9 +26,9 @@ function p(e) {
                 ? (0, i.jsx)(d.Z, {
                       webhooks: t,
                       editedWebhook: n,
-                      selectableWebhookChannels: p,
-                      errors: g,
-                      canNavigate: f
+                      selectableWebhookChannels: g,
+                      errors: p,
+                      canNavigate: b
                   })
                 : (function (e, t) {
                       let n = (0, l.wj)(e) ? h : x;
@@ -52,7 +52,7 @@ function p(e) {
                               })
                           ]
                       });
-                  })(b, () => open(o.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)))
+                  })(_, () => open(o.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)))
         ]
     });
 }

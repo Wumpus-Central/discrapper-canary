@@ -51,9 +51,9 @@ var i = n(192379),
             I = function (e) {
                 return c(t, e);
             },
-            b = {};
+            T = {};
         return (
-            c && (b.onMouseOver = I),
+            c && (T.onMouseOver = I),
             i.createElement(
                 'div',
                 o(
@@ -64,7 +64,7 @@ var i = n(192379),
                         tabIndex: 0,
                         onKeyDown: y
                     },
-                    b
+                    T
                 ),
                 _,
                 g &&

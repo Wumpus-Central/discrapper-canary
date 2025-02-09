@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => L });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -19,24 +19,24 @@ var r = n(120356),
     v = n(139793),
     y = n(652853),
     I = n(336383),
-    b = n(194811),
-    T = n(373826),
+    T = n(194811),
+    b = n(373826),
     S = n(340266),
     A = n(788858),
     N = n(599864),
     C = n(670451),
     R = n(228168),
     O = n(388032),
-    D = n(249942);
-function x(e) {
-    let { user: t, voiceChannel: n, className: r, onClose: x } = e,
-        { profileType: L } = (0, y.z)(),
-        P = { [D.fullSize]: L === R.y0.FULL_SIZE },
-        { analyticsLocations: w } = (0, d.ZP)(c.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
+    D = n(309584);
+function L(e) {
+    let { user: t, voiceChannel: n, className: r, onClose: L } = e,
+        { profileType: x } = (0, y.z)(),
+        w = { [D.fullSize]: x === R.y0.FULL_SIZE },
+        { analyticsLocations: P } = (0, d.ZP)(c.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
         M = (0, E.Z)({
             display: 'voice',
             user: t,
-            analyticsLocations: w
+            analyticsLocations: P
         }),
         k = (0, v.Z)({
             userId: t.id,
@@ -47,10 +47,10 @@ function x(e) {
         B = (0, f.ZP)(n),
         Z = () => {
             let e = (e) => {
-                    e.stopPropagation(), null == M || M({ action: 'OPEN_VOICE_CHANNEL' }), n.isGuildStageVoice() ? (0, h.Cq)(n) : (u.default.selectVoiceChannel(n.id), (0, _.Kh)(n.id)), null == x || x();
+                    e.stopPropagation(), null == M || M({ action: 'OPEN_VOICE_CHANNEL' }), n.isGuildStageVoice() ? (0, h.Cq)(n) : (u.default.selectVoiceChannel(n.id), (0, _.Kh)(n.id)), null == L || L();
                 },
                 t = (e) => {
-                    e.stopPropagation(), M({ action: 'OPEN_VOICE_GUILD' }), (0, p.X)(n.guild_id), null == x || x();
+                    e.stopPropagation(), M({ action: 'OPEN_VOICE_GUILD' }), (0, p.X)(n.guild_id), null == L || L();
                 };
             return (0, i.jsx)('div', {
                 className: D.details,
@@ -75,7 +75,7 @@ function x(e) {
                             ]
                         }),
                         null != U &&
-                            (0, i.jsx)(T.Z, {
+                            (0, i.jsx)(b.Z, {
                                 variant: 'text-xs/normal',
                                 text: O.intl.formatToPlainString(O.t['hq/Qzc'], { guildName: U.name }),
                                 onClick: t
@@ -86,44 +86,44 @@ function x(e) {
         },
         F = () =>
             (0, i.jsx)('div', {
-                className: a()(D.actions, P),
+                className: a()(D.actions, w),
                 children: (0, i.jsx)(N.Z, {
                     channel: n,
                     onAction: M,
-                    onClose: x
+                    onClose: L
                 })
             });
     return (0, i.jsx)(d.Gt, {
-        value: w,
+        value: P,
         children: (0, i.jsxs)(I.Z, {
             ref: k,
             className: a()(D.card, r),
             onAction: M,
-            onClose: x,
+            onClose: L,
             children: [
-                (0, i.jsx)(b.Z, {
+                (0, i.jsx)(T.Z, {
                     text: O.intl.string(n.isGuildStageVoice() ? O.t.Q1lNen : O.t.bl1Mz8),
                     contextMenu: (0, i.jsx)(C.Z, {
                         display: 'voice',
                         user: t,
-                        onClose: x
+                        onClose: L
                     })
                 }),
                 (0, i.jsx)('div', {
                     className: D.body,
                     children: (0, i.jsxs)('div', {
-                        className: a()(D.content, P),
+                        className: a()(D.content, w),
                         children: [
                             (0, i.jsx)(S.Z, {
                                 users: G,
                                 channel: n
                             }),
                             Z(),
-                            L === R.y0.FULL_SIZE && F()
+                            x === R.y0.FULL_SIZE && F()
                         ]
                     })
                 }),
-                L !== R.y0.FULL_SIZE && F()
+                x !== R.y0.FULL_SIZE && F()
             ]
         })
     });

@@ -24,8 +24,8 @@ var r = n(990547),
     v = n(981631),
     y = n(792101);
 let I = new d.Z('AuthenticationActionCreators'),
-    b = 5000,
-    T = null;
+    T = 5000,
+    b = null;
 var S = (function (e) {
     return (e.MFA = 'MFA'), (e.SUCCESS = 'SUCCESS'), e;
 })({});
@@ -496,16 +496,16 @@ let C = {
         });
     },
     getLocationMetadata: () =>
-        null != T
-            ? T
+        null != b
+            ? b
             : (clearTimeout(i),
               (i = setTimeout(() => {
                   l.Z.dispatch({
                       type: 'SET_CONSENT_REQUIRED',
                       consentRequired: !0
                   });
-              }, b)),
-              (T = s.tn
+              }, T)),
+              (b = s.tn
                   .get({
                       url: v.ANM.AUTH_LOCATION_METADATA,
                       retries: 2,
@@ -527,7 +527,7 @@ let C = {
                                   type: 'SET_LOCATION_METADATA',
                                   countryCode: null !== (s = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== s ? s : void 0
                               }),
-                              (T = null),
+                              (b = null),
                               (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null)
                           ) {
                               let t = e.body.promotional_email_opt_in;
@@ -544,7 +544,7 @@ let C = {
                                   type: 'SET_CONSENT_REQUIRED',
                                   consentRequired: !0
                               }),
-                              (T = null);
+                              (b = null);
                       }
                   ))),
     closeSuspendedUser() {

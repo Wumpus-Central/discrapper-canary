@@ -1,34 +1,34 @@
-n.d(e, { Z: () => _ });
-var i = n(200651);
+n.d(i, { Z: () => s });
+var t = n(200651);
 n(192379);
 var o = n(120356),
-    a = n.n(o),
-    r = n(481060),
-    c = n(436774),
-    l = n(118012),
-    s = n(392842);
-function _(t) {
-    let { text: e, textSize: n = l.Z.Sizes.SIZE_12, textColor: o = l.Z.Colors.STANDARD, className: _, button: d, reducedRightPadding: u = !1 } = t;
-    return (0, i.jsxs)('div', {
-        className: a()(u ? s.noticeWithoutRightPadding : s.noticeWithRightPadding, _),
+    r = n.n(o),
+    a = n(481060),
+    l = n(436774),
+    c = n(118012),
+    d = n(822996);
+function s(e) {
+    let { text: i, textSize: n = c.Z.Sizes.SIZE_12, textColor: o = c.Z.Colors.STANDARD, className: s, button: u, reducedRightPadding: _ = !1 } = e;
+    return (0, t.jsxs)('div', {
+        className: r()(_ ? d.noticeWithoutRightPadding : d.noticeWithRightPadding, s),
         children: [
-            (0, i.jsxs)('div', {
-                className: s.noticeLeft,
+            (0, t.jsxs)('div', {
+                className: d.noticeLeft,
                 children: [
-                    (0, i.jsx)(r.SrA, {
+                    (0, t.jsx)(a.SrA, {
                         size: 'md',
-                        className: s.icon,
-                        color: c.JX.PREMIUM_TIER_2
+                        className: d.icon,
+                        color: l.JX.PREMIUM_TIER_2
                     }),
-                    (0, i.jsx)(l.Z, {
-                        className: s.text,
+                    (0, t.jsx)(c.Z, {
+                        className: d.text,
                         size: n,
                         color: o,
-                        children: e
+                        children: i
                     })
                 ]
             }),
-            d
+            u
         ]
     });
 }

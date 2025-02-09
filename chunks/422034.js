@@ -12,7 +12,7 @@ var i = n(200651),
     c = n(357355),
     d = n(182294),
     f = n(388032),
-    _ = n(811905);
+    _ = n(952670);
 function p(e) {
     let { smallerText: t, className: n, textColor: a, isMarketingPageV2Enabled: u } = e,
         p = (0, o.e7)([c.Z], () => c.Z.affinities.slice(0, 3).reverse()),

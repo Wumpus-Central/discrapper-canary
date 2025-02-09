@@ -9,7 +9,7 @@ var i = n(200651),
     c = n(699516),
     d = n(594174),
     f = n(981631),
-    _ = n(960897);
+    _ = n(783914);
 let p = [];
 function h(e, t) {
     let n = (0, o.Z)(e, t);
@@ -43,9 +43,9 @@ function g(e) {
             var e;
             return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === v;
         }),
-        b = (0, u.wn)({ location: 'useAcceptGameFriendRequest' }),
-        T = I || y || !b,
-        S = T ? p : _,
+        T = (0, u.wn)({ location: 'useAcceptGameFriendRequest' }),
+        b = I || y || !T,
+        S = b ? p : _,
         [A, N] = r.useState(!1),
         C = r.useCallback(() => N(!0), []),
         R = r.useMemo(
@@ -58,7 +58,7 @@ function g(e) {
         ),
         O = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(v), [v]),
         D = h(R, A || 1 === S.length);
-    if (T || 0 === S.length || O === f.OGo.FRIEND) return null;
+    if (b || 0 === S.length || O === f.OGo.FRIEND) return null;
     if (1 === S.length) {
         let { applicationId: e } = S[0],
             n = D.get(e);
@@ -73,12 +73,12 @@ function g(e) {
                   action: () => g(n)
               });
     }
-    let x = [];
+    let L = [];
     return (S.forEach((e) => {
         let { applicationId: t } = e,
             n = D.get(t);
         null != n &&
-            x.push(
+            L.push(
                 (0, i.jsx)(
                     s.sNh,
                     {
@@ -94,13 +94,13 @@ function g(e) {
                 )
             );
     }),
-    0 === x.length)
+    0 === L.length)
         ? null
         : (0, i.jsx)(s.sNh, {
               color: E,
               id: t,
               label: o,
               onFocus: C,
-              children: x
+              children: L
           });
 }

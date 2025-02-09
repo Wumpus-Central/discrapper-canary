@@ -12,7 +12,7 @@ var l = t(200651),
     x = t(598948),
     h = t(428936),
     j = t(41586),
-    C = t(676391);
+    C = t(87893);
 function _(e) {
     let { guild: n } = e,
         t = (0, d.$j)(n.id),
@@ -31,8 +31,8 @@ function _(e) {
 function f(e) {
     let { guild: n, className: t, onPageChange: r, onMemberSelect: s } = e,
         f = n.id,
-        b = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(f), [f]),
-        v = (0, d.$j)(f),
+        v = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(f), [f]),
+        b = (0, d.$j)(f),
         N = (0, d.M3)(f),
         g = i.useCallback(
             (e) => {
@@ -40,23 +40,23 @@ function f(e) {
             },
             [s]
         ),
-        T = (0, m.xb)(N, v, b),
-        p = i.useRef(null),
+        T = (0, m.xb)(N, b, v),
         I = i.useRef(null),
+        p = i.useRef(null),
         E = i.useCallback(() => {
             var e;
-            null === (e = p.current) || void 0 === e || e.resetSearchText();
+            null === (e = I.current) || void 0 === e || e.resetSearchText();
         }, []);
     return (0, l.jsx)('div', {
         className: a()(C.mainTableContainer, t),
         children: (0, l.jsxs)(c.Den, {
             className: a()(C.horizatonalScroller),
-            ref: I,
+            ref: p,
             orientation: 'horizontal',
             children: [
                 (0, l.jsx)(j.Z, {
                     guild: n,
-                    ref: p
+                    ref: I
                 }),
                 (0, l.jsx)(_, { guild: n }),
                 (0, l.jsx)(x.Z, {

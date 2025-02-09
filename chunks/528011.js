@@ -1,6 +1,6 @@
 n.d(e, {
-    g: () => S,
-    mI: () => f
+    g: () => m,
+    mI: () => p
 }),
     n(47120);
 var i = n(149765),
@@ -12,41 +12,41 @@ var i = n(149765),
     o = n(594174),
     d = n(700785),
     c = n(709054),
-    _ = n(533244),
-    g = n(487419),
-    p = n(676770);
-function f(t) {
+    g = n(533244),
+    _ = n(487419),
+    f = n(676770);
+function p(t) {
     let e = (0, r.e7)([a.Z, u.Z], () => {
             let e = a.Z.getGuild(t);
             if (null == e) return !1;
             let n = u.Z.getGuildPermissions(e);
-            return null != n && i.Db(n, p.cv);
+            return null != n && i.Db(n, f.cv);
         }),
-        n = (0, r.e7)([g.Z], () => (null != t ? g.Z.getGuildIncident(t) : null)),
-        l = null != n && (0, _.ur)(n);
+        n = (0, r.e7)([_.Z], () => (null != t ? _.Z.getGuildIncident(t) : null)),
+        l = null != n && (0, g.ur)(n);
     return {
         shouldShowIncidentActions: e,
         incidentData: n,
         isUnderLockdown: l
     };
 }
-function S() {
+function m() {
     var t;
     let e = (function (t) {
             let e = o.default.getCurrentUser(),
-                n = g.Z.getIncidentsByGuild();
+                n = _.Z.getIncidentsByGuild();
             for (let r of c.default.keys(n).map((t) => a.Z.getGuild(t))) {
                 if (null == r) continue;
                 let l = n[r.id];
                 if (
-                    !(null == l || (!(0, _.i9)(l) && !(0, _.ur)(l)) || ((0, _.ur)(l) && r.id !== t)) &&
+                    !(null == l || (!(0, g.i9)(l) && !(0, g.ur)(l)) || ((0, g.ur)(l) && r.id !== t)) &&
                     i.Db(
                         d.uB({
                             user: e,
                             context: r,
                             checkElevated: !1
                         }),
-                        p.cv
+                        f.cv
                     )
                 )
                     return r.id;

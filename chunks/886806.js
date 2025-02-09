@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(442837),
     s = n(893776),
     c = n(493773),
@@ -10,16 +10,16 @@ var i = n(200651),
     u = n(388905),
     h = n(17894),
     _ = n(108427),
-    g = n(626135),
-    m = n(981631),
+    m = n(626135),
+    g = n(981631),
     p = n(388032),
-    f = n(823793),
-    E = n(232186);
+    f = n(285596),
+    E = n(814632);
 function x(e) {
     n.g.location.assign(e);
 }
 function I(e) {
-    let { location: t, transitionTo: a = x } = e,
+    let { location: t, transitionTo: l = x } = e,
         [o, I] = r.useState('submitting'),
         C = r.useRef(void 0);
     (0, c.ZP)(() => {
@@ -39,17 +39,17 @@ function I(e) {
         })();
     });
     let v = r.useCallback(() => {
-            a(m.Z5c.LOGIN);
-        }, [a]),
+            l(g.Z5c.LOGIN);
+        }, [l]),
         N = r.useCallback(() => {
-            g.default.track(m.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: C.current }), (0, h.Z)('verify_email');
+            m.default.track(g.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: C.current }), (0, h.Z)('verify_email');
         }, []);
     return 'failed' === o
         ? (0, i.jsxs)(u.ZP, {
               children: [
                   (0, i.jsx)(u.Ee, {
                       src: n(375673),
-                      className: l()(f.image, E.marginBottom20)
+                      className: a()(f.image, E.marginBottom20)
                   }),
                   (0, i.jsx)(u.Dx, {
                       className: E.marginBottom8,
@@ -70,7 +70,7 @@ function I(e) {
                 children: [
                     (0, i.jsx)(u.Ee, {
                         src: n(73962),
-                        className: l()(f.image, E.marginBottom20)
+                        className: a()(f.image, E.marginBottom20)
                     }),
                     (0, i.jsx)(u.Dx, {
                         className: E.marginBottom40,
@@ -86,7 +86,7 @@ function I(e) {
                 children: [
                     (0, i.jsx)(u.Ee, {
                         src: n(892235),
-                        className: l()(f.image, E.marginBottom20)
+                        className: a()(f.image, E.marginBottom20)
                     }),
                     (0, i.jsx)(u.Dx, {
                         className: E.marginBottom8,

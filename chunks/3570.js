@@ -4,10 +4,10 @@ n.d(t, {
 });
 var i = n(536285),
     r = n(703656),
-    a = n(314897),
-    l = n(358085),
+    l = n(314897),
+    a = n(358085),
     o = n(981631);
-let s = l.isPlatformEmbedded
+let s = a.isPlatformEmbedded
         ? o.dG4
         : (e, t) => {
               if (!(0, r.DB)())
@@ -16,12 +16,12 @@ let s = l.isPlatformEmbedded
                       params: t
                   });
           },
-    c = l.isPlatformEmbedded
+    c = a.isPlatformEmbedded
         ? o.dG4
         : (e, t) => {
-              if (!a.default.isAuthenticated())
+              if (!l.default.isAuthenticated())
                   return s(e, {
                       ...(t || {}),
-                      fingerprint: a.default.getFingerprint()
+                      fingerprint: l.default.getFingerprint()
                   });
           };

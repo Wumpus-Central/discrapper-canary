@@ -4,16 +4,16 @@ n.d(t, {
     CA: () => O,
     F8: () => Q,
     JM: () => R,
-    NZ: () => L,
+    NZ: () => x,
     ZP: () => J,
-    aN: () => x,
+    aN: () => L,
     ay: () => z,
     gT: () => S,
     ov: () => C,
     pK: () => m,
     pU: () => $,
     rI: () => H,
-    tp: () => P,
+    tp: () => w,
     xR: () => K
 }),
     n(315314),
@@ -42,8 +42,8 @@ let E = i.canUseWebp(),
     v = 5,
     y = 240,
     I = 1096,
-    b = (0, c.isAndroid)();
-function T(e) {
+    T = (0, c.isAndroid)();
+function b(e) {
     let t,
         { endpoint: n, path: i, id: r, hash: a, size: o, lossless: u = !1, canAnimate: c = !1, keepAspectRatio: d, format: f = null } = e;
     if (null == r || null == a) return;
@@ -60,7 +60,7 @@ function S(e) {
         s = E ? 'webp' : 'gif',
         o = r ? 'png' : n ? s : a,
         u = E && n ? '&animated=true' : '',
-        c = 'size='.concat((0, l.oO)(i * (0, l.x_)(), b));
+        c = 'size='.concat((0, l.oO)(i * (0, l.x_)(), T));
     return null != window.GLOBAL_ENV.CDN_HOST ? ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.CDN_HOST, '/emojis/').concat(t, '.').concat(o) + '?'.concat(c).concat(u) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.EMOJI(t, o);
 }
 function A(e, t) {
@@ -80,7 +80,7 @@ function N(e) {
         if (e) return e;
         if (null == n && '0000' === r) return m[0];
     }
-    return T({
+    return b({
         endpoint: f.ANM.AVATAR,
         path: 'avatars',
         id: t,
@@ -130,7 +130,7 @@ function D(e, t) {
         i = O(e, n);
     return null != i ? X(i) : t.getAvatarSource(e.guildId, n);
 }
-function x(e) {
+function L(e) {
     let t,
         { id: n, banner: i, canAnimate: r, size: a } = e;
     if (null == i) return;
@@ -138,7 +138,7 @@ function x(e) {
         o = r && K(i) ? 'gif' : 'png';
     return (null != s ? ''.concat(location.protocol, '//').concat(s, '/banners/').concat(n, '/').concat(i, '.').concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.USER_BANNER(n, i, o)) + '?size='.concat((0, l.oO)(a * (0, l.x_)()));
 }
-function L(e) {
+function x(e) {
     let { avatarDecoration: t, size: n, canAnimate: i = !1 } = e;
     if (null == t || (0, o.fO)(t)) return;
     if (/^data:/.test(t.asset)) return t.asset;
@@ -147,7 +147,7 @@ function L(e) {
         u = new URL(null != r ? ''.concat(location.protocol, '//').concat(r).concat(s) : ''.concat(location.protocol).concat(a).concat(s));
     return u.searchParams.set('size', ''.concat((0, l.oO)(n * (0, l.x_)()))), u.searchParams.set('passthrough', ''.concat(i && (0, o.ae)(t.asset))), u.toString();
 }
-function P(e) {
+function w(e) {
     let t,
         { id: n, guildId: i, banner: r, canAnimate: a, size: s } = e;
     if (null == r || null == i) return;
@@ -156,7 +156,7 @@ function P(e) {
         c = f.ANM.GUILD_MEMBER_BANNER(i, n, r, u);
     return (null != o ? ''.concat(location.protocol, '//').concat(o).concat(c) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + c) + '?size='.concat((0, l.oO)(s * (0, l.x_)()));
 }
-function w(e) {
+function P(e) {
     let t,
         { id: n, splash: i, size: r } = e;
     if (null == i) return null;
@@ -165,7 +165,7 @@ function w(e) {
     return (null != a ? ''.concat(location.protocol, '//').concat(a, '/splashes/').concat(n, '/').concat(i, '.jpg') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_SPLASH(n, i)) + '?size='.concat(r);
 }
 function M(e) {
-    return X(w(e));
+    return X(P(e));
 }
 function k(e) {
     let t,
@@ -199,7 +199,7 @@ function B(e) {
 }
 function Z(e) {
     let { id: t, icon: n, size: i, canAnimate: r = !1, lossless: a = !1 } = e;
-    return T({
+    return b({
         endpoint: f.ANM.GUILD_ICON,
         path: 'icons',
         id: t,
@@ -211,7 +211,7 @@ function Z(e) {
 }
 function F(e) {
     let { id: t, icon: n, size: i = f.IXf, canAnimate: r = !1 } = e;
-    return T({
+    return b({
         endpoint: f.ANM.GUILD_TEMPLATE_ICON,
         path: 'guild-templates',
         id: t,
@@ -227,7 +227,7 @@ function V(e) {
         if (null != e) return e;
     }
     if (null != n)
-        return T({
+        return b({
             endpoint: f.ANM.APPLICATION_ICON,
             path: 'app-icons',
             id: t,
@@ -243,7 +243,7 @@ function V(e) {
 }
 function j(e) {
     let { id: t, hash: n, size: i = f.IXf, keepAspectRatio: r = !1, format: a } = e;
-    return T({
+    return b({
         endpoint: f.ANM.APPLICATION_ICON,
         path: 'app-icons',
         id: t,
@@ -256,7 +256,7 @@ function j(e) {
 }
 function H(e) {
     let { userId: t, assetId: n, assetHash: i, size: r, canAnimate: a = !0 } = e;
-    return T({
+    return b({
         endpoint: (e, r, a) => f.ANM.VIDEO_FILTER_ASSET_STORAGE(t, n, i, a),
         path: 'video-filter-assets/'.concat(t),
         id: n,
@@ -281,7 +281,7 @@ function W(e) {
             ? t
             : i.DEFAULT_CHANNEL_ICON
         : null !==
-                (n = T({
+                (n = b({
                     endpoint: f.ANM.CHANNEL_ICON,
                     path: 'channel-icons',
                     id: r,
@@ -318,16 +318,16 @@ let J = {
     getGuildMemberAvatarURL: O,
     getGuildMemberAvatarURLSimple: R,
     getGuildMemberAvatarSource: D,
-    getGuildMemberBannerURL: P,
-    getUserBannerURL: x,
-    getAvatarDecorationURL: L,
+    getGuildMemberBannerURL: w,
+    getUserBannerURL: L,
+    getAvatarDecorationURL: x,
     hasAnimatedGuildIcon: function e(e) {
         return K(null == e ? void 0 : e.icon);
     },
     isAnimatedIconHash: K,
     getUserAvatarSource: (e, t, n) => X(C(e, t, n)),
     getGuildIconURL: Z,
-    getGuildSplashURL: w,
+    getGuildSplashURL: P,
     getGuildSplashSource: M,
     getGuildDiscoverySplashURL: G,
     getGuildDiscoverySplashSource: B,
@@ -337,7 +337,7 @@ let J = {
         let { channelId: t, icon: n } = e;
         return null == n
             ? null
-            : T({
+            : b({
                   endpoint: f.ANM.GUILD_RESOURCE_CHANNELS_ICON,
                   path: 'resource-channels',
                   id: t,
@@ -350,7 +350,7 @@ let J = {
         let { channelId: t, icon: n } = e;
         return null == n
             ? null
-            : T({
+            : b({
                   endpoint: f.ANM.GUILD_NEW_MEMBER_ACTIONS_ICON,
                   path: 'new-member-actions',
                   id: t,

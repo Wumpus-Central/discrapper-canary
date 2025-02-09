@@ -1,10 +1,10 @@
 n.d(t, {
     $K: () => C,
     OQ: () => I,
-    RE: () => T,
+    RE: () => b,
     Xe: () => R,
     dv: () => S,
-    rS: () => b,
+    rS: () => T,
     t0: () => y
 }),
     n(47120),
@@ -60,7 +60,7 @@ function I(e) {
                     })
             );
 }
-function b(e) {
+function T(e) {
     let { guildId: t, image: n, name: i, roles: r } = e;
     return (
         o.Z.dispatch({
@@ -94,7 +94,7 @@ function b(e) {
             )
     );
 }
-function T(e, t) {
+function b(e, t) {
     return (
         o.Z.dispatch({
             type: 'EMOJI_DELETE',

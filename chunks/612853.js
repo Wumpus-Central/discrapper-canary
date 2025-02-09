@@ -5,8 +5,8 @@ var r = n(120356),
     a = n.n(r),
     s = n(481060),
     o = n(388032),
-    l = n(221309),
-    u = n(652849);
+    l = n(973181),
+    u = n(801194);
 function c() {
     return (0, i.jsxs)('div', {
         className: a()(l.paymentModalLockIcon, u.flex, u.alignCenter),

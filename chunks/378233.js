@@ -1,19 +1,19 @@
 n.d(t, {
     B0: () => O,
-    Hc: () => P,
-    J8: () => w,
+    Hc: () => w,
+    J8: () => P,
     Q6: () => C,
     V9: () => U,
-    WD: () => L,
+    WD: () => x,
     X_: () => D,
-    Zt: () => T,
+    Zt: () => b,
     Zv: () => A,
     _V: () => N,
     cv: () => k,
     gM: () => Z,
     jl: () => M,
     sM: () => R,
-    z: () => x
+    z: () => L
 }),
     n(411104);
 var i = n(606301),
@@ -31,8 +31,8 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
     v = Object.values(d.og),
     y = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(v.join('|'), ')'))),
     I = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(h, ')(').concat(y, ')'), 'ig'),
-    b = RegExp(''.concat(location.protocol).concat(p, '(').concat(y, ')'), 'ig'),
-    T = (e) => {
+    T = RegExp(''.concat(location.protocol).concat(p, '(').concat(y, ')'), 'ig'),
+    b = (e) => {
         if (null != e.cover_sticker_id) {
             let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
             if (null != t) return t;
@@ -108,21 +108,21 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
             n
         );
     },
-    O = (e) => null != e.match('development' !== m ? I : b),
+    O = (e) => null != e.match('development' !== m ? I : T),
     D = (e) =>
         e.stickers.some((e) => {
             let { format_type: t } = e;
             return t === d.u3.APNG || t === d.u3.LOTTIE || t === d.u3.GIF;
         }),
-    x = (e) => ({
+    L = (e) => ({
         type: d.Ih.PACK,
         id: e.id,
         name: e.name,
         stickers: e.stickers,
-        previewSticker: T(e)
+        previewSticker: b(e)
     }),
-    L = (e, t) => (e === f.yr.ANIMATE_ON_INTERACTION ? t : e !== f.yr.NEVER_ANIMATE),
-    P = (e, t, n, r) => {
+    x = (e, t) => (e === f.yr.ANIMATE_ON_INTERACTION ? t : e !== f.yr.NEVER_ANIMATE),
+    w = (e, t, n, r) => {
         if (o.Z.getUploadCount(n, r) > 0) return !0;
         let a = c.Z.getStickerPreview(n, r);
         if (null != a && a.length > 0) return !0;
@@ -137,7 +137,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
                 return !1;
         }
     },
-    w = (e) => e.type === d.n0.GUILD,
+    P = (e) => e.type === d.n0.GUILD,
     M = (e) => e.type === d.n0.STANDARD,
     k = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
     U = (e) => {

@@ -1,12 +1,12 @@
 let i;
 n.d(t, { Z: () => u });
-var s,
-    r,
-    l,
-    a = n(442837),
+var r,
+    a,
+    s,
+    l = n(442837),
     o = n(570140);
 let c = !1;
-class d extends (l = a.ZP.Store) {
+class d extends (s = l.ZP.Store) {
     get harvestType() {
         return i;
     }
@@ -14,15 +14,15 @@ class d extends (l = a.ZP.Store) {
         return c;
     }
 }
-(r = 'DataHarvestStore'),
-    (s = 'displayName') in d
-        ? Object.defineProperty(d, s, {
-              value: r,
+(a = 'DataHarvestStore'),
+    (r = 'displayName') in d
+        ? Object.defineProperty(d, r, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (d[s] = r);
+        : (d[r] = a);
 let u = new d(o.Z, {
     CONNECTION_OPEN: function () {
         i = void 0;

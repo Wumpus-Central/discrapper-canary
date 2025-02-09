@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -13,7 +13,7 @@ var i = n(200651),
     p = n(74538),
     h = n(921944),
     m = n(388032),
-    g = n(140787);
+    g = n(840427);
 let E = {
         tension: 750,
         mass: 2.5,
@@ -54,16 +54,16 @@ function y(e) {
 function I(e) {
     return e ? m.intl.string(m.t['5cRA/f']) : m.intl.string(m.t.buV4am);
 }
-function b(e) {
+function T(e) {
     let { checked: t, onClick: n, id: a = 'burst-reaction-toggle-button' } = e,
-        b = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        T = _.default.getCurrentUser(),
-        S = null == T || (0, p.I5)(T) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        T = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        b = _.default.getCurrentUser(),
+        S = null == b || (0, p.I5)(b) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
         [A, N] = (0, f.US)(S),
         [C, R] = r.useState(!1),
         [O, D] = (0, c.q_F)(() => ({})),
-        x = (0, o.animated)(c.Pt5);
-    function L() {
+        L = (0, o.animated)(c.Pt5);
+    function x() {
         D({
             from: { rotate: t ? '360deg' : '0deg' },
             to: { rotate: t ? '0deg' : '360deg' },
@@ -76,24 +76,24 @@ function b(e) {
         let e = A === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
         e && (N(h.L.DISMISS), setTimeout(() => R(e), 200));
     }, [A, N]);
-    let P = C ? m.intl.string(m.t['Osi/u7']) : I(t),
-        w = C ? m.intl.string(m.t.ORK94u) : void 0;
+    let w = C ? m.intl.string(m.t['Osi/u7']) : I(t),
+        P = C ? m.intl.string(m.t.ORK94u) : void 0;
     return (0, i.jsxs)(c.DY3, {
         position: 'top',
         text: (0, i.jsx)(y, {
             textColor: 'always-white',
-            tooltipText: P,
-            headingText: w
+            tooltipText: w,
+            headingText: P
         }),
         color: c.ua7.Colors.BRAND,
         forceOpen: C,
-        'aria-label': P,
+        'aria-label': w,
         tooltipClassName: g.tooltip,
         children: [
             (0, i.jsx)('input', {
                 className: g.visuallyHidden,
                 checked: t,
-                onChange: L,
+                onChange: x,
                 id: a,
                 type: 'checkbox'
             }),
@@ -104,11 +104,11 @@ function b(e) {
                     t
                         ? (0, i.jsx)(c.ZX5, {
                               className: g.shine,
-                              shinePaused: b
+                              shinePaused: T
                           })
                         : null,
-                    (0, i.jsx)(x, {
-                        style: b ? void 0 : O,
+                    (0, i.jsx)(L, {
+                        style: T ? void 0 : O,
                         size: 'custom',
                         width: v,
                         height: v,

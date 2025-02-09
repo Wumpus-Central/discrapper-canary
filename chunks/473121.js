@@ -1,43 +1,43 @@
 n.d(t, { Z: () => c });
-var i = n(200651),
-    r = n(192379),
-    a = n(481060),
-    s = n(454585),
-    o = n(273744),
-    l = n(388032),
-    u = n(494045);
+var l = n(200651),
+    i = n(192379),
+    r = n(481060),
+    a = n(454585),
+    s = n(273744),
+    o = n(388032),
+    d = n(209223);
 let c = (e) => {
     let {
             node: { header: t, subheader: n, button: c }
         } = e,
-        d = (null == c ? void 0 : c.type) === 'submit',
-        f = r.useRef(
-            s.Z.reactParserFor({
-                ...s.Z.defaultRules,
-                link: o.s
+        u = (null == c ? void 0 : c.type) === 'submit',
+        m = i.useRef(
+            a.Z.reactParserFor({
+                ...a.Z.defaultRules,
+                link: s.s
             })
         );
-    return (0, i.jsxs)('div', {
-        className: u.headerContainer,
+    return (0, l.jsxs)('div', {
+        className: d.headerContainer,
         children: [
             null != t && '' !== t
-                ? (0, i.jsx)(a.X6q, {
+                ? (0, l.jsx)(r.X6q, {
                       variant: 'heading-xl/semibold',
                       color: 'header-primary',
                       children: t
                   })
                 : null,
             null != n && '' !== t
-                ? (0, i.jsx)(a.Text, {
+                ? (0, l.jsx)(r.Text, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: f.current(n)
+                      children: m.current(n)
                   })
                 : null,
-            d &&
-                (0, i.jsx)(a.Text, {
+            u &&
+                (0, l.jsx)(r.Text, {
                     variant: 'text-sm/normal',
-                    children: l.intl.format(l.t.Q0tSKS, {})
+                    children: o.intl.format(o.t.Q0tSKS, {})
                 })
         ]
     });

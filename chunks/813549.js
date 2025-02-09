@@ -8,7 +8,7 @@ var r = n(120356),
     a = n.n(r),
     s = n(385499),
     o = n(674563),
-    l = n(485453);
+    l = n(814842);
 let u = (e) => {
     let { name: t, discriminator: n, invertBotTagColor: r, nameColor: o, className: u, botType: c, usernameClass: d, discriminatorClass: f, botClass: _, botVerified: p = !1, style: h, useRemSizes: m = !1, usernameIcon: g } = e;
     return (0, i.jsxs)('div', {

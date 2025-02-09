@@ -1,17 +1,17 @@
-n.d(t, { F: () => o });
-var i = n(925549),
-    s = n(475468),
-    r = n(19780),
-    l = n(944486),
-    a = n(981631);
-let o = {
+t.d(n, { F: () => a });
+var i = t(925549),
+    r = t(475468),
+    s = t(19780),
+    l = t(944486),
+    o = t(981631);
+let a = {
     binds: ['mod+alt+left'],
     comboKeysBindGlobal: !0,
     action() {
         var e;
-        if (!r.Z.isConnected()) return !1;
-        let t = null !== (e = r.Z.getGuildId()) && void 0 !== e ? e : a.ME,
-            n = l.Z.getChannelId(t);
-        return (0, s.K)(t, n), i.Z.channelListScrollTo(t, r.Z.getChannelId()), !1;
+        if (!s.Z.isConnected()) return !1;
+        let n = null !== (e = s.Z.getGuildId()) && void 0 !== e ? e : o.ME,
+            t = l.Z.getChannelId(n);
+        return (0, r.K)(n, t), i.Z.channelListScrollTo(n, s.Z.getChannelId()), !1;
     }
 };

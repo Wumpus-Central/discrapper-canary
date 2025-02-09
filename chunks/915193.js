@@ -9,7 +9,7 @@ var s = i(442837),
     o = i(700582),
     c = i(594174),
     u = i(388032),
-    m = i(597539);
+    m = i(435867);
 function h(e) {
     let { color: n, className: i } = e;
     return (0, r.jsx)('svg', {

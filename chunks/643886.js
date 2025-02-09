@@ -1,4 +1,4 @@
-n.d(t, { U: () => p }), n(653041), n(47120), n(733860);
+n.d(t, { U: () => g }), n(653041), n(47120), n(733860);
 var i = n(192379),
     l = n(512722),
     a = n.n(l),
@@ -11,17 +11,17 @@ var i = n(192379),
     m = n(700785),
     h = n(282923),
     x = n(981631);
-function p(e) {
+function g(e) {
     let t = (0, s.e7)([d.Z], () => d.Z.getGuild(e));
     a()(null != t, 'guild must be present to be editing its integration settings');
     let n = (0, s.e7)([c.Z], () => c.Z.getHighestRole(t)),
         l = (0, s.Wu)([o.ZP], () => o.ZP.getMembers(e), [e]),
-        p = (0, s.cj)([u.default], () => u.default.getUsers()),
-        b = (0, s.Wu)([d.Z], () => Object.values(d.Z.getRoles(e)), [e]),
-        v = i.useMemo(() => {
+        g = (0, s.cj)([u.default], () => u.default.getUsers()),
+        _ = (0, s.Wu)([d.Z], () => Object.values(d.Z.getRoles(e)), [e]),
+        f = i.useMemo(() => {
             let e = [];
             for (let n of l) {
-                let i = p[n.userId];
+                let i = g[n.userId];
                 if (null == i || i.bot) continue;
                 let l =
                     i.id !== t.ownerId &&
@@ -39,15 +39,15 @@ function p(e) {
                 });
             }
             return e;
-        }, [t, l, p]),
-        _ = (e) => {
+        }, [t, l, g]),
+        v = (e) => {
             var t;
             return e.managed && (null === (t = e.tags) || void 0 === t ? void 0 : t.bot_id) != null;
         },
-        j = i.useMemo(() => {
+        C = i.useMemo(() => {
             let i = [];
-            for (let l of b) {
-                if (_(l)) continue;
+            for (let l of _) {
+                if (v(l)) continue;
                 let a = !r.e$(l.permissions, x.Plq.ADMINISTRATOR) && c.Z.isRoleHigher(t, n, l),
                     s = {
                         id: l.id,
@@ -57,25 +57,25 @@ function p(e) {
                 l.id === e ? i.unshift(s) : i.push(s);
             }
             return i;
-        }, [b, e, t, n]),
-        [N, C] = i.useState(''),
+        }, [_, e, t, n]),
+        [j, N] = i.useState(''),
         I = i.useMemo(() => {
             var t;
-            let n = (t = N).startsWith('@') ? t.substr(1) : t,
-                i = N.startsWith('@') ? j.filter((t) => t.id === e) : j;
+            let n = (t = j).startsWith('@') ? t.substr(1) : t,
+                i = j.startsWith('@') ? C.filter((t) => t.id === e) : C;
             return {
-                members: (0, h.B)(v, g, n),
-                roles: (0, h.B)(i, f, n)
+                members: (0, h.B)(f, p, n),
+                roles: (0, h.B)(i, b, n)
             };
-        }, [e, v, N, j]);
+        }, [e, f, j, C]);
     return {
-        query: N,
+        query: j,
         results: I,
-        setQuery: C,
+        setQuery: N,
         unfilteredCount: I.members.length + I.roles.length
     };
 }
-function g(e) {
+function p(e) {
     let t = [e.username];
     return (
         (null == e ? void 0 : e.nick) != null && t.push(e.nick),
@@ -85,7 +85,7 @@ function g(e) {
         }
     );
 }
-function f(e) {
+function b(e) {
     return {
         id: e.id,
         names: [e.name]

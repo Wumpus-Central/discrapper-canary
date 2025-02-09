@@ -1,29 +1,29 @@
 n.d(t, { Z: () => O });
 var i = n(200651),
     s = n(192379),
-    r = n(512722),
-    l = n.n(r),
+    l = n(512722),
+    r = n.n(l),
     a = n(442837),
     o = n(481060),
     c = n(570140),
     d = n(497321),
     u = n(100527),
-    m = n(367907),
-    g = n(906732),
-    h = n(296810),
+    h = n(367907),
+    m = n(906732),
+    g = n(296810),
     x = n(921813),
     _ = n(621853),
     p = n(246946),
     E = n(594174),
     C = n(63063),
-    f = n(74538),
-    T = n(18438),
-    N = n(778825),
-    I = n(856607),
+    N = n(74538),
+    f = n(18438),
+    I = n(778825),
+    T = n(856607),
     S = n(594496),
-    b = n(856768),
+    j = n(856768),
     v = n(981631),
-    j = n(388032);
+    b = n(388032);
 function A(e) {
     (0, o.ZDy)(async () => {
         let { default: t } = await n.e('84509').then(n.bind(n, 933696));
@@ -39,59 +39,59 @@ function A(e) {
 }
 function O(e) {
     let { selectedGuild: t } = e,
-        { analyticsLocations: n } = (0, g.ZP)(u.Z.GUILD_PROFILE),
-        r = (0, a.e7)([E.default], () => {
+        { analyticsLocations: n } = (0, m.ZP)(u.Z.GUILD_PROFILE),
+        l = (0, a.e7)([E.default], () => {
             let e = E.default.getCurrentUser();
-            return l()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
+            return r()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
-        O = (0, a.e7)([_.Z], () => !_.Z.isFetchingProfile(r.id, null == t ? void 0 : t.id)),
+        O = (0, a.e7)([_.Z], () => !_.Z.isFetchingProfile(l.id, null == t ? void 0 : t.id)),
         R = (0, a.e7)([p.Z], () => p.Z.hidePersonalInformation),
-        { source: P, ...D } = (0, a.cj)([N.Z], () => ({
-            ...N.Z.getAllPending(),
-            source: N.Z.getSource()
+        { source: D, ...P } = (0, a.cj)([I.Z], () => ({
+            ...I.Z.getAllPending(),
+            source: I.Z.getSource()
         }));
-    return (s.useEffect(() => () => c.Z.wait(T.W3), []),
+    return (s.useEffect(() => () => c.Z.wait(f.W3), []),
     s.useEffect(() => {
-        null != P &&
-            m.ZP.trackWithMetadata(v.rMx.SETTINGS_PANE_VIEWED, {
+        null != D &&
+            h.ZP.trackWithMetadata(v.rMx.SETTINGS_PANE_VIEWED, {
                 settings_type: 'guild',
                 destination_pane: v.jXE.SETTINGS_CUSTOMIZE_PROFILE,
-                source: P
+                source: D
             });
-    }, [P]),
+    }, [D]),
     R)
         ? (0, i.jsx)(d.Z, {})
         : O
-          ? (0, i.jsxs)(g.Gt, {
+          ? (0, i.jsxs)(m.Gt, {
                 value: n,
                 children: [
                     (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        children: j.intl.format(j.t['/PTB2N'], { helpCenterLink: C.Z.getArticleURL(v.BhN.GUILD_PROFILES) })
+                        children: b.intl.format(b.t['/PTB2N'], { helpCenterLink: C.Z.getArticleURL(v.BhN.GUILD_PROFILES) })
                     }),
                     null != t
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(b.Z, {
+                                  (0, i.jsx)(j.Z, {
                                       guildId: t.id,
                                       onChange: (e) => {
-                                          null != e && (0, T.HP)(e);
+                                          null != e && (0, f.HP)(e);
                                       }
                                   }),
-                                  (0, i.jsx)(h.Z, {
-                                      previewTitle: j.intl.formatToPlainString(j.t.Tc0slJ, { guildName: null == t ? void 0 : t.name }),
+                                  (0, i.jsx)(g.Z, {
+                                      previewTitle: b.intl.formatToPlainString(b.t.Tc0slJ, { guildName: null == t ? void 0 : t.name }),
                                       profilePreview: (0, i.jsx)(x.Z, {
-                                          user: r,
+                                          user: l,
                                           guild: t,
-                                          canUsePremiumCustomization: f.ZP.canUsePremiumProfileCustomization(r),
+                                          canUsePremiumCustomization: N.ZP.canUsePremiumProfileCustomization(l),
                                           onUpsellClick: A,
-                                          ...D
+                                          ...P
                                       }),
                                       children: (0, i.jsx)(S.Z, {})
                                   })
                               ]
                           })
-                        : (0, i.jsx)(I.Z, {})
+                        : (0, i.jsx)(T.Z, {})
                 ]
             })
           : (0, i.jsx)(o.$jN, {});

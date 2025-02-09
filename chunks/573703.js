@@ -6,8 +6,8 @@ var i = e(481060),
     s = e(376340),
     l = e(981631),
     a = e(388032),
-    c = e(567770),
-    d = e(592240);
+    c = e(562373),
+    d = e(38920);
 function u() {
     return (0, o.jsx)('div', {
         className: c.__invalid_getCrunchyrollApp,

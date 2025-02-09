@@ -1,7 +1,7 @@
 n.d(t, {
-    As: () => L,
-    By: () => P,
-    Lu: () => w,
+    As: () => x,
+    By: () => w,
+    Lu: () => P,
     e9: () => F,
     hG: () => U,
     nd: () => Z,
@@ -29,12 +29,12 @@ var i = n(200651),
     v = n(374649),
     y = n(591548),
     I = n(639119),
-    b = n(653798),
-    T = n(585602),
+    T = n(653798),
+    b = n(585602),
     S = n(474936),
     A = n(981631),
     N = n(388032),
-    C = n(193727);
+    C = n(913706);
 let R = (e, t) => {
         var n;
         return !!(null === (n = e.discounts) || void 0 === n ? void 0 : n.some((e) => e.type === t));
@@ -80,7 +80,7 @@ function D(e, t, n, i) {
     }
     throw Error('Unexpected invoice plan: '.concat(e.subscriptionPlanId));
 }
-function x(e) {
+function L(e) {
     var t;
     let { invoiceItem: n, overrideAmount: r, showGuildSubscriptionAdjustmentTooltip: a, currency: s, className: o, isPrepaidPaymentSource: d, referralTrialOfferId: f, inTrialPeriod: _ } = e,
         h = (0, u.e7)([p.Z], () => p.Z.get(n.subscriptionPlanId)),
@@ -117,10 +117,10 @@ function x(e) {
             ]
         }));
     let y = (0, E.T4)(null != r ? r : n.amount, s),
-        T = d ? y : (0, E.og)(y, h.interval, h.intervalCount);
-    return (0, i.jsx)(b.i$, {
+        b = d ? y : (0, E.og)(y, h.interval, h.intervalCount);
+    return (0, i.jsx)(T.i$, {
         label: v,
-        value: T,
+        value: b,
         originalAmount: n.subscriptionPlanPrice * n.quantity,
         discounts: n.discounts,
         interval: h.interval,
@@ -130,7 +130,7 @@ function x(e) {
         inTrialPeriod: _
     });
 }
-function L(e) {
+function x(e) {
     let { label: t, tooltipText: n, tooltipAriaLabel: r } = e;
     return (0, i.jsxs)('div', {
         className: C.invoiceItemLabelWithIcon,
@@ -152,7 +152,7 @@ function L(e) {
         ]
     });
 }
-function P(e) {
+function w(e) {
     let { invoice: t, isPrepaidPaymentSource: n } = e,
         r = (0, y.j)(t.invoiceItems),
         a = r.find((e) => !(0, g.Z8)(e.subscriptionPlanId) && e.amount >= 0),
@@ -164,14 +164,14 @@ function P(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             null != a
-                ? (0, i.jsx)(x, {
+                ? (0, i.jsx)(L, {
                       invoiceItem: a,
                       currency: t.currency,
                       isPrepaidPaymentSource: n
                   })
                 : null,
             0 !== l && null != s && null != o
-                ? (0, i.jsx)(b.R$, {
+                ? (0, i.jsx)(T.R$, {
                       label: N.intl.formatToPlainString(N.t.a3cAOj, {
                           numGuildSubscriptions: s.quantity,
                           planName: (0, g.Gf)(o.id, !1, n)
@@ -179,16 +179,16 @@ function P(e) {
                       value: n ? c : d
                   })
                 : null,
-            (0, i.jsx)(T.Z, { invoice: t }),
-            (0, i.jsx)(b.KU, {}),
-            (0, i.jsx)(b.Ji, {
+            (0, i.jsx)(b.Z, { invoice: t }),
+            (0, i.jsx)(T.KU, {}),
+            (0, i.jsx)(T.Ji, {
                 label: N.intl.format(t.taxInclusive ? (n ? N.t.BqdxQk : N.t.XH4raG) : N.t.RUI48P, {}),
                 value: t.currency === A.pKx.USD ? (0, E.T4)(t.total, t.currency) : ''.concat((0, E.T4)(t.total, t.currency), '*')
             })
         ]
     });
 }
-function w(e) {
+function P(e) {
     let { invoice: t, newPlan: n, isPrepaidPaymentSource: r, referralTrialOfferId: a } = e,
         s = (0, y.j)(t.invoiceItems),
         o = s.find((e) => e.subscriptionPlanId === n.id);
@@ -202,7 +202,7 @@ function w(e) {
         m = s.filter((e) => e.subscriptionPlanId === S.Xh.PREMIUM_MONTH_GUILD || e.subscriptionPlanId === S.Xh.PREMIUM_YEAR_GUILD).reduce((e, t) => e + t.amount, 0);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(x, {
+            (0, i.jsx)(L, {
                 invoiceItem: o,
                 currency: t.currency,
                 overrideAmount: p,
@@ -211,16 +211,16 @@ function w(e) {
             }),
             0 === h || f
                 ? null
-                : (0, i.jsx)(b.R$, {
-                      label: (0, i.jsx)(L, {
+                : (0, i.jsx)(T.R$, {
+                      label: (0, i.jsx)(x, {
                           label: N.intl.formatToPlainString(N.t.ZSVgeX, { planName: (0, g.PV)(n.id) ? (0, g.aq)(n.id) : n.name }),
                           tooltipText: N.intl.string(N.t.JmwQJC)
                       }),
                       value: (0, E.T4)(h, t.currency)
                   }),
             0 !== m
-                ? (0, i.jsx)(b.R$, {
-                      label: (0, i.jsx)(L, {
+                ? (0, i.jsx)(T.R$, {
+                      label: (0, i.jsx)(x, {
                           label: N.intl.string(N.t['+as5ZW']),
                           tooltipText: N.intl.format(N.t.UDop9f, {}),
                           tooltipAriaLabel: N.intl.string(N.t.P68ePD)
@@ -228,9 +228,9 @@ function w(e) {
                       value: (0, E.T4)(m, t.currency)
                   })
                 : null,
-            (0, i.jsx)(T.Z, { invoice: t }),
-            (0, i.jsx)(b.KU, {}),
-            (0, i.jsx)(b.Ji, {
+            (0, i.jsx)(b.Z, { invoice: t }),
+            (0, i.jsx)(T.KU, {}),
+            (0, i.jsx)(T.Ji, {
                 label: N.intl.format(t.taxInclusive ? (r ? N.t.BqdxQk : N.t.XH4raG) : N.t.RUI48P, {}),
                 value: t.currency === A.pKx.USD ? (0, E.T4)(t.total, t.currency) : ''.concat((0, E.T4)(t.total, t.currency), '*')
             })
@@ -273,14 +273,14 @@ function G(e) {
         d = null != l && (l.intervalType !== u || l.intervalCount !== c);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(b.KU, { extended: !0 }),
+            (0, i.jsx)(T.KU, { extended: !0 }),
             null != n
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(b.q9, { children: N.intl.string(N.t.tuqjWV) }),
+                          (0, i.jsx)(T.q9, { children: N.intl.string(N.t.tuqjWV) }),
                           k(M((0, y.j)(n.invoiceItems))).map((e) =>
                               (0, i.jsx)(
-                                  x,
+                                  L,
                                   {
                                       invoiceItem: e,
                                       currency: n.currency,
@@ -289,15 +289,15 @@ function G(e) {
                                   e.id
                               )
                           ),
-                          (0, i.jsx)(b.KU, { extended: !0 })
+                          (0, i.jsx)(T.KU, { extended: !0 })
                       ]
                   })
                 : null,
-            (0, i.jsx)(b.q9, { children: N.intl.string(N.t.qxVrh4) }),
+            (0, i.jsx)(T.q9, { children: N.intl.string(N.t.qxVrh4) }),
             k(M((0, y.j)(r.invoiceItems))).map((e) => {
                 let n = null != o && !o.some((t) => t.subscriptionPlanId === e.subscriptionPlanId && t.quantity === e.quantity);
                 return (0, i.jsx)(
-                    x,
+                    L,
                     {
                         invoiceItem: e,
                         currency: r.currency,
@@ -307,9 +307,9 @@ function G(e) {
                     e.id
                 );
             }),
-            (0, i.jsx)(T.Z, { invoice: r }),
-            (0, i.jsx)(b.KU, {}),
-            (0, i.jsx)(b.R$, {
+            (0, i.jsx)(b.Z, { invoice: r }),
+            (0, i.jsx)(T.KU, {}),
+            (0, i.jsx)(T.R$, {
                 label: N.intl.string(N.t.AChTLS),
                 value: (0, E.og)((0, E.T4)(r.total, r.currency), u, c),
                 className: C.subscriptionCostRow
@@ -363,12 +363,12 @@ function Z(e) {
             ...u
         },
         [y] = (0, v.ED)(E),
-        [I, T] = r.useState(!1);
+        [I, b] = r.useState(!1);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             d
                 ? null
-                : (0, i.jsx)(b.HE, {
+                : (0, i.jsx)(T.HE, {
                       children: (0, i.jsx)(B, {
                           proratedInvoice: n,
                           renewalInvoice: a,
@@ -382,7 +382,7 @@ function Z(e) {
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsxs)(c.P3F, {
-                            onClick: () => T((e) => !e),
+                            onClick: () => b((e) => !e),
                             className: C.subscriptionDetailsToggle,
                             children: [
                                 I ? N.intl.string(N.t.aBcRbG) : N.intl.string(N.t.X6duqq),
@@ -427,17 +427,17 @@ function F(e) {
                                   className: C.purchaseDetailsHeaderText,
                                   children: t
                               }),
-                              (0, i.jsxs)(b.PO, {
+                              (0, i.jsxs)(T.PO, {
                                   className: r,
                                   children: [
-                                      (0, i.jsx)(b.q9, { children: N.intl.string(N.t.sail9P) }),
-                                      (0, i.jsx)(b.R$, {
+                                      (0, i.jsx)(T.q9, { children: N.intl.string(N.t.sail9P) }),
+                                      (0, i.jsx)(T.R$, {
                                           label: t,
                                           value: p
                                       }),
-                                      (0, i.jsx)(T.Z, { invoice: o }),
-                                      (0, i.jsx)(b.KU, {}),
-                                      (0, i.jsx)(b.R$, {
+                                      (0, i.jsx)(b.Z, { invoice: o }),
+                                      (0, i.jsx)(T.KU, {}),
+                                      (0, i.jsx)(T.R$, {
                                           label: N.intl.string(N.t.txajQE),
                                           value: h,
                                           className: C.subscriptionCostRow

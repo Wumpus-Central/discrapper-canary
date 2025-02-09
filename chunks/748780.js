@@ -45,14 +45,14 @@ function g(e, t) {
         v = e._value,
         y = m(t.duration, p, h),
         I = m(t.toValue, r, a),
-        b = i[f](e, {
+        T = i[f](e, {
             ...E,
             toValue: I,
             tension: s,
             friction: o,
             duration: y
         }),
-        T = b;
+        b = T;
     if (u || c) {
         let r = m(t.duration, p, h);
         (n = i[f](e, {
@@ -62,13 +62,13 @@ function g(e, t) {
             friction: o,
             duration: r
         })),
-            (T = i.sequence([b, n]));
+            (b = i.sequence([T, n]));
     }
     l
-        ? T.start(() => {
+        ? b.start(() => {
               (!_ || (_ && _())) && (d ? d(g.bind(null, e, t)) : g(e, t));
           })
-        : T.start(d);
+        : b.start(d);
 }
 function E(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];

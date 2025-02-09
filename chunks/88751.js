@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => w }), n(47120), n(724458);
+n.d(t, { ZP: () => P }), n(47120), n(724458);
 var i,
     r = n(392711),
     a = n.n(r),
@@ -55,13 +55,13 @@ function I(e, t) {
           }
         : E;
 }
-function b(e, t) {
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     null == g[t] && (g[t] = {});
     let i = I(e, t, n);
     return (g[t][e] = i), i;
 }
-function T(e, t) {
+function b(e, t) {
     var n;
     if (null == t) return !1;
     let i = l.Z.getChannel(t);
@@ -97,24 +97,24 @@ function O(e) {
         !a().isEmpty(g) &&
         t.reduce((e, t) => {
             let { userId: n, channelId: i } = t;
-            return T(n, i) || e;
+            return b(n, i) || e;
         }, !1)
     );
 }
 function D(e) {
     return A(e.guildId);
 }
-function x() {
+function L() {
     g = {};
 }
-function L(e) {
+function x(e) {
     let { guild: t } = e;
     for (let e in g) {
         let n = l.Z.getBasicChannel(e);
         (null == n || n.guild_id === t.id) && delete g[e];
     }
 }
-class P extends (i = s.ZP.Store) {
+class w extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(u.ZP, l.Z, c.Z, d.default, f.Z);
     }
@@ -134,18 +134,18 @@ class P extends (i = s.ZP.Store) {
         let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (null == e || null == t) return E;
         let r = null === (n = g[t]) || void 0 === n ? void 0 : n[e];
-        return null != r ? (i && null == r.moderator ? b(e, t, !0) : r) : b(e, t, i);
+        return null != r ? (i && null == r.moderator ? T(e, t, !0) : r) : T(e, t, i);
     }
 }
-m(P, 'displayName', 'StageChannelRoleStore');
-let w = new P(o.Z, {
+m(w, 'displayName', 'StageChannelRoleStore');
+let P = new w(o.Z, {
     CHANNEL_UPDATES: N,
-    CONNECTION_OPEN: x,
+    CONNECTION_OPEN: L,
     GUILD_MEMBER_REMOVE: R,
     GUILD_MEMBER_UPDATE: R,
     GUILD_ROLE_UPDATE: C,
     PASSIVE_UPDATE_V2: D,
     VOICE_STATE_UPDATES: O,
-    GUILD_CREATE: L,
-    GUILD_DELETE: L
+    GUILD_CREATE: x,
+    GUILD_DELETE: x
 });

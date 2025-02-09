@@ -19,7 +19,7 @@ var i = n(200651),
     m = n(550271),
     g = n(308083),
     E = n(388032),
-    v = n(319653);
+    v = n(610550);
 function y(e) {
     let { wildcardDescriptors: t, primaryColor: n } = e,
         a = t.filter((e) => e !== g.U6).join(', '),
@@ -84,7 +84,7 @@ function I(e) {
                 })
             });
 }
-function b(e) {
+function T(e) {
     let { traits: t, traitsToHighlight: n, onInteraction: a } = e,
         l = r.useMemo(() => (null == n ? new Set() : new Set(n)), [n]),
         u = r.useCallback(
@@ -118,7 +118,7 @@ function b(e) {
         itemGapPx: 4
     });
 }
-function T(e) {
+function b(e) {
     let { hasPendingJoinRequest: t, atMaxMemberCapacity: n, isGuildMember: r } = e;
     return t
         ? (0, i.jsxs)('div', {
@@ -163,9 +163,9 @@ function T(e) {
 }
 function S(e) {
     var t;
-    let { clan: n, bannerComponent: a, expanded: d, isMember: h = !1, traitsToHighlight: S, prioritizedGameIds: A, className: N, position: C, showBrandingFooter: R = !1, bannerUrl: O, onlyAnimateIconOnHover: D = !1, hasPendingJoinRequest: x = !1, atMaxMemberCapacity: L = !1, footer: P = null } = e,
+    let { clan: n, bannerComponent: a, expanded: d, isMember: h = !1, traitsToHighlight: S, prioritizedGameIds: A, className: N, position: C, showBrandingFooter: R = !1, bannerUrl: O, onlyAnimateIconOnHover: D = !1, hasPendingJoinRequest: L = !1, atMaxMemberCapacity: x = !1, footer: w = null } = e,
         {
-            tag: w,
+            tag: P,
             badge: M,
             branding: { primaryColor: k, secondaryColor: U },
             bannerHash: G,
@@ -219,9 +219,9 @@ function S(e) {
                 style: Q,
                 children: [
                     X,
-                    (0, i.jsx)(T, {
-                        hasPendingJoinRequest: x,
-                        atMaxMemberCapacity: L,
+                    (0, i.jsx)(b, {
+                        hasPendingJoinRequest: L,
+                        atMaxMemberCapacity: x,
                         isGuildMember: h
                     })
                 ]
@@ -266,7 +266,7 @@ function S(e) {
                                                 (0, i.jsx)(o.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-primary',
-                                                    children: w
+                                                    children: P
                                                 })
                                             ]
                                         })
@@ -320,7 +320,7 @@ function S(e) {
                         description: n.description,
                         expanded: d
                     }),
-                    (0, i.jsx)(b, {
+                    (0, i.jsx)(T, {
                         traits: J,
                         traitsToHighlight: S,
                         onInteraction: $('traits')
@@ -357,7 +357,7 @@ function S(e) {
                     className: v.cardBrandingFooter,
                     style: { background: 'linear-gradient(90deg, '.concat(k, ', ').concat(U, ')') }
                 }),
-            P
+            w
         ]
     });
 }

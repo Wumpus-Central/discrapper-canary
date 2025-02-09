@@ -10,7 +10,7 @@ var i,
     d = n(823379),
     f = n(754103),
     _ = n(388032),
-    p = n(498918);
+    p = n(589366);
 function h(e, t, n) {
     return (
         t in e
@@ -33,8 +33,8 @@ let m = 'US',
         label: e.name
     })).filter((e) => 'KP' !== e.value && 'SY' !== e.value),
     I = (0, c.hQ)(),
-    b = (0, c.hQ)(),
     T = (0, c.hQ)(),
+    b = (0, c.hQ)(),
     S = (0, c.hQ)(),
     A = (0, c.hQ)(),
     N = (0, c.hQ)(),
@@ -49,7 +49,7 @@ let D = {
         [m]: l.G,
         [g]: s.X
     },
-    x = (e) => ({
+    L = (e) => ({
         name: 'name',
         id: I,
         title: () => _.intl.string(_.t.vyuULS),
@@ -57,9 +57,9 @@ let D = {
         getClassNameForLayout: (e) => (['modalUS', 'modalInternational', 'modalUSWithName', 'modalInternationalWithName', 'settingsUSMobile', 'settingsInternationalMobile', 'settingsInternationalWithoutNameMobile'].includes(e) ? p.width100 : p.width60),
         renderInput: (e) => (0, r.jsx)(u.oil, { ...e })
     }),
-    L = (e) => ({
+    x = (e) => ({
         name: 'country',
-        id: b,
+        id: T,
         title: () => _.intl.string(_.t.eDdrAA),
         autoComplete: 'country',
         getClassNameForLayout: (e) => {
@@ -87,16 +87,16 @@ let D = {
             });
         }
     }),
-    P = (e) => ({
+    w = (e) => ({
         name: 'line1',
-        id: T,
+        id: b,
         title: () => _.intl.string(_.t.x0beVV),
         autoComplete: 'address-line1',
         placeholder: () => _.intl.string(_.t['ynII//']),
         getClassNameForLayout: (e) => (['modalUS', 'modalInternational', 'modalUSWithName', 'modalInternationalWithName', 'settingsUSMobile', 'settingsInternationalMobile', 'settingsInternationalWithoutNameMobile'].includes(e) ? p.width100 : p.width60),
         renderInput: (e) => (0, r.jsx)(u.oil, { ...e })
     }),
-    w = (e) => ({
+    P = (e) => ({
         name: 'line2',
         id: S,
         title: () => _.intl.string(_.t.i2Z0gI),
@@ -227,16 +227,16 @@ let D = {
         };
     },
     G = {
-        modalUS: [[L], [P], [w], [M], [U, k]],
-        modalInternational: [[L], [P], [w], [M], [U], [k]],
-        modalUSWithName: [[L], [x], [P], [w], [M], [U, k]],
-        modalInternationalWithName: [[L], [x], [P], [w], [M], [U], [k]],
-        settingsUS: [[x], [P, w], [M, U, k], [L]],
-        settingsUSMobile: [[x], [P], [w], [M], [U], [k], [L]],
-        settingsInternational: [[x], [P, w], [M], [U, k], [L]],
-        settingsInternationalMobile: [[x], [P], [w], [M], [U], [k], [L]],
-        settingsInternationalWithoutName: [[P, w], [M], [U, k], [L]],
-        settingsInternationalWithoutNameMobile: [[P], [w], [M], [U], [k], [L]]
+        modalUS: [[x], [w], [P], [M], [U, k]],
+        modalInternational: [[x], [w], [P], [M], [U], [k]],
+        modalUSWithName: [[x], [L], [w], [P], [M], [U, k]],
+        modalInternationalWithName: [[x], [L], [w], [P], [M], [U], [k]],
+        settingsUS: [[L], [w, P], [M, U, k], [x]],
+        settingsUSMobile: [[L], [w], [P], [M], [U], [k], [x]],
+        settingsInternational: [[L], [w, P], [M], [U, k], [x]],
+        settingsInternationalMobile: [[L], [w], [P], [M], [U], [k], [x]],
+        settingsInternationalWithoutName: [[w, P], [M], [U, k], [x]],
+        settingsInternationalWithoutNameMobile: [[w], [P], [M], [U], [k], [x]]
     };
 class B extends (i = a.PureComponent) {
     componentDidMount() {

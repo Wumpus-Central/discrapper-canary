@@ -18,29 +18,29 @@ var i = n(200651),
     v = n(652853),
     y = n(228168),
     I = n(981631),
-    b = n(474936),
-    T = n(882636);
+    T = n(474936),
+    b = n(720947);
 let S = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
 function A(e) {
     let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: A, animateOnHover: N, onOpenProfile: C, className: R } = e,
         { theme: O } = (0, v.z)(),
         { analyticsLocations: D } = (0, d.ZP)(c.Z.AVATAR),
-        { trackUserProfileAction: x } = (0, m.KZ)(),
-        L = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, b.p9.TIER_2),
-        P = r.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
-        { live: w } = (0, g.Z)(t.id),
-        [M] = w,
+        { trackUserProfileAction: L } = (0, m.KZ)(),
+        x = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, T.p9.TIER_2),
+        w = r.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
+        { live: P } = (0, g.Z)(t.id),
+        [M] = P,
         { status: k, isMobileOnline: U } = (0, o.cj)([_.Z], () => ({
             status: (0, u.Z)(M) ? I.Skl.STREAMING : _.Z.getStatus(t.id),
             isMobileOnline: _.Z.isMobileOnline(t.id)
         })),
         G = A === y.y0.FULL_SIZE ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
         B = s()(
-            T.avatar,
+            b.avatar,
             {
-                [T.biteSize]: A === y.y0.BITE_SIZE,
-                [T.fullSize]: A === y.y0.FULL_SIZE,
-                [T.panel]: A === y.y0.PANEL
+                [b.biteSize]: A === y.y0.BITE_SIZE,
+                [b.fullSize]: A === y.y0.FULL_SIZE,
+                [b.panel]: A === y.y0.PANEL
             },
             R
         ),
@@ -59,9 +59,9 @@ function A(e) {
             avatarDecoration: Z,
             size: G,
             'aria-label': t.username,
-            imageClassName: null != C ? T.overlay : void 0,
-            status: P ? I.Skl.UNKNOWN : k,
-            statusBackdropColor: L && !P ? (0, l.QFD)(O) : void 0,
+            imageClassName: null != C ? b.overlay : void 0,
+            status: w ? I.Skl.UNKNOWN : k,
+            statusBackdropColor: x && !w ? (0, l.QFD)(O) : void 0,
             isMobile: U,
             statusTooltip: !0,
             statusTooltipDelay: y.vB
@@ -74,10 +74,10 @@ function A(e) {
           })
         : (0, i.jsx)(l.P3F, {
               ...V,
-              className: s()(B, T.clickable),
-              focusProps: { ringClassName: T.focusRing },
+              className: s()(B, b.clickable),
+              focusProps: { ringClassName: b.focusRing },
               onClick: () => {
-                  x({
+                  L({
                       action: 'PRESS_VIEW_PROFILE',
                       analyticsLocations: D
                   }),

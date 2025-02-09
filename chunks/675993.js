@@ -21,8 +21,8 @@ var i = n(200651),
     I = n(29380),
     _ = n(783685),
     g = n(388032),
-    P = n(580062),
-    y = n(665162);
+    P = n(456529),
+    y = n(642367);
 function j(e) {
     let { context: t, application: n, videoUrl: a, imageCoverUrl: r, sectionName: d, hasCommands: m } = e,
         p = l.useMemo(() => {

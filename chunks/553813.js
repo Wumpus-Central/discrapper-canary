@@ -92,7 +92,7 @@ function I(e, t, n, i) {
         return null;
     }
 }
-function b(e, t) {
+function T(e, t) {
     if (U(e, t)) return null;
     var n = g(e),
         i = g(t),
@@ -185,12 +185,12 @@ function b(e, t) {
         return this.format(), (this.raw = this.version), this;
     }),
     (t.inc = I),
-    (t.diff = b),
+    (t.diff = T),
     (t.compareIdentifiers = S);
-var T = /^[0-9]+$/;
+var b = /^[0-9]+$/;
 function S(e, t) {
-    var n = T.test(e),
-        i = T.test(t);
+    var n = b.test(e),
+        i = b.test(t);
     return n && i && ((e = +e), (t = +t)), e === t ? 0 : n && !i ? -1 : i && !n ? 1 : e < t ? -1 : 1;
 }
 function A(e, t) {
@@ -211,20 +211,20 @@ function O(e, t, n) {
 function D(e, t) {
     return O(e, t, !0);
 }
-function x(e, t, n) {
+function L(e, t, n) {
     var i = new y(e, n),
         r = new y(t, n);
     return i.compare(r) || i.compareBuild(r);
 }
-function L(e, t, n) {
+function x(e, t, n) {
     return O(t, e, n);
 }
-function P(e, n) {
+function w(e, n) {
     return e.sort(function (e, i) {
         return t.compareBuild(e, i, n);
     });
 }
-function w(e, n) {
+function P(e, n) {
     return e.sort(function (e, i) {
         return t.compareBuild(i, e, n);
     });
@@ -286,7 +286,7 @@ function V(e, t) {
     if (!(this instanceof V)) return new V(e, t);
     i('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === j ? (this.value = '') : (this.value = this.operator + this.semver.version), i('comp', this);
 }
-(t.rcompareIdentifiers = A), (t.major = N), (t.minor = C), (t.patch = R), (t.compare = O), (t.compareLoose = D), (t.compareBuild = x), (t.rcompare = L), (t.sort = P), (t.rsort = w), (t.gt = M), (t.lt = k), (t.eq = U), (t.neq = G), (t.gte = B), (t.lte = Z), (t.cmp = F), (t.Comparator = V);
+(t.rcompareIdentifiers = A), (t.major = N), (t.minor = C), (t.patch = R), (t.compare = O), (t.compareLoose = D), (t.compareBuild = L), (t.rcompare = x), (t.sort = w), (t.rsort = P), (t.gt = M), (t.lt = k), (t.eq = U), (t.neq = G), (t.gte = B), (t.lte = Z), (t.cmp = F), (t.Comparator = V);
 var j = {};
 function H(e, t) {
     if (

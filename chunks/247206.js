@@ -1,9 +1,9 @@
 n.d(t, {
     Cm: () => W,
-    HH: () => x,
+    HH: () => L,
     Hc: () => j,
     IV: () => H,
-    KP: () => w,
+    KP: () => P,
     OP: () => V,
     Pq: () => F,
     Sv: () => k,
@@ -13,12 +13,12 @@ n.d(t, {
     aP: () => Z,
     bR: () => q,
     l4: () => O,
-    lJ: () => P,
+    lJ: () => w,
     oh: () => U,
     tG: () => A,
     vx: () => D,
     xx: () => Y,
-    zj: () => L
+    zj: () => x
 }),
     n(789020);
 var i = n(286379),
@@ -49,12 +49,12 @@ let y = {
         [v.TI.NON_FRIENDS.valueOf()]: r.Q4.BLOCK,
         [v.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.Q4.BLOCK
     },
-    b = {
+    T = {
         [v.TI.DISABLED.valueOf()]: r.Q4.BLUR,
         [v.TI.NON_FRIENDS.valueOf()]: r.Q4.BLUR,
         [v.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.Q4.BLOCK
     },
-    T = {
+    b = {
         [v.TI.DISABLED.valueOf()]: r.Q4.BLUR,
         [v.TI.NON_FRIENDS.valueOf()]: r.Q4.BLOCK,
         [v.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.Q4.BLOCK
@@ -91,7 +91,7 @@ let y = {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         if (!t) return r.Q4.BLUR;
         let i = u.UP.getSetting();
-        return n ? b[i] : T[i];
+        return n ? T[i] : b[i];
     },
     R = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
@@ -115,7 +115,7 @@ let y = {
 function D(e) {
     return e === r.Q4.BLUR || e === r.Q4.BLOCK;
 }
-function x(e) {
+function L(e) {
     var t;
     let n = f.default.getCurrentUser();
     if (null == n || (null === (t = e.author) || void 0 === t ? void 0 : t.id) === n.id) return !1;
@@ -123,17 +123,17 @@ function x(e) {
         s = c.Z.getChannel(e.channel_id);
     return null != s && (s.isDM() || s.isGroupDM() ? (null != e.author && d.Z.getFriendIDs().includes(e.author.id) ? D(r) : D(a)) : D(i));
 }
-let L = (e) => {
+let x = (e) => {
     let t = O();
     u.Sh.updateSetting({
         ...t,
         ...e
     });
 };
-var P = (function (e) {
+var w = (function (e) {
     return (e[(e.Attachment = 0)] = 'Attachment'), (e[(e.Embed = 1)] = 'Embed'), (e[(e.GenericMedia = 2)] = 'GenericMedia'), e;
 })({});
-function w(e, t) {
+function P(e, t) {
     var n, i, r, o;
     if (!t) return !1;
     if (a.ZP.get('obscure_blur_effect_enabled')) return !0;
@@ -149,10 +149,10 @@ function w(e, t) {
     }
 }
 function M(e) {
-    return x(e)
+    return L(e)
         ? {
               obscuredAttachments: e.attachments.filter((e) =>
-                  w(
+                  P(
                       {
                           type: 0,
                           media: e
@@ -161,7 +161,7 @@ function M(e) {
                   )
               ),
               obscuredEmbeds: e.embeds.filter((e) =>
-                  w(
+                  P(
                       {
                           type: 1,
                           media: e

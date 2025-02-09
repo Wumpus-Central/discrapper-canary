@@ -5,7 +5,7 @@ var i = n(703656),
     s = n(998502),
     o = n(981631);
 function l(e, t) {
-    return !(e === o.MAM.BROWSER && r.Z.hasKeybind(o.MoX.MOUSE_BUTTON, t));
+    return !(e === o.MAM.BROWSER && r.ZP.hasKeybind(o.MoX.MOUSE_BUTTON, t));
 }
 class u {
     initialize() {

@@ -1,100 +1,100 @@
-n.d(t, { R: () => A }), n(47120);
-var l = n(200651),
-    i = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    u = n(481060),
+n.d(t, { R: () => E }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(481060),
     s = n(590965),
-    d = n(695346),
-    o = n(51331),
-    c = n(259580),
-    E = n(626135),
+    c = n(695346),
+    d = n(51331),
+    u = n(259580),
+    h = n(626135),
     _ = n(44609),
     m = n(731971),
-    S = n(981631),
-    g = n(388032),
-    N = n(671149);
-let A = () => {
+    g = n(981631),
+    p = n(388032),
+    f = n(80384);
+let E = () => {
     var e;
-    let [t, n] = i.useState(!1),
-        a = d.G6.useSetting(),
-        { nickname: A, dmsAllowed: I, showActivity: v, mutedServer: R, setNickname: T, setDmsAllowed: O, setShowActivity: h, setMutedServer: f } = (0, m.XW)(),
-        C = null === (e = s.Z.getProps().invite) || void 0 === e ? void 0 : e.is_nickname_changeable,
-        D = (0, _.m4)({ location: 'InviteSettingsControls' });
-    return (0, l.jsxs)('div', {
-        className: r()(N.editProfileContainer, { [N.opened]: t }),
+    let [t, n] = r.useState(!1),
+        l = c.G6.useSetting(),
+        { nickname: E, dmsAllowed: x, showActivity: I, mutedServer: C, setNickname: v, setDmsAllowed: N, setShowActivity: S, setMutedServer: T } = (0, m.XW)(),
+        A = null === (e = s.Z.getProps().invite) || void 0 === e ? void 0 : e.is_nickname_changeable,
+        b = (0, _.m4)({ location: 'InviteSettingsControls' });
+    return (0, i.jsxs)('div', {
+        className: a()(f.editProfileContainer, { [f.opened]: t }),
         children: [
-            (0, l.jsxs)(u.P3F, {
-                className: N.header,
+            (0, i.jsxs)(o.P3F, {
+                className: f.header,
                 onClick: () => {
-                    t || E.default.track(S.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED), n(!t);
+                    t || h.default.track(g.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED), n(!t);
                 },
                 children: [
-                    (0, l.jsx)('div', {
-                        className: N.headerIconWrapper,
-                        children: (0, l.jsx)(u.ewm, { size: 'md' })
+                    (0, i.jsx)('div', {
+                        className: f.headerIconWrapper,
+                        children: (0, i.jsx)(o.ewm, { size: 'md' })
                     }),
-                    (0, l.jsxs)('div', {
-                        className: N.title,
+                    (0, i.jsxs)('div', {
+                        className: f.title,
                         children: [
-                            (0, l.jsx)(u.Text, {
+                            (0, i.jsx)(o.Text, {
                                 variant: 'eyebrow',
                                 color: 'header-secondary',
-                                children: g.intl.string(g.t.A5wHQ0)
+                                children: p.intl.string(p.t.A5wHQ0)
                             }),
-                            (0, l.jsx)(u.Text, {
+                            (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'interactive-normal',
-                                children: g.intl.string(g.t.UKCSER)
+                                children: p.intl.string(p.t.UKCSER)
                             })
                         ]
                     }),
-                    (0, l.jsx)('div', {
-                        className: r()(N.caret, { [N.opened]: t }),
-                        children: (0, l.jsx)(c.Z, {
+                    (0, i.jsx)('div', {
+                        className: a()(f.caret, { [f.opened]: t }),
+                        children: (0, i.jsx)(u.Z, {
                             width: 18,
                             height: 18,
-                            direction: c.Z.Directions.UP
+                            direction: u.Z.Directions.UP
                         })
                     })
                 ]
             }),
-            (0, l.jsxs)('div', {
-                className: r()(N.customizationSection, { [N.opened]: t }, C ? null : N.condensed),
+            (0, i.jsxs)('div', {
+                className: a()(f.customizationSection, { [f.opened]: t }, A ? null : f.condensed),
                 children: [
-                    C &&
-                        (0, l.jsxs)('div', {
-                            className: N.serverNickname,
+                    A &&
+                        (0, i.jsxs)('div', {
+                            className: f.serverNickname,
                             children: [
-                                (0, l.jsx)(u.Text, {
+                                (0, i.jsx)(o.Text, {
                                     variant: 'eyebrow',
                                     color: 'header-secondary',
-                                    children: g.intl.string(g.t.me1lRk)
+                                    children: p.intl.string(p.t.me1lRk)
                                 }),
-                                (0, l.jsx)(u.oil, {
-                                    placeholder: g.intl.string(g.t['09Q8ys']),
-                                    maxLength: S.l$U,
-                                    value: A,
-                                    onChange: T
+                                (0, i.jsx)(o.oil, {
+                                    placeholder: p.intl.string(p.t['09Q8ys']),
+                                    maxLength: g.l$U,
+                                    value: E,
+                                    onChange: v
                                 })
                             ]
                         }),
-                    (0, l.jsx)(o.Z, {
-                        title: g.intl.string(g.t['/2ed39']),
-                        value: I,
-                        onChange: O
+                    (0, i.jsx)(d.Z, {
+                        title: p.intl.string(p.t['/2ed39']),
+                        value: x,
+                        onChange: N
                     }),
-                    a &&
-                        (0, l.jsx)(o.Z, {
-                            title: g.intl.string(g.t.bN4m1N),
-                            value: v,
-                            onChange: h
+                    l &&
+                        (0, i.jsx)(d.Z, {
+                            title: p.intl.string(p.t.bN4m1N),
+                            value: I,
+                            onChange: S
                         }),
-                    D &&
-                        (0, l.jsx)(o.Z, {
-                            title: g.intl.string(g.t['0nZCqK']),
-                            value: R,
-                            onChange: f
+                    b &&
+                        (0, i.jsx)(d.Z, {
+                            title: p.intl.string(p.t['0nZCqK']),
+                            value: C,
+                            onChange: T
                         })
                 ]
             })

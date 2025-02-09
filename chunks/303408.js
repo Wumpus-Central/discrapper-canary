@@ -656,7 +656,7 @@ function l(e) {
                 relevance: 0
             }
         },
-        b = {
+        T = {
             className: 'variable',
             variants: [
                 {
@@ -671,7 +671,7 @@ function l(e) {
                 contains: E
             }
         },
-        T = {
+        b = {
             variants: [
                 {
                     begin: '[\\.#:&\\[>]',
@@ -723,10 +723,10 @@ function l(e) {
         S = {
             begin: c + ':(:)?' + `(${u.join('|')})`,
             returnBegin: !0,
-            contains: [T]
+            contains: [b]
         };
     return (
-        f.push(e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, I, b, S, y, T, v, l.FUNCTION_DISPATCH),
+        f.push(e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, I, T, S, y, b, v, l.FUNCTION_DISPATCH),
         {
             name: 'Less',
             case_insensitive: !0,

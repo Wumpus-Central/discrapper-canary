@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         WebAudioAPISound: () => S,
-        WebAudioSound: () => T,
+        WebAudioSound: () => b,
         playGiftSound: () => I
     }),
     n(47120),
@@ -49,7 +49,7 @@ function I(e, t) {
     let n = new Audio((0, o.Z)(e));
     (n.volume = (0, l.Z)(t)), n.play();
 }
-async function b() {
+async function T() {
     if (null != window.navigator.mediaDevices)
         try {
             var e;
@@ -78,8 +78,8 @@ async function b() {
             m = _;
         }
 }
-c.isPlatformEmbedded && (u.Z.addChangeListener(b), b());
-let T = class {
+c.isPlatformEmbedded && (u.Z.addChangeListener(T), T());
+let b = class {
         get volume() {
             return this._volume;
         }

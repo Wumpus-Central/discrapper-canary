@@ -13,7 +13,7 @@ var i = n(200651),
     f = n(5192),
     p = n(981631),
     C = n(388032),
-    v = n(674055);
+    v = n(935677);
 function E(e) {
     var t;
     let { guildId: n, role: r, theme: E, content: m = C.intl.string(C.t['6OSasb']), className: _ } = e,

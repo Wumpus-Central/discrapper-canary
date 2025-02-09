@@ -1,5 +1,5 @@
-n.d(t, { $: () => i });
-let i = (0, n(818083).B)({
+t.d(n, { $: () => i });
+let i = (0, t(818083).B)({
     kind: 'user',
     id: '2024-07_referral_program_sender_incentive',
     label: 'Referral Program Sender Incentive',

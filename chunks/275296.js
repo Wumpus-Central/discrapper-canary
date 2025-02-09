@@ -6,7 +6,7 @@ var r = n(481060),
     s = n(402148),
     a = n(981631),
     o = n(388032),
-    c = n(54572);
+    c = n(529348);
 let d = (e) => {
     let { role: t } = e;
     return (0, l.yE)(t.flags, a.aO5.IN_PROMPT)

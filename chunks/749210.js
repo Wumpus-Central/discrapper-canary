@@ -1,6 +1,6 @@
 n.d(t, {
     V: () => D,
-    Z: () => L
+    Z: () => x
 }),
     n(411104),
     n(177593);
@@ -23,8 +23,8 @@ var i = n(990547),
     v = n(594174),
     y = n(626135),
     I = n(700785),
-    b = n(74538),
-    T = n(573261),
+    T = n(74538),
+    b = n(573261),
     S = n(668781),
     A = n(981631),
     N = n(388032);
@@ -54,10 +54,10 @@ function D(e) {
         })
     );
 }
-function x(e, t) {
+function L(e, t) {
     return null != t ? t : (0, d.V)(e);
 }
-let L = {
+let x = {
     joinGuild: async function (e) {
         var t, i, r, o, l;
         let u = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -125,14 +125,14 @@ let L = {
         } catch (t) {
             if ((null === (r = t.body) || void 0 === r ? void 0 : r.code) === A.evJ.TOO_MANY_USER_GUILDS) {
                 let e = v.default.getCurrentUser();
-                b.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? C(A.tHP) : C(A.DZw);
+                T.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? C(A.tHP) : C(A.DZw);
             }
             throw ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === A.evJ.GUILD_AT_CAPACITY && O(), y && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === A.evJ.UNKNOWN_GUILD && R(e), t);
         }
     },
     waitForGuild: D,
     async transitionToGuildSync(e, t, n) {
-        let i = x((await D(e)).id, n),
+        let i = L((await D(e)).id, n),
             r = t;
         (null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) &&
             null == t.welcomeModalChannelId &&
@@ -192,7 +192,7 @@ let L = {
         }),
     setCommunicationDisabledUntil(e) {
         let { guildId: t, userId: n, communicationDisabledUntilTimestamp: r, duration: a, reason: s, location: o } = e;
-        return T.Z.patch({
+        return b.Z.patch({
             url: A.ANM.GUILD_MEMBER(t, n),
             reason: s,
             body: { communication_disabled_until: r },

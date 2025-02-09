@@ -124,10 +124,10 @@ function y(e, t) {
 function I() {
     return B;
 }
-function b(e, t) {
+function T(e, t) {
     t && (v('Patches'), (e.u = []), (e.s = []), (e.v = t));
 }
-function T(e) {
+function b(e) {
     S(e), e.p.forEach(N), (e.p = null);
 }
 function S(e) {
@@ -150,7 +150,7 @@ function C(e, t) {
     t._ = t.p.length;
     var n = t.p[0],
         r = void 0 !== e && e !== n;
-    return t.h.O || v('ES5').S(t, e, r), r ? (n[W].P && (T(t), i(4)), a(e) && ((e = R(t, e)), t.l || D(t, e)), t.u && v('Patches').M(n[W].t, e, t.u, t.s)) : (e = R(t, n, [])), T(t), t.u && t.v(t.u, t.s), e !== H ? e : void 0;
+    return t.h.O || v('ES5').S(t, e, r), r ? (n[W].P && (b(t), i(4)), a(e) && ((e = R(t, e)), t.l || D(t, e)), t.u && v('Patches').M(n[W].t, e, t.u, t.s)) : (e = R(t, n, [])), b(t), t.u && t.v(t.u, t.s), e !== H ? e : void 0;
 }
 function R(e, t, n) {
     if (E(t)) return t;
@@ -196,11 +196,11 @@ function O(e, t, n, i, s, o, u) {
 function D(e, t, n) {
     void 0 === n && (n = !1), !e.l && e.h.D && e.m && m(t, n);
 }
-function x(e, t) {
+function L(e, t) {
     var n = e[W];
     return (n ? p(n) : e)[t];
 }
-function L(e, t) {
+function x(e, t) {
     if (t in e)
         for (var n = Object.getPrototypeOf(e); n; ) {
             var i = Object.getOwnPropertyDescriptor(n, t);
@@ -208,10 +208,10 @@ function L(e, t) {
             n = Object.getPrototypeOf(n);
         }
 }
-function P(e) {
-    e.P || ((e.P = !0), e.l && P(e.l));
-}
 function w(e) {
+    e.P || ((e.P = !0), e.l && w(e.l));
+}
+function P(e) {
     e.o || (e.o = h(e.t));
 }
 function M(e, t, n) {
@@ -320,11 +320,11 @@ var G,
             if (!l(n, t))
                 return (function (e, t, n) {
                     var i,
-                        r = L(t, n);
+                        r = x(t, n);
                     return r ? ('value' in r ? r.value : null === (i = r.get) || void 0 === i ? void 0 : i.call(e.k)) : void 0;
                 })(e, n, t);
             var i = n[t];
-            return e.I || !a(i) ? i : i === x(e.t, t) ? (w(e), (e.o[t] = M(e.A.h, i, e))) : i;
+            return e.I || !a(i) ? i : i === L(e.t, t) ? (P(e), (e.o[t] = M(e.A.h, i, e))) : i;
         },
         has: function (e, t) {
             return t in p(e);
@@ -333,19 +333,19 @@ var G,
             return Reflect.ownKeys(p(e));
         },
         set: function (e, t, n) {
-            var i = L(p(e), t);
+            var i = x(p(e), t);
             if (null == i ? void 0 : i.set) return i.set.call(e.k, n), !0;
             if (!e.P) {
-                var r = x(p(e), t),
+                var r = L(p(e), t),
                     a = null == r ? void 0 : r[W];
                 if (a && a.t === n) return (e.o[t] = n), (e.R[t] = !1), !0;
                 if (d(n, r) && (void 0 !== n || l(e.t, t))) return !0;
-                w(e), P(e);
+                P(e), w(e);
             }
             return (e.o[t] === n && (void 0 !== n || t in e.o)) || (Number.isNaN(n) && Number.isNaN(e.o[t])) || ((e.o[t] = n), (e.R[t] = !0)), !0;
         },
         deleteProperty: function (e, t) {
-            return void 0 !== x(e.t, t) || t in e.t ? ((e.R[t] = !1), w(e), P(e)) : delete e.R[t], e.o && delete e.o[t], !0;
+            return void 0 !== L(e.t, t) || t in e.t ? ((e.R[t] = !1), P(e), w(e)) : delete e.R[t], e.o && delete e.o[t], !0;
         },
         getOwnPropertyDescriptor: function (e, t) {
             var n = p(e),
@@ -409,18 +409,18 @@ var ee = new ((function () {
                         try {
                             (s = n(c)), (d = !1);
                         } finally {
-                            d ? T(u) : S(u);
+                            d ? b(u) : S(u);
                         }
                         return 'undefined' != typeof Promise && s instanceof Promise
                             ? s.then(
                                   function (e) {
-                                      return b(u, r), C(e, u);
+                                      return T(u, r), C(e, u);
                                   },
                                   function (e) {
-                                      throw (T(u), e);
+                                      throw (b(u), e);
                                   }
                               )
-                            : (b(u, r), C(s, u));
+                            : (T(u, r), C(s, u));
                     }
                     if (!e || 'object' != typeof e) {
                         if ((void 0 === (s = n(e)) && (s = e), s === H && (s = void 0), t.D && m(s, !0), r)) {
@@ -464,7 +464,7 @@ var ee = new ((function () {
             }),
             (t.finishDraft = function (e, t) {
                 var n = (e && e[W]).A;
-                return b(n, t), C(void 0, n);
+                return T(n, t), C(void 0, n);
             }),
             (t.setAutoFreeze = function (e) {
                 this.D = e;

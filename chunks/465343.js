@@ -23,7 +23,7 @@ function g(e, t, n, i) {
         case '@':
             return v(e, t, n, r, a);
         case ':':
-            return b(e, t);
+            return T(e, t);
         case '#':
             return I(e, t);
     }
@@ -115,7 +115,7 @@ function I(e, t) {
         }
     return null;
 }
-function b(e, t) {
+function T(e, t) {
     let n = s.ZP.EMOJI_NAME_RE.exec(e);
     if (null == n) return null;
     let i = n[1],

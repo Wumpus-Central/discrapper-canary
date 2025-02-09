@@ -1,5 +1,5 @@
 n.d(t, {
-    F6: () => w,
+    F6: () => P,
     _Y: () => K,
     cG: () => M,
     ly: () => k,
@@ -29,8 +29,8 @@ var i = n(192379),
     v = n(9156),
     y = n(626135),
     I = n(630388),
-    b = n(823379),
-    T = n(960048),
+    T = n(823379),
+    b = n(960048),
     S = n(709054),
     A = n(223683),
     N = n(630114),
@@ -38,10 +38,10 @@ var i = n(192379),
     R = n(468788),
     O = n(789662),
     D = n(981631),
-    x = n(490897),
-    L = n(526761),
-    P = n(388032);
-function w(e, t) {
+    L = n(490897),
+    x = n(526761),
+    w = n(388032);
+function P(e, t) {
     let [n, r] = i.useState(O.nf),
         [a, o] = i.useState({});
     (0, _.D)();
@@ -79,7 +79,7 @@ function k() {
     for (let r of e) {
         var n, i;
         let e = null !== (i = (null !== (n = v.ZP.getAllSettings().userGuildSettings[r.id]) && void 0 !== n ? n : {}).flags) && void 0 !== i ? i : 0;
-        (e = (0, I.mB)(e, L.vc.UNREADS_ALL_MESSAGES, !0)), (e = (0, I.mB)(e, L.vc.UNREADS_ONLY_MENTIONS, !1)), (t[r.id] = { flags: e });
+        (e = (0, I.mB)(e, x.vc.UNREADS_ALL_MESSAGES, !0)), (e = (0, I.mB)(e, x.vc.UNREADS_ONLY_MENTIONS, !1)), (t[r.id] = { flags: e });
     }
     V(t),
         y.default.track(D.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
@@ -191,10 +191,10 @@ async function Z(e, t) {
             });
         } else n();
     } catch (e) {
-        T.Z.captureException(e),
+        b.Z.captureException(e),
             u.Z.show({
-                title: P.intl.string(P.t.j2d6Ki),
-                body: P.intl.string(P.t.mCjLAQ),
+                title: w.intl.string(w.t.j2d6Ki),
+                body: w.intl.string(w.t.mCjLAQ),
                 onConfirm: t
             });
     }
@@ -271,7 +271,7 @@ function Y() {
     });
 }
 async function W() {
-    o.K.set('turnedOffNewNotifications', !0), y.default.track(D.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(g.Z.getGuilds()).filter((e) => v.ZP.resolveGuildUnreadSetting(e) === x.i.ONLY_MENTIONS).length });
+    o.K.set('turnedOffNewNotifications', !0), y.default.track(D.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(g.Z.getGuilds()).filter((e) => v.ZP.resolveGuildUnreadSetting(e) === L.i.ONLY_MENTIONS).length });
     let e = await (0, A.Tn)(),
         t = a().sortBy(e, (e) => new Date(e.recorded_at).getTime());
     if (t.length > 0) {
@@ -312,5 +312,5 @@ function K(e) {
                 num_six_month_voice_joins: Number(null !== (_ = null == p ? void 0 : p.six_month_opens) && void 0 !== _ ? _ : 0)
             };
         })
-        .filter(b.lm);
+        .filter(T.lm);
 }

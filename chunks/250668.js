@@ -17,8 +17,8 @@ var i = n(147018),
     v = n(740362),
     y = n(974971),
     I = n(622281),
-    b = n(323979),
-    T = n(803938),
+    T = n(323979),
+    b = n(803938),
     S = n(838957),
     A = n(276321),
     N = n(537443).f,
@@ -26,15 +26,15 @@ var i = n(147018),
     R = n(335225).forEach,
     O = n(930990),
     D = n(4340),
-    x = n(97131),
-    L = n(347722),
-    P = n(644659),
-    w = n(95948),
-    M = P.get,
-    k = P.set,
-    U = P.enforce,
-    G = x.f,
-    B = L.f,
+    L = n(97131),
+    x = n(347722),
+    w = n(644659),
+    P = n(95948),
+    M = w.get,
+    k = w.set,
+    U = w.enforce,
+    G = L.f,
+    B = x.f,
     Z = r.RangeError,
     F = u.ArrayBuffer,
     V = F.prototype,
@@ -65,7 +65,7 @@ var i = n(147018),
         return S(V, e) || 'ArrayBuffer' === (t = y(e)) || 'SharedArrayBuffer' === t;
     },
     et = function (e, t) {
-        return q(e) && !b(t) && t in e && _(+t) && t >= 0;
+        return q(e) && !T(t) && t in e && _(+t) && t >= 0;
     },
     en = function (e, t) {
         return et(e, (t = E(t))) ? d(2, e[t]) : B(e, t);
@@ -74,7 +74,7 @@ var i = n(147018),
         return et(e, (t = E(t))) && I(n) && v(n, 'value') && !v(n, 'get') && !v(n, 'set') && !n.configurable && (!v(n, 'writable') || n.writable) && (!v(n, 'enumerable') || n.enumerable) ? ((e[t] = n.value), e) : G(e, t, n);
     };
 s
-    ? (H || ((L.f = en), (x.f = ei), $(K, 'buffer'), $(K, 'byteOffset'), $(K, 'byteLength'), $(K, 'length')),
+    ? (H || ((x.f = en), (L.f = ei), $(K, 'buffer'), $(K, 'byteOffset'), $(K, 'byteLength'), $(K, 'length')),
       i(
           {
               target: 'Object',
@@ -95,7 +95,7 @@ s
               E = _,
               v = E && E.prototype,
               y = {},
-              b = function (e, t) {
+              T = function (e, t) {
                   var n = M(e);
                   return n.view[u](t * s + n.byteOffset, !0);
               },
@@ -106,7 +106,7 @@ s
               D = function (e, t) {
                   G(e, t, {
                       get: function () {
-                          return b(this, t);
+                          return T(this, t);
                       },
                       set: function (e) {
                           return S(this, t, e);
@@ -119,7 +119,7 @@ s
                 ((E = t(function (e, t, n, i) {
                     return (
                         c(e, v),
-                        w(
+                        P(
                             (function () {
                                 return I(t) ? (ee(t) ? (void 0 !== i ? new _(t, m(n, s), i) : void 0 !== n ? new _(t, m(n, s)) : new _(t)) : q(t) ? J(E, t) : a(C, E, t)) : new _(h(t));
                             })(),
@@ -165,17 +165,17 @@ s
                         D(e, u++);
                 })),
                 A && A(E, W),
-                (v = E.prototype = T(K))),
+                (v = E.prototype = b(K))),
               v.constructor !== E && f(v, 'constructor', E),
               (U(v).TypedArrayConstructor = E),
               Y && f(v, Y, l);
-          var x = E !== _;
+          var L = E !== _;
           (y[l] = E),
               i(
                   {
                       global: !0,
                       constructor: !0,
-                      forced: x,
+                      forced: L,
                       sham: !H
                   },
                   y

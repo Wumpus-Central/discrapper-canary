@@ -23,12 +23,12 @@ var i,
     E = n(501655),
     I = n(192079),
     C = n(427679),
-    N = n(448206),
-    v = n(496675),
+    v = n(448206),
+    N = n(496675),
     T = n(938475),
     S = n(626135),
-    Z = n(823379),
-    A = n(15274),
+    A = n(823379),
+    Z = n(15274),
     x = n(924301),
     b = n(504160),
     L = n(151864),
@@ -43,7 +43,7 @@ var i,
     k = n(765305),
     U = n(981631),
     G = n(388032),
-    B = n(832019);
+    B = n(333522);
 let V = r.memo(function (e) {
     let { heading: t, location: n, locationIcon: i, details: r, detailsIcon: a, topic: o, onClickCloseIcon: d, children: u } = e,
         h = (0, p.Q3)('GuildNoticeBody');
@@ -212,7 +212,7 @@ function z(e) {
                     className: B.textBlock,
                     children: [
                         (0, l.jsx)(c.P3F, {
-                            onClick: () => (0, A.bO)({ eventId: n.id }),
+                            onClick: () => (0, Z.bO)({ eventId: n.id }),
                             className: B.eventNameClickable,
                             children: (0, l.jsx)(c.Text, {
                                 color: 'header-primary',
@@ -311,7 +311,7 @@ function W(e) {
 function Y(e) {
     let { guildEvent: t } = e,
         n = r.useCallback(() => {
-            (0, A.bO)({ eventId: t.id });
+            (0, Z.bO)({ eventId: t.id });
         }, [t]);
     return (0, l.jsx)(c.zxk, {
         fullWidth: !0,
@@ -372,8 +372,8 @@ function Q(e) {
     let { channel: t, speakers: n, voiceType: i } = e,
         a = t.getGuildId(),
         u = r.useMemo(() => n.slice(0, 3), [n]),
-        h = (0, o.e7)([v.Z], () => v.Z.can(U.Plq.CONNECT, t)),
-        m = (0, N.Z)(t.id),
+        h = (0, o.e7)([N.Z], () => N.Z.can(U.Plq.CONNECT, t)),
+        m = (0, v.Z)(t.id),
         p = G.intl.string(G.t.VJlc0d);
     switch (i) {
         case 1:
@@ -386,7 +386,7 @@ function Q(e) {
             p = G.intl.string(G.t.wBoE6O);
             break;
         default:
-            (0, Z.vE)(i);
+            (0, A.vE)(i);
     }
     return null == a
         ? null

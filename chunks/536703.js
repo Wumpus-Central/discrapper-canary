@@ -1,7 +1,7 @@
 n.d(t, {
     QM: () => N,
     ds: () => S,
-    mG: () => f
+    mG: () => A
 }),
     n(47120);
 var l = n(200651),
@@ -15,9 +15,9 @@ var l = n(200651),
     c = n(479766),
     E = n(741808),
     _ = n(388032),
-    C = n(588245),
-    h = n(772787);
-let T = () =>
+    C = n(61822),
+    h = n(668096);
+let I = () =>
         (0, l.jsx)('div', {
             className: h.svgContainer,
             children: (0, l.jsx)('img', {
@@ -26,7 +26,7 @@ let T = () =>
                 alt: 'Quests Icon'
             })
         }),
-    I = (e) =>
+    T = (e) =>
         (0, l.jsx)(o.zxk, {
             ...e,
             'aria-label': _.intl.string(_.t.cpT0Cg),
@@ -105,7 +105,7 @@ let T = () =>
                         left: 0
                     },
                     onGetBoundingRect: C,
-                    children: (0, l.jsx)(f, {
+                    children: (0, l.jsx)(A, {
                         onClose: t,
                         renderTail: a,
                         invertTail: c
@@ -132,13 +132,13 @@ let T = () =>
             { shouldShowOnboardingCoachmark: n }
         );
     },
-    f = (e) => {
+    A = (e) => {
         let { onClose: t, renderTail: n, invertTail: i = !1 } = e;
         return (0, l.jsxs)('div', {
             className: r()(C.baseCardOutline, h.container),
             children: [
-                (0, l.jsx)(I, { onClick: t }),
-                (0, l.jsx)(T, {}),
+                (0, l.jsx)(T, { onClick: t }),
+                (0, l.jsx)(I, {}),
                 (0, l.jsxs)('div', {
                     className: h.content,
                     children: [

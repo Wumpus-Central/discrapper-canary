@@ -1,59 +1,59 @@
-n.d(t, { Z: () => f }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(454585),
-    u = n(572004),
+n.d(t, { Z: () => m }), n(47120);
+var l = n(200651),
+    i = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(454585),
+    d = n(572004),
     c = n(388032),
-    d = n(417336);
-function f(e) {
+    u = n(644660);
+function m(e) {
     let {
             element: {
-                data: { title: t, body: n, sms: a, is_localized: f }
+                data: { title: t, body: n, sms: r, is_localized: m }
             }
         } = e,
-        [_, p] = r.useState(!1),
-        h = r.useRef(l.Z.reactParserFor(l.Z.defaultRules));
-    if (!f) return null;
-    let m = () => {
-        (0, u.JG)(a) && p(!0);
-    };
-    return (0, i.jsxs)('div', {
-        className: d.container,
-        children: [
-            (0, i.jsx)(o.X6q, {
-                variant: 'heading-sm/semibold',
-                color: 'header-secondary',
-                className: d.header,
-                children: t
-            }),
-            (0, i.jsx)(o.Text, {
-                variant: 'text-sm/normal',
-                className: d.bodyText,
-                children: h.current(n)
-            }),
-            (0, i.jsx)('div', {
-                children: (0, i.jsxs)('div', {
-                    className: s()(d.smsNumberContainer, { [d.copied]: _ }),
-                    children: [
-                        (0, i.jsx)(o.Text, {
-                            variant: 'text-md/normal',
-                            selectable: !0,
-                            className: d.smsNumberText,
-                            children: a
-                        }),
-                        (0, i.jsx)(o.zxk, {
-                            size: o.zxk.Sizes.SMALL,
-                            className: d.__invalid_trailingButton,
-                            onClick: m,
-                            color: o.zxk.Colors.PRIMARY,
-                            children: _ ? c.intl.string(c.t['t5VZ8/']) : c.intl.string(c.t.OpuAlJ)
-                        })
-                    ]
-                })
-            })
-        ]
-    });
+        [x, _] = i.useState(!1),
+        h = i.useRef(o.Z.reactParserFor(o.Z.defaultRules));
+    return m
+        ? (0, l.jsxs)('div', {
+              className: u.container,
+              children: [
+                  (0, l.jsx)(s.X6q, {
+                      variant: 'heading-sm/semibold',
+                      color: 'header-secondary',
+                      className: u.header,
+                      children: t
+                  }),
+                  (0, l.jsx)(s.Text, {
+                      variant: 'text-sm/normal',
+                      className: u.bodyText,
+                      children: h.current(n)
+                  }),
+                  (0, l.jsx)('div', {
+                      children: (0, l.jsxs)('div', {
+                          className: a()(u.smsNumberContainer, { [u.copied]: x }),
+                          children: [
+                              (0, l.jsx)(s.Text, {
+                                  variant: 'text-md/normal',
+                                  selectable: !0,
+                                  className: u.smsNumberText,
+                                  children: r
+                              }),
+                              (0, l.jsx)(s.zxk, {
+                                  size: s.zxk.Sizes.SMALL,
+                                  className: u.__invalid_trailingButton,
+                                  onClick: () => {
+                                      (0, d.JG)(r) && _(!0);
+                                  },
+                                  color: s.zxk.Colors.PRIMARY,
+                                  children: x ? c.intl.string(c.t['t5VZ8/']) : c.intl.string(c.t.OpuAlJ)
+                              })
+                          ]
+                      })
+                  })
+              ]
+          })
+        : null;
 }

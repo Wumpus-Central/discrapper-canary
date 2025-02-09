@@ -12,7 +12,7 @@ var a = c(120356),
     b = c(528567),
     u = c(371583),
     l = c(388032),
-    m = c(828980);
+    m = c(347871);
 function g(t) {
     var e, c, a, g;
     let { guildId: h, leaderboard: j, className: _ } = t,

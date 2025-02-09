@@ -1,5 +1,5 @@
 let i, l, a;
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var r,
     s,
     o,
@@ -9,11 +9,11 @@ var r,
     m = n(399860);
 let h = {},
     x = {},
-    p = !1;
-function g() {
-    (i = void 0), (h = {}), (x = {}), (l = void 0), (a = void 0), (p = !1);
+    g = !1;
+function p() {
+    (i = void 0), (h = {}), (x = {}), (l = void 0), (a = void 0), (g = !1);
 }
-class f extends (r = d.ZP.Store) {
+class b extends (r = d.ZP.Store) {
     getApplicationPermissions() {
         return h;
     }
@@ -30,32 +30,32 @@ class f extends (r = d.ZP.Store) {
         return a;
     }
     isUnavailable() {
-        return p;
+        return g;
     }
     getApplicationId() {
         return i;
     }
 }
 (o = 'IntegrationPermissionStore'),
-    (s = 'displayName') in f
-        ? Object.defineProperty(f, s, {
+    (s = 'displayName') in b
+        ? Object.defineProperty(b, s, {
               value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (f[s] = o);
-let b = new f(c.Z, {
-    LOGOUT: g,
+        : (b[s] = o);
+let _ = new b(c.Z, {
+    LOGOUT: p,
     INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE: function (e) {
         let { applicationId: t } = e;
         if (t !== i) return !1;
-        p = !0;
+        g = !0;
     },
-    INTEGRATION_PERMISSION_SETTINGS_CLEAR: g,
+    INTEGRATION_PERMISSION_SETTINGS_CLEAR: p,
     INTEGRATION_PERMISSION_SETTINGS_INIT: function (e) {
         let { applicationId: t } = e;
-        g(), (i = t);
+        p(), (i = t);
     },
     INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE: function (e) {
         let { applicationId: t, commandId: n, permissions: l } = e;
@@ -88,7 +88,7 @@ let b = new f(c.Z, {
     INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_FAILURE: function (e) {
         let { applicationId: t } = e;
         if (t !== i) return !1;
-        p = !0;
+        g = !0;
     },
     INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_SUCCESS: function (e) {
         let { applicationId: t, commands: n, permissions: l } = e;

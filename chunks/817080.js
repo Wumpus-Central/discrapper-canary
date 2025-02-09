@@ -15,73 +15,73 @@ var t =
                 a = /Version\/[\d\.]+.*Safari/.test(navigator.userAgent),
                 s = e.webkitRequestFileSystem,
                 l = e.requestFileSystem || s || e.mozRequestFileSystem,
-                d = function (t) {
+                c = function (t) {
                     (e.setImmediate || e.setTimeout)(function () {
                         throw t;
                     }, 0);
                 },
-                c = 'application/octet-stream',
+                d = 'application/octet-stream',
                 u = 0,
-                h = function (e) {
+                E = function (e) {
                     setTimeout(function () {
                         'string' == typeof e ? n().revokeObjectURL(e) : e.remove();
                     }, 40000);
                 },
-                p = function (e, t, n) {
+                h = function (e, t, n) {
                     for (var r = (t = [].concat(t)).length; r--; ) {
                         var o = e['on' + t[r]];
                         if ('function' == typeof o)
                             try {
                                 o.call(e, n || e);
                             } catch (e) {
-                                d(e);
+                                c(e);
                             }
                     }
                 },
-                f = function (e) {
+                _ = function (e) {
                     return /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type) ? new Blob(['ï\xBB\xBF', e], { type: e.type }) : e;
                 },
-                _ = function (t, d, _) {
-                    _ || (t = f(t));
-                    var E,
-                        m,
-                        N = this,
-                        g = t.type,
-                        S = !1,
-                        b = function () {
-                            p(N, 'writestart progress write writeend'.split(' '));
+                p = function (t, c, p) {
+                    p || (t = _(t));
+                    var f,
+                        R,
+                        I = this,
+                        m = t.type,
+                        N = !1,
+                        g = function () {
+                            h(I, 'writestart progress write writeend'.split(' '));
                         },
-                        x = function () {
-                            if (m && a && 'undefined' != typeof FileReader) {
+                        C = function () {
+                            if (R && a && 'undefined' != typeof FileReader) {
                                 var r = new FileReader();
                                 (r.onloadend = function () {
                                     var e = r.result;
-                                    (m.location.href = 'data:attachment/file' + e.slice(e.search(/[,;]/))), (N.readyState = N.DONE), b();
+                                    (R.location.href = 'data:attachment/file' + e.slice(e.search(/[,;]/))), (I.readyState = I.DONE), g();
                                 }),
                                     r.readAsDataURL(t),
-                                    (N.readyState = N.INIT);
+                                    (I.readyState = I.INIT);
                                 return;
                             }
-                            (S || !E) && (E = n().createObjectURL(t)), m ? (m.location.href = E) : void 0 === e.open(E, '_blank') && a && (e.location.href = E), (N.readyState = N.DONE), b(), h(E);
+                            (N || !f) && (f = n().createObjectURL(t)), R ? (R.location.href = f) : void 0 === e.open(f, '_blank') && a && (e.location.href = f), (I.readyState = I.DONE), g(), E(f);
                         },
                         y = function (e) {
                             return function () {
-                                if (N.readyState !== N.DONE) return e.apply(this, arguments);
+                                if (I.readyState !== I.DONE) return e.apply(this, arguments);
                             };
                         },
-                        C = {
+                        S = {
                             create: !0,
                             exclusive: !1
                         };
-                    if (((N.readyState = N.INIT), d || (d = 'download'), o)) {
-                        (E = n().createObjectURL(t)),
+                    if (((I.readyState = I.INIT), c || (c = 'download'), o)) {
+                        (f = n().createObjectURL(t)),
                             setTimeout(function () {
-                                (r.href = E), (r.download = d), i(r), b(), h(E), (N.readyState = N.DONE);
+                                (r.href = f), (r.download = c), i(r), g(), E(f), (I.readyState = I.DONE);
                             });
                         return;
                     }
-                    if ((e.chrome && g && g !== c && ((t = (t.slice || t.webkitSlice).call(t, 0, t.size, c)), (S = !0)), s && 'download' !== d && (d += '.download'), (g === c || s) && (m = e), !l)) {
-                        x();
+                    if ((e.chrome && m && m !== d && ((t = (t.slice || t.webkitSlice).call(t, 0, t.size, d)), (N = !0)), s && 'download' !== c && (c += '.download'), (m === d || s) && (R = e), !l)) {
+                        C();
                         return;
                     }
                     (u += t.size),
@@ -91,68 +91,68 @@ var t =
                             y(function (e) {
                                 e.root.getDirectory(
                                     'saved',
-                                    C,
+                                    S,
                                     y(function (e) {
                                         var n = function () {
                                             e.getFile(
-                                                d,
-                                                C,
+                                                c,
+                                                S,
                                                 y(function (e) {
                                                     e.createWriter(
                                                         y(function (n) {
                                                             (n.onwriteend = function (t) {
-                                                                (m.location.href = e.toURL()), (N.readyState = N.DONE), p(N, 'writeend', t), h(e);
+                                                                (R.location.href = e.toURL()), (I.readyState = I.DONE), h(I, 'writeend', t), E(e);
                                                             }),
                                                                 (n.onerror = function () {
                                                                     var e = n.error;
-                                                                    e.code !== e.ABORT_ERR && x();
+                                                                    e.code !== e.ABORT_ERR && C();
                                                                 }),
                                                                 'writestart progress write abort'.split(' ').forEach(function (e) {
-                                                                    n['on' + e] = N['on' + e];
+                                                                    n['on' + e] = I['on' + e];
                                                                 }),
                                                                 n.write(t),
-                                                                (N.abort = function () {
-                                                                    n.abort(), (N.readyState = N.DONE);
+                                                                (I.abort = function () {
+                                                                    n.abort(), (I.readyState = I.DONE);
                                                                 }),
-                                                                (N.readyState = N.WRITING);
+                                                                (I.readyState = I.WRITING);
                                                         }),
-                                                        x
+                                                        C
                                                     );
                                                 }),
-                                                x
+                                                C
                                             );
                                         };
                                         e.getFile(
-                                            d,
+                                            c,
                                             { create: !1 },
                                             y(function (e) {
                                                 e.remove(), n();
                                             }),
                                             y(function (e) {
-                                                e.code === e.NOT_FOUND_ERR ? n() : x();
+                                                e.code === e.NOT_FOUND_ERR ? n() : C();
                                             })
                                         );
                                     }),
-                                    x
+                                    C
                                 );
                             }),
-                            x
+                            C
                         );
                 },
-                E = _.prototype;
+                f = p.prototype;
             return 'undefined' != typeof navigator && navigator.msSaveOrOpenBlob
                 ? function (e, t, n) {
-                      return n || (e = f(e)), navigator.msSaveOrOpenBlob(e, t || 'download');
+                      return n || (e = _(e)), navigator.msSaveOrOpenBlob(e, t || 'download');
                   }
-                : ((E.abort = function () {
-                      (this.readyState = this.DONE), p(this, 'abort');
+                : ((f.abort = function () {
+                      (this.readyState = this.DONE), h(this, 'abort');
                   }),
-                  (E.readyState = E.INIT = 0),
-                  (E.WRITING = 1),
-                  (E.DONE = 2),
-                  (E.error = E.onwritestart = E.onprogress = E.onwrite = E.onabort = E.onerror = E.onwriteend = null),
+                  (f.readyState = f.INIT = 0),
+                  (f.WRITING = 1),
+                  (f.DONE = 2),
+                  (f.error = f.onwritestart = f.onprogress = f.onwrite = f.onabort = f.onerror = f.onwriteend = null),
                   function (e, t, n) {
-                      return new _(e, t, n);
+                      return new p(e, t, n);
                   });
         }
     })(('undefined' != typeof self && self) || ('undefined' != typeof window && window) || this.content);

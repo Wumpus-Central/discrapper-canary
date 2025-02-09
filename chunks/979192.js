@@ -1,41 +1,41 @@
-n.d(t, { O: () => c });
-var i = n(442837),
-    r = n(675478),
-    a = n(581883),
-    s = n(626135),
-    o = n(434382),
-    l = n(981631);
-async function u(e, t) {
-    await (0, r.PS)(
-        e,
-        (n) => {
-            (n.leaderboardsDisabled = !n.leaderboardsDisabled),
-                s.default.track(l.rMx.LEADERBOARD_USER_OPT_OUT_UPDATED, {
-                    leaderboard_id: t,
-                    guild_id: e,
-                    leaderboards_disabled: n.leaderboardsDisabled
+c.d(e, { O: () => p });
+var d = c(442837),
+    a = c(675478),
+    s = c(581883),
+    n = c(626135),
+    o = c(434382),
+    f = c(981631);
+async function i(t, e) {
+    await (0, a.PS)(
+        t,
+        (c) => {
+            (c.leaderboardsDisabled = !c.leaderboardsDisabled),
+                n.default.track(f.rMx.LEADERBOARD_USER_OPT_OUT_UPDATED, {
+                    leaderboard_id: e,
+                    guild_id: t,
+                    leaderboards_disabled: c.leaderboardsDisabled
                 });
         },
-        r.fy.INFREQUENT_USER_ACTION
+        a.fy.INFREQUENT_USER_ACTION
     ),
-        await new Promise((e) => setTimeout(e, 300)),
+        await new Promise((t) => setTimeout(t, 300)),
         await o.Z.fetchLeaderboard({
-            guildId: e,
-            leaderboardId: t,
+            guildId: t,
+            leaderboardId: e,
             force: !0
         });
 }
-function c(e, t) {
-    let n = (0, i.e7)(
-        [a.Z],
+function p(t, e) {
+    let c = (0, d.e7)(
+        [s.Z],
         () => {
-            var t, n;
-            return null === (n = a.Z.settings.guilds) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : t[e];
+            var e, c;
+            return null === (c = s.Z.settings.guilds) || void 0 === c ? void 0 : null === (e = c.guilds) || void 0 === e ? void 0 : e[t];
         },
-        [e]
+        [t]
     );
     return {
-        leaderboardsDisabled: (null == n ? void 0 : n.leaderboardsDisabled) === !0,
-        toggleGuildLeaderboardsDisabled: () => u(e, t)
+        leaderboardsDisabled: (null == c ? void 0 : c.leaderboardsDisabled) === !0,
+        toggleGuildLeaderboardsDisabled: () => i(t, e)
     };
 }

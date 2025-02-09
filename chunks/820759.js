@@ -4,22 +4,22 @@ n.d(t, {
 });
 var i = n(200651),
     s = n(120356),
-    r = n.n(s),
-    l = n(481060),
-    a = n(574792);
+    l = n.n(s),
+    r = n(481060),
+    a = n(226902);
 let o = () => (0, i.jsx)('hr', { className: a.sectionDivider }),
     c = (e) => {
         let { label: t, children: n, direction: s = 'horizontal', className: c } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o, {}),
-                (0, i.jsx)(l.Text, {
+                (0, i.jsx)(r.Text, {
                     variant: 'text-md/semibold',
                     className: a.labelSpacing,
                     children: t
                 }),
                 (0, i.jsx)('div', {
-                    className: r()(a.container, c, { [a.verticalContainer]: 'vertical' === s }),
+                    className: l()(a.container, c, { [a.verticalContainer]: 'vertical' === s }),
                     children: n
                 })
             ]

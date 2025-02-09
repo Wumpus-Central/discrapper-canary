@@ -1,11 +1,11 @@
 n.d(t, { Z: () => h }), n(47120), n(733860);
-var r,
-    i = n(442837),
+var i,
+    r = n(442837),
     a = n(570140),
-    o = n(592125),
-    l = n(271383),
-    c = n(430824);
-function d(e, t, n) {
+    l = n(592125),
+    o = n(271383),
+    u = n(430824);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,28 +18,28 @@ function d(e, t, n) {
         e
     );
 }
-let _ = [],
-    u = new Set();
-class s extends (r = i.ZP.PersistedStore) {
+let d = [],
+    s = new Set();
+class _ extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(l.ZP, c.Z, o.Z), (u = new Set([...(_ = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : [])]));
+        this.waitFor(o.ZP, u.Z, l.Z), (s = new Set([...(d = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : [])]));
     }
     getState() {
-        return { channelHistory: _ };
+        return { channelHistory: d };
     }
     getChannelHistory() {
-        return _;
+        return d;
     }
 }
-d(s, 'displayName', 'RecentVoiceChannelStore'), d(s, 'persistKey', 'RecentVoiceChannelStore');
-let h = new s(a.Z, {
+c(_, 'displayName', 'RecentVoiceChannelStore'), c(_, 'persistKey', 'RecentVoiceChannelStore');
+let h = new _(a.Z, {
     POST_CONNECTION_OPEN: function () {
-        u = new Set([..._]);
+        s = new Set([...d]);
     },
     VOICE_CHANNEL_SELECT: function (e) {
         var t, n;
-        let { channelId: r } = e;
-        return !(null == r || !(null !== (n = null === (t = o.Z.getChannel(r)) || void 0 === t ? void 0 : t.isVocal()) && void 0 !== n && n) || u.has(r)) && (_.unshift(r), u.add(r), _.length > 10 && ((_.length = 10), (u = new Set([..._]))), !0);
+        let { channelId: i } = e;
+        return !(null == i || !(null !== (n = null === (t = l.Z.getChannel(i)) || void 0 === t ? void 0 : t.isVocal()) && void 0 !== n && n) || s.has(i)) && (d.unshift(i), s.add(i), d.length > 10 && ((d.length = 10), (s = new Set([...d]))), !0);
     }
 });

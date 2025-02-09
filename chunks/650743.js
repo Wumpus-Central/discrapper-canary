@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => T });
 var i = n(200651);
 n(192379);
 var r = n(399606),
@@ -18,16 +18,16 @@ var r = n(399606),
     E = n(763296),
     v = n(981631),
     y = n(388032),
-    I = n(705340);
-function b(e) {
-    let { soundboardSound: t, closePicker: b } = e,
-        T = (0, d.Iu)((e) => e.searchQuery),
+    I = n(988387);
+function T(e) {
+    let { soundboardSound: t, closePicker: T } = e,
+        b = (0, d.Iu)((e) => e.searchQuery),
         S = (0, r.e7)([E.Z], () => null != t && E.Z.isFavoriteSound(t.soundId)),
         A = (0, r.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guildId)),
         N = (0, r.e7)([l.Z], () => l.Z.useReducedMotion, []),
         C = (0, r.e7)([h.Z], () => h.Z.isFocused()),
-        R = (0, r.e7)([p.Z], () => p.Z.getKeybindForAction(v.kg4.SOUNDBOARD_HOLD));
-    if (null != t && T.length > 0)
+        R = (0, r.e7)([p.ZP], () => p.ZP.getKeybindForAction(v.kg4.SOUNDBOARD_HOLD));
+    if (null != t && b.length > 0)
         return (0, i.jsx)(f.Z, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
@@ -53,15 +53,15 @@ function b(e) {
             isFavorite: S
         });
     let O = () => {
-            b(),
+            T(),
                 (0, s.ZDy)(async () => {
                     let { default: e } = await n.e('58120').then(n.bind(n, 355453));
                     return (t) => (0, i.jsx)(e, { ...t });
                 });
         },
         D = (0, u.un)(a.z.SOUNDBOARD_KEYBIND_TIP),
-        x = () => (0, u.EW)(a.z.SOUNDBOARD_KEYBIND_TIP),
-        L =
+        L = () => (0, u.EW)(a.z.SOUNDBOARD_KEYBIND_TIP),
+        x =
             null != R && (0, m.isWindows)() && !D
                 ? y.intl.format(y.t.udMTtr, {
                       keybind: (0, g.BB)(R.shortcut, !0),
@@ -76,7 +76,7 @@ function b(e) {
                           )
                   })
                 : null;
-    return null == L
+    return null == x
         ? null
         : (0, i.jsxs)('div', {
               className: I.keybindHint,
@@ -92,11 +92,11 @@ function b(e) {
                       variant: 'text-sm/medium',
                       color: 'text-normal',
                       className: I.keybindHintText,
-                      children: L
+                      children: x
                   }),
                   (0, i.jsx)(s.P3F, {
                       className: I.closeButton,
-                      onClick: x,
+                      onClick: L,
                       children: (0, i.jsx)(s.Dio, {
                           size: 'xs',
                           color: 'currentColor'

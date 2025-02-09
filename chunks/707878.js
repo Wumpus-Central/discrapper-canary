@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(442837),
@@ -10,10 +10,10 @@ var i = n(200651),
     u = n(987650),
     h = n(981631),
     p = n(388032),
-    g = n(394977);
+    g = n(330697);
 let m = Object.values(u.wF).map((e) => 100 * e),
     f = (0, o.hQ)();
-class v extends s.PureComponent {
+class _ extends s.PureComponent {
     handleUpdateBackgroundOpacity(e) {
         r.Z.setTextWidgetOpacity((0, c.Z)(e / 100)), r.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
     }
@@ -66,4 +66,4 @@ class v extends s.PureComponent {
                 : (this[t] = n);
     }
 }
-let Z = l.ZP.connectStores([d.Z], () => ({ opacity: d.Z.getTextWidgetOpacity() }))(v);
+let v = l.ZP.connectStores([d.Z], () => ({ opacity: d.Z.getTextWidgetOpacity() }))(_);

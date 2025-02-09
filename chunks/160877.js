@@ -16,7 +16,7 @@ var i = n(200651),
     h = n(247206),
     p = n(719548),
     g = n(388032),
-    f = n(320534);
+    f = n(68092);
 let x = (e) => {
         let { attachment: t } = e,
             { url: n, description: l } = t;

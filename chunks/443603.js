@@ -12,7 +12,7 @@ var i = n(200651),
     c = n(540059),
     d = n(855981),
     f = n(55543),
-    _ = n(198593),
+    _ = n(576039),
     p = (function (e) {
         return (e[(e.UPDATE = 0)] = 'UPDATE'), (e[(e.NEW = 1)] = 'NEW'), e;
     })({});
@@ -42,9 +42,9 @@ let h = 24,
         }
     };
 function E(e) {
-    let { className: t, disabled: n = !1, innerClassName: r, childClassName: a, iconClassName: p, icon: E, children: v, onClick: y, isActive: I, onMouseEnter: b, onMouseLeave: T, onFocus: S, onBlur: A, pulse: N, sparkle: C, notification: R, 'aria-label': O, 'aria-expanded': D, 'aria-haspopup': x, 'aria-controls': L } = e,
-        P = (0, c.Q3)('ChannelTextAreaButton'),
-        w = (0, l.Yzy)(null != v, {
+    let { className: t, disabled: n = !1, innerClassName: r, childClassName: a, iconClassName: p, icon: E, children: v, onClick: y, isActive: I, onMouseEnter: T, onMouseLeave: b, onFocus: S, onBlur: A, pulse: N, sparkle: C, notification: R, 'aria-label': O, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x } = e,
+        w = (0, c.Q3)('ChannelTextAreaButton'),
+        P = (0, l.Yzy)(null != v, {
             ...g,
             keys: (e) => (e ? 'children' : 'icon')
         }),
@@ -57,8 +57,8 @@ function E(e) {
                           (0, i.jsx)(u.ZP, {
                               className: _.iconMask,
                               mask: u.QS.CHAT_INPUT_BUTTON_NOTIFICATION,
-                              width: P ? m : h,
-                              height: P ? m : h,
+                              width: w ? m : h,
+                              height: w ? m : h,
                               children: t
                           }),
                           (0, i.jsx)('span', { className: _.notificationDot })
@@ -71,14 +71,14 @@ function E(e) {
         size: l.zxk.Sizes.NONE,
         'aria-label': O,
         'aria-expanded': D,
-        'aria-haspopup': x,
-        'aria-controls': L,
+        'aria-haspopup': L,
+        'aria-controls': x,
         disabled: n,
         className: s()(t, { [_.active]: I }),
         innerClassName: s()(_.button, r, { [_.pulseButton]: N }),
         onClick: y,
-        onMouseEnter: b,
-        onMouseLeave: T,
+        onMouseEnter: T,
+        onMouseLeave: b,
         onFocus: S,
         onBlur: A,
         focusProps: {
@@ -88,7 +88,7 @@ function E(e) {
             }
         },
         children: [
-            w((e, t, n) => {
+            P((e, t, n) => {
                 let { key: r } = n;
                 return t
                     ? (0, i.jsx)(

@@ -36,7 +36,7 @@ var i = n(200651),
     b = n(465520),
     T = n(981631),
     S = n(388032),
-    R = n(633963);
+    R = n(149552);
 let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
     y = () => {
         let {

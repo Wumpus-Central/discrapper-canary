@@ -132,7 +132,7 @@ class _ extends f {
         });
     }
     mergeFromApplicationUpdate(e) {
-        var t, n, i, r, a, s, o, l, u, c, d, f, p, h, m, g, E, v, y, I, b, T, S, A, N, C, R, O, D, x, L, P, w, M, k, U, G, B, Z, F, V;
+        var t, n, i, r, a, s, o, l, u, c, d, f, p, h, m, g, E, v, y, I, T, b, S, A, N, C, R, O, D, L, x, w, P, M, k, U, G, B, Z, F, V;
         return new _({
             id: null !== (t = e.id) && void 0 !== t ? t : this.id,
             name: null !== (n = e.name) && void 0 !== n ? n : this.name,
@@ -154,8 +154,8 @@ class _ extends f {
             executables: null !== (v = e.executables) && void 0 !== v ? v : this.executables,
             hashes: null !== (y = e.hashes) && void 0 !== y ? y : this.hashes,
             description: null !== (I = e.description) && void 0 !== I ? I : this.description,
-            eulaId: null !== (b = e.eulaId) && void 0 !== b ? b : this.eulaId,
-            slug: null !== (T = e.slug) && void 0 !== T ? T : this.slug,
+            eulaId: null !== (T = e.eulaId) && void 0 !== T ? T : this.eulaId,
+            slug: null !== (b = e.slug) && void 0 !== b ? b : this.slug,
             coverImage: null !== (S = e.coverImage) && void 0 !== S ? S : this.coverImage,
             bot: null !== (A = e.bot) && void 0 !== A ? A : this.bot,
             flags: null !== (N = e.flags) && void 0 !== N ? N : this.flags,
@@ -163,10 +163,10 @@ class _ extends f {
             tags: null !== (R = e.tags) && void 0 !== R ? R : this.tags,
             embeddedActivityConfig: null !== (O = e.embeddedActivityConfig) && void 0 !== O ? O : null != this.embeddedActivityConfig ? { ...this.embeddedActivityConfig } : void 0,
             type: null !== (D = e.type) && void 0 !== D ? D : this.type,
-            team: null !== (x = e.team) && void 0 !== x ? x : this.team,
-            roleConnectionsVerificationUrl: null !== (L = e.roleConnectionsVerificationUrl) && void 0 !== L ? L : this.roleConnectionsVerificationUrl,
-            integrationTypesConfig: null !== (P = e.integrationTypesConfig) && void 0 !== P ? P : this.integrationTypesConfig,
-            isMonetized: null !== (w = e.isMonetized) && void 0 !== w ? w : this.isMonetized,
+            team: null !== (L = e.team) && void 0 !== L ? L : this.team,
+            roleConnectionsVerificationUrl: null !== (x = e.roleConnectionsVerificationUrl) && void 0 !== x ? x : this.roleConnectionsVerificationUrl,
+            integrationTypesConfig: null !== (w = e.integrationTypesConfig) && void 0 !== w ? w : this.integrationTypesConfig,
+            isMonetized: null !== (P = e.isMonetized) && void 0 !== P ? P : this.isMonetized,
             storefront_available: null !== (M = e.storefront_available) && void 0 !== M ? M : this.storefront_available,
             termsOfServiceUrl: null !== (k = e.termsOfServiceUrl) && void 0 !== k ? k : this.termsOfServiceUrl,
             privacyPolicyUrl: null !== (U = e.privacyPolicyUrl) && void 0 !== U ? U : this.privacyPolicyUrl,

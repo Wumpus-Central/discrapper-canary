@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var i,
     r = n(442837),
     a = n(570140),
@@ -70,7 +70,7 @@ function y(e) {
 function I(e) {
     _ = {};
 }
-class b extends (i = r.ZP.Store) {
+class T extends (i = r.ZP.Store) {
     initialize() {
         this.waitFor(o.Z, l.Z, u.Z, s.Z), this.syncWith([o.Z, l.Z, u.Z, s.Z], h);
     }
@@ -84,8 +84,8 @@ class b extends (i = r.ZP.Store) {
         return p;
     }
 }
-f(b, 'displayName', 'GuildIncidentsStore');
-let T = new b(a.Z, {
+f(T, 'displayName', 'GuildIncidentsStore');
+let b = new T(a.Z, {
     CONNECTION_OPEN: g,
     GUILD_CREATE: E,
     GUILD_UPDATE: v,

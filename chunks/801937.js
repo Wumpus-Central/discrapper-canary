@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => L }), n(47120), n(653041), n(724458);
+n.d(t, { ZP: () => x }), n(47120), n(653041), n(724458);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -16,10 +16,10 @@ var i = n(200651),
     g = n(358085),
     E = n(981631),
     v = n(388032),
-    y = n(742415),
-    I = n(652849);
-let b = new _.Z('ChoosePaymentSourceType'),
-    T = {
+    y = n(773524),
+    I = n(801194);
+let T = new _.Z('ChoosePaymentSourceType'),
+    b = {
         [E.HeQ.CARD]: p.ZP.Types.UNKNOWN,
         [E.HeQ.PAYPAL]: p.ZP.Types.PAYPAL,
         [E.HeQ.SOFORT]: p.ZP.Types.SOFORT,
@@ -77,7 +77,7 @@ function D(e) {
         }
     );
 }
-class x extends r.PureComponent {
+class L extends r.PureComponent {
     componentDidMount() {
         var e;
         (0, u.GE)(),
@@ -90,7 +90,7 @@ class x extends r.PureComponent {
         var e;
         let t = null !== (e = this.props.paymentRequestWallets) && void 0 !== e ? e : [];
         if (0 === t.length || !this.arePaymentRequestWalletsLoading()) return;
-        b.warn('Payment request wallets failed to load in time: '.concat(t.join(', '), '. Max time allowed: ').concat(O, ' ms'));
+        T.warn('Payment request wallets failed to load in time: '.concat(t.join(', '), '. Max time allowed: ').concat(O, ' ms'));
         let n = t.reduce(
             (e, t) => ({
                 ...e,
@@ -115,7 +115,7 @@ class x extends r.PureComponent {
     createPaymentButtons(e) {
         return e.map((e) => {
             var t;
-            let n = T[e],
+            let n = b[e],
                 r = h.Wo[e](),
                 a = null === (t = this.props.localizedPromo) || void 0 === t ? void 0 : t.paymentSourceTypes.includes(e);
             return (0, i.jsx)(
@@ -182,13 +182,13 @@ class x extends r.PureComponent {
             }),
             g = [],
             E = [],
-            b = void 0 === o || this.arePaymentRequestWalletsLoading();
+            T = void 0 === o || this.arePaymentRequestWalletsLoading();
         if (u) g.push(...this.createPaymentButtons(D('ALL').countryPaymentMethods));
         else {
             let { countryPaymentMethods: e, remainingPaymentMethods: t } = D(o);
             g.push(...this.createPaymentButtons(e)), E.push(...this.createPaymentButtons(t));
         }
-        let T = (0, i.jsxs)('div', {
+        let b = (0, i.jsxs)('div', {
             children: [
                 (0, i.jsxs)('div', {
                     className: s()(I.wrap, I.horizontal, y.container),
@@ -210,9 +210,9 @@ class x extends r.PureComponent {
             ]
         });
         return (
-            b &&
+            T &&
                 !u &&
-                (T = (0, i.jsxs)('div', {
+                (b = (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)('div', {
                             className: y.hidden,
@@ -227,7 +227,7 @@ class x extends r.PureComponent {
                     (0, i.jsx)(l.hjN, {
                         title: _ ? v.intl.string(v.t.tywMsb) : v.intl.string(v.t['8lqkf3']),
                         className: r,
-                        children: T
+                        children: b
                     }),
                     _ && (0, i.jsx)('hr', { className: y.SeparatorLower })
                 ]
@@ -243,8 +243,8 @@ class x extends r.PureComponent {
             });
     }
 }
-let L = o.ZP.connectStores([m.Z], () => ({
+let x = o.ZP.connectStores([m.Z], () => ({
     ipCountryCode: m.Z.ipCountryCode,
     ipCountryCodeHasError: m.Z.ipCountryCodeHasError,
     localizedPromo: m.Z.localizedPricingPromo
-}))(x);
+}))(L);

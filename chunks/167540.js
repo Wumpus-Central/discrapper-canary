@@ -1,18 +1,18 @@
 n.d(t, { Z: () => E }), n(47120);
 var i = n(200651),
     s = n(192379),
-    r = n(120356),
-    l = n.n(r),
+    l = n(120356),
+    r = n.n(l),
     a = n(442837),
     o = n(481060),
     c = n(921801),
     d = n(131951),
     u = n(962100),
-    m = n(445817),
-    g = n(726985),
-    h = n(65154),
+    h = n(445817),
+    m = n(726985),
+    g = n(65154),
     x = n(388032),
-    _ = n(232186);
+    _ = n(814632);
 function p() {
     return (0, i.jsx)(o.ToO, {
         type: o.sje.PRIMARY,
@@ -28,14 +28,14 @@ function p() {
 }
 function E(e) {
     let { refreshStyles: t = !1 } = e,
-        n = (0, a.e7)([d.Z], () => d.Z.supports(h.AN.VIDEO)),
-        [r, u] = s.useState(!1),
+        n = (0, a.e7)([d.Z], () => d.Z.supports(g.AN.VIDEO)),
+        [l, u] = s.useState(!1),
         E = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.F, {
-                    setting: g.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
-                    children: (0, i.jsx)(m.Z, {
-                        previewEnabled: r,
+                    setting: m.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
+                    children: (0, i.jsx)(h.Z, {
+                        previewEnabled: l,
                         onEnablePreview: () => u(!0),
                         onCancelPreview: () => u(!1)
                     })
@@ -55,7 +55,7 @@ function E(e) {
                       }),
                       children: E
                   }),
-                  (0, i.jsx)(o.$i$, { className: l()(_.marginBottom40, _.marginTop40) })
+                  (0, i.jsx)(o.$i$, { className: r()(_.marginBottom40, _.marginTop40) })
               ]
           });
 }

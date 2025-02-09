@@ -1,4 +1,4 @@
-n.d(t, { t: () => P }), n(47120);
+n.d(t, { t: () => w }), n(47120);
 var i = n(200651),
     r = n(192379),
     a = n(119617),
@@ -10,7 +10,7 @@ var i = n(200651),
     d = n(146128),
     f = n(981631),
     _ = n(675654),
-    p = n(75877);
+    p = n(889357);
 let h = [],
     m = -5,
     g = -40,
@@ -18,8 +18,8 @@ let h = [],
     v = -100,
     y = 11,
     I = 125,
-    b = 20,
-    T = 12,
+    T = 20,
+    b = 12,
     S = 48,
     A = 0.01,
     N = new Set(['jack_o_lantern', 'nose']),
@@ -57,7 +57,7 @@ function D() {
             return t;
         });
 }
-function x(e) {
+function L(e) {
     if (null == e) return 'enter';
     switch (e) {
         case 'enter':
@@ -68,7 +68,7 @@ function x(e) {
             return 'enter';
     }
 }
-let L = r.forwardRef(function (e, t) {
+let x = r.forwardRef(function (e, t) {
     let { sprites: n } = e,
         [s, o] = r.useState(null),
         { confettiCanvas: u } = r.useContext(l.h),
@@ -101,7 +101,7 @@ let L = r.forwardRef(function (e, t) {
                             },
                             size: {
                                 type: 'static-random',
-                                minValue: T,
+                                minValue: b,
                                 maxValue: S
                             },
                             dragCoefficient: {
@@ -109,7 +109,7 @@ let L = r.forwardRef(function (e, t) {
                                 value: A
                             }
                         },
-                        b
+                        T
                     );
                 }
             }),
@@ -124,11 +124,11 @@ let L = r.forwardRef(function (e, t) {
         })
     );
 });
-function P(e) {
+function w(e) {
     let { children: t } = e,
         n = r.useRef({}),
         [a, l] = r.useState(null),
-        u = x(a),
+        u = L(a),
         _ = r.useRef(null),
         [h, m] = r.useState(!1),
         g = r.useRef('jack_o_lantern'),
@@ -142,14 +142,14 @@ function P(e) {
             },
             [h]
         ),
-        b = r.useMemo(
+        T = r.useMemo(
             () => ({
                 triggerAnimation: v,
                 untriggerAnimation: () => {}
             }),
             [v]
         ),
-        T = r.useCallback((e) => {
+        b = r.useCallback((e) => {
             l(e);
         }, []),
         S = r.useCallback((e) => {
@@ -171,13 +171,13 @@ function P(e) {
     E !== f.IlC.APP)
         ? (0, i.jsx)(i.Fragment, { children: t })
         : (0, i.jsxs)(d.Rm.Provider, {
-              value: b,
+              value: T,
               children: [
                   t,
                   Object.keys(C).map((e) => {
                       let t = C[e];
                       return (0, i.jsx)(
-                          L,
+                          x,
                           {
                               ref: (t) => {
                                   null != t ? (n.current[e] = t) : delete n.current[e];
@@ -196,7 +196,7 @@ function P(e) {
                                     className: p.lottieAnimation,
                                     nextScene: u,
                                     sceneSegments: O,
-                                    onScenePlay: T,
+                                    onScenePlay: b,
                                     onSceneComplete: S,
                                     importData: D,
                                     pauseWhileUnfocused: !1

@@ -21,29 +21,29 @@ function f(e, t) {
         v = void 0 === E ? l.Pj : E,
         y = n.elementContext,
         I = void 0 === y ? l.k5 : y,
-        b = n.altBoundary,
-        T = void 0 !== b && b,
+        T = n.altBoundary,
+        b = void 0 !== T && T,
         S = n.padding,
         A = void 0 === S ? 0 : S,
         N = (0, c.Z)('number' != typeof A ? A : (0, d.Z)(A, l.mv)),
         C = I === l.k5 ? l.YP : l.k5,
         R = e.rects.popper,
-        O = e.elements[T ? C : I],
+        O = e.elements[b ? C : I],
         D = (0, i.Z)((0, u.kK)(O) ? O : O.contextElement || (0, r.Z)(e.elements.popper), g, v, h),
-        x = (0, a.Z)(e.elements.reference),
-        L = (0, s.Z)({
-            reference: x,
+        L = (0, a.Z)(e.elements.reference),
+        x = (0, s.Z)({
+            reference: L,
             element: R,
             strategy: 'absolute',
             placement: _
         }),
-        P = (0, o.Z)(Object.assign({}, R, L)),
-        w = I === l.k5 ? P : x,
+        w = (0, o.Z)(Object.assign({}, R, x)),
+        P = I === l.k5 ? w : L,
         M = {
-            top: D.top - w.top + N.top,
-            bottom: w.bottom - D.bottom + N.bottom,
-            left: D.left - w.left + N.left,
-            right: w.right - D.right + N.right
+            top: D.top - P.top + N.top,
+            bottom: P.bottom - D.bottom + N.bottom,
+            left: D.left - P.left + N.left,
+            right: P.right - D.right + N.right
         },
         k = e.modifiersData.offset;
     if (I === l.k5 && k) {

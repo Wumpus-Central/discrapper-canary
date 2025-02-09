@@ -1,44 +1,44 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(468194),
-    a = n(399606),
+var r = n(120356),
+    a = n.n(r),
+    s = n(468194),
+    l = n(399606),
     o = n(481060),
     c = n(372769),
     d = n(914788),
     u = n(981631),
     m = n(388032),
-    g = n(77659);
-let h = [18, 18, 16, 16, 14, 12, 10],
-    x = (e) => {
+    g = n(836537);
+let _ = [18, 18, 16, 16, 14, 12, 10],
+    p = (e) => {
         let { guildId: t } = e,
-            n = (0, a.e7)([d.Z], () => d.Z.getGuild(t));
+            n = (0, l.e7)([d.Z], () => d.Z.getGuild(t));
         if (void 0 === n) return null;
-        let s = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
-            x = n.toString(),
-            _ = n.getIconURL(40, !0),
-            p = null,
-            E = h[h.length - 1];
-        if (null == n.icon && null != x) {
-            var C;
-            E = null !== (C = h[(p = (0, l.Zg)(x)).length - 1]) && void 0 !== C ? C : h[h.length - 1];
+        let r = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
+            p = n.toString(),
+            f = n.getIconURL(40, !0),
+            h = null,
+            x = _[_.length - 1];
+        if (null == n.icon && null != p) {
+            var E;
+            x = null !== (E = _[(h = (0, s.Zg)(p)).length - 1]) && void 0 !== E ? E : _[_.length - 1];
         }
         return (0, i.jsxs)('div', {
             className: g.container,
             children: [
                 (0, i.jsxs)('div', {
-                    style: { fontSize: E },
+                    style: { fontSize: x },
                     children: [
-                        null != p
+                        null != h
                             ? (0, i.jsx)('div', {
-                                  className: r()(g.childWrapper, g.acronym),
+                                  className: a()(g.childWrapper, g.acronym),
                                   'aria-hidden': !0,
-                                  children: p
+                                  children: h
                               })
                             : null,
-                        null != _
+                        null != f
                             ? (0, i.jsx)(o.qEK, {
                                   src: n.getIconURL(40, !0),
                                   size: o.EFr.SIZE_40,
@@ -53,7 +53,7 @@ let h = [18, 18, 16, 16, 14, 12, 10],
                         (0, i.jsxs)('div', {
                             className: g.header,
                             children: [
-                                s
+                                r
                                     ? (0, i.jsx)(c.Z, {
                                           guild: n,
                                           tooltipPosition: 'bottom',

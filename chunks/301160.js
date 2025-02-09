@@ -6,7 +6,7 @@ var o = t(200651),
     l = t(768581),
     c = t(570533),
     r = t(388032),
-    m = t(88498);
+    m = t(826777);
 function d(e) {
     let { emoji: i, onChange: t, value: a } = e,
         s = l.ZP.getEmojiURL({

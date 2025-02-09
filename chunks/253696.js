@@ -28,22 +28,22 @@ function g(e) {
         v = l.Z.getChannel(u.Z.getChannelId()),
         y = null == v ? void 0 : v.getGuildId(),
         { canSplitFrecencyList: I } = s.Z.getCurrentConfig({ location: 'trackOnEmojiPickerOpened' }, { autoTrackExposure: !0 }),
-        b = (0, o.E2)({
+        T = (0, o.E2)({
             location: 'trackOnEmojiPickerOpened',
             autoTrackExposure: !0
         });
     o.Xb.trackExposure({ location: 'trackOnEmojiPickerOpened' });
-    let T = (I || b) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
+    let b = (I || T) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
         S = null != v ? a.ZP.getDisambiguatedEmojiContext(v.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
-        A = (I || b) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
-        N = T.slice(0, A),
+        A = (I || T) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
+        N = b.slice(0, A),
         C = null != y ? a.ZP.getGuildEmoji(y) : [],
         R = Object.values(null !== (t = a.ZP.getDisambiguatedEmojiContext(null == v ? void 0 : v.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}).reduce((e, t) => (e += t.length), 0),
         { topEmojis: O, newlyAddedEmojis: D } = (0, f._)({
             guildId: null == v ? void 0 : v.getGuildId(),
             pickerIntention: n
         }),
-        { visibleTopEmojis: x, visibleNewlyAddedEmojis: L } = (0, d.J)({
+        { visibleTopEmojis: L, visibleNewlyAddedEmojis: x } = (0, d.J)({
             topEmojis: O,
             newlyAddedEmojis: D,
             rowSize: m
@@ -62,10 +62,10 @@ function g(e) {
         num_standard_expressions_frecent: N.filter((e) => null == e.id).length,
         num_current_guild_expressions: C.length,
         num_custom_expressions_total: R,
-        num_expressions_top_server: x.length,
-        num_animated_expressions_top_server: x.filter((e) => e.animated).length,
-        num_expressions_newly_added: L.length,
-        num_animated_expressions_newly_added: L.filter((e) => e.animated).length,
+        num_expressions_top_server: L.length,
+        num_animated_expressions_top_server: L.filter((e) => e.animated).length,
+        num_expressions_newly_added: x.length,
+        num_animated_expressions_newly_added: x.filter((e) => e.animated).length,
         ...(n === p.Hz.REACTION && { is_burst: g }),
         ...(null != E && { location_object: E })
     });

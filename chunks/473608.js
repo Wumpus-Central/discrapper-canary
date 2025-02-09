@@ -11,7 +11,7 @@ var i = n(200651),
     f = n(731896),
     _ = n(594174),
     p = n(597688),
-    h = n(452049),
+    h = n(233639),
     m = n(223223);
 let g = (e) => {
         let { avatarDecoration: t, fallbackLabel: n } = e,

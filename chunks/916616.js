@@ -1,4 +1,4 @@
-n.d(t, { E: () => b }), n(47120);
+n.d(t, { E: () => T }), n(47120);
 var i,
     r = n(200651),
     a = n(192379),
@@ -14,7 +14,7 @@ var i,
     h = n(981631),
     m = n(217702),
     g = n(388032),
-    E = n(319378),
+    E = n(798022),
     v = n(167969),
     y = n(557256);
 function I(e, t, n) {
@@ -30,10 +30,10 @@ function I(e, t, n) {
         e
     );
 }
-class b extends (i = a.PureComponent) {
+class T extends (i = a.PureComponent) {
     render() {
         let e;
-        let { className: t, imageClassName: n, readyState: i, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: m, maxWidth: v = _, maxHeight: y = m, minWidth: I, minHeight: b, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: x, renderAccessory: L, onClick: P, tabIndex: w, dataSafeSrc: M, useFullWidth: k = !1, ...U } = this.props;
+        let { className: t, imageClassName: n, readyState: i, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: m, maxWidth: v = _, maxHeight: y = m, minWidth: I, minHeight: T, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: P, dataSafeSrc: M, useFullWidth: k = !1, ...U } = this.props;
         if (1 === _ && 1 === m) return null;
         let G = (0, f.Tj)({
                 width: _,
@@ -41,11 +41,11 @@ class b extends (i = a.PureComponent) {
                 maxWidth: v,
                 maxHeight: y,
                 minWidth: I,
-                minHeight: b
+                minHeight: T
             }),
             B = 0 !== G.width ? G.width / G.height : 1;
         '' !== a && i !== h.zo9.ERROR
-            ? (e = x({
+            ? (e = L({
                   src: a,
                   size: G,
                   alt: c,
@@ -53,7 +53,7 @@ class b extends (i = a.PureComponent) {
                   mediaLayoutType: N
               }))
             : i !== h.zo9.LOADING &&
-              (e = (0, r.jsx)(T, {
+              (e = (0, r.jsx)(b, {
                   size: G,
                   mediaLayoutType: N,
                   alt: c
@@ -66,7 +66,7 @@ class b extends (i = a.PureComponent) {
                 placeholderStyle: A(G, N),
                 children: e
             }));
-        let Z = null != L ? L() : null;
+        let Z = null != x ? x() : null;
         return (
             (Z = null != Z ? Z : R),
             (0, r.jsx)(u.tEY, {
@@ -78,7 +78,7 @@ class b extends (i = a.PureComponent) {
                         {
                             [E.imageZoom]: O,
                             [E.imageWrapperBackground]: i !== h.zo9.READY,
-                            [E.clickable]: null != P
+                            [E.clickable]: null != w
                         },
                         t
                     ),
@@ -88,7 +88,7 @@ class b extends (i = a.PureComponent) {
                         null != D &&
                             (0, r.jsx)('a', {
                                 tabIndex: -1,
-                                onClick: P,
+                                onClick: w,
                                 'aria-hidden': !0,
                                 className: E.originalLink,
                                 href: D,
@@ -96,11 +96,11 @@ class b extends (i = a.PureComponent) {
                                 'data-role': 'img',
                                 'data-safe-src': null != M ? M : a
                             }),
-                        null != P
+                        null != w
                             ? (0, r.jsx)(u.P3F, {
                                   className: E.clickableWrapper,
-                                  tabIndex: null != w ? w : 0,
-                                  onClick: P,
+                                  tabIndex: null != P ? P : 0,
+                                  onClick: w,
                                   'aria-label': null != c ? c : g.intl.string(g.t.X4IxWF),
                                   'aria-describedby': d.r5,
                                   innerRef: this._clickableRef,
@@ -123,7 +123,7 @@ class b extends (i = a.PureComponent) {
         super(...e), I(this, '_containerRef', a.createRef()), I(this, '_clickableRef', a.createRef());
     }
 }
-function T(e) {
+function b(e) {
     let { size: t, mediaLayoutType: n, alt: i } = e,
         a = (0, c.ZP)();
     return (0, r.jsx)('div', {
@@ -198,7 +198,7 @@ function C(e) {
         aspectRatio: ''.concat(t, ' / ').concat(n)
     };
 }
-I(b, 'defaultProps', {
+I(T, 'defaultProps', {
     readyState: h.zo9.READY,
     zoomable: !0,
     children: (e) => {

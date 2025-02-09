@@ -24,7 +24,7 @@ function v(e) {
 }
 let y = {
     async handleVoiceConnect(e) {
-        let { channel: t, connected: o, needSubscriptionToAccess: y, locked: I = !1, routeDirectlyToChannel: b = !1, bypassChangeModal: T, bypassBlockedWarningModal: S, bypassGuildIdCheck: A = !1 } = e;
+        let { channel: t, connected: o, needSubscriptionToAccess: y, locked: I = !1, routeDirectlyToChannel: T = !1, bypassChangeModal: b, bypassBlockedWarningModal: S, bypassGuildIdCheck: A = !1 } = e;
         t.isThread() && (await d.Z.unarchiveThreadIfNecessary(t.id), c.Z.hasJoined(t.id) || (await d.Z.joinThread(t, 'Join Voice')));
         let N = s.Z.getRemoteSessionId(),
             C = p.Z.getVoiceStateForSession(f.default.getId(), N),
@@ -32,7 +32,7 @@ let y = {
             O = u.Z.getBlockedUsersForVoiceChannel(t.id),
             D = u.Z.getIgnoredUsersForVoiceChannel(t.id);
         return ((0, l.B)(t.id) && (S = !0), S || I || o || (!(O.size > 0) && !(D.size > 0)))
-            ? !T && !I && (0, m._)(t)
+            ? !b && !I && (0, m._)(t)
                 ? new Promise((e) => {
                       (0, r.ZDy)(async () => {
                           let { default: r } = await n.e('65045').then(n.bind(n, 143782));
@@ -45,7 +45,7 @@ let y = {
                                               channel: t,
                                               connected: o,
                                               needSubscriptionToAccess: y,
-                                              routeDirectlyToChannel: b,
+                                              routeDirectlyToChannel: T,
                                               locked: I,
                                               bypassChangeModal: !0
                                           })
@@ -54,7 +54,7 @@ let y = {
                               });
                       });
                   })
-                : (I || o || a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (o || R || y || b) && v(t, A), !0)
+                : (I || o || a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (o || R || y || T) && v(t, A), !0)
             : new Promise((e) => {
                   (0, r.ZDy)(
                       async () => {
@@ -73,7 +73,7 @@ let y = {
                                               channel: t,
                                               connected: o,
                                               needSubscriptionToAccess: y,
-                                              routeDirectlyToChannel: b,
+                                              routeDirectlyToChannel: T,
                                               locked: I,
                                               bypassChangeModal: !0,
                                               bypassBlockedWarningModal: !0

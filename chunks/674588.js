@@ -1,8 +1,8 @@
 n.d(t, {
     CP: () => R,
     T4: () => O,
-    XK: () => L,
-    g5: () => P,
+    XK: () => x,
+    g5: () => w,
     gZ: () => N,
     i6: () => C,
     yC: () => D
@@ -28,8 +28,8 @@ var c = n(706454),
     v = n(981631);
 let y = 1000,
     I = 5000,
-    b = 10,
-    T = 86400000,
+    T = 10,
+    b = 86400000,
     S = 600000,
     A = new Map();
 async function N(e) {
@@ -45,7 +45,7 @@ async function N(e) {
     let a = new i.Z(y, I),
         s = (e, t) =>
             429 === e.status &&
-            a.fails < b &&
+            a.fails < T &&
             (a.fail(() => {
                 t(void 0, s);
             }),
@@ -55,7 +55,7 @@ async function N(e) {
             await l.tn.get({
                 url: v.ANM.APPLICATION_DIRECTORY_EMBED_APPLICATION(e),
                 backoff: a,
-                retries: b,
+                retries: T,
                 interceptResponse: s,
                 rejectWithError: !1
             })
@@ -178,7 +178,7 @@ async function D(e) {
     let { query: n, guildId: i, options: r, onSuccessCallback: a } = e,
         { page: s, pageSize: d, categoryId: f, integrationType: _, minUserInstallCommandCount: p, excludeAppsWithCustomInstallUrl: h, excludeNonEmbeddedApps: g, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E, source: y = o.F.APP_DIRECTORY } = null != r ? r : {},
         I = Date.now(),
-        b = m.Z.getFetchState({
+        T = m.Z.getFetchState({
             query: n,
             guildId: i,
             page: s,
@@ -186,7 +186,7 @@ async function D(e) {
             categoryId: f,
             integrationType: _
         }),
-        { lastFetchTimeMs: T } =
+        { lastFetchTimeMs: b } =
             null !==
                 (t = m.Z.getSearchResults({
                     query: n,
@@ -198,7 +198,7 @@ async function D(e) {
                 })) && void 0 !== t
                 ? t
                 : {};
-    if (b !== m.M.FETCHING && (null == T || !(T + S > I))) {
+    if (T !== m.M.FETCHING && (null == b || !(b + S > I))) {
         u.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_SEARCH',
             query: n,
@@ -273,10 +273,10 @@ async function D(e) {
         }
     }
 }
-function x() {
+function L() {
     return (0, f.isAndroid)() ? a.R.ANDROID : (0, f.isIOS)() ? a.R.IOS : a.R.WEB;
 }
-async function L() {
+async function x() {
     let { surface: e = s.Y.APPLICATION_DIRECTORY, activeState: t = r.E.ACTIVE } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         n = d.default.disableAppCollectionsCache,
         i = Date.now(),
@@ -302,7 +302,7 @@ async function L() {
                 query: {
                     surface: e,
                     active_state: t,
-                    platform: x(),
+                    platform: L(),
                     locale: c.default.locale,
                     cache: f
                 },
@@ -323,12 +323,12 @@ async function L() {
         }
     }
 }
-async function P() {
+async function w() {
     let e = Date.now(),
         t = E.Z.getFetchState(),
         n = E.Z.getLastFetchTimeMs(),
         i = E.Z.getNextFetchRetryTimeMs();
-    if (t !== E.M.FETCHING && (null == n || !(n + T > e)) && (null == i || !(e < i))) {
+    if (t !== E.M.FETCHING && (null == n || !(n + b > e)) && (null == i || !(e < i))) {
         u.Z.dispatch({ type: 'FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS' });
         try {
             let e = await l.tn.get({

@@ -15,9 +15,9 @@ var i = n(200651),
     _ = n(51144),
     f = n(524484),
     E = n(388032),
-    I = n(525270);
+    I = n(222018);
 let C = { offset: 2 },
-    N = {
+    v = {
         serverDeaf: {
             icon: o.Vm4,
             colorize: !0,
@@ -44,9 +44,9 @@ let C = { offset: 2 },
             getStatus: () => E.intl.string(E.t['9F+xJS'])
         }
     };
-function v(e) {
+function N(e) {
     var t, l;
-    let { channel: r, user: p, nick: v, mute: T, deaf: S, serverMute: Z, serverDeaf: A } = e,
+    let { channel: r, user: p, nick: N, mute: T, deaf: S, serverMute: A, serverDeaf: Z } = e,
         x = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         b = (0, d.Z)({
             userId: p.id,
@@ -54,7 +54,7 @@ function v(e) {
         }),
         L = null !== (t = r.getGuildId()) && void 0 !== t ? t : void 0,
         y = p.getAvatarURL(r.guild_id, 24),
-        P = null != v ? v : _.ZP.getName(p),
+        P = null != N ? N : _.ZP.getName(p),
         {
             icon: O,
             colorize: R,
@@ -62,15 +62,15 @@ function v(e) {
         } = null !==
             (l = (function (e) {
                 let { serverDeaf: t, deaf: n, serverMute: i, mute: l, localMute: r } = e;
-                if (t) return N.serverDeaf;
-                if (n) return N.deaf;
-                if (i) return N.serverMute;
-                if (r) return N.localMute;
-                if (l) return N.mute;
+                if (t) return v.serverDeaf;
+                if (n) return v.deaf;
+                if (i) return v.serverMute;
+                if (r) return v.localMute;
+                if (l) return v.mute;
             })({
-                serverDeaf: A,
+                serverDeaf: Z,
                 deaf: S,
-                serverMute: Z,
+                serverMute: A,
                 mute: T,
                 localMute: x
             })) && void 0 !== l
@@ -86,7 +86,7 @@ function v(e) {
     function w(e) {
         null != L
             ? (0, c.jW)(e, async () => {
-                  let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('7717'), n.e('11875')]).then(n.bind(n, 757387));
+                  let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('7717'), n.e('44475')]).then(n.bind(n, 757387));
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,
@@ -97,7 +97,7 @@ function v(e) {
                       });
               })
             : (0, c.jW)(e, async () => {
-                  let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('95052')]).then(n.bind(n, 881351));
+                  let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('18509')]).then(n.bind(n, 881351));
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,
@@ -191,7 +191,7 @@ function T(e) {
                           let { user: t, nick: l, voiceState: r } = e;
                           return t.id !== m
                               ? (0, i.jsx)(
-                                    v,
+                                    N,
                                     {
                                         channel: n,
                                         user: t,

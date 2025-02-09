@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(620662),
     h = n(841784),
     p = n(471445),
-    g = n(430824),
-    m = n(496675),
+    m = n(430824),
+    g = n(496675),
     f = n(158776),
     _ = n(979651),
     v = n(823379),
@@ -22,11 +22,11 @@ var i = n(200651),
     b = n(543432),
     S = n(981631),
     N = n(388032),
-    E = n(684393),
-    j = n(738523);
+    E = n(39085),
+    j = n(348554);
 function y(e) {
     var t, r;
-    let { channel: a, guild: p, onAction: g, voiceStates: m, isChannelSelected: _, shouldShowSettingNudge: C } = e;
+    let { channel: a, guild: p, onAction: m, voiceStates: g, isChannelSelected: _, shouldShowSettingNudge: C } = e;
     !(function (e, t) {
         let n = l.useMemo(() => {
             var n;
@@ -44,10 +44,10 @@ function y(e) {
                   };
         }, [e, t]);
         (0, c.$)(n);
-    })(a, m);
+    })(a, g);
     let Z = (0, d.ZP)(a),
         I = Array.from((0, d.uF)(Z).values()),
-        b = null !== (t = null == m ? void 0 : m.filter(v.lm)) && void 0 !== t ? t : [],
+        b = null !== (t = null == g ? void 0 : g.filter(v.lm)) && void 0 !== t ? t : [],
         j = (e) => (t) => ([S.IIU.PLAYING, S.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === S.IIU.LISTENING,
         y = (0, o.e7)(
             [f.Z],
@@ -83,7 +83,7 @@ function y(e) {
                   (0, i.jsx)(P, {
                       channel: a,
                       isChannelSelected: _,
-                      voiceStatesCount: null !== (r = null == m ? void 0 : m.length) && void 0 !== r ? r : 0
+                      voiceStatesCount: null !== (r = null == g ? void 0 : g.length) && void 0 !== r ? r : 0
                   }),
                   (0, i.jsx)('div', { className: E.headerDivider }),
                   I.map((e, t) => {
@@ -94,7 +94,7 @@ function y(e) {
                               embeddedApp: e,
                               presenceActivity: null !== (n = e.presenceActivity) && void 0 !== n ? n : void 0,
                               channel: a,
-                              onAction: g
+                              onAction: m
                           },
                           t
                       );
@@ -107,7 +107,7 @@ function y(e) {
                               presenceActivity: l,
                               channel: a,
                               members: n,
-                              onAction: g
+                              onAction: m
                           },
                           t
                       );
@@ -124,7 +124,7 @@ function y(e) {
                                       children: N.intl.format(N.t.ePyoY2, {
                                           onClick: () => {
                                               (0, s.ZDy)(async () => {
-                                                  let { default: e } = await Promise.all([n.e('23217'), n.e('84605'), n.e('8016'), n.e('17938'), n.e('76540'), n.e('68445'), n.e('49508'), n.e('22646'), n.e('3940'), n.e('25183'), n.e('48923'), n.e('30419'), n.e('18824'), n.e('28805'), n.e('4877'), n.e('8744')]).then(n.bind(n, 241420));
+                                                  let { default: e } = await Promise.all([n.e('23217'), n.e('84605'), n.e('33053'), n.e('8016'), n.e('17298'), n.e('76540'), n.e('17938'), n.e('81966'), n.e('22646'), n.e('3940'), n.e('78258'), n.e('48923'), n.e('30419'), n.e('18824'), n.e('72992'), n.e('49508'), n.e('25183'), n.e('28044'), n.e('44307'), n.e('27541'), n.e('4877'), n.e('40994')]).then(n.bind(n, 241420));
                                                   return (t) =>
                                                       (0, i.jsx)(e, {
                                                           ...t,
@@ -142,7 +142,7 @@ function y(e) {
 }
 function P(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
-        r = (0, o.e7)([m.Z], () => !m.Z.can(S.Plq.CONNECT, t)),
+        r = (0, o.e7)([g.Z], () => !g.Z.can(S.Plq.CONNECT, t)),
         s = (0, o.e7)([_.Z], () => _.Z.hasVideo(t.id)),
         c = (0, C.ZP)({
             channel: t,
@@ -150,7 +150,7 @@ function P(e) {
             video: s,
             selected: n
         }),
-        d = (0, o.e7)([g.Z], () => g.Z.getGuild(t.guild_id));
+        d = (0, o.e7)([m.Z], () => m.Z.getGuild(t.guild_id));
     return null == (0, p.KS)(t, d)
         ? null
         : (0, i.jsxs)('div', {

@@ -1,5 +1,5 @@
 n.d(t, {
-    PD: () => A,
+    PD: () => T,
     ZP: () => L,
     aR: () => w
 }),
@@ -15,8 +15,8 @@ var i = n(200651),
     u = n(481060),
     h = n(239091),
     p = n(100527),
-    g = n(367907),
-    m = n(906732),
+    m = n(367907),
+    g = n(906732),
     f = n(540059),
     _ = n(434404),
     v = n(496675),
@@ -29,9 +29,9 @@ var i = n(200651),
     N = n(30513),
     E = n(981631),
     j = n(388032),
-    y = n(976019);
+    y = n(474985);
 let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-    T = (e) => {
+    A = (e) => {
         let { guild: t, onSelect: n } = e,
             [r, a] = l.useState(t.premiumProgressBarEnabled),
             [o, s] = l.useState(!1),
@@ -53,7 +53,7 @@ let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             })
         });
     },
-    A = 57,
+    T = 57,
     w = 57 + P,
     R = {
         tension: 180,
@@ -62,12 +62,12 @@ let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     L = (e) => {
         let { guild: t, withMargin: n } = e,
             r = (0, f.Q3)('GuildBoostingSidebarDisplay'),
-            { analyticsLocations: d } = (0, m.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
+            { analyticsLocations: d } = (0, g.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
             { premiumSubscriberCount: _, id: Z } = t,
             P = (0, x.rF)(_, Z),
-            A = (0, x.FZ)(P, t.id),
-            w = null == A,
-            L = null != A ? A : P,
+            T = (0, x.FZ)(P, t.id),
+            w = null == T,
+            L = null != T ? T : P,
             M = (0, c.e7)([b.Z], () => {
                 var e;
                 return null !== (e = b.Z.getCountForGuild(Z)) && void 0 !== e ? e : 0;
@@ -85,7 +85,7 @@ let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             },
             [O, U] = (0, u.q_F)(() => B),
             V = () => {
-                (0, g.yw)(E.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                (0, m.yw)(E.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: { section: E.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                     guild_id: Z,
                     location_stack: d
@@ -137,7 +137,7 @@ let P = (0, Z.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                         onContextMenu: (e) => {
                             D &&
                                 (0, h.vq)(e, (e) =>
-                                    (0, i.jsx)(T, {
+                                    (0, i.jsx)(A, {
                                         ...e,
                                         guild: t
                                     })

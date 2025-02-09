@@ -4,14 +4,14 @@ n.d(t, {
 });
 var i = n(544891),
     s = n(570140),
-    r = n(809206),
-    l = n(981631);
+    l = n(809206),
+    r = n(981631);
 function a() {
     return (
         s.Z.dispatch({ type: 'LOAD_DATA_HARVEST_TYPE_START' }),
         i.tn
             .get({
-                url: l.ANM.USER_HARVEST,
+                url: r.ANM.USER_HARVEST,
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
@@ -30,7 +30,7 @@ function a() {
     );
 }
 function o(e) {
-    return (0, r.V3)(e).then(
+    return (0, l.V3)(e).then(
         (e) => (
             null != e &&
                 null != e.body &&

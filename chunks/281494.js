@@ -1,9 +1,9 @@
 n.d(t, {
     C$: () => v,
-    Eo: () => b,
+    Eo: () => T,
     Fe: () => _,
     Fz: () => p,
-    IB: () => T,
+    IB: () => b,
     Ve: () => y,
     bq: () => g,
     iF: () => E,
@@ -186,7 +186,7 @@ async function I(e) {
         n
     );
 }
-async function b(e) {
+async function T(e) {
     try {
         var t;
         let n = await i.tn.post({
@@ -209,7 +209,7 @@ async function b(e) {
         }
     }
 }
-async function T(e) {
+async function b(e) {
     try {
         var t;
         let n = await i.tn.get({

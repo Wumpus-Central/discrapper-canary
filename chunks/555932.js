@@ -10,7 +10,7 @@ var i = n(200651),
     d = n(436444),
     f = n(981631),
     _ = n(388032),
-    p = n(572656);
+    p = n(855161);
 let h = 200,
     m = 250,
     g = 36,
@@ -73,18 +73,18 @@ function I(e) {
         [o, h] = r.useState(!1),
         [g, E] = r.useState(0),
         I = r.useRef(null),
-        b = Math.min(f.Eu4.TIER_3, t.premiumTier + 1),
-        T = f.oCV[t.premiumTier],
-        S = f.oCV[b],
-        A = (t.premiumSubscriberCount - T) / (S - T),
+        T = Math.min(f.Eu4.TIER_3, t.premiumTier + 1),
+        b = f.oCV[t.premiumTier],
+        S = f.oCV[T],
+        A = (t.premiumSubscriberCount - b) / (S - b),
         N = d.P[t.premiumTier],
-        C = d.P[b],
+        C = d.P[T],
         {
             progressBarFillWidthFactor: R,
             isProgressBarAnimationComplete: O,
             setShouldFireConfetti: D,
-            shouldFireConfetti: x,
-            tierMarkerAnimationPosition: L
+            shouldFireConfetti: L,
+            tierMarkerAnimationPosition: x
         } = y({
             fillFactor: t.premiumTier === f.Eu4.TIER_3 ? 1 : A * (C - N) + N,
             isRevealed: o || n,
@@ -138,7 +138,7 @@ function I(e) {
                             setConfettiCount: E,
                             setShouldFireConfetti: D,
                             tier: e,
-                            tierMarkerAnimationPosition: L,
+                            tierMarkerAnimationPosition: x,
                             children: (0, u.nW)(e)
                         },
                         e
@@ -147,7 +147,7 @@ function I(e) {
                 (0, i.jsx)(c.Z, {
                     confettiCount: g,
                     confettiTriggerRef: I,
-                    isFiring: x
+                    isFiring: L
                 })
             ]
         })

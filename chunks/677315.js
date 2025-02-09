@@ -17,8 +17,8 @@ var i,
     v = n(13780),
     y = n(992416),
     I = n(62691).set,
-    b = n(584831),
-    T = n(502856),
+    T = n(584831),
+    b = n(502856),
     S = n(139545),
     A = n(6938),
     N = n(29461),
@@ -26,10 +26,10 @@ var i,
     R = n(732116),
     O = n(653457),
     D = 'Promise',
-    x = R.CONSTRUCTOR,
-    L = R.REJECTION_EVENT,
-    P = R.SUBCLASSING,
-    w = N.getterFor(D),
+    L = R.CONSTRUCTOR,
+    x = R.REJECTION_EVENT,
+    w = R.SUBCLASSING,
+    P = N.getterFor(D),
     M = N.set,
     k = C && C.prototype,
     U = C,
@@ -70,7 +70,7 @@ var i,
     ee = function (e, t) {
         e.notified ||
             ((e.notified = !0),
-            b(function () {
+            T(function () {
                 for (var n, i = e.reactions; (n = i.get()); ) $(n, e);
                 (e.notified = !1), t && !e.rejection && en(e);
             }));
@@ -83,7 +83,7 @@ var i,
                   promise: t,
                   reason: n
               }),
-            !L && (r = c['on' + e]) ? r(i) : e === Y && T('Unhandled promise rejection', n);
+            !x && (r = c['on' + e]) ? r(i) : e === Y && b('Unhandled promise rejection', n);
     },
     en = function (e) {
         d(I, c, function () {
@@ -125,7 +125,7 @@ var i,
                 if (e.facade === t) throw new B("Promise can't be resolved itself");
                 var i = J(t);
                 i
-                    ? b(function () {
+                    ? T(function () {
                           var n = { done: !1 };
                           try {
                               d(i, t, ea(eo, n, e), ea(es, n, e));
@@ -140,10 +140,10 @@ var i,
         }
     };
 if (
-    x &&
+    L &&
     ((G = (U = function (e) {
         v(this, G), m(e), d(i, this);
-        var t = w(this);
+        var t = P(this);
         try {
             e(ea(eo, t), ea(es, t));
         } catch (e) {
@@ -162,7 +162,7 @@ if (
             value: void 0
         });
     }).prototype = f(G, 'then', function (e, t) {
-        var n = w(this),
+        var n = P(this),
             i = V(y(this, U));
         return (
             (n.parent = !0),
@@ -171,7 +171,7 @@ if (
             (i.domain = u ? F.domain : void 0),
             n.state === K
                 ? n.reactions.add(i)
-                : b(function () {
+                : T(function () {
                       $(i, n);
                   }),
             i.promise
@@ -179,7 +179,7 @@ if (
     })),
     (r = function () {
         var e = new i(),
-            t = w(e);
+            t = P(e);
         (this.promise = e), (this.resolve = ea(eo, t)), (this.reject = ea(es, t));
     }),
     (O.f = V =
@@ -189,7 +189,7 @@ if (
     !l && g(C) && k !== Object.prototype)
 ) {
     (s = k.then),
-        P ||
+        w ||
             f(
                 k,
                 'then',
@@ -211,7 +211,7 @@ o(
         global: !0,
         constructor: !0,
         wrap: !0,
-        forced: x
+        forced: L
     },
     { Promise: U }
 ),

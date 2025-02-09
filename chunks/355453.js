@@ -11,11 +11,11 @@ var i = n(200651),
     u = n(710111),
     p = n(981631),
     b = n(388032),
-    _ = n(111764);
+    _ = n(688592);
 function m(e) {
     var t;
     let { transitionState: n, onClose: m } = e,
-        g = (0, r.e7)([c.Z], () => c.Z.getKeybindForAction(p.kg4.SOUNDBOARD_HOLD)),
+        g = (0, r.e7)([c.ZP], () => c.ZP.getKeybindForAction(p.kg4.SOUNDBOARD_HOLD)),
         [f, E] = s.useState(null !== (t = null == g ? void 0 : g.shortcut) && void 0 !== t ? t : []);
     return (
         s.useEffect(

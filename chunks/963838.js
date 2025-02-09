@@ -4,7 +4,7 @@ n.d(t, {
     _r: () => Z,
     cX: () => V,
     lv: () => G,
-    v: () => w
+    v: () => P
 });
 var i = n(392711),
     r = n.n(i),
@@ -25,8 +25,8 @@ var i = n(392711),
     v = n(252611),
     y = n(136144),
     I = n(316137),
-    b = n(654123),
-    T = n(660020),
+    T = n(654123),
+    b = n(660020),
     S = n(980084),
     A = n(24688),
     N = n(200997),
@@ -34,18 +34,18 @@ var i = n(392711),
     R = n(134432),
     O = n(594174),
     D = n(768581),
-    x = n(176354),
-    L = n(353368),
-    P = n(388032);
-let w = {
+    L = n(176354),
+    x = n(353368),
+    w = n(388032);
+let P = {
         start: 10,
         end: 15
     },
     M = [a],
-    k = [s, o, l, u, c, d, f, _, p, h, m, g, E, v, y, I, b, T, S, A, N],
+    k = [s, o, l, u, c, d, f, _, p, h, m, g, E, v, y, I, T, b, S, A, N],
     U = {
-        [L.q.BASIC]: M,
-        [L.q.PREMIUM]: k
+        [x.q.BASIC]: M,
+        [x.q.PREMIUM]: k
     },
     G = r().memoize(
         (e) =>
@@ -54,7 +54,7 @@ let w = {
                 (n.src = e),
                     (n.crossOrigin = 'Anonymous'),
                     (n.onload = () => {
-                        let i = L.v * (0, R.x_)();
+                        let i = x.v * (0, R.x_)();
                         if (n.width === i && n.height === i) t(e);
                         else {
                             var r;
@@ -66,14 +66,14 @@ let w = {
     ),
     B = (e, t) => {
         let n = U[e];
-        if (null != t && e === L.q.PREMIUM) {
+        if (null != t && e === x.q.PREMIUM) {
             let e = t.end + 1;
             return Math.floor(Math.random() * (t.start - e) + e);
         }
         return Math.floor(Math.random() * n.length);
     };
 function Z(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L.v;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x.v;
     if (null != e.id) {
         var n;
         return D.ZP.getEmojiURL({
@@ -84,7 +84,7 @@ function Z(e) {
     }
     let i = C.ZP.convertSurrogateToName(e.name, !1),
         r = C.ZP.getByName(i);
-    return null != r ? x.ZP.getURL(r.surrogates) : '';
+    return null != r ? L.ZP.getURL(r.surrogates) : '';
 }
 function F(e, t) {
     return r()(e)
@@ -105,17 +105,17 @@ function V(e) {
     return o.length < 1
         ? ''
         : 1 === o.length
-          ? P.intl.formatToPlainString(P.t.yZYxzM, {
+          ? w.intl.formatToPlainString(w.t.yZYxzM, {
                 firstUsername: null === (n = O.default.getUser(o[0])) || void 0 === n ? void 0 : n.username,
                 emojiNames: u
             })
           : 2 === o.length
-            ? P.intl.formatToPlainString(P.t['8rmtbW'], {
+            ? w.intl.formatToPlainString(w.t['8rmtbW'], {
                   firstUsername: null === (i = O.default.getUser(o[0])) || void 0 === i ? void 0 : i.username,
                   secondUsername: null === (r = O.default.getUser(o[1])) || void 0 === r ? void 0 : r.username,
                   emojiNames: u
               })
-            : P.intl.formatToPlainString(P.t['/okjv7'], {
+            : w.intl.formatToPlainString(w.t['/okjv7'], {
                   firstUsername: null === (a = O.default.getUser(o[0])) || void 0 === a ? void 0 : a.username,
                   secondUsername: null === (s = O.default.getUser(o[1])) || void 0 === s ? void 0 : s.username,
                   count: o.length - 2,

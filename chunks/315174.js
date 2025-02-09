@@ -10,26 +10,26 @@ var i = n(200651),
     u = n(666188),
     h = n(695346),
     p = n(768581),
-    g = n(358555),
-    m = n(981631),
+    m = n(358555),
+    g = n(981631),
     f = n(647086),
     _ = n(388032),
-    v = n(837349);
+    v = n(338680);
 function C(e) {
     var t;
     let { guild: n, controller: l, guildBanner: r, animate: c } = e,
         { value: u } = l.springs,
-        g = h.QK.getSetting(),
-        m = (0, d.Q3)('AnimatedBanner') ? 150 : 90;
+        m = h.QK.getSetting(),
+        g = (0, d.Q3)('AnimatedBanner') ? 150 : 90;
     return (0, i.jsx)(o.animated.div, {
         className: v.animatedContainer,
         style: {
             opacity: u,
-            transform: u.to((e) => 'translateY(-'.concat((1 - e) * m, 'px)'))
+            transform: u.to((e) => 'translateY(-'.concat((1 - e) * g, 'px)'))
         },
         children: (0, i.jsx)(o.animated.div, {
             className: a()(v.bannerImage, { [v.bannerImgFullWidth]: s.tq }),
-            style: { transform: u.to((e) => (g ? 'translateY('.concat((1 - e) * m * (2 / 3), 'px) scale(').concat(1 + (1 - e) * 0.2, ')') : 'translateY('.concat((1 - e) * m, 'px)'))) },
+            style: { transform: u.to((e) => (m ? 'translateY('.concat((1 - e) * g * (2 / 3), 'px) scale(').concat(1 + (1 - e) * 0.2, ')') : 'translateY('.concat((1 - e) * g, 'px)'))) },
             children: (0, i.jsx)('img', {
                 className: a()(v.bannerImg, { [v.bannerImgFullWidth]: s.tq }),
                 src:
@@ -52,7 +52,7 @@ function C(e) {
 function x(e) {
     let { guild: t, controller: n, hasBanner: l, hasSubheader: r } = e,
         { value: s } = n.springs,
-        d = t.hasFeature(m.oNc.DISCOVERABLE),
+        d = t.hasFeature(g.oNc.DISCOVERABLE),
         u = (0, i.jsx)('div', {
             className: v.communityInfo,
             children:
@@ -102,8 +102,8 @@ function Z() {
     });
 }
 let I = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: I, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': N, 'aria-controls': E, guild: j, guildBanner: y, animationOverlayHeight: P, children: T, headerClassName: A, communityInfoVisible: w, hasSubheader: R } = e,
-        L = j.hasFeature(m.oNc.ANIMATED_BANNER),
+    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: I, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': N, 'aria-controls': E, guild: j, guildBanner: y, animationOverlayHeight: P, children: A, headerClassName: T, communityInfoVisible: w, hasSubheader: R } = e,
+        L = j.hasFeature(g.oNc.ANIMATED_BANNER),
         M = (0, u.Z)(j),
         D = !M && j.hasCommunityInfoSubheader(),
         G = !M && w,
@@ -134,7 +134,7 @@ let I = l.memo(function (e) {
         },
         W = (0, d.Q3)('GuildHeader');
     return (0, i.jsx)(c.f6W, {
-        theme: t ? m.BRd.DARK : void 0,
+        theme: t ? g.BRd.DARK : void 0,
         children: (e) => {
             var l;
             return (0, i.jsxs)(i.Fragment, {
@@ -155,12 +155,12 @@ let I = l.memo(function (e) {
                         onClick: o,
                         children: [
                             (0, i.jsxs)('header', {
-                                className: a()(v.header, A, { [v.themedHeaderMobile]: s.tq }),
+                                className: a()(v.header, T, { [v.themedHeaderMobile]: s.tq }),
                                 children: [
                                     (0, i.jsxs)('div', {
                                         className: a()(v.headerContent, v.primaryInfo),
                                         children: [
-                                            (0, i.jsx)(g.Z, {
+                                            (0, i.jsx)(m.Z, {
                                                 guild: j,
                                                 isBannerVisible: t
                                             }),
@@ -186,7 +186,7 @@ let I = l.memo(function (e) {
                                                 }),
                                             (0, i.jsx)('div', {
                                                 className: v.headerChildren,
-                                                children: T
+                                                children: A
                                             })
                                         ]
                                     }),

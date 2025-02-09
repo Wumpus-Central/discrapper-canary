@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
-var i = n(200651);
+n.d(t, { Z: () => i });
+var a = n(200651);
 n(192379);
-var r = n(739754);
-function a(e) {
+var o = n(739754);
+function i(e) {
     return {
-        content: (0, i.jsx)(r.ZP, { message: e }),
+        content: (0, a.jsx)(o.ZP, { message: e }),
         hasSpoilerEmbeds: !1
     };
 }

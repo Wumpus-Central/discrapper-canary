@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => T });
 var i = n(200651),
     r = n(192379),
     a = n(442837),
@@ -16,7 +16,7 @@ var i = n(200651),
     g = n(420212),
     E = n(231338),
     v = n(388032),
-    y = n(894639);
+    y = n(220986);
 let I = (e) => {
     let { emoji: t, username: n, sourceType: i, sourceDetails: r } = e,
         a = ':'.concat(t.name, ':');
@@ -36,16 +36,16 @@ let I = (e) => {
             (0, u.vE)(i);
     }
 };
-function b(e) {
-    let { user: t, guildId: n, entry: u, sourceType: _, sourceDetails: v, setPopoutRef: b, onAction: T, onClose: S } = e,
+function T(e) {
+    let { user: t, guildId: n, entry: u, sourceType: _, sourceDetails: v, setPopoutRef: T, onAction: b, onClose: S } = e,
         { resetInteraction: A, setInteractionToast: N } = (0, f.Xo)(),
         { theme: C } = (0, p.z)(),
         R = (0, a.e7)([l.Z], () => l.Z.theme),
         O = (0, s.wj)(R) ? !(0, s.wj)(C) : (0, s.wj)(C),
         D = r.useRef(null);
     r.useEffect(() => {
-        null == b || b(null == D ? void 0 : D.current);
-    }, [D, b]),
+        null == T || T(null == D ? void 0 : D.current);
+    }, [D, T]),
         r.useEffect(() => {
             let e = (e) => {
                 e.key === g.vn.ESCAPE && (e.stopPropagation(), A());
@@ -57,9 +57,9 @@ function b(e) {
                 }
             );
         }, [S, A]);
-    let x = async (e) => {
+    let L = async (e) => {
         if (null == e) return;
-        _ === h.n_.AVATAR ? T({ action: 'SEND_REACT_AVATAR' }) : _ === h.n_.STATUS ? T({ action: 'SEND_REACT_CUSTOM_STATUS' }) : T({ action: 'SEND_REACT_ACTIVITY' });
+        _ === h.n_.AVATAR ? b({ action: 'SEND_REACT_AVATAR' }) : _ === h.n_.STATUS ? b({ action: 'SEND_REACT_CUSTOM_STATUS' }) : b({ action: 'SEND_REACT_ACTIVITY' });
         let n = I({
             emoji: e,
             username: c.ZP.getName(t),
@@ -84,7 +84,7 @@ function b(e) {
         guildId: null != n ? n : void 0,
         closePopout: E.dG,
         onSelectEmoji: async (e, t) => {
-            await x(e), t && (A(), null == S || S());
+            await L(e), t && (A(), null == S || S());
         },
         pickerIntention: m.Hz.PROFILE
     });

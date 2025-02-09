@@ -12,7 +12,7 @@ var i = n(200651),
     m = n(376191),
     p = n(86203),
     g = n(388032),
-    _ = n(48829);
+    _ = n(597644);
 function f(e) {
     let { active: t, user: n, channel: f } = e,
         E = (0, u.V)(),
@@ -22,22 +22,22 @@ function f(e) {
         C = l.useCallback(() => {
             c.Z.closeChannelSidebar(d.uZ);
         }, []),
-        N = l.useCallback(() => {
+        v = l.useCallback(() => {
             c.Z.closeChannelSidebar(d.uZ), E && (0, o.Kh)(f.id);
         }, [f.id, E]),
         {
-            acceptMessageRequest: v,
+            acceptMessageRequest: N,
             isAcceptLoading: T,
             isUserProfileLoading: S,
-            isOptimisticAccepted: Z
+            isOptimisticAccepted: A
         } = (0, h.m)({
             user: n,
-            onAcceptSuccess: N,
+            onAcceptSuccess: v,
             onRejectSuccess: C,
             onError: I
         }),
-        A = T || S,
-        x = A || Z;
+        Z = T || S,
+        x = Z || A;
     return (0, i.jsxs)('div', {
         className: _.container,
         children: [
@@ -54,10 +54,10 @@ function f(e) {
                         color: a.Ttl.PRIMARY,
                         size: a.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            v(f.id), e.stopPropagation();
+                            N(f.id), e.stopPropagation();
                         },
                         disabled: x,
-                        submitting: A,
+                        submitting: Z,
                         children: g.intl.string(g.t.vicfl5)
                     }),
                     (0, i.jsx)(p.Z, {

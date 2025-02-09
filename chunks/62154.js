@@ -1,107 +1,107 @@
-i.d(n, { Z: () => j });
-var t = i(200651);
-i(192379);
-var l = i(442837),
-    o = i(372460),
-    s = i(320582),
-    r = i(699516),
-    a = i(5192),
-    d = i(111361),
-    c = i(648052),
-    u = i(537006),
-    m = i(681837),
-    x = i(91433),
-    p = i(944043),
-    f = i(502762),
-    I = i(530),
-    h = i(740628),
-    v = i(643518),
-    Z = i(228168),
-    g = i(981631),
-    _ = i(171865);
+t.d(n, { Z: () => j });
+var i = t(200651);
+t(192379);
+var l = t(442837),
+    o = t(372460),
+    s = t(320582),
+    r = t(699516),
+    a = t(5192),
+    d = t(111361),
+    c = t(648052),
+    u = t(537006),
+    I = t(681837),
+    f = t(91433),
+    p = t(944043),
+    x = t(502762),
+    _ = t(530),
+    m = t(740628),
+    h = t(643518),
+    Z = t(228168),
+    v = t(981631),
+    g = t(757672);
 function j(e) {
     var n;
-    let { user: i, currentUser: j, guildId: E, channelId: N, displayProfile: y, initialSection: T, initialSubsection: S, friendToken: b, onClose: P } = e,
+    let { user: t, currentUser: j, guildId: E, channelId: y, displayProfile: N, initialSection: T, initialSubsection: b, friendToken: P, onClose: S } = e,
         { relationshipType: L, originApplicationId: C } = (0, l.cj)([r.Z], () => ({
-            relationshipType: r.Z.getRelationshipType(i.id),
-            originApplicationId: r.Z.getOriginApplicationId(i.id)
+            relationshipType: r.Z.getRelationshipType(t.id),
+            originApplicationId: r.Z.getOriginApplicationId(t.id)
         })),
-        A = (0, s.vh)(i.id),
+        A = (0, s.vh)(t.id),
         O = (0, o.wn)({ location: 'UserProfileModalBody' }),
-        M = i.id === j.id,
-        R = (0, d.I5)(j),
-        U = a.ZP.useName(null == y ? void 0 : y.guildId, N, i),
-        F = (0, v.Z)({
-            user: i,
+        R = t.id === j.id,
+        M = (0, d.I5)(j),
+        B = a.ZP.useName(null == N ? void 0 : N.guildId, y, t),
+        U = (0, h.Z)({
+            user: t,
             currentUser: j,
             guildId: E,
-            initialSubsection: S
+            initialSubsection: b
         });
-    return (0, t.jsxs)('div', {
-        className: _.body,
+    return (0, i.jsxs)('div', {
+        className: g.body,
         children: [
-            (0, t.jsx)(I.Z, {
-                user: i,
+            (0, i.jsx)(_.Z, {
+                user: t,
                 profileType: Z.y0.FULL_SIZE,
-                nickname: U,
-                pronouns: null == y ? void 0 : y.pronouns,
+                nickname: B,
+                pronouns: null == N ? void 0 : N.pronouns,
                 nicknameVariant: 'heading-xl/bold',
-                nicknameIcons: (0, t.jsx)(m.Z, { userId: i.id }),
-                tags: (0, t.jsx)(c.Z, {
-                    displayProfile: y,
+                nicknameIcons: (0, i.jsx)(I.Z, { userId: t.id }),
+                tags: (0, i.jsx)(c.Z, {
+                    displayProfile: N,
                     profileType: Z.y0.FULL_SIZE,
-                    onClose: P
+                    onClose: S
                 })
             }),
-            L === g.OGo.PENDING_INCOMING &&
-                (0, t.jsx)(f.Z.Overlay, {
-                    className: _.friendRequestBannerOverlay,
-                    children: (0, t.jsx)(x.Z, {
-                        user: i,
+            L === v.OGo.PENDING_INCOMING &&
+                (0, i.jsx)(x.Z.Overlay, {
+                    className: g.friendRequestBannerOverlay,
+                    children: (0, i.jsx)(f.Z, {
+                        user: t,
                         applicationId: O ? C : void 0,
-                        guildId: null !== (n = null == y ? void 0 : y.guildId) && void 0 !== n ? n : void 0,
-                        channelId: N,
-                        friendToken: b,
-                        className: _.friendRequestBanner
+                        guildId: null !== (n = null == N ? void 0 : N.guildId) && void 0 !== n ? n : void 0,
+                        channelId: y,
+                        friendToken: P,
+                        className: g.friendRequestBanner
                     })
                 }),
             O &&
                 A.map((e) =>
-                    (0, t.jsx)(
-                        f.Z.Overlay,
+                    (0, i.jsx)(
+                        x.Z.Overlay,
                         {
-                            className: _.friendRequestBannerOverlay,
-                            children: (0, t.jsx)(x.Z, {
-                                user: i,
-                                channelId: N,
+                            className: g.friendRequestBannerOverlay,
+                            children: (0, i.jsx)(f.Z, {
+                                user: t,
+                                channelId: y,
                                 isGameRelationship: !0,
                                 applicationId: e.applicationId,
-                                className: _.friendRequestBanner
+                                className: g.friendRequestBanner
                             })
                         },
                         e.applicationId
                     )
                 ),
-            (0, t.jsx)(p.Z, {
-                user: i,
+            (0, i.jsx)(p.Z, {
+                user: t,
                 source: p.t.MODAL
             }),
-            M &&
-                (0, t.jsx)(u.Z, {
-                    isPremiumUser: R,
-                    onInteraction: P
+            R &&
+                (0, i.jsx)(u.Z, {
+                    isPremiumUser: M,
+                    onInteraction: S
                 }),
-            (0, t.jsx)(f.Z.Overlay, {
-                className: _.overlay,
-                children: (0, t.jsx)(h.Z, {
-                    user: i,
+            (0, i.jsx)(x.Z.Overlay, {
+                className: g.overlay,
+                children: (0, i.jsx)(m.Z, {
+                    user: t,
                     currentUser: j,
-                    displayProfile: y,
+                    displayProfile: N,
                     guildId: E,
-                    items: F,
+                    items: U,
                     initialSection: T,
-                    initialSubsection: S,
-                    onClose: P
+                    initialSubsection: b,
+                    onClose: S
                 })
             })
         ]

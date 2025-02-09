@@ -183,8 +183,8 @@ class d {
             let { previous: g, current: E, currentTimestampMs: v, previousTimestampMs: y, numRateSamples: I } = m;
             if (void 0 !== y && v > y) {
                 var t, n, i, r, a, s, o, l, u, c, d, f, _, p;
-                let b = v - y,
-                    T = {
+                let T = v - y,
+                    b = {
                         userId: h,
                         silent: null !== (n = E.silent) && void 0 !== n ? n : 0 - (null !== (t = g.silent) && void 0 !== t ? t : 0),
                         normal: null !== (r = E.normal) && void 0 !== r ? r : 0 - (null !== (i = g.normal) && void 0 !== i ? i : 0),
@@ -197,9 +197,9 @@ class d {
                         expandRate: m.expandRateSum / I,
                         preemptiveExpandRate: m.preemptiveExpandRateSum / I,
                         speechExpandRate: m.speechExpandRateSum / I,
-                        durationMs: b
+                        durationMs: T
                     };
-                T.normal + T.merged + T.expanded + T.accelerated + T.preemptiveExpanded > 0 && e.push(T);
+                b.normal + b.merged + b.expanded + b.accelerated + b.preemptiveExpanded > 0 && e.push(b);
             }
             (this.periodicInboundStats[h].accelerateRateSum = 0), (this.periodicInboundStats[h].expandRateSum = 0), (this.periodicInboundStats[h].preemptiveExpandRateSum = 0), (this.periodicInboundStats[h].speechExpandRateSum = 0), (this.periodicInboundStats[h].numRateSamples = 0), (this.periodicInboundStats[h].previous = E), (this.periodicInboundStats[h].previousTimestampMs = v);
         }
@@ -256,8 +256,8 @@ class d {
                     r().forEach(e.rtp.inbound, (t, n) => {
                         r().forEach(t, (t) => {
                             if ('audio' === t.type) {
-                                var i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, y, I, b;
-                                let T = null !== (i = e.transport.ping) && void 0 !== i ? i : 0,
+                                var i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, y, I, T;
+                                let b = null !== (i = e.transport.ping) && void 0 !== i ? i : 0,
                                     S = t.packetsReceived,
                                     A = t.packetsLost,
                                     N = t.bytesReceived,
@@ -265,14 +265,14 @@ class d {
                                     R = null !== (a = t.fecPacketsReceived) && void 0 !== a ? a : 0,
                                     O = null !== (s = t.fecPacketsDiscarded) && void 0 !== s ? s : 0,
                                     D = null !== (o = t.jitterBuffer) && void 0 !== o ? o : 0,
-                                    x = {
+                                    L = {
                                         audioJitterBuffer: t.audioJitterBuffer,
                                         audioJitterTarget: t.audioJitterTarget,
                                         audioJitterDelay: t.audioJitterDelay,
                                         relativeReceptionDelay: t.relativeReceptionDelay,
                                         relativePlayoutDelay: t.relativePlayoutDelay
                                     },
-                                    L = {
+                                    x = {
                                         silent: t.opSilence,
                                         normal: t.opNormal,
                                         merged: t.opMerge,
@@ -281,7 +281,7 @@ class d {
                                         preemptiveExpanded: t.opPreemptiveExpand,
                                         cng: t.opCNG
                                     },
-                                    P = {
+                                    w = {
                                         passthroughCount: null !== (l = t.passthroughCount) && void 0 !== l ? l : 0,
                                         decryptSuccessCount: null !== (u = t.decryptSuccessCount) && void 0 !== u ? u : 0,
                                         decryptFailureCount: null !== (c = t.decryptFailureCount) && void 0 !== c ? c : 0,
@@ -295,7 +295,7 @@ class d {
                                         i = A - this.inboundStats[n].packetsLost,
                                         a = 0,
                                         s = this.inboundStats[n].mosBuckets;
-                                    e > 0 && i >= 0 && ((a = this.calculateMos(T + D, r().clamp(i / (e + i), 0, 1))), s[Math.floor(a)]++),
+                                    e > 0 && i >= 0 && ((a = this.calculateMos(b + D, r().clamp(i / (e + i), 0, 1))), s[Math.floor(a)]++),
                                         (this.inboundStats[n] = {
                                             packetsReceived: S,
                                             bytesReceived: N,
@@ -307,15 +307,15 @@ class d {
                                             mosSum: this.inboundStats[n].mosSum + a,
                                             mosCount: this.inboundStats[n].mosCount + (a > 0 ? 1 : 0),
                                             mosBuckets: s,
-                                            bufferStats: x,
-                                            frameOpStats: L,
-                                            ...P
+                                            bufferStats: L,
+                                            frameOpStats: x,
+                                            ...w
                                         }),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: this.periodicInboundStats[n].previousTimestampMs,
                                             previous: this.periodicInboundStats[n].previous,
                                             currentTimestampMs: Date.now(),
-                                            current: L,
+                                            current: x,
                                             accelerateRateSum: this.periodicInboundStats[n].accelerateRateSum + (null !== (h = t.accelerateRate) && void 0 !== h ? h : 0),
                                             expandRateSum: this.periodicInboundStats[n].expandRateSum + (null !== (m = t.expandRate) && void 0 !== m ? m : 0),
                                             preemptiveExpandRateSum: this.periodicInboundStats[n].preemptiveExpandRateSum + (null !== (g = t.preemptiveExpandRate) && void 0 !== g ? g : 0),
@@ -334,19 +334,19 @@ class d {
                                         mosSum: 0,
                                         mosCount: 0,
                                         mosBuckets: [0, 0, 0, 0, 0],
-                                        bufferStats: x,
-                                        frameOpStats: L,
-                                        ...P
+                                        bufferStats: L,
+                                        frameOpStats: x,
+                                        ...w
                                     }),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: Date.now(),
-                                            previous: L,
+                                            previous: x,
                                             currentTimestampMs: Date.now(),
-                                            current: L,
+                                            current: x,
                                             accelerateRateSum: null !== (v = t.accelerateRate) && void 0 !== v ? v : 0,
                                             expandRateSum: null !== (y = t.expandRate) && void 0 !== y ? y : 0,
                                             preemptiveExpandRateSum: null !== (I = t.preemptiveExpandRate) && void 0 !== I ? I : 0,
-                                            speechExpandRateSum: null !== (b = t.speechExpandRate) && void 0 !== b ? b : 0,
+                                            speechExpandRateSum: null !== (T = t.speechExpandRate) && void 0 !== T ? T : 0,
                                             numRateSamples: 1
                                         });
                             }

@@ -11,22 +11,22 @@ var i = n(200651),
     f = n(5192),
     _ = n(785717),
     p = n(388032),
-    h = n(117191);
+    h = n(252020);
 function m(e) {
     let { user: t, guildId: n, channelId: a, applicationId: m, friendToken: g, isGameRelationship: E = !1, className: v } = e,
         y = f.ZP.getName(n, a, t),
         { trackUserProfileAction: I } = (0, _.KZ)(),
-        { newestAnalyticsLocation: b } = (0, l.ZP)(),
-        { acceptFriendRequest: T, cancelFriendRequest: S } = (0, d.u)({
+        { newestAnalyticsLocation: T } = (0, l.ZP)(),
+        { acceptFriendRequest: b, cancelFriendRequest: S } = (0, d.u)({
             userId: t.id,
             applicationId: m,
             isGameRelationship: E,
-            location: b,
+            location: T,
             friendToken: g
         }),
         A = r.useCallback(() => {
-            T(), I({ action: E ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
-        }, [T, E, I]),
+            b(), I({ action: E ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
+        }, [b, E, I]),
         N = r.useCallback(() => {
             S(), I({ action: E ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' });
         }, [S, E, I]),

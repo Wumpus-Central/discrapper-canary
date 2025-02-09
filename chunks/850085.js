@@ -17,7 +17,7 @@ var r = n(200651),
     E = n(981631),
     w = n(678916),
     R = n(388032),
-    f = n(63059);
+    f = n(310857);
 let x = (e) => {
     let { file: t, imgURI: n, transitionState: x, allowSkip: N = !1, onCrop: M, onClose: _, uploadType: v = A.pC.AVATAR, showUpsellHeader: D = !1, analyticsPage: y } = e,
         [k, L] = i.useState({

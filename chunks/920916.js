@@ -23,8 +23,8 @@ var i = n(200651),
     v = n(164946),
     y = n(369111),
     I = n(25990),
-    b = n(594174),
-    T = n(960048),
+    T = n(594174),
+    b = n(960048),
     S = n(272008),
     A = n(113434),
     N = n(497505),
@@ -32,10 +32,10 @@ var i = n(200651),
     R = n(475595),
     O = n(566078),
     D = n(114732),
-    x = n(46140),
-    L = n(675654),
-    P = n(388032),
-    w = n(144143);
+    L = n(46140),
+    x = n(675654),
+    w = n(388032),
+    P = n(332284);
 function M() {
     let e = I.Z.getAllPending(),
         t = (0, v.ED)(e);
@@ -49,7 +49,7 @@ function k(e) {
             let e = t.items.find((e) => e.type === l.Z.AVATAR_DECORATION);
             return null == e ? null : e;
         }, [t, n]),
-        a = () => (null == i ? (T.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(i), M()));
+        a = () => (null == i ? (b.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(i), M()));
     return [i, a];
 }
 function U(e) {
@@ -58,30 +58,30 @@ function U(e) {
         E = r.useRef(null),
         [v, y] = r.useState(null),
         I = r.useRef(new o.qA()),
-        T = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
-        A = (0, u.e7)([b.default], () => b.default.getCurrentUser()),
+        b = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+        A = (0, u.e7)([T.default], () => T.default.getCurrentUser()),
         C = r.useMemo(() => (0, R.fh)(l, R.eC.HERO), [l]),
         O = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        [x, P] = r.useState(!0 === g || O ? 'claimed' : 'loading');
+        [L, w] = r.useState(!0 === g || O ? 'claimed' : 'loading');
     r.useEffect(() => {
         O ||
             !0 === g ||
             (0, S.QB)(l.id, N.y$.CROSS_PLATFORM, d)
-                .then(() => P('claimed'))
-                .catch(() => P('error'));
+                .then(() => w('claimed'))
+                .catch(() => w('error'));
     }, [l, d, O, g]);
     let M = () => {
-            P('applying'), h().finally(a);
+            w('applying'), h().finally(a);
         },
         k = !0 === g && null === p && (null == _ ? void 0 : _.skuId) !== '',
         U = null == p && !0 !== g,
-        G = null == A || U || k || 'loading' === x,
-        Z = !T && !O && 'claimed' === x;
+        G = null == A || U || k || 'loading' === L,
+        Z = !b && !O && 'claimed' === L;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.O_, {
                 ref: y,
-                className: w.confettiCanvas,
+                className: P.confettiCanvas,
                 environment: I.current
             }),
             (0, i.jsx)('div', {
@@ -89,14 +89,14 @@ function U(e) {
                 children: (0, i.jsx)(c.Y0X, {
                     transitionState: n,
                     size: c.CgR.DYNAMIC,
-                    className: s()(w.rootContainer, { [w.rootContainerLoading]: G }),
+                    className: s()(P.rootContainer, { [P.rootContainerLoading]: G }),
                     hideShadow: !0,
                     children:
-                        'error' === x
+                        'error' === L
                             ? (0, i.jsx)(D.Z, { onClose: a })
                             : G
                               ? (0, i.jsx)('div', {
-                                    className: w.loadingIndicatorWrapper,
+                                    className: P.loadingIndicatorWrapper,
                                     children: (0, i.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE })
                                 })
                               : (0, i.jsx)(B, {
@@ -104,7 +104,7 @@ function U(e) {
                                     user: A,
                                     decoration: p,
                                     backgroundUrl: C.url,
-                                    isSaving: 'applying' === x,
+                                    isSaving: 'applying' === L,
                                     onClose: a,
                                     onConfirm: M
                                 })
@@ -114,8 +114,8 @@ function U(e) {
                 (0, i.jsx)(m.Z, {
                     confettiTarget: E.current,
                     confettiCanvas: v,
-                    sprites: L.CA,
-                    colors: L.Br
+                    sprites: x.CA,
+                    colors: x.Br
                 })
         ]
     });
@@ -125,12 +125,12 @@ function G(e) {
         n = r.useMemo(() => (0, R.fh)(t, R.eC.LOGO_TYPE, 'dark'), [t]),
         a = O.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[N.y$.CROSS_PLATFORM];
     return (0, i.jsxs)('div', {
-        className: w.additionalRedemptionInstructions,
+        className: P.additionalRedemptionInstructions,
         children: [
             (0, i.jsx)('img', {
                 src: n.url,
                 alt: '',
-                className: w.sponsorLogo
+                className: P.sponsorLogo
             }),
             (0, i.jsx)(c.Text, {
                 variant: 'text-sm/normal',
@@ -145,13 +145,13 @@ function B(e) {
         u = (0, R.fh)(t, R.eC.REWARD).url,
         d = (0, A.Qy)(t.config);
     return (0, i.jsxs)('div', {
-        className: w.claimedRootContainer,
+        className: P.claimedRootContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: w.headerContainer,
+                className: P.headerContainer,
                 children: [
                     (0, i.jsx)(g.Z, {
-                        className: w.headerBackground,
+                        className: P.headerBackground,
                         autoPlay: !1,
                         loop: !1,
                         muted: !0,
@@ -160,9 +160,9 @@ function B(e) {
                         poster: a
                     }),
                     (0, i.jsx)('div', {
-                        className: w.headerForeground,
+                        className: P.headerForeground,
                         children: (0, i.jsx)(c.olH, {
-                            className: w.close,
+                            className: P.close,
                             withCircleBackground: !0,
                             onClick: o
                         })
@@ -172,10 +172,10 @@ function B(e) {
             (0, i.jsx)(c.mzw, {
                 separator: !1,
                 children: (0, i.jsxs)('div', {
-                    className: w.footerBody,
+                    className: P.footerBody,
                     children: [
                         (0, i.jsx)('div', {
-                            className: w.previewContainer,
+                            className: P.previewContainer,
                             children: (0, i.jsx)(p.Z, {
                                 user: n,
                                 guildId: null,
@@ -187,21 +187,21 @@ function B(e) {
                         (0, i.jsx)(c.X6q, {
                             variant: 'heading-lg/bold',
                             color: 'header-primary',
-                            className: w.heading,
-                            children: P.intl.string(P.t['0/Yz+f'])
+                            className: P.heading,
+                            children: w.intl.string(w.t['0/Yz+f'])
                         }),
                         (0, i.jsx)(c.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-normal',
-                            className: w.text,
+                            className: P.text,
                             children: d
                         }),
                         (0, i.jsx)(c.zxk, {
                             submitting: s,
                             onClick: l,
-                            children: P.intl.string(P.t.MAS7uL)
+                            children: w.intl.string(w.t.MAS7uL)
                         }),
-                        (0, C.zK)(t, x.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, i.jsx)(G, { quest: t })
+                        (0, C.zK)(t, L.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, i.jsx)(G, { quest: t })
                     ]
                 })
             })

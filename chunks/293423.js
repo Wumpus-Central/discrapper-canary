@@ -13,7 +13,7 @@ var l = n(481060),
     m = n(726324),
     p = n(981631),
     g = n(388032),
-    _ = n(205572);
+    _ = n(118340);
 let f = (e) => {
     var t, n;
     let { guild: f } = e,
@@ -26,13 +26,13 @@ let f = (e) => {
     });
     let { activeSubscription: I } = (0, s.Z)(null == E ? void 0 : E.id),
         C = (0, r.YB)(f.id),
-        N = null == C ? void 0 : C.description,
-        { editStateIds: v } = a.B7(null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : null, f.id);
+        v = null == C ? void 0 : C.description,
+        { editStateIds: N } = a.B7(null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : null, f.id);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(m.Z, {
                 title: g.intl.format(g.t['rm+ojI'], { serverName: f.toString() }),
-                description: null != N ? N : null,
+                description: null != v ? v : null,
                 coverImageAsset: null !== (n = null == C ? void 0 : C.cover_image_asset) && void 0 !== n ? n : null,
                 guild: f,
                 children: [
@@ -49,7 +49,7 @@ let f = (e) => {
             (0, i.jsx)(l.y5t, {
                 children: (0, i.jsx)(u.Z, {
                     guildId: f.id,
-                    children: v.map((e) => {
+                    children: N.map((e) => {
                         var t;
                         return (0, i.jsx)(
                             h.Z,

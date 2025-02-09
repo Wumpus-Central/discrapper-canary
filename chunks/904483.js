@@ -32,7 +32,7 @@ function u(e) {
                           label: c.intl.string(c.t['fUYU+v']),
                           action: () =>
                               (0, a.ZDy)(async () => {
-                                  let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('74100')]).then(n.bind(n, 218613));
+                                  let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('76924')]).then(n.bind(n, 218613));
                                   return (n) =>
                                       (0, l.jsx)(t, {
                                           ...n,
@@ -50,7 +50,7 @@ function u(e) {
                           label: c.intl.string(c.t['ISN+ND']),
                           action: () =>
                               (0, a.ZDy)(async () => {
-                                  let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('74100')]).then(n.bind(n, 218613));
+                                  let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('76924')]).then(n.bind(n, 218613));
                                   return (n) =>
                                       (0, l.jsx)(t, {
                                           ...n,

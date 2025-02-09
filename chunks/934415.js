@@ -2,9 +2,9 @@ n.d(t, {
     EO: () => B,
     LY: () => k,
     Nj: () => a.Z,
-    a5: () => w,
-    c4: () => P,
-    g7: () => x,
+    a5: () => P,
+    c4: () => w,
+    g7: () => L,
     jZ: () => C,
     mE: () => Z,
     oQ: () => N,
@@ -35,15 +35,15 @@ n(51144);
 var g = n(981631),
     E = n(474936),
     v = n(388032);
-let { GUILD_VOICE: y, GUILD_CATEGORY: I, GUILD_STAGE_VOICE: b } = g.d4z;
-function T(e, t) {
+let { GUILD_VOICE: y, GUILD_CATEGORY: I, GUILD_STAGE_VOICE: T } = g.d4z;
+function b(e, t) {
     return e === t || e === I;
 }
 function S(e, t, n) {
     let r = h.Hn;
     return (
         ((0, u.r8)(t) || t === I) && (r = i.IH(r, g.Plq.VIEW_CHANNEL)),
-        T(t, y) && ((r = i.IH(r, g.Plq.VIEW_CHANNEL)), (r = i.IH(r, g.Plq.CONNECT))),
+        b(t, y) && ((r = i.IH(r, g.Plq.VIEW_CHANNEL)), (r = i.IH(r, g.Plq.CONNECT))),
         {
             id: e,
             type: n,
@@ -56,7 +56,7 @@ function A(e, t, n) {
     let r = h.Hn;
     return (
         ((0, u.r8)(t) || t === I) && (r = i.IH(r, g.Plq.VIEW_CHANNEL)),
-        (T(t, y) || T(t, b)) && ((r = i.IH(r, g.Plq.VIEW_CHANNEL)), (r = i.IH(r, g.Plq.CONNECT))),
+        (b(t, y) || b(t, T)) && ((r = i.IH(r, g.Plq.VIEW_CHANNEL)), (r = i.IH(r, g.Plq.CONNECT))),
         {
             id: e,
             type: n,
@@ -102,14 +102,14 @@ function D(e, t, n) {
         d = p.ZP.getVoiceStatesForChannel(e),
         _ = f.Z.can(g.Plq.MOVE_MEMBERS, e) && f.Z.can(g.Plq.CONNECT, e),
         h = !1;
-    h = e.type === b ? null != a && (t.hasVideo(e.id) || (0, s.a)(d)) && u > 0 && c >= u : null != a && t.hasVideo(e.id) && l > 0 && c >= l + (_ ? 1 : 0);
+    h = e.type === T ? null != a && (t.hasVideo(e.id) || (0, s.a)(d)) && u > 0 && c >= u : null != a && t.hasVideo(e.id) && l > 0 && c >= l + (_ ? 1 : 0);
     let m = e.userLimit > 0 && c >= e.userLimit;
     return h || (m && !_);
 }
-function x(e, t) {
+function L(e, t) {
     return t.isGuildStageVoice() ? g.epw : null == e ? g.eWB : Math.max(e.hasFeature(g.oNc.VIP_REGIONS) ? E.HO[g.Eu4.TIER_3].limits.bitrate : g.eWB, E.HO[e.premiumTier].limits.bitrate);
 }
-function L(e) {
+function x(e) {
     let { channels: t, selectedChannelId: n, selectedVoiceChannelId: i, voiceStates: r } = e,
         a = [];
     return (
@@ -126,16 +126,16 @@ function L(e) {
         a
     );
 }
-function P(e) {
+function w(e) {
     let { channels: t, selectedChannelId: n, selectedVoiceChannelId: i, voiceStates: r } = e;
-    return L({
+    return x({
         channels: t,
         selectedChannelId: n,
         selectedVoiceChannelId: i,
         voiceStates: r
     }).map((e) => e.user);
 }
-function w(e) {
+function P(e) {
     let { type: t } = e;
     switch (t) {
         case g.d4z.DM:

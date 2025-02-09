@@ -85,8 +85,8 @@ class I {
         f(this, 'state', void 0), (this.state = e);
     }
 }
-let b = I.empty(),
-    T = !1,
+let T = I.empty(),
+    b = !1,
     S = null;
 function A(e, t, n) {
     return ''.concat(e, ':').concat(t, ':').concat(n);
@@ -127,19 +127,19 @@ function D(e) {
     var t;
     p = null !== (t = e.section) && void 0 !== t ? t : _;
 }
-function x() {
+function L() {
     O();
 }
-function L(e) {
+function x(e) {
     null != e.channelId && (C(), m.clear());
 }
-function P(e) {
+function w(e) {
     if (null === e.streamId) {
         let t = y(e.userId, e.context);
         m.set(t, d.Z.NO_OVERRIDE);
     }
 }
-function w(e) {
+function P(e) {
     p = e.section;
 }
 function M(e) {
@@ -208,11 +208,11 @@ function G(e) {
         s.Z.wait(() => o.bA()));
 }
 function B(e) {
-    b = b.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
+    T = T.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
 }
 function Z(e) {
     let { value: t } = e;
-    T = t;
+    b = t;
 }
 function F(e) {
     let { userId: t, context: n, quality: i } = e;
@@ -258,10 +258,10 @@ class V extends (i = r.ZP.Store) {
         return Object.values(h[e]);
     }
     getVideoStreams() {
-        return b;
+        return T;
     }
     shouldRecordNextConnection() {
-        return T;
+        return b;
     }
     getSimulcastDebugOverride(e, t) {
         let n = y(e, t);
@@ -271,15 +271,15 @@ class V extends (i = r.ZP.Store) {
 f(V, 'displayName', 'RTCDebugStore');
 let j = new V(s.Z, {
     RTC_DEBUG_MODAL_OPEN: D,
-    RTC_DEBUG_MODAL_CLOSE: x,
-    RTC_DEBUG_MODAL_SET_SECTION: w,
+    RTC_DEBUG_MODAL_CLOSE: L,
+    RTC_DEBUG_MODAL_SET_SECTION: P,
     RTC_DEBUG_MODAL_UPDATE: k,
     RTC_DEBUG_MODAL_OPEN_REPLAY: U,
     RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: G,
     RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: B,
     RTC_DEBUG_SET_RECORDING_FLAG: Z,
     RTC_DEBUG_SET_SIMULCAST_OVERRIDE: F,
-    VOICE_CHANNEL_SELECT: L,
-    RTC_CONNECTION_VIDEO: P
+    VOICE_CHANNEL_SELECT: x,
+    RTC_CONNECTION_VIDEO: w
 });
 l.Z.getMediaEngine().on(a.aB.ConnectionStats, R);

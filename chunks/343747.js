@@ -7,7 +7,7 @@ var r = n(481060),
 function o(e) {
     a.Z.open(e, s.pNK.SOUNDBOARD),
         (0, r.ZDy)(async () => {
-            let { default: t } = await Promise.all([n.e('56035'), n.e('28394')]).then(n.bind(n, 758961));
+            let { default: t } = await Promise.all([n.e('56035'), n.e('13519')]).then(n.bind(n, 758961));
             return (n) =>
                 (0, i.jsx)(t, {
                     ...n,

@@ -18,10 +18,10 @@ var i = n(200651),
     v = n(597952),
     y = n(252618),
     I = n(80006),
-    b = n(587061),
-    T = n(392358),
+    T = n(587061),
+    b = n(392358),
     S = n(981631);
-n(702955);
+n(666829);
 let A = new Set([S.Z5c.LOGIN, S.Z5c.REGISTER]);
 function N(e) {
     let t = (0, c.e7)([g.default], () => g.default.locale),
@@ -30,11 +30,11 @@ function N(e) {
         { reducedMotion: d } = r.useContext(f.Sfi),
         { accessibilitySettings: _, appWrapperClassName: y } = (0, I.I)(),
         { fontScale: S, fontScaleClass: N, saturation: C, desaturateUserColors: R, useForcedColors: O, systemForcedColors: D } = _,
-        x = (0, c.e7)([m.Z], () => m.Z.confettiMode),
-        L = (0, l.TH)(),
-        P = r.useMemo(() => A.has(L.pathname), [L.pathname]);
-    (0, b.Z)(window, P);
-    let w = (0, T.Z)(window, __OVERLAY__ || n),
+        L = (0, c.e7)([m.Z], () => m.Z.confettiMode),
+        x = (0, l.TH)(),
+        w = r.useMemo(() => A.has(x.pathname), [x.pathname]);
+    (0, T.Z)(window, w);
+    let P = (0, b.Z)(window, __OVERLAY__ || n),
         M = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
         k = (0, f.bWb)().enabled,
         U = (0, p.Q3)('AppHelmet'),
@@ -47,7 +47,7 @@ function N(e) {
             y,
             {
                 overlay: __OVERLAY__,
-                'mouse-mode': w,
+                'mouse-mode': P,
                 'reduce-motion': d.enabled,
                 'full-motion': !d.enabled,
                 'is-mobile': u.tq,
@@ -58,7 +58,7 @@ function N(e) {
                 'show-redesigned-icons': k,
                 'visual-refresh': U,
                 'visual-refresh-chat-input': G,
-                'confetti-mode': x
+                'confetti-mode': L
             },
             (0, f.QeD)(a),
             'density-'.concat(o),

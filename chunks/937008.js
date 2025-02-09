@@ -9,7 +9,7 @@ var r = n(120356),
     u = n(841784),
     c = n(556638),
     d = n(981631),
-    f = n(748442);
+    f = n(694978);
 function _(e) {
     let { activity: t, stream: n, tooltip: r, className: _ } = e;
     if (null == t && null == n) return null;

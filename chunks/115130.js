@@ -1,6 +1,6 @@
 n.d(t, {
     O: () => f,
-    Z: () => T
+    Z: () => b
 }),
     n(789020);
 var i,
@@ -63,7 +63,7 @@ function I(e) {
     let { filter: t } = e;
     d.filter = t;
 }
-class b extends (i = r.ZP.PersistedStore) {
+class T extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         d = {
             ...c(),
@@ -98,8 +98,8 @@ class b extends (i = r.ZP.PersistedStore) {
         return this.getIsEnabled() && null != p.find((t) => t.id === e);
     }
 }
-u(b, 'displayName', 'DeveloperActivityShelfStore'), u(b, 'persistKey', 'DeveloperActivityShelfStore'), u(b, 'migrations', [(e) => (delete e.isEnabled, { ...e })]);
-let T = new b(a.Z, {
+u(T, 'displayName', 'DeveloperActivityShelfStore'), u(T, 'persistKey', 'DeveloperActivityShelfStore'), u(T, 'migrations', [(e) => (delete e.isEnabled, { ...e })]);
+let b = new T(a.Z, {
     LOGOUT: h,
     DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: m,
     DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: g,

@@ -1,12 +1,12 @@
 n.d(t, { L: () => u });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(568611),
-    a = n(693789),
-    o = (n(965789), n(842055)),
-    c = n(588245);
+var r = n(120356),
+    a = n.n(r),
+    s = n(568611),
+    l = n(693789),
+    o = (n(965789), n(714513)),
+    c = n(61822);
 let d = () =>
         (0, i.jsx)('div', {
             className: o.gifContainer,
@@ -17,23 +17,23 @@ let d = () =>
             })
         }),
     u = (e) => {
-        let { ctaText: t, ctaOnClick: n, linkText: s, linkTo: u } = e;
+        let { ctaText: t, ctaOnClick: n, linkText: r, linkTo: u } = e;
         return (0, i.jsxs)('div', {
-            className: r()(o.container, c.baseCardOutline),
+            className: a()(o.container, c.baseCardOutline),
             children: [
                 (0, i.jsx)(d, {}),
-                (0, i.jsx)(a.zx, {
+                (0, i.jsx)(l.zx, {
                     className: o.ctaButton,
-                    color: a.zx.Colors.BRAND,
-                    look: a.zx.Looks.FILLED,
+                    color: l.zx.Colors.BRAND,
+                    look: l.zx.Looks.FILLED,
                     onClick: n,
                     fullWidth: !0,
                     children: t
                 }),
-                (0, i.jsx)(l.rU, {
+                (0, i.jsx)(s.rU, {
                     to: { pathname: u },
                     className: o.learnMoreLink,
-                    children: s
+                    children: r
                 })
             ]
         });

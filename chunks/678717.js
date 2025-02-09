@@ -23,11 +23,11 @@ var g = n(392750),
     N = n(789654),
     T = n(719672),
     E = n(691867),
-    y = n(916790),
-    S = n(645973),
+    S = n(916790),
+    y = n(645973),
     k = n(903502),
-    R = n(912072),
-    I = n(272193),
+    I = n(912072),
+    R = n(272193),
     O = n(735959),
     Z = n(246992),
     w = n(496025),
@@ -36,8 +36,8 @@ var g = n(392750),
     P = n(702904),
     D = n(178821),
     B = n(958328),
-    F = n(315384),
-    M = n(514866),
+    M = n(315384),
+    F = n(514866),
     z = n(678639),
     U = n(351930),
     G = n(771751),
@@ -45,8 +45,8 @@ var g = n(392750),
     V = n(56706),
     W = n(621060),
     Y = n(388032),
-    X = n(771466),
-    K = n(941469);
+    X = n(362793),
+    K = n(617521);
 function J(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r } = e,
         l = (0, d.Z)({
@@ -83,7 +83,7 @@ function q() {
                 {
                     id: 'dispatcher',
                     name: 'Dispatcher',
-                    render: () => (0, a.jsx)(y.Z, {})
+                    render: () => (0, a.jsx)(S.Z, {})
                 }
             ];
             return (
@@ -91,13 +91,13 @@ function q() {
                     e.push({
                         id: 'quick_actions',
                         name: 'Quick Actions',
-                        render: () => (0, a.jsx)(M.Z, {})
+                        render: () => (0, a.jsx)(F.Z, {})
                     }),
                 x.Z.isDeveloper &&
                     (e.push({
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
-                        render: () => (0, a.jsx)(S.Z, {})
+                        render: () => (0, a.jsx)(y.Z, {})
                     }),
                     e.push({
                         id: 'clans',
@@ -137,7 +137,7 @@ function q() {
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, a.jsx)(R.Z, { devSettingsCategory: b.zU.OVERLAYS })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: b.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -147,7 +147,7 @@ function q() {
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, a.jsx)(R.Z, { devSettingsCategory: b.zU.REPORTING })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: b.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -178,7 +178,7 @@ function q() {
                 e.push({
                     id: 'potions',
                     name: 'Potions',
-                    render: () => (0, a.jsx)(F.Z, {})
+                    render: () => (0, a.jsx)(M.Z, {})
                 }),
                 window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') &&
                     (e.push({
@@ -204,7 +204,7 @@ function q() {
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
-                    render: () => (0, a.jsx)(I.Z, {})
+                    render: () => (0, a.jsx)(R.Z, {})
                 }),
                 e.push({
                     id: 'voice_filters',

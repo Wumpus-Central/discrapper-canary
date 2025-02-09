@@ -1,8 +1,8 @@
-n.d(t, { Z: () => S }), n(47120);
+n.d(t, { Z: () => I }), n(47120);
 var i = n(200651);
 n(192379);
-var r = n(952265),
-    o = n(24124),
+var o = n(952265),
+    r = n(24124),
     l = n(13245),
     a = n(620662),
     s = n(835473),
@@ -17,8 +17,8 @@ var r = n(952265),
     m = n(602091),
     v = n(701488),
     x = n(388032),
-    E = n(176463),
-    C = n(802334);
+    E = n(103492),
+    C = n(341312);
 function Z(e) {
     let { game: t } = e,
         n = (0, s.q)(t.id);
@@ -29,7 +29,7 @@ function Z(e) {
               size: 40
           });
 }
-function S(e, t) {
+function I(e, t) {
     let { trackView: s, trackClick: d } = (0, p.R)(f.n0.WelcomeNudge, { notif_type: f.n0.WelcomeNudge }),
         v = {};
     for (let s of t)
@@ -40,7 +40,7 @@ function S(e, t) {
                     (0, a.Z)(t, g.xjy.JOIN) &&
                     ((v.cancelText = x.intl.string(x.t['6F9ivr'])),
                     (v.onCancelClick = (e, n) => {
-                        d('unlock'), l.Z.updateNotificationStatus(n), l.Z.setInputLocked(!1, (0, u.QF)()), (0, o.h7)(t, !1, g.IlC.POPOUT);
+                        d('unlock'), l.Z.updateNotificationStatus(n), l.Z.setInputLocked(!1, (0, u.QF)()), (0, r.h7)(t, !1, g.IlC.POPOUT);
                     }));
                 break;
             }
@@ -51,9 +51,9 @@ function S(e, t) {
                         d('unlock'),
                             l.Z.updateNotificationStatus(t),
                             l.Z.setInputLocked(!1, (0, u.QF)()),
-                            (0, r.ZD)(
+                            (0, o.ZD)(
                                 async () => {
-                                    let { default: e } = await Promise.all([n.e('79477'), n.e('73554')]).then(n.bind(n, 60594));
+                                    let { default: e } = await Promise.all([n.e('79477'), n.e('52211')]).then(n.bind(n, 60594));
                                     return (t) =>
                                         (0, i.jsx)(e, {
                                             ...t,

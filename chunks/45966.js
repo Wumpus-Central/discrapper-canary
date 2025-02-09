@@ -34,7 +34,7 @@ function y() {
 function I() {
     (v = !1), (m = {});
 }
-function b(e, t, n) {
+function T(e, t, n) {
     let i = !1,
         r = [];
     for (let t = 0; t < e.options.length; t++) {
@@ -53,14 +53,14 @@ function b(e, t, n) {
         isNew: null == t[e.id]
     };
 }
-function T(e, t, n) {
-    return e.map((e) => b(e, t, n));
+function b(e, t, n) {
+    return e.map((e) => T(e, t, n));
 }
 function S(e) {
     let { guildId: t, prompts: n, defaultChannelIds: i, enabled: r, responses: a, onboardingPromptsSeen: s, onboardingResponsesSeen: o, mode: l, belowRequirements: u } = e;
     v = !1;
     let c = _.ZP.getOnboardingStatus(t) === _.uX.READY,
-        d = T(n, s, o);
+        d = b(n, s, o);
     (m[t] = {
         enabled: r,
         mode: l,
@@ -83,7 +83,7 @@ function N(e) {
     let { guildId: c, updates: d } = e,
         f = null !== (a = null !== (r = d.onboardingPromptsSeen) && void 0 !== r ? r : null === (t = m[c]) || void 0 === t ? void 0 : t.onboardingPromptsSeen) && void 0 !== a ? a : {},
         _ = null !== (o = null !== (s = d.onboardingResponsesSeen) && void 0 !== s ? s : null === (n = m[c]) || void 0 === n ? void 0 : n.onboardingResponsesSeen) && void 0 !== o ? o : {},
-        p = T(null !== (u = null !== (l = d.prompts) && void 0 !== l ? l : null === (i = m[c]) || void 0 === i ? void 0 : i.prompts) && void 0 !== u ? u : [], f, _);
+        p = b(null !== (u = null !== (l = d.prompts) && void 0 !== l ? l : null === (i = m[c]) || void 0 === i ? void 0 : i.prompts) && void 0 !== u ? u : [], f, _);
     m[c] = {
         ...m[c],
         ...d,
@@ -115,7 +115,7 @@ function O(e) {
     R(t, n);
     let a = m[t];
     if (null == a) return !1;
-    let s = T(a.prompts, i, r);
+    let s = b(a.prompts, i, r);
     m[t] = {
         ...a,
         prompts: s,
@@ -131,29 +131,29 @@ function D(e) {
         defaultChannelIds: n
     };
 }
-function x(e) {
+function L(e) {
     let { guildId: t, mode: n } = e,
         i = m[t];
     null != i && (i.mode = n);
 }
-let L = [],
-    P = [],
-    w = [];
+let x = [],
+    w = [],
+    P = [];
 class M extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(u.Z, _.ZP, l.Z);
     }
     getOnboardingPromptsForOnboarding(e) {
         var t, n;
-        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : L;
+        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : x;
     }
     getOnboardingPrompts(e) {
         var t, n;
-        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : L;
+        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : x;
     }
     getOnboardingResponses(e) {
         var t, n, i;
-        return l.Z.isFullServerPreview(e) ? Array.from(null !== (n = l.Z.getOnboardingResponses(e)) && void 0 !== n ? n : P) : null !== (i = null === (t = m[e]) || void 0 === t ? void 0 : t.responses) && void 0 !== i ? i : P;
+        return l.Z.isFullServerPreview(e) ? Array.from(null !== (n = l.Z.getOnboardingResponses(e)) && void 0 !== n ? n : w) : null !== (i = null === (t = m[e]) || void 0 === t ? void 0 : t.responses) && void 0 !== i ? i : w;
     }
     getSelectedOptions(e) {
         let t = this.getOnboardingResponses(e);
@@ -164,10 +164,10 @@ class M extends (i = s.ZP.Store) {
     }
     getOnboardingResponsesForPrompt(e, t) {
         let n = m[e];
-        if (null == n) return P;
+        if (null == n) return w;
         let i = n.prompts.find((e) => e.id === t);
         return null == i
-            ? P
+            ? w
             : a().intersection(
                   i.options.map((e) => e.id),
                   this.getOnboardingResponses(e)
@@ -176,11 +176,11 @@ class M extends (i = s.ZP.Store) {
     getEnabledOnboardingPrompts(e) {
         var t, n;
         let i = m[e];
-        return l.Z.isFullServerPreview(e) ? (null !== (t = null == i ? void 0 : i.prompts) && void 0 !== t ? t : L) : null != i && i.enabled && null !== (n = i.prompts) && void 0 !== n ? n : L;
+        return l.Z.isFullServerPreview(e) ? (null !== (t = null == i ? void 0 : i.prompts) && void 0 !== t ? t : x) : null != i && i.enabled && null !== (n = i.prompts) && void 0 !== n ? n : x;
     }
     getDefaultChannelIds(e) {
         var t, n;
-        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.defaultChannelIds) && void 0 !== n ? n : w;
+        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.defaultChannelIds) && void 0 !== n ? n : P;
     }
     getEnabled(e) {
         var t, n;
@@ -236,5 +236,5 @@ let k = new M(o.Z, {
     GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: N,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: N,
     GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: D,
-    GUILD_SETTINGS_ONBOARDING_SET_MODE: x
+    GUILD_SETTINGS_ONBOARDING_SET_MODE: L
 });

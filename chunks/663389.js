@@ -30,8 +30,8 @@ let d = u.QZA.CLOSED,
     v = !1,
     y = !1,
     I = null,
-    b = null,
-    T = [],
+    T = null,
+    b = [],
     S = null,
     A = null;
 function N(e) {
@@ -63,26 +63,26 @@ function C(e) {
             })
         }),
         (I = null !== (i = e.onClose) && void 0 !== i ? i : null),
-        (b = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null),
-        (T = null !== (a = e.analyticsLocations) && void 0 !== a ? a : []),
+        (T = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null),
+        (b = null !== (a = e.analyticsLocations) && void 0 !== a ? a : []),
         (A = null !== (s = e.impressionSource) && void 0 !== s ? s : null);
 }
 function R() {
-    (d = u.QZA.CLOSED), (v = !1), (g = null), (S = null), (E = null), (f = null), (_ = null), (p = {}), (h = {}), (I = null), (b = null), (T = []), (A = null);
+    (d = u.QZA.CLOSED), (v = !1), (g = null), (S = null), (E = null), (f = null), (_ = null), (p = {}), (h = {}), (I = null), (T = null), (b = []), (A = null);
 }
 function O(e) {
     var t;
-    (f = _), (_ = e.section), (b = null), (T = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (p[_] = e.subsection);
+    (f = _), (_ = e.section), (T = null), (b = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (p[_] = e.subsection);
 }
 function D(e) {
     let { forSection: t } = e;
     null != t ? delete p[t] : null != _ && delete p[_];
 }
-function x(e) {
+function L(e) {
     let { forSection: t } = e;
     null != t ? delete h[t] : null != _ && delete h[_];
 }
-function L(e) {
+function x(e) {
     let { settings: t } = e;
     null == E && (E = {});
     let n = E[u.oAB.ACCOUNT];
@@ -91,10 +91,10 @@ function L(e) {
         ...t
     };
 }
-function P() {
+function w() {
     d = u.QZA.SUBMITTING;
 }
-function w() {
+function P() {
     let e = l.default.getCurrentUser();
     M(),
         null != e &&
@@ -156,8 +156,8 @@ class U extends (i = s.ZP.Store) {
             errors: m,
             hasChanges: this.hasChanges(),
             openWithoutBackstack: y,
-            analyticsLocation: b,
-            analyticsLocations: T,
+            analyticsLocation: T,
+            analyticsLocations: b,
             initialSection: S,
             impressionSource: A
         };
@@ -172,12 +172,12 @@ let G = new U(o.Z, {
     USER_SETTINGS_MODAL_INIT: C,
     USER_SETTINGS_MODAL_CLOSE: R,
     LOGOUT: R,
-    USER_SETTINGS_MODAL_SUBMIT: P,
+    USER_SETTINGS_MODAL_SUBMIT: w,
     USER_SETTINGS_MODAL_SUBMIT_FAILURE: k,
     USER_SETTINGS_MODAL_SET_SECTION: O,
     USER_SETTINGS_MODAL_CLEAR_SUBSECTION: D,
-    USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: x,
-    USER_SETTINGS_MODAL_UPDATE_ACCOUNT: L,
+    USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: L,
+    USER_SETTINGS_MODAL_UPDATE_ACCOUNT: x,
     USER_SETTINGS_MODAL_SUBMIT_COMPLETE: M,
-    USER_SETTINGS_MODAL_RESET: w
+    USER_SETTINGS_MODAL_RESET: P
 });

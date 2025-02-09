@@ -1,55 +1,55 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
-var s = n(399606),
-    r = n(481060),
-    l = n(594174),
-    a = n(785681),
+var r = n(399606),
+    a = n(481060),
+    s = n(594174),
+    l = n(785681),
     o = n(780985),
     c = n(631885),
     d = n(552045),
     u = n(87792),
     m = n(302289),
     g = n(946690),
-    h = n(456771),
-    x = n(292352),
-    _ = n(388032),
-    p = n(23020);
-let E = () => {
-    let e = (0, c.mq)(x.ne.ACTIVE),
+    _ = n(456771),
+    p = n(292352),
+    f = n(388032),
+    h = n(269503);
+let x = () => {
+    let e = (0, c.mq)(p.ne.ACTIVE),
         t = (0, o.c)(),
-        n = (0, s.e7)([l.default], () => l.default.getCurrentUser()),
-        E = (0, a.o)(_.intl.string(_.t['5RZ8Tk']), _.intl.string(_.t.bmhCnJ)),
-        C = (0, a.o)(_.intl.string(_.t.XKnFFh), _.intl.string(_.t['68zfxM'])),
-        f = (0, a.o)(_.intl.string(_.t['Rm/6a2']), _.intl.string(_.t['1xPTwM'])),
-        T = (0, r.bWb)().enabled;
+        n = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
+        x = (0, l.o)(f.intl.string(f.t['5RZ8Tk']), f.intl.string(f.t.bmhCnJ)),
+        E = (0, l.o)(f.intl.string(f.t.XKnFFh), f.intl.string(f.t['68zfxM'])),
+        C = (0, l.o)(f.intl.string(f.t['Rm/6a2']), f.intl.string(f.t['1xPTwM'])),
+        b = (0, a.bWb)().enabled;
     return void 0 === n
         ? null
         : (0, i.jsxs)('div', {
-              className: p.container,
+              className: h.container,
               children: [
                   (0, i.jsx)('div', {
-                      className: p.banner,
+                      className: h.banner,
                       children: (0, i.jsx)(d.Z, {})
                   }),
                   (0, i.jsxs)('div', {
-                      className: p.featureCards,
+                      className: h.featureCards,
                       children: [
                           (0, i.jsx)(g.Z, {
-                              iconClassName: p.chatCheckIcon,
-                              icon: r.eQA,
-                              header: _.intl.string(_.t['001l3t']),
+                              iconClassName: h.chatCheckIcon,
+                              icon: a.eQA,
+                              header: f.intl.string(f.t['001l3t']),
+                              description: x
+                          }),
+                          (0, i.jsx)(g.Z, {
+                              icon: a.tEF,
+                              header: f.intl.string(f.t.yipAeH),
                               description: E
                           }),
                           (0, i.jsx)(g.Z, {
-                              icon: r.tEF,
-                              header: _.intl.string(_.t.yipAeH),
+                              icon: b ? a.IkH : (0, a.GSL)(_.Z),
+                              header: f.intl.string(f.t.hhOuMT),
                               description: C
-                          }),
-                          (0, i.jsx)(g.Z, {
-                              icon: T ? r.IkH : (0, r.GSL)(h.Z),
-                              header: _.intl.string(_.t.hhOuMT),
-                              description: f
                           })
                       ]
                   }),

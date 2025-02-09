@@ -1,33 +1,33 @@
-n.d(t, { Z: () => l }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
-var s = n(200651),
-    r = n(192379),
-    a = n(481060),
-    o = n(763610),
-    i = n(102787);
-let l = function (e) {
-    var t, n;
-    let { assetKey: l, filters: c, initialValue: d, onFileChange: u, title: p } = e,
-        [m, x] = r.useState(null),
-        h = r.useRef(null);
+a.d(s, { Z: () => o }), a(47120), a(315314), a(309749), a(610138), a(216116), a(78328), a(815648);
+var i = a(200651),
+    t = a(192379),
+    n = a(481060),
+    l = a(763610),
+    r = a(326687);
+let o = function (e) {
+    var s, a;
+    let { assetKey: o, filters: d, initialValue: c, onFileChange: u, title: g } = e,
+        [h, v] = t.useState(null),
+        m = t.useRef(null);
     return (
-        r.useEffect(
+        t.useEffect(
             () => () => {
-                null != h.current && URL.revokeObjectURL(h.current);
+                null != m.current && URL.revokeObjectURL(m.current);
             },
             []
         ),
-        (0, s.jsxs)(a.xJW, {
+        (0, i.jsxs)(n.xJW, {
             children: [
-                (0, s.jsx)(a.vwX, {
-                    tag: a.RB0.H5,
-                    children: (0, s.jsxs)('div', {
-                        className: i.headingWithTooltip,
+                (0, i.jsx)(n.vwX, {
+                    tag: n.RB0.H5,
+                    children: (0, i.jsxs)('div', {
+                        className: r.headingWithTooltip,
                         children: [
-                            p,
-                            (0, s.jsx)(a.ua7, {
-                                text: 'Supported asset formats: '.concat(c.join(', ')),
+                            g,
+                            (0, i.jsx)(n.ua7, {
+                                text: 'Supported asset formats: '.concat(d.join(', ')),
                                 children: (e) =>
-                                    (0, s.jsx)(a.d3s, {
+                                    (0, i.jsx)(n.d3s, {
                                         size: 'xs',
                                         ...e
                                     })
@@ -35,22 +35,22 @@ let l = function (e) {
                         ]
                     })
                 }),
-                (0, s.jsx)(o.Z, {
-                    filename: null !== (n = null !== (t = null == m ? void 0 : m.name) && void 0 !== t ? t : d) && void 0 !== n ? n : '',
+                (0, i.jsx)(l.Z, {
+                    filename: null !== (a = null !== (s = null == h ? void 0 : h.name) && void 0 !== s ? s : c) && void 0 !== a ? a : '',
                     filters: [
                         {
-                            name: p,
-                            extensions: c
+                            name: g,
+                            extensions: d
                         }
                     ],
                     buttonText: 'Browse',
                     placeholder: 'Select an asset',
                     onFileSelect: function (e) {
-                        if ((x(null != e ? e : null), null == e)) return;
-                        let t = URL.createObjectURL(e);
-                        h.current = t;
-                        let n = new URL(t);
-                        n.searchParams.append('mimetype', e.type), n.searchParams.append('name', e.name), u(l, n.toString());
+                        if ((v(null != e ? e : null), null == e)) return;
+                        let s = URL.createObjectURL(e);
+                        m.current = s;
+                        let a = new URL(s);
+                        a.searchParams.append('mimetype', e.type), a.searchParams.append('name', e.name), u(o, a.toString());
                     }
                 })
             ]

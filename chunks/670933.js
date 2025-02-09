@@ -72,9 +72,9 @@ function _(e, t) {
         s = p(n[3]),
         o = p(n[4]),
         u = p(n[5]) - 1;
-    if (i) return T(t, o, u) ? E(t, o, u) : new Date(NaN);
+    if (i) return b(t, o, u) ? E(t, o, u) : new Date(NaN);
     var c = new Date(0);
-    return I(t, a, s) && b(t, r) ? (c.setUTCFullYear(t, a, Math.max(r, s)), c) : new Date(NaN);
+    return I(t, a, s) && T(t, r) ? (c.setUTCFullYear(t, a, Math.max(r, s)), c) : new Date(NaN);
 }
 function p(e) {
     return e ? parseInt(e) : 1;
@@ -112,10 +112,10 @@ function y(e) {
 function I(e, t, n) {
     return t >= 0 && t <= 11 && n >= 1 && n <= (v[t] || (y(e) ? 29 : 28));
 }
-function b(e, t) {
+function T(e, t) {
     return t >= 1 && t <= (y(e) ? 366 : 365);
 }
-function T(e, t, n) {
+function b(e, t, n) {
     return t >= 1 && t <= 53 && n >= 0 && n <= 6;
 }
 function S(e, t, n) {

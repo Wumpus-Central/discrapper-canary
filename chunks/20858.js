@@ -17,8 +17,8 @@ var i = n(67867),
     v = o(''.replace),
     y = o((1).toString),
     I = /[\uD800-\uDFFF]/g,
-    b = /^[\uD800-\uDBFF]$/,
-    T = /^[\uDC00-\uDFFF]$/,
+    T = /^[\uD800-\uDBFF]$/,
+    b = /^[\uDC00-\uDFFF]$/,
     S =
         !_ ||
         l(function () {
@@ -42,7 +42,7 @@ var i = n(67867),
     C = function (e, t, n) {
         var i = g(n, t - 1),
             r = g(n, t + 1);
-        return (m(b, e) && !m(T, r)) || (m(T, e) && !m(b, i)) ? '\\u' + y(E(e, 0), 16) : e;
+        return (m(T, e) && !m(b, r)) || (m(b, e) && !m(T, i)) ? '\\u' + y(E(e, 0), 16) : e;
     };
 h &&
     i(

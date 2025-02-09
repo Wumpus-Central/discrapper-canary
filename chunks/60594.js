@@ -52,7 +52,7 @@ var t = l(200651),
     $ = l(921944),
     ee = l(761274),
     en = l(388032),
-    el = l(456963);
+    el = l(760416);
 let et = (e) => {
     let { visibleContent: n, markAsDismissed: l } = e;
     return n === d.z.GO_LIVE_SYSTEM_PICKER_COACHMARK
@@ -169,7 +169,7 @@ function ei(e) {
                         });
                 })();
     }
-    function e9() {
+    function e5() {
         e7(), eu();
     }
     i.useEffect(() => {
@@ -184,7 +184,7 @@ function ei(e) {
         }),
             E.Z.trackExposure({ location: 'GoLiveModal' });
     }, [eo]);
-    let e5 = i.useCallback(
+    let e6 = i.useCallback(
             (e, n, l) => {
                 var t;
                 let i = (0, W.Z)(e, ef, eT),
@@ -201,14 +201,14 @@ function ei(e) {
             },
             [eZ, eU, ef, eT, eY, eV, eJ]
         ),
-        e6 = i.useCallback(
+        e9 = i.useCallback(
             (e) => {
                 (0, F.t)(), (0, F.T)(null != e ? e : e2);
             },
             [e2]
         );
     function e8(e) {
-        if ((e.preventDefault(), 1 === e_)) return e6();
+        if ((e.preventDefault(), 1 === e_)) return e9();
         if (2 === e_) return eL(3);
         if (null != e2) return eL(1);
         let n = (0, H.Z)(ev, eG, I.ZP.getRunningGames());
@@ -221,12 +221,12 @@ function ei(e) {
                       return (l) =>
                           (0, t.jsx)(e, {
                               ...l,
-                              handleStream: e9,
+                              handleStream: e5,
                               pid: n
                           });
                   });
               })()
-            : e9();
+            : e5();
     }
     let ne = i.useCallback(
             (e) => {
@@ -343,9 +343,9 @@ function ei(e) {
                                 previewDisabled: eQ,
                                 sourceChanged: ez,
                                 selectSource: ea,
-                                onChangeSelectedFPS: (e) => e5(eJ, eV, e),
-                                onChangeSelectedResolution: (e) => e5(eJ, e, eY),
-                                onChangeSelectedPreset: (e) => e5(e, eV, eY),
+                                onChangeSelectedFPS: (e) => e6(eJ, eV, e),
+                                onChangeSelectedResolution: (e) => e6(eJ, e, eY),
+                                onChangeSelectedPreset: (e) => e6(e, eV, eY),
                                 onChangeSelectedChannelId: ey,
                                 onChangeSelectedSource: ne,
                                 onChangeSource: () => ns(),
@@ -365,7 +365,7 @@ function ei(e) {
                         children: (0, t.jsx)('div', {
                             className: el.modalSize,
                             children: (0, t.jsx)(Y.Hu, {
-                                onSourceSelect: e9,
+                                onSourceSelect: e5,
                                 onCancel: no,
                                 pickerType: e2
                             })

@@ -17,17 +17,17 @@ var i = n(200651),
     E = n(377171),
     I = n(633302),
     C = n(153066),
-    N = n(335131),
-    v = n(744112),
+    v = n(335131),
+    N = n(744112),
     T = n(267097),
     S = n(364111),
-    Z = n(81136),
-    A = n(141594),
+    A = n(81136),
+    Z = n(141594),
     x = n(302800),
     b = n(215023),
     L = n(981631),
     y = n(388032),
-    P = n(335907);
+    P = n(2556);
 let O = (e) => {
         let { color: t } = e;
         return (0, i.jsx)(d.IGR, {
@@ -37,7 +37,7 @@ let O = (e) => {
         });
     },
     R = () => {
-        let { noCache: e, includeUnpublished: t } = (0, Z.Z)();
+        let { noCache: e, includeUnpublished: t } = (0, A.Z)();
         return (
             (0, S.E)(b.AW.HOME, {
                 noCache: e,
@@ -55,7 +55,7 @@ let O = (e) => {
             [E, I] = l.useState(!1),
             C = l.useCallback(() => {
                 I(!0),
-                    (0, N.Sm)({
+                    (0, v.Sm)({
                         analyticsSource: p,
                         analyticsLocations: f
                     });
@@ -126,30 +126,30 @@ let O = (e) => {
         });
     }),
     M = (e) => {
-        var t, n, r, s, u, h, g, _, f, E, I, N;
-        let v, T;
-        let { selected: S, locationState: Z, displayOptions: A } = e,
+        var t, n, r, s, u, h, g, _, f, E, I, v;
+        let N, T;
+        let { selected: S, locationState: A, displayOptions: Z } = e,
             x = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
             [b, L] = l.useState(0),
             [R, D] = l.useState(!1),
             M = (0, m.ZP)(),
-            k = A.entrypointDecorationAssets,
+            k = Z.entrypointDecorationAssets,
             U = (0, c.wj)(M);
-        R ? (U ? ((v = null === (t = A.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (T = null === (r = A.entrypointBackgroundStyle) || void 0 === r ? void 0 : null === (n = r.hovered) || void 0 === n ? void 0 : n.dark)) : ((v = null === (s = A.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (T = null === (h = A.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((v = null === (g = A.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (T = null === (f = A.entrypointBackgroundStyle) || void 0 === f ? void 0 : null === (_ = f.resting) || void 0 === _ ? void 0 : _.dark)) : ((v = null === (E = A.entryPointBackgroundAssets) || void 0 === E ? void 0 : E.srcLight), (T = null === (N = A.entrypointBackgroundStyle) || void 0 === N ? void 0 : null === (I = N.resting) || void 0 === I ? void 0 : I.light));
+        R ? (U ? ((N = null === (t = Z.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (T = null === (r = Z.entrypointBackgroundStyle) || void 0 === r ? void 0 : null === (n = r.hovered) || void 0 === n ? void 0 : n.dark)) : ((N = null === (s = Z.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (T = null === (h = Z.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((N = null === (g = Z.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (T = null === (f = Z.entrypointBackgroundStyle) || void 0 === f ? void 0 : null === (_ = f.resting) || void 0 === _ ? void 0 : _.dark)) : ((N = null === (E = Z.entryPointBackgroundAssets) || void 0 === E ? void 0 : E.srcLight), (T = null === (v = Z.entrypointBackgroundStyle) || void 0 === v ? void 0 : null === (I = v.resting) || void 0 === I ? void 0 : I.light));
         let G = l.useCallback(
                 (e) => {
-                    L((e) => (e + 1) % A.assetIds.length), D(!0), null == e || e();
+                    L((e) => (e + 1) % Z.assetIds.length), D(!0), null == e || e();
                 },
-                [A.assetIds.length]
+                [Z.assetIds.length]
             ),
             B = l.useCallback((e) => {
                 D(!1), null == e || e();
             }, []),
-            V = A.title();
+            V = Z.title();
         return (0, i.jsx)(d.ua7, {
             text: (0, i.jsx)(w, {
-                displayOptions: A,
-                assetId: A.assetIds[b],
+                displayOptions: Z,
+                assetId: Z.assetIds[b],
                 reducedMotion: x
             }),
             tooltipClassName: P.marketingBadgeTooltip,
@@ -160,10 +160,10 @@ let O = (e) => {
             'aria-label': 'string' == typeof V ? V : y.intl.string(y.t.rSXaxc),
             children: (e) =>
                 (0, i.jsxs)(j, {
-                    className: null != A.entryPointClassName ? (0, C.l)(P, A.entryPointClassName) : void 0,
+                    className: null != Z.entryPointClassName ? (0, C.l)(P, Z.entryPointClassName) : void 0,
                     selected: S,
-                    locationState: Z,
-                    icon: A.entryPointIcon,
+                    locationState: A,
+                    icon: Z.entryPointIcon,
                     ...e,
                     onMouseEnter: () => G(e.onMouseEnter),
                     onMouseLeave: () => B(e.onMouseLeave),
@@ -172,9 +172,9 @@ let O = (e) => {
                             className: P.marketingButtonBackground,
                             style: { background: T },
                             children:
-                                null != v &&
+                                null != N &&
                                 (0, i.jsx)('img', {
-                                    src: v,
+                                    src: N,
                                     className: P.marketingButtonBackgroundImage,
                                     alt: '',
                                     'aria-hidden': !0
@@ -188,7 +188,7 @@ let O = (e) => {
                                 alt: '',
                                 'aria-hidden': !0
                             }),
-                        (0, i.jsx)(O, { color: A.badgeColor })
+                        (0, i.jsx)(O, { color: Z.badgeColor })
                     ]
                 })
         });
@@ -223,8 +223,8 @@ let O = (e) => {
     U = () => ((0, T.Z)(), null),
     G = (e) => {
         let { selected: t, locationState: n } = e,
-            { collectiblesShopTabNewBadgeDisplayOptions: l } = (0, A.Z)(),
-            r = (0, v.b)('Collectibles Shop Button');
+            { collectiblesShopTabNewBadgeDisplayOptions: l } = (0, Z.Z)(),
+            r = (0, N.b)('Collectibles Shop Button');
         if (null != l)
             switch (l.type) {
                 case x.k2.TOOLTIP:

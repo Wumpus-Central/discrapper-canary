@@ -60,7 +60,7 @@ Object.defineProperty(e, 'ICalCalendar', {
             return d.ICalCalendarMethod;
         }
     });
-var l = a(337951);
+var l = a(755260);
 Object.defineProperty(e, 'ICalCategory', {
     enumerable: !0,
     get: function () {

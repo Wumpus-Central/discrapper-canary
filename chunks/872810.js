@@ -2,12 +2,12 @@ n.d(t, {
     L6: () => B,
     Rc: () => U,
     WH: () => C,
-    aP: () => w,
+    aP: () => P,
     dV: () => G,
-    g: () => P,
-    iV: () => L,
+    g: () => w,
+    iV: () => x,
     n9: () => M,
-    pR: () => x,
+    pR: () => L,
     rn: () => D,
     tK: () => R,
     xc: () => k
@@ -31,9 +31,9 @@ var i = n(512722),
     v = n(934415),
     y = n(70956),
     I = n(557457),
-    b = n(573261);
+    T = n(573261);
 n(26151), n(493683);
-var T = n(475179);
+var b = n(475179);
 n(287734);
 var S = n(981631),
     A = n(70722);
@@ -76,16 +76,16 @@ function D(e, t) {
         streamKey: r,
         allowMultiple: a
     }),
-        a || (null != t && t.noFocus) || T.Z.selectParticipant(e.channelId, r);
+        a || (null != t && t.noFocus) || b.Z.selectParticipant(e.channelId, r);
 }
-function x(e, t) {
+function L(e, t) {
     o.Z.dispatch({
         type: 'STREAM_UPDATE_SELF_HIDDEN',
         channelId: e,
         selfStreamHidden: t
     });
 }
-function L(e, t) {
+function x(e, t) {
     let { guildId: n, channelId: i } = e;
     if (null != n && O(n, i)) return;
     D(e, t);
@@ -93,16 +93,16 @@ function L(e, t) {
         a = g.Z.getVoiceChannelId();
     (!r || a !== i) && (0, c.Z)(e);
 }
-function P(e) {
+function w(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    w(e, t),
+    P(e, t),
         o.Z.dispatch({
             type: 'STREAM_STOP',
             streamKey: e,
             appContext: __OVERLAY__ ? S.IlC.OVERLAY : S.IlC.APP
         });
 }
-function w(e) {
+function P(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     o.Z.dispatch({
         type: 'STREAM_CLOSE',
@@ -146,7 +146,7 @@ async function M(e, t, n) {
 }
 async function k(e) {
     try {
-        await b.Z.post({
+        await T.Z.post({
             url: S.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
             trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY },
@@ -172,5 +172,5 @@ function G(e, t) {
 function B() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = _.Z.getCurrentUserActiveStream();
-    null != t && P((0, u.V9)(t), e);
+    null != t && w((0, u.V9)(t), e);
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     F: () => S,
-    X: () => b
+    X: () => T
 }),
     n(47120);
 var i,
@@ -16,7 +16,7 @@ var i,
     _ = n(481060),
     p = n(540059),
     h = n(981631),
-    m = n(592901);
+    m = n(573097);
 function g(e, t, n) {
     return (
         t in e
@@ -45,7 +45,7 @@ let y = {
         top: m.alignTop,
         center: m.alignCenter
     };
-class b extends (i = a.PureComponent) {
+class T extends (i = a.PureComponent) {
     render() {
         let { disabled: e, readOnly: t, value: n, align: i = 'center', className: a, innerClassName: s, children: l, size: u, reverse: c, displayOnly: d, type: _, onClick: p } = this.props,
             g =
@@ -92,7 +92,7 @@ class b extends (i = a.PureComponent) {
             });
     }
 }
-function T(e, t) {
+function b(e, t) {
     var n;
     let { value: i, type: r, color: a } = e,
         s = null !== (n = e.style) && void 0 !== n ? n : {};
@@ -130,7 +130,7 @@ function T(e, t) {
 function S(e) {
     let t = (0, p.Q3)('Checkbox'),
         { indicatorClassName: n, value: i, size: s, shape: l, checkboxColor: u, type: c, color: f, disabled: _ } = e,
-        h = T(e, t),
+        h = b(e, t),
         g = a.useMemo(() => (i ? (t ? d.Z.colors.WHITE.css : 'inverted' === c || 'row' === c ? d.Z.colors.WHITE.css : null != f ? f : d.Z.unsafe_rawColors.BRAND_500.css) : d.Z.unsafe_rawColors.TRANSPARENT.css), [i, c, f, t]);
     return (0, r.jsx)('div', {
         className: o()(m.checkbox, l, n, {
@@ -155,10 +155,10 @@ function A(e) {
     let { isVisualRefreshEnabled: t, ...n } = e;
     return t ? (0, r.jsx)(_.kSu, { ...n }) : (0, r.jsx)(_.dz2, { ...n });
 }
-g(b, 'Types', E),
-    g(b, 'Shapes', y),
-    g(b, 'Aligns', v),
-    g(b, 'defaultProps', {
+g(T, 'Types', E),
+    g(T, 'Shapes', y),
+    g(T, 'Aligns', v),
+    g(T, 'defaultProps', {
         size: 24,
         disabled: !1,
         readOnly: !1,

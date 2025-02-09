@@ -8,19 +8,19 @@ var l = n(120356),
     s = n(481060),
     c = n(565138),
     d = n(252686),
-    u = n(10448);
+    u = n(893539);
 function h(e) {
     let { guild: t, show: n, active: l, onAnimationStart: h, onAnimationRest: p } = e,
-        g = {},
-        m = {};
-    (g.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (m.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)');
+        m = {},
+        g = {};
+    (m.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (g.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)');
     let f = (0, s.dQu)(o.Z.unsafe_rawColors.BRAND_500).hex(),
         _ = (0, s.dQu)(o.Z.unsafe_rawColors.PRIMARY_630).hex();
-    l && null == t.icon && ((g.backgroundColor = f), (m.backgroundColor = _));
+    l && null == t.icon && ((m.backgroundColor = f), (g.backgroundColor = _));
     let v = (0, s.Yzy)(n, {
-        from: g,
-        enter: m,
-        leave: g,
+        from: m,
+        enter: g,
+        leave: m,
         config: { duration: 100 },
         onStart: h,
         onRest: p

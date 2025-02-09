@@ -14,7 +14,7 @@ n.d(t, {
     ib: () => O,
     lh: () => J,
     mF: () => q,
-    ub: () => L,
+    ub: () => x,
     v1: () => U,
     x6: () => k,
     zi: () => Q
@@ -40,8 +40,8 @@ let p = 365,
     v = 4,
     y = [s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday],
     I = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday],
-    b = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
-    T = [s.Ci.SA.weekday, s.Ci.SU.weekday],
+    T = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
+    b = [s.Ci.SA.weekday, s.Ci.SU.weekday],
     S = [s.Ci.FR.weekday, s.Ci.SA.weekday],
     A = [s.Ci.SU.weekday, s.Ci.MO.weekday],
     N = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
@@ -101,17 +101,17 @@ let O = () => {
         return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
     },
     D = (e, t) => (0, l.vc)(e, e.get('years') === t.get('years') ? m : g),
-    x = (e, t) => {
+    L = (e, t) => {
         let n = (0, l.wY)(e.toDate(), t.toDate());
         return n > 1 || n < 0 ? D(e, t) : (0, l.vc)(e, e.localeData().calendar(n < 1 ? 'sameDay' : 'nextDay', e, t));
     };
-function L(e, t, n) {
+function x(e, t, n) {
     null == n && (n = a()());
     let i = a()(e),
         r = null != t && '' !== t ? a()(t) : void 0,
         s = null != t && i.isSame(r, 'day');
     return {
-        startDateTimeString: x(i, n),
+        startDateTimeString: L(i, n),
         endDateTimeString: null != r ? (s ? r.format(E) : D(r, n)) : void 0,
         currentOrPastEvent: i <= n,
         upcomingEvent: i <= a()().add(1, 'hour'),
@@ -119,10 +119,10 @@ function L(e, t, n) {
         diffMinutes: i.diff(n, 'minutes')
     };
 }
-function P(e) {
+function w(e) {
     return new s.OG(N[e]);
 }
-function w(e, t) {
+function P(e, t) {
     let n;
     return (
         null != e &&
@@ -153,10 +153,10 @@ function k(e, t) {
     };
 }
 function U(e) {
-    return w(e.scheduledStartTime, e.scheduledEndTime);
+    return P(e.scheduledStartTime, e.scheduledEndTime);
 }
 function G(e) {
-    return w(e.scheduled_start_time, e.scheduled_end_time);
+    return P(e.scheduled_start_time, e.scheduled_end_time);
 }
 function B(e, t) {
     return null == e || null == t ? null == e && null == t : e.isSame(t);
@@ -215,19 +215,19 @@ function Y(e, t) {
     }
 }
 function W(e) {
-    let t = P(e.toDate().getDay()),
-        n = P(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? b : n.weekday - t.weekday < 0 ? I : y;
+    let t = w(e.toDate().getDay()),
+        n = w(e.toDate().getUTCDay());
+    return n.weekday - t.weekday > 0 ? T : n.weekday - t.weekday < 0 ? I : y;
 }
 function K(e) {
-    let t = P(e.toDate().getDay()),
-        n = P(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? A : n.weekday - t.weekday < 0 ? S : T;
+    let t = w(e.toDate().getDay()),
+        n = w(e.toDate().getUTCDay());
+    return n.weekday - t.weekday > 0 ? A : n.weekday - t.weekday < 0 ? S : b;
 }
 function z(e, t) {
     let n = W(t),
         i = K(t),
-        r = P(t.toDate().getUTCDay()),
+        r = w(t.toDate().getUTCDay()),
         a = Math.ceil(t.toDate().getUTCDate() / 7),
         o = t.toDate();
     switch ((o.setMilliseconds(0), e)) {

@@ -15,27 +15,27 @@ var i = n(200651),
     m = n(703926),
     g = n(474936),
     E = n(388032),
-    v = n(461405);
+    v = n(355620);
 let y = (e) => {
     let { isShopGift: t, className: n, optionsContainerClassName: a } = e,
-        { giftRecipient: y, selectedGiftStyle: I, setSelectedGiftStyle: b, emojiConfetti: T, soundEffect: S, setEmojiConfetti: A, setSoundEffect: N } = (0, l.wD)(),
+        { giftRecipient: y, selectedGiftStyle: I, setSelectedGiftStyle: T, emojiConfetti: b, soundEffect: S, setEmojiConfetti: A, setSoundEffect: N } = (0, l.wD)(),
         [C, R] = r.useState(!1),
         O = r.useRef(null),
         D = (0, o.arW)({ orientation: 'horizontal' }),
-        x = (0, c.MY)(y, t),
-        L = x === c.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        P = x !== c.xr.DEFAULT,
-        w = (0, f.rK)(),
-        { enabled: M } = f.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: w }),
+        L = (0, c.MY)(y, t),
+        x = L === c.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        w = L !== c.xr.DEFAULT,
+        P = (0, f.rK)(),
+        { enabled: M } = f.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: P }),
         { enabled: k } = _.O.useExperiment({ location: 'gift card' }),
         U = null;
-    P && (U = w && M ? g.kJ : g.QI), k && (U = g.RQ);
+    w && (U = P && M ? g.kJ : g.QI), k && (U = g.RQ);
     let G = (e) => {
         null != N && N(null == e ? void 0 : e);
     };
     return (0, i.jsxs)('div', {
         children: [
-            P &&
+            w &&
                 (0, i.jsxs)('div', {
                     className: s()(v.giftMainAnimation, n),
                     children: [
@@ -48,7 +48,7 @@ let y = (e) => {
                                   className: v.animation
                               })
                             : (0, i.jsx)(o.$jN, { className: v.spinner }),
-                        L &&
+                        x &&
                             (0, i.jsxs)('div', {
                                 className: v.soundEmojiContainer,
                                 children: [
@@ -63,7 +63,7 @@ let y = (e) => {
                                         className: v.emoji,
                                         children: (0, i.jsx)(h.Z, {
                                             setEmojiConfetti: A,
-                                            emojiConfetti: null == T ? void 0 : T
+                                            emojiConfetti: null == b ? void 0 : b
                                         })
                                     })
                                 ]
@@ -87,7 +87,7 @@ let y = (e) => {
                             {
                                 isSelected: I === e,
                                 giftStyle: e,
-                                setSelectedGiftStyle: b,
+                                setSelectedGiftStyle: T,
                                 ref: 0 === t ? O : null,
                                 onFocus: () => R(!0),
                                 onBlur: () => R(!1)

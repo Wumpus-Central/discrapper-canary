@@ -10,7 +10,7 @@ var t = l(200651),
     d = l(91907),
     m = l(866040),
     h = l(388032),
-    p = l(633942);
+    p = l(825665);
 function x(e) {
     let { entry: n, channel: l, className: i } = e,
         { displayParticipants: x, participant1: v, participant2: f, numOtherParticipants: C, orderedParticipants: g } = (0, u.Z)(n),

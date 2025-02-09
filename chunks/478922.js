@@ -6,7 +6,7 @@ var i = n(200651),
     o = n(663507),
     l = n(84735),
     u = n(562701),
-    c = n(448304);
+    c = n(511201);
 function d(e, t, n) {
     let a = (0, u.G6)(e),
         d = new Map(),
@@ -19,7 +19,7 @@ function d(e, t, n) {
         });
     return (0, r.forwardRef)(function (n, _) {
         var p;
-        let { onScroll: h, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: y, getSectionHeight: I, chunkSize: b, renderSection: T, renderItem: S, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: x, fade: L = !1, className: P, style: w, maxContentWidth: M, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
+        let { onScroll: h, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: y, getSectionHeight: I, chunkSize: T, renderSection: b, renderItem: S, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: w, style: P, maxContentWidth: M, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
             B = r.useRef(null),
             Z = r.useRef(null),
             F = r.useRef({}),
@@ -27,7 +27,7 @@ function d(e, t, n) {
             { scrollerRef: H, scrollerState: Y, getScrollerState: W } = (0, u.T4)();
         (0, u.tT)({
             scrollerRef: H,
-            className: P,
+            className: w,
             specs: a,
             orientation: 'vertical',
             dir: m
@@ -46,13 +46,13 @@ function d(e, t, n) {
             getItemKey: v,
             getItemHeight: y,
             getSectionHeight: I,
-            chunkSize: b,
+            chunkSize: T,
             itemGutter: N,
             removeEdgeItemGutters: C,
             sectionGutter: R,
             padding: O,
             paddingVertical: D,
-            paddingHorizontal: x,
+            paddingHorizontal: L,
             getScrollerState: W,
             dir: m,
             maxBufferWidth: M
@@ -107,12 +107,12 @@ function d(e, t, n) {
             (0, i.jsxs)('div', {
                 ref: H,
                 onScroll: ea,
-                className: s()(P, {
+                className: s()(w, {
                     [e]: !0,
-                    [t]: L,
+                    [t]: x,
                     [c.scrolling]: V
                 }),
-                style: (0, u.uT)(w),
+                style: (0, u.uT)(P),
                 ...G,
                 children: [
                     null !== (p = null == k ? void 0 : k(X)) && void 0 !== p ? p : null,
@@ -141,7 +141,7 @@ function d(e, t, n) {
                                                           ...(null !== (t = null == o ? void 0 : o.style) && void 0 !== t ? t : {})
                                                       },
                                                       children: [
-                                                          null != T && null != s && T(n, s, e),
+                                                          null != b && null != s && b(n, s, e),
                                                           a.map((e) => {
                                                               let [t, n, i] = e,
                                                                   r = z[t];
@@ -155,7 +155,7 @@ function d(e, t, n) {
                                     })
                                 })
                             }),
-                        [Q, S, T, z, X, A, q]
+                        [Q, S, b, z, X, A, q]
                     )
                 ]
             })

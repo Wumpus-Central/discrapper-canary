@@ -15,7 +15,7 @@ var i = e(200651),
     m = e(984933),
     p = e(430824),
     u = e(388032),
-    L = e(217540);
+    L = e(673789);
 function _(t) {
     let { createdGuildId: n, hasFooter: e = !0, onClose: _, onChannelPromptCompleted: g, isSlideReady: x } = t,
         [T, E] = l.useState(''),

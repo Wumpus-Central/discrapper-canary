@@ -8,7 +8,7 @@ var r = n(442837),
     o = n(845377),
     c = n(981631),
     d = n(388032),
-    u = n(941851);
+    u = n(414659);
 let m = (e) => {
     let { guild: t } = e,
         n = (0, r.e7)([s.Z], () => s.Z.can(c.Plq.ADMINISTRATOR, t), [t]),

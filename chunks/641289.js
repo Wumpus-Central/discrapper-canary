@@ -30,8 +30,8 @@ let s = (e) => i(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
     v = a(E, /\d/, /[\u0300-\u036F\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F]/),
     y = i(E, v, '*'),
     I = i(/[A-Z]/, v, '*'),
-    b = ['attached', 'autoclosure', i(/convention\(/, a('swift', 'block', 'c'), /\)/), 'discardableResult', 'dynamicCallable', 'dynamicMemberLookup', 'escaping', 'freestanding', 'frozen', 'GKInspectable', 'IBAction', 'IBDesignable', 'IBInspectable', 'IBOutlet', 'IBSegueAction', 'inlinable', 'main', 'nonobjc', 'NSApplicationMain', 'NSCopying', 'NSManaged', i(/objc\(/, y, /\)/), 'objc', 'objcMembers', 'propertyWrapper', 'requires_stored_property_inits', 'resultBuilder', 'Sendable', 'testable', 'UIApplicationMain', 'unchecked', 'unknown', 'usableFromInline', 'warn_unqualified_access'],
-    T = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
+    T = ['attached', 'autoclosure', i(/convention\(/, a('swift', 'block', 'c'), /\)/), 'discardableResult', 'dynamicCallable', 'dynamicMemberLookup', 'escaping', 'freestanding', 'frozen', 'GKInspectable', 'IBAction', 'IBDesignable', 'IBInspectable', 'IBOutlet', 'IBSegueAction', 'inlinable', 'main', 'nonobjc', 'NSApplicationMain', 'NSCopying', 'NSManaged', i(/objc\(/, y, /\)/), 'objc', 'objcMembers', 'propertyWrapper', 'requires_stored_property_inits', 'resultBuilder', 'Sendable', 'testable', 'UIApplicationMain', 'unchecked', 'unknown', 'usableFromInline', 'warn_unqualified_access'],
+    b = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
 function S(e) {
     let t = {
             match: /\s+/,
@@ -82,7 +82,7 @@ function S(e) {
             match: /->/,
             relevance: 0
         },
-        x = [
+        L = [
             D,
             {
                 className: 'operator',
@@ -90,12 +90,12 @@ function S(e) {
                 variants: [{ match: g }, { match: `\\.(\\.|${m})+` }]
             }
         ],
-        L = '([0-9]_*)+',
-        P = '([0-9a-fA-F]_*)+',
-        w = {
+        x = '([0-9]_*)+',
+        w = '([0-9a-fA-F]_*)+',
+        P = {
             className: 'number',
             relevance: 0,
-            variants: [{ match: `\\b(${L})(\\.(${L}))?([eE][+-]?(${L}))?\\b` }, { match: `\\b0x(${P})(\\.(${P}))?([pP][+-]?(${L}))?\\b` }, { match: /\b0o([0-7]_*)+\b/ }, { match: /\b0b([01]_*)+\b/ }]
+            variants: [{ match: `\\b(${x})(\\.(${x}))?([eE][+-]?(${x}))?\\b` }, { match: `\\b0x(${w})(\\.(${w}))?([pP][+-]?(${x}))?\\b` }, { match: /\b0o([0-7]_*)+\b/ }, { match: /\b0b([01]_*)+\b/ }]
         },
         M = (e = '') => ({
             className: 'subst',
@@ -180,15 +180,15 @@ function S(e) {
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: T,
-                            contains: [...x, w, Z]
+                            keywords: b,
+                            contains: [...L, P, Z]
                         }
                     ]
                 }
             },
             {
                 scope: 'keyword',
-                match: i(/@/, a(...b), n(a(/\(/, /\s+/)))
+                match: i(/@/, a(...T), n(a(/\(/, /\s+/)))
             },
             {
                 scope: 'meta',
@@ -245,8 +245,8 @@ function S(e) {
                 H,
                 ...R,
                 ...O,
-                ...x,
-                w,
+                ...L,
+                P,
                 Z,
                 ...W,
                 ...K,
@@ -281,8 +281,8 @@ function S(e) {
                 },
                 ...h,
                 ...R,
-                ...x,
-                w,
+                ...L,
+                P,
                 Z,
                 ...K,
                 z,
@@ -366,7 +366,7 @@ function S(e) {
     for (let e of Z.variants) {
         let t = e.contains.find((e) => 'interpol' === e.label);
         t.keywords = C;
-        let n = [...R, ...O, ...x, w, Z, ...W];
+        let n = [...R, ...O, ...L, P, Z, ...W];
         t.contains = [
             ...n,
             {
@@ -397,8 +397,8 @@ function S(e) {
             H,
             ...R,
             ...O,
-            ...x,
-            w,
+            ...L,
+            P,
             Z,
             ...W,
             ...K,

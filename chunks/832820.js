@@ -15,7 +15,7 @@ var i = n(200651),
     m = n(576645),
     g = n(981631),
     E = n(388032),
-    v = n(648624);
+    v = n(887220);
 function y(e) {
     let { emojiConfetti: t } = e,
         n = r.useMemo(() => (null == t ? null : null == t.id ? t.optionallyDiverseSequence : t.name), [t]);
@@ -38,13 +38,13 @@ let I = function (e) {
         n = (0, d.z8)(t.id),
         a = (0, d.OG)(t.id),
         { entitlement: u, numPotions: I } = (0, m.t6)(_.D1),
-        b = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 (0, d.Hi)(e, t.id);
             },
             [t.id]
         ),
-        T = r.useCallback(() => {
+        b = r.useCallback(() => {
             (0, d.GA)(t.id);
         }, [t.id]),
         S = r.useMemo(() => (null != n ? n.name.replace(/_/g, ' ') : ''), [n]),
@@ -54,18 +54,18 @@ let I = function (e) {
         N = r.useMemo(() => (null != I && I > 0 ? ((null == u ? void 0 : u.type) === g.qc2.DEVELOPER_GIFT ? E.intl.format(E.t['b+P6ra'], { numPotions: I }) : E.intl.format(E.t.RiQ4cn, { numPotions: I })) : E.intl.string(E.t.hvVgAQ)), [I, u]),
         [C, R] = r.useState(!1 === a);
     r.useEffect(() => {
-        !1 === a && T();
-    }, [a, T]);
+        !1 === a && b();
+    }, [a, b]);
     let O = r.useCallback(() => {
             R(!1);
         }, []),
         D = r.useCallback(
             (e) => {
-                b(e), R(!1);
+                T(e), R(!1);
             },
-            [b]
+            [T]
         ),
-        x = r.useCallback(() => {
+        L = r.useCallback(() => {
             (0, p.s)({
                 channelId: t.id,
                 onRedeem: () => {},
@@ -105,7 +105,7 @@ let I = function (e) {
                     (0, i.jsx)(l.zxk, {
                         look: l.zxk.Looks.LINK,
                         size: l.zxk.Sizes.SMALL,
-                        onClick: x,
+                        onClick: L,
                         color: l.zxk.Colors.TRANSPARENT,
                         className: v.learnMoreButton,
                         children: (0, i.jsx)(o.xv, {

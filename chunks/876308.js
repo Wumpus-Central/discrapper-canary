@@ -27,7 +27,7 @@ let N = (0, d.Z)(
                         u = r.useCallback(() => {
                             if ((null == e ? void 0 : e.id) == null) return null;
                             (0, s.ZDy)(async () => {
-                                let { default: r } = await Promise.all([n.e('56035'), n.e('28394')]).then(n.bind(n, 758961));
+                                let { default: r } = await Promise.all([n.e('56035'), n.e('13519')]).then(n.bind(n, 758961));
                                 return (n) =>
                                     (0, i.jsx)(r, {
                                         ...n,

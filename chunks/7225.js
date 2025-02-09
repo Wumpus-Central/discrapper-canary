@@ -1,108 +1,108 @@
-i.d(e, { default: () => h }), i(47120);
-var n = i(200651),
-    r = i(192379),
-    s = i(541822),
-    l = i(442837),
-    a = i(481060),
-    o = i(728345),
-    c = i(812206),
-    d = i(600164),
-    _ = i(886176),
-    u = i(572004),
-    p = i(504211),
-    S = i(283836),
-    C = i(507608),
-    I = i(533159),
-    T = i(981631),
-    f = i(979007),
-    N = i(388032),
-    L = i(671702);
-function h(t) {
-    let { onClose: e, transitionState: i, appId: h, guildId: m } = t,
-        E = (0, l.e7)([c.Z], () => c.Z.getApplication(h), [h]),
-        [g, P] = r.useState(() => (c.Z.isFetchingApplication(h) ? { status: 1 } : { status: 0 }));
-    r.useEffect(() => {
-        0 === g.status &&
-            (P({ status: 1 }),
-            o.ZP.fetchApplication(h)
+s.d(e, { default: () => v }), s(47120);
+var r = s(200651),
+    i = s(192379),
+    a = s(541822),
+    n = s(442837),
+    o = s(481060),
+    c = s(728345),
+    l = s(812206),
+    d = s(600164),
+    p = s(886176),
+    u = s(572004),
+    _ = s(504211),
+    f = s(283836),
+    m = s(507608),
+    x = s(533159),
+    h = s(981631),
+    S = s(979007),
+    g = s(388032),
+    j = s(827957);
+function v(t) {
+    let { onClose: e, transitionState: s, appId: v, guildId: C } = t,
+        N = (0, n.e7)([l.Z], () => l.Z.getApplication(v), [v]),
+        [b, T] = i.useState(() => (l.Z.isFetchingApplication(v) ? { status: 1 } : { status: 0 }));
+    i.useEffect(() => {
+        0 === b.status &&
+            (T({ status: 1 }),
+            c.ZP.fetchApplication(v)
                 .then(() => {
-                    P({ status: 2 });
+                    T({ status: 2 });
                 })
                 .catch((t) => {
-                    P({
+                    T({
                         status: 3,
                         error: t.message
                     });
                 }));
-    }, [h, g.status]);
-    let { subscriptions: A, otps: O } = (0, S.q)(h);
-    if (null == E) return null;
-    let v = N.intl.formatToPlainString(N.t.XDRjs7, { appName: E.name });
-    return (0, n.jsxs)(a.Y0X, {
-        transitionState: i,
-        'aria-label': v,
-        size: a.CgR.DYNAMIC,
-        className: L.modal,
+    }, [v, b.status]);
+    let { subscriptions: Z, otps: w } = (0, f.q)(v);
+    if (null == N) return null;
+    let A = g.intl.formatToPlainString(g.t.XDRjs7, { appName: N.name });
+    return (0, r.jsxs)(o.Y0X, {
+        transitionState: s,
+        'aria-label': A,
+        size: o.CgR.DYNAMIC,
+        className: j.modal,
         children: [
-            (0, n.jsxs)(a.xBx, {
-                className: L.modalHeader,
+            (0, r.jsxs)(o.xBx, {
+                className: j.modalHeader,
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: L.modalTitle,
+                    (0, r.jsxs)('div', {
+                        className: j.modalTitle,
                         children: [
-                            (0, n.jsx)(_.Z, {}),
-                            (0, n.jsx)(a.X6q, {
+                            (0, r.jsx)(p.Z, {}),
+                            (0, r.jsx)(o.X6q, {
                                 variant: 'heading-md/semibold',
-                                children: v
+                                children: A
                             })
                         ]
                     }),
-                    (0, n.jsxs)('div', {
-                        className: L.modalHeaderLinks,
+                    (0, r.jsxs)('div', {
+                        className: j.modalHeaderLinks,
                         children: [
                             u.wS &&
-                                (0, n.jsx)(a.zxk, {
-                                    look: a.iLD.BLANK,
-                                    size: a.PhG.ICON,
-                                    color: a.Ttl.TRANSPARENT,
-                                    'aria-label': N.intl.string(N.t.WqhZsr),
+                                (0, r.jsx)(o.zxk, {
+                                    look: o.iLD.BLANK,
+                                    size: o.PhG.ICON,
+                                    color: o.Ttl.TRANSPARENT,
+                                    'aria-label': g.intl.string(g.t.WqhZsr),
                                     onClick: () => {
-                                        let t = ''.concat(location.protocol, '//').concat(location.host).concat(T.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(h, f.GlobalDiscoveryAppsSections.STORE));
-                                        (0, u.JG)(t), (0, a.showToast)((0, a.createToast)(N.intl.string(N.t['L/PwZW']), a.ToastType.SUCCESS)), (0, p.X)(h, p.B.STORE_MODAL);
+                                        let t = ''.concat(location.protocol, '//').concat(location.host).concat(h.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(v, S.GlobalDiscoveryAppsSections.STORE));
+                                        (0, u.JG)(t), (0, o.showToast)((0, o.createToast)(g.intl.string(g.t['L/PwZW']), o.ToastType.SUCCESS)), (0, _.X)(v, _.B.STORE_MODAL);
                                     },
-                                    children: (0, n.jsx)(a.xPt, { size: 'sm' })
+                                    children: (0, r.jsx)(o.xPt, { size: 'sm' })
                                 }),
-                            (0, n.jsx)(a.olH, {
+                            (0, r.jsx)(o.olH, {
                                 onClick: e,
-                                className: L.modalCloseBtn
+                                className: j.modalCloseBtn
                             })
                         ]
                     })
                 ]
             }),
-            (0, n.jsx)('div', {
-                className: L.scrollerWrapper,
-                children: (0, n.jsx)(s.Z, {
-                    className: L.scroller,
-                    children: (0, n.jsx)(C.AF, {
-                        app: E,
-                        guildId: m,
-                        subscriptions: A,
-                        otps: O
+            (0, r.jsx)('div', {
+                className: j.scrollerWrapper,
+                children: (0, r.jsx)(a.Z, {
+                    className: j.scroller,
+                    children: (0, r.jsx)(m.AF, {
+                        app: N,
+                        guildId: C,
+                        subscriptions: Z,
+                        otps: w
                     })
                 })
             }),
-            (0, n.jsx)(a.mzw, {
+            (0, r.jsx)(o.mzw, {
                 justify: d.Z.Justify.END,
-                children: (0, n.jsx)(a.Text, {
+                children: (0, r.jsx)(o.Text, {
                     variant: 'text-md/normal',
                     children:
-                        null != E.termsOfServiceUrl || null != E.privacyPolicyUrl
-                            ? (0, n.jsx)(I.Z, {
-                                  termsOfServiceUrl: E.termsOfServiceUrl,
-                                  privacyPolicyUrl: E.privacyPolicyUrl
+                        null != N.termsOfServiceUrl || null != N.privacyPolicyUrl
+                            ? (0, r.jsx)(x.Z, {
+                                  termsOfServiceUrl: N.termsOfServiceUrl,
+                                  privacyPolicyUrl: N.privacyPolicyUrl
                               })
-                            : N.intl.string(N.t['3ZY+0N'])
+                            : g.intl.string(g.t['3ZY+0N'])
                 })
             })
         ]
