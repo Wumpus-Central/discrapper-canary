@@ -1,71 +1,72 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
 var r = n(442837),
     a = n(481060),
-    s = n(300284),
-    o = n(314897),
-    l = n(430824),
-    u = n(785717),
-    c = n(475413),
-    d = n(388032),
-    f = n(283946);
-function _(e) {
-    let { user: t, guildId: n, fullWidth: _, onClose: p } = e,
-        h = (0, r.e7)([o.default], () => o.default.getId() === t.id),
-        m = (0, r.e7)([l.Z], () => (null != n ? l.Z.getGuild(n) : null)),
-        g = (0, s.Z)({ guild: m }),
-        E = (0, s.Z)(),
-        { trackUserProfileAction: v } = (0, u.KZ)();
-    return h
-        ? null == m
-            ? (0, i.jsx)(c.tG, {
+    s = n(549879),
+    o = n(300284),
+    l = n(314897),
+    u = n(430824),
+    c = n(785717),
+    d = n(475413),
+    f = n(388032),
+    _ = n(283946);
+function p(e) {
+    let { user: t, guildId: n, fullWidth: p, appContext: h, onClose: m } = e,
+        g = (0, r.e7)([l.default], () => l.default.getId() === t.id),
+        E = (0, r.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
+        v = (0, o.Z)({ guild: E }),
+        y = (0, o.Z)({}),
+        { trackUserProfileAction: I } = (0, c.KZ)();
+    return g
+        ? null == E
+            ? (0, i.jsx)(d.tG, {
                   action: 'EDIT_PROFILE',
-                  text: d.intl.string(d.t.s5vZlZ),
+                  text: f.intl.string(f.t.s5vZlZ),
                   icon: a.vdY,
                   autoFocus: !0,
-                  fullWidth: _,
+                  fullWidth: p,
                   onClick: () => {
-                      null == p || p(), E();
+                      null == m || m(), y(), (0, s.i)(h);
                   }
               })
             : (0, i.jsx)(a.yRy, {
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
                       return (0, i.jsxs)(a.v2r, {
-                          className: f.popoutMenu,
+                          className: _.popoutMenu,
                           onSelect: void 0,
                           navId: 'edit-profile-popout',
                           onClose: () => {
-                              t(), null == p || p();
+                              t(), null == m || m();
                           },
-                          'aria-label': d.intl.string(d.t.AXIHpa),
+                          'aria-label': f.intl.string(f.t.AXIHpa),
                           children: [
                               (0, i.jsx)(a.sNh, {
                                   id: 'edit-server-profile',
-                                  label: d.intl.string(d.t['PKQB/P']),
-                                  subtext: d.intl.string(d.t.VYHWKC),
+                                  label: f.intl.string(f.t['PKQB/P']),
+                                  subtext: f.intl.string(f.t.VYHWKC),
                                   action: () => {
-                                      v({ action: 'EDIT_GUILD_PROFILE' }), g();
+                                      I({ action: 'EDIT_GUILD_PROFILE' }), v(), (0, s.i)(h);
                                   }
                               }),
                               (0, i.jsx)(a.sNh, {
                                   id: 'edit-main-profile',
-                                  label: d.intl.string(d.t.HmFaFB),
-                                  subtext: d.intl.string(d.t['+EERMj']),
+                                  label: f.intl.string(f.t.HmFaFB),
+                                  subtext: f.intl.string(f.t['+EERMj']),
                                   action: () => {
-                                      v({ action: 'EDIT_PROFILE' }), E();
+                                      I({ action: 'EDIT_PROFILE' }), y(), (0, s.i)(h);
                                   }
                               })
                           ]
                       });
                   },
                   children: (e) =>
-                      (0, i.jsx)(c.tG, {
-                          text: d.intl.string(d.t.s5vZlZ),
+                      (0, i.jsx)(d.tG, {
+                          text: f.intl.string(f.t.s5vZlZ),
                           icon: a.vdY,
                           autoFocus: !0,
-                          fullWidth: _,
+                          fullWidth: p,
                           ...e
                       })
               })

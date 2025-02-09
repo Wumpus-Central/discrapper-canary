@@ -8,11 +8,11 @@ var r = n(100527),
     l = n(382405),
     u = n(670451);
 function c(e) {
-    let { user: t, entry: n, className: c, onClose: d, hideContextMenu: f = !1 } = e,
-        { analyticsLocations: _ } = (0, a.ZP)(r.Z.USER_PROFILE_RECENT_ACTIVITY_CARD);
+    let { user: t, entry: n, className: c, onClose: d, hideContextMenu: f = !1, appContext: _ } = e,
+        { analyticsLocations: p } = (0, a.ZP)(r.Z.USER_PROFILE_RECENT_ACTIVITY_CARD);
     return (0, s.Rh)(n)
         ? (0, i.jsx)(a.Gt, {
-              value: _,
+              value: p,
               children: (0, i.jsx)(l.Z, {
                   entry: n,
                   user: t,
@@ -25,7 +25,8 @@ function c(e) {
                                 display: 'recent',
                                 entry: n,
                                 user: t,
-                                onClose: d
+                                onClose: d,
+                                appContext: _
                             })
                   })
               })

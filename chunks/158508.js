@@ -8,9 +8,9 @@ var r = n(442837),
     l = n(377171),
     u = n(243778),
     c = n(922611),
-    d = n(240515),
-    f = n(699516),
-    _ = n(594174),
+    d = n(699516),
+    f = n(594174),
+    _ = n(981631),
     p = n(921944),
     h = n(388032),
     m = n(469619);
@@ -21,55 +21,60 @@ function g() {
     });
 }
 function E(e) {
-    let { user: t, guildId: n, channelId: l, onBlock: E, onIgnore: v, onUnignore: y, location: I = 'ContextMenu' } = e,
-        { id: b } = t,
-        T = (0, r.e7)(
-            [_.default],
+    let { user: t, guildId: l, channelId: E, onBlock: v, onIgnore: y, onUnignore: I, location: T = 'ContextMenu', appContext: b = _.IlC.APP } = e,
+        { id: S } = t,
+        A = (0, r.e7)(
+            [f.default],
             () => {
                 var e;
-                return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === b;
+                return (null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === S;
             },
-            [b]
+            [S]
         ),
-        { isIgnored: S, isBlocked: A } = (0, r.cj)(
-            [f.Z],
+        { isIgnored: N, isBlocked: C } = (0, r.cj)(
+            [d.Z],
             () => ({
-                isIgnored: f.Z.isIgnored(b),
-                isBlocked: f.Z.isBlocked(b)
+                isIgnored: d.Z.isIgnored(S),
+                isBlocked: d.Z.isBlocked(S)
             }),
-            [b]
+            [S]
         ),
-        N = (0, c.Do)({ location: 'use-block-user-item-web' }),
-        C = N ? [a.z.IGNORE_USER_NEW_BADGE] : [],
-        [R, O] = (0, u.US)(C),
-        D = R === a.z.IGNORE_USER_NEW_BADGE;
-    return !N || T || A
+        R = (0, c.Do)({ location: 'use-block-user-item-web' }),
+        O = R ? [a.z.IGNORE_USER_NEW_BADGE] : [],
+        [D, L] = (0, u.US)(O),
+        x = D === a.z.IGNORE_USER_NEW_BADGE;
+    return !R || A || C
         ? null
         : (0, i.jsx)(s.sNh, {
               id: 'ignore',
               color: 'default',
-              label: S
+              label: N
                   ? h.intl.string(h.t['8wXU9P'])
                   : (0, i.jsxs)('div', {
                         className: m.label,
-                        children: [h.intl.string(h.t.ytCpKi), D ? (0, i.jsx)(g, {}) : null]
+                        children: [h.intl.string(h.t.ytCpKi), x ? (0, i.jsx)(g, {}) : null]
                     }),
-              action: S
+              action: N
                   ? () => {
-                        null == y || y(), o.Z.unignoreUser(b, null != I ? I : 'use-ignore-user-item-web', null != l ? l : void 0);
+                        null == I || I(), o.Z.unignoreUser(S, null != T ? T : 'use-ignore-user-item-web', null != E ? E : void 0);
                     }
                   : () => {
-                        D && O(p.L.TAKE_ACTION),
-                            (0, s.h7j)((e) =>
-                                (0, i.jsx)(d.Z, {
-                                    ...e,
-                                    guildId: n,
-                                    channelId: l,
-                                    user: t,
-                                    onIgnore: v,
-                                    onBlock: E,
-                                    location: I
-                                })
+                        x && L(p.L.TAKE_ACTION),
+                            (0, s.ZDy)(
+                                async () => {
+                                    let { default: e } = await n.e('97652').then(n.bind(n, 240515));
+                                    return (n) =>
+                                        (0, i.jsx)(e, {
+                                            ...n,
+                                            guildId: l,
+                                            channelId: E,
+                                            user: t,
+                                            onIgnore: y,
+                                            onBlock: v,
+                                            location: T
+                                        });
+                                },
+                                { contextKey: (0, s.VnL)(b) }
                             );
                     }
           });

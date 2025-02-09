@@ -1,4 +1,4 @@
-var i = {
+e.exports = {
     ephemeral: 'ephemeral__5126c',
     nitroMessage: 'nitroMessage__5126c',
     automodMessage: 'automodMessage__5126c',
@@ -26,4 +26,3 @@ var i = {
     beforeGroup: 'beforeGroup__5126c',
     interactionSending: 'interactionSending__5126c'
 };
-e.exports = i;

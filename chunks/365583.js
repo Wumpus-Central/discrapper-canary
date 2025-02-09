@@ -1,67 +1,68 @@
 n.d(t, {
-    C: () => v,
-    Z: () => I
+    C: () => y,
+    Z: () => T
 });
 var i = n(200651);
 n(192379);
 var r = n(442837),
     a = n(481060),
     s = n(230711),
-    o = n(394821),
-    l = n(841784),
-    u = n(833664),
-    c = n(503438),
-    d = n(579630),
-    f = n(26033),
-    _ = n(594174),
-    p = n(324745),
-    h = n(981631),
-    m = n(388032);
-let g = () => s.Z.open(h.oAB.CONNECTIONS, null);
-function E(e) {
-    let { activity: t, onOpenGameSettings: n } = e;
-    return (0, d.Z)(t) || (0, c.Z)(t) || (0, o.Z)(t) ? g : (0, u.Z)(t) && !(0, l.Z)(t) ? n : null;
-}
+    o = n(549879),
+    l = n(394821),
+    u = n(841784),
+    c = n(833664),
+    d = n(503438),
+    f = n(579630),
+    _ = n(26033),
+    p = n(594174),
+    h = n(324745),
+    m = n(981631),
+    g = n(388032);
+let E = () => s.Z.open(m.oAB.CONNECTIONS, null);
 function v(e) {
-    let { entry: t, onOpenGameSettings: n } = e;
-    return (0, f.aA)(t) || (0, f.y0)(t) || (0, f.dU)(t) ? g : (0, f.dX)(t) ? n : null;
+    let { activity: t, onOpenGameSettings: n } = e;
+    return (0, f.Z)(t) || (0, d.Z)(t) || (0, l.Z)(t) ? E : (0, c.Z)(t) && !(0, u.Z)(t) ? n : null;
 }
 function y(e) {
+    let { entry: t, onOpenGameSettings: n } = e;
+    return (0, _.aA)(t) || (0, _.y0)(t) || (0, _.dU)(t) ? E : (0, _.dX)(t) ? n : null;
+}
+function I(e) {
     let { activity: t, entry: n, onOpenGameSettings: i } = e;
     return null != n
-        ? v({
+        ? y({
               entry: n,
               onOpenGameSettings: i
           })
         : null != t
-          ? E({
+          ? v({
                 activity: t,
                 onOpenGameSettings: i
             })
           : null;
 }
-function I(e) {
-    let { user: t, activity: n, entry: s, onAction: o, onClose: l } = e,
-        u = (0, p.Z)({ onClose: l });
+function T(e) {
+    let { user: t, activity: n, entry: s, onAction: l, onClose: u, appContext: c } = e,
+        d = (0, h.Z)({ onClose: u });
     if (
-        !(0, r.e7)([_.default], () => {
+        !(0, r.e7)([p.default], () => {
             var e;
-            return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
+            return (null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
         })
     )
         return null;
-    let c = y({
+    let f = I({
         activity: n,
         entry: s,
-        onOpenGameSettings: u
+        onOpenGameSettings: d
     });
-    return null == c
+    return null == f
         ? null
         : (0, i.jsx)(a.sNh, {
               id: 'manage-privacy',
-              label: m.intl.string(m.t.anfNPT),
+              label: g.intl.string(g.t.anfNPT),
               action: () => {
-                  null == o || o({ action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM' }), c(), null == l || l();
+                  null == l || l({ action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM' }), f(), (0, o.i)(c), null == u || u();
               }
           });
 }

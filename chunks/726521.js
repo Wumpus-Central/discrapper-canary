@@ -1,6 +1,6 @@
 n.d(t, {
     I6: () => v,
-    J7: () => b,
+    J7: () => T,
     JM: () => y,
     Jw: () => _,
     WL: () => m,
@@ -11,7 +11,7 @@ n.d(t, {
     pX: () => E,
     sq: () => d,
     uu: () => S,
-    wk: () => T,
+    wk: () => b,
     zd: () => g
 });
 var i = n(367907),
@@ -33,7 +33,7 @@ function d(e, t) {
                 record: e
             },
             {},
-            t
+            { onSubmit: t }
         );
 }
 function f(e, t, n) {
@@ -47,7 +47,7 @@ function f(e, t, n) {
                 record: e
             },
             {},
-            n
+            { onSubmit: n }
         );
 }
 function _(e, t, n) {
@@ -61,7 +61,7 @@ function _(e, t, n) {
                 record: e
             },
             { variant: 'staff' },
-            n
+            { onSubmit: n }
         );
 }
 function p(e, t) {
@@ -78,7 +78,7 @@ function p(e, t) {
                 record: n
             },
             {},
-            t
+            { onSubmit: t }
         ));
 }
 function h(e, t) {
@@ -94,7 +94,7 @@ function h(e, t) {
                 record: e
             },
             {},
-            t
+            { onSubmit: t }
         );
 }
 function m(e, t) {
@@ -108,9 +108,10 @@ function m(e, t) {
                 record: e
             },
             {},
-            t,
-            void 0,
-            !1
+            {
+                onSubmit: t,
+                isEligibleForFeedback: !1
+            }
         );
 }
 async function g(e, t) {
@@ -125,7 +126,7 @@ async function g(e, t) {
             null == t || t();
     } catch {}
 }
-function E(e, t, n) {
+function E(e, t, n, i) {
     A(o.b.USER, { reported_user_id: e.id }),
         (0, u.m)(
             {
@@ -134,11 +135,13 @@ function E(e, t, n) {
                 contextualGuildId: t
             },
             {},
-            n,
-            void 0
+            {
+                onSubmit: n,
+                appContext: i
+            }
         );
 }
-function v(e, t, n) {
+function v(e, t, n, i) {
     A(o.b.USER, { reported_user_id: e.id }),
         (0, u.m)(
             {
@@ -147,9 +150,11 @@ function v(e, t, n) {
                 contextualGuildId: t
             },
             { variant: 'staff' },
-            n,
-            void 0,
-            !1
+            {
+                onSubmit: n,
+                isEligibleForFeedback: !1,
+                appContext: i
+            }
         );
 }
 function y(e, t) {
@@ -161,11 +166,12 @@ function y(e, t) {
                 record: n
             },
             {},
-            t,
-            void 0,
-            !1,
-            !1,
-            e
+            {
+                onSubmit: t,
+                isEligibleForFeedback: !1,
+                isAuthenticated: !1,
+                emailToken: e
+            }
         );
 }
 function I(e, t) {
@@ -180,14 +186,15 @@ function I(e, t) {
                 record: n
             },
             {},
-            t,
-            void 0,
-            !1,
-            !1,
-            e
+            {
+                onSubmit: t,
+                isEligibleForFeedback: !1,
+                isAuthenticated: !1,
+                emailToken: e
+            }
         );
 }
-async function b(e, t, n) {
+async function T(e, t, n) {
     try {
         await (0, l.ox)(
             {
@@ -201,7 +208,7 @@ async function b(e, t, n) {
         null == n || n();
     }
 }
-function T(e, t) {
+function b(e, t) {
     A(o.b.MESSAGE, {
         message_id: e.id,
         channel_id: e.channel_id
@@ -212,7 +219,7 @@ function T(e, t) {
                 record: e
             },
             { variant: 'safety_alerts_v1' },
-            t
+            { onSubmit: t }
         );
 }
 function S(e) {
@@ -235,7 +242,7 @@ function S(e) {
                 entrypoint: n
             },
             {},
-            s
+            { onSubmit: s }
         );
 }
 function A(e, t) {

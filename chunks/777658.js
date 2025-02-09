@@ -9,58 +9,63 @@ var i = n(200651),
     c = n(594174),
     d = n(388032);
 function f(e) {
-    let { user: t, location: n = 'ContextMenu', onFriendRequestSent: f, onFriendRemove: _ } = e,
-        { id: p, username: h, bot: m } = t,
-        g = (0, a.e7)(
+    let { user: t, location: f = 'ContextMenu', onFriendRequestSent: _, onFriendRemove: p, appContext: h } = e,
+        { id: m, username: g, bot: E } = t,
+        v = (0, a.e7)(
             [c.default],
             () => {
                 var e;
-                return (null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === p;
+                return (null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === m;
             },
-            [p]
+            [m]
         ),
-        E = (0, l.p0)(p),
-        [v, y] = (0, a.Wu)([u.Z], () => [u.Z.isFriend(p), u.Z.isBlocked(p)], [p]),
-        [I, b] = r.useState(!1);
-    if (m || g) return null;
-    function T() {
-        (0, s.h7j)((e) =>
-            (0, i.jsx)(s.ConfirmModal, {
-                header: d.intl.formatToPlainString(d.t.fPLvZW, { name: h }),
-                confirmText: d.intl.string(d.t.cvSt1N),
-                cancelText: d.intl.string(d.t['ETE/oK']),
-                onConfirm: () => {
-                    o.Z.removeFriend(p, { location: n }), b(!1), null == _ || _();
-                },
-                ...e,
-                children: (0, i.jsx)(s.Text, {
-                    variant: 'text-md/normal',
-                    children: d.intl.format(d.t.l5FFq6, { name: h })
-                })
-            })
+        y = (0, l.p0)(m),
+        [I, T] = (0, a.Wu)([u.Z], () => [u.Z.isFriend(m), u.Z.isBlocked(m)], [m]),
+        [b, S] = r.useState(!1);
+    if (E || v) return null;
+    function A() {
+        (0, s.ZDy)(
+            async () => {
+                let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 794106));
+                return (t) =>
+                    (0, i.jsx)(e, {
+                        header: d.intl.formatToPlainString(d.t.fPLvZW, { name: g }),
+                        confirmText: d.intl.string(d.t.cvSt1N),
+                        cancelText: d.intl.string(d.t['ETE/oK']),
+                        onConfirm: () => {
+                            o.Z.removeFriend(m, { location: f }), S(!1), null == p || p();
+                        },
+                        ...t,
+                        children: (0, i.jsx)(s.Text, {
+                            variant: 'text-md/normal',
+                            children: d.intl.format(d.t.l5FFq6, { name: g })
+                        })
+                    });
+            },
+            { contextKey: null != h ? (0, s.VnL)(h) : void 0 }
         );
     }
-    if (v)
+    if (I)
         return (0, i.jsx)(s.sNh, {
             id: 'remove-friend',
             label: d.intl.string(d.t.cvSt1N),
-            action: T
+            action: A
         });
     {
-        let e = E.length > 0 ? d.t.tfnAkJ : d.t.w5uwoK;
+        let e = y.length > 0 ? d.t.tfnAkJ : d.t.w5uwoK;
         return (0, i.jsx)(s.sNh, {
             id: 'add-friend',
-            label: I ? d.intl.string(d.t.xMH6vL) : d.intl.string(e),
+            label: b ? d.intl.string(d.t.xMH6vL) : d.intl.string(e),
             action: () => {
-                I ||
+                b ||
                     (o.Z.addRelationship({
-                        userId: p,
-                        context: { location: n }
+                        userId: m,
+                        context: { location: f }
                     }),
-                    b(!0),
-                    null == f || f());
+                    S(!0),
+                    null == _ || _());
             },
-            disabled: y || (I && !v)
+            disabled: T || (b && !I)
         });
     }
 }

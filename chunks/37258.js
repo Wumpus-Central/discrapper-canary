@@ -12,7 +12,8 @@ function d(e) {
     let { label: t, onAction: n, icon: d, ...f } = e,
         { analyticsLocations: _ } = (0, s.ZP)(),
         { context: p } = (0, o.KZ)(),
-        h = (0, a.Aq)();
+        h = (0, a.Aq)(),
+        m = (0, a.bp)();
     return (0, i.jsx)(r.sNh, {
         id: 'user-profile',
         label: null != t ? t : c.intl.string(c.t.LYju5O),
@@ -20,6 +21,7 @@ function d(e) {
             null == n || n(),
                 (0, l.openUserProfileModal)({
                     sourceAnalyticsLocations: _,
+                    appContext: m,
                     ...p,
                     ...f
                 }),

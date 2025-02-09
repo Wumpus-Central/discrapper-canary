@@ -1,38 +1,39 @@
-n.d(t, { Z: () => c });
-var i,
-    r = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+c.d(e, { Z: () => i });
+var d,
+    a = c(442837),
+    s = c(570140);
+function n(t, e, c) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: c,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
-        e
+            : (t[e] = c),
+        t
     );
 }
 let o = { lastUpdateRequested: {} };
-function l(e) {
-    let { lastUpdateRequested: t, leaderboardId: n } = e;
-    o.lastUpdateRequested[n] = t;
-}
-class u extends (i = r.ZP.PersistedStore) {
-    initialize(e) {
+class f extends (d = a.ZP.PersistedStore) {
+    initialize(t) {
         o = {
             ...o,
-            ...(null != e ? e : {})
+            ...(null != t ? t : {})
         };
     }
     getState() {
         return o;
     }
-    getLastUpdateRequested(e) {
-        return o.lastUpdateRequested[e];
+    getLastUpdateRequested(t) {
+        return o.lastUpdateRequested[t];
     }
 }
-s(u, 'displayName', 'UserLeaderboardStore'), s(u, 'persistKey', 'UserLeaderboardStore');
-let c = new u(a.Z, { SET_USER_LEADERBOARD_LAST_UPDATE_REQUESTED: l });
+n(f, 'displayName', 'UserLeaderboardStore'), n(f, 'persistKey', 'UserLeaderboardStore');
+let i = new f(s.Z, {
+    SET_USER_LEADERBOARD_LAST_UPDATE_REQUESTED: function (t) {
+        let { lastUpdateRequested: e, leaderboardId: c } = t;
+        o.lastUpdateRequested[c] = e;
+    }
+});

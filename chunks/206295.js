@@ -1,52 +1,50 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i = n(192379),
-    r = n(688619),
-    a = n.n(r);
+n.d(t, { Z: () => m }), n(47120);
+var a = n(192379),
+    l = n(688619),
+    i = n.n(l);
 n(979590);
 var s = n(442837),
-    o = n(866442),
-    l = n(607070),
-    u = n(220082),
-    c = n(981631);
-let d = 8,
-    f = 0.725,
-    _ = (e) => {
-        var t, r, _, p, h, m;
-        let g;
-        g = n(481060).TVs;
-        let E = (0, s.e7)([l.Z], () => l.Z.saturation),
-            [v, y] = (0, u.Cf)(
-                e,
-                null !==
-                    (m =
-                        null == g
+    r = n(866442),
+    o = n(607070),
+    c = n(220082),
+    d = n(981631);
+let m = (e) => {
+    var t, l, m, u, h, g;
+    let x;
+    x = n(481060).TVs;
+    let v = (0, s.e7)([o.Z], () => o.Z.saturation),
+        [p, f] = (0, c.Cf)(
+            e,
+            null !==
+                (g =
+                    null == x
+                        ? void 0
+                        : null === (h = x.colors) || void 0 === h
+                          ? void 0
+                          : null === (u = h.BACKGROUND_FLOATING) || void 0 === u
                             ? void 0
-                            : null === (h = g.colors) || void 0 === h
+                            : null === (m = u.resolve) || void 0 === m
                               ? void 0
-                              : null === (p = h.BACKGROUND_FLOATING) || void 0 === p
+                              : null ===
+                                      (l = m.call(u, {
+                                          theme: d.BRd.DARK,
+                                          saturation: v
+                                      })) || void 0 === l
                                 ? void 0
-                                : null === (_ = p.resolve) || void 0 === _
+                                : null === (t = l.hex) || void 0 === t
                                   ? void 0
-                                  : null ===
-                                          (r = _.call(p, {
-                                              theme: c.BRd.DARK,
-                                              saturation: E
-                                          })) || void 0 === r
-                                    ? void 0
-                                    : null === (t = r.hex) || void 0 === t
-                                      ? void 0
-                                      : t.call(r)) && void 0 !== m
-                    ? m
-                    : '#000'
-            );
-        return i.useMemo(() => {
-            let e = (0, o._i)(v),
-                t = (0, o._i)(y);
-            for (let t = 1; t < d && !((0, o.Bd)(e) >= f); t++) e = a()(e).darken(0.5).num();
-            for (let e = 1; e < d && !((0, o.Bd)(t) >= f); e++) t = a()(t).darken(0.5).num();
-            return {
-                primaryColor: (0, o.Rf)(e),
-                secondaryColor: (0, o.Rf)(t)
-            };
-        }, [v, y]);
-    };
+                                  : t.call(l)) && void 0 !== g
+                ? g
+                : '#000'
+        );
+    return a.useMemo(() => {
+        let e = (0, r._i)(p),
+            t = (0, r._i)(f);
+        for (let t = 1; t < 8 && !((0, r.Bd)(e) >= 0.725); t++) e = i()(e).darken(0.5).num();
+        for (let e = 1; e < 8 && !((0, r.Bd)(t) >= 0.725); e++) t = i()(t).darken(0.5).num();
+        return {
+            primaryColor: (0, r.Rf)(e),
+            secondaryColor: (0, r.Rf)(t)
+        };
+    }, [p, f]);
+};

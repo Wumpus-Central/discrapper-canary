@@ -1,132 +1,129 @@
-n.d(t, { Z: () => P }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(195302),
-    l = n(206295),
-    u = n(134432),
-    c = n(706454),
-    d = n(314897),
-    f = n(158776),
-    _ = n(594174),
-    p = n(302221),
-    h = n(5192),
-    m = n(358085),
-    g = n(998502),
-    E = n(528567),
-    v = n(371583),
-    y = n(246627),
-    I = n(249268),
-    b = n(864138),
-    T = n(473188),
-    S = n(169080),
-    A = n(986398),
-    N = n(463031),
-    C = n(206583),
-    R = n(388032),
-    O = n(508806);
-let D = 10,
-    x = 15,
-    L = 'leaderboard.png';
-function P(e) {
-    let { leaderboard: t, previewMode: n = !1, trackRankingItemInteraction: o } = e,
-        f = (0, a.e7)([d.default], () => d.default.getId()),
-        _ = (0, a.e7)([c.default], () => c.default.locale),
-        { rankChanges: h } = (0, y.Z)({
-            guildId: t.guild_id,
-            leaderboardId: t.leaderboard_id,
-            intervalStart: t.interval_start
+c.d(e, { Z: () => A }), c(47120);
+var d = c(200651),
+    a = c(192379),
+    s = c(442837),
+    n = c(481060),
+    o = c(195302),
+    f = c(206295),
+    i = c(134432),
+    p = c(706454),
+    r = c(314897),
+    b = c(158776),
+    u = c(594174),
+    l = c(302221),
+    m = c(5192),
+    g = c(358085),
+    h = c(998502),
+    j = c(528567),
+    _ = c(371583),
+    v = c(246627),
+    x = c(249268),
+    N = c(864138),
+    Z = c(473188),
+    T = c(169080),
+    E = c(986398),
+    I = c(463031),
+    S = c(206583),
+    R = c(388032),
+    L = c(508806);
+function A(t) {
+    let { leaderboard: e, previewMode: c = !1, trackRankingItemInteraction: o } = t,
+        b = (0, s.e7)([r.default], () => r.default.getId()),
+        u = (0, s.e7)([p.default], () => p.default.locale),
+        { rankChanges: m } = (0, v.Z)({
+            guildId: e.guild_id,
+            leaderboardId: e.leaderboard_id,
+            intervalStart: e.interval_start
         }),
-        m = r.useMemo(() => {
-            let e = new Map();
-            h.forEach((t) => {
-                let { userId: n, previousRank: i } = t;
-                e.set(n, i);
+        g = a.useMemo(() => {
+            let t = new Map();
+            m.forEach((e) => {
+                let { userId: c, previousRank: d } = e;
+                t.set(c, d);
             });
-            let { sort_by_statistic_id: n } = t.guild_settings;
-            return t.users.map((t, i) => {
-                var r, a;
+            let { sort_by_statistic_id: c } = e.guild_settings;
+            return e.users.map((e, d) => {
+                var a, s;
                 return {
-                    userId: t.user_id,
-                    value: null !== (a = null === (r = t.statistics[n]) || void 0 === r ? void 0 : r.value) && void 0 !== a ? a : 0,
-                    rank: i + 1,
-                    previousRank: e.get(t.user_id)
+                    userId: e.user_id,
+                    value: null !== (s = null === (a = e.statistics[c]) || void 0 === a ? void 0 : a.value) && void 0 !== s ? s : 0,
+                    rank: d + 1,
+                    previousRank: t.get(e.user_id)
                 };
             });
-        }, [t, h]),
-        g = (0, v.r)(t),
-        { primaryColor: b } = (0, l.Z)(g),
-        T = r.useMemo(() => {
-            let e = (0, p.oo)(b),
-                t = {
-                    ...(0, p.pz)(e.r, e.g, e.b),
-                    l: x
+        }, [e, m]),
+        h = (0, _.r)(e),
+        { primaryColor: N } = (0, f.Z)(h),
+        Z = a.useMemo(() => {
+            let t = (0, l.oo)(N),
+                e = {
+                    ...(0, l.pz)(t.r, t.g, t.b),
+                    l: 15
                 };
-            return (0, p.ZJ)(t.h, t.s, t.l);
-        }, [b]),
-        A = r.useMemo(() => null == m.find((e) => e.userId === f) && m.length <= D, [m, f]);
+            return (0, l.ZJ)(e.h, e.s, e.l);
+        }, [N]),
+        E = a.useMemo(() => null == g.find((t) => t.userId === b) && g.length <= 10, [g, b]);
     if (
-        (r.useEffect(() => {
-            S.M.forEach((e) => (0, u.po)(e));
+        (a.useEffect(() => {
+            T.M.forEach((t) => (0, i.po)(t));
         }),
-        0 === t.users.length)
+        0 === e.users.length)
     )
-        return (0, i.jsx)(w, { leaderboard: t });
-    let { sort_by_statistic_id: N, sort_desc: C } = t.guild_settings,
-        L = t.settings.statistics[N];
-    return (0, i.jsxs)('div', {
-        className: O.container,
-        style: { background: T },
+        return (0, d.jsx)(y, { leaderboard: e });
+    let { sort_by_statistic_id: I, sort_desc: S } = e.guild_settings,
+        A = e.settings.statistics[I];
+    return (0, d.jsxs)('div', {
+        className: L.container,
+        style: { background: Z },
         children: [
-            (0, i.jsx)(I.Z, {
-                userId: m[0].userId,
-                leaderboard: t
+            (0, d.jsx)(x.Z, {
+                userId: g[0].userId,
+                leaderboard: e
             }),
-            n
+            c
                 ? null
-                : (0, i.jsx)(i.Fragment, {
-                      children: (0, i.jsxs)('div', {
-                          className: O.table,
+                : (0, d.jsx)(d.Fragment, {
+                      children: (0, d.jsxs)('div', {
+                          className: L.table,
                           children: [
-                              (0, i.jsxs)('div', {
-                                  className: O.headerRow,
+                              (0, d.jsxs)('div', {
+                                  className: L.headerRow,
                                   children: [
-                                      (0, i.jsx)(s.Text, {
+                                      (0, d.jsx)(n.Text, {
                                           variant: 'text-xxs/medium',
-                                          className: O.headerRank,
+                                          className: L.headerRank,
                                           children: '#'
                                       }),
-                                      (0, i.jsx)(s.Text, {
+                                      (0, d.jsx)(n.Text, {
                                           variant: 'text-xxs/medium',
-                                          className: O.headerPlayer,
+                                          className: L.headerPlayer,
                                           children: R.intl.string(R.t['6ii1+/'])
                                       }),
-                                      (0, i.jsx)(s.Text, {
+                                      (0, d.jsx)(n.Text, {
                                           variant: 'text-xxs/medium',
-                                          className: O.headerValue,
-                                          children: (0, E.s)({
-                                              statisticId: N,
-                                              sortDesc: C,
-                                              aggregationType: null == L ? void 0 : L.aggregation_type
+                                          className: L.headerValue,
+                                          children: (0, j.s)({
+                                              statisticId: I,
+                                              sortDesc: S,
+                                              aggregationType: null == A ? void 0 : A.aggregation_type
                                           })
                                       })
                                   ]
                               }),
-                              (0, i.jsxs)(s.u2D, {
-                                  className: O.rows,
+                              (0, d.jsxs)(n.u2D, {
+                                  className: L.rows,
                                   children: [
-                                      m.map((e) =>
-                                          (0, r.createElement)(M, {
-                                              ...e,
-                                              key: e.userId,
-                                              guildId: t.guild_id,
-                                              locale: _,
-                                              leaderboard: t,
+                                      g.map((t) =>
+                                          (0, a.createElement)(k, {
+                                              ...t,
+                                              key: t.userId,
+                                              guildId: e.guild_id,
+                                              locale: u,
+                                              leaderboard: e,
                                               trackRankingItemInteraction: o
                                           })
                                       ),
-                                      A ? (0, i.jsx)(k, { leaderboard: t }) : null
+                                      E ? (0, d.jsx)(D, { leaderboard: e }) : null
                                   ]
                               })
                           ]
@@ -135,205 +132,205 @@ function P(e) {
         ]
     });
 }
-function w(e) {
-    let { leaderboard: t } = e,
-        n = (0, v.r)(t);
-    return (0, i.jsx)(b.z, {
-        imageUrl: n,
-        children: (0, i.jsxs)('span', {
-            className: O.emptyTitleContainer,
+function y(t) {
+    let { leaderboard: e } = t,
+        c = (0, _.r)(e);
+    return (0, d.jsx)(N.z, {
+        imageUrl: c,
+        children: (0, d.jsxs)('span', {
+            className: L.emptyTitleContainer,
             children: [
-                (0, i.jsx)(s.Text, {
+                (0, d.jsx)(n.Text, {
                     tag: 'span',
                     variant: 'text-lg/normal',
-                    className: O.emptyTitle,
+                    className: L.emptyTitle,
                     children: R.intl.string(R.t.BfRGk5)
                 }),
-                (0, i.jsx)(A.Z, {
-                    className: O.emptyWinnerImage,
-                    leaderboard: t
+                (0, d.jsx)(E.Z, {
+                    className: L.emptyWinnerImage,
+                    leaderboard: e
                 })
             ]
         })
     });
 }
-function M(e) {
-    let { userId: t, rank: n, value: l, guildId: u, previousRank: c, locale: d, leaderboard: p, trackRankingItemInteraction: E } = e,
-        v = (0, a.e7)([_.default], () => _.default.getUser(t)),
-        y = h.ZP.getName(u, void 0, v),
-        I = null != c && c > n,
-        [b, D] = r.useState('default'),
-        x = (0, a.e7)([f.Z], () => {
-            let e = f.Z.getPrimaryActivity(t);
-            return (null == e ? void 0 : e.application_id) != null && N.T.includes(e.application_id);
+function k(t) {
+    let { userId: e, rank: c, value: f, guildId: i, previousRank: p, locale: r, leaderboard: l, trackRankingItemInteraction: j } = t,
+        _ = (0, s.e7)([u.default], () => u.default.getUser(e)),
+        v = m.ZP.getName(i, void 0, _),
+        x = null != p && p > c,
+        [N, A] = a.useState('default'),
+        y = (0, s.e7)([b.Z], () => {
+            let t = b.Z.getPrimaryActivity(e);
+            return (null == t ? void 0 : t.application_id) != null && I.T.includes(t.application_id);
         }),
-        { generatingImage: P, generateImage: w } = (0, o.d)({
-            renderComponent: (e) =>
-                (0, i.jsx)(S.Z, {
-                    ...e,
-                    userId: t,
-                    leaderboard: p,
-                    guildId: u
+        { generatingImage: k, generateImage: D } = (0, o.d)({
+            renderComponent: (t) =>
+                (0, d.jsx)(T.Z, {
+                    ...t,
+                    userId: e,
+                    leaderboard: l,
+                    guildId: i
                 }),
             imageOptions: { pixelRatio: 4 }
         }),
-        M = async () => {
+        C = async () => {
             try {
-                let e = await w();
-                await g.ZP.copyImageBlob(e, L), D('copied'), null == E || E(C.xP.COPIED_LEADERBOARD_ROW);
-            } catch (e) {
-                D('error');
+                let t = await D();
+                await h.ZP.copyImageBlob(t, 'leaderboard.png'), A('copied'), null == j || j(S.xP.COPIED_LEADERBOARD_ROW);
+            } catch (t) {
+                A('error');
             }
         },
-        k = (0, i.jsx)(s.Text, {
-            className: O.tooltip,
+        U = (0, d.jsx)(n.Text, {
+            className: L.tooltip,
             variant: 'text-sm/medium',
             children:
-                'copied' === b
-                    ? (0, i.jsxs)(i.Fragment, {
+                'copied' === N
+                    ? (0, d.jsxs)(d.Fragment, {
                           children: [
-                              (0, i.jsx)(s.kSu, {
+                              (0, d.jsx)(n.kSu, {
                                   size: 'xs',
-                                  color: s.TVs.colors.STATUS_POSITIVE
+                                  color: n.TVs.colors.STATUS_POSITIVE
                               }),
                               R.intl.string(R.t.ZO0ku7)
                           ]
                       })
-                    : 'error' === b
-                      ? (0, i.jsxs)(i.Fragment, {
+                    : 'error' === N
+                      ? (0, d.jsxs)(d.Fragment, {
                             children: [
-                                (0, i.jsx)(s.P$X, {
+                                (0, d.jsx)(n.P$X, {
                                     size: 'xs',
-                                    color: s.TVs.colors.STATUS_DANGER
+                                    color: n.TVs.colors.STATUS_DANGER
                                 }),
                                 R.intl.string(R.t.j2d6Ki)
                             ]
                         })
-                      : (0, i.jsx)(i.Fragment, { children: R.intl.string(R.t.mikfoa) })
+                      : (0, d.jsx)(d.Fragment, { children: R.intl.string(R.t.mikfoa) })
         });
-    return (0, i.jsxs)('div', {
-        className: O.userRow,
+    return (0, d.jsxs)('div', {
+        className: L.userRow,
         children: [
-            I ? (0, i.jsx)('div', { className: O.rankChangeIndicator }) : null,
-            (0, i.jsx)('div', {
-                className: O.userRank,
+            x ? (0, d.jsx)('div', { className: L.rankChangeIndicator }) : null,
+            (0, d.jsx)('div', {
+                className: L.userRank,
                 children:
-                    n <= 3
-                        ? (0, i.jsx)(T._, { rank: n })
-                        : (0, i.jsx)(s.Text, {
+                    c <= 3
+                        ? (0, d.jsx)(Z._, { rank: c })
+                        : (0, d.jsx)(n.Text, {
                               tabularNumbers: !0,
                               color: 'text-muted',
                               variant: 'text-xs/medium',
-                              children: n
+                              children: c
                           })
             }),
-            (0, i.jsxs)('div', {
-                className: O.userPlayer,
+            (0, d.jsxs)('div', {
+                className: L.userPlayer,
                 children: [
-                    (0, i.jsx)(s.qEK, {
-                        src: null == v ? void 0 : v.getAvatarURL(u, 16),
-                        size: s.EFr.SIZE_16,
+                    (0, d.jsx)(n.qEK, {
+                        src: null == _ ? void 0 : _.getAvatarURL(i, 16),
+                        size: n.EFr.SIZE_16,
                         'aria-label': 'avatar'
                     }),
-                    (0, i.jsx)(s.LZC, {
+                    (0, d.jsx)(n.LZC, {
                         size: 6,
                         horizontal: !0
                     }),
-                    (0, i.jsx)(s.X6q, {
+                    (0, d.jsx)(n.X6q, {
                         lineClamp: 1,
                         variant: 'heading-sm/medium',
                         color: 'header-primary',
-                        children: y
+                        children: v
                     }),
-                    1 === n
-                        ? (0, i.jsxs)(i.Fragment, {
+                    1 === c
+                        ? (0, d.jsxs)(d.Fragment, {
                               children: [
-                                  (0, i.jsx)(s.LZC, {
+                                  (0, d.jsx)(n.LZC, {
                                       size: 4,
                                       horizontal: !0
                                   }),
-                                  (0, i.jsx)(A.Z, {
-                                      className: O.userWinnerImage,
-                                      leaderboard: p
+                                  (0, d.jsx)(E.Z, {
+                                      className: L.userWinnerImage,
+                                      leaderboard: l
                                   })
                               ]
                           })
                         : null,
-                    I ? (0, i.jsx)(U, { rankChange: c - n }) : null
+                    x ? (0, d.jsx)(O, { rankChange: p - c }) : null
                 ]
             }),
-            (0, i.jsxs)('div', {
-                className: O.badgesContainer,
+            (0, d.jsxs)('div', {
+                className: L.badgesContainer,
                 children: [
-                    x &&
-                        (0, i.jsx)(s.iWm, {
+                    y &&
+                        (0, d.jsx)(n.iWm, {
                             size: 'xs',
-                            color: s.TVs.colors.TEXT_POSITIVE,
-                            className: O.liveIcon
+                            color: n.TVs.colors.TEXT_POSITIVE,
+                            className: L.liveIcon
                         }),
-                    m.isPlatformEmbedded &&
-                        (0, i.jsx)(s.ua7, {
-                            text: k,
+                    g.isPlatformEmbedded &&
+                        (0, d.jsx)(n.ua7, {
+                            text: U,
                             'aria-label': !1,
-                            shouldShow: !P,
-                            onTooltipHide: () => D('default'),
-                            children: (e) =>
-                                (0, i.jsx)(s.P3F, {
-                                    ...e,
-                                    onClick: P ? void 0 : M,
-                                    'aria-busy': P,
-                                    className: O.copyLinkContainer,
-                                    children: P
-                                        ? (0, i.jsx)(s.$jN, {
-                                              type: s.$jN.Type.SPINNING_CIRCLE_SIMPLE,
-                                              className: O.copySpinner
+                            shouldShow: !k,
+                            onTooltipHide: () => A('default'),
+                            children: (t) =>
+                                (0, d.jsx)(n.P3F, {
+                                    ...t,
+                                    onClick: k ? void 0 : C,
+                                    'aria-busy': k,
+                                    className: L.copyLinkContainer,
+                                    children: k
+                                        ? (0, d.jsx)(n.$jN, {
+                                              type: n.$jN.Type.SPINNING_CIRCLE_SIMPLE,
+                                              className: L.copySpinner
                                           })
-                                        : (0, i.jsx)(s.xPt, {
+                                        : (0, d.jsx)(n.xPt, {
                                               size: 'xs',
-                                              className: O.copyLink
+                                              className: L.copyLink
                                           })
                                 })
                         })
                 ]
             }),
-            (0, i.jsx)(s.X6q, {
+            (0, d.jsx)(n.X6q, {
                 variant: 'heading-sm/medium',
                 color: 'header-primary',
                 tabularNumbers: !0,
-                children: l.toLocaleString(d)
+                children: f.toLocaleString(r)
             })
         ]
     });
 }
-function k(e) {
-    let { leaderboard: t } = e;
-    return (0, i.jsxs)('div', {
-        className: O.joinLeaderboardCTAContainer,
+function D(t) {
+    let { leaderboard: e } = t;
+    return (0, d.jsxs)('div', {
+        className: L.joinLeaderboardCTAContainer,
         children: [
-            (0, i.jsx)(s.Text, {
+            (0, d.jsx)(n.Text, {
                 variant: 'text-xs/normal',
                 children: R.intl.string(R.t.BfRGk5)
             }),
-            (0, i.jsx)(A.Z, {
-                className: O.joinLeaderboardCTAWinnerImage,
-                leaderboard: t
+            (0, d.jsx)(E.Z, {
+                className: L.joinLeaderboardCTAWinnerImage,
+                leaderboard: e
             })
         ]
     });
 }
-function U(e) {
-    let { rankChange: t } = e;
-    return (0, i.jsxs)('div', {
-        className: O.rankChangeBadge,
+function O(t) {
+    let { rankChange: e } = t;
+    return (0, d.jsxs)('div', {
+        className: L.rankChangeBadge,
         children: [
-            (0, i.jsx)(s.wj7, {
+            (0, d.jsx)(n.wj7, {
                 size: 'xxs',
-                color: s.TVs.colors.TEXT_MUTED
+                color: n.TVs.colors.TEXT_MUTED
             }),
-            (0, i.jsx)(s.Text, {
+            (0, d.jsx)(n.Text, {
                 variant: 'text-xs/medium',
                 color: 'text-muted',
-                children: t
+                children: e
             })
         ]
     });

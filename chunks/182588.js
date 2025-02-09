@@ -1,4 +1,4 @@
-var i = {
+n.exports = {
     cell: 'cell_f70307',
     iconContainer: 'iconContainer_f70307',
     icon: 'icon_f70307',
@@ -7,4 +7,3 @@ var i = {
     cellGroup: 'cellGroup_f70307',
     content: 'content_f70307'
 };
-e.exports = i;

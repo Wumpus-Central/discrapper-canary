@@ -1,4 +1,4 @@
-var i = {
+e.exports = {
     badge: 'badge__86331',
     badgeVerifiedIcon: 'badgeVerifiedIcon__86331',
     roleName: 'roleName__86331',
@@ -16,4 +16,3 @@ var i = {
     viewConnectionsButton: 'viewConnectionsButton__86331',
     botTag: 'botTag__86331'
 };
-e.exports = i;

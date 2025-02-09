@@ -1,2 +1,1 @@
-var i = { infoBox: 'infoBox_fbc3be' };
-e.exports = i;
+e.exports = { infoBox: 'infoBox_fbc3be' };

@@ -1,4 +1,4 @@
-var i = {
+e.exports = {
     container: 'container_dba137',
     header: 'header_dba137',
     bodyText: 'bodyText_dba137',
@@ -6,4 +6,3 @@ var i = {
     smsNumberContainer: 'smsNumberContainer_dba137',
     copied: 'copied_dba137'
 };
-e.exports = i;

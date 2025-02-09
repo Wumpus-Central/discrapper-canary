@@ -1,38 +1,39 @@
-n.d(e, { Z: () => v });
-var i = n(200651),
-    l = n(192379),
-    a = n(481060),
-    d = n(906732),
-    r = n(531301),
-    o = n(171368),
-    s = n(314897),
-    u = n(246946),
-    c = n(626135),
-    g = n(981631),
-    Z = n(228168),
-    f = n(388032);
+e.d(n, { Z: () => v });
+var i = e(200651),
+    l = e(192379),
+    a = e(481060),
+    o = e(906732),
+    d = e(531301),
+    r = e(171368),
+    s = e(314897),
+    u = e(246946),
+    c = e(626135),
+    g = e(981631),
+    Z = e(228168),
+    f = e(388032);
 function v(t) {
-    let { user: e, guildId: n, channelId: v, context: b } = t,
-        { id: h } = e,
-        { loading: m, note: x } = (0, r.Z)(h),
-        I = !m && null != x && x.length > 0,
-        U = b === g.IlC.POPOUT,
-        _ = l.useContext(c.AnalyticsContext),
-        { analyticsLocations: p } = (0, d.ZP)();
-    return h === s.default.getId() || u.Z.hidePersonalInformation || U
+    let { user: n, guildId: e, channelId: v, context: b } = t,
+        { id: h } = n,
+        { loading: m, note: x } = (0, d.Z)(h),
+        p = !m && null != x && x.length > 0,
+        I = b === g.IlC.POPOUT || b === g.IlC.OVERLAY,
+        A = l.useContext(c.AnalyticsContext),
+        { analyticsLocations: C } = (0, o.ZP)();
+    return h === s.default.getId() || u.Z.hidePersonalInformation || I
         ? null
         : (0, i.jsx)(a.sNh, {
               id: 'note',
-              label: m ? f.intl.string(f.t['WLKx//']) : I ? f.intl.string(f.t.sHHsOD) : f.intl.string(f.t.Dglxra),
+              label: m ? f.intl.string(f.t['WLKx//']) : p ? f.intl.string(f.t.sHHsOD) : f.intl.string(f.t.Dglxra),
               action: () => {
-                  (0, o.openUserProfileModal)({
-                      userId: e.id,
+                  (0, r.openUserProfileModal)({
+                      userId: n.id,
                       section: Z.oh.USER_INFO,
                       subsection: Z.Tb.NOTE,
-                      guildId: n,
+                      guildId: e,
                       channelId: v,
-                      sourceAnalyticsLocations: p,
-                      analyticsLocation: _.location
+                      sourceAnalyticsLocations: C,
+                      analyticsLocation: A.location,
+                      appContext: b
                   });
               }
           });

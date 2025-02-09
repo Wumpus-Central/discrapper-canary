@@ -1,37 +1,40 @@
-n.d(e, { Z: () => o }), n(47120);
-var i = n(200651);
-n(192379);
-var l = n(442837),
-    a = n(481060),
-    d = n(699516),
-    r = n(388032);
-function o(t) {
-    let { user: e, onAction: o } = t,
-        s = e.id,
-        [u, c] = (0, l.Wu)(
-            [d.Z],
+e.d(n, { Z: () => r }), e(47120);
+var i = e(200651);
+e(192379);
+var l = e(442837),
+    a = e(481060),
+    o = e(699516),
+    d = e(388032);
+function r(t) {
+    let { user: n, onAction: r, appContext: s } = t,
+        u = n.id,
+        [c, g] = (0, l.Wu)(
+            [o.Z],
             () => {
                 var t;
-                return [d.Z.isFriend(s), null !== (t = d.Z.getNickname(s)) && void 0 !== t ? t : null];
+                return [o.Z.isFriend(u), null !== (t = o.Z.getNickname(u)) && void 0 !== t ? t : null];
             },
-            [s]
+            [u]
         );
-    if (!u) return null;
-    let g = null == c ? r.intl.string(r.t.BGYkaG) : r.intl.string(r.t['8pOYUF']);
+    if (!c) return null;
+    let Z = null == g ? d.intl.string(d.t.BGYkaG) : d.intl.string(d.t['8pOYUF']);
     return (0, i.jsx)(a.sNh, {
-        id: null == c ? 'add-friend-nickname' : 'edit-friend-nickname',
-        label: g,
+        id: null == g ? 'add-friend-nickname' : 'edit-friend-nickname',
+        label: Z,
         action: () => {
-            null == o || o(),
-                (0, a.ZDy)(async () => {
-                    let { default: t } = await n.e('25070').then(n.bind(n, 670794));
-                    return (n) =>
-                        (0, i.jsx)(t, {
-                            user: e,
-                            nickname: c,
-                            ...n
-                        });
-                });
+            null == r || r(),
+                (0, a.ZDy)(
+                    async () => {
+                        let { default: t } = await e.e('25070').then(e.bind(e, 670794));
+                        return (e) =>
+                            (0, i.jsx)(t, {
+                                user: n,
+                                nickname: g,
+                                ...e
+                            });
+                    },
+                    { contextKey: null != s ? (0, a.VnL)(s) : void 0 }
+                );
         }
     });
 }

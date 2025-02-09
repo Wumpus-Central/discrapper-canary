@@ -1,2 +1,1 @@
-var i = { menuIcon: 'menuIcon__10fcc' };
-e.exports = i;
+e.exports = { menuIcon: 'menuIcon__10fcc' };

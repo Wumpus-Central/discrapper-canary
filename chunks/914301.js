@@ -1,4 +1,4 @@
-var i = {
+e.exports = {
     container: 'container_f37514',
     appContainer: 'appContainer_f37514',
     header: 'header_f37514',
@@ -8,4 +8,3 @@ var i = {
     textContainer: 'textContainer_f37514',
     guildStack: 'guildStack_f37514'
 };
-e.exports = i;

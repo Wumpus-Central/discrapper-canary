@@ -1,4 +1,4 @@
-var i = {
+e.exports = {
     rankContainer: 'rankContainer__632c2',
     goldBorder: 'goldBorder__632c2',
     silverBorder: 'silverBorder__632c2',
@@ -11,4 +11,3 @@ var i = {
     silverText: 'silverText__632c2',
     bronzeText: 'bronzeText__632c2'
 };
-e.exports = i;

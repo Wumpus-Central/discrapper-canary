@@ -13,85 +13,89 @@ var r = n(481060),
     _ = n(475413),
     p = n(388032);
 function h(e) {
-    let { user: t, guildId: n, viewProfileItem: h } = e,
-        { trackUserProfileAction: m } = (0, f.KZ)(),
-        { analyticsLocations: g, newestAnalyticsLocation: E } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
-        v = (0, c.Z)({
+    let { user: t, guildId: n, viewProfileItem: h, appContext: m } = e,
+        { trackUserProfileAction: g } = (0, f.KZ)(),
+        { analyticsLocations: E, newestAnalyticsLocation: v } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
+        y = (0, c.Z)({
             user: t,
             guildId: n,
             onAction: () =>
-                m({
+                g({
                     action: 'PRESS_INVITE_TO_SERVER',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 })
         }),
-        y = (0, l.Z)({
+        I = (0, l.Z)({
             user: t,
             guildId: n,
-            location: E,
+            location: v,
             color: 'danger',
+            appContext: m,
             onBlock: () =>
-                m({
+                g({
                     action: 'BLOCK',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 }),
             onIgnore: () =>
-                m({
+                g({
                     action: 'IGNORE',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 }),
             onUnblock: () =>
-                m({
+                g({
                     action: 'UNBLOCK',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 })
         }),
-        I = (0, u.Z)({
+        T = (0, u.Z)({
             user: t,
             guildId: n,
-            location: E,
+            location: v,
+            appContext: m,
             onBlock: () =>
-                m({
+                g({
                     action: 'BLOCK',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 }),
             onIgnore: () =>
-                m({
+                g({
                     action: 'IGNORE',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 }),
             onUnignore: () =>
-                m({
+                g({
                     action: 'UNIGNORE',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 })
         }),
         b = (0, d.Z)({
             user: t,
             guildId: n,
-            location: E,
+            location: v,
+            appContext: m,
             color: 'danger',
             onAction: () =>
-                m({
+                g({
                     action: 'REPORT',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 })
         }),
-        T = [
-            [h, v],
+        S = [
+            [h, y],
             [
+                T,
                 I,
-                y,
                 b,
                 (0, d.T)({
                     user: t,
                     guildId: n,
-                    location: E,
+                    location: v,
+                    appContext: m,
                     color: 'danger',
                     onAction: () =>
-                        m({
+                        g({
                             action: 'REPORT',
-                            analyticsLocations: g
+                            analyticsLocations: E
                         })
                 })
             ],
@@ -100,17 +104,17 @@ function h(e) {
                     id: t.id,
                     label: p.intl.string(p.t['/AXYnJ']),
                     onSuccess: () =>
-                        m({
+                        g({
                             action: 'COPY_USER_ID',
-                            analyticsLocations: g
+                            analyticsLocations: E
                         })
                 })
             ]
         ];
-    return T.every((e) => e.every((e) => null == e))
+    return S.every((e) => e.every((e) => null == e))
         ? null
         : (0, i.jsx)(s.Gt, {
-              value: g,
+              value: E,
               children: (0, i.jsx)(r.yRy, {
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
@@ -119,7 +123,7 @@ function h(e) {
                           onSelect: void 0,
                           onClose: t,
                           'aria-label': p.intl.string(p.t.AXIHpa),
-                          children: T.map((e, t) => (0, i.jsx)(r.kSQ, { children: e.map((e) => e) }, t))
+                          children: S.map((e, t) => (0, i.jsx)(r.kSQ, { children: e.map((e) => e) }, t))
                       });
                   },
                   children: (e) =>

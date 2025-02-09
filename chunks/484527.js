@@ -1,89 +1,90 @@
 n.d(t, { Z: () => v }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    o = n(643872),
+var r = n(200651),
+    a = n(192379),
+    i = n(120356),
+    o = n.n(i),
+    l = n(643872),
     s = n(442837),
     c = n(481060),
     d = n(570140),
     u = n(652898),
     m = n(93093),
-    p = n(768581),
+    _ = n(768581),
     g = n(810568),
-    _ = n(981631),
-    h = n(388032),
-    f = n(561526),
+    p = n(981631),
+    f = n(388032),
+    h = n(561526),
     x = n(731364);
 function v(e) {
-    let { detectedGame: t, trackClick: n, onInviteResolved: a, closeModal: v } = e,
-        [I, E] = r.useState(),
-        C = (0, s.e7)([m.Z], () => {
+    let { detectedGame: t, trackClick: n, onInviteResolved: i, closeModal: v } = e,
+        [I, C] = a.useState(),
+        E = (0, s.e7)([m.Z], () => {
             var e, t;
             return (null == I ? void 0 : null === (e = I.guild) || void 0 === e ? void 0 : e.id) != null && m.Z.isMember(null == I ? void 0 : null === (t = I.guild) || void 0 === t ? void 0 : t.id);
         }),
-        b = r.useMemo(() => {
+        b = a.useMemo(() => {
             var e;
             return null === (e = t.websites) || void 0 === e
                 ? void 0
                 : e.find((e) => {
                       let { category: t } = e;
-                      return t === o.p.DISCORD;
+                      return t === l.p.DISCORD;
                   });
         }, [t.websites]);
     if (
-        (r.useEffect(() => {
+        (a.useEffect(() => {
             let e = async (e) => {
                 let t = e.split('/').pop();
                 if (null != t) {
+                    if (null != I && I.code === t) return;
                     let e = await (0, u.Z)(t);
-                    !0 !== e.banned && (E(e.invite), null != e.invite && (null == a || a(e.invite)));
+                    !0 !== e.banned && (C(e.invite), null != e.invite && (null == i || i(e.invite)));
                 }
             };
             null != b && e(b.url);
-        }, [b, a]),
+        }, [b, i, I]),
         null == I || null == I.guild || (!I.guild.features.includes('VERIFIED') && !I.guild.features.includes('PARTNER')))
     )
         return null;
-    let j = p.ZP.getGuildIconURL({
+    let T = _.ZP.getGuildIconURL({
         id: I.guild.id,
         icon: I.guild.icon,
         size: 32
     });
-    return (0, i.jsxs)('div', {
-        className: f.column,
+    return (0, r.jsxs)('div', {
+        className: h.column,
         children: [
-            (0, i.jsx)(c.X6q, {
-                className: f.sectionHeader,
+            (0, r.jsx)(c.X6q, {
+                className: h.sectionHeader,
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                children: h.intl.string(h.t.kBDZSE)
+                children: f.intl.string(f.t.kBDZSE)
             }),
-            (0, i.jsxs)('div', {
-                className: l()(f.row, f.gapMd),
+            (0, r.jsxs)('div', {
+                className: o()(h.row, h.gapMd),
                 children: [
-                    (0, i.jsx)('img', {
+                    (0, r.jsx)('img', {
                         className: x.guildIcon,
-                        src: j,
-                        alt: h.intl.formatToPlainString(h.t.xm6W9P, { guildName: I.guild.name })
+                        src: T,
+                        alt: f.intl.formatToPlainString(f.t.xm6W9P, { guildName: I.guild.name })
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: x.inviteInfo,
                         children: [
-                            (0, i.jsx)(c.Text, {
+                            (0, r.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
                                 children: I.guild.name
                             }),
                             null != I.approximate_member_count &&
-                                (0, i.jsx)(c.Text, {
+                                (0, r.jsx)(c.Text, {
                                     variant: 'text-xxs/normal',
-                                    children: h.intl.format(h.t.zRl6XV, { count: I.approximate_member_count })
+                                    children: f.intl.format(f.t.zRl6XV, { count: I.approximate_member_count })
                                 })
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)(c.zxk, {
+            (0, r.jsx)(c.zxk, {
                 color: c.Ttl.PRIMARY,
                 onClick: () => {
                     v(),
@@ -92,10 +93,10 @@ function v(e) {
                             type: 'INVITE_MODAL_OPEN',
                             invite: I,
                             code: I.code,
-                            context: _.IlC.APP
+                            context: p.IlC.APP
                         });
                 },
-                children: C ? h.intl.string(h.t.cEnaW1) : h.intl.string(h.t.XpeFYm)
+                children: E ? f.intl.string(f.t.cEnaW1) : f.intl.string(f.t.XpeFYm)
             })
         ]
     });

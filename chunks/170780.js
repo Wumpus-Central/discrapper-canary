@@ -1,4 +1,4 @@
-var i = {
+e.exports = {
     container: 'container__527b1',
     closeButton: 'closeButton__527b1',
     header: 'header__527b1',
@@ -7,4 +7,3 @@ var i = {
     listElement: 'listElement__527b1',
     listElementWrapper: 'listElementWrapper__527b1'
 };
-e.exports = i;

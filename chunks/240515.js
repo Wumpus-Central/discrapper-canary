@@ -1,141 +1,140 @@
-n.d(t, { Z: () => v });
-var i = n(200651),
-    r = n(192379),
-    a = n(990547),
-    s = n(481060),
-    o = n(194359),
-    l = n(819557),
-    u = n(138201),
-    c = n(626135),
-    d = n(63063),
-    f = n(5192),
-    _ = n(478923),
-    p = n(858380),
-    h = n(981631),
-    m = n(388032),
-    g = n(294794);
-function E() {
-    return (0, i.jsxs)(l.z, {
+e.d(t, { default: () => N });
+var i = e(200651),
+    r = e(192379),
+    o = e(990547),
+    l = e(481060),
+    s = e(194359),
+    a = e(819557),
+    c = e(138201),
+    d = e(626135),
+    x = e(63063),
+    u = e(5192),
+    m = e(478923),
+    f = e(858380),
+    h = e(981631),
+    j = e(388032),
+    _ = e(294794);
+function C() {
+    return (0, i.jsxs)(a.z, {
         children: [
-            (0, i.jsx)(l.q, {
-                title: m.intl.string(m.t.ruhGkp),
-                description: m.intl.string(m.t['/FWKKC']),
-                icon: s.owK
+            (0, i.jsx)(a.q, {
+                title: j.intl.string(j.t.ruhGkp),
+                description: j.intl.string(j.t['/FWKKC']),
+                icon: l.owK
             }),
-            (0, i.jsx)(l.q, {
-                title: m.intl.string(m.t.N9v3en),
-                description: m.intl.string(m.t.ddpuJi),
-                icon: s.owK
+            (0, i.jsx)(a.q, {
+                title: j.intl.string(j.t.N9v3en),
+                description: j.intl.string(j.t.ddpuJi),
+                icon: l.owK
             }),
-            (0, i.jsx)(l.q, {
-                title: m.intl.string(m.t['4ycGEx']),
-                description: m.intl.string(m.t['5yfN+v']),
-                icon: s.d3s
+            (0, i.jsx)(a.q, {
+                title: j.intl.string(j.t['4ycGEx']),
+                description: j.intl.string(j.t['5yfN+v']),
+                icon: l.d3s
             })
         ]
     });
 }
-function v(e) {
-    let { user: t, guildId: n, channelId: l, onIgnore: v, onBlock: y, location: I = 'ContextMenu', ...b } = e,
-        T = () => {
-            c.default.track(h.rMx.USER_REMEDIATION_ACTION, {
-                action: p.l.CANCEL_IGNORE,
-                location: I
-            });
-        };
+function N(n) {
+    let { user: t, guildId: e, channelId: a, onIgnore: N, onBlock: g, location: I = 'ContextMenu', ...E } = n;
     return (
         r.useLayoutEffect(
             () => () => {
-                c.default.track(h.rMx.USER_REMEDIATION_ACTION, {
-                    action: p.l.DISMISS_IGNORE,
+                d.default.track(h.rMx.USER_REMEDIATION_ACTION, {
+                    action: f.l.DISMISS_IGNORE,
                     location: I
                 });
             },
             [I]
         ),
-        (0, i.jsx)(s.ConfirmModal, {
-            confirmText: m.intl.string(m.t.ytCpKi),
-            cancelText: m.intl.string(m.t['ETE/oK']),
+        (0, i.jsx)(l.ConfirmModal, {
+            confirmText: j.intl.string(j.t.ytCpKi),
+            cancelText: j.intl.string(j.t['ETE/oK']),
             onConfirm: () => {
-                null == v || v(), o.Z.ignoreUser(t.id, I, null != l ? l : void 0), c.default.track(h.rMx.IGNORE_USER_CONFIRMED);
+                null == N || N(), s.Z.ignoreUser(t.id, I, null != a ? a : void 0), d.default.track(h.rMx.IGNORE_USER_CONFIRMED);
             },
-            onCancel: T,
-            impression: { impressionName: a.ImpressionNames.IGNORE_USER_CONFIRMATION },
-            confirmButtonColor: s.zxk.Colors.BRAND,
-            ...b,
+            onCancel: () => {
+                d.default.track(h.rMx.USER_REMEDIATION_ACTION, {
+                    action: f.l.CANCEL_IGNORE,
+                    location: I
+                });
+            },
+            impression: { impressionName: o.ImpressionNames.IGNORE_USER_CONFIRMATION },
+            confirmButtonColor: l.zxk.Colors.BRAND,
+            ...E,
             children: (0, i.jsxs)('div', {
-                className: g.container,
+                className: _.container,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: g.confirmationHeader,
+                        className: _.confirmationHeader,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: g.iconContainer,
+                                className: _.iconContainer,
                                 children: [
-                                    (0, i.jsx)(s.qEK, {
-                                        size: s.EFr.SIZE_56,
+                                    (0, i.jsx)(l.qEK, {
+                                        size: l.EFr.SIZE_56,
                                         src: t.getAvatarURL(void 0, 64),
                                         'aria-hidden': !0
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: g.icon,
-                                        children: (0, i.jsx)(s.kZF, {})
+                                        className: _.icon,
+                                        children: (0, i.jsx)(l.kZF, {})
                                     })
                                 ]
                             }),
                             (0, i.jsxs)('div', {
                                 children: [
-                                    (0, i.jsx)(s.X6q, {
+                                    (0, i.jsx)(l.X6q, {
                                         variant: 'heading-xl/bold',
                                         color: 'header-primary',
-                                        children: m.intl.format(m.t['WrQD/f'], { username: f.ZP.getName(n, l, t) })
+                                        children: j.intl.format(j.t['WrQD/f'], { username: u.ZP.getName(e, a, t) })
                                     }),
-                                    (0, i.jsx)(s.Text, {
+                                    (0, i.jsx)(l.Text, {
                                         variant: 'text-md/medium',
                                         color: 'header-secondary',
-                                        children: m.intl.string(m.t.JKL1u7)
+                                        children: j.intl.string(j.t.JKL1u7)
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, i.jsx)(E, {}),
+                    (0, i.jsx)(C, {}),
                     (0, i.jsxs)('div', {
-                        className: g.otherOptions,
+                        className: _.otherOptions,
                         children: [
-                            (0, i.jsx)(u.rT, {
-                                title: m.intl.string(m.t['1v01go']),
-                                children: (0, i.jsx)(u.ZP, {
-                                    title: m.intl.string(m.t.bwxY39),
-                                    description: m.intl.string(m.t.NTnf1d),
+                            (0, i.jsx)(c.rT, {
+                                title: j.intl.string(j.t['1v01go']),
+                                children: (0, i.jsx)(c.ZP, {
+                                    title: j.intl.string(j.t.bwxY39),
+                                    description: j.intl.string(j.t.NTnf1d),
                                     titleVariant: 'text-md/medium',
                                     descriptionVariant: 'text-xs/medium',
-                                    buttonText: m.intl.string(m.t.QdfUHB),
-                                    buttonColor: s.Ttl.PRIMARY,
+                                    buttonText: j.intl.string(j.t.QdfUHB),
+                                    buttonColor: l.Ttl.PRIMARY,
                                     onButtonPress: () => {
-                                        c.default.track(h.rMx.USER_REMEDIATION_ACTION, {
-                                            action: p.l.GOTO_BLOCK,
+                                        d.default.track(h.rMx.USER_REMEDIATION_ACTION, {
+                                            action: f.l.GOTO_BLOCK,
                                             location: I
                                         }),
-                                            (0, s.pTH)(),
-                                            (0, s.h7j)((e) =>
-                                                (0, i.jsx)(_.Z, {
-                                                    ...e,
+                                            (0, l.pTH)(),
+                                            (0, l.h7j)((n) =>
+                                                (0, i.jsx)(m.default, {
+                                                    ...n,
                                                     user: t,
-                                                    guildId: n,
-                                                    channelId: l,
-                                                    onBlock: y,
-                                                    onIgnore: v,
+                                                    guildId: e,
+                                                    channelId: a,
+                                                    onBlock: g,
+                                                    onIgnore: N,
                                                     location: I
                                                 })
                                             );
                                     }
                                 })
                             }),
-                            (0, i.jsx)(s.Text, {
+                            (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
-                                className: g.featureGuide,
-                                children: m.intl.format(m.t.Hjvqr6, { articleLink: d.Z.getArticleURL(h.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
+                                className: _.featureGuide,
+                                children: j.intl.format(j.t.Hjvqr6, { articleLink: x.Z.getArticleURL(h.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
                             })
                         ]
                     })

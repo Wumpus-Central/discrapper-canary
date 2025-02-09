@@ -22,52 +22,55 @@ function g(e, t) {
 }
 async function E(e) {
     var t, a, s, E;
-    let { userId: v, section: y, subsection: I, guildId: b, channelId: T, friendToken: S, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
-        R = d.default.getUser(v);
-    if (null == R) return;
-    let O = _.Z.getUserProfile(v),
-        D = u.Z.getPrimaryActivity(v),
+    let { userId: v, section: y, subsection: I, guildId: T, channelId: b, friendToken: S, analyticsLocation: A, showGuildProfile: N = !0, appContext: C, ...R } = e,
+        O = d.default.getUser(v);
+    if (null == O) return;
+    let D = _.Z.getUserProfile(v),
+        L = u.Z.getPrimaryActivity(v),
         x = u.Z.getStatus(v),
-        L = u.Z.isMobileOnline(v),
-        { party: P, assets: w, application_id: M } = null != D ? D : {},
-        k = null != M ? l.Z.getApplication(M) : null,
-        U = L ? p.j28.ONLINE_MOBILE : p.j28.ONLINE_DESKTOP,
-        G = x === p.Skl.ONLINE ? U : x;
+        w = u.Z.isMobileOnline(v),
+        { party: P, assets: M, application_id: k } = null != L ? L : {},
+        U = null != k ? l.Z.getApplication(k) : null,
+        G = w ? p.j28.ONLINE_MOBILE : p.j28.ONLINE_DESKTOP,
+        B = x === p.Skl.ONLINE ? G : x;
     (m = await (0, r.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('82412'), n.e('3748')]).then(n.bind(n, 533835));
+            let { default: e } = await Promise.all([n.e('94989'), n.e('82412'), n.e('87151')]).then(n.bind(n, 533835));
             return (t) =>
                 (0, i.jsx)(e, {
-                    user: R,
-                    guildId: b,
+                    user: O,
+                    guildId: T,
                     friendToken: S,
                     initialSection: y,
                     initialSubsection: I,
-                    channelId: T,
+                    channelId: b,
                     showGuildProfile: N,
                     ...t,
-                    ...C
+                    ...R
                 });
         },
-        { modalKey: g(v, N ? b : void 0) }
+        {
+            modalKey: g(v, N ? T : void 0),
+            contextKey: (0, r.VnL)(null != C ? C : p.IlC.APP)
+        }
     )),
         f.default.track(p.rMx.OPEN_MODAL, {
             type: 'Profile Modal',
-            guild_id: b,
-            channel_id: T,
+            guild_id: T,
+            channel_id: b,
             other_user_id: v,
-            application_id: null !== (a = null == D ? void 0 : D.application_id) && void 0 !== a ? a : null,
-            application_name: null == D ? void 0 : D.name,
-            sku_id: null !== (s = null == k ? void 0 : k.primarySkuId) && void 0 !== s ? s : null,
+            application_id: null !== (a = null == L ? void 0 : L.application_id) && void 0 !== a ? a : null,
+            application_name: null == L ? void 0 : L.name,
+            sku_id: null !== (s = null == U ? void 0 : U.primarySkuId) && void 0 !== s ? s : null,
             is_friend: c.Z.isFriend(v),
-            has_images: !!(null !== (E = null == w ? void 0 : w.large_image) && void 0 !== E ? E : null == w ? void 0 : w.small_image),
+            has_images: !!(null !== (E = null == M ? void 0 : M.large_image) && void 0 !== E ? E : null == M ? void 0 : M.small_image),
             party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
             party_id: null == P ? void 0 : P.id,
             party_platform: (0, h.Ps)(null == P ? void 0 : P.id) ? p.ABu.SPOTIFY : null,
-            game_platform: (0, o.Z)(D),
-            profile_user_status: G,
-            profile_has_nitro_customization: (null == O ? void 0 : O.banner) != null,
-            profile_has_profile_effect: (null == O ? void 0 : O.profileEffectId) != null,
+            game_platform: (0, o.Z)(L),
+            profile_user_status: B,
+            profile_has_nitro_customization: (null == D ? void 0 : D.banner) != null,
+            profile_has_profile_effect: (null == D ? void 0 : D.profileEffectId) != null,
             ...(null == A ? null : (0, f.expandLocation)(A))
         });
 }

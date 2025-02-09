@@ -216,6 +216,7 @@ var i = (function (e) {
         (e.THREAD_USER_MENU = 'thread user menu'),
         (e.USER_GENERIC_MENU = 'user generic menu'),
         (e.USER_PROFILE_OVERFLOW_MENU = 'user profile overflow menu'),
+        (e.USER_OVERLAY_CONTEXT_MENU = 'user overlay context menu'),
         (e.VOICE_ACTION_SHEET = 'voice action sheet'),
         (e.FOCUSED_VOICE_CONTROLS = 'focused voice controls'),
         (e.MASKED_LINK = 'masked link'),

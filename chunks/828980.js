@@ -1,4 +1,4 @@
-var i = {
+e.exports = {
     container: 'container_cfd26e',
     title: 'title_cfd26e',
     textContainer: 'textContainer_cfd26e',
@@ -7,4 +7,3 @@ var i = {
     heroArtContainer: 'heroArtContainer_cfd26e',
     heroArt: 'heroArt_cfd26e'
 };
-e.exports = i;

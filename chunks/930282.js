@@ -1,60 +1,66 @@
 n.d(t, {
-    HR: () => E,
-    L5: () => m,
-    ZP: () => v
+    HR: () => f,
+    L5: () => p,
+    ZP: () => E
 });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(653603),
-    l = n.n(o),
-    u = n(902704),
-    c = n(453687),
-    d = n(318713),
-    f = n(981631),
+var a = n(200651),
+    l = n(192379),
+    i = n(120356),
+    s = n.n(i),
+    r = n(653603),
+    o = n.n(r),
+    c = n(902704),
+    d = n(453687),
+    u = n(318713),
+    m = n(981631),
     _ = n(388032),
-    p = n(507304),
-    h = n(665162);
-function m(e, t) {
-    return e.type === f.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(f.iLy.SOURCE_MESSAGE_DELETED) ? _.intl.string(_.t.JOtgS0) : t;
+    h = n(507304),
+    g = n(665162);
+function p(e, t) {
+    return e.type === m.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(m.iLy.SOURCE_MESSAGE_DELETED) ? _.intl.string(_.t.JOtgS0) : t;
 }
-function g(e) {
+function f(e, t) {
+    var n, a;
+    let { message: l } = t,
+        { message: i } = e;
+    return (0, c.Z)(e, t, ['message']) && l.content === i.content && l.state === i.state && (null === (n = l.editedTimestamp) || void 0 === n ? void 0 : n.toString()) === (null === (a = i.editedTimestamp) || void 0 === a ? void 0 : a.toString());
+}
+let E = l.memo(function (e) {
     var t;
-    let { className: n, message: a, children: o, content: u, onUpdate: g, contentRef: E } = e,
-        v = a.isEdited(),
-        y = a.state === f.yb.SEND_FAILED,
-        I = a.state === f.yb.SENDING,
-        b = a.isCommandType(),
-        T = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
-        S = r.useRef(!1);
+    let { className: n, message: i, children: r, content: c, onUpdate: f, contentRef: E } = e,
+        I = i.isEdited(),
+        C = i.state === m.yb.SEND_FAILED,
+        x = i.state === m.yb.SENDING,
+        A = i.isCommandType(),
+        S = null === (t = i.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
+        T = l.useRef(!1);
     return (
-        r.useLayoutEffect(() => {
-            S.current ? null != g && g() : (S.current = !0);
-        }, [g, a.content, u, T, o]),
-        (0, i.jsxs)('div', {
-            id: (0, c.ut)(a),
+        l.useLayoutEffect(() => {
+            T.current ? null != f && f() : (T.current = !0);
+        }, [f, i.content, c, S, r]),
+        (0, a.jsxs)('div', {
+            id: (0, d.ut)(i),
             ref: E,
-            className: s()(n, h.markup, {
-                [p.messageContent]: !0,
-                [p.isSending]: I && !b,
-                [p.markupRtl]: 'rtl' === l()(a.content),
-                [p.isFailed]: y,
-                [p.isUnsupported]: a.isUnsupported
+            className: s()(n, g.markup, {
+                [h.messageContent]: !0,
+                [h.isSending]: x && !A,
+                [h.markupRtl]: 'rtl' === o()(i.content),
+                [h.isFailed]: C,
+                [h.isUnsupported]: i.isUnsupported
             }),
             children: [
-                null != o ? o : m(a, u),
-                v &&
-                    null != a.editedTimestamp &&
-                    (0, i.jsxs)(i.Fragment, {
+                null != r ? r : p(i, c),
+                I &&
+                    null != i.editedTimestamp &&
+                    (0, a.jsxs)(a.Fragment, {
                         children: [
                             ' ',
-                            (0, i.jsx)(d.Z, {
-                                timestamp: a.editedTimestamp,
+                            (0, a.jsx)(u.Z, {
+                                timestamp: i.editedTimestamp,
                                 isEdited: !0,
                                 isInline: !1,
-                                children: (0, i.jsxs)('span', {
-                                    className: p.edited,
+                                children: (0, a.jsxs)('span', {
+                                    className: h.edited,
                                     children: ['(', _.intl.string(_.t.C8sXIC), ')']
                                 })
                             })
@@ -63,11 +69,4 @@ function g(e) {
             ]
         })
     );
-}
-function E(e, t) {
-    var n, i;
-    let { message: r } = t,
-        { message: a } = e;
-    return (0, u.Z)(e, t, ['message']) && r.content === a.content && r.state === a.state && (null === (n = r.editedTimestamp) || void 0 === n ? void 0 : n.toString()) === (null === (i = a.editedTimestamp) || void 0 === i ? void 0 : i.toString());
-}
-let v = r.memo(g, E);
+}, f);

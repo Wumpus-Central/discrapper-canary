@@ -1,2 +1,1 @@
-var i = { infoGroup: 'infoGroup_d2b61f' };
-e.exports = i;
+n.exports = { infoGroup: 'infoGroup_d2b61f' };

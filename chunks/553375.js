@@ -42,26 +42,27 @@ function f(e) {
     });
 }
 function _(e) {
-    let { user: t, activity: n, entry: a, onAction: l, isMenuOpen: u } = e,
-        { applicationId: f, sourceUserId: _ } = d({
+    let { user: t, activity: n, entry: a, onAction: l, isMenuOpen: u, appContext: f } = e,
+        { applicationId: _, sourceUserId: p } = d({
             activity: n,
             entry: a,
             user: t
         }),
-        p = (0, o.Z)({
+        h = (0, o.Z)({
             location: 'UserProfileActivityContextMenu',
             source: s.m1.UserProfileCardContextMenu,
             trackEntryPointImpression: u,
-            applicationId: f,
-            sourceUserId: _
+            applicationId: _,
+            sourceUserId: p,
+            appContext: f
         });
-    return null == p
+    return null == h
         ? null
         : (0, i.jsx)(r.sNh, {
               id: 'game-profile',
               label: c.intl.string(c.t.ajHoOj),
               action: (e) => {
-                  null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), p(e);
+                  null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), h(e);
               }
           });
 }

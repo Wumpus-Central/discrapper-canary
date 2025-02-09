@@ -1,74 +1,68 @@
 n.r(t),
     n.d(t, {
-        baseRules: () => b,
-        customRules: () => T
+        baseRules: () => k,
+        customRules: () => C
     }),
     n(47120);
-var i = n(200651),
-    r = n(192379),
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
-    s = n.n(a),
-    o = n(477660),
-    l = n.n(o),
-    u = n(481060),
+    o = n.n(a),
+    s = n(477660),
+    l = n.n(s),
+    d = n(481060),
     c = n(37234),
-    d = n(230711),
-    f = n(454585),
-    _ = n(703656),
+    u = n(230711),
+    _ = n(454585),
+    m = n(703656),
     p = n(626135),
     h = n(981631),
-    m = n(596401);
-let g = l().defaultRules.link,
-    E = { section: h.jXE.SETTINGS_CHANGELOG };
-function v() {
-    p.default.track(h.rMx.PREMIUM_PROMOTION_OPENED, { location: E });
-}
-function y(e, t) {
-    return null == t ? [] : t.split(' ').map((t) => e[t]);
-}
-let I = (e) => {
-        let { level: t, children: n, className: i = null, styleSheet: a = {} } = e,
-            o = (0, u.xSt)(),
+    g = n(596401);
+let b = l().defaultRules.link,
+    f = { section: h.jXE.SETTINGS_CHANGELOG },
+    x = (e) => {
+        let { level: t, children: n, className: r = null, styleSheet: a = {} } = e,
+            s = (0, d.xSt)(),
             l = parseInt(t, 10),
-            c = o + (isNaN(l) ? 1 : l) - 1;
-        return r.createElement('h'.concat(c), { className: s()(...y(a, i)) }, n);
+            c = isNaN(l) ? 1 : l;
+        return i.createElement('h'.concat(s + c - 1), { className: o()(...(null == r ? [] : r.split(' ').map((e) => a[e]))) }, n);
     },
-    b = null != f.Z ? f.Z.defaultRules : null,
-    T = {
+    k = null != _.Z ? _.Z.defaultRules : null,
+    C = {
         link: {
             parse(e, t, n) {
-                let i;
-                let r = e[2],
-                    a = r.startsWith('https://discordapp.com/nitro') || r.startsWith('https://discord.com/nitro'),
-                    s = r.startsWith('https://discordapp.com/hypesquad') || r.startsWith('https://discord.com/hypesquad'),
-                    o = r.startsWith('/shop/fullscreen?source=1') || r.startsWith('/activities');
+                let r;
+                let i = e[2],
+                    a = i.startsWith('https://discordapp.com/nitro') || i.startsWith('https://discord.com/nitro'),
+                    o = i.startsWith('https://discordapp.com/hypesquad') || i.startsWith('https://discord.com/hypesquad'),
+                    s = i.startsWith('/shop/fullscreen?source=1') || i.startsWith('/activities');
                 return (
-                    (i =
-                        a || s
+                    (r =
+                        a || o
                             ? (e) => {
-                                  v(), a ? d.Z.open(h.oAB.PREMIUM) : s && d.Z.open(h.oAB.HYPESQUAD_ONLINE), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, u.Mr3)(m.Xd), e.preventDefault();
+                                  p.default.track(h.rMx.PREMIUM_PROMOTION_OPENED, { location: f }), a ? u.Z.open(h.oAB.PREMIUM) : o && u.Z.open(h.oAB.HYPESQUAD_ONLINE), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, d.Mr3)(g.Xd), e.preventDefault();
                               }
-                            : o
+                            : s
                               ? (e) => {
-                                    (0, _.uL)(r), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { ...p.default.getCampaignParams(r) }), (0, c.Ou)(), (0, u.Mr3)(m.Xd), e.preventDefault();
+                                    (0, m.uL)(i), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { ...p.default.getCampaignParams(i) }), (0, c.Ou)(), (0, d.Mr3)(g.Xd), e.preventDefault();
                                 }
                               : () => {
-                                    n && 'function' == typeof n.onLinkClick && n.onLinkClick(r),
+                                    n && 'function' == typeof n.onLinkClick && n.onLinkClick(i),
                                         n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
-                                            target: r,
+                                            target: i,
                                             cta_type: 'inline_link',
-                                            ...p.default.getCampaignParams(r)
+                                            ...p.default.getCampaignParams(i)
                                         });
                                 }),
                     {
-                        ...g.parse(e, t, n),
-                        callToAction: i
+                        ...b.parse(e, t, n),
+                        callToAction: r
                     }
                 );
             },
             react: (e, t, n) =>
-                (0, i.jsx)(
-                    u.eee,
+                (0, r.jsx)(
+                    d.eee,
                     {
                         href: l().sanitizeUrl(e.target),
                         title: e.title,
@@ -81,22 +75,22 @@ let I = (e) => {
                 )
         },
         lheading: (e) => ({
-            react: (t, n, r) =>
-                (0, i.jsx)(
-                    I,
+            react: (t, n, i) =>
+                (0, r.jsx)(
+                    x,
                     {
                         level: t.level,
                         className: t.className,
                         styleSheet: e,
-                        children: n(t.content, r)
+                        children: n(t.content, i)
                     },
-                    r.key
+                    i.key
                 )
         }),
         heading: {
             react: (e, t, n) =>
-                (0, i.jsx)(
-                    I,
+                (0, r.jsx)(
+                    x,
                     {
                         level: e.level,
                         children: t(e.content, n)
@@ -105,18 +99,18 @@ let I = (e) => {
                 )
         },
         image: {
-            react(e, t, r) {
+            react(e, t, i) {
                 let a = n(595173)('./'.concat(e.target));
-                return (0, i.jsx)(
+                return (0, r.jsx)(
                     'img',
                     {
                         alt: e.alt,
                         src: a
                     },
-                    r.key
+                    i.key
                 );
             }
         },
-        blockQuote: { react: null == b ? void 0 : b.blockQuote.react },
-        paragraph: { react: (e, t, n) => (0, i.jsx)('p', { children: t(e.content, n) }, n.key) }
+        blockQuote: { react: null == k ? void 0 : k.blockQuote.react },
+        paragraph: { react: (e, t, n) => (0, r.jsx)('p', { children: t(e.content, n) }, n.key) }
     };

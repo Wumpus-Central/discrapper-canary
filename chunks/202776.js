@@ -1,4 +1,4 @@
-var i = {
+e.exports = {
     popoutContainer: 'popoutContainer_c00127',
     mainContent: 'mainContent_c00127',
     iconContainer: 'iconContainer_c00127',
@@ -6,4 +6,3 @@ var i = {
     ctaButton: 'ctaButton_c00127',
     ctaButtonContent: 'ctaButtonContent_c00127'
 };
-e.exports = i;

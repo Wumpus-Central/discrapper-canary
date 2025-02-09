@@ -1,1 +1,1 @@
-i.exports = { text: 'text__87e56' };
+e.exports = { text: 'text__87e56' };

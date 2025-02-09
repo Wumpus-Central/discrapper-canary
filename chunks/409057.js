@@ -19,8 +19,8 @@ var r = n(120356),
     v = n(649700),
     y = n(810568),
     I = n(168524),
-    b = n(769654),
-    T = n(960870),
+    T = n(769654),
+    b = n(960870),
     S = n(139793),
     A = n(994746),
     N = n(232174),
@@ -28,10 +28,10 @@ var r = n(120356),
     R = n(979038),
     O = n(448980),
     D = n(336383),
-    x = n(194811),
-    L = n(373826),
-    P = n(315324),
-    w = n(262210),
+    L = n(194811),
+    x = n(373826),
+    w = n(315324),
+    P = n(262210),
     M = n(103479),
     k = n(670451),
     U = n(553375),
@@ -41,43 +41,43 @@ var r = n(120356),
     F = n(388032),
     V = n(249942);
 function j(e) {
-    let { user: t, currentUser: n, activity: r, application: j, voiceGuild: H, voiceChannel: Y, className: W, onClose: K } = e,
-        { analyticsLocations: z } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { profileType: q } = (0, C.z)(),
-        Q = { [V.fullSize]: q === G.y0.FULL_SIZE },
-        X = (0, v.Z)({
+    let { user: t, currentUser: n, activity: r, application: j, voiceGuild: H, voiceChannel: Y, className: W, onClose: K, appContext: z } = e,
+        { analyticsLocations: q } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { profileType: Q } = (0, C.z)(),
+        X = { [V.fullSize]: Q === G.y0.FULL_SIZE },
+        J = (0, v.Z)({
             activity: r,
             user: t
         }),
-        J = (0, I.Z)({
+        $ = (0, I.Z)({
             location: 'UserProfileActivityCard',
             source: y.m1.UserProfile,
             trackEntryPointImpression: !0,
             ...(0, U.nK)({
                 user: t,
                 activity: r,
-                entry: X
+                entry: J
             })
         }),
-        $ = (0, T.Z)({
+        ee = (0, b.Z)({
             display: 'live',
             user: t,
             activity: r,
-            entry: X,
-            analyticsLocations: z
+            entry: J,
+            analyticsLocations: q
         }),
-        ee = (0, S.Z)({
+        et = (0, S.Z)({
             userId: t.id,
-            onAction: $
+            onAction: ee
         }),
-        et = () => {
+        en = () => {
             null != j && (null == K || K(), p.__(h._b.TEXT, m.Ie.NORMAL, { applicationId: j.id }));
         },
-        en = (0, A.Z)(r),
-        { largeImage: ei, smallImage: er } = (0, g.FO)(r, j),
-        ea = (0, s.EQ)(r)
-            .when(u.Z, () => (null != j ? et : void 0))
-            .when(c.Z, () => J)
+        ei = (0, A.Z)(r),
+        { largeImage: er, smallImage: ea } = (0, g.FO)(r, j),
+        es = (0, s.EQ)(r)
+            .when(u.Z, () => (null != j ? en : void 0))
+            .when(c.Z, () => $)
             .when(l.Z, () => {
                 if (t.id !== n.id)
                     return () =>
@@ -88,27 +88,27 @@ function j(e) {
                         });
             })
             .otherwise(() => void 0),
-        es = () => {
+        eo = () => {
             let e = (0, l.Z)(r) ? 'crunchyroll' : 'default';
-            return null == ea
+            return null == es
                 ? (0, i.jsx)(E.E, {
-                      image: ei,
-                      smallImage: er,
+                      image: er,
+                      smallImage: ea,
                       size: E.J.SIZE_60,
                       aspectRatio: e
                   })
                 : (0, i.jsx)(E.E, {
-                      image: ei,
-                      smallImage: er,
+                      image: er,
+                      smallImage: ea,
                       size: E.J.SIZE_60,
                       className: V.clickableImage,
                       aspectRatio: e,
                       onClick: (e) => {
-                          $({ action: 'PRESS_IMAGE' }), ea(e);
+                          ee({ action: 'PRESS_IMAGE' }), es(e);
                       }
                   });
         },
-        eo = () => {
+        el = () => {
             var e;
             return (0, d.Z)(r) && null != Y
                 ? (0, i.jsxs)('div', {
@@ -119,62 +119,62 @@ function j(e) {
                               color: o.TVs.colors.TEXT_NORMAL,
                               className: V.voiceIcon
                           }),
-                          (0, i.jsx)(L.Z, {
+                          (0, i.jsx)(x.Z, {
                               variant: 'heading-sm/semibold',
                               text: Y.name
                           })
                       ]
                   })
                 : (0, c.Z)(r)
-                  ? (0, i.jsx)(L.Z, {
+                  ? (0, i.jsx)(x.Z, {
                         variant: 'heading-sm/semibold',
                         text: r.name
                     })
-                  : (0, i.jsx)(L.Z, {
+                  : (0, i.jsx)(x.Z, {
                         variant: 'heading-sm/semibold',
                         text: null !== (e = r.details) && void 0 !== e ? e : r.name
                     });
         },
-        el = () =>
+        eu = () =>
             (0, d.Z)(r) && null != H
-                ? (0, i.jsx)(L.Z, {
+                ? (0, i.jsx)(x.Z, {
                       variant: 'text-xs/normal',
                       text: F.intl.formatToPlainString(F.t['hq/Qzc'], { guildName: H.name }),
                       onClick: () => {
-                          (0, b.X)(H.id), $({ action: 'OPEN_VOICE_GUILD' }), null == K || K();
+                          (0, T.X)(H.id), ee({ action: 'OPEN_VOICE_GUILD' }), null == K || K();
                       }
                   })
                 : (0, c.Z)(r)
-                  ? (0, i.jsx)(L.Z, {
+                  ? (0, i.jsx)(x.Z, {
                         variant: 'text-xs/normal',
                         text: r.details
                     })
-                  : (0, i.jsx)(L.Z, {
+                  : (0, i.jsx)(x.Z, {
                         text: r.state,
                         variant: 'text-xs/normal'
                     }),
-        eu = () => {
+        ec = () => {
             var e;
             return r.type === B.IIU.WATCHING
                 ? null
                 : (0, c.Z)(r)
-                  ? ec()
-                  : (0, i.jsx)(L.Z, {
+                  ? ed()
+                  : (0, i.jsx)(x.Z, {
                         text: null === (e = r.assets) || void 0 === e ? void 0 : e.large_text,
                         variant: 'text-xs/normal'
                     });
         },
-        ec = () => {
+        ed = () => {
             var e, t, n, a;
             return (null === (e = r.party) || void 0 === e ? void 0 : e.size) == null && r.application_id === Z.Zc
                 ? (0, i.jsxs)('div', {
                       className: V.gameState,
                       children: [
-                          (0, i.jsx)(L.Z, {
+                          (0, i.jsx)(x.Z, {
                               variant: 'text-xs/normal',
                               text: r.state
                           }),
-                          (0, i.jsx)(L.Z, {
+                          (0, i.jsx)(x.Z, {
                               variant: 'text-xs/normal',
                               text: F.intl.formatToPlainString(F.t['u//9Bw'], {
                                   count: '0',
@@ -187,11 +187,11 @@ function j(e) {
                   ? (0, i.jsxs)('div', {
                         className: V.gameState,
                         children: [
-                            (0, i.jsx)(L.Z, {
+                            (0, i.jsx)(x.Z, {
                                 variant: 'text-xs/normal',
                                 text: r.state
                             }),
-                            (0, i.jsx)(L.Z, {
+                            (0, i.jsx)(x.Z, {
                                 variant: 'text-xs/normal',
                                 text:
                                     0 === r.party.size[1]
@@ -204,99 +204,100 @@ function j(e) {
                         ]
                     })
                   : null == r.party
-                    ? (0, i.jsx)(L.Z, {
+                    ? (0, i.jsx)(x.Z, {
                           variant: 'text-xs/normal',
                           text: r.state
                       })
                     : null;
         },
-        ed = () => {
+        ef = () => {
             if (!(0, N.Z)(r)) return null;
             let { start: e, end: t } = r.timestamps;
-            return (0, i.jsx)(w.Z, {
+            return (0, i.jsx)(P.Z, {
                 start: e,
                 end: t
             });
         },
-        ef = () =>
-            null == ea
+        e_ = () =>
+            null == es
                 ? (0, i.jsxs)('div', {
-                      children: [eo(), el(), eu()]
+                      children: [el(), eu(), ec()]
                   })
                 : (0, i.jsxs)(o.P3F, {
                       className: V.clickableText,
                       onClick: (e) => {
-                          $({ action: 'PRESS_TEXT' }), ea(e);
+                          ee({ action: 'PRESS_TEXT' }), es(e);
                       },
-                      children: [eo(), el(), eu()]
+                      children: [el(), eu(), ec()]
                   }),
-        e_ = () =>
+        ep = () =>
             null == H || null == Y
                 ? null
-                : (0, i.jsx)(P.Z, {
+                : (0, i.jsx)(w.Z, {
                       user: t,
                       guild: H,
                       channel: Y,
-                      onAction: $,
+                      onAction: ee,
                       onClose: K
                   }),
-        ep = () =>
+        eh = () =>
             t.id === n.id
                 ? null
                 : (0, i.jsx)('div', {
-                      className: a()(V.actions, Q),
+                      className: a()(V.actions, X),
                       children: (0, i.jsx)(R.Z, {
                           activity: r,
                           user: t,
-                          onAction: $,
+                          onAction: ee,
                           onClose: K
                       })
                   });
     return (0, i.jsx)(_.Gt, {
-        value: z,
+        value: q,
         children: (0, i.jsxs)(D.Z, {
-            ref: ee,
+            ref: et,
             className: a()(V.card, W),
-            onAction: $,
+            onAction: ee,
             onClose: K,
             children: [
-                (0, i.jsx)(x.Z, {
-                    ...en,
+                (0, i.jsx)(L.Z, {
+                    ...ei,
                     contextMenu: (0, i.jsx)(k.Z, {
                         display: 'live',
                         user: t,
                         activity: r,
-                        entry: X,
-                        onClose: K
+                        entry: J,
+                        onClose: K,
+                        appContext: z
                     })
                 }),
                 (0, i.jsxs)('div', {
                     className: V.body,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: a()(V.content, Q),
+                            className: a()(V.content, X),
                             children: [
-                                !t.bot && es(),
+                                !t.bot && eo(),
                                 (0, i.jsxs)('div', {
                                     className: V.details,
                                     children: [
-                                        ef(),
+                                        e_(),
                                         !t.bot &&
                                             (0, i.jsx)(O.Z, {
                                                 user: t,
                                                 activity: r,
                                                 className: V.badges
                                             }),
-                                        ed()
+                                        ef()
                                     ]
                                 }),
-                                q === G.y0.FULL_SIZE && ep()
+                                Q === G.y0.FULL_SIZE && eh()
                             ]
                         }),
-                        e_()
+                        ep()
                     ]
                 }),
-                q !== G.y0.FULL_SIZE && ep()
+                Q !== G.y0.FULL_SIZE && eh()
             ]
         })
     });

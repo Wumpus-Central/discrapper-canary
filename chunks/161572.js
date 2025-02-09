@@ -6,24 +6,25 @@ var r = n(837411),
     s = n(955418),
     o = n(591156);
 function l(e) {
-    let { user: t, guildId: n, channelId: l, onClose: u } = e,
-        c = (0, r.Z)(t.id, n);
+    let { user: t, guildId: n, channelId: l, onClose: u, appContext: c } = e,
+        d = (0, r.Z)(t.id, n);
     return (0, i.jsxs)('footer', {
         className: o.footer,
         children: [
-            c &&
+            d &&
                 (0, i.jsx)(s.Z, {
                     user: t,
                     guildId: n,
                     channelId: l,
                     onClose: u
                 }),
-            !c &&
+            !d &&
                 (0, i.jsx)(a.Z, {
                     user: t,
                     guildId: n,
                     onClose: u,
-                    fullWidth: !0
+                    fullWidth: !0,
+                    appContext: c
                 })
         ]
     });

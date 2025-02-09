@@ -1,4 +1,4 @@
-var i = {
+e.exports = {
     container: 'container_f2d0d9',
     table: 'table_f2d0d9',
     rows: 'rows_f2d0d9',
@@ -24,4 +24,3 @@ var i = {
     badgesContainer: 'badgesContainer_f2d0d9',
     tooltip: 'tooltip_f2d0d9'
 };
-e.exports = i;

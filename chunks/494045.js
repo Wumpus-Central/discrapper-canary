@@ -1,2 +1,1 @@
-var i = { headerContainer: 'headerContainer_bdedd9' };
-e.exports = i;
+e.exports = { headerContainer: 'headerContainer_bdedd9' };

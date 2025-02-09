@@ -1,2 +1,1 @@
-var i = { required: 'required__287ee' };
-e.exports = i;
+e.exports = { required: 'required__287ee' };

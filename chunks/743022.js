@@ -1,4 +1,4 @@
-var i = {
+e.exports = {
     popout: 'popout__4f0a5',
     content: 'content__4f0a5',
     leaderboardName: 'leaderboardName__4f0a5',
@@ -9,4 +9,3 @@ var i = {
     exitPreviewModeText: 'exitPreviewModeText__4f0a5',
     exitPreviewModeButton: 'exitPreviewModeButton__4f0a5'
 };
-e.exports = i;

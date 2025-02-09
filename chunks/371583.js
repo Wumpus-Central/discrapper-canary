@@ -1,33 +1,37 @@
-n.d(t, {
-    j: () => u,
-    r: () => o
+c.d(e, {
+    j: () => o,
+    r: () => n
 });
-var i = n(99815),
-    r = n(81063),
-    a = n(463031);
-function s(e) {
-    var t;
-    let r = e.users[0],
-        a = null == r ? void 0 : null === (t = r.statistics[i.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === t ? void 0 : t.value;
-    try {
-        return null != a ? n(624119)('./champion_'.concat(a, '.jpg')).default : n(721191).Z;
-    } catch {
-        return n(721191).Z;
-    }
+var d = c(99815),
+    a = c(81063),
+    s = c(463031);
+function n(t) {
+    return t.leaderboard_id === s.z
+        ? (function (t) {
+              var e;
+              let a = t.users[0],
+                  s = null == a ? void 0 : null === (e = a.statistics[d.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === e ? void 0 : e.value;
+              try {
+                  return null != s ? c(624119)('./champion_'.concat(s, '.jpg')).default : c(721191).Z;
+              } catch {
+                  return c(721191).Z;
+              }
+          })(t)
+        : null != t.settings.splash_asset_id
+          ? (0, a.getAssetImage)(t.settings.application_id, t.settings.splash_asset_id)
+          : null;
 }
-function o(e) {
-    return e.leaderboard_id === a.z ? s(e) : null != e.settings.splash_asset_id ? (0, r.getAssetImage)(e.settings.application_id, e.settings.splash_asset_id) : null;
-}
-function l(e) {
-    var t, r;
-    let a = null == e ? void 0 : null === (t = e.users) || void 0 === t ? void 0 : t[0],
-        s = null == a ? void 0 : null === (r = a.statistics[i.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === r ? void 0 : r.value;
-    try {
-        return null != s ? n(692425)('./champion_'.concat(s, '.jpg')).default : null;
-    } catch {
-        return null;
-    }
-}
-function u(e) {
-    return e.leaderboard_id === a.z ? l(e) : (0, r.getAssetImage)(e.settings.application_id, e.settings.winner_asset_id);
+function o(t) {
+    return t.leaderboard_id === s.z
+        ? (function (t) {
+              var e, a;
+              let s = null == t ? void 0 : null === (e = t.users) || void 0 === e ? void 0 : e[0],
+                  n = null == s ? void 0 : null === (a = s.statistics[d.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === a ? void 0 : a.value;
+              try {
+                  return null != n ? c(692425)('./champion_'.concat(n, '.jpg')).default : null;
+              } catch {
+                  return null;
+              }
+          })(t)
+        : (0, a.getAssetImage)(t.settings.application_id, t.settings.winner_asset_id);
 }

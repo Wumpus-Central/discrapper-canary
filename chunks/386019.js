@@ -8,33 +8,34 @@ var i = n(200651),
     u = n(848966),
     c = n(388032);
 function d(e) {
-    let { children: t, user: n, activity: d, entry: f, display: _, onSelect: p, onClose: h } = e,
-        [m, g] = r.useState(!1),
-        { analyticsLocations: E } = (0, o.ZP)(s.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        v = (0, l.Z)({
+    let { children: t, user: n, activity: d, entry: f, display: _, onSelect: p, onClose: h, appContext: m } = e,
+        [g, E] = r.useState(!1),
+        { analyticsLocations: v } = (0, o.ZP)(s.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        y = (0, l.Z)({
             display: _,
             user: n,
             activity: d,
             entry: f,
-            analyticsLocations: E
+            analyticsLocations: v
         }),
-        y = (0, u.Z)({
+        I = (0, u.Z)({
             entry: f,
             activity: d,
             user: n,
             display: _,
             onClose: h,
-            onAction: v,
-            isMenuOpen: m
+            onAction: y,
+            isMenuOpen: g,
+            appContext: m
         });
-    return 0 === y.length || n.bot
+    return 0 === I.length || n.bot
         ? null
         : (0, i.jsx)(a.yRy, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  v({ action: 'OPEN_MENU' }), g(!0);
+                  y({ action: 'OPEN_MENU' }), E(!0);
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -43,11 +44,11 @@ function d(e) {
                       children: (0, i.jsx)(a.v2r, {
                           navId: 'content-inventory-context',
                           onClose: () => {
-                              t(), g(!1);
+                              t(), E(!1);
                           },
                           'aria-label': c.intl.string(c.t.PlAQz8),
                           onSelect: p,
-                          children: (0, i.jsx)(a.kSQ, { children: y })
+                          children: (0, i.jsx)(a.kSQ, { children: I })
                       })
                   });
               },

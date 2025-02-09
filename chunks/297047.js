@@ -1,48 +1,47 @@
-n.d(t, {
-    Z: () => h,
+t.d(n, {
+    Z: () => E,
     q: () => p
 }),
-    n(47120);
-var i = n(200651);
-n(192379);
-var r = n(442837),
-    a = n(481060),
-    s = n(144144),
-    o = n(592125),
-    l = n(496675),
-    u = n(944486),
-    c = n(585483),
-    d = n(51144),
-    f = n(981631),
-    _ = n(388032);
-function p(e, t) {
-    let { id: n } = e,
-        i = '@'.concat(d.ZP.getUserTag(e, { decoration: 'never' })),
-        r = '<@'.concat(n, '>');
-    c.S.dispatchToLastSubscribed(f.CkL.INSERT_TEXT, {
-        plainText: i,
-        rawText: r
+    t(47120);
+var l = t(200651);
+t(192379);
+var i = t(442837),
+    r = t(481060),
+    a = t(144144),
+    u = t(592125),
+    o = t(496675),
+    d = t(944486),
+    s = t(585483),
+    c = t(51144),
+    _ = t(981631),
+    f = t(388032);
+function p(e, n) {
+    let { id: t } = e,
+        l = '@'.concat(c.ZP.getUserTag(e, { decoration: 'never' }));
+    s.S.dispatchToLastSubscribed(_.CkL.INSERT_TEXT, {
+        plainText: l,
+        rawText: '<@'.concat(t, '>')
     }),
-        null != t && s.Z.startTyping(t);
+        null != n && a.Z.startTyping(n);
 }
-function h(e, t, n) {
-    let [s, c] = (0, r.Wu)(
-            [u.Z, o.Z, l.Z],
+function E(e, n, t) {
+    let [a, s] = (0, i.Wu)(
+            [d.Z, u.Z, o.Z],
             () => {
-                let e = u.Z.getChannelId(t),
-                    n = o.Z.getChannel(e);
-                return [e, null != n && (n.isMultiUserDM() || l.Z.can(f.Plq.SEND_MESSAGES, n))];
+                let e = d.Z.getChannelId(n),
+                    t = u.Z.getChannel(e);
+                return [e, null != t && (t.isMultiUserDM() || o.Z.can(_.Plq.SEND_MESSAGES, t))];
             },
-            [t]
+            [n]
         ),
-        d = n === f.IlC.POPOUT;
-    if (!c || d) return null;
-    function h() {
-        p(e, s);
-    }
-    return (0, i.jsx)(a.sNh, {
-        id: 'mention',
-        label: _.intl.string(_.t.P8tvKC),
-        action: h
-    });
+        c = t === _.IlC.POPOUT;
+    return !s || c
+        ? null
+        : (0, l.jsx)(r.sNh, {
+              id: 'mention',
+              label: f.intl.string(f.t.P8tvKC),
+              action: function () {
+                  p(e, a);
+              }
+          });
 }

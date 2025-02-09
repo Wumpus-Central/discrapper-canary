@@ -1,4 +1,4 @@
-var i = {
+e.exports = {
     popoutContainer: 'popoutContainer__8641f',
     mainContent: 'mainContent__8641f',
     roleIconContainer: 'roleIconContainer__8641f',
@@ -8,4 +8,3 @@ var i = {
     ctaButtonContent: 'ctaButtonContent__8641f',
     boosterBadge: 'boosterBadge__8641f'
 };
-e.exports = i;

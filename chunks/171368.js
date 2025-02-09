@@ -27,10 +27,10 @@ let _ = (0, r.pxk)(r.EFr.SIZE_120),
             }
     };
 async function m(e) {
-    let { userId: t, guildId: n, channelId: i, messageId: r, roleId: o, sessionId: l, joinRequestId: c, section: d, subsection: p, friendToken: m, showGuildProfile: g, analyticsLocation: E, sourceAnalyticsLocations: v } = e,
-        y = u.default.getUser(t);
+    let { userId: t, guildId: n, channelId: i, messageId: r, roleId: o, sessionId: l, joinRequestId: c, section: d, subsection: p, friendToken: m, showGuildProfile: g, analyticsLocation: E, sourceAnalyticsLocations: v, appContext: y } = e,
+        I = u.default.getUser(t);
     h(t),
-        null == y
+        null == I
             ? await (0, s.In)(t, {
                   guildId: g && null != n ? n : void 0,
                   withMutualGuilds: !0,
@@ -38,7 +38,7 @@ async function m(e) {
                   friendToken: m,
                   joinRequestId: c
               })
-            : (0, f.Z)(y.id, y.getAvatarURL(void 0, _), {
+            : (0, f.Z)(I.id, I.getAvatarURL(void 0, _), {
                   guildId: g && null != n ? n : void 0,
                   withMutualGuilds: !0,
                   withMutualFriends: !0,
@@ -58,7 +58,8 @@ async function m(e) {
             friendToken: m,
             showGuildProfile: g,
             analyticsLocation: E,
-            sourceAnalyticsLocations: v
+            sourceAnalyticsLocations: v,
+            appContext: y
         });
 }
 function g() {

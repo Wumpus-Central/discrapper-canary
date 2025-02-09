@@ -1,4 +1,4 @@
-var i = {
+e.exports = {
     divider: 'divider__5e421',
     updateMessage: 'updateMessage__5e421',
     infoMessageIcon: 'infoMessageIcon__5e421',
@@ -6,4 +6,3 @@ var i = {
     joinLeaderboardButtonInner: 'joinLeaderboardButtonInner__5e421',
     riotIcon: 'riotIcon__5e421'
 };
-e.exports = i;

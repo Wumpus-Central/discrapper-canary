@@ -1,2 +1,1 @@
-var i = { potionBadge: 'potionBadge__18061' };
-e.exports = i;
+e.exports = { potionBadge: 'potionBadge__18061' };

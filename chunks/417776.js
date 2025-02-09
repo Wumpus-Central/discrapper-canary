@@ -1,4 +1,4 @@
-var i = {
+e.exports = {
     container: 'container_f4b016',
     avatar: 'avatar_f4b016',
     title: 'title_f4b016',
@@ -6,4 +6,3 @@ var i = {
     gameTitleContainer: 'gameTitleContainer_f4b016',
     winnerImage: 'winnerImage_f4b016'
 };
-e.exports = i;

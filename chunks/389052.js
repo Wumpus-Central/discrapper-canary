@@ -6,27 +6,27 @@ var r = n(278074),
     s = n(481060),
     o = n(194359),
     l = n(922611),
-    u = n(478923),
-    c = n(681678),
-    d = n(699516),
-    f = n(594174),
+    u = n(681678),
+    c = n(699516),
+    d = n(594174),
+    f = n(981631),
     _ = n(388032);
 function p(e) {
-    let { user: t, color: n, guildId: p, channelId: h, onBlock: m, onIgnore: g, onUnblock: E, location: v = 'ContextMenu' } = e,
-        { id: y } = t,
-        I = (0, a.e7)(
-            [f.default],
+    let { user: t, color: p, guildId: h, channelId: m, onBlock: g, onIgnore: E, onUnblock: v, location: y = 'ContextMenu', appContext: I = f.IlC.APP } = e,
+        { id: T } = t,
+        b = (0, a.e7)(
+            [d.default],
             () => {
                 var e;
-                return (null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === y;
+                return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === T;
             },
-            [y]
+            [T]
         ),
-        b = (0, a.e7)([d.Z], () => d.Z.isBlocked(y), [y]),
-        T = (0, l.Do)({ location: 'use-block-user-item-web' }),
-        S = (0, r.EQ)({
-            isStealthRemediationEnabled: T,
-            isBlocked: b
+        S = (0, a.e7)([c.Z], () => c.Z.isBlocked(T), [T]),
+        A = (0, l.Do)({ location: 'use-block-user-item-web' }),
+        N = (0, r.EQ)({
+            isStealthRemediationEnabled: A,
+            isBlocked: S
         })
             .with(
                 {
@@ -42,28 +42,33 @@ function p(e) {
                 },
                 () => 'danger'
             )
-            .otherwise(() => n);
-    return I
+            .otherwise(() => p);
+    return b
         ? null
         : (0, i.jsx)(s.sNh, {
               id: 'block',
-              color: null != S ? S : 'default',
-              label: b ? _.intl.string(_.t.XyHpKC) : _.intl.string(_.t.l4EmaW),
-              action: b
+              color: null != N ? N : 'default',
+              label: S ? _.intl.string(_.t.XyHpKC) : _.intl.string(_.t.l4EmaW),
+              action: S
                   ? () => {
-                        null == E || E(), o.Z.unblockUser(y, { location: v }), c.Z.showUnblockSuccessToast(y, null != h ? h : void 0);
+                        null == v || v(), o.Z.unblockUser(T, { location: y }), u.Z.showUnblockSuccessToast(T, null != m ? m : void 0);
                     }
                   : () => {
-                        (0, s.h7j)((e) =>
-                            (0, i.jsx)(u.Z, {
-                                ...e,
-                                user: t,
-                                guildId: p,
-                                channelId: h,
-                                onBlock: m,
-                                onIgnore: g,
-                                location: v
-                            })
+                        (0, s.ZDy)(
+                            async () => {
+                                let { default: e } = await n.e('97652').then(n.bind(n, 478923));
+                                return (n) =>
+                                    (0, i.jsx)(e, {
+                                        ...n,
+                                        user: t,
+                                        guildId: h,
+                                        channelId: m,
+                                        onBlock: g,
+                                        onIgnore: E,
+                                        location: y
+                                    });
+                            },
+                            { contextKey: (0, s.VnL)(I) }
                         );
                     }
           });

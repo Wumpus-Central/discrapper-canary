@@ -1,86 +1,85 @@
-n.d(t, { Z: () => g });
-var i = n(200651);
-n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(381338),
-    o = n(442837),
-    l = n(481060),
-    u = n(206295),
-    c = n(594174),
-    d = n(5192),
-    f = n(528567),
-    _ = n(371583),
-    p = n(388032),
-    h = n(828980);
-function m(e) {
-    switch (e) {
-        case s.q.DAILY:
-            return p.intl.string(p.t.UfbhDA);
-        case s.q.WEEKLY:
-            return p.intl.string(p.t['9x5Nam']);
-        case s.q.MONTHLY:
-            return p.intl.string(p.t.xB2Co6);
-        default:
-            return p.intl.string(p.t['4N67JS']);
-    }
-}
-function g(e) {
-    var t, n, r, s;
-    let { guildId: g, leaderboard: E, className: v } = e,
-        y = null == E ? void 0 : null === (t = E.users) || void 0 === t ? void 0 : t[0],
-        { sort_by_statistic_id: I } = E.guild_settings,
-        b = null !== (s = null == y ? void 0 : null === (r = y.statistics) || void 0 === r ? void 0 : null === (n = r[I]) || void 0 === n ? void 0 : n.value) && void 0 !== s ? s : 0,
-        T = p.intl.formatToPlainString(p.t.yhdo8v, {
-            value: b,
-            statisticName: (0, f.C)(I)
+c.d(e, { Z: () => g });
+var d = c(200651);
+c(192379);
+var a = c(120356),
+    s = c.n(a),
+    n = c(381338),
+    o = c(442837),
+    f = c(481060),
+    i = c(206295),
+    p = c(594174),
+    r = c(5192),
+    b = c(528567),
+    u = c(371583),
+    l = c(388032),
+    m = c(828980);
+function g(t) {
+    var e, c, a, g;
+    let { guildId: h, leaderboard: j, className: _ } = t,
+        v = null == j ? void 0 : null === (e = j.users) || void 0 === e ? void 0 : e[0],
+        { sort_by_statistic_id: x } = j.guild_settings,
+        N = null !== (g = null == v ? void 0 : null === (a = v.statistics) || void 0 === a ? void 0 : null === (c = a[x]) || void 0 === c ? void 0 : c.value) && void 0 !== g ? g : 0,
+        Z = l.intl.formatToPlainString(l.t.yhdo8v, {
+            value: N,
+            statisticName: (0, b.C)(x)
         }),
-        S = (0, _.j)(E),
-        { primaryColor: A, secondaryColor: N } = (0, u.Z)(''.concat(S, '?forColors')),
-        C = (0, o.e7)([c.default], () => c.default.getUser(null == y ? void 0 : y.user_id));
-    if (null == C) return null;
-    let R = d.ZP.getName(g, void 0, C);
-    return (0, i.jsxs)('div', {
-        className: a()(h.container, v),
-        style: { backgroundImage: 'linear-gradient(90deg, '.concat(N, ' 0%, ').concat(A, ' 100%)') },
+        T = (0, u.j)(j),
+        { primaryColor: E, secondaryColor: I } = (0, i.Z)(''.concat(T, '?forColors')),
+        S = (0, o.e7)([p.default], () => p.default.getUser(null == v ? void 0 : v.user_id));
+    if (null == S) return null;
+    let R = r.ZP.getName(h, void 0, S);
+    return (0, d.jsxs)('div', {
+        className: s()(m.container, _),
+        style: { backgroundImage: 'linear-gradient(90deg, '.concat(I, ' 0%, ').concat(E, ' 100%)') },
         children: [
-            (0, i.jsx)(l.Text, {
+            (0, d.jsx)(f.Text, {
                 variant: 'text-xs/medium',
-                className: h.title,
-                children: m(E.settings.interval_type)
+                className: m.title,
+                children: (function (t) {
+                    switch (t) {
+                        case n.q.DAILY:
+                            return l.intl.string(l.t.UfbhDA);
+                        case n.q.WEEKLY:
+                            return l.intl.string(l.t['9x5Nam']);
+                        case n.q.MONTHLY:
+                            return l.intl.string(l.t.xB2Co6);
+                        default:
+                            return l.intl.string(l.t['4N67JS']);
+                    }
+                })(j.settings.interval_type)
             }),
-            (0, i.jsx)(l.qEK, {
-                src: C.getAvatarURL(g, 16),
-                size: l.EFr.SIZE_16,
+            (0, d.jsx)(f.qEK, {
+                src: S.getAvatarURL(h, 16),
+                size: f.EFr.SIZE_16,
                 'aria-label': 'avatar'
             }),
-            (0, i.jsx)(l.LZC, {
+            (0, d.jsx)(f.LZC, {
                 size: 6,
                 horizontal: !0
             }),
-            (0, i.jsxs)('div', {
-                className: h.textContainer,
+            (0, d.jsxs)('div', {
+                className: m.textContainer,
                 children: [
-                    (0, i.jsx)(l.Text, {
-                        className: h.username,
+                    (0, d.jsx)(f.Text, {
+                        className: m.username,
                         variant: 'text-xs/semibold',
                         color: 'header-primary',
                         children: R
                     }),
-                    (0, i.jsx)(l.Text, {
-                        className: h.statsText,
+                    (0, d.jsx)(f.Text, {
+                        className: m.statsText,
                         variant: 'text-xxs/medium',
                         color: 'text-secondary',
-                        children: T
+                        children: Z
                     })
                 ]
             }),
-            null != S &&
-                (0, i.jsx)('div', {
-                    className: h.heroArtContainer,
-                    children: (0, i.jsx)('img', {
-                        className: h.heroArt,
-                        src: S,
+            null != T &&
+                (0, d.jsx)('div', {
+                    className: m.heroArtContainer,
+                    children: (0, d.jsx)('img', {
+                        className: m.heroArt,
+                        src: T,
                         alt: ''
                     })
                 })
