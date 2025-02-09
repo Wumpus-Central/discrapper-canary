@@ -1,2 +1,1 @@
-var i = { loader: 'loader__82471' };
-e.exports = i;
+e.exports = '/assets/f5737b751b424acb.svg';

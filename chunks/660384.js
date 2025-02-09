@@ -1,5 +1,22 @@
-var i = {
-    cta: 'cta_a3a802',
-    buttonReset: 'buttonReset_a3a802'
-};
-e.exports = i;
+n.d(t, { Z: () => a });
+var i = n(642128);
+class a {
+    handleScroll(e) {
+        this.top.set(e.currentTarget.scrollTop);
+    }
+    get scrollPosition() {
+        return this.top;
+    }
+    constructor() {
+        var e;
+        (e = new i.SpringValue(0)),
+            'top' in this
+                ? Object.defineProperty(this, 'top', {
+                      value: e,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (this.top = e);
+    }
+}

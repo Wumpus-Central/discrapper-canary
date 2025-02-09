@@ -1,14 +1,16 @@
-var i = {
-    container: 'container__468a6',
-    form: 'form__468a6',
-    modalContent: 'modalContent__468a6',
-    content: 'content__468a6',
-    title: 'title__468a6',
-    minorContainer: 'minorContainer__468a6',
-    secondaryAction: 'secondaryAction__468a6',
-    body: 'body__468a6',
-    primaryButton: 'primaryButton__468a6',
-    secondaryButton: 'secondaryButton__468a6',
-    gutter: 'gutter__468a6'
-};
-e.exports = i;
+n.d(t, { Z: () => l });
+var i = n(864106);
+function l(e) {
+    let { userId: t, nick: n, guildId: l, avatar: r, avatarDecoration: a, banner: s, bio: o, pronouns: c, colorString: d } = e;
+    return {
+        user_id: t,
+        nick: n,
+        guild_id: l,
+        avatar: r,
+        avatar_decoration_data: (0, i.FG)(a),
+        banner: s,
+        bio: o,
+        pronouns: c,
+        color_string: d
+    };
+}

@@ -15,7 +15,7 @@ var n = a(200651),
     h = a(674908),
     x = a(20437),
     g = a(388032),
-    _ = a(927932);
+    _ = a(969318);
 function j(e) {
     var t, a, j, C, b, w, y, k;
     let { clip: N, channelId: S, transitionState: R, onClose: E } = e,
@@ -36,11 +36,10 @@ function j(e) {
                     });
                 return;
             }
-            let t = e.data.buffer,
-                a = await (0, m.w)(t),
-                n = URL.createObjectURL(new Blob([a], { type: 'audio/mp4' })),
-                l = URL.createObjectURL(new Blob([e.data], { type: 'video/mp4' }));
-            A(n), P(l);
+            let t = await (0, m.w)(e.data.buffer),
+                a = URL.createObjectURL(new Blob([t], { type: 'audio/mp4' })),
+                n = URL.createObjectURL(new Blob([e.data], { type: 'video/mp4' }));
+            A(a), P(n);
         })();
     }, [N.filepath, E]),
         l.useEffect(

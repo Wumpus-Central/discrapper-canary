@@ -1,9 +1,15 @@
-e.exports = {
-    container: 'container__91e7c',
-    chipletContainer: 'chipletContainer__91e7c',
-    chipletParent: 'chipletParent__91e7c',
-    usernameContainer: 'usernameContainer__91e7c',
-    isOverlayContainer: 'isOverlayContainer__91e7c',
-    noPadding: 'noPadding__91e7c',
-    isOverlayTag: 'isOverlayTag__91e7c'
-};
+n.d(t, { c: () => l });
+let r = (0, n(818083).B)({
+        kind: 'user',
+        id: '2024-12_robert_holiday_promo',
+        label: 'Robert Holiday Promo Switch Experiment',
+        defaultConfig: { showRobertPromo: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: 'Show robert holiday promo',
+                config: { showRobertPromo: !0 }
+            }
+        ]
+    }),
+    l = (e) => r.useExperiment({ location: e }).showRobertPromo;

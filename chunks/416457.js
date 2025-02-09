@@ -1,1 +1,2 @@
-e.exports = { taskPresetSelect: 'taskPresetSelect_a8dbb2' };
+var i = { icon: 'icon_c76ab6' };
+e.exports = i;
