@@ -9,29 +9,25 @@ var i = n(200651),
     d = n(56848),
     u = n(378441);
 n(388032);
-var h = n(698545);
+var h = n(682713);
 let p = (e) => {
-    var t, n;
-    let { voiceFilter: a, hasNitro: p } = e,
-        { activeVoice: m, mostRecentlyRequestedVoiceId: f } = (0, u.o)(),
-        g = (0, d.z)(a.id),
-        _ = a.id === m,
-        C = !a.available && !a.temporarilyAvailable,
-        x = a.temporarilyAvailable && !p && !_,
-        v = !_ && a.id === f,
-        E = l.useCallback(() => {
-            (p || !C) && (0, c.v6)(m === a.id ? null : a.id);
-        }, [m, a.id, C, p]);
+    let { voiceFilter: t, hasNitro: n } = e,
+        { activeVoice: a, mostRecentlyRequestedVoiceId: p } = (0, u.o)(),
+        m = (0, d.z)(t.id),
+        f = t.id === a,
+        g = !t.available && !t.temporarilyAvailable,
+        _ = t.temporarilyAvailable && !n && !f,
+        C = !f && t.id === p,
+        x = l.useCallback(() => {
+            (n || !g) && (0, c.v6)(a === t.id ? null : t.id);
+        }, [a, t.id, g, n]),
+        v = h[t.styleKey];
     return (0, i.jsxs)(o.P3F, {
-        onClick: E,
-        style: {
-            '--custom-voice-filter-icon-bg-color-one': null == g ? void 0 : null === (t = g.iconBgColors) || void 0 === t ? void 0 : t[0],
-            '--custom-voice-filter-icon-bg-color-two': null == g ? void 0 : null === (n = g.iconBgColors) || void 0 === n ? void 0 : n[1]
-        },
-        className: r()(h.filter, {
-            [h.selected]: _,
-            [h.locked]: C && !_,
-            [h.unlocked]: !C
+        onClick: x,
+        className: r()(h.filter, v, {
+            [h.selected]: f,
+            [h.locked]: g && !f,
+            [h.unlocked]: !g
         }),
         children: [
             (0, i.jsxs)('div', {
@@ -39,17 +35,17 @@ let p = (e) => {
                 children: [
                     (0, i.jsx)('div', {
                         className: r()(h.thumbnailWrapper, {
-                            [h.unlocked]: !C,
-                            [h.underDevelopment]: a.underDevelopment
+                            [h.unlocked]: !g,
+                            [h.underDevelopment]: t.underDevelopment
                         }),
                         children: (0, i.jsx)('img', {
                             className: r()(h.thumbnail),
                             alt: '',
-                            src: null == g ? void 0 : g.iconURL,
+                            src: null == m ? void 0 : m.iconURL,
                             draggable: !1
                         })
                     }),
-                    _ &&
+                    f &&
                         (0, i.jsx)('div', {
                             className: h.iconCircle,
                             children: (0, i.jsx)(o.owK, {
@@ -59,8 +55,8 @@ let p = (e) => {
                                 secondaryColor: s.Z.unsafe_rawColors.WHITE_500.css
                             })
                         }),
-                    C &&
-                        !_ &&
+                    g &&
+                        !f &&
                         (0, i.jsx)('div', {
                             className: r()([h.iconCircle, h.lockedCircle]),
                             children: (0, i.jsx)(o.mBM, {
@@ -71,7 +67,7 @@ let p = (e) => {
                                 colorClass: h.lockedIcon
                             })
                         }),
-                    x &&
+                    _ &&
                         (0, i.jsx)('div', {
                             className: r()([h.iconCircle, h.clockCircle]),
                             children: (0, i.jsx)(o.T39, {
@@ -82,7 +78,7 @@ let p = (e) => {
                                 colorClass: h.clockIcon
                             })
                         }),
-                    v &&
+                    C &&
                         (0, i.jsx)('div', {
                             className: h.spinnerWrapper,
                             children: (0, i.jsx)(o.$jN, {
@@ -96,8 +92,8 @@ let p = (e) => {
             (0, i.jsx)(o.Text, {
                 className: h.filterName,
                 variant: 'text-xs/medium',
-                color: a.underDevelopment ? 'header-muted' : 'header-primary',
-                children: null == g ? void 0 : g.name
+                color: t.underDevelopment ? 'header-muted' : 'header-primary',
+                children: null == m ? void 0 : m.name
             })
         ]
     });
