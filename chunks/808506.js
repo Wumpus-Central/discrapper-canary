@@ -1,7 +1,7 @@
 let i;
 n.d(t, {
     Y: () => e_,
-    Z: () => eV
+    Z: () => eH
 }),
     n(47120),
     n(518263),
@@ -325,7 +325,7 @@ async function ec(e) {
             }
     }
     for (let t of e.removed) et.verbose('updateIntendedOverlayPIDs: removedGame', t), await i(t), (r = !0);
-    r && eF.emitChange();
+    r && ej.emitChange();
 }
 let ed = er('updateIntendedOverlayPIDs', (e) => (et.info('updateIntendedOverlayPIDs', e), ec(e))),
     ef = er('clearPID', (e) => {
@@ -334,7 +334,7 @@ let ed = er('updateIntendedOverlayPIDs', (e) => (et.info('updateIntendedOverlayP
     });
 function e_() {
     return new Promise((e) => {
-        eF.addConditionalChangeListener(() => {
+        ej.addConditionalChangeListener(() => {
             if (null != i) return e(i), !1;
         });
     });
@@ -345,7 +345,7 @@ let ep = er('setOverlayEnabled', async (e) => {
         et.verbose('setOverlayEnabled: no change', { newOverlayEnabled: e });
         return;
     }
-    (j = e), eF.emitChange();
+    (j = e), ej.emitChange();
     let t = await (0, M.K)();
     if (null == t) {
         et.error('setOverlayEnabled: overlay module failed loaded');
@@ -479,7 +479,7 @@ function eN(e) {
     let { port: t } = e;
     z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append('build_id', '1152b772d94dbfb33e047f2b1e41fd1d1a32ac0c'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+    n.append('build_id', 'd9c66cc7c674df1fce6a54b34beab4c36969e422'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
 }
 function eC(e) {
     let { channelId: t, ring: n } = e;
@@ -496,7 +496,7 @@ function eO(e) {
     es(t, 'CRASHED'), et.verbose('OverlayBridgeStore: handleOverlayCrashed: '.concat(t));
 }
 function eD() {
-    Y = !0;
+    (Y = !0), (Z = !1);
 }
 function ex() {
     (Y = !1), (W = null), ed(void 0), et.verbose('OverlayBridgeStore: handleConnectionClosed');
@@ -567,7 +567,13 @@ function eG(e) {
 function eB() {
     v.Z.hasLoadedExperiments && !Z && ((Z = !0), ep(I.v.legacyEnabled));
 }
-class eZ extends (r = s.ZP.Store) {
+function eZ() {
+    Z = !1;
+}
+function eF() {
+    Z = !1;
+}
+class eV extends (r = s.ZP.Store) {
     initialize() {
         !(!U.iP || __OVERLAY__) && (this.waitFor(y.ZP, v.Z, C.default, A.ZP, T.Z), this.syncWith([v.Z], eB), g.sr(ev, eE), C.default.addChangeListener(eg), l.Z.addInterceptor(X.queueDispatch));
     }
@@ -589,6 +595,9 @@ class eZ extends (r = s.ZP.Store) {
     get legacyEnabled() {
         return !A.ZP.isOverlayV3Enabled() && H;
     }
+    getAnyGlobalEnabledOverlay() {
+        return T.Z.getAnyGlobalEnabledOverlay();
+    }
     getFocusedPID() {
         let e = A.ZP.getFocusedPID();
         return null != e && A.ZP.isOverlayV3EnabledForPID(e) ? e : W;
@@ -607,12 +616,14 @@ class eZ extends (r = s.ZP.Store) {
         return F;
     }
 }
-G(eZ, 'displayName', 'OverlayBridgeStore');
-let eF = new eZ(
+G(eV, 'displayName', 'OverlayBridgeStore');
+let ej = new eV(
         l.Z,
         __OVERLAY__
             ? { OVERLAY_RELAY_CLICK_ZONE_CLICKED: eM }
             : {
+                  LOGIN: eZ,
+                  LOGOUT: eF,
                   CONNECTION_OPEN: eD,
                   CONNECTION_CLOSED: ex,
                   EXPERIMENT_OVERRIDE_BUCKET: eL,
@@ -630,4 +641,4 @@ let eF = new eZ(
                   OVERLAY_UPDATE_OVERLAY_METHOD: eG
               }
     ),
-    eV = eF;
+    eH = ej;

@@ -50,8 +50,8 @@ function X(e) {
     var t;
     let n = V.Z.getNotificationPositionMode(),
         i = n !== z._vf.DISABLED,
-        s = M.Z.getOverlayKeybind(),
-        r = M.Z.getOverlayChatKeybind();
+        s = M.ZP.getOverlayKeybind(),
+        r = M.ZP.getOverlayChatKeybind();
     return {
         enabled: w.Z.enabled,
         notifications_enabled: i,
@@ -616,7 +616,7 @@ function ea(e) {
           });
 }
 function eo() {
-    let e = (0, g.e7)([M.Z], () => M.Z.getOverlayKeybind()),
+    let e = (0, g.e7)([M.ZP], () => M.ZP.getOverlayKeybind()),
         t = (0, N.$1)(),
         n = !(0, H.VS)(),
         [s, r] = (0, g.Wu)([b.ZP], () => [b.ZP.canShowAdminWarning, b.ZP.getVisibleGame()], []),
@@ -728,19 +728,7 @@ function ed(e) {
             let e = X(q);
             m().isEqual(e, q) || (U.default.track(z.rMx.OVERLAY_SETTINGS_UPDATED, e), (q = e));
         })();
-    let [E] = s.useState(() =>
-        null == x
-            ? []
-            : [
-                  (function (e) {
-                      let t = ec(e.username);
-                      return (t.user = e), t;
-                  })(x),
-                  ec(W.intl.string(W.t.C0ZDvr), !0, !1),
-                  ec(W.intl.string(W.t.iOtj8P), !1, !1, !0),
-                  ec(W.intl.string(W.t['0oqNgI']), !1, !0)
-              ]
-    );
+    let [E] = s.useState(() => [ec(W.intl.string(W.t.C0ZDvr), !0, !1), ec(W.intl.string(W.t.iOtj8P), !1, !1, !0), ec(W.intl.string(W.t['0oqNgI']), !1, !0)]);
     return null == x
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -869,7 +857,13 @@ function ed(e) {
                                                   type: z.d4z.GUILD_VOICE,
                                                   guild_id: '456'
                                               }),
-                                              sortedVoiceStates: E,
+                                              sortedVoiceStates: [
+                                                  (function (e) {
+                                                      let t = ec(e.username);
+                                                      return (t.user = e), t;
+                                                  })(x),
+                                                  ...E
+                                              ],
                                               displayNameMode: l,
                                               displayUserMode: a,
                                               avatarSizeMode: r,
