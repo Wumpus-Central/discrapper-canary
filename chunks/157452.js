@@ -1,0 +1,21 @@
+e.exports = {
+    authedApp: 'authedApp__50a54',
+    header: 'header__50a54',
+    headerText: 'headerText__50a54',
+    headerTextContainer: 'headerTextContainer__50a54',
+    appAvatar: 'appAvatar__50a54',
+    reportButton: 'reportButton__50a54',
+    permission: 'permission__50a54',
+    permissionCheckmark: 'permissionCheckmark__50a54',
+    disclosureIcon: 'disclosureIcon__50a54',
+    infoBox: 'infoBox__50a54',
+    twoWayWarning: 'twoWayWarning__50a54',
+    twoWayWarningIcon: 'twoWayWarningIcon__50a54',
+    searchContainer: 'searchContainer__50a54',
+    tosPrivacy: 'tosPrivacy__50a54',
+    tos: 'tos__50a54',
+    privacy: 'privacy__50a54',
+    externalLinkIcon: 'externalLinkIcon__50a54',
+    divider: 'divider__50a54',
+    link: 'link__50a54'
+};
