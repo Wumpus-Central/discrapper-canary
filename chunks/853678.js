@@ -40,7 +40,7 @@ let T = new Set([v.Fu, v.JT]),
                     }
                     let t = s.ZP.getCurrentEmbeddedActivity(),
                         i = u.Z.getApplication(null == t ? void 0 : t.applicationId),
-                        l = (0, d.p)(null == t ? void 0 : t.location);
+                        l = (0, d.pY)(null == t ? void 0 : t.location);
                     return new Promise((t) =>
                         (0, p.q)(
                             {

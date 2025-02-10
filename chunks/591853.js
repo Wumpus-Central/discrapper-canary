@@ -272,8 +272,8 @@ function ep(e) {
         }),
         { embeddedActivity: K } = (0, ee.Z)(p),
         $ = (function (e) {
-            let t = (0, c.e7)([B.Z], () => B.Z.getGuild((0, C.j)(null == e ? void 0 : e.location))),
-                n = (0, c.e7)([z.Z], () => z.Z.getChannel((0, C.p)(null == e ? void 0 : e.location))),
+            let t = (0, c.e7)([B.Z], () => B.Z.getGuild((0, C.jS)(null == e ? void 0 : e.location))),
+                n = (0, c.e7)([z.Z], () => z.Z.getChannel((0, C.pY)(null == e ? void 0 : e.location))),
                 a = (0, c.Wu)([G.default], () => {
                     var t, n;
                     return null !== (n = null == e ? void 0 : null === (t = e.participants) || void 0 === t ? void 0 : t.map((e) => G.default.getUser(e.userId))) && void 0 !== n ? n : [];

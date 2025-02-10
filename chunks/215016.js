@@ -70,11 +70,11 @@ function x(e, t, n, r) {
                   r
               );
 }
-function w(e, t) {
+function P(e, t) {
     var n, i;
     return e > 0 ? '' : null !== (i = null === (n = O[t]) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : '';
 }
-function P(e) {
+function w(e) {
     return e === c.EO.VIDEO;
 }
 function M(e) {
@@ -141,7 +141,7 @@ class U extends r.PureComponent {
                 backgroundColor: o ? void 0 : s,
                 ...r
             },
-            children: [P(n) ? null : this.renderGIF(), null != t ? t(e) : null]
+            children: [w(n) ? null : this.renderGIF(), null != t ? t(e) : null]
         });
     }
     constructor(e) {
@@ -162,7 +162,7 @@ class U extends r.PureComponent {
             color: null == n ? l().sample(N) : n,
             loaded: !1
         }),
-            P(t) || ((this._image = i.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src));
+            w(t) || ((this._image = i.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src));
     }
 }
 class G extends r.PureComponent {
@@ -371,7 +371,7 @@ class G extends r.PureComponent {
                               sections: [O.length],
                               columns: e,
                               itemGutter: 12,
-                              getItemKey: w,
+                              getItemKey: P,
                               getItemHeight: L,
                               renderItem: x,
                               chunkSize: 128

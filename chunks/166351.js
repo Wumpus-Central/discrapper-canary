@@ -1,4 +1,4 @@
-i.d(n, { Z: () => p });
+i.d(e, { Z: () => p });
 var t = i(200651),
     r = i(192379),
     a = i(120356),
@@ -11,22 +11,22 @@ var t = i(200651),
     x = i(324180),
     m = i(388032),
     v = i(328332);
-function p(e) {
-    let { powerup: n } = e,
-        a = (0, u.Z)(n),
+function p(n) {
+    let { powerup: e } = n,
+        a = (0, u.Z)(e),
         p = r.useCallback(() => {
             (0, c.ZDy)(async () => {
-                let { default: e } = await i.e('78718').then(i.bind(i, 640139));
+                let { default: n } = await i.e('78718').then(i.bind(i, 640139));
                 return (i) =>
-                    (0, t.jsx)(e, {
-                        powerup: n,
+                    (0, t.jsx)(n, {
+                        powerup: e,
                         ...i
                     });
             });
-        }, [n]);
+        }, [e]);
     return (0, t.jsxs)(c.P3F, {
         onClick: p,
-        className: s()(v.container, { [v.active]: n.active }),
+        className: s()(v.container, { [v.active]: e.active }),
         children: [
             (0, t.jsx)('div', {
                 className: v.imageContainer,
@@ -40,11 +40,11 @@ function p(e) {
                         children: [
                             (0, t.jsx)(o.X6, {
                                 variant: 'heading-md/bold',
-                                children: n.title
+                                children: e.title
                             }),
-                            n.bundle &&
+                            e.bundle &&
                                 (0, t.jsx)(o.xv, {
-                                    className: s()(v.bundle, { [v.active]: n.active }),
+                                    className: s()(v.bundle, { [v.active]: e.active }),
                                     variant: 'text-xs/semibold',
                                     children: m.intl.string(x.Z.j2jUjY)
                                 })
@@ -53,7 +53,7 @@ function p(e) {
                     (0, t.jsx)(o.xv, {
                         className: v.description,
                         variant: 'text-sm/medium',
-                        children: n.description
+                        children: e.description
                     }),
                     (0, t.jsxs)('div', {
                         className: v.labelContainer,
@@ -65,11 +65,11 @@ function p(e) {
                                     (0, t.jsx)(o.xv, {
                                         tag: 'div',
                                         variant: 'heading-md/bold',
-                                        children: n.cost
+                                        children: e.cost
                                     })
                                 ]
                             }),
-                            n.active &&
+                            e.active &&
                                 (0, t.jsxs)('div', {
                                     className: v.inline,
                                     children: [
@@ -91,8 +91,8 @@ function p(e) {
             (0, t.jsx)('div', {
                 className: v.buttonContainer,
                 children: (0, t.jsx)(d.Z, {
-                    skuId: n.skuId,
-                    active: n.active,
+                    skuId: e.skuId,
+                    active: e.active,
                     onPrimaryClick: a
                 })
             })

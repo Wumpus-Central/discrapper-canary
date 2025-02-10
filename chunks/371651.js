@@ -41,8 +41,8 @@ let S = new c.Z('OverlayRenderStore'),
     D = null,
     L = {},
     x = null,
-    w = new Set([u.Jx.FULLSCREEN, u.Jx.BORDERLESS_FULLSCREEN, u.Jx.UNKNOWN, u.Jx.MINIMIZED]),
-    P = new Set([u.Jx.MINIMIZED, u.Jx.UNKNOWN]),
+    P = new Set([u.Jx.FULLSCREEN, u.Jx.BORDERLESS_FULLSCREEN, u.Jx.UNKNOWN, u.Jx.MINIMIZED]),
+    w = new Set([u.Jx.MINIMIZED, u.Jx.UNKNOWN]),
     M = 5000,
     k = 8000,
     U = 12000;
@@ -301,7 +301,7 @@ async function ee(e) {
     var t;
     let n = f.ZP.getGameForPID(e),
         i = null !== (t = null == n ? void 0 : n.fullscreenType) && void 0 !== t ? t : u.Jx.UNKNOWN;
-    if (w.has(i)) {
+    if (P.has(i)) {
         let t = await (0, y.hj)(e, k);
         S.verbose('Resolved fullscreen type for pid '.concat(e, ': ').concat(t)), null != t && (i = t);
     }
@@ -309,7 +309,7 @@ async function ee(e) {
 }
 async function et(e) {
     let t = await ee(e);
-    if (P.has(t)) {
+    if (w.has(t)) {
         let n = await (0, y.hj)(e, U);
         null != n && (t = n);
     }

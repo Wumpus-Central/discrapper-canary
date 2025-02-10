@@ -135,7 +135,7 @@ function R(e) {
         });
     }, [C, L]),
         r.useEffect(() => o, [o]);
-    let w = (e) => {
+    let P = (e) => {
             let t = '#' === e[0] ? e : '#'.concat(e);
             if (!(0, u.FX)(t)) {
                 x((e) => ({
@@ -156,11 +156,11 @@ function R(e) {
             }),
                 a(n);
         },
-        P = async () => {
+        w = async () => {
             if (null != N)
                 try {
                     let { sRGBHex: e } = await N.open();
-                    w(e);
+                    P(e);
                 } catch {}
         },
         M = r.useCallback(
@@ -194,7 +194,7 @@ function R(e) {
                         v &&
                             null != N &&
                             (0, i.jsx)(g.JO, {
-                                onClick: P,
+                                onClick: w,
                                 tooltip: y.intl.string(y.t['0dU9Nz']),
                                 tooltipPosition: 'top',
                                 className: I.customColorPickerEyeDropper,
@@ -203,7 +203,7 @@ function R(e) {
                         (0, i.jsx)(_.o, {
                             className: I.customColorPickerInput,
                             value: L.input,
-                            onChange: w,
+                            onChange: P,
                             maxLength: T
                         })
                     ]
@@ -219,7 +219,7 @@ function R(e) {
                                     'aria-label': '',
                                     style: { backgroundColor: e },
                                     className: I.suggestedColor,
-                                    onClick: () => w(e)
+                                    onClick: () => P(e)
                                 },
                                 ''.concat(e, '-').concat(t)
                             )

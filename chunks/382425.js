@@ -29,8 +29,8 @@ var i = n(200651),
     D = n(626135),
     L = n(960870),
     x = n(139793),
-    w = n(510659),
-    P = n(287954),
+    P = n(510659),
+    w = n(287954),
     M = n(660579),
     k = n(652853),
     U = n(64621),
@@ -51,7 +51,7 @@ var i = n(200651),
 function J(e) {
     let { user: t, currentUser: n, stream: a, className: J, onClose: $, profileGuildId: ee } = e,
         { profileType: et, theme: en } = (0, k.z)(),
-        { interactionSource: ei, interactionSourceId: er } = (0, w.Xo)(),
+        { interactionSource: ei, interactionSourceId: er } = (0, P.Xo)(),
         ea = {
             [q.fullSize]: et === Y.y0.FULL_SIZE,
             [z.fullSize]: et === Y.y0.FULL_SIZE
@@ -246,7 +246,7 @@ function J(e) {
         children: (0, i.jsx)(U.Z, {
             sourceType: Y.n_.ACTIVITY,
             user: t,
-            children: (0, i.jsx)(P.Z, {
+            children: (0, i.jsx)(w.Z, {
                 user: t,
                 guildId: ee,
                 profileType: et,

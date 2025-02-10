@@ -26,7 +26,7 @@ let m = (e) => {
         x = (e) => {
             null != e && e.preventDefault(), null == b || b(), null == S || S();
         },
-        w = () => {
+        P = () => {
             null == b || b(), null == A || A();
         };
     return (
@@ -53,7 +53,7 @@ let m = (e) => {
         null != I &&
             '' !== I &&
             (r = (0, i.jsx)(o.P, {
-                onClick: w,
+                onClick: P,
                 className: h.minorContainer,
                 children: (0, i.jsx)(c.x, {
                     className: h.secondaryAction,

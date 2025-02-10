@@ -34,8 +34,8 @@ var i = n(200651),
     D = n(114732),
     L = n(46140),
     x = n(675654),
-    w = n(388032),
-    P = n(332284);
+    P = n(388032),
+    w = n(332284);
 function M() {
     let e = I.Z.getAllPending(),
         t = (0, v.ED)(e);
@@ -62,16 +62,16 @@ function U(e) {
         A = (0, u.e7)([T.default], () => T.default.getCurrentUser()),
         C = r.useMemo(() => (0, R.fh)(l, R.eC.HERO), [l]),
         O = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        [L, w] = r.useState(!0 === g || O ? 'claimed' : 'loading');
+        [L, P] = r.useState(!0 === g || O ? 'claimed' : 'loading');
     r.useEffect(() => {
         O ||
             !0 === g ||
             (0, S.QB)(l.id, N.y$.CROSS_PLATFORM, d)
-                .then(() => w('claimed'))
-                .catch(() => w('error'));
+                .then(() => P('claimed'))
+                .catch(() => P('error'));
     }, [l, d, O, g]);
     let M = () => {
-            w('applying'), h().finally(a);
+            P('applying'), h().finally(a);
         },
         k = !0 === g && null === p && (null == _ ? void 0 : _.skuId) !== '',
         U = null == p && !0 !== g,
@@ -81,7 +81,7 @@ function U(e) {
         children: [
             (0, i.jsx)(o.O_, {
                 ref: y,
-                className: P.confettiCanvas,
+                className: w.confettiCanvas,
                 environment: I.current
             }),
             (0, i.jsx)('div', {
@@ -89,14 +89,14 @@ function U(e) {
                 children: (0, i.jsx)(c.Y0X, {
                     transitionState: n,
                     size: c.CgR.DYNAMIC,
-                    className: s()(P.rootContainer, { [P.rootContainerLoading]: G }),
+                    className: s()(w.rootContainer, { [w.rootContainerLoading]: G }),
                     hideShadow: !0,
                     children:
                         'error' === L
                             ? (0, i.jsx)(D.Z, { onClose: a })
                             : G
                               ? (0, i.jsx)('div', {
-                                    className: P.loadingIndicatorWrapper,
+                                    className: w.loadingIndicatorWrapper,
                                     children: (0, i.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE })
                                 })
                               : (0, i.jsx)(B, {
@@ -125,12 +125,12 @@ function G(e) {
         n = r.useMemo(() => (0, R.fh)(t, R.eC.LOGO_TYPE, 'dark'), [t]),
         a = O.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[N.y$.CROSS_PLATFORM];
     return (0, i.jsxs)('div', {
-        className: P.additionalRedemptionInstructions,
+        className: w.additionalRedemptionInstructions,
         children: [
             (0, i.jsx)('img', {
                 src: n.url,
                 alt: '',
-                className: P.sponsorLogo
+                className: w.sponsorLogo
             }),
             (0, i.jsx)(c.Text, {
                 variant: 'text-sm/normal',
@@ -145,13 +145,13 @@ function B(e) {
         u = (0, R.fh)(t, R.eC.REWARD).url,
         d = (0, A.Qy)(t.config);
     return (0, i.jsxs)('div', {
-        className: P.claimedRootContainer,
+        className: w.claimedRootContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: P.headerContainer,
+                className: w.headerContainer,
                 children: [
                     (0, i.jsx)(g.Z, {
-                        className: P.headerBackground,
+                        className: w.headerBackground,
                         autoPlay: !1,
                         loop: !1,
                         muted: !0,
@@ -160,9 +160,9 @@ function B(e) {
                         poster: a
                     }),
                     (0, i.jsx)('div', {
-                        className: P.headerForeground,
+                        className: w.headerForeground,
                         children: (0, i.jsx)(c.olH, {
-                            className: P.close,
+                            className: w.close,
                             withCircleBackground: !0,
                             onClick: o
                         })
@@ -172,10 +172,10 @@ function B(e) {
             (0, i.jsx)(c.mzw, {
                 separator: !1,
                 children: (0, i.jsxs)('div', {
-                    className: P.footerBody,
+                    className: w.footerBody,
                     children: [
                         (0, i.jsx)('div', {
-                            className: P.previewContainer,
+                            className: w.previewContainer,
                             children: (0, i.jsx)(p.Z, {
                                 user: n,
                                 guildId: null,
@@ -187,19 +187,19 @@ function B(e) {
                         (0, i.jsx)(c.X6q, {
                             variant: 'heading-lg/bold',
                             color: 'header-primary',
-                            className: P.heading,
-                            children: w.intl.string(w.t['0/Yz+f'])
+                            className: w.heading,
+                            children: P.intl.string(P.t['0/Yz+f'])
                         }),
                         (0, i.jsx)(c.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-normal',
-                            className: P.text,
+                            className: w.text,
                             children: d
                         }),
                         (0, i.jsx)(c.zxk, {
                             submitting: s,
                             onClick: l,
-                            children: w.intl.string(w.t.MAS7uL)
+                            children: P.intl.string(P.t.MAS7uL)
                         }),
                         (0, C.zK)(t, L.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, i.jsx)(G, { quest: t })
                     ]

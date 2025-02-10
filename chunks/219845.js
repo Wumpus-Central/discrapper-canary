@@ -57,14 +57,14 @@ var i = n(644387),
             D = i ? S + N : 0,
             L = i ? A + C : 0,
             x = n ? n.width : d(t.width) - D - O,
-            w = n ? n.height : d(t.height) - L - R,
-            P = x + S + O + N,
-            M = w + A + R + C,
+            P = n ? n.height : d(t.height) - L - R,
+            w = x + S + O + N,
+            M = P + A + R + C,
             k = Object.freeze({
-                devicePixelContentBoxSize: f(Math.round(x * devicePixelRatio), Math.round(w * devicePixelRatio), s),
-                borderBoxSize: f(P, M, s),
-                contentBoxSize: f(x, w, s),
-                contentRect: new r.N(v, m, x, w)
+                devicePixelContentBoxSize: f(Math.round(x * devicePixelRatio), Math.round(P * devicePixelRatio), s),
+                borderBoxSize: f(w, M, s),
+                contentBoxSize: f(x, P, s),
+                contentRect: new r.N(v, m, x, P)
             });
         return o.set(e, k), k;
     },

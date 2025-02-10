@@ -3,7 +3,7 @@ n.d(t, {
     HH: () => L,
     Hc: () => j,
     IV: () => H,
-    KP: () => P,
+    KP: () => w,
     OP: () => V,
     Pq: () => F,
     Sv: () => k,
@@ -13,7 +13,7 @@ n.d(t, {
     aP: () => Z,
     bR: () => q,
     l4: () => O,
-    lJ: () => w,
+    lJ: () => P,
     oh: () => U,
     tG: () => A,
     vx: () => D,
@@ -130,10 +130,10 @@ let x = (e) => {
         ...e
     });
 };
-var w = (function (e) {
+var P = (function (e) {
     return (e[(e.Attachment = 0)] = 'Attachment'), (e[(e.Embed = 1)] = 'Embed'), (e[(e.GenericMedia = 2)] = 'GenericMedia'), e;
 })({});
-function P(e, t) {
+function w(e, t) {
     var n, i, r, o;
     if (!t) return !1;
     if (a.ZP.get('obscure_blur_effect_enabled')) return !0;
@@ -152,7 +152,7 @@ function M(e) {
     return L(e)
         ? {
               obscuredAttachments: e.attachments.filter((e) =>
-                  P(
+                  w(
                       {
                           type: 0,
                           media: e
@@ -161,7 +161,7 @@ function M(e) {
                   )
               ),
               obscuredEmbeds: e.embeds.filter((e) =>
-                  P(
+                  w(
                       {
                           type: 1,
                           media: e

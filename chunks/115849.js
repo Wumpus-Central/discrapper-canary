@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -48,16 +48,16 @@ function S(e, t) {
             };
     }
 }
-function A() {
+function Z() {
     let e = l.createRef(),
         t = l.createRef(),
         [n, r] = l.useReducer(S, C),
-        { canSend: s, hint: u, success: A, error: Z } = n,
+        { canSend: s, hint: u, success: Z, error: A } = n,
         b = (0, h.Q3)('AddFriendInput');
     return (
         l.useEffect(() => {
-            null != A && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
-        }, [A, e]),
+            null != Z && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
+        }, [Z, e]),
         (0, i.jsxs)('form', {
             onSubmit: (t) => {
                 t.preventDefault(), o()(null != e.current, 'Input is submitted when not mounted');
@@ -118,8 +118,8 @@ function A() {
                     children: (0, i.jsxs)('div', {
                         ref: t,
                         className: a()(f.addFriendInputWrapper, {
-                            [f.success]: A,
-                            [f.error]: Z
+                            [f.success]: Z,
+                            [f.error]: A
                         }),
                         children: [
                             (0, i.jsx)(c.oil, {
@@ -160,8 +160,8 @@ function A() {
                                 'data-1p-ignore': !0,
                                 placeholder: _.intl.string(_.t['Rn/sLi']),
                                 'aria-label': _.intl.string(_.t['Rn/sLi']),
-                                'aria-invalid': null != Z || void 0,
-                                'aria-describedby': null != Z ? T : v
+                                'aria-invalid': null != A || void 0,
+                                'aria-describedby': null != A ? T : v
                             }),
                             null != u &&
                                 (0, i.jsx)('div', {
@@ -178,20 +178,20 @@ function A() {
                         ]
                     })
                 }),
-                null != Z &&
+                null != A &&
                     (0, i.jsx)(c.R94, {
                         role: 'alert',
                         id: T,
                         type: c.R94.Types.ERROR,
                         className: E.marginTop8,
-                        children: Z
+                        children: A
                     }),
-                null != A &&
+                null != Z &&
                     (0, i.jsx)(c.R94, {
                         role: 'status',
                         type: c.R94.Types.SUCCESS,
                         className: E.marginTop8,
-                        children: A
+                        children: Z
                     })
             ]
         })

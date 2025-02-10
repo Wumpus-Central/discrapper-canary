@@ -12,68 +12,68 @@ let u = 4,
     f = [
         [
             {
-                top: 16,
-                left: 16,
+                top: 15,
+                left: 15,
                 width: 28,
                 height: 28
             }
         ],
         [
             {
-                top: 8,
-                left: 8,
+                top: 7,
+                left: 7,
                 width: 20,
                 height: 20
             },
             {
-                top: 26,
-                left: 26,
+                top: 25,
+                left: 25,
                 width: 26,
                 height: 26
             }
         ],
         [
             {
-                top: 6,
-                left: 11,
+                top: 5,
+                left: 10,
                 width: 18,
                 height: 18
             },
             {
-                top: 16,
-                left: 32,
+                top: 15,
+                left: 31,
                 width: 22,
                 height: 22
             },
             {
-                top: 30,
-                left: 6,
+                top: 29,
+                left: 5,
                 width: 24,
                 height: 24
             }
         ],
         [
             {
-                top: 6,
-                left: 6,
+                top: 5,
+                left: 5,
                 width: 22,
                 height: 22
             },
             {
-                top: 8,
-                left: 34,
+                top: 7,
+                left: 33,
                 width: 18,
                 height: 18
             },
             {
-                top: 34,
-                left: 8,
+                top: 33,
+                left: 7,
                 width: 18,
                 height: 18
             },
             {
-                top: 32,
-                left: 32,
+                top: 31,
+                left: 31,
                 width: 22,
                 height: 22
             }

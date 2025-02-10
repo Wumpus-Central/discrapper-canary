@@ -131,14 +131,14 @@ function x(e) {
         };
     }
 }
-function w(e, t) {
+function P(e, t) {
     if (t === f.default.getId()) return !1;
     let n = g[t];
     if (null == n || null == n[e]) return !1;
     delete n[e], 0 === Object.keys(n).length && delete g[t], O(t);
 }
-function P(e) {
-    for (let t of d.default.keys(g)) w(e, t);
+function w(e) {
+    for (let t of d.default.keys(g)) P(e, t);
 }
 function M() {
     return !0;
@@ -185,7 +185,7 @@ function U(e) {
 }
 function G(e) {
     let { presences: t } = e;
-    P(p.ME),
+    w(p.ME),
         t.forEach((e) => {
             let { user: t, status: n, clientStatus: i, activities: r } = e;
             null != t &&
@@ -213,11 +213,11 @@ function B(e) {
 }
 function Z(e) {
     let { guild: t } = e;
-    P(t.id);
+    w(t.id);
 }
 function F(e) {
     let { guildId: t, user: n } = e;
-    return w(t, n.id);
+    return P(t, n.id);
 }
 function V(e) {
     let { updates: t } = e;

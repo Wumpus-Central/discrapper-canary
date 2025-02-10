@@ -1,5 +1,5 @@
 n.d(t, {
-    F6: () => P,
+    F6: () => w,
     _Y: () => K,
     cG: () => M,
     ly: () => k,
@@ -40,8 +40,8 @@ var i = n(192379),
     D = n(981631),
     L = n(490897),
     x = n(526761),
-    w = n(388032);
-function P(e, t) {
+    P = n(388032);
+function w(e, t) {
     let [n, r] = i.useState(O.nf),
         [a, o] = i.useState({});
     (0, _.D)();
@@ -193,8 +193,8 @@ async function Z(e, t) {
     } catch (e) {
         b.Z.captureException(e),
             u.Z.show({
-                title: w.intl.string(w.t.j2d6Ki),
-                body: w.intl.string(w.t.mCjLAQ),
+                title: P.intl.string(P.t.j2d6Ki),
+                body: P.intl.string(P.t.mCjLAQ),
                 onConfirm: t
             });
     }

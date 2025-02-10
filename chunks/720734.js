@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(634894),
     T = n(586902),
     S = n(907305),
-    A = n(297369),
-    Z = n(953372),
+    Z = n(297369),
+    A = n(953372),
     b = n(570928),
     x = n(100527),
     L = n(906732),
@@ -75,8 +75,8 @@ var i = n(200651),
     ev = n(768581),
     eT = n(572004),
     eS = n(70956),
-    eA = n(74538),
-    eZ = n(374023),
+    eZ = n(74538),
+    eA = n(374023),
     eb = n(51144),
     ex = n(998502),
     eL = n(870569),
@@ -190,11 +190,11 @@ class eB extends l.PureComponent {
         let { hovered: e } = this.state,
             { activities: t, activityStatusCleanupEnabled: n, applicationStream: l, currentUser: r, status: a, userTag: s } = this.props;
         if (null == r) return null;
-        if (n && (0, A.Z)(t, a))
+        if (n && (0, Z.Z)(t, a))
             return (0, i.jsx)(b.Z, {
                 hoverText: s,
                 forceHover: e,
-                children: (0, i.jsx)(Z.Z, {
+                children: (0, i.jsx)(A.Z, {
                     user: r,
                     activities: t,
                     applicationStream: l,
@@ -553,20 +553,20 @@ function eV() {
             return null != e ? em.Z.getChannel(e) : null;
         }),
         { mute: g, selfMute: E, suppress: I } = (0, es.Z)(p),
-        { selfDeaf: C, deaf: A } = (0, ea.Z)(p),
-        Z = (0, o.e7)([O.C], () => {
+        { selfDeaf: C, deaf: Z } = (0, ea.Z)(p),
+        A = (0, o.e7)([O.C], () => {
             var e;
             return (0, R.fD)() ? (null === (e = O.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         b = (0, o.e7)([eC.ZP], () => eC.ZP.getPremiumTypeSubscription()),
         y = (0, o.e7)([eg.Z], () => eg.Z.getSpeakingWhileMuted()),
         P = (0, o.e7)([ep.Z], () => ep.Z.hasLayers()),
-        D = (0, _.s9z)(_.JQI) || P || eZ.s.isDisallowPopupsSet(),
+        D = (0, _.s9z)(_.JQI) || P || eA.s.isDisallowPopupsSet(),
         w = (0, K.b)(),
         k = (0, o.e7)([z.Z], () => null != z.Z.getAwaitingRemoteSessionInfo()),
         M = (0, J.D)(),
         U = (0, N.u)(),
-        G = eA.ZP.canUsePremiumGuildMemberProfile(t),
+        G = eZ.ZP.canUsePremiumGuildMemberProfile(t),
         B = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eR.rL,
         { activityStatusCleanupEnabled: V } = (0, S.w)({ location: 'Account' }),
         { enabled: F } = (0, j.Z)({ location: 'Account' }),
@@ -625,14 +625,14 @@ function eV() {
                 premiumSubscription: b,
                 selfDeaf: C,
                 selfMute: E,
-                serverDeaf: A,
+                serverDeaf: Z,
                 serverMute: g,
                 speaking: u,
                 speakingWhileMuted: y,
                 status: s,
                 streaming: a,
                 suppress: I,
-                webBuildOverride: Z,
+                webBuildOverride: A,
                 awaitingRemote: k,
                 isEligibleForPomelo: w,
                 simplifiedCallSettingsEnabled: F
@@ -662,8 +662,8 @@ function eF(e) {
         v = (0, h.O)(C ? 'unmute' : 'mute'),
         T = (0, m.P)(C ? 'unmute' : 'mute'),
         { activeVoice: S } = (0, ec.o)(),
-        { Component: A, events: Z, play: b } = null != S ? T : v,
-        y = n || r ? _.v0G : A,
+        { Component: Z, events: A, play: b } = null != S ? T : v,
+        y = n || r ? _.v0G : Z,
         { mode: P } = (0, er.ZP)({ location: 'RTC Microphone Button' }),
         O = null != o ? o : (0, w.Z)(t, n, r, a, P === er.BK.GroupedButtonsRedMic),
         { analyticsLocations: R } = (0, L.ZP)(x.Z.AUDIO_INPUT_BUTTON),
@@ -690,10 +690,10 @@ function eF(e) {
                     tooltipColor: c,
                     tooltipForceOpen: d,
                     onMouseEnter: () => {
-                        u(), Z.onMouseEnter();
+                        u(), A.onMouseEnter();
                     },
                     onMouseLeave: () => {
-                        p(), Z.onMouseLeave();
+                        p(), A.onMouseLeave();
                     },
                     icon: (0, i.jsx)(y, {
                         size: 'custom',

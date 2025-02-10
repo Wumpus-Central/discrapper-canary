@@ -33,8 +33,8 @@ var r = n(772848),
     D = n(115130),
     L = n(566620),
     x = n(317381),
-    w = n(969345),
-    P = n(148720),
+    P = n(969345),
+    w = n(148720),
     M = n(122613),
     k = n(782769),
     U = n(16609),
@@ -106,12 +106,12 @@ async function $(e) {
             rejectWithError: !1
         }));
     let u = Y[i],
-        c = I.Z.getChannel((0, U.p)(r)),
+        c = I.Z.getChannel((0, U.pY)(r)),
         d = S.default.getCurrentUser();
     if (null == u || null == c || null == d) return;
     let f = c.getGuildId(),
         _ = x.ZP.getShelfActivities(f),
-        h = (0, w.Z)({
+        h = (0, P.Z)({
             applicationId: i,
             activityConfigs: _
         }),
@@ -150,7 +150,7 @@ function ee(e) {
     let { applicationId: a, isFirstActivityInChannel: s, isStart: l, participants: u, embeddedActivity: c, location: f, inviterUserId: h } = e,
         m = y.default.getId(),
         g = u.find((e) => e.userId === m),
-        E = (0, U.p)(f),
+        E = (0, U.pY)(f),
         v = I.Z.getChannel(E);
     if ((l && null != v && v.isPrivate() && s && null == g && o.Z.selectParticipant(v.id, null), null == g)) return;
     let b = T.Z.getMediaSessionId(),
@@ -159,12 +159,12 @@ function ee(e) {
     if (null == N || C) return;
     let D = (0, r.Z)(),
         L = 'location' in c ? 2 : 1,
-        P = null == v ? void 0 : v.getGuildId(),
+        w = null == v ? void 0 : v.getGuildId(),
         M = S.default.getCurrentUser();
     if (null == v || null == M) return;
-    let k = x.ZP.getShelfActivities(P),
+    let k = x.ZP.getShelfActivities(w),
         G = O.Z.getState().shelfOrder,
-        B = (0, w.Z)({
+        B = (0, P.Z)({
             applicationId: a,
             activityConfigs: k
         }),
@@ -234,7 +234,7 @@ class en extends u.Z {
             j(this, 'handleSelectedChannelUpdate', () => {
                 let e = b.Z.getVoiceChannelId();
                 for (let { location: t, applicationId: n } of x.ZP.getSelfEmbeddedActivities().values()) {
-                    let i = (0, U.p)(t);
+                    let i = (0, U.pY)(t);
                     null != i &&
                         (0, Z.Z)(i) &&
                         i !== e &&
@@ -248,7 +248,7 @@ class en extends u.Z {
                         n = y.default.getId();
                     t.forEach((e) => {
                         if (e.userIds.has(n)) {
-                            let t = (0, U.p)(e.location),
+                            let t = (0, U.pY)(e.location),
                                 n = x.ZP.getSelfEmbeddedActivityForChannel(t);
                             null == n
                                 ? this.leaveActivity({
@@ -397,7 +397,7 @@ class en extends u.Z {
                     { activityConfigs: p, applications: h } = await (0, L.w1)({ guildId: _ });
                 if (
                     null ==
-                    (0, w.Z)({
+                    (0, P.Z)({
                         applicationId: a,
                         activityConfigs: p,
                         applications: h
@@ -407,7 +407,7 @@ class en extends u.Z {
                         guildId: _,
                         force: !0
                     });
-                    (0, w.Z)({
+                    (0, P.Z)({
                         applicationId: a,
                         activityConfigs: e.activityConfigs,
                         applications: e.applications
@@ -415,7 +415,7 @@ class en extends u.Z {
                 }
                 let m = x.ZP.getEmbeddedActivitiesForChannel(r).find((e) => e.applicationId === a);
                 (null !== (i = null == m ? void 0 : m.userIds.size) && void 0 !== i ? i : 0) > 0
-                    ? await (0, P.k)({
+                    ? await (0, w.k)({
                           channelId: r,
                           applicationId: a,
                           launchId: null == m ? void 0 : m.launchId,
@@ -435,7 +435,7 @@ class en extends u.Z {
                 let { guild: t } = e;
                 x.ZP.getSelfEmbeddedActivities().forEach((e) => {
                     let { location: n, applicationId: i } = e,
-                        r = (0, U.j)(n);
+                        r = (0, U.jS)(n);
                     t.id === r &&
                         this.leaveActivity({
                             location: n,

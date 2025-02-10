@@ -168,7 +168,7 @@
         D = / *\n+$/,
         L = RegExp('^( *)(' + b + ') [\\s\\S]+?(?:\n{2,}(?! )(?!\\1' + b + ' )\\n*|\\s*\n*$)'),
         x = /(?:^|\n)( *)$/,
-        w = (function () {
+        P = (function () {
             var e = /^ *\| *| *\| *$/g,
                 t = / *$/,
                 n = /^ *-+: *$/,
@@ -225,7 +225,7 @@
                 NPTABLE_REGEX: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/
             };
         })(),
-        P = '(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*',
+        w = '(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*',
         M = '\\s*<?((?:\\([^)]*\\)|[^\\s\\\\]|\\\\.)*?)>?(?:\\s+[\'"]([\\s\\S]*?)[\'"])?\\s*',
         k = /mailto:/i,
         U = function (e, t, n) {
@@ -297,8 +297,8 @@
             },
             nptable: {
                 order: B++,
-                match: o(w.NPTABLE_REGEX),
-                parse: w.parseNpTable,
+                match: o(P.NPTABLE_REGEX),
+                parse: P.parseNpTable,
                 react: null,
                 html: null
             },
@@ -460,8 +460,8 @@
             },
             table: {
                 order: B++,
-                match: o(w.TABLE_REGEX),
-                parse: w.parseTable,
+                match: o(P.TABLE_REGEX),
+                parse: P.parseTable,
                 react: function (e, t, n) {
                     var i = function (t) {
                             return null == e.align[t] ? {} : { textAlign: e.align[t] };
@@ -634,7 +634,7 @@
             link: {
                 order: B++,
                 requiredFirstCharacters: ['['],
-                match: s(RegExp('^\\[(' + P + ')\\]\\(' + M + '\\)')),
+                match: s(RegExp('^\\[(' + w + ')\\]\\(' + M + '\\)')),
                 parse: function (e, t, n) {
                     return {
                         content: t(e[1], n),
@@ -659,7 +659,7 @@
             },
             image: {
                 order: B++,
-                match: s(RegExp('^!\\[(' + P + ')\\]\\(' + M + '\\)')),
+                match: s(RegExp('^!\\[(' + w + ')\\]\\(' + M + '\\)')),
                 parse: function (e, t, n) {
                     return {
                         alt: e[1],
@@ -689,7 +689,7 @@
             },
             reflink: {
                 order: B++,
-                match: s(RegExp('^\\[(' + P + ')\\]\\s*\\[([^\\]]*)\\]')),
+                match: s(RegExp('^\\[(' + w + ')\\]\\s*\\[([^\\]]*)\\]')),
                 parse: function (e, t, n) {
                     return U(e, n, {
                         type: 'link',
@@ -701,7 +701,7 @@
             },
             refimage: {
                 order: B++,
-                match: s(RegExp('^!\\[(' + P + ')\\]\\s*\\[([^\\]]*)\\]')),
+                match: s(RegExp('^!\\[(' + w + ')\\]\\s*\\[([^\\]]*)\\]')),
                 parse: function (e, t, n) {
                     return U(e, n, {
                         type: 'image',

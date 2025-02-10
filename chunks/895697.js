@@ -26,8 +26,8 @@ var r = n(442837),
     N = n(112650);
 function C(e) {
     let { user: t, currentUser: n, displayProfile: C, guild: R, isHovering: O, onOpenProfile: D, channelId: L, onClose: x } = e,
-        w = u.ZP.getName(null == R ? void 0 : R.id, L, t),
-        P = (0, r.e7)([c.Z], () => {
+        P = u.ZP.getName(null == R ? void 0 : R.id, L, t),
+        w = (0, r.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         }),
@@ -41,7 +41,7 @@ function C(e) {
                 user: t,
                 profileType: b.y0.BITE_SIZE,
                 onOpenProfile: D,
-                nickname: w,
+                nickname: P,
                 pronouns: null == C ? void 0 : C.pronouns,
                 tags: (0, i.jsx)(f.Z, {
                     displayProfile: C,
@@ -93,11 +93,11 @@ function C(e) {
                 onClose: x,
                 className: N.activity
             }),
-            (null == P ? void 0 : P.popularApplicationCommandIds) != null &&
+            (null == w ? void 0 : w.popularApplicationCommandIds) != null &&
                 null != M &&
                 (0, i.jsx)(d.Z, {
-                    applicationId: P.id,
-                    commandIds: P.popularApplicationCommandIds,
+                    applicationId: w.id,
+                    commandIds: w.popularApplicationCommandIds,
                     channel: M,
                     guildId: null == R ? void 0 : R.id,
                     onClick: x

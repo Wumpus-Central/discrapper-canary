@@ -47,8 +47,8 @@ function N(e) {
                 opacity: C ? 1 : 0,
                 transform: C || R.enabled || 'subtle' === S ? 'scale(1)' : 'scale(0.7)',
                 config: {
-                    duration: C ? 300 : 100,
-                    easing: C ? u.Z.Easing.inOut(u.Z.Easing.back()) : u.Z.Easing.quad,
+                    duration: 200,
+                    easing: u.Z.Easing.out(u.Z.Easing.quad),
                     clamp: !0
                 },
                 onRest: v
@@ -58,14 +58,14 @@ function N(e) {
         D = r.useRef(null),
         L = null != N['aria-label'],
         x = null != N['aria-labelledby'],
-        w = r.useId(),
-        P = null !== (t = N['aria-labelledby']) && void 0 !== t ? t : w,
+        P = r.useId(),
+        w = null !== (t = N['aria-labelledby']) && void 0 !== t ? t : P,
         M = r.useMemo(
             () => ({
-                headerId: P,
+                headerId: w,
                 headerIdIsManaged: x
             }),
-            [P, x]
+            [w, x]
         );
     return (0, i.jsx)(y.zM.Provider, {
         value: M,

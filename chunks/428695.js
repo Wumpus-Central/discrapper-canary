@@ -12,7 +12,7 @@ var i = n(200651),
     m = n(364049);
 let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500),
     g = function (e) {
-        let { guild: t, title: n, message: r, image: s, type: g, imageStyles: _, imageMarginX: f, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: N, onClick: v, cta: T, ctaColor: S, centerText: A, className: Z } = e;
+        let { guild: t, title: n, message: r, image: s, type: g, imageStyles: _, imageMarginX: f, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: N, onClick: v, cta: T, ctaColor: S, centerText: Z, className: A } = e;
         l.useEffect(() => {
             p(u.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: g,
@@ -46,7 +46,7 @@ let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500),
               (x = (0, i.jsx)(o.Text, {
                   variant: 'text-md/medium',
                   color: 'header-primary',
-                  className: a()(m.title, { [m.noImageTitle]: null == s }, { [m.center]: A }),
+                  className: a()(m.title, { [m.noImageTitle]: null == s }, { [m.center]: Z }),
                   children: n
               }));
         let L = null;
@@ -54,14 +54,14 @@ let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500),
             ? (L = r())
             : null != r &&
               (L = (0, i.jsx)(o.Text, {
-                  className: a()({ [m.center]: A }),
+                  className: a()({ [m.center]: Z }),
                   variant: 'text-sm/normal',
                   color: 'text-muted',
                   children: r
               }));
         let y = null != f ? ''.concat(f, 'px') : '16px';
         return (0, i.jsxs)('div', {
-            className: a()(m.container, Z),
+            className: a()(m.container, A),
             children: [
                 !0 === C
                     ? null

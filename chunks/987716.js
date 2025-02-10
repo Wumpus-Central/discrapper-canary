@@ -24,18 +24,18 @@ let y = (e) => {
         D = (0, o.arW)({ orientation: 'horizontal' }),
         L = (0, c.MY)(y, t),
         x = L === c.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        w = L !== c.xr.DEFAULT,
-        P = (0, f.rK)(),
-        { enabled: M } = f.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: P }),
+        P = L !== c.xr.DEFAULT,
+        w = (0, f.rK)(),
+        { enabled: M } = f.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: w }),
         { enabled: k } = _.O.useExperiment({ location: 'gift card' }),
         U = null;
-    w && (U = P && M ? g.kJ : g.QI), k && (U = g.RQ);
+    P && (U = w && M ? g.kJ : g.QI), k && (U = g.RQ);
     let G = (e) => {
         null != N && N(null == e ? void 0 : e);
     };
     return (0, i.jsxs)('div', {
         children: [
-            w &&
+            P &&
                 (0, i.jsxs)('div', {
                     className: s()(v.giftMainAnimation, n),
                     children: [

@@ -29,13 +29,13 @@ var i = n(200651),
     D = n(314404),
     L = n(42818),
     x = n(981631),
-    w = n(388032),
-    P = n(917569),
+    P = n(388032),
+    w = n(917569),
     M = n(987434);
 function k(e) {
     var t;
     let n,
-        { premiumSubscription: a, paymentSources: p, priceOptions: h, onPaymentSourceChange: A, onPaymentSourceAdd: R, planId: L, setHasAcceptedTerms: P, legalTermsNodeRef: k, hasLegalTermsFlash: V, onInvoiceError: j, planGroup: H, currencies: Y, onCurrencyChange: W, hasOpenInvoice: K, purchaseState: z, handleClose: q } = e,
+        { premiumSubscription: a, paymentSources: p, priceOptions: h, onPaymentSourceChange: A, onPaymentSourceAdd: R, planId: L, setHasAcceptedTerms: w, legalTermsNodeRef: k, hasLegalTermsFlash: V, onInvoiceError: j, planGroup: H, currencies: Y, onCurrencyChange: W, hasOpenInvoice: K, purchaseState: z, handleClose: q } = e,
         { selectedSkuId: Q, defaultPlanId: X, isPremium: J, startedPaymentFlowWithPaymentSourcesRef: $ } = (0, g.JL)(),
         { isGift: ee } = (0, m.wD)(),
         et = h.paymentSourceId,
@@ -65,7 +65,7 @@ function k(e) {
                 }),
             [Q, a, X, J, ee]
         );
-    n = K || eo ? w.intl.string(w.t.nyzoFR) : (0, b.PV)(L) ? (0, b.W_)(a, en) : w.intl.formatToPlainString(w.t['sBpy9/'], { planName: en.name });
+    n = K || eo ? P.intl.string(P.t.nyzoFR) : (0, b.PV)(L) ? (0, b.W_)(a, en) : P.intl.formatToPlainString(P.t['sBpy9/'], { planName: en.name });
     let eu = null;
     return (
         null != a &&
@@ -131,7 +131,7 @@ function k(e) {
                     children: [
                         (0, i.jsx)(u.vwX, {
                             tag: u.RB0.H5,
-                            children: w.intl.string(w.t.mmDvV1)
+                            children: P.intl.string(P.t.mmDvV1)
                         }),
                         (0, i.jsx)(f.Z, {
                             paymentSources: Object.values(p),
@@ -149,7 +149,7 @@ function k(e) {
                     children: [
                         (0, i.jsx)(u.vwX, {
                             tag: u.RB0.H5,
-                            children: w.intl.string(w.t['/AAR09'])
+                            children: P.intl.string(P.t['/AAR09'])
                         }),
                         (0, i.jsx)(c.Z, {
                             selectedCurrency: h.currency,
@@ -174,10 +174,10 @@ function k(e) {
                                   disabled: ea,
                                   isEEA: er,
                                   paymentSources: p,
-                                  setHasAcceptedTerms: P
+                                  setHasAcceptedTerms: w
                               })
                             : (0, i.jsx)(_.Z, {
-                                  onChange: P,
+                                  onChange: w,
                                   finePrint: (0, i.jsx)(d.Z, {
                                       subscriptionPlan: en,
                                       paymentSourceType: null === (t = p[null != et ? et : '']) || void 0 === t ? void 0 : t.type,
@@ -210,7 +210,7 @@ function U(e) {
     let c = (0, b.Ap)(a.paymentSourceId);
     return null != o
         ? (0, i.jsxs)(C.PO, {
-              className: P.__invalid_invoice,
+              className: w.__invalid_invoice,
               children: [
                   (0, i.jsx)(L.By, {
                       invoice: o,
@@ -279,7 +279,7 @@ function G(e) {
             (0, i.jsxs)(C.PO, {
                 className: M.invoice,
                 children: [
-                    (0, i.jsx)(C.q9, { children: w.intl.string(w.t['2eh+Cg']) }),
+                    (0, i.jsx)(C.q9, { children: P.intl.string(P.t['2eh+Cg']) }),
                     (0, i.jsx)(L.Lu, {
                         invoice: y,
                         newPlan: n,
@@ -381,13 +381,13 @@ function Z(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: P.renewalInvoiceDate,
-                children: w.intl.string(w.t.spIYoq)
+                className: w.renewalInvoiceDate,
+                children: P.intl.string(P.t.spIYoq)
             }),
             (0, i.jsxs)(C.PO, {
                 className: M.invoice,
                 children: [
-                    (0, i.jsx)(C.q9, { children: w.intl.string(w.t['2eh+Cg']) }),
+                    (0, i.jsx)(C.q9, { children: P.intl.string(P.t['2eh+Cg']) }),
                     (0, i.jsx)(L.By, {
                         invoice: l,
                         isPrepaidPaymentSource: m
@@ -426,13 +426,13 @@ function F(e) {
         className: M.bodyText,
         children: [
             (0, i.jsx)('div', {
-                className: P.renewalInvoiceDate,
-                children: w.intl.format(w.t['+y0Tj4'], { renewalDate: c.subscriptionPeriodStart })
+                className: w.renewalInvoiceDate,
+                children: P.intl.format(P.t['+y0Tj4'], { renewalDate: c.subscriptionPeriodStart })
             }),
             (0, i.jsxs)(C.PO, {
                 className: M.invoice,
                 children: [
-                    (0, i.jsx)(C.q9, { children: w.intl.string(w.t.iqhIp6) }),
+                    (0, i.jsx)(C.q9, { children: P.intl.string(P.t.iqhIp6) }),
                     (0, i.jsx)(C.R$, {
                         label: t,
                         value: (0, b.PK)(r, s, !0)

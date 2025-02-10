@@ -29,7 +29,7 @@ var i,
     D = n(804739),
     L = n(7956),
     x = n(981631);
-function w(e, t, n) {
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function w(e, t, n) {
         e
     );
 }
-let P = 5,
+let w = 5,
     M = u()().subtract(1, 'week'),
     k = [],
     U = '',
@@ -161,7 +161,7 @@ function X() {
                 O.ZP.setSystemTrayApplications(
                     j(k)
                         .map((e) => e.application)
-                        .slice(0, P)
+                        .slice(0, w)
                 ),
             !0)
     );
@@ -195,5 +195,5 @@ class J extends (i = c.ZP.Store) {
         return G;
     }
 }
-w(J, 'displayName', 'ApplicationViewStore');
+P(J, 'displayName', 'ApplicationViewStore');
 let $ = new J(d.Z, { LIBRARY_APPLICATION_FILTER_UPDATE: z });

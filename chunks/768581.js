@@ -13,7 +13,7 @@ n.d(t, {
     pK: () => m,
     pU: () => $,
     rI: () => H,
-    tp: () => w,
+    tp: () => P,
     xR: () => K
 }),
     n(315314),
@@ -147,7 +147,7 @@ function x(e) {
         u = new URL(null != r ? ''.concat(location.protocol, '//').concat(r).concat(s) : ''.concat(location.protocol).concat(a).concat(s));
     return u.searchParams.set('size', ''.concat((0, l.oO)(n * (0, l.x_)()))), u.searchParams.set('passthrough', ''.concat(i && (0, o.ae)(t.asset))), u.toString();
 }
-function w(e) {
+function P(e) {
     let t,
         { id: n, guildId: i, banner: r, canAnimate: a, size: s } = e;
     if (null == r || null == i) return;
@@ -156,7 +156,7 @@ function w(e) {
         c = f.ANM.GUILD_MEMBER_BANNER(i, n, r, u);
     return (null != o ? ''.concat(location.protocol, '//').concat(o).concat(c) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + c) + '?size='.concat((0, l.oO)(s * (0, l.x_)()));
 }
-function P(e) {
+function w(e) {
     let t,
         { id: n, splash: i, size: r } = e;
     if (null == i) return null;
@@ -165,7 +165,7 @@ function P(e) {
     return (null != a ? ''.concat(location.protocol, '//').concat(a, '/splashes/').concat(n, '/').concat(i, '.jpg') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_SPLASH(n, i)) + '?size='.concat(r);
 }
 function M(e) {
-    return X(P(e));
+    return X(w(e));
 }
 function k(e) {
     let t,
@@ -318,7 +318,7 @@ let J = {
     getGuildMemberAvatarURL: O,
     getGuildMemberAvatarURLSimple: R,
     getGuildMemberAvatarSource: D,
-    getGuildMemberBannerURL: w,
+    getGuildMemberBannerURL: P,
     getUserBannerURL: L,
     getAvatarDecorationURL: x,
     hasAnimatedGuildIcon: function e(e) {
@@ -327,7 +327,7 @@ let J = {
     isAnimatedIconHash: K,
     getUserAvatarSource: (e, t, n) => X(C(e, t, n)),
     getGuildIconURL: Z,
-    getGuildSplashURL: P,
+    getGuildSplashURL: w,
     getGuildSplashSource: M,
     getGuildDiscoverySplashURL: G,
     getGuildDiscoverySplashSource: B,

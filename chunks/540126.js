@@ -861,17 +861,17 @@ function eg(e, t, n) {
                     type: 'voice',
                     text: r
                 };
-            let s = a.ZP.getEmbeddedActivitiesForChannel(e.id),
-                u = (null != s ? s : [])
-                    .map((e) => {
-                        var t;
-                        return null === (t = o.Z.getApplication(e.applicationId)) || void 0 === t ? void 0 : t.name;
-                    })
-                    .filter(Z.lm);
-            if (u.length > 0)
+            let s = a.ZP.getEmbeddedActivitiesForChannel(e.id)
+                .concat(a.ZP.getEmbeddedActivitiesForStartingChannel(e.id))
+                .map((e) => {
+                    var t;
+                    return null === (t = o.Z.getApplication(e.applicationId)) || void 0 === t ? void 0 : t.name;
+                })
+                .filter(Z.lm);
+            if (s.length > 0)
                 return {
                     type: 'embedded-activities',
-                    name: u.join(', ')
+                    name: s.join(', ')
                 };
             return null;
         }

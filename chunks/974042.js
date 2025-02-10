@@ -39,7 +39,7 @@ function S(e) {
         usernameLower: null != t ? t.username.toLowerCase() : null
     };
 }
-function A(e) {
+function Z(e) {
     return {
         status: E.Z.getStatus(e),
         isMobile: E.Z.isMobileOnline(e),
@@ -47,7 +47,7 @@ function A(e) {
         applicationStream: g.Z.getAnyStreamForUser(e)
     };
 }
-function Z(e) {
+function A(e) {
     let t = [];
     return (
         r()(_.ZP.memberOf(e))
@@ -86,8 +86,8 @@ class x {
                         userId: i,
                         nickname: I.Z.getNickname(i),
                         ...S(i),
-                        ...A(i),
                         ...Z(i),
+                        ...A(i),
                         spam: I.Z.isSpam(i),
                         ignoredUser: I.Z.isIgnored(i),
                         giftIntentType: n === N.OGo.FRIEND && p.Z.isTopAffinityFriendAnniversary({ userId: i }) ? v.hX.FRIEND_ANNIVERSARY : void 0,
@@ -112,8 +112,8 @@ class x {
                                 applicationId: r,
                                 nickname: I.Z.getNickname(l),
                                 ...S(l),
-                                ...A(l),
                                 ...Z(l),
+                                ...A(l),
                                 spam: I.Z.isSpam(l),
                                 ignoredUser: I.Z.isIgnored(l),
                                 isGameRelationship: !0
@@ -130,8 +130,8 @@ class x {
                     type: 99,
                     nickname: e.name,
                     ...S(e.key),
-                    ...A(e.key),
-                    ...Z(e.key)
+                    ...Z(e.key),
+                    ...A(e.key)
                 })
         );
         return new x(r().concat(n, i, l));
@@ -224,7 +224,7 @@ function M(e) {
 }
 class U extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, E.Z, C.default, f.Z, _.ZP, g.Z, u.Z, d.Z), this.syncWith([I.Z], k), this.syncWith([m.Z], k), this.syncWith([u.Z], k), this.syncWith([p.Z], k), this.syncWith([C.default], M(S)), this.syncWith([E.Z, g.Z], M(A)), w();
+        this.waitFor(I.Z, E.Z, C.default, f.Z, _.ZP, g.Z, u.Z, d.Z), this.syncWith([I.Z], k), this.syncWith([m.Z], k), this.syncWith([u.Z], k), this.syncWith([p.Z], k), this.syncWith([C.default], M(S)), this.syncWith([E.Z, g.Z], M(Z)), w();
     }
     getState() {
         return {

@@ -35,9 +35,9 @@ function R(e, t) {
 function O(e, t) {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         b = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: S, onClick: R, onConfirm: O, onCancel: D, shouldConfirm: L, messageId: x, channelId: w } = e,
-        P = r().sanitizeUrl(e.href);
-    if (null == P) {
+        { trusted: S, onClick: R, onConfirm: O, onCancel: D, shouldConfirm: L, messageId: x, channelId: P } = e,
+        w = r().sanitizeUrl(e.href);
+    if (null == w) {
         null != t && t.preventDefault(),
             a.Z.show({
                 title: C.intl.string(C.t.x87gam),
@@ -47,21 +47,21 @@ function O(e, t) {
             });
         return;
     }
-    let M = P;
+    let M = w;
     try {
-        decodeURI(P);
+        decodeURI(w);
     } catch (e) {
-        M = encodeURI(P);
+        M = encodeURI(w);
     }
     let k = null,
         U = !1,
         G = x,
-        B = w,
+        B = P,
         Z = null;
-    if (null != x && null != w) {
+    if (null != x && null != P) {
         var F, V, j;
-        let e = T.Z.getMessage(w, x),
-            t = E.Z.getBasicChannel(w);
+        let e = T.Z.getMessage(P, x),
+            t = E.Z.getBasicChannel(P);
         k = null !== (j = null == t ? void 0 : t.guild_id) && void 0 !== j ? j : null;
         let n = v.Z.getGuild(k),
             i = (null == e ? void 0 : null === (F = e.messageReference) || void 0 === F ? void 0 : F.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(N.iLy.IS_CROSSPOST)) && null != k;
@@ -70,8 +70,8 @@ function O(e, t) {
             a = (null == e ? void 0 : e.hasFlag(N.iLy.EPHEMERAL)) === !0;
         U = null != e && !a && (i || r);
     }
-    if (null != w) {
-        let e = E.Z.getChannel(w),
+    if (null != P) {
+        let e = E.Z.getChannel(P),
             t = v.Z.getGuild(null == e ? void 0 : e.getGuildId());
         null != e &&
             null != t &&
@@ -81,7 +81,7 @@ function O(e, t) {
                 guild_id: t.id,
                 channel_id: e.id
             }),
-            (0, c.Z)(w) &&
+            (0, c.Z)(P) &&
                 A.default.track(N.rMx.CHANGE_LOG_CTA_CLICKED, {
                     cta_type: 'inline_link',
                     target: M
@@ -102,7 +102,7 @@ function O(e, t) {
                 (U &&
                     _.Z.trackAnnouncementMessageLinkClicked({
                         messageId: G,
-                        channelId: w,
+                        channelId: P,
                         guildId: k,
                         sourceChannelId: B,
                         sourceGuildId: Z
@@ -136,7 +136,7 @@ function O(e, t) {
             : U &&
               _.Z.trackAnnouncementMessageLinkClicked({
                   messageId: G,
-                  channelId: w,
+                  channelId: P,
                   guildId: k,
                   sourceChannelId: B,
                   sourceGuildId: Z

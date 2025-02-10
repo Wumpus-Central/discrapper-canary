@@ -268,7 +268,7 @@ function x(e) {
               location_object_type: e.objectType
           };
 }
-function w(e) {
+function P(e) {
     return 'string' == typeof e
         ? { source: e }
         : {
@@ -279,9 +279,9 @@ function w(e) {
               source_promotion_id: e.promotionId
           };
 }
-let P = () => h.E.NONE;
+let w = () => h.E.NONE;
 function M(e) {
-    P = e;
+    w = e;
 }
 let k = (0, a.trackMaker)({
     analyticEventConfigs: L,
@@ -305,10 +305,10 @@ function G(e) {
         let { source: e, ...t } = a;
         a = {
             ...t,
-            ...w(e)
+            ...P(e)
         };
     }
-    (a.client_performance_cpu = f.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = f.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = f.Z.getCPUCoreCount()), (a.accessibility_features = P()), (a.rendered_locale = m.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - R) / 1000));
+    (a.client_performance_cpu = f.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = f.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = f.Z.getCPUCoreCount()), (a.accessibility_features = w()), (a.rendered_locale = m.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - R) / 1000));
     let s = f.Z.getProcessUptime();
     null != s && (a.uptime_process_renderer = Math.floor(s));
     let { utmSource: o, utmMedium: l, utmCampaign: u, utmContent: c } = v;

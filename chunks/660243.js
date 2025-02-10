@@ -52,7 +52,7 @@ function x(e) {
                                   c > 0 &&
                                   (0, i.jsx)(s.xv, {
                                       variant: 'text-sm/semibold',
-                                      children: u.intl.string(u.t['9b/+6e'])
+                                      children: u.intl.string(u.t.NOIHs7)
                                   })
                           }),
                           (0, i.jsxs)('div', {
@@ -84,8 +84,8 @@ function _() {
         children: [
             (0, i.jsx)(x, {
                 headerAssetSrc: m,
-                headerText: u.intl.string(u.t.URyqtL),
-                description: u.intl.string(u.t['3uTjaG']),
+                headerText: u.intl.string(u.t.CQkyMj),
+                description: u.intl.string(u.t.ctRS3d),
                 assets: t,
                 assetCount: n,
                 onClick: () => r.Z.open(d.oAB.REGISTERED_GAMES),
@@ -94,7 +94,7 @@ function _() {
             (0, i.jsx)(x, {
                 headerAssetSrc: g,
                 headerText: u.intl.string(u.t['3fe7U1']),
-                description: u.intl.string(u.t.IoN1am),
+                description: u.intl.string(u.t.DU5UXF),
                 assets: s,
                 assetCount: l,
                 onClick: () => r.Z.open(d.oAB.CONNECTIONS),

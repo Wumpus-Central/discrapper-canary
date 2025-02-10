@@ -16,10 +16,10 @@ let m = function (e) {
         S = () => {
             N(!0), !_ || f || v || null == E || E();
         },
-        A = () => {
+        Z = () => {
             N(!1);
         },
-        Z = (e, t) => {
+        A = (e, t) => {
             null != t &&
                 (T(!0),
                 (0, d.jW)(
@@ -52,9 +52,9 @@ let m = function (e) {
                         [h.active]: f || v,
                         [h.firstItem]: 0 === t
                     }),
-                    onContextMenu: (e) => Z(e, m),
+                    onContextMenu: (e) => A(e, m),
                     onMouseEnter: S,
-                    onMouseLeave: A,
+                    onMouseLeave: Z,
                     onClick: null != g ? g : void 0,
                     style: {
                         LIST_ROW_HEIGHT: u.WN,

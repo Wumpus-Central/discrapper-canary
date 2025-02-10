@@ -51,7 +51,7 @@ let O = (e) => {
 function D(e) {
     let { badges: t, className: n, badgeClassName: a, displayProfile: D, onClose: L } = e,
         { analyticsLocations: x } = (0, c.ZP)(u.Z.BADGE),
-        { context: w, trackUserProfileAction: P } = (0, y.KZ)(),
+        { context: P, trackUserProfileAction: w } = (0, y.KZ)(),
         [M, k] = r.useState(!1),
         U = m.default.getCurrentUser(),
         G = (0, E.yd)(null == U ? void 0 : U.premiumType, N.p9.TIER_2);
@@ -63,11 +63,11 @@ function D(e) {
             let t = (0, v.fv)(e.id),
                 n = (n) => {
                     if (
-                        (P({ action: 'PRESS_BADGE' }),
+                        (w({ action: 'PRESS_BADGE' }),
                         (0, I.NE)({
                             badge: e.id,
                             analyticsLocations: x,
-                            ...w
+                            ...P
                         }),
                         (null == t ? void 0 : t.badgeVersion) === 2)
                     ) {
@@ -95,11 +95,11 @@ function D(e) {
                 },
                 r = () => {
                     e.id === T.i && g.default.track(A.rMx.QUEST_CONTENT_VIEWED, { ...(0, _.mH)(p.jn.QUEST_BADGE) }),
-                        P({ action: 'HOVER_BADGE' }),
+                        w({ action: 'HOVER_BADGE' }),
                         (0, I.Qf)({
                             badge: e.id,
                             analyticsLocations: x,
-                            ...w
+                            ...P
                         });
                 },
                 c = O(null == t ? void 0 : t.id),

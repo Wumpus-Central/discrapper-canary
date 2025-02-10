@@ -27,7 +27,7 @@ function C(e) {
         E = c ? _.t.cpT0Cg : _.t['0hKkS0'],
         I = i.useMemo(() => (null != n ? (0, h.XZ)(n.displayName) : _.intl.string(_.t['3xjX0d'])), [n]),
         b = void 0 !== s.flags && (0, f.yE)(s.flags, g.udG.EMBEDDED),
-        Z = null != x && x.applicationId === s.id && (v || (0, o.p)(x.location) === t.channel.id),
+        Z = null != x && x.applicationId === s.id && (v || (0, o.pY)(x.location) === t.channel.id),
         { analyticsLocations: N } = (0, u.ZP)(d.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
         T = null != t.channel.recipients ? t.channel.recipients[0] : void 0;
     return {

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => H,
+    Z: () => Y,
     _: () => W
 }),
     n(47120);
@@ -78,19 +78,19 @@ function W(e) {
         })
     );
 }
-function H(e) {
+function Y(e) {
     let { participant: t, selected: n, onVideoResize: r, paused: f, fit: h, inPopout: E, inOverlayPopout: Z = !1, width: P, focused: M, wrapperClassName: W } = e,
-        H = R.Z.getVideoComponent(),
-        Y = (0, s.e7)([I.default], () => I.default.getId()),
+        Y = R.Z.getVideoComponent(),
+        H = (0, s.e7)([I.default], () => I.default.getId()),
         B = (0, p.Z)(),
         { stream: K, user: q, streamId: G } = t,
         J = (0, s.e7)([_.Z], () => _.Z.getChannel(K.channelId)),
         Q = (0, s.e7)([b.Z], () => b.Z.getActiveStreamForUser(q.id, K.guildId), [q.id, K.guildId]),
         X = (0, s.e7)([b.Z], () => b.Z.getAllActiveStreams().length > 0),
         $ = (0, s.e7)([y.Z], () => y.Z.isFocused()),
-        ee = (null == Q ? void 0 : Q.ownerId) === Y,
+        ee = (null == Q ? void 0 : Q.ownerId) === H,
         et = ee && !$ && !E,
-        en = null != Q ? (0, v.Z)(Q, q, q.id === Y, et) : null,
+        en = null != Q ? (0, v.Z)(Q, q, q.id === H, et) : null,
         el = P < 195;
     if (
         ((0, d.ZP)(() => {
@@ -101,17 +101,17 @@ function H(e) {
                 'Stream Tile State - activeStream: '
                     .concat(null != Q, ' | selected: ')
                     .concat(n, ' | Video: ')
-                    .concat(null != H, ' | MediaEngine: ')
+                    .concat(null != Y, ' | MediaEngine: ')
                     .concat(R.Z.supports(F.AN.VIDEO))
             );
-        }, [H, Q, n]),
+        }, [Y, Q, n]),
         B)
     )
         return (0, l.jsx)(O.Z, {
             stream: t.stream,
             isSmall: el,
             selected: n,
-            isSelfStream: q.id === Y
+            isSelfStream: q.id === H
         });
     if ((null == Q ? void 0 : Q.state) === D.jm8.ENDED)
         return (0, l.jsx)(A.Z, {
@@ -131,7 +131,7 @@ function H(e) {
             participant: t,
             width: P
         });
-    if (!(null != Q && !n && null != H && R.Z.supports(F.AN.VIDEO)))
+    if (!(null != Q && !n && null != Y && R.Z.supports(F.AN.VIDEO)))
         return (0, l.jsxs)('div', {
             className: a()(z.content, z.streamPreview, { [z.small]: el }),
             children: [
@@ -192,7 +192,7 @@ function H(e) {
                         wrapperClassName: a()(z.videoWrapper, W),
                         className: z.content,
                         streamId: G,
-                        videoComponent: H,
+                        videoComponent: Y,
                         fit: h,
                         paused: f || et,
                         videoSpinnerContext: ee ? m.m.SELF_STREAM : m.m.REMOTE_STREAM,

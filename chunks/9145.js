@@ -45,7 +45,7 @@ function B(e) {
         { groupedButtons: H } = (0, f.ZP)({ location: 'ActivityPanelFocusedView' }),
         G = (0, y.Z)(),
         V = (0, s.Wu)([N.ZP], () => N.ZP.getEmbeddedActivitiesForLocation(B), [B]),
-        z = (0, j.p)(B),
+        z = (0, j.pY)(B),
         W = (0, s.e7)([C.Z], () => C.Z.getChannel(z)),
         Y = (0, T.gb)(V),
         q = (0, T.uF)(Y),

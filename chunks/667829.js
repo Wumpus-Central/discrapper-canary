@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(47120), n(653041);
+n.d(t, { Z: () => w }), n(47120), n(653041);
 var i = n(200651),
     r = n(192379),
     a = n(120356),
@@ -44,7 +44,7 @@ new E.Z('ChannelEditor.tsx');
 let x = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    w = {
+    P = {
         12: D.fontSize12Padding,
         14: D.fontSize14Padding,
         15: D.fontSize15Padding,
@@ -53,7 +53,7 @@ let x = function () {
         20: D.fontSize20Padding,
         24: D.fontSize24Padding
     };
-class P extends r.Component {
+class w extends r.Component {
     componentDidMount() {
         this.props.focused && requestAnimationFrame(() => this.focus()), document.addEventListener('selectionchange', this.handleSelectionChange), window.addEventListener('beforeunload', this.handleBeforeUnload);
     }
@@ -156,7 +156,7 @@ class P extends r.Component {
     }
     render() {
         var e, t, n, r, a, o;
-        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: I, useNewSlashCommands: S, canOnlyUseTextCommands: C, className: O, id: L, required: x, maxCharacterCount: P, allowNewLines: M, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: G } = this.props,
+        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: I, useNewSlashCommands: S, canOnlyUseTextCommands: C, className: O, id: L, required: x, maxCharacterCount: w, allowNewLines: M, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: G } = this.props,
             { submitting: B, popup: Z } = this.state,
             F = {
                 channel: m,
@@ -184,7 +184,7 @@ class P extends r.Component {
                 onResize: p,
                 onKeyDown: _,
                 onSubmit: h,
-                textAreaPaddingClassName: s()(w[E], {
+                textAreaPaddingClassName: s()(P[E], {
                     [D.textAreaWithoutAttachmentButton]: g !== T.Ie.NORMAL && g !== T.Ie.OVERLAY && g !== T.Ie.THREAD_CREATION && g !== T.Ie.SIDEBAR,
                     [D.textAreaForPostCreation]: g === T.Ie.CREATE_FORUM_POST,
                     [D.textAreaCustomGift]: g === T.Ie.CUSTOM_GIFT,
@@ -199,7 +199,7 @@ class P extends r.Component {
                 'aria-haspopup': 'listbox',
                 'aria-expanded': null !== Z.id || void 0,
                 'aria-activedescendant': null !== (o = Z.activeDescendant) && void 0 !== o ? o : void 0,
-                'aria-invalid': l.length > P,
+                'aria-invalid': l.length > w,
                 'aria-describedby': k,
                 'aria-labelledby': U,
                 'aria-autocomplete': 'list'

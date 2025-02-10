@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eP }), n(47120), n(653041), n(724458);
+n.d(t, { Z: () => ew }), n(47120), n(653041), n(724458);
 var i,
     r = n(512722),
     a = n.n(r),
@@ -41,8 +41,8 @@ let O = new d.Z('ChannelRTCStore'),
     D = Object.freeze([]),
     L = [],
     x = {},
-    w = {},
     P = {},
+    w = {},
     M = {},
     k = {},
     U = {},
@@ -83,22 +83,22 @@ function z(e) {
     var t;
     let n = E.Z.getChannel(e),
         i = (null == n ? void 0 : n.isDM()) ? N.dF.AUTO : N.dF.NONE;
-    return null !== (t = w[e]) && void 0 !== t ? t : [i, N.dF.NONE];
+    return null !== (t = P[e]) && void 0 !== t ? t : [i, N.dF.NONE];
 }
 function q(e) {
-    if (null == w[e]) return !1;
-    let [t] = w[e];
+    if (null == P[e]) return !1;
+    let [t] = P[e];
     return t !== N.dF.NONE;
 }
 function Q(e) {
-    null == P[e] &&
-        (P[e] = {
+    null == w[e] &&
+        (w[e] = {
             gridDurationMs: 0,
             focusDurationMs: 0,
             toggleCount: 0,
             lastUpdate: 0
         });
-    let t = P[e],
+    let t = w[e],
         n = performance.now(),
         i = q(e);
     if (t.lastUpdate > 0) {
@@ -110,7 +110,7 @@ function Q(e) {
 function X(e, t) {
     Q(e);
     let n = q(e);
-    null == t ? delete w[e] : (w[e] = t), n !== q(e) && P[e].toggleCount++;
+    null == t ? delete P[e] : (P[e] = t), n !== q(e) && w[e].toggleCount++;
 }
 function J(e) {
     return e.size(A.sI.STREAM) > 0 || e.size(A.sI.VIDEO) > 0 || e.hasEmbeddedActivity();
@@ -148,14 +148,14 @@ function ee(e) {
     n === C.WtW.VOICE ? (delete M[e], delete k[e]) : (M[e] = n);
 }
 function et(e) {
-    delete x[e], delete w[e], delete M[e], delete k[e];
+    delete x[e], delete P[e], delete M[e], delete k[e];
 }
 function en() {
     return W((e) => e.rebuild(), Y());
 }
 function ei(e) {
     let { channelId: t, currentVoiceChannelId: n } = e;
-    return null != t ? delete P[t] : null != n && (delete B[n], delete F[n], Q(n)), en();
+    return null != t ? delete w[t] : null != n && (delete B[n], delete F[n], Q(n)), en();
 }
 function er(e) {
     let { channelId: t, messageId: n } = e,
@@ -346,7 +346,7 @@ function ex(e) {
     var t;
     return !!(null === (t = E.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildVocal());
 }
-class ew extends (i = l.ZP.PersistedStore) {
+class eP extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(h.Z, m.default, g.Z, E.Z, c.ZP, v.Z, y.Z, I.Z, T.default, b.Z, S.Z), this.syncWith([c.ZP], es), this.syncWith([v.Z], eo), this.syncWith([f.Z], en), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(G, null == e ? void 0 : e.voiceParticipantsHidden);
     }
@@ -403,7 +403,7 @@ class ew extends (i = l.ZP.PersistedStore) {
         return null == t ? null : j(e).getParticipant(t);
     }
     getSelectedParticipantStats(e) {
-        let t = P[e];
+        let t = w[e];
         return null == t
             ? {}
             : {
@@ -448,8 +448,8 @@ class ew extends (i = l.ZP.PersistedStore) {
         return V[e];
     }
 }
-R(ew, 'displayName', 'ChannelRTCStore'), R(ew, 'persistKey', 'ChannelRTCStore');
-let eP = new ew(u.Z, {
+R(eP, 'displayName', 'ChannelRTCStore'), R(eP, 'persistKey', 'ChannelRTCStore');
+let ew = new eP(u.Z, {
     CONNECTION_OPEN: H,
     CONNECTION_OPEN_SUPPLEMENTAL: en,
     THREAD_LIST_SYNC: en,

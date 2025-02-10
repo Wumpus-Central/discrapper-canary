@@ -142,7 +142,7 @@ class _ extends r.Z {
         this.avatarDecorationData = (0, a.FG)(e);
     }
     constructor(e) {
-        var t, n, r, a, s, o, c, d, _, p, h, m, g, E, v, y, I, T, b, S, A, N, C, R, O, D, L, x, w, P, M;
+        var t, n, r, a, s, o, c, d, _, p, h, m, g, E, v, y, I, T, b, S, A, N, C, R, O, D, L, x, P, w, M;
         super(), f(this, 'id', void 0), f(this, 'username', void 0), f(this, 'discriminator', void 0), f(this, 'avatar', void 0), f(this, 'avatarDecorationData', void 0), f(this, 'banner', void 0), f(this, 'email', void 0), f(this, 'verified', void 0), f(this, 'bot', void 0), f(this, 'system', void 0), f(this, 'mfaEnabled', void 0), f(this, 'mobile', void 0), f(this, 'desktop', void 0), f(this, 'premiumType', void 0), f(this, 'flags', void 0), f(this, 'publicFlags', void 0), f(this, 'purchasedFlags', void 0), f(this, 'premiumUsageFlags', void 0), f(this, 'phone', void 0), f(this, 'nsfwAllowed', void 0), f(this, 'guildMemberAvatars', void 0), f(this, 'hasBouncedEmail', void 0), f(this, 'personalConnectionId', void 0), f(this, 'globalName', void 0), f(this, 'primaryGuild', void 0), f(this, 'hasFlag', (e) => !1), f(this, 'isStaff', () => !1), f(this, 'isStaffPersonal', () => !1), f(this, 'hasAnyStaffLevel', () => !1);
         let k = null !== (n = e.premium_type) && void 0 !== n ? n : e.premiumType;
         (this.id = e.id),
@@ -167,9 +167,9 @@ class _ extends r.Z {
             (this.guildMemberAvatars = null !== (R = e.guildMemberAvatars) && void 0 !== R ? R : {}),
             (this.hasBouncedEmail = null !== (D = null !== (O = e.has_bounced_email) && void 0 !== O ? O : e.hasBouncedEmail) && void 0 !== D && D),
             (this.personalConnectionId = null !== (x = null !== (L = e.personal_connection_id) && void 0 !== L ? L : e.personalConnectionId) && void 0 !== x ? x : null),
-            (this.globalName = null !== (w = e.global_name) && void 0 !== w ? w : e.globalName),
+            (this.globalName = null !== (P = e.global_name) && void 0 !== P ? P : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, u.lt)(null !== (M = null !== (P = e.primary_guild) && void 0 !== P ? P : e.primaryGuild) && void 0 !== M ? M : null)),
+            (this.primaryGuild = (0, u.lt)(null !== (M = null !== (w = e.primary_guild) && void 0 !== w ? w : e.primaryGuild) && void 0 !== M ? M : null)),
             Object.defineProperties(this, {
                 hasFlag: {
                     writable: !1,

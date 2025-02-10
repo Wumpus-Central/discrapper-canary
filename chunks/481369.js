@@ -18,6 +18,6 @@ let d = 'no_text_activity',
 function h() {
     let e = (0, i.e7)([l.ZP], () => l.ZP.getCurrentEmbeddedActivity()),
         t = (0, i.e7)([l.ZP], () => l.ZP.getActivityPanelMode()),
-        n = (0, a.p)(null == e ? void 0 : e.location);
+        n = (0, a.pY)(null == e ? void 0 : e.location);
     return void 0 === e || (0, r.Z)(n, s.Z) ? u[d] : u[t];
 }

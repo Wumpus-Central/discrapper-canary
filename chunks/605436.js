@@ -132,11 +132,11 @@ function x(e, t, n, r, a) {
         ? T(g.intl.string(g.t.nZfHsb))
         : s;
 }
-function w(e, t) {
+function P(e, t) {
     var n;
     return null !== (n = l.ZP.getNick(t.id, e.id)) && void 0 !== n ? n : p.ZP.getName(e);
 }
-function P(e, t) {
+function w(e, t) {
     return t.isOwner(e);
 }
 function M(e, t) {
@@ -147,14 +147,14 @@ function k(e, t) {
     let i = M(e, t);
     return {
         rowType: i,
-        name: w(e, t),
+        name: P(e, t),
         nickname: null !== (n = l.ZP.getNick(t.id, e.id)) && void 0 !== n ? n : null,
         username: p.ZP.getName(e),
         id: e.id,
         avatarURL: e.getAvatarURL(t.id, 24),
         bot: e.bot,
         verifiedBot: e.isVerifiedBot(),
-        disabled: P(e, t),
+        disabled: w(e, t),
         key: ''.concat(i, ':').concat(e.id)
     };
 }
@@ -166,7 +166,7 @@ function G(e, t, n, i) {
     return e
         .map(u.default.getUser)
         .filter(d.lm)
-        .filter((e) => !n.isOwner(e) && b(t, e.id, i) && (r(w(e, n)) || r(e.username) || r(e.discriminator)))
+        .filter((e) => !n.isOwner(e) && b(t, e.id, i) && (r(P(e, n)) || r(e.username) || r(e.discriminator)))
         .map((e) => k(e, n))
         .sort(U);
 }
@@ -174,7 +174,7 @@ function B(e, t, n, i, r) {
     return e
         .map(u.default.getUser)
         .filter(d.lm)
-        .filter((e) => !b(t, e.id, i, r) || P(e, n));
+        .filter((e) => !b(t, e.id, i, r) || w(e, n));
 }
 function Z(e, t, n, i, r) {
     return B(e, t, n, i, r)

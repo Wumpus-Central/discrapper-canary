@@ -61,10 +61,10 @@ function L(e, t) {
     };
 }
 let x = function (e) {
-    let { tabIndex: t, className: n, renderButtonContents: a, active: A, onClick: N, 'aria-controls': C, focusProps: x, shouldShowSoundmojiCoachmark: w = !1 } = e,
-        [P, M] = r.useState(!1),
+    let { tabIndex: t, className: n, renderButtonContents: a, active: A, onClick: N, 'aria-controls': C, focusProps: x, shouldShowSoundmojiCoachmark: P = !1 } = e,
+        [w, M] = r.useState(!1),
         [k, U] = r.useState(50),
-        G = P || A,
+        G = w || A,
         B = (0, v.l)(S, 'emojiButton', G ? 'Hovered' : 'Normal'),
         Z = L(k, (0, f.Q3)('EmojiButton')),
         F = r.useCallback(() => {
@@ -84,7 +84,7 @@ let x = function (e) {
         [Q, X] = r.useState(!1),
         [J, $] = r.useState(!1),
         ee = (0, m.V2)({ location: 'EmojiButton' }),
-        [et, en] = (0, _.US)(w && ee ? [u.z.SOUNDMOJI_COACHMARK] : []),
+        [et, en] = (0, _.US)(P && ee ? [u.z.SOUNDMOJI_COACHMARK] : []),
         ei = !Q && et === u.z.SOUNDMOJI_COACHMARK && !J;
     return (0, i.jsx)(c.yRy, {
         renderPopout: () => (0, i.jsx)(g.Z, { markAsDismissed: en }),

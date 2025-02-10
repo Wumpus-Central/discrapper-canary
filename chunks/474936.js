@@ -1,5 +1,5 @@
 n.d(t, {
-    $7: () => P,
+    $7: () => w,
     $8: () => eN,
     $e: () => d,
     $n: () => ez,
@@ -40,7 +40,7 @@ n.d(t, {
     TD: () => eG,
     TL: () => K,
     Tp: () => eV,
-    UA: () => w,
+    UA: () => P,
     UD: () => E,
     Ue: () => M,
     Uq: () => eT,
@@ -56,7 +56,7 @@ n.d(t, {
     a1: () => eB,
     a7: () => Q,
     b6: () => c,
-    bg: () => eP,
+    bg: () => ew,
     cb: () => x,
     cd: () => eg,
     dB: () => eu,
@@ -100,7 +100,7 @@ n.d(t, {
     wh: () => Y,
     xT: () => $,
     y7: () => h,
-    ys: () => ew,
+    ys: () => eP,
     zp: () => k
 }),
     n(47120);
@@ -322,8 +322,8 @@ let N = Object.freeze({
     D = 5,
     L = 30,
     x = 2,
-    w = 3,
-    P = 28,
+    P = 3,
+    w = 28,
     M = 30,
     k = 7,
     U = 7,
@@ -608,10 +608,10 @@ let ex = {
     '944037208325619722': O,
     '642251038925127690': D
 };
-var ew = (function (e) {
+var eP = (function (e) {
     return (e.HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (e.MID_STREAMING_QUALITY = 'mid_streaming_quality'), e;
 })({});
-let eP = Object.freeze({
+let ew = Object.freeze({
     high_streaming_quality: 2,
     mid_streaming_quality: 1
 });

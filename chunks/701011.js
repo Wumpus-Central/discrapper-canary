@@ -21,8 +21,8 @@ function _() {
             guildId: n
         } = (0, l.cj)([f.ZP], () => {
             let e = f.ZP.getCurrentEmbeddedActivity(),
-                t = (0, p.p)(null == e ? void 0 : e.location),
-                n = (0, p.j)(null == e ? void 0 : e.location);
+                t = (0, p.pY)(null == e ? void 0 : e.location),
+                n = (0, p.jS)(null == e ? void 0 : e.location);
             return {
                 embeddedActivity: e,
                 channelId: t,

@@ -3,8 +3,8 @@ n.d(t, {
     GN: () => R,
     M2: () => L,
     Nq: () => N,
-    SZ: () => P,
-    aC: () => w,
+    SZ: () => w,
+    aC: () => P,
     pI: () => S,
     sR: () => x,
     tt: () => k
@@ -81,7 +81,7 @@ function x(e) {
     }
     return a;
 }
-function w(e, t) {
+function P(e, t) {
     (0, o.PS)(
         e,
         (n) => {
@@ -96,7 +96,7 @@ function w(e, t) {
         o.fy.INFREQUENT_USER_ACTION
     );
 }
-function P(e, t, n) {
+function w(e, t, n) {
     (0, o.PS)(
         e,
         (i) => {

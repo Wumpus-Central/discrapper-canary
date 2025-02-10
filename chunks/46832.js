@@ -81,8 +81,8 @@ class I extends i.EventEmitter {
                             let [t, n] = e;
                             a.default.track(m.rMx.ACTIVITY_HANDSHAKE_TIMED_OUT, {
                                 application_id: t,
-                                channel_id: (0, r.p)(n.location),
-                                guild_id: (0, r.j)(n.location),
+                                channel_id: (0, r.pY)(n.location),
+                                guild_id: (0, r.jS)(n.location),
                                 timeout_ms: g
                             });
                         });

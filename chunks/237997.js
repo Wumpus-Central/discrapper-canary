@@ -56,8 +56,8 @@ let A = Object.freeze({
     D = !1,
     L = !1,
     x = !1,
-    w = new Set(),
-    P = !1,
+    P = new Set(),
+    w = !1,
     M = new c.Z('OverlayStore');
 function k(e) {
     let t = C[e];
@@ -150,22 +150,22 @@ function W() {
 function K() {
     if (!__OVERLAY__) return !1;
     let e = N === (0, v.QF)(),
-        t = O.has((0, v.QF)()) || w.size > 0;
+        t = O.has((0, v.QF)()) || P.size > 0;
     e && t ? (0, l.T_)(window, !0) : (0, l.T_)(window, !1);
 }
 function z() {}
 function q(e) {
     let { locked: t, pid: n } = e;
-    t ? O.delete(n) : O.add(n), X(), K(), (P = !1);
+    t ? O.delete(n) : O.add(n), X(), K(), (w = !1);
 }
 function Q(e) {
     let { region: t } = e;
-    if (N !== (0, v.QF)() || w.has(t)) return !1;
-    w.add(t);
+    if (N !== (0, v.QF)() || P.has(t)) return !1;
+    P.add(t);
 }
 function X() {
     if (N !== (0, v.QF)()) return !1;
-    w.clear();
+    P.clear();
 }
 function J(e) {
     let { pid: t } = e;
@@ -185,11 +185,11 @@ function et() {
 function en() {
     if (__OVERLAY__) {
         let e = I.Z.windowSize();
-        (0, v.Te)(e) || (P = !1);
+        (0, v.Te)(e) || (w = !1);
     }
 }
 function ei(e) {
-    P = e.isPreviewingInGame;
+    w = e.isPreviewingInGame;
 }
 function er(e) {
     let { mode: t } = e;
@@ -400,13 +400,13 @@ class ey extends (r = a.ZP.PersistedStore) {
         return D;
     }
     getActiveRegions() {
-        return w;
+        return P;
     }
     getTextWidgetOpacity() {
         return U.textWidgetOpacity;
     }
     isPreviewingInGame() {
-        return P;
+        return w;
     }
 }
 S(ey, 'displayName', 'OverlayStore'),

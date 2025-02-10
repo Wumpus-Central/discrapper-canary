@@ -91,10 +91,10 @@ function x(e) {
                 user: e.relationship.user
             });
 }
-function w(e) {
+function P(e) {
     (h = { ...h }), delete h[e.relationship.id], null != m[e.relationship.id] && ((m = { ...m }), delete m[e.relationship.id]), null != g[e.relationship.id] && ((g = { ...g }), delete g[e.relationship.id]), null != T[e.relationship.id] && ((T = { ...T }), delete T[e.relationship.id]), e.relationship.userIgnored || (y.delete(e.relationship.id), I.delete(e.relationship.id)), E.delete(e.relationship.id), v.delete(e.relationship.id), O();
 }
-function P(e) {
+function w(e) {
     let { relationship: t } = e;
     (h = {
         ...h,
@@ -214,7 +214,7 @@ let U = new k(o.Z, {
     CONNECTION_OPEN: D,
     OVERLAY_INITIALIZE: L,
     RELATIONSHIP_ADD: x,
-    RELATIONSHIP_REMOVE: w,
-    RELATIONSHIP_UPDATE: P,
+    RELATIONSHIP_REMOVE: P,
+    RELATIONSHIP_UPDATE: w,
     RELATIONSHIP_PENDING_INCOMING_REMOVED: M
 });

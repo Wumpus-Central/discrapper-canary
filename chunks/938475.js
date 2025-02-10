@@ -208,10 +208,10 @@ function x(e) {
         n = c.default.getId();
     return null != n && I(null != t ? t : g.ME).updateVoiceState(n);
 }
-function w() {
+function P() {
     return a().reduce(y, (e, t) => t.updateUsers() || e, !1);
 }
-function P(e) {
+function w(e) {
     let { guildId: t, user: n } = e;
     return I(t).updateMember(n.id);
 }
@@ -234,7 +234,7 @@ function U() {
 }
 class G extends (i = s.ZP.Store) {
     initialize() {
-        U(), this.waitFor(c.default, _.default, f.ZP, p.Z), this.syncWith([_.default], w);
+        U(), this.waitFor(c.default, _.default, f.ZP, p.Z), this.syncWith([_.default], P);
     }
     getVoiceStates(e) {
         return I(null != e ? e : g.ME).getVoiceStates();
@@ -266,7 +266,7 @@ let B = new G(l.Z, {
     OVERLAY_INITIALIZE: O,
     VOICE_CHANNEL_SELECT: x,
     VOICE_STATE_UPDATES: D,
-    GUILD_MEMBER_UPDATE: P,
+    GUILD_MEMBER_UPDATE: w,
     GUILD_CREATE: M,
     GUILD_DELETE: k,
     PASSIVE_UPDATE_V2: L

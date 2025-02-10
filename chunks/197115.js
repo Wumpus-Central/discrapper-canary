@@ -89,7 +89,7 @@ function A(e) {
     );
 }
 let N = function (e) {
-    let { isGift: t, subscriptionTier: n, onClick: r, size: f, className: N, isTrialCTA: C, buttonText: R, buttonTextClassName: O, iconClassName: D, postSuccessGuild: L, onSubscribeModalClose: x, premiumModalAnalyticsLocation: w, showIcon: P = !0, disableShine: M, applicationId: k, giftMessage: U, overrideDisabledButtonText: G, shinyButtonClassName: B, showGradient: Z = !1, ...F } = e,
+    let { isGift: t, subscriptionTier: n, onClick: r, size: f, className: N, isTrialCTA: C, buttonText: R, buttonTextClassName: O, iconClassName: D, postSuccessGuild: L, onSubscribeModalClose: x, premiumModalAnalyticsLocation: P, showIcon: w = !0, disableShine: M, applicationId: k, giftMessage: U, overrideDisabledButtonText: G, shinyButtonClassName: B, showGradient: Z = !1, ...F } = e,
         V = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         j = (0, s.e7)([g.Z], () => g.Z.isFocused()),
         H = (0, s.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
@@ -116,7 +116,7 @@ let N = function (e) {
                 postSuccessGuild: L,
                 onSubscribeModalClose: x,
                 analyticsLocations: W,
-                premiumModalAnalyticsLocation: w,
+                premiumModalAnalyticsLocation: P,
                 applicationId: k,
                 giftMessage: U
             });
@@ -130,7 +130,7 @@ let N = function (e) {
             onClick: q,
             ...F,
             children: [
-                P &&
+                w &&
                     (0, i.jsx)(o.SrA, {
                         size: 'md',
                         color: 'currentColor',
@@ -199,7 +199,7 @@ let N = function (e) {
             ...F,
             ...e,
             children: [
-                P &&
+                w &&
                     (0, i.jsx)(o.SrA, {
                         size: 'md',
                         color: 'currentColor',

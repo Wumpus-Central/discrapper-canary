@@ -76,11 +76,11 @@ var i = n(478497),
         if ('comma' === a && l(C)) b && m && (C = r.maybeMap(C, m)), (N = [{ value: C.length > 0 ? C.join(',') || null : void 0 }]);
         else if (l(g)) N = g;
         else {
-            var w = Object.keys(C);
-            N = E ? w.sort(E) : w;
+            var P = Object.keys(C);
+            N = E ? P.sort(E) : P;
         }
-        var P = f ? n.replace(/\./g, '%2E') : n,
-            M = s && l(C) && 1 === C.length ? P + '[]' : P;
+        var w = f ? n.replace(/\./g, '%2E') : n,
+            M = s && l(C) && 1 === C.length ? w + '[]' : w;
         if (o && l(C) && 0 === C.length) return M + '[]';
         for (var k = 0; k < N.length; ++k) {
             var U = N[k],

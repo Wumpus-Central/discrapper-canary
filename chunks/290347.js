@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(47120), n(411104), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
+n.d(t, { Z: () => A }), n(47120), n(411104), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -27,7 +27,7 @@ let T = [],
             text: t
         });
     },
-    A = (e) => {
+    Z = (e) => {
         let { header: t, subHeader: n, imageSrc: l, tagText: r, wideStyle: s } = e;
         return (0, i.jsxs)('div', {
             className: a()(v.featureCard, { [v.wideStyle]: s }),
@@ -60,8 +60,8 @@ let T = [],
             ]
         });
     };
-function Z(e) {
-    let { className: t, renderModalProps: n, heroArt: r, heroArtClassName: S, modalDismissibleContent: Z, modalTopExtra: b, header: x, headerClassName: L, subHeader: y, subHeaderExtra: P, featureCards: O, changeLogId: R, button: j, body: D } = e,
+function A(e) {
+    let { className: t, renderModalProps: n, heroArt: r, heroArtClassName: S, modalDismissibleContent: A, modalTopExtra: b, header: x, headerClassName: L, subHeader: y, subHeaderExtra: P, featureCards: O, changeLogId: R, button: j, body: D } = e,
         { onClose: w, transitionState: k } = n,
         M = (0, h.Dt)(),
         U = O.length % 2 == 0,
@@ -141,7 +141,7 @@ function Z(e) {
             [R, r.type]
         ),
         l.useEffect(() => {
-            null != Z && (0, p.kk)(Z);
+            null != A && (0, p.kk)(A);
             let e = Date.now();
             return (
                 _.default.track(I.rMx.CHANGE_LOG_OPENED, { change_log_id: R }),
@@ -150,10 +150,10 @@ function Z(e) {
                         change_log_id: R,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != Z && (0, p.EW)(Z, { dismissAction: C.L.DISMISS });
+                        null != A && (0, p.EW)(A, { dismissAction: C.L.DISMISS });
                 }
             );
-        }, [Z, R]),
+        }, [A, R]),
         (0, i.jsxs)(o.Y0X, {
             className: a()(v.root, t),
             transitionState: k,
@@ -256,7 +256,7 @@ function Z(e) {
                                 className: a()(v.featureCardGroup, { [v.wideStyle]: U }),
                                 children: O.map((e, t) =>
                                     (0, i.jsx)(
-                                        A,
+                                        Z,
                                         {
                                             ...e,
                                             wideStyle: U

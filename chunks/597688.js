@@ -42,11 +42,11 @@ let m = new Map(),
         let { skuId: t } = e;
         (R = new Set(R)).add(t), (O = new Map(O)).delete(t), (D = new Map(D)).delete(t);
     },
-    w = (e) => {
+    P = (e) => {
         let { skuId: t, error: n } = e;
         (R = new Set(R)).delete(t), (O = new Map(O)).set(t, n), (D = new Map(D)).set(t, Date.now());
     },
-    P = (e) => {
+    w = (e) => {
         let { skuId: t, product: n } = e;
         T.set(t, n), (R = new Set(R)).delete(t), (O = new Map(O)).delete(t), (D = new Map(D)).delete(t);
     },
@@ -148,8 +148,8 @@ let j = new V(u.Z, {
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: U,
     COLLECTIBLES_CATEGORIES_FETCH_FAILURE: k,
     COLLECTIBLES_PRODUCT_FETCH: x,
-    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: P,
-    COLLECTIBLES_PRODUCT_FETCH_FAILURE: w,
+    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: w,
+    COLLECTIBLES_PRODUCT_FETCH_FAILURE: P,
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: G,
     LOGOUT: Z
 });

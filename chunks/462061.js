@@ -51,13 +51,13 @@ function A(e) {
         F = (0, s.e7)([E.default], () => E.default.getId()),
         { user: U, streamId: z, speaking: V } = t,
         W = U.id === F,
-        H = (0, b.ZP)(t),
-        Y = (0, s.e7)([S.Z], () => S.Z.isFocused()),
+        Y = (0, b.ZP)(t),
+        H = (0, s.e7)([S.Z], () => S.Z.isFocused()),
         B = (0, s.e7)([p.Z], () => p.Z.getWindowFocused(I.KJ3.CHANNEL_CALL_POPOUT)),
         K = (0, s.e7)([Z.Z], () => null != U.id && Z.Z.isLocalVideoDisabled(U.id, (0, m.Z)(t.type)), [U.id, t.type]),
         q = (0, s.e7)([x.ZP], () => x.ZP.isGuestOrLurker(n.guild_id, U.id)),
         G = C.ZP.getName(n.getGuildId(), n.id, U) + (q ? ' '.concat(R.intl.string(R.t['pFO/Pj'])) : ''),
-        J = V && (B || Y),
+        J = V && (B || H),
         Q = o < 124 ? N : j,
         { avatarSrc: X, avatarDecorationSrc: $ } = (0, v.Z)({
             user: U,
@@ -77,9 +77,9 @@ function A(e) {
     }),
     i.useEffect(() => {
         let { channel: e, selectedParticipant: t, user: n } = en.current;
-        e.isGuildStageVoice() && !H && (null == t ? void 0 : t.id) === n.id && u.Z.selectParticipant(e.id, null);
-    }, [H]),
-    r && !K && !P && H && !w && null != L && Z.Z.supports(_.AN.VIDEO))
+        e.isGuildStageVoice() && !Y && (null == t ? void 0 : t.id) === n.id && u.Z.selectParticipant(e.id, null);
+    }, [Y]),
+    r && !K && !P && Y && !w && null != L && Z.Z.supports(_.AN.VIDEO))
         ? (0, l.jsx)(
               h.Z,
               {

@@ -61,19 +61,19 @@ function x(e) {
     let t = L(e);
     t.sentinel++, O++;
 }
-function w(e, t, n) {
+function P(e, t, n) {
     return null != e.guild_id && n && !((0, d.Q5)(e.type) || y.ZP.isChannelRecordOrParentOptedIn(e)) && 0 === t;
 }
-function P(e) {
+function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return !(null == e || (e.isGuildVocal() && 0 === t) || e.hasFlag(b.zZ.IS_GUILD_RESOURCE_CHANNEL) || ((0 === t || n) && (e.isThread() ? u.Z.isMuted(e.id) || y.ZP.isGuildOrCategoryOrChannelMuted(e.guild_id, e.parent_id) : y.ZP.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id))) || (!e.isPrivate() && (w(e, t, (0, s.r1)(e.guild_id)) || !m.Z.can(e.accessPermissions, e)))) && (t > 0 || y.ZP.resolveUnreadSetting(e) === S.i.ALL_MESSAGES);
+    return !(null == e || (e.isGuildVocal() && 0 === t) || e.hasFlag(b.zZ.IS_GUILD_RESOURCE_CHANNEL) || ((0 === t || n) && (e.isThread() ? u.Z.isMuted(e.id) || y.ZP.isGuildOrCategoryOrChannelMuted(e.guild_id, e.parent_id) : y.ZP.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id))) || (!e.isPrivate() && (P(e, t, (0, s.r1)(e.guild_id)) || !m.Z.can(e.accessPermissions, e)))) && (t > 0 || y.ZP.resolveUnreadSetting(e) === S.i.ALL_MESSAGES);
 }
 function M(e) {
     return 'flags' in e;
 }
 function k(e, t, n) {
-    return !(((0, d.bw)(e.type) && 0 === t) || !m.Z.canBasicChannel((0, d.Gz)(e.type), e) || w(e, t, n) || (M(e) && e.hasFlag(b.zZ.IS_GUILD_RESOURCE_CHANNEL))) && (t > 0 || y.ZP.resolveUnreadSetting(e) === S.i.ALL_MESSAGES);
+    return !(((0, d.bw)(e.type) && 0 === t) || !m.Z.canBasicChannel((0, d.Gz)(e.type), e) || P(e, t, n) || (M(e) && e.hasFlag(b.zZ.IS_GUILD_RESOURCE_CHANNEL))) && (t > 0 || y.ZP.resolveUnreadSetting(e) === S.i.ALL_MESSAGES);
 }
 function U(e) {
     switch (e) {
@@ -126,8 +126,8 @@ function j(e, t) {
             if (t.getGuildId() !== n) return;
             let i = u ? o.Z.getMentionCountForChannel(e) : 0,
                 a = g.ZP.getMentionCount(e) - i;
-            null !== n && !c && g.ZP.hasUnread(t.id) && P(t, a, !0) && ((c = !0), (r.unreadChannelId = t.id)),
-                a > 0 && P(t, a)
+            null !== n && !c && g.ZP.hasUnread(t.id) && w(t, a, !0) && ((c = !0), (r.unreadChannelId = t.id)),
+                a > 0 && w(t, a)
                     ? (r.mentionCounts[t.id] = {
                           count: a,
                           isMentionLowImportance: g.ZP.getIsMentionLowImportance(e)
@@ -138,7 +138,7 @@ function j(e, t) {
         r.unreadByType[S.W.CHANNEL] !== i.unreadByType[S.W.CHANNEL] && !r.unreadByType[S.W.CHANNEL])
     ) {
         let e = p.Z.getChannel(i.unreadChannelId);
-        if (!(null != e && !t.includes(e.id) && g.ZP.hasUnread(e.id) && P(e))) return Y(n);
+        if (!(null != e && !t.includes(e.id) && g.ZP.hasUnread(e.id) && w(e))) return Y(n);
         null != n && R.add(n), (r.unreadByType[S.W.CHANNEL] = !0);
     }
     return V(n, r, i);
@@ -160,7 +160,7 @@ function Y(e, t) {
             let n = e[t],
                 r = g.ZP.getMentionCount(t);
             r > 0 &&
-                P(n, r) &&
+                w(n, r) &&
                 ((i.highImportanceMentionCount += r),
                 (i.mentionCounts[n.id] = {
                     count: r,

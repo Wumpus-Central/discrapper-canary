@@ -19,7 +19,7 @@ function d(e, t, n) {
         });
     return (0, r.forwardRef)(function (n, _) {
         var p;
-        let { onScroll: h, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: y, getSectionHeight: I, chunkSize: T, renderSection: b, renderItem: S, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: w, style: P, maxContentWidth: M, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
+        let { onScroll: h, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: y, getSectionHeight: I, chunkSize: T, renderSection: b, renderItem: S, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: P, style: w, maxContentWidth: M, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
             B = r.useRef(null),
             Z = r.useRef(null),
             F = r.useRef({}),
@@ -27,7 +27,7 @@ function d(e, t, n) {
             { scrollerRef: H, scrollerState: Y, getScrollerState: W } = (0, u.T4)();
         (0, u.tT)({
             scrollerRef: H,
-            className: w,
+            className: P,
             specs: a,
             orientation: 'vertical',
             dir: m
@@ -107,12 +107,12 @@ function d(e, t, n) {
             (0, i.jsxs)('div', {
                 ref: H,
                 onScroll: ea,
-                className: s()(w, {
+                className: s()(P, {
                     [e]: !0,
                     [t]: x,
                     [c.scrolling]: V
                 }),
-                style: (0, u.uT)(P),
+                style: (0, u.uT)(w),
                 ...G,
                 children: [
                     null !== (p = null == k ? void 0 : k(X)) && void 0 !== p ? p : null,

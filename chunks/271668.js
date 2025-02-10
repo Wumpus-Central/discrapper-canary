@@ -29,8 +29,8 @@ var i = n(200651),
     D = n(490165),
     L = n(239840);
 let x = 512,
-    w = 7,
-    P = 56,
+    P = 7,
+    w = 56,
     M = 16,
     k = 32,
     U = 20,
@@ -70,7 +70,7 @@ let x = 512,
                     applicationCommands: !a
                 },
                 options: {
-                    placeholderCount: w,
+                    placeholderCount: P,
                     limit: C.tn,
                     includeFrecency: !0
                 },
@@ -91,7 +91,7 @@ let x = 512,
                 searchQuery: ''
             }),
             ei = (e) => {
-                let t = q.length * (k + M) + (Q.reduce((e, t) => e + t.data.length, 0) - (X ? w : 0)) * P - x;
+                let t = q.length * (k + M) + (Q.reduce((e, t) => e + t.data.length, 0) - (X ? P : 0)) * w - x;
                 X && e + G > t && ee(), en(e), Z(), (l.current = e);
             },
             er = r.useRef(ei);
@@ -152,7 +152,7 @@ let x = 512,
                 },
                 onMoveSelection: (e) => {
                     if (0 === J.length) return !0;
-                    let t = X ? w : 0,
+                    let t = X ? P : 0,
                         n = J.length + t,
                         i = null == F ? 0 : F + e;
                     return i >= n ? (i = n - 1) : i < 0 && (i = 0), j(i), W(!0), !0;
@@ -272,7 +272,7 @@ let x = 512,
                         renderSectionHeader: eu,
                         rowCount: q.length,
                         rowCountBySection: es,
-                        rowHeight: P,
+                        rowHeight: w,
                         sectionHeaderHeight: k,
                         sectionMarginBottom: ea,
                         ref: H,

@@ -2,10 +2,10 @@ n.d(t, {
     PF: () => k,
     R7: () => D,
     Tg: () => x,
-    UU: () => w,
+    UU: () => P,
     gK: () => L,
     hM: () => S,
-    iy: () => P,
+    iy: () => w,
     mO: () => R,
     t1: () => b,
     uL: () => M,
@@ -198,7 +198,7 @@ function x() {
             });
         });
 }
-function w(e) {
+function P(e) {
     let t = Date.now();
     b(E.wI2.TRENDING_GIFS),
         s.tn
@@ -230,7 +230,7 @@ function w(e) {
                 }
             );
 }
-function P(e) {
+function w(e) {
     let t = m.Z.toURLSafe(e);
     return null == t ? e : (0, c.MO)(t) ? (0, c.q5)(t).toString() : e;
 }
@@ -241,7 +241,7 @@ function M(e) {
             var n;
             let i = null !== (n = r().max(Object.values(t.gifs).map((e) => e.order))) && void 0 !== n ? n : 0;
             if (
-                ((t.gifs[P(e.url)] = {
+                ((t.gifs[w(e.url)] = {
                     ...e,
                     order: i + 1
                 }),
@@ -264,7 +264,7 @@ function k(e) {
     f.DZ.updateAsync(
         'favoriteGifs',
         (t) => {
-            e in t.gifs ? delete t.gifs[e] : delete t.gifs[P(e)], p.default.track(E.rMx.GIF_UNFAVORITED, { total_num_favorited: r().size(t.gifs) });
+            e in t.gifs ? delete t.gifs[e] : delete t.gifs[w(e)], p.default.track(E.rMx.GIF_UNFAVORITED, { total_num_favorited: r().size(t.gifs) });
         },
         v.fy.INFREQUENT_USER_ACTION
     );

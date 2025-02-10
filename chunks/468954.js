@@ -7,7 +7,7 @@ var i = n(200651),
     l = n(810462),
     u = n(89508);
 function c(e) {
-    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: f, onSearchExpressions: _, hasSearchResults: p, defaultSearchPlaceholder: h, emptySearchPlaceholder: m, renderEmptyState: g, renderRow: E, renderSection: v, renderSectionHeader: y, renderSectionFooter: I, renderInspector: T, renderEmptySearchState: b, renderCategoryList: S, renderHeaderAccessories: A, rowHeight: N, sectionHeaderHeight: C, sectionFooterHeight: R, itemNodeWidth: O, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: w, gridNotice: P, renderHeader: M, renderUpsell: k, setShowUpsell: U } = e,
+    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: f, onSearchExpressions: _, hasSearchResults: p, defaultSearchPlaceholder: h, emptySearchPlaceholder: m, renderEmptyState: g, renderRow: E, renderSection: v, renderSectionHeader: y, renderSectionFooter: I, renderInspector: T, renderEmptySearchState: b, renderCategoryList: S, renderHeaderAccessories: A, rowHeight: N, sectionHeaderHeight: C, sectionFooterHeight: R, itemNodeWidth: O, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: P, gridNotice: w, renderHeader: M, renderUpsell: k, setShowUpsell: U } = e,
         G = r.useRef(null),
         B = r.useRef(null),
         Z = r.useRef(null),
@@ -45,7 +45,7 @@ function c(e) {
             expressionsGrid: Y,
             onSelectItem: f,
             store: d,
-            gridNavigatorId: w
+            gridNavigatorId: P
         }),
         et = r.useCallback(
             (e, t) =>
@@ -91,7 +91,7 @@ function c(e) {
                 hasSendableExpressions: !0,
                 onKeyDown: $,
                 expressionsListRef: B,
-                gridNavigatorId: w,
+                gridNavigatorId: P,
                 defaultSearchPlaceholder: h,
                 emptySearchPlaceholder: m
             }),
@@ -111,15 +111,15 @@ function c(e) {
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           S(B),
-                          null != P &&
+                          null != w &&
                               (0, i.jsx)('div', {
                                   className: u.gridNoticeWrapper,
-                                  children: P
+                                  children: w
                               }),
                           (0, i.jsx)('div', {
                               ref: G,
                               className: u.listWrapper,
-                              id: w,
+                              id: P,
                               ...J,
                               children:
                                   null != H

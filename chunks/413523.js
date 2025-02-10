@@ -178,14 +178,14 @@ class L {
         t ? this.guildRingingUsers.add(e) : this.guildRingingUsers.delete(e);
     }
     _getEmbeddedActivities() {
-        let e = l.ZP.getEmbeddedActivitiesForChannel(this.channelId),
-            t = l.ZP.getSelfEmbeddedActivityForChannel(this.channelId);
-        if (null == t) return e;
+        var e, t;
+        let n = l.ZP.getEmbeddedActivitiesForChannel(this.channelId).concat(l.ZP.getEmbeddedActivitiesForStartingChannel(this.channelId)),
+            r = null !== (e = l.ZP.getSelfEmbeddedActivityForChannel(this.channelId)) && void 0 !== e ? e : l.ZP.getSelfEmbeddedActivitiesForStartingChannel(this.channelId);
+        if (null == r) return n;
         {
-            var n;
-            let r = (0, i.uniqBy)([...e, t], (e) => e.applicationId),
-                a = null === (n = t.participants) || void 0 === n ? void 0 : n.some((e) => e.sessionId === d.default.getSessionId());
-            return (0, s.R)() && a ? r.filter((e) => e.applicationId !== t.applicationId && e.compositeInstanceId !== t.compositeInstanceId) : r;
+            let e = (0, i.uniqBy)([...n, r], (e) => e.applicationId),
+                a = null === (t = r.participants) || void 0 === t ? void 0 : t.some((e) => e.sessionId === d.default.getSessionId());
+            return (0, s.R)() && a ? e.filter((e) => e.applicationId !== r.applicationId && e.compositeInstanceId !== r.compositeInstanceId) : e;
         }
     }
     _getParticipantsForEmbeddedActivities() {
@@ -209,18 +209,18 @@ class L {
         let L = [],
             x = g.default.getUser(e);
         if (null == x) return L;
-        let w = v.Z.getVoiceStateForChannel(this.channelId, e),
-            P = v.Z.getVoicePlatformForChannel(this.channelId, e),
+        let P = v.Z.getVoiceStateForChannel(this.channelId, e),
+            w = v.Z.getVoicePlatformForChannel(this.channelId, e),
             M = _.Z.getChannel(this.channelId),
             k = null !== (i = (null === (n = this.call) || void 0 === n ? void 0 : null === (t = n.ringing) || void 0 === t ? void 0 : t.includes(e)) || this.guildRingingUsers.has(e)) && void 0 !== i && i;
-        (null != w || k) &&
+        (null != P || k) &&
             ((C = {
                 type: b.fO.USER,
                 ...E.Z.getUserStreamData(e, null == M ? void 0 : M.getGuildId()),
                 user: x,
                 id: x.id,
-                voiceState: w,
-                voicePlatform: P,
+                voiceState: P,
+                voicePlatform: w,
                 speaking: (0, a.O)({
                     userId: e,
                     checkIsMuted: !0
@@ -249,7 +249,7 @@ class L {
                 ...r,
                 type: i ? b.fO.HIDDEN_STREAM : b.fO.STREAM,
                 id: t,
-                userVideo: null !== (f = null == w ? void 0 : w.selfVideo) && void 0 !== f && f,
+                userVideo: null !== (f = null == P ? void 0 : P.selfVideo) && void 0 !== f && f,
                 user: x,
                 userNick: I.ZP.getName(null == M ? void 0 : M.getGuildId(), this.channelId, x),
                 stream: U
@@ -257,9 +257,9 @@ class L {
                 L.push(O);
         }
         let G = h.Z.findActivity(x.id, (e) => [S.IIU.PLAYING, S.IIU.WATCHING].includes(e.type));
-        if ((0, o.sq)() && null != w && w.channelId === this.channelId && null != G && (0, y.yE)(null !== (T = G.flags) && void 0 !== T ? T : 0, S.xjy.EMBEDDED)) {
+        if ((0, o.sq)() && null != P && P.channelId === this.channelId && null != G && (0, y.yE)(null !== (T = G.flags) && void 0 !== T ? T : 0, S.xjy.EMBEDDED)) {
             let t = l.ZP.getCurrentEmbeddedActivity();
-            (null == t ? void 0 : null === (N = t.participants) || void 0 === N ? void 0 : N.some((t) => t.userId === e && t.sessionId === w.sessionId)) !== !0 &&
+            (null == t ? void 0 : null === (N = t.participants) || void 0 === N ? void 0 : N.some((t) => t.userId === e && t.sessionId === P.sessionId)) !== !0 &&
                 null != G.application_id &&
                 ((D = {
                     type: b.fO.PRESENCE_EMBEDDED_ACTIVITY,

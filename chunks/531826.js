@@ -40,7 +40,7 @@ function h(e) {
     if (null != i)
         return _({
             application: i,
-            channelId: (0, u.p)(n.location)
+            channelId: (0, u.pY)(n.location)
         });
 }
 function m(e) {

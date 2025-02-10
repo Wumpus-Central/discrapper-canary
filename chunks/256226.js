@@ -26,8 +26,8 @@ let y = r.forwardRef(function (e, t) {
             size: 16,
             guildId: C
         }),
-        w = (0, u.e7)([_.Z], () => _.Z.roleStyle),
-        P = (null === (a = A.tags) || void 0 === a ? void 0 : a.guild_connections) === null,
+        P = (0, u.e7)([_.Z], () => _.Z.roleStyle),
+        w = (null === (a = A.tags) || void 0 === a ? void 0 : a.guild_connections) === null,
         M = r.useCallback(
             (e) => {
                 (0, f.jW)(e, async () => {
@@ -48,14 +48,14 @@ let y = r.forwardRef(function (e, t) {
         B = c.Z.unsafe_rawColors.WHITE_500.css,
         Z = (0, l._i)(U);
     null != Z && 0.3 > (0, l.Bd)(Z) && (B = c.Z.unsafe_rawColors.PRIMARY_630.css),
-        (T = P
+        (T = w
             ? (0, i.jsx)(p.Z, {
                   className: v.roleFlowerStar,
                   iconClassName: b ? v.roleVerifiedIcon : void 0,
                   color: U,
                   size: 14
               })
-            : 'dot' === w
+            : 'dot' === P
               ? (0, i.jsx)(d.FhE, {
                     className: v.roleDot,
                     color: U,

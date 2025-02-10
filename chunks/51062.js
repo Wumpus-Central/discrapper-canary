@@ -28,18 +28,18 @@ function v(e, t, n) {
             return !1;
         }),
         x = (0, u.Ib)(e.guild, e.channel) && !L && !(0, u.g0)(e.guild),
-        w = (0, a.e7)([c.ZP, _.default], () => {
+        P = (0, a.e7)([c.ZP, _.default], () => {
             var e, t;
             let n = _.default.getCurrentUser();
             return null !== (t = null != N.guild_id && null != n ? (null === (e = c.ZP.getMember(N.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== t && t;
         }),
-        { canMentionEveryone: P, hidePersonalInformation: M } = (0, a.cj)(
+        { canMentionEveryone: w, hidePersonalInformation: M } = (0, a.cj)(
             [d.Z, f.Z],
             () => ({
-                canMentionEveryone: N.isPrivate() || w || C === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, N),
+                canMentionEveryone: N.isPrivate() || P || C === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, N),
                 hidePersonalInformation: f.Z.hidePersonalInformation
             }),
-            [N, C, w]
+            [N, C, P]
         ),
         { activeCommand: k, activeCommandOption: U } = (0, a.cj)([o.Z], () => ({
             activeCommand: o.Z.getActiveCommand(N.id),
@@ -58,7 +58,7 @@ function v(e, t, n) {
             activeCommand: k,
             activeCommandOption: U,
             canMentionUsers: null !== (b = null === (y = C.users) || void 0 === y ? void 0 : y.allowMentioning) && void 0 !== b && b,
-            canMentionEveryone: P,
+            canMentionEveryone: w,
             canMentionClyde: x,
             hidePersonalInformation: M,
             hideMentionDescription: C === l.Ie.RULES_INPUT,

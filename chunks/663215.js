@@ -130,8 +130,8 @@ function S(e) {
             location: 'soundboard-useSoundGrid',
             autoTrackExposure: !0
         }),
-        w = N(),
-        P = (0, r.Wu)([_.Z], () => _.Z.recentlyHeardSoundIds);
+        P = N(),
+        w = (0, r.Wu)([_.Z], () => _.Z.recentlyHeardSoundIds);
     return i.useMemo(() => {
         let e = 0,
             i = 0,
@@ -160,7 +160,7 @@ function S(e) {
                       sections: r,
                       guildIds: A,
                       allSounds: g,
-                      potentialSoundIdsForSection: P,
+                      potentialSoundIdsForSection: w,
                       sectionType: h.bg.RECENTLY_HEARD,
                       sortById: !1
                   }),
@@ -169,7 +169,7 @@ function S(e) {
                       sections: r,
                       guildIds: A,
                       allSounds: g,
-                      potentialSoundIdsForSection: w.map((e) => e.soundId),
+                      potentialSoundIdsForSection: P.map((e) => e.soundId),
                       sectionType: h.bg.FREQUENTLY_USED,
                       sortById: !1
                   }),
@@ -189,7 +189,7 @@ function S(e) {
                       lockedCustomSoundCount: i
                   }
               });
-    }, [A, g, v, P, w, x, L, O, D, t, R, C, n, S, d]);
+    }, [A, g, v, w, P, x, L, O, D, t, R, C, n, S, d]);
 }
 function A(e, t, n) {
     return i.useMemo(

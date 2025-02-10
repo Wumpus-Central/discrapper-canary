@@ -30,8 +30,8 @@ var r = n(120356),
     D = n(979038),
     L = n(448980),
     x = n(336383),
-    w = n(194811),
-    P = n(373826),
+    P = n(194811),
+    w = n(373826),
     M = n(315324),
     k = n(262210),
     U = n(103479),
@@ -119,25 +119,25 @@ function Y(e) {
                               color: o.TVs.colors.TEXT_NORMAL,
                               className: H.voiceIcon
                           }),
-                          (0, i.jsx)(P.Z, {
+                          (0, i.jsx)(w.Z, {
                               variant: 'heading-sm/semibold',
                               text: z.name
                           })
                       ]
                   })
                 : (0, c.Z)(Y)
-                  ? (0, i.jsx)(P.Z, {
+                  ? (0, i.jsx)(w.Z, {
                         variant: 'heading-sm/semibold',
                         text: Y.name
                     })
-                  : (0, i.jsx)(P.Z, {
+                  : (0, i.jsx)(w.Z, {
                         variant: 'heading-sm/semibold',
                         text: null !== (e = Y.details) && void 0 !== e ? e : Y.name
                     });
         },
         e_ = () =>
             (0, d.Z)(Y) && null != K
-                ? (0, i.jsx)(P.Z, {
+                ? (0, i.jsx)(w.Z, {
                       variant: 'text-xs/normal',
                       text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: K.name }),
                       onClick: () => {
@@ -145,11 +145,11 @@ function Y(e) {
                       }
                   })
                 : (0, c.Z)(Y)
-                  ? (0, i.jsx)(P.Z, {
+                  ? (0, i.jsx)(w.Z, {
                         variant: 'text-xs/normal',
                         text: Y.details
                     })
-                  : (0, i.jsx)(P.Z, {
+                  : (0, i.jsx)(w.Z, {
                         text: Y.state,
                         variant: 'text-xs/normal'
                     }),
@@ -159,7 +159,7 @@ function Y(e) {
                 ? null
                 : (0, c.Z)(Y)
                   ? eh()
-                  : (0, i.jsx)(P.Z, {
+                  : (0, i.jsx)(w.Z, {
                         text: null === (e = Y.assets) || void 0 === e ? void 0 : e.large_text,
                         variant: 'text-xs/normal'
                     });
@@ -170,11 +170,11 @@ function Y(e) {
                 ? (0, i.jsxs)('div', {
                       className: H.gameState,
                       children: [
-                          (0, i.jsx)(P.Z, {
+                          (0, i.jsx)(w.Z, {
                               variant: 'text-xs/normal',
                               text: Y.state
                           }),
-                          (0, i.jsx)(P.Z, {
+                          (0, i.jsx)(w.Z, {
                               variant: 'text-xs/normal',
                               text: j.intl.formatToPlainString(j.t['u//9Bw'], {
                                   count: '0',
@@ -187,11 +187,11 @@ function Y(e) {
                   ? (0, i.jsxs)('div', {
                         className: H.gameState,
                         children: [
-                            (0, i.jsx)(P.Z, {
+                            (0, i.jsx)(w.Z, {
                                 variant: 'text-xs/normal',
                                 text: Y.state
                             }),
-                            (0, i.jsx)(P.Z, {
+                            (0, i.jsx)(w.Z, {
                                 variant: 'text-xs/normal',
                                 text:
                                     0 === Y.party.size[1]
@@ -204,7 +204,7 @@ function Y(e) {
                         ]
                     })
                   : null == Y.party
-                    ? (0, i.jsx)(P.Z, {
+                    ? (0, i.jsx)(w.Z, {
                           variant: 'text-xs/normal',
                           text: Y.state
                       })
@@ -292,7 +292,7 @@ function Y(e) {
                             onAction: ea,
                             onClose: X,
                             children: [
-                                (0, i.jsx)(w.Z, { ...eo }),
+                                (0, i.jsx)(P.Z, { ...eo }),
                                 (0, i.jsxs)('div', {
                                     className: H.body,
                                     children: [

@@ -34,8 +34,8 @@ function C(e) {
             null != t ? (R.current[e] = t) : delete R.current[e];
         },
         [D, L] = r.useState(d),
-        [x, w] = r.useState(S),
-        [P, M] = r.useState(!1),
+        [x, P] = r.useState(S),
+        [w, M] = r.useState(!1),
         k = r.useRef(null),
         U = r.useRef(null),
         G = r.useRef(0);
@@ -43,7 +43,7 @@ function C(e) {
         G.current = 0;
     }, [d]),
         r.useLayoutEffect(() => {
-            if (P) return;
+            if (w) return;
             let e = N(k.current),
                 t = N(U.current),
                 n = [],
@@ -62,8 +62,8 @@ function C(e) {
                     (e += s + b), n.push(r);
                 }
             }
-            L(n.length === D.length ? D : n), w(i), G.current++;
-        }, [d, D, P]);
+            L(n.length === D.length ? D : n), P(i), G.current++;
+        }, [d, D, w]);
     let B = r.useMemo(() => 'roles-'.concat((0, a.Z)()), []),
         Z = (0, s.ZP)({
             id: B,
@@ -74,14 +74,14 @@ function C(e) {
         }),
         F = d.length,
         V = 0 === F ? I.intl.string(I.t['vR7M+/']) : I.intl.formatToPlainString(I.t.PCs0oq, { numRoles: F }),
-        j = (P ? d : D).map((e, r) => {
+        j = (w ? d : D).map((e, r) => {
             var a;
             return (0, i.jsx)(
                 E.Z,
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: P || r !== D.length - 1 ? S : x },
+                    style: { maxWidth: w || r !== D.length - 1 ? S : x },
                     disableBorderColor: !0,
                     ref: (t) => O(e.id, t),
                     onRemove: () => C(e),
@@ -110,7 +110,7 @@ function C(e) {
                     children: [
                         j,
                         D.length < d.length
-                            ? P
+                            ? w
                                 ? (0, i.jsx)(u.DY3, {
                                       text: I.intl.string(I.t.XnXtCg),
                                       children: (0, i.jsx)(u.P3F, {

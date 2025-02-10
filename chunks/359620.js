@@ -156,7 +156,7 @@ function u(e) {
             keywords: E,
             contains: L
         },
-        w = {
+        P = {
             variants: [
                 {
                     match: [/class/, /\s+/, d, /\s+/, /extends/, /\s+/, u.concat(d, '(', u.concat(/\./, d), ')*')],
@@ -176,7 +176,7 @@ function u(e) {
                 }
             ]
         },
-        P = {
+        w = {
             relevance: 0,
             match: u.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
             className: 'title.class',
@@ -252,7 +252,7 @@ function u(e) {
         keywords: E,
         exports: {
             PARAMS_CONTAINS: L,
-            CLASS_REFERENCE: P
+            CLASS_REFERENCE: w
         },
         illegal: /#(?![$_A-z])/,
         contains: [
@@ -271,7 +271,7 @@ function u(e) {
             R,
             { match: /\$\d+/ },
             T,
-            P,
+            w,
             {
                 scope: 'attr',
                 match: d + u.lookahead(':'),
@@ -378,7 +378,7 @@ function u(e) {
             },
             B,
             U,
-            w,
+            P,
             F,
             { match: /\$[(.]/ }
         ]

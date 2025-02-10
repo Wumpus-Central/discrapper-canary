@@ -22,7 +22,7 @@ n.d(t, {
     Nj: () => eT,
     OG: () => e0,
     PM: () => er,
-    Qe: () => P,
+    Qe: () => w,
     Rs: () => ei,
     U3: () => K,
     V$: () => e$,
@@ -101,8 +101,8 @@ var h = n(572004),
     D = n(701488),
     L = n(388032);
 let x = 2592000000,
-    w = new Set([l.n.PREMIUM_EXTENSION, l.n.PREMIUM_PERMANENT]);
-function P(e) {
+    P = new Set([l.n.PREMIUM_EXTENSION, l.n.PREMIUM_PERMANENT]);
+function w(e) {
     try {
         return (0, a.EQ)(e.config)
             .with({ config_version: 2 }, () => !0)
@@ -463,14 +463,14 @@ let eD = (e, t) => {
     },
     eL = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
     ex = (e) => ez(e) || b.Z.isProgressingOnDesktop(e.id),
-    ew = (e, t) => {
+    eP = (e, t) => {
         var n, i, a, s;
         let o = null === (s = e.userStatus) || void 0 === s ? void 0 : null === (a = s.progress) || void 0 === a ? void 0 : null === (i = a[t.eventName]) || void 0 === i ? void 0 : null === (n = i.heartbeat) || void 0 === n ? void 0 : n.lastBeatAt;
         if (null == o || !ex(e)) return 0;
         let l = Date.now() - new Date(o).valueOf();
         return (0, r.floor)(l / m.Z.Millis.SECOND, 2);
     },
-    eP = (e, t) => {
+    ew = (e, t) => {
         var n, i, r, a, s;
         let o = null === (i = e.userStatus) || void 0 === i ? void 0 : null === (n = i.progress) || void 0 === n ? void 0 : n[t.eventName],
             l = null !== (s = null !== (a = null == o ? void 0 : o.value) && void 0 !== a ? a : null === (r = e.userStatus) || void 0 === r ? void 0 : r.streamProgressSeconds) && void 0 !== s ? s : 0;
@@ -478,14 +478,14 @@ let eD = (e, t) => {
             let n = b.Z.getOptimisticProgress(e.id, t.eventName);
             return null == n || n < l ? l : n;
         }
-        return l + ew(e, t);
+        return l + eP(e, t);
     },
     eM = 0.99,
     ek = (e, t) => {
         var n;
         let i = t.target;
         if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null) return i;
-        let a = Math.min(i * eM, eP(e, t));
+        let a = Math.min(i * eM, ew(e, t));
         return Math.max((0, r.floor)(a, 2), 0);
     },
     eU = (e) => {
@@ -696,7 +696,7 @@ function e6(e) {
 function e5(e) {
     var t;
     let n = null === (t = eu(e)) || void 0 === t ? void 0 : t.expirationMode;
-    return !!(0, A.U)() && !!n && w.has(n);
+    return !!(0, A.U)() && !!n && P.has(n);
 }
 function e7(e) {
     var t;

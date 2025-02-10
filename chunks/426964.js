@@ -30,15 +30,15 @@ let C = r.memo(function (e) {
     let { clan: n, isLoading: C, onClose: R, profileViewedAnalytics: O, userId: D } = e,
         L = null == n ? void 0 : n.identityGuildId,
         x = (0, g.Cc)(null != L ? L : null),
-        w = null == n ? void 0 : n.tag,
-        { newestAnalyticsLocation: P } = (0, l.ZP)(),
+        P = null == n ? void 0 : n.tag,
+        { newestAnalyticsLocation: w } = (0, l.ZP)(),
         M = r.useMemo(
             () => ({
                 tagUserId: D,
-                source: P,
+                source: w,
                 ...O
             }),
-            [D, P, O]
+            [D, w, O]
         ),
         k = (0, s.e7)([_.default], () => _.default.getId()),
         U = (0, s.e7)([p.ZP], () => (null != L ? p.ZP.getMember(L, k) : null), [L, k]),
@@ -116,7 +116,7 @@ let C = r.memo(function (e) {
             }),
             []
         );
-    if (null == w || null == x || null == L || C)
+    if (null == P || null == x || null == L || C)
         return (0, i.jsx)('div', {
             ...q,
             children: (0, i.jsx)(a.$jN, {})

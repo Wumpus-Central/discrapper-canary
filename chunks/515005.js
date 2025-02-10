@@ -23,7 +23,7 @@ let b = (0, l.Mg)(T.__invalid_stickerPickerPreviewDimensions),
     S = (0, l.Mg)(T.__invalid_stickerPickerPreviewPadding),
     A = 250,
     N = r.memo(function (e) {
-        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: N, gutterWidth: C, inspectedStickerPosition: R, isScrolling: O, isUsingKeyboardNavigation: D, onInspect: L, onSelect: x, rowIndex: w, stickerClassName: P, stickerDescriptors: M, stickerPadding: k = S, stickerSize: U = b, ownedStickerPacks: G, enlargeOnInteraction: B = !1, channel: Z, currentUser: F, checkSendability: V = !0 } = e,
+        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: N, gutterWidth: C, inspectedStickerPosition: R, isScrolling: O, isUsingKeyboardNavigation: D, onInspect: L, onSelect: x, rowIndex: P, stickerClassName: w, stickerDescriptors: M, stickerPadding: k = S, stickerSize: U = b, ownedStickerPacks: G, enlargeOnInteraction: B = !1, channel: Z, currentUser: F, checkSendability: V = !0 } = e,
             { location: j } = (0, d.O)(),
             H = U + 2 * k,
             Y = r.useMemo(
@@ -47,7 +47,7 @@ let b = (0, l.Mg)(T.__invalid_stickerPickerPreviewDimensions),
         return (0, i.jsx)('div', {
             className: T.row,
             style: Y,
-            ...(null == N ? void 0 : N(w)),
+            ...(null == N ? void 0 : N(P)),
             children: M.map((e) => {
                 var d;
                 let f = e.visibleRowIndex === (null == R ? void 0 : R.rowIndex) && e.columnIndex === (null == R ? void 0 : R.columnIndex),
@@ -75,7 +75,7 @@ let b = (0, l.Mg)(T.__invalid_stickerPickerPreviewDimensions),
                                     });
                             }));
                     },
-                    { ref: M, tabIndex: k, onFocus: H, ...Y } = null !== (d = null == l ? void 0 : l(e.columnIndex, w)) && void 0 !== d ? d : {};
+                    { ref: M, tabIndex: k, onFocus: H, ...Y } = null !== (d = null == l ? void 0 : l(e.columnIndex, P)) && void 0 !== d ? d : {};
                 switch (e.type) {
                     case m.al.CREATE_STICKER:
                         return (0, i.jsx)(
@@ -84,7 +84,7 @@ let b = (0, l.Mg)(T.__invalid_stickerPickerPreviewDimensions),
                                 ...Y,
                                 children: (0, i.jsxs)(u.P3F, {
                                     'aria-label': e.name,
-                                    className: s()(T.createSticker, P, { [T.createInspected]: f }),
+                                    className: s()(T.createSticker, w, { [T.createInspected]: f }),
                                     innerRef: M,
                                     tabIndex: k,
                                     onFocus: null != H ? H : N,
@@ -126,7 +126,7 @@ let b = (0, l.Mg)(T.__invalid_stickerPickerPreviewDimensions),
                                 key: e.sticker.id
                             },
                             (0, i.jsxs)(u.P3F, {
-                                className: s()(T.sticker, P, {
+                                className: s()(T.sticker, w, {
                                     [T.stickerInspected]: f,
                                     [T.showPulse]: K === e.sticker.id
                                 }),

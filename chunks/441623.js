@@ -83,10 +83,10 @@ function x() {
             (C = new Set(N.slice(0, v)));
     }
 }
-function w(e) {
+function P(e) {
     return Math.round(o()().diff(e, 'years', !0));
 }
-function P() {
+function w() {
     return Array.from(C).some((e) => !A.lastShownFriendsListGiftIntents.includes(e));
 }
 function M() {
@@ -173,11 +173,11 @@ class q extends (i = l.ZP.PersistedStore) {
     canShowFriendsTabBadge() {
         var e;
         let t = null !== (e = A.friendsTabBadgeLastDismissedTime) && void 0 !== e ? e : 0;
-        return !(Date.now() - t <= T) && P();
+        return !(Date.now() - t <= T) && w();
     }
     getFriendAnniversaryYears(e) {
         let t = R[e];
-        return null == t ? 0 : w(t.friendsSince);
+        return null == t ? 0 : P(t.friendsSince);
     }
     isGiftIntentMessageInCooldown(e) {
         return null != A.messageGiftIntentLastShownMap[e];

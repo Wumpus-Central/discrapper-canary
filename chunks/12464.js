@@ -96,8 +96,8 @@ let p = function (e) {
         ),
         [x, R]
     );
-    let w = (0, u.dQu)(l.Z.colors.TEXT_SECONDARY).hex(),
-        P = (0, u.dQu)(l.Z.colors.TEXT_PRIMARY).hex();
+    let P = (0, u.dQu)(l.Z.colors.TEXT_SECONDARY).hex(),
+        w = (0, u.dQu)(l.Z.colors.TEXT_PRIMARY).hex();
     function M() {
         return o()(f.cardInput, {
             [f.cardInputError]: null !== b,
@@ -153,12 +153,12 @@ let p = function (e) {
                 base: {
                     fontFamily: i,
                     fontWeight: n.getPropertyValue('font-weight'),
-                    color: P,
+                    color: w,
                     fontSize: n.getPropertyValue('font-size'),
-                    '::placeholder': { color: w }
+                    '::placeholder': { color: P }
                 }
             });
-        }, [t, w, P]),
+        }, [t, P, w]),
         (0, i.jsxs)('div', {
             className: o()(f.cardNumberWrapper),
             'data-stripe-type': n,

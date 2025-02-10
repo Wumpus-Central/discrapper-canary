@@ -23,7 +23,7 @@ function T(e) {
 }
 async function b(e) {
     let t,
-        { applicationId: n, activityChannelId: u, locationObject: T, analyticsLocations: b, componentId: S, sectionName: A, source: N, partyId: C, joinUserId: R, joinSessionId: O, joinSecret: D, inviterUserId: L, isContextlessActivity: x, customId: w, referrerId: P } = e,
+        { applicationId: n, activityChannelId: u, locationObject: T, analyticsLocations: b, componentId: S, sectionName: A, source: N, partyId: C, joinUserId: R, joinSessionId: O, joinSecret: D, inviterUserId: L, isContextlessActivity: x, customId: P, referrerId: w } = e,
         M = (0, g.Z)(),
         k = a.Z.getChannel(u),
         U = null == k ? void 0 : k.getGuildId(),
@@ -35,7 +35,7 @@ async function b(e) {
     let F = f.ZP.getCurrentEmbeddedActivity();
     (null == F ? void 0 : F.applicationId) != null && (t = r.Z.getApplication(null == F ? void 0 : F.applicationId));
     let V = (null == F ? void 0 : F.location.kind) === i.X.CONTEXTLESS;
-    if ((V || s.Z.getVoiceChannelId() === u) && null != F && F.applicationId === n && (V || (0, h.p)(F.location) === s.Z.getVoiceChannelId())) return (0, y.Z)(U, F.location), Promise.resolve(!0);
+    if ((V || s.Z.getVoiceChannelId() === u) && null != F && F.applicationId === n && (V || (0, h.pY)(F.location) === s.Z.getVoiceChannelId())) return (0, y.Z)(U, F.location), Promise.resolve(!0);
     if (
         !(await (0, p.p)({
             applicationId: n,
@@ -79,8 +79,8 @@ async function b(e) {
             joinSecret: D,
             inviterUserId: L,
             isContextlessActivity: x,
-            customId: w,
-            referrerId: P
+            customId: P,
+            referrerId: w
         })
     );
 }

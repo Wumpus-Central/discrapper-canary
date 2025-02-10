@@ -63,10 +63,10 @@ function c(e) {
                 }),
             [t, d, f]
         ),
-        [x, w] = i.useState(!1),
-        P = i.useRef(x);
+        [x, P] = i.useState(!1),
+        w = i.useRef(x);
     i.useLayoutEffect(() => {
-        P.current = x;
+        w.current = x;
     }, [x]),
         i.useLayoutEffect(() => {
             let e = S.current;
@@ -83,11 +83,11 @@ function c(e) {
                 );
             }
             function n() {
-                w(!0);
+                P(!0);
             }
             function i(e) {
                 !e.currentTarget.contains(e.relatedTarget) &&
-                    (w(!1),
+                    (P(!1),
                     requestAnimationFrame(() => {
                         let e = T.current;
                         null !== e && null == N((0, l.P1)(e)) && O((0, l.P1)(t, l.kn));
@@ -95,7 +95,7 @@ function c(e) {
             }
             async function r() {
                 let e = S.current;
-                if (P.current || null == e) return;
+                if (w.current || null == e) return;
                 let n = T.current;
                 if (g && null !== n) {
                     let t = (0, l.P1)(n),
@@ -136,7 +136,7 @@ function c(e) {
         }, [L, M, _, D]),
         G = i.useCallback(
             (e) => {
-                if (!A.current || (!E && !P.current)) return;
+                if (!A.current || (!E && !w.current)) return;
                 let n = y === o.hy.HORIZONTAL ? o.R8.RIGHT : o.R8.DOWN,
                     i = y === o.hy.HORIZONTAL ? o.R8.LEFT : o.R8.UP;
                 switch (e.key) {

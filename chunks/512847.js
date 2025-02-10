@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(979651),
     T = n(938475),
     S = n(823379),
-    A = n(981631);
-function Z(e, t, n, i) {
+    Z = n(981631);
+function A(e, t, n, i) {
     l.useEffect(() => {
         let l = t(),
             a = new r.Fh(e, () => {
@@ -35,7 +35,7 @@ function Z(e, t, n, i) {
 }
 function b() {
     return (
-        Z(
+        A(
             [f.Z, C.Z],
             () => ({
                 inVoiceChannel: null != C.Z.getVoiceChannelId(),
@@ -61,7 +61,7 @@ function b() {
 }
 function x() {
     return (
-        Z(
+        A(
             [g.Z, I.Z, C.Z, o.Z],
             () => {
                 let e = g.Z.getChannel(C.Z.getVoiceChannelId()),
@@ -72,8 +72,8 @@ function x() {
                 return {
                     channelType: t,
                     guildId: n,
-                    connected: l === A.hes.RTC_CONNECTED,
-                    connectHasStarted: (!i && l !== A.hes.DISCONNECTED) || l === A.hes.RTC_CONNECTED,
+                    connected: l === Z.hes.RTC_CONNECTED,
+                    connectHasStarted: (!i && l !== Z.hes.DISCONNECTED) || l === Z.hes.RTC_CONNECTED,
                     awaitingRemote: null != o.Z.getAwaitingRemoteSessionInfo(),
                     connectedRemote: null != o.Z.getRemoteSessionId()
                 };
@@ -98,13 +98,13 @@ function x() {
 }
 function L() {
     return (
-        Z(
+        A(
             [N.Z],
             () => N.Z.isCurrentUserSpeaking(),
             (e, t) => {
                 if (e !== t) {
                     let e = f.Z.isSelfMute();
-                    if (f.Z.getMode() === A.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
+                    if (f.Z.getMode() === Z.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
                 }
             }
         ),
@@ -113,7 +113,7 @@ function L() {
 }
 function y() {
     return (
-        Z(
+        A(
             [f.Z],
             () => f.Z.getActiveVoiceFilter(),
             (e, t) => {
@@ -125,13 +125,13 @@ function y() {
 }
 function P() {
     return (
-        Z(
+        A(
             [f.Z],
             () => f.Z.isSelfMutedTemporarily(),
             (e, t) => {
                 if (e !== t) {
                     let e = f.Z.isSelfMute();
-                    if (f.Z.getMode() === A.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
+                    if (f.Z.getMode() === Z.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
                 }
             }
         ),
@@ -140,7 +140,7 @@ function P() {
 }
 function O() {
     return (
-        Z(
+        A(
             [v.Z],
             () => v.Z.userHasBeenMovedVersion,
             (e, t) => {
@@ -152,7 +152,7 @@ function O() {
 }
 function R() {
     return (
-        Z(
+        A(
             [C.Z, v.Z],
             () => {
                 let e = C.Z.getVoiceChannelId();
@@ -169,7 +169,7 @@ function R() {
 }
 function j() {
     return (
-        Z(
+        A(
             [C.Z, m.Z, p.default, v.Z, g.Z],
             () => {
                 let e, t;
@@ -185,7 +185,7 @@ function j() {
                 }
                 let o = null;
                 return (
-                    (null == (o = 1 === s.length ? s[0] : m.Z.getCurrentUserActiveStream()) ? void 0 : o.state) === A.jm8.CONNECTING && (o = null),
+                    (null == (o = 1 === s.length ? s[0] : m.Z.getCurrentUserActiveStream()) ? void 0 : o.state) === Z.jm8.CONNECTING && (o = null),
                     null != o && ((r = (0, c.V9)(o)), (a = m.Z.getViewerIds(r).filter((e) => e !== i).length)),
                     {
                         channelType: e,
@@ -232,13 +232,13 @@ function j() {
 }
 function D() {
     return (
-        Z(
+        A(
             [C.Z, a.ZP, p.default],
             () => {
                 let e = C.Z.getVoiceChannelId(),
                     t = C.Z.getChannelId(),
                     n = a.ZP.getConnectedActivityLocation(),
-                    i = (0, s.p)(n),
+                    i = (0, s.pY)(n),
                     l = p.default.getId(),
                     r = (0, S.lm)(t) ? a.ZP.getEmbeddedActivitiesForChannel(t) : a.i6,
                     o = (0, S.lm)(e) ? a.ZP.getEmbeddedActivitiesForChannel(e) : a.i6,

@@ -42,7 +42,7 @@ let p = r.forwardRef(function (e, t) {
             p,
             {
                 keys: (e) => (e ? 'backdrop' : 'empty'),
-                config: { duration: r || I ? 0 : 300 },
+                config: { duration: r || I ? 0 : 200 },
                 from: v,
                 enter: y,
                 leave: v

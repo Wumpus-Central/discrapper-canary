@@ -39,8 +39,8 @@ class _ extends r.Z {
         let { enabled: t } = e;
         o.Z.isConnected() && i.Z.setLoopback(t);
     }
-    handleVoiceFilterRequestSwitch(e) {
-        let { newVoiceFilterId: t } = e,
+    handleVoiceFilterApplied(e) {
+        let { voiceFilterId: t } = e,
             n = s.Z.getVoiceFilterPlaybackEnabled();
         if (null == t) {
             let e = s.Z.getLoopback();
@@ -52,7 +52,7 @@ class _ extends r.Z {
             d(this, 'actions', {
                 RTC_CONNECTION_STATE: this.handleRtcConnectionState,
                 VOICE_FILTER_LOOPBACK_TOGGLE: this.handleLoopbackToggle,
-                VOICE_FILTER_REQUEST_SWITCH: this.handleVoiceFilterRequestSwitch
+                VOICE_FILTER_APPLIED: this.handleVoiceFilterApplied
             }),
             d(this, 'stores', new Map().set(a.Z, this.handleExperimentStateChange));
     }

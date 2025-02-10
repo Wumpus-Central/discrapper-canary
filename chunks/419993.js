@@ -101,7 +101,7 @@ class S extends (i = a.Component) {
             D = N ? _.l : 'textarea',
             L = this.hasError(),
             x = null !== (t = this.props['aria-labelledby']) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId,
-            w = this.getAriaDescribedBy();
+            P = this.getAriaDescribedBy();
         return (0, r.jsxs)('div', {
             className: o()(m.inputWrapper, { [h.flex]: A }),
             children: [
@@ -117,7 +117,7 @@ class S extends (i = a.Component) {
                                     [h.resizeable]: v
                                 }),
                                 'aria-labelledby': x,
-                                'aria-describedby': w,
+                                'aria-describedby': P,
                                 'aria-invalid': L,
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: b,

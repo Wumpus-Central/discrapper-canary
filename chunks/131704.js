@@ -8,7 +8,7 @@ n.d(t, {
     Km: () => A,
     Lr: () => R,
     Q5: () => F,
-    Qm: () => P,
+    Qm: () => w,
     Sf: () => ef,
     TK: () => K,
     Ti: () => b,
@@ -21,7 +21,7 @@ n.d(t, {
     dF: () => Y,
     hv: () => D,
     iR: () => ee,
-    jD: () => ew,
+    jD: () => eP,
     kt: () => ek,
     mn: () => eC,
     nl: () => e_,
@@ -29,7 +29,7 @@ n.d(t, {
     ov: () => z,
     q_: () => ex,
     r8: () => v,
-    sR: () => w,
+    sR: () => P,
     tx: () => N,
     uC: () => Z,
     vc: () => G,
@@ -97,9 +97,9 @@ let L = new Set([h.d4z.GROUP_DM]);
 function x(e) {
     return L.has(e);
 }
-let w = new Set([h.d4z.DM, h.d4z.GROUP_DM, h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.ANNOUNCEMENT_THREAD, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD]);
-function P(e) {
-    return w.has(e);
+let P = new Set([h.d4z.DM, h.d4z.GROUP_DM, h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.ANNOUNCEMENT_THREAD, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD]);
+function w(e) {
+    return P.has(e);
 }
 let M = new Set([h.d4z.DM, h.d4z.GROUP_DM, h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD]);
 function k(e) {
@@ -713,10 +713,10 @@ function ex(e, t) {
     var n, i;
     return (null !== (i = eL[null !== (n = e.type) && void 0 !== n ? n : h.d4z.GUILD_TEXT]) && void 0 !== i ? i : e_.fromServer)(e, t);
 }
-function ew(e) {
+function eP(e) {
     return ek(e);
 }
-let eP = {
+let ew = {
     [h.d4z.DM]: eR,
     [h.d4z.GROUP_DM]: eO,
     [h.d4z.GUILD_TEXT]: eI,
@@ -734,10 +734,10 @@ let eP = {
 };
 function eM(e) {
     var t, n;
-    let i = null !== (n = eP[null !== (t = e.type) && void 0 !== t ? t : h.d4z.GUILD_TEXT]) && void 0 !== n ? n : e_;
+    let i = null !== (n = ew[null !== (t = e.type) && void 0 !== t ? t : h.d4z.GUILD_TEXT]) && void 0 !== n ? n : e_;
     return (0, c.gh)(e, i);
 }
 function ek(e) {
     var t, n;
-    return new (null !== (n = eP[null !== (t = e.type) && void 0 !== t ? t : h.d4z.GUILD_TEXT]) && void 0 !== n ? n : e_)(ec(e));
+    return new (null !== (n = ew[null !== (t = e.type) && void 0 !== t ? t : h.d4z.GUILD_TEXT]) && void 0 !== n ? n : e_)(ec(e));
 }

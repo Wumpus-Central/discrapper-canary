@@ -223,7 +223,7 @@ class R extends (i = a.Component) {
     }
     render() {
         let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: i, onContextMenu: a, autoPlay: o, original: l, className: c, imageClassName: d, children: f, animated: _, shouldAnimate: p, width: h, height: m, minWidth: g, minHeight: E, maxWidth: y, maxHeight: I, onClick: T, renderAccessory: b, tabIndex: S, limitResponsiveWidth: A, useFullWidth: N, placeholder: C, placeholderVersion: O, dataSafeSrc: D, srcIsAnimated: L } = this.props,
-            { readyState: x, hasMouseOver: w, hasFocus: P } = this.state,
+            { readyState: x, hasMouseOver: P, hasFocus: w } = this.state,
             M = null != n,
             k = this.getRatio(),
             U = (0, s.clamp)(Math.round(h * k), null != g ? g : 0, null != y ? y : 1 / 0),
@@ -273,7 +273,7 @@ class R extends (i = a.Component) {
             case v.zo9.READY:
                 if (R.isAnimated(this.props)) {
                     B.onMouseLeave = this.onMouseLeave;
-                    let e = (o || w || P) && (null == p || p) && R.visibilityObserver.isVisible(this);
+                    let e = (o || P || w) && (null == p || p) && R.visibilityObserver.isVisible(this);
                     e ? ((B.src = this.getSrc(k)), (B.renderAccessory = b)) : ((B.src = this.getSrc(k, !_ || !o)), (B.renderAccessory = this.renderAccessory)),
                         null != f &&
                             (B.children = (t) => {

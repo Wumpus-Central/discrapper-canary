@@ -1,5 +1,5 @@
 n.d(t, {
-    o: () => v,
+    o: () => Z,
     t: () => P
 }),
     n(47120),
@@ -27,13 +27,13 @@ var l = n(192379),
     p = n(540126),
     L = n(647086),
     m = n(231338);
-let Z = [s.ZP, o.Z, d.ZP, c.Z, E.Z, C.Z, h.Z, T.Z, g.Z, S.ZP, N.Z, A.ZP];
-function v() {
+let v = [s.ZP, o.Z, d.ZP, c.Z, E.Z, C.Z, h.Z, T.Z, g.Z, S.ZP, N.Z, A.ZP];
+function Z() {
     let [e, t] = l.useState(() => P());
     return (
         l.useEffect(() => {
             let e = a().throttle(() => t(P()), 100);
-            return Z.forEach((t) => t.addChangeListener(e)), () => Z.forEach((t) => t.removeChangeListener(e));
+            return v.forEach((t) => t.addChangeListener(e)), () => v.forEach((t) => t.removeChangeListener(e));
         }, []),
         e
     );
@@ -91,7 +91,7 @@ function P() {
             .value();
     }
     let T = null,
-        Z = {
+        v = {
             isMuted: !1,
             isCollapsed: !1,
             position: 0,
@@ -103,7 +103,7 @@ function P() {
                 return null == T && (T = E(s, this)), T;
             }
         },
-        v = a()(e)
+        Z = a()(e)
             .values()
             .filter((e) => e.type === r.Dd.CATEGORY)
             .sortBy((e) => e.order)
@@ -149,13 +149,13 @@ function P() {
         voiceChannelsSectionNumber: -999,
         getSections() {
             let e = [];
-            (e[p.Fq] = 0), (e[p.wZ] = 0), (e[p.p2] = 0), (e[p.PB] = 0), (e[p.wd] = Z.channelList.length);
-            for (let t = 0; t < v.length; t++) e[p.wF + t] = Math.max(1, v[t].channelList.length);
+            (e[p.Fq] = 0), (e[p.wZ] = 0), (e[p.p2] = 0), (e[p.PB] = 0), (e[p.wd] = v.channelList.length);
+            for (let t = 0; t < Z.length; t++) e[p.wF + t] = Math.max(1, Z[t].channelList.length);
             return e;
         },
-        isPlaceholderRow: (e, t) => !(e < p.wF) && 0 === t && 0 === v[e - p.wF].channelList.length,
-        getCategoryFromSection: (e) => (e === p.wd ? Z : v[e - p.wF]),
-        getNamedCategoryFromSection: (e) => v[e - p.wF],
+        isPlaceholderRow: (e, t) => !(e < p.wF) && 0 === t && 0 === Z[e - p.wF].channelList.length,
+        getCategoryFromSection: (e) => (e === p.wd ? v : Z[e - p.wF]),
+        getNamedCategoryFromSection: (e) => Z[e - p.wF],
         getChannelFromSectionRow(e, t) {
             let n = this.getCategoryFromSection(e);
             return null == n || null == n.channelList[t]
@@ -169,7 +169,7 @@ function P() {
         getChannelNoticeSection: () => D,
         getFirstVoiceChannel: () => null,
         getSectionRowsFromChannel(e) {
-            let t = [Z, ...v];
+            let t = [v, ...Z];
             for (let n = 0; n < t.length; n++)
                 for (let l = 0; l < t[n].channelList.length; l++)
                     if (t[n].channelList[l].id === e)
@@ -182,7 +182,7 @@ function P() {
             return [];
         },
         forEachShownChannel(e) {
-            for (let t of [Z, ...v])
+            for (let t of [v, ...Z])
                 for (let n of t.channelList)
                     for (let t of (e(n.record), n.threadIds)) {
                         let n = h.Z.getChannel(t);
@@ -190,7 +190,7 @@ function P() {
                     }
         },
         forEachChannel(e) {
-            for (let t of [Z, ...v]) for (let n of t.getChannelRecords()) e(n);
+            for (let t of [v, ...Z]) for (let n of t.getChannelRecords()) e(n);
         },
         getSlicedChannels: (e) => [[], e, []],
         getChannels: () => []

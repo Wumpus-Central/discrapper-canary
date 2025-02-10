@@ -26,8 +26,8 @@ var i = n(200651),
     v = n(843445),
     T = n(981631),
     S = n(388032),
-    A = n(912960);
-function Z(e, t, n) {
+    Z = n(912960);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -72,11 +72,11 @@ class L extends l.PureComponent {
         let { isAuthenticated: e, location: t } = this.props,
             n = e
                 ? (0, i.jsx)('div', {
-                      className: A.applicationStore,
+                      className: Z.applicationStore,
                       children: this.renderContent()
                   })
                 : (0, i.jsx)(b, {
-                      className: A.applicationStore,
+                      className: Z.applicationStore,
                       location: t,
                       render: this.renderContent
                   });
@@ -87,8 +87,8 @@ class L extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            Z(this, 'stopListeningToHistory', void 0),
-            Z(this, 'renderStoreListing', (e) => {
+            A(this, 'stopListeningToHistory', void 0),
+            A(this, 'renderStoreListing', (e) => {
                 let {
                         match: {
                             params: { skuId: t, applicationId: n, slug: l }
@@ -110,7 +110,7 @@ class L extends l.PureComponent {
                     })
                 });
             }),
-            Z(this, 'renderContent', () =>
+            A(this, 'renderContent', () =>
                 (0, i.jsxs)(a.rs, {
                     children: [
                         (0, i.jsx)(a.AW, {

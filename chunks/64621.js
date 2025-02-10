@@ -32,22 +32,22 @@ function C(e) {
             var e;
             return (null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === C.id;
         }),
-        w = (0, s.e7)([_.Z], () =>
+        P = (0, s.e7)([_.Z], () =>
             _.Z.findActivity(C.id, (e) => {
                 let { type: t } = e;
                 return t === v.IIU.CUSTOM_STATUS;
             })
         ),
-        P =
+        w =
             !x &&
             R === E.y0.BITE_SIZE &&
             (0, a.EQ)(t)
-                .with(E.n_.AVATAR, () => L && null == w)
+                .with(E.n_.AVATAR, () => L && null == P)
                 .with(E.n_.STATUS, () => L)
                 .with(E.n_.ACTIVITY, () => !L && (O || D))
                 .exhaustive(),
         [M, k] = r.useState(!1);
-    (0, u.Z)(() => k(!0), P ? S : null);
+    (0, u.Z)(() => k(!0), w ? S : null);
     let {
             asset: U,
             assetClassName: G,

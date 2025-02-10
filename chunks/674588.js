@@ -2,7 +2,7 @@ n.d(t, {
     CP: () => R,
     T4: () => O,
     XK: () => x,
-    g5: () => w,
+    g5: () => P,
     gZ: () => N,
     i6: () => C,
     yC: () => D
@@ -323,7 +323,7 @@ async function x() {
         }
     }
 }
-async function w() {
+async function P() {
     let e = Date.now(),
         t = E.Z.getFetchState(),
         n = E.Z.getLastFetchTimeMs(),

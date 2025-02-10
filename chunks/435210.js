@@ -221,16 +221,16 @@ function N(e) {
     return void 0 === e;
 }
 function C(e) {
-    return R(e) && '[object RegExp]' === w(e);
+    return R(e) && '[object RegExp]' === P(e);
 }
 function R(e) {
     return 'object' == typeof e && null !== e;
 }
 function O(e) {
-    return R(e) && '[object Date]' === w(e);
+    return R(e) && '[object Date]' === P(e);
 }
 function D(e) {
-    return R(e) && ('[object Error]' === w(e) || e instanceof Error);
+    return R(e) && ('[object Error]' === P(e) || e instanceof Error);
 }
 function L(e) {
     return 'function' == typeof e;
@@ -238,10 +238,10 @@ function L(e) {
 function x(e) {
     return null === e || 'boolean' == typeof e || 'number' == typeof e || 'string' == typeof e || 'symbol' == typeof e || void 0 === e;
 }
-function w(e) {
+function P(e) {
     return Object.prototype.toString.call(e);
 }
-function P(e) {
+function w(e) {
     return e < 10 ? '0' + e.toString(10) : e.toString(10);
 }
 (t.debuglog = function (e) {
@@ -304,7 +304,7 @@ function P(e) {
 var M = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 function k() {
     var e = new Date(),
-        t = [P(e.getHours()), P(e.getMinutes()), P(e.getSeconds())].join(':');
+        t = [w(e.getHours()), w(e.getMinutes()), w(e.getSeconds())].join(':');
     return [e.getDate(), M[e.getMonth()], t].join(' ');
 }
 function U(e, t) {

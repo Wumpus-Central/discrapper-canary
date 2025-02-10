@@ -64,8 +64,8 @@ function v(e) {
         properties: D,
         _stackContext: { isSlide: !0 }
     });
-    let { ref: L, width: x = 0, height: w = 0 } = (0, c.Z)(S),
-        P = {
+    let { ref: L, width: x = 0, height: P = 0 } = (0, c.Z)(S),
+        w = {
             ...h,
             ...I.springConfig,
             ...(C.enabled ? { clamp: !0 } : null)
@@ -73,8 +73,8 @@ function v(e) {
         M = (0, u.q_F)(
             {
                 width: null !== (n = I.width) && void 0 !== n ? n : x,
-                height: w,
-                config: P
+                height: P,
+                config: w
             },
             null == A ? 'animate-never' : 'respect-motion-settings'
         ),
@@ -85,7 +85,7 @@ function v(e) {
                 from: { value: 1 },
                 enter: { value: 0 },
                 leave: { value: -1 },
-                config: P,
+                config: w,
                 onRest: (e, t) => {
                     let { item: n } = t;
                     n === S && null != I.onSlideReady && I.onSlideReady(n);

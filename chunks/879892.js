@@ -41,7 +41,7 @@ async function m(e) {
         x = (e) => {
             null == v || v(), null == b || b(e);
         },
-        w = () => {
+        P = () => {
             null == v || v(),
                 null == y || y(),
                 d.default.track(p.rMx.MODAL_DISMISSED, {
@@ -82,7 +82,7 @@ async function m(e) {
             analyticsLocation: m,
             analyticsSourceLocation: g,
             guildId: T.id,
-            closeLayer: w,
+            closeLayer: P,
             totalNumberOfSlotsToAssign: null != E ? E : 1,
             onCloseModal: x,
             disablePremiumUpsell: S,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(47120);
+n.d(t, { Z: () => A }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -21,9 +21,9 @@ var i = n(200651),
     v = n(981631),
     T = n(921944),
     S = n(388032),
-    A = n(110696);
-function Z(e) {
-    let { channel: t, iconClassName: r, className: Z, innerClassName: b, ...x } = e,
+    Z = n(110696);
+function A(e) {
+    let { channel: t, iconClassName: r, className: A, innerClassName: b, ...x } = e,
         L = (0, p.Q3)('SoundBoardRTCPanelButton'),
         { mute: y, suppress: P } = (0, _.Z)(t),
         O = (0, s.e7)([f.Z], () => f.Z.isDeaf()),
@@ -75,11 +75,11 @@ function Z(e) {
                         children: (0, i.jsx)(d.zxk, {
                             ...e,
                             ...t,
-                            className: a()(Z, {
-                                [A.buttonActive]: j,
-                                [A.disabled]: R
+                            className: a()(A, {
+                                [Z.buttonActive]: j,
+                                [Z.disabled]: R
                             }),
-                            wrapperClassName: Z,
+                            wrapperClassName: A,
                             innerClassName: b,
                             disabled: R,
                             onClick: () => {

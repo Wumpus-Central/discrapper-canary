@@ -28,8 +28,8 @@ var i = n(620014),
     D = '[object Boolean]',
     L = '[object Date]',
     x = '[object Error]',
-    w = '[object Function]',
-    P = '[object GeneratorFunction]',
+    P = '[object Function]',
+    w = '[object GeneratorFunction]',
     M = '[object Map]',
     k = '[object Number]',
     U = '[object Object]',
@@ -62,7 +62,7 @@ function et(e, t, n, O, D, L) {
         if (((x = h(e)), !M)) return u(e, x);
     } else {
         var Z = p(e),
-            F = Z == w || Z == P;
+            F = Z == P || Z == w;
         if (v(e)) return l(e, M);
         if (Z == U || Z == R || (F && !D)) {
             if (((x = k || F ? {} : g(e)), !M)) return k ? d(e, o(x, e)) : c(e, s(x, e));
@@ -92,4 +92,4 @@ function et(e, t, n, O, D, L) {
         x
     );
 }
-(ee[R] = ee[O] = ee[j] = ee[H] = ee[D] = ee[L] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[U] = ee[G] = ee[B] = ee[Z] = ee[F] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[x] = ee[w] = ee[V] = !1), (e.exports = et);
+(ee[R] = ee[O] = ee[j] = ee[H] = ee[D] = ee[L] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[U] = ee[G] = ee[B] = ee[Z] = ee[F] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[x] = ee[P] = ee[V] = !1), (e.exports = et);

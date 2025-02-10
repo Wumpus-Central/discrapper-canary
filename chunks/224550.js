@@ -35,24 +35,24 @@ let m = function (e) {
             primaryText: L,
             paidURL: f.EYA.PAID_TERMS
         }),
-        w = p.intl.format(p.t.H2uH5e, {
+        P = p.intl.format(p.t.H2uH5e, {
             primaryText: L,
             paidURL: f.EYA.PAID_TERMS
         }),
-        P = '',
+        w = '',
         M = '';
     if (I) {
-        if (null != m && (null == T ? void 0 : T.subscriptionPeriodEnd) != null) P = p.intl.format(p.t['2VPTa2'], { subtotalRate: g });
+        if (null != m && (null == T ? void 0 : T.subscriptionPeriodEnd) != null) w = p.intl.format(p.t['2VPTa2'], { subtotalRate: g });
         else
             switch (t) {
                 case _.rV.MONTH:
-                    P = 1 === n ? p.intl.format(p.t['+ywPmZ'], {}) : p.intl.format(p.t.oBwZfn, { intervalCount: n });
+                    w = 1 === n ? p.intl.format(p.t['+ywPmZ'], {}) : p.intl.format(p.t.oBwZfn, { intervalCount: n });
                     break;
                 case _.rV.YEAR:
-                    P = p.intl.format(p.t.y9gsX1, {});
+                    w = p.intl.format(p.t.y9gsX1, {});
                     break;
                 case void 0:
-                    (M = x), (P = p.intl.format(p.t.UxGFHx, {}));
+                    (M = x), (w = p.intl.format(p.t.UxGFHx, {}));
                     break;
                 default:
                     throw Error('Unexpected interval: '.concat(t));
@@ -60,24 +60,24 @@ let m = function (e) {
     } else if (A === f.GZQ.ONE_TIME)
         switch (N) {
             case f.POd.COLLECTIBLES:
-                (M = x), (P = v ? p.intl.format(p.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS }) : p.intl.format(p.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS }));
+                (M = x), (w = v ? p.intl.format(p.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS }) : p.intl.format(p.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS }));
                 break;
             case f.POd.GUILD_PRODUCT:
-                (M = x), (P = p.intl.format(p.t['GEAQ+v'], { paidURL: f.EYA.PAID_TERMS }));
+                (M = x), (w = p.intl.format(p.t['GEAQ+v'], { paidURL: f.EYA.PAID_TERMS }));
                 break;
             default:
-                (M = w), (P = p.intl.string(p.t['9/siSU']));
+                (M = P), (w = p.intl.string(p.t['9/siSU']));
         }
     else if (null == E || v)
         switch ((v && (M = x), t)) {
             case _.rV.MONTH:
-                (P = v ? p.intl.string(p.t.IjNapq) : p.intl.string(p.t['/sGXPj'])), (P = v ? p.intl.string(p.t.IjNapq) : 1 === n ? p.intl.string(p.t['/sGXPj']) : p.intl.formatToPlainString(p.t.Fqjiho, { intervalCount: n }));
+                (w = v ? p.intl.string(p.t.IjNapq) : p.intl.string(p.t['/sGXPj'])), (w = v ? p.intl.string(p.t.IjNapq) : 1 === n ? p.intl.string(p.t['/sGXPj']) : p.intl.formatToPlainString(p.t.Fqjiho, { intervalCount: n }));
                 break;
             case _.rV.YEAR:
-                P = v ? p.intl.string(p.t.vAfbGx) : p.intl.string(p.t.IGzFc3);
+                w = v ? p.intl.string(p.t.vAfbGx) : p.intl.string(p.t.IGzFc3);
                 break;
             case void 0:
-                P = '';
+                w = '';
                 break;
             default:
                 throw Error('Unexpected interval: '.concat(t));
@@ -96,7 +96,7 @@ let m = function (e) {
             let e = Error('Missing base rate for legal fine print');
             (0, o.q2)(e, { tags: { planId: E.id } });
         }
-        P = (null == R ? void 0 : R.isPaused)
+        w = (null == R ? void 0 : R.isPaused)
             ? p.intl.format(p.t.B6oNwM, {
                   primaryText: i,
                   rate: e,
@@ -140,7 +140,7 @@ let m = function (e) {
                 (0, i.jsxs)('div', {
                     children: [(0, i.jsx)('div', { children: M }), (0, i.jsx)('div', { className: h.divider })]
                 }),
-            '' !== P && (0, i.jsx)('div', { children: P }),
+            '' !== w && (0, i.jsx)('div', { children: w }),
             b === f.HeQ.PAYSAFE_CARD &&
                 (0, i.jsx)('div', {
                     className: h.paymentSourceNoticeCopy,

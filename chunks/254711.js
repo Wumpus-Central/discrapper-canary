@@ -654,8 +654,8 @@ let O = n(227419).Z,
                     },
                     required: !0,
                     get maxLength() {
-                        var w;
-                        return (null === (w = I.default.getCurrentUser()) || void 0 === w ? void 0 : w.premiumType) ? N.en1 : N.J6R;
+                        var P;
+                        return (null === (P = I.default.getCurrentUser()) || void 0 === P ? void 0 : P.premiumType) ? N.en1 : N.J6R;
                     }
                 }
             ],
@@ -676,8 +676,8 @@ let O = n(227419).Z,
             }
         }
     ],
-    P = x.filter((e) => ['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.untranslatedName)),
+    w = x.filter((e) => ['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.untranslatedName)),
     M = (e, t, n) => {
-        let i = t ? x : P;
+        let i = t ? x : w;
         return i.filter((t) => e.includes(t.type) && (!n || t.inputType === S.iw.BUILT_IN_TEXT || t.inputType === S.iw.BUILT_IN_INTEGRATION));
     };

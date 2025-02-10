@@ -54,7 +54,7 @@ let v = {
                     friction: 12
                 }
             }),
-            w = (0, i.jsxs)(i.Fragment, {
+            P = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(s.animated.div, {
                         className: g.progressBarMarkerIndicator,
@@ -67,7 +67,7 @@ let v = {
                         })
                 ]
             });
-        function P() {
+        function w() {
             R &&
                 (0, f.u)({
                     analyticsLocations: A,
@@ -83,7 +83,7 @@ let v = {
         }
         let M = !O && N.fractionalState === h.a$.NONE,
             k = M ? o.P3F : 'div',
-            U = M ? { onClick: P } : {};
+            U = M ? { onClick: w } : {};
         return (0, i.jsx)(o.ua7, {
             text: O
                 ? m.intl.formatToPlainString(m.t['1o48kp'], { tierName: (0, d.nW)(b, { useLevels: !1 }) })
@@ -110,9 +110,9 @@ let v = {
                                   confettiTriggerRef: n,
                                   setConfettiCount: I,
                                   setShouldFireConfetti: T,
-                                  children: w
+                                  children: P
                               })
-                            : w,
+                            : P,
                         (0, i.jsxs)(o.Text, {
                             className: g.progressBarMarkerLabel,
                             variant: 'text-md/normal',

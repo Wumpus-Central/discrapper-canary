@@ -29,8 +29,8 @@ var i = n(200651),
     D = n(451478),
     L = n(768581),
     x = n(358221),
-    w = n(584511),
-    P = n(793865),
+    P = n(584511),
+    w = n(793865),
     M = n(981631),
     k = n(65154),
     U = n(388032),
@@ -100,7 +100,7 @@ function W(e) {
                 (0, i.jsx)(u.yRy, {
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
-                        return (0, i.jsx)(P.Z, { onClose: t });
+                        return (0, i.jsx)(w.Z, { onClose: t });
                     },
                     position: 'top',
                     align: 'center',
@@ -155,7 +155,7 @@ function K(e) {
         A = null != v ? ''.concat(T, ', ').concat(v.name) : T,
         N = (0, l.e7)([D.Z], () => D.Z.isFocused()),
         O = (0, l.e7)([x.Z], () => x.Z.getMode(m.id)),
-        P = r.useCallback((e) => {
+        w = r.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
         K = (0, u.q_F)(
@@ -177,11 +177,11 @@ function K(e) {
     let z = O === M.WtW.VIDEO && b && S > 0,
         q = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(w.Z, {
+                (0, i.jsx)(P.Z, {
                     className: G.icon,
                     ringing: N,
                     src: null != I ? I : '',
-                    ringingType: w.Z.RingingType.INCOMING,
+                    ringingType: P.Z.RingingType.INCOMING,
                     size: g ? u.EFr.SIZE_40 : u.EFr.SIZE_80
                 }),
                 (0, i.jsxs)('div', {
@@ -214,7 +214,7 @@ function K(e) {
         },
         maxX: X.width,
         maxY: X.height,
-        onDragEnd: P,
+        onDragEnd: w,
         dragAnywhere: !0,
         children: (0, i.jsx)(u.f6W, {
             theme: g ? M.BRd.DARK : void 0,

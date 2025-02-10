@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => P,
+    Z: () => w,
     _: () => D
 }),
     n(627341),
@@ -57,7 +57,7 @@ function x() {
         (0, i.jsx)(h.Z, { isEditor: !0 })
     );
 }
-function w(e) {
+function P(e) {
     let { tab: t, isPreview: a, isCoachmark: l, onClose: d } = e,
         _ = r.useCallback(() => {
             d(), l || c.Z.open();
@@ -140,7 +140,7 @@ function w(e) {
         ]
     });
 }
-function P(e) {
+function w(e) {
     let { initialTab: t, markAsDismissed: n, isCoachmark: a } = e,
         [s, o] = r.useState(t),
         c = r.useMemo(
@@ -206,7 +206,7 @@ function P(e) {
                     className: O.scrollContainer,
                     children: [0 === s && (0, i.jsx)(L, { isCoachmark: a }), 1 === s && (0, i.jsx)(x, {})]
                 }),
-                (0, i.jsx)(w, {
+                (0, i.jsx)(P, {
                     tab: s,
                     isPreview: m,
                     onClose: b,

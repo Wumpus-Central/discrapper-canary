@@ -20,7 +20,7 @@ let c = 20,
                 nitroLockedSectionStates: L,
                 setShowUpsell: N
             }),
-            w = (0, l.Qs)({
+            P = (0, l.Qs)({
                 activeCategoryIndex: D,
                 isScrolling: C,
                 listRef: R,
@@ -28,11 +28,11 @@ let c = 20,
                 scrollOffset: c,
                 searchQuery: O
             }),
-            P = r.useCallback(
+            w = r.useCallback(
                 (e) => {
-                    x(e), w(e);
+                    x(e), P(e);
                 },
-                [x, w]
+                [x, P]
             );
         return (
             (0, l.Xs)({
@@ -91,7 +91,7 @@ let c = 20,
                         : (0, i.jsx)(a.Z, {
                               role: 'none presentation',
                               listPadding: _,
-                              onScroll: P,
+                              onScroll: w,
                               renderRow: p,
                               renderSection: h,
                               renderSectionHeader: m,

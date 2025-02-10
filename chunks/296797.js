@@ -13,7 +13,7 @@ function h(e) {
     i.useEffect(() => {
         async function e(e) {
             let { location: n } = e,
-                i = (0, s.p)(n);
+                i = (0, s.pY)(n);
             if (null == i || !(0, o.Z)(i)) return;
             a.Z.getVoiceChannelId() !== i && (await (0, c.Z)({ channelId: i }));
             let r = l.Z.getChannel(i),

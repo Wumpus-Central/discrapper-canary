@@ -48,16 +48,16 @@ var i = n(175730),
             D = g ? e.offsetHeight - O - e.clientHeight : 0,
             L = m ? e.offsetWidth - R - e.clientWidth : 0,
             x = r ? N + R : 0,
-            w = r ? C + O : 0,
-            P = i ? i.width : _(n.width) - x - L,
-            M = i ? i.height : _(n.height) - w - D,
-            k = P + N + L + R,
+            P = r ? C + O : 0,
+            w = i ? i.width : _(n.width) - x - L,
+            M = i ? i.height : _(n.height) - P - D,
+            k = w + N + L + R,
             U = M + C + D + O,
             G = (0, o.v)({
-                devicePixelContentBoxSize: p(Math.round(P * devicePixelRatio), Math.round(M * devicePixelRatio), l),
+                devicePixelContentBoxSize: p(Math.round(w * devicePixelRatio), Math.round(M * devicePixelRatio), l),
                 borderBoxSize: p(k, U, l),
-                contentBoxSize: p(P, M, l),
-                contentRect: new a.N(I, E, P, M)
+                contentBoxSize: p(w, M, l),
+                contentRect: new a.N(I, E, w, M)
             });
         return u.set(e, G), G;
     },

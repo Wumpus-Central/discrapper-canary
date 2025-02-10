@@ -4,14 +4,14 @@ n.d(t, {
     DZ: () => N,
     PS: () => R,
     T6: () => b,
-    Z1: () => P,
+    Z1: () => w,
     aj: () => C,
     bE: () => k,
     fy: () => g.fy,
     hW: () => A,
     nm: () => D,
     sr: () => M,
-    w9: () => w,
+    w9: () => P,
     z2: () => x
 }),
     n(411104),
@@ -345,7 +345,7 @@ function x(e) {
         g.fy.INFREQUENT_USER_ACTION
     );
 }
-function w(e) {
+function P(e) {
     return A.updateAsync(
         'userContent',
         (t) => {
@@ -355,7 +355,7 @@ function w(e) {
         g.fy.INFREQUENT_USER_ACTION
     );
 }
-function P(e) {
+function w(e) {
     return A.updateAsync(
         'userContent',
         (t) => {

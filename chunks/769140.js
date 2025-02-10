@@ -29,8 +29,8 @@ var i = n(200651),
     D = n(626135),
     L = n(960870),
     x = n(139793),
-    w = n(652853),
-    P = n(336383),
+    P = n(652853),
+    w = n(336383),
     M = n(194811),
     k = n(373826),
     U = n(315324),
@@ -46,7 +46,7 @@ var i = n(200651),
     K = n(774797);
 function z(e) {
     let { user: t, currentUser: n, stream: a, className: z, onClose: q } = e,
-        { profileType: Q, theme: X } = (0, w.z)(),
+        { profileType: Q, theme: X } = (0, P.z)(),
         J = {
             [Y.fullSize]: Q === F.y0.FULL_SIZE,
             [H.fullSize]: Q === F.y0.FULL_SIZE
@@ -235,7 +235,7 @@ function z(e) {
                   });
     return (0, i.jsx)(h.Gt, {
         value: et,
-        children: (0, i.jsxs)(P.Z, {
+        children: (0, i.jsxs)(w.Z, {
             ref: ei,
             className: z,
             onAction: en,

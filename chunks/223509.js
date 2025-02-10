@@ -28,8 +28,8 @@ var i,
     D = 7,
     L = 8,
     x = 9,
-    w = 10,
-    P = 11,
+    P = 10,
+    w = 11,
     M = 12,
     k = 13,
     U = 14,
@@ -154,7 +154,7 @@ function ep(e, t) {
                     (e.msg = 'invalid window size'), (n.mode = $);
                     break;
                 }
-                (n.dmax = 1 << eI), (e.adler = n.check = 1), (n.mode = 512 & es ? w : M), (es = 0), (eo = 0);
+                (n.dmax = 1 << eI), (e.adler = n.check = 1), (n.mode = 512 & es ? P : M), (es = 0), (eo = 0);
                 break;
             case A:
                 for (; eo < 16; ) {
@@ -226,13 +226,13 @@ function ep(e, t) {
                 }
                 n.head && ((n.head.hcrc = (n.flags >> 9) & 1), (n.head.done = !0)), (e.adler = n.check = 0), (n.mode = M);
                 break;
-            case w:
+            case P:
                 for (; eo < 32; ) {
                     if (0 === ei) break i;
                     ei--, (es += i[et++] << eo), (eo += 8);
                 }
-                (e.adler = n.check = er(es)), (es = 0), (eo = 0), (n.mode = P);
-            case P:
+                (e.adler = n.check = er(es)), (es = 0), (eo = 0), (n.mode = w);
+            case w:
                 if (0 === n.havedict) return (e.next_out = en), (e.avail_out = ea), (e.next_in = et), (e.avail_in = ei), (n.hold = es), (n.bits = eo), E;
                 (e.adler = n.check = 1), (n.mode = M);
             case M:
@@ -500,6 +500,6 @@ function eg(e, t) {
     var n,
         i,
         r = t.length;
-    return e && e.state && (0 === (n = e.state).wrap || n.mode === P) ? (n.mode === P && (i = s((i = 1), t, r, 0)) !== n.check ? y : e_(e, t, r, r) ? ((n.mode = ee), I) : ((n.havedict = 1), m)) : v;
+    return e && e.state && (0 === (n = e.state).wrap || n.mode === w) ? (n.mode === w && (i = s((i = 1), t, r, 0)) !== n.check ? y : e_(e, t, r, r) ? ((n.mode = ee), I) : ((n.havedict = 1), m)) : v;
 }
 (t.inflateReset = eo), (t.inflateReset2 = el), (t.inflateResetKeep = es), (t.inflateInit = ec), (t.inflateInit2 = eu), (t.inflate = ep), (t.inflateEnd = eh), (t.inflateGetHeader = em), (t.inflateSetDictionary = eg), (t.inflateInfo = 'pako inflate (from Nodeca project)');

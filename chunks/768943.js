@@ -128,11 +128,11 @@ function x(e) {
     let r = { ...i };
     (r.message = (0, o.wi)(i.message, t)), p.set(n, r);
 }
-function w() {
+function P() {
     if (0 === E.size || h) return !1;
     h = !0;
 }
-function P(e) {
+function w(e) {
     let { channel: t } = e;
     if (0 === E.size || h || !y(t.id)) return !1;
     h = !0;
@@ -222,15 +222,15 @@ let Z = new B(s.Z, {
     MESSAGE_DELETE: D,
     MESSAGE_DELETE_BULK: L,
     MESSAGE_UPDATE: x,
-    GUILD_CREATE: w,
-    GUILD_UPDATE: w,
-    GUILD_DELETE: w,
-    CHANNEL_CREATE: P,
+    GUILD_CREATE: P,
+    GUILD_UPDATE: P,
+    GUILD_DELETE: P,
+    CHANNEL_CREATE: w,
     CHANNEL_UPDATES: M,
     CHANNEL_DELETE: k,
     GUILD_MEMBER_UPDATE: U,
-    GUILD_ROLE_CREATE: w,
-    GUILD_ROLE_UPDATE: w,
-    GUILD_ROLE_DELETE: w,
+    GUILD_ROLE_CREATE: P,
+    GUILD_ROLE_UPDATE: P,
+    GUILD_ROLE_DELETE: P,
     MESSAGE_REMINDER_DUE: G
 });

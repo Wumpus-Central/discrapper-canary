@@ -166,7 +166,7 @@ class x extends o.Z {
                             }
                             let O = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != r ? r : 0) + (null != a ? a : 0) + (null != u ? u : 0) + (null != g ? g : 0) + (null != m ? m : 0),
                                 D = (null == T ? void 0 : null === (b = T.desktopSource) || void 0 === b ? void 0 : b.sourcePid) != null ? _.ZP.getGameForPID(T.desktopSource.sourcePid) : null,
-                                { gameName: L, gameId: x, exe: w, distributor: P } = (0, f.G8)(D);
+                                { gameName: L, gameId: x, exe: P, distributor: w } = (0, f.G8)(D);
                             I.default.track(A.rMx.SCREENSHARE_FINISHED, {
                                 screenshare_frames: e,
                                 videohook_frames: t,
@@ -191,8 +191,8 @@ class x extends o.Z {
                                 soundshare_session: null !== (C = null == T ? void 0 : null === (S = T.desktopSource) || void 0 === S ? void 0 : S.soundshareSession) && void 0 !== C ? C : void 0,
                                 share_game_name: L,
                                 share_game_id: x,
-                                share_game_exe: w,
-                                share_game_distributor: P,
+                                share_game_exe: P,
+                                share_game_distributor: w,
                                 picker_type_used: null != this.analyticsContext.nativePickerStyleUsed ? 'native' : 'internal',
                                 duration: this.analyticsContext.getDuration(),
                                 ...R

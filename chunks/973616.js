@@ -132,7 +132,7 @@ class _ extends f {
         });
     }
     mergeFromApplicationUpdate(e) {
-        var t, n, i, r, a, s, o, l, u, c, d, f, p, h, m, g, E, v, y, I, T, b, S, A, N, C, R, O, D, L, x, w, P, M, k, U, G, B, Z, F, V;
+        var t, n, i, r, a, s, o, l, u, c, d, f, p, h, m, g, E, v, y, I, T, b, S, A, N, C, R, O, D, L, x, P, w, M, k, U, G, B, Z, F, V;
         return new _({
             id: null !== (t = e.id) && void 0 !== t ? t : this.id,
             name: null !== (n = e.name) && void 0 !== n ? n : this.name,
@@ -165,8 +165,8 @@ class _ extends f {
             type: null !== (D = e.type) && void 0 !== D ? D : this.type,
             team: null !== (L = e.team) && void 0 !== L ? L : this.team,
             roleConnectionsVerificationUrl: null !== (x = e.roleConnectionsVerificationUrl) && void 0 !== x ? x : this.roleConnectionsVerificationUrl,
-            integrationTypesConfig: null !== (w = e.integrationTypesConfig) && void 0 !== w ? w : this.integrationTypesConfig,
-            isMonetized: null !== (P = e.isMonetized) && void 0 !== P ? P : this.isMonetized,
+            integrationTypesConfig: null !== (P = e.integrationTypesConfig) && void 0 !== P ? P : this.integrationTypesConfig,
+            isMonetized: null !== (w = e.isMonetized) && void 0 !== w ? w : this.isMonetized,
             storefront_available: null !== (M = e.storefront_available) && void 0 !== M ? M : this.storefront_available,
             termsOfServiceUrl: null !== (k = e.termsOfServiceUrl) && void 0 !== k ? k : this.termsOfServiceUrl,
             privacyPolicyUrl: null !== (U = e.privacyPolicyUrl) && void 0 !== U ? U : this.privacyPolicyUrl,

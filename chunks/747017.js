@@ -37,7 +37,7 @@ function E(e) {
                           })) && void 0 !== t
                 ? t
                 : null,
-        w =
+        P =
             (null == x ? void 0 : x.emoji) == null || T
                 ? null
                 : (0, i.jsx)(_.Z, {
@@ -46,11 +46,11 @@ function E(e) {
                       hideTooltip: I,
                       className: a()(g.emoji, v)
                   });
-    return L || null != w
+    return L || null != P
         ? (0, i.jsxs)('div', {
               className: g.container,
               children: [
-                  w,
+                  P,
                   (0, i.jsx)(h.Z, {
                       className: E,
                       children: D

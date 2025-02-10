@@ -27,8 +27,8 @@ var l = n(200651),
     p = n(201895),
     L = n(43267),
     m = n(933557),
-    Z = n(979264),
-    v = n(711406),
+    v = n(979264),
+    Z = n(711406),
     P = n(318870),
     D = n(163889),
     U = n(111028),
@@ -51,8 +51,8 @@ var l = n(200651),
     z = n(981631),
     Q = n(388032),
     Y = n(24259);
-let X = W.ZP.getEnableHardwareAcceleration() ? _.Xo$ : _.qEK,
-    q = {
+let q = W.ZP.getEnableHardwareAcceleration() ? _.Xo$ : _.qEK,
+    X = {
         offset: {
             top: 2,
             bottom: 2,
@@ -104,7 +104,7 @@ function en(e) {
         role: T,
         focusProps: {
             within: !0,
-            ...q
+            ...X
         },
         'aria-posinset': g,
         'aria-setsize': S,
@@ -258,7 +258,7 @@ function el(e) {
                           isTyping: H,
                           status: V
                       })
-                    : (0, l.jsx)(X, {
+                    : (0, l.jsx)(q, {
                           ...eu,
                           src: (0, L.x)(a),
                           'aria-hidden': !0,
@@ -270,7 +270,7 @@ function el(e) {
             let t = null;
             return (
                 R.isSystemUser() || (t = (0, I.Z)(x) ? z.Skl.STREAMING : V),
-                (0, l.jsx)(X, {
+                (0, l.jsx)(q, {
                     ...eu,
                     size: _.EFr.SIZE_32,
                     src: es,
@@ -283,10 +283,10 @@ function el(e) {
                 })
             );
         },
-        eZ = a.isMultiUserDM(),
-        ev = a.isSystemDM(),
+        ev = a.isMultiUserDM(),
+        eZ = a.isSystemDM(),
         eP = (0, M.Q)(),
-        eD = !eZ && !ev && a.type === z.d4z.DM,
+        eD = !ev && !eZ && a.type === z.d4z.DM,
         eU = eD && (null == R ? void 0 : R.primaryGuild) != null,
         eR = eD && ec,
         eO = eD && eE,
@@ -294,7 +294,7 @@ function el(e) {
             ? (0, l.jsxs)(l.Fragment, {
                   children: [
                       eC,
-                      (0, l.jsx)(Z.ZP, {
+                      (0, l.jsx)(v.ZP, {
                           primaryGuild: null == R ? void 0 : R.primaryGuild,
                           userId: null == R ? void 0 : R.id,
                           inline: !0,
@@ -309,7 +309,7 @@ function el(e) {
         id: a.id,
         children: (e) => {
             let { role: t, ...n } = e;
-            return (0, l.jsx)(v.Z, {
+            return (0, l.jsx)(Z.Z, {
                 placement: P.QY.PrivateChannel,
                 namePlate: K,
                 selected: c,
@@ -318,7 +318,7 @@ function el(e) {
                     className: r()(Y.channel, Y.dm),
                     role: t,
                     focusProps: {
-                        ...q,
+                        ...X,
                         focusTarget: ea,
                         ringTarget: er
                     },
@@ -331,7 +331,7 @@ function el(e) {
                     'aria-posinset': W,
                     children: (0, l.jsxs)(_.vjx, {
                         className: r()(Y.interactive, {
-                            [Y.interactiveSystemDM]: eP && ev,
+                            [Y.interactiveSystemDM]: eP && eZ,
                             [Y.interactiveSelected]: c && null == K
                         }),
                         as: 'div',
@@ -371,8 +371,8 @@ function el(e) {
                             eR ? (0, l.jsx)(ee, {}) : null,
                             eO ? (0, l.jsx)(et, {}) : null,
                             (0, l.jsx)(J, {
-                                'aria-label': eZ ? Q.intl.string(Q.t['26C4oq']) : Q.intl.string(Q.t.jsvgc3),
-                                onClick: eZ ? ep : eg,
+                                'aria-label': ev ? Q.intl.string(Q.t['26C4oq']) : Q.intl.string(Q.t.jsvgc3),
+                                onClick: ev ? ep : eg,
                                 onMouseDown: eN
                             })
                         ]

@@ -106,22 +106,22 @@ i.inherits(v, g),
             L = this.h[14],
             x = this.h[15];
         a(this.k.length === n.length);
-        for (var w = 0; w < n.length; w += 2) {
-            var P = L,
+        for (var P = 0; P < n.length; P += 2) {
+            var w = L,
                 M = x,
                 k = N(g, E),
                 U = C(g, E),
                 G = y(g, E, v, R, O, D),
                 B = I(g, E, v, R, O, D),
-                Z = this.k[w],
-                F = this.k[w + 1],
-                V = n[w],
-                j = n[w + 1],
-                H = h(P, M, k, U, G, B, Z, F, V, j),
-                Y = m(P, M, k, U, G, B, Z, F, V, j);
-            (P = S(i, r)), (M = A(i, r));
-            var W = d(P, M, (k = T(i, r, s, o, l, u)), (U = b(i, r, s, o, l, u))),
-                K = f(P, M, k, U);
+                Z = this.k[P],
+                F = this.k[P + 1],
+                V = n[P],
+                j = n[P + 1],
+                H = h(w, M, k, U, G, B, Z, F, V, j),
+                Y = m(w, M, k, U, G, B, Z, F, V, j);
+            (w = S(i, r)), (M = A(i, r));
+            var W = d(w, M, (k = T(i, r, s, o, l, u)), (U = b(i, r, s, o, l, u))),
+                K = f(w, M, k, U);
             (L = O), (x = D), (O = v), (D = R), (v = g), (R = E), (g = d(_, p, H, Y)), (E = f(p, p, H, Y)), (_ = l), (p = u), (l = s), (u = o), (s = i), (o = r), (i = d(H, Y, W, K)), (r = f(H, Y, W, K));
         }
         c(this.h, 0, i, r), c(this.h, 2, s, o), c(this.h, 4, l, u), c(this.h, 6, _, p), c(this.h, 8, g, E), c(this.h, 10, v, R), c(this.h, 12, O, D), c(this.h, 14, L, x);

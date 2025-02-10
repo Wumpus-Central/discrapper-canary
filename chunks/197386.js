@@ -12,7 +12,7 @@ var i = n(475179),
 function _(e, t) {
     let n = l.ZP.getSelfEmbeddedActivityForLocation(t),
         _ = r.Z.getApplication(null == n ? void 0 : n.applicationId),
-        p = (0, c.p)(null == n ? void 0 : n.location),
+        p = (0, c.pY)(null == n ? void 0 : n.location),
         h = (0, u.ZP)({
             application: _,
             channelId: p

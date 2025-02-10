@@ -6,11 +6,11 @@ n.d(t, {
     Dd: () => S,
     Ft: () => R,
     X0: () => x,
-    XA: () => w,
+    XA: () => P,
     Z8: () => E,
     bD: () => N,
     nG: () => T,
-    qJ: () => P,
+    qJ: () => w,
     t0: () => M,
     tI: () => L
 }),
@@ -296,7 +296,7 @@ function x(e, t) {
         isUserApp: null != t && t
     };
 }
-function w(e) {
+function P(e) {
     let t = e.id,
         n = e.options,
         i = null == n ? void 0 : n.find((e) => e.type === c.jw.SUB_COMMAND_GROUP);
@@ -310,7 +310,7 @@ function w(e) {
         }
     );
 }
-function P(e) {
+function w(e) {
     var t, n;
     let { command: i, location: r, triggerSection: a, queryLength: s, sectionName: o, query: l, searchResultsPosition: u, source: c } = e;
     (0, d.yw)(m.rMx.APPLICATION_COMMAND_SELECTED, {

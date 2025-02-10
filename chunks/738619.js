@@ -29,8 +29,8 @@ var i = n(200651),
     D = n(5192),
     L = n(981631),
     x = n(388032),
-    w = n(437047);
-function P(e, t, n) {
+    P = n(437047);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -69,14 +69,14 @@ class k extends r.PureComponent {
     render() {
         let { activity: e, isRefreshChatInputEnabled: t } = this.props;
         return (0, i.jsxs)('div', {
-            className: s()(w.activityInviteEducation, { [w.activityInviteEducationFadeIn]: this.state.fadeIn }),
+            className: s()(P.activityInviteEducation, { [P.activityInviteEducationFadeIn]: this.state.fadeIn }),
             children: [
                 t
                     ? (0, i.jsx)(d.whL, {
                           size: 'sm',
-                          className: w.activityInviteEducationLeftArrow
+                          className: P.activityInviteEducationLeftArrow
                       })
-                    : (0, i.jsx)('div', { className: w.activityInviteEducationArrow }),
+                    : (0, i.jsx)('div', { className: P.activityInviteEducationArrow }),
                 (0, i.jsx)('span', {
                     children: x.intl.format(x.t['i/MoCg'], {
                         game: e.name,
@@ -88,9 +88,9 @@ class k extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            P(this, 'state', { fadeIn: !1 }),
-            P(this, 'timeout', null),
-            P(this, 'handleDismissInviteEducation', () => {
+            w(this, 'state', { fadeIn: !1 }),
+            w(this, 'timeout', null),
+            w(this, 'handleDismissInviteEducation', () => {
                 let { activity: e } = this.props;
                 null != e && null != e.application_id && f.Z.dismissForApplicationId(e.application_id);
             });
@@ -135,7 +135,7 @@ function G(e) {
                   channel: c,
                   guild: I
               });
-    let [R, L, P] = A,
+    let [R, L, w] = A,
         M = '';
     return (
         1 === A.length
@@ -149,31 +149,31 @@ function G(e) {
                 ? (M = x.intl.format(x.t.StKTho, {
                       a: R,
                       b: L,
-                      c: P
+                      c: w
                   }))
                 : A.length > 3 && (M = x.intl.string(x.t.uVDhqa)),
         (0, i.jsxs)('div', {
             className: s()(
-                w.typing,
+                P.typing,
                 {
                     'stop-animation': !a,
-                    [w.isComboing]: p && g
+                    [P.isComboing]: p && g
                 },
                 u
             ),
             children: [
                 (0, i.jsxs)('div', {
-                    className: w.typingDots,
+                    className: P.typingDots,
                     children: [
                         A.length > 0 &&
                             !1 !== _ &&
                             (0, i.jsx)(d.bbz, {
-                                className: w.ellipsis,
+                                className: P.ellipsis,
                                 dotRadius: 3.5,
                                 themed: !0
                             }),
                         (0, i.jsx)('span', {
-                            className: w.text,
+                            className: P.text,
                             'aria-live': 'polite',
                             'aria-atomic': !0,
                             children: M

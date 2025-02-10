@@ -17,7 +17,7 @@ n.d(t, {
     SQ: () => x,
     UY: () => eE,
     XW: () => $,
-    YQ: () => P,
+    YQ: () => w,
     Zv: () => H,
     _H: () => em,
     aN: () => M,
@@ -34,7 +34,7 @@ n.d(t, {
     pF: () => k,
     pl: () => ef,
     qu: () => ec,
-    qv: () => w,
+    qv: () => P,
     r5: () => eN,
     rt: () => eI,
     sF: () => F,
@@ -282,7 +282,7 @@ function x(e) {
     let s = Error('string' == typeof e ? e : t.message);
     return i && (0, p.q2)(s, { extra: n }), s;
 }
-async function w(e, t) {
+async function P(e, t) {
     if (null == e || null == t) throw x('Stripe or elements not loaded');
     let n = t.getElement(i.CardNumberElement);
     if (null == n) throw x('Unable to load card elements from Stripe');
@@ -291,7 +291,7 @@ async function w(e, t) {
     if (null == r) throw x('token not available with successful stripe call');
     return r.id;
 }
-async function P(e, t, n, i) {
+async function w(e, t, n, i) {
     if (null == e) throw x('Stripe not loaded');
     if (null == t) throw x('Bank required for EPS');
     let { email: r, name: a, line1: s, line2: l, city: u, state: c, postalCode: d, country: f } = n;

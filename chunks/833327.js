@@ -99,10 +99,10 @@ function L(e, t, n, i, r, a) {
 function x(e, t, n, i, r, a, s) {
     (t.writelen = i), (t.writecb = s), (t.writing = !0), (t.sync = !0), t.destroyed ? t.onwrite(new y('write')) : n ? e._writev(r, t.onwrite) : e._write(r, a, t.onwrite), (t.sync = !1);
 }
-function w(e, t, n, i, r) {
+function P(e, t, n, i, r) {
     --t.pendingcb, n ? (a.nextTick(r, i), a.nextTick(V, e, t), (e._writableState.errorEmitted = !0), S(e, i)) : (r(i), (e._writableState.errorEmitted = !0), S(e, i), V(e, t));
 }
-function P(e) {
+function w(e) {
     (e.writing = !1), (e.writecb = null), (e.length -= e.writelen), (e.writelen = 0);
 }
 function M(e, t) {
@@ -110,7 +110,7 @@ function M(e, t) {
         i = n.sync,
         r = n.writecb;
     if ('function' != typeof r) throw new E();
-    if ((P(n), t)) w(e, n, i, t, r);
+    if ((w(n), t)) P(e, n, i, t, r);
     else {
         var s = B(n) || e.destroyed;
         s || n.corked || n.bufferProcessing || !n.bufferedRequest || G(e, n), i ? a.nextTick(k, e, n, s, r) : k(e, n, s, r);

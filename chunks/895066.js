@@ -281,7 +281,7 @@ class d {
                                         preemptiveExpanded: t.opPreemptiveExpand,
                                         cng: t.opCNG
                                     },
-                                    w = {
+                                    P = {
                                         passthroughCount: null !== (l = t.passthroughCount) && void 0 !== l ? l : 0,
                                         decryptSuccessCount: null !== (u = t.decryptSuccessCount) && void 0 !== u ? u : 0,
                                         decryptFailureCount: null !== (c = t.decryptFailureCount) && void 0 !== c ? c : 0,
@@ -309,7 +309,7 @@ class d {
                                             mosBuckets: s,
                                             bufferStats: L,
                                             frameOpStats: x,
-                                            ...w
+                                            ...P
                                         }),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: this.periodicInboundStats[n].previousTimestampMs,
@@ -336,7 +336,7 @@ class d {
                                         mosBuckets: [0, 0, 0, 0, 0],
                                         bufferStats: L,
                                         frameOpStats: x,
-                                        ...w
+                                        ...P
                                     }),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: Date.now(),

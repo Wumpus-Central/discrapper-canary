@@ -21,14 +21,14 @@ let I = (e) => {
     let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: I, targetBoostedGuildTier: T, onClose: b = () => {}, closeLayer: S = () => {}, pauseAnimation: A = !1, applicationId: N, handleSubscribeModalClose: C, withHighlight: R = !1, ...O } = e,
         { analyticsLocations: D } = (0, c.ZP)(),
         L = (0, u.bp)() === g.IlC.POPOUT,
-        [x, w] = r.useState(!1),
-        { fractionalState: P } = (0, d.Z)();
+        [x, P] = r.useState(!1),
+        { fractionalState: w } = (0, d.Z)();
     _.Z.hasFetched || (0, l.X8)();
     let M = (0, h.vx)(_.Z.boostSlots),
         k = null != T ? Math.max((0, h.KK)(a, T), 1) : 1,
-        U = (0, h.aq)({ fractionalState: P }),
+        U = (0, h.aq)({ fractionalState: w }),
         G = async () => {
-            w(!0),
+            P(!0),
                 await (0, m.u)({
                     analyticsLocations: D,
                     analyticsLocation: t,
@@ -41,12 +41,12 @@ let I = (e) => {
                     applicationId: N,
                     handleSubscribeModalClose: C
                 }),
-                w(!1);
+                P(!1);
         },
         B = p.ZP.getPremiumTypeSubscription(),
         Z = (0, i.jsx)('span', { children: null != I ? I : v.intl.string(v.t.gKmQ1N) });
     return ((null == B ? void 0 : B.isPausedOrPausePending) &&
-        (P === E.a$.NONE || 0 === M.length) &&
+        (w === E.a$.NONE || 0 === M.length) &&
         ((Z = (0, i.jsxs)('div', {
             className: y.pausedButton,
             children: [

@@ -43,8 +43,8 @@ let h = 24,
     };
 function E(e) {
     let { className: t, disabled: n = !1, innerClassName: r, childClassName: a, iconClassName: p, icon: E, children: v, onClick: y, isActive: I, onMouseEnter: T, onMouseLeave: b, onFocus: S, onBlur: A, pulse: N, sparkle: C, notification: R, 'aria-label': O, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x } = e,
-        w = (0, c.Q3)('ChannelTextAreaButton'),
-        P = (0, l.Yzy)(null != v, {
+        P = (0, c.Q3)('ChannelTextAreaButton'),
+        w = (0, l.Yzy)(null != v, {
             ...g,
             keys: (e) => (e ? 'children' : 'icon')
         }),
@@ -57,8 +57,8 @@ function E(e) {
                           (0, i.jsx)(u.ZP, {
                               className: _.iconMask,
                               mask: u.QS.CHAT_INPUT_BUTTON_NOTIFICATION,
-                              width: w ? m : h,
-                              height: w ? m : h,
+                              width: P ? m : h,
+                              height: P ? m : h,
                               children: t
                           }),
                           (0, i.jsx)('span', { className: _.notificationDot })
@@ -88,7 +88,7 @@ function E(e) {
             }
         },
         children: [
-            P((e, t, n) => {
+            w((e, t, n) => {
                 let { key: r } = n;
                 return t
                     ? (0, i.jsx)(

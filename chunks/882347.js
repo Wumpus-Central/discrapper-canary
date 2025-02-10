@@ -30,7 +30,7 @@ async function m(e) {
         null == t ||
         (await new Promise((e) => {
             let n = o.ZP.getSelfEmbeddedActivities().get(t.id),
-                i = (0, d.p)(null == n ? void 0 : n.location),
+                i = (0, d.pY)(null == n ? void 0 : n.location),
                 r = a.Z.getChannel(i);
             if (null == n || null == r) {
                 e(!0);

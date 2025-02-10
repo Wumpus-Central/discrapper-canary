@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(47120);
+n.d(t, { Z: () => A }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -21,7 +21,7 @@ var i = n(200651),
     v = n(898625),
     T = n(388032),
     S = n(351594);
-function A(e) {
+function Z(e) {
     let { guild: t, width: n, height: r } = e,
         a = l.useMemo(
             () =>
@@ -56,11 +56,11 @@ function A(e) {
               ]
           });
 }
-let Z = (e) => {
+let A = (e) => {
     let { guildId: t } = e,
         { ref: n, width: o, height: c } = (0, s.Z)(),
         [h, m] = l.useState(v.hO.INITIAL),
-        Z = (0, r.e7)([f.Z], () => f.Z.getRequest(t)),
+        A = (0, r.e7)([f.Z], () => f.Z.getRequest(t)),
         b = (0, r.e7)([u.Z], () => u.Z.getGuild(t)),
         { hasFetchedRequestToJoinGuilds: x, guildPreviewDisabled: L } = (0, r.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
@@ -101,7 +101,7 @@ let Z = (e) => {
         className: S.page,
         ref: n,
         children: [
-            (0, i.jsx)(A, {
+            (0, i.jsx)(Z, {
                 guild: L,
                 height: c,
                 width: o
@@ -109,8 +109,8 @@ let Z = (e) => {
             (0, i.jsx)('div', {
                 className: S.contentWrapper,
                 children: (() => {
-                    if (null == Z) return null;
-                    switch (Z.applicationStatus) {
+                    if (null == A) return null;
+                    switch (A.applicationStatus) {
                         case _.wB.SUBMITTED:
                             return (0, i.jsx)(C.Z, {
                                 onWithdrawApplication: R,
@@ -122,7 +122,7 @@ let Z = (e) => {
                                 onReapply: O,
                                 confirmText: T.intl.string(T.t.g9tK0t),
                                 onWithdrawApplication: R,
-                                rejectionReason: Z.rejectionReason,
+                                rejectionReason: A.rejectionReason,
                                 guild: L
                             });
                         default:

@@ -1,6 +1,6 @@
 n.d(t, {
     Cy: () => C,
-    DY: () => w,
+    DY: () => P,
     FG: () => y,
     u: () => x
 }),
@@ -273,7 +273,7 @@ v(x, 'Colors', y),
         allowOverflow: !1,
         overflowOnly: !1
     });
-let w = (e) => {
+let P = (e) => {
     let { children: t, className: n, element: i = 'div', ...s } = e;
     return (0, r.jsx)(x, {
         ...s,

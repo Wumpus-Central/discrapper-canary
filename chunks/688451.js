@@ -208,10 +208,10 @@ function x(e, t) {
             n = Object.getPrototypeOf(n);
         }
 }
-function w(e) {
-    e.P || ((e.P = !0), e.l && w(e.l));
-}
 function P(e) {
+    e.P || ((e.P = !0), e.l && P(e.l));
+}
+function w(e) {
     e.o || (e.o = h(e.t));
 }
 function M(e, t, n) {
@@ -324,7 +324,7 @@ var G,
                     return r ? ('value' in r ? r.value : null === (i = r.get) || void 0 === i ? void 0 : i.call(e.k)) : void 0;
                 })(e, n, t);
             var i = n[t];
-            return e.I || !a(i) ? i : i === L(e.t, t) ? (P(e), (e.o[t] = M(e.A.h, i, e))) : i;
+            return e.I || !a(i) ? i : i === L(e.t, t) ? (w(e), (e.o[t] = M(e.A.h, i, e))) : i;
         },
         has: function (e, t) {
             return t in p(e);
@@ -340,12 +340,12 @@ var G,
                     a = null == r ? void 0 : r[W];
                 if (a && a.t === n) return (e.o[t] = n), (e.R[t] = !1), !0;
                 if (d(n, r) && (void 0 !== n || l(e.t, t))) return !0;
-                P(e), w(e);
+                w(e), P(e);
             }
             return (e.o[t] === n && (void 0 !== n || t in e.o)) || (Number.isNaN(n) && Number.isNaN(e.o[t])) || ((e.o[t] = n), (e.R[t] = !0)), !0;
         },
         deleteProperty: function (e, t) {
-            return void 0 !== L(e.t, t) || t in e.t ? ((e.R[t] = !1), P(e), w(e)) : delete e.R[t], e.o && delete e.o[t], !0;
+            return void 0 !== L(e.t, t) || t in e.t ? ((e.R[t] = !1), w(e), P(e)) : delete e.R[t], e.o && delete e.o[t], !0;
         },
         getOwnPropertyDescriptor: function (e, t) {
             var n = p(e),

@@ -40,8 +40,8 @@ var l,
     z = n(358085),
     V = n(62883),
     W = n(998502),
-    H = n(473159),
-    Y = n(928518),
+    Y = n(473159),
+    H = n(928518),
     B = n(981631),
     K = n(501787),
     q = n(388032),
@@ -63,7 +63,7 @@ class Q extends (l = r.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, H.O)(e), e.addEventListener('blur', this.handleBlur), z.isPlatformEmbedded ? t.addEventListener('contextmenu', V.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', V.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload);
+        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, Y.O)(e), e.addEventListener('blur', this.handleBlur), z.isPlatformEmbedded ? t.addEventListener('contextmenu', V.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', V.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload);
     }
     componentDidUpdate(e) {
         let { title: t, fontScale: n, locale: l, clientThemesCSS: i } = this.props;
@@ -204,7 +204,7 @@ class Q extends (l = r.Component) {
             J(this, '_cleanupWindowActionCreators', void 0),
             J(this, 'beforeUnload', (e) => {
                 let t = () => {
-                    Y.Z.unmountWindow(this.props.windowKey), z.isPlatformEmbedded && W.ZP.close(this.props.windowKey);
+                    H.Z.unmountWindow(this.props.windowKey), z.isPlatformEmbedded && W.ZP.close(this.props.windowKey);
                 };
                 if (this.props.connectedToEmbeddedActivity && !F.ZP.disableEmbeddedActivityPopOutAlert) {
                     if (!z.isPlatformEmbedded) return;
@@ -224,9 +224,9 @@ class Q extends (l = r.Component) {
 }
 J(Q, 'defaultProps', { withTitleBar: !0 });
 let X = r.forwardRef(function (e, t) {
-    let { guestWindow: n, focused: l } = (0, m.cj)([Y.Z], () => ({
-        guestWindow: Y.Z.getWindow(e.windowKey),
-        focused: Y.Z.getWindowFocused(e.windowKey)
+    let { guestWindow: n, focused: l } = (0, m.cj)([H.Z], () => ({
+        guestWindow: H.Z.getWindow(e.windowKey),
+        focused: H.Z.getWindowFocused(e.windowKey)
     }));
     u()(null != n, 'Missing guestWindow reference');
     let r = (0, k.Q3)('PopoutWindow'),

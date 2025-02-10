@@ -217,7 +217,7 @@ function M(i, t) {
                                 label: w.intl.string(w.t['3fRyS0']),
                                 subtext: o.name,
                                 action: () => {
-                                    id((0, U.p)(l.location), l.applicationId);
+                                    id((0, U.pY)(l.location), l.applicationId);
                                 }
                             },
                             'self-embedded-'.concat(l.applicationId)

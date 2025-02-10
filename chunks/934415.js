@@ -2,8 +2,8 @@ n.d(t, {
     EO: () => B,
     LY: () => k,
     Nj: () => a.Z,
-    a5: () => P,
-    c4: () => w,
+    a5: () => w,
+    c4: () => P,
     g7: () => L,
     jZ: () => C,
     mE: () => Z,
@@ -126,7 +126,7 @@ function x(e) {
         a
     );
 }
-function w(e) {
+function P(e) {
     let { channels: t, selectedChannelId: n, selectedVoiceChannelId: i, voiceStates: r } = e;
     return x({
         channels: t,
@@ -135,7 +135,7 @@ function w(e) {
         voiceStates: r
     }).map((e) => e.user);
 }
-function P(e) {
+function w(e) {
     let { type: t } = e;
     switch (t) {
         case g.d4z.DM:

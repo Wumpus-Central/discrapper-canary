@@ -21,17 +21,17 @@ var r = n(200651),
     j = n(51144),
     I = n(145597),
     g = n(214629),
-    A = n(317381),
-    S = n(884338),
+    S = n(317381),
+    A = n(884338),
     y = n(473179),
     P = n(981631),
     N = n(388032),
     w = n(334145);
-let k = S.u.SIZE_24;
+let k = A.u.SIZE_24;
 function T(e) {
     let { applicationId: t, channelId: n } = e,
         l = (0, a.e7)([s.Z], () => s.Z.getApplication(t)),
-        T = (0, a.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities().get(t)),
+        T = (0, a.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivities().get(t)),
         E = (0, a.e7)([Z.Z], () => Z.Z.getChannel(n)),
         R = m.Sb.useSetting(),
         L = (0, a.Wu)(
@@ -128,7 +128,7 @@ function T(e) {
                                         children: '.'
                                     })
                                 }),
-                                (0, r.jsx)(S.Z, {
+                                (0, r.jsx)(A.Z, {
                                     renderIcon: !1,
                                     users: O,
                                     size: k,

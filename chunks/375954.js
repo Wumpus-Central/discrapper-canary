@@ -29,7 +29,7 @@ var i,
     D = n(914010),
     L = n(594174),
     x = n(981631);
-function w(e, t, n) {
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function w(e, t, n) {
         e
     );
 }
-let P = new Set(),
+let w = new Set(),
     M = new d.Z('MessageStore'),
     k = !1;
 function U() {
@@ -54,7 +54,7 @@ function U() {
             })
         );
     }),
-        P.clear();
+        w.clear();
 }
 function G(e) {
     let { changesByChannelId: t } = e;
@@ -80,7 +80,7 @@ function Z(e) {
 }
 function F(e) {
     let { channelId: t } = e;
-    M.log('Clearing messages for '.concat(t)), u.Z.clear(t), P.clear();
+    M.log('Clearing messages for '.concat(t)), u.Z.clear(t), w.clear();
 }
 function V(e) {
     let { channelId: t, jump: n, focus: i, before: r, after: a, limit: s, truncate: o } = e,
@@ -115,16 +115,16 @@ function H(e) {
 }
 function Y(e) {
     let { message: t } = e;
-    null != t.nonce && P.add(t.nonce);
+    null != t.nonce && w.add(t.nonce);
 }
 function W(e) {
     let { channelId: t, messageRecord: n } = e,
         i = null == n ? void 0 : n.nonce;
-    if (null != i && P.has(i)) {
+    if (null != i && w.has(i)) {
         let e = u.Z.getOrCreate(t),
             n = e.get(i);
         if (null == n) return;
-        (e = (e = e.remove(i)).merge([n])), P.delete(i), u.Z.commit(e);
+        (e = (e = e.remove(i)).merge([n])), w.delete(i), u.Z.commit(e);
     }
 }
 function K(e) {
@@ -135,7 +135,7 @@ function K(e) {
         return;
     }
     if (!r.ready) return !1;
-    null != n.nonce && n.state !== x.yb.SENDING && P.has(n.nonce) && ((r = r.remove(n.nonce)), P.delete(n.nonce)), (r = r.receiveMessage(n, !0 === b.Z.isAtBottom(t))), u.Z.commit(r);
+    null != n.nonce && n.state !== x.yb.SENDING && w.has(n.nonce) && ((r = r.remove(n.nonce)), w.delete(n.nonce)), (r = r.receiveMessage(n, !0 === b.Z.isAtBottom(t))), u.Z.commit(r);
 }
 function z(e) {
     let { channelId: t, messageId: n, reason: i } = e,
@@ -152,7 +152,7 @@ function q(e) {
         let e = i.getAfter(t);
         i = null != e && e.blocked ? i.mutate({ revealedMessageId: e.id }) : i.mutate({ revealedMessageId: null });
     }
-    (i = i.remove(t)), u.Z.commit(i), P.delete(t);
+    (i = i.remove(t)), u.Z.commit(i), w.delete(t);
 }
 function Q(e) {
     let { ids: t, channelId: n } = e,
@@ -166,7 +166,7 @@ function Q(e) {
     }
     u.Z.commit(r),
         t.forEach((e) => {
-            P.delete(e);
+            w.delete(e);
         });
 }
 function X(e) {
@@ -263,7 +263,7 @@ function ed() {
     u.Z.forEach((e) => {
         u.Z.clear(e.channelId);
     }),
-        P.clear();
+        w.clear();
 }
 function ef(e) {
     for (let [t, n] of y.default.entries(e.messages)) {
@@ -351,7 +351,7 @@ class eh extends (i = s.ZP.Store) {
         return k;
     }
 }
-w(eh, 'displayName', 'MessageStore');
+P(eh, 'displayName', 'MessageStore');
 let em = new eh(o.Z, {
     BACKGROUND_SYNC_CHANNEL_MESSAGES: G,
     CONNECTION_OPEN: U,
