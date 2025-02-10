@@ -22,20 +22,21 @@ var i = n(200651),
     b = n(720947);
 let S = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
 function A(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: A, animateOnHover: N, onOpenProfile: C, className: R } = e,
-        { theme: O } = (0, v.z)(),
-        { analyticsLocations: D } = (0, d.ZP)(c.Z.AVATAR),
-        { trackUserProfileAction: L } = (0, m.KZ)(),
-        x = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, T.p9.TIER_2),
-        w = r.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
-        { live: P } = (0, g.Z)(t.id),
-        [M] = P,
-        { status: k, isMobileOnline: U } = (0, o.cj)([_.Z], () => ({
-            status: (0, u.Z)(M) ? I.Skl.STREAMING : _.Z.getStatus(t.id),
+    let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: A, animateOnHover: N, onOpenProfile: C, className: R, previewStatus: O } = e,
+        { theme: D } = (0, v.z)(),
+        { analyticsLocations: L } = (0, d.ZP)(c.Z.AVATAR),
+        { trackUserProfileAction: x } = (0, m.KZ)(),
+        w = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, T.p9.TIER_2),
+        P = r.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
+        { live: M } = (0, g.Z)(t.id),
+        [k] = M,
+        { status: U, isMobileOnline: G } = (0, o.cj)([_.Z], () => ({
+            status: (0, u.Z)(k) ? I.Skl.STREAMING : _.Z.getStatus(t.id),
             isMobileOnline: _.Z.isMobileOnline(t.id)
         })),
-        G = A === y.y0.FULL_SIZE ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        B = s()(
+        B = void 0 !== O ? O : U,
+        Z = A === y.y0.FULL_SIZE ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
+        F = s()(
             b.avatar,
             {
                 [b.biteSize]: A === y.y0.BITE_SIZE,
@@ -45,44 +46,44 @@ function A(e) {
             R
         ),
         {
-            avatarDecorationSrc: Z,
-            avatarSrc: F,
-            eventHandlers: V
+            avatarDecorationSrc: V,
+            avatarSrc: j,
+            eventHandlers: H
         } = (0, E.Z)({
             user: t,
             guildId: null != n ? n.guildId : a,
-            size: G,
+            size: Z,
             animateOnHover: N
         }),
-        j = (0, i.jsx)(S, {
-            src: F,
-            avatarDecoration: Z,
-            size: G,
+        Y = (0, i.jsx)(S, {
+            src: j,
+            avatarDecoration: V,
+            size: Z,
             'aria-label': t.username,
             imageClassName: null != C ? b.overlay : void 0,
-            status: w ? I.Skl.UNKNOWN : k,
-            statusBackdropColor: x && !w ? (0, l.QFD)(O) : void 0,
-            isMobile: U,
+            status: P ? I.Skl.UNKNOWN : B,
+            statusBackdropColor: w && !P ? (0, l.QFD)(D) : void 0,
+            isMobile: G,
             statusTooltip: !0,
             statusTooltipDelay: y.vB
         });
     return null == C
         ? (0, i.jsx)('div', {
-              ...V,
-              className: B,
-              children: j
+              ...H,
+              className: F,
+              children: Y
           })
         : (0, i.jsx)(l.P3F, {
-              ...V,
-              className: s()(B, b.clickable),
+              ...H,
+              className: s()(F, b.clickable),
               focusProps: { ringClassName: b.focusRing },
               onClick: () => {
-                  L({
+                  x({
                       action: 'PRESS_VIEW_PROFILE',
-                      analyticsLocations: D
+                      analyticsLocations: L
                   }),
                       null == C || C();
               },
-              children: j
+              children: Y
           });
 }
