@@ -1,53 +1,50 @@
-n.d(t, { default: () => S }), n(627341);
-var s = n(200651);
-n(192379);
-var i = n(278074),
-    a = n(990547),
-    r = n(442837),
-    o = n(481060),
-    l = n(287734),
-    _ = n(922611),
-    d = n(592125),
-    c = n(699516),
-    u = n(594174),
-    A = n(626135),
-    g = n(33194),
-    I = n(807031),
-    E = n(343544),
-    h = n(14251),
-    m = n(110223),
-    f = n(981631),
-    N = n(388032),
-    x = n(743398);
-function S(e) {
-    let { channelId: t, userId: n, transitionState: S, onClose: p } = e,
-        L = (0, I.KR)({ location: 'warning_modal' }),
-        C = (0, r.e7)([c.Z], () => c.Z.isBlocked(n)),
-        G = (0, _.Do)({ location: 'BlockedUserJoinedVoiceChannelModal' }),
-        O = (0, r.e7)([d.Z], () => d.Z.getChannel(t));
-    if (!L) return null;
-    let j = u.default.getUser(n);
-    if (null == j) return null;
-    let v = [
+s.d(t, { default: () => x }), s(627341);
+var n = s(200651);
+s(192379);
+var i = s(278074),
+    a = s(990547),
+    r = s(442837),
+    o = s(481060),
+    l = s(287734),
+    _ = s(922611),
+    d = s(592125),
+    c = s(699516),
+    u = s(594174),
+    A = s(626135),
+    I = s(33194),
+    g = s(343544),
+    E = s(14251),
+    h = s(110223),
+    m = s(981631),
+    f = s(388032),
+    N = s(743398);
+function x(e) {
+    let { channelId: t, userId: s, transitionState: x, onClose: S } = e,
+        p = (0, r.e7)([c.Z], () => c.Z.isBlocked(s)),
+        L = (0, _.Do)({ location: 'BlockedUserJoinedVoiceChannelModal' }),
+        C = (0, r.e7)([d.Z], () => d.Z.getChannel(t)),
+        G = u.default.getUser(s);
+    if (null == G) return null;
+    let O = [
             {
-                icon: G ? (0, h.r)([n], null == O ? void 0 : O.guild_id) : (0, s.jsx)(o.tBG, {}),
-                text: G ? (0, h.a)([n], 1, null == O ? void 0 : O.guild_id, t) : N.intl.formatToPlainString(N.t.w0YvUl, { userName: null == j ? void 0 : j.username }),
-                className: G ? x.row : void 0
+                icon: L ? (0, E.r)([s], null == C ? void 0 : C.guild_id) : (0, n.jsx)(o.tBG, {}),
+                text: L ? (0, E.a)([s], 1, null == C ? void 0 : C.guild_id, t) : f.intl.formatToPlainString(f.t.w0YvUl, { userName: null == G ? void 0 : G.username }),
+                className: L ? N.row : void 0
             },
             {
-                icon: G
-                    ? (0, s.jsx)('div', {
-                          className: x.icon,
-                          children: (0, s.jsx)(o.aNP, {})
+                icon: L
+                    ? (0, n.jsx)('div', {
+                          className: N.icon,
+                          children: (0, n.jsx)(o.aNP, {})
                       })
-                    : (0, s.jsx)(o.S6n, {}),
-                text: N.intl.string(N.t['+4O9nZ']),
-                className: G ? x.row : void 0
+                    : (0, n.jsx)(o.S6n, {}),
+                text: f.intl.string(f.t['+4O9nZ']),
+                className: L ? N.row : void 0
             }
         ],
-        F = (0, i.EQ)({
-            stealthRemediationEnabled: G,
-            isBlocked: C
+        j = (0, i.EQ)({
+            stealthRemediationEnabled: L,
+            isBlocked: p
         })
             .with(
                 {
@@ -55,8 +52,8 @@ function S(e) {
                     isBlocked: !0
                 },
                 () =>
-                    (0, s.jsxs)(s.Fragment, {
-                        children: [N.intl.string(N.t.cpgfFh), (0, s.jsx)('br', {}), N.intl.string(N.t.UKQ4Cg)]
+                    (0, n.jsxs)(n.Fragment, {
+                        children: [f.intl.string(f.t.cpgfFh), (0, n.jsx)('br', {}), f.intl.string(f.t.UKQ4Cg)]
                     })
             )
             .with(
@@ -65,49 +62,49 @@ function S(e) {
                     isBlocked: !1
                 },
                 () =>
-                    (0, s.jsxs)(s.Fragment, {
-                        children: [N.intl.string(N.t['xj3j4+']), (0, s.jsx)('br', {}), N.intl.string(N.t.wWueRU)]
+                    (0, n.jsxs)(n.Fragment, {
+                        children: [f.intl.string(f.t['xj3j4+']), (0, n.jsx)('br', {}), f.intl.string(f.t.wWueRU)]
                     })
             )
-            .otherwise(() => N.intl.string(N.t.K8YIgY));
-    return (0, s.jsx)(E.Z, {
-        headerText: G ? N.intl.string(N.t['1/gpFh']) : N.intl.string(N.t.LGnmpa),
-        secondaryHeaderText: G ? void 0 : N.intl.string(N.t['1/gpFh']),
-        descriptionText: F,
-        infoRows: v,
+            .otherwise(() => f.intl.string(f.t.K8YIgY));
+    return (0, n.jsx)(g.Z, {
+        headerText: L ? f.intl.string(f.t['1/gpFh']) : f.intl.string(f.t.LGnmpa),
+        secondaryHeaderText: L ? void 0 : f.intl.string(f.t['1/gpFh']),
+        descriptionText: j,
+        infoRows: O,
         onDismissAndStay: () => {
-            p(),
-                (0, g.g6)(t),
-                A.default.track(f.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: m.q.CLICK_TO_STAY,
+            S(),
+                (0, I.g6)(t),
+                A.default.track(m.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: h.q.CLICK_TO_STAY,
                     channel_id: t,
-                    blocked_user_ids: C ? [n] : [],
-                    ignored_user_ids: C ? [] : [n],
-                    warning_surface: m.fz.POST_JOIN_MODAL
+                    blocked_user_ids: p ? [s] : [],
+                    ignored_user_ids: p ? [] : [s],
+                    warning_surface: h.fz.POST_JOIN_MODAL
                 });
         },
         onDismissAndLeave: () => {
-            p(),
+            S(),
                 l.default.disconnect(),
-                A.default.track(f.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: m.q.CLICK_TO_LEAVE,
+                A.default.track(m.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: h.q.CLICK_TO_LEAVE,
                     channel_id: t,
-                    blocked_user_ids: C ? [n] : [],
-                    ignored_user_ids: C ? [] : [n],
-                    warning_surface: m.fz.POST_JOIN_MODAL
+                    blocked_user_ids: p ? [s] : [],
+                    ignored_user_ids: p ? [] : [s],
+                    warning_surface: h.fz.POST_JOIN_MODAL
                 });
         },
-        leaveButtonText: N.intl.string(N.t['Y56/oK']),
-        stayButtonText: N.intl.string(N.t['Z+/hfX']),
-        transitionState: S,
-        onClose: p,
+        leaveButtonText: f.intl.string(f.t['Y56/oK']),
+        stayButtonText: f.intl.string(f.t['Z+/hfX']),
+        transitionState: x,
+        onClose: S,
         impression: {
             impressionName: a.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
             impressionProperties: {
                 channel_id: t,
-                blocked_user_ids: C ? [n] : [],
-                ignored_user_ids: C ? [] : [n],
-                warning_surface: m.fz.POST_JOIN_MODAL
+                blocked_user_ids: p ? [s] : [],
+                ignored_user_ids: p ? [] : [s],
+                warning_surface: h.fz.POST_JOIN_MODAL
             }
         }
     });
