@@ -22340,26 +22340,6 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     cursor: pointer
 }
 
-.container__10adc {
-    background-color: var(--background-floating);
-    opacity: .95
-}
-
-.image__10adc {
-    height: 80px;
-    width: auto
-}
-
-.buttonContainer__10adc {
-    position: relative
-}
-
-.previewButtonContainer__10adc {
-    position: absolute;
-    top: 8px;
-    left: -24px
-}
-
 .sectionContainer__61424 {
     display: flex;
     padding-left: 8px
