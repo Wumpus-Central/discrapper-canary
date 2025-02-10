@@ -35,7 +35,9 @@ function f(e) {
             reappearTimeMs: I
         },
         b = o.useRef(S);
-    o.useEffect(() => void (b.current = S)),
+    o.useEffect(() => {
+        b.current = S;
+    }),
         o.useEffect(
             () => (
                 (x.current = setInterval(() => {

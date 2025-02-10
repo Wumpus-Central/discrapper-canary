@@ -1,7 +1,7 @@
 t.d(a, { default: () => s });
 var n = t(200651),
-    i = t(192379),
-    r = t(232713),
+    r = t(192379),
+    i = t(232713),
     l = t(481060),
     u = t(239091),
     o = t(667142),
@@ -9,7 +9,7 @@ var n = t(200651),
 function s(e) {
     let { onSelect: a, onClose: t } = e,
         s = (function () {
-            let e = o.ZP.useState((e) => e.timeToLiveMs, r.X);
+            let e = o.ZP.useState((e) => e.timeToLiveMs, i.X);
             return (0, n.jsx)(l.II_, {
                 id: 'opacity',
                 'aria-haspopup': !0,
@@ -28,7 +28,7 @@ function s(e) {
             });
         })(),
         p = (function () {
-            let e = o.ZP.useState((e) => e.reappearTimeMs, r.X);
+            let e = o.ZP.useState((e) => e.reappearTimeMs, i.X);
             return (0, n.jsx)(l.II_, {
                 id: 'opacity',
                 'aria-haspopup': !0,
@@ -46,10 +46,12 @@ function s(e) {
                     })
             });
         })(),
-        d = i.useRef(t);
+        f = r.useRef(t);
     return (
-        i.useEffect(() => void (d.current = t)),
-        i.useEffect(() => () => d.current(), []),
+        r.useEffect(() => {
+            f.current = t;
+        }),
+        r.useEffect(() => () => f.current(), []),
         (0, n.jsxs)(l.v2r, {
             navId: 'overlay-click-zone-debug-context-menu',
             onClose: u.Zy,

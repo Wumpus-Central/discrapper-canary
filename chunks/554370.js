@@ -158,13 +158,12 @@ function ea(e) {
                 mount: e,
                 unmount: t
             });
-            o.useEffect(
-                () =>
-                    void (n.current = {
-                        mount: e,
-                        unmount: t
-                    })
-            ),
+            o.useEffect(() => {
+                n.current = {
+                    mount: e,
+                    unmount: t
+                };
+            }),
                 o.useEffect(
                     () => (
                         n.current.mount(),

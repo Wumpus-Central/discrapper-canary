@@ -120,7 +120,9 @@ function y(e) {
     return (!(function (e) {
         let { id: t, streamParticipants: n, layout: i, widgetLayoutSpecs: r } = e,
             l = o.useRef(r);
-        o.useEffect(() => void (l.current = r));
+        o.useEffect(() => {
+            l.current = r;
+        });
         let s = n.length;
         o.useEffect(() => {
             let { id: e, width: t, height: n, sizeOffset: i, layout: o, padding: r } = l.current;

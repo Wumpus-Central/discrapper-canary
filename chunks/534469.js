@@ -292,7 +292,12 @@ let ee = l.memo(function (e) {
         ew = (0, d.e7)([x.Z], () => x.Z.getPendingReply(Q)),
         eU = (function (e) {
             let t = l.useRef(e);
-            return l.useEffect(() => void (t.current = null != e ? e : t.current)), null != e ? e : t.current;
+            return (
+                l.useEffect(() => {
+                    t.current = null != e ? e : t.current;
+                }),
+                null != e ? e : t.current
+            );
         })(et),
         eB = (0, m.p9)({
             guildId: J.guild_id,

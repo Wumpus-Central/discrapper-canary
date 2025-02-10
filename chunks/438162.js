@@ -165,13 +165,12 @@ function e_() {
             mount: e,
             unmount: t
         });
-        r.useEffect(
-            () =>
-                void (n.current = {
-                    mount: e,
-                    unmount: t
-                })
-        ),
+        r.useEffect(() => {
+            n.current = {
+                mount: e,
+                unmount: t
+            };
+        }),
             r.useEffect(
                 () => (
                     n.current.mount(),

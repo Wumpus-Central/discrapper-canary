@@ -44,7 +44,9 @@ function j(e) {
     var t, n;
     let { keybind: l } = e,
         o = s.useRef(l);
-    s.useEffect(() => void (o.current = l));
+    s.useEffect(() => {
+        o.current = l;
+    });
     let [d, u] = s.useState(null !== (n = null === (t = l.params) || void 0 === t ? void 0 : t.channelId) && void 0 !== n ? n : void 0),
         h = s.useCallback(() => {
             (0, r.ZDy)(
@@ -137,7 +139,9 @@ function v(e) {
                 i = s.useRef(e);
             return (
                 e !== i.current && 0 !== t && n(0),
-                s.useEffect(() => void (i.current = e)),
+                s.useEffect(() => {
+                    i.current = e;
+                }),
                 {
                     focusedIndex: t,
                     setFocusedIndex: n

@@ -56,7 +56,9 @@ let E = (e) => {
             );
         }, []);
     let b = r.useRef(s);
-    r.useEffect(() => void (b.current = s)),
+    r.useEffect(() => {
+        b.current = s;
+    }),
         r.useEffect(
             () => () => {
                 var e;

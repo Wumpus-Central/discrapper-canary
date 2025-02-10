@@ -55,7 +55,9 @@ function g(e) {
         })),
         S = n.useRef(t);
     return (
-        n.useEffect(() => void (S.current = t)),
+        n.useEffect(() => {
+            S.current = t;
+        }),
         n.useEffect(() => () => S.current(), []),
         (0, l.jsxs)(s.v2r, {
             navId: 'overlay-voice-widget-context-menu',

@@ -1,7 +1,7 @@
 i.d(e, { default: () => l });
 var n = i(200651),
-    o = i(192379),
-    c = i(442837),
+    c = i(192379),
+    o = i(442837),
     a = i(481060),
     s = i(239091),
     u = i(13245),
@@ -10,11 +10,13 @@ var n = i(200651),
     f = i(388032);
 function l(t) {
     let { onSelect: e, onClose: i } = t,
-        { textChatNotificationMode: l } = (0, c.cj)([r.Z], () => ({ textChatNotificationMode: r.Z.getTextChatNotificationMode() })),
-        h = o.useRef(i);
+        { textChatNotificationMode: l } = (0, o.cj)([r.Z], () => ({ textChatNotificationMode: r.Z.getTextChatNotificationMode() })),
+        h = c.useRef(i);
     return (
-        o.useEffect(() => void (h.current = i)),
-        o.useEffect(() => () => h.current(), []),
+        c.useEffect(() => {
+            h.current = i;
+        }),
+        c.useEffect(() => () => h.current(), []),
         (0, n.jsx)(a.v2r, {
             navId: 'overlay-notifications-widget-context-menu',
             onClose: s.Zy,
