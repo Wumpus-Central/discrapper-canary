@@ -242,7 +242,7 @@ class eC extends r.PureComponent {
                                         en.intl.string(en.t['MsUY/f']),
                                         (0, i.jsx)(P.ZP, {
                                             ref: this._imageInputRef,
-                                            onChange: this.handleOpenImageCroppingModal,
+                                            onChange: this.handleOpenImageEditingModal,
                                             disabled: !n
                                         })
                                     ]
@@ -658,17 +658,16 @@ class eC extends r.PureComponent {
                 onChange: this.handleBannerChange,
                 hint: en.intl.string(en.t.uPvxqK),
                 onOpenImageSelectModal: () =>
-                    ev(
-                        ee.pC.GUILD_BANNER,
-                        et.B,
-                        this.handleBannerChange,
-                        !0,
-                        {
+                    ev({
+                        uploadType: ee.pC.GUILD_BANNER,
+                        maxFileSizeBytes: et.B,
+                        onComplete: this.handleBannerChange,
+                        analyticsLocation: {
                             page: J.ZY5.GUILD_SETTINGS,
                             section: J.jXE.GUILD_BANNER
                         },
-                        n
-                    ),
+                        analyticsLocations: n
+                    }),
                 enabled: s
             }),
             o = (0, i.jsx)(g.zxk, {
@@ -676,17 +675,16 @@ class eC extends r.PureComponent {
                 color: g.zxk.Colors.BRAND,
                 className: ei.marginTop16,
                 onClick: () =>
-                    ev(
-                        ee.pC.GUILD_BANNER,
-                        et.B,
-                        this.handleBannerChange,
-                        !0,
-                        {
+                    ev({
+                        uploadType: ee.pC.GUILD_BANNER,
+                        maxFileSizeBytes: et.B,
+                        onComplete: this.handleBannerChange,
+                        analyticsLocation: {
                             page: J.ZY5.GUILD_SETTINGS,
                             section: J.jXE.GUILD_BANNER
                         },
-                        n
-                    ),
+                        analyticsLocations: n
+                    }),
                 children: en.intl.string(en.t.yG2pUl)
             });
         return (0, i.jsx)(g.hjN, {
@@ -807,9 +805,9 @@ class eC extends r.PureComponent {
             es(this, 'handleIconChange', (e) => {
                 q.Z.updateGuild({ icon: e });
             }),
-            es(this, 'handleOpenImageCroppingModal', (e, t) => {
+            es(this, 'handleOpenImageEditingModal', (e, t) => {
                 (0, g.ZDy)(async () => {
-                    let { default: r } = await Promise.all([n.e('70687'), n.e('48017'), n.e('18280')]).then(n.bind(n, 850085));
+                    let { default: r } = await Promise.all([n.e('70687'), n.e('59732'), n.e('30258')]).then(n.bind(n, 73620));
                     return (n) =>
                         (0, i.jsx)(r, {
                             onCrop: this.handleIconChange,
@@ -844,7 +842,7 @@ class eC extends r.PureComponent {
                     return;
                 }
                 (0, g.ZDy)(async () => {
-                    let { default: r } = await Promise.all([n.e('70687'), n.e('48017'), n.e('18280')]).then(n.bind(n, 850085));
+                    let { default: r } = await Promise.all([n.e('70687'), n.e('59732'), n.e('18280')]).then(n.bind(n, 712451));
                     return (n) =>
                         (0, i.jsx)(r, {
                             imgURI: e,
@@ -1008,20 +1006,18 @@ function ef() {
               })
           });
 }
-function ev(e, t, r) {
-    let l = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
-        s = arguments.length > 4 ? arguments[4] : void 0,
-        a = arguments.length > 5 ? arguments[5] : void 0;
+function ev(e) {
+    let { uploadType: t, maxFileSizeBytes: r, onComplete: l, showUpsellHeader: s = !0, analyticsLocation: a, analyticsLocations: o } = e;
     (0, g.ZDy)(async () => {
-        let { default: o } = await Promise.all([n.e('70687'), n.e('31785')]).then(n.bind(n, 28130));
+        let { default: e } = await Promise.all([n.e('70687'), n.e('55849'), n.e('68450')]).then(n.bind(n, 192277));
         return (n) =>
-            (0, i.jsx)(o, {
-                maxFileSizeBytes: t,
-                onComplete: r,
-                uploadType: e,
-                showUpsellHeader: l,
-                analyticsLocation: s,
-                analyticsLocations: a,
+            (0, i.jsx)(e, {
+                maxFileSizeBytes: r,
+                onComplete: l,
+                uploadType: t,
+                showUpsellHeader: s,
+                analyticsLocation: a,
+                analyticsLocations: o,
                 ...n
             });
     });
