@@ -1,1 +1,2 @@
-e.exports = { orbIconContainer: 'orbIconContainer__85200' };
+var i = { orbIconContainer: 'orbIconContainer__85200' };
+e.exports = i;
