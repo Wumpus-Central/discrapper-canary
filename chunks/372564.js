@@ -49,12 +49,7 @@ class _ extends l.Component {
                                   'aria-label': p.intl.string(p.t.mKwsSk),
                                   className: m.topicClickTarget
                               }),
-                              null == e.linkedLobby || t
-                                  ? d.Z.parseTopic(e.topic, !0, {
-                                        channelId: e.id,
-                                        allowLinks: !0
-                                    })
-                                  : p.intl.string(p.t.XJVlf3)
+                              null == e.linkedLobby || t ? d.Z.parseTopic(e.topic, !0, { channelId: e.id }) : p.intl.string(p.t.XJVlf3)
                           ]
                       })
                   ]

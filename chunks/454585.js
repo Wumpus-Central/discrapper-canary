@@ -48,7 +48,16 @@ let d = {
         astParserFor: a._p,
         reactParserFor: a.w4,
         parse: a.w4(f),
-        parseTopic: a.w4(p),
+        parseTopic: (e, t, n, i) =>
+            a.w4(p)(
+                e,
+                t,
+                {
+                    allowLinks: !0,
+                    ...n
+                },
+                i
+            ),
         parseVoiceChannelStatus: a.w4(h),
         parseEmbedTitle: a.w4(m),
         parseInlineReply: a.w4(g),
