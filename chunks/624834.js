@@ -87,7 +87,8 @@ function b(e) {
                             locationObject: j.location,
                             analyticsLocations: y,
                             joinUserId: T,
-                            joinSessionId: N
+                            joinSessionId: N,
+                            isContextlessActivity: !0
                         }),
                         A(!1));
             },

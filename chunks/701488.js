@@ -1,35 +1,34 @@
 n.d(t, {
     $Z: () => C,
-    AC: () => V,
-    AU: () => k,
+    AC: () => F,
     Cb: () => A,
     Cr: () => M,
     Ec: () => v,
     Es: () => L,
     Ev: () => o,
     Fu: () => D,
-    GM: () => Q,
+    GM: () => q,
     GR: () => h,
     Gv: () => S,
     IF: () => T,
     In: () => R,
     JT: () => O,
-    K8: () => U,
+    K8: () => k,
     MO: () => f,
-    OF: () => q,
-    P9: () => P,
+    OF: () => z,
+    P9: () => w,
     PD: () => m,
-    Pc: () => j,
-    S4: () => B,
+    Pc: () => V,
+    S4: () => G,
     Si: () => x,
-    Ws: () => G,
+    Ws: () => U,
     Zc: () => b,
-    ag: () => F,
+    ag: () => Z,
     am: () => E,
-    cE: () => Y,
+    cE: () => H,
     cc: () => a,
     d: () => s,
-    eB: () => w,
+    eB: () => P,
     fE: () => I,
     jT: () => g,
     js: () => _,
@@ -37,10 +36,10 @@ n.d(t, {
     mI: () => p,
     qG: () => N,
     qm: () => l,
-    um: () => H,
-    wP: () => z,
-    wT: () => K,
-    xK: () => Z
+    um: () => j,
+    wP: () => K,
+    wT: () => W,
+    xK: () => B
 }),
     n(47120);
 var i = n(911969),
@@ -76,37 +75,36 @@ let a = 160,
         SMALL: 64,
         LARGE: 160
     },
-    w = ['in_development', 'activities_team', 'employee_release'],
-    P = [N, '235088799074484224', _, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1227719606223765687'],
-    M = ['1247266306231898122', '1257458870390099989', '1276239071764680926'],
-    k = [c, d, g, '910224161476083792', '945748195256979606', C];
-var U = (function (e) {
+    P = ['in_development', 'activities_team', 'employee_release'],
+    w = [N, '235088799074484224', _, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1227719606223765687'],
+    M = ['1247266306231898122', '1257458870390099989', '1276239071764680926'];
+var k = (function (e) {
         return (e.ADS = 'ADS'), (e.FAILED_LOAD = 'FAILED_LOAD'), (e.LAGGING = 'LAGGING'), (e.CONFUSING = 'CONFUSING'), (e.NOT_FUN = 'NOT_FUN'), (e.OTHER = 'OTHER'), e;
     })({}),
-    G = (function (e) {
+    U = (function (e) {
         return (e[(e.PLAY = 0)] = 'PLAY'), (e[(e.SPECTATE = 1)] = 'SPECTATE'), e;
     })({}),
-    B = (function (e) {
+    G = (function (e) {
         return (e.DESKTOP = 'desktop'), (e.MOBILE = 'mobile'), e;
     })({}),
-    Z = (function (e) {
+    B = (function (e) {
         return (e[(e.UNLOCKED = 1)] = 'UNLOCKED'), (e[(e.PORTRAIT = 2)] = 'PORTRAIT'), (e[(e.LANDSCAPE = 3)] = 'LANDSCAPE'), e;
     })({}),
-    F = (function (e) {
+    Z = (function (e) {
         return (e[(e.DIRECTORY = 0)] = 'DIRECTORY'), (e[(e.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (e[(e.DETAIL_PAGE = 2)] = 'DETAIL_PAGE'), e;
     })({});
-let V = 'activity-shelf',
-    j = new Set([u, c, d, g]),
-    H = new Set([c, d, g]);
-var Y = (function (e) {
+let F = 'activity-shelf',
+    V = new Set([u, c, d, g]),
+    j = new Set([c, d, g]);
+var H = (function (e) {
     return (e[(e.FOCUSED = 0)] = 'FOCUSED'), (e[(e.PIP = 1)] = 'PIP'), (e[(e.GRID = 2)] = 'GRID'), e;
 })({});
-let W = {
+let Y = {
         label_type: i.ww.NONE,
         release_phase: '',
         label_until: null
     },
-    K = {
+    W = {
         application_id: '',
         requires_age_gate: !1,
         legacy_responsive_aspect_ratio: !1,
@@ -114,15 +112,15 @@ let W = {
         tablet_default_orientation_lock_state: 1,
         supported_platforms: [i.C3.WEB],
         client_platform_config: {
-            [i.C3.WEB]: W,
-            [i.C3.IOS]: W,
-            [i.C3.ANDROID]: W
+            [i.C3.WEB]: Y,
+            [i.C3.IOS]: Y,
+            [i.C3.ANDROID]: Y
         },
         has_csp_exception: !1,
         displays_advertisements: !1
     },
-    z = [r.d4z.GUILD_TEXT, r.d4z.DM, r.d4z.GROUP_DM],
-    q = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
-var Q = (function (e) {
+    K = [r.d4z.GUILD_TEXT, r.d4z.DM, r.d4z.GROUP_DM],
+    z = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
+var q = (function (e) {
     return (e.NORMAL = 'normal'), (e.FULL_SCREEN = 'full-screen'), e;
 })({});

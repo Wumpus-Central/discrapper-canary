@@ -198,8 +198,9 @@ let K = new k(o.Z, {
         return Z.nonPositionalChannelIdUpdate(e);
     },
     EMBEDDED_ACTIVITY_UPDATE_V2: function (n) {
-        let { location: e } = n;
-        return Z.updateSubtitles((0, u.j)(e), (0, u.p)(e));
+        var e, t;
+        let { location: i } = n;
+        return Z.updateSubtitles(null !== (e = (0, u.jS)(i)) && void 0 !== e ? e : (0, u.hu)(i), null !== (t = (0, u.pY)(i)) && void 0 !== t ? t : (0, u.wq)(i));
     },
     EMBEDDED_ACTIVITY_LAUNCH_START: function (n) {
         V();
