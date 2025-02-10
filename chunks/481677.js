@@ -228,6 +228,8 @@ Object.freeze({
     'modal-background': [r.I.PRIMARY_600, r.I.WHITE, r.I.PLUM_16, r.I.PLUM_16],
     'modal-footer-background': [r.I.PRIMARY_630, r.I.PRIMARY_130, r.I.PLUM_17, r.I.PLUM_17],
     'navigator-header-tint': [r.I.WHITE, r.I.PRIMARY_500, r.I.WHITE, r.I.WHITE],
+    'overlay-backdrop-default': [r.I.OPACITY_BLACK_72, r.I.OPACITY_BLACK_52, r.I.OPACITY_BLACK_72, r.I.OPACITY_BLACK_72],
+    'overlay-backdrop-lightbox': [r.I.OPACITY_BLACK_92, r.I.OPACITY_BLACK_92, r.I.OPACITY_BLACK_92, r.I.OPACITY_BLACK_92],
     'panel-bg': [r.I.PRIMARY_600, r.I.WHITE, r.I.PLUM_24, r.I.PLUM_20],
     'polls-normal-fill-hover': [r.I.PRIMARY_600, r.I.PRIMARY_230, r.I.PRIMARY_600, r.I.PRIMARY_600],
     'polls-normal-image-background': [r.I.PRIMARY_660, r.I.WHITE, r.I.PRIMARY_660, r.I.PRIMARY_660],

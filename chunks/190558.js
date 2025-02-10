@@ -4610,6 +4610,44 @@ let { Themes: r } = a(15202).V,
                     opacity: 1
                 }
             },
+            OVERLAY_BACKDROP_DEFAULT: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'OPACITY_BLACK_72',
+                    opacity: 0.7215686274509804
+                },
+                [r.LIGHT]: {
+                    raw: 'OPACITY_BLACK_52',
+                    opacity: 0.5215686274509804
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'OPACITY_BLACK_72',
+                    opacity: 0.7215686274509804
+                },
+                [r.DARKER]: {
+                    raw: 'OPACITY_BLACK_72',
+                    opacity: 0.7215686274509804
+                }
+            },
+            OVERLAY_BACKDROP_LIGHTBOX: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'OPACITY_BLACK_92',
+                    opacity: 0.9215686274509803
+                },
+                [r.LIGHT]: {
+                    raw: 'OPACITY_BLACK_92',
+                    opacity: 0.9215686274509803
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'OPACITY_BLACK_92',
+                    opacity: 0.9215686274509803
+                },
+                [r.DARKER]: {
+                    raw: 'OPACITY_BLACK_92',
+                    opacity: 0.9215686274509803
+                }
+            },
             PANEL_BG: {
                 category: 'background',
                 [r.DARK]: {
