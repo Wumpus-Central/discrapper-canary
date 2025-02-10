@@ -25,7 +25,7 @@ var i = n(200651),
 let E = (0, g.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     j = (0, s.animated)(u.Kqy);
 function y(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: d, mentionCount: g = 0, isMentionLowImportance: y, unread: P = !1, defaultFolderName: A, useCircleMask: T = !1, draggable: w = !1, sorting: R = !1, onDragStart: L, onDragEnd: M, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: O } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: d, mentionCount: g = 0, isMentionLowImportance: y, unread: P = !1, defaultFolderName: T, useCircleMask: A = !1, draggable: w = !1, sorting: R = !1, onDragStart: L, onDragEnd: M, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: O } = e,
         { id: U, name: V, children: F } = t,
         H = (0, p.Q3)('FolderItem'),
         [z, W] = l.useState(!1),
@@ -57,7 +57,7 @@ function y(e) {
             },
             [D, s]
         ),
-        ee = null != V && '' !== V ? V : null != A && '' !== A ? A : b.intl.string(b.t.xV9hVl),
+        ee = null != V && '' !== V ? V : null != T && '' !== T ? T : b.intl.string(b.t.xV9hVl),
         et = (0, c.Ie)(''.concat(U)),
         en = 'folder-items-'.concat(U),
         ei = (function (e) {
@@ -98,7 +98,7 @@ function y(e) {
                             : (0, i.jsx)(v.Z, {
                                   folderNode: t,
                                   expanded: s,
-                                  forceCircular: T,
+                                  forceCircular: A,
                                   sorting: R,
                                   mediaState: d,
                                   mentionCount: g,
@@ -127,6 +127,7 @@ function y(e) {
     return (0, i.jsxs)('div', {
         ref: er,
         className: a()(S.wrapper, s && S.isExpanded),
+        'data-drop-hovering': q,
         children: [
             !J &&
                 s &&
