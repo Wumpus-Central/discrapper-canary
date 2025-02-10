@@ -125,44 +125,55 @@ class ea extends l.PureComponent {
         });
     }
     renderEmbeddedActivity() {
-        let e;
-        let { application: t, embeddedActivity: n, channel: l, channelName: r, guildForConnectedChannel: a } = this.props;
-        if (null == n || null == l || null == t) return null;
-        let o = { start: n.connectedSince },
-            s = r;
-        null != a ? ((e = en.Z5c.CHANNEL(a.id, l.id)), (s = ''.concat(s, ' / ').concat(a.name))) : (e = en.Z5c.CHANNEL(en.ME, l.id));
-        let c = (0, i.jsx)(M.Z, {
+        let e, t;
+        let { application: n, embeddedActivity: l, channel: r, channelName: o, guildForConnectedChannel: s } = this.props;
+        if (null == l || null == r || null == n) return null;
+        let c = { start: l.connectedSince },
+            h = o;
+        null != s ? ((e = en.Z5c.CHANNEL(s.id, r.id)), (h = ''.concat(h, ' / ').concat(s.name))) : (e = en.Z5c.CHANNEL(en.ME, r.id));
+        let p = (0, i.jsx)(M.Z, {
             href: e,
             onClick: this.handleApplicationOrChannelLinkClick,
             children: (0, i.jsx)(X.Z, {
                 className: el.channel,
-                children: s
+                children: h
             })
         });
-        return (0, i.jsxs)('div', {
-            className: el.gameWrapper,
+        t = (0, _.R)()
+            ? (0, i.jsx)($.Z, { children: n.name })
+            : (0, i.jsx)(M.Z, {
+                  href: e,
+                  onClick: this.handleApplicationOrChannelLinkClick,
+                  children: (0, i.jsx)($.Z, {
+                      className: el.underlineOnHover,
+                      children: n.name
+                  })
+              });
+        let m = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(P.Z, {
                     className: el.gameIcon,
-                    game: t,
+                    game: n,
                     size: P.Z.Sizes.SMALL
                 }),
                 (0, i.jsxs)('div', {
                     className: el.info,
-                    children: [
-                        (0, i.jsx)(M.Z, {
-                            href: e,
-                            onClick: this.handleApplicationOrChannelLinkClick,
-                            children: (0, i.jsx)($.Z, {
-                                className: el.activityName,
-                                children: t.name
-                            })
-                        }),
-                        (0, k.Qm)(l.type) ? c : (0, i.jsx)(er, { timestamps: o })
-                    ]
+                    children: [t, (0, k.Qm)(r.type) ? p : (0, i.jsx)(er, { timestamps: c })]
                 })
             ]
         });
+        return (0, _.R)()
+            ? (0, i.jsx)(d.P3F, {
+                  className: a()(el.gameWrapper, el.clickableGameWrapper),
+                  onClick: () => {
+                      u.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
+                  },
+                  children: m
+              })
+            : (0, i.jsx)('div', {
+                  className: el.gameWrapper,
+                  children: m
+              });
     }
     render() {
         let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: l, streamMetadata: r, application: o, activity: s, className: c, isForceShowSharingPopout: d, setIsForceShowSharingPopout: u } = this.props;
@@ -187,7 +198,7 @@ class ea extends l.PureComponent {
             (n = () => {
                 var e;
                 let { channel: t, embeddedActivity: n } = this.props;
-                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), p.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : en.ME, t.id), (0, _.R)() ? u.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }) : ((0, k.vd)(t.type) && h.Z.selectParticipant(t.id, (0, b.oW)(n.applicationId)), (0, k.Qm)(t.type) && (0, C.tg)(ei.Ez.PANEL));
+                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), p.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : en.ME, t.id), !(0, _.R)() && ((0, k.vd)(t.type) && h.Z.selectParticipant(t.id, (0, b.oW)(n.applicationId)), (0, k.Qm)(t.type) && (0, C.tg)(ei.Ez.PANEL));
             }),
             t in this
                 ? Object.defineProperty(this, t, {
