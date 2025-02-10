@@ -69,6 +69,7 @@ var i = (function (e) {
         (e.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE = 'premium tier 0 trial ending notice'),
         (e.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE = 'premium tier 2 trial ending notice'),
         (e.BOOSTED_GUILD_PERKS_MODAL = 'boosted guild perks modal'),
+        (e.GUILD_POWERUPS_OVERVIEW = 'guild powerups overview'),
         (e.GUILD_BOOSTING_PREMIUM_UPSELL = 'guild boosting premium upsell'),
         (e.RPC = 'rpc'),
         (e.BILLING_STANDALONE = 'billing standalone'),
