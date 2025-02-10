@@ -1313,6 +1313,7 @@ var T =
     (r.ACTIVITY_CLOSED_RPC_ERROR = 'activity_closed_rpc_error'),
     (r.APP_PROFILE_OPEN_APP_BUTTON_CLICKED = 'app_profile_open_app_button_clicked'),
     (r.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED = 'app_detail_page_entry_point_command_button_clicked'),
+    (r.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED = 'app_launcher_pep_button_not_rendered'),
     (r.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED = 'embedded_application_invite_embed_viewed'),
     (r.NITRO_TAB_VISITED = 'nitro_tab_visited'),
     (r.BROWSER_HANDOFF_SUCCEEDED = 'browser_handoff_succeeded'),
